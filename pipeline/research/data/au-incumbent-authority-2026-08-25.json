@@ -1,0 +1,5884 @@
+{
+ "ours": 28,
+ "rd": {
+  "30acres.com.au": {
+   "rd": 155,
+   "backlinks": 501,
+   "rank": 173
+  },
+  "76creativestudio.com": {
+   "rd": 77,
+   "backlinks": 9908,
+   "rank": 368
+  },
+  "7pillars.com.au": {
+   "rd": 569,
+   "backlinks": 2995,
+   "rank": 274
+  },
+  "actiondigital.com.au": {
+   "rd": 41,
+   "backlinks": 218,
+   "rank": 207
+  },
+  "adelaideseomarketing.com.au": {
+   "rd": 111,
+   "backlinks": 2001,
+   "rank": 279
+  },
+  "adelaidewebdesigner.com.au": {
+   "rd": 124,
+   "backlinks": 22154,
+   "rank": 391
+  },
+  "advisible.com.au": {
+   "rd": 520,
+   "backlinks": 4599,
+   "rank": 317
+  },
+  "aekmedia.com.au": {
+   "rd": 371,
+   "backlinks": 8131,
+   "rank": 319
+  },
+  "aeo.com.pk": {
+   "rd": 245,
+   "backlinks": 662,
+   "rank": 224
+  },
+  "aeo.org.au": {
+   "rd": 26,
+   "backlinks": 42,
+   "rank": 84
+  },
+  "aerospike.com": {
+   "rd": 3192,
+   "backlinks": 36219,
+   "rank": 383
+  },
+  "agencies.semrush.com": {
+   "rd": 3061,
+   "backlinks": 42316,
+   "rank": 447
+  },
+  "agentic.ai": {
+   "rd": 574,
+   "backlinks": 1681,
+   "rank": 230
+  },
+  "agenticaiagency.com.au": {
+   "rd": 13,
+   "backlinks": 13,
+   "rank": 0
+  },
+  "aiautomationagency.com.au": {
+   "rd": 14,
+   "backlinks": 14,
+   "rank": 0
+  },
+  "aiconsultinggroup.com.au": {
+   "rd": 480,
+   "backlinks": 2066,
+   "rank": 165
+  },
+  "aidial.com.au": {
+   "rd": 86,
+   "backlinks": 265,
+   "rank": 199
+  },
+  "aipivot.com.au": {
+   "rd": 13,
+   "backlinks": 13,
+   "rank": 0
+  },
+  "aircall.io": {
+   "rd": 6604,
+   "backlinks": 106277,
+   "rank": 414
+  },
+  "aitalent.com.au": {
+   "rd": 382,
+   "backlinks": 688,
+   "rank": 47
+  },
+  "aivy.com.au": {
+   "rd": 58,
+   "backlinks": 230,
+   "rank": 198
+  },
+  "alanajadestudio.com": {
+   "rd": 195,
+   "backlinks": 3667,
+   "rank": 308
+  },
+  "amaracollective.com.au": {
+   "rd": 200,
+   "backlinks": 962,
+   "rank": 244
+  },
+  "apacinsider.digital": {
+   "rd": 2055,
+   "backlinks": 92161,
+   "rank": 431
+  },
+  "aperitifagency.com.au": {
+   "rd": 383,
+   "backlinks": 936,
+   "rank": 235
+  },
+  "arcadiandigital.com.au": {
+   "rd": 390,
+   "backlinks": 6324,
+   "rank": 341
+  },
+  "argon.com.au": {
+   "rd": 821,
+   "backlinks": 134254,
+   "rank": 449
+  },
+  "ashgrovewebdesign.com.au": {
+   "rd": 98,
+   "backlinks": 4314,
+   "rank": 335
+  },
+  "astondigital.com.au": {
+   "rd": 170,
+   "backlinks": 2975,
+   "rank": 298
+  },
+  "atollon.com.au": {
+   "rd": 417,
+   "backlinks": 50828,
+   "rank": 417
+  },
+  "au.linkedin.com": {
+   "rd": 60407,
+   "backlinks": 20504740,
+   "rank": 664
+  },
+  "au.pattern.com": {
+   "rd": 143,
+   "backlinks": 517,
+   "rank": 177
+  },
+  "au.seek.com": {
+   "rd": 11717,
+   "backlinks": 16908520,
+   "rank": 548
+  },
+  "australiaaiautomation.com.au": null,
+  "australiaseoservices.com.au": {
+   "rd": 33,
+   "backlinks": 95,
+   "rank": 98
+  },
+  "authenticai.com.au": {
+   "rd": 45,
+   "backlinks": 118,
+   "rank": 124
+  },
+  "automationagency.com": {
+   "rd": 528,
+   "backlinks": 1485,
+   "rank": 258
+  },
+  "autoreception.com.au": {
+   "rd": 8,
+   "backlinks": 12,
+   "rank": 0
+  },
+  "avenuegroupaus.com.au": {
+   "rd": 265,
+   "backlinks": 663,
+   "rank": 213
+  },
+  "aws.amazon.com": {
+   "rd": 286820,
+   "backlinks": 104797173,
+   "rank": 671
+  },
+  "bacreative.com.au": {
+   "rd": 287,
+   "backlinks": 38979,
+   "rank": 419
+  },
+  "bambrick.com.au": {
+   "rd": 626,
+   "backlinks": 3558,
+   "rank": 317
+  },
+  "bamwebdesign.com.au": {
+   "rd": 130,
+   "backlinks": 437,
+   "rank": 243
+  },
+  "bcreativestudio.au": {
+   "rd": 167,
+   "backlinks": 588,
+   "rank": 231
+  },
+  "beam.ai": {
+   "rd": 2347,
+   "backlinks": 13824,
+   "rank": 302
+  },
+  "bgtechs.com.au": {
+   "rd": 31,
+   "backlinks": 3675,
+   "rank": 240
+  },
+  "bigbao.com.au": {
+   "rd": 28,
+   "backlinks": 477,
+   "rank": 247
+  },
+  "blog.hubspot.com": {
+   "rd": 182258,
+   "backlinks": 2427543,
+   "rank": 535
+  },
+  "bmf.com.au": {
+   "rd": 452,
+   "backlinks": 7075,
+   "rank": 246
+  },
+  "brisbanelocalseo.net.au": {
+   "rd": 16,
+   "backlinks": 22,
+   "rank": 12
+  },
+  "builtinmelbourne.com": {
+   "rd": 304,
+   "backlinks": 23708,
+   "rank": 295
+  },
+  "builtinsydney.au": {
+   "rd": 1065,
+   "backlinks": 11224,
+   "rank": 265
+  },
+  "business.adobe.com": {
+   "rd": 50197,
+   "backlinks": 2130350,
+   "rank": 545
+  },
+  "business.localsearch.com.au": {
+   "rd": 2210,
+   "backlinks": 39324,
+   "rank": 430
+  },
+  "businessmedics.com.au": {
+   "rd": 47,
+   "backlinks": 312,
+   "rank": 134
+  },
+  "butterfly.com.au": {
+   "rd": 856,
+   "backlinks": 134366,
+   "rank": 438
+  },
+  "canberradaily.com.au": {
+   "rd": 1656,
+   "backlinks": 21137,
+   "rank": 369
+  },
+  "canberralocalseocompany.com.au": {
+   "rd": 7,
+   "backlinks": 9,
+   "rank": 17
+  },
+  "cantydigital.com.au": {
+   "rd": 2023,
+   "backlinks": 12167,
+   "rank": 354
+  },
+  "centdigital.com.au": {
+   "rd": 13,
+   "backlinks": 13,
+   "rank": 0
+  },
+  "chatgpt.com": {
+   "rd": 267298,
+   "backlinks": 218892487,
+   "rank": 673
+  },
+  "chocchip.com.au": {
+   "rd": 295,
+   "backlinks": 2784,
+   "rank": 311
+  },
+  "clearwateragency.com.au": {
+   "rd": 557,
+   "backlinks": 1728,
+   "rank": 328
+  },
+  "clickbiz.com.au": {
+   "rd": 232,
+   "backlinks": 5512,
+   "rank": 375
+  },
+  "clickclickmedia.com.au": {
+   "rd": 514,
+   "backlinks": 141879,
+   "rank": 515
+  },
+  "clickk.com.au": {
+   "rd": 243,
+   "backlinks": 11086,
+   "rank": 369
+  },
+  "cloco.com.au": {
+   "rd": 16,
+   "backlinks": 44,
+   "rank": 164
+  },
+  "cloud.google.com": {
+   "rd": 202043,
+   "backlinks": 16591707,
+   "rank": 679
+  },
+  "clutch.co": {
+   "rd": 49222,
+   "backlinks": 20317811,
+   "rank": 650
+  },
+  "cobusgreyling.medium.com": {
+   "rd": 773,
+   "backlinks": 2848,
+   "rank": 263
+  },
+  "confettidesign.com.au": {
+   "rd": 211,
+   "backlinks": 13034,
+   "rank": 383
+  },
+  "conversationalai.com.au": {
+   "rd": 71,
+   "backlinks": 89,
+   "rank": 110
+  },
+  "creativebaguette.com": {
+   "rd": 43,
+   "backlinks": 212,
+   "rank": 209
+  },
+  "creeddigital.com.au": {
+   "rd": 62,
+   "backlinks": 6837,
+   "rank": 205
+  },
+  "darwinseo.au": {
+   "rd": 6,
+   "backlinks": 14,
+   "rank": 70
+  },
+  "dbpa.com.au": {
+   "rd": 18,
+   "backlinks": 101,
+   "rank": 0
+  },
+  "dealhub.io": {
+   "rd": 5479,
+   "backlinks": 36567,
+   "rank": 379
+  },
+  "dejanmarketing.com": {
+   "rd": 793,
+   "backlinks": 12479,
+   "rank": 382
+  },
+  "deliciousdesign.com.au": {
+   "rd": 99,
+   "backlinks": 1133,
+   "rank": 317
+  },
+  "designpoint.com.au": {
+   "rd": 460,
+   "backlinks": 48564,
+   "rank": 460
+  },
+  "dev-story.com": {
+   "rd": 814,
+   "backlinks": 5457,
+   "rank": 303
+  },
+  "developers.google.com": {
+   "rd": 917602,
+   "backlinks": 83537567,
+   "rank": 708
+  },
+  "developers.googleblog.com": {
+   "rd": 19826,
+   "backlinks": 352199,
+   "rank": 580
+  },
+  "digifix.com.au": {
+   "rd": 259,
+   "backlinks": 11343,
+   "rank": 396
+  },
+  "digione.com.au": {
+   "rd": 179,
+   "backlinks": 345,
+   "rank": 105
+  },
+  "digital8.com.au": {
+   "rd": 615,
+   "backlinks": 7600,
+   "rank": 350
+  },
+  "digitalagencynetwork.com": {
+   "rd": 7304,
+   "backlinks": 152460,
+   "rank": 469
+  },
+  "digitalbond.com.au": {
+   "rd": 242,
+   "backlinks": 403,
+   "rank": 160
+  },
+  "digitalmarketinginstitute.com": {
+   "rd": 19061,
+   "backlinks": 963952,
+   "rank": 441
+  },
+  "digitalnomadshq.com.au": {
+   "rd": 1135,
+   "backlinks": 15050,
+   "rank": 366
+  },
+  "digitalon.ai": {
+   "rd": 282,
+   "backlinks": 1831,
+   "rank": 240
+  },
+  "digitalon.com.au": {
+   "rd": 642,
+   "backlinks": 10104,
+   "rank": 326
+  },
+  "digitalsurfer.com.au": {
+   "rd": 329,
+   "backlinks": 2097,
+   "rank": 298
+  },
+  "distl.com.au": {
+   "rd": 477,
+   "backlinks": 6178,
+   "rank": 331
+  },
+  "dnmdigital.com.au": {
+   "rd": 219,
+   "backlinks": 1719,
+   "rank": 307
+  },
+  "dotcollective.com.au": {
+   "rd": 227,
+   "backlinks": 8162,
+   "rank": 335
+  },
+  "duenorth.com.au": {
+   "rd": 268,
+   "backlinks": 8431,
+   "rank": 376
+  },
+  "dynamicwebsites.com.au": {
+   "rd": 136,
+   "backlinks": 6348,
+   "rank": 347
+  },
+  "ebpearls.com.au": {
+   "rd": 1117,
+   "backlinks": 68607,
+   "rank": 484
+  },
+  "ecomexperts.au": {
+   "rd": 71,
+   "backlinks": 128,
+   "rank": 183
+  },
+  "edifyingvoyages.com": {
+   "rd": 816,
+   "backlinks": 3244,
+   "rank": 302
+  },
+  "edynam.com": {
+   "rd": 286,
+   "backlinks": 18503,
+   "rank": 403
+  },
+  "elasticdesign.com.au": {
+   "rd": 90,
+   "backlinks": 417,
+   "rank": 250
+  },
+  "elephynlabs.com": {
+   "rd": 9,
+   "backlinks": 10,
+   "rank": 0
+  },
+  "en.wikipedia.org": {
+   "rd": 4806570,
+   "backlinks": 1413264768,
+   "rank": 790
+  },
+  "eoantechnologies.com.au": {
+   "rd": 52,
+   "backlinks": 1174,
+   "rank": 172
+  },
+  "eux.com.au": {
+   "rd": 203,
+   "backlinks": 7835,
+   "rank": 395
+  },
+  "everyshot.com.au": {
+   "rd": 22,
+   "backlinks": 41,
+   "rank": 114
+  },
+  "experteaseai.com": {
+   "rd": 99,
+   "backlinks": 296,
+   "rank": 133
+  },
+  "factoryjet.com": {
+   "rd": 67,
+   "backlinks": 170,
+   "rank": 141
+  },
+  "farsiight.com": {
+   "rd": 417,
+   "backlinks": 641,
+   "rank": 181
+  },
+  "feelgoodcreative.com.au": {
+   "rd": 83,
+   "backlinks": 4105,
+   "rank": 331
+  },
+  "fin.ai": {
+   "rd": 3576,
+   "backlinks": 56933,
+   "rank": 431
+  },
+  "firewiredigital.com.au": {
+   "rd": 440,
+   "backlinks": 8751,
+   "rank": 294
+  },
+  "firstpage.com.au": {
+   "rd": 946,
+   "backlinks": 15075,
+   "rank": 311
+  },
+  "flowtivity.ai": {
+   "rd": 147,
+   "backlinks": 618,
+   "rank": 212
+  },
+  "flowworks.com.au": {
+   "rd": 20,
+   "backlinks": 26,
+   "rank": 27
+  },
+  "flux.agency": {
+   "rd": 89,
+   "backlinks": 1998,
+   "rank": 259
+  },
+  "fontis.au": {
+   "rd": 51,
+   "backlinks": 170,
+   "rank": 189
+  },
+  "geelongwebdesign.com.au": {
+   "rd": 37,
+   "backlinks": 337,
+   "rank": 260
+  },
+  "genrank.io": {
+   "rd": 96,
+   "backlinks": 324,
+   "rank": 171
+  },
+  "getmilk.com.au": {
+   "rd": 444,
+   "backlinks": 41176,
+   "rank": 418
+  },
+  "goldcoastwebsites.com.au": {
+   "rd": 544,
+   "backlinks": 31534,
+   "rank": 422
+  },
+  "gorilla360.com.au": {
+   "rd": 691,
+   "backlinks": 1163,
+   "rank": 223
+  },
+  "growthfirst.com.au": {
+   "rd": 7,
+   "backlinks": 7,
+   "rank": 0
+  },
+  "help.openai.com": {
+   "rd": 30434,
+   "backlinks": 2005861,
+   "rank": 597
+  },
+  "henrywong.consulting": {
+   "rd": 117,
+   "backlinks": 6995,
+   "rank": 339
+  },
+  "heyjodie.com": {
+   "rd": 35,
+   "backlinks": 74,
+   "rank": 80
+  },
+  "hiagency.au": {
+   "rd": 83,
+   "backlinks": 2278,
+   "rank": 311
+  },
+  "hooraydigital.au": {
+   "rd": 30,
+   "backlinks": 1358,
+   "rank": 315
+  },
+  "horntech.com.au": {
+   "rd": 162,
+   "backlinks": 14327,
+   "rank": 341
+  },
+  "iconagency.com.au": {
+   "rd": 447,
+   "backlinks": 4027,
+   "rank": 356
+  },
+  "iddigital.com.au": {
+   "rd": 238,
+   "backlinks": 36189,
+   "rank": 433
+  },
+  "ignitionmedia.com.au": {
+   "rd": 253,
+   "backlinks": 25068,
+   "rank": 372
+  },
+  "impressive.com.au": {
+   "rd": 1177,
+   "backlinks": 2861,
+   "rank": 282
+  },
+  "indicreativeagency.com.au": {
+   "rd": 67,
+   "backlinks": 736,
+   "rank": 230
+  },
+  "itprofiles.com": {
+   "rd": 350,
+   "backlinks": 2131,
+   "rank": 267
+  },
+  "jemwebsitedesign.com.au": {
+   "rd": 122,
+   "backlinks": 7937,
+   "rank": 340
+  },
+  "jimmyweb.net": {
+   "rd": 919,
+   "backlinks": 211168,
+   "rank": 494
+  },
+  "kazamcreative.com.au": {
+   "rd": 147,
+   "backlinks": 8778,
+   "rank": 386
+  },
+  "kinskiandbourke.com": {
+   "rd": 303,
+   "backlinks": 4491,
+   "rank": 294
+  },
+  "kurl.com.au": {
+   "rd": 296,
+   "backlinks": 17348,
+   "rank": 393
+  },
+  "llmrefs.com": {
+   "rd": 1379,
+   "backlinks": 5242,
+   "rank": 271
+  },
+  "loadedcommunications.com.au": {
+   "rd": 91,
+   "backlinks": 4195,
+   "rank": 331
+  },
+  "locx.com.au": {
+   "rd": 13,
+   "backlinks": 46,
+   "rank": 34
+  },
+  "lollipopcreative.com.au": {
+   "rd": 144,
+   "backlinks": 1804,
+   "rank": 291
+  },
+  "loopwebdesign.com.au": {
+   "rd": 75,
+   "backlinks": 14614,
+   "rank": 367
+  },
+  "madeagency.com.au": {
+   "rd": 603,
+   "backlinks": 8322,
+   "rank": 348
+  },
+  "magicdust.com.au": {
+   "rd": 1393,
+   "backlinks": 119875,
+   "rank": 452
+  },
+  "marketinglab.com.au": {
+   "rd": 111,
+   "backlinks": 2993,
+   "rank": 267
+  },
+  "marketingsweet.com.au": {
+   "rd": 812,
+   "backlinks": 5329,
+   "rank": 330
+  },
+  "marketixdigital.com.au": {
+   "rd": 779,
+   "backlinks": 2167,
+   "rank": 246
+  },
+  "maturedge.com.au": {
+   "rd": 32,
+   "backlinks": 646,
+   "rank": 276
+  },
+  "medium.com": {
+   "rd": 1419143,
+   "backlinks": 256495483,
+   "rank": 744
+  },
+  "melbourneit.au": {
+   "rd": 1584,
+   "backlinks": 8756,
+   "rank": 348
+  },
+  "melbourneseoconsultant.au": {
+   "rd": 8,
+   "backlinks": 12,
+   "rank": 94
+  },
+  "ministryofdesign.com.au": {
+   "rd": 89,
+   "backlinks": 4184,
+   "rank": 335
+  },
+  "mitsloan.mit.edu": {
+   "rd": 31169,
+   "backlinks": 191443,
+   "rank": 419
+  },
+  "miyai.ai": {
+   "rd": 85,
+   "backlinks": 101,
+   "rank": 157
+  },
+  "murf.ai": {
+   "rd": 12303,
+   "backlinks": 92758,
+   "rank": 411
+  },
+  "mywork.com.au": {
+   "rd": 1292,
+   "backlinks": 1142895,
+   "rank": 499
+  },
+  "n8n.io": {
+   "rd": 24587,
+   "backlinks": 931756,
+   "rank": 499
+  },
+  "neilpatel.com": {
+   "rd": 97334,
+   "backlinks": 7061969,
+   "rank": 576
+  },
+  "neontreehouse.com": {
+   "rd": 218,
+   "backlinks": 367,
+   "rank": 210
+  },
+  "newism.com.au": {
+   "rd": 298,
+   "backlinks": 34200,
+   "rank": 396
+  },
+  "noonmedia.com.au": {
+   "rd": 17,
+   "backlinks": 19,
+   "rank": 0
+  },
+  "olivetreemarketing.com.au": {
+   "rd": 147,
+   "backlinks": 433,
+   "rank": 188
+  },
+  "omnidim.io": {
+   "rd": 56,
+   "backlinks": 165,
+   "rank": 167
+  },
+  "onebookplus.com.au": {
+   "rd": 34,
+   "backlinks": 723,
+   "rank": 240
+  },
+  "openai.com": {
+   "rd": 358174,
+   "backlinks": 51802326,
+   "rank": 711
+  },
+  "oroinc.com": {
+   "rd": 3304,
+   "backlinks": 15750,
+   "rank": 347
+  },
+  "peabodydigital.com.au": {
+   "rd": 38,
+   "backlinks": 286,
+   "rank": 193
+  },
+  "perth-seo-agency.com.au": {
+   "rd": 110,
+   "backlinks": 521,
+   "rank": 266
+  },
+  "perthseostudio.com.au": {
+   "rd": 125,
+   "backlinks": 236,
+   "rank": 247
+  },
+  "perthwebsitestudio.com.au": {
+   "rd": 218,
+   "backlinks": 1634,
+   "rank": 190
+  },
+  "philkurth.com.au": {
+   "rd": 400,
+   "backlinks": 7865,
+   "rank": 354
+  },
+  "pixelmethis.com.au": {
+   "rd": 1,
+   "backlinks": 2,
+   "rank": 0
+  },
+  "pixelstorm.com.au": {
+   "rd": 284,
+   "backlinks": 17137,
+   "rank": 391
+  },
+  "priority1group.com.au": {
+   "rd": 330,
+   "backlinks": 2531,
+   "rank": 281
+  },
+  "prosperdigital.com.au": {
+   "rd": 116,
+   "backlinks": 56329,
+   "rank": 412
+  },
+  "prosperitymedia.com.au": {
+   "rd": 1093,
+   "backlinks": 2123,
+   "rank": 230
+  },
+  "punkfox.com.au": {
+   "rd": 11,
+   "backlinks": 15,
+   "rank": 60
+  },
+  "pwd.com.au": {
+   "rd": 2516,
+   "backlinks": 136115,
+   "rank": 393
+  },
+  "qikify.com": {
+   "rd": 573,
+   "backlinks": 6865,
+   "rank": 310
+  },
+  "radproaustralia.com": {
+   "rd": 59,
+   "backlinks": 95,
+   "rank": 103
+  },
+  "rampupdigital.com.au": {
+   "rd": 69,
+   "backlinks": 357,
+   "rank": 172
+  },
+  "reborn.co": {
+   "rd": 353,
+   "backlinks": 2078,
+   "rank": 284
+  },
+  "redkite.design": {
+   "rd": 363,
+   "backlinks": 2616,
+   "rank": 302
+  },
+  "redmarble.ai": {
+   "rd": 301,
+   "backlinks": 459,
+   "rank": 115
+  },
+  "redmoth.com.au": {
+   "rd": 27,
+   "backlinks": 170,
+   "rank": 239
+  },
+  "reefdigital.com.au": {
+   "rd": 481,
+   "backlinks": 2064,
+   "rank": 231
+  },
+  "reformdigital.com.au": {
+   "rd": 198,
+   "backlinks": 422,
+   "rank": 216
+  },
+  "region.com.au": {
+   "rd": 6154,
+   "backlinks": 203705,
+   "rank": 430
+  },
+  "relevanceai.com": {
+   "rd": 4085,
+   "backlinks": 33360,
+   "rank": 357
+  },
+  "remedystudio.com.au": {
+   "rd": 108,
+   "backlinks": 7587,
+   "rank": 367
+  },
+  "reveler.com.au": {
+   "rd": 139,
+   "backlinks": 3114,
+   "rank": 330
+  },
+  "rgcdigitalmarketing.com.au": {
+   "rd": 488,
+   "backlinks": 12543,
+   "rank": 390
+  },
+  "risedigitalmedia.com.au": {
+   "rd": 160,
+   "backlinks": 3680,
+   "rank": 333
+  },
+  "rocketagency.com.au": {
+   "rd": 731,
+   "backlinks": 1591,
+   "rank": 232
+  },
+  "rpaics.org.au": null,
+  "salescloser.ai": {
+   "rd": 944,
+   "backlinks": 9642,
+   "rank": 277
+  },
+  "saltandfuessel.com.au": {
+   "rd": 237,
+   "backlinks": 15415,
+   "rank": 372
+  },
+  "scp.com.au": {
+   "rd": 94,
+   "backlinks": 173,
+   "rank": 156
+  },
+  "searchdigital.au": {
+   "rd": 23,
+   "backlinks": 14990,
+   "rank": 303
+  },
+  "searchengineland.com": {
+   "rd": 97227,
+   "backlinks": 3033835,
+   "rank": 526
+  },
+  "searchflex.com": {
+   "rd": 261,
+   "backlinks": 514,
+   "rank": 246
+  },
+  "searchscope.com.au": {
+   "rd": 222,
+   "backlinks": 591,
+   "rank": 208
+  },
+  "seo.ai": {
+   "rd": 6097,
+   "backlinks": 27213,
+   "rank": 337
+  },
+  "seobrisbane.com.au": {
+   "rd": 114,
+   "backlinks": 345,
+   "rank": 187
+  },
+  "seoincanberra.com.au": {
+   "rd": 37,
+   "backlinks": 103,
+   "rank": 135
+  },
+  "seoperth.expert": {
+   "rd": 329,
+   "backlinks": 7258,
+   "rank": 340
+  },
+  "seowollongong.com": {
+   "rd": 55,
+   "backlinks": 81,
+   "rank": 71
+  },
+  "seventyfourdesign.com.au": {
+   "rd": 137,
+   "backlinks": 7264,
+   "rank": 344
+  },
+  "sgd.com.au": {
+   "rd": 739,
+   "backlinks": 30862,
+   "rank": 410
+  },
+  "sharkdigital.com.au": {
+   "rd": 574,
+   "backlinks": 1940,
+   "rank": 170
+  },
+  "shuffledigital.com.au": {
+   "rd": 66,
+   "backlinks": 109,
+   "rank": 132
+  },
+  "simplyai.com.au": {
+   "rd": 250,
+   "backlinks": 513,
+   "rank": 197
+  },
+  "sixgun.com.au": {
+   "rd": 1486,
+   "backlinks": 4035,
+   "rank": 303
+  },
+  "skyavenue.com.au": {
+   "rd": 124,
+   "backlinks": 2267,
+   "rank": 315
+  },
+  "skywarddigital.com.au": {
+   "rd": 92,
+   "backlinks": 389,
+   "rank": 236
+  },
+  "slhd.health.nsw.gov.au": {
+   "rd": 823,
+   "backlinks": 5443,
+   "rank": 291
+  },
+  "slickdesign.com.au": {
+   "rd": 228,
+   "backlinks": 5523,
+   "rank": 350
+  },
+  "socialtap.com.au": {
+   "rd": 503,
+   "backlinks": 19155,
+   "rank": 400
+  },
+  "source-digital.com.au": {
+   "rd": 16,
+   "backlinks": 106,
+   "rank": 210
+  },
+  "sovirastudio.com": {
+   "rd": 38,
+   "backlinks": 47,
+   "rank": 84
+  },
+  "sparkdigital.com.au": {
+   "rd": 188,
+   "backlinks": 4705,
+   "rank": 347
+  },
+  "stonedigital.com.au": {
+   "rd": 260,
+   "backlinks": 21197,
+   "rank": 363
+  },
+  "stripe.com": {
+   "rd": 455183,
+   "backlinks": 91749384,
+   "rank": 729
+  },
+  "studio22.com.au": {
+   "rd": 325,
+   "backlinks": 11907,
+   "rank": 380
+  },
+  "studio60design.com.au": {
+   "rd": 93,
+   "backlinks": 310,
+   "rank": 189
+  },
+  "studioeast.com.au": {
+   "rd": 34,
+   "backlinks": 14423,
+   "rank": 347
+  },
+  "studiohawk.com.au": {
+   "rd": 1716,
+   "backlinks": 37576,
+   "rank": 355
+  },
+  "studiowho.com.au": {
+   "rd": 21,
+   "backlinks": 79,
+   "rank": 181
+  },
+  "sunburntai.com.au": {
+   "rd": 24,
+   "backlinks": 66,
+   "rank": 85
+  },
+  "swankyagency.com": {
+   "rd": 716,
+   "backlinks": 11990,
+   "rank": 308
+  },
+  "sydneyaiagency.com": {
+   "rd": 13,
+   "backlinks": 15,
+   "rank": 0
+  },
+  "sydneydigitalmarketing.com.au": {
+   "rd": 247,
+   "backlinks": 3242,
+   "rank": 316
+  },
+  "sydneylocalseo.net.au": null,
+  "synthflow.ai": {
+   "rd": 2947,
+   "backlinks": 27304,
+   "rank": 335
+  },
+  "tassiewebsites.au": {
+   "rd": 126,
+   "backlinks": 2793,
+   "rank": 312
+  },
+  "tdsaustralia.com.au": {
+   "rd": 95,
+   "backlinks": 10913,
+   "rank": 407
+  },
+  "team400.ai": {
+   "rd": 999,
+   "backlinks": 20187,
+   "rank": 364
+  },
+  "tecala.com.au": {
+   "rd": 493,
+   "backlinks": 4660,
+   "rank": 232
+  },
+  "techbehemoths.com": {
+   "rd": 5701,
+   "backlinks": 592764,
+   "rank": 530
+  },
+  "technologycue.com.au": {
+   "rd": 92,
+   "backlinks": 347,
+   "rank": 183
+  },
+  "techreviewer.co": {
+   "rd": 3143,
+   "backlinks": 57380,
+   "rank": 430
+  },
+  "theaiautomationagency.ai": {
+   "rd": 88,
+   "backlinks": 118,
+   "rank": 176
+  },
+  "thecreativestore.com.au": {
+   "rd": 139,
+   "backlinks": 5791,
+   "rank": 343
+  },
+  "thehopefactory.com": {
+   "rd": 173,
+   "backlinks": 483,
+   "rank": 217
+  },
+  "thestart.com.au": {
+   "rd": 518,
+   "backlinks": 29238,
+   "rank": 399
+  },
+  "thomas-wiegold.com": {
+   "rd": 124,
+   "backlinks": 329,
+   "rank": 161
+  },
+  "thriveagency.com": {
+   "rd": 9328,
+   "backlinks": 208498,
+   "rank": 483
+  },
+  "thriveweb.com.au": {
+   "rd": 1766,
+   "backlinks": 444623,
+   "rank": 500
+  },
+  "titanblue.com.au": {
+   "rd": 687,
+   "backlinks": 3741,
+   "rank": 307
+  },
+  "tradiebots.com.au": {
+   "rd": 58,
+   "backlinks": 543,
+   "rank": 137
+  },
+  "trekwebdesign.com.au": {
+   "rd": 38,
+   "backlinks": 52,
+   "rank": 53
+  },
+  "tugtraffic.com.au": {
+   "rd": 57,
+   "backlinks": 132,
+   "rank": 181
+  },
+  "tv.apple.com": {
+   "rd": 51377,
+   "backlinks": 10479816,
+   "rank": 569
+  },
+  "twomoonsconsulting.com.au": {
+   "rd": 182,
+   "backlinks": 2146,
+   "rank": 318
+  },
+  "uprisedigital.com.au": {
+   "rd": 144,
+   "backlinks": 310,
+   "rank": 214
+  },
+  "vapi.ai": {
+   "rd": 3003,
+   "backlinks": 19336,
+   "rank": 380
+  },
+  "virtocommerce.com": {
+   "rd": 2057,
+   "backlinks": 75015,
+   "rank": 397
+  },
+  "vivogroup.com.au": {
+   "rd": 255,
+   "backlinks": 20508,
+   "rank": 426
+  },
+  "webdesigngeelong.au": {
+   "rd": 8,
+   "backlinks": 9,
+   "rank": 35
+  },
+  "webdesignhobart.com": {
+   "rd": 78,
+   "backlinks": 143,
+   "rank": 185
+  },
+  "webdesignincanberra.com.au": {
+   "rd": 44,
+   "backlinks": 134,
+   "rank": 157
+  },
+  "webdesignperth.com.au": {
+   "rd": 121,
+   "backlinks": 217,
+   "rank": 147
+  },
+  "webdesignsunshinecoast.net": {
+   "rd": 293,
+   "backlinks": 1116,
+   "rank": 308
+  },
+  "webdevelopmentcompany.au": {
+   "rd": 27,
+   "backlinks": 40,
+   "rank": 138
+  },
+  "webeasy.com.au": {
+   "rd": 376,
+   "backlinks": 3393,
+   "rank": 348
+  },
+  "webhoney.digital": {
+   "rd": 50,
+   "backlinks": 845,
+   "rank": 251
+  },
+  "weboracle.com.au": {
+   "rd": 488,
+   "backlinks": 3335,
+   "rank": 352
+  },
+  "websiteadelaide.com": {
+   "rd": 404,
+   "backlinks": 20065,
+   "rank": 439
+  },
+  "whatagraph.com": {
+   "rd": 4642,
+   "backlinks": 16124,
+   "rank": 345
+  },
+  "willmullins.com.au": {
+   "rd": 137,
+   "backlinks": 197,
+   "rank": 159
+  },
+  "wpcreative.com.au": {
+   "rd": 1015,
+   "backlinks": 9006,
+   "rank": 326
+  },
+  "www.23digital.com.au": {
+   "rd": 602,
+   "backlinks": 34010,
+   "rank": 405
+  },
+  "www.42digital.com.au": {
+   "rd": 1,
+   "backlinks": 4,
+   "rank": 15
+  },
+  "www.7thvision.com.au": {
+   "rd": 344,
+   "backlinks": 30116,
+   "rank": 334
+  },
+  "www.9now.com.au": {
+   "rd": 7227,
+   "backlinks": 965576,
+   "rank": 543
+  },
+  "www.abf.gov.au": {
+   "rd": 5606,
+   "backlinks": 133815,
+   "rank": 421
+  },
+  "www.adsmurai.com": {
+   "rd": 1971,
+   "backlinks": 13224,
+   "rank": 305
+  },
+  "www.advancer.com.au": {
+   "rd": 225,
+   "backlinks": 388,
+   "rank": 61
+  },
+  "www.adyen.com": {
+   "rd": 34620,
+   "backlinks": 394255,
+   "rank": 509
+  },
+  "www.aec.gov.au": {
+   "rd": 6301,
+   "backlinks": 73491,
+   "rank": 413
+  },
+  "www.aeoperations.com.au": {
+   "rd": 5,
+   "backlinks": 10,
+   "rank": 11
+  },
+  "www.aerobusinesssolutions.com": {
+   "rd": 220,
+   "backlinks": 12275,
+   "rank": 374
+  },
+  "www.agenticcommerce.dev": {
+   "rd": 583,
+   "backlinks": 1513,
+   "rank": 258
+  },
+  "www.aiautomationbrisbane.com.au": {
+   "rd": 6,
+   "backlinks": 56,
+   "rank": 132
+  },
+  "www.aiautomationmelbourne.com.au": null,
+  "www.ailabaustralia.com": {
+   "rd": 12,
+   "backlinks": 77,
+   "rank": 141
+  },
+  "www.airtasker.com": {
+   "rd": 15050,
+   "backlinks": 408136,
+   "rank": 548
+  },
+  "www.aiservicesbrisbane.com.au": null,
+  "www.aissie.com.au": {
+   "rd": 2,
+   "backlinks": 4,
+   "rank": 0
+  },
+  "www.aitalentondemand.com.au": {
+   "rd": 73,
+   "backlinks": 203,
+   "rank": 72
+  },
+  "www.aitrillion.com": {
+   "rd": 683,
+   "backlinks": 44487,
+   "rank": 393
+  },
+  "www.alyka.com.au": {
+   "rd": 338,
+   "backlinks": 28682,
+   "rank": 420
+  },
+  "www.andmine.com.au": {
+   "rd": 400,
+   "backlinks": 14608,
+   "rank": 387
+  },
+  "www.anthropic.com": {
+   "rd": 78822,
+   "backlinks": 2796755,
+   "rank": 615
+  },
+  "www.apwebsolutions.com.au": {
+   "rd": 326,
+   "backlinks": 1517,
+   "rank": 279
+  },
+  "www.areaten.com": {
+   "rd": 672,
+   "backlinks": 3161,
+   "rank": 429
+  },
+  "www.assurancedigital.au": {
+   "rd": 59,
+   "backlinks": 701,
+   "rank": 216
+  },
+  "www.aussifywebdesign.com.au": null,
+  "www.auswebdesign.com.au": {
+   "rd": 57,
+   "backlinks": 1245,
+   "rank": 287
+  },
+  "www.b2bea.org": {
+   "rd": 445,
+   "backlinks": 4492,
+   "rank": 373
+  },
+  "www.bakercreative.com.au": {
+   "rd": 251,
+   "backlinks": 392,
+   "rank": 241
+  },
+  "www.balanceinternet.com.au": {
+   "rd": 104,
+   "backlinks": 401,
+   "rank": 166
+  },
+  "www.bark.com": {
+   "rd": 33902,
+   "backlinks": 1847559,
+   "rank": 566
+  },
+  "www.beansmarketing.com.au": {
+   "rd": 278,
+   "backlinks": 4565,
+   "rank": 340
+  },
+  "www.belindaowen.com": {
+   "rd": 107,
+   "backlinks": 532,
+   "rank": 181
+  },
+  "www.beontop.com": {
+   "rd": 2533,
+   "backlinks": 522285,
+   "rank": 482
+  },
+  "www.beyondkey.com.au": {
+   "rd": 7,
+   "backlinks": 20,
+   "rank": 79
+  },
+  "www.bigcommerce.com": {
+   "rd": 47789,
+   "backlinks": 20378398,
+   "rank": 616
+  },
+  "www.bloomdigital.net.au": {
+   "rd": 373,
+   "backlinks": 1597,
+   "rank": 178
+  },
+  "www.bonfire.com.au": {
+   "rd": 231,
+   "backlinks": 7258,
+   "rank": 220
+  },
+  "www.boylen.com.au": {
+   "rd": 485,
+   "backlinks": 53958,
+   "rank": 439
+  },
+  "www.braive.com.au": {
+   "rd": 2,
+   "backlinks": 2,
+   "rank": 0
+  },
+  "www.bruceclay.com": {
+   "rd": 4804,
+   "backlinks": 87623,
+   "rank": 382
+  },
+  "www.bsbmarketing.com.au": {
+   "rd": 30,
+   "backlinks": 143,
+   "rank": 64
+  },
+  "www.canberraweb.com.au": {
+   "rd": 232,
+   "backlinks": 6482,
+   "rank": 369
+  },
+  "www.capterra.com.au": {
+   "rd": 2117,
+   "backlinks": 5979658,
+   "rank": 540
+  },
+  "www.chilligroup.com.au": {
+   "rd": 335,
+   "backlinks": 8238,
+   "rank": 358
+  },
+  "www.christom.com.au": {
+   "rd": 232,
+   "backlinks": 37459,
+   "rank": 413
+  },
+  "www.chromatix.com.au": {
+   "rd": 914,
+   "backlinks": 38923,
+   "rank": 412
+  },
+  "www.cliqmc.com.au": {
+   "rd": 136,
+   "backlinks": 385,
+   "rank": 182
+  },
+  "www.cloudcartel.com.au": {
+   "rd": 256,
+   "backlinks": 9972,
+   "rank": 369
+  },
+  "www.concise.digital": {
+   "rd": 384,
+   "backlinks": 30044,
+   "rank": 446
+  },
+  "www.consultancy.com.au": {
+   "rd": 1751,
+   "backlinks": 6079,
+   "rank": 274
+  },
+  "www.convertdigital.com.au": {
+   "rd": 135,
+   "backlinks": 603,
+   "rank": 192
+  },
+  "www.creatio.com": {
+   "rd": 6448,
+   "backlinks": 114562,
+   "rank": 382
+  },
+  "www.criteo.com": {
+   "rd": 28809,
+   "backlinks": 3722919,
+   "rank": 708
+  },
+  "www.cvwcreative.com.au": {
+   "rd": 105,
+   "backlinks": 15908,
+   "rank": 383
+  },
+  "www.decidr.ai": {
+   "rd": 356,
+   "backlinks": 1258,
+   "rank": 279
+  },
+  "www.designrush.com": {
+   "rd": 32189,
+   "backlinks": 3039670,
+   "rank": 595
+  },
+  "www.digitalhitmen.com.au": {
+   "rd": 366,
+   "backlinks": 7422,
+   "rank": 354
+  },
+  "www.digitalmarketingadelaide.com.au": {
+   "rd": 165,
+   "backlinks": 206,
+   "rank": 145
+  },
+  "www.digitalrescue.com.au": {
+   "rd": 217,
+   "backlinks": 2426,
+   "rank": 333
+  },
+  "www.digitxl.com.au": {
+   "rd": 77,
+   "backlinks": 450,
+   "rank": 187
+  },
+  "www.dilate.com.au": {
+   "rd": 743,
+   "backlinks": 9494,
+   "rank": 333
+  },
+  "www.donhesh.com.au": {
+   "rd": 27,
+   "backlinks": 40,
+   "rank": 92
+  },
+  "www.earnedmedia.com.au": {
+   "rd": 696,
+   "backlinks": 1185,
+   "rank": 217
+  },
+  "www.elevatewebdesigns.com.au": {
+   "rd": 18,
+   "backlinks": 204,
+   "rank": 223
+  },
+  "www.elsner.com.au": {
+   "rd": 335,
+   "backlinks": 3595,
+   "rank": 287
+  },
+  "www.emotedigital.com.au": {
+   "rd": 194,
+   "backlinks": 27230,
+   "rank": 360
+  },
+  "www.empowerit.com.au": {
+   "rd": 136,
+   "backlinks": 1331,
+   "rank": 163
+  },
+  "www.eurisko.com.au": {
+   "rd": 141,
+   "backlinks": 4491,
+   "rank": 340
+  },
+  "www.ewebmarketing.au": {
+   "rd": 770,
+   "backlinks": 23659,
+   "rank": 397
+  },
+  "www.excitemedia.com.au": {
+   "rd": 735,
+   "backlinks": 96476,
+   "rank": 457
+  },
+  "www.facebook.com": {
+   "rd": 34736119,
+   "backlinks": 57727110096,
+   "rank": 1000
+  },
+  "www.fivebyfive.com.au": {
+   "rd": 670,
+   "backlinks": 52483,
+   "rank": 347
+  },
+  "www.formulate.com.au": {
+   "rd": 56,
+   "backlinks": 109,
+   "rank": 136
+  },
+  "www.frankdigital.com.au": {
+   "rd": 148,
+   "backlinks": 511,
+   "rank": 204
+  },
+  "www.goodfirms.co": {
+   "rd": 18750,
+   "backlinks": 3573512,
+   "rank": 575
+  },
+  "www.goop.com.au": {
+   "rd": 537,
+   "backlinks": 25932,
+   "rank": 425
+  },
+  "www.gov.uk": {
+   "rd": 548566,
+   "backlinks": 71937438,
+   "rank": 704
+  },
+  "www.gumloop.com": {
+   "rd": 2655,
+   "backlinks": 19236,
+   "rank": 329
+  },
+  "www.heyitslola.com": {
+   "rd": 83,
+   "backlinks": 103,
+   "rank": 202
+  },
+  "www.hyphn.com.au": {
+   "rd": 2,
+   "backlinks": 3,
+   "rank": 0
+  },
+  "www.ibm.com": {
+   "rd": 286217,
+   "backlinks": 11034918,
+   "rank": 606
+  },
+  "www.insidermedia.com.au": {
+   "rd": 195,
+   "backlinks": 98692,
+   "rank": 449
+  },
+  "www.instagram.com": {
+   "rd": 22562543,
+   "backlinks": 32379055984,
+   "rank": 1000
+  },
+  "www.intermeta.ai": {
+   "rd": 2,
+   "backlinks": 3,
+   "rank": 0
+  },
+  "www.itomic.com.au": {
+   "rd": 489,
+   "backlinks": 19455,
+   "rank": 395
+  },
+  "www.jaredbennett.com.au": {
+   "rd": 35,
+   "backlinks": 55,
+   "rank": 97
+  },
+  "www.jasper.ai": {
+   "rd": 29650,
+   "backlinks": 166617,
+   "rank": 527
+  },
+  "www.josiebrownwebdesign.com.au": {
+   "rd": 53,
+   "backlinks": 763,
+   "rank": 253
+  },
+  "www.jslmedia.com.au": {
+   "rd": 110,
+   "backlinks": 53693,
+   "rank": 392
+  },
+  "www.jtbstudios.com.au": {
+   "rd": 898,
+   "backlinks": 22435,
+   "rank": 407
+  },
+  "www.kiaoradigital.com.au": {
+   "rd": 78,
+   "backlinks": 838,
+   "rank": 239
+  },
+  "www.kineticconsulting.com.au": {
+   "rd": 30,
+   "backlinks": 125,
+   "rank": 205
+  },
+  "www.kmo.com.au": {
+   "rd": 299,
+   "backlinks": 54964,
+   "rank": 461
+  },
+  "www.kook.com.au": {
+   "rd": 437,
+   "backlinks": 15743,
+   "rank": 406
+  },
+  "www.lethal.com.au": {
+   "rd": 430,
+   "backlinks": 12555,
+   "rank": 344
+  },
+  "www.liamridingscopywriter.com.au": {
+   "rd": 101,
+   "backlinks": 282,
+   "rank": 160
+  },
+  "www.lightningventures.com.au": {
+   "rd": 82,
+   "backlinks": 102,
+   "rank": 86
+  },
+  "www.linkedin.com": {
+   "rd": 13361317,
+   "backlinks": 15222777024,
+   "rank": 963
+  },
+  "www.localsearch.com.au": {
+   "rd": 8407,
+   "backlinks": 173932,
+   "rank": 440
+  },
+  "www.loudachris.com.au": {
+   "rd": 91,
+   "backlinks": 4842,
+   "rank": 342
+  },
+  "www.lovemyonlinemarketing.com": {
+   "rd": 275,
+   "backlinks": 5379,
+   "rank": 349
+  },
+  "www.madweb.com.au": {
+   "rd": 96,
+   "backlinks": 98,
+   "rank": 0
+  },
+  "www.makemywebsite.com.au": {
+   "rd": 1448,
+   "backlinks": 29591,
+   "rank": 378
+  },
+  "www.markseo.com.au": {
+   "rd": 37,
+   "backlinks": 1739,
+   "rank": 299
+  },
+  "www.mckinsey.com": {
+   "rd": 286655,
+   "backlinks": 2646491,
+   "rank": 542
+  },
+  "www.melbourneaiagents.com.au": {
+   "rd": 1,
+   "backlinks": 2,
+   "rank": 0
+  },
+  "www.melbourneseoservices.com": {
+   "rd": 359,
+   "backlinks": 2628,
+   "rank": 239
+  },
+  "www.michaelsherry.com.au": {
+   "rd": 582,
+   "backlinks": 25704,
+   "rank": 299
+  },
+  "www.microsoft.com": {
+   "rd": 871472,
+   "backlinks": 294305440,
+   "rank": 744
+  },
+  "www.milkdigital.com.au": {
+   "rd": 101,
+   "backlinks": 10026,
+   "rank": 403
+  },
+  "www.mindarc.com": {
+   "rd": 176,
+   "backlinks": 490,
+   "rank": 218
+  },
+  "www.moveworks.com": {
+   "rd": 4013,
+   "backlinks": 27934,
+   "rank": 320
+  },
+  "www.nicreated.com.au": {
+   "rd": 27,
+   "backlinks": 801,
+   "rank": 204
+  },
+  "www.nvidia.com": {
+   "rd": 128829,
+   "backlinks": 10016225,
+   "rank": 595
+  },
+  "www.ogilvy.com.au": {
+   "rd": 262,
+   "backlinks": 7563,
+   "rank": 308
+  },
+  "www.optimising.com.au": {
+   "rd": 221,
+   "backlinks": 709,
+   "rank": 206
+  },
+  "www.ottomedia.com.au": {
+   "rd": 107,
+   "backlinks": 390,
+   "rank": 199
+  },
+  "www.pa.com.au": {
+   "rd": 299,
+   "backlinks": 2171,
+   "rank": 238
+  },
+  "www.paperstack.com.au": {
+   "rd": 542,
+   "backlinks": 132333,
+   "rank": 400
+  },
+  "www.pathfindermarketing.com.au": {
+   "rd": 183,
+   "backlinks": 1367,
+   "rank": 262
+  },
+  "www.perthweb.com.au": {
+   "rd": 316,
+   "backlinks": 50760,
+   "rank": 461
+  },
+  "www.pivotalagency.com.au": {
+   "rd": 286,
+   "backlinks": 77659,
+   "rank": 400
+  },
+  "www.pixeld.com.au": {
+   "rd": 235,
+   "backlinks": 17913,
+   "rank": 399
+  },
+  "www.pixelfish.com.au": {
+   "rd": 350,
+   "backlinks": 23244,
+   "rank": 401
+  },
+  "www.processcreative.com.au": {
+   "rd": 9,
+   "backlinks": 378,
+   "rank": 212
+  },
+  "www.projectsimple.com.au": {
+   "rd": 46,
+   "backlinks": 543,
+   "rank": 254
+  },
+  "www.protiviti.com": {
+   "rd": 5657,
+   "backlinks": 222994,
+   "rank": 446
+  },
+  "www.pwc.com.au": {
+   "rd": 6779,
+   "backlinks": 25929,
+   "rank": 363
+  },
+  "www.quikclicks.com.au": {
+   "rd": 710,
+   "backlinks": 26068,
+   "rank": 413
+  },
+  "www.rankingaustralia.com.au": {
+   "rd": 34,
+   "backlinks": 399,
+   "rank": 226
+  },
+  "www.rankingco.com.au": {
+   "rd": 233,
+   "backlinks": 935,
+   "rank": 200
+  },
+  "www.rb.com.au": {
+   "rd": 1282,
+   "backlinks": 30132,
+   "rank": 382
+  },
+  "www.reddit.com": {
+   "rd": 1092277,
+   "backlinks": 1671611232,
+   "rank": 789
+  },
+  "www.redhat.com": {
+   "rd": 76837,
+   "backlinks": 6332669,
+   "rank": 602
+  },
+  "www.resurgedigital.com.au": {
+   "rd": 102,
+   "backlinks": 9736,
+   "rank": 236
+  },
+  "www.retaildive.com": {
+   "rd": 26642,
+   "backlinks": 323705,
+   "rank": 443
+  },
+  "www.retellai.com": {
+   "rd": 2233,
+   "backlinks": 12552,
+   "rank": 339
+  },
+  "www.rewardinc.com.au": {
+   "rd": 65,
+   "backlinks": 1230,
+   "rank": 320
+  },
+  "www.rhythmwebsites.com.au": {
+   "rd": 55,
+   "backlinks": 2551,
+   "rank": 308
+  },
+  "www.rubix.com.au": {
+   "rd": 59,
+   "backlinks": 344,
+   "rank": 183
+  },
+  "www.salesforce.com": {
+   "rd": 175003,
+   "backlinks": 4884863,
+   "rank": 673
+  },
+  "www.sap.com": {
+   "rd": 74917,
+   "backlinks": 12995604,
+   "rank": 656
+  },
+  "www.screenaustralia.gov.au": {
+   "rd": 5460,
+   "backlinks": 78620,
+   "rank": 418
+  },
+  "www.sentius.com.au": {
+   "rd": 119,
+   "backlinks": 825,
+   "rank": 262
+  },
+  "www.seoadvantage.com.au": {
+   "rd": 143,
+   "backlinks": 2774,
+   "rank": 293
+  },
+  "www.seoempire.com.au": {
+   "rd": 71,
+   "backlinks": 4378,
+   "rank": 292
+  },
+  "www.seonorthsydney.com.au": {
+   "rd": 485,
+   "backlinks": 2535,
+   "rank": 274
+  },
+  "www.seopartners.com.au": {
+   "rd": 45,
+   "backlinks": 64,
+   "rank": 106
+  },
+  "www.seoperthexperts.com.au": {
+   "rd": 235,
+   "backlinks": 2745,
+   "rank": 340
+  },
+  "www.seoservices.com.au": {
+   "rd": 253,
+   "backlinks": 776,
+   "rank": 269
+  },
+  "www.seotakeoff.com": {
+   "rd": 29,
+   "backlinks": 1780,
+   "rank": 110
+  },
+  "www.sharpinstincts.com.au": {
+   "rd": 191,
+   "backlinks": 3742,
+   "rank": 301
+  },
+  "www.shopify.com": {
+   "rd": 1871409,
+   "backlinks": 922469744,
+   "rank": 691
+  },
+  "www.shoutdigital.com.au": {
+   "rd": 895,
+   "backlinks": 24082,
+   "rank": 334
+  },
+  "www.simple.com.au": {
+   "rd": 184,
+   "backlinks": 35776,
+   "rank": 400
+  },
+  "www.slinkywebdesign.com.au": {
+   "rd": 508,
+   "backlinks": 6155,
+   "rank": 357
+  },
+  "www.smallbusinesswebdesigns.net.au": {
+   "rd": 255,
+   "backlinks": 878,
+   "rank": 235
+  },
+  "www.smartosc.com": {
+   "rd": 1659,
+   "backlinks": 16589,
+   "rank": 292
+  },
+  "www.sophiie.ai": {
+   "rd": 93,
+   "backlinks": 332,
+   "rank": 158
+  },
+  "www.sortlist.com": {
+   "rd": 6623,
+   "backlinks": 4702153,
+   "rank": 598
+  },
+  "www.spacewolf.au": {
+   "rd": 10,
+   "backlinks": 11,
+   "rank": 88
+  },
+  "www.sparkinteract.com.au": {
+   "rd": 746,
+   "backlinks": 27803,
+   "rank": 395
+  },
+  "www.specialgroup.com": {
+   "rd": 52,
+   "backlinks": 88,
+   "rank": 143
+  },
+  "www.squarespace.com": {
+   "rd": 302941,
+   "backlinks": 13362779,
+   "rank": 667
+  },
+  "www.ssw.com.au": {
+   "rd": 1257,
+   "backlinks": 20562,
+   "rank": 350
+  },
+  "www.suncoastmedia.com.au": {
+   "rd": 101,
+   "backlinks": 4623,
+   "rank": 329
+  },
+  "www.sutherlandglobal.com": {
+   "rd": 2524,
+   "backlinks": 18742,
+   "rank": 352
+  },
+  "www.synap.au": {
+   "rd": 4,
+   "backlinks": 92,
+   "rank": 165
+  },
+  "www.thead.com.au": {
+   "rd": 344,
+   "backlinks": 3612,
+   "rank": 286
+  },
+  "www.thecreativeworks.com.au": {
+   "rd": 22,
+   "backlinks": 107,
+   "rank": 225
+  },
+  "www.thehero.co": {
+   "rd": 33,
+   "backlinks": 118,
+   "rank": 167
+  },
+  "www.theorchardagency.com.au": {
+   "rd": 72,
+   "backlinks": 111,
+   "rank": 120
+  },
+  "www.thoughtworks.com": {
+   "rd": 15796,
+   "backlinks": 457338,
+   "rank": 467
+  },
+  "www.uipath.com": {
+   "rd": 16566,
+   "backlinks": 147450,
+   "rank": 446
+  },
+  "www.upwork.com": {
+   "rd": 106859,
+   "backlinks": 2613934,
+   "rank": 604
+  },
+  "www.valory.com.au": {
+   "rd": 10,
+   "backlinks": 31,
+   "rank": 115
+  },
+  "www.vellum.ai": {
+   "rd": 3046,
+   "backlinks": 18158,
+   "rank": 326
+  },
+  "www.verveinnovation.au": {
+   "rd": 59,
+   "backlinks": 3006,
+   "rank": 324
+  },
+  "www.vibe0.com.au": {
+   "rd": 31,
+   "backlinks": 710,
+   "rank": 311
+  },
+  "www.vrinsoft.com.au": {
+   "rd": 731,
+   "backlinks": 10612,
+   "rank": 302
+  },
+  "www.wakeforddigital.com.au": {
+   "rd": 108,
+   "backlinks": 1590,
+   "rank": 317
+  },
+  "www.wdmagency.com.au": {
+   "rd": 2,
+   "backlinks": 4,
+   "rank": 0
+  },
+  "www.wearetag.co": {
+   "rd": 83,
+   "backlinks": 1571,
+   "rank": 296
+  },
+  "www.web4business.com.au": {
+   "rd": 780,
+   "backlinks": 4679,
+   "rank": 327
+  },
+  "www.webadelaide.com.au": {
+   "rd": 259,
+   "backlinks": 3555,
+   "rank": 313
+  },
+  "www.webalive.com.au": {
+   "rd": 1184,
+   "backlinks": 7844,
+   "rank": 358
+  },
+  "www.webdesignadelaide.com.au": {
+   "rd": 61,
+   "backlinks": 17077,
+   "rank": 367
+  },
+  "www.webdesigninmelbourne.com.au": {
+   "rd": 14,
+   "backlinks": 125,
+   "rank": 233
+  },
+  "www.webdevelopmentexperts.com.au": {
+   "rd": 5,
+   "backlinks": 42,
+   "rank": 114
+  },
+  "www.webmarketingguru.com.au": {
+   "rd": 98,
+   "backlinks": 1496,
+   "rank": 293
+  },
+  "www.websitedesign.com.au": {
+   "rd": 143,
+   "backlinks": 658,
+   "rank": 246
+  },
+  "www.websitesthatsell.com.au": {
+   "rd": 521,
+   "backlinks": 8521,
+   "rank": 275
+  },
+  "www.whitepeakdigital.com": {
+   "rd": 1034,
+   "backlinks": 58385,
+   "rank": 431
+  },
+  "www.wolfiq.com.au": {
+   "rd": 313,
+   "backlinks": 18901,
+   "rank": 391
+  },
+  "www.wolfwebsitedesigns.com.au": {
+   "rd": 92,
+   "backlinks": 2536,
+   "rank": 322
+  },
+  "www.wollongongwebdesign.com.au": {
+   "rd": 20,
+   "backlinks": 26,
+   "rank": 73
+  },
+  "www.wto.org": {
+   "rd": 56577,
+   "backlinks": 5166907,
+   "rank": 591
+  },
+  "www.yoghurtdigital.com.au": {
+   "rd": 168,
+   "backlinks": 2110,
+   "rank": 255
+  },
+  "www.youtube.com": {
+   "rd": 18266262,
+   "backlinks": 29888714832,
+   "rank": 1000
+  },
+  "www.zammeth.com.au": {
+   "rd": 28,
+   "backlinks": 908,
+   "rank": 282
+  },
+  "x.ai": {
+   "rd": 27003,
+   "backlinks": 1900735,
+   "rank": 516
+  },
+  "yesai.au": {
+   "rd": 30,
+   "backlinks": 669,
+   "rank": 283
+  },
+  "yourcreative.com.au": {
+   "rd": 616,
+   "backlinks": 9729,
+   "rank": 341
+  },
+  "zeemo.com.au": {
+   "rd": 334,
+   "backlinks": 41035,
+   "rank": 417
+  },
+  "zibdigital.com.au": {
+   "rd": 1144,
+   "backlinks": 86638,
+   "rank": 442
+  }
+ },
+ "terms": [
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "agentic ai",
+   "volume": 8100,
+   "cpc": 15.6,
+   "aio": true,
+   "top10": [
+    "agentic.ai",
+    "www.ibm.com",
+    "mitsloan.mit.edu",
+    "www.salesforce.com",
+    "en.wikipedia.org",
+    "aws.amazon.com",
+    "www.gov.uk",
+    "cloud.google.com",
+    "www.redhat.com",
+    "www.uipath.com"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "What is actually an agentic AI?",
+    "Is ChatGPT agentic AI?",
+    "What is the difference between AI Genai and agentic AI?",
+    "What is an agentic AI model?"
+   ],
+   "err": null,
+   "weakest_rd": 574,
+   "weakest_dom": "agentic.ai",
+   "median_rd": 188523.0,
+   "ratio": 20.5,
+   "verdict": "GATED (not this year)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "web design perth",
+   "volume": 4400,
+   "cpc": 23.57,
+   "aio": false,
+   "top10": [
+    "pwd.com.au",
+    "webdesignperth.com.au",
+    "www.wolfwebsitedesigns.com.au",
+    "www.lethal.com.au",
+    "www.bakercreative.com.au",
+    "www.reddit.com",
+    "remedystudio.com.au",
+    "www.slinkywebdesign.com.au",
+    "www.bark.com",
+    "deliciousdesign.com.au"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "How much does it cost to design a website in Perth?",
+    "What is the average cost for a website designer?",
+    "How much should a full website design cost?",
+    "Is web design still in demand in 2026?"
+   ],
+   "err": null,
+   "weakest_rd": 92,
+   "weakest_dom": "www.wolfwebsitedesigns.com.au",
+   "median_rd": 340.5,
+   "ratio": 3.2857142857142856,
+   "verdict": "HARD (sustained link building)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "web design brisbane",
+   "volume": 2400,
+   "cpc": 35.73,
+   "aio": false,
+   "top10": [
+    "www.elevatewebdesigns.com.au",
+    "digitalnomadshq.com.au",
+    "mywork.com.au",
+    "www.kmo.com.au",
+    "alanajadestudio.com",
+    "ashgrovewebdesign.com.au",
+    "www.belindaowen.com",
+    "www.whitepeakdigital.com",
+    "www.reddit.com",
+    "feelgoodcreative.com.au"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "How much does it cost to design a website in Brisbane?",
+    "How much do website designers usually charge?",
+    "Is web design still in demand in 2026?",
+    "How much does it cost to design a web?"
+   ],
+   "err": null,
+   "weakest_rd": 18,
+   "weakest_dom": "www.elevatewebdesigns.com.au",
+   "median_rd": 247.0,
+   "ratio": 0.6428571428571429,
+   "verdict": "WINNABLE NOW"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "website design sydney",
+   "volume": 2400,
+   "cpc": 35.29,
+   "aio": false,
+   "top10": [
+    "www.milkdigital.com.au",
+    "www.thead.com.au",
+    "jimmyweb.net",
+    "www.wolfiq.com.au",
+    "madeagency.com.au",
+    "www.smallbusinesswebdesigns.net.au",
+    "www.quikclicks.com.au",
+    "clutch.co",
+    "magicdust.com.au",
+    "www.sparkinteract.com.au"
+   ],
+   "dir_count": 1,
+   "fj_pos": null,
+   "paa": [
+    "How much does it cost to design a website in Sydney?",
+    "How much would it cost for someone to design a website?",
+    "Is web design still in demand in 2026?",
+    "What are the five golden rules of a website?"
+   ],
+   "err": null,
+   "weakest_rd": 101,
+   "weakest_dom": "www.milkdigital.com.au",
+   "median_rd": 656.5,
+   "ratio": 3.607142857142857,
+   "verdict": "HARD (sustained link building)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "seo agency brisbane",
+   "volume": 1900,
+   "cpc": 25.16,
+   "aio": false,
+   "top10": [
+    "digital8.com.au",
+    "www.excitemedia.com.au",
+    "agencies.semrush.com",
+    "www.jaredbennett.com.au",
+    "www.dilate.com.au",
+    "zibdigital.com.au",
+    "studiohawk.com.au",
+    "clutch.co",
+    "bambrick.com.au",
+    "sixgun.com.au"
+   ],
+   "dir_count": 1,
+   "fj_pos": null,
+   "paa": [
+    "How much does SEO cost in Brisbane?",
+    "How much should I expect to pay for SEO?",
+    "Is an SEO agency worth it?",
+    "How much does SEO cost in Australia?"
+   ],
+   "err": null,
+   "weakest_rd": 35,
+   "weakest_dom": "www.jaredbennett.com.au",
+   "median_rd": 943.5,
+   "ratio": 1.25,
+   "verdict": "WINNABLE (one link cycle)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "seo agency melbourne",
+   "volume": 1900,
+   "cpc": 33.74,
+   "aio": true,
+   "top10": [
+    "studiohawk.com.au",
+    "impressive.com.au",
+    "www.shoutdigital.com.au",
+    "agencies.semrush.com",
+    "zibdigital.com.au",
+    "saltandfuessel.com.au",
+    "digitalsurfer.com.au",
+    "aekmedia.com.au",
+    "www.sentius.com.au",
+    "clutch.co"
+   ],
+   "dir_count": 1,
+   "fj_pos": null,
+   "paa": [
+    "How much does SEO typically cost in Melbourne?",
+    "Who is the best SEO agency in Melbourne?",
+    "Is an SEO agency worth it?",
+    "Which AI SEO agency is located in Melbourne?"
+   ],
+   "err": null,
+   "weakest_rd": 119,
+   "weakest_dom": "www.sentius.com.au",
+   "median_rd": 1019.5,
+   "ratio": 4.25,
+   "verdict": "HARD (sustained link building)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "web design melbourne",
+   "volume": 1900,
+   "cpc": 12.72,
+   "aio": false,
+   "top10": [
+    "www.makemywebsite.com.au",
+    "www.chromatix.com.au",
+    "www.simple.com.au",
+    "confettidesign.com.au",
+    "digitalagencynetwork.com",
+    "www.heyitslola.com",
+    "www.airtasker.com",
+    "www.christom.com.au",
+    "clutch.co",
+    "www.webdesigninmelbourne.com.au"
+   ],
+   "dir_count": 1,
+   "fj_pos": null,
+   "paa": [
+    "How much does it cost to design a website in Melbourne?",
+    "How much does it cost to pay someone to design a website?",
+    "Is web design still in demand in 2026?",
+    "How much should a full website design cost?"
+   ],
+   "err": null,
+   "weakest_rd": 14,
+   "weakest_dom": "www.webdesigninmelbourne.com.au",
+   "median_rd": 573.0,
+   "ratio": 0.5,
+   "verdict": "WINNABLE NOW"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "seo agency perth",
+   "volume": 1600,
+   "cpc": 48.85,
+   "aio": false,
+   "top10": [
+    "pwd.com.au",
+    "www.dilate.com.au",
+    "prosperitymedia.com.au",
+    "digitalnomadshq.com.au",
+    "perthseostudio.com.au",
+    "marketixdigital.com.au",
+    "agencies.semrush.com",
+    "firewiredigital.com.au",
+    "distl.com.au",
+    "thriveagency.com"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "How much does SEO typically cost in Perth?",
+    "Which SEO agency is the best in Perth?",
+    "How much does SEO typically cost in Australia?",
+    "Is an SEO agency worth it?"
+   ],
+   "err": null,
+   "weakest_rd": 125,
+   "weakest_dom": "perthseostudio.com.au",
+   "median_rd": 936.0,
+   "ratio": 4.464285714285714,
+   "verdict": "HARD (sustained link building)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "web design gold coast",
+   "volume": 1600,
+   "cpc": 26.07,
+   "aio": false,
+   "top10": [
+    "www.fivebyfive.com.au",
+    "webeasy.com.au",
+    "goldcoastwebsites.com.au",
+    "thriveweb.com.au",
+    "www.7thvision.com.au",
+    "bcreativestudio.au",
+    "ignitionmedia.com.au",
+    "www.michaelsherry.com.au",
+    "titanblue.com.au",
+    "www.whitepeakdigital.com"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "How much should a full website design cost?",
+    "How much does it cost to pay someone to design a website?",
+    "Is web design still in demand in 2026?",
+    "How much does it cost to design a web?"
+   ],
+   "err": null,
+   "weakest_rd": 167,
+   "weakest_dom": "bcreativestudio.au",
+   "median_rd": 563.0,
+   "ratio": 5.964285714285714,
+   "verdict": "HARD (sustained link building)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "seo agency adelaide",
+   "volume": 1300,
+   "cpc": 39.25,
+   "aio": false,
+   "top10": [
+    "www.loudachris.com.au",
+    "www.reddit.com",
+    "www.digitalmarketingadelaide.com.au",
+    "risedigitalmedia.com.au",
+    "studiohawk.com.au",
+    "www.goodfirms.co",
+    "adelaideseomarketing.com.au",
+    "www.markseo.com.au",
+    "sixgun.com.au",
+    "neontreehouse.com"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "How much does SEO typically cost in Australia?",
+    "How much should I expect to pay for SEO?",
+    "What is the 80/20 rule in SEO?",
+    "Which SEO agency in Australia is considered the best?"
+   ],
+   "err": null,
+   "weakest_rd": 37,
+   "weakest_dom": "www.markseo.com.au",
+   "median_rd": 191.5,
+   "ratio": 1.3214285714285714,
+   "verdict": "WINNABLE (one link cycle)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "seo agency australia",
+   "volume": 1300,
+   "cpc": 58.67,
+   "aio": false,
+   "top10": [
+    "studiohawk.com.au",
+    "clutch.co",
+    "firstpage.com.au",
+    "www.seoadvantage.com.au",
+    "agencies.semrush.com",
+    "zibdigital.com.au",
+    "www.bruceclay.com",
+    "digitalagencynetwork.com",
+    "business.localsearch.com.au",
+    "www.elsner.com.au"
+   ],
+   "dir_count": 1,
+   "fj_pos": null,
+   "paa": [
+    "Which SEO agency in Australia is considered the best?",
+    "How much does SEO typically cost in Australia?",
+    "How much does an SEO agency typically cost?",
+    "Is an SEO agency worth it?"
+   ],
+   "err": null,
+   "weakest_rd": 143,
+   "weakest_dom": "www.seoadvantage.com.au",
+   "median_rd": 1963.0,
+   "ratio": 5.107142857142857,
+   "verdict": "HARD (sustained link building)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "seo agency sydney",
+   "volume": 1300,
+   "cpc": 65.79,
+   "aio": false,
+   "top10": [
+    "studiohawk.com.au",
+    "agencies.semrush.com",
+    "prosperitymedia.com.au",
+    "impressive.com.au",
+    "zibdigital.com.au",
+    "clutch.co",
+    "www.earnedmedia.com.au",
+    "www.sentius.com.au",
+    "clickclickmedia.com.au",
+    "www.shoutdigital.com.au"
+   ],
+   "dir_count": 1,
+   "fj_pos": null,
+   "paa": [
+    "Who is the best SEO agency in Sydney?",
+    "How much does SEO cost in Sydney?",
+    "Is an SEO agency worth it?",
+    "What are some reputable SEO agencies in Australia?"
+   ],
+   "err": null,
+   "weakest_rd": 119,
+   "weakest_dom": "www.sentius.com.au",
+   "median_rd": 1118.5,
+   "ratio": 4.25,
+   "verdict": "HARD (sustained link building)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "seo company perth",
+   "volume": 1300,
+   "cpc": 49.53,
+   "aio": false,
+   "top10": [
+    "pwd.com.au",
+    "loadedcommunications.com.au",
+    "agencies.semrush.com",
+    "thriveagency.com",
+    "www.dilate.com.au",
+    "perthseostudio.com.au",
+    "prosperitymedia.com.au",
+    "digitalnomadshq.com.au",
+    "techbehemoths.com",
+    "studio22.com.au"
+   ],
+   "dir_count": 1,
+   "fj_pos": null,
+   "paa": [
+    "How much does SEO typically cost in Perth?",
+    "How much does SEO typically cost in Australia?",
+    "Which SEO company is the best in Australia?",
+    "How much should I expect to pay for SEO?"
+   ],
+   "err": null,
+   "weakest_rd": 91,
+   "weakest_dom": "loadedcommunications.com.au",
+   "median_rd": 1114.0,
+   "ratio": 3.25,
+   "verdict": "HARD (sustained link building)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "seo company sydney",
+   "volume": 1300,
+   "cpc": 117.46,
+   "aio": false,
+   "top10": [
+    "studiohawk.com.au",
+    "agencies.semrush.com",
+    "prosperitymedia.com.au",
+    "clutch.co",
+    "www.shoutdigital.com.au",
+    "zibdigital.com.au",
+    "www.verveinnovation.au",
+    "www.earnedmedia.com.au",
+    "au.linkedin.com",
+    "www.seonorthsydney.com.au"
+   ],
+   "dir_count": 1,
+   "fj_pos": null,
+   "paa": [
+    "Who is the best SEO agency in Sydney?",
+    "How much does SEO cost in Sydney?",
+    "What are some good SEO companies in Australia?",
+    "Which company is best for SEO?"
+   ],
+   "err": null,
+   "weakest_rd": 59,
+   "weakest_dom": "www.verveinnovation.au",
+   "median_rd": 1118.5,
+   "ratio": 2.107142857142857,
+   "verdict": "WINNABLE (one link cycle)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "seo consultant melbourne",
+   "volume": 1300,
+   "cpc": 15.67,
+   "aio": false,
+   "top10": [
+    "www.sharpinstincts.com.au",
+    "www.23digital.com.au",
+    "www.upwork.com",
+    "henrywong.consulting",
+    "melbourneseoconsultant.au",
+    "www.spacewolf.au",
+    "www.bark.com",
+    "studiohawk.com.au",
+    "digifix.com.au",
+    "digitalbond.com.au"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "How much does SEO cost in Melbourne?",
+    "What does an SEO consultant do?",
+    "Who are some SEO experts in Melbourne?",
+    "Are SEO consultants worth it?"
+   ],
+   "err": null,
+   "weakest_rd": 8,
+   "weakest_dom": "melbourneseoconsultant.au",
+   "median_rd": 250.5,
+   "ratio": 0.2857142857142857,
+   "verdict": "WINNABLE NOW"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "website design adelaide",
+   "volume": 1300,
+   "cpc": 24.41,
+   "aio": false,
+   "top10": [
+    "studio60design.com.au",
+    "www.boylen.com.au",
+    "www.assurancedigital.au",
+    "argon.com.au",
+    "www.webdesignadelaide.com.au",
+    "websiteadelaide.com",
+    "www.simple.com.au",
+    "www.rewardinc.com.au",
+    "www.webadelaide.com.au",
+    "elasticdesign.com.au"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "How much does it cost for a website designer?",
+    "Is web design still in demand in 2026?",
+    "How much does website design cost in Australia?",
+    "What are the five golden rules of web design?"
+   ],
+   "err": null,
+   "weakest_rd": 59,
+   "weakest_dom": "www.assurancedigital.au",
+   "median_rd": 138.5,
+   "ratio": 2.107142857142857,
+   "verdict": "WINNABLE (one link cycle)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "website design melbourne",
+   "volume": 1300,
+   "cpc": 27.69,
+   "aio": false,
+   "top10": [
+    "www.makemywebsite.com.au",
+    "www.23digital.com.au",
+    "www.heyitslola.com",
+    "www.airtasker.com",
+    "digitalagencynetwork.com",
+    "confettidesign.com.au",
+    "www.simple.com.au",
+    "www.chromatix.com.au",
+    "astondigital.com.au",
+    "www.23digital.com.au"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "How much does it cost to design a website in Melbourne?",
+    "How much should I pay a website designer?",
+    "How much should a full website design cost?",
+    "Is web design still in demand in 2026?"
+   ],
+   "err": null,
+   "weakest_rd": 83,
+   "weakest_dom": "www.heyitslola.com",
+   "median_rd": 602.0,
+   "ratio": 2.9642857142857144,
+   "verdict": "WINNABLE (one link cycle)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "ai seo",
+   "volume": 1000,
+   "cpc": 42.92,
+   "aio": true,
+   "top10": [
+    "www.reddit.com",
+    "studiohawk.com.au",
+    "www.salesforce.com",
+    "whatagraph.com",
+    "seo.ai",
+    "llmrefs.com",
+    "blog.hubspot.com",
+    "www.youtube.com",
+    "www.jasper.ai",
+    "searchengineland.com"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "Can SEO be done by AI?",
+    "What is AI SEO called now?",
+    "Can ChatGPT do SEO?",
+    "What are some good AI SEO agencies in Australia?"
+   ],
+   "err": null,
+   "weakest_rd": 1379,
+   "weakest_dom": "llmrefs.com",
+   "median_rd": 63438.5,
+   "ratio": 49.25,
+   "verdict": "GATED (not this year)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "seo company melbourne",
+   "volume": 1000,
+   "cpc": 75.63,
+   "aio": false,
+   "top10": [
+    "studiohawk.com.au",
+    "impressive.com.au",
+    "clutch.co",
+    "www.shoutdigital.com.au",
+    "zibdigital.com.au",
+    "www.kiaoradigital.com.au",
+    "www.seoempire.com.au",
+    "agencies.semrush.com",
+    "saltandfuessel.com.au",
+    "sixgun.com.au"
+   ],
+   "dir_count": 1,
+   "fj_pos": null,
+   "paa": [
+    "Who is the best SEO agency in Melbourne?",
+    "How much does SEO typically cost in Melbourne?",
+    "Which SEO company is the best in Australia?",
+    "How much should I expect to pay for SEO?"
+   ],
+   "err": null,
+   "weakest_rd": 71,
+   "weakest_dom": "www.seoempire.com.au",
+   "median_rd": 1160.5,
+   "ratio": 2.5357142857142856,
+   "verdict": "WINNABLE (one link cycle)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "seo consultant sydney",
+   "volume": 1000,
+   "cpc": 64.89,
+   "aio": true,
+   "top10": [
+    "www.liamridingscopywriter.com.au",
+    "tugtraffic.com.au",
+    "au.linkedin.com",
+    "www.nicreated.com.au",
+    "businessmedics.com.au",
+    "www.donhesh.com.au",
+    "prosperitymedia.com.au",
+    "www.bark.com",
+    "studiohawk.com.au",
+    "www.reddit.com"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "How much does SEO cost in Sydney?",
+    "Is SEO replaced by AI?",
+    "Are SEO consultants worth it?",
+    "How much should I expect to pay for SEO?"
+   ],
+   "err": null,
+   "weakest_rd": 27,
+   "weakest_dom": "www.nicreated.com.au",
+   "median_rd": 597.0,
+   "ratio": 0.9642857142857143,
+   "verdict": "WINNABLE NOW"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "web design adelaide",
+   "volume": 1000,
+   "cpc": 16.8,
+   "aio": false,
+   "top10": [
+    "adelaidewebdesigner.com.au",
+    "studio60design.com.au",
+    "www.boylen.com.au",
+    "websiteadelaide.com",
+    "argon.com.au",
+    "www.webdesignadelaide.com.au",
+    "www.assurancedigital.au",
+    "www.simple.com.au",
+    "redmoth.com.au",
+    "www.webadelaide.com.au"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "How much does it cost to design a web?",
+    "Is web design still in demand in 2026?",
+    "How much does it cost to hire a designer for a website?",
+    "What are the 7 C's of a website?"
+   ],
+   "err": null,
+   "weakest_rd": 27,
+   "weakest_dom": "redmoth.com.au",
+   "median_rd": 154.0,
+   "ratio": 0.9642857142857143,
+   "verdict": "WINNABLE NOW"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "web design canberra",
+   "volume": 1000,
+   "cpc": 10.94,
+   "aio": false,
+   "top10": [
+    "webdesignincanberra.com.au",
+    "www.projectsimple.com.au",
+    "www.reddit.com",
+    "region.com.au",
+    "www.josiebrownwebdesign.com.au",
+    "studiowho.com.au",
+    "www.facebook.com",
+    "bamwebdesign.com.au",
+    "canberradaily.com.au",
+    "www.canberraweb.com.au"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "Where can I find web designers in Canberra?",
+    "How much does it cost to hire a designer for a website?",
+    "Is web design still in demand in 2026?",
+    "What is the average cost of designing a website in Australia?"
+   ],
+   "err": null,
+   "weakest_rd": 21,
+   "weakest_dom": "studiowho.com.au",
+   "median_rd": 181.0,
+   "ratio": 0.75,
+   "verdict": "WINNABLE NOW"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "web design sydney",
+   "volume": 1000,
+   "cpc": 12.71,
+   "aio": false,
+   "top10": [
+    "www.sparkinteract.com.au",
+    "www.wolfiq.com.au",
+    "magicdust.com.au",
+    "www.milkdigital.com.au",
+    "www.thead.com.au",
+    "www.quikclicks.com.au",
+    "clickclickmedia.com.au",
+    "clutch.co",
+    "jimmyweb.net",
+    "madeagency.com.au"
+   ],
+   "dir_count": 1,
+   "fj_pos": null,
+   "paa": [
+    "How much does it cost to design a website in Sydney?",
+    "Is web design still in demand in 2026?",
+    "How much should a full website design cost?",
+    "Are web designers in demand in Australia?"
+   ],
+   "err": null,
+   "weakest_rd": 101,
+   "weakest_dom": "www.milkdigital.com.au",
+   "median_rd": 656.5,
+   "ratio": 3.607142857142857,
+   "verdict": "HARD (sustained link building)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "seo agency canberra",
+   "volume": 880,
+   "cpc": 0,
+   "aio": false,
+   "top10": [
+    "www.jslmedia.com.au",
+    "seoincanberra.com.au",
+    "studiohawk.com.au",
+    "prosperitymedia.com.au",
+    "clutch.co",
+    "www.ewebmarketing.au",
+    "www.ottomedia.com.au",
+    "eoantechnologies.com.au",
+    "zibdigital.com.au",
+    "canberralocalseocompany.com.au"
+   ],
+   "dir_count": 1,
+   "fj_pos": null,
+   "paa": [
+    "How much should I expect to pay for SEO?",
+    "Is SEO dead or evolving in 2026?",
+    "How much does SEO typically cost in Australia?",
+    "What are the top 10 SEO companies in Australia?"
+   ],
+   "err": null,
+   "weakest_rd": 7,
+   "weakest_dom": "canberralocalseocompany.com.au",
+   "median_rd": 440.0,
+   "ratio": 0.25,
+   "verdict": "WINNABLE NOW"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "seo services sydney",
+   "volume": 880,
+   "cpc": 39.3,
+   "aio": false,
+   "top10": [
+    "studiohawk.com.au",
+    "agencies.semrush.com",
+    "prosperitymedia.com.au",
+    "clutch.co",
+    "zibdigital.com.au",
+    "www.dilate.com.au",
+    "www.shoutdigital.com.au",
+    "www.sentius.com.au",
+    "au.linkedin.com",
+    "www.sentius.com.au"
+   ],
+   "dir_count": 1,
+   "fj_pos": null,
+   "paa": [
+    "How much does SEO cost in Sydney?",
+    "What are some good SEO services in Sydney?",
+    "How much should I expect to pay for SEO?",
+    "Is SEO replaced by AI?"
+   ],
+   "err": null,
+   "weakest_rd": 119,
+   "weakest_dom": "www.sentius.com.au",
+   "median_rd": 1118.5,
+   "ratio": 4.25,
+   "verdict": "HARD (sustained link building)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "web design sunshine coast",
+   "volume": 880,
+   "cpc": 17.47,
+   "aio": false,
+   "top10": [
+    "sovirastudio.com",
+    "www.websitesthatsell.com.au",
+    "digitalnomadshq.com.au",
+    "socialtap.com.au",
+    "au.linkedin.com",
+    "amaracollective.com.au",
+    "www.kook.com.au",
+    "digitalon.com.au",
+    "www.chilligroup.com.au",
+    "webdesignsunshinecoast.net"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "How much does it cost to pay someone to design a website?",
+    "How much should a full website design cost?",
+    "Is web design still in demand in 2026?",
+    "How much does it cost to design a web?"
+   ],
+   "err": null,
+   "weakest_rd": 38,
+   "weakest_dom": "sovirastudio.com",
+   "median_rd": 470.0,
+   "ratio": 1.3571428571428572,
+   "verdict": "WINNABLE (one link cycle)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "best seo agency sydney",
+   "volume": 720,
+   "cpc": 67.99,
+   "aio": false,
+   "top10": [
+    "studiohawk.com.au",
+    "clutch.co",
+    "prosperitymedia.com.au",
+    "agencies.semrush.com",
+    "zibdigital.com.au",
+    "www.dilate.com.au",
+    "www.earnedmedia.com.au",
+    "www.reddit.com",
+    "digitalnomadshq.com.au",
+    "www.shoutdigital.com.au"
+   ],
+   "dir_count": 1,
+   "fj_pos": null,
+   "paa": [
+    "Who is the best SEO agency in Sydney?",
+    "How much does SEO cost in Sydney?",
+    "What are some reputable SEO agencies in Australia?",
+    "Who is the best SEO agency?"
+   ],
+   "err": null,
+   "weakest_rd": 696,
+   "weakest_dom": "www.earnedmedia.com.au",
+   "median_rd": 1139.5,
+   "ratio": 24.857142857142858,
+   "verdict": "GATED (not this year)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "seo consultant perth",
+   "volume": 720,
+   "cpc": 36.71,
+   "aio": false,
+   "top10": [
+    "seoperth.expert",
+    "perthseostudio.com.au",
+    "twomoonsconsulting.com.au",
+    "www.bonfire.com.au",
+    "prosperitymedia.com.au",
+    "www.dilate.com.au",
+    "www.bark.com",
+    "distl.com.au",
+    "agencies.semrush.com",
+    "perth-seo-agency.com.au"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "How much does SEO typically cost in Perth?",
+    "Who are some reputable SEO consultants in Perth?",
+    "How much does SEO typically cost in Australia?",
+    "How much should I expect to pay for SEO?"
+   ],
+   "err": null,
+   "weakest_rd": 110,
+   "weakest_dom": "perth-seo-agency.com.au",
+   "median_rd": 403.0,
+   "ratio": 3.9285714285714284,
+   "verdict": "HARD (sustained link building)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "seo services brisbane",
+   "volume": 720,
+   "cpc": 17.3,
+   "aio": false,
+   "top10": [
+    "digitalnomadshq.com.au",
+    "www.jaredbennett.com.au",
+    "digital8.com.au",
+    "agencies.semrush.com",
+    "www.dilate.com.au",
+    "zibdigital.com.au",
+    "www.excitemedia.com.au",
+    "bambrick.com.au",
+    "clutch.co",
+    "digitalsurfer.com.au"
+   ],
+   "dir_count": 1,
+   "fj_pos": null,
+   "paa": [
+    "How much does SEO cost in Brisbane?",
+    "How much should I expect to pay for SEO?",
+    "How much does SEO cost in Australia?",
+    "What do SEO services do?"
+   ],
+   "err": null,
+   "weakest_rd": 35,
+   "weakest_dom": "www.jaredbennett.com.au",
+   "median_rd": 739.0,
+   "ratio": 1.25,
+   "verdict": "WINNABLE (one link cycle)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "autonomous ai agents",
+   "volume": 590,
+   "cpc": 10.54,
+   "aio": true,
+   "top10": [
+    "www.microsoft.com",
+    "www.salesforce.com",
+    "www.reddit.com",
+    "aerospike.com",
+    "www.nvidia.com",
+    "cobusgreyling.medium.com",
+    "aws.amazon.com",
+    "www.sutherlandglobal.com",
+    "en.wikipedia.org",
+    "tecala.com.au"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "What are autonomous AI agents?",
+    "What are the four types of AI agents?",
+    "Is ChatGPT an autonomous agent?",
+    "What is the best autonomous AI agent?"
+   ],
+   "err": null,
+   "weakest_rd": 493,
+   "weakest_dom": "tecala.com.au",
+   "median_rd": 151916.0,
+   "ratio": 17.607142857142858,
+   "verdict": "GATED (not this year)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "local seo perth",
+   "volume": 590,
+   "cpc": 10.63,
+   "aio": false,
+   "top10": [
+    "distl.com.au",
+    "pwd.com.au",
+    "www.facebook.com",
+    "everyshot.com.au",
+    "www.linkedin.com",
+    "studiohawk.com.au",
+    "www.dilate.com.au",
+    "searchscope.com.au",
+    "pwd.com.au",
+    "perthseostudio.com.au"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "How much does SEO typically cost in Perth?",
+    "How much should I pay for local SEO?",
+    "Which SEO agency in Perth is considered the best?",
+    "How much should I expect to pay for SEO?"
+   ],
+   "err": null,
+   "weakest_rd": 22,
+   "weakest_dom": "everyshot.com.au",
+   "median_rd": 1229.5,
+   "ratio": 0.7857142857142857,
+   "verdict": "WINNABLE NOW"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "seo consultant brisbane",
+   "volume": 590,
+   "cpc": 49.85,
+   "aio": true,
+   "top10": [
+    "apacinsider.digital",
+    "willmullins.com.au",
+    "www.jaredbennett.com.au",
+    "www.seopartners.com.au",
+    "seobrisbane.com.au",
+    "agencies.semrush.com",
+    "www.resurgedigital.com.au",
+    "www.digitxl.com.au",
+    "www.bark.com",
+    "www.bsbmarketing.com.au"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "How much does SEO cost in Brisbane?",
+    "Is SEO replaced by AI?",
+    "Is paying someone for SEO worth it?",
+    "Who are some good SEO specialists in Australia?"
+   ],
+   "err": null,
+   "weakest_rd": 30,
+   "weakest_dom": "www.bsbmarketing.com.au",
+   "median_rd": 108.0,
+   "ratio": 1.0714285714285714,
+   "verdict": "WINNABLE (one link cycle)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "seo services australia",
+   "volume": 590,
+   "cpc": 57.52,
+   "aio": false,
+   "top10": [
+    "australiaseoservices.com.au",
+    "www.seoadvantage.com.au",
+    "www.seoservices.com.au",
+    "business.localsearch.com.au",
+    "agencies.semrush.com",
+    "priority1group.com.au",
+    "www.facebook.com",
+    "clutch.co",
+    "shuffledigital.com.au",
+    "firstpage.com.au"
+   ],
+   "dir_count": 1,
+   "fj_pos": null,
+   "paa": [
+    "How much does SEO typically cost in Australia?",
+    "What are some good SEO services in Australia?",
+    "How much should you pay for SEO services?",
+    "What do SEO services actually do?"
+   ],
+   "err": null,
+   "weakest_rd": 33,
+   "weakest_dom": "australiaseoservices.com.au",
+   "median_rd": 638.0,
+   "ratio": 1.1785714285714286,
+   "verdict": "WINNABLE (one link cycle)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "web design agency melbourne",
+   "volume": 590,
+   "cpc": 10.58,
+   "aio": false,
+   "top10": [
+    "www.makemywebsite.com.au",
+    "www.simple.com.au",
+    "www.chromatix.com.au",
+    "digitalagencynetwork.com",
+    "astondigital.com.au",
+    "www.earnedmedia.com.au",
+    "www.apwebsolutions.com.au",
+    "www.23digital.com.au",
+    "www.digitalrescue.com.au",
+    "www.digitalrescue.com.au"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "How much does it cost to design a website in Melbourne?",
+    "What are some good web design agencies in Melbourne?",
+    "How much do web design agencies charge?",
+    "Is web design still in demand in 2026?"
+   ],
+   "err": null,
+   "weakest_rd": 170,
+   "weakest_dom": "astondigital.com.au",
+   "median_rd": 464.0,
+   "ratio": 6.071428571428571,
+   "verdict": "HARD (sustained link building)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "web design company melbourne",
+   "volume": 590,
+   "cpc": 21.57,
+   "aio": false,
+   "top10": [
+    "www.chromatix.com.au",
+    "www.makemywebsite.com.au",
+    "clutch.co",
+    "www.23digital.com.au",
+    "designpoint.com.au",
+    "digitalagencynetwork.com",
+    "www.earnedmedia.com.au",
+    "www.simple.com.au",
+    "magicdust.com.au",
+    "magicdust.com.au"
+   ],
+   "dir_count": 1,
+   "fj_pos": null,
+   "paa": [
+    "How much does it cost to design a website in Melbourne?",
+    "Is web design still in demand in 2026?",
+    "How much should a full website design cost?",
+    "Which company is best for web designing?"
+   ],
+   "err": null,
+   "weakest_rd": 184,
+   "weakest_dom": "www.simple.com.au",
+   "median_rd": 1153.5,
+   "ratio": 6.571428571428571,
+   "verdict": "HARD (sustained link building)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "agentic commerce",
+   "volume": 480,
+   "cpc": 16.69,
+   "aio": true,
+   "top10": [
+    "www.ibm.com",
+    "www.agenticcommerce.dev",
+    "www.pwc.com.au",
+    "en.wikipedia.org",
+    "www.salesforce.com",
+    "stripe.com",
+    "www.mckinsey.com",
+    "www.adyen.com",
+    "www.reddit.com",
+    "www.criteo.com"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "Can you give me an example of agentic commerce?",
+    "What companies are using agentic commerce?",
+    "What does agentic mean?",
+    "What does agentic economy mean?"
+   ],
+   "err": null,
+   "weakest_rd": 583,
+   "weakest_dom": "www.agenticcommerce.dev",
+   "median_rd": 230610.0,
+   "ratio": 20.821428571428573,
+   "verdict": "GATED (not this year)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "local seo sydney",
+   "volume": 480,
+   "cpc": 0,
+   "aio": false,
+   "top10": [
+    "sydneydigitalmarketing.com.au",
+    "rocketagency.com.au",
+    "clickbiz.com.au",
+    "sydneylocalseo.net.au",
+    "sharkdigital.com.au",
+    "marketingsweet.com.au",
+    "olivetreemarketing.com.au",
+    "horntech.com.au",
+    "clickclickmedia.com.au",
+    "dnmdigital.com.au"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "How much does SEO cost in Sydney?",
+    "How to get a local SEO?",
+    "Is SEO dead now with AI?",
+    "Which SEO agency in Sydney is considered the best?"
+   ],
+   "err": null,
+   "weakest_rd": 147,
+   "weakest_dom": "olivetreemarketing.com.au",
+   "median_rd": 247,
+   "ratio": 5.25,
+   "verdict": "HARD (sustained link building)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "seo services melbourne",
+   "volume": 480,
+   "cpc": 53.22,
+   "aio": false,
+   "top10": [
+    "studiohawk.com.au",
+    "www.melbourneseoservices.com",
+    "impressive.com.au",
+    "www.shoutdigital.com.au",
+    "zibdigital.com.au",
+    "www.kiaoradigital.com.au",
+    "www.sentius.com.au",
+    "aekmedia.com.au",
+    "clutch.co",
+    "aekmedia.com.au"
+   ],
+   "dir_count": 1,
+   "fj_pos": null,
+   "paa": [
+    "How much does SEO typically cost in Melbourne?",
+    "Who is the best SEO agency in Melbourne?",
+    "How much should I expect to pay for SEO?",
+    "What is the 80/20 rule in SEO?"
+   ],
+   "err": null,
+   "weakest_rd": 78,
+   "weakest_dom": "www.kiaoradigital.com.au",
+   "median_rd": 633.0,
+   "ratio": 2.7857142857142856,
+   "verdict": "WINNABLE (one link cycle)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "web design agency perth",
+   "volume": 480,
+   "cpc": 16.18,
+   "aio": false,
+   "top10": [
+    "www.bakercreative.com.au",
+    "pwd.com.au",
+    "www.dilate.com.au",
+    "www.itomic.com.au",
+    "remedystudio.com.au",
+    "thestart.com.au",
+    "www.bark.com",
+    "perthwebsitestudio.com.au",
+    "www.designrush.com",
+    "www.designrush.com"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "How much do web design agencies charge?",
+    "Is web design still in demand in 2026?",
+    "What are the 7 C's of a website?",
+    "What is the average cost of designing a website in Australia?"
+   ],
+   "err": null,
+   "weakest_rd": 108,
+   "weakest_dom": "remedystudio.com.au",
+   "median_rd": 630.5,
+   "ratio": 3.857142857142857,
+   "verdict": "HARD (sustained link building)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "web design agency sydney",
+   "volume": 480,
+   "cpc": 15.4,
+   "aio": false,
+   "top10": [
+    "www.sparkinteract.com.au",
+    "madeagency.com.au",
+    "www.wolfiq.com.au",
+    "clutch.co",
+    "clickclickmedia.com.au",
+    "digitalsurfer.com.au",
+    "www.thead.com.au",
+    "www.quikclicks.com.au",
+    "jimmyweb.net",
+    "kinskiandbourke.com"
+   ],
+   "dir_count": 1,
+   "fj_pos": null,
+   "paa": [
+    "How much does it cost to design a website in Sydney?",
+    "How much do web design agencies charge?",
+    "Is web design still in demand in 2026?",
+    "What are the 7 C's of a website?"
+   ],
+   "err": null,
+   "weakest_rd": 303,
+   "weakest_dom": "kinskiandbourke.com",
+   "median_rd": 558.5,
+   "ratio": 10.821428571428571,
+   "verdict": "GATED (not this year)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "web design australia",
+   "volume": 480,
+   "cpc": 20.71,
+   "aio": false,
+   "top10": [
+    "redkite.design",
+    "stonedigital.com.au",
+    "clutch.co",
+    "www.auswebdesign.com.au",
+    "www.smallbusinesswebdesigns.net.au",
+    "tdsaustralia.com.au",
+    "www.websitedesign.com.au",
+    "www.simple.com.au",
+    "www.sparkinteract.com.au",
+    "agencies.semrush.com"
+   ],
+   "dir_count": 1,
+   "fj_pos": null,
+   "paa": [
+    "What is the average cost of a website design in Australia?",
+    "Is Web Designer in demand in Australia?",
+    "Is web design still in demand in 2026?",
+    "What are some reputable website designers in Australia?"
+   ],
+   "err": null,
+   "weakest_rd": 57,
+   "weakest_dom": "www.auswebdesign.com.au",
+   "median_rd": 257.5,
+   "ratio": 2.0357142857142856,
+   "verdict": "WINNABLE (one link cycle)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "web design wollongong",
+   "volume": 480,
+   "cpc": 5.75,
+   "aio": false,
+   "top10": [
+    "www.madweb.com.au",
+    "www.zammeth.com.au",
+    "www.lovemyonlinemarketing.com",
+    "www.localsearch.com.au",
+    "jemwebsitedesign.com.au",
+    "www.wollongongwebdesign.com.au",
+    "cantydigital.com.au",
+    "www.instagram.com",
+    "wpcreative.com.au",
+    "www.airtasker.com"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "What is a reasonable price for website design?",
+    "Is web design still in demand in 2026?",
+    "How much does it cost to hire a designer for a website?",
+    "What are the 7 C's of a website?"
+   ],
+   "err": null,
+   "weakest_rd": 20,
+   "weakest_dom": "www.wollongongwebdesign.com.au",
+   "median_rd": 645.0,
+   "ratio": 0.7142857142857143,
+   "verdict": "WINNABLE NOW"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "ai automation agency",
+   "volume": 390,
+   "cpc": 17.45,
+   "aio": true,
+   "top10": [
+    "aivy.com.au",
+    "www.reddit.com",
+    "theaiautomationagency.ai",
+    "aiautomationagency.com.au",
+    "www.youtube.com",
+    "www.sparkinteract.com.au",
+    "team400.ai",
+    "automationagency.com",
+    "www.youtube.com",
+    "www.youtube.com"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "What do AI automation agencies do?",
+    "What are some leading AI automation agencies in Australia?",
+    "What is an AI automation agency business?",
+    "What is the best AI agent for automation?"
+   ],
+   "err": null,
+   "weakest_rd": 14,
+   "weakest_dom": "aiautomationagency.com.au",
+   "median_rd": 872.5,
+   "ratio": 0.5,
+   "verdict": "WINNABLE NOW"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "ai seo agency",
+   "volume": 390,
+   "cpc": 22.24,
+   "aio": true,
+   "top10": [
+    "studiohawk.com.au",
+    "impressive.com.au",
+    "digitalsurfer.com.au",
+    "clearwateragency.com.au",
+    "www.earnedmedia.com.au",
+    "clickclickmedia.com.au",
+    "dejanmarketing.com",
+    "reformdigital.com.au",
+    "www.formulate.com.au",
+    "www.youtube.com"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "What is an AI SEO agency?",
+    "What are some good AI SEO agencies in Australia?",
+    "Can you do SEO with AI?",
+    "Which AI agent is best for SEO?"
+   ],
+   "err": null,
+   "weakest_rd": 56,
+   "weakest_dom": "www.formulate.com.au",
+   "median_rd": 626.5,
+   "ratio": 2.0,
+   "verdict": "WINNABLE (one link cycle)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "best seo agency australia",
+   "volume": 390,
+   "cpc": 22.85,
+   "aio": true,
+   "top10": [
+    "impressive.com.au",
+    "clutch.co",
+    "zibdigital.com.au",
+    "agencies.semrush.com",
+    "avenuegroupaus.com.au",
+    "firstpage.com.au",
+    "www.seoadvantage.com.au",
+    "advisible.com.au",
+    "itprofiles.com",
+    "www.elsner.com.au"
+   ],
+   "dir_count": 1,
+   "fj_pos": null,
+   "paa": [
+    "How much does SEO typically cost in Australia?",
+    "Who is the best SEO agency?",
+    "Is an SEO agency worth it?",
+    "Who is a reputable SEO consultant in Melbourne?"
+   ],
+   "err": null,
+   "weakest_rd": 143,
+   "weakest_dom": "www.seoadvantage.com.au",
+   "median_rd": 733.0,
+   "ratio": 5.107142857142857,
+   "verdict": "HARD (sustained link building)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "ecommerce web design sydney",
+   "volume": 390,
+   "cpc": 40.49,
+   "aio": false,
+   "top10": [
+    "www.sparkinteract.com.au",
+    "clickclickmedia.com.au",
+    "www.23digital.com.au",
+    "www.thead.com.au",
+    "ebpearls.com.au",
+    "www.whitepeakdigital.com",
+    "marketinglab.com.au",
+    "www.elsner.com.au",
+    "www.milkdigital.com.au",
+    "www.milkdigital.com.au"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "How much does it cost to design a website in Sydney?",
+    "Is eCommerce still booming?",
+    "What are the top 10 eCommerce websites in Australia?",
+    "How much does it cost to have an eCommerce website?"
+   ],
+   "err": null,
+   "weakest_rd": 101,
+   "weakest_dom": "www.milkdigital.com.au",
+   "median_rd": 429.0,
+   "ratio": 3.607142857142857,
+   "verdict": "HARD (sustained link building)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "local seo brisbane",
+   "volume": 390,
+   "cpc": 0,
+   "aio": false,
+   "top10": [
+    "bambrick.com.au",
+    "brisbanelocalseo.net.au",
+    "digitalnomadshq.com.au",
+    "tradiebots.com.au",
+    "digital8.com.au",
+    "www.pivotalagency.com.au",
+    "www.rankingco.com.au",
+    "hiagency.au",
+    "www.rankingaustralia.com.au",
+    "actiondigital.com.au"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "How much does SEO cost in Brisbane?",
+    "How to get a local SEO?",
+    "How much should I expect to pay for SEO?",
+    "Who is the top SEO consultant in Brisbane?"
+   ],
+   "err": null,
+   "weakest_rd": 16,
+   "weakest_dom": "brisbanelocalseo.net.au",
+   "median_rd": 158.0,
+   "ratio": 0.5714285714285714,
+   "verdict": "WINNABLE NOW"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "seo agency gold coast",
+   "volume": 390,
+   "cpc": 18.87,
+   "aio": false,
+   "top10": [
+    "impressive.com.au",
+    "studiohawk.com.au",
+    "www.shoutdigital.com.au",
+    "zibdigital.com.au",
+    "www.goodfirms.co",
+    "rgcdigitalmarketing.com.au",
+    "www.cliqmc.com.au",
+    "www.michaelsherry.com.au",
+    "thriveweb.com.au",
+    "www.cliqmc.com.au"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "How much should I expect to pay for SEO?",
+    "How much does SEO typically cost in Australia?",
+    "What does an SEO agency do?",
+    "Which SEO agency in Australia is considered the best?"
+   ],
+   "err": null,
+   "weakest_rd": 136,
+   "weakest_dom": "www.cliqmc.com.au",
+   "median_rd": 1019.5,
+   "ratio": 4.857142857142857,
+   "verdict": "HARD (sustained link building)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "web design agency brisbane",
+   "volume": 390,
+   "cpc": 13.94,
+   "aio": false,
+   "top10": [
+    "stonedigital.com.au",
+    "digitalnomadshq.com.au",
+    "vivogroup.com.au",
+    "www.whitepeakdigital.com",
+    "www.pivotalagency.com.au",
+    "mywork.com.au",
+    "alanajadestudio.com",
+    "www.excitemedia.com.au",
+    "www.facebook.com",
+    "www.facebook.com"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "How much does it cost to design a website in Brisbane?",
+    "How much do web design agencies charge?",
+    "Is web design still in demand in 2026?",
+    "What are the 7 C's of a website?"
+   ],
+   "err": null,
+   "weakest_rd": 195,
+   "weakest_dom": "alanajadestudio.com",
+   "median_rd": 884.5,
+   "ratio": 6.964285714285714,
+   "verdict": "HARD (sustained link building)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "web design company australia",
+   "volume": 390,
+   "cpc": 36.57,
+   "aio": false,
+   "top10": [
+    "redkite.design",
+    "stonedigital.com.au",
+    "clutch.co",
+    "www.sparkinteract.com.au",
+    "www.smallbusinesswebdesigns.net.au",
+    "agencies.semrush.com",
+    "www.dilate.com.au",
+    "www.chromatix.com.au",
+    "www.simple.com.au",
+    "www.linkedin.com"
+   ],
+   "dir_count": 1,
+   "fj_pos": null,
+   "paa": [
+    "How much does it cost to design a website in Australia?",
+    "What are the best web development companies in Australia?",
+    "What are some reputable website designers in Australia?",
+    "Which company is best for web designing?"
+   ],
+   "err": null,
+   "weakest_rd": 184,
+   "weakest_dom": "www.simple.com.au",
+   "median_rd": 744.5,
+   "ratio": 6.571428571428571,
+   "verdict": "HARD (sustained link building)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "web design geelong",
+   "volume": 390,
+   "cpc": 10.54,
+   "aio": false,
+   "top10": [
+    "www.chromatix.com.au",
+    "webdesigngeelong.au",
+    "geelongwebdesign.com.au",
+    "philkurth.com.au",
+    "reveler.com.au",
+    "www.pixeld.com.au",
+    "www.airtasker.com",
+    "www.concise.digital",
+    "www.goop.com.au",
+    "chocchip.com.au"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "How much does it cost to hire a designer for a website?",
+    "Is web design still in demand in 2026?",
+    "How much does it cost to design a website in Melbourne?",
+    "What are the 7 C's of a website?"
+   ],
+   "err": null,
+   "weakest_rd": 8,
+   "weakest_dom": "webdesigngeelong.au",
+   "median_rd": 339.5,
+   "ratio": 0.2857142857142857,
+   "verdict": "WINNABLE NOW"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "ai receptionist australia",
+   "volume": 320,
+   "cpc": 16.42,
+   "aio": true,
+   "top10": [
+    "www.sophiie.ai",
+    "aidial.com.au",
+    "aivy.com.au",
+    "heyjodie.com",
+    "onebookplus.com.au",
+    "autoreception.com.au",
+    "www.valory.com.au",
+    "flowworks.com.au",
+    "miyai.ai",
+    "www.aissie.com.au"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "Which AI receptionist is best in Australia?",
+    "How much does it cost to hire an AI receptionist in Australia?",
+    "How much does an AI receptionist cost?",
+    "Is an AI receptionist worth it?"
+   ],
+   "err": null,
+   "weakest_rd": 2,
+   "weakest_dom": "www.aissie.com.au",
+   "median_rd": 34.5,
+   "ratio": 0.07142857142857142,
+   "verdict": "WINNABLE NOW"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "ecommerce web design perth",
+   "volume": 320,
+   "cpc": 0,
+   "aio": true,
+   "top10": [
+    "www.dilate.com.au",
+    "www.bloomdigital.net.au",
+    "slickdesign.com.au",
+    "www.lethal.com.au",
+    "www.alyka.com.au",
+    "www.perthweb.com.au",
+    "www.bakercreative.com.au",
+    "www.lethal.com.au",
+    "www.cvwcreative.com.au",
+    "www.cloudcartel.com.au"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "How much does it cost to design a website in Perth?",
+    "Is web design still in demand in 2026?",
+    "What are the top 10 e-commerce websites in Australia?",
+    "What are the 7 C's of a website?"
+   ],
+   "err": null,
+   "weakest_rd": 105,
+   "weakest_dom": "www.cvwcreative.com.au",
+   "median_rd": 327.0,
+   "ratio": 3.75,
+   "verdict": "HARD (sustained link building)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "web design hobart",
+   "volume": 320,
+   "cpc": 15.75,
+   "aio": true,
+   "top10": [
+    "skyavenue.com.au",
+    "peabodydigital.com.au",
+    "tassiewebsites.au",
+    "digitalnomadshq.com.au",
+    "www.goop.com.au",
+    "loopwebdesign.com.au",
+    "au.linkedin.com",
+    "webdesignhobart.com",
+    "webhoney.digital",
+    "webhoney.digital"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "How much does it cost to hire a designer for a website?",
+    "Is web design still in demand in 2026?",
+    "What is the average cost of designing a website in Australia?",
+    "What are the 7 C's of a website?"
+   ],
+   "err": null,
+   "weakest_rd": 38,
+   "weakest_dom": "peabodydigital.com.au",
+   "median_rd": 101.0,
+   "ratio": 1.3571428571428572,
+   "verdict": "WINNABLE (one link cycle)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "web design newcastle",
+   "volume": 320,
+   "cpc": 19.63,
+   "aio": false,
+   "top10": [
+    "clickk.com.au",
+    "digitalnomadshq.com.au",
+    "www.rb.com.au",
+    "trekwebdesign.com.au",
+    "studioeast.com.au",
+    "kazamcreative.com.au",
+    "newism.com.au",
+    "www.rhythmwebsites.com.au",
+    "kurl.com.au",
+    "ministryofdesign.com.au"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "How much does it cost to hire a designer for a website?",
+    "Is web design still in demand in 2026?",
+    "How much would a web design cost?",
+    "What are the 7 C's of a website?"
+   ],
+   "err": null,
+   "weakest_rd": 34,
+   "weakest_dom": "studioeast.com.au",
+   "median_rd": 195.0,
+   "ratio": 1.2142857142857142,
+   "verdict": "WINNABLE (one link cycle)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "web development melbourne",
+   "volume": 320,
+   "cpc": 18.51,
+   "aio": false,
+   "top10": [
+    "www.jtbstudios.com.au",
+    "pixelstorm.com.au",
+    "clutch.co",
+    "butterfly.com.au",
+    "digitalagencynetwork.com",
+    "www.chromatix.com.au",
+    "jimmyweb.net",
+    "www.simple.com.au",
+    "www.mindarc.com",
+    "www.airtasker.com"
+   ],
+   "dir_count": 1,
+   "fj_pos": null,
+   "paa": [
+    "How much does it cost to design a website in Melbourne?",
+    "Is web design still worth it in 2026?",
+    "Is web developer in demand in Australia?",
+    "Is 40 too old to become a web developer?"
+   ],
+   "err": null,
+   "weakest_rd": 176,
+   "weakest_dom": "www.mindarc.com",
+   "median_rd": 906.0,
+   "ratio": 6.285714285714286,
+   "verdict": "HARD (sustained link building)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "best seo agency melbourne",
+   "volume": 260,
+   "cpc": 42.47,
+   "aio": true,
+   "top10": [
+    "impressive.com.au",
+    "studiohawk.com.au",
+    "clutch.co",
+    "sixgun.com.au",
+    "agencies.semrush.com",
+    "saltandfuessel.com.au",
+    "www.sentius.com.au",
+    "www.reddit.com",
+    "zibdigital.com.au",
+    "www.optimising.com.au"
+   ],
+   "dir_count": 1,
+   "fj_pos": null,
+   "paa": [
+    "Which SEO company is the best in Australia?",
+    "How much does SEO typically cost in Melbourne?",
+    "Who is the best SEO agency?",
+    "How much does an SEO agency typically cost?"
+   ],
+   "err": null,
+   "weakest_rd": 119,
+   "weakest_dom": "www.sentius.com.au",
+   "median_rd": 1331.5,
+   "ratio": 4.25,
+   "verdict": "HARD (sustained link building)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "digital agency australia",
+   "volume": 260,
+   "cpc": 9.26,
+   "aio": true,
+   "top10": [
+    "www.frankdigital.com.au",
+    "sparkdigital.com.au",
+    "digitalagencynetwork.com",
+    "www.23digital.com.au",
+    "iddigital.com.au",
+    "reefdigital.com.au",
+    "clutch.co",
+    "www.dilate.com.au",
+    "www.reddit.com",
+    "www.designrush.com"
+   ],
+   "dir_count": 1,
+   "fj_pos": null,
+   "paa": [
+    "Which digital agency is considered the best in Australia?",
+    "Is the digital agency network legit?",
+    "What do digital agencies do?",
+    "Who are the big 6 digital marketing agencies?"
+   ],
+   "err": null,
+   "weakest_rd": 148,
+   "weakest_dom": "www.frankdigital.com.au",
+   "median_rd": 672.5,
+   "ratio": 5.285714285714286,
+   "verdict": "HARD (sustained link building)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "seo agency hobart",
+   "volume": 260,
+   "cpc": 0,
+   "aio": false,
+   "top10": [
+    "studiohawk.com.au",
+    "aperitifagency.com.au",
+    "prosperitymedia.com.au",
+    "firewiredigital.com.au",
+    "bgtechs.com.au",
+    "www.kiaoradigital.com.au",
+    "www.seotakeoff.com",
+    "www.wakeforddigital.com.au",
+    "www.pathfindermarketing.com.au",
+    "edifyingvoyages.com"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "How much should I expect to pay for SEO?",
+    "What is the 80/20 rule in SEO?",
+    "How much does SEO typically cost in Australia?",
+    "Should I hire an SEO agency or do it myself?"
+   ],
+   "err": null,
+   "weakest_rd": 29,
+   "weakest_dom": "www.seotakeoff.com",
+   "median_rd": 283.0,
+   "ratio": 1.0357142857142858,
+   "verdict": "WINNABLE (one link cycle)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "web development australia",
+   "volume": 260,
+   "cpc": 14.88,
+   "aio": true,
+   "top10": [
+    "stonedigital.com.au",
+    "clutch.co",
+    "www.designrush.com",
+    "butterfly.com.au",
+    "clickclickmedia.com.au",
+    "techreviewer.co",
+    "www.webdevelopmentexperts.com.au",
+    "www.wearetag.co",
+    "agencies.semrush.com",
+    "www.youtube.com"
+   ],
+   "dir_count": 1,
+   "fj_pos": null,
+   "paa": [
+    "Is web developer in demand in Australia?",
+    "How much does it cost to develop a website in Australia?",
+    "Is web design still worth it in 2026?",
+    "Is 40 too old to become a web developer?"
+   ],
+   "err": null,
+   "weakest_rd": 5,
+   "weakest_dom": "www.webdevelopmentexperts.com.au",
+   "median_rd": 1958.5,
+   "ratio": 0.17857142857142858,
+   "verdict": "WINNABLE NOW"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "web development company australia",
+   "volume": 260,
+   "cpc": 8.86,
+   "aio": false,
+   "top10": [
+    "stonedigital.com.au",
+    "clutch.co",
+    "webdevelopmentcompany.au",
+    "dev-story.com",
+    "butterfly.com.au",
+    "www.thead.com.au",
+    "iconagency.com.au",
+    "www.designrush.com",
+    "techreviewer.co",
+    "clickclickmedia.com.au"
+   ],
+   "dir_count": 1,
+   "fj_pos": null,
+   "paa": [
+    "What are the top web development companies in Australia?",
+    "How much does it cost to develop a website in Australia?",
+    "What is the best website builder in Australia?",
+    "Who are the top 10 developers in Australia?"
+   ],
+   "err": null,
+   "weakest_rd": 27,
+   "weakest_dom": "webdevelopmentcompany.au",
+   "median_rd": 664.0,
+   "ratio": 0.9642857142857143,
+   "verdict": "WINNABLE NOW"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "ai voice agent",
+   "volume": 210,
+   "cpc": 34.88,
+   "aio": true,
+   "top10": [
+    "www.retellai.com",
+    "omnidim.io",
+    "x.ai",
+    "vapi.ai",
+    "aircall.io",
+    "murf.ai",
+    "www.vellum.ai",
+    "synthflow.ai",
+    "www.reddit.com",
+    "synthflow.ai"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "Is there a free AI voice agent available?",
+    "Is using AI voice illegal?",
+    "Which is the best AI voice agent?",
+    "How much do AI voice agents cost?"
+   ],
+   "err": null,
+   "weakest_rd": 56,
+   "weakest_dom": "omnidim.io",
+   "median_rd": 3024.5,
+   "ratio": 2.0,
+   "verdict": "WINNABLE (one link cycle)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "ecommerce seo perth",
+   "volume": 210,
+   "cpc": 0,
+   "aio": true,
+   "top10": [
+    "www.digitalhitmen.com.au",
+    "www.eurisko.com.au",
+    "www.kiaoradigital.com.au",
+    "www.23digital.com.au",
+    "agencies.semrush.com",
+    "searchflex.com",
+    "ecomexperts.au",
+    "www.dilate.com.au",
+    "punkfox.com.au",
+    "www.paperstack.com.au"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "How much does SEO typically cost in Perth?",
+    "How much does SEO typically cost in Australia?",
+    "Is SEO worth it for ecommerce?",
+    "How much should I expect to pay for SEO?"
+   ],
+   "err": null,
+   "weakest_rd": 11,
+   "weakest_dom": "punkfox.com.au",
+   "median_rd": 313.5,
+   "ratio": 0.39285714285714285,
+   "verdict": "WINNABLE NOW"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "web design company adelaide",
+   "volume": 210,
+   "cpc": 5.78,
+   "aio": false,
+   "top10": [
+    "studio60design.com.au",
+    "www.assurancedigital.au",
+    "www.webadelaide.com.au",
+    "www.boylen.com.au",
+    "redmoth.com.au",
+    "argon.com.au",
+    "websiteadelaide.com",
+    "www.simple.com.au",
+    "edynam.com",
+    "adelaidewebdesigner.com.au"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "How much does it cost to hire a designer for a website?",
+    "Is web design still in demand in 2026?",
+    "What is the average cost of designing a website in Australia?",
+    "Which company is best for web designing?"
+   ],
+   "err": null,
+   "weakest_rd": 27,
+   "weakest_dom": "redmoth.com.au",
+   "median_rd": 221.5,
+   "ratio": 0.9642857142857143,
+   "verdict": "WINNABLE NOW"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "ecommerce seo melbourne",
+   "volume": 170,
+   "cpc": 0,
+   "aio": true,
+   "top10": [
+    "searchflex.com",
+    "impressive.com.au",
+    "creeddigital.com.au",
+    "www.webmarketingguru.com.au",
+    "searchdigital.au",
+    "zibdigital.com.au",
+    "www.kiaoradigital.com.au",
+    "www.sentius.com.au",
+    "marketixdigital.com.au",
+    "www.areaten.com"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "How much does SEO cost in Melbourne?",
+    "Who is the best SEO agency in Melbourne?",
+    "Is SEO worth it for ecommerce?",
+    "How much should I expect to pay for SEO?"
+   ],
+   "err": null,
+   "weakest_rd": 23,
+   "weakest_dom": "searchdigital.au",
+   "median_rd": 190.0,
+   "ratio": 0.8214285714285714,
+   "verdict": "WINNABLE NOW"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "seo agency newcastle",
+   "volume": 170,
+   "cpc": 0.69,
+   "aio": false,
+   "top10": [
+    "digitalnomadshq.com.au",
+    "gorilla360.com.au",
+    "firewiredigital.com.au",
+    "www.goodfirms.co",
+    "www.rankingco.com.au",
+    "www.ewebmarketing.au",
+    "centdigital.com.au",
+    "rampupdigital.com.au",
+    "pixelmethis.com.au",
+    "www.rb.com.au"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "How much should I expect to pay for SEO?",
+    "How much does SEO typically cost in Australia?",
+    "What does an SEO agency do?",
+    "Which SEO agency in Australia is considered the best?"
+   ],
+   "err": null,
+   "weakest_rd": 1,
+   "weakest_dom": "pixelmethis.com.au",
+   "median_rd": 565.5,
+   "ratio": 0.03571428571428571,
+   "verdict": "WINNABLE NOW"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "ai agent australia",
+   "volume": 140,
+   "cpc": 13.3,
+   "aio": true,
+   "top10": [
+    "7pillars.com.au",
+    "flowworks.com.au",
+    "digitalon.ai",
+    "www.empowerit.com.au",
+    "source-digital.com.au",
+    "www.thoughtworks.com",
+    "conversationalai.com.au",
+    "experteaseai.com",
+    "yesai.au",
+    "www.advancer.com.au"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "How much does it cost for an AI agent?",
+    "What is the 30% rule in AI?",
+    "How do I obtain an AI agent?",
+    "Can I get a free AI agent?"
+   ],
+   "err": null,
+   "weakest_rd": 16,
+   "weakest_dom": "source-digital.com.au",
+   "median_rd": 117.5,
+   "ratio": 0.5714285714285714,
+   "verdict": "WINNABLE NOW"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "chatgpt shopping",
+   "volume": 140,
+   "cpc": 1.42,
+   "aio": false,
+   "top10": [
+    "chatgpt.com",
+    "openai.com",
+    "www.youtube.com",
+    "chatgpt.com",
+    "www.reddit.com",
+    "www.adsmurai.com",
+    "neilpatel.com",
+    "help.openai.com",
+    "www.retaildive.com",
+    "genrank.io"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "Is there a ChatGPT for shopping?",
+    "What is the best AI to use for shopping?",
+    "How can I use AI for shopping?",
+    "What are the current ChatGPT deals?"
+   ],
+   "err": null,
+   "weakest_rd": 96,
+   "weakest_dom": "genrank.io",
+   "median_rd": 182316.0,
+   "ratio": 3.4285714285714284,
+   "verdict": "HARD (sustained link building)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "ecommerce agency sydney",
+   "volume": 140,
+   "cpc": 14.53,
+   "aio": false,
+   "top10": [
+    "www.yoghurtdigital.com.au",
+    "digitalagencynetwork.com",
+    "www.processcreative.com.au",
+    "clickclickmedia.com.au",
+    "digitalsurfer.com.au",
+    "agencies.semrush.com",
+    "farsiight.com",
+    "eux.com.au",
+    "reefdigital.com.au",
+    "rocketagency.com.au"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "What is the biggest eCommerce company in Australia?",
+    "What is an eCommerce agency?",
+    "What are the top 5 eCommerce companies?",
+    "Is e-commerce still booming?"
+   ],
+   "err": null,
+   "weakest_rd": 9,
+   "weakest_dom": "www.processcreative.com.au",
+   "median_rd": 449.0,
+   "ratio": 0.32142857142857145,
+   "verdict": "WINNABLE NOW"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "seo agency darwin",
+   "volume": 140,
+   "cpc": 0,
+   "aio": false,
+   "top10": [
+    "sixgun.com.au",
+    "firstpage.com.au",
+    "darwinseo.au",
+    "prosperitymedia.com.au",
+    "digitalnomadshq.com.au",
+    "rgcdigitalmarketing.com.au",
+    "locx.com.au",
+    "skywarddigital.com.au",
+    "www.linkedin.com",
+    "www.seotakeoff.com"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "How much should I expect to pay for SEO?",
+    "What is the 80/20 rule in SEO?",
+    "How much does SEO typically cost in Australia?",
+    "Is paying someone for SEO worth it?"
+   ],
+   "err": null,
+   "weakest_rd": 6,
+   "weakest_dom": "darwinseo.au",
+   "median_rd": 717.0,
+   "ratio": 0.21428571428571427,
+   "verdict": "WINNABLE NOW"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "ecommerce web design melbourne",
+   "volume": 140,
+   "cpc": 17.05,
+   "aio": false,
+   "top10": [
+    "www.emotedigital.com.au",
+    "www.23digital.com.au",
+    "weboracle.com.au",
+    "confettidesign.com.au",
+    "www.christom.com.au",
+    "zibdigital.com.au",
+    "www.webalive.com.au",
+    "sgd.com.au",
+    "marketinglab.com.au",
+    "astondigital.com.au"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "How much does it cost to design a website in Melbourne?",
+    "Is web design still in demand in 2026?",
+    "What are the top 10 eCommerce websites in Australia?",
+    "What are some good web design agencies in Melbourne?"
+   ],
+   "err": null,
+   "weakest_rd": 111,
+   "weakest_dom": "marketinglab.com.au",
+   "median_rd": 360.0,
+   "ratio": 3.9642857142857144,
+   "verdict": "HARD (sustained link building)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "seo agency sunshine coast",
+   "volume": 140,
+   "cpc": 11.53,
+   "aio": false,
+   "top10": [
+    "digitalnomadshq.com.au",
+    "studiohawk.com.au",
+    "www.suncoastmedia.com.au",
+    "www.reddit.com",
+    "www.websitesthatsell.com.au",
+    "duenorth.com.au",
+    "agencies.semrush.com",
+    "firstpage.com.au",
+    "www.linkedin.com",
+    "www.beontop.com"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "How much should I expect to pay for SEO?",
+    "Is an SEO agency worth it?",
+    "How much does SEO typically cost in Australia?",
+    "Which SEO agency in Australia is considered the best?"
+   ],
+   "err": null,
+   "weakest_rd": 101,
+   "weakest_dom": "www.suncoastmedia.com.au",
+   "median_rd": 1425.5,
+   "ratio": 3.607142857142857,
+   "verdict": "HARD (sustained link building)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "ai consultant australia",
+   "volume": 110,
+   "cpc": 15.16,
+   "aio": false,
+   "top10": [
+    "au.seek.com",
+    "clutch.co",
+    "aiconsultinggroup.com.au",
+    "www.protiviti.com",
+    "www.beyondkey.com.au",
+    "www.consultancy.com.au",
+    "au.linkedin.com",
+    "www.pa.com.au",
+    "www.reddit.com",
+    "www.rubix.com.au"
+   ],
+   "dir_count": 1,
+   "fj_pos": null,
+   "paa": [
+    "How much does an AI consultant cost?",
+    "What does an AI consultant actually do?",
+    "Are AI consultants in high demand?",
+    "Who are the best AI consultants?"
+   ],
+   "err": null,
+   "weakest_rd": 7,
+   "weakest_dom": "www.beyondkey.com.au",
+   "median_rd": 3704.0,
+   "ratio": 0.25,
+   "verdict": "WINNABLE NOW"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "ai consulting melbourne",
+   "volume": 110,
+   "cpc": 18.01,
+   "aio": false,
+   "top10": [
+    "redmarble.ai",
+    "www.reddit.com",
+    "arcadiandigital.com.au",
+    "www.protiviti.com",
+    "clutch.co",
+    "www.synap.au",
+    "flowtivity.ai",
+    "aiconsultinggroup.com.au",
+    "www.rubix.com.au",
+    "cloco.com.au"
+   ],
+   "dir_count": 1,
+   "fj_pos": null,
+   "paa": [
+    "Who are some good AI consultants in Melbourne?",
+    "How much does an AI consultant cost?",
+    "What does an AI consultant actually do?",
+    "What are the 10 best AI consulting firms?"
+   ],
+   "err": null,
+   "weakest_rd": 4,
+   "weakest_dom": "www.synap.au",
+   "median_rd": 345.5,
+   "ratio": 0.14285714285714285,
+   "verdict": "WINNABLE NOW"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "ai consulting sydney",
+   "volume": 110,
+   "cpc": 20.33,
+   "aio": false,
+   "top10": [
+    "thomas-wiegold.com",
+    "www.reddit.com",
+    "aiconsultinggroup.com.au",
+    "www.kineticconsulting.com.au",
+    "dbpa.com.au",
+    "www.vibe0.com.au",
+    "clutch.co",
+    "www.ssw.com.au",
+    "simplyai.com.au",
+    "team400.ai"
+   ],
+   "dir_count": 1,
+   "fj_pos": null,
+   "paa": [
+    "What is the 30% rule in AI?",
+    "What does an AI consultant actually do?",
+    "What are the 10 best AI consulting firms?",
+    "Is there a demand for AI consultants?"
+   ],
+   "err": null,
+   "weakest_rd": 18,
+   "weakest_dom": "dbpa.com.au",
+   "median_rd": 365.0,
+   "ratio": 0.6428571428571429,
+   "verdict": "WINNABLE NOW"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "ai sales agent",
+   "volume": 110,
+   "cpc": 37.53,
+   "aio": true,
+   "top10": [
+    "www.reddit.com",
+    "www.salesforce.com",
+    "fin.ai",
+    "www.creatio.com",
+    "salescloser.ai",
+    "www.decidr.ai",
+    "relevanceai.com",
+    "www.gumloop.com",
+    "www.ibm.com",
+    "dealhub.io"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "How much does an AI sales agent cost?",
+    "Can AI agents do sales?",
+    "Who has the best AI sales agent?",
+    "How can I build an AI agent for sales?"
+   ],
+   "err": null,
+   "weakest_rd": 356,
+   "weakest_dom": "www.decidr.ai",
+   "median_rd": 4782.0,
+   "ratio": 12.714285714285714,
+   "verdict": "GATED (not this year)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "seo for ai",
+   "volume": 110,
+   "cpc": 29.54,
+   "aio": true,
+   "top10": [
+    "developers.google.com",
+    "www.reddit.com",
+    "studiohawk.com.au",
+    "www.salesforce.com",
+    "llmrefs.com",
+    "whatagraph.com",
+    "seo.ai",
+    "www.youtube.com",
+    "digitalmarketinginstitute.com",
+    "www.squarespace.com"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "How do you do SEO for AI?",
+    "What is SEO for AI called?",
+    "What is the 30% rule in AI?",
+    "Can ChatGPT do SEO?"
+   ],
+   "err": null,
+   "weakest_rd": 1379,
+   "weakest_dom": "llmrefs.com",
+   "median_rd": 97032.0,
+   "ratio": 49.25,
+   "verdict": "GATED (not this year)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "seo services hobart",
+   "volume": 110,
+   "cpc": 0,
+   "aio": false,
+   "top10": [
+    "studiohawk.com.au",
+    "www.42digital.com.au",
+    "www.kiaoradigital.com.au",
+    "www.wakeforddigital.com.au",
+    "prosperitymedia.com.au",
+    "firewiredigital.com.au",
+    "edifyingvoyages.com",
+    "digitalnomadshq.com.au",
+    "noonmedia.com.au",
+    "bgtechs.com.au"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "How much do SEO services typically cost?",
+    "How much should I expect to pay for SEO?",
+    "What is the 80/20 rule in SEO?",
+    "How much does SEO typically cost in Australia?"
+   ],
+   "err": null,
+   "weakest_rd": 1,
+   "weakest_dom": "www.42digital.com.au",
+   "median_rd": 274.0,
+   "ratio": 0.03571428571428571,
+   "verdict": "WINNABLE NOW"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "creative agency australia",
+   "volume": 90,
+   "cpc": 10.26,
+   "aio": false,
+   "top10": [
+    "yourcreative.com.au",
+    "www.ogilvy.com.au",
+    "www.designrush.com",
+    "reborn.co",
+    "www.specialgroup.com",
+    "bmf.com.au",
+    "indicreativeagency.com.au",
+    "www.thecreativeworks.com.au",
+    "thecreativestore.com.au",
+    "www.thehero.co"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "What are the top creative agencies in Australia?",
+    "Who makes Aldi ads?",
+    "What are the top 3 creative agencies in the world?",
+    "Which agency is best for Australia?"
+   ],
+   "err": null,
+   "weakest_rd": 22,
+   "weakest_dom": "www.thecreativeworks.com.au",
+   "median_rd": 200.5,
+   "ratio": 0.7857142857142857,
+   "verdict": "WINNABLE NOW"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "web design agency australia",
+   "volume": 90,
+   "cpc": 10.65,
+   "aio": false,
+   "top10": [
+    "www.sparkinteract.com.au",
+    "clutch.co",
+    "stonedigital.com.au",
+    "redkite.design",
+    "digitalagencynetwork.com",
+    "butterfly.com.au",
+    "www.simple.com.au",
+    "tdsaustralia.com.au",
+    "madeagency.com.au",
+    "getmilk.com.au"
+   ],
+   "dir_count": 1,
+   "fj_pos": null,
+   "paa": [],
+   "err": null,
+   "weakest_rd": 95,
+   "weakest_dom": "tdsaustralia.com.au",
+   "median_rd": 523.5,
+   "ratio": 3.392857142857143,
+   "verdict": "HARD (sustained link building)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "web design company canberra",
+   "volume": 90,
+   "cpc": 0,
+   "aio": false,
+   "top10": [
+    "www.projectsimple.com.au",
+    "region.com.au",
+    "www.rb.com.au",
+    "webdesignincanberra.com.au",
+    "studiowho.com.au",
+    "digione.com.au",
+    "www.facebook.com",
+    "www.josiebrownwebdesign.com.au",
+    "clutch.co",
+    "clutch.co"
+   ],
+   "dir_count": 2,
+   "fj_pos": null,
+   "paa": [],
+   "err": null,
+   "weakest_rd": 21,
+   "weakest_dom": "studiowho.com.au",
+   "median_rd": 730.5,
+   "ratio": 0.75,
+   "verdict": "WINNABLE NOW"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "aeo australia",
+   "volume": 70,
+   "cpc": 0,
+   "aio": true,
+   "top10": [
+    "www.aeoperations.com.au",
+    "aeo.com.pk",
+    "www.wto.org",
+    "www.aec.gov.au",
+    "www.andmine.com.au",
+    "aeo.org.au",
+    "www.abf.gov.au",
+    "au.linkedin.com",
+    "uprisedigital.com.au",
+    "uprisedigital.com.au"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "What is AEO in Pakistan?",
+    "What does AO mean in Australia?",
+    "What are the requirements for Pakistani students to study in Australia?"
+   ],
+   "err": null,
+   "weakest_rd": 5,
+   "weakest_dom": "www.aeoperations.com.au",
+   "median_rd": 322.5,
+   "ratio": 0.17857142857142858,
+   "verdict": "WINNABLE NOW"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "ai agency melbourne",
+   "volume": 70,
+   "cpc": 11.16,
+   "aio": false,
+   "top10": [
+    "www.melbourneaiagents.com.au",
+    "www.lightningventures.com.au",
+    "www.aitalentondemand.com.au",
+    "team400.ai",
+    "www.reddit.com",
+    "www.andmine.com.au",
+    "digitalagencynetwork.com",
+    "aivy.com.au",
+    "builtinmelbourne.com",
+    "builtinmelbourne.com"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "How much does it cost to get an AI agent?",
+    "Is there an AI automation agency in Melbourne?",
+    "What is the 30% rule in AI?",
+    "Which AI SEO agency is located in Melbourne?"
+   ],
+   "err": null,
+   "weakest_rd": 1,
+   "weakest_dom": "www.melbourneaiagents.com.au",
+   "median_rd": 304.0,
+   "ratio": 0.03571428571428571,
+   "verdict": "WINNABLE NOW"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "ai agent development",
+   "volume": 70,
+   "cpc": 11.79,
+   "aio": true,
+   "top10": [
+    "www.ibm.com",
+    "www.reddit.com",
+    "medium.com",
+    "www.anthropic.com",
+    "openai.com",
+    "aws.amazon.com",
+    "www.salesforce.com",
+    "www.moveworks.com",
+    "developers.googleblog.com",
+    "n8n.io"
+   ],
+   "dir_count": 1,
+   "fj_pos": null,
+   "paa": [
+    "How is an AI agent developed?",
+    "What does an AI agent developer do?",
+    "How can I develop my own AI agent?",
+    "What are the 7 types of AI agents?"
+   ],
+   "err": null,
+   "weakest_rd": 4013,
+   "weakest_dom": "www.moveworks.com",
+   "median_rd": 230610.0,
+   "ratio": 143.32142857142858,
+   "verdict": "GATED (not this year)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "b2b ecommerce platform",
+   "volume": 70,
+   "cpc": 25.74,
+   "aio": true,
+   "top10": [
+    "www.b2bea.org",
+    "oroinc.com",
+    "www.reddit.com",
+    "www.bigcommerce.com",
+    "www.capterra.com.au",
+    "www.sap.com",
+    "www.salesforce.com",
+    "virtocommerce.com",
+    "www.youtube.com",
+    "www.youtube.com"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "What is a B2B ecommerce platform?",
+    "What is the best B2B ecommerce platform?",
+    "What is B2B in e-commerce?",
+    "Which platform is best for B2B?"
+   ],
+   "err": null,
+   "weakest_rd": 445,
+   "weakest_dom": "www.b2bea.org",
+   "median_rd": 61353.0,
+   "ratio": 15.892857142857142,
+   "verdict": "GATED (not this year)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "best seo agency brisbane",
+   "volume": 70,
+   "cpc": 26.09,
+   "aio": false,
+   "top10": [
+    "digital8.com.au",
+    "agencies.semrush.com",
+    "studiohawk.com.au",
+    "www.jaredbennett.com.au",
+    "www.excitemedia.com.au",
+    "www.dilate.com.au",
+    "bambrick.com.au",
+    "digitalsurfer.com.au",
+    "clutch.co",
+    "sixgun.com.au"
+   ],
+   "dir_count": 1,
+   "fj_pos": null,
+   "paa": [
+    "Who is the top SEO consultant in Brisbane?",
+    "How much does SEO cost in Brisbane?",
+    "Which SEO agency in Australia is considered the best?",
+    "Who is the best SEO agency?"
+   ],
+   "err": null,
+   "weakest_rd": 35,
+   "weakest_dom": "www.jaredbennett.com.au",
+   "median_rd": 739.0,
+   "ratio": 1.25,
+   "verdict": "WINNABLE (one link cycle)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "best seo agency perth",
+   "volume": 70,
+   "cpc": 22.77,
+   "aio": false,
+   "top10": [
+    "loadedcommunications.com.au",
+    "digitalnomadshq.com.au",
+    "www.seoperthexperts.com.au",
+    "www.dilate.com.au",
+    "perthseostudio.com.au",
+    "agencies.semrush.com",
+    "prosperitymedia.com.au",
+    "www.goodfirms.co",
+    "pwd.com.au",
+    "pwd.com.au"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "How much does SEO typically cost in Perth?",
+    "Which SEO agency in Australia is considered the best?",
+    "Who is the best SEO agency?",
+    "How much does SEO typically cost in Australia?"
+   ],
+   "err": null,
+   "weakest_rd": 91,
+   "weakest_dom": "loadedcommunications.com.au",
+   "median_rd": 1114.0,
+   "ratio": 3.25,
+   "verdict": "HARD (sustained link building)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "shopify developer melbourne",
+   "volume": 70,
+   "cpc": 2.68,
+   "aio": false,
+   "top10": [
+    "seventyfourdesign.com.au",
+    "www.airtasker.com",
+    "www.whitepeakdigital.com",
+    "thehopefactory.com",
+    "zibdigital.com.au",
+    "www.vrinsoft.com.au",
+    "www.insidermedia.com.au",
+    "www.upwork.com",
+    "www.convertdigital.com.au",
+    "fontis.au"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "How much does it cost to hire a Shopify developer?",
+    "How much do Shopify developers make?",
+    "Is Shopify still worth it in 2026?",
+    "Can I hire someone to build my Shopify?"
+   ],
+   "err": null,
+   "weakest_rd": 51,
+   "weakest_dom": "fontis.au",
+   "median_rd": 463.0,
+   "ratio": 1.8214285714285714,
+   "verdict": "WINNABLE (one link cycle)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "shopify experts australia",
+   "volume": 70,
+   "cpc": 25.29,
+   "aio": true,
+   "top10": [
+    "www.shopify.com",
+    "www.dilate.com.au",
+    "www.insidermedia.com.au",
+    "www.airtasker.com",
+    "www.shopify.com",
+    "76creativestudio.com",
+    "30acres.com.au",
+    "www.upwork.com",
+    "www.aerobusinesssolutions.com",
+    "www.facebook.com"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "Is it worth it to hire a Shopify expert?",
+    "How do I know if I got scammed on Shopify?",
+    "Can I hire someone to manage my Shopify store?",
+    "Is Shopify worth it in Australia?"
+   ],
+   "err": null,
+   "weakest_rd": 77,
+   "weakest_dom": "76creativestudio.com",
+   "median_rd": 7896.5,
+   "ratio": 2.75,
+   "verdict": "WINNABLE (one link cycle)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "small business web design australia",
+   "volume": 70,
+   "cpc": 6.32,
+   "aio": true,
+   "top10": [
+    "www.smallbusinesswebdesigns.net.au",
+    "magicdust.com.au",
+    "dynamicwebsites.com.au",
+    "lollipopcreative.com.au",
+    "www.web4business.com.au",
+    "creativebaguette.com",
+    "www.auswebdesign.com.au",
+    "factoryjet.com",
+    "au.linkedin.com",
+    "www.pixelfish.com.au"
+   ],
+   "dir_count": 0,
+   "fj_pos": 8,
+   "paa": [
+    "What is the best website builder for small businesses in Australia?",
+    "How much does it cost to build a website for a small business in Australia?",
+    "How much does it cost to design a website for a small business?",
+    "Is Web Designer in demand in Australia?"
+   ],
+   "err": null,
+   "weakest_rd": 43,
+   "weakest_dom": "creativebaguette.com",
+   "median_rd": 199.5,
+   "ratio": 1.5357142857142858,
+   "verdict": "WINNABLE (one link cycle)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "seo agency wollongong",
+   "volume": 50,
+   "cpc": 0,
+   "aio": false,
+   "top10": [
+    "seowollongong.com",
+    "advisible.com.au",
+    "www.ewebmarketing.au",
+    "business.localsearch.com.au",
+    "cantydigital.com.au",
+    "www.beansmarketing.com.au",
+    "maturedge.com.au",
+    "locx.com.au",
+    "sixgun.com.au",
+    "sixgun.com.au"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "How much should I expect to pay for SEO?",
+    "How much does SEO typically cost in Australia?",
+    "Which SEO agency in Australia is considered the best?",
+    "What does an SEO agency do?"
+   ],
+   "err": null,
+   "weakest_rd": 13,
+   "weakest_dom": "locx.com.au",
+   "median_rd": 645.0,
+   "ratio": 0.4642857142857143,
+   "verdict": "WINNABLE NOW"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "ai agency sydney",
+   "volume": 50,
+   "cpc": 7.36,
+   "aio": true,
+   "top10": [
+    "www.ailabaustralia.com",
+    "sydneyaiagency.com",
+    "aitalent.com.au",
+    "www.andmine.com.au",
+    "team400.ai",
+    "www.lightningventures.com.au",
+    "www.reddit.com",
+    "clutch.co",
+    "simplyai.com.au",
+    "builtinsydney.au"
+   ],
+   "dir_count": 1,
+   "fj_pos": null,
+   "paa": [
+    "What are some AI agencies in Australia?",
+    "How much does it cost to get an AI agent?",
+    "What is the 30% rule in AI?",
+    "Which is the best AI agent now?"
+   ],
+   "err": null,
+   "weakest_rd": 12,
+   "weakest_dom": "www.ailabaustralia.com",
+   "median_rd": 391.0,
+   "ratio": 0.42857142857142855,
+   "verdict": "WINNABLE NOW"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "ai automation agency australia",
+   "volume": 50,
+   "cpc": 15.72,
+   "aio": true,
+   "top10": [
+    "aiautomationagency.com.au",
+    "aivy.com.au",
+    "www.sparkinteract.com.au",
+    "www.ailabaustralia.com",
+    "www.hyphn.com.au",
+    "team400.ai",
+    "digitalon.ai",
+    "www.braive.com.au",
+    "authenticai.com.au",
+    "digitalon.ai"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "What is the best AI agent for automation?",
+    "Are there any AI factories in Australia?",
+    "What are some leading AI software development companies in Australia?",
+    "What are the best AI agent companies?"
+   ],
+   "err": null,
+   "weakest_rd": 2,
+   "weakest_dom": "www.hyphn.com.au",
+   "median_rd": 51.5,
+   "ratio": 0.07142857142857142,
+   "verdict": "WINNABLE NOW"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "shopify developer australia",
+   "volume": 50,
+   "cpc": 27,
+   "aio": true,
+   "top10": [
+    "www.convertdigital.com.au",
+    "au.seek.com",
+    "www.shopify.com",
+    "www.upwork.com",
+    "confettidesign.com.au",
+    "www.concise.digital",
+    "clutch.co",
+    "www.elsner.com.au",
+    "www.airtasker.com",
+    "elephynlabs.com"
+   ],
+   "dir_count": 1,
+   "fj_pos": null,
+   "paa": [
+    "How much does it cost to hire a Shopify developer?",
+    "Is Shopify still worth it in 2026?",
+    "Can I hire someone to build my Shopify?",
+    "How much do Shopify developers make?"
+   ],
+   "err": null,
+   "weakest_rd": 9,
+   "weakest_dom": "elephynlabs.com",
+   "median_rd": 6050.5,
+   "ratio": 0.32142857142857145,
+   "verdict": "WINNABLE NOW"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "agentic ai agency",
+   "volume": 40,
+   "cpc": 27.59,
+   "aio": true,
+   "top10": [
+    "agenticaiagency.com.au",
+    "www.ibm.com",
+    "beam.ai",
+    "mitsloan.mit.edu",
+    "www.moveworks.com",
+    "aws.amazon.com",
+    "business.adobe.com",
+    "agentic.ai",
+    "cloud.google.com",
+    "www.youtube.com"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "What is an agentic AI company?",
+    "Which companies are making agentic AI?",
+    "What are examples of agentic AI agents?",
+    "What are the top 3 AI agents?"
+   ],
+   "err": null,
+   "weakest_rd": 13,
+   "weakest_dom": "agenticaiagency.com.au",
+   "median_rd": 40683.0,
+   "ratio": 0.4642857142857143,
+   "verdict": "WINNABLE NOW"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "ai automation australia",
+   "volume": 40,
+   "cpc": 13.78,
+   "aio": true,
+   "top10": [
+    "australiaaiautomation.com.au",
+    "flowworks.com.au",
+    "au.seek.com",
+    "www.sparkinteract.com.au",
+    "aiautomationagency.com.au",
+    "digitalon.ai",
+    "tecala.com.au",
+    "scp.com.au",
+    "www.ailabaustralia.com",
+    "www.ailabaustralia.com"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "Which is best for AI automation?",
+    "What is the 30% rule in AI?",
+    "Is AI automation in demand?",
+    "What is the best home automation system in Australia?"
+   ],
+   "err": null,
+   "weakest_rd": 12,
+   "weakest_dom": "www.ailabaustralia.com",
+   "median_rd": 94,
+   "ratio": 0.42857142857142855,
+   "verdict": "WINNABLE NOW"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "ai automation brisbane",
+   "volume": 40,
+   "cpc": 22.08,
+   "aio": true,
+   "top10": [
+    "www.advancer.com.au",
+    "www.aiautomationbrisbane.com.au",
+    "aiautomationagency.com.au",
+    "hooraydigital.au",
+    "www.aiautomationbrisbane.com.au",
+    "bigbao.com.au",
+    "aipivot.com.au",
+    "sunburntai.com.au",
+    "technologycue.com.au",
+    "www.aiservicesbrisbane.com.au"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "How much do AI automations cost?",
+    "What are some leading AI automation agencies in Australia?",
+    "Is AI automation in high demand?",
+    "What jobs will survive AI in Australia?"
+   ],
+   "err": null,
+   "weakest_rd": 6,
+   "weakest_dom": "www.aiautomationbrisbane.com.au",
+   "median_rd": 24,
+   "ratio": 0.21428571428571427,
+   "verdict": "WINNABLE NOW"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "ai automation melbourne",
+   "volume": 40,
+   "cpc": 12.2,
+   "aio": false,
+   "top10": [
+    "www.aiautomationmelbourne.com.au",
+    "aiautomationagency.com.au",
+    "team400.ai",
+    "growthfirst.com.au",
+    "tecala.com.au",
+    "www.intermeta.ai",
+    "aivy.com.au",
+    "www.lightningventures.com.au",
+    "www.reddit.com",
+    "aipivot.com.au"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "Is there an AI automation agency in Melbourne?",
+    "How much do AI automations cost?",
+    "Is AI automation in high demand?",
+    "Can you make money with AI automation?"
+   ],
+   "err": null,
+   "weakest_rd": 2,
+   "weakest_dom": "www.intermeta.ai",
+   "median_rd": 58,
+   "ratio": 0.07142857142857142,
+   "verdict": "WINNABLE NOW"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "rpa australia",
+   "volume": 40,
+   "cpc": 0,
+   "aio": true,
+   "top10": [
+    "slhd.health.nsw.gov.au",
+    "en.wikipedia.org",
+    "radproaustralia.com",
+    "www.9now.com.au",
+    "au.linkedin.com",
+    "www.screenaustralia.gov.au",
+    "rpaics.org.au",
+    "tv.apple.com",
+    "tv.apple.com",
+    "www.facebook.com"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "Is RPA a good hospital?",
+    "What is the RPA hospital in Australia?",
+    "What does RPA stand for?",
+    "Is the RPA a private hospital?"
+   ],
+   "err": null,
+   "weakest_rd": 59,
+   "weakest_dom": "radproaustralia.com",
+   "median_rd": 51377,
+   "ratio": 2.107142857142857,
+   "verdict": "WINNABLE (one link cycle)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "ecommerce agency melbourne",
+   "volume": 40,
+   "cpc": 0,
+   "aio": false,
+   "top10": [
+    "www.emotedigital.com.au",
+    "digitalagencynetwork.com",
+    "www.wdmagency.com.au",
+    "au.pattern.com",
+    "www.sortlist.com",
+    "thehopefactory.com",
+    "www.theorchardagency.com.au",
+    "zeemo.com.au",
+    "www.23digital.com.au",
+    "www.23digital.com.au"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [
+    "What is the biggest ecommerce company in Australia?",
+    "What are the top 5 ecommerce companies?",
+    "Which e-commerce is best in Australia?",
+    "Who are Melbourne's top ad agencies?"
+   ],
+   "err": null,
+   "weakest_rd": 2,
+   "weakest_dom": "www.wdmagency.com.au",
+   "median_rd": 264.0,
+   "ratio": 0.07142857142857142,
+   "verdict": "WINNABLE NOW"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "ecommerce web design australia",
+   "volume": 40,
+   "cpc": 25.45,
+   "aio": false,
+   "top10": [
+    "www.23digital.com.au",
+    "digitalon.com.au",
+    "www.auswebdesign.com.au",
+    "clickclickmedia.com.au",
+    "melbourneit.au",
+    "sgd.com.au",
+    "www.quikclicks.com.au",
+    "www.alyka.com.au",
+    "www.elsner.com.au",
+    "www.webalive.com.au"
+   ],
+   "dir_count": 0,
+   "fj_pos": null,
+   "paa": [],
+   "err": null,
+   "weakest_rd": 57,
+   "weakest_dom": "www.auswebdesign.com.au",
+   "median_rd": 622.0,
+   "ratio": 2.0357142857142856,
+   "verdict": "WINNABLE (one link cycle)"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "shopify agency australia",
+   "volume": 40,
+   "cpc": 27.48,
+   "aio": true,
+   "top10": [
+    "swankyagency.com",
+    "thehopefactory.com",
+    "clutch.co",
+    "bacreative.com.au",
+    "www.23digital.com.au",
+    "www.processcreative.com.au",
+    "www.aitrillion.com",
+    "www.shopify.com",
+    "qikify.com",
+    "www.aussifywebdesign.com.au"
+   ],
+   "dir_count": 1,
+   "fj_pos": null,
+   "paa": [
+    "What does a Shopify agency do?",
+    "How much does Shopify take from a $100 sale?",
+    "How to become a Shopify agency?",
+    "Can I hire someone to manage my Shopify store?"
+   ],
+   "err": null,
+   "weakest_rd": 9,
+   "weakest_dom": "www.processcreative.com.au",
+   "median_rd": 602,
+   "ratio": 0.32142857142857145,
+   "verdict": "WINNABLE NOW"
+  },
+  {
+   "market": "Australia",
+   "loc": 2036,
+   "keyword": "shopify agency melbourne",
+   "volume": 40,
+   "cpc": 20.28,
+   "aio": false,
+   "top10": [
+    "thehopefactory.com",
+    "swankyagency.com",
+    "prosperdigital.com.au",
+    "www.smartosc.com",
+    "atollon.com.au",
+    "flux.agency",
+    "www.balanceinternet.com.au",
+    "dotcollective.com.au",
+    "clutch.co",
+    "clutch.co"
+   ],
+   "dir_count": 2,
+   "fj_pos": null,
+   "paa": [
+    "Which Shopify agencies are the best in Australia?",
+    "What does a Shopify agency do?",
+    "How much does Shopify take from a $100 sale?",
+    "Is Shopify still worth it in 2026?"
+   ],
+   "err": null,
+   "weakest_rd": 89,
+   "weakest_dom": "flux.agency",
+   "median_rd": 322.0,
+   "ratio": 3.1785714285714284,
+   "verdict": "HARD (sustained link building)"
+  }
+ ]
+}

@@ -1,0 +1,2380 @@
+{
+  "rows": [
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "aeo australia",
+      "vol": 70,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "affordable seo australia",
+      "vol": 50,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "agentic ai",
+      "vol": 8100,
+      "cpc": 15.6,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "agentic ai agency",
+      "vol": 40,
+      "cpc": 27.59,
+      "comp": "HIGH"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "agentic ai australia",
+      "vol": 20,
+      "cpc": 6.54,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "agentic checkout",
+      "vol": 10,
+      "cpc": null,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "agentic commerce",
+      "vol": 480,
+      "cpc": 16.69,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "agentic commerce australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai agency adelaide",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai agency australia",
+      "vol": 140,
+      "cpc": 13.3,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai agency brisbane",
+      "vol": 30,
+      "cpc": 6.84,
+      "comp": "HIGH"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai agency melbourne",
+      "vol": 70,
+      "cpc": 11.16,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai agency perth",
+      "vol": 20,
+      "cpc": 8.91,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai agency sydney",
+      "vol": 50,
+      "cpc": 7.36,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai agent australia",
+      "vol": 140,
+      "cpc": 13.3,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai agent development",
+      "vol": 70,
+      "cpc": 11.79,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai agent development adelaide",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai agent development australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai agent development brisbane",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai agent development company",
+      "vol": 30,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai agent development melbourne",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai agent development perth",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai agent development services",
+      "vol": 30,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai agent development sydney",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai agents australia",
+      "vol": 140,
+      "cpc": 13.3,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai agents for ecommerce",
+      "vol": 20,
+      "cpc": 23.59,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai automation adelaide",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai automation agency",
+      "vol": 390,
+      "cpc": 17.45,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai automation agency australia",
+      "vol": 50,
+      "cpc": 15.72,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai automation australia",
+      "vol": 40,
+      "cpc": 13.78,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai automation brisbane",
+      "vol": 40,
+      "cpc": 22.08,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai automation melbourne",
+      "vol": 40,
+      "cpc": 12.2,
+      "comp": "HIGH"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai automation perth",
+      "vol": 20,
+      "cpc": 9.89,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai automation sydney",
+      "vol": 30,
+      "cpc": 11.39,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai chatbot australia",
+      "vol": 20,
+      "cpc": null,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai chatbot development australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai commerce australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai consultant australia",
+      "vol": 110,
+      "cpc": 15.16,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai consulting adelaide",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai consulting australia",
+      "vol": 110,
+      "cpc": 15.16,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai consulting brisbane",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai consulting melbourne",
+      "vol": 110,
+      "cpc": 18.01,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai consulting perth",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai consulting services australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai consulting sydney",
+      "vol": 110,
+      "cpc": 20.33,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai customer service australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai development adelaide",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai development brisbane",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai development company australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai development melbourne",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai development perth",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai development sydney",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai implementation australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai integration services australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai overview optimisation",
+      "vol": 10,
+      "cpc": null,
+      "comp": "HIGH"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai personal shopper",
+      "vol": 20,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai receptionist australia",
+      "vol": 320,
+      "cpc": 16.42,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai sales agent",
+      "vol": 110,
+      "cpc": 37.53,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai search optimisation australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai search optimization australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai seo",
+      "vol": 1000,
+      "cpc": 42.92,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai seo adelaide",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai seo agency",
+      "vol": 390,
+      "cpc": 22.24,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai seo agency australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai seo australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai seo brisbane",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai seo melbourne",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai seo perth",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai seo services australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai seo sydney",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai shopping agent",
+      "vol": 20,
+      "cpc": 16.11,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai software development australia",
+      "vol": 10,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai solutions australia",
+      "vol": 20,
+      "cpc": 8.71,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai visibility australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai voice agent",
+      "vol": 210,
+      "cpc": 34.88,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "answer engine optimisation australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "answer engine optimization australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "autonomous ai agents",
+      "vol": 590,
+      "cpc": 10.54,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "b2b digital agency australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "b2b ecommerce agency",
+      "vol": 10,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "b2b ecommerce australia",
+      "vol": 10,
+      "cpc": 4.03,
+      "comp": "HIGH"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "b2b ecommerce platform",
+      "vol": 70,
+      "cpc": 25.74,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "b2b ecommerce platform australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "b2b ecommerce website",
+      "vol": 10,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "b2b online ordering system",
+      "vol": 10,
+      "cpc": 7.96,
+      "comp": "HIGH"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "b2b portal development",
+      "vol": 10,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "b2b website development australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "best seo agency adelaide",
+      "vol": 20,
+      "cpc": null,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "best seo agency australia",
+      "vol": 390,
+      "cpc": 22.85,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "best seo agency brisbane",
+      "vol": 70,
+      "cpc": 26.09,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "best seo agency melbourne",
+      "vol": 260,
+      "cpc": 42.47,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "best seo agency perth",
+      "vol": 70,
+      "cpc": 22.77,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "best seo agency sydney",
+      "vol": 720,
+      "cpc": 67.99,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "bigcommerce agency australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "business automation australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "chatbot development adelaide",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "chatbot development australia",
+      "vol": 10,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "chatbot development brisbane",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "chatbot development melbourne",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "chatbot development perth",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "chatbot development sydney",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "chatgpt seo australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "chatgpt shopping",
+      "vol": 140,
+      "cpc": 1.42,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "conversational ai australia",
+      "vol": 10,
+      "cpc": null,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "conversational commerce australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "creative agency australia",
+      "vol": 90,
+      "cpc": 10.26,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "custom ai development australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "custom web design australia",
+      "vol": 10,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "customer portal development australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "digital agency australia",
+      "vol": 260,
+      "cpc": 9.26,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ecommerce agency adelaide",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ecommerce agency australia",
+      "vol": 40,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ecommerce agency brisbane",
+      "vol": 30,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ecommerce agency melbourne",
+      "vol": 40,
+      "cpc": null,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ecommerce agency perth",
+      "vol": 10,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ecommerce agency sydney",
+      "vol": 140,
+      "cpc": 14.53,
+      "comp": "HIGH"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ecommerce consultant australia",
+      "vol": 20,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ecommerce development adelaide",
+      "vol": 10,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ecommerce development australia",
+      "vol": 10,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ecommerce development brisbane",
+      "vol": 10,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ecommerce development company australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ecommerce development melbourne",
+      "vol": 40,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ecommerce development perth",
+      "vol": 10,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ecommerce development sydney",
+      "vol": 20,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ecommerce seo adelaide",
+      "vol": 50,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ecommerce seo agency australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ecommerce seo australia",
+      "vol": 140,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ecommerce seo brisbane",
+      "vol": 30,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ecommerce seo melbourne",
+      "vol": 170,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ecommerce seo perth",
+      "vol": 210,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ecommerce seo sydney",
+      "vol": 140,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ecommerce web design adelaide",
+      "vol": 50,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ecommerce web design australia",
+      "vol": 40,
+      "cpc": 25.45,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ecommerce web design brisbane",
+      "vol": 260,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ecommerce web design melbourne",
+      "vol": 140,
+      "cpc": 17.05,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ecommerce web design perth",
+      "vol": 320,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ecommerce web design sydney",
+      "vol": 390,
+      "cpc": 40.49,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ecommerce web development australia",
+      "vol": 20,
+      "cpc": 56.55,
+      "comp": "HIGH"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ecommerce website builder australia",
+      "vol": 30,
+      "cpc": 7.77,
+      "comp": "HIGH"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ecommerce website design australia",
+      "vol": 40,
+      "cpc": 25.45,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ecommerce website development australia",
+      "vol": 20,
+      "cpc": 56.55,
+      "comp": "HIGH"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "erp ecommerce integration australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "generative ai consulting australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "generative engine optimisation australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "generative engine optimization australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "geo agency australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "geo seo australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "headless commerce australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "llm development australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "llm seo australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "local seo adelaide",
+      "vol": 140,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "local seo australia",
+      "vol": 210,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "local seo brisbane",
+      "vol": 390,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "local seo melbourne",
+      "vol": 390,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "local seo perth",
+      "vol": 590,
+      "cpc": 10.63,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "local seo sydney",
+      "vol": 480,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "machine learning consulting australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "magento agency australia",
+      "vol": 10,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "magento developer australia",
+      "vol": 10,
+      "cpc": null,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "netsuite ecommerce australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "online store development australia",
+      "vol": 10,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "process automation australia",
+      "vol": 10,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "rpa australia",
+      "vol": 40,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "seo agency adelaide",
+      "vol": 1300,
+      "cpc": 39.25,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "seo agency australia",
+      "vol": 1300,
+      "cpc": 58.67,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "seo agency brisbane",
+      "vol": 1900,
+      "cpc": 25.16,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "seo agency canberra",
+      "vol": 880,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "seo agency darwin",
+      "vol": 140,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "seo agency geelong",
+      "vol": 70,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "seo agency gold coast",
+      "vol": 390,
+      "cpc": 18.87,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "seo agency hobart",
+      "vol": 260,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "seo agency melbourne",
+      "vol": 1900,
+      "cpc": 33.74,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "seo agency newcastle",
+      "vol": 170,
+      "cpc": 0.69,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "seo agency perth",
+      "vol": 1600,
+      "cpc": 48.85,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "seo agency sunshine coast",
+      "vol": 140,
+      "cpc": 11.53,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "seo agency sydney",
+      "vol": 1300,
+      "cpc": 65.79,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "seo agency wollongong",
+      "vol": 50,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "seo audit australia",
+      "vol": 30,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "seo company adelaide",
+      "vol": 1300,
+      "cpc": 39.25,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "seo company australia",
+      "vol": 1300,
+      "cpc": 58.67,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "seo company brisbane",
+      "vol": 1900,
+      "cpc": 25.16,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "seo company melbourne",
+      "vol": 1000,
+      "cpc": 75.63,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "seo company perth",
+      "vol": 1300,
+      "cpc": 49.53,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "seo company sydney",
+      "vol": 1300,
+      "cpc": 117.46,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "seo consultant adelaide",
+      "vol": 390,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "seo consultant australia",
+      "vol": 170,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "seo consultant brisbane",
+      "vol": 590,
+      "cpc": 49.85,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "seo consultant melbourne",
+      "vol": 1300,
+      "cpc": 15.67,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "seo consultant perth",
+      "vol": 720,
+      "cpc": 36.71,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "seo consultant sydney",
+      "vol": 1000,
+      "cpc": 64.89,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "seo for ai",
+      "vol": 110,
+      "cpc": 29.54,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "seo services adelaide",
+      "vol": 480,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "seo services australia",
+      "vol": 590,
+      "cpc": 57.52,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "seo services brisbane",
+      "vol": 720,
+      "cpc": 17.3,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "seo services canberra",
+      "vol": 260,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "seo services darwin",
+      "vol": 70,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "seo services geelong",
+      "vol": 70,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "seo services gold coast",
+      "vol": 260,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "seo services hobart",
+      "vol": 110,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "seo services melbourne",
+      "vol": 480,
+      "cpc": 53.22,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "seo services newcastle",
+      "vol": 210,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "seo services perth",
+      "vol": 1600,
+      "cpc": 48.85,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "seo services sunshine coast",
+      "vol": 170,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "seo services sydney",
+      "vol": 880,
+      "cpc": 39.3,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "seo services wollongong",
+      "vol": 30,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "seo specialist australia",
+      "vol": 170,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "shopify agency adelaide",
+      "vol": 10,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "shopify agency australia",
+      "vol": 40,
+      "cpc": 27.48,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "shopify agency brisbane",
+      "vol": 10,
+      "cpc": 30.1,
+      "comp": "HIGH"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "shopify agency melbourne",
+      "vol": 40,
+      "cpc": 20.28,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "shopify agency perth",
+      "vol": 10,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "shopify agency sydney",
+      "vol": 20,
+      "cpc": 25.4,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "shopify designer australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "shopify developer adelaide",
+      "vol": 10,
+      "cpc": 12.53,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "shopify developer australia",
+      "vol": 50,
+      "cpc": 27,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "shopify developer brisbane",
+      "vol": 20,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "shopify developer melbourne",
+      "vol": 70,
+      "cpc": 2.68,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "shopify developer perth",
+      "vol": 40,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "shopify developer sydney",
+      "vol": 50,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "shopify developers australia",
+      "vol": 50,
+      "cpc": 27,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "shopify development australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "shopify experts australia",
+      "vol": 70,
+      "cpc": 25.29,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "shopify migration australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "shopify partner australia",
+      "vol": 20,
+      "cpc": null,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "shopify plus agency australia",
+      "vol": 10,
+      "cpc": 50.03,
+      "comp": "HIGH"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "shopify seo australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "shopify web design australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "shopify website design australia",
+      "vol": 10,
+      "cpc": 12.48,
+      "comp": "HIGH"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "small business web design australia",
+      "vol": 70,
+      "cpc": 6.32,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "technical seo australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "trade portal australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ux design australia",
+      "vol": 20,
+      "cpc": 1.54,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "voice ai australia",
+      "vol": 10,
+      "cpc": 4.83,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "web design adelaide",
+      "vol": 1000,
+      "cpc": 16.8,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "web design agency adelaide",
+      "vol": 50,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "web design agency australia",
+      "vol": 90,
+      "cpc": 10.65,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "web design agency brisbane",
+      "vol": 390,
+      "cpc": 13.94,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "web design agency melbourne",
+      "vol": 590,
+      "cpc": 10.58,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "web design agency perth",
+      "vol": 480,
+      "cpc": 16.18,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "web design agency sydney",
+      "vol": 480,
+      "cpc": 15.4,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "web design australia",
+      "vol": 480,
+      "cpc": 20.71,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "web design brisbane",
+      "vol": 2400,
+      "cpc": 35.73,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "web design canberra",
+      "vol": 1000,
+      "cpc": 10.94,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "web design company adelaide",
+      "vol": 210,
+      "cpc": 5.78,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "web design company australia",
+      "vol": 390,
+      "cpc": 36.57,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "web design company brisbane",
+      "vol": 2400,
+      "cpc": 35.73,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "web design company canberra",
+      "vol": 90,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "web design company darwin",
+      "vol": 10,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "web design company geelong",
+      "vol": 390,
+      "cpc": 10.54,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "web design company gold coast",
+      "vol": 90,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "web design company hobart",
+      "vol": 20,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "web design company melbourne",
+      "vol": 590,
+      "cpc": 21.57,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "web design company newcastle",
+      "vol": 10,
+      "cpc": 2.92,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "web design company perth",
+      "vol": 480,
+      "cpc": 16.18,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "web design company sunshine coast",
+      "vol": 40,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "web design company sydney",
+      "vol": 2400,
+      "cpc": 35.29,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "web design company wollongong",
+      "vol": 480,
+      "cpc": 5.75,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "web design darwin",
+      "vol": 140,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "web design geelong",
+      "vol": 390,
+      "cpc": 10.54,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "web design gold coast",
+      "vol": 1600,
+      "cpc": 26.07,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "web design hobart",
+      "vol": 320,
+      "cpc": 15.75,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "web design melbourne",
+      "vol": 1900,
+      "cpc": 12.72,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "web design newcastle",
+      "vol": 320,
+      "cpc": 19.63,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "web design perth",
+      "vol": 4400,
+      "cpc": 23.57,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "web design services australia",
+      "vol": 70,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "web design sunshine coast",
+      "vol": 880,
+      "cpc": 17.47,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "web design sydney",
+      "vol": 1000,
+      "cpc": 12.71,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "web design wollongong",
+      "vol": 480,
+      "cpc": 5.75,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "web designer adelaide",
+      "vol": 1000,
+      "cpc": 16.8,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "web designer australia",
+      "vol": 480,
+      "cpc": 20.71,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "web designer brisbane",
+      "vol": 2400,
+      "cpc": 35.73,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "web designer melbourne",
+      "vol": 1900,
+      "cpc": 12.72,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "web designer perth",
+      "vol": 4400,
+      "cpc": 23.57,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "web designer sydney",
+      "vol": 1000,
+      "cpc": 12.71,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "web development adelaide",
+      "vol": 1300,
+      "cpc": 24.41,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "web development australia",
+      "vol": 260,
+      "cpc": 14.88,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "web development brisbane",
+      "vol": 2400,
+      "cpc": 35.73,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "web development company australia",
+      "vol": 260,
+      "cpc": 8.86,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "web development melbourne",
+      "vol": 320,
+      "cpc": 18.51,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "web development perth",
+      "vol": 4400,
+      "cpc": 23.57,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "web development sydney",
+      "vol": 2400,
+      "cpc": 35.29,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "website design adelaide",
+      "vol": 1300,
+      "cpc": 24.41,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "website design australia",
+      "vol": 480,
+      "cpc": 20.71,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "website design brisbane",
+      "vol": 2400,
+      "cpc": 35.73,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "website design melbourne",
+      "vol": 1300,
+      "cpc": 27.69,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "website design perth",
+      "vol": 4400,
+      "cpc": 23.57,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "website design sydney",
+      "vol": 2400,
+      "cpc": 35.29,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "website designer australia",
+      "vol": 480,
+      "cpc": 20.71,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "website development australia",
+      "vol": 260,
+      "cpc": 14.88,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "website redesign australia",
+      "vol": 480,
+      "cpc": 20.71,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "wholesale ecommerce platform australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "wholesale ordering platform australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "woocommerce agency australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "woocommerce developer australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "wordpress agency australia",
+      "vol": 10,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "wordpress development australia",
+      "vol": 10,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "workflow automation australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    }
+  ]
+}
