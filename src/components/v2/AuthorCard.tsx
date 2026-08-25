@@ -37,7 +37,7 @@ export default function AuthorCard({ variant = 'light', className = '' }: Author
         {/* Author Details & Bio */}
         <div className="flex-grow">
           <div className="flex flex-wrap items-center gap-2 mb-1.5">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#FF5622] bg-[#FFF0EB] px-2.5 py-0.5 rounded-full">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#B23E13] bg-[#FFF0EB] px-2.5 py-0.5 rounded-full">
               Senior Technical Leadership
             </span>
             <span className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
@@ -54,7 +54,7 @@ export default function AuthorCard({ variant = 'light', className = '' }: Author
           </p>
 
           <p className={`text-xs sm:text-sm leading-relaxed mb-4 ${isDark ? 'text-gray-400' : 'text-[#6E6E80]'}`}>
-            Architect of high-performance Next.js web applications, headless commerce systems, and local search infrastructure for growing brands across North America. Every project is planned, reviewed, and deployed directly under senior technical supervision with zero junior agency handoffs.
+            Architect of high-performance Next.js web applications, headless commerce systems, and local search infrastructure for growing brands.  Every project is planned, reviewed, and deployed directly under senior technical supervision with zero junior agency handoffs.
           </p>
 
           {/* Entity Profile Links & Credentials */}

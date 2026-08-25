@@ -1,17 +1,31 @@
 import type { Metadata } from 'next';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import Footer from '../sections/Footer';
+import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
-import AuthorCard from '@/components/v2/AuthorCard';
-import WebDesignArchitectureBlueprint from '@/components/v2/WebDesignArchitectureBlueprint';
-import WebDesignValueCalculator from '@/components/v2/WebDesignValueCalculator';
-import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
-import CityLinksUK from '@/components/v2/CityLinksUK';
 import './ai-agents.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/ai-agents';
-const UPDATED = '2026-08-24';
+const UPDATED = '2026-08-25';
+
+/* ONE array drives the visible trail AND the BreadcrumbList JSON-LD, so the
+   schema can never describe a trail a human cannot see. Never hand-copy a
+   second list here. */
+const crumbs = [
+  { name: 'FactoryJet', url: 'https://factoryjet.com' },
+  { name: 'UK', url: 'https://factoryjet.com/uk' },
+  { name: 'AI Automation Agency', url: CANONICAL },
+];
+
+/* ─── External sources, each fetch-verified 2026-08-25 (HTTP 200, claim
+       confirmed in the fetched body) ──────────────────────────────────── */
+const SRC_ONS =
+  'https://www.ons.gov.uk/businessindustryandtrade/business/businessservices/articles/artificialintelligenceinukbusinesses/2023to2026';
+const SRC_OFCOM =
+  'https://www.ofcom.org.uk/media-use-and-attitudes/online-habits/from-apps-to-ai-search-how-the-uk-goes-online-in-2025';
+const SRC_ICO =
+  'https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/artificial-intelligence/guidance-on-ai-and-data-protection/what-are-the-accountability-and-governance-implications-of-ai/';
 
 /* ─── FAQ source of truth (drives UI + FAQPage schema) ─────────────── */
 const FAQ_CATEGORIES = [
@@ -23,6 +37,12 @@ const FAQ_CATEGORIES = [
 
 const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   // ── AI agents basics ──
+  { category: 'basics', question: 'What is an AI automation agency?',
+    answer: 'An AI automation agency builds AI into the way a business already works, instead of selling you a product to log into. The work is mapping which of your processes are worth automating, building an agent or workflow that handles one, connecting it to your existing systems, and keeping it accurate once it is live. It is engineering and integration work, not software resale.' },
+  { category: 'basics', question: 'How many UK businesses actually use AI?',
+    answer: 'The Office for National Statistics reports that self-reported AI use among UK businesses with 10 or more employees rose from around 12% in late 2023 to around 35% by June 2026. Use is uneven by sector: 58% in information and communication against 13% in construction. So roughly a third have started, and two thirds have not.' },
+  { category: 'basics', question: 'Is most UK business AI use deep or shallow?',
+    answer: 'Shallow, on the official numbers. The ONS found that the average number of AI technologies used per adopting business moved only from about 1.4 to about 1.6 between late 2023 and June 2026. Adoption spread sideways much faster than it went deep. Most firms bought one tool and stopped. That gap is where automation work still pays.' },
   { category: 'basics', question: 'What do AI automation agencies do?',
     answer: 'An AI automation agency designs, builds, and integrates AI agents and automated workflows for a business, rather than selling software off the shelf. That covers mapping which processes are worth automating, building the agent or workflow, wiring it into your existing tools, and keeping it running and accurate after launch.' },
   { category: 'basics', question: 'What is an AI agent versus a chatbot?',
@@ -69,6 +89,12 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     answer: 'No. Your data is used to build and run your agent, not to train a model for anyone else. Where we use third-party AI providers, we use them on standard business terms that keep your data out of their training sets, and we are direct about which providers are involved in any build.' },
   { category: 'integrations', question: 'Do you build agents for regulated or sensitive industries?',
     answer: 'Yes, with the security and access controls scoped to what that sector actually requires. We ask about compliance and data-handling requirements at the audit stage, before any build starts, so the agent is designed around them from day one rather than retrofitted afterward.' },
+  { category: 'integrations', question: 'Do we need a DPIA before an AI agent touches customer data?',
+    answer: 'Often yes. The Information Commissioner’s Office says the accountability principle makes you responsible for complying with data protection law, and for showing that compliance, in any AI system that processes personal data. It names a data protection impact assessment, or DPIA, as the ideal way to demonstrate it. We raise this at the audit stage, not after launch.' },
+  { category: 'integrations', question: 'Who is legally responsible for what the agent does, you or us?',
+    answer: 'You remain the data controller for your own customer data, so the legal responsibility sits with your business. Our job is to build the agent so that responsibility is easy to meet: scoped access, a record of what the agent did, and clear limits on what it can decide alone. We document all of it as part of the build.' },
+  { category: 'integrations', question: 'Can an agent work with a system that has no API?',
+    answer: 'Sometimes. If the system exports a clean file on a schedule, or has a database we can read safely, an agent can usually still work with it. If it has neither, the honest answer is that the integration will be fragile and we will say so before you spend anything. We check this during the audit, not halfway through a build.' },
 
   // ── Results & working with us ──
   { category: 'results', question: 'How much does an AI automation agency charge?',
@@ -83,6 +109,12 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     answer: 'Senior engineers, with the founder involved on every build. We are not a sales team that hands your project to a junior team or an offshore subcontractor once the contract is signed. The people who scope your automation audit are the same people who build and support the agent.' },
   { category: 'results', question: 'How is this different from a generic AI automation agency reselling templates?',
     answer: 'A reseller configures a platform built by someone else and charges a markup. We design and build the agent and the integration ourselves, senior engineers, founder included, and you own the result. If an agency cannot show you a production build, only a demo, it is worth asking what you would actually own at the end.' },
+  { category: 'results', question: 'What is the most common reason UK businesses stall on AI?',
+    answer: 'A shortage of in-house expertise. The ONS found that among firms reporting any barrier to AI adoption, lack of expertise is one of the most cited, and 62% of those firms respond by training or retraining existing staff. Hiring an agency is the other route: you borrow the expertise for one build instead of trying to grow it from scratch.' },
+  { category: 'results', question: 'What does an engagement with you look like in practice?',
+    answer: 'Three shapes, depending on what you need. A one-off automation audit if you only want to know what is worth doing. A fixed-price milestone build if you have a specific process to automate. Or a monthly retainer if you want agents built and maintained on an ongoing basis. We recommend the shape that fits after the audit call.' },
+  { category: 'results', question: 'What if an agent turns out not to be the right answer?',
+    answer: 'We tell you. Plenty of problems that look like automation problems are really a broken process, a missing integration, or software your team never finished setting up. If that is what the audit finds, we say so rather than selling you an agent. It costs us a project and saves you a bad build.' },
   { category: 'results', question: 'How do we get started?',
     answer: 'Send your name and work email through the form on this page. The founder replies within 24 hours to book a short call, where we run a free automation audit on your business, show you which processes are worth automating first, and map what a build would involve. That first look costs nothing.' },
 ];
@@ -115,8 +147,8 @@ const jsonLd = {
     {
       '@type': 'Service',
       '@id': `${CANONICAL}#service`,
-      name: 'AI Agent Development & AI Automation UK',
-      serviceType: 'AI agent development, AI automation, and AI workflow integration',
+      name: 'AI Automation Agency UK',
+      serviceType: 'AI automation, AI agent development, and AI workflow integration',
       provider: { '@id': 'https://factoryjet.com/#organization' },
       areaServed: { '@type': 'Country', name: 'United Kingdom' },
       url: CANONICAL,
@@ -126,18 +158,19 @@ const jsonLd = {
     {
       '@type': 'BreadcrumbList',
       '@id': `${CANONICAL}#breadcrumb`,
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-        { '@type': 'ListItem', position: 2, name: 'UK', item: 'https://factoryjet.com/uk' },
-        { '@type': 'ListItem', position: 3, name: 'AI Agents', item: CANONICAL },
-      ],
+      itemListElement: crumbs.map((c, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: c.name,
+        item: c.url,
+      })),
     },
     {
       '@type': ['WebPage', 'Article'],
       '@id': CANONICAL,
       url: CANONICAL,
-      name: 'AI Agent Development & Automation Agency UK | FactoryJet',
-      headline: 'AI Agents and Automation, Built for UK Businesses That Want Results, Not a Demo',
+      name: 'AI Automation Agency UK | Custom AI Agents | FactoryJet',
+      headline: 'The UK AI Automation Agency That Builds Agents Into Your Actual Tools',
       inLanguage: 'en-GB',
       datePublished: '2026-07-25',
       dateModified: UPDATED,
@@ -176,19 +209,19 @@ const jsonLd = {
 };
 
 export const metadata: Metadata = {
-  title: 'AI Agent Development & Automation Agency UK | FactoryJet',
+  title: 'AI Automation Agency UK | Custom AI Agents | FactoryJet',
   description:
-    'FactoryJet is a UK AI automation agency. We build custom AI agents for support, sales, and ops, wired into your tools. You own the build. Free audit.',
+    'FactoryJet is a UK AI automation agency building custom AI agents for support, sales and operations, wired into the tools you run. You own the build.',
   alternates: { canonical: CANONICAL, languages: { 'en-GB': CANONICAL, 'x-default': CANONICAL } },
   openGraph: {
-    title: 'AI Agent Development & Automation Agency UK | FactoryJet',
+    title: 'AI Automation Agency UK | Custom AI Agents | FactoryJet',
     description:
       'A UK AI automation agency and AI agent development team. We design and build custom AI agents for customer support, sales, and operations, wired into the tools you already run. You own what we build. Free automation audit.',
     url: CANONICAL,
     siteName: 'FactoryJet',
     locale: 'en_GB',
     type: 'website',
-    images: [{ url: '/images/uk/ai-agents-og.webp', width: 1200, height: 630, alt: 'AI Agent Development & Automation Agency UK by FactoryJet' }],
+    images: [{ url: '/images/uk/ai-agents-og.webp', width: 1200, height: 630, alt: 'AI automation agency UK, FactoryJet, building custom AI agents' }],
   },
   robots: { index: true, follow: true },
 };
@@ -202,6 +235,8 @@ export default function AiAgentsUKPage() {
       <div className="uk-aiagents">
       <main>
 
+        <Breadcrumbs items={crumbs} />
+
         {/* ═══ 1. HERO ═══ */}
         <section className="sec-lg dot-grid" style={{ position: 'relative' }}>
           <div className="wrap">
@@ -212,9 +247,9 @@ export default function AiAgentsUKPage() {
                   <span className="chip">AI Agent Development</span>
                   <span className="chip">Custom Built, You Own It</span>
                 </div>
-                <h1>AI Agents and Automation, Built for UK Businesses That Want Results, Not a Demo</h1>
+                <h1>The UK AI Automation Agency That Builds Agents Into Your Actual Tools</h1>
                 <p className="lead mt-6" style={{ maxWidth: 560 }}>
-                  FactoryJet is a UK AI automation agency and AI agent development team. We design and build
+                  FactoryJet is an AI automation agency working with businesses across the UK. We design and build
                   custom AI agents (customer support, sales, scheduling, ops, chatbots) that plug into the tools
                   you already run: your CRM, helpdesk, email, and WhatsApp. You own what we build, not us.
                 </p>
@@ -222,7 +257,7 @@ export default function AiAgentsUKPage() {
                 <div className="byline mt-6" style={{ maxWidth: 560 }}>
                   <div className="av">BB</div>
                   <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ projects delivered</span></div>
-                  <div className="upd">Last updated<br />25 July 2026</div>
+                  <div className="upd">Last updated<br />25 August 2026</div>
                 </div>
 
                 <div className="mt-6" style={{ maxWidth: 560 }}>
@@ -247,11 +282,11 @@ export default function AiAgentsUKPage() {
                 </div>
                 <div className="scorecard-row">
                   <div><div className="scorecard-metric">Code and agent ownership</div><div className="scorecard-note">nothing licensed back to us</div></div>
-                  <div className="scorecard-val" style={{ color: 'var( - green)', fontSize: 15 }}>100% yours</div>
+                  <div className="scorecard-val" style={{ color: 'var(--green)', fontSize: 15 }}>100% yours</div>
                 </div>
                 <div className="scorecard-row">
                   <div><div className="scorecard-metric">Monitoring after launch</div><div className="scorecard-note">shipped with every agent</div></div>
-                  <div className="scorecard-val" style={{ color: 'var( - green)' }}>Included</div>
+                  <div className="scorecard-val" style={{ color: 'var(--green)' }}>Included</div>
                 </div>
               </div>
             </div>
@@ -262,20 +297,28 @@ export default function AiAgentsUKPage() {
         <section className="sec">
           <div className="wrap">
             <div className="def" style={{ maxWidth: 940 }} data-speakable="true">
-              <span className="lab">What is an AI agent?</span>
+              <span className="lab">What is an AI automation agency?</span>
               <p>
-                An AI agent is software that can take actions and complete multi-step tasks across the tools a
-                business relies on, not just answer questions in a chat window. It can look something up, update
-                a record, send a message, or book a slot on its own. An AI automation agency builds these agents
-                wired into your real systems, not a templated chatbot widget.
+                An AI automation agency builds AI into the way a business already works, rather than selling it a
+                product to log into. The work is four things: finding which of your processes are worth
+                automating, building an AI agent or workflow that handles one, connecting it to the systems you
+                already run, and keeping it accurate after launch. FactoryJet does that for UK businesses.
+              </p>
+            </div>
+            <div className="def mt-6" style={{ maxWidth: 940 }}>
+              <span className="lab">And what is an AI agent?</span>
+              <p>
+                An AI agent is software that takes actions and completes multi-step tasks across your tools,
+                rather than only answering questions in a chat window. It can look something up, update a record,
+                send a message, or book a slot on its own. That is the difference between a chatbot and an agent.
               </p>
             </div>
             <p className="lead mt-8" style={{ maxWidth: 920 }}>
-              The shift that matters in 2026 is not whether a UK business uses AI. Most already do, at least
-              personally. It is whether that business has turned AI into something that acts on its behalf:
-              answering a customer, updating a system, chasing a lead, without a person doing every step by hand.
-              That is the gap between using AI and running on it. Closing it is the job an AI automation agency
-              is built for.
+              The question in 2026 is not whether a UK business uses AI. Around 35% of businesses with 10 or more
+              employees now report using at least one AI technology, up from around 12% in late 2023, according
+              to the Office for National Statistics. The question is whether that use has gone anywhere near deep
+              enough to change how the business runs. On the same ONS figures, it has not. That gap, between AI
+              you use and AI your business runs on, is the job an AI automation agency exists to close.
             </p>
           </div>
         </section>
@@ -283,12 +326,12 @@ export default function AiAgentsUKPage() {
         {/* ═══ 3. TRUST BAND ═══ */}
         <section className="stats-band">
           <div className="wrap">
-            <div className="col-4" style={{ gap: 20 }}>
-              <div className="trust-pill"><span className="dot dot-orange" />Custom agents, built on your real tools</div>
-              <div className="trust-pill"><span className="dot dot-orange" />Senior engineers, not a reseller playbook</div>
-              <div className="trust-pill"><span className="dot dot-orange" />You own the code and the agent</div>
-              <div className="trust-pill"><span className="dot dot-orange" />Founder involved on every build</div>
-            </div>
+            <ul className="col-4" style={{ gap: 20 }}>
+              <li className="trust-pill"><span className="dot dot-orange" />Custom agents, built on your real tools</li>
+              <li className="trust-pill"><span className="dot dot-orange" />Senior engineers, not a reseller playbook</li>
+              <li className="trust-pill"><span className="dot dot-orange" />You own the code and the agent</li>
+              <li className="trust-pill"><span className="dot dot-orange" />Founder involved on every build</li>
+            </ul>
           </div>
         </section>
 
@@ -301,45 +344,75 @@ export default function AiAgentsUKPage() {
                 <h2>Your team already uses AI. Your business does not run on it yet.</h2>
                 <div className="stack mt-6">
                   <p>
-                    The adoption curve already happened. Ofcom, the UK communications regulator, found in its
-                    Online Nation report, published in December 2025, that 54% of UK adults already use AI tools
-                    such as ChatGPT, Copilot, or Gemini, up from 31% just a year earlier. That is not
-                    early-adopter territory. That is most of the country.
+                    The Office for National Statistics tracks this directly. Self-reported AI use among UK
+                    businesses with 10 or more employees has risen from around 12% in late 2023 to around 35% by
+                    June 2026, almost tripling in under three years. Adoption is no longer the story. Most of
+                    your competitors have started.
                   </p>
                   <p>
-                    The same report found that ChatGPT alone drew 1.8 billion UK visits in the first eight months
-                    of 2025, up nearly five times year on year from 368 million. Your customers are already using
-                    it. So, most likely, is whoever answers your phones and inboxes right now.
+                    Here is the part almost nobody quotes. Over that same period, the average number of AI
+                    technologies used per adopting business moved from about 1.4 to about 1.6. Adoption spread
+                    sideways far faster than it went deep. In the ONS wording, adoption has been relatively
+                    shallow. Most firms bought one tool, used it for one thing, and stopped.
                   </p>
                   <p>
-                    Here is the gap that matters. Almost all of that use is personal: someone typing a question
-                    into a browser tab and reading the reply. Almost none of it is operational: an agent that
-                    answers the customer, updates the record, or books the call without a person doing the typing.
-                    Closing that gap, between AI you use and AI your business runs on, is what an AI automation
-                    agency does. It is the whole of what we build.
+                    That is the gap. Almost all of the AI in a typical UK business is personal: someone typing a
+                    question into a browser tab and reading the reply. Ofcom recorded 1.8 billion UK ChatGPT
+                    visits in the first eight months of 2025, up from 368 million a year earlier. Almost none of
+                    it is operational: an agent that answers the customer, updates the record, or books the call
+                    without a person doing the typing. Closing that gap is what an AI automation agency does.
                   </p>
                 </div>
+
+                <ul className="stack mt-8" style={{ maxWidth: 560 }}>
+                  <li className="card" style={{ padding: '14px 18px' }}>
+                    <p style={{ fontSize: 14 }}><b style={{ color: 'var(--ink)' }}>Sector matters more than size.</b> The ONS
+                      puts AI use at 58% in information and communication against 13% in construction. If your
+                      industry is at the low end, an agent is a competitive gap, not a tick-box exercise.</p>
+                  </li>
+                  <li className="card" style={{ padding: '14px 18px' }}>
+                    <p style={{ fontSize: 14 }}><b style={{ color: 'var(--ink)' }}>Small firms are not locked out.</b> 28% of
+                      UK businesses with 0 to 9 employees report using at least one AI technology, against 49% of
+                      those with 250 or more. The gap is real but far smaller than most owners assume.</p>
+                  </li>
+                  <li className="card" style={{ padding: '14px 18px' }}>
+                    <p style={{ fontSize: 14 }}><b style={{ color: 'var(--ink)' }}>Operations is the use case that wins.</b>{' '}
+                      Improving business operations is the most common reported use of AI, named by over 60% of
+                      larger businesses. That is exactly the work an agent does well.</p>
+                  </li>
+                  <li className="card" style={{ padding: '14px 18px' }}>
+                    <p style={{ fontSize: 14 }}><b style={{ color: 'var(--ink)' }}>Expertise, not cost, is the usual blocker.</b>{' '}
+                      Among UK firms reporting any barrier to AI adoption, lack of expertise is one of the most
+                      cited, and 62% of them respond by training existing staff. Hiring the expertise for one
+                      build is the faster route.</p>
+                  </li>
+                </ul>
+                <p style={{ fontFamily: 'var(--fm)', fontSize: 11, color: 'var(--n400)', marginTop: 12 }}>
+                  All four figures: <a href={SRC_ONS} target="_blank" rel="noopener noreferrer nofollow" style={{ textDecoration: 'underline' }}>ONS, Artificial intelligence in UK businesses: 2023 to 2026</a>, BICS Wave 159, June 2026.
+                </p>
               </div>
 
               <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid var( - n200)', padding: '14px 18px' }}>
-                  <span style={{ fontFamily: 'var( - fm)', fontSize: 10, letterSpacing: '.13em', textTransform: 'uppercase', color: 'var( - n400)' }}>UK · AI adoption in numbers</span>
-                  <span style={{ background: '#B23E13', color: '#fff', fontFamily: 'var( - fm)', fontSize: 10, borderRadius: 999, padding: '3px 9px' }}>Sourced</span>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid var(--n200)', padding: '14px 18px' }}>
+                  <span style={{ fontFamily: 'var(--fm)', fontSize: 10, letterSpacing: '.13em', textTransform: 'uppercase', color: 'var(--n400)' }}>UK · AI adoption in numbers</span>
+                  <span style={{ background: '#B23E13', color: '#fff', fontFamily: 'var(--fm)', fontSize: 10, borderRadius: 999, padding: '3px 9px' }}>Sourced</span>
                 </div>
-                <div style={{ padding: '6px 18px 16px' }}>
+                <ul style={{ padding: '6px 18px 16px', listStyle: 'none', margin: 0 }}>
                   {[
-                    { v: '54%', t: 'of UK adults already use AI tools, up from 31% in 2024', s: 'Ofcom, Online Nation, Dec 2025', u: 'https://www.ofcom.org.uk/media-use-and-attitudes/online-habits/from-apps-to-ai-search-how-the-uk-goes-online-in-2025' },
-                    { v: '1.8bn', t: 'UK ChatGPT visits, first 8 months of 2025, up from 368m', s: 'Ofcom, Online Nation, Dec 2025', u: 'https://www.ofcom.org.uk/media-use-and-attitudes/online-habits/from-apps-to-ai-search-how-the-uk-goes-online-in-2025' },
+                    { v: '35%', t: 'of UK businesses with 10+ staff use at least one AI technology, up from 12% in late 2023', s: 'ONS, AI in UK businesses, 2023 to 2026', u: SRC_ONS },
+                    { v: '1.6', t: 'AI technologies per adopting business, up only from 1.4. Adoption is wide, not deep', s: 'ONS, AI in UK businesses, 2023 to 2026', u: SRC_ONS },
+                    { v: '1.8bn', t: 'UK ChatGPT visits, first 8 months of 2025, up from 368m', s: 'Ofcom, Online Nation, Dec 2025', u: SRC_OFCOM },
+                    { v: '53%', t: 'of UK adults say they often see AI summaries in search results', s: 'Ofcom, Online Nation, Dec 2025', u: SRC_OFCOM },
                   ].map((r) => (
-                    <div key={r.t} style={{ padding: '13px 0', borderBottom: '1px solid var( - n200)' }}>
+                    <li key={r.t} style={{ padding: '13px 0', borderBottom: '1px solid var(--n200)' }}>
                       <div style={{ display: 'flex', alignItems: 'baseline', gap: 10 }}>
-                        <span style={{ fontFamily: 'var( - fd)', fontWeight: 800, fontSize: 22, color: 'var( - orange)' }}>{r.v}</span>
-                        <span style={{ fontSize: 13, color: 'var( - ink)' }}>{r.t}</span>
+                        <span style={{ fontFamily: 'var(--fd)', fontWeight: 800, fontSize: 22, color: 'var(--orange)' }}>{r.v}</span>
+                        <span style={{ fontSize: 13, color: 'var(--ink)' }}>{r.t}</span>
                       </div>
-                      <a href={r.u} target="_blank" rel="noopener noreferrer nofollow" style={{ fontFamily: 'var( - fm)', fontSize: 10, color: 'var( - n400)', textDecoration: 'underline' }}>{r.s}</a>
-                    </div>
+                      <a href={r.u} target="_blank" rel="noopener noreferrer nofollow" style={{ fontFamily: 'var(--fm)', fontSize: 10, color: 'var(--n400)', textDecoration: 'underline' }}>{r.s}</a>
+                    </li>
                   ))}
-                </div>
+                </ul>
               </div>
             </div>
           </div>
@@ -428,6 +501,50 @@ export default function AiAgentsUKPage() {
           </div>
         </section>
 
+        {/* ═══ 6b. IN SCOPE / OUT OF SCOPE ═══ */}
+        <section className="sec-lg">
+          <div className="wrap">
+            <div style={{ maxWidth: 760 }}>
+              <span className="eyebrow">The boundary</span>
+              <h2>What is in a build, and what is not</h2>
+              <p className="lead mt-4">
+                Most disappointment with an AI automation agency comes from a boundary nobody drew at the start.
+                So here is ours, written down before you ever speak to us.
+              </p>
+            </div>
+
+            <div className="col-2 mt-10" style={{ gap: 32 }}>
+              <div className="card">
+                <span className="eyebrow">Included in every build</span>
+                <ul className="scope-list yes-list mt-4">
+                  <li><b>A workflow audit before anything is built.</b> We map the process, the systems it touches, and where it breaks now.</li>
+                  <li><b>The agent itself,</b> designed around your rules rather than a template we reuse across clients.</li>
+                  <li><b>Integrations into your live systems,</b> not a sandbox copy, with access scoped to what the agent needs.</li>
+                  <li><b>Testing against your real data:</b> your tickets, your conversations, your records, before launch day.</li>
+                  <li><b>Escalation rules</b> that define exactly what the agent may decide alone and when it must hand off to a person.</li>
+                  <li><b>Monitoring from day one,</b> so you can read back what the agent actually did and when.</li>
+                  <li><b>Written documentation of the build,</b> so your team or another provider can maintain it without us.</li>
+                  <li><b>Full ownership of the code, the agent, and the integrations.</b> Nothing is licensed back to us.</li>
+                  <li><b>An agreed success measure</b> set before the build starts, reported against monthly afterwards.</li>
+                </ul>
+              </div>
+
+              <div className="card">
+                <span className="eyebrow">Not included, and we will say so</span>
+                <ul className="scope-list no-list mt-4">
+                  <li><b>Model provider fees.</b> Running an agent means paying whichever AI provider it calls. That bill is yours and goes direct, with no markup through us.</li>
+                  <li><b>Replacing software that already works.</b> If your helpdesk is fine, we integrate with it rather than rebuilding it.</li>
+                  <li><b>Fixing a broken process by automating it.</b> Automating a bad process just produces bad outcomes faster. We flag it instead.</li>
+                  <li><b>Agents that make final decisions on money, contracts, or people.</b> Those stay with a human by design, not by oversight.</li>
+                  <li><b>Legal or compliance sign-off.</b> We build to the requirements you set and document what the agent does. Your data protection duties stay yours.</li>
+                  <li><b>Guarantees of a specific percentage improvement.</b> Anyone quoting one before seeing your data is guessing.</li>
+                  <li><b>Integrations into systems with no API and no usable export.</b> An API is the doorway a piece of software opens so other software can read and write its data. Without one, or a clean file export, an agent has no safe way in. We check this during the audit and tell you before you spend anything.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* ═══ 7. LISTICLE ═══ */}
         <section className="sec-lg">
           <div className="wrap">
@@ -449,7 +566,7 @@ export default function AiAgentsUKPage() {
                 { n: '07', t: 'Iterate', d: 'Agents get tuned as your business changes. Nothing gets shipped once and left to drift.' },
               ].map((s) => (
                 <li key={s.n} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
-                  <span style={{ fontFamily: 'var( - fm)', fontWeight: 700, fontSize: 15, color: 'var( - orange)', minWidth: 34 }}>{s.n}</span>
+                  <span style={{ fontFamily: 'var(--fm)', fontWeight: 700, fontSize: 15, color: 'var(--orange)', minWidth: 34 }}>{s.n}</span>
                   <div>
                     <h3 style={{ fontSize: 18 }}>{s.t}</h3>
                     <p className="mt-2" style={{ marginTop: 6 }}>{s.d}</p>
@@ -464,8 +581,8 @@ export default function AiAgentsUKPage() {
 
         <MidPageCTA
           headline={'Have a process eating your team alive?'}
-          sub={'Describe the workflow. We will tell you whether an agent genuinely helps or whether you just need better software.'}
-          label={'Talk about your workflow'}
+          sub={'Describe the workflow and we will run a free automation audit on it. You get a straight answer on whether an AI agent genuinely helps here, or whether you just need better software. Plenty of times it is the second one.'}
+          label={'Get my free automation audit'}
         />
 
         {/* ═══ 8. COMPARISON TABLE ═══ */}
@@ -523,18 +640,79 @@ export default function AiAgentsUKPage() {
                 Three groups make up most of our work.
               </p>
             </div>
-            <div className="col-3 mt-12">
-              <div className="svc-card">
+            <ul className="col-3 mt-12">
+              <li className="svc-card">
                 <h3>Ecommerce and DTC brands</h3>
                 <p className="mt-4">Order status, returns, and stock questions that eat up your support inbox. We build agents that answer them directly, and can work alongside your <a href="/uk/ecommerce-seo">ecommerce SEO</a> if visibility is also part of the goal.</p>
-              </div>
-              <div className="svc-card">
+              </li>
+              <li className="svc-card">
                 <h3>Professional services and B2B</h3>
                 <p className="mt-4">Firms where a lead goes cold waiting for a reply. We build agents that qualify, answer early questions, and book the call directly into your calendar.</p>
-              </div>
-              <div className="svc-card">
+              </li>
+              <li className="svc-card">
                 <h3>Founders and small teams</h3>
                 <p className="mt-4">Teams too small to have someone answering everything all day. An agent handles the volume so your best people spend time on the calls that actually need them.</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        {/* ═══ 10b. READINESS CHECKLIST + INTEGRATIONS ═══ */}
+        <section className="sec-lg">
+          <div className="wrap">
+            <div className="col-6040">
+              <div>
+                <span className="eyebrow">Before you hire anyone</span>
+                <h2>Nine signs a process is ready for an AI agent</h2>
+                <p className="lead mt-4" style={{ maxWidth: 560 }}>
+                  Not every job is worth automating. Run your candidate process through this list first. If you
+                  tick six or more, an agent will very likely pay for itself. If you tick two, it will not, and
+                  we would rather you found that out here than after a build.
+                </p>
+                <ul className="scope-list num-list mt-6" style={{ maxWidth: 560 }}>
+                  <li><b>It repeats.</b> The same shape of task happens many times a week, not once a quarter.</li>
+                  <li><b>The rules can be written down.</b> If a competent new starter could follow a one-page instruction, an agent can follow it too.</li>
+                  <li><b>The information already exists somewhere.</b> A help centre, past tickets, a product database, an order system.</li>
+                  <li><b>Someone currently copies data between two screens.</b> That is the clearest signal of all.</li>
+                  <li><b>Delay costs you something measurable.</b> A lead going cold, a customer churning, a refund escalating.</li>
+                  <li><b>The systems involved have an API or a clean export.</b> Without one, an integration is fragile.</li>
+                  <li><b>A wrong answer is recoverable.</b> Nothing irreversible happens if the agent gets one case wrong before a person catches it.</li>
+                  <li><b>You can name the number that would improve.</b> Tickets resolved, meetings booked, hours returned.</li>
+                  <li><b>Someone internally owns it.</b> Agents drift without an owner, the same way any other system does.</li>
+                </ul>
+              </div>
+
+              <div className="card">
+                <span className="eyebrow">Where agents plug in</span>
+                <p className="mt-2" style={{ fontSize: 14 }}>
+                  The tools UK teams bring us most often. If a system has an API, or even a well-structured
+                  export, an agent can usually reach it. We confirm your exact stack on the audit call.
+                </p>
+                <div className="mt-6">
+                  <p style={{ fontFamily: 'var(--fm)', fontSize: 10, letterSpacing: '.12em', textTransform: 'uppercase', color: '#B23E13', marginBottom: 4 }}>Customer conversations</p>
+                  <ul className="int-group">
+                    <li><b>Helpdesk and ticketing.</b> Reading a ticket, drafting or sending the reply, tagging and routing it.</li>
+                    <li><b>Shared inboxes.</b> Triaging what arrives and answering the routine half without a person.</li>
+                    <li><b>WhatsApp and live chat.</b> Answering in the channel the customer already chose.</li>
+                  </ul>
+                </div>
+                <div className="mt-6">
+                  <p style={{ fontFamily: 'var(--fm)', fontSize: 10, letterSpacing: '.12em', textTransform: 'uppercase', color: '#B23E13', marginBottom: 4 }}>Sales and scheduling</p>
+                  <ul className="int-group">
+                    <li><b>CRM.</b> The system holding your customer and deal records. An agent creates and updates records, moves a deal stage, and logs what was said.</li>
+                    <li><b>Calendars.</b> Offering real availability and booking the slot, not just suggesting one.</li>
+                    <li><b>Quote and proposal tools.</b> Chasing a quote that has gone quiet and flagging the ones worth a call.</li>
+                  </ul>
+                </div>
+                <div className="mt-6">
+                  <p style={{ fontFamily: 'var(--fm)', fontSize: 10, letterSpacing: '.12em', textTransform: 'uppercase', color: '#B23E13', marginBottom: 4 }}>Operations and back office</p>
+                  <ul className="int-group">
+                    <li><b>Ecommerce and order systems.</b> Looking up an order, checking stock, starting a return.</li>
+                    <li><b>Spreadsheets and internal databases.</b> Reading and writing the records a person updates by hand today.</li>
+                    <li><b>Accounting and invoicing tools.</b> Matching, chasing, and flagging what does not reconcile.</li>
+                    <li><b>Internal documentation.</b> Answering staff questions from your own written process, not a guess.</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -549,10 +727,12 @@ export default function AiAgentsUKPage() {
               <div>
                 <div className="stack">
                   <p>
-                    Search demand for AI automation in the UK is real and growing. Terms like &quot;ai automation
-                    agency&quot; and &quot;ai agents for business&quot; draw hundreds of searches a month, and
-                    interest in &quot;ai agent development&quot; is climbing as more owners look past the chatbot
-                    demo stage. These are buyers looking for a team to hire, not people reading a definition.
+                    Look at what people actually type. &quot;AI automation agency&quot; is the phrase with real
+                    demand behind it in the UK, and &quot;ai automation agency uk&quot; specifically is a
+                    commercial-intent search: someone looking for a team to hire, not a definition to read.
+                    Meanwhile &quot;ai agent development uk&quot;, the phrase most agencies write their pages
+                    around, has effectively no search volume at all. We named this page after the search that
+                    exists.
                   </p>
                   <p>
                     Whether you are searching for an AI automation agency UK-wide or specifically in London,
@@ -570,25 +750,29 @@ export default function AiAgentsUKPage() {
               </div>
 
               <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid var( - n200)', padding: '14px 18px' }}>
-                  <span style={{ fontFamily: 'var( - fm)', fontSize: 10, letterSpacing: '.13em', textTransform: 'uppercase', color: 'var( - n400)' }}>UK · Monthly Search Demand</span>
-                  <span style={{ background: '#B23E13', color: '#fff', fontFamily: 'var( - fm)', fontSize: 10, borderRadius: 999, padding: '3px 9px' }}>DataForSEO</span>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid var(--n200)', padding: '14px 18px' }}>
+                  <span style={{ fontFamily: 'var(--fm)', fontSize: 10, letterSpacing: '.13em', textTransform: 'uppercase', color: 'var(--n400)' }}>UK · Monthly Search Demand</span>
+                  <span style={{ background: '#B23E13', color: '#fff', fontFamily: 'var(--fm)', fontSize: 10, borderRadius: 999, padding: '3px 9px' }}>DataForSEO</span>
                 </div>
                 <div style={{ padding: '4px 18px 14px' }}>
-                  {[
-                    { kw: 'ai automation agency', v: '720', w: '100%', kd: 'KD 10 · Winnable now' },
-                    { kw: 'ai agents for business', v: '110', w: '15%', kd: 'KD 16 · Winnable' },
-                    { kw: 'seo ai agents', v: '90', w: '13%', kd: 'KD 17 · Winnable' },
-                    { kw: 'ai automation agency london', v: '70', w: '10%', kd: 'KD 10 · Local, winnable' },
-                    { kw: 'ai chatbot development services', v: '40', w: '6%', kd: 'KD 0 · Quick win' },
-                  ].map((r) => (
-                    <div key={r.kw} className="demand-row">
-                      <div className="demand-top"><span className="demand-kw">{r.kw}</span><span className="demand-v">{r.v}<span style={{ fontSize: 9, color: 'var( - n400)' }}> /mo</span></span></div>
-                      <div className="demand-bar"><i style={{ width: r.w }} /></div>
-                      <div className="demand-kd">{r.kd}</div>
-                    </div>
-                  ))}
-                  <p style={{ textAlign: 'center', fontFamily: 'var( - fm)', fontSize: 10, color: 'var( - n400)', marginTop: 10 }}>Source: DataForSEO, United Kingdom, July 2026</p>
+                  <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
+                    {[
+                      { kw: 'ai automation agency', v: '720', w: '100%', kd: 'KD 10 · The head term' },
+                      { kw: 'ai automation agency uk', v: '210', w: '29%', kd: 'KD 10 · Commercial intent' },
+                      { kw: 'ai agents for business', v: '110', w: '15%', kd: 'KD 16 · Winnable' },
+                      { kw: 'seo ai agents', v: '90', w: '13%', kd: 'KD 17 · Winnable' },
+                      { kw: 'ai automation agency london', v: '70', w: '10%', kd: 'KD 10 · Local, winnable' },
+                      { kw: 'ai chatbot development services', v: '40', w: '6%', kd: 'KD 0 · Quick win' },
+                      { kw: 'ai agent development uk', v: '0', w: '1%', kd: 'No measurable demand' },
+                    ].map((r) => (
+                      <li key={r.kw} className="demand-row">
+                        <div className="demand-top"><span className="demand-kw">{r.kw}</span><span className="demand-v">{r.v}<span style={{ fontSize: 9, color: 'var(--n400)' }}> searches</span></span></div>
+                        <div className="demand-bar"><i style={{ width: r.w }} /></div>
+                        <div className="demand-kd">{r.kd}</div>
+                      </li>
+                    ))}
+                  </ul>
+                  <p style={{ textAlign: 'center', fontFamily: 'var(--fm)', fontSize: 10, color: 'var(--n400)', marginTop: 10 }}>Source: DataForSEO, United Kingdom, August 2026</p>
                 </div>
               </div>
             </div>
@@ -609,15 +793,15 @@ export default function AiAgentsUKPage() {
             <ul className="stack mt-10" style={{ maxWidth: 900 }}>
               {AI_AUTOMATION_AGENCIES.map((a, i) => (
                 <li key={a.name} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
-                  <span style={{ fontFamily: 'var( - fm)', fontWeight: 700, fontSize: 15, color: 'var( - orange)', minWidth: 30 }}>{i + 1}</span>
+                  <span style={{ fontFamily: 'var(--fm)', fontWeight: 700, fontSize: 15, color: 'var(--orange)', minWidth: 30 }}>{i + 1}</span>
                   <div>
-                    <h3 style={{ fontSize: 18 }}>{a.name}{a.name === 'FactoryJet' && <span style={{ fontFamily: 'var( - fm)', fontSize: 10, background: '#B23E13', color: '#fff', borderRadius: 999, padding: '2px 8px', marginLeft: 8, verticalAlign: 'middle' }}>That is us</span>}</h3>
+                    <h3 style={{ fontSize: 18 }}>{a.name}{a.name === 'FactoryJet' && <span style={{ fontFamily: 'var(--fm)', fontSize: 10, background: '#B23E13', color: '#fff', borderRadius: 999, padding: '2px 8px', marginLeft: 8, verticalAlign: 'middle' }}>That is us</span>}</h3>
                     <p className="mt-2" style={{ marginTop: 6 }}>{a.note}</p>
                   </div>
                 </li>
               ))}
             </ul>
-            <p style={{ fontFamily: 'var( - fm)', fontSize: 11, color: 'var( - n400)', marginTop: 14 }}>
+            <p style={{ fontFamily: 'var(--fm)', fontSize: 11, color: 'var(--n400)', marginTop: 14 }}>
               Agencies named from live UK search results for AI automation terms, July 2026. Listing is not endorsement, and we are one option among them.
             </p>
           </div>
@@ -644,6 +828,27 @@ export default function AiAgentsUKPage() {
                     you actually need rather than a fixed package.
                   </p>
                 </div>
+
+                <h3 className="mt-8">The three shapes an engagement takes</h3>
+                <ul className="scope-list num-list mt-4">
+                  <li><b>A one-off automation audit.</b> We map your workflows and tell you what is worth automating and what is not. Nothing gets built. Some businesses stop here, and that is a fine outcome.</li>
+                  <li><b>A fixed-price milestone build.</b> One clearly defined process, scoped into stages with a fixed price agreed per stage, so you are never signing a blank cheque against an open-ended project.</li>
+                  <li><b>A monthly retainer.</b> For businesses automating several processes over time, or where agents need continuous tuning as the business changes. Cancellable, and you keep everything already built.</li>
+                </ul>
+
+                <h3 className="mt-8">What the data rules add to any scope</h3>
+                <p className="mt-4">
+                  If an agent will touch customer data, UK data protection law shapes the build before the
+                  engineering does. The Information Commissioner&rsquo;s Office is direct about it: the
+                  accountability principle makes you responsible for complying with data protection law, and for
+                  demonstrating that compliance, in any AI system that processes personal data. It points to a
+                  data protection impact assessment, or DPIA, as the ideal way to show it. We raise that at the
+                  audit stage rather than after launch, because retrofitting it is always the expensive route.
+                </p>
+                <p style={{ fontFamily: 'var(--fm)', fontSize: 11, color: 'var(--n400)', marginTop: 10 }}>
+                  Source: <a href={SRC_ICO} target="_blank" rel="noopener noreferrer nofollow" style={{ textDecoration: 'underline' }}>ICO, Guidance on AI and data protection: accountability and governance implications of AI</a>.
+                </p>
+
                 <div className="mt-8">
                   <ModalCTAButton label="Get my free automation audit" region="uk" modalVariant="default" btnVariant="primary-light" />
                 </div>
@@ -654,7 +859,7 @@ export default function AiAgentsUKPage() {
                 <div className="scorecard-row"><div className="scorecard-metric">Systems and tools they connect to</div><div className="scorecard-val" style={{ fontSize: 14 }}>Reach</div></div>
                 <div className="scorecard-row"><div className="scorecard-metric">Complexity of the logic and decisions</div><div className="scorecard-val" style={{ fontSize: 14 }}>Depth</div></div>
                 <div className="scorecard-row"><div className="scorecard-metric">Security and data requirements</div><div className="scorecard-val" style={{ fontSize: 14 }}>Base</div></div>
-                <div className="scorecard-row"><div className="scorecard-metric">Free automation audit before you commit</div><div className="scorecard-val" style={{ color: 'var( - green)', fontSize: 14 }}>Always</div></div>
+                <div className="scorecard-row"><div className="scorecard-metric">Free automation audit before you commit</div><div className="scorecard-val" style={{ color: 'var(--green)', fontSize: 14 }}>Always</div></div>
               </div>
             </div>
           </div>

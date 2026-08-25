@@ -15,11 +15,14 @@ type Stat = {
 
 const STATS: Stat[] = [
   {
-    value: "£80.8B",
-    label: "UK AI Sector Value",
-    sublabel: "Europe's largest AI economy",
+    // 2026-08-25: was "£80.8B UK AI Sector Value", which no source we could
+    // fetch supports and which sat awkwardly beside the government's own
+    // figures further down the page. Replaced with DSIT's published numbers.
+    value: "£10B+",
+    label: "UK AI Sector Revenue",
+    sublabel: "Across 3,000+ UK AI companies (DSIT, 2024)",
     icon: Sparkles,
-    trend: "+28% YoY",
+    trend: "DSIT 2024",
   },
   {
     value: "54%",
@@ -29,18 +32,24 @@ const STATS: Stat[] = [
     trend: "6x Growth",
   },
   {
+    // 2026-08-25: sublabel said "28% of total UK retail sales". ONS Retail
+    // Sales GB, June 2026 puts the online share at 29.4%, so the page was
+    // contradicting the source it now cites further down.
     value: "£265B+",
     label: "UK E-Commerce Market",
-    sublabel: "28% of total UK retail sales",
+    sublabel: "29.4% of UK retail sales are online (ONS, June 2026)",
     icon: ShoppingBag,
-    trend: "24% Organic",
+    trend: "ONS 2026",
   },
   {
-    value: "42%",
-    label: "UK Searches with AI Overviews",
-    sublabel: "Converts at 4.4x traditional CTR",
+    // 2026-08-25: was "42%", which no source we could fetch supports. Ofcom's
+    // Online Nation 2025 measures roughly 30% of searches showing an AI
+    // overview, so that is the number the page now carries.
+    value: "30%",
+    label: "UK Searches Showing an AI Overview",
+    sublabel: "53% of UK adults say they see these summaries often",
     icon: TrendingUp,
-    trend: "527% Surge",
+    trend: "Ofcom 2025",
   },
 ];
 
@@ -112,12 +121,12 @@ export default function DigitalLandscape() {
               }}
             >
               <p>
-                Google AI Overviews now appear in 42% of UK searches. ChatGPT
-                had 1.8 billion UK visits in eight months. Perplexity AI
-                processes 780 million queries monthly. And 54% of UK firms are
-                actively using AI, up from just 9% in 2023. The digital
-                agencies that built their models around WordPress templates
-                and traditional SEO are not equipped for this reality.
+                Google AI Overviews now appear on around 30% of searches, and
+                ChatGPT took 1.8 billion UK visits in the first eight months of
+                2025, up from 368 million a year earlier, according to Ofcom.
+                More than half of UK adults say they see AI summaries often. The
+                digital agencies that built their models around WordPress
+                templates and traditional SEO are not equipped for this reality.
               </p>
               <p>
                 FactoryJet is. We are the AI-native web design agency,
@@ -131,10 +140,11 @@ export default function DigitalLandscape() {
                 with senior engineers and no agency overhead.
               </p>
               <p>
-                The United Kingdom has the largest AI sector in Europe and
-                the third largest globally, valued at £80.8 billion in 2026.
-                British businesses are adopting AI faster than almost anywhere
-                else: the proportion of UK firms actively using AI has leapt
+                The United Kingdom has one of the largest AI sectors in
+                Europe. The government&rsquo;s own AI sector study counts more than
+                3,000 UK AI companies, turning over more than £10 billion a year
+                and employing over 60,000 people in AI roles. British businesses
+                are adopting AI faster than almost anywhere else: the proportion of UK firms actively using AI has leapt
                 from 9% in 2023 to 25% in late 2024 to 54% in early 2026,
                 according to the British Chambers of Commerce. Yet a
                 significant gap remains: only 28% of UK businesses have fully
@@ -154,18 +164,17 @@ export default function DigitalLandscape() {
               <p>
                 Simultaneously, the way customers find businesses online is
                 transforming at an unprecedented pace. The UK e-commerce
-                market exceeds £265 billion, with 28% of all retail sales
-                happening digitally and 23.6% of e-commerce orders originating
-                from organic search. But &ldquo;organic search&rdquo; no
-                longer means just Google&rsquo;s ten blue links. Over 60% of
-                Google searches now end without a click to any website.
-                AI-referred website sessions surged 527% in the first half of
-                2025. And here is the number that should matter most to every
-                UK business owner: AI search traffic converts at 4.4 times
-                the rate of traditional organic search. UK businesses need a
-                digital partner that understands both worlds, traditional
-                search and AI-powered discovery, and builds for both from
-                day one.
+                market exceeds £265 billion, and the Office for National
+                Statistics put 29.4% of all UK retail sales online in June 2026,
+                the highest share since April 2021. But &ldquo;organic
+                search&rdquo; no longer means just Google&rsquo;s ten blue
+                links. Ofcom found that around 30% of searches now return an AI
+                overview, and that ChatGPT took 1.8 billion UK visits in the
+                first eight months of 2025, up from 368 million a year earlier.
+                A shopper can now read a full answer, and a recommendation,
+                without ever landing on a shop. UK businesses need a digital
+                partner that understands both worlds, traditional search and
+                AI-powered discovery, and builds for both from day one.
               </p>
             </div>
           </div>
@@ -276,6 +285,10 @@ export default function DigitalLandscape() {
             borderRadius: 12,
           }}
         >
+          {/* 2026-08-25: this used to assert "AI search traffic converts at 4.4
+              times the rate of traditional organic search". We could not find a
+              primary source for that number, so it is replaced with a claim we
+              can link to. */}
           <blockquote
             className="font-clash"
             style={{
@@ -286,9 +299,19 @@ export default function DigitalLandscape() {
               letterSpacing: "-0.01em",
             }}
           >
-            &ldquo;AI search traffic converts at 4.4 times the rate of
-            traditional organic search.&rdquo;
+            Google says there is no separate trick for appearing in AI
+            Overviews. The fundamentals are the work.
           </blockquote>
+          <figcaption className="mt-4">
+            <a
+              href="https://developers.google.com/search/docs/appearance/ai-features"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-fj-mono text-[12px] text-[#4A4A45] underline underline-offset-4 hover:text-[#0A0F1C]"
+            >
+              Source: Google Search Central, AI features and your website
+            </a>
+          </figcaption>
         </figure>
       </div>
     </section>

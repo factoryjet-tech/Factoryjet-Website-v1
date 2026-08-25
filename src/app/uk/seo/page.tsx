@@ -1,20 +1,36 @@
 import type { Metadata } from 'next';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import Footer from '../sections/Footer';
+import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
-import AuthorCard from '@/components/v2/AuthorCard';
-import LocalSeoArchitectureBlueprint from '@/components/v2/LocalSeoArchitectureBlueprint';
-import LocalSeoOpportunityEstimator from '@/components/v2/LocalSeoOpportunityEstimator';
-import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
-import CityLinksUK from '@/components/v2/CityLinksUK';
 import './seo.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/seo';
-const UPDATED = '2026-08-24';
+const UPDATED = '2026-08-25';
+const UPDATED_LABEL = '25 August 2026';
+
+/* ─── Breadcrumb source of truth (drives trail + BreadcrumbList) ───── */
+const crumbs = [
+  { name: 'FactoryJet', url: 'https://factoryjet.com' },
+  { name: 'UK', url: 'https://factoryjet.com/uk' },
+  { name: 'SEO Consultant', url: CANONICAL },
+];
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: crumbs.map((c, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: c.name,
+    item: c.url,
+  })),
+};
 
 /* ─── FAQ source of truth (drives UI + FAQPage schema) ─────────────── */
 const FAQ_CATEGORIES = [
+  { key: 'consultant', label: 'Working with a consultant' },
   { key: 'basics',    label: 'SEO basics' },
   { key: 'ai-search', label: 'SEO vs AI search' },
   { key: 'local',     label: 'Local & ecommerce SEO' },
@@ -22,6 +38,24 @@ const FAQ_CATEGORIES = [
 ] as const;
 
 const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
+  // ── Working with a consultant ──
+  { category: 'consultant', question: 'What does an SEO consultant do?',
+    answer: 'An SEO consultant is one senior person who plans and runs your search work, instead of a team you get handed to after the sales call. The job covers the same four things an agency does: technical health, page content and structure, links and reputation, and measurement. The difference is that the person who scopes the work is the person doing it, so nothing gets lost between the pitch and the delivery.' },
+  { category: 'consultant', question: 'Is an SEO consultant better than an SEO agency?',
+    answer: 'Neither is better. They suit different jobs. A consultant fits when you want senior judgement, a clear plan, and someone who can work alongside your existing developer or marketing manager. An agency retainer fits when you need volume: lots of content every month, ongoing digital PR, and a bench of specialists. If your real bottleneck is knowing what to do rather than having hands to do it, pick the consultant.' },
+  { category: 'consultant', question: 'How do I choose an SEO consultant in the UK?',
+    answer: 'Google publishes its own advice on hiring an SEO and it is worth following. Ask for examples of previous work, ask how they measure success and in what timeframe, ask about their experience in your industry and your country, and ask whether they will share every change they make and the reasoning behind it. Google states plainly that no one can guarantee a number one ranking, so treat any guarantee as a reason to walk away.' },
+  { category: 'consultant', question: 'What does an SEO consultant engagement look like?',
+    answer: 'Usually one of three shapes. A one-off audit gives you a prioritised list of what is wrong and what to fix first, which you can hand to your own developer. A fixed-price project takes a defined piece of work from start to finish, like a technical rebuild or a set of pages. A monthly retainer covers ongoing content, links, and measurement. We agree which shape fits after a short call.' },
+  { category: 'consultant', question: 'Do I need an SEO consultant, or can I do it myself?',
+    answer: 'Google says that if you run a small local business you can probably do much of the work yourself, and that is honest advice. Claim your Google Business Profile, write one clear page for each thing you sell, gather real reviews, and fix anything slow or broken. A consultant earns their place when the market is competitive, when the site has technical faults you cannot diagnose, or when you have run out of time to do it properly.' },
+  { category: 'consultant', question: 'Who will I actually be talking to?',
+    answer: 'Bhavesh Barot, the founder, on every account. Not a salesperson who hands you over, and not a junior working from a checklist. He scopes the work, plans it, and stays on it, so the person answering your email is the person doing the work. That is the whole point of hiring a consultant rather than a retainer, and it is why we keep the number of active accounts deliberately small.' },
+  { category: 'consultant', question: 'Can you work with our in-house team or existing agency?',
+    answer: 'Yes, and it is common. Plenty of businesses already have a developer, a marketing manager, or an agency doing part of the job well. In that case the consultant role is to set the plan, review the work, and settle the technical decisions nobody else can. We write recommendations your own team can act on, with the reasoning attached, so you are not stuck depending on us to keep moving.' },
+  { category: 'consultant', question: 'Do you work with businesses outside your own city?',
+    answer: 'Yes. We consult for UK businesses wherever they are based, from London and Manchester to smaller towns with no local specialist at all. The work happens remotely with regular video reviews, so you get the same senior attention regardless of postcode. Where you sit only changes which local searches we target for you, never the standard of the work or how often you hear from us.' },
+
   // ── SEO basics ──
   { category: 'basics', question: 'What does an SEO agency actually do?',
     answer: 'An SEO agency helps your website show up when people search for what you sell. That covers four things: fixing the technical health of your site so Google can crawl and index it, improving the content and structure of your pages, earning links and mentions from other sites, and tracking what ranks. A good agency ties all of it to real enquiries, not vanity keyword positions.' },
@@ -44,7 +78,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'ai-search', question: 'Will AI kill SEO?',
     answer: 'AI is changing SEO, not ending it. More than half of UK adults now use tools like ChatGPT and Gemini, so a growing share of buyers form an opinion inside an AI answer before they reach your site. The click is getting rarer, the visibility is not. The winners are businesses built to be the source the engine quotes. That is a change in method, not the end of search.' },
   { category: 'ai-search', question: 'Do you also do AI SEO and GEO?',
-    answer: 'Yes, and it is our edge over a traditional agency. Alongside classic SEO we do generative engine optimization, which shapes how AI models describe and cite you, and answer engine optimization, which structures pages so an engine can lift a clear answer. We track whether ChatGPT, Gemini, Perplexity, and Google AI Overviews actually name you. If you want that focus on its own, see our AI SEO page.' },
+    answer: 'Yes, and it is our edge over a traditional agency. Alongside classic SEO we do generative engine optimisation, which shapes how AI models describe and cite you, and answer engine optimisation, which structures pages so an engine can lift a clear answer. We track whether ChatGPT, Gemini, Perplexity, and Google AI Overviews actually name you. If you want that focus on its own, see our AI SEO page.' },
   { category: 'ai-search', question: 'Is SEO better than paid ads?',
     answer: 'They do different jobs. Paid ads buy visibility the moment you switch them on and stop the moment you switch them off. SEO builds an asset that keeps working, compounding over months at a lower cost per enquiry once it lands. Most businesses we work with use ads for speed and SEO for durable growth. If you can only pick one for the long run, SEO usually wins on return.' },
 
@@ -54,7 +88,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'local', question: 'Can I do local SEO myself?',
     answer: 'Yes, the basics are very doable. Claim your Google Business Profile, keep your name, address, and phone consistent everywhere, gather genuine reviews, and write a clear page for each area you serve. Many small businesses get real results this way. Where an agency helps is competitive areas, technical fixes, and the ongoing content and links that keep you ahead once the easy wins are done.' },
   { category: 'local', question: 'What is ecommerce SEO?',
-    answer: 'Ecommerce SEO is search optimization for online stores. It covers category and product pages, site structure, fast loading, clean handling of filters and variants, and product schema so your items can appear in search and shopping results. Increasingly it also means being named when a shopper asks a chatbot for the best option. Done well, it brings buyers with intent, not just browsers.' },
+    answer: 'Ecommerce SEO is search optimisation for online stores. It covers category and product pages, site structure, fast loading, clean handling of filters and variants, and product schema so your items can appear in search and shopping results. Increasingly it also means being named when a shopper asks a chatbot for the best option. Done well, it brings buyers with intent, not just browsers.' },
   { category: 'local', question: 'Are you an ecommerce SEO agency?',
     answer: 'Yes. We work with Shopify, WooCommerce, and custom stores, optimising category and product pages, fixing the technical issues that hold ranking back, and structuring pages so both Google and AI engines surface your products. We also build the content around buying decisions that pulls in shoppers earlier. If you run a store, our ecommerce SEO and Shopify SEO work is built for exactly that.' },
   { category: 'local', question: 'Do you work outside London?',
@@ -83,7 +117,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
 
 /* ─── Named UK SEO agencies (open self-disclosure, ItemList) ────────── */
 const SEO_AGENCIES: { name: string; note: string }[] = [
-  { name: 'FactoryJet', note: 'That is us. A UK SEO agency that builds pages to rank in Google and to be quoted by ChatGPT, Gemini, Perplexity, and Google AI Overviews, with AI visibility tracked as a first-class metric.' },
+  { name: 'FactoryJet', note: 'That is us. A founder-led SEO consultancy rather than a retainer shop. We build pages to rank in Google and to be quoted by ChatGPT, Gemini, Perplexity, and Google AI Overviews, with AI visibility tracked as a first-class metric and one senior person on your account throughout.' },
   { name: 'The SEO Works', note: 'A long-running Sheffield-based SEO and digital agency working with brands and SMBs across the UK.' },
   { name: 'ClickSlice', note: 'A London SEO agency known for technical SEO and link building for small and mid-sized businesses.' },
   { name: 'JDR Group', note: 'A Midlands agency that pairs SEO with inbound marketing for B2B, manufacturing, and industrial firms.' },
@@ -107,19 +141,34 @@ const jsonLd = {
       ],
     },
     {
+      '@type': 'Person',
+      '@id': 'https://factoryjet.com/about#bhavesh-barot',
+      name: 'Bhavesh Barot',
+      jobTitle: 'Chief Technical Architect',
+      url: 'https://factoryjet.com/about',
+      worksFor: { '@id': 'https://factoryjet.com/#organization' },
+      knowsAbout: [
+        'Search engine optimisation',
+        'Technical SEO',
+        'Local SEO',
+        'Ecommerce SEO',
+        'Generative engine optimisation',
+      ],
+      sameAs: [
+        'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
+        'https://github.com/factoryjet-tech',
+      ],
+    },
+    {
       '@type': 'Service',
       '@id': `${CANONICAL}#service`,
-      name: 'SEO Services UK',
-      author: {
-    '@type': 'Person',
-    name: 'Bhavesh Barot',
-    jobTitle: 'Chief Technical Architect',
-    url: 'https://factoryjet.com/about',
-    sameAs: [
-      'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-      'https://github.com/factoryjet-tech',
-    ],
-  },
+      name: 'SEO Consultant UK',
+      serviceType: 'SEO consulting',
+      areaServed: { '@type': 'Country', name: 'United Kingdom' },
+      description:
+        'Founder-led SEO consulting for UK businesses, covering technical SEO, on-page and content, local SEO, ecommerce SEO, and visibility inside AI answers.',
+      author: { '@id': 'https://factoryjet.com/about#bhavesh-barot' },
+      provider: { '@id': 'https://factoryjet.com/#organization' },
       publisher: { '@id': 'https://factoryjet.com/#organization' },
     },
     {
@@ -141,23 +190,35 @@ const jsonLd = {
         acceptedAnswer: { '@type': 'Answer', text: f.answer },
       })),
     },
+    {
+      '@type': 'WebPage',
+      '@id': `${CANONICAL}#webpage`,
+      url: CANONICAL,
+      name: 'SEO Consultant UK',
+      inLanguage: 'en-GB',
+      dateModified: UPDATED,
+      isPartOf: { '@id': 'https://factoryjet.com/#organization' },
+      about: { '@id': `${CANONICAL}#service` },
+      breadcrumb: { '@id': `${CANONICAL}#breadcrumb` },
+    },
+    { ...breadcrumbSchema, '@id': `${CANONICAL}#breadcrumb` },
   ],
 };
 
 export const metadata: Metadata = {
-  title: 'SEO Agency UK | Rank in Google & AI Answers | FactoryJet',
+  title: 'SEO Consultant UK | Senior SEO, Founder Led | FactoryJet',
   description:
-    'FactoryJet is a UK SEO agency that ranks you in Google and gets you named in AI answers. Technical, local, and ecommerce SEO. Book a free SEO audit.',
+    'A UK SEO consultant who plans and does the work himself. Technical, local, and ecommerce SEO, plus getting named in AI answers. Free SEO audit before you commit.',
   alternates: { canonical: CANONICAL, languages: { 'en-GB': CANONICAL, 'x-default': CANONICAL } },
   openGraph: {
-    title: 'SEO Agency UK | Rank in Google & AI Answers | FactoryJet',
+    title: 'SEO Consultant UK | Senior SEO, Founder Led | FactoryJet',
     description:
-      'A UK SEO agency getting businesses ranked in Google and named in AI answers from ChatGPT, Gemini, Perplexity, and Google AI Overviews. Technical, local, and ecommerce SEO. Free SEO audit.',
+      'Founder-led SEO consulting for UK businesses. One senior person on your account, covering technical, on-page, local, and ecommerce SEO, plus visibility inside ChatGPT, Gemini, Perplexity, and Google AI Overviews. Free SEO audit.',
     url: CANONICAL,
     siteName: 'FactoryJet',
     locale: 'en_GB',
     type: 'website',
-    images: [{ url: '/images/uk/seo-og.webp', width: 1200, height: 630, alt: 'SEO Agency UK by FactoryJet' }],
+    images: [{ url: '/images/uk/seo-og.webp', width: 1200, height: 630, alt: 'SEO consultant for UK businesses, FactoryJet' }],
   },
   robots: { index: true, follow: true },
 };
@@ -171,27 +232,29 @@ export default function SeoUKPage() {
       <div className="uk-seo">
       <main>
 
+        <Breadcrumbs items={crumbs} />
+
         {/* ═══ 1. HERO ═══ */}
         <section className="sec-lg dot-grid" style={{ position: 'relative' }}>
           <div className="wrap">
             <div className="col-6040">
               <div>
                 <div className="flex-wrap mb-6">
-                  <span className="chip"><span className="dot dot-orange" />UK SEO Agency</span>
+                  <span className="chip"><span className="dot dot-orange" />UK SEO Consultant</span>
+                  <span className="chip">Founder on every account</span>
                   <span className="chip">Google + AI Answers</span>
-                  <span className="chip">SEO · Local · Ecommerce</span>
                 </div>
-                <h1>SEO in the UK, Built for Google and the AI Answers Now Above It</h1>
+                <h1>SEO Consultant UK: Ranked in Google, Named in the AI Answers Above It</h1>
                 <p className="lead mt-6" style={{ maxWidth: 560 }}>
-                  FactoryJet is an SEO agency for UK businesses. We rank you in Google and get you named inside the
-                  AI answers your buyers now read first, with technical, on-page, local, and ecommerce SEO on every
-                  account, plus the AI visibility work most agencies still ignore.
+                  Bhavesh Barot is an SEO consultant for UK businesses. One senior person plans your search work
+                  and does it, covering technical, on-page, local, and ecommerce SEO, plus the AI visibility work
+                  most agencies still skip. No handover to a junior, no packages you have to fit into.
                 </p>
 
                 <div className="byline mt-6" style={{ maxWidth: 560 }}>
                   <div className="av">BB</div>
                   <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ projects, AI-native since day one</span></div>
-                  <div className="upd">Last updated<br />25 July 2026</div>
+                  <div className="upd">Last updated<br />{UPDATED_LABEL}</div>
                 </div>
 
                 <div className="mt-6" style={{ maxWidth: 560 }}>
@@ -204,7 +267,7 @@ export default function SeoUKPage() {
                 <span className="eyebrow">What we optimise for</span>
                 <div className="scorecard-row">
                   <div><div className="scorecard-metric">Google organic</div><div className="scorecard-note">the ten blue links, still ranked</div></div>
-                  <div className="scorecard-val" style={{ color: 'var( - green)', fontSize: 15 }}>Ranked</div>
+                  <div className="scorecard-val" style={{ color: 'var(--green)', fontSize: 15 }}>Ranked</div>
                 </div>
                 <div className="scorecard-row">
                   <div><div className="scorecard-metric">Google AI Overviews</div><div className="scorecard-note">the summary above the links</div></div>
@@ -220,7 +283,7 @@ export default function SeoUKPage() {
                 </div>
                 <div className="scorecard-row">
                   <div><div className="scorecard-metric">Technical &amp; schema</div><div className="scorecard-note">in server HTML, crawler-readable</div></div>
-                  <div className="scorecard-val" style={{ color: 'var( - green)' }}>100%</div>
+                  <div className="scorecard-val" style={{ color: 'var(--green)' }}>100%</div>
                 </div>
               </div>
             </div>
@@ -231,19 +294,23 @@ export default function SeoUKPage() {
         <section className="sec">
           <div className="wrap">
             <div className="def" style={{ maxWidth: 940 }} data-speakable="true">
-              <span className="lab">What does an SEO agency do?</span>
+              <span className="lab">What does an SEO consultant do?</span>
               <p>
-                An SEO agency gets your business found when people search for what you sell. It combines on-page,
-                technical, local, and off-page work so search engines rank your pages, and increasingly so AI engines
-                quote them. The 2026 shift is that ranking now shares the page with an AI answer, so being named in
-                that answer matters as much as ranking below it.
+                An SEO consultant is one senior person who plans and runs your search work, rather than an agency
+                team you get passed to after the sales call. The job covers four things: the technical health of
+                your site, the content and structure of your pages, the links and mentions that build trust, and
+                the measurement that proves it worked. In 2026 it covers a fifth: making sure AI answers name you.
               </p>
             </div>
             <p className="lead mt-8" style={{ maxWidth: 920 }}>
               The change that matters in 2026 is where the answer gets read. For years the goal was a high spot in a
               list of links. Now a growing share of buyers read a written answer at the top of the page, or ask a
               chatbot, and never scroll. Ranking still counts. Being the source the engine names when it writes the
-              answer counts just as much, and most SEO agencies are not built for it yet.
+              answer counts just as much, and most SEO providers are not built for it yet.
+            </p>
+            <p className="lead mt-4" style={{ maxWidth: 920 }}>
+              We also work the way an agency does when that is what a business needs, with ongoing content, links,
+              and reporting. The difference is not the list of tasks. It is who does them and who you talk to.
             </p>
           </div>
         </section>
@@ -255,7 +322,7 @@ export default function SeoUKPage() {
               <div className="trust-pill"><span className="dot dot-orange" />Ranked in Google, quoted in AI answers</div>
               <div className="trust-pill"><span className="dot dot-orange" />Technical, on-page, local, and ecommerce SEO</div>
               <div className="trust-pill"><span className="dot dot-orange" />AI visibility tracked, not guessed</div>
-              <div className="trust-pill"><span className="dot dot-orange" />Senior team, founder on every account</div>
+              <div className="trust-pill"><span className="dot dot-orange" />One senior consultant, not a handover</div>
             </div>
           </div>
         </section>
@@ -289,25 +356,193 @@ export default function SeoUKPage() {
               </div>
 
               <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid var( - n200)', padding: '14px 18px' }}>
-                  <span style={{ fontFamily: 'var( - fm)', fontSize: 10, letterSpacing: '.13em', textTransform: 'uppercase', color: 'var( - n400)' }}>UK · Search in numbers</span>
-                  <span style={{ background: '#B23E13', color: '#fff', fontFamily: 'var( - fm)', fontSize: 10, borderRadius: 999, padding: '3px 9px' }}>Sourced</span>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid var(--n200)', padding: '14px 18px' }}>
+                  <span style={{ fontFamily: 'var(--fm)', fontSize: 10, letterSpacing: '.13em', textTransform: 'uppercase', color: 'var(--n400)' }}>UK · Search in numbers</span>
+                  <span style={{ background: '#B23E13', color: '#fff', fontFamily: 'var(--fm)', fontSize: 10, borderRadius: 999, padding: '3px 9px' }}>Sourced</span>
                 </div>
                 <div style={{ padding: '6px 18px 16px' }}>
                   {[
                     { v: '~30%', t: 'of UK searches now show an AI Overview', s: 'Ofcom, Online Nation, Dec 2025', u: 'https://www.ofcom.org.uk/media-use-and-attitudes/online-habits/from-apps-to-ai-search-how-the-uk-goes-online-in-2025' },
                     { v: '8% vs 15%', t: 'link click rate with an AI summary vs without', s: 'Pew Research Center, Jul 2025', u: 'https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/' },
-                    { v: '1.8bn', t: 'UK ChatGPT visits, first 8 months of 2025', s: 'Ofcom, Online Nation, Dec 2025', u: 'https://www.ofcom.org.uk/media-use-and-attitudes/online-habits/from-apps-to-ai-search-how-the-uk-goes-online-in-2025' },
+                    { v: '1.8bn', t: 'UK ChatGPT visits, first 8 months of 2025, up from 368 million', s: 'Ofcom, Online Nation, Dec 2025', u: 'https://www.ofcom.org.uk/media-use-and-attitudes/online-habits/from-apps-to-ai-search-how-the-uk-goes-online-in-2025' },
+                    { v: '3bn', t: 'Google searches a month in the UK, used by 82% of adults', s: 'Ofcom, Online Nation, Dec 2025', u: 'https://www.ofcom.org.uk/media-use-and-attitudes/online-habits/from-apps-to-ai-search-how-the-uk-goes-online-in-2025' },
                   ].map((r) => (
-                    <div key={r.t} style={{ padding: '13px 0', borderBottom: '1px solid var( - n200)' }}>
+                    <div key={r.t} style={{ padding: '13px 0', borderBottom: '1px solid var(--n200)' }}>
                       <div style={{ display: 'flex', alignItems: 'baseline', gap: 10 }}>
-                        <span style={{ fontFamily: 'var( - fd)', fontWeight: 800, fontSize: 22, color: 'var( - orange)' }}>{r.v}</span>
-                        <span style={{ fontSize: 13, color: 'var( - ink)' }}>{r.t}</span>
+                        <span style={{ fontFamily: 'var(--fd)', fontWeight: 800, fontSize: 22, color: 'var(--orange)' }}>{r.v}</span>
+                        <span style={{ fontSize: 13, color: 'var(--ink)' }}>{r.t}</span>
                       </div>
-                      <a href={r.u} target="_blank" rel="noopener noreferrer nofollow" style={{ fontFamily: 'var( - fm)', fontSize: 10, color: 'var( - n400)', textDecoration: 'underline' }}>{r.s}</a>
+                      <a href={r.u} target="_blank" rel="noopener noreferrer nofollow" style={{ fontFamily: 'var(--fm)', fontSize: 10, color: 'var(--n400)', textDecoration: 'underline' }}>{r.s}</a>
                     </div>
                   ))}
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ═══ 4A. CONSULTANT OR AGENCY ═══ */}
+        <section className="sec-lg" id="consultant">
+          <div className="wrap">
+            <div style={{ maxWidth: 780 }}>
+              <span className="eyebrow">Consultant or agency</span>
+              <h2>What an SEO consultant gives you that a retainer does not</h2>
+              <p className="lead mt-4">
+                Most SEO in the UK is sold as a monthly retainer with a team behind it. That works when you need
+                volume. It works badly when what you actually need is one senior person to decide what to do next.
+                Here is the honest difference, so you can pick the shape that fits your business rather than the
+                shape that suits the seller.
+              </p>
+            </div>
+
+            <div className="col-2 mt-10" style={{ gap: 24 }}>
+              <div className="card card-top-orange">
+                <span className="eyebrow">A consultant engagement</span>
+                <h3 className="mt-4">One senior person, accountable end to end</h3>
+                <ul className="fact-list mt-6">
+                  <li><b>The person who scopes it does it.</b> No handover to a junior after the call, and no account manager relaying questions to someone you never meet.</li>
+                  <li><b>You get the reasoning, not just the task list.</b> Every recommendation comes with why it matters and what happens if you skip it, so your team can judge it.</li>
+                  <li><b>It fits around what you already have.</b> If you have a developer, a marketing manager, or an agency doing part of the job well, we set the plan and review their work rather than replacing them.</li>
+                  <li><b>Scope can be small.</b> A one-off audit is a complete piece of work. You are not required to start a monthly commitment to get an answer.</li>
+                  <li><b>Decisions happen in one conversation.</b> Technical calls that stall for weeks inside an agency get settled on a call, because the person deciding is the person building.</li>
+                  <li><b>Fewer accounts, deliberately.</b> Senior attention does not scale, so we cap how many businesses are active at once rather than pretending otherwise.</li>
+                </ul>
+              </div>
+
+              <div className="card">
+                <span className="eyebrow">An agency retainer</span>
+                <h3 className="mt-4">More hands, when volume is the bottleneck</h3>
+                <ul className="fact-list mt-6">
+                  <li><b>Better when you need output every month.</b> Twenty articles, ongoing digital PR, and constant page production need a bench of writers and outreach people.</li>
+                  <li><b>Better for very broad sites.</b> A retailer with tens of thousands of product pages needs sustained hands, not one adviser.</li>
+                  <li><b>Specialists on tap.</b> A dedicated link builder, a dedicated content editor, and a dedicated analyst are genuinely useful at scale.</li>
+                  <li><b>Continuity when people leave.</b> A team absorbs a departure more easily than a single consultant can.</li>
+                  <li><b>The trade-off is distance.</b> The senior person who won the account is rarely the person doing the work six months in, and that is where quality usually slips.</li>
+                  <li><b>The other trade-off is fixed shape.</b> Retainers tend to bill a set amount of work whether or not that is the work your site needs this month.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="card mt-8" style={{ maxWidth: 980 }}>
+              <span className="eyebrow">Engagement shapes we offer</span>
+              <h3 className="mt-4">Three ways to work with us, described in plain words</h3>
+              <p className="mt-4">
+                We do not sell tiers or packages. We agree the shape after a short call, once we can see the site.
+              </p>
+              <ol className="step-list mt-6">
+                <li><b>One-off SEO audit</b>A single fixed piece of work. You get a prioritised list of what is holding the site back, in the order it should be fixed, with the reasoning attached. Plenty of clients take that to their own developer and never come back, which is fine.</li>
+                <li><b>Fixed-price milestone project</b>A defined job with a defined end, such as a technical rebuild, a migration, or a set of pages built properly. Payment is tied to milestones you can see, not to hours logged.</li>
+                <li><b>Monthly retainer</b>Ongoing content, links, technical maintenance, and reporting, for businesses in competitive markets where the work never really stops. Same senior person, month after month.</li>
+                <li><b>Advisory sessions</b>Booked time when an in-house team wants a second opinion on a plan, a migration, or an agency proposal they are unsure about. No implementation, just judgement.</li>
+              </ol>
+            </div>
+
+            <div className="col-3 mt-10">
+              <div className="svc-card">
+                <h3>Pick a consultant if</h3>
+                <ul className="fact-list mt-4">
+                  <li>You already have people who can build, but nobody who can decide what to build.</li>
+                  <li>You have been burned by a retainer that produced reports rather than rankings.</li>
+                  <li>Your site has a technical fault nobody has been able to diagnose.</li>
+                  <li>You want to understand the work well enough to keep doing it yourself later.</li>
+                </ul>
+              </div>
+              <div className="svc-card">
+                <h3>Pick an agency if</h3>
+                <ul className="fact-list is-cross mt-4">
+                  <li>You need a high volume of new content published every single month.</li>
+                  <li>You are running paid, social, email, and SEO and want one supplier for all of it.</li>
+                  <li>Your catalogue runs to tens of thousands of pages needing constant attention.</li>
+                  <li>Your procurement process requires a company with a large named team.</li>
+                </ul>
+              </div>
+              <div className="svc-card">
+                <h3>Do it yourself if</h3>
+                <ul className="fact-list is-cross mt-4">
+                  <li>You run a small local business in a market with little competition.</li>
+                  <li>Your main need is a Google Business Profile and a few clear service pages.</li>
+                  <li>You have time to learn, and Google publishes the starter guide free.</li>
+                  <li>You would rather spend on the product first and revisit search later.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ═══ 4B. HOW TO HIRE ONE (Google Search Central, cited) ═══ */}
+        <section className="sec-lg dot-grid">
+          <div className="wrap">
+            <div className="col-6040">
+              <div>
+                <span className="eyebrow">Before you hire anyone</span>
+                <h2>The questions Google itself says to ask an SEO</h2>
+                <div className="stack mt-6">
+                  <p>
+                    You do not have to take our word for what a good SEO consultant looks like. Google publishes its
+                    own guidance on hiring one, and it is short, blunt, and free to read. We have reproduced the
+                    questions it recommends below, because a consultant who flinches at any of them is telling you
+                    something useful.
+                  </p>
+                  <p>
+                    The same page says two things worth repeating. First, that if you run a small local business you
+                    can probably do much of the work yourself, and that starting with Google&apos;s own starter guide is
+                    sensible. Second, that no one can guarantee a number one ranking, and that you should be wary of
+                    anyone who claims a special relationship with Google.
+                  </p>
+                  <p>
+                    Google also asks whether an SEO cites official documentation as evidence, and whether advice about
+                    optimising for AI features lines up with Google&apos;s published guidance on generative AI. That is a
+                    fair test, and one we are happy to be measured against.
+                  </p>
+                </div>
+                <p className="src-note mt-6">
+                  Question list from <a href="https://developers.google.com/search/docs/fundamentals/do-i-need-seo" target="_blank" rel="noopener noreferrer nofollow">Google Search Central, &quot;Do you need an SEO?&quot;</a>, page last updated 5 June 2026. Reproduced under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer nofollow">Creative Commons Attribution 4.0 licence</a>. Contractions expanded to match the rest of this page; wording otherwise unchanged.
+                </p>
+              </div>
+
+              <div className="card card-top-orange">
+                <span className="eyebrow">Google&apos;s recommended questions</span>
+                <ul className="fact-list mt-6">
+                  <li>Can you show me examples of your previous work and share some success stories?</li>
+                  <li>Do you follow the Google Search Essentials?</li>
+                  <li>What kind of results do you expect to see, and in what timeframe?</li>
+                  <li>How do you measure your success?</li>
+                  <li>What is your experience in my industry?</li>
+                  <li>What is your experience in my country and city?</li>
+                  <li>How long have you been in business?</li>
+                  <li>How can I expect to communicate with you?</li>
+                  <li>Will you share every change you make to my site, and explain the reasoning behind your recommendations?</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="col-2 mt-10" style={{ gap: 24 }}>
+              <div className="card">
+                <span className="eyebrow">Warning signs Google names</span>
+                <h3 className="mt-4">Reasons to walk away</h3>
+                <ul className="fact-list is-cross mt-6">
+                  <li>Anyone who guarantees a number one ranking on Google.</li>
+                  <li>Anyone claiming a special relationship with Google, or a priority submission to it.</li>
+                  <li>Any firm that contacts you out of the blue to say your site is missing from the major search engines.</li>
+                  <li>Anyone secretive about what they intend to do, or unwilling to explain it clearly when asked.</li>
+                  <li>Any tool sold as approved or endorsed by Google. Google says it does not evaluate or endorse third-party SEO tools.</li>
+                  <li>Anyone who wants write access to your Search Console before an audit has even happened.</li>
+                </ul>
+                <p className="src-note mt-6">
+                  Summarised from <a href="https://developers.google.com/search/docs/fundamentals/do-i-need-seo" target="_blank" rel="noopener noreferrer nofollow">Google Search Central, &quot;Do you need an SEO?&quot;</a>
+                </p>
+              </div>
+              <div className="card">
+                <span className="eyebrow">How we answer them</span>
+                <h3 className="mt-4">Our replies, in advance</h3>
+                <ul className="fact-list mt-6">
+                  <li><b>Guarantees:</b> none on rankings, ever. We guarantee the work and the reporting, not the algorithm.</li>
+                  <li><b>Evidence:</b> recommendations cite Google&apos;s own documentation where it exists, so you can check them.</li>
+                  <li><b>Access:</b> read-only Search Console access for the audit. Write access only if and when you decide to proceed.</li>
+                  <li><b>Change log:</b> every change to your site is listed, with the reason, so nothing happens quietly.</li>
+                  <li><b>Communication:</b> the founder replies within 24 hours, in plain language, without a ticket queue.</li>
+                  <li><b>AI advice:</b> our approach to AI answers is built on Google&apos;s published guidance on generative AI features, not folklore.</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -383,7 +618,7 @@ export default function SeoUKPage() {
                 { n: '07', t: 'Measure and compound', d: 'We track rankings, enquiries, and where you get named across engines month on month, double down on what moves, and keep the content fresh so you stay found.' },
               ].map((s) => (
                 <li key={s.n} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
-                  <span style={{ fontFamily: 'var( - fm)', fontWeight: 700, fontSize: 15, color: 'var( - orange)', minWidth: 34 }}>{s.n}</span>
+                  <span style={{ fontFamily: 'var(--fm)', fontWeight: 700, fontSize: 15, color: 'var(--orange)', minWidth: 34 }}>{s.n}</span>
                   <div>
                     <h3 style={{ fontSize: 18 }}>{s.t}</h3>
                     <p className="mt-2" style={{ marginTop: 6 }}>{s.d}</p>
@@ -394,7 +629,68 @@ export default function SeoUKPage() {
           </div>
         </section>
 
-    
+        {/* ═══ 6A. WHAT IS IN THE FREE AUDIT ═══ */}
+        <section className="sec-lg">
+          <div className="wrap">
+            <div style={{ maxWidth: 780 }}>
+              <span className="eyebrow">The free SEO audit</span>
+              <h2>Exactly what you get before you commit to anything</h2>
+              <p className="lead mt-4">
+                Google&apos;s guidance says an audit should give you realistic estimates of improvement and an honest
+                estimate of the work involved. That is what ours does. It is a real piece of work, not a sales
+                document with your logo dropped into it, and it is yours whether or not you hire us.
+              </p>
+            </div>
+
+            <div className="col-2 mt-10" style={{ gap: 24 }}>
+              <div className="card card-top-orange">
+                <span className="eyebrow">What is included</span>
+                <h3 className="mt-4">Twelve checks, written up in plain English</h3>
+                <ul className="fact-list mt-6">
+                  <li>Where you rank today for the terms that actually bring enquiries, not the ones that flatter a report.</li>
+                  <li>Whether ChatGPT, Gemini, Perplexity, and Google AI Overviews name your business when asked about your category.</li>
+                  <li>Crawl and index check: which of your pages Google can reach, and which it has quietly dropped.</li>
+                  <li>Page speed and Core Web Vitals on mobile, measured on your real pages rather than a lab average.</li>
+                  <li>Whether your content is present in the server HTML, or hidden behind JavaScript that crawlers may not run.</li>
+                  <li>Structured data check: what schema you ship, whether it matches what the page actually shows.</li>
+                  <li>Duplicate and competing pages on your own site that are splitting your own rankings.</li>
+                  <li>Internal linking: which important pages nothing links to, and which get all the link equity.</li>
+                  <li>Your Google Business Profile and local signals, if you serve a location or an area.</li>
+                  <li>A short competitor read: who is ahead on your main terms, and what they have that you do not.</li>
+                  <li>Broken links, redirect chains, and anything returning an error to a crawler.</li>
+                  <li>A prioritised fix list, ordered by effect against effort, so you know what to do first on Monday.</li>
+                </ul>
+              </div>
+
+              <div className="card">
+                <span className="eyebrow">What is not included</span>
+                <h3 className="mt-4">The honest limits</h3>
+                <ul className="fact-list is-cross mt-6">
+                  <li>No ranking guarantees. Nobody can offer those honestly, and Google says so on its own hiring page.</li>
+                  <li>No implementation. The audit tells you what to fix. Fixing it is a separate, scoped piece of work.</li>
+                  <li>No write access to your Search Console. Read-only is all we ask for at this stage.</li>
+                  <li>No hundred-page automated tool export dressed up as analysis. Tool output is a starting point, not a report.</li>
+                  <li>No link package, and no bulk directory submissions. Automated links are a risk, not a service.</li>
+                  <li>No obligation, no follow-up sequence, and no call from a salesperson you have never spoken to.</li>
+                </ul>
+                <p className="src-note mt-6">
+                  Audit scope reflects <a href="https://developers.google.com/search/docs/fundamentals/do-i-need-seo" target="_blank" rel="noopener noreferrer nofollow">Google&apos;s guidance on SEO audits and Search Console access</a>.
+                </p>
+              </div>
+            </div>
+
+            <div className="card mt-8" style={{ maxWidth: 980 }}>
+              <span className="eyebrow">After the audit</span>
+              <h3 className="mt-4">What the first three months usually look like</h3>
+              <ol className="step-list mt-6">
+                <li><b>Weeks one and two: clear the blockers</b>Indexing faults, broken redirects, missing or wrong structured data, and anything stopping a crawler reading your pages. These are the fixes that can move things within weeks.</li>
+                <li><b>Weeks three to six: rebuild the pages that matter</b>The handful of pages closest to bringing enquiries get restructured so they answer one clear question up top and read like the source an engine would quote.</li>
+                <li><b>Weeks six to ten: build the surrounding depth</b>The related questions your buyers ask get proper answers, so search engines and AI models treat you as the authority on the topic rather than a thin page hoping to get lucky.</li>
+                <li><b>Weeks ten to twelve: earn mentions and measure</b>Digital PR and citations on sites that already have trust, then a full read on what moved: rankings, enquiries, and whether AI answers now name you.</li>
+              </ol>
+            </div>
+          </div>
+        </section>
 
         <MidPageCTA
           headline={'Want to see where you really stand?'}
@@ -406,13 +702,19 @@ export default function SeoUKPage() {
         <section className="sec-lg">
           <div className="wrap">
             <span className="eyebrow">How we compare</span>
-            <h2 style={{ maxWidth: 680 }}>FactoryJet vs a traditional SEO agency vs doing it yourself</h2>
+            <h2 style={{ maxWidth: 680 }}>A consultant, an agency retainer, or doing it yourself</h2>
+            <p className="lead mt-4" style={{ maxWidth: 760 }}>
+              Same table, three honest columns. There are rows here where the agency wins, and we have left them in.
+            </p>
             <div className="card mt-8" style={{ padding: 0, overflow: 'hidden' }}>
               <table className="cmp-table">
+                <caption className="src-note" style={{ captionSide: 'bottom', textAlign: 'left', padding: '12px 18px' }}>
+                  Comparison of a founder-led consultant engagement, a typical UK agency retainer, and in-house or DIY search work.
+                </caption>
                 <thead>
                   <tr>
                     <th>What you get</th>
-                    <th className="fj">FactoryJet</th>
+                    <th className="fj">FactoryJet consultant</th>
                     <th>Traditional SEO agency</th>
                     <th>DIY / in-house</th>
                   </tr>
@@ -424,7 +726,12 @@ export default function SeoUKPage() {
                   <tr><td className="feat">Local &amp; ecommerce SEO</td><td className="fj"><span className="yes">Yes</span></td><td><span className="partial">Sometimes</span></td><td><span className="partial">Basic</span></td></tr>
                   <tr><td className="feat">Transparent reporting</td><td className="fj"><span className="yes">Yes</span></td><td><span className="partial">Sometimes</span></td><td><span className="no">N/A</span></td></tr>
                   <tr><td className="feat">AI visibility tracked as a metric</td><td className="fj"><span className="yes">Yes</span></td><td><span className="no">No</span></td><td><span className="no">No</span></td></tr>
-                  <tr><td className="feat">Who does the work</td><td className="fj"><span className="yes">Senior team + founder</span></td><td><span className="partial">Often juniors</span></td><td>You</td></tr>
+                  <tr><td className="feat">Who does the work</td><td className="fj"><span className="yes">The founder</span></td><td><span className="partial">Often juniors</span></td><td>You</td></tr>
+                  <tr><td className="feat">Start with a one-off piece of work</td><td className="fj"><span className="yes">Yes</span></td><td><span className="partial">Rarely</span></td><td><span className="yes">Yes</span></td></tr>
+                  <tr><td className="feat">High volume of new content each month</td><td className="fj"><span className="partial">Limited</span></td><td><span className="yes">Yes</span></td><td><span className="no">No</span></td></tr>
+                  <tr><td className="feat">Cover for holiday and staff turnover</td><td className="fj"><span className="partial">Limited</span></td><td><span className="yes">Yes</span></td><td><span className="partial">Varies</span></td></tr>
+                  <tr><td className="feat">Works alongside your existing agency</td><td className="fj"><span className="yes">Yes</span></td><td><span className="no">Rarely</span></td><td><span className="yes">N/A</span></td></tr>
+                  <tr><td className="feat">Ranking guarantee offered</td><td className="fj"><span className="no">Never</span></td><td><span className="partial">Sometimes claimed</span></td><td><span className="no">N/A</span></td></tr>
                 </tbody>
               </table>
             </div>
@@ -484,19 +791,29 @@ export default function SeoUKPage() {
               <div>
                 <div className="stack">
                   <p>
-                    Search demand for SEO in the UK is large and specific. &quot;seo agency uk&quot; alone draws
-                    thousands of searches a month, while local and ecommerce terms like &quot;local seo services&quot;
-                    and &quot;ecommerce seo agency&quot; sit lower in difficulty and are winnable quickly. These are
-                    buyers looking for help right now, not people browsing definitions.
+                    The Department for Business and Trade counts 5.7 million private sector businesses in the UK at
+                    the start of 2025, and 5.64 million of them have fewer than 50 employees. That is the real
+                    market: small firms, most without an in-house search specialist, competing for the same
+                    handful of positions.
+                  </p>
+                  <p>
+                    Search demand reflects it. &quot;seo consultant uk&quot; draws around 720 searches a month,
+                    separate from the thousands searching for an agency, and the split is not accidental. People
+                    searching for a consultant usually want one person to talk to. People searching for an agency
+                    usually want a team. Local and ecommerce terms like &quot;local seo services&quot; and
+                    &quot;ecommerce seo agency&quot; sit lower in difficulty again, and are winnable quickly.
                   </p>
                   <p>
                     That mix is the plan. We chase the low-difficulty local and ecommerce terms for fast movement,
                     then build toward the harder national terms over time, for businesses in London, Manchester,
-                    Birmingham, Leeds, and across the UK, with the same senior team on every account. London is the
-                    deepest and most contested of those markets, so it gets its own breakdown of the search demand and
-                    how the work changes borough by borough: read <a href="/uk/london/seo">SEO services in London</a>.
+                    Birmingham, Leeds, and across the UK. London is the deepest and most contested of those markets,
+                    so it gets its own breakdown of the search demand and how the work changes borough by borough:
+                    read <a href="/uk/london/seo">SEO services in London</a>.
                   </p>
                 </div>
+                <p className="src-note mt-6">
+                  Business counts: <a href="https://www.gov.uk/government/statistics/business-population-estimates-2025/business-population-estimates-for-the-uk-and-regions-2025-statistical-release" target="_blank" rel="noopener noreferrer nofollow">Department for Business &amp; Trade, Business population estimates 2025</a>, published 2 October 2025.
+                </p>
                 <div className="flex-wrap mt-6">
                   <a className="city-pill" href="/uk/london">SEO London</a>
                   <a className="city-pill" href="/uk/manchester">SEO Manchester</a>
@@ -509,25 +826,26 @@ export default function SeoUKPage() {
               </div>
 
               <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid var( - n200)', padding: '14px 18px' }}>
-                  <span style={{ fontFamily: 'var( - fm)', fontSize: 10, letterSpacing: '.13em', textTransform: 'uppercase', color: 'var( - n400)' }}>UK · Monthly Search Demand</span>
-                  <span style={{ background: '#B23E13', color: '#fff', fontFamily: 'var( - fm)', fontSize: 10, borderRadius: 999, padding: '3px 9px' }}>DataForSEO</span>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid var(--n200)', padding: '14px 18px' }}>
+                  <span style={{ fontFamily: 'var(--fm)', fontSize: 10, letterSpacing: '.13em', textTransform: 'uppercase', color: 'var(--n400)' }}>UK · Monthly Search Demand</span>
+                  <span style={{ background: '#B23E13', color: '#fff', fontFamily: 'var(--fm)', fontSize: 10, borderRadius: 999, padding: '3px 9px' }}>DataForSEO</span>
                 </div>
                 <div style={{ padding: '4px 18px 14px' }}>
                   {[
-                    { kw: 'seo agency uk', v: '3,600', w: '100%', kd: 'KD 42 · Stretch target' },
-                    { kw: 'local seo services', v: '1,600', w: '44%', kd: 'KD 2 · Quick win' },
-                    { kw: 'ecommerce seo agency', v: '1,000', w: '28%', kd: 'KD 0 · Quick win' },
-                    { kw: 'seo agency manchester', v: '1,000', w: '28%', kd: 'KD 9 · Winnable now' },
-                    { kw: 'seo audit services', v: '880', w: '24%', kd: 'KD 14 · Winnable now' },
+                    { kw: 'seo agency uk', v: '2,900', w: '100%', kd: 'Gated · weakest rival 360 links' },
+                    { kw: 'seo company uk', v: '2,900', w: '100%', kd: 'Hard · weakest rival 126 links' },
+                    { kw: 'seo services uk', v: '1,300', w: '45%', kd: 'Hard · weakest rival 126 links' },
+                    { kw: 'seo consultant uk', v: '720', w: '25%', kd: 'Winnable now · weakest rival 26 links' },
+                    { kw: 'local seo services', v: '1,600', w: '55%', kd: 'KD 2 · Quick win' },
+                    { kw: 'ecommerce seo agency', v: '1,000', w: '34%', kd: 'KD 0 · Quick win' },
                   ].map((r) => (
                     <div key={r.kw} className="demand-row">
-                      <div className="demand-top"><span className="demand-kw">{r.kw}</span><span className="demand-v">{r.v}<span style={{ fontSize: 9, color: 'var( - n400)' }}> /mo</span></span></div>
+                      <div className="demand-top"><span className="demand-kw">{r.kw}</span><span className="demand-v">{r.v}<span style={{ fontSize: 9, color: 'var(--n400)' }}> /mo</span></span></div>
                       <div className="demand-bar"><i style={{ width: r.w }} /></div>
                       <div className="demand-kd">{r.kd}</div>
                     </div>
                   ))}
-                  <p style={{ textAlign: 'center', fontFamily: 'var( - fm)', fontSize: 10, color: 'var( - n400)', marginTop: 10 }}>Source: DataForSEO, United Kingdom, July 2026</p>
+                  <p style={{ textAlign: 'center', fontFamily: 'var(--fm)', fontSize: 10, color: 'var(--n400)', marginTop: 10 }}>Source: DataForSEO, United Kingdom, August 2026. &quot;Weakest rival&quot; is the number of referring domains held by the least-linked site on page one.</p>
                 </div>
               </div>
             </div>
@@ -539,24 +857,25 @@ export default function SeoUKPage() {
           <div className="wrap">
             <div style={{ maxWidth: 760 }}>
               <span className="eyebrow">The honest landscape</span>
-              <h2>UK SEO agencies worth knowing</h2>
+              <h2>UK SEO consultants and agencies worth knowing</h2>
               <p className="lead mt-4">
-                We would rather tell you the truth than pretend we are the only option. Here are UK agencies doing
-                real search work, including us. Talk to a few and pick the fit.
+                We would rather tell you the truth than pretend we are the only option. Here are UK firms doing real
+                search work, including us. Talk to a few, ask them Google&apos;s questions from earlier on this page, and
+                pick the fit.
               </p>
             </div>
             <ul className="stack mt-10" style={{ maxWidth: 900 }}>
               {SEO_AGENCIES.map((a, i) => (
                 <li key={a.name} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
-                  <span style={{ fontFamily: 'var( - fm)', fontWeight: 700, fontSize: 15, color: 'var( - orange)', minWidth: 30 }}>{i + 1}</span>
+                  <span style={{ fontFamily: 'var(--fm)', fontWeight: 700, fontSize: 15, color: 'var(--orange)', minWidth: 30 }}>{i + 1}</span>
                   <div>
-                    <h3 style={{ fontSize: 18 }}>{a.name}{a.name === 'FactoryJet' && <span style={{ fontFamily: 'var( - fm)', fontSize: 10, background: '#B23E13', color: '#fff', borderRadius: 999, padding: '2px 8px', marginLeft: 8, verticalAlign: 'middle' }}>That is us</span>}</h3>
+                    <h3 style={{ fontSize: 18 }}>{a.name}{a.name === 'FactoryJet' && <span style={{ fontFamily: 'var(--fm)', fontSize: 10, background: '#B23E13', color: '#fff', borderRadius: 999, padding: '2px 8px', marginLeft: 8, verticalAlign: 'middle' }}>That is us</span>}</h3>
                     <p className="mt-2" style={{ marginTop: 6 }}>{a.note}</p>
                   </div>
                 </li>
               ))}
             </ul>
-            <p style={{ fontFamily: 'var( - fm)', fontSize: 11, color: 'var( - n400)', marginTop: 14 }}>
+            <p style={{ fontFamily: 'var(--fm)', fontSize: 11, color: 'var(--n400)', marginTop: 14 }}>
               Agencies named from live UK search results for SEO agency terms, July 2026. Listing is not endorsement, and we are one option among them.
             </p>
           </div>
@@ -593,7 +912,7 @@ export default function SeoUKPage() {
                 <div className="scorecard-row"><div className="scorecard-metric">How competitive your market is</div><div className="scorecard-val" style={{ fontSize: 14 }}>Field</div></div>
                 <div className="scorecard-row"><div className="scorecard-metric">Content and authority you already have</div><div className="scorecard-val" style={{ fontSize: 14 }}>Base</div></div>
                 <div className="scorecard-row"><div className="scorecard-metric">Local, national, or ecommerce focus</div><div className="scorecard-val" style={{ fontSize: 14 }}>Reach</div></div>
-                <div className="scorecard-row"><div className="scorecard-metric">Free SEO audit before you commit</div><div className="scorecard-val" style={{ color: 'var( - green)', fontSize: 14 }}>Always</div></div>
+                <div className="scorecard-row"><div className="scorecard-metric">Free SEO audit before you commit</div><div className="scorecard-val" style={{ color: 'var(--green)', fontSize: 14 }}>Always</div></div>
               </div>
             </div>
           </div>
@@ -604,7 +923,10 @@ export default function SeoUKPage() {
           <div className="wrap">
             <div style={{ textAlign: 'center' }}>
               <span className="eyebrow">FAQ</span>
-              <h2>SEO questions UK founders actually ask</h2>
+              <h2>SEO consultant questions UK founders actually ask</h2>
+              <p className="lead mt-4" style={{ margin: '16px auto 0', maxWidth: 640 }}>
+                {FAQ_ITEMS.length} questions, answered straight. If yours is not here, ask the founder directly.
+              </p>
             </div>
             <div className="faq-grid">
               <aside className="faq-sidebar">
@@ -643,6 +965,39 @@ export default function SeoUKPage() {
                     ))}</ul>
                   </div>
                 ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ═══ 13A. WHO WROTE THIS (E-E-A-T) ═══ */}
+        <section className="sec">
+          <div className="wrap">
+            <div className="card card-top-orange" style={{ maxWidth: 980 }}>
+              <span className="eyebrow">Who wrote this page</span>
+              <div className="byline mt-4" style={{ maxWidth: 620 }}>
+                <div className="av">BB</div>
+                <div className="who">
+                  <b>Bhavesh Barot</b>, Founder and Chief Technical Architect, FactoryJet<br />
+                  <span>SEO consultant for UK businesses</span>
+                </div>
+                <div className="upd">Last updated<br />{UPDATED_LABEL}</div>
+              </div>
+              <p className="mt-6" style={{ maxWidth: 760 }}>
+                Bhavesh plans and runs the search work on every FactoryJet account, across more than 500 projects.
+                He works on technical SEO, site architecture, local search, ecommerce catalogues, and the newer
+                problem of getting a business named inside AI answers rather than only ranked below them. He wrote
+                this page, and he is the person who replies when you use the form on it.
+              </p>
+              <ul className="fact-list mt-6" style={{ maxWidth: 760 }}>
+                <li><b>What he does day to day:</b> technical audits, page structure, schema, internal linking, and measurement across UK, US, and India accounts.</li>
+                <li><b>How to check:</b> profiles below, and a free audit of your own site that you can judge on its merits before committing to anything.</li>
+                <li><b>What he will not do:</b> guarantee a ranking, buy links in bulk, or hand your account to someone you have not met.</li>
+              </ul>
+              <div className="flex-wrap mt-6">
+                <a className="city-pill" href="https://www.linkedin.com/in/bhavesh-ai-gtm-expert/" target="_blank" rel="noopener noreferrer">LinkedIn profile</a>
+                <a className="city-pill" href="https://github.com/factoryjet-tech" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a className="city-pill" href="/about">About FactoryJet</a>
               </div>
             </div>
           </div>

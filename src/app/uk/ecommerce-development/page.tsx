@@ -3,15 +3,18 @@ import HeroInlineForm from '@/components/HeroInlineForm';
 import Footer from '../sections/Footer';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
-import AuthorCard from '@/components/v2/AuthorCard';
-import EnterpriseArchitectureBlueprint from '@/components/v2/EnterpriseArchitectureBlueprint';
-import CommerceRoiCalculator from '@/components/v2/CommerceRoiCalculator';
-import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
-import CityLinksUK from '@/components/v2/CityLinksUK';
+import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import './ecommerce-development.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/ecommerce-development';
-const UPDATED = '2026-08-24';
+const UPDATED = '2026-08-25';
+
+/* ─── Breadcrumb source of truth (drives visible trail + BreadcrumbList) ─── */
+const crumbs = [
+  { name: 'FactoryJet', url: 'https://factoryjet.com' },
+  { name: 'UK', url: 'https://factoryjet.com/uk' },
+  { name: 'Ecommerce Web Design', url: CANONICAL },
+];
 
 /* ─── FAQ source of truth (drives UI + FAQPage schema) ─────────────── */
 const FAQ_CATEGORIES = [
@@ -32,6 +35,8 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     answer: "Yes, completely. When we hand a project over, you get the full codebase, admin access, and every credential involved, with no dependency on us to keep running. That is different from agencies that build on a locked template or keep hosting and code access under their own account. If you ever want to move to another developer, you can, because it is genuinely yours." },
   { category: 'start', question: "Can you build a store for B2B as well as DTC?",
     answer: "Yes. B2B commerce needs things a DTC template does not have: account-based pricing, bulk ordering, quote requests, and sometimes a login wall before customers see prices at all. We build that logic properly on Shopify Plus, Magento, or a custom stack, rather than bolting a password page onto a normal storefront and calling it B2B." },
+  { category: 'start', question: "Do you redesign existing ecommerce websites, or only build new ones?",
+    answer: "Both, and redesigns are more than half of what we do. Most UK brands come to us with a store that already takes orders but leaks them: slow on mobile, an awkward checkout, or a theme patched so many times nobody wants to touch it. We map what is already ranking and converting before we change anything, so the redesign buys you speed and sales without costing you the search traffic you have." },
   { category: 'start', question: "How do we get started?",
     answer: "Send your name and work email through the form on this page. The founder replies within 24 hours to book a short call, where we look at your catalogue, your current store if you have one, and what platform actually fits. That first conversation is useful whether or not we end up working together." },
 
@@ -48,6 +53,10 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     answer: "Yes. Every build connects to the systems that already run your business: payment providers like Stripe or Shopify Payments, stock and inventory tools, and whatever CRM or email platform your team uses day to day. We would rather connect your existing tools properly than force you onto new ones just because they are easier for us to set up." },
 
   // ── Design & conversion ──
+  { category: 'design', question: "What is the difference between ecommerce web design and ecommerce development?",
+    answer: "Design decides what a shopper sees and trusts: the layout, the product photography, the order information appears in, and how the checkout feels to use. Development is the code underneath that makes it fast, connects payments and stock, and keeps it standing when traffic spikes. A design nobody can build is just a picture. A build nobody designed usually converts badly. We do both together, so neither gets blamed for the other." },
+  { category: 'design', question: "What makes a good ecommerce website design?",
+    answer: "A good ecommerce website design answers a buyer's questions before they have to ask them. Clear pricing and delivery cost up front, honest stock status, real photography from the angles people actually want, and a checkout with nothing in it that does not need to be there. It loads fast on a phone. It looks like your brand rather than the theme it started life as. Everything else is decoration." },
   { category: 'design', question: "Will my store be fast and mobile-first?",
     answer: "That is the standard, not an add-on. Most ecommerce traffic now arrives on a phone, so we design and test for mobile first and target genuinely fast Core Web Vitals rather than a score that only holds up in a lab. A slow store loses sales quietly, one abandoned cart at a time, long before anyone complains about it." },
   { category: 'design', question: "Can you build product pages and a checkout that actually convert?",
@@ -88,6 +97,39 @@ const ECOM_AGENCIES: { name: string; note: string }[] = [
   { name: 'Blue Frontier', note: 'A UK Shopify Plus agency working with retailers that need enterprise-grade builds and ongoing support.' },
 ];
 
+/* ─── Pre-launch checks (drives the visible checklist) ─────────────── */
+const LAUNCH_CHECKS: { n: string; t: string; d: string }[] = [
+  { n: '01', t: 'Product structured data on every product page',
+    d: 'Google supports two kinds of product markup: product snippets for pages a shopper cannot buy from, and merchant listings for pages they can. We use the one that matches the page, rather than pasting the same block everywhere.' },
+  { n: '02', t: 'Checkout tested end to end on a real phone',
+    d: 'A real card, a real address, a real order confirmation, on a mid-range Android and an iPhone. Test-mode checkout passing is not the same as checkout working.' },
+  { n: '03', t: 'Every old URL redirected once, never twice',
+    d: 'On a migration each retired address points straight at its replacement. Two-hop chains waste crawl budget and search engines often give up before the end of them.' },
+  { n: '04', t: 'Stock and price sync checked against your systems',
+    d: 'We place test orders and watch the numbers move in your inventory tool, so you find out now rather than the first time you oversell something.' },
+  { n: '05', t: 'Speed measured on a mid-range phone, not a fast laptop',
+    d: 'Core Web Vitals get checked on the kind of device and connection your customers actually use. A score that only holds up on office broadband is not a score.' },
+  { n: '06', t: 'Analytics and Search Console connected before launch',
+    d: 'Tracking goes live with the store, not three weeks later. Otherwise the launch period, the one you most want to learn from, is a blank space in your data.' },
+  { n: '07', t: 'Images sized, compressed, and given fixed dimensions',
+    d: 'Width and height are set on every image so the page does not jump around while it loads. Layout shift costs sales on mobile and it is entirely avoidable.' },
+  { n: '08', t: 'Consent banner set to decline non-essential by default',
+    d: 'UK privacy rules expect a genuine choice, not a pre-ticked box. We set it up so nothing non-essential fires until the shopper actually agrees.' },
+  { n: '09', t: 'Accessibility pass on keyboard, focus, contrast, and alt text',
+    d: 'Every control reachable by keyboard, a visible focus ring, readable colour contrast, and real alt text on product images. It helps screen readers and search engines alike.' },
+  { n: '10', t: 'Recorded handover so your team can run it without us',
+    d: 'A walkthrough of adding products, editing pages, and handling orders, recorded and written up, so it still makes sense to whoever joins your team next year.' },
+];
+
+/* ─── Scope boundaries (honest, drives the "what we do not do" list) ─ */
+const NOT_INCLUDED: string[] = [
+  'We do not buy links or use private blog networks. It puts your store at risk and the effect does not last.',
+  'We do not lock your store to our hosting, our accounts, or our licences. Everything is in your name.',
+  'We do not promise a specific ranking position or a guaranteed mention in an AI answer. Nobody can honestly promise either.',
+  'We do not hand your build to junior subcontractors once the sales call is over.',
+  'We do not sell fixed packages that ignore what your catalogue actually needs.',
+];
+
 /* ─── External stats (fetch-verified, cited on page) ──────────────── */
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -106,29 +148,32 @@ const jsonLd = {
     {
       '@type': 'Service',
       '@id': `${CANONICAL}#service`,
-      name: 'Ecommerce Development Services UK',
-      serviceType: 'Ecommerce development, Shopify development, WooCommerce and Magento builds',
+      name: 'Ecommerce Web Design and Development UK',
+      serviceType: 'Ecommerce web design, ecommerce development, Shopify development, WooCommerce and Magento builds',
       provider: { '@id': 'https://factoryjet.com/#organization' },
       areaServed: { '@type': 'Country', name: 'United Kingdom' },
       url: CANONICAL,
       description:
-        'Ecommerce development agency in the UK. FactoryJet builds fast, conversion-first stores on Shopify, WooCommerce, Magento, and custom or headless stacks, structured to rank in Google and to be recommended by AI shopping tools.',
+        'Ecommerce web design and development agency in the UK. FactoryJet designs and builds fast, conversion-first stores on Shopify, WooCommerce, Magento, and custom or headless stacks, structured to rank in Google and to be recommended by AI shopping tools.',
     },
     {
       '@type': 'BreadcrumbList',
       '@id': `${CANONICAL}#breadcrumb`,
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-        { '@type': 'ListItem', position: 2, name: 'UK', item: 'https://factoryjet.com/uk' },
-        { '@type': 'ListItem', position: 3, name: 'Ecommerce Development', item: CANONICAL },
-      ],
+      // Derived from the same `crumbs` array the visible trail renders, so the
+      // two cannot drift apart.
+      itemListElement: crumbs.map((c, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: c.name,
+        item: c.url,
+      })),
     },
     {
       '@type': ['WebPage', 'Article'],
       '@id': CANONICAL,
       url: CANONICAL,
-      name: 'Shopify & Ecommerce Development Agency UK | FactoryJet',
-      headline: 'Ecommerce Development for UK Brands That Sell on Every Channel',
+      name: 'Ecommerce Web Design & Development Agency UK | FactoryJet',
+      headline: 'Ecommerce Web Design and Development for UK Brands That Sell on Every Channel',
       inLanguage: 'en-GB',
       datePublished: '2026-07-25',
       dateModified: UPDATED,
@@ -167,14 +212,14 @@ const jsonLd = {
 };
 
 export const metadata: Metadata = {
-  title: 'Shopify & Ecommerce Development Agency UK | FactoryJet',
+  title: 'Ecommerce Web Design & Development Agency UK | FactoryJet',
   description:
-    'FactoryJet builds fast, conversion-first ecommerce stores on Shopify, WooCommerce, Magento and custom stacks for UK brands. You own the code. Free consult.',
+    'Ecommerce web design and development for UK brands. Fast, conversion-first stores on Shopify, WooCommerce, Magento and custom stacks. You own the code.',
   alternates: { canonical: CANONICAL, languages: { 'en-GB': CANONICAL, 'x-default': CANONICAL } },
   openGraph: {
-    title: 'Shopify & Ecommerce Development Agency UK | FactoryJet',
+    title: 'Ecommerce Web Design & Development Agency UK | FactoryJet',
     description:
-      'A UK ecommerce development agency building fast, conversion-first stores on Shopify, WooCommerce, Magento, and custom or headless stacks. You own the code. Free store consult.',
+      'A UK ecommerce web design and development agency building fast, conversion-first stores on Shopify, WooCommerce, Magento, and custom or headless stacks. You own the code.',
     url: CANONICAL,
     siteName: 'FactoryJet',
     locale: 'en_GB',
@@ -193,28 +238,30 @@ export default function EcommerceDevelopmentUKPage() {
       <div className="uk-ecomdev">
       <main>
 
+        <Breadcrumbs items={crumbs} />
+
         {/* ═══ 1. HERO ═══ */}
         <section className="sec-lg dot-grid" style={{ position: 'relative' }}>
           <div className="wrap">
             <div className="col-6040">
               <div>
                 <div className="flex-wrap mb-6">
-                  <span className="chip"><span className="dot dot-orange" />UK Ecommerce Development Agency</span>
+                  <span className="chip"><span className="dot dot-orange" />UK Ecommerce Web Design Agency</span>
                   <span className="chip">Shopify · WooCommerce · Magento</span>
                   <span className="chip">Custom &amp; Headless</span>
                 </div>
-                <h1>Ecommerce Development for UK Brands That Sell on Every Channel</h1>
+                <h1>Ecommerce Web Design and Development for UK Brands That Sell on Every Channel</h1>
                 <p className="lead mt-6" style={{ maxWidth: 560 }}>
-                  FactoryJet is an ecommerce development agency for UK brands. We build fast, conversion-first
-                  stores on Shopify, WooCommerce, Magento, and custom or headless stacks, and you own every line
-                  of code when we hand it over. Built to rank in Google and to show up when AI tools recommend
-                  where to buy.
+                  FactoryJet is an ecommerce web design and development agency for UK brands. We design and build
+                  fast, conversion-first stores on Shopify, WooCommerce, Magento, and custom or headless stacks,
+                  and you own every line of code when we hand it over. Built to rank in Google and to show up when
+                  AI tools recommend where to buy.
                 </p>
 
                 <div className="byline mt-6" style={{ maxWidth: 560 }}>
                   <div className="av">BB</div>
                   <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ projects delivered</span></div>
-                  <div className="upd">Last updated<br />25 July 2026</div>
+                  <div className="upd">Last updated<br />25 August 2026</div>
                 </div>
 
                 <div className="mt-6" style={{ maxWidth: 560 }}>
@@ -227,7 +274,7 @@ export default function EcommerceDevelopmentUKPage() {
                 <span className="eyebrow">What every build ships with</span>
                 <div className="scorecard-row">
                   <div><div className="scorecard-metric">Core Web Vitals</div><div className="scorecard-note">fast on mobile, not just desktop</div></div>
-                  <div className="scorecard-val" style={{ color: 'var( - green)', fontSize: 15 }}>Green</div>
+                  <div className="scorecard-val" style={{ color: 'var(--green)', fontSize: 15 }}>Green</div>
                 </div>
                 <div className="scorecard-row">
                   <div><div className="scorecard-metric">Code ownership</div><div className="scorecard-note">yours, not rented</div></div>
@@ -243,7 +290,7 @@ export default function EcommerceDevelopmentUKPage() {
                 </div>
                 <div className="scorecard-row">
                   <div><div className="scorecard-metric">Who builds it</div><div className="scorecard-note">senior engineers, founder involved</div></div>
-                  <div className="scorecard-val" style={{ color: 'var( - green)' }}>Always</div>
+                  <div className="scorecard-val" style={{ color: 'var(--green)' }}>Always</div>
                 </div>
               </div>
             </div>
@@ -254,10 +301,13 @@ export default function EcommerceDevelopmentUKPage() {
         <section className="sec" style={{ backgroundColor: '#F9F9FC', borderBottom: '1px solid #E6E6EC' }}>
           <div className="wrap">
             <div style={{ maxWidth: 860, margin: '0 auto', textAlign: 'center' }}>
-              <span className="chip" style={{ marginBottom: 12 }}>The Direct Comparison</span>
-              <h2>The Typical UK Agency Frustration vs The FactoryJet Engineering Approach</h2>
+              <span className="chip" style={{ marginBottom: 12 }}>The direct comparison</span>
+              <h2>What usually goes wrong, and what we do instead</h2>
               <p className="lead mt-4">
-                Traditional e-commerce agencies push bloated themes and monthly retainer lock-ins. FactoryJet engineers lightweight, sub-second Shopify Plus architectures with 100% full IP code ownership.
+                A lot of ecommerce agencies start from a heavy off-the-shelf theme, then keep you on a monthly
+                retainer to maintain the weight they added. We build a lighter store, tune it for speed on a phone,
+                and hand you every line of the code at the end, so staying with us is a choice rather than the only
+                option you have.
               </p>
             </div>
           </div>
@@ -267,12 +317,22 @@ export default function EcommerceDevelopmentUKPage() {
         <section className="sec">
           <div className="wrap">
             <div className="def" style={{ maxWidth: 940 }} data-speakable="true">
-              <span className="lab">What is ecommerce development?</span>
+              <span className="lab">What is ecommerce web design?</span>
               <p>
-                Ecommerce development is the work of planning, building, and integrating an online store: product
-                pages, cart, checkout, payments, and stock, so it actually converts visitors into customers. In
-                2026 it also means structuring that store so it shows up correctly when AI tools like ChatGPT or
-                Google AI Overviews answer shopping questions, not only when someone searches Google directly.
+                Ecommerce web design is the work of planning and building an online store so it is easy to use and
+                actually sells: product pages, cart, checkout, payments, and stock, all shaped around how people
+                really buy. Design decides what a shopper sees and trusts. Development is the code underneath that
+                makes it fast and connects it to your payment, stock, and customer systems. Most real projects need
+                both, which is why we do them together rather than handing you a picture and leaving you to build it.
+              </p>
+            </div>
+            <div className="def mt-6" style={{ maxWidth: 940 }}>
+              <span className="lab">Why it is different in 2026</span>
+              <p>
+                A UK store now has to be readable by machines as well as people. Ofcom reports that about 30 percent
+                of searches show an AI overview, and more than half of UK adults say they see those summaries often.
+                So your product and category pages need clean structure and plain, factual descriptions, because that
+                is what decides whether an AI tool can quote your store when someone asks it where to buy.
               </p>
             </div>
             <p className="lead mt-8" style={{ maxWidth: 920 }}>
@@ -289,12 +349,12 @@ export default function EcommerceDevelopmentUKPage() {
         {/* ═══ 3. TRUST BAND ═══ */}
         <section className="stats-band">
           <div className="wrap">
-            <div className="col-4" style={{ gap: 20 }}>
-              <div className="trust-pill"><span className="dot dot-orange" />Senior engineers build it, not junior subcontractors</div>
-              <div className="trust-pill"><span className="dot dot-orange" />You own 100% of the code and the store</div>
-              <div className="trust-pill"><span className="dot dot-orange" />Shopify, WooCommerce, Magento, and custom/headless</div>
-              <div className="trust-pill"><span className="dot dot-orange" />Founder involved on every build</div>
-            </div>
+            <ul className="col-4" style={{ gap: 20 }}>
+              <li className="trust-pill"><span className="dot dot-orange" />Senior engineers build it, not junior subcontractors</li>
+              <li className="trust-pill"><span className="dot dot-orange" />You own 100% of the code and the store</li>
+              <li className="trust-pill"><span className="dot dot-orange" />Shopify, WooCommerce, Magento, and custom/headless</li>
+              <li className="trust-pill"><span className="dot dot-orange" />Founder involved on every build</li>
+            </ul>
           </div>
         </section>
 
@@ -313,11 +373,16 @@ export default function EcommerceDevelopmentUKPage() {
                     screen rather than a till, and that share keeps climbing.
                   </p>
                   <p>
-                    At the same time, the way people shop online is changing. Ofcom found that 54 percent of UK
-                    adults now use AI tools such as ChatGPT, Copilot, or Gemini, up from 31 percent in 2024. A
-                    growing number of your customers are asking one of those tools to compare products or
-                    recommend a store before they ever load a search engine. A store that only performs well on
-                    Google is optimised for half the buyer journey.
+                    At the same time, the way people find products is changing. Ofcom reports that about 30 percent
+                    of searches now show an AI overview, and more than half of UK adults, 53 percent, say they see
+                    those summaries often. Most are not looking for them. They simply arrive at the top of the
+                    results. Ofcom also recorded 1.8 billion UK visits to ChatGPT in the first eight months of 2025,
+                    up from 368 million over the same months in 2024.
+                  </p>
+                  <p>
+                    Put those together and a lot of buying decisions are now shaped before anyone clicks a normal
+                    search result. A store that only performs well in the blue links is optimised for half the buyer
+                    journey.
                   </p>
                   <p>
                     That is the gap FactoryJet builds for: a store fast and clear enough to convert the visitor in
@@ -328,21 +393,22 @@ export default function EcommerceDevelopmentUKPage() {
               </div>
 
               <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid var( - n200)', padding: '14px 18px' }}>
-                  <span style={{ fontFamily: 'var( - fm)', fontSize: 10, letterSpacing: '.13em', textTransform: 'uppercase', color: 'var( - n400)' }}>UK · Ecommerce in numbers</span>
-                  <span style={{ background: '#B23E13', color: '#fff', fontFamily: 'var( - fm)', fontSize: 10, borderRadius: 999, padding: '3px 9px' }}>Sourced</span>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid var(--n200)', padding: '14px 18px' }}>
+                  <span style={{ fontFamily: 'var(--fm)', fontSize: 10, letterSpacing: '.13em', textTransform: 'uppercase', color: 'var(--n400)' }}>UK · Ecommerce in numbers</span>
+                  <span style={{ background: '#B23E13', color: '#fff', fontFamily: 'var(--fm)', fontSize: 10, borderRadius: 999, padding: '3px 9px' }}>Sourced</span>
                 </div>
                 <div style={{ padding: '6px 18px 16px' }}>
                   {[
                     { v: '28.7%', t: 'of all UK retail sales now happen online', s: 'ONS, Retail Sales GB, March 2026', u: 'https://www.ons.gov.uk/businessindustryandtrade/retailindustry/bulletins/retailsales/march2026' },
-                    { v: '54%', t: 'of UK adults now use AI tools like ChatGPT', s: 'Ofcom, Online Nation, Dec 2025', u: 'https://www.ofcom.org.uk/media-use-and-attitudes/online-habits/from-apps-to-ai-search-how-the-uk-goes-online-in-2025' },
+                    { v: '53%', t: 'of UK adults say they often see AI summaries in search', s: 'Ofcom, how the UK goes online in 2025', u: 'https://www.ofcom.org.uk/media-use-and-attitudes/online-habits/from-apps-to-ai-search-how-the-uk-goes-online-in-2025' },
+                    { v: '30%', t: 'of UK searches now show an AI overview', s: 'Ofcom, how the UK goes online in 2025', u: 'https://www.ofcom.org.uk/media-use-and-attitudes/online-habits/from-apps-to-ai-search-how-the-uk-goes-online-in-2025' },
                   ].map((r) => (
-                    <div key={r.t} style={{ padding: '13px 0', borderBottom: '1px solid var( - n200)' }}>
+                    <div key={r.t} style={{ padding: '13px 0', borderBottom: '1px solid var(--n200)' }}>
                       <div style={{ display: 'flex', alignItems: 'baseline', gap: 10 }}>
-                        <span style={{ fontFamily: 'var( - fd)', fontWeight: 800, fontSize: 22, color: 'var( - orange)' }}>{r.v}</span>
-                        <span style={{ fontSize: 13, color: 'var( - ink)' }}>{r.t}</span>
+                        <span style={{ fontFamily: 'var(--fd)', fontWeight: 800, fontSize: 22, color: 'var(--orange)' }}>{r.v}</span>
+                        <span style={{ fontSize: 13, color: 'var(--ink)' }}>{r.t}</span>
                       </div>
-                      <a href={r.u} target="_blank" rel="noopener noreferrer nofollow" style={{ fontFamily: 'var( - fm)', fontSize: 10, color: 'var( - n400)', textDecoration: 'underline' }}>{r.s}</a>
+                      <a href={r.u} target="_blank" rel="noopener noreferrer nofollow" style={{ fontFamily: 'var(--fm)', fontSize: 10, color: 'var(--n400)', textDecoration: 'underline' }}>{r.s}</a>
                     </div>
                   ))}
                 </div>
@@ -399,36 +465,36 @@ export default function EcommerceDevelopmentUKPage() {
                 we happen to prefer. Here is how we think about each.
               </p>
             </div>
-            <div className="col-2 mt-12" style={{ gap: 24 }}>
-              <div className="plat-card">
+            <ul className="col-2 mt-12" style={{ gap: 24 }}>
+              <li className="plat-card">
                 <div className="plat-top"><span className="plat-name">Shopify</span><span className="plat-pill">DTC &amp; SCALING</span></div>
                 <p>The fastest route to a reliable, well-supported store, and the platform most of our shopify
                 development agency work happens on. Strong app ecosystem, solid checkout, and a straightforward
                 path to Shopify Plus once you outgrow the standard plan.</p>
                 <p className="plat-best"><b>Best for:</b> DTC brands, growing catalogues, teams who want less to maintain.</p>
-              </div>
-              <div className="plat-card">
+              </li>
+              <li className="plat-card">
                 <div className="plat-top"><span className="plat-name">WooCommerce</span><span className="plat-pill">WORDPRESS</span></div>
                 <p>Ecommerce built on top of WordPress, which suits brands that already publish a lot of content
                 or need full control of hosting. Our woocommerce development work focuses on keeping it fast,
                 since Woo can get sluggish without real performance engineering behind it.</p>
                 <p className="plat-best"><b>Best for:</b> content-heavy brands, teams already invested in WordPress.</p>
-              </div>
-              <div className="plat-card">
+              </li>
+              <li className="plat-card">
                 <div className="plat-top"><span className="plat-name">Magento</span><span className="plat-pill">ENTERPRISE</span></div>
                 <p>Still the right call for complex, high-SKU catalogues and multi-store setups that need deep
                 customisation. As a magento agency we mostly meet this platform on migrations and replatforming,
                 where a business has outgrown a simpler tool.</p>
                 <p className="plat-best"><b>Best for:</b> large catalogues, multi-store or multi-currency operations.</p>
-              </div>
-              <div className="plat-card">
+              </li>
+              <li className="plat-card">
                 <div className="plat-top"><span className="plat-name">Custom &amp; headless</span><span className="plat-pill">BESPOKE</span></div>
                 <p>When your business logic, integrations, or performance needs do not fit a template. Custom
                 ecommerce built on a headless stack gives you full control of the front end while keeping a
                 proper commerce engine underneath.</p>
                 <p className="plat-best"><b>Best for:</b> complex B2B, unusual checkout flows, brands with real engineering needs.</p>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
         </section>
 
@@ -452,7 +518,7 @@ export default function EcommerceDevelopmentUKPage() {
                 { n: '06', t: 'Full code handover with a walkthrough', d: 'When we hand the project over, you get the full codebase and a proper walkthrough of how it works, not just a login and a wave goodbye.' },
               ].map((s) => (
                 <li key={s.n} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
-                  <span style={{ fontFamily: 'var( - fm)', fontWeight: 700, fontSize: 15, color: 'var( - orange)', minWidth: 34 }}>{s.n}</span>
+                  <span style={{ fontFamily: 'var(--fm)', fontWeight: 700, fontSize: 15, color: 'var(--orange)', minWidth: 34 }}>{s.n}</span>
                   <div>
                     <h3 style={{ fontSize: 18 }}>{s.t}</h3>
                     <p className="mt-2" style={{ marginTop: 6 }}>{s.d}</p>
@@ -515,6 +581,36 @@ export default function EcommerceDevelopmentUKPage() {
           </div>
         </section>
 
+        {/* ═══ 8b. PRE-LAUNCH CHECKLIST ═══ */}
+        <section className="sec-lg">
+          <div className="wrap">
+            <div style={{ maxWidth: 760 }}>
+              <span className="eyebrow">Before it goes live</span>
+              <h2>The ten checks we run before your store takes a real order</h2>
+              <p className="lead mt-4">
+                Most of what goes wrong after an ecommerce launch was findable beforehand. This is the list we
+                work through on every build, whatever the platform. Structured data follows{' '}
+                <a href="https://developers.google.com/search/docs/appearance/structured-data/product"
+                   target="_blank" rel="noopener noreferrer nofollow"
+                   style={{ color: '#B23E13', textDecoration: 'underline' }}>
+                  Google&rsquo;s own product markup guidance
+                </a>, not guesswork.
+              </p>
+            </div>
+            <ol className="col-2 mt-10" style={{ gap: 16 }}>
+              {LAUNCH_CHECKS.map((c) => (
+                <li key={c.n} className="card" style={{ display: 'flex', gap: 16, alignItems: 'flex-start', padding: '20px 22px' }}>
+                  <span style={{ fontFamily: 'var(--fm)', fontWeight: 700, fontSize: 14, color: 'var(--orange)', minWidth: 26 }}>{c.n}</span>
+                  <div>
+                    <h3 style={{ fontSize: 16 }}>{c.t}</h3>
+                    <p className="mt-2" style={{ marginTop: 6, fontSize: 14.5, color: 'var(--n600)' }}>{c.d}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </section>
+
         {/* ═══ 9. WHO WE SERVE ═══ */}
         <section className="sec-lg dot-grid">
           <div className="wrap">
@@ -526,20 +622,20 @@ export default function EcommerceDevelopmentUKPage() {
                 business. Three groups make up most of our work.
               </p>
             </div>
-            <div className="col-3 mt-12">
-              <div className="svc-card">
+            <ul className="col-3 mt-12">
+              <li className="svc-card">
                 <h3>DTC and consumer brands</h3>
                 <p className="mt-4">Brands selling direct to consumers who need a fast, trustworthy store and a checkout that does not leak sales. We build for conversion first, brand second, because a beautiful store that does not sell is not doing its job.</p>
-              </div>
-              <div className="svc-card">
+              </li>
+              <li className="svc-card">
                 <h3>B2B and wholesale brands</h3>
                 <p className="mt-4">Businesses selling to other businesses, often with account pricing, bulk ordering, or a quote process layered on top of a normal storefront. We build the commerce logic B2B actually needs, not a DTC template with a login wall.</p>
-              </div>
-              <div className="svc-card">
+              </li>
+              <li className="svc-card">
                 <h3>Scaling multi-channel retailers</h3>
                 <p className="mt-4">Brands selling across their own site, Amazon, and marketplaces like TikTok Shop, who need a store and stock system that stays in sync everywhere they sell.</p>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
         </section>
 
@@ -578,9 +674,9 @@ export default function EcommerceDevelopmentUKPage() {
               </div>
 
               <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid var( - n200)', padding: '14px 18px' }}>
-                  <span style={{ fontFamily: 'var( - fm)', fontSize: 10, letterSpacing: '.13em', textTransform: 'uppercase', color: 'var( - n400)' }}>UK · Monthly Search Demand</span>
-                  <span style={{ background: '#B23E13', color: '#fff', fontFamily: 'var( - fm)', fontSize: 10, borderRadius: 999, padding: '3px 9px' }}>DataForSEO</span>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid var(--n200)', padding: '14px 18px' }}>
+                  <span style={{ fontFamily: 'var(--fm)', fontSize: 10, letterSpacing: '.13em', textTransform: 'uppercase', color: 'var(--n400)' }}>UK · Monthly Search Demand</span>
+                  <span style={{ background: '#B23E13', color: '#fff', fontFamily: 'var(--fm)', fontSize: 10, borderRadius: 999, padding: '3px 9px' }}>DataForSEO</span>
                 </div>
                 <div style={{ padding: '4px 18px 14px' }}>
                   {[
@@ -591,12 +687,12 @@ export default function EcommerceDevelopmentUKPage() {
                     { kw: 'ecommerce web design agencies', v: '480', w: '7%', kd: 'KD 26 · Winnable' },
                   ].map((r) => (
                     <div key={r.kw} className="demand-row">
-                      <div className="demand-top"><span className="demand-kw">{r.kw}</span><span className="demand-v">{r.v}<span style={{ fontSize: 9, color: 'var( - n400)' }}> /mo</span></span></div>
+                      <div className="demand-top"><span className="demand-kw">{r.kw}</span><span className="demand-v">{r.v}<span style={{ fontSize: 9, color: 'var(--n400)' }}> /mo</span></span></div>
                       <div className="demand-bar"><i style={{ width: r.w }} /></div>
                       <div className="demand-kd">{r.kd}</div>
                     </div>
                   ))}
-                  <p style={{ textAlign: 'center', fontFamily: 'var( - fm)', fontSize: 10, color: 'var( - n400)', marginTop: 10 }}>Source: DataForSEO, United Kingdom, July 2026</p>
+                  <p style={{ textAlign: 'center', fontFamily: 'var(--fm)', fontSize: 10, color: 'var(--n400)', marginTop: 10 }}>Source: DataForSEO, United Kingdom, July 2026</p>
                 </div>
               </div>
             </div>
@@ -617,15 +713,15 @@ export default function EcommerceDevelopmentUKPage() {
             <ul className="stack mt-10" style={{ maxWidth: 900 }}>
               {ECOM_AGENCIES.map((a, i) => (
                 <li key={a.name} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
-                  <span style={{ fontFamily: 'var( - fm)', fontWeight: 700, fontSize: 15, color: 'var( - orange)', minWidth: 30 }}>{i + 1}</span>
+                  <span style={{ fontFamily: 'var(--fm)', fontWeight: 700, fontSize: 15, color: 'var(--orange)', minWidth: 30 }}>{i + 1}</span>
                   <div>
-                    <h3 style={{ fontSize: 18 }}>{a.name}{a.name === 'FactoryJet' && <span style={{ fontFamily: 'var( - fm)', fontSize: 10, background: '#B23E13', color: '#fff', borderRadius: 999, padding: '2px 8px', marginLeft: 8, verticalAlign: 'middle' }}>That is us</span>}</h3>
+                    <h3 style={{ fontSize: 18 }}>{a.name}{a.name === 'FactoryJet' && <span style={{ fontFamily: 'var(--fm)', fontSize: 10, background: '#B23E13', color: '#fff', borderRadius: 999, padding: '2px 8px', marginLeft: 8, verticalAlign: 'middle' }}>That is us</span>}</h3>
                     <p className="mt-2" style={{ marginTop: 6 }}>{a.note}</p>
                   </div>
                 </li>
               ))}
             </ul>
-            <p style={{ fontFamily: 'var( - fm)', fontSize: 11, color: 'var( - n400)', marginTop: 14 }}>
+            <p style={{ fontFamily: 'var(--fm)', fontSize: 11, color: 'var(--n400)', marginTop: 14 }}>
               Agencies named from live UK search results for ecommerce development terms, July 2026. Listing is not endorsement, and we are one option among them.
             </p>
           </div>
@@ -652,6 +748,16 @@ export default function EcommerceDevelopmentUKPage() {
                     after a short call, so the plan matches your store rather than a generic tier.
                   </p>
                 </div>
+                <h3 className="mt-8" style={{ fontSize: 18 }}>What we do not do</h3>
+                <ul className="stack mt-4">
+                  {NOT_INCLUDED.map((n) => (
+                    <li key={n} style={{ display: 'flex', gap: 10, alignItems: 'flex-start', fontSize: 15, color: 'var(--n600)', lineHeight: 1.65 }}>
+                      <span className="dot dot-orange" style={{ marginTop: 8, flexShrink: 0 }} />
+                      <span>{n}</span>
+                    </li>
+                  ))}
+                </ul>
+
                 <div className="mt-8">
                   <ModalCTAButton label="Get my free store consult" region="uk" modalVariant="default" btnVariant="primary-light" />
                 </div>
@@ -662,7 +768,7 @@ export default function EcommerceDevelopmentUKPage() {
                 <div className="scorecard-row"><div className="scorecard-metric">Platform, and any migration involved</div><div className="scorecard-val" style={{ fontSize: 14 }}>Start</div></div>
                 <div className="scorecard-row"><div className="scorecard-metric">Integrations: payments, stock, CRM</div><div className="scorecard-val" style={{ fontSize: 14 }}>Reach</div></div>
                 <div className="scorecard-row"><div className="scorecard-metric">How custom the design and checkout are</div><div className="scorecard-val" style={{ fontSize: 14 }}>Field</div></div>
-                <div className="scorecard-row"><div className="scorecard-metric">Free store consult before you commit</div><div className="scorecard-val" style={{ color: 'var( - green)', fontSize: 14 }}>Always</div></div>
+                <div className="scorecard-row"><div className="scorecard-metric">Free store consult before you commit</div><div className="scorecard-val" style={{ color: 'var(--green)', fontSize: 14 }}>Always</div></div>
               </div>
             </div>
           </div>
@@ -673,7 +779,7 @@ export default function EcommerceDevelopmentUKPage() {
           <div className="wrap">
             <div style={{ textAlign: 'center' }}>
               <span className="eyebrow">FAQ</span>
-              <h2>Ecommerce development questions UK founders actually ask</h2>
+              <h2>Ecommerce web design questions UK founders actually ask</h2>
             </div>
             <div className="faq-grid">
               <aside className="faq-sidebar">

@@ -16,9 +16,12 @@
   --green-bg: rgba(5,150,105,.08);
   --green-bd: rgba(5,150,105,.25);
   --dark: #0F0F12;
-  --fd: 'Plus Jakarta Sans', sans-serif;
-  --fb: 'Inter', sans-serif;
-  --fm: 'Geist Mono', monospace;
+  /* Point at the next/font variables set in app/layout.tsx rather than the raw family
+     names, so this page uses the same self-hosted faces as the rest of the site instead
+     of hoping the family happens to be installed. Literal names kept as fallbacks. */
+  --fd: var(--font-plus-jakarta), 'Plus Jakarta Sans', system-ui, sans-serif;
+  --fb: var(--font-inter), 'Inter', system-ui, sans-serif;
+  --fm: var(--font-geist-mono), 'Geist Mono', ui-monospace, monospace;
 }
 
 .uk-eseo, .uk-eseo *::before, .uk-eseo *::after {box-sizing:border-box;margin:0;padding:0}
@@ -91,7 +94,6 @@
 
 .uk-eseo .card-top-green {border-top:2px solid var(--green)}
 
-.uk-eseo .dark-card {background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:28px}
 
 
 .uk-eseo .stat-num {font-family:var(--fd);font-size:clamp(2.25rem,4vw,3.25rem);font-weight:700;line-height:1;letter-spacing:-.04em;color:var(--orange)}
@@ -106,11 +108,9 @@
 
 .uk-eseo .stats-band {background:var(--cream);border-top:1.5px solid rgba(5,150,105,.2);border-bottom:1.5px solid rgba(5,150,105,.2);padding:56px 0}
 
-.uk-eseo .dark-sec {background:var(--dark);color:#fff;padding:80px 0}
-
-.uk-eseo .dark-sec h2 {color:#fff}
-.uk-eseo .dark-sec .eyebrow {color:rgba(255,92,0,.9)}
-.uk-eseo .dark-sec p {color:rgba(255,255,255,.65)}
+/* .dark-sec and .dark-card were removed on 2026-08-25 with the sections that used them.
+   The page now carries exactly one dark section, the closing CTA, which styles itself
+   inline. Re-adding a dark-section class here would quietly reopen that budget. */
 
 
 .uk-eseo .shimmer {height:1px;background:linear-gradient(90deg,transparent 0%,rgba(0,82,204,.15) 30%,rgba(0,82,204,.15) 70%,transparent 100%)}
@@ -127,7 +127,7 @@
 .uk-eseo .scorecard-val {font-family:var(--fd);font-size:18px;font-weight:700;color:var(--green);letter-spacing:-.02em;flex-shrink:0}
 
 
-/* Revenue timeline — unique to this page */
+/* Revenue timeline: unique to this page */
 .uk-eseo .timeline {display:flex;flex-direction:column;gap:0}
 
 .uk-eseo .tl-item {display:grid;grid-template-columns:120px 24px 1fr;gap:16px;align-items:start;padding:24px 0}
@@ -144,7 +144,8 @@
 /* Rank tracker visual */
 .uk-eseo .rank-card {background:var(--ink);border-radius:16px;padding:24px;font-family:var(--fm)}
 
-.uk-eseo .rank-kw {font-size:11px;color:rgba(255,255,255,.4);letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px}
+/* .62 not .4: white at 40% over near-black measures about 3.8:1 at this size, under the 4.5:1 bar. */
+.uk-eseo .rank-kw {font-size:11px;color:rgba(255,255,255,.62);letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px}
 
 .uk-eseo .rank-pos {font-size:28px;font-weight:600;color:var(--white);letter-spacing:-.04em}
 
@@ -288,6 +289,10 @@
 
 .uk-eseo .faq-cat-label {color:#C94A1A;font-family:var(--fm);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;margin:0}
 
+/* The FAQ rows are a real <ul>/<li> list for semantics. Declared explicitly rather than
+   leaning on Tailwind preflight, since this page is styled from its own stylesheet. */
+.uk-eseo .faq-list {list-style:none;margin:0;padding:0}
+
 .uk-eseo .faq-item {border-top:1px solid var(--n200)}
 
 .uk-eseo .faq-item summary {display:flex;justify-content:space-between;align-items:flex-start;padding:20px 0;cursor:pointer;list-style:none;gap:16px}
@@ -396,7 +401,7 @@
 
 .uk-eseo details > summary::-webkit-details-marker { display: none; }
 
-/* ── FAQ: fixed sidebar width — prevents category label wrap ─── */
+/* ── FAQ: fixed sidebar width, prevents category label wrap ─── */
 .uk-eseo .faq-grid { grid-template-columns: 260px 1fr !important; }
 
 @media (max-width: 768px) {
@@ -413,3 +418,59 @@
   margin: 0;
   padding: 0;
 }
+
+
+/* ── Light band. Replaces the two surplus dark sections so the page keeps exactly one
+   dark section, the closing CTA near the footer. ── */
+.uk-eseo .light-band {background:var(--white);border-top:1px solid var(--n200);border-bottom:1px solid var(--n200);padding:80px 0}
+.uk-eseo .light-band .eyebrow {color:#B23E13}
+.uk-eseo .light-card {background:var(--cream);border:1px solid var(--n200);border-radius:16px;padding:28px}
+.uk-eseo .light-card h3 {color:var(--ink)}
+.uk-eseo .light-card p {color:var(--n600)}
+
+/* ── Checklists: deliverables, inclusions, exclusions, process steps ── */
+.uk-eseo .check-list {list-style:none;display:flex;flex-direction:column;gap:10px;margin:0;padding:0}
+.uk-eseo .check-list li {position:relative;padding-left:26px;font-size:14px;line-height:1.6;color:var(--n600)}
+.uk-eseo .check-list li::before {content:"";position:absolute;left:2px;top:7px;width:11px;height:6px;border-left:2px solid var(--green);border-bottom:2px solid var(--green);transform:rotate(-45deg)}
+.uk-eseo .check-list li strong {color:var(--ink);font-weight:600}
+
+.uk-eseo .cross-list {list-style:none;display:flex;flex-direction:column;gap:10px;margin:0;padding:0}
+.uk-eseo .cross-list li {position:relative;padding-left:26px;font-size:14px;line-height:1.6;color:var(--n600)}
+.uk-eseo .cross-list li::before {content:"\00d7";position:absolute;left:4px;top:0;font-size:15px;font-weight:700;color:#B23E13;line-height:1.6}
+.uk-eseo .cross-list li strong {color:var(--ink);font-weight:600}
+
+.uk-eseo .step-list {list-style:none;counter-reset:step;display:flex;flex-direction:column;gap:20px;margin:0;padding:0}
+.uk-eseo .step-list > li {position:relative;padding-left:46px}
+.uk-eseo .step-list > li::before {counter-increment:step;content:counter(step);position:absolute;left:0;top:0;width:30px;height:30px;border-radius:999px;background:var(--green-bg);border:1px solid var(--green-bd);color:var(--green);font-family:var(--fm);font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.uk-eseo .step-list h3 {font-size:15px;margin-bottom:6px}
+.uk-eseo .step-list p {font-size:14px}
+.uk-eseo .step-list .check-list {margin-top:10px}
+
+/* ── Source list ── */
+.uk-eseo .src-list {list-style:none;display:flex;flex-direction:column;gap:14px;margin:0;padding:0}
+.uk-eseo .src-list li {font-size:13px;line-height:1.65;color:var(--n600)}
+.uk-eseo .src-list a {color:#B23E13;text-decoration:underline;text-underline-offset:2px;font-weight:600}
+.uk-eseo .src-list a:hover {color:var(--green)}
+
+/* ── Shared v2 components embedded in this page ──
+   This page scopes itself with element selectors: `.uk-eseo a {color:inherit}` is (0,1,1)
+   and `.uk-eseo p` is (0,1,1), both of which beat a single Tailwind utility class at (0,1,0).
+   So a shared component dropped in here silently loses its own colours: the MidPageCTA button
+   would render ink-on-orange instead of white. Re-assert the component's intended values,
+   scoped to the .fj-embed wrapper only, so nothing else on the page is affected. */
+.uk-eseo .fj-embed a.text-white {color:#fff}
+.uk-eseo .fj-embed p.text-xs {font-size:12px;line-height:1.5;color:#B23E13}
+.uk-eseo .fj-embed p.text-base {font-size:16px;line-height:1.65;color:#3A3A38}
+
+/* ── Image band. Was an inline 3fr/2fr grid, which cannot carry a media query, so on a
+   phone the image was squeezed into 60% of a 375px viewport. ── */
+.uk-eseo .band-split {display:grid;grid-template-columns:3fr 2fr;min-height:340px}
+@media (max-width:860px){
+  .uk-eseo .band-split {grid-template-columns:1fr;min-height:0}
+  .uk-eseo .band-split > div:first-child {min-height:220px}
+  .uk-eseo .band-split > div:last-child {padding:32px 24px!important;display:grid!important;grid-template-columns:1fr 1fr;gap:24px!important}
+}
+
+/* ── Two-up layout for included / not included ── */
+.uk-eseo .two-up {display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media (max-width:860px){.uk-eseo .two-up {grid-template-columns:1fr}}

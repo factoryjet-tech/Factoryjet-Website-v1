@@ -1,26 +1,30 @@
 import type { Metadata } from "next";
 
 import Hero from "./sections/Hero";
+import AnswerFirst from "./sections/AnswerFirst";
 import DigitalLandscape from "./sections/DigitalLandscape";
 import Services from "./sections/Services";
 import Cities from "./sections/Cities";
+import Deliverables from "./sections/Deliverables";
 import TechStack from "./sections/TechStack";
 import Pricing from "./sections/Pricing";
 import FAQ from "./sections/FAQ";
 import FinalCTA from "./sections/FinalCTA";
 import Footer from "./sections/Footer";
 import AuthorCard from '@/components/v2/AuthorCard';
+import Breadcrumbs from '@/components/v2/Breadcrumbs';
+import MidPageCTA from '@/components/v2/MidPageCTA';
 import WebDesignArchitectureBlueprint from '@/components/v2/WebDesignArchitectureBlueprint';
 import WebDesignValueCalculator from '@/components/v2/WebDesignValueCalculator';
 import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import CityLinksUK from '@/components/v2/CityLinksUK';
 
 import { ukMetadata } from "./metadata";
-import { ukSchemas } from "./schema";
+import { ukSchemas, UK_CRUMBS } from "./schema";
 
 // Last date the content of /uk actually changed. Matches the `UPDATED` const
 // convention used by the UK hub pages (see src/app/uk/ai-agents/page.tsx).
-const UPDATED = "2026-08-24";
+const UPDATED = "2026-08-25";
 
 export function generateMetadata(): Metadata {
   return ukMetadata;
@@ -75,10 +79,29 @@ export default function UKPage() {
       />
 
       <main id="main-content" className="min-h-screen bg-white">
+        {/* Visible trail. Same UK_CRUMBS array drives the BreadcrumbList JSON-LD
+            above, so the two cannot drift. Wrapped in the cream band so it reads
+            as part of the hero rather than a white strip above it. */}
+        <div className="bg-fj-cream pb-1">
+          <Breadcrumbs items={UK_CRUMBS} />
+        </div>
+
         <Hero />
+        <AnswerFirst />
         <DigitalLandscape />
         <Services />
         <Cities />
+        <Deliverables />
+
+        {/* Mid-page CTA, roughly halfway down. Before this the page had a hero
+            CTA and a closing CTA and nothing in between. */}
+        <MidPageCTA
+          headline={'Want to know where your UK site stands right now?'}
+          sub={'Send us the URL and we will run a free audit: technical issues, Google visibility, and whether ChatGPT and Perplexity can see you at all. You get the findings whether or not you hire us.'}
+          label={'Get a free UK digital audit'}
+          note={'Bhavesh replies within one business day.'}
+        />
+
         <TechStack />
         <Pricing />
         <section className="sec-lg" style={{ backgroundColor: "#FFFFFF", padding: "48px 0 16px" }}>

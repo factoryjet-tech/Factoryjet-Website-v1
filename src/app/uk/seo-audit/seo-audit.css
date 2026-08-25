@@ -284,7 +284,7 @@
   color:#B23E13;transition:all .2s;
 }
 
-.uk-seoaudit .city-pill:hover {background:var(--orange);color:#fff;border-color:var(--orange)}
+.uk-seoaudit .city-pill:hover {background:#B23E13;color:#fff;border-color:#B23E13}
 
 
 /* ─── Blog card ─── */
@@ -540,3 +540,21 @@
   margin: 0;
   padding: 0;
 }
+
+/* ─── Checklists (deliverables, inclusions, exclusions) ─── */
+.uk-seoaudit .check-list {list-style:none;padding:0;margin:0}
+.uk-seoaudit .check-list>li {position:relative;padding-left:26px;font-size:15px;line-height:1.7;color:var(--n600)}
+.uk-seoaudit .check-list>li+li {margin-top:10px}
+.uk-seoaudit .check-list>li::before {content:'';position:absolute;left:7px;top:11px;width:7px;height:7px;border-radius:50%;background:var(--orange)}
+.uk-seoaudit .check-list b {color:var(--ink);font-weight:650}
+.uk-seoaudit .x-list>li::before {background:var(--n400);border-radius:1px}
+.uk-seoaudit .cost-row {display:flex;gap:16px;align-items:flex-start;padding:15px 0;border-bottom:1px solid var(--n200)}
+.uk-seoaudit .cost-row:last-child {border-bottom:0}
+.uk-seoaudit .cost-time {font-family:var(--fm);font-size:12px;font-weight:700;color:#B23E13;min-width:76px;padding-top:2px}
+.uk-seoaudit .cost-body h3 {font-size:16px;margin-bottom:4px}
+.uk-seoaudit .cost-body p {font-size:14px}
+
+/* The generic summary::after '+' marker also matched .faq-item summary, which
+   renders its own SVG chevron. Every FAQ row was drawing both. */
+.uk-seoaudit .faq-item summary::after,
+.uk-seoaudit .faq-item[open] summary::after {content:none}

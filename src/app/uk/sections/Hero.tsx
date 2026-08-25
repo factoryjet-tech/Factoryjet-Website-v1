@@ -1,23 +1,20 @@
 "use client";
 
 import { useRef } from "react";
-import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "@/lib/gsap";
 import { useContactModal } from "@/context/ContactModalContext";
 import { trackButtonClick, trackCTAClick } from "@/utils/gtm";
 
-// MeshGradient is a WebGL canvas — skip SSR entirely.
-const MeshGradient = dynamic(() => import("@/components/MeshGradient"), {
-  ssr: false,
-});
-
-// Inline SVG noise for grain pseudo-element. Kept tiny — ~0.3KB.
-const GRAIN_DATA_URI =
-  "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E\")";
-
 // ── Hero ─────────────────────────────────────────────────────────────────────
+//
+// 2026-08-25: this hero used to be a full dark band (#0A0F1C) with a WebGL mesh
+// gradient, a grain overlay and a photo in `mix-blend-mode: overlay`. That broke
+// the house rule that the hero is always light, and the WebGL canvas was pure
+// client cost on the first paint of the whole UK section. It is now a light
+// cream hero on an asymmetric 7/5 split: copy left, photograph right. Every
+// GSAP ref is unchanged, so the entrance animation still runs exactly as before.
 export default function Hero() {
   const sectionRef = useRef<HTMLElement>(null);
   const labelRef = useRef<HTMLParagraphElement>(null);
@@ -25,7 +22,7 @@ export default function Hero() {
   const headingRef = useRef<HTMLHeadingElement>(null);
   const subheadRef = useRef<HTMLDivElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
-  const trustRef = useRef<HTMLDivElement>(null);
+  const trustRef = useRef<HTMLUListElement>(null);
   const scrollCueRef = useRef<HTMLDivElement>(null);
   const skylineRef = useRef<SVGGElement>(null);
   const { openModal: openContactModal } = useContactModal();
@@ -37,7 +34,7 @@ export default function Hero() {
         window.matchMedia("(prefers-reduced-motion: reduce)").matches;
       if (prefersReduced) return;
 
-      // 1. Eyebrow label rule draws in from centre
+      // 1. Eyebrow rule draws in from the left
       gsap.fromTo(
         labelRuleRef.current,
         { scaleX: 0 },
@@ -46,7 +43,7 @@ export default function Hero() {
           duration: 0.8,
           delay: 0.5,
           ease: "power2.out",
-          transformOrigin: "50% 50%",
+          transformOrigin: "0% 50%",
         }
       );
       gsap.from(labelRef.current, {
@@ -56,11 +53,10 @@ export default function Hero() {
         ease: "power3.out",
       });
 
-      // 2. H1 — line-based stagger.
+      // 2. H1, word-based stagger. Reads textContent, so keep the heading
+      //    plain text with no nested elements.
       const h1 = headingRef.current;
       if (h1) {
-        // Wrap each word in a span.line-word for GSAP to stagger lines.
-        // We split by words and then group into "lines" using getClientRects.
         const text = h1.textContent ?? "";
         h1.innerHTML = text
           .split(" ")
@@ -89,15 +85,15 @@ export default function Hero() {
         ease: "power3.out",
       });
 
-      // 4. CTAs — use fromTo so the final state is guaranteed even if the
-      // tween is interrupted (dev HMR, fast refresh, StrictMode double-invoke).
+      // 4. CTAs, fromTo so the final state is guaranteed even if the tween is
+      //    interrupted (HMR, fast refresh, StrictMode double-invoke).
       const ctaChildren = ctaRef.current
         ? Array.from(ctaRef.current.children)
         : [];
       if (ctaChildren.length) {
-        // NOTE: opacity + transform only — no visibility toggle. This keeps
-        // the animation fully compositor-driven (Lighthouse "non-composited
-        // animations" audit flags autoAlpha because it writes `visibility`).
+        // Opacity + transform only, no visibility toggle, so the animation
+        // stays compositor-driven. autoAlpha writes `visibility` and trips
+        // the Lighthouse "non-composited animations" audit.
         gsap.fromTo(
           ctaChildren,
           { y: 16, opacity: 0 },
@@ -135,7 +131,7 @@ export default function Hero() {
         });
       }
 
-      // 7. Scroll cue — fades out as user scrolls past 100vh
+      // 7. Scroll cue fades as the reader leaves the hero
       gsap.to(scrollCueRef.current, {
         autoAlpha: 0,
         ease: "none",
@@ -155,44 +151,18 @@ export default function Hero() {
       ref={sectionRef}
       id="hero"
       aria-label="FactoryJet UK, hero"
-      className="relative flex min-h-screen w-full items-start justify-center overflow-hidden"
-      style={{ backgroundColor: "#0A0F1C", maxWidth: "100vw" }}
+      className="relative flex w-full items-center overflow-hidden bg-fj-cream"
+      style={{ maxWidth: "100vw", minHeight: "88vh" }}
     >
-      {/* Layer 1: WebGL mesh gradient (lazy, client only) */}
-      <MeshGradient />
-
-      {/* Layer 1b, Photographic hero image. Enhances the dark hero with
-          warmth and texture without competing with text, low opacity,
-          overlay blend mode, sits above the WebGL mesh but below the
-          grain layer and content. */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0"
-        style={{ zIndex: 0, opacity: 0.4, mixBlendMode: "overlay" }}
-      >
-        <Image
-          src="/images/uk/hero-uk.webp"
-          alt="British professionals collaborating in modern workspace"
-          fill
-          sizes="100vw"
-          priority
-          fetchPriority="high"
-          loading="eager"
-          quality={82}
-          className="object-cover"
-        />
-      </div>
-
-      {/* Layer 2, SVG cityscape silhouette */}
+      {/* Decorative skyline, sits low and light so it never competes with copy */}
       <svg
         aria-hidden="true"
         viewBox="0 0 1600 200"
         preserveAspectRatio="none"
-        className="absolute bottom-0 left-0 w-full pointer-events-none"
-        style={{ height: 200, zIndex: 1, color: "rgba(255,255,255,0.05)" }}
+        className="pointer-events-none absolute bottom-0 left-0 w-full"
+        style={{ height: 160, zIndex: 0, color: "rgba(20,17,15,0.05)" }}
       >
         <g ref={skylineRef} fill="currentColor">
-          {/* Same silhouette as CityscapeSVG but inlined so refs work */}
           <rect x="0" y="130" width="60" height="70" />
           <rect x="62" y="110" width="40" height="90" />
           <rect x="104" y="140" width="70" height="60" />
@@ -232,186 +202,157 @@ export default function Hero() {
         </g>
       </svg>
 
-      {/* Layer 3, Grain */}
+      {/* Content, asymmetric 7/5 split: copy left, photograph right */}
       <div
-        aria-hidden="true"
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          zIndex: 2,
-          backgroundImage: GRAIN_DATA_URI,
-          backgroundRepeat: "repeat",
-          backgroundSize: "200px 200px",
-          opacity: 0.03,
-          mixBlendMode: "overlay",
-        }}
-      />
-
-      {/* Watermark "UK", desktop only */}
-      <span
-        aria-hidden="true"
-        className="pointer-events-none absolute hidden select-none lg:block font-clash"
-        style={{
-          right: "-5%",
-          bottom: "10%",
-          fontSize: 280,
-          lineHeight: 0.8,
-          fontWeight: 700,
-          color: "rgba(255,255,255,0.02)",
-          letterSpacing: "-0.04em",
-          zIndex: 3,
-        }}
-      >
-        UK
-      </span>
-
-      {/* Layer 4, Content. Tight vertical rhythm so the whole stack,
-          eyebrow → H1 → sub → value prop → CTAs → trust bar → cityscape,
-          fits within a single 1440×900 viewport without scrolling. */}
-      <div
-        className="relative mx-auto flex w-full max-w-5xl flex-col items-center px-6 pt-[18vh] pb-24 text-center sm:px-8"
+        className="relative mx-auto grid w-full max-w-[1200px] grid-cols-1 items-center gap-10 px-6 pb-24 pt-[13vh] sm:px-8 lg:grid-cols-12 lg:gap-14 lg:pb-28"
         style={{ zIndex: 10 }}
       >
-        {/* Eyebrow */}
-        <p
-          ref={labelRef}
-          className="relative inline-flex flex-col items-center pb-2"
-          style={{
-            color: "#FF6B35",
-            fontFamily: "var(--font-sans)",
-            fontWeight: 500,
-            fontSize: 13,
-            letterSpacing: "0.15em",
-            textTransform: "uppercase",
-          }}
-        >
-          The UK&rsquo;s AI-Native Digital Agency
-          <span
-            ref={labelRuleRef}
-            aria-hidden="true"
-            className="mt-2 block h-px w-24"
-            style={{ backgroundColor: "#FF6B35" }}
-          />
-        </p>
-
-        {/* H1 */}
-        <h1
-          ref={headingRef}
-          className="font-clash mt-6 text-white"
-          style={{
-            fontWeight: 700,
-            fontSize: "clamp(28px, 5vw, 56px)",
-            lineHeight: 1.05,
-            letterSpacing: "-0.02em",
-            maxWidth: 1100,
-            textShadow: "0 0 30px rgba(255,107,53,0.08)",
-          }}
-        >
-          The UK&rsquo;s AI-Native Digital Agency: Web Design, E-Commerce, AI
-          Agents &amp; AI SEO for British Businesses
-        </h1>
-
-        {/* Sub-headline, opener sentence only. Rest moved to Section 2. */}
-        <div ref={subheadRef} className="mt-4">
+        {/* Left column, 7 of 12 */}
+        <div className="lg:col-span-7">
+          {/* Eyebrow */}
           <p
+            ref={labelRef}
+            className="font-fj-mono relative inline-flex flex-col items-start pb-2"
             style={{
-              maxWidth: 760,
-              margin: "0 auto",
-              color: "rgba(255,255,255,0.72)",
-              fontFamily: "var(--font-sans)",
-              fontWeight: 400,
-              fontSize: "clamp(15px, 1.2vw, 17px)",
-              lineHeight: 1.6,
+              color: "#B23E13",
+              fontWeight: 600,
+              fontSize: 12,
+              letterSpacing: "0.15em",
+              textTransform: "uppercase",
             }}
           >
-            The way British businesses get found online changed fundamentally
-            in 2025.
+            AI-native digital agency, United Kingdom
+            <span
+              ref={labelRuleRef}
+              aria-hidden="true"
+              className="mt-2 block h-px w-24"
+              style={{ backgroundColor: "#F05A28" }}
+            />
           </p>
-          {/* Value prop one-liner */}
-          <p
-            style={{
-              maxWidth: 700,
-              margin: "8px auto 0",
-              color: "#FFFFFF",
-              fontFamily: "var(--font-sans)",
-              fontWeight: 500,
-              fontSize: "clamp(15px, 1.3vw, 18px)",
-              lineHeight: 1.45,
-            }}
-          >
-            Enterprise-grade web design, e-commerce, AI agents &amp; AI SEO,
-            at a fixed, transparent quote.
-          </p>
-        </div>
 
-        {/* CTAs */}
-        <div
-          ref={ctaRef}
-          className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-4"
-        >
-          <button
-            type="button"
-            onClick={() => {
-              trackCTAClick('get_your_free_digital_audit', 'hero', 'primary');
-              trackButtonClick('get_your_free_digital_audit', 'hero');
-              openModal();
-            }}
-            className="w-full sm:w-auto rounded-lg px-7 py-3.5 text-[15px] font-semibold text-white transition-transform duration-200 will-change-transform hover:-translate-y-0.5"
+          {/* H1. Plain text only, the word-stagger reads textContent. */}
+          <h1
+            ref={headingRef}
+            className="font-fj-display mt-5 text-fj-ink"
             style={{
-              backgroundColor: "#B23E13",
-              fontFamily: "var(--font-sans)",
-              minHeight: 48,
+              fontWeight: 700,
+              fontSize: "clamp(30px, 4.4vw, 56px)",
+              lineHeight: 1.05,
+              letterSpacing: "-0.02em",
+              maxWidth: 780,
             }}
           >
-            Get Your Free Digital Audit
-          </button>
-          <a
-            href="/portfolio"
-            className="w-full sm:w-auto text-center rounded-lg border border-white/25 px-7 py-3.5 text-[15px] font-semibold text-white transition-colors duration-200 hover:bg-white hover:text-[#0A0F1C]"
-            style={{ fontFamily: "var(--font-sans)" }}
-          >
-            View Our Work
-          </a>
-          <a
-            href="#cities"
-            data-lenis-scroll
-            className="text-[14px] font-medium text-white/70 underline-offset-4 transition-colors duration-200 hover:text-white hover:underline"
-            style={{ fontFamily: "var(--font-sans)" }}
-          >
-            Find Your City ↓
-          </a>
-        </div>
+            Digital Agency UK: Web Design, E-Commerce, AI Agents and AI SEO
+          </h1>
 
-        {/* Trust bar */}
-        <div
-          ref={trustRef}
-          className="mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[clamp(11px,1.2vw,13px)]"
-          style={{
-            color: "rgba(255,255,255,0.55)",
-            fontFamily: "var(--font-sans)",
-            fontWeight: 500,
-          }}
-        >
-          {[
-            "500+ projects delivered globally",
-            "Serving businesses in Leeds, Manchester, Birmingham, Sheffield, Bristol, Edinburgh & across the UK",
-            "AI-native from day one",
-            "Lighthouse 92+ on every build",
-          ].map((item, i, arr) => (
-            <span key={item} className="flex items-center gap-x-6">
-              <span>{item}</span>
-              {i < arr.length - 1 && (
+          <div ref={subheadRef} className="mt-5">
+            <p
+              className="font-fj-body text-fj-neutral-600"
+              style={{
+                maxWidth: 660,
+                fontSize: "clamp(16px, 1.3vw, 18px)",
+                lineHeight: 1.65,
+              }}
+            >
+              One British-focused team builds the site, the shop, the AI agents
+              and the search work, on the same stack every time. Pick a service
+              hub or a city below and you land on the exact page for that job.
+            </p>
+            <p
+              className="font-fj-body mt-3 text-fj-ink"
+              style={{
+                maxWidth: 640,
+                fontWeight: 600,
+                fontSize: "clamp(15px, 1.2vw, 17px)",
+                lineHeight: 1.5,
+              }}
+            >
+              Scoped in writing, quoted before work starts, delivered on
+              fixed-price milestones.
+            </p>
+          </div>
+
+          {/* CTAs */}
+          <div
+            ref={ctaRef}
+            className="mt-7 flex flex-col items-stretch gap-3 sm:flex-row sm:flex-wrap sm:items-center"
+          >
+            <button
+              type="button"
+              onClick={() => {
+                trackCTAClick('get_your_free_digital_audit', 'hero', 'primary');
+                trackButtonClick('get_your_free_digital_audit', 'hero');
+                openModal();
+              }}
+              className="font-fj-body w-full rounded-2xl px-7 py-3.5 text-[15px] font-semibold text-white transition-transform duration-200 will-change-transform hover:-translate-y-0.5 sm:w-auto"
+              style={{ backgroundColor: "#B23E13", minHeight: 48 }}
+            >
+              Get your free UK digital audit
+            </button>
+            <a
+              href="/portfolio"
+              className="font-fj-body w-full rounded-2xl border border-fj-neutral-200 bg-white px-7 py-3.5 text-center text-[15px] font-semibold text-fj-ink transition-colors duration-200 hover:border-fj-ink sm:w-auto"
+            >
+              See UK work
+            </a>
+            <a
+              href="#cities"
+              data-lenis-scroll
+              className="font-fj-body py-2 text-center text-[14px] font-medium text-fj-neutral-600 underline-offset-4 transition-colors duration-200 hover:text-fj-ink hover:underline"
+            >
+              Find your city
+            </a>
+          </div>
+
+          {/* Trust bar */}
+          <ul
+            ref={trustRef}
+            className="font-fj-body mt-7 flex list-none flex-wrap items-center gap-x-5 gap-y-2 p-0 text-[13px] text-fj-neutral-600"
+          >
+            {[
+              "500+ projects delivered worldwide",
+              "21 UK city hubs, 10 UK service hubs",
+              "Lighthouse 92+ on every build",
+              "Senior engineers, no account-manager layer",
+            ].map((item) => (
+              <li key={item} className="flex items-center gap-2">
                 <span
                   aria-hidden="true"
-                  className="hidden h-3 w-px md:inline-block"
-                  style={{ backgroundColor: "#333" }}
+                  className="inline-block h-1.5 w-1.5 rounded-full"
+                  style={{ backgroundColor: "#F05A28" }}
                 />
-              )}
-            </span>
-          ))}
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Right column, 5 of 12 */}
+        <div className="lg:col-span-5">
+          <div
+            className="relative w-full overflow-hidden rounded-2xl border border-fj-neutral-200"
+            style={{ aspectRatio: "4 / 5" }}
+          >
+            <Image
+              src="/images/uk/hero-uk.webp"
+              alt="A UK team reviewing a website build together in a modern office"
+              fill
+              sizes="(min-width: 1024px) 40vw, 100vw"
+              priority
+              fetchPriority="high"
+              loading="eager"
+              quality={82}
+              className="object-cover"
+            />
+          </div>
+          <p className="font-fj-body mt-3 text-[13px] leading-relaxed text-fj-neutral-600">
+            We work with UK businesses remotely, from Southampton to Edinburgh,
+            in your time zone and in plain English.
+          </p>
         </div>
       </div>
 
-      {/* Scroll cue, sits low, overlapping the decorative cityscape */}
+      {/* Scroll cue */}
       <div
         ref={scrollCueRef}
         aria-hidden="true"
@@ -420,7 +361,7 @@ export default function Hero() {
           bottom: 16,
           zIndex: 4,
           animation: "uk-scroll-bounce 2s ease-in-out infinite",
-          color: "#FF6B35",
+          color: "#B23E13",
         }}
       >
         <svg

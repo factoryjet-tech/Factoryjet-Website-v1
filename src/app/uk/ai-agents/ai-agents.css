@@ -540,3 +540,39 @@
   margin: 0;
   padding: 0;
 }
+
+/* ─── Scope lists (2026-08-25).
+   Real <ul>/<li> so the in-scope / out-of-scope content is semantic list
+   markup rather than divs pretending to be a list. The tick and the dash are
+   CSS pseudo-elements, so neither ends up in the accessible name. ─── */
+.uk-aiagents .scope-list {list-style:none;margin:0;padding:0}
+.uk-aiagents .scope-list li {
+  position:relative;padding:9px 0 9px 30px;font-size:14.5px;line-height:1.6;
+  color:var(--n600);border-bottom:1px solid var(--n100);
+}
+.uk-aiagents .scope-list li:last-child {border-bottom:none}
+.uk-aiagents .scope-list li b {color:var(--ink);font-weight:600}
+.uk-aiagents .scope-list.yes-list li::before {
+  content:"";position:absolute;left:4px;top:15px;width:11px;height:6px;
+  border-left:2px solid var(--green);border-bottom:2px solid var(--green);
+  transform:rotate(-45deg);
+}
+.uk-aiagents .scope-list.no-list li::before {
+  content:"";position:absolute;left:5px;top:18px;width:12px;height:2px;
+  background:var(--n400);
+}
+.uk-aiagents .scope-list.num-list {counter-reset:scope}
+.uk-aiagents .scope-list.num-list li {padding-left:36px;counter-increment:scope}
+.uk-aiagents .scope-list.num-list li::before {
+  content:counter(scope,decimal-leading-zero);position:absolute;left:0;top:10px;
+  font-family:var(--fm);font-size:11px;font-weight:700;color:#B23E13;
+}
+
+/* ─── Integration groups ─── */
+.uk-aiagents .int-group {list-style:none;margin:0;padding:0}
+.uk-aiagents .int-group li {
+  font-size:14px;line-height:1.65;color:var(--n600);
+  padding:7px 0;border-bottom:1px solid var(--n100);
+}
+.uk-aiagents .int-group li:last-child {border-bottom:none}
+.uk-aiagents .int-group li b {color:var(--ink);font-weight:600}

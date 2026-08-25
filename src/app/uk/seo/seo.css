@@ -540,3 +540,39 @@
   margin: 0;
   padding: 0;
 }
+
+
+/* ─── Structured fact lists (deliverables, checklists) ──────────────── */
+.uk-seo .fact-list {list-style:none;margin:0;padding:0}
+
+.uk-seo .fact-list li {position:relative;padding-left:26px;font-size:14.5px;color:var(--n600);line-height:1.65}
+
+.uk-seo .fact-list li + li {margin-top:12px}
+
+.uk-seo .fact-list li::before {
+  content:"";position:absolute;left:0;top:8px;width:9px;height:9px;border-radius:2px;
+  background:#B23E13;
+}
+
+.uk-seo .fact-list.is-cross li::before {background:transparent;border:1.5px solid var(--n400);border-radius:50%}
+
+.uk-seo .fact-list b {color:var(--ink);font-weight:600}
+
+.uk-seo .fact-list a {color:#B23E13;text-decoration:underline;text-underline-offset:2px}
+
+.uk-seo .step-list {list-style:none;margin:0;padding:0;counter-reset:steps}
+
+.uk-seo .step-list li {position:relative;padding-left:38px;font-size:14.5px;color:var(--n600);line-height:1.65;counter-increment:steps}
+
+.uk-seo .step-list li + li {margin-top:16px}
+
+.uk-seo .step-list li::before {
+  content:counter(steps,decimal-leading-zero);position:absolute;left:0;top:1px;
+  font-family:var(--fm);font-size:11px;font-weight:700;color:#B23E13;
+}
+
+.uk-seo .step-list b {display:block;color:var(--ink);font-weight:600;font-size:15px;margin-bottom:2px}
+
+.uk-seo .src-note {font-family:var(--fm);font-size:11px;color:var(--n400);line-height:1.6}
+
+.uk-seo .src-note a {color:var(--n400);text-decoration:underline}

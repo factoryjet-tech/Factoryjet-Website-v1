@@ -181,7 +181,7 @@
   }
 
   /* outcome boxes inside fix cells */
-  .uk-sseo .prob-cell.fix [style*="rgba(5, .uk-sseo 150, .uk-sseo 105, .uk-sseo .1)"] {
+  .uk-sseo .prob-cell.fix [style*="rgba(5,150,105,.1)"] {
     margin-top: 10px !important;
     padding: 8px 12px !important;
   }
@@ -307,7 +307,7 @@
 
 }
 @media(max-width:480px) {
-.uk-sseo .col-3, .uk-sseo .col-4 {grid-column:1fr}
+.uk-sseo .col-3, .uk-sseo .col-4 {grid-template-columns:1fr}
 .uk-sseo .prob-fix-grid {grid-template-columns:1fr}
 
 }
@@ -481,3 +481,111 @@
   margin: 0;
   padding: 0;
 }
+
+
+/* ── Structured list styles added 2026-08-25 with the rubric upgrade.
+      Used by the answer-first block, the Shopify technical reference section
+      and the "what is / is not included" grid. Plain lists, no decoration
+      beyond a marker, so they stay readable at small sizes. ── */
+
+.uk-sseo .tick-list,
+.uk-sseo .src-list,
+.uk-sseo .ref-list,
+.uk-sseo .scope-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.uk-sseo .tick-list > li {
+  position: relative;
+  padding-left: 26px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--n600);
+}
+
+.uk-sseo .tick-list > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  background: var(--orange2);
+}
+
+.uk-sseo .tick-list > li:last-child { margin-bottom: 0; }
+.uk-sseo .tick-list strong { color: var(--ink); font-weight: 600; }
+.uk-sseo .tick-list a { color: #B23E13; font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
+
+/* Source list: link on its own line, one-line note underneath. */
+.uk-sseo .src-list > li {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--n100);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.uk-sseo .src-list > li:last-child { border-bottom: none; padding-bottom: 0; }
+.uk-sseo .src-list a { display: block; color: #B23E13; font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
+.uk-sseo .src-list span { display: block; color: var(--n400); margin-top: 3px; font-size: 12px; }
+
+/* Reference list: the numbered technical breakdown. */
+.uk-sseo .ref-list > li {
+  position: relative;
+  padding-left: 26px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--n600);
+}
+
+.uk-sseo .ref-list > li::before {
+  content: "\2192";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--orange2);
+  font-weight: 700;
+}
+
+.uk-sseo .ref-list > li:last-child { margin-bottom: 0; }
+.uk-sseo .ref-list strong { color: var(--ink); font-weight: 600; }
+
+.uk-sseo .ref-list code,
+.uk-sseo .tick-list code,
+.uk-sseo .scope-list code,
+.uk-sseo .pull-quote code {
+  font-family: var(--fm);
+  font-size: .9em;
+  background: var(--n100);
+  border-radius: 4px;
+  padding: 1px 5px;
+  word-break: break-word;
+}
+
+/* Scope list: what is and is not included. */
+.uk-sseo .scope-list > li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--n600);
+}
+
+.uk-sseo .scope-list > li:last-child { margin-bottom: 0; }
+.uk-sseo .scope-list.is-in > li::before { content: "\2713"; position: absolute; left: 0; top: 0; color: var(--green); font-weight: 700; }
+.uk-sseo .scope-list.is-out > li::before { content: "\2715"; position: absolute; left: 0; top: 0; color: var(--n400); font-weight: 700; }
+
+/* The FAQ accordion is generated from the FAQ_ITEMS array; keep its list semantics clean. */
+.uk-sseo .faq-list { list-style: none; margin: 0; padding: 0; }
+
+/* Light replacement for the two former dark sections (house rule: one dark section per page,
+   and that budget is spent on the closing CTA). */
+.uk-sseo .light-sec { background: var(--cream); padding: 80px 0; border-top: 1px solid var(--n200); border-bottom: 1px solid var(--n200); }
+.uk-sseo .light-card { background: var(--white); border: 1px solid var(--n200); border-radius: 16px; padding: 28px; }
+.uk-sseo .light-card h3 { color: var(--ink); }

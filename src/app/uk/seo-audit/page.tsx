@@ -1,23 +1,39 @@
 import type { Metadata } from 'next';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import Footer from '../sections/Footer';
+import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
-import AuthorCard from '@/components/v2/AuthorCard';
-import LocalSeoArchitectureBlueprint from '@/components/v2/LocalSeoArchitectureBlueprint';
-import LocalSeoOpportunityEstimator from '@/components/v2/LocalSeoOpportunityEstimator';
-import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
-import CityLinksUK from '@/components/v2/CityLinksUK';
 import './seo-audit.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/seo-audit';
-const UPDATED = '2026-08-24';
+const UPDATED = '2026-08-25';
+const UPDATED_LABEL = '25 August 2026';
+
+/* ─── Breadcrumb: ONE array feeds the visible trail and the JSON-LD ── */
+const crumbs = [
+  { name: 'FactoryJet', url: 'https://factoryjet.com' },
+  { name: 'UK', url: 'https://factoryjet.com/uk' },
+  { name: 'Free SEO Audit', url: CANONICAL },
+];
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: crumbs.map((c, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: c.name,
+    item: c.url,
+  })),
+};
 
 /* ─── FAQ source of truth (drives UI + FAQPage schema) ─────────────── */
 const FAQ_CATEGORIES = [
   { key: 'basics',  label: 'SEO audit basics' },
   { key: 'checks',  label: 'What we check' },
   { key: 'ai',      label: 'AI visibility' },
+  { key: 'access',  label: 'Access, privacy & the catch' },
   { key: 'results', label: 'Results & working with us' },
 ] as const;
 
@@ -70,6 +86,26 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'ai', question: 'Can you fix AI visibility issues, or just report them?',
     answer: 'The audit itself only reports what we find, so you know exactly where you stand before spending anything further. If you want us to fix what the audit uncovers, that becomes a separate, scoped piece of work: entity and schema fixes, content restructuring, and building the credible mentions that get a business named in an AI answer.' },
 
+  // ── Access, privacy & the catch ──
+  { category: 'access', question: 'What do you need from me to run the audit?',
+    answer: 'Your website address, read-only access to Google Search Console and Google Analytics if those accounts exist, the three or four terms you most want to be found for, and the names of one or two competitors who currently beat you. That is the whole list. If you do not have Search Console set up, we can still audit the site, we just see less history.' },
+  { category: 'access', question: 'Do I have to give you my website login or password?',
+    answer: 'No, and you should be wary of anyone who asks for one to run an audit. An audit only reads: it looks at your public pages the way a search engine does, plus read-only reporting data if you choose to share it. We never need to change anything on your site to tell you what is wrong with it.' },
+  { category: 'access', question: 'What happens to my data and the audit findings?',
+    answer: 'The findings are yours. We use your site data only to produce your audit, we do not sell it, publish it, or use your site as a named example anywhere without asking you first. You can withdraw the read-only access you granted at any point, in two clicks, and that removes our view of your accounts immediately.' },
+  { category: 'access', question: 'Will I get chased by a sales team afterwards?',
+    answer: 'No. There is no drip sequence and no call rota. After the walkthrough call the next move is yours, and if we do not hear from you we leave it there. We would rather have a small number of people who chose to work with us than a long list of people avoiding our emails.' },
+  { category: 'access', question: 'What is the catch with a free SEO audit?',
+    answer: 'The honest answer is that we hope some people who see good work will ask us to do more of it. That is the entire business case. What we do not do is pad the findings, invent urgency, or hold back the useful half until you pay. If the audit is only valuable when you buy something, it was never really free.' },
+  { category: 'access', question: 'Can I get the audit without a call?',
+    answer: 'You can have the written findings without the walkthrough, yes, though we would gently push for fifteen minutes on the phone at the start. Without a short conversation we are guessing at which pages and enquiries actually matter to you, and an audit aimed at the wrong part of the site is a waste of everyone\u2019s time.' },
+  { category: 'access', question: 'Is a website audit the same thing as an SEO audit?',
+    answer: 'They overlap heavily, and most people mean the same thing by both. A website audit sometimes stretches wider, into design, accessibility, and conversion. Ours covers the search and technical side in full, and we flag design or usability problems we spot along the way, because a page that loses visitors also loses rankings eventually.' },
+  { category: 'access', question: 'Do you audit sites outside the UK?',
+    answer: 'Yes, though this page is written for UK businesses and most of our audit work is UK-based. If you are trading into the UK from elsewhere, or out of the UK into other markets, say so on the first call, because the checks change: hreflang, currency and address signals, and which version of Google we test against all shift.' },
+  { category: 'access', question: 'How quickly can you start?',
+    answer: 'Usually within a few days of the first call. The founder replies to enquiries within 24 hours to book that call, and for most sites we begin the technical, content, backlink, and AI-visibility checks straight after it. Larger sites and busier weeks stretch that a little, and we tell you the honest date rather than an optimistic one.' },
+
   // ── Results & working with us ──
   { category: 'results', question: 'Do I get a written report, or just a call?',
     answer: 'Both. You get a written, prioritised list of findings you can keep, forward to a colleague, or hand to another agency, plus a call where we walk through it in plain English and answer questions live. Some people want to read first and talk second, others want the opposite. We support either order.' },
@@ -85,6 +121,43 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     answer: 'We can, if it makes sense for what the audit found. Some businesses only need the fixes done once and are set for a year. Others have gaps that take sustained content and authority work to close properly. We scope that separately and only after you have seen the findings, never as a condition of getting the audit itself.' },
   { category: 'results', question: 'How do we get started?',
     answer: 'Send your name and work email through the form on this page. The founder replies within 24 hours to book the audit call, where we agree what to look at and, for most sites, run the technical, content, backlink, and AI-visibility checks straight away. You get the findings and a plain walkthrough call after that, with no obligation attached.' },
+];
+
+/* ─── Where the audit request comes from: every UK page that links here ── */
+const UK_CITIES: { slug: string; name: string }[] = [
+  { slug: 'london', name: 'London' },
+  { slug: 'manchester', name: 'Manchester' },
+  { slug: 'birmingham', name: 'Birmingham' },
+  { slug: 'leeds', name: 'Leeds' },
+  { slug: 'liverpool', name: 'Liverpool' },
+  { slug: 'sheffield', name: 'Sheffield' },
+  { slug: 'bristol', name: 'Bristol' },
+  { slug: 'edinburgh', name: 'Edinburgh' },
+  { slug: 'glasgow', name: 'Glasgow' },
+  { slug: 'newcastle', name: 'Newcastle' },
+  { slug: 'nottingham', name: 'Nottingham' },
+  { slug: 'cardiff', name: 'Cardiff' },
+  { slug: 'southampton', name: 'Southampton' },
+  { slug: 'brighton', name: 'Brighton' },
+  { slug: 'oxford', name: 'Oxford' },
+  { slug: 'cambridge', name: 'Cambridge' },
+  { slug: 'derby', name: 'Derby' },
+  { slug: 'coventry', name: 'Coventry' },
+  { slug: 'hull', name: 'Hull' },
+  { slug: 'plymouth', name: 'Plymouth' },
+  { slug: 'leicester', name: 'Leicester' },
+];
+
+const UK_HUBS: { slug: string; name: string; note: string }[] = [
+  { slug: 'seo', name: 'SEO', note: 'ongoing organic search work once the audit fixes are agreed' },
+  { slug: 'local-seo', name: 'Local SEO', note: 'map pack, Google Business Profile, and service-area pages' },
+  { slug: 'ai-seo', name: 'AI Search and GEO', note: 'getting named inside ChatGPT, Gemini, and AI Overviews' },
+  { slug: 'ecommerce-seo', name: 'Ecommerce SEO', note: 'category and product pages that compete on their own merit' },
+  { slug: 'shopify-seo', name: 'Shopify SEO', note: 'the platform quirks that cost Shopify stores rankings' },
+  { slug: 'web-design', name: 'Web Design', note: 'when the audit finds the site itself is the bottleneck' },
+  { slug: 'ecommerce-development', name: 'Ecommerce Development', note: 'rebuilding a store that cannot be fixed in place' },
+  { slug: 'shopify-development', name: 'Shopify Development', note: 'theme and app work on Shopify and Shopify Plus' },
+  { slug: 'ai-agents', name: 'AI Agents', note: 'automating the follow-up work behind the website' },
 ];
 
 /* ─── Named UK SEO audit / agencies (open self-disclosure, ItemList) ── */
@@ -115,18 +188,33 @@ const jsonLd = {
     {
       '@type': 'Service',
       '@id': `${CANONICAL}#service`,
-      name: 'SEO Audit Services UK',
+      name: 'Free SEO Audit UK',
+      serviceType: 'SEO audit',
+      description:
+        'A free SEO audit for UK websites covering technical health, on-page content, backlinks, schema, and AI visibility across ChatGPT, Gemini, Perplexity, and Google AI Overviews. Reviewed by a senior person before it reaches you.',
+      areaServed: { '@type': 'Country', name: 'United Kingdom' },
+      provider: { '@id': 'https://factoryjet.com/#organization' },
       author: {
-    '@type': 'Person',
-    name: 'Bhavesh Barot',
-    jobTitle: 'Chief Technical Architect',
-    url: 'https://factoryjet.com/about',
-    sameAs: [
-      'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-      'https://github.com/factoryjet-tech',
-    ],
-  },
+        '@type': 'Person',
+        name: 'Bhavesh Barot',
+        jobTitle: 'Chief Technical Architect',
+        url: 'https://factoryjet.com/about',
+        sameAs: [
+          'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
+          'https://github.com/factoryjet-tech',
+        ],
+      },
       publisher: { '@id': 'https://factoryjet.com/#organization' },
+    },
+    {
+      '@type': 'WebPage',
+      '@id': `${CANONICAL}#webpage`,
+      url: CANONICAL,
+      name: 'Free SEO Audit UK',
+      inLanguage: 'en-GB',
+      dateModified: UPDATED,
+      isPartOf: { '@id': 'https://factoryjet.com/#organization' },
+      primaryTopicOf: { '@id': `${CANONICAL}#service` },
     },
     {
       '@type': 'ItemList',
@@ -151,19 +239,19 @@ const jsonLd = {
 };
 
 export const metadata: Metadata = {
-  title: 'SEO Audit Services UK | Free & Human-Reviewed | FactoryJet',
+  title: 'Free SEO Audit UK | Human-Reviewed Website Audit | FactoryJet',
   description:
-    'FactoryJet runs human-reviewed UK SEO audits: technical, content, backlinks, and AI visibility across ChatGPT and Google AI Overviews. Free, no obligation.',
+    'A free SEO audit UK businesses can act on. A full website audit: technical health, content, backlinks, plus whether ChatGPT and AI Overviews name you.',
   alternates: { canonical: CANONICAL, languages: { 'en-GB': CANONICAL, 'x-default': CANONICAL } },
   openGraph: {
-    title: 'SEO Audit Services UK | Free & Human-Reviewed | FactoryJet',
+    title: 'Free SEO Audit UK | Human-Reviewed Website Audit | FactoryJet',
     description:
-      'A UK SEO audit that goes beyond an automated PDF: technical health, on-page content, backlinks, and AI visibility across ChatGPT, Gemini, Perplexity, and Google AI Overviews. Free, human-reviewed.',
+      'A free SEO audit UK businesses can act on: technical health, on-page content, backlinks, and AI visibility across ChatGPT, Gemini, Perplexity, and Google AI Overviews. Reviewed by a person, not generated by a tool.',
     url: CANONICAL,
     siteName: 'FactoryJet',
     locale: 'en_GB',
     type: 'website',
-    images: [{ url: '/images/uk/seo-audit-og.webp', width: 1200, height: 630, alt: 'SEO Audit Services UK by FactoryJet' }],
+    images: [{ url: '/images/uk/seo-audit-og.webp', width: 1200, height: 630, alt: 'Free SEO audit UK by FactoryJet' }],
   },
   robots: { index: true, follow: true },
 };
@@ -173,9 +261,13 @@ export default function SeoAuditUKPage() {
     <>
       <script id="ld-uk-seo-audit" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script id="ld-uk-seo-audit-breadcrumb" type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       <div className="uk-seoaudit">
       <main>
+
+        <Breadcrumbs items={crumbs} />
 
         {/* ═══ 1. HERO ═══ */}
         <section className="sec-lg dot-grid" style={{ position: 'relative' }}>
@@ -183,22 +275,24 @@ export default function SeoAuditUKPage() {
             <div className="col-6040">
               <div>
                 <div className="flex-wrap mb-6">
-                  <span className="chip"><span className="dot dot-orange" />UK SEO Audit Service</span>
+                  <span className="chip"><span className="dot dot-orange" />Free SEO Audit UK</span>
                   <span className="chip">Technical + Content + Backlinks</span>
-                  <span className="chip">Now Checks AI Visibility</span>
+                  <span className="chip">Includes an AI visibility check</span>
                 </div>
-                <h1>An SEO Audit for UK Businesses That Actually Tells You What to Fix First</h1>
+                <h1>A Free SEO Audit for UK Websites That Tells You What to Fix First</h1>
                 <p className="lead mt-6" style={{ maxWidth: 560 }}>
-                  FactoryJet runs SEO audits for UK businesses that want a straight answer, not a stack of jargon.
-                  We check your technical health, on-page content, and backlink profile, then check whether
-                  ChatGPT, Gemini, Perplexity, and Google AI Overviews mention your business at all. A senior
-                  person reviews every finding before it reaches you.
+                  This is the free SEO audit UK business owners land on after clicking &quot;get a site
+                  review&quot; somewhere else on this site. It is a real website audit, not a teaser. We check
+                  your technical health, on-page content, and backlink profile, then check whether ChatGPT,
+                  Gemini, Perplexity, and Google AI Overviews mention your business at all. A senior person
+                  reads every finding before it reaches you. It costs you about 40 minutes of your time and
+                  nothing else.
                 </p>
 
                 <div className="byline mt-6" style={{ maxWidth: 560 }}>
                   <div className="av">BB</div>
                   <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ projects delivered</span></div>
-                  <div className="upd">Last updated<br />25 July 2026</div>
+                  <div className="upd">Last updated<br />{UPDATED_LABEL}</div>
                 </div>
 
                 <div className="mt-6" style={{ maxWidth: 560 }}>
@@ -227,7 +321,7 @@ export default function SeoAuditUKPage() {
                 </div>
                 <div className="scorecard-row">
                   <div><div className="scorecard-metric">Prioritised action list</div><div className="scorecard-note">ranked by likely impact</div></div>
-                  <div className="scorecard-val" style={{ color: 'var( - green)', fontSize: 15 }}>Delivered</div>
+                  <div className="scorecard-val" style={{ color: 'var(--green)', fontSize: 15 }}>Delivered</div>
                 </div>
               </div>
             </div>
@@ -251,12 +345,13 @@ export default function SeoAuditUKPage() {
         <section className="sec">
           <div className="wrap">
             <div className="def" style={{ maxWidth: 940 }} data-speakable="true">
-              <span className="lab">What is an SEO audit?</span>
+              <span className="lab">What is a free SEO audit in the UK?</span>
               <p>
-                An SEO audit is a structured review of technical health, on-page content, and backlink authority
-                across a website, designed to explain why it is not ranking, or ranking below its potential in
-                Google. A proper audit in 2026 checks one more thing: AI visibility, whether ChatGPT, Gemini,
-                Perplexity, and Google AI Overviews name the business at all.
+                A free SEO audit is a structured review of a UK website across technical health, on-page content,
+                and backlink authority, done at no cost and with no obligation to buy anything afterwards. It
+                explains why the site is not ranking, or ranking below its potential, and ends in a short list of
+                what to fix first. A proper website audit in 2026 checks one more thing: AI visibility, whether
+                ChatGPT, Gemini, Perplexity, and Google AI Overviews name the business at all.
               </p>
             </div>
             <p className="lead mt-8" style={{ maxWidth: 920 }}>
@@ -266,6 +361,15 @@ export default function SeoAuditUKPage() {
               cover, not one: why the business is not ranking where it should, and why no AI engine mentions it
               when a buyer asks.
             </p>
+            <div className="card mt-8" style={{ maxWidth: 920 }}>
+              <span className="eyebrow">The offer in four lines</span>
+              <ul className="check-list mt-4">
+                <li><b>What we look at:</b> technical health, on-page content, backlinks, schema, local presence, and AI visibility across four engines.</li>
+                <li><b>What you get back:</b> a ranked list of fixes, a technical scorecard, a 90-day plan, and a call to walk through it.</li>
+                <li><b>How long it takes:</b> one to two weeks from the first call to the findings, depending on the size of your site.</li>
+                <li><b>What it costs you:</b> about 40 minutes of your time in total, and read-only access to two accounts. No money, and no contract at the end.</li>
+              </ul>
+            </div>
           </div>
         </section>
 
@@ -311,9 +415,9 @@ export default function SeoAuditUKPage() {
               </div>
 
               <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid var( - n200)', padding: '14px 18px' }}>
-                  <span style={{ fontFamily: 'var( - fm)', fontSize: 10, letterSpacing: '.13em', textTransform: 'uppercase', color: 'var( - n400)' }}>UK · AI search in numbers</span>
-                  <span style={{ background: '#B23E13', color: '#fff', fontFamily: 'var( - fm)', fontSize: 10, borderRadius: 999, padding: '3px 9px' }}>Sourced</span>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid var(--n200)', padding: '14px 18px' }}>
+                  <span style={{ fontFamily: 'var(--fm)', fontSize: 10, letterSpacing: '.13em', textTransform: 'uppercase', color: 'var(--n400)' }}>UK · AI search in numbers</span>
+                  <span style={{ background: '#B23E13', color: '#fff', fontFamily: 'var(--fm)', fontSize: 10, borderRadius: 999, padding: '3px 9px' }}>Sourced</span>
                 </div>
                 <div style={{ padding: '6px 18px 16px' }}>
                   {[
@@ -321,12 +425,12 @@ export default function SeoAuditUKPage() {
                     { v: '8% vs 15%', t: 'link click rate with an AI summary vs without', s: 'Pew Research Center, Jul 2025', u: 'https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/' },
                     { v: '1%', t: 'of clicks land on a source link inside the AI summary itself', s: 'Pew Research Center, Jul 2025', u: 'https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/' },
                   ].map((r) => (
-                    <div key={r.t} style={{ padding: '13px 0', borderBottom: '1px solid var( - n200)' }}>
+                    <div key={r.t} style={{ padding: '13px 0', borderBottom: '1px solid var(--n200)' }}>
                       <div style={{ display: 'flex', alignItems: 'baseline', gap: 10 }}>
-                        <span style={{ fontFamily: 'var( - fd)', fontWeight: 800, fontSize: 22, color: 'var( - orange)' }}>{r.v}</span>
-                        <span style={{ fontSize: 13, color: 'var( - ink)' }}>{r.t}</span>
+                        <span style={{ fontFamily: 'var(--fd)', fontWeight: 800, fontSize: 22, color: 'var(--orange)' }}>{r.v}</span>
+                        <span style={{ fontSize: 13, color: 'var(--ink)' }}>{r.t}</span>
                       </div>
-                      <a href={r.u} target="_blank" rel="noopener noreferrer nofollow" style={{ fontFamily: 'var( - fm)', fontSize: 10, color: 'var( - n400)', textDecoration: 'underline' }}>{r.s}</a>
+                      <a href={r.u} target="_blank" rel="noopener noreferrer nofollow" style={{ fontFamily: 'var(--fm)', fontSize: 10, color: 'var(--n400)', textDecoration: 'underline' }}>{r.s}</a>
                     </div>
                   ))}
                 </div>
@@ -442,7 +546,7 @@ export default function SeoAuditUKPage() {
                 { n: '07', t: 'A prioritised 90-day action list', d: <>Everything above gets ranked by what will move the needle first, so the audit ends in a plan, not just a diagnosis.</> },
               ].map((s) => (
                 <li key={s.n} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
-                  <span style={{ fontFamily: 'var( - fm)', fontWeight: 700, fontSize: 15, color: 'var( - orange)', minWidth: 34 }}>{s.n}</span>
+                  <span style={{ fontFamily: 'var(--fm)', fontWeight: 700, fontSize: 15, color: '#B23E13', minWidth: 34 }}>{s.n}</span>
                   <div>
                     <h3 style={{ fontSize: 18 }}>{s.t}</h3>
                     <p className="mt-2" style={{ marginTop: 6 }}>{s.d}</p>
@@ -531,59 +635,168 @@ export default function SeoAuditUKPage() {
           </div>
         </section>
 
-        {/* ═══ 11. UK MARKET + DEMAND ═══ */}
+        {/* ═══ 11. WHAT THE AUDIT COSTS YOU (time, not money) ═══ */}
         <section className="sec-lg">
           <div className="wrap">
-            <span className="eyebrow">The UK SEO audit market</span>
-            <h2 style={{ maxWidth: 780 }}>Businesses are searching for an SEO audit right now. Most get an automated PDF back</h2>
-            <div className="col-6040 mt-8">
-              <div>
-                <div className="stack">
-                  <p>
-                    Search demand for an SEO audit in the UK is steady and specific. Terms like &quot;seo audit
-                    services&quot; and &quot;seo auditing services&quot; draw hundreds of searches a month, and
-                    &quot;seo audit service&quot; sits right alongside them. These are business owners who already
-                    suspect something is wrong and want someone to tell them what, not people browsing definitions.
-                  </p>
-                  <p>
-                    Most of the pages ranking for these terms are lead-generation funnels dressed up as audits:
-                    fill in an email, get an automated PDF, then a sales call. This page exists to do the actual
-                    work properly, for businesses across London, Manchester, Birmingham, Leeds, and the rest of
-                    the UK, with the same senior team on every account.
-                  </p>
-                </div>
-                <div className="flex-wrap mt-6">
-                  <a className="city-pill" href="/uk/london">SEO Audit London</a>
-                  <a className="city-pill" href="/uk/manchester">SEO Audit Manchester</a>
-                  <a className="city-pill" href="/uk/birmingham">SEO Audit Birmingham</a>
-                  <a className="city-pill" href="/uk/leeds">SEO Audit Leeds</a>
-                  <a className="city-pill" href="/uk/shopify-seo">Shopify SEO</a>
-                </div>
+            <div style={{ maxWidth: 760 }}>
+              <span className="eyebrow">What it costs you</span>
+              <h2>The audit is free. Here is what it actually costs you in time</h2>
+              <p className="lead mt-4">
+                &quot;Free&quot; usually hides a cost somewhere. Here is ours, stated up front: roughly 40 minutes
+                of your attention spread over two weeks, and read-only access to two accounts. That is the whole
+                bill. No money changes hands and there is no contract at the end of it.
+              </p>
+            </div>
+
+            <div className="col-6040 mt-10">
+              <div className="card">
+                <span className="eyebrow">Your time, stage by stage</span>
+                <ol className="mt-4" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                  <li className="cost-row">
+                    <span className="cost-time">15 min</span>
+                    <div className="cost-body">
+                      <h3>The kick-off call</h3>
+                      <p>You tell us what is bothering you and which pages or enquiries matter most. We agree what the audit should focus on.</p>
+                    </div>
+                  </li>
+                  <li className="cost-row">
+                    <span className="cost-time">5 min</span>
+                    <div className="cost-body">
+                      <h3>Granting read-only access</h3>
+                      <p>You add us as a viewer to Google Search Console and Google Analytics. Read-only, and you can remove us in two clicks at any point.</p>
+                    </div>
+                  </li>
+                  <li className="cost-row">
+                    <span className="cost-time">0 min</span>
+                    <div className="cost-body">
+                      <h3>We run the audit</h3>
+                      <p>One to two weeks of our time, none of yours. We may send one short clarifying question by email if something on the site is ambiguous.</p>
+                    </div>
+                  </li>
+                  <li className="cost-row">
+                    <span className="cost-time">20 min</span>
+                    <div className="cost-body">
+                      <h3>The walkthrough call</h3>
+                      <p>We go through the findings in order of impact, in plain English, and you ask whatever you want. The written list is yours to keep either way.</p>
+                    </div>
+                  </li>
+                  <li className="cost-row">
+                    <span className="cost-time">0 min</span>
+                    <div className="cost-body">
+                      <h3>Deciding what happens next</h3>
+                      <p>No follow-up sequence and no chasing. If you want help with the fixes you tell us, and if you do not, you keep the plan and we leave it there.</p>
+                    </div>
+                  </li>
+                </ol>
               </div>
 
-              <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid var( - n200)', padding: '14px 18px' }}>
-                  <span style={{ fontFamily: 'var( - fm)', fontSize: 10, letterSpacing: '.13em', textTransform: 'uppercase', color: 'var( - n400)' }}>UK · Monthly Search Demand</span>
-                  <span style={{ background: '#B23E13', color: '#fff', fontFamily: 'var( - fm)', fontSize: 10, borderRadius: 999, padding: '3px 9px' }}>DataForSEO</span>
+              <div>
+                <div className="card">
+                  <span className="eyebrow">What we need from you</span>
+                  <ul className="check-list mt-4">
+                    <li>Your website address, and any second site or subdomain you want covered.</li>
+                    <li>Read-only access to Google Search Console, if the property exists.</li>
+                    <li>Read-only access to Google Analytics, if you use it.</li>
+                    <li>The three or four terms you most want to be found for.</li>
+                    <li>The names of one or two competitors who currently beat you.</li>
+                  </ul>
                 </div>
-                <div style={{ padding: '4px 18px 14px' }}>
-                  {[
-                    { kw: 'seo audit services', v: '880', w: '100%', kd: 'KD 14 · Winnable' },
-                    { kw: 'seo auditing services', v: '880', w: '100%', kd: 'KD 0 · Quick win' },
-                    { kw: 'seo audit service', v: '880', w: '100%', kd: 'KD 0 · Quick win' },
-                    { kw: 'professional seo services', v: '880', w: '100%', kd: 'KD 18 · Winnable, adjacent' },
-                    { kw: 'shopify seo agency', v: '720', w: '82%', kd: 'KD 0 · Adjacent quick win' },
-                  ].map((r) => (
-                    <div key={r.kw} className="demand-row">
-                      <div className="demand-top"><span className="demand-kw">{r.kw}</span><span className="demand-v">{r.v}<span style={{ fontSize: 9, color: 'var( - n400)' }}> /mo</span></span></div>
-                      <div className="demand-bar"><i style={{ width: r.w }} /></div>
-                      <div className="demand-kd">{r.kd}</div>
-                    </div>
-                  ))}
-                  <p style={{ textAlign: 'center', fontFamily: 'var( - fm)', fontSize: 10, color: 'var( - n400)', marginTop: 10 }}>Source: DataForSEO, United Kingdom, July 2026</p>
+                <div className="card mt-6">
+                  <span className="eyebrow">What we do not need</span>
+                  <ul className="check-list x-list mt-4">
+                    <li>Your website login or hosting password. We never ask for one to run an audit.</li>
+                    <li>A budget figure before we have looked at anything.</li>
+                    <li>A signed agreement, a deposit, or a notice period.</li>
+                    <li>Permission to change anything on your site. An audit only reads.</li>
+                  </ul>
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* ═══ 11b. INCLUDED VS NOT INCLUDED ═══ */}
+        <section className="sec-lg dot-grid">
+          <div className="wrap">
+            <div style={{ maxWidth: 760 }}>
+              <span className="eyebrow">Scope, stated plainly</span>
+              <h2>What the free website audit includes, and what it does not</h2>
+              <p className="lead mt-4">
+                A free audit that quietly leaves out half the work is not free, it is a sample. Here is the line
+                we draw, so nothing on the call is a surprise.
+              </p>
+            </div>
+            <div className="col-2 mt-10" style={{ gap: 24 }}>
+              <div className="card card-top-orange">
+                <h3>Included in the free audit</h3>
+                <ul className="check-list mt-6">
+                  <li><b>Crawl and index check.</b> Whether every page you care about can be reached, read, and indexed at all.</li>
+                  <li><b>Core Web Vitals and speed.</b> Measured on real page loads, mobile and desktop, and explained in plain terms.</li>
+                  <li><b>On-page and content review.</b> Titles, headings, thin pages, duplicate pages, and pages that answer nothing.</li>
+                  <li><b>Backlink and authority summary.</b> What is helping you, what looks risky, and how you compare with whoever outranks you.</li>
+                  <li><b>Schema and structured data.</b> What you have, what is broken, and what a search or AI engine cannot currently understand about you.</li>
+                  <li><b>Local and map-pack check.</b> Google Business Profile, name and address consistency, and local page quality, where relevant.</li>
+                  <li><b>AI visibility test.</b> Real buyer questions run through ChatGPT, Gemini, Perplexity, and Google AI Overviews.</li>
+                  <li><b>A ranked 90-day action list.</b> The fixes in the order we would do them, with the reasoning attached.</li>
+                  <li><b>A walkthrough call.</b> A person explaining the findings, not a document left on your doorstep.</li>
+                  <li><b>The written findings to keep.</b> Yours to forward to a colleague or another agency, with no strings.</li>
+                </ul>
+              </div>
+              <div className="card">
+                <h3>Not included in the free audit</h3>
+                <ul className="check-list x-list mt-6">
+                  <li><b>Doing the fixes.</b> The audit tells you what to change. Changing it is separate, scoped work.</li>
+                  <li><b>A full competitor teardown.</b> We note what one or two competitors do better. A proper teardown is its own project.</li>
+                  <li><b>Keyword research at scale.</b> We check the terms you name. Building a full keyword map is a separate piece.</li>
+                  <li><b>Paid search or social review.</b> This audit covers organic search and AI visibility only.</li>
+                  <li><b>Ongoing monitoring.</b> It is a point-in-time read, not a subscription to a dashboard.</li>
+                  <li><b>Content writing.</b> We flag the thin and missing pages. Writing them is a separate engagement.</li>
+                  <li><b>Link building.</b> We assess your link profile. We do not sell links, and we would steer you away from anyone who does.</li>
+                  <li><b>A guarantee of ranking positions.</b> Nobody can honestly promise that, and we will not pretend otherwise.</li>
+                </ul>
+              </div>
+            </div>
+            <p className="mt-8" style={{ maxWidth: 900 }}>
+              If any of the excluded items turn out to be the thing you actually need, we say so on the walkthrough
+              call and scope it separately, as a one-off piece of work, fixed-price milestones, or a monthly
+              retainer, whichever fits. That conversation happens after you have seen the findings, never before.
+            </p>
+          </div>
+        </section>
+
+        {/* ═══ 11c. GOOGLE'S OWN PAGE EXPERIENCE CHECKLIST (cited) ═══ */}
+        <section className="sec-lg">
+          <div className="wrap">
+            <div style={{ maxWidth: 780 }}>
+              <span className="eyebrow">Checked against Google&apos;s own guidance</span>
+              <h2>The six questions Google tells site owners to ask themselves</h2>
+              <p className="lead mt-4">
+                We do not invent a checklist and call it a standard. Google Search Central publishes a
+                self-assessment for page experience, and every audit answers each of its questions about your
+                site, with evidence attached.
+              </p>
+            </div>
+            <ul className="check-list mt-8" style={{ maxWidth: 900 }}>
+              <li><b>Do your pages have good Core Web Vitals?</b> We measure loading, responsiveness, and layout stability on your real pages rather than quoting a lab score.</li>
+              <li><b>Are your pages served in a secure fashion?</b> We check that every page is served over HTTPS and that nothing inside the page loads insecurely.</li>
+              <li><b>Does your content display well on mobile devices?</b> We open your key pages at phone size and note anything that breaks, overflows, or becomes unreadable.</li>
+              <li><b>Does your content avoid an excessive amount of ads that distract from the main content?</b> Rarely a problem on business sites, but we check, because third-party scripts often behave like ads where speed is concerned.</li>
+              <li><b>Do your pages avoid intrusive interstitials?</b> Pop-ups and cookie walls that cover the content on arrival get flagged, with a note on what to change.</li>
+              <li><b>Can visitors easily tell the main content from everything else?</b> We look at whether the substance of each page is obvious within a few seconds, to a reader and to a crawler.</li>
+            </ul>
+            <p className="mt-6" style={{ maxWidth: 900, fontSize: 13 }}>
+              Source:{' '}
+              <a
+                href="https://developers.google.com/search/docs/appearance/page-experience"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                style={{ color: '#B23E13', textDecoration: 'underline' }}
+              >
+                Google Search Central, Understanding page experience in Google Search results
+              </a>
+              . Google notes these questions do not cover every aspect of page experience, and that no single
+              factor decides how a page ranks.
+            </p>
           </div>
         </section>
 
@@ -601,15 +814,15 @@ export default function SeoAuditUKPage() {
             <ul className="stack mt-10" style={{ maxWidth: 900 }}>
               {SEO_AUDIT_AGENCIES.map((a, i) => (
                 <li key={a.name} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
-                  <span style={{ fontFamily: 'var( - fm)', fontWeight: 700, fontSize: 15, color: 'var( - orange)', minWidth: 30 }}>{i + 1}</span>
+                  <span style={{ fontFamily: 'var(--fm)', fontWeight: 700, fontSize: 15, color: '#B23E13', minWidth: 30 }}>{i + 1}</span>
                   <div>
-                    <h3 style={{ fontSize: 18 }}>{a.name}{a.name === 'FactoryJet' && <span style={{ fontFamily: 'var( - fm)', fontSize: 10, background: '#B23E13', color: '#fff', borderRadius: 999, padding: '2px 8px', marginLeft: 8, verticalAlign: 'middle' }}>That is us</span>}</h3>
+                    <h3 style={{ fontSize: 18 }}>{a.name}{a.name === 'FactoryJet' && <span style={{ fontFamily: 'var(--fm)', fontSize: 10, background: '#B23E13', color: '#fff', borderRadius: 999, padding: '2px 8px', marginLeft: 8, verticalAlign: 'middle' }}>That is us</span>}</h3>
                     <p className="mt-2" style={{ marginTop: 6 }}>{a.note}</p>
                   </div>
                 </li>
               ))}
             </ul>
-            <p style={{ fontFamily: 'var( - fm)', fontSize: 11, color: 'var( - n400)', marginTop: 14 }}>
+            <p style={{ fontFamily: 'var(--fm)', fontSize: 11, color: 'var(--n400)', marginTop: 14 }}>
               Agencies named from live UK search results for SEO audit terms, July 2026. Listing is not endorsement, and we are one option among them.
             </p>
           </div>
@@ -646,7 +859,7 @@ export default function SeoAuditUKPage() {
                 <div className="scorecard-row"><div className="scorecard-metric">How competitive your market is</div><div className="scorecard-val" style={{ fontSize: 14 }}>Field</div></div>
                 <div className="scorecard-row"><div className="scorecard-metric">Content and authority you already have</div><div className="scorecard-val" style={{ fontSize: 14 }}>Base</div></div>
                 <div className="scorecard-row"><div className="scorecard-metric">Whether AI visibility needs work too</div><div className="scorecard-val" style={{ fontSize: 14 }}>Reach</div></div>
-                <div className="scorecard-row"><div className="scorecard-metric">Free audit before you commit to anything</div><div className="scorecard-val" style={{ color: 'var( - green)', fontSize: 14 }}>Always</div></div>
+                <div className="scorecard-row"><div className="scorecard-metric">Free audit before you commit to anything</div><div className="scorecard-val" style={{ color: 'var(--green)', fontSize: 14 }}>Always</div></div>
               </div>
             </div>
           </div>
@@ -697,6 +910,44 @@ export default function SeoAuditUKPage() {
                   </div>
                 ))}
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ═══ 14b. WHERE THIS AUDIT FITS (internal links, both directions) ═══ */}
+        <section className="sec-lg dot-grid">
+          <div className="wrap">
+            <div style={{ maxWidth: 780 }}>
+              <span className="eyebrow">Where this audit fits</span>
+              <h2>Arrived here from another page? This is the same free audit</h2>
+              <p className="lead mt-4">
+                Every &quot;get a free site review&quot; link across our UK city and service pages lands here. It
+                is one audit and one team, whichever page sent you. If you want to read about the service behind
+                the fixes first, the links below go straight to it.
+              </p>
+            </div>
+
+            <div className="mt-10">
+              <h3>UK cities we audit and work in</h3>
+              <ul className="flex-wrap mt-4" style={{ listStyle: 'none', padding: 0, margin: 0, gap: 8 }}>
+                {UK_CITIES.map((c) => (
+                  <li key={c.slug}>
+                    <a className="city-pill" href={`/uk/${c.slug}`}>SEO and web design in {c.name}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="mt-12">
+              <h3>What the audit hands off to</h3>
+              <ul className="check-list mt-4" style={{ maxWidth: 900 }}>
+                {UK_HUBS.map((h) => (
+                  <li key={h.slug}>
+                    <a href={`/uk/${h.slug}`} style={{ color: '#B23E13', textDecoration: 'underline', fontWeight: 600 }}>{h.name}</a>
+                    {' '}for {h.note}.
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </section>

@@ -540,3 +540,38 @@
   margin: 0;
   padding: 0;
 }
+
+
+/* upgrade-2026-08-25 */
+/* ─── Structured checklists ────────────────────────────────────────── */
+/* Meaning is carried by the column heading above each list, never by the
+   marker colour alone, so this stays inside WCAG 1.4.1. */
+.uk-localseo .tick-list {list-style:none;margin:14px 0 0;padding:0}
+.uk-localseo .tick-list li {position:relative;padding-left:24px;margin-top:11px;font-size:14px;line-height:1.65;color:var(--n600)}
+.uk-localseo .tick-list li:first-child {margin-top:0}
+.uk-localseo .tick-list li b {color:var(--ink);font-weight:600}
+.uk-localseo .tick-list li::before {content:"";position:absolute;left:0;top:7px;width:8px;height:8px;border-radius:2px;display:block}
+.uk-localseo .tick-yes li::before {background:var(--green)}
+.uk-localseo .tick-no  li::before {background:#B23E13}
+.uk-localseo .tick-dot li::before {background:var(--n400)}
+
+/* ─── Source note under a cited claim ──────────────────────────────── */
+.uk-localseo .src-note {font-family:var(--fm);font-size:11px;line-height:1.6;color:var(--n400);margin-top:12px}
+.uk-localseo .src-note a {text-decoration:underline}
+
+/* ─── Mid-page CTA scope ───────────────────────────────────────────── */
+/* MidPageCTA is a shared Tailwind component dropped inside this page-local
+   CSS island. `.uk-localseo a {color:inherit}` outranks Tailwind's
+   `.text-white` on specificity, which would silently repaint the orange
+   button's label. Restore it here rather than editing the shared component. */
+/* White on #F05A28 measures 3.39:1. That clears the 3:1 WCAG bar for LARGE text
+   only, and "large" means >=18.66px AND bold. The shared component ships 18px
+   semibold, which does not qualify, so pin 19px/700 here rather than edit it. */
+.uk-localseo .midcta-scope a {color:#fff;font-size:19px;font-weight:700}
+.uk-localseo .midcta-scope h2 {margin-top:12px}
+/* Page CSS sets a 15px grey on every <p>; restore the eyebrow's mono treatment. */
+.uk-localseo .midcta-scope .font-fj-mono {font-size:11px;letter-spacing:.14em;color:#B23E13}
+
+/* ─── Media figures ────────────────────────────────────────────────── */
+.uk-localseo figure {margin:0}
+.uk-localseo figcaption {font-family:var(--fm);font-size:11px;color:var(--n400);margin-top:10px;line-height:1.6}

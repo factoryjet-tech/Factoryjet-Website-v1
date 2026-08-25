@@ -16,7 +16,7 @@ const organization = {
   url: "https://factoryjet.com",
   logo: "https://factoryjet.com/logo.png",
   description:
-    "FactoryJet is the UK’s AI-native digital agency. Web design, Shopify development, custom AI agents & AI SEO (GEO/AEO/AIO) for British businesses. Pricing is fixed and published upfront.",
+    "FactoryJet is an AI-native digital agency for UK businesses. Web design, Shopify and WooCommerce development, custom AI agents and AI SEO (GEO/AEO/AIO). Every project is scoped and quoted in writing before work starts.",
   author: {
     '@type': 'Person',
     name: 'Bhavesh Barot',
@@ -69,7 +69,7 @@ const services = [
     serviceType: "Web Design & Development",
     name: "Web Design & Development for UK Businesses",
     description:
-      "Next.js 15 + Tailwind CSS 4 websites for UK businesses. Lighthouse 90+, under two-second loads, built for both Google and AI search visibility. Pricing is fixed and published upfronts.",
+      "Next.js 15 and Tailwind CSS 4 websites for UK businesses. Lighthouse 90+, under two-second loads, built for both Google and AI search visibility. Fixed-price milestones, scoped and quoted before work starts.",
     provider,
     areaServed,
     url: "https://factoryjet.com/uk/web-design",
@@ -129,23 +129,25 @@ const faqPage = {
   })),
 };
 
+/**
+ * One crumb array, two consumers. page.tsx renders `<Breadcrumbs items={UK_CRUMBS} />`
+ * and the JSON-LD below is mapped from the same constant, so the visible trail
+ * and the structured data cannot drift apart.
+ */
+export const UK_CRUMBS: Array<{ name: string; url: string }> = [
+  { name: "FactoryJet", url: "https://factoryjet.com" },
+  { name: "UK", url: URL },
+];
+
 const breadcrumb = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
-  itemListElement: [
-    {
-      "@type": "ListItem",
-      position: 1,
-      name: "Home",
-      item: "https://factoryjet.com",
-    },
-    {
-      "@type": "ListItem",
-      position: 2,
-      name: "United Kingdom",
-      item: URL,
-    },
-  ],
+  itemListElement: UK_CRUMBS.map((c, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    name: c.name,
+    item: c.url,
+  })),
 };
 
 // Ordered array so page.tsx can map each JSON-LD block into its own <script> tag.

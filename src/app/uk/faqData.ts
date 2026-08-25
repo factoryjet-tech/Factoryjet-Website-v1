@@ -74,7 +74,7 @@ export const UK_FAQS: UkFaq[] = [
   {
     cat: "ecommerce",
     q: "Shopify vs WooCommerce, which is better for UK businesses in 2026?",
-    a: "Both are excellent platforms serving different needs. Shopify (5.8 million live sites globally) is better for businesses that want simplicity, reliability, and managed infrastructure, hosting, security, and payments work out of the box, on a tiered monthly subscription plus standard card-processing fees. WooCommerce (4.5 million live sites) is better for businesses needing deep customisation who are comfortable managing their own hosting. For most UK SMBs launching their first online store, we typically recommend Shopify for lower maintenance overhead. For businesses with complex product configurations, multiple integrations, or existing WordPress sites, WooCommerce offers more flexibility. We build on both and recommend based on your actual business needs, not our preferred platform.",
+    a: "Shopify suits most UK SMBs; WooCommerce suits businesses that need deep customisation. Shopify manages hosting, security, payments and updates for you, so a small team can run a shop without a developer on call, in exchange for a monthly subscription plus card fees. WooCommerce is free software on top of WordPress, so you control everything, but you also own hosting, security and updates. If you already run WordPress, or your products have complex options and integrations, WooCommerce usually wins. We build on both and recommend after looking at your catalogue, your team and your integrations, not our preference.",
   },
   {
     cat: "ecommerce",
@@ -99,7 +99,7 @@ export const UK_FAQS: UkFaq[] = [
   {
     cat: "ai-agents",
     q: "What is an AI agent and how is it different from a chatbot?",
-    a: "A chatbot follows pre-defined scripts and decision trees, if the user’s query does not match the script, the chatbot fails. An AI agent uses large language models to understand natural language, interpret context, reason about the best action, and take autonomous steps to achieve a goal. The industry term is agentic AI, named a Gartner Top 10 strategic technology trend, with related inquiries surging 1,445% from Q1 2024 to Q2 2025. AI agents can handle complex, multi-step tasks like qualifying sales leads, processing insurance claims, managing customer returns, and coordinating across multiple business systems. They improve over time, integrate with existing tools, and can manage 60–80% of routine business interactions.",
+    a: "A chatbot follows a script. If the question does not match the script, it fails. An AI agent uses a large language model to read the question in plain language, work out what is being asked, and then take steps to finish the job: look something up, write a record, book a slot, or hand over to a person. The industry calls this agentic AI. In practice an agent can qualify a sales enquiry, chase a missing document, or process a return end to end, and it gets better as you feed it real examples of good and bad answers.",
   },
   {
     cat: "ai-agents",
@@ -109,12 +109,12 @@ export const UK_FAQS: UkFaq[] = [
   {
     cat: "ai-agents",
     q: "What is agentic AI and why is everyone talking about it?",
-    a: "Agentic AI refers to AI systems that can independently plan, reason, and take actions to achieve goals, going beyond simple question-and-answer interactions. Gartner named it a Top 10 strategic technology trend for 2026, predicting that 40% of enterprise applications will embed AI agents by year’s end. The global AI agents market hit $7.63 billion in 2025 and is projected to reach $10.91 billion in 2026: a 43% year-over-year jump. In the UK, 54% of businesses are already using AI but only 28% have fully integrated it. FactoryJet builds agentic AI systems that bridge this gap, using Model Context Protocol and A2A protocol for seamless agent-to-agent communication.",
+    a: "Agentic AI means AI that plans and acts, not just answers. A normal assistant replies to a question. An agent breaks a goal into steps, calls the tools it needs, checks its own work, and escalates when it is stuck. It is getting attention because most business value sits in multi-step work rather than single answers: chasing a document, reconciling an order, qualifying a lead. We build agents with a narrow written job description, an explicit list of things they must never do, and a human handover path that always works.",
   },
   {
     cat: "ai-agents",
     q: "Can AI agents integrate with my existing business software?",
-    a: "Yes. Modern AI agents connect with virtually any business system through APIs and integration protocols. FactoryJet builds agents that integrate with CRMs (HubSpot, Salesforce, Pipedrive), ERPs (SAP, ERPNext), email platforms (Gmail, Outlook), communication tools (Slack, Microsoft Teams, WhatsApp), e-commerce platforms (Shopify, WooCommerce), and custom databases. We use Model Context Protocol for seamless tool integration, ensuring your AI agent can read, write, and take actions across your entire software stack.",
+    a: "Yes. Modern AI agents connect with virtually any business system through APIs and integration protocols. FactoryJet builds agents that integrate with CRMs (HubSpot, Salesforce, Pipedrive), ERPs (SAP, ERPNext), email platforms (Gmail, Outlook), communication tools (Slack, Microsoft Teams, WhatsApp), e-commerce platforms (Shopify, WooCommerce), and custom databases. We use Model Context Protocol, an open standard for connecting AI tools to data, so your agent can read, write and act across the software you already run. Every connection is scoped: the agent only gets the access its job needs.",
   },
   {
     cat: "ai-agents",
@@ -124,17 +124,17 @@ export const UK_FAQS: UkFaq[] = [
   {
     cat: "ai-seo",
     q: "What is generative engine optimisation (GEO) and how is it different from traditional SEO?",
-    a: "Generative engine optimisation is the practice of structuring your website content so that AI-powered search tools: Google AI Overviews, ChatGPT, Perplexity AI, Claude, and others, reference and cite your business in their responses. Traditional SEO focuses on ranking in Google’s organic results list. GEO focuses on being the source that AI systems draw from when answering user queries directly. The GEO market is valued at $848 million growing at 50.5% CAGR to a projected $19.8 billion by 2034. AI search traffic converts at 4.4 times the rate of traditional organic. FactoryJet is one of the few traditional agencies offering GEO as a dedicated service.",
+    a: "Generative engine optimisation is structuring your content so AI tools quote you. Google AI Overviews, ChatGPT, Perplexity and Claude answer a question directly and cite a handful of sources. GEO is the work of being one of those sources. Traditional SEO aims at a position in a list of links. GEO aims at being the sentence the answer is built from. In practice that means answering the question near the top of the page, keeping structured data honest, citing real sources, and making sure AI crawlers are not blocked.",
   },
   {
     cat: "ai-seo",
     q: "What is answer engine optimisation (AEO)?",
-    a: "Answer engine optimisation focuses on winning the direct-answer positions in search results, featured snippets, People Also Ask boxes, knowledge panels, and AI-generated summaries that now appear at the top of 42% of UK Google searches. AEO delivers the fastest results of any SEO discipline, often within 2–8 weeks, because it targets answer positions that already exist in search results rather than competing for traditional organic rankings. It complements traditional SEO and GEO by capturing different types of search intent.",
+    a: "Answer engine optimisation focuses on winning the direct-answer positions in search results, featured snippets, People Also Ask boxes, knowledge panels, and AI-generated summaries that now appear at the top of around 30% of UK Google searches. AEO delivers the fastest results of any SEO discipline, often within 2–8 weeks, because it targets answer positions that already exist in search results rather than competing for traditional organic rankings. It complements traditional SEO and GEO by capturing different types of search intent.",
   },
   {
     cat: "ai-seo",
     q: "Is SEO dead because of AI?",
-    a: "No. SEO is evolving, not dying. Google still processes billions of searches daily and organic traffic remains the highest-ROI marketing channel for most businesses. What has changed is that SEO now needs to encompass AI platforms alongside traditional Google rankings. Over 60% of Google searches end without a click, AI search traffic converts 4.4 times higher than traditional organic, and AI Overviews appear in 42% of UK searches. The smartest approach in 2026 is search everywhere optimisation, combining traditional SEO with GEO, AEO, and AIO to ensure your business is visible wherever your customers search.",
+    a: "No. Google still handles billions of searches a day, and organic remains the cheapest reliable channel for most UK businesses. What changed is where the answer appears. Ofcom found that around 30% of searches now return an AI overview, and that more than half of UK adults see those summaries often. Google’s own guidance says there are no extra requirements to appear in AI Overviews or AI Mode. So the work is the same fundamentals done properly: clear answers near the top, honest structured data, fast pages, and content worth quoting.",
   },
   {
     cat: "ai-seo",
@@ -154,12 +154,12 @@ export const UK_FAQS: UkFaq[] = [
   {
     cat: "ai-seo",
     q: "What is share of AI voice and how do I measure it?",
-    a: "Share of AI voice measures how frequently AI systems like ChatGPT, Claude, Perplexity, and Google AI Overviews reference and recommend your brand compared to competitors. It is the AI equivalent of share of voice in traditional marketing. FactoryJet tracks share of AI voice by systematically querying AI platforms with your target keywords and measuring how often your brand appears versus competitors. This gives you visibility into a channel that most UK businesses are completely blind to, and one that is growing at 527% year-over-year in referral traffic.",
+    a: "Share of AI voice measures how often AI assistants name your brand when someone asks a question you want to win. It is the AI version of share of voice in traditional marketing. We measure it by running the same list of buying questions through ChatGPT, Perplexity, Claude and Google AI Overviews on a schedule, then recording which brands get named and in what order. You get a number to track month to month, plus the exact answers, so you can see who is being quoted instead of you.",
   },
   {
     cat: "general",
     q: "How does FactoryJet deliver faster than a traditional agency?",
-    a: "Three reasons, none of which mean cutting corners. First, our AI-augmented workflow removes the busywork that slows traditional agencies down: we use AI across design generation, code review, testing, and QA, so senior engineers spend their time on the work that actually matters. Second, we build on a component-based architecture, assembling high-quality sites in days instead of rebuilding from scratch every time. Third, our fixed-price, milestone-paid model means no account-manager layers or hourly billing inflating your invoice. The result: 7-day delivery, transparent fixed pricing, and every site scoring 90+ on Google Lighthouse: the same quality benchmark as agencies that take months and charge far more.",
+    a: "Three reasons, none of them cutting corners. First, we use AI across design, code review and testing, so senior engineers spend their hours on the parts that need judgement. Second, we build from a component library, so a new site is assembled and customised rather than rebuilt from nothing. Third, there is no account-manager layer between you and the people writing the code, which removes a whole round of relayed feedback. Most UK builds land in three to six weeks, and every one clears Lighthouse 90+ before it goes live.",
   },
   {
     cat: "general",

@@ -32,10 +32,10 @@ const WATERMARKS: Array<{
   left: string;
   rotate: number;
 }> = [
-  { label: "£80.8B", top: "8%", left: "4%", rotate: -6 },
+  { label: "£10B+", top: "8%", left: "4%", rotate: -6 },
   { label: "54%", top: "14%", left: "82%", rotate: 5 },
   { label: "£265B+", top: "62%", left: "6%", rotate: 4 },
-  { label: "42%", top: "70%", left: "78%", rotate: -5 },
+  { label: "30%", top: "70%", left: "78%", rotate: -5 },
 ];
 
 export default function FinalCTA() {
