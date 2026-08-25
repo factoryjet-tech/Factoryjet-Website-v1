@@ -99,10 +99,18 @@ import { post as howToBuildCustomAiSdrB2bSales2026Post } from './posts/how-to-bu
 import { post as n8nVsZapierVsMakeAiWorkflowAutomation2026Post } from './posts/n8n-vs-zapier-vs-make-ai-workflow-automation-2026';
 import { post as agenticCommerceAutonomousAiAgentsEcommerce2026Post } from './posts/agentic-commerce-autonomous-ai-agents-ecommerce-2026';
 import { post as whatIsSeoSmallBusiness2026Post } from './posts/what-is-seo-small-business-2026';
+import { post as whatIsAnAiAgentCost2026Post } from './posts/what-is-an-ai-agent-cost-2026';
+import { post as googleAdsCostSmallBusiness2026Post } from './posts/google-ads-cost-small-business-2026';
+import { post as websiteRunningCostPerMonth2026Post } from './posts/website-running-cost-per-month-2026';
+import { post as amazonSellerFees100DollarSale2026Post } from './posts/amazon-seller-fees-100-dollar-sale-2026';
 
 export const POSTS: BlogPost[] = [
-  // --- US SEO DEFINITION PILLAR (2026-08-25) ---
+  // --- US MARKET CONTENT BATCH (2026-08-25) ---
   whatIsSeoSmallBusiness2026Post,
+  whatIsAnAiAgentCost2026Post,
+  googleAdsCostSmallBusiness2026Post,
+  websiteRunningCostPerMonth2026Post,
+  amazonSellerFees100DollarSale2026Post,
   // --- US AI AGENT PILLAR GUIDES (2026-08-21) ---
   aiCustomerSupportAgentArchitectureGuidePost,
   howToBuildCustomAiSdrB2bSales2026Post,

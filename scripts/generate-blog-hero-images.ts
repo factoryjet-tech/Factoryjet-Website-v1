@@ -166,6 +166,43 @@ const SPECS: Spec[] = [
       'warm cream and deep charcoal palette, no people',
     alt: 'A desk with a laptop showing search results beside a printed agency proposal, representing a business owner deciding what SEO actually buys',
   },
+  {
+    file: 'what-is-an-ai-agent-cost-2026',
+    prompt:
+      'A quiet modern office desk at mid morning, an open laptop showing a soft blurred sequence of ' +
+      'task cards moving through columns, a closed notebook and a pen beside it, a second empty chair ' +
+      'pushed in at the desk, natural light from a tall window, calm and uncluttered, ' +
+      'warm cream and deep charcoal palette, no people',
+    alt: 'An office desk with a laptop showing a workflow moving through stages, representing an AI agent doing work on its own',
+  },
+  {
+    file: 'google-ads-cost-small-business-2026',
+    prompt:
+      'An overhead flat lay on a pale oak desk, a blank white sheet of paper bearing only a plain ' +
+      'grey line chart that climbs left to right, the page completely empty of any title, heading, ' +
+      'caption, axis label or writing of any kind, a plain pocket calculator, a pen and a white ' +
+      'coffee cup arranged around it, no laptop and no keyboard in frame, cool even daylight, ' +
+      'minimal editorial composition, muted cream and slate palette, no people',
+    alt: 'An overhead view of a desk with a rising line chart printed on paper, a pocket calculator and a pen, representing the arithmetic behind a Google Ads budget',
+  },
+  {
+    file: 'website-running-cost-per-month-2026',
+    prompt:
+      'A tidy home office desk in the early evening, an open laptop showing a soft blurred uptime ' +
+      'dashboard with faint green status rows, a stack of printed invoices held under a small clip, ' +
+      'a desk lamp casting warm light, the room quiet and empty, ' +
+      'warm amber and deep charcoal tones, no people',
+    alt: 'A home office desk at dusk with an uptime dashboard on a laptop beside a clipped stack of invoices, representing the recurring monthly cost of keeping a website running',
+  },
+  {
+    file: 'amazon-seller-fees-100-dollar-sale-2026',
+    prompt:
+      'A small ecommerce packing bench, three plain unbranded brown shipping cartons of different ' +
+      'sizes stacked beside a roll of packing tape and a postal scale, an open laptop to one side ' +
+      'showing a soft blurred table of figures, bright diffused daylight from a window, ' +
+      'practical and lived-in, warm cream and kraft brown palette, no people',
+    alt: 'A packing bench with unbranded shipping cartons, a postal scale and a laptop showing a fee breakdown, representing what a marketplace keeps from each sale',
+  },
 ]
 
 async function generate(prompt: string): Promise<Buffer> {
