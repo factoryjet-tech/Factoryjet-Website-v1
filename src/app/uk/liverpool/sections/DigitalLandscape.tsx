@@ -1,225 +1,189 @@
-"use client";
+// Static server component. Light section, sits directly under the hero.
+//
+// This is the answer-first block. Somebody who searched "seo agency liverpool"
+// should be able to read the first two paragraphs and know what the service is,
+// what it costs them in time, and whether it is for them. Every figure carries a
+// source link, because unsourced city statistics are how this page got into
+// trouble the first time.
 
-import { useRef } from "react";
-import { Landmark, Building2, TrendingUp, Ship } from "lucide-react";
+const ONS_GDP =
+  'https://www.ons.gov.uk/economy/grossdomesticproductgdp/bulletins/regionaleconomicactivitybygrossdomesticproductuk/1998to2023';
+const ONS_BUSINESS =
+  'https://www.ons.gov.uk/businessindustryandtrade/business/activitysizeandlocation/bulletins/ukbusinessactivitysizeandlocation/2024';
 
-// ── Bento stat definition ────────────────────────────────────────────────────
 type Stat = {
   value: string;
   label: string;
   sublabel: string;
-  icon: React.ElementType<{ size?: number; strokeWidth?: number; className?: string }>;
-  trend: string;
+  source: string;
+  href: string;
 };
 
 const STATS: Stat[] = [
   {
-    value: "£43.3bn",
-    label: "City Region GDP",
-    sublabel: "Liverpool City Region economic output",
-    icon: Landmark,
-    trend: "Key Growth Hub",
+    value: '£49.2bn',
+    label: 'Liverpool City Region GDP',
+    sublabel: 'At current market prices, 2023',
+    source: 'ONS',
+    href: ONS_GDP,
   },
   {
-    value: "14,000+",
-    label: "Registered Businesses",
-    sublabel: "Rapidly expanding tech & creative cluster",
-    icon: Building2,
-    trend: "Fast Expanding",
+    value: '£31,016',
+    label: 'GDP per head',
+    sublabel: 'Liverpool City Region, 2023',
+    source: 'ONS',
+    href: ONS_GDP,
   },
   {
-    value: "£11bn",
-    label: "Active Investment",
-    sublabel: "Commercial & waterfront pipeline",
-    icon: TrendingUp,
-    trend: "Major Pipeline",
+    value: '266,000',
+    label: 'North West businesses',
+    sublabel: 'VAT or PAYE registered, 2024',
+    source: 'ONS',
+    href: ONS_BUSINESS,
   },
   {
-    value: "45%",
-    label: "UK-US Trade Volume",
-    sublabel: "Handled through Peel Ports Liverpool",
-    icon: Ship,
-    trend: "Atlantic Gateway",
+    value: '9.8%',
+    label: 'Share of all UK businesses',
+    sublabel: 'North West region, 2024',
+    source: 'ONS',
+    href: ONS_BUSINESS,
+  },
+];
+
+const QUICK: Array<{ q: string; a: string }> = [
+  {
+    q: 'In one line',
+    a: 'An SEO agency gets your business found by people already searching for what you sell, on Google and now inside AI answers.',
+  },
+  {
+    q: 'What the work is',
+    a: 'Fix the site so Google can read it, fix your local listings so you appear in the map, write the pages you are missing, and earn mentions that prove you are a real business.',
+  },
+  {
+    q: 'How long it takes',
+    a: 'Map results can move in weeks. Competitive Liverpool terms take months. Google says some changes show within hours and others take several months.',
+  },
+  {
+    q: 'What it costs you in time',
+    a: 'About an hour a month once running, for approving content and answering questions about your own work. Access to your site and accounts is needed at the start.',
+  },
+  {
+    q: 'How to judge it',
+    a: 'By enquiries, not by ranking screenshots. If a report never shows calls and forms, ask what actually changed on the site that month.',
+  },
+  {
+    q: 'When to skip it',
+    a: 'If nobody searches for your category yet, or you need enquiries this week. Paid search does the short window better and we will tell you so.',
   },
 ];
 
 export default function DigitalLandscape() {
-  const sectionRef = useRef<HTMLElement>(null);
-
   return (
     <section
-      ref={sectionRef}
-      id="digital-landscape"
-      aria-label="The Liverpool digital opportunity"
-      className="relative w-full"
-      style={{ backgroundColor: "#FFFFFF", maxWidth: "100vw" }}
+      id="short-answer"
+      aria-labelledby="short-answer-heading"
+      className="w-full bg-white"
     >
-      <div
-        className="mx-auto w-full max-w-[1200px] px-6 sm:px-8"
-        style={{
-          paddingTop: "clamp(64px, 10vw, 120px)",
-          paddingBottom: "clamp(64px, 10vw, 120px)",
-        }}
-      >
-        {/* Heading block */}
-        <div className="flex flex-col items-center text-center">
-          <p
-            style={{
-              color: "#B23E13",
-              fontFamily: "var(--font-sans)",
-              fontWeight: 600,
-              fontSize: 13,
-              letterSpacing: "0.15em",
-              textTransform: "uppercase",
-            }}
-          >
-            The Liverpool Opportunity
-          </p>
-
-          <h2
-            className="font-clash mt-5"
-            style={{
-              color: "#0A0F1C",
-              fontWeight: 700,
-              fontSize: "clamp(24px, 3.5vw, 44px)",
-              lineHeight: 1.1,
-              letterSpacing: "-0.02em",
-              maxWidth: 900,
-            }}
-          >
-            A Port City on the Verge of a Second Renaissance.
-          </h2>
-
-          <span
-            aria-hidden="true"
-            className="mt-6 block"
-            style={{ width: 48, height: 2, backgroundColor: "#FF6B35" }}
-          />
-        </div>
-
-        {/* Editorial two-column */}
-        <div className="mt-16 flex flex-col gap-10 lg:grid lg:grid-cols-[55%_45%] lg:gap-14">
-          {/* Prose */}
-          <div className="order-2 lg:order-1">
-            <div
-              className="space-y-6"
-              style={{
-                maxWidth: 720,
-                color: "#374151",
-                fontFamily: "var(--font-sans)",
-                fontWeight: 400,
-                fontSize: "clamp(15px, 1.1vw, 17px)",
-                lineHeight: 1.8,
-              }}
+      <div className="mx-auto w-full max-w-[1120px] px-6 py-16 md:px-8 md:py-24">
+        {/* Asymmetric 55/45, left aligned */}
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-[55%_1fr] lg:gap-14">
+          <div>
+            <p className="font-fj-mono text-xs font-semibold uppercase tracking-[0.18em] text-[#B23E13]">
+              The short answer
+            </p>
+            <h2
+              id="short-answer-heading"
+              className="mt-4 font-fj-display text-3xl font-bold leading-tight tracking-tight text-fj-ink md:text-[42px]"
             >
+              What an SEO agency in Liverpool actually does
+            </h2>
+
+            <div className="mt-6 space-y-5 font-fj-body text-[17px] leading-relaxed text-fj-neutral-600">
               <p>
-                Liverpool isn&rsquo;t just a city with a remarkable past. It&rsquo;s
-                a city with an extraordinary digital present. The Liverpool City
-                Region generates £43.3 billion in GDP, and with an £11 billion
-                investment pipeline actively reshaping the waterfront, the
-                Knowledge Quarter, and Bramley-Moore Dock, the businesses that
-                own their digital presence right now will capture
-                disproportionate growth over the next decade.
+                An SEO agency gets your business in front of people who are
+                already looking for what you sell. In Liverpool that means two
+                separate fights at once: the block of three businesses shown with
+                a map, which is where most local phone calls start, and the
+                ordinary links underneath, which is where research traffic comes
+                from. They are won in different ways, so they need different work.
               </p>
               <p>
-                The opening of Everton&rsquo;s 52,769-seat stadium at
-                Bramley-Moore Dock in August 2025 is the headline act. But
-                behind it sits a £5.5 billion Liverpool Waters regeneration
-                scheme, a 450-acre Knowledge Quarter housing the city&rsquo;s
-                life sciences and deep-tech sector, and the LCR Freeport,
-                positioning Liverpool as the UK&rsquo;s premier Atlantic gateway
-                once more. Peel Ports already handles approximately 45% of
-                UK-US trade flows. JLR Halewood manufactures Range Rover Evoque
-                and Discovery Sport for global export.
+                The work itself is unglamorous and specific. Make the site fast
+                and readable on a phone. Make sure Google can crawl every page.
+                Rebuild the Google Business Profile so it says what you actually
+                do and where. Write a real page for every service instead of one
+                page listing all eight. Then earn mentions from chambers, trade
+                bodies, partners and local press, because Google treats being
+                known as a ranking factor and there is no shortcut for it.
               </p>
               <p>
-                For Liverpool&rsquo;s 14,000 businesses, from logistics
-                operators in Merseyside to creative studios in the Baltic
-                Triangle: the digital opportunity is enormous. And competition
-                in AI web design, AI SEO, and AI agent development in Liverpool
-                is, right now, effectively zero.
+                It is worth doing when demand already exists. Liverpool City
+                Region is a substantial economy in its own right, and the North
+                West holds close to a tenth of every registered business in the
+                country, so for most sectors people are already typing your
+                service into a search box. If nobody is, we will say so on the
+                first call rather than sell you a retainer.
               </p>
             </div>
 
-            {/* Pull quote */}
-            <figure
-              className="mt-10 border-l-4 pl-6 py-2"
-              style={{ borderColor: "#F05A28" }}
-            >
-              <blockquote
-                className="font-clash"
-                style={{
-                  color: "#F05A28",
-                  fontWeight: 600,
-                  fontSize: "clamp(18px, 1.8vw, 22px)",
-                  lineHeight: 1.4,
-                  letterSpacing: "-0.01em",
-                }}
-              >
-                &ldquo;The businesses that digitise first in Liverpool&rsquo;s
-                next chapter won&rsquo;t just grow. They&rsquo;ll compound.&rdquo;
-              </blockquote>
-            </figure>
+            {/* Quick answers, high extraction value for AI tools */}
+            <dl className="mt-10 divide-y divide-fj-neutral-200 border-y border-fj-neutral-200">
+              {QUICK.map((item) => (
+                <div key={item.q} className="grid grid-cols-1 gap-1 py-4 sm:grid-cols-[170px_1fr] sm:gap-6">
+                  <dt className="font-fj-body text-[14px] font-semibold text-fj-ink">
+                    {item.q}
+                  </dt>
+                  <dd className="font-fj-body text-[15px] leading-relaxed text-fj-neutral-600">
+                    {item.a}
+                  </dd>
+                </div>
+              ))}
+            </dl>
           </div>
 
-          {/* Bento stats grid */}
-          <div className="order-1 lg:order-2">
-            <div
-              className="grid gap-4 grid-cols-1 sm:grid-cols-2"
-              role="list"
-              aria-label="Liverpool digital statistics"
-            >
-              {STATS.map((s) => {
-                const Icon = s.icon;
-                return (
-                  <div
-                    key={s.label}
-                    role="listitem"
-                    className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-[#E2E8F0] bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#FF5622]/40 hover:shadow-xl hover:shadow-[#F05A28]/5"
+          {/* Verified stat cards */}
+          <div>
+            <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
+              {STATS.map((s) => (
+                <li
+                  key={s.label}
+                  className="rounded-2xl border border-fj-neutral-200 bg-fj-cream p-6"
+                >
+                  <p
+                    className="font-fj-display font-bold text-[#F05A28]"
                     style={{
-                      boxShadow: "0 2px 8px rgba(0,0,0,0.04)",
-                      minHeight: 180,
+                      fontSize: 'clamp(26px, 2.4vw, 34px)',
+                      lineHeight: 1.1,
+                      letterSpacing: '-0.02em',
                     }}
                   >
-                    {/* Header: Clean Icon Badge + Trend Pill */}
-                    <div className="flex items-center justify-between mb-3">
-                      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#FEEFEA] border border-[#F3C9B6] text-[#F05A28] transition-transform duration-300 group-hover:scale-105">
-                        <Icon size={18} strokeWidth={2} />
-                      </div>
-                      <span className="inline-flex items-center rounded-full bg-[#F6F6F9] border border-[#E6E6EC] px-2.5 py-0.5 font-fj-mono text-[11px] font-semibold text-[#141414]">
-                        {s.trend}
-                      </span>
-                    </div>
+                    {s.value}
+                  </p>
+                  <p className="mt-2 font-fj-body text-[13.5px] font-semibold leading-snug text-fj-ink">
+                    {s.label}
+                  </p>
+                  <p className="mt-1 font-fj-body text-[12px] leading-relaxed text-fj-neutral-600">
+                    {s.sublabel}
+                  </p>
+                  <a
+                    href={s.href}
+                    rel="noopener"
+                    target="_blank"
+                    className="mt-3 inline-block font-fj-mono text-[11px] font-semibold uppercase tracking-[0.12em] text-[#B23E13] underline underline-offset-4"
+                  >
+                    Source: {s.source}
+                  </a>
+                </li>
+              ))}
+            </ul>
 
-                    {/* Big Number Headline */}
-                    <div>
-                      <div
-                        className="font-clash"
-                        style={{
-                          fontSize: "clamp(30px, 2.5vw, 38px)",
-                          fontWeight: 700,
-                          color: "#F05A28",
-                          lineHeight: 1.1,
-                          letterSpacing: "-0.02em",
-                        }}
-                      >
-                        {s.value}
-                      </div>
-                      <div
-                        className="mt-2 font-fj-body text-[13.5px] font-semibold leading-snug text-[#0A0F1C]"
-                      >
-                        {s.label}
-                      </div>
-                      <p
-                        className="mt-0.5 font-fj-body text-[11.5px] leading-relaxed text-[#6b7280]"
-                      >
-                        {s.sublabel}
-                      </p>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
+            <blockquote className="mt-6 border-l-4 border-[#F05A28] py-2 pl-6">
+              <p className="font-fj-display text-lg font-semibold leading-snug text-fj-ink md:text-xl">
+                Nobody can guarantee you first place on Google. What can be
+                promised is the work: the fixes shipped, the pages written, and
+                the dates they land.
+              </p>
+            </blockquote>
           </div>
         </div>
       </div>

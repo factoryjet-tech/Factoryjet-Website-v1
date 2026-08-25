@@ -1,10 +1,18 @@
+/*
+ * MarqueeTicker.
+ *
+ * Light band as of 2026-08-25, and role="marquee" is gone: that is not a real
+ * ARIA role, so assistive tech ignored it and validators flagged it. The second
+ * copy of the list exists only to make the loop seamless, so it is aria-hidden.
+ */
+
 const ITEMS = [
   "LIGHTHOUSE 100 SEO",
   "90-DAY SUPPORT INCLUDED",
   "NO LOCK-IN CONTRACTS",
   "MEDIACITYUK · SPINNINGFIELDS · NORTHERN QUARTER",
-  "WEB DESIGN MANCHESTER",
-  "Pricing is fixed and published upfront",
+  "SEO AGENCY MANCHESTER",
+  "FIXED-PRICE MILESTONES",
   "NEXT.JS 15 + GSAP + TAILWIND",
 ];
 
@@ -12,8 +20,7 @@ function TickerItem({ label }: { label: string }) {
   return (
     <>
       <span className="whitespace-nowrap">{label}</span>
-      {/* Diamond separator */}
-      <span className="text-[#F05A28] mx-4 select-none" aria-hidden="true">
+      <span className="mx-4 select-none text-[#B23E13]" aria-hidden="true">
         ◆
       </span>
     </>
@@ -24,36 +31,31 @@ export default function MarqueeTicker() {
   return (
     <div
       id="marquee-ticker"
-      role="marquee"
       aria-label="Trust signals"
-      className="w-full overflow-hidden"
-      style={{
-        background: "#111827",
-        height: "48px",
-        borderTop: "1px solid rgba(255,255,255,0.05)",
-      }}
+      className="w-full overflow-hidden border-y border-fj-neutral-200 bg-white"
+      style={{ height: "48px" }}
     >
-      {/* animate-marquee is defined in globals.css: translateX(0) → translateX(-50%) 30s linear infinite */}
+      {/* animate-marquee is defined in globals.css: translateX(0) to translateX(-50%), 30s linear infinite */}
       <div
-        className="animate-marquee flex items-center h-full"
+        className="animate-marquee flex h-full items-center font-fj-body"
         style={{
           width: "max-content",
-          fontFamily: "var(--font-inter), sans-serif",
           fontSize: "12px",
           fontWeight: 500,
           letterSpacing: "0.1em",
-          color: "rgba(255,255,255,0.5)",
+          color: "#4A4A45",
           textTransform: "uppercase",
         }}
       >
-        {/* First copy */}
         {ITEMS.map((item) => (
           <TickerItem key={`a-${item}`} label={item} />
         ))}
-        {/* Duplicate for seamless loop */}
-        {ITEMS.map((item) => (
-          <TickerItem key={`b-${item}`} label={item} />
-        ))}
+        {/* Duplicate copy: visual loop only, hidden from assistive tech. */}
+        <span aria-hidden="true" className="flex items-center">
+          {ITEMS.map((item) => (
+            <TickerItem key={`b-${item}`} label={item} />
+          ))}
+        </span>
       </div>
     </div>
   );

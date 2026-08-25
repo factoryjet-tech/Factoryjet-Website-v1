@@ -98,7 +98,7 @@ export default function Pricing() {
               marginBottom: "16px",
             }}
           >
-            Transparent Pricing
+            Scope, not day rates
           </p>
 
           <h2
@@ -111,8 +111,7 @@ export default function Pricing() {
               marginBottom: "16px",
             }}
           >
-            Manchester Web Design Pricing: Enterprise Quality,
-            Startup-Friendly Investment
+            What each Manchester engagement includes
           </h2>
 
           <p
@@ -124,11 +123,9 @@ export default function Pricing() {
               marginBottom: "48px",
             }}
           >
-            Every project is fixed-price and scoped to your build. The main
-            drivers are page count, design depth, and integrations. Here is what
-            each service includes. We quote the full written price up front after
-            a free discovery call, so you know the complete cost before any work
-            starts.
+            Every project is fixed-price and scoped to your build. The drivers
+            are page count, design depth and integrations. We quote in writing
+            after a free call, so you know the full cost before work starts.
           </p>
         </div>
 
@@ -245,9 +242,9 @@ export default function Pricing() {
               Every Project Includes
             </p>
 
-            <div className="flex flex-wrap" style={{ gap: "12px 24px" }}>
+            <ul className="flex flex-wrap" style={{ gap: "12px 24px" }}>
               {INCLUDES.map((item) => (
-                <span
+                <li
                   key={item}
                   className="flex items-center gap-2"
                   style={{ fontSize: "14px", color: "#374151" }}
@@ -258,9 +255,9 @@ export default function Pricing() {
                     aria-hidden="true"
                   />
                   {item}
-                </span>
+                </li>
               ))}
-            </div>
+            </ul>
 
             <p
               className="font-medium"
@@ -299,8 +296,8 @@ export default function Pricing() {
                 fontSize: "15px",
               }}
               onMouseEnter={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.borderColor = "#F05A28";
-                (e.currentTarget as HTMLAnchorElement).style.color = "#F05A28";
+                (e.currentTarget as HTMLAnchorElement).style.borderColor = "#B23E13";
+                (e.currentTarget as HTMLAnchorElement).style.color = "#B23E13";
               }}
               onMouseLeave={(e) => {
                 (e.currentTarget as HTMLAnchorElement).style.borderColor = "#E5E7EB";

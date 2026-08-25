@@ -1,17 +1,21 @@
 "use client";
 
-import { useEffect } from "react";
-import Hero from "./sections/Hero";
-import DigitalLandscape from "./sections/DigitalLandscape";
-import Services from "./sections/Services";
-import Cities from "./sections/Cities";
-import TechStack from "./sections/TechStack";
-import Pricing from "./sections/Pricing";
-import FAQ from "./sections/FAQ";
-import FinalCTA from "./sections/FinalCTA";
-import Footer from "@/app/uk/sections/Footer";
+// Client shell for /uk/liverpool. Its only job is Lenis smooth scroll plus the
+// <main> landmark. Every section is composed in page.tsx (a Server Component)
+// and passed in as children, so sections that do not need browser APIs stay
+// static and ship no JavaScript.
+//
+// Rebuilt 2026-08-25. The previous version rendered the site Footer INSIDE
+// <main>, and page.tsx then rendered six more sections after it, so roughly a
+// third of the page sat below the footer.
 
-export default function LiverpoolPage() {
+import { useEffect } from "react";
+
+export default function LiverpoolPage({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   useEffect(() => {
     let lenis: import("lenis").default | null = null;
     let rafId: number | null = null;
@@ -48,16 +52,8 @@ export default function LiverpoolPage() {
   }, []);
 
   return (
-    <main id="main-content">
-      <Hero />
-      <DigitalLandscape />
-      <Services />
-      <Cities />
-      <TechStack />
-      <Pricing />
-      <FAQ />
-      <FinalCTA />
-      <Footer />
+    <main id="main-content" className="bg-fj-cream">
+      {children}
     </main>
   );
 }

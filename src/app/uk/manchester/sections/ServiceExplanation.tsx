@@ -27,7 +27,7 @@ const STANDARD_CARDS: StandardCard[] = [
     icon: Zap,
     title: "Next.js 15 Foundation",
     description:
-      "Server-side rendered React that loads in under 1.5 seconds. The same framework Vercel, Notion, and TikTok use, now for Manchester businesses.",
+      "Server-rendered React that loads in under 1.5 seconds. The framework Vercel and Notion use.",
     image: {
       src: "/images/manchester/mockup-responsive.webp",
       alt: "Responsive website design mockup showing desktop and mobile",
@@ -37,7 +37,7 @@ const STANDARD_CARDS: StandardCard[] = [
     icon: Globe,
     title: "GSAP + Lenis Animation",
     description:
-      "Smooth, butter-like scroll experiences and micro-interactions that signal quality without sacrificing performance.",
+      "Restrained scroll motion and micro-interactions that signal quality without costing speed.",
     image: {
       src: "/images/manchester/mockup-ecommerce.webp",
       alt: "E-commerce storefront design mockup",
@@ -47,13 +47,13 @@ const STANDARD_CARDS: StandardCard[] = [
     icon: Code,
     title: "Tailwind CSS 4 Styling",
     description:
-      "Every Manchester website ships with under 20KB of CSS, compared to 200–500KB typical of WordPress theme builders.",
+      "Under 20KB of CSS per site, against the 200 to 500KB typical of theme builders.",
   },
   {
     icon: Target,
     title: "Conversion-Engineered Forms",
     description:
-      "Multi-step modal forms with auto-advance. Our Sheffield page shipped SEO 100, Performance 92.",
+      "Multi-step forms with auto-advance. Our Sheffield page shipped SEO 100, Performance 92.",
     image: {
       src: "/images/manchester/mockup-dashboard.webp",
       alt: "Web analytics dashboard showing traffic growth",
@@ -65,7 +65,7 @@ export default function ServiceExplanation() {
   const sectionRef      = useRef<HTMLElement>(null);
   const headerRef       = useRef<HTMLDivElement>(null);
   const featuredRef     = useRef<HTMLDivElement>(null);
-  const standardGridRef = useRef<HTMLDivElement>(null);
+  const standardGridRef = useRef<HTMLUListElement>(null);
 
   // ── GSAP: header + featured card reveals ─────────────────────────────────
   // Service cards are handled separately by IntersectionObserver below.
@@ -102,7 +102,7 @@ export default function ServiceExplanation() {
       window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     if (prefersReduced) {
-      // Show everything immediately — no animation
+      // Show everything immediately, no animation
       cards.forEach((card) => {
         card.style.opacity = "1";
         card.style.transform = "translateY(0)";
@@ -190,8 +190,7 @@ export default function ServiceExplanation() {
               marginBottom: "16px",
             }}
           >
-            AI-Native Web Design for Manchester Businesses That Refuse to Be
-            Average
+            What we build for Manchester businesses
           </h2>
 
           <p
@@ -203,10 +202,8 @@ export default function ServiceExplanation() {
               lineHeight: 1.7,
             }}
           >
-            FactoryJet doesn&apos;t build websites. We engineer digital revenue
-            machines. Every Manchester project starts with conversion
-            architecture, mapping the exact journey from first visit to
-            qualified lead.
+            Every project starts by mapping the route from first visit to
+            qualified enquiry, then building only what serves it.
           </p>
         </div>
 
@@ -279,13 +276,13 @@ export default function ServiceExplanation() {
           </div>
 
           {/* STANDARD CARDS, 2×2 grid inside the 2-col outer grid */}
-          <div
+          <ul
             ref={standardGridRef}
             className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 items-start"
             style={{ gap: "20px" }}
           >
             {STANDARD_CARDS.map(({ icon: Icon, title, description, image }) => (
-              <div
+              <li
                 key={title}
                 className="service-card rounded-xl"
                 style={{
@@ -360,9 +357,9 @@ export default function ServiceExplanation() {
                     />
                   </div>
                 )}
-              </div>
+              </li>
             ))}
-          </div>
+          </ul>
 
         </div>
       </div>

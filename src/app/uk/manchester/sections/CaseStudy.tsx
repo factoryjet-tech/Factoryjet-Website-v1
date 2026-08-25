@@ -13,12 +13,11 @@ const BEFORE_METRICS = [
   { label: "Local search ranking", value: "Not ranking" },
 ];
 
-// Numeric values for count-up; null = text reveal only
 const AFTER_METRICS = [
-  { label: "Lighthouse Performance", display: "92 / 100", countTo: 92, suffix: " / 100" },
-  { label: "Mobile load time", display: "Under 1.5s", countTo: null, suffix: "" },
-  { label: "Form completion (target)", display: "8–12%", countTo: null, suffix: "" },
-  { label: "AI search visibility", display: "GEO + AEO ready", countTo: null, suffix: "" },
+  { label: "Lighthouse Performance", display: "92 / 100" },
+  { label: "Mobile load time", display: "Under 1.5s" },
+  { label: "Form completion (target)", display: "8–12%" },
+  { label: "AI search visibility", display: "GEO + AEO ready" },
 ];
 
 // ── Before/After image slider ─────────────────────────────────────────────────
@@ -202,8 +201,6 @@ export default function CaseStudy() {
   const headerRef = useRef<HTMLDivElement>(null);
   const beforeCardRef = useRef<HTMLDivElement>(null);
   const afterCardRef = useRef<HTMLDivElement>(null);
-  // Refs for each "after" metric value span — only the countable one matters
-  const afterValueRefs = useRef<(HTMLSpanElement | null)[]>([]);
 
   useGSAP(
     () => {
@@ -250,30 +247,9 @@ export default function CaseStudy() {
         },
       });
 
-      if (prefersReduced) return;
-
-      // Count-up for Lighthouse score (index 0 in after metrics)
-      const counterEl = afterValueRefs.current[0];
-      if (counterEl) {
-        const obj = { val: 0 };
-        gsap.fromTo(
-          obj,
-          { val: 0 },
-          {
-            val: 92,
-            duration: 1.8,
-            ease: "power2.out",
-            onUpdate() {
-              counterEl.textContent = `${Math.round(obj.val)} / 100`;
-            },
-            scrollTrigger: {
-              trigger: afterCardRef.current,
-              start: "top 75%",
-              toggleActions: "play none none none",
-            },
-          }
-        );
-      }
+      // The Lighthouse figure used to count up from zero on scroll. Removed
+      // 2026-08-25: count-up animations are banned by the brand anchor, and it
+      // meant the static HTML literally read "0 / 100" as our result.
     },
     { scope: sectionRef }
   );
@@ -323,11 +299,9 @@ export default function CaseStudy() {
               marginBottom: "48px",
             }}
           >
-            A financial advisory firm in Spinningfields needed to replace a
-            4-year-old WordPress site that scored 38 on Lighthouse Performance
-            and ranked nowhere for &ldquo;financial advisor Manchester.&rdquo;
-            Their site loaded in 6.2 seconds on mobile. Their contact form had
-            a 1.2% completion rate.
+            A financial advisory firm in Spinningfields, replacing a four-year-old
+            WordPress site that scored 38 on Lighthouse, took 6.2 seconds to load
+            on mobile and ranked nowhere for &ldquo;financial advisor Manchester&rdquo;.
           </p>
         </div>
 
@@ -364,9 +338,9 @@ export default function CaseStudy() {
             </div>
 
             {/* Metrics */}
-            <div className="flex flex-col">
+            <ul className="flex flex-col">
               {BEFORE_METRICS.map(({ label, value }, i) => (
-                <div
+                <li
                   key={label}
                   className="flex items-center justify-between"
                   style={{
@@ -386,9 +360,9 @@ export default function CaseStudy() {
                   >
                     {value}
                   </span>
-                </div>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
 
           {/* AFTER card */}
@@ -418,9 +392,9 @@ export default function CaseStudy() {
             </div>
 
             {/* Metrics */}
-            <div className="flex flex-col">
-              {AFTER_METRICS.map(({ label, display, countTo }, i) => (
-                <div
+            <ul className="flex flex-col">
+              {AFTER_METRICS.map(({ label, display }, i) => (
+                <li
                   key={label}
                   className="flex items-center justify-between"
                   style={{
@@ -435,20 +409,14 @@ export default function CaseStudy() {
                     {label}
                   </span>
                   <span
-                    ref={(el) => {
-                      afterValueRefs.current[i] = el;
-                    }}
                     className="font-clash font-bold"
                     style={{ fontSize: "20px", color: "#10B981" }}
-                    // Pre-fill display value; count-up overrides index 0 only
-                    suppressHydrationWarning
                   >
-                    {/* countTo=null means static; countTo set means GSAP will update */}
-                    {countTo !== null ? "0 / 100" : display}
+                    {display}
                   </span>
-                </div>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
 
         </div>

@@ -1,8 +1,11 @@
 "use client";
 
-// Birmingham FAQ — fully static, zero accordion/filter logic.
-// All 12 answers permanently visible in the DOM.
-// AI crawlers (GPTBot, ClaudeBot, PerplexityBot) see every answer in HTML source.
+// Birmingham FAQ. Fully static, no accordion and no filter logic, so every answer is
+// permanently visible in the DOM and any crawler reading the HTML source sees all of them.
+//
+// The questions come from ../faqData.ts. page.tsx maps that SAME array into FAQPage JSON-LD.
+// Counts below are derived from FAQS.length rather than typed as a number, because the copy
+// "12 answers" survived here for weeks after the array had stopped having twelve entries.
 
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
@@ -110,7 +113,7 @@ export default function FAQ() {
                   textTransform: "uppercase",
                 }}
               >
-                Birmingham Web Design FAQ
+                Birmingham SEO FAQ
               </p>
 
               <h2
@@ -137,12 +140,13 @@ export default function FAQ() {
                   marginTop: 10,
                 }}
               >
-                12 answers. Zero jargon.
+                {FAQS.length} answers, in plain English. Every one of them is a question a
+                Birmingham business has actually asked us on a first call.
               </p>
             </div>
           </aside>
 
-          {/* Right: all 12 cards, permanently expanded */}
+          {/* Right: every card, permanently expanded */}
           <div ref={listRef} className="flex flex-col gap-4">
             {FAQS.map((item, i) => (
               <div
@@ -167,8 +171,8 @@ export default function FAQ() {
                       width: 40,
                       height: 40,
                       minWidth: 40,
-                      backgroundColor: "rgba(0,82,204,0.08)",
-                      border: "1px solid rgba(0,82,204,0.2)",
+                      backgroundColor: "rgba(178,62,19,0.07)",
+                      border: "1px solid rgba(178,62,19,0.2)",
                       color: "#B23E13",
                       fontFamily: "var(--font-sans)",
                       fontSize: 13,

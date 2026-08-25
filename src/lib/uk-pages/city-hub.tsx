@@ -7,6 +7,8 @@ import WebDesignArchitectureBlueprint from '@/components/v2/WebDesignArchitectur
 import WebDesignValueCalculator from '@/components/v2/WebDesignValueCalculator'
 import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard'
 import CityLinksUK from '@/components/v2/CityLinksUK'
+import Breadcrumbs from '@/components/v2/Breadcrumbs'
+import MidPageCTA from '@/components/v2/MidPageCTA'
 import ModalCTAButton from '@/components/v2/ModalCTAButton'
 import { getCityDepth } from '@/data/countries/gb/cityDepth'
 import { getCityMarket, type CityMarket } from '@/data/countries/gb/cityMarket'
@@ -267,14 +269,24 @@ export default function CityHubPage({ city }: CityHubPageProps) {
     },
   }
 
+  // ONE array drives both the visible trail and the JSON-LD, so the two cannot
+  // drift. Until now the schema claimed a breadcrumb no human could see, which
+  // is the same soft-cloaking problem Breadcrumbs.tsx was written to fix.
+  const crumbs = [
+    { name: 'FactoryJet', url: 'https://factoryjet.com' },
+    { name: 'UK', url: 'https://factoryjet.com/uk' },
+    { name: city.name, url: `https://factoryjet.com/uk/${city.slug}` },
+  ]
+
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'FactoryJet', item: 'https://factoryjet.com' },
-      { '@type': 'ListItem', position: 2, name: 'UK', item: 'https://factoryjet.com/uk' },
-      { '@type': 'ListItem', position: 3, name: city.name, item: `https://factoryjet.com/uk/${city.slug}` },
-    ],
+    itemListElement: crumbs.map((c, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: c.name,
+      item: c.url,
+    })),
   }
 
   return (
@@ -284,6 +296,7 @@ export default function CityHubPage({ city }: CityHubPageProps) {
       <script id="city-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       <main className="bg-fj-cream">
+        <Breadcrumbs items={crumbs} />
         {/* Hero, light, per CLAUDE.md non-negotiable #1. Lead form in first viewport. */}
         <section className="px-6 pb-16 pt-14 md:px-8 md:pb-20 md:pt-20">
           <div className="mx-auto grid max-w-[1160px] gap-12 lg:grid-cols-[1.15fr_1fr] lg:gap-16">
@@ -531,6 +544,16 @@ export default function CityHubPage({ city }: CityHubPageProps) {
             </ul>
           </div>
         </section>
+
+        {/* 6b. Mid-page CTA.
+            The page previously carried a hero form and a closing CTA and nothing
+            between them, on all 15 city roots. A reader convinced by the local
+            market sections above had to scroll to one extreme or the other. */}
+        <MidPageCTA
+          headline={`Thinking about a new site for your ${city.name} business?`}
+          sub={`Send us your current URL. We will come back with the three things costing you the most enquiries in ${city.name}, and what it would take to fix them.`}
+          label={'Get a free site review'}
+        />
 
         {/* 7. Business districts */}
         {depth && (

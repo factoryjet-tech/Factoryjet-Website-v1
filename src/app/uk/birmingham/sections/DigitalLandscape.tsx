@@ -112,26 +112,28 @@ export default function DigitalLandscape() {
               }}
             >
               <p>
-                Birmingham has always been a city of transformation. From the
-                Jewellery Quarter&rsquo;s 700 independent craftspeople to Goldman
-                Sachs engineers coding in Brindleyplace, from Deutsche Bank&rsquo;s
-                2,000-strong technology hub to JLR&rsquo;s design studios in the
-                West Midlands: Birmingham&rsquo;s economy is broader, deeper, and
-                faster-moving than most agency websites acknowledge.
+                Birmingham does not have one economy, it has several sitting on
+                top of each other. Independent makers in the Jewellery Quarter.
+                Banking and professional services around Colmore Row and
+                Brindleyplace. Engineering and logistics out through Erdington,
+                Tyseley and the Black Country. Studios and food businesses in
+                Digbeth. They search differently, and a page written for one of
+                them will not work for the others.
               </p>
               <p>
-                The £1bn Paradise regeneration at Three Chamberlain Square added
-                1.4 million sq ft of commercial space. The £1.9bn Smithfield
-                masterplan is remaking the city&rsquo;s core. HS2&rsquo;s Curzon
-                Street terminus will make Birmingham a 45-minute commute from
-                London by 2033. Every one of these projects brings 500 new
-                businesses into the city region.
+                The city is also still being rebuilt around itself. Paradise at
+                Chamberlain Square, the Smithfield masterplan and the Curzon
+                Street terminus keep moving where people work and how they
+                travel, which over time moves the map results too. The
+                Office for National Statistics publishes the regional business
+                counts behind the figures above, and reported the UK total of
+                VAT and PAYE registered businesses rising by 0.4% over the year.
               </p>
               <p>
-                What that means for your website: buyers arrive well-informed.
-                They&rsquo;ve compared three agencies before they contact you.
-                Your digital presence is your proposal before you ever get in
-                the room.
+                What that means for your website is simple enough. Buyers arrive
+                already informed, usually having looked at two or three other
+                firms first. Whatever your site says is your proposal, written
+                before you ever get in the room.
               </p>
             </div>
 

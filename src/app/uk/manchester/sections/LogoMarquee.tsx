@@ -35,7 +35,7 @@ export default function LogoMarquee({
     <>
       {/*
        * Keyframe + hover + reduced-motion rules injected once per instance.
-       * Duplicate @keyframes marquee declarations are harmless — CSS simply
+       * Duplicate @keyframes marquee declarations are harmless, CSS simply
        * applies the last-written definition which is identical anyway.
        */}
       <style>{`

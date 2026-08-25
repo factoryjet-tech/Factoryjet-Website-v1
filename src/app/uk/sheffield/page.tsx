@@ -1,30 +1,45 @@
 import type { Metadata } from 'next';
 import SheffieldPage from './SheffieldPage';
 import AuthorCard from '@/components/v2/AuthorCard';
+import Breadcrumbs from '@/components/v2/Breadcrumbs';
+import MidPageCTA from '@/components/v2/MidPageCTA';
 import WebDesignArchitectureBlueprint from '@/components/v2/WebDesignArchitectureBlueprint';
 import WebDesignValueCalculator from '@/components/v2/WebDesignValueCalculator';
 import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import CityLinksUK from '@/components/v2/CityLinksUK';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import Footer from '@/app/uk/sections/Footer';
+import { CANONICAL, CRUMBS } from './seoData';
+import {
+  SheffieldDeliverables,
+  SheffieldProcess,
+  SheffieldScope,
+  SheffieldLocalContext,
+  SheffieldHowGoogleDecides,
+  SheffieldSources,
+} from './SheffieldSeoSections';
 
-const CANONICAL = 'https://factoryjet.com/uk/sheffield';
-const PAGE_MODIFIED = '2026-08-24';
+const PAGE_MODIFIED = '2026-08-25';
 
 export const metadata: Metadata = {
-  title: 'Web Design Agency Sheffield | Fast Next.js Sites | FactoryJet',
+  title: 'SEO Agency Sheffield | Local SEO and Web Design | FactoryJet',
   description:
-    'Sheffield web design agency. Custom Next.js websites, sub-second load speeds, mobile conversion flows, and 100% full IP code ownership for Sheffield businesses.',
-  alternates: { canonical: CANONICAL },
+    'Sheffield SEO agency for local search, technical SEO and fast websites. Map pack work, Sheffield area pages, monthly reporting and no lock-in contracts.',
+  alternates: {
+    canonical: CANONICAL,
+    languages: { 'en-GB': CANONICAL, 'x-default': CANONICAL },
+  },
   openGraph: {
-    title: 'Web Design Agency Sheffield | Fast Next.js Sites | FactoryJet',
+    title: 'SEO Agency Sheffield | Local SEO and Web Design | FactoryJet',
     description:
-      'Custom Next.js web design, e-commerce, and AI search optimization in Sheffield. Sub-second performance and 100% code ownership.',
+      'Local SEO, technical SEO and fast Next.js websites for Sheffield and South Yorkshire businesses. Clear monthly reporting, full code ownership.',
     url: CANONICAL,
     images: [{ url: '/images/uk/hero-uk.webp' }],
   },
 };
 
+// The BreadcrumbList markup lives in layout.tsx and is derived from this same
+// CRUMBS array, so the visible trail below cannot drift away from the markup.
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -41,10 +56,19 @@ const jsonLd = {
     },
     {
       '@type': 'LocalBusiness',
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: '4.9',
+        reviewCount: '64',
+        bestRating: '5',
+        worstRating: '1',
+      },
       '@id': `${CANONICAL}#business`,
       name: 'FactoryJet Technologies: Sheffield',
       url: CANONICAL,
-      description: 'Web design, e-commerce, AI agents and AI SEO agency serving Sheffield and South Yorkshire.',
+      parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
+      description:
+        'SEO agency and web design studio serving Sheffield and South Yorkshire. Local SEO, technical SEO and fast Next.js websites.',
       areaServed: {
         '@type': 'City',
         name: 'Sheffield',
@@ -54,22 +78,25 @@ const jsonLd = {
         latitude: 53.3811,
         longitude: -1.4701,
       },
-      author: {
-        '@type': 'Person',
-        name: 'Bhavesh Barot',
-        jobTitle: 'Chief Technical Architect',
-        url: 'https://factoryjet.com/about',
-        sameAs: [
-          'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-          'https://github.com/factoryjet-tech',
+    },
+    {
+      '@type': 'Service',
+      '@id': `${CANONICAL}#seo-service`,
+      name: 'SEO Agency Sheffield',
+      serviceType: 'Search engine optimisation',
+      provider: { '@id': 'https://factoryjet.com/#organization' },
+      areaServed: { '@type': 'City', name: 'Sheffield' },
+      url: CANONICAL,
+      hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: 'Sheffield SEO deliverables',
+        itemListElement: [
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Technical SEO audit and fixes' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Local SEO and Google Business Profile management' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Keyword research and on-page content' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Digital PR and link earning' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Search reporting and conversion tracking' } },
         ],
-      },
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '4.9',
-        reviewCount: '64',
-        bestRating: '5',
-        worstRating: '1',
       },
     },
     {
@@ -80,29 +107,13 @@ const jsonLd = {
       provider: { '@id': 'https://factoryjet.com/#organization' },
       areaServed: { '@type': 'City', name: 'Sheffield' },
       url: CANONICAL,
-      author: {
-        '@type': 'Person',
-        name: 'Bhavesh Barot',
-        jobTitle: 'Chief Technical Architect',
-        url: 'https://factoryjet.com/about',
-        sameAs: [
-          'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-          'https://github.com/factoryjet-tech',
-        ],
-      },
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '4.9',
-        reviewCount: '64',
-        bestRating: '5',
-        worstRating: '1',
-      },
     },
     {
       '@type': 'WebPage',
       '@id': `${CANONICAL}#webpage`,
       url: CANONICAL,
-      name: 'Web Design Agency Sheffield | Fast Next.js Sites | FactoryJet',
+      name: 'SEO Agency Sheffield | Local SEO and Web Design | FactoryJet',
+      inLanguage: 'en-GB',
       dateModified: PAGE_MODIFIED,
       author: {
         '@type': 'Person',
@@ -127,7 +138,32 @@ export default function Page() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <main className="uk-sheffield-root">
+        <Breadcrumbs items={CRUMBS} />
+
         <SheffieldPage />
+
+        {/* ══ WHAT THE ENGAGEMENT INCLUDES ══ */}
+        <SheffieldDeliverables />
+
+        {/* ══ HOW THE WORK RUNS, WEEK BY WEEK ══ */}
+        <SheffieldProcess />
+
+        {/* ══ MID-PAGE CTA, roughly halfway down the page ══ */}
+        <MidPageCTA
+          headline="See what is actually holding your Sheffield rankings back"
+          sub="Send us your website address. We run the crawl, check your Google Business Profile and your Core Web Vitals, then send back a written list of what is wrong and what we would fix first. No call required to receive it."
+          label="Get a free Sheffield site review"
+          note="Written back within two working days."
+        />
+
+        {/* ══ SCOPE BOUNDARIES AND FIT ══ */}
+        <SheffieldScope />
+
+        {/* ══ SHEFFIELD SPECIFICS, ONS DATA ══ */}
+        <SheffieldLocalContext />
+
+        {/* ══ HOW GOOGLE DECIDES, WITH CITATIONS ══ */}
+        <SheffieldHowGoogleDecides />
 
         {/* ── COUNTER-NARRATIVE & VENDOR EVALUATION MATRIX ── */}
         <section className="py-16 bg-fj-cream border-t border-fj-neutral-200 text-fj-ink">
@@ -167,6 +203,11 @@ export default function Page() {
                     <td className="p-4 text-fj-neutral-600">Hourly day rates + ongoing retainers</td>
                     <td className="p-4 text-[#047857] font-semibold">Fixed-price milestone model</td>
                   </tr>
+                  <tr className="border-b border-fj-neutral-200">
+                    <td className="p-4 font-semibold text-fj-ink">SEO Reporting</td>
+                    <td className="p-4 text-fj-neutral-600">Impression charts, no enquiry tracking</td>
+                    <td className="p-4 text-[#047857] font-semibold">Calls and form fills traced back to searches</td>
+                  </tr>
                   <tr>
                     <td className="p-4 font-semibold text-fj-ink">Code &amp; IP Ownership</td>
                     <td className="p-4 text-fj-neutral-600">Proprietary CMS lock-in or agency hosting</td>
@@ -178,12 +219,16 @@ export default function Page() {
 
             {/* Standard Deliverables Checklist */}
             <div className="bg-white border border-fj-neutral-200 rounded-xl p-6">
-              <h3 className="text-base font-bold text-fj-ink mb-3">Standard Engineering Deliverables on Every Build:</h3>
+              <h3 className="text-base font-bold text-fj-ink mb-3">Standard engineering deliverables on every Sheffield build:</h3>
               <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs text-fj-neutral-600">
                 <li className="flex items-center gap-2"><span className="text-[#047857] font-bold">✓</span> Server-rendered Next.js 15 App Router</li>
                 <li className="flex items-center gap-2"><span className="text-[#047857] font-bold">✓</span> LocalBusiness Schema.org JSON-LD graph</li>
-                <li className="flex items-center gap-2"><span className="text-[#047857] font-bold">✓</span> 95+ Core Web Vitals speed verification</li>
+                <li className="flex items-center gap-2"><span className="text-[#047857] font-bold">✓</span> Core Web Vitals verified before launch</li>
                 <li className="flex items-center gap-2"><span className="text-[#047857] font-bold">✓</span> Complete GitHub repository transfer</li>
+                <li className="flex items-center gap-2"><span className="text-[#047857] font-bold">✓</span> Google Search Console and Analytics wired up</li>
+                <li className="flex items-center gap-2"><span className="text-[#047857] font-bold">✓</span> Sheffield keyword map handed over in writing</li>
+                <li className="flex items-center gap-2"><span className="text-[#047857] font-bold">✓</span> Google Business Profile claimed and completed</li>
+                <li className="flex items-center gap-2"><span className="text-[#047857] font-bold">✓</span> 30 days of post-launch support included</li>
               </ul>
             </div>
           </div>
@@ -203,6 +248,9 @@ export default function Page() {
         {/* ── INTERACTIVE SPEED & PIPELINE VALUE CALCULATOR ── */}
         <WebDesignValueCalculator city="Sheffield" region="uk" />
 
+        {/* ── SOURCES AND ONWARD LINKS ── */}
+        <SheffieldSources />
+
         {/* ── UK REGIONAL HORIZONTAL CROSS-LINKS ── */}
         <CityLinksUK currentCity="sheffield" />
 
@@ -216,8 +264,8 @@ export default function Page() {
         {/* ── FINAL MODAL CTA STRIP ── */}
         <section className="py-12 bg-white border-t border-fj-neutral-200 text-center">
           <div className="max-w-xl mx-auto px-4">
-            <h3 className="text-xl font-bold text-fj-ink mb-3">Ready to transform your Sheffield digital presence?</h3>
-            <p className="text-sm text-fj-neutral-600 mb-6">Receive a custom architectural scope and fixed timeline from our senior team.</p>
+            <h2 className="text-xl font-bold text-fj-ink mb-3">Ready to be found by Sheffield customers?</h2>
+            <p className="text-sm text-fj-neutral-600 mb-6">Tell us your website address and what you sell. You get a scoped plan and a fixed timeline back from a senior engineer, not a sales call.</p>
             <ModalCTAButton label="Get my free quote" region="uk" modalVariant="default" btnVariant="primary-light" />
           </div>
         </section>

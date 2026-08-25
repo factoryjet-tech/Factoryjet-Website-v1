@@ -17,42 +17,42 @@ const INDUSTRIES: Industry[] = [
   {
     name: "Tech & SaaS Companies",
     description:
-      "Manchester's 10,000+ digital businesses need websites that match their product quality. We build product landing pages, SaaS marketing sites, and developer portals.",
+      "Product landing pages, marketing sites and developer portals for the city's digital sector.",
     image: "/images/manchester/industry-tech.webp",
     imageAlt: "Tech and SaaS businesses in Manchester",
   },
   {
     name: "Financial & Professional Services",
     description:
-      "HSBC, Barclays, Deloitte, and hundreds of independent advisors, law firms, and consultancies need websites that convey trust, compliance, and authority.",
+      "Advisers, law firms and consultancies that need a site conveying trust and compliance.",
     image: "/images/manchester/industry-finance.webp",
     imageAlt: "Financial services businesses in Manchester",
   },
   {
     name: "Creative & Media Agencies",
     description:
-      "MediaCityUK hosts the BBC, ITV, dock10, and 250+ production companies. Your agency's website is your portfolio's portfolio.",
+      "MediaCityUK hosts the BBC, ITV and dock10. Your site is your portfolio's portfolio.",
     image: "/images/manchester/industry-media.webp",
     imageAlt: "Creative and media agencies in Manchester",
   },
   {
     name: "E-Commerce & Retail",
     description:
-      "From the Arndale to the Northern Quarter's independent scene, Manchester retail is increasingly digital. Outperform template stores on speed and conversion.",
+      "From the Arndale to the Northern Quarter independents. Beat template stores on speed.",
     image: "/images/manchester/industry-hospitality.webp",
     imageAlt: "E-commerce and retail businesses in Manchester",
   },
   {
     name: "Manufacturing & Engineering",
     description:
-      "Greater Manchester is at the heart of the UK's largest manufacturing cluster. B2B pages that generate RFQs and rank for industry-specific long-tail keywords.",
+      "B2B pages that pull RFQs and rank for the long-tail terms buyers actually use.",
     image: "/images/manchester/industry-manufacturing.webp",
     imageAlt: "Manufacturing and engineering businesses in Manchester",
   },
   {
     name: "Health & Life Sciences",
     description:
-      "Health-tech startups and biomedical research drive demand for compliant, accessible, high-performance websites built to WCAG 2.2 AA standards.",
+      "Accessible, fast sites built to WCAG 2.2 AA for health-tech and research teams.",
     image: "/images/manchester/industry-health.webp",
     imageAlt: "Health and life sciences businesses in Manchester",
   },
@@ -61,7 +61,7 @@ const INDUSTRIES: Industry[] = [
 export default function IndustriesGrid() {
   const sectionRef = useRef<HTMLElement>(null);
   const headerRef  = useRef<HTMLDivElement>(null);
-  const gridRef    = useRef<HTMLDivElement>(null);
+  const gridRef    = useRef<HTMLUListElement>(null);
 
   useGSAP(
     () => {
@@ -137,7 +137,7 @@ export default function IndustriesGrid() {
         </div>
 
         {/* ── Photography grid ─────────────────────────────────────────── */}
-        <div
+        <ul
           ref={gridRef}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
@@ -149,7 +149,7 @@ export default function IndustriesGrid() {
              *  - .industry-card class kept for GSAP stagger compatibility
              *  - group enables Tailwind group-hover on the fill <Image>
              */
-            <div
+            <li
               key={name}
               className="industry-card group relative overflow-hidden rounded-xl h-[200px] md:h-[280px]"
               style={{ cursor: "default" }}
@@ -187,9 +187,9 @@ export default function IndustriesGrid() {
                   {description}
                 </p>
               </div>
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
 
       </div>
     </section>

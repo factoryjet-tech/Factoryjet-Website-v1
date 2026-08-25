@@ -406,12 +406,13 @@ export default function Cities() {
             }}
           >
             <p>
-              We respect what agencies like KIJO in the Jewellery Quarter, ALT
-              Agency, and Republic Marketing in Brindleyplace have built. They
-              serve Birmingham well. But if your ambitions sit outside their
-              price range, their technology stack, or their willingness to build
-              AI-native systems from day one, FactoryJet builds digital
-              infrastructure for Birmingham that compounds across 10 UK cities.
+              Birmingham is where most of our UK search work starts, but the
+              same team runs it across the other cities below. That matters more
+              than it sounds: what we learn about which directories, chambers
+              and trade titles actually pass weight in one city usually tells us
+              where to look in the next one. If your customers sit in more than
+              one place, say so early and we will build the page structure for
+              that from the start rather than bolting it on later.
             </p>
           </div>
         </div>

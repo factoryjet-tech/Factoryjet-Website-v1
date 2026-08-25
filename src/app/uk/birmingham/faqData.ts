@@ -1,53 +1,115 @@
-// Shared FAQ source for Birmingham -- imported by sections/FAQ.tsx (visible render + microdata)
-// and page.tsx (JSON-LD schema). Plain data module, no "use client": safe for the Server
-// Component page.tsx to import without crossing a client/server boundary.
+// Shared FAQ source for Birmingham. Imported by sections/FAQ.tsx (visible render plus
+// microdata) and by page.tsx (FAQPage JSON-LD). Both read THIS array. Never hand-copy a
+// second version of these questions next to a <script type="application/ld+json"> block:
+// when the two drift, the schema describes a page that does not exist, which is a
+// cloaking problem, not a formatting one.
+//
+// Plain data module, no "use client": safe for the Server Component page.tsx to import.
+//
+// House rule: no price figures. Engagement shape is described in words.
 export const FAQS = [
   {
-    q: "How much does web design cost in Birmingham?",
-    a: "Most Birmingham agencies price by studio overhead and project complexity, so quotes vary widely from one studio to the next. Factors that push prices up include bespoke functionality, complex integrations, and the agency's studio overhead, agencies in the Jewellery Quarter, Brindleyplace, or the Mailbox area typically carry higher costs than remote-first agencies. At FactoryJet, pricing is fixed and scoped to your build: the main drivers are page count, design depth, integrations, and catalogue size for e-commerce. Every project is quoted up front after a free discovery call, so you know the full cost before work starts. We provide itemised quotes within 24 hours, free of charge, with no discovery phase required.",
+    q: "What does an SEO agency in Birmingham actually do?",
+    a: "Three jobs. First, we fix the technical faults that stop Google reading your site properly, things like slow pages, broken links and missing page titles. Second, we build pages that answer what Birmingham buyers actually type in, and we make your Google Business Profile match. Third, we earn mentions and links from real West Midlands sites so Google treats you as a serious local option rather than a new name.",
   },
   {
-    q: "What's the best web design agency in Birmingham for manufacturers and industrial businesses?",
-    a: "Most Birmingham web agencies build beautiful consumer-facing sites but lack fluency in manufacturing buyer journeys, long sales cycles, technical specifications, ISO accreditations, and the need to rank for industry-specific terms like 'precision engineering Birmingham' or 'CNC machining West Midlands'. FactoryJet specialises in web design for manufacturers in Birmingham, including B2B e-commerce portals with trade pricing, product catalogues, and ERP integration. Our clients in the Erdington, Tyseley, and Smethwick manufacturing corridors see 40–60% improvements in qualified lead volume within six months of replatforming.",
+    q: "How much does SEO cost in Birmingham?",
+    a: "It depends on the shape of the work, not on a menu. Most Birmingham businesses start with a one-off audit, which is a fixed price for a fixed piece of work. If the audit finds a lot to repair, we quote fixed-price milestones so you pay per finished job. Ongoing content and link work runs as a monthly retainer. You get the number in writing before anything starts, and we do not charge for the first review.",
   },
   {
-    q: "Can I get a Next.js or Framer developer in Birmingham?",
-    a: "Yes, FactoryJet's primary development stack is Next.js 15 with React 19, Tailwind CSS 4, and GSAP for animations. We also build in Framer for marketing sites and Webflow for client-managed sites. The majority of Birmingham web agencies build in WordPress or Squarespace. If you specifically need a Next.js developer Birmingham or a Framer developer Birmingham, FactoryJet is one of the few agencies in the region delivering these at a non-agency-inflated rate. Our builds consistently achieve Lighthouse scores of 90–100 across Performance, Accessibility, and SEO.",
+    q: "How long before I see results from SEO?",
+    a: "Google itself says some changes take a few hours and others take several months, and that you should wait a few weeks before judging whether a change helped. In practice, technical fixes and Google Business Profile work often move local results inside about a month. Competitive Birmingham search terms usually take longer, often two to three quarters. Anyone promising page one in thirty days is guessing.",
   },
   {
-    q: "What is AI SEO and does my Birmingham business need it in 2026?",
-    a: "AI SEO is the practice of optimising your content to be cited, recommended, and surfaced by AI-powered search engines, including Google AI Overviews, ChatGPT Search, Perplexity, and Claude. Traditional SEO gets you ranked in the ten blue links. AI SEO gets your business named when a potential client asks an AI assistant for a recommendation. For Birmingham professional services firms, manufacturers, and B2B businesses, this shift is already happening. FactoryJet builds AI SEO strategies using entity-based content architecture, FAQPage and HowTo schema, llms.txt implementation, and explicit AI crawler whitelisting, ensuring GPTBot, ClaudeBot, and PerplexityBot can index and cite your site.",
+    q: "Do I need a Birmingham SEO agency, or will any UK agency do?",
+    a: "For local search, local knowledge matters more than a local postcode. What matters is whether the agency knows which Birmingham directories, chambers, trade bodies and news sites actually pass weight, how the map pack behaves across the city centre and the suburbs, and which nearby towns your customers really search from. We work remotely and meet in person when it helps. You are not paying for a city centre office.",
   },
   {
-    q: "What is generative engine optimisation (GEO) and how does it work for Birmingham businesses?",
-    a: "Generative engine optimisation (GEO) is the technical process of structuring your website's content, schema markup, and crawlability so that AI language models prefer to cite your business when generating answers. For a Birmingham solicitor, this means appearing in ChatGPT's answer when someone asks 'best employment lawyer Birmingham'. For a Jewellery Quarter retailer, it means being cited in Perplexity's gift guide. GEO is growing at 50.5% CAGR globally: the Birmingham businesses that invest in it now will own AI-generated referrals before their competitors realise they exist. FactoryJet is one of the only agencies in the West Midlands currently executing full GEO implementations with answer engine optimisation (AEO) as a core deliverable.",
+    q: "We come up when people search our own name, but nothing else. Why?",
+    a: "That is the most common pattern we see. Ranking for your own name proves Google has indexed you, nothing more. Ranking for what people search before they know you exist, such as your service plus Birmingham, needs three things you probably do not have yet: a page that is clearly about that service, wording that matches how buyers phrase it, and enough outside signals that Google trusts you over the firms already there.",
   },
   {
-    q: "What's the difference between FactoryJet and agencies like KIJO, Opace, or ALT Agency in Birmingham?",
-    a: "KIJO, Opace, ALT Agency, and Republic Marketing are all established Birmingham agencies with strong track records in their niches. The key differences with FactoryJet are: (1) Technology stack, we build in Next.js 15, the same framework used by global SaaS companies, while most Birmingham agencies default to WordPress or Squarespace. (2) AI capability, we build multi-agent AI systems and AI SEO architectures; no Birmingham agency currently offers this at production grade. (3) Pricing: our remote-first model means lower overhead, directly reflected in fixed quotes scoped to your build. (4) Speed: our builds take 3–6 weeks versus the 8–16 weeks standard for Birmingham studio agencies.",
+    q: "What is local SEO and how is it different from normal SEO?",
+    a: "Local SEO targets the map results and the nearby-me searches. It leans on your Google Business Profile, your address details being identical everywhere they appear online, reviews, and pages that genuinely serve one place. Normal SEO targets the ordinary blue links below, which are decided more by content depth and links. Most Birmingham service businesses need both, because the map pack and the blue links sit on the same screen.",
   },
   {
-    q: "Do you build Shopify Plus stores for Birmingham businesses?",
-    a: "Yes. FactoryJet builds Shopify Plus stores, standard Shopify stores, and headless commerce architectures using Shopify as the backend with a custom Next.js storefront. Birmingham has a strong wholesale and retail manufacturing base, particularly in the Jewellery Quarter (700+ jewellery businesses) and the city's growing fashion district, that benefits enormously from headless Shopify setups. Eastside Co in Digbeth are the most prominent Birmingham-based Shopify agency with 500+ stores globally; FactoryJet's differentiation is headless commerce capability, B2B trade portals, and AI-powered product recommendations at non-Plus agency rates.",
+    q: "My Google listing shows the wrong address or the wrong opening hours. Can you fix that?",
+    a: "Yes, and it should be the first thing done. We take ownership of the Business Profile if you have lost access, correct the name, address, phone number, category and hours, then chase down the wrong versions sitting in old directories. Mismatched details across the web are one of the quietest reasons a Birmingham business is missing from the map pack while a smaller rival sits in it.",
   },
   {
-    q: "What is agentic AI and how can Birmingham law firms or financial services businesses use it?",
-    a: "Agentic AI refers to AI systems that take multi-step autonomous actions, not just answering questions, but completing workflows. For a Birmingham law firm, this means an AI agent that receives an online enquiry, extracts the matter type, checks it against your practice areas, drafts a conflict-of-interest check, creates a CRM entry in your case management system, and sends a personalised acknowledgment email: all without human intervention. For financial services businesses near HSBC UK's Brindleyplace headquarters or in the emerging Deutsche Bank tech hub, AI agents handle client onboarding, document verification workflows, and compliance reporting. FactoryJet builds these systems using Claude (Anthropic), GPT-4o, and open-source LLMs, with full integration into your existing CRM and practice management software.",
+    q: "We work out of a co-working space in the city centre. Can we still have a Google listing?",
+    a: "Only under strict conditions. Google's own guidelines say a business cannot list an office in a co-working space unless that office has clear signage, receives customers there during business hours, and is staffed during business hours by your own people. Plenty of Birmingham firms in shared buildings do not meet that bar. If you do not, we set you up as a service area business instead, which is legitimate and still ranks.",
   },
   {
-    q: "I'm based in the Jewellery Quarter, do you understand the wholesale and B2C dynamics of this market?",
-    a: "Yes. The Jewellery Quarter's 700+ jewellery businesses face a specific challenge: they sell both wholesale (to retailers, galleries, and jewellers globally) and direct-to-consumer (online and via the Quarter's workshops and boutiques). This requires a website that handles B2B trade logins with custom pricing tiers alongside a public D2C storefront, exactly the headless commerce architecture we specialise in. We understand the SEO dynamics of bespoke and handcrafted jewellery, the role of craft story-telling in conversion, and the need for high-resolution product photography guidance.",
+    q: "Will you make us rank number one?",
+    a: "No, and treat anyone who promises it with suspicion. Nobody controls Google's results. What we control is whether your site is technically sound, whether your pages answer the question better than the ones currently ranking, and whether real sites reference you. We tell you which terms look winnable given who is already there, and which ones would take years. Then you decide where the effort goes.",
   },
   {
-    q: "Can you handle SEO for a manufacturer based in Solihull, Coventry, or the wider West Midlands?",
-    a: "Yes, FactoryJet's Birmingham SEO service covers the full West Midlands Combined Authority area, including Solihull, Coventry, Wolverhampton, Dudley, Walsall, and Sandwell. We understand the manufacturing and logistics cluster dynamics of the region, including JLR's Solihull facility, the Coventry aerospace supply chain, and the Black Country's precision engineering ecosystem. Our SEO and AI SEO strategies are built around the specific search behaviour of industrial buyers, including technical long-tail keywords, schema for products and services, and GBP optimisation for local pack rankings across the West Midlands.",
+    q: "How do you decide which search terms to go after for a Birmingham business?",
+    a: "We check three things for every term: how many people search it, what it is worth if they convert, and how strong the sites currently ranking are. A term with big numbers is useless if the top ten are national brands with thousands of links. A quieter term you can actually win, like a specific service plus a Birmingham district, often brings more enquiries in the first year.",
   },
   {
-    q: "What is headless commerce and is it right for my Birmingham B2B business?",
-    a: "Headless commerce separates the front-end (what your customers see) from the back-end commerce platform (Shopify, WooCommerce, or custom). The front end is built in Next.js for speed, full design control, and seamless API integrations, while the back end handles orders, inventory, and payments. For Birmingham B2B businesses, particularly in manufacturing, wholesale, and professional supplies, headless commerce enables trade portals with customer-specific pricing, account-based checkout flows, integration with ERP systems like SAP or Sage, and Lighthouse Performance scores above 90. It costs more upfront than a standard Shopify theme, but pays back in conversion rate and operational efficiency within 12–18 months.",
+    q: "We serve the whole West Midlands, not just Birmingham. Does that change things?",
+    a: "It changes the page structure. One page cannot rank well for Birmingham, Solihull, Wolverhampton and Coventry at once, and forcing it usually means it ranks for none of them. We build one strong Birmingham page, then add genuinely different pages for the towns worth the effort, each with its own local detail. Thin copies of the same page with the town name swapped get filtered out.",
   },
   {
-    q: "How quickly can you build a website for my Birmingham business?",
-    a: "A standard 5-page business website takes 3–4 weeks from brief to launch. A Shopify e-commerce store takes 4–6 weeks. A custom Next.js build with bespoke functionality takes 6–10 weeks. AI agent deployments take 4–8 weeks depending on integration complexity. These timelines assume you have your brand assets (logo, colours, photography) ready. We offer express 2-week delivery for simple business sites for a small surcharge. For context, Birmingham studio agencies typically quote 8–14 weeks for equivalent projects. Every site ships with a Lighthouse SEO score of 100 guaranteed.",
+    q: "What do you need from us to get started?",
+    a: "Less than you think. Access to your website, your Google Analytics and Search Console accounts, and your Google Business Profile. A short call so we understand what a good enquiry looks like for you and what your sales team can actually handle. If you do not have Analytics or Search Console set up, we set them up. You do not need a brief, a strategy document or a content plan.",
+  },
+  {
+    q: "Can you do SEO without rebuilding our website?",
+    a: "In most cases yes. We work with WordPress, Shopify, Wix, Squarespace and custom builds. A rebuild is only worth raising when the platform itself blocks the work, for example when pages cannot have their own titles, when the site is not readable on a phone, or when it is so slow that no amount of content fixes it. We tell you plainly which of those apply before suggesting anything.",
+  },
+  {
+    q: "Our website is slow. Does that hurt our ranking?",
+    a: "It hurts your enquiries first and your ranking second. Google publishes the pass marks it uses: Largest Contentful Paint under 2.5 seconds, Interaction to Next Paint under 200 milliseconds, and Cumulative Layout Shift under 0.1. Missing them is rarely the single reason you are not ranking, but a slow page loses people who arrived ready to buy, which is the more expensive problem.",
+  },
+  {
+    q: "What is AI search and do I need to worry about it in Birmingham?",
+    a: "AI search is when someone asks ChatGPT, Google's AI answers or Perplexity for a recommendation instead of scrolling a results page. They get a short answer naming a few businesses. Being named there is a different job from ranking: it rewards clear, factual, well structured pages that state what you do, where, and for whom. It is worth doing now because very few Birmingham firms have bothered.",
+  },
+  {
+    q: "How do I know the SEO work is actually happening?",
+    a: "You get a short monthly report that leads with enquiries, not rankings. It lists what was changed, what was published, what links were earned, and what moved in Search Console. Every claim links to something you can open yourself. If a month was quiet, the report says so. Long dashboards full of graphs that never mention a phone call are how agencies hide a lack of work.",
+  },
+  {
+    q: "Do you write the content or do we?",
+    a: "We write it, you correct it. Our writers can research your market, but they cannot know why your Birmingham customers actually chose you, or the objection your sales team hears every week. So we draft, you mark it up, we finish. For technical trades and regulated work, we usually ask for one short call with whoever knows the subject best. That call is worth more than a week of desk research.",
+  },
+  {
+    q: "Are you going to buy links for us?",
+    a: "No. Paid link networks are against Google's rules and the damage lands on your site, not on the agency that sold them. We earn mentions the slow way: local press and trade titles, genuine supplier and partner pages, Birmingham business groups and chambers, case studies your clients will happily host, and data worth quoting. It is slower than buying, and it does not evaporate at the next update.",
+  },
+  {
+    q: "We tried an SEO company before and it did nothing. How is this different?",
+    a: "Usually one of three things went wrong: the work was blog posts nobody searched for, the technical faults were never fixed, or the terms chosen were unwinnable from day one. So we start with the audit and show you which of the three it was, using your own Search Console data. If the honest answer is that your previous agency did fine and the market is simply hard, we say that too.",
+  },
+  {
+    q: "Can you help a trade business, like a plumber or a builder in Birmingham?",
+    a: "Yes, and trades are often the fastest wins because the searches are urgent and local. The work is usually less about writing and more about the map pack: a properly set up Business Profile, correct service areas across Birmingham and the surrounding boroughs, steady reviews, photographs of real jobs, and one solid page per service rather than one page listing everything you do.",
+  },
+  {
+    q: "We are a manufacturer in the Black Country. Is SEO worth it for us?",
+    a: "Often more than for consumer businesses, because one enquiry can be worth a year of a retailer's traffic. Industrial buyers search in specifications, not slogans, so the wins come from pages built around materials, tolerances, capabilities, certifications and lead times. Volumes look small on paper. What matters is that the handful of people searching are purchasing managers with a live requirement.",
+  },
+  {
+    q: "Do we need a separate page for every Birmingham suburb?",
+    a: "Almost never. Twenty near identical pages for Edgbaston, Harborne, Moseley and the rest usually get ignored by Google and confuse your own visitors. Build one strong Birmingham page. Add a suburb page only where there is genuinely different content to write, for example a different service mix, a real local case study, or a location you actually operate from.",
+  },
+  {
+    q: "What happens if we stop the SEO work?",
+    a: "Rankings do not vanish overnight, but they drift. Technical fixes and published pages stay working for you. What stops is the new content, the new links, and the maintenance that keeps pages matching what people search this year. Sites that pause typically hold position for a few months, then slip as competitors keep publishing. Pausing is a reasonable decision. Being surprised by the slide six months later is not.",
+  },
+  {
+    q: "Who will actually be doing the work?",
+    a: "The person who scopes your project is the person who runs it. There is no handover to a junior account manager after the sale, because there is no account management layer to hand over to. You get direct contact with the people making changes to your site. If we need a specialist, for example for a complicated migration, we tell you who they are and what they are doing.",
+  },
+  {
+    q: "How do we get out if it is not working?",
+    a: "Monthly work runs month to month after any agreed initial period, and you can stop with notice in writing. Whatever we built stays yours: the pages, the content, the technical fixes, and full admin access to every account. We do not hold your Google Business Profile, your Analytics, your Search Console or your website hostage. Ask any agency that question before you sign, not after.",
+  },
+  {
+    q: "Do you work with our existing web developer or marketing person?",
+    a: "Yes, and it is usually cheaper for you when we do. We can hand your developer a prioritised list of fixes with the reasoning attached, rather than touching the site ourselves. For in-house marketers we tend to take the technical and link work and leave the content to the person who already knows your customers. Say which parts you want to keep and we scope around them.",
   },
 ];

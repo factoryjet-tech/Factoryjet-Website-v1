@@ -1,19 +1,27 @@
 "use client";
 
 import { useRef } from "react";
-import dynamic from "next/dynamic";
-import Image from "next/image";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "@/lib/gsap";
 import { useContactModal } from "@/context/ContactModalContext";
 import { trackButtonClick, trackCTAClick } from "@/utils/gtm";
 
-const MeshGradient = dynamic(() => import("@/components/MeshGradient"), {
-  ssr: false,
-});
+// 2026-08-25: this hero was #0A0F1C with a WebGL mesh gradient, a full-bleed image at 40%
+// overlay and a grain layer. Three problems. The brand rule is that the hero is never dark.
+// White copy sat on an orange button below the large-text size, which fails contrast. And the
+// LCP element was a decorative background image nobody reads. All three are gone. What is
+// kept is the Birmingham skyline, which is real local drawing rather than stock AI artwork,
+// recoloured as a light ink tint.
 
-const GRAIN_DATA_URI =
-  "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E\")";
+// Landmarks named in the trust strip, kept as data so the row cannot drift from the SVG.
+const LANDMARKS = [
+  "Colmore Business District",
+  "Jewellery Quarter",
+  "Digbeth",
+  "Brindleyplace",
+  "Bullring",
+  "Curzon Street",
+];
 
 export default function Hero() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -140,8 +148,8 @@ export default function Hero() {
       ref={sectionRef}
       id="hero"
       aria-label="FactoryJet Birmingham, hero"
-      className="relative flex min-h-screen w-full items-start justify-center overflow-hidden"
-      style={{ backgroundColor: "#0A0F1C", maxWidth: "100vw" }}
+      className="relative flex w-full items-start justify-center overflow-hidden"
+      style={{ backgroundColor: "#FAFAF7", maxWidth: "100vw" }}
     >
       <style>{`
         @keyframes bham-scroll-bounce {
@@ -150,35 +158,13 @@ export default function Hero() {
         }
       `}</style>
 
-      {/* Layer 1, WebGL mesh gradient */}
-      <MeshGradient />
-
-      {/* Layer 1b, Hero image */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0"
-        style={{ zIndex: 0, opacity: 0.4, mixBlendMode: "overlay" }}
-      >
-        <Image
-          src="/images/uk/birmingham/hero-birmingham.webp"
-          alt="Birmingham city skyline, AI web design agency backdrop"
-          fill
-          sizes="100vw"
-          priority
-          fetchPriority="high"
-          loading="eager"
-          quality={82}
-          className="object-cover"
-        />
-      </div>
-
-      {/* Layer 2, Birmingham skyline SVG: Rotunda + Selfridges dome */}
+      {/* Layer 1, Birmingham skyline SVG: Rotunda + Selfridges dome */}
       <svg
         aria-hidden="true"
         viewBox="0 0 1600 200"
         preserveAspectRatio="none"
         className="absolute bottom-0 left-0 w-full pointer-events-none"
-        style={{ height: 200, zIndex: 1, color: "rgba(255,255,255,0.05)" }}
+        style={{ height: 200, zIndex: 1, color: "rgba(26,26,26,0.06)" }}
       >
         <g ref={skylineRef} fill="currentColor">
           {/* Far left low buildings */}
@@ -261,226 +247,175 @@ export default function Hero() {
         </g>
       </svg>
 
-      {/* Layer 3, Grain */}
+      {/* Layer 2, Content. Asymmetric 60/40, left aligned. */}
       <div
-        aria-hidden="true"
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          zIndex: 2,
-          backgroundImage: GRAIN_DATA_URI,
-          backgroundRepeat: "repeat",
-          backgroundSize: "200px 200px",
-          opacity: 0.03,
-          mixBlendMode: "overlay",
-        }}
-      />
-
-      {/* Stat watermarks */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none hidden select-none lg:flex items-end justify-center"
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: "50%",
-          overflow: "hidden",
-          zIndex: 0,
-          pointerEvents: "none",
-        }}
-      >
-        <div
-          style={{
-            color: "rgba(255,255,255,0.08)",
-            fontFamily: "var(--font-clash), 'Clash Display', sans-serif",
-            fontWeight: 700,
-            fontSize: "clamp(32px, 3.5vw, 48px)",
-            letterSpacing: "-0.03em",
-            paddingBottom: "12vh",
-            display: "flex",
-            flexWrap: "wrap",
-            gap: "0 24px",
-            justifyContent: "center",
-          }}
-        >
-          <span>£31.9bn GDP</span>
-          <span>·</span>
-          <span>60,000 businesses</span>
-          <span>·</span>
-          <span>2.6M+ metro population</span>
-          <span>·</span>
-          <span>£2.9bn+ regeneration</span>
-        </div>
-      </div>
-
-      {/* Watermark "BHM", desktop only */}
-      <span
-        aria-hidden="true"
-        className="pointer-events-none absolute hidden select-none lg:block font-clash"
-        style={{
-          right: "-5%",
-          bottom: "10%",
-          fontSize: 280,
-          lineHeight: 0.8,
-          fontWeight: 700,
-          color: "rgba(255,255,255,0.02)",
-          letterSpacing: "-0.04em",
-          zIndex: 3,
-        }}
-      >
-        BHM
-      </span>
-
-      {/* Layer 4, Content */}
-      <div
-        className="relative mx-auto flex w-full max-w-5xl flex-col items-center px-6 pt-[18vh] pb-24 text-center sm:px-8"
+        className="relative mx-auto w-full max-w-[1120px] px-6 pt-14 pb-24 sm:px-8 md:pt-20"
         style={{ zIndex: 10 }}
       >
-        {/* Eyebrow */}
-        <p
-          ref={labelRef}
-          className="relative inline-flex flex-col items-center pb-2"
-          style={{
-            color: "#FF6B35",
-            fontFamily: "var(--font-sans)",
-            fontWeight: 500,
-            fontSize: 13,
-            letterSpacing: "0.15em",
-            textTransform: "uppercase",
-          }}
-        >
-          Birmingham&rsquo;s AI-Native Digital Agency
-          <span
-            ref={labelRuleRef}
-            aria-hidden="true"
-            className="mt-2 block h-px w-24"
-            style={{ backgroundColor: "#FF6B35" }}
-          />
-        </p>
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-[58%_1fr] lg:gap-16">
+          {/* Left, the pitch */}
+          <div>
+            {/* Eyebrow */}
+            <p
+              ref={labelRef}
+              className="relative inline-flex flex-col items-start pb-2 font-fj-mono"
+              style={{
+                color: "#B23E13",
+                fontWeight: 600,
+                fontSize: 12.5,
+                letterSpacing: "0.15em",
+                textTransform: "uppercase",
+              }}
+            >
+              SEO agency, Birmingham and the West Midlands
+              <span
+                ref={labelRuleRef}
+                aria-hidden="true"
+                className="mt-2 block h-px w-24"
+                style={{ backgroundColor: "#B23E13" }}
+              />
+            </p>
 
-        {/* H1 */}
-        <h1
-          ref={headingRef}
-          className="font-clash mt-6 text-white"
-          style={{
-            fontWeight: 700,
-            fontSize: "clamp(28px, 5vw, 56px)",
-            lineHeight: 1.05,
-            letterSpacing: "-0.02em",
-            maxWidth: 1100,
-            textShadow: "0 0 30px rgba(255,107,53,0.08)",
-          }}
-        >
-          Birmingham&rsquo;s AI-Native Web Agency, Built for the Second City&rsquo;s Digital Decade
-        </h1>
+            {/* H1 */}
+            <h1
+              ref={headingRef}
+              className="font-fj-display mt-6"
+              style={{
+                color: "#1A1A1A",
+                fontWeight: 700,
+                fontSize: "clamp(30px, 4.4vw, 54px)",
+                lineHeight: 1.05,
+                letterSpacing: "-0.025em",
+                maxWidth: 800,
+              }}
+            >
+              SEO agency in Birmingham for firms that need enquiries, not ranking screenshots
+            </h1>
 
-        {/* Sub-headline */}
-        <div ref={subheadRef} className="mt-4">
-          <p
-            style={{
-              maxWidth: 760,
-              margin: "0 auto",
-              color: "rgba(255,255,255,0.72)",
-              fontFamily: "var(--font-sans)",
-              fontWeight: 400,
-              fontSize: "clamp(15px, 1.2vw, 17px)",
-              lineHeight: 1.6,
-            }}
-          >
-            Web design, e-commerce, AI agents and AI SEO for Birmingham&rsquo;s
-            60,000 businesses, at a fixed, transparent quote you&rsquo;ve been
-            quoted from Jewellery Quarter and Brindleyplace agencies.
-          </p>
-          <p
-            style={{
-              maxWidth: 700,
-              margin: "8px auto 0",
-              color: "#FFFFFF",
-              fontFamily: "var(--font-sans)",
-              fontWeight: 500,
-              fontSize: "clamp(15px, 1.3vw, 18px)",
-              lineHeight: 1.45,
-            }}
-          >
-            No committee. No bloat. No agency markup.
-          </p>
-        </div>
+            {/* Sub-headline */}
+            <div ref={subheadRef} className="mt-6">
+              <p
+                className="font-fj-body"
+                style={{
+                  maxWidth: 640,
+                  color: "#4A4A45",
+                  fontWeight: 400,
+                  fontSize: "clamp(16px, 1.2vw, 18px)",
+                  lineHeight: 1.65,
+                }}
+              >
+                We fix what stops Google reading your site, get your Google Business Profile
+                right, and build pages that answer what Birmingham buyers actually type. Then
+                we report on the enquiries, not on a rankings graph.
+              </p>
+              <p
+                className="font-fj-body mt-3"
+                style={{
+                  maxWidth: 620,
+                  color: "#1A1A1A",
+                  fontWeight: 600,
+                  fontSize: "clamp(15px, 1.15vw, 17px)",
+                  lineHeight: 1.5,
+                }}
+              >
+                No account handler layer. No lock-in. You own every account from day one.
+              </p>
+            </div>
 
-        {/* CTAs */}
-        <div
-          ref={ctaRef}
-          className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-4"
-        >
-          <button
-            type="button"
-            onClick={() => {
-              trackCTAClick("get_a_free_birmingham_quote", "hero", "primary");
-              trackButtonClick("get_a_free_birmingham_quote", "hero");
-              openModal();
-            }}
-            className="w-full sm:w-auto rounded-lg px-7 py-3.5 text-[15px] font-semibold text-white transition-transform duration-200 will-change-transform hover:-translate-y-0.5"
-            style={{
-              backgroundColor: "#B23E13",
-              fontFamily: "var(--font-sans)",
-              minHeight: 48,
-            }}
-          >
-            Get Your Free Birmingham Quote
-          </button>
-          <a
-            href="#services"
-            onClick={(e) => {
-              e.preventDefault();
-              document
-                .getElementById("services")
-                ?.scrollIntoView({ behavior: "smooth" });
-            }}
-            className="w-full sm:w-auto text-center rounded-lg border border-white/25 px-7 py-3.5 text-[15px] font-semibold text-white transition-colors duration-200 hover:bg-white hover:text-[#0A0F1C]"
-            style={{ fontFamily: "var(--font-sans)" }}
-          >
-            View Our Work
-          </a>
-          <a
-            href="https://wa.me/919699977699"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[14px] font-medium text-white/70 underline-offset-4 transition-colors duration-200 hover:text-white hover:underline"
-            style={{ fontFamily: "var(--font-sans)" }}
-          >
-            WhatsApp Us ↓
-          </a>
-        </div>
+            {/* CTAs */}
+            <div
+              ref={ctaRef}
+              className="mt-8 flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4"
+            >
+              <button
+                type="button"
+                onClick={() => {
+                  trackCTAClick("free_birmingham_site_review", "hero", "primary");
+                  trackButtonClick("free_birmingham_site_review", "hero");
+                  openModal();
+                }}
+                className="font-fj-body w-full sm:w-auto rounded-lg px-7 py-3.5 text-[16px] font-semibold text-white transition-transform duration-200 will-change-transform hover:-translate-y-0.5"
+                style={{ backgroundColor: "#B23E13", minHeight: 48 }}
+              >
+                Get a free Birmingham site review
+              </button>
+              <a
+                href="#engagement"
+                className="font-fj-body w-full sm:w-auto rounded-lg border px-7 py-3.5 text-center text-[16px] font-semibold transition-colors duration-200 hover:bg-white"
+                style={{
+                  borderColor: "#D9D9D2",
+                  color: "#1A1A1A",
+                  minHeight: 48,
+                  lineHeight: "1.35",
+                }}
+              >
+                See what the work covers
+              </a>
+            </div>
 
-        {/* Trust bar */}
-        <div
-          ref={trustRef}
-          className="mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[clamp(11px,1.2vw,13px)]"
-          style={{
-            color: "rgba(255,255,255,0.55)",
-            fontFamily: "var(--font-sans)",
-            fontWeight: 500,
-          }}
-        >
-          {[
-            "HSBC UK HQ",
-            "Paradise Quarter",
-            "Brindleyplace",
-            "Jewellery Quarter",
-            "Digbeth",
-            "HS2 Curzon Street",
-          ].map((item, i, arr) => (
-            <span key={item} className="flex items-center gap-x-6">
-              <span>{item}</span>
-              {i < arr.length - 1 && (
-                <span
-                  aria-hidden="true"
-                  className="hidden h-3 w-px md:inline-block"
-                  style={{ backgroundColor: "#333" }}
-                />
-              )}
-            </span>
-          ))}
+            {/* Trust bar */}
+            <div
+              ref={trustRef}
+              className="font-fj-body mt-8 flex flex-wrap items-center gap-x-4 gap-y-2 text-[clamp(11.5px,1.2vw,13px)]"
+              style={{ color: "#4A4A45", fontWeight: 500 }}
+            >
+              {LANDMARKS.map((item, i, arr) => (
+                <span key={item} className="flex items-center gap-x-4">
+                  <span>{item}</span>
+                  {i < arr.length - 1 && (
+                    <span
+                      aria-hidden="true"
+                      className="hidden h-3 w-px md:inline-block"
+                      style={{ backgroundColor: "#D9D9D2" }}
+                    />
+                  )}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Right, what the free review contains */}
+          <aside className="lg:pt-2">
+            <div
+              className="rounded-2xl border bg-white p-6 md:p-7"
+              style={{ borderColor: "#D9D9D2" }}
+            >
+              <p className="font-fj-mono text-[11px] font-semibold uppercase tracking-[0.14em] text-[#B23E13]">
+                The free review
+              </p>
+              <p className="font-fj-display mt-3 text-[19px] font-bold leading-snug text-fj-ink">
+                What you get before you pay anything
+              </p>
+              <ul className="mt-5 space-y-3">
+                {[
+                  "The three faults costing you the most search traffic, named and ranked.",
+                  "What your Google Business Profile is missing, and whether you can legally list your address.",
+                  "The Birmingham search terms you already rank for, pulled from your own Search Console.",
+                  "An honest read on which terms are winnable this year and which are not.",
+                  "A written scope with fixed-price milestones, or a clear no if we are the wrong fit.",
+                ].map((item) => (
+                  <li
+                    key={item}
+                    className="font-fj-body flex gap-3 text-[14.5px] leading-[1.6]"
+                    style={{ color: "#4A4A45" }}
+                  >
+                    <span
+                      aria-hidden="true"
+                      className="mt-[8px] h-[5px] w-[5px] flex-shrink-0 rounded-full"
+                      style={{ backgroundColor: "#B23E13" }}
+                    />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <p
+                className="font-fj-body mt-5 text-[13px] leading-[1.55]"
+                style={{ color: "#4A4A45" }}
+              >
+                Sent as a short written summary, whether or not you go ahead.
+              </p>
+            </div>
+          </aside>
         </div>
       </div>
 
@@ -493,7 +428,9 @@ export default function Hero() {
           bottom: 16,
           zIndex: 4,
           animation: "bham-scroll-bounce 2s ease-in-out infinite",
-          color: "#FF6B35",
+          // #FF6B35 measured about 2.6:1 against the cream hero. Fine on the old dark
+          // background, not on this one.
+          color: "#B23E13",
         }}
       >
         <svg

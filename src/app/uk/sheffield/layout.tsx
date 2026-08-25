@@ -1,60 +1,54 @@
 import type { Metadata } from "next";
 import { FAQ_ITEMS } from "./faqData";
+import { CANONICAL, CRUMBS } from "./seoData";
 
 export const metadata: Metadata = {
-  title: "Web Design Sheffield | AI Websites in 7 Days | FactoryJet",
+  title: "SEO Agency Sheffield | Local SEO and Web Design | FactoryJet",
   description:
-    "Professional web design Sheffield. Custom AI-powered websites for Sheffield SMBs built in 7 days. Fixed pricing, quoted up front. No lock-ins. Serving Kelham Island to the city centre.",
+    "Sheffield SEO agency for local search, technical SEO and fast websites. Map pack work, Sheffield area pages, monthly reporting and no lock-in contracts.",
   keywords: [
+    "seo agency sheffield",
+    "seo sheffield",
+    "local seo sheffield",
+    "seo company sheffield",
     "web design sheffield",
     "website design sheffield",
-    "web designer sheffield",
-    "ai website sheffield",
-    "web design company sheffield",
   ],
-  alternates: { canonical: "https://factoryjet.com/uk/sheffield" },
+  alternates: {
+    canonical: CANONICAL,
+    languages: { "en-GB": CANONICAL, "x-default": CANONICAL },
+  },
   openGraph: {
-    title: "Web Design Sheffield | AI Websites in 7 Days | FactoryJet",
+    title: "SEO Agency Sheffield | Local SEO and Web Design | FactoryJet",
     description:
-      "Professional web design Sheffield. Custom AI-powered websites for Sheffield SMBs built in 7 days. Fixed pricing, quoted up front. No lock-ins.",
-    url: "https://factoryjet.com/uk/sheffield",
+      "Sheffield SEO agency for local search, technical SEO and fast websites. Map pack work, Sheffield area pages and monthly reporting.",
+    url: CANONICAL,
     siteName: "FactoryJet",
     locale: "en_GB",
     type: "website",
-    images: [{ url: '/images/uk/city-sheffield.jpg', width: 1200, height: 630, alt: 'Web Design Sheffield: FactoryJet' }],
+    images: [{ url: '/images/uk/city-sheffield.jpg', width: 1200, height: 630, alt: 'SEO agency Sheffield: FactoryJet' }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Web Design Sheffield | AI Websites in 7 Days | FactoryJet",
+    title: "SEO Agency Sheffield | Local SEO and Web Design | FactoryJet",
     description:
-      "Professional web design Sheffield. Custom AI-powered websites for Sheffield SMBs built in 7 days. Fixed pricing, quoted up front. No lock-ins.",
+      "Sheffield SEO agency for local search, technical SEO and fast websites. Map pack work, Sheffield area pages and monthly reporting.",
   },
   robots: { index: true, follow: true },
 };
 
+// Derived from the SAME CRUMBS array that page.tsx renders as a visible trail.
+// Do not hand-write a second list here: the visible trail and the markup have to
+// describe the same navigation or it becomes a soft cloaking problem.
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
-  itemListElement: [
-    {
-      "@type": "ListItem",
-      position: 1,
-      name: "Home",
-      item: "https://factoryjet.com",
-    },
-    {
-      "@type": "ListItem",
-      position: 2,
-      name: "UK",
-      item: "https://factoryjet.com/uk",
-    },
-    {
-      "@type": "ListItem",
-      position: 3,
-      name: "Web Design Sheffield",
-      item: "https://factoryjet.com/uk/sheffield",
-    },
-  ],
+  itemListElement: CRUMBS.map((c, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    name: c.name,
+    item: c.url,
+  })),
 };
 
 const howToSchema = {
@@ -73,19 +67,19 @@ const howToSchema = {
     {
       "@type": "HowToStep",
       position: 2,
-      name: "Day 2 | Strategy & Structure",
+      name: "Day 2 | Strategy and Structure",
       text: "We map your site architecture, research your Sheffield competitors, identify your top keywords, and write the first draft of your page copy.",
     },
     {
       "@type": "HowToStep",
       position: 3,
-      name: "Days 3–4 | Design",
+      name: "Days 3 to 4 | Design",
       text: "Your bespoke design is created, homepage and inner pages. You get a design preview link. Feedback incorporated within 24 hours.",
     },
     {
       "@type": "HowToStep",
       position: 4,
-      name: "Days 5–6 | Development & SEO",
+      name: "Days 5 to 6 | Development and SEO",
       text: "Your approved design is built in code, fast, mobile-first, and SEO-optimised. Sheffield local schema markup added. Google Analytics and Search Console connected.",
     },
     {
@@ -100,11 +94,14 @@ const howToSchema = {
 const speakableSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": "https://factoryjet.com/uk/sheffield#webpage",
+  "@id": `${CANONICAL}#webpage`,
   "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["h1", "h2:first-of-type"] },
-  "url": "https://factoryjet.com/uk/sheffield"
+  "url": CANONICAL,
 };
 
+// Generated from the same FAQ_ITEMS array the accordion renders. If you find
+// yourself typing a second question list next to this block, stop: that is the
+// drift bug this file exists to prevent.
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",

@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
 
 export const manchesterMetadata: Metadata = {
-  title: "Web Design Manchester | AI-Native Agency | FactoryJet",
+  title: "SEO Agency Manchester | Web Design, AI SEO | FactoryJet",
   description:
-    "Award-winning web design agency in Manchester. Custom websites built with Next.js, GSAP & AI. Pricing is fixed and published upfront. Free quote. SEO 100 guaranteed.",
+    "Manchester SEO and web design agency. Technical fixes, local map pack work, fast Next.js builds, and full code ownership for Greater Manchester businesses.",
   keywords: [
+    "seo agency manchester",
+    "seo manchester",
+    "seo company manchester",
+    "local seo manchester",
     "web design manchester",
     "website design manchester",
     "web design agency manchester",
@@ -20,11 +24,18 @@ export const manchesterMetadata: Metadata = {
     "web design northern quarter manchester",
     "web design mediacityuk",
   ],
-  alternates: { canonical: "https://factoryjet.com/uk/manchester" },
+  alternates: {
+    canonical: "https://factoryjet.com/uk/manchester",
+    // UK-only page, no international twin, so both entries are self-referential.
+    languages: {
+      "en-GB": "https://factoryjet.com/uk/manchester",
+      "x-default": "https://factoryjet.com/uk/manchester",
+    },
+  },
   openGraph: {
-    title: "Web Design Manchester | AI-Native Agency | FactoryJet",
+    title: "SEO Agency Manchester | Web Design, AI SEO | FactoryJet",
     description:
-      "Award-winning web design agency in Manchester. Custom websites built with Next.js, GSAP & AI. Pricing is fixed and published upfront. Free quote.",
+      "SEO, local search and fast Next.js web design for Manchester businesses. Fixed-price milestones and 100% code ownership.",
     url: "https://factoryjet.com/uk/manchester",
     siteName: "FactoryJet",
     locale: "en_GB",
@@ -33,9 +44,9 @@ export const manchesterMetadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Web Design Manchester | AI-Native Agency | FactoryJet",
+    title: "SEO Agency Manchester | Web Design, AI SEO | FactoryJet",
     description:
-      "Award-winning web design agency in Manchester. Custom websites built with Next.js, GSAP & AI. Pricing is fixed and published upfront.",
+      "SEO, local search and fast Next.js web design for Manchester businesses. Fixed-price milestones and 100% code ownership.",
   },
   robots: { index: true, follow: true },
 };

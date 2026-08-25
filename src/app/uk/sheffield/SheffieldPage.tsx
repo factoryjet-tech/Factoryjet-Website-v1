@@ -20,17 +20,17 @@ gsap.registerPlugin(ScrollTrigger);
 // ─── Static data ──────────────────────────────────────────────────────────────
 
 const TRUST_CHIPS = [
-  "7-day delivery guarantee",
+  "Free written site review",
   "No lock-in contracts",
-  "AI-powered & SEO-ready",
-  "Free 30-min consultation",
-  "Sheffield businesses served",
+  "Monthly reporting you can check",
+  "Sheffield and South Yorkshire",
+  "You own every account",
 ];
 
 const MARQUEE_ITEMS = [
-  "WEB DESIGN SHEFFIELD",
-  "BUILT IN 7 DAYS",
-  "AI-POWERED WEBSITES",
+  "SEO AGENCY SHEFFIELD",
+  "LOCAL SEO AND MAP PACK",
+  "TECHNICAL SEO AND SITE SPEED",
   "FIXED-PRICE, QUOTED UP FRONT",
   "NO LOCK-IN CONTRACTS",
 ];
@@ -40,18 +40,23 @@ const MARQUEE_ITEMS = [
 const WHY_BENEFITS = [
   {
     num: "01",
-    title: "Speed That Competes",
-    desc: "AI-assisted build process cuts time by 80%, enterprise quality, 7-day delivery. Most Sheffield agencies take 6–12 weeks.",
+    title: "Built for Sheffield search, not a national average",
+    desc: "Rankings are tracked from Sheffield postcodes, not a national figure that hides what your customers actually see. Google Business Profile, area pages and local citations are set up per area rather than copied.",
   },
   {
     num: "02",
-    title: "Built for Sheffield Search",
-    desc: "Sheffield-specific SEO from day one, local schema, Google Business Profile integration, and keyword-optimised content.",
+    title: "The technical work comes first",
+    desc: "Crawl errors, duplicate pages and slow loading get fixed before anyone writes new content. It is the least exciting part of SEO and reliably the fastest win.",
   },
   {
     num: "03",
-    title: "Truly Affordable",
-    desc: "Fixed-price, quoted up front for your professional 5-page website. Everything included. No surprises, no add-ons, no lock-in contracts.",
+    title: "Reported in enquiries, not impressions",
+    desc: "Calls and form fills are traced back to the searches that produced them. Impressions can rise while enquiries fall, so we never report that number on its own.",
+  },
+  {
+    num: "04",
+    title: "Fixed-price, and you own everything",
+    desc: "Quoted up front after a free discovery call. Every account, the site code and the written handover stay yours, so leaving us costs you nothing but notice.",
   },
 ];
 
@@ -71,14 +76,14 @@ const PROCESS_STEPS = [
     desc: "Site architecture, competitor research, keyword strategy, and first-draft copy.",
   },
   {
-    day: "Days 3–4",
-    label: "3–4",
+    day: "Days 3 to 4",
+    label: "3 to 4",
     title: "Design",
     desc: "Bespoke homepage and inner pages. Design preview link. Feedback in 24 hours.",
   },
   {
-    day: "Days 5–6",
-    label: "5–6",
+    day: "Days 5 to 6",
+    label: "5 to 6",
     title: "Development & SEO",
     desc: "Built mobile-first with Sheffield local schema, Analytics, and Search Console.",
   },
@@ -100,7 +105,7 @@ const TESTIMONIALS = [
     company: "Whitfield Professional Services, Sheffield",
   },
   {
-    quote: "I was sceptical about the 7-day promise but they delivered on day 5. Our Ecclesall Road shop now ranks on page one for \u201csheffield independent gifts\u201d and footfall has genuinely increased. Worth every penny of the \u00a31,499.",
+    quote: "I was sceptical about the 7-day promise but they delivered on day 5. Our Ecclesall Road shop now ranks on page one for \u201csheffield independent gifts\u201d and footfall has genuinely increased. Worth every penny.",
     name: "Sarah Holbrook",
     title: "Founder",
     company: "Holbrook Gifts, Ecclesall Road",
@@ -119,31 +124,34 @@ const TESTIMONIALS = [
 
 // ─── Section 12 data (Local Credibility) ─────────────────────────────────────
 
+// Sourced, not invented. ONS UK Business Counts (local units by industry and
+// employment size band), Sheffield local authority E08000019, 2025 reference
+// year, queried from Nomis on 2026-08-25 and cited in full further down the page.
 const CRED_STATS = [
-  { id: "smbs",   target: 15000, display: "15,000+", label: "Sheffield SMBs" },
-  { id: "online", target: 73,    display: "73%",      label: "Research online first" },
-  { id: "mobile", target: 34,    display: "34%",      label: "Not mobile-optimised" },
-  { id: "leads",  target: 3,     display: "3\u00d7",  label: "More leads with AI chatbot" },
+  { id: "units",   display: "20,205", label: "business sites registered in Sheffield" },
+  { id: "micro",   display: "13,490", label: "of them employ four people or fewer" },
+  { id: "under10", display: "4 in 5", label: "employ fewer than ten people in total" },
+  { id: "large",   display: "110",    label: "employ 250 people or more" },
 ];
 
 // ─── Section 8 data ───────────────────────────────────────────────────────────
 
 const AI_FEATURES = [
   {
-    title: "AI Chatbot Integration",
-    desc: "Your website qualifies leads and books appointments automatically, 24/7. Sheffield businesses report 3× more after-hours enquiries.",
+    title: "Research at a scale a person cannot match",
+    desc: "Our tooling checks every candidate search term against live demand and against who already ranks in Sheffield, so the keyword list is evidence rather than opinion. A human decides what makes the final cut.",
   },
   {
-    title: "AI-Powered SEO",
-    desc: "We research the exact search terms Sheffield customers use and build them naturally into every page, heading, and meta description.",
+    title: "First drafts, never final copy",
+    desc: "AI writes the first pass of a page so the blank screen stops being the bottleneck. Every line is then rewritten by the person who spoke to you, because a draft that has never met your business reads exactly like one.",
   },
   {
-    title: "AI Content Generation",
-    desc: "Professional, Sheffield-specific copy reviewed and refined by our team before a single word goes live.",
+    title: "Monitoring that notices before you do",
+    desc: "Crawl errors, dropped pages, broken structured data and slipping Core Web Vitals get flagged automatically and land in the monthly report, rather than being discovered when the enquiries stop.",
   },
   {
-    title: "AI Performance Monitoring",
-    desc: "Post-launch AI monitors your site, flags issues before they affect rankings, and surfaces Sheffield search opportunities.",
+    title: "An assistant on your own site",
+    desc: "An optional chatbot trained on your pages answers common questions and captures details outside office hours. It is told to say it does not know rather than invent an answer, and it hands the conversation to you by email.",
   },
 ];
 
@@ -152,11 +160,11 @@ const AI_FEATURES = [
 const STATS = [
   {
     id: "smbs",
-    target: 15000,
+    target: 20205,
     prefix: "",
-    suffix: "+",
-    display: "15,000",
-    label: "Sheffield SMBs that could benefit from a better website",
+    suffix: "",
+    display: "20,205",
+    label: "Sheffield business sites on the ONS register, and most of them compete on the same local searches",
   },
   {
     id: "days",
@@ -167,12 +175,12 @@ const STATS = [
     label: "Days to go from brief to live website, guaranteed",
   },
   {
-    id: "lighthouse",
-    target: 90,
+    id: "lcp",
+    target: 25,
     prefix: "",
-    suffix: "+",
-    display: "90",
-    label: "Google Lighthouse performance score on every Sheffield build",
+    suffix: "s",
+    display: "2.5",
+    label: "The Largest Contentful Paint target Google publishes, and the bar every page we ship has to clear",
   },
 ];
 
@@ -183,7 +191,7 @@ export default function SheffieldPage() {
   const [statsVisible,  setStatsVisible]  = useState(false);
   const { openModal } = useContactModal();
 
-  // ── Inline lead form (Sheffield) — captures the fields the visitor actually
+  // ── Inline lead form (Sheffield), captures the fields the visitor actually
   //    typed and routes them through the durable submitLead path. Previously the
   //    button just opened a blank modal and DISCARDED everything typed here.
   const [lead, setLead] = useState({ name: "", business: "", email: "", pkg: "", message: "" });
@@ -239,7 +247,7 @@ export default function SheffieldPage() {
   const credRef          = useRef<HTMLElement>(null);
   const credStatRefs     = useRef<(HTMLSpanElement | null)[]>([]);
 
-  // GSAP: Hero H1 word reveal animation (load animation — no ScrollTrigger)
+  // GSAP: Hero H1 word reveal animation (load animation, no ScrollTrigger)
   useGSAP(() => {
     if (typeof window === "undefined") return;
     if (!headingRef.current) return;
@@ -262,10 +270,10 @@ export default function SheffieldPage() {
     );
   }, []);
 
-  // Section 4 Why FactoryJet: STATIC — no GSAP, always fully visible
-  // Section 5 Services Bento: STATIC — no GSAP, always fully visible
+  // Section 4 Why FactoryJet: STATIC, no GSAP, always fully visible
+  // Section 5 Services Bento: STATIC, no GSAP, always fully visible
 
-  // Section 6 — stats revealed via IntersectionObserver (no GSAP, no count-up)
+  // Section 6, stats revealed via IntersectionObserver (no GSAP, no count-up)
   useEffect(() => {
     if (!statsRef.current) return;
     const observer = new IntersectionObserver(
@@ -276,7 +284,7 @@ export default function SheffieldPage() {
     return () => observer.disconnect();
   }, []);
 
-  // GSAP: Section 7 — process steps stagger (y-only, no opacity)
+  // GSAP: Section 7, process steps stagger (y-only, no opacity)
   useGSAP(() => {
     if (typeof window === "undefined") return;
     const steps = processSteps.current.filter(Boolean);
@@ -294,7 +302,7 @@ export default function SheffieldPage() {
     return () => { ScrollTrigger.getAll().forEach((t) => t.kill()); };
   }, []);
 
-  // GSAP: Section 8 — AI columns slide (x-only, no opacity)
+  // GSAP: Section 8, AI columns slide (x-only, no opacity)
   useGSAP(() => {
     if (typeof window === "undefined") return;
     if (!aiLeftRef.current || !aiRightRef.current) return;
@@ -311,7 +319,7 @@ export default function SheffieldPage() {
 
   // Section 9 pricing: handled in PricingSection dynamic component
 
-  // GSAP: Section 10 — testimonial cards stagger (y-only, no opacity)
+  // GSAP: Section 10, testimonial cards stagger (y-only, no opacity)
   useGSAP(() => {
     if (typeof window === "undefined") return;
     const cards = testimonialCards.current.filter(Boolean);
@@ -342,7 +350,7 @@ export default function SheffieldPage() {
             Exactly 100vh. Pollinations.ai bg. SplitText H1.
             Design Signature Moment #1.
         ════════════════════════════════════════════════════════════════ */}
-        <section className="relative h-screen flex items-center bg-white overflow-hidden">
+        <section className="relative min-h-[calc(100vh-56px)] flex items-center bg-white overflow-hidden">
 
           {/* Jet Blue 3px rule, pinned to top of page */}
           <div className="fixed top-0 left-0 right-0 h-[3px] bg-[#F05A28] z-[60]" />
@@ -388,7 +396,7 @@ export default function SheffieldPage() {
 
                 {/* Label */}
                 <p className="relative z-10 text-[12px] font-semibold uppercase tracking-[0.1em] text-[#B23E13] mb-3">
-                  WEB DESIGN SHEFFIELD · SOUTH YORKSHIRE
+                  SEO AGENCY SHEFFIELD · SOUTH YORKSHIRE
                 </p>
 
                 {/* H1, 3 explicit lines */}
@@ -397,22 +405,25 @@ export default function SheffieldPage() {
                   className="relative z-10 font-clash text-[#0a0a0a] font-bold leading-[1.05] tracking-[-0.04em] mb-4"
                   style={{ fontSize: "clamp(40px, 4.8vw, 68px)", opacity: 1 }}
                 >
-                  Web Design Sheffield, <br />
-                  Built &amp; Live in<br />
-                  <span className="text-[#F05A28]">7 Days</span>
+                  SEO Agency Sheffield,{" "}
+                  <br />
+                  Backed by Websites{" "}
+                  <br />
+                  <span className="text-[#F05A28]">Built to Rank</span>
                 </h1>
 
                 {/* Subheading */}
                 <p className="relative z-10 text-[18px] text-[#343A40] leading-[1.6] mb-4 max-w-[520px]">
-                  AI-powered websites for Sheffield businesses. Enterprise quality,
-                  agency speed. We build, you grow.
+                  Local SEO, technical SEO and fast websites for Sheffield and South
+                  Yorkshire businesses. We do the search work, and we build the pages
+                  it runs on.
                 </p>
 
                 {/* Stat chips */}
                 <div className="relative z-10 flex flex-wrap gap-x-6 gap-y-2 mb-6">
                   {[
-                    { icon: "⚡", text: "7-day delivery" },
-                    { icon: "🔒", text: "No lock-in contracts" },
+                    { icon: "📍", text: "Sheffield map pack work" },
+                    { icon: "📈", text: "Reported in enquiries, not impressions" },
                     { icon: "💷", text: "Fixed-price, quoted up front" },
                   ].map((s) => (
                     <span key={s.text} className="flex items-center gap-2 text-[14px] font-medium text-[#64748B]">
@@ -473,13 +484,74 @@ export default function SheffieldPage() {
           aria-hidden="true"
         >
           <div className="flex h-full items-center">
-            {/* Two identical copies side-by-side so the loop is seamless */}
+            {/* Two identical copies side-by-side so the loop never shows a gap */}
             <div className="flex animate-marquee whitespace-nowrap will-change-transform">
               <MarqueeItems />
               <MarqueeItems />
             </div>
           </div>
         </div>
+
+        {/* ════════════════════════════════════════════════════════════════
+            SECTION 3b, ANSWER-FIRST BLOCK
+            Sits directly under the hero on purpose. This is the block a search
+            snippet or an AI answer engine lifts, so it states the answer before
+            any selling and keeps every claim checkable.
+        ════════════════════════════════════════════════════════════════ */}
+        <section id="what-we-do" className="bg-white border-b border-[#E9ECEF]">
+          <div className="w-full max-w-[1400px] mx-auto px-6 md:px-10 lg:px-20 py-14 md:py-16">
+            <div className="grid grid-cols-1 lg:grid-cols-[7fr_5fr] gap-10 xl:gap-16">
+              <div>
+                <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#B23E13] mb-4">
+                  The short answer
+                </p>
+                <h2
+                  className="font-clash font-bold leading-[1.08] tracking-[-0.03em] text-[#0a0a0a] mb-5"
+                  style={{ fontSize: "clamp(26px, 3.2vw, 40px)" }}
+                >
+                  What an SEO agency in Sheffield actually does for you
+                </h2>
+                <p className="text-[17px] text-[#343A40] leading-[1.7] max-w-[640px] mb-4">
+                  An SEO agency gets your business found in Google without paying for
+                  ads. For a Sheffield business that means four bodies of work: fixing
+                  the technical faults that stop search engines reading your site,
+                  choosing the search terms your customers really type, building pages
+                  and a Google Business Profile that answer those searches, and earning
+                  mentions from other websites so Google treats you as a known name.
+                </p>
+                <p className="text-[17px] text-[#343A40] leading-[1.7] max-w-[640px]">
+                  We run all four, and we build the website underneath them, so there is
+                  nobody to blame in the middle when a fix does not get made. Work is
+                  quoted fixed-price up front, reported monthly in enquiries rather than
+                  impressions, and every account stays in your name.
+                </p>
+              </div>
+
+              <div className="bg-[#F8F9FA] border border-[#E9ECEF] rounded-2xl p-6 md:p-7">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-[#4A4A45] mb-4">
+                  At a glance
+                </p>
+                <ul className="flex flex-col gap-3">
+                  {[
+                    "Service area: Sheffield and South Yorkshire, including Rotherham, Barnsley and Doncaster",
+                    "Best suited to: small firms selling to people who search before they buy",
+                    "First movement: usually around three months, meaningful change at six to nine",
+                    "Your time cost: one 90 minute kick-off, then roughly an hour a month",
+                    "Engagement shape: one-off audit, fixed-price milestones, or a rolling monthly retainer",
+                    "Reporting: monthly, covering rankings, clicks, enquiries and the work completed",
+                    "Ownership: the site code, the analytics and the Business Profile stay yours",
+                    "Never done here: bought links, private blog networks, or guaranteed rankings",
+                  ].map((line) => (
+                    <li key={line} className="flex gap-3 text-[14px] leading-[1.6] text-[#343A40]">
+                      <span aria-hidden="true" className="mt-[8px] h-[6px] w-[6px] flex-shrink-0 rounded-full bg-[#F05A28]" />
+                      <span>{line}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* ════════════════════════════════════════════════════════════════
             SECTION 4, WHY SHEFFIELD SMBs CHOOSE FACTORYJET
@@ -503,12 +575,12 @@ export default function SheffieldPage() {
                   className="font-clash font-bold leading-[1.05] tracking-[-0.03em] text-[#0a0a0a] mb-4"
                   style={{ fontSize: "clamp(28px, 3.6vw, 44px)" }}
                 >
-                  Why Sheffield SMBs are switching to FactoryJet
+                  Why Sheffield businesses move their search work to us
                 </h2>
                 <p className="text-[16px] text-[#343A40] leading-[1.7] mb-8 max-w-[520px]">
-                  Sheffield has always been a city that builds things that last. Every
-                  site we build is engineered for speed, search visibility, and lead
-                  generation, not just appearances.
+                  Sheffield has always been a city that builds things that last. The same
+                  applies here: we fix the foundations before we chase rankings, and we
+                  report in enquiries rather than in charts that only ever go up.
                 </p>
 
                 {/* Benefit rows, tighter gap */}
@@ -531,7 +603,7 @@ export default function SheffieldPage() {
                         <h3 className="text-[17px] font-semibold text-[#0a0a0a] mb-1">
                           {b.title}
                         </h3>
-                        <p className="text-[14px] text-[#6B7280] leading-[1.6]">
+                        <p className="text-[14px] text-[#5C6270] leading-[1.6]">
                           {b.desc}
                         </p>
                       </div>
@@ -545,15 +617,15 @@ export default function SheffieldPage() {
 
                 {/* Speed comparison bars */}
                 <div className="bg-white rounded-2xl border border-[#E9ECEF] p-6 flex flex-col gap-5">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-[#6B7280]">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-[#5C6270]">
                     Delivery time comparison
                   </p>
 
                   {/* Traditional agencies bar */}
                   <div className="flex flex-col gap-[6px]">
                     <div className="flex items-center justify-between">
-                      <span className="text-[13px] font-medium text-[#6B7280]">Traditional agencies</span>
-                      <span className="text-[12px] font-semibold text-[#6B7280]">6–12 weeks</span>
+                      <span className="text-[13px] font-medium text-[#5C6270]">Traditional agencies</span>
+                      <span className="text-[12px] font-semibold text-[#5C6270]">6 to 12 weeks</span>
                     </div>
                     <div className="h-[8px] w-full rounded-full bg-[#F1F3F5]">
                       <div className="h-full w-full rounded-full bg-[#D1D5DB]" />
@@ -571,7 +643,7 @@ export default function SheffieldPage() {
                     </div>
                   </div>
 
-                  <p className="text-[12px] text-[#6B7280] pt-2 border-t border-[#E9ECEF]">
+                  <p className="text-[12px] text-[#5C6270] pt-2 border-t border-[#E9ECEF]">
                     Our AI-assisted process is{" "}
                     <span className="font-bold text-[#B23E13]">up to 8× faster</span>{" "}
                     than traditional Sheffield agencies, zero compromise on quality.
@@ -580,7 +652,7 @@ export default function SheffieldPage() {
 
                 {/* How we price */}
                 <div className="bg-white rounded-2xl border border-[#E9ECEF] p-6 flex flex-col gap-3">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-[#6B7280]">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-[#5C6270]">
                     How we price
                   </p>
                   <p
@@ -592,7 +664,7 @@ export default function SheffieldPage() {
                   <p className="text-[13px] text-[#343A40] leading-[1.6]">
                     Every Sheffield project is fixed-price and scoped to your build. The main drivers are page count, design depth, and any integrations you need. You get one quote up front after a free discovery call, so you know the full cost before work starts, and it typically lands well below what a traditional Sheffield agency charges.
                   </p>
-                  <p className="text-[12px] text-[#6B7280] pt-3 border-t border-[#E9ECEF]">
+                  <p className="text-[12px] text-[#5C6270] pt-3 border-t border-[#E9ECEF]">
                     No hidden extras. No lock-in contracts. Everything included.
                   </p>
                 </div>
@@ -622,12 +694,12 @@ export default function SheffieldPage() {
                 className="font-clash font-bold leading-[1.05] tracking-[-0.03em] text-[#0a0a0a] mb-5"
                 style={{ fontSize: "clamp(28px, 3.2vw, 46px)" }}
               >
-                Web design &amp; digital services for every Sheffield business
+                Search and web services for every Sheffield business
               </h2>
-              <p className="text-[16px] text-[#6B7280] leading-[1.75]">
+              <p className="text-[16px] text-[#5C6270] leading-[1.75]">
                 Whether you&rsquo;re a sole trader in Broomhill, a retail shop on Ecclesall
-                Road, or a manufacturer in Attercliffe, we build the digital presence your
-                Sheffield business needs to compete.
+                Road, or a manufacturer in Attercliffe, we cover the same ground: getting
+                found in Sheffield search, and having a site worth landing on when you are.
               </p>
             </div>
 
@@ -641,7 +713,7 @@ export default function SheffieldPage() {
                 <h3 className="font-clash font-semibold text-[18px] leading-snug text-[#0a0a0a]">
                   Web Design &amp; Development
                 </h3>
-                <p className="text-[14px] text-[#6B7280] leading-[1.7] flex-1">
+                <p className="text-[14px] text-[#5C6270] leading-[1.7] flex-1">
                   Custom-designed websites built from scratch. Mobile-first, blazing fast,
                   and SEO-optimised. Every site includes SSL, analytics, and Search Console setup.
                 </p>
@@ -653,10 +725,10 @@ export default function SheffieldPage() {
               </div>
 
               {/* AI, featured, spans 2 rows */}
-              <div className="bento-ai group rounded-2xl border-2 border-[#F05A28] bg-[#F05A28] p-5 md:p-7 flex flex-col gap-4 hover:shadow-[0_0_40px_rgba(0,82,204,0.35)] transition-all duration-300">
+              <div className="bento-ai group rounded-2xl border-2 border-[#F05A28] bg-[#0a0a0a] p-5 md:p-7 flex flex-col gap-4 hover:-translate-y-1 transition-all duration-300">
                 {/* Blinking cursor element */}
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-white/15 flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-xl bg-[#F05A28] flex items-center justify-center flex-shrink-0">
                     <BotIcon />
                   </div>
                   <span className="inline-block w-[2px] h-5 bg-white animate-blink" />
@@ -664,18 +736,18 @@ export default function SheffieldPage() {
                 <h3 className="font-clash font-semibold text-[22px] leading-snug text-white">
                   AI-Powered Websites
                 </h3>
-                <p className="text-[14px] text-white/80 leading-[1.7] flex-1">
-                  The next generation of Sheffield web design. Integrated AI chatbots that
-                  qualify leads, answer questions, and book appointments, 24 hours a day,
-                  7 days a week. No extra staff required.
+                <p className="text-[14px] text-white/90 leading-[1.7] flex-1">
+                  An assistant on your own site, trained on your pages. It answers the
+                  questions people ask at nine in the evening, captures the details, and
+                  emails the conversation to you. No extra staff required.
                 </p>
                 <div className="mt-2 p-4 rounded-xl bg-white/10 border border-white/15 flex flex-col gap-2">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-white/60">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.08em] text-white/85">
                     AI chatbot live preview
                   </p>
-                  <p className="text-[13px] text-white/90">
-                    &ldquo;Hi! I can help you book a consultation or answer questions about our
-                    Sheffield web design packages.&rdquo;
+                  <p className="text-[13px] text-white">
+                    &ldquo;Hi. I can book you a consultation, or answer questions about how
+                    we run SEO for Sheffield businesses.&rdquo;
                   </p>
                   <div className="flex items-center gap-[3px] mt-1">
                     <span className="w-[5px] h-[5px] rounded-full bg-white/70 animate-bounce-dot" style={{ animationDelay: "0ms" }} />
@@ -698,7 +770,7 @@ export default function SheffieldPage() {
                 <h3 className="font-clash font-semibold text-[18px] leading-snug text-[#0a0a0a]">
                   E-Commerce Websites
                 </h3>
-                <p className="text-[14px] text-[#6B7280] leading-[1.7] flex-1">
+                <p className="text-[14px] text-[#5C6270] leading-[1.7] flex-1">
                   Full Shopify and WooCommerce builds for Sheffield retailers. Payment
                   integration, delivery options, and SEO-optimised product pages.
                 </p>
@@ -717,7 +789,7 @@ export default function SheffieldPage() {
                 <h3 className="font-clash font-semibold text-[18px] leading-snug text-[#0a0a0a]">
                   Website Redesign
                 </h3>
-                <p className="text-[14px] text-[#6B7280] leading-[1.7] flex-1">
+                <p className="text-[14px] text-[#5C6270] leading-[1.7] flex-1">
                   Stuck with an outdated site costing you leads? We redesign with
                   conversion in mind. Your content, dramatically improved results.
                 </p>
@@ -736,7 +808,7 @@ export default function SheffieldPage() {
                 <h3 className="font-clash font-semibold text-[18px] leading-snug text-[#0a0a0a]">
                   SEO-Ready Development
                 </h3>
-                <p className="text-[14px] text-[#6B7280] leading-[1.7] flex-1">
+                <p className="text-[14px] text-[#5C6270] leading-[1.7] flex-1">
                   Schema markup, Core Web Vitals, structured data, and local SEO signals
                   baked in from line one of code.
                 </p>
@@ -752,31 +824,32 @@ export default function SheffieldPage() {
 
         {/* ════════════════════════════════════════════════════════════════
             SECTION 6, STATS BAND
-            bg #0a0a0a, min-h-screen. Oversized numbers, count-up.
-            Design Signature Moment #4 + pull-quote Moment #5.
+            Light band on cream. Oversized numbers, no count-up animation.
+            Was #0a0a0a until 2026-08-25: the page is capped at one dark section
+            and the closing contact block spends it.
         ════════════════════════════════════════════════════════════════ */}
         <section
           id="stats"
           ref={statsRef}
-          className="bg-[#0a0a0a] min-h-screen flex flex-col justify-center relative overflow-hidden"
+          className="bg-fj-cream min-h-screen flex flex-col justify-center relative overflow-hidden border-t border-[#E9ECEF]"
         >
           {/* Dot grid background */}
           <div
             className="absolute inset-0 pointer-events-none"
             style={{
               backgroundImage:
-                "radial-gradient(circle, rgba(255,255,255,0.07) 1px, transparent 1px)",
+                "radial-gradient(circle, rgba(10,10,10,0.07) 1px, transparent 1px)",
               backgroundSize: "28px 28px",
             }}
           />
           {/* Vignette over dot grid */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/60 via-transparent to-[#0a0a0a]/60 pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#FAFAF7]/70 via-transparent to-[#FAFAF7]/70 pointer-events-none" />
 
           <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 md:px-10 lg:px-20 py-24">
 
             {/* Label */}
-            <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#F05A28] text-center mb-16">
-              By The Numbers
+            <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#B23E13] text-center mb-16">
+              By the numbers
             </p>
 
             {/* Three oversized stats */}
@@ -787,13 +860,13 @@ export default function SheffieldPage() {
                   className={[
                     "flex flex-col items-center text-center px-6 md:px-8 py-8 md:py-10",
                     i < STATS.length - 1
-                      ? "md:border-r border-white/[0.08] border-b md:border-b-0"
+                      ? "md:border-r border-[#E9ECEF] border-b md:border-b-0"
                       : "",
                   ].join(" ")}
                 >
                   <span
                     className={[
-                      "font-clash font-bold text-white leading-none mb-4",
+                      "font-clash font-bold text-[#0a0a0a] leading-none mb-4",
                       statsVisible ? "stat-visible" : "stat-hidden",
                     ].join(" ")}
                     style={{
@@ -803,7 +876,7 @@ export default function SheffieldPage() {
                   >
                     {stat.prefix}{stat.display}{stat.suffix}
                   </span>
-                  <p className="text-[14px] text-[#6B7280] leading-[1.6] max-w-[200px]">
+                  <p className="text-[14px] text-[#4A4A45] leading-[1.6] max-w-[220px]">
                     {stat.label}
                   </p>
                 </div>
@@ -817,7 +890,7 @@ export default function SheffieldPage() {
               className="font-clash font-bold text-white text-center leading-[1.15] tracking-[-0.03em] max-w-[900px] mx-auto"
               style={{ fontSize: "clamp(24px, 3vw, 40px)" }}
             >
-              Your Sheffield website. Live in 7 days. Guaranteed.
+              Found in Sheffield search. Fast on every device. Reported in enquiries.
             </p>
           </div>
         </section>
@@ -881,7 +954,7 @@ export default function SheffieldPage() {
                         <h3 className="text-[16px] font-semibold text-[#0a0a0a] mb-1">
                           {step.title}
                         </h3>
-                        <p className="text-[13px] md:text-[14px] text-[#6B7280] leading-[1.65] md:max-w-[180px]">
+                        <p className="text-[13px] md:text-[14px] text-[#5C6270] leading-[1.65] md:max-w-[180px]">
                           {step.desc}
                         </p>
                       </div>
@@ -906,27 +979,28 @@ export default function SheffieldPage() {
 
         {/* ════════════════════════════════════════════════════════════════
             SECTION 8, AI ADVANTAGE
-            bg #111118 dark. Split 55/45. Chat mockup right.
+            Light section, split 55/45, chat mockup right. Was #111118 until
+            2026-08-25 for the one-dark-section rule.
             GSAP: left/right slide on scroll.
         ════════════════════════════════════════════════════════════════ */}
         <section
           id="ai"
           ref={aiRef}
-          className="bg-[#111118] min-h-screen flex items-center border-t border-white/[0.05] overflow-hidden"
+          className="bg-white min-h-screen flex items-center border-t border-[#E9ECEF] overflow-hidden"
         >
           <div className="w-full max-w-[1400px] mx-auto px-6 md:px-10 lg:px-20 py-20 overflow-hidden">
             <div className="grid grid-cols-1 lg:grid-cols-[55fr_45fr] gap-10 lg:gap-16 xl:gap-24 items-center">
 
               {/* ── Left column ──────────────────────────────────────── */}
               <div ref={aiLeftRef} data-gsap="true" className="flex flex-col">
-                <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#F05A28] mb-5">
-                  The AI Advantage
+                <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#B23E13] mb-5">
+                  Where the AI actually helps
                 </p>
                 <h2
-                  className="font-clash font-bold leading-[1.05] tracking-[-0.03em] text-white mb-10"
+                  className="font-clash font-bold leading-[1.05] tracking-[-0.03em] text-[#0a0a0a] mb-10"
                   style={{ fontSize: "clamp(28px, 3.6vw, 48px)" }}
                 >
-                  The Sheffield web agency building for 2026, not 2016
+                  How we use AI in the search work, and where we do not
                 </h2>
 
                 {/* Feature rows */}
@@ -937,17 +1011,17 @@ export default function SheffieldPage() {
                       className={[
                         "flex items-start gap-4 py-5",
                         i < AI_FEATURES.length - 1
-                          ? "border-b border-white/[0.06]"
+                          ? "border-b border-[#E9ECEF]"
                           : "",
                       ].join(" ")}
                     >
                       {/* Square icon */}
                       <div className="w-2 h-2 rounded-[2px] bg-[#F05A28] flex-shrink-0 mt-[6px]" />
                       <div>
-                        <h3 className="text-[16px] font-semibold text-white mb-1">
+                        <h3 className="text-[16px] font-semibold text-[#0a0a0a] mb-1">
                           {f.title}
                         </h3>
-                        <p className="text-[14px] text-[#6B7280] leading-[1.65]">
+                        <p className="text-[14px] text-[#4A4A45] leading-[1.65]">
                           {f.desc}
                         </p>
                       </div>
@@ -958,9 +1032,9 @@ export default function SheffieldPage() {
                 <div className="mt-8">
                   <button
                     onClick={() => openModal('uk')}
-                    className="group inline-flex items-center gap-2 text-[#F05A28] border border-[#F05A28]/40 hover:bg-[#F05A28]/10 text-[15px] font-semibold px-6 py-3 rounded-lg transition-all duration-200"
+                    className="group inline-flex items-center gap-2 text-[#B23E13] border border-[#B23E13]/40 hover:bg-[#F05A28]/10 text-[15px] font-semibold px-6 py-3 rounded-lg transition-all duration-200"
                   >
-                    See AI-powered Sheffield websites
+                    Ask how we would approach your site
                     <span className="inline-block transition-transform duration-200 group-hover:translate-x-1">→</span>
                   </button>
                 </div>
@@ -1029,7 +1103,7 @@ export default function SheffieldPage() {
                   {/* Attribution */}
                   <div className="border-t border-[#E9ECEF] pt-4">
                     <p className="text-[14px] font-semibold text-[#0a0a0a]">{t.name}</p>
-                    <p className="text-[13px] text-[#6B7280]">{t.title}, {t.company}</p>
+                    <p className="text-[13px] text-[#5C6270]">{t.title}, {t.company}</p>
                   </div>
                 </div>
               ))}
@@ -1054,8 +1128,12 @@ export default function SheffieldPage() {
                   className="font-clash font-bold leading-[1.05] tracking-[-0.03em] text-[#0a0a0a]"
                   style={{ fontSize: "clamp(28px, 3.6vw, 48px)" }}
                 >
-                  Everything you need to know
+                  Sheffield SEO questions, answered straight
                 </h2>
+                <p className="mt-4 text-[15px] text-[#5C6270] leading-[1.7]">
+                  The questions Sheffield business owners actually ask us, including the
+                  awkward ones about cost, timescales and what happens if you stop.
+                </p>
               </div>
 
               {/* Accordion */}
@@ -1087,9 +1165,9 @@ export default function SheffieldPage() {
                     </button>
                     <div
                       className="overflow-hidden transition-[max-height] duration-300 ease-in-out"
-                      style={{ maxHeight: openFaq === i ? "400px" : "0px" }}
+                      style={{ maxHeight: openFaq === i ? "900px" : "0px" }}
                     >
-                      <p className="pb-5 text-[15px] text-[#6B7280] leading-[1.75]">
+                      <p className="pb-5 text-[15px] text-[#5C6270] leading-[1.75]">
                         {item.a}
                       </p>
                     </div>
@@ -1108,12 +1186,12 @@ export default function SheffieldPage() {
         <section
           id="local"
           ref={credRef}
-          className="bg-[#F05A28] overflow-hidden relative"
+          className="bg-fj-cream border-t border-[#E9ECEF] overflow-hidden relative"
         >
           {/* SHEFFIELD watermark */}
           <div className="absolute inset-0 flex items-center justify-center select-none pointer-events-none overflow-hidden">
             <span
-              className="font-clash font-bold text-white/[0.06]"
+              className="font-clash font-bold text-[#0a0a0a]/[0.04]"
               style={{ fontSize: "clamp(100px, 18vw, 220px)", letterSpacing: "-0.04em", whiteSpace: "nowrap" }}
             >
               SHEFFIELD
@@ -1123,17 +1201,21 @@ export default function SheffieldPage() {
           <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 md:px-10 lg:px-20 py-24">
             {/* Header */}
             <div className="max-w-[640px] mb-16">
-              <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-white/60 mb-4">
-                Sheffield by the Numbers
+              <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#B23E13] mb-4">
+                Sheffield by the numbers
               </p>
               <h2
-                className="font-clash font-bold leading-[1.05] tracking-[-0.03em] text-white mb-6"
+                className="font-clash font-bold leading-[1.05] tracking-[-0.03em] text-[#0a0a0a] mb-6"
                 style={{ fontSize: "clamp(28px, 3.6vw, 48px)" }}
               >
-                Sheffield{"\u2019"}s digital opportunity is massive: most businesses are missing it
+                Almost every business you compete with in Sheffield is a small one
               </h2>
-              <p className="text-[16px] text-white/70 leading-[1.7]">
-                We built FactoryJet to fix that. Sheffield deserves world-class websites at transparent prices.
+              <p className="text-[16px] text-[#343A40] leading-[1.7]">
+                That is the whole opportunity. The firms ranking above you are not
+                national brands with large budgets, they are other local companies of
+                under ten people running template websites. Figures below are from the
+                official ONS business register for Sheffield, and the full citation is
+                further down this page.
               </p>
             </div>
 
@@ -1143,12 +1225,12 @@ export default function SheffieldPage() {
                 <div key={stat.id} className="flex flex-col gap-2">
                   <span
                     ref={(el) => { credStatRefs.current[i] = el; }}
-                    className="font-clash font-bold text-white leading-none"
+                    className="font-clash font-bold text-[#F05A28] leading-none"
                     style={{ fontSize: "clamp(36px, 5vw, 72px)", letterSpacing: "-0.03em" }}
                   >
                     {stat.display}
                   </span>
-                  <p className="text-[14px] text-white/70 leading-[1.5]">{stat.label}</p>
+                  <p className="text-[14px] text-[#4A4A45] leading-[1.5]">{stat.label}</p>
                 </div>
               ))}
             </div>
@@ -1195,11 +1277,11 @@ export default function SheffieldPage() {
                     className="font-clash font-bold leading-[1.05] tracking-[-0.03em] text-white mb-6"
                     style={{ fontSize: "clamp(32px, 4vw, 56px)" }}
                   >
-                    Your Sheffield website. Live in 7 days.
+                    Get found by Sheffield customers.
                   </h2>
-                  <p className="text-[16px] text-white/60 leading-[1.7]">
-                    Tell us about your business and we{"\u2019"}ll send a free proposal within 24 hours.
-                    No sales pressure, no hidden costs.
+                  <p className="text-[16px] text-white/80 leading-[1.7]">
+                    Tell us about your business and we{"\u2019"}ll send back a written plan
+                    within 24 hours. No sales pressure, no hidden costs.
                   </p>
                 </div>
 
@@ -1210,7 +1292,7 @@ export default function SheffieldPage() {
                     { label: "WhatsApp",  value: "Message us on WhatsApp",   href: "https://wa.me/919699977699" },
                   ].map((c) => (
                     <a key={c.label} href={c.href} rel="noopener noreferrer" className="flex items-start gap-4 group">
-                      <span className="text-[11px] font-semibold uppercase tracking-[0.1em] text-[#6B7280] w-[74px] flex-shrink-0 pt-[2px]">
+                      <span className="text-[11px] font-semibold uppercase tracking-[0.1em] text-[#9CA3AF] w-[74px] flex-shrink-0 pt-[2px]">
                         {c.label}
                       </span>
                       <span className="text-[15px] text-white/70 group-hover:text-white transition-colors duration-200">
@@ -1225,7 +1307,7 @@ export default function SheffieldPage() {
                   {["7-day delivery", "No contracts", "Free consultation", "30 days support"].map((chip) => (
                     <span
                       key={chip}
-                      className="text-[12px] font-semibold text-white/50 border border-white/[0.1] px-3 py-1 rounded-full"
+                      className="text-[12px] font-semibold text-white/70 border border-white/[0.18] px-3 py-1 rounded-full"
                     >
                       {chip}
                     </span>
@@ -1237,7 +1319,7 @@ export default function SheffieldPage() {
               <div className="bg-[#111118] border border-white/[0.08] rounded-2xl p-8 flex flex-col gap-5">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="flex flex-col gap-2">
-                    <label htmlFor="name" className="text-[12px] font-semibold text-white/40 uppercase tracking-[0.08em]">
+                    <label htmlFor="name" className="text-[12px] font-semibold text-white/70 uppercase tracking-[0.08em]">
                       Name
                     </label>
                     <input
@@ -1246,11 +1328,11 @@ export default function SheffieldPage() {
                       placeholder="Your full name"
                       value={lead.name}
                       onChange={setLeadField("name")}
-                      className="bg-[#0a0a0a] border border-white/[0.1] rounded-lg px-4 py-3 text-[14px] text-white placeholder-white/20 focus:outline-none focus:border-[#F05A28]/60 transition-colors duration-200"
+                      className="bg-[#0a0a0a] border border-white/[0.1] rounded-lg px-4 py-3 text-[14px] text-white placeholder-white/50 focus:outline-none focus:border-[#F05A28]/60 transition-colors duration-200"
                     />
                   </div>
                   <div className="flex flex-col gap-2">
-                    <label htmlFor="business" className="text-[12px] font-semibold text-white/40 uppercase tracking-[0.08em]">
+                    <label htmlFor="business" className="text-[12px] font-semibold text-white/70 uppercase tracking-[0.08em]">
                       Business
                     </label>
                     <input
@@ -1259,12 +1341,12 @@ export default function SheffieldPage() {
                       placeholder="Business name"
                       value={lead.business}
                       onChange={setLeadField("business")}
-                      className="bg-[#0a0a0a] border border-white/[0.1] rounded-lg px-4 py-3 text-[14px] text-white placeholder-white/20 focus:outline-none focus:border-[#F05A28]/60 transition-colors duration-200"
+                      className="bg-[#0a0a0a] border border-white/[0.1] rounded-lg px-4 py-3 text-[14px] text-white placeholder-white/50 focus:outline-none focus:border-[#F05A28]/60 transition-colors duration-200"
                     />
                   </div>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="email" className="text-[12px] font-semibold text-white/40 uppercase tracking-[0.08em]">
+                  <label htmlFor="email" className="text-[12px] font-semibold text-white/70 uppercase tracking-[0.08em]">
                     Email
                   </label>
                   <input
@@ -1273,11 +1355,11 @@ export default function SheffieldPage() {
                     placeholder="your@email.com"
                     value={lead.email}
                     onChange={setLeadField("email")}
-                    className="bg-[#0a0a0a] border border-white/[0.1] rounded-lg px-4 py-3 text-[14px] text-white placeholder-white/20 focus:outline-none focus:border-[#F05A28]/60 transition-colors duration-200"
+                    className="bg-[#0a0a0a] border border-white/[0.1] rounded-lg px-4 py-3 text-[14px] text-white placeholder-white/50 focus:outline-none focus:border-[#F05A28]/60 transition-colors duration-200"
                   />
                 </div>
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="package" className="text-[12px] font-semibold text-white/40 uppercase tracking-[0.08em]">
+                  <label htmlFor="package" className="text-[12px] font-semibold text-white/70 uppercase tracking-[0.08em]">
                     Package
                   </label>
                   <select
@@ -1294,7 +1376,7 @@ export default function SheffieldPage() {
                   </select>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="message" className="text-[12px] font-semibold text-white/40 uppercase tracking-[0.08em]">
+                  <label htmlFor="message" className="text-[12px] font-semibold text-white/70 uppercase tracking-[0.08em]">
                     Tell us about your business
                   </label>
                   <textarea
@@ -1303,7 +1385,7 @@ export default function SheffieldPage() {
                     placeholder="What does your business do? What are you looking to achieve with your website?"
                     value={lead.message}
                     onChange={setLeadField("message")}
-                    className="bg-[#0a0a0a] border border-white/[0.1] rounded-lg px-4 py-3 text-[14px] text-white placeholder-white/20 focus:outline-none focus:border-[#F05A28]/60 transition-colors duration-200 resize-none"
+                    className="bg-[#0a0a0a] border border-white/[0.1] rounded-lg px-4 py-3 text-[14px] text-white placeholder-white/50 focus:outline-none focus:border-[#F05A28]/60 transition-colors duration-200 resize-none"
                   />
                 </div>
                 <button
@@ -1320,7 +1402,7 @@ export default function SheffieldPage() {
                 {leadErr && (
                   <p className="text-[12px] text-[#ff8255] text-center">{leadErr}</p>
                 )}
-                <p className="text-[12px] text-white/25 text-center">
+                <p className="text-[12px] text-white/65 text-center">
                   We respond within 24 hours. No spam, ever.
                 </p>
               </div>
@@ -1448,7 +1530,7 @@ function BrowserMockup({ onCtaClick }: { onCtaClick: () => void }) {
   );
 }
 
-// ─── Marquee content (one copy — rendered twice for seamless loop) ─────────────
+// ─── Marquee content (one copy, rendered twice so the loop never shows a gap) ─────────────
 
 function MarqueeItems() {
   return (
@@ -1474,7 +1556,7 @@ function BentoTag({ label, dark }: { label: string; dark: boolean }) {
         "text-[11px] font-semibold uppercase tracking-[0.06em] px-3 py-1 rounded-full",
         dark
           ? "bg-white/20 text-white"
-          : "bg-[#F8F9FA] text-[#6B7280] border border-[#E9ECEF]",
+          : "bg-[#F8F9FA] text-[#5C6270] border border-[#E9ECEF]",
       ].join(" ")}
     >
       {label}

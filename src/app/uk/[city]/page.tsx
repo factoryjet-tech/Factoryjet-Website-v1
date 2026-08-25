@@ -16,12 +16,22 @@ export async function generateMetadata({
 
   if (!city) return {}
 
+  const url = `https://factoryjet.com/uk/${city.slug}`
+
   return {
     title: `Web Design & Digital Agency in ${city.name} | FactoryJet`,
     description: `FactoryJet serves ${city.name} businesses with web design, AI websites, ecommerce, SEO, and AI agents. ${city.businesses.toLocaleString()}+ local businesses. Free consultation.`,
     alternates: {
-      canonical: `https://factoryjet.com/uk/${city.slug}`
-    }
+      canonical: url,
+      // These 15 city pages are UK-only: there is no India or US twin to point
+      // at, so en-GB and x-default both resolve to the page itself. Do NOT
+      // import hreflangMap here, which describes the multi-market service hubs.
+      // Before this, all 15 shipped zero hreflang tags at all.
+      languages: {
+        'en-GB': url,
+        'x-default': url,
+      },
+    },
   }
 }
 

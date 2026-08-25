@@ -149,7 +149,7 @@ export default function Pricing() {
               textTransform: "uppercase",
             }}
           >
-            Transparent Pricing, No Surprises
+            How we quote
           </p>
 
           <h2
@@ -163,7 +163,7 @@ export default function Pricing() {
               maxWidth: 960,
             }}
           >
-            Transparent Pricing. No RFQ Theatre. No Six-Week Discovery Phase.
+            What each service includes, and how it is priced
           </h2>
 
           <span
@@ -182,11 +182,15 @@ export default function Pricing() {
               maxWidth: 760,
             }}
           >
-            Birmingham agencies are notorious for requiring discovery workshops
-            before providing a quote. At FactoryJet, every project is fixed-price
-            and scoped to your build, so you know the full cost before work
-            starts. Here is what each service includes. Your specific written
-            quote comes within 24 hours, free, no commitment.
+            We do not publish prices, because a number posted here would be
+            wrong for almost everyone reading it. What a Birmingham project
+            costs depends on how much repair the site needs, and nobody can
+            know that before looking. What we can tell you is the shape:
+            one-off work such as an audit is a fixed price, repair work is
+            quoted as fixed-price milestones, and anything ongoing runs as a
+            monthly retainer. Here is what sits inside each service. Your own
+            written quote follows the free review, at no charge and with no
+            commitment.
           </p>
         </div>
 

@@ -80,7 +80,7 @@ export default function CompetitorComparison() {
   const sectionRef = useRef<HTMLElement>(null);
   const headerRef = useRef<HTMLDivElement>(null);
   const tableBodyRef = useRef<HTMLTableSectionElement>(null);
-  const cardsRef = useRef<HTMLDivElement>(null);
+  const cardsRef = useRef<HTMLUListElement>(null);
   const calloutRef = useRef<HTMLDivElement>(null);
 
   useGSAP(
@@ -153,9 +153,9 @@ export default function CompetitorComparison() {
               lineHeight: 1.7,
             }}
           >
-            Manchester&apos;s agency scene is one of the densest in the UK,
-            MadeByShape, Pixel Kicks, Soap Media, and Supremo among the most
-            established. Here&apos;s how FactoryJet stacks up.
+            Manchester&apos;s agency scene is one of the densest in the UK, with
+            MadeByShape, Pixel Kicks, Soap Media and Supremo among the best known.
+            Here is how we compare on the things a buyer can actually check.
           </p>
         </div>
 
@@ -277,13 +277,13 @@ export default function CompetitorComparison() {
         </div>
 
         {/* ── Competitor profile cards ──────────────────────────────────── */}
-        <div
+        <ul
           ref={cardsRef}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mt-12"
           style={{ gap: "16px" }}
         >
           {COMPETITOR_CARDS.map(({ name, specialty, description }) => (
-            <div
+            <li
               key={name}
               className="competitor-card rounded-xl"
               style={{
@@ -312,9 +312,9 @@ export default function CompetitorComparison() {
               <p style={{ fontSize: "14px", color: "#374151", lineHeight: 1.55 }}>
                 {description}
               </p>
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
 
         {/* ── "Why the price difference?" callout ──────────────────────── */}
         <div
@@ -330,7 +330,7 @@ export default function CompetitorComparison() {
             className="font-clash"
             style={{ fontSize: "22px", color: "#0a0f1c", marginBottom: "12px" }}
           >
-            Why the price difference?
+            Why we can work this way
           </h3>
           <p
             style={{
@@ -340,12 +340,11 @@ export default function CompetitorComparison() {
               lineHeight: 1.7,
             }}
           >
-            FactoryJet operates from Bengaluru, India with a senior engineering
-            team that builds at the same technical level as London and Manchester
-            agencies, but at India delivery economics. You get enterprise-grade
-            Next.js development, GSAP animation, and conversion engineering at a fixed, transparent quote. No offshore compromises: direct
-            communication with senior engineers, UK business hours availability,
-            and the same quality benchmarks as any Spinningfields agency.
+            We run a small senior team and no account-handler layer, so the
+            person who scopes your build is the person who writes the code. Scope
+            is fixed at milestones rather than billed by the day, you talk to
+            engineers directly during UK business hours, and the finished codebase
+            is pushed to your own GitHub at handover.
           </p>
         </div>
 

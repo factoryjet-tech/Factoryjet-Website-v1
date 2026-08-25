@@ -13,7 +13,7 @@ type Platform = {
 };
 
 const PLATFORMS: Platform[] = [
-  { id: "nextjs",    name: "Next.js 15",       tagline: "App Router, SSR, ISR | Lighthouse 95+ guaranteed",                    accent: "#FFFFFF", mark: "N" },
+  { id: "nextjs",    name: "Next.js 15",       tagline: "App Router, SSR, ISR | server rendering by default",                accent: "#1A1A1A", mark: "N" },
   { id: "react",     name: "React 19",          tagline: "Server Components, concurrent rendering, zero layout shift",           accent: "#61DAFB", mark: "R" },
   { id: "nodejs",    name: "Node.js",           tagline: "API layers, webhooks, and server-side integrations",                   accent: "#8CC84B", mark: "⬡" },
   { id: "wordpress", name: "WordPress",         tagline: "Custom themes, plugins, and content-managed builds",                   accent: "#21759B", mark: "W" },
@@ -32,8 +32,8 @@ function PlatformCard({ platform }: { platform: Platform }) {
     <div
       className="relative overflow-hidden"
       style={{
-        backgroundColor: "#111827",
-        border: "1px solid rgba(255,255,255,0.06)",
+        backgroundColor: "#FFFFFF",
+        border: "1px solid #D9D9D2",
         borderRadius: 12,
         padding: "20px 20px 22px",
         borderLeft: `3px solid ${platform.accent}`,
@@ -44,10 +44,10 @@ function PlatformCard({ platform }: { platform: Platform }) {
           aria-hidden="true"
           className="flex h-9 w-9 flex-none items-center justify-center text-[13px] font-bold"
           style={{
-            backgroundColor: "rgba(255,255,255,0.04)",
-            border: `1px solid ${platform.accent}40`,
+            backgroundColor: "#FAFAF7",
+            border: `1px solid ${platform.accent}66`,
             borderRadius: 8,
-            color: platform.accent,
+            color: "#1A1A1A",
             fontFamily: "var(--font-clash), 'Clash Display', sans-serif",
             lineHeight: 1,
           }}
@@ -57,7 +57,7 @@ function PlatformCard({ platform }: { platform: Platform }) {
         <h3
           className="font-clash"
           style={{
-            color: "#FFFFFF",
+            color: "#1A1A1A",
             fontWeight: 600,
             fontSize: "clamp(15px, 1.2vw, 17px)",
             lineHeight: 1.2,
@@ -70,7 +70,7 @@ function PlatformCard({ platform }: { platform: Platform }) {
       <p
         className="mt-3"
         style={{
-          color: "rgba(255,255,255,0.6)",
+          color: "#4A4A45",
           fontFamily: "var(--font-sans)",
           fontSize: 13,
           lineHeight: 1.6,
@@ -131,7 +131,7 @@ export default function TechStack() {
       id="technology-stack"
       aria-label="Our technology stack"
       className="relative w-full overflow-hidden"
-      style={{ backgroundColor: "#0A0F1C", maxWidth: "100vw" }}
+      style={{ backgroundColor: "#FAFAF7", maxWidth: "100vw" }}
     >
       <style>{`
         @keyframes bham-ticker {
@@ -155,7 +155,7 @@ export default function TechStack() {
         className="pointer-events-none absolute inset-0"
         style={{
           backgroundImage:
-            "linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px)",
+            "linear-gradient(rgba(26,26,26,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(26,26,26,0.05) 1px, transparent 1px)",
           backgroundSize: "64px 64px",
           maskImage:
             "radial-gradient(ellipse at 50% 40%, #000 30%, transparent 75%)",
@@ -175,7 +175,7 @@ export default function TechStack() {
         <div className="flex flex-col items-center text-center">
           <p
             style={{
-              color: "#FF6B35",
+              color: "#B23E13",
               fontFamily: "var(--font-sans)",
               fontWeight: 600,
               fontSize: 13,
@@ -183,13 +183,13 @@ export default function TechStack() {
               textTransform: "uppercase",
             }}
           >
-            The Stack That Separates Us
+            Platforms we work in
           </p>
 
           <h2
             className="font-clash mt-5"
             style={{
-              color: "#FFFFFF",
+              color: "#1A1A1A",
               fontWeight: 700,
               fontSize: "clamp(24px, 3.5vw, 44px)",
               lineHeight: 1.1,
@@ -197,19 +197,19 @@ export default function TechStack() {
               maxWidth: 960,
             }}
           >
-            The Stack Behind Birmingham&rsquo;s Fastest-Loading, Highest-Converting Websites
+            The platform your site runs on decides how far SEO can take it
           </h2>
 
           <span
             aria-hidden="true"
             className="mt-6 block"
-            style={{ width: 48, height: 2, backgroundColor: "#FF6B35" }}
+            style={{ width: 48, height: 2, backgroundColor: "#B23E13" }}
           />
 
           <div
             className="mt-8 space-y-5"
             style={{
-              color: "rgba(255,255,255,0.72)",
+              color: "#4A4A45",
               fontFamily: "var(--font-sans)",
               fontSize: "clamp(15px, 1.1vw, 17px)",
               lineHeight: 1.8,
@@ -217,29 +217,28 @@ export default function TechStack() {
             }}
           >
             <p>
-              The difference between a 2026-ready website and a website that
-              needs rebuilding in 18 months is the stack it runs on. Every
-              FactoryJet build uses the same technology stack that Stripe,
-              Vercel, and Linear use for their marketing sites, adapted to real
-              Birmingham business budgets.
+              SEO work is only as good as the site it runs on. If pages cannot
+              have their own titles, if the platform will not let you add
+              structured data, or if the thing simply loads too slowly on a
+              phone, no amount of content writing fixes it. So we work with
+              whatever you already have, and we say plainly when the platform
+              itself is the problem.
             </p>
             <p>
-              Birmingham agencies build on WordPress with Elementor. That&rsquo;s
-              fine, for 2018. FactoryJet builds on the stack that powers the
-              fastest, most scalable websites on the internet: Next.js 15 with
-              App Router, React 19, Tailwind CSS 4, and GSAP 3.13 for
-              animations that don&rsquo;t compromise your Core Web Vitals. Our AI
-              projects run on Anthropic&rsquo;s Claude API, OpenAI&rsquo;s
-              function-calling models, and custom MCP integrations for
-              enterprise-grade agentic workflows.
+              We build in Next.js with React and Tailwind when a project needs a
+              custom front end, and we work inside WordPress, Shopify, Webflow,
+              Framer, Wix and Magento when that is where your site already
+              lives. There is no single right platform. There is only the one
+              your team can actually keep updated, which loads fast enough to
+              hold a visitor who arrived from a search result.
             </p>
             <p>
-              For Birmingham&rsquo;s manufacturing sector in Erdington and
-              Tyseley, this means web systems that integrate directly with your
-              ERP. For the Jewellery Quarter&rsquo;s 700 businesses, it means
-              headless B2B and D2C commerce on a single architecture. For
-              professional services in Colmore Business District, it means
-              AI-native lead qualification built into your site from day one.
+              What does not change is the measurement. Google publishes the pass
+              marks for the three Core Web Vitals, and we test against them on a
+              real mobile connection rather than on a fast office laptop. For
+              Birmingham manufacturers that usually means fixing images and
+              integrations. For professional services it usually means cutting
+              the scripts nobody remembers adding.
             </p>
           </div>
         </div>
@@ -261,9 +260,9 @@ export default function TechStack() {
       <div
         className="relative w-full"
         style={{
-          borderTop: "1px solid rgba(255,255,255,0.06)",
-          borderBottom: "1px solid rgba(255,255,255,0.06)",
-          backgroundColor: "#07090F",
+          borderTop: "1px solid #D9D9D2",
+          borderBottom: "1px solid #D9D9D2",
+          backgroundColor: "#FFFFFF",
           paddingTop: 22,
           paddingBottom: 22,
           marginTop: "clamp(48px, 8vw, 96px)",
@@ -275,7 +274,7 @@ export default function TechStack() {
           style={{
             width: 120,
             background:
-              "linear-gradient(90deg, #07090F 0%, rgba(7,9,15,0) 100%)",
+              "linear-gradient(90deg, #FFFFFF 0%, rgba(255,255,255,0) 100%)",
           }}
         />
         <div
@@ -284,7 +283,7 @@ export default function TechStack() {
           style={{
             width: 120,
             background:
-              "linear-gradient(270deg, #07090F 0%, rgba(7,9,15,0) 100%)",
+              "linear-gradient(270deg, #FFFFFF 0%, rgba(255,255,255,0) 100%)",
           }}
         />
 
@@ -303,11 +302,11 @@ export default function TechStack() {
           {[0, 1].map((i) => (
             <div key={i} className="flex items-center">
               <BirminghamCodeLine />
-              <span className="mx-8" style={{ color: "rgba(255,255,255,0.2)" }}>
+              <span className="mx-8" style={{ color: "#B0B0A8" }}>
                 {"//"}
               </span>
               <BirminghamCodeLine />
-              <span className="mx-8" style={{ color: "rgba(255,255,255,0.2)" }}>
+              <span className="mx-8" style={{ color: "#B0B0A8" }}>
                 {"//"}
               </span>
             </div>
@@ -319,12 +318,12 @@ export default function TechStack() {
 }
 
 function BirminghamCodeLine() {
-  const kw = { color: "#FF6B35" } as const;
-  const fn = { color: "#38BDF8" } as const;
-  const str = { color: "#10B981" } as const;
-  const num = { color: "#A78BFA" } as const;
-  const pun = { color: "rgba(255,255,255,0.55)" } as const;
-  const mute = { color: "rgba(255,255,255,0.85)" } as const;
+  const kw = { color: "#B23E13" } as const;
+  const fn = { color: "#0B5FA5" } as const;
+  const str = { color: "#046C4E" } as const;
+  const num = { color: "#6127C4" } as const;
+  const pun = { color: "#6B6B62" } as const;
+  const mute = { color: "#1A1A1A" } as const;
 
   return (
     <span className="inline-flex items-center gap-0">

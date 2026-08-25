@@ -1,371 +1,192 @@
-"use client";
+// Static server component. Light section.
+//
+// Rebuilt 2026-08-25. This used to be a "transparent pricing" table with no
+// prices in it, which is the worst of both worlds. It now does the useful job:
+// explains the three shapes an SEO engagement can take, what ships in each, and
+// who each one suits, so a Liverpool business can work out which one to ask for
+// before the call rather than during it.
 
-import { useRef } from "react";
-import { useGSAP } from "@gsap/react";
-import { gsap, ScrollTrigger } from "@/lib/gsap";
-import { useContactModal } from "@/context/ContactModalContext";
-import { trackButtonClick, trackCTAClick } from "@/utils/gtm";
+import ModalCTAButton from '@/components/v2/ModalCTAButton';
 
-// ── Pricing table data ────────────────────────────────────────────────────────
-type Row = {
-  service: string;
-  included: string;
+type Shape = {
+  id: string;
+  name: string;
+  shape: string;
+  bestFor: string;
+  ships: string[];
+  notFor: string;
 };
 
-const ROWS: Row[] = [
+const SHAPES: Shape[] = [
   {
-    service: "Brochure Website (5–7 pages)",
-    included: "Custom design, build, on-page SEO, launch & training",
+    id: 'audit',
+    name: 'One-off audit',
+    shape: 'Fixed piece of work, single delivery, no ongoing commitment',
+    bestFor:
+      'You have a developer or an in-house marketer who can carry out fixes, and you want to know exactly what is wrong.',
+    ships: [
+      'Full technical crawl of every URL on the site',
+      'Google Search Console history reviewed for drops, penalties and index gaps',
+      'Google Business Profile and citation audit',
+      'Competitor check against the Liverpool businesses holding your terms',
+      'Keyword map showing which page should target which term',
+      'A written list of problems ranked by likely impact, with the pages named',
+      'A walkthrough call so your developer can ask questions',
+    ],
+    notFor:
+      'Not for you if nobody internally has time to implement it. An audit nobody acts on changes nothing.',
   },
   {
-    service: "E-Commerce Store (Shopify)",
-    included: "Store build, payments, shipping, product config, SEO",
+    id: 'project',
+    name: 'Fixed-price project',
+    shape: 'Defined scope, milestone payments, agreed end date',
+    bestFor:
+      'You have one specific job: a site migration, a set of new service pages, a structured data rollout, or recovery after a traffic drop.',
+    ships: [
+      'Written scope agreed before anything starts, with the deliverables listed',
+      'Milestones with dates, so you can see progress rather than trust it',
+      'All technical work carried out by us, or ticketed for your developer',
+      'Content written, reviewed by you, then published',
+      'Redirects, canonicals and structured data shipped as part of the build',
+      'Handover document covering every change made and why',
+    ],
+    notFor:
+      'Not for you if the goal is open ended, for example "more traffic". That needs a retainer, not a project.',
   },
   {
-    service: "Shopify Plus Build",
-    included: "Advanced store, custom checkout, integrations",
-  },
-  {
-    service: "Headless Commerce (Next.js)",
-    included: "Headless storefront, commerce backend, custom build",
-  },
-  {
-    service: "AI Agent / Chatbot",
-    included: "Scoping, build, tool integration, testing, handover",
-  },
-  {
-    service: "AI SEO (GEO/AEO)",
-    included: "Answer-first content, schema, per-engine citation tracking",
-  },
-  {
-    service: "Local SEO (monthly)",
-    included: "Google Business Profile, local content, citations, reporting",
-  },
-  {
-    service: "Webflow / Framer Build",
-    included: "Design, build, on-page SEO, launch & training",
+    id: 'retainer',
+    name: 'Monthly retainer',
+    shape: 'Rolling monthly work, scoped fresh each month, cancel with notice',
+    bestFor:
+      'You want compounding growth: new pages, ongoing technical maintenance, mentions earned month after month.',
+    ships: [
+      'Agreed deliverables each month, written down before the month starts',
+      'Ongoing technical maintenance so nothing quietly breaks',
+      'New service and area pages written and published',
+      'Google Business Profile kept current, with reviews and posts',
+      'Outreach for genuine mentions from chambers, partners and local press',
+      'One monthly report covering enquiries, clicks, positions and technical health',
+      'A shared change log listing every edit made to your site, with dates',
+    ],
+    notFor:
+      'Not for you if you need results inside a month. Search compounds slowly and paid ads will serve you better in that window.',
   },
 ];
 
-// ── Section ──────────────────────────────────────────────────────────────────
+const HONEST: string[] = [
+  'Nothing is quoted until we have looked at your site and your Search Console',
+  'The quote is written down before work starts, and it does not move mid-project',
+  'Cost is driven by four things: how many pages, how competitive your terms are, whether we write the content, and whether we implement or you do',
+  'No setup fee dressed up as something else, and no automatic annual uplift',
+  'Retainers are scoped month by month, so you never pay for hours you cannot inspect',
+];
+
 export default function Pricing() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const tableRef = useRef<HTMLDivElement>(null);
-  const { openModal: openContactModal } = useContactModal();
-  const openModal = () => openContactModal("uk", "default");
-
-  useGSAP(
-    () => {
-      const prefersReduced = window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
-      ).matches;
-      if (prefersReduced) return;
-
-      const rows = tableRef.current?.querySelectorAll<HTMLElement>(
-        "[data-pricing-row]"
-      );
-      if (!rows || !rows.length) return;
-
-      gsap.fromTo(
-        rows,
-        { y: 24, autoAlpha: 0 },
-        {
-          y: 0,
-          autoAlpha: 1,
-          duration: 0.6,
-          ease: "power3.out",
-          stagger: 0.07,
-          scrollTrigger: {
-            trigger: tableRef.current,
-            start: "top 82%",
-            toggleActions: "play none none reverse",
-          },
-        }
-      );
-
-      return () => {
-        ScrollTrigger.getAll().forEach((t) => {
-          if (t.trigger && sectionRef.current?.contains(t.trigger as Node)) {
-            t.kill();
-          }
-        });
-      };
-    },
-    { scope: sectionRef }
-  );
-
   return (
     <section
-      ref={sectionRef}
-      id="pricing"
-      aria-label="Liverpool pricing"
-      className="relative w-full"
-      style={{ backgroundColor: "#F8FAFC", maxWidth: "100vw" }}
+      id="engagements"
+      aria-labelledby="engagements-heading"
+      className="w-full bg-fj-cream"
     >
-      {/* Mobile edge-fade for horizontal scroll */}
-      <style>{`
-        @media (max-width: 767px) {
-          .liv-price-scroll {
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-            scroll-snap-type: x proximity;
-          }
-          .liv-price-fade {
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            width: 56px;
-            pointer-events: none;
-            background: linear-gradient(270deg, #F8FAFC 0%, rgba(248,250,252,0) 100%);
-          }
-        }
-        @media (min-width: 768px) {
-          .liv-price-fade { display: none; }
-        }
-      `}</style>
-
-      <div
-        className="mx-auto w-full max-w-[1200px] px-6 sm:px-8"
-        style={{
-          paddingTop: "clamp(64px, 10vw, 120px)",
-          paddingBottom: "clamp(64px, 10vw, 120px)",
-        }}
-      >
-        {/* Heading block */}
-        <div className="flex flex-col items-center text-center">
-          <p
-            style={{
-              color: "#B23E13",
-              fontFamily: "var(--font-sans)",
-              fontWeight: 600,
-              fontSize: 13,
-              letterSpacing: "0.15em",
-              textTransform: "uppercase",
-            }}
-          >
-            Transparent Pricing, No Surprises
+      <div className="mx-auto w-full max-w-[1120px] px-6 py-16 md:px-8 md:py-24">
+        <div className="max-w-3xl">
+          <p className="font-fj-mono text-xs font-semibold uppercase tracking-[0.18em] text-[#B23E13]">
+            How we work together
           </p>
-
           <h2
-            className="font-clash mt-5"
-            style={{
-              color: "#0A0F1C",
-              fontWeight: 700,
-              fontSize: "clamp(24px, 3.5vw, 44px)",
-              lineHeight: 1.1,
-              letterSpacing: "-0.02em",
-              maxWidth: 960,
-            }}
+            id="engagements-heading"
+            className="mt-4 font-fj-display text-3xl font-bold leading-tight tracking-tight text-fj-ink md:text-[42px]"
           >
-            Pricing is fixed and published upfront. Every Time.
+            Three shapes an engagement can take
           </h2>
-
-          <span
-            aria-hidden="true"
-            className="mt-6 block"
-            style={{ width: 48, height: 2, backgroundColor: "#FF6B35" }}
-          />
-
-          <p
-            className="mt-8"
-            style={{
-              color: "#374151",
-              fontFamily: "var(--font-sans)",
-              fontSize: "clamp(15px, 1.1vw, 17px)",
-              lineHeight: 1.8,
-              maxWidth: 760,
-            }}
-          >
-            Liverpool has strong agencies, and most of them carry the overhead
-            of city-centre office rent and account manager commissions.
-            FactoryJet is AI-native and remote-first, so that overhead never
-            lands on your quote. Every project is fixed-price and scoped to your
-            build. Here is what each service includes, with your written quote
-            confirmed before any work starts.
+          <p className="mt-5 font-fj-body text-lg leading-relaxed text-fj-neutral-600">
+            The shape matters more than the number. Pick the wrong one and you
+            either pay for work you cannot use, or you buy a report that sits in a
+            folder. Here is what each one is for.
           </p>
         </div>
 
-        {/* Premium table */}
-        <div className="relative mt-14">
-          <div className="liv-price-scroll relative">
-            <div
-              ref={tableRef}
-              className="relative overflow-hidden"
-              style={{
-                minWidth: 760,
-                backgroundColor: "#FFFFFF",
-                border: "1px solid #E2E8F0",
-                borderRadius: 16,
-                boxShadow: "0 4px 12px rgba(15,23,42,0.06)",
-              }}
+        <div className="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-3">
+          {SHAPES.map((s) => (
+            <article
+              key={s.id}
+              className="flex flex-col rounded-2xl border border-fj-neutral-200 bg-white p-7"
             >
-              {/* Header row */}
-              <div
-                className="grid grid-cols-[1fr_1.6fr]"
-                style={{
-                  backgroundColor: "#0A0F1C",
-                  color: "#FFFFFF",
-                }}
-              >
-                {["Service", "What's Included"].map((h, i) => (
-                  <div
-                    key={h}
-                    className="px-6 py-5"
-                    style={{
-                      fontFamily: "var(--font-sans)",
-                      fontWeight: 600,
-                      fontSize: 12.5,
-                      letterSpacing: "0.14em",
-                      textTransform: "uppercase",
-                      color: i === 0 ? "#FFFFFF" : "rgba(255,255,255,0.78)",
-                      borderLeft:
-                        i === 0 ? "none" : "1px solid rgba(255,255,255,0.08)",
-                    }}
+              <h3 className="font-fj-display text-xl font-bold text-fj-ink">
+                {s.name}
+              </h3>
+              <p className="mt-2 font-fj-mono text-[12px] uppercase leading-relaxed tracking-[0.08em] text-fj-neutral-400">
+                {s.shape}
+              </p>
+              <p className="mt-4 font-fj-body text-[15px] leading-relaxed text-fj-neutral-600">
+                {s.bestFor}
+              </p>
+
+              <p className="mt-6 font-fj-body text-[13px] font-semibold uppercase tracking-wide text-fj-ink">
+                What ships
+              </p>
+              <ul className="mt-3 flex-1 space-y-2.5">
+                {s.ships.map((item) => (
+                  <li
+                    key={item}
+                    className="flex gap-3 font-fj-body text-[14.5px] leading-relaxed text-fj-ink"
                   >
-                    {h}
-                  </div>
+                    <svg
+                      aria-hidden="true"
+                      width="15"
+                      height="15"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#B23E13"
+                      strokeWidth="3"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="mt-1 flex-none"
+                    >
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    <span>{item}</span>
+                  </li>
                 ))}
-              </div>
+              </ul>
 
-              {/* Body rows */}
-              {ROWS.map((row, idx) => {
-                const zebra = idx % 2 === 0 ? "#FFFFFF" : "#F8FAFC";
-                return (
-                  <div
-                    key={row.service}
-                    data-pricing-row
-                    className="grid grid-cols-[1fr_1.6fr] items-center"
-                    style={{
-                      backgroundColor: zebra,
-                      borderTop: "1px solid #E2E8F0",
-                    }}
-                  >
-                    {/* Service, highlighted column (Jet Green) */}
-                    <div
-                      className="px-6 py-6"
-                      style={{
-                        color: "#0A0F1C",
-                        fontFamily: "var(--font-sans)",
-                        fontWeight: 700,
-                        fontSize: 15.5,
-                        lineHeight: 1.4,
-                        backgroundColor: "rgba(16,185,129,0.04)",
-                        borderLeft: "3px solid #10B981",
-                      }}
-                    >
-                      {row.service}
-                    </div>
-                    {/* What's included */}
-                    <div
-                      className="px-6 py-6"
-                      style={{
-                        color: "#374151",
-                        fontFamily: "var(--font-sans)",
-                        fontSize: 15,
-                        lineHeight: 1.5,
-                        borderLeft: "1px solid #E2E8F0",
-                      }}
-                    >
-                      {row.included}
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
+              <p className="mt-6 border-t border-fj-neutral-200 pt-4 font-fj-body text-[14px] leading-relaxed text-fj-neutral-600">
+                {s.notFor}
+              </p>
+            </article>
+          ))}
+        </div>
+
+        <div className="mt-12 rounded-2xl border border-fj-neutral-200 bg-white p-7 md:p-10">
+          <h3 className="font-fj-display text-2xl font-bold text-fj-ink">
+            How quoting works
+          </h3>
+          <ul className="mt-6 grid grid-cols-1 gap-3 md:grid-cols-2">
+            {HONEST.map((h) => (
+              <li
+                key={h}
+                className="flex gap-3 font-fj-body text-[15px] leading-relaxed text-fj-neutral-600"
+              >
+                <span
+                  aria-hidden="true"
+                  className="mt-[9px] h-1.5 w-1.5 flex-none rounded-full bg-[#F05A28]"
+                />
+                <span>{h}</span>
+              </li>
+            ))}
+          </ul>
+
+          <div className="mt-8 flex flex-col items-start gap-3 sm:flex-row sm:items-center">
+            <ModalCTAButton
+              label="Get a written quote"
+              region="uk"
+              modalVariant="default"
+              btnVariant="primary-light"
+            />
+            <span className="font-fj-body text-sm text-fj-neutral-600">
+              Free, no commitment, and you keep the audit notes either way.
+            </span>
           </div>
-          <div aria-hidden="true" className="liv-price-fade" />
-        </div>
-
-        {/* Disclaimer */}
-        <div className="mx-auto mt-8 text-center" style={{ maxWidth: 820 }}>
-          <p
-            style={{
-              color: "#6b7280",
-              fontFamily: "var(--font-sans)",
-              fontSize: "clamp(13px, 0.9vw, 14px)",
-              lineHeight: 1.7,
-            }}
-          >
-            Every quote is fixed-price and depends on your project scope,
-            confirmed in writing before work starts. Free quote, no commitment.
-          </p>
-        </div>
-
-        {/* CTA */}
-        <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <button
-            type="button"
-            onClick={() => {
-              trackCTAClick("get_a_free_liverpool_quote", "pricing", "primary");
-              trackButtonClick("get_a_free_liverpool_quote", "pricing");
-              openModal();
-            }}
-            className="inline-flex items-center justify-center"
-            style={{
-              backgroundColor: "#B23E13",
-              color: "#FFFFFF",
-              padding: "16px 28px",
-              borderRadius: 8,
-              fontFamily: "var(--font-sans)",
-              fontWeight: 600,
-              fontSize: 15,
-              letterSpacing: "0.01em",
-              boxShadow: "0 4px 12px rgba(0,82,204,0.25)",
-              transition: "transform 0.2s ease-out, box-shadow 0.2s ease-out",
-              border: "none",
-              cursor: "pointer",
-              minHeight: 48,
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = "translateY(-1px)";
-              e.currentTarget.style.boxShadow =
-                "0 8px 20px rgba(0,82,204,0.32)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = "translateY(0)";
-              e.currentTarget.style.boxShadow =
-                "0 4px 12px rgba(0,82,204,0.25)";
-            }}
-          >
-            Get a Free Liverpool Quote
-          </button>
-          <a
-            href="https://wa.me/919699977699"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2"
-            style={{
-              backgroundColor: "#FFFFFF",
-              color: "#0A0F1C",
-              padding: "15px 26px",
-              borderRadius: 8,
-              fontFamily: "var(--font-sans)",
-              fontWeight: 600,
-              fontSize: 15,
-              border: "1px solid #E2E8F0",
-              transition: "border-color 0.2s ease-out, transform 0.2s ease-out",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.borderColor = "#F05A28";
-              e.currentTarget.style.transform = "translateY(-1px)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.borderColor = "#E2E8F0";
-              e.currentTarget.style.transform = "translateY(0)";
-            }}
-          >
-            <svg
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="#10B981"
-              aria-hidden="true"
-            >
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-            </svg>
-            WhatsApp: 969 997 7699
-          </a>
         </div>
       </div>
     </section>

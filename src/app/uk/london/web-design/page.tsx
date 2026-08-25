@@ -3,14 +3,78 @@ import HeroInlineForm from '@/components/HeroInlineForm';
 import Footer from '../../sections/Footer';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import AuthorCard from '@/components/v2/AuthorCard';
-import WebDesignArchitectureBlueprint from '@/components/v2/WebDesignArchitectureBlueprint';
-import WebDesignValueCalculator from '@/components/v2/WebDesignValueCalculator';
-import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
+import Breadcrumbs from '@/components/v2/Breadcrumbs';
+import MidPageCTA from '@/components/v2/MidPageCTA';
 import CityLinksUK from '@/components/v2/CityLinksUK';
 import './london-web-design.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/london/web-design';
-const UPDATED = '2026-08-24';
+const UPDATED = '2026-08-25';
+const UPDATED_LABEL = '25 August 2026';
+
+/* Local style tokens. Mirrors the custom properties in london-web-design.css so
+   inline styles never reference a CSS variable name from TSX. */
+const T = {
+  fd: "'Plus Jakarta Sans', sans-serif",
+  fm: "'Geist Mono', monospace",
+  ink: '#0F0F12',
+  dark: '#0F0F12',
+  orange: '#FF5C00',
+  green: '#047857',
+  n200: '#E5E5E0',
+  n400: '#6E6E68',
+} as const;
+
+/* ─── Breadcrumb source of truth (drives visible trail + BreadcrumbList) ──── */
+const crumbs = [
+  { name: 'FactoryJet', url: 'https://factoryjet.com' },
+  { name: 'UK', url: 'https://factoryjet.com/uk' },
+  { name: 'London', url: 'https://factoryjet.com/uk/london' },
+  { name: 'Web Design', url: CANONICAL },
+];
+
+const breadcrumbSchema = {
+  '@type': 'BreadcrumbList',
+  '@id': `${CANONICAL}#breadcrumb`,
+  itemListElement: crumbs.map((c, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: c.name,
+    item: c.url,
+  })),
+};
+
+/* ─── Cited sources. Every URL fetch-verified on 25 August 2026 (HTTP 200). ── */
+const SOURCES = [
+  {
+    id: 'bpe',
+    title: 'Business population estimates for the UK and regions 2025: statistical release',
+    publisher: 'Department for Business and Trade',
+    url: 'https://www.gov.uk/government/statistics/business-population-estimates-2025/business-population-estimates-for-the-uk-and-regions-2025-statistical-release',
+    used: 'London had 1.042 million private sector businesses at the start of 2025, the most of any UK region, and 1,436 businesses per 10,000 adults, the highest business density in the UK.',
+  },
+  {
+    id: 'cwv',
+    title: 'Understanding Core Web Vitals and Google search results',
+    publisher: 'Google Search Central',
+    url: 'https://developers.google.com/search/docs/appearance/core-web-vitals',
+    used: 'The pass marks we build to: Largest Contentful Paint under 2.5 seconds, Interaction to Next Paint under 200 milliseconds, Cumulative Layout Shift under 0.1.',
+  },
+  {
+    id: 'wcag',
+    title: 'Web Content Accessibility Guidelines (WCAG) 2.2',
+    publisher: 'World Wide Web Consortium (W3C)',
+    url: 'https://www.w3.org/TR/WCAG22/',
+    used: 'Normal text needs a contrast ratio of at least 4.5 to 1, large text at least 3 to 1, and tap targets at least 24 by 24 CSS pixels under success criterion 2.5.8.',
+  },
+  {
+    id: 'psbar',
+    title: 'Accessibility requirements for public sector bodies',
+    publisher: 'GOV.UK (Government Digital Service)',
+    url: 'https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps',
+    used: 'UK public sector websites must meet WCAG 2.2 level AA and publish an accessibility statement. The rules have applied since 23 September 2018.',
+  },
+] as const;
 
 /* ─── FAQ source of truth (drives UI + FAQPage schema) ─────────────── */
 const FAQ_CATEGORIES = [
@@ -19,6 +83,7 @@ const FAQ_CATEGORIES = [
   { key: 'london',          label: 'London & working with us' },
   { key: 'design',          label: 'Design & conversion' },
   { key: 'seo',             label: 'SEO & AI search' },
+  { key: 'aftercare',       label: 'Hosting, law & aftercare' },
 ] as const;
 
 const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
@@ -36,7 +101,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'platforms', question: 'Do you build on Next.js, or only WordPress?',
     answer: 'Both, plus Webflow, Framer, Shopify, and fully custom builds. Next.js is our default for web development London projects when speed and Core Web Vitals matter most, because it produces the fastest mobile load times of any option we offer, which counts for a lot on a Tube-signal connection.' },
   { category: 'platforms', question: 'Can I edit the website myself after launch?',
-    answer: 'Yes. Every build ships with a content management system so your team can update text, images, and pages without a developer. We include a short handover walkthrough and written notes so nobody on your side is left guessing.' },
+    answer: 'Yes. Every build ships with a content management system so your team can update text, images, and pages without a developer. We include a short handover walkthrough and written notes so nobody on your side is left guessing. Structural changes, such as a whole new template or a new type of page, are the part that still needs us, and we are happy to quote those one at a time.' },
   { category: 'platforms', question: 'Do you build ecommerce and Shopify sites for London brands?',
     answer: 'Yes. Ecommerce web design London and Shopify web design London are among our most common builds, for DTC and B2B brands alike. We design product pages and checkout flows that convert on mobile, then wire up the payments, stock, and analytics behind them.' },
 
@@ -59,13 +124,32 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     answer: 'Yes. If you have brand guidelines we follow them exactly. If you do not, we set a simple, consistent design system as part of the build. In a city as crowded as London, looking like everyone else gets you ignored, so we design sites that are recognisably yours rather than a template with a new logo.' },
 
   { category: 'seo', question: 'Will my new site be good for SEO and rank in London?',
-    answer: 'Yes. On-page SEO, structured data, clean URLs, and Core Web Vitals are included in every build. You launch ready to rank for London searches, rather than paying for an SEO fix-up six months later to undo a slow template.' },
+    answer: 'Yes. On-page SEO, structured data, clean web addresses, and Core Web Vitals are included in every build. You launch ready to rank for London searches, rather than paying for an SEO fix-up six months later to undo a slow template. What a build cannot do on its own is earn you links and reviews, which is what decides the most competitive London terms, so treat the launch as the starting line.' },
   { category: 'seo', question: 'Can a new website help me show up in ChatGPT and Google AI answers?',
     answer: 'Yes. We structure pages so AI engines can quote them: the answer stated up top, question-style headings, FAQ schema, and cited facts. That structure is what gets a site referenced in AI answers from ChatGPT, Gemini, and Perplexity, alongside a normal Google listing.' },
   { category: 'seo', question: 'Do you set up analytics and conversion tracking?',
-    answer: 'Yes. We wire up Google Analytics and conversion tracking so you can see what the site is doing from day one. You will know which pages bring enquiries from London customers, not just how many people visited.' },
+    answer: 'Yes. We wire up Google Analytics and conversion tracking so you can see what the site is doing from day one. You will know which pages bring enquiries from London customers, not just how many people visited. We test it with a real submission before handover, because tracking that was never checked is the most common reason a site looks like it is failing when it is not.' },
   { category: 'seo', question: 'What are Core Web Vitals and do they matter for my London site?',
-    answer: 'Core Web Vitals are Google measures of loading speed, visual stability, and responsiveness (LCP, CLS, and INP). They affect both your rankings and how many mobile visitors stay long enough to buy, which is decisive in a market where buyers judge in seconds. Every site we ship passes them in the green.' },
+    answer: 'Core Web Vitals are three Google measures of how a page feels to use. Google Search Central sets the pass marks: Largest Contentful Paint under 2.5 seconds, Interaction to Next Paint under 200 milliseconds, and Cumulative Layout Shift under 0.1. They affect both your rankings and how many mobile visitors stay long enough to buy. Every site we ship passes all three before handover.' },
+  { category: 'seo', question: 'Will you fix the SEO on my old pages, or only the new ones?',
+    answer: 'Both, when your old pages are worth keeping. Before a redesign we list every URL that currently earns traffic or links, then decide page by page whether to keep it, rewrite it, or redirect it. Pages that get folded into a better one are pointed at their replacement with a single permanent redirect, so nothing lands on a dead end and no ranking equity is thrown away.' },
+
+  { category: 'aftercare', question: 'Who hosts the website, and can I use my own hosting?',
+    answer: 'You can use your own hosting, or we can set hosting up for you in your name so the account belongs to you. We normally recommend a content delivery network so pages are served from a location near the visitor, which is what keeps load times low for a London audience. Either way the account is yours, and you can move it whenever you want.' },
+  { category: 'aftercare', question: 'Do I need to buy a new domain name, or can I keep mine?',
+    answer: 'Keep yours. Changing domain name throws away years of Google history and any links pointing at you, so we only suggest it when there is a real business reason such as a rebrand. We handle the technical settings that point your existing domain at the new site, and we schedule the switch so there is no visible gap for your customers.' },
+  { category: 'aftercare', question: 'What happens after launch if something breaks?',
+    answer: 'You tell us and we fix it. Every build comes with a support window after go-live for anything that is not working as agreed, at no extra charge. After that you can either handle changes yourself in the content management system, call us in for one-off pieces of work, or put us on a monthly retainer. There is no compulsory support contract.' },
+  { category: 'aftercare', question: 'Do I need a cookie banner, and will you set one up?',
+    answer: 'You need one if your site sets any cookie that is not strictly necessary, which includes most analytics and advertising tools. UK rules require you to ask permission before those cookies are set, not after. We install a consent banner that actually blocks the tags until someone agrees, rather than a decorative one that lets everything fire anyway.' },
+  { category: 'aftercare', question: 'Does my website have to be accessible by law?',
+    answer: 'If you are a UK public sector body, yes. GOV.UK guidance says public sector websites must meet WCAG 2.2 level AA and publish an accessibility statement, and those rules have applied since 23 September 2018. Private businesses are not covered by that specific regulation, but the Equality Act 2010 still requires reasonable adjustments, so building to the same standard is the safer route.' },
+  { category: 'aftercare', question: 'Can you move my site off Wix, Squarespace, or GoDaddy?',
+    answer: 'Yes, and it is one of the most common jobs we do for London businesses. We export your content, rebuild the pages properly, map every old address to its new one, and move the domain last so nothing goes dark. The usual reasons people move are page speed, being unable to change things they need to change, and not owning the site they pay for.' },
+  { category: 'aftercare', question: 'Can you build the site in more than one language?',
+    answer: 'Yes. Multi-language work suits London businesses selling into Europe or the Gulf. Each language gets its own address rather than a translate button, and we add the tags that tell search engines which version to show which country. Translation quality is the part to plan for: machine translation is fine for a first pass but a human should check anything that sells.' },
+  { category: 'aftercare', question: 'Do you do branding and logo design as well?',
+    answer: 'We do the design system: colours, type, spacing, buttons, and how it all fits together. Full brand identity work, including logo creation from scratch, is not our core job. If you need one we will say so early and either work to a brand designer you choose or point you at someone. We would rather be honest than sell you work we are not best at.' },
 ];
 
 const jsonLd = {
@@ -86,23 +170,6 @@ const jsonLd = {
       '@type': 'Service',
       '@id': `${CANONICAL}#service`,
       name: 'Web Design London',
-      author: {
-    '@type': 'Person',
-    name: 'Bhavesh Barot',
-    jobTitle: 'Chief Technical Architect',
-    url: 'https://factoryjet.com/about',
-    sameAs: [
-      'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-      'https://github.com/factoryjet-tech',
-    ],
-  },
-      aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '64',
-    bestRating: '5',
-    worstRating: '1',
-  },
       serviceType: 'Web design',
       provider: { '@id': 'https://factoryjet.com/#organization' },
       areaServed: { '@type': 'City', name: 'London' },
@@ -116,16 +183,7 @@ const jsonLd = {
       areaServed: { '@type': 'City', name: 'London' },
       provider: { '@id': 'https://factoryjet.com/#organization' },
     },
-    {
-      '@type': 'BreadcrumbList',
-      '@id': `${CANONICAL}#breadcrumb`,
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-        { '@type': 'ListItem', position: 2, name: 'UK', item: 'https://factoryjet.com/uk' },
-        { '@type': 'ListItem', position: 3, name: 'London', item: 'https://factoryjet.com/uk/london' },
-        { '@type': 'ListItem', position: 4, name: 'Web Design', item: CANONICAL },
-      ],
-    },
+    breadcrumbSchema,
     {
       '@type': ['WebPage', 'Article'],
       '@id': CANONICAL,
@@ -138,10 +196,20 @@ const jsonLd = {
       author: {
         '@type': 'Person',
         name: 'Bhavesh Barot',
-        url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
         jobTitle: 'Founder, FactoryJet',
+        url: 'https://factoryjet.com/about',
+        sameAs: [
+          'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
+          'https://github.com/factoryjet-tech',
+        ],
       },
       publisher: { '@id': 'https://factoryjet.com/#organization' },
+      citation: SOURCES.map((s) => ({
+        '@type': 'CreativeWork',
+        name: s.title,
+        url: s.url,
+        publisher: { '@type': 'Organization', name: s.publisher },
+      })),
     },
     {
       '@type': 'FAQPage',
@@ -159,7 +227,10 @@ export const metadata: Metadata = {
   title: 'Web Design London | Website Design Agency | FactoryJet',
   description:
     'FactoryJet is a web design agency in London. Fast, conversion-focused website design and ecommerce on Next.js, WordPress, Webflow, Framer, and Shopify. Fixed quote, you own the code.',
-  alternates: { canonical: CANONICAL },
+  alternates: {
+    canonical: CANONICAL,
+    languages: { 'en-GB': CANONICAL, 'x-default': CANONICAL },
+  },
   openGraph: {
     title: 'Web Design London | Website Design Agency | FactoryJet',
     description:
@@ -182,12 +253,13 @@ export default function LondonWebDesignPage() {
       <div className="uk-londonwd">
         <main>
 
+        <Breadcrumbs items={crumbs} />
+
         {/* ═══ 1. HERO ═══ */}
         <section className="sec-lg dot-grid" style={{ position: 'relative' }}>
           <div className="wrap">
             <div className="col-6040">
               <div>
-                <p className="bc" style={{ fontFamily: 'var( - fm)', fontSize: 11, letterSpacing: '.04em', color: 'var( - n400)', marginBottom: 14 }}>Home &rsaquo; UK &rsaquo; London &rsaquo; Web Design</p>
                 <div className="flex-wrap mb-6">
                   <span className="chip"><span className="dot dot-orange" />London Web Design Agency</span>
                   <span className="chip">Next.js &middot; Webflow &middot; Shopify</span>
@@ -203,7 +275,7 @@ export default function LondonWebDesignPage() {
                 <div className="byline mt-6" style={{ maxWidth: 540 }}>
                   <div className="av">BB</div>
                   <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ sites delivered</span></div>
-                  <div className="upd">Last updated<br />1 July 2026</div>
+                  <div className="upd">Last updated<br />{UPDATED_LABEL}</div>
                 </div>
 
                 <div className="mt-6" style={{ maxWidth: 540 }}>
@@ -220,7 +292,7 @@ export default function LondonWebDesignPage() {
                 </div>
                 <div className="scorecard-row">
                   <div><div className="scorecard-metric">Core Web Vitals</div><div className="scorecard-note">LCP, CLS, INP on delivery</div></div>
-                  <div className="scorecard-val" style={{ color: 'var( - green)' }}>Green</div>
+                  <div className="scorecard-val" style={{ color: T.green }}>Green</div>
                 </div>
                 <div className="scorecard-row">
                   <div><div className="scorecard-metric">Delivery</div><div className="scorecard-note">standard build, express available</div></div>
@@ -232,7 +304,7 @@ export default function LondonWebDesignPage() {
                 </div>
                 <div className="scorecard-row">
                   <div><div className="scorecard-metric">Code Ownership</div><div className="scorecard-note">pushed to your GitHub at launch</div></div>
-                  <div className="scorecard-val" style={{ color: 'var( - green)' }}>100%</div>
+                  <div className="scorecard-val" style={{ color: T.green }}>100%</div>
                 </div>
               </div>
             </div>
@@ -273,6 +345,68 @@ export default function LondonWebDesignPage() {
           </div>
         </section>
 
+        {/* ═══ 3B. SCOPE: WHAT IS AND IS NOT INCLUDED ═══ */}
+        <section className="sec-lg">
+          <div className="wrap">
+            <div style={{ maxWidth: 760 }}>
+              <span className="eyebrow">The deliverables</span>
+              <h2>Exactly what a London web design project hands over</h2>
+              <p className="lead mt-4">
+                Most web design quotes describe a feeling, not a list. Here is the actual list. Everything on the
+                left is in every build. Everything on the right is genuinely useful work that we either do not do,
+                or scope separately so you are not paying for it by accident.
+              </p>
+            </div>
+
+            <div className="col-6040 mt-12">
+              <div className="card">
+                <h3>In every build, no exceptions</h3>
+                <ul className="chk-list mt-4">
+                  <li>A custom page design for each unique template, drawn for your content rather than picked from a theme library</li>
+                  <li>A design system you can reuse: colour set, type scale, spacing rules, and button and form styles</li>
+                  <li>Responsive layouts checked at phone, tablet, laptop, and large desktop widths</li>
+                  <li>A content management system so your team can change words, images, and pages without us</li>
+                  <li>Page titles, meta descriptions, heading structure, and clean web addresses on every page</li>
+                  <li>Structured data (the machine-readable summary search engines and AI assistants read)</li>
+                  <li>An XML sitemap and a robots file that lets the AI answer engines read your pages</li>
+                  <li>Redirects mapped from every old address to its new one, one hop, never a chain</li>
+                  <li>Google Analytics plus goal tracking on every form and phone tap</li>
+                  <li>Image compression, modern image formats, and correct width and height on every image</li>
+                  <li>The full source code pushed to a repository you own, with a written handover walkthrough</li>
+                </ul>
+              </div>
+
+              <div className="card">
+                <h3>Not included, and why</h3>
+                <ul className="no-list mt-4">
+                  <li><b>Logo and full brand identity.</b> We build the design system, not the brand mark. We will work to your brand designer.</li>
+                  <li><b>Ongoing SEO campaigns.</b> The build launches SEO-ready. Ranking work over months is a separate engagement.</li>
+                  <li><b>Paid ads management.</b> We wire the tracking so your ads team can measure. We do not run the accounts.</li>
+                  <li><b>Product photography and video.</b> We specify what is needed and place it. Shooting it is yours or a specialist&apos;s.</li>
+                  <li><b>Long-form content production at volume.</b> We write the pages in scope, not a rolling blog programme.</li>
+                  <li><b>Third-party licence fees.</b> Fonts, stock imagery, and paid apps are billed to you directly at cost.</li>
+                  <li><b>Legal copy.</b> Your terms, privacy notice, and any regulated wording should be checked by your own adviser.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="card mt-8">
+              <h3>What we need from you to start</h3>
+              <p className="mt-4">
+                Six things. If you only have three of them, we still start, and we help you fill the gaps as we go.
+              </p>
+              <ul className="chk-list mt-4 col-2" style={{ gap: '0 32px' }}>
+                <li>Access to your current site and its hosting, if one exists</li>
+                <li>Your logo files and brand guidelines, if you have them</li>
+                <li>A rough page list, or the questions your customers keep asking</li>
+                <li>One named decision maker who can sign off a design</li>
+                <li>Access to your Google Analytics and Search Console accounts</li>
+                <li>Any hard deadline: a trade show, a funding round, a season</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
         {/* ═══ 4. WHY LONDON IS DIFFERENT (unique local content) ═══ */}
         <section className="sec-lg dot-grid">
           <div className="wrap">
@@ -288,7 +422,14 @@ export default function LondonWebDesignPage() {
             <div className="col-2 mt-12" style={{ gap: 24 }}>
               <div className="card">
                 <h3>You are competing with the whole country</h3>
-                <p className="mt-4">London is home to roughly a million businesses, more than any other UK city, according to the ONS Business Population Estimates. Your site is not up against the shop next door, it is up against well-funded brands and national agencies. Generic template design disappears in that crowd, so distinctive, conversion-first work is the entry ticket, not a luxury.</p>
+                <p className="mt-4">
+                  London had 1.042 million private sector businesses at the start of 2025, more than any other UK
+                  region, and 1,436 businesses for every 10,000 adults, the highest density in the country
+                  (<a href={SOURCES[0].url} target="_blank" rel="noopener noreferrer" className="cite">Department for Business and Trade, Business Population Estimates 2025</a>).
+                  Your site is not up against the shop next door, it is up against well-funded brands and national
+                  agencies. Generic template design disappears in that crowd, so distinctive, conversion-first work
+                  is the entry ticket, not a luxury.
+                </p>
               </div>
               <div className="card">
                 <h3>London buyers judge in seconds</h3>
@@ -325,6 +466,16 @@ export default function LondonWebDesignPage() {
                 site ranks, loads, and turns visitors into customers. Every FactoryJet build covers all eight, so
                 professional web design and the technical groundwork arrive as one job rather than two invoices.
               </p>
+              <ol className="num-list mt-6">
+                <li>Conversion-first structure</li>
+                <li>Responsive, mobile-first design</li>
+                <li>Speed and Core Web Vitals</li>
+                <li>On-page SEO and schema</li>
+                <li>Accessibility</li>
+                <li>A content management system</li>
+                <li>Analytics and conversion tracking</li>
+                <li>Ownership and maintainability</li>
+              </ol>
             </div>
             <div className="col-2 mt-12" style={{ gap: 24 }}>
               <div className="card">
@@ -363,6 +514,85 @@ export default function LondonWebDesignPage() {
           </div>
         </section>
 
+        {/* ═══ 5B. PRE-LAUNCH CHECKLIST (citable technical detail) ═══ */}
+        <section className="sec-lg dot-grid">
+          <div className="wrap">
+            <div style={{ maxWidth: 800 }}>
+              <span className="eyebrow">Before we hand it over</span>
+              <h2>The checklist every London build has to pass</h2>
+              <p className="lead mt-4">
+                Nothing goes live until it clears this list. The numbers are not ours: they are the published pass
+                marks from Google and the W3C, the body that writes the web accessibility standard. We run the list
+                on a throttled mobile connection, because that is closer to a Northern line platform than office
+                broadband is.
+              </p>
+            </div>
+
+            <div className="col-2 mt-12" style={{ gap: 24 }}>
+              <div className="card">
+                <h3>Speed and Core Web Vitals</h3>
+                <p className="mt-4">
+                  Google Search Central publishes three pass marks, and we test against all three
+                  (<a href={SOURCES[1].url} target="_blank" rel="noopener noreferrer" className="cite">Google Search Central, Core Web Vitals</a>):
+                </p>
+                <ul className="chk-list mt-4">
+                  <li>Largest Contentful Paint under 2.5 seconds. This is how long the biggest thing on screen takes to appear</li>
+                  <li>Interaction to Next Paint under 200 milliseconds. This is how fast the page reacts when someone taps</li>
+                  <li>Cumulative Layout Shift under 0.1. This is how much the page jumps about while it loads</li>
+                  <li>Every image compressed, served in a modern format, and given a fixed width and height so nothing jumps</li>
+                  <li>Fonts loaded so text is readable straight away instead of flashing in late</li>
+                  <li>No third-party script allowed to block the first screen from rendering</li>
+                </ul>
+              </div>
+
+              <div className="card">
+                <h3>Accessibility</h3>
+                <p className="mt-4">
+                  We build to WCAG 2.2, the W3C standard
+                  (<a href={SOURCES[2].url} target="_blank" rel="noopener noreferrer" className="cite">W3C, WCAG 2.2</a>).
+                  UK public sector bodies are legally required to meet level AA and publish an accessibility statement
+                  (<a href={SOURCES[3].url} target="_blank" rel="noopener noreferrer" className="cite">GOV.UK guidance</a>),
+                  which matters for the Westminster and charity work we do:
+                </p>
+                <ul className="chk-list mt-4">
+                  <li>Normal text at a contrast ratio of at least 4.5 to 1 against its background</li>
+                  <li>Large text at a contrast ratio of at least 3 to 1</li>
+                  <li>Tap targets at least 24 by 24 CSS pixels, so thumbs hit the right thing</li>
+                  <li>Every function reachable by keyboard alone, with a focus outline you can actually see</li>
+                  <li>Alt text on every image that carries meaning, and none on images that are pure decoration</li>
+                  <li>Headings in real order, so a screen reader can skim the page the way a sighted reader does</li>
+                </ul>
+              </div>
+
+              <div className="card">
+                <h3>Search and AI readability</h3>
+                <ul className="chk-list mt-4">
+                  <li>One page title and one meta description per page, written for a human, not stuffed with keywords</li>
+                  <li>Exactly one main heading per page, then a clean descent through the sub-headings</li>
+                  <li>Structured data that matches what is actually visible on the page, never a second hidden version</li>
+                  <li>A canonical address on every page so near-duplicate versions do not compete with each other</li>
+                  <li>Old addresses mapped to new ones with a single permanent redirect, never a chain of hops</li>
+                  <li>A robots file that names the AI retrieval crawlers and lets them in</li>
+                  <li>Answer-first opening paragraphs, so a quoting engine can lift a clean sentence</li>
+                </ul>
+              </div>
+
+              <div className="card">
+                <h3>Handover and safety</h3>
+                <ul className="chk-list mt-4">
+                  <li>Full source code in a repository owned by your account, not ours</li>
+                  <li>Content management logins issued to named people on your side</li>
+                  <li>Analytics and goal tracking firing, checked with a real test submission</li>
+                  <li>Forms tested end to end, including where the enquiry actually lands</li>
+                  <li>A cookie consent banner that blocks non-essential tags until someone agrees</li>
+                  <li>An automated backup, and a written note on how to restore from it</li>
+                  <li>A recorded walkthrough so a new starter can pick it up in a year</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* ═══ 6. LONDON, AREA BY AREA (flagship unique local content) ═══ */}
         <section className="sec-lg">
           <div className="wrap">
@@ -374,6 +604,21 @@ export default function LondonWebDesignPage() {
                 about the areas we design for, and what each one actually needs from its website design.
               </p>
             </div>
+
+            <figure className="fig mt-8">
+              <img
+                src="/images/uk/london/web-design-og.webp"
+                alt="A tablet showing a website design on a long table in a converted East London brick warehouse office"
+                width={1200}
+                height={630}
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>
+                The same site has to work on a warehouse desk in Hackney and on a phone at Bank station. We test
+                both before anything ships.
+              </figcaption>
+            </figure>
             <div className="col-2 mt-12" style={{ gap: 24 }}>
               <div className="card">
                 <h3>Shoreditch &amp; Old Street</h3>
@@ -428,9 +673,10 @@ export default function LondonWebDesignPage() {
                   </p>
                   <p>
                     Speed is not a nice-to-have in a city where so much browsing happens on a phone between meetings.
-                    Around 53 percent of mobile visitors leave a page that takes longer than three seconds to load, so
-                    a slow site loses customers before they ever see your offer. We build mobile-first and treat load
-                    time as a design constraint, not an afterthought.
+                    Google&apos;s own pass mark is that the biggest thing on screen should appear within 2.5 seconds,
+                    and that the page should react to a tap within 200 milliseconds. Miss those and you are losing
+                    people before they ever see your offer. We build mobile-first and treat load time as a design
+                    constraint, not an afterthought.
                   </p>
                   <p>
                     Whether you are a small business web design London client on a first site or an established brand
@@ -441,38 +687,47 @@ export default function LondonWebDesignPage() {
                 <div className="col-2 mt-8">
                   <div className="card">
                     <div className="stat-num">2.3&times;</div>
-                    <p className="mb-2" style={{ color: 'var( - ink)', fontWeight: 600, marginTop: 8 }}>Mobile add-to-cart lift</p>
+                    <p className="mb-2" style={{ color: T.ink, fontWeight: 600, marginTop: 8 }}>Mobile add-to-cart lift</p>
                     <p style={{ fontSize: 13 }}>vs. a generic theme, averaged across our ecommerce builds.</p>
                   </div>
                   <div className="card">
                     <div className="stat-num">&lt;1.5s</div>
-                    <p className="mb-2" style={{ color: 'var( - ink)', fontWeight: 600, marginTop: 8 }}>Typical mobile load</p>
+                    <p className="mb-2" style={{ color: T.ink, fontWeight: 600, marginTop: 8 }}>Typical mobile load</p>
                     <p style={{ fontSize: 13 }}>on delivery, measured in Lighthouse before handover.</p>
                   </div>
                 </div>
               </div>
 
               <div className="card" style={{ padding: 8 }}>
-                <div style={{ background: 'var( - dark)', color: '#fff', borderRadius: 12, padding: '16px 18px', fontFamily: 'var( - fd)', fontWeight: 700 }}>
+                <div style={{ background: T.dark, color: '#fff', borderRadius: 12, padding: '16px 18px', fontFamily: T.fd, fontWeight: 700 }}>
                   Every build includes
                 </div>
-                {[
-                  'Custom website design, no recycled templates',
-                  'Mobile-first, 90+ Lighthouse score',
-                  'On-page SEO and schema baked in',
-                  'A CMS so you can edit it yourself',
-                  'Full code ownership on your GitHub',
-                ].map((item) => (
-                  <div key={item} className="scorecard-row" style={{ padding: '13px 12px' }}>
-                    <span style={{ display: 'flex', gap: 10, alignItems: 'center', fontSize: 14, color: 'var( - ink)' }}>
-                      <span style={{ color: 'var( - orange)', fontWeight: 700 }}>&#10003;</span>{item}
-                    </span>
-                  </div>
-                ))}
+                <ul className="tick-list">
+                  {[
+                    'Custom website design, no recycled templates',
+                    'Mobile-first, 90+ Lighthouse score',
+                    'On-page SEO and schema baked in',
+                    'A CMS so you can edit it yourself',
+                    'Full code ownership on your GitHub',
+                  ].map((item) => (
+                    <li key={item}>
+                      <span aria-hidden="true">&#10003;</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>
         </section>
+
+        {/* ═══ 7B. MID-PAGE CTA ═══ */}
+        <MidPageCTA
+          headline="Have your London site checked against this list"
+          sub="Send us the address and we will run your current site through the same pre-launch checklist above, then send back what passes, what fails, and which failures are actually costing you enquiries."
+          label="Get a free site review"
+          note="Bhavesh reads every one. You get a written reply within one business day."
+        />
 
         {/* ═══ 8. PLATFORMS ═══ */}
         <section className="sec-lg">
@@ -520,6 +775,33 @@ export default function LondonWebDesignPage() {
           </div>
         </section>
 
+        {/* ═══ 8B. HOW TO CHOOSE BETWEEN THEM ═══ */}
+        <section className="sec">
+          <div className="wrap">
+            <div className="card" style={{ maxWidth: 900 }}>
+              <h3>How to pick, in one pass</h3>
+              <p className="mt-4">
+                Read down until a line describes you. That is usually the right platform, and we will tell you on
+                the call if it is not.
+              </p>
+              <ul className="arrow-list mt-4">
+                <li><b>You sell products online.</b> Shopify, unless you have unusual stock, pricing, or trade account rules, in which case a custom build</li>
+                <li><b>You publish something new most weeks.</b> WordPress, because your editors already know it and the cost of training is nil</li>
+                <li><b>Your marketing team changes the site constantly and has no developer.</b> Webflow</li>
+                <li><b>You need to be live in days for a launch or a raise.</b> Framer</li>
+                <li><b>Speed on mobile is the thing that decides whether you win.</b> Next.js</li>
+                <li><b>People log in and do work inside your product.</b> A custom build, because no page builder survives real application logic</li>
+              </ul>
+              <p className="mt-6" style={{ fontSize: 14 }}>
+                Two honest warnings. First, moving between these later is real work, so pick for where you will be
+                in three years, not where you are this month. Second, the platform matters far less than whether the
+                pages are fast and say the right thing. A well-built WordPress site beats a badly built Next.js one
+                every time.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* ═══ 9. COMPARISON TABLE ═══ */}
         <section className="sec-lg dot-grid">
           <div className="wrap">
@@ -557,11 +839,55 @@ export default function LondonWebDesignPage() {
               <h2>From brief to live in four stages</h2>
             </div>
             <div className="process-grid mt-12" style={{ gridTemplateColumns: 'repeat(4,1fr)' }}>
-              <div className="card"><span className="stage-num">01</span><h3>Discovery</h3><p className="mt-4">We map your London customers, goals, and the pages that must earn their trust before anyone opens a design tool.</p></div>
-              <div className="card"><span className="stage-num">02</span><h3>Design</h3><p className="mt-4">Custom, conversion-first web design, reviewed with you before a single line of code is written.</p></div>
-              <div className="card"><span className="stage-num">03</span><h3>Build</h3><p className="mt-4">Engineered on your chosen platform: fast, responsive, SEO-ready, and accessible on a London phone.</p></div>
-              <div className="card"><span className="stage-num">04</span><h3>Launch</h3><p className="mt-4">We ship, hand over the code to your GitHub, and stay on for support afterwards.</p></div>
+              <div className="card">
+                <span className="stage-num">01</span><h3>Discovery</h3>
+                <p className="mt-4">Roughly week one. We map your London customers, goals, and the pages that must earn their trust before anyone opens a design tool.</p>
+                <ul className="chk-list mt-4">
+                  <li>A kick-off call, then a written brief you sign off</li>
+                  <li>A crawl of your current site, if there is one</li>
+                  <li>A look at the five competitors you actually lose to</li>
+                  <li>An agreed page list and a single success measure</li>
+                </ul>
+              </div>
+              <div className="card">
+                <span className="stage-num">02</span><h3>Design</h3>
+                <p className="mt-4">Roughly week two. Custom, conversion-first web design, reviewed with you before a single line of code is written.</p>
+                <ul className="chk-list mt-4">
+                  <li>The home page and one inner page drawn first, for direction</li>
+                  <li>Mobile drawn alongside desktop, never bolted on afterwards</li>
+                  <li>Two rounds of changes built into the schedule</li>
+                  <li>Colour and type contrast checked at the design stage</li>
+                </ul>
+              </div>
+              <div className="card">
+                <span className="stage-num">03</span><h3>Build</h3>
+                <p className="mt-4">Roughly weeks three and four. Engineered on your chosen platform: fast, responsive, SEO-ready, and accessible on a London phone.</p>
+                <ul className="chk-list mt-4">
+                  <li>A staging address you can watch as it comes together</li>
+                  <li>Content loaded and the CMS wired to it</li>
+                  <li>Speed and accessibility tested as we go, not at the end</li>
+                  <li>Forms, tracking, and integrations connected and tested</li>
+                </ul>
+              </div>
+              <div className="card">
+                <span className="stage-num">04</span><h3>Launch</h3>
+                <p className="mt-4">End of week four. We ship, hand over the code to your GitHub, and stay on for support afterwards.</p>
+                <ul className="chk-list mt-4">
+                  <li>Redirects checked one by one before the switch</li>
+                  <li>Sitemap submitted and the new pages requested for indexing</li>
+                  <li>Code, logins, and a recorded walkthrough handed over</li>
+                  <li>A support window after go-live at no extra charge</li>
+                </ul>
+              </div>
             </div>
+
+            <p className="lead mt-8" style={{ maxWidth: 820 }}>
+              Four weeks is the standard shape for a marketing site. An express build of up to five pages can be
+              done in seven days. Ecommerce and web applications are scoped on their own, because pretending a
+              200-product store fits a four-week template is how projects go wrong. The single biggest cause of
+              delay is not engineering, it is waiting for content and sign-off, which is why we ask for a named
+              decision maker up front.
+            </p>
           </div>
         </section>
 
@@ -608,9 +934,9 @@ export default function LondonWebDesignPage() {
               </div>
 
               <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid var( - n200)', padding: '14px 18px' }}>
-                  <span style={{ fontFamily: 'var( - fm)', fontSize: 10, letterSpacing: '.13em', textTransform: 'uppercase', color: 'var( - n400)' }}>London &middot; Monthly Search Demand</span>
-                  <span style={{ background: 'var( - orange)', color: '#fff', fontFamily: 'var( - fm)', fontSize: 10, borderRadius: 999, padding: '3px 9px' }}>DataForSEO</span>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: `1px solid `, padding: '14px 18px' }}>
+                  <span style={{ fontFamily: T.fm, fontSize: 10, letterSpacing: '.13em', textTransform: 'uppercase', color: T.n400 }}>London &middot; Monthly Search Demand</span>
+                  <span style={{ background: T.orange, color: '#fff', fontFamily: T.fm, fontSize: 10, borderRadius: 999, padding: '3px 9px' }}>DataForSEO</span>
                 </div>
                 <div style={{ padding: '4px 18px 14px' }}>
                   {[
@@ -621,12 +947,12 @@ export default function LondonWebDesignPage() {
                     { kw: 'london web designer', v: '880', w: '20%', kd: 'KD 48 · Freelance-intent' },
                   ].map((r) => (
                     <div key={r.kw} className="demand-row">
-                      <div className="demand-top"><span className="demand-kw">{r.kw}</span><span className="demand-v">{r.v}<span style={{ fontSize: 9, color: 'var( - n400)' }}> /mo</span></span></div>
+                      <div className="demand-top"><span className="demand-kw">{r.kw}</span><span className="demand-v">{r.v}<span style={{ fontSize: 9, color: T.n400 }}> searches</span></span></div>
                       <div className="demand-bar"><i style={{ width: r.w }} /></div>
                       <div className="demand-kd">{r.kd}</div>
                     </div>
                   ))}
-                  <p style={{ textAlign: 'center', fontFamily: 'var( - fm)', fontSize: 10, color: 'var( - n400)', marginTop: 10 }}>Source: DataForSEO, London / United Kingdom, July 2026</p>
+                  <p style={{ textAlign: 'center', fontFamily: T.fm, fontSize: 10, color: T.n400, marginTop: 10 }}>Source: DataForSEO, London / United Kingdom, July 2026</p>
                 </div>
               </div>
             </div>
@@ -661,6 +987,17 @@ export default function LondonWebDesignPage() {
                     full custom build, we will be straight about which one fits your goal.
                   </p>
                 </div>
+                <h3 className="mt-8">The things that actually move the number</h3>
+                <ul className="arrow-list mt-4">
+                  <li><b>Unique page templates, not page count.</b> Fifty products on one template is cheaper than five pages that all look different</li>
+                  <li><b>Taking payments.</b> A checkout brings stock, tax, delivery rules, and refunds with it</li>
+                  <li><b>Systems that have to talk to each other.</b> A CRM, a booking tool, or a stock feed each add engineering time</li>
+                  <li><b>Who writes the words.</b> Handing us finished copy is the single easiest way to keep scope tight</li>
+                  <li><b>Who supplies the pictures.</b> Sourcing, licensing, and editing imagery is real work if it falls to us</li>
+                  <li><b>Accounts and logins.</b> Anything a customer signs into moves the job from a website to an application</li>
+                  <li><b>More than one language.</b> Each language multiplies pages, testing, and review</li>
+                  <li><b>How fast you need it.</b> Compressing four weeks into one means more people on it at once</li>
+                </ul>
                 <div className="mt-8">
                   <ModalCTAButton label="Get a fixed quote for your project" region="uk" modalVariant="default" btnVariant="primary-light" />
                 </div>
@@ -671,10 +1008,55 @@ export default function LondonWebDesignPage() {
                 <div className="scorecard-row"><div className="scorecard-metric">Marketing site vs. ecommerce</div><div className="scorecard-val" style={{ fontSize: 14 }}>Type</div></div>
                 <div className="scorecard-row"><div className="scorecard-metric">Integrations (CRM, payments, stock)</div><div className="scorecard-val" style={{ fontSize: 14 }}>Systems</div></div>
                 <div className="scorecard-row"><div className="scorecard-metric">Custom design and copywriting</div><div className="scorecard-val" style={{ fontSize: 14 }}>Craft</div></div>
-                <div className="scorecard-row"><div className="scorecard-metric">No central London day rates</div><div className="scorecard-val" style={{ color: 'var( - green)', fontSize: 14 }}>Fixed</div></div>
-                <div className="scorecard-row"><div className="scorecard-metric">Fixed quote before you commit</div><div className="scorecard-val" style={{ color: 'var( - green)', fontSize: 14 }}>Always</div></div>
+                <div className="scorecard-row"><div className="scorecard-metric">No central London day rates</div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Fixed</div></div>
+                <div className="scorecard-row"><div className="scorecard-metric">Fixed quote before you commit</div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Always</div></div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* ═══ 12B. WHO THIS SUITS ═══ */}
+        <section className="sec-lg">
+          <div className="wrap">
+            <div style={{ maxWidth: 760 }}>
+              <span className="eyebrow">Fit</span>
+              <h2>Who this is for, and who it is not</h2>
+              <p className="lead mt-4">
+                We would rather turn work down early than take it and disappoint someone. Read both lists before
+                you get in touch.
+              </p>
+            </div>
+            <div className="col-6040 mt-12">
+              <div className="card">
+                <h3>A good fit</h3>
+                <ul className="chk-list mt-4">
+                  <li>London businesses whose current site is slow, dated, or was never built to bring in enquiries</li>
+                  <li>Startups and scale-ups who need a site an investor or a buyer will take seriously</li>
+                  <li>DTC and B2B brands selling online who are losing people on mobile at the checkout</li>
+                  <li>Firms in the City, Canary Wharf, or Westminster where trust, accuracy, and accessibility are non-negotiable</li>
+                  <li>Anyone stuck on a rented platform who wants to own their own website outright</li>
+                  <li>Teams with someone who can make a decision and stick to it</li>
+                </ul>
+              </div>
+              <div className="card">
+                <h3>Probably not a fit</h3>
+                <ul className="no-list mt-4">
+                  <li>You want the cheapest possible site. A template builder will genuinely serve you better</li>
+                  <li>You want an agency to sit in your office in Zone 1 every week. We work remotely by design</li>
+                  <li>You want a full brand identity built from nothing. That is a brand designer&apos;s job, not ours</li>
+                  <li>You need ongoing monthly SEO more than you need a new site. Fix the ranking work first</li>
+                  <li>Nobody on your side can free up a few hours a week for reviews and content</li>
+                  <li>You want us to guarantee a search position. Nobody honest can promise that</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ═══ 12C. WHO WROTE THIS ═══ */}
+        <section className="sec">
+          <div className="wrap">
+            <AuthorCard variant="light" />
           </div>
         </section>
 
@@ -726,6 +1108,37 @@ export default function LondonWebDesignPage() {
             </div>
           </div>
         </section>
+
+        {/* ═══ 13B. SOURCES ═══ */}
+        <section className="sec" id="sources">
+          <div className="wrap">
+            <div className="card" style={{ maxWidth: 900 }}>
+              <span className="eyebrow">Sources</span>
+              <h3>Where the numbers on this page come from</h3>
+              <p className="mt-4">
+                Every figure quoted above is from a named public source, linked below. We checked each link on
+                {' '}{UPDATED_LABEL}.
+              </p>
+              <ol className="src-list mt-6">
+                {SOURCES.map((s) => (
+                  <li key={s.id}>
+                    <a href={s.url} target="_blank" rel="noopener noreferrer" className="cite">{s.title}</a>
+                    <span className="src-pub">{s.publisher}</span>
+                    <span className="src-used">{s.used}</span>
+                  </li>
+                ))}
+              </ol>
+              <p className="mt-6" style={{ fontSize: 13 }}>
+                Search demand figures shown earlier are from DataForSEO for London and the United Kingdom, and are
+                estimates rather than counts. Delivery timings and Lighthouse scores describe our own completed
+                projects.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* ═══ 13C. OTHER UK CITIES AND SERVICES ═══ */}
+        <CityLinksUK currentCity="london" currentService="web-design" />
 
         {/* ═══ 14. FINAL CTA ═══ */}
         <section className="dark-sec">

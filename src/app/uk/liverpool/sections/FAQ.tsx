@@ -1,8 +1,9 @@
 "use client";
 
-// Liverpool FAQ — fully static, zero accordion/filter logic.
-// All 12 answers permanently visible in the DOM.
-// AI crawlers (GPTBot, ClaudeBot, PerplexityBot) see every answer in HTML source.
+// Liverpool FAQ. No accordion, no filter, no hidden panels.
+// Every answer is permanently visible in the DOM, so AI crawlers (GPTBot,
+// ClaudeBot, PerplexityBot) read all of them straight out of the HTML source.
+// The count in the header is derived from FAQS.length so it can never drift.
 
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
@@ -14,7 +15,7 @@ import { FAQS } from '../faqData';
 export default function FAQ() {
   const sectionRef = useRef<HTMLElement>(null);
   const headerRef = useRef<HTMLDivElement>(null);
-  const listRef = useRef<HTMLDivElement>(null);
+  const listRef = useRef<HTMLUListElement>(null);
 
   useGSAP(
     () => {
@@ -80,11 +81,9 @@ export default function FAQ() {
     <section
       ref={sectionRef}
       id="faq"
-      aria-label="Frequently asked questions, Liverpool web design"
+      aria-label="Frequently asked questions, SEO agency Liverpool"
       className="relative w-full"
-      style={{ backgroundColor: "#0A0F1C", maxWidth: "100vw" }}
-      itemScope
-      itemType="https://schema.org/FAQPage"
+      style={{ backgroundColor: "#FAFAF7", maxWidth: "100vw" }}
     >
       <div
         className="mx-auto w-full max-w-[1200px] px-6 sm:px-8"
@@ -102,7 +101,7 @@ export default function FAQ() {
               <p
                 data-faq-head
                 style={{
-                  color: "#FF6B35",
+                  color: "#B23E13",
                   fontFamily: "var(--font-sans)",
                   fontWeight: 600,
                   fontSize: 12,
@@ -110,50 +109,47 @@ export default function FAQ() {
                   textTransform: "uppercase",
                 }}
               >
-                Liverpool Web Design FAQ
+                Liverpool SEO FAQ
               </p>
 
               <h2
                 data-faq-head
                 className="font-clash mt-4"
                 style={{
-                  color: "#FFFFFF",
+                  color: "#1A1A1A",
                   fontWeight: 700,
                   fontSize: "clamp(24px, 3.2vw, 36px)",
                   lineHeight: 1.1,
                   letterSpacing: "-0.02em",
                 }}
               >
-                Everything Liverpool Businesses Ask Us
+                What Liverpool businesses ask before they hire an SEO agency
               </h2>
 
               <p
                 data-faq-head
                 style={{
-                  color: "rgba(255,255,255,0.55)",
+                  color: "#4A4A45",
                   fontFamily: "var(--font-sans)",
                   fontSize: 14,
                   lineHeight: 1.6,
                   marginTop: 10,
                 }}
               >
-                12 answers. Zero jargon.
+                {FAQS.length} answers, written out in full. No jargon, no hedging.
               </p>
             </div>
           </aside>
 
-          {/* Right: all 12 cards, permanently expanded */}
-          <div ref={listRef} className="flex flex-col gap-4">
+          {/* Right: every card, permanently expanded */}
+          <ul ref={listRef} className="flex list-none flex-col gap-4 p-0">
             {FAQS.map((item, i) => (
-              <div
+              <li
                 key={item.q}
                 data-faq-card
-                itemScope
-                itemProp="mainEntity"
-                itemType="https://schema.org/Question"
                 style={{
-                  backgroundColor: "rgba(255,255,255,0.04)",
-                  border: "1px solid rgba(255,255,255,0.08)",
+                  backgroundColor: "#FFFFFF",
+                  border: "1px solid #D9D9D2",
                   borderRadius: 16,
                   padding: "24px",
                 }}
@@ -167,9 +163,9 @@ export default function FAQ() {
                       width: 40,
                       height: 40,
                       minWidth: 40,
-                      backgroundColor: "rgba(147,197,253,0.12)",
-                      border: "1px solid rgba(147,197,253,0.3)",
-                      color: "#93C5FD",
+                      backgroundColor: "#FEF3E8",
+                      border: "1px solid #F3C9B6",
+                      color: "#B23E13",
                       fontFamily: "var(--font-sans)",
                       fontSize: 13,
                       fontVariantNumeric: "tabular-nums",
@@ -180,9 +176,8 @@ export default function FAQ() {
 
                   <div className="flex-1 min-w-0">
                     <h3
-                      itemProp="name"
                       style={{
-                        color: "#FFFFFF",
+                        color: "#1A1A1A",
                         fontFamily: "var(--font-sans)",
                         fontWeight: 600,
                         fontSize: "clamp(15px, 1.1vw, 17px)",
@@ -194,15 +189,10 @@ export default function FAQ() {
                       {item.q}
                     </h3>
 
-                    <div
-                      itemScope
-                      itemProp="acceptedAnswer"
-                      itemType="https://schema.org/Answer"
-                    >
+                    <div>
                       <p
-                        itemProp="text"
                         style={{
-                          color: "rgba(255,255,255,0.65)",
+                          color: "#4A4A45",
                           fontFamily: "var(--font-sans)",
                           fontWeight: 400,
                           fontSize: "clamp(14px, 1.05vw, 15px)",
@@ -216,9 +206,9 @@ export default function FAQ() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </div>
     </section>

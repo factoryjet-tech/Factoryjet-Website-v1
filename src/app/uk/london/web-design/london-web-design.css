@@ -528,3 +528,88 @@
 .uk-londonwd .demand-bar {height:4px;background:var(--n100);border-radius:99px;margin-top:8px;overflow:hidden}
 .uk-londonwd .demand-bar i {display:block;height:100%;border-radius:99px;background:var(--orange)}
 .uk-londonwd .demand-kd {font-family:var(--fm);font-size:10px;color:var(--n400);margin-top:5px}
+
+
+/* ─── Lists (added 2026-08-25: page previously rendered zero list items) ─── */
+.uk-londonwd ul, .uk-londonwd ol {list-style:none}
+
+.uk-londonwd .chk-list li,
+.uk-londonwd .no-list li,
+.uk-londonwd .arrow-list li,
+.uk-londonwd .num-list li {
+  position:relative;padding-left:26px;margin-bottom:10px;
+  font-size:14.5px;line-height:1.65;color:var(--n600);
+}
+
+.uk-londonwd .chk-list li b,
+.uk-londonwd .no-list li b,
+.uk-londonwd .arrow-list li b {color:var(--ink);font-weight:600}
+
+.uk-londonwd .chk-list li::before {
+  content:"\2713";position:absolute;left:0;top:0;
+  color:var(--green);font-weight:700;font-size:13px;line-height:1.75;
+}
+
+.uk-londonwd .no-list li::before {
+  content:"\2013";position:absolute;left:2px;top:0;
+  color:var(--n400);font-weight:700;font-size:14px;line-height:1.6;
+}
+
+.uk-londonwd .arrow-list li::before {
+  content:"\2192";position:absolute;left:0;top:0;
+  color:#B23E13;font-weight:700;font-size:14px;line-height:1.65;
+}
+
+.uk-londonwd .num-list {counter-reset:numlist}
+.uk-londonwd .num-list li {counter-increment:numlist;margin-bottom:8px}
+.uk-londonwd .num-list li::before {
+  content:counter(numlist);position:absolute;left:0;top:1px;
+  font-family:var(--fm);font-size:11px;font-weight:600;color:#B23E13;
+}
+
+/* Tick list inside the dark-headed "Every build includes" card */
+.uk-londonwd .tick-list li {
+  display:flex;gap:10px;align-items:flex-start;
+  font-size:14px;color:var(--ink);line-height:1.55;
+  padding:13px 12px;border-bottom:1px solid var(--n100);
+}
+.uk-londonwd .tick-list li:last-child {border-bottom:none}
+.uk-londonwd .tick-list li span {color:var(--orange);font-weight:700;flex-shrink:0}
+
+/* Source list */
+.uk-londonwd .src-list {counter-reset:srclist}
+.uk-londonwd .src-list li {
+  counter-increment:srclist;position:relative;padding-left:30px;
+  margin-bottom:18px;padding-bottom:18px;border-bottom:1px solid var(--n100);
+}
+.uk-londonwd .src-list li:last-child {border-bottom:none;margin-bottom:0;padding-bottom:0}
+.uk-londonwd .src-list li::before {
+  content:"[" counter(srclist) "]";position:absolute;left:0;top:2px;
+  font-family:var(--fm);font-size:11px;font-weight:600;color:#B23E13;
+}
+.uk-londonwd .src-pub {display:block;font-family:var(--fm);font-size:10.5px;
+  letter-spacing:.06em;text-transform:uppercase;color:var(--n400);margin-top:4px}
+.uk-londonwd .src-used {display:block;font-size:13.5px;line-height:1.6;color:var(--n600);margin-top:6px}
+
+/* External citation links */
+.uk-londonwd a.cite {
+  color:#B23E13;text-decoration:underline;text-underline-offset:2px;
+  text-decoration-thickness:1px;font-weight:500;
+}
+.uk-londonwd a.cite:hover {text-decoration-thickness:2px}
+
+@media(max-width:700px) {
+  .uk-londonwd .chk-list.col-2 {grid-template-columns:1fr}
+}
+
+/* ─── Figure ─── */
+.uk-londonwd .fig {margin:0}
+.uk-londonwd .fig img {
+  display:block;width:100%;height:auto;
+  border:1px solid var(--n200);border-radius:16px;
+  background:var(--n100);
+}
+.uk-londonwd .fig figcaption {
+  font-family:var(--fm);font-size:11.5px;line-height:1.6;
+  color:var(--n400);margin-top:10px;max-width:640px;
+}

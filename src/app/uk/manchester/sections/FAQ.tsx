@@ -1,22 +1,71 @@
 /*
- * FAQ — Pouch-style editorial layout
+ * FAQ, Pouch-style editorial layout
  * Pure server component: no "use client", no GSAP, no useState.
- * All 16 Q&As are fully visible in static HTML at all times —
+ * All 24 Q&As are fully visible in static HTML at all times.
  * AI crawlers (GPTBot, ClaudeBot, PerplexityBot) parse every word
  * without executing JavaScript.
+ *
+ * ALL_FAQS at the bottom of this file is the single source the FAQPage JSON-LD
+ * in layout.tsx maps over. Never hand-write a second copy of these questions
+ * next to a script tag: schema that disagrees with the visible page is a
+ * cloaking problem, not a formatting one.
+ *
+ * The four questions in SEO_FAQS marked "PAA" are copied verbatim from the live
+ * People Also Ask box for "seo agency manchester", harvested 2026-08-25. Leave
+ * the wording alone: matching the real query is the entire point.
  */
 
 const CATEGORIES = [
   { label: "General Questions", href: "#faq-general" },
+  { label: "SEO in Manchester", href: "#faq-seo" },
   { label: "Technology & Performance", href: "#faq-technology" },
   { label: "Services & Capabilities", href: "#faq-services" },
   { label: "Comparisons & Strategy", href: "#faq-comparisons" },
 ];
 
+const SEO_FAQS = [
+  {
+    // PAA, verbatim
+    q: "How much does SEO cost in the UK?",
+    a: "It depends on the shape of the work, not the postcode. UK SEO is sold three ways: a one-off audit, a fixed-price project such as a technical clean-up, or a monthly retainer covering ongoing content and link earning. The drivers are how many pages need rewriting, how competitive your terms are, and how fast someone in-house can approve copy.",
+  },
+  {
+    // PAA, verbatim
+    q: "Is an SEO agency worth it?",
+    a: "It is worth it when one new customer pays for several months of work, and it is not worth it when you need leads inside a fortnight. Search moves slowly, so SEO compounds rather than switching on. Work out what an average customer is worth over a year. If one job would cover a quarter, the maths holds.",
+  },
+  {
+    // PAA, verbatim
+    q: "What is the 80/20 rule in SEO?",
+    a: "It is the observation that roughly 20% of the work drives roughly 80% of the results. That 20% is nearly always the same short list: fix what stops search engines reading the site, make pages fast on a mid-range phone, build one strong page per thing you sell, and earn a few genuine mentions. We do that first, deliberately.",
+  },
+  {
+    // PAA, verbatim
+    q: "How much should I pay for SEO services?",
+    a: "Pay enough to cover real senior time, and no more. Cheap SEO is usually a junior running a template checklist, which produces reports rather than rankings. Ask how many hours a month you are buying and who does them. Then ask what you lose if you leave. We quote a fixed scope in writing after a call.",
+  },
+  {
+    q: "How long does SEO take to work in Manchester?",
+    a: "Expect early movement in about three months and real commercial results in six to nine. Technical and speed fixes land fastest, because search engines just recrawl and re-rank. New pages for competitive Manchester terms take longer: they have to earn trust before they hold. Map pack results often move sooner, if your Google Business Profile has been neglected.",
+  },
+  {
+    q: "What does an SEO agency in Manchester actually do each month?",
+    a: "Four things, repeated. Check the site for new technical faults and fix them. Write or rewrite pages aimed at terms real buyers type. Tidy the local listings so your name, address and phone match everywhere. Earn mentions from sites that matter in your trade. The monthly report exists to show which of the four moved.",
+  },
+  {
+    q: "Can I do SEO myself instead of hiring an agency?",
+    a: "Yes, and for a small local business that is often the right call. Claim and complete your Google Business Profile, ask happy customers for reviews, give every service its own page, and get the site loading fast on mobile. That covers most of it. Bring in an agency once the obvious fixes run out.",
+  },
+  {
+    q: "How do I check an SEO agency is any good before signing?",
+    a: "Ask for three things. A live page they built and the terms it ranks for, so you can check it yourself. The name of the person doing the work, not the one selling it. Written confirmation that you keep the site, content, analytics and links if you leave. Hesitation on the third tells you plenty.",
+  },
+];
+
 const GENERAL_FAQS = [
   {
     q: "How much does web design cost in Manchester?",
-    a: "Manchester web design costs vary enormously depending on the agency and scope, from budget template shops to premium bespoke studios. FactoryJet's pricing is fixed-price and scoped to your build: the main drivers are the number of pages, e-commerce or custom functionality, and content needs. Every project is quoted up front after a free discovery call, so you know the full cost before work starts. Lighthouse 90+ performance and a full schema stack are included as standard.",
+    a: "Manchester web design costs vary hugely, from budget template shops to bespoke studios. Ours is fixed-price and scoped to your build: the drivers are page count, whether you need e-commerce or custom functionality, and how much content has to be written. Every project is quoted in writing after a free call, so you know the full cost before work starts.",
   },
   {
     q: "What is the best web design agency in Manchester?",
@@ -73,7 +122,7 @@ const SERVICES_FAQS = [
 const COMPARISONS_FAQS = [
   {
     q: "How does FactoryJet compare to a Manchester website design company that uses WordPress?",
-    a: "Most Manchester website design companies build on WordPress with premium themes and no performance engineering, charging premium fees for websites that score 40–60 on Lighthouse. FactoryJet builds on Next.js 15: every site ships with Lighthouse 90+ performance, full schema markup, server-side rendering, and AI search visibility, typically at a meaningfully lower cost. Our pricing is fixed-price and scoped to your build, quoted up front after a free discovery call.",
+    a: "Most build on WordPress with a premium theme and no performance work, and the result often scores 40 to 60 on Lighthouse. We build on Next.js 15, so every site ships with Lighthouse 90+, full schema, server-side rendering and AI search visibility. Scope is fixed and quoted in writing after a free call.",
   },
   {
     q: "What makes a digital agency different from a traditional web development company?",
@@ -89,7 +138,14 @@ const COMPARISONS_FAQS = [
   },
 ];
 
-export const ALL_FAQS = [...GENERAL_FAQS, ...TECHNOLOGY_FAQS, ...SERVICES_FAQS, ...COMPARISONS_FAQS];
+/** The one array. The visible list and the FAQPage JSON-LD both read from it. */
+export const ALL_FAQS = [
+  ...GENERAL_FAQS,
+  ...SEO_FAQS,
+  ...TECHNOLOGY_FAQS,
+  ...SERVICES_FAQS,
+  ...COMPARISONS_FAQS,
+];
 
 function QAList({ items }: { items: { q: string; a: string }[] }) {
   return (
@@ -156,7 +212,7 @@ export default function FAQ() {
           {/* ── RIGHT: grouped Q&A ─────────────────────────────────────── */}
           {/*
             Content is NEVER hidden behind accordions or JS toggles.
-            All 16 Q&As are static HTML: GPTBot, ClaudeBot, and
+            All 24 Q&As are static HTML: GPTBot, ClaudeBot, and
             PerplexityBot parse every word without executing JavaScript.
           */}
           <div className="lg:col-span-9">
@@ -172,6 +228,15 @@ export default function FAQ() {
 
             {/* Category 2 */}
             <h2
+              id="faq-seo"
+              className="text-2xl font-bold text-gray-900 mb-8 mt-16"
+            >
+              SEO in Manchester
+            </h2>
+            <QAList items={SEO_FAQS} />
+
+            {/* Category 3 */}
+            <h2
               id="faq-technology"
               className="text-2xl font-bold text-gray-900 mb-8 mt-16"
             >
@@ -179,7 +244,7 @@ export default function FAQ() {
             </h2>
             <QAList items={TECHNOLOGY_FAQS} />
 
-            {/* Category 3 */}
+            {/* Category 4 */}
             <h2
               id="faq-services"
               className="text-2xl font-bold text-gray-900 mb-8 mt-16"
@@ -188,7 +253,7 @@ export default function FAQ() {
             </h2>
             <QAList items={SERVICES_FAQS} />
 
-            {/* Category 4 */}
+            {/* Category 5 */}
             <h2
               id="faq-comparisons"
               className="text-2xl font-bold text-gray-900 mb-8 mt-16"

@@ -5,23 +5,26 @@ import WebDesignArchitectureBlueprint from '@/components/v2/WebDesignArchitectur
 import WebDesignValueCalculator from '@/components/v2/WebDesignValueCalculator';
 import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import CityLinksUK from '@/components/v2/CityLinksUK';
-import ModalCTAButton from '@/components/v2/ModalCTAButton';
-import Footer from '@/app/uk/sections/Footer';
+import { CANONICAL } from './crumbs';
 
-const CANONICAL = 'https://factoryjet.com/uk/manchester';
-const PAGE_MODIFIED = '2026-08-24';
+const PAGE_MODIFIED = '2026-08-25';
 
 export const metadata: Metadata = {
-  title: 'Web Design Agency Manchester | Fast Next.js Sites | FactoryJet',
+  title: 'SEO Agency Manchester | Web Design, AI SEO | FactoryJet',
   description:
-    'Manchester web design agency. Custom Next.js websites, sub-second load speeds, mobile conversion flows, and 100% full IP code ownership for Manchester businesses.',
-  alternates: { canonical: CANONICAL },
+    'Manchester SEO and web design agency. Technical fixes, local map pack work, fast Next.js builds, and full code ownership for Greater Manchester businesses.',
+  alternates: {
+    canonical: CANONICAL,
+    // UK-only page with no international twin, so both entries point at itself.
+    languages: { 'en-GB': CANONICAL, 'x-default': CANONICAL },
+  },
   openGraph: {
-    title: 'Web Design Agency Manchester | Fast Next.js Sites | FactoryJet',
+    title: 'SEO Agency Manchester | Web Design, AI SEO | FactoryJet',
     description:
-      'Custom Next.js web design, e-commerce, and AI search optimization in Manchester. Sub-second performance and 100% code ownership.',
+      'SEO, local search and fast Next.js web design for Manchester businesses. Fixed-price milestones and 100% code ownership.',
     url: CANONICAL,
-    images: [{ url: '/images/uk/manchester/hero-manchester.webp' }],
+    // /images/uk/manchester/hero-manchester.webp never existed. This one does.
+    images: [{ url: '/images/manchester/hero-skyline.webp' }],
   },
 };
 
@@ -44,7 +47,7 @@ const jsonLd = {
       '@id': `${CANONICAL}#business`,
       name: 'FactoryJet Technologies: Manchester',
       url: CANONICAL,
-      description: 'Web design, e-commerce, AI agents and AI SEO agency serving Manchester and the North West.',
+      description: 'SEO, web design, e-commerce and AI search agency serving Manchester and the North West.',
       areaServed: {
         '@type': 'City',
         name: 'Manchester',
@@ -75,8 +78,8 @@ const jsonLd = {
     {
       '@type': 'Service',
       '@id': `${CANONICAL}#service`,
-      name: 'Web Design Manchester',
-      serviceType: 'Web design',
+      name: 'SEO Agency Manchester',
+      serviceType: 'Search engine optimisation',
       provider: { '@id': 'https://factoryjet.com/#organization' },
       areaServed: { '@type': 'City', name: 'Manchester' },
       url: CANONICAL,
@@ -102,7 +105,7 @@ const jsonLd = {
       '@type': 'WebPage',
       '@id': `${CANONICAL}#webpage`,
       url: CANONICAL,
-      name: 'Web Design Agency Manchester | Fast Next.js Sites | FactoryJet',
+      name: 'SEO Agency Manchester | Web Design, AI SEO | FactoryJet',
       dateModified: PAGE_MODIFIED,
       author: {
         '@type': 'Person',
@@ -127,100 +130,43 @@ export default function Page() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <div className="uk-manchester-root">
-        <ManchesterPage />
+        {/*
+          These blocks are passed as children so they render INSIDE <main>, above
+          the closing CTA. They used to sit after <ManchesterPage />, which put
+          them after the page footer: outside the main landmark, with 25 internal
+          links and every list item invisible to anything that reads landmarks.
 
-        {/* ── COUNTER-NARRATIVE & VENDOR EVALUATION MATRIX ── */}
-        <section className="py-16 bg-[#111111] border-t border-slate-800 text-slate-100">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center mb-12">
-              <span className="text-xs font-bold uppercase tracking-widest text-[#FF5622]">The Direct Comparison</span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-white mt-2">
-                The Typical UK Agency Frustration vs FactoryJet Engineering Approach
-              </h2>
-              <p className="text-slate-300 mt-4 text-sm leading-relaxed">
-                Traditional Manchester agencies sell bloated WordPress themes and junior account handlers. FactoryJet delivers deterministic Next.js builds, sub-second performance, and 100% full IP code ownership.
-              </p>
+          The dark counter-narrative table that used to live here was removed on
+          2026-08-25. It repeated the CompetitorComparison section almost row for
+          row, and it was the third dark band on a page whose brand anchor allows
+          one.
+        */}
+        <ManchesterPage>
+          {/* Regional performance benchmark */}
+          <section className="bg-white py-12">
+            <div className="mx-auto max-w-[1120px] px-4 sm:px-6 lg:px-8">
+              <RegionalBenchmarkCard city="Manchester" vertical="web-design" />
             </div>
+          </section>
 
-            <div className="overflow-x-auto mb-10">
-              <table className="w-full border-collapse bg-[#1A1A1A] rounded-xl border border-slate-800 text-left text-sm">
-                <thead>
-                  <tr className="border-b border-slate-800 bg-[#222222]">
-                    <th className="p-4 font-bold text-white">Evaluation Criteria</th>
-                    <th className="p-4 font-bold text-slate-400">Traditional Manchester Agencies</th>
-                    <th className="p-4 font-bold text-[#FF5622]">FactoryJet Engineering</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="border-b border-slate-800/60">
-                    <td className="p-4 font-semibold text-white">Core Web Vitals SLA</td>
-                    <td className="p-4 text-slate-400">Unverified; average 3.8s LCP</td>
-                    <td className="p-4 text-emerald-400 font-semibold">Guaranteed &lt; 1.2s LCP (95+ score)</td>
-                  </tr>
-                  <tr className="border-b border-slate-800/60">
-                    <td className="p-4 font-semibold text-white">Delivery Speed</td>
-                    <td className="p-4 text-slate-400">8 to 16 weeks typical timeline</td>
-                    <td className="p-4 text-emerald-400 font-semibold">7-Day Express Delivery SLA</td>
-                  </tr>
-                  <tr className="border-b border-slate-800/60">
-                    <td className="p-4 font-semibold text-white">Pricing Model</td>
-                    <td className="p-4 text-slate-400">Day rates + ongoing retainers</td>
-                    <td className="p-4 text-emerald-400 font-semibold">Fixed-price milestone model</td>
-                  </tr>
-                  <tr>
-                    <td className="p-4 font-semibold text-white">Code &amp; IP Ownership</td>
-                    <td className="p-4 text-slate-400">Proprietary CMS lock-in or agency hosting</td>
-                    <td className="p-4 text-emerald-400 font-semibold">100% full codebase pushed to your GitHub</td>
-                  </tr>
-                </tbody>
-              </table>
+          {/* Architecture blueprint */}
+          <div id="manchester-architecture-blueprint">
+            <WebDesignArchitectureBlueprint />
+          </div>
+
+          {/* Interactive speed and pipeline value calculator */}
+          <WebDesignValueCalculator city="Manchester" region="uk" />
+
+          {/* UK regional horizontal cross-links */}
+          <CityLinksUK currentCity="manchester" />
+
+          {/* Verified author entity card */}
+          <section className="bg-fj-cream py-12 border-t border-fj-neutral-200">
+            <div className="mx-auto max-w-[1120px] px-4 sm:px-6 lg:px-8">
+              <AuthorCard />
             </div>
-
-            {/* Standard Deliverables Checklist */}
-            <div className="bg-[#1A1A1A] border border-slate-800 rounded-xl p-6">
-              <h3 className="text-base font-bold text-white mb-3">Standard Engineering Deliverables on Every Manchester Build:</h3>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs text-slate-300">
-                <li className="flex items-center gap-2"><span className="text-emerald-400 font-bold">✓</span> Server-rendered Next.js 15 App Router</li>
-                <li className="flex items-center gap-2"><span className="text-emerald-400 font-bold">✓</span> LocalBusiness Schema.org JSON-LD graph</li>
-                <li className="flex items-center gap-2"><span className="text-emerald-400 font-bold">✓</span> 95+ Core Web Vitals speed verification</li>
-                <li className="flex items-center gap-2"><span className="text-emerald-400 font-bold">✓</span> Complete GitHub repository transfer</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-        
-        {/* ── REGIONAL BENCHMARK & ARCHITECTURE BLUEPRINT ── */}
-        <section className="sec-lg" style={{ backgroundColor: '#FFFFFF', padding: '48px 0 16px' }}>
-          <div className="wrap" style={{ maxWidth: 1120, margin: '0 auto', padding: '0 16px' }}>
-            <RegionalBenchmarkCard city="Manchester" vertical="web-design" />
-          </div>
-        </section>
-
-        <div id="manchester-architecture-blueprint">
-          <WebDesignArchitectureBlueprint />
-        </div>
-
-        {/* ── INTERACTIVE SPEED & PIPELINE VALUE CALCULATOR ── */}
-        <WebDesignValueCalculator city="Manchester" region="uk" />
-
-        {/* ── UK REGIONAL HORIZONTAL CROSS-LINKS ── */}
-        <CityLinksUK currentCity="manchester" />
-
-        {/* ── VERIFIED AUTHOR ENTITY CARD ── */}
-        <section className="sec-lg" style={{ backgroundColor: '#F6F6F9', padding: '48px 0', borderTop: '1px solid #E6E6EC' }}>
-          <div className="wrap" style={{ maxWidth: 1120, margin: '0 auto', padding: '0 16px' }}>
-            <AuthorCard />
-          </div>
-        </section>
-
-        {/* ── FINAL MODAL CTA STRIP ── */}
-        <section className="py-12 bg-[#0E0E0E] border-t border-slate-800 text-center">
-          <div className="max-w-xl mx-auto px-4">
-            <h3 className="text-xl font-bold text-white mb-3">Ready to transform your Manchester digital presence?</h3>
-            <p className="text-sm text-slate-400 mb-6">Receive a custom architectural scope and fixed timeline from our senior team.</p>
-            <ModalCTAButton label="Get my free quote" region="uk" modalVariant="default" btnVariant="primary-light" />
-          </div>
-        </section>
+          </section>
+        </ManchesterPage>
       </div>
     </>
   );

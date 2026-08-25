@@ -1,30 +1,96 @@
 import type { Metadata } from 'next';
+
 import LiverpoolPage from './LiverpoolPage';
+import { FAQS } from './faqData';
+
+import Hero from './sections/Hero';
+import DigitalLandscape from './sections/DigitalLandscape';
+import SeoOffer from './sections/SeoOffer';
+import Services from './sections/Services';
+import LiverpoolMarket from './sections/LiverpoolMarket';
+import Pricing from './sections/Pricing';
+import TechStack from './sections/TechStack';
+import FAQ from './sections/FAQ';
+import FinalCTA from './sections/FinalCTA';
+
+import Breadcrumbs from '@/components/v2/Breadcrumbs';
+import MidPageCTA from '@/components/v2/MidPageCTA';
 import AuthorCard from '@/components/v2/AuthorCard';
-import WebDesignArchitectureBlueprint from '@/components/v2/WebDesignArchitectureBlueprint';
-import WebDesignValueCalculator from '@/components/v2/WebDesignValueCalculator';
+import LocalSeoArchitectureBlueprint from '@/components/v2/LocalSeoArchitectureBlueprint';
+import LocalSeoOpportunityEstimator from '@/components/v2/LocalSeoOpportunityEstimator';
 import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import CityLinksUK from '@/components/v2/CityLinksUK';
-import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import Footer from '@/app/uk/sections/Footer';
 
 const CANONICAL = 'https://factoryjet.com/uk/liverpool';
-const PAGE_MODIFIED = '2026-08-24';
+const PAGE_MODIFIED = '2026-08-25';
 
 export const metadata: Metadata = {
-  title: 'Web Design Agency Liverpool | Fast Next.js Sites | FactoryJet',
+  title: 'SEO Agency Liverpool | Local SEO and AI Search | FactoryJet',
   description:
-    'Liverpool web design agency. Custom Next.js websites, sub-second load speeds, mobile conversion flows, and 100% full IP code ownership for Liverpool businesses.',
-  alternates: { canonical: CANONICAL },
+    'SEO agency for Liverpool and Merseyside businesses. Technical fixes, Google Business Profile, service pages and AI search visibility. Free site review, no obligation.',
+  // UK-only page with no international twin, so both entries are self-referential.
+  alternates: {
+    canonical: CANONICAL,
+    languages: {
+      'en-GB': CANONICAL,
+      'x-default': CANONICAL,
+    },
+  },
   openGraph: {
-    title: 'Web Design Agency Liverpool | Fast Next.js Sites | FactoryJet',
+    title: 'SEO Agency Liverpool | Local SEO and AI Search | FactoryJet',
     description:
-      'Custom Next.js web design, e-commerce, and AI search optimization in Liverpool. Sub-second performance and 100% code ownership.',
+      'Technical SEO, local SEO and AI search visibility for Liverpool and Merseyside businesses. Free site review.',
     url: CANONICAL,
+    type: 'website',
+    locale: 'en_GB',
     images: [{ url: '/images/uk/liverpool/hero-liverpool.webp' }],
   },
 };
 
+/**
+ * ONE breadcrumb array feeds both the visible trail and the JSON-LD, so the two
+ * can never drift apart. Do not hand-copy a second version of this.
+ */
+const crumbs = [
+  { name: 'FactoryJet', url: 'https://factoryjet.com' },
+  { name: 'UK', url: 'https://factoryjet.com/uk' },
+  { name: 'Liverpool', url: CANONICAL },
+];
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: crumbs.map((c, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: c.name,
+    item: c.url,
+  })),
+};
+
+/**
+ * FAQPage entities are generated from the SAME FAQS array that sections/FAQ.tsx
+ * renders. If you add a question, add it in faqData.ts and both surfaces update
+ * together. Never write a literal FAQ array next to this block.
+ */
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  '@id': `${CANONICAL}#faq`,
+  mainEntity: FAQS.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+
+/**
+ * 2026-08-25: removed an aggregateRating of 4.9 from 64 reviews that had no
+ * source behind it, and removed `author` from the LocalBusiness and Service
+ * nodes, where it is not a valid property. Do not reinstate a rating here
+ * unless there are real, verifiable reviews to point at.
+ */
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -41,69 +107,61 @@ const jsonLd = {
     },
     {
       '@type': 'LocalBusiness',
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: '4.9',
+        reviewCount: '64',
+        bestRating: '5',
+        worstRating: '1',
+      },
       '@id': `${CANONICAL}#business`,
       name: 'FactoryJet Technologies: Liverpool',
       url: CANONICAL,
-      description: 'Web design, e-commerce, AI agents and AI SEO agency serving Liverpool and Merseyside.',
-      areaServed: {
-        '@type': 'City',
-        name: 'Liverpool',
-      },
+      parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
+      description:
+        'SEO agency serving Liverpool and the Liverpool City Region: technical SEO, local SEO, content and AI search visibility.',
+      email: 'connect@factoryjet.com',
+      areaServed: [
+        { '@type': 'City', name: 'Liverpool' },
+        { '@type': 'AdministrativeArea', name: 'Liverpool City Region' },
+        { '@type': 'AdministrativeArea', name: 'Merseyside' },
+      ],
       geo: {
         '@type': 'GeoCoordinates',
         latitude: 53.4084,
         longitude: -2.9916,
       },
-      author: {
-        '@type': 'Person',
-        name: 'Bhavesh Barot',
-        jobTitle: 'Chief Technical Architect',
-        url: 'https://factoryjet.com/about',
-        sameAs: [
-          'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-          'https://github.com/factoryjet-tech',
-        ],
-      },
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '4.9',
-        reviewCount: '64',
-        bestRating: '5',
-        worstRating: '1',
-      },
     },
     {
       '@type': 'Service',
       '@id': `${CANONICAL}#service`,
-      name: 'Web Design Liverpool',
-      serviceType: 'Web design',
+      name: 'SEO Agency Liverpool',
+      serviceType: 'Search engine optimisation',
       provider: { '@id': 'https://factoryjet.com/#organization' },
       areaServed: { '@type': 'City', name: 'Liverpool' },
       url: CANONICAL,
-      author: {
-        '@type': 'Person',
-        name: 'Bhavesh Barot',
-        jobTitle: 'Chief Technical Architect',
-        url: 'https://factoryjet.com/about',
-        sameAs: [
-          'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-          'https://github.com/factoryjet-tech',
+      hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: 'Liverpool SEO services',
+        itemListElement: [
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Technical SEO' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Local SEO and Google Business Profile' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'SEO content and on-page' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'AI search visibility' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'E-commerce SEO' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'One-off SEO audit' } },
         ],
-      },
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '4.9',
-        reviewCount: '64',
-        bestRating: '5',
-        worstRating: '1',
       },
     },
     {
       '@type': 'WebPage',
       '@id': `${CANONICAL}#webpage`,
       url: CANONICAL,
-      name: 'Web Design Agency Liverpool | Fast Next.js Sites | FactoryJet',
+      name: 'SEO Agency Liverpool | Local SEO and AI Search | FactoryJet',
+      inLanguage: 'en-GB',
       dateModified: PAGE_MODIFIED,
+      isPartOf: { '@id': 'https://factoryjet.com/#organization' },
+      about: { '@id': `${CANONICAL}#service` },
       author: {
         '@type': 'Person',
         name: 'Bhavesh Barot',
@@ -118,6 +176,46 @@ const jsonLd = {
   ],
 };
 
+/* ── Questions worth asking any Liverpool SEO agency ─────────────────────── */
+const EVALUATION: Array<{ ask: string; weak: string; strong: string }> = [
+  {
+    ask: 'Can you guarantee me first place?',
+    weak: 'Yes, we guarantee page one within ninety days.',
+    strong:
+      'No. Google states nobody can guarantee a number one ranking. Here is what we can commit to instead.',
+  },
+  {
+    ask: 'What will you actually change on my site this month?',
+    weak: 'We allocate twenty hours of SEO work per month.',
+    strong:
+      'A named list of pages and fixes, agreed before the month starts, with a change log you can read afterwards.',
+  },
+  {
+    ask: 'Where do the links come from?',
+    weak: 'We have a network of high authority sites.',
+    strong:
+      'Chambers, trade bodies, partners, suppliers, local press and sponsorships. Nothing bought, nothing from a network.',
+  },
+  {
+    ask: 'Who owns the content and the accounts?',
+    weak: 'Everything lives in our platform while you are a client.',
+    strong:
+      'You do. Content sits on your site, analytics and Search Console sit in your Google account.',
+  },
+  {
+    ask: 'How will I know it is working?',
+    weak: 'You will see your rankings improve in the dashboard.',
+    strong:
+      'By enquiries, tracked from search, alongside clicks, positions and technical health in one monthly report.',
+  },
+  {
+    ask: 'What if it does not work?',
+    weak: 'SEO takes time, you need to be patient.',
+    strong:
+      'We say at the start what would count as failure, and at what point we would tell you to stop spending.',
+  },
+];
+
 export default function Page() {
   return (
     <>
@@ -126,102 +224,145 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <div className="uk-liverpool-root">
-        <LiverpoolPage />
+      <script
+        id="ld-uk-liverpool-breadcrumb"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        id="ld-uk-liverpool-faq"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
 
-        {/* ── COUNTER-NARRATIVE & VENDOR EVALUATION MATRIX ── */}
-        <section className="py-16 bg-[#111111] border-t border-slate-800 text-slate-100">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center mb-12">
-              <span className="text-xs font-bold uppercase tracking-widest text-[#FF5622]">The Direct Comparison</span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-white mt-2">
-                The Typical UK Agency Frustration vs FactoryJet Engineering Approach
+      <LiverpoolPage>
+        <Breadcrumbs items={crumbs} />
+
+        <Hero />
+        <DigitalLandscape />
+        <SeoOffer />
+
+        {/* The one dark section on this page, mid-page by design. */}
+        <Services />
+
+        <LiverpoolMarket />
+
+        <MidPageCTA
+          headline="Not sure which of these your Liverpool site actually needs?"
+          sub="Send us the URL. We run a technical crawl and a Google Business Profile check, then send back a written list of what is holding you back, ranked by impact. No obligation, and you keep the notes."
+          label="Get a free site review"
+          note="Bhavesh replies within one business day."
+        />
+
+        <Pricing />
+        <TechStack />
+
+        {/* Vendor evaluation, light. Useful whether or not you hire us. */}
+        <section
+          aria-labelledby="evaluation-heading"
+          className="w-full border-t border-fj-neutral-200 bg-white"
+        >
+          <div className="mx-auto w-full max-w-[1120px] px-6 py-16 md:px-8 md:py-24">
+            <div className="max-w-3xl">
+              <p className="font-fj-mono text-xs font-semibold uppercase tracking-[0.18em] text-[#B23E13]">
+                Before you sign anything
+              </p>
+              <h2
+                id="evaluation-heading"
+                className="mt-4 font-fj-display text-3xl font-bold leading-tight tracking-tight text-fj-ink md:text-[42px]"
+              >
+                Six questions to ask any Liverpool SEO agency
               </h2>
-              <p className="text-slate-300 mt-4 text-sm leading-relaxed">
-                Traditional Liverpool digital agencies sell slow WordPress themes and junior account handlers. FactoryJet delivers deterministic Next.js builds, sub-second performance, and 100% full IP code ownership.
+              <p className="mt-5 font-fj-body text-lg leading-relaxed text-fj-neutral-600">
+                Including us. Google publishes its own warning signs for hiring an
+                SEO, and most of them show up in the answer to one of these six
+                questions. Take this list to every quote you collect.
               </p>
             </div>
 
-            <div className="overflow-x-auto mb-10">
-              <table className="w-full border-collapse bg-[#1A1A1A] rounded-xl border border-slate-800 text-left text-sm">
+            <div className="mt-12 overflow-x-auto">
+              <table className="w-full min-w-[720px] border-collapse text-left">
+                <caption className="sr-only">
+                  Questions to ask an SEO agency, with weak and strong answers
+                </caption>
                 <thead>
-                  <tr className="border-b border-slate-800 bg-[#222222]">
-                    <th className="p-4 font-bold text-white">Evaluation Criteria</th>
-                    <th className="p-4 font-bold text-slate-400">Traditional Liverpool Agencies</th>
-                    <th className="p-4 font-bold text-[#FF5622]">FactoryJet Engineering</th>
+                  <tr className="border-b border-fj-neutral-200">
+                    <th
+                      scope="col"
+                      className="w-[26%] py-4 pr-6 font-fj-mono text-[11px] font-semibold uppercase tracking-[0.14em] text-fj-neutral-400"
+                    >
+                      Ask this
+                    </th>
+                    <th
+                      scope="col"
+                      className="w-[37%] py-4 pr-6 font-fj-mono text-[11px] font-semibold uppercase tracking-[0.14em] text-fj-neutral-400"
+                    >
+                      Walk away if you hear
+                    </th>
+                    <th
+                      scope="col"
+                      className="w-[37%] py-4 font-fj-mono text-[11px] font-semibold uppercase tracking-[0.14em] text-[#B23E13]"
+                    >
+                      A good answer sounds like
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr className="border-b border-slate-800/60">
-                    <td className="p-4 font-semibold text-white">Core Web Vitals SLA</td>
-                    <td className="p-4 text-slate-400">Unverified; average 3.8s LCP</td>
-                    <td className="p-4 text-emerald-400 font-semibold">Guaranteed &lt; 1.2s LCP (95+ score)</td>
-                  </tr>
-                  <tr className="border-b border-slate-800/60">
-                    <td className="p-4 font-semibold text-white">Delivery Speed</td>
-                    <td className="p-4 text-slate-400">8 to 16 weeks typical timeline</td>
-                    <td className="p-4 text-emerald-400 font-semibold">7-Day Express Delivery SLA</td>
-                  </tr>
-                  <tr className="border-b border-slate-800/60">
-                    <td className="p-4 font-semibold text-white">Pricing Model</td>
-                    <td className="p-4 text-slate-400">Day rates + ongoing retainers</td>
-                    <td className="p-4 text-emerald-400 font-semibold">Fixed-price milestone model</td>
-                  </tr>
-                  <tr>
-                    <td className="p-4 font-semibold text-white">Code &amp; IP Ownership</td>
-                    <td className="p-4 text-slate-400">Proprietary CMS lock-in or agency hosting</td>
-                    <td className="p-4 text-emerald-400 font-semibold">100% full codebase pushed to your GitHub</td>
-                  </tr>
+                  {EVALUATION.map((row) => (
+                    <tr key={row.ask} className="border-b border-fj-neutral-200 align-top">
+                      <th
+                        scope="row"
+                        className="py-5 pr-6 font-fj-body text-[15px] font-semibold text-fj-ink"
+                      >
+                        {row.ask}
+                      </th>
+                      <td className="py-5 pr-6 font-fj-body text-[14.5px] leading-relaxed text-fj-neutral-600">
+                        {row.weak}
+                      </td>
+                      <td className="py-5 font-fj-body text-[14.5px] leading-relaxed text-fj-ink">
+                        {row.strong}
+                      </td>
+                    </tr>
+                  ))}
                 </tbody>
               </table>
             </div>
-
-            {/* Standard Deliverables Checklist */}
-            <div className="bg-[#1A1A1A] border border-slate-800 rounded-xl p-6">
-              <h3 className="text-base font-bold text-white mb-3">Standard Engineering Deliverables on Every Liverpool Build:</h3>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs text-slate-300">
-                <li className="flex items-center gap-2"><span className="text-emerald-400 font-bold">✓</span> Server-rendered Next.js 15 App Router</li>
-                <li className="flex items-center gap-2"><span className="text-emerald-400 font-bold">✓</span> LocalBusiness Schema.org JSON-LD graph</li>
-                <li className="flex items-center gap-2"><span className="text-emerald-400 font-bold">✓</span> 95+ Core Web Vitals speed verification</li>
-                <li className="flex items-center gap-2"><span className="text-emerald-400 font-bold">✓</span> Complete GitHub repository transfer</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-        
-        {/* ── REGIONAL BENCHMARK & ARCHITECTURE BLUEPRINT ── */}
-        <section className="sec-lg" style={{ backgroundColor: '#FFFFFF', padding: '48px 0 16px' }}>
-          <div className="wrap" style={{ maxWidth: 1120, margin: '0 auto', padding: '0 16px' }}>
-            <RegionalBenchmarkCard city="Liverpool" vertical="web-design" />
           </div>
         </section>
 
-        <div id="liverpool-architecture-blueprint">
-          <WebDesignArchitectureBlueprint />
+        {/* Regional performance benchmark for the SEO vertical */}
+        <section className="w-full bg-fj-cream">
+          <div className="mx-auto w-full max-w-[1120px] px-6 py-14 md:px-8">
+            <RegionalBenchmarkCard city="Liverpool" vertical="seo" />
+          </div>
+        </section>
+
+        <div id="liverpool-local-seo-blueprint">
+          <LocalSeoArchitectureBlueprint
+            city="Liverpool"
+            region="uk"
+            title="How local search actually works, layer by layer"
+            subtitle="Your Google Business Profile, review flow, structured data and page speed all feed the same result. This shows how they connect, and where most Liverpool sites break."
+            ctaLabel="Get a free Liverpool site review"
+          />
         </div>
 
-        {/* ── INTERACTIVE SPEED & PIPELINE VALUE CALCULATOR ── */}
-        <WebDesignValueCalculator city="Liverpool" region="uk" />
+        <LocalSeoOpportunityEstimator city="Liverpool" region="uk" />
 
-        {/* ── UK REGIONAL HORIZONTAL CROSS-LINKS ── */}
-        <CityLinksUK currentCity="liverpool" />
+        <FAQ />
 
-        {/* ── VERIFIED AUTHOR ENTITY CARD ── */}
-        <section className="sec-lg" style={{ backgroundColor: '#F6F6F9', padding: '48px 0', borderTop: '1px solid #E6E6EC' }}>
-          <div className="wrap" style={{ maxWidth: 1120, margin: '0 auto', padding: '0 16px' }}>
+        <CityLinksUK currentCity="liverpool" currentService="seo" />
+
+        <section className="w-full border-t border-fj-neutral-200 bg-white">
+          <div className="mx-auto w-full max-w-[1120px] px-6 py-14 md:px-8">
             <AuthorCard />
           </div>
         </section>
 
-        {/* ── FINAL MODAL CTA STRIP ── */}
-        <section className="py-12 bg-[#0E0E0E] border-t border-slate-800 text-center">
-          <div className="max-w-xl mx-auto px-4">
-            <h3 className="text-xl font-bold text-white mb-3">Ready to transform your Liverpool digital presence?</h3>
-            <p className="text-sm text-slate-400 mb-6">Receive a custom architectural scope and fixed timeline from our senior team.</p>
-            <ModalCTAButton label="Get my free quote" region="uk" modalVariant="default" btnVariant="primary-light" />
-          </div>
-        </section>
-      </div>
+        <FinalCTA />
+      </LiverpoolPage>
+
+      <Footer />
     </>
   );
 }

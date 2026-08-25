@@ -2,47 +2,33 @@
 
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
-import { gsap, ScrollTrigger } from "@/lib/gsap";
+import { gsap } from "@/lib/gsap";
+import { STEPS, type ProcessStep } from "../process-steps";
 
-
-const STEPS = [
-  {
-    days: "DAYS 1–2",
-    title: "Discovery & Conversion Mapping",
-    description:
-      "We audit your current Manchester digital presence, map your customer journey from search query to conversion, identify keyword gaps against local competitors, and define the technical architecture. You get a documented brief covering target keywords, page structure, schema requirements, and conversion goals.",
-  },
-  {
-    days: "DAYS 3–5",
-    title: "Content Architecture & SEO Engineering",
-    description:
-      "Every page is structured for both human readers and AI systems. We write conversion copy, define H1–H6 hierarchy, build FAQ schema content, and map internal linking. All content is optimised for \"web design Manchester\" and 20+ secondary keywords before a single pixel is designed.",
-  },
-  {
-    days: "DAYS 6–10",
-    title: "UI/UX Design & Animation Choreography",
-    description:
-      "Design in code, not Figma. Every section is built as a React component with responsive breakpoints, GSAP scroll animations, and Lenis smooth scroll. You see the actual website in a staging environment, not a static mockup that looks nothing like the final product.",
-  },
-  {
-    days: "DAYS 11–18",
-    title: "Development, Testing & Performance Tuning",
-    description:
-      "Full build in Next.js 15 with Tailwind CSS 4. Schema injection, sitemap generation, robots.txt configuration, Open Graph meta, and Core Web Vitals optimisation. We test across Chrome, Safari, Firefox, Edge, iOS Safari, and Android Chrome. Every page must score Lighthouse 90+ before deployment.",
-  },
-  {
-    days: "DAY 19+",
-    title: "Launch, Indexing & 90-Day Support",
-    description:
-      "Deploy to your domain, submit to Google Search Console, configure analytics, and begin monitoring indexation. You get 90 days of post-launch support including bug fixes, content updates, and performance monitoring, included, not invoiced separately.",
-  },
-];
+/*
+ * ProcessTimeline.
+ *
+ * Two changes on 2026-08-25.
+ *
+ * 1. One card per step, not two. The old build rendered a mobile card AND a
+ *    desktop card for every step, so every word of this section appeared twice
+ *    in the HTML. Crawlers saw 500 words of duplicated copy. The card now lives
+ *    in a single DOM node and flex `order` moves it to the left on desktop.
+ *
+ * 2. Light ground. The page brand anchor allows one dark band and the closing
+ *    CTA already spends it.
+ *
+ * The step copy itself lives in ../process-steps.ts, not here. layout.tsx builds
+ * the HowTo JSON-LD from that same array, and a server component cannot read a
+ * plain export out of a "use client" module. One array, two consumers, so the
+ * schema cannot describe a process the page does not show.
+ */
 
 const CARD_STYLE: React.CSSProperties = {
-  background: "rgba(255,255,255,0.04)",
-  border: "1px solid rgba(255,255,255,0.08)",
-  borderRadius: "12px",
-  padding: "32px",
+  background: "#FFFFFF",
+  border: "1px solid #D9D9D2",
+  borderRadius: "16px",
+  padding: "28px",
   maxWidth: "480px",
   width: "100%",
 };
@@ -50,11 +36,11 @@ const CARD_STYLE: React.CSSProperties = {
 function StepNode({ num }: { num: number }) {
   return (
     <div
-      className="flex items-center justify-center rounded-full flex-shrink-0"
+      className="flex flex-none items-center justify-center rounded-full"
       style={{
-        width: "64px",
-        height: "64px",
-        background: "rgba(0,82,204,0.2)",
+        width: "56px",
+        height: "56px",
+        background: "#FFFFFF",
         border: "2px solid #F05A28",
         zIndex: 10,
         position: "relative",
@@ -62,8 +48,8 @@ function StepNode({ num }: { num: number }) {
       aria-hidden="true"
     >
       <span
-        className="font-clash"
-        style={{ fontSize: "28px", color: "#F05A28", lineHeight: 1 }}
+        className="font-fj-display"
+        style={{ fontSize: "24px", color: "#B23E13", lineHeight: 1, fontWeight: 700 }}
       >
         {num}
       </span>
@@ -71,34 +57,27 @@ function StepNode({ num }: { num: number }) {
   );
 }
 
-function CardBody({ step }: { step: (typeof STEPS)[0] }) {
+function CardBody({ step }: { step: ProcessStep }) {
   return (
     <>
-      <p
-        className="font-semibold uppercase"
-        style={{
-          color: "#FF6B35",
-          fontSize: "13px",
-          letterSpacing: "0.08em",
-        }}
-      >
+      <p className="font-fj-mono text-xs font-semibold uppercase tracking-[0.15em] text-[#B23E13]">
         {step.days}
       </p>
-      <h3
-        className="font-clash text-white"
-        style={{ fontSize: "22px", marginTop: "8px", marginBottom: "12px" }}
-      >
-        {step.title}
-      </h3>
-      <p
-        style={{
-          fontSize: "15px",
-          color: "rgba(255,255,255,0.75)",
-          lineHeight: 1.65,
-        }}
-      >
+      <h3 className="mt-2 mb-3 font-fj-display text-xl font-bold text-fj-ink">{step.title}</h3>
+      <p className="font-fj-body text-[15px] leading-relaxed text-fj-neutral-600">
         {step.description}
       </p>
+      <ul className="mt-4 grid gap-y-1.5 font-fj-body text-sm text-fj-neutral-600">
+        {step.deliverables.map((d) => (
+          <li key={d} className="flex gap-2">
+            <span
+              aria-hidden="true"
+              className="mt-[8px] h-1.5 w-1.5 flex-none rounded-full bg-[#F05A28]"
+            />
+            <span>{d}</span>
+          </li>
+        ))}
+      </ul>
     </>
   );
 }
@@ -135,20 +114,16 @@ export default function ProcessTimeline() {
 
       const mm = gsap.matchMedia();
 
-      // ── Desktop: Z-pattern, x-direction reveals ─────────────────────
       mm.add("(min-width: 768px)", () => {
         animateLine(desktopLineRef.current);
 
         stepRefs.current.forEach((stepEl, i) => {
           if (!stepEl) return;
-          const isLeft = i % 2 === 0;
-          const card = stepEl.querySelector(
-            isLeft ? ".desktop-left-card" : ".desktop-right-card"
-          );
+          const card = stepEl.querySelector(".step-card");
           if (!card) return;
 
           gsap.from(card, {
-            x: isLeft ? -20 : 20,
+            x: i % 2 === 0 ? -20 : 20,
             autoAlpha: 0,
             duration: 0.7,
             ease: "power3.out",
@@ -161,13 +136,12 @@ export default function ProcessTimeline() {
         });
       });
 
-      // ── Mobile: left-line, y-direction reveals ───────────────────────
       mm.add("(max-width: 767px)", () => {
         animateLine(mobileLineRef.current);
 
         stepRefs.current.forEach((stepEl) => {
           if (!stepEl) return;
-          const card = stepEl.querySelector(".mobile-card");
+          const card = stepEl.querySelector(".step-card");
           if (!card) return;
 
           gsap.from(card, {
@@ -191,103 +165,77 @@ export default function ProcessTimeline() {
     <section
       ref={sectionRef}
       id="process-timeline"
-      style={{ background: "#0a0f1c", padding: "160px 0", overflow: "hidden" }}
+      className="bg-fj-cream"
+      style={{ padding: "96px 0", overflow: "hidden" }}
     >
       <div className="mx-auto px-4 sm:px-6 lg:px-8" style={{ maxWidth: "1200px" }}>
 
-        {/* ── Header ─────────────────────────────────────────────────── */}
-        <p
-          className="font-semibold uppercase"
-          style={{
-            color: "#FF6B35",
-            fontSize: "13px",
-            letterSpacing: "0.15em",
-            marginBottom: "16px",
-          }}
-        >
-          How We Work
+        <p className="font-fj-mono text-xs font-semibold uppercase tracking-[0.15em] text-[#B23E13]">
+          How we work
         </p>
 
-        <h2
-          className="font-clash text-white"
-          style={{
-            fontSize: "clamp(2rem, 1.7rem + 1.3vw, 3rem)",
-            lineHeight: 1.15,
-            maxWidth: "700px",
-            marginBottom: "64px",
-          }}
-        >
-          From Brief to Live in Manchester: Our 5-Step Process
+        <h2 className="mt-3 mb-14 max-w-3xl font-fj-display text-3xl font-bold leading-tight text-fj-ink md:text-4xl">
+          From brief to live in Manchester: our 5-step process
         </h2>
 
-        {/* ── Timeline ───────────────────────────────────────────────── */}
         <div className="relative">
 
-          {/* Vertical line, desktop center */}
+          {/* Vertical line, desktop centre */}
           <div
             ref={desktopLineRef}
-            className="hidden md:block absolute inset-y-0 pointer-events-none"
+            className="pointer-events-none absolute inset-y-0 hidden md:block"
             style={{
               left: "calc(50% - 1px)",
               width: "2px",
-              background: "rgba(255,255,255,0.1)",
+              background: "#D9D9D2",
               transformOrigin: "top",
             }}
           />
 
-          {/* Vertical line, mobile left (centered on 64px node) */}
+          {/* Vertical line, mobile left, centred on the 56px node */}
           <div
             ref={mobileLineRef}
-            className="md:hidden absolute inset-y-0 pointer-events-none"
+            className="pointer-events-none absolute inset-y-0 md:hidden"
             style={{
-              left: "31px",
+              left: "27px",
               width: "2px",
-              background: "rgba(255,255,255,0.1)",
+              background: "#D9D9D2",
               transformOrigin: "top",
             }}
           />
 
-          {/* Steps */}
           {STEPS.map((step, i) => {
             const isLeft = i % 2 === 0;
 
             return (
               <div
-                key={i}
+                key={step.title}
                 ref={(el) => {
                   stepRefs.current[i] = el;
                 }}
-                className="relative mb-10 md:mb-16"
+                className="relative mb-10 md:mb-14"
               >
-                {/* ── MOBILE layout ─────────────────────────────────── */}
-                <div className="flex items-start gap-5 md:hidden">
-                  <StepNode num={i + 1} />
-                  <div className="mobile-card flex-1" style={CARD_STYLE}>
-                    <CardBody step={step} />
-                  </div>
-                </div>
+                <div className="flex items-start gap-5 md:items-center md:gap-0">
+                  {/* Empty half, desktop only. Order flips so the single card
+                      can sit on either side without a second copy in the DOM. */}
+                  <div
+                    className={`hidden flex-1 md:block ${isLeft ? "md:order-3 md:pl-10" : "md:order-1 md:pr-10"}`}
+                  />
 
-                {/* ── DESKTOP layout (Z-pattern) ────────────────────── */}
-                <div className="hidden md:flex items-center">
-                  {/* Left zone */}
-                  <div className="flex-1 flex justify-end pr-10">
-                    {isLeft && (
-                      <div className="desktop-left-card" style={CARD_STYLE}>
-                        <CardBody step={step} />
-                      </div>
-                    )}
+                  <div className="md:order-2">
+                    <StepNode num={i + 1} />
                   </div>
 
-                  {/* Node */}
-                  <StepNode num={i + 1} />
-
-                  {/* Right zone */}
-                  <div className="flex-1 pl-10">
-                    {!isLeft && (
-                      <div className="desktop-right-card" style={CARD_STYLE}>
-                        <CardBody step={step} />
-                      </div>
-                    )}
+                  <div
+                    className={`flex-1 ${
+                      isLeft
+                        ? "md:order-1 md:flex md:justify-end md:pr-10"
+                        : "md:order-3 md:pl-10"
+                    }`}
+                  >
+                    <div className="step-card" style={CARD_STYLE}>
+                      <CardBody step={step} />
+                    </div>
                   </div>
                 </div>
               </div>

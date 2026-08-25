@@ -1,6 +1,15 @@
-"use client";
-
 import Image from "next/image";
+
+/*
+ * SocialProof.
+ *
+ * Light ground as of 2026-08-25, so the closing CTA is the only dark band left
+ * on the page. Testimonials, stat badges and the stack row are now real lists,
+ * which is both correct markup and the difference between an answer engine
+ * lifting these as facts or skipping them as decoration.
+ *
+ * The quotes are verbatim from named clients. Do not edit them for length.
+ */
 
 const TESTIMONIALS = [
   {
@@ -34,220 +43,101 @@ const TESTIMONIALS = [
 ];
 
 const STATS = [
-  { value: "100", label: "Lighthouse SEO Score", color: "#60A5FA" },
-  { value: "92+", label: "Lighthouse Performance", color: "#10B981" },
-  { value: "2–4wk", label: "Average Delivery", color: "#FF6B35" },
-  { value: "50–60%", label: "Below Market Rates", color: "#FF6B35" },
-  { value: "45+", label: "Countries Served", color: "#60A5FA" },
-  { value: "90 days", label: "Free Post-Launch Support", color: "#10B981" },
+  { value: "100", label: "Lighthouse SEO score" },
+  { value: "92+", label: "Lighthouse performance" },
+  { value: "2–4wk", label: "Average delivery" },
+  { value: "100%", label: "Code and IP ownership" },
+  { value: "45+", label: "Countries served" },
+  { value: "90 days", label: "Free post-launch support" },
 ];
 
 const STACK_ITEMS = [
   "Next.js 15 + React",
   "GSAP 3.14+",
   "Tailwind CSS 4",
-  "Lenis Smooth Scroll",
-  "AI-Native from Day 1",
-  "GEO · AEO · AIO Ready",
+  "Lenis smooth scroll",
+  "AI-native from day one",
+  "GEO, AEO and AIO ready",
 ];
 
 export default function SocialProof() {
   return (
-    <section
-      id="social-proof"
-      style={{ background: "#0a0f1c", padding: "32px 0 96px" }}
-    >
-      <div className="mx-auto px-4 sm:px-6 lg:px-8" style={{ maxWidth: "1400px" }}>
+    <section id="social-proof" className="bg-fj-cream" style={{ padding: "80px 0" }}>
+      <div className="mx-auto px-4 sm:px-6 lg:px-8" style={{ maxWidth: "1200px" }}>
 
-        {/* ── Testimonials ─────────────────────────────────────────────── */}
-        <div className="text-center mb-12">
-          <p
-            className="font-semibold uppercase"
-            style={{
-              color: "#FF6B35",
-              fontSize: "13px",
-              letterSpacing: "0.15em",
-              marginBottom: "16px",
-            }}
-          >
-            Client Stories
-          </p>
-          <h2
-            className="font-clash text-white"
-            style={{
-              fontSize: "clamp(1.8rem, 1.5rem + 1.2vw, 2.8rem)",
-              lineHeight: 1.15,
-            }}
-          >
-            What Manchester Business Owners Say
-          </h2>
-        </div>
+        <p className="font-fj-mono text-xs font-semibold uppercase tracking-[0.15em] text-[#B23E13]">
+          Client stories
+        </p>
+        <h2 className="mt-3 mb-10 max-w-3xl font-fj-display text-3xl font-bold leading-tight text-fj-ink md:text-4xl">
+          What business owners say about working with us
+        </h2>
 
-        <div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"
-          style={{ gap: "20px", marginBottom: "72px" }}
-        >
+        <ul className="mb-16 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {TESTIMONIALS.map(({ name, role, image, quote }) => (
-            <div
+            <li
               key={name}
-              className="rounded-2xl transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
-              style={{
-                background: "white",
-                padding: "28px",
-                boxShadow: "0 4px 16px rgba(0,0,0,0.25)",
-                borderLeft: "3px solid #F05A28",
-                display: "flex",
-                flexDirection: "column",
-                gap: "16px",
-              }}
+              className="flex flex-col gap-4 rounded-2xl border border-fj-neutral-200 bg-white p-7"
+              style={{ borderLeft: "3px solid #F05A28" }}
             >
-              {/* Avatar + name/role */}
               <div className="flex items-center gap-3">
-                <div
-                  className="flex-shrink-0 rounded-full overflow-hidden"
-                  style={{ width: "56px", height: "56px" }}
-                >
+                <div className="h-14 w-14 flex-shrink-0 overflow-hidden rounded-full">
                   <Image
                     src={image}
                     alt={`${name}, ${role}`}
                     width={56}
                     height={56}
-                    className="w-full h-full object-cover rounded-full"
+                    className="h-full w-full rounded-full object-cover"
                   />
                 </div>
                 <div>
-                  <p
-                    className="font-semibold"
-                    style={{ fontSize: "15px", color: "#111827", lineHeight: 1.3 }}
-                  >
+                  <p className="font-fj-body text-[15px] font-semibold leading-tight text-fj-ink">
                     {name}
                   </p>
-                  <p style={{ fontSize: "13px", color: "#6B7280", lineHeight: 1.4 }}>
-                    {role}
-                  </p>
+                  <p className="font-fj-body text-[13px] text-fj-neutral-600">{role}</p>
                 </div>
               </div>
-
-              {/* Quote */}
-              <p
-                style={{
-                  fontSize: "14px",
-                  color: "#374151",
-                  lineHeight: 1.65,
-                  fontStyle: "italic",
-                }}
-              >
-                <span
-                  style={{
-                    fontSize: "22px",
-                    color: "#F05A28",
-                    fontStyle: "normal",
-                    lineHeight: 0,
-                    verticalAlign: "-6px",
-                    marginRight: "2px",
-                  }}
-                  aria-hidden="true"
-                >
-                  &ldquo;
-                </span>
+              <blockquote className="font-fj-body text-sm leading-relaxed text-fj-neutral-600">
+                <span aria-hidden="true" className="text-[#B23E13]">&ldquo;</span>
                 {quote}
-              </p>
-            </div>
+                <span aria-hidden="true" className="text-[#B23E13]">&rdquo;</span>
+              </blockquote>
+            </li>
           ))}
-        </div>
+        </ul>
 
-        {/* ── Divider ──────────────────────────────────────────────────── */}
-        <div
-          style={{
-            borderTop: "1px solid rgba(255,255,255,0.08)",
-            marginBottom: "64px",
-          }}
-          aria-hidden="true"
-        />
-
-        {/* ── Stats (unchanged) ─────────────────────────────────────────── */}
-        <div className="text-center">
-          <p
-            className="font-semibold uppercase"
-            style={{
-              color: "#FF6B35",
-              fontSize: "13px",
-              letterSpacing: "0.15em",
-              marginBottom: "16px",
-            }}
-          >
-            Built for Performance
+        <div className="border-t border-fj-neutral-200 pt-14">
+          <p className="font-fj-mono text-xs font-semibold uppercase tracking-[0.15em] text-[#B23E13]">
+            Built for performance
           </p>
-
-          <h2
-            className="font-clash text-white"
-            style={{
-              fontSize: "2.5rem",
-              lineHeight: 1.15,
-              marginBottom: "48px",
-            }}
-          >
-            Proven by Numbers
+          <h2 className="mt-3 mb-8 font-fj-display text-3xl font-bold leading-tight text-fj-ink md:text-4xl">
+            What every build ships with
           </h2>
 
-          {/* Stat badges */}
-          <div
-            className="flex flex-wrap justify-center"
-            style={{ gap: "24px", marginBottom: "48px" }}
-          >
-            {STATS.map(({ value, label, color }) => (
-              <div
+          <ul className="mb-10 flex flex-wrap gap-5">
+            {STATS.map(({ value, label }) => (
+              <li
                 key={label}
-                className="rounded-xl text-center"
-                style={{
-                  background: "rgba(255,255,255,0.04)",
-                  border: "1px solid rgba(255,255,255,0.08)",
-                  padding: "20px",
-                  minWidth: "160px",
-                }}
+                className="min-w-[160px] rounded-2xl border border-fj-neutral-200 bg-white px-5 py-5"
               >
-                <p
-                  className="font-clash font-bold"
-                  style={{ fontSize: "2rem", color, lineHeight: 1.1, marginBottom: "6px" }}
-                >
+                <p className="font-fj-display text-3xl font-bold leading-none text-fj-ink">
                   {value}
                 </p>
-                <p style={{ fontSize: "13px", color: "rgba(255,255,255,0.5)" }}>
-                  {label}
-                </p>
-              </div>
+                <p className="mt-2 font-fj-body text-[13px] text-fj-neutral-600">{label}</p>
+              </li>
             ))}
-          </div>
+          </ul>
 
-          {/* Tech stack row */}
-          <div
-            className="flex flex-wrap justify-center items-center"
-            style={{ gap: "8px" }}
-            aria-label="Technology stack"
-          >
-            {STACK_ITEMS.map((item, i) => (
-              <span key={item} className="flex items-center gap-2">
-                <span
-                  style={{ fontSize: "13px", color: "rgba(255,255,255,0.7)" }}
-                >
-                  {item}
-                </span>
-                {i < STACK_ITEMS.length - 1 && (
-                  <span
-                    className="rounded-full"
-                    style={{
-                      width: "5px",
-                      height: "5px",
-                      background: "#10B981",
-                      display: "inline-block",
-                      flexShrink: 0,
-                    }}
-                    aria-hidden="true"
-                  />
-                )}
-              </span>
+          <h3 className="font-fj-display text-lg font-bold text-fj-ink">The stack we build on</h3>
+          <ul className="mt-3 flex flex-wrap gap-x-3 gap-y-2">
+            {STACK_ITEMS.map((item) => (
+              <li
+                key={item}
+                className="rounded-full border border-fj-neutral-200 bg-white px-3 py-1 font-fj-body text-[13px] text-fj-neutral-600"
+              >
+                {item}
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
 
       </div>

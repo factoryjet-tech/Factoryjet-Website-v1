@@ -16,68 +16,57 @@ type Service = {
   featured?: boolean;
   body: string[];
   imageSide: "left" | "right";
-  keywords: string;
 };
 
 const SERVICES: Service[] = [
   {
-    id: "web-design",
+    id: "local-seo",
     number: "01",
-    name: "Web Design",
-    heading: "Websites That Work as Hard as Liverpool Does",
-    image: "/images/uk/liverpool/service-web-design-liverpool.webp",
-    imageAlt: "Modern website design for Liverpool businesses",
-    imageSide: "right",
-    body: [
-      "Liverpool's business landscape is as diverse as the city itself, logistics companies on the docks, creative agencies in the Baltic Triangle, hospitality groups on Albert Dock, life sciences firms in the Knowledge Quarter. Your website needs to convert visitors from all of them. We build in Next.js 15 with Tailwind CSS 4, GSAP animations, and Lighthouse scores that consistently hit 95+. Webflow and Framer builds for Liverpool's creative sector. WordPress for businesses that need content control. Every site is mobile-first, accessibility-compliant, and built to rank.",
-    ],
-    keywords:
-      "web design Liverpool Webflow developer Liverpool Framer developer Liverpool AI web design Liverpool",
-  },
-  {
-    id: "ecommerce",
-    number: "02",
-    name: "E-Commerce",
-    heading: "Build the Liverpool Shopify Story the City Deserves",
-    image: "/images/uk/liverpool/service-ecommerce-liverpool.webp",
-    imageAlt: "E-commerce development for Liverpool businesses",
-    imageSide: "left",
-    body: [
-      "Velstar, Liverpool's own Shopify Platinum Partner, has set a high benchmark for e-commerce in the city. We match it at 50–60% of the price. From Shopify Plus builds for fashion brands targeting Misspap's demographic, to headless WooCommerce for B2B distributors supplying JLR and the NHS, we build e-commerce that converts, scales, and connects to your ERP and CRM from day one. Liverpool's port proximity makes it a natural distribution hub. Your store should reflect that operational ambition.",
-    ],
-    keywords:
-      "Shopify Plus agency Liverpool B2B ecommerce Liverpool headless commerce Liverpool WooCommerce Liverpool",
-  },
-  {
-    id: "ai-agents",
-    number: "03",
-    name: "AI Agents",
-    heading:
-      "Liverpool's AI Agent Agency: Before Anyone Else Claims the Title",
-    image: "/images/uk/liverpool/service-ai-agents-liverpool.webp",
-    imageAlt:
-      "AI agent development for Liverpool logistics and port businesses",
+    name: "Local SEO",
+    heading: "Get Into the Liverpool Map Results",
+    image: "/images/uk/liverpool/service-ai-seo-liverpool.webp",
+    imageAlt: "Local search results for a Liverpool business",
     imageSide: "right",
     featured: true,
     body: [
-      "Search 'AI agents Liverpool' right now. You'll find near-zero competition. We're building that position for FactoryJet, and we're building AI agent infrastructure for Liverpool businesses that want to own their category before the incumbents wake up. Custom agentic AI for logistics routing and port operations. Multi-agent systems for NHS supply chain automation. AI chatbots for Liverpool's hospitality and tourism sector. MCP-integrated workflows for legal and financial services firms in Old Hall Street. The Baltic Triangle's creative studios are already asking for AI creative automation pipelines. We build all of it.",
+      "Google says three things decide the map results: relevance, distance and prominence. Distance you cannot change. The other two are the job. We rebuild your Google Business Profile properly, set the service area around where your customers actually are across Liverpool, Wirral, Sefton, Knowsley, St Helens and Halton, make your business name, address and phone number identical everywhere they appear, clear out the duplicate listings a previous agency left behind, and build a steady flow of genuine reviews. Then we write real area pages for the places you serve, rather than sixty thin ones for every postcode.",
     ],
-    keywords:
-      "AI agent development Liverpool agentic AI Liverpool AI automation Liverpool AI chatbot Liverpool AI for healthcare Liverpool AI for logistics Liverpool",
+  },
+  {
+    id: "seo",
+    number: "02",
+    name: "Search and content",
+    heading: "The Pages You Are Missing, Written and Shipped",
+    image: "/images/uk/liverpool/service-web-design-liverpool.webp",
+    imageAlt: "Service pages laid out for a Liverpool website",
+    imageSide: "left",
+    body: [
+      "Most Liverpool sites have three pages trying to do the work of fifteen. If you sell eight services and have one page listing all of them, you are competing for none of them. We do the keyword research against real search volume, separate out the terms you can realistically win, then build a page per service that answers the question in its first sentence. Existing pages get fixed before new ones get written, because a rewritten page that already has history will usually move faster than a brand new one.",
+    ],
   },
   {
     id: "ai-seo",
+    number: "03",
+    name: "AI search",
+    heading: "Getting Quoted Inside ChatGPT and Perplexity",
+    image: "/images/uk/liverpool/service-ai-agents-liverpool.webp",
+    imageAlt: "An AI answer citing a Liverpool business",
+    imageSide: "right",
+    body: [
+      "AI answer tools do not rank you, they quote you. That rewards a different shape of page: a direct answer in the opening sentence, facts a machine can check, clean structured data, and the same business details everywhere the tool looks. It does not replace ordinary SEO and anybody selling it as a replacement is overselling. We treat it as a second surface on top of the same foundations, and we track which of your pages get cited, per query, across ChatGPT, Perplexity and Google AI Overviews, so you can see whether it is working rather than take our word for it.",
+    ],
+  },
+  {
+    id: "ecommerce-seo",
     number: "04",
-    name: "AI SEO",
-    heading: "The Only AI SEO Agency in Liverpool. Right Now.",
-    image: "/images/uk/liverpool/service-ai-seo-liverpool.webp",
-    imageAlt: "AI SEO and GEO services for Liverpool businesses",
+    name: "E-commerce SEO",
+    heading: "Category and Product Pages That Earn Their Traffic",
+    image: "/images/uk/liverpool/service-ecommerce-liverpool.webp",
+    imageAlt: "An online store category page structure",
     imageSide: "left",
     body: [
-      "Quirky Digital has 20 specialists and a Global Search Awards win. SEO Company Liverpool has been in the Royal Albert Dock for years. Six Digital serves national clients. But none of them are doing generative engine optimisation. None of them are building answer engine optimisation strategies for Liverpool businesses. None of them are making your content appear inside ChatGPT, Perplexity, and Claude when someone asks 'best logistics web design agency Liverpool' or 'AI automation company Liverpool.' We are. And because we're first, our clients rank first, in both Google and the AI answers that are replacing it.",
+      "Online stores fail at search for predictable reasons. Filters generate thousands of near identical URLs. The same product sits in four collections and competes with itself. Category pages carry no text at all. Product structured data is missing or wrong, so nothing shows a price or a review in the results. We work on Shopify, Shopify Plus, WooCommerce and Magento, fix the crawl and duplication problems first, then build category pages that actually deserve to rank. Liverpool port proximity makes distribution cheap, and your store should be pulling demand rather than waiting for it.",
     ],
-    keywords:
-      "AI SEO agency Liverpool AI SEO Liverpool generative engine optimization Liverpool answer engine optimization Liverpool AI web design Liverpool",
   },
 ];
 
@@ -193,13 +182,6 @@ function Panel({ service }: { service: Service }) {
             {service.body.map((p, i) => (
               <p key={i}>{p}</p>
             ))}
-            {/* Hidden keyword span for AI crawlers */}
-            <span
-              aria-hidden="true"
-              style={{ fontSize: 0, position: "absolute", overflow: "hidden" }}
-            >
-              {service.keywords}
-            </span>
           </div>
         </div>
       </div>
@@ -322,14 +304,14 @@ export default function Services() {
     <section
       ref={sectionRef}
       id="services"
-      aria-label="Our services for Liverpool businesses"
+      aria-label="Search services for Liverpool businesses"
       className="relative w-full"
       style={{ maxWidth: "100vw" }}
     >
       {/* Header (off-white, before the pin) */}
       <div style={{ backgroundColor: "#F8FAFC" }}>
         <div
-          className="mx-auto flex w-full max-w-[1200px] flex-col items-center px-6 text-center sm:px-8"
+          className="mx-auto flex w-full max-w-[1120px] flex-col items-start px-6 text-left sm:px-8"
           style={{
             paddingTop: "clamp(64px, 10vw, 120px)",
             paddingBottom: "clamp(64px, 8vw, 96px)",
@@ -337,7 +319,7 @@ export default function Services() {
         >
           <p
             style={{
-              color: "#FF6B35",
+              color: "#B23E13",
               fontFamily: "var(--font-sans)",
               fontWeight: 600,
               fontSize: 13,
@@ -345,7 +327,7 @@ export default function Services() {
               textTransform: "uppercase",
             }}
           >
-            What We Build in Liverpool
+            What the work covers
           </p>
 
           <h2
@@ -359,8 +341,7 @@ export default function Services() {
               maxWidth: 960,
             }}
           >
-            Four Services. One AI-Native Agency. Built for Liverpool&rsquo;s
-            Next Chapter.
+            Four kinds of search work, run together, not sold separately.
           </h2>
 
           <span

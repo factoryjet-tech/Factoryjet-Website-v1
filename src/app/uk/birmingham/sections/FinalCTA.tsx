@@ -16,11 +16,18 @@ const CITIES = [
   { name: "Nottingham", slug: "nottingham" },
 ];
 
+// 2026-08-25: these pointed at /uk/birmingham/{web-design,ecommerce,ai-agents,ai-seo}.
+// Those four routes were retired in the August doorway-page consolidation, so all four
+// links had been hard 404s sitting in the closing block of the page. They now point at the
+// national hubs that actually exist. Check the route exists before adding to this list.
 const SERVICES = [
-  { name: "Web Design", slug: "web-design" },
-  { name: "E-Commerce", slug: "ecommerce" },
-  { name: "AI Agents", slug: "ai-agents" },
-  { name: "AI SEO", slug: "ai-seo" },
+  { name: "SEO", href: "/uk/seo" },
+  { name: "Local SEO", href: "/uk/local-seo" },
+  { name: "AI SEO", href: "/uk/ai-seo" },
+  { name: "SEO Audit", href: "/uk/seo-audit" },
+  { name: "Web Design", href: "/uk/web-design" },
+  { name: "E-Commerce", href: "/uk/ecommerce-development" },
+  { name: "AI Agents", href: "/uk/ai-agents" },
 ];
 
 // Birmingham-specific watermarks
@@ -33,9 +40,19 @@ const WATERMARKS: Array<{
   { label: "£31.9bn", top: "8%", left: "4%", rotate: -6 },
   { label: "60,000", top: "14%", left: "78%", rotate: 5 },
   { label: "2.6M", top: "62%", left: "6%", rotate: 4 },
-  { label: "7-day", top: "68%", left: "72%", rotate: -5 },
+  // Was "7-day", implying a seven day delivery promise that the FAQ on this same page
+  // contradicts. Replaced with something the page actually offers.
+  { label: "Free review", top: "68%", left: "72%", rotate: -5 },
 ];
 
+/**
+ * Closing CTA.
+ *
+ * 2026-08-25: this band was a solid #F05A28 carrying white text down to 12.5px. White on
+ * that orange measures roughly 3.4:1, which fails at anything below large-text size, and
+ * most of the copy in here sits below it. It now uses the charcoal token instead, which is
+ * also the ONE dark section this page is allowed, sitting directly above the footer.
+ */
 export default function FinalCTA() {
   const { openModal: openContactModal } = useContactModal();
   const openModal = () => openContactModal("uk", "default");
@@ -43,10 +60,10 @@ export default function FinalCTA() {
   return (
     <section
       id="contact"
-      aria-label="Start your Birmingham digital transformation today"
+      aria-label="Book a free Birmingham site review"
       className="relative w-full overflow-hidden"
       style={{
-        backgroundColor: "#F05A28",
+        backgroundColor: "#0F0F12",
         color: "#FFFFFF",
         maxWidth: "100vw",
       }}
@@ -109,7 +126,7 @@ export default function FinalCTA() {
               textTransform: "uppercase",
             }}
           >
-            Start Your Birmingham Project
+            Start with the free review
           </p>
 
           <h2
@@ -123,7 +140,7 @@ export default function FinalCTA() {
               maxWidth: 960,
             }}
           >
-            Start Your Birmingham Digital Transformation Today
+            Find out what is stopping Birmingham from finding you
           </h2>
 
           <span
@@ -142,12 +159,13 @@ export default function FinalCTA() {
               maxWidth: 820,
             }}
           >
-            Join Birmingham businesses that chose AI-native web design over
-            inflated agency rates. Free quote in 24 hours. No discovery fee. No
-            commitment. Whether you&rsquo;re in Digbeth, the Jewellery Quarter,
-            Brindleyplace, or Grand Central, we build digital systems that
-            match your ambition without the studio overhead baked into a
-            traditional agency&rsquo;s quote.
+            Send us your web address. We crawl the site, look at your Google
+            Business Profile and read your own Search Console data, then write
+            back with the three things costing you the most search traffic and
+            an honest read on which Birmingham search terms are winnable this
+            year. No charge, no discovery fee, and no obligation to go any
+            further. Whether you are in Digbeth, the Jewellery Quarter,
+            Brindleyplace or out towards Solihull, you get the same review.
           </p>
 
           {/* CTAs */}
@@ -156,11 +174,11 @@ export default function FinalCTA() {
               type="button"
               onClick={() => {
                 trackCTAClick(
-                  "get_a_free_birmingham_quote",
+                  "free_birmingham_site_review",
                   "final_cta",
                   "primary"
                 );
-                trackButtonClick("get_a_free_birmingham_quote", "final_cta");
+                trackButtonClick("free_birmingham_site_review", "final_cta");
                 openModal();
               }}
               className="inline-flex items-center justify-center gap-2"
@@ -179,7 +197,7 @@ export default function FinalCTA() {
                 minHeight: 48,
               }}
             >
-              Get Your Free Birmingham Quote
+              Get a free site review
               <span aria-hidden="true" style={{ fontSize: 18, lineHeight: 1 }}>
                 →
               </span>
@@ -312,9 +330,9 @@ export default function FinalCTA() {
             style={{ listStyle: "none", padding: 0, margin: 0 }}
           >
             {SERVICES.map((s, i) => (
-              <li key={s.slug} className="flex items-center gap-5">
+              <li key={s.href} className="flex items-center gap-5">
                 <Link
-                  href={`/uk/birmingham/${s.slug}`}
+                  href={s.href}
                   style={{
                     color: "#FFFFFF",
                     fontFamily: "var(--font-sans)",

@@ -18,72 +18,78 @@ type Service = {
   keywords: string;
 };
 
+// 2026-08-25 rewrite. The previous copy in this array named Birmingham competitors and
+// then asserted what they could not do ("what they haven't cracked is...", "is soft-
+// positioning"), and carried four statistics with no source behind any of them: 500+ stores,
+// 23% higher basket values, a 200+ law firm ecosystem, and 60-70% of intake automated.
+// Unsourced numbers about ourselves are a claim we cannot defend, and unsourced numbers
+// about named competitors are worse than that. Both are gone. Nothing below is a figure we
+// cannot show the working for.
 const SERVICES: Service[] = [
   {
-    id: "web-design",
+    id: "seo",
     number: "01",
-    name: "Web Design",
-    heading: "From Webflow to Next.js 15: Designed to Convert Birmingham Buyers",
+    name: "SEO",
+    heading: "Search work that starts with what is broken, not with a content calendar",
     image: "/images/uk/birmingham/service-web-design-birmingham.webp",
-    imageAlt: "Modern website design for Birmingham businesses",
-    imageSide: "right",
-    body: [
-      "Birmingham businesses don't need a pretty portfolio piece. They need a website that converts a Google searcher into a qualified lead before your competitor's page loads. We build in Next.js 15, React 19, WordPress, Webflow, and Framer, whichever platform your team can manage, whichever stack your budget supports.",
-      "Unlike agencies at the Mailbox or in the Jewellery Quarter, our development process begins with conversion architecture, not visual mood boards. We map the buyer journey for your specific industry, whether you're a professional services firm in Colmore Business District, a manufacturer in Erdington, or a property developer in the Jewellery Quarter, before we write a single line of code.",
-      "We're one of the only agencies deploying Next.js 15 with AI-assisted content personalisation for Birmingham businesses. WordPress, Webflow, Framer, and Next.js developer expertise in one team, no outsourcing, no handoffs. Every build ships with a Lighthouse SEO score of 100 guaranteed.",
-    ],
-    keywords:
-      "web design Birmingham Next.js developer Birmingham Webflow developer Birmingham Framer developer Birmingham AI web design Birmingham",
-  },
-  {
-    id: "ecommerce",
-    number: "02",
-    name: "E-Commerce",
-    heading: "Shopify Plus, Headless Commerce & B2B Ecommerce Built for Birmingham Brands",
-    image: "/images/uk/birmingham/service-ecommerce-birmingham.webp",
-    imageAlt: "E-commerce development for Birmingham businesses",
-    imageSide: "left",
-    body: [
-      "Eastside Co in Digbeth has built 500+ Shopify stores from their Birmingham base. They've proved the demand is here. What they haven't cracked is headless commerce and the B2B ecommerce niche that Birmingham's manufacturing sector urgently needs.",
-      "We deliver Shopify Plus agency-level builds at non-Plus prices. Headless commerce on Next.js with a Shopify or WooCommerce backend. B2B ecommerce with customer portals, trade pricing, and ERP integrations. Full custom builds for brands that have outgrown what magic42 or SwiftSync can offer at a fraction of the agency markup.",
-      "Our Birmingham e-commerce clients see average basket values 23% higher within 90 days of replatforming, because conversion rate optimisation is baked into every build, not sold as a monthly upsell. The Jewellery Quarter's 700 businesses need B2B and B2C in a single headless architecture, that's our specialism.",
-    ],
-    keywords:
-      "Shopify Plus agency Birmingham B2B ecommerce Birmingham headless commerce Birmingham WooCommerce Birmingham Jewellery Quarter ecommerce",
-  },
-  {
-    id: "ai-agents",
-    number: "03",
-    name: "AI Agents",
-    heading: "The AI Agents Birmingham's Professional Services Firms Are Actually Deploying",
-    image: "/images/uk/birmingham/service-ai-agents-birmingham.webp",
-    imageAlt:
-      "AI agent development for Birmingham legal and financial services firms",
+    imageAlt: "Search Console data for a Birmingham business website",
     imageSide: "right",
     featured: true,
     body: [
-      "Birmingham's legal community: Gowling WLG, Pinsent Masons, the city's 200+ law firm ecosystem, handles thousands of enquiries, contracts, and document reviews every week. AI agents can automate 60–70% of that intake workflow. Most firms haven't moved yet because the agencies pitching to them don't understand the legal context.",
-      "We build agentic AI systems, multi-step autonomous workflows that intake leads, qualify them against your criteria, trigger CRM entries, draft response emails, and escalate edge cases to a human. Not a chatbot. An agent that works a 24-hour shift without a salary.",
-      "No dominant AI agent development agency exists in Birmingham yet. The Bot Factory offers lightweight automation. Opace Digital is soft-positioning. FactoryJet builds production-grade multi-agent systems using Claude, GPT-4o, and open-source LLMs. Use cases specific to Birmingham: legal intake automation · financial services client onboarding · manufacturing RFQ processing · property developer lead qualification · Jewellery Quarter wholesale order management.",
+      "Most Birmingham businesses that come to us are not missing content. They are carrying a site Google struggles to crawl, a Google Business Profile that has been wrong for two years, and a set of service pages competing with each other for the same search. Publishing more on top of that changes nothing.",
+      "So the first month is repair. We crawl every page and list what errors, what redirects more than once and what Google is quietly ignoring. We claim the Business Profile, fix the categories and the service areas, and hunt down the wrong versions of your address sitting in old directories. Then we set up Search Console and Analytics properly, so everything after that is measured on your data rather than on somebody's estimate.",
+      "Only then does content start, one service page at a time, each built to rank on its own rather than as a paragraph inside a page that lists everything you do. You approve every page before it goes live, and the monthly report opens with enquiries.",
     ],
     keywords:
-      "AI agent development Birmingham agentic AI Birmingham AI automation Birmingham AI chatbot Birmingham AI for legal Birmingham AI for manufacturing Birmingham",
+      "seo agency Birmingham seo Birmingham local seo Birmingham technical seo Birmingham search engine optimisation Birmingham West Midlands",
   },
   {
     id: "ai-seo",
-    number: "04",
+    number: "02",
     name: "AI SEO",
-    heading: "While Birmingham Agencies Chase Old Rankings, Your Buyers Are Asking AI",
+    heading: "Getting named when someone asks an assistant for a Birmingham recommendation",
     image: "/images/uk/birmingham/service-ai-seo-birmingham.webp",
-    imageAlt: "AI SEO and GEO services for Birmingham businesses",
+    imageAlt: "AI search results naming local suppliers",
     imageSide: "left",
     body: [
-      "Search is fragmenting. A Birmingham CFO looking for an audit firm types into ChatGPT. A procurement manager sourcing a manufacturer asks Perplexity. A law firm partner researching a legal tech supplier queries Google's AI Overview. Traditional SEO optimises for the ten blue links. AI SEO, generative engine optimisation (GEO) and answer engine optimisation (AEO), optimises for the AI answer.",
-      "Accentuate Agency is the only Birmingham-based agency currently positioning on GEO. M3.agency, Opace, and Chameleon Web Services are all operating on pre-AI SEO playbooks. FactoryJet builds entity-based content architectures with structured schema, llms.txt implementation, and explicit AI crawler whitelisting: the full technical stack that gets your content cited by ChatGPT, Perplexity, and Google AI Overviews.",
-      "For Birmingham businesses targeting London-based clients, AI SEO is not optional. It's where the attention already is.",
+      "Search is splitting in two. Some people still scroll a results page. Others type the question into ChatGPT, Perplexity or Google's AI answers and read the short reply that names three or four businesses. Being named in that reply is a different job from ranking tenth, and very few Birmingham firms have started on it.",
+      "The work is less exotic than the name suggests. Clear factual pages that state what you do, where you do it and who you do it for. Structured data that matches what the page visibly says rather than describing a page that does not exist. Answer-first paragraphs an assistant can lift without rewriting. An llms.txt file at the site root. And a check that the AI crawlers are not being blocked by a robots rule somebody added years ago.",
+      "It is not a replacement for ordinary search work and we will not sell it as one. It is a second front that is currently cheap to compete on because almost nobody local is competing.",
     ],
     keywords:
-      "AI SEO agency Birmingham AI SEO Birmingham generative engine optimisation Birmingham answer engine optimisation Birmingham GEO Birmingham",
+      "ai seo Birmingham generative engine optimisation Birmingham answer engine optimisation Birmingham GEO Birmingham AI search visibility",
+  },
+  {
+    id: "web-design",
+    number: "03",
+    name: "Web Design",
+    heading: "Rebuilds, but only when the platform is genuinely the thing holding you back",
+    image: "/images/uk/birmingham/service-ai-agents-birmingham.webp",
+    imageAlt: "A Birmingham business website being rebuilt for speed",
+    imageSide: "right",
+    body: [
+      "We would rather fix your site than replace it. A rebuild resets whatever search history the old pages had earned, costs months, and is the wrong answer to most problems. So we only raise it when the platform itself blocks the work: when pages cannot have their own titles, when structured data cannot be added, when the site is unusable on a phone, or when it is so slow that no content fix will rescue it.",
+      "When a rebuild is the right call, we build in Next.js with React and Tailwind, or inside WordPress, Shopify, Webflow or Framer if that is what your team can keep updated. Google publishes the pass marks for the three Core Web Vitals and we test against them on a real mobile connection, not on a fast office laptop.",
+      "Every migration is planned around keeping what already ranks: a full URL map, single-hop redirects, and the old pages checked page by page before anything is switched over. The code goes to your own repository at the end.",
+    ],
+    keywords:
+      "web design Birmingham website redesign Birmingham Next.js developer Birmingham WordPress developer Birmingham site migration",
+  },
+  {
+    id: "ecommerce",
+    number: "04",
+    name: "E-Commerce",
+    heading: "Product and category pages built to be found, not just to be browsed",
+    image: "/images/uk/birmingham/service-ecommerce-birmingham.webp",
+    imageAlt: "E-commerce product listing for a Birmingham retailer",
+    imageSide: "left",
+    body: [
+      "Most e-commerce SEO problems are structural. Category pages with no text on them, product pages using the manufacturer's description word for word, filters generating thousands of near-identical URLs, and a search box that quietly creates a new indexable page for every query anyone types. None of that is fixed by writing a blog.",
+      "We work on Shopify, WooCommerce, Magento, and on headless setups where the storefront is custom and the commerce platform sits behind it. The job is the same in each: get the category structure to match how people search, get product data into structured markup that reflects the page, control what is allowed to be indexed, and make the pages fast enough on a phone to survive the visit.",
+      "For Birmingham businesses selling to trade and to the public at once, which is common across the Jewellery Quarter and the manufacturing corridors, that also means keeping the trade side out of the public index without hiding the pages you do want found.",
+    ],
+    keywords:
+      "ecommerce seo Birmingham Shopify seo Birmingham WooCommerce Birmingham product page seo B2B ecommerce Birmingham",
   },
 ];
 
@@ -112,8 +118,8 @@ function Panel({ service }: { service: Service }) {
             borderRadius: 16,
             overflow: "hidden",
             boxShadow: service.featured
-              ? "0 0 0 2px rgba(255,107,53,0.55), 0 30px 80px -20px rgba(255,107,53,0.35), 0 20px 60px -20px rgba(0,82,204,0.25)"
-              : "0 30px 80px -20px rgba(0,82,204,0.15), 0 10px 40px -10px rgba(0,0,0,0.5)",
+              ? "0 0 0 2px #B23E13, 0 18px 44px -22px rgba(26,26,26,0.28)"
+              : "0 0 0 1px #D9D9D2, 0 18px 44px -22px rgba(26,26,26,0.18)",
           }}
         >
           <Image
@@ -153,7 +159,7 @@ function Panel({ service }: { service: Service }) {
           <div
             className="flex items-center gap-3"
             style={{
-              color: service.featured ? "#FF6B35" : "#93C5FD",
+              color: "#B23E13",
               fontFamily: "var(--font-sans)",
               fontWeight: 600,
               fontSize: 12,
@@ -166,15 +172,16 @@ function Panel({ service }: { service: Service }) {
               aria-hidden="true"
               className="inline-block h-px w-8"
               style={{
-                backgroundColor: service.featured ? "#FF6B35" : "#93C5FD",
+                backgroundColor: "#B23E13",
               }}
             />
             <span>{service.name}</span>
           </div>
 
           <h3
-            className="font-clash mt-5 text-white"
+            className="font-clash mt-5"
             style={{
+              color: "#1A1A1A",
               fontWeight: 700,
               fontSize: "clamp(20px, 2.5vw, 32px)",
               lineHeight: 1.15,
@@ -187,7 +194,7 @@ function Panel({ service }: { service: Service }) {
           <div
             className="mt-6 space-y-5"
             style={{
-              color: "rgba(255,255,255,0.72)",
+              color: "#4A4A45",
               fontFamily: "var(--font-sans)",
               fontWeight: 400,
               fontSize: "clamp(14px, 1.05vw, 15.5px)",
@@ -261,7 +268,7 @@ export default function Services() {
               dots?.forEach((d, i) => {
                 d.dataset.active = i === idx ? "true" : "false";
                 d.style.backgroundColor =
-                  i === idx ? "#FF6B35" : "rgba(255,255,255,0.25)";
+                  i === idx ? "#B23E13" : "#D9D9D2";
                 d.style.transform = i === idx ? "scale(1.25)" : "scale(1)";
               });
               if (activeNameRef.current) {
@@ -338,7 +345,7 @@ export default function Services() {
         >
           <p
             style={{
-              color: "#FF6B35",
+              color: "#B23E13",
               fontFamily: "var(--font-sans)",
               fontWeight: 600,
               fontSize: 13,
@@ -346,7 +353,7 @@ export default function Services() {
               textTransform: "uppercase",
             }}
           >
-            What We Build in Birmingham
+            What we do for Birmingham businesses
           </p>
 
           <h2
@@ -360,14 +367,13 @@ export default function Services() {
               maxWidth: 960,
             }}
           >
-            Four Services. One AI-Native Agency. Built for Birmingham&rsquo;s
-            Second City Ambition.
+            Four things, in the order they usually need doing
           </h2>
 
           <span
             aria-hidden="true"
             className="mt-6 block"
-            style={{ width: 48, height: 2, backgroundColor: "#FF6B35" }}
+            style={{ width: 48, height: 2, backgroundColor: "#B23E13" }}
           />
         </div>
       </div>
@@ -376,7 +382,7 @@ export default function Services() {
       <div
         ref={pinRef}
         className="relative w-full overflow-hidden"
-        style={{ backgroundColor: "#0A0F1C" }}
+        style={{ backgroundColor: "#FAFAF7" }}
       >
         <div
           ref={trackRef}
@@ -402,20 +408,20 @@ export default function Services() {
                 className="block h-2 w-2 rounded-full transition-transform duration-300"
                 style={{
                   backgroundColor:
-                    i === 0 ? "#FF6B35" : "rgba(255,255,255,0.25)",
+                    i === 0 ? "#B23E13" : "#D9D9D2",
                 }}
               />
             ))}
           </div>
           <span
             className="inline-block h-4 w-px"
-            style={{ backgroundColor: "rgba(255,255,255,0.2)" }}
+            style={{ backgroundColor: "#D9D9D2" }}
           />
           <span
             ref={activeNameRef}
             className="text-[12px] uppercase tracking-[0.18em]"
             style={{
-              color: "rgba(255,255,255,0.75)",
+              color: "#4A4A45",
               fontFamily: "var(--font-sans)",
               fontWeight: 600,
             }}

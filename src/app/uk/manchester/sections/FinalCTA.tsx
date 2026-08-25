@@ -70,7 +70,7 @@ export default function FinalCTA() {
                 marginBottom: "24px",
               }}
             >
-              Ready to Build a Manchester Website That Actually Works?
+              Ready to find out why Manchester is not finding you?
             </h2>
 
             <p
@@ -82,11 +82,9 @@ export default function FinalCTA() {
                 maxWidth: "50ch",
               }}
             >
-              Manchester&apos;s digital economy is worth £5 billion and growing.
-              Your website should reflect the ambition of the city you operate
-              in, fast, intelligent, visible, and engineered to convert.
-              FactoryJet builds AI-native websites on Next.js 15 at a fixed, transparent quote, with guaranteed Lighthouse scores
-              and AI search visibility baked into every page.
+              Send us the site and the terms you want to win. You get a short
+              written review of what is holding you back, what we would fix
+              first, and a fixed scope with a date on it.
             </p>
 
             {/* Trust checkpoints */}
