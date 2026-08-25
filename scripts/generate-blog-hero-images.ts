@@ -156,6 +156,16 @@ const SPECS: Spec[] = [
       'warm amber and deep charcoal tones, calm atmospheric, no people',
     alt: 'A quiet UK office desk at dusk with a workflow running on an open laptop, representing automation that keeps working in the background',
   },
+  {
+    file: 'what-is-seo-small-business-2026',
+    prompt:
+      'A US small business owner desk in the late morning, an open laptop angled away showing a soft ' +
+      'blurred page of search results, beside it a printed multi-page proposal document with ' +
+      'unreadable blurred columns and a pen resting on it, a plain coffee cup to one side, ' +
+      'natural light from a window on the left, lived-in and real rather than staged, ' +
+      'warm cream and deep charcoal palette, no people',
+    alt: 'A desk with a laptop showing search results beside a printed agency proposal, representing a business owner deciding what SEO actually buys',
+  },
 ]
 
 async function generate(prompt: string): Promise<Buffer> {

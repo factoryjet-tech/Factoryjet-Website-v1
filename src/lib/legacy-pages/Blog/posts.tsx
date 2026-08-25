@@ -98,8 +98,11 @@ import { post as aiCustomerSupportAgentArchitectureGuidePost } from './posts/ai-
 import { post as howToBuildCustomAiSdrB2bSales2026Post } from './posts/how-to-build-custom-ai-sdr-b2b-sales-2026';
 import { post as n8nVsZapierVsMakeAiWorkflowAutomation2026Post } from './posts/n8n-vs-zapier-vs-make-ai-workflow-automation-2026';
 import { post as agenticCommerceAutonomousAiAgentsEcommerce2026Post } from './posts/agentic-commerce-autonomous-ai-agents-ecommerce-2026';
+import { post as whatIsSeoSmallBusiness2026Post } from './posts/what-is-seo-small-business-2026';
 
 export const POSTS: BlogPost[] = [
+  // --- US SEO DEFINITION PILLAR (2026-08-25) ---
+  whatIsSeoSmallBusiness2026Post,
   // --- US AI AGENT PILLAR GUIDES (2026-08-21) ---
   aiCustomerSupportAgentArchitectureGuidePost,
   howToBuildCustomAiSdrB2bSales2026Post,
