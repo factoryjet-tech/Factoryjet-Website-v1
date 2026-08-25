@@ -18,7 +18,7 @@ import MidPageCTA from '@/components/v2/MidPageCTA';
 import AuthorCard from '@/components/v2/AuthorCard';
 import CityLinksAU from '@/components/v2/CityLinksAU';
 import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
-import AuHeader from '@/app/au/components/Header';
+import AuSubpageHeader from '@/app/au/components/SubpageHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import { AU_FOOTER_COLUMNS } from '@/data/auFooterColumns';
 
@@ -193,7 +193,7 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <AuHeader />
+      <AuSubpageHeader current="/au/brisbane" />
 
       <BrisbanePage>
         <Breadcrumbs items={CRUMBS} />
