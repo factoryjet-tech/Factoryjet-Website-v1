@@ -96,7 +96,7 @@ export const post: BlogPost = {
       </p>
       <p className="mb-4">
         Bigger goals often use several agents. A planner breaks the goal into steps, specialists handle research or execution, and an orchestrator keeps them in sync. Whether it is one agent or a team, the shape is the same: reason, act, check, repeat. If you want the finer distinction between a single agent and a coordinated system, we cover{' '}
-        <a href="/blog/agentic-ai-vs-ai-agents" className="text-[#B23E13] underline hover:text-[#F05A28]">agentic AI vs AI agents</a> separately.
+        <a href="/blog/agentic-ai-vs-ai-agents" className="text-[#B23E13] underline hover:text-[#F05A28]">agentic AI vs AI agents</a> separately, and the single agent gets its own definition and running costs in <a href="/blog/what-is-an-ai-agent-cost-2026" className="text-[#B23E13] underline hover:text-[#F05A28]">what an AI agent is and what it costs</a>.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">How is agentic AI different from generative AI?</h2>

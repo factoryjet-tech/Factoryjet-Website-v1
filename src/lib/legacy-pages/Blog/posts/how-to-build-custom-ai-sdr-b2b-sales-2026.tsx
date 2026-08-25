@@ -100,7 +100,7 @@ export const post: BlogPost = {
       </p>
 
       <p className="mb-6">
-        Yet data from the Harvard Business Review reveals that the average B2B company takes <strong>42 hours</strong> to respond to an inbound web lead, with 23% of companies failing to respond at all. Traditional human SDR models struggle with high turnover, onboarding lag, and weekend lead abandonment. Custom AI Sales Development Representatives (SDRs) solve this by engaging, qualifying, and scheduling discovery calls with every inbound lead in under 60 seconds.
+        Yet data from the Harvard Business Review reveals that the average B2B company takes <strong>42 hours</strong> to respond to an inbound web lead, with 23% of companies failing to respond at all. Traditional human SDR models struggle with high turnover, onboarding lag, and weekend lead abandonment. Custom AI Sales Development Representatives (SDRs) solve this by engaging, qualifying, and scheduling discovery calls with every inbound lead in under 60 seconds. An AI SDR is one job an AI agent can hold; <a href="/blog/what-is-an-ai-agent-cost-2026" className="text-[#B23E13] underline hover:text-[#F05A28]">what an AI agent is and what it costs</a> covers the general definition and the running costs.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">1. The Mathematical Proof: HBR vs. Lead Response Management</h2>

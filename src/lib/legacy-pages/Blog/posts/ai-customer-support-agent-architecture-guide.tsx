@@ -98,7 +98,7 @@ export const post: BlogPost = {
       </p>
 
       <p className="mb-6">
-        However, the first generation of AI chatbots created massive customer frustration. Built as static FAQ deflection widgets, they trapped users in repetitive loops and offered generic policy links instead of solving problems. Modern AI customer support agents represent a fundamental architectural leap: by combining conversational reasoning models with authenticated API tools, they check real-time warehouse queues, issue return authorizations, modify delivery addresses, and resolve 70%+ of tickets end-to-end.
+        However, the first generation of AI chatbots created massive customer frustration. Built as static FAQ deflection widgets, they trapped users in repetitive loops and offered generic policy links instead of solving problems. Modern AI customer support agents represent a fundamental architectural leap: by combining conversational reasoning models with authenticated API tools, they check real-time warehouse queues, issue return authorizations, modify delivery addresses, and resolve 70%+ of tickets end-to-end. If the term itself is new to you, <a href="/blog/what-is-an-ai-agent-cost-2026" className="text-[#B23E13] underline hover:text-[#F05A28]">what an AI agent is and what it costs</a> covers the definition and the running costs before you read the architecture below.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">1. The 5-Layer Technical Support Agent Architecture</h2>

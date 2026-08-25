@@ -82,7 +82,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What AI Agents Actually Are (Plain English)</h2>
       <p className="mb-4">
-        An AI agent is software that can perceive a situation, reason about it, and take action, without a human approving each step. The "intelligence" comes from a large language model (GPT-4, Claude, Gemini) that understands natural language far beyond keyword matching.
+        An AI agent is software that can perceive a situation, reason about it, and take action, without a human approving each step. The full definition, the parts an agent is built from, and what one actually costs to run are covered in <a href="/blog/what-is-an-ai-agent-cost-2026" className="text-blue-600 underline hover:text-blue-800 transition-colors">what an AI agent is and what it costs</a>; this guide starts one step later, at which agents earn their keep in a US small business.
       </p>
       <p className="mb-4">
         A practical example: a potential customer lands on your plumbing company website at 10 PM on a Saturday and types "my water heater stopped working, how much is a replacement?" A traditional contact form sends an email that gets read Monday morning. A chatbot might show a pre-written FAQ. An AI agent understands the urgency, asks follow-up questions about the water heater age and home size, qualifies the lead as high-priority, schedules a callback for 8 AM Sunday when your on-call technician starts, and sends a confirmation text: all automatically, with no one touching a keyboard.

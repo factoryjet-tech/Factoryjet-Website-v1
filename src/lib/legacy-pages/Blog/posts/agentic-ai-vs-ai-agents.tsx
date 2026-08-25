@@ -83,7 +83,7 @@ export const post: BlogPost = {
         An AI agent is a program that perceives its situation, decides what to do, and takes action toward a goal, with limited supervision. Give it an objective and access to a few tools, and it works out the steps and carries them out. A support agent that reads a ticket, looks up the order, and issues a refund is a good mental picture: one system, finishing one job, on its own.
       </p>
       <p className="mb-4">
-        Under the hood, an agent usually pairs a reasoning model with three things: memory, so it remembers context; tools, so it can act in the real world through APIs; and a loop, so it can take a step, look at the result, and adjust. That loop is what separates an agent from a chatbot that only replies.
+        Under the hood, an agent pairs a reasoning model with memory, tools it can call through APIs, and a loop that lets it take a step, check the result, and adjust. That loop is what separates an agent from a chatbot that only replies. If you want the long version, including what running one costs, we wrote it up in <a href="/blog/what-is-an-ai-agent-cost-2026" className="text-[#B23E13] underline hover:text-[#F05A28]">what an AI agent is and what it costs</a>.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What is agentic AI?</h2>

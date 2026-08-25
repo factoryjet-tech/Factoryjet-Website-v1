@@ -125,7 +125,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What an AI Agent Actually Is</h2>
       <p className="mb-4">
-        An AI agent uses the same underlying LLM but adds a critical layer: <strong>tools</strong>. The agent can call your CRM API to check whether a prospect already exists. It can read your calendar to find an open slot. It can write a draft email to your inbox. It can update a HubSpot deal stage. It can pull a customer's order history before answering a refund request. And it decides, turn by turn, which tool to use and when.
+        An AI agent uses the same underlying LLM but adds a critical layer: <strong>tools</strong>. The agent can call your CRM API to check whether a prospect already exists. It can read your calendar to find an open slot. It can write a draft email to your inbox. It can update a HubSpot deal stage. It can pull a customer's order history before answering a refund request. And it decides, turn by turn, which tool to use and when. If you want the standalone definition rather than the comparison, along with what an agent costs to run, start with <a href="/blog/what-is-an-ai-agent-cost-2026" className="text-blue-600 underline hover:text-blue-800 transition-colors">what an AI agent is and what it costs</a>.
       </p>
       <p className="mb-4">
         Four real US SMB agent deployments:
