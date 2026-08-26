@@ -27,13 +27,9 @@ const organization = {
       'https://github.com/factoryjet-tech',
     ],
   },
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '64',
-    bestRating: '5',
-    worstRating: '1',
-  },
+  // No aggregateRating: there is no review corpus behind a number, and Google
+  // treats review markup it can't trace to real reviews as a structured-data
+  // policy problem. Add it back only with real, verifiable reviews.
   areaServed: {
     "@type": "Country",
     name: "United Kingdom",

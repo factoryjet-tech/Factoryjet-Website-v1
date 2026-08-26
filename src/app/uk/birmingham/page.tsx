@@ -92,13 +92,6 @@ const jsonLd = {
     },
     {
       '@type': 'LocalBusiness',
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '4.9',
-        reviewCount: '64',
-        bestRating: '5',
-        worstRating: '1',
-      },
       '@id': `${CANONICAL}#business`,
       name: 'FactoryJet Technologies: Birmingham',
       url: CANONICAL,

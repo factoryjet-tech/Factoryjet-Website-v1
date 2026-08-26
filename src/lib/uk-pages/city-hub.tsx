@@ -249,13 +249,9 @@ export default function CityHubPage({ city }: CityHubPageProps) {
         'https://github.com/factoryjet-tech',
       ],
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '64',
-      bestRating: '5',
-      worstRating: '1',
-    },
+    // No aggregateRating: WebPage isn't a type Google grants review-snippet rich
+    // results for, and there is no review corpus behind this number anyway.
+    // Add it back only on a review-eligible type, with real, verifiable reviews.
     publisher: { '@id': 'https://factoryjet.com/#organization' },
     about: {
       '@type': 'City',

@@ -54,15 +54,11 @@ const jsonLd = {
         'https://www.crunchbase.com/organization/factoryjet',
       ],
     },
+    // No aggregateRating: there is no review corpus behind a number, and Google
+    // treats review markup it can't trace to real reviews as a structured-data
+    // policy problem. Add it back only with real, verifiable reviews.
     {
       '@type': 'LocalBusiness',
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '4.9',
-        reviewCount: '64',
-        bestRating: '5',
-        worstRating: '1',
-      },
       '@id': `${CANONICAL}#business`,
       name: 'FactoryJet Technologies: Sheffield',
       url: CANONICAL,

@@ -193,13 +193,6 @@ const SERVICE_SCHEMA = {
       'https://github.com/factoryjet-tech',
     ],
   },
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '64',
-    bestRating: '5',
-    worstRating: '1',
-  },
   serviceType: 'Shopify Plus B2B Wholesale Development Agency',
   name: 'Shopify Plus B2B Wholesale Portal Development',
   description:

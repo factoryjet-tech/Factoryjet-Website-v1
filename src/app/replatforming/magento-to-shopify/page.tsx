@@ -243,13 +243,6 @@ const SERVICE_SCHEMA = {
       'https://github.com/factoryjet-tech',
     ],
   },
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '64',
-    bestRating: '5',
-    worstRating: '1',
-  },
   name: 'Magento to Shopify Plus Migration Services',
   provider: {
     '@type': 'Organization',

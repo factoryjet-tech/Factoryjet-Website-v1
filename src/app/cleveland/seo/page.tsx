@@ -380,13 +380,6 @@ const FAQ_SCHEMA = {
 const LOCAL_BUSINESS_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '64',
-    bestRating: '5',
-    worstRating: '1',
-  },
   name: 'FactoryJet - Cleveland SEO Company & Local Agency',
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
@@ -425,13 +418,6 @@ const SERVICE_SCHEMA = {
       'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
       'https://github.com/factoryjet-tech',
     ],
-  },
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '64',
-    bestRating: '5',
-    worstRating: '1',
   },
   name: 'Cleveland SEO Services & Local Search Optimization',
   provider: {
