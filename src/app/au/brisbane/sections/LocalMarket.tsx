@@ -97,6 +97,20 @@ export default function LocalMarket() {
           </div>
 
           <aside>
+            <figure className="m-0 mb-5 overflow-hidden rounded-2xl border border-fj-neutral-200">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/au/brisbane/brisbane-interior-768.webp"
+                srcSet="/images/au/brisbane/brisbane-interior-768.webp 768w, /images/au/brisbane/brisbane-interior-1200.webp 1200w"
+                sizes="(max-width: 1023px) 92vw, 440px"
+                alt="A renovated Queensland commercial interior with brick, timber and louvre windows"
+                width={1200}
+                height={800}
+                loading="lazy"
+                className="h-auto w-full object-cover"
+              />
+            </figure>
+
             <div className="rounded-2xl border border-fj-neutral-200 bg-fj-cream p-6">
               <h3 className="font-fj-display text-[18px] font-bold text-fj-ink">
                 Who we build for in Brisbane

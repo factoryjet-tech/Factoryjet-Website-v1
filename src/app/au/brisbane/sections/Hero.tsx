@@ -71,9 +71,30 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right: proof and coverage */}
+          {/* Right: the human, then proof and coverage */}
           <aside>
-            <div className="rounded-2xl border border-fj-neutral-200 bg-white p-6 md:p-7">
+            <figure className="m-0 overflow-hidden rounded-2xl border border-fj-neutral-200">
+              <picture>
+                <source
+                  type="image/avif"
+                  srcSet="/images/au/brisbane/hero-owner-528.avif 528w, /images/au/brisbane/hero-owner-720.avif 720w, /images/au/brisbane/hero-owner-1024.avif 1024w"
+                  sizes="(max-width: 1023px) 92vw, 420px"
+                />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/au/brisbane/hero-owner-720.webp"
+                  srcSet="/images/au/brisbane/hero-owner-528.webp 528w, /images/au/brisbane/hero-owner-720.webp 720w, /images/au/brisbane/hero-owner-1024.webp 1024w"
+                  sizes="(max-width: 1023px) 92vw, 420px"
+                  alt="A Brisbane business owner reviewing his site on a tablet in his workshop"
+                  width={720}
+                  height={1080}
+                  loading="eager"
+                  className="h-auto w-full object-cover"
+                />
+              </picture>
+            </figure>
+
+            <div className="mt-5 rounded-2xl border border-fj-neutral-200 bg-white p-6 md:p-7">
               <h2 className="font-fj-display text-[18px] font-bold text-fj-ink">
                 What you get, in short
               </h2>

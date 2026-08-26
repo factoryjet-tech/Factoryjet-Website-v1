@@ -125,17 +125,19 @@ const DAYS = [
   { dn: 'Day 7', t: 'Launch', d: 'Live on your domain, training handover included.' },
 ];
 
-/* Coverage cards. These were <Link>s to /au/{city} pages that were never built,
-   so all six were hard 404s (fixed 2026-07-26). They now render as static cards.
-   Add the href back when the AU city pages ship. */
+/* Coverage cards. Originally static divs: the first four were hard 404 links
+   until 2026-07-26 (fixed by unlinking). The four live city pages shipped
+   2026-08-25, so their hrefs are back per this file's own instruction. SYD,
+   PER and OOL have no pages yet (authority rationale in sitemap-au/sitemap.ts)
+   and render as static cards with a "local guide coming soon" tag. */
 const CITIES = [
-  { state: 'NSW', code: 'SYD', name: 'Sydney', blurb: "Web design Sydney & SEO for Australia's biggest market" },
-  { state: 'VIC', code: 'MEL', name: 'Melbourne', blurb: 'Web design Melbourne for retail, hospitality & services' },
-  { state: 'QLD', code: 'BNE', name: 'Brisbane', blurb: 'Web design Brisbane & SEO for the growth corridor' },
-  { state: 'WA', code: 'PER', name: 'Perth', blurb: 'Web design Perth for trades, mining services & retail' },
-  { state: 'SA', code: 'ADL', name: 'Adelaide', blurb: 'Web design & website development Adelaide for growing SMBs' },
-  { state: 'QLD', code: 'OOL', name: 'Gold Coast', blurb: 'Web design Gold Coast for tourism, fitness & lifestyle brands' },
-];
+  { state: 'NSW', code: 'SYD', name: 'Sydney', blurb: "Web design Sydney & SEO for Australia's biggest market", soon: true },
+  { state: 'VIC', code: 'MEL', name: 'Melbourne', blurb: 'Web design Melbourne for retail, hospitality & services', href: '/au/melbourne' },
+  { state: 'QLD', code: 'BNE', name: 'Brisbane', blurb: 'Web design Brisbane & SEO for the growth corridor', href: '/au/brisbane' },
+  { state: 'WA', code: 'PER', name: 'Perth', blurb: 'Web design Perth for trades, mining services & retail', soon: true },
+  { state: 'SA', code: 'ADL', name: 'Adelaide', blurb: 'Web design & website development Adelaide for growing SMBs', href: '/au/adelaide' },
+  { state: 'QLD', code: 'OOL', name: 'Gold Coast', blurb: 'Web design Gold Coast for tourism, fitness & lifestyle brands', soon: true },
+] as const;;
 
 const CASES = [
   { tag: 'E-commerce · Home décor', name: 'Belle Maison', p: 'Custom storefront with curated collections and a checkout that converts.', stat: 'Conversion-focused rebuild', img: '/images/portfolio/belle-maison.webp' },
@@ -153,7 +155,7 @@ const TAPE_ITEMS = [
 
 // Freshness signal. Benchmark: 56% of AI-Overview-cited pages carry it.
 // Keep honest: bump when the page's content actually changes.
-const PAGE_MODIFIED = '2026-08-04';
+const PAGE_MODIFIED = '2026-08-26';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -503,16 +505,28 @@ export default function AUHomePage() {
               <h2>Built for Australian businesses, <span className="it">city by city.</span></h2>
               <p className="lead" style={{ maxWidth: 600 }}>Web design, e-commerce and SEO services for businesses across Australia, fully remote, in your hours. Local market pages for our priority cities:</p>
               <div className="cities">
-                {CITIES.map((c) => (
-                  <div className="city" key={c.code}>
-                    <span className="crow">
-                      <span className="pin"><Ic id="i-pin" />{c.state}</span>
-                      <span className="code">{c.code}</span>
-                    </span>
-                    <b>{c.name}</b>
-                    <span>{c.blurb}</span>
-                  </div>
-                ))}
+                {CITIES.map((c) => {
+                  const body = (
+                    <>
+                      <span className="crow">
+                        <span className="pin"><Ic id="i-pin" />{c.state}</span>
+                        <span className="code">{c.code}</span>
+                      </span>
+                      <b>{c.name}</b>
+                      <span>{c.blurb}</span>
+                      {'soon' in c && c.soon && <span className="soon-tag">Local guide coming soon</span>}
+                    </>
+                  );
+                  return 'href' in c && c.href ? (
+                    <Link className="city" href={c.href} key={c.code} aria-label={`FactoryJet local guide: ${c.name}`}>
+                      {body}
+                    </Link>
+                  ) : (
+                    <div className="city city-static" key={c.code}>
+                      {body}
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </section>

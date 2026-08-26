@@ -8,6 +8,7 @@ import Hero from './sections/Hero';
 import AnswerFirst from './sections/AnswerFirst';
 import LocalMarket from './sections/LocalMarket';
 import Services from './sections/Services';
+import TeamSection from './sections/TeamSection';
 import ChoosingAnAgency from './sections/ChoosingAnAgency';
 import FAQ from './sections/FAQ';
 import Sources from './sections/Sources';
@@ -22,7 +23,7 @@ import AuSubpageHeader from '@/app/au/components/SubpageHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import { AU_FOOTER_COLUMNS } from '@/data/auFooterColumns';
 
-const PAGE_MODIFIED = '2026-08-25';
+const PAGE_MODIFIED = '2026-08-26';
 
 export const metadata: Metadata = {
   title: 'Web Design & SEO Brisbane | Fast Sites, Found on Google | FactoryJet',
@@ -202,6 +203,7 @@ export default function Page() {
         <AnswerFirst />
         <LocalMarket />
         <Services />
+        <TeamSection />
 
         <section
           className="w-full bg-white"

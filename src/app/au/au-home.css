@@ -293,6 +293,13 @@
 .auh .city:hover::after{opacity:1}
 .auh .city:nth-child(2n){background:linear-gradient(165deg,#FDF4EE,var(--peach))}
 .auh .city:nth-child(3n){background:linear-gradient(165deg,#EAF6F0,var(--green-soft))}
+/* static (no page yet) cards: kill the link affordance, label the wait */
+.auh .city-static{cursor:default}
+.auh .city-static:hover{transform:none;box-shadow:none}
+.auh .city-static:hover .code{color:var(--n600)}
+.auh .city-static:hover::after{opacity:0}
+.auh .city .soon-tag{font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--n600);margin-top:10px;display:inline-flex;align-items:center;gap:5px}
+.auh .city .soon-tag::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--line-d)}
 
 /* case studies */
 .auh .cases{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;margin-top:42px}

@@ -116,6 +116,21 @@ export default function Services() {
         </p>
         <Block items={WEB_DESIGN} />
 
+        {/* Editorial band: the build in progress, between the two service blocks */}
+        <figure className="m-0 mt-12 overflow-hidden rounded-2xl border border-fj-neutral-200">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/au/brisbane/process-desk-768.webp"
+            srcSet="/images/au/brisbane/process-desk-768.webp 768w, /images/au/brisbane/process-desk-1200.webp 1200w"
+            sizes="(max-width: 1120px) 92vw, 1088px"
+            alt="A FactoryJet website build in progress: layout blocks on dual monitors in the studio"
+            width={1200}
+            height={800}
+            loading="lazy"
+            className="h-auto w-full object-cover"
+          />
+        </figure>
+
         {/* ---- SEO ---- */}
         <h3
           id="seo-brisbane"
