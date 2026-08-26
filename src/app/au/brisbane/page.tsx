@@ -207,10 +207,10 @@ export default function Page() {
 
         <section
           className="w-full bg-white"
-          style={{ padding: '48px 0 16px' }}
+          style={{ padding: '0' }}
           aria-label="Regional benchmark"
         >
-          <div className="mx-auto w-full max-w-[1120px] px-4">
+          <div className="mx-auto w-full max-w-[1120px] px-6 pt-8 sm:px-8">
             <RegionalBenchmarkCard city="Brisbane" vertical="web-design" />
           </div>
         </section>
@@ -230,10 +230,10 @@ export default function Page() {
 
         <section
           className="w-full bg-fj-cream"
-          style={{ padding: '48px 0' }}
+          style={{ padding: '0' }}
           aria-label="About the author"
         >
-          <div className="mx-auto w-full max-w-[1120px] px-4">
+          <div className="mx-auto w-full max-w-[1120px] px-6 pb-12 pt-0 sm:px-8">
             <AuthorCard />
           </div>
         </section>

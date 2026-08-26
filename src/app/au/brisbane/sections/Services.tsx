@@ -84,7 +84,7 @@ export default function Services() {
       className="w-full bg-fj-cream"
       style={{ maxWidth: '100vw' }}
     >
-      <div className="mx-auto w-full max-w-[1120px] px-6 py-16 sm:px-8 md:py-24">
+      <div className="mx-auto w-full max-w-[1120px] px-6 py-12 sm:px-8 md:py-20">
         <p className="font-fj-mono text-xs font-semibold uppercase tracking-[0.16em] text-[#B23E13]">
           What we do
         </p>

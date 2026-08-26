@@ -19,7 +19,7 @@ export default function FinalCTA() {
       className="w-full"
       style={{ backgroundColor: '#14110F' }}
     >
-      <div className="mx-auto w-full max-w-[1120px] px-6 py-16 sm:px-8 md:py-24">
+      <div className="mx-auto w-full max-w-[1120px] px-6 py-12 sm:px-8 md:py-20">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[58%_1fr] lg:gap-16">
           <div>
             <p className="font-fj-mono text-xs font-semibold uppercase tracking-[0.16em] text-[#FF8A4C]">
