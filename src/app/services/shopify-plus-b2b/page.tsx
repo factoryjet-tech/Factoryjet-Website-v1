@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import FAQ from '@/components/v2/FAQ';
@@ -9,9 +10,10 @@ import EnterpriseArchitectureBlueprint from '@/components/v2/EnterpriseArchitect
 import AuthorCard from '@/components/v2/AuthorCard';
 import CommerceRoiCalculator from '@/components/v2/CommerceRoiCalculator';
 import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
+import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-24';
+const PAGE_MODIFIED = '2026-08-29';
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const IMG = '/images/us/marketplace';
 
@@ -61,7 +63,7 @@ const FAQ_ITEMS = [
     category: 'features',
     question: 'How do custom B2B price lists work in Shopify Plus?',
     answer:
-      'You can assign percentage-off discounts or fixed dollar prices to specific products, collections, or entire catalogs. These price lists are bound to specific wholesale company profiles or buyer locations, ensuring each business customer only sees their negotiated contract pricing upon logging in.',
+      'You can assign percentage-off discounts or fixed contract prices to specific products, collections, or entire catalogs. These price lists are bound to specific wholesale company profiles or buyer locations, ensuring each business customer only sees their negotiated contract pricing upon logging in.',
   },
   {
     category: 'features',
@@ -183,22 +185,16 @@ const FAQ_SCHEMA = {
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  author: {
-    '@type': 'Person',
-    name: 'Bhavesh Barot',
-    jobTitle: 'Chief Technical Architect',
-    url: 'https://factoryjet.com/about',
-    sameAs: [
-      'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-      'https://github.com/factoryjet-tech',
-    ],
-  },
   serviceType: 'Shopify Plus B2B Wholesale Development Agency',
   name: 'Shopify Plus B2B Wholesale Portal Development',
   description:
     'Complete Shopify Plus native B2B wholesale portal development, custom price lists, Net terms, company account hierarchies, and ERP integrations.',
   provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
-  areaServed: { '@type': 'Country', name: 'United States' },
+  areaServed: [
+    { '@type': 'Country', name: 'United States' },
+    { '@type': 'Country', name: 'United Kingdom' },
+    { '@type': 'Country', name: 'Australia' },
+  ],
   audience: { '@type': 'BusinessAudience', name: 'DTC and B2B Brands Scaling Wholesale' },
 };
 
@@ -217,6 +213,7 @@ const HOWTO_SCHEMA = {
 const WEBPAGE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/services/shopify-plus-b2b#webpage',
   name: 'Shopify Plus B2B Agency & Wholesale Development | FactoryJet',
   description: 'Scale B2B wholesale on Shopify Plus with custom pricing and ERP sync.',
   url: 'https://factoryjet.com/services/shopify-plus-b2b',
@@ -224,13 +221,15 @@ const WEBPAGE_SCHEMA = {
   author: {
     '@type': 'Person',
     name: 'Bhavesh Barot',
-    jobTitle: 'Chief Technical Architect',
+    jobTitle: 'Founder & Chief Technical Architect',
     url: 'https://factoryjet.com/about',
     sameAs: [
       'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
       'https://github.com/factoryjet-tech',
     ],
   },
+  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
 };
 
 const ORG_SCHEMA = {
@@ -288,7 +287,6 @@ const BENEFITS = [
   { i: '⛓', t: 'ERP & WMS Bi-Directional Synchronization', d: 'Connect NetSuite, SAP, Acumatica, or Katana directly to Shopify Plus GraphQL APIs for synchronized inventory and orders.' },
   { i: '⤢', t: 'Custom B2B Checkout Rules with Shopify Functions', d: 'Enforce minimum order quantities (MOQs), case pack multiples, and custom freight rules natively in checkout.' },
 ];
-
 
 const EVALUATION_CRITERIA = [
   {
@@ -494,8 +492,6 @@ export default function ShopifyPlusB2BPage() {
           </div>
         </section>
 
-
-
         {/* ── Use Case & Imagery Section ── */}
         <section className="pp-sec tint">
           <div className="pp-wrap">
@@ -522,7 +518,6 @@ export default function ShopifyPlusB2BPage() {
           </div>
         </section>
 
-        
         {/* ── Shopify Functions & B2B Checkout Extensibility Deep Dive ── */}
         <section className="pp-sec tint">
           <div className="pp-wrap pp-narrow">
@@ -541,7 +536,7 @@ export default function ShopifyPlusB2BPage() {
               </p>
               <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>2. Automated Cart &amp; Order Validation Functions</h3>
               <p>
-                Enforce strict commercial rules before order placement: validate that wholesale orders meet minimum tier values (e.g. $500 minimum),
+                Enforce strict commercial rules before order placement: validate that wholesale orders meet minimum tier values,
                 ensure case packs are ordered in full carton multiples (e.g. increments of 12 units), and prevent unverified buyers
                 from adding restricted catalog lines to their carts.
               </p>
@@ -554,7 +549,6 @@ export default function ShopifyPlusB2BPage() {
           </div>
         </section>
 
-        
         {/* ── Wholesale Price List Architecture & Tiered Volume Rules ── */}
         <section className="pp-sec">
           <div className="pp-wrap pp-narrow">
@@ -567,12 +561,12 @@ export default function ShopifyPlusB2BPage() {
               </p>
               <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>1. Fixed vs. Percentage Price Adjustments</h3>
               <p>
-                Assign specific negotiated wholesale dollar amounts per SKU (e.g. $14.50 instead of $32.00 retail) or apply broad percentage-based
+                Assign specific negotiated wholesale prices per SKU or apply broad percentage-based
                 margins across entire product collections (e.g. 45% off MSRP for Gold Tier wholesale accounts).
               </p>
               <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>2. Incremental Quantity Breaks and Breakpoint Pricing</h3>
               <p>
-                Incentivize larger corporate purchase orders with tiered quantity breaks (e.g. 1-49 units at $20/ea, 50-199 units at $17/ea, 200+ units at $14/ea).
+                Incentivize larger corporate purchase orders with tiered quantity breaks across volume brackets.
                 Shopify Plus updates line item pricing dynamically in the cart grid as buyers adjust quantities.
               </p>
               <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>3. Territory-Specific Catalog Gating</h3>
@@ -635,8 +629,8 @@ export default function ShopifyPlusB2BPage() {
                   </tr>
                   <tr>
                     <td className="name">Maintenance &amp; App Fees</td>
-                    <td>$0 extra app fees (Included in Plus)</td>
-                    <td>$300 to $1,500/mo in app subscriptions</td>
+                    <td>Zero extra app fees (Included in Plus)</td>
+                    <td>High monthly app subscription overhead</td>
                     <td>Double Shopify subscription cost</td>
                   </tr>
                 </tbody>
@@ -661,12 +655,6 @@ export default function ShopifyPlusB2BPage() {
           region="us"
         />
 
-        {/* ── FAQ ── */}
-        <section className="pp-sec pp-faqsec tint">
-          <div className="pp-wrap">
-            <p className="pp-mlabel">// wholesale answers</p>
-            <div style={{ marginTop: '16px' }}>
-              
         {/* ── AGENCY EVALUATION FRAMEWORK TABLE ── */}
         <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
           <div className="pp-wrap">
@@ -720,14 +708,23 @@ export default function ShopifyPlusB2BPage() {
           </div>
         </section>
 
-        <CommerceRoiCalculator city="Enterprise Store" region="us" />
+        {/* ── ROI Calculator ── */}
+        <section className="pp-sec">
+          <div className="pp-wrap">
+            <CommerceRoiCalculator city="Enterprise Store" region="us" />
+          </div>
+        </section>
 
-        <FAQ
-                headline="Frequently asked questions about Shopify Plus B2B"
-                categories={FAQ_CATEGORIES}
-                items={FAQ_ITEMS}
-              />
-            </div>
+        {/* ── FAQ ── */}
+        <section className="pp-sec pp-faqsec tint">
+          <div className="pp-wrap">
+            <FAQ
+              eyebrow="SHOPIFY PLUS B2B FAQ"
+              headline="Frequently asked questions about Shopify Plus B2B"
+              lead="Direct technical answers on pricing matrices, Net terms, ERP integration, and wholesale migrations:"
+              categories={FAQ_CATEGORIES}
+              items={FAQ_ITEMS}
+            />
           </div>
         </section>
 
@@ -754,6 +751,9 @@ export default function ShopifyPlusB2BPage() {
                     <span>Founder, FactoryJet · 10+ yrs building commerce</span>
                   </div>
                 </div>
+                <p style={{ marginTop: '20px', fontSize: '13.5px', color: 'var(--pp-muted)' }}>
+                  Explore related capabilities: <Link href="/b2b-ecommerce" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>B2B e-commerce platforms</Link>, <Link href="/services/shopify-development" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>Shopify store development</Link>, <Link href="/agentic-commerce" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>agentic commerce</Link>, and <Link href="/services/ai-agent-development" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>AI agent operations</Link>.
+                </p>
               </div>
               <div className="pp-proof">
                 <div className="top">
@@ -789,7 +789,7 @@ export default function ShopifyPlusB2BPage() {
         </div>
       </section>
 
-      <SiteFooter />
+      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   );
 }
