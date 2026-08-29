@@ -10,29 +10,30 @@ import AuthorCard from '@/components/v2/AuthorCard';
 import CommerceRoiCalculator from '@/components/v2/CommerceRoiCalculator';
 import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import EcommerceCityLinksUS from '@/components/v2/EcommerceCityLinksUS';
+import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-24';
+const PAGE_MODIFIED = '2026-08-29';
 const CANONICAL = 'https://factoryjet.com/denver/ecommerce-development';
 
 export const metadata: Metadata = {
-  title: 'Denver E-Commerce Development Agency | Shopify & Headless Next.js | FactoryJet',
+  title: 'Denver E-Commerce Agency | Shopify Plus & B2B | FactoryJet',
   description:
-    'Denver ecommerce development agency. High-converting Shopify Plus, headless Next.js architectures, and ERP integrations for Colorado brands.',
+    'Denver ecommerce agency. High-converting Shopify Plus, headless Next.js architectures, and ERP integrations for Colorado brands. Free technical audit.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Denver E-Commerce Development Agency | Shopify & Headless Next.js | FactoryJet',
+    title: 'Denver E-Commerce Agency | Shopify Plus & B2B | FactoryJet',
     description:
-      'Denver ecommerce development agency. High-converting Shopify Plus, headless Next.js architectures, and ERP integrations for Colorado brands.',
+      'Denver ecommerce agency. High-converting Shopify Plus, headless Next.js architectures, and ERP integrations for Colorado brands.',
     url: CANONICAL,
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Denver E-Commerce Development Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Denver E-Commerce Development Agency | Shopify & Headless Next.js | FactoryJet',
+    title: 'Denver E-Commerce Agency | Shopify Plus & B2B | FactoryJet',
     description: 'Custom Shopify Plus and Headless Next.js ecommerce engineering for Colorado brands. Sub-second performance and ERP integration.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -367,7 +368,6 @@ const LOCAL_BUSINESS_SCHEMA = {
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
   telephone: '+1-832-998-8422',
-  priceRange: '$$$',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Denver',
@@ -394,7 +394,7 @@ const SERVICE_SCHEMA = {
   author: {
     '@type': 'Person',
     name: 'Bhavesh Barot',
-    jobTitle: 'Chief Technical Architect',
+    jobTitle: 'Founder & Chief Technical Architect',
     url: 'https://factoryjet.com/about',
     sameAs: [
       'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
@@ -404,32 +404,45 @@ const SERVICE_SCHEMA = {
   name: 'Denver E-Commerce Development & Headless Shopify Plus Engineering',
   provider: {
     '@type': 'Organization',
+    '@id': 'https://factoryjet.com/#organization',
     name: 'FactoryJet',
     url: 'https://factoryjet.com',
   },
   serviceType: 'Headless E-Commerce Development, Shopify Plus, BigCommerce B2B & ERP Integration',
   description:
     'Custom headless Next.js ecommerce engineering, Shopify Plus architectures, NetSuite ERP integrations, and sub-second performance for Colorado brands.',
-  areaServed: { '@type': 'State', name: 'Colorado' },
+  areaServed: [
+    { '@type': 'City', name: 'Denver' },
+    { '@type': 'State', name: 'Colorado' },
+    { '@type': 'Country', name: 'United States' },
+  ],
 };
 
 const WEBPAGE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'Denver E-Commerce Development Agency | Shopify & Headless Next.js | FactoryJet',
+  '@id': 'https://factoryjet.com/denver/ecommerce-development#webpage',
+  name: 'Denver E-Commerce Agency | Shopify Plus & B2B | FactoryJet',
   description: 'Denver ecommerce development agency. High-converting Shopify Plus, headless Next.js architectures, and ERP integrations for Colorado brands.',
   url: CANONICAL,
   dateModified: PAGE_MODIFIED,
   author: {
     '@type': 'Person',
     name: 'Bhavesh Barot',
-    jobTitle: 'Chief Technical Architect',
+    jobTitle: 'Founder & Chief Technical Architect',
     url: 'https://factoryjet.com/about',
     sameAs: [
       'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
       'https://github.com/factoryjet-tech',
     ],
   },
+  isPartOf: {
+    '@type': 'WebSite',
+    '@id': 'https://factoryjet.com/#website',
+    name: 'FactoryJet',
+    url: 'https://factoryjet.com',
+  },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
 };
 
 const BREADCRUMB_SCHEMA = {
@@ -471,9 +484,16 @@ export default function DenverEcommercePage() {
                   Denver E-Commerce Development Agency for High-Growth Brands
                 </h1>
 
-                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
+                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 24px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
                   High-converting Shopify Plus stores, headless Next.js 15 storefronts, and real-time NetSuite ERP integrations engineered for Colorado leaders. Sub-second performance with 100% intellectual property code ownership.
                 </p>
+
+                {/* Answer-First Brief */}
+                <div style={{ background: '#F6F6F9', borderLeft: '3px solid #FF5622', padding: '14px 18px', borderRadius: '0 12px 12px 0', marginBottom: '28px', maxWidth: '52ch' }}>
+                  <p style={{ fontSize: '13.5px', color: '#141414', lineHeight: 1.55, margin: 0, fontWeight: 500 }}>
+                    <strong style={{ color: '#FF5622' }}>Executive Brief:</strong> FactoryJet engineers high-conversion Shopify Plus, headless Next.js, and custom B2B e-commerce architectures for Denver brands: sub-second mobile page speeds, real-time ERP and inventory synchronization, structured Schema.org markup, and 100% full IP code ownership with zero agency lock-in.
+                  </p>
+                </div>
 
                 <div className="rv-actions">
                   <ModalCTAButton label="Get a Fixed-Price Quote" region="us" btnVariant="primary-dark" />
@@ -939,11 +959,15 @@ export default function DenverEcommercePage() {
             <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
               <ModalCTAButton label="Get Your Fixed-Price Proposal" region="us" btnVariant="primary-light" />
             </div>
+
+            <p style={{ marginTop: '28px', fontSize: '13.5px', color: '#8E8E9F' }}>
+              Related services: <Link href="/denver/seo" style={{ color: '#FF5622', textDecoration: 'underline' }}>Denver SEO agency</Link>, <Link href="/denver/web-design" style={{ color: '#FF5622', textDecoration: 'underline' }}>Denver web design</Link>, <Link href="/services/shopify-development" style={{ color: '#FF5622', textDecoration: 'underline' }}>Shopify development</Link>, and <Link href="/services/shopify-plus-b2b" style={{ color: '#FF5622', textDecoration: 'underline' }}>Shopify Plus B2B</Link>.
+            </p>
           </div>
         </section>
       </main>
 
-      <SiteFooter locale="us" />
+      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   );
 }

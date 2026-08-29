@@ -10,20 +10,21 @@ import AuthorCard from '@/components/v2/AuthorCard';
 import LocalSeoOpportunityEstimator from '@/components/v2/LocalSeoOpportunityEstimator';
 import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
+import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
 const PAGE_MODIFIED = '2026-08-29';
 const CANONICAL = 'https://factoryjet.com/austin/seo';
 
 export const metadata: Metadata = {
-  title: 'No-Contract Austin SEO Agency & Technical SEO Company TX | FactoryJet',
+  title: 'Austin Local SEO Agency | Google Maps 3-Pack | FactoryJet',
   description:
-    'Austin SEO company with no long-term contracts. Top 3 Google Map Pack rankings, technical Next.js performance, AI answer citations, and direct senior engineer access.',
+    'Austin local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Downtown, South Congress, and Domain. Free audit.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'No-Contract Austin SEO Agency & Technical SEO Company TX | FactoryJet',
+    title: 'Austin Local SEO Agency | Google Maps 3-Pack | FactoryJet',
     description:
       'Austin SEO company built for the most crowded market in Texas. No-contract local SEO, technical Core Web Vitals engineering, and direct senior engineer access.',
     url: CANONICAL,
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'No-Contract Austin SEO Agency & Technical SEO Company TX | FactoryJet',
+    title: 'Austin Local SEO Agency | Google Maps 3-Pack | FactoryJet',
     description: 'Local and technical SEO in Austin TX. Win the Google Map Pack and AI search citations.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -436,7 +437,7 @@ const SERVICE_SCHEMA = {
   author: {
     '@type': 'Person',
     name: 'Bhavesh Barot',
-    jobTitle: 'Chief Technical Architect',
+    jobTitle: 'Founder & Chief Technical Architect',
     url: 'https://factoryjet.com/about',
     sameAs: [
       'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
@@ -446,32 +447,45 @@ const SERVICE_SCHEMA = {
   name: 'Austin SEO Services & Local Search Optimization',
   provider: {
     '@type': 'Organization',
+    '@id': 'https://factoryjet.com/#organization',
     name: 'FactoryJet',
     url: 'https://factoryjet.com',
   },
   serviceType: 'Local SEO, Technical SEO & Generative Engine Optimization',
   description:
     'Senior engineering-led local SEO, Google Map Pack rankings, technical Core Web Vitals optimization, and AI answer citations for Austin businesses.',
-  areaServed: { '@type': 'State', name: 'Texas' },
+  areaServed: [
+    { '@type': 'City', name: 'Austin' },
+    { '@type': 'State', name: 'Texas' },
+    { '@type': 'Country', name: 'United States' },
+  ],
 };
 
 const WEBPAGE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'No-Contract Austin SEO Agency & Technical SEO Company TX | FactoryJet',
-  description: 'Austin SEO company with no long-term contracts. Top 3 Google Map Pack rankings, technical Next.js performance, AI answer citations, and direct senior engineer access.',
+  '@id': 'https://factoryjet.com/austin/seo#webpage',
+  name: 'Austin Local SEO Agency | Google Maps 3-Pack | FactoryJet',
+  description: 'Austin local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Downtown, South Congress, and Domain. Free audit.',
   url: CANONICAL,
   dateModified: PAGE_MODIFIED,
   author: {
     '@type': 'Person',
     name: 'Bhavesh Barot',
-    jobTitle: 'Chief Technical Architect',
+    jobTitle: 'Founder & Chief Technical Architect',
     url: 'https://factoryjet.com/about',
     sameAs: [
       'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
       'https://github.com/factoryjet-tech',
     ],
   },
+  isPartOf: {
+    '@type': 'WebSite',
+    '@id': 'https://factoryjet.com/#website',
+    name: 'FactoryJet',
+    url: 'https://factoryjet.com',
+  },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
 };
 
 const BREADCRUMB_SCHEMA = {
@@ -479,8 +493,8 @@ const BREADCRUMB_SCHEMA = {
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com/' },
-    { '@type': 'ListItem', position: 2, name: 'Austin', item: 'https://factoryjet.com/austin/ecommerce-development' },
-    { '@type': 'ListItem', position: 3, name: 'SEO', item: CANONICAL },
+    { '@type': 'ListItem', position: 2, name: 'SEO', item: 'https://factoryjet.com/services/seo' },
+    { '@type': 'ListItem', position: 3, name: 'Austin', item: CANONICAL },
   ],
 };
 
@@ -515,9 +529,16 @@ export default function AustinSeoPage() {
                   Austin SEO Company &amp; Local Search Marketing Agency
                 </h1>
 
-                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
+                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 24px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
                   Win the Google 3-Pack Map results, capture high-intent Central Texas commercial queries, and earn citations across AI answer engines. No long-term contracts. Talk directly with senior technical software engineers.
                 </p>
+
+                {/* Answer-First Brief */}
+                <div style={{ background: '#F6F6F9', borderLeft: '3px solid #FF5622', padding: '14px 18px', borderRadius: '0 12px 12px 0', marginBottom: '28px', maxWidth: '52ch' }}>
+                  <p style={{ fontSize: '13.5px', color: '#141414', lineHeight: 1.55, margin: 0, fontWeight: 500 }}>
+                    <strong style={{ color: '#FF5622' }}>Executive Brief:</strong> FactoryJet delivers senior engineering-led Austin local SEO services: Google Business Profile optimization, multi-radius geo-grid proximity expansion, 100% NAP citation synchronization across major aggregators, structured LocalBusiness Schema.org graphs, and high-intent local conversion engineering across Travis County with transparent call tracking and zero locked monthly retainers.
+                  </p>
+                </div>
 
                 <div className="rv-actions">
                   <ModalCTAButton label="Claim Free Austin SEO Audit" region="us" btnVariant="primary-dark" />
@@ -1004,12 +1025,16 @@ export default function AustinSeoPage() {
             <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
               <ModalCTAButton label="Claim Your Free Austin SEO Audit" region="us" btnVariant="primary-light" />
             </div>
+
+            <p style={{ marginTop: '28px', fontSize: '13.5px', color: '#8E8E9F' }}>
+              Related services: <Link href="/austin/ecommerce-development" style={{ color: '#FF5622', textDecoration: 'underline' }}>Austin ecommerce development</Link>, <Link href="/austin/web-design" style={{ color: '#FF5622', textDecoration: 'underline' }}>Austin web design</Link>, <Link href="/services/local-seo" style={{ color: '#FF5622', textDecoration: 'underline' }}>Local SEO services</Link>, and <Link href="/services/seo-audit" style={{ color: '#FF5622', textDecoration: 'underline' }}>technical SEO audits</Link>.
+            </p>
           </div>
         </section>
 
       </main>
 
-      <SiteFooter />
+      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   );
 }

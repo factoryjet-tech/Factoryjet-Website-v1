@@ -10,20 +10,21 @@ import AuthorCard from '@/components/v2/AuthorCard';
 import LocalSeoOpportunityEstimator from '@/components/v2/LocalSeoOpportunityEstimator';
 import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
+import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
 const PAGE_MODIFIED = '2026-08-29';
 const CANONICAL = 'https://factoryjet.com/denver/seo';
 
 export const metadata: Metadata = {
-  title: 'Denver Local SEO Services & Search Marketing Agency CO | FactoryJet',
+  title: 'Denver Local SEO Agency | Google Maps 3-Pack | FactoryJet',
   description:
-    'Denver local SEO company. Dominate the Google Map Pack 3-Pack, capture Front Range commercial search queries, and earn citations in AI answer engines across LoDo, Cherry Creek, DTC, and Boulder.',
+    'Denver local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across LoDo, Cherry Creek, DTC, and Boulder. Free audit.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Denver Local SEO Services & Search Marketing Agency CO | FactoryJet',
+    title: 'Denver Local SEO Agency | Google Maps 3-Pack | FactoryJet',
     description:
       'Denver local SEO company. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across LoDo, Cherry Creek, DTC, and Boulder.',
     url: CANONICAL,
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Denver Local SEO Services & Search Marketing Agency CO | FactoryJet',
+    title: 'Denver Local SEO Agency | Google Maps 3-Pack | FactoryJet',
     description: 'Dominate Denver local search and AI answer engines. Verified Google Maps 3-Pack capture and entity optimization across Colorado.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -405,7 +406,7 @@ const SERVICE_SCHEMA = {
   author: {
     '@type': 'Person',
     name: 'Bhavesh Barot',
-    jobTitle: 'Chief Technical Architect',
+    jobTitle: 'Founder & Chief Technical Architect',
     url: 'https://factoryjet.com/about',
     sameAs: [
       'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
@@ -415,32 +416,45 @@ const SERVICE_SCHEMA = {
   name: 'Denver Local SEO & Google Maps Optimization',
   provider: {
     '@type': 'Organization',
+    '@id': 'https://factoryjet.com/#organization',
     name: 'FactoryJet',
     url: 'https://factoryjet.com',
   },
   serviceType: 'Local SEO, Google Business Profile Management & AI Search Optimization',
   description:
     'Senior engineering-led local search engine optimization, Google Maps 3-Pack capture, structured data graphs, and AI citation engineering for Denver businesses.',
-  areaServed: { '@type': 'State', name: 'Colorado' },
+  areaServed: [
+    { '@type': 'City', name: 'Denver' },
+    { '@type': 'State', name: 'Colorado' },
+    { '@type': 'Country', name: 'United States' },
+  ],
 };
 
 const WEBPAGE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'Denver Local SEO Services & Search Marketing Agency CO | FactoryJet',
-  description: 'Denver local SEO company. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across LoDo, Cherry Creek, and DTC.',
+  '@id': 'https://factoryjet.com/denver/seo#webpage',
+  name: 'Denver Local SEO Agency | Google Maps 3-Pack | FactoryJet',
+  description: 'Denver local SEO company. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across LoDo, Cherry Creek, DTC, and Boulder.',
   url: CANONICAL,
   dateModified: PAGE_MODIFIED,
   author: {
     '@type': 'Person',
     name: 'Bhavesh Barot',
-    jobTitle: 'Chief Technical Architect',
+    jobTitle: 'Founder & Chief Technical Architect',
     url: 'https://factoryjet.com/about',
     sameAs: [
       'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
       'https://github.com/factoryjet-tech',
     ],
   },
+  isPartOf: {
+    '@type': 'WebSite',
+    '@id': 'https://factoryjet.com/#website',
+    name: 'FactoryJet',
+    url: 'https://factoryjet.com',
+  },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
 };
 
 const BREADCRUMB_SCHEMA = {
@@ -482,9 +496,16 @@ export default function DenverSeoPage() {
                   Denver Local SEO Services &amp; Search Marketing Agency
                 </h1>
 
-                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
+                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 24px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
                   Dominate the Google Maps 3-Pack, capture high-intent Front Range search queries, and earn citations across AI conversational search engines. No long-term contracts. Talk directly with senior technical engineers.
                 </p>
+
+                {/* Answer-First Brief */}
+                <div style={{ background: '#F6F6F9', borderLeft: '3px solid #FF5622', padding: '14px 18px', borderRadius: '0 12px 12px 0', marginBottom: '28px', maxWidth: '52ch' }}>
+                  <p style={{ fontSize: '13.5px', color: '#141414', lineHeight: 1.55, margin: 0, fontWeight: 500 }}>
+                    <strong style={{ color: '#FF5622' }}>Executive Brief:</strong> FactoryJet delivers senior engineering-led Denver local SEO services: Google Business Profile geo-radius expansion, 100% NAP citation synchronization across major aggregators, structured LocalBusiness Schema.org graphs, and high-intent local conversion engineering across the Front Range with transparent call tracking and zero locked monthly retainers.
+                  </p>
+                </div>
 
                 <div className="rv-actions">
                   <ModalCTAButton label="Get a Free Local SEO Audit" region="us" btnVariant="primary-dark" modalVariant="seo" />
@@ -968,11 +989,15 @@ export default function DenverSeoPage() {
             <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
               <ModalCTAButton label="Claim Your Free Denver SEO Audit" region="us" btnVariant="primary-light" modalVariant="seo" />
             </div>
+
+            <p style={{ marginTop: '28px', fontSize: '13.5px', color: '#8E8E9F' }}>
+              Related services: <Link href="/denver/ecommerce-development" style={{ color: '#FF5622', textDecoration: 'underline' }}>Denver ecommerce development</Link>, <Link href="/denver/web-design" style={{ color: '#FF5622', textDecoration: 'underline' }}>Denver web design</Link>, <Link href="/services/local-seo" style={{ color: '#FF5622', textDecoration: 'underline' }}>Local SEO services</Link>, and <Link href="/services/seo-audit" style={{ color: '#FF5622', textDecoration: 'underline' }}>technical SEO audits</Link>.
+            </p>
           </div>
         </section>
       </main>
 
-      <SiteFooter />
+      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   );
 }
