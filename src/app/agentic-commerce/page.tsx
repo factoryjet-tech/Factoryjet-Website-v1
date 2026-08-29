@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
-import Breadcrumbs from '@/components/v2/Breadcrumbs';
+import Image from 'next/image';
 import Link from 'next/link';
+import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import { Bot, ShoppingBag, RefreshCw, Handshake, MessagesSquare, Workflow, Check } from 'lucide-react';
 
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
@@ -15,13 +16,14 @@ import AiVisibilityCtaBand from '@/components/ai-visibility/AiVisibilityCtaBand'
 
 import './agentic-commerce.css';
 
+const PAGE_MODIFIED = '2026-08-29';
 const URL = 'https://factoryjet.com/agentic-commerce';
 
 /* ── SEO / Metadata ─────────────────────────────────────────────────────── */
 export const metadata: Metadata = {
-  title: 'Agentic Commerce Explained: The 2026 Guide for Brands | FactoryJet',
+  title: 'Agentic Commerce Explained: 2026 Architecture Guide for Brands | FactoryJet',
   description:
-    'What is agentic commerce? A clear 2026 guide to how AI agents discover, compare, and buy on shoppers behalf, who is building it (OpenAI, Stripe, Visa, Mastercard, PayPal, Shopify), how it differs from traditional ecommerce, and how brands get agent-ready.',
+    'What is agentic commerce? A comprehensive 2026 guide to how AI agents discover, compare, and buy on shoppers behalf, who is building it (OpenAI, Stripe, Visa, Mastercard, Shopify), and how brands get agent-ready.',
   keywords: [
     'agentic commerce',
     'what is agentic commerce',
@@ -31,24 +33,25 @@ export const metadata: Metadata = {
     'agentic commerce platform',
     'agentic ai vs generative ai',
     'agentic commerce examples',
+    'agentic ecommerce architecture',
   ],
   openGraph: {
     type: 'article',
     siteName: 'FactoryJet',
-    title: 'Agentic Commerce Explained: The 2026 Guide for Brands',
+    title: 'Agentic Commerce Explained: 2026 Architecture Guide for Brands | FactoryJet',
     description:
-      'How AI agents are rewiring the way the world buys: what agentic commerce is, who is building it, how it differs from traditional ecommerce, and how brands get agent-ready.',
+      'How AI shopping agents are rewiring retail discovery and checkout: what agentic commerce is, who is building it, how it differs from traditional ecommerce, and how brands get agent-ready.',
     url: URL,
     images: [
-      { url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Agentic commerce, explained, by FactoryJet' },
+      { url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Agentic commerce explained for brands by FactoryJet' },
     ],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Agentic Commerce Explained: The 2026 Guide for Brands',
+    title: 'Agentic Commerce Explained: 2026 Architecture Guide for Brands | FactoryJet',
     description:
-      'How AI agents are rewiring the way the world buys, and how brands get agent-ready. A clear 2026 field guide.',
+      'How AI agents are rewiring online buying, and how modern brands get agent-ready. A 2026 field guide.',
     images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: { canonical: URL },
@@ -61,59 +64,69 @@ export const metadata: Metadata = {
 
 /* ── Definitions (drive both the on-page glossary and DefinedTermSet schema) ── */
 const DEFINITIONS = [
-  { term: 'Agentic commerce', body: 'Commerce carried out by AI agents that act on a person or business behalf. The agent discovers products, compares options, and can complete checkout with limited human input, instead of a shopper clicking through a store themselves.' },
-  { term: 'Agentic AI', body: 'AI that plans and takes multi-step actions toward a goal, not just generates text or answers. An agentic AI decides what to do next, uses tools and APIs, and completes tasks with limited supervision.' },
-  { term: 'AI commerce', body: 'The broad use of AI across selling: product discovery, pricing, content, support, and now autonomous buying and selling. Agentic commerce is the most advanced layer of AI commerce.' },
-  { term: 'AI shopping agent', body: 'An AI that shops for a person. It takes a request, searches across stores, compares options, and can complete the purchase, whether inside a chat assistant, a browser, or a retailer app.' },
+  { term: 'Agentic commerce', body: 'Commerce carried out by autonomous AI agents acting on behalf of shoppers or businesses. The agent discovers products, compares attributes and pricing, and executes checkout with minimal human input, rather than a shopper manually navigating a website.' },
+  { term: 'Agentic AI', body: 'Artificial intelligence designed to reason, plan, and execute multi-step deterministic tasks toward a goal. Agentic AI calls external APIs, verifies data outputs, and completes workflows with bounded supervision.' },
+  { term: 'AI commerce', body: 'The application of artificial intelligence across retail operations: search indexing, dynamic pricing, support triage, and autonomous agent-to-agent transactions. Agentic commerce represents the transaction-layer evolution of AI commerce.' },
+  { term: 'AI shopping agent', body: 'An intelligent software agent that purchases items on behalf of a consumer. It parses natural-language intent, queries catalog feeds across multiple stores, compares verified reviews, and completes transactions inside chat interfaces or connected apps.' },
 ];
 
 /* ── FAQ data (drives both the on-page accordion and the FAQPage schema) ──── */
 const FAQ_CATEGORIES: ReadonlyArray<FAQCategory> = [
-  { key: 'basics', label: 'The basics' },
-  { key: 'landscape', label: 'The landscape' },
-  { key: 'brands', label: 'For brands' },
+  { key: 'basics', label: 'The Basics' },
+  { key: 'landscape', label: 'The Landscape & Rails' },
+  { key: 'brands', label: 'Brand Readiness & Implementation' },
 ];
 
 const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
-  { category: 'basics', question: 'What is agentic commerce?', answer: 'Agentic commerce is commerce carried out by AI agents that act on a person or business behalf. Instead of a shopper browsing a store and clicking buy, an AI agent discovers products, compares options, and can complete checkout with limited human input. It is the next layer on top of ecommerce, the way mobile shopping was a layer on top of the web.' },
-  { category: 'basics', question: 'What is agentic AI?', answer: 'Agentic AI is artificial intelligence that plans and takes multi-step actions toward a goal, rather than only generating text or answers. An agentic AI decides what to do next, calls tools and APIs, checks its own work, and completes a task with limited supervision. Buying a product end to end is a common example.' },
-  { category: 'basics', question: 'What is the difference between agentic AI and generative AI?', answer: 'Generative AI creates content: text, images, code, or answers to a prompt. Agentic AI uses that intelligence to act: it sets a plan, takes steps, uses tools, and completes a task. In short, generative AI writes the answer, agentic AI goes and does the thing. Most agentic systems use generative models inside a loop that can take actions.' },
-  { category: 'basics', question: 'What is the difference between an AI agent and agentic AI?', answer: 'An AI agent is a single system that can perceive, decide, and act toward a goal. Agentic AI is the broader capability, often several agents and tools working together to plan and complete multi-step work. Put simply, an AI agent is one worker, agentic AI is the approach of getting real tasks done autonomously, sometimes with a whole team of agents.' },
-  { category: 'basics', question: 'What is an AI shopping agent?', answer: 'An AI shopping agent is software that shops for a person. It takes a request like find me running shoes under one hundred dollars, searches across stores, compares options on price and reviews, and can complete the purchase. Shopping agents are appearing inside chat assistants, browsers, and retailer apps, and are the front end of agentic commerce.' },
-  { category: 'basics', question: 'What is AI commerce?', answer: 'AI commerce is the broad use of artificial intelligence across selling: product discovery, search, pricing, content, merchandising, customer support, and now autonomous buying and selling. Agentic commerce is the most advanced layer of AI commerce, where agents do not just assist the work but carry out transactions.' },
-  { category: 'basics', question: 'How is agentic commerce different from traditional ecommerce?', answer: 'In traditional ecommerce a human browses your storefront and clicks buy, so brand, design, and marketing to people win. In agentic commerce an AI agent does the discovering and buying, so being legible to machines wins: clean product feeds, structured data, honest reviews, and machine-readable pricing. The buyer stops being a person looking at a page and becomes software reading your data.' },
+  { category: 'basics', question: 'What is agentic commerce?', answer: 'Agentic commerce is digital commerce carried out by AI agents that act on behalf of consumers or business buyers. Instead of a shopper browsing a website and clicking buttons, an AI agent discovers products, compares options across merchant catalogs, and completes checkout autonomously.' },
+  { category: 'basics', question: 'What is agentic AI?', answer: 'Agentic AI is artificial intelligence that plans and executes multi-step actions toward a defined goal, rather than merely generating text. An agentic AI evaluates intermediate results, calls typed tools and APIs, checks inventory or pricing data, and finishes tasks with minimal human intervention.' },
+  { category: 'basics', question: 'What is the difference between agentic AI and generative AI?', answer: 'Generative AI creates content such as text, images, or conversational replies. Agentic AI uses reasoning to take real actions: it sets a plan, executes API calls, verifies outcomes, and completes tasks. Generative AI drafts the text; agentic AI executes the transaction.' },
+  { category: 'basics', question: 'What is the difference between an AI agent and agentic AI?', answer: 'An AI agent is a software worker with tools and permissions. Agentic AI is the underlying architecture and autonomous reasoning capability that allows single or multi-agent networks to accomplish complex tasks independently.' },
+  { category: 'basics', question: 'What is an AI shopping agent?', answer: 'An AI shopping agent is an application that shops for a human. It takes a prompt (e.g., "find waterproof trail shoes for wide feet under $160"), queries product feeds, evaluates real customer reviews, and executes the purchase directly within the assistant interface or browser.' },
+  { category: 'basics', question: 'What is AI commerce?', answer: 'AI commerce spans the broad utilization of artificial intelligence across commerce operations: product discovery, semantic search, dynamic catalog feeds, customer support triage, and autonomous agent-to-agent transactions.' },
+  { category: 'basics', question: 'How is agentic commerce different from traditional ecommerce?', answer: 'In traditional ecommerce, humans browse a storefront UI and click buttons to purchase, so visual merchandising and display ads win. In agentic commerce, AI software reads product feeds, structured schema data, and API endpoints to make purchasing decisions based on verifiable attributes and machine-readable data.' },
 
-  { category: 'landscape', question: 'Is agentic commerce real yet, or is it hype?', answer: 'It is early but real. As of early 2026, you can already buy inside some chat assistants, and the largest payment and platform companies have shipped agent-payment rails. Most shopping is still done by humans, so treat agentic commerce as an emerging channel to prepare for, not a replacement for your current store overnight. The brands preparing now are the ones agents will find first.' },
-  { category: 'landscape', question: 'Who is building agentic commerce?', answer: 'The push is led by the payment and platform giants. As of early 2026 that includes OpenAI, with in-chat checkout built on its Agentic Commerce Protocol with Stripe, plus agent-payment efforts from Visa, Mastercard, PayPal, and Google, and agent-facing commerce work from Shopify. The picture is moving fast, and the standards are still settling, which is exactly why brands should get ready now.' },
-  { category: 'landscape', question: 'What is the Agentic Commerce Protocol?', answer: 'The Agentic Commerce Protocol is an open standard, introduced by OpenAI with Stripe in 2025, for letting AI agents complete purchases from merchants inside an assistant like ChatGPT. It defines how an agent shares a cart and completes payment with a seller. Other players have their own agent-payment approaches, and the standards are still converging as of early 2026.' },
-  { category: 'landscape', question: 'What is the difference between conversational commerce and agentic commerce?', answer: 'Conversational commerce is buying through a chat interface, where a human still makes each decision by typing back and forth. Agentic commerce goes further: the AI agent makes decisions and completes steps on your behalf, not just chatting but acting. Conversational commerce is talking to buy, agentic commerce is delegating the buying.' },
-  { category: 'landscape', question: 'Will AI agents replace online stores?', answer: 'Not replace, but reshape. Your store still holds your catalog, pricing, and brand, and humans will keep shopping directly for a long time. What changes is that a growing share of discovery and checkout runs through agents, so your store also needs to serve machines cleanly, with structured data and, increasingly, an agent-ready checkout. The storefront becomes one of several front doors, not the only one.' },
+  { category: 'landscape', question: 'Is agentic commerce active in 2026, or is it experimental?', answer: 'It is active and growing rapidly. Payment networks and major tech platforms have deployed live agent-payment rails in 2026. While human shopping remains the majority, agentic discovery and autonomous purchasing are expanding exponentially across conversational engines and mobile assistants.' },
+  { category: 'landscape', question: 'Who is building agentic commerce infrastructure?', answer: 'The ecosystem is led by OpenAI (Agentic Commerce Protocol), Stripe (agent billing APIs), Visa (Intelligent Commerce), Mastercard (Agent Pay), PayPal (agent-ready wallet rails), and Shopify (GraphQL merchant agent tools).' },
+  { category: 'landscape', question: 'What is the Agentic Commerce Protocol?', answer: 'The Agentic Commerce Protocol is an open standard introduced by OpenAI and Stripe that enables AI agents to securely share carts, negotiate terms, and execute authenticated payments with merchants directly inside assistant environments like ChatGPT.' },
+  { category: 'landscape', question: 'What is the difference between conversational commerce and agentic commerce?', answer: 'Conversational commerce requires human back-and-forth messaging inside a chat widget. Agentic commerce delegates the entire multi-step shopping and checkout task to the AI agent, which executes the transaction autonomously.' },
+  { category: 'landscape', question: 'Will AI shopping agents replace direct brand storefronts?', answer: 'No. Direct storefronts remain the central source of truth for product catalogs, brand identity, and customer relationships. However, stores must now serve both human shoppers and AI software by exposing structured data, clean API feeds, and agent-compatible checkout endpoints.' },
 
-  { category: 'brands', question: 'How do brands get ready for agentic commerce?', answer: 'Three moves. Get legible: clean product feeds, structured data, and honest reviews so agents can read and trust your catalog. Get transactable: make sure your pricing, inventory, and checkout can be reached cleanly, through the channels and rails agents use. Get an operator: run an AI system of your own that keeps all of this accurate across channels. A readiness audit shows where you stand.' },
-  { category: 'brands', question: 'Can small brands do agentic commerce, or is it only for big retailers?', answer: 'Small brands can absolutely play, and the timing favors them. Agentic discovery rewards clean data and genuine reviews over ad budget, so a focused brand with a well-structured catalog can get surfaced next to giants. The work is mostly getting your product data, pricing, and reviews in order, which is within reach for a small team with the right help.' },
-  { category: 'brands', question: 'How does agentic commerce change SEO and discovery?', answer: 'Discovery shifts from ranking on a results page to being chosen by an agent or answer engine. That means optimizing for machines: structured data, clear specifications, comparison-friendly content, and strong reviews, alongside classic SEO. It is the same direction as AI search and answer-engine optimization, applied to buying. We treat it as one discipline with our AI SEO work.' },
-  { category: 'brands', question: 'Is agentic commerce safe? How do payments work?', answer: 'The agent-payment rails from Visa, Mastercard, PayPal, and others are being built specifically to keep agent purchases secure, with controls on what an agent may spend and clear authorization. For a brand, the practical safety work is making sure the agent transacts against accurate pricing and inventory, so you do not sell at the wrong price or oversell. That is an operations problem we help solve.' },
-  { category: 'brands', question: 'Does agentic commerce help or hurt brands?', answer: 'It does both, depending on readiness. Brands with clean data, fair pricing, and strong reviews get surfaced and bought by agents more often, which helps. Brands with messy feeds, hidden pricing, or weak reviews get skipped, because an agent has no loyalty and no patience for a broken experience. The gap between prepared and unprepared brands is the whole opportunity.' },
-  { category: 'brands', question: 'How does FactoryJet help with agentic commerce?', answer: 'We make your commerce legible and transactable to agents: clean product feeds and structured data, accurate pricing and inventory across channels, and answer-engine optimization so agents find and trust you. We run this with Commerceflo, our AI commerce operator, which audits your storefront and fixes what is stalling growth across every channel you sell through.' },
-  { category: 'brands', question: 'What is Commerceflo?', answer: 'Commerceflo is FactoryJet AI commerce operator. It audits your storefront in about 90 seconds, ranks what is stalling growth by revenue impact, and carries out the fix once you approve it, across your store, marketplaces, and B2B. It is how we keep a brand agent-ready in practice, not just in theory.' },
-  { category: 'brands', question: 'How do we get started with agentic commerce?', answer: 'Ask for a free agentic-readiness audit with your store and your email. We come back with where your catalog, data, pricing, and discovery stand against how agents actually buy, plus a prioritized plan to close the gaps. No long sales cycle, and the audit is yours to keep either way.' },
+  { category: 'brands', question: 'How do brands get ready for agentic commerce?', answer: 'Brands prepare across three pillars: First, achieve machine legibility through rich schema markup and clean merchant feeds. Second, achieve transactability with accurate real-time inventory and pricing APIs. Third, deploy autonomous operational agents to manage multi-channel order synchronization.' },
+  { category: 'brands', question: 'Can mid-sized brands compete in agentic commerce against retail giants?', answer: 'Yes. AI agents evaluate data accuracy, inventory availability, and verified customer reviews rather than advertising budgets. A mid-sized brand with clean structured data and strong product specifications can outrank legacy retailers in AI shopping queries.' },
+  { category: 'brands', question: 'How does agentic commerce change SEO and product discovery?', answer: 'Discovery shifts from keyword search rankings to AI citation and recommendation engines. Brands must optimize for generative engine optimization (GEO) and structured Product JSON-LD markup so AI search platforms can parse and cite their catalog accurately.' },
+  { category: 'brands', question: 'How do security and payment authorizations work in agentic commerce?', answer: 'Agent transactions utilize tokenized credentials with hard spending limits, biometric user authorizations, and single-use transaction tokens enforced by payment networks (Visa, Mastercard, Stripe), ensuring agents cannot exceed pre-approved purchase thresholds.' },
+  { category: 'brands', question: 'How does FactoryJet engineer agentic commerce for brands?', answer: 'We engineer structured product feeds, deploy nested Product and Offer schemas, optimize API endpoints for AI indexing, and build custom back-office agents that automate order triage and ERP inventory synchronization.' },
+  { category: 'brands', question: 'How do we get started with an agentic readiness audit?', answer: 'Submit your website URL for a comprehensive agentic readiness scan. We analyze your catalog structure, schema completeness, and AI search visibility, providing a prioritized roadmap to make your store agent-ready.' },
 ];
 
-/* ── JSON-LD ─────────────────────────────────────────────────────────────── */
+/* ── JSON-LD Schemas ─────────────────────────────────────────────────────── */
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Agentic Commerce, Explained: The 2026 Guide for Brands',
+  headline: 'Agentic Commerce Explained: The 2026 Guide for Brands',
   description:
     'What agentic commerce is, who is building it, how it differs from traditional ecommerce, and how brands get agent-ready.',
-  author: { '@type': 'Person', name: 'Bhavesh Barot', url: 'https://factoryjet.com/author/bhavesh-barot' },
+  author: {
+    '@type': 'Person',
+    name: 'Bhavesh Barot',
+    jobTitle: 'Founder & Chief Technical Architect',
+    url: 'https://factoryjet.com/about',
+    sameAs: [
+      'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
+      'https://github.com/factoryjet-tech',
+    ],
+  },
   publisher: {
-    '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet',
+    '@type': 'Organization',
+    '@id': 'https://factoryjet.com/#organization',
+    name: 'FactoryJet',
+    url: 'https://factoryjet.com',
     logo: { '@type': 'ImageObject', url: 'https://factoryjet.com/FinalLogo.svg' },
   },
   mainEntityOfPage: { '@type': 'WebPage', '@id': URL },
   datePublished: '2026-07-11T00:00:00.000Z',
-  dateModified: '2026-07-11T00:00:00.000Z',
+  dateModified: `${PAGE_MODIFIED}T00:00:00.000Z`,
 };
 
 const glossarySchema = {
@@ -167,20 +180,20 @@ const READY = [
   { n: 'Step 01', h: 'Audit', p: 'A free agentic-readiness audit of your catalog, data, pricing, reviews, and discovery, against how agents actually buy.' },
   { n: 'Step 02', h: 'Structure', p: 'Clean product feeds, structured data, and honest reviews so agents can read and trust your catalog.' },
   { n: 'Step 03', h: 'Expose', p: 'Accurate pricing and inventory reachable through the channels and rails agents use, with an agent-ready checkout.' },
-  { n: 'Step 04', h: 'Operate', p: 'Run Commerceflo, our AI commerce operator, to keep all of it accurate and fixed across every channel.' },
+  { n: 'Step 04', h: 'Operate', p: 'Deploy autonomous agents that synchronize catalog feeds, inventory levels, and orders across all channels.' },
 ];
 
 const PILLARS = [
   { k: 'Legible', h: 'Get readable by agents', p: 'Clean feeds, structured data, and real reviews, so an agent can find you, understand you, and trust you.' },
   { k: 'Transactable', h: 'Get buyable by agents', p: 'Accurate pricing and inventory, reachable through the channels and rails buying agents use.' },
-  { k: 'Operated', h: 'Run an operator of your own', p: 'Commerceflo audits your storefront and fixes what is stalling growth across every channel, so you stay agent-ready.' },
+  { k: 'Operated', h: 'Run an operator of your own', p: 'Deploy back-office agents that audit and fix catalog errors, sync ERP inventory, and maintain agent readiness.' },
 ];
 
 const yes = <span style={{ color: '#177a48', fontWeight: 700 }}>Yes</span>;
 const no = (t: string) => <span style={{ color: '#b23e13' }}>{t}</span>;
 const partial = (t: string) => <span style={{ color: '#8a5e00' }}>{t}</span>;
 
-/* ── Page ────────────────────────────────────────────────────────────────── */
+/* ── Page Component ──────────────────────────────────────────────────────── */
 export default function AgenticCommercePage() {
   return (
     <>
@@ -194,59 +207,59 @@ export default function AgenticCommercePage() {
         ]}
       />
 
-      <SiteHeader locale="us" />
+      <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
       <main className="agc">
-      <Breadcrumbs items={[
-          { name: 'Home', url: 'https://factoryjet.com' },
-          { name: 'Agentic Commerce', url: URL },
-        ]} />
+        <Breadcrumbs
+          items={[
+            { name: 'Home', url: 'https://factoryjet.com' },
+            { name: 'Agentic Commerce', url: URL },
+          ]}
+        />
+
         {/* HERO */}
         <section className="agc-hero">
           <div className="agc-wrap agc-hero-grid">
             <div className="agc-hero-copy">
               <span className="agc-pill"><span className="d" /> Agentic Commerce · Field Guide 2026</span>
               <h1 className="agc-h1 disp">Agentic commerce: how <span className="u">AI agents</span> are rewiring the way the world buys</h1>
-              <p className="agc-lead">AI agents are starting to discover products, compare options, and check out for shoppers. Here is what agentic commerce means, who is building it, and how brands get ready. Built on 12 years and 500+ commerce builds.</p>
+              <p className="agc-lead">AI agents are discovering products, comparing options, and checking out for shoppers. Here is what agentic commerce means, who is building it, and how brands get ready. Built on 12 years and 500+ commerce builds.</p>
               <HeroInlineForm region="us" source="us_agentic_commerce_hero" submitLabel="Get my readiness audit" />
               <div className="agc-trust">
                 <span className="tk"><Check size={15} strokeWidth={2.4} /> 500+ businesses served</span>
                 <span className="tk"><Check size={15} strokeWidth={2.4} /> 12 years in commerce</span>
-                <span className="tk"><Check size={15} strokeWidth={2.4} /> Builders of Commerceflo</span>
+                <span className="tk"><Check size={15} strokeWidth={2.4} /> Senior AI Engineers</span>
               </div>
             </div>
             <div className="agc-hero-visual">
               <div className="agc-crystal agc-hero-diagram">
                 <svg viewBox="0 0 420 300" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram: an AI agent connecting a shopper to your store, marketplaces, and checkout">
-                  {/* links */}
                   <g stroke="#f0b8a4" strokeWidth="1.6" strokeDasharray="4 5">
                     <line x1="210" y1="150" x2="80" y2="70" />
                     <line x1="210" y1="150" x2="340" y2="70" />
                     <line x1="210" y1="150" x2="80" y2="235" />
                     <line x1="210" y1="150" x2="340" y2="235" />
                   </g>
-                  {/* outer nodes */}
                   <g>
                     <rect x="18" y="46" width="124" height="48" rx="12" fill="#fff" stroke="#eaeae3" />
-                    <text x="80" y="68" textAnchor="middle" className="dm"fontSize="11" fill="#5e5e57">SHOPPER</text>
+                    <text x="80" y="68" textAnchor="middle" className="dm" fontSize="11" fill="#5e5e57">SHOPPER</text>
                     <text x="80" y="83" textAnchor="middle" fontSize="12.5" fontWeight="800" fill="#141414">asks, delegates</text>
                   </g>
                   <g>
                     <rect x="278" y="46" width="124" height="48" rx="12" fill="#fff" stroke="#eaeae3" />
-                    <text x="340" y="68" textAnchor="middle" className="dm"fontSize="11" fill="#5e5e57">YOUR STORE</text>
+                    <text x="340" y="68" textAnchor="middle" className="dm" fontSize="11" fill="#5e5e57">YOUR STORE</text>
                     <text x="340" y="83" textAnchor="middle" fontSize="12.5" fontWeight="800" fill="#141414">catalog, price</text>
                   </g>
                   <g>
                     <rect x="18" y="211" width="124" height="48" rx="12" fill="#fff" stroke="#eaeae3" />
-                    <text x="80" y="233" textAnchor="middle" className="dm"fontSize="11" fill="#5e5e57">MARKETPLACES</text>
+                    <text x="80" y="233" textAnchor="middle" className="dm" fontSize="11" fill="#5e5e57">MARKETPLACES</text>
                     <text x="80" y="248" textAnchor="middle" fontSize="12.5" fontWeight="800" fill="#141414">Amazon, TikTok</text>
                   </g>
                   <g>
                     <rect x="278" y="211" width="124" height="48" rx="12" fill="#fff" stroke="#eaeae3" />
-                    <text x="340" y="233" textAnchor="middle" className="dm"fontSize="11" fill="#5e5e57">CHECKOUT</text>
+                    <text x="340" y="233" textAnchor="middle" className="dm" fontSize="11" fill="#5e5e57">CHECKOUT</text>
                     <text x="340" y="248" textAnchor="middle" fontSize="12.5" fontWeight="800" fill="#141414">agent pays</text>
                   </g>
-                  {/* center node */}
                   <circle cx="210" cy="150" r="46" fill="#F05A28" />
                   <circle cx="210" cy="150" r="46" fill="none" stroke="#fff" strokeOpacity="0.25" strokeWidth="6" />
                   <text x="210" y="146" textAnchor="middle" fontSize="14" fontWeight="800" fill="#fff">AI</text>
@@ -324,14 +337,18 @@ export default function AgenticCommercePage() {
                   <p>{body}</p>
                 </div>
               ))}
-              <Link href="/commerceflo" className="agc-crystal agc-bcard w6">
+              <div className="agc-crystal agc-bcard w6">
                 <div>
                   <div className="ic"><Workflow size={22} strokeWidth={2} /></div>
-                  <h3 className="disp">Where FactoryJet and Commerceflo fit</h3>
-                  <p>We make your store legible and transactable to agents, then run Commerceflo, our AI commerce operator, to keep pricing, inventory, and product data accurate across every channel an agent might buy from.</p>
+                  <h3 className="disp">Where FactoryJet Fits</h3>
+                  <p>We engineer your store to be legible and transactable to AI agents, implementing clean GraphQL feeds, structured Product JSON-LD schemas, and autonomous back-office agents that synchronize pricing and inventory across all your channels.</p>
                 </div>
-                <div className="mini"><span>Meet Commerceflo →</span></div>
-              </Link>
+                <div className="mini">
+                  <Link href="/services/ai-agent-development" style={{ color: 'var(--pp-orange-dark)', fontWeight: 700, textDecoration: 'underline' }}>
+                    Explore AI Agent Services →
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -372,25 +389,42 @@ export default function AgenticCommercePage() {
           </div>
         </section>
 
-        {/* E-E-A-T */}
+        {/* E-E-A-T AUTHOR SECTION */}
         <section className="agc-sec pt0">
           <div className="agc-wrap agc-eeat-grid">
             <div className="agc-crystal agc-eeat">
-              <div><img className="agc-avatar" src="/bhavesh_image.jpg" alt="Bhavesh Barot, Founder of FactoryJet" width={76} height={76} loading="lazy" decoding="async" /></div>
+              <div>
+                <Image
+                  className="agc-avatar"
+                  src="/bhavesh_image.jpg"
+                  alt="Bhavesh Barot, Founder of FactoryJet"
+                  width={76}
+                  height={76}
+                  loading="lazy"
+                  style={{ borderRadius: '50%', objectFit: 'cover' }}
+                />
+              </div>
               <div>
                 <div className="role">Written by the founder</div>
                 <h3 className="disp">Bhavesh Barot, Founder of FactoryJet</h3>
-                <p>Twelve years building and scaling commerce for 500+ businesses, and the team behind Commerceflo, our AI commerce operator. We build agent-ready commerce for US brands, and we wrote this because most brands are getting the definitions, and the urgency, wrong.</p>
+                <p>Twelve years building and scaling high-performance commerce systems for 500+ businesses. We build agent-ready architectures for US brands, ensuring clean data feeds, sub-second edge speeds, and full readiness for AI shopping agents.</p>
                 <div className="agc-reco"><span>Recognized on</span> <b>Clutch</b> <b>GoodFirms</b> <b>DesignRush</b> <b>SoftwareSuggest</b></div>
               </div>
             </div>
-            <div className="agc-teamframe">
-              <img src="/images/us/services/service-team.webp" alt="The FactoryJet team at work" width={800} height={600} loading="lazy" decoding="async" />
+            <div className="agc-teamframe" style={{ position: 'relative', borderRadius: '16px', overflow: 'hidden', minHeight: '300px' }}>
+              <Image
+                src="/images/us/services/service-team.webp"
+                alt="The FactoryJet senior engineering team at work"
+                fill
+                sizes="(max-width: 768px) 100vw, 40vw"
+                style={{ objectFit: 'cover' }}
+                loading="lazy"
+              />
             </div>
           </div>
         </section>
 
-        {/* Free AI Visibility Checker, lead magnet funnel */}
+        {/* Free AI Visibility Checker */}
         <AiVisibilityCtaBand />
 
         {/* FAQ */}
@@ -409,7 +443,7 @@ export default function AgenticCommercePage() {
             <div className="agc-finalcta">
               <span className="agc-eyebrow">Get started</span>
               <h2 className="disp">Find out how agent-ready your brand really is</h2>
-              <p>Get a free agentic-readiness audit of your catalog, data, pricing, and discovery, plus a plan to close the gaps before agents do the choosing. Or meet <Link href="/commerceflo" style={{ color: '#fff', textDecoration: 'underline' }}>Commerceflo</Link>, our AI commerce operator.</p>
+              <p>Get a free agentic-readiness audit of your catalog, structured data, pricing feeds, and AI discovery, plus an engineering roadmap to ensure your store is chosen by AI shopping agents.</p>
               <Link href="/contact" className="agc-cta-btn">Get my free readiness audit</Link>
               <div className="obj">No long contracts. Keep the audit either way.</div>
             </div>
