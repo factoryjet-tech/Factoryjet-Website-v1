@@ -10,20 +10,21 @@ import AuthorCard from '@/components/v2/AuthorCard';
 import CommerceRoiCalculator from '@/components/v2/CommerceRoiCalculator';
 import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import EcommerceCityLinksUS from '@/components/v2/EcommerceCityLinksUS';
+import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-24';
+const PAGE_MODIFIED = '2026-08-29';
 const CANONICAL = 'https://factoryjet.com/tampa/ecommerce-development';
 
 export const metadata: Metadata = {
-  title: 'Tampa E-Commerce Agency | Headless Shopify Plus & B2B | FactoryJet',
+  title: 'Tampa FL E-Commerce Agency | Shopify Plus, B2B & Next.js | FactoryJet',
   description:
-    'Tampa e-commerce development agency. Headless Shopify Plus, BigCommerce B2B, ERP integrations, and sub-second checkouts for Florida enterprise brands.',
+    'Tampa e-commerce development agency. Headless Shopify Plus, BigCommerce B2B, ERP integrations, and sub-second checkouts for Florida enterprise brands. Free quote.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Tampa E-Commerce Agency | Headless Shopify Plus & B2B | FactoryJet',
+    title: 'Tampa FL E-Commerce Agency | Shopify Plus, B2B & Next.js | FactoryJet',
     description:
       'Tampa e-commerce development agency. Headless Shopify Plus, BigCommerce B2B, ERP integrations, and sub-second checkouts for Florida enterprise brands.',
     url: CANONICAL,
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Tampa E-Commerce Agency | Headless Shopify Plus & B2B | FactoryJet',
+    title: 'Tampa FL E-Commerce Agency | Shopify Plus, B2B & Next.js | FactoryJet',
     description: 'Custom headless e-commerce engineering in Tampa FL. Sub-second checkouts, ERP integrations, and full IP code ownership.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -367,7 +368,6 @@ const LOCAL_BUSINESS_SCHEMA = {
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
   telephone: '+1-832-998-8422',
-  priceRange: '$$$',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Tampa',
@@ -394,7 +394,7 @@ const SERVICE_SCHEMA = {
   author: {
     '@type': 'Person',
     name: 'Bhavesh Barot',
-    jobTitle: 'Chief Technical Architect',
+    jobTitle: 'Founder & Chief Technical Architect',
     url: 'https://factoryjet.com/about',
     sameAs: [
       'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
@@ -404,32 +404,45 @@ const SERVICE_SCHEMA = {
   name: 'Tampa E-Commerce Development & Headless Architecture',
   provider: {
     '@type': 'Organization',
+    '@id': 'https://factoryjet.com/#organization',
     name: 'FactoryJet',
     url: 'https://factoryjet.com',
   },
   serviceType: 'E-Commerce Development, Shopify Plus, BigCommerce B2B & ERP Integration',
   description:
     'Senior engineering-led custom headless e-commerce development, sub-second checkout speeds, ERP integrations, and full IP code ownership for Tampa enterprise brands.',
-  areaServed: { '@type': 'State', name: 'Florida' },
+  areaServed: [
+    { '@type': 'City', name: 'Tampa' },
+    { '@type': 'State', name: 'Florida' },
+    { '@type': 'Country', name: 'United States' },
+  ],
 };
 
 const WEBPAGE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'Tampa E-Commerce Agency | Headless Shopify Plus & B2B | FactoryJet',
+  '@id': 'https://factoryjet.com/tampa/ecommerce-development#webpage',
+  name: 'Tampa FL E-Commerce Agency | Shopify Plus, B2B & Next.js | FactoryJet',
   description: 'Tampa e-commerce development agency. Headless Shopify Plus, BigCommerce B2B, ERP integrations, and sub-second checkouts for Florida enterprise brands.',
   url: CANONICAL,
   dateModified: PAGE_MODIFIED,
   author: {
     '@type': 'Person',
     name: 'Bhavesh Barot',
-    jobTitle: 'Chief Technical Architect',
+    jobTitle: 'Founder & Chief Technical Architect',
     url: 'https://factoryjet.com/about',
     sameAs: [
       'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
       'https://github.com/factoryjet-tech',
     ],
   },
+  isPartOf: {
+    '@type': 'WebSite',
+    '@id': 'https://factoryjet.com/#website',
+    name: 'FactoryJet',
+    url: 'https://factoryjet.com',
+  },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
 };
 
 const BREADCRUMB_SCHEMA = {
@@ -454,7 +467,7 @@ export default function TampaEcommercePage() {
       <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
       <main className="platpage">
-        {/* ── 01. RITOVEX HERO BANNER SECTION ── */}
+        {/* ── 01. HERO SECTION ── */}
         <section className="pp-sec" style={{ paddingTop: 'clamp(44px, 7vh, 88px)', paddingBottom: 'clamp(44px, 6vh, 72px)', background: '#FFFFFF' }}>
           <div className="pp-wrap">
             <div className="rv-hero-wrap">
@@ -471,9 +484,16 @@ export default function TampaEcommercePage() {
                   Tampa E-Commerce Agency for High-Growth Brands
                 </h1>
 
-                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
+                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 24px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
                   Scale direct-to-consumer and wholesale operations with headless Shopify Plus, BigCommerce B2B, and sub-second checkout speeds. Engineered with bidirectional NetSuite and SAP ERP integrations.
                 </p>
+
+                {/* Answer-First Brief */}
+                <div style={{ background: '#F6F6F9', borderLeft: '3px solid #FF5622', padding: '14px 18px', borderRadius: '0 12px 12px 0', marginBottom: '28px', maxWidth: '52ch' }}>
+                  <p style={{ fontSize: '13.5px', color: '#141414', lineHeight: 1.55, margin: 0, fontWeight: 500 }}>
+                    <strong style={{ color: '#FF5622' }}>Executive Brief:</strong> FactoryJet delivers senior engineering-led Tampa e-commerce development: headless Next.js storefronts, Shopify Plus &amp; BigCommerce B2B architectures, real-time NetSuite/SAP ERP connectors, sub-second checkout speeds, and 100% intellectual property code ownership.
+                  </p>
+                </div>
 
                 <div className="rv-actions">
                   <ModalCTAButton label="Get an E-Commerce Architecture Quote" region="us" btnVariant="primary-dark" />
@@ -488,7 +508,7 @@ export default function TampaEcommercePage() {
                 </div>
               </div>
 
-              {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
+              {/* Right Column: Clean Organic Curved Photo Frame */}
               <div className="rv-curved-frame-1">
                 <Image
                   src="/images/us/tampa/ecommerce/service-explanation.webp"
@@ -503,7 +523,7 @@ export default function TampaEcommercePage() {
           </div>
         </section>
 
-        {/* ── 02. RITOVEX PARTNERS / TECHNOLOGY MARQUEE TICKER ── */}
+        {/* ── 02. TECHNOLOGY MARQUEE TICKER ── */}
         <section style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC', padding: '36px 0' }}>
           <div className="pp-wrap">
             <div className="rv-ticker-header">
@@ -527,7 +547,7 @@ export default function TampaEcommercePage() {
           </div>
         </section>
 
-        {/* ── 03. RITOVEX ABOUT US & 2x2 BENTO COUNTER SECTION ── */}
+        {/* ── 03. 2x2 BENTO COUNTER SECTION ── */}
         <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(56px, 8vh, 96px) 0' }}>
           <div className="pp-wrap">
             <div className="rv-about-grid">
@@ -578,7 +598,6 @@ export default function TampaEcommercePage() {
                   ))}
                 </div>
 
-                {/* Bottom Actions */}
                 <div style={{ marginTop: '32px' }}>
                   <ModalCTAButton label="Schedule E-Commerce Architecture Review" region="us" btnVariant="primary-dark" />
                 </div>
@@ -758,12 +777,12 @@ export default function TampaEcommercePage() {
         {/* ── 07. ARCHITECTURE BLUEPRINT ── */}
         <div id="ecommerce-blueprint">
           <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: '48px 0 16px' }}>
-          <div className="pp-wrap">
-            <RegionalBenchmarkCard city="Tampa" vertical="ecommerce" />
-          </div>
-        </section>
+            <div className="pp-wrap">
+              <RegionalBenchmarkCard city="Tampa" vertical="ecommerce" />
+            </div>
+          </section>
 
-        <EnterpriseArchitectureBlueprint
+          <EnterpriseArchitectureBlueprint
             badge="// TAMPA ENTERPRISE E-COMMERCE BLUEPRINT"
             title="High-Scale Commerce: Next.js Storefront to Real-Time ERP"
             subtitle="Explore how custom Next.js storefronts, headless Shopify Plus &amp; BigCommerce engines, NetSuite ERP middleware, and sub-second checkout pipelines operate together seamlessly."
@@ -939,11 +958,15 @@ export default function TampaEcommercePage() {
             <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
               <ModalCTAButton label="Get Your Fixed-Price Proposal" region="us" btnVariant="primary-light" />
             </div>
+
+            <p style={{ marginTop: '28px', fontSize: '13.5px', color: '#8E8E9F' }}>
+              Related services: <Link href="/services/shopify-development" style={{ color: '#FF5622', textDecoration: 'underline' }}>Shopify development</Link>, <Link href="/services/shopify-plus-b2b" style={{ color: '#FF5622', textDecoration: 'underline' }}>Shopify Plus B2B</Link>, <Link href="/b2b-ecommerce" style={{ color: '#FF5622', textDecoration: 'underline' }}>B2B e-commerce agency</Link>, and <Link href="/agentic-commerce" style={{ color: '#FF5622', textDecoration: 'underline' }}>Agentic commerce</Link>.
+            </p>
           </div>
         </section>
       </main>
 
-      <SiteFooter locale="us" />
+      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   );
 }
