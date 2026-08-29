@@ -10,20 +10,21 @@ import AuthorCard from '@/components/v2/AuthorCard';
 import CommerceRoiCalculator from '@/components/v2/CommerceRoiCalculator';
 import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import EcommerceCityLinksUS from '@/components/v2/EcommerceCityLinksUS';
+import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-24';
+const PAGE_MODIFIED = '2026-08-29';
 const CANONICAL = 'https://factoryjet.com/austin/ecommerce-development';
 
 export const metadata: Metadata = {
-  title: 'Ecommerce Development Austin TX | Shopify Plus | FactoryJet',
+  title: 'Austin TX E-Commerce Agency | Shopify Plus & B2B | FactoryJet',
   description:
-    'Austin ecommerce development agency. Custom Shopify Plus, WooCommerce, and wholesale B2B portals built for high conversion. Get a fixed quote.',
+    'Austin ecommerce development agency. Custom Shopify Plus, WooCommerce, and wholesale B2B portals built for high conversion. Free quote.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Ecommerce Development Austin TX | Shopify Plus | FactoryJet',
+    title: 'Austin TX E-Commerce Agency | Shopify Plus & B2B | FactoryJet',
     description:
       'Austin ecommerce development agency. Custom Shopify Plus, WooCommerce, and wholesale B2B portals built for high conversion.',
     url: CANONICAL,
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ecommerce Development Austin TX | Shopify Plus | FactoryJet',
+    title: 'Austin TX E-Commerce Agency | Shopify Plus & B2B | FactoryJet',
     description: 'Custom Shopify Plus and wholesale ecommerce development in Austin TX. High conversion and zero lock-in.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -98,55 +99,55 @@ const DISTRICTS = [
 
 const INDUSTRY_SHOWCASE = [
   {
-    sector: 'Direct-to-Consumer Apparel & Lifestyle Brands',
-    headline: 'Engineering Frictionless Mobile Checkout for Austin DTC Leaders',
+    sector: 'Consumer Packaged Goods & Specialty Foods',
+    headline: 'Scaling DTC Subscription & Recurring Revenue in East Austin',
     description:
-      'Austin is a national hotspot for modern lifestyle and apparel brands. We build bespoke Shopify Plus themes engineered for one-tap mobile checkout via Shop Pay, rapid product filtering, intelligent size recommendation charts, and dynamic upsell drawers that boost average order values.',
-    image: '/images/us/austin/ecommerce/portfolio-1.webp',
-    alt: 'Austin DTC apparel and lifestyle ecommerce storefront development',
+      'Central Texas is the national epicenter for disruptive CPG and beverage brands. We build custom Shopify Plus stores with recharge subscription engines, automated build-a-box bundles, and one-click upsells that maximize customer lifetime value (LTV).',
+    image: '/images/us/restaurant-website-design/hero.webp',
+    alt: 'Austin consumer packaged goods and specialty food ecommerce development',
     points: [
-      'Shop Pay and Apple Pay one-tap conversion acceleration',
-      'Dynamic slide-out cart drawers with tiered free-shipping progress bars',
-      'Klaviyo automated flows for abandoned checkout and back-in-stock alerts',
+      'Custom recurring subscription billing flows and flexible delivery interval management',
+      'Interactive build-a-box bundlers and volume-tiered discount matrices',
+      'Seamless Klaviyo email and SMS automation integration for cart recovery',
     ],
   },
   {
-    sector: 'Consumer Electronics & Hardware Brands',
-    headline: 'High-Performance Storefronts for Silicon Hills Tech Creators',
+    sector: 'Apparel, Footwear & Lifestyle Boutiques',
+    headline: 'Bespoke Omnichannel Experiences for South Congress Brands',
     description:
-      'Selling sophisticated consumer electronics and hardware requires detailed technical specifications, interactive product exploded views, and modular accessory add-on logic. We build fast, clean storefronts that educate customers and convert high-ticket orders with ease.',
-    image: '/images/us/austin/ecommerce/portfolio-2.webp',
-    alt: 'Austin consumer tech and hardware ecommerce development',
+      'Austin lifestyle brands demand visual storytelling combined with frictionless mobile checkout. We engineer custom Shopify themes with real-time Shopify POS inventory syncing, dynamic color/swatch variant filtering, and Shop Pay accelerated purchasing.',
+    image: '/images/us/omnichannel/retail-dtc.webp',
+    alt: 'Austin apparel lifestyle boutique ecommerce store development',
     points: [
-      'Interactive 3D product visualizers and component spec sheets',
-      'Integrated extended warranty and protection plan upsells',
-      'Global multi-currency conversion with automatic localization',
+      'Sub-second mobile collection browsing with instant faceted filtering',
+      'Omnichannel Shopify POS integration for in-store pickup and cross-channel returns',
+      'Automated back-in-stock notifications and pre-order deposit workflows',
     ],
   },
   {
-    sector: 'Specialty Food, Craft Beverage & CPG',
-    headline: 'Scaling High-Velocity Subscriptions and Bulk Purchasing',
+    sector: 'Tech Hardware, IoT & Consumer Electronics',
+    headline: 'High-Performance Storefronts for Silicon Hills Innovators',
     description:
-      'From hot sauces and roasted coffees to craft spirits and wellness supplements, Central Texas CPG brands thrive on recurring revenue. We implement robust subscription engines via Recharge and Smartrr, automated bundle builders, and temperature-controlled shipping rate calculators.',
-    image: '/images/us/austin/ecommerce/portfolio-3.webp',
-    alt: 'Austin specialty food beverage and CPG ecommerce development',
+      'Tech hardware companies in The Domain and Silicon Hills require complex e-commerce architectures. We integrate 3D interactive product configurators, serial number registration portals, and global localized multi-currency checkouts.',
+    image: '/images/us/saas-website-design/hero.webp',
+    alt: 'Austin consumer electronics and hardware technology ecommerce store design',
     points: [
-      'Flexible subscribe-and-save billing with custom customer portals',
-      'Mix-and-match bundle builders with tiered volume discounts',
-      'Automated integration with ShipStation and Central Texas cold-chain 3PLs',
+      'Interactive 3D model product viewers and custom feature comparison matrices',
+      'Multi-currency and localized tax compliance via Shopify Markets Pro',
+      'Extended warranty upsells and post-purchase customer support ticket routing',
     ],
   },
   {
-    sector: 'B2B Wholesale Portals & Industrial Distributors',
-    headline: 'Self-Service Digital Ordering for Manufacturers & Dealers',
+    sector: 'B2B Wholesale, Industrial Supply & Distributors',
+    headline: 'Self-Service Digital Procurement for Texas B2B Distributors',
     description:
-      'Traditional wholesale manufacturers in Austin lose valuable staff hours manually entering PDF purchase orders. We build enterprise Shopify B2B wholesale portals featuring personalized dealer pricing catalogs, bulk CSV order uploads, NET 30 invoicing terms, and ERP inventory synchronization.',
-    image: '/images/us/b2b/b2b-trade-portal.webp',
-    alt: 'Austin wholesale B2B portal and manufacturing ecommerce engineering',
+      'Manufacturers and distributors across North Austin and Williamson County lose hours processing manual orders. We build custom Shopify Plus B2B portals with company account hierarchies, negotiated price lists, and Net 30 payment terms.',
+    image: '/images/us/manufacturing-website-design/shop-floor.webp',
+    alt: 'Austin B2B wholesale distribution ecommerce portal development',
     points: [
-      'Tiered wholesale pricing rules based on customer account tier',
-      'Fast bulk reordering matrices and quick CSV order upload tools',
-      'Bi-directional NetSuite and QuickBooks ERP synchronization for inventory levels',
+      'Company profile hierarchies with multi-user purchasing permission controls',
+      'Custom volume-tiered price lists and automated quick-order CSV uploads',
+      'Draft order quote request workflows and purchase order payment processing',
     ],
   },
 ];
@@ -154,199 +155,158 @@ const INDUSTRY_SHOWCASE = [
 const PAIN_POINTS = [
   {
     num: '01',
-    title: 'Ending Clunky Legacy Platforms That Drop Mobile Checkout Conversions',
-    problem: 'Outdated WooCommerce plugins and bloated monolithic stores create sluggish product page loads, broken checkout flows, and high mobile cart abandonment rates.',
-    solution: 'We engineer custom Shopify Plus themes with Shop Pay one-tap acceleration, sub-second product pages, and friction-free mobile checkouts.',
+    title: 'Eliminating Bloated App Stacks & Crashing Checkouts',
+    problem: 'Installing 30+ unvetted Shopify apps slows down mobile page speed, creates checkout javascript conflicts, and costs thousands in recurring app fees every month.',
+    solution: 'We code custom Liquid and React components directly into a lightweight, high-speed theme, eliminating unnecessary third-party apps while keeping load times under 800ms.',
   },
   {
     num: '02',
-    title: 'Connecting Complex ERP, Warehouse, and Inventory Systems Seamlessly',
-    problem: 'Manual inventory entry between your warehouse, physical retail store, and online storefront leads to overselling, stockout errors, and shipping delays.',
-    solution: 'We build automated API integrations connecting Shopify to NetSuite, QuickBooks, ShipStation, and custom warehouse management systems.',
+    title: 'Ending Inventory Discrepancies Between Retail POS & Web',
+    problem: 'Disjointed point-of-sale systems cause overselling, manual inventory corrections, and frustrating order cancellations for in-store and online shoppers.',
+    solution: 'We architect unified commerce architectures where inventory levels, customer profiles, and gift cards sync automatically across Shopify POS and online storefronts.',
   },
   {
     num: '03',
-    title: 'Modernizing B2B Wholesale Ordering Out of Phone Calls and Spreadsheets',
-    problem: 'Wholesale B2B clients are forced to call or email PDF purchase orders because the website lacks tiered dealer pricing and bulk order sheets.',
-    solution: 'We architect enterprise Shopify B2B portals with custom dealer pricing tiers, NET payment terms, quick-order matrices, and company accounts.',
+    title: 'Overcoming High Cart Abandonment on Mobile Devices',
+    problem: 'Clunky multi-step checkouts requiring manual address entry cause over 70% of Austin mobile shoppers to drop off before completing their purchase.',
+    solution: 'We deploy accelerated Shop Pay, Apple Pay, and Google Pay integrations alongside frictionless one-page checkouts that allow customers to buy in a single tap.',
   },
   {
     num: '04',
-    title: 'Retaining Full Ownership of Your Store Code and Brand Intellectual Property',
-    problem: 'Agencies lock clients into proprietary software or hold theme source code hostage with expensive recurring retainer contracts.',
-    solution: 'You retain 100% ownership of your Shopify theme, Git repository, product data, customer lists, and payment processing accounts from day one.',
+    title: 'Replacing Slow, Vulnerable Legacy Platforms (Magento/Woo)',
+    problem: 'Outdated self-hosted platforms require constant server maintenance, security patching, and crash during high-traffic promotional sales events.',
+    solution: 'We execute seamless migrations to cloud-hosted Shopify Plus or headless architectures, guaranteeing 99.99% uptime during Black Friday and Cyber Monday spikes.',
   },
 ];
 
 const ROADMAP_STEPS = [
   {
-    phase: 'Month 1',
-    title: 'Catalog Architecture, ERP Scoping & Figma UI/UX Design',
-    desc: 'We map your complete product data schema, variant options, customer group pricing tiers, and warehouse fulfillment logic. We deliver interactive Figma prototypes for all key customer journeys for your direct review.',
-    deliverables: [
-      'Comprehensive product catalog matrix and tax and shipping logic map',
-      'High-fidelity Figma prototypes for desktop and mobile commerce flows',
-      'ERP and 3PL warehouse integration architecture specification',
-      'Legacy store SEO redirect and data preservation roadmap',
-    ],
+    phase: 'Phase 01',
+    title: 'Catalog Architecture & UX Strategy',
+    desc: 'We audit your product catalog, customer journey data, and operational requirements to create high-converting Figma design wireframes.',
+    deliverables: ['Product taxonomy and variant mapping', 'Mobile conversion flow wireframes', 'Third-party app audit and consolidation plan', 'Milestone development roadmap'],
   },
   {
-    phase: 'Month 2',
-    title: 'Shopify Plus Theme Engineering & Custom Liquid Components',
-    desc: 'We build a lightweight, high-performance Shopify Plus theme with zero app bloat. Every product page, collection grid, and checkout extension is coded for sub-second mobile rendering.',
-    deliverables: [
-      'Custom Shopify Liquid and React component development',
-      'Interactive cart drawer with dynamic upsells and shipping thresholds',
-      'Advanced collection filtering and predictive search implementation',
-      'Mobile-first responsive QA testing across all iOS and Android devices',
-    ],
+    phase: 'Phase 02',
+    title: 'Custom Theme Engineering & Apps',
+    desc: 'We engineer your custom Shopify Plus theme using clean, modular code with integrated upsells, cart drawer, and subscription logic.',
+    deliverables: ['Custom lightweight Liquid theme development', 'Sub-second mobile search and collection filtering', 'Slide-out cart with dynamic free shipping tiers', 'Klaviyo and review app integration'],
   },
   {
-    phase: 'Month 3',
-    title: 'Data Migration, ERP Integration & App Ecosystem Setup',
-    desc: 'We migrate all legacy products, customers, order history, and discount codes. We connect your ERP, shipping software, email marketing platform, and analytics tracking.',
-    deliverables: [
-      'Full migration of products, collections, customer records, and orders',
-      'Live API sync with ShipStation, NetSuite, QuickBooks, or custom WMS',
-      'Klaviyo e-commerce flow setup and segmentation architecture',
-      'Google Analytics 4 e-commerce revenue and event tracking validation',
-    ],
+    phase: 'Phase 03',
+    title: 'Data Migration & ERP Integration',
+    desc: 'We securely migrate all historical customers, orders, and product data while configuring payment gateways and tax rules.',
+    deliverables: ['Historical customer and order data transfer', 'Shop Pay, Stripe, and financing setup', 'Automated inventory and ERP webhook connectors', 'SEO 301 redirect mapping for all old URLs'],
   },
   {
-    phase: 'Months 4 to 6',
-    title: 'Conversion Rate Optimization, B2B Expansion & Scale',
-    desc: 'Following a zero-downtime launch, we analyze real customer purchasing behavior, run A/B conversion tests, and expand advanced features like wholesale portals and international multi-currency.',
-    deliverables: [
-      'Conversion funnel teardowns and checkout optimization iterations',
-      'Shopify B2B wholesale pricing tier deployment and customer rollout',
-      'International localization with multi-currency and localized shipping',
-      'Monthly performance reviews with senior technical commerce engineers',
-    ],
+    phase: 'Phase 04',
+    title: 'Load Testing, Cutover & Launch',
+    desc: 'We execute multi-device checkout testing, run automated traffic load simulations, execute seamless domain cutover, and provide staff training.',
+    deliverables: ['Comprehensive multi-device QA testing', 'Zero-downtime DNS cutover execution', 'Recorded staff training video tutorials', '30-day post-launch warranty and optimization'],
   },
 ];
 
 const EVALUATION_CRITERIA = [
   {
-    label: 'Platform Recommendation',
-    factoryjet: 'Shopify Plus or Headless Next.js based purely on your operational model.',
-    traditional: 'Forces outdated WordPress or custom CMS to keep billing for plugin fixes.',
+    label: 'Theme & Code Architecture',
+    factoryjet: 'Bespoke lightweight Shopify Plus theme with zero app bloat. Clean Liquid and TypeScript engineering.',
+    traditional: 'Pre-made marketplace theme overloaded with 30+ conflicting apps causing severe mobile speed degradation.',
   },
   {
-    label: 'Theme Engineering',
-    factoryjet: 'Bespoke, lightweight Liquid code built for sub-second mobile loading speeds.',
-    traditional: 'Installs bloated $180 marketplace themes loaded with 20 conflicting plugins.',
+    label: 'Mobile Checkout Experience',
+    factoryjet: 'One-tap Shop Pay, Apple Pay, and Google Pay acceleration with dynamic drawer upsells.',
+    traditional: 'Multi-step checkout forms with slow shipping rate calculators that drive 70%+ mobile abandonment.',
   },
   {
-    label: 'ERP & Inventory Sync',
-    factoryjet: 'Direct API integrations connecting warehouse, ERP, and POS seamlessly.',
-    traditional: 'Relies on fragile third-party sync apps that frequently desync inventory.',
+    label: 'Data Migration & SEO Preservation',
+    factoryjet: 'Complete 1-to-1 301 redirect map, historical customer/order migration, and structured schema preservation.',
+    traditional: 'Incomplete URL redirects causing massive 404 error spikes and severe post-launch Google organic traffic drops.',
   },
   {
-    label: 'SEO Migration Safety',
-    factoryjet: '1-to-1 301 URL redirect mapping preserving 100% of organic search rankings.',
-    traditional: 'Overlooks URL mapping, causing sudden 50% drops in post-launch organic traffic.',
-  },
-  {
-    label: 'Code & Store Ownership',
-    factoryjet: 'You own 100% of your theme repository, customer data, and store configuration.',
-    traditional: 'Holds theme assets inside agency developer accounts with proprietary lock-ins.',
-  },
-  {
-    label: 'Pricing & Delivery Terms',
-    factoryjet: 'Fixed-price milestone contracts with guaranteed sprint delivery timelines.',
-    traditional: 'Open-ended hourly billing that drags projects out for 6 to 9 months.',
+    label: 'Code & Account Ownership',
+    factoryjet: '100% full intellectual property ownership. You own your Shopify store, theme files, and payment gateways directly.',
+    traditional: 'Agencies retaining proprietary app licenses or charging ongoing monthly markups on hosting and development.',
   },
 ];
 
 const FAQ_CATEGORIES = [
-  { key: 'platform', label: 'Shopify & Platforms' },
+  { key: 'pricing', label: 'Cost & Scope' },
+  { key: 'platforms', label: 'Shopify Plus & Platforms' },
   { key: 'b2b', label: 'B2B & Wholesale' },
-  { key: 'timeline', label: 'Pricing & Timeline' },
-  { key: 'migration', label: 'Data Migration' },
+  { key: 'migration', label: 'Migration & SEO' },
+  { key: 'growth', label: 'Speed & Conversion' },
 ];
 
 const FAQ_ITEMS = [
   {
-    category: 'platform',
-    question: 'Why do you recommend Shopify Plus for Austin e-commerce brands?',
+    category: 'pricing',
+    question: 'How much does a custom ecommerce website build cost in Austin TX?',
     answer:
-      'Shopify Plus provides 99.99% uptime, built-in Shop Pay checkout with the highest conversion rate in e-commerce, native B2B wholesale portal capabilities, and zero server maintenance overhead compared to fragile self-hosted platforms.',
+      'Pricing depends on catalog size, custom functionality (such as subscription builders or B2B portals), ERP integration requirements, and design scope. We provide transparent fixed-price proposals based on documented project milestones with zero hidden agency surcharges. Every proposal includes custom Figma UX design, clean theme development, data migration, SEO setup, and 100% store ownership.',
   },
   {
-    category: 'platform',
-    question: 'Can you build custom headless commerce solutions with Next.js and Shopify?',
+    category: 'pricing',
+    question: 'Are there hidden monthly agency fees after our store launches?',
     answer:
-      'Yes. For high-growth brands requiring ultra-custom interactive experiences, we build headless frontends using Next.js Commerce and Shopify Storefront API deployed on Cloudflare Global Edge.',
+      'No. You contract directly with Shopify or your platform provider, maintaining full control over your billing. We do not charge ongoing retainer fees unless you choose an ongoing conversion optimization or growth partnership.',
   },
   {
-    category: 'platform',
-    question: 'How do you ensure our Austin store loads in under one second on mobile?',
+    category: 'pricing',
+    question: 'How do you prevent budget overruns during custom e-commerce builds?',
     answer:
-      'We code clean, modular Liquid templates without relying on bloated third-party page builder apps. We optimize product photography with WebP/AVIF compression, implement asynchronous script loading, and utilize Shopify global edge CDN caching.',
+      'We conduct an in-depth discovery phase before writing any code. We document all catalog structures, third-party integrations, design specifications, and launch requirements in a detailed scope of work with guaranteed fixed pricing.',
   },
   {
-    category: 'platform',
-    question: 'Can you integrate custom product personalization and bundle builders?',
+    category: 'platforms',
+    question: 'Why do you recommend Shopify Plus for scaling Austin consumer brands?',
     answer:
-      'Yes. We build bespoke product customizers, engraving preview tools, and dynamic mix-and-match bundle builders that allow shoppers to configure custom product sets with real-time price updates.',
+      'Shopify Plus provides 99.99% cloud uptime, native Shop Pay accelerated checkout that lifts conversion by up to 50%, built-in B2B wholesale features, seamless international expansion via Shopify Markets, and zero server maintenance overhead.',
   },
   {
-    category: 'b2b',
-    question: 'Can we offer custom wholesale pricing and NET payment terms to B2B buyers?',
+    category: 'platforms',
+    question: 'Do you also build on WooCommerce, BigCommerce, or Headless Commerce stacks?',
     answer:
-      'Yes. With Shopify Plus B2B features, you can assign custom price lists, quantity price breaks, NET 30/60 invoice terms, and company customer permissions directly within the same store.',
+      'Yes. While Shopify Plus is our primary recommendation for high-growth DTC and B2B brands, we also engineer custom BigCommerce B2B portals, enterprise WooCommerce platforms, and headless Next.js commerce architectures based on specific technical requirements.',
   },
   {
-    category: 'b2b',
-    question: 'Can you connect our Austin store to our warehouse and inventory ERP?',
+    category: 'platforms',
+    question: 'How long does a typical custom Shopify store build take from start to launch?',
     answer:
-      'Yes. We integrate Shopify with leading ERPs and warehouse management systems including NetSuite, QuickBooks Commerce, SAP, ShipStation, and custom internal inventory APIs.',
-  },
-  {
-    category: 'b2b',
-    question: 'How does multi-location inventory work for brands with both physical stores and warehouses?',
-    answer:
-      'Shopify multi-location inventory allows you to route orders based on customer proximity, stock availability, or split fulfillment rules across your South Congress retail store and North Austin warehouse.',
+      'Standard custom DTC e-commerce builds are typically delivered in 4 to 6 weeks. Complex enterprise deployments involving B2B wholesale portals, multi-location inventory routing, or custom ERP integrations generally take 6 to 10 weeks.',
   },
   {
     category: 'b2b',
-    question: 'Can B2B buyers submit tax exemption certificates directly at checkout?',
+    question: 'Can you build a wholesale B2B ordering portal on Shopify Plus?',
     answer:
-      'Yes. We configure automated sales tax exemption workflows via Avalara AvaTax or Shopify Tax, allowing verified wholesale dealers to complete tax-exempt purchases instantly upon account verification.',
+      'Yes. Using Shopify Plus B2B or custom application architectures, we build self-service wholesale portals featuring customer-specific price lists, tiered volume quantity breaks, net payment terms (Net 30/60), and corporate account hierarchies.',
   },
   {
-    category: 'timeline',
-    question: 'How long does it take to build and launch a custom Shopify store in Austin?',
+    category: 'b2b',
+    question: 'Can retail DTC and wholesale B2B customers use the same Austin storefront?',
     answer:
-      'Standard custom theme builds typically launch in 2 to 4 weeks, while complex enterprise migrations with ERP integrations and wholesale portals typically launch in 4 to 8 weeks on milestone-based delivery.',
+      'Yes. We can architect a unified store where retail customers see standard MSRP pricing and one-click checkout, while approved wholesale partners log in to see their custom negotiated price tiers and purchase order checkout options.',
   },
   {
-    category: 'timeline',
-    question: 'How do you price e-commerce development projects?',
+    category: 'b2b',
+    question: 'Can you integrate our e-commerce store with our ERP or inventory software?',
     answer:
-      'We provide transparent fixed-price quotes based on your exact store scope, catalog size, integration requirements, and design customization, with no surprise hourly overages.',
-  },
-  {
-    category: 'timeline',
-    question: 'What ongoing maintenance is required after the store goes live?',
-    answer:
-      'Unlike WordPress, Shopify is a fully hosted platform that handles security patches, server scaling, and payment compliance automatically. We provide flexible month-to-month optimization support for ongoing feature expansion.',
-  },
-  {
-    category: 'timeline',
-    question: 'Do you offer a post-launch warranty on your code?',
-    answer:
-      'Every FactoryJet build includes a comprehensive 30-day post-launch warranty covering any technical adjustments, bug fixes, and recorded video handover sessions for your internal marketing team.',
+      'Yes. We build automated bidirectional API connectors for NetSuite, QuickBooks Enterprise, Katana Cloud Manufacturing, SAP, and custom warehouse management systems (WMS) to keep stock levels and orders synced in real time.',
   },
   {
     category: 'migration',
-    question: 'Can you migrate our products, customer data, and SEO history from WooCommerce or Magento?',
+    question: 'How do you protect our Google SEO rankings when migrating from Magento or WooCommerce?',
     answer:
-      'Yes. We perform complete data migrations for products, customer accounts, past orders, and execute 1-to-1 301 URL redirect maps to ensure you preserve 100% of your existing search rankings.',
+      'We map out every single legacy URL and create comprehensive 1-to-1 301 redirects, preserve meta titles and descriptions, transfer product schema markup, and execute launch DNS cutover during off-peak hours to ensure zero ranking disruption.',
   },
   {
     category: 'migration',
-    question: 'Will our existing customer passwords transfer to Shopify during migration?',
+    question: 'Can you migrate customer accounts and order histories to our new Shopify store?',
+    answer:
+      'Yes. We migrate your complete historical product catalog, customer records, and order histories so returning shoppers retain their account details and past order history.',
+  },
+  {
+    category: 'migration',
+    question: 'How do customers log into their accounts after a platform migration?',
     answer:
       'Due to industry-standard cryptographic password hashing, passwords cannot be extracted in plain text. We set up automated one-click account activation emails so customers can reset and access their history seamlessly.',
   },
@@ -361,6 +321,30 @@ const FAQ_ITEMS = [
     question: 'Can you migrate historical customer reviews to the new Shopify store?',
     answer:
       'Yes. We export verified customer reviews, star ratings, and review photos from your previous platform and import them directly into modern review engines like Okendo, Yotpo, or Judge.me.',
+  },
+  {
+    category: 'growth',
+    question: 'How do you optimize mobile page loading speeds for high-volume stores?',
+    answer:
+      'We eliminate heavy third-party app scripts, use modern WebP and AVIF image compression, implement responsive image sizing, and code custom lightweight modular Liquid and React components.',
+  },
+  {
+    category: 'growth',
+    question: 'What conversion rate optimization (CRO) features do you build into storefronts?',
+    answer:
+      'We build dynamic slide-out cart drawers with free shipping threshold progress bars, one-click bundle upsells, sticky add-to-cart buttons on mobile, and trust badges at high-friction checkout decision points.',
+  },
+  {
+    category: 'growth',
+    question: 'How does Shop Pay integration increase checkout conversion rates?',
+    answer:
+      'Shop Pay stores customer billing and shipping details across millions of global merchants, enabling verified buyers to complete purchases in a single tap with zero manual form filling.',
+  },
+  {
+    category: 'growth',
+    question: 'Do you set up email and SMS marketing automation alongside the store build?',
+    answer:
+      'Yes. We configure Klaviyo marketing automation flows including abandoned cart recovery series, welcome email onboarding, post-purchase review requests, and VIP customer win-back sequences.',
   },
 ];
 
@@ -384,7 +368,6 @@ const LOCAL_BUSINESS_SCHEMA = {
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
   telephone: '+1-832-998-8422',
-  priceRange: '$$',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Austin',
@@ -411,7 +394,7 @@ const SERVICE_SCHEMA = {
   author: {
     '@type': 'Person',
     name: 'Bhavesh Barot',
-    jobTitle: 'Chief Technical Architect',
+    jobTitle: 'Founder & Chief Technical Architect',
     url: 'https://factoryjet.com/about',
     sameAs: [
       'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
@@ -421,32 +404,45 @@ const SERVICE_SCHEMA = {
   name: 'Austin Ecommerce Development & Shopify Plus Engineering',
   provider: {
     '@type': 'Organization',
+    '@id': 'https://factoryjet.com/#organization',
     name: 'FactoryJet',
     url: 'https://factoryjet.com',
   },
   serviceType: 'Ecommerce Development, Shopify Plus & B2B Portals',
   description:
     'Senior engineering-led Shopify Plus and WooCommerce development, Shop Pay acceleration, wholesale B2B portals, and ERP integrations in Austin TX.',
-  areaServed: { '@type': 'State', name: 'Texas' },
+  areaServed: [
+    { '@type': 'City', name: 'Austin' },
+    { '@type': 'State', name: 'Texas' },
+    { '@type': 'Country', name: 'United States' },
+  ],
 };
 
 const WEBPAGE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'Ecommerce Development Austin TX | Shopify Plus | FactoryJet',
+  '@id': 'https://factoryjet.com/austin/ecommerce-development#webpage',
+  name: 'Austin TX E-Commerce Agency | Shopify Plus & B2B | FactoryJet',
   description: 'Custom Shopify Plus, WooCommerce, and wholesale B2B portals built for high conversion in Austin TX.',
   url: CANONICAL,
   dateModified: PAGE_MODIFIED,
   author: {
     '@type': 'Person',
     name: 'Bhavesh Barot',
-    jobTitle: 'Chief Technical Architect',
+    jobTitle: 'Founder & Chief Technical Architect',
     url: 'https://factoryjet.com/about',
     sameAs: [
       'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
       'https://github.com/factoryjet-tech',
     ],
   },
+  isPartOf: {
+    '@type': 'WebSite',
+    '@id': 'https://factoryjet.com/#website',
+    name: 'FactoryJet',
+    url: 'https://factoryjet.com',
+  },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
 };
 
 const BREADCRUMB_SCHEMA = {
@@ -454,8 +450,8 @@ const BREADCRUMB_SCHEMA = {
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com/' },
-    { '@type': 'ListItem', position: 2, name: 'Austin', item: 'https://factoryjet.com/austin/seo' },
-    { '@type': 'ListItem', position: 3, name: 'Ecommerce Development', item: CANONICAL },
+    { '@type': 'ListItem', position: 2, name: 'E-Commerce', item: 'https://factoryjet.com/services/ecommerce-development' },
+    { '@type': 'ListItem', position: 3, name: 'Austin', item: CANONICAL },
   ],
 };
 
@@ -471,12 +467,10 @@ export default function AustinEcommerceDevelopmentPage() {
       <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
       <main className="platpage">
-
-        {/* ── 01. RITOVEX HERO BANNER SECTION ── */}
+        {/* ── 01. HERO BANNER SECTION ── */}
         <section className="pp-sec" style={{ paddingTop: 'clamp(44px, 7vh, 88px)', paddingBottom: 'clamp(44px, 6vh, 72px)', background: '#FFFFFF' }}>
           <div className="pp-wrap">
             <div className="rv-hero-wrap">
-              
               {/* Left Column Typography */}
               <div>
                 <div className="rv-badge" style={{ marginBottom: '18px' }}>
@@ -487,12 +481,19 @@ export default function AustinEcommerceDevelopmentPage() {
                 </div>
 
                 <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
-                  Austin Ecommerce Development Agency for High-Growth Brands
+                  Austin Ecommerce Agency for High-Growth Brands
                 </h1>
 
-                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
+                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 24px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
                   Scale DTC online sales and wholesale B2B dealer ordering with custom Shopify Plus engineering, Shop Pay acceleration, and seamless ERP inventory synchronization.
                 </p>
+
+                {/* Answer-First Brief */}
+                <div style={{ background: '#F6F6F9', borderLeft: '3px solid #FF5622', padding: '14px 18px', borderRadius: '0 12px 12px 0', marginBottom: '28px', maxWidth: '52ch' }}>
+                  <p style={{ fontSize: '13.5px', color: '#141414', lineHeight: 1.55, margin: 0, fontWeight: 500 }}>
+                    <strong style={{ color: '#FF5622' }}>Executive Brief:</strong> FactoryJet delivers custom Austin e-commerce development: lightweight Shopify Plus storefronts, wholesale B2B ordering portals, Shop Pay 1-tap checkout acceleration, ERP inventory synchronization, and 100% full code ownership.
+                  </p>
+                </div>
 
                 <div className="rv-actions">
                   <ModalCTAButton label="Get a Fixed-Price Quote" region="us" btnVariant="primary-dark" />
@@ -502,36 +503,35 @@ export default function AustinEcommerceDevelopmentPage() {
                         <path d="M13 7.13397C13.6667 7.51887 13.6667 8.48113 13 8.86603L2.5 14.9282C1.83333 15.3131 1 14.832 1 14.0622L1 1.93782C1 1.16802 1.83333 0.686897 2.5 1.0718L13 7.13397Z" />
                       </svg>
                     </div>
-                    <span>Explore Commerce Corridors</span>
+                    <span>Explore Austin Corridors</span>
                   </a>
                 </div>
               </div>
 
-              {/* Right Column: Clean Ritovex Organic Curved Photo Frame (Edge-to-Edge) */}
+              {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
               <div className="rv-curved-frame-1">
                 <Image
-                  src="/images/us/austin/ecommerce/service-explanation.webp"
-                  alt="Austin Texas ecommerce development team engineering custom Shopify Plus storefronts"
+                  src="/images/us/services/hero-enterprise-ecommerce.webp"
+                  alt="Austin Texas modern ecommerce development and custom Shopify Plus store mockup"
                   width={640}
                   height={640}
                   priority
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
                 />
               </div>
-
             </div>
           </div>
         </section>
 
-        {/* ── 02. RITOVEX PARTNERS / TECHNOLOGY MARQUEE TICKER ── */}
+        {/* ── 02. TECHNOLOGY MARQUEE TICKER ── */}
         <section style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC', padding: '36px 0' }}>
           <div className="pp-wrap">
             <div className="rv-ticker-header">
               <div className="rv-ticker-line" />
-              <div className="rv-ticker-label">Modern Commerce &amp; Fulfillment Stack</div>
+              <div className="rv-ticker-label">Modern Commerce Tech Stack</div>
               <div className="rv-ticker-line" />
             </div>
-            
+
             <div className="rv-marquee-wrapper">
               <div className="rv-marquee">
                 {PARTNERS.concat(PARTNERS).map((p, idx) => (
@@ -547,15 +547,14 @@ export default function AustinEcommerceDevelopmentPage() {
           </div>
         </section>
 
-        {/* ── 03. RITOVEX ABOUT US & 2x2 BENTO COUNTER SECTION ── */}
+        {/* ── 03. 2x2 BENTO COUNTER SECTION ── */}
         <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(56px, 8vh, 96px) 0' }}>
           <div className="pp-wrap">
             <div className="rv-about-grid">
-              
-              {/* Left Column: Clean Organic Curved Photo Frame (Edge-to-Edge) */}
+              {/* Left Column: Clean Organic Curved Photo Frame */}
               <div className="rv-curved-frame-2">
                 <Image
-                  src="/images/us/b2b/b2b-scoping-call.webp"
+                  src="/images/us/shared/factoryjet-audit-call.webp"
                   alt="FactoryJet senior ecommerce engineers building custom Shopify solutions in Austin"
                   width={640}
                   height={640}
@@ -563,21 +562,21 @@ export default function AustinEcommerceDevelopmentPage() {
                 />
               </div>
 
-              {/* Right Column: 2x2 Bento Counter Grid + Discovery CTA Button */}
+              {/* Right Column: 2x2 Bento Counter Grid */}
               <div>
                 <div className="rv-badge" style={{ marginBottom: '14px' }}>
                   <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                     <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
                   </svg>
-                  <span>Built for Scale &amp; Speed</span>
+                  <span>Speed, Scale &amp; Conversion</span>
                 </div>
 
                 <h2 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 14px' }}>
-                  Engineered for High-Growth Commerce in Austin
+                  Storefronts Engineered for Austin&apos;s High-Volume Merchants
                 </h2>
 
                 <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
-                  From South Congress DTC lifestyle leaders to Silicon Hills hardware creators and B2B industrial distributors, we build custom storefronts that eliminate checkout friction and scale orders effortlessly.
+                  From South Congress lifestyle boutiques to East Austin CPG innovators and North Austin wholesale distributors, Austin businesses need stores that maximize checkout conversion and eliminate inventory friction.
                 </p>
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
@@ -599,17 +598,16 @@ export default function AustinEcommerceDevelopmentPage() {
                   ))}
                 </div>
 
-                {/* Bottom Actions: Discovery Call CTA Button */}
+                {/* Bottom Actions */}
                 <div style={{ marginTop: '32px' }}>
-                  <ModalCTAButton label="Schedule Commerce Strategy Call" region="us" btnVariant="primary-dark" />
+                  <ModalCTAButton label="Schedule Ecommerce Strategy Call" region="us" btnVariant="primary-dark" />
                 </div>
               </div>
-
             </div>
           </div>
         </section>
 
-        {/* ── 04. AUSTIN COMMERCE DISTRICTS DIRECTORY ── */}
+        {/* ── 04. AUSTIN DISTRICTS & INDUSTRY DIRECTORY ── */}
         <section id="austin-ecom-districts" className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
           <div className="pp-wrap">
             <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
@@ -617,13 +615,13 @@ export default function AustinEcommerceDevelopmentPage() {
                 <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                   <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
                 </svg>
-                <span>Central Texas Market Depth</span>
+                <span>Austin Commercial Corridor Depth</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Tailored E-Commerce for Austin&apos;s Core Sectors
+                Tailored Ecommerce Development for Austin&apos;s Core Sectors
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                From South Congress flagship boutiques to Silicon Hills hardware and wholesale distribution:
+                From South Congress lifestyle boutiques to East Austin CPG innovators and North Austin wholesale distributors:
               </p>
             </div>
 
@@ -661,7 +659,7 @@ export default function AustinEcommerceDevelopmentPage() {
           </div>
         </section>
 
-        {/* ── 05. INDUSTRY DEEP-DIVES & PHOTOREALISTIC CASE EXAMPLES ── */}
+        {/* ── 05. INDUSTRY SHOWCASE SECTION ── */}
         <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
           <div className="pp-wrap">
             <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
@@ -672,10 +670,10 @@ export default function AustinEcommerceDevelopmentPage() {
                 <span>Industry-Specific Execution</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Specialized Commerce Architectures for Austin Brands
+                Specialized Ecommerce Architectures for Austin Brands
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                Every commercial vertical in Austin demands distinct checkout logic, inventory routing, and post-purchase flows:
+                Every retail and wholesale vertical in Austin demands customized checkout funnels, ERP connectors, and speed optimization:
               </p>
             </div>
 
@@ -729,7 +727,7 @@ export default function AustinEcommerceDevelopmentPage() {
           </div>
         </section>
 
-        {/* ── 06. CORE DRIVERS & PAIN POINTS (RITOVEX NUMBERED SERVICES ROWS) ── */}
+        {/* ── 06. CORE DRIVERS & PAIN POINTS ── */}
         <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
           <div className="pp-wrap">
             <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
@@ -740,10 +738,10 @@ export default function AustinEcommerceDevelopmentPage() {
                 <span>The FactoryJet Difference</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Why Austin Brands Choose FactoryJet Commerce
+                Why Austin Merchants Choose FactoryJet Ecommerce
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                We replace clunky legacy software with high-converting, scalable e-commerce engineering:
+                We replace fragile app stacks and slow monolithic checkouts with modern engineering:
               </p>
             </div>
 
@@ -777,26 +775,26 @@ export default function AustinEcommerceDevelopmentPage() {
           </div>
         </section>
 
-        {/* ── 07. ARCHITECTURE BLUEPRINT (AUTO-ROTATING TABS) ── */}
-        <div id="ecom-architecture-blueprint">
+        {/* ── 07. ARCHITECTURE BLUEPRINT ── */}
+        <div id="ecommerce-blueprint">
           <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: '48px 0 16px' }}>
-          <div className="pp-wrap">
-            <RegionalBenchmarkCard city="Austin" vertical="ecommerce" />
-          </div>
-        </section>
+            <div className="pp-wrap">
+              <RegionalBenchmarkCard city="Austin" vertical="ecommerce" />
+            </div>
+          </section>
 
-        <EnterpriseArchitectureBlueprint
-            badge="// AUSTIN COMMERCE ARCHITECTURE BLUEPRINT"
-            title="Modern E-Commerce: From Catalog to One-Tap Checkout"
-            subtitle="Explore how custom Shopify Liquid architecture, Shop Pay acceleration, B2B wholesale portals, and automated ERP sync drive scalable revenue."
-            legacySource="Clunky WooCommerce & Manual Phone Orders"
-            targetStack="High-Speed Shopify Plus & B2B Portal Engine"
-            ctaLabel="Get a Fixed-Price Quote"
+          <EnterpriseArchitectureBlueprint
+            badge="// AUSTIN ENTERPRISE E-COMMERCE BLUEPRINT"
+            title="High-Scale Commerce: Next.js Storefront to Real-Time ERP"
+            subtitle="Explore how custom Next.js storefronts, headless Shopify Plus &amp; BigCommerce engines, NetSuite ERP middleware, and sub-second checkout pipelines operate together seamlessly."
+            legacySource="Legacy Magento, WooCommerce &amp; Custom PHP"
+            targetStack="Headless Shopify Plus, BigCommerce B2B &amp; Next.js 15"
+            ctaLabel="Get an E-Commerce Architecture Quote"
             region="us"
           />
         </div>
 
-        {/* ── 08. STEP-BY-STEP 6-MONTH ROADMAP MATRIX ── */}
+        {/* ── 08. STEP-BY-STEP 4-STAGE REPLATFORMING PROTOCOL ── */}
         <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
           <div className="pp-wrap">
             <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
@@ -804,13 +802,13 @@ export default function AustinEcommerceDevelopmentPage() {
                 <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                   <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
                 </svg>
-                <span>Predictable Delivery</span>
+                <span>Proven Replatforming Engine</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Our 6-Month E-Commerce Growth Roadmap
+                Our 4-Stage Ecommerce Launch Protocol
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                A transparent, step-by-step engineering roadmap delivering compounding store conversions and revenue:
+                A disciplined engineering methodology for high-conversion storefront launches with zero scope drift:
               </p>
             </div>
 
@@ -874,7 +872,7 @@ export default function AustinEcommerceDevelopmentPage() {
                 Evaluating Austin Ecommerce Agencies: What to Ask
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                Compare engineering-led Shopify development against traditional design agencies before you commit:
+                Compare engineering-led Shopify Plus development against traditional template agencies before you sign:
               </p>
             </div>
 
@@ -882,7 +880,7 @@ export default function AustinEcommerceDevelopmentPage() {
               <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1.4fr 1.4fr', background: '#141414', color: '#FFFFFF', padding: '16px 24px', fontWeight: 700, fontSize: '13.5px' }}>
                 <div>Evaluation Factor</div>
                 <div style={{ color: '#FF5622' }}>FactoryJet Engineering Model</div>
-                <div style={{ color: '#A0A0B0' }}>Traditional Design Agencies</div>
+                <div style={{ color: '#A0A0B0' }}>Traditional Template Agencies</div>
               </div>
 
               {EVALUATION_CRITERIA.map((crit, cIdx) => (
@@ -913,13 +911,14 @@ export default function AustinEcommerceDevelopmentPage() {
           </div>
         </section>
 
-        {/* ── 10. SEARCHABLE CATEGORIZED FAQ SECTION (16 DETAILED QUESTIONS) ── */}
+        {/* ── INTERACTIVE SPEED & REVENUE RECOVERY CALCULATOR ── */}
         <CommerceRoiCalculator city="Austin" region="us" />
 
+        {/* ── 10. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
         <FAQ
           eyebrow="AUSTIN ECOMMERCE INTELLIGENCE"
-          headline="Frequently Asked Questions About E-Commerce in Austin TX"
-          lead="Direct, plain English answers to what Austin business owners and commerce leaders ask about online store development and Shopify Plus:"
+          headline="Frequently Asked Questions About Ecommerce Development in Austin TX"
+          lead="Direct, plain English answers to what Austin business owners ask about custom Shopify Plus and e-commerce development:"
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
           bgClassName="bg-[#FFFFFF]"
@@ -946,26 +945,29 @@ export default function AustinEcommerceDevelopmentPage() {
               <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                 <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
               </svg>
-              <span>Fixed-Price E-Commerce Engineering</span>
+              <span>Fixed-Price &amp; Zero Downtime</span>
             </div>
-            
+
             <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
-              Ready to Scale Your Online Store in Austin?
+              Ready to Upgrade Your Austin Ecommerce Architecture?
             </h2>
-            
+
             <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
-              Tell us about your brand catalog and goals. We will provide a comprehensive fixed-price proposal, migration architecture, and interactive Figma preview.
+              Tell us about your catalog size and operational goals. We will provide a comprehensive architectural proposal, clear migration timeline, and interactive Figma preview.
             </p>
-            
+
             <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
-              <ModalCTAButton label="Get Your Fixed-Price Quote" region="us" btnVariant="primary-light" />
+              <ModalCTAButton label="Get Your Fixed-Price Proposal" region="us" btnVariant="primary-light" />
             </div>
+
+            <p style={{ marginTop: '28px', fontSize: '13.5px', color: '#8E8E9F' }}>
+              Related services: <Link href="/austin/seo" style={{ color: '#FF5622', textDecoration: 'underline' }}>Austin SEO agency</Link>, <Link href="/services/shopify-development" style={{ color: '#FF5622', textDecoration: 'underline' }}>Shopify development</Link>, <Link href="/services/shopify-plus-b2b" style={{ color: '#FF5622', textDecoration: 'underline' }}>Shopify Plus B2B</Link>, and <Link href="/agentic-commerce" style={{ color: '#FF5622', textDecoration: 'underline' }}>Agentic commerce</Link>.
+            </p>
           </div>
         </section>
-
       </main>
 
-      <SiteFooter />
+      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   );
 }
