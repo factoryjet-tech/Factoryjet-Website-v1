@@ -10,29 +10,30 @@ import AuthorCard from '@/components/v2/AuthorCard';
 import CommerceRoiCalculator from '@/components/v2/CommerceRoiCalculator';
 import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import EcommerceCityLinksUS from '@/components/v2/EcommerceCityLinksUS';
+import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-24';
+const PAGE_MODIFIED = '2026-08-29';
 const CANONICAL = 'https://factoryjet.com/chicago/ecommerce-development';
 
 export const metadata: Metadata = {
-  title: 'Chicago E-Commerce Development Agency | Shopify Plus & B2B | FactoryJet',
+  title: 'Chicago E-Commerce Agency | Shopify Plus & B2B | FactoryJet',
   description:
-    'Chicago ecommerce development agency. Shopify Plus, BigCommerce B2B, NetSuite ERP integrations, and custom headless commerce for Illinois brands.',
+    'Chicago ecommerce development agency. Shopify Plus, BigCommerce B2B, NetSuite ERP integrations, and custom headless commerce for Illinois brands. Free quote.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Chicago E-Commerce Development Agency | Shopify Plus & B2B | FactoryJet',
+    title: 'Chicago E-Commerce Agency | Shopify Plus & B2B | FactoryJet',
     description:
       'Chicago ecommerce development agency. Shopify Plus, BigCommerce B2B, NetSuite ERP integrations, and custom headless commerce for Illinois brands.',
     url: CANONICAL,
-    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Chicago E-Commerce Development Agency' }],
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Chicago E-Commerce Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Chicago E-Commerce Development Agency | Shopify Plus & B2B | FactoryJet',
+    title: 'Chicago E-Commerce Agency | Shopify Plus & B2B | FactoryJet',
     description: 'Enterprise Shopify Plus, B2B wholesale portals, and headless commerce engineering in Chicago IL.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -260,7 +261,7 @@ const FAQ_ITEMS = [
     category: 'migration',
     question: 'How do you prevent organic search ranking drops during an ecommerce replatforming?',
     answer:
-      'We execute a comprehensive 1-to-1 URL redirect map for every legacy product, category, and blog URL. We preserve title tag structures, breadcrumbs, and image alt text, while injecting rich Product, AggregateRating, and Offer JSON-LD schema to maintain and enhance your organic search visibility.',
+      'We execute a comprehensive 1-to-1 URL redirect map for every legacy product, category, and blog URL. We preserve title tag structures, breadcrumbs, and image alt text, while injecting rich Product, Organization, and Offer JSON-LD schema to maintain and enhance your organic search visibility.',
   },
   {
     category: 'cost',
@@ -380,7 +381,6 @@ const LOCAL_BUSINESS_SCHEMA = {
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
   telephone: '+1-832-998-8422',
-  priceRange: '$$',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Chicago',
@@ -407,7 +407,7 @@ const SERVICE_SCHEMA = {
   author: {
     '@type': 'Person',
     name: 'Bhavesh Barot',
-    jobTitle: 'Chief Technical Architect',
+    jobTitle: 'Founder & Chief Technical Architect',
     url: 'https://factoryjet.com/about',
     sameAs: [
       'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
@@ -417,32 +417,45 @@ const SERVICE_SCHEMA = {
   name: 'Chicago E-Commerce Development & Shopify Plus Architecture',
   provider: {
     '@type': 'Organization',
+    '@id': 'https://factoryjet.com/#organization',
     name: 'FactoryJet',
     url: 'https://factoryjet.com',
   },
   serviceType: 'E-Commerce Development, Shopify Plus Engineering & B2B Wholesale Portals',
   description:
     'Senior engineering-led custom Shopify Plus storefronts, B2B wholesale portals, ERP integrations, and headless commerce engineering for Chicago businesses.',
-  areaServed: { '@type': 'State', name: 'Illinois' },
+  areaServed: [
+    { '@type': 'City', name: 'Chicago' },
+    { '@type': 'State', name: 'Illinois' },
+    { '@type': 'Country', name: 'United States' },
+  ],
 };
 
 const WEBPAGE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'Chicago E-Commerce Development Agency | Shopify Plus & B2B | FactoryJet',
+  '@id': 'https://factoryjet.com/chicago/ecommerce-development#webpage',
+  name: 'Chicago E-Commerce Agency | Shopify Plus & B2B | FactoryJet',
   description: 'Enterprise Shopify Plus, BigCommerce B2B, and headless ecommerce development for Chicago brands.',
   url: CANONICAL,
   dateModified: PAGE_MODIFIED,
   author: {
     '@type': 'Person',
     name: 'Bhavesh Barot',
-    jobTitle: 'Chief Technical Architect',
+    jobTitle: 'Founder & Chief Technical Architect',
     url: 'https://factoryjet.com/about',
     sameAs: [
       'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
       'https://github.com/factoryjet-tech',
     ],
   },
+  isPartOf: {
+    '@type': 'WebSite',
+    '@id': 'https://factoryjet.com/#website',
+    name: 'FactoryJet',
+    url: 'https://factoryjet.com',
+  },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
 };
 
 const BREADCRUMB_SCHEMA = {
@@ -450,7 +463,7 @@ const BREADCRUMB_SCHEMA = {
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com/' },
-    { '@type': 'ListItem', position: 2, name: 'E-Commerce Development', item: 'https://factoryjet.com/services/ecommerce-development' },
+    { '@type': 'ListItem', position: 2, name: 'E-Commerce', item: 'https://factoryjet.com/services/ecommerce-development' },
     { '@type': 'ListItem', position: 3, name: 'Chicago', item: CANONICAL },
   ],
 };
@@ -484,9 +497,16 @@ export default function ChicagoEcommercePage() {
                   Enterprise E-Commerce Development for Chicago Brands
                 </h1>
 
-                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
+                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 24px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
                   Scale your direct-to-consumer flagship or B2B wholesale operation with custom Shopify Plus engineering, sub-second catalog speeds, and NetSuite/SAP ERP integrations.
                 </p>
+
+                {/* Answer-First Brief */}
+                <div style={{ background: '#F6F6F9', borderLeft: '3px solid #FF5622', padding: '14px 18px', borderRadius: '0 12px 12px 0', marginBottom: '28px', maxWidth: '52ch' }}>
+                  <p style={{ fontSize: '13.5px', color: '#141414', lineHeight: 1.55, margin: 0, fontWeight: 500 }}>
+                    <strong style={{ color: '#FF5622' }}>Executive Brief:</strong> FactoryJet delivers enterprise Chicago e-commerce development services: custom Shopify Plus storefronts, BigCommerce B2B wholesale portals, sub-second headless architectures, and bidirectional NetSuite/SAP ERP synchronization. Every build features custom Liquid/React engineering, one-tap mobile checkout acceleration, guaranteed zero downtime data migration, and 100% full intellectual property code ownership.
+                  </p>
+                </div>
 
                 <div className="rv-actions">
                   <ModalCTAButton label="Get an E-Commerce Proposal" region="us" btnVariant="primary-dark" />
@@ -952,11 +972,15 @@ export default function ChicagoEcommercePage() {
             <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
               <ModalCTAButton label="Request Your Commerce Proposal" region="us" btnVariant="primary-light" />
             </div>
+
+            <p style={{ marginTop: '28px', fontSize: '13.5px', color: '#8E8E9F' }}>
+              Related services: <Link href="/chicago/seo" style={{ color: '#FF5622', textDecoration: 'underline' }}>Chicago SEO agency</Link>, <Link href="/services/shopify-development" style={{ color: '#FF5622', textDecoration: 'underline' }}>Shopify development</Link>, <Link href="/services/shopify-plus-b2b" style={{ color: '#FF5622', textDecoration: 'underline' }}>Shopify Plus B2B</Link>, and <Link href="/agentic-commerce" style={{ color: '#FF5622', textDecoration: 'underline' }}>Agentic commerce</Link>.
+            </p>
           </div>
         </section>
       </main>
 
-      <SiteFooter locale="us" />
+      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   );
 }

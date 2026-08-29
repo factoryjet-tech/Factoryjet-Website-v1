@@ -10,20 +10,21 @@ import AuthorCard from '@/components/v2/AuthorCard';
 import LocalSeoOpportunityEstimator from '@/components/v2/LocalSeoOpportunityEstimator';
 import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
+import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-24';
+const PAGE_MODIFIED = '2026-08-29';
 const CANONICAL = 'https://factoryjet.com/chicago/seo';
 
 export const metadata: Metadata = {
-  title: 'Chicago Local SEO Agency | Google Map Pack 3-Pack | FactoryJet',
+  title: 'Chicago IL Local SEO Services & Search Marketing Agency | FactoryJet',
   description:
-    'Chicago local SEO agency. Top Google Map Pack 3-pack rankings, local citation sync, GBP optimization, and organic search growth for Illinois businesses.',
+    'Chicago local SEO agency. Top Google Map Pack 3-pack rankings, local citation sync, GBP optimization, and organic search growth for Illinois businesses. Free SEO audit.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Chicago Local SEO Agency | Google Map Pack 3-Pack | FactoryJet',
+    title: 'Chicago IL Local SEO Services & Search Marketing Agency | FactoryJet',
     description:
       'Chicago local SEO agency. Top Google Map Pack 3-pack rankings, local citation sync, and revenue-driven search growth for Illinois businesses.',
     url: CANONICAL,
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Chicago Local SEO Agency | Google Map Pack 3-Pack | FactoryJet',
+    title: 'Chicago IL Local SEO Services & Search Marketing Agency | FactoryJet',
     description: 'Dominate Chicago Google 3-Pack map rankings and high-intent local search queries with FactoryJet.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -380,7 +381,6 @@ const LOCAL_BUSINESS_SCHEMA = {
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
   telephone: '+1-832-998-8422',
-  priceRange: '$$',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Chicago',
@@ -407,7 +407,7 @@ const SERVICE_SCHEMA = {
   author: {
     '@type': 'Person',
     name: 'Bhavesh Barot',
-    jobTitle: 'Chief Technical Architect',
+    jobTitle: 'Founder & Chief Technical Architect',
     url: 'https://factoryjet.com/about',
     sameAs: [
       'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
@@ -417,32 +417,45 @@ const SERVICE_SCHEMA = {
   name: 'Chicago Local SEO & Map Pack Optimization',
   provider: {
     '@type': 'Organization',
+    '@id': 'https://factoryjet.com/#organization',
     name: 'FactoryJet',
     url: 'https://factoryjet.com',
   },
   serviceType: 'Local SEO, Google Business Profile Optimization & Geo-Grid Defense',
   description:
     'Senior engineering-led Google Business Profile optimization, local citation syndication, and geo-grid rank defense for Chicago businesses.',
-  areaServed: { '@type': 'State', name: 'Illinois' },
+  areaServed: [
+    { '@type': 'City', name: 'Chicago' },
+    { '@type': 'State', name: 'Illinois' },
+    { '@type': 'Country', name: 'United States' },
+  ],
 };
 
 const WEBPAGE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'Chicago Local SEO Agency | Google Map Pack 3-Pack | FactoryJet',
+  '@id': 'https://factoryjet.com/chicago/seo#webpage',
+  name: 'Chicago IL Local SEO Services & Search Marketing Agency | FactoryJet',
   description: 'Top Google Map Pack 3-pack rankings, local citation sync, and revenue-driven search growth for Illinois businesses.',
   url: CANONICAL,
   dateModified: PAGE_MODIFIED,
   author: {
     '@type': 'Person',
     name: 'Bhavesh Barot',
-    jobTitle: 'Chief Technical Architect',
+    jobTitle: 'Founder & Chief Technical Architect',
     url: 'https://factoryjet.com/about',
     sameAs: [
       'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
       'https://github.com/factoryjet-tech',
     ],
   },
+  isPartOf: {
+    '@type': 'WebSite',
+    '@id': 'https://factoryjet.com/#website',
+    name: 'FactoryJet',
+    url: 'https://factoryjet.com',
+  },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
 };
 
 const BREADCRUMB_SCHEMA = {
@@ -467,7 +480,7 @@ export default function ChicagoSeoPage() {
       <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
       <main className="platpage">
-        {/* ── 01. RITOVEX HERO BANNER SECTION ── */}
+        {/* ── 01. HERO SECTION ── */}
         <section className="pp-sec" style={{ paddingTop: 'clamp(44px, 7vh, 88px)', paddingBottom: 'clamp(44px, 6vh, 72px)', background: '#FFFFFF' }}>
           <div className="pp-wrap">
             <div className="rv-hero-wrap">
@@ -484,9 +497,16 @@ export default function ChicagoSeoPage() {
                   Dominate the Chicago Google Map Pack &amp; Local Search
                 </h1>
 
-                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
+                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 24px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
                   Capture high-intent local phone calls, consultation inquiries, and foot traffic across Cook County. Precision GBP optimization, 100% NAP citation sync, and no long-term contracts.
                 </p>
+
+                {/* Answer-First Brief */}
+                <div style={{ background: '#F6F6F9', borderLeft: '3px solid #FF5622', padding: '14px 18px', borderRadius: '0 12px 12px 0', marginBottom: '28px', maxWidth: '52ch' }}>
+                  <p style={{ fontSize: '13.5px', color: '#141414', lineHeight: 1.55, margin: 0, fontWeight: 500 }}>
+                    <strong style={{ color: '#FF5622' }}>Executive Brief:</strong> FactoryJet delivers senior engineering-led Chicago local search optimization: Google Business Profile category calibration, multi-radius geo-grid proximity expansion, 100% NAP data aggregator sync, and transparent call tracking without locked retainers.
+                  </p>
+                </div>
 
                 <div className="rv-actions">
                   <ModalCTAButton label="Get Your Free Local SEO Audit" region="us" btnVariant="primary-dark" />
@@ -501,7 +521,7 @@ export default function ChicagoSeoPage() {
                 </div>
               </div>
 
-              {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
+              {/* Right Column: Clean Organic Curved Photo Frame */}
               <div className="rv-curved-frame-1">
                 <Image
                   src="/images/us/chicago-seo/chicago-strategy-session.webp"
@@ -516,7 +536,7 @@ export default function ChicagoSeoPage() {
           </div>
         </section>
 
-        {/* ── 02. RITOVEX PARTNERS / TECHNOLOGY MARQUEE TICKER ── */}
+        {/* ── 02. TECHNOLOGY MARQUEE TICKER ── */}
         <section style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC', padding: '36px 0' }}>
           <div className="pp-wrap">
             <div className="rv-ticker-header">
@@ -540,7 +560,7 @@ export default function ChicagoSeoPage() {
           </div>
         </section>
 
-        {/* ── 03. RITOVEX ABOUT US & 2x2 BENTO COUNTER SECTION ── */}
+        {/* ── 03. 2x2 BENTO COUNTER SECTION ── */}
         <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(56px, 8vh, 96px) 0' }}>
           <div className="pp-wrap">
             <div className="rv-about-grid">
@@ -591,7 +611,6 @@ export default function ChicagoSeoPage() {
                   ))}
                 </div>
 
-                {/* Bottom Actions */}
                 <div style={{ marginTop: '32px' }}>
                   <ModalCTAButton label="Schedule Local SEO Audit" region="us" btnVariant="primary-dark" />
                 </div>
@@ -611,10 +630,10 @@ export default function ChicagoSeoPage() {
                 <span>Chicagoland Search Coverage</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Targeting Key Chicago Search Corridors
+                Targeting Key Chicagoland Search Corridors
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                Every commercial sub-market in Cook and DuPage county demands localized proximity targeting:
+                Every commercial sub-market in Cook, DuPage, and Lake county demands localized proximity targeting:
               </p>
             </div>
 
@@ -768,15 +787,15 @@ export default function ChicagoSeoPage() {
           </div>
         </section>
 
-        {/* ── 07. ARCHITECTURE BLUEPRINT (AUTO-ROTATING TABS) ── */}
+        {/* ── 07. ARCHITECTURE BLUEPRINT ── */}
         <div id="local-seo-architecture-blueprint">
           <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: '48px 0 16px' }}>
-          <div className="pp-wrap">
-            <RegionalBenchmarkCard city="Chicago" vertical="seo" />
-          </div>
-        </section>
+            <div className="pp-wrap">
+              <RegionalBenchmarkCard city="Chicago" vertical="seo" />
+            </div>
+          </section>
 
-        <LocalSeoArchitectureBlueprint
+          <LocalSeoArchitectureBlueprint
             badge="// CHICAGO LOCAL SEO & MAP PACK BLUEPRINT"
             title="Entity-Led Local Search: From Citations to Inbound Calls"
             subtitle="Explore how Google Business Profile signals, data aggregator sync, LocalBusiness schema, and review acceleration work together."
@@ -951,11 +970,15 @@ export default function ChicagoSeoPage() {
             <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
               <ModalCTAButton label="Get Your Free Local SEO Audit" region="us" btnVariant="primary-light" />
             </div>
+
+            <p style={{ marginTop: '28px', fontSize: '13.5px', color: '#8E8E9F' }}>
+              Related services: <Link href="/services/local-seo" style={{ color: '#FF5622', textDecoration: 'underline' }}>Local SEO services</Link>, <Link href="/services/seo-audit" style={{ color: '#FF5622', textDecoration: 'underline' }}>technical SEO audits</Link>, <Link href="/austin/seo" style={{ color: '#FF5622', textDecoration: 'underline' }}>Austin SEO agency</Link>, and <Link href="/dallas/seo" style={{ color: '#FF5622', textDecoration: 'underline' }}>Dallas local SEO</Link>.
+            </p>
           </div>
         </section>
       </main>
 
-      <SiteFooter locale="us" />
+      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   );
 }
