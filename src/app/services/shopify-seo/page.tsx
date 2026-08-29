@@ -325,23 +325,34 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
 ];
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   JSON-LD Schema (WebPage + BreadcrumbList + Service + FAQPage + Organization)
+   JSON-LD Schema (WebPage + BreadcrumbList + Service + HowTo + FAQPage + Organization)
 ───────────────────────────────────────────────────────────────────────────── */
+
+const PAGE_MODIFIED = '2026-08-29';
 
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  dateModified: '2026-08-04',
-  name: 'Shopify SEO Agency USA: Rank Your Store & Win AI Citations',
+  '@id': 'https://factoryjet.com/services/shopify-seo#webpage',
+  dateModified: PAGE_MODIFIED,
+  name: 'Shopify SEO Agency USA: Rank Your Store & Win AI Citations | FactoryJet',
   url: 'https://factoryjet.com/services/shopify-seo',
   description:
     'Shopify SEO services for US stores: fix duplicate URLs and canonicals, rank collection and product pages, recover Core Web Vitals, and earn AI citations. Senior-engineer-led, month-to-month.',
   inLanguage: 'en-US',
+  author: {
+    '@type': 'Person',
+    name: 'Bhavesh Barot',
+    url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
+    jobTitle: 'Founder & Chief Technical Architect',
+  },
   isPartOf: {
     '@type': 'WebSite',
+    '@id': 'https://factoryjet.com/#website',
     name: 'FactoryJet',
     url: 'https://factoryjet.com',
   },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
 };
 
 const breadcrumbSchema = {
@@ -369,19 +380,35 @@ const breadcrumbSchema = {
   ],
 };
 
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'Our 5-Step Shopify SEO Process',
+  description: 'How FactoryJet fixes technical debt, optimizes collections, and ranks US Shopify stores.',
+  step: [
+    { '@type': 'HowToStep', position: 1, name: 'Audit', text: 'We crawl your store for duplicate URLs, canonical errors, thin collections, app-injected JS, and query gaps to produce a prioritized 90-day roadmap.' },
+    { '@type': 'HowToStep', position: 2, name: 'Technical fixes', text: 'We resolve duplicate URLs, clean collection architecture, add Product and Breadcrumb schema, and trim app bloat to recover Core Web Vitals.' },
+    { '@type': 'HowToStep', position: 3, name: 'Content', text: 'We write query-matched copy for priority collection and product pages structured for both Google and AI engines.' },
+    { '@type': 'HowToStep', position: 4, name: 'Authority & citations', text: 'We earn links and citations from trusted sources so ChatGPT, Perplexity, and Google AI Overviews cite your store.' },
+    { '@type': 'HowToStep', position: 5, name: 'Measure', text: 'Monthly keyword rankings, organic and AI-referral sessions, indexed-page health, and revenue reporting.' },
+  ],
+};
+
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'Shopify SEO Services',
+  name: 'Shopify SEO Services USA',
   provider: {
-    '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
+    '@type': 'Organization',
+    '@id': 'https://factoryjet.com/#organization',
     name: 'FactoryJet',
     url: 'https://factoryjet.com',
   },
-  areaServed: {
-    '@type': 'Country',
-    name: 'United States',
-  },
+  areaServed: [
+    { '@type': 'Country', name: 'United States' },
+    { '@type': 'Country', name: 'United Kingdom' },
+    { '@type': 'Country', name: 'Australia' },
+  ],
   serviceType: 'Shopify SEO / Ecommerce SEO',
   description:
     'Senior-engineer-led Shopify SEO services for US stores: duplicate-URL and canonical fixes, collection and product page optimization, Core Web Vitals, schema, and AI-citation positioning. Audit + monthly retainer, month-to-month.',
@@ -407,7 +434,6 @@ const serviceSchema = {
       description: 'Custom scope for Shopify Plus, multi-store, or international stores. Pricing on application.',
     },
   ],
-  
 };
 
 const faqSchema = {
@@ -425,7 +451,8 @@ const faqSchema = {
 
 const organizationSchema = {
   '@context': 'https://schema.org',
-  '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
+  '@type': 'Organization',
+  '@id': 'https://factoryjet.com/#organization',
   name: 'FactoryJet',
   url: 'https://factoryjet.com',
   logo: 'https://factoryjet.com/logo.png',
@@ -736,6 +763,11 @@ export default function ShopifySeoServicePage() {
         id="shopify-seo-breadcrumb-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        id="shopify-seo-howto-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
       />
       <script
         id="shopify-seo-service-schema"
