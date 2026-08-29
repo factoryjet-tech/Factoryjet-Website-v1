@@ -10,20 +10,21 @@ import AuthorCard from '@/components/v2/AuthorCard';
 import LocalSeoOpportunityEstimator from '@/components/v2/LocalSeoOpportunityEstimator';
 import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
+import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-24';
+const PAGE_MODIFIED = '2026-08-29';
 const CANONICAL = 'https://factoryjet.com/tampa/seo';
 
 export const metadata: Metadata = {
-  title: 'Tampa Local SEO Agency | Search & AI Visibility | FactoryJet',
+  title: 'Tampa Local SEO Agency | Google Maps 3-Pack | FactoryJet',
   description:
-    'Tampa local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Downtown Tampa, Westshore, and Ybor City.',
+    'Tampa local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Downtown Tampa, Westshore, and Ybor City. Free audit.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Tampa Local SEO Agency | Search & AI Visibility | FactoryJet',
+    title: 'Tampa Local SEO Agency | Google Maps 3-Pack | FactoryJet',
     description:
       'Tampa local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Downtown Tampa, Westshore, and Ybor City.',
     url: CANONICAL,
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Tampa Local SEO Agency | Search & AI Visibility | FactoryJet',
+    title: 'Tampa Local SEO Agency | Google Maps 3-Pack | FactoryJet',
     description: 'Dominate Tampa local search and AI answer engines. Verified Google Maps 3-Pack capture and entity optimization.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -367,7 +368,6 @@ const LOCAL_BUSINESS_SCHEMA = {
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
   telephone: '+1-832-998-8422',
-  priceRange: '$$',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Tampa',
@@ -394,7 +394,7 @@ const SERVICE_SCHEMA = {
   author: {
     '@type': 'Person',
     name: 'Bhavesh Barot',
-    jobTitle: 'Chief Technical Architect',
+    jobTitle: 'Founder & Chief Technical Architect',
     url: 'https://factoryjet.com/about',
     sameAs: [
       'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
@@ -404,32 +404,45 @@ const SERVICE_SCHEMA = {
   name: 'Tampa Local SEO & Google Maps Optimization',
   provider: {
     '@type': 'Organization',
+    '@id': 'https://factoryjet.com/#organization',
     name: 'FactoryJet',
     url: 'https://factoryjet.com',
   },
   serviceType: 'Local SEO, Google Business Profile Management & AI Search Optimization',
   description:
     'Senior engineering-led local search engine optimization, Google Maps 3-Pack capture, structured data graphs, and AI citation engineering for Tampa businesses.',
-  areaServed: { '@type': 'State', name: 'Florida' },
+  areaServed: [
+    { '@type': 'City', name: 'Tampa' },
+    { '@type': 'State', name: 'Florida' },
+    { '@type': 'Country', name: 'United States' },
+  ],
 };
 
 const WEBPAGE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'Tampa Local SEO Agency | Search & AI Visibility | FactoryJet',
+  '@id': 'https://factoryjet.com/tampa/seo#webpage',
+  name: 'Tampa Local SEO Agency | Google Maps 3-Pack | FactoryJet',
   description: 'Tampa local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Downtown Tampa, Westshore, and Ybor City.',
   url: CANONICAL,
   dateModified: PAGE_MODIFIED,
   author: {
     '@type': 'Person',
     name: 'Bhavesh Barot',
-    jobTitle: 'Chief Technical Architect',
+    jobTitle: 'Founder & Chief Technical Architect',
     url: 'https://factoryjet.com/about',
     sameAs: [
       'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
       'https://github.com/factoryjet-tech',
     ],
   },
+  isPartOf: {
+    '@type': 'WebSite',
+    '@id': 'https://factoryjet.com/#website',
+    name: 'FactoryJet',
+    url: 'https://factoryjet.com',
+  },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
 };
 
 const BREADCRUMB_SCHEMA = {
@@ -471,9 +484,16 @@ export default function TampaSeoPage() {
                   Tampa Local SEO Agency for Market Leaders
                 </h1>
 
-                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
+                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 24px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
                   Dominate the Google Maps 3-Pack, organic search rankings, and AI conversational search across Downtown Tampa, Westshore, and South Tampa. Engineered for verified inbound calls and high-ticket consultations.
                 </p>
+
+                {/* Answer-First Brief */}
+                <div style={{ background: '#F6F6F9', borderLeft: '3px solid #FF5622', padding: '14px 18px', borderRadius: '0 12px 12px 0', marginBottom: '28px', maxWidth: '52ch' }}>
+                  <p style={{ fontSize: '13.5px', color: '#141414', lineHeight: 1.55, margin: 0, fontWeight: 500 }}>
+                    <strong style={{ color: '#FF5622' }}>Executive Brief:</strong> FactoryJet delivers senior engineering-led Tampa local SEO services: Google Business Profile optimization, multi-radius geo-grid proximity expansion, 100% NAP citation synchronization across major data aggregators, structured LocalBusiness Schema.org graphs, and high-intent local conversion engineering across Hillsborough County with transparent call tracking and zero locked monthly retainers.
+                  </p>
+                </div>
 
                 <div className="rv-actions">
                   <ModalCTAButton label="Get a Free Local SEO Audit" region="us" btnVariant="primary-dark" modalVariant="seo" />
@@ -938,11 +958,15 @@ export default function TampaSeoPage() {
             <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
               <ModalCTAButton label="Claim Your Free SEO Audit" region="us" btnVariant="primary-light" modalVariant="seo" />
             </div>
+
+            <p style={{ marginTop: '28px', fontSize: '13.5px', color: '#8E8E9F' }}>
+              Related services: <Link href="/tampa/ecommerce-development" style={{ color: '#FF5622', textDecoration: 'underline' }}>Tampa ecommerce development</Link>, <Link href="/tampa/web-design" style={{ color: '#FF5622', textDecoration: 'underline' }}>Tampa web design</Link>, <Link href="/services/local-seo" style={{ color: '#FF5622', textDecoration: 'underline' }}>Local SEO services</Link>, and <Link href="/services/seo-audit" style={{ color: '#FF5622', textDecoration: 'underline' }}>technical SEO audits</Link>.
+            </p>
           </div>
         </section>
       </main>
 
-      <SiteFooter locale="us" />
+      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   );
 }

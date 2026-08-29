@@ -10,15 +10,16 @@ import AuthorCard from '@/components/v2/AuthorCard';
 import WebDesignValueCalculator from '@/components/v2/WebDesignValueCalculator';
 import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import WebDesignCityLinksUS from '@/components/v2/WebDesignCityLinksUS';
+import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-24';
+const PAGE_MODIFIED = '2026-08-29';
 const CANONICAL = 'https://factoryjet.com/austin/web-design';
 
 export const metadata: Metadata = {
   title: 'Austin Web Design Agency | Fast Next.js Sites | FactoryJet',
   description:
-    'Austin web design agency. Custom Next.js websites, sub-second load speeds, mobile conversion flows, and full code ownership for Texas businesses.',
+    'Austin web design agency. Custom Next.js websites, sub-second load speeds, mobile conversion flows, and full code ownership for Texas businesses. Free quote.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
@@ -367,7 +368,6 @@ const LOCAL_BUSINESS_SCHEMA = {
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
   telephone: '+1-832-998-8422',
-  priceRange: '$$',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Austin',
@@ -394,7 +394,7 @@ const SERVICE_SCHEMA = {
   author: {
     '@type': 'Person',
     name: 'Bhavesh Barot',
-    jobTitle: 'Chief Technical Architect',
+    jobTitle: 'Founder & Chief Technical Architect',
     url: 'https://factoryjet.com/about',
     sameAs: [
       'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
@@ -404,18 +404,24 @@ const SERVICE_SCHEMA = {
   name: 'Austin Web Design & Next.js Development',
   provider: {
     '@type': 'Organization',
+    '@id': 'https://factoryjet.com/#organization',
     name: 'FactoryJet',
     url: 'https://factoryjet.com',
   },
   serviceType: 'Web Design, Frontend Engineering & Conversion Optimization',
   description:
     'Senior engineering-led custom Next.js web design, sub-second page performance, mobile conversion optimization, and full IP ownership for Austin businesses.',
-  areaServed: { '@type': 'State', name: 'Texas' },
+  areaServed: [
+    { '@type': 'City', name: 'Austin' },
+    { '@type': 'State', name: 'Texas' },
+    { '@type': 'Country', name: 'United States' },
+  ],
 };
 
 const WEBPAGE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/austin/web-design#webpage',
   name: 'Austin Web Design Agency | Fast Next.js Sites | FactoryJet',
   description: 'Custom Next.js websites, sub-second load speeds, and full code ownership for Austin TX businesses.',
   url: CANONICAL,
@@ -423,13 +429,20 @@ const WEBPAGE_SCHEMA = {
   author: {
     '@type': 'Person',
     name: 'Bhavesh Barot',
-    jobTitle: 'Chief Technical Architect',
+    jobTitle: 'Founder & Chief Technical Architect',
     url: 'https://factoryjet.com/about',
     sameAs: [
       'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
       'https://github.com/factoryjet-tech',
     ],
   },
+  isPartOf: {
+    '@type': 'WebSite',
+    '@id': 'https://factoryjet.com/#website',
+    name: 'FactoryJet',
+    url: 'https://factoryjet.com',
+  },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
 };
 
 const BREADCRUMB_SCHEMA = {
@@ -471,9 +484,16 @@ export default function AustinWebDesignPage() {
                   Austin Web Design Agency for Growing Brands
                 </h1>
 
-                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
+                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 24px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
                   Turn website visitors into paying clients with custom Next.js architecture, sub-second load speeds, and mobile conversion flows. 7-day delivery with 100% full IP code ownership.
                 </p>
+
+                {/* Answer-First Brief */}
+                <div style={{ background: '#F6F6F9', borderLeft: '3px solid #FF5622', padding: '14px 18px', borderRadius: '0 12px 12px 0', marginBottom: '28px', maxWidth: '52ch' }}>
+                  <p style={{ fontSize: '13.5px', color: '#141414', lineHeight: 1.55, margin: 0, fontWeight: 500 }}>
+                    <strong style={{ color: '#FF5622' }}>Executive Brief:</strong> FactoryJet engineers custom, type-safe Next.js websites for Austin businesses: sub-second mobile page loads, high-converting Figma UX wireframes, structured Schema.org entity graphs, dedicated 7-day sprint delivery, and 100% full intellectual property code ownership with zero monthly vendor lock-in.
+                  </p>
+                </div>
 
                 <div className="rv-actions">
                   <ModalCTAButton label="Get a Fixed-Price Quote" region="us" btnVariant="primary-dark" />
@@ -938,11 +958,15 @@ export default function AustinWebDesignPage() {
             <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
               <ModalCTAButton label="Get Your Fixed-Price Quote" region="us" btnVariant="primary-light" />
             </div>
+
+            <p style={{ marginTop: '28px', fontSize: '13.5px', color: '#8E8E9F' }}>
+              Related services: <Link href="/austin/seo" style={{ color: '#FF5622', textDecoration: 'underline' }}>Austin SEO agency</Link>, <Link href="/austin/ecommerce-development" style={{ color: '#FF5622', textDecoration: 'underline' }}>Austin ecommerce development</Link>, <Link href="/services/web-design" style={{ color: '#FF5622', textDecoration: 'underline' }}>Web design services</Link>, and <Link href="/services/ai-agent-development" style={{ color: '#FF5622', textDecoration: 'underline' }}>AI agent development</Link>.
+            </p>
           </div>
         </section>
       </main>
 
-      <SiteFooter locale="us" />
+      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   );
 }
