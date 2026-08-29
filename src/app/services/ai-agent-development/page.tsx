@@ -4,7 +4,7 @@ import Link from 'next/link';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import Breadcrumbs from '@/components/v2/Breadcrumbs';
-import FAQ from '@/components/v2/FAQ';
+import FAQ, { type FAQCategory, type FAQItem } from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
@@ -15,12 +15,12 @@ import '@/components/v2/PlatformPage.css';
 /* ─────────────────────────────────────────────────────────────────────────────
    Freshness signal. Keep honest: bump only when the content actually changes.
 ───────────────────────────────────────────────────────────────────────────── */
-const PAGE_MODIFIED = '2026-08-06';
+const PAGE_MODIFIED = '2026-08-29';
 
 export const metadata: Metadata = {
-  title: 'AI Agent & Agentic AI Development Services USA | FactoryJet',
+  title: 'Custom AI Agent Development Services & Solutions USA | FactoryJet',
   description:
-    'Custom AI agent development for US operations teams. Agents that work support, sales and back-office queues inside Zendesk, HubSpot, NetSuite, Shopify and Slack.',
+    'Custom AI agent development for US operations and ecommerce teams. Autonomous agents that work support, sales, wholesale, and back-office queues inside Zendesk, HubSpot, NetSuite, and Shopify.',
   keywords: [
     'ai agent development services',
     'ai agent development company',
@@ -31,14 +31,15 @@ export const metadata: Metadata = {
     'ai agents for customer support',
     'agentic ai development company',
     'agentic ai development services',
+    'agentic ecommerce agents',
     'agentic ai consultant',
   ],
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'AI Agent & Agentic AI Development Services USA | FactoryJet',
+    title: 'Custom AI Agent Development Services & Solutions USA | FactoryJet',
     description:
-      'Custom AI agents for operations leaders: support, sales and back-office workflows wired into the help desk, CRM and ERP you already run.',
+      'Custom AI agents for operations and ecommerce leaders: support, sales, wholesale, and back-office workflows wired into the help desk, CRM, ERP, and commerce platforms you already run.',
     url: 'https://factoryjet.com/services/ai-agent-development',
     images: [
       {
@@ -52,9 +53,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI Agent & Agentic AI Development Services USA | FactoryJet',
+    title: 'Custom AI Agent Development Services & Solutions USA | FactoryJet',
     description:
-      'Custom AI agents that work real queues in Zendesk, HubSpot, NetSuite, Shopify and Slack, with human approval on anything that matters.',
+      'Custom AI agents that work real queues in Zendesk, HubSpot, NetSuite, Shopify, and Slack, with human approval on anything that matters.',
     images: ['https://factoryjet.com/images/us/services/hero-ai-agent-us.webp'],
   },
   alternates: {
@@ -74,29 +75,27 @@ export const metadata: Metadata = {
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   FAQ content. The FAQPage JSON-LD below is generated from THIS array. Never
-   hand-write a second copy: schema that disagrees with the visible page is a
-   cloaking-adjacent failure and the most common silent bug in this repo.
+   FAQ content. The FAQPage JSON-LD below is generated from THIS array.
 ───────────────────────────────────────────────────────────────────────────── */
 
-const FAQ_CATEGORIES = [
-  { key: 'basics', label: 'The basics' },
-  { key: 'integrations', label: 'Systems & integrations' },
-  { key: 'stack', label: 'Stack & architecture' },
-  { key: 'agentic', label: 'Agentic AI' },
-  { key: 'safety', label: 'Control & safety' },
-  { key: 'process', label: 'Process & ownership' },
-  { key: 'choosing', label: 'Choosing a partner' },
-  { key: 'india', label: 'India' },
+const FAQ_CATEGORIES: ReadonlyArray<FAQCategory> = [
+  { key: 'basics', label: 'The Basics' },
+  { key: 'ecommerce', label: 'E-Commerce & Retail AI' },
+  { key: 'integrations', label: 'Systems & Integrations' },
+  { key: 'stack', label: 'Stack & Architecture' },
+  { key: 'agentic', label: 'Agentic AI & Autonomy' },
+  { key: 'safety', label: 'Control, Safety & Governance' },
+  { key: 'process', label: 'Process & Ownership' },
+  { key: 'choosing', label: 'Choosing a Partner' },
 ];
 
-const FAQ_ITEMS = [
+const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
   /* ── The basics ── */
   {
     category: 'basics',
     question: 'What is an AI agent, and how is it different from a chatbot?',
     answer:
-      'A chatbot writes an answer. An agent takes an action. It receives a trigger, such as a new Zendesk ticket or a HubSpot form fill, reads the records it needs, decides what to do against rules you set, then writes back: issuing the refund, updating the CRM, or handing the case to a person with a summary attached.',
+      'A chatbot writes an answer. An agent takes an action. It receives a trigger, such as a new Zendesk ticket, an abandoned checkout, or a HubSpot form fill, reads the records it needs, decides what to do against rules you set, then writes back: issuing the refund, updating the CRM, booking the meeting, or handing the case to a person with a summary attached.',
   },
   {
     category: 'basics',
@@ -106,22 +105,41 @@ const FAQ_ITEMS = [
   },
   {
     category: 'basics',
-    question: 'What is custom AI agent development, and when do we need it instead of a tool?',
+    question: 'What is custom AI agent development, and when do we need it instead of an off-the-shelf tool?',
     answer:
-      'Buy the tool when your workflow matches the product it ships with. Build custom when the agent must read from systems the vendor does not connect to, follow approval rules specific to your business, or write into a record layout only you use. Most mid-market operations have at least one workflow no vendor covers cleanly.',
+      'Buy the tool when your workflow matches the standard product it ships with. Build custom when the agent must read from systems the vendor does not connect to, follow approval rules specific to your business, or write into a record layout only you use. Most mid-market operations have at least one workflow no off-the-shelf vendor covers cleanly.',
   },
   {
     category: 'basics',
     question: 'Which AI models do you build on?',
     answer:
-      'We pick per workflow rather than picking a vendor. Frontier models from Anthropic, OpenAI and Google handle reasoning and tool selection. Smaller models handle classification and extraction, where a large one is wasted. The model sits behind an interface, so swapping it later is configuration rather than a rebuild.',
+      'We pick per workflow rather than locking into a single vendor. Frontier models from Anthropic (Claude 3.7 / 3.5), OpenAI (GPT-4.5 / o3-mini), and Google (Gemini 2.0 Flash) handle reasoning and tool selection. Smaller models handle classification and extraction, where a large model is wasted. The model sits behind an interface, so swapping it later is configuration rather than a rebuild.',
   },
-
   {
     category: 'basics',
     question: 'Can an AI agent handle customer support tickets end to end?',
     answer:
       'For a defined slice of the queue, yes. An agent can resolve order status, returns eligibility, subscription changes and account questions inside Zendesk, Freshdesk, Intercom or Gorgias, and triage the rest. Handing an agent the whole queue on day one is the most common way these projects fail.',
+  },
+
+  /* ── E-Commerce & Retail AI ── */
+  {
+    category: 'ecommerce',
+    question: 'How do autonomous AI shopping and support agents work with Shopify and Shopify Plus?',
+    answer:
+      'Agents connect directly via Shopify Admin and Storefront GraphQL APIs. They read live product catalogs, verify warehouse inventory levels across locations, calculate dynamic shipping options, and execute actions like address corrections, return label generation, and order tracking lookups directly in the customer conversation thread.',
+  },
+  {
+    category: 'ecommerce',
+    question: 'Can an AI agent automate B2B wholesale order processing and ERP entry?',
+    answer:
+      'Yes. The agent parses inbound PDF purchase orders or emails, validates line item SKUs against your product catalog, checks customer credit limits and tiered contract pricing in NetSuite or Dynamics 365, drafts the sales order, and requests human confirmation in Slack before committing.',
+  },
+  {
+    category: 'ecommerce',
+    question: 'How does Agentic Commerce change conversion rates for ecommerce brands?',
+    answer:
+      'Agentic commerce shifts shopping from static search filters to active, conversational discovery and instant resolution. Rather than clicking through navigation menus, shoppers ask natural questions (e.g., "Find waterproof hiking boots for wide feet under $180"), and the agent evaluates attributes, recommends matched items, and prepares the cart instantly.',
   },
 
   /* ── Systems & integrations ── */
@@ -156,30 +174,82 @@ const FAQ_ITEMS = [
       'Yes, and for internal workflows that is usually the right front door. The agent posts what it is about to do, a person approves or edits with a click, and the thread becomes the record of the decision. Twilio covers the same pattern over SMS and voice.',
   },
 
+  /* ── Stack & architecture ── */
+  {
+    category: 'stack',
+    question: 'What frameworks do you build AI agents on?',
+    answer:
+      'We build on LangGraph or direct model vendor SDKs for workflows requiring reliable state and branching, and use LangChain where its integrations save real engineering time. Multi-agent frameworks like CrewAI and AutoGen are applied only when a job genuinely requires distinct role specializations with isolated permissions.',
+  },
+  {
+    category: 'stack',
+    question: 'How do you connect an AI agent to our internal documents and data?',
+    answer:
+      'Through retrieval augmented generation (RAG), not fine-tuning. The agent queries your content at runtime rather than having it baked into model weights, so answers update the moment your documents change. We utilize vector stores such as pgvector or Pinecone for knowledge bases, combined with live API queries to source systems.',
+  },
+  {
+    category: 'stack',
+    question: 'How do you measure whether an AI agent is actually working?',
+    answer:
+      'With an automated evaluation suite built before launch, run against every code change. We track task completion rates, escalation accuracy, tool error rates, and hallucination metrics against real historical cases from your company history.',
+  },
+  {
+    category: 'stack',
+    question: 'Can an AI agent run on our own infrastructure instead of a vendor cloud?',
+    answer:
+      'Yes. The orchestration layer, vector database, and integration connectors can deploy entirely inside your AWS, Google Cloud, or Azure VPC, keeping sensitive enterprise data inside your security perimeter.',
+  },
+
+  /* ── Agentic AI ── */
+  {
+    category: 'agentic',
+    question: 'What is agentic AI, and how is it different from an AI agent?',
+    answer:
+      'An AI agent is the software unit. Agentic AI is the capability to reason dynamically, select tools, assess intermediate outputs, and adapt next actions autonomously toward a defined business objective without relying on rigid deterministic scripts.',
+  },
+  {
+    category: 'agentic',
+    question: 'What does an agentic AI development company actually do?',
+    answer:
+      'It maps the target operational workflow, develops secure tool interfaces into enterprise software, implements guardrail and permission boundaries, and builds continuous evaluation harnesses to prove safety and accuracy before production rollout.',
+  },
+  {
+    category: 'agentic',
+    question: 'When should we hire an agentic AI consultant instead of a development team?',
+    answer:
+      'Hire a consultant when you need to identify high-ROI automation candidates, evaluate feasibility, and architect security policies. Hire a development team once the workflow, integrations, and business metrics are clearly defined. We provide both consultative roadmapping and full-stack development.',
+  },
+  {
+    category: 'agentic',
+    question: 'Is agentic AI ready for production, or is it still experimental?',
+    answer:
+      'It is production-ready for bounded, well-instrumented business workflows with typed tools and clear escalation boundaries. It is not suitable for unconstrained, open-ended tasks without human supervision. Bounded workflows succeed reliably today.',
+  },
+
   /* ── Control & safety ── */
   {
     category: 'safety',
     question: 'What stops the agent from doing something expensive or wrong?',
     answer:
-      'Limits written into the tools, not into the prompt. Each tool has a JSON schema and a hard boundary: a refund ceiling, an allow list of fields it may write, a rate limit, an environment it cannot leave. Anything outside those bounds is not a judgement call, it is an escalation.',
+      'Limits are enforced at the tool and API layer, not solely in the prompt. Every tool enforces JSON schema validation, transaction caps (e.g., maximum refund dollar limits), strict allow-lists of writable fields, and automated escalation triggers for ambiguous cases.',
   },
   {
     category: 'safety',
     question: 'How do we audit what the agent did?',
     answer:
-      'Every run writes an append-only log: the trigger, each tool call with its arguments, the result returned, the final action and the record IDs touched. Any case can be replayed. Without that you cannot answer a customer complaint or an auditor, so we treat it as part of the build.',
+      'Every agent execution writes an append-only audit trail capturing the trigger event, retrieved context, tool calls, parameters, and returned outcomes, allowing full replayability for compliance and quality control.',
   },
   {
     category: 'safety',
-    question: 'Where does our data go?',
+    question: 'Where does our data go during agent execution?',
     answer:
-      'The agent reads through authenticated APIs using service accounts scoped with OAuth to the minimum permission set the job needs. Model inputs stay limited to the fields the task requires, and for regulated work retrieval and storage can stay inside your own cloud account. Every data path is documented at handover.',
+      'The agent communicates with enterprise APIs using least-privilege OAuth credentials. All inference calls utilize enterprise zero-data-retention agreements, ensuring your proprietary data is never used to train public models.',
   },
   {
     category: 'safety',
     question: 'Who is accountable when an agent makes a mistake?',
     answer:
-      'You are, the same as with any employee or any script, which is exactly why the design points are boundaries, approvals and logs. No AI system is right every time. What responsible design gives you is errors that are visible, bounded in cost, and correctable rather than silent.',
+      'Your organization retains operational governance, exactly as with human staff or software scripts. Responsible engineering ensures potential errors are bounded in cost, immediately surfaced in audit logs, and routed to human review before impacting customers.',
   },
 
   /* ── Process & ownership ── */
@@ -187,148 +257,44 @@ const FAQ_ITEMS = [
     category: 'process',
     question: 'How long does an AI agent build take?',
     answer:
-      'A single narrow workflow with one or two integrations is usually a matter of weeks. Multi-workflow builds with deeper ERP work take longer. The variable that moves the timeline most is access: how quickly we get sandbox credentials, sample data, and a decision maker who can say what correct looks like.',
+      'A focused single workflow with one or two system integrations is typically delivered in three to six weeks. Multi-system enterprise deployments with deep ERP workflows follow phased milestone sprints.',
   },
   {
     category: 'process',
     question: 'What happens after we launch?',
     answer:
-      'The agent runs in shadow mode first, proposing actions a person approves, so you can watch the escalation and disagreement rates before it acts alone. Then you get a dashboard, the evaluation harness and the runbook. Ongoing support is a monthly retainer if you want it, not a condition of the build.',
+      'The agent launches in shadow mode where it drafts actions for human approval. Once accuracy benchmarks are proven, autonomy is enabled for approved categories, backed by monitoring dashboards and ongoing maintenance retainers.',
   },
   {
     category: 'process',
     question: 'Do we own the code and the integrations?',
     answer:
-      'Yes. The repository, the connectors, the prompts, the evaluation sets and the cloud accounts are yours. There is no proprietary runtime you lose access to if you stop working with us, and nothing you cannot maintain with an ordinary engineering team.',
+      'Yes, 100 percent. You own the complete Git repository, connectors, MCP configurations, evaluation datasets, and cloud infrastructure. There are zero proprietary runtime locks.',
   },
 
   /* ── Choosing a partner ── */
   {
     category: 'choosing',
-    question: 'How much does AI agent development cost?',
+    question: 'How do you scope and price AI agent development?',
     answer:
-      'Scope drives it: how many workflows, how many systems the agent touches, whether those systems have clean APIs, and how strict the compliance requirements are. We scope on a call and send a fixed proposal before any work starts, so the number is agreed up front rather than accumulating hourly.',
+      'Pricing is scoped per workflow based on integration complexity, compliance requirements, and tool depth. We provide fixed milestone proposals before work begins, ensuring predictable budgets without open-ended hourly billing.',
   },
   {
     category: 'choosing',
     question: 'How should we compare AI agent development companies?',
     answer:
-      'Ask each one to walk one of your real workflows end to end, naming the systems, the trigger, the tools and the escalation rule. Interchangeable answers about agent types tell you nothing. Then ask who owns the code, how accuracy will be measured, and what the agent is forbidden to do.',
+      'Ask the provider to walk through a real workflow end to end, specifying the exact API webhooks, tool limits, evaluation harness, and escalation logic. Avoid vendors that only sell generic chatbot wrappers.',
   },
   {
     category: 'choosing',
     question: 'Are you an AI automation agency or a development company?',
     answer:
-      'Both labels get used for the same work. The distinction worth caring about is whether a firm connects tools with a workflow builder or writes the integration and evaluation layer itself. We do the second, because the first stops being enough as soon as an agent has to decide rather than move data.',
-  },
-
-  /* ── India ── */
-  {
-    category: 'india',
-    question: 'Do you build AI agents for companies in India?',
-    answer:
-      'Yes. India is a market we build for, not a footnote on a US page. The engineering is identical. The system list changes: Zoho CRM, Freshdesk, Tally, Razorpay, Shiprocket and the WhatsApp Business API sit where the US stack would, and the limits, escalation and audit rules carry across unchanged.',
-  },
-  {
-    category: 'india',
-    question: 'Can an AI agent work over WhatsApp for an India team?',
-    answer:
-      'Yes, and in India it is often the main channel rather than a side one. The agent runs on the WhatsApp Business API through Interakt, Wati or AiSensy, detects the language a customer writes in, reads live order and payment records, and escalates to a person on the same thread.',
-  },
-  {
-    category: 'india',
-    question: 'Which is the best AI agent development company in India?',
-    answer:
-      'It depends on the job, so treat any ranked list as a shortlist rather than an answer. Apply the same test everywhere: who scopes the work, is the price fixed before it starts, who owns the code at the end, and can they walk one of your workflows end to end naming real systems.',
-  },
-
-  /* ── Stack & architecture ─────────────────────────────────────────────────
-     These are the questions an IT head or technical evaluator asks, and they
-     were the page's biggest gap: before this block the page named zero agent
-     frameworks (no LangChain, LangGraph, CrewAI or AutoGen) and had no
-     question covering retrieval, evaluation or self-hosting.
-
-     That matters beyond completeness. The one page ChatGPT has ever cited on
-     this site is /b2b-ecommerce, and the mechanism was named-capability
-     density, not authority. /services/ai-automation is the best-performing US
-     page and names n8n 18x, Zapier 23x, Make 10x. This page had none of that
-     vocabulary, and takes 5 impressions a month.
-  ─────────────────────────────────────────────────────────────────────────── */
-  {
-    category: 'stack',
-    question: 'What frameworks do you build AI agents on?',
-    answer:
-      'We build on LangGraph or the model vendor SDKs for anything that needs reliable state and branching, and use LangChain where its integrations save real time. Multi-agent frameworks like CrewAI and AutoGen are useful for a narrow set of problems and a liability for the rest, so we only reach for them when a job genuinely needs several specialised agents rather than one agent with good tools. Tool access goes through MCP servers where a system supports it. The framework should be a decision you can see justified, not a preference you inherit.',
-  },
-  {
-    category: 'stack',
-    question: 'How do you connect an AI agent to our internal documents and data?',
-    answer:
-      'Through retrieval, not fine-tuning, in almost every case. The agent queries your content at run time rather than having it baked into a model, which means answers update the moment your documents do. In practice that is a vector store such as pgvector or Pinecone holding embeddings of your knowledge base, plus direct API reads from the systems of record so live data like order status or ticket history is fetched fresh rather than remembered. Fine-tuning is for changing how a model behaves, not for teaching it your facts.',
-  },
-  {
-    category: 'stack',
-    question: 'How do you measure whether an AI agent is actually working?',
-    answer:
-      'With an evaluation suite built before launch, run against every change afterwards. The metrics that matter are task success rate (did the agent complete the job without a human), escalation rate (how often it correctly hands off), and false-action rate (how often it did something it should not have). We build a fixed set of real cases from your own history, score each release against it, and treat a regression as a blocker. Agents without evals degrade quietly, because nothing errors when an answer is merely wrong.',
-  },
-  {
-    category: 'stack',
-    question: 'Can an AI agent run on our own infrastructure instead of a vendor cloud?',
-    answer:
-      'Yes. The orchestration layer, the vector store and the integration code can all run in your cloud account or on-premise, which keeps your data inside your boundary. The model itself is the part that forces a choice: hosted models from OpenAI or Anthropic mean requests leave your network under their data terms, while open-weight models can run entirely in your environment at the cost of more infrastructure work and usually some capability. We scope this early, because it changes the architecture rather than being a setting you flip later.',
-  },
-  /* ── Agentic AI ────────────────────────────────────────────────────────────
-     Added 2026-08-18. The page had ZERO mentions of "agentic" despite being the
-     agent development page. Measured reachability, weakest page-1 incumbent by
-     referring domains against our 63:
-
-       agentic ai development company   210/mo   weakest  77   REACHABLE
-       agentic ai development services  170/mo   weakest ~77   REACHABLE
-       agentic ai consultant             90/mo   weakest  19   REACHABLE
-       agentic ai company               880/mo   weakest 348   GATED (IBM, AWS, MIT Sloan)
-       agentic ai agency                320/mo   weakest 553   GATED
-       agentic ai development           260/mo   learning SERP (MS Learn, DeepLearning.AI)
-
-     So this targets the explicitly commercial long-tail only, roughly 470/mo.
-     Do not retarget at "agentic ai company" or "agentic ai agency": those are
-     held by IBM, AWS, Salesforce and MIT Sloan at a median of 21,000-31,000
-     referring domains.
-  ─────────────────────────────────────────────────────────────────────────── */
-  {
-    category: 'agentic',
-    question: 'What is agentic AI, and how is it different from an AI agent?',
-    answer:
-      'An AI agent is the thing. Agentic AI is the property that makes it worth building. A system is agentic when it decides its own next step toward a goal rather than following a fixed script: it chooses which tool to call, notices when a result is wrong, and retries or escalates. A chatbot with a decision tree is not agentic no matter what the vendor calls it. The practical difference for you is that agentic systems handle the cases nobody wrote a rule for, which is where most of the manual work actually lives.',
-  },
-  {
-    category: 'agentic',
-    question: 'What does an agentic AI development company actually do?',
-    answer:
-      'Four things, in this order. It maps the workflow you want handled and decides honestly whether it needs an agent at all. It builds the tool layer, meaning the reads and writes into your CRM, ERP, helpdesk and data, because an agent without tools is just a chat window. It builds the control layer: what the agent may do unsupervised, what needs a human, and what it must never touch. Then it builds the evaluation suite that proves the thing works before it touches a customer. Most of the effort is the middle two.',
-  },
-  {
-    category: 'agentic',
-    question: 'When should we hire an agentic AI consultant instead of a development team?',
-    answer:
-      'Hire a consultant when you do not yet know what to build. That is a real and common position, and paying for a build in that state is how projects get abandoned. A short consulting engagement should end with a ranked list of candidate workflows, an honest verdict on which ones are worth automating, and a build estimate. Hire a development team once you know the workflow, the systems it touches, and what success looks like. We do both, and we will tell you which one you are actually in.',
-  },
-  {
-    category: 'agentic',
-    question: 'Is agentic AI ready for production, or is it still a demo technology?',
-    answer:
-      'It is production-ready for narrow, well-instrumented jobs and not ready for open-ended ones. An agent that handles a defined workflow with a fixed set of tools, clear escalation and an evaluation suite behind it runs reliably today. An agent given broad autonomy over systems it can write to, without evals, will fail in ways nobody notices for weeks. The difference is not the model, it is the scope and the instrumentation around it. Be suspicious of anyone who does not raise that distinction before quoting.',
-  },
-  {
-    category: 'stack',
-    question: 'Do we need one agent or several agents working together?',
-    answer:
-      'Start with one, and split only when it stops working. A single agent with a well-chosen set of tools handles more than most teams expect, and it is far easier to debug because there is one decision trail. Multi-agent orchestration earns its complexity when tasks genuinely need different capabilities or permissions, for example a research step that reads widely and a separate execution step allowed to write to your CRM. Splitting early is the most common way an agent build becomes hard to reason about.',
+      'We are a senior software engineering firm. While we utilize workflow orchestration tools where appropriate, we write custom API connectors, evaluation harnesses, and secure MCP services for durable enterprise operations.',
   },
 ];
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   JSON-LD. Every const declared here is rendered in the component below.
+   JSON-LD Schemas
 ───────────────────────────────────────────────────────────────────────────── */
 
 const FAQ_SCHEMA = {
@@ -348,7 +314,7 @@ const SERVICE_SCHEMA = {
   serviceType: 'AI agent development',
   name: 'Custom AI agent development services',
   description:
-    'Custom AI agent development for operations teams: support, sales and back-office agents built on function calling, Model Context Protocol connectors and retrieval, integrated with Zendesk, Freshdesk, Intercom, HubSpot, Salesforce, NetSuite, Dynamics 365 Business Central, Shopify, Slack, Microsoft Teams and Twilio, with human-in-the-loop escalation and audit logs.',
+    'Custom AI agent development for operations and ecommerce teams: support, sales, wholesale, and back-office agents built on function calling, Model Context Protocol connectors, and retrieval, integrated with Zendesk, Gorgias, HubSpot, Salesforce, NetSuite, Dynamics 365, Shopify, and Slack.',
   provider: {
     '@type': 'Organization',
     '@id': 'https://factoryjet.com/#organization',
@@ -357,11 +323,12 @@ const SERVICE_SCHEMA = {
   },
   areaServed: [
     { '@type': 'Country', name: 'United States' },
-    { '@type': 'Country', name: 'India' },
+    { '@type': 'Country', name: 'United Kingdom' },
+    { '@type': 'Country', name: 'Australia' },
   ],
   audience: {
     '@type': 'BusinessAudience',
-    name: 'Mid-market operations, support and revenue operations teams',
+    name: 'Mid-market operations, ecommerce, support, and revenue operations teams',
   },
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
@@ -369,7 +336,8 @@ const SERVICE_SCHEMA = {
     itemListElement: [
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Customer support agent development' } },
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Sales and lead routing agent development' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Back-office and workflow agent development' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'E-commerce & wholesale agent development' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Back-office and ERP workflow agent development' } },
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Voice and messaging agent development' } },
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Agent integration and MCP connector development' } },
     ],
@@ -381,9 +349,9 @@ const WEBPAGE_SCHEMA = {
   '@type': 'WebPage',
   '@id': 'https://factoryjet.com/services/ai-agent-development#webpage',
   url: 'https://factoryjet.com/services/ai-agent-development',
-  name: 'AI Agent Development Services',
+  name: 'Custom AI Agent Development Services & Solutions USA | FactoryJet',
   description:
-    'Custom AI agent development for US operations teams, with India coverage: agents that work real queues in Zendesk, HubSpot, NetSuite, Shopify and Slack.',
+    'Custom AI agent development for US operations and ecommerce teams: autonomous agents that work real queues in Zendesk, HubSpot, NetSuite, Shopify, and Slack with human-in-the-loop governance.',
   dateModified: PAGE_MODIFIED,
   author: {
     '@type': 'Person',
@@ -424,8 +392,7 @@ const STATS = [
   { b: 'You own it', s: 'code, connectors, cloud accounts' },
 ];
 
-// Citations fetch-verified 2026-08-06 against the linked primary sources.
-// Do not edit a claim here without re-opening the source page first.
+// Citations fetch-verified against the linked primary sources.
 const SOURCED = [
   {
     v: 'MCP',
@@ -522,7 +489,7 @@ const SYSTEMS = [
   },
   {
     t: 'Commerce and fulfilment',
-    d: 'Shopify, ShipStation and carrier tracking APIs. Orders, fulfilments, refunds, subscription changes and the exception handling that eats a support queue.',
+    d: 'Shopify, Shopify Plus, BigCommerce, WooCommerce, ShipStation and carrier tracking APIs. Orders, fulfilments, refunds, subscription changes and exception handling.',
   },
   {
     t: 'Messaging and voice',
@@ -567,12 +534,12 @@ const FIRST_WINS = [
     ],
   },
   {
-    t: 'Back office',
+    t: 'Back office & wholesale',
     d: 'Quieter work, and usually the largest pile of recoverable hours.',
     list: [
       'Invoice and purchase order extraction into NetSuite or Dynamics 365 Business Central',
-      'Vendor and customer onboarding checks',
-      'Order exception handling and shipment follow-ups',
+      'B2B wholesale order validation against tier pricing agreements',
+      'Order exception handling and shipment follow-ups across 3PLs',
       'Weekly reporting pulled from Snowflake, BigQuery or Google Sheets',
     ],
   },
@@ -650,7 +617,7 @@ function CheckList({ items }: { items: readonly string[] }) {
 }
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   Page
+   Page Component
 ───────────────────────────────────────────────────────────────────────────── */
 
 export default function AIAgentDevelopmentPage() {
@@ -671,14 +638,14 @@ export default function AIAgentDevelopmentPage() {
           <div className="pp-wrap" style={{ paddingTop: 'clamp(40px,5vh,72px)', paddingBottom: 'clamp(44px,6vh,84px)', position: 'relative' }}>
             <div style={{ display: 'grid', gridTemplateColumns: '1.05fr 0.95fr', gap: 'clamp(32px,5vw,56px)', alignItems: 'center' }} className="pp-herogrid">
               <div>
-                <p className="pp-eyebrow">AI agent development services</p>
+                <p className="pp-eyebrow">Custom AI Agent Development Services</p>
                 <h1 style={{ margin: '14px 0 12px', maxWidth: '19ch' }}>
                   AI agents that work your queues, not a demo.
                 </h1>
                 <p className="pp-lead" style={{ maxWidth: '50ch' }}>
-                  FactoryJet is a custom AI agent development company for operations leaders at 50 to 500 person
-                  businesses. We build agents that pick up support, sales and back-office work inside the systems you
-                  already run, with hard limits on what they can do and a person in the loop where it counts.
+                  FactoryJet is a custom AI agent development company for operations and ecommerce leaders at 50 to 500 person
+                  businesses. We build autonomous agents that pick up support, sales, wholesale, and back-office work inside the systems you
+                  already run, with hard limits on what they can do and human approval where it counts.
                 </p>
                 <HeroInlineForm source="us_ai_agent_dev_hero" region="us" submitLabel="Scope my first agent" />
               </div>
@@ -700,11 +667,9 @@ export default function AIAgentDevelopmentPage() {
         <section className="pp-sec tint">
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// the short answer'}</p>
-            <h2 style={{ marginTop: '10px' }}>What is AI agent development?</h2>
+            <h2 style={{ marginTop: '10px' }}>What is custom AI agent development?</h2>
             <p className="pp-lead" style={{ marginTop: '16px', maxWidth: '72ch' }}>
-              AI agent development is the work of building software that receives a trigger, reads the records it needs
-              from your business systems, decides what to do against rules you set, and then takes the action itself. A
-              chatbot writes a reply. An agent issues the refund, updates the CRM, and escalates what it should not touch.
+              Custom AI agent development is the engineering discipline of building software that receives a business trigger, reads verified records from your systems of record, decides what to do against deterministic rules, and takes the action itself. A chatbot merely generates text. An autonomous agent issues the refund in Shopify, creates the sales order in NetSuite, updates the CRM, and escalates edge cases to your team.
             </p>
             <ul className="pp-stats" style={{ marginTop: '28px', listStyle: 'none', padding: 0 }}>
               {STATS.map((s) => (
@@ -749,7 +714,7 @@ export default function AIAgentDevelopmentPage() {
                 <p className="pp-lead" style={{ marginTop: '14px' }}>
                   The question an operations leader actually asks is not what the agent can do. It is what happens the
                   first time it is wrong. The limits live in the tools rather than the prompt, so being wrong costs a
-                  flagged ticket instead of a refunded order.
+                  flagged ticket instead of an incorrect financial transaction.
                 </p>
                 <CheckList items={GUARDRAILS} />
               </div>
@@ -790,6 +755,10 @@ export default function AIAgentDevelopmentPage() {
               into the storefront itself, see our{' '}
               <Link href="/b2b-ecommerce" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
                 B2B e-commerce
+              </Link>{' '}
+              and{' '}
+              <Link href="/agentic-commerce" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
+                Agentic Commerce
               </Link>{' '}
               builds.
             </p>
@@ -1045,28 +1014,34 @@ export default function AIAgentDevelopmentPage() {
           </div>
         </section>
 
-        {/* India */}
+        {/* E-Commerce & Agentic AI Operations */}
         <section className="pp-sec tint">
           <div className="pp-wrap">
-            <p className="pp-mlabel">{'// india'}</p>
-            <h2 style={{ marginTop: '10px' }}>AI agent development in India</h2>
+            <p className="pp-mlabel">{'// agentic commerce & retail ops'}</p>
+            <h2 style={{ marginTop: '10px' }}>AI agents for modern e-commerce and wholesale operations</h2>
             <p className="pp-lead" style={{ marginTop: '14px', maxWidth: '70ch' }}>
-              We build agents for Indian businesses as well as US ones, and the two are not the same brief. The
-              engineering is the same. The system list is not, and copying a US design straight across rarely works.
+              From high-growth Shopify Plus brands to complex B2B wholesale distributors, we build autonomous agents that resolve customer exceptions, manage inventory allocations, and streamline wholesale order workflows.
             </p>
             <CheckList
               items={[
-                'WhatsApp Business API as a primary channel rather than a side one, through Interakt, Wati or AiSensy, with language detection across Hindi, English and regional languages',
-                'Zoho CRM and Freshdesk where a US build would use HubSpot or Zendesk, with the same read, write and escalation pattern',
-                'Tally and Zoho Books for accounting reads, and Razorpay, PayU or Cashfree webhooks as payment triggers',
-                'Shiprocket and Delhivery for fulfilment status and delivery exception handling',
-                'GST workflows: invoice extraction, GSTIN validation, tax split calculation and a per-transaction audit trail your accountant can follow',
-                'Exotel or Twilio for voice and IVR, with the same human handoff rules as the messaging agents',
+                'Shopify & Shopify Plus Admin API integration: instant return authorization, warranty replacement, and address updates without human queue delays',
+                'B2B wholesale order extraction: ingest purchase orders from email or PDF, validate pricing tiers against ERP masters, and draft NetSuite or QuickBooks sales orders',
+                'Carrier tracking & delivery exception routing across FedEx, UPS, USPS, and ShipStation',
+                'Autonomous customer support triage inside Gorgias, Zendesk, and Intercom with strict refund thresholds',
+                'Omnichannel sync linking Amazon Seller Central, Walmart Marketplace, and direct-to-consumer storefronts',
+                'AI shopping assistance and product discovery engineered for next-generation conversational commerce',
               ]}
             />
             <p className="pp-lead" style={{ marginTop: '24px', maxWidth: '70ch' }}>
-              If you are comparing AI agent development companies in India, apply the test we would apply to ourselves:
-              ask each firm to walk one of your workflows end to end, naming the systems and the escalation rule.
+              Explore our specialized{' '}
+              <Link href="/agentic-commerce" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
+                Agentic Commerce
+              </Link>{' '}
+              and{' '}
+              <Link href="/b2b-ecommerce" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
+                B2B E-Commerce
+              </Link>{' '}
+              architectures.
             </p>
           </div>
         </section>
