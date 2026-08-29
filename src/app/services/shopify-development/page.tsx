@@ -82,15 +82,21 @@ export const metadata: Metadata = {
    JSON-LD Schema
 ───────────────────────────────────────────────────────────────────────────── */
 
-// Freshness signal. Benchmark: 56% of AI-Overview-cited pages carry it.
-// Keep honest: bump when the page's content actually changes.
-const PAGE_MODIFIED = '2026-08-04';
+const PAGE_MODIFIED = '2026-08-29';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
   '@id': 'https://factoryjet.com/services/shopify-development#webpage',
   url: 'https://factoryjet.com/services/shopify-development',
+  name: 'Shopify Development Agency USA | Custom Stores & Shopify Plus | FactoryJet',
+  description: 'Hire senior Shopify developers for custom theme development, store design and customization, Shopify Plus, B2B, and migrations.',
   dateModified: PAGE_MODIFIED,
+  author: {
+    '@type': 'Person',
+    name: 'Bhavesh Barot',
+    url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
+    jobTitle: 'Founder & Chief Technical Architect',
+  },
   isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
   publisher: { '@id': 'https://factoryjet.com/#organization' },
 };
@@ -100,18 +106,19 @@ const serviceSchema = {
   '@type': 'Service',
   name: 'Shopify Development Services USA',
   provider: {
-    '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
+    '@type': 'Organization',
+    '@id': 'https://factoryjet.com/#organization',
     name: 'FactoryJet',
     url: 'https://factoryjet.com',
-    
   },
-  areaServed: {
-    '@type': 'Country',
-    name: 'United States',
-  },
+  areaServed: [
+    { '@type': 'Country', name: 'United States' },
+    { '@type': 'Country', name: 'United Kingdom' },
+    { '@type': 'Country', name: 'Australia' },
+  ],
   serviceType: 'Shopify Development',
   description:
-    'Custom Shopify and Shopify Plus store development for US DTC brands, B2B merchants, and e-commerce businesses. Custom themes, store migrations, headless Hydrogen builds. fixed-price, milestone-paid.',
+    'Custom Shopify and Shopify Plus store development for US DTC brands, B2B merchants, and e-commerce businesses. Custom themes, store migrations, headless Hydrogen builds, fixed-price, milestone-paid.',
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -593,32 +600,32 @@ const howToSchema = {
     {
       '@type': 'HowToStep',
       position: 1,
-      name: 'Day 1 | Discovery Call',
-      text: 'We learn your business, goals, and target audience. We define the sitemap, content strategy, and technical requirements.',
+      name: 'Stage 01 | Discover',
+      text: 'A 30-minute store audit. We review your current platform, catalog, traffic, and conversion data to define the right Shopify architecture and tech stack before scoping a line of work.',
     },
     {
       '@type': 'HowToStep',
       position: 2,
-      name: 'Day 2 | Strategy & Structure',
-      text: 'We finalize your site architecture, wireframes, and content outline. You approve the plan before any design begins.',
+      name: 'Stage 02 | Design',
+      text: 'Full Figma mockups for your homepage, product page, collection page, and cart. You approve desktop and mobile before we write a line of Liquid. Two revision rounds included.',
     },
     {
       '@type': 'HowToStep',
       position: 3,
-      name: 'Days 3–4 | Design',
-      text: 'We design every page with your brand identity, mobile-first layouts, and conversion-focused UX. You review and approve all designs.',
+      name: 'Stage 03 | Build',
+      text: 'Custom Liquid theme or Hydrogen build with daily commits to your GitHub repo. Staging store URL available within 48 hours. Products, collections, and metafields configured.',
     },
     {
       '@type': 'HowToStep',
       position: 4,
-      name: 'Days 5–6 | Development & SEO',
-      text: 'We build your site in Next.js or WordPress, optimize Core Web Vitals, add structured data, and connect all integrations.',
+      name: 'Stage 04 | Test',
+      text: 'Full checkout flow tested across Stripe, PayPal, and Shop Pay. Cross-browser and device testing on iOS, Android, Chrome, Safari, and Firefox. Lighthouse audit run before sign-off.',
     },
     {
       '@type': 'HowToStep',
       position: 5,
-      name: 'Day 7 | Launch',
-      text: 'Your website goes live. We handle DNS, SSL, final QA, and provide training plus 30-day post-launch support.',
+      name: 'Stage 05 | Launch',
+      text: 'DNS transfer, Google Analytics 4 and Search Console setup, sitemap submission, and a recorded handover walkthrough. Your theme code and all app credentials delivered to your GitHub.',
     },
   ],
 };
