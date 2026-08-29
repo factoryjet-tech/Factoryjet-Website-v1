@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
-import FAQ from '@/components/v2/FAQ';
+import FAQ, { type FAQItem, type FAQCategory } from '@/components/v2/FAQ';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import LocalSeoArchitectureBlueprint from '@/components/v2/LocalSeoArchitectureBlueprint';
 import AuthorCard from '@/components/v2/AuthorCard';
@@ -12,27 +12,27 @@ import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-24';
+const PAGE_MODIFIED = '2026-08-29';
 const CANONICAL = 'https://factoryjet.com/austin/seo';
 
 export const metadata: Metadata = {
-  title: 'Austin SEO Company & Local SEO Agency TX | FactoryJet',
+  title: 'No-Contract Austin SEO Agency & Technical SEO Company TX | FactoryJet',
   description:
-    'Austin SEO company and agency. No-contract local SEO, Google Map Pack rankings, AI answer citations, and technical Core Web Vitals for Austin TX.',
+    'Austin SEO company with no long-term contracts. Top 3 Google Map Pack rankings, technical Next.js performance, AI answer citations, and direct senior engineer access.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Austin SEO Company & Local SEO Agency TX | FactoryJet',
+    title: 'No-Contract Austin SEO Agency & Technical SEO Company TX | FactoryJet',
     description:
-      'Austin SEO company built for the most crowded market in Texas. No-contract local SEO, technical SEO, and an engineer who talks to you directly.',
+      'Austin SEO company built for the most crowded market in Texas. No-contract local SEO, technical Core Web Vitals engineering, and direct senior engineer access.',
     url: CANONICAL,
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Austin SEO Company & Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Austin SEO Company & Local SEO Agency TX | FactoryJet',
+    title: 'No-Contract Austin SEO Agency & Technical SEO Company TX | FactoryJet',
     description: 'Local and technical SEO in Austin TX. Win the Google Map Pack and AI search citations.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -51,9 +51,9 @@ const PARTNERS = [
 ];
 
 const STAT_CARDS = [
-  { num: '44%', title: 'Map Pack Clicks', desc: 'Direct calls and clicks won by the top 3 Google local business profiles in Austin.', icon: '📍' },
-  { num: '8,740+', title: 'Monthly Search Volume', desc: 'Verified monthly searches across Austin SEO agency and consultant queries.', icon: '📈' },
-  { num: '42,000+', title: 'Austin SMB Competitors', desc: 'Registered commercial entities competing for local visibility across Travis County.', icon: '🏢' },
+  { num: '44%', title: 'Map Pack Clicks', desc: 'Direct calls and clicks captured by the top 3 Google local business listings in Austin.', icon: '📍' },
+  { num: '8,740+', title: 'Monthly Search Volume', desc: 'Verified monthly searches across Austin SEO agency and local commercial queries.', icon: '📈' },
+  { num: '42,000+', title: 'Austin SMB Competitors', desc: 'Registered commercial entities competing for local search visibility across Travis County.', icon: '🏢' },
   { num: '100%', title: 'Direct Engineer Access', desc: 'Month-to-month terms with direct communication with senior technical engineers.', icon: '⚡' },
 ];
 
@@ -258,61 +258,62 @@ const EVALUATION_CRITERIA = [
   },
 ];
 
-const FAQ_CATEGORIES = [
-  { key: 'pricing', label: 'Pricing & Contracts' },
+const FAQ_CATEGORIES: ReadonlyArray<FAQCategory> = [
+  { key: 'contracts', label: 'Contracts & Terms' },
   { key: 'local', label: 'Local Map Pack & GBP' },
-  { key: 'technical', label: 'Technical SEO & AI' },
-  { key: 'timeline', label: 'Timeline & ROI' },
+  { key: 'technical', label: 'Technical SEO & AI Search' },
+  { key: 'corridors', label: 'Austin Corridors & Suburbs' },
+  { key: 'attribution', label: 'Lead Tracking & Delivery' },
 ];
 
-const FAQ_ITEMS = [
+const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
   {
-    category: 'pricing',
-    question: 'How much does professional SEO cost in Austin TX?',
+    category: 'contracts',
+    question: 'Why do you offer no-contract SEO agreements for Austin businesses?',
     answer:
-      'Professional SEO services in Austin generally range between $1,500 and $4,500 per month depending on sector competitiveness, the size of your geographic service area, and the technical condition of your existing website. A single-location medical clinic in Northwest Hills requires a different scope than a multi-truck plumbing enterprise serving all of Travis and Williamson counties. FactoryJet operates on month-to-month agreements with no long-term lock-ins and begins every partnership with a comprehensive free technical audit.',
+      'We believe agency retention must be earned every thirty days through measurable revenue outcomes rather than enforced through legal lock-ins. When agencies hide behind annual commitments, technical momentum stalls. Our month-to-month model aligns our engineering incentives directly with your ongoing commercial growth.',
   },
   {
-    category: 'pricing',
-    question: 'Why do you operate month-to-month instead of requiring 12-month retainers?',
+    category: 'contracts',
+    question: 'How do I compare proposals from different Austin SEO agencies?',
     answer:
-      'We believe agency retention must be earned every thirty days through measurable business outcomes rather than enforced through legal contracts. When agencies hide behind annual commitments, client communication slows down and technical momentum stalls. Our month-to-month model aligns our engineering incentives directly with your ongoing commercial revenue growth.',
+      'Ask three fundamental questions: First, who will actually write and deploy the technical code on my website? Second, will you implement fixes directly or only hand over audit spreadsheets? Third, what specific business metrics will you track each month? If an agency cannot guarantee senior technical execution and refuses to track qualified inbound phone calls, they are selling marketing reports rather than revenue engineering.',
   },
   {
-    category: 'pricing',
-    question: 'What hidden fees or setup costs should Austin businesses look out for?',
+    category: 'contracts',
+    question: 'What hidden onboarding or setup fees do traditional agencies charge?',
     answer:
-      'Many traditional agencies bill extra onboarding fees, charge separately for basic Google Business Profile setup, or invoice additional hourly rates for technical code adjustments. With FactoryJet, your monthly rate covers complete technical execution, on-page optimization, content production, citation management, and conversion tracking with zero unexpected surcharges.',
+      'Many traditional agencies bill extra onboarding fees, charge separately for Google Business Profile setup, or invoice extra hourly rates for code adjustments. With FactoryJet, our agreement covers full technical execution, on-page optimization, content production, citation synchronization, and conversion tracking with zero hidden surcharges.',
   },
   {
-    category: 'pricing',
-    question: 'How do I compare quotes from different Austin SEO agencies?',
+    category: 'contracts',
+    question: 'Do we own our website code, analytics accounts, and digital assets?',
     answer:
-      'When reviewing proposals, ask three fundamental questions: First, who will actually perform the technical work on my website? Second, will you write and deploy code directly or just deliver a list of suggestions? Third, what specific commercial metrics will you report on each month? If an agency cannot guarantee senior technical execution and refuses to track qualified inbound phone calls, they are selling marketing reports rather than revenue engineering.',
+      'Yes, completely. You maintain 100 percent direct ownership and administrative control over your domain, code repository, Google Analytics 4 property, Google Search Console account, and Google Business Profile. We build on open web standards so you are never locked into a proprietary agency ecosystem.',
   },
   {
     category: 'local',
     question: 'How do we get our Austin business into the top 3 Google Map Pack results?',
     answer:
-      'Securing a spot in the top 3 Google Map Pack requires four synchronized components: selecting the precise primary business category, ensuring absolute Name-Address-Phone consistency across major directories, maintaining a steady velocity of authentic five-star customer reviews with natural service keywords, and building localized domain authority through a fast website backed by structured LocalBusiness schema.',
+      'Securing a placement in the top 3 Google Map Pack requires four synchronized components: selecting the precise primary business category, ensuring absolute Name-Address-Phone consistency across major directories, maintaining a steady velocity of authentic customer reviews containing natural service terms, and building localized domain authority through a fast website backed by structured LocalBusiness schema.',
   },
   {
     category: 'local',
-    question: 'Can you rank our business in surrounding suburbs like Round Rock, Westlake, and Lakeway?',
+    question: 'How important are customer reviews for local search rankings in Austin?',
     answer:
-      'Yes. We architect dedicated geographic service area landing pages and localized schema markup targeting key suburban centers across Travis, Williamson, and Hays counties. This allows your brand to capture high-intent searches in Westlake Hills, Lakeway, Round Rock, Cedar Park, Pflugerville, Buda, and Kyle without triggering Google duplicate content penalties.',
-  },
-  {
-    category: 'local',
-    question: 'How important are Google customer reviews for local search rankings in Austin?',
-    answer:
-      'Google customer reviews are one of the most powerful direct ranking factors in local search algorithms. Both review quantity and the frequency of new reviews directly influence your Map Pack proximity radius. We help your team implement frictionless post-service SMS and email review collection workflows that consistently generate verified, detailed customer feedback.',
+      'Google customer reviews are one of the most powerful direct ranking factors in local search algorithms. Both review quantity and the frequency of new reviews directly influence your Map Pack proximity radius. We help your team implement automated post-service SMS and email review collection workflows that consistently generate verified customer feedback.',
   },
   {
     category: 'local',
     question: 'What is the difference between Google Map Pack SEO and organic website SEO?',
     answer:
       'Google Map Pack SEO focuses on the localized 3-Pack box displayed at the top of local search results, driven by your Google Business Profile, geographic proximity, citations, and reviews. Organic website SEO focuses on the traditional search listings beneath the map, driven by technical site speed, deep content silos, structured data, and high-authority backlinks. A successful campaign optimizes both layers in unison.',
+  },
+  {
+    category: 'local',
+    question: 'How do you handle Google Business Profile category optimization?',
+    answer:
+      'We analyze the primary and secondary GBP categories of the top three ranking competitors in your specific Austin business vertical. We align your primary category with the highest-volume commercial intent and configure relevant secondary categories to capture high-intent long-tail searches across Central Texas.',
   },
   {
     category: 'technical',
@@ -336,31 +337,55 @@ const FAQ_ITEMS = [
     category: 'technical',
     question: 'What structured data schema do you implement on local Austin websites?',
     answer:
-      'We deploy comprehensive JSON-LD schemas tailored to your industry, including LocalBusiness, ProfessionalService, MedicalClinic, LegalService, FAQPage, BreadcrumbList, and Service schemas. These structured data tags explicitly inform search bots about your geographic service boundaries, business hours, service offerings, and verified customer reviews.',
+      'We deploy comprehensive JSON-LD schemas tailored to your industry, including LocalBusiness, ProfessionalService, MedicalClinic, LegalService, FAQPage, BreadcrumbList, and Service schemas. These structured data tags explicitly inform search bots about your geographic service boundaries, business hours, service offerings, and verified entity relationships.',
   },
   {
-    category: 'timeline',
+    category: 'corridors',
+    question: 'Can you rank our business in surrounding suburbs like Round Rock, Westlake, and Lakeway?',
+    answer:
+      'Yes. We architect dedicated geographic service area landing pages and localized schema markup targeting key suburban centers across Travis, Williamson, and Hays counties. This allows your brand to capture high-intent searches in Westlake Hills, Lakeway, Round Rock, Cedar Park, Pflugerville, Buda, and Kyle without triggering duplicate content issues.',
+  },
+  {
+    category: 'corridors',
+    question: 'How do you structure SEO for multi-location businesses in Central Texas?',
+    answer:
+      'For multi-location businesses, we build dedicated location pages with unique NAP data, localized staff profiles, distinct Google Business Profile embeds, specific service menus, and custom LocalBusiness schema for each physical facility. This prevents internal location cannibalization and establishes clear geographic relevance.',
+  },
+  {
+    category: 'corridors',
+    question: 'How does Austin local SEO differ from statewide Texas SEO?',
+    answer:
+      'Austin local SEO targets hyper-specific geographic proximity signals, Map Pack 3-Pack rankings, and neighborhood-level search terms across Travis County. Statewide Texas SEO focuses on broader regional keyword authority, high-volume commercial head terms, and programmatic category hubs that rank across Houston, Dallas, San Antonio, and Austin simultaneously.',
+  },
+  {
+    category: 'attribution',
     question: 'How long does it take to see measurable SEO ranking improvements in Austin?',
     answer:
       'Initial technical fixes, Google Business Profile corrections, and low-competition neighborhood keyword wins typically produce measurable visibility gains within 30 to 60 days. Highly competitive commercial terms and dominant top-three Map Pack placements generally mature within 3 to 6 months of continuous optimization.',
   },
   {
-    category: 'timeline',
+    category: 'attribution',
     question: 'How do you track and verify real return on investment for our business?',
     answer:
       'We track concrete commercial outcomes: verified phone calls, qualified contact form submissions, appointment bookings, and organic pipeline revenue. Through custom Google Analytics 4 event tracking and Google Search Console data, you receive transparent monthly reporting showing exactly how search visibility translates into customer acquisition.',
   },
   {
-    category: 'timeline',
+    category: 'attribution',
     question: 'Will algorithm updates from Google disrupt our search rankings?',
     answer:
       'Google algorithm updates penalize websites that rely on manipulative shortcuts like artificial link networks and thin automated copy. Because our methodology is rooted in senior technical engineering, clean site architecture, authentic local citations, and deep original content, our client websites consistently gain ranking authority during core search updates.',
   },
   {
-    category: 'timeline',
+    category: 'attribution',
     question: 'Can SEO replace our paid Google Ads spend in Austin?',
     answer:
       'Yes, over time. While Google Ads provide immediate visibility for a continuous pay-per-click fee, organic SEO builds permanent digital equity. As your organic rankings and Map Pack positions solidify, most Austin clients systematically reduce their paid advertising budgets while maintaining a steady flow of qualified inbound leads.',
+  },
+  {
+    category: 'attribution',
+    question: 'Who executes the work on our account?',
+    answer:
+      'Senior technical software engineers and technical SEO architects execute all code, schema, and content work directly. You speak directly with the engineers building your systems rather than junior account managers or sales intermediaries.',
   },
 ];
 
@@ -384,7 +409,6 @@ const LOCAL_BUSINESS_SCHEMA = {
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
   telephone: '+1-832-998-8422',
-  priceRange: '$$',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Austin',
@@ -434,8 +458,8 @@ const SERVICE_SCHEMA = {
 const WEBPAGE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'Austin SEO Company & Local SEO Agency TX | FactoryJet',
-  description: 'No-contract local SEO, Google Map Pack rankings, and technical SEO for Austin TX businesses.',
+  name: 'No-Contract Austin SEO Agency & Technical SEO Company TX | FactoryJet',
+  description: 'Austin SEO company with no long-term contracts. Top 3 Google Map Pack rankings, technical Next.js performance, AI answer citations, and direct senior engineer access.',
   url: CANONICAL,
   dateModified: PAGE_MODIFIED,
   author: {
@@ -473,7 +497,7 @@ export default function AustinSeoPage() {
 
       <main className="platpage">
 
-        {/* ── 01. RITOVEX HERO BANNER SECTION ── */}
+        {/* ── 01. HERO BANNER SECTION ── */}
         <section className="pp-sec" style={{ paddingTop: 'clamp(44px, 7vh, 88px)', paddingBottom: 'clamp(44px, 6vh, 72px)', background: '#FFFFFF' }}>
           <div className="pp-wrap">
             <div className="rv-hero-wrap">
@@ -484,7 +508,7 @@ export default function AustinSeoPage() {
                   <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                     <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
                   </svg>
-                  <span>Austin Local &amp; Technical SEO</span>
+                  <span>No-Contract Austin SEO Engineering</span>
                 </div>
 
                 <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
@@ -492,7 +516,7 @@ export default function AustinSeoPage() {
                 </h1>
 
                 <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
-                  Win the Google 3-Pack Map results, dominate high-intent Central Texas search terms, and earn citations across AI answer engines. No long-term contracts. Talk directly with senior technical engineers.
+                  Win the Google 3-Pack Map results, capture high-intent Central Texas commercial queries, and earn citations across AI answer engines. No long-term contracts. Talk directly with senior technical software engineers.
                 </p>
 
                 <div className="rv-actions">
@@ -508,7 +532,7 @@ export default function AustinSeoPage() {
                 </div>
               </div>
 
-              {/* Right Column: Clean Ritovex Organic Curved Photo Frame (Edge-to-Edge) */}
+              {/* Right Column: Clean Organic Curved Photo Frame (Edge-to-Edge) */}
               <div className="rv-curved-frame-1">
                 <Image
                   src="/images/us/austin/hero-austin.webp"
@@ -524,8 +548,28 @@ export default function AustinSeoPage() {
           </div>
         </section>
 
-        {/* ── 02. RITOVEX PARTNERS / TECHNOLOGY MARQUEE TICKER ── */}
-        <section style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC', padding: '36px 0' }}>
+        {/* ── ANSWER-FIRST LOCAL SEO BRIEF ── */}
+        <section style={{ backgroundColor: '#FAFAF7', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC', padding: '32px 0' }}>
+          <div className="pp-wrap">
+            <div style={{ maxWidth: '860px', margin: '0 auto', background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '16px', padding: '24px 28px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '10px' }}>
+                <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#FF5622' }} />
+                <span style={{ fontSize: '12px', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.06em', color: '#FF5622' }}>
+                  Austin Local Search Engineering Brief
+                </span>
+              </div>
+              <h2 style={{ fontSize: '19px', fontWeight: 800, color: '#141414', margin: '0 0 10px', letterSpacing: '-0.015em' }}>
+                How Central Texas Businesses Win the Google Map Pack and AI Search
+              </h2>
+              <p style={{ fontSize: '14.5px', color: '#494852', lineHeight: 1.6, margin: 0 }}>
+                Over 44% of local commercial clicks in Austin go directly to the top 3 Google Business Profile listings. Ranking requires four verified technical assets: selecting the primary Google Business Profile category with highest transaction intent, maintaining synchronized NAP citations across Tier 1 Texas directories, structuring LocalBusiness JSON-LD markup on sub-second Next.js pages, and deploying automated post-service review collection workflows.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 02. PARTNERS / TECHNOLOGY MARQUEE TICKER ── */}
+        <section style={{ backgroundColor: '#F6F6F9', borderBottom: '1px solid #E6E6EC', padding: '36px 0' }}>
           <div className="pp-wrap">
             <div className="rv-ticker-header">
               <div className="rv-ticker-line" />
@@ -548,7 +592,7 @@ export default function AustinSeoPage() {
           </div>
         </section>
 
-        {/* ── 03. RITOVEX ABOUT US & 2x2 BENTO COUNTER SECTION ── */}
+        {/* ── 03. ABOUT US & 2x2 BENTO COUNTER SECTION ── */}
         <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(56px, 8vh, 96px) 0' }}>
           <div className="pp-wrap">
             <div className="rv-about-grid">
@@ -662,7 +706,7 @@ export default function AustinSeoPage() {
           </div>
         </section>
 
-        {/* ── 05. INDUSTRY DEEP-DIVES & PHOTOREALISTIC CASE EXAMPLES ── */}
+        {/* ── 05. INDUSTRY DEEP-DIVES ── */}
         <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
           <div className="pp-wrap">
             <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
@@ -730,7 +774,7 @@ export default function AustinSeoPage() {
           </div>
         </section>
 
-        {/* ── 06. CORE DRIVERS & PAIN POINTS (RITOVEX NUMBERED SERVICES ROWS) ── */}
+        {/* ── 06. CORE DRIVERS & PAIN POINTS ── */}
         <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
           <div className="pp-wrap">
             <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 48px' }}>
@@ -778,7 +822,7 @@ export default function AustinSeoPage() {
           </div>
         </section>
 
-        {/* ── 07. ARCHITECTURE BLUEPRINT (AUTO-ROTATING TABS) ── */}
+        {/* ── 07. ARCHITECTURE BLUEPRINT ── */}
         <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: '48px 0 16px' }}>
           <div className="pp-wrap">
             <RegionalBenchmarkCard city="Austin" vertical="seo" />
@@ -913,7 +957,7 @@ export default function AustinSeoPage() {
           </div>
         </section>
 
-        {/* ── 10. SEARCHABLE CATEGORIZED FAQ SECTION (16 DETAILED QUESTIONS) ── */}
+        {/* ── 10. INTERACTIVE LEAD OPPORTUNITY ESTIMATOR & FAQ ── */}
         <LocalSeoOpportunityEstimator city="Austin" region="us" />
 
         <FAQ
