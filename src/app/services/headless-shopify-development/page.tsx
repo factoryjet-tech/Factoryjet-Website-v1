@@ -9,6 +9,7 @@ import EnterpriseArchitectureBlueprint from '@/components/v2/EnterpriseArchitect
 import AuthorCard from '@/components/v2/AuthorCard';
 import CommerceRoiCalculator from '@/components/v2/CommerceRoiCalculator';
 import EcommerceCityLinksUS from '@/components/v2/EcommerceCityLinksUS';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
@@ -548,15 +549,35 @@ export default function HeadlessShopifyPage() {
                   </p>
                 </div>
 
-                <div className="rv-actions">
-                  <ModalCTAButton label="Get a Headless Architecture Proposal" region="us" btnVariant="primary-dark" />
-                  <a href="#headless-architecture" className="rv-btn-secondary">
-                    <div className="rv-video-circle">
-                      <svg width="14" height="16" viewBox="0 0 14 16" fill="#141414">
-                        <path d="M13 7.13397C13.6667 7.51887 13.6667 8.48113 13 8.86603L2.5 14.9282C1.83333 15.3131 1 14.832 1 14.0622L1 1.93782C1 1.16802 1.83333 0.686897 2.5 1.0718L13 7.13397Z" />
-                      </svg>
-                    </div>
-                    <span>Explore Architecture</span>
+                {/* 2-Field Direct Proposal Capture */}
+                <div style={{ maxWidth: '52ch', marginTop: '4px' }}>
+                  <HeroInlineForm
+                    source="headless_shopify_hero"
+                    region="us"
+                    submitLabel="Get Headless Architecture Proposal"
+                  />
+                </div>
+
+                <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginTop: '18px' }}>
+                  <a
+                    href="#headless-architecture"
+                    style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '8px',
+                      fontSize: '13.5px',
+                      color: '#494852',
+                      fontWeight: 600,
+                      textDecoration: 'underline',
+                      textUnderlineOffset: '3px',
+                    }}
+                  >
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#FF5622" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                      <polygon points="12 2 2 7 12 12 22 7 12 2" />
+                      <polyline points="2 17 12 22 22 17" />
+                      <polyline points="2 12 12 17 22 12" />
+                    </svg>
+                    <span>Explore Decoupled Architecture Blueprint ↓</span>
                   </a>
                 </div>
               </div>
