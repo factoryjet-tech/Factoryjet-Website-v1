@@ -10,20 +10,21 @@ import AuthorCard from '@/components/v2/AuthorCard';
 import WebDesignValueCalculator from '@/components/v2/WebDesignValueCalculator';
 import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import WebDesignCityLinksUS from '@/components/v2/WebDesignCityLinksUS';
+import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-24';
+const PAGE_MODIFIED = '2026-08-29';
 const CANONICAL = 'https://factoryjet.com/dallas/web-design';
 
 export const metadata: Metadata = {
-  title: 'Dallas Web Design Agency | Fast Next.js Sites | FactoryJet',
+  title: 'Dallas TX Web Design Agency | Custom Next.js Websites | FactoryJet',
   description:
-    'Dallas web design agency. Custom Next.js websites, sub-second load speeds, mobile conversion flows, and full code ownership for Texas businesses.',
+    'Dallas web design agency. Custom Next.js websites, sub-second load speeds, mobile conversion flows, and full code ownership for Texas businesses. Free quote.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Dallas Web Design Agency | Fast Next.js Sites | FactoryJet',
+    title: 'Dallas TX Web Design Agency | Custom Next.js Websites | FactoryJet',
     description:
       'Dallas web design agency. Custom Next.js websites, sub-second load speeds, and full code ownership for Texas businesses.',
     url: CANONICAL,
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Dallas Web Design Agency | Fast Next.js Sites | FactoryJet',
+    title: 'Dallas TX Web Design Agency | Custom Next.js Websites | FactoryJet',
     description: 'Custom Next.js web design in Dallas TX. 7-day launch and 100% full IP code ownership.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -367,7 +368,6 @@ const LOCAL_BUSINESS_SCHEMA = {
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
   telephone: '+1-832-998-8422',
-  priceRange: '$$',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Dallas',
@@ -394,7 +394,7 @@ const SERVICE_SCHEMA = {
   author: {
     '@type': 'Person',
     name: 'Bhavesh Barot',
-    jobTitle: 'Chief Technical Architect',
+    jobTitle: 'Founder & Chief Technical Architect',
     url: 'https://factoryjet.com/about',
     sameAs: [
       'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
@@ -404,32 +404,45 @@ const SERVICE_SCHEMA = {
   name: 'Dallas Web Design & Next.js Development',
   provider: {
     '@type': 'Organization',
+    '@id': 'https://factoryjet.com/#organization',
     name: 'FactoryJet',
     url: 'https://factoryjet.com',
   },
   serviceType: 'Web Design, Frontend Engineering & Conversion Optimization',
   description:
     'Senior engineering-led custom Next.js web design, sub-second page performance, mobile conversion optimization, and full IP ownership for Dallas businesses.',
-  areaServed: { '@type': 'State', name: 'Texas' },
+  areaServed: [
+    { '@type': 'City', name: 'Dallas' },
+    { '@type': 'State', name: 'Texas' },
+    { '@type': 'Country', name: 'United States' },
+  ],
 };
 
 const WEBPAGE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'Dallas Web Design Agency | Fast Next.js Sites | FactoryJet',
+  '@id': 'https://factoryjet.com/dallas/web-design#webpage',
+  name: 'Dallas TX Web Design Agency | Custom Next.js Websites | FactoryJet',
   description: 'Custom Next.js websites, sub-second load speeds, and full code ownership for Dallas TX businesses.',
   url: CANONICAL,
   dateModified: PAGE_MODIFIED,
   author: {
     '@type': 'Person',
     name: 'Bhavesh Barot',
-    jobTitle: 'Chief Technical Architect',
+    jobTitle: 'Founder & Chief Technical Architect',
     url: 'https://factoryjet.com/about',
     sameAs: [
       'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
       'https://github.com/factoryjet-tech',
     ],
   },
+  isPartOf: {
+    '@type': 'WebSite',
+    '@id': 'https://factoryjet.com/#website',
+    name: 'FactoryJet',
+    url: 'https://factoryjet.com',
+  },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
 };
 
 const BREADCRUMB_SCHEMA = {
@@ -454,7 +467,7 @@ export default function DallasWebDesignPage() {
       <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
       <main className="platpage">
-        {/* ── 01. RITOVEX HERO BANNER SECTION ── */}
+        {/* ── 01. HERO SECTION ── */}
         <section className="pp-sec" style={{ paddingTop: 'clamp(44px, 7vh, 88px)', paddingBottom: 'clamp(44px, 6vh, 72px)', background: '#FFFFFF' }}>
           <div className="pp-wrap">
             <div className="rv-hero-wrap">
@@ -471,9 +484,16 @@ export default function DallasWebDesignPage() {
                   Dallas Web Design Agency for Growing Brands
                 </h1>
 
-                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
+                <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 24px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
                   Turn website visitors into paying clients with custom Next.js architecture, sub-second load speeds, and mobile conversion flows. 7-day delivery with 100% full IP code ownership.
                 </p>
+
+                {/* Answer-First Brief */}
+                <div style={{ background: '#F6F6F9', borderLeft: '3px solid #FF5622', padding: '14px 18px', borderRadius: '0 12px 12px 0', marginBottom: '28px', maxWidth: '52ch' }}>
+                  <p style={{ fontSize: '13.5px', color: '#141414', lineHeight: 1.55, margin: 0, fontWeight: 500 }}>
+                    <strong style={{ color: '#FF5622' }}>Executive Brief:</strong> FactoryJet engineers custom, type-safe Next.js websites for Dallas businesses: sub-second mobile page loads, structured Schema.org entity graphs, dedicated 7-day sprint delivery, and 100% full intellectual property code ownership.
+                  </p>
+                </div>
 
                 <div className="rv-actions">
                   <ModalCTAButton label="Get a Fixed-Price Quote" region="us" btnVariant="primary-dark" />
@@ -488,7 +508,7 @@ export default function DallasWebDesignPage() {
                 </div>
               </div>
 
-              {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
+              {/* Right Column: Clean Organic Curved Photo Frame */}
               <div className="rv-curved-frame-1">
                 <Image
                   src="/images/us/dallas-web-design/hero.webp"
@@ -503,7 +523,7 @@ export default function DallasWebDesignPage() {
           </div>
         </section>
 
-        {/* ── 02. RITOVEX PARTNERS / TECHNOLOGY MARQUEE TICKER ── */}
+        {/* ── 02. TECHNOLOGY MARQUEE TICKER ── */}
         <section style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC', padding: '36px 0' }}>
           <div className="pp-wrap">
             <div className="rv-ticker-header">
@@ -527,7 +547,7 @@ export default function DallasWebDesignPage() {
           </div>
         </section>
 
-        {/* ── 03. RITOVEX ABOUT US & 2x2 BENTO COUNTER SECTION ── */}
+        {/* ── 03. 2x2 BENTO COUNTER SECTION ── */}
         <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(56px, 8vh, 96px) 0' }}>
           <div className="pp-wrap">
             <div className="rv-about-grid">
@@ -578,7 +598,6 @@ export default function DallasWebDesignPage() {
                   ))}
                 </div>
 
-                {/* Bottom Actions */}
                 <div style={{ marginTop: '32px' }}>
                   <ModalCTAButton label="Schedule Web Strategy Call" region="us" btnVariant="primary-dark" />
                 </div>
@@ -598,10 +617,10 @@ export default function DallasWebDesignPage() {
                 <span>DFW Commercial Corridor Depth</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Tailored Web Design for Dallas&apos;s Core Sectors
+                Tailored Web Development for Dallas&apos;s Core Sectors
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                From Uptown corporate legal firms to Plano tech campuses and Fort Worth logistics hubs:
+                From Plano telecom corridors to Uptown legal practices and Alliance logistics hubs:
               </p>
             </div>
 
@@ -650,10 +669,10 @@ export default function DallasWebDesignPage() {
                 <span>Industry-Specific Execution</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Specialized Web Architectures for Dallas Businesses
+                Specialized Web Architectures for Dallas Brands
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                Every commercial sector in North Texas demands tailored user experiences, technical credibility, and conversion paths:
+                Every commercial sector in DFW demands tailored conversion funnels, custom schemas, and high-performance design:
               </p>
             </div>
 
@@ -718,10 +737,10 @@ export default function DallasWebDesignPage() {
                 <span>The FactoryJet Difference</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Why Dallas Companies Choose FactoryJet Web Design
+                Why Dallas Businesses Choose FactoryJet Web Design
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                We replace outdated WordPress themes and bloated retainers with modern engineering:
+                We replace bloated WordPress themes and endless agency meetings with focused Next.js engineering:
               </p>
             </div>
 
@@ -756,24 +775,24 @@ export default function DallasWebDesignPage() {
         </section>
 
         {/* ── 07. ARCHITECTURE BLUEPRINT ── */}
-        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: '48px 0 16px' }}>
-          <div className="pp-wrap">
-            <RegionalBenchmarkCard city="Dallas" vertical="web-design" />
-          </div>
-        </section>
+        <div id="web-design-blueprint">
+          <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: '48px 0 16px' }}>
+            <div className="pp-wrap">
+              <RegionalBenchmarkCard city="Dallas" vertical="web-design" />
+            </div>
+          </section>
 
-        <div id="web-architecture-blueprint">
           <WebDesignArchitectureBlueprint
-            badge="// DALLAS MODERN WEB ARCHITECTURE BLUEPRINT"
-            title="High-Performance Frontend: From Code to Conversion"
-            subtitle="Explore how custom Next.js components, Cloudflare Edge caching, structured JSON-LD schema, and conversion tracking work together seamlessly."
+            badge="// DALLAS WEB DESIGN &amp; NEXT.JS BLUEPRINT"
+            title="Modern Frontend Stack: Figma Design to Cloudflare Edge"
+            subtitle="Explore how custom Figma design systems, Next.js 15 App Router components, server-rendered JSON-LD schema, and Cloudflare Global Edge hosting operate together."
             city="Dallas"
             ctaLabel="Get a Fixed-Price Quote"
             region="us"
           />
         </div>
 
-        {/* ── 08. STEP-BY-STEP 7-DAY DELIVERY ROADMAP MATRIX ── */}
+        {/* ── 08. STEP-BY-STEP 7-DAY SPRINT PROTOCOL ── */}
         <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(64px, 9vh, 104px) 0' }}>
           <div className="pp-wrap">
             <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 56px' }}>
@@ -781,13 +800,13 @@ export default function DallasWebDesignPage() {
                 <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                   <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
                 </svg>
-                <span>Guaranteed 7-Day Sprint</span>
+                <span>Proven 7-Day Sprint Delivery</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Our 7-Day Delivery Sprint Protocol
+                Our 7-Day Web Design Sprint Protocol
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                From initial kickoff and Figma prototyping to production code and zero-downtime launch in 7 calendar days:
+                A disciplined engineering methodology for rapid, reliable website launches with zero scope drift:
               </p>
             </div>
 
@@ -851,7 +870,7 @@ export default function DallasWebDesignPage() {
                 Evaluating Dallas Web Design Agencies: What to Ask
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                Compare engineering-led Next.js development against traditional design agencies before you commit:
+                Compare engineering-led Next.js development against traditional template agencies before you sign:
               </p>
             </div>
 
@@ -859,7 +878,7 @@ export default function DallasWebDesignPage() {
               <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1.4fr 1.4fr', background: '#141414', color: '#FFFFFF', padding: '16px 24px', fontWeight: 700, fontSize: '13.5px' }}>
                 <div>Evaluation Factor</div>
                 <div style={{ color: '#FF5622' }}>FactoryJet Engineering Model</div>
-                <div style={{ color: '#A0A0B0' }}>Traditional Design Agencies</div>
+                <div style={{ color: '#A0A0B0' }}>Traditional Template Agencies</div>
               </div>
 
               {EVALUATION_CRITERIA.map((crit, cIdx) => (
@@ -890,14 +909,14 @@ export default function DallasWebDesignPage() {
           </div>
         </section>
 
-        {/* ── INTERACTIVE SPEED & PIPELINE VALUE CALCULATOR ── */}
+        {/* ── INTERACTIVE SPEED & REVENUE VALUE CALCULATOR ── */}
         <WebDesignValueCalculator city="Dallas" region="us" />
 
         {/* ── 10. SEARCHABLE CATEGORIZED FAQ SECTION ── */}
         <FAQ
           eyebrow="DALLAS WEB DESIGN INTELLIGENCE"
           headline="Frequently Asked Questions About Web Design in Dallas TX"
-          lead="Direct, plain English answers to what Dallas business owners and marketing leaders ask about website projects:"
+          lead="Direct, plain English answers to what Dallas business owners ask about custom web development and Next.js engineering:"
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
           bgClassName="bg-[#FFFFFF]"
@@ -928,21 +947,25 @@ export default function DallasWebDesignPage() {
             </div>
 
             <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
-              Ready to Upgrade Your Dallas Business Website?
+              Ready to Upgrade Your Dallas Web Presence?
             </h2>
 
             <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
-              Tell us about your brand goals. We will provide a comprehensive fixed-price proposal, clear timeline, and interactive Figma preview.
+              Schedule a strategy call or request a fixed-price proposal. We will review your current website, identify conversion friction, and deliver an interactive Figma preview.
             </p>
 
             <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
-              <ModalCTAButton label="Get Your Fixed-Price Quote" region="us" btnVariant="primary-light" />
+              <ModalCTAButton label="Get Your Fixed-Price Proposal" region="us" btnVariant="primary-light" />
             </div>
+
+            <p style={{ marginTop: '28px', fontSize: '13.5px', color: '#8E8E9F' }}>
+              Related services: <Link href="/dallas/seo" style={{ color: '#FF5622', textDecoration: 'underline' }}>Dallas local SEO</Link>, <Link href="/services/web-design" style={{ color: '#FF5622', textDecoration: 'underline' }}>custom web design services</Link>, <Link href="/austin/web-design" style={{ color: '#FF5622', textDecoration: 'underline' }}>Austin web design</Link>, and <Link href="/services/ai-agent-development" style={{ color: '#FF5622', textDecoration: 'underline' }}>AI agent development</Link>.
+            </p>
           </div>
         </section>
       </main>
 
-      <SiteFooter locale="us" />
+      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   );
 }
