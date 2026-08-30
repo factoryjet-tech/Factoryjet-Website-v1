@@ -13,27 +13,27 @@ import WebDesignCityLinksUS from '@/components/v2/WebDesignCityLinksUS';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-29';
+const PAGE_MODIFIED = '2026-08-30';
 const CANONICAL = 'https://factoryjet.com/houston/web-design';
 
 export const metadata: Metadata = {
-  title: 'Houston Web Design Agency | Custom Next.js | FactoryJet',
+  title: 'Best Houston Web Design Agency | Top Next.js Websites | FactoryJet',
   description:
-    'Houston web design agency. High-converting Next.js websites, sub-second load times, and custom Figma UI/UX for Houston energy, medical, and industrial enterprises.',
+    'Best Houston web design agency. Top custom Next.js websites, sub-second load speeds, mobile conversion flows, and 100% full IP code ownership for Texas businesses.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Houston Web Design Agency | Custom Next.js | FactoryJet',
+    title: 'Best Houston Web Design Agency | Top Next.js Websites | FactoryJet',
     description:
-      'Houston web design agency. High-converting Next.js websites, sub-second load times, and custom Figma UI/UX for Houston energy, medical, and industrial enterprises.',
+      'Premier Houston web design agency. High-converting Next.js websites, sub-second load times, and custom Figma UI/UX for Houston energy, medical, and industrial enterprises.',
     url: CANONICAL,
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Houston Web Design Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Houston Web Design Agency | Custom Next.js | FactoryJet',
+    title: 'Best Houston Web Design Agency | Top Next.js Websites | FactoryJet',
     description: 'Custom Next.js web design and engineering in Houston Texas. Sub-second performance, full IP code ownership, 7-day delivery.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -148,6 +148,32 @@ const INDUSTRY_SHOWCASE = [
       'Interactive freight rate estimation calculators and RFQ workflow automation',
       'Sub-second mobile performance ensuring immediate commercial quote submissions',
       'Structured LogisticsService and Organization schema markup for regional search dominance',
+    ],
+  },
+  {
+    sector: 'Maritime Shipping, Port Infrastructure & Heavy Chemical Logistics',
+    headline: 'Commercial Lead Engines for Houston Ship Channel Operators',
+    description:
+      'Maritime logistics providers, chemical terminals, stevedoring operators, and intermodal carriers across the Port of Houston require high-speed lead engines. We build responsive web applications with interactive freight quote estimators, facility specification sheets, hazardous materials compliance disclosures, and automated RFQ routing.',
+    image: '/images/us/manufacturing-website-design/shop-floor.webp',
+    alt: 'Houston Ship Channel maritime logistics port freight forwarding website design',
+    points: [
+      'Interactive freight rate estimation calculators and RFQ workflow automation',
+      'Sub-second mobile performance ensuring immediate commercial quote submissions',
+      'Structured LogisticsService and Organization schema markup for regional search dominance',
+    ],
+  },
+  {
+    sector: 'Luxury Residential Architecture, Custom Home Builders & Interior Studios',
+    headline: 'Editorial Portfolio Visualizers for River Oaks & Memorial Builders',
+    description:
+      'High-end custom home builders, luxury interior designers, and architectural firms in River Oaks, Memorial, and The Woodlands require immersive visual storytelling. We build custom Next.js portfolios with high-resolution image galleries, interactive 3D floor plan viewers, and private consultation booking workflows.',
+    image: '/images/services/card-real-estate.webp',
+    alt: 'Houston luxury residential custom home builder and architecture website design',
+    points: [
+      'High-resolution retina photo galleries loading smoothly at 60 frames per second',
+      'Interactive architectural project lookbooks and finishes specification matrices',
+      'Private VIP consultation intake funnels qualifying high-net-worth property owners',
     ],
   },
 ];
@@ -357,6 +383,42 @@ const FAQ_ITEMS = [
     question: 'Can any software engineer maintain our Next.js codebase in the future?',
     answer:
       'Yes. We write clean, modular, and fully typed TypeScript and React code adhering to global standards, ensuring any modern web developer can easily maintain and extend your application.',
+  },
+  {
+    category: 'technical',
+    question: 'How do Houston Energy Corridor oilfield and clean tech firms showcase technical capability matrices?',
+    answer:
+      'We build static React Server Component architectures with structured capability tables, downloadable engineering spec sheets, ISO/API quality certifications, interactive asset maps, and sub-second edge hosting for global energy procurement teams.',
+  },
+  {
+    category: 'architecture',
+    question: 'How do Texas Medical Center (TMC) clinical practices and hospital groups ensure HIPAA compliance?',
+    answer:
+      'We engineer clinical-grade Next.js web applications featuring HIPAA-compliant form routing, strict Content Security Policies (CSP), secure physician credential directories, and zero client-side tracking on sensitive appointment booking workflows.',
+  },
+  {
+    category: 'design',
+    question: 'Can you build maritime quote calculators and freight lead engines for Houston Ship Channel operators?',
+    answer:
+      'Yes. We build responsive web applications with interactive freight rate calculators, facility specification sheets, hazardous materials compliance disclosures, and automated RFQ routing directly to dispatch teams.',
+  },
+  {
+    category: 'process',
+    question: 'How do you guarantee sub-600ms load speeds and 100/100 Core Web Vitals in Texas?',
+    answer:
+      'We optimize every asset from the foundation up: automatic WebP/AVIF image transcoding, critical CSS inlining, font subsetting, zero render-blocking scripts, and static HTML pre-generation delivered from global edge servers across Texas.',
+  },
+  {
+    category: 'ownership',
+    question: 'What design files and tokens are delivered during the Figma design system handover?',
+    answer:
+      'You receive full edit access to a complete Figma design system containing typography scales, color tokens, responsive mobile/desktop wireframes, custom icon sets, component variants, and interactive prototype flows that your marketing team owns forever.',
+  },
+  {
+    category: 'local',
+    question: 'How do you configure Schema.org JSON-LD structured data for Google Rich Results in Houston?',
+    answer:
+      'We embed granular Schema.org JSON-LD structured data on every page, including Organization, ProfessionalService, LocalBusiness, FAQPage, BreadcrumbList, and WebSite schemas. These explicit semantic annotations enable Google to generate rich snippet cards, sitelinks, and AI search citations.',
   },
 ];
 
@@ -588,7 +650,7 @@ export default function HoustonWebDesignPage() {
                 </h2>
 
                 <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
-                  From Energy Corridor titans to Texas Medical Center health innovators, Downtown legal institutions, and Ship Channel fabricators, we build high-converting web applications that elevate your brand equity.
+                  From Energy Corridor titans to Texas Medical Center health innovators, Downtown legal institutions, and Ship Channel fabricators, we build high-converting web applications that expand your market authority.
                 </p>
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>

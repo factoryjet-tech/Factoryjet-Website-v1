@@ -12,27 +12,27 @@ import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import WebDesignCityLinksUS from '@/components/v2/WebDesignCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-24';
+const PAGE_MODIFIED = '2026-08-30';
 const CANONICAL = 'https://factoryjet.com/portland/web-design';
 
 export const metadata: Metadata = {
-  title: 'Portland Web Design Agency | Fast Next.js Sites | FactoryJet',
+  title: 'Best Portland Web Design Agency | Top Next.js Websites | FactoryJet',
   description:
-    'Portland web design agency. Custom Next.js websites, sub-second load speeds, mobile conversion flows, and full code ownership for Oregon businesses.',
+    'Best Portland web design agency. Top custom Next.js websites, sub-second load speeds, mobile conversion flows, and 100% full IP code ownership for Oregon businesses.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Portland Web Design Agency | Fast Next.js Sites | FactoryJet',
+    title: 'Best Portland Web Design Agency | Top Next.js Websites | FactoryJet',
     description:
-      'Portland web design agency. Custom Next.js websites, sub-second load speeds, and full code ownership for Oregon businesses.',
+      'Premier Portland web design agency. Custom Next.js websites, sub-second load speeds, and full code ownership for Oregon businesses.',
     url: CANONICAL,
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Portland Web Design Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Portland Web Design Agency | Fast Next.js Sites | FactoryJet',
+    title: 'Best Portland Web Design Agency | Top Next.js Websites | FactoryJet',
     description: 'Custom Next.js web design in Portland OR. 7-day launch and 100% full IP code ownership.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -147,6 +147,32 @@ const INDUSTRY_SHOWCASE = [
       'Interactive equipment capability matrices and downloadable CAD/PDF engineering data',
       'Frictionless multi-step RFQ form workflows routing directly to estimating teams',
       'Lightweight server-rendered Next.js architecture deployed to Cloudflare Edge nodes',
+    ],
+  },
+  {
+    sector: 'Performance Athletic Apparel, Footwear & Outdoor Gear',
+    headline: 'High-Volume Headless Flagships for Beaverton & Portland Apparel Leaders',
+    description:
+      'As the global footwear and athletic apparel capital, Beaverton and Portland brands require uncompromising visual precision and rapid e-commerce checkouts. We build custom Next.js web applications featuring interactive 3D product rotators, sustainable materials transparency matrices, and sub-second catalog navigation.',
+    image: '/images/us/manufacturing-website-design/shop-floor.webp',
+    alt: 'Portland athletic footwear outdoor gear and performance apparel website design',
+    points: [
+      'Interactive 3D product viewports and fluid high-resolution lookbook galleries',
+      'Sustainable materials traceability data and environmental impact estimators',
+      'Headless Shopify and custom Stripe e-commerce checkouts converting at lightning speeds',
+    ],
+  },
+  {
+    sector: 'Specialty Coffee, Craft Breweries & Pacific Northwest Culinary Brands',
+    headline: 'Artisanal Brand Storytelling & Frictionless Subscriptions for Portland Makers',
+    description:
+      'From world-renowned specialty roasters in the Central Eastside to artisanal breweries and Pacific Northwest farm-to-table culinary groups, digital storytelling drives DTC subscriptions and taproom foot traffic. We engineer immersive web applications featuring recurring coffee subscription flows, live craft draft feeds, and high-resolution photo menus rendering at 60fps.',
+    image: '/images/us/restaurant-website-design/hero.webp',
+    alt: 'Portland specialty coffee craft brewery and artisanal culinary website design',
+    points: [
+      'Interactive roast profile guides and recurring coffee subscription checkout funnels',
+      'Live taproom draft beer list integrations and private event booking inquiry forms',
+      'Fast-loading visual photo menus with structured Restaurant and Product schema markup',
     ],
   },
 ];
@@ -301,7 +327,7 @@ const FAQ_ITEMS = [
     category: 'local',
     question: 'Do you build websites for Silicon Forest tech and semiconductor companies?',
     answer:
-      'Yes. We build high-conversion B2B websites tailored for Hillsboro and Beaverton tech enterprises, complete with spec sheet download gateways, technical capability matrices, and seamless CRM lead routing.',
+      'Yes. We build high-conversion B2B websites tailored for Hillsboro and Beaverton tech enterprises, complete with spec sheet download gateways, technical capability matrices, and automated CRM lead routing.',
   },
   {
     category: 'local',
@@ -344,6 +370,42 @@ const FAQ_ITEMS = [
     question: 'How do you train our internal team to manage site content?',
     answer:
       'Upon launch, we record a personalized video walkthrough demonstrating exactly how to update copy, add new team members, publish articles, and view analytics data, giving your team complete operational independence.',
+  },
+  {
+    category: 'technical',
+    question: 'How do Silicon Forest semiconductor and tech hardware leaders structure technical capability matrices on Next.js?',
+    answer:
+      'Silicon Forest manufacturers in Hillsboro demand high-speed spec sheet downloads, cleanroom certification data, interactive product configurators, and multi-tier RFQ forms. We engineer static React Server Component architectures that load technical documentation in under 600ms globally.',
+  },
+  {
+    category: 'design',
+    question: 'How do you build high-performance e-commerce and subscription funnels for Portland DTC and apparel brands?',
+    answer:
+      'We combine Next.js 15 with headless Shopify Storefront APIs or custom Stripe Elements, delivering instant page transitions, dynamic cart drawers, recurring subscription management, and sub-second checkout speeds that maximize mobile conversion rates.',
+  },
+  {
+    category: 'architecture',
+    question: 'Can you design research portals and clinical gateways for OHSU and South Waterfront biotech spinouts?',
+    answer:
+      'Yes. We build structured life science portals featuring scientific publication hubs, researcher credential schemas, clinical trial protocol archives, and HIPAA-aware inquiry forms.',
+  },
+  {
+    category: 'process',
+    question: 'How do you guarantee sub-600ms load speeds and 100/100 Core Web Vitals in Oregon?',
+    answer:
+      'We optimize every asset from the foundation up: automatic WebP/AVIF image transcoding, critical CSS inlining, font subsetting, zero render-blocking scripts, and static HTML pre-generation delivered from global edge servers across the Pacific Northwest.',
+  },
+  {
+    category: 'ownership',
+    question: 'What design files and tokens are delivered during the Figma design system handover?',
+    answer:
+      'You receive full edit access to a complete Figma design system containing typography scales, color tokens, responsive mobile/desktop wireframes, custom icon sets, component variants, and interactive prototype flows that your marketing team owns forever.',
+  },
+  {
+    category: 'local',
+    question: 'How do you configure Schema.org JSON-LD structured data for Google Rich Results in Oregon?',
+    answer:
+      'We embed granular Schema.org JSON-LD structured data on every page, including Organization, ProfessionalService, LocalBusiness, FAQPage, BreadcrumbList, and WebSite schemas. These explicit semantic annotations enable Google to generate rich snippet cards, sitelinks, and AI search citations.',
   },
 ];
 

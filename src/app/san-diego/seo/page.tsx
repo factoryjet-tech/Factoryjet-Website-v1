@@ -12,27 +12,27 @@ import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-24';
+const PAGE_MODIFIED = '2026-08-30';
 const CANONICAL = 'https://factoryjet.com/san-diego/seo';
 
 export const metadata: Metadata = {
-  title: 'San Diego Local SEO Agency | Search & AI Visibility | FactoryJet',
+  title: 'Best San Diego SEO Company | Top Local SEO Agency CA | FactoryJet',
   description:
-    'San Diego local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across UTC, Torrey Pines, and Downtown.',
+    'Best San Diego SEO company & local agency. Top Google Map Pack rankings, AI answer citations, and technical Core Web Vitals for San Diego & Southern California.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'San Diego Local SEO Agency | Search & AI Visibility | FactoryJet',
+    title: 'Best San Diego SEO Company | Top Local SEO Agency CA | FactoryJet',
     description:
-      'San Diego local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across UTC, Torrey Pines, and Downtown.',
+      'Premier San Diego SEO company & local agency. Top Google Maps 3-Pack rankings, organic search visibility, and AI search citations across Southern California.',
     url: CANONICAL,
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'San Diego Local SEO Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'San Diego Local SEO Agency | Search & AI Visibility | FactoryJet',
+    title: 'Best San Diego SEO Company | Top Local SEO Agency CA | FactoryJet',
     description: 'Dominate San Diego local search and AI answer engines. Verified Google Maps 3-Pack capture and entity optimization.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -62,37 +62,37 @@ const DISTRICTS = [
     corridor: 'Torrey Pines & University City',
     query: 'biotech patent attorney seo torrey pines san diego',
     focus: 'Biotech Research, Genomics & Life Sciences IP',
-    desc: 'The global biotech mesa. Intense competition for venture funding inquiries, patent litigation retainers, and specialized clinical trial participant recruitment.',
+    desc: 'The global biotech mesa along North Torrey Pines Road and Genesee Avenue. Intense regional and national competition for venture funding inquiries, patent litigation retainers, and specialized clinical trial participant recruitment.',
   },
   {
     corridor: 'Downtown San Diego & Little Italy',
     query: 'commercial litigation law firm seo downtown san diego',
     focus: 'Maritime Law, Commercial Real Estate & Hospitality',
-    desc: 'The dynamic waterfront urban core. Captures high-ticket corporate legal retainers, commercial leasing inquiries, and maritime dispute representations.',
+    desc: 'The dynamic waterfront urban core along Broadway and India Street. Captures high-ticket corporate legal retainers, commercial real estate leasing inquiries, and maritime dispute representations.',
   },
   {
     corridor: 'Sorrento Valley & UTC',
     query: 'defense technology b2b seo sorrento valley',
     focus: 'Telecom Hardware, Defense Technology & Venture Portfolios',
-    desc: 'Southern California wireless and defense hub. B2B service queries require deep technical topical authority, defense capability schemas, and sub-second edge performance.',
+    desc: 'Southern California wireless, semiconductor, and defense contracting hub along Mira Mesa Boulevard and Executive Drive. B2B service queries require deep technical topical authority, defense capability schemas, and sub-second edge performance.',
   },
   {
     corridor: 'La Jolla & Pacific Beach',
     query: 'wealth management seo la jolla',
     focus: 'Wealth Management, Plastic Surgery & Luxury Estate Law',
-    desc: 'Affluent coastal enclave. Features structured medical and financial schema, neighborhood rank grid saturation, and VIP client intake flows.',
+    desc: 'Affluent coastal enclave along Prospect Street and Girard Avenue. Features structured medical and financial schema, neighborhood rank grid saturation, and VIP client consultation intake flows.',
   },
   {
     corridor: 'Kearny Mesa & Central San Diego',
     query: 'specialized healthcare clinic seo kearny mesa',
     focus: 'Medical Systems, Specialized Healthcare & Asian Commerce',
-    desc: 'Central commercial and medical corridor. Multi-location practice architectures, physician directories, and bilingual English and Asian language optimization.',
+    desc: 'Central commercial and medical corridor anchored by Sharp Memorial Hospital and Rady Children’s Hospital. Multi-location practice architectures, physician directories, and bilingual English and Asian language optimization.',
   },
   {
     corridor: 'Otay Mesa & South County Hub',
     query: 'cross border logistics customs broker seo otay mesa',
     focus: 'Cross-Border Logistics, Maquiladora Trade & Manufacturing',
-    desc: 'Critical US-Mexico industrial gateway. B2B service inquiries require technical customs broker landing pages and bilingual Spanish and English search optimization.',
+    desc: 'Critical US-Mexico commercial port of entry and industrial gateway. B2B service inquiries require technical customs broker landing pages, freight capability tables, and bilingual Spanish and English search optimization.',
   },
 ];
 
@@ -344,6 +344,48 @@ const FAQ_ITEMS = [
     question: 'Who will be our main point of contact during the campaign?',
     answer:
       'You work directly with a dedicated senior SEO strategist who oversees technical implementation, citation distribution, and monthly strategy reviews without layers of junior account coordinators.',
+  },
+  {
+    category: 'local',
+    question: 'How do you optimize for life sciences, biopharma, and genomics innovators in Torrey Pines and UTC?',
+    answer:
+      'San Diego is one of the premier life science clusters in the world. We build technical B2B content hubs, MedicalBusiness and ClinicalTrial schemas, scientific research directories, and enterprise procurement lead funnels that capture national biotech queries.',
+  },
+  {
+    category: 'technical',
+    question: 'How do private plastic surgeons and luxury wealth advisors capture high-value clients in La Jolla and Del Mar?',
+    answer:
+      'We deploy granular MedicalBusiness, Physician, and FinancialService schemas, optimize verified practitioner credentials with California State Medical and Bar boards, construct hyper-local neighborhood landing pages, and engineer frictionless private consultation funnels.',
+  },
+  {
+    category: 'local',
+    question: 'How do you structure SEO for cross-border logistics, customs brokers, and maquiladora trade in Otay Mesa?',
+    answer:
+      'The Otay Mesa border crossing is a crucial international manufacturing and freight hub. We build bilingual Spanish and English landing pages, customs brokerage capability matrices, and rapid RFQ quotation forms to capture cross-border B2B contracts.',
+  },
+  {
+    category: 'technical',
+    question: 'How does Google Gemini AI Overview and SearchGPT citation indexing work in Southern California?',
+    answer:
+      'Generative AI search engines synthesize verified factual entities from structured JSON-LD schemas, official California Secretary of State business filings, and direct answer-first page sections. We format your core service offerings to maximize conversational citation frequency in Google AI Overviews and ChatGPT search.',
+  },
+  {
+    category: 'local',
+    question: 'Can you structure local SEO across multi-location healthcare and dental networks in San Diego County?',
+    answer:
+      'Yes. We construct distinct location landing pages for North County (Carlsbad, Oceanside, Encinitas), East County (El Cajon, La Mesa), and South Bay (Chula Vista) with independent Schema.org LocalBusiness markup, preventing internal keyword cannibalization.',
+  },
+  {
+    category: 'deliverables',
+    question: 'What is NAP citation synchronization across San Diego and California business directories?',
+    answer:
+      'We establish and synchronize verified business citations across essential regional directories, including the San Diego Regional Chamber of Commerce, California BBB, Apple Maps, Bing Places, YellowPages, Dun & Bradstreet, and industry registries, ensuring 100% data consistency, eliminating duplicates, and reinforcing Google Maps 3-Pack authority.',
+  },
+  {
+    category: 'local',
+    question: 'How do defense technology suppliers and maritime contractors near Point Loma capture federal and commercial bids?',
+    answer:
+      'San Diego is home to the largest concentration of naval and military forces in the country. We engineer technical B2B landing pages with CAGE codes, NAICS classifications, cybersecurity compliance credentials, and defense capability documentation to capture prime contractor searches.',
   },
 ];
 
