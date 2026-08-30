@@ -12,27 +12,27 @@ import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import EcommerceCityLinksUS from '@/components/v2/EcommerceCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-24';
+const PAGE_MODIFIED = '2026-08-30';
 const CANONICAL = 'https://factoryjet.com/lincoln/ecommerce-development';
 
 export const metadata: Metadata = {
-  title: 'Lincoln Ecommerce Development Agency | Shopify Plus & Headless | FactoryJet',
+  title: 'Best Lincoln E-Commerce Agency | Top Shopify Plus & Headless | FactoryJet',
   description:
-    'Lincoln ecommerce development agency. Headless Shopify Plus, Next.js storefronts, sub-second checkout, and custom B2B wholesale integrations for Nebraska brands.',
+    'Best Lincoln e-commerce development agency. Top headless Shopify Plus, Next.js storefronts, sub-second checkouts, and custom B2B wholesale portals in Nebraska.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Lincoln Ecommerce Development Agency | Shopify Plus & Headless | FactoryJet',
+    title: 'Best Lincoln E-Commerce Agency | Top Shopify Plus & Headless | FactoryJet',
     description:
-      'Lincoln ecommerce development agency. Headless Shopify Plus, Next.js storefronts, sub-second checkout, and custom B2B wholesale integrations for Nebraska brands.',
+      'Premier Lincoln ecommerce development agency. Headless Shopify Plus, Next.js storefronts, sub-second checkout, and custom B2B wholesale integrations for Nebraska brands.',
     url: CANONICAL,
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Lincoln Ecommerce Development Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Lincoln Ecommerce Development Agency | Shopify Plus & Headless | FactoryJet',
+    title: 'Best Lincoln E-Commerce Agency | Top Shopify Plus & Headless | FactoryJet',
     description: 'Custom headless Shopify Plus and Next.js ecommerce development in Lincoln NE. Sub-second performance, full IP code ownership, 7-day delivery.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -101,7 +101,7 @@ const INDUSTRY_SHOWCASE = [
     sector: 'Agricultural Technology, Livestock Genetics & Agronomy Supply',
     headline: 'Enterprise B2B Wholesale Portals for Nebraska AgTech Leaders',
     description:
-      'Livestock nutrition manufacturers, seed distributors, and precision agriculture equipment providers across Lincoln and the Silicon Prairie require robust digital commerce capabilities. We build high-speed wholesale platforms with automated PO processing, Net-30 credit terms, dealer group tier pricing, and real-time ERP inventory syncing.',
+      'Livestock nutrition manufacturers, seed distributors, and precision agriculture equipment providers across Lincoln and the Silicon Prairie require high-performance digital commerce capabilities. We build high-speed wholesale platforms with automated PO processing, Net-30 credit terms, dealer group tier pricing, and real-time ERP inventory syncing.',
     image: '/images/us/lincoln/ecommerce/portfolio-1.webp',
     alt: 'Lincoln Nebraska agricultural technology livestock genetics and agronomy supply B2B ecommerce platform',
     points: [
@@ -114,7 +114,7 @@ const INDUSTRY_SHOWCASE = [
     sector: 'B2B Industrial Equipment, Sheet Metal & Manufacturing',
     headline: 'High-Throughput Commerce Engines for Lincoln Industrial Suppliers',
     description:
-      'Sheet metal fabricators, industrial electrical parts distributors, and hydraulic tool manufacturers across North 27th and West O Street demand robust online catalogs. We engineer specialized technical search filters, schematic part lookups, automated freight rating, and customer credit line management.',
+      'Sheet metal fabricators, industrial electrical parts distributors, and hydraulic tool manufacturers across North 27th and West O Street demand resilient online catalogs. We engineer specialized technical search filters, schematic part lookups, automated freight rating, and customer credit line management.',
     image: '/images/us/manufacturing-website-design/shop-floor.webp',
     alt: 'Lincoln Nebraska industrial equipment sheet metal fabrication and manufacturing B2B ecommerce engineering',
     points: [
@@ -124,16 +124,16 @@ const INDUSTRY_SHOWCASE = [
     ],
   },
   {
-    sector: 'Athletic Apparel, Outdoor Gear & Collegiate Merchandising',
-    headline: 'High-Converting Headless Storefronts for Nebraska Lifestyle Brands',
+    sector: 'Collegiate Apparel, Lifestyle Goods & Husker Fan Merch',
+    headline: 'High-Conversion Storefronts for Haymarket & Campus Retailers',
     description:
-      'From Husker collegiate lifestyle apparel creators to hunting gear innovators and outdoor performance brands, Nebraska brands demand high-speed shopping experiences. We engineer bespoke Figma UI/UX storefronts with sub-second product page loads, one-click mobile checkout, rich interactive lookbooks, and customized gear configurators.',
-    image: '/images/us/b2b-website-design/hero.webp',
-    alt: 'Lincoln Nebraska athletic apparel outdoor hunting gear and collegiate merchandising headless ecommerce',
+      'Collegiate apparel brands, boutique lifestyle retailers, and sports merchandise creators across Downtown Lincoln and the Railyard need platforms engineered for viral game-day spikes. We build custom headless Next.js storefronts with instant product filtering, visual lookbooks, and frictionless 1-tap mobile checkouts.',
+    image: '/images/us/saas-website-design/hero.webp',
+    alt: 'Lincoln Nebraska Haymarket collegiate apparel lifestyle goods and fan merchandise ecommerce',
     points: [
       'Sub-second first contentful paint and instant product filtering with zero layout shifts',
       'Interactive visual lookbooks, dynamic sizing calculators, and cross-sell gear bundles',
-      'Seamless mobile checkout utilizing Shop Pay, Apple Pay, and Klarna flexible financing',
+      'Frictionless mobile checkout utilizing Shop Pay, Apple Pay, and Klarna flexible financing',
     ],
   },
   {
@@ -147,6 +147,32 @@ const INDUSTRY_SHOWCASE = [
       'Flexible recurring subscription management with custom delivery interval selection',
       'Dynamic cold-pack and localized perishable shipping rate calculation',
       'Integrated loyalty rewards, customer referral engines, and verified review collection',
+    ],
+  },
+  {
+    sector: 'University of Nebraska Innovation Campus AgTech & Precision Sensors',
+    headline: 'Digital License Provisioning & Global Hardware Sales Portals',
+    description:
+      'AgTech software developers and precision sensor innovators at Nebraska Innovation Campus (NIC) require sophisticated B2B commerce. We engineer custom Next.js web applications featuring automated digital software license key provisioning, developer API documentation gateways, and tier-based hardware evaluation unit checkouts.',
+    image: '/images/services/card-real-estate.webp',
+    alt: 'Lincoln Nebraska Innovation Campus agtech software precision sensors ecommerce development',
+    points: [
+      'Automated digital license provisioning and recurring enterprise SaaS billing',
+      'Developer API key management and SDK documentation download portals',
+      'Tiered enterprise procurement gateways with automated ACH invoicing',
+    ],
+  },
+  {
+    sector: 'Air Park Aerospace Components, Warehousing & Precision Metal Supply',
+    headline: 'High-Throughput Parts Catalogs for Air Park Industrial Suppliers',
+    description:
+      'Aviation component manufacturers, sheet metal fabricators, and warehouse logistics providers across Lincoln Air Park demand rugged online ordering portals. We build custom Next.js storefronts featuring engineering drawing downloads, real-time inventory lot tracking, and freight quoting for heavy LTL freight.',
+    image: '/images/us/manufacturing-website-design/shop-floor.webp',
+    alt: 'Lincoln Air Park aerospace components warehousing precision sheet metal B2B ecommerce engineering',
+    points: [
+      'Interactive CAD specification matrices and instant part number add-to-cart matching',
+      'Real-time multi-location warehouse inventory feeds across eastern Nebraska',
+      'Customer-specific contracted pricing tiers and commercial net-30 terms',
     ],
   },
 ];
@@ -289,7 +315,7 @@ const FAQ_ITEMS = [
     category: 'tech',
     question: 'Why build headless with Next.js 15 instead of a standard Shopify Liquid theme?',
     answer:
-      'Headless Next.js 15 delivers sub-second page transitions, instant search, dynamic bundle builders, and complete design freedom while retaining Shopify Plus robust checkout and inventory engine.',
+      'Headless Next.js 15 delivers sub-second page transitions, instant search, dynamic bundle builders, and complete design freedom while retaining Shopify Plus scalable checkout and inventory engine.',
   },
   {
     category: 'tech',
@@ -319,7 +345,7 @@ const FAQ_ITEMS = [
     category: 'local',
     question: 'Can you build custom B2B wholesale portals for North 27th industrial suppliers?',
     answer:
-      'Yes. We build robust B2B platforms featuring customer tier pricing, bulk line sheet ordering, Net-30 purchase order workflows, and custom invoice management.',
+      'Yes. We build enterprise B2B platforms featuring customer tier pricing, bulk line sheet ordering, Net-30 purchase order workflows, and custom invoice management.',
   },
   {
     category: 'local',
@@ -356,6 +382,42 @@ const FAQ_ITEMS = [
     question: 'Can our in-house developers easily maintain and extend the Next.js codebase?',
     answer:
       'Yes. We write clean, strictly typed TypeScript and modular React code following standard conventions, ensuring your internal engineers can maintain and expand the platform effortlessly.',
+  },
+  {
+    category: 'architecture',
+    question: 'Why do Lincoln and Nebraska enterprise brands choose headless Shopify Plus over standard themes?',
+    answer:
+      'Headless architectures decouple your front-end customer storefront from commerce back-end databases, delivering sub-500ms page transitions, custom 3D product configurators, and zero theme-code bloat while using Shopify Plus for secure payment processing and inventory tracking.',
+  },
+  {
+    category: 'b2b',
+    question: 'How do you integrate NetSuite, Microsoft Dynamics, and Epicor ERP with B2B portals for Nebraska AgTech suppliers?',
+    answer:
+      'We build real-time bidirectional API connectors that synchronize customer-specific contract pricing tiers, credit limits, purchase orders, multi-warehouse inventory levels across the Silicon Prairie, and automated invoice PDF generation.',
+  },
+  {
+    category: 'shipping',
+    question: 'How do you calculate complex LTL freight and agricultural equipment shipping rates in real time?',
+    answer:
+      'We integrate specialized freight rating engines including Freightview, Echo, and custom carrier APIs with Shopify checkout, calculating real-time pallet rates, liftgate surcharges, and heavy freight rules at the zip code level.',
+  },
+  {
+    category: 'performance',
+    question: 'How do you guarantee sub-500ms load speeds and 100/100 Core Web Vitals across Nebraska networks?',
+    answer:
+      'We optimize every asset from the foundation up: automatic WebP/AVIF image transcoding, critical CSS inlining, font subsetting, zero render-blocking scripts, and static HTML pre-generation delivered from global edge servers across the Midwest.',
+  },
+  {
+    category: 'conversion',
+    question: 'What mobile checkout optimizations do you implement to maximize conversion rates in Lincoln?',
+    answer:
+      'We implement one-tap accelerated checkouts using Shop Pay, Apple Pay, Google Pay, and Klarna, combined with sticky mobile add-to-cart drawers, localized address auto-complete, and zero full-page reloads.',
+  },
+  {
+    category: 'seo',
+    question: 'How do you configure Schema.org JSON-LD structured data for Google Merchant Center and Product Rich Snippets?',
+    answer:
+      'We embed granular Schema.org JSON-LD structured data on every product and collection page, including Product, Offer, AggregateRating, MerchantReturnPolicy, and ShippingDetails schemas. These explicit semantic annotations enable Google to generate rich merchant listings, free product carousel badges, and AI search citations.',
   },
 ];
 
