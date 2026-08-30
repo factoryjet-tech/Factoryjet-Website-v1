@@ -86,7 +86,7 @@ export const metadata: Metadata = {
 // Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
 // dateModified; these pages carried none. Keep this honest: bump it when the
 // page's content actually changes, not on every unrelated deploy.
-const PAGE_MODIFIED = '2026-08-17';
+const PAGE_MODIFIED = '2026-08-30';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -483,6 +483,30 @@ const CHATBOT_FAQ_ITEMS = [
     question: 'Is my business data safe with an AI chatbot?',
     answer:
       "Yes. We use API-level integrations (no screen scraping), enforce least-privilege access so the agent reads only the data it needs, and implement full audit trails on every action. For financial services, healthcare, and legal clients, we offer private LLM setups where your data never leaves your infrastructure. All data flows are documented and handed over at delivery.",
+  },
+  {
+    category: 'technical',
+    question: 'What is Retrieval-Augmented Generation (RAG) and how does it prevent chatbot hallucinations?',
+    answer:
+      'Retrieval-Augmented Generation (RAG) connects large language models to your proprietary knowledge base, PDFs, product databases, and SOPs via semantic vector embeddings (pgvector, Pinecone). Before generating a response, the agent retrieves exact factual excerpts and cites source documents, preventing hallucinations and ensuring 100% policy compliance.',
+  },
+  {
+    category: 'technical',
+    question: 'How do AI chatbots handle bi-directional tool calling and API execution?',
+    answer:
+      'Our AI chatbots utilize function calling to perform live actions across your business software: checking order tracking numbers via ShipStation, issuing partial refunds via Stripe, booking calendar appointments via Calendly/Google Calendar, and updating deal stages in HubSpot or Salesforce.',
+  },
+  {
+    category: 'channels',
+    question: 'Can AI chatbots handle human agent handoffs with conversation context?',
+    answer:
+      'Yes. When an inquiry requires human escalation (e.g. high-value VIP deals or complex edge cases), the AI chatbot summarizes the conversation history, sentiment, and user intent, and transfers the chat to your live team inside Zendesk, Gorgias, Intercom, or Slack with zero context lost.',
+  },
+  {
+    category: 'technical',
+    question: 'How do you evaluate and benchmark AI chatbot response accuracy and latency?',
+    answer:
+      'We run automated LLM evaluation suites (DeepEval, RAGAS) across hundreds of synthetic and historical customer inquiry test cases. We measure retrieval precision, factual faithfulness, answer relevance, and sub-second token latency prior to production deployment.',
   },
 ];
 
