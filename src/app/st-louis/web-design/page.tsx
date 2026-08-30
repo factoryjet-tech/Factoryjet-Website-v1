@@ -12,18 +12,18 @@ import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import WebDesignCityLinksUS from '@/components/v2/WebDesignCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-24';
+const PAGE_MODIFIED = '2026-08-30';
 const CANONICAL = 'https://factoryjet.com/st-louis/web-design';
 
 export const metadata: Metadata = {
-  title: 'St. Louis Web Design Agency | Custom Next.js & UI/UX | FactoryJet',
+  title: 'Best St. Louis Web Design Agency | Top Next.js Sites | FactoryJet',
   description:
-    'St. Louis web design agency. High-converting Next.js websites, sub-second load times, and custom Figma UI/UX for Missouri businesses.',
+    'Best St. Louis web design agency. Top custom Next.js websites, sub-second load times, and custom Figma UI/UX for Missouri businesses.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'St. Louis Web Design Agency | Custom Next.js & UI/UX | FactoryJet',
+    title: 'Best St. Louis Web Design Agency | Top Next.js Sites | FactoryJet',
     description:
       'St. Louis web design agency. High-converting Next.js websites, sub-second load times, and custom Figma UI/UX for Missouri businesses.',
     url: CANONICAL,
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'St. Louis Web Design Agency | Custom Next.js & UI/UX | FactoryJet',
+    title: 'Best St. Louis Web Design Agency | Top Next.js Sites | FactoryJet',
     description: 'Custom Next.js web design and engineering in St. Louis MO. Sub-second performance, full IP code ownership, 7-day delivery.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -147,6 +147,32 @@ const INDUSTRY_SHOWCASE = [
       'Interactive freight rate estimation calculators and RFQ workflow automation',
       'Sub-second mobile performance ensuring immediate commercial quote submissions',
       'Structured LogisticsService and Organization schema markup for regional search dominance',
+    ],
+  },
+  {
+    sector: 'Chesterfield & West County Enterprise Tech, Healthcare & Architectural Services',
+    headline: 'Enterprise Portals & Client Sandboxes for West County Corporate Hubs',
+    description:
+      'Enterprise software firms, regional healthcare provider networks, and commercial architectural studios across Chesterfield and West County demand sophisticated digital flagships. We engineer custom Next.js web applications with interactive capability matrices, patient intake workflows, and automated Salesforce/HubSpot lead routing.',
+    image: '/images/us/denver/tech-office.webp',
+    alt: 'St. Louis Chesterfield enterprise tech healthcare architecture web design',
+    points: [
+      'Interactive architectural portfolio visualizers and CAD model presentation modules',
+      'HIPAA-aware patient intake form gateways and provider directory search',
+      'High-security edge deployment on Cloudflare CDN with sub-second response times',
+    ],
+  },
+  {
+    sector: 'Grand Center Arts & Midtown Cultural Institutions, Foundations & Media Studios',
+    headline: 'Tactile Digital Experiences for St. Louis Arts & Non-Profit Foundations',
+    description:
+      'Historic cultural foundations, contemporary arts institutions, and digital media production studios across Grand Center and Midtown demand visual distinction. We design high-converting web applications with tactile editorial typography, interactive donor contribution funnels, dynamic event calendars, and smooth micro-animations.',
+    image: '/images/services/card-real-estate.webp',
+    alt: 'St. Louis Grand Center arts cultural foundation media studio web design',
+    points: [
+      'Tactile editorial typography scales with custom brand micro-animations',
+      'Interactive donor contribution funnels with recurring Stripe giving workflows',
+      'Frictionless event ticketing and program schedule calendar integrations',
     ],
   },
 ];
@@ -345,6 +371,48 @@ const FAQ_ITEMS = [
     answer:
       'Yes. We write clean, modular, and fully typed TypeScript and React code adhering to global standards, ensuring any modern web developer can easily maintain and extend your application.',
   },
+  {
+    category: 'technical',
+    question: 'Why do St. Louis enterprise businesses and bioscience platforms choose custom Next.js over WordPress templates?',
+    answer:
+      'Next.js 15 delivers static generation and server-side rendering on global edge networks, eliminating database bottlenecks, vulnerable PHP plugins, and slow load times. This results in sub-500ms first contentful paint, automated SEO indexing, and enterprise-grade security with zero ongoing plugin maintenance headaches.',
+  },
+  {
+    category: 'bioscience',
+    question: 'How do you design clinical and pipeline visualizer web applications for Cortex and 39 North plant science leaders?',
+    answer:
+      'We engineer clinical-grade digital flagships with interactive plant science and biotechnology pipeline visualizers, gated investor data rooms, and FDA compliance documentation search to convey scientific authority to research partners and global agtech investors.',
+  },
+  {
+    category: 'performance',
+    question: 'How do you guarantee sub-500ms page load speeds and 100/100 Core Web Vitals across Missouri?',
+    answer:
+      'We optimize every asset from the foundation up: automatic WebP/AVIF image transcoding, critical CSS inlining, font subsetting, zero render-blocking scripts, and static HTML pre-generation delivered from global edge servers across the Midwest.',
+  },
+  {
+    category: 'design-systems',
+    question: 'How do you structure custom Figma UI/UX design systems for corporate brands in Clayton and St. Louis?',
+    answer:
+      'We build complete Figma design token libraries with semantic color palettes, accessible typography hierarchies, auto-layout responsive components, and interactive micro-animations. This creates visual consistency across all digital touchpoints and enables rapid feature deployment.',
+  },
+  {
+    category: 'seo',
+    question: 'How do you implement Schema.org JSON-LD structured data for Google AI Overviews and rich search results?',
+    answer:
+      'We embed granular Schema.org JSON-LD structured data on every page, including ProfessionalService, WebPage, FAQPage, BreadcrumbList, and Person schemas. These explicit semantic annotations enable search engines and LLM agents to accurately understand and cite your services.',
+  },
+  {
+    category: 'accessibility',
+    question: 'What ADA accessibility standards and WCAG 2.1 AA compliance protocols do you build into St. Louis websites?',
+    answer:
+      'We engineer fully accessible web applications meeting WCAG 2.1 AA criteria: keyboard-navigable interface components, semantic HTML5 landmarks, ARIA labels, high-contrast color pairings, and screen-reader optimized content hierarchies.',
+  },
+  {
+    category: 'lead-generation',
+    question: 'How do you handle frictionless CRM and automated lead routing for commercial service firms in Clayton and Downtown St. Louis?',
+    answer:
+      'We build secure, webhook-driven form gateways that immediately route consultation requests, RFQs, and client intake data into Salesforce, HubSpot, or custom databases with instant email/SMS notifications and zero spam submissions.',
+  },
 ];
 
 const FAQ_SCHEMA = {
@@ -367,7 +435,6 @@ const LOCAL_BUSINESS_SCHEMA = {
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
   telephone: '+1-832-998-8422',
-  priceRange: '$$$',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'St. Louis',
@@ -556,7 +623,7 @@ export default function StLouisWebDesignPage() {
                 </h2>
 
                 <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
-                  From Cortex plant science leaders to Clayton private equity firms and St. Charles aerospace suppliers, we build high-converting web applications that elevate your brand equity.
+                  From Cortex plant science leaders to Clayton private equity firms and St. Charles aerospace suppliers, we build high-converting web applications that accelerate your commercial growth.
                 </p>
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
