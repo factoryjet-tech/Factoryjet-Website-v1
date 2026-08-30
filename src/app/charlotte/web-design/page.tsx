@@ -12,27 +12,27 @@ import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import WebDesignCityLinksUS from '@/components/v2/WebDesignCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-24';
+const PAGE_MODIFIED = '2026-08-30';
 const CANONICAL = 'https://factoryjet.com/charlotte/web-design';
 
 export const metadata: Metadata = {
-  title: 'Charlotte Web Design Agency | Fast Next.js Sites | FactoryJet',
+  title: 'Best Charlotte Web Design Agency | Top Next.js Websites | FactoryJet',
   description:
-    'Charlotte web design agency. Custom Next.js websites, sub-second load speeds, mobile conversion flows, and full code ownership for North Carolina businesses.',
+    'Best Charlotte web design agency. Top custom Next.js websites, sub-second load speeds, mobile conversion flows, and 100% full IP code ownership for North Carolina businesses.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Charlotte Web Design Agency | Fast Next.js Sites | FactoryJet',
+    title: 'Best Charlotte Web Design Agency | Top Next.js Websites | FactoryJet',
     description:
-      'Charlotte web design agency. Custom Next.js websites, sub-second load speeds, and full code ownership for North Carolina businesses.',
+      'Premier Charlotte web design agency. Custom Next.js websites, sub-second load speeds, and full code ownership for North Carolina businesses.',
     url: CANONICAL,
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Charlotte Web Design Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Charlotte Web Design Agency | Fast Next.js Sites | FactoryJet',
+    title: 'Best Charlotte Web Design Agency | Top Next.js Websites | FactoryJet',
     description: 'Custom Next.js web design in Charlotte NC. 7-day launch and 100% full IP code ownership.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -147,6 +147,32 @@ const INDUSTRY_SHOWCASE = [
       'Interactive equipment capability matrices and downloadable CAD/PDF engineering data',
       'Frictionless multi-step RFQ form workflows routing directly to estimating teams',
       'Lightweight server-rendered Next.js architecture deployed to Cloudflare Edge nodes',
+    ],
+  },
+  {
+    sector: 'Motorsports Engineering, High-Performance Automotive & Lake Norman Marine',
+    headline: 'Engineering Digital Dominance for Mooresville & Lake Norman Leaders',
+    description:
+      'NASCAR team headquarters, precision racing suppliers, and luxury boat brokerages around Lake Norman demand ultra-high-definition visual platforms. We build custom Next.js web applications featuring interactive parts catalogs, 3D component configurators, race telemetry dashboards, and VIP private appointment inquiry funnels.',
+    image: '/images/us/manufacturing-website-design/shop-floor.webp',
+    alt: 'Charlotte motorsports engineering and performance racing website design',
+    points: [
+      'Searchable performance parts catalogs with spec sheet downloads and fitment guides',
+      'Interactive 3D component renders and video highlights rendering smoothly at 60fps',
+      'VIP consultation scheduling forms routing directly to technical engineering teams',
+    ],
+  },
+  {
+    sector: 'Energy Tech, Clean Power Generation & Grid Infrastructure',
+    headline: 'Institutional Credibility for Charlotte Energy & Utility Innovators',
+    description:
+      'Known as the Energy Hub of the East Coast, Charlotte hosts major utility operators, smart grid engineers, and nuclear technology consultants in University City. We construct enterprise digital flagships featuring interactive grid capability maps, ESG reporting repositories, regulatory compliance matrices, and enterprise RFP portals.',
+    image: '/images/services/card-real-estate.webp',
+    alt: 'Charlotte energy tech clean power and utility infrastructure web design',
+    points: [
+      'Interactive energy infrastructure project maps and downloadable ESG compliance data',
+      'Enterprise RFP and contractor bid submission portals with secure file uploads',
+      'Sub-second page rendering with 100/100 Core Web Vitals on mobile and desktop',
     ],
   },
 ];
@@ -301,7 +327,7 @@ const FAQ_ITEMS = [
     category: 'local',
     question: 'Do you build B2B websites for South End fintech and digital firms?',
     answer:
-      'Yes. We build high-conversion B2B websites tailored for South End and Uptown financial technology firms, complete with interactive demo portals, technical capability matrices, and seamless CRM lead routing.',
+      'Yes. We build high-conversion B2B websites tailored for South End and Uptown financial technology firms, complete with interactive demo portals, technical capability matrices, and automated CRM lead routing.',
   },
   {
     category: 'local',
@@ -344,6 +370,42 @@ const FAQ_ITEMS = [
     question: 'How do you train our internal team to manage site content?',
     answer:
       'Upon launch, we record a personalized video walkthrough demonstrating exactly how to update copy, add new team members, publish articles, and view analytics data, giving your team complete operational independence.',
+  },
+  {
+    category: 'technical',
+    question: 'How do Uptown Charlotte banking and financial institutions address cybersecurity and FINRA compliance?',
+    answer:
+      'We build static React Server Component architectures deployed to Cloudflare Edge nodes with automated SSL, strict Content Security Policies (CSP), FINRA/SEC archiving hooks, and enterprise DDoS shielding, eliminating the database vulnerabilities common in legacy CMS platforms.',
+  },
+  {
+    category: 'architecture',
+    question: 'Why is Next.js 15 ideal for South End and LoSo fintech and SaaS scale-ups?',
+    answer:
+      'Tech startups in South End require fast page load speeds, dynamic developer documentation, interactive product demos, and frictionless conversion flows. Next.js 15 delivers sub-second rendering, instant client-side transitions, and clean TypeScript codebases ready for enterprise scaling.',
+  },
+  {
+    category: 'design',
+    question: 'Can you design executive partner directories and investor hubs for Ballantyne corporate headquarters?',
+    answer:
+      'Yes. We build structured partner directories with bar admission schemas, board member profiles, interactive investor relations portals, and downloadable annual reports engineered for corporate transparency and high conversion rates.',
+  },
+  {
+    category: 'process',
+    question: 'How do you guarantee sub-600ms load speeds and 100/100 Core Web Vitals in North Carolina?',
+    answer:
+      'We optimize every asset from the foundation up: automatic WebP/AVIF image transcoding, critical CSS inlining, font subsetting, zero render-blocking scripts, and static HTML pre-generation delivered from global edge servers across the Carolinas.',
+  },
+  {
+    category: 'ownership',
+    question: 'What design files and tokens are delivered during the Figma design system handover?',
+    answer:
+      'You receive full edit access to a complete Figma design system containing typography scales, color tokens, responsive mobile/desktop wireframes, custom icon sets, component variants, and interactive prototype flows that your marketing team owns forever.',
+  },
+  {
+    category: 'local',
+    question: 'How do you configure Schema.org JSON-LD structured data for Google Rich Results in North Carolina?',
+    answer:
+      'We embed granular Schema.org JSON-LD structured data on every page, including Organization, ProfessionalService, LocalBusiness, FAQPage, BreadcrumbList, and WebSite schemas. These explicit semantic annotations enable Google to generate rich snippet cards, sitelinks, and AI search citations.',
   },
 ];
 

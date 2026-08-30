@@ -12,27 +12,27 @@ import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import WebDesignCityLinksUS from '@/components/v2/WebDesignCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-24';
+const PAGE_MODIFIED = '2026-08-30';
 const CANONICAL = 'https://factoryjet.com/miami/web-design';
 
 export const metadata: Metadata = {
-  title: 'Miami Web Design Agency | Fast Next.js Sites | FactoryJet',
+  title: 'Best Miami Web Design Agency | Top Next.js Websites | FactoryJet',
   description:
-    'Miami web design agency. Custom Next.js websites, sub-second load speeds, mobile conversion flows, and full code ownership for Florida businesses.',
+    'Best Miami web design agency. Top custom Next.js websites, sub-second load speeds, mobile conversion flows, and 100% full IP code ownership for South Florida businesses.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Miami Web Design Agency | Fast Next.js Sites | FactoryJet',
+    title: 'Best Miami Web Design Agency | Top Next.js Websites | FactoryJet',
     description:
-      'Miami web design agency. Custom Next.js websites, sub-second load speeds, and full code ownership for Florida businesses.',
+      'Premier Miami web design agency. Custom Next.js websites, sub-second load speeds, and full code ownership for South Florida businesses.',
     url: CANONICAL,
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Miami Web Design Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Miami Web Design Agency | Fast Next.js Sites | FactoryJet',
+    title: 'Best Miami Web Design Agency | Top Next.js Websites | FactoryJet',
     description: 'Custom Next.js web design in Miami FL. 7-day launch and 100% full IP code ownership.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -147,6 +147,32 @@ const INDUSTRY_SHOWCASE = [
       'Interactive logistics capability matrices and downloadable customs documentation',
       'Frictionless multi-step freight RFQ form workflows routing directly to dispatch teams',
       'Lightweight server-rendered Next.js architecture deployed to Cloudflare Edge nodes',
+    ],
+  },
+  {
+    sector: 'Luxury Yacht Brokerages, Marine Logistics & Maritime Charters',
+    headline: 'Editorial Maritime Portfolios & Miami River Superyacht Showcases',
+    description:
+      'High-end yacht brokerages, charter fleets, and marine services operating in Miami Beach, Fort Lauderdale, and Coconut Grove require prestigious digital flagships. We build custom Next.js web applications featuring vessel inventory filtering, high-resolution photo galleries, virtual 360-degree cabin tours, and VIP private charter booking funnels.',
+    image: '/images/services/card-real-estate.webp',
+    alt: 'Miami luxury yacht brokerage and maritime charter website design',
+    points: [
+      'Searchable vessel inventory catalogs with builder, length, and draft filtering',
+      'Interactive 360-degree virtual yacht cabin tours and high-resolution video embeds',
+      'VIP charter reservation funnels with automated Salesforce and HubSpot CRM routing',
+    ],
+  },
+  {
+    sector: 'Elective Aesthetic Medicine, Plastic Surgery & Luxury Wellness',
+    headline: 'High-Trust Patient Portfolios for Miami Cosmetic & Wellness Clinics',
+    description:
+      'From Brickell wellness institutes to world-renowned plastic surgery clinics in Coral Gables and South Beach, patient trust drives procedure bookings. We engineer HIPAA-aware medical flagships featuring before-and-after procedural galleries, Florida Board of Medicine credentials, surgeon biographies, and instant private consultation scheduling.',
+    image: '/images/us/services/dental-seo/hero.webp',
+    alt: 'Miami plastic surgery aesthetic medicine and luxury wellness web design',
+    points: [
+      'Interactive before-and-after treatment sliders with procedural filtering',
+      'HIPAA-compliant consultation booking forms and secure patient intake portals',
+      'Flawless mobile page rendering achieving sub-600ms load speeds on 5G networks',
     ],
   },
 ];
@@ -301,7 +327,7 @@ const FAQ_ITEMS = [
     category: 'local',
     question: 'Do you build bilingual English and Spanish websites for Miami companies?',
     answer:
-      'Yes. We architect seamless multi-language routing with hreflang tags, localized JSON-LD schema, and high-performance language toggles to effectively capture both domestic US and Latin American markets.',
+      'Yes. We architect frictionless multi-language routing with hreflang tags, localized JSON-LD schema, and high-performance language toggles to effectively capture both domestic US and Latin American markets.',
   },
   {
     category: 'local',
@@ -344,6 +370,42 @@ const FAQ_ITEMS = [
     question: 'How do you train our internal team to manage site content?',
     answer:
       'Upon launch, we record a personalized video walkthrough demonstrating exactly how to update copy, add new team members, publish articles, and view analytics data, giving your team complete operational independence.',
+  },
+  {
+    category: 'architecture',
+    question: 'How do you build bilingual English and Spanish web architectures for Miami and Latin American markets?',
+    answer:
+      'We engineer internationalized Next.js routing with localized hreflang tags, subpath or domain-level language switching, and fully translated UI strings. This allows South Florida businesses to serve bilingual domestic clients while ranking across Latin American and Caribbean search engines.',
+  },
+  {
+    category: 'technical',
+    question: 'How do Brickell wealth management and cross-border fintech firms handle security and compliance?',
+    answer:
+      'We build static React Server Component architectures deployed to Cloudflare Edge nodes with automated SSL, strict Content Security Policies (CSP), SOC 2 compliant endpoints, and enterprise DDoS shielding, eliminating the database vulnerabilities common in legacy CMS platforms.',
+  },
+  {
+    category: 'design',
+    question: 'Can you design interactive before-and-after procedural galleries for plastic surgery clinics in Coral Gables and Miami Beach?',
+    answer:
+      'Yes. We build HIPAA-aware before-and-after image comparison sliders with procedure categorization, doctor attribution, and mobile touch gestures, allowing prospective patients to review surgical results with sub-second image loading.',
+  },
+  {
+    category: 'architecture',
+    question: 'Can you integrate dynamic freight rate estimators and quote requests for Doral import-export firms?',
+    answer:
+      'Yes. We build custom multi-step logistics quote calculators that factor in cargo origin, destination, container dimensions, and customs clearance requirements, routing submissions immediately to dispatch and sales teams.',
+  },
+  {
+    category: 'process',
+    question: 'How do you migrate slow legacy WordPress or Wix websites to Next.js 15 without losing Google rankings?',
+    answer:
+      'We perform a complete URL inventory audit, map every legacy page to its new Next.js route with server-level 301 redirects, preserve existing meta descriptions and heading structures, and deploy Schema.org markup to maintain and expand established search visibility.',
+  },
+  {
+    category: 'local',
+    question: 'How do you configure Schema.org JSON-LD structured data for Google Rich Results in Florida?',
+    answer:
+      'We embed granular Schema.org JSON-LD structured data on every page, including Organization, ProfessionalService, LocalBusiness, FAQPage, BreadcrumbList, and WebSite schemas. These explicit semantic annotations enable Google to generate rich snippet cards, sitelinks, and AI search citations.',
   },
 ];
 
