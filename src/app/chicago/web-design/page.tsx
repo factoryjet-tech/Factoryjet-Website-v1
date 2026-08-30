@@ -13,27 +13,27 @@ import WebDesignCityLinksUS from '@/components/v2/WebDesignCityLinksUS';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-29';
+const PAGE_MODIFIED = '2026-08-30';
 const CANONICAL = 'https://factoryjet.com/chicago/web-design';
 
 export const metadata: Metadata = {
-  title: 'Chicago Web Design Agency | Fast Next.js Sites | FactoryJet',
+  title: 'Best Chicago Web Design Agency | Top Next.js Websites | FactoryJet',
   description:
-    'Chicago web design agency. Custom Next.js websites, sub-second load speeds, mobile conversion flows, and full code ownership for Illinois businesses. Free quote.',
+    'Best Chicago web design agency. Top custom Next.js websites, sub-second load speeds, mobile conversion flows, and 100% full IP code ownership for Illinois businesses.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Chicago Web Design Agency | Fast Next.js Sites | FactoryJet',
+    title: 'Best Chicago Web Design Agency | Top Next.js Websites | FactoryJet',
     description:
-      'Chicago web design agency. Custom Next.js websites, sub-second load speeds, and full code ownership for Illinois businesses.',
+      'Premier Chicago web design agency. Custom Next.js websites, sub-second load speeds, and full code ownership for Illinois businesses.',
     url: CANONICAL,
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Chicago Web Design Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Chicago Web Design Agency | Fast Next.js Sites | FactoryJet',
+    title: 'Best Chicago Web Design Agency | Top Next.js Websites | FactoryJet',
     description: 'Custom Next.js web design in Chicago IL. 7-day launch and 100% full IP code ownership.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -345,6 +345,36 @@ const FAQ_ITEMS = [
     question: 'How do you train our internal team to manage site content?',
     answer:
       'Upon launch, we record a personalized video walkthrough demonstrating exactly how to update copy, add new team members, publish articles, and view analytics data, giving your team complete operational independence.',
+  },
+  {
+    category: 'architecture',
+    question: 'Why is Next.js 15 superior to legacy WordPress page builders for Chicago businesses?',
+    answer:
+      'Legacy WordPress sites relying on Elementor or Divi carry heavy PHP execution overhead, plugin vulnerability risks, and sluggish mobile render times (scoring 30–55 Lighthouse). Next.js 15 pre-renders static React pages on global edge networks, delivering sub-second page loads, 100/100 Core Web Vitals, and total immunity to database injection attacks.',
+  },
+  {
+    category: 'design',
+    question: 'How do you ensure ADA and WCAG 2.1 AA digital accessibility compliance?',
+    answer:
+      'We engineer accessibility natively: semantic HTML5 landmarks, strict color contrast ratios (minimum 4.5:1), keyboard-navigable focus rings, explicit ARIA labels, and screen-reader compatibility. This ensures full compliance with federal ADA guidelines and Illinois state accessibility standards.',
+  },
+  {
+    category: 'architecture',
+    question: 'Can you integrate custom dynamic calculators and automated lead routing to our CRM?',
+    answer:
+      'Yes. We build bespoke interactive ROI estimators, project cost calculators, and multi-step qualification forms using modern React. Submissions route instantly into HubSpot, Salesforce, Pipedrive, or custom webhooks with automatic source attribution.',
+  },
+  {
+    category: 'process',
+    question: 'How do you handle zero-downtime website launches on Cloudflare and Vercel?',
+    answer:
+      'We run exhaustive pre-launch staging tests on private preview URLs. At cutover, we update DNS records with zero downtime, configure automated SSL certificates, verify 100% of 301 redirects, and submit updated XML sitemaps to Google Search Console for immediate re-crawling.',
+  },
+  {
+    category: 'ownership',
+    question: 'What design files do we receive with the Figma design system handover?',
+    answer:
+      'You receive full edit access to a complete Figma design system containing typography scales, color tokens, responsive mobile/desktop wireframes, custom icon sets, component variants, and interactive prototype flows that your marketing team owns forever.',
   },
 ];
 
