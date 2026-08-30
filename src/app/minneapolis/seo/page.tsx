@@ -12,27 +12,27 @@ import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-24';
+const PAGE_MODIFIED = '2026-08-30';
 const CANONICAL = 'https://factoryjet.com/minneapolis/seo';
 
 export const metadata: Metadata = {
-  title: 'Minneapolis Local SEO Agency | Search & AI Visibility | FactoryJet',
+  title: 'Best Minneapolis SEO Company | Top Local SEO Agency MN | FactoryJet',
   description:
-    'Minneapolis local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Downtown, North Loop, and Plymouth.',
+    'Best Minneapolis SEO company & local agency. Top Google Map Pack rankings, AI answer citations, and technical Core Web Vitals for Twin Cities & Hennepin County.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Minneapolis Local SEO Agency | Search & AI Visibility | FactoryJet',
+    title: 'Best Minneapolis SEO Company | Top Local SEO Agency MN | FactoryJet',
     description:
-      'Minneapolis local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Downtown, North Loop, and Plymouth.',
+      'Premier Minneapolis SEO company & local agency. Top Google Maps 3-Pack rankings, organic search visibility, and AI search citations across the Twin Cities.',
     url: CANONICAL,
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Minneapolis Local SEO Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Minneapolis Local SEO Agency | Search & AI Visibility | FactoryJet',
+    title: 'Best Minneapolis SEO Company | Top Local SEO Agency MN | FactoryJet',
     description: 'Dominate Minneapolis local search and AI answer engines. Verified Google Maps 3-Pack capture and entity optimization.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -62,37 +62,37 @@ const DISTRICTS = [
     corridor: 'Downtown Minneapolis & North Loop',
     query: 'venture capital corporate legal seo north loop minneapolis',
     focus: 'Fintech Platforms, Venture Capital & Creative Agencies',
-    desc: 'The vibrant design and legal core. Captures high-ticket corporate legal retainers, commercial leasing inquiries, and tech venture advisory contracts.',
+    desc: 'The vibrant financial, design, and legal core along Washington Avenue and Nicollet Mall. Captures high-ticket corporate legal retainers, commercial real estate leasing inquiries, and tech venture advisory contracts.',
   },
   {
     corridor: 'Plymouth & West Metro MedTech Corridor',
     query: 'medical device healthcare clinic seo plymouth mn',
     focus: 'Medical Device Manufacturing, Clinical Diagnostics & Healthcare',
-    desc: 'The global Medical Alley heartland. Multi-practitioner practice architectures, physician directories, and clinical credential schemas.',
+    desc: 'The global Medical Alley heartland spanning Plymouth, Maple Grove, and Minnetonka along Interstate 494. Multi-practitioner practice architectures, physician directories, and clinical credential schemas.',
   },
   {
     corridor: 'Bloomington & I-494 Corporate Spine',
     query: 'corporate litigation wealth management seo bloomington mn',
     focus: 'Corporate Law, Private Equity & Commercial Real Estate',
-    desc: 'Major corporate and financial headquarters corridor. B2B service queries demand enterprise capability schemas, localized authority, and sub-second edge speeds.',
+    desc: 'Major corporate and financial headquarters corridor near Minneapolis-Saint Paul International Airport (MSP). B2B service queries demand enterprise capability schemas, localized authority, and sub-second edge speeds.',
   },
   {
     corridor: 'St. Paul Capital & Grand Avenue',
     query: 'estate planning higher education seo st paul',
     focus: 'Estate Planning Law, Higher Education & Enterprise Nonprofits',
-    desc: 'Historic seat of government and law. Intense competition for high-net-worth estate planning, trust litigation, and wealth advisory retainers.',
+    desc: 'Historic seat of Minnesota government and law along Summit Avenue and Grand Avenue. Intense local search competition for high-net-worth estate planning, trust litigation, and wealth advisory retainers.',
   },
   {
     corridor: 'Eden Prairie & Minnetonka Tech Hub',
     query: 'enterprise cloud software telematics seo eden prairie',
     focus: 'Enterprise Cloud Software, Telematics & Logistics Platforms',
-    desc: 'Major enterprise and supply chain software corridor. Features structured entity markup, executive leadership profiles, and high-converting consultation funnels.',
+    desc: 'Major enterprise and supply chain software corridor along Highway 212 and Highway 169. Features structured entity markup, executive leadership profiles, and high-converting consultation funnels.',
   },
   {
     corridor: 'Anoka & North Metro Industrial Hub',
     query: 'precision machining commercial contractor seo anoka mn',
     focus: 'Precision Tooling, Commercial Contracting & Advanced Fabrication',
-    desc: 'Precision industrial and heavy contracting heartland. Features technical capability landing pages, equipment schemas, and RFQ workflows.',
+    desc: 'Precision industrial and heavy contracting heartland across the northern Twin Cities metro. Features technical capability landing pages, equipment schemas, and rapid RFQ quotation workflows.',
   },
 ];
 
@@ -344,6 +344,48 @@ const FAQ_ITEMS = [
     question: 'Who will be our main point of contact during the campaign?',
     answer:
       'You work directly with a dedicated senior SEO strategist who oversees technical implementation, citation distribution, and monthly strategy reviews without layers of junior account coordinators.',
+  },
+  {
+    category: 'local',
+    question: 'How do medical device manufacturers and biotech firms in Medical Alley dominate B2B search rankings?',
+    answer:
+      'Minnesota is the global capital of medical device technology. We build technical B2B content hubs, FDA regulatory compliance schemas, ISO 13485 manufacturing capability pages, and clinical trial participant recruitment funnels that capture national procurement queries.',
+  },
+  {
+    category: 'technical',
+    question: 'How do Fortune 500 corporate headquarters and enterprise SaaS scale-ups in Eden Prairie and Minnetonka structure technical SEO?',
+    answer:
+      'We build comprehensive B2B topical clusters, enterprise product documentation portals, software integration schemas, and developer-oriented landing pages that load in under 600ms across global edge networks.',
+  },
+  {
+    category: 'local',
+    question: 'How do estate planning attorneys and wealth advisors in St. Paul and Edina capture high-net-worth clients?',
+    answer:
+      'We engineer authoritative LegalService and FinancialService schemas, connect verified practitioner credentials with the Minnesota State Bar Association, create neighborhood landing pages for Edina, Wayzata, and Summit Hill, and establish frictionless consultation funnels.',
+  },
+  {
+    category: 'technical',
+    question: 'How does Google Gemini AI Overview and SearchGPT citation indexing work in Minnesota?',
+    answer:
+      'Generative AI search engines synthesize verified factual entities from structured JSON-LD schemas, official Minnesota Secretary of State business filings, and direct answer-first page sections. We format your core service offerings to maximize conversational citation frequency in Google AI Overviews and ChatGPT search.',
+  },
+  {
+    category: 'local',
+    question: 'Can you structure local SEO across multi-location practices throughout Hennepin, Ramsey, and Dakota Counties?',
+    answer:
+      'Yes. We construct distinct localized landing pages for Minneapolis, St. Paul, Bloomington, Plymouth, and Woodbury with independent Schema.org LocalBusiness markup, preventing internal keyword cannibalization.',
+  },
+  {
+    category: 'deliverables',
+    question: 'What is NAP citation synchronization across Minneapolis and Minnesota business directories?',
+    answer:
+      'We establish and synchronize verified business citations across essential regional directories, including the Minneapolis Regional Chamber, Minnesota BBB, Apple Maps, Bing Places, YellowPages, Dun & Bradstreet, and industry registries, ensuring 100% data consistency, eliminating duplicates, and reinforcing Google Maps 3-Pack authority.',
+  },
+  {
+    category: 'local',
+    question: 'How do precision machining shops and contract manufacturers in Anoka, Coon Rapids, and Rogers capture industrial OEM RFQs?',
+    answer:
+      'The northern Twin Cities metro is an industrial precision manufacturing powerhouse. We build technical capability matrices, CNC tolerance specification tables, ISO 9001, AS9100, and ITAR compliance certification data schemas, equipment lists, and rapid blueprint upload RFQ gateways that convert commercial engineering procurement officers across the Midwest.',
   },
 ];
 

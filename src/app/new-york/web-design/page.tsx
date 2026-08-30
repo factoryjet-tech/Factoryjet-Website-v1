@@ -12,27 +12,27 @@ import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import WebDesignCityLinksUS from '@/components/v2/WebDesignCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-24';
+const PAGE_MODIFIED = '2026-08-30';
 const CANONICAL = 'https://factoryjet.com/new-york/web-design';
 
 export const metadata: Metadata = {
-  title: 'New York Web Design Agency | Custom Next.js & UI/UX | FactoryJet',
+  title: 'Best New York Web Design Agency | Top Next.js Websites | FactoryJet',
   description:
-    'New York web design agency. High-converting Next.js websites, sub-second load times, and custom Figma UI/UX for NYC enterprises and high-growth brands.',
+    'Best New York web design agency. Top custom Next.js websites, sub-second load speeds, mobile conversion flows, and 100% full IP code ownership for NYC businesses.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'New York Web Design Agency | Custom Next.js & UI/UX | FactoryJet',
+    title: 'Best New York Web Design Agency | Top Next.js Websites | FactoryJet',
     description:
-      'New York web design agency. High-converting Next.js websites, sub-second load times, and custom Figma UI/UX for NYC enterprises and high-growth brands.',
+      'Premier New York web design agency. High-converting Next.js websites, sub-second load times, and custom Figma UI/UX for NYC enterprises and high-growth brands.',
     url: CANONICAL,
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'New York Web Design Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'New York Web Design Agency | Custom Next.js & UI/UX | FactoryJet',
+    title: 'Best New York Web Design Agency | Top Next.js Websites | FactoryJet',
     description: 'Custom Next.js web design and engineering in New York City. Sub-second performance, full IP code ownership, 7-day delivery.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -92,7 +92,7 @@ const DISTRICTS = [
     corridor: 'Meatpacking & SoHo Flagship District',
     query: 'luxury retail direct to consumer fashion web design soho nyc',
     focus: 'Luxury Retail, Modern D2C & High-End Fashion Flagships',
-    desc: 'The world luxury retail showcase. Demands ultra-responsive lookbooks, interactive styling visualizers, and seamless digital commerce.',
+    desc: 'The world luxury retail showcase. Demands ultra-responsive lookbooks, interactive styling visualizers, and frictionless digital commerce.',
   },
 ];
 
@@ -127,7 +127,7 @@ const INDUSTRY_SHOWCASE = [
     sector: 'Enterprise SaaS, Media & Digital Publishing',
     headline: 'High-Conversion Growth Engines for Silicon Alley Innovators',
     description:
-      'Fast-growing software companies and modern digital media brands across Flatiron and Chelsea need web applications that convert enterprise buyers. We engineer high-speed marketing websites with interactive pricing calculators, product feature matrices, and seamless CRM integrations.',
+      'Fast-growing software companies and modern digital media brands across Flatiron and Chelsea need web applications that convert enterprise buyers. We engineer high-speed marketing websites with interactive pricing calculators, product feature matrices, and automated CRM integrations.',
     image: '/images/us/saas-website-design/hero.webp',
     alt: 'New York City Silicon Alley enterprise SaaS and digital media marketing web design',
     points: [
@@ -147,6 +147,32 @@ const INDUSTRY_SHOWCASE = [
       'Fluid interactive project galleries and 3D architectural floor plan viewers',
       'High-resolution WebP and AVIF image optimization with zero layout shift',
       'Structured RealEstateAgent and ArchitecturalOffice schema markup integration',
+    ],
+  },
+  {
+    sector: 'Fintech, Private Equity & Institutional Asset Management',
+    headline: 'Institutional Authority & Compliance Portals for Wall Street Leaders',
+    description:
+      'Hedge funds, venture capital firms, private equity sponsors, and fintech platforms in Lower Manhattan and Midtown demand institutional credibility. We engineer custom Next.js web applications featuring real-time market data visualization widgets, LP investor portal gateways, and SOC 2 security compliance disclosures.',
+    image: '/images/services/card-real-estate.webp',
+    alt: 'New York Wall Street fintech private equity asset management website design',
+    points: [
+      'Interactive financial return charts and real-time market API data widgets',
+      'Password-gated investor data rooms with encrypted LP document vaults',
+      'Sub-second page rendering with 100/100 Core Web Vitals on mobile and desktop',
+    ],
+  },
+  {
+    sector: 'DUMBO Creative Agencies, Media Studios & Architectural Flagships',
+    headline: 'Tactile Editorial Portfolios for Brooklyn Creative Institutions',
+    description:
+      'Creative agencies, film production houses, and world-class architectural studios across DUMBO, Williamsburg, and the Brooklyn Navy Yard require immaculate aesthetic execution. We build bespoke digital flagships featuring 60fps micro-animations, retina video portfolios, and bespoke design systems.',
+    image: '/images/us/manufacturing-website-design/shop-floor.webp',
+    alt: 'Brooklyn DUMBO creative media agency and architecture website design',
+    points: [
+      'Custom WebGL and Canvas visual interactions rendering at a steady 60 frames per second',
+      'High-resolution streaming video case study galleries with zero buffering lag',
+      'Structured CreativeWork and ProfessionalService schema for Google rich snippet capture',
     ],
   },
 ];
@@ -356,6 +382,42 @@ const FAQ_ITEMS = [
     question: 'Can any software engineer maintain our Next.js codebase in the future?',
     answer:
       'Yes. We write clean, modular, and fully typed TypeScript and React code adhering to global standards, ensuring any modern web developer can easily maintain and extend your application.',
+  },
+  {
+    category: 'technical',
+    question: 'How do Wall Street FinTech and private equity firms ensure SOC 2 compliance and data security on Next.js?',
+    answer:
+      'We engineer static React Server Component architectures deployed to Cloudflare Edge nodes with automated SSL, strict Content Security Policies (CSP), encrypted investor portal endpoints, and zero client-side tracking on sensitive lead capture funnels.',
+  },
+  {
+    category: 'architecture',
+    question: 'Why do Silicon Alley SaaS scale-ups prefer Next.js 15 App Router over legacy CMS platforms?',
+    answer:
+      'High-growth tech companies require interactive product demo viewports, developer-grade API documentation hubs, automated CRM lead routing to Salesforce and HubSpot, and sub-600ms load speeds that maximize paid acquisition conversion rates.',
+  },
+  {
+    category: 'design',
+    question: 'How do you engineer high-resolution editorial lookbooks for SoHo and Meatpacking luxury fashion brands?',
+    answer:
+      'We combine headless Shopify Storefront APIs with Next.js 15 image optimization pipelines, streaming retina lookbook galleries and interactive 3D product viewports that load in under 500ms on mobile networks.',
+  },
+  {
+    category: 'process',
+    question: 'How do you guarantee sub-600ms load speeds and 100/100 Core Web Vitals in New York City?',
+    answer:
+      'We optimize every asset from the foundation up: automatic WebP/AVIF image transcoding, critical CSS inlining, font subsetting, zero render-blocking scripts, and static HTML pre-generation delivered from global edge servers across the Northeast.',
+  },
+  {
+    category: 'ownership',
+    question: 'What design files and tokens are delivered during the Figma design system handover?',
+    answer:
+      'You receive full edit access to a complete Figma design system containing typography scales, color tokens, responsive mobile/desktop wireframes, custom icon sets, component variants, and interactive prototype flows that your marketing team owns forever.',
+  },
+  {
+    category: 'local',
+    question: 'How do you configure Schema.org JSON-LD structured data for Google Rich Results in New York?',
+    answer:
+      'We embed granular Schema.org JSON-LD structured data on every page, including Organization, ProfessionalService, LocalBusiness, FAQPage, BreadcrumbList, and WebSite schemas. These explicit semantic annotations enable Google to generate rich snippet cards, sitelinks, and AI search citations.',
   },
 ];
 
@@ -568,7 +630,7 @@ export default function NewYorkWebDesignPage() {
                 </h2>
 
                 <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
-                  From Wall Street fintech leaders to Midtown law firms, Silicon Alley software scale-ups, and SoHo fashion houses, we build high-converting web applications that elevate your brand equity.
+                  From Wall Street fintech leaders to Midtown law firms, Silicon Alley software scale-ups, and SoHo fashion houses, we build high-converting web applications that expand your market authority.
                 </p>
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
