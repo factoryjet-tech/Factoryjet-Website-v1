@@ -12,27 +12,27 @@ import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-24';
+const PAGE_MODIFIED = '2026-08-30';
 const CANONICAL = 'https://factoryjet.com/nashville/seo';
 
 export const metadata: Metadata = {
-  title: 'Nashville Local SEO Agency | Search & AI Visibility | FactoryJet',
+  title: 'Best Nashville Local SEO Agency | Top Search & AI Visibility | FactoryJet',
   description:
-    'Nashville local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Music Row, West End, and Brentwood.',
+    'Best Nashville local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Music Row, West End, and Brentwood.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Nashville Local SEO Agency | Search & AI Visibility | FactoryJet',
+    title: 'Best Nashville Local SEO Agency | Top Search & AI Visibility | FactoryJet',
     description:
-      'Nashville local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Music Row, West End, and Brentwood.',
+      'Premier Nashville local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Music Row, West End, and Brentwood.',
     url: CANONICAL,
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Nashville Local SEO Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Nashville Local SEO Agency | Search & AI Visibility | FactoryJet',
+    title: 'Best Nashville Local SEO Agency | Top Search & AI Visibility | FactoryJet',
     description: 'Dominate Nashville local search and AI answer engines. Verified Google Maps 3-Pack capture and entity optimization.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -59,40 +59,40 @@ const STAT_CARDS = [
 
 const DISTRICTS = [
   {
-    corridor: 'Music Row & Midtown',
+    corridor: 'Music Row & Midtown Entertainment District',
     query: 'entertainment law seo music row nashville',
     focus: 'Entertainment Law, Artist Management & Recording Studios',
-    desc: 'The global epicenter of music business. High-intent local searches demand entertainment legal schemas, verified studio credentials, and top organic rankings.',
+    desc: 'The global epicenter of music business and creative talent representation. High-intent local searches demand entertainment legal schemas, verified studio credentials, copyright litigation case studies, and top organic rankings across Davidson County.',
   },
   {
-    corridor: 'Downtown Nashville & SoBro',
+    corridor: 'Downtown Nashville & SoBro Hospitality Core',
     query: 'hospitality seo downtown nashville',
     focus: 'Convention Hospitality, Real Estate Developers & Tourism',
-    desc: 'Fast-growing urban core. Captures high-volume corporate event inquiries, private venue bookings, and commercial real estate development searches.',
+    desc: 'Fast-growing urban core and convention center hub. Captures high-volume corporate event inquiries, private venue bookings, and commercial real estate development searches with structured local landing pages and high-authority event citations.',
   },
   {
-    corridor: 'West End & Vanderbilt Medical District',
+    corridor: 'West End & Vanderbilt Medical Corridor',
     query: 'specialty medical clinic seo west end nashville',
     focus: 'Hospital Networks, Specialized Clinics & Surgery Centers',
-    desc: 'The healthcare management capital of America. Multi-location practice architectures, physician directories, and structured patient review funnels.',
+    desc: 'The healthcare management capital of America. Multi-location practice architectures, physician directories, HIPAA-compliant patient inquiry workflows, and structured patient review funnels designed for elective surgical and specialty medical centers.',
   },
   {
-    corridor: 'The Gulch & Germantown',
+    corridor: 'The Gulch & Germantown Retail Enclave',
     query: 'creative agency seo the gulch',
     focus: 'Culinary Brands, Boutique Retail & Creative Studios',
-    desc: 'High-end culinary and retail district. High-intent local searches demand visual schema integration, localized service radius targeting, and Google Maps prominence.',
+    desc: 'High-end culinary, residential, and creative studio district. High-intent local searches demand visual schema integration, localized service radius targeting, menu and product schemas, and prominent Google Maps 3-Pack rankings.',
   },
   {
-    corridor: 'Brentwood & Cool Springs',
+    corridor: 'Brentwood & Cool Springs Corporate Gateway',
     query: 'wealth advisory seo brentwood nashville',
     focus: 'Corporate Regional HQs, Healthcare Management & Financial Advisory',
-    desc: 'Affluent corporate commercial hub in Williamson County. Captures high-net-worth wealth retainers, corporate consulting contracts, and B2B vendor inquiries.',
+    desc: 'Affluent corporate commercial hub in Williamson County. Captures high-net-worth wealth retainers, corporate consulting contracts, and B2B vendor inquiries through nested financial entity schemas and verified regional citations.',
   },
   {
-    corridor: 'Murfreesboro & I-24 Logistics Corridor',
+    corridor: 'Murfreesboro & I-24 Logistics Manufacturing Corridor',
     query: 'industrial manufacturing seo murfreesboro',
     focus: 'Automotive Manufacturing, Equipment Supply & Freight Hubs',
-    desc: 'Dense industrial manufacturing corridor. B2B service inquiries require technical capability landing pages, equipment schemas, and sub-second edge performance.',
+    desc: 'Dense industrial automotive and logistics supply chain corridor. B2B service inquiries require technical capability landing pages, equipment schemas, and sub-second edge performance across Middle Tennessee.',
   },
 ];
 
@@ -344,6 +344,66 @@ const FAQ_ITEMS = [
     question: 'Who will be our main point of contact during the campaign?',
     answer:
       'You work directly with a dedicated senior SEO strategist who oversees technical implementation, citation distribution, and monthly strategy reviews without layers of junior account coordinators.',
+  },
+  {
+    category: 'maps',
+    question: 'How do you optimize Google Maps rankings across Nashville and Middle Tennessee suburbs?',
+    answer:
+      'We build distinct, geo-targeted location pages for Franklin, Brentwood, Hendersonville, Mount Juliet, and Murfreesboro with unique local schema markup, verified business citations, localized case studies, and hyper-local proximity signals.',
+  },
+  {
+    category: 'ai-seo',
+    question: 'How does AI search optimization for ChatGPT, Claude, and Perplexity work for Nashville healthcare and legal practices?',
+    answer:
+      'We structure your service offerings into factual question-and-answer formats, integrate verified practitioner credentials, publish transparent fee structures, and embed JSON-LD Knowledge Graph entities that AI answer engines cite directly.',
+  },
+  {
+    category: 'technical',
+    question: 'What technical SEO factors are most critical for competitive Nashville enterprises?',
+    answer:
+      'Sub-500ms server response times, 100/100 Core Web Vitals, clean Next.js static HTML pre-rendering, nested Schema.org medical and legal schemas, and zero render-blocking JavaScript files.',
+  },
+  {
+    category: 'citations',
+    question: 'How do you clean up duplicate and incorrect NAP citations across Tennessee business directories?',
+    answer:
+      'We run an exhaustive audit across 80+ top business directories, data aggregators, and mapping platforms, claiming unverified listings, removing spam duplicates, and enforcing 100% NAP consistency.',
+  },
+  {
+    category: 'reviews',
+    question: 'What is your review generation framework for Nashville medical clinics and hospitality groups?',
+    answer:
+      'We implement automated SMS and email review request workflows triggered post-consultation or post-stay, directing happy clients to Google Maps while capturing feedback internally.',
+  },
+  {
+    category: 'schema',
+    question: 'How do you configure Schema.org JSON-LD structured data for local Nashville businesses?',
+    answer:
+      'We embed granular Schema.org JSON-LD structured data on every page, including LocalBusiness, MedicalBusiness, LegalService, FAQPage, and Review schemas. These explicit semantic annotations enable Google to generate rich snippet stars, knowledge panel attributes, and local map pack citations.',
+  },
+  {
+    category: 'conversion',
+    question: 'How do you turn organic search visitors into booked consultations and corporate inquiries in Nashville?',
+    answer:
+      'We implement sticky click-to-call mobile headers, instant booking calendar integrations, verified customer review proof badges, and clear zero-friction consultation forms that convert local high-intent search traffic.',
+  },
+  {
+    category: 'gbp',
+    question: 'How do you choose and optimize primary and secondary Google Business Profile categories for Nashville businesses?',
+    answer:
+      'We conduct competitor correlation analysis to select the highest-converting primary category and up to nine strategic secondary categories, ensuring your listing captures broad search intent without diluting relevance.',
+  },
+  {
+    category: 'citations',
+    question: 'Do you secure local links and sponsorships from Nashville and Williamson County business organizations?',
+    answer:
+      'Yes. We help secure verified local links through the Nashville Area Chamber of Commerce, Williamson County Chamber, Nashville Downtown Partnership, and regional charitable sponsorships to build genuine local geographic authority.',
+  },
+  {
+    category: 'tracking',
+    question: 'How do you track local phone call inquiries and form conversions from Google Maps?',
+    answer:
+      'We set up dynamic call tracking numbers integrated with Google Analytics 4 and your CRM, tracking every inbound phone call, appointment booking, and consultation request directly to specific local search keywords and Google Maps actions.',
   },
 ];
 

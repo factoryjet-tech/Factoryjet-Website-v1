@@ -12,27 +12,27 @@ import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import EcommerceCityLinksUS from '@/components/v2/EcommerceCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-24';
+const PAGE_MODIFIED = '2026-08-30';
 const CANONICAL = 'https://factoryjet.com/los-angeles/ecommerce-development';
 
 export const metadata: Metadata = {
-  title: 'Los Angeles E-Commerce Agency | Headless Shopify Plus & B2B | FactoryJet',
+  title: 'Best Los Angeles E-Commerce Agency | Top Shopify Plus & Headless | FactoryJet',
   description:
-    'Los Angeles e-commerce development agency. Headless Shopify Plus, BigCommerce B2B, ERP integrations, and sub-second checkouts for California enterprise brands.',
+    'Best Los Angeles e-commerce development agency. Top headless Shopify Plus, BigCommerce B2B, ERP integrations, and sub-second checkouts for California enterprise brands.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Los Angeles E-Commerce Agency | Headless Shopify Plus & B2B | FactoryJet',
+    title: 'Best Los Angeles E-Commerce Agency | Top Shopify Plus & Headless | FactoryJet',
     description:
-      'Los Angeles e-commerce development agency. Headless Shopify Plus, BigCommerce B2B, ERP integrations, and sub-second checkouts for California enterprise brands.',
+      'Premier Los Angeles e-commerce development agency. Headless Shopify Plus, BigCommerce B2B, ERP integrations, and sub-second checkouts for California enterprise brands.',
     url: CANONICAL,
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Los Angeles E-Commerce Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Los Angeles E-Commerce Agency | Headless Shopify Plus & B2B | FactoryJet',
+    title: 'Best Los Angeles E-Commerce Agency | Top Shopify Plus & Headless | FactoryJet',
     description: 'Custom headless e-commerce engineering in Los Angeles CA. Sub-second checkouts, ERP integrations, and full IP code ownership.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -68,7 +68,7 @@ const DISTRICTS = [
     corridor: 'Culver City & Silicon Beach',
     query: 'creator brand ecommerce culver city',
     focus: 'Creator Economy D2C, Influencer Brand Drops & Digital Subscriptions',
-    desc: 'Vibrant creator and entertainment tech corridor. Features high-concurrency flash sale architectures, token-gated drops, and seamless Apple Pay checkouts.',
+    desc: 'Vibrant creator and entertainment tech corridor. Features high-concurrency flash sale architectures, token-gated drops, and frictionless Apple Pay checkouts.',
   },
   {
     corridor: 'Beverly Hills & West Hollywood',
@@ -149,6 +149,32 @@ const INDUSTRY_SHOWCASE = [
       'Global multi-currency checkout with localized fulfillment routing',
     ],
   },
+  {
+    sector: 'Specialty Automotive Aftermarket, Performance Parts & EV Modding',
+    headline: 'High-Performance Parts Catalogs for SoCal Automotive Innovators',
+    description:
+      'Aftermarket exhaust manufacturers, off-road suspension fabricators, and EV performance tuning shops across the San Fernando Valley and Torrance demand complex vehicle fitment catalogs. We engineer specialized Year-Make-Model search filters, custom freight rating engines, and core-deposit return workflows.',
+    image: '/images/us/manufacturing-website-design/shop-floor.webp',
+    alt: 'Los Angeles automotive aftermarket performance parts and EV tuning B2B ecommerce engineering',
+    points: [
+      'ACES and PIES compliant Year-Make-Model catalog fitment lookup engines',
+      'Automated LTL freight shipping calculation and hazardous battery handling logic',
+      'Custom customer group pricing tiers with wholesale B2B net-30 terms',
+    ],
+  },
+  {
+    sector: 'Gourmet Specialty Foods, Asian Imports & Cold-Chain D2C',
+    headline: 'Multi-Lingual Subscription Commerce for San Gabriel Valley Importers',
+    description:
+      'Gourmet Asian food importers, specialty tea merchants, and artisanal snack brands across the San Gabriel Valley and Pasadena require rich multi-lingual digital storefronts. We build custom Next.js platforms featuring multi-currency checkouts, dynamic cold-chain shipping rules, and recurring subscription boxes.',
+    image: '/images/services/card-real-estate.webp',
+    alt: 'Los Angeles San Gabriel Valley specialty food import and cold chain subscription ecommerce',
+    points: [
+      'Multi-language localization and localized currency payment gateways',
+      'Automated dry-ice cold-chain shipping rate calculation based on zip code distance',
+      'Flexible recurring subscription management with customer taste profile onboarding',
+    ],
+  },
 ];
 
 const PAIN_POINTS = [
@@ -200,7 +226,7 @@ const ROADMAP_STEPS = [
   {
     phase: 'Phase 04',
     title: 'Load Testing, Cutover & Launch Warranty',
-    desc: 'We execute rigorous multi-device checkout testing, simulated traffic spike tests, execute seamless DNS cutover, and provide 30-day post-launch support.',
+    desc: 'We execute rigorous multi-device checkout testing, simulated traffic spike tests, execute smooth zero-downtime DNS cutover, and provide 30-day post-launch support.',
     deliverables: ['Simulated high-concurrency load testing', 'SEO 301 redirect map and schema validation', 'Zero-downtime production domain cutover', 'Full code repository transfer and team training'],
   },
 ];
@@ -344,6 +370,42 @@ const FAQ_ITEMS = [
     question: 'Can any standard engineering team maintain our Next.js e-commerce store?',
     answer:
       'Yes. Next.js, React, and TypeScript are the undisputed global standard for modern frontend engineering. Our clean, documented code architecture allows any competent software developer to maintain and scale your platform.',
+  },
+  {
+    category: 'architecture',
+    question: 'Why do Los Angeles fashion houses and creator brands prefer headless Shopify Plus over traditional themes?',
+    answer:
+      'Headless architectures decouple your front-end customer experience from commerce back-end databases, delivering sub-500ms page transitions, custom visual lookbooks, and zero theme-code bloat while using Shopify Plus for secure payment processing and inventory management.',
+  },
+  {
+    category: 'b2b',
+    question: 'How do you integrate NetSuite, SAP, and Epicor ERP with B2B wholesale portals in DTLA Fashion District and Port of LA?',
+    answer:
+      'We build real-time bidirectional API connectors that synchronize customer-specific contract pricing tiers, credit limits, purchase orders, multi-warehouse inventory levels across Southern California, and automated invoice PDF generation.',
+  },
+  {
+    category: 'performance',
+    question: 'How do you guarantee sub-500ms load speeds and 100/100 Core Web Vitals for high-SKU fashion stores in Los Angeles?',
+    answer:
+      'We optimize every asset from the foundation up: automatic WebP/AVIF image transcoding, critical CSS inlining, font subsetting, zero render-blocking scripts, and static HTML pre-generation delivered from global edge servers across the West Coast.',
+  },
+  {
+    category: 'conversion',
+    question: 'What mobile checkout optimizations do you implement to maximize conversion rates in Los Angeles?',
+    answer:
+      'We implement one-tap accelerated checkouts using Shop Pay, Apple Pay, Google Pay, and Klarna, combined with sticky mobile add-to-cart drawers, localized address auto-complete, and zero full-page reloads.',
+  },
+  {
+    category: 'flash-sales',
+    question: 'How do you architect storefronts for sudden celebrity influencer drops and high-concurrency product releases?',
+    answer:
+      'We deploy edge-cached static storefronts on Cloudflare and Vercel edge networks, connected asynchronously to Shopify checkout queues. This architecture handles surges of over 50,000 concurrent visitors without crashing or throttling database queries.',
+  },
+  {
+    category: 'seo',
+    question: 'How do you configure Schema.org JSON-LD structured data for Google Merchant Center and Product Rich Snippets?',
+    answer:
+      'We embed granular Schema.org JSON-LD structured data on every product and collection page, including Product, Offer, AggregateRating, MerchantReturnPolicy, and ShippingDetails schemas. These explicit semantic annotations enable Google to generate rich merchant listings, free product carousel badges, and AI search citations.',
   },
 ];
 
