@@ -361,7 +361,7 @@ const FAQ_ITEMS = [
     category: 'local',
     question: 'How do you optimize for maritime law and offshore energy logistics near the Port of Corpus Christi?',
     answer:
-      'The Port of Corpus Christi is the nation’s leading energy export gateway. We engineer specialized B2B content hubs and structured legal/industrial schema markup—optimizing for Jones Act litigation, maritime casualty claims, marine fabrication, and petrochemical logistics procurement terms.',
+      'The Port of Corpus Christi is the nation’s leading energy export gateway. We engineer specialized B2B content hubs and structured legal/industrial schema markup, optimizing for Jones Act litigation, maritime casualty claims, marine fabrication, and petrochemical logistics procurement terms.',
   },
   {
     category: 'technical',
@@ -385,7 +385,7 @@ const FAQ_ITEMS = [
     category: 'deliverables',
     question: 'What is NAP citation synchronization across Corpus Christi and Coastal Bend directories?',
     answer:
-      'We establish and synchronize verified business citations across essential regional directories—including the Corpus Christi Chamber of Commerce, Coastal Bend BBB, Apple Maps, Bing Places, YellowPages, and industry registries—ensuring 100% data consistency, eliminating duplicate listings, and reinforcing Google Maps 3-Pack authority across Nueces, San Patricio, and Aransas counties.',
+      'We establish and synchronize verified business citations across essential regional directories, including the Corpus Christi Chamber of Commerce, Coastal Bend BBB, Apple Maps, Bing Places, YellowPages, and industry registries, ensuring 100% data consistency, eliminating duplicate listings, and reinforcing Google Maps 3-Pack authority across Nueces, San Patricio, and Aransas counties.',
   },
 ];
 

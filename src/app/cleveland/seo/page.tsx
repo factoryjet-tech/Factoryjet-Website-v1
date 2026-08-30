@@ -390,7 +390,7 @@ const FAQ_ITEMS = [
     category: 'technical',
     question: 'What is NAP citation synchronization across Cleveland and Ohio business directories?',
     answer:
-      'We establish and synchronize verified business citations across essential regional directories—including the Greater Cleveland Partnership, Council of Smaller Enterprises (COSE), Better Business Bureau of Greater Cleveland, Apple Maps, and Bing Places—ensuring 100% data consistency and reinforcing Google Maps 3-Pack authority.',
+      'We establish and synchronize verified business citations across essential regional directories, including the Greater Cleveland Partnership, Council of Smaller Enterprises (COSE), Better Business Bureau of Greater Cleveland, Apple Maps, and Bing Places, ensuring 100% data consistency and reinforcing Google Maps 3-Pack authority.',
   },
 ];
 

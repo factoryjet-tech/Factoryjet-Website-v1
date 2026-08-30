@@ -17,14 +17,14 @@ const CANONICAL = 'https://factoryjet.com/services/shopify-theme-development';
 export const metadata: Metadata = {
   title: 'Custom Shopify Theme Development Agency | Sub-Second Liquid 2.0 | FactoryJet',
   description:
-    'Custom Shopify theme development agency. We engineer bespoke Online Store 2.0 Liquid themes from scratch—delivering 95+ Core Web Vitals, zero app bloat, and full GitHub code ownership.',
+    'Custom Shopify theme development agency. We engineer bespoke Online Store 2.0 Liquid themes from scratch, delivering 95+ Core Web Vitals, zero app bloat, and full GitHub code ownership.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
     title: 'Custom Shopify Theme Development Agency | Sub-Second Liquid 2.0 | FactoryJet',
     description:
-      'Custom Shopify theme development agency. We engineer bespoke Online Store 2.0 Liquid themes from scratch—delivering 95+ Core Web Vitals, zero app bloat, and full GitHub code ownership.',
+      'Custom Shopify theme development agency. We engineer bespoke Online Store 2.0 Liquid themes from scratch, delivering 95+ Core Web Vitals, zero app bloat, and full GitHub code ownership.',
     url: CANONICAL,
     images: [
       {
@@ -86,15 +86,15 @@ const THEME_PILLARS = [
 const BENCHMARK_ROWS = [
   {
     factor: 'Mobile Largest Contentful Paint (LCP)',
-    custom: '0.8s – 1.2s (Sub-second visual completion)',
-    marketplace: '2.8s – 5.5s (Heavy render-blocking asset queues)',
-    headless: '0.6s – 1.0s (Edge static prerendering)',
+    custom: '0.8s - 1.2s (Sub-second visual completion)',
+    marketplace: '2.8s - 5.5s (Heavy render-blocking asset queues)',
+    headless: '0.6s - 1.0s (Edge static prerendering)',
   },
   {
     factor: 'Third-Party JavaScript Overhead',
     custom: 'Sub-35KB minified Vanilla JS Web Components',
-    marketplace: '450KB – 1.8MB unminified multi-purpose JS scripts',
-    headless: '60KB – 120KB React 19 RSC streaming bundle',
+    marketplace: '450KB - 1.8MB unminified multi-purpose JS scripts',
+    headless: '60KB - 120KB React 19 RSC streaming bundle',
   },
   {
     factor: 'Merchandiser Layout Flexibility',
@@ -105,7 +105,7 @@ const BENCHMARK_ROWS = [
   {
     factor: 'Native Feature Integration (Cart, Swatches)',
     custom: 'Built directly into Liquid & CSS (Zero app subscriptions)',
-    marketplace: 'Requires 8–15 third-party apps ($400–$1,200/mo extra)',
+    marketplace: 'Requires 8-15 third-party apps ($400-$1,200/mo extra)',
     headless: 'Engineered via custom React component API state',
   },
   {
@@ -117,20 +117,20 @@ const BENCHMARK_ROWS = [
   {
     factor: 'Cumulative Layout Shift (CLS)',
     custom: '0.00 (Zero layout shifting with explicit aspect ratios)',
-    marketplace: '0.18 – 0.45 (High shifting as third-party apps inject DOM)',
+    marketplace: '0.18 - 0.45 (High shifting as third-party apps inject DOM)',
     headless: '0.00 (Zero layout shifting with static server components)',
   },
   {
     factor: 'Ongoing Total Cost of Ownership (TCO)',
     custom: 'Lowest ongoing TCO (Zero extra app fees, zero extra hosting)',
-    marketplace: 'High TCO ($4.8k–$15k/yr in recurring app subscription stacks)',
-    headless: 'Moderate TCO (Requires edge frontend hosting $20–$150/mo)',
+    marketplace: 'High TCO ($4.8k-$15k/yr in recurring app subscription stacks)',
+    headless: 'Moderate TCO (Requires edge frontend hosting $20-$150/mo)',
   },
   {
     factor: 'Recommended Brand Revenue Scale',
-    custom: 'Ideal for brands generating $1M – $25M annually',
+    custom: 'Ideal for brands generating $1M - $25M annually',
     marketplace: 'Suitable only for early-stage stores (< $1M annually)',
-    headless: 'Ideal for high-growth enterprise brands ($5M – $100M+)',
+    headless: 'Ideal for high-growth enterprise brands ($5M - $100M+)',
   },
 ];
 
@@ -172,7 +172,7 @@ const ARCHITECTURE_LAYERS = [
     points: [
       'Server-side volume tiered pricing executed with zero client latency',
       'Post-purchase 1-click upsell offers built with Checkout UI Extensions',
-      'Seamless multi-currency and multi-language routing via Shopify Markets',
+      'Frictionless multi-currency and multi-language routing via Shopify Markets',
     ],
   },
 ];
@@ -219,7 +219,7 @@ const SPRINT_ROADMAP = [
       'High-converting slide-out Ajax cart drawer with dynamic free shipping progress bar',
       'In-cart 1-click cross-sell recommendations driven by Shopify Search & Discovery API',
       'Native gift-with-purchase (GWP) and coupon code validation input directly in the cart',
-      'Decommissioning of 8–12 redundant third-party apps, saving $300–$1,000/month',
+      'Decommissioning of 8-12 redundant third-party apps, saving $300-$1,000/month',
     ],
   },
   {
@@ -227,7 +227,7 @@ const SPRINT_ROADMAP = [
     timeline: 'Week 9',
     desc: 'We connect your essential marketing and operations platforms (Klaviyo, Gorgias, Reviews, ERP) and build custom server-side discount logic using Shopify Functions.',
     deliverables: [
-      'Seamless integration of customer review widgets (Okendo, Yotpo, Junip) with zero CLS',
+      'Frictionless integration of customer review widgets (Okendo, Yotpo, Junip) with zero CLS',
       'Klaviyo back-in-stock notifications and custom email event tracking integration',
       'Shopify Functions for custom tiered wholesale discounts and VIP customer pricing',
       'Gorgias live chat integration with deferred script loading for zero performance drag',
@@ -268,7 +268,7 @@ const FAQS = [
   },
   {
     q: 'Why should we avoid installing 15+ third-party apps for simple theme features?',
-    a: 'Every third-party app installed from the Shopify App Store injects its own external JavaScript files, CSS stylesheets, and tracking pixels into your store’s critical rendering path. Having 15–20 apps creates severe script conflicts, increases mobile page weight to 5MB+, degrades Core Web Vitals scores, and introduces perpetual monthly SaaS subscription costs ($400–$1,500/mo). FactoryJet codes features like slide-out cart drawers, swatch selectors, sticky ATC bars, accordion tabs, and bundle builders natively into your theme source code with zero app fees.',
+    a: 'Every third-party app installed from the Shopify App Store injects its own external JavaScript files, CSS stylesheets, and tracking pixels into your store’s critical rendering path. Having 15-20 apps creates severe script conflicts, increases mobile page weight to 5MB+, degrades Core Web Vitals scores, and introduces perpetual monthly SaaS subscription costs ($400-$1,500/mo). FactoryJet codes features like slide-out cart drawers, swatch selectors, sticky ATC bars, accordion tabs, and bundle builders natively into your theme source code with zero app fees.',
   },
   {
     q: 'Will our marketing team be able to customize page layouts without coding?',
@@ -304,7 +304,7 @@ const FAQS = [
   },
   {
     q: 'Can we use Shopify Functions for custom cart discounts with our theme?',
-    a: 'Yes. Shopify Functions allow us to build custom server-side business logic—such as tiered spend-and-get discounts, volume pricing breaks, bundle discounts, and custom shipping validation rules—that execute in WebAssembly within Shopify’s checkout backend at sub-50ms speeds with zero client-side JavaScript delay.',
+    a: 'Yes. Shopify Functions allow us to build custom server-side business logic, such as tiered spend-and-get discounts, volume pricing breaks, bundle discounts, and custom shipping validation rules, that execute in WebAssembly within Shopify’s checkout backend at sub-50ms speeds with zero client-side JavaScript delay.',
   },
   {
     q: 'How do you ensure our custom theme is accessible and WCAG compliant?',
@@ -328,11 +328,11 @@ const FAQS = [
   },
   {
     q: 'What ongoing maintenance is required for a custom Shopify theme?',
-    a: 'Because a custom theme contains zero fragile third-party app scripts and uses clean, standard Liquid 2.0 architecture, maintenance overhead is minimal. FactoryJet provides ongoing conversion rate optimization (CRO) sprints, seasonal campaign builds, and feature enhancement retainers to continually elevate your store’s performance.',
+    a: 'Because a custom theme contains zero fragile third-party app scripts and uses clean, standard Liquid 2.0 architecture, maintenance overhead is minimal. FactoryJet provides ongoing conversion rate optimization (CRO) sprints, seasonal campaign builds, and feature enhancement retainers to continually strengthen your store’s performance.',
   },
   {
     q: 'Can you build custom product configurators and 3D visualizers into our theme?',
-    a: 'Yes. We engineer interactive 2D/3D product customizers, live preview engraving tools, and visual bundle configurators using lightweight WebGL, Canvas, and vanilla JavaScript that seamlessly attach custom line item properties to the Shopify cart without slowing down initial page loads.',
+    a: 'Yes. We engineer interactive 2D/3D product customizers, live preview engraving tools, and visual bundle configurators using lightweight WebGL, Canvas, and vanilla JavaScript that fluidly attach custom line item properties to the Shopify cart without slowing down initial page loads.',
   },
   {
     q: 'Who executes the theme development on our account?',
@@ -392,7 +392,7 @@ const JSON_LD = {
       url: CANONICAL,
       name: 'Custom Shopify Theme Development Agency | Sub-Second Liquid 2.0 | FactoryJet',
       description:
-        'Custom Shopify theme development agency. We engineer sub-second Online Store 2.0 Liquid themes from scratch—delivering 95+ Core Web Vitals, zero app bloat, and full GitHub code ownership.',
+        'Custom Shopify theme development agency. We engineer sub-second Online Store 2.0 Liquid themes from scratch, delivering 95+ Core Web Vitals, zero app bloat, and full GitHub code ownership.',
       datePublished: '2026-01-15',
       dateModified: PAGE_MODIFIED,
       inLanguage: 'en-US',
@@ -438,7 +438,7 @@ export default function ShopifyThemeDevelopmentPage() {
             Custom Shopify Theme Development Agency: Sub-Second Performance, Zero App Bloat
           </h1>
           <p className="pp-hero-sub">
-            Escape bloated marketplace themes and slow page load times. We engineer custom, bespoke Shopify Online Store 2.0 Liquid themes from scratch—delivering 95+ Google Lighthouse mobile scores, modular Section Schemas for effortless marketing customization, and 100% full GitHub source code ownership.
+            Escape bloated marketplace themes and slow page load times. We engineer custom, bespoke Shopify Online Store 2.0 Liquid themes from scratch, delivering 95+ Google Lighthouse mobile scores, modular Section Schemas for effortless marketing customization, and 100% full GitHub source code ownership.
           </p>
 
           <div className="pp-hero-ctas" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.25rem', width: '100%', maxWidth: '580px', margin: '0 auto' }}>
@@ -501,7 +501,7 @@ export default function ShopifyThemeDevelopmentPage() {
                   Commercial themes purchased from the Shopify Theme Store or Envato are designed to appeal to thousands of different businesses across dozens of industries. To achieve broad appeal, theme authors bundle hundreds of configurable settings, generic scripts, heavy slider libraries, and unminified CSS frameworks into a single massive codebase.
                 </p>
                 <p>
-                  When you launch with a generic theme, your customers’ mobile browsers must download and parse megabytes of unused code on every page load. Worse, when you install 10 to 20 third-party apps to add missing features—like slide-out cart drawers, swatch selectors, and bundle builders—your mobile speed plummets below 40 on Google Lighthouse, directly increasing bounce rates and paid ad acquisition costs.
+                  When you launch with a generic theme, your customers’ mobile browsers must download and parse megabytes of unused code on every page load. Worse, when you install 10 to 20 third-party apps to add missing features, like slide-out cart drawers, swatch selectors, and bundle builders, your mobile speed plummets below 40 on Google Lighthouse, directly increasing bounce rates and paid ad acquisition costs.
                 </p>
               </div>
 
@@ -510,7 +510,7 @@ export default function ShopifyThemeDevelopmentPage() {
                   <strong>FactoryJet engineers bespoke Shopify Online Store 2.0 themes tailored specifically to your brand.</strong> We write clean, lightweight Liquid markup, modular fluid CSS variables, and native Vanilla JS Web Components. 
                 </p>
                 <p>
-                  We engineer high-converting e-commerce features natively into the theme source code—eliminating $400 to $1,200 per month in bloated third-party app subscriptions while delivering guaranteed <strong>sub-1.2s Largest Contentful Paint (LCP)</strong> and <strong>0.00 Cumulative Layout Shift (CLS)</strong>. Your marketing team gains complete visual layout flexibility through modular Section Schemas, while your business enjoys higher conversion rates and total GitHub code ownership.
+                  We engineer high-converting e-commerce features natively into the theme source code, eliminating $400 to $1,200 per month in bloated third-party app subscriptions while delivering guaranteed <strong>sub-1.2s Largest Contentful Paint (LCP)</strong> and <strong>0.00 Cumulative Layout Shift (CLS)</strong>. Your marketing team gains complete visual layout flexibility through modular Section Schemas, while your business enjoys higher conversion rates and total GitHub code ownership.
                 </p>
               </div>
             </div>
@@ -548,7 +548,7 @@ export default function ShopifyThemeDevelopmentPage() {
                 Even if your brand uses only 15% of those features, your customers’ mobile browsers must parse and execute 100% of that JavaScript on every single page view. The browser’s main thread becomes heavily congested, causing significant <strong>Interaction to Next Paint (INP)</strong> delays and delayed visual paint times.
               </p>
               <p>
-                Furthermore, as your marketing team attempts to add functionality—such as countdown timers, sticky add-to-cart bars, currency selectors, and product review badges—they install third-party apps from the Shopify App Store. Each app injects additional external script tags into the <code>theme.liquid</code> layout file. Within 12 months, the average Shopify store loads over 45 external script requests, resulting in mobile load times exceeding 5.5 seconds on 4G connections and devastating paid ad return on ad spend (ROAS).
+                Furthermore, as your marketing team attempts to add functionality, such as countdown timers, sticky add-to-cart bars, currency selectors, and product review badges, they install third-party apps from the Shopify App Store. Each app injects additional external script tags into the <code>theme.liquid</code> layout file. Within 12 months, the average Shopify store loads over 45 external script requests, resulting in mobile load times exceeding 5.5 seconds on 4G connections and devastating paid ad return on ad spend (ROAS).
               </p>
               <p>
                 This cycle creates a severe drag on growth. Search engines like Google continuously evaluate real user field metrics (Core Web Vitals) via the Chrome User Experience Report (CrUX). When your store suffers from sluggish LCP and high CLS scores, your organic keyword rankings drop while Google Ads CPCs increase due to lower landing page experience quality scores.
@@ -666,19 +666,19 @@ export default function ShopifyThemeDevelopmentPage() {
               </p>
               <ul style={{ listStyleType: 'disc', paddingLeft: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1rem', color: '#e2e8f0' }}>
                 <li>
-                  <strong>Slide-Out Ajax Cart Drawer with Tiered Free Shipping Bar (Saves $300–$600/yr):</strong> An ultra-fast, sub-50ms slide-out cart drawer that recalculates free shipping progress dynamically as items are added, featuring 1-click in-cart cross-sells and coupon code validation.
+                  <strong>Slide-Out Ajax Cart Drawer with Tiered Free Shipping Bar (Saves $300-$600/yr):</strong> An ultra-fast, sub-50ms slide-out cart drawer that recalculates free shipping progress dynamically as items are added, featuring 1-click in-cart cross-sells and coupon code validation.
                 </li>
                 <li>
-                  <strong>Visual Swatch Selectors &amp; Multi-Variant Image Grouping (Saves $240–$480/yr):</strong> Native color swatch buttons, image swatches, and pill selectors that filter the product media gallery to show only images relevant to the selected color variant without third-party swatch apps.
+                  <strong>Visual Swatch Selectors &amp; Multi-Variant Image Grouping (Saves $240-$480/yr):</strong> Native color swatch buttons, image swatches, and pill selectors that filter the product media gallery to show only images relevant to the selected color variant without third-party swatch apps.
                 </li>
                 <li>
-                  <strong>Sticky Mobile Add-to-Cart Bar (Saves $180–$360/yr):</strong> A persistent, high-converting sticky purchase bar that smoothly docks at the bottom of mobile screens when the user scrolls past the main Buy button, capturing impulse mobile purchases.
+                  <strong>Sticky Mobile Add-to-Cart Bar (Saves $180-$360/yr):</strong> A persistent, high-converting sticky purchase bar that smoothly docks at the bottom of mobile screens when the user scrolls past the main Buy button, capturing impulse mobile purchases.
                 </li>
                 <li>
-                  <strong>Dynamic Product Bundle Builders &amp; Volume Tier Tables (Saves $400–$1,200/yr):</strong> Custom spend-and-save tiered discount tables and mix-and-match bundle builders powered directly by native Shopify Functions without third-party bundle apps slowing down the DOM.
+                  <strong>Dynamic Product Bundle Builders &amp; Volume Tier Tables (Saves $400-$1,200/yr):</strong> Custom spend-and-save tiered discount tables and mix-and-match bundle builders powered directly by native Shopify Functions without third-party bundle apps slowing down the DOM.
                 </li>
                 <li>
-                  <strong>Accessible Product Accordion Tabs &amp; Sizing Modals (Saves $120–$240/yr):</strong> Native, semantic accordion tabs for materials, care instructions, ingredients, and interactive sizing charts bound directly to product metafields.
+                  <strong>Accessible Product Accordion Tabs &amp; Sizing Modals (Saves $120-$240/yr):</strong> Native, semantic accordion tabs for materials, care instructions, ingredients, and interactive sizing charts bound directly to product metafields.
                 </li>
               </ul>
             </div>
@@ -710,7 +710,7 @@ export default function ShopifyThemeDevelopmentPage() {
                 <div style={{ background: 'rgba(255,255,255,0.03)', padding: '1.75rem', borderRadius: '0.75rem', border: '1px solid rgba(255,255,255,0.08)' }}>
                   <h3 style={{ color: '#94a3b8', fontSize: '1.25rem', marginBottom: '1rem', fontWeight: 700 }}>Choose Headless Next.js 15 If:</h3>
                   <ul style={{ listStyleType: 'disc', paddingLeft: '1.25rem', display: 'flex', flexDirection: 'column', gap: '0.75rem', fontSize: '0.95rem', color: '#cbd5e1' }}>
-                    <li>Your annual e-commerce revenue exceeds $10M–$50M+ with complex multi-region catalogs, omnichannel POS integrations, or custom ERP pricing engines.</li>
+                    <li>Your annual e-commerce revenue exceeds $10M-$50M+ with complex multi-region catalogs, omnichannel POS integrations, or custom ERP pricing engines.</li>
                     <li>You manage rich editorial lookbooks and multi-brand storytelling requiring advanced Headless CMS workflows in Sanity.io or Contentful.</li>
                     <li>You require complete frontend decoupling to run multiple digital touchpoints (mobile apps, IoT kiosks, smart vending) from a single unified GraphQL API.</li>
                     <li>You have a dedicated in-house engineering team capable of managing React 19, edge middleware, and custom frontend deployment pipelines.</li>
@@ -730,13 +730,13 @@ export default function ShopifyThemeDevelopmentPage() {
             </div>
             <div style={{ color: '#cbd5e1', lineHeight: '1.8', fontSize: '1.05rem', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
               <p>
-                In poorly architected themes, simple marketing updates—such as changing a banner background, adding an announcement strip, or creating a seasonal product landing page—require submitting a developer ticket and waiting days for code deployment. 
+                In poorly architected themes, simple marketing updates, such as changing a banner background, adding an announcement strip, or creating a seasonal product landing page, require submitting a developer ticket and waiting days for code deployment. 
               </p>
               <p>
                 FactoryJet builds every template using <strong>Shopify Online Store 2.0 JSON templates</strong> and granular Liquid <code>schema</code> definitions. We structure your theme into reusable modular sections (Hero Banners, Split Features, Product Grids, Testimonial Carousels, Video Showcases, FAQ Accordions) and configurable content blocks.
               </p>
               <p>
-                Your marketing and merchandising teams can dynamically drag and drop sections, adjust typography and color overlays, configure dynamic metaobject bindings, and publish high-converting campaign pages in minutes—all within the visual Shopify Theme Editor, with zero code edits and zero risk of breaking store layouts.
+                Your marketing and merchandising teams can dynamically drag and drop sections, adjust typography and color overlays, configure dynamic metaobject bindings, and publish high-converting campaign pages in minutes, all within the visual Shopify Theme Editor, with zero code edits and zero risk of breaking store layouts.
               </p>
             </div>
           </div>
@@ -824,7 +824,7 @@ export default function ShopifyThemeDevelopmentPage() {
             </div>
             <div style={{ color: '#cbd5e1', lineHeight: '1.8', fontSize: '1.05rem', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
               <p>
-                Historically, Shopify merchants relied on client-side JavaScript apps or legacy Ruby Script Editor scripts to implement custom discounts, tiered pricing, and checkout validation. Client-side apps are notoriously fragile—they cause delayed price calculations, flicker on page load, and can be bypassed by tech-savvy users. Legacy Script Editor scripts are officially deprecated by Shopify.
+                Historically, Shopify merchants relied on client-side JavaScript apps or legacy Ruby Script Editor scripts to implement custom discounts, tiered pricing, and checkout validation. Client-side apps are notoriously fragile, they cause delayed price calculations, flicker on page load, and can be bypassed by tech-savvy users. Legacy Script Editor scripts are officially deprecated by Shopify.
               </p>
               <p>
                 FactoryJet builds custom server-side business logic using <strong>Shopify Functions</strong>, compiled to WebAssembly (Wasm) and executed directly on Shopify’s global edge servers during cart operations and checkout:
@@ -949,11 +949,11 @@ export default function ShopifyThemeDevelopmentPage() {
             </div>
             <div style={{ color: '#cbd5e1', lineHeight: '1.8', fontSize: '1.05rem', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
               <p>
-                Launching a custom Shopify theme is not the finish line—it is the foundation for continuous data-driven growth. Our post-launch engineering sprints focus on systematic conversion rate experimentation:
+                Launching a custom Shopify theme is not the finish line, it is the foundation for continuous data-driven growth. Our post-launch engineering sprints focus on systematic conversion rate experimentation:
               </p>
               <ul style={{ listStyleType: 'disc', paddingLeft: '1.5rem', display: 'flex', flexDirection: 'column', gap: '0.75rem', color: '#e2e8f0' }}>
                 <li>
-                  <strong>Native Server-Side A/B Split Testing:</strong> Testing alternative PDP layouts, CTA button placements, and pricing displays with native Liquid conditional logic—achieving true 50/50 traffic splits without client-side DOM flickering or anti-flicker script performance penalties.
+                  <strong>Native Server-Side A/B Split Testing:</strong> Testing alternative PDP layouts, CTA button placements, and pricing displays with native Liquid conditional logic, achieving true 50/50 traffic splits without client-side DOM flickering or anti-flicker script performance penalties.
                 </li>
                 <li>
                   <strong>High-Fidelity Funnel Analytics:</strong> Real-time tracking of cart additions, drawer opens, checkout starts, and checkout completions synchronized directly with Google Analytics 4 (GA4) and Klaviyo via clean data layer events.
@@ -975,7 +975,7 @@ export default function ShopifyThemeDevelopmentPage() {
             </div>
             <div style={{ color: '#cbd5e1', lineHeight: '1.8', fontSize: '1.05rem', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
               <p>
-                Ensuring your e-commerce storefront is accessible to all users—including those with visual, auditory, motor, or cognitive disabilities—is both a legal necessity under ADA compliance standards and a proven driver of conversion rate optimization.
+                Ensuring your e-commerce storefront is accessible to all users, including those with visual, auditory, motor, or cognitive disabilities, is both a legal necessity under ADA compliance standards and a proven driver of conversion rate optimization.
               </p>
               <p>
                 Every component in our custom theme is built strictly adhering to <strong>WCAG 2.1 AA guidelines</strong>:
@@ -1011,7 +1011,7 @@ export default function ShopifyThemeDevelopmentPage() {
               </p>
               <ul style={{ listStyleType: 'disc', paddingLeft: '1.5rem', display: 'flex', flexDirection: 'column', gap: '0.75rem', color: '#e2e8f0' }}>
                 <li>
-                  <strong>Semantic Modern CSS:</strong> We use native CSS custom properties, modern Flexbox and Grid layouts, CSS subgrid, and modern <code>:has()</code> pseudo-selectors—completely eliminating bloated utility frameworks and redundant CSS declarations.
+                  <strong>Semantic Modern CSS:</strong> We use native CSS custom properties, modern Flexbox and Grid layouts, CSS subgrid, and modern <code>:has()</code> pseudo-selectors, completely eliminating bloated utility frameworks and redundant CSS declarations.
                 </li>
                 <li>
                   <strong>Modular Architecture:</strong> Every section, snippet, and asset file has a single, well-defined responsibility with complete inline developer documentation and automated Theme Check linter compliance.

@@ -94,7 +94,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
   { category: 'working', question: 'How do we get started?', answer: 'Request the free growth audit with your store URL and email. We come back with findings and a suggested 90-day plan, then you decide if you want us to run it. No pressure, no long sales cycle.' },
   { category: 'services', question: 'What is Marketing Efficiency Ratio (MER) and why is it superior to platform ROAS?', answer: 'Platform-reported ROAS (in Meta Ads Manager or Google Ads) often takes double-credit for organic conversions and ignores customer acquisition costs. Marketing Efficiency Ratio (Total Net Revenue divided by Total Ad Spend) measures true blended business profitability, ensuring ad spend scales without eroding your bottom line.' },
   { category: 'services', question: 'How do you combat post-iOS 14 ad signal loss and attribution inaccuracies?', answer: 'We implement server-side conversion tracking via Meta Conversions API (CAPI), Google Enhanced Conversions, and first-party data capture. This restores 95%+ event matching quality and allows machine learning bidding algorithms to optimize toward high-value repeat buyers.' },
-  { category: 'services', question: 'How does conversion rate optimization (CRO) interact with customer acquisition costs?', answer: 'Lifting your store conversion rate from 1.5% to 2.5% effectively cuts your customer acquisition cost (CAC) by 40% on every ad dollar spent. CRO creates operating leverage that allows you to outbid competitors and scale ad budgets profitably.' },
+  { category: 'services', question: 'How does conversion rate optimization (CRO) interact with customer acquisition costs?', answer: 'Lifting your store conversion rate from 1.5% to 2.5% effectively cuts your customer acquisition cost (CAC) by 40% on every ad dollar spent. CRO creates operating utilize that allows you to outbid competitors and scale ad budgets profitably.' },
   { category: 'services', question: 'What is RFM customer segmentation in Klaviyo email marketing?', answer: 'RFM analyzes Recency, Frequency, and Monetary value across your customer database. We build targeted VIP reward flows for high-value champions, automated replenishment triggers for predictable consumables, and aggressive win-back flows for churning buyers.' },
   { category: 'services', question: 'How do you structure product bundles and threshold upsells to increase Average Order Value (AOV)?', answer: 'We engineer dynamic in-cart progress bars (e.g. "Add $15 for Free Shipping"), post-purchase 1-click upsells in checkout, and volume tiered bundle discounts (Buy 2 Get 10% Off, Buy 3 Get 20% Off), lifting site-wide AOV by 18% to 32%.' },
   { category: 'services', question: 'How do AI search citations in ChatGPT and Perplexity drive e-commerce revenue?', answer: 'High-intent consumers increasingly use AI engines to research product comparisons and buying recommendations. By structuring your store content with deep schema, objective comparison tables, and verified reviews, your brand becomes the direct quoted answer in AI responses.' },
@@ -375,7 +375,7 @@ export default function EcommerceGrowthAgencyPage() {
                 <div>
                   <b>Klaviyo Lifecycle Retention &amp; RFM Predictive Segmentation</b>
                   <p>
-                    We build automated 12-stage email and SMS customer journeys—including dynamic welcome series, high-intent cart abandonment triggers, price drop alerts, VIP early access drops, and predictive replenishment flows based on SKU consumption cycles.
+                    We build automated 12-stage email and SMS customer journeys, including dynamic welcome series, high-intent cart abandonment triggers, price drop alerts, VIP early access drops, and predictive replenishment flows based on SKU consumption cycles.
                   </p>
                 </div>
               </div>
@@ -408,14 +408,14 @@ export default function EcommerceGrowthAgencyPage() {
               <span className="ega-eyebrow">Execution Methodology</span>
               <h2 className="disp">The 90-Day Compounding Ecommerce Growth Sprint Roadmap</h2>
               <p>
-                A proven, phase-governed engineering and marketing framework designed to unlock fast cash flow and compound long-term market leadership:
+                A proven, phase-governed engineering and marketing framework designed to capture fast cash flow and compound long-term market leadership:
               </p>
             </div>
             <div className="ega-list" style={{ marginTop: 24 }}>
               <div className="ega-crystal ega-li">
                 <span className="num" />
                 <div>
-                  <b>Sprint 1: Days 1–30 (Foundation &amp; Rapid Cash Flow Levers)</b>
+                  <b>Sprint 1: Days 1-30 (Foundation &amp; Rapid Cash Flow Levers)</b>
                   <p>
                     Comprehensive technical audit, server-side CAPI pixel setup, Klaviyo high-intent core flows overhaul (Welcome, Abandoned Cart, Post-Purchase), ad account restructuring, and quick-win CRO fixes on high-traffic PDPs.
                   </p>
@@ -424,7 +424,7 @@ export default function EcommerceGrowthAgencyPage() {
               <div className="ega-crystal ega-li">
                 <span className="num" />
                 <div>
-                  <b>Sprint 2: Days 31–60 (Creative Testing &amp; Category Scaling)</b>
+                  <b>Sprint 2: Days 31-60 (Creative Testing &amp; Category Scaling)</b>
                   <p>
                     Iterative UGC ad creative sprint (15+ angles/hooks per month), Google Performance Max asset group segmentation, collection page SEO content optimization, in-cart bundle testing, and SMS list acceleration.
                   </p>
@@ -433,7 +433,7 @@ export default function EcommerceGrowthAgencyPage() {
               <div className="ega-crystal ega-li">
                 <span className="num" />
                 <div>
-                  <b>Sprint 3: Days 61–90 (Retention Compounding &amp; Omnichannel Expansion)</b>
+                  <b>Sprint 3: Days 61-90 (Retention Compounding &amp; Omnichannel Expansion)</b>
                   <p>
                     Predictive RFM segmentation, custom loyalty reward tiers, marketplace synchronization (Amazon Storefront / TikTok Shop), AI customer support agent deployment, and full quarterly contribution margin financial review.
                   </p>

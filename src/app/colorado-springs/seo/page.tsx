@@ -390,7 +390,7 @@ const FAQ_ITEMS = [
     category: 'technical',
     question: 'What is NAP citation synchronization across Colorado Springs and Front Range directories?',
     answer:
-      'We establish and maintain 100% consistent business citations across major regional platforms—including the Colorado Springs Chamber & EDC, Better Business Bureau of Southern Colorado, Apple Maps, Bing Places, and Yelp—preventing map pin duplication and strengthening local 3-Pack authority.',
+      'We establish and maintain 100% consistent business citations across major regional platforms, including the Colorado Springs Chamber & EDC, Better Business Bureau of Southern Colorado, Apple Maps, Bing Places, and Yelp, preventing map pin duplication and strengthening local 3-Pack authority.',
   },
 ];
 

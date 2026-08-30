@@ -635,7 +635,7 @@ export default function BigCommerceB2BPage() {
               <p>
                 Enterprise buyers at Fortune 500 corporations, universities, and government agencies often mandate e-procurement integrations as a condition of vendor selection:
               </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>1. Seamless Procurement Session Handshake</h3>
+              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>1. Frictionless Procurement Session Handshake</h3>
               <p>
                 Buyers click a PunchOut link inside their procurement software (SAP Ariba, Coupa, Jaggaer, Oracle Fusion) and are authenticated into your customized BigCommerce catalog without separate login credentials.
               </p>
@@ -654,7 +654,7 @@ export default function BigCommerceB2BPage() {
             <h2 style={{ marginTop: '10px' }}>The 6-Phase BigCommerce B2B Implementation Sprint Roadmap</h2>
             <div className="pp-editorial" style={{ marginTop: '20px' }}>
               <p>
-                Our structured milestone engineering process guarantees a predictable timeline, robust ERP synchronization, and smooth customer onboarding:
+                Our structured milestone engineering process guarantees a predictable timeline, resilient ERP synchronization, and smooth customer onboarding:
               </p>
               <ol style={{ listStyleType: 'decimal', paddingLeft: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1rem', marginTop: '1rem' }}>
                 <li>

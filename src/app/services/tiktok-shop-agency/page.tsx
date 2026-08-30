@@ -329,7 +329,7 @@ export default function TikTokShopAgencyPage() {
               <span className="tts-eyebrow">Creator Architecture</span>
               <h2 className="disp">The 4-Pillar TikTok Shop Creator Seeding &amp; Spark Scaling Engine</h2>
               <p>
-                Organic virality is not an accident—it is a repeatable engineering pipeline. Here is how we turn creator seeding into consistent, compounding 7-figure GMV:
+                Organic virality is not an accident, it is a repeatable engineering pipeline. Here is how we turn creator seeding into consistent, compounding 7-figure GMV:
               </p>
             </div>
             <div className="tts-list" style={{ marginTop: 24 }}>
@@ -338,7 +338,7 @@ export default function TikTokShopAgencyPage() {
                 <div>
                   <b>1. High-Volume Micro-Creator Seeding (50+ Sample Dispatches/Month)</b>
                   <p>
-                    We identify, vet, and dispatch targeted product samples to high-engagement micro-creators (5k–50k followers) in your niche. Our proprietary outreach workflows ensure 70%+ of sample recipients post authentic demo reviews with shoppable product anchors within 14 days.
+                    We identify, vet, and dispatch targeted product samples to high-engagement micro-creators (5k-50k followers) in your niche. Our proprietary outreach workflows ensure 70%+ of sample recipients post authentic demo reviews with shoppable product anchors within 14 days.
                   </p>
                 </div>
               </div>
@@ -347,7 +347,7 @@ export default function TikTokShopAgencyPage() {
                 <div>
                   <b>2. Tiered Open &amp; Targeted Affiliate Commission Structures</b>
                   <p>
-                    We configure high-incentive affiliate commission rates (15%–25%) that motivate top-tier creators to prioritize your product over competitors, backed by automated sample approval rules inside TikTok Shop Affiliate Center.
+                    We configure high-incentive affiliate commission rates (15%-25%) that motivate top-tier creators to prioritize your product over competitors, backed by automated sample approval rules inside TikTok Shop Affiliate Center.
                   </p>
                 </div>
               </div>

@@ -302,7 +302,7 @@ const FAQ_ITEMS = [
     category: 'local',
     question: 'Do you build B2B websites for Chicago manufacturers and industrial suppliers?',
     answer:
-      'Yes. We build high-conversion B2B websites tailored for Chicago manufacturers, precision machinists, and chemical suppliers, complete with downloadable spec sheets, technical capability matrices, and seamless RFQ inquiry forms.',
+      'Yes. We build high-conversion B2B websites tailored for Chicago manufacturers, precision machinists, and chemical suppliers, complete with downloadable spec sheets, technical capability matrices, and frictionless RFQ inquiry forms.',
   },
   {
     category: 'local',
@@ -350,7 +350,7 @@ const FAQ_ITEMS = [
     category: 'architecture',
     question: 'Why is Next.js 15 superior to legacy WordPress page builders for Chicago businesses?',
     answer:
-      'Legacy WordPress sites relying on Elementor or Divi carry heavy PHP execution overhead, plugin vulnerability risks, and sluggish mobile render times (scoring 30–55 Lighthouse). Next.js 15 pre-renders static React pages on global edge networks, delivering sub-second page loads, 100/100 Core Web Vitals, and total immunity to database injection attacks.',
+      'Legacy WordPress sites relying on Elementor or Divi carry heavy PHP execution overhead, plugin vulnerability risks, and sluggish mobile render times (scoring 30-55 Lighthouse). Next.js 15 pre-renders static React pages on global edge networks, delivering sub-second page loads, 100/100 Core Web Vitals, and total immunity to database injection attacks.',
   },
   {
     category: 'design',
@@ -816,7 +816,7 @@ export default function ChicagoWebDesignPage() {
           <WebDesignArchitectureBlueprint
             badge="// CHICAGO MODERN WEB ARCHITECTURE BLUEPRINT"
             title="High-Performance Frontend: From Code to Conversion"
-            subtitle="Explore how custom Next.js components, Cloudflare Edge caching, structured JSON-LD schema, and conversion tracking work together seamlessly."
+            subtitle="Explore how custom Next.js components, Cloudflare Edge caching, structured JSON-LD schema, and conversion tracking work together fluidly."
             city="Chicago"
             ctaLabel="Get a Fixed-Price Quote"
             region="us"

@@ -81,7 +81,7 @@ const DISTRICTS = [
     corridor: 'Frisco & North Platinum Corridor',
     query: 'healthcare clinic web design frisco',
     focus: 'Sports Medicine, Specialty Healthcare & Luxury Retail',
-    desc: 'The nation’s fastest-growing sports and healthcare hub. Features seamless online patient scheduling, mobile provider directories, and high-impact visual storytelling.',
+    desc: 'The nation’s fastest-growing sports and healthcare hub. Features frictionless online patient scheduling, mobile provider directories, and high-impact visual storytelling.',
   },
   {
     corridor: 'Design District & Oak Lawn',
@@ -171,7 +171,7 @@ const INDUSTRY_SHOWCASE = [
     image: '/images/us/restaurant-website-design/hero.webp',
     alt: 'Dallas luxury hospitality private club and fine dining website design',
     points: [
-      'Seamless integration with OpenTable, SevenRooms, and Toast POS online ordering',
+      'Frictionless integration with OpenTable, SevenRooms, and Toast POS online ordering',
       'Interactive private banquet and corporate event inquiry calculators',
       'Fast-loading visual photo menus with structured Restaurant and Menu schema markup',
     ],
@@ -328,7 +328,7 @@ const FAQ_ITEMS = [
     category: 'local',
     question: 'Do you build B2B websites for Dallas technology and telecom companies?',
     answer:
-      'Yes. We build high-conversion B2B websites tailored for Plano, Richardson, and Irving tech firms, complete with interactive demo portals, technical capability matrices, and seamless CRM lead routing.',
+      'Yes. We build high-conversion B2B websites tailored for Plano, Richardson, and Irving tech firms, complete with interactive demo portals, technical capability matrices, and frictionless CRM lead routing.',
   },
   {
     category: 'local',
@@ -376,7 +376,7 @@ const FAQ_ITEMS = [
     category: 'architecture',
     question: 'Why is Next.js 15 superior to legacy WordPress page builders for DFW corporate enterprises?',
     answer:
-      'Legacy WordPress sites relying on Elementor or Divi suffer from heavy PHP execution delays, unpatched plugin vulnerabilities, and sluggish mobile render times (scoring 35–60 Lighthouse). Next.js 15 pre-renders static React pages on global edge networks, delivering sub-second page loads, 100/100 Core Web Vitals, and total immunity to database injection attacks.',
+      'Legacy WordPress sites relying on Elementor or Divi suffer from heavy PHP execution delays, unpatched plugin vulnerabilities, and sluggish mobile render times (scoring 35-60 Lighthouse). Next.js 15 pre-renders static React pages on global edge networks, delivering sub-second page loads, 100/100 Core Web Vitals, and total immunity to database injection attacks.',
   },
   {
     category: 'design',
@@ -406,7 +406,7 @@ const FAQ_ITEMS = [
     category: 'local',
     question: 'How do you configure Schema.org JSON-LD structured data for Google Rich Results?',
     answer:
-      'We embed granular Schema.org JSON-LD structured data on every page—including Organization, ProfessionalService, LocalBusiness, FAQPage, BreadcrumbList, and WebSite schemas. These explicit semantic annotations enable Google to generate rich snippet cards, sitelinks, and AI search citations.',
+      'We embed granular Schema.org JSON-LD structured data on every page, including Organization, ProfessionalService, LocalBusiness, FAQPage, BreadcrumbList, and WebSite schemas. These explicit semantic annotations enable Google to generate rich snippet cards, sitelinks, and AI search citations.',
   },
 ];
 

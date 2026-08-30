@@ -390,7 +390,7 @@ const FAQ_ITEMS = [
     category: 'technical',
     question: 'What is NAP citation verification across Florida regional directories and chambers?',
     answer:
-      'We establish and synchronize verified business citations across essential Gulf Coast platforms—including the Lakewood Ranch Business Alliance, Sarasota Chamber of Commerce, Manatee Chamber, Better Business Bureau West Florida, Apple Maps, and Bing Places—ensuring 100% data consistency.',
+      'We establish and synchronize verified business citations across essential Gulf Coast platforms, including the Lakewood Ranch Business Alliance, Sarasota Chamber of Commerce, Manatee Chamber, Better Business Bureau West Florida, Apple Maps, and Bing Places, ensuring 100% data consistency.',
   },
 ];
 

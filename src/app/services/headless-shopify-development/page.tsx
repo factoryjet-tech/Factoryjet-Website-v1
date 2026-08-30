@@ -229,7 +229,7 @@ const MIGRATION_ROADMAP = [
     timeline: 'Week 6',
     desc: 'We bridge the headless frontend with Shopify Checkout Extensibility and synchronize your enterprise ERP, OMS, warehouse, and third-party logistics systems.',
     deliverables: [
-      'Seamless tokenized cart handoff to native Shopify Plus checkout with persistent customer authentication',
+      'Frictionless tokenized cart handoff to native Shopify Plus checkout with persistent customer authentication',
       'Shopify Functions for custom bundle rules, tiered volume discounts, and B2B customer price lists',
       'Bidirectional inventory and order sync with NetSuite, SAP, Acumatica, or Microsoft Dynamics via webhook queues',
       'Server-side tracking integration for Meta Conversions API (CAPI), Klaviyo, and Google Analytics 4 via Cloudflare Workers',
@@ -277,7 +277,7 @@ const FAQS = [
   },
   {
     q: 'How does Next.js 15 App Router benefit a headless Shopify store?',
-    a: 'Next.js 15 App Router introduces React Server Components (RSC), Incremental Static Regeneration (ISR), and native edge streaming. This allows product detail and collection pages to be statically prerendered at edge data centers worldwide (delivering sub-200ms Time to First Byte) while dynamic elements—such as personalized recommendations, cart drawers, and real-time inventory counts—stream asynchronously without blocking the initial page render or causing Cumulative Layout Shift (CLS).',
+    a: 'Next.js 15 App Router introduces React Server Components (RSC), Incremental Static Regeneration (ISR), and native edge streaming. This allows product detail and collection pages to be statically prerendered at edge data centers worldwide (delivering sub-200ms Time to First Byte) while dynamic elements, such as personalized recommendations, cart drawers, and real-time inventory counts, stream asynchronously without blocking the initial page render or causing Cumulative Layout Shift (CLS).',
   },
   {
     q: 'How does headless Shopify improve site speed and Core Web Vitals?',
@@ -297,7 +297,7 @@ const FAQS = [
   },
   {
     q: 'How does checkout work on a headless Shopify store?',
-    a: 'When a customer clicks "Checkout" in the headless cart drawer, our Next.js application creates a tokenized checkout session via the Shopify Storefront API and seamlessly redirects the customer to your native Shopify Plus checkout domain (e.g., checkout.yourbrand.com). The customer completes payment using Shopify’s high-converting 1-tap Shop Pay, Apple Pay, Google Pay, or credit card checkout, maintaining 100% native PCI-DSS compliance and checkout extensibility.',
+    a: 'When a customer clicks "Checkout" in the headless cart drawer, our Next.js application creates a tokenized checkout session via the Shopify Storefront API and fluidly redirects the customer to your native Shopify Plus checkout domain (e.g., checkout.yourbrand.com). The customer completes payment using Shopify’s high-converting 1-tap Shop Pay, Apple Pay, Google Pay, or credit card checkout, maintaining 100% native PCI-DSS compliance and checkout extensibility.',
   },
   {
     q: 'Can we use Shopify Checkout Extensibility with a headless frontend?',
@@ -305,7 +305,7 @@ const FAQS = [
   },
   {
     q: 'Can we still use our favorite Shopify apps on a headless store?',
-    a: 'Backend apps that handle order fulfillment, inventory syncing, ERP data pipelines, warehouse management, and accounting integrate seamlessly without modification because Shopify’s backend remains intact. For frontend customer-facing apps (reviews, search, subscriptions, loyalty), we integrate their official headless GraphQL/REST APIs (e.g. Okendo, Yotpo, Algolia, Recharge, Skio, Smile.io) directly into our clean React component architecture, eliminating third-party script bloat and design restrictions.',
+    a: 'Backend apps that handle order fulfillment, inventory syncing, ERP data pipelines, warehouse management, and accounting integrate fluidly without modification because Shopify’s backend remains intact. For frontend customer-facing apps (reviews, search, subscriptions, loyalty), we integrate their official headless GraphQL/REST APIs (e.g. Okendo, Yotpo, Algolia, Recharge, Skio, Smile.io) directly into our clean React component architecture, eliminating third-party script bloat and design restrictions.',
   },
   {
     q: 'How are third-party analytics and tracking pixels handled headlessly?',
@@ -337,11 +337,11 @@ const FAQS = [
   },
   {
     q: 'How does headless Shopify handle subscriptions like Recharge, Skio, or Smartrr?',
-    a: 'We integrate subscription platforms directly via their headless APIs and Shopify Checkout Selling Plan contracts. Customers can select one-time purchase vs recurring delivery frequencies with custom discount schedules on the product page. The subscription contract is attached natively to the Shopify checkout line item, ensuring seamless recurring billing and customer portal management.',
+    a: 'We integrate subscription platforms directly via their headless APIs and Shopify Checkout Selling Plan contracts. Customers can select one-time purchase vs recurring delivery frequencies with custom discount schedules on the product page. The subscription contract is attached natively to the Shopify checkout line item, ensuring frictionless recurring billing and customer portal management.',
   },
   {
     q: 'How does server-side rendering protect our store against bot traffic and scraping?',
-    a: 'By hosting the Next.js 15 application on Cloudflare Workers and Enterprise CDN, we leverage advanced Web Application Firewall (WAF) rules, Cloudflare Bot Management, and rate limiting at the edge. Malicious price scrapers, credential stuffing bots, and automated inventory hoarding bots are challenged and blocked at the edge before they can execute queries against your Shopify backend or consume infrastructure resources.',
+    a: 'By hosting the Next.js 15 application on Cloudflare Workers and Enterprise CDN, we utilize advanced Web Application Firewall (WAF) rules, Cloudflare Bot Management, and rate limiting at the edge. Malicious price scrapers, credential stuffing bots, and automated inventory hoarding bots are challenged and blocked at the edge before they can execute queries against your Shopify backend or consume infrastructure resources.',
   },
   {
     q: 'What is the ongoing monthly maintenance cost for a headless Next.js 15 Shopify store?',
@@ -427,7 +427,7 @@ export default function HeadlessShopifyPage() {
             Headless Shopify Agency: Sub-Second Next.js 15 Storefronts
           </h1>
           <p className="pp-hero-sub">
-            Decouple your Shopify Plus backend from bloated Liquid themes. We build ultra-fast, bespoke Next.js 15 App Router storefronts powered by GraphQL APIs, Sanity CMS, and edge rendering—guaranteeing 95+ Mobile Core Web Vitals, zero app bloat, and higher conversion rates for scaling $3M to $100M+ brands.
+            Decouple your Shopify Plus backend from bloated Liquid themes. We build ultra-fast, bespoke Next.js 15 App Router storefronts powered by GraphQL APIs, Sanity CMS, and edge rendering, guaranteeing 95+ Mobile Core Web Vitals, zero app bloat, and higher conversion rates for scaling $3M to $100M+ brands.
           </p>
 
           <div className="pp-hero-ctas" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.25rem', width: '100%', maxWidth: '580px', margin: '0 auto' }}>
@@ -487,7 +487,7 @@ export default function HeadlessShopifyPage() {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', color: '#cbd5e1', lineHeight: '1.8', fontSize: '1.05rem' }}>
               <div>
                 <p style={{ marginBottom: '1.25rem' }}>
-                  For high-volume e-commerce brands generating between <strong>$3 million and $100 million annually</strong>, the traditional monolithic Shopify Liquid theme represents an engineering ceiling. Every marketing app installed—from review widgets and email popups to currency converters and countdown timers—injects unminified, render-blocking JavaScript files directly into the critical rendering path.
+                  For high-volume e-commerce brands generating between <strong>$3 million and $100 million annually</strong>, the traditional monolithic Shopify Liquid theme represents an engineering ceiling. Every marketing app installed, from review widgets and email popups to currency converters and countdown timers, injects unminified, render-blocking JavaScript files directly into the critical rendering path.
                 </p>
                 <p>
                   The result is severe mobile page bloat: average mobile page weights exceeding 4.5MB, Time to Interactive (TTI) spanning 4 to 8 seconds on 4G cellular networks, and failing Google Core Web Vitals scores that drag down paid ad ROAS and organic search rankings.

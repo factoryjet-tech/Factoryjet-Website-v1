@@ -385,7 +385,7 @@ const FAQ_ITEMS = [
     category: 'deliverables',
     question: 'What is NAP citation synchronization across Huntington Beach and Orange County directories?',
     answer:
-      'We establish and synchronize verified business citations across essential regional platforms—including the Huntington Beach Chamber of Commerce, Orange County BBB, Apple Maps, Bing Places, YellowPages, and industry registries—ensuring 100% data consistency, eliminating duplicates, and reinforcing Google Maps 3-Pack authority.',
+      'We establish and synchronize verified business citations across essential regional platforms, including the Huntington Beach Chamber of Commerce, Orange County BBB, Apple Maps, Bing Places, YellowPages, and industry registries, ensuring 100% data consistency, eliminating duplicates, and reinforcing Google Maps 3-Pack authority.',
   },
 ];
 

@@ -73,13 +73,13 @@ const howToSchema = {
     {
       '@type': 'HowToStep',
       position: 3,
-      name: 'Days 3–4 | Design',
+      name: 'Days 3-4 | Design',
       text: 'We design every page with your brand identity, mobile-first layouts, and conversion-focused UX. You review and approve all designs.',
     },
     {
       '@type': 'HowToStep',
       position: 4,
-      name: 'Days 5–6 | Development & SEO',
+      name: 'Days 5-6 | Development & SEO',
       text: 'We build your site in Next.js or WordPress, optimize Core Web Vitals, add structured data, and connect all integrations.',
     },
     {
@@ -212,7 +212,7 @@ const SERVICES = [
     eyebrow: 'AI · AUTOMATION',
     title: 'AI Automation',
     description:
-      'Connect your tools. Automate your ops. We build n8n, Zapier, and custom AI pipelines that save 10–30 hours a week.',
+      'Connect your tools. Automate your ops. We build n8n, Zapier, and custom AI pipelines that save 10-30 hours a week.',
     href: '/services/ai-automation',
     cta: 'See AI Automation',
     featured: false,
@@ -292,7 +292,7 @@ const FAQS = [
   },
   {
     q: 'What\'s an AI agent, and does my small business actually need one?',
-    a: 'An AI agent is a software program that handles repetitive tasks, answering customer questions, qualifying leads, routing support tickets, sending follow-up emails. If you\'re manually handling any of those at scale, an AI agent probably saves you 10–30 hours a week. We scope them honestly, if you don\'t need one yet, we\'ll tell you.',
+    a: 'An AI agent is a software program that handles repetitive tasks, answering customer questions, qualifying leads, routing support tickets, sending follow-up emails. If you\'re manually handling any of those at scale, an AI agent probably saves you 10-30 hours a week. We scope them honestly, if you don\'t need one yet, we\'ll tell you.',
   },
   {
     q: 'How does AI automation differ from AI agent development?',
@@ -348,7 +348,7 @@ const FAQS = [
   },
   {
     q: 'How do you handle bi-directional ERP and CRM data synchronization?',
-    a: 'We build robust REST and GraphQL API middleware connecting your digital storefront to enterprise ERP and CRM platforms—including NetSuite, SAP, Salesforce, HubSpot, Microsoft Dynamics 365, and QuickBooks Enterprise. Inventory, orders, pricing tiers, and customer records sync in real time with automated error logging.',
+    a: 'We build resilient REST and GraphQL API middleware connecting your digital storefront to enterprise ERP and CRM platforms, including NetSuite, SAP, Salesforce, HubSpot, Microsoft Dynamics 365, and QuickBooks Enterprise. Inventory, orders, pricing tiers, and customer records sync in real time with automated error logging.',
   },
   {
     q: 'What is your code handover process and do you provide full GitHub repository transfer?',

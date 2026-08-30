@@ -280,7 +280,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'method',
     question: 'How do you earn AI citations for a Shopify store?',
     answer:
-      'We structure your collection, product, and blog content with clear question–answer formatting and schema (FAQ, Product, Article) that AI engines extract, then earn named third-party citations that build the credibility those engines weight. The result: when a buyer asks ChatGPT, Perplexity, or Google AI Overviews about your product category, your store is referenced. We report AI citations alongside Google rankings every month.',
+      'We structure your collection, product, and blog content with clear question-answer formatting and schema (FAQ, Product, Article) that AI engines extract, then earn named third-party citations that build the credibility those engines weight. The result: when a buyer asks ChatGPT, Perplexity, or Google AI Overviews about your product category, your store is referenced. We report AI citations alongside Google rankings every month.',
   },
   {
     category: 'method',
@@ -300,7 +300,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'measure',
     question: 'How long does Shopify SEO take to work?',
     answer:
-      'Technical fixes (canonical and duplicate-URL cleanup, schema, Core Web Vitals) can show impact within weeks because they let Google index and rank pages it was previously discounting. Content and authority work compounds over 3–6 months. Most stores see early movement in the first quarter and meaningful organic growth by months 4–6. SEO is a compounding asset, not a switch, we sequence the fast wins first.',
+      'Technical fixes (canonical and duplicate-URL cleanup, schema, Core Web Vitals) can show impact within weeks because they let Google index and rank pages it was previously discounting. Content and authority work compounds over 3-6 months. Most stores see early movement in the first quarter and meaningful organic growth by months 4-6. SEO is a compounding asset, not a switch, we sequence the fast wins first.',
   },
 
   // ── Pricing & engagement ───────────────────────────────────────────────

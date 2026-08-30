@@ -51,7 +51,7 @@ const MIGRATION_PLATFORMS = [
     slug: 'magento-to-shopify',
     link: '/replatforming/magento-to-shopify',
     badge: 'High Enterprise Demand',
-    pain: 'Crippling cloud hosting bills ($4,000–$15,000/mo), endless PHP security patch cycles, fragile third-party extensions, slow catalog rendering, and high developer turnover.',
+    pain: 'Crippling cloud hosting bills ($4,000-$15,000/mo), endless PHP security patch cycles, fragile third-party extensions, slow catalog rendering, and high developer turnover.',
     solution: 'Automated database ETL of complex EAV catalog models into clean Shopify metafields, customer password hash preservation via Multipass, and 70% lower ongoing total cost of ownership.',
     keyStats: ['70% lower TCO', 'Zero server patching', 'Sub-second checkout'],
   },
@@ -70,7 +70,7 @@ const MIGRATION_PLATFORMS = [
     link: '/replatforming/bigcommerce-to-shopify-plus',
     badge: 'B2B & Multi-Storefront',
     pain: 'Fragmented app ecosystem, restrictive checkout customization constraints, and sluggish headless API response times under high concurrent peak catalog volume.',
-    solution: 'Seamless migration of B2B price lists, parent-child company accounts, Net payment terms, and custom business logic into native Shopify Plus B2B and Checkout Extensibility.',
+    solution: 'Frictionless migration of B2B price lists, parent-child company accounts, Net payment terms, and custom business logic into native Shopify Plus B2B and Checkout Extensibility.',
     keyStats: ['Unified B2B + DTC', 'Custom checkout rules', 'Fast Storefront GraphQL'],
   },
   {
@@ -110,7 +110,7 @@ const MIGRATION_DATA_PROTOCOLS = [
   },
   {
     title: 'Customer Passwords & Historical Auth Continuity',
-    desc: 'We utilize Shopify Plus Multipass API and cryptographic token bridges (preserving bcrypt/Argon2 password hashes) so your existing customer base logs in seamlessly post-migration without frustrating password reset emails.',
+    desc: 'We utilize Shopify Plus Multipass API and cryptographic token bridges (preserving bcrypt/Argon2 password hashes) so your existing customer base logs in fluidly post-migration without frustrating password reset emails.',
     points: ['Zero customer login friction', 'Loyalty point & credit migration', 'Encrypted customer data transfer'],
   },
   {
@@ -203,7 +203,7 @@ const MIGRATION_ROADMAP = [
     desc: 'We migrate complete historical order records, tax breakdowns, fulfillment tracking numbers, customer profiles, store credit balances, and active subscription billing contracts.',
     deliverables: [
       'Historical order records and invoice data imported with accurate financial settlement reconciliation',
-      'Customer profile migration with Shopify Multipass seamless login configuration',
+      'Customer profile migration with Shopify Multipass frictionless login configuration',
       'Subscription contract migration to Recharge, Skio, or native Shopify Subscriptions',
       'Loyalty points and reward balances transferred with zero customer balance loss',
     ],
@@ -233,7 +233,7 @@ const MIGRATION_ROADMAP = [
   {
     phase: 'Phase 7: Zero-Downtime DNS Cutover & Hypercare War Room',
     timeline: 'Launch Day & Post-Launch',
-    desc: 'We execute a seamless live cutover using Cloudflare Edge traffic routing with delta order synchronization, followed by 30 days of 24/7 dedicated hypercare engineering support.',
+    desc: 'We execute a frictionless live cutover using Cloudflare Edge traffic routing with delta order synchronization, followed by 30 days of 24/7 dedicated hypercare engineering support.',
     deliverables: [
       'Delta synchronization of orders and customers created on legacy platform during final cutover window',
       'Zero-downtime DNS switchover with live transaction settlement and webhook monitoring',
@@ -258,11 +258,11 @@ const FAQS = [
   },
   {
     q: 'What happens to our historical order records and invoices?',
-    a: 'We migrate complete historical order records, line items, historical customer billing and shipping addresses, tax breakdowns, discount codes, shipping fees, fulfillment tracking numbers, and refund histories into Shopify Plus using Shopify’s Order API. Your customer service team retains full visibility into past customer purchase history directly within the Shopify admin, and past orders synchronize seamlessly with your ERP.',
+    a: 'We migrate complete historical order records, line items, historical customer billing and shipping addresses, tax breakdowns, discount codes, shipping fees, fulfillment tracking numbers, and refund histories into Shopify Plus using Shopify’s Order API. Your customer service team retains full visibility into past customer purchase history directly within the Shopify admin, and past orders synchronize fluidly with your ERP.',
   },
   {
     q: 'Can existing customers log into Shopify without resetting their passwords?',
-    a: 'Yes. On Shopify Plus, we implement Shopify Multipass authentication or custom cryptographic token bridging. This allows existing customers with password hashes (bcrypt, Argon2, SHA-256) to log into the new Shopify store seamlessly on their first visit without requiring disruptive mass password-reset email campaigns, preventing customer friction and cart abandonment.',
+    a: 'Yes. On Shopify Plus, we implement Shopify Multipass authentication or custom cryptographic token bridging. This allows existing customers with password hashes (bcrypt, Argon2, SHA-256) to log into the new Shopify store fluidly on their first visit without requiring disruptive mass password-reset email campaigns, preventing customer friction and cart abandonment.',
   },
   {
     q: 'What happens to customer loyalty points and store credit during migration?',
@@ -306,7 +306,7 @@ const FAQS = [
   },
   {
     q: 'How are custom product bundles, tiered quantity discounts, and custom pricing migrated?',
-    a: 'We leverage Shopify Functions—Shopify’s high-performance server-side WebAssembly logic engine. Instead of relying on slow client-side JavaScript apps, we engineer custom discount and cart validation rules that execute natively within Shopify’s checkout backend, ensuring sub-50ms execution speed and seamless mobile conversion.',
+    a: 'We utilize Shopify Functions, Shopify’s high-performance server-side WebAssembly logic engine. Instead of relying on slow client-side JavaScript apps, we engineer custom discount and cart validation rules that execute natively within Shopify’s checkout backend, ensuring sub-50ms execution speed and frictionless mobile conversion.',
   },
   {
     q: 'What happens to customer subscription tokens and recurring billing contracts?',
@@ -458,7 +458,7 @@ export default function ShopifyMigrationPage() {
                   Over <strong>68% of enterprise e-commerce replatforming projects</strong> experience severe post-launch issues: catastrophic organic search traffic drops of 30% to 60%, broken customer accounts forcing password resets, missing order histories that paralyze customer support, and unexpected launch day downtime that costs hundreds of thousands in lost revenue.
                 </p>
                 <p>
-                  These failures are not caused by the destination platform—they are caused by poor migration engineering. Typical agencies rely on generic SaaS migration tools or unvalidated CSV exports that truncate custom product metafields, corrupt parent-child variant relationships, and fail to map complex URL rewrite hierarchies.
+                  These failures are not caused by the destination platform, they are caused by poor migration engineering. Typical agencies rely on generic SaaS migration tools or unvalidated CSV exports that truncate custom product metafields, corrupt parent-child variant relationships, and fail to map complex URL rewrite hierarchies.
                 </p>
               </div>
 

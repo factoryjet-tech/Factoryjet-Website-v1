@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'AI Chatbot Agent Development for US Businesses | FactoryJet',
     description:
-      'Custom AI chatbot agents for websites, phone, SMS, email and support portals. HubSpot, Salesforce, Shopify and Stripe ready. Fixed price. Live in 2–3 weeks.',
+      'Custom AI chatbot agents for websites, phone, SMS, email and support portals. HubSpot, Salesforce, Shopify and Stripe ready. Fixed price. Live in 2-3 weeks.',
     url: 'https://factoryjet.com/services/ai-agent-development/ai-chatbot',
     images: [
       {
@@ -109,7 +109,7 @@ const serviceSchema = {
   areaServed: { '@type': 'Country', name: 'United States' },
   serviceType: 'AI Chatbot Development',
   description:
-    'Custom AI chatbot agents for US businesses: website chat agents, phone and SMS agents, and email support bots integrated with HubSpot, Salesforce, Shopify, Stripe, and Zendesk. Fixed price. Deployed in 2–3 weeks.',
+    'Custom AI chatbot agents for US businesses: website chat agents, phone and SMS agents, and email support bots integrated with HubSpot, Salesforce, Shopify, Stripe, and Zendesk. Fixed price. Deployed in 2-3 weeks.',
 };
 
 const speakableSchema = {
@@ -200,7 +200,7 @@ const CHATBOT_MARKET_STATS = [
     value: '61.1%',
     label: 'of Americans who speak a language other than English at home speak Spanish',
     sourceUrl: 'https://www.census.gov/newsroom/press-releases/2023/language-at-home-acs-5-year.html',
-    sourceLabel: 'US Census Bureau, 2018–2022 ACS',
+    sourceLabel: 'US Census Bureau, 2018-2022 ACS',
   },
 ];
 
@@ -317,7 +317,7 @@ const CHATBOT_INDUSTRIES = [
     name: 'Real Estate',
     description:
       'Website and SMS agents that qualify leads coming in from Zillow, Realtor.com, and your own listings, answer property FAQs, show available units, and book showings: all logged automatically to HubSpot, Salesforce, or Follow Up Boss.',
-    example: 'Brokerages see 35–50% more showings booked without adding inside sales reps.',
+    example: 'Brokerages see 35-50% more showings booked without adding inside sales reps.',
   },
   {
     name: 'Education & Training',
@@ -329,7 +329,7 @@ const CHATBOT_INDUSTRIES = [
     name: 'Healthcare & Clinics',
     description:
       'Appointment booking agents on your website, phone line, and SMS that check provider availability, confirm slots, send reminders, and handle cancellations, built to respect HIPAA requirements with full audit trails on every interaction.',
-    example: 'Clinics recover 3–4 hours of front-desk time per day.',
+    example: 'Clinics recover 3-4 hours of front-desk time per day.',
   },
   {
     name: 'Financial Services',
@@ -412,7 +412,7 @@ const CHATBOT_FAQ_ITEMS = [
     category: 'compliance',
     question: 'Can the chatbot respond in Spanish as well as English?',
     answer:
-      "Yes. Spanish is the largest non-English language spoken at home in the US, accounting for 61.1% of people who speak a language other than English, per the Census Bureau's 2018–2022 American Community Survey. We configure the agent to detect the language the customer writes in and reply in kind. Detection is automatic, so one agent handles both languages without you maintaining two separate bots.",
+      "Yes. Spanish is the largest non-English language spoken at home in the US, accounting for 61.1% of people who speak a language other than English, per the Census Bureau's 2018-2022 American Community Survey. We configure the agent to detect the language the customer writes in and reply in kind. Detection is automatic, so one agent handles both languages without you maintaining two separate bots.",
   },
   {
     category: 'compliance',
@@ -438,7 +438,7 @@ const CHATBOT_FAQ_ITEMS = [
     category: 'process',
     question: 'How long does it take to build an AI chatbot agent?',
     answer:
-      "A focused website or email chatbot goes from kickoff to live in 2–3 weeks. Multi-channel agents with deeper CRM/ERP integrations take 4–6 weeks. The timeline depends on the number of integrations and how many conversation flows we need to build, we give you a firm estimate after a 45-minute discovery call.",
+      "A focused website or email chatbot goes from kickoff to live in 2-3 weeks. Multi-channel agents with deeper CRM/ERP integrations take 4-6 weeks. The timeline depends on the number of integrations and how many conversation flows we need to build, we give you a firm estimate after a 45-minute discovery call.",
   },
   {
     category: 'process',
@@ -470,7 +470,7 @@ const CHATBOT_FAQ_ITEMS = [
     category: 'pricing',
     question: 'What is the typical return on investment for a business chatbot?',
     answer:
-      "The most common ROI comes from support labor savings. An agent handling 70% of routine questions absorbs the workload of one to two support reps, with payback in 3–6 months for most businesses. Secondary ROI: leads that now get an instant response instead of waiting until the next business day convert at meaningfully higher rates. Most clients see measurable improvement within 30 days of launch.",
+      "The most common ROI comes from support labor savings. An agent handling 70% of routine questions absorbs the workload of one to two support reps, with payback in 3-6 months for most businesses. Secondary ROI: leads that now get an instant response instead of waiting until the next business day convert at meaningfully higher rates. Most clients see measurable improvement within 30 days of launch.",
   },
   {
     category: 'pricing',
@@ -577,7 +577,7 @@ export default function AIChatbotUSPage() {
         <Hero
         formSlot={<HeroInlineForm region="us" source="services_ai_agent_development_ai_chatbot_hero" />}
           eyebrow="AI CHATBOT AGENT DEVELOPMENT · UNITED STATES"
-          headline="AI Chatbot Agents Built for US Customers, Live in 2–3 Weeks"
+          headline="AI Chatbot Agents Built for US Customers, Live in 2-3 Weeks"
           lead="Your customers ask the same questions 200 times a day, on your website, by phone, over SMS and in your inbox. An AI chatbot agent answers them instantly, in English or Spanish, while pushing data straight into HubSpot, Shopify, and Stripe. Fixed price. No ongoing SaaS fee."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'us' as const }}
           trustItems={[
@@ -659,7 +659,7 @@ export default function AIChatbotUSPage() {
                 ))}
               </div>
               <p>
-                The scripted chatbots most businesses have tried, button-click menus, keyword matching, decision trees, fail 40–60% of conversations because customers do not behave the way the script expects. They use different words, switch between English and Spanish, ask follow-up questions, or type something the script never anticipated. The bot breaks, the customer leaves, and your team picks up the mess.
+                The scripted chatbots most businesses have tried, button-click menus, keyword matching, decision trees, fail 40-60% of conversations because customers do not behave the way the script expects. They use different words, switch between English and Spanish, ask follow-up questions, or type something the script never anticipated. The bot breaks, the customer leaves, and your team picks up the mess.
               </p>
               <div className="grid grid-cols-3 gap-3" aria-hidden>
                 {[
@@ -760,7 +760,7 @@ export default function AIChatbotUSPage() {
         <StrategicDarkSection
           eyebrow="THE PROBLEM"
           headline="Your team is answering the same messages on repeat"
-          lead="The biggest hidden cost in most US businesses is not salary, it is repetition. Your support staff spend 60–70% of their time on questions with the same 10 answers. An AI chatbot agent eliminates that entirely."
+          lead="The biggest hidden cost in most US businesses is not salary, it is repetition. Your support staff spend 60-70% of their time on questions with the same 10 answers. An AI chatbot agent eliminates that entirely."
           pillars={[
             {
               icon: '💬',
@@ -783,7 +783,7 @@ export default function AIChatbotUSPage() {
         {/* ── 6. BUILD JOURNEY (LIGHT) ─────────────────────────────────────── */}
         <ServiceJourneyRow
           eyebrow="HOW WE BUILD"
-          headline="From discovery to a live chatbot agent in 2–3 weeks"
+          headline="From discovery to a live chatbot agent in 2-3 weeks"
           stages={CHATBOT_JOURNEY_STAGES}
           closingNote="Every stage ends with a working demo. You see the agent before it talks to your customers."
         />

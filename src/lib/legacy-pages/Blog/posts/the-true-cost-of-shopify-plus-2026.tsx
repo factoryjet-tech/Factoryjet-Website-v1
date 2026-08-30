@@ -23,8 +23,8 @@ export const post: BlogPost = {
     'Shopify Payments transaction processing rates on Plus drop to 2.15% + $0.30 per transaction for domestic cards (0.25% cheaper than the Advanced plan at 2.40% + $0.30). For a $5M brand, this processing rate reduction alone saves $12,500 annually.',
     'Third-party payment gateways (e.g. Stripe, Authorize.net, or Adyen without Shopify Payments) incur an additional 0.20% platform surcharge on Plus (down from 0.60% on Advanced and 2.0% on Basic).',
     'Up to 9 expansion stores (for international localization, sub-brands, or staging environments) are included free in the base tier. Additional expansion stores cost $250/month each.',
-    'Native B2B wholesale functionality is bundled into Shopify Plus at no extra license fee, eliminating $6,000–$18,000/year previously spent on third-party wholesale apps or duplicate clone stores.',
-    'The true mathematical break-even threshold to upgrade from Advanced Shopify ($399/mo) to Shopify Plus sits between $80,000 and $125,000/month ($1M–$1.5M/yr) in revenue, driven by credit card fee reductions, checkout extensibility conversion lifts, and multi-currency expansion.',
+    'Native B2B wholesale functionality is bundled into Shopify Plus at no extra license fee, eliminating $6,000-$18,000/year previously spent on third-party wholesale apps or duplicate clone stores.',
+    'The true mathematical break-even threshold to upgrade from Advanced Shopify ($399/mo) to Shopify Plus sits between $80,000 and $125,000/month ($1M-$1.5M/yr) in revenue, driven by credit card fee reductions, checkout extensibility conversion lifts, and multi-currency expansion.',
   ],
   faqs: [
     {
@@ -49,7 +49,7 @@ export const post: BlogPost = {
     },
     {
       q: 'What is the break-even revenue to upgrade from Advanced Shopify to Plus?',
-      a: 'The financial break-even point typically occurs between $80,000 and $125,000 in monthly GMV ($1M–$1.5M annually). At $100,000/month, the 0.25% credit card savings equals $250/mo, and eliminating 3–4 third-party apps for checkout customization, B2B wholesale, and international multi-store syncing saves $1,200–$2,000/mo, fully offsetting the subscription cost difference while unlocking sub-second checkout speeds.',
+      a: 'The financial break-even point typically occurs between $80,000 and $125,000 in monthly GMV ($1M-$1.5M annually). At $100,000/month, the 0.25% credit card savings equals $250/mo, and eliminating 3-4 third-party apps for checkout customization, B2B wholesale, and international multi-store syncing saves $1,200-$2,000/mo, fully offsetting the subscription cost difference while capturing sub-second checkout speeds.',
     },
     {
       q: 'Are B2B wholesale features included in Shopify Plus pricing?',
@@ -61,11 +61,11 @@ export const post: BlogPost = {
     },
     {
       q: 'Is Shopify Plus cheaper than Adobe Commerce (Magento) or Salesforce (SFCC)?',
-      a: 'Yes, significantly. A $10M GMV brand on Magento 2 or Salesforce Commerce Cloud typically incurs $350,000–$650,000/year in total cost of ownership (TCO) across server hosting, DevOps infrastructure, security patch retainers, and enterprise licensing. The same brand on Shopify Plus typically incurs $160,000–$280,000/year in total TCO, delivering a 50% to 65% net annual cost reduction.',
+      a: 'Yes, significantly. A $10M GMV brand on Magento 2 or Salesforce Commerce Cloud typically incurs $350,000-$650,000/year in total cost of ownership (TCO) across server hosting, DevOps infrastructure, security patch retainers, and enterprise licensing. The same brand on Shopify Plus typically incurs $160,000-$280,000/year in total TCO, delivering a 50% to 65% net annual cost reduction.',
     },
     {
       q: 'What hidden costs should enterprise brands budget for on Shopify Plus?',
-      a: 'The four primary secondary costs beyond the base subscription are: 1) High-volume app stack subscriptions (Klaviyo, Gorgias, Recharge, Algolia: $1,000–$3,500/mo), 2) ERP middleware integration services (Celigo, Boomi, or custom webhooks: $500–$1,500/mo), 3) Third-party tax engines like Avalara AvaTax ($250–$1,000/mo), and 4) Ongoing agency development support or conversion rate optimization sprints.',
+      a: 'The four primary secondary costs beyond the base subscription are: 1) High-volume app stack subscriptions (Klaviyo, Gorgias, Recharge, Algolia: $1,000-$3,500/mo), 2) ERP middleware integration services (Celigo, Boomi, or custom webhooks: $500-$1,500/mo), 3) Third-party tax engines like Avalara AvaTax ($250-$1,000/mo), and 4) Ongoing agency development support or conversion rate optimization sprints.',
     },
     {
       q: 'How does Shopify Plus handle multi-currency conversions and FX markups?',
@@ -81,11 +81,11 @@ export const post: BlogPost = {
     },
     {
       q: 'How does Shopify Plus pricing compare for B2B-only wholesale distributors?',
-      a: 'For pure B2B wholesale businesses, Shopify Plus is exceptionally cost-effective. Legacy enterprise B2B platforms like SAP Commerce or Magento B2B charge $50k–$150k/year in licensing plus immense hosting overhead. Shopify Plus bundles full B2B company accounts, customer-specific price lists, quantity price breaks, and draft order purchasing for the standard $2,500/mo fee.',
+      a: 'For pure B2B wholesale businesses, Shopify Plus is exceptionally cost-effective. Legacy enterprise B2B platforms like SAP Commerce or Magento B2B charge $50k-$150k/year in licensing plus immense hosting overhead. Shopify Plus bundles full B2B company accounts, customer-specific price lists, quantity price breaks, and draft order purchasing for the standard $2,500/mo fee.',
     },
     {
       q: 'What are the costs of building custom Shopify Functions vs third-party apps?',
-      a: 'Building custom Shopify Functions (for custom cart discounts, bundle logic, and shipping validation) incurs a one-time development fee ($3,000–$8,000) during initial store build. However, because Functions execute server-side natively in WebAssembly within Shopify’s infrastructure at zero recurring cost, they eliminate $300–$1,200/month in perpetual third-party app subscriptions.',
+      a: 'Building custom Shopify Functions (for custom cart discounts, bundle logic, and shipping validation) incurs a one-time development fee ($3,000-$8,000) during initial store build. However, because Functions execute server-side natively in WebAssembly within Shopify’s infrastructure at zero recurring cost, they eliminate $300-$1,200/month in perpetual third-party app subscriptions.',
     },
     {
       q: 'What is the SLA and support tier included in the $2,500/month Plus subscription?',
@@ -113,7 +113,7 @@ export const post: BlogPost = {
           <li>Secondary Line Items: ERP Middleware, Subscriptions, &amp; Taxes</li>
           <li>Shopify Plus vs. Magento vs. Salesforce Commerce Cloud (SFCC) TCO</li>
           <li>The Exact Mathematical Break-Even Threshold to Upgrade</li>
-          <li>Enterprise App Stack Budgeting: Real Costs for $5M–$25M Brands</li>
+          <li>Enterprise App Stack Budgeting: Real Costs for $5M-$25M Brands</li>
           <li>Headless Shopify Hosting &amp; Edge Infrastructure Costs</li>
           <li>How to Negotiate Your Shopify Plus Enterprise Agreement</li>
           <li>International Expansion &amp; Cross-Border Currency Conversion Fees</li>
@@ -134,7 +134,7 @@ export const post: BlogPost = {
         1. Shopify Plus 2026 Core Pricing Structure
       </h2>
       <p className="mb-4 text-gray-700 leading-relaxed">
-        Following the 2024–2025 platform adjustments, Shopify Plus pricing operates on a two-tier model: a predictable fixed base tier for scaling mid-market merchants, and a variable basis-point fee for high-volume enterprise operations.
+        Following the 2024-2025 platform adjustments, Shopify Plus pricing operates on a two-tier model: a predictable fixed base tier for scaling mid-market merchants, and a variable basis-point fee for high-volume enterprise operations.
       </p>
 
       <div className="overflow-x-auto mb-8">
@@ -320,13 +320,13 @@ export const post: BlogPost = {
 
       <ul className="list-disc pl-6 mb-6 space-y-3 text-gray-700">
         <li>
-          <strong>Native B2B Wholesale Portals (Saves $6,000–$18,000/year):</strong> Eliminates costly wholesale apps (Wholesale Gorilla, SparkLayer) and removes the overhead of maintaining duplicate "clone" stores.
+          <strong>Native B2B Wholesale Portals (Saves $6,000-$18,000/year):</strong> Eliminates costly wholesale apps (Wholesale Gorilla, SparkLayer) and removes the overhead of maintaining duplicate "clone" stores.
         </li>
         <li>
           <strong>9 Free Expansion Stores (Saves $43,000/year):</strong> Running 5 localized international storefronts on Advanced requires 5 separate $399/mo subscriptions plus duplicate app fees ($23,940/year). Plus includes 9 expansion stores free under one organization.
         </li>
         <li>
-          <strong>Shopify Checkout Extensibility &amp; Functions (Saves $3,600–$10,000/year):</strong> Custom post-purchase upsell widgets, custom tiered discounts, and shipping validation rules are built server-side natively, eliminating apps like ReBuy or Script Editor maintenance.
+          <strong>Shopify Checkout Extensibility &amp; Functions (Saves $3,600-$10,000/year):</strong> Custom post-purchase upsell widgets, custom tiered discounts, and shipping validation rules are built server-side natively, eliminating apps like ReBuy or Script Editor maintenance.
         </li>
         <li>
           <strong>Shopify Flow &amp; Launchpad Automation (Saves $2,400/year):</strong> Automated fraud tagging, inventory reordering, and automated promotional flash sale scheduling built directly into admin without Zapier/Make tasks.
@@ -353,33 +353,33 @@ export const post: BlogPost = {
           <tbody>
             <tr className="bg-white">
               <td className="border p-3 font-semibold text-gray-900">Annual Software Licensing</td>
-              <td className="border p-3 font-semibold text-green-700">$30,000 – $60,000</td>
-              <td className="border p-3 text-gray-700">$22,000 – $75,000</td>
-              <td className="border p-3 text-red-600 font-semibold">$150,000 – $350,000+</td>
+              <td className="border p-3 font-semibold text-green-700">$30,000 - $60,000</td>
+              <td className="border p-3 text-gray-700">$22,000 - $75,000</td>
+              <td className="border p-3 text-red-600 font-semibold">$150,000 - $350,000+</td>
             </tr>
             <tr className="bg-gray-50">
               <td className="border p-3 font-semibold text-gray-900">Server Hosting &amp; Cloud DevOps</td>
               <td className="border p-3 font-semibold text-green-700">$0 (Managed 99.99% Cloud)</td>
-              <td className="border p-3 text-red-600 font-semibold">$36,000 – $120,000 (AWS/Azure)</td>
+              <td className="border p-3 text-red-600 font-semibold">$36,000 - $120,000 (AWS/Azure)</td>
               <td className="border p-3 text-gray-700">Bundled (Proprietary Cloud)</td>
             </tr>
             <tr className="bg-white">
               <td className="border p-3 font-semibold text-gray-900">Security Patches &amp; PCI Audits</td>
               <td className="border p-3 font-semibold text-green-700">$0 (Native Level 1 PCI)</td>
-              <td className="border p-3 text-red-600 font-semibold">$24,000 – $60,000/yr Retainers</td>
-              <td className="border p-3 text-gray-700">$15,000 – $40,000/yr</td>
+              <td className="border p-3 text-red-600 font-semibold">$24,000 - $60,000/yr Retainers</td>
+              <td className="border p-3 text-gray-700">$15,000 - $40,000/yr</td>
             </tr>
             <tr className="bg-gray-50">
               <td className="border p-3 font-semibold text-gray-900">Average Developer Hourly Rate</td>
-              <td className="border p-3 text-gray-700">$85 – $150 / hour</td>
-              <td className="border p-3 text-gray-700">$140 – $225 / hour</td>
-              <td className="border p-3 text-red-600 font-semibold">$185 – $300+ / hour</td>
+              <td className="border p-3 text-gray-700">$85 - $150 / hour</td>
+              <td className="border p-3 text-gray-700">$140 - $225 / hour</td>
+              <td className="border p-3 text-red-600 font-semibold">$185 - $300+ / hour</td>
             </tr>
             <tr className="bg-orange-50 font-bold text-gray-950">
               <td className="border p-3">Estimated 3-Year TCO ($10M Brand)</td>
-              <td className="border p-3 text-green-700">$850,000 – $1,100,000</td>
-              <td className="border p-3 text-red-600">$1,650,000 – $2,400,000</td>
-              <td className="border p-3 text-red-600">$2,400,000 – $3,800,000</td>
+              <td className="border p-3 text-green-700">$850,000 - $1,100,000</td>
+              <td className="border p-3 text-red-600">$1,650,000 - $2,400,000</td>
+              <td className="border p-3 text-red-600">$2,400,000 - $3,800,000</td>
             </tr>
           </tbody>
         </table>
@@ -409,7 +409,7 @@ export const post: BlogPost = {
       </p>
 
       <h2 className="text-2xl font-bold mt-10 mb-4 text-gray-900">
-        8. Enterprise App Stack Budgeting: Real Costs for $5M–$25M Brands
+        8. Enterprise App Stack Budgeting: Real Costs for $5M-$25M Brands
       </h2>
       <p className="mb-4 text-gray-700 leading-relaxed">
         While Shopify Plus includes native B2B and automation, top-tier DTC and omnichannel operations rely on best-of-breed software partners. App costs scale directly with order volume, email list sizes, and API call frequency:
@@ -421,22 +421,22 @@ export const post: BlogPost = {
             <tr>
               <th className="p-3.5 border text-left">Software Category</th>
               <th className="p-3.5 border text-left">Market Leaders</th>
-              <th className="p-3.5 border text-left">$1M–$5M GMV Budget</th>
-              <th className="p-3.5 border text-left">$10M–$25M GMV Budget</th>
+              <th className="p-3.5 border text-left">$1M-$5M GMV Budget</th>
+              <th className="p-3.5 border text-left">$10M-$25M GMV Budget</th>
             </tr>
           </thead>
           <tbody>
             <tr className="bg-white">
               <td className="border p-3 font-semibold text-gray-900">Email &amp; SMS Marketing</td>
               <td className="border p-3 text-gray-700">Klaviyo, Attentive, Omnisend</td>
-              <td className="border p-3">$600 – $1,800 / month</td>
-              <td className="border p-3">$2,500 – $6,000 / month</td>
+              <td className="border p-3">$600 - $1,800 / month</td>
+              <td className="border p-3">$2,500 - $6,000 / month</td>
             </tr>
             <tr className="bg-gray-50">
               <td className="border p-3 font-semibold text-gray-900">Customer Support &amp; AI Helpdesk</td>
               <td className="border p-3 text-gray-700">Gorgias, Zendesk, Kustomer</td>
-              <td className="border p-3">$300 – $750 / month</td>
-              <td className="border p-3">$1,200 – $3,000 / month</td>
+              <td className="border p-3">$300 - $750 / month</td>
+              <td className="border p-3">$1,200 - $3,000 / month</td>
             </tr>
             <tr className="bg-white">
               <td className="border p-3 font-semibold text-gray-900">Subscription Management</td>
@@ -447,20 +447,20 @@ export const post: BlogPost = {
             <tr className="bg-gray-50">
               <td className="border p-3 font-semibold text-gray-900">Enterprise Search &amp; Merchandising</td>
               <td className="border p-3 text-gray-700">Algolia, Searchspring, Boost AI</td>
-              <td className="border p-3">$250 – $600 / month</td>
-              <td className="border p-3">$1,000 – $2,500 / month</td>
+              <td className="border p-3">$250 - $600 / month</td>
+              <td className="border p-3">$1,000 - $2,500 / month</td>
             </tr>
             <tr className="bg-white">
               <td className="border p-3 font-semibold text-gray-900">Reviews &amp; UGC</td>
               <td className="border p-3 text-gray-700">Yotpo, Okendo, Junip</td>
-              <td className="border p-3">$200 – $500 / month</td>
-              <td className="border p-3">$800 – $2,000 / month</td>
+              <td className="border p-3">$200 - $500 / month</td>
+              <td className="border p-3">$800 - $2,000 / month</td>
             </tr>
             <tr className="bg-gray-50">
               <td className="border p-3 font-semibold text-gray-900">Sales Tax Automation</td>
               <td className="border p-3 text-gray-700">Shopify Tax, Avalara AvaTax</td>
               <td className="border p-3">Included / $250 / mo</td>
-              <td className="border p-3">$600 – $1,500 / month</td>
+              <td className="border p-3">$600 - $1,500 / month</td>
             </tr>
           </tbody>
         </table>
@@ -484,7 +484,7 @@ export const post: BlogPost = {
         10. How to Negotiate Your Shopify Plus Enterprise Agreement
       </h2>
       <p className="mb-4 text-gray-700 leading-relaxed">
-        While Shopify's list pricing is structured, enterprise merchants have significant leverage when signing new multi-year agreements or replatforming from Salesforce or Magento. Here are four proven negotiation tactics:
+        While Shopify's list pricing is structured, enterprise merchants have significant utilize when signing new multi-year agreements or replatforming from Salesforce or Magento. Here are four proven negotiation tactics:
       </p>
 
       <ol className="list-decimal pl-6 mb-6 space-y-3 text-gray-700">
@@ -495,10 +495,10 @@ export const post: BlogPost = {
           <strong>Negotiate Shopify Payments Basis Points:</strong> Brands processing over $10M annually can request custom custom interchange-plus pricing or reduced domestic basis points (e.g. 2.05% instead of 2.15%), yielding tens of thousands in annual savings.
         </li>
         <li>
-          <strong>Request Additional Free Expansion Stores:</strong> If you operate across 12+ international markets, request 2–5 additional expansion stores bundled into your base agreement, saving up to $15,000 over 3 years.
+          <strong>Request Additional Free Expansion Stores:</strong> If you operate across 12+ international markets, request 2-5 additional expansion stores bundled into your base agreement, saving up to $15,000 over 3 years.
         </li>
         <li>
-          <strong>Leverage Partner Merchant Success Managers (MSMs):</strong> Working through certified Shopify Plus partner agencies like FactoryJet ensures your RFP is routed to senior enterprise tier specialists with discretionary contract flexibility.
+          <strong>Utilize Partner Merchant Success Managers (MSMs):</strong> Working through certified Shopify Plus partner agencies like FactoryJet ensures your RFP is routed to senior enterprise tier specialists with discretionary contract flexibility.
         </li>
       </ol>
 
@@ -514,7 +514,7 @@ export const post: BlogPost = {
           <strong>Shopify Markets with Native Currency Conversion (2.0% FX Fee):</strong> If you sell globally from a single US store in 130+ currencies using Shopify Payments, Shopify automatically converts transactions at mid-market rates plus a <strong>2.0% foreign exchange (FX) fee</strong>. For a brand with $3,000,000 in international sales, this fee amounts to $60,000 annually.
         </li>
         <li>
-          <strong>Localized Expansion Stores with Local Merchant Accounts (0% FX Fee):</strong> By leveraging Shopify Plus’s 9 included expansion stores, you can deploy dedicated localized storefronts (e.g., uk.yourbrand.com in GBP, au.yourbrand.com in AUD) backed by local legal entities and local bank accounts. This completely bypasses the 2.0% cross-border FX markup, saving $60,000/year while boosting local conversion rates by up to 28%.
+          <strong>Localized Expansion Stores with Local Merchant Accounts (0% FX Fee):</strong> By utilizing Shopify Plus’s 9 included expansion stores, you can deploy dedicated localized storefronts (e.g., uk.yourbrand.com in GBP, au.yourbrand.com in AUD) backed by local legal entities and local bank accounts. This completely bypasses the 2.0% cross-border FX markup, saving $60,000/year while boosting local conversion rates by up to 28%.
         </li>
       </ul>
 

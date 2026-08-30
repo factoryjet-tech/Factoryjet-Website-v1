@@ -390,7 +390,7 @@ const FAQ_ITEMS = [
     category: 'technical',
     question: 'What is NAP citation synchronization across Sioux Falls and regional directories?',
     answer:
-      'We establish and synchronize verified business listings across essential regional platforms—including the Greater Sioux Falls Chamber of Commerce, South Dakota Better Business Bureau, Apple Maps, Bing Places, and YellowPages—ensuring 100% data consistency and reinforcing Google Maps 3-Pack authority.',
+      'We establish and synchronize verified business listings across essential regional platforms, including the Greater Sioux Falls Chamber of Commerce, South Dakota Better Business Bureau, Apple Maps, Bing Places, and YellowPages, ensuring 100% data consistency and reinforcing Google Maps 3-Pack authority.',
   },
 ];
 

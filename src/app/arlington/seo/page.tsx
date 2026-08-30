@@ -386,7 +386,7 @@ const FAQ_ITEMS = [
     category: 'deliverables',
     question: 'What is NAP citation synchronization across Arlington and North Texas business directories?',
     answer:
-      'We establish and synchronize verified business citations across essential regional directories—including the Greater Arlington Chamber of Commerce, North Texas BBB, Apple Maps, Bing Places, YellowPages, Dun & Bradstreet, and industry registries—ensuring 100% data consistency, eliminating duplicate listings, and reinforcing Google Maps 3-Pack authority across Tarrant, Dallas, and Johnson counties.',
+      'We establish and synchronize verified business citations across essential regional directories, including the Greater Arlington Chamber of Commerce, North Texas BBB, Apple Maps, Bing Places, YellowPages, Dun & Bradstreet, and industry registries, ensuring 100% data consistency, eliminating duplicate listings, and reinforcing Google Maps 3-Pack authority across Tarrant, Dallas, and Johnson counties.',
   },
 ];
 

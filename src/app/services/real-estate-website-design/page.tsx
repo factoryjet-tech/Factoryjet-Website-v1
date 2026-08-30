@@ -152,7 +152,7 @@ const USE_CASES = [
   {
     name: 'Commercial Real Estate',
     description: 'Commercial property listing sites, investment portfolio showcases, and market report pages for commercial brokers and investors.',
-    example: 'Typically 10–15 pages with property showcase. Fixed price, scoped to your build.',
+    example: 'Typically 10-15 pages with property showcase. Fixed price, scoped to your build.',
   },
   {
     name: 'Real Estate Developers',
@@ -261,7 +261,7 @@ const PRICING_TIERS = [
       'Lease document storage',
       'Email notification system',
       'Owner financial reporting',
-      '4–6 week delivery',
+      '4-6 week delivery',
       '60 days post-launch support',
     ],
     cta: { label: 'Get Started', modal: true, region: 'us' },
@@ -291,7 +291,7 @@ const FAQ_ITEMS = [
   {
     category: 'basics',
     question: 'Do I need a website if I have a Zillow Premier Agent profile?',
-    answer: "Zillow and a website serve different purposes. Zillow puts you in front of buyers already on Zillow, you pay per lead, and the moment you stop paying, you disappear. A website builds organic search visibility: when someone searches 'real estate agent in [neighborhood]' or '[city] homes for sale,' your site ranks, not your Zillow profile. Over 3–5 years, a website that ranks generates leads at near-zero cost. Zillow leads keep costing you per contact. The top-producing agents run both, but the website builds an asset. Zillow is a rental.",
+    answer: "Zillow and a website serve different purposes. Zillow puts you in front of buyers already on Zillow, you pay per lead, and the moment you stop paying, you disappear. A website builds organic search visibility: when someone searches 'real estate agent in [neighborhood]' or '[city] homes for sale,' your site ranks, not your Zillow profile. Over 3-5 years, a website that ranks generates leads at near-zero cost. Zillow leads keep costing you per contact. The top-producing agents run both, but the website builds an asset. Zillow is a rental.",
   },
   {
     category: 'basics',
@@ -307,7 +307,7 @@ const FAQ_ITEMS = [
   {
     category: 'seo',
     question: 'How long does it take to rank on Google for real estate terms?',
-    answer: "New websites typically take 3–6 months to establish domain authority and begin ranking meaningfully. Highly competitive terms like '[major city] real estate agent' may take 12–18 months. Neighborhood-specific terms are less competitive and rank faster, often within 60–90 days of launch. The SEO work we do at launch sets the foundation. Consistent content additions accelerate the timeline.",
+    answer: "New websites typically take 3-6 months to establish domain authority and begin ranking meaningfully. Highly competitive terms like '[major city] real estate agent' may take 12-18 months. Neighborhood-specific terms are less competitive and rank faster, often within 60-90 days of launch. The SEO work we do at launch sets the foundation. Consistent content additions accelerate the timeline.",
   },
   {
     category: 'seo',
@@ -323,7 +323,7 @@ const FAQ_ITEMS = [
   {
     category: 'process',
     question: 'How long does it take to build a real estate website?',
-    answer: "FactoryJet delivers custom real estate agent websites in 7 business days for sites up to 10 pages. Brokerage sites with team rosters take 14–21 days. Property management platforms with tenant/owner portals take 3–6 weeks. Timeline starts from design approval.",
+    answer: "FactoryJet delivers custom real estate agent websites in 7 business days for sites up to 10 pages. Brokerage sites with team rosters take 14-21 days. Property management platforms with tenant/owner portals take 3-6 weeks. Timeline starts from design approval.",
   },
   {
     category: 'process',
@@ -333,7 +333,7 @@ const FAQ_ITEMS = [
   {
     category: 'process',
     question: 'Can you redesign my current real estate website?',
-    answer: "Yes, redesigns are common. Many agents have sites on older platforms (Agent Image, Real Geeks, BoomTown) that are slow, look dated, or can't be customized without paying per change. We redesign onto Next.js or WordPress, keeping your domain, migrating your content, setting up 301 redirects to preserve your existing search rankings. Redesign pricing is typically 20–30% lower than a new build of the same scope.",
+    answer: "Yes, redesigns are common. Many agents have sites on older platforms (Agent Image, Real Geeks, BoomTown) that are slow, look dated, or can't be customized without paying per change. We redesign onto Next.js or WordPress, keeping your domain, migrating your content, setting up 301 redirects to preserve your existing search rankings. Redesign pricing is typically 20-30% lower than a new build of the same scope.",
   },
   {
     category: 'process',
@@ -375,7 +375,7 @@ const FAQ_ITEMS = [
   {
     category: 'platforms',
     question: 'How does your real estate website compare to Real Geeks, kvCORE, or BoomTown?',
-    answer: "Real Geeks, kvCORE, and BoomTown bundle a website with CRM and lead generation tools. The tradeoffs: a recurring monthly platform fee, the websites look identical to every other agent on the platform, performance scores are typically 40–65 Lighthouse, and you can't meaningfully customize the design. FactoryJet builds a custom site you own outright, integrated with whatever CRM you prefer. Higher upfront cost, zero ongoing platform fee.",
+    answer: "Real Geeks, kvCORE, and BoomTown bundle a website with CRM and lead generation tools. The tradeoffs: a recurring monthly platform fee, the websites look identical to every other agent on the platform, performance scores are typically 40-65 Lighthouse, and you can't meaningfully customize the design. FactoryJet builds a custom site you own outright, integrated with whatever CRM you prefer. Higher upfront cost, zero ongoing platform fee.",
   },
   {
     category: 'platforms',
@@ -385,12 +385,12 @@ const FAQ_ITEMS = [
   {
     category: 'basics',
     question: 'What is the difference between RESO Web API and legacy RETS feeds for IDX listings?',
-    answer: 'RESO (Real Estate Standards Organization) Web API is the modern RESTful standard that replaced deprecated RETS XML feeds. RESO Web API delivers faster, real-time MLS data synchronization, lower server resource overhead, and seamless mobile responsiveness across property details and high-resolution photo galleries.',
+    answer: 'RESO (Real Estate Standards Organization) Web API is the modern RESTful standard that replaced deprecated RETS XML feeds. RESO Web API delivers faster, real-time MLS data synchronization, lower server resource overhead, and frictionless mobile responsiveness across property details and high-resolution photo galleries.',
   },
   {
     category: 'seo',
     question: 'How do you implement RealEstateAgent and SingleFamilyResidence Schema.org structured data?',
-    answer: 'We embed granular Schema.org JSON-LD markup on every page—including RealEstateAgent entity data, LocalBusiness geographic coordinates, SingleFamilyResidence property attributes (price, bedrooms, square footage, MLS ID), and FAQPage rich snippets for instant Google Rich Result indexing.',
+    answer: 'We embed granular Schema.org JSON-LD markup on every page, including RealEstateAgent entity data, LocalBusiness geographic coordinates, SingleFamilyResidence property attributes (price, bedrooms, square footage, MLS ID), and FAQPage rich snippets for instant Google Rich Result indexing.',
   },
   {
     category: 'process',
@@ -423,7 +423,7 @@ const MARKET_STATS = [
   },
   {
     value: '90+',
-    label: 'Lighthouse performance score on FactoryJet real estate sites, vs. 40–65 on most platform-built sites',
+    label: 'Lighthouse performance score on FactoryJet real estate sites, vs. 40-65 on most platform-built sites',
     sourceUrl: 'https://factoryjet.com/services/real-estate-website-design',
     sourceLabel: 'FactoryJet',
   },
@@ -457,13 +457,13 @@ const howToSchema = {
     {
       '@type': 'HowToStep',
       position: 3,
-      name: 'Days 3–4 | Design',
+      name: 'Days 3-4 | Design',
       text: 'We design every page with your brand identity, mobile-first layouts, and conversion-focused UX. You review and approve all designs.',
     },
     {
       '@type': 'HowToStep',
       position: 4,
-      name: 'Days 5–6 | Development & SEO',
+      name: 'Days 5-6 | Development & SEO',
       text: 'We build your site in Next.js or WordPress, optimize Core Web Vitals, add structured data, and connect all integrations.',
     },
     {
@@ -511,7 +511,7 @@ export default function RealEstateWebsiteDesignPage() {
             </div>
             {[
               ['Monthly Cost', '$0 after build', 'Recurring monthly fee'],
-              ['Lighthouse Score', '90+', '40–65'],
+              ['Lighthouse Score', '90+', '40-65'],
               ['Custom Design', '✓ Fully custom', '✗ Template only'],
               ['You Own the Site', '✓ Outright', '✗ Subscription'],
               ['CRM Choice', '✓ Any CRM', '✗ Locked to theirs'],
@@ -616,7 +616,7 @@ export default function RealEstateWebsiteDesignPage() {
           },
           {
             title: 'Platform performance scores hurt your rankings',
-            body: "Real estate platform sites typically score 40–65 on Google Lighthouse, well below the 90+ threshold Google favors. Page speed is a direct Google ranking signal. If your platform-built site loads slower than a competitor's custom site, Google notices and ranks you accordingly.",
+            body: "Real estate platform sites typically score 40-65 on Google Lighthouse, well below the 90+ threshold Google favors. Page speed is a direct Google ranking signal. If your platform-built site loads slower than a competitor's custom site, Google notices and ranks you accordingly.",
           },
         ]}
       />

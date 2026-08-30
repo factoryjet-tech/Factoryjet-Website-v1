@@ -472,7 +472,7 @@ export default function ShopifyPlusB2BPage() {
                 By consolidating your wholesale operations onto Shopify Plus, enterprise brands eliminate the immense operational friction of manual purchase order entry, phone-based credit card authorization, and asynchronous inventory reconciliation. Corporate buyers enjoy an intuitive, consumer-grade digital purchasing experience while your operations team maintains total visibility across accounts receivable, shipping routing, and sales tax compliance.
               </p>
               <p>
-                Whether launching a unified blended storefront or configuring dedicated international B2B expansion stores across North America, Europe, and Asia-Pacific, our engineering architecture ensures sub-second response times, 100% data integrity, automated tax compliance, and seamless scale across millions in wholesale order volume.
+                Whether launching a unified blended storefront or configuring dedicated international B2B expansion stores across North America, Europe, and Asia-Pacific, our engineering architecture ensures sub-second response times, 100% data integrity, automated tax compliance, and frictionless scale across millions in wholesale order volume.
               </p>
             </div>
           </div>

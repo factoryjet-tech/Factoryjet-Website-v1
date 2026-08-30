@@ -378,7 +378,7 @@ const FAQ_ITEMS = [
     category: 'local',
     question: 'How do you handle Google Business Profile re-verification and suspension appeals in Charlotte?',
     answer:
-      'If your Google Business Profile faces algorithmic suspension or video re-verification requests, we assemble complete physical documentation—including North Carolina Secretary of State filings, utility bills, permanent suite signage photographs, and lease agreements—to rapidly submit compliant reinstatement appeals directly to Google support.',
+      'If your Google Business Profile faces algorithmic suspension or video re-verification requests, we assemble complete physical documentation, including North Carolina Secretary of State filings, utility bills, permanent suite signage photographs, and lease agreements, to rapidly submit compliant reinstatement appeals directly to Google support.',
   },
   {
     category: 'technical',

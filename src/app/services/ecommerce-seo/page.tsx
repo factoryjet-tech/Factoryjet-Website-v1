@@ -159,7 +159,7 @@ const FAQ_GROUPS: ReadonlyArray<FaqGroup> = [
       },
       {
         q: 'What is the role of Merchant Center product feeds in organic Google Search visibility?',
-        a: 'Google now merges organic search listings with Google Shopping free product listings (Organic Popular Products grid). We synchronize your store’s structured Product schema and Merchant Center feeds—ensuring GTIN/UPC codes, brand identifiers, material attributes, and real-time inventory counts match across organic and shopping graphs for maximum visual search footprint.',
+        a: 'Google now merges organic search listings with Google Shopping free product listings (Organic Popular Products grid). We synchronize your store’s structured Product schema and Merchant Center feeds, ensuring GTIN/UPC codes, brand identifiers, material attributes, and real-time inventory counts match across organic and shopping graphs for maximum visual search footprint.',
       },
       {
         q: 'How do you optimize e-commerce stores for Google AI Overviews and ChatGPT shopping citations?',
@@ -531,8 +531,8 @@ export default function EcommerceSeoServicePage() {
                   <div className="gc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="4" width="18" height="6" rx="1.5" /><rect x="3" y="14" width="18" height="6" rx="1.5" /></svg></div>
                   <div className="gc-ln">Layer 01</div>
                   <h3>Collection &amp; category pages</h3>
-                  <p>The highest-leverage layer. Category pages outrank products, so we give them real 200 to 400 word intros, clean hierarchy, and internal links.</p>
-                  <span className="gc-tag">Highest leverage</span>
+                  <p>The highest-utilize layer. Category pages outrank products, so we give them real 200 to 400 word intros, clean hierarchy, and internal links.</p>
+                  <span className="gc-tag">Highest utilize</span>
                 </article>
                 <article className="gcard gc2">
                   <div className="gc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 3l2.4 5 5.5.7-4 3.9 1 5.4-4.9-2.7L7.6 21l1-5.4-4-3.9 5.5-.7z" strokeLinejoin="round" /></svg></div>
@@ -561,7 +561,7 @@ export default function EcommerceSeoServicePage() {
             <p className="dek" data-reveal>Expert ecommerce SEO services for Shopify, WooCommerce, and Magento, built around the four things that turn organic traffic into revenue.</p>
             <div className="bento2" data-reveal>
               <div className="tile feat">
-                <span className="badge">Highest leverage</span>
+                <span className="badge">Highest utilize</span>
                 <div className="ic ic-o"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="4" width="18" height="6" rx="1.5" /><rect x="3" y="14" width="18" height="6" rx="1.5" /></svg></div>
                 <div className="kk">Collection / category SEO</div>
                 <h3>Collection page SEO</h3>
@@ -649,7 +649,7 @@ export default function EcommerceSeoServicePage() {
           <div className="wrap">
             <div className="eyebrow" data-reveal>How it actually works</div>
             <h2 data-reveal style={{ marginTop: 14 }}>The 8 ecommerce SEO factors that move revenue</h2>
-            <p className="dek" data-reveal>Ranked from highest leverage down. This is the checklist we run on every store, in order.</p>
+            <p className="dek" data-reveal>Ranked from highest utilize down. This is the checklist we run on every store, in order.</p>
             <ol
               data-reveal
               style={{ listStyle: 'none', margin: '40px 0 0', padding: 0, display: 'grid', gap: 12, maxWidth: 840 }}

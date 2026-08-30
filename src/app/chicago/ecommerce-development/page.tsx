@@ -176,7 +176,7 @@ const PAIN_POINTS = [
     num: '02',
     title: 'Eliminating Manual Order Entry & ERP Inventory Disconnects',
     problem: 'Operating disjointed ecommerce platforms forces customer service teams to manually re-enter orders into NetSuite or SAP, causing shipping delays and stockouts.',
-    solution: 'We construct robust bidirectional middleware synchronizing inventory counts, customer pricing, sales orders, and tracking updates in real time.',
+    solution: 'We construct resilient bidirectional middleware synchronizing inventory counts, customer pricing, sales orders, and tracking updates in real time.',
   },
   {
     num: '03',
@@ -262,13 +262,13 @@ const FAQ_ITEMS = [
     category: 'b2b',
     question: 'How do you engineer B2B wholesale capabilities on Shopify Plus?',
     answer:
-      'We utilize Shopify Plus B2B features alongside custom middleware to implement tiered contract pricing, custom payment terms (Net 30/60), company account hierarchies, purchase order processing, quantity price breaks, and gated product catalogs, allowing you to run B2B and DTC operations seamlessly from a single admin backend.',
+      'We utilize Shopify Plus B2B features alongside custom middleware to implement tiered contract pricing, custom payment terms (Net 30/60), company account hierarchies, purchase order processing, quantity price breaks, and gated product catalogs, allowing you to run B2B and DTC operations fluidly from a single admin backend.',
   },
   {
     category: 'integrations',
     question: 'Can you integrate our Chicago ecommerce store with NetSuite or SAP ERP?',
     answer:
-      'Yes. We build robust, bidirectional API integrations connecting your storefront with NetSuite, SAP, Acumatica, Microsoft Dynamics, or custom ERP systems. This synchronizes inventory counts, customer-specific pricing matrices, sales orders, customer credits, and fulfillment tracking numbers in real time.',
+      'Yes. We build resilient, bidirectional API integrations connecting your storefront with NetSuite, SAP, Acumatica, Microsoft Dynamics, or custom ERP systems. This synchronizes inventory counts, customer-specific pricing matrices, sales orders, customer credits, and fulfillment tracking numbers in real time.',
   },
   {
     category: 'migration',
@@ -304,7 +304,7 @@ const FAQ_ITEMS = [
     category: 'platforms',
     question: 'Do you build custom subscription billing workflows?',
     answer:
-      'Yes. We integrate native subscription engines like Recharge, Smartrr, or custom Shopify Subscriptions API workflows, allowing customers to easily manage recurring orders, swap products, and adjust delivery frequencies from a seamless customer portal.',
+      'Yes. We integrate native subscription engines like Recharge, Smartrr, or custom Shopify Subscriptions API workflows, allowing customers to easily manage recurring orders, swap products, and adjust delivery frequencies from a frictionless customer portal.',
   },
   {
     category: 'b2b',
@@ -376,7 +376,7 @@ const FAQ_ITEMS = [
     category: 'b2b',
     question: 'What is PunchOut e-procurement (cXML/OCI) integration for Chicago B2B distributors?',
     answer:
-      'PunchOut e-procurement enables corporate enterprise buyers (such as Fortune 500 manufacturers and healthcare systems) to access your e-commerce product catalog directly from within their internal procurement ERP systems (Ariba, Coupa, Jaggaer). Orders, contract pricing, and requisitions transfer seamlessly via cXML and OCI protocols without manual purchase order entry.',
+      'PunchOut e-procurement enables corporate enterprise buyers (such as Fortune 500 manufacturers and healthcare systems) to access your e-commerce product catalog directly from within their internal procurement ERP systems (Ariba, Coupa, Jaggaer). Orders, contract pricing, and requisitions transfer fluidly via cXML and OCI protocols without manual purchase order entry.',
   },
   {
     category: 'platforms',
@@ -394,13 +394,13 @@ const FAQ_ITEMS = [
     category: 'speed',
     question: 'What is the difference between custom Shopify Liquid themes and pre-built commercial theme templates?',
     answer:
-      'Pre-built commercial themes carry thousands of lines of unused JavaScript, heavy slider scripts, and generic CSS bloat designed for thousands of unrelated stores, frequently scoring 35–55 on mobile Google Lighthouse. Custom FactoryJet themes are engineered specifically for your brand’s exact conversion architecture, containing zero bloat, scoring 90+ Core Web Vitals, and converting 20–40% higher.',
+      'Pre-built commercial themes carry thousands of lines of unused JavaScript, heavy slider scripts, and generic CSS bloat designed for thousands of unrelated stores, frequently scoring 35-55 on mobile Google Lighthouse. Custom FactoryJet themes are engineered specifically for your brand’s exact conversion architecture, containing zero bloat, scoring 90+ Core Web Vitals, and converting 20-40% higher.',
   },
   {
     category: 'b2b',
     question: 'What are the core capabilities of BigCommerce B2B Edition for Illinois manufacturers?',
     answer:
-      'BigCommerce B2B Edition provides native corporate account hierarchies, multiple tier-level buyers with custom spend thresholds, requisition list sharing, automated RFQ quote management, and seamless invoice portal payments. We configure these modules to streamline complex B2B wholesale transactions across Illinois and Midwest regional accounts.',
+      'BigCommerce B2B Edition provides native corporate account hierarchies, multiple tier-level buyers with custom spend thresholds, requisition list sharing, automated RFQ quote management, and frictionless invoice portal payments. We configure these modules to streamline complex B2B wholesale transactions across Illinois and Midwest regional accounts.',
   },
   {
     category: 'integrations',
