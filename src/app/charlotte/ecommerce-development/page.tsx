@@ -12,18 +12,18 @@ import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import EcommerceCityLinksUS from '@/components/v2/EcommerceCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-24';
+const PAGE_MODIFIED = '2026-08-30';
 const CANONICAL = 'https://factoryjet.com/charlotte/ecommerce-development';
 
 export const metadata: Metadata = {
-  title: 'Ecommerce Development Charlotte NC | Shopify | FactoryJet',
+  title: 'Best Charlotte E-Commerce Agency | Top Shopify Plus | FactoryJet',
   description:
-    'Charlotte ecommerce development agency. Custom Shopify Plus, WooCommerce, and wholesale B2B portals built for high conversion. Get a fixed quote.',
+    'Best Charlotte ecommerce development agency. Top custom Shopify Plus, WooCommerce, and wholesale B2B portals built for high conversion.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Ecommerce Development Charlotte NC | Shopify | FactoryJet',
+    title: 'Best Charlotte E-Commerce Agency | Top Shopify Plus | FactoryJet',
     description:
       'Charlotte ecommerce development agency. Custom Shopify Plus, WooCommerce, and wholesale B2B portals built for high conversion.',
     url: CANONICAL,
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ecommerce Development Charlotte NC | Shopify | FactoryJet',
+    title: 'Best Charlotte E-Commerce Agency | Top Shopify Plus | FactoryJet',
     description: 'Custom Shopify Plus and wholesale ecommerce development in Charlotte NC. High conversion and zero lock-in.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -62,7 +62,7 @@ const DISTRICTS = [
     corridor: 'South End & Design District',
     query: 'dtc brand developer charlotte nc',
     focus: 'Apparel, Luxury Accessories & Lifestyle DTC',
-    desc: 'High-energy urban retail corridor where emerging lifestyle and fashion brands require seamless omnichannel POS synchronization with online Shopify Plus storefronts.',
+    desc: 'High-energy urban retail corridor where emerging lifestyle and fashion brands require real-time omnichannel POS synchronization with online Shopify Plus storefronts.',
   },
   {
     corridor: 'I-85 & I-77 Industrial Crossroads',
@@ -140,13 +140,39 @@ const INDUSTRY_SHOWCASE = [
     sector: 'Specialty Food, Craft Beverage & Regional CPG',
     headline: 'Scaling High-Velocity Subscriptions Across the Carolinas',
     description:
-      'From craft coffee roasters and regional barbecue sauces to wellness supplements, food and beverage brands thrive on recurring subscriber revenue. We integrate robust subscription engines via Recharge, custom mix-and-match bundle builders, and automated cold-chain 3PL logistics.',
+      'From craft coffee roasters and regional barbecue sauces to wellness supplements, food and beverage brands thrive on recurring subscriber revenue. We integrate high-throughput subscription engines via Recharge, custom mix-and-match bundle builders, and automated cold-chain 3PL logistics.',
     image: '/images/us/b2b/b2b-trade-portal.webp',
     alt: 'Charlotte specialty food craft beverage and CPG ecommerce development',
     points: [
       'Flexible subscribe-and-save billing portals with customer self-management',
       'Mix-and-match bundle builders with tiered volume price incentives',
       'Direct API integrations with regional Carolinas cold-storage 3PL fulfillment centers',
+    ],
+  },
+  {
+    sector: 'SouthPark & Sharon Road Luxury Home Goods, Fine Jewelry & High-Ticket Retail',
+    headline: 'Editorial Flagships for High-Ticket Retail & Luxury Outfitting',
+    description:
+      'Fine jewelry ateliers, custom furniture showrooms, and luxury lifestyle brands across SouthPark demand bespoke digital flagships. We build custom Shopify Plus storefronts with high-resolution media zoom, integrated Affirm/Klarna financing, and white-glove delivery scheduling.',
+    image: '/images/us/chicago-web-design/storefront.webp',
+    alt: 'Charlotte SouthPark luxury fine jewelry home decor ecommerce design',
+    points: [
+      'High-resolution visual product zoom with 360-degree interactive asset views',
+      'Integrated tiered consumer financing via Affirm and Shop Pay Installments',
+      'White-glove freight delivery options and automated postal code validation',
+    ],
+  },
+  {
+    sector: 'Lake Norman & Mooresville Marine Equipment, Watercraft & Performance Outfitting',
+    headline: 'Technical Commerce Engines for Marine & Motorsports Outfitting',
+    description:
+      'Marine electronics suppliers, custom boat rigging manufacturers, and outdoor gear retailers across Lake Norman demand fast and intuitive catalog navigation. We engineer sub-second facet filtering, oversized freight calculation rules, and interactive dealer lookup locator maps.',
+    image: '/images/us/manufacturing-website-design/shop-floor.webp',
+    alt: 'Charlotte Lake Norman marine equipment watercraft motorsports ecommerce development',
+    points: [
+      'Advanced multi-attribute facet filtering by hull size, horsepower, and model',
+      'Dynamic freight rate calculation for oversized watercraft and boat parts',
+      'Interactive dealer locator maps with direct contact intake funnels',
     ],
   },
 ];
@@ -160,7 +186,7 @@ const PAIN_POINTS = [
   },
   {
     num: '02',
-    title: 'Connecting Complex ERP, Warehouse, and Inventory Systems Seamlessly',
+    title: 'Connecting Complex ERP, Warehouse, and Inventory Systems in Real-Time',
     problem: 'Manual inventory entry between your warehouse, physical retail store, and online storefront leads to overselling, stockout errors, and shipping delays.',
     solution: 'We build automated API integrations connecting Shopify to NetSuite, QuickBooks, ShipStation, and custom warehouse management systems.',
   },
@@ -238,7 +264,7 @@ const EVALUATION_CRITERIA = [
   },
   {
     label: 'ERP & Inventory Sync',
-    factoryjet: 'Direct API integrations connecting warehouse, ERP, and POS seamlessly.',
+    factoryjet: 'Direct API integrations connecting warehouse, ERP, and POS without friction.',
     traditional: 'Relies on fragile third-party sync apps that frequently desync inventory.',
   },
   {
@@ -348,7 +374,7 @@ const FAQ_ITEMS = [
     category: 'migration',
     question: 'Will our existing customer passwords transfer to Shopify during migration?',
     answer:
-      'Due to industry-standard cryptographic password hashing, passwords cannot be extracted in plain text. We set up automated one-click account activation emails so customers can reset and access their history seamlessly.',
+      'Due to industry-standard cryptographic password hashing, passwords cannot be extracted in plain text. We set up automated one-click account activation emails so customers can reset and access their history with zero friction.',
   },
   {
     category: 'migration',
@@ -361,6 +387,60 @@ const FAQ_ITEMS = [
     question: 'Can you migrate historical customer reviews to the new Shopify store?',
     answer:
       'Yes. We export verified customer reviews, star ratings, and review photos from your previous platform and import them directly into modern review engines like Okendo, Yotpo, or Judge.me.',
+  },
+  {
+    category: 'technical',
+    question: 'Why do Charlotte manufacturers and motorsports brands choose custom Shopify Plus over WooCommerce?',
+    answer:
+      'Shopify Plus delivers 99.99% server uptime, native PCI-DSS Level 1 compliance, automatic server scaling during high-traffic product drops, and sub-500ms checkout response times without the vulnerability risks or plugin conflicts common in self-hosted WooCommerce setups.',
+  },
+  {
+    category: 'motorsports',
+    question: 'How do you architect year-make-model vehicle fitment lookup engines for NASCAR and motorsports parts distributors?',
+    answer:
+      'We build high-performance vehicle selector engines that instantly filter multi-thousand SKU parts catalogs by Year, Make, Model, Submodel, and Engine type with zero search delay, complete with fitment guarantee badges and exploded assembly diagrams.',
+  },
+  {
+    category: 'b2b',
+    question: 'How do you build enterprise Shopify B2B wholesale portals with custom dealer pricing and NET payment terms?',
+    answer:
+      'We utilize Shopify Plus B2B architecture to configure company profiles, personalized tiered wholesale price lists, quantity-break rules, draft order approvals, and automated NET 30/60 invoicing directly integrated with your accounting ERP.',
+  },
+  {
+    category: 'performance',
+    question: 'How do you guarantee sub-500ms page load speeds and 100/100 Core Web Vitals on large catalog ecommerce sites?',
+    answer:
+      'We engineer lightweight custom Liquid themes with zero third-party script bloat, automatic next-gen image transcoding (AVIF/WebP), critical CSS extraction, predictive asset prefetching, and Cloudflare CDN caching across global edge nodes.',
+  },
+  {
+    category: 'erp',
+    question: 'How do you synchronize Shopify inventory with NetSuite, SAP, or QuickBooks ERP systems in real time?',
+    answer:
+      'We engineer custom webhook-driven API middleware and secure connectors that synchronize inventory quantities, customer master records, purchase orders, and fulfillment statuses bi-directionally between Shopify and your central ERP.',
+  },
+  {
+    category: 'subscriptions',
+    question: 'How do you engineer subscription commerce engines for regional North Carolina craft food and beverage brands?',
+    answer:
+      'We integrate Recharge and custom checkout extensions to offer flexible subscribe-and-save frequencies, build-your-own bundle configurators, tiered customer loyalty rewards, and automated self-service customer portals.',
+  },
+  {
+    category: 'seo',
+    question: 'How do you implement Schema.org JSON-LD structured data for Google Shopping, Merchant Center, and AI Overviews?',
+    answer:
+      'We embed rich Product, Offer, AggregateRating, Organization, and FAQPage Schema.org JSON-LD structured data directly into the theme, enabling search engines and AI assistants to display rich price, availability, and review snippets.',
+  },
+  {
+    category: 'logistics',
+    question: 'How do you handle multi-warehouse fulfillment routing and automated freight shipping rules across the Southeast?',
+    answer:
+      'We configure advanced shipping script rules and 3PL integrations with ShipStation and regional logistics hubs to dynamically route orders to the closest fulfillment facility and calculate accurate freight rates for heavy or oversized freight shipments.',
+  },
+  {
+    category: 'conversion',
+    question: 'How do you optimize checkout funnels to reduce mobile cart abandonment for Carolinas online shoppers?',
+    answer:
+      'We deploy accelerated one-tap checkout mechanisms including Shop Pay, Apple Pay, and Google Pay, paired with slide-out cart drawers featuring real-time free-shipping progress indicators and 1-click upsells.',
   },
 ];
 
@@ -384,7 +464,6 @@ const LOCAL_BUSINESS_SCHEMA = {
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
   telephone: '+1-832-998-8422',
-  priceRange: '$$',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Charlotte',
@@ -491,7 +570,7 @@ export default function CharlotteEcommerceDevelopmentPage() {
                 </h1>
 
                 <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
-                  Scale DTC online sales and wholesale B2B dealer ordering with custom Shopify Plus engineering, Shop Pay acceleration, and seamless ERP inventory synchronization.
+                  Scale DTC online sales and wholesale B2B dealer ordering with custom Shopify Plus engineering, Shop Pay acceleration, and real-time ERP inventory synchronization.
                 </p>
 
                 <div className="rv-actions">
