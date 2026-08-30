@@ -322,13 +322,43 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     answer:
       'Yes. The audit is a complete deliverable, many stores use it as a one-time strategic input, run the roadmap with their own team, and return for retainer support later. If you continue into a retainer within 30 days, the audit fee is credited toward your first month. You own all audit deliverables either way.',
   },
+  {
+    category: 'technical',
+    question: 'How does faceted navigation and collection filtering impact Shopify SEO?',
+    answer:
+      'Faceted navigation apps and URL parameters (such as ?filter.p.m.custom.color=red) can generate thousands of duplicate, thin parameterized URLs that drain Google crawl budget and cause index bloat. We engineer clean canonical hierarchy rules, meta robots noindex directives on low-value filter combinations, and indexable sub-collection landing pages for high-volume search queries (e.g. /collections/red-running-shoes).',
+  },
+  {
+    category: 'technical',
+    question: 'How do you handle out-of-stock and discontinued product pages for SEO?',
+    answer:
+      'Deleting discontinued product pages generates 404 errors that erase hard-earned backlink authority. For temporarily out-of-stock items, we keep the page live with back-in-stock Klaviyo capture forms and related product recommendations. For permanently discontinued items, we implement 301 redirects to the closest parent collection or replacement product, preserving 100% link equity.',
+  },
+  {
+    category: 'technical',
+    question: 'What is the difference between Shopify\'s native sitemap.xml and custom XML sitemaps?',
+    answer:
+      'Shopify automatically generates sitemap.xml files for products, collections, pages, and blogs, but merchants cannot natively edit or exclude specific URLs directly. We audit sitemap indexation health in Google Search Console, resolve noindexed or orphaned URL leaks, and ensure all revenue-generating collection and product URLs are crawled with maximum efficiency.',
+  },
+  {
+    category: 'technical',
+    question: 'How do you optimize Shopify image filenames, alt text, and responsive formats for Google Images?',
+    answer:
+      'Google Images and AI vision search represent a major source of e-commerce discovery. We optimize product media asset pipelines with descriptive hyphenated filenames, keyword-rich contextual alt text, explicit width/height dimensions to eliminate layout shifts, and native WebP/AVIF compression via Shopify’s global CDN.',
+  },
+  {
+    category: 'technical',
+    question: 'How do you configure Shopify Markets and hreflang tags for multi-country international SEO?',
+    answer:
+      'For global brands selling across the US, UK, Canada, Australia, and Europe via Shopify Markets, we configure automated self-referencing and cross-region hreflang XML tags and HTML link headers. This ensures search engines serve the correct localized currency, pricing, and language version to users in each geographic market without duplicate content penalties.',
+  },
 ];
 
 /* ─────────────────────────────────────────────────────────────────────────────
    JSON-LD Schema (WebPage + BreadcrumbList + Service + HowTo + FAQPage + Organization)
 ───────────────────────────────────────────────────────────────────────────── */
 
-const PAGE_MODIFIED = '2026-08-29';
+const PAGE_MODIFIED = '2026-08-30';
 
 const webPageSchema = {
   '@context': 'https://schema.org',

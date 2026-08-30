@@ -150,6 +150,26 @@ const FAQ_GROUPS: ReadonlyArray<FaqGroup> = [
         a: 'We work with DTC and retail brands across apparel, home and decor, beauty and wellness, food and supplements, and B2B and industrial catalogs across the US.',
       },
       {
+        q: 'How do you handle pagination and crawl efficiency on 10,000+ SKU e-commerce stores?',
+        a: 'For enterprise catalogs with thousands of SKUs, paginated collection URLs (?page=2, ?page=3) can consume excessive Googlebot crawl budget. We implement self-referencing canonical tags, clean rel="next" and rel="prev" header indications, and infinite scroll with pushState URL updates so crawlers discover deep catalog products without indexing low-value paginated duplicates.',
+      },
+      {
+        q: 'How do you optimize internal linking architecture across product category clusters?',
+        a: 'We design topical category clusters using strategic contextual breadcrumbs, cross-category related links, sub-category facet hubs, and featured product modules. This distributes PageRank authority evenly from high-authority collection pages down to long-tail product URLs, boosting indexing speed and keyword rankings.',
+      },
+      {
+        q: 'What is the role of Merchant Center product feeds in organic Google Search visibility?',
+        a: 'Google now merges organic search listings with Google Shopping free product listings (Organic Popular Products grid). We synchronize your store’s structured Product schema and Merchant Center feeds—ensuring GTIN/UPC codes, brand identifiers, material attributes, and real-time inventory counts match across organic and shopping graphs for maximum visual search footprint.',
+      },
+      {
+        q: 'How do you optimize e-commerce stores for Google AI Overviews and ChatGPT shopping citations?',
+        a: 'AI search engines (Google Gemini, ChatGPT Search, Perplexity) answer buyer intent queries by pulling from authoritative e-commerce reviews, objective buying guides, and clean structured data tables. We structure your store content with clear comparative specifications, verified customer review graphs, and direct answers to common buyer questions, ensuring your products are cited as top recommendations in AI generated answers.',
+      },
+      {
+        q: 'How do you handle canonical tags when products belong to multiple categories?',
+        a: 'When a product belongs to multiple collections (e.g., /collections/men/products/shirt and /collections/sale/products/shirt), we enforce a single canonical master URL (/products/shirt) across all breadcrumb trails and category links. This consolidates link equity into one authoritative URL and eliminates Google duplicate content warnings.',
+      },
+      {
         q: 'Who will I actually be working with?',
         a: 'The founder, Bhavesh. The person who scopes your ecommerce SEO is the same person accountable for the revenue it earns, not a junior who rotates off the account next quarter.',
       },

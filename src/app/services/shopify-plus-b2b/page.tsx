@@ -167,6 +167,30 @@ const FAQ_ITEMS = [
     answer:
       'We integrate automated tax compliance systems (Avalara AvaTax or Vertex) with Shopify Plus B2B. Corporate buyers upload their state resale certificates directly during onboarding, which automatically marks verified accounts as tax-exempt upon verification.',
   },
+  {
+    category: 'features',
+    question: 'How does Shopify Plus B2B handle minimum order quantity (MOQ) rules per SKU or collection?',
+    answer:
+      'Using Shopify Functions Cart Validation rules, we enforce strict minimum order quantities (MOQs) at both the SKU level (e.g., minimum 24 units per colorway) and the cart order level (e.g., minimum $1,500 total wholesale order value). These rules execute server-side during checkout with zero latency.',
+  },
+  {
+    category: 'features',
+    question: 'Can corporate buyers save multiple credit cards or bank accounts (ACH) for one-click wholesale checkout?',
+    answer:
+      'Yes. Shopify Plus B2B supports vaulted payment methods where corporate buyers can securely store corporate credit cards or ACH bank account details for rapid reordering, with automated payment capture upon order fulfillment.',
+  },
+  {
+    category: 'architecture',
+    question: 'How does Shopify Plus B2B support custom volume tier pricing tables on product pages?',
+    answer:
+      'We engineer native Liquid and Vanilla JS volume pricing break tables directly on the Product Detail Page (PDP). When authenticated B2B buyers increase order quantities across breakpoints (e.g., 50+, 100+, 500+ units), the unit price and total savings update dynamically in real time.',
+  },
+  {
+    category: 'commercials',
+    question: 'What is the difference between Shopify B2B on Plus versus third-party wholesale apps on standard Shopify?',
+    answer:
+      'Third-party wholesale apps on standard Shopify rely on fragile client-side JavaScript overrides, customer tag workarounds, and draft order hacks that break with checkout updates. Native Shopify Plus B2B is built directly into Shopify’s core database, supporting true company hierarchies, native Net terms in checkout, and direct ERP webhooks with zero app fees.',
+  },
 ];
 
 /* ─────────────────────────────────────────────
@@ -444,6 +468,12 @@ export default function ShopifyPlusB2BPage() {
                 automate Net payment term approvals, implement matrix quick-order forms, and integrate bi-directional ERP data
                 pipelines connecting NetSuite, SAP, or Microsoft Dynamics.
               </p>
+              <p>
+                By consolidating your wholesale operations onto Shopify Plus, enterprise brands eliminate the immense operational friction of manual purchase order entry, phone-based credit card authorization, and asynchronous inventory reconciliation. Corporate buyers enjoy an intuitive, consumer-grade digital purchasing experience while your operations team maintains total visibility across accounts receivable, shipping routing, and sales tax compliance.
+              </p>
+              <p>
+                Whether launching a unified blended storefront or configuring dedicated international B2B expansion stores across North America, Europe, and Asia-Pacific, our engineering architecture ensures sub-second response times, 100% data integrity, automated tax compliance, and seamless scale across millions in wholesale order volume.
+              </p>
             </div>
           </div>
         </section>
@@ -574,6 +604,110 @@ export default function ShopifyPlusB2BPage() {
                 Restrict specific product lines based on regional distribution rights. Exclusive regional distributors see only their authorized
                 product lines, preventing territorial conflicts between wholesale partners.
               </p>
+            </div>
+          </div>
+        </section>
+
+        {/* ── Enterprise B2B Data & Entity Modeling ── */}
+        <section className="pp-sec tint">
+          <div className="pp-wrap pp-narrow">
+            <p className="pp-mlabel">// data &amp; entity modeling</p>
+            <h2 style={{ marginTop: '10px' }}>Enterprise B2B Entity Modeling: Companies, Locations, and Buyer Roles</h2>
+            <div className="pp-editorial" style={{ marginTop: '20px' }}>
+              <p>
+                Traditional e-commerce platforms model all users as simple single-tier customer accounts. Shopify Plus B2B introduces a sophisticated enterprise relational data model designed specifically for multi-location corporate purchasing:
+              </p>
+              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>1. Parent Company Records</h3>
+              <p>
+                A single corporate entity (e.g., &ldquo;Acme Retail Group&rdquo;) acts as the master account record, housing global payment terms, assigned tax exemption certificates, and corporate credit limits.
+              </p>
+              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>2. Company Locations &amp; Shipping Endpoints</h3>
+              <p>
+                Parent companies can establish multiple subsidiary shipping locations (e.g., &ldquo;Acme Dallas Distribution Center&rdquo;, &ldquo;Acme Chicago Retail Store #14&rdquo;). Each location maintains its own default shipping addresses, assigned sales representatives, and location-specific catalogs.
+              </p>
+              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>3. Granular Buyer Roles &amp; Purchasing Permissions</h3>
+              <p>
+                Corporate accounts can invite multiple staff members with specific role-based permissions: &ldquo;Ordering Only&rdquo; (can build carts and submit purchase orders), &ldquo;Location Admin&rdquo; (manages address books and location buyers), or &ldquo;Company Admin&rdquo; (authorizes invoices, edits vaulted payment methods, and manages all subsidiary branches).
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* ── Bi-Directional ERP Middleware Integration ── */}
+        <section className="pp-sec">
+          <div className="pp-wrap pp-narrow">
+            <p className="pp-mlabel">// erp &amp; wms integration</p>
+            <h2 style={{ marginTop: '10px' }}>Bi-Directional ERP Integration: NetSuite, SAP, Dynamics, &amp; Acumatica</h2>
+            <div className="pp-editorial" style={{ marginTop: '20px' }}>
+              <p>
+                A modern B2B wholesale portal cannot operate in isolation from your back-office financial and supply chain systems. FactoryJet engineers real-time, bi-directional API pipelines connecting Shopify Plus GraphQL endpoints directly to your master ERP:
+              </p>
+              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>1. Real-Time Inventory Reservation &amp; Multi-Warehouse Routing</h3>
+              <p>
+                When a wholesale buyer submits a large purchase order, our middleware immediately queries warehouse inventory levels across regional fulfillment centers (3PL / WMS), locks allocated stock in your ERP, and routes line items to the optimal fulfillment facility.
+              </p>
+              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>2. Customer Credit Limit &amp; Aging Invoice Synchronization</h3>
+              <p>
+                Prior to allowing Net 30 purchase order completion, our Shopify Functions query ERP financial ledgers in sub-150ms. If a wholesale customer has overdue outstanding balances or exceeds their total credit line, the checkout automatically falls back to credit card capture with an automated warning.
+              </p>
+              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>3. Asynchronous Master Price Matrix Updates</h3>
+              <p>
+                When negotiated wholesale contracts are updated in your ERP (NetSuite SuiteTalk, SAP OData, Microsoft Business Central), automated delta webhooks update Shopify Plus B2B price lists asynchronously in bulk, eliminating manual data entry errors.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* ── B2B Tax Compliance & Resale Exemption Management ── */}
+        <section className="pp-sec tint">
+          <div className="pp-wrap pp-narrow">
+            <p className="pp-mlabel">// tax compliance &amp; legal</p>
+            <h2 style={{ marginTop: '10px' }}>B2B Automated Tax Compliance &amp; State Resale Certificate Validation</h2>
+            <div className="pp-editorial" style={{ marginTop: '20px' }}>
+              <p>
+                Managing sales tax compliance across dozens of US states for wholesale distributors requires rigorous legal verification to avoid audit penalties while ensuring qualified B2B buyers are never charged improper sales tax:
+              </p>
+              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>1. Automated Resale Certificate Onboarding</h3>
+              <p>
+                During wholesale account registration, buyers submit their state resale certificate numbers and PDF tax exemption forms. Our integration with Avalara AvaTax or Vertex validates exemption certificate validity in real time.
+              </p>
+              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>2. Automated Zero-Tax Wholesale Checkout</h3>
+              <p>
+                Once an exemption certificate is approved on a Company Record, Shopify Plus automatically applies 0% sales tax on qualified wholesale line items, while correctly maintaining taxable status on non-exempt retail orders placed on the same blended storefront.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 6-Phase Wholesale Sprint Roadmap ── */}
+        <section className="pp-sec">
+          <div className="pp-wrap pp-narrow">
+            <p className="pp-mlabel">// sprint methodology</p>
+            <h2 style={{ marginTop: '10px' }}>The 6-Phase Shopify Plus B2B Implementation Sprint Roadmap</h2>
+            <div className="pp-editorial" style={{ marginTop: '20px' }}>
+              <p>
+                A structured, milestone-driven technical deployment ensuring zero downtime, accurate accounting, and rapid buyer adoption:
+              </p>
+              <ol style={{ listStyleType: 'decimal', paddingLeft: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1rem', marginTop: '1rem' }}>
+                <li>
+                  <strong>Phase 1: B2B Price Matrix &amp; ERP Architecture Blueprint (Week 1):</strong> Complete audit of existing wholesale price sheets, tier discount brackets, buyer account rosters, and ERP API endpoint mapping.
+                </li>
+                <li>
+                  <strong>Phase 2: Company Accounts &amp; Buyer Hierarchy Setup (Week 2):</strong> Provisioning native Shopify Plus B2B Company records, establishing multi-location address hierarchies, and configuring role permissions.
+                </li>
+                <li>
+                  <strong>Phase 3: High-Speed Quick Order Matrix &amp; CSV Ordering UI (Week 3):</strong> Engineering bespoke wholesale ordering interfaces, including multi-variant SKU entry grids and 1-click CSV spreadsheet reordering tools.
+                </li>
+                <li>
+                  <strong>Phase 4: Shopify Functions &amp; Checkout Extensibility (Week 4):</strong> Developing custom WebAssembly functions for MOQ enforcement, tiered spend-and-save logic, and payment method gating for Net terms.
+                </li>
+                <li>
+                  <strong>Phase 5: Bi-Directional ERP &amp; Tax Middleware Integration (Week 5):</strong> Connecting NetSuite, SAP, or QuickBooks Enterprise for real-time inventory locking, draft order sync, and automated invoicing.
+                </li>
+                <li>
+                  <strong>Phase 6: Wholesale Buyer UAT &amp; Live Portal Launch (Week 6):</strong> Conducting end-to-end purchasing test cycles with key corporate accounts, training internal sales reps, and executing a zero-downtime cutover.
+                </li>
+              </ol>
             </div>
           </div>
         </section>
