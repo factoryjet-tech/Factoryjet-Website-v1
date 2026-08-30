@@ -12,27 +12,27 @@ import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-24';
+const PAGE_MODIFIED = '2026-08-30';
 const CANONICAL = 'https://factoryjet.com/lincoln/seo';
 
 export const metadata: Metadata = {
-  title: 'Lincoln Local SEO Agency | Search & AI Visibility | FactoryJet',
+  title: 'Best Lincoln SEO Company | Top Local SEO Agency NE | FactoryJet',
   description:
-    'Lincoln local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Downtown, Haymarket, South Lincoln, and Lancaster County.',
+    'Best Lincoln SEO company & local agency. Top Google Map Pack rankings, AI answer citations, and technical Core Web Vitals for Nebraska & Lancaster County.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Lincoln Local SEO Agency | Search & AI Visibility | FactoryJet',
+    title: 'Best Lincoln SEO Company | Top Local SEO Agency NE | FactoryJet',
     description:
-      'Lincoln local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Downtown, Haymarket, South Lincoln, and Lancaster County.',
+      'Premier Lincoln SEO company & local agency. Top Google Maps 3-Pack rankings, organic search visibility, and AI search citations across Nebraska.',
     url: CANONICAL,
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Lincoln Local SEO Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Lincoln Local SEO Agency | Search & AI Visibility | FactoryJet',
+    title: 'Best Lincoln SEO Company | Top Local SEO Agency NE | FactoryJet',
     description: 'Dominate Lincoln local search and AI answer engines. Verified Google Maps 3-Pack capture and entity optimization across Nebraska.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -62,37 +62,37 @@ const DISTRICTS = [
     corridor: 'Downtown Lincoln & Historic Haymarket Core',
     query: 'corporate law financial advisory commercial real estate private equity seo downtown lincoln',
     focus: 'Corporate Law, Advisory & Financial Services',
-    desc: 'The political and business capital core. Captures commercial litigation retainers, estate planning inquiries, and corporate financial advisory consults.',
+    desc: 'The political, legal, and banking core along K Street, O Street, and the Historic Haymarket. Captures high-ticket commercial litigation retainers, corporate accounting consults, and commercial real estate investment inquiries.',
   },
   {
     corridor: 'University of Nebraska & Innovation Campus',
     query: 'agtech software consultancy it services engineering precision tech seo lincoln nic',
     focus: 'AgTech Consulting, Software Engineering & Research',
-    desc: 'Silicon Prairie innovation hub. B2B service queries demand technical capability schemas, ISO credentials, and RFP lead funnels.',
+    desc: 'Silicon Prairie research and technology hub anchored by the Nebraska Innovation Campus (NIC). B2B service queries demand technical capability schemas, ISO accreditation data, and enterprise RFP submission funnels.',
   },
   {
     corridor: 'West O Street Commercial & Logistics Spine',
     query: 'heavy equipment repair freight transport commercial electrical fleet maintenance seo west o lincoln',
     focus: 'Commercial Contracting, Heavy Machinery & Logistics',
-    desc: 'Major industrial and freight artery. Drives steady inbound emergency service calls, fleet maintenance contracts, and commercial project bids.',
+    desc: 'Major industrial, transportation, and agricultural implement distribution artery along West O Street. Drives steady inbound emergency service calls, fleet maintenance contracts, and commercial construction bids.',
   },
   {
     corridor: 'South Lincoln & Pine Lake Commercial Hub',
     query: 'cosmetic dentistry dental implants pediatric medicine luxury remodeling seo south lincoln',
     focus: 'Elective Healthcare, Dental Implants & Remodeling',
-    desc: 'Affluent and high-growth residential corridor. Intense local search competition for cosmetic dentistry, orthodontics, and custom residential contracting.',
+    desc: 'High-growth affluent residential corridor anchored by SouthPointe Pavilions and Pine Lake Road. Intense local search competition for cosmetic dentistry, dental implants, specialized pediatrics, and custom home remodeling.',
   },
   {
     corridor: 'North 27th Street Industrial & Contractor District',
     query: 'commercial roofing hvac sheet metal fabrication mechanical contracting seo north 27th lincoln',
     focus: 'Commercial Roofing, HVAC & Sheet Metal Trades',
-    desc: 'Precision manufacturing and contractor fulfillment core. Demands multi-county ServiceAreaBusiness schemas and verified trade accreditations.',
+    desc: 'Precision manufacturing and trade contractor fulfillment core along North 27th Street and Superior Street. Demands multi-county ServiceAreaBusiness schemas, trade licensing disclosures, and commercial estimator funnels.',
   },
   {
     corridor: 'Air Park Industrial & Manufacturing District',
     query: 'aerospace manufacturing warehousing tier 1 supplier industrial supply seo air park lincoln',
     focus: 'Aerospace Components, Industrial Storage & B2B Supply',
-    desc: 'Heavy manufacturing park adjacent to Lincoln Airport. Demands technical capability schemas, AS9100 quality credentials, and B2B quote funnels.',
+    desc: 'Heavy manufacturing and industrial aerospace park adjacent to Lincoln Airport (LNK). Demands technical capability schemas, AS9100/ISO quality credentials, and B2B RFQ procurement workflows.',
   },
 ];
 
@@ -356,6 +356,42 @@ const FAQ_ITEMS = [
     question: 'How do we get started with a Lincoln local SEO audit?',
     answer:
       'Schedule a free 30-minute local search audit. We will analyze your Google Business Profile, identify competitor gaps, and deliver an actionable ranking roadmap for your business.',
+  },
+  {
+    category: 'local',
+    question: 'How do you optimize for AgTech companies, seed genetics, and precision agriculture software in Nebraska?',
+    answer:
+      'Nebraska is the center of global agricultural innovation. We engineer technical B2B content hubs, agricultural software schemas, grower case studies, and enterprise RFP portals that capture high-value agribusiness queries across the Corn Belt and worldwide.',
+  },
+  {
+    category: 'technical',
+    question: 'How do cosmetic dentists and private elective medical practices dominate search in South Lincoln and Pine Lake?',
+    answer:
+      'We deploy granular MedicalBusiness and Physician schemas, optimize doctor profile authority with Nebraska Board of Dentistry credentials, construct neighborhood landing pages for SouthPointe, Yankee Hill, and Wilderness Ridge, and streamline verified Google review funnels to capture high-intent patients.',
+  },
+  {
+    category: 'local',
+    question: 'How do you structure SEO for aerospace precision tooling and Tier 1 manufacturers in Lincoln Air Park?',
+    answer:
+      'Lincoln Air Park hosts specialized aerospace and industrial suppliers. We build technical capability matrices, AS9100/ISO quality certification schemas, equipment tolerance spec sheets, and rapid engineering RFQ workflows to capture contracts from national prime contractors.',
+  },
+  {
+    category: 'technical',
+    question: 'How does Google Gemini AI Overview and SearchGPT citation indexing work in Nebraska?',
+    answer:
+      'Generative AI search engines synthesize verified factual entities from structured JSON-LD schemas, official Nebraska Secretary of State business entity filings, and direct answer-first page sections. We format your core service offerings to maximize conversational citation frequency in Google AI Overviews and ChatGPT search.',
+  },
+  {
+    category: 'local',
+    question: 'Can you structure local SEO across both Lincoln and the Omaha metro corridor?',
+    answer:
+      'Yes. Many Lancaster County businesses serve clients along the Interstate 80 corridor into Omaha, Waverly, and Gretna. We construct distinct localized landing pages and multi-county Schema.org AreaServed arrays targeting Lincoln and Omaha without triggering duplicate content penalties.',
+  },
+  {
+    category: 'deliverables',
+    question: 'What is NAP citation synchronization across Lincoln and Nebraska business directories?',
+    answer:
+      'We establish and synchronize verified business citations across essential regional directories, including the Lincoln Chamber of Commerce, Nebraska BBB, Apple Maps, Bing Places, YellowPages, Dun & Bradstreet, and industry registries, ensuring 100% data consistency, eliminating duplicates, and reinforcing Google Maps 3-Pack authority.',
   },
 ];
 

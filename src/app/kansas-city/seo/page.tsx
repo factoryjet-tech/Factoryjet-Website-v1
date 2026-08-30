@@ -12,28 +12,28 @@ import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-24';
+const PAGE_MODIFIED = '2026-08-30';
 const CANONICAL = 'https://factoryjet.com/kansas-city/seo';
 
 export const metadata: Metadata = {
-  title: 'Kansas City Local SEO Agency | Search & AI Visibility | FactoryJet',
+  title: 'Best Kansas City SEO Company | Top Local SEO Agency MO KS | FactoryJet',
   description:
-    'Kansas City local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Country Club Plaza, Overland Park, and Downtown.',
+    'Best Kansas City SEO company & local agency. Top Google Map Pack rankings, AI answer citations, and technical Core Web Vitals for Missouri & Kansas.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Kansas City Local SEO Agency | Search & AI Visibility | FactoryJet',
+    title: 'Best Kansas City SEO Company | Top Local SEO Agency MO KS | FactoryJet',
     description:
-      'Kansas City local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Country Club Plaza, Overland Park, and Downtown.',
+      'Premier Kansas City SEO company & local agency. Top Google Maps 3-Pack rankings, organic search visibility, and AI search citations across MO and KS.',
     url: CANONICAL,
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Kansas City Local SEO Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Kansas City Local SEO Agency | Search & AI Visibility | FactoryJet',
-    description: 'Dominate Kansas City local search and AI answer engines. Verified Google Maps 3-Pack capture and entity optimization.',
+    title: 'Best Kansas City SEO Company | Top Local SEO Agency MO KS | FactoryJet',
+    description: 'Dominate Kansas City local search and AI answer engines. Verified Google Maps 3-Pack capture and entity optimization across Missouri and Kansas.',
     images: ['https://factoryjet.com/og-default.png'],
   },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
@@ -62,37 +62,37 @@ const DISTRICTS = [
     corridor: 'Crossroads Arts District & Downtown KC',
     query: 'creative agency corporate law seo crossroads kc',
     focus: 'Creative Agencies, Tech Startups & Corporate Law',
-    desc: 'The vibrant design and legal core. Captures high-ticket corporate legal retainers, commercial leasing inquiries, and tech venture advisory contracts.',
+    desc: 'The vibrant design, technology, and legal core along Main Street and Broadway Boulevard. Captures high-ticket corporate litigation retainers, commercial office leasing inquiries, and tech venture advisory contracts.',
   },
   {
     corridor: 'Country Club Plaza & Midtown',
     query: 'wealth management plastic surgery seo country club plaza',
     focus: 'Private Wealth Advisory, Aesthetic Medicine & Family Law',
-    desc: 'Affluent executive and specialized medical enclave. Intense competition for high-net-worth estate planning, cosmetic surgery consultations, and wealth retainers.',
+    desc: 'Affluent executive and specialized medical enclave along Nichols Road and Ward Parkway. Intense search competition for high-net-worth estate planning, cosmetic surgery consultations, and wealth management retainers.',
   },
   {
     corridor: 'Overland Park & College Boulevard',
     query: 'enterprise healthtech telecommunications seo overland park',
     focus: 'HealthTech, Telecommunications & Corporate Headquarters',
-    desc: 'Major corporate and software campus core. B2B service queries demand enterprise capability schemas, localized authority, and sub-second edge speeds.',
+    desc: 'Major corporate and software campus corridor along College Boulevard in Johnson County, Kansas. B2B service queries demand enterprise capability schemas, localized authority, and sub-second edge speeds.',
   },
   {
     corridor: 'KC Animal Health Corridor',
     query: 'animal health veterinary biotech seo kansas city',
     focus: 'Animal Science Research, Veterinary Tech & AgTech',
-    desc: 'World-renowned animal health and bio-agricultural nexus. Multi-practitioner practice architectures, research directories, and clinical credential schemas.',
+    desc: 'World-renowned animal health and bio-agricultural corridor spanning from Manhattan, Kansas to Columbia, Missouri. Multi-location practice architectures, research directories, and clinical credential schemas.',
   },
   {
     corridor: 'Northland & KCI Airport Logistics',
     query: 'freight forwarding cold storage logistics seo northland kc',
     focus: 'Aviation Cargo, Cold Storage & Distribution',
-    desc: 'Major Midwest freight and aviation fulfillment nexus. Features logistics capability landing pages, equipment schemas, and RFQ workflows.',
+    desc: 'Major Midwest freight, aviation, and cold storage fulfillment nexus surrounding Kansas City International Airport (MCI). Features logistics capability landing pages, equipment schemas, and RFQ workflows.',
   },
   {
     corridor: 'Lenexa & Olathe Industrial Corridor',
     query: 'commercial contractor precision machining seo lenexa',
     focus: 'Commercial Construction, HVAC & Heavy Equipment',
-    desc: 'Precision industrial and heavy contracting heartland. Captures high-intent commercial HVAC, roofing, and contractor project bidding inquiries.',
+    desc: 'Precision industrial, commercial fabrication, and trade contracting heartland across western Johnson County. Captures high-intent commercial HVAC, industrial roofing, and contractor project bidding inquiries.',
   },
 ];
 
@@ -344,6 +344,42 @@ const FAQ_ITEMS = [
     question: 'Who will be our main point of contact during the campaign?',
     answer:
       'You work directly with a dedicated senior SEO strategist who oversees technical implementation, citation distribution, and monthly strategy reviews without layers of junior account coordinators.',
+  },
+  {
+    category: 'local',
+    question: 'How do you optimize for animal health, veterinary biotech, and life sciences companies in the KC Animal Health Corridor?',
+    answer:
+      'The KC Animal Health Corridor accounts for over 56% of global animal health revenue. We construct technical B2B catalog structures, veterinary specialist schemas, clinical research directories, and downloadable product specifications that capture institutional buyers and veterinary networks nationwide.',
+  },
+  {
+    category: 'local',
+    question: 'Can you structure local SEO across both Missouri and Kansas state lines in the Kansas City metro?',
+    answer:
+      'Yes. The KC metro spans Jackson and Clay counties in Missouri as well as Johnson and Wyandotte counties in Kansas. We construct distinct localized landing pages and multi-state Schema.org AreaServed arrays targeting Kansas City MO, Overland Park KS, Olathe, and Lee’s Summit without duplicate content penalties.',
+  },
+  {
+    category: 'technical',
+    question: 'How do HealthTech and corporate enterprise firms along College Boulevard in Overland Park capture qualified B2B leads?',
+    answer:
+      'We engineer high-converting B2B content hubs, integrate software capability matrices, optimize for enterprise procurement search intent, and implement SOC 2/HIPAA compliance disclosures with structured JSON-LD schemas to convert decision-makers.',
+  },
+  {
+    category: 'technical',
+    question: 'How does Google Gemini AI Overview and SearchGPT citation indexing work in the Midwest?',
+    answer:
+      'Generative AI search platforms synthesize verified factual entities from structured JSON-LD schemas, official Missouri Secretary of State and Kansas Secretary of State corporate filings, and direct answer-first page sections. We format your core service offerings to maximize conversational citation frequency in Google AI Overviews and ChatGPT search.',
+  },
+  {
+    category: 'local',
+    question: 'How do aesthetic surgery and wealth management practices capture high-net-worth clients in Country Club Plaza?',
+    answer:
+      'We deploy granular MedicalBusiness, Physician, and FinancialService schemas, optimize provider credential authority, construct neighborhood landing pages for the Plaza, Mission Hills, and Brookside, and streamline verified Google review funnels to dominate high-intent procedural and advisory queries.',
+  },
+  {
+    category: 'reporting',
+    question: 'What is NAP citation synchronization across Kansas City and regional business directories?',
+    answer:
+      'We establish and synchronize verified business citations across essential regional directories, including the Greater Kansas City Chamber of Commerce, Overland Park Chamber, regional BBB, Apple Maps, Bing Places, YellowPages, Dun & Bradstreet, and industry registries, ensuring 100% data consistency, eliminating duplicates, and reinforcing Google Maps 3-Pack authority.',
   },
 ];
 

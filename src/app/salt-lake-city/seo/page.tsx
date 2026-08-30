@@ -12,28 +12,28 @@ import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-24';
+const PAGE_MODIFIED = '2026-08-30';
 const CANONICAL = 'https://factoryjet.com/salt-lake-city/seo';
 
 export const metadata: Metadata = {
-  title: 'Salt Lake City Local SEO Agency | Search & AI Visibility | FactoryJet',
+  title: 'Best Salt Lake City SEO Company | Top Local SEO Agency UT | FactoryJet',
   description:
-    'Salt Lake City local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Silicon Slopes, Lehi, and Downtown.',
+    'Best Salt Lake City SEO company & local agency. Top Google Map Pack rankings, AI answer citations, and technical Core Web Vitals for Silicon Slopes & Utah.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Salt Lake City Local SEO Agency | Search & AI Visibility | FactoryJet',
+    title: 'Best Salt Lake City SEO Company | Top Local SEO Agency UT | FactoryJet',
     description:
-      'Salt Lake City local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Silicon Slopes, Lehi, and Downtown.',
+      'Premier Salt Lake City SEO company & local agency. Top Google Maps 3-Pack rankings, organic search visibility, and AI search citations across Utah.',
     url: CANONICAL,
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Salt Lake City Local SEO Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Salt Lake City Local SEO Agency | Search & AI Visibility | FactoryJet',
-    description: 'Dominate Salt Lake City local search and AI answer engines. Verified Google Maps 3-Pack capture and entity optimization.',
+    title: 'Best Salt Lake City SEO Company | Top Local SEO Agency UT | FactoryJet',
+    description: 'Dominate Salt Lake City local search and AI answer engines. Verified Google Maps 3-Pack capture and entity optimization across Utah.',
     images: ['https://factoryjet.com/og-default.png'],
   },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
@@ -62,37 +62,37 @@ const DISTRICTS = [
     corridor: 'Silicon Slopes & Lehi Tech Corridor',
     query: 'enterprise saas venture tech seo lehi utah',
     focus: 'Enterprise SaaS, Cloud Platforms & Venture Capital',
-    desc: 'The beating heart of Utah tech. B2B service queries demand enterprise capability schemas, localized authority, and sub-second edge speeds.',
+    desc: 'The beating heart of Utah’s tech economy along Interstate 15. B2B software and cloud infrastructure queries demand enterprise capability schemas, localized authority, and sub-second edge speeds.',
   },
   {
     corridor: 'Downtown Salt Lake City & CBD',
     query: 'commercial litigation law firm seo downtown slc',
     focus: 'Corporate Law, Private Equity & Commercial Real Estate',
-    desc: 'The executive legal and financial core. Captures high-ticket corporate legal retainers, commercial leasing inquiries, and wealth advisory contracts.',
+    desc: 'The executive legal and banking core along Main Street and State Street. Captures high-ticket corporate litigation retainers, commercial leasing inquiries, and private wealth advisory contracts.',
   },
   {
     corridor: 'Research Park & Foothill Corridor',
     query: 'biotech clinical diagnostic seo research park slc',
     focus: 'Biotech Research, Medical Device Clinical & Specialized Medicine',
-    desc: 'World-class scientific and biomedical research nexus. Multi-practitioner practice architectures, physician directories, and clinical credential schemas.',
+    desc: 'World-class scientific and biomedical research nexus adjacent to the University of Utah. Multi-practitioner practice architectures, physician directories, and clinical credential schemas.',
   },
   {
     corridor: 'South Jordan & Daybreak',
     query: 'aesthetic medicine family law seo south jordan',
     focus: 'Aesthetic Medicine, Pediatric Dentistry & Family Law',
-    desc: 'High-growth residential and healthcare enclave. Intense competition for elective dental, cosmetic procedures, and family law consultations.',
+    desc: 'High-growth residential and elective healthcare enclave in the southwest Salt Lake Valley. Intense competition for elective dental, cosmetic surgery, and family law consultations.',
   },
   {
     corridor: 'Sandy & Draper Tech Hub',
     query: 'security software digital agency seo draper ut',
     focus: 'Security SaaS, EdTech & Digital Agencies',
-    desc: 'Major tech and digital services corridor. Features structured entity markup, executive leadership profiles, and high-converting consultation funnels.',
+    desc: 'Major tech, cybersecurity, and digital agency corridor along 12300 South and Bangerter Highway. Features structured entity markup, executive leadership profiles, and high-converting consultation funnels.',
   },
   {
     corridor: 'West Valley City & Airport Logistics Hub',
     query: 'heavy equipment precision tooling contractor seo west valley',
     focus: 'Heavy Equipment, Precision Tooling & Advanced Freight',
-    desc: 'Precision industrial and freight fulfillment nexus. Features technical capability landing pages, equipment schemas, and RFQ workflows.',
+    desc: 'Precision industrial, precision machining, and air freight fulfillment nexus surrounding Salt Lake City International Airport (SLC). Features technical capability landing pages, equipment schemas, and RFQ workflows.',
   },
 ];
 
@@ -344,6 +344,42 @@ const FAQ_ITEMS = [
     question: 'Who will be our main point of contact during the campaign?',
     answer:
       'You work directly with a dedicated senior SEO strategist who oversees technical implementation, citation distribution, and monthly strategy reviews without layers of junior account coordinators.',
+  },
+  {
+    category: 'local',
+    question: 'How do you optimize for Silicon Slopes B2B SaaS and cloud platform enterprises in Lehi and Draper?',
+    answer:
+      'Silicon Slopes is home to high-growth software unicorns and venture-backed cloud platforms. We build technical B2B content hubs, software capability matrices, developer documentation portals, and enterprise RFP lead funnels that capture high-intent software buyers nationwide.',
+  },
+  {
+    category: 'technical',
+    question: 'How do biomedical diagnostic companies and clinical research labs capture visibility in Research Park?',
+    answer:
+      'University of Utah Research Park represents a global hub for medical device innovation. We deploy structured MedicalBusiness schemas, scientific publication repositories, clinical trial landing pages, and investigator credential directories to attract institutional partners and healthcare systems.',
+  },
+  {
+    category: 'local',
+    question: 'How do cosmetic dentists and aesthetic practices dominate local search in South Jordan and Daybreak?',
+    answer:
+      'We deploy granular MedicalBusiness, Physician, and Dentist schemas, optimize provider credential authority with Utah Division of Occupational and Professional Licensing records, construct neighborhood landing pages for Daybreak, Herriman, and Riverton, and streamline verified Google review funnels.',
+  },
+  {
+    category: 'technical',
+    question: 'How does Google Gemini AI Overview and SearchGPT citation indexing work in Utah?',
+    answer:
+      'Generative AI search platforms synthesize verified factual entities from structured JSON-LD schemas, official Utah Department of Commerce Division of Corporations filings, and direct answer-first page sections. We format your core service offerings to maximize conversational citation frequency in Google AI Overviews and ChatGPT search.',
+  },
+  {
+    category: 'local',
+    question: 'Can you structure local SEO across both Salt Lake and Utah counties?',
+    answer:
+      'Yes. Many Wasatch Front businesses serve clients across Salt Lake County and Utah County (including Provo, Orem, Lehi, and American Fork). We construct distinct localized landing pages and multi-county Schema.org AreaServed arrays without triggering duplicate content penalties.',
+  },
+  {
+    category: 'reporting',
+    question: 'What is NAP citation synchronization across Salt Lake City and Utah business directories?',
+    answer:
+      'We establish and synchronize verified business citations across essential regional directories, including the Salt Lake Chamber, Utah Valley Chamber, Utah BBB, Apple Maps, Bing Places, YellowPages, Dun & Bradstreet, and industry registries, ensuring 100% data consistency, eliminating duplicates, and reinforcing Google Maps 3-Pack authority.',
   },
 ];
 
