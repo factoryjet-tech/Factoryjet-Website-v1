@@ -12,27 +12,27 @@ import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import EcommerceCityLinksUS from '@/components/v2/EcommerceCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-24';
+const PAGE_MODIFIED = '2026-08-30';
 const CANONICAL = 'https://factoryjet.com/san-francisco/ecommerce-development';
 
 export const metadata: Metadata = {
-  title: 'San Francisco E-Commerce Agency | Headless Shopify Plus & B2B | FactoryJet',
+  title: 'Best San Francisco E-Commerce Agency | Top Shopify Plus & Next.js | FactoryJet',
   description:
-    'San Francisco e-commerce development agency. Headless Shopify Plus, BigCommerce B2B, ERP integrations, and sub-second checkouts for Bay Area enterprise brands.',
+    'Best San Francisco e-commerce development agency. Top headless Shopify Plus, BigCommerce B2B, ERP integrations, and sub-second checkouts for Bay Area enterprise brands.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'San Francisco E-Commerce Agency | Headless Shopify Plus & B2B | FactoryJet',
+    title: 'Best San Francisco E-Commerce Agency | Top Shopify Plus & Next.js | FactoryJet',
     description:
-      'San Francisco e-commerce development agency. Headless Shopify Plus, BigCommerce B2B, ERP integrations, and sub-second checkouts for Bay Area enterprise brands.',
+      'Premier San Francisco e-commerce development agency. Headless Shopify Plus, BigCommerce B2B, ERP integrations, and sub-second checkouts for Bay Area enterprise brands.',
     url: CANONICAL,
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'San Francisco E-Commerce Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'San Francisco E-Commerce Agency | Headless Shopify Plus & B2B | FactoryJet',
+    title: 'Best San Francisco E-Commerce Agency | Top Shopify Plus & Next.js | FactoryJet',
     description: 'Custom headless e-commerce engineering in San Francisco CA. Sub-second checkouts, ERP integrations, and full IP code ownership.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -86,7 +86,7 @@ const DISTRICTS = [
     corridor: 'Napa Valley & North Bay Wine Corridor',
     query: 'winery direct to consumer ecommerce napa valley',
     focus: 'Winery Direct-to-Consumer, Club Allocations & Custom Subscriptions',
-    desc: 'World-renowned wine and gourmet capital. Requires complex allocation tiering, recurring wine club billing engines, and state-by-state compliance compliance.',
+    desc: 'World-renowned wine and gourmet capital. Requires complex allocation tiering, recurring wine club billing engines, and state-by-state shipping compliance.',
   },
   {
     corridor: 'South Bay & San Jose Hardware Nexus',
@@ -101,7 +101,7 @@ const INDUSTRY_SHOWCASE = [
     sector: 'High-Tech Hardware, IoT Devices & Connected Consumer Electronics',
     headline: 'High-Performance D2C & Subscription Hardware Storefronts',
     description:
-      'Silicon Valley hardware tech companies require seamless blending of device sales, firmware warranties, and recurring software subscriptions. We engineer headless Next.js architectures connecting Shopify Plus to Stripe Billing and custom IoT telemetry APIs for unified checkout flows.',
+      'Silicon Valley hardware tech companies require unified synchronization of device sales, firmware warranties, and recurring software subscriptions. We engineer headless Next.js architectures connecting Shopify Plus to Stripe Billing and custom IoT telemetry APIs for unified checkout flows.',
     image: '/images/us/marketplace/san-francisco-silicon-valley-ecommerce-architecture.webp',
     alt: 'San Francisco Silicon Valley hardware technology and consumer electronics ecommerce development',
     points: [
@@ -147,6 +147,32 @@ const INDUSTRY_SHOWCASE = [
       'Sub-second headless Next.js frontend with instant mobile product filtering',
       'Dynamic product bundling, tiered upsells, and personalized cross-sells',
       'Integrated VIP loyalty programs, SMS marketing funnels, and post-purchase flows',
+    ],
+  },
+  {
+    sector: 'Winery Direct-to-Consumer, Club Allocations & Custom Subscriptions',
+    headline: 'High-End DTC Flagships & Allocation Engines for Napa & Sonoma Vintners',
+    description:
+      'Premier estate wineries and boutique vintners across Napa, Sonoma, and Northern California require sophisticated direct-to-consumer digital commerce. We build bespoke wine club management portals, allocation release workflows, recurring subscription billing systems, and automated state shipping compliance integrations.',
+    image: '/images/services/card-real-estate.webp',
+    alt: 'Napa Valley winery DTC wine club allocation and subscription ecommerce development',
+    points: [
+      'Tiered allocation release systems with member-specific reserve gating',
+      'Custom recurring wine club subscription customizer and shipment editor',
+      'Automated real-time compliance integrations with ShipCompliant and Sovos',
+    ],
+  },
+  {
+    sector: 'Semiconductor Components, IoT Hardware & Industrial Electronics',
+    headline: 'Engineering-Grade B2B Commerce for Silicon Valley Hardware Innovators',
+    description:
+      'Semiconductor suppliers, IoT hardware manufacturers, and industrial electronics distributors across San Jose and the South Bay demand technical precision. We construct high-performance B2B portals featuring parametric part search filters, CAD drawing download gateways, and instant RFQ quoting workflows.',
+    image: '/images/us/manufacturing-website-design/shop-floor.webp',
+    alt: 'Silicon Valley semiconductor IoT hardware industrial electronics ecommerce development',
+    points: [
+      'Parametric spec-sheet search filters and real-time inventory lot tracking',
+      'Instant CAD and STEP file download gateways with gated engineering access',
+      'Frictionless multi-line RFQ quoting with automated ERP price break calculations',
     ],
   },
 ];
@@ -200,7 +226,7 @@ const ROADMAP_STEPS = [
   {
     phase: 'Phase 04',
     title: 'Load Testing, Cutover & Launch Warranty',
-    desc: 'We execute rigorous multi-device checkout testing, simulated traffic spike tests, execute seamless DNS cutover, and provide 30-day post-launch support.',
+    desc: 'We execute rigorous multi-device checkout testing, simulated traffic spike tests, execute zero-downtime DNS cutover, and provide 30-day post-launch support.',
     deliverables: ['Simulated high-concurrency load testing', 'SEO 301 redirect map and schema validation', 'Zero-downtime production domain cutover', 'Full code repository transfer and team training'],
   },
 ];
@@ -344,6 +370,42 @@ const FAQ_ITEMS = [
     question: 'Can any standard engineering team maintain our Next.js e-commerce store?',
     answer:
       'Yes. Next.js, React, and TypeScript are the undisputed global standard for modern frontend engineering. Our clean, documented code architecture allows any competent software developer to maintain and scale your platform.',
+  },
+  {
+    category: 'architecture',
+    question: 'Why do San Francisco tech companies and D2C brands prefer headless Shopify Plus over traditional themes?',
+    answer:
+      'Headless architectures decouple your front-end user experience from the commerce back end, delivering sub-500ms page transitions, custom 3D product viewports, and zero theme-code lock-in while utilizing Shopify Plus for secure checkout, inventory management, and payment processing.',
+  },
+  {
+    category: 'b2b',
+    question: 'How do you build wine club allocation systems and compliance billing for Napa and Sonoma wineries?',
+    answer:
+      'We integrate custom subscription engines with ShipCompliant and Sovos, automating state-by-state direct shipping volume limits, alcohol excise tax calculations, age verification, and member allocation release windows.',
+  },
+  {
+    category: 'technical',
+    question: 'How do you connect NetSuite, SAP, and custom ERPs with B2B wholesale portals in Silicon Valley?',
+    answer:
+      'We build real-time bidirectional API middleware that synchronizes customer-specific contract pricing tiers, credit limits, purchase orders, inventory counts across multiple California distribution centers, and automated invoice PDF generation.',
+  },
+  {
+    category: 'performance',
+    question: 'How do you guarantee sub-500ms load speeds and 100/100 Core Web Vitals for Bay Area stores?',
+    answer:
+      'We optimize every asset from the foundation up: automatic WebP/AVIF image transcoding, critical CSS inlining, font subsetting, zero render-blocking scripts, and static HTML pre-generation delivered from global edge servers across Northern California.',
+  },
+  {
+    category: 'conversion',
+    question: 'What mobile checkout optimizations do you implement to maximize conversion rates in San Francisco?',
+    answer:
+      'We implement one-tap accelerated checkouts using Shop Pay, Apple Pay, Google Pay, and Stripe Elements, combined with sticky mobile add-to-cart drawers, localized address auto-complete, and zero full-page reloads.',
+  },
+  {
+    category: 'seo',
+    question: 'How do you configure Schema.org JSON-LD structured data for Google Merchant Center and Product Rich Snippets?',
+    answer:
+      'We embed granular Schema.org JSON-LD structured data on every product and collection page, including Product, Offer, AggregateRating, MerchantReturnPolicy, and ShippingDetails schemas. These explicit semantic annotations enable Google to generate rich merchant listings, free product carousel badges, and AI search citations.',
   },
 ];
 

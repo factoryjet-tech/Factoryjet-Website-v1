@@ -12,27 +12,27 @@ import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-24';
+const PAGE_MODIFIED = '2026-08-30';
 const CANONICAL = 'https://factoryjet.com/miami/seo';
 
 export const metadata: Metadata = {
-  title: 'Miami Local SEO Agency | Search & AI Visibility | FactoryJet',
+  title: 'Best Miami Local SEO Agency | Top Maps 3-Pack & AI Rankings | FactoryJet',
   description:
-    'Miami local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Brickell, Coral Gables, and Wynwood.',
+    'Best Miami local SEO agency. Top Google Maps 3-Pack ranking, organic search capture, and bilingual AI engine citation engineering across Brickell, Coral Gables, and Wynwood.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Miami Local SEO Agency | Search & AI Visibility | FactoryJet',
+    title: 'Best Miami Local SEO Agency | Top Maps 3-Pack & AI Rankings | FactoryJet',
     description:
-      'Miami local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Brickell, Coral Gables, and Wynwood.',
+      'Premier Miami local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Brickell, Coral Gables, and Wynwood.',
     url: CANONICAL,
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Miami Local SEO Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Miami Local SEO Agency | Search & AI Visibility | FactoryJet',
+    title: 'Best Miami Local SEO Agency | Top Maps 3-Pack & AI Rankings | FactoryJet',
     description: 'Dominate Miami local search and AI answer engines. Verified Google Maps 3-Pack capture and entity optimization.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -62,37 +62,37 @@ const DISTRICTS = [
     corridor: 'Brickell Financial District',
     query: 'private wealth seo brickell miami',
     focus: 'Cross-Border Wealth Advisory, Private Equity & Corporate Law',
-    desc: 'The Wall Street of the South. Fierce local competition for ultra-high-net-worth family office advisory, international arbitration, and private wealth management inquiries.',
+    desc: 'The Wall Street of the South along Brickell Avenue and Brickell Key. Fierce local competition for ultra-high-net-worth family office advisory, international cross-border arbitration, and private wealth management retainers.',
   },
   {
     corridor: 'Coral Gables & Downtown Gables',
     query: 'corporate law firm seo coral gables',
     focus: 'Corporate Legal, Executive Healthcare & Financial Consulting',
-    desc: 'Affluent corporate headquarters hub. Features deep practice area knowledge graphs, attorney profile schemas, and bilingual Spanish and English search optimization.',
+    desc: 'Affluent corporate headquarters hub centered along Ponce de Leon Boulevard and Miracle Mile. Features deep practice area knowledge graphs, attorney bar schemas, and bilingual Spanish and English search optimization.',
   },
   {
     corridor: 'Wynwood & Miami Design District',
     query: 'architecture studio seo miami design district',
     focus: 'Luxury Fashion Flagships, Architecture & Creative Agencies',
-    desc: 'Global luxury retail and architectural epicenter. High-intent local searches demand visual schema integration, localized service radius targeting, and Google Maps prominence.',
+    desc: 'Global luxury retail and architectural epicenter along NE 2nd Avenue and NW 2nd Avenue. High-intent local searches demand visual schema integration, localized service radius targeting, and Google Maps prominence.',
   },
   {
     corridor: 'Miami Beach & South Beach',
     query: 'cosmetic surgery seo miami beach',
     focus: 'Boutique Hospitality, Cosmetic Surgery & Luxury Real Estate',
-    desc: 'World-renowned medical and luxury residential strip. Captures high-ticket elective procedure consultations, private surgical inquiries, and luxury property showings.',
+    desc: 'World-renowned medical and luxury residential strip spanning Ocean Drive, Collins Avenue, and Lincoln Road. Captures high-ticket elective procedure consultations, private surgical inquiries, and luxury property showings.',
   },
   {
     corridor: 'Doral & Airport Logistics Hub',
     query: 'freight forwarding seo doral',
     focus: 'Import/Export Logistics, Cold-Chain Transport & Industrial Trade',
-    desc: 'The gateway to Latin American commerce. B2B service inquiries require technical capability landing pages, freight quote calculators, and sub-second edge performance.',
+    desc: 'The premier gateway to Latin American trade adjacent to Miami International Airport (MIA). B2B service inquiries require technical capability landing pages, freight quote calculators, and sub-second edge performance.',
   },
   {
     corridor: 'Aventura & Sunny Isles Beach',
     query: 'private wealth management seo aventura',
     focus: 'High-Net-Worth Private Wealth, Aesthetic Clinics & Luxury Yachting',
-    desc: 'Affluent coastal corridor. Features structured medical and financial schema, neighborhood rank grid saturation, and multi-language patient intake flows.',
+    desc: 'Affluent coastal corridor spanning Biscayne Boulevard and Collins Avenue. Features structured medical and financial schema, neighborhood rank grid saturation, and multi-language patient intake flows.',
   },
 ];
 
@@ -344,6 +344,54 @@ const FAQ_ITEMS = [
     question: 'Who will be our main point of contact during the campaign?',
     answer:
       'You work directly with a dedicated senior SEO strategist who oversees technical implementation, citation distribution, and monthly strategy reviews without layers of junior account coordinators.',
+  },
+  {
+    category: 'local',
+    question: 'How do you execute bilingual English and Spanish local SEO in Miami and South Florida?',
+    answer:
+      'Over 65% of Miami-Dade residents speak Spanish at home. We implement bilingual Schema.org structured data, correct hreflang annotations, localized Spanish landing pages, and dual-language Google Business Profile optimization without machine-translation errors.',
+  },
+  {
+    category: 'local',
+    question: 'How do Brickell wealth management firms and international law practices capture high-net-worth retainers?',
+    answer:
+      'We optimize Google Business Profiles with verified practitioner citations, attorney bar credentials, LegalService schema markup, and neighborhood location silos across Brickell, Coral Gables, and Downtown Miami.',
+  },
+  {
+    category: 'technical',
+    question: 'How do Doral import/export freight forwarders and logistics hubs capture national and LATAM B2B queries?',
+    answer:
+      'We build comprehensive B2B capability clusters, customs brokerage schemas, international cold-chain freight hubs, and instant RFQ quotation funnels that convert corporate procurement directors.',
+  },
+  {
+    category: 'local',
+    question: 'How do cosmetic surgery and luxury aesthetic clinics in Miami Beach and Aventura dominate Google Maps 3-Pack rankings?',
+    answer:
+      'We engineer dedicated physician profile schemas, before-and-after procedure galleries with structured MedicalProcedure markup, verified board certification links, and geo-grid rank saturation across coastal corridors.',
+  },
+  {
+    category: 'technical',
+    question: 'How does Google Gemini AI Overview and SearchGPT citation indexing work in Miami?',
+    answer:
+      'Generative AI search engines synthesize verified factual entities from structured JSON-LD schemas, official Florida Division of Corporations (Sunbiz) business filings, and direct answer-first page sections. We format your core service offerings to maximize conversational citation frequency in Google AI Overviews and ChatGPT search.',
+  },
+  {
+    category: 'deliverables',
+    question: 'What is NAP citation synchronization across Miami and Florida business directories?',
+    answer:
+      'We establish and synchronize verified business citations across essential regional directories, including the Greater Miami Chamber of Commerce, Florida BBB, Apple Maps, Bing Places, YellowPages, Dun & Bradstreet, and industry registries, ensuring 100% data consistency, eliminating duplicates, and reinforcing Google Maps 3-Pack authority.',
+  },
+  {
+    category: 'local',
+    question: 'How do luxury yacht charter companies and marine brokerages in Coconut Grove and Miami Beach dominate search?',
+    answer:
+      'South Florida is the luxury yachting capital of the Americas. We construct vessel specification schemas, destination itinerary hubs, seasonal pricing tables, and localized harbor landing pages that capture affluent international charter and brokerage inquiries.',
+  },
+  {
+    category: 'deliverables',
+    question: 'How do you acquire authoritative local backlinks across Miami and South Florida business publications?',
+    answer:
+      'We conduct white-hat digital PR outreach securing editorial citations in the South Florida Business Journal, Miami Herald, local university alumni networks across University of Miami and FIU, regional trade publications, and verified community sponsorships without PBNs or link farms.',
   },
 ];
 
