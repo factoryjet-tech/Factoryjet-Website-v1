@@ -12,27 +12,27 @@ import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import EcommerceCityLinksUS from '@/components/v2/EcommerceCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-24';
+const PAGE_MODIFIED = '2026-08-30';
 const CANONICAL = 'https://factoryjet.com/raleigh/ecommerce-development';
 
 export const metadata: Metadata = {
-  title: 'Raleigh Ecommerce Development Agency | Shopify Plus & Headless | FactoryJet',
+  title: 'Best Raleigh E-Commerce Agency | Top Shopify Plus & Headless | FactoryJet',
   description:
-    'Raleigh ecommerce development agency. Headless Shopify Plus, Next.js storefronts, sub-second checkout, and custom B2B wholesale integrations for Research Triangle brands.',
+    'Best Raleigh e-commerce development agency. Top headless Shopify Plus, Next.js storefronts, sub-second checkouts, and custom B2B wholesale portals in North Carolina.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Raleigh Ecommerce Development Agency | Shopify Plus & Headless | FactoryJet',
+    title: 'Best Raleigh E-Commerce Agency | Top Shopify Plus & Headless | FactoryJet',
     description:
-      'Raleigh ecommerce development agency. Headless Shopify Plus, Next.js storefronts, sub-second checkout, and custom B2B wholesale integrations for Research Triangle brands.',
+      'Premier Raleigh ecommerce development agency. Headless Shopify Plus, Next.js storefronts, sub-second checkout, and custom B2B wholesale integrations for Research Triangle brands.',
     url: CANONICAL,
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Raleigh Ecommerce Development Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Raleigh Ecommerce Development Agency | Shopify Plus & Headless | FactoryJet',
+    title: 'Best Raleigh E-Commerce Agency | Top Shopify Plus & Headless | FactoryJet',
     description: 'Custom headless Shopify Plus and Next.js ecommerce development in Raleigh NC. Sub-second performance, full IP code ownership, 7-day delivery.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -68,7 +68,7 @@ const DISTRICTS = [
     corridor: 'Downtown Raleigh & Warehouse District',
     query: 'modern d2c lifestyle apparel retail ecommerce warehouse district raleigh',
     focus: 'Modern D2C Brands, Craft Retail & Lifestyle Flagships',
-    desc: 'Vibrant design and creator enclave. Features tactile editorial layouts, interactive sizing calculators, and seamless mobile checkout.',
+    desc: 'Vibrant design and creator enclave. Features tactile editorial layouts, interactive sizing calculators, and frictionless mobile checkout.',
   },
   {
     corridor: 'North Hills & Midtown Corporate Hub',
@@ -120,7 +120,7 @@ const INDUSTRY_SHOWCASE = [
     points: [
       'Sub-second first contentful paint and instant product filtering with zero layout shifts',
       'Custom interactive bundle builders, sizing calculators, and upsell modules',
-      'Seamless checkout optimization utilizing Shop Pay, Apple Pay, and Klarna financing',
+      'Frictionless checkout optimization utilizing Shop Pay, Apple Pay, and Klarna financing',
     ],
   },
   {
@@ -140,13 +140,39 @@ const INDUSTRY_SHOWCASE = [
     sector: 'Industrial Electronics, CleanTech & Precision Tooling',
     headline: 'Engineering Commercial Wholesale Engines for Morrisville Distributors',
     description:
-      'Industrial hardware distributors, electronic component suppliers, and precision tooling manufacturers across Morrisville and I-40 demand robust B2B capabilities. We build high-speed wholesale platforms with bulk CSV order uploads, freight rate estimation at checkout, and automated tax exemption validation.',
+      'Industrial hardware distributors, electronic component suppliers, and precision tooling manufacturers across Morrisville and I-40 demand high-throughput B2B capabilities. We build high-speed wholesale platforms with bulk CSV order uploads, freight rate estimation at checkout, and automated tax exemption validation.',
     image: '/images/us/manufacturing-website-design/shop-floor.webp',
     alt: 'Raleigh industrial electronics precision hardware and clean technology B2B ecommerce platform',
     points: [
       'Bulk matrix ordering and instant CSV spreadsheet SKU order upload workflows',
       'Dynamic LTL freight calculation integrations with real-time carrier rate tables',
       'Automated Avalara tax exemption certificate management and resale verification',
+    ],
+  },
+  {
+    sector: 'Cary Tech Corridor Software Licensing, Digital Subscriptions & Hardware Sales',
+    headline: 'Digital License Provisioning & Global Hardware Sales Portals',
+    description:
+      'Technology hardware manufacturers, IoT monitoring firms, and enterprise SaaS developers across Cary and the Triangle demand high-speed digital sales portals. We engineer custom Next.js web applications featuring automated software license key generation, developer API documentation gateways, and tier-based hardware evaluation checkout.',
+    image: '/images/services/card-real-estate.webp',
+    alt: 'Raleigh Cary tech corridor software licensing digital subscriptions ecommerce development',
+    points: [
+      'Automated digital license provisioning and recurring enterprise SaaS billing',
+      'Developer API key management and SDK documentation download portals',
+      'Tiered corporate procurement gateways with automated ACH invoicing',
+    ],
+  },
+  {
+    sector: 'Durham American Tobacco Specialty Goods & Direct-to-Consumer',
+    headline: 'High-Impact Storefronts for Historic Tobacco District Innovators',
+    description:
+      'Artisanal consumer brands, lifestyle product creators, and innovative direct-to-consumer businesses across Durham American Tobacco District require digital flagships with sub-second page rendering, interactive lookbooks, and conversion-optimized mobile checkouts.',
+    image: '/images/us/b2b-website-design/sales-enablement.webp',
+    alt: 'Raleigh Durham American Tobacco District specialty consumer goods ecommerce storefront',
+    points: [
+      'Sub-500ms Next.js 15 edge page transitions with zero cumulative layout shifts',
+      'Integrated VIP loyalty programs, SMS marketing funnels, and post-purchase flows',
+      'Frictionless mobile checkout with one-tap Shop Pay and Apple Pay biometric support',
     ],
   },
 ];
@@ -289,7 +315,7 @@ const FAQ_ITEMS = [
     category: 'tech',
     question: 'Why build headless with Next.js 15 instead of a standard Shopify Liquid theme?',
     answer:
-      'Headless Next.js 15 delivers sub-second page transitions, instant search, dynamic bundle builders, and complete design freedom while retaining Shopify Plus robust checkout and inventory engine.',
+      'Headless Next.js 15 delivers sub-second page transitions, instant search, dynamic bundle builders, and complete design freedom while retaining Shopify Plus scalable checkout and inventory engine.',
   },
   {
     category: 'tech',
@@ -319,7 +345,7 @@ const FAQ_ITEMS = [
     category: 'local',
     question: 'Can you build custom B2B wholesale portals for North Carolina manufacturers?',
     answer:
-      'Yes. We build robust B2B platforms featuring customer tier pricing, bulk CSV ordering, Net-30 purchase order workflows, and custom invoice management.',
+      'Yes. We build enterprise B2B platforms featuring customer tier pricing, bulk CSV ordering, Net-30 purchase order workflows, and custom invoice management.',
   },
   {
     category: 'local',
@@ -356,6 +382,42 @@ const FAQ_ITEMS = [
     question: 'Can our in-house developers easily maintain and extend the Next.js codebase?',
     answer:
       'Yes. We write clean, strictly typed TypeScript and modular React code following standard conventions, ensuring your internal engineers can maintain and expand the platform effortlessly.',
+  },
+  {
+    category: 'architecture',
+    question: 'Why do Raleigh and Research Triangle enterprise brands choose headless Shopify Plus over standard themes?',
+    answer:
+      'Headless architectures decouple your front-end customer storefront from commerce back-end databases, delivering sub-500ms page transitions, custom 3D product configurators, and zero theme-code bloat while using Shopify Plus for secure payment processing and inventory tracking.',
+  },
+  {
+    category: 'b2b',
+    question: 'How do you integrate university punchout catalogs and grant billing for RTP life sciences suppliers?',
+    answer:
+      'We build cXML PunchOut integrations compatible with Coupa, Jaggaer, SAP Ariba, and university procurement systems, enabling frictionless institutional checkout, automatic PO dispatch, and grant code billing.',
+  },
+  {
+    category: 'performance',
+    question: 'How do you guarantee sub-500ms load speeds and 100/100 Core Web Vitals for North Carolina ecommerce stores?',
+    answer:
+      'We optimize every asset from the foundation up: automatic WebP/AVIF image transcoding, critical CSS inlining, font subsetting, zero render-blocking scripts, and static HTML pre-generation delivered from global edge servers across the East Coast.',
+  },
+  {
+    category: 'conversion',
+    question: 'What mobile checkout optimizations do you implement to maximize conversion rates in Raleigh?',
+    answer:
+      'We implement one-tap accelerated checkouts using Shop Pay, Apple Pay, Google Pay, and Klarna, combined with sticky mobile add-to-cart drawers, localized address auto-complete, and zero full-page reloads.',
+  },
+  {
+    category: 'tech-hardware',
+    question: 'How do you handle digital license key provisioning and API entitlement gating for Cary tech firms?',
+    answer:
+      'We build automated webhook listener workflows that generate cryptographic license keys upon successful checkout, grant instant developer portal access, and synchronize subscription statuses with your licensing database.',
+  },
+  {
+    category: 'seo',
+    question: 'How do you configure Schema.org JSON-LD structured data for Google Merchant Center and Product Rich Snippets?',
+    answer:
+      'We embed granular Schema.org JSON-LD structured data on every product and collection page, including Product, Offer, AggregateRating, MerchantReturnPolicy, and ShippingDetails schemas. These explicit semantic annotations enable Google to generate rich merchant listings, free product carousel badges, and AI search citations.',
   },
 ];
 

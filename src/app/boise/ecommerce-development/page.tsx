@@ -12,27 +12,27 @@ import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import EcommerceCityLinksUS from '@/components/v2/EcommerceCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-24';
+const PAGE_MODIFIED = '2026-08-30';
 const CANONICAL = 'https://factoryjet.com/boise/ecommerce-development';
 
 export const metadata: Metadata = {
-  title: 'Boise Ecommerce Development Agency | Shopify Plus & Headless | FactoryJet',
+  title: 'Best Boise E-Commerce Agency | Top Shopify Plus & Headless | FactoryJet',
   description:
-    'Boise ecommerce development agency. Headless Shopify Plus, Next.js storefronts, sub-second checkout, and custom B2B wholesale integrations for Idaho brands.',
+    'Best Boise e-commerce development agency. Top headless Shopify Plus, Next.js storefronts, sub-second checkouts, and custom B2B wholesale portals in Idaho.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Boise Ecommerce Development Agency | Shopify Plus & Headless | FactoryJet',
+    title: 'Best Boise E-Commerce Agency | Top Shopify Plus & Headless | FactoryJet',
     description:
-      'Boise ecommerce development agency. Headless Shopify Plus, Next.js storefronts, sub-second checkout, and custom B2B wholesale integrations for Idaho brands.',
+      'Premier Boise ecommerce development agency. Headless Shopify Plus, Next.js storefronts, sub-second checkout, and custom B2B wholesale integrations for Idaho brands.',
     url: CANONICAL,
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Boise Ecommerce Development Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Boise Ecommerce Development Agency | Shopify Plus & Headless | FactoryJet',
+    title: 'Best Boise E-Commerce Agency | Top Shopify Plus & Headless | FactoryJet',
     description: 'Custom headless Shopify Plus and Next.js ecommerce development in Boise ID. Sub-second performance, full IP code ownership, 7-day delivery.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -92,7 +92,7 @@ const DISTRICTS = [
     corridor: 'Hyde Park & North End Artisanal Enclave',
     query: 'handcrafted goods specialty boutique lifestyle ecommerce hyde park boise',
     focus: 'Artisanal Goods, Handcrafted Decor & Direct-to-Consumer',
-    desc: 'Historic craft creative district. Features tactile editorial layouts, interactive 3D product configurators, and seamless mobile checkout.',
+    desc: 'Historic craft creative district. Features tactile editorial layouts, interactive 3D product configurators, and frictionless mobile checkout.',
   },
 ];
 
@@ -107,7 +107,7 @@ const INDUSTRY_SHOWCASE = [
     points: [
       'Sub-second first contentful paint and instant product filtering with zero layout shifts',
       'Interactive visual lookbooks, dynamic sizing calculators, and cross-sell gear bundles',
-      'Seamless mobile checkout utilizing Shop Pay, Apple Pay, and Klarna flexible financing',
+      'Frictionless mobile checkout utilizing Shop Pay, Apple Pay, and Klarna flexible financing',
     ],
   },
   {
@@ -127,7 +127,7 @@ const INDUSTRY_SHOWCASE = [
     sector: 'B2B Industrial Hardware, Tooling & Construction Materials',
     headline: 'Enterprise Wholesale Portals for Nampa & Caldwell Distributors',
     description:
-      'Industrial hardware distributors, building material suppliers, and precision tooling manufacturers across Nampa and Caldwell require robust B2B wholesale capabilities. We build high-speed wholesale platforms with automated PO processing, Net-30 credit terms, customer group tier pricing, and real-time ERP inventory syncing.',
+      'Industrial hardware distributors, building material suppliers, and precision tooling manufacturers across Nampa and Caldwell require high-throughput B2B wholesale capabilities. We build high-speed wholesale platforms with automated PO processing, Net-30 credit terms, customer group tier pricing, and real-time ERP inventory syncing.',
     image: '/images/us/manufacturing-website-design/shop-floor.webp',
     alt: 'Boise Nampa industrial hardware building materials and manufacturing B2B ecommerce engineering',
     points: [
@@ -145,8 +145,34 @@ const INDUSTRY_SHOWCASE = [
     alt: 'Boise Meridian direct-to-consumer nutritional supplement and healthtech subscription ecommerce',
     points: [
       'Custom interactive bundle configurators and personalized diagnostic quiz engines',
-      'Seamless subscription management with Recharge, Smartrr, and Stripe Billing',
+      'Automated subscription management with Recharge, Smartrr, and Stripe Billing',
       'High-speed mobile checkout optimized for paid social, TikTok Shop, and search traffic',
+    ],
+  },
+  {
+    sector: 'Micron Campus Tech Hardware, Electronic Components & Embedded Sensors',
+    headline: 'Digital License Provisioning & Global Hardware Sales Portals',
+    description:
+      'Semiconductor hardware developers, IoT sensor innovators, and technology firms across the Boise Tech Corridor demand high-speed digital sales portals. We engineer custom Next.js web applications featuring automated software license key generation, developer API documentation gateways, and tier-based hardware evaluation checkout.',
+    image: '/images/services/card-real-estate.webp',
+    alt: 'Boise Idaho tech corridor electronics hardware software licensing ecommerce development',
+    points: [
+      'Automated digital license provisioning and recurring enterprise SaaS billing',
+      'Developer API key management and SDK documentation download portals',
+      'Tiered corporate procurement gateways with automated ACH invoicing',
+    ],
+  },
+  {
+    sector: 'Nampa & Caldwell Building Materials, Timber Supply & Industrial Hardware',
+    headline: 'High-Throughput Parts Catalogs for Canyon County Contractors',
+    description:
+      'Lumber processors, building material distributors, and heavy industrial hardware suppliers across Nampa and Caldwell require rugged online ordering portals. We build custom Next.js storefronts featuring engineering specification lookups, real-time multi-yard inventory tracking, and automated LTL freight calculations.',
+    image: '/images/us/manufacturing-website-design/shop-floor.webp',
+    alt: 'Boise Nampa Caldwell building materials timber supply and industrial hardware B2B ecommerce',
+    points: [
+      'Interactive contractor material calculation matrices with bulk CSV order uploads',
+      'Real-time multi-location warehouse inventory feeds across the Treasure Valley',
+      'Customer-specific contracted pricing tiers and commercial net-30 terms',
     ],
   },
 ];
@@ -289,7 +315,7 @@ const FAQ_ITEMS = [
     category: 'tech',
     question: 'Why build headless with Next.js 15 instead of a standard Shopify Liquid theme?',
     answer:
-      'Headless Next.js 15 delivers sub-second page transitions, instant search, dynamic bundle builders, and complete design freedom while retaining Shopify Plus robust checkout and inventory engine.',
+      'Headless Next.js 15 delivers sub-second page transitions, instant search, dynamic bundle builders, and complete design freedom while retaining Shopify Plus scalable checkout and inventory engine.',
   },
   {
     category: 'tech',
@@ -319,7 +345,7 @@ const FAQ_ITEMS = [
     category: 'local',
     question: 'Can you build custom B2B wholesale portals for Treasure Valley manufacturers?',
     answer:
-      'Yes. We build robust B2B platforms featuring customer tier pricing, bulk line sheet ordering, Net-30 purchase order workflows, and custom invoice management.',
+      'Yes. We build enterprise B2B platforms featuring customer tier pricing, bulk line sheet ordering, Net-30 purchase order workflows, and custom invoice management.',
   },
   {
     category: 'local',
@@ -356,6 +382,42 @@ const FAQ_ITEMS = [
     question: 'Can our in-house developers easily maintain and extend the Next.js codebase?',
     answer:
       'Yes. We write clean, strictly typed TypeScript and modular React code following standard conventions, ensuring your internal engineers can maintain and expand the platform effortlessly.',
+  },
+  {
+    category: 'architecture',
+    question: 'Why do Boise and Idaho enterprise brands choose headless Shopify Plus over standard themes?',
+    answer:
+      'Headless architectures decouple your front-end customer storefront from commerce back-end databases, delivering sub-500ms page transitions, custom 3D product configurators, and zero theme-code bloat while using Shopify Plus for secure payment processing and inventory tracking.',
+  },
+  {
+    category: 'b2b',
+    question: 'How do you integrate NetSuite, SAP, and Epicor ERP with B2B wholesale portals in Nampa, Caldwell, and Boise?',
+    answer:
+      'We build real-time bidirectional API connectors that synchronize customer-specific contract pricing tiers, credit limits, purchase orders, multi-warehouse inventory levels across the Pacific Northwest, and automated invoice PDF generation.',
+  },
+  {
+    category: 'performance',
+    question: 'How do you guarantee sub-500ms load speeds and 100/100 Core Web Vitals for outdoor brands in Idaho?',
+    answer:
+      'We optimize every asset from the foundation up: automatic WebP/AVIF image transcoding, critical CSS inlining, font subsetting, zero render-blocking scripts, and static HTML pre-generation delivered from global edge servers across the West Coast.',
+  },
+  {
+    category: 'conversion',
+    question: 'What mobile checkout optimizations do you implement to maximize conversion rates in Boise?',
+    answer:
+      'We implement one-tap accelerated checkouts using Shop Pay, Apple Pay, Google Pay, and Klarna, combined with sticky mobile add-to-cart drawers, localized address auto-complete, and zero full-page reloads.',
+  },
+  {
+    category: 'tech-hardware',
+    question: 'How do you handle digital license key provisioning and API entitlement gating for Boise tech firms?',
+    answer:
+      'We build automated webhook listener workflows that generate cryptographic license keys upon successful checkout, grant instant developer portal access, and synchronize subscription statuses with your licensing database.',
+  },
+  {
+    category: 'seo',
+    question: 'How do you configure Schema.org JSON-LD structured data for Google Merchant Center and Product Rich Snippets?',
+    answer:
+      'We embed granular Schema.org JSON-LD structured data on every product and collection page, including Product, Offer, AggregateRating, MerchantReturnPolicy, and ShippingDetails schemas. These explicit semantic annotations enable Google to generate rich merchant listings, free product carousel badges, and AI search citations.',
   },
 ];
 
