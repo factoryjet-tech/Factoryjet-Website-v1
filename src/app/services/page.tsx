@@ -40,7 +40,7 @@ export const metadata: Metadata = {
 
 // Freshness signal. Benchmark: 56% of AI-Overview-cited pages carry it.
 // Keep honest: bump when the page's content actually changes.
-const PAGE_MODIFIED = '2026-08-04';
+const PAGE_MODIFIED = '2026-08-30';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -334,6 +334,54 @@ const FAQS = [
     q: 'Can I see examples of websites you\'ve built for US businesses?',
     a: 'Yes, visit our portfolio at factoryjet.com/portfolio to see live case studies. We also share Figma design files and Lighthouse scores on request.',
   },
+  {
+    q: 'What is headless commerce and when does a business need a Next.js 15 decoupled storefront?',
+    a: 'Headless commerce decouples your customer-facing frontend (built with Next.js 15, React Server Components, and Tailwind CSS) from backend commerce engines like Shopify Plus or BigCommerce. It delivers sub-second page loads, total design flexibility, and higher mobile conversion rates for high-growth brands scaling beyond monolithic theme limitations.',
+  },
+  {
+    q: 'How do you ensure 100/100 Google Core Web Vitals on every website build?',
+    a: 'We engineer performance from the ground up: zero heavy third-party tracking scripts, native next/image responsive optimization, CSS containment, edge-cached dynamic content on Cloudflare/Vercel, and zero layout shift (CLS). Every custom site we deliver is verified against Google PageSpeed Insights.',
+  },
+  {
+    q: 'What is Generative Engine Optimization (GEO) and how do you optimize sites for AI search?',
+    a: 'Generative Engine Optimization (GEO) structures your website content, factual entities, comparison tables, and Schema.org JSON-LD markup so conversational AI search engines (ChatGPT, Google Gemini AI Overviews, Perplexity) directly cite and recommend your brand when users research purchasing decisions.',
+  },
+  {
+    q: 'How do you handle bi-directional ERP and CRM data synchronization?',
+    a: 'We build robust REST and GraphQL API middleware connecting your digital storefront to enterprise ERP and CRM platforms—including NetSuite, SAP, Salesforce, HubSpot, Microsoft Dynamics 365, and QuickBooks Enterprise. Inventory, orders, pricing tiers, and customer records sync in real time with automated error logging.',
+  },
+  {
+    q: 'What is your code handover process and do you provide full GitHub repository transfer?',
+    a: 'Upon project completion and final milestone approval, we transfer full administrative ownership of the GitHub code repository, Vercel/Cloudflare deployment pipelines, Figma source design files, and DNS configurations. You own 100% of your intellectual property with zero agency lock-in.',
+  },
+  {
+    q: 'What are the payment milestone terms for FactoryJet service engagements?',
+    a: 'We work on transparent, milestone-governed fixed-price agreements: 50% deposit to kick off strategy and Figma design, and 50% upon final QA and production launch approval. We never charge hidden hourly overages or unexpected change-order fees.',
+  },
+  {
+    q: 'What is the FactoryJet 7-Day Sprint delivery guarantee and how does it work?',
+    a: 'For standard custom business websites up to 5 pages, we guarantee full design and development delivery within 7 business days from Figma milestone approval. Our structured daily milestones and dedicated senior engineering pods eliminate the multi-month delays common with traditional creative agencies.',
+  },
+  {
+    q: 'How do you handle multi-currency, multi-language international e-commerce localization?',
+    a: 'We configure native Shopify Markets, subfolder domain routing, automated geolocation IP detection, localized currency conversions, and automated hreflang XML sitemaps to ensure international customers enjoy a frictionless localized purchasing experience without SEO duplicate content penalties.',
+  },
+  {
+    q: 'What is Conversion Rate Optimization (CRO) and how do you increase checkout velocity?',
+    a: 'Our CRO engineering framework analyzes session recordings, heatmap drop-off points, mobile tap targets, and checkout friction. We implement sticky add-to-cart drawers, 1-click express payment buttons (Apple Pay, Shop Pay, Google Pay), and tiered in-cart upsells, lifting checkout conversion rates by 25% to 45%.',
+  },
+  {
+    q: 'How do you migrate legacy monolithic websites to modern Next.js 15 architectures?',
+    a: 'We execute structured zero-downtime replatforming: crawling 100% of legacy URLs, mapping 1:1 301 redirects, migrating blog and customer data with cryptographic integrity checks, and running side-by-side staging tests before DNS propagation to guarantee 0% organic search traffic loss.',
+  },
+  {
+    q: 'What ongoing technical support and SLA guarantees are included post-launch?',
+    a: 'Every project includes 30 days of dedicated hypercare support covering bug fixes, speed audits, and staff training. For ongoing partnerships, we offer monthly SLA retainers covering 24/7 uptime monitoring, critical security patching, feature enhancements, and continuous Core Web Vitals telemetry.',
+  },
+  {
+    q: 'How do I book an architectural scoping call with FactoryJet founder Bhavesh Barot?',
+    a: 'You can book a 30-minute discovery consultation directly via our Calendly calendar. We will review your current website, analyze technical bottlenecks, evaluate third-party integrations, and provide an actionable fixed-price proposal within 24 hours.',
+  },
 ];
 
 const jsonLd = {
@@ -505,6 +553,228 @@ export default function USServicesHubPage() {
                   {item}
                 </span>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 4 STRATEGIC ENGINEERING PILLARS ──────────────────────────────── */}
+        <section className="py-14 md:py-20" style={{ backgroundColor: '#FFFFFF' }}>
+          <div className="mx-auto max-w-[1120px] px-6 md:px-8">
+            <div className="mb-12">
+              <p
+                className="font-fj-mono font-bold uppercase"
+                style={{ fontSize: '11px', letterSpacing: '0.14em', color: '#B23E13' }}
+              >
+                // FULL-STACK CAPABILITIES
+              </p>
+              <h2
+                className="fj-display mt-3 font-semibold text-fj-ink"
+                style={{
+                  fontSize: 'clamp(1.875rem, 3.5vw, 2.75rem)',
+                  lineHeight: 1.08,
+                  letterSpacing: '-0.03em',
+                  maxWidth: '32ch',
+                }}
+              >
+                The 4 Pillars of the FactoryJet Engineering &amp; Growth Ecosystem
+              </h2>
+              <p
+                className="mt-4 font-fj-body text-fj-neutral-600"
+                style={{ fontSize: '1.0625rem', lineHeight: 1.65, maxWidth: '640px' }}
+              >
+                We eliminate the fragmentation of managing separate web development, e-commerce, AI automation, and paid acquisition vendors. Our senior in-house engineers and growth strategists deliver integrated digital solutions built to scale revenue and eliminate operational friction.
+              </p>
+              <p
+                className="mt-3 font-fj-body text-fj-neutral-600"
+                style={{ fontSize: '1rem', lineHeight: 1.65, maxWidth: '640px' }}
+              >
+                Whether you need a bespoke corporate web presence delivered in 7 days, a high-volume headless Shopify storefront processing millions in GMV, or an autonomous AI agent routing customer support tickets, FactoryJet provides senior engineering leadership, transparent milestone pricing, and 100% intellectual property ownership from day one. Every engagement is backed by our rigorous quality assurance benchmarks and a dedicated 30-day post-launch hypercare guarantee.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+              <div
+                className="rounded-2xl p-8"
+                style={{
+                  backgroundColor: '#FAFAF7',
+                  border: '1px solid rgba(15,15,18,0.07)',
+                }}
+              >
+                <div
+                  className="font-fj-mono font-bold uppercase"
+                  style={{ fontSize: '11px', letterSpacing: '0.12em', color: '#B23E13' }}
+                >
+                  PILLAR 01 // FRONTEND ENGINEERING
+                </div>
+                <h3
+                  className="fj-display mt-2 font-semibold text-fj-ink"
+                  style={{ fontSize: '1.375rem', lineHeight: 1.2 }}
+                >
+                  High-Performance Next.js 15 Web Applications
+                </h3>
+                <p className="mt-3 font-fj-body text-fj-neutral-600" style={{ fontSize: '0.9375rem', lineHeight: 1.65 }}>
+                  Sub-second serverless edge architectures built with React Server Components, Tailwind CSS, and headless content management systems (Sanity, Contentful, Strapi). Every web application is engineered for 100/100 Core Web Vitals, instant page transitions, semantic search visibility, and complete accessibility compliance across all device viewports.
+                </p>
+              </div>
+
+              <div
+                className="rounded-2xl p-8"
+                style={{
+                  backgroundColor: '#FAFAF7',
+                  border: '1px solid rgba(15,15,18,0.07)',
+                }}
+              >
+                <div
+                  className="font-fj-mono font-bold uppercase"
+                  style={{ fontSize: '11px', letterSpacing: '0.12em', color: '#B23E13' }}
+                >
+                  PILLAR 02 // ENTERPRISE COMMERCE
+                </div>
+                <h3
+                  className="fj-display mt-2 font-semibold text-fj-ink"
+                  style={{ fontSize: '1.375rem', lineHeight: 1.2 }}
+                >
+                  Shopify Plus, BigCommerce B2B &amp; Omnichannel Solutions
+                </h3>
+                <p className="mt-3 font-fj-body text-fj-neutral-600" style={{ fontSize: '0.9375rem', lineHeight: 1.65 }}>
+                  From high-converting custom Shopify Liquid themes to complex BigCommerce B2B wholesale portals with automated RFQ negotiation and PunchOut e-procurement (cXML/OCI). We build unified commerce ecosystems connecting retail POS, online storefronts, and warehouse ERPs into a single source of truth. We ensure multi-currency localized checkout, real-time inventory allocation, and automated tax compliance across all global markets.
+                </p>
+              </div>
+
+              <div
+                className="rounded-2xl p-8"
+                style={{
+                  backgroundColor: '#FAFAF7',
+                  border: '1px solid rgba(15,15,18,0.07)',
+                }}
+              >
+                <div
+                  className="font-fj-mono font-bold uppercase"
+                  style={{ fontSize: '11px', letterSpacing: '0.12em', color: '#B23E13' }}
+                >
+                  PILLAR 03 // APPLIED ARTIFICIAL INTELLIGENCE
+                </div>
+                <h3
+                  className="fj-display mt-2 font-semibold text-fj-ink"
+                  style={{ fontSize: '1.375rem', lineHeight: 1.2 }}
+                >
+                  Autonomous AI Agents &amp; Intelligent Workflows
+                </h3>
+                <p className="mt-3 font-fj-body text-fj-neutral-600" style={{ fontSize: '0.9375rem', lineHeight: 1.65 }}>
+                  Bespoke conversational AI chatbot agents and autonomous workflow pipelines built with LangChain, LlamaIndex, Python, and n8n. We integrate semantic RAG vector databases with your internal CRM, helpdesk, and accounting software, automating 70%+ of routine customer inquiries, data entry, and internal business operations.
+                </p>
+              </div>
+
+              <div
+                className="rounded-2xl p-8"
+                style={{
+                  backgroundColor: '#FAFAF7',
+                  border: '1px solid rgba(15,15,18,0.07)',
+                }}
+              >
+                <div
+                  className="font-fj-mono font-bold uppercase"
+                  style={{ fontSize: '11px', letterSpacing: '0.12em', color: '#B23E13' }}
+                >
+                  PILLAR 04 // OMNICHANNEL GROWTH
+                </div>
+                <h3
+                  className="fj-display mt-2 font-semibold text-fj-ink"
+                  style={{ fontSize: '1.375rem', lineHeight: 1.2 }}
+                >
+                  Amazon, Walmart Marketplace &amp; Generative AI SEO
+                </h3>
+                <p className="mt-3 font-fj-body text-fj-neutral-600" style={{ fontSize: '0.9375rem', lineHeight: 1.65 }}>
+                  Full-funnel marketplace growth management across Amazon Seller/Vendor Central, Walmart Connect, and TikTok Shop. We combine algorithmic PPC optimization, WFS/FBA logistics management, and advanced Generative Engine Optimization (GEO) to dominate both traditional search and AI conversational recommendations.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── ENGINEERING STANDARDS & GOVERNANCE ───────────────────────────── */}
+        <section className="py-14 md:py-20" style={{ backgroundColor: '#FAFAF7' }}>
+          <div className="mx-auto max-w-[1120px] px-6 md:px-8">
+            <div className="mb-12">
+              <p
+                className="font-fj-mono font-bold uppercase"
+                style={{ fontSize: '11px', letterSpacing: '0.14em', color: '#B23E13' }}
+              >
+                // CODE GOVERNANCE
+              </p>
+              <h2
+                className="fj-display mt-3 font-semibold text-fj-ink"
+                style={{
+                  fontSize: 'clamp(1.875rem, 3.5vw, 2.75rem)',
+                  lineHeight: 1.08,
+                  letterSpacing: '-0.03em',
+                  maxWidth: '30ch',
+                }}
+              >
+                Zero-Lockin Architecture &amp; Production Quality Standards
+              </h2>
+              <p
+                className="mt-4 font-fj-body text-fj-neutral-600"
+                style={{ fontSize: '1.0625rem', lineHeight: 1.65, maxWidth: '640px' }}
+              >
+                We believe you should own your technology outright. Every line of code we write is modular, documented, and delivered directly to your private infrastructure without proprietary dependencies.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
+              <div
+                className="rounded-2xl bg-white p-6"
+                style={{ border: '1px solid rgba(15,15,18,0.07)' }}
+              >
+                <div
+                  className="font-fj-mono font-bold uppercase"
+                  style={{ fontSize: '11px', letterSpacing: '0.12em', color: '#B23E13' }}
+                >
+                  100% IP OWNERSHIP
+                </div>
+                <h3 className="fj-display mt-2 font-semibold text-fj-ink" style={{ fontSize: '1.125rem' }}>
+                  Full GitHub Code Handoff
+                </h3>
+                <p className="mt-2 font-fj-body text-fj-neutral-600" style={{ fontSize: '0.875rem', lineHeight: 1.6 }}>
+                  No monthly platform hostage fees. On final project sign-off, we transfer full repository rights, Figma design files, and deployment environments directly to your organization.
+                </p>
+              </div>
+
+              <div
+                className="rounded-2xl bg-white p-6"
+                style={{ border: '1px solid rgba(15,15,18,0.07)' }}
+              >
+                <div
+                  className="font-fj-mono font-bold uppercase"
+                  style={{ fontSize: '11px', letterSpacing: '0.12em', color: '#B23E13' }}
+                >
+                  SUB-SECOND VELOCITY
+                </div>
+                <h3 className="fj-display mt-2 font-semibold text-fj-ink" style={{ fontSize: '1.125rem' }}>
+                  100/100 Core Web Vitals
+                </h3>
+                <p className="mt-2 font-fj-body text-fj-neutral-600" style={{ fontSize: '0.875rem', lineHeight: 1.6 }}>
+                  Built for extreme speed on global serverless edge CDNs. We eliminate render-blocking JavaScript and bloat to maximize organic search rankings and conversion rates.
+                </p>
+              </div>
+
+              <div
+                className="rounded-2xl bg-white p-6"
+                style={{ border: '1px solid rgba(15,15,18,0.07)' }}
+              >
+                <div
+                  className="font-fj-mono font-bold uppercase"
+                  style={{ fontSize: '11px', letterSpacing: '0.12em', color: '#B23E13' }}
+                >
+                  ENTERPRISE SECURITY
+                </div>
+                <h3 className="fj-display mt-2 font-semibold text-fj-ink" style={{ fontSize: '1.125rem' }}>
+                  API-Level Least Privilege
+                </h3>
+                <p className="mt-2 font-fj-body text-fj-neutral-600" style={{ fontSize: '0.875rem', lineHeight: 1.6 }}>
+                  Strict credential isolation, environment secret encryption, and compliant bi-directional middleware connecting your ERP, payment gateways, and third-party logistics.
+                </p>
+              </div>
             </div>
           </div>
         </section>

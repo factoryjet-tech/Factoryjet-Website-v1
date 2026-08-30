@@ -65,6 +65,10 @@ const FAQ_ITEMS = [
   { category: 'working', question: 'Can you migrate our channels without losing SEO?', answer: 'Yes. We handle replatforming and data migration, including products, customers, orders, and pricing, with 301 redirects and a cutover plan that protects your rankings and uptime.' },
   { category: 'working', question: 'How long does an omnichannel commerce build take?', answer: 'It depends on how many channels and systems we connect and how complex your catalog and pricing are. After a short scoping call you get a phased timeline with milestones, and a fixed proposal before any work starts.' },
   { category: 'working', question: 'Do we own the omnichannel system you build?', answer: 'Yes. You own and operate everything we build. We design, build, implement, and then hand it over, and we stay on call to support and scale it. We never run your store for you.' },
+  { category: 'connecting', question: 'What is Distributed Order Management (DOM) and how does dynamic inventory allocation work?', answer: 'Distributed Order Management (DOM) algorithms evaluate stock availability, customer proximity, store labor capacity, and carrier shipping rates in real time. Orders automatically route to the fulfillment location (distribution warehouse, 3PL, or retail storefront) that minimizes transit days and freight cost while preventing stockouts.' },
+  { category: 'connecting', question: 'How do you unify customer loyalty points and gift cards across online and in-store POS?', answer: 'We build unified customer identification middleware using barcode scanning and phone lookups. Loyalty points earned on retail POS purchases instantly credit to the customer’s online account, and digital gift cards or store credit can be redeemed seamlessly at physical checkout counters.' },
+  { category: 'connecting', question: 'How does real-time Ship-from-Store (SFS) order routing reduce regional shipping transit times?', answer: 'By turning physical retail stores into localized fulfillment nodes, Ship-from-Store allows brands to fulfill regional orders within 1–2 days via ground delivery instead of expensive air freight. Store staff use handheld picking apps with automated barcode verification to pack orders during retail downtime.' },
+  { category: 'platforms', question: 'What is Master Data Management (MDM) for multi-channel product catalogs and PIMs?', answer: 'Master Data Management (MDM) unifies SKU attributes, technical specifications, multi-language descriptions, and media assets in a centralized Product Information Management (PIM) system (such as Akeneo or Salsify). Updates propagate automatically across Shopify, Amazon, Walmart, and wholesale B2B portals with zero manual duplicate data entry.' },
 ];
 const FAQ_SCHEMA = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: FAQ_ITEMS.map((i) => ({ '@type': 'Question', name: i.question, acceptedAnswer: { '@type': 'Answer', text: i.answer } })) };
 const SERVICE_SCHEMA = {
@@ -91,7 +95,7 @@ const ORG_SCHEMA = {
   
   sameAs: ['https://www.linkedin.com/company/factoryjet'],
 };
-const PAGE_MODIFIED = '2026-08-03';
+const PAGE_MODIFIED = '2026-08-30';
 const WEBPAGE_SCHEMA = {
   '@context': 'https://schema.org', '@type': 'WebPage',
   '@id': 'https://factoryjet.com/omnichannel-commerce#webpage',

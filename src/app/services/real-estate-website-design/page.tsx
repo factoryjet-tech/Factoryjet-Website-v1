@@ -54,7 +54,7 @@ export const metadata: Metadata = {
 
 // Freshness signal. Benchmark: 56% of AI-Overview-cited pages carry it.
 // Keep honest: bump when the page's content actually changes.
-const PAGE_MODIFIED = '2026-08-04';
+const PAGE_MODIFIED = '2026-08-30';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -381,6 +381,26 @@ const FAQ_ITEMS = [
     category: 'platforms',
     question: 'Do you build real estate websites for teams and brokerages?',
     answer: "Yes, brokerage and team sites need: a team roster with individual agent profiles and bios, a listings page that aggregates listings across all team members, office location pages, a recruitment page targeting agent talent, and often co-branded templates that individual agents can personalize. Brokerage sites are fixed-price and scoped to your team size and feature set.",
+  },
+  {
+    category: 'basics',
+    question: 'What is the difference between RESO Web API and legacy RETS feeds for IDX listings?',
+    answer: 'RESO (Real Estate Standards Organization) Web API is the modern RESTful standard that replaced deprecated RETS XML feeds. RESO Web API delivers faster, real-time MLS data synchronization, lower server resource overhead, and seamless mobile responsiveness across property details and high-resolution photo galleries.',
+  },
+  {
+    category: 'seo',
+    question: 'How do you implement RealEstateAgent and SingleFamilyResidence Schema.org structured data?',
+    answer: 'We embed granular Schema.org JSON-LD markup on every page—including RealEstateAgent entity data, LocalBusiness geographic coordinates, SingleFamilyResidence property attributes (price, bedrooms, square footage, MLS ID), and FAQPage rich snippets for instant Google Rich Result indexing.',
+  },
+  {
+    category: 'process',
+    question: 'How does mobile map-based polygon property search work on custom real estate sites?',
+    answer: 'We integrate high-performance Mapbox GL and Google Maps vector layers allowing home buyers to draw custom boundary polygons or filter by school district boundaries. Property markers cluster and render at 60fps on mobile devices without lag.',
+  },
+  {
+    category: 'leads',
+    question: 'How do you capture off-market and pocket listing buyer inquiries compliantly?',
+    answer: 'We build VIP buyer registration portals where pre-approved clients can sign digital confidentiality waivers and access exclusive off-market pocket listings or coming-soon inventory, strictly adhering to NAR Clear Cooperation policy rules.',
   },
 ];
 
