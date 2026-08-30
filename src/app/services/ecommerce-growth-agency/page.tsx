@@ -92,6 +92,12 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
   { category: 'working', question: 'What size businesses do you work with?', answer: 'Mostly US small and mid-market ecommerce brands, from stores doing their first serious growth push to established brands scaling past seven and eight figures. We scope the engagement to your stage rather than forcing one package on everyone.' },
   { category: 'working', question: 'How do you report on performance?', answer: 'You get a live dashboard tied to revenue and contribution margin, plus a plain-language monthly review of what we did, what it returned, and what is next. No vanity metrics dressed up as progress.' },
   { category: 'working', question: 'How do we get started?', answer: 'Request the free growth audit with your store URL and email. We come back with findings and a suggested 90-day plan, then you decide if you want us to run it. No pressure, no long sales cycle.' },
+  { category: 'services', question: 'What is Marketing Efficiency Ratio (MER) and why is it superior to platform ROAS?', answer: 'Platform-reported ROAS (in Meta Ads Manager or Google Ads) often takes double-credit for organic conversions and ignores customer acquisition costs. Marketing Efficiency Ratio (Total Net Revenue divided by Total Ad Spend) measures true blended business profitability, ensuring ad spend scales without eroding your bottom line.' },
+  { category: 'services', question: 'How do you combat post-iOS 14 ad signal loss and attribution inaccuracies?', answer: 'We implement server-side conversion tracking via Meta Conversions API (CAPI), Google Enhanced Conversions, and first-party data capture. This restores 95%+ event matching quality and allows machine learning bidding algorithms to optimize toward high-value repeat buyers.' },
+  { category: 'services', question: 'How does conversion rate optimization (CRO) interact with customer acquisition costs?', answer: 'Lifting your store conversion rate from 1.5% to 2.5% effectively cuts your customer acquisition cost (CAC) by 40% on every ad dollar spent. CRO creates operating leverage that allows you to outbid competitors and scale ad budgets profitably.' },
+  { category: 'services', question: 'What is RFM customer segmentation in Klaviyo email marketing?', answer: 'RFM analyzes Recency, Frequency, and Monetary value across your customer database. We build targeted VIP reward flows for high-value champions, automated replenishment triggers for predictable consumables, and aggressive win-back flows for churning buyers.' },
+  { category: 'services', question: 'How do you structure product bundles and threshold upsells to increase Average Order Value (AOV)?', answer: 'We engineer dynamic in-cart progress bars (e.g. "Add $15 for Free Shipping"), post-purchase 1-click upsells in checkout, and volume tiered bundle discounts (Buy 2 Get 10% Off, Buy 3 Get 20% Off), lifting site-wide AOV by 18% to 32%.' },
+  { category: 'services', question: 'How do AI search citations in ChatGPT and Perplexity drive e-commerce revenue?', answer: 'High-intent consumers increasingly use AI engines to research product comparisons and buying recommendations. By structuring your store content with deep schema, objective comparison tables, and verified reviews, your brand becomes the direct quoted answer in AI responses.' },
 ];
 
 /* ── JSON-LD ─────────────────────────────────────────────────────────────── */
@@ -288,6 +294,150 @@ export default function EcommerceGrowthAgencyPage() {
                   <p>Get cited in ChatGPT and Google AI Overviews, and build AI agents that automate support, merchandising, and reporting. We do this now, so you win the channels your competitors have not figured out.</p>
                 </div>
                 <div className="mini"><span>AI SEO</span><span>Answer engines</span><span>AI agents</span><span>Automation</span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 4-Pillar Profit Telemetry ── */}
+        <section className="ega-sec pt0">
+          <div className="ega-wrap">
+            <div className="ega-sh">
+              <span className="ega-eyebrow">Financial Telemetry</span>
+              <h2 className="disp">The 4-Pillar Ecommerce Profit Equation: Beyond Vanity ROAS</h2>
+              <p>
+                Scaling ad spend without unit economic discipline destroys operating cash flow. We manage your growth portfolio across four fundamental financial metrics:
+              </p>
+            </div>
+            <div className="ega-list" style={{ marginTop: 24 }}>
+              <div className="ega-crystal ega-li">
+                <span className="num" />
+                <div>
+                  <b>1. Marketing Efficiency Ratio (Blended MER) &gt; 4.0x</b>
+                  <p>
+                    Rather than relying on isolated channel platform attribution, we calculate Blended MER (Total Top-Line Revenue divided by Total Marketing Ad Spend across all channels). This measures true enterprise profitability and ensures paid acquisition lifts net cash flow.
+                  </p>
+                </div>
+              </div>
+              <div className="ega-crystal ega-li">
+                <span className="num" />
+                <div>
+                  <b>2. Net Contribution Margin (NCM) Modeling</b>
+                  <p>
+                    We map your gross margin, payment gateway fees, pick-pack-and-ship fulfillment expenses, and returns allowance to establish the exact breakeven Customer Acquisition Cost (CAC) for every SKU and product category in your catalog.
+                  </p>
+                </div>
+              </div>
+              <div className="ega-crystal ega-li">
+                <span className="num" />
+                <div>
+                  <b>3. 60-Day &amp; 90-Day LTV:CAC Expansion (4:1 Ratio Target)</b>
+                  <p>
+                    Acquiring a customer at breakeven is a winning strategy only when your post-purchase email, SMS, and loyalty engine reliably produces repeat purchases within 60 days. We engineer retention flows that turn single-order buyers into high-LTV brand advocates.
+                  </p>
+                </div>
+              </div>
+              <div className="ega-crystal ega-li">
+                <span className="num" />
+                <div>
+                  <b>4. Server-Side First-Party Attribution &amp; Meta CAPI Signal Recovery</b>
+                  <p>
+                    With browser cookie deprecation and iOS privacy signal loss, client-side tracking drops up to 30% of conversion events. We deploy server-side Meta Conversions API (CAPI) and Google Tag Manager server containers to restore 95%+ event match quality.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── Full-Funnel Growth Synergy ── */}
+        <section className="ega-sec pt0">
+          <div className="ega-wrap">
+            <div className="ega-sh">
+              <span className="ega-eyebrow">Omnichannel Architecture</span>
+              <h2 className="disp">How Paid Media, Retention, CRO &amp; AI Search Work as One Engine</h2>
+              <p>
+                Single-channel tactics fail because modern consumers interact across six touchpoints before purchasing. Here is how our senior in-house team synchronizes your growth stack:
+              </p>
+            </div>
+            <div className="ega-list" style={{ marginTop: 24 }}>
+              <div className="ega-crystal ega-li">
+                <span className="num" />
+                <div>
+                  <b>Paid Media (Meta Advantage+, Google PMax &amp; TikTok Shop Ads)</b>
+                  <p>
+                    We deploy high-converting UGC creative frameworks, modular video hooks, and value-based bidding (tROAS) targeting high-intent in-market shoppers across Google Search, Shopping, YouTube, Instagram Reels, and TikTok Shop.
+                  </p>
+                </div>
+              </div>
+              <div className="ega-crystal ega-li">
+                <span className="num" />
+                <div>
+                  <b>Klaviyo Lifecycle Retention &amp; RFM Predictive Segmentation</b>
+                  <p>
+                    We build automated 12-stage email and SMS customer journeys—including dynamic welcome series, high-intent cart abandonment triggers, price drop alerts, VIP early access drops, and predictive replenishment flows based on SKU consumption cycles.
+                  </p>
+                </div>
+              </div>
+              <div className="ega-crystal ega-li">
+                <span className="num" />
+                <div>
+                  <b>Scientific Conversion Rate Optimization &amp; Sub-Second Checkout</b>
+                  <p>
+                    We execute multivariate A/B testing on product detail pages (PDPs), sticky add-to-cart bars, in-cart bundle builders, trust badges, and 1-click Shop Pay checkout workflows, lifting session conversion rates from 1.8% to 3.2%+.
+                  </p>
+                </div>
+              </div>
+              <div className="ega-crystal ega-li">
+                <span className="num" />
+                <div>
+                  <b>Organic E-Commerce SEO &amp; Generative AI Search Optimization (GEO)</b>
+                  <p>
+                    We structure collection pages, product schemas, and buying guides to dominate traditional Google rankings and capture prominent citations in ChatGPT, Perplexity, and Google AI Overviews.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 90-Day Compounding Growth Roadmap ── */}
+        <section className="ega-sec pt0">
+          <div className="ega-wrap">
+            <div className="ega-sh">
+              <span className="ega-eyebrow">Execution Methodology</span>
+              <h2 className="disp">The 90-Day Compounding Ecommerce Growth Sprint Roadmap</h2>
+              <p>
+                A proven, phase-governed engineering and marketing framework designed to unlock fast cash flow and compound long-term market leadership:
+              </p>
+            </div>
+            <div className="ega-list" style={{ marginTop: 24 }}>
+              <div className="ega-crystal ega-li">
+                <span className="num" />
+                <div>
+                  <b>Sprint 1: Days 1–30 (Foundation &amp; Rapid Cash Flow Levers)</b>
+                  <p>
+                    Comprehensive technical audit, server-side CAPI pixel setup, Klaviyo high-intent core flows overhaul (Welcome, Abandoned Cart, Post-Purchase), ad account restructuring, and quick-win CRO fixes on high-traffic PDPs.
+                  </p>
+                </div>
+              </div>
+              <div className="ega-crystal ega-li">
+                <span className="num" />
+                <div>
+                  <b>Sprint 2: Days 31–60 (Creative Testing &amp; Category Scaling)</b>
+                  <p>
+                    Iterative UGC ad creative sprint (15+ angles/hooks per month), Google Performance Max asset group segmentation, collection page SEO content optimization, in-cart bundle testing, and SMS list acceleration.
+                  </p>
+                </div>
+              </div>
+              <div className="ega-crystal ega-li">
+                <span className="num" />
+                <div>
+                  <b>Sprint 3: Days 61–90 (Retention Compounding &amp; Omnichannel Expansion)</b>
+                  <p>
+                    Predictive RFM segmentation, custom loyalty reward tiers, marketplace synchronization (Amazon Storefront / TikTok Shop), AI customer support agent deployment, and full quarterly contribution margin financial review.
+                  </p>
+                </div>
               </div>
             </div>
           </div>

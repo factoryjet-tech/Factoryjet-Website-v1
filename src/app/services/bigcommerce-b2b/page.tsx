@@ -159,7 +159,31 @@ const FAQ_ITEMS = [
     category: 'b2b',
     question: 'Can corporate buyers set up multi-user approval workflows with spend limits?',
     answer:
-      'Yes. Master account administrators can invite junior buyers with designated monthly spending caps. Orders exceeding the authorization threshold automatically route to senior managers for one-click approval before order release.',
+      'Yes. Enterprise accounts can establish multi-tiered approval chains. For example, junior procurement staff can draft orders, but purchases exceeding $5,000 automatically route to a designated corporate purchasing manager for digital approval prior to fulfillment.',
+  },
+  {
+    category: 'features',
+    question: 'How does BigCommerce B2B Edition handle contract pricing for thousands of custom SKUs?',
+    answer:
+      'BigCommerce B2B Edition utilizes high-performance price list APIs supporting over 100,000+ custom price list entries. Merchants can assign specific contracted SKU rates, collection percentage margins, or currency overrides to individual corporate account groups without slowing down catalog query speeds.',
+  },
+  {
+    category: 'features',
+    question: 'Can corporate buyers download official invoices and statement of accounts in PDF?',
+    answer:
+      'Yes. Corporate buyers and accounts payable teams have complete self-service access to historical orders, tracking numbers, outstanding balances, and downloadable PDF tax invoices directly within their B2B account portal.',
+  },
+  {
+    category: 'integrations',
+    question: 'How does BigCommerce B2B Edition support multi-warehouse inventory routing and LTL freight shipping?',
+    answer:
+      'We integrate custom carrier freight APIs and multi-location inventory routing engines. For oversized or palletized orders, the checkout calculates real-time LTL freight rates based on destination dock requirements and routes line items to the nearest regional distribution warehouse.',
+  },
+  {
+    category: 'commercials',
+    question: 'What is the difference between BigCommerce B2B Edition and Adobe Commerce (Magento B2B)?',
+    answer:
+      'While Adobe Commerce requires heavy self-hosted server infrastructure, perpetual security patching, and expensive maintenance retainers, BigCommerce B2B Edition delivers an enterprise SaaS architecture with native quoting, PunchOut, and corporate buyer hierarchies at a fraction of the total cost of ownership.',
   },
   {
     category: 'integrations',
@@ -395,6 +419,15 @@ export default function BigCommerceB2BPage() {
                 deploy automated RFQ workflows, build custom self-service invoice payment hubs, and engineer bi-directional
                 ERP connectors linking NetSuite, SAP, Epicor, or Microsoft Dynamics 365.
               </p>
+              <p>
+                By digitizing manual order entry and phone-based quotation requests onto BigCommerce B2B Edition, industrial manufacturers and wholesale distributors achieve a 40%+ reduction in order processing costs while accelerating customer quote turnaround times from days to minutes.
+              </p>
+              <p>
+                Whether launching a dedicated wholesale portal or integrating headless BigCommerce Catalyst with an existing enterprise CMS, our systems engineering ensures sub-second catalog responsiveness, zero downtime, and complete data consistency across millions of dollars in monthly transaction volume. We eliminate legacy software friction, allowing your sales team to focus on high-value client relationships rather than manual administrative tasks. Every implementation is backed by dedicated post-launch hypercare, thorough staff training, and transparent milestone governance.
+              </p>
+              <p>
+                From complex multi-brand automotive parts catalogs with millions of fitment SKUs to customized industrial manufacturing supply chains, BigCommerce B2B Edition scales effortlessly without database lockups or expensive server re-architectures.
+              </p>
             </div>
           </div>
         </section>
@@ -539,6 +572,110 @@ export default function BigCommerceB2BPage() {
                 Enable corporate clients to save standard weekly or monthly consumable orders, configure automated recurring replenishment schedules,
                 and download official PDF invoices for internal corporate tax records.
               </p>
+            </div>
+          </div>
+        </section>
+
+        {/* ── Enterprise Corporate Account Modeling & Approvals ── */}
+        <section className="pp-sec tint">
+          <div className="pp-wrap pp-narrow">
+            <p className="pp-mlabel">// account modeling &amp; governance</p>
+            <h2 style={{ marginTop: '10px' }}>Corporate Account Hierarchies &amp; Multi-Tier Buyer Approval Workflows</h2>
+            <div className="pp-editorial" style={{ marginTop: '20px' }}>
+              <p>
+                Unlike standard consumer e-commerce platforms where each customer operates independently, enterprise B2B purchasing requires strict organizational hierarchies and compliance governance:
+              </p>
+              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>1. Multi-Tiered Corporate Account Structures</h3>
+              <p>
+                Configure master corporate accounts with parent-child relationships across multiple operating entities, regional subsidiaries, and physical job sites. Master account administrators have total oversight across company-wide purchasing activity, open invoices, and aggregate credit limits.
+              </p>
+              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>2. Role-Based Buyer Permissions &amp; Spending Caps</h3>
+              <p>
+                Assign granular permissions to individual team members: &ldquo;Senior Buyer&rdquo; (can authorize purchase orders up to $25,000), &ldquo;Junior Requisitioner&rdquo; (can build shopping lists and submit quote requests), and &ldquo;Accounts Payable&rdquo; (manages invoice settlements and ACH payments). Orders exceeding designated thresholds automatically trigger email approvals to senior management.
+              </p>
+              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>3. Address Book &amp; Billing Entity Isolation</h3>
+              <p>
+                Restrict specific buyer logins to authorized shipping locations and tax exemption jurisdictions. Corporate branch managers see only their approved delivery docks, preventing misrouted freight and billing confusion.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* ── Bi-Directional ERP & WMS Middleware Architecture ── */}
+        <section className="pp-sec">
+          <div className="pp-wrap pp-narrow">
+            <p className="pp-mlabel">// enterprise erp middleware</p>
+            <h2 style={{ marginTop: '10px' }}>Bi-Directional ERP Integration: NetSuite, SAP, Epicor, &amp; Dynamics</h2>
+            <div className="pp-editorial" style={{ marginTop: '20px' }}>
+              <p>
+                FactoryJet builds high-velocity API integration pipelines connecting BigCommerce B2B Edition directly to your core back-office infrastructure:
+              </p>
+              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>1. Real-Time Customer Contract Pricing Synchronization</h3>
+              <p>
+                When negotiated wholesale contracts, customer tier assignments, or volume discounts are updated in your ERP (NetSuite SuiteTalk, SAP OData, Microsoft Dynamics 365 Business Central, Epicor Prophet 21), our automated delta webhooks update BigCommerce B2B price lists asynchronously in bulk, eliminating manual data entry errors.
+              </p>
+              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>2. Live Credit Line &amp; Aging Invoice Verification</h3>
+              <p>
+                Before a wholesale buyer completes checkout on Net 30 or Net 60 terms, our middleware queries ERP accounts receivable ledgers in sub-150ms. If an account has past-due invoices or exceeds its credit ceiling, the checkout automatically prompts for credit card payment.
+              </p>
+              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>3. Automated Purchase Order Ingestion &amp; Fulfillment Routing</h3>
+              <p>
+                Submitted purchase orders transmit immediately into your ERP and warehouse management software (WMS), generating picking tickets, reserving inventory across regional warehouses, and returning tracking ASN notifications to the buyer portal.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* ── PunchOut e-Procurement for Fortune 500 Purchasing ── */}
+        <section className="pp-sec tint">
+          <div className="pp-wrap pp-narrow">
+            <p className="pp-mlabel">// fortune 500 procurement</p>
+            <h2 style={{ marginTop: '10px' }}>PunchOut e-Procurement (cXML / OCI): Connecting to SAP Ariba &amp; Coupa</h2>
+            <div className="pp-editorial" style={{ marginTop: '20px' }}>
+              <p>
+                Enterprise buyers at Fortune 500 corporations, universities, and government agencies often mandate e-procurement integrations as a condition of vendor selection:
+              </p>
+              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>1. Seamless Procurement Session Handshake</h3>
+              <p>
+                Buyers click a PunchOut link inside their procurement software (SAP Ariba, Coupa, Jaggaer, Oracle Fusion) and are authenticated into your customized BigCommerce catalog without separate login credentials.
+              </p>
+              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>2. Electronic Bill-of-Materials Transfer</h3>
+              <p>
+                When the buyer completes their cart, the line-item details transfer back into their ERP as an internal purchase requisition for management sign-off, completely replacing manual PDF purchase order creation.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 6-Phase Wholesale Sprint Roadmap ── */}
+        <section className="pp-sec">
+          <div className="pp-wrap pp-narrow">
+            <p className="pp-mlabel">// sprint methodology</p>
+            <h2 style={{ marginTop: '10px' }}>The 6-Phase BigCommerce B2B Implementation Sprint Roadmap</h2>
+            <div className="pp-editorial" style={{ marginTop: '20px' }}>
+              <p>
+                Our structured milestone engineering process guarantees a predictable timeline, robust ERP synchronization, and smooth customer onboarding:
+              </p>
+              <ol style={{ listStyleType: 'decimal', paddingLeft: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1rem', marginTop: '1rem' }}>
+                <li>
+                  <strong>Phase 1: B2B Quoting &amp; Price Matrix Architecture (Week 1):</strong> Scoping customer tier matrices, volume break schedules, corporate account structures, and ERP API endpoint mappings.
+                </li>
+                <li>
+                  <strong>Phase 2: Company Accounts &amp; Buyer Hierarchy Setup (Week 2):</strong> Provisioning BigCommerce B2B Edition company records, setting spending thresholds, and configuring staff approval chains.
+                </li>
+                <li>
+                  <strong>Phase 3: High-Speed Quick Order &amp; CSV Matrix Interface (Week 3):</strong> Developing high-speed SKU bulk entry pads, CSV spreadsheet upload engines, and recurring replenishment tools.
+                </li>
+                <li>
+                  <strong>Phase 4: Digital Quoting Engine &amp; Sales Rep Masquerade (Week 4):</strong> Configuring automated RFQ workflows, margin lock rules, and sales representative order entry portals.
+                </li>
+                <li>
+                  <strong>Phase 5: Bi-Directional ERP &amp; PunchOut Integration (Weeks 5 - 6):</strong> Building and testing real-time connectors for NetSuite, SAP, Epicor, or Coupa e-procurement systems.
+                </li>
+                <li>
+                  <strong>Phase 6: Buyer UAT, Training &amp; Zero-Downtime Launch (Weeks 7 - 8):</strong> Executing test purchasing cycles with key wholesale partners, training sales and accounting staff, and launching the live portal.
+                </li>
+              </ol>
             </div>
           </div>
         </section>

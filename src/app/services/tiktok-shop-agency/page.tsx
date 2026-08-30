@@ -97,6 +97,10 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
   { category: 'working', question: 'What size brands do you work with?', answer: 'Mostly US small and mid-market brands, from sellers making their first serious push into TikTok Shop to established brands scaling their creator and ad spend. We scope the engagement to your stage and catalog rather than forcing one package on everyone, and we will tell you honestly if you are too early to need us yet.' },
   { category: 'working', question: 'How do you report on TikTok Shop performance?', answer: 'You get a dashboard tied to GMV, ad efficiency, affiliate-driven sales, and profit, plus a plain-language monthly review of what we did, what it returned, and what is next. We report on the numbers that decide whether TikTok Shop makes you money, not vanity metrics like views dressed up as progress.' },
   { category: 'working', question: 'How do we get started?', answer: 'Request the free TikTok Shop audit with your brand and your email. We come back with a teardown of your shop, ads, affiliate program, and content, plus a suggested 90-day plan. Then you decide if you want us to run it. No long sales cycle, and the audit is yours to keep either way.' },
+  { category: 'services', question: 'What are TikTok Shop Seller Performance metrics and Late Dispatch Rate (LDR) thresholds?', answer: 'TikTok enforces strict account health guidelines: Late Dispatch Rate (LDR) must stay below 4%, Seller Fault Cancellation Rate below 2.5%, and Customer Inquiries responded to within 24 hours. We monitor operational compliance daily to protect your shop from listing suppression or merchant probation.' },
+  { category: 'services', question: 'How do Spark Ads amplify organic creator affiliate videos?', answer: 'Spark Ads allow your brand to put paid ad budget directly behind high-performing organic videos posted by your affiliate creators using their authorization codes. This preserves authentic social proof, comments, and creator identity while driving targeted traffic to your in-app product page.' },
+  { category: 'services', question: 'What is GMV Max on TikTok Shop and how does it compare to custom ad group bidding?', answer: 'GMV Max is TikTok’s automated algorithmic bidding solution that distributes budget across short-form videos, LIVE streams, and shopping tabs simultaneously to maximize gross merchandise value. We utilize a hybrid approach: custom value-based ad groups for stable winners and GMV Max for rapid product catalog scaling.' },
+  { category: 'services', question: 'How do you connect TikTok Shop Seller Center to Shopify for real-time inventory sync?', answer: 'We configure native Shopify TikTok App connectors and automated middleware pipelines. Every order placed on TikTok Shop deducts real-time inventory from your central Shopify or ERP warehouse and automatically pushes carrier tracking numbers back to TikTok to satisfy dispatch SLAs.' },
 ];
 
 /* ── JSON-LD ─────────────────────────────────────────────────────────────── */
@@ -314,6 +318,57 @@ export default function TikTokShopAgencyPage() {
               {LEVERS.map((l) => (
                 <div key={l.b} className="tts-crystal tts-li"><span className="num" /><div><b>{l.b}</b><p>{l.p}</p></div></div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── Creator Seeding & GMV Scaling Framework ── */}
+        <section className="tts-sec pt0">
+          <div className="tts-wrap">
+            <div className="tts-sh">
+              <span className="tts-eyebrow">Creator Architecture</span>
+              <h2 className="disp">The 4-Pillar TikTok Shop Creator Seeding &amp; Spark Scaling Engine</h2>
+              <p>
+                Organic virality is not an accident—it is a repeatable engineering pipeline. Here is how we turn creator seeding into consistent, compounding 7-figure GMV:
+              </p>
+            </div>
+            <div className="tts-list" style={{ marginTop: 24 }}>
+              <div className="tts-crystal tts-li">
+                <span className="num" />
+                <div>
+                  <b>1. High-Volume Micro-Creator Seeding (50+ Sample Dispatches/Month)</b>
+                  <p>
+                    We identify, vet, and dispatch targeted product samples to high-engagement micro-creators (5k–50k followers) in your niche. Our proprietary outreach workflows ensure 70%+ of sample recipients post authentic demo reviews with shoppable product anchors within 14 days.
+                  </p>
+                </div>
+              </div>
+              <div className="tts-crystal tts-li">
+                <span className="num" />
+                <div>
+                  <b>2. Tiered Open &amp; Targeted Affiliate Commission Structures</b>
+                  <p>
+                    We configure high-incentive affiliate commission rates (15%–25%) that motivate top-tier creators to prioritize your product over competitors, backed by automated sample approval rules inside TikTok Shop Affiliate Center.
+                  </p>
+                </div>
+              </div>
+              <div className="tts-crystal tts-li">
+                <span className="num" />
+                <div>
+                  <b>3. Spark Ads Amplification Behind Organic Breakout Videos</b>
+                  <p>
+                    When an affiliate video generates organic sales velocity, we immediately request creator Spark Ad authorization codes and deploy paid ad spend to scale the video across broader demographic segments, achieving 4.5x+ blended ROAS.
+                  </p>
+                </div>
+              </div>
+              <div className="tts-crystal tts-li">
+                <span className="num" />
+                <div>
+                  <b>4. Scheduled LIVE Shopping Sprint Production</b>
+                  <p>
+                    We organize high-energy 2-hour LIVE shopping broadcasts featuring exclusive bundle flash discounts, countdown timers, and interactive product demonstrations that capture immediate buyer impulse and lift algorithmic shop rank.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
