@@ -12,27 +12,27 @@ import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-24';
+const PAGE_MODIFIED = '2026-08-30';
 const CANONICAL = 'https://factoryjet.com/huntington-beach/seo';
 
 export const metadata: Metadata = {
-  title: 'Huntington Beach Local SEO Agency | Search & AI Visibility | FactoryJet',
+  title: 'Best Huntington Beach SEO Company | Top Local Agency CA | FactoryJet',
   description:
-    'Huntington Beach local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Downtown, Pacific City, Bella Terra, and Orange County.',
+    'Best Huntington Beach SEO company & local agency. Top Google Map Pack rankings, AI answer citations, and technical Core Web Vitals for Orange County businesses.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Huntington Beach Local SEO Agency | Search & AI Visibility | FactoryJet',
+    title: 'Best Huntington Beach SEO Company | Top Local Agency CA | FactoryJet',
     description:
-      'Huntington Beach local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Downtown, Pacific City, Bella Terra, and Orange County.',
+      'Premier Huntington Beach SEO company & local agency. Top Google Maps 3-Pack rankings, organic search visibility, and AI search citations across Orange County.',
     url: CANONICAL,
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Huntington Beach Local SEO Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Huntington Beach Local SEO Agency | Search & AI Visibility | FactoryJet',
+    title: 'Best Huntington Beach SEO Company | Top Local Agency CA | FactoryJet',
     description: 'Dominate Huntington Beach local search and AI answer engines. Verified Google Maps 3-Pack capture and entity optimization across Orange County.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -62,37 +62,37 @@ const DISTRICTS = [
     corridor: 'Downtown Huntington Beach & Pier District',
     query: 'hospitality private dining surf lifestyle boutique retail seo downtown huntington beach',
     focus: 'Hospitality, Surf Lifestyle & Coastal Retail',
-    desc: 'The iconic heart of Surf City USA. Captures high-intent tourist dining, event venue bookings, and action sports retail searches.',
+    desc: 'The iconic heart of Surf City USA along Main Street and Pacific Coast Highway. Captures high-intent tourist dining, private event venue bookings, and action sports retail searches.',
   },
   {
     corridor: 'Pacific City & Oceanfront Corridor',
     query: 'luxury resort oceanfront dining wellness spa cosmetic dentistry seo pacific city hb',
     focus: 'Luxury Dining, Wellness Resorts & Coastal Aesthetics',
-    desc: 'Upscale coastal lifestyle enclave. Demands high-trust review velocity, visual rich snippet schemas, and local influencer citations.',
+    desc: 'Upscale coastal lifestyle and retail enclave. Demands high-trust customer review velocity, visual rich snippet schemas, and local influencer citations for luxury dining and wellness spas.',
   },
   {
     corridor: 'Bella Terra & Beach Boulevard Core',
     query: 'cosmetic surgery dental implants family law roofing general contractor seo bella terra',
     focus: 'Elective Healthcare, Law Firms & Home Contracting',
-    desc: 'High-density commercial power center. Intense local search competition for dental implants, plastic surgery, personal injury, and roofing consults.',
+    desc: 'High-density commercial power center in North Huntington Beach. Intense local search competition for dental implants, plastic surgery, personal injury legal retainers, and roofing contractor consults.',
   },
   {
     corridor: 'Huntington Harbour & Marina District',
     query: 'yacht brokerage marine repair waterfront real estate wealth advisory seo huntington harbour',
     focus: 'Yacht Brokerage, Marine Services & Luxury Real Estate',
-    desc: 'Affluent private harbor enclave. Captures high-ticket marine maintenance, private wealth consults, and waterfront property inquiries.',
+    desc: 'Affluent private harbor and canal enclave. Captures high-ticket marine maintenance contracts, private wealth management consults, and luxury waterfront residential property inquiries.',
   },
   {
     corridor: 'Aerospace & Industrial Tech Center (Gothard)',
     query: 'precision machining aerospace fabrication it services commercial electrical seo gothard hb',
     focus: 'Aerospace Machining, Precision Tooling & Tech Services',
-    desc: 'Advanced manufacturing corridor anchored by aerospace suppliers. B2B service queries demand technical capability schemas and ISO credentials.',
+    desc: 'Advanced manufacturing and logistics corridor anchored by tier-1 aerospace suppliers along Gothard Street and Slater Avenue. B2B service queries demand technical capability schemas, AS9100/ISO credentials, and streamlined commercial RFQ funnels.',
   },
   {
     corridor: 'Sunset Beach & North Coast Strip',
     query: 'vacation rental management coastal contracting boutique hospitality seo sunset beach ca',
     focus: 'Vacation Rentals, Coastal Contracting & Boutiques',
-    desc: 'Historic coastal community. Demands hyper-local geo-pages, verified vacation rental schemas, and neighborhood entity citations.',
+    desc: 'Historic coastal beachfront community along North PCH. Demands hyper-local geo-pages, verified vacation rental schemas, neighborhood entity citations, and high-converting seasonal hospitality booking funnels.',
   },
 ];
 
@@ -356,6 +356,36 @@ const FAQ_ITEMS = [
     question: 'How do we get started with a Huntington Beach local SEO audit?',
     answer:
       'Schedule a free 30-minute local search audit. We will analyze your Google Business Profile, identify competitor gaps, and deliver an actionable ranking roadmap for your business.',
+  },
+  {
+    category: 'local',
+    question: 'How do you optimize for aerospace manufacturing and precision tooling along the Gothard corridor?',
+    answer:
+      'Huntington Beach is a major defense and aerospace manufacturing hub. We engineer technical B2B product catalogs, AS9100/ISO certification schema markup, and downloadable capability spec sheets that capture high-ticket procurement queries from defense contractors and tier-1 aerospace buyers nationwide.',
+  },
+  {
+    category: 'technical',
+    question: 'How do cosmetic surgery and elective medical practices capture high-value Orange County patients?',
+    answer:
+      'We deploy granular MedicalBusiness and Physician schemas, optimize doctor bio authority profiles with California Medical Board licensing data, build neighborhood landing pages for Pacific City and Bella Terra, and streamline verified Google patient reviews to dominate high-intent procedural queries.',
+  },
+  {
+    category: 'local',
+    question: 'How do you optimize for yacht brokerages and marine repair services in Huntington Harbour?',
+    answer:
+      'Huntington Harbour features exclusive waterfront residences and private boat slips. We structure specialized MarineBusiness schemas, boat inventory showcase pages, and localized Map Pack profiles capturing high-net-worth vessel sales, yacht maintenance, and slip leasing inquiries.',
+  },
+  {
+    category: 'technical',
+    question: 'How does Google Gemini and SearchGPT AI citation indexing work in Southern California?',
+    answer:
+      'Generative AI search platforms index clear entity relationships, verified state licensing records from the California Secretary of State, and direct answer-first content blocks. We format your service offerings and customer review data with granular JSON-LD markup to maximize AI conversational recommendations.',
+  },
+  {
+    category: 'deliverables',
+    question: 'What is NAP citation synchronization across Huntington Beach and Orange County directories?',
+    answer:
+      'We establish and synchronize verified business citations across essential regional platforms—including the Huntington Beach Chamber of Commerce, Orange County BBB, Apple Maps, Bing Places, YellowPages, and industry registries—ensuring 100% data consistency, eliminating duplicates, and reinforcing Google Maps 3-Pack authority.',
   },
 ];
 

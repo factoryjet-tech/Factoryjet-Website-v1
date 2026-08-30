@@ -12,27 +12,27 @@ import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-24';
+const PAGE_MODIFIED = '2026-08-30';
 const CANONICAL = 'https://factoryjet.com/corpus-christi/seo';
 
 export const metadata: Metadata = {
-  title: 'Corpus Christi Local SEO Agency | Search & AI Visibility | FactoryJet',
+  title: 'Best Corpus Christi SEO Company | Top Local Agency TX | FactoryJet',
   description:
-    'Corpus Christi local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Downtown, Port Corridor, Southside, and Coastal Bend.',
+    'Best Corpus Christi SEO company & local agency. Top Google Map Pack rankings, AI answer citations, and technical Core Web Vitals for Coastal Bend businesses.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Corpus Christi Local SEO Agency | Search & AI Visibility | FactoryJet',
+    title: 'Best Corpus Christi SEO Company | Top Local Agency TX | FactoryJet',
     description:
-      'Corpus Christi local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Downtown, Port Corridor, Southside, and Coastal Bend.',
+      'Premier Corpus Christi SEO company & local agency. Top Google Maps 3-Pack rankings, organic search visibility, and AI search citations across Coastal Bend.',
     url: CANONICAL,
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Corpus Christi Local SEO Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Corpus Christi Local SEO Agency | Search & AI Visibility | FactoryJet',
+    title: 'Best Corpus Christi SEO Company | Top Local Agency TX | FactoryJet',
     description: 'Dominate Corpus Christi local search and AI answer engines. Verified Google Maps 3-Pack capture and entity optimization across Coastal Bend.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -62,13 +62,13 @@ const DISTRICTS = [
     corridor: 'Downtown Corpus Christi & Marina Waterfront',
     query: 'maritime law corporate litigation financial advisory commercial real estate seo downtown corpus christi',
     focus: 'Admiralty Law, Wealth Advisory & Marine Commercial Services',
-    desc: 'The bayfront commercial and legal core. Captures maritime law retainers, coastal real estate transactions, and corporate financial advisory consults.',
+    desc: 'The bayfront commercial and legal core along Shoreline Boulevard. Captures high-value maritime law retainers, coastal commercial real estate transactions, and corporate financial advisory client consultations.',
   },
   {
     corridor: 'Port of Corpus Christi & Ship Channel Corridor',
     query: 'energy logistics marine fabrication industrial contracting petrochemical seo port corpus christi',
     focus: 'Energy Logistics, Heavy Marine Fabrication & Petrochem Supply',
-    desc: 'The nation largest energy export port. B2B service queries demand technical capability schemas, safety certifications, and commercial bid workflows.',
+    desc: 'The nation’s largest energy export gateway and industrial trade corridor. B2B service queries demand technical capability schemas, safety certifications, and streamlined commercial bid workflows.',
   },
   {
     corridor: 'Southside Commercial & Retail Power Hub',
@@ -356,6 +356,36 @@ const FAQ_ITEMS = [
     question: 'How do we get started with a Corpus Christi local SEO audit?',
     answer:
       'Schedule a free 30-minute local search audit. We will analyze your Google Business Profile, identify competitor gaps, and deliver an actionable ranking roadmap for your business.',
+  },
+  {
+    category: 'local',
+    question: 'How do you optimize for maritime law and offshore energy logistics near the Port of Corpus Christi?',
+    answer:
+      'The Port of Corpus Christi is the nation’s leading energy export gateway. We engineer specialized B2B content hubs and structured legal/industrial schema markup—optimizing for Jones Act litigation, maritime casualty claims, marine fabrication, and petrochemical logistics procurement terms.',
+  },
+  {
+    category: 'technical',
+    question: 'How do medical and elective surgical practices in Southside capture local patient searches?',
+    answer:
+      'We deploy granular MedicalBusiness and Physician schemas, optimize doctor bio authority profiles with Texas Medical Board licensing data, build neighborhood landing pages for Southside and Lamar Park, and streamline Google review generation to dominate high-intent procedural queries.',
+  },
+  {
+    category: 'local',
+    question: 'How do emergency home service contractors capture storm and hurricane repair surges?',
+    answer:
+      'Coastal Bend weather events generate rapid spikes in roofing, storm restoration, and emergency plumbing searches. We build dedicated emergency response landing pages with LocalBusiness EmergencyService schema and high-converting click-to-call mobile CTAs that activate instantly during weather surges.',
+  },
+  {
+    category: 'technical',
+    question: 'How does Google Gemini and SearchGPT AI citation indexing work in South Texas?',
+    answer:
+      'AI search engines synthesize verified factual entities from structured JSON-LD schemas, official Texas Secretary of State licensing records, customer sentiment reviews, and concise question-answering page sections. We format your core service offerings and commercial expertise to maximize conversational citation frequency in Google AI Overviews, Apple Intelligence, and ChatGPT search results.',
+  },
+  {
+    category: 'deliverables',
+    question: 'What is NAP citation synchronization across Corpus Christi and Coastal Bend directories?',
+    answer:
+      'We establish and synchronize verified business citations across essential regional directories—including the Corpus Christi Chamber of Commerce, Coastal Bend BBB, Apple Maps, Bing Places, YellowPages, and industry registries—ensuring 100% data consistency, eliminating duplicate listings, and reinforcing Google Maps 3-Pack authority across Nueces, San Patricio, and Aransas counties.',
   },
 ];
 
