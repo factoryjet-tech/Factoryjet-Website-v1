@@ -103,8 +103,10 @@ import { post as whatIsAnAiAgentCost2026Post } from './posts/what-is-an-ai-agent
 import { post as googleAdsCostSmallBusiness2026Post } from './posts/google-ads-cost-small-business-2026';
 import { post as websiteRunningCostPerMonth2026Post } from './posts/website-running-cost-per-month-2026';
 import { post as amazonSellerFees100DollarSale2026Post } from './posts/amazon-seller-fees-100-dollar-sale-2026';
+import { post as theTrueCostOfShopifyPlus2026Post } from './posts/the-true-cost-of-shopify-plus-2026';
 
 export const POSTS: BlogPost[] = [
+  theTrueCostOfShopifyPlus2026Post,
   // --- US MARKET CONTENT BATCH (2026-08-25) ---
   whatIsSeoSmallBusiness2026Post,
   whatIsAnAiAgentCost2026Post,
