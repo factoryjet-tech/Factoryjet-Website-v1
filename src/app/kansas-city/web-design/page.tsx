@@ -12,18 +12,18 @@ import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import WebDesignCityLinksUS from '@/components/v2/WebDesignCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-24';
+const PAGE_MODIFIED = '2026-08-30';
 const CANONICAL = 'https://factoryjet.com/kansas-city/web-design';
 
 export const metadata: Metadata = {
-  title: 'Kansas City Web Design Agency | Custom Next.js & UI/UX | FactoryJet',
+  title: 'Best Kansas City Web Design Agency | Top Next.js Sites | FactoryJet',
   description:
-    'Kansas City web design agency. High-converting Next.js websites, sub-second load times, and custom Figma UI/UX for Missouri and Kansas businesses.',
+    'Best Kansas City web design agency. Top custom Next.js websites, sub-second load times, and custom Figma UI/UX for Missouri and Kansas businesses.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Kansas City Web Design Agency | Custom Next.js & UI/UX | FactoryJet',
+    title: 'Best Kansas City Web Design Agency | Top Next.js Sites | FactoryJet',
     description:
       'Kansas City web design agency. High-converting Next.js websites, sub-second load times, and custom Figma UI/UX for Missouri and Kansas businesses.',
     url: CANONICAL,
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Kansas City Web Design Agency | Custom Next.js & UI/UX | FactoryJet',
+    title: 'Best Kansas City Web Design Agency | Top Next.js Sites | FactoryJet',
     description: 'Custom Next.js web design and engineering in Kansas City MO. Sub-second performance, full IP code ownership, 7-day delivery.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -147,6 +147,32 @@ const INDUSTRY_SHOWCASE = [
       'Interactive freight rate estimation calculators and RFQ workflow automation',
       'Sub-second mobile performance ensuring immediate commercial quote submissions',
       'Structured LogisticsService and Organization schema markup for regional search dominance',
+    ],
+  },
+  {
+    sector: 'Overland Park HealthTech, Telecommunications & Corporate Headquarters',
+    headline: 'Enterprise Portals & Client Sandboxes for Overland Park Tech Campuses',
+    description:
+      'HealthTech platforms, telecommunications providers, and corporate regional headquarters along College Boulevard in Overland Park demand enterprise-grade digital flagships. We engineer custom Next.js web applications with interactive product sandboxes, SOC2-compliant client portals, automated HubSpot/Salesforce lead routing, and sub-second global edge CDN caching.',
+    image: '/images/us/denver/tech-office.webp',
+    alt: 'Kansas City Overland Park healthtech telecommunications enterprise web design',
+    points: [
+      'Interactive software capability sandboxes and animated cloud architecture visualizers',
+      'HIPAA and SOC2-compliant client portal gateways with multi-factor authentication',
+      'Clean TypeScript codebase deployed on Cloudflare edge CDN with zero plugin bloat',
+    ],
+  },
+  {
+    sector: 'Crossroads Arts District Creative Agencies, Architecture & FinTech Studios',
+    headline: 'Tactile Digital Experiences for Crossroads Studios & FinTech Innovators',
+    description:
+      'Contemporary architecture firms, creative studios, and emerging fintech innovators across the Crossroads Arts District and Downtown KC demand bespoke visual excellence. We design high-converting web applications with tactile editorial typography, interactive project lookbooks, smooth micro-animations, and instant consultation scheduling funnels.',
+    image: '/images/services/card-real-estate.webp',
+    alt: 'Kansas City Crossroads Arts District creative studio architecture fintech web design',
+    points: [
+      'Tactile editorial typography scales with custom brand micro-animations',
+      'Interactive high-resolution project visualizers with zero layout shift or image delay',
+      'Frictionless consultation booking funnels with direct calendar API synchronization',
     ],
   },
 ];
@@ -345,6 +371,48 @@ const FAQ_ITEMS = [
     answer:
       'Yes. We write clean, modular, and fully typed TypeScript and React code adhering to global standards, ensuring any modern web developer can easily maintain and extend your application.',
   },
+  {
+    category: 'technical',
+    question: 'Why do Kansas City enterprise businesses and tech companies choose custom Next.js over traditional WordPress templates?',
+    answer:
+      'Next.js 15 delivers static generation and server-side rendering on global edge networks, eliminating database bottlenecks, vulnerable PHP plugins, and slow load times. This results in sub-500ms first contentful paint, automated SEO indexing, and enterprise-grade security with zero ongoing plugin maintenance headaches.',
+  },
+  {
+    category: 'animal-health',
+    question: 'How do you design clinical and scientific web applications for the KC Animal Health Corridor?',
+    answer:
+      'We engineer clinical-grade digital flagships with interactive mechanism-of-action visualizers, product pipeline charts, gated research data rooms, and compliance-ready documentation search to convey scientific authority to veterinary partners and investors.',
+  },
+  {
+    category: 'performance',
+    question: 'How do you guarantee sub-500ms page load speeds and 100/100 Core Web Vitals across Missouri and Kansas?',
+    answer:
+      'We optimize every asset from the foundation up: automatic WebP/AVIF image transcoding, critical CSS inlining, font subsetting, zero render-blocking scripts, and static HTML pre-generation delivered from global edge servers across the Midwest.',
+  },
+  {
+    category: 'design-systems',
+    question: 'How do you structure custom Figma UI/UX design systems for corporate brands in Overland Park and Downtown KC?',
+    answer:
+      'We build complete Figma design token libraries with semantic color palettes, accessible typography hierarchies, auto-layout responsive components, and interactive micro-animations. This creates visual consistency across all digital touchpoints and enables rapid feature deployment.',
+  },
+  {
+    category: 'seo',
+    question: 'How do you implement Schema.org JSON-LD structured data for Google AI Overviews and rich search results?',
+    answer:
+      'We embed granular Schema.org JSON-LD structured data on every page, including ProfessionalService, WebPage, FAQPage, BreadcrumbList, and Person schemas. These explicit semantic annotations enable search engines and LLM agents to accurately understand and cite your services.',
+  },
+  {
+    category: 'accessibility',
+    question: 'What ADA accessibility standards and WCAG 2.1 AA compliance protocols do you build into Kansas City websites?',
+    answer:
+      'We engineer fully accessible web applications meeting WCAG 2.1 AA criteria: keyboard-navigable interface components, semantic HTML5 landmarks, ARIA labels, high-contrast color pairings, and screen-reader optimized content hierarchies.',
+  },
+  {
+    category: 'lead-generation',
+    question: 'How do you handle frictionless CRM and automated lead routing for commercial service firms in Country Club Plaza?',
+    answer:
+      'We build secure, webhook-driven form gateways that immediately route consultation requests, RFQs, and client intake data into Salesforce, HubSpot, or custom databases with instant email/SMS notifications and zero spam submissions.',
+  },
 ];
 
 const FAQ_SCHEMA = {
@@ -367,7 +435,6 @@ const LOCAL_BUSINESS_SCHEMA = {
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
   telephone: '+1-832-998-8422',
-  priceRange: '$$$',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Kansas City',
@@ -556,7 +623,7 @@ export default function KansasCityWebDesignPage() {
                 </h2>
 
                 <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
-                  From Animal Health Corridor bio-innovators to Country Club Plaza wealth advisory firms and Overland Park enterprise tech campuses, we build high-converting web applications that elevate your brand equity.
+                  From Animal Health Corridor bio-innovators to Country Club Plaza wealth advisory firms and Overland Park enterprise tech campuses, we build high-converting web applications that strengthen your market positioning.
                 </p>
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>

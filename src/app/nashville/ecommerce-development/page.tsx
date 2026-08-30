@@ -12,27 +12,27 @@ import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import EcommerceCityLinksUS from '@/components/v2/EcommerceCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-24';
+const PAGE_MODIFIED = '2026-08-30';
 const CANONICAL = 'https://factoryjet.com/nashville/ecommerce-development';
 
 export const metadata: Metadata = {
-  title: 'Nashville E-Commerce Agency | Headless Shopify Plus & B2B | FactoryJet',
+  title: 'Best Nashville E-Commerce Agency | Top Shopify Plus & B2B | FactoryJet',
   description:
-    'Nashville e-commerce development agency. Headless Shopify Plus, BigCommerce B2B, ERP integrations, and sub-second checkouts for Tennessee enterprise brands.',
+    'Best Nashville e-commerce development agency. Top headless Shopify Plus, BigCommerce B2B, ERP integrations, and sub-second checkouts for Tennessee enterprise brands.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Nashville E-Commerce Agency | Headless Shopify Plus & B2B | FactoryJet',
+    title: 'Best Nashville E-Commerce Agency | Top Shopify Plus & B2B | FactoryJet',
     description:
-      'Nashville e-commerce development agency. Headless Shopify Plus, BigCommerce B2B, ERP integrations, and sub-second checkouts for Tennessee enterprise brands.',
+      'Premier Nashville e-commerce development agency. Headless Shopify Plus, BigCommerce B2B, ERP integrations, and sub-second checkouts for Tennessee enterprise brands.',
     url: CANONICAL,
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Nashville E-Commerce Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Nashville E-Commerce Agency | Headless Shopify Plus & B2B | FactoryJet',
+    title: 'Best Nashville E-Commerce Agency | Top Shopify Plus & B2B | FactoryJet',
     description: 'Custom headless e-commerce engineering in Nashville TN. Sub-second checkouts, ERP integrations, and full IP code ownership.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -149,6 +149,32 @@ const INDUSTRY_SHOWCASE = [
       'Automated recurring delivery and clinic replenishment subscriptions',
     ],
   },
+  {
+    sector: 'Brentwood & Cool Springs Corporate B2B Procurement & Wholesale Supply',
+    headline: 'Enterprise Procurement Portals for Middle Tennessee Corporate Hubs',
+    description:
+      'Corporate headquarters, franchise operations, and multi-location commercial suppliers in Brentwood and Cool Springs require high-throughput digital procurement engines. We build custom B2B portals featuring customized corporate pricing sheets, punchout catalog integrations, multi-tiered buyer approval routing, and real-time NetSuite and SAP ERP synchronization.',
+    image: '/images/us/b2b-website-design/hero.webp',
+    alt: 'Nashville Brentwood corporate B2B wholesale procurement ecommerce platform',
+    points: [
+      'Multi-tier corporate account hierarchies with departmental purchasing limit controls',
+      'Customized contracted price books and volume rebate tier calculation',
+      'Automated purchase order generation and two-way NetSuite invoice reconciliation',
+    ],
+  },
+  {
+    sector: 'The Gulch & Germantown Artisan Apparel, Handcrafted Boots & Lifestyle Goods',
+    headline: 'High-Converting Digital Flagships for Nashville Fashion & Lifestyle Makers',
+    description:
+      'Handcrafted leather bootmakers, bespoke denim houses, and luxury apparel creators across The Gulch and Germantown demand tactile digital storefronts that convey artisanal quality. We engineer headless Next.js storefronts with interactive visual lookbooks, dynamic custom swatch pickers, 3D product visualizers, and instant one-tap Shop Pay mobile checkout.',
+    image: '/images/services/card-real-estate.webp',
+    alt: 'Nashville Gulch handcrafted boots apparel artisan lifestyle ecommerce store design',
+    points: [
+      'Interactive 3D product visualizers and dynamic leather finish swatch selectors',
+      'Sub-500ms edge rendering ensuring frictionless lookbook browsing on mobile devices',
+      'One-tap accelerated Shop Pay and Apple Pay checkout integration with zero cart abandonment',
+    ],
+  },
 ];
 
 const PAIN_POINTS = [
@@ -200,7 +226,7 @@ const ROADMAP_STEPS = [
   {
     phase: 'Phase 04',
     title: 'Load Testing, Cutover & Launch Warranty',
-    desc: 'We execute rigorous multi-device checkout testing, simulated traffic spike tests, execute seamless DNS cutover, and provide 30-day post-launch support.',
+    desc: 'We execute rigorous multi-device checkout testing, simulated traffic spike tests, execute smooth DNS cutover, and provide 30-day post-launch support.',
     deliverables: ['Simulated high-concurrency load testing', 'SEO 301 redirect map and schema validation', 'Zero-downtime production domain cutover', 'Full code repository transfer and team training'],
   },
 ];
@@ -345,6 +371,48 @@ const FAQ_ITEMS = [
     answer:
       'Yes. Next.js, React, and TypeScript are the undisputed global standard for modern frontend engineering. Our clean, documented code architecture allows any competent software developer to maintain and scale your platform.',
   },
+  {
+    category: 'technical',
+    question: 'Why do Nashville music entertainment labels and artist brands choose headless Shopify Plus over standard templates?',
+    answer:
+      'Headless architectures decouple your front-end customer storefront from commerce back-end databases, delivering sub-500ms page transitions, custom 3D product configurators, and zero theme-code bloat while using Shopify Plus for secure payment processing and inventory tracking.',
+  },
+  {
+    category: 'b2b',
+    question: 'How do you integrate NetSuite, SAP, and Microsoft Dynamics with B2B wholesale portals in Middle Tennessee?',
+    answer:
+      'We build real-time bidirectional API connectors that synchronize customer-specific contract pricing tiers, credit limits, purchase orders, multi-warehouse inventory levels across Tennessee, and automated invoice PDF generation.',
+  },
+  {
+    category: 'entertainment',
+    question: 'How do you engineer high-concurrency flash drops for tour merchandise and album launches without crashing?',
+    answer:
+      'We deploy headless Next.js storefronts on edge CDN networks with static asset pre-rendering, queue management integration, and serverless API middleware capable of processing tens of thousands of concurrent checkout requests without server throttling.',
+  },
+  {
+    category: 'technical',
+    question: 'How do you guarantee sub-500ms load speeds and 100/100 Core Web Vitals for high-SKU stores in Tennessee?',
+    answer:
+      'We optimize every asset from the foundation up: automatic WebP/AVIF image transcoding, critical CSS inlining, font subsetting, zero render-blocking scripts, and static HTML pre-generation delivered from global edge servers across the Southeast.',
+  },
+  {
+    category: 'conversion',
+    question: 'What mobile checkout optimizations do you implement to maximize conversion rates in Nashville?',
+    answer:
+      'We implement one-tap accelerated checkouts using Shop Pay, Apple Pay, Google Pay, and Klarna, combined with sticky mobile add-to-cart drawers, localized address auto-complete, and zero full-page reloads.',
+  },
+  {
+    category: 'seo',
+    question: 'How do you configure Schema.org JSON-LD structured data for Google Merchant Center and Product Rich Snippets?',
+    answer:
+      'We embed granular Schema.org JSON-LD structured data on every product and collection page, including Product, Offer, AggregateRating, MerchantReturnPolicy, and ShippingDetails schemas. These explicit semantic annotations enable Google to generate rich merchant listings, free product carousel badges, and AI search citations.',
+  },
+  {
+    category: 'design-systems',
+    question: 'How do you design custom Figma UI/UX design systems tailored to Nashville lifestyle and fashion brands?',
+    answer:
+      'We craft comprehensive Figma design systems complete with typography scales, color palettes, custom iconography, responsive auto-layout components, interactive state variants, and developer handoff documentation. This ensures cohesive brand consistency across your entire web ecosystem and marketing collateral.',
+  },
 ];
 
 const FAQ_SCHEMA = {
@@ -367,7 +435,6 @@ const LOCAL_BUSINESS_SCHEMA = {
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
   telephone: '+1-832-998-8422',
-  priceRange: '$$$',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Nashville',

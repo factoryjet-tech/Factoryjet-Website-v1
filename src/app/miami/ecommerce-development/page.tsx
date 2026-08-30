@@ -12,27 +12,27 @@ import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import EcommerceCityLinksUS from '@/components/v2/EcommerceCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-24';
+const PAGE_MODIFIED = '2026-08-30';
 const CANONICAL = 'https://factoryjet.com/miami/ecommerce-development';
 
 export const metadata: Metadata = {
-  title: 'Miami E-Commerce Agency | Headless Shopify Plus & B2B | FactoryJet',
+  title: 'Best Miami E-Commerce Agency | Top Shopify Plus & Headless | FactoryJet',
   description:
-    'Miami e-commerce development agency. Headless Shopify Plus, BigCommerce B2B, ERP integrations, and sub-second checkouts for Florida enterprise brands.',
+    'Best Miami e-commerce development agency. Top headless Shopify Plus, BigCommerce B2B, ERP integrations, and sub-second checkouts for Florida enterprise brands.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Miami E-Commerce Agency | Headless Shopify Plus & B2B | FactoryJet',
+    title: 'Best Miami E-Commerce Agency | Top Shopify Plus & Headless | FactoryJet',
     description:
-      'Miami e-commerce development agency. Headless Shopify Plus, BigCommerce B2B, ERP integrations, and sub-second checkouts for Florida enterprise brands.',
+      'Premier Miami e-commerce development agency. Headless Shopify Plus, BigCommerce B2B, ERP integrations, and sub-second checkouts for Florida enterprise brands.',
     url: CANONICAL,
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Miami E-Commerce Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Miami E-Commerce Agency | Headless Shopify Plus & B2B | FactoryJet',
+    title: 'Best Miami E-Commerce Agency | Top Shopify Plus & Headless | FactoryJet',
     description: 'Custom headless e-commerce engineering in Miami FL. Sub-second checkouts, ERP integrations, and full IP code ownership.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -127,7 +127,7 @@ const INDUSTRY_SHOWCASE = [
     sector: 'Food & Beverage, Specialty Imports & Cold-Chain Goods',
     headline: 'High-Volume Recurring Revenue Engines for Specialty Importers',
     description:
-      'Gourmet food importers and specialty beverage brands in Miami demand robust recurring subscription engines. We develop custom recharge and Stripe billing integrations, temperature-controlled shipping rate calculators, and automated customer self-service retention portals.',
+      'Gourmet food importers and specialty beverage brands in Miami demand high-throughput recurring subscription engines. We develop custom recharge and Stripe billing integrations, temperature-controlled shipping rate calculators, and automated customer self-service retention portals.',
     image: '/images/us/manufacturing-website-design/shop-floor.webp',
     alt: 'Miami specialty food beverage and gourmet import subscription ecommerce',
     points: [
@@ -147,6 +147,32 @@ const INDUSTRY_SHOWCASE = [
       'Verified practitioner license gating and professional wholesale tiers',
       'HIPAA-aware checkout workflows and secure patient data handling',
       'Automated recurring delivery and clinic replenishment subscriptions',
+    ],
+  },
+  {
+    sector: 'Brickell Luxury Creator Commerce, Private Client Salons & High-Ticket D2C',
+    headline: 'Private Client Salons & VIP Checkout Portals for Brickell Brands',
+    description:
+      'High-end jewelry creators, luxury accessory designers, and wealth merchandising flagships across Brickell demand bespoke private client experiences. We engineer headless Shopify Plus applications with password-protected VIP vaults, multi-currency wallets, and white-glove concierge checkout workflows.',
+    image: '/images/services/card-real-estate.webp',
+    alt: 'Miami Brickell luxury creator commerce private client high ticket ecommerce development',
+    points: [
+      'Token-gated VIP product drops and private client reservation vaults',
+      'Multi-currency cryptocurrency and wire transfer high-ticket checkout gateways',
+      'Sub-500ms edge rendering ensuring instant catalog browsing for global clientele',
+    ],
+  },
+  {
+    sector: 'Coral Gables Cross-Border Latin America Merchandising & Dual-Language Gateways',
+    headline: 'Pan-Regional E-Commerce Gateways for Coral Gables Headquarters',
+    description:
+      'Multinational consumer brands and Latin American regional headquarters in Coral Gables require localized cross-border commerce architectures. We build dual-language English and Spanish storefronts with automated IP geolocation routing, localized payment gateways, and integrated customs duty calculations.',
+    image: '/images/us/b2b-website-design/hero.webp',
+    alt: 'Miami Coral Gables cross border Latin America dual language ecommerce development',
+    points: [
+      'Automated IP geolocation language detection with frictionless English/Spanish currency toggles',
+      'Integrated Latin American local payment gateways including PIX, OXXO, and MercadoPago',
+      'Dynamic landed cost calculation including international freight tariffs and import duties',
     ],
   },
 ];
@@ -200,7 +226,7 @@ const ROADMAP_STEPS = [
   {
     phase: 'Phase 04',
     title: 'Load Testing, Cutover & Launch Warranty',
-    desc: 'We execute rigorous multi-device checkout testing, simulated traffic spike tests, execute seamless DNS cutover, and provide 30-day post-launch support.',
+    desc: 'We execute rigorous multi-device checkout testing, simulated traffic spike tests, execute smooth DNS cutover, and provide 30-day post-launch support.',
     deliverables: ['Simulated high-concurrency load testing', 'SEO 301 redirect map and schema validation', 'Zero-downtime production domain cutover', 'Full code repository transfer and team training'],
   },
 ];
@@ -344,6 +370,48 @@ const FAQ_ITEMS = [
     question: 'Can any standard engineering team maintain our Next.js e-commerce store?',
     answer:
       'Yes. Next.js, React, and TypeScript are the undisputed global standard for modern frontend engineering. Our clean, documented code architecture allows any competent software developer to maintain and scale your platform.',
+  },
+  {
+    category: 'technical',
+    question: 'Why do Miami luxury and cross-border enterprise brands choose headless Shopify Plus over standard themes?',
+    answer:
+      'Headless architectures decouple your front-end customer storefront from commerce back-end databases, delivering sub-500ms page transitions, custom 3D product configurators, and zero theme-code bloat while using Shopify Plus for secure payment processing and inventory tracking.',
+  },
+  {
+    category: 'b2b',
+    question: 'How do you integrate NetSuite, SAP, and Epicor ERP with B2B wholesale portals in Doral and Airport logistics?',
+    answer:
+      'We build real-time bidirectional API connectors that synchronize customer-specific contract pricing tiers, credit limits, purchase orders, multi-warehouse inventory levels across Florida, and automated invoice PDF generation.',
+  },
+  {
+    category: 'cross-border',
+    question: 'How do you handle multi-currency checkout, local payment methods, and automated Latin America duty calculations?',
+    answer:
+      'We integrate multi-currency checkout engines with support for localized Latin American payment methods (PIX, OXXO, MercadoPago, Boleto) and dynamic landed cost APIs that calculate customs duties and tariffs in real time.',
+  },
+  {
+    category: 'technical',
+    question: 'How do you guarantee sub-500ms load speeds and 100/100 Core Web Vitals for high-SKU stores in Florida?',
+    answer:
+      'We optimize every asset from the foundation up: automatic WebP/AVIF image transcoding, critical CSS inlining, font subsetting, zero render-blocking scripts, and static HTML pre-generation delivered from global edge servers across the Southeast.',
+  },
+  {
+    category: 'conversion',
+    question: 'What mobile checkout optimizations do you implement to maximize conversion rates in Miami?',
+    answer:
+      'We implement one-tap accelerated checkouts using Shop Pay, Apple Pay, Google Pay, and Klarna, combined with sticky mobile add-to-cart drawers, localized address auto-complete, and zero full-page reloads.',
+  },
+  {
+    category: 'seo',
+    question: 'How do you configure Schema.org JSON-LD structured data for Google Merchant Center and Product Rich Snippets?',
+    answer:
+      'We embed granular Schema.org JSON-LD structured data on every product and collection page, including Product, Offer, AggregateRating, MerchantReturnPolicy, and ShippingDetails schemas. These explicit semantic annotations enable Google to generate rich merchant listings, free product carousel badges, and AI search citations.',
+  },
+  {
+    category: 'design-systems',
+    question: 'How do you design custom Figma UI/UX design systems tailored to Miami luxury fashion brands?',
+    answer:
+      'We craft comprehensive Figma design systems complete with typography scales, color palettes, custom iconography, responsive auto-layout components, interactive state variants, and developer handoff documentation. This ensures cohesive brand consistency across your entire web ecosystem and marketing collateral.',
   },
 ];
 
