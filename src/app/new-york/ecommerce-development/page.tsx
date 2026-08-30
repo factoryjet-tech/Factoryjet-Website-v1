@@ -12,27 +12,27 @@ import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import EcommerceCityLinksUS from '@/components/v2/EcommerceCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-24';
+const PAGE_MODIFIED = '2026-08-30';
 const CANONICAL = 'https://factoryjet.com/new-york/ecommerce-development';
 
 export const metadata: Metadata = {
-  title: 'New York Ecommerce Development Agency | Shopify Plus & Headless | FactoryJet',
+  title: 'Best New York Ecommerce Agency | Top Shopify Plus & Headless | FactoryJet',
   description:
-    'New York ecommerce development agency. Headless Shopify Plus, Next.js storefronts, sub-second checkout, and custom B2B wholesale integrations for NYC brands.',
+    'Best New York ecommerce development agency. Top headless Shopify Plus, Next.js storefronts, sub-second checkouts, and custom B2B wholesale portals in NYC.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'New York Ecommerce Development Agency | Shopify Plus & Headless | FactoryJet',
+    title: 'Best New York Ecommerce Agency | Top Shopify Plus & Headless | FactoryJet',
     description:
-      'New York ecommerce development agency. Headless Shopify Plus, Next.js storefronts, sub-second checkout, and custom B2B wholesale integrations for NYC brands.',
+      'Premier New York ecommerce development agency. Headless Shopify Plus, Next.js storefronts, sub-second checkout, and custom B2B wholesale integrations for NYC brands.',
     url: CANONICAL,
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'New York Ecommerce Development Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'New York Ecommerce Development Agency | Shopify Plus & Headless | FactoryJet',
+    title: 'Best New York Ecommerce Agency | Top Shopify Plus & Headless | FactoryJet',
     description: 'Custom headless Shopify Plus and Next.js ecommerce development in New York City. Sub-second performance, full IP code ownership, 7-day delivery.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -74,7 +74,7 @@ const DISTRICTS = [
     corridor: 'DUMBO & Brooklyn Creative Commerce',
     query: 'artisanal lifestyle home goods d2c ecommerce dumbo',
     focus: 'Modern D2C Brands, Artisanal Goods & Specialty Homeware',
-    desc: 'Vibrant design and creator enclave. Features tactile editorial layouts, interactive 3D product configurators, and seamless mobile checkout.',
+    desc: 'Vibrant design and creator enclave. Features tactile editorial layouts, interactive 3D product configurators, and frictionless mobile checkout.',
   },
   {
     corridor: 'Flatiron & Chelsea D2C Tech Corridor',
@@ -107,7 +107,7 @@ const INDUSTRY_SHOWCASE = [
     points: [
       'Sub-second first contentful paint and instant product filtering with zero layout shifts',
       'Interactive visual lookbooks, dynamic sizing calculators, and cross-sell styling modules',
-      'Seamless multi-currency global checkout utilizing Shopify Markets and localized duties',
+      'Frictionless multi-currency global checkout utilizing Shopify Markets and localized duties',
     ],
   },
   {
@@ -119,7 +119,7 @@ const INDUSTRY_SHOWCASE = [
     alt: 'New York City direct-to-consumer beauty skincare and wellness subscription ecommerce platform',
     points: [
       'Custom interactive bundle configurators and personalized diagnostic quiz engines',
-      'Seamless subscription management with Recharge, Smartrr, and Stripe Billing',
+      'Automated subscription management with Recharge, Smartrr, and Stripe Billing',
       'High-speed mobile checkout optimized for TikTok Shop, Instagram, and paid media traffic',
     ],
   },
@@ -127,7 +127,7 @@ const INDUSTRY_SHOWCASE = [
     sector: 'B2B Wholesale, Food & Beverage Supply Chain',
     headline: 'Enterprise Wholesale Portals for Garment District & Queens Distributors',
     description:
-      'Apparel manufacturers, gourmet food importers, and specialty beverage distributors across Midtown and Long Island City require robust B2B wholesale engines. We build high-speed wholesale platforms with automated PO processing, Net-30 credit terms, customer group tier pricing, and real-time ERP inventory syncing.',
+      'Apparel manufacturers, gourmet food importers, and specialty beverage distributors across Midtown and Long Island City require comprehensive B2B wholesale engines. We build high-speed wholesale platforms with automated PO processing, Net-30 credit terms, customer group tier pricing, and real-time ERP inventory syncing.',
     image: '/images/us/b2b-website-design/hero.webp',
     alt: 'New York City apparel manufacturing and food wholesale B2B ecommerce engineering',
     points: [
@@ -147,6 +147,32 @@ const INDUSTRY_SHOWCASE = [
       'Interactive 360-degree 3D jewelry configurators and diamond certification databases',
       'High-limit fraud protection and escrow-integrated payment gateway routing',
       'Insured armored courier shipping rate calculation and white-glove delivery tracking',
+    ],
+  },
+  {
+    sector: 'Gourmet Food Wholesale, Beverage & Cold-Chain Logistics',
+    headline: 'Multi-Borough Perishable Logistics & Specialty Food Wholesale',
+    description:
+      'Artisanal specialty food producers, craft coffee roasters, and restaurant supply distributors across Long Island City, Brooklyn, and Hunts Point require complex multi-temperature logistics and wholesale pricing. We engineer custom B2B portals featuring route delivery scheduling, catch-weight billing calculations, and multi-warehouse inventory visibility.',
+    image: '/images/services/card-real-estate.webp',
+    alt: 'New York City gourmet food beverage cold chain distribution ecommerce website design',
+    points: [
+      'Catch-weight and variable lot pricing calculations during checkout',
+      'Multi-warehouse regional distribution inventory synchronization',
+      'Custom net-payment terms and automated ERP invoice settlement',
+    ],
+  },
+  {
+    sector: 'FinTech Digital Subscriptions & Tokenized Multi-Currency Commerce',
+    headline: 'High-Velocity Digital Product Checkouts for Wall Street Innovators',
+    description:
+      'Financial data publishers, digital research firms, and Web3 fintech platforms in Lower Manhattan require institutional-grade payment infrastructure. We build custom Next.js storefronts with automated multi-currency settlement, tokenized micro-billing gateways, and sub-400ms global checkout rendering.',
+    image: '/images/us/manufacturing-website-design/shop-floor.webp',
+    alt: 'New York Financial District Wall Street fintech digital subscription ecommerce development',
+    points: [
+      'Multi-currency global settlement routing through Stripe and Adyen',
+      'Tokenized micro-billing and dynamic digital entitlement provisioning',
+      'Sub-400ms page load speeds across global edge points of presence',
     ],
   },
 ];
@@ -289,7 +315,7 @@ const FAQ_ITEMS = [
     category: 'tech',
     question: 'Why build headless with Next.js 15 instead of a standard Shopify Liquid theme?',
     answer:
-      'Headless Next.js 15 delivers sub-second page transitions, instant search, dynamic bundle builders, and complete design freedom while retaining Shopify Plus robust checkout and inventory engine.',
+      'Headless Next.js 15 delivers sub-second page transitions, instant search, dynamic bundle builders, and complete design freedom while retaining Shopify Plus scalable checkout and inventory engine.',
   },
   {
     category: 'tech',
@@ -319,7 +345,7 @@ const FAQ_ITEMS = [
     category: 'local',
     question: 'Can you build custom B2B wholesale portals for Garment District manufacturers?',
     answer:
-      'Yes. We build robust B2B platforms featuring customer tier pricing, bulk line sheet ordering, Net-30 purchase order workflows, and custom invoice management.',
+      'Yes. We build enterprise B2B platforms featuring customer tier pricing, bulk line sheet ordering, Net-30 purchase order workflows, and custom invoice management.',
   },
   {
     category: 'local',
@@ -356,6 +382,42 @@ const FAQ_ITEMS = [
     question: 'Can our in-house developers easily maintain and extend the Next.js codebase?',
     answer:
       'Yes. We write clean, strictly typed TypeScript and modular React code following standard conventions, ensuring your internal engineers can maintain and expand the platform effortlessly.',
+  },
+  {
+    category: 'architecture',
+    question: 'Why do NYC luxury fashion and D2C brands choose headless Shopify Plus over standard themes?',
+    answer:
+      'Headless architectures decouple your front-end customer storefront from commerce back-end databases, delivering sub-500ms page transitions, custom 3D product visualizers, and zero theme-code bloat while using Shopify Plus for secure payment processing and inventory tracking.',
+  },
+  {
+    category: 'b2b',
+    question: 'How do you integrate NetSuite, SAP, and QuickBooks Enterprise with B2B wholesale line sheet portals in Manhattan?',
+    answer:
+      'We build real-time bidirectional API connectors that synchronize customer-specific contract pricing tiers, credit limits, purchase orders, multi-warehouse inventory levels, and automated invoice PDF generation.',
+  },
+  {
+    category: 'performance',
+    question: 'How do you guarantee sub-500ms load speeds and 100/100 Core Web Vitals for high-SKU stores in New York?',
+    answer:
+      'We optimize every asset from the foundation up: automatic WebP/AVIF image transcoding, critical CSS inlining, font subsetting, zero render-blocking scripts, and static HTML pre-generation delivered from global edge servers across the Northeast.',
+  },
+  {
+    category: 'conversion',
+    question: 'What mobile checkout optimizations do you implement to maximize conversion rates in New York City?',
+    answer:
+      'We implement one-tap accelerated checkouts using Shop Pay, Apple Pay, Google Pay, and Klarna, combined with sticky mobile add-to-cart drawers, localized address auto-complete, and zero full-page reloads.',
+  },
+  {
+    category: 'security',
+    question: 'How do you implement Diamond District grade high-limit fraud protection and escrow payment gateways?',
+    answer:
+      'We integrate enterprise fraud screening via Signifyd and Riskified with custom 3D Secure 2 (3DS2) biometric step-up authentication, escrow payment hold logic, and insured armored courier shipping APIs for five- and six-figure order values.',
+  },
+  {
+    category: 'seo',
+    question: 'How do you configure Schema.org JSON-LD structured data for Google Merchant Center and Product Rich Snippets?',
+    answer:
+      'We embed granular Schema.org JSON-LD structured data on every product and collection page, including Product, Offer, AggregateRating, MerchantReturnPolicy, and ShippingDetails schemas. These explicit semantic annotations enable Google to generate rich merchant listings, free product carousel badges, and AI search citations.',
   },
 ];
 
