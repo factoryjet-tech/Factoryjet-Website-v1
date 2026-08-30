@@ -12,27 +12,27 @@ import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import WebDesignCityLinksUS from '@/components/v2/WebDesignCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-24';
+const PAGE_MODIFIED = '2026-08-30';
 const CANONICAL = 'https://factoryjet.com/nashville/web-design';
 
 export const metadata: Metadata = {
-  title: 'Nashville Web Design Agency | Fast Next.js Sites | FactoryJet',
+  title: 'Best Nashville Web Design Agency | Top Next.js Websites | FactoryJet',
   description:
-    'Nashville web design agency. Custom Next.js websites, sub-second load speeds, mobile conversion flows, and full code ownership for Tennessee businesses.',
+    'Best Nashville web design agency. Top custom Next.js websites, sub-second load speeds, mobile conversion flows, and 100% full IP code ownership for Tennessee businesses.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Nashville Web Design Agency | Fast Next.js Sites | FactoryJet',
+    title: 'Best Nashville Web Design Agency | Top Next.js Websites | FactoryJet',
     description:
-      'Nashville web design agency. Custom Next.js websites, sub-second load speeds, and full code ownership for Tennessee businesses.',
+      'Premier Nashville web design agency. Custom Next.js websites, sub-second load speeds, and full code ownership for Tennessee businesses.',
     url: CANONICAL,
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Nashville Web Design Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Nashville Web Design Agency | Fast Next.js Sites | FactoryJet',
+    title: 'Best Nashville Web Design Agency | Top Next.js Websites | FactoryJet',
     description: 'Custom Next.js web design in Nashville TN. 7-day launch and 100% full IP code ownership.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -147,6 +147,32 @@ const INDUSTRY_SHOWCASE = [
       'Interactive equipment capability matrices and downloadable CAD/PDF engineering data',
       'Frictionless multi-step RFQ form workflows routing directly to estimating teams',
       'Lightweight server-rendered Next.js architecture deployed to Cloudflare Edge nodes',
+    ],
+  },
+  {
+    sector: 'Automotive Supply Chain, Precision Stamping & Logistics',
+    headline: 'Engineering Industrial Authority for Middle Tennessee Manufacturers',
+    description:
+      'From Nissan and GM automotive tier suppliers along the I-24 and I-840 corridors to heavy stamping facilities in Smyrna and Murfreesboro, industrial procurement teams demand technical clarity. We build custom Next.js web applications featuring structured capability tables, instant RFQ calculators, downloadable spec sheets, and sub-second edge hosting.',
+    image: '/images/us/manufacturing-website-design/shop-floor.webp',
+    alt: 'Nashville automotive manufacturing and industrial supply web design engineering',
+    points: [
+      'Interactive equipment capability matrices and downloadable CAD/PDF engineering data',
+      'Frictionless multi-step RFQ form workflows routing directly to estimating teams',
+      'Lightweight server-rendered Next.js architecture deployed to Cloudflare Edge nodes',
+    ],
+  },
+  {
+    sector: 'Hospitality, Iconic Honky-Tonks & Southern Culinary Venues',
+    headline: 'Visual Brand Experiences & Frictionless Event Booking for Nashville Venues',
+    description:
+      'From Lower Broadway live music institutions to high-end Southern dining concepts in Germantown and The Gulch, digital first impressions drive table bookings and VIP private event buyouts. We engineer high-performance web applications featuring live Resy/OpenTable widgets, VIP reservation funnels, and high-resolution photo menus rendering at 60fps.',
+    image: '/images/us/restaurant-website-design/hero.webp',
+    alt: 'Nashville hospitality entertainment venue and southern culinary website design',
+    points: [
+      'Frictionless integration with Resy, OpenTable, and Toast POS online ordering systems',
+      'Interactive private event and corporate banquet buyout booking calculators',
+      'Fast-loading visual photo menus with structured Restaurant and Event schema markup',
     ],
   },
 ];
@@ -301,7 +327,7 @@ const FAQ_ITEMS = [
     category: 'local',
     question: 'Do you build B2B websites for Nashville healthcare and healthtech enterprises?',
     answer:
-      'Yes. We build high-conversion B2B websites tailored for Nashville healthcare companies, clinical research organizations, and hospital operators, complete with provider directories, compliance data sheets, and seamless CRM lead routing.',
+      'Yes. We build high-conversion B2B websites tailored for Nashville healthcare companies, clinical research organizations, and hospital operators, complete with provider directories, compliance data sheets, and automated CRM lead routing.',
   },
   {
     category: 'local',
@@ -344,6 +370,42 @@ const FAQ_ITEMS = [
     question: 'How do you train our internal team to manage site content?',
     answer:
       'Upon launch, we record a personalized video walkthrough demonstrating exactly how to update copy, add new team members, publish articles, and view analytics data, giving your team complete operational independence.',
+  },
+  {
+    category: 'technical',
+    question: 'How do Nashville healthcare systems and hospital operators handle HIPAA compliance on Next.js platforms?',
+    answer:
+      'We build static React Server Component architectures deployed to Cloudflare Edge nodes with automated SSL, strict Content Security Policies (CSP), HIPAA-compliant form endpoints, and zero client-side tracking on sensitive intake funnels, protecting patient privacy while maintaining sub-second performance.',
+  },
+  {
+    category: 'design',
+    question: 'How do Music Row entertainment agencies and artist management firms manage high-resolution video and audio media?',
+    answer:
+      'We integrate custom headless media streaming components, lazy-loaded video pipelines, and high-resolution photo portfolios that stream smoothly across 5G networks without degrading Core Web Vitals or triggering bandwidth bottlenecks.',
+  },
+  {
+    category: 'architecture',
+    question: 'Can you design investor hubs and B2B portals for corporate headquarters in Brentwood and Cool Springs?',
+    answer:
+      'Yes. We build structured corporate portals featuring executive leadership directories, investor relations disclosures, SEC document archives, and automated CRM lead routing to Salesforce and HubSpot.',
+  },
+  {
+    category: 'process',
+    question: 'How do you guarantee sub-600ms load speeds and 100/100 Core Web Vitals in Tennessee?',
+    answer:
+      'We optimize every asset from the foundation up: automatic WebP/AVIF image transcoding, critical CSS inlining, font subsetting, zero render-blocking scripts, and static HTML pre-generation delivered from global edge servers across Middle Tennessee.',
+  },
+  {
+    category: 'ownership',
+    question: 'What design files and tokens are delivered during the Figma design system handover?',
+    answer:
+      'You receive full edit access to a complete Figma design system containing typography scales, color tokens, responsive mobile/desktop wireframes, custom icon sets, component variants, and interactive prototype flows that your marketing team owns forever.',
+  },
+  {
+    category: 'local',
+    question: 'How do you configure Schema.org JSON-LD structured data for Google Rich Results in Tennessee?',
+    answer:
+      'We embed granular Schema.org JSON-LD structured data on every page, including Organization, ProfessionalService, LocalBusiness, FAQPage, BreadcrumbList, and WebSite schemas. These explicit semantic annotations enable Google to generate rich snippet cards, sitelinks, and AI search citations.',
   },
 ];
 

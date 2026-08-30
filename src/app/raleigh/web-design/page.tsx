@@ -12,27 +12,27 @@ import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import WebDesignCityLinksUS from '@/components/v2/WebDesignCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-24';
+const PAGE_MODIFIED = '2026-08-30';
 const CANONICAL = 'https://factoryjet.com/raleigh/web-design';
 
 export const metadata: Metadata = {
-  title: 'Raleigh Web Design Agency | Fast Next.js Sites | FactoryJet',
+  title: 'Best Raleigh Web Design Agency | Top Next.js Websites | FactoryJet',
   description:
-    'Raleigh web design agency. Custom Next.js websites, sub-second load speeds, mobile conversion flows, and full code ownership for Research Triangle businesses.',
+    'Best Raleigh web design agency. Top custom Next.js websites, sub-second load speeds, mobile conversion flows, and 100% full IP code ownership for Research Triangle businesses.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Raleigh Web Design Agency | Fast Next.js Sites | FactoryJet',
+    title: 'Best Raleigh Web Design Agency | Top Next.js Websites | FactoryJet',
     description:
-      'Raleigh web design agency. Custom Next.js websites, sub-second load speeds, and full code ownership for Research Triangle businesses.',
+      'Premier Raleigh web design agency. Custom Next.js websites, sub-second load speeds, and full code ownership for Research Triangle businesses.',
     url: CANONICAL,
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Raleigh Web Design Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Raleigh Web Design Agency | Fast Next.js Sites | FactoryJet',
+    title: 'Best Raleigh Web Design Agency | Top Next.js Websites | FactoryJet',
     description: 'Custom Next.js web design in Raleigh NC. 7-day launch and 100% full IP code ownership.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -147,6 +147,32 @@ const INDUSTRY_SHOWCASE = [
       'Interactive equipment capability matrices and downloadable CAD/PDF engineering data',
       'Frictionless multi-step RFQ form workflows routing directly to estimating teams',
       'Lightweight server-rendered Next.js architecture deployed to Cloudflare Edge nodes',
+    ],
+  },
+  {
+    sector: 'Enterprise Analytics, Clean Energy & Smart Grid Technology',
+    headline: 'Engineering Digital Authority for Raleigh Clean Tech Leaders',
+    description:
+      'From smart grid engineers in Raleigh to SAS enterprise analytics spinouts in Cary, technical B2B buyers require interactive proof of performance. We build custom Next.js web applications featuring real-time data visualization components, ESG reporting repositories, and enterprise procurement lead funnels.',
+    image: '/images/services/card-real-estate.webp',
+    alt: 'Raleigh clean tech smart grid and enterprise analytics website design',
+    points: [
+      'Interactive energy infrastructure project maps and downloadable ESG compliance data',
+      'Enterprise RFP and contractor bid submission portals with secure file uploads',
+      'Sub-second page rendering with 100/100 Core Web Vitals on mobile and desktop',
+    ],
+  },
+  {
+    sector: 'University Research Spinouts, Intellectual Property & Deep Tech',
+    headline: 'Academic Stature & Commercial Pitch Portals for Triangle Spinouts',
+    description:
+      'Commercialization teams from NC State, Duke, and UNC Chapel Hill spinning out deep tech ventures demand high-credibility digital flagships. We construct interactive platforms featuring scientific publication hubs, researcher profile schemas, grant funding track records, and venture capital presentation portals.',
+    image: '/images/us/manufacturing-website-design/shop-floor.webp',
+    alt: 'Raleigh university research spinout and intellectual property web design',
+    points: [
+      'Searchable scientific publication repositories with DOI links and author citations',
+      'Interactive technology readiness level (TRL) matrices and patent portfolio silos',
+      'Secure investor presentation portals with gated data rooms and analytics tracking',
     ],
   },
 ];
@@ -301,7 +327,7 @@ const FAQ_ITEMS = [
     category: 'local',
     question: 'Do you build B2B websites for RTP biopharma and life sciences companies?',
     answer:
-      'Yes. We build high-conversion B2B websites tailored for Research Triangle biopharma, clinical CROs, and agtech enterprises, complete with pipeline charts, downloadable clinical whitepapers, and seamless CRM lead routing.',
+      'Yes. We build high-conversion B2B websites tailored for Research Triangle biopharma, clinical CROs, and agtech enterprises, complete with pipeline charts, downloadable clinical whitepapers, and automated CRM lead routing.',
   },
   {
     category: 'local',
@@ -344,6 +370,42 @@ const FAQ_ITEMS = [
     question: 'How do you train our internal team to manage site content?',
     answer:
       'Upon launch, we record a personalized video walkthrough demonstrating exactly how to update copy, add new team members, publish articles, and view analytics data, giving your team complete operational independence.',
+  },
+  {
+    category: 'architecture',
+    question: 'How do you engineer clinical trial gateways and biopharma hubs for Research Triangle Park (RTP) leaders?',
+    answer:
+      'We build static React Server Component architectures with structured MedicalBusiness and ClinicalTrial schemas, searchable protocol repositories, investigator application forms, and sub-second page performance across global research networks.',
+  },
+  {
+    category: 'technical',
+    question: 'Why is Next.js 15 preferred by Downtown Raleigh and Durham B2B SaaS startups over legacy CMS platforms?',
+    answer:
+      'Tech startups in the Triangle demand developer-grade documentation portals, interactive product demo tours, automated CRM lead routing, and sub-600ms load speeds. Next.js 15 eliminates the security risks and bloat of legacy PHP plugins while supporting modern TypeScript component architecture.',
+  },
+  {
+    category: 'design',
+    question: 'Can you design investor pitch portals and patent repositories for university spinouts in Chapel Hill and Raleigh?',
+    answer:
+      'Yes. We build structured commercialization portals featuring scientific publication hubs, patent portfolios, technology readiness matrices, and password-protected investor data rooms.',
+  },
+  {
+    category: 'process',
+    question: 'How do you guarantee sub-600ms load speeds and 100/100 Core Web Vitals in North Carolina?',
+    answer:
+      'We optimize every asset from the foundation up: automatic WebP/AVIF image transcoding, critical CSS inlining, font subsetting, zero render-blocking scripts, and static HTML pre-generation delivered from global edge servers across the Research Triangle.',
+  },
+  {
+    category: 'ownership',
+    question: 'What design files and tokens are delivered during the Figma design system handover?',
+    answer:
+      'You receive full edit access to a complete Figma design system containing typography scales, color tokens, responsive mobile/desktop wireframes, custom icon sets, component variants, and interactive prototype flows that your marketing team owns forever.',
+  },
+  {
+    category: 'local',
+    question: 'How do you configure Schema.org JSON-LD structured data for Google Rich Results in the Triangle?',
+    answer:
+      'We embed granular Schema.org JSON-LD structured data on every page, including Organization, ProfessionalService, LocalBusiness, FAQPage, BreadcrumbList, and WebSite schemas. These explicit semantic annotations enable Google to generate rich snippet cards, sitelinks, and AI search citations.',
   },
 ];
 

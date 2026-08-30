@@ -12,27 +12,27 @@ import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-24';
+const PAGE_MODIFIED = '2026-08-30';
 const CANONICAL = 'https://factoryjet.com/boise/seo';
 
 export const metadata: Metadata = {
-  title: 'Boise Local SEO Agency | Search & AI Visibility | FactoryJet',
+  title: 'Best Boise SEO Company | Top Local SEO Agency ID | FactoryJet',
   description:
-    'Boise local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Downtown, Meridian, Eagle, and Treasure Valley.',
+    'Best Boise SEO company & local agency. Top Google Map Pack rankings, AI answer citations, and technical Core Web Vitals for Idaho & Treasure Valley.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Boise Local SEO Agency | Search & AI Visibility | FactoryJet',
+    title: 'Best Boise SEO Company | Top Local SEO Agency ID | FactoryJet',
     description:
-      'Boise local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Downtown, Meridian, Eagle, and Treasure Valley.',
+      'Premier Boise SEO company & local agency. Top Google Maps 3-Pack rankings, organic search visibility, and AI search citations across Idaho.',
     url: CANONICAL,
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Boise Local SEO Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Boise Local SEO Agency | Search & AI Visibility | FactoryJet',
+    title: 'Best Boise SEO Company | Top Local SEO Agency ID | FactoryJet',
     description: 'Dominate Boise local search and AI answer engines. Verified Google Maps 3-Pack capture and entity optimization across Idaho.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -62,37 +62,37 @@ const DISTRICTS = [
     corridor: 'Downtown Boise & Capitol Commercial District',
     query: 'corporate law wealth management financial advisory commercial real estate seo boise',
     focus: 'Corporate Law, Wealth Management & Commercial Real Estate',
-    desc: 'The political and corporate core of Idaho. Captures high-value business litigation retainers, commercial property transactions, and fiduciary advisory consults.',
+    desc: 'The political, legal, and banking core of Idaho along Capitol Boulevard, Main Street, and Idaho Street. Captures high-value business litigation retainers, commercial real estate development leasing inquiries, and fiduciary wealth management advisory consults.',
   },
   {
     corridor: 'Boise Tech Corridor & Micron Campus Nexus',
     query: 'it support software consultancy cybersecurity engineering services seo boise tech',
     focus: 'IT Services, Software Engineering & Tech Consulting',
-    desc: 'Rapidly expanding technology corridor. B2B service queries demand technical capability schemas, ISO credentials, and RFP lead funnels.',
+    desc: 'Rapidly expanding technology and semiconductor engineering corridor anchored by Micron Technology’s global headquarters. B2B service queries demand technical capability schemas, ISO accreditation data, and enterprise RFP lead funnels.',
   },
   {
     corridor: 'Meridian & Eagle High-Growth Hub',
     query: 'cosmetic dentistry pediatric medicine custom home builder seo meridian eagle id',
     focus: 'Elective Healthcare, Dental Implants & Luxury Remodeling',
-    desc: 'Affluent and fast-growing residential commercial corridor. Intense local search competition for dental implants, orthodontics, and custom residential building.',
+    desc: 'Affluent and fast-growing residential commercial corridor along Eagle Road and Chinden Boulevard. Intense local search competition for dental implants, cosmetic dentistry, orthodontics, and custom luxury home building.',
   },
   {
     corridor: 'Treasure Valley Medical & Orthopedic Enclave',
     query: 'orthopedic surgery sports medicine physical therapy clinic seo boise id',
     focus: 'Orthopedic Medicine, Physical Therapy & Specialized Clinics',
-    desc: 'Regional medical district anchored by St. Luke’s and Saint Alphonsus. Captures high-intent patient appointments and specialist referral traffic.',
+    desc: 'Regional medical district anchored by the flagship campuses of St. Luke’s Boise Medical Center and Saint Alphonsus Regional Medical Center. Captures high-intent private patient appointments, orthopedic consults, and specialist referral traffic.',
   },
   {
     corridor: 'Nampa & Caldwell Industrial & Logistics Spine',
     query: 'commercial hvac roofing contractor electrical logistics fleet seo nampa id',
     focus: 'Commercial Contracting, Heavy Trades & Industrial Logistics',
-    desc: 'Major industrial and agricultural fulfillment artery. Drives steady inbound emergency service calls, fleet maintenance contracts, and commercial project bids.',
+    desc: 'Major industrial, agricultural processing, and transportation fulfillment artery across Canyon County along Interstate 84. Drives steady inbound emergency trade calls, fleet maintenance contracts, and commercial project bids.',
   },
   {
     corridor: 'North End & Hyde Park Commercial District',
     query: 'boutique hospitality veterinary wellness natural health seo north end boise',
     focus: 'Veterinary Care, Wellness Clinics & Boutique Services',
-    desc: 'Historic neighborhood commercial enclave. Demands high-trust local proof signals, verified client reviews, and refined neighborhood entity silos.',
+    desc: 'Historic neighborhood commercial enclave along 13th Street. Demands high-trust local proof signals, verified client review funnels, veterinary credentials, and refined neighborhood entity silos.',
   },
 ];
 
@@ -356,6 +356,42 @@ const FAQ_ITEMS = [
     question: 'How do we get started with a Boise local SEO audit?',
     answer:
       'Schedule a free 30-minute local search audit. We will analyze your Google Business Profile, identify competitor gaps, and deliver an actionable ranking roadmap for your business.',
+  },
+  {
+    category: 'local',
+    question: 'How do you optimize for semiconductor supply chain, clean tech, and IT software enterprises near Micron in Boise?',
+    answer:
+      'Boise is a premier semiconductor innovation center in the Mountain West. We build technical B2B content hubs, ISO/AS9100 manufacturing schemas, cleanroom equipment specifications, and enterprise RFP lead funnels that capture national procurement queries.',
+  },
+  {
+    category: 'technical',
+    question: 'How do cosmetic dentists and private elective medical clinics capture high-value patients in Meridian and Eagle?',
+    answer:
+      'We deploy granular MedicalBusiness and Physician schemas, optimize doctor profile authority with Idaho Board of Medicine credentials, construct neighborhood landing pages for Eagle, Meridian, and Star, and streamline verified Google review funnels to dominate high-intent clinical queries.',
+  },
+  {
+    category: 'local',
+    question: 'How do you structure SEO for food processing, agricultural logistics, and commercial contractors in Nampa and Caldwell?',
+    answer:
+      'Canyon County is a critical industrial, food processing, and agricultural distribution corridor. We construct technical B2B catalog structures, cold-storage capability matrices, and rapid contractor RFQ estimating workflows to capture high-value regional contracts.',
+  },
+  {
+    category: 'technical',
+    question: 'How does Google Gemini AI Overview and SearchGPT citation indexing work in Idaho?',
+    answer:
+      'Generative AI search engines synthesize verified factual entities from structured JSON-LD schemas, official Idaho Secretary of State business filings, and direct answer-first page sections. We format your core service offerings to maximize conversational citation frequency in Google AI Overviews and ChatGPT search.',
+  },
+  {
+    category: 'local',
+    question: 'Can you structure local SEO across both Ada County and Canyon County corridors?',
+    answer:
+      'Yes. The Treasure Valley spans Ada County (Boise, Meridian, Eagle) and Canyon County (Nampa, Caldwell). We construct distinct localized landing pages and multi-county Schema.org AreaServed arrays without triggering duplicate content penalties.',
+  },
+  {
+    category: 'deliverables',
+    question: 'What is NAP citation synchronization across Boise and Idaho business directories?',
+    answer:
+      'We establish and synchronize verified business citations across essential regional directories, including the Boise Metro Chamber, Idaho BBB, Apple Maps, Bing Places, YellowPages, Dun & Bradstreet, and industry registries, ensuring 100% data consistency, eliminating duplicates, and reinforcing Google Maps 3-Pack authority.',
   },
 ];
 
