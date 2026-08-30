@@ -13,27 +13,27 @@ import EcommerceCityLinksUS from '@/components/v2/EcommerceCityLinksUS';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-29';
+const PAGE_MODIFIED = '2026-08-30';
 const CANONICAL = 'https://factoryjet.com/dallas/ecommerce-development';
 
 export const metadata: Metadata = {
-  title: 'Dallas E-Commerce Agency | Shopify Plus & B2B | FactoryJet',
+  title: 'Best Dallas E-Commerce Agency | Top Shopify Plus & B2B Development | FactoryJet',
   description:
-    'Dallas ecommerce agency. Shopify Plus, BigCommerce B2B, NetSuite ERP integrations, and custom headless commerce for Texas brands. Free technical audit.',
+    'Best Dallas ecommerce development agency. Top Shopify Plus developers, BigCommerce B2B wholesale portals, NetSuite ERP integrations, and custom headless commerce for Texas brands.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Dallas E-Commerce Agency | Shopify Plus & B2B | FactoryJet',
+    title: 'Best Dallas E-Commerce Agency | Top Shopify Plus & B2B Development | FactoryJet',
     description:
-      'Dallas ecommerce development agency. Shopify Plus, BigCommerce B2B, NetSuite ERP integrations, and custom headless commerce for Texas brands.',
+      'Premier Dallas ecommerce agency. Top Shopify Plus developers, BigCommerce B2B portals, NetSuite ERP integrations, and custom headless commerce for Texas brands.',
     url: CANONICAL,
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Dallas E-Commerce Development Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Dallas E-Commerce Agency | Shopify Plus & B2B | FactoryJet',
+    title: 'Best Dallas E-Commerce Agency | Top Shopify Plus & B2B Development | FactoryJet',
     description: 'Enterprise Shopify Plus, B2B wholesale portals, and headless commerce engineering in Dallas TX.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -148,6 +148,19 @@ const INDUSTRY_SHOWCASE = [
       'Automated state tax exemption certificate collection and automated verification',
       'Purchase order (PO) generation with multi-tiered corporate approval workflows',
       'Real-time LTL freight rate calculators integrated with destination commercial dock rules',
+    ],
+  },
+  {
+    sector: 'Luxury Home Furnishings, Lighting & Interior Design Trade Portals',
+    headline: 'High-Ticket Designer Trade Portals & Bespoke Furniture Configurators',
+    description:
+      'The Dallas Design District and Dallas Market Center represent the epicenter of high-end home furnishings. We build gated trade portals allowing interior designers and architects to apply for wholesale tax exemption, calculate custom fabric finishes, request physical finish swatches, and order white-glove residential freight delivery with custom lead times.',
+    image: '/images/us/marketplace/dallas-fort-worth-wholesale-logistics-commerce.webp',
+    alt: 'Dallas luxury home furnishings and trade portal ecommerce development',
+    points: [
+      'Gated wholesale designer registration with automated resale certificate verification',
+      'Interactive 3D fabric, wood finish, and dimension customization tools',
+      'White-glove residential freight carrier integrations with scheduled delivery windows',
     ],
   },
 ];
@@ -358,6 +371,30 @@ const FAQ_ITEMS = [
     question: 'How do we get started on an ecommerce project with FactoryJet in Dallas?',
     answer:
       'Schedule a discovery consultation or request an enterprise ecommerce architecture review. We will evaluate your current tech stack, identify conversion bottlenecks, and provide a clear roadmap and fixed-price proposal within 24 hours.',
+  },
+  {
+    category: 'b2b',
+    question: 'What is PunchOut e-procurement (cXML/OCI) integration for Dallas B2B distributors?',
+    answer:
+      'PunchOut e-procurement enables corporate enterprise buyers (such as Fortune 500 energy leaders, aerospace contractors, and telecom giants) to access your e-commerce product catalog directly from within their internal procurement ERP systems (SAP Ariba, Coupa, Jaggaer). Orders, contract pricing, and requisitions transfer seamlessly via cXML and OCI protocols without manual purchase order entry.',
+  },
+  {
+    category: 'platforms',
+    question: 'How do you architect headless Shopify storefronts using Next.js 15 and GraphQL Storefront API?',
+    answer:
+      'We build decoupled frontend applications utilizing Next.js 15 App Router, React Server Components, and Tailwind CSS. The storefront connects to Shopify Plus via the GraphQL Storefront API and Customer Account API, achieving instantaneous page loads (<200ms TTFB), total UX design freedom, and complete elimination of liquid theme constraints.',
+  },
+  {
+    category: 'integrations',
+    question: 'How does real-time ERP inventory reconciliation work with NetSuite and SAP in DFW warehouses?',
+    answer:
+      'We build bi-directional API middleware using Celigo, Boomi, or custom Node.js serverless functions that synchronize inventory levels, purchase orders, customer trade balances, and tracking numbers between your warehouse ERP (NetSuite, SAP, Microsoft Dynamics 365) and storefront in sub-second intervals, preventing multi-channel overselling.',
+  },
+  {
+    category: 'speed',
+    question: 'What is the difference between custom Shopify Liquid themes and pre-built commercial theme templates?',
+    answer:
+      'Pre-built commercial themes carry thousands of lines of unused JavaScript, heavy slider scripts, and generic CSS bloat designed for thousands of unrelated stores, frequently scoring 35–55 on mobile Google Lighthouse. Custom FactoryJet themes are engineered specifically for your brand’s exact conversion architecture, containing zero bloat, scoring 90+ Core Web Vitals, and converting 20–40% higher.',
   },
 ];
 
