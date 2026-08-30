@@ -12,27 +12,27 @@ import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-24';
+const PAGE_MODIFIED = '2026-08-30';
 const CANONICAL = 'https://factoryjet.com/las-vegas/seo';
 
 export const metadata: Metadata = {
-  title: 'Las Vegas Local SEO Agency | Search & AI Visibility | FactoryJet',
+  title: 'Best Las Vegas SEO Company | Top Local SEO Agency NV | FactoryJet',
   description:
-    'Las Vegas local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Summerlin, Henderson, and Downtown.',
+    'Best Las Vegas SEO company & local agency. Top Google Map Pack rankings, AI answer citations, and technical Core Web Vitals for Las Vegas & Clark County.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Las Vegas Local SEO Agency | Search & AI Visibility | FactoryJet',
+    title: 'Best Las Vegas SEO Company | Top Local SEO Agency NV | FactoryJet',
     description:
-      'Las Vegas local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Summerlin, Henderson, and Downtown.',
+      'Premier Las Vegas SEO company & local agency. Top Google Maps 3-Pack rankings, organic search visibility, and AI search citations across Nevada.',
     url: CANONICAL,
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Las Vegas Local SEO Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Las Vegas Local SEO Agency | Search & AI Visibility | FactoryJet',
+    title: 'Best Las Vegas SEO Company | Top Local SEO Agency NV | FactoryJet',
     description: 'Dominate Las Vegas local search and AI answer engines. Verified Google Maps 3-Pack capture and entity optimization.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -62,37 +62,37 @@ const DISTRICTS = [
     corridor: 'The Strip & Resort Corridor',
     query: 'hospitality entertainment management seo las vegas',
     focus: 'Hospitality Groups, Entertainment & Nightlife Management',
-    desc: 'The global entertainment capital. Demands high-concurrency event visibility, hospitality schema graphs, and mobile geo-fenced local search optimization.',
+    desc: 'The global entertainment capital along Las Vegas Boulevard. Demands high-concurrency event visibility, hospitality schema graphs, VIP nightlife booking funnels, and mobile geo-fenced local search optimization.',
   },
   {
     corridor: 'Summerlin & Peccole Ranch',
     query: 'estate planning attorney seo summerlin las vegas',
     focus: 'Private Wealth Advisors, Aesthetic Medicine & Luxury Law',
-    desc: 'Affluent master-planned enclave. Intense competition for high-net-worth estate planning, cosmetic surgery consultations, and wealth advisory retainers.',
+    desc: 'Affluent master-planned enclave along Rampart Boulevard and Town Center Drive. Intense local search competition for high-net-worth estate planning, cosmetic surgery consultations, and wealth advisory retainers.',
   },
   {
     corridor: 'Henderson & Green Valley',
     query: 'specialized healthcare clinic seo henderson nv',
     focus: 'Specialized Healthcare, Pediatric Dental & Family Legal Practices',
-    desc: 'Fast-growing residential and medical corridor. Multi-practitioner practice architectures, physician directories, and verified review funnels.',
+    desc: 'Fast-growing residential and medical corridor along St. Rose Parkway and Green Valley Parkway. Multi-practitioner practice architectures, physician directories, and verified review funnels.',
   },
   {
     corridor: 'Downtown Las Vegas & Arts District',
     query: 'tech creative agency seo downtown las vegas',
     focus: 'Tech Startups, Creative Agencies & Boutique Law Firms',
-    desc: 'Vibrant urban innovation and legal district. Captures commercial litigation retainers, tech venture inquiries, and creative service contracts.',
+    desc: 'Vibrant urban innovation, culinary, and legal district along Fremont Street and Casino Center Boulevard. Captures commercial litigation retainers, tech venture inquiries, and creative service contracts.',
   },
   {
     corridor: 'North Las Vegas & Apex Logistics Corridor',
     query: 'industrial warehousing logistics seo north las vegas',
     focus: 'Industrial Warehousing, Advanced Logistics & Distribution',
-    desc: 'Major Mountain West distribution and fulfillment nexus. B2B service queries require logistics capability schemas and sub-second edge speeds.',
+    desc: 'Major Mountain West distribution and fulfillment nexus along Interstate 15. B2B service queries require logistics capability schemas, cold-storage facility specifications, and sub-second edge speeds.',
   },
   {
     corridor: 'Southwest Valley & Spring Valley',
     query: 'commercial hvac roofing contractor seo las vegas',
     focus: 'Commercial Construction, HVAC & General Contractors',
-    desc: 'High-growth commercial and trade corridor. Captures high-intent commercial HVAC, roofing, and contractor project bidding inquiries.',
+    desc: 'High-growth commercial and trade corridor along Rainbow Boulevard and Durango Drive. Captures high-intent commercial HVAC, roofing, and general contractor project bidding inquiries.',
   },
 ];
 
@@ -344,6 +344,48 @@ const FAQ_ITEMS = [
     question: 'Who will be our main point of contact during the campaign?',
     answer:
       'You work directly with a dedicated senior SEO strategist who oversees technical implementation, citation distribution, and monthly strategy reviews without layers of junior account coordinators.',
+  },
+  {
+    category: 'local',
+    question: 'How do hospitality groups, entertainment venues, and nightlife clubs dominate local search along The Strip?',
+    answer:
+      'Las Vegas Boulevard is the most competitive hospitality search ecosystem in the world. We deploy structured Event, Restaurant, and NightClub schemas, build high-concurrency VIP booking funnels, and optimize mobile geo-fencing to capture tourist search demand.',
+  },
+  {
+    category: 'technical',
+    question: 'How do private wealth advisors and cosmetic medical practices capture high-net-worth clients in Summerlin?',
+    answer:
+      'We engineer granular FinancialService, MedicalBusiness, and Physician schemas, connect verified board credentials with Nevada state regulatory bodies, create neighborhood landing pages, and establish frictionless consultation funnels.',
+  },
+  {
+    category: 'local',
+    question: 'How do you structure SEO for industrial warehousing, advanced logistics, and fulfillment centers in North Las Vegas and Apex?',
+    answer:
+      'North Las Vegas and the Apex Industrial Park are vital logistics hubs for the Mountain West. We build technical B2B catalog structures, cold-storage capability matrices, and rapid RFQ quotation workflows to capture high-value fulfillment contracts.',
+  },
+  {
+    category: 'technical',
+    question: 'How does Google Gemini AI Overview and SearchGPT citation indexing work in Nevada?',
+    answer:
+      'Generative AI search engines synthesize verified factual entities from structured JSON-LD schemas, official Nevada Secretary of State SilverFlume business filings, and direct answer-first page sections. We format your core service offerings to maximize conversational citation frequency in Google AI Overviews and ChatGPT search.',
+  },
+  {
+    category: 'local',
+    question: 'Can you structure local SEO across multi-location practices throughout Clark County and Henderson?',
+    answer:
+      'Yes. We construct distinct localized landing pages for Summerlin, Henderson, North Las Vegas, Spring Valley, and Boulder City with independent Schema.org LocalBusiness markup, preventing internal keyword cannibalization.',
+  },
+  {
+    category: 'deliverables',
+    question: 'What is NAP citation synchronization across Las Vegas and Nevada business directories?',
+    answer:
+      'We establish and synchronize verified business citations across essential regional directories, including the Vegas Chamber of Commerce, Nevada BBB, Apple Maps, Bing Places, YellowPages, Dun & Bradstreet, and industry registries, ensuring 100% data consistency, eliminating duplicates, and reinforcing Google Maps 3-Pack authority.',
+  },
+  {
+    category: 'local',
+    question: 'How do trade show contractors, audiovisual staging companies, and convention services capture Las Vegas Convention Center exhibitors?',
+    answer:
+      'Las Vegas is the world capital for major trade shows and conventions. We build event-specific landing pages targeting high-intent queries for CES, SEMA, NAB Show, and World of Concrete, integrating ExhibitVendor schemas, booth rental capability matrices, and rapid RFQ quotation forms.',
   },
 ];
 

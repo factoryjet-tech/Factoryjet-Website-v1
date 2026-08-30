@@ -12,27 +12,27 @@ import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-24';
+const PAGE_MODIFIED = '2026-08-30';
 const CANONICAL = 'https://factoryjet.com/los-angeles/seo';
 
 export const metadata: Metadata = {
-  title: 'Los Angeles Local SEO Agency | Search & AI Visibility | FactoryJet',
+  title: 'Best Los Angeles SEO Company | Top Local SEO Agency CA | FactoryJet',
   description:
-    'Los Angeles local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Century City, Silicon Beach, and DTLA.',
+    'Best Los Angeles SEO company & local agency. Top Google Map Pack rankings, AI answer citations, and technical Core Web Vitals for Los Angeles & Southern California.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Los Angeles Local SEO Agency | Search & AI Visibility | FactoryJet',
+    title: 'Best Los Angeles SEO Company | Top Local SEO Agency CA | FactoryJet',
     description:
-      'Los Angeles local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Century City, Silicon Beach, and DTLA.',
+      'Premier Los Angeles SEO company & local agency. Top Google Maps 3-Pack rankings, organic search visibility, and AI search citations across Southern California.',
     url: CANONICAL,
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Los Angeles Local SEO Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Los Angeles Local SEO Agency | Search & AI Visibility | FactoryJet',
+    title: 'Best Los Angeles SEO Company | Top Local SEO Agency CA | FactoryJet',
     description: 'Dominate Los Angeles local search and AI answer engines. Verified Google Maps 3-Pack capture and entity optimization.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -62,37 +62,37 @@ const DISTRICTS = [
     corridor: 'Century City & Beverly Hills',
     query: 'entertainment law seo century city los angeles',
     focus: 'Entertainment Law, Talent Representation & Private Wealth Advisory',
-    desc: 'The power center of global entertainment legal practice. Intense local competition for high-net-worth family office advisory, talent representation, and complex IP litigation.',
+    desc: 'The power center of global entertainment legal practice and high-net-worth advisory along Avenue of the Stars and Wilshire Boulevard. Intense local competition for family office retainers, talent representation, and complex IP litigation.',
   },
   {
     corridor: 'Silicon Beach & Santa Monica',
     query: 'tech b2b seo silicon beach santa monica',
     focus: 'SaaS Tech, Venture Capital & Creator Platforms',
-    desc: 'West Coast digital innovation corridor. Tech and venture firms require deep technical topical authority, founder profile schemas, and AI engine citation dominance.',
+    desc: 'West Coast digital innovation corridor along Ocean Park Boulevard and Colorado Avenue. Tech and venture firms require deep technical topical authority, founder profile schemas, and AI engine citation dominance.',
   },
   {
     corridor: 'Downtown Los Angeles & Arts District',
     query: 'fashion showroom commercial seo dtla',
     focus: 'Fashion Showrooms, Architecture & Commercial Litigation',
-    desc: 'The historic and creative core of Southern California. Captures high-ticket corporate legal retainers, commercial architecture RFQs, and wholesale apparel inquiries.',
+    desc: 'The historic, financial, and creative core of Southern California along Grand Avenue and 7th Street. Captures high-ticket corporate legal retainers, commercial architecture RFQs, and wholesale apparel showroom inquiries.',
   },
   {
     corridor: 'Pasadena & San Gabriel Valley',
     query: 'biotech clinic seo pasadena',
     focus: 'Biotech, Aerospace Engineering & Healthcare Systems',
-    desc: 'Scientific innovation and affluent residential hub. Demands verified medical specialist schemas, research institute cross-links, and multi-location practice architectures.',
+    desc: 'Scientific innovation and affluent residential hub anchored by Caltech and Huntington Hospital. Demands verified medical specialist schemas, research institute citations, and multi-location practice architectures.',
   },
   {
     corridor: 'South Bay & El Segundo',
     query: 'defense contractor logistics seo el segundo',
     focus: 'Defense Contracting, Commercial Logistics & Corporate HQs',
-    desc: 'Aerospace and defense capital. B2B service inquiries require technical capability landing pages, ITAR-aware compliance schemas, and sub-second edge performance.',
+    desc: 'Aerospace, defense, and national security capital near Los Angeles International Airport (LAX). B2B service inquiries require technical capability landing pages, ITAR-aware compliance schemas, and sub-second edge performance.',
   },
   {
     corridor: 'San Fernando Valley & Sherman Oaks',
     query: 'plastic surgery seo sherman oaks',
     focus: 'Specialty Medical Clinics, Aesthetic Surgery & Professional Services',
-    desc: 'Dense, affluent medical corridor. Captures high-ticket elective procedure consultations, cosmetic dermatology patients, and executive wealth clients.',
+    desc: 'Dense, affluent commercial and medical corridor along Ventura Boulevard. Captures high-ticket elective procedure consultations, cosmetic dermatology patients, and executive wealth clients.',
   },
 ];
 
@@ -344,6 +344,48 @@ const FAQ_ITEMS = [
     question: 'Who will be our main point of contact during the campaign?',
     answer:
       'You work directly with a dedicated senior SEO strategist who oversees technical implementation, citation distribution, and monthly strategy reviews without layers of junior account coordinators.',
+  },
+  {
+    category: 'local',
+    question: 'How do entertainment law firms and talent agencies in Century City and Beverly Hills capture high-profile representation retainers?',
+    answer:
+      'We engineer authoritative LegalService and Attorney schemas, establish verified trial outcome and deal advisory case silos, optimize senior partner credentials with California State Bar data, and capture high-intent entertainment industry search queries.',
+  },
+  {
+    category: 'technical',
+    question: 'How do Silicon Beach SaaS platforms and venture scale-ups dominate technical search rankings in Los Angeles?',
+    answer:
+      'We build comprehensive B2B topical clusters, product capability documentation architectures, software integration schemas, and developer-oriented landing pages that load in under 600ms across global edge networks.',
+  },
+  {
+    category: 'local',
+    question: 'How do aerospace and defense contractors in El Segundo and the South Bay capture prime contractor RFQs?',
+    answer:
+      'We construct technical capability landing pages featuring CAGE codes, NAICS classifications, ITAR security compliance markers, and AS9100 quality certifications that validate supplier authority for defense procurement officers.',
+  },
+  {
+    category: 'technical',
+    question: 'How does Google Gemini AI Overview and SearchGPT citation indexing work in Greater Los Angeles?',
+    answer:
+      'Generative AI search engines synthesize verified factual entities from structured JSON-LD schemas, official California Secretary of State business filings, and direct answer-first page sections. We format your core service offerings to maximize conversational citation frequency in Google AI Overviews and ChatGPT search.',
+  },
+  {
+    category: 'local',
+    question: 'Can you structure local SEO across multi-location practices throughout Los Angeles County and Orange County?',
+    answer:
+      'Yes. We construct distinct localized landing pages for Westside (Santa Monica, Culver City), San Fernando Valley, Pasadena, and South Bay with independent Schema.org LocalBusiness markup, preventing internal keyword cannibalization.',
+  },
+  {
+    category: 'deliverables',
+    question: 'What is NAP citation synchronization across Los Angeles and California business directories?',
+    answer:
+      'We establish and synchronize verified business citations across essential regional directories, including the Los Angeles Area Chamber of Commerce, California BBB, Apple Maps, Bing Places, YellowPages, Dun & Bradstreet, and industry registries, ensuring 100% data consistency, eliminating duplicates, and reinforcing Google Maps 3-Pack authority.',
+  },
+  {
+    category: 'local',
+    question: 'How do cosmetic surgeons, medspas, and aesthetic dentists dominate competitive searches in Beverly Hills and West Hollywood?',
+    answer:
+      'The luxury aesthetics market in Los Angeles is the most competitive in the nation. We deploy granular Physician and MedicalProcedure schemas, optimize board certification entity connections, create treatment-specific before-and-after case galleries, and construct high-converting private VIP booking funnels.',
   },
 ];
 
