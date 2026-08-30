@@ -12,27 +12,27 @@ import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import EcommerceCityLinksUS from '@/components/v2/EcommerceCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-24';
+const PAGE_MODIFIED = '2026-08-30';
 const CANONICAL = 'https://factoryjet.com/portland/ecommerce-development';
 
 export const metadata: Metadata = {
-  title: 'Portland E-Commerce Agency | Headless Shopify Plus & B2B | FactoryJet',
+  title: 'Best Portland E-Commerce Agency | Top Shopify Plus & Headless | FactoryJet',
   description:
-    'Portland e-commerce development agency. Headless Shopify Plus, BigCommerce B2B, ERP integrations, and sub-second checkouts for Oregon enterprise brands.',
+    'Best Portland e-commerce development agency. Top headless Shopify Plus, BigCommerce B2B, ERP integrations, and sub-second checkouts for Oregon enterprise brands.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Portland E-Commerce Agency | Headless Shopify Plus & B2B | FactoryJet',
+    title: 'Best Portland E-Commerce Agency | Top Shopify Plus & Headless | FactoryJet',
     description:
-      'Portland e-commerce development agency. Headless Shopify Plus, BigCommerce B2B, ERP integrations, and sub-second checkouts for Oregon enterprise brands.',
+      'Premier Portland e-commerce development agency. Headless Shopify Plus, BigCommerce B2B, ERP integrations, and sub-second checkouts for Oregon enterprise brands.',
     url: CANONICAL,
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Portland E-Commerce Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Portland E-Commerce Agency | Headless Shopify Plus & B2B | FactoryJet',
+    title: 'Best Portland E-Commerce Agency | Top Shopify Plus & Headless | FactoryJet',
     description: 'Custom headless e-commerce engineering in Portland OR. Sub-second checkouts, ERP integrations, and full IP code ownership.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -149,6 +149,32 @@ const INDUSTRY_SHOWCASE = [
       'Temperature-controlled shipping rate calculators and localized fulfillment routing',
     ],
   },
+  {
+    sector: 'Columbia River Gorge Action Sports, Hydrofoil Gear & Marine Supply',
+    headline: 'High-Performance Storefronts for Outdoor Action Sports Leaders',
+    description:
+      'Kiteboarding innovators, hydrofoil equipment manufacturers, and outdoor gear wholesalers across Hood River and the Columbia River Gorge demand high-impact commerce. We engineer custom Next.js storefronts with 3D product visualizers, interactive gear configurators, and regional dealer locator mapping.',
+    image: '/images/us/manufacturing-website-design/shop-floor.webp',
+    alt: 'Portland Columbia River Gorge action sports hydrofoil gear ecommerce development',
+    points: [
+      'Interactive 3D hydrofoil and board configurators with instant price recalculation',
+      'Regional dealer locator maps with integrated local inventory availability feeds',
+      'Custom freight calculation integrations for oversized sporting gear shipments',
+    ],
+  },
+  {
+    sector: 'Clackamas Precision Metal Fabrication, Heavy Machinery & Industrial Supply',
+    headline: 'Engineering Commercial Wholesale Engines for Clackamas Manufacturers',
+    description:
+      'Precision CNC machine shops, industrial tooling distributors, and metal fabricators across Clackamas and the Industrial South demand high-throughput B2B commerce. We build custom wholesale portals with bulk matrix ordering, real-time CAD drawing file uploads, and ERP-integrated purchase order workflows.',
+    image: '/images/us/b2b-website-design/hero.webp',
+    alt: 'Portland Clackamas precision metal fabrication heavy machinery B2B ecommerce platform',
+    points: [
+      'CAD drawing file upload gateways with automated quoting request workflows',
+      'Bulk matrix ordering and instant CSV spreadsheet SKU order upload workflows',
+      'Real-time NetSuite and SAP ERP two-way stock synchronization and invoice generation',
+    ],
+  },
 ];
 
 const PAIN_POINTS = [
@@ -187,20 +213,20 @@ const ROADMAP_STEPS = [
   },
   {
     phase: 'Phase 02',
-    title: 'Headless Next.js Frontend & Core Engineering',
-    desc: 'We build your custom storefront using Next.js 15, TypeScript, and modern component libraries connected to Shopify Plus or BigCommerce APIs.',
-    deliverables: ['Custom Next.js 15 headless storefront', 'Sub-second search and filtering powered by Algolia', 'Dynamic cart, upsell, and cross-sell drawer', 'Multi-device mobile responsive optimization'],
+    title: 'Figma UI/UX & Conversion Design',
+    desc: 'Our senior product designers craft bespoke desktop and mobile checkout wireframes, interactive product configurators, and component design systems.',
+    deliverables: ['Complete high-fidelity Figma design system', 'Interactive mobile UX prototype', 'Accessibility & Core Web Vitals audit plan', 'Client design approval milestone'],
   },
   {
     phase: 'Phase 03',
-    title: 'ERP Integration & Historical Data Migration',
-    desc: 'We securely migrate historical customers, orders, and product data while establishing real-time bidirectional ERP connectors.',
-    deliverables: ['Zero-downtime historical data migration', 'Automated NetSuite/SAP/QuickBooks sync', 'Custom B2B pricing and account hierarchy rules', 'Payment gateway and tax compliance configuration'],
+    title: 'Headless Next.js 15 & API Engineering',
+    desc: 'We develop your high-speed frontend using Next.js 15, TypeScript, Tailwind CSS, connecting to Shopify Plus or BigCommerce B2B via GraphQL APIs.',
+    deliverables: ['Production Next.js 15 codebase', 'GraphQL Storefront API connectors', 'Custom ERP & 3PL webhook pipelines', 'Automated CI/CD deployment workflow'],
   },
   {
     phase: 'Phase 04',
     title: 'Load Testing, Cutover & Launch Warranty',
-    desc: 'We execute rigorous multi-device checkout testing, simulated traffic spike tests, execute seamless DNS cutover, and provide 30-day post-launch support.',
+    desc: 'We execute rigorous multi-device checkout testing, simulated traffic spike tests, execute smooth DNS cutover, and provide 30-day post-launch support.',
     deliverables: ['Simulated high-concurrency load testing', 'SEO 301 redirect map and schema validation', 'Zero-downtime production domain cutover', 'Full code repository transfer and team training'],
   },
 ];
@@ -344,6 +370,42 @@ const FAQ_ITEMS = [
     question: 'Can any standard engineering team maintain our Next.js e-commerce store?',
     answer:
       'Yes. Next.js, React, and TypeScript are the undisputed global standard for modern frontend engineering. Our clean, documented code architecture allows any competent software developer to maintain and scale your platform.',
+  },
+  {
+    category: 'technical',
+    question: 'Why do Portland enterprise brands choose headless Shopify Plus over standard themes?',
+    answer:
+      'Headless architectures decouple your front-end customer storefront from commerce back-end databases, delivering sub-500ms page transitions, custom 3D product configurators, and zero theme-code bloat while using Shopify Plus for secure payment processing and inventory tracking.',
+  },
+  {
+    category: 'b2b',
+    question: 'How do you integrate NetSuite, SAP, and Epicor ERP with B2B wholesale portals in the Silicon Forest?',
+    answer:
+      'We build real-time bidirectional API connectors that synchronize customer-specific contract pricing tiers, credit limits, purchase orders, multi-warehouse inventory levels across Oregon, and automated invoice PDF generation.',
+  },
+  {
+    category: 'direct-to-consumer',
+    question: 'How do you configure DTC wine club allocations, recurring billing, and shipping compliance for Willamette Valley wineries?',
+    answer:
+      'We build custom allocation engines with tiered member access gates, automated recurring club billing, self-service bottle selection portals, and integrated state-by-state alcohol tax calculation compliance.',
+  },
+  {
+    category: 'technical',
+    question: 'How do you guarantee sub-500ms load speeds and 100/100 Core Web Vitals for high-SKU stores in Oregon?',
+    answer:
+      'We optimize every asset from the foundation up: automatic WebP/AVIF image transcoding, critical CSS inlining, font subsetting, zero render-blocking scripts, and static HTML pre-generation delivered from global edge servers across the Pacific Northwest.',
+  },
+  {
+    category: 'conversion',
+    question: 'What mobile checkout optimizations do you implement to maximize conversion rates in Portland?',
+    answer:
+      'We implement one-tap accelerated checkouts using Shop Pay, Apple Pay, Google Pay, and Klarna, combined with sticky mobile add-to-cart drawers, localized address auto-complete, and zero full-page reloads.',
+  },
+  {
+    category: 'seo',
+    question: 'How do you configure Schema.org JSON-LD structured data for Google Merchant Center and Product Rich Snippets?',
+    answer:
+      'We embed granular Schema.org JSON-LD structured data on every product and collection page, including Product, Offer, AggregateRating, MerchantReturnPolicy, and ShippingDetails schemas. These explicit semantic annotations enable Google to generate rich merchant listings, free product carousel badges, and AI search citations.',
   },
 ];
 
