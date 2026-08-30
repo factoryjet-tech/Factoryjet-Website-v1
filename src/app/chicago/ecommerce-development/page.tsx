@@ -13,7 +13,7 @@ import EcommerceCityLinksUS from '@/components/v2/EcommerceCityLinksUS';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-29';
+const PAGE_MODIFIED = '2026-08-30';
 const CANONICAL = 'https://factoryjet.com/chicago/ecommerce-development';
 
 export const metadata: Metadata = {
@@ -148,6 +148,19 @@ const INDUSTRY_SHOWCASE = [
       'Automated state tax exemption certificate collection and automated verification',
       'Purchase order (PO) generation with multi-tiered corporate approval workflows',
       'Restricted product catalog access based on professional medical licensing validation',
+    ],
+  },
+  {
+    sector: 'Commercial Packaging, Chemical Supply & Freight Distribution',
+    headline: 'Bulk Quoting & Automated LTL Freight Logistics for Chicago Distributors',
+    description:
+      'Industrial packaging manufacturers and chemical distributors in Bedford Park and Elk Grove Village operate high-ticket bulk order workflows. We engineer custom B2B storefronts featuring real-time pallet weight calculations, automated hazardous material shipping disclaimers, tiered container volume pricing, and automated invoice reconciliation via QuickBooks and NetSuite.',
+    image: '/images/us/marketplace/dallas-fort-worth-wholesale-logistics-commerce.webp',
+    alt: 'Chicago commercial packaging and bulk freight distribution ecommerce engineering',
+    points: [
+      'Automated freight rate lookups with dynamic pallet dimension calculations',
+      'Gated MSDS chemical safety data sheet downloads and compliance tracking',
+      'Custom Net-60 credit application workflows with automated Dun & Bradstreet risk scoring',
     ],
   },
 ];
@@ -358,6 +371,42 @@ const FAQ_ITEMS = [
     question: 'How do we get started on an ecommerce project with FactoryJet in Chicago?',
     answer:
       'Schedule a discovery consultation or request an enterprise ecommerce architecture review. We will evaluate your current tech stack, identify conversion bottlenecks, and provide a clear roadmap and fixed-price proposal within 24 hours.',
+  },
+  {
+    category: 'b2b',
+    question: 'What is PunchOut e-procurement (cXML/OCI) integration for Chicago B2B distributors?',
+    answer:
+      'PunchOut e-procurement enables corporate enterprise buyers (such as Fortune 500 manufacturers and healthcare systems) to access your e-commerce product catalog directly from within their internal procurement ERP systems (Ariba, Coupa, Jaggaer). Orders, contract pricing, and requisitions transfer seamlessly via cXML and OCI protocols without manual purchase order entry.',
+  },
+  {
+    category: 'platforms',
+    question: 'How do you architect headless Shopify storefronts using Next.js 15 and GraphQL Storefront API?',
+    answer:
+      'We build decoupled frontend applications utilizing Next.js 15 App Router, React Server Components, and Tailwind CSS. The storefront connects to Shopify Plus via the GraphQL Storefront API and Customer Account API, achieving instantaneous page loads (<200ms TTFB), total UX design freedom, and complete elimination of liquid theme constraints.',
+  },
+  {
+    category: 'integrations',
+    question: 'How does real-time ERP inventory reconciliation work with NetSuite and SAP in Chicago warehouses?',
+    answer:
+      'We build bi-directional API middleware using Celigo, Boomi, or custom Node.js serverless functions that synchronize inventory levels, purchase orders, customer trade balances, and tracking numbers between your warehouse ERP (NetSuite, SAP, Microsoft Dynamics 365) and storefront in sub-second intervals, preventing multi-channel overselling.',
+  },
+  {
+    category: 'speed',
+    question: 'What is the difference between custom Shopify Liquid themes and pre-built commercial theme templates?',
+    answer:
+      'Pre-built commercial themes carry thousands of lines of unused JavaScript, heavy slider scripts, and generic CSS bloat designed for thousands of unrelated stores, frequently scoring 35–55 on mobile Google Lighthouse. Custom FactoryJet themes are engineered specifically for your brand’s exact conversion architecture, containing zero bloat, scoring 90+ Core Web Vitals, and converting 20–40% higher.',
+  },
+  {
+    category: 'b2b',
+    question: 'What are the core capabilities of BigCommerce B2B Edition for Illinois manufacturers?',
+    answer:
+      'BigCommerce B2B Edition provides native corporate account hierarchies, multiple tier-level buyers with custom spend thresholds, requisition list sharing, automated RFQ quote management, and seamless invoice portal payments. We configure these modules to streamline complex B2B wholesale transactions across Illinois and Midwest regional accounts.',
+  },
+  {
+    category: 'integrations',
+    question: 'How do you structure Product and Offer Schema.org JSON-LD for AI search engines?',
+    answer:
+      'We embed granular Product, AggregateOffer, MerchantReturnPolicy, and ShippingDetails JSON-LD schema markup on every product page. This allows Google Merchant Center, Gemini AI Overviews, and ChatGPT to instantly parse live stock availability, tiered pricing, and return terms for organic shopping citations.',
   },
 ];
 

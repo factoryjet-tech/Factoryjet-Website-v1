@@ -13,7 +13,7 @@ import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-29';
+const PAGE_MODIFIED = '2026-08-30';
 const CANONICAL = 'https://factoryjet.com/denver/seo';
 
 export const metadata: Metadata = {
@@ -357,6 +357,30 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     question: 'How do you combat spam and fake competitor listings on Google Maps in Denver?',
     answer:
       'We continuously monitor your primary search categories in Denver, identifying keyword-stuffed business names and fake virtual office listings, and submit formal redressal complaints to Google to remove spam competitors.',
+  },
+  {
+    category: 'technical',
+    question: 'How does Google Gemini AI Overview citation indexing work for Denver local businesses?',
+    answer:
+      'Google Gemini AI Overviews synthesize local search answers by querying verified Knowledge Graph entities, high-authority localized directory citations, and authoritative Schema.org LocalBusiness markup. We structure your website content with explicit factual entities and customer review statistics to maximize generative AI citation frequency.',
+  },
+  {
+    category: 'basics',
+    question: 'What role do Google Business Profile primary and secondary categories play in Denver Maps rankings?',
+    answer:
+      'Your primary GBP category carries the heaviest ranking weight for Google Local 3-Pack placement, while up to 9 secondary categories allow you to capture long-tail service inquiries. We conduct reverse-engineering audits on top-ranking Denver competitors to identify the exact category hierarchy that maximizes search impression share.',
+  },
+  {
+    category: 'corridors',
+    question: 'How do you handle canonical tags and schema for Colorado multi-city service areas?',
+    answer:
+      'Each Front Range city page receives self-referential canonical tags, unique localized copy detailing specific neighborhood landmarks, and nested LocalBusiness/AreaServed JSON-LD schemas. This prevents internal duplicate content penalties while securing top organic rankings in Denver, Aurora, Boulder, and Littleton.',
+  },
+  {
+    category: 'technical',
+    question: 'What is citation velocity and NAP consistency across Denver commercial directories?',
+    answer:
+      'Citation velocity refers to the steady, natural acquisition of verified business listings across authoritative platforms (BBB Colorado, Denver Chamber of Commerce, Apple Maps, Bing Places). We maintain 100% NAP (Name, Address, Phone) consistency to reinforce Google Maps algorithmic trust.',
   },
 ];
 

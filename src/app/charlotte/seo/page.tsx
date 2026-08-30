@@ -12,7 +12,7 @@ import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-24';
+const PAGE_MODIFIED = '2026-08-30';
 const CANONICAL = 'https://factoryjet.com/charlotte/seo';
 
 export const metadata: Metadata = {
@@ -361,6 +361,30 @@ const FAQ_ITEMS = [
     question: 'Can SEO replace our paid Google Ads spend in Charlotte?',
     answer:
       'Yes, over time. While Google Ads provide immediate visibility for a continuous pay-per-click fee, organic SEO builds permanent digital equity. As your organic rankings and Map Pack positions solidify, most Charlotte clients systematically reduce their paid advertising budgets while maintaining a steady flow of qualified inbound leads.',
+  },
+  {
+    category: 'local',
+    question: 'How does Charlotte local SEO differ from regional North Carolina statewide optimization?',
+    answer:
+      'Charlotte local SEO optimizes for hyper-local geographic proximity signals across Mecklenburg County corridors (Uptown, South End, SouthPark, Ballantyne) and Google Maps 3-Pack capture. Statewide North Carolina SEO focuses on broader regional keyword authority, high-volume commercial head terms, and category directory architecture that ranks simultaneously across Charlotte, Raleigh, Greensboro, and Wilmington.',
+  },
+  {
+    category: 'technical',
+    question: 'What role do Apple Business Connect and Bing Places play in Queen City local search?',
+    answer:
+      'While Google represents the majority of local search volume, Apple Business Connect powers default local search on millions of iPhones, Apple CarPlay navigation units, and Siri voice assistants across Charlotte. Bing Places directly powers Copilot conversational search. We synchronize your verified NAP profiles across all primary mapping ecosystems.',
+  },
+  {
+    category: 'local',
+    question: 'How do you handle Google Business Profile re-verification and suspension appeals in Charlotte?',
+    answer:
+      'If your Google Business Profile faces algorithmic suspension or video re-verification requests, we assemble complete physical documentation—including North Carolina Secretary of State filings, utility bills, permanent suite signage photographs, and lease agreements—to rapidly submit compliant reinstatement appeals directly to Google support.',
+  },
+  {
+    category: 'technical',
+    question: 'What is internal link siloing and topical authority mapping for Charlotte service businesses?',
+    answer:
+      'Internal link siloing organizes your website into clear semantic topic clusters. Primary service pillars (e.g. Commercial Litigation, HVAC Installation, Wealth Management) link hierarchically to detailed sub-service guides and neighborhood case studies, concentrating PageRank and proving exhaustive topical depth to search crawlers.',
   },
 ];
 
