@@ -13,27 +13,27 @@ import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-29';
+const PAGE_MODIFIED = '2026-08-30';
 const CANONICAL = 'https://factoryjet.com/tampa/seo';
 
 export const metadata: Metadata = {
-  title: 'Tampa Local SEO Agency | Google Maps 3-Pack | FactoryJet',
+  title: 'Best Tampa SEO Company | Top Local SEO Agency FL | FactoryJet',
   description:
-    'Tampa local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Downtown Tampa, Westshore, and Ybor City. Free audit.',
+    'Best Tampa SEO company & local agency. Top Google Map Pack rankings, AI answer citations, and technical Core Web Vitals for Tampa Bay & Hillsborough County.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Tampa Local SEO Agency | Google Maps 3-Pack | FactoryJet',
+    title: 'Best Tampa SEO Company | Top Local SEO Agency FL | FactoryJet',
     description:
-      'Tampa local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Downtown Tampa, Westshore, and Ybor City.',
+      'Premier Tampa SEO company & local agency. Top Google Maps 3-Pack rankings, organic search visibility, and AI search citations across Tampa Bay.',
     url: CANONICAL,
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Tampa Local SEO Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Tampa Local SEO Agency | Google Maps 3-Pack | FactoryJet',
+    title: 'Best Tampa SEO Company | Top Local SEO Agency FL | FactoryJet',
     description: 'Dominate Tampa local search and AI answer engines. Verified Google Maps 3-Pack capture and entity optimization.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -345,6 +345,42 @@ const FAQ_ITEMS = [
     question: 'Who will be our main point of contact during the campaign?',
     answer:
       'You work directly with a dedicated senior SEO strategist who oversees technical implementation, citation distribution, and monthly strategy reviews without layers of junior account coordinators.',
+  },
+  {
+    category: 'local',
+    question: 'How do you optimize for financial institutions, fintechs, and corporate law firms in Water Street and Westshore?',
+    answer:
+      'Water Street and Westshore represent the premier corporate corridors in Tampa. We construct high-authority corporate content hubs, optimizing for financial advisory, commercial litigation retainers, private equity, and wealth management search terms with structured FinancialService and LegalService schema markup.',
+  },
+  {
+    category: 'technical',
+    question: 'How do medical aesthetics and elective healthcare practices capture high-value patients in South Tampa and Hyde Park?',
+    answer:
+      'We deploy granular MedicalBusiness and Physician schemas, optimize doctor profile authority with Florida Board of Medicine credentials, construct neighborhood landing pages for Hyde Park, Davis Islands, and Palma Ceia, and streamline verified Google review funnels to dominate high-intent procedural queries.',
+  },
+  {
+    category: 'local',
+    question: 'How do you structure SEO for maritime logistics, cold storage, and heavy distribution near Port Tampa Bay?',
+    answer:
+      'Port Tampa Bay is Florida’s largest cargo gateway. We engineer technical B2B catalog structures, ISO certification schema markup, freight capability calculators, and downloadable spec sheets that capture high-ticket procurement queries from industrial supply chain buyers nationwide.',
+  },
+  {
+    category: 'technical',
+    question: 'How does Google Gemini AI Overview and SearchGPT citation indexing work in Florida?',
+    answer:
+      'Generative AI search platforms index clear entity relationships, verified state business records from Sunbiz (Florida Division of Corporations), and direct answer-first content blocks. We format your service offerings and customer review data with granular JSON-LD markup to maximize conversational AI recommendations.',
+  },
+  {
+    category: 'local',
+    question: 'Can you structure local SEO across both Hillsborough and Pinellas county service corridors?',
+    answer:
+      'Yes. Tampa Bay businesses frequently serve clients across both sides of the bay. We construct distinct localized landing pages and multi-county AreaServed schema markup targeting Tampa, St. Petersburg, Clearwater, Brandon, and Carrollwood without triggering duplicate content penalties.',
+  },
+  {
+    category: 'reporting',
+    question: 'What is NAP citation synchronization across Tampa Bay and Florida directories?',
+    answer:
+      'We establish and synchronize verified business citations across essential regional platforms, including the Greater Tampa Chamber of Commerce, Suncoast BBB, Apple Maps, Bing Places, YellowPages, Dun & Bradstreet, and industry registries, ensuring 100% data consistency, eliminating duplicates, and reinforcing Google Maps 3-Pack authority across Hillsborough, Pinellas, and Pasco counties.',
   },
 ];
 

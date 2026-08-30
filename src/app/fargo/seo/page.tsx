@@ -12,27 +12,27 @@ import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-24';
+const PAGE_MODIFIED = '2026-08-30';
 const CANONICAL = 'https://factoryjet.com/fargo/seo';
 
 export const metadata: Metadata = {
-  title: 'Fargo Local SEO Agency | Search & AI Visibility | FactoryJet',
+  title: 'Best Fargo SEO Company | Top Local SEO Agency ND | FactoryJet',
   description:
-    'Fargo local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Downtown, West Fargo, NDSU, and Cass County.',
+    'Best Fargo SEO company & local agency. Top Google Map Pack rankings, AI answer citations, and technical Core Web Vitals for North Dakota & Red River Valley.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Fargo Local SEO Agency | Search & AI Visibility | FactoryJet',
+    title: 'Best Fargo SEO Company | Top Local SEO Agency ND | FactoryJet',
     description:
-      'Fargo local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Downtown, West Fargo, NDSU, and Cass County.',
+      'Premier Fargo SEO company & local agency. Top Google Maps 3-Pack rankings, organic search visibility, and AI search citations across North Dakota.',
     url: CANONICAL,
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Fargo Local SEO Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Fargo Local SEO Agency | Search & AI Visibility | FactoryJet',
+    title: 'Best Fargo SEO Company | Top Local SEO Agency ND | FactoryJet',
     description: 'Dominate Fargo local search and AI answer engines. Verified Google Maps 3-Pack capture and entity optimization across North Dakota.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -62,37 +62,37 @@ const DISTRICTS = [
     corridor: 'Downtown Fargo & Broadway Historic Core',
     query: 'corporate law software consultancy commercial real estate wealth advisory seo downtown fargo',
     focus: 'Corporate Law, Advisory & Tech Consulting',
-    desc: 'The vibrant entrepreneurial core. Captures commercial litigation retainers, corporate accounting consults, and tech agency client inquiries.',
+    desc: 'The vibrant entrepreneurial and financial core along Broadway and Main Avenue. Captures high-value commercial litigation retainers, corporate wealth accounting consults, and B2B technology client inquiries.',
   },
   {
     corridor: 'West Fargo Commercial & Industrial Spine',
     query: 'heavy equipment repair freight transport commercial hvac electrical logistics seo west fargo',
     focus: 'Commercial Contracting, Heavy Machinery & Logistics',
-    desc: 'Major industrial and logistics distribution artery. Drives steady inbound emergency service calls, fleet maintenance contracts, and commercial project bids.',
+    desc: 'Major industrial and freight logistics distribution artery along Main Avenue West and Sheyenne Street. Drives steady inbound emergency service calls, fleet maintenance contracts, and commercial construction project bids.',
   },
   {
     corridor: 'NDSU Campus & Innovation Corridor',
     query: 'biomedical research engineering services intellectual property tech patent seo fargo nd',
     focus: 'Biomedical Tech, Engineering & Patent Law',
-    desc: 'Academic research and tech park hub. B2B service queries demand technical capability schemas, patent attorney credentials, and enterprise RFP funnels.',
+    desc: 'Academic research and technology park hub anchored by North Dakota State University. B2B service queries demand technical capability schemas, patent attorney credentials, and enterprise RFP submission funnels.',
   },
   {
     corridor: '13th Avenue South & 45th Street Power Hub',
     query: 'aesthetic medicine dental implants cosmetic surgery dermatology clinic seo fargo nd',
     focus: 'Elective Healthcare, Dental Implants & Wellness',
-    desc: 'High-density commercial retail and medical highway. Intense local search competition for cosmetic dentistry, plastic surgery, and specialized wellness consults.',
+    desc: 'High-density commercial retail and outpatient medical highway. Intense local search competition for cosmetic dentistry, dental implants, plastic surgery, and specialized aesthetic wellness consultations.',
   },
   {
     corridor: 'Red River Valley Healthcare & Medical Enclave',
     query: 'orthopedic surgery cardiology physical therapy specialized medical clinic seo fargo',
     focus: 'Specialized Medicine, Orthopedics & Cardiology',
-    desc: 'Regional medical district anchored by Sanford Health and Essentia Health. Captures high-intent patient appointments and specialist referral traffic.',
+    desc: 'Regional medical district anchored by the flagship campuses of Sanford Medical Center Fargo and Essentia Health 32nd Avenue. Captures high-intent private patient appointments, physical therapy consults, and specialist referral traffic.',
   },
   {
     corridor: 'Moorhead Border Regional Commerce District',
     query: 'cross border contractor commercial roofing fleet service logistics seo moorhead fargo',
     focus: 'Cross-Border Contracting, Fleets & Regional Services',
-    desc: 'Dual-state commercial corridor serving North Dakota and Minnesota. Demands multi-state service area schemas and multi-county citation synchronization.',
+    desc: 'Dual-state commercial and transportation corridor serving eastern North Dakota and western Minnesota. Demands multi-state service area schemas, dual licensing disclosures, and multi-county citation synchronization across Cass and Clay counties.',
   },
 ];
 
@@ -356,6 +356,36 @@ const FAQ_ITEMS = [
     question: 'How do we get started with a Fargo local SEO audit?',
     answer:
       'Schedule a free 30-minute local search audit. We will analyze your Google Business Profile, identify competitor gaps, and deliver an actionable ranking roadmap for your business.',
+  },
+  {
+    category: 'local',
+    question: 'How do you optimize for agricultural technology, precision machinery, and seed suppliers across Cass County?',
+    answer:
+      'The Red River Valley is one of the most productive agricultural centers in North America. We construct technical B2B product catalogs, equipment dealership schemas, and regional dealer landing pages that capture high-ticket farm machinery and ag-tech procurement searches across North Dakota and Minnesota.',
+  },
+  {
+    category: 'technical',
+    question: 'How can independent medical clinics and dental practices compete with Sanford Health and Essentia Health?',
+    answer:
+      'While major health systems dominate general brand searches, private specialists and cosmetic dentists capture lucrative procedural queries through hyper-targeted neighborhood landing pages, sub-second mobile page loads, Doctor Schema markup, and verified patient review generation.',
+  },
+  {
+    category: 'local',
+    question: 'Can you structure local SEO across the Fargo, North Dakota and Moorhead, Minnesota metro area?',
+    answer:
+      'Yes. The Fargo-Moorhead metro spans Cass County in North Dakota and Clay County in Minnesota. We construct distinct geographic service area landing pages and multi-state Schema.org AreaServed arrays targeting Fargo, West Fargo, Moorhead, and Dilworth without duplicate content penalties.',
+  },
+  {
+    category: 'technical',
+    question: 'How does Google Gemini AI Overview and SearchGPT citation indexing work in the Upper Midwest?',
+    answer:
+      'Generative AI search engines synthesize verified factual entities from structured JSON-LD schemas, official North Dakota Secretary of State corporate records, and direct question-answering page sections. We format your core service offerings to maximize conversational citation frequency in Google AI Overviews and ChatGPT search.',
+  },
+  {
+    category: 'deliverables',
+    question: 'What is NAP citation synchronization across Fargo and North Dakota business directories?',
+    answer:
+      'We establish and synchronize verified business citations across essential regional directories, including the Fargo Moorhead West Fargo Chamber of Commerce, North Dakota BBB, Apple Maps, Bing Places, YellowPages, Dun & Bradstreet, and industry registries, ensuring 100% data consistency, eliminating duplicate records, and reinforcing Google Maps 3-Pack authority across Cass and Clay counties.',
   },
 ];
 
