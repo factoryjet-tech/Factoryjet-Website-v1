@@ -377,7 +377,7 @@ const JSON_LD = {
         '@type': 'Organization',
         name: 'FactoryJet',
         url: 'https://factoryjet.com',
-        logo: 'https://factoryjet.com/images/logo.png',
+        logo: 'https://factoryjet.com/FinalLogo.svg',
       },
       serviceType: 'E-Commerce Development',
       areaServed: [
