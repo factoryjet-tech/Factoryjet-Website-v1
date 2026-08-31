@@ -20,6 +20,7 @@ import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
 import MidPageCTA from '@/components/v2/MidPageCTA';
+import WebDesignValueCalculator from '@/components/v2/WebDesignValueCalculator';
 
 export const metadata: Metadata = {
   title: 'Web Application Development for US Businesses | FactoryJet',
@@ -132,20 +133,20 @@ const APP_TYPES = [
   },
   {
     name: 'Customer Portals',
-    description: 'Secure login areas where clients view orders, documents, invoices, and project status. Reduces support volume by 40–60% in the first 90 days.',
-    example: 'Fixed price, scoped to your build. Replaces 3–5 email threads per client per week.',
+    description: 'Secure login areas where clients view orders, documents, invoices, and project status. Reduces support volume by 40-60% in the first 90 days.',
+    example: 'Fixed price, scoped to your build. Replaces 3-5 email threads per client per week.',
     linkLabel: 'Get an estimate',
     linkHref: '/contact',
   },
   {
     name: 'Internal Ops Dashboards',
     description: 'Custom reporting, approval workflows, KPI tracking, and team coordination tools built for your specific operational data, not a generic BI tool.',
-    example: 'Fixed price, scoped to your build. Recovers 5–15 hours per manager per week.',
+    example: 'Fixed price, scoped to your build. Recovers 5-15 hours per manager per week.',
   },
   {
     name: 'SaaS MVPs',
     description: 'Multi-tenant platforms with subscription billing, self-serve onboarding, usage metering, and the core feature set needed to validate with paying users.',
-    example: 'Fixed price, scoped to your build. Validated with first paying customers in 8–14 weeks.',
+    example: 'Fixed price, scoped to your build. Validated with first paying customers in 8-14 weeks.',
     linkLabel: 'Discuss your idea',
     linkHref: '/contact',
   },
@@ -223,7 +224,7 @@ const PRICING_TIERS = [
       'One third-party integration',
       'Mobile-responsive',
       'Deployed to production',
-      '4–8 week delivery',
+      '4-8 week delivery',
       '60-day bug warranty',
       'Full source code + docs on handoff',
     ],
@@ -235,14 +236,14 @@ const PRICING_TIERS = [
     description: 'Multi-role application with dashboard, reporting, multiple integrations, and a full admin panel for your team.',
     features: [
       'Multiple user roles (admin, manager, client)',
-      '3–5 core workflows',
+      '3-5 core workflows',
       'Analytics + reporting dashboard',
       'Up to 5 third-party integrations',
       'Email notification system',
       'File upload + storage',
       'Advanced admin panel',
       'Role-based access control',
-      '8–14 week delivery',
+      '8-14 week delivery',
       '60-day bug warranty',
     ],
     cta: { label: 'Get a Scope & Quote', modal: true, region: 'us' },
@@ -307,7 +308,7 @@ const FAQ_ITEMS = [
   {
     category: 'cost',
     question: 'Why do web apps cost more than websites?',
-    answer: 'Websites are primarily design + content work. Web applications require backend development, database design, server-side logic, API development, authentication systems, and security architecture. A 5-page website takes 1–2 weeks of engineering; a booking system with user accounts, scheduling logic, calendar sync, and payment processing takes 6–10 weeks. The complexity is in the logic, not the pixels.',
+    answer: 'Websites are primarily design + content work. Web applications require backend development, database design, server-side logic, API development, authentication systems, and security architecture. A 5-page website takes 1-2 weeks of engineering; a booking system with user accounts, scheduling logic, calendar sync, and payment processing takes 6-10 weeks. The complexity is in the logic, not the pixels.',
   },
   {
     category: 'cost',
@@ -323,12 +324,12 @@ const FAQ_ITEMS = [
   {
     category: 'process',
     question: 'How long does it take to build a web application?',
-    answer: "A focused MVP takes 4–8 weeks. A mid-complexity platform takes 8–16 weeks. Full-scale SaaS platforms take 4–9 months. FactoryJet uses a phased delivery model: you see a working MVP before the full feature set is done, so you can launch sooner and iterate based on real user feedback rather than assumptions.",
+    answer: "A focused MVP takes 4-8 weeks. A mid-complexity platform takes 8-16 weeks. Full-scale SaaS platforms take 4-9 months. FactoryJet uses a phased delivery model: you see a working MVP before the full feature set is done, so you can launch sooner and iterate based on real user feedback rather than assumptions.",
   },
   {
     category: 'process',
     question: 'What happens in the discovery phase?',
-    answer: "Discovery maps every user role (who logs in and what they can do), every data model (what gets stored and how it relates), every integration (what third-party systems connect), and every edge case we can anticipate. Discovery typically takes 3–5 days and produces a specification document we both sign off on. This spec is what your fixed price is based on.",
+    answer: "Discovery maps every user role (who logs in and what they can do), every data model (what gets stored and how it relates), every integration (what third-party systems connect), and every edge case we can anticipate. Discovery typically takes 3-5 days and produces a specification document we both sign off on. This spec is what your fixed price is based on.",
   },
   {
     category: 'process',
@@ -388,7 +389,7 @@ const FAQ_ITEMS = [
     category: 'working',
     question: 'Who is the best web development company in USA?',
     answer:
-      'For SMBs that need production software without enterprise consulting overhead, FactoryJet makes a strong case: senior engineers on every build, fixed milestones, and a deliberately fast website development service, standard sites ship in 7 days, MVPs in 4–8 weeks. The best web development agency in USA for you depends on what you are building; the best website development company in USA for a SaaS MVP is not automatically the best web development services in USA for a content site. Apply three filters to any shortlist: engineers scope the work, pricing is fixed before code starts, and you own the repository from day one. The best website development services in USA pass all three.',
+      'For SMBs that need production software without enterprise consulting overhead, FactoryJet makes a strong case: senior engineers on every build, fixed milestones, and a deliberately fast website development service, standard sites ship in 7 days, MVPs in 4-8 weeks. The best web development agency in USA for you depends on what you are building; the best website development company in USA for a SaaS MVP is not automatically the best web development services in USA for a content site. Apply three filters to any shortlist: engineers scope the work, pricing is fixed before code starts, and you own the repository from day one. The best website development services in USA pass all three.',
   },
   {
     category: 'cost',
@@ -423,7 +424,7 @@ const MARKET_STATS = [
   },
   {
     value: '81%',
-    label: 'year-over-year growth in web application development demand among US SMBs in 2024–2025',
+    label: 'year-over-year growth in web application development demand among US SMBs in 2024-2025',
     sourceUrl: 'https://factoryjet.com/services/web-application-development',
     sourceLabel: 'FactoryJet Market Data',
   },
@@ -457,13 +458,13 @@ const howToSchema = {
     {
       '@type': 'HowToStep',
       position: 3,
-      name: 'Days 3–4 | Design',
+      name: 'Days 3-4 | Design',
       text: 'We design every page with your brand identity, mobile-first layouts, and conversion-focused UX. You review and approve all designs.',
     },
     {
       '@type': 'HowToStep',
       position: 4,
-      name: 'Days 5–6 | Development & SEO',
+      name: 'Days 5-6 | Development & SEO',
       text: 'We build your site in Next.js or WordPress, optimize Core Web Vitals, add structured data, and connect all integrations.',
     },
     {
@@ -532,7 +533,7 @@ export default function WebApplicationDevelopmentPage() {
         imageAlt="SaaS analytics dashboard on an ultrawide monitor, FactoryJet web application development"
         stats={[
           { value: 'Fixed Price', label: 'Scoped to Your Build' },
-          { value: '4–8 Wks', label: 'Typical MVP Build Time' },
+          { value: '4-8 Wks', label: 'Typical MVP Build Time' },
           { value: 'Milestone', label: 'Paid in Stages' },
           { value: '10+ Yrs', label: 'Software Expertise' },
         ]}
@@ -544,7 +545,7 @@ export default function WebApplicationDevelopmentPage() {
       {/* ── 3. TRUST BLOCK ── */}
       <BigThreeTrustBlock
         eyebrow="BY THE NUMBERS"
-        headline="Fixed-price MVP. 4–8 weeks. 60-day bug warranty. Full source code on handoff."
+        headline="Fixed-price MVP. 4-8 weeks. 60-day bug warranty. Full source code on handoff."
       />
 
       {/* ── 4. SERVICE EXPLANATION ── */}
@@ -555,7 +556,7 @@ export default function WebApplicationDevelopmentPage() {
         body={
           <>
             <p>
-              The problem shows up 12–24 months in. You&apos;re paying for five overlapping tools that don&apos;t talk to each other. Your team has built workarounds on top of workarounds. You&apos;re exporting CSVs between systems that should share data automatically. Every new hire needs a week of onboarding just to learn the tool stack.
+              The problem shows up 12-24 months in. You&apos;re paying for five overlapping tools that don&apos;t talk to each other. Your team has built workarounds on top of workarounds. You&apos;re exporting CSVs between systems that should share data automatically. Every new hire needs a week of onboarding just to learn the tool stack.
             </p>
             <p>
               That&apos;s when a custom web application starts penciling out. One system that matches your actual workflow, integrates with everything you already use, and costs a one-time build fee instead of five monthly subscriptions forever.
@@ -593,7 +594,7 @@ export default function WebApplicationDevelopmentPage() {
       <StrategicDarkSection
         eyebrow="THE REAL COST OF STITCHING TOOLS TOGETHER"
         headline="Five SaaS subscriptions and a Zapier account is not a system. It's technical debt."
-        lead="The average US SMB paying for 5–7 SaaS tools spends thousands per month in subscriptions, for software designed for someone else's workflow. A custom web application built at FactoryJet is a fixed, one-time cost that pays for itself within the first year or two, eliminating those subscription costs and reducing manual data entry."
+        lead="The average US SMB paying for 5-7 SaaS tools spends thousands per month in subscriptions, for software designed for someone else's workflow. A custom web application built at FactoryJet is a fixed, one-time cost that pays for itself within the first year or two, eliminating those subscription costs and reducing manual data entry."
         pillars={[
           {
             title: 'The subscription math flips within a year or two',
@@ -660,6 +661,24 @@ export default function WebApplicationDevelopmentPage() {
         rows={COMPARISON_ROWS}
         footer="Prices reflect typical US market ranges as of 2026. No-code platform monthly fees compound over time and limit scalability."
       />
+
+      {/* ── 9B. INTERACTIVE VALUE/ROI CALCULATOR ──────────────────────────── */}
+      <section className="bg-[#FFF8F5] py-16 md:py-24 border-y border-[#E7DED6]">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <span className="inline-block text-sm font-semibold tracking-wider text-[#F05A28] uppercase font-fj-mono">
+              Interactive Scope & Value Estimator
+            </span>
+            <h2 className="mt-3 text-3xl font-extrabold text-[#0F0F12] sm:text-4xl font-fj-display">
+              Estimate Your Web Application Development ROI
+            </h2>
+            <p className="mt-4 text-lg text-[#333333] font-fj-body">
+              Calculate estimated engineering timeline savings, operational efficiency returns, and payback value for your custom software build.
+            </p>
+          </div>
+          <WebDesignValueCalculator region="us" />
+        </div>
+      </section>
 
       {/* ── 10. PRICING TIERS ── */}
       <div id="pricing">

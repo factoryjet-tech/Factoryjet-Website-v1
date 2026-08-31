@@ -16,6 +16,7 @@ import ComparisonTable, { CompareIcon } from '@/components/v2/ComparisonTable';
 import PricingTiers from '@/components/v2/PricingTiers';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
+import AiAgentRoiCalculator from '@/components/ai-agent/AiAgentRoiCalculator';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    SEO / Metadata
@@ -46,7 +47,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'AI Workflow Automation Services USA | FactoryJet',
     description:
-      'Custom AI workflow automation for US small businesses. fixed-price. 2–4 week delivery. Get a quote.',
+      'Custom AI workflow automation for US small businesses. fixed-price. 2-4 week delivery. Get a quote.',
     images: ['https://factoryjet.com/images/us/services/hero-ai-workflow.webp'],
   },
   alternates: {
@@ -109,7 +110,7 @@ const serviceSchema = {
     {
       '@type': 'Offer',
       name: 'Growth Automation Platform',
-      description: 'Multi-workflow automation connecting 3–5 systems with operations dashboard.',
+      description: 'Multi-workflow automation connecting 3-5 systems with operations dashboard.',
     },
     {
       '@type': 'Offer',
@@ -207,7 +208,7 @@ const AUTOMATION_TYPES = [
     name: 'Employee Onboarding Automation',
     description:
       'A new hire\'s start date triggers a coordinated sequence: IT account provisioning requests, welcome emails, first-week schedule, training module assignments, check-in reminders, and manager notifications: all automatically, without HR manually tracking a checklist in a spreadsheet.',
-    example: 'HR teams reclaim 6–8 hours per new hire from manual coordination.',
+    example: 'HR teams reclaim 6-8 hours per new hire from manual coordination.',
     linkLabel: 'Book a strategy call',
     linkHref: '/contact',
   },
@@ -215,7 +216,7 @@ const AUTOMATION_TYPES = [
     name: 'Automated Reporting & Dashboards',
     description:
       'A scheduled workflow pulls data from your CRM, e-commerce platform, ads account, and any connected database, runs the numbers, writes plain-English commentary on the key trends and anomalies, and delivers a formatted report to Slack, email, or a shared Google Doc: every Monday morning.',
-    example: 'Business owners reclaim 5–8 hours per week of manual reporting time.',
+    example: 'Business owners reclaim 5-8 hours per week of manual reporting time.',
     linkLabel: 'Learn more',
     linkHref: '/contact',
   },
@@ -223,7 +224,7 @@ const AUTOMATION_TYPES = [
     name: 'Cross-System Data Sync',
     description:
       'Keeps your CRM, e-commerce platform, accounting software, and operations database in sync without manual exports and imports. New orders update inventory, customers update the CRM, payments update accounting, in real time, with conflict resolution logic when records don\'t match cleanly.',
-    example: 'Eliminates 10–20 hours per week of copy-paste data entry.',
+    example: 'Eliminates 10-20 hours per week of copy-paste data entry.',
     linkLabel: 'Get a free assessment',
     linkHref: '/contact',
   },
@@ -297,7 +298,7 @@ const MARKET_STATS = [
     categoryLabel: 'SMB PAIN POINT',
   },
   {
-    value: '3–6×',
+    value: '3-6×',
     label: 'higher ROI from AI-enhanced automation vs. basic rule-based tools like Zapier',
     microcopy: 'McKinsey, Winning the SMB tech market in a challenging economy',
     categoryLabel: 'AI ADVANTAGE',
@@ -323,7 +324,7 @@ const COMPARISON_ROWS = [
   },
   {
     feature: 'Delivery timeline',
-    values: ['2–4 weeks', '2–5 months', 'Hours (limited capability)', '4–8 weeks (unreliable)'],
+    values: ['2-4 weeks', '2-5 months', 'Hours (limited capability)', '4-8 weeks (unreliable)'],
   },
   {
     feature: 'AI decision-making in workflows',
@@ -398,7 +399,7 @@ const PRICING_TIERS = [
       'One focused workflow automation that eliminates your highest-impact manual process. Best for businesses automating their first workflow.',
     features: [
       'Single workflow automation (lead follow-up, invoice processing, or data sync)',
-      'Connects to 2–3 existing tools via API',
+      'Connects to 2-3 existing tools via API',
       'AI reasoning layer for decision-making and classification',
       'Error handling with Slack or email notifications',
       'Workflow monitoring dashboard',
@@ -411,7 +412,7 @@ const PRICING_TIERS = [
     name: 'Growth',
     priceRange: 'Most common scope',
     description:
-      'A multi-workflow automation platform connecting 3–5 systems with an operations dashboard. The most popular tier for US SMBs ready to automate seriously.',
+      'A multi-workflow automation platform connecting 3-5 systems with an operations dashboard. The most popular tier for US SMBs ready to automate seriously.',
     features: [
       'Up to 4 interconnected workflow automations',
       'Full CRM, e-commerce, or accounting integration',
@@ -453,7 +454,7 @@ const FAQ_CATEGORIES = [
   { key: 'trust',     label: 'Trust & Results' },
 ];
 
-/* ─── FAQ items — 21 conversational Q-A pairs, AI-citation optimized ────── */
+/* ─── FAQ items: 21 conversational Q-A pairs, AI-citation optimized ────── */
 const FAQ_ITEMS = [
 
   /* ── What Is AI Workflow Automation ── */
@@ -493,7 +494,7 @@ const FAQ_ITEMS = [
     category: 'process',
     question: 'How long does it take to build and launch AI workflow automation?',
     answer:
-      'A single focused workflow, lead follow-up, invoice processing, or a data sync, goes from kickoff to production in 2–3 weeks. A multi-workflow platform connecting several systems takes 4–6 weeks. Enterprise automation with complex logic and multiple departments runs 8–12 weeks. Timeline is confirmed after the discovery session.',
+      'A single focused workflow, lead follow-up, invoice processing, or a data sync, goes from kickoff to production in 2-3 weeks. A multi-workflow platform connecting several systems takes 4-6 weeks. Enterprise automation with complex logic and multiple departments runs 8-12 weeks. Timeline is confirmed after the discovery session.',
   },
   {
     category: 'process',
@@ -525,7 +526,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'What return on investment can I expect from workflow automation?',
     answer:
-      'The most direct return comes from manual hours eliminated. An invoice processing automation that handles 100 invoices per week pays for itself in 2–3 months based on the staff time it replaces. Lead follow-up automation that contacts every new lead within 60 seconds (instead of waiting for a sales rep to get to it) typically increases qualified pipeline by 25–40%. Most clients see payback within 2–4 months of launch.',
+      'The most direct return comes from manual hours eliminated. An invoice processing automation that handles 100 invoices per week pays for itself in 2-3 months based on the staff time it replaces. Lead follow-up automation that contacts every new lead within 60 seconds (instead of waiting for a sales rep to get to it) typically increases qualified pipeline by 25-40%. Most clients see payback within 2-4 months of launch.',
   },
   {
     category: 'pricing',
@@ -736,7 +737,7 @@ export default function AIWorkflowAutomationPage() {
                 {[
                   { value: '55%', label: 'Time saved' },
                   { value: '24/7', label: 'Runs without you' },
-                  { value: '2–4mo', label: 'Typical payback' },
+                  { value: '2-4mo', label: 'Typical payback' },
                 ].map((b) => (
                   <div
                     key={b.value}
@@ -767,7 +768,7 @@ export default function AIWorkflowAutomationPage() {
                 </p>
               </div>
               <p>
-                FactoryJet builds AI workflow automation on n8n, Make.com, and LangChain, connected to your CRM, e-commerce platform, accounting software, and communication tools. We handle the engineering; you handle the work that actually needs a human. We&apos;ve been building for US small and mid-sized businesses and understand the operational reality inside a 10–50 person company. The messy data, the exception cases, the Friday afternoon task that someone always forgets, that&apos;s exactly what we build for.
+                FactoryJet builds AI workflow automation on n8n, Make.com, and LangChain, connected to your CRM, e-commerce platform, accounting software, and communication tools. We handle the engineering; you handle the work that actually needs a human. We&apos;ve been building for US small and mid-sized businesses and understand the operational reality inside a 10-50 person company. The messy data, the exception cases, the Friday afternoon task that someone always forgets, that&apos;s exactly what we build for.
               </p>
 
               <div className="grid grid-cols-2 gap-2" aria-hidden>
@@ -893,10 +894,10 @@ export default function AIWorkflowAutomationPage() {
         {/* ── 5. OUR PROCESS ───────────────────────────────────────────────── */}
         <ServiceJourneyRow
           eyebrow="OUR PROCESS"
-          headline="From Strategy Call to Live Automation in 2–4 Weeks"
+          headline="From Strategy Call to Live Automation in 2-4 Weeks"
           lead="A structured 5-stage process that keeps you informed at every step and delivers working automation, not a proposal about automation."
           stages={AUTOMATION_JOURNEY_STAGES}
-          closingNote="5 STAGES · 2–12 WEEKS DEPENDING ON SCOPE · WEEKLY DEMOS THROUGHOUT"
+          closingNote="5 STAGES · 2-12 WEEKS DEPENDING ON SCOPE · WEEKLY DEMOS THROUGHOUT"
         />
 
         {/* ── 6. AUTOMATION TYPES ──────────────────────────────────────────── */}
@@ -912,10 +913,28 @@ export default function AIWorkflowAutomationPage() {
           <BoringStatsRow stats={MARKET_STATS} align="center" />
         </div>
 
-        {/* ── 9. ROI STATS ─────────────────────────────────────────────────── */}
+        {/* ── 8. ROI STATS ─────────────────────────────────────────────────── */}
         <div className="bg-fj-neutral-50">
           <BoringStatsRow stats={ROI_STATS} align="center" />
         </div>
+
+        {/* ── 8B. INTERACTIVE ROI CALCULATOR ──────────────────────────────── */}
+        <section className="bg-[#FFF8F5] py-16 md:py-24 border-y border-[#E7DED6]">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <span className="inline-block text-sm font-semibold tracking-wider text-[#F05A28] uppercase font-fj-mono">
+                Interactive ROI & Hours Saved Estimator
+              </span>
+              <h2 className="mt-3 text-3xl font-extrabold text-[#0F0F12] sm:text-4xl font-fj-display">
+                Calculate Your Workflow Automation ROI
+              </h2>
+              <p className="mt-4 text-lg text-[#333333] font-fj-body">
+                Estimate how many manual labor hours your team can eliminate each week and the direct payroll savings delivered by custom automated workflows.
+              </p>
+            </div>
+            <AiAgentRoiCalculator defaultWorkflow="erp" source="ai-workflow-automation" />
+          </div>
+        </section>
 
         {/* ── 10. COMPARISON TABLE ─────────────────────────────────────────── */}
         <ComparisonTable
@@ -979,7 +998,7 @@ export default function AIWorkflowAutomationPage() {
             sub="We'll map your highest-value automation opportunity, estimate how many hours per week it would recover, and give you a fixed-price quote, before you commit to anything."
             primaryCta={{ label: 'Get a Quote', modal: true, region: 'us' }}
             secondaryCta={{ label: 'See All AI Services', href: '/services' }}
-            objectionHandler="Most clients see full ROI within 2–4 months. Free call, fixed price, no hidden fees."
+            objectionHandler="Most clients see full ROI within 2-4 months. Free call, fixed price, no hidden fees."
           />
         </div>
 

@@ -16,6 +16,7 @@ import IndustriesGrid from '@/components/v2/IndustriesGrid';
 import FAQ, { type FAQItem, type FAQCategory } from '@/components/v2/FAQ';
 import TalkToFounder from '@/components/v2/TalkToFounder';
 import FinalCTA from '@/components/v2/FinalCTA';
+import LocalSeoOpportunityEstimator from '@/components/v2/LocalSeoOpportunityEstimator';
 
 import HealthcareSpecialtiesTabs from './HealthcareSpecialtiesTabs';
 import StatsRowAnimated from './StatsRowAnimated';
@@ -60,9 +61,9 @@ const REVIEWED_DATE = 'June 13, 2026';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  // 58 chars — fits Google's ~60-char SERP truncation limit
+  // 58 chars - fits Google's ~60-char SERP truncation limit
   title: 'Healthcare SEO Agency for Medical Practices & Clinics | FactoryJet',
-  // ~156 chars — within Google's ~160-char description preview
+  // ~156 chars - within Google's ~160-char description preview
   description:
     'Healthcare SEO agency for US practices and clinics. We build YMYL E-E-A-T, dominate map packs, earn AI citations, and run HIPAA-safe analytics. Free audit.',
   openGraph: {
@@ -74,7 +75,7 @@ export const metadata: Metadata = {
     url: 'https://factoryjet.com/services/healthcare-seo',
     images: [
       {
-        // Page-specific image — correct dimensions for social card previews
+        // Page-specific image - correct dimensions for social card previews
         url: 'https://factoryjet.com/images/services/healthcare-seo.webp',
         width: 1344,
         height: 1024,
@@ -280,7 +281,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'what',
     question: 'How long before I see results from healthcare SEO?',
     answer:
-      'Technical and E-E-A-T fixes, schema, GBP optimization, bylines, citations, can improve rankings within 4–8 weeks because they unlock pages Google was previously suppressing under YMYL review. Local map pack movement typically shows within 2–3 months once citation and GBP work is complete. Content and authority work compounds over 3–6 months. Healthcare SEO has a longer initial setup than a typical ecommerce site because the compliance baseline takes time, but once built, it is a durable competitive advantage most practices never invest in.',
+      'Technical and E-E-A-T fixes, schema, GBP optimization, bylines, citations, can improve rankings within 4-8 weeks because they unlock pages Google was previously suppressing under YMYL review. Local map pack movement typically shows within 2-3 months once citation and GBP work is complete. Content and authority work compounds over 3-6 months. Healthcare SEO has a longer initial setup than a typical ecommerce site because the compliance baseline takes time, but once built, it is a durable competitive advantage most practices never invest in.',
   },
 
   // ── Local & map pack ──────────────────────────────────────────────────────
@@ -529,7 +530,7 @@ const organizationSchema = {
   name: 'FactoryJet',
   url: 'https://factoryjet.com',
   logo: 'https://factoryjet.com/logo.png',
-  // sameAs = external URLs only — never self-reference (schema audit rule 2026-06-13)
+  // sameAs = external URLs only - never self-reference (schema audit rule 2026-06-13)
   sameAs: [
     'https://www.linkedin.com/company/factoryjet',
   ],
@@ -720,7 +721,7 @@ function StatsRow() {
   );
 }
 
-/* Original data table — Healthcare Practice Type SEO Priority Matrix */
+/* Original data table: Healthcare Practice Type SEO Priority Matrix */
 function HealthcareDataTable() {
   const rows = [
     {
@@ -854,14 +855,14 @@ function HealthcareDataTable() {
   );
 }
 
-/* Listicle — 6 healthcare specialties with highest SEO ROI */
+/* Listicle: 6 healthcare specialties with highest SEO ROI */
 function HealthcareSpecialtiesSection() {
   const specialties = [
     {
       number: '01',
       name: 'Dental practices',
       why:
-        '"Dentist near me" drives over 550,000 monthly searches in the US. Dental implants and restorative procedures carry among the highest per-appointment values in healthcare. A practice ranking in the 3-Pack in a mid-size market can attribute 30–60 new patients per month to organic alone, with zero ongoing ad spend once the map pack position is held.',
+        '"Dentist near me" drives over 550,000 monthly searches in the US. Dental implants and restorative procedures carry among the highest per-appointment values in healthcare. A practice ranking in the 3-Pack in a mid-size market can attribute 30-60 new patients per month to organic alone, with zero ongoing ad spend once the map pack position is held.',
       signal: 'Map pack + dental directory citations',
     },
     {
@@ -1282,7 +1283,7 @@ export default function HealthcareSeoServicePage() {
             'Map pack + AI citations in one monthly report',
           ]}
           rightSlot={
-            /* hidden on mobile — image is never the LCP element; desktop-only visual */
+            /* hidden on mobile - image is never the LCP element; desktop-only visual */
             <div className="hidden lg:block relative w-full rounded-2xl overflow-hidden shadow-2xl ring-1 ring-black/10">
               <Image
                 src="/images/services/healthcare-seo.webp"
@@ -1495,6 +1496,24 @@ export default function HealthcareSeoServicePage() {
           primaryCta={{ label: 'Get My Free Audit', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See our approach', href: '#pricing' }}
         />
+
+        {/* ─── 8C. INTERACTIVE OPPORTUNITY ESTIMATOR ──────────────────────── */}
+        <section className="bg-[#FFF8F5] py-16 md:py-24 border-y border-[#E7DED6]">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <span className="inline-block text-sm font-semibold tracking-wider text-[#F05A28] uppercase font-fj-mono">
+                Interactive Practice Growth & Map Pack Estimator
+              </span>
+              <h2 className="mt-3 text-3xl font-extrabold text-[#0F0F12] sm:text-4xl font-fj-display">
+                Estimate Your Healthcare Local SEO Opportunity
+              </h2>
+              <p className="mt-4 text-lg text-[#333333] font-fj-body">
+                Calculate estimated local search patient volume, map pack traffic value, and appointment acquisition returns for your practice.
+              </p>
+            </div>
+            <LocalSeoOpportunityEstimator region="us" />
+          </div>
+        </section>
 
         {/* ─── 9. Comparison vs generalist / freelancer / in-house ─────────── */}
         <ComparisonTable

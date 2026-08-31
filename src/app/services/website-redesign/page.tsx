@@ -19,6 +19,7 @@ import PricingTiers from '@/components/v2/PricingTiers';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
+import WebDesignValueCalculator from '@/components/v2/WebDesignValueCalculator';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    SEO / Metadata
@@ -114,7 +115,7 @@ const REDESIGN_SERVICES = [
     name: 'Homepage & Brand Refresh',
     description:
       'Your homepage is your highest-traffic, highest-stakes page. We redesign it with a clear value proposition above the fold, social proof positioned where trust decisions happen, and a conversion path that moves visitors from landing to contact, without friction or confusion.',
-    example: 'Clients typically see 30–60% improvement in homepage engagement metrics within 30 days.',
+    example: 'Clients typically see 30-60% improvement in homepage engagement metrics within 30 days.',
     linkLabel: 'Get a free redesign audit',
     linkHref: '/contact',
   },
@@ -122,7 +123,7 @@ const REDESIGN_SERVICES = [
     name: 'Service & Product Pages',
     description:
       'Service pages that only list features don\'t convert. We redesign them with outcome-focused copy, structured content that answers buyer questions in the right order, and CTAs placed where intent is highest, not just at the bottom of the page.',
-    example: 'Well-structured service pages generate 2–3× more quote requests than feature-list pages.',
+    example: 'Well-structured service pages generate 2-3× more quote requests than feature-list pages.',
     linkLabel: 'See our process',
     linkHref: '#process',
   },
@@ -130,7 +131,7 @@ const REDESIGN_SERVICES = [
     name: 'E-Commerce Store Redesign',
     description:
       'Cart abandonment, poor mobile checkout, and slow product pages are revenue problems, not design problems. We redesign Shopify and WooCommerce stores with conversion-focused layouts, optimized product pages, and mobile-first checkout flows that reduce drop-off.',
-    example: 'E-commerce redesigns regularly recover 15–25% of revenue lost to cart abandonment.',
+    example: 'E-commerce redesigns regularly recover 15-25% of revenue lost to cart abandonment.',
     linkLabel: 'See e-commerce redesign pricing',
     linkHref: '#pricing',
   },
@@ -138,7 +139,7 @@ const REDESIGN_SERVICES = [
     name: 'Lead Generation Landing Pages',
     description:
       'A landing page that doesn\'t convert is expensive traffic with no return. We redesign landing pages with a single clear offer, social proof matched to the audience, and form design optimized for completion, not for looking impressive.',
-    example: 'Optimized landing pages outperform original versions by 40–120% in form completion rate.',
+    example: 'Optimized landing pages outperform original versions by 40-120% in form completion rate.',
     linkLabel: 'Book a strategy call',
     linkHref: '/contact',
   },
@@ -154,7 +155,7 @@ const REDESIGN_SERVICES = [
     name: 'Page Speed & Performance Redesign',
     description:
       'Your current site may look fine but be failing invisibly, slow load times, poor Core Web Vitals scores, and bloated page builder output all suppress rankings and visitor retention. We diagnose the performance gaps and rebuild with clean, optimized code that loads fast on every connection.',
-    example: 'Sites rebuilt from heavy page builders to clean code see 60–80% reduction in page load time.',
+    example: 'Sites rebuilt from heavy page builders to clean code see 60-80% reduction in page load time.',
     linkLabel: 'Get a free speed audit',
     linkHref: '/contact',
   },
@@ -228,7 +229,7 @@ const COMPARISON_ROWS = [
   },
   {
     feature: 'Delivery timeline',
-    values: ['7 days (5-page)', '6–16 weeks', '2–4 weeks (with customization)', '4–10 weeks (variable)'],
+    values: ['7 days (5-page)', '6-16 weeks', '2-4 weeks (with customization)', '4-10 weeks (variable)'],
   },
   {
     feature: 'Custom design (not a theme)',
@@ -317,9 +318,9 @@ const PRICING_TIERS = [
     name: 'Business Redesign',
     priceRange: 'Fixed price, scoped to your build',
     description:
-      'A full redesign of 10–20 pages with custom design, CMS integration, conversion-focused copywriting guidance, internal linking structure, and full SEO setup. The most popular choice for service businesses and professional firms.',
+      'A full redesign of 10-20 pages with custom design, CMS integration, conversion-focused copywriting guidance, internal linking structure, and full SEO setup. The most popular choice for service businesses and professional firms.',
     features: [
-      '10–20 pages fully redesigned',
+      '10-20 pages fully redesigned',
       'Custom design system (typography, colors, components)',
       'CMS integration, update content without a developer',
       'Conversion-focused page structure and CTA placement',
@@ -388,7 +389,7 @@ const FAQ_ITEMS = [
     category: 'what-is-redesign',
     question: 'Can a website redesign help my Google rankings?',
     answer:
-      'Yes, when done correctly. A redesign that improves Core Web Vitals, mobile usability, page structure, and on-page SEO will almost always improve rankings within 60–90 days. The risks come from poor execution: not implementing 301 redirects for changed URLs, removing content that was ranking, or changing page structure in ways that fragment internal linking. FactoryJet\'s redesign process includes a pre-launch SEO audit, full 301 redirect mapping, and preservation of all ranking signals, so you launch with the SEO floor intact and improvements in place to build from.',
+      'Yes, when done correctly. A redesign that improves Core Web Vitals, mobile usability, page structure, and on-page SEO will almost always improve rankings within 60-90 days. The risks come from poor execution: not implementing 301 redirects for changed URLs, removing content that was ranking, or changing page structure in ways that fragment internal linking. FactoryJet\'s redesign process includes a pre-launch SEO audit, full 301 redirect mapping, and preservation of all ranking signals, so you launch with the SEO floor intact and improvements in place to build from.',
   },
 
   /* ── Process & Timeline ── */
@@ -402,7 +403,7 @@ const FAQ_ITEMS = [
     category: 'process',
     question: 'How long does a website redesign take?',
     answer:
-      'FactoryJet delivers up to 5-page redesigns in 7 business days. Business website redesigns of 10–20 pages typically take 3–4 weeks. E-commerce redesigns run 4–6 weeks depending on catalog size and custom functionality. The timeline is driven by two things: your content readiness and the speed of your feedback. Our process has structured checkpoints with 24-hour feedback windows, clients who respond quickly consistently hit the fast end of these timelines.',
+      'FactoryJet delivers up to 5-page redesigns in 7 business days. Business website redesigns of 10-20 pages typically take 3-4 weeks. E-commerce redesigns run 4-6 weeks depending on catalog size and custom functionality. The timeline is driven by two things: your content readiness and the speed of your feedback. Our process has structured checkpoints with 24-hour feedback windows, clients who respond quickly consistently hit the fast end of these timelines.',
   },
   {
     category: 'process',
@@ -428,7 +429,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'What is the ROI of a website redesign?',
     answer:
-      'The most direct returns: lead volume (better conversion path and SEO), lead quality (clearer positioning attracts better-fit prospects), and operational time (a CMS you can actually use saves the ongoing cost of paying a developer to update copy). Service businesses regularly report 40–80% more contact form submissions after a conversion-focused redesign. E-commerce clients see 15–25% improvement in conversion rate. At typical small business revenue levels, a 20% improvement in lead conversion from a fixed-price redesign pays back in weeks, not months.',
+      'The most direct returns: lead volume (better conversion path and SEO), lead quality (clearer positioning attracts better-fit prospects), and operational time (a CMS you can actually use saves the ongoing cost of paying a developer to update copy). Service businesses regularly report 40-80% more contact form submissions after a conversion-focused redesign. E-commerce clients see 15-25% improvement in conversion rate. At typical small business revenue levels, a 20% improvement in lead conversion from a fixed-price redesign pays back in weeks, not months.',
   },
   {
     category: 'pricing',
@@ -442,13 +443,13 @@ const FAQ_ITEMS = [
     category: 'technical',
     question: 'What technologies do you use to build redesigned websites?',
     answer:
-      'We select the technology stack based on your needs. For content-heavy business sites we use Next.js (React) for maximum performance, static generation, sub-second load times, and Lighthouse 90+ scores. For clients who need a familiar CMS, we use WordPress with a custom theme (no page builders). For e-commerce we work with Shopify and WooCommerce. We don\'t use Elementor, Divi, WPBakery, or other page builders, they produce bloated code that fails Core Web Vitals and inflates page size 3–5× unnecessarily.',
+      'We select the technology stack based on your needs. For content-heavy business sites we use Next.js (React) for maximum performance, static generation, sub-second load times, and Lighthouse 90+ scores. For clients who need a familiar CMS, we use WordPress with a custom theme (no page builders). For e-commerce we work with Shopify and WooCommerce. We don\'t use Elementor, Divi, WPBakery, or other page builders, they produce bloated code that fails Core Web Vitals and inflates page size 3-5× unnecessarily.',
   },
   {
     category: 'technical',
     question: 'What happens to my SEO during a website redesign?',
     answer:
-      'A properly managed redesign should protect and improve your SEO. Our process: pre-launch audit of all ranking pages and their URLs, full 301 redirect map for any changed URLs, preservation of existing meta titles and descriptions (unless we\'re improving them), schema markup added for relevant page types, and XML sitemap submitted to Google Search Console on launch day. We track ranking positions for 30 days post-launch and flag any drops for immediate investigation. The goal is to launch with your current rankings intact and improvements in place that compound over the following 60–90 days.',
+      'A properly managed redesign should protect and improve your SEO. Our process: pre-launch audit of all ranking pages and their URLs, full 301 redirect map for any changed URLs, preservation of existing meta titles and descriptions (unless we\'re improving them), schema markup added for relevant page types, and XML sitemap submitted to Google Search Console on launch day. We track ranking positions for 30 days post-launch and flag any drops for immediate investigation. The goal is to launch with your current rankings intact and improvements in place that compound over the following 60-90 days.',
   },
   {
     category: 'technical',
@@ -462,7 +463,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from a US website redesign agency?',
     answer:
-      'Three differences: pricing model (fixed-price and milestone-paid, with specialized engineers serving US businesses, no layers of account managers and PMs inflating your bill), speed (we deliver 5-page redesigns in 7 days, traditional agencies average 8–16 weeks for the same scope), and SMB focus (500+ small business projects means we understand the operational reality of your size, you don\'t need enterprise features, you need a site that generates leads and loads fast on a phone). We also own your outcome, not your timeline: fixed prices mean you know the cost before you commit, not after.',
+      'Three differences: pricing model (fixed-price and milestone-paid, with specialized engineers serving US businesses, no layers of account managers and PMs inflating your bill), speed (we deliver 5-page redesigns in 7 days, traditional agencies average 8-16 weeks for the same scope), and SMB focus (500+ small business projects means we understand the operational reality of your size, you don\'t need enterprise features, you need a site that generates leads and loads fast on a phone). We also own your outcome, not your timeline: fixed prices mean you know the cost before you commit, not after.',
   },
   {
     category: 'trust',
@@ -493,7 +494,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'Does FactoryJet offer ongoing support and maintenance after a website redesign?',
     answer:
-      'Yes: every redesign project includes a 14–30 day post-launch support window for bug fixes, content corrections, and minor adjustments at no additional charge. Beyond that, FactoryJet offers website maintenance plans scoped to your site: security updates (critical for WordPress sites), plugin and dependency updates, daily automated backups, uptime monitoring, and a set block of content and minor design changes per month. We also offer a 90-day redesign performance review: a structured analysis of before-and-after conversion rates, organic traffic, and Core Web Vitals to verify the redesign is delivering measurable business results. Redesign clients who skip maintenance typically see performance degradation within 12 months as outdated dependencies accumulate security vulnerabilities.',
+      'Yes: every redesign project includes a 14-30 day post-launch support window for bug fixes, content corrections, and minor adjustments at no additional charge. Beyond that, FactoryJet offers website maintenance plans scoped to your site: security updates (critical for WordPress sites), plugin and dependency updates, daily automated backups, uptime monitoring, and a set block of content and minor design changes per month. We also offer a 90-day redesign performance review: a structured analysis of before-and-after conversion rates, organic traffic, and Core Web Vitals to verify the redesign is delivering measurable business results. Redesign clients who skip maintenance typically see performance degradation within 12 months as outdated dependencies accumulate security vulnerabilities.',
   },
 
   // ── Money-query coverage, added 2026-06-11 ──
@@ -590,13 +591,13 @@ const howToSchema = {
     {
       '@type': 'HowToStep',
       position: 3,
-      name: 'Days 3–4 | Design',
+      name: 'Days 3-4 | Design',
       text: 'We design every page with your brand identity, mobile-first layouts, and conversion-focused UX. You review and approve all designs.',
     },
     {
       '@type': 'HowToStep',
       position: 4,
-      name: 'Days 5–6 | Development & SEO',
+      name: 'Days 5-6 | Development & SEO',
       text: 'We build your site in Next.js or WordPress, optimize Core Web Vitals, add structured data, and connect all integrations.',
     },
     {
@@ -804,7 +805,7 @@ export default function WebsiteRedesignPage() {
                   { category: 'CMS', tools: 'Edit content without a developer' },
                   { category: 'Analytics', tools: 'GA4 + Search Console configured' },
                   { category: 'Forms', tools: 'Lead capture with email notifications' },
-                  { category: 'Support', tools: '14–30 days post-launch included' },
+                  { category: 'Support', tools: '14-30 days post-launch included' },
                 ].map((item) => (
                   <div key={item.category} className="flex items-center justify-between gap-4 py-3.5">
                     <div className="flex items-center gap-2.5">
@@ -829,7 +830,7 @@ export default function WebsiteRedesignPage() {
         <StrategicDarkSection
           eyebrow="THE REAL COST OF AN OUTDATED WEBSITE"
           headline="A site that loads in 8 seconds loses 53% of mobile visitors before they see a single word you wrote."
-          lead="Google research shows 53% of mobile visitors abandon a site that takes more than 3 seconds to load. The average small business website built on a heavy page builder loads in 6–12 seconds on mobile. That means more than half your mobile visitors: your highest-growth traffic segment, are leaving before your business has said anything. A website redesign isn't a marketing expense. It's plugging a leak."
+          lead="Google research shows 53% of mobile visitors abandon a site that takes more than 3 seconds to load. The average small business website built on a heavy page builder loads in 6-12 seconds on mobile. That means more than half your mobile visitors: your highest-growth traffic segment, are leaving before your business has said anything. A website redesign isn't a marketing expense. It's plugging a leak."
           pillars={[
             {
               title: 'Your site\'s first impression happens in 50 milliseconds',
@@ -841,7 +842,7 @@ export default function WebsiteRedesignPage() {
             },
             {
               title: 'Traditional agencies charge enterprise prices for SMB problems',
-              body: 'The average US web design agency charges several times more for a business website redesign, with 8–16 week timelines and hourly billing that makes the final cost unpredictable. That pricing was built for companies with design directors, multiple stakeholder reviews, and RFP processes. FactoryJet delivers the same quality of engineering: fixed-price and milestone-paid, because our experienced team has served US businesses for 12+ years with lean operations. Fixed-price contracts mean you know the cost before we start, not after.',
+              body: 'The average US web design agency charges several times more for a business website redesign, with 8-16 week timelines and hourly billing that makes the final cost unpredictable. That pricing was built for companies with design directors, multiple stakeholder reviews, and RFP processes. FactoryJet delivers the same quality of engineering: fixed-price and milestone-paid, because our experienced team has served US businesses for 12+ years with lean operations. Fixed-price contracts mean you know the cost before we start, not after.',
             },
           ]}
         />
@@ -870,12 +871,30 @@ export default function WebsiteRedesignPage() {
           eyebrow="WHY US SMALL BUSINESSES ARE REDESIGNING NOW"
           headline="Website Redesign Has Shifted from Optional to Competitive Requirement"
           leadParagraphs={[
-            "The combination of Google\'s mobile-first indexing, Core Web Vitals as a ranking factor, and AI-driven search results surfacing structured content has made 2024–2025 the most significant period of website obsolescence for small businesses since the mobile revolution. Sites built before 2021, when Core Web Vitals weren\'t ranking signals and mobile indexing wasn\'t default, are increasingly outranked by competitors who\'ve rebuilt for the current environment.",
+            "The combination of Google\'s mobile-first indexing, Core Web Vitals as a ranking factor, and AI-driven search results surfacing structured content has made 2024-2025 the most significant period of website obsolescence for small businesses since the mobile revolution. Sites built before 2021, when Core Web Vitals weren\'t ranking signals and mobile indexing wasn\'t default, are increasingly outranked by competitors who\'ve rebuilt for the current environment.",
             "In high-competition local markets: Austin, Miami, Denver, Nashville, Portland, Charlotte, Raleigh, and Tampa: the gap between businesses with optimized sites and those without has widened significantly. Google\'s local pack and organic results increasingly favor sites with fast load times, mobile usability passes, and structured data. A 3-second load time advantage over a local competitor is not a UX improvement, it\'s a ranking advantage.",
-            "FactoryJet has delivered 500+ website redesigns for US small businesses across every major market. The pattern is consistent: businesses that invest in a proper redesign see lead volume increase within 60–90 days, not because of magic, but because the structural improvements address the exact signals Google uses to determine which site deserves the top position.",
+            "FactoryJet has delivered 500+ website redesigns for US small businesses across every major market. The pattern is consistent: businesses that invest in a proper redesign see lead volume increase within 60-90 days, not because of magic, but because the structural improvements address the exact signals Google uses to determine which site deserves the top position.",
           ]}
           stats={US_REDESIGN_STATS}
         />
+
+        {/* ── 8B. INTERACTIVE VALUE CALCULATOR ────────────────────────────── */}
+        <section className="bg-[#FFF8F5] py-16 md:py-24 border-y border-[#E7DED6]">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <span className="inline-block text-sm font-semibold tracking-wider text-[#F05A28] uppercase font-fj-mono">
+                Interactive Revenue & Scope Estimator
+              </span>
+              <h2 className="mt-3 text-3xl font-extrabold text-[#0F0F12] sm:text-4xl font-fj-display">
+                Calculate the ROI of a High-Performance Website Redesign
+              </h2>
+              <p className="mt-4 text-lg text-[#333333] font-fj-body">
+                Estimate how much revenue your current website is leaking and what a sub-second, conversion-optimized redesign delivers to your bottom line.
+              </p>
+            </div>
+            <WebDesignValueCalculator region="us" />
+          </div>
+        </section>
 
         {/* ── 9. COMPARISON TABLE ──────────────────────────────────────────── */}
         <ComparisonTable

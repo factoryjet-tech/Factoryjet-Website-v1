@@ -19,6 +19,7 @@ import PricingTiers from '@/components/v2/PricingTiers';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
+import WebDesignValueCalculator from '@/components/v2/WebDesignValueCalculator';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    SEO / Metadata
@@ -126,7 +127,7 @@ const LEGAL_SERVICES = [
     name: 'Practice Area Pages',
     description:
       'The single highest-ROI investment in a law firm website. Each practice area you want to rank for needs its own dedicated page, not a section on a single Services page. We design and build practice area pages with keyword-targeted content, local schema markup, FAQ sections that capture voice search queries, and CTAs positioned where intent is highest.',
-    example: 'Firms with individual practice area pages rank for 3–5× more local search queries than firms with a single Services page.',
+    example: 'Firms with individual practice area pages rank for 3-5× more local search queries than firms with a single Services page.',
     linkLabel: 'Get a free SEO audit',
     linkHref: '/contact',
   },
@@ -142,7 +143,7 @@ const LEGAL_SERVICES = [
     name: 'Consultation Intake Optimization',
     description:
       'Most law firm contact forms ask for a name and email and leave prospective clients with no idea what happens next. We redesign intake flows with multi-step forms that pre-qualify case type, capture key details the intake team needs, set expectations about response time, and confirm submission in a way that reduces anxiety and drop-off.',
-    example: 'Multi-step intake forms with clear expectations convert 40–60% more consultation requests than single-field contact forms.',
+    example: 'Multi-step intake forms with clear expectations convert 40-60% more consultation requests than single-field contact forms.',
     linkLabel: 'Book a strategy call',
     linkHref: '/contact',
   },
@@ -158,7 +159,7 @@ const LEGAL_SERVICES = [
     name: 'Legal Blog & Thought Leadership',
     description:
       'A law firm blog that covers the questions your prospective clients are actually searching for generates compounding organic traffic over time. We design blog architecture that supports long-tail SEO, integrates with practice area pages through internal linking, and presents attorneys as authoritative voices in their practice area, not just generic legal tips.',
-    example: 'Active law firm blogs with practice area-specific content generate 3–4× more organic sessions within 12 months of launch.',
+    example: 'Active law firm blogs with practice area-specific content generate 3-4× more organic sessions within 12 months of launch.',
     linkLabel: 'See content strategy services',
     linkHref: '/contact',
   },
@@ -166,7 +167,7 @@ const LEGAL_SERVICES = [
     name: 'Contingency Fee & Pricing Pages',
     description:
       'Prospective clients search for cost information before they call, and law firms that answer this question clearly on their website capture leads that competitors lose. We design fee structure pages that explain contingency arrangements, flat fees, hourly billing, and retainers in plain language, reducing the price anxiety that prevents consultations.',
-    example: 'Transparent fee pages increase consultation request rates by 25–35%, especially for consumer practice areas.',
+    example: 'Transparent fee pages increase consultation request rates by 25-35%, especially for consumer practice areas.',
     linkLabel: 'Start a conversation',
     linkHref: '/contact',
   },
@@ -340,9 +341,9 @@ const PRICING_TIERS = [
     name: 'Full Law Firm Website',
     priceRange: 'Fixed price, scoped to your build',
     description:
-      'A complete law firm website for multi-attorney practices, 15–30 pages with individual attorney profiles, full practice area page architecture, blog, local SEO structure, and intake optimization. The most popular choice for established firms competing for local search visibility.',
+      'A complete law firm website for multi-attorney practices, 15-30 pages with individual attorney profiles, full practice area page architecture, blog, local SEO structure, and intake optimization. The most popular choice for established firms competing for local search visibility.',
     features: [
-      '15–30 pages with full content architecture',
+      '15-30 pages with full content architecture',
       'Up to 8 individual practice area pages (keyword and location targeted)',
       'Multiple attorney profile pages with credentials and testimonials',
       'Legal blog with category architecture for SEO',
@@ -406,7 +407,7 @@ const FAQ_ITEMS = [
     category: 'what-law-site-needs',
     question: 'Do I need a separate page for each practice area?',
     answer:
-      'Yes, this is the single most important structural decision in a law firm website. Google cannot rank a single "Practice Areas" page for "personal injury attorney Austin" and "criminal defense attorney Austin" and "DUI attorney Austin" simultaneously. Each practice area needs its own dedicated page with keyword-targeted content, practice-area-specific FAQ, schema markup, and internal links. Law firms that restructure from a single services page to individual practice area pages consistently see ranking improvements within 60–90 days, not because of better content, but because the structure finally allows Google to understand what each page is about.',
+      'Yes, this is the single most important structural decision in a law firm website. Google cannot rank a single "Practice Areas" page for "personal injury attorney Austin" and "criminal defense attorney Austin" and "DUI attorney Austin" simultaneously. Each practice area needs its own dedicated page with keyword-targeted content, practice-area-specific FAQ, schema markup, and internal links. Law firms that restructure from a single services page to individual practice area pages consistently see ranking improvements within 60-90 days, not because of better content, but because the structure finally allows Google to understand what each page is about.',
   },
   {
     category: 'what-law-site-needs',
@@ -426,7 +427,7 @@ const FAQ_ITEMS = [
     category: 'process',
     question: 'How long does it take to build a law firm website?',
     answer:
-      'A solo or small firm website (10 pages) takes 4–6 weeks. A full law firm website (15–30 pages, multiple attorneys, blog) runs 6–10 weeks. Large firm builds with 30+ pages and custom intake workflows are 10–14 weeks. The timeline driver is usually content, specifically attorney biography drafts and professional photography. We\'ll flag these requirements at kickoff so you can coordinate photo sessions and content gathering in parallel with design work, keeping the overall timeline tight.',
+      'A solo or small firm website (10 pages) takes 4-6 weeks. A full law firm website (15-30 pages, multiple attorneys, blog) runs 6-10 weeks. Large firm builds with 30+ pages and custom intake workflows are 10-14 weeks. The timeline driver is usually content, specifically attorney biography drafts and professional photography. We\'ll flag these requirements at kickoff so you can coordinate photo sessions and content gathering in parallel with design work, keeping the overall timeline tight.',
   },
   {
     category: 'process',
@@ -458,7 +459,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'What is the ROI of a professional law firm website?',
     answer:
-      'Legal services have among the highest consultation-to-retainer rates of any professional services vertical, clients who contact a law firm are almost always in active need. A single new personal injury, estate planning, or business law client from organic search can be worth $5,000–$50,000+ in retained fees. If a redesigned website increases consultation requests by 40% (a typical result we see), a firm taking 10 consultations/month from organic traffic goes to 14, and if even 2 of those additional consultations convert to retained clients at $10,000 average, the website has paid for itself before the first quarter ends.',
+      'Legal services have among the highest consultation-to-retainer rates of any professional services vertical, clients who contact a law firm are almost always in active need. A single new personal injury, estate planning, or business law client from organic search can be worth $5,000-$50,000+ in retained fees. If a redesigned website increases consultation requests by 40% (a typical result we see), a firm taking 10 consultations/month from organic traffic goes to 14, and if even 2 of those additional consultations convert to retained clients at $10,000 average, the website has paid for itself before the first quarter ends.',
   },
 
   /* ── Legal SEO ── */
@@ -478,7 +479,7 @@ const FAQ_ITEMS = [
     category: 'seo',
     question: 'How long does it take for a new law firm website to rank on Google?',
     answer:
-      'For a new site with no existing Google authority, first-page rankings for competitive "[practice area] attorney [city]" queries typically take 6–12 months of consistent publishing and link building. For a redesigned site with existing authority, ranking improvements from better practice area page structure and schema implementation are typically visible within 60–90 days. Local pack appearance (the map with 3 firms at the top of search results) is primarily driven by Google Business Profile optimization and reviews, improvements there can appear within 4–8 weeks of correct optimization. We\'ll set realistic expectations for your specific market and starting position during the initial audit.',
+      'For a new site with no existing Google authority, first-page rankings for competitive "[practice area] attorney [city]" queries typically take 6-12 months of consistent publishing and link building. For a redesigned site with existing authority, ranking improvements from better practice area page structure and schema implementation are typically visible within 60-90 days. Local pack appearance (the map with 3 firms at the top of search results) is primarily driven by Google Business Profile optimization and reviews, improvements there can appear within 4-8 weeks of correct optimization. We\'ll set realistic expectations for your specific market and starting position during the initial audit.',
   },
 
   /* ── Trust & Compliance ── */
@@ -511,7 +512,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'Can you build a law firm website with a client intake form, client portal, or scheduling integration?',
     answer:
-      'Yes, functional client intake is one of the most important conversion elements on a law firm website, and one that most agencies treat as an afterthought. FactoryJet builds: multi-step intake forms with practice-area-specific field logic (personal injury intake asks different questions than business formation intake), Calendly or Cal.com scheduling integration for consultation booking directly from the website, secure client portal access using password-protected pages or dedicated portal software (Clio, MyCase, or custom-built), electronic retainer agreement signing via DocuSign or PandaDoc embedded in the intake flow, and CRM routing that creates a new matter record in Clio or Lawmatics automatically when a form is submitted. A well-built intake flow can increase qualified consultation bookings by 40–60% over a contact form alone.',
+      'Yes, functional client intake is one of the most important conversion elements on a law firm website, and one that most agencies treat as an afterthought. FactoryJet builds: multi-step intake forms with practice-area-specific field logic (personal injury intake asks different questions than business formation intake), Calendly or Cal.com scheduling integration for consultation booking directly from the website, secure client portal access using password-protected pages or dedicated portal software (Clio, MyCase, or custom-built), electronic retainer agreement signing via DocuSign or PandaDoc embedded in the intake flow, and CRM routing that creates a new matter record in Clio or Lawmatics automatically when a form is submitted. A well-built intake flow can increase qualified consultation bookings by 40-60% over a contact form alone.',
   },
   {
     category: 'trust',
@@ -828,6 +829,24 @@ export default function LawFirmWebsiteDesignPage() {
           ]}
           stats={LEGAL_STATS}
         />
+
+        {/* ── 8B. INTERACTIVE VALUE ESTIMATOR ──────────────────────────────── */}
+        <section className="bg-[#FFF8F5] py-16 md:py-24 border-y border-[#E7DED6]">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <span className="inline-block text-sm font-semibold tracking-wider text-[#F05A28] uppercase font-fj-mono">
+                Interactive Consultation & Revenue Estimator
+              </span>
+              <h2 className="mt-3 text-3xl font-extrabold text-[#0F0F12] sm:text-4xl font-fj-display">
+                Estimate Your Law Firm Website ROI
+              </h2>
+              <p className="mt-4 text-lg text-[#333333] font-fj-body">
+                Calculate estimated organic search traffic value, consultation request lift, and client retainer payback from an authoritative practice website.
+              </p>
+            </div>
+            <WebDesignValueCalculator region="us" />
+          </div>
+        </section>
 
         {/* ── 9. COMPARISON TABLE ──────────────────────────────────────────── */}
         <ComparisonTable

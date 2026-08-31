@@ -19,6 +19,7 @@ import PricingTiers from '@/components/v2/PricingTiers';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
+import AiAgentRoiCalculator from '@/components/ai-agent/AiAgentRoiCalculator';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    SEO / Metadata
@@ -112,7 +113,7 @@ const serviceSchema = {
     {
       '@type': 'Offer',
       name: 'Growth Automation Platform',
-      description: '3–5 interconnected automated workflows with AI decision layer and full tool integrations.',
+      description: '3-5 interconnected automated workflows with AI decision layer and full tool integrations.',
     },
     {
       '@type': 'Offer',
@@ -293,7 +294,7 @@ const COMPARISON_ROWS = [
   },
   {
     feature: 'Delivery timeline',
-    values: ['3 days – 4 weeks', '4–12 weeks', 'Ongoing, never fully done', '2–6 weeks (unreliable)'],
+    values: ['3 days - 4 weeks', '4-12 weeks', 'Ongoing, never fully done', '2-6 weeks (unreliable)'],
   },
   {
     feature: 'AI decision layer (not just routing)',
@@ -365,10 +366,10 @@ const PRICING_TIERS = [
     name: 'Starter',
     priceRange: 'Scoped to your build',
     description:
-      'One end-to-end automated workflow for your highest-impact manual process. Connects 2–3 tools, includes an AI decision layer where needed, and goes live in under 2 weeks.',
+      'One end-to-end automated workflow for your highest-impact manual process. Connects 2-3 tools, includes an AI decision layer where needed, and goes live in under 2 weeks.',
     features: [
       'Single workflow automation (lead nurturing, invoicing, or support triage)',
-      'Connects 2–3 existing tools via API',
+      'Connects 2-3 existing tools via API',
       'AI classification or content generation layer (where applicable)',
       'Built in n8n, Make.com, or Zapier based on your stack',
       'Error handling and edge case logic included',
@@ -383,7 +384,7 @@ const PRICING_TIERS = [
     description:
       'Three to five interconnected automated workflows with a shared AI layer, full CRM integration, and a monitoring dashboard. The most popular choice for US SMBs automating their core operations.',
     features: [
-      '3–5 interconnected automated workflows',
+      '3-5 interconnected automated workflows',
       'Full CRM integration (HubSpot, Salesforce, Pipedrive, or Zoho)',
       'AI decision layer across all workflows (Claude or GPT-4o)',
       'Custom monitoring dashboard, no code required to operate',
@@ -459,7 +460,7 @@ const FAQ_ITEMS = [
     category: 'process',
     question: 'How long does it take to automate a workflow?',
     answer:
-      'Simple single-step automations, connect two tools, trigger an action, can go live in 3–5 business days. Multi-step workflows with AI decision layers and CRM integrations typically take 2–3 weeks. Complex multi-department platforms with custom logic and compliance requirements run 4–8 weeks. We give you a firm timeline after the free audit, not before, because the process you want to automate drives the scope completely.',
+      'Simple single-step automations, connect two tools, trigger an action, can go live in 3-5 business days. Multi-step workflows with AI decision layers and CRM integrations typically take 2-3 weeks. Complex multi-department platforms with custom logic and compliance requirements run 4-8 weeks. We give you a firm timeline after the free audit, not before, because the process you want to automate drives the scope completely.',
   },
   {
     category: 'process',
@@ -550,7 +551,7 @@ const FAQ_ITEMS = [
     category: 'what-is-automation',
     question: 'How do I know if my business process is a good candidate for AI automation?',
     answer:
-      'A process is a strong automation candidate when it has four characteristics: it\'s repetitive (done more than 10 times per week), rule-based (the decision logic can be written down as \'if X then Y\'), data-driven (it involves moving, transforming, or acting on data), and currently done by a human who\'d rather be doing something else. Strong candidates: invoice processing, lead routing, customer support tier-1 responses, report generation, social media scheduling, CRM data enrichment, and order processing. Weak candidates: strategic decisions, creative judgment calls, relationship-building conversations, and novel situations requiring human context. On a discovery call, FactoryJet maps your top 10 workflows and identifies the 2–3 with the highest automation ROI.',
+      'A process is a strong automation candidate when it has four characteristics: it\'s repetitive (done more than 10 times per week), rule-based (the decision logic can be written down as \'if X then Y\'), data-driven (it involves moving, transforming, or acting on data), and currently done by a human who\'d rather be doing something else. Strong candidates: invoice processing, lead routing, customer support tier-1 responses, report generation, social media scheduling, CRM data enrichment, and order processing. Weak candidates: strategic decisions, creative judgment calls, relationship-building conversations, and novel situations requiring human context. On a discovery call, FactoryJet maps your top 10 workflows and identifies the 2-3 with the highest automation ROI.',
   },
   {
     category: 'trust',
@@ -885,7 +886,7 @@ export default function AIAutomationPage() {
             },
             {
               title: 'US automation agencies are priced for enterprise budgets',
-              body: 'The average US AI automation agency charges enterprise rates for a mid-scope automation project, on a timeline of months. That price point was designed for companies with 100+ employees and a six-figure software budget. FactoryJet\'s Growth tier delivers the same engineering quality, several interconnected workflows with AI decision-making, at fixed-price, in 2–4 weeks. We built for your budget, not theirs.',
+              body: 'The average US AI automation agency charges enterprise rates for a mid-scope automation project, on a timeline of months. That price point was designed for companies with 100+ employees and a six-figure software budget. FactoryJet\'s Growth tier delivers the same engineering quality, several interconnected workflows with AI decision-making, at fixed-price, in 2-4 weeks. We built for your budget, not theirs.',
             },
           ]}
         />
@@ -918,6 +919,24 @@ export default function AIAutomationPage() {
           ]}
           stats={US_AUTOMATION_STATS}
         />
+
+        {/* ── 8B. INTERACTIVE ROI CALCULATOR ──────────────────────────────── */}
+        <section className="bg-[#FFF8F5] py-16 md:py-24 border-y border-[#E7DED6]">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <span className="inline-block text-sm font-semibold tracking-wider text-[#F05A28] uppercase font-fj-mono">
+                Interactive ROI & Hours Saved Estimator
+              </span>
+              <h2 className="mt-3 text-3xl font-extrabold text-[#0F0F12] sm:text-4xl font-fj-display">
+                Calculate Your Automation Return on Investment
+              </h2>
+              <p className="mt-4 text-lg text-[#333333] font-fj-body">
+                Estimate how many manual labor hours your team can eliminate each week and the direct payroll savings delivered by custom automated workflows.
+              </p>
+            </div>
+            <AiAgentRoiCalculator defaultWorkflow="erp" source="ai-automation" />
+          </div>
+        </section>
 
         {/* ── 9. COMPARISON TABLE ──────────────────────────────────────────── */}
         <ComparisonTable

@@ -12,6 +12,7 @@ import FAQ, { type FAQItem, type FAQCategory } from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
 import JsonLd from '@/components/JsonLd';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import EcommerceRoiCalculator from '@/components/commerce/EcommerceRoiCalculator';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    /services/ecommerce-marketing-agency: US paid acquisition and marketing hub.
@@ -999,6 +1000,24 @@ export default function EcommerceMarketingAgencyPage() {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* ── INTERACTIVE ECOMMERCE ROI ESTIMATOR ──────────────────────────── */}
+        <section className="bg-[#FFF8F5] py-16 md:py-24 border-y border-[#E7DED6]">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <span className="inline-block text-sm font-semibold tracking-wider text-[#F05A28] uppercase font-fj-mono">
+                Interactive ROAS & Profitability Estimator
+              </span>
+              <h2 className="mt-3 text-3xl font-extrabold text-[#0F0F12] sm:text-4xl font-fj-display">
+                Estimate Your E-Commerce Marketing ROI
+              </h2>
+              <p className="mt-4 text-lg text-[#333333] font-fj-body">
+                Calculate estimated blended return on ad spend (ROAS), contribution margin, and customer acquisition payback across paid channels.
+              </p>
+            </div>
+            <EcommerceRoiCalculator source="ecommerce-marketing-agency" defaultPlatform="shopify" />
           </div>
         </section>
 

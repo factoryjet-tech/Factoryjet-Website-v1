@@ -19,6 +19,7 @@ import PricingTiers from '@/components/v2/PricingTiers';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
+import WebDesignValueCalculator from '@/components/v2/WebDesignValueCalculator';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    SEO / Metadata
@@ -114,7 +115,7 @@ const WP_SERVICES = [
     name: 'Custom WordPress Theme Development',
     description:
       'We build WordPress themes from scratch in PHP, HTML, CSS, and JavaScript, no page builders, no purchased templates. Every theme is written specifically for your site\'s content structure, which means clean code, fast load times, and a Lighthouse score that reflects engineering discipline, not luck.',
-    example: 'Custom themes load 60–80% faster than equivalent page builder builds on the same hosting.',
+    example: 'Custom themes load 60-80% faster than equivalent page builder builds on the same hosting.',
     linkLabel: 'Get a free consultation',
     linkHref: '/contact',
   },
@@ -122,7 +123,7 @@ const WP_SERVICES = [
     name: 'WordPress Website Redesign',
     description:
       'Your current Elementor or Divi site is probably costing you organic traffic and converting visitors at a fraction of what it could. We redesign WordPress sites from page builders into clean custom themes, keeping your content, improving your speed, and rebuilding the conversion architecture from the ground up.',
-    example: 'Elementor-to-custom-theme migrations improve Lighthouse performance scores from 35–55 to 85–95+.',
+    example: 'Elementor-to-custom-theme migrations improve Lighthouse performance scores from 35-55 to 85-95+.',
     linkLabel: 'See redesign services',
     linkHref: '/services/website-redesign',
   },
@@ -130,7 +131,7 @@ const WP_SERVICES = [
     name: 'WooCommerce Store Design',
     description:
       'WooCommerce is the most flexible e-commerce platform on WordPress, and the most commonly under-optimized. We design and build WooCommerce stores with custom product pages, mobile-first checkout, cart abandonment recovery, and performance optimization that doesn\'t require an expensive premium hosting plan to achieve decent load times.',
-    example: 'Optimized WooCommerce stores convert at 2–3% vs. 0.5–1% for default theme builds.',
+    example: 'Optimized WooCommerce stores convert at 2-3% vs. 0.5-1% for default theme builds.',
     linkLabel: 'See WooCommerce options',
     linkHref: '#pricing',
   },
@@ -138,7 +139,7 @@ const WP_SERVICES = [
     name: 'WordPress Plugin Development',
     description:
       'When off-the-shelf plugins don\'t do exactly what your business needs, we build custom WordPress plugins. Custom post types, custom taxonomies, API integrations, membership systems, booking engines, directory listings, and workflow-specific functionality, built to your spec and integrated cleanly with your theme.',
-    example: 'Custom plugins eliminate the performance overhead of 3–5 general-purpose plugins covering the same function.',
+    example: 'Custom plugins eliminate the performance overhead of 3-5 general-purpose plugins covering the same function.',
     linkLabel: 'Book a strategy call',
     linkHref: '/contact',
   },
@@ -146,7 +147,7 @@ const WP_SERVICES = [
     name: 'WordPress Performance Optimization',
     description:
       'Slow WordPress sites almost always share the same problems: a bloated theme, too many plugins, unoptimized images, no caching, and shared hosting. We audit, diagnose, and fix, implementing WP Rocket or Perfmatters caching, image optimization, database cleanup, and code minification to move your Lighthouse score from failing to passing.',
-    example: 'Most WordPress performance audits uncover 4–7 specific issues that account for 90% of the speed problem.',
+    example: 'Most WordPress performance audits uncover 4-7 specific issues that account for 90% of the speed problem.',
     linkLabel: 'Get a free speed audit',
     linkHref: '/contact',
   },
@@ -154,7 +155,7 @@ const WP_SERVICES = [
     name: 'WordPress Multisite & Enterprise Builds',
     description:
       'Multi-location businesses, franchise networks, and organizations with regional sites benefit from WordPress Multisite: one installation, many distinct sites, shared users and content where appropriate, separate branding and admin where needed. We architect and build Multisite networks for organizations that need the flexibility of separate sites with the efficiency of unified management.',
-    example: 'WordPress Multisite reduces content management overhead by 40–60% for multi-location businesses.',
+    example: 'WordPress Multisite reduces content management overhead by 40-60% for multi-location businesses.',
     linkLabel: 'Start a conversation',
     linkHref: '/contact',
   },
@@ -201,7 +202,7 @@ const WP_STATS = [
     sourceLabel: 'W3Techs',
   },
   {
-    value: '60–80%',
+    value: '60-80%',
     label: 'faster: custom WordPress themes vs. page builder builds on identical hosting environments',
     sourceUrl: 'https://developers.google.com/web/tools/lighthouse',
     sourceLabel: 'Google Lighthouse',
@@ -228,7 +229,7 @@ const COMPARISON_ROWS = [
   },
   {
     feature: 'Delivery timeline',
-    values: ['3–5 weeks (10 pages)', '8–20 weeks', '2–4 weeks', '4–12 weeks (unreliable)'],
+    values: ['3-5 weeks (10 pages)', '8-20 weeks', '2-4 weeks', '4-12 weeks (unreliable)'],
   },
   {
     feature: 'Custom theme (no page builder)',
@@ -317,9 +318,9 @@ const PRICING_TIERS = [
     name: 'Business WordPress',
     priceRange: 'Get a quote',
     description:
-      'A full 15–30 page custom WordPress website with custom post types, advanced content architecture, schema markup, and a design system your team can grow without breaking. The most popular choice for service businesses and growing companies.',
+      'A full 15-30 page custom WordPress website with custom post types, advanced content architecture, schema markup, and a design system your team can grow without breaking. The most popular choice for service businesses and growing companies.',
     features: [
-      '15–30 pages with custom post types and templates',
+      '15-30 pages with custom post types and templates',
       'Custom WordPress design system (typography, colors, components)',
       'Advanced content architecture, blog, team, case studies, FAQs',
       'Full on-page SEO: schema markup, canonical tags, XML sitemaps',
@@ -375,7 +376,7 @@ const FAQ_ITEMS = [
     category: 'what-is-wp',
     question: 'What is a custom WordPress theme and why does it matter?',
     answer:
-      'A custom WordPress theme is PHP and CSS code written specifically for your site, it includes exactly the components your site needs and nothing else. Page builder themes (Elementor, Divi, WPBakery) take the opposite approach: they load a full framework with hundreds of features your site won\'t use, generating bloated HTML that search engines struggle to parse and browsers load slowly. The performance difference is significant: page builder sites routinely score 30–55 on Lighthouse performance. Custom theme sites built by FactoryJet target 85–100. That gap translates directly to mobile load time, Core Web Vitals scores, and Google ranking signals.',
+      'A custom WordPress theme is PHP and CSS code written specifically for your site, it includes exactly the components your site needs and nothing else. Page builder themes (Elementor, Divi, WPBakery) take the opposite approach: they load a full framework with hundreds of features your site won\'t use, generating bloated HTML that search engines struggle to parse and browsers load slowly. The performance difference is significant: page builder sites routinely score 30-55 on Lighthouse performance. Custom theme sites built by FactoryJet target 85-100. That gap translates directly to mobile load time, Core Web Vitals scores, and Google ranking signals.',
   },
   {
     category: 'what-is-wp',
@@ -401,7 +402,7 @@ const FAQ_ITEMS = [
     category: 'process',
     question: 'How long does it take to build a custom WordPress website?',
     answer:
-      'A standard business WordPress site of 10–15 pages takes 3–5 weeks. Sites with 20–40 pages and custom post types (team profiles, case studies, resources, events) run 6–10 weeks. WooCommerce stores take 4–8 weeks. The timeline is primarily driven by the speed of your content and approvals: our engineering process has structured 24-hour checkpoints to keep projects moving. Clients who come in with existing content and give fast feedback routinely hit the faster end of these timelines.',
+      'A standard business WordPress site of 10-15 pages takes 3-5 weeks. Sites with 20-40 pages and custom post types (team profiles, case studies, resources, events) run 6-10 weeks. WooCommerce stores take 4-8 weeks. The timeline is primarily driven by the speed of your content and approvals: our engineering process has structured 24-hour checkpoints to keep projects moving. Clients who come in with existing content and give fast feedback routinely hit the faster end of these timelines.',
   },
   {
     category: 'process',
@@ -421,13 +422,13 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does a custom WordPress website cost?',
     answer:
-      'FactoryJet\'s custom WordPress websites are fixed-price and scoped to your build. The main cost drivers are page count (a focused site with a custom theme, no page builders, mobile-first build, and full SEO setup vs. a 15–30 page site with custom post types) and whether you need a WooCommerce store. Fixed-price and milestone-paid, with the full number confirmed on a free consultation before work starts: our engineering team has built WordPress sites for US businesses for 12+ years with the same engineering standards, leaner operations.',
+      'FactoryJet\'s custom WordPress websites are fixed-price and scoped to your build. The main cost drivers are page count (a focused site with a custom theme, no page builders, mobile-first build, and full SEO setup vs. a 15-30 page site with custom post types) and whether you need a WooCommerce store. Fixed-price and milestone-paid, with the full number confirmed on a free consultation before work starts: our engineering team has built WordPress sites for US businesses for 12+ years with the same engineering standards, leaner operations.',
   },
   {
     category: 'pricing',
     question: 'What is the ROI of a custom WordPress website vs. a page builder site?',
     answer:
-      'Three return dimensions: SEO (custom themes pass Core Web Vitals, page builders don\'t, and Core Web Vitals are a direct ranking signal), conversion (faster sites convert better: 1 second of load time improvement = 5–7% improvement in conversion rate), and maintenance (custom themes have no plugin update conflicts, no page builder compatibility issues, and fewer security vulnerabilities, reducing ongoing maintenance costs). Most clients who switch from a page builder to a custom WordPress theme recover the redesign cost within 12 months from the combination of improved organic traffic and reduced developer maintenance time.',
+      'Three return dimensions: SEO (custom themes pass Core Web Vitals, page builders don\'t, and Core Web Vitals are a direct ranking signal), conversion (faster sites convert better: 1 second of load time improvement = 5-7% improvement in conversion rate), and maintenance (custom themes have no plugin update conflicts, no page builder compatibility issues, and fewer security vulnerabilities, reducing ongoing maintenance costs). Most clients who switch from a page builder to a custom WordPress theme recover the redesign cost within 12 months from the combination of improved organic traffic and reduced developer maintenance time.',
   },
   {
     category: 'pricing',
@@ -492,7 +493,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'Does FactoryJet offer ongoing WordPress maintenance and support after launch?',
     answer:
-      'Yes: WordPress maintenance is essential, not optional. WordPress is the world\'s most targeted CMS for security vulnerabilities, sites running outdated plugins and core versions are actively exploited. FactoryJet\'s WordPress maintenance plans (scoped and quoted up front) include: weekly WordPress core, theme, and plugin updates tested on a staging environment before applying to production; daily UpdraftPlus backups stored off-site; uptime monitoring with immediate alerts; Google Search Console monitoring for crawl errors and indexing issues; malware scanning via Wordfence or Sucuri; and 2 hours of content and minor design updates per month. Maintenance clients have never experienced a WordPress hack while under our care. Unmanaged WordPress sites are typically compromised within 18–24 months of launch as security patches go unapplied.',
+      'Yes: WordPress maintenance is essential, not optional. WordPress is the world\'s most targeted CMS for security vulnerabilities, sites running outdated plugins and core versions are actively exploited. FactoryJet\'s WordPress maintenance plans (scoped and quoted up front) include: weekly WordPress core, theme, and plugin updates tested on a staging environment before applying to production; daily UpdraftPlus backups stored off-site; uptime monitoring with immediate alerts; Google Search Console monitoring for crawl errors and indexing issues; malware scanning via Wordfence or Sucuri; and 2 hours of content and minor design updates per month. Maintenance clients have never experienced a WordPress hack while under our care. Unmanaged WordPress sites are typically compromised within 18-24 months of launch as security patches go unapplied.',
   },
 ];
 
@@ -528,13 +529,13 @@ const howToSchema = {
     {
       '@type': 'HowToStep',
       position: 3,
-      name: 'Days 3–4 | Design',
+      name: 'Days 3-4 | Design',
       text: 'We design every page with your brand identity, mobile-first layouts, and conversion-focused UX. You review and approve all designs.',
     },
     {
       '@type': 'HowToStep',
       position: 4,
-      name: 'Days 5–6 | Development & SEO',
+      name: 'Days 5-6 | Development & SEO',
       text: 'We build your site in Next.js or WordPress, optimize Core Web Vitals, add structured data, and connect all integrations.',
     },
     {
@@ -710,7 +711,7 @@ export default function WordPressDevelopmentPage() {
                 FactoryJet builds WordPress themes in PHP with Gutenberg custom blocks: the native WordPress block editor, extended with components designed to your brand system. No page builder framework. No inherited CSS from a parent theme. No plugin dependency for layout control. Your site loads what it needs and nothing else, which is why our WordPress builds consistently pass Core Web Vitals on the same shared hosting that makes page builder sites fail.
               </p>
               <p>
-                For businesses needing e-commerce, we build on WooCommerce with custom product and checkout templates, not the default WooCommerce theme or a storefront theme. Our WooCommerce builds target 2–3% conversion rates vs. the 0.5–1% typical of default theme implementations. If you need a <a href="/services/website-redesign" className="text-[#B23E13] underline underline-offset-2">website redesign</a> from an existing page builder, we handle that migration as well, preserving your content and Google history while rebuilding the performance and design from the ground up.
+                For businesses needing e-commerce, we build on WooCommerce with custom product and checkout templates, not the default WooCommerce theme or a storefront theme. Our WooCommerce builds target 2-3% conversion rates vs. the 0.5-1% typical of default theme implementations. If you need a <a href="/services/website-redesign" className="text-[#B23E13] underline underline-offset-2">website redesign</a> from an existing page builder, we handle that migration as well, preserving your content and Google history while rebuilding the performance and design from the ground up.
               </p>
             </>
           }
@@ -808,10 +809,28 @@ export default function WordPressDevelopmentPage() {
           leadParagraphs={[
             "WordPress powers 43% of the internet and continues to grow market share. The demand for WordPress web design agencies has increased 50% year-over-year as small businesses recognize the flexibility and SEO advantages of a properly built WordPress site over closed SaaS platforms. But the majority of that demand is still being met by agencies using page builders, which means most WordPress websites being built in 2025 are starting with a performance deficit they\'ll carry for the life of the site.",
             "In competitive markets: Austin, Miami, Denver, Nashville, Portland, Charlotte, Raleigh, and Tampa: the performance gap between page builder sites and custom theme sites translates directly into search ranking differences. Two businesses in the same city with the same content quality will rank differently if one has a custom WordPress theme passing Core Web Vitals and one has an Elementor build failing them. That\'s a mechanical advantage that compounding over time.",
-            "FactoryJet has built custom WordPress sites for US businesses across every major market. Our recommendation on every project: build it right the first time, even if it takes 2–3 more weeks than a page builder alternative. The performance and SEO returns are realized over years, not quarters.",
+            "FactoryJet has built custom WordPress sites for US businesses across every major market. Our recommendation on every project: build it right the first time, even if it takes 2-3 more weeks than a page builder alternative. The performance and SEO returns are realized over years, not quarters.",
           ]}
           stats={WP_STATS}
         />
+
+        {/* ── 8B. INTERACTIVE VALUE CALCULATOR ────────────────────────────── */}
+        <section className="bg-[#FFF8F5] py-16 md:py-24 border-y border-[#E7DED6]">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <span className="inline-block text-sm font-semibold tracking-wider text-[#F05A28] uppercase font-fj-mono">
+                Interactive Revenue & Scope Estimator
+              </span>
+              <h2 className="mt-3 text-3xl font-extrabold text-[#0F0F12] sm:text-4xl font-fj-display">
+                Calculate the ROI of a Custom WordPress Build
+              </h2>
+              <p className="mt-4 text-lg text-[#333333] font-fj-body">
+                See how migrating from a slow page builder or launching an engineered WordPress theme transforms conversion rates, lead generation, and total cost of ownership.
+              </p>
+            </div>
+            <WebDesignValueCalculator region="us" />
+          </div>
+        </section>
 
         {/* ── 9. COMPARISON TABLE ──────────────────────────────────────────── */}
         <ComparisonTable

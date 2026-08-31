@@ -19,6 +19,7 @@ import PricingTiers from '@/components/v2/PricingTiers';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
+import WebDesignValueCalculator from '@/components/v2/WebDesignValueCalculator';
 
 /* ----------------------------------------------------------------------------─
    SEO / Metadata
@@ -172,7 +173,7 @@ const STATS = [
   {
     value: '7 days',
     label: 'delivery guarantee for 5-page websites',
-    microcopy: 'vs. 6–16 weeks at most traditional agencies',
+    microcopy: 'vs. 6-16 weeks at most traditional agencies',
     categoryLabel: 'DELIVERY SPEED',
   },
   {
@@ -197,7 +198,7 @@ const COMPARISON_ROWS = [
   },
   {
     feature: 'Delivery time',
-    values: ['7 days', 'Your weekends', '4–8 weeks', '6–16 weeks'],
+    values: ['7 days', 'Your weekends', '4-8 weeks', '6-16 weeks'],
   },
   {
     feature: 'Custom design (not a template)',
@@ -330,17 +331,17 @@ const FAQ_ITEMS = [
   // -- Planning Your Site ------------------------------------------------─
   {
     question: 'What pages does a small business website need?',
-    answer: `Most small business websites need 5–8 core pages: a homepage, a services or products page, an about page, a contact page, and ideally a blog or FAQ for SEO. If you serve multiple locations or industries, each may need its own dedicated landing page. The homepage does the heavy lifting, it needs to answer "what do you do, who is it for, and why should I trust you" within the first 5 seconds. Every other page exists to go deeper on one of those questions.`,
+    answer: `Most small business websites need 5-8 core pages: a homepage, a services or products page, an about page, a contact page, and ideally a blog or FAQ for SEO. If you serve multiple locations or industries, each may need its own dedicated landing page. The homepage does the heavy lifting, it needs to answer "what do you do, who is it for, and why should I trust you" within the first 5 seconds. Every other page exists to go deeper on one of those questions.`,
     category: 'planning',
   },
   {
     question: 'Should I use a website builder or hire a web designer?',
-    answer: `Use a website builder if: you have 30–50 hours to invest in building and maintaining it, your business doesn't depend heavily on web traffic, and a template-based design is acceptable. Hire a web designer if: your website is your primary lead source, you want to rank in Google, you need custom functionality, or you don't have that time. The modest annual subscription savings from a DIY builder rarely justify the time cost and quality trade-off for a business where the website matters.`,
+    answer: `Use a website builder if: you have 30-50 hours to invest in building and maintaining it, your business doesn't depend heavily on web traffic, and a template-based design is acceptable. Hire a web designer if: your website is your primary lead source, you want to rank in Google, you need custom functionality, or you don't have that time. The modest annual subscription savings from a DIY builder rarely justify the time cost and quality trade-off for a business where the website matters.`,
     category: 'planning',
   },
   {
     question: 'How many pages does a small business website need?',
-    answer: `A functional small business website needs at least 4–5 pages: home, services/products, about, and contact. For better SEO, add individual service pages (one per service you want to rank for), location pages if you serve multiple areas, and a blog for ongoing content. More pages aren't always better: every page needs a clear purpose. A focused 5-page site beats a bloated 20-page site with thin content every time.`,
+    answer: `A functional small business website needs at least 4-5 pages: home, services/products, about, and contact. For better SEO, add individual service pages (one per service you want to rank for), location pages if you serve multiple areas, and a blog for ongoing content. More pages aren't always better: every page needs a clear purpose. A focused 5-page site beats a bloated 20-page site with thin content every time.`,
     category: 'planning',
   },
   {
@@ -367,7 +368,7 @@ const FAQ_ITEMS = [
   },
   {
     question: 'How long does a small business website take to build?',
-    answer: `FactoryJet delivers 5-page websites in 7 days: a hard delivery guarantee from when you send us your content. Larger sites (up to 15 pages) take 2–3 weeks. E-commerce stores take 2–4 weeks depending on product count. Traditional agencies typically quote 6–16 weeks for the same scope. Our speed comes from a structured build process and a senior-only team that doesn't have project handoff delays or internal review bottlenecks.`,
+    answer: `FactoryJet delivers 5-page websites in 7 days: a hard delivery guarantee from when you send us your content. Larger sites (up to 15 pages) take 2-3 weeks. E-commerce stores take 2-4 weeks depending on product count. Traditional agencies typically quote 6-16 weeks for the same scope. Our speed comes from a structured build process and a senior-only team that doesn't have project handoff delays or internal review bottlenecks.`,
     category: 'design',
   },
   {
@@ -416,7 +417,7 @@ const FAQ_ITEMS = [
   },
   {
     question: 'How long does it take for a new website to rank in Google?',
-    answer: `A new website typically takes 3–6 months to see meaningful organic search rankings, and that's with a properly built site (fast, mobile-first, technically sound) and active content publishing. Google needs time to crawl and index your site, assess its relevance, and compare it against existing competition. Sites with strong technical SEO foundations rank faster. FactoryJet submits your sitemap to Google Search Console on launch day and configures all the technical signals that help Google understand your site quickly.`,
+    answer: `A new website typically takes 3-6 months to see meaningful organic search rankings, and that's with a properly built site (fast, mobile-first, technically sound) and active content publishing. Google needs time to crawl and index your site, assess its relevance, and compare it against existing competition. Sites with strong technical SEO foundations rank faster. FactoryJet submits your sitemap to Google Search Console on launch day and configures all the technical signals that help Google understand your site quickly.`,
     category: 'seo',
   },
   {
@@ -431,7 +432,7 @@ const FAQ_ITEMS = [
   },
   {
     question: 'Should I have a blog on my small business website?',
-    answer: `A blog is one of the most effective long-term SEO tools for a small business, but only if you're going to publish consistently. A blog with 2–3 posts that's been abandoned since 2022 does more harm than good (signals a dormant business). If you can commit to publishing 1–2 posts per month on topics your customers are searching for, a blog compounds significantly over time. FactoryJet includes blog setup in the Growth package, with a CMS that makes publishing easy even for non-technical owners.`,
+    answer: `A blog is one of the most effective long-term SEO tools for a small business, but only if you're going to publish consistently. A blog with 2-3 posts that's been abandoned since 2022 does more harm than good (signals a dormant business). If you can commit to publishing 1-2 posts per month on topics your customers are searching for, a blog compounds significantly over time. FactoryJet includes blog setup in the Growth package, with a CMS that makes publishing easy even for non-technical owners.`,
     category: 'seo',
   },
 
@@ -458,7 +459,7 @@ const FAQ_ITEMS = [
   },
   {
     question: 'What makes FactoryJet different from other small business web designers?',
-    answer: `Three things separate FactoryJet: speed (7-day delivery guarantee on 5-page sites), value (fixed-price, milestone-paid), and track record (500+ websites built). Most web designers are solo freelancers or small agencies juggling 10–15 clients, which means slow turnarounds, inconsistent quality, and limited accountability. FactoryJet is a structured engineering team that has refined a repeatable process over 12 years. Senior engineers on every project, fixed pricing, and a support window after launch.`,
+    answer: `Three things separate FactoryJet: speed (7-day delivery guarantee on 5-page sites), value (fixed-price, milestone-paid), and track record (500+ websites built). Most web designers are solo freelancers or small agencies juggling 10-15 clients, which means slow turnarounds, inconsistent quality, and limited accountability. FactoryJet is a structured engineering team that has refined a repeatable process over 12 years. Senior engineers on every project, fixed pricing, and a support window after launch.`,
     category: 'factoryjet',
   },
 ];
@@ -495,13 +496,13 @@ const howToSchema = {
     {
       '@type': 'HowToStep',
       position: 3,
-      name: 'Days 3–4 | Design',
+      name: 'Days 3-4 | Design',
       text: 'We design every page with your brand identity, mobile-first layouts, and conversion-focused UX. You review and approve all designs.',
     },
     {
       '@type': 'HowToStep',
       position: 4,
-      name: 'Days 5–6 | Development & SEO',
+      name: 'Days 5-6 | Development & SEO',
       text: 'We build your site in Next.js or WordPress, optimize Core Web Vitals, add structured data, and connect all integrations.',
     },
     {
@@ -664,7 +665,7 @@ export default function SmallBusinessWebDesignPage() {
                   { scenario: 'Slow load speed (3s+)', cost: '53% mobile abandonment', subtext: 'Google penalizes slow sites in rankings' },
                   { scenario: 'Template design', cost: 'High bounce rate', subtext: '75% judge credibility by design' },
                   { scenario: 'No on-page SEO', cost: 'Zero organic traffic', subtext: 'Invisible to search engines' },
-                  { scenario: 'traditional agency build', cost: 'Several times more', subtext: '6–16 week wait before launch' },
+                  { scenario: 'traditional agency build', cost: 'Several times more', subtext: '6-16 week wait before launch' },
                 ].map(({ scenario, cost, subtext }) => (
                   <div key={scenario} className="py-3.5">
                     <p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">{scenario}</p>
@@ -705,8 +706,8 @@ export default function SmallBusinessWebDesignPage() {
               body: `A traditional agency employs account managers, project managers, junior developers billing at senior rates, and UX researchers, many of whom touch your project briefly. FactoryJet has no such structure. Senior engineers do the work directly. No billing multipliers, no handoff delays. The same engineering quality at a fixed, transparent price.`,
             },
             {
-              title: '6–16 weeks to launch when you need 7 days',
-              body: `A small business replacing an outdated website or launching a new one doesn't have 3–4 months to wait. Every month without a working site is a month of missed leads. Traditional agencies have long timelines because they have long internal review cycles, multiple approval stages, and too many projects running simultaneously. FactoryJet's process is designed for speed: one senior team, one project at a time, 7-day delivery guarantee.`,
+              title: '6-16 weeks to launch when you need 7 days',
+              body: `A small business replacing an outdated website or launching a new one doesn't have 3-4 months to wait. Every month without a working site is a month of missed leads. Traditional agencies have long timelines because they have long internal review cycles, multiple approval stages, and too many projects running simultaneously. FactoryJet's process is designed for speed: one senior team, one project at a time, 7-day delivery guarantee.`,
             },
             {
               title: `Templates dressed up as custom design`,
@@ -722,7 +723,7 @@ export default function SmallBusinessWebDesignPage() {
           lead="Four ways to get a small business website. Here's what the decision actually looks like when you compare on the things that matter, cost, speed, quality, and ownership."
           pullQuote={{
             stat: '7 days',
-            caption: 'delivery guarantee for 5-page small business websites. Traditional agencies average 6–16 weeks for the same scope.',
+            caption: 'delivery guarantee for 5-page small business websites. Traditional agencies average 6-16 weeks for the same scope.',
           }}
           columns={COMPARISON_COLUMNS}
           rows={COMPARISON_ROWS}
@@ -733,6 +734,24 @@ export default function SmallBusinessWebDesignPage() {
         <div className="bg-fj-neutral-50">
           <BoringStatsRow stats={STATS} align="center" />
         </div>
+
+        {/* -- 8B. INTERACTIVE VALUE ESTIMATOR -------------------------------- */}
+        <section className="bg-[#FFF8F5] py-16 md:py-24 border-y border-[#E7DED6]">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <span className="inline-block text-sm font-semibold tracking-wider text-[#F05A28] uppercase font-fj-mono">
+                Interactive Revenue & Scope Estimator
+              </span>
+              <h2 className="mt-3 text-3xl font-extrabold text-[#0F0F12] sm:text-4xl font-fj-display">
+                Estimate Your Small Business Website ROI
+              </h2>
+              <p className="mt-4 text-lg text-[#333333] font-fj-body">
+                Calculate estimated organic traffic value, conversion lift, and payback timeline for a high-performance small business website.
+              </p>
+            </div>
+            <WebDesignValueCalculator region="us" />
+          </div>
+        </section>
 
         {/* -- 9. HOW WE'RE DIFFERENT --------------------------------------─-- */}
         <ServiceExplanation

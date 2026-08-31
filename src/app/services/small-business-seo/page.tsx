@@ -12,6 +12,7 @@ import ComparisonTable from '@/components/v2/ComparisonTable';
 
 import HeroInlineForm from '@/components/HeroInlineForm';
 import MidPageCTA from '@/components/v2/MidPageCTA';
+import LocalSeoOpportunityEstimator from '@/components/v2/LocalSeoOpportunityEstimator';
 import './small-business-seo.css';
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -847,6 +848,24 @@ export default function SmallBusinessSeoServicePage() {
             'Columns describe the typical shape of each option as of 2026, not a scorecard. Freelancers and agencies vary enormously, so ask every one of them the same questions this table answers, us included.'
           }
         />
+
+        {/* 5d. INTERACTIVE OPPORTUNITY ESTIMATOR */}
+        <section className="bg-[#FFF8F5] py-16 md:py-24 border-y border-[#E7DED6]">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <span className="inline-block text-sm font-semibold tracking-wider text-[#F05A28] uppercase font-fj-mono">
+                Interactive Revenue & Ranking Estimator
+              </span>
+              <h2 className="mt-3 text-3xl font-extrabold text-[#0F0F12] sm:text-4xl font-fj-display">
+                Estimate Your Small Business SEO Opportunity
+              </h2>
+              <p className="mt-4 text-lg text-[#333333] font-fj-body">
+                Calculate estimated local search traffic volume, organic lead pipeline value, and return on investment for your market.
+              </p>
+            </div>
+            <LocalSeoOpportunityEstimator region="us" />
+          </div>
+        </section>
 
         {/* 6. SCORECARD */}
         <section>
