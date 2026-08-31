@@ -41,6 +41,7 @@ export default function Wordmark({
     <svg
       viewBox="0 0 5788 965"
       focusable="false"
+      style={{ maxHeight: '100%', maxWidth: '100%', ...props.style }}
       {...a11y}
       {...props}
     >
