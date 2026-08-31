@@ -51,6 +51,7 @@ export const US_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
     heading: 'Platforms',
     links: [
       { label: 'Best Ecommerce Platforms',href: '/best-ecommerce-platforms' },
+      { label: 'Shopify vs WooCommerce',  href: '/comparisons/shopify-vs-woocommerce' },
       { label: 'Shopify Plus vs BigCommerce', href: '/comparisons/shopify-plus-vs-bigcommerce' },
       { label: 'Shopify Plus vs Magento', href: '/comparisons/shopify-plus-vs-magento' },
       { label: 'Headless vs Monolithic',  href: '/comparisons/headless-commerce-vs-monolithic' },

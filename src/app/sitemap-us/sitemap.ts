@@ -188,6 +188,7 @@ const US_ROUTES: { path: string; source: string }[] = [
   { path: '/services/walmart-marketplace-agency',          source: 'src/app/services/walmart-marketplace-agency/page.tsx' },
   { path: '/ecommerce-speed-calculator',                   source: 'src/app/ecommerce-speed-calculator/page.tsx' },
   { path: '/comparisons/shopify-plus-vs-bigcommerce',      source: 'src/app/comparisons/shopify-plus-vs-bigcommerce/page.tsx' },
+  { path: '/comparisons/shopify-vs-woocommerce',           source: 'src/app/comparisons/shopify-vs-woocommerce/page.tsx' },
   { path: '/comparisons/shopify-plus-vs-magento',          source: 'src/app/comparisons/shopify-plus-vs-magento/page.tsx' },
   { path: '/comparisons/headless-commerce-vs-monolithic',  source: 'src/app/comparisons/headless-commerce-vs-monolithic/page.tsx' },
   { path: '/replatforming/bigcommerce-to-shopify-plus',    source: 'src/app/replatforming/bigcommerce-to-shopify-plus/page.tsx' },
