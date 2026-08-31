@@ -7,6 +7,9 @@ import FAQ from '@/components/v2/FAQ';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
+import B2bWholesaleCalculator from '@/components/commerce/B2bWholesaleCalculator';
+import Net30PaymentComparison from '@/components/commerce/Net30PaymentComparison';
+import AnswerFirstDefinition from '@/components/commerce/AnswerFirstDefinition';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
@@ -257,6 +260,40 @@ export default function EcommerceForManufacturersPage() {
                 />
               </div>
             </div>
+
+            {/* Answer-First Definitions for AI Overviews & Search Engines */}
+            <div style={{ marginTop: '48px', display: 'grid', gap: '18px' }}>
+              <AnswerFirstDefinition
+                term="Manufacturer Dealer Portals"
+                definition="A manufacturer dealer portal is an authenticated digital ordering hub enabling authorized distributors, dealers, and commercial contractors to place wholesale orders against negotiated contract pricing, check multi-location inventory availability, and submit purchase orders on approved Net terms without sales rep intervention."
+                keyTakeaways={[
+                  'Replaces manual PDF order entry and phone calls with 24/7 self-service ordering',
+                  'Enforces contracted account pricing, volume tiers, and territory exclusions dynamically',
+                  'Integrates directly with factory ERPs for automated sales order ingestion and fulfillment tracking',
+                ]}
+                citationSource="FactoryJet Manufacturing Commerce Architecture Standard (2026)"
+              />
+              <AnswerFirstDefinition
+                term="Parametric & Part Number Search"
+                definition="Parametric search is an engineering-grade product discovery interface allowing industrial buyers to locate replacement components, spare parts, and equipment by filtering on technical specifications (voltage, bore size, pressure rating, material, manufacturer part number) rather than browsing marketing categories."
+                keyTakeaways={[
+                  'Enables rapid lookup across catalogs containing 100,000+ technical SKUs and BOM assemblies',
+                  'Supports cross-reference matching against competitor and OEM superseded part numbers',
+                  'Integrates interactive schematic diagrams with one-click assembly line item cart addition',
+                ]}
+                citationSource="FactoryJet Industrial Catalog Architecture Standard (2026)"
+              />
+              <AnswerFirstDefinition
+                term="ERP Part Master & Real-Time Stock Synchronization"
+                definition="Real-time ERP synchronization connects an enterprise manufacturer's central system of record (NetSuite, SAP, Epicor Prophet 21, Infor) to the commerce storefront via bi-directional webhook and API pipelines, ensuring customer credit limits, multi-warehouse stock allocations, and custom pricing matrices remain 100% accurate."
+                keyTakeaways={[
+                  'Prevents overselling by calculating available-to-promise (ATP) stock across regional distribution hubs',
+                  'Maintains single-source-of-truth customer ledger data in the ERP without duplicate bookkeeping',
+                  'Sub-second transaction latency ensures rapid order confirmation and immediate warehouse dispatch',
+                ]}
+                citationSource="FactoryJet ERP Systems Integration Benchmark (2026)"
+              />
+            </div>
           </div>
         </section>
 
@@ -459,6 +496,25 @@ export default function EcommerceForManufacturersPage() {
                 </tbody>
               </table>
             </div>
+          </div>
+        </section>
+
+        {/* ── Net-30 Payment Terms Comparison ── */}
+        <section className="pp-sec">
+          <div className="pp-wrap">
+            <Net30PaymentComparison />
+          </div>
+        </section>
+
+        {/* ── Interactive B2B Wholesale Savings & ROI Calculator ── */}
+        <section className="pp-sec tint" id="b2b-wholesale-roi-calculator">
+          <div className="pp-wrap">
+            <B2bWholesaleCalculator
+              source="mfg_distributor_ecommerce_page"
+              defaultRevenue={7500000}
+              defaultAov={3800}
+              defaultAccounts={250}
+            />
           </div>
         </section>
 

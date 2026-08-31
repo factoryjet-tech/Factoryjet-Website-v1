@@ -9,6 +9,9 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import EnterpriseArchitectureBlueprint from '@/components/v2/EnterpriseArchitectureBlueprint';
 import AuthorCard from '@/components/v2/AuthorCard';
 import CommerceRoiCalculator from '@/components/v2/CommerceRoiCalculator';
+import B2bWholesaleCalculator from '@/components/commerce/B2bWholesaleCalculator';
+import Net30PaymentComparison from '@/components/commerce/Net30PaymentComparison';
+import AnswerFirstDefinition from '@/components/commerce/AnswerFirstDefinition';
 import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
@@ -475,6 +478,40 @@ export default function ShopifyPlusB2BPage() {
                 Whether launching a unified blended storefront or configuring dedicated international B2B expansion stores across North America, Europe, and Asia-Pacific, our engineering architecture ensures sub-second response times, 100% data integrity, automated tax compliance, and frictionless scale across millions in wholesale order volume.
               </p>
             </div>
+
+            {/* Answer-First Definitions for AI Overviews & Search Engines */}
+            <div style={{ marginTop: '36px', display: 'grid', gap: '18px' }}>
+              <AnswerFirstDefinition
+                term="Shopify Plus Native B2B Architecture"
+                definition="Shopify Plus Native B2B is Shopify's built-in enterprise wholesale suite that runs DTC retail and trade wholesale on a single catalog, backend, and checkout engine. It eliminates slow, fragile third-party wholesale apps by providing native Company records, multi-location shipping profiles, custom price lists, and Net payment terms directly in the core platform."
+                keyTakeaways={[
+                  'Consolidates consumer DTC and B2B wholesale into one unified inventory and catalog backend',
+                  'Sub-second checkout execution powered by native Shopify Functions instead of script injection',
+                  'Zero monthly third-party wholesale app subscriptions or maintenance overhead',
+                ]}
+                citationSource="FactoryJet Shopify Plus B2B Architecture Standard (2026)"
+              />
+              <AnswerFirstDefinition
+                term="Shopify Functions & Checkout Extensibility for B2B"
+                definition="Shopify Functions are server-side WebAssembly (WASM) modules executing in sub-5ms within the Shopify checkout pipeline. For B2B merchants, Functions enforce minimum order quantities (MOQs), carton case pack multiples, tiered volume pricing discounts, and dynamically gate Net 30 payment methods based on verified customer company credentials."
+                keyTakeaways={[
+                  'Replaces deprecated checkout.liquid with high-speed, secure WebAssembly logic',
+                  'Validates buyer credit limits and payment terms dynamically before order completion',
+                  'Enforces minimum spend brackets and customer-specific freight rules without theme code hacks',
+                ]}
+                citationSource="FactoryJet WebAssembly & Checkout Extensibility Standard (2026)"
+              />
+              <AnswerFirstDefinition
+                term="Parent-Child Company Hierarchies"
+                definition="A Company record in Shopify Plus B2B models complex corporate buying organizations with multiple branch facilities, shipping locations, and employee roles. Parent corporations maintain global credit terms and tax exemption certificates, while branch managers access location-specific catalogs and purchase order spending limits."
+                keyTakeaways={[
+                  'Corporate parent entities manage consolidated billing, credit lines, and tax resale certificates',
+                  'Subsidiary branches maintain independent shipping endpoints, delivery docks, and tax jurisdictions',
+                  'Role-based permissions separate ordering requisitioners from corporate management approvers',
+                ]}
+                citationSource="FactoryJet Enterprise Commerce Entity Modeling (2026)"
+              />
+            </div>
           </div>
         </section>
 
@@ -773,6 +810,13 @@ export default function ShopifyPlusB2BPage() {
           </div>
         </section>
 
+        {/* ── Net-30 Payment Terms Comparison ── */}
+        <section className="pp-sec">
+          <div className="pp-wrap">
+            <Net30PaymentComparison />
+          </div>
+        </section>
+
         <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: '48px 0 16px' }}>
           <div className="pp-wrap">
             <RegionalBenchmarkCard city="Enterprise Replatforming" vertical="replatforming" />
@@ -842,10 +886,15 @@ export default function ShopifyPlusB2BPage() {
           </div>
         </section>
 
-        {/* ── ROI Calculator ── */}
-        <section className="pp-sec">
+        {/* ── Interactive B2B Wholesale Savings & ROI Calculator ── */}
+        <section className="pp-sec" id="b2b-wholesale-roi-calculator">
           <div className="pp-wrap">
-            <CommerceRoiCalculator city="Enterprise Store" region="us" />
+            <B2bWholesaleCalculator
+              source="shopify_plus_b2b_service_page"
+              defaultRevenue={5000000}
+              defaultAov={2400}
+              defaultAccounts={180}
+            />
           </div>
         </section>
 

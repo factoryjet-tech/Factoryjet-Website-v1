@@ -9,6 +9,10 @@ import EnterpriseArchitectureBlueprint from '@/components/v2/EnterpriseArchitect
 import AuthorCard from '@/components/v2/AuthorCard';
 import CommerceRoiCalculator from '@/components/v2/CommerceRoiCalculator';
 import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
+import ReplatformingScopeEstimator from '@/components/commerce/ReplatformingScopeEstimator';
+import ZeroDowntimeMigrationMatrix from '@/components/commerce/ZeroDowntimeMigrationMatrix';
+import SeoLinkEquityChecklist from '@/components/commerce/SeoLinkEquityChecklist';
+import AnswerFirstDefinition from '@/components/commerce/AnswerFirstDefinition';
 import '@/components/v2/PlatformPage.css';
 
 const PAGE_MODIFIED = '2026-08-24';
@@ -459,6 +463,40 @@ export default function WooCommerceToShopifyPage() {
               </div>
 
             </div>
+
+            {/* Answer-First Definitions for AI Overviews & Search Engines */}
+            <div style={{ marginTop: '56px', display: 'grid', gap: '18px' }}>
+              <AnswerFirstDefinition
+                term="WordPress wp_postmeta Data Sanitization"
+                definition="WooCommerce stores product variants, custom fields, and order line items across bloated WordPress wp_posts and wp_postmeta MySQL tables. Replatforming to Shopify involves automated ETL extraction scripts that clean serialized JSON strings and normalize data into clean Shopify native Metafields and Variant matrices."
+                keyTakeaways={[
+                  'Cleans gigabytes of obsolete plugin transients, orphaned post meta, and legacy revision history',
+                  'Transforms custom Advanced Custom Fields (ACF) into native Shopify Metafields and Metaobjects',
+                  'Preserves multi-year customer purchase receipts, shipping addresses, and tax history without data corruption',
+                ]}
+                citationSource="FactoryJet WordPress Database Architecture Standard (2026)"
+              />
+              <AnswerFirstDefinition
+                term="WooCommerce Plugin Chain Decommissioning"
+                definition="WooCommerce stores typically depend on 30 to 60+ third-party WordPress plugins for basic checkout, subscriptions, and SEO functionality. Replatforming replaces fragile plugin dependency chains with Shopify's native 99.99% cloud infrastructure, Shop Pay, and high-performance Theme Store 2.0 sections."
+                keyTakeaways={[
+                  'Permanently eliminates WordPress PHP memory exhaustion crashes during traffic surges and sales',
+                  'Removes perpetual plugin security patching vulnerabilities and staging update test overhead',
+                  'Standardizes on audited, sandboxed Shopify App Store partners with verified SLAs',
+                ]}
+                citationSource="FactoryJet E-Commerce Reliability Benchmark (2026)"
+              />
+              <AnswerFirstDefinition
+                term="WooCommerce Permalink 1:1 301 Redirect Mapping"
+                definition="WooCommerce utilizes custom WordPress permalink patterns (e.g. /product/item-slug or /product-category/category-name). Comprehensive 1:1 301 redirect mapping ensures every historical WooCommerce product, category, tag, and blog URL routes directly to its corresponding Shopify destination."
+                keyTakeaways={[
+                  'Captures 100% of historical indexable WooCommerce permalinks and media attachment URLs',
+                  'Protects accumulated backlink domain authority and Google organic search keyword rankings',
+                  'Prevents Google soft 404 indexing penalties with single-hop permanent 301 redirects',
+                ]}
+                citationSource="FactoryJet SEO Preservation & URL Routing Standard (2026)"
+              />
+            </div>
           </div>
         </section>
 
@@ -510,6 +548,17 @@ export default function WooCommerceToShopifyPage() {
           </div>
         </section>
 
+        {/* ── INTERACTIVE REPLATFORMING SCOPE & TIMELINE ESTIMATOR ── */}
+        <section className="pp-sec tint" id="replatforming-estimator">
+          <div className="pp-wrap">
+            <ReplatformingScopeEstimator
+              source="woocommerce_to_shopify_page"
+              defaultSource="woocommerce"
+              defaultTarget="shopify"
+            />
+          </div>
+        </section>
+
         {/* ── 05. THE ENTERPRISE ARCHITECTURE BLUEPRINT (AUTO-ROTATING TABS) ── */}
         <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: '48px 0 16px' }}>
           <div className="pp-wrap">
@@ -528,6 +577,13 @@ export default function WooCommerceToShopifyPage() {
             region="us"
           />
         </div>
+
+        {/* ── ZERO-DOWNTIME DATA MIGRATION FRAMEWORK MATRIX ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF' }}>
+          <div className="pp-wrap">
+            <ZeroDowntimeMigrationMatrix />
+          </div>
+        </section>
 
         {/* ── 06. RITOVEX SIDE-BY-SIDE COMPARISON TABLE ── */}
         <section className="pp-sec" style={{ backgroundColor: '#FFFFFF' }}>
@@ -773,6 +829,13 @@ export default function WooCommerceToShopifyPage() {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* ── SEO LINK EQUITY PRESERVATION PROTOCOL & CHECKLIST ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF' }}>
+          <div className="pp-wrap">
+            <SeoLinkEquityChecklist sourcePlatform="woocommerce" />
           </div>
         </section>
 

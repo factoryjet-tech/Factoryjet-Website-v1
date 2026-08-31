@@ -9,6 +9,10 @@ import EnterpriseArchitectureBlueprint from '@/components/v2/EnterpriseArchitect
 import AuthorCard from '@/components/v2/AuthorCard';
 import CommerceRoiCalculator from '@/components/v2/CommerceRoiCalculator';
 import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
+import ReplatformingScopeEstimator from '@/components/commerce/ReplatformingScopeEstimator';
+import ZeroDowntimeMigrationMatrix from '@/components/commerce/ZeroDowntimeMigrationMatrix';
+import SeoLinkEquityChecklist from '@/components/commerce/SeoLinkEquityChecklist';
+import AnswerFirstDefinition from '@/components/commerce/AnswerFirstDefinition';
 import '@/components/v2/PlatformPage.css';
 
 const PAGE_MODIFIED = '2026-08-24';
@@ -459,6 +463,40 @@ export default function BigCommerceToShopifyPage() {
               </div>
 
             </div>
+
+            {/* Answer-First Definitions for AI Overviews & Search Engines */}
+            <div style={{ marginTop: '56px', display: 'grid', gap: '18px' }}>
+              <AnswerFirstDefinition
+                term="BigCommerce to Shopify Plus Data Migration"
+                definition="Migrating from BigCommerce to Shopify Plus entails extracting catalog option sets, custom modifier rules, buyer address books, historical orders, and gift card balances via the BigCommerce V3 REST API, normalizing the data into Shopify product metafields and variant records, and preserving complete order history."
+                keyTakeaways={[
+                  'Translates complex BigCommerce Option Sets and Modifiers into Shopify Variant Matrices and Metafields',
+                  'Maintains historical customer Lifetime Value (LTV) and tax receipt continuity without data loss',
+                  'Pre-validates checkout tax jurisdictions and carrier shipping rules in parallel staging environments',
+                ]}
+                citationSource="FactoryJet BigCommerce to Shopify Plus Migration Standard (2026)"
+              />
+              <AnswerFirstDefinition
+                term="BigCommerce Custom URL 1:1 Redirect Mapping"
+                definition="BigCommerce generates distinct URL structures (e.g. /products/item-name or custom category paths) that differ from Shopify's native /products/ and /collections/ patterns. 1-to-1 301 redirect mapping ensures every legacy BigCommerce URL route points directly to its exact Shopify equivalent without redirect loops or 404 errors."
+                keyTakeaways={[
+                  'Captures 100% of historical indexable BigCommerce product, category, and blog URLs',
+                  'Prevents organic search traffic drop-offs by preserving Google page authority and keyword rankings',
+                  'Eliminates soft 404 crawl errors in Google Search Console post-launch',
+                ]}
+                citationSource="FactoryJet SEO Preservation & URL Routing Standard (2026)"
+              />
+              <AnswerFirstDefinition
+                term="Shop Pay Conversion Uplift Over BigCommerce Checkout"
+                definition="Shop Pay is Shopify's 1-click accelerated checkout network with over 150 million pre-authenticated consumers. Compared to standard BigCommerce multi-step checkout forms, Shop Pay increases mobile checkout completion rates by up to 50% and reduces cart abandonment significantly."
+                keyTakeaways={[
+                  'Pre-fills shipping address, billing info, and credit cards for instant 1-click buying',
+                  'Accelerates checkout transaction speed by up to 4x compared to legacy guest checkouts',
+                  'Supports native Shop Pay Installments directly without third-party iframe friction',
+                ]}
+                citationSource="Shopify Enterprise Commerce Conversion Benchmark (2026)"
+              />
+            </div>
           </div>
         </section>
 
@@ -510,6 +548,17 @@ export default function BigCommerceToShopifyPage() {
           </div>
         </section>
 
+        {/* ── INTERACTIVE REPLATFORMING SCOPE & TIMELINE ESTIMATOR ── */}
+        <section className="pp-sec tint" id="replatforming-estimator">
+          <div className="pp-wrap">
+            <ReplatformingScopeEstimator
+              source="bigcommerce_to_shopify_plus_page"
+              defaultSource="bigcommerce"
+              defaultTarget="shopify-plus"
+            />
+          </div>
+        </section>
+
         {/* ── 05. THE ENTERPRISE ARCHITECTURE BLUEPRINT (AUTO-ROTATING TABS) ── */}
         <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: '48px 0 16px' }}>
           <div className="pp-wrap">
@@ -528,6 +577,13 @@ export default function BigCommerceToShopifyPage() {
             region="us"
           />
         </div>
+
+        {/* ── ZERO-DOWNTIME DATA MIGRATION FRAMEWORK MATRIX ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF' }}>
+          <div className="pp-wrap">
+            <ZeroDowntimeMigrationMatrix />
+          </div>
+        </section>
 
         {/* ── 06. RITOVEX SIDE-BY-SIDE COMPARISON TABLE ── */}
         <section className="pp-sec" style={{ backgroundColor: '#FFFFFF' }}>
@@ -773,6 +829,13 @@ export default function BigCommerceToShopifyPage() {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* ── SEO LINK EQUITY PRESERVATION PROTOCOL & CHECKLIST ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF' }}>
+          <div className="pp-wrap">
+            <SeoLinkEquityChecklist sourcePlatform="bigcommerce" />
           </div>
         </section>
 

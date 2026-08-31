@@ -7,6 +7,9 @@ import FAQ, { type FAQItem, type FAQCategory } from '@/components/v2/FAQ';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import EcommerceRoiCalculator from '@/components/commerce/EcommerceRoiCalculator';
+import B2bWholesaleCalculator from '@/components/commerce/B2bWholesaleCalculator';
+import Net30PaymentComparison from '@/components/commerce/Net30PaymentComparison';
+import AnswerFirstDefinition from '@/components/commerce/AnswerFirstDefinition';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
@@ -284,8 +287,8 @@ export default function B2BEcommercePage() {
                 <div className="pp-store" aria-hidden="true">
                   <div className="bar"><i /><i /><i /></div>
                   <div className="body">
-                    <div className="row"><span className="k">Standard Tier</span><span className="v">1–9 units</span></div>
-                    <div className="row"><span className="k">Volume Tier</span><span className="v">10–49 units</span></div>
+                    <div className="row"><span className="k">Standard Tier</span><span className="v">1-9 units</span></div>
+                    <div className="row"><span className="k">Volume Tier</span><span className="v">10-49 units</span></div>
                     <div className="row win"><span className="k">Contract Tier · Net 30</span><span className="v">50+ units</span></div>
                     <div className="row"><span className="k">Reorder · 12 SKUs</span><span className="v">1 click</span></div>
                   </div>
@@ -343,6 +346,40 @@ export default function B2BEcommercePage() {
                   style={{ width: '100%', height: 'auto', display: 'block' }}
                 />
               </div>
+            </div>
+
+            {/* Answer-First AI Engine Definitions */}
+            <div style={{ marginTop: '48px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+              <AnswerFirstDefinition
+                term="Real-Time ERP Synchronization"
+                definition="Real-time ERP synchronization for B2B e-commerce is the bi-directional, automated API exchange of inventory availability, contract price matrices, customer credit limits, and sales orders between the storefront and enterprise back-office systems (NetSuite, SAP, Dynamics 365, Acumatica, Epicor). It ensures buyers and finance teams always see identical stock and accounting ledgers."
+                keyTakeaways={[
+                  'Sub-200ms delta webhooks replace slow overnight batch imports',
+                  'Live customer credit checks stop past-due accounts from placing unbacked orders',
+                  'Orders instantly generate picking tickets in WMS without manual CSR re-keying',
+                ]}
+                citationSource="FactoryJet B2B Engineering Architecture (2026)"
+              />
+              <AnswerFirstDefinition
+                term="Tiered Pricing Matrices"
+                definition="A tiered pricing matrix is a rule-based discounting system that dynamically calculates unit prices based on customer account tier (e.g. Gold, Silver, Bronze), contract volume breakpoints, or minimum purchase thresholds. Prices are calculated server-side upon buyer login and locked through checkout without manual coupon codes."
+                keyTakeaways={[
+                  'Per-account negotiated contract pricing locked to company login profiles',
+                  'Carton, pallet, and volume bracket discounts update dynamically in line-item grids',
+                  'Restricted catalog gating prevents unapproved buyers from seeing confidential trade pricing',
+                ]}
+                citationSource="FactoryJet Wholesale Pricing Standard (2026)"
+              />
+              <AnswerFirstDefinition
+                term="Self-Serve Wholesale Ordering"
+                definition="Self-serve wholesale ordering is a digital trade portal architecture where verified commercial clients manage parent-child corporate company hierarchies, assign buyer permissions, submit purchase orders on Net payment terms, and repeat 100+ SKU restock orders in seconds using matrix pads or CSV uploads."
+                keyTakeaways={[
+                  'Matrix SKU entry grids allow entering multi-variant quantities simultaneously',
+                  'Replaces manual email/PDF order processing with instant digital order capture',
+                  'Empowers sales reps to focus on strategic business development instead of typing orders',
+                ]}
+                citationSource="FactoryJet Digital Commerce Benchmark (2026)"
+              />
             </div>
           </div>
         </section>
@@ -561,13 +598,21 @@ export default function B2BEcommercePage() {
           </div>
         </section>
 
-        {/* ── Interactive ROI & Wholesale Migration Calculator ── */}
-        <section className="pp-sec" id="b2b-roi-calculator">
+        {/* ── Net-30 Trade Credit Terms Comparison ── */}
+        <section className="pp-sec">
           <div className="pp-wrap">
-            <EcommerceRoiCalculator
+            <Net30PaymentComparison />
+          </div>
+        </section>
+
+        {/* ── Interactive B2B Wholesale Savings Calculator ── */}
+        <section className="pp-sec tint" id="b2b-roi-calculator">
+          <div className="pp-wrap">
+            <B2bWholesaleCalculator
               source="us_b2b_ecommerce_page"
-              defaultPlatform="magento"
-              defaultTarget="bigcommerce-b2b"
+              defaultRevenue={4500000}
+              defaultAov={2200}
+              defaultAccounts={140}
             />
           </div>
         </section>

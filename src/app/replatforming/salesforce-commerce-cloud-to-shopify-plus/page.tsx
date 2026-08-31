@@ -11,6 +11,10 @@ import EnterpriseArchitectureBlueprint from '@/components/v2/EnterpriseArchitect
 import AuthorCard from '@/components/v2/AuthorCard';
 import CommerceRoiCalculator from '@/components/v2/CommerceRoiCalculator';
 import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
+import ReplatformingScopeEstimator from '@/components/commerce/ReplatformingScopeEstimator';
+import ZeroDowntimeMigrationMatrix from '@/components/commerce/ZeroDowntimeMigrationMatrix';
+import SeoLinkEquityChecklist from '@/components/commerce/SeoLinkEquityChecklist';
+import AnswerFirstDefinition from '@/components/commerce/AnswerFirstDefinition';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
@@ -66,7 +70,7 @@ const FAQ_ITEMS = [
     category: 'cost',
     question: 'How much money do brands actually save switching from SFCC to Shopify Plus?',
     answer:
-      'Most enterprise brands save between 40% to 70% in total cost of ownership (TCO). On SFCC, companies typically pay $150,000–$500,000+ in annual software licenses plus a percentage of gross sales (GMV tax) and $150–$250/hour for specialized SFCC developers. On Shopify Plus, you pay a predictable flat enterprise fee with no mandatory developer retainers for basic content edits.',
+      'Most enterprise brands save between 40% to 70% in total cost of ownership (TCO). On SFCC, companies typically pay $150,000-$500,000+ in annual software licenses plus a percentage of gross sales (GMV tax) and $150-$250/hour for specialized SFCC developers. On Shopify Plus, you pay a predictable flat enterprise fee with no mandatory developer retainers for basic content edits.',
   },
   {
     category: 'arch',
@@ -78,7 +82,7 @@ const FAQ_ITEMS = [
     category: 'arch',
     question: 'Does it matter if we are currently on SiteGenesis or SFRA?',
     answer:
-      'We support migrations from both. SFRA (Storefront Reference Architecture) is newer and cleaner, making code auditing faster. SiteGenesis estates are older and often have 5–10 years of accumulated custom code. We audit all custom templates and business rules up front so there are never any mid-project surprises.',
+      'We support migrations from both. SFRA (Storefront Reference Architecture) is newer and cleaner, making code auditing faster. SiteGenesis estates are older and often have 5-10 years of accumulated custom code. We audit all custom templates and business rules up front so there are never any mid-project surprises.',
   },
   {
     category: 'data',
@@ -189,7 +193,7 @@ const PARTNERS = [
 
 const STAT_CARDS = [
   {
-    num: '40%–70%',
+    num: '40%-70%',
     title: 'Lower Annual Costs',
     desc: 'Eliminate GMV sales cuts, costly renewals, and $200/hr developer retainers.',
     icon: '💰',
@@ -229,7 +233,7 @@ const PAIN_POINTS = [
   },
   {
     num: '03',
-    title: 'Expensive Specialist Developers ($150–$250/hr)',
+    title: 'Expensive Specialist Developers ($150-$250/hr)',
     problem: 'SFCC developers are rare, expensive to hire, and difficult to retain.',
     solution: 'Shopify is the global commerce standard with thousands of certified engineers and modern APIs.',
   },
@@ -445,6 +449,40 @@ export default function SFCCToShopifyPlusPage() {
               </div>
 
             </div>
+
+            {/* Answer-First Definitions for AI Overviews & Search Engines */}
+            <div style={{ marginTop: '56px', display: 'grid', gap: '18px' }}>
+              <AnswerFirstDefinition
+                term="SFCC Cartridge & Pipeline Modernization"
+                definition="Migrating from Salesforce Commerce Cloud (Demandware) to Shopify Plus involves decommissioning proprietary SFCC cartridges (SiteGenesis / SFRA) and replacing them with modern Shopify Online Store 2.0 theme sections, native GraphQL app integrations, and Shopify Functions WebAssembly modules."
+                keyTakeaways={[
+                  'Eliminates heavy proprietary cartridge maintenance and $150-$250/hr specialist developer dependencies',
+                  'Enables marketing teams to deploy promotional landing pages and merchandising updates same-day',
+                  'Replaces legacy pipelines with clean, modular, cloud-native storefront sections',
+                ]}
+                citationSource="FactoryJet SFCC Modernization & Cartridge Decoupling Standard (2026)"
+              />
+              <AnswerFirstDefinition
+                term="Shopify Functions WASM for Complex SFCC Promotions"
+                definition="Shopify Functions are server-side WebAssembly programs running in sub-5ms during the Shopify checkout execution pipeline. Functions replicate complex SFCC promotion qualifier rules, customer-tier discounts, and coupon stacking without page latency or checkout vulnerabilities."
+                keyTakeaways={[
+                  'Replicates custom SFCC discount qualifiers, Buy-X-Get-Y tiers, and bundle pricing natively',
+                  'Executes at sub-5ms latency across global edge infrastructure during high-volume flash sales',
+                  'Provides 100% merchant IP ownership with zero third-party promotion app dependencies',
+                ]}
+                citationSource="FactoryJet Checkout Extensibility & Promotions Benchmark (2026)"
+              />
+              <AnswerFirstDefinition
+                term="Enterprise ERP, OMS & WMS Middleware Integration"
+                definition="Enterprise replatforming from SFCC requires connecting core back-office ERP systems (SAP S/4HANA, NetSuite, Manhattan WMS, Akeneo PIM) to Shopify Plus via event-driven webhook and REST/GraphQL connectors, preserving historical order receipts, customer ledgers, and multi-location inventory."
+                keyTakeaways={[
+                  'Maintains zero-downtime inventory synchronization across global multi-warehouse 3PL networks',
+                  'Preserves complete historical order receipts, warranty registrations, and tax records',
+                  'Automates bidirectional customer address updates and credit balance reconciliations',
+                ]}
+                citationSource="FactoryJet Enterprise Systems Integration Benchmark (2026)"
+              />
+            </div>
           </div>
         </section>
 
@@ -496,6 +534,17 @@ export default function SFCCToShopifyPlusPage() {
           </div>
         </section>
 
+        {/* ── INTERACTIVE REPLATFORMING SCOPE & TIMELINE ESTIMATOR ── */}
+        <section className="pp-sec tint" id="replatforming-estimator">
+          <div className="pp-wrap">
+            <ReplatformingScopeEstimator
+              source="salesforce_to_shopify_plus_page"
+              defaultSource="salesforce"
+              defaultTarget="shopify-plus"
+            />
+          </div>
+        </section>
+
         {/* ── 05. THE ENTERPRISE ARCHITECTURE BLUEPRINT (RITOVEX AUTO-SCROLL TABS) ── */}
         <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: '48px 0 16px' }}>
           <div className="pp-wrap">
@@ -514,6 +563,13 @@ export default function SFCCToShopifyPlusPage() {
             region="us"
           />
         </div>
+
+        {/* ── ZERO-DOWNTIME DATA MIGRATION FRAMEWORK MATRIX ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF' }}>
+          <div className="pp-wrap">
+            <ZeroDowntimeMigrationMatrix />
+          </div>
+        </section>
 
         {/* ── 06. RITOVEX SIDE-BY-SIDE COMPARISON TABLE ── */}
         <section className="pp-sec" style={{ backgroundColor: '#FFFFFF' }}>
@@ -546,9 +602,9 @@ export default function SFCCToShopifyPlusPage() {
                 <tbody>
                   <tr>
                     <td className="name" style={{ fontWeight: 700, color: '#141414' }}>Cost Model</td>
-                    <td>$150k–$500k+/yr license + GMV revenue cut</td>
+                    <td>$150k-$500k+/yr license + GMV revenue cut</td>
                     <td style={{ color: '#047857', fontWeight: 600 }}>Predictable enterprise plan, zero GMV penalty</td>
-                    <td>Save 40%–70% in total annual operating costs</td>
+                    <td>Save 40%-70% in total annual operating costs</td>
                   </tr>
                   <tr>
                     <td className="name" style={{ fontWeight: 700, color: '#141414' }}>Custom Code Model</td>
@@ -558,7 +614,7 @@ export default function SFCCToShopifyPlusPage() {
                   </tr>
                   <tr>
                     <td className="name" style={{ fontWeight: 700, color: '#141414' }}>Release Velocity</td>
-                    <td>2–4 weeks per deployment via developers</td>
+                    <td>2-4 weeks per deployment via developers</td>
                     <td style={{ color: '#047857', fontWeight: 600 }}>Same-day visual drag-and-drop updates</td>
                     <td>Marketing launches campaigns 10x faster</td>
                   </tr>
@@ -777,6 +833,13 @@ export default function SFCCToShopifyPlusPage() {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* ── SEO LINK EQUITY PRESERVATION PROTOCOL & CHECKLIST ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF' }}>
+          <div className="pp-wrap">
+            <SeoLinkEquityChecklist sourcePlatform="salesforce" />
           </div>
         </section>
 

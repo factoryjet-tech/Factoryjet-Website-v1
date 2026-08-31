@@ -9,6 +9,10 @@ import EnterpriseArchitectureBlueprint from '@/components/v2/EnterpriseArchitect
 import AuthorCard from '@/components/v2/AuthorCard';
 import CommerceRoiCalculator from '@/components/v2/CommerceRoiCalculator';
 import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
+import ReplatformingScopeEstimator from '@/components/commerce/ReplatformingScopeEstimator';
+import ZeroDowntimeMigrationMatrix from '@/components/commerce/ZeroDowntimeMigrationMatrix';
+import SeoLinkEquityChecklist from '@/components/commerce/SeoLinkEquityChecklist';
+import AnswerFirstDefinition from '@/components/commerce/AnswerFirstDefinition';
 import '@/components/v2/PlatformPage.css';
 
 const PAGE_MODIFIED = '2026-08-24';
@@ -459,6 +463,40 @@ export default function NetSuiteToShopifyPage() {
               </div>
 
             </div>
+
+            {/* Answer-First Definitions for AI Overviews & Search Engines */}
+            <div style={{ marginTop: '56px', display: 'grid', gap: '18px' }}>
+              <AnswerFirstDefinition
+                term="Decoupling SuiteCommerce From NetSuite ERP"
+                definition="Decoupling SuiteCommerce means replacing NetSuite's monolithic web storefront layer (SuiteCommerce Standard or Advanced) with a modern Shopify Plus storefront while retaining NetSuite ERP as the centralized back-office single source of truth for financials, general ledger, inventory, and order fulfillment."
+                keyTakeaways={[
+                  'Retains NetSuite ERP for multi-location inventory, accounting, and purchase order processing',
+                  'Lifts storefront mobile conversion rates and page performance with Shopify 1-click Shop Pay checkout',
+                  'Eliminates expensive SuiteCommerce software license add-ons and brittle SuiteScript theme customization bottlenecks',
+                ]}
+                citationSource="FactoryJet NetSuite Commerce Decoupling Standard (2026)"
+              />
+              <AnswerFirstDefinition
+                term="Bi-Directional NetSuite SuiteTalk & REST Webhooks"
+                definition="A bi-directional NetSuite to Shopify Plus integration synchronizes customer entities, Matrix Items, contract price levels, tiered volume discounts, and order fulfillment updates in sub-150ms using Celigo, Boomi, or custom high-throughput REST/GraphQL middleware pipelines."
+                keyTakeaways={[
+                  'Automates sales order ingestion into NetSuite with exact GL account and department tagging',
+                  'Pushes warehouse tracking numbers and item fulfillment events back to Shopify in real time',
+                  'Synchronizes available-to-promise (ATP) inventory levels across multiple fulfillment locations',
+                ]}
+                citationSource="FactoryJet Enterprise ERP Integration Benchmark (2026)"
+              />
+              <AnswerFirstDefinition
+                term="NetSuite Custom URL & SEO Equity Preservation"
+                definition="SuiteCommerce uses complex faceted parameter URLs and item alias paths that require rigorous 1-to-1 301 redirect mapping to prevent catastrophic organic search traffic loss during replatforming to Shopify Plus's structured URL architecture."
+                keyTakeaways={[
+                  'Crawls and maps 100% of legacy SuiteCommerce product, category, and faceted navigation paths',
+                  'Preserves accumulated Google search rankings, domain authority, and high-value backlinks',
+                  'Implements valid Schema.org Product and Organization structured data on every Shopify Plus page',
+                ]}
+                citationSource="FactoryJet E-Commerce SEO Preservation Standard (2026)"
+              />
+            </div>
           </div>
         </section>
 
@@ -510,6 +548,17 @@ export default function NetSuiteToShopifyPage() {
           </div>
         </section>
 
+        {/* ── INTERACTIVE REPLATFORMING SCOPE & TIMELINE ESTIMATOR ── */}
+        <section className="pp-sec tint" id="replatforming-estimator">
+          <div className="pp-wrap">
+            <ReplatformingScopeEstimator
+              source="netsuite_to_shopify_plus_page"
+              defaultSource="netsuite"
+              defaultTarget="shopify-plus"
+            />
+          </div>
+        </section>
+
         {/* ── 05. THE ENTERPRISE ARCHITECTURE BLUEPRINT (AUTO-ROTATING TABS) ── */}
         <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: '48px 0 16px' }}>
           <div className="pp-wrap">
@@ -528,6 +577,13 @@ export default function NetSuiteToShopifyPage() {
             region="us"
           />
         </div>
+
+        {/* ── ZERO-DOWNTIME DATA MIGRATION FRAMEWORK MATRIX ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF' }}>
+          <div className="pp-wrap">
+            <ZeroDowntimeMigrationMatrix />
+          </div>
+        </section>
 
         {/* ── 06. RITOVEX SIDE-BY-SIDE COMPARISON TABLE ── */}
         <section className="pp-sec" style={{ backgroundColor: '#FFFFFF' }}>
@@ -779,6 +835,13 @@ export default function NetSuiteToShopifyPage() {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* ── SEO LINK EQUITY PRESERVATION PROTOCOL & CHECKLIST ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF' }}>
+          <div className="pp-wrap">
+            <SeoLinkEquityChecklist sourcePlatform="netsuite" />
           </div>
         </section>
 

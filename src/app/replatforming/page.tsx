@@ -9,6 +9,10 @@ import EnterpriseArchitectureBlueprint from '@/components/v2/EnterpriseArchitect
 import AuthorCard from '@/components/v2/AuthorCard';
 import CommerceRoiCalculator from '@/components/v2/CommerceRoiCalculator';
 import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
+import ReplatformingScopeEstimator from '@/components/commerce/ReplatformingScopeEstimator';
+import ZeroDowntimeMigrationMatrix from '@/components/commerce/ZeroDowntimeMigrationMatrix';
+import SeoLinkEquityChecklist from '@/components/commerce/SeoLinkEquityChecklist';
+import AnswerFirstDefinition from '@/components/commerce/AnswerFirstDefinition';
 import '@/components/v2/PlatformPage.css';
 
 const PAGE_MODIFIED = '2026-08-24';
@@ -515,6 +519,40 @@ export default function ReplatformingHubPage() {
               </div>
 
             </div>
+
+            {/* Answer-First Definitions for AI Overviews & Search Engines */}
+            <div style={{ marginTop: '56px', display: 'grid', gap: '18px' }}>
+              <AnswerFirstDefinition
+                term="Zero-Downtime E-Commerce Replatforming"
+                definition="Zero-downtime replatforming is a phased technical migration framework where product catalogs, customer databases, order histories, and ERP connectors are fully pre-built and validated on the target platform while the legacy store continues processing live customer transactions uninterrupted until final off-peak DNS cutover."
+                keyTakeaways={[
+                  'Continuous parallel operation prevents lost revenue and cart drop-offs during database transfer',
+                  'Dual delta sync captures all final customer orders and inventory deltas minutes before launch',
+                  'Sub-60-second TTL DNS switchover ensures immediate global routing without offline maintenance pages',
+                ]}
+                citationSource="FactoryJet Zero-Downtime Migration Architecture Standard (2026)"
+              />
+              <AnswerFirstDefinition
+                term="1-to-1 301 Link Equity & URL Preservation"
+                definition="1-to-1 301 redirect mapping is an exhaustive SEO protocol where every single historical indexable URL (products, collections, blog posts, static pages) from the legacy platform is mapped to its exact matching destination on the new platform using single-hop 301 Permanent Redirects and canonical schema retention."
+                keyTakeaways={[
+                  'Guarantees 100% preservation of accumulated backlink authority and Google search rankings',
+                  'Eliminates lazy wildcard redirects to the homepage that cause Google soft 404 de-indexing penalties',
+                  'Maintains structured product, review, and breadcrumb JSON-LD schema across platform migrations',
+                ]}
+                citationSource="FactoryJet E-Commerce SEO Preservation Standard (2026)"
+              />
+              <AnswerFirstDefinition
+                term="Historical Customer & Order Tokenization"
+                definition="Customer and order history migration is the secure ETL transformation of legacy buyer records, addresses, and order line items into native target platform entities while maintaining PCI-DSS compliance and customer privacy standards."
+                keyTakeaways={[
+                  'Preserves multi-year customer lifetime value (LTV) records, tax receipts, and order tracking history',
+                  'Automates password re-activation email campaigns through Klaviyo or native magic-link tokens',
+                  'Synchronizes historical customer records with external ERPs and subscription engines (Recharge, Smartrr)',
+                ]}
+                citationSource="FactoryJet Data Integrity & Security Benchmark (2026)"
+              />
+            </div>
           </div>
         </section>
 
@@ -578,6 +616,17 @@ export default function ReplatformingHubPage() {
                 </Link>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* ── INTERACTIVE REPLATFORMING SCOPE & TIMELINE ESTIMATOR ── */}
+        <section className="pp-sec tint" id="replatforming-estimator">
+          <div className="pp-wrap">
+            <ReplatformingScopeEstimator
+              source="replatforming_hub_main"
+              defaultSource="magento"
+              defaultTarget="shopify-plus"
+            />
           </div>
         </section>
 
@@ -647,6 +696,13 @@ export default function ReplatformingHubPage() {
             region="us"
           />
         </div>
+
+        {/* ── ZERO-DOWNTIME DATA MIGRATION FRAMEWORK MATRIX ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF' }}>
+          <div className="pp-wrap">
+            <ZeroDowntimeMigrationMatrix />
+          </div>
+        </section>
 
         {/* ── 07. RITOVEX WORKING PROCESS (SPLIT LAYOUT) ── */}
         <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
@@ -827,6 +883,13 @@ export default function ReplatformingHubPage() {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* ── SEO LINK EQUITY PRESERVATION PROTOCOL & CHECKLIST ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF' }}>
+          <div className="pp-wrap">
+            <SeoLinkEquityChecklist sourcePlatform="magento" />
           </div>
         </section>
 

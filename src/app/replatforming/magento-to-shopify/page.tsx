@@ -9,6 +9,10 @@ import EnterpriseArchitectureBlueprint from '@/components/v2/EnterpriseArchitect
 import AuthorCard from '@/components/v2/AuthorCard';
 import CommerceRoiCalculator from '@/components/v2/CommerceRoiCalculator';
 import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
+import ReplatformingScopeEstimator from '@/components/commerce/ReplatformingScopeEstimator';
+import ZeroDowntimeMigrationMatrix from '@/components/commerce/ZeroDowntimeMigrationMatrix';
+import SeoLinkEquityChecklist from '@/components/commerce/SeoLinkEquityChecklist';
+import AnswerFirstDefinition from '@/components/commerce/AnswerFirstDefinition';
 import '@/components/v2/PlatformPage.css';
 
 const PAGE_MODIFIED = '2026-08-24';
@@ -477,6 +481,40 @@ export default function MagentoToShopifyPage() {
               </div>
 
             </div>
+
+            {/* Answer-First Definitions for AI Overviews & Search Engines */}
+            <div style={{ marginTop: '56px', display: 'grid', gap: '18px' }}>
+              <AnswerFirstDefinition
+                term="Magento EAV Database Normalization"
+                definition="Magento stores catalog attributes across complex Entity-Attribute-Value (EAV) database tables (e.g. catalog_product_entity_varchar). During migration to Shopify Plus, custom ETL scripts extract, flatten, and sanitize this nested data into native Shopify Product Variants, Metafields, and Metaobjects."
+                keyTakeaways={[
+                  'Extracts multi-layered custom product attributes and maps them into native Shopify Metafields',
+                  'Cleans legacy database bloat and eliminates duplicate SKU or unlinked orphan records',
+                  'Preserves multi-currency pricing tiers and customer group price rules cleanly',
+                ]}
+                citationSource="FactoryJet Magento Data Architecture Standard (2026)"
+              />
+              <AnswerFirstDefinition
+                term="Magento Custom Module Modernization"
+                definition="Legacy Magento 2 stores frequently run 40+ third-party PHP extensions and custom modules that cause severe site latency and security vulnerabilities. Replatforming replaces these bloated extensions with lightweight Shopify Online Store 2.0 liquid sections, native app ecosystem integrations, and Shopify Functions."
+                keyTakeaways={[
+                  'Decommissions expensive PHP server maintenance and third-party extension renewal fees',
+                  'Rebuilds proprietary business logic using high-speed serverless Shopify Functions',
+                  'Lifts mobile Core Web Vitals to sub-second Largest Contentful Paint (LCP) speeds',
+                ]}
+                citationSource="FactoryJet Code Modernization Benchmark (2026)"
+              />
+              <AnswerFirstDefinition
+                term="Magento URL Rewrite Table 1:1 301 Redirect Mapping"
+                definition="Magento utilizes an internal url_rewrite database table for catalog navigation. We extract 100% of historical target paths and generate single-hop 301 redirects to matching Shopify Plus product and collection handles, protecting organic search rankings and backlink authority."
+                keyTakeaways={[
+                  'Captures historical Magento category keys, .html product suffixes, and custom CMS aliases',
+                  'Eliminates redirect chains and Google soft 404 de-indexing penalties',
+                  'Maintains structured product, review, and breadcrumb schema for Google Rich Results',
+                ]}
+                citationSource="FactoryJet SEO Preservation & URL Routing Standard (2026)"
+              />
+            </div>
           </div>
         </section>
 
@@ -528,6 +566,17 @@ export default function MagentoToShopifyPage() {
           </div>
         </section>
 
+        {/* ── INTERACTIVE REPLATFORMING SCOPE & TIMELINE ESTIMATOR ── */}
+        <section className="pp-sec tint" id="replatforming-estimator">
+          <div className="pp-wrap">
+            <ReplatformingScopeEstimator
+              source="magento_to_shopify_plus_page"
+              defaultSource="magento"
+              defaultTarget="shopify-plus"
+            />
+          </div>
+        </section>
+
         {/* ── 05. THE ENTERPRISE ARCHITECTURE BLUEPRINT (AUTO-ROTATING TABS) ── */}
         <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: '48px 0 16px' }}>
           <div className="pp-wrap">
@@ -546,6 +595,13 @@ export default function MagentoToShopifyPage() {
             region="us"
           />
         </div>
+
+        {/* ── ZERO-DOWNTIME DATA MIGRATION FRAMEWORK MATRIX ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF' }}>
+          <div className="pp-wrap">
+            <ZeroDowntimeMigrationMatrix />
+          </div>
+        </section>
 
         {/* ── 06. RITOVEX SIDE-BY-SIDE COMPARISON TABLE ── */}
         <section className="pp-sec" style={{ backgroundColor: '#FFFFFF' }}>
@@ -803,6 +859,13 @@ export default function MagentoToShopifyPage() {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* ── SEO LINK EQUITY PRESERVATION PROTOCOL & CHECKLIST ── */}
+        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF' }}>
+          <div className="pp-wrap">
+            <SeoLinkEquityChecklist sourcePlatform="magento" />
           </div>
         </section>
 

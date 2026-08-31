@@ -6,8 +6,12 @@ import FAQ from '@/components/v2/FAQ';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import EcommerceRoiCalculator from '@/components/commerce/EcommerceRoiCalculator';
+import B2bWholesaleCalculator from '@/components/commerce/B2bWholesaleCalculator';
+import Net30PaymentComparison from '@/components/commerce/Net30PaymentComparison';
+import AnswerFirstDefinition from '@/components/commerce/AnswerFirstDefinition';
 import '@/components/v2/PlatformPage.css';
 
+const PAGE_MODIFIED = '2026-08-29';
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const IMG = '/images/us/marketplace';
 
@@ -239,6 +243,28 @@ const ORG_SCHEMA = {
   sameAs: ['https://www.linkedin.com/company/factoryjet'],
 };
 
+const WEBPAGE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://factoryjet.com/services/bigcommerce-b2b#webpage',
+  name: 'BigCommerce B2B Edition Agency & Development | FactoryJet',
+  description: 'Enterprise B2B wholesale portals on BigCommerce B2B Edition with custom quotes, buyer hierarchies, and ERP sync.',
+  url: 'https://factoryjet.com/services/bigcommerce-b2b',
+  dateModified: PAGE_MODIFIED,
+  author: {
+    '@type': 'Person',
+    name: 'Bhavesh Barot',
+    jobTitle: 'Founder & Chief Technical Architect',
+    url: 'https://factoryjet.com/about',
+    sameAs: [
+      'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
+      'https://github.com/factoryjet-tech',
+    ],
+  },
+  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+  publisher: { '@id': 'https://factoryjet.com/#organization' },
+};
+
 const BREADCRUMB_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
@@ -294,6 +320,7 @@ export default function BigCommerceB2BPage() {
       <script id="bc-howto-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(HOWTO_SCHEMA) }} />
       <script id="bc-org-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ORG_SCHEMA) }} />
       <script id="bc-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
+      <script id="bc-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
 
       <SiteHeader navLinks={[]} cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
@@ -428,6 +455,40 @@ export default function BigCommerceB2BPage() {
               <p>
                 From complex multi-brand automotive parts catalogs with millions of fitment SKUs to customized industrial manufacturing supply chains, BigCommerce B2B Edition scales effortlessly without database lockups or expensive server re-architectures.
               </p>
+            </div>
+
+            {/* Answer-First Definitions for AI Overviews & Search Engines */}
+            <div style={{ marginTop: '36px', display: 'grid', gap: '18px' }}>
+              <AnswerFirstDefinition
+                term="BigCommerce B2B Edition Architecture"
+                definition="BigCommerce B2B Edition is an enterprise SaaS wholesale platform integrating native Request for Quote (RFQ) negotiation, multi-tiered company account hierarchies, buyer purchasing approval rules, sales rep order masquerade, and self-service invoice payment portals on an open API backbone."
+                keyTakeaways={[
+                  'Provides enterprise B2B functionality without the high hosting overhead of open-source platforms',
+                  'REST and GraphQL APIs support real-time synchronization with ERPs like NetSuite, SAP, and Epicor',
+                  'Composable headless storefront support through modern Next.js Catalyst architecture',
+                ]}
+                citationSource="FactoryJet BigCommerce B2B Architecture Standard (2026)"
+              />
+              <AnswerFirstDefinition
+                term="Automated RFQ & Digital Quoting Engines"
+                definition="An automated RFQ (Request for Quote) engine allows B2B buyers to convert their digital shopping carts into formal quote proposals. Sales reps receive instant margin alerts, adjust line-item discounts, and return a digital binding quote with an expiration window for one-click buyer checkout."
+                keyTakeaways={[
+                  'Reduces quote negotiation turnaround time from 72 hours to under 15 minutes',
+                  'Maintains strict gross margin guardrails for sales representatives during discount adjustments',
+                  'Converts accepted quotes into authorized sales orders without manual invoice re-entry',
+                ]}
+                citationSource="FactoryJet B2B Quoting Benchmark (2026)"
+              />
+              <AnswerFirstDefinition
+                term="PunchOut e-Procurement (cXML / OCI)"
+                definition="PunchOut e-procurement is an automated electronic protocol connecting your BigCommerce catalog directly into an enterprise buyer's internal procurement software (SAP Ariba, Coupa, Jaggaer, Oracle Fusion). Buyers browse contracted catalogs and transfer requisitions back into their ERP for management approval without public checkout."
+                keyTakeaways={[
+                  'Meets mandatory procurement compliance rules for Fortune 500, government, and healthcare buyers',
+                  'Eliminates manual purchase order PDF entry and asynchronous billing disputes',
+                  'Automates electronic Purchase Order (OrderRequest) ingestion directly into warehouse picking queues',
+                ]}
+                citationSource="FactoryJet Enterprise e-Procurement Standard (2026)"
+              />
             </div>
           </div>
         </section>
@@ -738,6 +799,25 @@ export default function BigCommerceB2BPage() {
                 </tbody>
               </table>
             </div>
+          </div>
+        </section>
+
+        {/* ── Net-30 Payment Terms Comparison ── */}
+        <section className="pp-sec">
+          <div className="pp-wrap">
+            <Net30PaymentComparison />
+          </div>
+        </section>
+
+        {/* ── Interactive B2B Wholesale Savings & ROI Calculator ── */}
+        <section className="pp-sec tint" id="b2b-wholesale-roi-calculator">
+          <div className="pp-wrap">
+            <B2bWholesaleCalculator
+              source="bigcommerce_b2b_service_page"
+              defaultRevenue={6000000}
+              defaultAov={3200}
+              defaultAccounts={210}
+            />
           </div>
         </section>
 
