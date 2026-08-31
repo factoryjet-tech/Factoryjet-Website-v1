@@ -23,6 +23,7 @@ import PricingTiers from '@/components/v2/PricingTiers';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
+import EcommerceRoiCalculator from '@/components/commerce/EcommerceRoiCalculator';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    SEO / Metadata
@@ -188,7 +189,7 @@ const ECOMM_JOURNEY_STAGES: ServiceJourneyStage[] = [
     number: '03',
     title: 'Build',
     description:
-      'Engineering in your chosen platform: Liquid, WooCommerce PHP, BigCommerce Stencil, or Next.js. Daily commits to your GitHub repo. Staging store live within 48–72 hours.',
+      'Engineering in your chosen platform: Liquid, WooCommerce PHP, BigCommerce Stencil, or Next.js. Daily commits to your GitHub repo. Staging store live within 48-72 hours.',
   },
   {
     number: '04',
@@ -265,7 +266,7 @@ const COMPARISON_ROWS = [
   },
   {
     feature: 'Delivery timeline',
-    values: ['3–5 weeks', '3–6 months', '6–12 weeks (unreliable)', '1 week (but you build it)'],
+    values: ['3-5 weeks', '3-6 months', '6-12 weeks (unreliable)', '1 week (but you build it)'],
   },
   {
     feature: 'Custom design (not a template)',
@@ -432,7 +433,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How long does an e-commerce build take?',
     answer:
-      'A platform store (Shopify or WooCommerce) with a custom theme and standard features takes 3–5 weeks. An advanced store with subscriptions, B2B pricing, or a product configurator takes 5–8 weeks. Headless Next.js storefronts and custom commerce platforms run 8–14 weeks depending on catalog size, integration complexity, and whether we\'re migrating data from an existing store.',
+      'A platform store (Shopify or WooCommerce) with a custom theme and standard features takes 3-5 weeks. An advanced store with subscriptions, B2B pricing, or a product configurator takes 5-8 weeks. Headless Next.js storefronts and custom commerce platforms run 8-14 weeks depending on catalog size, integration complexity, and whether we\'re migrating data from an existing store.',
   },
   {
     category: 'pricing',
@@ -452,7 +453,7 @@ const FAQ_ITEMS = [
     category: 'migration',
     question: 'Will my Google rankings survive a platform migration?',
     answer:
-      'Yes, if done correctly. Before any migration, we audit your existing URL structure, identify which product and collection pages have rankings worth protecting, and build a complete redirect map before touching DNS. Every changed URL gets a 301 redirect. We submit the new sitemap to Google Search Console on launch day and monitor organic traffic for 30 days post-launch. Most clients see rankings fully recover within 6–8 weeks.',
+      'Yes, if done correctly. Before any migration, we audit your existing URL structure, identify which product and collection pages have rankings worth protecting, and build a complete redirect map before touching DNS. Every changed URL gets a 301 redirect. We submit the new sitemap to Google Search Console on launch day and monitor organic traffic for 30 days post-launch. Most clients see rankings fully recover within 6-8 weeks.',
   },
 
   /* ── Technical & SEO ── */
@@ -493,7 +494,7 @@ const FAQ_ITEMS = [
     category: 'platform',
     question: 'Can you build a subscription or recurring-revenue e-commerce store?',
     answer:
-      'Yes, subscription e-commerce is one of the highest-ROI models we build. We implement subscription logic using Recharge (the Shopify standard), Bold Subscriptions, or WooCommerce Subscriptions depending on your platform. Subscription products include: subscription boxes (monthly, quarterly), consumable replenishment programs (coffee, supplements, pet food), digital membership access, and B2B auto-replenishment. Subscription stores generate 30–50% higher customer lifetime value than one-time-purchase stores. We configure cancel flows designed to reduce churn, tiered subscription pricing, and loyalty points for subscribers.',
+      'Yes, subscription e-commerce is one of the highest-ROI models we build. We implement subscription logic using Recharge (the Shopify standard), Bold Subscriptions, or WooCommerce Subscriptions depending on your platform. Subscription products include: subscription boxes (monthly, quarterly), consumable replenishment programs (coffee, supplements, pet food), digital membership access, and B2B auto-replenishment. Subscription stores generate 30-50% higher customer lifetime value than one-time-purchase stores. We configure cancel flows designed to reduce churn, tiered subscription pricing, and loyalty points for subscribers.',
   },
   {
     category: 'technical',
@@ -505,7 +506,7 @@ const FAQ_ITEMS = [
     category: 'technical',
     question: 'How do I optimize my e-commerce store for mobile shoppers?',
     answer:
-      'Mobile accounts for 65–75% of US e-commerce traffic but only 55–60% of revenue: the gap is caused by poor mobile checkout UX. FactoryJet closes it with: mobile-first layout design (375px screen built before desktop), one-tap Apple Pay and Google Pay checkout (eliminates the single largest cart abandonment point), thumb-friendly product page layouts with sticky Add-to-Cart buttons, lazy-loaded images that deliver fast initial paint on mobile networks, and Google Core Web Vitals compliance (LCP under 2.5s, CLS below 0.1, INP under 200ms). Every store passes Lighthouse 90+ on mobile before delivery.',
+      'Mobile accounts for 65-75% of US e-commerce traffic but only 55-60% of revenue: the gap is caused by poor mobile checkout UX. FactoryJet closes it with: mobile-first layout design (375px screen built before desktop), one-tap Apple Pay and Google Pay checkout (eliminates the single largest cart abandonment point), thumb-friendly product page layouts with sticky Add-to-Cart buttons, lazy-loaded images that deliver fast initial paint on mobile networks, and Google Core Web Vitals compliance (LCP under 2.5s, CLS below 0.1, INP under 200ms). Every store passes Lighthouse 90+ on mobile before delivery.',
   },
   {
     category: 'technical',
@@ -523,7 +524,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'What ongoing support does FactoryJet offer after my store launches?',
     answer:
-      'Every e-commerce project includes a 14–30 day post-launch support window covering bug fixes, minor adjustments, and launch questions at no additional charge. Beyond that, FactoryJet offers monthly retainer plans (scoped and quoted up front): a set block of development time, priority same-day bug response, and access to a dedicated engineer who knows your codebase. Retainer clients get pre-built seasonal campaign assets, quarterly performance reviews, and priority scheduling for new feature development. We also offer one-time project engagements for specific post-launch work: new collections, checkout A/B tests, app integrations, and performance audits.',
+      'Every e-commerce project includes a 14-30 day post-launch support window covering bug fixes, minor adjustments, and launch questions at no additional charge. Beyond that, FactoryJet offers monthly retainer plans (scoped and quoted up front): a set block of development time, priority same-day bug response, and access to a dedicated engineer who knows your codebase. Retainer clients get pre-built seasonal campaign assets, quarterly performance reviews, and priority scheduling for new feature development. We also offer one-time project engagements for specific post-launch work: new collections, checkout A/B tests, app integrations, and performance audits.',
   },
   {
     category: 'trust',
@@ -775,7 +776,7 @@ export default function EcommerceDevelopmentPage() {
                 ))}
               </div>
               <p>
-                The average US e-commerce store converts at 1.4%. The top quartile converts at 3–5%. The difference isn&apos;t product, it&apos;s the store. Slow load times, confusing navigation, a mobile checkout that leaks customers at the payment step, and product pages that bury the &quot;add to cart&quot; button below the fold. These are engineering and design problems, not marketing problems.
+                The average US e-commerce store converts at 1.4%. The top quartile converts at 3-5%. The difference isn&apos;t product, it&apos;s the store. Slow load times, confusing navigation, a mobile checkout that leaks customers at the payment step, and product pages that bury the &quot;add to cart&quot; button below the fold. These are engineering and design problems, not marketing problems.
               </p>
 
               {/* Key e-commerce metrics, aria-hidden decorative */}
@@ -874,7 +875,7 @@ export default function EcommerceDevelopmentPage() {
             {
               icon: '🐢',
               title: 'Every second of load time costs you 7% in conversions',
-              body: 'Google\'s research shows a 1-second delay in page load reduces conversions by 7%. The average Shopify or WooCommerce store using a theme-store template loads in 4–6 seconds on mobile 4G. That\'s 21–35% of your potential revenue gone before a product image finishes rendering. A properly optimized custom build loads in under 2 seconds.',
+              body: 'Google\'s research shows a 1-second delay in page load reduces conversions by 7%. The average Shopify or WooCommerce store using a theme-store template loads in 4-6 seconds on mobile 4G. That\'s 21-35% of your potential revenue gone before a product image finishes rendering. A properly optimized custom build loads in under 2 seconds.',
             },
             {
               icon: '💸',
@@ -890,7 +891,7 @@ export default function EcommerceDevelopmentPage() {
           headline="From Platform Decision to Live Store in 5 Stages"
           lead="Discovery before we commit to a platform. Design approval before we commit to code. Full checkout testing before we commit to launch."
           stages={ECOMM_JOURNEY_STAGES}
-          closingNote="5 STAGES · 3–14 WEEKS TO LAUNCH · PLATFORM-AGNOSTIC · ZERO DOWNTIME LAUNCH DAY"
+          closingNote="5 STAGES · 3-14 WEEKS TO LAUNCH · PLATFORM-AGNOSTIC · ZERO DOWNTIME LAUNCH DAY"
         />
 
         {/* ── 6. WHAT WE BUILD ─────────────────────────────────────────────── */}
@@ -1027,7 +1028,7 @@ export default function EcommerceDevelopmentPage() {
                 borderStyle: 'solid',
                 borderColor: 'rgb(229, 231, 235)',
                 borderTopWidth: '2px',
-                borderTopColor: '#0052CC',
+                borderTopColor: '#F05A28',
               }}
             >
               <div className="border-b border-fj-neutral-100 px-8 py-5">
@@ -1070,7 +1071,7 @@ export default function EcommerceDevelopmentPage() {
           headline="US E-Commerce Is a $1.19 Trillion Market. Most Small Businesses Capture Almost None of It."
           leadParagraphs={[
             "US e-commerce sales are projected to reach $1.19 trillion in 2025, 21% of all US retail. The businesses capturing the majority of that growth are not the largest brands. They're the mid-size DTC companies with fast, well-built stores that convert mobile traffic efficiently, run automated post-purchase email flows, and don't lose half their ad spend to slow load times.",
-            "FactoryJet has served e-commerce businesses in Austin, Miami, Denver, Nashville, Portland, Charlotte, Raleigh, Tampa, and across the US. We understand what a 10–50 person brand needs from an e-commerce store: not enterprise complexity, but professional design, sub-2-second mobile performance, and a checkout flow that doesn't leak customers.",
+            "FactoryJet has served e-commerce businesses in Austin, Miami, Denver, Nashville, Portland, Charlotte, Raleigh, Tampa, and across the US. We understand what a 10-50 person brand needs from an e-commerce store: not enterprise complexity, but professional design, sub-2-second mobile performance, and a checkout flow that doesn't leak customers.",
             "The businesses we build for aren't buying a new store because their current one looks bad. They're buying it because they calculated the cost of staying on a template: 1% conversion rate × 5,000 monthly visitors × $80 AOV = $4,000/month. 2.3% × 5,000 × $80 = $9,200/month. That $5,200 monthly difference pays for the build in under 60 days.",
           ]}
           bodySlot={
@@ -1110,6 +1111,17 @@ export default function EcommerceDevelopmentPage() {
           }
           stats={US_ECOMM_STATS}
         />
+
+        {/* ── 9b. INTERACTIVE ROI CALCULATOR ──────────────────────────────── */}
+        <section className="bg-[#FFF8F5] py-16 md:py-24 border-y border-[#E7DED6]">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+            <EcommerceRoiCalculator
+              source="us_ecommerce_development_service_page"
+              defaultPlatform="shopify"
+              defaultTarget="shopify-plus"
+            />
+          </div>
+        </section>
 
         {/* ── 10. COMPARISON TABLE ─────────────────────────────────────────── */}
         <ComparisonTable
@@ -1157,7 +1169,7 @@ export default function EcommerceDevelopmentPage() {
             {
               icon: '📊',
               title: 'Conversion-first design backed by 120+ store builds',
-              body: 'We know from 120+ Shopify builds and hundreds of WooCommerce and custom stores that sticky carts outperform static ones, that social proof within 200px of the Add to Cart button lifts conversion, and that every unnecessary field in checkout reduces completion rate by 1–2%. We design around those data points, not around what looks good in a mockup.',
+              body: 'We know from 120+ Shopify builds and hundreds of WooCommerce and custom stores that sticky carts outperform static ones, that social proof within 200px of the Add to Cart button lifts conversion, and that every unnecessary field in checkout reduces completion rate by 1-2%. We design around those data points, not around what looks good in a mockup.',
             },
             {
               icon: '🔒',

@@ -20,6 +20,7 @@ import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
 import ServiceHeroImageBand from '@/components/v2/ServiceHeroImageBand';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
+import WebDesignValueCalculator from '@/components/v2/WebDesignValueCalculator';
 import Image from 'next/image';
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -116,13 +117,13 @@ const howToSchema = {
     {
       '@type': 'HowToStep',
       position: 3,
-      name: 'Days 3–4 | Design',
+      name: 'Days 3-4 | Design',
       text: 'We design every page with your brand identity, mobile-first layouts, and conversion-focused UX. You review and approve all designs.',
     },
     {
       '@type': 'HowToStep',
       position: 4,
-      name: 'Days 5–6 | Development & SEO',
+      name: 'Days 5-6 | Development & SEO',
       text: 'We build your site in Next.js or WordPress, optimize Core Web Vitals, add structured data, and connect all integrations.',
     },
     {
@@ -143,7 +144,7 @@ const WEB_DESIGN_TYPES = [
     name: 'Business Websites',
     description:
       'Clean, fast, conversion-focused websites for service businesses, consultants, and local companies. Built on Next.js or WordPress with a CMS so you can update content without touching code.',
-    example: 'Avg. Lighthouse score 98–100 across all four categories on delivery.',
+    example: 'Avg. Lighthouse score 98-100 across all four categories on delivery.',
     linkLabel: 'Get a free audit',
     linkHref: '/contact',
   },
@@ -151,7 +152,7 @@ const WEB_DESIGN_TYPES = [
     name: 'Landing Pages',
     description:
       'Single-purpose, high-converting landing pages for paid campaigns, product launches, or lead generation. Designed to a specific CTA, A/B-test ready, and built to load in under 1.5 seconds.',
-    example: 'Clients report 30–45% improvement in form conversion vs. homepage CTA.',
+    example: 'Clients report 30-45% improvement in form conversion vs. homepage CTA.',
     linkLabel: 'See examples',
     linkHref: '/contact',
   },
@@ -283,7 +284,7 @@ const COMPARISON_ROWS = [
   },
   {
     feature: 'Delivery timeline',
-    values: ['7 business days', '6–12 weeks', '4–8 weeks (unreliable)', '~1 day (but you build it)'],
+    values: ['7 business days', '6-12 weeks', '4-8 weeks (unreliable)', '~1 day (but you build it)'],
   },
   {
     feature: 'Custom design (not a template)',
@@ -380,7 +381,7 @@ const PRICING_TIERS = [
       'Advanced SEO: page-level keyword targeting, internal link map',
       'Google Analytics 4 + Search Console setup',
       'Lead capture forms with CRM integration (HubSpot, Pipedrive)',
-      'Lighthouse 98–100 across all four categories',
+      'Lighthouse 98-100 across all four categories',
       '3 rounds of design revisions',
       'Team content training walkthrough (recorded)',
     ],
@@ -423,7 +424,7 @@ const FAQ_ITEMS = [
     category: 'process',
     question: 'How long does it take to build a website?',
     answer:
-      'Most small business websites, up to 5 pages, are designed, built, and launched within 7 business days of your approved design sign-off. Larger sites (6–15 pages) typically take 10–14 business days. Shopify or Next.js e-commerce stores with custom product logic take 3–5 weeks depending on catalog size and integration requirements. We give you a firm timeline after the brief, not before, because scope drives everything.',
+      'Most small business websites, up to 5 pages, are designed, built, and launched within 7 business days of your approved design sign-off. Larger sites (6-15 pages) typically take 10-14 business days. Shopify or Next.js e-commerce stores with custom product logic take 3-5 weeks depending on catalog size and integration requirements. We give you a firm timeline after the brief, not before, because scope drives everything.',
   },
   {
     category: 'process',
@@ -481,7 +482,7 @@ const FAQ_ITEMS = [
     category: 'technical',
     question: 'What Lighthouse score will my website get?',
     answer:
-      'Our Starter tier guarantees Lighthouse 95+ across all four categories (Performance, Accessibility, Best Practices, SEO). Our Growth and Custom tiers target 98–100. We run PageSpeed Insights and Core Web Vitals checks as part of our QA process before every launch, you see the scores before you sign off.',
+      'Our Starter tier guarantees Lighthouse 95+ across all four categories (Performance, Accessibility, Best Practices, SEO). Our Growth and Custom tiers target 98-100. We run PageSpeed Insights and Core Web Vitals checks as part of our QA process before every launch, you see the scores before you sign off.',
   },
   {
     category: 'technical',
@@ -515,7 +516,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from a US web agency?',
     answer:
-      'Three differences that matter: pricing model (fixed-price and milestone-paid: every project scoped upfront with no scope-creep invoices, backed by 12+ years serving US businesses), speed (7-day delivery on standard sites: most traditional agencies quote 6–12 weeks), and ownership (you get the full codebase on launch day, no retainer required to keep your site online). We\'ve delivered 500+ websites for businesses across the US, UK, UAE and India, in every industry. We aren\'t selling you a template with a custom logo.',
+      'Three differences that matter: pricing model (fixed-price and milestone-paid: every project scoped upfront with no scope-creep invoices, backed by 12+ years serving US businesses), speed (7-day delivery on standard sites: most traditional agencies quote 6-12 weeks), and ownership (you get the full codebase on launch day, no retainer required to keep your site online). We\'ve delivered 500+ websites for businesses across the US, UK, UAE and India, in every industry. We aren\'t selling you a template with a custom logo.',
   },
   {
     category: 'trust',
@@ -534,7 +535,7 @@ const FAQ_ITEMS = [
     category: 'seo',
     question: 'How do you optimize a website for Google and AI search (AEO)?',
     answer:
-      'FactoryJet builds two layers of search visibility into every website: technical SEO (the baseline every site needs) and AEO (Answer Engine Optimization: the new layer that captures AI-generated search results). Technical SEO includes: Core Web Vitals compliance (Lighthouse 90+), structured data schema (Organization, WebSite, FAQPage, BreadcrumbList, Service), sitemap submission to Google Search Console, canonical URL configuration, and mobile-first page architecture. AEO goes further: FAQ content structured as direct answers to how your buyers search in ChatGPT and Perplexity, entity markup that identifies your business to AI knowledge graphs, and \'People Also Ask\' optimization. AEO is 18–24 months ahead of where most US web agencies are, early adopters are winning AI answer positions competitors haven\'t claimed.',
+      'FactoryJet builds two layers of search visibility into every website: technical SEO (the baseline every site needs) and AEO (Answer Engine Optimization: the new layer that captures AI-generated search results). Technical SEO includes: Core Web Vitals compliance (Lighthouse 90+), structured data schema (Organization, WebSite, FAQPage, BreadcrumbList, Service), sitemap submission to Google Search Console, canonical URL configuration, and mobile-first page architecture. AEO goes further: FAQ content structured as direct answers to how your buyers search in ChatGPT and Perplexity, entity markup that identifies your business to AI knowledge graphs, and \'People Also Ask\' optimization. AEO is 18-24 months ahead of where most US web agencies are, early adopters are winning AI answer positions competitors haven\'t claimed.',
   },
   {
     category: 'process',
@@ -546,7 +547,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'Does FactoryJet offer website maintenance and ongoing support after launch?',
     answer:
-      'Yes: every website project includes a 14–30 day post-launch support window for bug fixes and minor adjustments. Beyond that, FactoryJet offers monthly website maintenance plans (scoped and quoted up front): WordPress security updates, plugin and theme updates, daily automated backups, uptime monitoring, and a set block of content and minor design changes per month. For Next.js and Webflow sites, maintenance includes dependency updates, performance monitoring, and content updates. Maintenance clients also get priority response windows for urgent issues and access to a dedicated engineer who knows their site\'s codebase. Unmanaged websites develop security vulnerabilities and performance degradation within 6–12 months, maintenance prevents both.',
+      'Yes: every website project includes a 14-30 day post-launch support window for bug fixes and minor adjustments. Beyond that, FactoryJet offers monthly website maintenance plans (scoped and quoted up front): WordPress security updates, plugin and theme updates, daily automated backups, uptime monitoring, and a set block of content and minor design changes per month. For Next.js and Webflow sites, maintenance includes dependency updates, performance monitoring, and content updates. Maintenance clients also get priority response windows for urgent issues and access to a dedicated engineer who knows their site\'s codebase. Unmanaged websites develop security vulnerabilities and performance degradation within 6-12 months, maintenance prevents both.',
   },
 
   // ── Money-query coverage, added 2026-06-11 ──
@@ -670,7 +671,7 @@ export default function WebDesignPage() {
                 {[
                   'Load in under 2 seconds on mobile, or 53% of visitors leave before it finishes',
                   'Score 95+ on Lighthouse: Google ranks fast, accessible, technically clean sites higher',
-                  'Convert at 2–4% or better: most template sites convert below 1%',
+                  'Convert at 2-4% or better: most template sites convert below 1%',
                 ].map((point, i) => (
                   <div key={i} className="flex items-start gap-3">
                     <span className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#F05A28]/10 font-fj-mono text-[10px] font-bold text-[#B23E13]">
@@ -684,7 +685,7 @@ export default function WebDesignPage() {
               </div>
               <div className="mt-6 border-t border-fj-neutral-100 pt-6">
                 <p className="font-fj-body text-[0.8125rem] text-fj-neutral-400">
-                  FactoryJet sites average Lighthouse 98–100 on delivery. Verified.
+                  FactoryJet sites average Lighthouse 98-100 on delivery. Verified.
                 </p>
               </div>
             </div>
@@ -840,12 +841,12 @@ export default function WebDesignPage() {
             {
               icon: '🐢',
               title: 'Slow sites lose more than half their visitors',
-              body: '53% of mobile users abandon a site that takes more than 3 seconds to load. Most template-built WordPress and Squarespace sites load in 4–6 seconds on mobile 4G. That\'s not a minor inconvenience, it\'s more than half your paid ad traffic gone before they see a single word.',
+              body: '53% of mobile users abandon a site that takes more than 3 seconds to load. Most template-built WordPress and Squarespace sites load in 4-6 seconds on mobile 4G. That\'s not a minor inconvenience, it\'s more than half your paid ad traffic gone before they see a single word.',
             },
             {
               icon: '📉',
               title: 'Template sites convert at under 1%',
-              body: 'The average small business website built on a theme or template converts at 0.5–0.8%. A conversion-optimized custom site converts at 2–4%. On 1,000 monthly visitors at a $500 average sale, that\'s the difference between $5,000/month and $20,000/month in revenue, from the same traffic.',
+              body: 'The average small business website built on a theme or template converts at 0.5-0.8%. A conversion-optimized custom site converts at 2-4%. On 1,000 monthly visitors at a $500 average sale, that\'s the difference between $5,000/month and $20,000/month in revenue, from the same traffic.',
             },
             {
               icon: '💸',
@@ -1066,6 +1067,13 @@ export default function WebDesignPage() {
           stats={US_WEB_STATS}
         />
 
+        {/* ── 9b. INTERACTIVE VALUE CALCULATOR ───────────────────────────── */}
+        <section className="bg-[#FFF8F5] py-16 md:py-24 border-y border-[#E7DED6]">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+            <WebDesignValueCalculator city="USA" region="us" />
+          </div>
+        </section>
+
         {/* ── 10. COMPARISON TABLE ─────────────────────────────────────────── */}
         <ComparisonTable
           eyebrow="HOW WE COMPARE"
@@ -1107,7 +1115,7 @@ export default function WebDesignPage() {
             {
               icon: '⚡',
               title: '7-day delivery | not 12 weeks',
-              body: 'traditional agencies take 6–12 weeks because they have account managers, project coordinators, and approval layers between your brief and the keyboard. We don\'t. When you brief us, a designer and an engineer work on it. That\'s why we ship in 7 days.',
+              body: 'traditional agencies take 6-12 weeks because they have account managers, project coordinators, and approval layers between your brief and the keyboard. We don\'t. When you brief us, a designer and an engineer work on it. That\'s why we ship in 7 days.',
             },
             {
               icon: '🎯',
