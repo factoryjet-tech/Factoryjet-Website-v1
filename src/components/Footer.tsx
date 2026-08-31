@@ -109,10 +109,10 @@ const Footer: React.FC = () => {
 
         <div className="border-t border-gray-800 pt-6 md:pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs md:text-sm text-gray-400">
           <p>© 2026 FactoryJet Digital Solutions. All rights reserved.</p>
-          <div className="flex gap-4 md:gap-6">
-            <Link href="/terms" onClick={() => trackNavigation('Terms', '/terms', 'footer')} className="text-gray-400 hover:text-white transition-colors">Terms </Link>
+          <div className="flex flex-wrap gap-4 md:gap-6">
             <Link href="/privacy" onClick={() => trackNavigation('Privacy Policy', '/privacy', 'footer')} className="text-gray-400 hover:text-white transition-colors">Privacy Policy</Link>
-            <Link href="/refund-policy" onClick={() => trackNavigation('Refund Policy', '/refund-policy', 'footer')} className="text-gray-400 hover:text-white transition-colors">Refund Policy</Link>
+            <Link href="/terms" onClick={() => trackNavigation('Terms & Conditions', '/terms', 'footer')} className="text-gray-400 hover:text-white transition-colors">Terms & Conditions</Link>
+            <Link href="/refund-policy" onClick={() => trackNavigation('Refund & Cancellation Policy', '/refund-policy', 'footer')} className="text-gray-400 hover:text-white transition-colors">Refund & Cancellation Policy</Link>
             <Link href="/sitemap" onClick={() => trackNavigation('Sitemap', '/sitemap', 'footer')} className="text-gray-400 hover:text-white transition-colors">Sitemap</Link>
           </div>
         </div>

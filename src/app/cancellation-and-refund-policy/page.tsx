@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: 'Cancellation & Refund Policy | FactoryJet Private Limited',
     description:
       'Official Cancellation and Refund Policy for FactoryJet web development, SaaS, AMC, and AI agent services under Indian Corporate Law.',
-    url: 'https://factoryjet.com/refund-policy',
+    url: 'https://factoryjet.com/cancellation-and-refund-policy',
     images: [
       {
         url: 'https://factoryjet.com/og-default.png',
@@ -54,7 +54,7 @@ const jsonLdWebPage = {
   name: 'Cancellation & Refund Policy | FactoryJet Private Limited',
   description:
     'Official Cancellation and Refund Policy for FactoryJet web development, SaaS, AMC, and AI agent services under Indian Corporate Law.',
-  url: 'https://factoryjet.com/refund-policy',
+  url: 'https://factoryjet.com/cancellation-and-refund-policy',
   isPartOf: {
     '@type': 'WebSite',
     name: 'FactoryJet',
@@ -68,35 +68,12 @@ const jsonLdWebPage = {
   },
 };
 
-const jsonLdBreadcrumbs = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    {
-      '@type': 'ListItem',
-      position: 1,
-      name: 'Home',
-      item: 'https://factoryjet.com',
-    },
-    {
-      '@type': 'ListItem',
-      position: 2,
-      name: 'Cancellation & Refund Policy',
-      item: 'https://factoryjet.com/refund-policy',
-    },
-  ],
-};
-
 export default function Page() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdWebPage) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumbs) }}
       />
       <SiteHeader locale="us" />
       <main>

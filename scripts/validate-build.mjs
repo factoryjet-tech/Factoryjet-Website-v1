@@ -138,8 +138,9 @@ for (const f of srcFiles) {
 // Routes whose canonical intentionally points to a DIFFERENT (top-level) URL,
 // because a /services/ alias 301-redirects to the canonical top-level page.
 const CANONICAL_ALLOW = new Set([
-  '/services/shopify-development',   // canonical -> /shopify-development
-  '/services/whatsapp-chatbot',      // canonical -> /whatsapp-chatbot
+  '/services/shopify-development',       // canonical -> /shopify-development
+  '/services/whatsapp-chatbot',          // canonical -> /whatsapp-chatbot
+  '/cancellation-and-refund-policy',     // canonical -> /refund-policy
 ]);
 const CANON_RE = /canonical:\s*["']https:\/\/factoryjet\.com(\/[^"']*)["']/g;
 

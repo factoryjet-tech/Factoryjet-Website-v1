@@ -179,8 +179,10 @@ const DEFAULT_COLUMNS = US_FOOTER_COLUMNS;
 const DEFAULT_BOTTOM_ROW = {
   copyright: '© 2026 FactoryJet Technologies',
   links: [
-    { label: 'Privacy', href: '/privacy' },
-    { label: 'Terms', href: '/terms' },
+    { label: 'Privacy Policy', href: '/privacy' },
+    { label: 'Terms & Conditions', href: '/terms' },
+    { label: 'Refund & Cancellation Policy', href: '/refund-policy' },
+    { label: 'Sitemap', href: '/sitemap' },
   ] as ReadonlyArray<SiteFooterLink>,
 };
 

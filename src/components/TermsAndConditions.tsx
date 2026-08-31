@@ -1,287 +1,310 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import Link from 'next/link';
+
 export default function TermsAndConditions() {
   const [activeSection, setActiveSection] = useState<number | null>(null);
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    setIsLoaded(true);
-  }, []);
 
   const sections = [
     {
       id: 1,
+      number: '01',
       title: 'Introduction & Acceptance of Terms',
-      content: `These Terms & Conditions ("Terms") govern your access to and use of the website, services, and online payment facilities provided by FactoryJet Private Limited ("FactoryJet", "we", "our", or "us"). By accessing our website, engaging our services, submitting inquiries, or making payments online, you agree to be legally bound by these Terms, our Privacy Policy, and Refund & Cancellation Policy. If you do not agree with these Terms, please do not use our services or make any payments.`
+      content: `These Terms & Conditions ("Terms") govern your access to and use of the website, services, and online payment facilities provided by FactoryJet Private Limited ("FactoryJet", "we", "our", or "us"), a company incorporated under the Indian Companies Act, 2013 (CIN: U74999KA2020PTC140850, GSTIN: 29AAECF3218J1ZK). By accessing our website, engaging our services, submitting inquiries, or making payments online, you agree to be legally bound by these Terms, our Privacy Policy, and our Cancellation and Refund Policy. If you do not agree with these Terms, please do not use our services or make any payments.`,
     },
     {
       id: 2,
+      number: '02',
       title: 'Company Information',
       company: {
         name: 'FactoryJet Private Limited',
         cin: 'U74999KA2020PTC140850',
         gstin: '29AAECF3218J1ZK',
-        address: '70/1, Willow Herbs, Tigalarpalya, Kundalahalli, Bengaluru, Karnataka – 560037, India',
-        email: 'connect@factoiryjet.com',
+        address: '70/1, Willow Herbs, Tigalarpalya, Kundalahalli, Bengaluru, Karnataka - 560037, India',
+        email: 'connect@factoryjet.com',
         phone: '+91 96999 77699',
-        hours: 'Monday to Friday, 10:00 AM – 6:00 PM IST'
-      }
+        hours: 'Monday to Friday, 10:00 AM - 6:00 PM IST',
+      },
     },
     {
       id: 3,
+      number: '03',
       title: 'Scope of Services',
       content: 'FactoryJet provides professional digital services including but not limited to:',
       list: [
-        'Website design and development',
-        'E-commerce store design & development',
-        'B2B and B2C commerce solutions',
-        'Digital marketing, SEO, paid advertising, and growth services',
-        'IT services, SaaS, ERP, AI, and automation solutions',
-        'Consulting, strategy, and technical implementation'
+        'Website design, UI/UX, and Next.js frontend engineering',
+        'E-commerce store design and development (Shopify, WooCommerce, Magento, BigCommerce)',
+        'B2B and B2C commerce architectures and systems integration',
+        'Digital marketing, technical SEO, Generative Engine Optimization (GEO), and paid advertising',
+        'AI agent engineering, workflow automation (n8n, Python), and custom API solutions',
+        'Annual Maintenance Contracts (AMC) and ongoing technical infrastructure retainers',
       ],
-      note: 'The exact scope, deliverables, timelines, and pricing will be defined in written proposals, emails, Statements of Work (SoW), project agreements or invoices. Only written commitments explicitly agreed upon by FactoryJet shall be binding.'
+      note: 'The exact scope, deliverables, timelines, and pricing are defined in written proposals, Statements of Work (SoW), project agreements, or invoices. Only written commitments explicitly executed by FactoryJet shall be legally binding.',
     },
     {
       id: 4,
-      title: 'User Responsibilities',
+      number: '04',
+      title: 'User & Client Responsibilities',
       content: 'You agree to:',
       list: [
-        'Provide accurate and complete information',
-        'Share required content, approvals, and feedback on time',
-        'Ensure you have rights to any content, data, or materials you provide',
-        'Respond within reasonable timelines to avoid project delays'
+        'Provide accurate, authentic, and complete information necessary for project kickoff and execution',
+        'Share required content, design feedback, and formal milestone approvals in a timely manner',
+        'Ensure you hold lawful rights, licenses, or authorizations to all content, trademarks, or datasets provided',
+        'Designate a primary decision-maker to prevent communication bottlenecks and delivery delays',
       ],
-      note: 'FactoryJet shall not be responsible for delays or failures caused by incomplete inputs, delayed approvals, or third-party dependencies.'
+      note: 'FactoryJet shall not be responsible for delivery delays or project blockers caused by incomplete inputs, delayed approvals, or third-party platform dependencies.',
     },
     {
       id: 5,
-      title: 'Payments & Billing',
+      number: '05',
+      title: 'Payments, Invoicing & Taxes',
       subsections: [
         {
           subtitle: 'Advance & Milestone Payments',
           list: [
-            'All services require advance payment unless agreed otherwise in writing',
-            'Payments may be milestone-based or phase-based',
-            'Work commences only after receipt of the agreed payment'
-          ]
+            'All professional services require advance deposit disbursements unless expressly agreed otherwise in writing',
+            'Project billing is milestone-based, phase-based, or monthly retainer-based',
+            'Engineering sprints commence only upon verified receipt of the corresponding invoice payment',
+          ],
         },
         {
-          subtitle: 'Online Payments',
-          content: 'Payments made on the website are processed securely via third-party payment gateways such as Razorpay. FactoryJet does not store or process card, UPI, or banking details.'
+          subtitle: 'Online Payment Gateways',
+          content: 'Online transactions are processed securely via PCI-DSS compliant third-party payment gateways (Razorpay, Stripe). FactoryJet does not store or process payment card numbers, CVVs, UPI PINs, or net banking passwords.',
         },
         {
-          subtitle: 'Taxes',
-          content: 'Prices are exclusive of applicable taxes unless stated otherwise. GST will be charged as per Indian law.'
+          subtitle: 'Goods & Services Tax (GST)',
+          content: 'Quoted prices are exclusive of statutory taxes unless stated otherwise. GST (18%) is charged on domestic Indian transactions as per Indian tax law. International transactions comply with zero-rated export of services regulations under Letter of Undertaking (LUT).',
         },
         {
-          subtitle: 'Delayed Payments',
-          content: 'FactoryJet reserves the right to pause work, withhold deliverables, or suspend services until outstanding payments are cleared.'
-        }
-      ]
+          subtitle: 'Delayed Payments & Suspension',
+          content: 'FactoryJet reserves the right to pause active development sprints, withhold production deployments, or suspend staging environments if undisputed invoices remain unpaid beyond 14 days.',
+        },
+      ],
     },
     {
       id: 6,
-      title: 'No Guarantee of Results',
-      content: 'FactoryJet provides services on a best-effort and professional basis. We do not guarantee: Search engine rankings, Advertising performance, Revenue, sales, leads, or conversions, or Platform approvals or third-party outcomes. Results depend on multiple external factors beyond our control.'
+      number: '06',
+      title: 'Commercial Outcomes & Performance Disclaimer',
+      content: 'FactoryJet provides professional engineering, design, and growth consulting on a best-effort, industry-standard basis. We do not guarantee specific third-party outcomes, including search engine rankings, advertising conversion rates, or sales figures, as these depend on external market conditions and algorithm factors beyond our direct control.',
     },
     {
       id: 7,
+      number: '07',
       title: 'Intellectual Property Rights',
       subsections: [
         {
-          subtitle: 'Client IP',
-          content: 'Any content, data, or materials provided by the client remain the client\'s property.'
+          subtitle: 'Client Intellectual Property',
+          content: 'All trademarks, proprietary brand assets, datasets, and raw content supplied by the client remain the client\'s exclusive property.',
         },
         {
-          subtitle: 'FactoryJet IP',
-          content: 'All frameworks, code libraries, methodologies, templates, and internal tools remain the intellectual property of FactoryJet unless explicitly transferred in writing.'
+          subtitle: 'FactoryJet Core IP & Frameworks',
+          content: 'All pre-existing internal frameworks, modular code libraries, design methodologies, workflow automations, and custom tools developed independently by FactoryJet remain Company IP.',
         },
         {
-          subtitle: 'Final Deliverables',
-          content: 'Ownership of final deliverables transfers to the client only after full payment of all dues, unless otherwise agreed.'
-        }
-      ]
+          subtitle: 'Custom Deliverables Transfer',
+          content: 'Ownership of custom deliverables and unique application source code transfers to the client upon 100% full settlement of all project invoices and dues.',
+        },
+      ],
     },
     {
       id: 8,
-      title: 'Revisions & Change Requests',
+      number: '08',
+      title: 'Scope Revisions & Change Requests',
       list: [
-        'Revisions are limited to the agreed scope',
-        'Additional features, redesigns, or scope changes will be billed separately',
-        'Verbal requests are not binding unless confirmed in writing'
-      ]
+        'Deliverables are strictly bounded by the agreed Statement of Work (SoW) or project specification',
+        'Feature enhancements, structural redesigns, or third-party integrations outside the SoW will be scoped and billed as separate change orders',
+        'Verbal or informal requests are non-binding until confirmed via written amendment or signed change order',
+      ],
     },
     {
       id: 9,
-      title: 'Third-Party Services & Tools',
-      content: 'FactoryJet may integrate or recommend third-party tools, platforms, plugins, or services. FactoryJet is not responsible for third-party downtime, pricing changes, policy changes, or service discontinuation. Clients agree to comply with third-party terms independently.'
+      number: '09',
+      title: 'Third-Party Services & Dependencies',
+      content: 'FactoryJet may recommend or integrate third-party platforms, hosting services, theme marketplaces, or software APIs. FactoryJet is not liable for third-party service interruptions, API rate limits, pricing revisions, or platform policy deprecations.',
     },
     {
       id: 10,
+      number: '10',
       title: 'Limitation of Liability',
-      content: 'To the maximum extent permitted by law: FactoryJet shall not be liable for indirect, incidental, or consequential damages. Total liability shall not exceed the amount paid by the client for the specific service. This applies to all claims including contract, tort, negligence, or otherwise.'
+      content: 'To the maximum extent permitted by applicable law, FactoryJet shall not be liable for indirect, incidental, special, or consequential damages. FactoryJet\'s total aggregate liability arising under any contract or claim shall not exceed the total fees received by FactoryJet from the client for the specific service during the three months preceding the claim.',
     },
     {
       id: 11,
+      number: '11',
       title: 'Indemnification',
-      content: 'You agree to indemnify and hold harmless FactoryJet, its directors, employees, and partners from any claims, damages, losses, or expenses arising from:',
-      list: [
-        'Content provided by you',
-        'Violation of laws or third-party rights',
-        'Misuse of services'
-      ]
+      content: 'You agree to indemnify, defend, and hold harmless FactoryJet Private Limited, its directors, officers, and employees against any third-party claims, liabilities, damages, or legal expenses arising from client-provided materials, copyright infringements, or unlawful activities conducted through the deliverables.',
     },
     {
       id: 12,
-      title: 'Termination',
-      content: 'FactoryJet reserves the right to terminate or suspend services if Terms are violated, payments are not made, or unlawful or abusive activities are detected.',
-      note: 'Upon termination: Fees already paid are non-refundable and outstanding dues remain payable.'
+      number: '12',
+      title: 'Contractual Termination & Notice Periods',
+      content: 'Contracts may be terminated in accordance with our Cancellation and Refund Policy. Specifically:',
+      list: [
+        'SaaS & Subscriptions: Cancellable anytime, effective upcoming billing month.',
+        'Annual Maintenance Contracts (AMC): Requires 30 days written notice.',
+        'Custom Design & Development: Requires 90 days written notice, with client obligated to pay for all work completed or in progress.',
+      ],
+      note: 'Upon termination for convenience or cause, all completed work and accrued engineering hours remain payable.',
     },
     {
       id: 13,
-      title: 'Refunds & Cancellations',
-      content: 'Refunds, if any, are governed strictly by our Refund & Cancellation Policy, available on the website and incorporated by reference into these Terms.'
+      number: '13',
+      title: 'Refund & Cancellation Policy',
+      content: 'All cancellations, refunds, and financial adjustments are governed strictly by our dedicated Cancellation and Refund Policy, incorporated by reference into these Terms.',
     },
     {
       id: 14,
-      title: 'Confidentiality',
-      content: 'Both parties agree to maintain confidentiality of business information, pricing, project details, and trade secrets unless disclosure is required by law.'
+      number: '14',
+      title: 'Confidentiality & Non-Disclosure',
+      content: 'Both parties agree to hold all proprietary business information, source code, client records, and technical architectures in strict confidence, disclosing only to personnel with a need to know under equivalent non-disclosure obligations.',
     },
     {
       id: 15,
-      title: 'Governing Law & Jurisdiction',
-      content: 'These Terms shall be governed by and construed in accordance with the laws of India. All disputes shall be subject to the exclusive jurisdiction of courts in Bengaluru, Karnataka.'
+      number: '15',
+      title: 'Governing Law & Dispute Resolution',
+      content: 'These Terms are governed by and construed in accordance with the laws of the Republic of India. Disputes shall first be resolved through good-faith negotiation, failing which they shall be settled by binding arbitration under the Indian Arbitration and Conciliation Act, 1996 in Bengaluru, Karnataka, India.',
     },
     {
       id: 16,
+      number: '16',
       title: 'Modifications to Terms',
-      content: 'FactoryJet may modify these Terms at any time. Updated Terms will be posted on this page with a revised "Last updated" date. Continued use of services constitutes acceptance of revised Terms.'
+      content: 'FactoryJet reserves the right to revise these Terms at any time. Changes take effect upon posting with an updated "Last Updated" timestamp. Continued use of services after updates signifies your agreement to the revised Terms.',
     },
     {
       id: 17,
-      title: 'Contact Information',
-      content: 'For any questions regarding these Terms, please contact:',
+      number: '17',
+      title: 'Official Contact Information',
+      content: 'For questions regarding these Terms, please contact our legal and compliance department:',
       contact: {
         company: 'FactoryJet Private Limited',
-        email: 'connect@factoiryjet.com',
-        phone: '+91 96999 77699'
-      }
-    }
+        email: 'connect@factoryjet.com',
+        phone: '+91 96999 77699',
+      },
+    },
   ];
 
-  return ( <>
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 mt-9">
-      {/* Decorative background elements */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-indigo-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
-        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
-      </div>
-
-      <div className="relative">
-        {/* Header */}
-        {/* <header className={`border-b border-slate-200 bg-white/80 backdrop-blur-md sticky top-0 z-50 transition-all duration-700 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}>
-          <div className="max-w-5xl mx-auto px-6 py-8">
-            <div className="flex items-center justify-between">
-              <div>
-                <h1 className="text-4xl font-bold text-slate-900 tracking-tight" style={{ fontFamily: 'Georgia, serif' }}>
-                  Terms & Conditions
-                </h1>
-                <p className="text-sm text-slate-500 mt-2 tracking-wide" style={{ fontFamily: 'Courier New, monospace' }}>
-                  Last updated: 01/01/2026
-                </p>
-              </div>
-              <div className="hidden md:block">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg shadow-lg transform rotate-12 hover:rotate-0 transition-transform duration-300"></div>
-              </div>
-            </div>
+  return (
+    <div className="bg-[#FAFAF7] text-[#0F0F12] min-h-screen">
+      {/* Hero Header */}
+      <section className="border-b border-[#E5E5DF] bg-white pt-24 pb-14 md:pt-28 md:pb-18">
+        <div className="mx-auto max-w-[1200px] px-6 md:px-8">
+          <div className="flex flex-wrap items-center gap-3 mb-4">
+            <span className="inline-block px-3 py-1 bg-[#F05A28]/10 text-[#B23E13] text-xs font-bold uppercase rounded-full tracking-wider">
+              Legal Agreement
+            </span>
+            <span className="text-xs text-gray-500 font-medium">
+              Last Updated: August 31, 2026
+            </span>
           </div>
-        </header> */}
+          <h1 className="text-3xl md:text-5xl font-display font-bold text-gray-900 tracking-tight mb-4">
+            Terms and Conditions
+          </h1>
+          <p className="text-gray-600 text-base md:text-lg max-w-3xl leading-relaxed">
+            Standard contractual guidelines, user obligations, intellectual property rights, and service agreements governing all engagements with FactoryJet Private Limited.
+          </p>
+        </div>
+      </section>
 
-        {/* Main content */}
-        <main className="max-w-5xl mx-auto px-6 py-12">
-          <div className="space-y-8">
-            {sections.map((section, index) => (
-              <article
-                key={`section-${section.id}`}
-                className={`bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 overflow-hidden border border-slate-200 ${
-                  isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                }`}
-                style={{ 
-                  animationDelay: `${index * 100}ms`,
-                  transitionDelay: `${index * 50}ms`
-                }}
-                onMouseEnter={() => setActiveSection(section.id)}
-                onMouseLeave={() => setActiveSection(null)}
-              >
-                <div className={`p-8 transition-colors duration-300 ${
-                  activeSection === section.id ? 'bg-gradient-to-r from-blue-50 to-indigo-50' : ''
-                }`}>
-                  {/* Section number and title */}
-                  <div className="flex items-start gap-4 mb-6">
-                    <div className={`flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white font-bold shadow-md transition-transform duration-300 ${
-                      activeSection === section.id ? 'scale-110 rotate-3' : ''
-                    }`}>
-                      {section.id}
-                    </div>
-                    <div className="flex-1">
-                      <h2 className="text-2xl font-bold text-slate-900 mb-2" style={{ fontFamily: 'Georgia, serif' }}>
-                        {section.title}
-                      </h2>
-                      {section.content && (
-                        <p className="text-slate-700 leading-relaxed">
-                          {section.content}
-                        </p>
-                      )}
-                    </div>
+      {/* Main Content Layout */}
+      <section className="py-12 md:py-16">
+        <div className="mx-auto max-w-[1200px] px-6 md:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-10 items-start">
+            {/* Sidebar Navigation */}
+            <aside className="hidden lg:block sticky top-28 bg-white rounded-xl p-5 border border-[#E5E5DF] shadow-sm">
+              <p className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-4 px-2">
+                Table of Contents
+              </p>
+              <nav className="space-y-1">
+                {sections.map((section) => (
+                  <a
+                    key={section.id}
+                    href={`#section-${section.id}`}
+                    onClick={() => setActiveSection(section.id)}
+                    className={`flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium transition-colors ${
+                      activeSection === section.id
+                        ? 'bg-[#F05A28]/10 text-[#B23E13] font-bold'
+                        : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900'
+                    }`}
+                  >
+                    <span className="truncate">{section.title}</span>
+                    <span className="text-[10px] text-gray-400 ml-2">{section.number}</span>
+                  </a>
+                ))}
+              </nav>
+
+              <div className="mt-6 pt-5 border-t border-gray-100">
+                <p className="text-xs text-gray-500 mb-2">Legal inquiries?</p>
+                <a
+                  href="mailto:connect@factoryjet.com"
+                  className="block text-xs font-bold text-[#F05A28] hover:text-[#C94818] transition-colors"
+                >
+                  connect@factoryjet.com →
+                </a>
+              </div>
+            </aside>
+
+            {/* Terms Articles */}
+            <div className="space-y-8">
+              {sections.map((section) => (
+                <article
+                  key={`section-${section.id}`}
+                  id={`section-${section.id}`}
+                  className="bg-white rounded-2xl p-6 md:p-8 border border-[#E5E5DF] shadow-sm scroll-mt-28"
+                >
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="text-xs font-mono font-bold text-[#F05A28] bg-[#F05A28]/10 px-2.5 py-1 rounded">
+                      CLAUSE {section.number}
+                    </span>
+                    <h2 className="text-xl md:text-2xl font-display font-bold text-gray-900">
+                      {section.title}
+                    </h2>
                   </div>
 
-                  {/* Company information */}
+                  {section.content && (
+                    <p className="text-gray-700 leading-relaxed text-sm md:text-base mb-4 whitespace-pre-line">
+                      {section.content}
+                    </p>
+                  )}
+
                   {section.company && (
-                    <div className="ml-16 space-y-3 text-slate-700">
-                      <div className="bg-slate-50 rounded-xl p-6 border-l-4 border-blue-500">
-                        <p className="mb-2"><strong>Legal Entity Name:</strong> {section.company.name}</p>
-                        <p className="mb-2"><strong>CIN:</strong> <span className="font-mono text-sm">{section.company.cin}</span></p>
-                        <p className="mb-3"><strong>GSTIN:</strong> <span className="font-mono text-sm">{section.company.gstin}</span></p>
-                        <p className="mb-2"><strong>Registered & Operational Address:</strong></p>
-                        <p className="ml-4 mb-3">{section.company.address}</p>
-                        <p className="mb-2"><strong>Email:</strong> <span className="font-mono text-sm">{section.company.email}</span></p>
-                        <p className="mb-2"><strong>Phone:</strong> <span className="font-mono text-sm">{section.company.phone}</span></p>
-                        <p className="text-slate-600 text-sm">({section.company.hours})</p>
-                      </div>
+                    <div className="bg-[#FAFAF7] rounded-xl p-5 border border-[#E5E5DF] my-4 space-y-2 text-xs md:text-sm text-gray-800">
+                      <p><strong>Legal Entity:</strong> {section.company.name}</p>
+                      <p><strong>CIN:</strong> <span className="font-mono">{section.company.cin}</span></p>
+                      <p><strong>GSTIN:</strong> <span className="font-mono">{section.company.gstin}</span></p>
+                      <p><strong>Registered Address:</strong> {section.company.address}</p>
+                      <p><strong>Official Email:</strong> <span className="font-mono">{section.company.email}</span></p>
+                      <p><strong>Contact Phone:</strong> <span className="font-mono">{section.company.phone}</span> ({section.company.hours})</p>
                     </div>
                   )}
 
-                  {/* List items */}
                   {section.list && (
-                    <ul className="space-y-3 ml-16">
+                    <ul className="list-disc pl-5 space-y-2 mb-4 text-gray-700 text-sm md:text-base">
                       {section.list.map((item, idx) => (
-                        <li key={`list-${section.id}-${idx}`} className="flex items-start gap-3 text-slate-700">
-                          <span className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-gradient-to-r from-blue-400 to-indigo-500"></span>
-                          <span className="leading-relaxed">{item}</span>
+                        <li key={idx} className="leading-relaxed">
+                          {item}
                         </li>
                       ))}
                     </ul>
                   )}
 
-                  {/* Subsections */}
                   {section.subsections && (
-                    <div className="ml-16 space-y-6 mt-6">
+                    <div className="space-y-4 my-4">
                       {section.subsections.map((sub, idx) => (
-                        <div key={`subsection-${section.id}-${idx}`} className="bg-slate-50 rounded-xl p-6 border-l-4 border-blue-500">
-                          <h3 className="font-bold text-slate-900 mb-3 text-lg">
+                        <div key={idx} className="bg-[#FAFAF7] rounded-xl p-5 border border-[#E5E5DF]">
+                          <h3 className="font-display font-bold text-gray-900 text-sm md:text-base mb-2">
                             {sub.subtitle}
                           </h3>
                           {sub.content && (
-                            <p className="text-slate-700 mb-3">{sub.content}</p>
+                            <p className="text-gray-700 text-xs md:text-sm leading-relaxed mb-3">
+                              {sub.content}
+                            </p>
                           )}
                           {sub.list && (
-                            <ul className="space-y-2">
+                            <ul className="list-disc pl-5 space-y-1.5 text-gray-700 text-xs md:text-sm">
                               {sub.list.map((item, i) => (
-                                <li key={`sublist-${section.id}-${idx}-${i}`} className="flex items-start gap-2 text-slate-700">
-                                  <span className="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-blue-500"></span>
-                                  <span>{item}</span>
+                                <li key={i} className="leading-relaxed">
+                                  {item}
                                 </li>
                               ))}
                             </ul>
@@ -291,82 +314,49 @@ export default function TermsAndConditions() {
                     </div>
                   )}
 
-                  {/* Note */}
                   {section.note && (
-                    <div className="ml-16 mt-4 p-4 bg-amber-50 border-l-4 border-amber-400 rounded-r-lg">
-                      <p className="text-slate-700 italic">{section.note}</p>
+                    <div className="bg-amber-50/80 border-l-4 border-amber-500 p-4 rounded-r-lg mt-4 text-xs md:text-sm text-gray-800 leading-relaxed">
+                      <strong>Note:</strong> {section.note}
                     </div>
                   )}
 
-                  {/* Contact information */}
                   {section.contact && (
-                    <div className="ml-16 mt-6 bg-gradient-to-br from-slate-900 to-blue-900 rounded-xl p-6 text-white shadow-lg">
-                      <h3 className="font-bold text-xl mb-4">{section.contact.company}</h3>
-                      <div className="space-y-2">
-                        <p className="flex items-center gap-2">
-                          <span className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center text-sm">✉</span>
-                          <span className="font-mono">{section.contact.email}</span>
-                        </p>
-                        <p className="flex items-center gap-2">
-                          <span className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center text-sm">☎</span>
-                          <span className="font-mono">{section.contact.phone}</span>
-                        </p>
-                      </div>
+                    <div className="bg-[#FAFAF7] rounded-xl p-5 border border-[#E5E5DF] my-4 space-y-2 text-xs md:text-sm text-gray-800">
+                      <p className="font-bold text-gray-900">{section.contact.company}</p>
+                      <p>Email: <a href={`mailto:${section.contact.email}`} className="text-[#F05A28] font-mono hover:underline">{section.contact.email}</a></p>
+                      <p>Phone: <span className="font-mono">{section.contact.phone}</span></p>
                     </div>
                   )}
+                </article>
+              ))}
+
+              {/* Related Links Card */}
+              <div className="bg-gray-900 text-white rounded-2xl p-6 md:p-8 shadow-lg">
+                <h3 className="text-xl md:text-2xl font-display font-bold text-white mb-2">
+                  Related Legal Documentation
+                </h3>
+                <p className="text-gray-300 text-sm leading-relaxed mb-6">
+                  Review our complete policies regarding user privacy, data handling, and cancellation terms.
+                </p>
+                <div className="flex flex-wrap gap-3">
+                  <Link
+                    href="/privacy"
+                    className="inline-flex items-center justify-center bg-[#F05A28] hover:bg-[#C94818] text-white font-semibold text-xs md:text-sm px-5 py-2.5 rounded-lg transition-colors"
+                  >
+                    Privacy Policy
+                  </Link>
+                  <Link
+                    href="/refund-policy"
+                    className="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 text-white border border-white/20 font-semibold text-xs md:text-sm px-5 py-2.5 rounded-lg transition-colors"
+                  >
+                    Cancellation & Refund Policy
+                  </Link>
                 </div>
-              </article>
-            ))}
+              </div>
+            </div>
           </div>
-
-          {/* Footer notice */}
-          {/* <div className={`mt-12 p-6 bg-white/60 backdrop-blur-sm rounded-2xl border border-slate-200 transition-all duration-1000 ${
-            isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}>
-            <p className="text-center text-slate-600 text-sm leading-relaxed">
-              By using FactoryJet services, you acknowledge that you have read and agreed to these Terms & Conditions.
-              <br />
-              <span className="text-slate-500">© 2026 FactoryJet Private Limited. All rights reserved.</span>
-            </p>
-          </div> */}
-        </main>
-      </div>
-
-      <style >{`
-        @keyframes blob {
-          0%, 100% {
-            transform: translate(0, 0) scale(1);
-          }
-          33% {
-            transform: translate(30px, -50px) scale(1.1);
-          }
-          66% {
-            transform: translate(-20px, 20px) scale(0.9);
-          }
-        }
-        
-        .animate-blob {
-          animation: blob 7s infinite;
-        }
-        
-        .animation-delay-2000 {
-          animation-delay: 2s;
-        }
-        
-        .animation-delay-4000 {
-          animation-delay: 4s;
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-          * {
-            animation-duration: 0.01ms !important;
-            animation-iteration-count: 1 !important;
-            transition-duration: 0.01ms !important;
-          }
-        }
-      `}</style>
+        </div>
+      </section>
     </div>
-
-    </>
   );
 }
