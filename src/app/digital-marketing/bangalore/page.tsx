@@ -1233,6 +1233,10 @@ export default function BangaloreDigitalMarketingPage() {
               <a href="/digital-marketing" className="font-semibold text-[#B23E13] underline underline-offset-2">
                 choosing a digital marketing agency in India
               </a>
+              , or review our researched comparison of the{' '}
+              <a href="/blog/best-ai-seo-agencies-india" className="font-semibold text-[#B23E13] underline underline-offset-2">
+                top AI SEO agencies in India
+              </a>
               , so you can compare before you commit.
             </p>
           </div>
