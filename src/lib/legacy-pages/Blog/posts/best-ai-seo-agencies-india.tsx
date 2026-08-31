@@ -56,7 +56,7 @@ export const post: BlogPost = {
     },
     {
       q: 'Who is the best ChatGPT optimization agency in India?',
-      a: 'India is OpenAI’s second-largest user base with over 100 million weekly active users. FactoryJet tracks ChatGPT search citations as a primary KPI every month. Qoulomb optimizes prompt entities directly for GPT-4o and SearchGPT, and ZeroAdo showcases verified client referral acquisition from ChatGPT.',
+      a: 'India is OpenAI’s second-largest user base with over 100 million weekly active users. FactoryJet tracks ChatGPT citations as a primary KPI every month. Qoulomb optimizes prompt entities directly for ChatGPT and OpenAI Search, and ZeroAdo showcases verified client referral acquisition from conversational AI.',
     },
     {
       q: 'Which is the best LLM SEO agency in India?',
@@ -120,7 +120,7 @@ export const post: BlogPost = {
     },
     {
       q: 'How does FactoryJet track AI citations every month?',
-      a: 'FactoryJet monitors a custom portfolio of commercial buyer queries across ChatGPT (GPT-4o/SearchGPT), Perplexity Pro, Google AI Overviews, Claude 3.5 Sonnet, and Gemini. We record whether your brand was cited, the sentiment of the citation, and the specific landing page referenced.',
+      a: 'FactoryJet monitors a custom portfolio of commercial buyer queries across ChatGPT, Perplexity, Google AI Overviews, Claude, and Gemini. We record whether your brand was cited, the sentiment of the citation, and the specific landing page referenced.',
     },
     {
       q: 'Is Generative Engine Optimization (GEO) risky or considered black-hat?',
@@ -322,10 +322,10 @@ export const post: BlogPost = {
         <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
           <div className="flex items-center gap-2 mb-2">
             <span className="w-3 h-3 rounded-full bg-[#F05A28]" />
-            <h3 className="font-bold text-gray-900 text-base">1. OpenAI ChatGPT &amp; SearchGPT</h3>
+            <h3 className="font-bold text-gray-900 text-base">1. OpenAI ChatGPT &amp; Search</h3>
           </div>
           <p className="text-sm text-gray-600 leading-relaxed">
-            Parses web data using OAI-SearchBot. Rewards clear entity schema, Wikidata alignment, author authority, and factual markdown tables. FactoryJet logs live brand citations across GPT-4o and SearchGPT queries monthly.
+            Parses web data using OAI-SearchBot. Rewards clear entity schema, Wikidata alignment, author authority, and factual markdown tables. FactoryJet logs live brand citations across OpenAI search queries monthly.
           </p>
         </div>
 
@@ -342,7 +342,7 @@ export const post: BlogPost = {
         <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
           <div className="flex items-center gap-2 mb-2">
             <span className="w-3 h-3 rounded-full bg-[#F05A28]" />
-            <h3 className="font-bold text-gray-900 text-base">3. Perplexity AI Pro</h3>
+            <h3 className="font-bold text-gray-900 text-base">3. Perplexity AI</h3>
           </div>
           <p className="text-sm text-gray-600 leading-relaxed">
             An index-first answer engine favored by developers, executives, and tech buyers. Heavily cites pages with fresh dates, original data points, clear comparison matrices, and structured technical docs.
@@ -352,10 +352,10 @@ export const post: BlogPost = {
         <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
           <div className="flex items-center gap-2 mb-2">
             <span className="w-3 h-3 rounded-full bg-[#F05A28]" />
-            <h3 className="font-bold text-gray-900 text-base">4. Anthropic Claude (3.5 Sonnet)</h3>
+            <h3 className="font-bold text-gray-900 text-base">4. Anthropic Claude</h3>
           </div>
           <p className="text-sm text-gray-600 leading-relaxed">
-            Prioritizes deep topical reasoning, unbiased architectural breakdowns, and well-organized code or technical workflows. Highly influential for enterprise B2B evaluation.
+            Prioritizes deep topical reasoning, unbiased architectural breakdowns, and well-organized technical workflows. Highly influential for enterprise B2B evaluation.
           </p>
         </div>
       </div>
