@@ -140,7 +140,11 @@ for (const f of srcFiles) {
 const CANONICAL_ALLOW = new Set([
   '/services/shopify-development',       // canonical -> /shopify-development
   '/services/whatsapp-chatbot',          // canonical -> /whatsapp-chatbot
-  '/cancellation-and-refund-policy',     // canonical -> /refund-policy
+  '/privacy',                            // canonical -> /privacy-policy
+  '/terms',                              // canonical -> /terms-and-conditions
+  '/terms-conditions',                   // canonical -> /terms-and-conditions
+  '/refund-policy',                      // canonical -> /cancellation-and-refund-policy
+  '/cancellation-refund-policy',         // canonical -> /cancellation-and-refund-policy
 ]);
 const CANON_RE = /canonical:\s*["']https:\/\/factoryjet\.com(\/[^"']*)["']/g;
 

@@ -47,9 +47,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ]
 
   const legal: { path: string; source: string }[] = [
-    { path: '/privacy',        source: 'src/app/privacy/page.tsx' },
-    { path: '/terms',          source: 'src/app/terms/page.tsx' },
-    { path: '/refund-policy',  source: 'src/app/refund-policy/page.tsx' },
+    { path: '/privacy-policy',                 source: 'src/app/privacy-policy/page.tsx' },
+    { path: '/terms-and-conditions',           source: 'src/app/terms-and-conditions/page.tsx' },
+    { path: '/cancellation-and-refund-policy', source: 'src/app/cancellation-and-refund-policy/page.tsx' },
   ]
 
   // All 5 author profiles are driven by the same data file — share lastmod.

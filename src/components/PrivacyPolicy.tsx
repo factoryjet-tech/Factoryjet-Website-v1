@@ -297,13 +297,13 @@ export default function PrivacyPolicy() {
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <Link
-                    href="/terms"
+                    href="/terms-and-conditions"
                     className="inline-flex items-center justify-center bg-[#F05A28] hover:bg-[#C94818] text-white font-semibold text-xs md:text-sm px-5 py-2.5 rounded-lg transition-colors"
                   >
                     Terms & Conditions
                   </Link>
                   <Link
-                    href="/refund-policy"
+                    href="/cancellation-and-refund-policy"
                     className="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 text-white border border-white/20 font-semibold text-xs md:text-sm px-5 py-2.5 rounded-lg transition-colors"
                   >
                     Cancellation & Refund Policy

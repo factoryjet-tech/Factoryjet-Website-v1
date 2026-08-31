@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: 'Terms and Conditions | FactoryJet Private Limited',
     description:
       'Official Terms and Conditions for FactoryJet web development, SaaS, AMC, and AI agent services under Indian Corporate Law.',
-    url: 'https://factoryjet.com/terms',
+    url: 'https://factoryjet.com/terms-conditions',
     images: [
       {
         url: 'https://factoryjet.com/og-default.png',

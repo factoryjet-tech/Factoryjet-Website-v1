@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: {
-    canonical: 'https://factoryjet.com/refund-policy',
+    canonical: 'https://factoryjet.com/cancellation-and-refund-policy',
   },
   robots: {
     index: true,
@@ -48,56 +48,9 @@ export const metadata: Metadata = {
   },
 };
 
-const jsonLdWebPage = {
-  '@context': 'https://schema.org',
-  '@type': 'WebPage',
-  name: 'Cancellation & Refund Policy | FactoryJet Private Limited',
-  description:
-    'Official Cancellation and Refund Policy for FactoryJet web development, SaaS, AMC, and AI agent services under Indian Corporate Law.',
-  url: 'https://factoryjet.com/refund-policy',
-  isPartOf: {
-    '@type': 'WebSite',
-    name: 'FactoryJet',
-    url: 'https://factoryjet.com',
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'FactoryJet Private Limited',
-    url: 'https://factoryjet.com',
-    logo: 'https://factoryjet.com/FinalLogo.svg',
-  },
-};
-
-const jsonLdBreadcrumbs = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    {
-      '@type': 'ListItem',
-      position: 1,
-      name: 'Home',
-      item: 'https://factoryjet.com',
-    },
-    {
-      '@type': 'ListItem',
-      position: 2,
-      name: 'Cancellation & Refund Policy',
-      item: 'https://factoryjet.com/refund-policy',
-    },
-  ],
-};
-
 export default function Page() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdWebPage) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumbs) }}
-      />
       <SiteHeader locale="us" />
       <main>
         <RefundPolicy />

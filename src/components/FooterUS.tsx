@@ -101,9 +101,9 @@ const FooterUS: React.FC<FooterUSProps> = ({ onCtaClick, hideLocations = false }
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
           <p>© 2026 FactoryJet Inc. All rights reserved.</p>
           <div className="flex flex-wrap gap-6 md:gap-8">
-            <Link href="/privacy" onClick={() => trackNavigation('Privacy Policy', '/privacy', 'footer')} className="hover:text-white transition-colors">Privacy Policy</Link>
-            <Link href="/terms" onClick={() => trackNavigation('Terms & Conditions', '/terms', 'footer')} className="hover:text-white transition-colors">Terms & Conditions</Link>
-            <Link href="/refund-policy" onClick={() => trackNavigation('Refund & Cancellation Policy', '/refund-policy', 'footer')} className="hover:text-white transition-colors">Refund & Cancellation Policy</Link>
+            <Link href="/privacy-policy" onClick={() => trackNavigation('Privacy Policy', '/privacy-policy', 'footer')} className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link href="/terms-and-conditions" onClick={() => trackNavigation('Terms & Conditions', '/terms-and-conditions', 'footer')} className="hover:text-white transition-colors">Terms & Conditions</Link>
+            <Link href="/cancellation-and-refund-policy" onClick={() => trackNavigation('Cancellation & Refund Policy', '/cancellation-and-refund-policy', 'footer')} className="hover:text-white transition-colors">Cancellation & Refund Policy</Link>
             <Link href="/sitemap" onClick={() => trackNavigation('Sitemap', '/sitemap', 'footer')} className="hover:text-white transition-colors">Sitemap</Link>
           </div>
         </div>
