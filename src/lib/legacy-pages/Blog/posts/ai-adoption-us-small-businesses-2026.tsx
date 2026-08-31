@@ -377,41 +377,56 @@ export const post: BlogPost = {
         you run a service business: AI-assisted lead follow-up, AI-powered appointment scheduling,
         and AI content creation for your marketing tend to deliver returns fastest. For local service
         businesses in competitive markets: HVAC, plumbing, or home services in{' '}
-        <a href="/cleveland/seo" className="text-blue-600 underline hover:text-blue-800 transition-colors">
+        <a href="/cleveland/seo" className="text-[#F05A28] underline hover:text-[#C94818] transition-colors">
           Northeast Ohio
         </a>{' '}
 , AI-assisted SEO content helps you rank in the Map Pack faster by publishing neighborhood
         and service-area pages at a pace no manual team can match. There is a newer reason it matters too.
         Buyers increasingly ask ChatGPT or Perplexity for a recommendation before they ever open Google, and
         you can{' '}
-        <a href="/ai-visibility-checker" className="text-blue-600 underline hover:text-blue-800 transition-colors">
+        <a href="/ai-visibility-checker" className="text-[#F05A28] underline hover:text-[#C94818] transition-colors">
           check whether those tools name your business
         </a>{' '}
         in about a minute.
       </p>
       <p className="mb-4">
         At FactoryJet, we build these capabilities directly into the{' '}
-        <a href="/services/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">
+        <a href="/services/ecommerce-development" className="text-[#F05A28] underline hover:text-[#C94818] transition-colors">
           websites and e-commerce stores
         </a>{' '}
-        we deliver, so you're not starting from scratch. The 17.7% who are already there aren't
+        we deliver, so you are not starting from scratch. The 17.7% who are already there are not
         smarter than the other 82.3%. They just started earlier.
       </p>
 
-      <div className="bg-gray-900 text-white p-6 rounded-lg my-8">
-        <p className="font-semibold text-lg mb-2">
-          Need help figuring out which AI tools make sense for your business?
-        </p>
-        <p className="text-gray-300 mb-4">
-          FactoryJet has built AI-integrated websites and Shopify stores for 500+ businesses across the US, UK, UAE and India. We
-          deliver in 7 days.
-        </p>
-        <a
-          href="https://calendly.com/bhavesh-factoryjet/30min"
-          className="inline-block bg-[#B23E13] text-white px-5 py-2 rounded font-semibold hover:bg-[#9A3510] transition-colors"
-        >
-          Talk to Bhavesh →
-        </a>
+      {/* High-Converting In-Article Lead Magnet */}
+      <div className="bg-gradient-to-r from-gray-900 to-gray-800 text-white rounded-2xl p-6 md:p-8 my-8 shadow-lg">
+        <div className="max-w-2xl">
+          <span className="inline-block px-3 py-1 bg-[#F05A28] text-white text-xs font-bold uppercase rounded-full tracking-wider mb-3">
+            US Small Business Action Plan
+          </span>
+          <h3 className="text-xl md:text-2xl font-display font-bold text-white mb-2">
+            Want to Deploy Practical AI Tools That Actually Generate Revenue?
+          </h3>
+          <p className="text-gray-300 text-sm md:text-base leading-relaxed mb-6">
+            FactoryJet engineers custom AI customer support agents, automated lead follow-up workflows, and high-speed e-commerce storefronts for US small businesses. We deliver turn-key solutions in 7 days.
+          </p>
+          <div className="flex flex-wrap gap-3">
+            <a
+              href="https://calendly.com/bhavesh-factoryjet/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center bg-[#F05A28] hover:bg-[#C94818] text-white font-semibold text-sm px-6 py-3 rounded-lg transition-colors"
+            >
+              Book 30-Min Consultation
+            </a>
+            <a
+              href="/services/ai-automation"
+              className="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 text-white border border-white/20 font-semibold text-sm px-6 py-3 rounded-lg transition-colors"
+            >
+              Explore AI Automation Services
+            </a>
+          </div>
+        </div>
       </div>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Sources</h2>
@@ -419,7 +434,7 @@ export const post: BlogPost = {
         <li>
           <a
             href="https://www.census.gov/library/stories/2026/05/ai-use-businesses.html"
-            className="text-blue-600 underline hover:text-blue-800"
+            className="text-[#F05A28] underline hover:text-[#C94818]"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -429,7 +444,7 @@ export const post: BlogPost = {
         <li>
           <a
             href="https://www.jpmorganchase.com/institute/all-topics/business-growth-and-entrepreneurship/understanding-ai-use-by-small-businesses"
-            className="text-blue-600 underline hover:text-blue-800"
+            className="text-[#F05A28] underline hover:text-[#C94818]"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -439,7 +454,7 @@ export const post: BlogPost = {
         <li>
           <a
             href="https://www.federalreserve.gov/econres/notes/feds-notes/monitoring-ai-adoption-in-the-u-s-economy-20260403.html"
-            className="text-blue-600 underline hover:text-blue-800"
+            className="text-[#F05A28] underline hover:text-[#C94818]"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -449,7 +464,7 @@ export const post: BlogPost = {
         <li>
           <a
             href="https://advocacy.sba.gov/wp-content/uploads/2025/09/Research-Spotlight-AI-in-Business-Small-Firms-Closing-In_-092425.pdf"
-            className="text-blue-600 underline hover:text-blue-800"
+            className="text-[#F05A28] underline hover:text-[#C94818]"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -459,7 +474,7 @@ export const post: BlogPost = {
         <li>
           <a
             href="https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/12/ai-adoption-by-small-and-medium-sized-enterprises_9c48eae6/426399c1-en.pdf"
-            className="text-blue-600 underline hover:text-blue-800"
+            className="text-[#F05A28] underline hover:text-[#C94818]"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -469,7 +484,7 @@ export const post: BlogPost = {
         <li>
           <a
             href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai"
-            className="text-blue-600 underline hover:text-blue-800"
+            className="text-[#F05A28] underline hover:text-[#C94818]"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -479,7 +494,7 @@ export const post: BlogPost = {
         <li>
           <a
             href="https://www.statista.com/topics/11736/ai-in-small-and-medium-sized-enterprises/"
-            className="text-blue-600 underline hover:text-blue-800"
+            className="text-[#F05A28] underline hover:text-[#C94818]"
             target="_blank"
             rel="noopener noreferrer"
           >

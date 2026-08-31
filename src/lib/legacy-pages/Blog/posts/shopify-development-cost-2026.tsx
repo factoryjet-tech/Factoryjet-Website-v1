@@ -698,42 +698,55 @@ export const post: BlogPost = {
         Most US small businesses building their first or second Shopify store land in the $2,000 to
         $8,000 range for a professional result. That&apos;s a one-time development cost on top of
         $40 to $150/month in ongoing platform and app costs. If you are still deciding between
-        platforms, the{' '}
+        platforms, our in-depth{' '}
         <a
-          href="/blog/shopify-vs-woocommerce-us-small-business-2026"
-          className="text-[#B23E13] hover:underline"
+          href="/comparisons/shopify-vs-woocommerce"
+          className="text-[#F05A28] font-semibold underline hover:text-[#C94818]"
         >
-          Shopify vs WooCommerce cost breakdown
+          Shopify vs WooCommerce 2026 comparison guide
         </a>{' '}
-        covers how the two compare on price and flexibility, and our wider guide to the{' '}
-        <a href="/best-ecommerce-platforms" className="text-[#B23E13] hover:underline">
+        covers how the two compare on total cost of ownership, speed, and mobile checkout conversion, and our wider guide to the{' '}
+        <a href="/best-ecommerce-platforms" className="text-[#F05A28] font-semibold underline hover:text-[#C94818]">
           best ecommerce platforms
         </a>{' '}
         puts both of them next to the rest of the field. FactoryJet has delivered Shopify builds
         for US small businesses across markets like{' '}
-        <a href="/nashville" className="text-[#B23E13] hover:underline">
+        <a href="/nashville" className="text-[#F05A28] font-semibold underline hover:text-[#C94818]">
           Nashville
         </a>{' '}
         and beyond, all with a 7-day delivery guarantee.
       </p>
-      <p className="mb-6">
-        If you&apos;re trying to figure out where your specific build lands, the fastest path is a
-        30-minute scoping call. FactoryJet has built{' '}
-        <a href="/services/ecommerce-development" className="text-[#B23E13] hover:underline">
-          500+ stores for small businesses across the US, UK, UAE and India
-        </a>{' '}
-        and can give you a fixed-price quote within 24 hours.
-      </p>
-      <p className="mb-8">
-        <a
-          href="https://calendly.com/bhavesh-factoryjet/30min"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block bg-[#B23E13] text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-[#C94818] transition-colors"
-        >
-          Talk to the Founder: 30 Minutes, No Sales Pitch
-        </a>
-      </p>
+
+      {/* High-Converting CTA Box */}
+      <div className="bg-gradient-to-r from-gray-900 to-gray-800 text-white rounded-2xl p-6 md:p-8 my-8 shadow-lg">
+        <div className="max-w-2xl">
+          <span className="inline-block px-3 py-1 bg-[#F05A28] text-white text-xs font-bold uppercase rounded-full tracking-wider mb-3">
+            7-Day Delivery Turnaround
+          </span>
+          <h3 className="text-xl md:text-2xl font-display font-bold text-white mb-2">
+            Get an Exact Fixed-Price Scope for Your Shopify Store
+          </h3>
+          <p className="text-gray-300 text-sm md:text-base leading-relaxed mb-6">
+            FactoryJet has engineered 500+ custom Shopify stores and migrations for small businesses across the US, UK, UAE, and India. Book a 30-minute technical consultation with founder Bhavesh Barot.
+          </p>
+          <div className="flex flex-wrap gap-3">
+            <a
+              href="https://calendly.com/bhavesh-factoryjet/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center bg-[#F05A28] hover:bg-[#C94818] text-white font-semibold text-sm px-6 py-3 rounded-lg transition-colors"
+            >
+              Book 30-Min Technical Call
+            </a>
+            <a
+              href="/services/shopify-development"
+              className="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 text-white border border-white/20 font-semibold text-sm px-6 py-3 rounded-lg transition-colors"
+            >
+              Explore Shopify Services
+            </a>
+          </div>
+        </div>
+      </div>
 
       <p className="text-sm text-gray-500 italic">
         Prices in this post were verified against official sources on June 7, 2026. Shopify plan

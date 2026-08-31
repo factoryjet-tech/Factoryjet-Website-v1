@@ -227,6 +227,37 @@ export const post: BlogPost = {
       <p className="mb-4">
         Run together, they compound: a TikTok video creates the demand, and some of those buyers convert on TikTok Shop while others search you out on Amazon or your site later. The mistake is running them as three disconnected islands with different pricing, inventory, and branding. Coordinated, they are one flywheel. That coordination, across marketplaces and your store, is exactly the kind of work our <a href="/services/tiktok-shop-agency" className="text-[#B23E13] underline hover:text-[#F05A28]">TikTok Shop agency team</a> handles for US brands every day.
       </p>
+
+      {/* High-Converting CTA Box */}
+      <div className="bg-gradient-to-r from-gray-900 to-gray-800 text-white rounded-2xl p-6 md:p-8 my-8 shadow-lg">
+        <div className="max-w-2xl">
+          <span className="inline-block px-3 py-1 bg-[#F05A28] text-white text-xs font-bold uppercase rounded-full tracking-wider mb-3">
+            US Brand Growth Playbook
+          </span>
+          <h3 className="text-xl md:text-2xl font-display font-bold text-white mb-2">
+            Ready to Scale Your GMV on TikTok Shop?
+          </h3>
+          <p className="text-gray-300 text-sm md:text-base leading-relaxed mb-6">
+            FactoryJet manages creator affiliate outreach, product catalog syndication, and omnichannel inventory synchronization for fast-growing US brands.
+          </p>
+          <div className="flex flex-wrap gap-3">
+            <a
+              href="https://calendly.com/bhavesh-factoryjet/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center bg-[#F05A28] hover:bg-[#C94818] text-white font-semibold text-sm px-6 py-3 rounded-lg transition-colors"
+            >
+              Book 30-Min Strategy Call
+            </a>
+            <a
+              href="/services/tiktok-shop-agency"
+              className="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 text-white border border-white/20 font-semibold text-sm px-6 py-3 rounded-lg transition-colors"
+            >
+              Explore TikTok Shop Services
+            </a>
+          </div>
+        </div>
+      </div>
     </>
   ),
 };
