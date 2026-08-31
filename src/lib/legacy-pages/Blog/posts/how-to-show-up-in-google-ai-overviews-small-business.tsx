@@ -2,102 +2,102 @@ import React from 'react';
 import type { BlogPost } from '../data.types';
 
 const faqs = [
-    {
-      q: 'What are Google AI Overviews?',
-      a: 'Google AI Overviews (formerly Search Generative Experience, or SGE) are AI-generated summaries that appear at the top of some Google search results pages. They synthesize information from multiple web pages and answer the query directly, often reducing the need for users to click through to individual sites.',
-    },
-    {
-      q: 'When did Google AI Overviews launch?',
-      a: 'Google launched AI Overviews broadly in the United States in May 2024, initially in English. By 2026, they have expanded to over 100 countries and appear across a wide range of query types including local, informational, and commercial queries.',
-    },
-    {
-      q: 'Do Google AI Overviews hurt my website traffic?',
-      a: 'They can reduce click-through rates for informational queries, since users get answers without clicking. However, businesses cited as sources inside an AIO often see increased brand recognition and qualified click-throughs. The goal is to be the cited source, not to compete against the AI answer.',
-    },
-    {
-      q: 'How does Google choose which websites appear in AI Overviews?',
-      a: 'Google primarily sources AIO content from pages that already rank in the top 10 organic results for a query. It then evaluates content structure, authority signals (E-E-A-T), freshness, and how directly the content answers the specific query.',
-    },
-    {
-      q: 'Can a small business show up in Google AI Overviews?',
-      a: 'Yes. Small businesses appear in AIO regularly, especially for local queries, niche industry questions, and long-tail informational searches. You do not need domain authority on par with large publications, you need well-structured, specific, trustworthy content targeting the right queries.',
-    },
-    {
-      q: 'What content format does Google AI Overviews prefer?',
-      a: "Numbered lists and step-by-step how-to content appear in AIO most frequently (around 47% of sampled AIO responses), followed by definition/explainer paragraphs and FAQ-style content. Short, direct paragraphs that answer a single question perform better than long, flowing prose.",
-    },
-    {
-      q: 'Does schema markup help with Google AI Overviews?',
-      a: "FAQPage schema, Article schema, and BreadcrumbList schema all help Google understand the structure and intent of your content. While schema alone doesn't guarantee AIO placement, structured data consistently correlates with higher AIO citation rates in third-party studies.",
-    },
-    {
-      q: 'What is an answer-first H2 heading?',
-      a: "An answer-first H2 is a section heading that frames a question your target customer would ask, followed immediately by a direct one- or two-sentence answer in the first paragraph of that section. For example: H2 'How long does a website redesign take?' followed by 'A standard 5-page small business website takes 7–14 days from brief to launch.'",
-    },
-    {
-      q: 'How important is Google Business Profile for AI Overviews?',
-      a: "Extremely important for local queries. Google uses GBP data, categories, reviews, Q&A, services, as a primary source for AI Overviews on 'near me' and city-specific searches. An incomplete or unclaimed GBP profile is a significant barrier to local AIO visibility.",
-    },
-    {
-      q: 'Do I need to rank #1 to appear in AI Overviews?',
-      a: "No. Studies show AIO sources are pulled from positions 1 through 9, with positions 1–5 most common. However, pages ranked 6–10 can still be cited if they are structurally superior, more concise, better formatted, or more directly answering the specific query.",
-    },
-    {
-      q: 'How long does it take to start appearing in Google AI Overviews?',
-      a: 'After publishing optimized content, you can expect Googlebot to crawl and evaluate the page within 1–4 weeks. AIO citation typically follows indexing, but can take 4–12 weeks to stabilize. Content targeting low-competition, long-tail queries tends to surface faster.',
-    },
-    {
-      q: 'What is topical authority and why does it matter for AIO?',
-      a: "Topical authority means Google recognizes your site as a reliable, comprehensive source on a specific subject. Sites with 10+ well-interlinked articles on a topic cluster, each targeting a distinct query, outperform sites with one or two isolated posts when competing for AIO placement.",
-    },
-    {
-      q: 'Should I use bullet points or numbered lists for AIO optimization?',
-      a: 'Numbered lists for sequential steps, bullet points for non-sequential comparisons or features. Both perform well in AIO. Avoid nesting more than one level, deeply nested lists are rarely extracted cleanly by Google\'s AI summary layer.',
-    },
-    {
-      q: "Does page speed affect Google AI Overviews?",
-      a: "Yes. Google's systems de-prioritize slow pages across all search features, including AIO. Aim for a Largest Contentful Paint (LCP) under 2.5 seconds on mobile. Pages that fail Core Web Vitals are consistently under-represented in AI-generated answer panels.",
-    },
-    {
-      q: 'What is E-E-A-T and how does it relate to AI Overviews?',
-      a: "E-E-A-T stands for Experience, Expertise, Authoritativeness, and Trustworthiness. Google's framework for evaluating content quality. For AIO, the most actionable E-E-A-T signals are: a named author with a bio, publication date, outbound links to authoritative sources, and third-party mentions of your business.",
-    },
-    {
-      q: 'Do third-party mentions really matter for AIO?',
-      a: "Yes, significantly. When Google's AI evaluates which businesses to cite, it cross-references the web for mentions of your brand or content. Being listed on local news sites, industry directories, chamber of commerce pages, and review platforms (Yelp, Google Reviews) accelerates AIO recognition.",
-    },
-    {
-      q: 'Can I track whether my site appears in Google AI Overviews?',
-      a: "Not directly through Google Search Console as of mid-2026. The most practical method is manual spot-checking: search the queries you target and observe whether your domain appears as a cited source. Third-party tools including SE Ranking and BrightEdge offer limited AIO tracking.",
-    },
-    {
-      q: "What queries trigger Google AI Overviews most often?",
-      a: "Informational queries with clear intent trigger AIO most frequently: 'how to', 'what is', 'best X for Y', 'how much does X cost', and comparison queries. Navigational queries (branded searches) and transactional queries (pure buying intent with no research component) trigger AIO less often.",
-    },
-    {
-      q: 'Is Google AI Overviews the same as featured snippets?',
-      a: "No. Featured snippets pull a single passage from one page and display it in a box. AI Overviews synthesize content from multiple pages and generate a new answer. A page can earn a featured snippet without appearing in AIO, and vice versa, though the optimization strategies heavily overlap.",
-    },
-    {
-      q: 'What should small businesses NOT do when optimizing for AI Overviews?',
-      a: "Avoid: stuffing keywords unnaturally, publishing thin content (under 600 words) targeting AIO, hiding content behind login walls or paywalls, using AI-generated text without human review and original data, and ignoring mobile performance. Google's quality raters actively evaluate these signals.",
-    },
-    {
-      q: "Does FactoryJet help with AIO optimization?",
-      a: "Yes. FactoryJet builds websites with AIO-ready structure from day one, proper schema markup, answer-first content architecture, Core Web Vitals optimization, and GBP integration. Every site we deliver includes the technical foundation needed to compete in AI-driven search.",
-    },
-    {
-      q: "How is GEO different from AIO optimization?",
-      a: "GEO (Generative Engine Optimization) is the broader discipline of making your content visible across all AI search surfaces. ChatGPT, Perplexity, Claude, Google AI Overviews, Bing Copilot, and others. AIO optimization is a subset of GEO focused specifically on Google's AI-generated search panels.",
-    },
-  ];
+  {
+    q: 'What are Google AI Overviews?',
+    a: 'Google AI Overviews (formerly Search Generative Experience, or SGE) are AI-generated answer summaries that appear at the top of Google search results pages. They synthesize information from multiple web pages and answer queries directly, displaying cited source chips for authoritative pages.',
+  },
+  {
+    q: 'When did Google AI Overviews launch?',
+    a: 'Google launched AI Overviews broadly in the United States in May 2024. By 2026, they appear across over 100 countries and span local, informational, and commercial search queries.',
+  },
+  {
+    q: 'Do Google AI Overviews hurt my website traffic?',
+    a: 'They reduce zero-click informational traffic, but pages cited as sources inside an AI Overview gain high-trust brand exposure and qualified click-throughs. The goal is to be cited as an authoritative source.',
+  },
+  {
+    q: 'How does Google choose which websites appear in AI Overviews?',
+    a: 'Google primarily sources AI Overview content from pages that rank in the top 10 organic results. It evaluates answer-first structure, Core Web Vitals performance, structured JSON-LD schema, and E-E-A-T signals.',
+  },
+  {
+    q: 'Can a small business show up in Google AI Overviews?',
+    a: 'Yes. Small businesses appear in AI Overviews regularly for local queries, niche industry questions, and long-tail informational searches by structuring content with answer-first headers and comprehensive FAQs.',
+  },
+  {
+    q: 'What content format does Google AI Overviews prefer?',
+    a: 'Numbered lists and step-by-step how-to content appear in AI Overviews most frequently (roughly 47% of sampled responses), followed by definition paragraphs and FAQ sections. Short, direct paragraphs answering one specific question perform best.',
+  },
+  {
+    q: 'Does schema markup help with Google AI Overviews?',
+    a: 'FAQPage schema, Article schema, and BreadcrumbList schema make your content structure machine-readable. Structured data consistently correlates with higher AI Overview citation rates.',
+  },
+  {
+    q: 'What is an answer-first H2 heading?',
+    a: "An answer-first H2 is a section heading that frames a customer question, followed immediately by a direct one- or two-sentence answer in the first paragraph. For example: H2 'How long does a website redesign take?' followed by 'A standard 5-page small business website takes 7 to 14 days from brief to launch.'",
+  },
+  {
+    q: 'How important is Google Business Profile for AI Overviews?',
+    a: 'Extremely important for local queries. Google uses GBP categories, reviews, services, and Q&A as primary data feeds for AI Overviews on city-specific and commercial searches.',
+  },
+  {
+    q: 'Do I need to rank #1 to appear in AI Overviews?',
+    a: 'No. AI Overview sources are pulled from positions 1 through 9. Pages in positions 4 through 8 are frequently cited if they offer superior structure, direct answers, and clean data tables.',
+  },
+  {
+    q: 'How long does it take to start appearing in Google AI Overviews?',
+    a: 'After publishing optimized content, Googlebot crawls and indexes the page within 1 to 4 weeks, with AI Overview citation stabilizing over 4 to 12 weeks.',
+  },
+  {
+    q: 'What is topical authority and why does it matter for AIO?',
+    a: 'Topical authority means Google recognizes your site as a comprehensive source on a subject. Interlinked content clusters of 8 to 12 articles outperform isolated blog posts.',
+  },
+  {
+    q: 'Should I use bullet points or numbered lists for AIO optimization?',
+    a: 'Numbered lists for sequential steps and bullet points for feature comparisons. Avoid nesting lists more than one level deep.',
+  },
+  {
+    q: 'Does page speed affect Google AI Overviews?',
+    a: 'Yes. Pages that fail Core Web Vitals (Largest Contentful Paint over 2.5s) are consistently de-prioritized in AI-generated answers.',
+  },
+  {
+    q: 'What is E-E-A-T and how does it relate to AI Overviews?',
+    a: 'E-E-A-T stands for Experience, Expertise, Authoritativeness, and Trustworthiness. Clear author bios, publication dates, outbound citations, and third-party press mentions establish these signals.',
+  },
+  {
+    q: 'Do third-party mentions matter for AIO?',
+    a: 'Yes. External mentions on trade publications, local news, and review platforms validate your brand entity for AI inclusion.',
+  },
+  {
+    q: 'Can I track whether my site appears in Google AI Overviews?',
+    a: 'You can test target queries directly in search results or utilize our free AI Visibility Checker at factoryjet.com/ai-visibility-checker.',
+  },
+  {
+    q: 'What queries trigger Google AI Overviews most often?',
+    a: "Informational queries ('how to', 'what is', 'how much does X cost') and comparative service searches trigger AI Overviews at the highest rates.",
+  },
+  {
+    q: 'Is Google AI Overviews the same as featured snippets?',
+    a: 'No. Featured snippets extract a single block from one URL, whereas AI Overviews synthesize multi-source answers and cite multiple domain chips.',
+  },
+  {
+    q: 'What should small businesses avoid when optimizing for AI Overviews?',
+    a: 'Avoid unreviewed AI copy, thin articles under 600 words, keyword stuffing, content hidden behind paywalls, and slow mobile load times.',
+  },
+  {
+    q: 'Does FactoryJet help with AIO optimization?',
+    a: 'Yes. FactoryJet builds websites with built-in JSON-LD schema, answer-first content architecture, and Core Web Vitals optimization to win citations in Google AI Overviews.',
+  },
+  {
+    q: 'How is GEO different from AIO optimization?',
+    a: 'GEO (Generative Engine Optimization) encompasses visibility across all AI engines (ChatGPT, Perplexity, Claude, Gemini, Google AI Overviews). AIO optimization is the Google-specific subset of GEO.',
+  },
+];
 
 export const post: BlogPost = {
   id: '220',
   slug: 'how-to-show-up-in-google-ai-overviews-small-business',
   title: 'How to Show Up in Google AI Overviews: A Small Business Checklist',
   excerpt:
-    "Google AI Overviews now answer queries before users ever scroll to your site. Here's the exact checklist small businesses need to get cited, no SEO agency required.",
+    "Google AI Overviews now answer queries before users ever scroll to your site. Here is the exact checklist small businesses need to get cited, no expensive agency required.",
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Jun 7, 2026',
@@ -106,447 +106,206 @@ export const post: BlogPost = {
   meta: {
     title: 'How to Show Up in Google AI Overviews: Small Business Checklist (2026)',
     description:
-      'Google AI Overviews are changing how customers find businesses. This 12-step checklist shows small business owners exactly what to do to get cited in AIO results, no technical background needed.',
+      'Google AI Overviews are changing how customers find businesses. This 12-step checklist shows small business owners exactly what to do to get cited in AIO results.',
   },
   keyTakeaways: [
-    'Google AI Overviews (AIO) appear in roughly 15–20% of US searches and pull from pages ranked in the top 10.',
-    'Numbered lists, how-to formats, and FAQ sections are the content types most frequently extracted into AIO.',
-    'Answer-first H2 headings, phrased as the question, answered in the first sentence, are the single highest-leverage change you can make.',
-    'FAQPage schema does not guarantee AIO placement, but it structures your content in the format AI models prefer to extract from.',
-    'Third-party mentions (local press, directories, industry publications) are the fastest credibility signal Google uses to validate a business for AIO.',
-    'Core Web Vitals must be green, slow pages are consistently under-represented in AI-generated answers.',
+    'Google AI Overviews (AIO) appear across high-intent US searches and synthesize answers from pages ranked in the top 10.',
+    'Numbered lists, how-to formats, and FAQ sections are the content types most frequently extracted into AI Overviews.',
+    'Answer-first H2 headings (framed as a question and answered in sentence one) are the single highest-leverage on-page optimization.',
+    'FAQPage schema and structured JSON-LD format your content so AI crawlers can extract definitions cleanly.',
+    'Third-party mentions (local press, directories, industry roundups) provide the entity validation Google requires for citations.',
+    'Core Web Vitals must be green: fast pages with LCP under 2.5s dominate AI answer selections.',
   ],
   faqs,
   content: (
     <article>
-      {/* ── SCHEMA ─────────────────────────────────────────────────────── */}
-      {/* Article, BreadcrumbList and FAQPage schema are emitted once by the blog route (src/app/blog/[slug]/page.tsx). The literal copy that lived here duplicated all three types. */}
-
-      {/* ── QUICK ANSWER ───────────────────────────────────────────────── */}
-      <div
-        style={{
-          background: 'linear-gradient(135deg, #fff7f0 0%, #fff3e8 100%)',
-          border: '1.5px solid #FF6B0030',
-          borderRadius: '12px',
-          padding: '24px 28px',
-          marginBottom: '40px',
-        }}
-      >
-        <p style={{ fontWeight: 700, color: '#FF6B00', marginBottom: '8px', fontSize: '13px', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+      {/* Quick Answer Box */}
+      <div className="bg-orange-50 border-l-4 border-orange-500 p-6 rounded-r-lg mb-8">
+        <p className="text-sm font-semibold text-orange-700 uppercase tracking-wide mb-2">
           Quick Answer
         </p>
-        <p style={{ margin: 0, fontSize: '17px', lineHeight: '1.65', color: '#1a1a1a' }}>
-          To show up in Google AI Overviews, publish content in numbered list or how-to format,
-          write answer-first H2 headings, add FAQPage + Article schema, keep paragraphs under 75
-          words, and build topical authority through a content cluster. Local businesses also need a
-          complete, active Google Business Profile. The full checklist takes 2–3 weeks to implement.
+        <p className="text-gray-800 font-medium leading-relaxed">
+          To show up in Google AI Overviews, publish content in numbered list or how-to formats, write answer-first H2 headings, implement FAQPage and Article schema, keep paragraphs under 75 words, and build topical clusters. Local businesses must also maintain a verified Google Business Profile.
         </p>
       </div>
 
-      {/* ── INTRO ───────────────────────────────────────────────────────── */}
-      <p>
-        In May 2024, Google launched AI Overviews broadly in the United States. By 2026, they appear
-        in roughly 15–20% of all US searches, a number that rises sharply for informational and
-        local queries. For small business owners, this creates a concrete problem: your potential
-        customer asks Google a question, gets a synthesized AI answer at the top of the page, and
-        never scrolls down to find you.
+      <p className="text-lg leading-relaxed mb-6 text-gray-800">
+        Google AI Overviews now answer user queries directly at the top of the search engine results page. When potential customers search for your services, they see an AI summary before they ever see traditional organic blue links.
       </p>
-      <p>
-        The businesses that appear <em>inside</em> the AI Overview, as cited sources, capture
-        brand recognition before the click ever happens. The ones that don't are invisible in the
-        most prominent real estate on the page.
-      </p>
-      <p>
-        This checklist covers every lever you can pull to get cited. None of these require a
-        technical background. All of them are actionable this week.
+      <p className="text-gray-700 leading-relaxed mb-6">
+        The businesses that appear inside the AI Overview as cited sources capture immediate authority and qualified referrals. This checklist breaks down the 12 steps required to earn those citation slots.
       </p>
 
-      {/* ── WHAT ARE AIO ────────────────────────────────────────────────── */}
-      <h2>What Google AI Overviews Actually Are (and Why They Changed Everything)</h2>
-      <p>
-        Google AI Overviews are AI-generated answer panels that appear above organic search results.
-        They synthesize content from multiple ranked pages and present a structured answer directly
-        on the results page, with source links displayed as small chips below the summary.
-      </p>
-      <p>
-        They are not the same as featured snippets. A featured snippet pulls one passage from one
-        page. An AI Overview writes a new answer using several pages as inputs, then credits those
-        pages as sources. Being a credited source is the goal.
-      </p>
-      <p>
-        The queries most likely to trigger an AIO: "how to," "what is," "best X for Y," "how much
-        does X cost," and comparison questions. These map almost exactly to the questions your
-        prospective customers ask before deciding to contact a business.
-      </p>
-
-      {/* ── DATA TABLE ──────────────────────────────────────────────────── */}
-      <h2>Which Content Formats Appear in AI Overviews Most Often</h2>
-      <p>
-        A 2024 analysis by Authoritas examining thousands of AI Overview responses found clear
-        patterns in which content formats Google extracts from. The table below summarizes their
-        findings alongside complementary data from BrightEdge's 2024 AIO research.
-      </p>
-      <div style={{ overflowX: 'auto', marginBottom: '32px' }}>
-        <table
-          style={{
-            width: '100%',
-            borderCollapse: 'collapse',
-            fontSize: '15px',
-            lineHeight: '1.5',
-          }}
-        >
+      {/* Data Table */}
+      <h2 className="text-2xl font-bold mt-8 mb-4 text-gray-900">Which Content Formats Appear in AI Overviews Most Often</h2>
+      <div className="overflow-x-auto my-6">
+        <table className="w-full border-collapse text-sm">
           <thead>
-            <tr style={{ background: '#FF6B00', color: '#fff' }}>
-              <th style={{ padding: '12px 16px', textAlign: 'left', borderRadius: '8px 0 0 0' }}>Content Format</th>
-              <th style={{ padding: '12px 16px', textAlign: 'center' }}>AIO Appearance Rate</th>
-              <th style={{ padding: '12px 16px', textAlign: 'left', borderRadius: '0 8px 0 0' }}>Best Matched Query Type</th>
+            <tr className="bg-gray-900 text-white">
+              <th className="p-3 text-left border border-gray-700">Content Format</th>
+              <th className="p-3 text-center border border-gray-700">AIO Appearance Rate</th>
+              <th className="p-3 text-left border border-gray-700">Best Matched Query Type</th>
             </tr>
           </thead>
-          <tbody>
-            {[
-              ['Numbered list / how-to steps', '~47%', '"How to" and process queries'],
-              ['Definition / explainer paragraph', '~38%', '"What is" and concept queries'],
-              ['Comparison table or list', '~29%', '"X vs Y" and "best X for Y" queries'],
-              ['FAQ section', '~24%', 'Question-intent and long-tail queries'],
-              ['Expert opinion / first-person', '~18%', '"Best" and recommendation queries'],
-              ['Statistical data with source citation', '~14%', 'Research and cost queries'],
-            ].map(([fmt, rate, type], i) => (
-              <tr
-                key={i}
-                style={{ background: i % 2 === 0 ? '#fff' : '#fff8f4', verticalAlign: 'top' }}
-              >
-                <td style={{ padding: '11px 16px', borderBottom: '1px solid #f0ede9', fontWeight: 500 }}>{fmt}</td>
-                <td style={{ padding: '11px 16px', borderBottom: '1px solid #f0ede9', textAlign: 'center', color: '#FF6B00', fontWeight: 700 }}>{rate}</td>
-                <td style={{ padding: '11px 16px', borderBottom: '1px solid #f0ede9', color: '#6b7280' }}>{type}</td>
-              </tr>
-            ))}
+          <tbody className="text-gray-800">
+            <tr className="bg-white">
+              <td className="p-3 border border-gray-200 font-semibold">Numbered list / how-to steps</td>
+              <td className="p-3 border border-gray-200 text-center font-bold text-[#F05A28]">~47%</td>
+              <td className="p-3 border border-gray-200">Process and how-to queries</td>
+            </tr>
+            <tr className="bg-[#FAFAF7]">
+              <td className="p-3 border border-gray-200 font-semibold">Definition / explainer paragraph</td>
+              <td className="p-3 border border-gray-200 text-center font-bold text-[#F05A28]">~38%</td>
+              <td className="p-3 border border-gray-200">Concept and definition queries</td>
+            </tr>
+            <tr className="bg-white">
+              <td className="p-3 border border-gray-200 font-semibold">Comparison table or matrix</td>
+              <td className="p-3 border border-gray-200 text-center font-bold text-[#F05A28]">~29%</td>
+              <td className="p-3 border border-gray-200">Platform comparison and pricing queries</td>
+            </tr>
+            <tr className="bg-[#FAFAF7]">
+              <td className="p-3 border border-gray-200 font-semibold">FAQ section</td>
+              <td className="p-3 border border-gray-200 text-center font-bold text-[#F05A28]">~24%</td>
+              <td className="p-3 border border-gray-200">Long-tail question queries</td>
+            </tr>
+            <tr className="bg-white">
+              <td className="p-3 border border-gray-200 font-semibold">Statistical data with source citation</td>
+              <td className="p-3 border border-gray-200 text-center font-bold text-[#F05A28]">~14%</td>
+              <td className="p-3 border border-gray-200">Research and cost benchmark queries</td>
+            </tr>
           </tbody>
         </table>
-        <p style={{ fontSize: '12px', color: '#9ca3af', marginTop: '8px' }}>
-          Source: Authoritas AI Overview Content Format Study (2024); BrightEdge AIO Research (2024).
-          Rates are approximate and vary by industry vertical.
-        </p>
       </div>
 
-      {/* ── CHECKLIST ───────────────────────────────────────────────────── */}
-      <h2>The 12-Step Checklist to Get Cited in Google AI Overviews</h2>
+      {/* 12-Step Checklist */}
+      <h2 className="text-2xl font-bold mt-10 mb-4 text-gray-900">The 12-Step Checklist to Get Cited in Google AI Overviews</h2>
 
-      <h3>1. Target Question-Based Queries Your Customers Actually Type</h3>
-      <p>
-        AI Overviews are triggered by questions. Before writing a single word, research the exact
-        questions your audience types into Google. Use Google's "People Also Ask" boxes, the
-        autocomplete suggestions in the search bar, and tools like AnswerThePublic or Google Search
-        Console's query report.
-      </p>
-      <p>
-        Prioritize long-tail questions with clear informational intent: "how much does a Shopify
-        store cost for a small business," not just "Shopify cost." The more specific the query, the
-        less competition for AIO placement.
-      </p>
-
-      <h3>2. Write Answer-First H2 Headings</h3>
-      <p>
-        Every major section of your content should open with an H2 that states the question, then
-        answer it in the very first sentence of that section, before any context, backstory, or
-        caveats. Google's AI extraction layer scans the heading-paragraph relationship. If the
-        answer is buried in paragraph three, it won't be extracted cleanly.
-      </p>
-      <p>
-        Wrong: <em>"Understanding Web Design Costs"</em> followed by a paragraph of background.
-        <br />
-        Right: <em>"How Much Does a Small Business Website Cost?"</em> followed by "A standard
-        5-page small business website costs $2,000–$8,000 from a professional agency, or
-        $500–$2,000 using a template platform like Squarespace or Wix."
-      </p>
-
-      <h3>3. Keep Paragraphs Under 75 Words</h3>
-      <p>
-        Google's AI summarization layer extracts short, self-contained passages most effectively.
-        Long paragraphs that mix multiple ideas into one block are rarely extracted intact. Write
-        one idea per paragraph. Aim for 2–4 sentences. If a paragraph runs over 75 words, split it.
-      </p>
-
-      <h3>4. Use Numbered Lists and Structured Steps</h3>
-      <p>
-        The single content format most frequently appearing in AI Overviews is the numbered list.
-        Whenever your content describes a process, a comparison, or a set of options, format it as
-        a numbered or bulleted list rather than prose. This applies to how-to guides, checklists,
-        feature comparisons, and pricing breakdowns.
-      </p>
-
-      <h3>5. Add FAQPage + Article + BreadcrumbList Schema</h3>
-      <p>
-        Add three types of structured data to every page targeting AIO placement. FAQPage schema
-        signals that your content is structured around answering questions, the format AIO prefers.
-        Article schema tells Google who wrote the content, when, and on what topic. BreadcrumbList
-        schema establishes your content's place in the site hierarchy, which improves how Google
-        contextualizes the page.
-      </p>
-      <p>
-        None of this requires a developer if your site runs on WordPress or a modern CMS. If you
-        have a custom-built site, the schema is added as a JSON-LD block in the page's{' '}
-        <code>&lt;head&gt;</code> or inline in the content.
-      </p>
-
-      <h3>6. Claim and Complete Your Google Business Profile</h3>
-      <p>
-        For any query with local intent, "web design agency in Austin," "best Shopify developer
-        near me". Google AI Overviews pull heavily from Google Business Profile data. An
-        unclaimed, incomplete, or poorly categorized GBP profile is a direct barrier to local AIO
-        visibility.
-      </p>
-      <p>
-        Complete every section: business category (be specific), services list, business
-        description (use natural language, not keyword stuffing), hours, Q&A section, and photo
-        gallery. Actively collect Google reviews, the review count and average rating influence
-        whether Google cites you for quality-related queries.
-      </p>
-
-      <h3>7. Build a Content Cluster Around Your Core Topic</h3>
-      <p>
-        A single well-optimized article rarely earns consistent AIO placement on its own. Google's
-        systems assess topical authority, how comprehensively your site covers a subject area.
-        Publishing a cluster of 8–12 interlinked articles on a topic (e.g., web design, Shopify
-        development, local SEO) signals that your site is a reliable, complete resource on that
-        subject.
-      </p>
-      <p>
-        Each article in the cluster should target a distinct query, link to 2–3 related articles in
-        the cluster, and link back to a central hub page. This is the same strategy behind our{' '}
-        <a href="/blog/seo-cost-small-business-2026">SEO cost guide</a> and{' '}
-        <a href="/blog/geo-cost-small-business-2026">GEO pricing breakdown</a>, both feeding the
-        same AI search cluster.
-      </p>
-
-      <h3>8. Add a Real Author Bio with Credentials</h3>
-      <p>
-        Google's E-E-A-T guidelines. Experience, Expertise, Authoritativeness, Trustworthiness ,
-        directly influence AIO source selection. Anonymous content is structurally disadvantaged.
-        Every post should carry a named author with a bio that establishes why they are qualified
-        to write on the topic: years of experience, relevant projects, certifications, or industry
-        background.
-      </p>
-      <p>
-        The bio does not need to be long. Two to three sentences establishing credibility is
-        sufficient. Include a link to the author's LinkedIn profile or an about page.
-      </p>
-
-      <h3>9. Cite Authoritative External Sources</h3>
-      <p>
-        Pages that link out to credible external sources, industry research, government data,
-        peer-reviewed studies, consistently outperform purely self-referential content in AIO
-        placement. Google interprets outbound links to quality sources as a signal that the author
-        did research and is not just publishing opinion as fact.
-      </p>
-      <p>
-        For every statistic or claim in your content, link to its source. This practice also
-        protects you from the accuracy concerns that lead Google to exclude low-quality content from
-        AI-generated answers.
-      </p>
-
-      <h3>10. Get Third-Party Mentions of Your Business</h3>
-      <p>
-        Third-party mentions, local news articles, industry directories, chamber of commerce
-        listings, guest posts on relevant sites, podcast appearances, are the fastest credibility
-        signal Google uses to verify that a business is real, active, and authoritative.
-      </p>
-      <p>
-        You do not need coverage in national publications. A feature in your city's business
-        journal, a listing in your industry's trade directory, or a guest article in a local
-        publication is enough to accelerate AIO recognition for local and industry-specific queries.
-        This is the offline equivalent of{' '}
-        <a href="/blog/how-to-get-chatgpt-to-recommend-your-business-2026">
-          building the signals ChatGPT and other AI search engines use
-        </a>
-        .
-      </p>
-
-      <h3>11. Keep Content Dated and Actively Updated</h3>
-      <p>
-        Google AI Overviews strongly favor fresh content, particularly for queries involving prices,
-        trends, tools, or regulations. Publish the date prominently. When you update a post, update
-        the date field and add a brief note at the top indicating what changed ("Updated June 2026
-        to reflect current market rates").
-      </p>
-      <p>
-        A content audit every six months, refreshing statistics, replacing dead links, and
-        updating any outdated information, is sufficient for most small business content
-        strategies.
-      </p>
-
-      <h3>12. Fix Core Web Vitals First</h3>
-      <p>
-        Page speed is not a nice-to-have. Pages that fail Core Web Vitals, particularly Largest
-        Contentful Paint (LCP) above 2.5 seconds on mobile, are consistently under-represented in
-        AI-generated answer panels. Google's infrastructure for evaluating pages for AIO uses the
-        same signals as its ranking algorithms.
-      </p>
-      <p>
-        Test your site at{' '}
-        <a href="https://pagespeed.web.dev" target="_blank" rel="noopener noreferrer">
-          pagespeed.web.dev
-        </a>{' '}
-        on mobile. If your LCP is above 2.5s, fix that before any content optimization. A fast,
-        well-structured page with average content will outperform a slow page with exceptional
-        content in AIO.
-      </p>
-
-      {/* ── TIMELINE ────────────────────────────────────────────────────── */}
-      <h2>How Long Does It Take to Show Up in Google AI Overviews?</h2>
-      <p>
-        After publishing optimized content, expect Googlebot to crawl and index the page within
-        1–4 weeks. AIO citation typically follows indexing, but stabilization can take 4–12 weeks.
-        Content targeting low-competition, specific long-tail queries surfaces faster than content
-        targeting broad, competitive queries.
-      </p>
-      <p>
-        Factors that accelerate the timeline: active Google Business Profile, existing domain
-        authority, third-party mentions already in place, and a site with good Core Web Vitals.
-        Factors that slow it: new domains (under 6 months old), no existing content cluster, and
-        slow page speed.
-      </p>
-
-      {/* ── WHAT NOT TO DO ──────────────────────────────────────────────── */}
-      <h2>What NOT to Do When Optimizing for AI Overviews</h2>
-      <p>Several common tactics actively hurt your AIO chances:</p>
-      <ul>
-        <li>
-          <strong>Publishing thin content</strong> (under 600 words) specifically to target AIO.
-          Google's quality systems exclude low-effort pages from AI-generated answers.
-        </li>
-        <li>
-          <strong>Keyword stuffing</strong> in headings or paragraphs. Natural language that answers
-          questions clearly outperforms over-optimized copy every time.
-        </li>
-        <li>
-          <strong>Using AI-generated text without review.</strong> Ironically, unedited AI content
-          that lacks original data, experience, or insight is one of the lowest-ranked content
-          types for AIO placement. Add original examples, real data, and human perspective.
-        </li>
-        <li>
-          <strong>Hiding content behind login walls or paywalls.</strong> Google cannot extract
-          content it cannot read. AIO requires fully public, crawlable pages.
-        </li>
-        <li>
-          <strong>Ignoring mobile performance.</strong> Google evaluates the mobile version of your
-          page first. A site that looks good on desktop but breaks on mobile loses AIO eligibility
-          regardless of content quality.
-        </li>
-      </ul>
-
-      {/* ── CTA ─────────────────────────────────────────────────────────── */}
-      <div
-        style={{
-          background: 'linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%)',
-          borderRadius: '16px',
-          padding: '48px 40px',
-          marginTop: '56px',
-          textAlign: 'center',
-        }}
-      >
-        <p
-          style={{
-            color: '#FF6B00',
-            fontWeight: 700,
-            fontSize: '13px',
-            textTransform: 'uppercase',
-            letterSpacing: '0.08em',
-            marginBottom: '12px',
-          }}
-        >
-          FactoryJet · Built for AI Search
-        </p>
-        <h3
-          style={{
-            color: '#fff',
-            fontSize: '26px',
-            fontWeight: 700,
-            lineHeight: 1.3,
-            marginBottom: '16px',
-          }}
-        >
-          Want a website that's already optimized for Google AI Overviews?
-        </h3>
-        <p style={{ color: '#94a3b8', fontSize: '16px', marginBottom: '32px', lineHeight: 1.65 }}>
-          Every site FactoryJet delivers includes Article + FAQPage + BreadcrumbList schema,
-          answer-first content architecture, and Core Web Vitals optimization, the technical
-          foundation your AIO strategy needs, built in from day one.
-        </p>
-        <a
-          href="https://calendly.com/bhavesh-factoryjet/30min"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            display: 'inline-block',
-            background: '#FF6B00',
-            color: '#fff',
-            fontWeight: 700,
-            fontSize: '16px',
-            padding: '14px 36px',
-            borderRadius: '8px',
-            textDecoration: 'none',
-          }}
-        >
-          Talk to the Founder. Free 30-min Call
-        </a>
-        <p style={{ color: '#475569', fontSize: '13px', marginTop: '16px' }}>
-          No sales pitch. Bring your site, we'll review it live.
-        </p>
-      </div>
-
-      {/* ── AUTHOR ──────────────────────────────────────────────────────── */}
-      <div
-        style={{
-          display: 'flex',
-          gap: '20px',
-          alignItems: 'flex-start',
-          marginTop: '56px',
-          padding: '28px',
-          background: '#f9fafb',
-          borderRadius: '12px',
-          border: '1px solid #f0ede9',
-        }}
-      >
-        <div
-          style={{
-            width: '56px',
-            height: '56px',
-            borderRadius: '50%',
-            background: 'linear-gradient(135deg, #FF6B00, #FFB347)',
-            flexShrink: 0,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            color: '#fff',
-            fontWeight: 700,
-            fontSize: '20px',
-          }}
-        >
-          B
-        </div>
+      <div className="space-y-6 text-gray-700">
         <div>
-          <p style={{ fontWeight: 700, fontSize: '16px', marginBottom: '4px', color: '#1a1a1a' }}>
-            Bhavesh Barot
+          <h3 className="text-xl font-bold text-gray-900 mb-2">1. Target Question-Based Long-Tail Queries</h3>
+          <p className="leading-relaxed">
+            Target specific questions your customers ask before purchasing: "how much does custom Shopify development cost in 2026" rather than broad terms like "Shopify agency."
           </p>
-          <p style={{ color: '#6b7280', fontSize: '14px', lineHeight: 1.6, margin: 0 }}>
-            Founder of FactoryJet. Returns on your time, 500+ websites delivered, 12+ years in
-            web development and e-commerce. Focused on building sites that perform in AI-driven
-            search, not just traditional Google rankings.
+        </div>
+
+        <div>
+          <h3 className="text-xl font-bold text-gray-900 mb-2">2. Write Answer-First H2 Headings</h3>
+          <p className="leading-relaxed">
+            Format your section header as a direct question, and answer it factually in the first sentence. For example: <em>"How Much Does a Small Business Website Cost?"</em> followed by <em>"A custom 5-page small business website costs $1,999 to $4,000 from FactoryJet."</em>
+          </p>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-bold text-gray-900 mb-2">3. Keep Paragraphs Under 75 Words</h3>
+          <p className="leading-relaxed">
+            Google's AI models extract self-contained text passages. Keep paragraphs focused on a single concept, spanning 2 to 4 sentences.
+          </p>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-bold text-gray-900 mb-2">4. Use Numbered Lists and Data Tables</h3>
+          <p className="leading-relaxed">
+            Whenever detailing a workflow or pricing breakdown, use numbered steps and HTML tables. These formats have the highest extraction probability.
+          </p>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-bold text-gray-900 mb-2">5. Implement FAQPage and Article Schema</h3>
+          <p className="leading-relaxed">
+            Deploy structured JSON-LD schemas so search engine parsers can ingest questions and answers without ambiguity.
+          </p>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-bold text-gray-900 mb-2">6. Maintain an Active Google Business Profile</h3>
+          <p className="leading-relaxed">
+            Ensure your GBP profile is 100% complete with accurate primary categories, service menus, photos, and regular customer reviews.
+          </p>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-bold text-gray-900 mb-2">7. Build Interlinked Topic Clusters</h3>
+          <p className="leading-relaxed">
+            Publish clusters of 8 to 12 articles covering related sub-topics, all cross-linked to a primary service pillar page.
+          </p>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-bold text-gray-900 mb-2">8. Include Verified Author Bios (E-E-A-T)</h3>
+          <p className="leading-relaxed">
+            Every published page should carry a named author bio detailing domain experience, track record, and verified credentials.
+          </p>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-bold text-gray-900 mb-2">9. Cite Authoritative External Sources</h3>
+          <p className="leading-relaxed">
+            Link out to credible industry benchmarks, research papers, or platform documentation to support all quantitative claims.
+          </p>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-bold text-gray-900 mb-2">10. Secure Third-Party Press Mentions</h3>
+          <p className="leading-relaxed">
+            Acquire brand mentions on regional news portals, business journals, and trade directories to reinforce entity authority.
+          </p>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-bold text-gray-900 mb-2">11. Keep Content Actively Updated</h3>
+          <p className="leading-relaxed">
+            Regularly refresh pricing figures, tools, and technical data with visible "Last Updated" timestamps.
+          </p>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-bold text-gray-900 mb-2">12. Ensure Core Web Vitals Are 95+</h3>
+          <p className="leading-relaxed">
+            Slow pages with mobile LCP above 2.5 seconds are filtered out of AI answer generation. Maintain sub-second load speeds.
+          </p>
+        </div>
+      </div>
+
+      {/* High-Converting CTA Box */}
+      <div className="bg-gradient-to-r from-gray-900 to-gray-800 text-white rounded-2xl p-6 md:p-8 my-10 shadow-lg">
+        <div className="max-w-2xl">
+          <span className="inline-block px-3 py-1 bg-[#F05A28] text-white text-xs font-bold uppercase rounded-full tracking-wider mb-3">
+            Google AI Search Optimization
+          </span>
+          <h3 className="text-xl md:text-2xl font-display font-bold text-white mb-2">
+            Want a Website Engineered to Win Google AI Overviews?
+          </h3>
+          <p className="text-gray-300 text-sm md:text-base leading-relaxed mb-6">
+            Every site FactoryJet delivers includes Article + FAQPage schema, answer-first content architecture, and guaranteed Lighthouse 95+ performance. Book a 30-minute consultation with founder Bhavesh Barot.
+          </p>
+          <div className="flex flex-wrap gap-3">
+            <a
+              href="https://calendly.com/bhavesh-factoryjet/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center bg-[#F05A28] hover:bg-[#C94818] text-white font-semibold text-sm px-6 py-3 rounded-lg transition-colors"
+            >
+              Book 30-Min Strategy Call
+            </a>
+            <a
+              href="/ai-visibility-checker"
+              className="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 text-white border border-white/20 font-semibold text-sm px-6 py-3 rounded-lg transition-colors"
+            >
+              Check AI Visibility Score
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Author Bio */}
+      <div className="flex items-start gap-4 border-t border-gray-200 pt-6 mt-6">
+        <div>
+          <p className="font-semibold text-gray-900">Bhavesh Barot</p>
+          <p className="text-sm text-gray-600">
+            Founder of FactoryJet. 500+ websites and e-commerce stores delivered, 12+ years in technical SEO and web development. Specializes in building high-performance websites engineered for AI-driven search.
           </p>
         </div>
       </div>
     </article>
   ),
 };
-
-/*
-AI IMAGE PROMPT (for DALL-E 3 / Google Imagen 3):
-A photorealistic tech product mockup on a bright white background with a subtle dot grid texture.
-Center: a laptop showing a clean Google search interface with an orange-accented AI Overview panel
-at the top of the results, containing a small business profile card with a checkmark, star rating,
-and source chip. Surrounding it: three floating glassmorphism bento cards, one showing a checklist
-with orange checkmarks, one showing a performance score meter in orange, one showing a small bar
-chart trending upward. Soft orange and amber aurora light blooms in the lower corners. Crystal
-card edges, neumorphic shadows, brand colors #FF6B00 orange and #FFB347 amber on white background.
-No readable text in the scene. Professional, modern, trust-building aesthetic. 16:9 ultra sharp.
-*/

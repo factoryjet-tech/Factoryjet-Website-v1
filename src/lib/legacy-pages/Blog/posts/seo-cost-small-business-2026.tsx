@@ -358,20 +358,35 @@ export const post: BlogPost = {
         This is the calculation every agency should walk you through before quoting. If they skip it, ask for it. It tells you both whether SEO makes sense and whether the agency understands your business model.
       </p>
 
-      {/* CTA */}
-      <div className="bg-gray-900 text-white p-8 rounded-xl mt-10 mb-6">
-        <h3 className="text-xl font-bold mb-2">Not Sure What SEO Budget Makes Sense for Your Business?</h3>
-        <p className="text-gray-300 mb-4">
-          Book a 30-minute call with Bhavesh. We will look at your current traffic, your competitive landscape, and your revenue model, and give you an honest assessment of what SEO can and cannot do for your business, and what it will cost to get there.
-        </p>
-        <a
-          href="https://calendly.com/bhavesh-factoryjet/30min"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block bg-[#B23E13] hover:bg-[#9A3510] text-white font-semibold px-6 py-3 rounded-lg transition-colors"
-        >
-          Talk to the Founder. Free 30-Min Call
-        </a>
+      {/* High-Converting CTA Box */}
+      <div className="bg-gradient-to-r from-gray-900 to-gray-800 text-white rounded-2xl p-6 md:p-8 my-8 shadow-lg">
+        <div className="max-w-2xl">
+          <span className="inline-block px-3 py-1 bg-[#F05A28] text-white text-xs font-bold uppercase rounded-full tracking-wider mb-3">
+            SEO & AI Visibility Roadmap
+          </span>
+          <h3 className="text-xl md:text-2xl font-display font-bold text-white mb-2">
+            Not Sure What SEO & GEO Budget Makes Sense for Your Business?
+          </h3>
+          <p className="text-gray-300 text-sm md:text-base leading-relaxed mb-6">
+            FactoryJet engineers technical SEO and Generative Engine Optimization programs that get businesses cited across Google AI Overviews, Perplexity, and ChatGPT. Book a 30-minute consultation with founder Bhavesh Barot.
+          </p>
+          <div className="flex flex-wrap gap-3">
+            <a
+              href="https://calendly.com/bhavesh-factoryjet/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center bg-[#F05A28] hover:bg-[#C94818] text-white font-semibold text-sm px-6 py-3 rounded-lg transition-colors"
+            >
+              Book 30-Min Strategy Call
+            </a>
+            <a
+              href="/ai-visibility-checker"
+              className="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 text-white border border-white/20 font-semibold text-sm px-6 py-3 rounded-lg transition-colors"
+            >
+              Check AI Search Visibility
+            </a>
+          </div>
+        </div>
       </div>
 
       {/* Author Bio */}

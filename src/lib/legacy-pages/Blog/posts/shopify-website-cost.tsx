@@ -767,42 +767,69 @@ export const post: BlogPost = {
         by project type, see our{' '}
         <Link
           href="/blog/shopify-development-cost-2026"
-          className="text-[#B23E13] hover:underline"
+          className="text-[#F05A28] font-semibold underline hover:text-[#C94818]"
         >
           Shopify development cost guide
+        </Link>
+        , or compare platforms directly in our{' '}
+        <Link
+          href="/comparisons/shopify-vs-woocommerce"
+          className="text-[#F05A28] font-semibold underline hover:text-[#C94818]"
+        >
+          Shopify vs WooCommerce 2026 breakdown
         </Link>
         .
       </p>
       <p className="mb-4">
         FactoryJet has built Shopify stores for US small businesses across{' '}
-        <Link href="/austin" className="text-[#B23E13] hover:underline">
+        <Link href="/austin" className="text-[#F05A28] font-semibold underline hover:text-[#C94818]">
           Austin
         </Link>
         ,{' '}
-        <Link href="/miami" className="text-[#B23E13] hover:underline">
+        <Link href="/miami" className="text-[#F05A28] font-semibold underline hover:text-[#C94818]">
           Miami
         </Link>
         ,{' '}
-        <Link href="/nashville" className="text-[#B23E13] hover:underline">
+        <Link href="/nashville" className="text-[#F05A28] font-semibold underline hover:text-[#C94818]">
           Nashville
         </Link>
         , and{' '}
-        <Link href="/services/ecommerce-development" className="text-[#B23E13] hover:underline">
+        <Link href="/services/ecommerce-development" className="text-[#F05A28] font-semibold underline hover:text-[#C94818]">
           across the US
-        </Link>{' '}
-: all with a 7-day delivery guarantee and fixed-price quotes. If you want a scope estimate
-        for your specific build, a 30-minute call is the fastest path.
+        </Link>
+        : all with a 7-day delivery guarantee and fixed-price quotes.
       </p>
-      <p className="mb-8">
-        <a
-          href="https://calendly.com/bhavesh-factoryjet/30min"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block bg-[#B23E13] text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-[#C94818] transition-colors"
-        >
-          Get a Free Shopify Store Quote, 30 Minutes, Fixed Price
-        </a>
-      </p>
+
+      {/* High-Converting CTA Box */}
+      <div className="bg-gradient-to-r from-gray-900 to-gray-800 text-white rounded-2xl p-6 md:p-8 my-8 shadow-lg">
+        <div className="max-w-2xl">
+          <span className="inline-block px-3 py-1 bg-[#F05A28] text-white text-xs font-bold uppercase rounded-full tracking-wider mb-3">
+            7-Day Delivery Turnaround
+          </span>
+          <h3 className="text-xl md:text-2xl font-display font-bold text-white mb-2">
+            Get an Exact Fixed-Price Scope for Your Shopify Store
+          </h3>
+          <p className="text-gray-300 text-sm md:text-base leading-relaxed mb-6">
+            FactoryJet has engineered 500+ custom Shopify stores and migrations for US small businesses. Book a 30-minute scoping consultation with founder Bhavesh Barot.
+          </p>
+          <div className="flex flex-wrap gap-3">
+            <a
+              href="https://calendly.com/bhavesh-factoryjet/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center bg-[#F05A28] hover:bg-[#C94818] text-white font-semibold text-sm px-6 py-3 rounded-lg transition-colors"
+            >
+              Book 30-Min Consultation
+            </a>
+            <Link
+              href="/services/shopify-development"
+              className="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 text-white border border-white/20 font-semibold text-sm px-6 py-3 rounded-lg transition-colors"
+            >
+              Explore Shopify Services
+            </Link>
+          </div>
+        </div>
+      </div>
 
       <p className="text-sm text-gray-500 italic">
         Prices in this post were verified on June 13, 2026. Shopify plan pricing:{' '}
