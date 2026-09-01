@@ -42,6 +42,8 @@ import {
   UtensilsCrossed,
   Scale,
   Car,
+  FlaskConical,
+  Tractor,
 } from 'lucide-react';
 import { useContactModal } from '../../context/ContactModalContext';
 import type { ModalRegion } from '../../context/ContactModalContext';
@@ -72,6 +74,8 @@ const US_AI_SERVICES = [
 
 const US_AI_AGENTS_NAV = [
   { icon: Bot,           label: 'Custom AI Agents',       href: '/services/ai-agent-development',               desc: 'Autonomous operations & task agents' },
+  { icon: FlaskConical,  label: 'Chemical & Pharma AI',   href: '/services/chemical-pharmaceutical-ai-agents',  desc: 'GxP batch records & GHS SDS sync' },
+  { icon: Tractor,       label: 'Ag Equipment AI',        href: '/services/agriculture-equipment-ai-agents',   desc: 'Machinery parts & ISOBUS telematics' },
   { icon: Scale,         label: 'Legal AI Agents',        href: '/services/legal-ai-agents',                    desc: 'Clio & Filevine contract & intake AI' },
   { icon: Car,           label: 'Automotive AI Voice',    href: '/services/automotive-ai-voice-agents',         desc: 'Dealership BDC & CDK/Reynolds sync' },
   { icon: Factory,       label: 'Manufacturing AI',       href: '/services/manufacturing-ai-agents',            desc: 'RFQ quoting & NetSuite/SAP sync' },
