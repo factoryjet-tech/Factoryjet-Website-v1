@@ -36,6 +36,8 @@ import {
   Package,
   Target,
   Calculator,
+  HeartPulse,
+  Wrench,
 } from 'lucide-react';
 import { useContactModal } from '../../context/ContactModalContext';
 import type { ModalRegion } from '../../context/ContactModalContext';
@@ -66,12 +68,15 @@ const US_AI_SERVICES = [
 
 const US_AI_AGENTS_NAV = [
   { icon: Bot,           label: 'Custom AI Agents',       href: '/services/ai-agent-development',               desc: 'Autonomous operations & task agents' },
-  { icon: Headphones,    label: 'AI Customer Support',    href: '/services/ai-agent-development/ai-customer-support', desc: 'Deflect 70%+ of support tickets' },
-  { icon: TrendingUp,    label: 'AI Sales & SDR Agents',  href: '/services/ai-agent-development/ai-sales-agent',         desc: 'Inbound lead qualification & CRM booking' },
+  { icon: HeartPulse,    label: 'Healthcare AI Agents',   href: '/services/healthcare-ai-agents',               desc: 'HIPAA & EHR voice receptionists' },
+  { icon: Wrench,        label: 'Contractor AI Reception',href: '/services/contractor-ai-receptionist',         desc: '24/7 trade & dispatch voice' },
+  { icon: Headphones,    label: 'AI Customer Support',    href: '/services/ai-customer-support-agents',         desc: 'Deflect 70%+ of support tickets' },
+  { icon: TrendingUp,    label: 'AI Sales & SDR Agents',  href: '/services/ai-sdr-development',                 desc: 'Inbound qualification & CRM booking' },
   { icon: GitBranch,     label: 'Workflow Automation',    href: '/services/ai-agent-development/ai-workflow-automation', desc: 'Connect ERP, CRM & databases' },
   { icon: Mic,           label: 'Voice AI Agents',        href: '/services/ai-agent-development/ai-voice-agent',         desc: 'Inbound & outbound voice calling' },
   { icon: Workflow,      label: 'n8n Automation',         href: '/n8n-automation',                               desc: 'Self-hosted workflow automation' },
   { icon: Sparkles,      label: 'Agentic Commerce',       href: '/agentic-commerce',                             desc: 'How AI agents buy, sell & reprice' },
+  { icon: Calculator,    label: 'AI Agent ROI Calculator',href: '/tools/ai-agent-roi-calculator',               desc: 'Calculate headcount & payback' },
 ] as const;
 
 // Solutions (US) — categorized for enterprise-grade 3-column + showcase layout

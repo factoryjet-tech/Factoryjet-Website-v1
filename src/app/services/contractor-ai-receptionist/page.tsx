@@ -1,9 +1,12 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
+import SiteHeader from '@/components/v2/SiteHeader';
+import SiteFooter from '@/components/v2/SiteFooter';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import FAQ, { type FAQItem, type FAQCategory } from '@/components/v2/FAQ';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
 const CANONICAL_URL = 'https://factoryjet.com/services/contractor-ai-receptionist';
 const PAGE_TITLE = 'Contractor AI Receptionist & Voice Dispatch | FactoryJet';
@@ -320,6 +323,8 @@ export default function ContractorAiReceptionistPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaFAQ) }}
       />
+
+      <SiteHeader />
 
       <main className="min-h-screen bg-white text-[#14110F]">
         {/* HERO SECTION */}
@@ -1012,9 +1017,10 @@ export default function ContractorAiReceptionistPage() {
                 <div className="relative rounded-2xl border border-[#E7DED6] bg-[#FAFAF7] p-4 shadow-md max-w-md mx-auto">
                   <div className="relative rounded-xl overflow-hidden aspect-square">
                     <Image
-                      src="/bhavesh_image.jpg"
+                      src="/bhavesh_image.webp"
                       alt="Bhavesh Barot, Founder & CEO of FactoryJet"
                       fill
+                      quality={95}
                       className="object-cover"
                       sizes="(max-width: 1024px) 100vw, 40vw"
                     />
@@ -1119,6 +1125,8 @@ export default function ContractorAiReceptionistPage() {
           </div>
         </section>
       </main>
+
+      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>
   );
 }
