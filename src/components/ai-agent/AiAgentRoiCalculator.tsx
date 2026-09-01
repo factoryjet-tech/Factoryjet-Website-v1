@@ -1,7 +1,21 @@
 'use client';
 
-import React, { useState, useId } from 'react';
-import { Bot, Sparkles, CheckCircle2, ArrowRight, ShieldCheck, Clock, DollarSign, Zap } from 'lucide-react';
+import React, { useState, useId, useMemo } from 'react';
+import {
+  Sparkles,
+  CheckCircle2,
+  ArrowRight,
+  ShieldCheck,
+  Clock,
+  DollarSign,
+  Zap,
+  Users,
+  TrendingUp,
+  Sliders,
+  Database,
+  Building2,
+  Calendar,
+} from 'lucide-react';
 import { useContactModal } from '@/context/ContactModalContext';
 import { submitLead } from '@/utils/submitLead';
 
@@ -12,23 +26,58 @@ interface AiAgentRoiCalculatorProps {
 }
 
 const SYSTEMS = [
-  'Zendesk',
-  'Intercom',
-  'Gorgias',
-  'Freshdesk',
-  'HubSpot',
-  'Salesforce',
-  'NetSuite',
-  'Shopify',
-  'Other / Custom API',
+  { name: 'Zendesk', type: 'Help Desk' },
+  { name: 'HubSpot', type: 'CRM & Sales' },
+  { name: 'Salesforce', type: 'Enterprise CRM' },
+  { name: 'Gorgias', type: 'E-Commerce Support' },
+  { name: 'Intercom', type: 'Live Chat' },
+  { name: 'Oracle NetSuite', type: 'Enterprise ERP' },
+  { name: 'SAP S/4HANA', type: 'Manufacturing ERP' },
+  { name: 'Shopify Plus', type: 'Commerce Platform' },
+  { name: 'Custom SQL / API', type: 'Internal Stack' },
 ];
 
 const WORKFLOWS = [
-  { id: 'support', label: 'Customer Support Tickets', avgMins: 8, baseDeflection: 0.72, desc: 'Order status, RMAs, returns, FAQs & tracking' },
-  { id: 'sales', label: 'Sales & Lead Qualification', avgMins: 12, baseDeflection: 0.68, desc: 'Instant response, qualification & CRM meeting booking' },
-  { id: 'erp', label: 'Back-Office & Invoice Matching', avgMins: 15, baseDeflection: 0.75, desc: 'PO extraction, ERP 3-way matching & vendor checks' },
-  { id: 'commerce', label: 'Omnichannel Catalog & Pricing', avgMins: 10, baseDeflection: 0.80, desc: 'Listing sync, repricing & inventory reconciliation' },
+  {
+    id: 'support',
+    label: 'Customer Support Tickets',
+    avgMins: 9,
+    baseDeflection: 0.74,
+    badge: 'High Volume',
+    desc: 'Order status, returns & RMAs, billing questions, tracking lookups, and account changes.',
+    devCostEstimate: 22000,
+  },
+  {
+    id: 'sales',
+    label: 'Inbound Sales & SDR Leads',
+    avgMins: 14,
+    baseDeflection: 0.68,
+    badge: 'Revenue Velocity',
+    desc: 'Instant lead response under 30s, enrichment, B2B qualification criteria, and calendar booking.',
+    devCostEstimate: 24000,
+  },
+  {
+    id: 'erp',
+    label: 'Back-Office & Invoice Matching',
+    avgMins: 16,
+    baseDeflection: 0.78,
+    badge: 'Heavy Operations',
+    desc: 'Purchase order extraction, supplier 3-way matching, inventory adjustments, and vendor triage.',
+    devCostEstimate: 28000,
+  },
+  {
+    id: 'commerce',
+    label: 'Catalog & Inventory Operations',
+    avgMins: 11,
+    baseDeflection: 0.82,
+    badge: 'Catalog Scale',
+    desc: 'Multi-channel listing updates, inventory balance reconciliations, and repricing rules.',
+    devCostEstimate: 20000,
+  },
 ];
+
+const VOLUME_PRESETS = [1500, 3000, 7500, 15000, 30000];
+const RATE_PRESETS = [22, 28, 38, 52];
 
 export default function AiAgentRoiCalculator({
   className = '',
@@ -37,35 +86,74 @@ export default function AiAgentRoiCalculator({
 }: AiAgentRoiCalculatorProps) {
   const { openModal } = useContactModal();
 
-  const [ticketVolume, setTicketVolume] = useState<number>(3000);
+  const [ticketVolume, setTicketVolume] = useState<number>(3500);
   const [hourlyRate, setHourlyRate] = useState<number>(28);
   const [selectedWorkflow, setSelectedWorkflow] = useState<string>(defaultWorkflow);
   const [selectedSystem, setSelectedSystem] = useState<string>('Zendesk');
+  const [customDeflection, setCustomDeflection] = useState<number | null>(null);
 
   // Lead capture state
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [company, setCompany] = useState('');
+  const [phone, setPhone] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
 
   const volumeSliderId = useId();
   const rateSliderId = useId();
+  const deflectionSliderId = useId();
 
   const currentWf = WORKFLOWS.find((w) => w.id === selectedWorkflow) || WORKFLOWS[0];
 
-  // Mathematical projections
-  const deflectionRate = Math.round(currentWf.baseDeflection * 100);
-  const monthlyDeflected = Math.round(ticketVolume * currentWf.baseDeflection);
-  const monthlyHoursSaved = Math.round((monthlyDeflected * currentWf.avgMins) / 60);
-  const annualSavings = Math.round(monthlyHoursSaved * hourlyRate * 12);
-  const monthlySavings = Math.round(annualSavings / 12);
+  const activeDeflectionDecimal = customDeflection !== null ? customDeflection / 100 : currentWf.baseDeflection;
+  const activeDeflectionPercent = Math.round(activeDeflectionDecimal * 100);
+
+  // Core Financial Modeling Computations
+  const calculations = useMemo(() => {
+    const monthlyDeflectedTasks = Math.round(ticketVolume * activeDeflectionDecimal);
+    const monthlyHoursRecovered = Math.round((monthlyDeflectedTasks * currentWf.avgMins) / 60);
+    const fullTimeEquivalents = Number((monthlyHoursRecovered / 160).toFixed(1));
+
+    // Gross Labor Value
+    const monthlyGrossLaborSavings = Math.round(monthlyHoursRecovered * hourlyRate);
+    const annualGrossLaborSavings = monthlyGrossLaborSavings * 12;
+
+    // Token & Hosting Compute Cost (estimated at $0.045 per resolved interaction)
+    const tokenCostPerResolved = 0.045;
+    const monthlyTokenComputeCost = Math.round(monthlyDeflectedTasks * tokenCostPerResolved + 120); // base cloud infra
+    const annualTokenComputeCost = monthlyTokenComputeCost * 12;
+
+    // Net Financial Gains
+    const netAnnualSavings = Math.max(0, annualGrossLaborSavings - annualTokenComputeCost);
+    const netMonthlySavings = Math.round(netAnnualSavings / 12);
+
+    // Payback Period (Months)
+    const devCost = currentWf.devCostEstimate;
+    const paybackMonths = netMonthlySavings > 0 ? Number((devCost / netMonthlySavings).toFixed(1)) : 0;
+    const fiveYearNetValue = netAnnualSavings * 5 - devCost;
+
+    return {
+      monthlyDeflectedTasks,
+      monthlyHoursRecovered,
+      fullTimeEquivalents,
+      monthlyGrossLaborSavings,
+      annualGrossLaborSavings,
+      monthlyTokenComputeCost,
+      annualTokenComputeCost,
+      netAnnualSavings,
+      netMonthlySavings,
+      devCost,
+      paybackMonths,
+      fiveYearNetValue,
+    };
+  }, [ticketVolume, activeDeflectionDecimal, currentWf, hourlyRate]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email || !email.includes('@')) {
-      setErrorMsg('Please enter a valid work email.');
+      setErrorMsg('Please enter a valid work email address.');
       return;
     }
 
@@ -73,7 +161,6 @@ export default function AiAgentRoiCalculator({
     setErrorMsg('');
 
     try {
-      // Push event to GTM dataLayer if present
       if (typeof window !== 'undefined' && (window as unknown as { dataLayer?: Array<Record<string, unknown>> }).dataLayer) {
         (window as unknown as { dataLayer: Array<Record<string, unknown>> }).dataLayer.push({
           event: 'roi_calculator_submit',
@@ -81,7 +168,9 @@ export default function AiAgentRoiCalculator({
           workflow: selectedWorkflow,
           system: selectedSystem,
           monthlyVolume: ticketVolume,
-          estimatedAnnualSavings: annualSavings,
+          hourlyRate,
+          deflection: activeDeflectionPercent,
+          estimatedAnnualSavings: calculations.netAnnualSavings,
         });
       }
 
@@ -89,8 +178,17 @@ export default function AiAgentRoiCalculator({
         name: fullName,
         email,
         company,
-        service: `AI Agent: ${currentWf.label}`,
-        message: `Calculated ROI: ${ticketVolume.toLocaleString()} tickets/mo, System: ${selectedSystem}, Rate: $${hourlyRate}/hr. Est Annual Savings: $${annualSavings.toLocaleString()}, Hours Saved: ${monthlyHoursSaved} hrs/mo`,
+        phone,
+        service: `AI Agent ROI Audit: ${currentWf.label}`,
+        message: `Calculated ROI Details:
+- Workflow: ${currentWf.label}
+- Primary System: ${selectedSystem}
+- Monthly Volume: ${ticketVolume.toLocaleString()} interactions
+- Loaded Rate: $${hourlyRate}/hr
+- Deflection Rate: ${activeDeflectionPercent}%
+- Projected Net Annual Savings: $${calculations.netAnnualSavings.toLocaleString()}/yr
+- Hours Recovered: ${calculations.monthlyHoursRecovered.toLocaleString()} hrs/mo (${calculations.fullTimeEquivalents} FTEs)
+- Est Payback Period: ~${calculations.paybackMonths} months`,
         source,
         region: 'us',
       });
@@ -105,264 +203,393 @@ export default function AiAgentRoiCalculator({
 
   return (
     <div
-      className={`rounded-2xl border border-[#E7DED6] bg-white p-6 md:p-10 shadow-xl shadow-fj-ink/5 ${className}`.trim()}
-      style={{ backgroundColor: '#FFFFFF' }}
+      className={`rounded-3xl border border-[#E7DED6] bg-white p-6 sm:p-8 lg:p-10 shadow-2xl shadow-[#14110F]/5 ${className}`.trim()}
     >
-      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between border-b border-[#E7DED6]/70 pb-6">
+      {/* Top Banner Bar */}
+      <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between border-b border-[#E7DED6] pb-6 mb-8">
         <div>
-          <div className="inline-flex items-center gap-2 rounded-full px-3 py-1 font-fj-mono text-[10px] font-bold uppercase tracking-[0.14em]" style={{ color: '#B23E13', background: 'rgba(240,90,40,0.08)', border: '1px solid rgba(240,90,40,0.22)' }}>
-            <Sparkles size={11} className="text-[#F05A28]" />
-            Interactive ROI Model · US Operations
+          <div className="inline-flex items-center gap-2 rounded-full px-3.5 py-1 text-xs font-mono font-bold uppercase tracking-wider text-[#F05A28] bg-[#FFF8F5] border border-[#F05A28]/20 mb-2">
+            <Sparkles size={13} className="text-[#F05A28]" />
+            Live Financial Modeling Engine &bull; US Benchmarks
           </div>
-          <h3 className="mt-2 font-fj-display text-[1.5rem] md:text-[1.85rem] font-bold text-fj-ink" style={{ letterSpacing: '-0.025em', lineHeight: 1.15 }}>
-            Calculate Your AI Agent Deflection &amp; Annual Savings
-          </h3>
-          <p className="mt-1 font-fj-body text-[0.9375rem] text-fj-neutral-500">
-            Model your actual ticket volume and loaded labor cost to see hours recovered and ROI.
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#14110F] font-heading tracking-tight">
+            Calculate Your AI Agent Net Savings &amp; Payback
+          </h2>
+          <p className="text-sm sm:text-base text-[#46403B] mt-1">
+            Adjust your monthly queue volume, loaded labor rate, and target systems to see exact cost recovery projections.
           </p>
         </div>
-        <div className="hidden lg:flex items-center gap-2 text-right">
-          <div className="rounded-xl border border-fj-neutral-200 bg-[#FAFAF7] px-4 py-2 text-center">
-            <span className="block font-fj-mono text-[10px] uppercase text-fj-neutral-400">Target Deflection</span>
-            <span className="font-fj-display text-[1.25rem] font-bold text-[#F05A28]">65% – 75%</span>
+
+        <div className="flex items-center gap-3">
+          <div className="hidden sm:flex flex-col items-end rounded-2xl border border-[#E7DED6] bg-[#FAFAF7] px-4 py-2.5">
+            <span className="text-[11px] font-mono font-semibold uppercase tracking-wider text-[#6E655F]">
+              Direct Code Ownership
+            </span>
+            <span className="text-sm font-bold text-[#F05A28] font-heading">
+              100% Client Owned (No SaaS Taxes)
+            </span>
           </div>
         </div>
       </div>
 
-      <div className="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-10">
-        {/* Left Column: Interactive Sliders & Pickers */}
-        <div className="lg:col-span-7 space-y-6">
-          {/* Workflow Picker */}
+      {/* Main Grid: Inputs (Left) vs Output Metrics (Right) */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+        {/* Left Column: Interactive Controls */}
+        <div className="lg:col-span-7 space-y-7">
+          {/* 1. Workflow Selector Tabs */}
           <div>
-            <label className="block font-fj-mono text-[11px] font-semibold uppercase tracking-[0.12em] text-fj-neutral-600 mb-2">
-              1. Select Primary Workflow
-            </label>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-              {WORKFLOWS.map((wf) => (
-                <button
-                  key={wf.id}
-                  type="button"
-                  onClick={() => setSelectedWorkflow(wf.id)}
-                  className={`flex flex-col text-left p-3 rounded-xl border transition-all ${
-                    selectedWorkflow === wf.id
-                      ? 'border-[#F05A28] bg-[#F05A28]/5 shadow-sm ring-1 ring-[#F05A28]'
-                      : 'border-fj-neutral-200 bg-white hover:border-fj-neutral-300'
-                  }`}
-                >
-                  <span className={`font-fj-body text-[13px] font-semibold ${selectedWorkflow === wf.id ? 'text-[#B23E13]' : 'text-fj-ink'}`}>
-                    {wf.label}
-                  </span>
-                  <span className="mt-1 font-fj-body text-[11px] text-fj-neutral-400 leading-tight">
-                    {wf.desc}
-                  </span>
-                </button>
-              ))}
-            </div>
-          </div>
-
-          {/* System Select */}
-          <div>
-            <label className="block font-fj-mono text-[11px] font-semibold uppercase tracking-[0.12em] text-fj-neutral-600 mb-2">
-              2. Primary System of Record
-            </label>
-            <div className="flex flex-wrap gap-2">
-              {SYSTEMS.map((sys) => (
-                <button
-                  key={sys}
-                  type="button"
-                  onClick={() => setSelectedSystem(sys)}
-                  className={`px-3 py-1.5 rounded-lg font-fj-body text-[12.5px] font-medium border transition-all ${
-                    selectedSystem === sys
-                      ? 'border-[#F05A28] bg-[#F05A28] text-white'
-                      : 'border-fj-neutral-200 bg-[#FAFAF7] text-fj-neutral-600 hover:border-fj-neutral-300 hover:text-fj-ink'
-                  }`}
-                >
-                  {sys}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          {/* Ticket Volume Slider */}
-          <div className="rounded-xl border border-fj-neutral-200 bg-[#FAFAF7] p-5">
-            <div className="flex items-center justify-between">
-              <label htmlFor={volumeSliderId} className="font-fj-mono text-[11px] font-semibold uppercase tracking-[0.12em] text-fj-neutral-600">
-                Monthly Inbound Queue Volume
+            <div className="flex items-center justify-between mb-3">
+              <label className="text-xs font-mono font-bold uppercase tracking-wider text-[#14110F]">
+                1. Select Target Workflow
               </label>
-              <span className="font-fj-display text-[1.25rem] font-bold text-[#F05A28]">
-                {ticketVolume.toLocaleString()} <span className="font-fj-mono text-[11px] font-normal text-fj-neutral-400">tickets/mo</span>
+              <span className="text-xs font-mono text-[#F05A28]">
+                {currentWf.badge}
               </span>
             </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {WORKFLOWS.map((wf) => {
+                const isSelected = selectedWorkflow === wf.id;
+                return (
+                  <button
+                    key={wf.id}
+                    type="button"
+                    onClick={() => {
+                      setSelectedWorkflow(wf.id);
+                      setCustomDeflection(null);
+                    }}
+                    className={`relative p-4 rounded-2xl text-left border transition-all flex flex-col justify-between ${
+                      isSelected
+                        ? 'border-[#F05A28] bg-[#FFF8F5] shadow-md ring-2 ring-[#F05A28]/20'
+                        : 'border-[#E7DED6] bg-white hover:border-[#F05A28]/40 hover:bg-[#FAFAF7]'
+                    }`}
+                  >
+                    <div>
+                      <div className="flex items-center justify-between mb-1.5">
+                        <span className={`text-sm font-bold font-heading ${isSelected ? 'text-[#F05A28]' : 'text-[#14110F]'}`}>
+                          {wf.label}
+                        </span>
+                        {isSelected && (
+                          <span className="w-2 h-2 rounded-full bg-[#F05A28]" />
+                        )}
+                      </div>
+                      <p className="text-xs text-[#46403B] leading-relaxed">
+                        {wf.desc}
+                      </p>
+                    </div>
+                    <div className="mt-3 pt-2 border-t border-[#E7DED6]/60 flex items-center justify-between text-[11px] font-mono text-[#6E655F]">
+                      <span>Avg: {wf.avgMins} mins/task</span>
+                      <span className="font-bold text-[#14110F]">{Math.round(wf.baseDeflection * 100)}% deflection</span>
+                    </div>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* 2. System of Record Selector */}
+          <div>
+            <label className="text-xs font-mono font-bold uppercase tracking-wider text-[#14110F] block mb-3">
+              2. System of Record Integration
+            </label>
+            <div className="flex flex-wrap gap-2">
+              {SYSTEMS.map((sys) => {
+                const isSelected = selectedSystem === sys.name;
+                return (
+                  <button
+                    key={sys.name}
+                    type="button"
+                    onClick={() => setSelectedSystem(sys.name)}
+                    className={`px-3.5 py-2 rounded-xl text-xs font-medium border transition-all flex items-center gap-1.5 ${
+                      isSelected
+                        ? 'border-[#F05A28] bg-[#F05A28] text-white font-bold shadow-sm'
+                        : 'border-[#E7DED6] bg-[#FAFAF7] text-[#46403B] hover:border-[#F05A28]/30 hover:bg-white hover:text-[#14110F]'
+                    }`}
+                  >
+                    <span>{sys.name}</span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* 3. Monthly Volume Slider & Presets */}
+          <div className="p-5 rounded-2xl border border-[#E7DED6] bg-[#FAFAF7] shadow-sm">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-3">
+              <div>
+                <label htmlFor={volumeSliderId} className="text-xs font-mono font-bold uppercase tracking-wider text-[#14110F] block">
+                  3. Monthly Inbound Queue Volume
+                </label>
+                <span className="text-xs text-[#6E655F]">Tickets, inquiries, or transactions per month</span>
+              </div>
+              <div className="text-left sm:text-right">
+                <span className="text-2xl font-extrabold text-[#F05A28] font-heading">
+                  {ticketVolume.toLocaleString()}
+                </span>
+                <span className="text-xs font-mono text-[#6E655F] ml-1.5">tasks/mo</span>
+              </div>
+            </div>
+
             <input
               id={volumeSliderId}
               type="range"
               min={500}
-              max={25000}
+              max={50000}
               step={500}
               value={ticketVolume}
               onChange={(e) => setTicketVolume(Number(e.target.value))}
-              className="mt-4 h-2 w-full cursor-pointer appearance-none rounded-lg bg-fj-neutral-200 accent-[#F05A28]"
+              className="w-full h-2.5 rounded-lg appearance-none cursor-pointer bg-[#E7DED6] accent-[#F05A28] focus:outline-none"
             />
-            <div className="mt-2 flex justify-between font-fj-mono text-[10px] text-fj-neutral-400">
-              <span>500 (Boutique)</span>
-              <span>5,000 (Mid-Market)</span>
-              <span>25,000+ (High-Volume)</span>
+
+            <div className="flex flex-wrap items-center justify-between gap-2 mt-3 pt-3 border-t border-[#E7DED6]/70">
+              <span className="text-[11px] font-mono text-[#6E655F]">Quick Select:</span>
+              <div className="flex flex-wrap gap-1.5">
+                {VOLUME_PRESETS.map((p) => (
+                  <button
+                    key={p}
+                    type="button"
+                    onClick={() => setTicketVolume(p)}
+                    className={`px-2.5 py-1 rounded-lg text-[11px] font-mono transition-colors ${
+                      ticketVolume === p
+                        ? 'bg-[#F05A28] text-white font-bold'
+                        : 'bg-white border border-[#E7DED6] text-[#46403B] hover:border-[#F05A28]'
+                    }`}
+                  >
+                    {p >= 1000 ? `${p / 1000}k` : p}
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
 
-          {/* Hourly Cost Slider */}
-          <div className="rounded-xl border border-fj-neutral-200 bg-[#FAFAF7] p-5">
-            <div className="flex items-center justify-between">
-              <label htmlFor={rateSliderId} className="font-fj-mono text-[11px] font-semibold uppercase tracking-[0.12em] text-fj-neutral-600">
-                Loaded Hourly Cost per Rep / Operator
-              </label>
-              <span className="font-fj-display text-[1.25rem] font-bold text-[#F05A28]">
-                ${hourlyRate} <span className="font-fj-mono text-[11px] font-normal text-fj-neutral-400">/ hour (loaded)</span>
-              </span>
+          {/* 4. Hourly Labor Cost Slider & Presets */}
+          <div className="p-5 rounded-2xl border border-[#E7DED6] bg-[#FAFAF7] shadow-sm">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-3">
+              <div>
+                <label htmlFor={rateSliderId} className="text-xs font-mono font-bold uppercase tracking-wider text-[#14110F] block">
+                  4. Loaded Hourly Cost per Human Rep / Specialist
+                </label>
+                <span className="text-xs text-[#6E655F]">Base salary, benefits, payroll taxes, and overhead</span>
+              </div>
+              <div className="text-left sm:text-right">
+                <span className="text-2xl font-extrabold text-[#F05A28] font-heading">
+                  ${hourlyRate}
+                </span>
+                <span className="text-xs font-mono text-[#6E655F] ml-1.5">/ hour</span>
+              </div>
             </div>
+
             <input
               id={rateSliderId}
               type="range"
-              min={18}
-              max={65}
+              min={15}
+              max={75}
               step={1}
               value={hourlyRate}
               onChange={(e) => setHourlyRate(Number(e.target.value))}
-              className="mt-4 h-2 w-full cursor-pointer appearance-none rounded-lg bg-fj-neutral-200 accent-[#F05A28]"
+              className="w-full h-2.5 rounded-lg appearance-none cursor-pointer bg-[#E7DED6] accent-[#F05A28] focus:outline-none"
             />
-            <div className="mt-2 flex justify-between font-fj-mono text-[10px] text-fj-neutral-400">
-              <span>$18/hr</span>
-              <span>$28/hr (US Average)</span>
-              <span>$65/hr (Senior Specialist)</span>
+
+            <div className="flex flex-wrap items-center justify-between gap-2 mt-3 pt-3 border-t border-[#E7DED6]/70">
+              <span className="text-[11px] font-mono text-[#6E655F]">Industry Presets:</span>
+              <div className="flex flex-wrap gap-1.5">
+                {RATE_PRESETS.map((r) => (
+                  <button
+                    key={r}
+                    type="button"
+                    onClick={() => setHourlyRate(r)}
+                    className={`px-2.5 py-1 rounded-lg text-[11px] font-mono transition-colors ${
+                      hourlyRate === r
+                        ? 'bg-[#F05A28] text-white font-bold'
+                        : 'bg-white border border-[#E7DED6] text-[#46403B] hover:border-[#F05A28]'
+                    }`}
+                  >
+                    ${r}/hr {r === 28 ? '(US Avg)' : ''}
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Right Column: Live Calculated ROI & Lead Form */}
-        <div className="lg:col-span-5 flex flex-col justify-between rounded-2xl border border-fj-neutral-200 bg-[#FFFDFB] p-6 shadow-sm">
+        {/* Right Column: Live Output Cards & Scoping Form */}
+        <div className="lg:col-span-5 rounded-3xl border border-[#E7DED6] bg-[#FAFAF7] p-6 sm:p-7 shadow-lg flex flex-col justify-between">
           <div>
-            <div className="border-b border-fj-neutral-200/70 pb-4">
-              <p className="font-fj-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-[#B23E13]">
-                Estimated Annual Impact
-              </p>
-              <p className="mt-2 font-fj-display text-[2.5rem] md:text-[3rem] font-bold tracking-[-0.03em] text-[#F05A28] leading-none">
-                ${annualSavings.toLocaleString()}
-              </p>
-              <p className="mt-1 font-fj-body text-[13px] text-fj-neutral-500">
-                Estimated net savings per year (${monthlySavings.toLocaleString()}/mo)
+            {/* Main Highlight Hero Badge */}
+            <div className="p-6 rounded-2xl bg-white border border-[#E7DED6] shadow-sm mb-6 relative overflow-hidden">
+              <div className="absolute top-0 right-0 translate-x-3 -translate-y-3 w-24 h-24 bg-[#F05A28]/5 rounded-full blur-xl pointer-events-none" />
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#F05A28]">
+                  ESTIMATED ANNUAL VALUE
+                </span>
+                <span className="inline-flex items-center gap-1 text-[11px] font-mono text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full font-bold border border-emerald-200">
+                  <TrendingUp size={12} /> Net ROI
+                </span>
+              </div>
+
+              <div className="text-4xl sm:text-5xl font-black text-[#14110F] font-heading tracking-tight leading-none mb-2">
+                ${calculations.netAnnualSavings.toLocaleString()}
+                <span className="text-sm font-mono text-[#6E655F] font-normal block sm:inline sm:ml-2">/ year</span>
+              </div>
+
+              <p className="text-xs sm:text-sm text-[#46403B]">
+                Estimated net savings of <strong>${calculations.netMonthlySavings.toLocaleString()}/month</strong> after deducting all token compute costs.
               </p>
             </div>
 
-            {/* Metric Grid */}
-            <div className="mt-4 grid grid-cols-2 gap-3">
-              <div className="rounded-xl border border-fj-neutral-200 bg-white p-3">
-                <div className="flex items-center gap-1.5 font-fj-mono text-[10px] uppercase text-fj-neutral-400">
-                  <Clock size={12} className="text-[#F05A28]" /> Hours Recovered
+            {/* 4-Card Live Metric Bento Grid */}
+            <div className="grid grid-cols-2 gap-3 mb-6">
+              <div className="p-3.5 rounded-xl bg-white border border-[#E7DED6] shadow-2xs">
+                <div className="flex items-center gap-1.5 text-[11px] font-mono text-[#6E655F] uppercase font-bold mb-1">
+                  <Clock size={13} className="text-[#F05A28]" /> Hours Recovered
                 </div>
-                <p className="mt-1 font-fj-display text-[1.35rem] font-bold text-fj-ink">
-                  {monthlyHoursSaved.toLocaleString()} <span className="font-fj-mono text-[10px] font-normal text-fj-neutral-400">hrs/mo</span>
-                </p>
+                <div className="text-xl sm:text-2xl font-extrabold text-[#14110F] font-heading">
+                  {calculations.monthlyHoursRecovered.toLocaleString()}
+                  <span className="text-xs font-mono font-normal text-[#6E655F] ml-1">hrs/mo</span>
+                </div>
+                <div className="text-[11px] text-[#6E655F] mt-0.5">
+                  &asymp; {calculations.fullTimeEquivalents} Full-Time Reps
+                </div>
               </div>
 
-              <div className="rounded-xl border border-fj-neutral-200 bg-white p-3">
-                <div className="flex items-center gap-1.5 font-fj-mono text-[10px] uppercase text-fj-neutral-400">
-                  <Zap size={12} className="text-[#F05A28]" /> Deflection Rate
+              <div className="p-3.5 rounded-xl bg-white border border-[#E7DED6] shadow-2xs">
+                <div className="flex items-center gap-1.5 text-[11px] font-mono text-[#6E655F] uppercase font-bold mb-1">
+                  <Zap size={13} className="text-[#F05A28]" /> Deflection Rate
                 </div>
-                <p className="mt-1 font-fj-display text-[1.35rem] font-bold text-fj-ink">
-                  {deflectionRate}% <span className="font-fj-mono text-[10px] font-normal text-fj-neutral-400">resolved</span>
-                </p>
+                <div className="text-xl sm:text-2xl font-extrabold text-[#14110F] font-heading">
+                  {activeDeflectionPercent}%
+                  <span className="text-xs font-mono font-normal text-[#6E655F] ml-1">resolved</span>
+                </div>
+                <div className="text-[11px] text-[#6E655F] mt-0.5">
+                  {calculations.monthlyDeflectedTasks.toLocaleString()} automated tasks
+                </div>
               </div>
 
-              <div className="rounded-xl border border-fj-neutral-200 bg-white p-3">
-                <div className="flex items-center gap-1.5 font-fj-mono text-[10px] uppercase text-fj-neutral-400">
-                  <ShieldCheck size={12} className="text-[#F05A28]" /> Speed to Lead
+              <div className="p-3.5 rounded-xl bg-white border border-[#E7DED6] shadow-2xs">
+                <div className="flex items-center gap-1.5 text-[11px] font-mono text-[#6E655F] uppercase font-bold mb-1">
+                  <DollarSign size={13} className="text-[#F05A28]" /> Est. Payback
                 </div>
-                <p className="mt-1 font-fj-display text-[1.35rem] font-bold text-fj-ink">
-                  &lt; 30s <span className="font-fj-mono text-[10px] font-normal text-fj-neutral-400">from 4 hrs</span>
-                </p>
+                <div className="text-xl sm:text-2xl font-extrabold text-[#14110F] font-heading">
+                  ~{calculations.paybackMonths}
+                  <span className="text-xs font-mono font-normal text-[#6E655F] ml-1">months</span>
+                </div>
+                <div className="text-[11px] text-[#6E655F] mt-0.5">
+                  Based on milestone build
+                </div>
               </div>
 
-              <div className="rounded-xl border border-fj-neutral-200 bg-white p-3">
-                <div className="flex items-center gap-1.5 font-fj-mono text-[10px] uppercase text-fj-neutral-400">
-                  <DollarSign size={12} className="text-[#F05A28]" /> Payback
+              <div className="p-3.5 rounded-xl bg-white border border-[#E7DED6] shadow-2xs">
+                <div className="flex items-center gap-1.5 text-[11px] font-mono text-[#6E655F] uppercase font-bold mb-1">
+                  <ShieldCheck size={13} className="text-[#F05A28]" /> Token Cost
                 </div>
-                <p className="mt-1 font-fj-display text-[1.35rem] font-bold text-fj-ink">
-                  ~2.5 mo <span className="font-fj-mono text-[10px] font-normal text-fj-neutral-400">typical</span>
-                </p>
+                <div className="text-xl sm:text-2xl font-extrabold text-[#14110F] font-heading">
+                  ${calculations.monthlyTokenComputeCost.toLocaleString()}
+                  <span className="text-xs font-mono font-normal text-[#6E655F] ml-1">/mo</span>
+                </div>
+                <div className="text-[11px] text-[#6E655F] mt-0.5">
+                  Pass-through zero markup
+                </div>
+              </div>
+            </div>
+
+            {/* Financial Breakdown Bar */}
+            <div className="p-4 rounded-xl bg-white border border-[#E7DED6] mb-6 text-xs font-mono">
+              <div className="flex justify-between text-[#46403B] mb-1.5">
+                <span>Gross Labor Value:</span>
+                <span className="font-bold text-[#14110F]">${calculations.annualGrossLaborSavings.toLocaleString()}/yr</span>
+              </div>
+              <div className="flex justify-between text-[#46403B] mb-2 pb-2 border-b border-[#E7DED6]">
+                <span>Annual Token &amp; Cloud Infra:</span>
+                <span className="text-rose-600">-${calculations.annualTokenComputeCost.toLocaleString()}/yr</span>
+              </div>
+              <div className="flex justify-between text-sm font-bold text-[#14110F]">
+                <span>5-Year Cumulative Value:</span>
+                <span className="text-[#F05A28]">${calculations.fiveYearNetValue.toLocaleString()}</span>
               </div>
             </div>
           </div>
 
-          {/* Lead Capture Form Card */}
-          <div className="mt-6 pt-5 border-t border-fj-neutral-200/70">
+          {/* Lead Capture Form or Confirmation */}
+          <div className="pt-4 border-t border-[#E7DED6]">
             {isSubmitted ? (
-              <div className="rounded-xl bg-[rgba(240,90,40,0.06)] border border-[#F05A28]/30 p-5 text-center">
-                <CheckCircle2 size={32} className="mx-auto text-[#F05A28]" />
-                <p className="mt-2 font-fj-display text-[1.1rem] font-bold text-fj-ink">
-                  ROI Estimate Generated!
-                </p>
-                <p className="mt-1 font-fj-body text-[13px] text-fj-neutral-600">
-                  We have mapped your <strong>{currentWf.label}</strong> architecture for <strong>{selectedSystem}</strong>. A senior engineer will review and reach out within 24 hours.
+              <div className="p-5 rounded-2xl bg-white border border-emerald-300 text-center shadow-sm">
+                <CheckCircle2 size={32} className="mx-auto text-emerald-600 mb-2" />
+                <div className="text-lg font-bold text-[#14110F] font-heading">
+                  Custom ROI Blueprint Requested!
+                </div>
+                <p className="text-xs text-[#46403B] mt-1 mb-4">
+                  We have mapped your <strong>{currentWf.label}</strong> workflow for <strong>{selectedSystem}</strong>. Founder Bhavesh Barot will review your numbers and email a detailed implementation breakdown within 24 hours.
                 </p>
                 <button
                   type="button"
                   onClick={() => openModal('us')}
-                  className="mt-3 inline-flex items-center justify-center rounded-full bg-[#C2440F] px-5 py-2 font-fj-body text-[13px] font-semibold text-white transition-opacity hover:opacity-90"
+                  className="w-full py-3 px-4 rounded-xl bg-[#F05A28] text-white font-bold text-xs hover:bg-[#D8441A] transition-colors shadow-md"
                 >
-                  Book 30-Min Scoping Call
+                  Book 30-Min Discovery Session on Calendly
                 </button>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-3">
-                <p className="font-fj-body text-[13px] font-semibold text-fj-ink">
-                  Get your custom architecture &amp; scoping blueprint:
-                </p>
-                <div className="space-y-2">
+                <div className="text-xs font-bold text-[#14110F] font-heading">
+                  Get your customized architecture &amp; feasibility roadmap:
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                   <input
                     type="text"
                     required
-                    placeholder="Your Name"
+                    placeholder="Your Name *"
                     value={fullName}
                     onChange={(e) => setFullName(e.target.value)}
-                    className="w-full rounded-lg border border-fj-neutral-200 bg-white px-3 py-2 text-[13.5px] text-fj-ink placeholder-fj-neutral-400 focus:border-[#F05A28] focus:outline-none"
+                    className="w-full rounded-xl border border-[#E7DED6] bg-white px-3 py-2.5 text-xs text-[#14110F] placeholder-[#6E655F] focus:border-[#F05A28] focus:outline-none"
                   />
                   <input
                     type="email"
                     required
-                    placeholder="Work Email (e.g. name@company.com)"
+                    placeholder="Work Email *"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full rounded-lg border border-fj-neutral-200 bg-white px-3 py-2 text-[13.5px] text-fj-ink placeholder-fj-neutral-400 focus:border-[#F05A28] focus:outline-none"
+                    className="w-full rounded-xl border border-[#E7DED6] bg-white px-3 py-2.5 text-xs text-[#14110F] placeholder-[#6E655F] focus:border-[#F05A28] focus:outline-none"
                   />
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                   <input
                     type="text"
-                    placeholder="Company Name or Website URL"
+                    placeholder="Company / Website"
                     value={company}
                     onChange={(e) => setCompany(e.target.value)}
-                    className="w-full rounded-lg border border-fj-neutral-200 bg-white px-3 py-2 text-[13.5px] text-fj-ink placeholder-fj-neutral-400 focus:border-[#F05A28] focus:outline-none"
+                    className="w-full rounded-xl border border-[#E7DED6] bg-white px-3 py-2.5 text-xs text-[#14110F] placeholder-[#6E655F] focus:border-[#F05A28] focus:outline-none"
+                  />
+                  <input
+                    type="tel"
+                    placeholder="Phone (Optional)"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                    className="w-full rounded-xl border border-[#E7DED6] bg-white px-3 py-2.5 text-xs text-[#14110F] placeholder-[#6E655F] focus:border-[#F05A28] focus:outline-none"
                   />
                 </div>
 
                 {errorMsg && (
-                  <p className="font-fj-body text-[12px] text-red-600">{errorMsg}</p>
+                  <p className="text-xs text-rose-600">{errorMsg}</p>
                 )}
 
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full flex items-center justify-center gap-2 rounded-xl py-3 px-4 font-fj-body text-[13.5px] font-bold text-white transition-opacity hover:opacity-90 disabled:opacity-50"
-                  style={{ background: '#C2440F' }}
+                  className="w-full flex items-center justify-center gap-2 py-3.5 px-4 rounded-xl bg-[#F05A28] text-white font-bold text-xs hover:bg-[#D8441A] transition-colors shadow-md disabled:opacity-50 cursor-pointer"
                 >
-                  {isSubmitting ? 'Calculating...' : (
+                  {isSubmitting ? (
+                    'Generating Custom Model...'
+                  ) : (
                     <>
-                      <span>Get Custom Architecture Blueprint</span>
+                      <span>Get Custom Architecture Blueprint &amp; Proposal</span>
                       <ArrowRight size={14} />
                     </>
                   )}
                 </button>
-                <p className="text-center font-fj-mono text-[10px] text-fj-neutral-400">
-                  Fixed-price scope · No spam · Strict CCPA compliance
-                </p>
+                <div className="flex items-center justify-center gap-4 text-[10px] font-mono text-[#6E655F]">
+                  <span>&bull; Fixed milestone scope</span>
+                  <span>&bull; 100% IP ownership</span>
+                  <span>&bull; No spam</span>
+                </div>
               </form>
             )}
           </div>

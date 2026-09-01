@@ -1,21 +1,23 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
-import FAQ from '@/components/v2/FAQ';
-import HeroInlineForm from '@/components/HeroInlineForm';
+import FAQ, { type FAQCategory, type FAQItem } from '@/components/v2/FAQ';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import AiAgentRoiCalculator from '@/components/ai-agent/AiAgentRoiCalculator';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
-import '@/components/v2/PlatformPage.css';
 
-const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
+const CANONICAL_URL = 'https://factoryjet.com/tools/ai-agent-roi-calculator';
+const PAGE_TITLE = 'AI Agent ROI Calculator & Cost Estimator | FactoryJet';
+const PAGE_DESC =
+  'Calculate custom AI agent development ROI, ticket deflection, labor savings, and token compute payback periods for your US business. Try the calculator.';
 const PAGE_MODIFIED = '2026-09-01';
+const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 
 export const metadata: Metadata = {
-  title: 'AI Agent ROI Calculator & Cost Estimator | FactoryJet',
-  description:
-    'Calculate custom AI agent development ROI, ticket deflection, labor savings, and token compute payback periods for your US business. Try the calculator.',
+  title: PAGE_TITLE,
+  description: PAGE_DESC,
   keywords: [
     'ai agent cost calculator',
     'cost to build ai agent',
@@ -23,38 +25,57 @@ export const metadata: Metadata = {
     'ai agent development cost',
     'ai customer support roi calculator',
     'custom ai agent pricing',
+    'ai sdr roi estimator',
+    'netsuite ai agent savings',
   ],
+  alternates: {
+    canonical: CANONICAL_URL,
+  },
   openGraph: {
-    type: 'website',
-    siteName: 'FactoryJet',
     title: 'AI Agent Cost & ROI Calculator 2026 | FactoryJet',
     description:
       'Model custom AI agent development payback, automated ticket deflection, and net labor cost reduction across Zendesk, HubSpot, NetSuite, and Shopify.',
-    url: 'https://factoryjet.com/tools/ai-agent-roi-calculator',
-    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet AI Agent Cost and ROI Calculator' }],
+    url: CANONICAL_URL,
+    siteName: 'FactoryJet',
     locale: 'en_US',
+    type: 'website',
+    images: [
+      {
+        url: 'https://factoryjet.com/og-default.png',
+        width: 1200,
+        height: 630,
+        alt: 'FactoryJet AI Agent Cost and ROI Calculator',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'AI Agent Cost & ROI Calculator 2026 | FactoryJet',
-    description: 'Calculate custom AI agent development payback periods, labor savings, and monthly run costs with our interactive model.',
+    description:
+      'Calculate custom AI agent development payback periods, labor savings, and monthly run costs with our interactive model.',
     images: ['https://factoryjet.com/og-default.png'],
   },
-  alternates: { canonical: 'https://factoryjet.com/tools/ai-agent-roi-calculator' },
-  robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
-/* ─────────────────────────────────────────────
-   FAQ DATA
-───────────────────────────────────────────── */
-const FAQ_CATEGORIES = [
+const FAQ_CATEGORIES: ReadonlyArray<FAQCategory> = [
   { key: 'roi', label: 'ROI & Payback Formula' },
   { key: 'costs', label: 'Development & Compute Costs' },
   { key: 'accuracy', label: 'Accuracy & Deflection Rates' },
   { key: 'ownership', label: 'Code Ownership & Infrastructure' },
 ];
 
-const FAQ_ITEMS = [
+const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
   {
     category: 'roi',
     question: 'How do you calculate the return on investment for an AI agent?',
@@ -83,7 +104,7 @@ const FAQ_ITEMS = [
     category: 'costs',
     question: 'What are the recurring token compute costs for running an AI agent in production?',
     answer:
-      'For standard customer support and lead qualification workflows using frontier models from Anthropic and OpenAI behind semantic caching, token costs typically average between $0.02 and $0.07 per resolved conversation thread.',
+      'For standard customer support and lead qualification workflows using frontier models behind semantic caching, token costs typically average between $0.02 and $0.07 per resolved conversation thread.',
   },
   {
     category: 'costs',
@@ -153,253 +174,387 @@ const FAQ_ITEMS = [
   },
 ];
 
-/* ─────────────────────────────────────────────
-   SCHEMAS
-───────────────────────────────────────────── */
-const FAQ_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: FAQ_ITEMS.map((item) => ({
-    '@type': 'Question',
-    name: item.question,
-    acceptedAnswer: { '@type': 'Answer', text: item.answer },
-  })),
-};
-
-const WEBAPP_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'WebApplication',
-  name: 'AI Agent Cost & ROI Calculator',
-  applicationCategory: 'BusinessApplication',
-  operatingSystem: 'All',
-  offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-  description:
-    'Interactive calculator modeling custom AI agent development costs, labor savings, monthly token compute, ticket deflection rates, and net payback periods for US businesses.',
-  dateModified: `${PAGE_MODIFIED}T00:00:00Z`,
-  author: {
-    '@type': 'Person',
-    name: 'Bhavesh Barot',
-    url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-    jobTitle: 'Founder, FactoryJet',
-  },
-};
-
-const ORG_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
-  '@id': 'https://factoryjet.com/#organization',
-  name: 'FactoryJet',
-  url: 'https://factoryjet.com',
-  sameAs: ['https://www.linkedin.com/company/factoryjet'],
-};
-
-const BREADCRUMB_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-    { '@type': 'ListItem', position: 2, name: 'Tools', item: 'https://factoryjet.com/services' },
-    { '@type': 'ListItem', position: 3, name: 'AI Agent ROI Calculator', item: 'https://factoryjet.com/tools/ai-agent-roi-calculator' },
-  ],
-};
-
 export default function AiAgentRoiCalculatorPage() {
+  const schemaWebPage = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `${CANONICAL_URL}#webpage`,
+    url: CANONICAL_URL,
+    name: PAGE_TITLE,
+    description: PAGE_DESC,
+    dateModified: PAGE_MODIFIED,
+    publisher: {
+      '@type': 'Organization',
+      name: 'FactoryJet',
+      url: 'https://factoryjet.com',
+      logo: 'https://factoryjet.com/FinalLogo.svg',
+    },
+    author: {
+      '@type': 'Person',
+      name: 'Bhavesh Barot',
+      url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
+      jobTitle: 'Founder & CEO, FactoryJet',
+    },
+  };
+
+  const schemaWebApp = {
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'AI Agent Cost & ROI Calculator',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'All',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    description:
+      'Interactive calculator modeling custom AI agent development costs, labor savings, monthly token compute, ticket deflection rates, and net payback periods for US businesses.',
+    dateModified: `${PAGE_MODIFIED}T00:00:00Z`,
+    author: {
+      '@type': 'Person',
+      name: 'Bhavesh Barot',
+      url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
+      jobTitle: 'Founder, FactoryJet',
+    },
+  };
+
+  const schemaBreadcrumbs = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
+      { '@type': 'ListItem', position: 2, name: 'Tools', item: 'https://factoryjet.com/services' },
+      { '@type': 'ListItem', position: 3, name: 'AI Agent ROI Calculator', item: CANONICAL_URL },
+    ],
+  };
+
+  const schemaFAQ = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: FAQ_ITEMS.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answer,
+      },
+    })),
+  };
+
+  const schemaOrganization = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    '@id': 'https://factoryjet.com/#organization',
+    name: 'FactoryJet',
+    url: 'https://factoryjet.com',
+    logo: 'https://factoryjet.com/FinalLogo.svg',
+    sameAs: [
+      'https://www.linkedin.com/company/factoryjet',
+      'https://twitter.com/factoryjet',
+    ],
+  };
+
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBAPP_SCHEMA) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ORG_SCHEMA) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaWebPage) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaWebApp) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaBreadcrumbs) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaFAQ) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrganization) }} />
 
       <SiteHeader locale="us" />
 
-      <main className="pp-page">
-        {/* HERO SECTION */}
-        <section className="pp-hero">
-          <div className="pp-hero-grid">
-            <div>
-              <p className="pp-eyebrow">// FINANCIAL MODELING &amp; ROI BENCHMARKS</p>
-              <h1 className="pp-h1">
-                AI Agent <span className="pp-grad">Cost &amp; ROI</span> Calculator
-              </h1>
-              <HeroInlineForm
-                source="tools_ai_agent_roi_calculator"
-                region="us"
-                submitLabel="Request Custom ROI Audit"
-              />
-            </div>
+      <main className="min-h-screen bg-white text-[#14110F]">
+        {/* HERO SECTION WITH EMBEDDED CALCULATOR */}
+        <section className="relative pt-32 pb-20 border-b border-[#E7DED6] bg-[#FFFFFF] overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(#E7DED6_1px,transparent_1px)] [background-size:20px_20px] opacity-60 pointer-events-none" />
 
-            <div className="pp-hero-card">
-              <div className="flex items-center justify-between border-b border-[#E7DED6] pb-3 mb-4">
-                <span className="text-xs font-mono font-semibold uppercase tracking-wider text-[#F05A28]">
-                  Live Calculation Model
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="text-center max-w-4xl mx-auto mb-12">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FFF8F5] border border-[#F05A28]/30 mb-6">
+                <span className="font-mono text-xs text-[#F05A28] font-bold tracking-wide">
+                  // INTERACTIVE FINANCIAL MODEL &bull; 2026 US BENCHMARKS
                 </span>
-                <span className="text-xs text-[#8C827A]">US Operations Benchmark</span>
               </div>
-              <div className="space-y-3 text-sm">
-                <div className="flex justify-between py-1 border-b border-[#F5EFEA]">
-                  <span className="text-[#46403B]">Base Monthly Offset:</span>
-                  <span className="font-semibold text-[#14110F]">Tiered Labor Deflection</span>
-                </div>
-                <div className="flex justify-between py-1 border-b border-[#F5EFEA]">
-                  <span className="text-[#46403B]">Direct LLM Token API:</span>
-                  <span className="font-semibold text-[#14110F]">At-Cost Zero Markup</span>
-                </div>
-                <div className="flex justify-between py-1 border-b border-[#F5EFEA]">
-                  <span className="text-[#46403B]">Typical Payback Window:</span>
-                  <span className="font-semibold text-[#14110F]">3 to 6 Months</span>
-                </div>
-                <div className="flex justify-between py-1">
-                  <span className="text-[#46403B]">Code Ownership:</span>
-                  <span className="font-semibold text-[#F05A28]">100% Client Owned</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
 
-        {/* ANSWER-FIRST DEFINITION SECTION */}
-        <section className="pp-section pp-tint">
-          <div className="pp-container">
-            <div className="pp-card p-6 md:p-8 bg-white border-l-4 border-[#F05A28]">
-              <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#F05A28] block mb-2">
-                Executive Definition &amp; ROI Benchmark
-              </span>
-              <p className="text-base md:text-lg text-[#14110F] leading-relaxed font-medium">
-                AI agent return on investment measures net operating cost reductions and revenue acceleration generated by autonomous agent workflows relative to custom engineering and token compute costs. For mid-market US brands, production customer support and sales agents typically achieve full capital payback within 90 to 180 days by automating 60% to 80% of routine workflows.
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#14110F] font-heading leading-tight mb-6">
+                AI Agent <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F05A28] to-[#C94A1A]">Cost &amp; ROI Calculator</span>
+              </h1>
+
+              <p className="text-lg sm:text-xl text-[#46403B] leading-relaxed max-w-3xl mx-auto">
+                Model custom AI agent development payback, automated ticket deflection, and net labor cost reduction across Zendesk, HubSpot, NetSuite, and Shopify.
               </p>
-            </div>
-          </div>
-        </section>
 
-        {/* VERIFIED MARKET METRICS */}
-        <section className="pp-section">
-          <div className="pp-container">
-            <div className="text-center max-w-3xl mx-auto mb-12">
-              <h2 className="pp-h2 text-center">Industry Financial Benchmarks</h2>
-              <p className="text-base text-[#46403B] mt-3">
-                Third-party research on autonomous agent unit economics, deflection ratios, and labor productivity gains.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="pp-card p-6 bg-white">
-                <span className="text-3xl font-extrabold text-[#F05A28] font-mono block mb-2">60-80%</span>
-                <h3 className="text-base font-bold text-[#14110F] mb-2">Ticket Resolution Autonomy</h3>
-                <p className="text-sm text-[#46403B] mb-4">
-                  Autonomous agents resolve Tier-1 customer support requests without human agent intervention across retail and B2B sectors.
-                </p>
-                <a
-                  href="https://www.gartner.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs text-[#F05A28] font-mono hover:underline"
-                >
-                  Source: Gartner Customer Service Research &rarr;
-                </a>
-              </div>
-
-              <div className="pp-card p-6 bg-white">
-                <span className="text-3xl font-extrabold text-[#F05A28] font-mono block mb-2">21x</span>
-                <h3 className="text-base font-bold text-[#14110F] mb-2">Lead Qualification Speed</h3>
-                <p className="text-sm text-[#46403B] mb-4">
-                  Responding to inbound sales inquiries within 5 minutes increases qualified lead conversion rates by 21x compared to 30-minute response delays.
-                </p>
-                <a
-                  href="https://hbr.org"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs text-[#F05A28] font-mono hover:underline"
-                >
-                  Source: Harvard Business Review &rarr;
-                </a>
-              </div>
-
-              <div className="pp-card p-6 bg-white">
-                <span className="text-3xl font-extrabold text-[#F05A28] font-mono block mb-2">72%</span>
-                <h3 className="text-base font-bold text-[#14110F] mb-2">Lower Cost per Interaction</h3>
-                <p className="text-sm text-[#46403B] mb-4">
-                  AI-first customer contact routing reduces cost per resolution from $6.50 (live human rep) to under $0.45 per automated session.
-                </p>
-                <a
-                  href="https://www.mckinsey.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs text-[#F05A28] font-mono hover:underline"
-                >
-                  Source: McKinsey &amp; Company GenAI Report &rarr;
-                </a>
+              <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 mt-6 text-xs font-mono text-[#6E655F]">
+                <div className="flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-[#F05A28]" />
+                  <span>65% - 85% Deflection</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-[#F05A28]" />
+                  <span>3 to 6 Month Capital Payback</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-[#F05A28]" />
+                  <span>100% Client Code Ownership</span>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
 
-        {/* INTERACTIVE CALCULATOR SECTION */}
-        <section className="pp-section pp-tint">
-          <div className="pp-container">
-            <div className="text-center max-w-3xl mx-auto mb-10">
-              <h2 className="pp-h2 text-center">Interactive AI Agent ROI Model</h2>
-              <p className="text-base text-[#46403B] mt-3">
-                Adjust support ticket volume, team size, and integration tiers to calculate estimated net annual savings and payback timelines.
-              </p>
-            </div>
-
-            <div className="max-w-4xl mx-auto">
+            {/* THE VISUALLY STUNNING INTERACTIVE CALCULATOR */}
+            <div className="max-w-5xl mx-auto">
               <AiAgentRoiCalculator />
             </div>
           </div>
         </section>
 
-        {/* COMPARISON MATRIX SECTION */}
-        <section className="pp-section">
-          <div className="pp-container">
-            <div className="text-center max-w-3xl mx-auto mb-10">
-              <h2 className="pp-h2 text-center">Custom AI Agent vs. Generic SaaS Bots</h2>
-              <p className="text-base text-[#46403B] mt-3">
-                Why bespoke multi-agent state machines outperform off-the-shelf chatbot wrappers.
+        {/* ANSWER-FIRST DIRECT DEFINITION BLOCK (AEO & GEO OPTIMIZED) */}
+        <section className="py-12 bg-[#FFF8F5] border-b border-[#E7DED6]">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="rounded-2xl border border-[#F05A28]/30 bg-white p-6 sm:p-8 shadow-sm">
+              <div className="font-mono text-xs text-[#F05A28] font-bold uppercase tracking-wider mb-2">
+                // EXECUTIVE DEFINITION &amp; ROI METHODOLOGY
+              </div>
+              <h2 className="text-xl sm:text-2xl font-bold text-[#14110F] font-heading mb-4">
+                How AI Agent Return on Investment is Calculated
+              </h2>
+              <p className="text-base sm:text-lg text-[#46403B] leading-relaxed mb-4">
+                AI agent return on investment measures net operating cost reductions and revenue acceleration generated by autonomous agent workflows relative to custom engineering and token compute costs. For mid-market US brands, production customer support and sales agents typically achieve full capital payback within 90 to 180 days by automating 60% to 80% of routine workflows.
+              </p>
+              <div className="p-4 rounded-xl bg-[#FAFAF7] border border-[#E7DED6] text-xs font-mono text-[#14110F]">
+                <code>Net Annual Savings = (Monthly Volume &times; Deflection Rate &times; Mins Saved / 60 &times; Hourly Rate &times; 12) - Annual Token Compute Cost</code>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* VERIFIED INDUSTRY FINANCIAL BENCHMARKS */}
+        <section className="py-16 bg-white border-b border-[#E7DED6]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <div className="font-mono text-xs text-[#F05A28] font-bold uppercase tracking-wider mb-2">
+                // VERIFIED RESEARCH BENCHMARKS
+              </div>
+              <h2 className="text-3xl font-extrabold text-[#14110F] font-heading">
+                Third-Party AI Economics &amp; Unit Cost Benchmarks
+              </h2>
+              <p className="text-base sm:text-lg text-[#46403B] mt-3">
+                Authoritative research on autonomous agent unit economics, deflection ratios, and labor productivity gains.
               </p>
             </div>
 
-            <div className="overflow-x-auto">
-              <table className="pp-table">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="p-8 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6]">
+                <div className="text-4xl sm:text-5xl font-extrabold text-[#F05A28] font-heading mb-2">
+                  60-80%
+                </div>
+                <div className="text-sm font-bold text-[#14110F] mb-3">
+                  Ticket Resolution Autonomy
+                </div>
+                <p className="text-sm text-[#46403B] leading-relaxed mb-4">
+                  Autonomous agents resolve Tier-1 customer support requests without human agent intervention across retail and B2B sectors.
+                </p>
+                <div className="text-xs font-mono text-[#6E655F]">
+                  Source: Gartner Customer Service &amp; Support Research
+                </div>
+              </div>
+
+              <div className="p-8 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6]">
+                <div className="text-4xl sm:text-5xl font-extrabold text-[#F05A28] font-heading mb-2">
+                  21x
+                </div>
+                <div className="text-sm font-bold text-[#14110F] mb-3">
+                  Lead Qualification Speed Advantage
+                </div>
+                <p className="text-sm text-[#46403B] leading-relaxed mb-4">
+                  Responding to inbound sales inquiries within 5 minutes increases qualified lead conversion rates by 21x compared to 30-minute response delays.
+                </p>
+                <div className="text-xs font-mono text-[#6E655F]">
+                  Source: Harvard Business Review Lead Response Study
+                </div>
+              </div>
+
+              <div className="p-8 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6]">
+                <div className="text-4xl sm:text-5xl font-extrabold text-[#F05A28] font-heading mb-2">
+                  72%
+                </div>
+                <div className="text-sm font-bold text-[#14110F] mb-3">
+                  Lower Cost per Customer Interaction
+                </div>
+                <p className="text-sm text-[#46403B] leading-relaxed mb-4">
+                  AI-first customer contact routing reduces cost per resolution from $6.50 (live human rep) to under $0.45 per automated session.
+                </p>
+                <div className="text-xs font-mono text-[#6E655F]">
+                  Source: McKinsey &amp; Company GenAI Economic Analysis
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 4 WORKFLOW ARCHITECTURES & UNIT ECONOMICS */}
+        <section className="py-20 bg-[#FAFAF7] border-b border-[#E7DED6]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <div className="font-mono text-xs text-[#F05A28] font-bold uppercase tracking-wider mb-2">
+                // ENTERPRISE WORKFLOW BREAKDOWN
+              </div>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-4">
+                Unit Economics Across Primary AI Agent Workflows
+              </h2>
+              <p className="text-lg text-[#46403B]">
+                How autonomous agent state machines convert manual administrative queues into automated, profitable operations.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="p-8 rounded-2xl bg-white border border-[#E7DED6] hover:border-[#F05A28]/50 transition-all shadow-sm">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="font-mono text-xs text-[#F05A28] font-bold uppercase">WORKFLOW 01</span>
+                  <span className="text-xs font-mono bg-[#FFF8F5] text-[#F05A28] px-2.5 py-1 rounded-full border border-[#F05A28]/20 font-bold">
+                    65% - 80% Deflection
+                  </span>
+                </div>
+                <h3 className="text-xl font-bold text-[#14110F] mb-3">
+                  Customer Support &amp; Ticket Resolution Agents
+                </h3>
+                <p className="text-sm text-[#46403B] leading-relaxed mb-4">
+                  Connects directly to Zendesk, Gorgias, Freshdesk, or Intercom. Validates order numbers via Shopify or ERP APIs, checks tracking status with carriers, processes return authorizations (RMAs), and handles address changes without human intervention.
+                </p>
+                <div className="pt-4 border-t border-[#E7DED6] flex items-center justify-between text-xs font-mono text-[#6E655F]">
+                  <span>Average Time Saved: 8 to 10 mins/ticket</span>
+                  <span className="font-bold text-[#14110F]">Payback: 2 to 4 Months</span>
+                </div>
+              </div>
+
+              <div className="p-8 rounded-2xl bg-white border border-[#E7DED6] hover:border-[#F05A28]/50 transition-all shadow-sm">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="font-mono text-xs text-[#F05A28] font-bold uppercase">WORKFLOW 02</span>
+                  <span className="text-xs font-mono bg-[#FFF8F5] text-[#F05A28] px-2.5 py-1 rounded-full border border-[#F05A28]/20 font-bold">
+                    Sub-30s Speed to Lead
+                  </span>
+                </div>
+                <h3 className="text-xl font-bold text-[#14110F] mb-3">
+                  Inbound Sales SDR &amp; Lead Qualification Agents
+                </h3>
+                <p className="text-sm text-[#46403B] leading-relaxed mb-4">
+                  Responds to inbound website inquiries, demo requests, and pricing forms in seconds. Enriches firmographic data from Clearbit or Apollo, scores prospective accounts, and books meetings directly into rep calendars in HubSpot or Salesforce.
+                </p>
+                <div className="pt-4 border-t border-[#E7DED6] flex items-center justify-between text-xs font-mono text-[#6E655F]">
+                  <span>Conversion Lift: +20% to +35%</span>
+                  <span className="font-bold text-[#14110F]">Payback: 1 to 3 Months</span>
+                </div>
+              </div>
+
+              <div className="p-8 rounded-2xl bg-white border border-[#E7DED6] hover:border-[#F05A28]/50 transition-all shadow-sm">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="font-mono text-xs text-[#F05A28] font-bold uppercase">WORKFLOW 03</span>
+                  <span className="text-xs font-mono bg-[#FFF8F5] text-[#F05A28] px-2.5 py-1 rounded-full border border-[#F05A28]/20 font-bold">
+                    75% - 85% Automation
+                  </span>
+                </div>
+                <h3 className="text-xl font-bold text-[#14110F] mb-3">
+                  Back-Office Invoice &amp; PO Reconciliation Agents
+                </h3>
+                <p className="text-sm text-[#46403B] leading-relaxed mb-4">
+                  Extracts vendor bills and customer purchase orders from email attachments. Performs three-way matching against open POs and warehouse receiving logs in NetSuite, SAP, or QuickBooks, staging clean transactions for one-click controller approval.
+                </p>
+                <div className="pt-4 border-t border-[#E7DED6] flex items-center justify-between text-xs font-mono text-[#6E655F]">
+                  <span>Average Time Saved: 15 mins/invoice</span>
+                  <span className="font-bold text-[#14110F]">Payback: 3 to 5 Months</span>
+                </div>
+              </div>
+
+              <div className="p-8 rounded-2xl bg-white border border-[#E7DED6] hover:border-[#F05A28]/50 transition-all shadow-sm">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="font-mono text-xs text-[#F05A28] font-bold uppercase">WORKFLOW 04</span>
+                  <span className="text-xs font-mono bg-[#FFF8F5] text-[#F05A28] px-2.5 py-1 rounded-full border border-[#F05A28]/20 font-bold">
+                    10x Inventory Sync Speed
+                  </span>
+                </div>
+                <h3 className="text-xl font-bold text-[#14110F] mb-3">
+                  Omnichannel Catalog &amp; Inventory Sync Agents
+                </h3>
+                <p className="text-sm text-[#46403B] leading-relaxed mb-4">
+                  Reconciles product listings, stock balances, and tiered B2B pricing matrices across Shopify Plus, Amazon Seller Central, TikTok Shop, and wholesale distributor portals, preventing overselling and manual spreadsheet updates.
+                </p>
+                <div className="pt-4 border-t border-[#E7DED6] flex items-center justify-between text-xs font-mono text-[#6E655F]">
+                  <span>Error Reduction: 99.4%</span>
+                  <span className="font-bold text-[#14110F]">Payback: 2 to 4 Months</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* COMPARISON MATRIX: CUSTOM AI VS GENERIC SAAS BOTS VS OFFSHORING */}
+        <section className="py-20 bg-white border-b border-[#E7DED6]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <div className="font-mono text-xs text-[#F05A28] font-bold uppercase tracking-wider mb-2">
+                // FINANCIAL MODEL COMPARISON
+              </div>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-4">
+                FactoryJet Custom AI vs. Generic SaaS Bots vs. Human Staff
+              </h2>
+              <p className="text-base sm:text-lg text-[#46403B]">
+                Why building owned agentic infrastructure yields superior unit economics over per-seat software licensing taxes.
+              </p>
+            </div>
+
+            <div className="overflow-x-auto rounded-2xl border border-[#E7DED6] bg-white shadow-sm">
+              <table className="w-full text-left text-sm">
                 <thead>
-                  <tr>
-                    <th>Capability</th>
-                    <th>FactoryJet Custom AI Agent</th>
-                    <th>Generic SaaS Support Bot</th>
-                    <th>Offshore Support Outsourcing</th>
+                  <tr className="border-b border-[#E7DED6] bg-[#FFF8F5]">
+                    <th className="p-4 sm:p-6 font-bold text-[#14110F]">Capability / Metric</th>
+                    <th className="p-4 sm:p-6 font-bold text-[#F05A28] bg-[#FFF8F5]">
+                      FactoryJet Custom AI Agent
+                    </th>
+                    <th className="p-4 sm:p-6 font-bold text-[#6E655F]">
+                      Generic SaaS Support Bot
+                    </th>
+                    <th className="p-4 sm:p-6 font-bold text-[#6E655F]">
+                      Offshore Call Center BPO
+                    </th>
                   </tr>
                 </thead>
-                <tbody>
-                  <tr className="tr-me">
-                    <td className="font-bold">Code &amp; IP Ownership</td>
-                    <td className="font-semibold text-[#F05A28]">100% Client Owned (Your Cloud)</td>
-                    <td>Proprietary Vendor Lock-in</td>
-                    <td>Zero Assets Built</td>
+                <tbody className="divide-y divide-[#E7DED6]">
+                  <tr>
+                    <td className="p-4 sm:p-6 font-semibold text-[#14110F]">Software &amp; IP Ownership</td>
+                    <td className="p-4 sm:p-6 font-bold text-[#F05A28] bg-[#FFF8F5]">
+                      100% Client Owned (Your Cloud)
+                    </td>
+                    <td className="p-4 sm:p-6 text-[#6E655F]">Proprietary Vendor Lock-in</td>
+                    <td className="p-4 sm:p-6 text-[#6E655F]">Zero Capital Assets Built</td>
                   </tr>
                   <tr>
-                    <td className="font-bold">Direct API Tool Execution</td>
-                    <td className="font-semibold text-[#14110F]">Shopify, NetSuite, SAP, Gorgias</td>
-                    <td>Read-only basic FAQ search</td>
-                    <td>Manual agent entry</td>
-                  </tr>
-                  <tr className="tr-me">
-                    <td className="font-bold">Token Billing Model</td>
-                    <td className="font-semibold text-[#F05A28]">Direct LLM pass-through at cost</td>
-                    <td>$0.99 per resolution markup</td>
-                    <td>$18-$35 / hour per head</td>
+                    <td className="p-4 sm:p-6 font-semibold text-[#14110F]">Pricing Structure</td>
+                    <td className="p-4 sm:p-6 font-bold text-[#F05A28] bg-[#FFF8F5]">
+                      Fixed Milestone Scope, $0 Seat Fee
+                    </td>
+                    <td className="p-4 sm:p-6 text-[#6E655F]">$60 - $150 / seat / mo + usage</td>
+                    <td className="p-4 sm:p-6 text-[#6E655F]">$2,800 - $4,500 / agent / mo</td>
                   </tr>
                   <tr>
-                    <td className="font-bold">Data Privacy &amp; VPC</td>
-                    <td className="font-semibold text-[#14110F]">Zero Data Retention, Private VPC</td>
-                    <td>Shared cloud multi-tenant</td>
-                    <td>Variable contractor NDAs</td>
+                    <td className="p-4 sm:p-6 font-semibold text-[#14110F]">Direct Tool Execution</td>
+                    <td className="p-4 sm:p-6 font-bold text-[#F05A28] bg-[#FFF8F5]">
+                      Native Read/Write APIs (Shopify, ERP, CRM)
+                    </td>
+                    <td className="p-4 sm:p-6 text-[#6E655F]">Read-only FAQ retrieval</td>
+                    <td className="p-4 sm:p-6 text-[#6E655F]">Manual Human Data Entry</td>
                   </tr>
-                  <tr className="tr-me">
-                    <td className="font-bold">Autonomous Resolution Rate</td>
-                    <td className="font-semibold text-[#F05A28]">65% - 85% Verified</td>
-                    <td>15% - 30% Deflection</td>
-                    <td>100% Manual Human</td>
+                  <tr>
+                    <td className="p-4 sm:p-6 font-semibold text-[#14110F]">Token / Compute Cost</td>
+                    <td className="p-4 sm:p-6 font-bold text-[#F05A28] bg-[#FFF8F5]">
+                      Wholesale At-Cost (~$0.04 / ticket)
+                    </td>
+                    <td className="p-4 sm:p-6 text-[#6E655F]">$0.99 per resolution surcharge</td>
+                    <td className="p-4 sm:p-6 text-[#6E655F]">$18 - $35 / labor hour</td>
+                  </tr>
+                  <tr>
+                    <td className="p-4 sm:p-6 font-semibold text-[#14110F]">Data Privacy &amp; VPC</td>
+                    <td className="p-4 sm:p-6 font-bold text-[#F05A28] bg-[#FFF8F5]">
+                      Zero Data Retention, Private VPC
+                    </td>
+                    <td className="p-4 sm:p-6 text-[#6E655F]">Multi-tenant shared cloud</td>
+                    <td className="p-4 sm:p-6 text-[#6E655F]">Human Agent Turnover Risk</td>
                   </tr>
                 </tbody>
               </table>
@@ -407,41 +562,170 @@ export default function AiAgentRoiCalculatorPage() {
           </div>
         </section>
 
-        {/* FAQS SECTION */}
+        {/* TEAM & FOUNDER LEADERSHIP SECTION */}
+        <section className="py-20 bg-[#FAFAF7] border-b border-[#E7DED6]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+              <div className="lg:col-span-5">
+                <div className="relative rounded-2xl border border-[#E7DED6] bg-white p-4 shadow-md max-w-md mx-auto">
+                  <div className="relative rounded-xl overflow-hidden aspect-square">
+                    <Image
+                      src="/bhavesh_image.webp"
+                      alt="Bhavesh Barot, Founder &amp; CEO of FactoryJet"
+                      fill
+                      quality={95}
+                      className="object-cover"
+                      sizes="(max-width: 1024px) 100vw, 40vw"
+                    />
+                  </div>
+                  <div className="pt-4 text-center">
+                    <div className="font-bold text-lg text-[#14110F]">Bhavesh Barot</div>
+                    <div className="font-mono text-xs text-[#F05A28] font-bold">
+                      Founder &amp; CEO, FactoryJet
+                    </div>
+                    <div className="mt-3">
+                      <a
+                        href="https://www.linkedin.com/in/bhavesh-ai-gtm-expert/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-xs font-mono text-[#F05A28] hover:underline"
+                      >
+                        Connect on LinkedIn &rarr;
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="lg:col-span-7">
+                <div className="font-mono text-xs text-[#F05A28] font-bold uppercase tracking-wider mb-2">
+                  // DIRECT ARCHITECTURE LEADERSHIP
+                </div>
+                <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-6">
+                  Schedule a 30-Minute Custom ROI &amp; Feasibility Scoping Review
+                </h2>
+                <p className="text-base sm:text-lg text-[#46403B] leading-relaxed mb-6">
+                  Financial models are only as good as the underlying integration architecture. At FactoryJet, founder Bhavesh Barot personally leads every initial ROI review and feasibility scoping session. We analyze your historical ticket transcripts, inspect your CRM or ERP schemas, and validate exact deflection assumptions before proposing a fixed milestone scope.
+                </p>
+                <p className="text-base sm:text-lg text-[#46403B] leading-relaxed mb-8">
+                  You work directly with senior systems engineers who build production-grade agentic software your company owns and operates permanently.
+                </p>
+
+                <div className="flex flex-wrap items-center gap-4">
+                  <a
+                    href={CALENDLY}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-[#F05A28] text-white font-bold hover:bg-[#D8441A] transition-colors shadow-md text-sm"
+                  >
+                    Schedule Direct Discovery Call with Bhavesh
+                  </a>
+                  <ModalCTAButton
+                    label="Request Written ROI Proposal"
+                    region="us"
+                    modalVariant="ai"
+                    btnVariant="secondary-light"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* RELATED SERVICES & AGENT SPOKES */}
+        <section className="py-16 bg-white border-b border-[#E7DED6]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="font-mono text-xs text-[#F05A28] font-bold uppercase tracking-wider mb-4">
+              // EXPLORE PRODUCTION AI CAPABILITIES
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#14110F] font-heading mb-8">
+              Explore Our Core AI Agent Development Services
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <Link
+                href="/services/ai-agent-development"
+                className="p-6 rounded-xl bg-[#FAFAF7] border border-[#E7DED6] hover:border-[#F05A28] transition-colors group"
+              >
+                <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">SERVICE 01</div>
+                <h3 className="font-bold text-lg text-[#14110F] group-hover:text-[#F05A28] transition-colors mb-2">
+                  Custom AI Agent Development &rarr;
+                </h3>
+                <p className="text-sm text-[#46403B]">
+                  Autonomous operations agents wired into Zendesk, HubSpot, NetSuite, and Shopify.
+                </p>
+              </Link>
+
+              <Link
+                href="/services/ai-sdr-development"
+                className="p-6 rounded-xl bg-[#FAFAF7] border border-[#E7DED6] hover:border-[#F05A28] transition-colors group"
+              >
+                <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">SERVICE 02</div>
+                <h3 className="font-bold text-lg text-[#14110F] group-hover:text-[#F05A28] transition-colors mb-2">
+                  AI SDR Development &rarr;
+                </h3>
+                <p className="text-sm text-[#46403B]">
+                  Sub-minute inbound lead qualification, enrichment, and meeting scheduling automation.
+                </p>
+              </Link>
+
+              <Link
+                href="/services/manufacturing-ai-agents"
+                className="p-6 rounded-xl bg-[#FAFAF7] border border-[#E7DED6] hover:border-[#F05A28] transition-colors group"
+              >
+                <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">SERVICE 03</div>
+                <h3 className="font-bold text-lg text-[#14110F] group-hover:text-[#F05A28] transition-colors mb-2">
+                  Manufacturing AI Agents &rarr;
+                </h3>
+                <p className="text-sm text-[#46403B]">
+                  Autonomous shop floor scheduling, ERP synchronization, and predictive maintenance for industrial plants.
+                </p>
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* STRUCTURED FAQ SECTION */}
         <FAQ
-          eyebrow="FREQUENTLY ASKED QUESTIONS"
-          headline="Questions operations leaders ask before building agents"
+          eyebrow="// FREQUENTLY ASKED QUESTIONS"
+          headline="Questions Operations Leaders Ask Before Building Agents"
           lead="Everything operations leaders need to know about AI agent pricing, financial modeling, and development timelines."
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
+          bgClassName="bg-[#FAFAF7]"
         />
 
-        {/* FINAL CTA */}
-        <section className="pp-section">
-          <div className="pp-container">
-            <div className="pp-card p-8 md:p-12 bg-[#FFF8F5] border border-[#F05A28]/20 text-center max-w-4xl mx-auto">
-              <p className="pp-eyebrow">// READY TO MODEL YOUR WORKFLOW?</p>
-              <h2 className="text-2xl md:text-4xl font-extrabold text-[#14110F] mb-4">
-                Schedule a 30-Minute Custom ROI &amp; Feasibility Review
-              </h2>
-              <p className="text-base text-[#46403B] max-w-2xl mx-auto mb-8">
-                Speak directly with founder Bhavesh Barot. We will review your current ticketing volume, help desk software, and provide a fixed-price integration roadmap with projected payback milestones.
-              </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a
-                  href={CALENDLY}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 rounded-lg bg-[#F05A28] text-white font-semibold text-sm hover:bg-[#D8441A] transition-colors shadow-sm"
-                >
-                  Book Strategy Call via Calendly &rarr;
-                </a>
-                <ModalCTAButton
-                  label="Request Written Proposal"
-                  region="us"
-                  btnVariant="secondary-light"
-                />
-              </div>
+        {/* FINAL HIGH-CONVERTING CTA */}
+        <section className="py-20 bg-[#FFF8F5] border-t border-[#E7DED6]">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-[#F05A28]/30 mb-6">
+              <span className="font-mono text-xs text-[#F05A28] font-bold tracking-wide">
+                // 100% OWNED &bull; ZERO SAAS TAXES &bull; FAST PAYBACK
+              </span>
+            </div>
+
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#14110F] font-heading mb-6">
+              Ready to Model Your Operations with Custom AI?
+            </h2>
+
+            <p className="text-lg text-[#46403B] max-w-2xl mx-auto mb-10 leading-relaxed">
+              Book a 30-minute architecture review with founder Bhavesh Barot. We will analyze your monthly ticket volume, inspect your API endpoints, and deliver a fixed-scope roadmap with projected payback milestones.
+            </p>
+
+            <div className="flex flex-wrap justify-center items-center gap-4">
+              <a
+                href={CALENDLY}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-[#F05A28] text-white font-bold hover:bg-[#D8441A] transition-colors shadow-lg text-base"
+              >
+                Book 30-Min Scoping Call
+              </a>
+              <ModalCTAButton
+                label="Request Custom ROI Proposal"
+                region="us"
+                modalVariant="ai"
+                btnVariant="secondary-light"
+              />
             </div>
           </div>
         </section>
