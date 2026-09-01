@@ -225,6 +225,8 @@ const US_ROUTES: { path: string; source: string }[] = [
   { path: '/services/contractor-ai-receptionist',           source: 'src/app/services/contractor-ai-receptionist/page.tsx' },
   { path: '/services/manufacturing-ai-agents',              source: 'src/app/services/manufacturing-ai-agents/page.tsx' },
   { path: '/services/restaurant-ai-voice-agents',           source: 'src/app/services/restaurant-ai-voice-agents/page.tsx' },
+  { path: '/services/legal-ai-agents',                      source: 'src/app/services/legal-ai-agents/page.tsx' },
+  { path: '/services/automotive-ai-voice-agents',           source: 'src/app/services/automotive-ai-voice-agents/page.tsx' },
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {

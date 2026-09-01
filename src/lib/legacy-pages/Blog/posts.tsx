@@ -104,6 +104,7 @@ import { post as googleAdsCostSmallBusiness2026Post } from './posts/google-ads-c
 import { post as websiteRunningCostPerMonth2026Post } from './posts/website-running-cost-per-month-2026';
 import { post as amazonSellerFees100DollarSale2026Post } from './posts/amazon-seller-fees-100-dollar-sale-2026';
 import { post as theTrueCostOfShopifyPlus2026Post } from './posts/the-true-cost-of-shopify-plus-2026';
+import { post as aiVoiceAgentsVsHumanAnsweringServicesCostComparison2026Post } from './posts/ai-voice-agents-vs-human-answering-services-cost-comparison-2026';
 import { post as howMuchDoesAnAiMedicalReceptionistCost2026Post } from './posts/how-much-does-an-ai-medical-receptionist-cost-2026';
 import { post as aiAgentArchitectureManufacturingRfqErpSync2026Post } from './posts/ai-agent-architecture-manufacturing-rfq-erp-sync-2026';
 import { post as magentoToShopifyPlusMigrationChecklist2026Post } from './posts/magento-to-shopify-plus-migration-checklist-2026';
@@ -111,6 +112,7 @@ import { post as multiAgentWorkflowsLanggraphN8nEnterpriseErp2026Post } from './
 import { post as tiktokShopAmazonShopifyPlusMultiChannelInventorySync2026Post } from './posts/tiktok-shop-amazon-shopify-plus-multi-channel-inventory-sync-2026';
 
 export const POSTS: BlogPost[] = [
+  aiVoiceAgentsVsHumanAnsweringServicesCostComparison2026Post,
   aiAgentArchitectureManufacturingRfqErpSync2026Post,
   howMuchDoesAnAiMedicalReceptionistCost2026Post,
   magentoToShopifyPlusMigrationChecklist2026Post,
