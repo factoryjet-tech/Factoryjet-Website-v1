@@ -810,7 +810,7 @@ export default function HealthcareAiAgentsPage() {
                 The Healthcare AI Telephony &amp; EHR Integration Stack
               </h2>
               <p className="text-lg text-[#46403B]">
-                How we achieve sub-500ms voice responsiveness, zero-retention HIPAA security, and seamless bi-directional database synchronization.
+                How we achieve sub-500ms voice responsiveness, zero-retention HIPAA security, and reliable bi-directional database synchronization.
               </p>
             </div>
 
@@ -835,7 +835,7 @@ export default function HealthcareAiAgentsPage() {
                 <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">03 // DETERMINISTIC REASONING &amp; STATE MACHINE</div>
                 <h3 className="text-lg font-bold text-[#14110F] mb-2">LangGraph Cyclical Orchestration &amp; Guardrails</h3>
                 <p className="text-sm text-[#46403B] leading-relaxed">
-                  We never connect raw generative LLMs directly to telephone audio without deterministic guardrails. Our conversational state machine uses LangGraph cyclical graphs to enforce strict clinical boundaries. The agent executes defined clinical protocols, collects required patient demographics systematically, and cannot invent unauthorized medical advice.
+                  We never connect raw generative LLMs directly to telephone audio without deterministic guardrails. Our conversational state machine uses LangGraph cyclical graphs to enforce strict clinical boundaries. The agent executes defined clinical protocols, collects required patient demographics systematically, handles patient interruptions gracefully, and cannot invent unauthorized medical advice or drug dosages.
                 </p>
               </div>
 
@@ -883,7 +883,7 @@ export default function HealthcareAiAgentsPage() {
                 <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">09 // BILINGUAL SPANISH DETECTION</div>
                 <h3 className="text-lg font-bold text-[#14110F] mb-2">Sub-3-Second Language Switching &amp; English Note Logging</h3>
                 <p className="text-sm text-[#46403B] leading-relaxed">
-                  In diverse US metropolitan markets, bilingual capability is essential. Our voice agent identifies whether a patient is speaking English or Spanish within three words and switches fluency seamlessly. It conducts the entire scheduling conversation in natural Spanish while writing standardized English clinical notes inside the EHR.
+                  In diverse US metropolitan markets, bilingual capability is essential. Our voice agent identifies whether a patient is speaking English or Spanish within three words and switches fluency instantly. It conducts the entire scheduling conversation in natural Spanish while writing standardized English clinical notes inside the EHR.
                 </p>
               </div>
 

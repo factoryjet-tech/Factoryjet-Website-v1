@@ -498,7 +498,7 @@ export default function ContractorAiReceptionistPage() {
                 Engineered for High-Volume Residential and Commercial Contractors
               </h2>
               <p className="text-lg text-[#46403B]">
-                Capture every profitable job, qualify homeowner budgets, and dispatch crews seamlessly while your hands are on the tools.
+                Capture every profitable job, qualify homeowner budgets, and dispatch crews automatically while your hands are on the tools.
               </p>
             </div>
 
@@ -853,7 +853,7 @@ export default function ContractorAiReceptionistPage() {
                 <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">01 // TELEPHONY INGRESS &amp; OVERFLOW ROUTING</div>
                 <h3 className="text-lg font-bold text-[#14110F] mb-2">Dedicated SIP Trunking &amp; Smart Hunt Groups</h3>
                 <p className="text-sm text-[#46403B] leading-relaxed">
-                  We configure carrier-grade SIP trunks connecting seamlessly with your existing business numbers. The AI can act as your 24/7 primary receptionist, handle simultaneous rollover calls during morning peak bursts, or take over after 5 PM and on weekends with zero dropped connections.
+                  We configure carrier-grade SIP trunks connecting directly with your existing business numbers. The AI can act as your 24/7 primary receptionist, handle simultaneous rollover calls during morning peak bursts, or take over after 5 PM and on weekends with zero dropped connections.
                 </p>
               </div>
 

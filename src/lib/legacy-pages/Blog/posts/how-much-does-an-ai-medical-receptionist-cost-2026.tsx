@@ -242,7 +242,7 @@ export const post: BlogPost = {
         </li>
       </ol>
 
-      <h2>Conclusion: Transforming Fixed Overhead into Revenue Growth</h2>
+      <h2>Conclusion: Converting Fixed Overhead into Practice Revenue Growth</h2>
       <p>
         In 2026, an AI medical receptionist is no longer an experimental luxury; it is a foundational competitive advantage for American healthcare and dental practices. By capturing 100% of inbound patient phone inquiries, eliminating hold times, and scheduling appointments directly inside your EHR 24 hours a day, practices recover tens of thousands of dollars in lost patient revenue while liberating human clinical coordinators to deliver exceptional in-person patient care.
       </p>
