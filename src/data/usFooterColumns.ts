@@ -72,6 +72,8 @@ export const US_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
     heading: 'AI Agents & Automation',
     links: [
       { label: 'Custom AI Agent Development', href: '/services/ai-agent-development' },
+      { label: 'Manufacturing AI Agents',     href: '/services/manufacturing-ai-agents' },
+      { label: 'Restaurant AI Voice Agents',  href: '/services/restaurant-ai-voice-agents' },
       { label: 'Healthcare AI Agents',        href: '/services/healthcare-ai-agents' },
       { label: 'Contractor AI Receptionist',   href: '/services/contractor-ai-receptionist' },
       { label: 'AI Customer Support Agents',  href: '/services/ai-customer-support-agents' },

@@ -223,6 +223,8 @@ const US_ROUTES: { path: string; source: string }[] = [
   { path: '/comparisons/shopify-plus-vs-custom-headless-nextjs', source: 'src/app/comparisons/shopify-plus-vs-custom-headless-nextjs/page.tsx' },
   { path: '/services/healthcare-ai-agents',                 source: 'src/app/services/healthcare-ai-agents/page.tsx' },
   { path: '/services/contractor-ai-receptionist',           source: 'src/app/services/contractor-ai-receptionist/page.tsx' },
+  { path: '/services/manufacturing-ai-agents',              source: 'src/app/services/manufacturing-ai-agents/page.tsx' },
+  { path: '/services/restaurant-ai-voice-agents',           source: 'src/app/services/restaurant-ai-voice-agents/page.tsx' },
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {
