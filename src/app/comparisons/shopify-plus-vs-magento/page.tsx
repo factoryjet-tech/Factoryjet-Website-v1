@@ -604,10 +604,17 @@ export default function ShopifyVsMagentoPage() {
                   </a>
                 </div>
                 <div className="founder">
-                  <div className="b">B</div>
+                  <Image
+                    src="/bhavesh_image.webp"
+                    alt="Bhavesh Barot, Founder of FactoryJet"
+                    width={46}
+                    height={46}
+                    quality={95}
+                    style={{ borderRadius: '50%', objectFit: 'cover', border: '1.5px solid var(--pp-orange)' }}
+                  />
                   <div>
                     <b>Bhavesh Barot</b>
-                    <span>Founder, FactoryJet · 10+ yrs building commerce</span>
+                    <span>Founder, FactoryJet &bull; 10+ yrs building commerce</span>
                   </div>
                 </div>
               </div>
