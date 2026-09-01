@@ -1,0 +1,1040 @@
+[
+ {
+  "market": "United Kingdom",
+  "loc": 2826,
+  "keyword": "ai agency uk",
+  "volume": 90,
+  "cpc": 14.96,
+  "aio": true,
+  "top10": [
+   "www.ronins.co.uk",
+   "mqlflow.com",
+   "digitalagencynetwork.com",
+   "www.agencyaiuk.com",
+   "www.elevateai.co.uk",
+   "www.smartwebagency.co.uk",
+   "www.pushgroup.co.uk",
+   "www.opscaling.co.uk",
+   "www.found.co.uk",
+   "www.vayro.co.uk"
+  ],
+  "dir_count": 0,
+  "fj_pos": null,
+  "paa": [],
+  "err": null
+ },
+ {
+  "market": "United Kingdom",
+  "loc": 2826,
+  "keyword": "ai automation agency uk",
+  "volume": 210,
+  "cpc": 12.07,
+  "aio": false,
+  "top10": [
+   "www.ronins.co.uk",
+   "www.opscaling.co.uk",
+   "www.elevateai.co.uk",
+   "mqlflow.com",
+   "www.vayro.co.uk",
+   "aiautomationagencylondon.co.uk",
+   "auctaai.co.uk",
+   "www.moloagency.co.uk",
+   "blog.antekautomation.com",
+   "lotusbrainsstudio.com"
+  ],
+  "dir_count": 0,
+  "fj_pos": null,
+  "paa": [
+   "What is the best AI agent for automation?",
+   "Which AI company is in the UK?",
+   "What AI jobs are in demand in the UK?",
+   "Can you provide me with a website for an AI automation agency?"
+  ],
+  "err": null
+ },
+ {
+  "market": "United Kingdom",
+  "loc": 2826,
+  "keyword": "ai seo agency london",
+  "volume": 70,
+  "cpc": 0,
+  "aio": true,
+  "top10": [
+   "www.found.co.uk",
+   "weareyellowball.com",
+   "sinedigital.com",
+   "roardigital.co.uk",
+   "www.wearetenet.com",
+   "ga.agency",
+   "ink-digital.co.uk",
+   "www.munro.agency",
+   "www.carrieannsudlow.co.uk",
+   "www.carrieannsudlow.co.uk"
+  ],
+  "dir_count": 0,
+  "fj_pos": null,
+  "paa": [
+   "How much does AI SEO cost?",
+   "What is the best AI SEO agency?",
+   "How much does SEO cost in London?",
+   "What is an AI SEO agency?"
+  ],
+  "err": null
+ },
+ {
+  "market": "United Kingdom",
+  "loc": 2826,
+  "keyword": "ecommerce seo agency uk",
+  "volume": 110,
+  "cpc": 0,
+  "aio": true,
+  "top10": [
+   "www.nobraineragency.com",
+   "www.charle.co.uk",
+   "www.clickslice.co.uk",
+   "www.found.co.uk",
+   "www.creativeideaz.co.uk",
+   "ink-digital.co.uk",
+   "www.seoworks.co.uk",
+   "www.seobusiness.co.uk",
+   "www.impressiondigital.com",
+   "www.impressiondigital.com"
+  ],
+  "dir_count": 0,
+  "fj_pos": null,
+  "paa": [
+   "Which SEO agencies are the best in the UK?",
+   "How much does SEO cost in the UK?",
+   "What's the best SEO agency for e-commerce?",
+   "What is the 80/20 rule in SEO?"
+  ],
+  "err": null
+ },
+ {
+  "market": "United Kingdom",
+  "loc": 2826,
+  "keyword": "local seo services uk",
+  "volume": 170,
+  "cpc": 4.26,
+  "aio": false,
+  "top10": [
+   "www.localseoservice.uk",
+   "www.seoworks.co.uk",
+   "localiq.co.uk",
+   "agencies.semrush.com",
+   "www.phoenixwebservices.co.uk",
+   "evolynk.com",
+   "primeliondigital.co.uk",
+   "www.appearonline.co.uk",
+   "mr-marketing.co.uk",
+   "www.neometa.uk"
+  ],
+  "dir_count": 0,
+  "fj_pos": null,
+  "paa": [
+   "How much do local SEO services cost?",
+   "What is the 80/20 rule in SEO?",
+   "What are some reputable SEO services in the UK?",
+   "How to get a local SEO?"
+  ],
+  "err": null
+ },
+ {
+  "market": "United Kingdom",
+  "loc": 2826,
+  "keyword": "seo agency birmingham",
+  "volume": 1300,
+  "cpc": 17.09,
+  "aio": false,
+  "top10": [
+   "www.creativeideaz.co.uk",
+   "get-found.co.uk",
+   "opace.agency",
+   "www.nettl.com",
+   "www.damteq.co.uk",
+   "clutch.co",
+   "www.seoworks.co.uk",
+   "www.outrank.co.uk",
+   "mysticmaze.co.uk",
+   "puremarketing.uk"
+  ],
+  "dir_count": 1,
+  "fj_pos": null,
+  "paa": [],
+  "err": null
+ },
+ {
+  "market": "United Kingdom",
+  "loc": 2826,
+  "keyword": "seo agency brighton",
+  "volume": 260,
+  "cpc": 22.45,
+  "aio": false,
+  "top10": [
+   "helloseed.co.uk",
+   "www.seomg.co.uk",
+   "artemis.marketing",
+   "clutch.co",
+   "brightonseo.agency",
+   "seodons.co.uk",
+   "www.facebook.com",
+   "www.vixendigital.com",
+   "www.designrush.com",
+   "www.instagram.com"
+  ],
+  "dir_count": 1,
+  "fj_pos": null,
+  "paa": [
+   "Is an SEO agency worth it?",
+   "How much does SEO cost in the UK?",
+   "What is the 80/20 rule in SEO?",
+   "Should I hire an SEO agency or do it myself?"
+  ],
+  "err": null
+ },
+ {
+  "market": "United Kingdom",
+  "loc": 2826,
+  "keyword": "seo agency bristol",
+  "volume": 720,
+  "cpc": 19.83,
+  "aio": false,
+  "top10": [
+   "www.bristechtonic.co.uk",
+   "coolbison.co.uk",
+   "www.digitalnrg.co.uk",
+   "flex-digital.net",
+   "varn.co.uk",
+   "seodons.co.uk",
+   "clutch.co",
+   "superb.digital",
+   "promoteonline.co.uk",
+   "bamsh.co.uk"
+  ],
+  "dir_count": 1,
+  "fj_pos": null,
+  "paa": [],
+  "err": null
+ },
+ {
+  "market": "United Kingdom",
+  "loc": 2826,
+  "keyword": "seo agency cardiff",
+  "volume": 320,
+  "cpc": 36.22,
+  "aio": false,
+  "top10": [
+   "thriveagency.com",
+   "seoagencycardiff.co.uk",
+   "clutch.co",
+   "omniseo.co.uk",
+   "seodons.co.uk",
+   "www.lumenseo.co.uk",
+   "www.cardiffmedia.co.uk",
+   "www.walshandpartners.co.uk",
+   "sequenceseo.com",
+   "www.spindogs.co.uk"
+  ],
+  "dir_count": 1,
+  "fj_pos": null,
+  "paa": [],
+  "err": null
+ },
+ {
+  "market": "United Kingdom",
+  "loc": 2826,
+  "keyword": "seo agency coventry",
+  "volume": 70,
+  "cpc": 0,
+  "aio": false,
+  "top10": [
+   "headred.net",
+   "distributedigital.co.uk",
+   "www.seonuts.co.uk",
+   "onlinemarketingsurgery.co.uk",
+   "www.sherbetdonkey.co.uk",
+   "thriveagency.com",
+   "www.facebook.com",
+   "www.jdrgroup.co.uk",
+   "www.creativeideaz.co.uk",
+   "www.outrank.co.uk"
+  ],
+  "dir_count": 0,
+  "fj_pos": null,
+  "paa": [],
+  "err": null
+ },
+ {
+  "market": "United Kingdom",
+  "loc": 2826,
+  "keyword": "seo agency edinburgh",
+  "volume": 480,
+  "cpc": 45.04,
+  "aio": false,
+  "top10": [
+   "www.albaseoservices.co.uk",
+   "www.teckledigital.com",
+   "www.thelaneagency.com",
+   "uk.linkedin.com",
+   "thriveagency.com",
+   "www.designrush.com",
+   "www.outrank.co.uk",
+   "www.ambitiondigital.co.uk",
+   "clutch.co",
+   "www.jdrgroup.co.uk"
+  ],
+  "dir_count": 1,
+  "fj_pos": null,
+  "paa": [
+   "Is an SEO agency worth it?",
+   "How much does SEO cost in the UK?",
+   "What is the 80/20 rule in SEO?",
+   "Should I hire an SEO agency or do it myself?"
+  ],
+  "err": null
+ },
+ {
+  "market": "United Kingdom",
+  "loc": 2826,
+  "keyword": "seo agency glasgow",
+  "volume": 260,
+  "cpc": 8.87,
+  "aio": false,
+  "top10": [
+   "www.smarterdigitalmarketing.co.uk",
+   "clutch.co",
+   "www.a1seoglasgow.co.uk",
+   "www.boyddigital.co.uk",
+   "www.soapboxdigital.co.uk",
+   "www.outrank.co.uk",
+   "www.consultico.co.uk",
+   "contact.digital",
+   "digital-landscope.com",
+   "fizzdesigns.co.uk"
+  ],
+  "dir_count": 1,
+  "fj_pos": null,
+  "paa": [
+   "Is an SEO agency worth it?",
+   "How much does SEO cost in the UK?",
+   "What is the 80/20 rule in SEO?",
+   "Should I hire an SEO agency or do it myself?"
+  ],
+  "err": null
+ },
+ {
+  "market": "United Kingdom",
+  "loc": 2826,
+  "keyword": "seo agency leeds",
+  "volume": 480,
+  "cpc": 10.82,
+  "aio": false,
+  "top10": [
+   "www.seoworks.co.uk",
+   "connective3.com",
+   "anotherconcept.co.uk",
+   "www.designrush.com",
+   "www.wishagency.co.uk",
+   "thriveagency.com",
+   "www.ascensor.com",
+   "bobbledigital.com",
+   "salt.agency",
+   "bolser.co.uk"
+  ],
+  "dir_count": 0,
+  "fj_pos": null,
+  "paa": [],
+  "err": null
+ },
+ {
+  "market": "United Kingdom",
+  "loc": 2826,
+  "keyword": "seo agency leicester",
+  "volume": 320,
+  "cpc": 7.15,
+  "aio": true,
+  "top10": [
+   "bhavpro.com",
+   "thriveagency.com",
+   "anicca.co.uk",
+   "www.creativeideaz.co.uk",
+   "herdl.com",
+   "clutch.co",
+   "littlegreenagency.co.uk",
+   "www.outrank.co.uk",
+   "ahwebseo.co.uk",
+   "growroom.agency"
+  ],
+  "dir_count": 1,
+  "fj_pos": null,
+  "paa": [
+   "How much does SEO cost in the UK?",
+   "Should I hire an SEO agency or do it myself?",
+   "What is the 80/20 rule in SEO?",
+   "What does an SEO agency do?"
+  ],
+  "err": null
+ },
+ {
+  "market": "United Kingdom",
+  "loc": 2826,
+  "keyword": "seo agency liverpool",
+  "volume": 480,
+  "cpc": 10.03,
+  "aio": false,
+  "top10": [
+   "sixsearch.co.uk",
+   "quirkydigital.com",
+   "www.redcore.digital",
+   "www.flyhighmedia.co.uk",
+   "www.pixus.uk",
+   "clutch.co",
+   "mmcdigital.co.uk",
+   "www.epicnewmedia.co.uk",
+   "www.seoworks.co.uk",
+   "dolocal.co.uk"
+  ],
+  "dir_count": 1,
+  "fj_pos": null,
+  "paa": [
+   "Where can I find SEO services in Liverpool?",
+   "Is an SEO agency worth it?",
+   "How much does SEO cost in the UK?",
+   "What is the 80/20 rule in SEO?"
+  ],
+  "err": null
+ },
+ {
+  "market": "United Kingdom",
+  "loc": 2826,
+  "keyword": "seo agency london",
+  "volume": 3600,
+  "cpc": 15.04,
+  "aio": false,
+  "top10": [
+   "rapidseo.london",
+   "www.found.co.uk",
+   "clutch.co",
+   "www.goup.co.uk",
+   "www.clickslice.co.uk",
+   "agencies.semrush.com",
+   "www.sierrasixmedia.co.uk",
+   "www.polarisagency.com",
+   "www.seoworks.co.uk",
+   "www.wearetenet.com"
+  ],
+  "dir_count": 1,
+  "fj_pos": null,
+  "paa": [
+   "How much does SEO cost in London?",
+   "How much does an SEO agency typically cost?",
+   "What are the best SEO agencies in the UK?",
+   "Is an SEO agency worth it?"
+  ],
+  "err": null
+ },
+ {
+  "market": "United Kingdom",
+  "loc": 2826,
+  "keyword": "seo agency manchester",
+  "volume": 1000,
+  "cpc": 28.69,
+  "aio": false,
+  "top10": [
+   "madebyshape.co.uk",
+   "darkhorse.co",
+   "netsixtysix.co.uk",
+   "gorilla.marketing",
+   "tal-agency.com",
+   "clutch.co",
+   "www.jdrgroup.co.uk",
+   "agencies.semrush.com",
+   "www.epicnewmedia.co.uk",
+   "www.candidsky.com"
+  ],
+  "dir_count": 1,
+  "fj_pos": null,
+  "paa": [
+   "How much does SEO cost in the UK?",
+   "Is an SEO agency worth it?",
+   "What is the 80/20 rule in SEO?",
+   "How much should I pay for SEO services?"
+  ],
+  "err": null
+ },
+ {
+  "market": "United Kingdom",
+  "loc": 2826,
+  "keyword": "seo agency newcastle",
+  "volume": 480,
+  "cpc": 15.88,
+  "aio": false,
+  "top10": [
+   "seoagencynewcastle.com",
+   "thriveagency.com",
+   "gorilla.marketing",
+   "squidgy.co",
+   "www.outrank.co.uk",
+   "ranktix.co.uk",
+   "miramarketing.co.uk",
+   "www.jdrgroup.co.uk",
+   "clutch.co",
+   "clutch.co"
+  ],
+  "dir_count": 2,
+  "fj_pos": null,
+  "paa": [
+   "How much does SEO cost in the UK?",
+   "What is the 80/20 rule in SEO?",
+   "What does an SEO agency do?",
+   "How much does it cost to hire an SEO consultant?"
+  ],
+  "err": null
+ },
+ {
+  "market": "United Kingdom",
+  "loc": 2826,
+  "keyword": "seo agency nottingham",
+  "volume": 480,
+  "cpc": 15.94,
+  "aio": false,
+  "top10": [
+   "finsburymedia.com",
+   "www.adtrak.co.uk",
+   "www.fifteendesign.co.uk",
+   "clutch.co",
+   "tank.co.uk",
+   "www.vformation.co.uk",
+   "www.impressiondigital.com",
+   "www.outrank.co.uk",
+   "www.jdrgroup.co.uk",
+   "www.gilbert-media.co.uk"
+  ],
+  "dir_count": 1,
+  "fj_pos": null,
+  "paa": [
+   "How much does SEO cost in the UK?",
+   "Should I hire an SEO agency or do it myself?",
+   "What is the 80/20 rule in SEO?",
+   "What does an SEO agency do?"
+  ],
+  "err": null
+ },
+ {
+  "market": "United Kingdom",
+  "loc": 2826,
+  "keyword": "seo agency sheffield",
+  "volume": 320,
+  "cpc": 0,
+  "aio": false,
+  "top10": [
+   "www.calmdigital.com",
+   "fenti.co.uk",
+   "wearearise.com",
+   "wildcatdigital.co.uk",
+   "www.seoworks.co.uk",
+   "www.jdrgroup.co.uk",
+   "thriveagency.com",
+   "clutch.co",
+   "www.vividcreative.com",
+   "thriveagency.com"
+  ],
+  "dir_count": 1,
+  "fj_pos": null,
+  "paa": [
+   "How much does SEO cost in the UK?",
+   "What is the 80/20 rule in SEO?",
+   "What does an SEO agency do?",
+   "What are the best SEO agencies in the UK?"
+  ],
+  "err": null
+ },
+ {
+  "market": "United States",
+  "loc": 2840,
+  "keyword": "ai search optimization",
+  "volume": 1300,
+  "cpc": 45.41,
+  "aio": true,
+  "top10": [
+   "developers.google.com",
+   "digitalmarketinginstitute.com",
+   "www.youtube.com",
+   "www.salesforce.com",
+   "www.walkersands.com",
+   "www.rioseo.com",
+   "npdigital.com",
+   "firstpagesage.com",
+   "developers.google.com",
+   "www.squarespace.com"
+  ],
+  "dir_count": 0,
+  "fj_pos": null,
+  "paa": [
+   "How do I optimize for AI search?",
+   "What is the 30% rule in AI?",
+   "What is the best AI for search engine optimization?",
+   "What will AI SEO optimization be like in 2026?"
+  ],
+  "err": null
+ },
+ {
+  "market": "United States",
+  "loc": 2840,
+  "keyword": "ai seo agency",
+  "volume": 1300,
+  "cpc": 29.36,
+  "aio": true,
+  "top10": [
+   "www.reddit.com",
+   "thriveagency.com",
+   "www.level.agency",
+   "www.searchbloom.com",
+   "coalitiontechnologies.com",
+   "ziptie.dev",
+   "www.yesoptimist.com",
+   "www.outerboxdesign.com",
+   "percepture.com",
+   "www.youtube.com"
+  ],
+  "dir_count": 0,
+  "fj_pos": null,
+  "paa": [
+   "What is the best AI SEO agency?",
+   "What is an AI SEO agency?",
+   "How much does AI SEO cost?",
+   "Can SEO be done by AI?"
+  ],
+  "err": null
+ },
+ {
+  "market": "United States",
+  "loc": 2840,
+  "keyword": "ai seo audit",
+  "volume": 110,
+  "cpc": 30.93,
+  "aio": true,
+  "top10": [
+   "claude-seo.md",
+   "www.seoptimer.com",
+   "aioseo.com",
+   "www.semrush.com",
+   "seositecheckup.com",
+   "ahrefs.com",
+   "wordlift.io",
+   "rankmath.com",
+   "sintra.ai",
+   "www.youtube.com"
+  ],
+  "dir_count": 1,
+  "fj_pos": null,
+  "paa": [
+   "Can ChatGPT do an SEO audit?",
+   "What are the best AI SEO audit tools?",
+   "Is there an AI tool for SEO?",
+   "Can I do my own SEO audit?"
+  ],
+  "err": null
+ },
+ {
+  "market": "United States",
+  "loc": 2840,
+  "keyword": "ai seo company",
+  "volume": 590,
+  "cpc": 48.71,
+  "aio": true,
+  "top10": [
+   "www.ranked.ai",
+   "www.reddit.com",
+   "coalitiontechnologies.com",
+   "www.searchbloom.com",
+   "thriveagency.com",
+   "www.level.agency",
+   "www.spicymargarita.co",
+   "www.theadfirm.net",
+   "seo.co",
+   "www.linkedin.com"
+  ],
+  "dir_count": 0,
+  "fj_pos": null,
+  "paa": [],
+  "err": null
+ },
+ {
+  "market": "United States",
+  "loc": 2840,
+  "keyword": "ai seo services",
+  "volume": 1300,
+  "cpc": 50.62,
+  "aio": true,
+  "top10": [
+   "www.theadfirm.net",
+   "www.outerboxdesign.com",
+   "thriveagency.com",
+   "www.level.agency",
+   "www.salesforce.com",
+   "www.yesoptimist.com",
+   "coalitiontechnologies.com",
+   "seo.co",
+   "www.omnius.so",
+   "www.spicymargarita.co"
+  ],
+  "dir_count": 0,
+  "fj_pos": null,
+  "paa": [
+   "Is there an AI for SEO?",
+   "How much does AI SEO cost?",
+   "What are AI SEO services?",
+   "Can ChatGPT do SEO?"
+  ],
+  "err": null
+ },
+ {
+  "market": "United States",
+  "loc": 2840,
+  "keyword": "chatgpt seo",
+  "volume": 390,
+  "cpc": 20.33,
+  "aio": true,
+  "top10": [
+   "chatgpt.com",
+   "www.reddit.com",
+   "forgeandsmith.com",
+   "www.semrush.com",
+   "apiarydigital.com",
+   "www.reddit.com",
+   "www.wordstream.com",
+   "community.openai.com",
+   "team-gpt.com",
+   "sureoak.com"
+  ],
+  "dir_count": 0,
+  "fj_pos": null,
+  "paa": [
+   "Is SEO dead now with AI?",
+   "Which AI is best for SEO?",
+   "Can I use AI to do my SEO?",
+   "How to improve ChatGPT SEO?"
+  ],
+  "err": null
+ },
+ {
+  "market": "United States",
+  "loc": 2840,
+  "keyword": "ecommerce seo agency",
+  "volume": 1000,
+  "cpc": 125.74,
+  "aio": true,
+  "top10": [
+   "thriveagency.com",
+   "agencies.semrush.com",
+   "coalitiontechnologies.com",
+   "www.reddit.com",
+   "founderreports.com",
+   "www.polarisagency.com",
+   "firstpagesage.com",
+   "www.outerboxdesign.com",
+   "www.orbitmedia.com",
+   "www.topspot.com"
+  ],
+  "dir_count": 0,
+  "fj_pos": null,
+  "paa": [
+   "What's the best SEO agency for e-commerce?",
+   "How much does ecommerce SEO cost?",
+   "How much does an agency charge for SEO?",
+   "How much does it cost to hire someone to do SEO?"
+  ],
+  "err": null
+ },
+ {
+  "market": "United States",
+  "loc": 2840,
+  "keyword": "geo agency",
+  "volume": 590,
+  "cpc": 40.6,
+  "aio": false,
+  "top10": [
+   "geodigital.agency",
+   "thedigitalelevator.com",
+   "minuttia.com",
+   "gofishdigital.com",
+   "www.siegemedia.com",
+   "www.omnius.so",
+   "www.yesoptimist.com",
+   "www.linkedin.com",
+   "thebestgeo.com",
+   "beomniscient.com"
+  ],
+  "dir_count": 0,
+  "fj_pos": null,
+  "paa": [
+   "What is a GEO agency?",
+   "What is the best GEO agency?",
+   "What does GEO stand for?",
+   "Is GEO replacing SEO?"
+  ],
+  "err": null
+ },
+ {
+  "market": "United States",
+  "loc": 2840,
+  "keyword": "llm seo",
+  "volume": 880,
+  "cpc": 28.58,
+  "aio": true,
+  "top10": [
+   "www.reddit.com",
+   "www.marketermilk.com",
+   "llmrefs.com",
+   "www.youtube.com",
+   "neilpatel.com",
+   "www.getmorphic.com",
+   "medium.com",
+   "www.linkedin.com",
+   "www.resultfirst.com",
+   "www.flow-agency.com"
+  ],
+  "dir_count": 1,
+  "fj_pos": null,
+  "paa": [
+   "Is SEO dead now with AI?",
+   "What's the LLM equivalent of SEO?",
+   "Can SEO be done with AI?",
+   "What is AI SEO called now?"
+  ],
+  "err": null
+ },
+ {
+  "market": "United States",
+  "loc": 2840,
+  "keyword": "shopify seo agency",
+  "volume": 1300,
+  "cpc": 54.31,
+  "aio": true,
+  "top10": [
+   "www.outerboxdesign.com",
+   "www.ericschwartzman.com",
+   "clutch.co",
+   "globerunner.com",
+   "www.1digitalagency.com",
+   "www.siegemedia.com",
+   "help.shopify.com",
+   "agencies.semrush.com",
+   "www.fjsolutions.com",
+   "www.charleagency.com"
+  ],
+  "dir_count": 1,
+  "fj_pos": null,
+  "paa": [
+   "Does Shopify offer SEO services?",
+   "How much does Shopify SEO cost?",
+   "Is Shopify still worth it in 2026?",
+   "Where can I find Shopify SEO experts?"
+  ],
+  "err": null
+ },
+ {
+  "market": "Australia",
+  "loc": 2036,
+  "keyword": "seo agency adelaide",
+  "volume": 1300,
+  "cpc": 39.25,
+  "aio": false,
+  "top10": [
+   "www.loudachris.com.au",
+   "www.reddit.com",
+   "www.digitalmarketingadelaide.com.au",
+   "risedigitalmedia.com.au",
+   "studiohawk.com.au",
+   "www.goodfirms.co",
+   "adelaideseomarketing.com.au",
+   "www.markseo.com.au",
+   "www.designrush.com",
+   "sixgun.com.au"
+  ],
+  "dir_count": 0,
+  "fj_pos": null,
+  "paa": [
+   "How much does SEO typically cost in Australia?",
+   "How much should I expect to pay for SEO?",
+   "What is the 80/20 rule in SEO?",
+   "Which SEO agency in Australia is considered the best?"
+  ],
+  "err": null
+ },
+ {
+  "market": "Australia",
+  "loc": 2036,
+  "keyword": "seo agency australia",
+  "volume": 1300,
+  "cpc": 58.67,
+  "aio": false,
+  "top10": [
+   "studiohawk.com.au",
+   "clutch.co",
+   "firstpage.com.au",
+   "www.seoadvantage.com.au",
+   "zibdigital.com.au",
+   "agencies.semrush.com",
+   "www.bruceclay.com",
+   "digitalagencynetwork.com",
+   "business.localsearch.com.au",
+   "saltandfuessel.com.au"
+  ],
+  "dir_count": 1,
+  "fj_pos": null,
+  "paa": [
+   "Which SEO agency in Australia is considered the best?",
+   "How much does SEO typically cost in Australia?",
+   "How much does an SEO agency typically cost?",
+   "Is an SEO agency worth it?"
+  ],
+  "err": null
+ },
+ {
+  "market": "Australia",
+  "loc": 2036,
+  "keyword": "seo agency brisbane",
+  "volume": 1900,
+  "cpc": 25.16,
+  "aio": false,
+  "top10": [
+   "digital8.com.au",
+   "www.excitemedia.com.au",
+   "agencies.semrush.com",
+   "www.jaredbennett.com.au",
+   "www.dilate.com.au",
+   "studiohawk.com.au",
+   "sixgun.com.au",
+   "clutch.co",
+   "bambrick.com.au",
+   "www.shoutdigital.com.au"
+  ],
+  "dir_count": 1,
+  "fj_pos": null,
+  "paa": [
+   "How much does SEO cost in Brisbane?",
+   "How much should I expect to pay for SEO?",
+   "Is an SEO agency worth it?",
+   "How much does SEO cost in Australia?"
+  ],
+  "err": null
+ },
+ {
+  "market": "Australia",
+  "loc": 2036,
+  "keyword": "seo agency melbourne",
+  "volume": 1900,
+  "cpc": 33.74,
+  "aio": false,
+  "top10": [
+   "studiohawk.com.au",
+   "impressive.com.au",
+   "www.shoutdigital.com.au",
+   "agencies.semrush.com",
+   "zibdigital.com.au",
+   "saltandfuessel.com.au",
+   "digitalsurfer.com.au",
+   "aekmedia.com.au",
+   "www.sentius.com.au",
+   "clutch.co"
+  ],
+  "dir_count": 1,
+  "fj_pos": null,
+  "paa": [
+   "How much does SEO typically cost in Melbourne?",
+   "Who is the best SEO agency in Melbourne?",
+   "Is an SEO agency worth it?",
+   "How much should I expect to pay for SEO?"
+  ],
+  "err": null
+ },
+ {
+  "market": "Australia",
+  "loc": 2036,
+  "keyword": "seo agency perth",
+  "volume": 1600,
+  "cpc": 48.85,
+  "aio": false,
+  "top10": [
+   "pwd.com.au",
+   "www.dilate.com.au",
+   "prosperitymedia.com.au",
+   "digitalnomadshq.com.au",
+   "perthseostudio.com.au",
+   "marketixdigital.com.au",
+   "agencies.semrush.com",
+   "firewiredigital.com.au",
+   "distl.com.au",
+   "thriveagency.com"
+  ],
+  "dir_count": 0,
+  "fj_pos": null,
+  "paa": [
+   "How much does SEO typically cost in Perth?",
+   "Which SEO agency is the best in Perth?",
+   "How much does SEO typically cost in Australia?",
+   "Is an SEO agency worth it?"
+  ],
+  "err": null
+ },
+ {
+  "market": "Australia",
+  "loc": 2036,
+  "keyword": "seo agency sydney",
+  "volume": 1300,
+  "cpc": 65.79,
+  "aio": false,
+  "top10": [
+   "studiohawk.com.au",
+   "agencies.semrush.com",
+   "prosperitymedia.com.au",
+   "impressive.com.au",
+   "zibdigital.com.au",
+   "clutch.co",
+   "www.earnedmedia.com.au",
+   "www.sentius.com.au",
+   "clickclickmedia.com.au",
+   "agencies.semrush.com"
+  ],
+  "dir_count": 1,
+  "fj_pos": null,
+  "paa": [
+   "Who is the best SEO agency in Sydney?",
+   "How much does SEO cost in Sydney?",
+   "Is an SEO agency worth it?",
+   "What are some reputable SEO agencies in Australia?"
+  ],
+  "err": null
+ },
+ {
+  "market": "Australia",
+  "loc": 2036,
+  "keyword": "web design agency australia",
+  "volume": 90,
+  "cpc": 10.65,
+  "aio": false,
+  "top10": [
+   "www.sparkinteract.com.au",
+   "clutch.co",
+   "stonedigital.com.au",
+   "redkite.design",
+   "www.dilate.com.au",
+   "tdsaustralia.com.au",
+   "butterfly.com.au",
+   "www.simple.com.au",
+   "digitalagencynetwork.com",
+   "www.dilate.com.au"
+  ],
+  "dir_count": 1,
+  "fj_pos": null,
+  "paa": [
+   "How much does it cost to design a website in Australia?",
+   "Is Web Designer in demand in Australia?",
+   "How much do web design agencies charge?",
+   "Is web design still in demand in 2026?"
+  ],
+  "err": null
+ }
+]

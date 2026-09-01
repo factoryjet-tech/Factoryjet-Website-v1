@@ -1,0 +1,13 @@
+vertical,seed,keyword,search_volume,cpc,competition,keyword_difficulty,intent
+healthcare_medical,ai agent for healthcare,ai agent for healthcare,170,39.04,LOW,10,commercial
+healthcare_medical,ai medical receptionist,ai medical receptionist,140,203.7,MEDIUM,0,informational
+healthcare_medical,ai agent for healthcare,ai voice agent for healthcare,110,55.24,LOW,0,commercial
+healthcare_medical,ai medical receptionist,ai receptionist for medical office,90,100.89,MEDIUM,0,informational
+manufacturing_industrial,ai agents for manufacturing,ai agents for manufacturing,70,27.78,MEDIUM,0,commercial
+wholesale_distribution,ai agent for supply chain,ai agent for supply chain,40,9.8,MEDIUM,14,commercial
+healthcare_medical,ai medical receptionist,medical ai receptionist,30,38.95,HIGH,6,transactional
+construction_trades,ai for general contractors,ai for general contractors,30,5.33,MEDIUM,9,commercial
+healthcare_medical,ai medical receptionist,medical receptionist ai,10,181.55,HIGH,6,navigational
+healthcare_medical,ai medical receptionist,best ai medical receptionist,10,142.16,HIGH,0,commercial
+healthcare_medical,ai medical receptionist,ai medical receptionist australia,10,0.0,UNKNOWN,0,navigational
+agriculture_farming,ai in agriculture automation,ai automation in agriculture,10,0.0,UNKNOWN,0,commercial

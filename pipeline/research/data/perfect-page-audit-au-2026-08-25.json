@@ -1,0 +1,3298 @@
+{
+  "generated": "2026-08-25T16:50:04.737Z",
+  "rubric": "PERFECT-PAGE-RUBRIC v1.0",
+  "region": "au",
+  "inboundScope": "partial",
+  "benchmark": {
+    "words": 2813,
+    "h2": 11,
+    "liAll": 110
+  },
+  "profiles": {
+    "service": {
+      "words": [
+        2500,
+        5000
+      ],
+      "h2": 10,
+      "liMain": 30,
+      "faq": 20,
+      "compares": true
+    },
+    "city": {
+      "words": [
+        2000,
+        4500
+      ],
+      "h2": 10,
+      "liMain": 25,
+      "faq": 20,
+      "compares": false
+    },
+    "commercial": {
+      "words": [
+        2500,
+        5000
+      ],
+      "h2": 10,
+      "liMain": 30,
+      "faq": 15,
+      "compares": true
+    },
+    "blog": {
+      "words": [
+        1800,
+        5000
+      ],
+      "h2": 8,
+      "liMain": 20,
+      "faq": 8,
+      "compares": false
+    },
+    "case-study": {
+      "words": [
+        900,
+        2500
+      ],
+      "h2": 5,
+      "liMain": 10,
+      "faq": 0,
+      "compares": false
+    },
+    "hub": {
+      "words": [
+        0,
+        null
+      ],
+      "h2": 3,
+      "liMain": 0,
+      "faq": 0,
+      "compares": false
+    }
+  },
+  "pages": [
+    {
+      "url": "https://factoryjet.com/au",
+      "path": "/au",
+      "profile": "commercial",
+      "words": 2418,
+      "contentWords": 2292,
+      "h1": 1,
+      "h2": 9,
+      "h3": 5,
+      "headingSkips": 0,
+      "liAll": 23,
+      "liMain": 0,
+      "tables": 1,
+      "landmarks": [
+        "<main",
+        "<header",
+        "<nav",
+        "<section",
+        "<footer"
+      ],
+      "canonical": "https://factoryjet.com/au",
+      "title": "Web Design Agency Australia | Websites Live in 7 Days | FactoryJet",
+      "titleLen": 66,
+      "desc": "FactoryJet is a web design agency for Australian businesses, website development, ecommerce web design, Shopify stores and SEO services. Built by senior engineers, live in 7 days. Sydney, Melbourne, Brisbane, Perth, Adelaide & Gold Coast.",
+      "descLen": 238,
+      "robots": "index, follow",
+      "noindex": false,
+      "hreflangCount": 6,
+      "hasXDefault": true,
+      "imgTotal": 3,
+      "imgsWithAltAttr": 3,
+      "imgsWithAlt": 2,
+      "imgsWithDims": 3,
+      "ldBlocks": 8,
+      "ldParseError": false,
+      "schemaTypes": [
+        "Organization",
+        "Person",
+        "PostalAddress",
+        "Country",
+        "WebSite",
+        "WebPage",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "BreadcrumbList",
+        "ListItem",
+        "HowTo",
+        "HowToStep",
+        "SpeakableSpecification"
+      ],
+      "dateModified": "2026-08-04",
+      "faqSchemaQs": 22,
+      "faqHeadingVisible": true,
+      "faqSectionId": true,
+      "visibleBreadcrumb": false,
+      "internalLinkCount": 7,
+      "externalHosts": [],
+      "externalCitations": 0,
+      "answerFirst": {
+        "words": 39,
+        "text": "FactoryJet is the web design agency Australian businesses call when they&#x27;re done waiting, website development, e-commerce, Shopify stores and SEO, delivered by  senior engineers, fixed scope, one founder you can actually call.  No agency runaround, no six-week discovery phase."
+      },
+      "midCta": true,
+      "ctaCount": 1,
+      "ctaAnywhere": 7,
+      "systemsDistinct": 3,
+      "systemsTotal": 14,
+      "capsDistinct": 3,
+      "capsTotal": 7,
+      "capabilityDensity": 8.7,
+      "topTerms": [
+        "afterpay",
+        "shopify",
+        "next.js",
+        "customer portal",
+        "core web vitals",
+        "lighthouse"
+      ],
+      "emDashes": 0,
+      "slopHits": [],
+      "fkGrade": 8.3,
+      "priceHits": [],
+      "videoOrEmbed": false,
+      "downloadable": false,
+      "inlineSvgFigures": 55,
+      "inbound": 5,
+      "deterministicScore": 76,
+      "earned": 108,
+      "possible": 143,
+      "byCat": {
+        "technical": {
+          "earned": 37,
+          "possible": 41,
+          "pct": 90
+        },
+        "schema": {
+          "earned": 21,
+          "possible": 21,
+          "pct": 100
+        },
+        "architecture": {
+          "earned": 13,
+          "possible": 19,
+          "pct": 68
+        },
+        "depth": {
+          "earned": 7,
+          "possible": 10,
+          "pct": 70
+        },
+        "extractability": {
+          "earned": 9,
+          "possible": 18,
+          "pct": 50
+        },
+        "trust": {
+          "earned": 10,
+          "possible": 14,
+          "pct": 71
+        },
+        "entity": {
+          "earned": 0,
+          "possible": 7,
+          "pct": 0
+        },
+        "writing": {
+          "earned": 9,
+          "possible": 9,
+          "pct": 100
+        },
+        "media": {
+          "earned": 2,
+          "possible": 4,
+          "pct": 50
+        }
+      },
+      "checks": {
+        "T1": {
+          "cat": "technical",
+          "label": "Exactly one <h1>",
+          "weight": 5,
+          "status": "pass",
+          "earned": 5
+        },
+        "T2": {
+          "cat": "technical",
+          "label": "No skipped heading levels",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "T3": {
+          "cat": "technical",
+          "label": "Semantic landmarks",
+          "weight": 3,
+          "status": "pass",
+          "earned": 3
+        },
+        "T4": {
+          "cat": "technical",
+          "label": "Canonical self-referential",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "T5": {
+          "cat": "technical",
+          "label": "hreflang incl. x-default",
+          "weight": 3,
+          "status": "pass",
+          "earned": 3
+        },
+        "T6": {
+          "cat": "technical",
+          "label": "Indexable",
+          "weight": 5,
+          "status": "pass",
+          "earned": 5
+        },
+        "T7": {
+          "cat": "technical",
+          "label": "In sitemap",
+          "weight": 3,
+          "status": "pass",
+          "earned": 3
+        },
+        "T8": {
+          "cat": "technical",
+          "label": "Title 15-60 chars",
+          "weight": 2,
+          "status": "fail",
+          "earned": 0
+        },
+        "T9": {
+          "cat": "technical",
+          "label": "Meta description 70-160",
+          "weight": 2,
+          "status": "fail",
+          "earned": 0
+        },
+        "T10": {
+          "cat": "technical",
+          "label": "Images have alt attribute",
+          "weight": 3,
+          "status": "pass",
+          "earned": 3
+        },
+        "T11": {
+          "cat": "technical",
+          "label": "Images have width/height",
+          "weight": 2,
+          "status": "pass",
+          "earned": 2
+        },
+        "T12": {
+          "cat": "technical",
+          "label": "Server-rendered text",
+          "weight": 5,
+          "status": "pass",
+          "earned": 5
+        },
+        "S1": {
+          "cat": "schema",
+          "label": "JSON-LD present and parses",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "S2": {
+          "cat": "schema",
+          "label": "Organization",
+          "weight": 2,
+          "status": "pass",
+          "earned": 2
+        },
+        "S3": {
+          "cat": "schema",
+          "label": "BreadcrumbList",
+          "weight": 3,
+          "status": "pass",
+          "earned": 3
+        },
+        "S4": {
+          "cat": "schema",
+          "label": "WebPage or Service",
+          "weight": 2,
+          "status": "pass",
+          "earned": 2
+        },
+        "S5": {
+          "cat": "schema",
+          "label": "Person (named author)",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "S6": {
+          "cat": "schema",
+          "label": "FAQPage where FAQ visible",
+          "weight": 2,
+          "status": "pass",
+          "earned": 2
+        },
+        "S7": {
+          "cat": "schema",
+          "label": "dateModified present and sane",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "S9": {
+          "cat": "schema",
+          "label": "Schema matches visible content",
+          "weight": 5,
+          "status": "pending"
+        },
+        "A1": {
+          "cat": "architecture",
+          "label": "Answer-first block present",
+          "weight": 5,
+          "status": "pass",
+          "earned": 5
+        },
+        "A2": {
+          "cat": "architecture",
+          "label": "H2 count meets profile",
+          "weight": 4,
+          "status": "fail",
+          "earned": 0
+        },
+        "A3": {
+          "cat": "architecture",
+          "label": "Sections read as answerable questions",
+          "weight": 3,
+          "status": "pending"
+        },
+        "A4": {
+          "cat": "architecture",
+          "label": "5+ in-content internal links",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "A5": {
+          "cat": "architecture",
+          "label": "2+ inbound internal links",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "A6": {
+          "cat": "architecture",
+          "label": "Visible breadcrumb",
+          "weight": 2,
+          "status": "fail",
+          "earned": 0
+        },
+        "D1": {
+          "cat": "depth",
+          "label": "Word count in profile band",
+          "weight": 6,
+          "status": "partial",
+          "earned": 3
+        },
+        "D2": {
+          "cat": "depth",
+          "label": "Under the 5,000-word ceiling",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "X1": {
+          "cat": "extractability",
+          "label": "<li> in <main> meets profile",
+          "weight": 7,
+          "status": "fail",
+          "earned": 0
+        },
+        "X2": {
+          "cat": "extractability",
+          "label": "Whole-page <li> vs 110 benchmark",
+          "weight": 2,
+          "status": "fail",
+          "earned": 0
+        },
+        "X3": {
+          "cat": "extractability",
+          "label": "Visible FAQ section",
+          "weight": 5,
+          "status": "pass",
+          "earned": 5
+        },
+        "X4": {
+          "cat": "extractability",
+          "label": "FAQ count meets profile min",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "X5": {
+          "cat": "extractability",
+          "label": "FAQ answers self-contained",
+          "weight": 3,
+          "status": "pending"
+        },
+        "X6": {
+          "cat": "extractability",
+          "label": "FAQ phrased like buyers ask",
+          "weight": 2,
+          "status": "pending"
+        },
+        "X7": {
+          "cat": "extractability",
+          "label": "Definition sentences present",
+          "weight": 2,
+          "status": "pending"
+        },
+        "E1": {
+          "cat": "trust",
+          "label": "Named author visible on page",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "E2": {
+          "cat": "trust",
+          "label": "2-3 external citations",
+          "weight": 4,
+          "status": "fail",
+          "earned": 0
+        },
+        "E3": {
+          "cat": "trust",
+          "label": "Trust signals real, not decorative",
+          "weight": 5,
+          "status": "pending"
+        },
+        "E4": {
+          "cat": "trust",
+          "label": "No invented stats, clients, awards",
+          "weight": 6,
+          "status": "pending"
+        },
+        "E5": {
+          "cat": "trust",
+          "label": "Clear contact path",
+          "weight": 2,
+          "status": "pass",
+          "earned": 2
+        },
+        "E6": {
+          "cat": "trust",
+          "label": "Mid-page CTA",
+          "weight": 3,
+          "status": "pass",
+          "earned": 3
+        },
+        "E7": {
+          "cat": "trust",
+          "label": "sameAs on Organization",
+          "weight": 1,
+          "status": "pass",
+          "earned": 1
+        },
+        "N1": {
+          "cat": "entity",
+          "label": "Capability density 25+/1k",
+          "weight": 4,
+          "status": "fail",
+          "earned": 0
+        },
+        "N2": {
+          "cat": "entity",
+          "label": "Real third-party system names",
+          "weight": 3,
+          "status": "fail",
+          "earned": 0
+        },
+        "N3": {
+          "cat": "entity",
+          "label": "Entity coverage matches topic",
+          "weight": 3,
+          "status": "pending"
+        },
+        "W1": {
+          "cat": "writing",
+          "label": "Zero em dashes",
+          "weight": 3,
+          "status": "pass",
+          "earned": 3
+        },
+        "W2": {
+          "cat": "writing",
+          "label": "No AI-slop vocabulary",
+          "weight": 3,
+          "status": "pass",
+          "earned": 3
+        },
+        "W3": {
+          "cat": "writing",
+          "label": "Plain register (FK grade <= 10)",
+          "weight": 3,
+          "status": "pass",
+          "earned": 3
+        },
+        "W4": {
+          "cat": "writing",
+          "label": "Not commodity copy",
+          "weight": 4,
+          "status": "pending"
+        },
+        "W5": {
+          "cat": "writing",
+          "label": "Price figures unambiguously framed",
+          "weight": 2,
+          "status": "pending"
+        },
+        "M1": {
+          "cat": "media",
+          "label": "Comparison table where topic compares",
+          "weight": 2,
+          "status": "pass",
+          "earned": 2
+        },
+        "M2": {
+          "cat": "media",
+          "label": "3+ content images with alt",
+          "weight": 2,
+          "status": "fail",
+          "earned": 0
+        }
+      },
+      "pendingAi": [
+        "S9",
+        "A3",
+        "X5",
+        "X6",
+        "X7",
+        "E3",
+        "E4",
+        "N3",
+        "W4",
+        "W5"
+      ],
+      "hardFailRisk": [],
+      "evidenceForJudge": {
+        "answerFirst": {
+          "words": 39,
+          "text": "FactoryJet is the web design agency Australian businesses call when they&#x27;re done waiting, website development, e-commerce, Shopify stores and SEO, delivered by  senior engineers, fixed scope, one founder you can actually call.  No agency runaround, no six-week discovery phase."
+        },
+        "topTerms": [
+          "afterpay",
+          "shopify",
+          "next.js",
+          "customer portal",
+          "core web vitals",
+          "lighthouse"
+        ],
+        "slopHits": [],
+        "priceHits": [],
+        "externalHosts": [],
+        "openingText": "        Serving Sydney → Gold Coast   Your website,  built properly.  Live in   7 days.     FactoryJet is the web design agency Australian businesses call when they&#x27;re done waiting, website development, e-commerce, Shopify stores and SEO, delivered by  senior engineers, fixed scope, one founder you can actually call.  No agency runaround, no six-week discovery phase.        Get my free quote        Founder replies within 24 hours.  No spam, no obligation.     Talk to the Founder     500+ businesses shipped   12+ years engineering   Month-to-month, no lock-in                SYD  MEL  BNE  PER  ADL  OOL        7 days  brief to launch         4.9/5  average Google review rating         100"
+      }
+    },
+    {
+      "url": "https://factoryjet.com/au/seo",
+      "path": "/au/seo",
+      "profile": "service",
+      "words": 4293,
+      "contentWords": 4167,
+      "h1": 1,
+      "h2": 9,
+      "h3": 11,
+      "headingSkips": 0,
+      "liAll": 34,
+      "liMain": 8,
+      "tables": 3,
+      "landmarks": [
+        "<main",
+        "<header",
+        "<nav",
+        "<section",
+        "<footer"
+      ],
+      "canonical": "https://factoryjet.com/au/seo",
+      "title": "SEO Services Australia | We Measure Before We Sell | FactoryJet",
+      "titleLen": 63,
+      "desc": "SEO services for Australian businesses, based on measured demand rather than opinion. 297 keywords and 103 search results analysed in August 2026. Free site review.",
+      "descLen": 164,
+      "robots": "index, follow",
+      "noindex": false,
+      "hreflangCount": 2,
+      "hasXDefault": true,
+      "imgTotal": 0,
+      "imgsWithAltAttr": 0,
+      "imgsWithAlt": 0,
+      "imgsWithDims": 0,
+      "ldBlocks": 3,
+      "ldParseError": false,
+      "schemaTypes": [
+        "Organization",
+        "Person",
+        "PostalAddress",
+        "Country",
+        "WebSite",
+        "BreadcrumbList",
+        "ListItem",
+        "Service",
+        "OfferCatalog",
+        "Offer",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "WebPage"
+      ],
+      "dateModified": "2026-08-25",
+      "faqSchemaQs": 25,
+      "faqHeadingVisible": false,
+      "faqSectionId": true,
+      "visibleBreadcrumb": true,
+      "internalLinkCount": 7,
+      "externalHosts": [
+        "developers.google.com",
+        "abs.gov.au",
+        "github.com"
+      ],
+      "externalCitations": 3,
+      "answerFirst": {
+        "words": 33,
+        "text": "We measure before we sell. That means telling you which search terms have real Australian demand, which competitors are genuinely beatable, and which parts of a search plan are not worth your money."
+      },
+      "midCta": true,
+      "ctaCount": 1,
+      "ctaAnywhere": 5,
+      "systemsDistinct": 2,
+      "systemsTotal": 2,
+      "capsDistinct": 6,
+      "capsTotal": 7,
+      "capabilityDensity": 2.1,
+      "topTerms": [
+        "contentful",
+        "next.js",
+        "interaction to next paint",
+        "largest contentful paint",
+        "cumulative layout shift",
+        "headless commerce",
+        "internal linking",
+        "core web vitals"
+      ],
+      "emDashes": 0,
+      "slopHits": [],
+      "fkGrade": 9.3,
+      "priceHits": [],
+      "videoOrEmbed": false,
+      "downloadable": false,
+      "inlineSvgFigures": 5,
+      "inbound": 0,
+      "deterministicScore": 78,
+      "earned": 108,
+      "possible": 138,
+      "byCat": {
+        "technical": {
+          "earned": 32,
+          "possible": 36,
+          "pct": 89
+        },
+        "schema": {
+          "earned": 21,
+          "possible": 21,
+          "pct": 100
+        },
+        "architecture": {
+          "earned": 11,
+          "possible": 19,
+          "pct": 58
+        },
+        "depth": {
+          "earned": 10,
+          "possible": 10,
+          "pct": 100
+        },
+        "extractability": {
+          "earned": 9,
+          "possible": 18,
+          "pct": 50
+        },
+        "trust": {
+          "earned": 14,
+          "possible": 14,
+          "pct": 100
+        },
+        "entity": {
+          "earned": 0,
+          "possible": 7,
+          "pct": 0
+        },
+        "writing": {
+          "earned": 9,
+          "possible": 9,
+          "pct": 100
+        },
+        "media": {
+          "earned": 2,
+          "possible": 4,
+          "pct": 50
+        }
+      },
+      "checks": {
+        "T1": {
+          "cat": "technical",
+          "label": "Exactly one <h1>",
+          "weight": 5,
+          "status": "pass",
+          "earned": 5
+        },
+        "T2": {
+          "cat": "technical",
+          "label": "No skipped heading levels",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "T3": {
+          "cat": "technical",
+          "label": "Semantic landmarks",
+          "weight": 3,
+          "status": "pass",
+          "earned": 3
+        },
+        "T4": {
+          "cat": "technical",
+          "label": "Canonical self-referential",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "T5": {
+          "cat": "technical",
+          "label": "hreflang incl. x-default",
+          "weight": 3,
+          "status": "pass",
+          "earned": 3
+        },
+        "T6": {
+          "cat": "technical",
+          "label": "Indexable",
+          "weight": 5,
+          "status": "pass",
+          "earned": 5
+        },
+        "T7": {
+          "cat": "technical",
+          "label": "In sitemap",
+          "weight": 3,
+          "status": "pass",
+          "earned": 3
+        },
+        "T8": {
+          "cat": "technical",
+          "label": "Title 15-60 chars",
+          "weight": 2,
+          "status": "fail",
+          "earned": 0
+        },
+        "T9": {
+          "cat": "technical",
+          "label": "Meta description 70-160",
+          "weight": 2,
+          "status": "fail",
+          "earned": 0
+        },
+        "T10": {
+          "cat": "technical",
+          "label": "Images have alt attribute",
+          "weight": 3,
+          "status": "na"
+        },
+        "T11": {
+          "cat": "technical",
+          "label": "Images have width/height",
+          "weight": 2,
+          "status": "na"
+        },
+        "T12": {
+          "cat": "technical",
+          "label": "Server-rendered text",
+          "weight": 5,
+          "status": "pass",
+          "earned": 5
+        },
+        "S1": {
+          "cat": "schema",
+          "label": "JSON-LD present and parses",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "S2": {
+          "cat": "schema",
+          "label": "Organization",
+          "weight": 2,
+          "status": "pass",
+          "earned": 2
+        },
+        "S3": {
+          "cat": "schema",
+          "label": "BreadcrumbList",
+          "weight": 3,
+          "status": "pass",
+          "earned": 3
+        },
+        "S4": {
+          "cat": "schema",
+          "label": "WebPage or Service",
+          "weight": 2,
+          "status": "pass",
+          "earned": 2
+        },
+        "S5": {
+          "cat": "schema",
+          "label": "Person (named author)",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "S6": {
+          "cat": "schema",
+          "label": "FAQPage where FAQ visible",
+          "weight": 2,
+          "status": "pass",
+          "earned": 2
+        },
+        "S7": {
+          "cat": "schema",
+          "label": "dateModified present and sane",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "S9": {
+          "cat": "schema",
+          "label": "Schema matches visible content",
+          "weight": 5,
+          "status": "pending"
+        },
+        "A1": {
+          "cat": "architecture",
+          "label": "Answer-first block present",
+          "weight": 5,
+          "status": "pass",
+          "earned": 5
+        },
+        "A2": {
+          "cat": "architecture",
+          "label": "H2 count meets profile",
+          "weight": 4,
+          "status": "fail",
+          "earned": 0
+        },
+        "A3": {
+          "cat": "architecture",
+          "label": "Sections read as answerable questions",
+          "weight": 3,
+          "status": "pending"
+        },
+        "A4": {
+          "cat": "architecture",
+          "label": "5+ in-content internal links",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "A5": {
+          "cat": "architecture",
+          "label": "2+ inbound internal links",
+          "weight": 4,
+          "status": "fail",
+          "earned": 0
+        },
+        "A6": {
+          "cat": "architecture",
+          "label": "Visible breadcrumb",
+          "weight": 2,
+          "status": "pass",
+          "earned": 2
+        },
+        "D1": {
+          "cat": "depth",
+          "label": "Word count in profile band",
+          "weight": 6,
+          "status": "pass",
+          "earned": 6
+        },
+        "D2": {
+          "cat": "depth",
+          "label": "Under the 5,000-word ceiling",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "X1": {
+          "cat": "extractability",
+          "label": "<li> in <main> meets profile",
+          "weight": 7,
+          "status": "fail",
+          "earned": 0
+        },
+        "X2": {
+          "cat": "extractability",
+          "label": "Whole-page <li> vs 110 benchmark",
+          "weight": 2,
+          "status": "fail",
+          "earned": 0
+        },
+        "X3": {
+          "cat": "extractability",
+          "label": "Visible FAQ section",
+          "weight": 5,
+          "status": "pass",
+          "earned": 5
+        },
+        "X4": {
+          "cat": "extractability",
+          "label": "FAQ count meets profile min",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "X5": {
+          "cat": "extractability",
+          "label": "FAQ answers self-contained",
+          "weight": 3,
+          "status": "pending"
+        },
+        "X6": {
+          "cat": "extractability",
+          "label": "FAQ phrased like buyers ask",
+          "weight": 2,
+          "status": "pending"
+        },
+        "X7": {
+          "cat": "extractability",
+          "label": "Definition sentences present",
+          "weight": 2,
+          "status": "pending"
+        },
+        "E1": {
+          "cat": "trust",
+          "label": "Named author visible on page",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "E2": {
+          "cat": "trust",
+          "label": "2-3 external citations",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "E3": {
+          "cat": "trust",
+          "label": "Trust signals real, not decorative",
+          "weight": 5,
+          "status": "pending"
+        },
+        "E4": {
+          "cat": "trust",
+          "label": "No invented stats, clients, awards",
+          "weight": 6,
+          "status": "pending"
+        },
+        "E5": {
+          "cat": "trust",
+          "label": "Clear contact path",
+          "weight": 2,
+          "status": "pass",
+          "earned": 2
+        },
+        "E6": {
+          "cat": "trust",
+          "label": "Mid-page CTA",
+          "weight": 3,
+          "status": "pass",
+          "earned": 3
+        },
+        "E7": {
+          "cat": "trust",
+          "label": "sameAs on Organization",
+          "weight": 1,
+          "status": "pass",
+          "earned": 1
+        },
+        "N1": {
+          "cat": "entity",
+          "label": "Capability density 25+/1k",
+          "weight": 4,
+          "status": "fail",
+          "earned": 0
+        },
+        "N2": {
+          "cat": "entity",
+          "label": "Real third-party system names",
+          "weight": 3,
+          "status": "fail",
+          "earned": 0
+        },
+        "N3": {
+          "cat": "entity",
+          "label": "Entity coverage matches topic",
+          "weight": 3,
+          "status": "pending"
+        },
+        "W1": {
+          "cat": "writing",
+          "label": "Zero em dashes",
+          "weight": 3,
+          "status": "pass",
+          "earned": 3
+        },
+        "W2": {
+          "cat": "writing",
+          "label": "No AI-slop vocabulary",
+          "weight": 3,
+          "status": "pass",
+          "earned": 3
+        },
+        "W3": {
+          "cat": "writing",
+          "label": "Plain register (FK grade <= 10)",
+          "weight": 3,
+          "status": "pass",
+          "earned": 3
+        },
+        "W4": {
+          "cat": "writing",
+          "label": "Not commodity copy",
+          "weight": 4,
+          "status": "pending"
+        },
+        "W5": {
+          "cat": "writing",
+          "label": "Price figures unambiguously framed",
+          "weight": 2,
+          "status": "pending"
+        },
+        "M1": {
+          "cat": "media",
+          "label": "Comparison table where topic compares",
+          "weight": 2,
+          "status": "pass",
+          "earned": 2
+        },
+        "M2": {
+          "cat": "media",
+          "label": "3+ content images with alt",
+          "weight": 2,
+          "status": "fail",
+          "earned": 0
+        }
+      },
+      "pendingAi": [
+        "S9",
+        "A3",
+        "X5",
+        "X6",
+        "X7",
+        "E3",
+        "E4",
+        "N3",
+        "W4",
+        "W5"
+      ],
+      "hardFailRisk": [],
+      "evidenceForJudge": {
+        "answerFirst": {
+          "words": 33,
+          "text": "We measure before we sell. That means telling you which search terms have real Australian demand, which competitors are genuinely beatable, and which parts of a search plan are not worth your money."
+        },
+        "topTerms": [
+          "contentful",
+          "next.js",
+          "interaction to next paint",
+          "largest contentful paint",
+          "cumulative layout shift",
+          "headless commerce",
+          "internal linking",
+          "core web vitals"
+        ],
+        "slopHits": [],
+        "priceHits": [],
+        "externalHosts": [
+          "developers.google.com",
+          "abs.gov.au",
+          "github.com"
+        ],
+        "openingText": "       SEO services, Australia  SEO services for Australian businesses  We measure before we sell. That means telling you which search terms have real Australian demand, which competitors are genuinely beatable, and which parts of a search plan are not worth your money.  In August 2026 we measured 103 Australian commercial search results in detail: volume, competition, whether an AI Overview appears, and how many other websites link to each business currently holding a first-page position. Most of what follows on this page comes from that work rather than from opinion, and the parts where the answer was unfavourable are on the page too.   Get a free review of your site and your Google listin"
+      }
+    },
+    {
+      "url": "https://factoryjet.com/au/brisbane",
+      "path": "/au/brisbane",
+      "profile": "city",
+      "words": 5450,
+      "contentWords": 5323,
+      "h1": 1,
+      "h2": 11,
+      "h3": 21,
+      "headingSkips": 0,
+      "liAll": 51,
+      "liMain": 25,
+      "tables": 1,
+      "landmarks": [
+        "<main",
+        "<header",
+        "<nav",
+        "<section",
+        "<footer"
+      ],
+      "canonical": "https://factoryjet.com/au/brisbane",
+      "title": "Web Design & SEO Brisbane | Fast Sites, Found on Google | FactoryJet",
+      "titleLen": 68,
+      "desc": "Brisbane web design and SEO for businesses that need enquiries. Fast sites built by senior engineers, Google Business Profile done properly, and you own everything. Free site review.",
+      "descLen": 182,
+      "robots": "index, follow",
+      "noindex": false,
+      "hreflangCount": 2,
+      "hasXDefault": true,
+      "imgTotal": 0,
+      "imgsWithAltAttr": 0,
+      "imgsWithAlt": 0,
+      "imgsWithDims": 0,
+      "ldBlocks": 3,
+      "ldParseError": false,
+      "schemaTypes": [
+        "Organization",
+        "Person",
+        "PostalAddress",
+        "Country",
+        "WebSite",
+        "BreadcrumbList",
+        "ListItem",
+        "LocalBusiness",
+        "City",
+        "AdministrativeArea",
+        "Place",
+        "GeoCoordinates",
+        "Service",
+        "OfferCatalog",
+        "Offer",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "WebPage"
+      ],
+      "dateModified": "2026-08-25",
+      "faqSchemaQs": 25,
+      "faqHeadingVisible": false,
+      "faqSectionId": true,
+      "visibleBreadcrumb": true,
+      "internalLinkCount": 6,
+      "externalHosts": [
+        "abs.gov.au",
+        "developers.google.com",
+        "github.com"
+      ],
+      "externalCitations": 3,
+      "answerFirst": {
+        "words": 42,
+        "text": "We build fast websites for Brisbane companies and get them found in Google. Senior engineers do the work, you own everything at the end, and we tell you which parts of a search plan pay back in weeks and which take quarters."
+      },
+      "midCta": true,
+      "ctaCount": 1,
+      "ctaAnywhere": 5,
+      "systemsDistinct": 2,
+      "systemsTotal": 6,
+      "capsDistinct": 7,
+      "capsTotal": 15,
+      "capabilityDensity": 3.9,
+      "topTerms": [
+        "contentful",
+        "next.js",
+        "interaction to next paint",
+        "largest contentful paint",
+        "cumulative layout shift",
+        "headless commerce",
+        "core web vitals",
+        "churn",
+        "cdn"
+      ],
+      "emDashes": 0,
+      "slopHits": [],
+      "fkGrade": 9.1,
+      "priceHits": [],
+      "videoOrEmbed": false,
+      "downloadable": false,
+      "inlineSvgFigures": 6,
+      "inbound": 4,
+      "deterministicScore": 90,
+      "earned": 119,
+      "possible": 132,
+      "byCat": {
+        "technical": {
+          "earned": 32,
+          "possible": 36,
+          "pct": 89
+        },
+        "schema": {
+          "earned": 21,
+          "possible": 21,
+          "pct": 100
+        },
+        "architecture": {
+          "earned": 19,
+          "possible": 19,
+          "pct": 100
+        },
+        "depth": {
+          "earned": 8,
+          "possible": 10,
+          "pct": 80
+        },
+        "extractability": {
+          "earned": 16,
+          "possible": 18,
+          "pct": 89
+        },
+        "trust": {
+          "earned": 14,
+          "possible": 14,
+          "pct": 100
+        },
+        "entity": {
+          "earned": 0,
+          "possible": 3,
+          "pct": 0
+        },
+        "writing": {
+          "earned": 9,
+          "possible": 9,
+          "pct": 100
+        },
+        "media": {
+          "earned": 0,
+          "possible": 2,
+          "pct": 0
+        }
+      },
+      "checks": {
+        "T1": {
+          "cat": "technical",
+          "label": "Exactly one <h1>",
+          "weight": 5,
+          "status": "pass",
+          "earned": 5
+        },
+        "T2": {
+          "cat": "technical",
+          "label": "No skipped heading levels",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "T3": {
+          "cat": "technical",
+          "label": "Semantic landmarks",
+          "weight": 3,
+          "status": "pass",
+          "earned": 3
+        },
+        "T4": {
+          "cat": "technical",
+          "label": "Canonical self-referential",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "T5": {
+          "cat": "technical",
+          "label": "hreflang incl. x-default",
+          "weight": 3,
+          "status": "pass",
+          "earned": 3
+        },
+        "T6": {
+          "cat": "technical",
+          "label": "Indexable",
+          "weight": 5,
+          "status": "pass",
+          "earned": 5
+        },
+        "T7": {
+          "cat": "technical",
+          "label": "In sitemap",
+          "weight": 3,
+          "status": "pass",
+          "earned": 3
+        },
+        "T8": {
+          "cat": "technical",
+          "label": "Title 15-60 chars",
+          "weight": 2,
+          "status": "fail",
+          "earned": 0
+        },
+        "T9": {
+          "cat": "technical",
+          "label": "Meta description 70-160",
+          "weight": 2,
+          "status": "fail",
+          "earned": 0
+        },
+        "T10": {
+          "cat": "technical",
+          "label": "Images have alt attribute",
+          "weight": 3,
+          "status": "na"
+        },
+        "T11": {
+          "cat": "technical",
+          "label": "Images have width/height",
+          "weight": 2,
+          "status": "na"
+        },
+        "T12": {
+          "cat": "technical",
+          "label": "Server-rendered text",
+          "weight": 5,
+          "status": "pass",
+          "earned": 5
+        },
+        "S1": {
+          "cat": "schema",
+          "label": "JSON-LD present and parses",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "S2": {
+          "cat": "schema",
+          "label": "Organization",
+          "weight": 2,
+          "status": "pass",
+          "earned": 2
+        },
+        "S3": {
+          "cat": "schema",
+          "label": "BreadcrumbList",
+          "weight": 3,
+          "status": "pass",
+          "earned": 3
+        },
+        "S4": {
+          "cat": "schema",
+          "label": "WebPage or Service",
+          "weight": 2,
+          "status": "pass",
+          "earned": 2
+        },
+        "S5": {
+          "cat": "schema",
+          "label": "Person (named author)",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "S6": {
+          "cat": "schema",
+          "label": "FAQPage where FAQ visible",
+          "weight": 2,
+          "status": "pass",
+          "earned": 2
+        },
+        "S7": {
+          "cat": "schema",
+          "label": "dateModified present and sane",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "S9": {
+          "cat": "schema",
+          "label": "Schema matches visible content",
+          "weight": 5,
+          "status": "pending"
+        },
+        "A1": {
+          "cat": "architecture",
+          "label": "Answer-first block present",
+          "weight": 5,
+          "status": "pass",
+          "earned": 5
+        },
+        "A2": {
+          "cat": "architecture",
+          "label": "H2 count meets profile",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "A3": {
+          "cat": "architecture",
+          "label": "Sections read as answerable questions",
+          "weight": 3,
+          "status": "pending"
+        },
+        "A4": {
+          "cat": "architecture",
+          "label": "5+ in-content internal links",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "A5": {
+          "cat": "architecture",
+          "label": "2+ inbound internal links",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "A6": {
+          "cat": "architecture",
+          "label": "Visible breadcrumb",
+          "weight": 2,
+          "status": "pass",
+          "earned": 2
+        },
+        "D1": {
+          "cat": "depth",
+          "label": "Word count in profile band",
+          "weight": 6,
+          "status": "pass",
+          "earned": 6
+        },
+        "D2": {
+          "cat": "depth",
+          "label": "Under the 5,000-word ceiling",
+          "weight": 4,
+          "status": "partial",
+          "earned": 2
+        },
+        "X1": {
+          "cat": "extractability",
+          "label": "<li> in <main> meets profile",
+          "weight": 7,
+          "status": "pass",
+          "earned": 7
+        },
+        "X2": {
+          "cat": "extractability",
+          "label": "Whole-page <li> vs 110 benchmark",
+          "weight": 2,
+          "status": "fail",
+          "earned": 0
+        },
+        "X3": {
+          "cat": "extractability",
+          "label": "Visible FAQ section",
+          "weight": 5,
+          "status": "pass",
+          "earned": 5
+        },
+        "X4": {
+          "cat": "extractability",
+          "label": "FAQ count meets profile min",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "X5": {
+          "cat": "extractability",
+          "label": "FAQ answers self-contained",
+          "weight": 3,
+          "status": "pending"
+        },
+        "X6": {
+          "cat": "extractability",
+          "label": "FAQ phrased like buyers ask",
+          "weight": 2,
+          "status": "pending"
+        },
+        "X7": {
+          "cat": "extractability",
+          "label": "Definition sentences present",
+          "weight": 2,
+          "status": "pending"
+        },
+        "E1": {
+          "cat": "trust",
+          "label": "Named author visible on page",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "E2": {
+          "cat": "trust",
+          "label": "2-3 external citations",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "E3": {
+          "cat": "trust",
+          "label": "Trust signals real, not decorative",
+          "weight": 5,
+          "status": "pending"
+        },
+        "E4": {
+          "cat": "trust",
+          "label": "No invented stats, clients, awards",
+          "weight": 6,
+          "status": "pending"
+        },
+        "E5": {
+          "cat": "trust",
+          "label": "Clear contact path",
+          "weight": 2,
+          "status": "pass",
+          "earned": 2
+        },
+        "E6": {
+          "cat": "trust",
+          "label": "Mid-page CTA",
+          "weight": 3,
+          "status": "pass",
+          "earned": 3
+        },
+        "E7": {
+          "cat": "trust",
+          "label": "sameAs on Organization",
+          "weight": 1,
+          "status": "pass",
+          "earned": 1
+        },
+        "N1": {
+          "cat": "entity",
+          "label": "Capability density 25+/1k",
+          "weight": 4,
+          "status": "na"
+        },
+        "N2": {
+          "cat": "entity",
+          "label": "Real third-party system names",
+          "weight": 3,
+          "status": "fail",
+          "earned": 0
+        },
+        "N3": {
+          "cat": "entity",
+          "label": "Entity coverage matches topic",
+          "weight": 3,
+          "status": "pending"
+        },
+        "W1": {
+          "cat": "writing",
+          "label": "Zero em dashes",
+          "weight": 3,
+          "status": "pass",
+          "earned": 3
+        },
+        "W2": {
+          "cat": "writing",
+          "label": "No AI-slop vocabulary",
+          "weight": 3,
+          "status": "pass",
+          "earned": 3
+        },
+        "W3": {
+          "cat": "writing",
+          "label": "Plain register (FK grade <= 10)",
+          "weight": 3,
+          "status": "pass",
+          "earned": 3
+        },
+        "W4": {
+          "cat": "writing",
+          "label": "Not commodity copy",
+          "weight": 4,
+          "status": "pending"
+        },
+        "W5": {
+          "cat": "writing",
+          "label": "Price figures unambiguously framed",
+          "weight": 2,
+          "status": "pending"
+        },
+        "M1": {
+          "cat": "media",
+          "label": "Comparison table where topic compares",
+          "weight": 2,
+          "status": "na"
+        },
+        "M2": {
+          "cat": "media",
+          "label": "3+ content images with alt",
+          "weight": 2,
+          "status": "fail",
+          "earned": 0
+        }
+      },
+      "pendingAi": [
+        "S9",
+        "A3",
+        "X5",
+        "X6",
+        "X7",
+        "E3",
+        "E4",
+        "N3",
+        "W4",
+        "W5"
+      ],
+      "hardFailRisk": [],
+      "evidenceForJudge": {
+        "answerFirst": {
+          "words": 42,
+          "text": "We build fast websites for Brisbane companies and get them found in Google. Senior engineers do the work, you own everything at the end, and we tell you which parts of a search plan pay back in weeks and which take quarters."
+        },
+        "topTerms": [
+          "contentful",
+          "next.js",
+          "interaction to next paint",
+          "largest contentful paint",
+          "cumulative layout shift",
+          "headless commerce",
+          "core web vitals",
+          "churn",
+          "cdn"
+        ],
+        "slopHits": [],
+        "priceHits": [],
+        "externalHosts": [
+          "abs.gov.au",
+          "developers.google.com",
+          "github.com"
+        ],
+        "openingText": "       Brisbane, Queensland  Web design and SEO for Brisbane businesses  We build fast websites for Brisbane companies and get them found in Google. Senior engineers do the work, you own everything at the end, and we tell you which parts of a search plan pay back in weeks and which take quarters.  Most of our Brisbane work is for businesses with a real sales process behind the site: trades, professional services, clinics, manufacturers and B2B suppliers across the CBD, the inner north, and out through Ipswich, Logan and Moreton Bay. If your enquiries come from people searching rather than from a shopfront, this is the page for you.   Get a free review of your site and your Google listing  Se"
+      }
+    },
+    {
+      "url": "https://factoryjet.com/au/melbourne",
+      "path": "/au/melbourne",
+      "profile": "city",
+      "words": 5304,
+      "contentWords": 5182,
+      "h1": 1,
+      "h2": 11,
+      "h3": 15,
+      "headingSkips": 0,
+      "liAll": 47,
+      "liMain": 21,
+      "tables": 1,
+      "landmarks": [
+        "<main",
+        "<header",
+        "<nav",
+        "<section",
+        "<footer"
+      ],
+      "canonical": "https://factoryjet.com/au/melbourne",
+      "title": "Web Design & SEO Consultant Melbourne | FactoryJet",
+      "titleLen": 50,
+      "desc": "Melbourne web design and SEO consulting. Fast sites built by senior engineers, honest advice on what will move enquiries, and you own everything. Free site review.",
+      "descLen": 163,
+      "robots": "index, follow",
+      "noindex": false,
+      "hreflangCount": 2,
+      "hasXDefault": true,
+      "imgTotal": 0,
+      "imgsWithAltAttr": 0,
+      "imgsWithAlt": 0,
+      "imgsWithDims": 0,
+      "ldBlocks": 3,
+      "ldParseError": false,
+      "schemaTypes": [
+        "Organization",
+        "Person",
+        "PostalAddress",
+        "Country",
+        "WebSite",
+        "BreadcrumbList",
+        "ListItem",
+        "LocalBusiness",
+        "City",
+        "AdministrativeArea",
+        "Place",
+        "GeoCoordinates",
+        "Service",
+        "OfferCatalog",
+        "Offer",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "WebPage"
+      ],
+      "dateModified": "2026-08-25",
+      "faqSchemaQs": 27,
+      "faqHeadingVisible": false,
+      "faqSectionId": true,
+      "visibleBreadcrumb": true,
+      "internalLinkCount": 6,
+      "externalHosts": [
+        "abs.gov.au",
+        "developers.google.com",
+        "github.com"
+      ],
+      "externalCitations": 3,
+      "answerFirst": {
+        "words": 32,
+        "text": "We build fast websites for Melbourne businesses and advise on the search work that will actually move enquiries. You deal with the engineer doing the job, not an account manager relaying messages."
+      },
+      "midCta": true,
+      "ctaCount": 1,
+      "ctaAnywhere": 5,
+      "systemsDistinct": 2,
+      "systemsTotal": 5,
+      "capsDistinct": 6,
+      "capsTotal": 15,
+      "capabilityDensity": 3.8,
+      "topTerms": [
+        "contentful",
+        "next.js",
+        "interaction to next paint",
+        "largest contentful paint",
+        "cumulative layout shift",
+        "headless commerce",
+        "core web vitals",
+        "json-ld"
+      ],
+      "emDashes": 0,
+      "slopHits": [],
+      "fkGrade": 9.1,
+      "priceHits": [],
+      "videoOrEmbed": false,
+      "downloadable": false,
+      "inlineSvgFigures": 6,
+      "inbound": 4,
+      "deterministicScore": 89,
+      "earned": 117.5,
+      "possible": 132,
+      "byCat": {
+        "technical": {
+          "earned": 34,
+          "possible": 36,
+          "pct": 94
+        },
+        "schema": {
+          "earned": 21,
+          "possible": 21,
+          "pct": 100
+        },
+        "architecture": {
+          "earned": 19,
+          "possible": 19,
+          "pct": 100
+        },
+        "depth": {
+          "earned": 8,
+          "possible": 10,
+          "pct": 80
+        },
+        "extractability": {
+          "earned": 12.5,
+          "possible": 18,
+          "pct": 69
+        },
+        "trust": {
+          "earned": 14,
+          "possible": 14,
+          "pct": 100
+        },
+        "entity": {
+          "earned": 0,
+          "possible": 3,
+          "pct": 0
+        },
+        "writing": {
+          "earned": 9,
+          "possible": 9,
+          "pct": 100
+        },
+        "media": {
+          "earned": 0,
+          "possible": 2,
+          "pct": 0
+        }
+      },
+      "checks": {
+        "T1": {
+          "cat": "technical",
+          "label": "Exactly one <h1>",
+          "weight": 5,
+          "status": "pass",
+          "earned": 5
+        },
+        "T2": {
+          "cat": "technical",
+          "label": "No skipped heading levels",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "T3": {
+          "cat": "technical",
+          "label": "Semantic landmarks",
+          "weight": 3,
+          "status": "pass",
+          "earned": 3
+        },
+        "T4": {
+          "cat": "technical",
+          "label": "Canonical self-referential",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "T5": {
+          "cat": "technical",
+          "label": "hreflang incl. x-default",
+          "weight": 3,
+          "status": "pass",
+          "earned": 3
+        },
+        "T6": {
+          "cat": "technical",
+          "label": "Indexable",
+          "weight": 5,
+          "status": "pass",
+          "earned": 5
+        },
+        "T7": {
+          "cat": "technical",
+          "label": "In sitemap",
+          "weight": 3,
+          "status": "pass",
+          "earned": 3
+        },
+        "T8": {
+          "cat": "technical",
+          "label": "Title 15-60 chars",
+          "weight": 2,
+          "status": "pass",
+          "earned": 2
+        },
+        "T9": {
+          "cat": "technical",
+          "label": "Meta description 70-160",
+          "weight": 2,
+          "status": "fail",
+          "earned": 0
+        },
+        "T10": {
+          "cat": "technical",
+          "label": "Images have alt attribute",
+          "weight": 3,
+          "status": "na"
+        },
+        "T11": {
+          "cat": "technical",
+          "label": "Images have width/height",
+          "weight": 2,
+          "status": "na"
+        },
+        "T12": {
+          "cat": "technical",
+          "label": "Server-rendered text",
+          "weight": 5,
+          "status": "pass",
+          "earned": 5
+        },
+        "S1": {
+          "cat": "schema",
+          "label": "JSON-LD present and parses",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "S2": {
+          "cat": "schema",
+          "label": "Organization",
+          "weight": 2,
+          "status": "pass",
+          "earned": 2
+        },
+        "S3": {
+          "cat": "schema",
+          "label": "BreadcrumbList",
+          "weight": 3,
+          "status": "pass",
+          "earned": 3
+        },
+        "S4": {
+          "cat": "schema",
+          "label": "WebPage or Service",
+          "weight": 2,
+          "status": "pass",
+          "earned": 2
+        },
+        "S5": {
+          "cat": "schema",
+          "label": "Person (named author)",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "S6": {
+          "cat": "schema",
+          "label": "FAQPage where FAQ visible",
+          "weight": 2,
+          "status": "pass",
+          "earned": 2
+        },
+        "S7": {
+          "cat": "schema",
+          "label": "dateModified present and sane",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "S9": {
+          "cat": "schema",
+          "label": "Schema matches visible content",
+          "weight": 5,
+          "status": "pending"
+        },
+        "A1": {
+          "cat": "architecture",
+          "label": "Answer-first block present",
+          "weight": 5,
+          "status": "pass",
+          "earned": 5
+        },
+        "A2": {
+          "cat": "architecture",
+          "label": "H2 count meets profile",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "A3": {
+          "cat": "architecture",
+          "label": "Sections read as answerable questions",
+          "weight": 3,
+          "status": "pending"
+        },
+        "A4": {
+          "cat": "architecture",
+          "label": "5+ in-content internal links",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "A5": {
+          "cat": "architecture",
+          "label": "2+ inbound internal links",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "A6": {
+          "cat": "architecture",
+          "label": "Visible breadcrumb",
+          "weight": 2,
+          "status": "pass",
+          "earned": 2
+        },
+        "D1": {
+          "cat": "depth",
+          "label": "Word count in profile band",
+          "weight": 6,
+          "status": "pass",
+          "earned": 6
+        },
+        "D2": {
+          "cat": "depth",
+          "label": "Under the 5,000-word ceiling",
+          "weight": 4,
+          "status": "partial",
+          "earned": 2
+        },
+        "X1": {
+          "cat": "extractability",
+          "label": "<li> in <main> meets profile",
+          "weight": 7,
+          "status": "partial",
+          "earned": 3.5
+        },
+        "X2": {
+          "cat": "extractability",
+          "label": "Whole-page <li> vs 110 benchmark",
+          "weight": 2,
+          "status": "fail",
+          "earned": 0
+        },
+        "X3": {
+          "cat": "extractability",
+          "label": "Visible FAQ section",
+          "weight": 5,
+          "status": "pass",
+          "earned": 5
+        },
+        "X4": {
+          "cat": "extractability",
+          "label": "FAQ count meets profile min",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "X5": {
+          "cat": "extractability",
+          "label": "FAQ answers self-contained",
+          "weight": 3,
+          "status": "pending"
+        },
+        "X6": {
+          "cat": "extractability",
+          "label": "FAQ phrased like buyers ask",
+          "weight": 2,
+          "status": "pending"
+        },
+        "X7": {
+          "cat": "extractability",
+          "label": "Definition sentences present",
+          "weight": 2,
+          "status": "pending"
+        },
+        "E1": {
+          "cat": "trust",
+          "label": "Named author visible on page",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "E2": {
+          "cat": "trust",
+          "label": "2-3 external citations",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "E3": {
+          "cat": "trust",
+          "label": "Trust signals real, not decorative",
+          "weight": 5,
+          "status": "pending"
+        },
+        "E4": {
+          "cat": "trust",
+          "label": "No invented stats, clients, awards",
+          "weight": 6,
+          "status": "pending"
+        },
+        "E5": {
+          "cat": "trust",
+          "label": "Clear contact path",
+          "weight": 2,
+          "status": "pass",
+          "earned": 2
+        },
+        "E6": {
+          "cat": "trust",
+          "label": "Mid-page CTA",
+          "weight": 3,
+          "status": "pass",
+          "earned": 3
+        },
+        "E7": {
+          "cat": "trust",
+          "label": "sameAs on Organization",
+          "weight": 1,
+          "status": "pass",
+          "earned": 1
+        },
+        "N1": {
+          "cat": "entity",
+          "label": "Capability density 25+/1k",
+          "weight": 4,
+          "status": "na"
+        },
+        "N2": {
+          "cat": "entity",
+          "label": "Real third-party system names",
+          "weight": 3,
+          "status": "fail",
+          "earned": 0
+        },
+        "N3": {
+          "cat": "entity",
+          "label": "Entity coverage matches topic",
+          "weight": 3,
+          "status": "pending"
+        },
+        "W1": {
+          "cat": "writing",
+          "label": "Zero em dashes",
+          "weight": 3,
+          "status": "pass",
+          "earned": 3
+        },
+        "W2": {
+          "cat": "writing",
+          "label": "No AI-slop vocabulary",
+          "weight": 3,
+          "status": "pass",
+          "earned": 3
+        },
+        "W3": {
+          "cat": "writing",
+          "label": "Plain register (FK grade <= 10)",
+          "weight": 3,
+          "status": "pass",
+          "earned": 3
+        },
+        "W4": {
+          "cat": "writing",
+          "label": "Not commodity copy",
+          "weight": 4,
+          "status": "pending"
+        },
+        "W5": {
+          "cat": "writing",
+          "label": "Price figures unambiguously framed",
+          "weight": 2,
+          "status": "pending"
+        },
+        "M1": {
+          "cat": "media",
+          "label": "Comparison table where topic compares",
+          "weight": 2,
+          "status": "na"
+        },
+        "M2": {
+          "cat": "media",
+          "label": "3+ content images with alt",
+          "weight": 2,
+          "status": "fail",
+          "earned": 0
+        }
+      },
+      "pendingAi": [
+        "S9",
+        "A3",
+        "X5",
+        "X6",
+        "X7",
+        "E3",
+        "E4",
+        "N3",
+        "W4",
+        "W5"
+      ],
+      "hardFailRisk": [],
+      "evidenceForJudge": {
+        "answerFirst": {
+          "words": 32,
+          "text": "We build fast websites for Melbourne businesses and advise on the search work that will actually move enquiries. You deal with the engineer doing the job, not an account manager relaying messages."
+        },
+        "topTerms": [
+          "contentful",
+          "next.js",
+          "interaction to next paint",
+          "largest contentful paint",
+          "cumulative layout shift",
+          "headless commerce",
+          "core web vitals",
+          "json-ld"
+        ],
+        "slopHits": [],
+        "priceHits": [],
+        "externalHosts": [
+          "abs.gov.au",
+          "developers.google.com",
+          "github.com"
+        ],
+        "openingText": "       Melbourne, Victoria  Web design and SEO consulting in Melbourne  We build fast websites for Melbourne businesses and advise on the search work that will actually move enquiries. You deal with the engineer doing the job, not an account manager relaying messages.  Melbourne is a crowded market with a lot of good agencies in it, so this page spends more time on how to judge one than on selling you ours. If you are comparing three or four options right now, the six questions further down are the fastest way to separate them, and they work on us too.   Get a free review of your site and your Google listing  Send your address. We will tell you which of the five common problems you have, and"
+      }
+    },
+    {
+      "url": "https://factoryjet.com/au/adelaide",
+      "path": "/au/adelaide",
+      "profile": "service",
+      "words": 4400,
+      "contentWords": 4273,
+      "h1": 1,
+      "h2": 10,
+      "h3": 14,
+      "headingSkips": 0,
+      "liAll": 50,
+      "liMain": 24,
+      "tables": 0,
+      "landmarks": [
+        "<main",
+        "<header",
+        "<nav",
+        "<section",
+        "<footer"
+      ],
+      "canonical": "https://factoryjet.com/au/adelaide",
+      "title": "Web Design & SEO Adelaide | Easiest Capital to Rank In | FactoryJet",
+      "titleLen": 67,
+      "desc": "Adelaide web design and SEO. Less entrenched competition than Sydney or Perth, so the same work goes further. Fast sites by senior engineers. Free site review.",
+      "descLen": 159,
+      "robots": "index, follow",
+      "noindex": false,
+      "hreflangCount": 2,
+      "hasXDefault": true,
+      "imgTotal": 0,
+      "imgsWithAltAttr": 0,
+      "imgsWithAlt": 0,
+      "imgsWithDims": 0,
+      "ldBlocks": 3,
+      "ldParseError": false,
+      "schemaTypes": [
+        "Organization",
+        "Person",
+        "PostalAddress",
+        "Country",
+        "WebSite",
+        "BreadcrumbList",
+        "ListItem",
+        "LocalBusiness",
+        "City",
+        "AdministrativeArea",
+        "Place",
+        "GeoCoordinates",
+        "Service",
+        "OfferCatalog",
+        "Offer",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "WebPage"
+      ],
+      "dateModified": "2026-08-25",
+      "faqSchemaQs": 25,
+      "faqHeadingVisible": false,
+      "faqSectionId": true,
+      "visibleBreadcrumb": true,
+      "internalLinkCount": 6,
+      "externalHosts": [
+        "abs.gov.au",
+        "developers.google.com",
+        "github.com"
+      ],
+      "externalCitations": 3,
+      "answerFirst": {
+        "words": 41,
+        "text": "Adelaide is the easiest capital city in Australia to get found in, and we can show you why. Fewer entrenched competitors hold the first page here than in Sydney, Melbourne or Perth, which changes what is realistic and what it takes."
+      },
+      "midCta": true,
+      "ctaCount": 1,
+      "ctaAnywhere": 5,
+      "systemsDistinct": 2,
+      "systemsTotal": 6,
+      "capsDistinct": 6,
+      "capsTotal": 14,
+      "capabilityDensity": 4.5,
+      "topTerms": [
+        "contentful",
+        "next.js",
+        "interaction to next paint",
+        "largest contentful paint",
+        "cumulative layout shift",
+        "headless commerce",
+        "core web vitals",
+        "cdn"
+      ],
+      "emDashes": 0,
+      "slopHits": [],
+      "fkGrade": 9.1,
+      "priceHits": [],
+      "videoOrEmbed": false,
+      "downloadable": false,
+      "inlineSvgFigures": 6,
+      "inbound": 4,
+      "deterministicScore": 87,
+      "earned": 119.5,
+      "possible": 138,
+      "byCat": {
+        "technical": {
+          "earned": 34,
+          "possible": 36,
+          "pct": 94
+        },
+        "schema": {
+          "earned": 21,
+          "possible": 21,
+          "pct": 100
+        },
+        "architecture": {
+          "earned": 19,
+          "possible": 19,
+          "pct": 100
+        },
+        "depth": {
+          "earned": 10,
+          "possible": 10,
+          "pct": 100
+        },
+        "extractability": {
+          "earned": 12.5,
+          "possible": 18,
+          "pct": 69
+        },
+        "trust": {
+          "earned": 14,
+          "possible": 14,
+          "pct": 100
+        },
+        "entity": {
+          "earned": 0,
+          "possible": 7,
+          "pct": 0
+        },
+        "writing": {
+          "earned": 9,
+          "possible": 9,
+          "pct": 100
+        },
+        "media": {
+          "earned": 0,
+          "possible": 4,
+          "pct": 0
+        }
+      },
+      "checks": {
+        "T1": {
+          "cat": "technical",
+          "label": "Exactly one <h1>",
+          "weight": 5,
+          "status": "pass",
+          "earned": 5
+        },
+        "T2": {
+          "cat": "technical",
+          "label": "No skipped heading levels",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "T3": {
+          "cat": "technical",
+          "label": "Semantic landmarks",
+          "weight": 3,
+          "status": "pass",
+          "earned": 3
+        },
+        "T4": {
+          "cat": "technical",
+          "label": "Canonical self-referential",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "T5": {
+          "cat": "technical",
+          "label": "hreflang incl. x-default",
+          "weight": 3,
+          "status": "pass",
+          "earned": 3
+        },
+        "T6": {
+          "cat": "technical",
+          "label": "Indexable",
+          "weight": 5,
+          "status": "pass",
+          "earned": 5
+        },
+        "T7": {
+          "cat": "technical",
+          "label": "In sitemap",
+          "weight": 3,
+          "status": "pass",
+          "earned": 3
+        },
+        "T8": {
+          "cat": "technical",
+          "label": "Title 15-60 chars",
+          "weight": 2,
+          "status": "fail",
+          "earned": 0
+        },
+        "T9": {
+          "cat": "technical",
+          "label": "Meta description 70-160",
+          "weight": 2,
+          "status": "pass",
+          "earned": 2
+        },
+        "T10": {
+          "cat": "technical",
+          "label": "Images have alt attribute",
+          "weight": 3,
+          "status": "na"
+        },
+        "T11": {
+          "cat": "technical",
+          "label": "Images have width/height",
+          "weight": 2,
+          "status": "na"
+        },
+        "T12": {
+          "cat": "technical",
+          "label": "Server-rendered text",
+          "weight": 5,
+          "status": "pass",
+          "earned": 5
+        },
+        "S1": {
+          "cat": "schema",
+          "label": "JSON-LD present and parses",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "S2": {
+          "cat": "schema",
+          "label": "Organization",
+          "weight": 2,
+          "status": "pass",
+          "earned": 2
+        },
+        "S3": {
+          "cat": "schema",
+          "label": "BreadcrumbList",
+          "weight": 3,
+          "status": "pass",
+          "earned": 3
+        },
+        "S4": {
+          "cat": "schema",
+          "label": "WebPage or Service",
+          "weight": 2,
+          "status": "pass",
+          "earned": 2
+        },
+        "S5": {
+          "cat": "schema",
+          "label": "Person (named author)",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "S6": {
+          "cat": "schema",
+          "label": "FAQPage where FAQ visible",
+          "weight": 2,
+          "status": "pass",
+          "earned": 2
+        },
+        "S7": {
+          "cat": "schema",
+          "label": "dateModified present and sane",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "S9": {
+          "cat": "schema",
+          "label": "Schema matches visible content",
+          "weight": 5,
+          "status": "pending"
+        },
+        "A1": {
+          "cat": "architecture",
+          "label": "Answer-first block present",
+          "weight": 5,
+          "status": "pass",
+          "earned": 5
+        },
+        "A2": {
+          "cat": "architecture",
+          "label": "H2 count meets profile",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "A3": {
+          "cat": "architecture",
+          "label": "Sections read as answerable questions",
+          "weight": 3,
+          "status": "pending"
+        },
+        "A4": {
+          "cat": "architecture",
+          "label": "5+ in-content internal links",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "A5": {
+          "cat": "architecture",
+          "label": "2+ inbound internal links",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "A6": {
+          "cat": "architecture",
+          "label": "Visible breadcrumb",
+          "weight": 2,
+          "status": "pass",
+          "earned": 2
+        },
+        "D1": {
+          "cat": "depth",
+          "label": "Word count in profile band",
+          "weight": 6,
+          "status": "pass",
+          "earned": 6
+        },
+        "D2": {
+          "cat": "depth",
+          "label": "Under the 5,000-word ceiling",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "X1": {
+          "cat": "extractability",
+          "label": "<li> in <main> meets profile",
+          "weight": 7,
+          "status": "partial",
+          "earned": 3.5
+        },
+        "X2": {
+          "cat": "extractability",
+          "label": "Whole-page <li> vs 110 benchmark",
+          "weight": 2,
+          "status": "fail",
+          "earned": 0
+        },
+        "X3": {
+          "cat": "extractability",
+          "label": "Visible FAQ section",
+          "weight": 5,
+          "status": "pass",
+          "earned": 5
+        },
+        "X4": {
+          "cat": "extractability",
+          "label": "FAQ count meets profile min",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "X5": {
+          "cat": "extractability",
+          "label": "FAQ answers self-contained",
+          "weight": 3,
+          "status": "pending"
+        },
+        "X6": {
+          "cat": "extractability",
+          "label": "FAQ phrased like buyers ask",
+          "weight": 2,
+          "status": "pending"
+        },
+        "X7": {
+          "cat": "extractability",
+          "label": "Definition sentences present",
+          "weight": 2,
+          "status": "pending"
+        },
+        "E1": {
+          "cat": "trust",
+          "label": "Named author visible on page",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "E2": {
+          "cat": "trust",
+          "label": "2-3 external citations",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "E3": {
+          "cat": "trust",
+          "label": "Trust signals real, not decorative",
+          "weight": 5,
+          "status": "pending"
+        },
+        "E4": {
+          "cat": "trust",
+          "label": "No invented stats, clients, awards",
+          "weight": 6,
+          "status": "pending"
+        },
+        "E5": {
+          "cat": "trust",
+          "label": "Clear contact path",
+          "weight": 2,
+          "status": "pass",
+          "earned": 2
+        },
+        "E6": {
+          "cat": "trust",
+          "label": "Mid-page CTA",
+          "weight": 3,
+          "status": "pass",
+          "earned": 3
+        },
+        "E7": {
+          "cat": "trust",
+          "label": "sameAs on Organization",
+          "weight": 1,
+          "status": "pass",
+          "earned": 1
+        },
+        "N1": {
+          "cat": "entity",
+          "label": "Capability density 25+/1k",
+          "weight": 4,
+          "status": "fail",
+          "earned": 0
+        },
+        "N2": {
+          "cat": "entity",
+          "label": "Real third-party system names",
+          "weight": 3,
+          "status": "fail",
+          "earned": 0
+        },
+        "N3": {
+          "cat": "entity",
+          "label": "Entity coverage matches topic",
+          "weight": 3,
+          "status": "pending"
+        },
+        "W1": {
+          "cat": "writing",
+          "label": "Zero em dashes",
+          "weight": 3,
+          "status": "pass",
+          "earned": 3
+        },
+        "W2": {
+          "cat": "writing",
+          "label": "No AI-slop vocabulary",
+          "weight": 3,
+          "status": "pass",
+          "earned": 3
+        },
+        "W3": {
+          "cat": "writing",
+          "label": "Plain register (FK grade <= 10)",
+          "weight": 3,
+          "status": "pass",
+          "earned": 3
+        },
+        "W4": {
+          "cat": "writing",
+          "label": "Not commodity copy",
+          "weight": 4,
+          "status": "pending"
+        },
+        "W5": {
+          "cat": "writing",
+          "label": "Price figures unambiguously framed",
+          "weight": 2,
+          "status": "pending"
+        },
+        "M1": {
+          "cat": "media",
+          "label": "Comparison table where topic compares",
+          "weight": 2,
+          "status": "fail",
+          "earned": 0
+        },
+        "M2": {
+          "cat": "media",
+          "label": "3+ content images with alt",
+          "weight": 2,
+          "status": "fail",
+          "earned": 0
+        }
+      },
+      "pendingAi": [
+        "S9",
+        "A3",
+        "X5",
+        "X6",
+        "X7",
+        "E3",
+        "E4",
+        "N3",
+        "W4",
+        "W5"
+      ],
+      "hardFailRisk": [],
+      "evidenceForJudge": {
+        "answerFirst": {
+          "words": 41,
+          "text": "Adelaide is the easiest capital city in Australia to get found in, and we can show you why. Fewer entrenched competitors hold the first page here than in Sydney, Melbourne or Perth, which changes what is realistic and what it takes."
+        },
+        "topTerms": [
+          "contentful",
+          "next.js",
+          "interaction to next paint",
+          "largest contentful paint",
+          "cumulative layout shift",
+          "headless commerce",
+          "core web vitals",
+          "cdn"
+        ],
+        "slopHits": [],
+        "priceHits": [],
+        "externalHosts": [
+          "abs.gov.au",
+          "developers.google.com",
+          "github.com"
+        ],
+        "openingText": "       Adelaide, South Australia  Web design and SEO for Adelaide businesses  Adelaide is the easiest capital city in Australia to get found in, and we can show you why. Fewer entrenched competitors hold the first page here than in Sydney, Melbourne or Perth, which changes what is realistic and what it takes.  We build fast websites for South Australian businesses and do the search work that gets them found. Senior engineers do the job, you own everything at the end, and if the numbers say the work is not worth doing for you, we will tell you that instead of selling you a retainer.   Get a free review of your site and your Google listing  Send your address. We will measure how far you actual"
+      }
+    },
+    {
+      "url": "https://factoryjet.com/au/canberra",
+      "path": "/au/canberra",
+      "profile": "service",
+      "words": 4217,
+      "contentWords": 4090,
+      "h1": 1,
+      "h2": 10,
+      "h3": 14,
+      "headingSkips": 0,
+      "liAll": 50,
+      "liMain": 24,
+      "tables": 0,
+      "landmarks": [
+        "<main",
+        "<header",
+        "<nav",
+        "<section",
+        "<footer"
+      ],
+      "canonical": "https://factoryjet.com/au/canberra",
+      "title": "Web Design & SEO Canberra | Accessible Sites for the ACT | FactoryJet",
+      "titleLen": 69,
+      "desc": "Canberra web design and SEO for businesses, associations and public-sector suppliers. Accessible sites built to WCAG, fast, and yours to own. Free site review.",
+      "descLen": 159,
+      "robots": "index, follow",
+      "noindex": false,
+      "hreflangCount": 2,
+      "hasXDefault": true,
+      "imgTotal": 0,
+      "imgsWithAltAttr": 0,
+      "imgsWithAlt": 0,
+      "imgsWithDims": 0,
+      "ldBlocks": 3,
+      "ldParseError": false,
+      "schemaTypes": [
+        "Organization",
+        "Person",
+        "PostalAddress",
+        "Country",
+        "WebSite",
+        "BreadcrumbList",
+        "ListItem",
+        "LocalBusiness",
+        "City",
+        "AdministrativeArea",
+        "Place",
+        "GeoCoordinates",
+        "Service",
+        "OfferCatalog",
+        "Offer",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "WebPage"
+      ],
+      "dateModified": "2026-08-25",
+      "faqSchemaQs": 23,
+      "faqHeadingVisible": false,
+      "faqSectionId": true,
+      "visibleBreadcrumb": true,
+      "internalLinkCount": 6,
+      "externalHosts": [
+        "w3.org",
+        "abs.gov.au",
+        "developers.google.com",
+        "github.com"
+      ],
+      "externalCitations": 4,
+      "answerFirst": {
+        "words": 31,
+        "text": "Websites for businesses, associations and suppliers who work in and around the public sector. Accessible, fast, and built so you can answer the questions a tender puts to you without scrambling."
+      },
+      "midCta": true,
+      "ctaCount": 1,
+      "ctaAnywhere": 5,
+      "systemsDistinct": 2,
+      "systemsTotal": 6,
+      "capsDistinct": 7,
+      "capsTotal": 27,
+      "capabilityDensity": 7.8,
+      "topTerms": [
+        "contentful",
+        "next.js",
+        "interaction to next paint",
+        "largest contentful paint",
+        "cumulative layout shift",
+        "headless commerce",
+        "core web vitals",
+        "wcag",
+        "cdn"
+      ],
+      "emDashes": 0,
+      "slopHits": [],
+      "fkGrade": 10,
+      "priceHits": [],
+      "videoOrEmbed": false,
+      "downloadable": false,
+      "inlineSvgFigures": 6,
+      "inbound": 4,
+      "deterministicScore": 87,
+      "earned": 119.5,
+      "possible": 138,
+      "byCat": {
+        "technical": {
+          "earned": 34,
+          "possible": 36,
+          "pct": 94
+        },
+        "schema": {
+          "earned": 21,
+          "possible": 21,
+          "pct": 100
+        },
+        "architecture": {
+          "earned": 19,
+          "possible": 19,
+          "pct": 100
+        },
+        "depth": {
+          "earned": 10,
+          "possible": 10,
+          "pct": 100
+        },
+        "extractability": {
+          "earned": 12.5,
+          "possible": 18,
+          "pct": 69
+        },
+        "trust": {
+          "earned": 14,
+          "possible": 14,
+          "pct": 100
+        },
+        "entity": {
+          "earned": 0,
+          "possible": 7,
+          "pct": 0
+        },
+        "writing": {
+          "earned": 9,
+          "possible": 9,
+          "pct": 100
+        },
+        "media": {
+          "earned": 0,
+          "possible": 4,
+          "pct": 0
+        }
+      },
+      "checks": {
+        "T1": {
+          "cat": "technical",
+          "label": "Exactly one <h1>",
+          "weight": 5,
+          "status": "pass",
+          "earned": 5
+        },
+        "T2": {
+          "cat": "technical",
+          "label": "No skipped heading levels",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "T3": {
+          "cat": "technical",
+          "label": "Semantic landmarks",
+          "weight": 3,
+          "status": "pass",
+          "earned": 3
+        },
+        "T4": {
+          "cat": "technical",
+          "label": "Canonical self-referential",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "T5": {
+          "cat": "technical",
+          "label": "hreflang incl. x-default",
+          "weight": 3,
+          "status": "pass",
+          "earned": 3
+        },
+        "T6": {
+          "cat": "technical",
+          "label": "Indexable",
+          "weight": 5,
+          "status": "pass",
+          "earned": 5
+        },
+        "T7": {
+          "cat": "technical",
+          "label": "In sitemap",
+          "weight": 3,
+          "status": "pass",
+          "earned": 3
+        },
+        "T8": {
+          "cat": "technical",
+          "label": "Title 15-60 chars",
+          "weight": 2,
+          "status": "fail",
+          "earned": 0
+        },
+        "T9": {
+          "cat": "technical",
+          "label": "Meta description 70-160",
+          "weight": 2,
+          "status": "pass",
+          "earned": 2
+        },
+        "T10": {
+          "cat": "technical",
+          "label": "Images have alt attribute",
+          "weight": 3,
+          "status": "na"
+        },
+        "T11": {
+          "cat": "technical",
+          "label": "Images have width/height",
+          "weight": 2,
+          "status": "na"
+        },
+        "T12": {
+          "cat": "technical",
+          "label": "Server-rendered text",
+          "weight": 5,
+          "status": "pass",
+          "earned": 5
+        },
+        "S1": {
+          "cat": "schema",
+          "label": "JSON-LD present and parses",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "S2": {
+          "cat": "schema",
+          "label": "Organization",
+          "weight": 2,
+          "status": "pass",
+          "earned": 2
+        },
+        "S3": {
+          "cat": "schema",
+          "label": "BreadcrumbList",
+          "weight": 3,
+          "status": "pass",
+          "earned": 3
+        },
+        "S4": {
+          "cat": "schema",
+          "label": "WebPage or Service",
+          "weight": 2,
+          "status": "pass",
+          "earned": 2
+        },
+        "S5": {
+          "cat": "schema",
+          "label": "Person (named author)",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "S6": {
+          "cat": "schema",
+          "label": "FAQPage where FAQ visible",
+          "weight": 2,
+          "status": "pass",
+          "earned": 2
+        },
+        "S7": {
+          "cat": "schema",
+          "label": "dateModified present and sane",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "S9": {
+          "cat": "schema",
+          "label": "Schema matches visible content",
+          "weight": 5,
+          "status": "pending"
+        },
+        "A1": {
+          "cat": "architecture",
+          "label": "Answer-first block present",
+          "weight": 5,
+          "status": "pass",
+          "earned": 5
+        },
+        "A2": {
+          "cat": "architecture",
+          "label": "H2 count meets profile",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "A3": {
+          "cat": "architecture",
+          "label": "Sections read as answerable questions",
+          "weight": 3,
+          "status": "pending"
+        },
+        "A4": {
+          "cat": "architecture",
+          "label": "5+ in-content internal links",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "A5": {
+          "cat": "architecture",
+          "label": "2+ inbound internal links",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "A6": {
+          "cat": "architecture",
+          "label": "Visible breadcrumb",
+          "weight": 2,
+          "status": "pass",
+          "earned": 2
+        },
+        "D1": {
+          "cat": "depth",
+          "label": "Word count in profile band",
+          "weight": 6,
+          "status": "pass",
+          "earned": 6
+        },
+        "D2": {
+          "cat": "depth",
+          "label": "Under the 5,000-word ceiling",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "X1": {
+          "cat": "extractability",
+          "label": "<li> in <main> meets profile",
+          "weight": 7,
+          "status": "partial",
+          "earned": 3.5
+        },
+        "X2": {
+          "cat": "extractability",
+          "label": "Whole-page <li> vs 110 benchmark",
+          "weight": 2,
+          "status": "fail",
+          "earned": 0
+        },
+        "X3": {
+          "cat": "extractability",
+          "label": "Visible FAQ section",
+          "weight": 5,
+          "status": "pass",
+          "earned": 5
+        },
+        "X4": {
+          "cat": "extractability",
+          "label": "FAQ count meets profile min",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "X5": {
+          "cat": "extractability",
+          "label": "FAQ answers self-contained",
+          "weight": 3,
+          "status": "pending"
+        },
+        "X6": {
+          "cat": "extractability",
+          "label": "FAQ phrased like buyers ask",
+          "weight": 2,
+          "status": "pending"
+        },
+        "X7": {
+          "cat": "extractability",
+          "label": "Definition sentences present",
+          "weight": 2,
+          "status": "pending"
+        },
+        "E1": {
+          "cat": "trust",
+          "label": "Named author visible on page",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "E2": {
+          "cat": "trust",
+          "label": "2-3 external citations",
+          "weight": 4,
+          "status": "pass",
+          "earned": 4
+        },
+        "E3": {
+          "cat": "trust",
+          "label": "Trust signals real, not decorative",
+          "weight": 5,
+          "status": "pending"
+        },
+        "E4": {
+          "cat": "trust",
+          "label": "No invented stats, clients, awards",
+          "weight": 6,
+          "status": "pending"
+        },
+        "E5": {
+          "cat": "trust",
+          "label": "Clear contact path",
+          "weight": 2,
+          "status": "pass",
+          "earned": 2
+        },
+        "E6": {
+          "cat": "trust",
+          "label": "Mid-page CTA",
+          "weight": 3,
+          "status": "pass",
+          "earned": 3
+        },
+        "E7": {
+          "cat": "trust",
+          "label": "sameAs on Organization",
+          "weight": 1,
+          "status": "pass",
+          "earned": 1
+        },
+        "N1": {
+          "cat": "entity",
+          "label": "Capability density 25+/1k",
+          "weight": 4,
+          "status": "fail",
+          "earned": 0
+        },
+        "N2": {
+          "cat": "entity",
+          "label": "Real third-party system names",
+          "weight": 3,
+          "status": "fail",
+          "earned": 0
+        },
+        "N3": {
+          "cat": "entity",
+          "label": "Entity coverage matches topic",
+          "weight": 3,
+          "status": "pending"
+        },
+        "W1": {
+          "cat": "writing",
+          "label": "Zero em dashes",
+          "weight": 3,
+          "status": "pass",
+          "earned": 3
+        },
+        "W2": {
+          "cat": "writing",
+          "label": "No AI-slop vocabulary",
+          "weight": 3,
+          "status": "pass",
+          "earned": 3
+        },
+        "W3": {
+          "cat": "writing",
+          "label": "Plain register (FK grade <= 10)",
+          "weight": 3,
+          "status": "pass",
+          "earned": 3
+        },
+        "W4": {
+          "cat": "writing",
+          "label": "Not commodity copy",
+          "weight": 4,
+          "status": "pending"
+        },
+        "W5": {
+          "cat": "writing",
+          "label": "Price figures unambiguously framed",
+          "weight": 2,
+          "status": "pending"
+        },
+        "M1": {
+          "cat": "media",
+          "label": "Comparison table where topic compares",
+          "weight": 2,
+          "status": "fail",
+          "earned": 0
+        },
+        "M2": {
+          "cat": "media",
+          "label": "3+ content images with alt",
+          "weight": 2,
+          "status": "fail",
+          "earned": 0
+        }
+      },
+      "pendingAi": [
+        "S9",
+        "A3",
+        "X5",
+        "X6",
+        "X7",
+        "E3",
+        "E4",
+        "N3",
+        "W4",
+        "W5"
+      ],
+      "hardFailRisk": [],
+      "evidenceForJudge": {
+        "answerFirst": {
+          "words": 31,
+          "text": "Websites for businesses, associations and suppliers who work in and around the public sector. Accessible, fast, and built so you can answer the questions a tender puts to you without scrambling."
+        },
+        "topTerms": [
+          "contentful",
+          "next.js",
+          "interaction to next paint",
+          "largest contentful paint",
+          "cumulative layout shift",
+          "headless commerce",
+          "core web vitals",
+          "wcag",
+          "cdn"
+        ],
+        "slopHits": [],
+        "priceHits": [],
+        "externalHosts": [
+          "w3.org",
+          "abs.gov.au",
+          "developers.google.com",
+          "github.com"
+        ],
+        "openingText": "       Canberra, ACT  Web design and SEO for Canberra organisations  Websites for businesses, associations and suppliers who work in and around the public sector. Accessible, fast, and built so you can answer the questions a tender puts to you without scrambling.  Canberra also happens to have the thinnest search competition of anywhere we measured in Australia. When we checked the main local SEO term in August 2026, the weakest organisation holding a first-page position had links from seven other websites. That is a genuinely low bar, and it will not stay that way.   Get a free review of your site, including an accessibility check  Send your address. We crawl the site, test it against the W"
+      }
+    }
+  ],
+  "failed": []
+}

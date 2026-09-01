@@ -213,6 +213,16 @@ const US_ROUTES: { path: string; source: string }[] = [
   { path: '/seattle/ecommerce-development',       source: 'src/app/seattle/ecommerce-development/page.tsx' },
   { path: '/sioux-falls/ecommerce-development',   source: 'src/app/sioux-falls/ecommerce-development/page.tsx' },
   { path: '/tampa/ecommerce-development',         source: 'src/app/tampa/ecommerce-development/page.tsx' },
+  // ── 2026-09-01 Lead Gen & Revenue Expansion ────────────────────────────────
+  { path: '/tools/ai-agent-roi-calculator',                 source: 'src/app/tools/ai-agent-roi-calculator/page.tsx' },
+  { path: '/tools/replatforming-cost-calculator',          source: 'src/app/tools/replatforming-cost-calculator/page.tsx' },
+  { path: '/services/ai-customer-support-agents',          source: 'src/app/services/ai-customer-support-agents/page.tsx' },
+  { path: '/services/ai-sdr-development',                  source: 'src/app/services/ai-sdr-development/page.tsx' },
+  { path: '/services/ecommerce-cro-agency',                source: 'src/app/services/ecommerce-cro-agency/page.tsx' },
+  { path: '/comparisons/n8n-vs-langchain-vs-crewai-enterprise', source: 'src/app/comparisons/n8n-vs-langchain-vs-crewai-enterprise/page.tsx' },
+  { path: '/comparisons/shopify-plus-vs-custom-headless-nextjs', source: 'src/app/comparisons/shopify-plus-vs-custom-headless-nextjs/page.tsx' },
+  { path: '/services/healthcare-ai-agents',                 source: 'src/app/services/healthcare-ai-agents/page.tsx' },
+  { path: '/services/contractor-ai-receptionist',           source: 'src/app/services/contractor-ai-receptionist/page.tsx' },
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {

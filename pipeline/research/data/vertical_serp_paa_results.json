@@ -1,0 +1,73 @@
+{
+  "ai medical receptionist": {
+    "organic_competitors": [
+      {
+        "domain": "omnimd.com",
+        "url": "https://omnimd.com/ai-front-desk/",
+        "title": "AI Front Desk Software for Medical Practices"
+      },
+      {
+        "domain": "www.medreception.ai",
+        "url": "https://www.medreception.ai/",
+        "title": "MedReception.ai"
+      },
+      {
+        "domain": "www.getfreed.ai",
+        "url": "https://www.getfreed.ai/front-desk",
+        "title": "AI front desk receptionist for clinics"
+      },
+      {
+        "domain": "www.ohmd.com",
+        "url": "https://www.ohmd.com/virtual-medical-receptionist",
+        "title": "Virtual medical receptionist: AI vs human vs hybrid (2026)"
+      },
+      {
+        "domain": "genie.healow.com",
+        "url": "https://genie.healow.com/blog/ai-agent-should-be-medical-receptionist/",
+        "title": "AI Medical Receptionist: Smarter Front Desk Help"
+      },
+      {
+        "domain": "www.deepcura.com",
+        "url": "https://www.deepcura.com/resources/best-ai-medical-receptionist",
+        "title": "Best AI Medical Receptionist in 2026 \u2014 Ranked & Reviewed"
+      },
+      {
+        "domain": "www.eclinicalworks.com",
+        "url": "https://www.eclinicalworks.com/blog/value-of-ai-virtual-receptionist-in-healthcare/",
+        "title": "The Value of a Healthcare AI Virtual Receptionist"
+      },
+      {
+        "domain": "www.curemd.com",
+        "url": "https://www.curemd.com/virtual-medical-receptionist?srsltid=AfmBOopi1to6ifvLWy-PoJDqKZN3FMZ5nafsZfcA15dYYkT6aKoVZsMM",
+        "title": "Virtual Medical Receptionist - 24/7 AI Patient Support"
+      }
+    ],
+    "people_also_ask": [
+      "Will a medical receptionist be replaced by AI?",
+      "How much does an AI receptionist cost?",
+      "Which AI medical receptionist is the best?",
+      "Is an AI receptionist worth it?"
+    ],
+    "ai_overview_present": true
+  },
+  "dental ai receptionist": {
+    "organic_competitors": [],
+    "people_also_ask": [],
+    "ai_overview_present": false
+  },
+  "ai voice agent for healthcare": {
+    "organic_competitors": [],
+    "people_also_ask": [],
+    "ai_overview_present": false
+  },
+  "ai agents for manufacturing": {
+    "organic_competitors": [],
+    "people_also_ask": [],
+    "ai_overview_present": false
+  },
+  "ai voice agent for restaurant": {
+    "organic_competitors": [],
+    "people_also_ask": [],
+    "ai_overview_present": false
+  }
+}

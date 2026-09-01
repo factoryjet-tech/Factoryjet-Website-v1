@@ -104,8 +104,16 @@ import { post as googleAdsCostSmallBusiness2026Post } from './posts/google-ads-c
 import { post as websiteRunningCostPerMonth2026Post } from './posts/website-running-cost-per-month-2026';
 import { post as amazonSellerFees100DollarSale2026Post } from './posts/amazon-seller-fees-100-dollar-sale-2026';
 import { post as theTrueCostOfShopifyPlus2026Post } from './posts/the-true-cost-of-shopify-plus-2026';
+import { post as howMuchDoesAnAiMedicalReceptionistCost2026Post } from './posts/how-much-does-an-ai-medical-receptionist-cost-2026';
+import { post as magentoToShopifyPlusMigrationChecklist2026Post } from './posts/magento-to-shopify-plus-migration-checklist-2026';
+import { post as multiAgentWorkflowsLanggraphN8nEnterpriseErp2026Post } from './posts/multi-agent-workflows-langgraph-n8n-enterprise-erp-2026';
+import { post as tiktokShopAmazonShopifyPlusMultiChannelInventorySync2026Post } from './posts/tiktok-shop-amazon-shopify-plus-multi-channel-inventory-sync-2026';
 
 export const POSTS: BlogPost[] = [
+  howMuchDoesAnAiMedicalReceptionistCost2026Post,
+  magentoToShopifyPlusMigrationChecklist2026Post,
+  multiAgentWorkflowsLanggraphN8nEnterpriseErp2026Post,
+  tiktokShopAmazonShopifyPlusMultiChannelInventorySync2026Post,
   theTrueCostOfShopifyPlus2026Post,
   // --- US MARKET CONTENT BATCH (2026-08-25) ---
   whatIsSeoSmallBusiness2026Post,

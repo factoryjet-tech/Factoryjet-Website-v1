@@ -1,0 +1,4529 @@
+{
+  "generated": "2026-08-24T19:10:31.055Z",
+  "filter": null,
+  "results": [
+    {
+      "url": "https://factoryjet.com/",
+      "ldBlocks": 8,
+      "nodes": 61,
+      "urlsChecked": 11,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/about",
+      "ldBlocks": 3,
+      "nodes": 19,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/contact",
+      "ldBlocks": 3,
+      "nodes": 21,
+      "urlsChecked": 11,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)",
+        "no dateModified in schema"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/portfolio",
+      "ldBlocks": 6,
+      "nodes": 21,
+      "urlsChecked": 12,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/pricing",
+      "ldBlocks": 4,
+      "nodes": 18,
+      "urlsChecked": 12,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)",
+        "3 FAQ questions in schema, none detected in DOM (accordion markup may differ)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/glossary",
+      "ldBlocks": 3,
+      "nodes": 64,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)",
+        "no dateModified in schema"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/sitemap",
+      "ldBlocks": 2,
+      "nodes": 8,
+      "urlsChecked": 11,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)",
+        "no dateModified in schema"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/ai-visibility-checker",
+      "ldBlocks": 5,
+      "nodes": 59,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)",
+        "no dateModified in schema"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/privacy",
+      "ldBlocks": 2,
+      "nodes": 8,
+      "urlsChecked": 11,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)",
+        "no dateModified in schema"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/terms",
+      "ldBlocks": 2,
+      "nodes": 8,
+      "urlsChecked": 11,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)",
+        "no dateModified in schema"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/refund-policy",
+      "ldBlocks": 2,
+      "nodes": 8,
+      "urlsChecked": 11,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)",
+        "no dateModified in schema"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/author/bhavesh-barot",
+      "ldBlocks": 4,
+      "nodes": 14,
+      "urlsChecked": 14,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)",
+        "no dateModified in schema"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/web-design",
+      "ldBlocks": 8,
+      "nodes": 103,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/web-design/ahmedabad",
+      "ldBlocks": 8,
+      "nodes": 76,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/web-design/bangalore",
+      "ldBlocks": 8,
+      "nodes": 77,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/web-design/bhubaneswar",
+      "ldBlocks": 8,
+      "nodes": 80,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/web-design/chennai",
+      "ldBlocks": 8,
+      "nodes": 72,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/web-design/coimbatore",
+      "ldBlocks": 8,
+      "nodes": 80,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/web-design/delhi",
+      "ldBlocks": 8,
+      "nodes": 76,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/web-design/gurgaon",
+      "ldBlocks": 8,
+      "nodes": 76,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/web-design/hyderabad",
+      "ldBlocks": 8,
+      "nodes": 76,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/web-design/indore",
+      "ldBlocks": 8,
+      "nodes": 83,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/web-design/jaipur",
+      "ldBlocks": 8,
+      "nodes": 80,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/web-design/kochi",
+      "ldBlocks": 8,
+      "nodes": 80,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/web-design/kolkata",
+      "ldBlocks": 8,
+      "nodes": 76,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/web-design/madurai",
+      "ldBlocks": 8,
+      "nodes": 72,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/web-design/mumbai",
+      "ldBlocks": 8,
+      "nodes": 77,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/web-design/nagpur",
+      "ldBlocks": 8,
+      "nodes": 80,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/web-design/noida",
+      "ldBlocks": 8,
+      "nodes": 76,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/web-design/pune",
+      "ldBlocks": 8,
+      "nodes": 76,
+      "urlsChecked": 14,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/web-design/rajkot",
+      "ldBlocks": 8,
+      "nodes": 76,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/web-design/surat",
+      "ldBlocks": 8,
+      "nodes": 72,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/web-design/thiruvananthapuram",
+      "ldBlocks": 8,
+      "nodes": 82,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/web-design/vadodara",
+      "ldBlocks": 8,
+      "nodes": 76,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/web-design/visakhapatnam",
+      "ldBlocks": 8,
+      "nodes": 78,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/ai-seo",
+      "ldBlocks": 6,
+      "nodes": 63,
+      "urlsChecked": 12,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/ecommerce-development",
+      "ldBlocks": 7,
+      "nodes": 80,
+      "urlsChecked": 12,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/shopify-development",
+      "ldBlocks": 8,
+      "nodes": 78,
+      "urlsChecked": 12,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/wordpress-development",
+      "ldBlocks": 7,
+      "nodes": 71,
+      "urlsChecked": 12,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/n8n-automation",
+      "ldBlocks": 7,
+      "nodes": 65,
+      "urlsChecked": 12,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/whatsapp-chatbot",
+      "ldBlocks": 8,
+      "nodes": 64,
+      "urlsChecked": 14,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/seo",
+      "ldBlocks": 7,
+      "nodes": 70,
+      "urlsChecked": 12,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/digital-marketing",
+      "ldBlocks": 8,
+      "nodes": 92,
+      "urlsChecked": 12,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/seo/mumbai",
+      "ldBlocks": 8,
+      "nodes": 67,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/seo/bangalore",
+      "ldBlocks": 8,
+      "nodes": 68,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/seo/pune",
+      "ldBlocks": 8,
+      "nodes": 69,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/seo/delhi",
+      "ldBlocks": 8,
+      "nodes": 68,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/seo/ahmedabad",
+      "ldBlocks": 8,
+      "nodes": 72,
+      "urlsChecked": 14,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/seo/noida",
+      "ldBlocks": 8,
+      "nodes": 72,
+      "urlsChecked": 14,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/seo/jaipur",
+      "ldBlocks": 8,
+      "nodes": 71,
+      "urlsChecked": 14,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/seo/vadodara",
+      "ldBlocks": 8,
+      "nodes": 72,
+      "urlsChecked": 14,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/seo/kolkata",
+      "ldBlocks": 8,
+      "nodes": 73,
+      "urlsChecked": 14,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/seo/hyderabad",
+      "ldBlocks": 8,
+      "nodes": 67,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/seo/chennai",
+      "ldBlocks": 8,
+      "nodes": 67,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/seo/local-seo",
+      "ldBlocks": 7,
+      "nodes": 61,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/seo/technical-seo",
+      "ldBlocks": 7,
+      "nodes": 61,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/seo/ecommerce-seo",
+      "ldBlocks": 7,
+      "nodes": 61,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/seo/link-building",
+      "ldBlocks": 7,
+      "nodes": 61,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/seo/seo-audit",
+      "ldBlocks": 7,
+      "nodes": 61,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/ecommerce-development/ahmedabad",
+      "ldBlocks": 8,
+      "nodes": 67,
+      "urlsChecked": 15,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/ecommerce-development/bangalore",
+      "ldBlocks": 8,
+      "nodes": 69,
+      "urlsChecked": 15,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/ecommerce-development/chandigarh",
+      "ldBlocks": 8,
+      "nodes": 67,
+      "urlsChecked": 15,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/ecommerce-development/chennai",
+      "ldBlocks": 8,
+      "nodes": 67,
+      "urlsChecked": 15,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/ecommerce-development/delhi",
+      "ldBlocks": 8,
+      "nodes": 67,
+      "urlsChecked": 15,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/ecommerce-development/hyderabad",
+      "ldBlocks": 8,
+      "nodes": 67,
+      "urlsChecked": 15,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/ecommerce-development/jaipur",
+      "ldBlocks": 8,
+      "nodes": 67,
+      "urlsChecked": 15,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/ecommerce-development/kochi",
+      "ldBlocks": 8,
+      "nodes": 67,
+      "urlsChecked": 15,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/ecommerce-development/kolkata",
+      "ldBlocks": 8,
+      "nodes": 67,
+      "urlsChecked": 15,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/ecommerce-development/lucknow",
+      "ldBlocks": 8,
+      "nodes": 67,
+      "urlsChecked": 15,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/ecommerce-development/mumbai",
+      "ldBlocks": 8,
+      "nodes": 69,
+      "urlsChecked": 15,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/ecommerce-development/pune",
+      "ldBlocks": 8,
+      "nodes": 67,
+      "urlsChecked": 15,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/ecommerce-development/surat",
+      "ldBlocks": 8,
+      "nodes": 67,
+      "urlsChecked": 15,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/digital-marketing/mumbai",
+      "ldBlocks": 8,
+      "nodes": 104,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/digital-marketing/bangalore",
+      "ldBlocks": 8,
+      "nodes": 108,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/digital-marketing/delhi",
+      "ldBlocks": 8,
+      "nodes": 113,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/digital-marketing/pune",
+      "ldBlocks": 8,
+      "nodes": 108,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/digital-marketing/hyderabad",
+      "ldBlocks": 8,
+      "nodes": 107,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/digital-marketing/noida",
+      "ldBlocks": 8,
+      "nodes": 104,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/digital-marketing/ahmedabad",
+      "ldBlocks": 8,
+      "nodes": 104,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/digital-marketing/chennai",
+      "ldBlocks": 8,
+      "nodes": 104,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/digital-marketing/kolkata",
+      "ldBlocks": 8,
+      "nodes": 104,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/digital-marketing/surat",
+      "ldBlocks": 8,
+      "nodes": 78,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/digital-marketing/indore",
+      "ldBlocks": 8,
+      "nodes": 78,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/digital-marketing/chandigarh",
+      "ldBlocks": 8,
+      "nodes": 78,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/digital-marketing/lucknow",
+      "ldBlocks": 8,
+      "nodes": 78,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/digital-marketing/jaipur",
+      "ldBlocks": 8,
+      "nodes": 78,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/uk",
+      "ldBlocks": 10,
+      "nodes": 87,
+      "urlsChecked": 20,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)",
+        "28 FAQ questions in schema, none detected in DOM (accordion markup may differ)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/uk/web-design",
+      "ldBlocks": 3,
+      "nodes": 63,
+      "urlsChecked": 17,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/uk/shopify-development",
+      "ldBlocks": 3,
+      "nodes": 54,
+      "urlsChecked": 15,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)",
+        "no dateModified in schema"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/uk/shopify-seo",
+      "ldBlocks": 3,
+      "nodes": 54,
+      "urlsChecked": 15,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)",
+        "no dateModified in schema"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/uk/ecommerce-seo",
+      "ldBlocks": 3,
+      "nodes": 54,
+      "urlsChecked": 15,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)",
+        "no dateModified in schema"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/uk/ai-seo",
+      "ldBlocks": 3,
+      "nodes": 63,
+      "urlsChecked": 15,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)",
+        "no dateModified in schema"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/uk/seo",
+      "ldBlocks": 3,
+      "nodes": 71,
+      "urlsChecked": 15,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)",
+        "no dateModified in schema"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/uk/ecommerce-development",
+      "ldBlocks": 3,
+      "nodes": 72,
+      "urlsChecked": 17,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/uk/ai-agents",
+      "ldBlocks": 3,
+      "nodes": 84,
+      "urlsChecked": 17,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/uk/local-seo",
+      "ldBlocks": 3,
+      "nodes": 71,
+      "urlsChecked": 15,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)",
+        "no dateModified in schema"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/uk/seo-audit",
+      "ldBlocks": 3,
+      "nodes": 77,
+      "urlsChecked": 15,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)",
+        "no dateModified in schema"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/uk/london",
+      "ldBlocks": 3,
+      "nodes": 65,
+      "urlsChecked": 17,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/uk/leeds",
+      "ldBlocks": 7,
+      "nodes": 59,
+      "urlsChecked": 17,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)",
+        "12 FAQ questions in schema, none detected in DOM (accordion markup may differ)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/uk/manchester",
+      "ldBlocks": 7,
+      "nodes": 67,
+      "urlsChecked": 17,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)",
+        "16 FAQ questions in schema, none detected in DOM (accordion markup may differ)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/uk/birmingham",
+      "ldBlocks": 3,
+      "nodes": 22,
+      "urlsChecked": 16,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/uk/bristol",
+      "ldBlocks": 5,
+      "nodes": 64,
+      "urlsChecked": 16,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/uk/edinburgh",
+      "ldBlocks": 5,
+      "nodes": 64,
+      "urlsChecked": 16,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/uk/sheffield",
+      "ldBlocks": 7,
+      "nodes": 51,
+      "urlsChecked": 17,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)",
+        "8 FAQ questions in schema, none detected in DOM (accordion markup may differ)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/uk/nottingham",
+      "ldBlocks": 5,
+      "nodes": 64,
+      "urlsChecked": 16,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/uk/leicester",
+      "ldBlocks": 5,
+      "nodes": 64,
+      "urlsChecked": 16,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/uk/liverpool",
+      "ldBlocks": 3,
+      "nodes": 22,
+      "urlsChecked": 16,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/uk/cardiff",
+      "ldBlocks": 5,
+      "nodes": 64,
+      "urlsChecked": 16,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/uk/glasgow",
+      "ldBlocks": 5,
+      "nodes": 64,
+      "urlsChecked": 16,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/uk/newcastle",
+      "ldBlocks": 5,
+      "nodes": 64,
+      "urlsChecked": 16,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/uk/southampton",
+      "ldBlocks": 5,
+      "nodes": 64,
+      "urlsChecked": 16,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/uk/brighton",
+      "ldBlocks": 5,
+      "nodes": 64,
+      "urlsChecked": 16,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/uk/oxford",
+      "ldBlocks": 5,
+      "nodes": 64,
+      "urlsChecked": 16,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/uk/cambridge",
+      "ldBlocks": 5,
+      "nodes": 64,
+      "urlsChecked": 16,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/uk/derby",
+      "ldBlocks": 5,
+      "nodes": 64,
+      "urlsChecked": 16,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/uk/coventry",
+      "ldBlocks": 5,
+      "nodes": 64,
+      "urlsChecked": 16,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/uk/hull",
+      "ldBlocks": 5,
+      "nodes": 64,
+      "urlsChecked": 16,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/uk/plymouth",
+      "ldBlocks": 5,
+      "nodes": 64,
+      "urlsChecked": 16,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/uk/london/web-design",
+      "ldBlocks": 3,
+      "nodes": 67,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/uk/london/seo",
+      "ldBlocks": 3,
+      "nodes": 67,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/b2b-ecommerce",
+      "ldBlocks": 8,
+      "nodes": 90,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/ecommerce-for-manufacturers",
+      "ldBlocks": 7,
+      "nodes": 79,
+      "urlsChecked": 14,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/ai-citation-study",
+      "ldBlocks": 7,
+      "nodes": 53,
+      "urlsChecked": 14,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/replatforming",
+      "ldBlocks": 7,
+      "nodes": 60,
+      "urlsChecked": 17,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/replatforming/magento-to-shopify",
+      "ldBlocks": 7,
+      "nodes": 53,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/replatforming/woocommerce-to-shopify",
+      "ldBlocks": 7,
+      "nodes": 47,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/replatforming/squarespace-to-shopify",
+      "ldBlocks": 7,
+      "nodes": 47,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/replatforming/wix-to-shopify",
+      "ldBlocks": 7,
+      "nodes": 47,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/replatforming/wordpress-to-shopify",
+      "ldBlocks": 7,
+      "nodes": 47,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/replatforming/salesforce-commerce-cloud-to-shopify-plus",
+      "ldBlocks": 7,
+      "nodes": 43,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/omnichannel-commerce",
+      "ldBlocks": 8,
+      "nodes": 83,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/ecommerce-consulting",
+      "ldBlocks": 6,
+      "nodes": 57,
+      "urlsChecked": 12,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/bigcommerce-development",
+      "ldBlocks": 8,
+      "nodes": 60,
+      "urlsChecked": 12,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/headless-commerce",
+      "ldBlocks": 6,
+      "nodes": 68,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/commerceflo",
+      "ldBlocks": 7,
+      "nodes": 71,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/agentic-commerce",
+      "ldBlocks": 6,
+      "nodes": 62,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/best-ecommerce-platforms",
+      "ldBlocks": 8,
+      "nodes": 64,
+      "urlsChecked": 12,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/faq",
+      "ldBlocks": 4,
+      "nodes": 60,
+      "urlsChecked": 12,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog",
+      "ldBlocks": 4,
+      "nodes": 14,
+      "urlsChecked": 12,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)",
+        "no dateModified in schema"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/case-studies",
+      "ldBlocks": 2,
+      "nodes": 8,
+      "urlsChecked": 11,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)",
+        "no dateModified in schema"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services",
+      "ldBlocks": 5,
+      "nodes": 78,
+      "urlsChecked": 23,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)",
+        "22 FAQ questions in schema, none detected in DOM (accordion markup may differ)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/web-design",
+      "ldBlocks": 6,
+      "nodes": 70,
+      "urlsChecked": 12,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/shopify-development",
+      "ldBlocks": 7,
+      "nodes": 77,
+      "urlsChecked": 13,
+      "fails": [
+        {
+          "check": "S4-entities",
+          "detail": "2 \"WebPage\" nodes, 1 carry @id (1 distinct) — un-@id'd duplicates compete as separate entities"
+        }
+      ],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/website-redesign",
+      "ldBlocks": 7,
+      "nodes": 81,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/wordpress-development",
+      "ldBlocks": 7,
+      "nodes": 65,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/web-application-development",
+      "ldBlocks": 7,
+      "nodes": 72,
+      "urlsChecked": 14,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)",
+        "23 FAQ questions in schema, none detected in DOM (accordion markup may differ)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/ai-automation",
+      "ldBlocks": 8,
+      "nodes": 90,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/seo",
+      "ldBlocks": 7,
+      "nodes": 85,
+      "urlsChecked": 14,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)",
+        "no dateModified in schema"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/local-seo",
+      "ldBlocks": 7,
+      "nodes": 71,
+      "urlsChecked": 14,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/ecommerce-seo",
+      "ldBlocks": 7,
+      "nodes": 65,
+      "urlsChecked": 14,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/shopify-seo",
+      "ldBlocks": 7,
+      "nodes": 57,
+      "urlsChecked": 14,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/small-business-seo",
+      "ldBlocks": 7,
+      "nodes": 63,
+      "urlsChecked": 14,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/seo-audit",
+      "ldBlocks": 7,
+      "nodes": 63,
+      "urlsChecked": 14,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/seo-consulting",
+      "ldBlocks": 8,
+      "nodes": 116,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/roofing-seo",
+      "ldBlocks": 9,
+      "nodes": 139,
+      "urlsChecked": 14,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/dental-seo",
+      "ldBlocks": 7,
+      "nodes": 59,
+      "urlsChecked": 14,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/healthcare-seo",
+      "ldBlocks": 7,
+      "nodes": 75,
+      "urlsChecked": 14,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/law-firm-seo",
+      "ldBlocks": 8,
+      "nodes": 72,
+      "urlsChecked": 14,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/ai-seo",
+      "ldBlocks": 8,
+      "nodes": 84,
+      "urlsChecked": 20,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/generative-engine-optimization",
+      "ldBlocks": 7,
+      "nodes": 79,
+      "urlsChecked": 14,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/shopify-plus-agency",
+      "ldBlocks": 7,
+      "nodes": 94,
+      "urlsChecked": 14,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/ai-agent-development",
+      "ldBlocks": 6,
+      "nodes": 98,
+      "urlsChecked": 14,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/ai-agent-development/ai-chatbot",
+      "ldBlocks": 7,
+      "nodes": 62,
+      "urlsChecked": 14,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/ai-agent-development/ai-customer-support",
+      "ldBlocks": 6,
+      "nodes": 85,
+      "urlsChecked": 14,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/ai-agent-development/ai-marketing-agent",
+      "ldBlocks": 7,
+      "nodes": 61,
+      "urlsChecked": 14,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/ai-agent-development/ai-sales-agent",
+      "ldBlocks": 6,
+      "nodes": 85,
+      "urlsChecked": 14,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/ai-agent-development/ai-scheduling-agent",
+      "ldBlocks": 7,
+      "nodes": 67,
+      "urlsChecked": 14,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/ai-agent-development/ai-voice-agent",
+      "ldBlocks": 6,
+      "nodes": 85,
+      "urlsChecked": 14,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/ai-agent-development/ai-workflow-automation",
+      "ldBlocks": 6,
+      "nodes": 85,
+      "urlsChecked": 14,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/ai-agent-development/rfq-bidding-agent",
+      "ldBlocks": 7,
+      "nodes": 79,
+      "urlsChecked": 15,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/ai-agent-development/manufacturing-operations-agent",
+      "ldBlocks": 6,
+      "nodes": 64,
+      "urlsChecked": 15,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/ai-agent-development/procurement-supply-chain-agent",
+      "ldBlocks": 7,
+      "nodes": 72,
+      "urlsChecked": 15,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/ai-chatbot-development",
+      "ldBlocks": 7,
+      "nodes": 74,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/ai-integration-services",
+      "ldBlocks": 7,
+      "nodes": 72,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/ai-workflow-automation",
+      "ldBlocks": 7,
+      "nodes": 70,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/small-business-website-design",
+      "ldBlocks": 7,
+      "nodes": 74,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/magento-development",
+      "ldBlocks": 7,
+      "nodes": 80,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/woocommerce-development",
+      "ldBlocks": 7,
+      "nodes": 76,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/website-cost",
+      "ldBlocks": 7,
+      "nodes": 75,
+      "urlsChecked": 14,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/law-firm-website-design",
+      "ldBlocks": 7,
+      "nodes": 66,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/real-estate-website-design",
+      "ldBlocks": 7,
+      "nodes": 66,
+      "urlsChecked": 14,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)",
+        "20 FAQ questions in schema, none detected in DOM (accordion markup may differ)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/austin/web-design",
+      "ldBlocks": 7,
+      "nodes": 65,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/miami/web-design",
+      "ldBlocks": 7,
+      "nodes": 65,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/denver/web-design",
+      "ldBlocks": 7,
+      "nodes": 65,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/nashville/web-design",
+      "ldBlocks": 7,
+      "nodes": 65,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/portland/web-design",
+      "ldBlocks": 7,
+      "nodes": 65,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/charlotte/web-design",
+      "ldBlocks": 7,
+      "nodes": 65,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/raleigh/web-design",
+      "ldBlocks": 7,
+      "nodes": 65,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/cleveland/web-design",
+      "ldBlocks": 7,
+      "nodes": 61,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/new-york/web-design",
+      "ldBlocks": 7,
+      "nodes": 69,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/tampa/web-design",
+      "ldBlocks": 7,
+      "nodes": 65,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/b2b-website-design",
+      "ldBlocks": 8,
+      "nodes": 110,
+      "urlsChecked": 15,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/manufacturing-website-design",
+      "ldBlocks": 8,
+      "nodes": 112,
+      "urlsChecked": 14,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/saas-website-design",
+      "ldBlocks": 8,
+      "nodes": 101,
+      "urlsChecked": 14,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/restaurant-website-design",
+      "ldBlocks": 8,
+      "nodes": 106,
+      "urlsChecked": 14,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/nonprofit-website-design",
+      "ldBlocks": 9,
+      "nodes": 122,
+      "urlsChecked": 15,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/ai-agents-for-real-estate",
+      "ldBlocks": 8,
+      "nodes": 108,
+      "urlsChecked": 15,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/ai-agents-for-healthcare",
+      "ldBlocks": 8,
+      "nodes": 102,
+      "urlsChecked": 15,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/ecommerce-app-development",
+      "ldBlocks": 8,
+      "nodes": 113,
+      "urlsChecked": 14,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/dallas/web-design",
+      "ldBlocks": 7,
+      "nodes": 65,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/chicago/web-design",
+      "ldBlocks": 7,
+      "nodes": 65,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/phoenix/web-design",
+      "ldBlocks": 7,
+      "nodes": 65,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/san-diego/web-design",
+      "ldBlocks": 7,
+      "nodes": 65,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/detroit/web-design",
+      "ldBlocks": 7,
+      "nodes": 65,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/dallas/seo",
+      "ldBlocks": 7,
+      "nodes": 69,
+      "urlsChecked": 18,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/chicago/seo",
+      "ldBlocks": 7,
+      "nodes": 69,
+      "urlsChecked": 18,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/phoenix/seo",
+      "ldBlocks": 7,
+      "nodes": 65,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/san-diego/seo",
+      "ldBlocks": 7,
+      "nodes": 65,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/boston/seo",
+      "ldBlocks": 7,
+      "nodes": 65,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/las-vegas/seo",
+      "ldBlocks": 7,
+      "nodes": 64,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/los-angeles/seo",
+      "ldBlocks": 7,
+      "nodes": 65,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/atlanta/web-design",
+      "ldBlocks": 7,
+      "nodes": 65,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/seattle/web-design",
+      "ldBlocks": 7,
+      "nodes": 65,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/houston/web-design",
+      "ldBlocks": 7,
+      "nodes": 69,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/st-louis/web-design",
+      "ldBlocks": 7,
+      "nodes": 65,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/boise/seo",
+      "ldBlocks": 7,
+      "nodes": 69,
+      "urlsChecked": 18,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/chattanooga/seo",
+      "ldBlocks": 7,
+      "nodes": 69,
+      "urlsChecked": 18,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/fargo/seo",
+      "ldBlocks": 7,
+      "nodes": 69,
+      "urlsChecked": 18,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/lincoln/seo",
+      "ldBlocks": 7,
+      "nodes": 69,
+      "urlsChecked": 18,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/sioux-falls/seo",
+      "ldBlocks": 7,
+      "nodes": 61,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/tampa/seo",
+      "ldBlocks": 7,
+      "nodes": 65,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/charlotte/seo",
+      "ldBlocks": 7,
+      "nodes": 61,
+      "urlsChecked": 18,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/cleveland/seo",
+      "ldBlocks": 7,
+      "nodes": 62,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/nashville/seo",
+      "ldBlocks": 7,
+      "nodes": 65,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/austin/seo",
+      "ldBlocks": 7,
+      "nodes": 62,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/colorado-springs/seo",
+      "ldBlocks": 7,
+      "nodes": 61,
+      "urlsChecked": 17,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/denver/seo",
+      "ldBlocks": 7,
+      "nodes": 65,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/providence/seo",
+      "ldBlocks": 7,
+      "nodes": 69,
+      "urlsChecked": 18,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/arlington/seo",
+      "ldBlocks": 7,
+      "nodes": 69,
+      "urlsChecked": 18,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/corpus-christi/seo",
+      "ldBlocks": 7,
+      "nodes": 69,
+      "urlsChecked": 18,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/huntington-beach/seo",
+      "ldBlocks": 7,
+      "nodes": 69,
+      "urlsChecked": 18,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/lakewood-ranch/seo",
+      "ldBlocks": 7,
+      "nodes": 60,
+      "urlsChecked": 17,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/austin/ai-agents",
+      "ldBlocks": 7,
+      "nodes": 77,
+      "urlsChecked": 14,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/denver/ai-agents",
+      "ldBlocks": 7,
+      "nodes": 77,
+      "urlsChecked": 14,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/raleigh/ai-agents",
+      "ldBlocks": 7,
+      "nodes": 77,
+      "urlsChecked": 14,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/charlotte/ai-automation",
+      "ldBlocks": 7,
+      "nodes": 80,
+      "urlsChecked": 14,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/miami/ai-automation",
+      "ldBlocks": 7,
+      "nodes": 77,
+      "urlsChecked": 14,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/ecommerce-growth-agency",
+      "ldBlocks": 5,
+      "nodes": 69,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)",
+        "no dateModified in schema"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/ecommerce-marketing-agency",
+      "ldBlocks": 5,
+      "nodes": 118,
+      "urlsChecked": 14,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/marketplace-management",
+      "ldBlocks": 7,
+      "nodes": 58,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)",
+        "no dateModified in schema"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/faire-wholesale-marketplace",
+      "ldBlocks": 7,
+      "nodes": 54,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)",
+        "no dateModified in schema"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/target-plus-marketplace",
+      "ldBlocks": 7,
+      "nodes": 56,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)",
+        "no dateModified in schema"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/marketplace-fee-calculator",
+      "ldBlocks": 6,
+      "nodes": 58,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)",
+        "no dateModified in schema"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/omnichannel-vs-multichannel-commerce",
+      "ldBlocks": 6,
+      "nodes": 53,
+      "urlsChecked": 14,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)",
+        "no dateModified in schema"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/agentic-commerce-for-brands",
+      "ldBlocks": 6,
+      "nodes": 57,
+      "urlsChecked": 14,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)",
+        "no dateModified in schema"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/shopify-plus-b2b",
+      "ldBlocks": 8,
+      "nodes": 62,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/bigcommerce-b2b",
+      "ldBlocks": 7,
+      "nodes": 60,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)",
+        "no dateModified in schema"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/amazon-agency",
+      "ldBlocks": 5,
+      "nodes": 77,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)",
+        "no dateModified in schema"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/tiktok-shop-agency",
+      "ldBlocks": 5,
+      "nodes": 73,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)",
+        "no dateModified in schema"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/services/walmart-marketplace-agency",
+      "ldBlocks": 5,
+      "nodes": 73,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)",
+        "no dateModified in schema"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/ecommerce-speed-calculator",
+      "ldBlocks": 5,
+      "nodes": 60,
+      "urlsChecked": 12,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)",
+        "no dateModified in schema"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/comparisons/shopify-plus-vs-bigcommerce",
+      "ldBlocks": 5,
+      "nodes": 58,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)",
+        "no dateModified in schema"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/comparisons/shopify-plus-vs-magento",
+      "ldBlocks": 5,
+      "nodes": 60,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)",
+        "no dateModified in schema"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/comparisons/headless-commerce-vs-monolithic",
+      "ldBlocks": 5,
+      "nodes": 62,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)",
+        "no dateModified in schema"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/replatforming/bigcommerce-to-shopify-plus",
+      "ldBlocks": 7,
+      "nodes": 47,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/replatforming/netsuite-suitecommerce-to-shopify-plus",
+      "ldBlocks": 7,
+      "nodes": 47,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/san-francisco/ecommerce-development",
+      "ldBlocks": 7,
+      "nodes": 65,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/dallas/ecommerce-development",
+      "ldBlocks": 7,
+      "nodes": 69,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/atlanta/ecommerce-development",
+      "ldBlocks": 7,
+      "nodes": 65,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/austin/ecommerce-development",
+      "ldBlocks": 7,
+      "nodes": 61,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/boise/ecommerce-development",
+      "ldBlocks": 7,
+      "nodes": 69,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/chicago/ecommerce-development",
+      "ldBlocks": 7,
+      "nodes": 69,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/charlotte/ecommerce-development",
+      "ldBlocks": 7,
+      "nodes": 61,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/chattanooga/ecommerce-development",
+      "ldBlocks": 7,
+      "nodes": 69,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/denver/ecommerce-development",
+      "ldBlocks": 7,
+      "nodes": 65,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/fargo/ecommerce-development",
+      "ldBlocks": 7,
+      "nodes": 69,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/lincoln/ecommerce-development",
+      "ldBlocks": 7,
+      "nodes": 69,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/los-angeles/ecommerce-development",
+      "ldBlocks": 7,
+      "nodes": 65,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/miami/ecommerce-development",
+      "ldBlocks": 7,
+      "nodes": 65,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/nashville/ecommerce-development",
+      "ldBlocks": 7,
+      "nodes": 65,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/new-york/ecommerce-development",
+      "ldBlocks": 7,
+      "nodes": 69,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/portland/ecommerce-development",
+      "ldBlocks": 7,
+      "nodes": 65,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/raleigh/ecommerce-development",
+      "ldBlocks": 7,
+      "nodes": 69,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/seattle/ecommerce-development",
+      "ldBlocks": 7,
+      "nodes": 65,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/sioux-falls/ecommerce-development",
+      "ldBlocks": 7,
+      "nodes": 61,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/tampa/ecommerce-development",
+      "ldBlocks": 7,
+      "nodes": 65,
+      "urlsChecked": 18,
+      "fails": [
+        {
+          "check": "S7-rating",
+          "detail": "AggregateRating 4.9/5 from 64 reviews is in the JSON-LD, but the rendered page shows no rating, stars, or review text. Render the reviews to make the markup eligible."
+        }
+      ],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/uae",
+      "ldBlocks": 7,
+      "nodes": 43,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)",
+        "12 FAQ questions in schema, none detected in DOM (accordion markup may differ)",
+        "no dateModified in schema"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/uae/ecommerce-development",
+      "ldBlocks": 3,
+      "nodes": 87,
+      "urlsChecked": 15,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/au",
+      "ldBlocks": 8,
+      "nodes": 71,
+      "urlsChecked": 13,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/ai-customer-support-agent-architecture-guide",
+      "ldBlocks": 5,
+      "nodes": 43,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/how-to-build-custom-ai-sdr-b2b-sales-2026",
+      "ldBlocks": 5,
+      "nodes": 43,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/n8n-vs-zapier-vs-make-ai-workflow-automation-2026",
+      "ldBlocks": 5,
+      "nodes": 43,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/agentic-commerce-autonomous-ai-agents-ecommerce-2026",
+      "ldBlocks": 5,
+      "nodes": 43,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/seo-tips-small-business-2026",
+      "ldBlocks": 5,
+      "nodes": 65,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/what-is-agentic-commerce",
+      "ldBlocks": 6,
+      "nodes": 107,
+      "urlsChecked": 17,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/agentic-commerce-vs-traditional-ecommerce",
+      "ldBlocks": 6,
+      "nodes": 92,
+      "urlsChecked": 20,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/best-ai-for-ecommerce-2026",
+      "ldBlocks": 6,
+      "nodes": 96,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/what-does-an-ai-automation-agency-do",
+      "ldBlocks": 6,
+      "nodes": 103,
+      "urlsChecked": 19,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/will-ai-replace-web-designers",
+      "ldBlocks": 6,
+      "nodes": 96,
+      "urlsChecked": 17,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/is-geo-replacing-seo-2026",
+      "ldBlocks": 5,
+      "nodes": 59,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/what-does-an-ai-automation-agency-do-uk",
+      "ldBlocks": 5,
+      "nodes": 57,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/local-seo-uk-small-businesses-map-pack",
+      "ldBlocks": 5,
+      "nodes": 57,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/how-to-choose-digital-marketing-agency-india-2026",
+      "ldBlocks": 6,
+      "nodes": 77,
+      "urlsChecked": 17,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/digital-marketing-for-small-business-india",
+      "ldBlocks": 6,
+      "nodes": 83,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/hidden-cost-of-cheap-websites-india",
+      "ldBlocks": 5,
+      "nodes": 37,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/react-vs-wordpress",
+      "ldBlocks": 5,
+      "nodes": 35,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/website-redesign-checklist-2026",
+      "ldBlocks": 5,
+      "nodes": 69,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/b2b-web-design-trust-signals",
+      "ldBlocks": 5,
+      "nodes": 69,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/mobile-only-design-strategy",
+      "ldBlocks": 5,
+      "nodes": 73,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/shopify-vs-woocommerce-india-comparison",
+      "ldBlocks": 5,
+      "nodes": 69,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/reduce-cart-abandonment-ui-ux",
+      "ldBlocks": 5,
+      "nodes": 69,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/scaling-ecommerce-infrastructure",
+      "ldBlocks": 5,
+      "nodes": 69,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/quick-commerce-app-design-trends",
+      "ldBlocks": 5,
+      "nodes": 69,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/best-payment-gateway-india-2026",
+      "ldBlocks": 5,
+      "nodes": 69,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/wordpress-security-audit-guide",
+      "ldBlocks": 5,
+      "nodes": 69,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/importance-of-website-maintenance-seo",
+      "ldBlocks": 5,
+      "nodes": 69,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/core-web-vitals-optimization-service",
+      "ldBlocks": 5,
+      "nodes": 71,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/cost-of-website-downtime-calculator",
+      "ldBlocks": 5,
+      "nodes": 69,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/wordpress-speed-optimization-plugin-audit",
+      "ldBlocks": 5,
+      "nodes": 73,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/aio-artificial-intelligence-optimization-guide",
+      "ldBlocks": 5,
+      "nodes": 69,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/headless-commerce-pros-cons",
+      "ldBlocks": 5,
+      "nodes": 71,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/local-seo-multi-location-business",
+      "ldBlocks": 5,
+      "nodes": 69,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/color-psychology-web-design-india",
+      "ldBlocks": 5,
+      "nodes": 71,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/mvp-development-strategy-startups",
+      "ldBlocks": 5,
+      "nodes": 69,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/what-is-webflow",
+      "ldBlocks": 5,
+      "nodes": 35,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/top-web-design-companies-mumbai",
+      "ldBlocks": 5,
+      "nodes": 35,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/how-uk-smbs-evaluate-woocommerce-agency-2026",
+      "ldBlocks": 5,
+      "nodes": 35,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/evaluate-web-design-agency-us-smbs-2026",
+      "ldBlocks": 5,
+      "nodes": 43,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/website-cost-small-business-usa-2026",
+      "ldBlocks": 5,
+      "nodes": 63,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/shopify-vs-custom-website-us-small-business-2026",
+      "ldBlocks": 5,
+      "nodes": 67,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/best-web-design-agency-us-small-business-2026",
+      "ldBlocks": 5,
+      "nodes": 61,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/woocommerce-seo-tips-uk-stores",
+      "ldBlocks": 5,
+      "nodes": 43,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/ai-agents-uk-smbs-guide",
+      "ldBlocks": 5,
+      "nodes": 43,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/website-redesign-cost-uk-2026-complete-pricing-guide",
+      "ldBlocks": 5,
+      "nodes": 39,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/best-web-design-agencies-uk-smbs-2026",
+      "ldBlocks": 5,
+      "nodes": 43,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/top-web-design-agencies-london-smbs-2026",
+      "ldBlocks": 5,
+      "nodes": 43,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/what-does-web-design-agency-do-2026",
+      "ldBlocks": 5,
+      "nodes": 43,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/custom-online-store-development-uk-smbs-2026",
+      "ldBlocks": 5,
+      "nodes": 43,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/shopify-store-development-uk-smbs-2026-guide",
+      "ldBlocks": 5,
+      "nodes": 43,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/ecommerce-development-uk-shopify-woocommerce-2026",
+      "ldBlocks": 5,
+      "nodes": 43,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/best-web-design-companies-small-business-australia",
+      "ldBlocks": 5,
+      "nodes": 69,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/best-ecommerce-agency-small-business-australia-2026",
+      "ldBlocks": 5,
+      "nodes": 71,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/seo-recruitment-agencies-uk-2026",
+      "ldBlocks": 5,
+      "nodes": 43,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/best-wordpress-development-companies-australia-2026",
+      "ldBlocks": 5,
+      "nodes": 43,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/how-to-choose-web-design-agency-uk-2026",
+      "ldBlocks": 5,
+      "nodes": 43,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/uk-web-design-agency-pricing-2026-smb-guide",
+      "ldBlocks": 5,
+      "nodes": 43,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/best-lead-generation-websites-small-business-2026",
+      "ldBlocks": 5,
+      "nodes": 43,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/website-redesign-small-business-uk-2026-ai-powered",
+      "ldBlocks": 5,
+      "nodes": 49,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/how-to-build-online-store-uk-smb-guide-2026",
+      "ldBlocks": 5,
+      "nodes": 43,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/top-ecommerce-development-agencies-uk-2026",
+      "ldBlocks": 5,
+      "nodes": 39,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/create-ai-agents-business-uk-smb-guide-2026",
+      "ldBlocks": 5,
+      "nodes": 43,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/best-ai-automation-tools-small-business-uk-2026",
+      "ldBlocks": 5,
+      "nodes": 43,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/build-ai-agents-small-business-diy-vs-agency-2026",
+      "ldBlocks": 5,
+      "nodes": 43,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/ai-agents-business-operations-uk-smbs-2026",
+      "ldBlocks": 5,
+      "nodes": 45,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/ai-automation-services-small-business-uk-2026",
+      "ldBlocks": 5,
+      "nodes": 43,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/ai-seo-agency-uk-geo-aeo-organic-growth",
+      "ldBlocks": 5,
+      "nodes": 43,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/best-seo-agency-uk-small-business-2026",
+      "ldBlocks": 5,
+      "nodes": 43,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/sales-automation-ai-uk-smbs-workflows",
+      "ldBlocks": 5,
+      "nodes": 39,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/best-sales-automation-small-business-uk-2026",
+      "ldBlocks": 5,
+      "nodes": 43,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/sales-automation-tools-uk-smbs-roi-2026",
+      "ldBlocks": 5,
+      "nodes": 43,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/sell-ai-automation-services-uk-agency-playbook-2026",
+      "ldBlocks": 5,
+      "nodes": 49,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/web-design-austin-tx-small-business-guide-2026",
+      "ldBlocks": 5,
+      "nodes": 35,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/web-design-miami-fl-small-business-2026",
+      "ldBlocks": 5,
+      "nodes": 35,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/shopify-store-setup-us-small-business-7-days",
+      "ldBlocks": 5,
+      "nodes": 35,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/website-redesign-cost-us-small-business-2026",
+      "ldBlocks": 5,
+      "nodes": 35,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/ecommerce-development-denver-co-small-business",
+      "ldBlocks": 5,
+      "nodes": 35,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/web-design-nashville-tn-small-business-2026",
+      "ldBlocks": 5,
+      "nodes": 35,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/web-design-charlotte-nc-small-business-2026",
+      "ldBlocks": 5,
+      "nodes": 35,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/web-design-denver-co-small-business-2026",
+      "ldBlocks": 5,
+      "nodes": 35,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/ai-agents-small-business-usa-2026",
+      "ldBlocks": 5,
+      "nodes": 35,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/how-much-does-a-website-cost-small-business-usa-2026",
+      "ldBlocks": 5,
+      "nodes": 35,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/website-development-cost-india-2026",
+      "ldBlocks": 5,
+      "nodes": 59,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/shopify-vs-woocommerce-us-small-business-2026",
+      "ldBlocks": 5,
+      "nodes": 41,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/ai-chatbots-vs-ai-agents-business",
+      "ldBlocks": 5,
+      "nodes": 35,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/best-ecommerce-platform-tampa-boutiques-dtc-2026",
+      "ldBlocks": 5,
+      "nodes": 33,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/custom-web-development-vs-wordpress-us-small-business-2026",
+      "ldBlocks": 5,
+      "nodes": 35,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/boise-shopify-development-guide-idaho-small-business-2026",
+      "ldBlocks": 5,
+      "nodes": 35,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/nyc-b2b-corporate-web-design-guide-2026",
+      "ldBlocks": 5,
+      "nodes": 37,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/austin-ecommerce-checkout-optimization-2026",
+      "ldBlocks": 5,
+      "nodes": 35,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/raleigh-shopify-training-support-triangle-nc-2026",
+      "ldBlocks": 5,
+      "nodes": 35,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/custom-shopify-theme-development-us-brands-2026",
+      "ldBlocks": 5,
+      "nodes": 37,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/webflow-vs-wordpress-us-small-business-2026",
+      "ldBlocks": 5,
+      "nodes": 59,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/seo-cost-small-business-2026",
+      "ldBlocks": 5,
+      "nodes": 63,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/how-to-get-chatgpt-to-recommend-your-business-2026",
+      "ldBlocks": 5,
+      "nodes": 61,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/geo-cost-small-business-2026",
+      "ldBlocks": 5,
+      "nodes": 63,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/how-to-show-up-in-google-ai-overviews-small-business",
+      "ldBlocks": 5,
+      "nodes": 63,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/how-long-does-seo-take-2026-month-by-month-timeline",
+      "ldBlocks": 5,
+      "nodes": 67,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/is-seo-dead-2026-ai-search-data",
+      "ldBlocks": 5,
+      "nodes": 63,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/seo-audit-cost-2026",
+      "ldBlocks": 5,
+      "nodes": 61,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/bigcommerce-vs-shopify-2026-fee-change",
+      "ldBlocks": 5,
+      "nodes": 61,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/shopify-development-cost-2026",
+      "ldBlocks": 5,
+      "nodes": 61,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/ai-adoption-us-small-businesses-2026",
+      "ldBlocks": 5,
+      "nodes": 59,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/best-ai-seo-agencies-uk",
+      "ldBlocks": 5,
+      "nodes": 61,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/best-ai-seo-agencies-india",
+      "ldBlocks": 5,
+      "nodes": 61,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/best-seo-agencies-uk",
+      "ldBlocks": 5,
+      "nodes": 59,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/shopify-website-cost",
+      "ldBlocks": 5,
+      "nodes": 63,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/best-ai-agent-development-companies-small-business",
+      "ldBlocks": 5,
+      "nodes": 61,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/best-geo-agencies",
+      "ldBlocks": 5,
+      "nodes": 65,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/generative-engine-optimization-guide",
+      "ldBlocks": 5,
+      "nodes": 63,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/best-geo-ai-visibility-tools-2026",
+      "ldBlocks": 5,
+      "nodes": 63,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/best-ai-seo-agencies-usa",
+      "ldBlocks": 5,
+      "nodes": 67,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/best-seo-agencies-usa",
+      "ldBlocks": 5,
+      "nodes": 69,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/how-to-sell-on-tiktok-shop-2026",
+      "ldBlocks": 5,
+      "nodes": 39,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/agentic-ai-vs-generative-ai",
+      "ldBlocks": 5,
+      "nodes": 37,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/agentic-ai-vs-ai-agents",
+      "ldBlocks": 5,
+      "nodes": 35,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/what-is-agentic-ai",
+      "ldBlocks": 5,
+      "nodes": 37,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/how-to-sell-on-amazon-2026",
+      "ldBlocks": 5,
+      "nodes": 67,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/blog/how-to-sell-on-walmart-marketplace-2026",
+      "ldBlocks": 5,
+      "nodes": 63,
+      "urlsChecked": 16,
+      "fails": [],
+      "notes": [
+        "6 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/case-studies/belle-maison-ecommerce-success",
+      "ldBlocks": 5,
+      "nodes": 29,
+      "urlsChecked": 14,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/case-studies/impulse-branding-migration",
+      "ldBlocks": 5,
+      "nodes": 29,
+      "urlsChecked": 14,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/case-studies/formative-concepts-bim",
+      "ldBlocks": 5,
+      "nodes": 29,
+      "urlsChecked": 14,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/case-studies/grofresh-manufacturing-erp",
+      "ldBlocks": 5,
+      "nodes": 29,
+      "urlsChecked": 14,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/case-studies/fliying-pixel-agency",
+      "ldBlocks": 5,
+      "nodes": 29,
+      "urlsChecked": 14,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/case-studies/rukman-transport-logistics",
+      "ldBlocks": 5,
+      "nodes": 29,
+      "urlsChecked": 14,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/case-studies/sow-easy-distributor-portal",
+      "ldBlocks": 5,
+      "nodes": 29,
+      "urlsChecked": 14,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/case-studies/gpsuk-promotional-products",
+      "ldBlocks": 5,
+      "nodes": 27,
+      "urlsChecked": 14,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    },
+    {
+      "url": "https://factoryjet.com/case-studies/yadav-entrance-automation-website-seo",
+      "ldBlocks": 5,
+      "nodes": 27,
+      "urlsChecked": 14,
+      "fails": [],
+      "notes": [
+        "5 URL(s) unverifiable (host blocks bots)"
+      ]
+    }
+  ]
+}

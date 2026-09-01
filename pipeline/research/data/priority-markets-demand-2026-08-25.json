@@ -1,0 +1,844 @@
+{
+  "rows": [
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "aeo agency uk",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "ai agency uk",
+      "vol": 90,
+      "cpc": 14.96,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "ai automation agency uk",
+      "vol": 210,
+      "cpc": 12.07,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "ai search optimisation uk",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "ai seo agency birmingham",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "ai seo agency brighton",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "ai seo agency bristol",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "ai seo agency cardiff",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "ai seo agency coventry",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "ai seo agency edinburgh",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "ai seo agency glasgow",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "ai seo agency leeds",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "ai seo agency leicester",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "ai seo agency liverpool",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "ai seo agency london",
+      "vol": 70,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "ai seo agency manchester",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "ai seo agency newcastle",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "ai seo agency nottingham",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "ai seo agency pricing uk",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "ai seo agency sheffield",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "ai seo agency uk",
+      "vol": 40,
+      "cpc": 32.8,
+      "comp": "LOW"
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "ai seo audit uk",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "ai seo birmingham",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "ai seo brighton",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "ai seo bristol",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "ai seo cardiff",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "ai seo company uk",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "ai seo consultant uk",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "ai seo coventry",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "ai seo edinburgh",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "ai seo glasgow",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "ai seo leeds",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "ai seo leicester",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "ai seo liverpool",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "ai seo london",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "ai seo manchester",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "ai seo newcastle",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "ai seo nottingham",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "ai seo services uk",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "ai seo sheffield",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "answer engine optimisation uk",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "chatgpt seo uk",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "ecommerce seo agency uk",
+      "vol": 110,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "generative engine optimisation uk",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "generative engine optimization uk",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "geo agency uk",
+      "vol": 20,
+      "cpc": 28.19,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "llm seo uk",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "local seo services uk",
+      "vol": 170,
+      "cpc": 4.26,
+      "comp": "LOW"
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "seo agency birmingham",
+      "vol": 1300,
+      "cpc": 17.09,
+      "comp": "LOW"
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "seo agency brighton",
+      "vol": 260,
+      "cpc": 22.45,
+      "comp": "LOW"
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "seo agency bristol",
+      "vol": 720,
+      "cpc": 19.83,
+      "comp": "LOW"
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "seo agency cardiff",
+      "vol": 320,
+      "cpc": 36.22,
+      "comp": "LOW"
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "seo agency coventry",
+      "vol": 70,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "seo agency edinburgh",
+      "vol": 480,
+      "cpc": 45.04,
+      "comp": "LOW"
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "seo agency glasgow",
+      "vol": 260,
+      "cpc": 8.87,
+      "comp": "LOW"
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "seo agency leeds",
+      "vol": 480,
+      "cpc": 10.82,
+      "comp": "LOW"
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "seo agency leicester",
+      "vol": 320,
+      "cpc": 7.15,
+      "comp": "LOW"
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "seo agency liverpool",
+      "vol": 480,
+      "cpc": 10.03,
+      "comp": "LOW"
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "seo agency london",
+      "vol": 3600,
+      "cpc": 15.04,
+      "comp": "LOW"
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "seo agency manchester",
+      "vol": 1000,
+      "cpc": 28.69,
+      "comp": "LOW"
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "seo agency newcastle",
+      "vol": 480,
+      "cpc": 15.88,
+      "comp": "LOW"
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "seo agency nottingham",
+      "vol": 480,
+      "cpc": 15.94,
+      "comp": "LOW"
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "seo agency sheffield",
+      "vol": 320,
+      "cpc": null,
+      "comp": "LOW"
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "seo audit service uk",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "United Kingdom",
+      "loc": 2826,
+      "keyword": "shopify seo agency uk",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "United States",
+      "loc": 2840,
+      "keyword": "aeo agency",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "United States",
+      "loc": 2840,
+      "keyword": "ai search optimization",
+      "vol": 1300,
+      "cpc": 45.41,
+      "comp": "LOW"
+    },
+    {
+      "market": "United States",
+      "loc": 2840,
+      "keyword": "ai seo agency",
+      "vol": 1300,
+      "cpc": 29.36,
+      "comp": "LOW"
+    },
+    {
+      "market": "United States",
+      "loc": 2840,
+      "keyword": "ai seo audit",
+      "vol": 110,
+      "cpc": 30.93,
+      "comp": "LOW"
+    },
+    {
+      "market": "United States",
+      "loc": 2840,
+      "keyword": "ai seo company",
+      "vol": 590,
+      "cpc": 48.71,
+      "comp": "LOW"
+    },
+    {
+      "market": "United States",
+      "loc": 2840,
+      "keyword": "ai seo consultant",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "United States",
+      "loc": 2840,
+      "keyword": "ai seo pricing",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "United States",
+      "loc": 2840,
+      "keyword": "ai seo services",
+      "vol": 1300,
+      "cpc": 50.62,
+      "comp": "LOW"
+    },
+    {
+      "market": "United States",
+      "loc": 2840,
+      "keyword": "ai visibility agency",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "United States",
+      "loc": 2840,
+      "keyword": "answer engine optimization agency",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "United States",
+      "loc": 2840,
+      "keyword": "brand visibility in ai search",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "United States",
+      "loc": 2840,
+      "keyword": "chatgpt seo",
+      "vol": 390,
+      "cpc": 20.33,
+      "comp": "LOW"
+    },
+    {
+      "market": "United States",
+      "loc": 2840,
+      "keyword": "chatgpt seo agency",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "United States",
+      "loc": 2840,
+      "keyword": "ecommerce seo agency",
+      "vol": 1000,
+      "cpc": 125.74,
+      "comp": "LOW"
+    },
+    {
+      "market": "United States",
+      "loc": 2840,
+      "keyword": "generative engine optimization agency",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "United States",
+      "loc": 2840,
+      "keyword": "generative engine optimization services",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "United States",
+      "loc": 2840,
+      "keyword": "geo agency",
+      "vol": 590,
+      "cpc": 40.6,
+      "comp": "LOW"
+    },
+    {
+      "market": "United States",
+      "loc": 2840,
+      "keyword": "llm seo",
+      "vol": 880,
+      "cpc": 28.58,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "United States",
+      "loc": 2840,
+      "keyword": "llm seo agency",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "United States",
+      "loc": 2840,
+      "keyword": "shopify seo agency",
+      "vol": 1300,
+      "cpc": 54.31,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai automation agency australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai seo adelaide",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai seo agency australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai seo australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai seo brisbane",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai seo melbourne",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai seo perth",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai seo services australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ai seo sydney",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "ecommerce seo agency australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "generative engine optimisation australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "geo agency australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "seo agency adelaide",
+      "vol": 1300,
+      "cpc": 39.25,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "seo agency australia",
+      "vol": 1300,
+      "cpc": 58.67,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "seo agency brisbane",
+      "vol": 1900,
+      "cpc": 25.16,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "seo agency melbourne",
+      "vol": 1900,
+      "cpc": 33.74,
+      "comp": "MEDIUM"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "seo agency perth",
+      "vol": 1600,
+      "cpc": 48.85,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "seo agency sydney",
+      "vol": 1300,
+      "cpc": 65.79,
+      "comp": "LOW"
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "shopify development australia",
+      "vol": null,
+      "cpc": null,
+      "comp": null
+    },
+    {
+      "market": "Australia",
+      "loc": 2036,
+      "keyword": "web design agency australia",
+      "vol": 90,
+      "cpc": 10.65,
+      "comp": "LOW"
+    }
+  ]
+}

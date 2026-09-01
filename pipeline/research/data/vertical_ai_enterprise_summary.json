@@ -1,0 +1,166 @@
+{
+  "healthcare_medical": {
+    "total_keywords": 8,
+    "total_volume": 570,
+    "high_cpc_keywords": [
+      {
+        "vertical": "healthcare_medical",
+        "seed": "ai agent for healthcare",
+        "keyword": "ai agent for healthcare",
+        "search_volume": 170,
+        "cpc": 39.04,
+        "competition": "LOW",
+        "keyword_difficulty": 10,
+        "intent": "commercial"
+      },
+      {
+        "vertical": "healthcare_medical",
+        "seed": "ai medical receptionist",
+        "keyword": "ai medical receptionist",
+        "search_volume": 140,
+        "cpc": 203.7,
+        "competition": "MEDIUM",
+        "keyword_difficulty": 0,
+        "intent": "informational"
+      },
+      {
+        "vertical": "healthcare_medical",
+        "seed": "ai agent for healthcare",
+        "keyword": "ai voice agent for healthcare",
+        "search_volume": 110,
+        "cpc": 55.24,
+        "competition": "LOW",
+        "keyword_difficulty": 0,
+        "intent": "commercial"
+      },
+      {
+        "vertical": "healthcare_medical",
+        "seed": "ai medical receptionist",
+        "keyword": "ai receptionist for medical office",
+        "search_volume": 90,
+        "cpc": 100.89,
+        "competition": "MEDIUM",
+        "keyword_difficulty": 0,
+        "intent": "informational"
+      },
+      {
+        "vertical": "healthcare_medical",
+        "seed": "ai medical receptionist",
+        "keyword": "medical ai receptionist",
+        "search_volume": 30,
+        "cpc": 38.95,
+        "competition": "HIGH",
+        "keyword_difficulty": 6,
+        "intent": "transactional"
+      },
+      {
+        "vertical": "healthcare_medical",
+        "seed": "ai medical receptionist",
+        "keyword": "medical receptionist ai",
+        "search_volume": 10,
+        "cpc": 181.55,
+        "competition": "HIGH",
+        "keyword_difficulty": 6,
+        "intent": "navigational"
+      },
+      {
+        "vertical": "healthcare_medical",
+        "seed": "ai medical receptionist",
+        "keyword": "best ai medical receptionist",
+        "search_volume": 10,
+        "cpc": 142.16,
+        "competition": "HIGH",
+        "keyword_difficulty": 0,
+        "intent": "commercial"
+      }
+    ],
+    "top_volume_keywords": [
+      {
+        "vertical": "healthcare_medical",
+        "seed": "ai agent for healthcare",
+        "keyword": "ai agent for healthcare",
+        "search_volume": 170,
+        "cpc": 39.04,
+        "competition": "LOW",
+        "keyword_difficulty": 10,
+        "intent": "commercial"
+      },
+      {
+        "vertical": "healthcare_medical",
+        "seed": "ai medical receptionist",
+        "keyword": "ai medical receptionist",
+        "search_volume": 140,
+        "cpc": 203.7,
+        "competition": "MEDIUM",
+        "keyword_difficulty": 0,
+        "intent": "informational"
+      },
+      {
+        "vertical": "healthcare_medical",
+        "seed": "ai agent for healthcare",
+        "keyword": "ai voice agent for healthcare",
+        "search_volume": 110,
+        "cpc": 55.24,
+        "competition": "LOW",
+        "keyword_difficulty": 0,
+        "intent": "commercial"
+      },
+      {
+        "vertical": "healthcare_medical",
+        "seed": "ai medical receptionist",
+        "keyword": "ai receptionist for medical office",
+        "search_volume": 90,
+        "cpc": 100.89,
+        "competition": "MEDIUM",
+        "keyword_difficulty": 0,
+        "intent": "informational"
+      }
+    ]
+  },
+  "manufacturing_industrial": {
+    "total_keywords": 1,
+    "total_volume": 70,
+    "high_cpc_keywords": [
+      {
+        "vertical": "manufacturing_industrial",
+        "seed": "ai agents for manufacturing",
+        "keyword": "ai agents for manufacturing",
+        "search_volume": 70,
+        "cpc": 27.78,
+        "competition": "MEDIUM",
+        "keyword_difficulty": 0,
+        "intent": "commercial"
+      }
+    ],
+    "top_volume_keywords": [
+      {
+        "vertical": "manufacturing_industrial",
+        "seed": "ai agents for manufacturing",
+        "keyword": "ai agents for manufacturing",
+        "search_volume": 70,
+        "cpc": 27.78,
+        "competition": "MEDIUM",
+        "keyword_difficulty": 0,
+        "intent": "commercial"
+      }
+    ]
+  },
+  "wholesale_distribution": {
+    "total_keywords": 1,
+    "total_volume": 40,
+    "high_cpc_keywords": [],
+    "top_volume_keywords": []
+  },
+  "construction_trades": {
+    "total_keywords": 1,
+    "total_volume": 30,
+    "high_cpc_keywords": [],
+    "top_volume_keywords": []
+  },
+  "agriculture_farming": {
+    "total_keywords": 1,
+    "total_volume": 10,
+    "high_cpc_keywords": [],
+    "top_volume_keywords": []
+  }
+}
