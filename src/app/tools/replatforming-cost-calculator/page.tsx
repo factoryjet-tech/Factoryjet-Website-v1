@@ -1,13 +1,21 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import FAQ from '@/components/v2/FAQ';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
-import ReplatformingScopeEstimator from '@/components/commerce/ReplatformingScopeEstimator';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
+
+// Lazy-load the estimator as a separate chunk so its ~255 KiB JS doesn't block
+// initial render. ssr stays true (required in a Server Component) so the
+// Migration Guarantees list still renders in the static HTML for crawlers.
+const ReplatformingScopeEstimator = dynamic(
+  () => import('@/components/commerce/ReplatformingScopeEstimator'),
+  { ssr: true }
+);
 
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const PAGE_MODIFIED = '2026-09-01';
@@ -52,6 +60,7 @@ const FAQ_CATEGORIES = [
   { key: 'data', label: 'Data & Password Preservation' },
   { key: 'seo', label: 'SEO & 301 Redirect Equity' },
   { key: 'erp', label: 'ERP & Cutover Execution' },
+  { key: 'usage', label: 'How This Estimator Works' },
 ];
 
 const FAQ_ITEMS = [
@@ -59,97 +68,127 @@ const FAQ_ITEMS = [
     category: 'scope',
     question: 'What factors determine the total cost of an ecommerce replatforming project?',
     answer:
-      'Total migration investment is driven by catalog SKU complexity, historical customer and order data volume, custom third-party ERP and WMS integrations, B2B tiered contract pricing rules, custom theme architecture, and rigorous quality assurance testing.',
+      'Total migration investment is driven by catalog SKU complexity, historical customer and order data volume, custom third-party ERP and WMS integrations, B2B tiered contract pricing rules, custom theme architecture, and rigorous quality assurance testing. A simple 200-SKU DTC catalog with no ERP dependency costs meaningfully less than a 10,000-SKU B2B catalog syncing live inventory across NetSuite and three warehouses.',
   },
   {
     category: 'scope',
     question: 'How long does an enterprise migration to Shopify Plus or BigCommerce take?',
     answer:
-      'Standard mid-market replatforming deployments typically take between 4 and 8 weeks. Highly customized enterprise architectures with deep NetSuite, SAP, or Dynamics 365 ERP synchronization take between 8 and 14 weeks.',
+      'Standard mid-market replatforming deployments typically take between 4 and 8 weeks. Highly customized enterprise architectures with deep NetSuite, SAP, or Dynamics 365 ERP synchronization take between 8 and 14 weeks. The timeline scales primarily with the number of systems that must stay synchronized during cutover, not with catalog size alone, since ERP integration testing is usually the longest single phase.',
   },
   {
     category: 'scope',
     question: 'Why do brands migrate from Magento and Salesforce to Shopify Plus?',
     answer:
-      'Brands migrate to eliminate mandatory security patching, server hosting maintenance, high developer retainers, and brittle monolithic extensions, replacing them with a fully managed cloud architecture backed by 99.99 percent uptime and native 1-click Shop Pay checkout.',
+      'Brands migrate to eliminate mandatory security patching, server hosting maintenance, high developer retainers, and brittle monolithic extensions, replacing them with a fully managed cloud architecture backed by 99.99 percent uptime and native 1-click Shop Pay checkout. Most brands we talk to are also reacting to a specific pain point, a Black Friday outage on legacy servers or a checkout conversion gap versus competitors.',
   },
   {
     category: 'scope',
     question: 'What ongoing maintenance cost savings occur after replatforming?',
     answer:
-      'By moving from self-hosted monolithic servers to Shopify Plus or BigCommerce, brands typically save $35,000 to $85,000 annually in dedicated cloud hosting, security monitoring, server patching, and emergency DevOps contractor retainers.',
+      'By moving from self-hosted monolithic servers to Shopify Plus or BigCommerce, brands typically save $35,000 to $85,000 annually in dedicated cloud hosting, security monitoring, server patching, and emergency DevOps contractor retainers. That figure excludes the developer time freed up to work on merchandising and growth instead of firefighting server incidents during peak traffic events.',
   },
   {
     category: 'data',
     question: 'How are customer accounts and passwords migrated safely?',
     answer:
-      'Because customer passwords are encrypted using one-way cryptographic hashes (such as bcrypt or Argon2) in legacy databases, passwords cannot be decrypted. We migrate customer records using automated Multipass token activation or secure password-reset invitation funnels.',
+      'Because customer passwords are encrypted using one-way cryptographic hashes (such as bcrypt or Argon2) in legacy databases, passwords cannot be decrypted. We migrate customer records using automated Multipass token activation or secure password-reset invitation funnels. Customers with an active session on launch day are signed in automatically through Multipass without ever noticing a password change was required.',
   },
   {
     category: 'data',
     question: 'Can historical order data and purchase histories be imported?',
     answer:
-      'Yes. Complete historical order records, line item SKUs, transaction dates, customer shipping addresses, and financial statuses are cleansed and imported into the target platform for unified customer lifetime reporting.',
+      "Yes. Complete historical order records, line item SKUs, transaction dates, customer shipping addresses, and financial statuses are cleansed and imported into the target platform for unified customer lifetime reporting. Preserving this history matters for repeat-customer segmentation and loyalty programs, since starting every customer's purchase count at zero on launch day would break lifetime value reporting and tier eligibility.",
   },
   {
     category: 'data',
     question: 'How do you handle complex product variants and matrix items?',
     answer:
-      'We write automated schema transformation scripts that normalize legacy multi-attribute matrix items into clean variant structures, preserving custom metafields, technical specifications, and parent-child SKU relationships.',
+      "We write automated schema transformation scripts that normalize legacy multi-attribute matrix items into clean variant structures, preserving custom metafields, technical specifications, and parent-child SKU relationships. A product with size, color, and material dimensions in the legacy system maps cleanly to Shopify's variant model instead of breaking into duplicate or orphaned product listings during import.",
   },
   {
     category: 'data',
     question: 'What data validation processes ensure zero record loss during migration?',
     answer:
-      'We run automated reconciliation scripts that perform line-by-line checksum verification across legacy database exports and staging imports, ensuring exact record parity before DNS cutover.',
+      'We run automated reconciliation scripts that perform line-by-line checksum verification across legacy database exports and staging imports, ensuring exact record parity before DNS cutover. Every product, customer, and order record count is verified against the legacy source before we allow a go-live decision, so a partial or dropped import is caught in staging, not discovered by a customer after launch.',
   },
   {
     category: 'seo',
     question: 'How do you prevent organic search traffic loss during replatforming?',
     answer:
-      'We crawl your entire legacy store to construct a complete URL inventory, map 1-to-1 permanent 301 redirects, preserve exact title tags, meta descriptions, and heading hierarchies, and migrate existing Schema.org structured data.',
+      'We crawl your entire legacy store to construct a complete URL inventory, map 1-to-1 permanent 301 redirects, preserve exact title tags, meta descriptions, and heading hierarchies, and migrate existing Schema.org structured data. Every redirect maps to the single most relevant new page rather than a blanket homepage redirect, which is what actually preserves the ranking signal search engines associate with the old URL.',
   },
   {
     category: 'seo',
     question: 'What happens to legacy URL structures that Shopify cannot support?',
     answer:
-      'Legacy deep category hierarchies (such as /category/subcategory/product.html) are redirected via strict 301 server rules to their corresponding /products/ or /collections/ paths, passing complete link equity to the new pages.',
+      'Legacy deep category hierarchies (such as /category/subcategory/product.html) are redirected via strict 301 server rules to their corresponding /products/ or /collections/ paths, passing complete link equity to the new pages. We build the full redirect map before cutover, not after, so no URL is ever live on the new platform without its permanent redirect already in place.',
   },
   {
     category: 'seo',
     question: 'How quickly should search engine rankings stabilize after launch?',
     answer:
-      'With complete 1-to-1 301 redirect mapping, indexation updates, and XML sitemap submissions to Google Search Console, organic traffic typically stabilizes within 7 to 14 days without long-term ranking drops.',
+      'With complete 1-to-1 301 redirect mapping, indexation updates, and XML sitemap submissions to Google Search Console, organic traffic typically stabilizes within 7 to 14 days without long-term ranking drops. We monitor Search Console coverage reports daily through that window and correct any redirect gap or crawl error the moment it appears, rather than waiting for a scheduled check-in.',
   },
   {
     category: 'seo',
     question: 'Do you audit backlinks and historical citation equity prior to migration?',
     answer:
-      'Yes. We extract all high-authority referring domains and external backlinks pointing to legacy URLs, verifying that every cited landing page receives an immediate, exact 301 redirect.',
+      'Yes. We extract all high-authority referring domains and external backlinks pointing to legacy URLs, verifying that every cited landing page receives an immediate, exact 301 redirect. Losing link equity from an earned backlink because the page it points to now 404s is one of the most common and most avoidable causes of a post-migration traffic drop.',
   },
   {
     category: 'erp',
     question: 'How do you synchronize NetSuite, SAP, or Microsoft Dynamics during cutover?',
     answer:
-      'We build bi-directional API connectors that synchronize product master data, live inventory across multiple warehouses, customer credit terms, and sales order creation, running staging tests in parallel prior to live switch.',
+      'We build bi-directional API connectors that synchronize product master data, live inventory across multiple warehouses, customer credit terms, and sales order creation, running staging tests in parallel prior to live switch. Staging tests run against a full copy of production data for at least two weeks before cutover, so integration issues surface long before they could ever reach a live order.',
   },
   {
     category: 'erp',
     question: 'What is delta migration and why is it essential for zero-downtime launches?',
     answer:
-      'Delta migration is the process of migrating all new customer accounts, orders, and inventory adjustments generated on the legacy store during the final staging build window immediately prior to DNS cutover, ensuring zero data gap.',
+      'Delta migration is the process of migrating all new customer accounts, orders, and inventory adjustments generated on the legacy store during the final staging build window immediately prior to DNS cutover, ensuring zero data gap. Without it, any order placed on the old store during the final build hours would be permanently invisible to the new platform, a silent data loss most brands only discover during month-end reconciliation.',
   },
   {
     category: 'erp',
     question: 'How does FactoryJet ensure zero downtime during domain DNS switch?',
     answer:
-      'We execute a choreographed cutover protocol: pre-warming CDN caches, lowering DNS TTL values 48 hours in advance, running real-time delta imports, switching records, and validating checkout within a 15-minute maintenance window.',
+      'We execute a choreographed cutover protocol: pre-warming CDN caches, lowering DNS TTL values 48 hours in advance, running real-time delta imports, switching records, and validating checkout within a 15-minute maintenance window. We schedule the cutover during your lowest-traffic hours and keep the legacy environment on standby so we can roll back within minutes if validation fails.',
   },
   {
     category: 'erp',
     question: 'How do we schedule a replatforming architecture review with founder Bhavesh Barot?',
     answer:
-      'You can schedule a direct 30-minute discovery session. We will evaluate your existing database schemas, ERP connectors, and deliver a detailed scope breakdown with fixed project milestones.',
+      'You can schedule a direct 30-minute discovery session. We will evaluate your existing database schemas, ERP connectors, and deliver a detailed scope breakdown with fixed project milestones. You leave the call with a specific week-by-week timeline and fixed price tied to your actual catalog and integration complexity, not a generic range pulled from an average project.',
+  },
+  {
+    category: 'usage',
+    question: 'What inputs does this estimator use to calculate my migration timeline?',
+    answer:
+      'You select your current source platform, target architecture (Shopify, Shopify Plus, BigCommerce B2B, or headless), catalog SKU tier, historical order volume, and ERP or middleware integration depth. Each selection adds or removes weeks from a base timeline tied to your source platform, and a headless target architecture adds a further 20 percent to account for custom frontend engineering.',
+  },
+  {
+    category: 'usage',
+    question: 'How is the estimated timeline range calculated?',
+    answer:
+      'Each source platform carries a base timeline in weeks, migrating off Magento or Salesforce Commerce Cloud starts higher than migrating off WooCommerce, because the underlying architecture is more complex to unwind. We then add time for your SKU tier, order volume, and ERP integration depth, and show the result as a range rather than one number, since real projects vary within that band depending on final QA findings.',
+  },
+  {
+    category: 'usage',
+    question: 'Are the annual DevOps savings figures guaranteed?',
+    answer:
+      'No. The savings figure is modeled from typical hosting, patching, and contractor costs tied to your current source platform, with a modest upward adjustment for enterprise-scale catalogs. It is meant to size the opportunity, not replace an audit of your actual hosting invoices, security retainers, and DevOps contractor spend, which we review directly during a scoping call before quoting a fixed migration price.',
+  },
+  {
+    category: 'usage',
+    question: 'What happens after I submit my email through the estimator?',
+    answer:
+      'Submitting your email, store URL, and selected scope parameters sends the complete configuration, source and target platforms, SKU tier, order volume, and ERP depth, directly to our team rather than a generic form inbox. You get an on-screen confirmation immediately, and we follow up by email with your custom migration roadmap and a link to schedule a technical scoping call.',
+  },
+  {
+    category: 'usage',
+    question: 'Does the estimator account for a headless or composable commerce migration?',
+    answer:
+      'Yes. Selecting the composable headless Next.js target architecture adds 20 percent to the base timeline versus a standard Shopify or BigCommerce target, reflecting the additional custom frontend engineering a headless build requires beyond standard theme development. The risk rating and DevOps savings estimate still calculate the same way regardless of which target architecture you choose.',
   },
 ];
 

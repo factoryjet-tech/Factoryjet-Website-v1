@@ -86,7 +86,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'intake',
     question: 'Does the AI intake agent support multilingual intake for non-English speaking claimants?',
     answer:
-      'Yes. Our intake agents support fluent real-time voice and text translation across Spanish, Portuguese, Mandarin, Vietnamese, and French. Matter summaries and intake notes are transcribed and translated into English for attorney review alongside original audio recordings.',
+      'Yes. Our intake agents support fluent real-time voice and text translation across Spanish, Portuguese, Mandarin, Vietnamese, and French. Matter summaries and intake notes are transcribed and translated into English for attorney review alongside original audio recordings. This matters most for firms handling personal injury or immigration intake in diverse markets, where a same-day response in the claimant\'s own language is often the difference between booking the consultation and losing it to a competing firm.',
   },
   {
     category: 'contracts',
@@ -116,13 +116,13 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'pms',
     question: 'Which legal practice management systems and document repositories do you integrate with?',
     answer:
-      'We engineer native bi-directional connectors for Clio Manage and Clio Grow, Filevine, MyCase, PracticePanther, Smokeball, NetDocuments, iManage, Relativity, and Litify. The agent creates new contacts, opens matter folders, attaches indexed files, and logs time entries automatically.',
+      'We engineer native bi-directional connectors for Clio Manage and Clio Grow, Filevine, MyCase, PracticePanther, Smokeball, NetDocuments, iManage, Relativity, and Litify. The agent creates new contacts, opens matter folders, attaches indexed files, and logs time entries automatically. Sync runs on webhooks, not nightly batch exports, so a new contact or matter update reflects in your practice management system within seconds rather than the next business day.',
   },
   {
     category: 'pms',
     question: 'Can the AI agent create calendar events and calculate statutory court filing deadlines?',
     answer:
-      'Yes. The agent parses served complaints, discovery requests, and scheduling orders, calculates jurisdictional response deadlines based on local court civil procedure rules, and stages calendar entries directly in your Outlook, Google Calendar, or practice management docketing system.',
+      'Yes. The agent parses served complaints, discovery requests, and scheduling orders, calculates jurisdictional response deadlines based on local court civil procedure rules, and stages calendar entries directly in your Outlook, Google Calendar, or practice management docketing system. Every calculated deadline includes the underlying procedural rule it was derived from, so the responsible attorney can verify the date before it goes on the docket rather than trusting a black-box calculation.',
   },
   {
     category: 'pms',
@@ -134,7 +134,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'pms',
     question: 'Can our law firm connect proprietary knowledge bases and precedent brief archives?',
     answer:
-      'Yes. We build private, isolated vector databases indexing your firm historical motion practice, appellate briefs, discovery responses, and settlement negotiation memos, allowing your team to draft work product based on your firm proven work style.',
+      'Yes. We build private, isolated vector databases indexing your firm historical motion practice, appellate briefs, discovery responses, and settlement negotiation memos, allowing your team to draft work product based on your firm proven work style. Each vector database is scoped to your firm alone and never shared across clients, so a junior associate drafting a motion gets suggestions grounded in your partners\' prior filings and phrasing, not generic boilerplate pulled from the open web.',
   },
   {
     category: 'security',
@@ -146,19 +146,49 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'security',
     question: 'Can our firm deploy the AI agent on private on-premise hardware or isolated sovereign clouds?',
     answer:
-      'Yes. For boutique litigation firms, corporate defense practices, and governmental legal departments requiring strict physical data custody, we deploy open-source legal language models on local GPU servers behind your physical office firewalls or inside sovereign AWS GovCloud enclaves.',
+      'Yes. For boutique litigation firms, corporate defense practices, and governmental legal departments requiring strict physical data custody, we deploy open-source legal language models on local GPU servers behind your physical office firewalls or inside sovereign AWS GovCloud enclaves. This path costs more upfront in hardware and setup time than our standard cloud deployment, so we recommend it only when a client contract, government clearance, or internal policy mandates it rather than as a default choice.',
   },
   {
     category: 'security',
     question: 'Does our law firm own the custom AI agent code and prompt state machines?',
     answer:
-      'Yes. FactoryJet provides 100 percent source code, Git repository, and intellectual property ownership. We build customized Python backend services, database connectors, and orchestration workflows that belong exclusively to your firm with zero per-user monthly software licensing fees.',
+      'Yes. FactoryJet provides 100 percent source code, Git repository, and intellectual property ownership. We build customized Python backend services, database connectors, and orchestration workflows that belong exclusively to your firm with zero per-user monthly software licensing fees. You can move the entire system to an in-house engineer or a different vendor at any time, since nothing is locked behind our proprietary platform or a recurring per-seat contract you would need to renegotiate to leave.',
   },
   {
     category: 'security',
     question: 'How long does it take to implement a custom legal AI agent for our firm?',
     answer:
-      'A focused intake qualification agent or document redlining workflow deploys within 3 to 4 weeks. A comprehensive firm-wide implementation covering intake, practice management synchronization, discovery indexing, and custom precedent drafting completes in 6 to 8 weeks.',
+      'A focused intake qualification agent or document redlining workflow deploys within 3 to 4 weeks. A comprehensive firm-wide implementation covering intake, practice management synchronization, discovery indexing, and custom precedent drafting completes in 6 to 8 weeks. Timelines depend mainly on how quickly your firm can provide API access to your practice management system and sample documents for the redlining playbook; firms that get us that access in the first week rarely slip past these ranges.',
+  },
+  {
+    category: 'contracts',
+    question: 'Can the AI agent manage e-discovery review and generate a defensible privilege log before documents go to opposing counsel?',
+    answer:
+      'Yes. The agent ingests native files and email threads, applies your firm responsiveness and privilege criteria, and flags attorney-client communications, work product, and third-party consultant materials for withholding. It generates a structured privilege log with document ID, date, author, recipients, and privilege basis for attorney sign-off before production.',
+  },
+  {
+    category: 'intake',
+    question: 'What happens after a lead is qualified? Does the agent actually open the matter file in our practice management system?',
+    answer:
+      'Yes. Once an attorney approves a qualified lead, the agent opens a new matter record directly in Clio, Filevine, or MyCase, assigns the matter number, links the client contact, attaches the signed engagement letter, and populates standard matter fields including practice area, responsible attorney, and originating source without paralegal re-keying.',
+  },
+  {
+    category: 'pms',
+    question: 'Can the agent draft and track litigation hold notices when a new lawsuit or regulatory inquiry begins?',
+    answer:
+      'Yes. When a matter is flagged as contentious, the agent drafts a litigation hold notice from your firm template, identifies custodians based on matter parties and department, distributes it for attorney review, and logs acknowledgment receipts so your firm has a defensible record of preservation efforts.',
+  },
+  {
+    category: 'security',
+    question: 'Does the AI agent keep an audit trail we could produce in response to a bar complaint or malpractice inquiry?',
+    answer:
+      'Yes. Every extraction, redline, and matter action the agent takes is logged with a timestamp, the source document citation, and the human reviewer who approved it. That audit trail is exportable and gives your firm a defensible record of what the AI proposed versus what an attorney actually approved and filed.',
+  },
+  {
+    category: 'contracts',
+    question: 'Can the agent process scanned or handwritten documents, not just clean digital PDFs?',
+    answer:
+      'Yes. The parsing pipeline runs OCR with legal-specific tuning before extraction, so scanned pleadings, faxed medical records, and handwritten intake notes still get indexed. Low-confidence OCR passages are flagged for human verification rather than silently guessed at, which keeps citation accuracy intact.',
   },
 ];
 
@@ -309,19 +339,6 @@ export default function LegalAiAgentsPage() {
     })),
   };
 
-  const schemaOrganization = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    '@id': 'https://factoryjet.com/#organization',
-    name: 'FactoryJet',
-    url: 'https://factoryjet.com',
-    logo: 'https://factoryjet.com/FinalLogo.svg',
-    sameAs: [
-      'https://www.linkedin.com/company/factoryjet',
-      'https://twitter.com/factoryjet',
-    ],
-  };
-
   return (
     <>
       <script
@@ -344,10 +361,6 @@ export default function LegalAiAgentsPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaFAQ) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrganization) }}
-      />
 
       <SiteHeader />
 
@@ -366,10 +379,7 @@ export default function LegalAiAgentsPage() {
                 </div>
 
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#14110F] font-heading leading-tight mb-6">
-                  Custom Legal AI Agents with{' '}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F05A28] to-[#C94A1A]">
-                    Live Clio &amp; Filevine Sync.
-                  </span>
+                  Custom Legal AI Agents with Live Clio &amp; Filevine Sync.
                 </h1>
 
                 <p className="text-lg sm:text-xl text-[#46403B] mb-8 leading-relaxed">
@@ -462,47 +472,62 @@ export default function LegalAiAgentsPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="p-8 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6]">
                 <div className="text-4xl sm:text-5xl font-extrabold text-[#F05A28] font-heading mb-2">
-                  58%
+                  &lt;3 Hrs
                 </div>
                 <div className="text-sm font-bold text-[#14110F] mb-3">
-                  Lawyer Workday Spent on Non-Billable Tasks
+                  Billable Hours Captured in an 8-Hour Workday
                 </div>
                 <p className="text-sm text-[#46403B] leading-relaxed mb-4">
-                  The Clio Legal Trends Report confirms that lawyers spend under 3 hours daily on billable legal analysis, with the remainder consumed by intake, document formatting, and administrative record searches.
+                  Clio&rsquo;s Legal Trends Report has repeatedly found that lawyers convert under 3 hours of an average 8-hour day into billable work, with the remainder consumed by intake, document formatting, and administrative record searches.
                 </p>
-                <div className="text-xs font-mono text-[#6E655F]">
-                  Source: Clio Legal Trends Report Benchmark Data
-                </div>
+                <a
+                  href="https://www.clio.com/resources/legal-trends/benchmarks/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs font-mono text-[#F05A28] hover:underline"
+                >
+                  Source: Clio Legal Trends Report &rarr;
+                </a>
               </div>
 
               <div className="p-8 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6]">
                 <div className="text-4xl sm:text-5xl font-extrabold text-[#F05A28] font-heading mb-2">
-                  74%
+                  80%
                 </div>
                 <div className="text-sm font-bold text-[#14110F] mb-3">
-                  Claimants Retain the First Law Firm That Responds
+                  Prospects Who Call a Competing Firm After 48 Hours of Silence
                 </div>
                 <p className="text-sm text-[#46403B] leading-relaxed mb-4">
-                  ABA legal marketing studies establish that nearly three-quarters of prospective clients hire the first law firm that answers their telephone call or responds to their web inquiry with a consultation offer.
+                  Martindale-Avvo&rsquo;s legal consumer research finds that four in five prospective clients contact another attorney if a firm has not followed up within 48 hours of the initial inquiry.
                 </p>
-                <div className="text-xs font-mono text-[#6E655F]">
-                  Source: American Bar Association Law Practice Division
-                </div>
+                <a
+                  href="https://www.martindale-avvo.com/academy/research/understanding-the-legal-consumer-2024/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs font-mono text-[#F05A28] hover:underline"
+                >
+                  Source: Martindale-Avvo Legal Consumer Research &rarr;
+                </a>
               </div>
 
               <div className="p-8 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6]">
                 <div className="text-4xl sm:text-5xl font-extrabold text-[#F05A28] font-heading mb-2">
-                  $140,000
+                  190 Hrs
                 </div>
                 <div className="text-sm font-bold text-[#14110F] mb-3">
-                  Annual Wasted Associate Overhead Per 10 Attorneys
+                  Reclaimed Per Lawyer Annually With AI-Assisted Review
                 </div>
                 <p className="text-sm text-[#46403B] leading-relaxed mb-4">
-                  Law firms spend over one hundred thousand dollars annually in junior associate salaries on mechanical contract clause comparisons that deterministic AI pipelines complete in seconds.
+                  Thomson Reuters Institute&rsquo;s Future of Professionals research finds each lawyer stands to reclaim roughly 190 work-hours a year by shifting document drafting and contract review onto AI-assisted workflows.
                 </p>
-                <div className="text-xs font-mono text-[#6E655F]">
-                  Source: Thomson Reuters Institute Legal Analytics
-                </div>
+                <a
+                  href="https://www.thomsonreuters.com/en-us/posts/legal/future-of-professionals-report-analysis-law-firm-economics/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs font-mono text-[#F05A28] hover:underline"
+                >
+                  Source: Thomson Reuters Institute &rarr;
+                </a>
               </div>
             </div>
           </div>
@@ -665,6 +690,42 @@ export default function LegalAiAgentsPage() {
           </div>
         </section>
 
+        {/* MID-PAGE CTA */}
+        <section className="py-16 bg-[#FFF8F5] border-b border-[#E7DED6]">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-[#F05A28]/30 mb-6">
+              <span className="font-mono text-xs text-[#F05A28] font-bold tracking-wide">
+                // SEE IT RUN ON YOUR OWN MATTER TYPES
+              </span>
+            </div>
+
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#14110F] font-heading mb-6">
+              Want to See These Capabilities Mapped to Your Practice Area?
+            </h2>
+
+            <p className="text-base sm:text-lg text-[#46403B] max-w-2xl mx-auto mb-8 leading-relaxed">
+              Send us a sample contract, intake form, or discovery file. We will show you exactly how the agent would process it inside your Clio, MyCase, or Filevine environment before you commit to anything.
+            </p>
+
+            <div className="flex flex-wrap justify-center items-center gap-4">
+              <a
+                href="https://calendly.com/bhavesh-factoryjet/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-[#F05A28] text-white font-bold hover:bg-[#D8441A] transition-colors shadow-md text-sm"
+              >
+                Book 30-Min Discovery Call
+              </a>
+              <ModalCTAButton
+                label="Send Us a Sample Document"
+                region="us"
+                modalVariant="ai"
+                btnVariant="secondary-light"
+              />
+            </div>
+          </div>
+        </section>
+
         {/* 5 SUB-VERTICAL LEGAL SHOWCASES */}
         <section className="py-20 bg-white border-b border-[#E7DED6]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -696,17 +757,17 @@ export default function LegalAiAgentsPage() {
                   <p className="text-[#46403B] leading-relaxed mb-6">
                     Our M&amp;A due diligence agent ingests virtual data room archives, categorizes agreements by contract type, flags restrictive covenants, assigns risk scores based on deal parameters, and compiles comprehensive due diligence memos with direct links to source clauses.
                   </p>
-                  <div className="flex flex-wrap gap-2 text-xs font-mono text-[#6E655F]">
-                    <span className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
+                  <ul className="flex flex-wrap gap-2 text-xs font-mono text-[#6E655F] list-none">
+                    <li className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
                       Change of Control Detection
-                    </span>
-                    <span className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
+                    </li>
+                    <li className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
                       Indemnity &amp; Cap Analysis
-                    </span>
-                    <span className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
+                    </li>
+                    <li className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
                       Disclosure Schedule Drafting
-                    </span>
-                  </div>
+                    </li>
+                  </ul>
                 </div>
                 <div className="lg:col-span-6 order-1 lg:order-2">
                   <div className="relative rounded-xl overflow-hidden aspect-[16/9] border border-[#E7DED6]">
@@ -747,17 +808,17 @@ export default function LegalAiAgentsPage() {
                   <p className="text-[#46403B] leading-relaxed mb-6">
                     Our personal injury AI agent answers inbound calls on the first ring, collects incident details, evaluates liability thresholds, sends digital retainer agreements via SMS, and synchronizes matter records directly into Filevine or MyCase. In litigation, it parses thousands of medical pages into organized treatment timelines.
                   </p>
-                  <div className="flex flex-wrap gap-2 text-xs font-mono text-[#6E655F]">
-                    <span className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
+                  <ul className="flex flex-wrap gap-2 text-xs font-mono text-[#6E655F] list-none">
+                    <li className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
                       Instant E-Retainer Dispatch
-                    </span>
-                    <span className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
+                    </li>
+                    <li className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
                       Medical Specials Calculation
-                    </span>
-                    <span className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
+                    </li>
+                    <li className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
                       Filevine &amp; MyCase API Sync
-                    </span>
-                  </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
 
@@ -776,17 +837,17 @@ export default function LegalAiAgentsPage() {
                   <p className="text-[#46403B] leading-relaxed mb-6">
                     Our real estate legal AI agent reads multi-property lease bundles, abstracts critical dates, calculates square footage base rent schedules, verifies tenant insurance compliance, and generates standardized lease abstraction summaries for property acquisitions and asset management teams.
                   </p>
-                  <div className="flex flex-wrap gap-2 text-xs font-mono text-[#6E655F]">
-                    <span className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
+                  <ul className="flex flex-wrap gap-2 text-xs font-mono text-[#6E655F] list-none">
+                    <li className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
                       CAM Reconciliation Parsing
-                    </span>
-                    <span className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
+                    </li>
+                    <li className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
                       Option Date Docketing
-                    </span>
-                    <span className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
+                    </li>
+                    <li className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
                       Title Exception Comparison
-                    </span>
-                  </div>
+                    </li>
+                  </ul>
                 </div>
                 <div className="lg:col-span-6 order-1 lg:order-2">
                   <div className="relative rounded-xl overflow-hidden aspect-[16/9] border border-[#E7DED6]">
@@ -827,17 +888,17 @@ export default function LegalAiAgentsPage() {
                   <p className="text-[#46403B] leading-relaxed mb-6">
                     Our IP automation agent parses incoming USPTO correspondence, cross-references cited registrations against trademark databases, matches goods and services classifications under the Nice Agreement, and drafts structured office action response outlines for attorney review.
                   </p>
-                  <div className="flex flex-wrap gap-2 text-xs font-mono text-[#6E655F]">
-                    <span className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
+                  <ul className="flex flex-wrap gap-2 text-xs font-mono text-[#6E655F] list-none">
+                    <li className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
                       USPTO TSDR Ingestion
-                    </span>
-                    <span className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
+                    </li>
+                    <li className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
                       Section 2(d) Confusion Analysis
-                    </span>
-                    <span className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
+                    </li>
+                    <li className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
                       Patent Claim Chart Extraction
-                    </span>
-                  </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
 
@@ -856,17 +917,17 @@ export default function LegalAiAgentsPage() {
                   <p className="text-[#46403B] leading-relaxed mb-6">
                     Our estate planning AI agent conducts structured conversational asset interviews with clients, organizes real estate deeds and brokerage accounts into structured estate schedules, and drafts customized estate planning packets using your firm approved templates.
                   </p>
-                  <div className="flex flex-wrap gap-2 text-xs font-mono text-[#6E655F]">
-                    <span className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
+                  <ul className="flex flex-wrap gap-2 text-xs font-mono text-[#6E655F] list-none">
+                    <li className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
                       Conversational Asset Intake
-                    </span>
-                    <span className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
+                    </li>
+                    <li className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
                       Trust Schedule Assembly
-                    </span>
-                    <span className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
+                    </li>
+                    <li className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
                       Smokeball &amp; Clio Document Sync
-                    </span>
-                  </div>
+                    </li>
+                  </ul>
                 </div>
                 <div className="lg:col-span-6 order-1 lg:order-2">
                   <div className="relative rounded-xl overflow-hidden aspect-[16/9] border border-[#E7DED6]">
@@ -899,7 +960,7 @@ export default function LegalAiAgentsPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 list-none">
               {[
                 {
                   title: 'Zero Data Retention & Privilege Enclaves',
@@ -942,7 +1003,7 @@ export default function LegalAiAgentsPage() {
                   desc: 'Your law firm receives complete Git repository access, Python backend code, Docker containers, and database schemas with zero recurring per-user software licensing fees.',
                 },
               ].map((item, idx) => (
-                <div
+                <li
                   key={item.title}
                   className="p-6 rounded-2xl border border-[#E7DED6] bg-white hover:border-[#F05A28]/50 transition-colors shadow-sm"
                 >
@@ -955,9 +1016,9 @@ export default function LegalAiAgentsPage() {
                   <p className="text-sm text-[#46403B] leading-relaxed">
                     {item.desc}
                   </p>
-                </div>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 
@@ -976,8 +1037,8 @@ export default function LegalAiAgentsPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="p-6 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6] shadow-sm flex flex-col justify-between">
+            <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 list-none">
+              <li className="p-6 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6] shadow-sm flex flex-col justify-between">
                 <div>
                   <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">PHASE 01 // WEEKS 1-2</div>
                   <h3 className="text-lg font-bold text-[#14110F] font-heading mb-3">PMS Schema &amp; Privilege Audit</h3>
@@ -988,9 +1049,9 @@ export default function LegalAiAgentsPage() {
                 <div className="text-xs font-mono text-[#6E655F] pt-4 border-t border-[#E7DED6]">
                   Deliverable: API connector schema &amp; security architecture documentation
                 </div>
-              </div>
+              </li>
 
-              <div className="p-6 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6] shadow-sm flex flex-col justify-between">
+              <li className="p-6 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6] shadow-sm flex flex-col justify-between">
                 <div>
                   <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">PHASE 02 // WEEKS 2-3</div>
                   <h3 className="text-lg font-bold text-[#14110F] font-heading mb-3">Parsing Pipeline &amp; Playbooks</h3>
@@ -1001,9 +1062,9 @@ export default function LegalAiAgentsPage() {
                 <div className="text-xs font-mono text-[#6E655F] pt-4 border-t border-[#E7DED6]">
                   Deliverable: Custom legal extraction models &amp; citation verification engine
                 </div>
-              </div>
+              </li>
 
-              <div className="p-6 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6] shadow-sm flex flex-col justify-between">
+              <li className="p-6 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6] shadow-sm flex flex-col justify-between">
                 <div>
                   <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">PHASE 03 // WEEKS 3-4</div>
                   <h3 className="text-lg font-bold text-[#14110F] font-heading mb-3">Approval Console &amp; PMS Staging</h3>
@@ -1014,9 +1075,9 @@ export default function LegalAiAgentsPage() {
                 <div className="text-xs font-mono text-[#6E655F] pt-4 border-t border-[#E7DED6]">
                   Deliverable: Lawyer review dashboard &amp; staging environment integration
                 </div>
-              </div>
+              </li>
 
-              <div className="p-6 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6] shadow-sm flex flex-col justify-between">
+              <li className="p-6 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6] shadow-sm flex flex-col justify-between">
                 <div>
                   <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">PHASE 04 // WEEKS 5-6</div>
                   <h3 className="text-lg font-bold text-[#14110F] font-heading mb-3">Live Rollout &amp; Code Handover</h3>
@@ -1027,8 +1088,8 @@ export default function LegalAiAgentsPage() {
                 <div className="text-xs font-mono text-[#6E655F] pt-4 border-t border-[#E7DED6]">
                   Deliverable: Full source code, Docker configs &amp; operations manual
                 </div>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
         </section>
 

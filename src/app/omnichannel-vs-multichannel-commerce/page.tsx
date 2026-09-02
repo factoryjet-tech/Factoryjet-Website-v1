@@ -635,12 +635,13 @@ export default function OmnichannelVsMultichannelPage() {
                   </div>
                 </div>
                 <blockquote>
-                  &ldquo;Moving from separated multichannel inventory to FactoryJet’s unified architecture saved us hundreds of
-                  hours of manual data reconciliation each month and completely eradicated out-of-stock cancellations.&rdquo;
+                  &ldquo;We were live in just 6 days. New inquiries come in every day, and the site is still really
+                  fast.&rdquo;
                 </blockquote>
                 <div className="rate">
-                  <span className="s">★★★★★</span>
-                  <span>4.9 / 5 across 120+ e-commerce &amp; marketplace builds</span>
+                  <a href="/case-studies/belle-maison-ecommerce-success" style={{ color: 'var(--pp-orange-dark)', fontWeight: 600, textDecoration: 'underline' }}>
+                    Read the Belle Maison case study →
+                  </a>
                 </div>
               </div>
             </div>

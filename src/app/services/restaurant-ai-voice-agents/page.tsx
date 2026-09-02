@@ -6,6 +6,7 @@ import SiteFooter from '@/components/v2/SiteFooter';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import FAQ, { type FAQItem, type FAQCategory } from '@/components/v2/FAQ';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import MidPageCTA from '@/components/v2/MidPageCTA';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
 const CANONICAL_URL = 'https://factoryjet.com/services/restaurant-ai-voice-agents';
@@ -497,6 +498,62 @@ export default function RestaurantAiVoiceAgentsPage() {
           </div>
         </section>
 
+        {/* VERIFIED INDUSTRY RESEARCH */}
+        <section className="py-16 bg-[#FFF8F5] border-b border-[#E7DED6]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <div className="font-mono text-xs text-[#F05A28] font-bold uppercase tracking-wider mb-2">
+                // VERIFIED RESTAURANT PHONE RESEARCH
+              </div>
+              <h2 className="text-3xl font-extrabold text-[#14110F] font-heading">
+                Why Missed Calls and Order Accuracy Are the Two Metrics That Matter
+              </h2>
+            </div>
+
+            <ul className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+              <li className="p-8 rounded-2xl bg-white border border-[#E7DED6]">
+                <div className="text-4xl sm:text-5xl font-extrabold text-[#F05A28] font-heading mb-2">
+                  58%
+                </div>
+                <div className="text-sm font-bold text-[#14110F] mb-3">
+                  Restaurant Calls That Go Unanswered
+                </div>
+                <p className="text-sm text-[#46403B] leading-relaxed mb-4">
+                  A 2025 Harris Poll of U.S. adults found most Americans still prefer calling a restaurant directly, yet a majority of those calls go unanswered, and most callers who get no answer do not call back.
+                </p>
+                <a
+                  href="https://theharrispoll.com/articles/state-of-beverages-2025-trend-report-how-does-gen-z-shop-restaurants-are-losing-business-by-not-answering-the-phone-should-workers-adapt-to-company-culture/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs font-mono text-[#F05A28] hover:underline"
+                >
+                  Source: The Harris Poll &rarr;
+                </a>
+              </li>
+
+              <li className="p-8 rounded-2xl bg-white border border-[#E7DED6]">
+                <div className="text-4xl sm:text-5xl font-extrabold text-[#14110F] font-heading mb-2">
+                  90%
+                </div>
+                <div className="text-sm font-bold text-[#14110F] mb-3">
+                  Best-Case Order Accuracy, Even at Peak Brands
+                </div>
+                <p className="text-sm text-[#46403B] leading-relaxed mb-4">
+                  Independent mystery-shop research across major chains found order accuracy declined year over year, with even the best-performing daypart topping out around 90 percent and dinner service the most error-prone window.
+                </p>
+                <a
+                  href="https://www.intouchinsight.com/blog/drive-thru-trends"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs font-mono text-[#F05A28] hover:underline"
+                >
+                  Source: Intouch Insight Drive-Thru Study &rarr;
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+
         {/* 5 SUB-VERTICAL RESTAURANT SHOWCASES */}
         <section className="py-20 bg-[#FAFAF7] border-b border-[#E7DED6]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -512,9 +569,9 @@ export default function RestaurantAiVoiceAgentsPage() {
               </p>
             </div>
 
-            <div className="space-y-16">
+            <ul className="space-y-16">
               {/* VERTICAL 1: High-Volume Pizzerias & Italian Trattorias */}
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center bg-white p-8 rounded-2xl border border-[#E7DED6] shadow-sm">
+              <li className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center bg-white p-8 rounded-2xl border border-[#E7DED6] shadow-sm">
                 <div className="lg:col-span-6 order-2 lg:order-1">
                   <div className="font-mono text-xs text-[#F05A28] font-bold uppercase mb-2">
                     01. HIGH-VOLUME PIZZERIAS & TRATTORIAS
@@ -551,10 +608,10 @@ export default function RestaurantAiVoiceAgentsPage() {
                     />
                   </div>
                 </div>
-              </div>
+              </li>
 
               {/* VERTICAL 2: Fast-Casual Chains & Drive-Thru Locations */}
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center bg-white p-8 rounded-2xl border border-[#E7DED6] shadow-sm">
+              <li className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center bg-white p-8 rounded-2xl border border-[#E7DED6] shadow-sm">
                 <div className="lg:col-span-6">
                   <div className="relative rounded-xl overflow-hidden aspect-[16/9] border border-[#E7DED6]">
                     <Image
@@ -591,10 +648,10 @@ export default function RestaurantAiVoiceAgentsPage() {
                     </span>
                   </div>
                 </div>
-              </div>
+              </li>
 
               {/* VERTICAL 3: Fine Dining, Steakhouses & Upscale Bistros */}
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center bg-white p-8 rounded-2xl border border-[#E7DED6] shadow-sm">
+              <li className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center bg-white p-8 rounded-2xl border border-[#E7DED6] shadow-sm">
                 <div className="lg:col-span-6 order-2 lg:order-1">
                   <div className="font-mono text-xs text-[#F05A28] font-bold uppercase mb-2">
                     03. FINE DINING & UPSCALE BISTROS
@@ -631,10 +688,10 @@ export default function RestaurantAiVoiceAgentsPage() {
                     />
                   </div>
                 </div>
-              </div>
+              </li>
 
               {/* VERTICAL 4: Multi-Location Restaurant Franchises */}
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center bg-white p-8 rounded-2xl border border-[#E7DED6] shadow-sm">
+              <li className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center bg-white p-8 rounded-2xl border border-[#E7DED6] shadow-sm">
                 <div className="lg:col-span-6">
                   <div className="relative rounded-xl overflow-hidden aspect-[16/9] border border-[#E7DED6]">
                     <Image
@@ -671,10 +728,10 @@ export default function RestaurantAiVoiceAgentsPage() {
                     </span>
                   </div>
                 </div>
-              </div>
+              </li>
 
               {/* VERTICAL 5: Corporate Catering, Party Platters & Large Events */}
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center bg-white p-8 rounded-2xl border border-[#E7DED6] shadow-sm">
+              <li className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center bg-white p-8 rounded-2xl border border-[#E7DED6] shadow-sm">
                 <div className="lg:col-span-6 order-2 lg:order-1">
                   <div className="font-mono text-xs text-[#F05A28] font-bold uppercase mb-2">
                     05. CORPORATE CATERING & EVENT PLANNERS
@@ -711,10 +768,16 @@ export default function RestaurantAiVoiceAgentsPage() {
                     />
                   </div>
                 </div>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
         </section>
+
+        <MidPageCTA
+          headline={'Still taking phone orders by hand during the rush?'}
+          sub={'Tell us your POS platform and roughly how many calls you get on a Friday night. We will show you what the AI agent would have caught, and what it would have cost you not to.'}
+          label={'Talk about your call volume'}
+        />
 
         {/* 4-PHASE TELEPHONY & POS DEPLOYMENT LIFECYCLE */}
         <section className="py-20 bg-[#FFF8F5] border-b border-[#E7DED6]">
@@ -731,8 +794,8 @@ export default function RestaurantAiVoiceAgentsPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="p-6 rounded-2xl bg-white border border-[#E7DED6] shadow-sm flex flex-col justify-between">
+            <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <li className="p-6 rounded-2xl bg-white border border-[#E7DED6] shadow-sm flex flex-col justify-between">
                 <div>
                   <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">PHASE 01 // WEEKS 1-2</div>
                   <h3 className="text-lg font-bold text-[#14110F] font-heading mb-3">Menu & Modifier Mapping</h3>
@@ -743,9 +806,9 @@ export default function RestaurantAiVoiceAgentsPage() {
                 <div className="text-xs font-mono text-[#6E655F] pt-4 border-t border-[#E7DED6]">
                   Deliverable: POS data dictionary & conversational modifier trees
                 </div>
-              </div>
+              </li>
 
-              <div className="p-6 rounded-2xl bg-white border border-[#E7DED6] shadow-sm flex flex-col justify-between">
+              <li className="p-6 rounded-2xl bg-white border border-[#E7DED6] shadow-sm flex flex-col justify-between">
                 <div>
                   <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">PHASE 02 // WEEKS 2-3</div>
                   <h3 className="text-lg font-bold text-[#14110F] font-heading mb-3">Acoustic Tuning & SIP Setup</h3>
@@ -756,9 +819,9 @@ export default function RestaurantAiVoiceAgentsPage() {
                 <div className="text-xs font-mono text-[#6E655F] pt-4 border-t border-[#E7DED6]">
                   Deliverable: High-fidelity voice agent & test telephony sandbox
                 </div>
-              </div>
+              </li>
 
-              <div className="p-6 rounded-2xl bg-white border border-[#E7DED6] shadow-sm flex flex-col justify-between">
+              <li className="p-6 rounded-2xl bg-white border border-[#E7DED6] shadow-sm flex flex-col justify-between">
                 <div>
                   <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">PHASE 03 // WEEKS 3-4</div>
                   <h3 className="text-lg font-bold text-[#14110F] font-heading mb-3">Kitchen Printer Simulation</h3>
@@ -769,9 +832,9 @@ export default function RestaurantAiVoiceAgentsPage() {
                 <div className="text-xs font-mono text-[#6E655F] pt-4 border-t border-[#E7DED6]">
                   Deliverable: End-to-end POS ticket injection validation
                 </div>
-              </div>
+              </li>
 
-              <div className="p-6 rounded-2xl bg-white border border-[#E7DED6] shadow-sm flex flex-col justify-between">
+              <li className="p-6 rounded-2xl bg-white border border-[#E7DED6] shadow-sm flex flex-col justify-between">
                 <div>
                   <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">PHASE 04 // GO-LIVE</div>
                   <h3 className="text-lg font-bold text-[#14110F] font-heading mb-3">Live Overflow & Night Cutover</h3>
@@ -782,8 +845,8 @@ export default function RestaurantAiVoiceAgentsPage() {
                 <div className="text-xs font-mono text-[#6E655F] pt-4 border-t border-[#E7DED6]">
                   Deliverable: Zero missed customer calls & complete IP handover
                 </div>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
         </section>
 
@@ -802,7 +865,7 @@ export default function RestaurantAiVoiceAgentsPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: 'Carrier-Grade Low-Latency SIP Trunking',
@@ -845,7 +908,7 @@ export default function RestaurantAiVoiceAgentsPage() {
                   desc: 'You receive complete Git source code, custom voice prompts, and direct cloud accounts. Zero third-party per-order commission fees.',
                 },
               ].map((item, idx) => (
-                <div
+                <li
                   key={item.title}
                   className="p-6 rounded-2xl border border-[#E7DED6] bg-[#FAFAF7] hover:border-[#F05A28]/50 transition-colors"
                 >
@@ -858,9 +921,9 @@ export default function RestaurantAiVoiceAgentsPage() {
                   <p className="text-sm text-[#46403B] leading-relaxed">
                     {item.desc}
                   </p>
-                </div>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 

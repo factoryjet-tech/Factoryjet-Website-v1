@@ -1216,14 +1216,14 @@ export default function ShopifyDevelopmentPage() {
     <div style={{ maxWidth: '760px', marginBottom: '40px' }}>
       <span className="eyebrow">CLIENT RESULTS</span>
       <h2 style={{ marginTop: '12px' }}>What UK brands say after we build their Shopify store</h2>
-      <p className="lead" style={{ marginTop: '16px' }}>Three named clients, in their own words. We are still waiting on permission to publish the rest, and we would rather show three real ones than twelve invented ones.</p>
+      <p className="lead" style={{ marginTop: '16px' }}>Two named clients, in their own words. We are still waiting on permission to publish the rest, and we would rather show two real ones than twelve invented ones.</p>
     </div>
-    <ul className="col-3">
+    <ul className="col-2" style={{ maxWidth: '820px' }}>
       <li className="result-card">
         <div style={{ height: '40px', background: 'var(--n100)', borderRadius: '8px', marginBottom: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <span style={{ fontFamily: 'var(--fd)', fontSize: '13px', fontWeight: '700', color: 'var(--ink)' }}>Belle Maison</span>
         </div>
-        <p style={{ fontSize: '15px', color: 'var(--ink)', fontWeight: '500', lineHeight: '1.6', marginBottom: '16px' }}>"FactoryJet delivered our Shopify store in 7 days: custom theme, full product catalogue, and all our payment methods live. The mobile speed was a revelation after our old WooCommerce site."</p>
+        <p style={{ fontSize: '15px', color: 'var(--ink)', fontWeight: '500', lineHeight: '1.6', marginBottom: '16px' }}>"We were live in 6 days, I genuinely did not believe that was possible. The design is stunning, the WhatsApp integration brings in inquiries every day, and the site has stayed lightning fast."</p>
         <div style={{ borderTop: '1px solid var(--n200)', paddingTop: '16px' }}>
           <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--ink)' }}>Ricky B, Founder, Belle Maison</p>
           <p style={{ fontSize: '13px', color: 'var(--n400)' }}>Artificial plants &amp; home décor</p>
@@ -1231,21 +1231,11 @@ export default function ShopifyDevelopmentPage() {
       </li>
       <li className="result-card">
         <div style={{ height: '40px', background: 'var(--n100)', borderRadius: '8px', marginBottom: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <span style={{ fontFamily: 'var(--fd)', fontSize: '13px', fontWeight: '700', color: 'var(--ink)' }}>Bombay Petals</span>
-        </div>
-        <p style={{ fontSize: '15px', color: 'var(--ink)', fontWeight: '500', lineHeight: '1.6', marginBottom: '16px' }}>"Migrating from Magento was something every agency we spoke to quoted as a major project. FactoryJet did it properly, with zero data loss and all our SEO URLs preserved, at a fair price we agreed before any work started."</p>
-        <div style={{ borderTop: '1px solid var(--n200)', paddingTop: '16px' }}>
-          <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--ink)' }}>Vishal, Director, Bombay Petals</p>
-          <p style={{ fontSize: '13px', color: 'var(--n400)' }}>B2B artificial plants &amp; décor</p>
-        </div>
-      </li>
-      <li className="result-card">
-        <div style={{ height: '40px', background: 'var(--n100)', borderRadius: '8px', marginBottom: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <span style={{ fontFamily: 'var(--fd)', fontSize: '13px', fontWeight: '700', color: 'var(--ink)' }}>Impulse Branding</span>
         </div>
-        <p style={{ fontSize: '15px', color: 'var(--ink)', fontWeight: '500', lineHeight: '1.6', marginBottom: '16px' }}>"The Figma-first process was brilliant. We saw every page on desktop and mobile before a line of code was written. No surprises at launch. The Lighthouse score was 97 on day one."</p>
+        <p style={{ fontSize: '15px', color: 'var(--ink)', fontWeight: '500', lineHeight: '1.6', marginBottom: '16px' }}>"In our business, clients size you up before they ever call. FactoryJet built us a website that finally looks as solid as the work we deliver, and we are getting real project inquiries through it."</p>
         <div style={{ borderTop: '1px solid var(--n200)', paddingTop: '16px' }}>
-          <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--ink)' }}>Kiran M, Founder, Impulse Branding</p>
+          <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--ink)' }}>Vishal K, Director, Impulse Branding</p>
           <p style={{ fontSize: '13px', color: 'var(--n400)' }}>Branding &amp; promotional products</p>
         </div>
       </li>

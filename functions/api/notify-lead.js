@@ -81,6 +81,56 @@ async function writeLeadToFirestore(env, lead) {
   }
 }
 
+/**
+ * Direct push to ERPNext CRM Lead via REST API.
+ * Ensures every incoming web lead directly registers inside ERPNext.
+ */
+async function writeLeadToERPNext(env, lead) {
+  const erpUrl = (env && env.ERPNEXT_URL) || 'https://erp.factoryjet.com';
+  const apiKey = env && env.ERPNEXT_API_KEY;
+  const apiSecret = env && env.ERPNEXT_API_SECRET;
+
+  if (!apiKey || !apiSecret) {
+    console.error('ERPNext lead sync skipped: ERPNEXT_API_KEY/ERPNEXT_API_SECRET not configured');
+    return { saved: false, error: 'not configured' };
+  }
+
+  const payload = {
+    lead_name: lead.name || 'Website Inquiry',
+    email_id: lead.email || '',
+    mobile_no: lead.phone || '',
+    company_name: lead.company || lead.name || 'Individual',
+    source: 'Website',
+    notes: [
+      {
+        note: `Source: ${lead.source || 'Website'}\nPage: https://factoryjet.com${lead.page || ''}\nService: ${serviceLabel(lead.service)}\nRegion: ${lead.region || 'India'}\nMessage: ${lead.message || 'N/A'}`
+      }
+    ]
+  };
+
+  try {
+    const res = await fetch(`${erpUrl}/api/resource/Lead`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `token ${apiKey}:${apiSecret}`
+      },
+      body: JSON.stringify(payload),
+    });
+
+    if (res.ok) {
+      const data = await res.json();
+      return { saved: true, leadId: data?.data?.name };
+    }
+    const errText = await res.text();
+    console.error('ERPNext Lead write failed:', res.status, errText);
+    return { saved: false, status: res.status, error: errText };
+  } catch (err) {
+    console.error('ERPNext Lead write error:', err);
+    return { saved: false, error: String(err) };
+  }
+}
+
 /** Pretty-print the service slug into a human label */
 function serviceLabel(id) {
   const map = {
@@ -259,6 +309,16 @@ export async function onRequestPost(context) {
     turnstileToken: body.turnstileToken, turnstileVerdict,
   });
 
+  // ── (1b) Concurrently push lead to ERPNext CRM ─────────────────────────────
+  let erpResult = { saved: false };
+  try {
+    erpResult = await writeLeadToERPNext(env, {
+      name, email, phone, company, service, message, region, source, page,
+    });
+  } catch (err) {
+    console.error('ERPNext lead sync exception:', err);
+  }
+
   // ── (2) Notify by email via Resend (best-effort) ───────────────────────────
   let emailed = false;
   const apiKey = env.RESEND_API_KEY;
@@ -292,11 +352,17 @@ export async function onRequestPost(context) {
   }
 
   // Capture is successful if the lead was saved OR an alert email was sent.
-  const ok = fsResult.saved || emailed;
+  const ok = fsResult.saved || erpResult.saved || emailed;
   return new Response(
-    JSON.stringify({ ok, saved: fsResult.saved, emailed, docId: fsResult.docId || docId }),
+    JSON.stringify({
+      ok,
+      saved: fsResult.saved,
+      erpLeadId: erpResult.leadId || null,
+      emailed,
+      docId: fsResult.docId || docId,
+    }),
     {
-      // 502 only when BOTH paths failed, so the client retries.
+      // 502 only when ALL paths failed, so the client retries.
       status: ok ? 200 : 502,
       headers: { 'Content-Type': 'application/json', ...corsHeaders },
     },

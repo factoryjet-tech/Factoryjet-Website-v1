@@ -6,6 +6,7 @@ import SiteFooter from '@/components/v2/SiteFooter';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import FAQ, { type FAQItem, type FAQCategory } from '@/components/v2/FAQ';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import MidPageCTA from '@/components/v2/MidPageCTA';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
 const CANONICAL_URL = 'https://factoryjet.com/services/manufacturing-ai-agents';
@@ -74,7 +75,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'basics',
     question: 'How fast can our manufacturing plant achieve positive ROI?',
     answer:
-      'Most mid-market US machine shops and contract manufacturers recover their implementation investment within 60 to 90 days. ROI is achieved by reducing RFQ turnaround time from 5 days to 20 minutes, eliminating open PO expediting labor, and preventing costly manual data entry errors into your ERP.',
+      'Payback period depends on plant size and how much of the quoting and PO workflow moves to the agent, but many mid-market US machine shops and contract manufacturers report recovering their implementation investment within the first few months. ROI comes from cutting RFQ turnaround time, eliminating open PO expediting labor, and preventing costly manual data-entry errors into your ERP.',
   },
   {
     category: 'basics',
@@ -86,13 +87,13 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'basics',
     question: 'Can the AI agent handle complex multi-tier manufacturing assemblies?',
     answer:
-      'Yes. Our agents parse multi-level bills of materials (BOM), identifying sub-assemblies, raw material stock requirements, outsourced finishing operations like anodizing or heat treating, and standard hardware components across your supplier catalogs.',
+      'Yes. Our agents parse multi-level bills of materials (BOM), identifying sub-assemblies, raw material stock requirements, outsourced finishing operations like anodizing or heat treating, and standard hardware components across your supplier catalogs. Each sub-assembly gets its own costed line rather than a single blended price, so your estimator can see exactly where labor, outsourced processing, and raw material drive the total, and adjust any one line without re-quoting the entire assembly from scratch.',
   },
   {
     category: 'erp',
     question: 'Which ERP systems do your manufacturing AI agents integrate with?',
     answer:
-      'We engineer native REST, SOAP, and direct database connectors for NetSuite, SAP S/4HANA, SAP Business One, Epicor Prophet 21, Epicor Kinetic, Infor CloudSuite Industrial (SyteLine), Microsoft Dynamics 365 Business Central, Acumatica, and JobBOSS.',
+      'We engineer native REST, SOAP, and direct database connectors for NetSuite, SAP S/4HANA, SAP Business One, Epicor Prophet 21, Epicor Kinetic, Infor CloudSuite Industrial (SyteLine), Microsoft Dynamics 365 Business Central, Acumatica, and JobBOSS. If your shop runs an ERP outside this list, or a heavily customized version of one of these, we scope the connector against its API or database schema during discovery rather than treating it as a blocker to the project.',
   },
   {
     category: 'erp',
@@ -110,31 +111,31 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'erp',
     question: 'How does the agent handle custom inventory pricing tiers and contract terms?',
     answer:
-      'The agent queries your ERP customer master record in real time. It retrieves specific contract discounts, negotiated freight terms, minimum order quantities (MOQ), and customer-specific markup rules before generating any quote draft.',
+      'The agent queries your ERP customer master record in real time. It retrieves specific contract discounts, negotiated freight terms, minimum order quantities (MOQ), and customer-specific markup rules before generating any quote draft. This runs on every quote, not just the first one for a new customer, so pricing stays accurate for a repeat customer even after your sales team updates contract terms mid-year, without anyone needing to re-key the new numbers.',
   },
   {
     category: 'rfq',
     question: 'How does the AI agent parse engineering drawings and PDF prints?',
     answer:
-      'We build multi-modal vision pipelines that extract title blocks, part numbers, material callouts (such as 6061-T6 Aluminum or 304 Stainless Steel), dimensional tolerances, surface finish requirements, and GD&T notes from scanned PDF prints, DWG, and STEP files.',
+      'We build multi-modal vision pipelines that extract title blocks, part numbers, material callouts (such as 6061-T6 Aluminum or 304 Stainless Steel), dimensional tolerances, surface finish requirements, and GD&T notes from scanned PDF prints, DWG, and STEP files. Extracted values are linked back to their exact location on the drawing, so an estimator reviewing the draft quote can click a tolerance callout and see the source dimension line rather than re-reading the print to verify it.',
   },
   {
     category: 'rfq',
     question: 'What happens when an RFQ drawing contains unreadable or ambiguous dimensions?',
     answer:
-      'When extraction confidence scores fall below mathematical safety thresholds, the agent flags the specific callout, generates a human clarification note, and routes the ticket to your senior estimator rather than guessing critical manufacturing dimensions.',
+      'When extraction confidence scores fall below mathematical safety thresholds, the agent flags the specific callout, generates a human clarification note, and routes the ticket to your senior estimator rather than guessing critical manufacturing dimensions. The flag includes the specific field the agent could not resolve and its best guess with a confidence score, so your estimator can confirm or correct it in seconds instead of re-reading the entire print to find what was ambiguous.',
   },
   {
     category: 'rfq',
     question: 'Can the agent calculate cycle times and raw material stock costs?',
     answer:
-      'Yes. The agent references your internal feeds-and-speeds tables, standard machine hourly rates, setup times, and live raw material commodity index prices (such as scrap and metal spot prices) to construct accurate cost-plus or market-based quote calculations.',
+      'Yes. The agent references your internal feeds-and-speeds tables, standard machine hourly rates, setup times, and live raw material commodity index prices (such as scrap and metal spot prices) to construct accurate cost-plus or market-based quote calculations. Commodity index prices refresh on a schedule you control, typically daily, so a quote built on Monday reflects Monday\'s aluminum or steel spot price rather than a stale number from whenever the ERP was last updated manually.',
   },
   {
     category: 'rfq',
     question: 'Does the RFQ agent support customer portal submissions and email inboxes?',
     answer:
-      'Yes. Our agents monitor shared sales inboxes (such as rfq@yourcompany.com) as well as customer portals like Coupa, Ariba, and government bidding boards, automatically ingesting RFQ packages as soon as they are posted.',
+      'Yes. Our agents monitor shared sales inboxes (such as rfq@yourcompany.com) as well as customer portals like Coupa, Ariba, and government bidding boards, automatically ingesting RFQ packages as soon as they are posted. For portals that require a login and do not offer an API, we configure a scheduled, credentialed check rather than true real-time push, so nothing sits unnoticed for more than the polling interval you set, typically every fifteen minutes.',
   },
   {
     category: 'security',
@@ -146,31 +147,55 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'security',
     question: 'Does our manufacturing company own the custom AI agent code?',
     answer:
-      'Yes. You receive 100 percent intellectual property and source code ownership. We deliver the complete Git repository, Python connectors, prompt orchestration scripts, and Docker containers. You never pay per-seat user taxes or runtime vendor licensing.',
+      'Yes. You receive 100 percent intellectual property and source code ownership. We deliver the complete Git repository, Python connectors, prompt orchestration scripts, and Docker containers. You never pay per-seat user taxes or runtime vendor licensing. That ownership is unconditional from day one, not contingent on a minimum contract term, so you could hand the repository to an internal developer or a different vendor at any point without needing our permission or a data export process.',
   },
   {
     category: 'security',
     question: 'How do you ensure IT compliance with CMMC and ITAR requirements?',
     answer:
-      'For aerospace and defense manufacturers subject to ITAR or CMMC standards, we deploy AI models within sovereign AWS GovCloud or Azure Government enclaves with strict US-citizen engineering access controls and end-to-end audit logging.',
+      'For aerospace and defense manufacturers subject to ITAR or CMMC standards, we deploy AI models within sovereign AWS GovCloud or Azure Government enclaves with strict US-citizen engineering access controls and end-to-end audit logging. We also scope which specific data classes count as export-controlled technical data under your ITAR determination before implementation starts, so the boundary between what the agent can touch and what stays fully isolated is defined by your compliance team, not by us.',
   },
   {
     category: 'erp',
     question: 'Can the AI agent parse multi-level Bill of Materials (BOM) for complex assemblies?',
     answer:
-      'Yes. The agent recursively traverses parent-child BOM assembly trees in your CAD or ERP database, breaking down sub-assemblies, weldments, raw stock cut pieces, standard off-the-shelf catalog hardware (fasteners, bearings, seals), and outside vendor plating processes into individual costed lines.',
+      'Yes. The agent recursively traverses parent-child BOM assembly trees in your CAD or ERP database, breaking down sub-assemblies, weldments, raw stock cut pieces, standard off-the-shelf catalog hardware (fasteners, bearings, seals), and outside vendor plating processes into individual costed lines. Depth is not capped at a fixed number of levels; the agent keeps traversing until it hits a purchased part, so even a five-level weldment assembly gets costed as completely as a simple one.',
   },
   {
     category: 'erp',
     question: 'How do you integrate with older on-premise ERPs that lack modern REST APIs?',
     answer:
-      'For legacy on-premise manufacturing ERPs (such as JobBOSS, Global Shop Solutions, or older SAP/Epicor versions), we deploy secure, local read-only ODBC/JDBC gateway agents or intermediate SQL staging tables behind your local network firewall with zero cloud exposure.',
+      'For legacy on-premise manufacturing ERPs (such as JobBOSS, Global Shop Solutions, or older SAP/Epicor versions), we deploy secure, local read-only ODBC/JDBC gateway agents or intermediate SQL staging tables behind your local network firewall with zero cloud exposure. The gateway agent runs inside your network and only pushes the specific fields a workflow needs, such as part numbers and open PO lines, keeping the rest of your database exactly as isolated as it is today.',
   },
   {
     category: 'security',
     question: 'How long does a full manufacturing AI agent deployment take?',
     answer:
-      'A single focused workflow (such as RFQ email extraction or PO date reconciliation) deploys in 3 to 5 weeks. A comprehensive plant-wide integration across quoting, ERP synchronization, and shop-floor scheduling completes in 8 to 12 weeks.',
+      'A single focused workflow (such as RFQ email extraction or PO date reconciliation) deploys in 3 to 5 weeks. A comprehensive plant-wide integration across quoting, ERP synchronization, and shop-floor scheduling completes in 8 to 12 weeks. The biggest variable is ERP access: plants that can provision a sandbox and API credentials in week one move through testing fastest, while those waiting on IT or a third-party ERP consultant tend to land toward the longer end.',
+  },
+  {
+    category: 'erp',
+    question: 'Does the agent support AS9100 or IATF 16949 quality documentation requirements?',
+    answer:
+      'Yes. For aerospace suppliers operating under AS9100 and automotive suppliers under IATF 16949, the agent attaches required material certifications, first-article inspection reports, and lot traceability documentation to each quote or PO record, and flags any missing certificate before a quote goes out.',
+  },
+  {
+    category: 'rfq',
+    question: 'Can the agent handle RFQs that arrive as native CAD files instead of PDFs, such as SolidWorks or Inventor assemblies?',
+    answer:
+      'Yes, where customers grant file access. Beyond flattened PDF and STEP files, we build parsers for native SolidWorks, Autodesk Inventor, and Siemens NX assemblies, extracting dimensional and material data directly from the model tree rather than a rasterized drawing. Reading the native model tree instead of a flattened drawing also recovers metadata a rasterized PDF loses, like material assigned per part in a multi-material assembly, which improves quote accuracy on complex weldments and machined housings.',
+  },
+  {
+    category: 'security',
+    question: 'What happens to the agent and its data if we end the engagement?',
+    answer:
+      'You keep everything. Because you own the full Git repository, connector code, and Docker containers from day one, ending the engagement means we stop billing and hand over any remaining documentation. There is no data migration fire drill, because your ERP and your infrastructure never left your control in the first place.',
+  },
+  {
+    category: 'basics',
+    question: 'Do you support manufacturers running separate ERP instances across multiple plants?',
+    answer:
+      'Yes. Multi-plant manufacturers often run separate NetSuite or SAP instances per facility, or a mix of systems after an acquisition. We build a single agent layer that routes RFQs and PO reconciliations to the correct plant instance based on customer, part number, or requested ship-from location.',
   },
 ];
 
@@ -445,11 +470,19 @@ export default function ManufacturingAiAgentsPage() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               <div>
                 <div className="text-3xl sm:text-4xl font-extrabold text-[#F05A28] font-mono mb-1">
-                  85%
+                  Up to 85%
                 </div>
                 <div className="text-xs sm:text-sm text-[#6E655F]">
                   Quoting turnaround reduction
                 </div>
+                <a
+                  href="https://www.paperlessparts.com/facts/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-1 block text-[10px] font-mono text-[#F05A28] hover:underline"
+                >
+                  Source: manufacturing quoting-automation data &rarr;
+                </a>
               </div>
               <div>
                 <div className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-mono mb-1">
@@ -464,7 +497,7 @@ export default function ManufacturingAiAgentsPage() {
                   &lt; 20 Min
                 </div>
                 <div className="text-xs sm:text-sm text-[#6E655F]">
-                  Average RFQ package assembly
+                  Typical RFQ package assembly
                 </div>
               </div>
               <div>
@@ -510,17 +543,17 @@ export default function ManufacturingAiAgentsPage() {
                   <p className="text-[#46403B] leading-relaxed mb-6">
                     Our AI quoting agent ingests CAD drawings and PDF packages, extracts material callouts (such as 6061 Aluminum, 4140 Steel, or Titanium), calculates stock volume, looks up machine rate tables, and generates comprehensive quote summaries in NetSuite or JobBOSS with full engineer approval gates.
                   </p>
-                  <div className="flex flex-wrap gap-2 text-xs font-mono text-[#6E655F]">
-                    <span className="px-2.5 py-1 rounded bg-[#FFF8F5] border border-[#F05A28]/20">
+                  <ul className="flex flex-wrap gap-2 text-xs font-mono text-[#6E655F] list-none">
+                    <li className="px-2.5 py-1 rounded bg-[#FFF8F5] border border-[#F05A28]/20">
                       Haas & Mazak Rate Matching
-                    </span>
-                    <span className="px-2.5 py-1 rounded bg-[#FFF8F5] border border-[#F05A28]/20">
+                    </li>
+                    <li className="px-2.5 py-1 rounded bg-[#FFF8F5] border border-[#F05A28]/20">
                       STEP & DWG Extraction
-                    </span>
-                    <span className="px-2.5 py-1 rounded bg-[#FFF8F5] border border-[#F05A28]/20">
+                    </li>
+                    <li className="px-2.5 py-1 rounded bg-[#FFF8F5] border border-[#F05A28]/20">
                       Finishing & Anodizing Lookup
-                    </span>
-                  </div>
+                    </li>
+                  </ul>
                 </div>
                 <div className="lg:col-span-6 order-1 lg:order-2">
                   <div className="relative rounded-xl overflow-hidden aspect-[16/9] border border-[#E7DED6]">
@@ -561,17 +594,17 @@ export default function ManufacturingAiAgentsPage() {
                   <p className="text-[#46403B] leading-relaxed mb-6">
                     Our supply chain AI agent reads supplier order confirmations, pulls promised ship dates, verifies quantities against open purchase orders in SAP or Epicor, and alerts procurement managers to schedule slips before they impact customer delivery milestones.
                   </p>
-                  <div className="flex flex-wrap gap-2 text-xs font-mono text-[#6E655F]">
-                    <span className="px-2.5 py-1 rounded bg-[#FFF8F5] border border-[#F05A28]/20">
+                  <ul className="flex flex-wrap gap-2 text-xs font-mono text-[#6E655F] list-none">
+                    <li className="px-2.5 py-1 rounded bg-[#FFF8F5] border border-[#F05A28]/20">
                       EDI 855 & PDF Ingestion
-                    </span>
-                    <span className="px-2.5 py-1 rounded bg-[#FFF8F5] border border-[#F05A28]/20">
+                    </li>
+                    <li className="px-2.5 py-1 rounded bg-[#FFF8F5] border border-[#F05A28]/20">
                       Critical Path Delay Alerts
-                    </span>
-                    <span className="px-2.5 py-1 rounded bg-[#FFF8F5] border border-[#F05A28]/20">
+                    </li>
+                    <li className="px-2.5 py-1 rounded bg-[#FFF8F5] border border-[#F05A28]/20">
                       3-Way Invoice Matching
-                    </span>
-                  </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
 
@@ -590,17 +623,17 @@ export default function ManufacturingAiAgentsPage() {
                   <p className="text-[#46403B] leading-relaxed mb-6">
                     Our electronics sourcing agent queries real-time distributor APIs (including DigiKey, Mouser, Newark, and Arrow) to verify live stock levels, price break points, and factory lead times. It automatically identifies obsolete components and suggests drop-in form-fit-function replacements.
                   </p>
-                  <div className="flex flex-wrap gap-2 text-xs font-mono text-[#6E655F]">
-                    <span className="px-2.5 py-1 rounded bg-[#FFF8F5] border border-[#F05A28]/20">
+                  <ul className="flex flex-wrap gap-2 text-xs font-mono text-[#6E655F] list-none">
+                    <li className="px-2.5 py-1 rounded bg-[#FFF8F5] border border-[#F05A28]/20">
                       DigiKey & Mouser API Sync
-                    </span>
-                    <span className="px-2.5 py-1 rounded bg-[#FFF8F5] border border-[#F05A28]/20">
+                    </li>
+                    <li className="px-2.5 py-1 rounded bg-[#FFF8F5] border border-[#F05A28]/20">
                       Lifecycle & EOL Detection
-                    </span>
-                    <span className="px-2.5 py-1 rounded bg-[#FFF8F5] border border-[#F05A28]/20">
+                    </li>
+                    <li className="px-2.5 py-1 rounded bg-[#FFF8F5] border border-[#F05A28]/20">
                       Attrition Rate Costing
-                    </span>
-                  </div>
+                    </li>
+                  </ul>
                 </div>
                 <div className="lg:col-span-6 order-1 lg:order-2">
                   <div className="relative rounded-xl overflow-hidden aspect-[16/9] border border-[#E7DED6]">
@@ -641,17 +674,17 @@ export default function ManufacturingAiAgentsPage() {
                   <p className="text-[#46403B] leading-relaxed mb-6">
                     Our AI dispatch agents ingest raw EDI feeds, reconcile cumulative received quantities against shipment histories in your ERP, calculate safety buffer requirements, and generate release schedules directly into NetSuite or SAP.
                   </p>
-                  <div className="flex flex-wrap gap-2 text-xs font-mono text-[#6E655F]">
-                    <span className="px-2.5 py-1 rounded bg-[#FFF8F5] border border-[#F05A28]/20">
+                  <ul className="flex flex-wrap gap-2 text-xs font-mono text-[#6E655F] list-none">
+                    <li className="px-2.5 py-1 rounded bg-[#FFF8F5] border border-[#F05A28]/20">
                       EDI 830 & 862 Ingestion
-                    </span>
-                    <span className="px-2.5 py-1 rounded bg-[#FFF8F5] border border-[#F05A28]/20">
+                    </li>
+                    <li className="px-2.5 py-1 rounded bg-[#FFF8F5] border border-[#F05A28]/20">
                       Cum Quantity Reconciliation
-                    </span>
-                    <span className="px-2.5 py-1 rounded bg-[#FFF8F5] border border-[#F05A28]/20">
+                    </li>
+                    <li className="px-2.5 py-1 rounded bg-[#FFF8F5] border border-[#F05A28]/20">
                       ASN Generation Verification
-                    </span>
-                  </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
 
@@ -670,17 +703,17 @@ export default function ManufacturingAiAgentsPage() {
                   <p className="text-[#46403B] leading-relaxed mb-6">
                     Our plastics quoting agent extracts part volume and wall thickness from 3D CAD models, queries live resin market spot prices (e.g. Polypropylene, ABS, PEEK, Polycarbonate), calculates press tonnage requirements, and structures tiered quotes across single-cavity prototype and multi-cavity production tooling.
                   </p>
-                  <div className="flex flex-wrap gap-2 text-xs font-mono text-[#6E655F]">
-                    <span className="px-2.5 py-1 rounded bg-[#FFF8F5] border border-[#F05A28]/20">
+                  <ul className="flex flex-wrap gap-2 text-xs font-mono text-[#6E655F] list-none">
+                    <li className="px-2.5 py-1 rounded bg-[#FFF8F5] border border-[#F05A28]/20">
                       Resin Index Spot Pricing
-                    </span>
-                    <span className="px-2.5 py-1 rounded bg-[#FFF8F5] border border-[#F05A28]/20">
+                    </li>
+                    <li className="px-2.5 py-1 rounded bg-[#FFF8F5] border border-[#F05A28]/20">
                       Tonnage & Clamp Matching
-                    </span>
-                    <span className="px-2.5 py-1 rounded bg-[#FFF8F5] border border-[#F05A28]/20">
+                    </li>
+                    <li className="px-2.5 py-1 rounded bg-[#FFF8F5] border border-[#F05A28]/20">
                       Multi-Cavity Amortization
-                    </span>
-                  </div>
+                    </li>
+                  </ul>
                 </div>
                 <div className="lg:col-span-6 order-1 lg:order-2">
                   <div className="relative rounded-xl overflow-hidden aspect-[16/9] border border-[#E7DED6]">
@@ -698,6 +731,12 @@ export default function ManufacturingAiAgentsPage() {
           </div>
         </section>
 
+        <MidPageCTA
+          headline="Wondering how this maps to your ERP and drawings?"
+          sub="Send us a sample RFQ package and your NetSuite, SAP, or Epicor setup. We'll show exactly where the agent reads, writes, and stops for your team's approval."
+          label="Get a manufacturing AI audit"
+        />
+
         {/* 10-POINT TECHNICAL ARCHITECTURE BLUEPRINT */}
         <section className="py-20 bg-white border-b border-[#E7DED6]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -713,7 +752,7 @@ export default function ManufacturingAiAgentsPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 list-none">
               {[
                 {
                   title: 'Multi-Modal CAD & Drawing Vision Pipeline',
@@ -756,7 +795,7 @@ export default function ManufacturingAiAgentsPage() {
                   desc: 'You receive full Git repository access, Python backend services, and Docker orchestration files. Zero vendor lock-in or recurring per-seat user fees.',
                 },
               ].map((item, idx) => (
-                <div
+                <li
                   key={item.title}
                   className="p-6 rounded-2xl border border-[#E7DED6] bg-[#FAFAF7] hover:border-[#F05A28]/50 transition-colors"
                 >
@@ -769,9 +808,9 @@ export default function ManufacturingAiAgentsPage() {
                   <p className="text-sm text-[#46403B] leading-relaxed">
                     {item.desc}
                   </p>
-                </div>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 

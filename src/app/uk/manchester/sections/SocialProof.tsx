@@ -12,6 +12,13 @@ import Image from "next/image";
  */
 
 const TESTIMONIALS = [
+  // Checked 2026-09-02: verified against the case study at
+  // src/data/case-studies/index.ts (slug "gpsuk-promotional-products") plus 10+
+  // corroborating blog posts, all describing the same RFQ / credit-terms / artwork-
+  // visualiser B2B build on Commerceflo for this real, named client. No canonical
+  // first-person quote exists anywhere to check word-for-word, but the claims below
+  // match the documented engagement and carry none of the AI-search-visibility
+  // overclaim that got the Kassem Sheikh testimonial (previously below) removed.
   {
     name: "Gareth Sampson",
     role: "Director, GPSUK",
@@ -20,26 +27,29 @@ const TESTIMONIALS = [
       "FactoryJet built our entire B2B promotional products store from the ground up, complete RFQ management, credit management, and an image visualiser. It's not a template shop; it's a proper enterprise e-commerce platform built exactly to our workflow.",
   },
   {
-    name: "Ricky",
+    name: "Ricky B.",
     role: "Founder, Belle Maison",
     image: "/images/manchester/person-2.webp",
     quote:
-      "We needed a store that handled both B2B and B2C for artificial plants, flowers, and LED lighting. FactoryJet built the full e-commerce platform and then did SEO, GEO, and AEO, we now show up in AI search results alongside Google.",
+      "We were live in 6 days, I genuinely did not believe that was possible. The design is stunning, the WhatsApp integration brings in inquiries every day, and the site has stayed lightning fast.",
   },
   {
-    name: "Kiran M.",
-    role: "Director, Impulse Branding Solutions",
+    name: "Vishal K.",
+    role: "Director, Impulse Branding",
     image: "/images/manchester/person-3.webp",
     quote:
-      "FactoryJet built our website from scratch and got us ranking in the top results on Google Search and AI search for our key terms. For a print branding and civil contracting firm serving India's largest enterprises, that visibility is everything.",
+      "In our business, clients size you up before they ever call. FactoryJet built us a website that finally looks as solid as the work we deliver, and we are getting real project inquiries through it.",
   },
-  {
-    name: "Kassem Sheikh",
-    role: "Director, Shevvaa Driver for Hire Services",
-    image: "/images/manchester/person-4.webp",
-    quote:
-      "They built our entire website from scratch, handled SEO and GEO, and got us listed on all search engines and AI platforms. We went from invisible to discoverable across Google, ChatGPT, and Perplexity.",
-  },
+  // Kassem Sheikh / Shevvaa Driver for Hire Services testimonial removed 2026-09-02.
+  // The quote claimed the client was "listed on all search engines and AI platforms" and
+  // "discoverable across Google, ChatGPT, and Perplexity" -- the same AI-search-visibility
+  // overclaim template as the Ricky/Kiran M. quotes confirmed fabricated and replaced above
+  // (all three were written in the same original commit, c55c94a, Apr 2026, in near-identical
+  // phrasing). Unlike Ricky and Kiran M., no canonical quote or case study exists anywhere in
+  // the repo for this client to substitute in its place (checked src/data/case-studies/index.ts
+  // and src/components/v2/TestimonialsSection.tsx), so the card was removed rather than left
+  // live on an unverifiable claim. If a real quote is collected, it can be added back the same
+  // way Ricky B. and Vishal K. were.
 ];
 
 const STATS = [
@@ -72,7 +82,7 @@ export default function SocialProof() {
           What business owners say about working with us
         </h2>
 
-        <ul className="mb-16 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <ul className="mb-16 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {TESTIMONIALS.map(({ name, role, image, quote }) => (
             <li
               key={name}

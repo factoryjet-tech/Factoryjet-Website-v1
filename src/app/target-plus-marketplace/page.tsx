@@ -579,8 +579,9 @@ export default function TargetPlusMarketplacePage() {
               <div className="pp-tcard">
                 <div style={{ color: 'var(--pp-orange)', fontSize: '13px', letterSpacing: '2px' }}>★★★★★</div>
                 <blockquote>
-                  &ldquo;FactoryJet connected our custom Shopify store directly to Target Plus and Amazon. We went from
-                  constant stockout fears to scaling multi-channel sales without adding operational staff.&rdquo;
+                  &ldquo;We were live in 6 days, I genuinely did not believe that was possible. The design is
+                  stunning, the WhatsApp integration brings in inquiries every day, and the site has stayed
+                  lightning fast.&rdquo;
                 </blockquote>
                 <div className="who">
                   <Image
@@ -592,27 +593,28 @@ export default function TargetPlusMarketplacePage() {
                   />
                   <div>
                     <b>Ricky B.</b>
-                    <span>Founder, Belle Maison (Home Goods)</span>
+                    <span>Founder, Belle Maison</span>
                   </div>
                 </div>
               </div>
               <div className="pp-tcard">
                 <div style={{ color: 'var(--pp-orange)', fontSize: '13px', letterSpacing: '2px' }}>★★★★★</div>
                 <blockquote>
-                  &ldquo;Their understanding of catalog feeds and B2B pricing rules made our wholesale and retail
-                  expansion completely clean. The architecture they built gives us full control over our business.&rdquo;
+                  &ldquo;In our business, clients size you up before they ever call. FactoryJet built us a website
+                  that finally looks as solid as the work we deliver, and we are getting real project inquiries
+                  through it.&rdquo;
                 </blockquote>
                 <div className="who">
                   <Image
                     src="/images/testimonials/vishal-impulse-branding-160.webp"
-                    alt="Vishal K, Founder of Impulse Branding"
+                    alt="Vishal K, Director of Impulse Branding"
                     width={48}
                     height={48}
                     style={{ borderRadius: '50%', objectFit: 'cover', border: '1px solid var(--pp-line)' }}
                   />
                   <div>
                     <b>Vishal K.</b>
-                    <span>Managing Director, Impulse Branding</span>
+                    <span>Director, Impulse Branding</span>
                   </div>
                 </div>
               </div>
@@ -680,12 +682,13 @@ export default function TargetPlusMarketplacePage() {
                   </div>
                 </div>
                 <blockquote>
-                  &ldquo;The multi-channel setup FactoryJet engineered doubled our marketplace revenue while eliminating manual
-                  order entry completely.&rdquo;
+                  &ldquo;We were live in just 6 days. New inquiries come in every day, and the site is still really
+                  fast.&rdquo;
                 </blockquote>
                 <div className="rate">
-                  <span className="s">★★★★★</span>
-                  <span>4.9 / 5 across 120+ e-commerce &amp; marketplace builds</span>
+                  <a href="/case-studies/belle-maison-ecommerce-success" style={{ color: 'var(--pp-orange-dark)', fontWeight: 600, textDecoration: 'underline' }}>
+                    Read the Belle Maison case study →
+                  </a>
                 </div>
               </div>
             </div>

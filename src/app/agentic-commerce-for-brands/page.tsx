@@ -655,12 +655,13 @@ export default function AgenticCommerceForBrandsPage() {
                   </div>
                 </div>
                 <blockquote>
-                  &ldquo;FactoryJet’s focus on structured schemas and fast edge APIs put our catalog at the top of AI search
-                  recommendations before our competitors even understood what agentic commerce meant.&rdquo;
+                  &ldquo;We were live in just 6 days. New inquiries come in every day, and the site is still really
+                  fast.&rdquo;
                 </blockquote>
                 <div className="rate">
-                  <span className="s">★★★★★</span>
-                  <span>4.9 / 5 across 120+ e-commerce &amp; marketplace builds</span>
+                  <a href="/case-studies/belle-maison-ecommerce-success" style={{ color: 'var(--pp-orange-dark)', fontWeight: 600, textDecoration: 'underline' }}>
+                    Read the Belle Maison case study →
+                  </a>
                 </div>
               </div>
             </div>

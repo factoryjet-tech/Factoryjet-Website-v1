@@ -877,16 +877,18 @@ export default function BigCommerceB2BPage() {
                   />
                   <div>
                     <b>Vishal K.</b>
-                    <span>Managing Director, Impulse Branding</span>
+                    <span>Director, Impulse Branding</span>
                   </div>
                 </div>
                 <blockquote>
-                  &ldquo;BigCommerce B2B Edition gave us the exact custom quotation engine and PunchOut connectivity our enterprise
-                  clients demanded. FactoryJet executed the integration flawlessly.&rdquo;
+                  &ldquo;In our business, clients size you up before they ever call. FactoryJet built us a website
+                  that finally looks as solid as the work we deliver, and we are getting real project inquiries
+                  through it.&rdquo;
                 </blockquote>
                 <div className="rate">
-                  <span className="s">★★★★★</span>
-                  <span>4.9 / 5 across 120+ e-commerce &amp; marketplace builds</span>
+                  <a href="/case-studies/impulse-branding-migration" style={{ color: 'var(--pp-orange-dark)', fontWeight: 600, textDecoration: 'underline' }}>
+                    Read the Impulse Branding case study →
+                  </a>
                 </div>
               </div>
             </div>

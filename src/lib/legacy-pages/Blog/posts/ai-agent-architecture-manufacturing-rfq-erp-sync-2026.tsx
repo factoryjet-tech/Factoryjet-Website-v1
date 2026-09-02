@@ -13,6 +13,61 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   category: 'Emerging Tech',
   imageUrl: '/images/manufacturing/manufacturing-plant-rfq-ai.jpg',
+  meta: {
+    title: 'Manufacturing AI Agents: RFQ & ERP Sync Guide',
+    description:
+      'Technical blueprint for manufacturing AI agents: PDF CAD drawing parsing, BOM costing, and NetSuite/SAP ERP synchronization.',
+  },
+  faqs: [
+    {
+      q: 'How does the AI agent parse scanned PDF engineering drawings with poor contrast?',
+      a: 'We implement specialized computer vision pre-processing pipelines that de-skew, contrast-enhance, and denoise rasterized prints before passing geometry to multi-modal extraction models.',
+    },
+    {
+      q: 'Can the agent calculate multi-operation setup times for CNC milling and turning?',
+      a: 'Yes. The agent references your internal standard setup matrices based on part volume, clamp setups, fixture requirements, and tool change counts.',
+    },
+    {
+      q: 'Which ERP systems support automated draft quote injection?',
+      a: 'We support NetSuite, SAP S/4HANA, SAP Business One, Epicor Prophet 21, Epicor Kinetic, Infor CloudSuite Industrial, Microsoft Dynamics 365, Acumatica, and JobBOSS.',
+    },
+    {
+      q: 'How does the agent handle outside processing like heat treatment or anodizing?',
+      a: 'The agent extracts outside processing specifications from drawing notes, references your approved vendor pricing rate sheets, and factors outside lead times into the final quote delivery date.',
+    },
+    {
+      q: 'Does the AI agent replace our existing human estimating engineers?',
+      a: 'No. The agent eliminates 80 percent of manual transcription and math lookups, allowing your senior estimators to review, refine, and approve four times more quotes daily.',
+    },
+    {
+      q: 'How does the agent reconcile supplier PO confirmations in purchasing?',
+      a: 'The agent parses vendor email acknowledgements, pulls promised ship dates and quantities, and updates matching open purchase order lines in your ERP automatically.',
+    },
+    {
+      q: 'What happens when drawing dimensions or tolerances are unreadable?',
+      a: 'If the computer vision confidence score falls below strict 95 percent safety thresholds, the agent flags the ambiguous callout with a red bounding box and routes it to the human estimator with a pre-written clarification question for the customer.',
+    },
+    {
+      q: 'Can the AI agent estimate assembly weldments and sheet metal fabrication?',
+      a: 'Yes. For sheet metal and structural weldments, the agent calculates laser/waterjet cutting linear inches, press brake bend counts, tonnage requirements, and weld seam inches based on thickness and alloy grade.',
+    },
+    {
+      q: 'How are volatile raw metal prices factored into quote margins?',
+      a: 'The agent connects to live metal spot pricing feeds (such as COMEX/LME indices for aluminum and copper scrap/billet), applying real-time surcharge formulas so your quotes never erode gross margins.',
+    },
+    {
+      q: 'Is the AI deployment compliant with ITAR and defense data regulations?',
+      a: 'Yes. We deploy within sovereign AWS GovCloud or Microsoft Azure Government environments with signed Zero Data Retention agreements and citizen-only access controls.',
+    },
+    {
+      q: 'What is the implementation timeline for a custom manufacturing AI agent?',
+      a: 'A focused RFQ quoting or purchasing PO reconciliation agent typically deploys in production within 4 to 6 weeks.',
+    },
+    {
+      q: 'Do we own the full source code and connectors after launch?',
+      a: 'Yes. You receive 100 percent source code, Git repositories, and connector ownership with zero ongoing vendor licensing royalties.',
+    },
+  ],
   content: (
     <article className="prose prose-lg max-w-none text-[#14110F]">
       {/* KEY TAKEAWAYS */}
@@ -123,7 +178,7 @@ export const post: BlogPost = {
               <td className="p-4 text-[#6E655F]">20 to 35 RFQ Packages</td>
             </tr>
             <tr>
-              <td className="p-4 font-semibold">Quote Win Rate (Speed to Lead)</td>
+              <td className="p-4 font-semibold">Quote Win Rate (Illustrative, Speed-to-Lead Pattern)*</td>
               <td className="p-4 font-bold text-[#F05A28]">32% to 41%</td>
               <td className="p-4 text-[#6E655F]">14% to 19%</td>
             </tr>
@@ -135,11 +190,16 @@ export const post: BlogPost = {
             <tr>
               <td className="p-4 font-semibold">Annual Cost per Estimating Seat</td>
               <td className="p-4 font-bold text-[#F05A28]">$0 User Tax (100% Owned)</td>
-              <td className="p-4 text-[#6E655F]">$95,000 to $130,000 Salary</td>
+              <td className="p-4 text-[#6E655F]">$95,000 to $130,000 Salary**</td>
             </tr>
           </tbody>
         </table>
       </div>
+      <p className="text-xs text-[#6E655F] italic">
+        *Illustrative modeling, not a verified manufacturing-industry statistic. It reflects the broadly documented speed-to-lead pattern in B2B sales, where faster response and turnaround times correlate with higher close rates; actual win-rate lift depends on your product, market, and existing sales process. **Senior manufacturing estimator compensation, reflecting deep technical and ERP expertise. Per the{' '}
+        <a href="https://www.bls.gov/ooh/business-and-financial/cost-estimators.htm" target="_blank" rel="noopener noreferrer">U.S. Bureau of Labor Statistics</a>{' '}
+        (May 2025), the median cost estimator salary in manufacturing specifically was $75,940/year, with the highest-paid 10% of cost estimators nationally earning over $130,820/year; senior estimators with manufacturing/ERP specialization typically fall toward the upper end of that range before payroll taxes and benefits load.
+      </p>
 
       <h2>Data Security, ITAR, and CMMC Compliance</h2>
       <p>
@@ -191,70 +251,7 @@ export const post: BlogPost = {
         A frequent concern for Chief Information Officers is ongoing token compute expenses. Parsing a complex 10-page drawing package using multi-modal vision models consumes approximately 14,000 to 22,000 input tokens and 1,800 output tokens.
       </p>
       <p>
-        At 2026 enterprise cloud inference pricing, the raw compute expense per RFQ package averages $0.08 to $0.18. Even for high-volume contract manufacturers processing 500 RFQs monthly, total inference and hosting costs remain under $120 per month, delivering an astronomical return on investment compared to hiring additional full-time estimators.
-      </p>
-
-      {/* FREQUENTLY ASKED QUESTIONS */}
-      <h2>Frequently Asked Questions on Manufacturing AI Architecture</h2>
-      
-      <h3>1. How does the AI agent parse scanned PDF engineering drawings with poor contrast?</h3>
-      <p>
-        We implement specialized computer vision pre-processing pipelines that de-skew, contrast-enhance, and denoise rasterized prints before passing geometry to multi-modal extraction models.
-      </p>
-
-      <h3>2. Can the agent calculate multi-operation setup times for CNC milling and turning?</h3>
-      <p>
-        Yes. The agent references your internal standard setup matrices based on part volume, clamp setups, fixture requirements, and tool change counts.
-      </p>
-
-      <h3>3. Which ERP systems support automated draft quote injection?</h3>
-      <p>
-        We support NetSuite, SAP S/4HANA, SAP Business One, Epicor Prophet 21, Epicor Kinetic, Infor CloudSuite Industrial, Microsoft Dynamics 365, Acumatica, and JobBOSS.
-      </p>
-
-      <h3>4. How does the agent handle outside processing like heat treatment or anodizing?</h3>
-      <p>
-        The agent extracts outside processing specifications from drawing notes, references your approved vendor pricing rate sheets, and factors outside lead times into the final quote delivery date.
-      </p>
-
-      <h3>5. Does the AI agent replace our existing human estimating engineers?</h3>
-      <p>
-        No. The agent eliminates 80 percent of manual transcription and math lookups, allowing your senior estimators to review, refine, and approve four times more quotes daily.
-      </p>
-
-      <h3>6. How does the agent reconcile supplier PO confirmations in purchasing?</h3>
-      <p>
-        The agent parses vendor email acknowledgements, pulls promised ship dates and quantities, and updates matching open purchase order lines in your ERP automatically.
-      </p>
-
-      <h3>7. What happens when drawing dimensions or tolerances are unreadable?</h3>
-      <p>
-        If the computer vision confidence score falls below strict 95 percent safety thresholds, the agent flags the ambiguous callout with a red bounding box and routes it to the human estimator with a pre-written clarification question for the customer.
-      </p>
-
-      <h3>8. Can the AI agent estimate assembly weldments and sheet metal fabrication?</h3>
-      <p>
-        Yes. For sheet metal and structural weldments, the agent calculates laser/waterjet cutting linear inches, press brake bend counts, tonnage requirements, and weld seam inches based on thickness and alloy grade.
-      </p>
-
-      <h3>9. How are volatile raw metal prices factored into quote margins?</h3>
-      <p>
-        The agent connects to live metal spot pricing feeds (such as COMEX/LME indices for aluminum and copper scrap/billet), applying real-time surcharge formulas so your quotes never erode gross margins.
-      </p>
-
-      <h3>10. Is the AI deployment compliant with ITAR and defense data regulations?</h3>
-      <p>
-        Yes. We deploy within sovereign AWS GovCloud or Microsoft Azure Government environments with signed Zero Data Retention agreements and citizen-only access controls.
-      </p>
-
-      <h3>11. What is the implementation timeline for a custom manufacturing AI agent?</h3>
-      <p>
-        A focused RFQ quoting or purchasing PO reconciliation agent typically deploys in production within 4 to 6 weeks.
-      </p>
-
-      <h3>12. Do we own the full source code and connectors after launch?</h3>
-      <p>
-        Yes. You receive 100 percent source code, Git repositories, and connector ownership with zero ongoing vendor licensing royalties.
+        At current enterprise cloud inference pricing, parsing a drawing package this way costs a small fraction of a cent in raw compute, not a per-seat or per-hour rate. Even at high monthly RFQ volumes, total inference and hosting spend for a contract manufacturer stays a rounding error next to the fully-loaded cost of hiring an additional full-time estimator, which is the comparison CIOs actually care about.
       </p>
 
       <div className="my-10 p-8 rounded-2xl bg-[#FFF8F5] border border-[#E7DED6] text-center not-prose">

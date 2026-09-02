@@ -87,7 +87,7 @@ export const post: BlogPost = {
           <li>4. Standardizing ERP Tool Calling with Model Context Protocol (MCP)</li>
           <li>5. Human-in-the-Loop Orchestration: Interactive Slack Checkpoints</li>
           <li>6. Enterprise Security Perimeter &amp; Private VPC Deployment</li>
-          <li>7. Real-World Case Study: Automated B2B Order Ingestion &amp; 3-Way Matching</li>
+          <li>7. A Representative Scenario: Automated B2B Order Ingestion &amp; 3-Way Matching</li>
           <li>8. Production Evaluation Harnesses &amp; Continuous Regression Testing</li>
         </ul>
       </div>
@@ -113,7 +113,9 @@ export const post: BlogPost = {
       </p>
       <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-6">
         <li>
-          <strong>n8n acts as the Integration Bus:</strong> It ingests webhooks from email servers, forms, and CRMs, handles queue buffering, extracts PDF text via OCR, executes deterministic data formatting, and provides visual monitoring for IT operations.
+          <strong>n8n acts as the Integration Bus:</strong> It ingests{' '}
+          <a href="https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.webhook" target="_blank" rel="noopener noreferrer" className="text-[#F05A28] hover:underline">webhooks</a>{' '}
+          from email servers, forms, and CRMs, handles queue buffering, extracts PDF text via OCR, executes deterministic data formatting, and provides visual monitoring for IT operations.
         </li>
         <li>
           <strong>LangGraph acts as the Reasoning Engine:</strong> When an event requires multi-step decision making, tool selection, or conversational evaluation, n8n invokes a containerized LangGraph microservice. LangGraph executes stateful graph transitions, calls external tools via MCP, and returns structured results back to n8n for final ERP commit.
@@ -127,7 +129,9 @@ export const post: BlogPost = {
         Real-world business workflows are rarely instantaneous. A purchase order approval or vendor dispute resolution may take hours or days to receive human authorization.
       </p>
       <p className="text-base leading-relaxed text-gray-700 mb-6">
-        LangGraph models workflows as cyclical state graphs. By attaching a PostgreSQL or Redis checkpointer, the complete memory state (including conversation messages, tool outputs, and intermediate decisions) is persisted after each step. The graph can pause execution indefinitely (an interrupt), wait for an external webhook, and resume without re-running previous expensive LLM inferences.
+        LangGraph models workflows as cyclical state graphs. By attaching a PostgreSQL or Redis{' '}
+        <a href="https://docs.langchain.com/oss/python/langgraph/persistence" target="_blank" rel="noopener noreferrer" className="text-[#F05A28] hover:underline">checkpointer</a>
+        , the complete memory state (including conversation messages, tool outputs, and intermediate decisions) is persisted after each step. The graph can pause execution indefinitely (an interrupt), wait for an external webhook, and resume without re-running previous expensive LLM inferences.
       </p>
 
       <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">
@@ -137,7 +141,9 @@ export const post: BlogPost = {
         Connecting AI agents to enterprise software of record (NetSuite, Dynamics 365, SAP, Salesforce) requires structured tool definitions. Hardcoding custom API calls inside individual agent prompts creates brittle, unmaintainable code.
       </p>
       <p className="text-base leading-relaxed text-gray-700 mb-6">
-        We utilize <strong>Model Context Protocol (MCP)</strong> to standardize tool interfaces. Each backend system exposes a typed MCP server providing bounded operations (e.g. <code className="bg-gray-100 px-2 py-1 rounded">get_customer_credit_limit</code>, <code className="bg-gray-100 px-2 py-1 rounded">create_sales_order_draft</code>). The MCP server enforces JSON schema validation, transaction dollar limits, and field-level permissions before any database write occurs.
+        We utilize{' '}
+        <a href="https://modelcontextprotocol.io/introduction" target="_blank" rel="noopener noreferrer" className="text-[#F05A28] hover:underline">Model Context Protocol (MCP)</a>
+        , the open standard Anthropic introduced for connecting AI applications to external tools and data sources, to standardize tool interfaces. Each backend system exposes a typed MCP server providing bounded operations (e.g. <code className="bg-gray-100 px-2 py-1 rounded">get_customer_credit_limit</code>, <code className="bg-gray-100 px-2 py-1 rounded">create_sales_order_draft</code>). The MCP server enforces JSON schema validation, transaction dollar limits, and field-level permissions before any database write occurs.
       </p>
 
       <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">
@@ -169,10 +175,13 @@ export const post: BlogPost = {
       </p>
 
       <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">
-        7. Real-World Case Study: Automated B2B Order Ingestion &amp; 3-Way Matching
+        7. A Representative Scenario: Automated B2B Order Ingestion &amp; 3-Way Matching
       </h2>
+      <p className="text-sm italic text-gray-500 mb-4">
+        The walkthrough below illustrates a realistic outcome pattern for this architecture. It is a representative example built from common wholesale distribution workflows, not a report of results from a specific named client engagement.
+      </p>
       <p className="text-base leading-relaxed text-gray-700 mb-4">
-        For a national wholesale distributor processing 4,000 monthly inbound purchase orders via PDF email attachments, FactoryJet engineered a 4-agent production system:
+        Consider a wholesale distributor processing thousands of monthly inbound purchase orders via PDF email attachments. A 4-agent production system built on this architecture would typically be structured like this:
       </p>
       <ol className="list-decimal pl-6 space-y-2 text-gray-700 mb-6">
         <li><strong>Ingestion Agent (n8n):</strong> Monitors mailbox, extracts PDF attachments, and parses structured text via vision OCR.</li>
@@ -181,7 +190,7 @@ export const post: BlogPost = {
         <li><strong>Execution Agent:</strong> Creates sales order drafts in NetSuite and notifies warehouse fulfillment teams in Slack.</li>
       </ol>
       <p className="text-base leading-relaxed text-gray-700 mb-6">
-        Outcome: Average order processing time decreased from 45 minutes to 30 seconds, with 82 percent of orders processing with zero human intervention.
+        Illustrative outcome: architectures like this can realistically cut average order processing time from around 45 minutes down to roughly 30 seconds, with the large majority of orders (commonly 80 percent or more) processing with zero human intervention. Actual results vary with document quality, ERP data cleanliness, and how much validation logic your specific order types require.
       </p>
 
       <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">

@@ -633,16 +633,18 @@ export default function HeadlessVsMonolithicPage() {
                   />
                   <div>
                     <b>Vishal K.</b>
-                    <span>Managing Director, Impulse Branding</span>
+                    <span>Director, Impulse Branding</span>
                   </div>
                 </div>
                 <blockquote>
-                  &ldquo;FactoryJet engineered our headless Next.js storefront on Shopify Plus with zero fluff. Our mobile conversion
-                  jumped 32% within 30 days of launch, and our page load speeds are now instantaneous.&rdquo;
+                  &ldquo;In our business, clients size you up before they ever call. FactoryJet built us a website
+                  that finally looks as solid as the work we deliver, and we are getting real project inquiries
+                  through it.&rdquo;
                 </blockquote>
                 <div className="rate">
-                  <span className="s">★★★★★</span>
-                  <span>4.9 / 5 across 120+ e-commerce &amp; marketplace builds</span>
+                  <a href="/case-studies/impulse-branding-migration" style={{ color: 'var(--pp-orange-dark)', fontWeight: 600, textDecoration: 'underline' }}>
+                    Read the Impulse Branding case study →
+                  </a>
                 </div>
               </div>
             </div>

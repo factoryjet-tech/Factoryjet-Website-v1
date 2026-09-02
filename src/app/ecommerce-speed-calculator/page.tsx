@@ -601,16 +601,18 @@ export default function EcommerceSpeedCalculatorPage() {
                   />
                   <div>
                     <b>Vishal K.</b>
-                    <span>Managing Director, Impulse Branding</span>
+                    <span>Director, Impulse Branding</span>
                   </div>
                 </div>
                 <blockquote>
-                  &ldquo;FactoryJet is the best e-commerce speed optimization agency we have ever worked with. They cut our mobile
-                  LCP from 4.1s to 0.8s, resulting in an immediate 28% jump in mobile checkout conversion.&rdquo;
+                  &ldquo;In our business, clients size you up before they ever call. FactoryJet built us a website
+                  that finally looks as solid as the work we deliver, and we are getting real project inquiries
+                  through it.&rdquo;
                 </blockquote>
                 <div className="rate">
-                  <span className="s">★★★★★</span>
-                  <span>4.9 / 5 across 120+ e-commerce &amp; marketplace builds</span>
+                  <a href="/case-studies/impulse-branding-migration" style={{ color: 'var(--pp-orange-dark)', fontWeight: 600, textDecoration: 'underline' }}>
+                    Read the Impulse Branding case study →
+                  </a>
                 </div>
               </div>
             </div>

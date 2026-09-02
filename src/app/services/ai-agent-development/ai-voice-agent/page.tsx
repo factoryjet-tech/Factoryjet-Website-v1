@@ -1093,53 +1093,6 @@ export default function AIVoiceAgentPage() {
           </div>
         </section>
 
-        {/* Real Proof / Testimonials */}
-        <section className="pp-sec tint">
-          <div className="pp-wrap">
-            <p className="pp-mlabel">{'// verified proof'}</p>
-            <h2 style={{ marginTop: '10px' }}>Built for high-volume telephone operations</h2>
-            <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="pp-card" style={{ padding: '28px', backgroundColor: '#FFFFFF' }}>
-                <p className="font-fj-body text-[1rem] leading-relaxed text-fj-neutral-700 italic">
-                  &ldquo;We used to lose after-hours emergency calls to voicemail. The AI voice agent answers every call within two rings, captures the issue details, and schedules dispatch visits directly on our calendar with zero missed opportunities.&rdquo;
-                </p>
-                <div className="mt-5 flex items-center gap-3">
-                  <Image
-                    src="/images/testimonials/ricky-belle-maison-160.webp"
-                    alt="Ricky B, Founder at Belle Maison"
-                    width={48}
-                    height={48}
-                    className="rounded-full border border-fj-neutral-200"
-                  />
-                  <div>
-                    <p className="font-fj-body font-bold text-fj-ink">Ricky B.</p>
-                    <p className="font-fj-mono text-[11px] text-fj-neutral-400">Founder, Belle Maison (DTC Home Goods)</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="pp-card" style={{ padding: '28px', backgroundColor: '#FFFFFF' }}>
-                <p className="font-fj-body text-[1rem] leading-relaxed text-fj-neutral-700 italic">
-                  &ldquo;The bilingual English and Spanish capability was critical for our customer base. The voice agent switches languages frictionlessly and sounds completely natural, cutting our answering service costs by 80%.&rdquo;
-                </p>
-                <div className="mt-5 flex items-center gap-3">
-                  <Image
-                    src="/images/testimonials/vishal-impulse-branding-160.webp"
-                    alt="Vishal K, Managing Director at Impulse Branding"
-                    width={48}
-                    height={48}
-                    className="rounded-full border border-fj-neutral-200"
-                  />
-                  <div>
-                    <p className="font-fj-body font-bold text-fj-ink">Vishal K.</p>
-                    <p className="font-fj-mono text-[11px] text-fj-neutral-400">Managing Director, Impulse Branding (B2B Distribution)</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* FAQ Section */}
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import FAQ from '@/components/v2/FAQ';
@@ -9,11 +10,18 @@ import EnterpriseArchitectureBlueprint from '@/components/v2/EnterpriseArchitect
 import AuthorCard from '@/components/v2/AuthorCard';
 import CommerceRoiCalculator from '@/components/v2/CommerceRoiCalculator';
 import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
-import ReplatformingScopeEstimator from '@/components/commerce/ReplatformingScopeEstimator';
 import ZeroDowntimeMigrationMatrix from '@/components/commerce/ZeroDowntimeMigrationMatrix';
 import SeoLinkEquityChecklist from '@/components/commerce/SeoLinkEquityChecklist';
 import AnswerFirstDefinition from '@/components/commerce/AnswerFirstDefinition';
 import '@/components/v2/PlatformPage.css';
+
+// Lazy-load the estimator as a separate chunk so its ~255 KiB JS doesn't block
+// initial render. ssr stays true (required in a Server Component) so the
+// Migration Guarantees list still renders in the static HTML for crawlers.
+const ReplatformingScopeEstimator = dynamic(
+  () => import('@/components/commerce/ReplatformingScopeEstimator'),
+  { ssr: true }
+);
 
 const PAGE_MODIFIED = '2026-08-24';
 

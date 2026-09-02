@@ -1049,57 +1049,6 @@ export default function EcommerceSeoPage() {
 </section>
 
 {/* ════════════════════════════════════════════════
-  11. CLIENT RESULTS
-════════════════════════════════════════════════ */}
-<section className="sec-lg dot-grid" style={{ position: 'relative' }}>
-  <div className="shimmer" style={{ position: 'absolute', bottom: '0', left: '0', right: '0' }}></div>
-  <div className="wrap">
-    <div style={{ maxWidth: '640px', margin: '0 auto 48px', textAlign: 'center' }}>
-      <span className="eyebrow">CLIENT RESULTS</span>
-      <h2 style={{ marginTop: '12px' }}>UK ecommerce brands on what FactoryJet SEO changed</h2>
-    </div>
-    <ul className="col-3">
-      <li className="card">
-        <div style={{ background: 'var(--green-bg)', border: '1px solid var(--green-bd)', borderRadius: '8px', padding: '12px 16px', marginBottom: '20px' }}>
-          <div style={{ fontFamily: 'var(--fm)', fontSize: '10px', textTransform: 'uppercase', letterSpacing: '.10em', color: 'var(--green)' }}>RESULT</div>
-          <div style={{ fontFamily: 'var(--fd)', fontSize: '20px', fontWeight: '700', color: 'var(--green)', letterSpacing: '-.03em' }}>+57 positions</div>
-          <div style={{ fontSize: '12px', color: 'var(--n600)', marginTop: '2px' }}>on "artificial plants UK", 6 months</div>
-        </div>
-        <p style={{ fontSize: '15px', color: 'var(--ink)', fontWeight: '500', lineHeight: '1.6', marginBottom: '16px' }}>"Our organic traffic was zero when we started. FactoryJet fixed the technical issues first. It turned out Shopify was indexing 400 duplicate filter pages. Then they rebuilt our category content. We're now getting 2,800 organic sessions per month to categories that were invisible before."</p>
-        <div style={{ borderTop: '1px solid var(--n200)', paddingTop: '16px' }}>
-          <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--ink)' }}>Vishal; Director, Bombay Petals</p>
-          <p style={{ fontSize: '13px', color: 'var(--n400)' }}>B2B artificial plants, London</p>
-        </div>
-      </li>
-      <li className="card">
-        <div style={{ background: 'var(--green-bg)', border: '1px solid var(--green-bd)', borderRadius: '8px', padding: '12px 16px', marginBottom: '20px' }}>
-          <div style={{ fontFamily: 'var(--fm)', fontSize: '10px', textTransform: 'uppercase', letterSpacing: '.10em', color: 'var(--green)' }}>RESULT</div>
-          <div style={{ fontFamily: 'var(--fd)', fontSize: '20px', fontWeight: '700', color: 'var(--green)', letterSpacing: '-.03em' }}>3.2× organic revenue</div>
-          <div style={{ fontSize: '12px', color: 'var(--n600)', marginTop: '2px' }}>in 8 months vs. baseline</div>
-        </div>
-        <p style={{ fontSize: '15px', color: 'var(--ink)', fontWeight: '500', lineHeight: '1.6', marginBottom: '16px' }}>"Every other SEO agency we'd spoken to showed us ranking dashboards. FactoryJet opened with a GA4 ecommerce breakdown and asked why our organic sessions weren't converting. That framing changed everything. We ended up with better traffic, not just more of it."</p>
-        <div style={{ borderTop: '1px solid var(--n200)', paddingTop: '16px' }}>
-          <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--ink)' }}>Ricky B; Founder, Belle Maison</p>
-          <p style={{ fontSize: '13px', color: 'var(--n400)' }}>Home décor ecommerce, UK</p>
-        </div>
-      </li>
-      <li className="card">
-        <div style={{ background: 'var(--green-bg)', border: '1px solid var(--green-bd)', borderRadius: '8px', padding: '12px 16px', marginBottom: '20px' }}>
-          <div style={{ fontFamily: 'var(--fm)', fontSize: '10px', textTransform: 'uppercase', letterSpacing: '.10em', color: 'var(--green)' }}>RESULT</div>
-          <div style={{ fontFamily: 'var(--fd)', fontSize: '20px', fontWeight: '700', color: 'var(--green)', letterSpacing: '-.03em' }}>Page 1 · 6 target terms</div>
-          <div style={{ fontSize: '12px', color: 'var(--n600)', marginTop: '2px' }}>none ranked before we started</div>
-        </div>
-        <p style={{ fontSize: '15px', color: 'var(--ink)', fontWeight: '500', lineHeight: '1.6', marginBottom: '16px' }}>"We had been doing SEO with a UK agency for 18 months, on a monthly retainer, and had nothing to show for it in Search Console. FactoryJet's audit found 11 technical issues the previous agency had missed entirely. We switched, and were on page 1 for our core terms inside 6 months."</p>
-        <div style={{ borderTop: '1px solid var(--n200)', paddingTop: '16px' }}>
-          <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--ink)' }}>Kiran M; Founder, Impulse Branding</p>
-          <p style={{ fontSize: '13px', color: 'var(--n400)' }}>Promotional products, UK</p>
-        </div>
-      </li>
-    </ul>
-  </div>
-</section>
-
-{/* ════════════════════════════════════════════════
   12. FOUNDER + HIRE SECTION
 ════════════════════════════════════════════════ */}
 <section className="sec-lg" style={{ background: 'var(--white)' }}>

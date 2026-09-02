@@ -89,41 +89,41 @@
    research (docs/AI-SEO-RULEBOOK.md §2) found the median AI-cited page carries
    ~110 <li> elements: a list item is a self-contained retrievable chunk, a
    <div> is not. Reset the list chrome so the grid looks identical. */
-.platpage .pp-bento { display: grid; gap: 16px; grid-template-columns: repeat(3, 1fr);
+.platpage .pp-bento, .pp-page .pp-bento { display: grid; gap: 16px; grid-template-columns: repeat(3, 1fr);
   list-style: none; margin: 0; padding: 0; }
 
 /* 2 cards: half-width each rather than two-thirds and a hole. */
-.platpage .pp-bento.n2 { grid-template-columns: repeat(2, 1fr); }
+.platpage .pp-bento.n2, .pp-page .pp-bento.n2 { grid-template-columns: repeat(2, 1fr); }
 
 /* 4 cards: one clean row of 4. */
-.platpage .pp-bento.n4 { grid-template-columns: repeat(4, 1fr); }
+.platpage .pp-bento.n4, .pp-page .pp-bento.n4 { grid-template-columns: repeat(4, 1fr); }
 
 /* 5 cards: 3 then 2, both rows full-bleed. A 6-col base lets row 1 use
    3 spans of 2 and row 2 use 2 spans of 3, so neither row leaves a gap. */
-.platpage .pp-bento.n5 { grid-template-columns: repeat(6, 1fr); }
-.platpage .pp-bento.n5 > * { grid-column: span 2; }
-.platpage .pp-bento.n5 > *:nth-child(n+4) { grid-column: span 3; }
+.platpage .pp-bento.n5, .pp-page .pp-bento.n5 { grid-template-columns: repeat(6, 1fr); }
+.platpage .pp-bento.n5 > *, .pp-page .pp-bento.n5 > * { grid-column: span 2; }
+.platpage .pp-bento.n5 > *:nth-child(n+4), .pp-page .pp-bento.n5 > *:nth-child(n+4) { grid-column: span 3; }
 
 /* 8 cards: 4 x 2. */
-.platpage .pp-bento.n8 { grid-template-columns: repeat(4, 1fr); }
+.platpage .pp-bento.n8, .pp-page .pp-bento.n8 { grid-template-columns: repeat(4, 1fr); }
 
 /* Tablet: everything collapses to 2-up and the span rules must be cleared,
    otherwise n5 children keep spanning 2-3 tracks of a 2-track grid and overflow. */
 @media (max-width: 900px) {
-  .platpage .pp-bento,
-  .platpage .pp-bento.n2,
-  .platpage .pp-bento.n4,
-  .platpage .pp-bento.n5,
-  .platpage .pp-bento.n8 { grid-template-columns: repeat(2, 1fr) !important; }
-  .platpage .pp-bento.n5 > *,
-  .platpage .pp-bento.n5 > *:nth-child(n+4) { grid-column: auto !important; }
+  .platpage .pp-bento, .pp-page .pp-bento,
+  .platpage .pp-bento.n2, .pp-page .pp-bento.n2,
+  .platpage .pp-bento.n4, .pp-page .pp-bento.n4,
+  .platpage .pp-bento.n5, .pp-page .pp-bento.n5,
+  .platpage .pp-bento.n8, .pp-page .pp-bento.n8 { grid-template-columns: repeat(2, 1fr) !important; }
+  .platpage .pp-bento.n5 > *, .pp-page .pp-bento.n5 > *,
+  .platpage .pp-bento.n5 > *:nth-child(n+4), .pp-page .pp-bento.n5 > *:nth-child(n+4) { grid-column: auto !important; }
 }
 @media (max-width: 560px) {
-  .platpage .pp-bento,
-  .platpage .pp-bento.n2,
-  .platpage .pp-bento.n4,
-  .platpage .pp-bento.n5,
-  .platpage .pp-bento.n8 { grid-template-columns: 1fr !important; }
+  .platpage .pp-bento, .pp-page .pp-bento,
+  .platpage .pp-bento.n2, .pp-page .pp-bento.n2,
+  .platpage .pp-bento.n4, .pp-page .pp-bento.n4,
+  .platpage .pp-bento.n5, .pp-page .pp-bento.n5,
+  .platpage .pp-bento.n8, .pp-page .pp-bento.n8 { grid-template-columns: 1fr !important; }
 }
 .platpage .pp-card {
   border: 1px solid var(--pp-line); border-radius: 18px; padding: 22px; background: #fff;
@@ -988,12 +988,8 @@
   text-wrap: balance;
 }
 
-.pp-page .pp-grad,
-.platpage .pp-grad {
-  background: linear-gradient(135deg, var(--pp-orange) 0%, var(--pp-orange-dark) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+/* .pp-grad: gradient text is banned (CLAUDE.md non-negotiable #5). Removed here
+   once already (2026-08-01); do not restyle this class as a gradient again. */
 
 .pp-page .pp-hero-card {
   background: #ffffff;

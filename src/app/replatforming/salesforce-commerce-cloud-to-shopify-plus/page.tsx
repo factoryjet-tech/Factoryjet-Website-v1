@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import FAQ from '@/components/v2/FAQ';
@@ -11,12 +12,19 @@ import EnterpriseArchitectureBlueprint from '@/components/v2/EnterpriseArchitect
 import AuthorCard from '@/components/v2/AuthorCard';
 import CommerceRoiCalculator from '@/components/v2/CommerceRoiCalculator';
 import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
-import ReplatformingScopeEstimator from '@/components/commerce/ReplatformingScopeEstimator';
 import ZeroDowntimeMigrationMatrix from '@/components/commerce/ZeroDowntimeMigrationMatrix';
 import SeoLinkEquityChecklist from '@/components/commerce/SeoLinkEquityChecklist';
 import AnswerFirstDefinition from '@/components/commerce/AnswerFirstDefinition';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
+
+// Lazy-load the estimator as a separate chunk so its ~255 KiB JS doesn't block
+// initial render. ssr stays true (required in a Server Component) so the
+// Migration Guarantees list still renders in the static HTML for crawlers.
+const ReplatformingScopeEstimator = dynamic(
+  () => import('@/components/commerce/ReplatformingScopeEstimator'),
+  { ssr: true }
+);
 
 const PAGE_MODIFIED = '2026-08-24';
 
@@ -713,7 +721,7 @@ export default function SFCCToShopifyPlusPage() {
                 <div>
                   <div style={{ color: '#F59E0B', fontSize: '16px', marginBottom: '16px' }}>★★★★★</div>
                   <p style={{ fontSize: '15px', color: '#141414', lineHeight: 1.6, fontStyle: 'italic', margin: 0 }}>
-                    &ldquo;FactoryJet executed our zero-downtime cutover without losing a single customer record or ranking position. Our mobile conversion shot up immediately with Shop Pay.&rdquo;
+                    &ldquo;We were live in 6 days, I genuinely did not believe that was possible. The design is stunning, the WhatsApp integration brings in inquiries every day, and the site has stayed lightning fast.&rdquo;
                   </p>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginTop: '24px', paddingTop: '18px', borderTop: '1px solid #E6E6EC' }}>
@@ -726,7 +734,7 @@ export default function SFCCToShopifyPlusPage() {
                   />
                   <div>
                     <div style={{ fontSize: '14.5px', fontWeight: 800, color: '#141414' }}>Ricky B.</div>
-                    <div style={{ fontSize: '12.5px', color: '#6E6E80' }}>Managing Director · Belle Maison</div>
+                    <div style={{ fontSize: '12.5px', color: '#6E6E80' }}>Founder · Belle Maison · <a href="/case-studies/belle-maison-ecommerce-success" style={{ color: 'inherit', textDecoration: 'underline' }}>case study</a></div>
                   </div>
                 </div>
               </div>
@@ -736,7 +744,7 @@ export default function SFCCToShopifyPlusPage() {
                 <div>
                   <div style={{ color: '#F59E0B', fontSize: '16px', marginBottom: '16px' }}>★★★★★</div>
                   <p style={{ fontSize: '15px', color: '#141414', lineHeight: 1.6, fontStyle: 'italic', margin: 0 }}>
-                    &ldquo;Connecting our NetSuite ERP directly to Shopify Plus B2B Catalogs used to give us nightmares. FactoryJet’s sub-150ms event bus handles 100k+ SKU updates flawlessly.&rdquo;
+                    &ldquo;In our business, clients size you up before they ever call. FactoryJet built us a website that finally looks as solid as the work we deliver, and we are getting real project inquiries through it.&rdquo;
                   </p>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginTop: '24px', paddingTop: '18px', borderTop: '1px solid #E6E6EC' }}>
@@ -749,7 +757,7 @@ export default function SFCCToShopifyPlusPage() {
                   />
                   <div>
                     <div style={{ fontSize: '14.5px', fontWeight: 800, color: '#141414' }}>Vishal K.</div>
-                    <div style={{ fontSize: '12.5px', color: '#6E6E80' }}>VP of Operations · Impulse Branding</div>
+                    <div style={{ fontSize: '12.5px', color: '#6E6E80' }}>Director · Impulse Branding · <a href="/case-studies/impulse-branding-migration" style={{ color: 'inherit', textDecoration: 'underline' }}>case study</a></div>
                   </div>
                 </div>
               </div>
@@ -759,20 +767,20 @@ export default function SFCCToShopifyPlusPage() {
                 <div>
                   <div style={{ color: '#F59E0B', fontSize: '16px', marginBottom: '16px' }}>★★★★★</div>
                   <p style={{ fontSize: '15px', color: '#141414', lineHeight: 1.6, fontStyle: 'italic', margin: 0 }}>
-                    &ldquo;No junior salespeople or endless discovery decks. We worked directly with Bhavesh and his engineering architects to get the job done on time and on budget.&rdquo;
+                    &ldquo;As an MEP and BIM consultancy, credibility is everything. FactoryJet gave us a site that looks like a Tier-1 firm, structured data, fast load, and project showcase pages that actually rank on Google.&rdquo;
                   </p>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginTop: '24px', paddingTop: '18px', borderTop: '1px solid #E6E6EC' }}>
                   <Image
-                    src="/images/testimonials/kiran-formative-concepts-160.webp"
-                    alt="Kiran P."
+                    src="/images/testimonials/arif-k.webp"
+                    alt="Arif Saif Khan"
                     width={48}
                     height={48}
                     style={{ borderRadius: '50%', objectFit: 'cover' }}
                   />
                   <div>
-                    <div style={{ fontSize: '14.5px', fontWeight: 800, color: '#141414' }}>Kiran P.</div>
-                    <div style={{ fontSize: '12.5px', color: '#6E6E80' }}>Technical Director · Formative Concepts</div>
+                    <div style={{ fontSize: '14.5px', fontWeight: 800, color: '#141414' }}>Arif Saif Khan</div>
+                    <div style={{ fontSize: '12.5px', color: '#6E6E80' }}>Principal · Formative Concepts</div>
                   </div>
                 </div>
               </div>
@@ -781,8 +789,18 @@ export default function SFCCToShopifyPlusPage() {
           </div>
         </section>
 
+        {/* ── MID-PAGE CTA. Sits between the testimonials/social-proof block above and the
+            agency comparison + SEO checklist below, roughly two-thirds through the page --
+            the stretch after the Working Process CTA where a convinced reader otherwise has
+            nothing to click until the ROI calculator, many sections later. ── */}
+        <MidPageCTA
+          headline="Worried about losing rankings during the switch?"
+          sub="Send us your sitemap or your top landing pages. We will show you exactly how the 1-to-1 redirect map and schema carryover would work for your store before you commit to a migration date."
+          label="Get my redirect risk review"
+        />
+
         {/* ── 09. RITOVEX FAQ ACCORDION ── */}
-        
+
         {/* ── AGENCY EVALUATION FRAMEWORK TABLE ── */}
         <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
           <div className="pp-wrap">

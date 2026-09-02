@@ -13,6 +13,11 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   category: 'Emerging Tech',
   imageUrl: '/images/blog/enterprise-erp-ai-agent-architecture.jpg',
+  meta: {
+    title: 'Enterprise ERP AI Agents: NetSuite, SAP, Epicor',
+    description:
+      'Architecture guide for integrating AI agents with NetSuite SuiteTalk, SAP S/4HANA, and Epicor Kinetic REST APIs.',
+  },
   content: (
     <article className="prose prose-lg max-w-none text-[#14110F]">
       {/* KEY TAKEAWAYS */}

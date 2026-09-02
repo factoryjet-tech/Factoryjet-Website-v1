@@ -797,12 +797,10 @@ export default function B2BEcommercePage() {
               </p>
             </div>
             <div style={{ border: '1px solid var(--pp-line)', borderRadius: '20px', padding: '28px', background: '#fff', boxShadow: '0 12px 32px -16px rgba(20,17,15,0.18)' }}>
-              <div style={{ display: 'flex', alignItems: 'baseline', gap: '4px' }}>
-                <span style={{ fontFamily: 'var(--pp-display)', fontWeight: 800, fontSize: '48px', lineHeight: 1, letterSpacing: '-0.04em', color: 'var(--pp-ink)' }}>4.9</span>
-                <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '13px', color: 'var(--pp-muted)' }}>/ 5</span>
-              </div>
-              <div style={{ marginTop: '6px', color: '#F05A28', fontSize: '18px', letterSpacing: '2px' }}>★★★★★</div>
-              <p style={{ marginTop: '6px', fontFamily: 'var(--pp-mono)', fontSize: '11px', color: 'var(--pp-muted)' }}>Client satisfaction benchmark across 150+ commerce builds</p>
+              <p style={{ fontFamily: 'var(--pp-display)', fontWeight: 800, fontSize: '22px', letterSpacing: '-0.01em', color: 'var(--pp-ink)', margin: 0 }}>Why teams choose FactoryJet</p>
+              <p style={{ marginTop: '8px', fontFamily: 'var(--pp-mono)', fontSize: '11px' }}>
+                <a href="/case-studies" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>See real, named client case studies →</a>
+              </p>
               <div style={{ margin: '20px 0', borderTop: '1px solid var(--pp-line)' }} />
               {[
                 'Fixed proposal, no hourly billing surprises',

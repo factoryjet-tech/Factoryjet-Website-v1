@@ -998,57 +998,6 @@ export default function ShopifySeoPage() {
 </section>
 
 {/* ════════════════════════════════════════════════
-  8. CLIENT RESULTS
-════════════════════════════════════════════════ */}
-<section className="sec-lg dot-grid" style={{ position: 'relative' }}>
-  <div className="shimmer" style={{ position: 'absolute', bottom: '0', left: '0', right: '0' }}></div>
-  <div className="wrap">
-    <div style={{ maxWidth: '640px', margin: '0 auto 48px', textAlign: 'center' }}>
-      <span className="eyebrow">SHOPIFY SEO RESULTS</span>
-      <h2 style={{ marginTop: '12px' }}>UK Shopify stores on what changed after FactoryJet</h2>
-    </div>
-    <ul className="col-3">
-      <li className="card">
-        <div style={{ background: 'var(--orange-bg)', border: '1px solid var(--orange-bd)', borderRadius: '8px', padding: '12px 16px', marginBottom: '20px' }}>
-          <div style={{ fontFamily: 'var(--fm)', fontSize: '10px', textTransform: 'uppercase', letterSpacing: '.10em', color: 'var(--orange)' }}>RESULT</div>
-          <div style={{ fontFamily: 'var(--fd)', fontSize: '20px', fontWeight: '700', color: 'var(--orange)', letterSpacing: '-.03em' }}>+57 positions</div>
-          <div style={{ fontSize: '12px', color: 'var(--n600)', marginTop: '2px' }}>"artificial plants UK"; 6 months</div>
-        </div>
-        <p style={{ fontSize: '15px', color: 'var(--ink)', fontWeight: '500', lineHeight: '1.6', marginBottom: '16px' }}>"FactoryJet found that Shopify had indexed 400 filter combination pages on our store, one for every combination of colour, size and availability. Google was spending its crawl budget on these instead of our actual collection pages. Fixing the canonicalisation and removing the filter pages from the sitemap was the turning point."</p>
-        <div style={{ borderTop: '1px solid var(--n200)', paddingTop: '16px' }}>
-          <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--ink)' }}>Vishal; Director, Bombay Petals</p>
-          <p style={{ fontSize: '13px', color: 'var(--n400)' }}>B2B artificial plants, UK; Shopify Plus</p>
-        </div>
-      </li>
-      <li className="card">
-        <div style={{ background: 'var(--orange-bg)', border: '1px solid var(--orange-bd)', borderRadius: '8px', padding: '12px 16px', marginBottom: '20px' }}>
-          <div style={{ fontFamily: 'var(--fm)', fontSize: '10px', textTransform: 'uppercase', letterSpacing: '.10em', color: 'var(--orange)' }}>RESULT</div>
-          <div style={{ fontFamily: 'var(--fd)', fontSize: '20px', fontWeight: '700', color: 'var(--orange)', letterSpacing: '-.03em' }}>3.2× organic sessions</div>
-          <div style={{ fontSize: '12px', color: 'var(--n600)', marginTop: '2px' }}>8 months after engagement started</div>
-        </div>
-        <p style={{ fontSize: '15px', color: 'var(--ink)', fontWeight: '500', lineHeight: '1.6', marginBottom: '16px' }}>"Every UK SEO agency we'd spoken to said they could 'do Shopify SEO' but when they described their process it was always the same: write some blog posts, build some links, update meta descriptions. FactoryJet's first call was about canonicalisation and Liquid rendering. That was the first time I felt like someone actually understood our Shopify store."</p>
-        <div style={{ borderTop: '1px solid var(--n200)', paddingTop: '16px' }}>
-          <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--ink)' }}>Ricky B; Founder, Belle Maison</p>
-          <p style={{ fontSize: '13px', color: 'var(--n400)' }}>Home décor ecommerce, UK; Shopify Advanced</p>
-        </div>
-      </li>
-      <li className="card">
-        <div style={{ background: 'var(--orange-bg)', border: '1px solid var(--orange-bd)', borderRadius: '8px', padding: '12px 16px', marginBottom: '20px' }}>
-          <div style={{ fontFamily: 'var(--fm)', fontSize: '10px', textTransform: 'uppercase', letterSpacing: '.10em', color: 'var(--orange)' }}>RESULT</div>
-          <div style={{ fontFamily: 'var(--fd)', fontSize: '20px', fontWeight: '700', color: 'var(--orange)', letterSpacing: '-.03em' }}>Page 1 in 5 months</div>
-          <div style={{ fontSize: '12px', color: 'var(--n600)', marginTop: '2px' }}>from position 40+ on core commercial terms</div>
-        </div>
-        <p style={{ fontSize: '15px', color: 'var(--ink)', fontWeight: '500', lineHeight: '1.6', marginBottom: '16px' }}>"After a Shopify migration from WooCommerce that another agency handled, our organic traffic dropped 60%. FactoryJet identified that 200 of our product URLs had changed and the redirects were set up incorrectly, so none of the link equity was passing through. They fixed the redirect chain and rebuilt our collection page content. We recovered all the traffic in 5 months."</p>
-        <div style={{ borderTop: '1px solid var(--n200)', paddingTop: '16px' }}>
-          <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--ink)' }}>Kiran M; Founder, Impulse Branding</p>
-          <p style={{ fontSize: '13px', color: 'var(--n400)' }}>Promotional products, UK; Shopify</p>
-        </div>
-      </li>
-    </ul>
-  </div>
-</section>
-
-{/* ════════════════════════════════════════════════
   9. FOUNDER + HIRE
 ════════════════════════════════════════════════ */}
 <section className="sec-lg" style={{ background: 'var(--white)' }}>

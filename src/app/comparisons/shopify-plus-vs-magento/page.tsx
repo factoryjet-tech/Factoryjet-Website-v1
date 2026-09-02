@@ -170,7 +170,7 @@ const FAQ_ITEMS = [
     category: 'migration',
     question: 'How long does a Magento to Shopify Plus migration take with FactoryJet?',
     answer:
-      'A complete enterprise Magento to Shopify Plus migration, including full historical customer database transfer, order history migration, custom theme design, ERP integration, and 1-to-1 301 SEO redirect mapping, is typically completed in 4 to 8 weeks.',
+      'A standard enterprise migration, including full historical customer database transfer, order history migration, custom theme design, and 1-to-1 301 SEO redirect mapping, typically takes 6 to 8 weeks. Complex deployments with 100,000+ SKUs, multi-region storefronts, or deep NetSuite or SAP ERP integration usually take 10 to 14 weeks.',
   },
   {
     category: 'migration',
@@ -633,12 +633,13 @@ export default function ShopifyVsMagentoPage() {
                   </div>
                 </div>
                 <blockquote>
-                  &ldquo;FactoryJet migrated our entire catalog from Magento 2 to Shopify Plus in 6 weeks. We cut our monthly
-                  hosting and agency bills by over $12,000 while our site speed doubled immediately.&rdquo;
+                  &ldquo;We were live in just 6 days. New inquiries come in every day, and the site is still really
+                  fast.&rdquo;
                 </blockquote>
                 <div className="rate">
-                  <span className="s">★★★★★</span>
-                  <span>4.9 / 5 across 120+ e-commerce &amp; marketplace builds</span>
+                  <a href="/case-studies/belle-maison-ecommerce-success" style={{ color: 'var(--pp-orange-dark)', fontWeight: 600, textDecoration: 'underline' }}>
+                    Read the Belle Maison case study →
+                  </a>
                 </div>
               </div>
             </div>

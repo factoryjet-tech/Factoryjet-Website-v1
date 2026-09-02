@@ -73,6 +73,7 @@ const FAQ_CATEGORIES: ReadonlyArray<FAQCategory> = [
   { key: 'costs', label: 'Development & Compute Costs' },
   { key: 'accuracy', label: 'Accuracy & Deflection Rates' },
   { key: 'ownership', label: 'Code Ownership & Infrastructure' },
+  { key: 'usage', label: 'How This Calculator Works' },
 ];
 
 const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
@@ -86,25 +87,25 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'roi',
     question: 'What is the typical payback period for custom AI agent development?',
     answer:
-      'For mid-market US teams processing 2,000 or more monthly customer inquiries, sales leads, or back-office transactions, the payback period typically ranges between 2.5 and 5 months from production deployment.',
+      'For mid-market US teams processing 2,000 or more monthly customer inquiries, sales leads, or back-office transactions, the payback period typically ranges between 2.5 and 5 months from production deployment. Lower-volume teams still see positive ROI, just over a longer horizon, since the fixed development cost is spread across fewer monthly transactions each covering a smaller share of the total investment.',
   },
   {
     category: 'roi',
     question: 'How do labor cost offsets scale as ticket volume grows?',
     answer:
-      'Unlike human staffing, which requires linear headcount additions and benefits overhead as volume expands, an AI agent handles 5x to 10x spikes in transaction volume with nominal increases in token compute costs.',
+      'Unlike human staffing, which requires linear headcount additions and benefits overhead as volume expands, an AI agent handles 5x to 10x spikes in transaction volume with nominal increases in token compute costs. A seasonal surge that would normally require temporary hires and weeks of onboarding instead just increases your monthly token bill, with no ramp-up time and no drop in resolution quality.',
   },
   {
     category: 'roi',
     question: 'What qualitative business benefits are excluded from this calculator?',
     answer:
-      'This model deliberately excludes indirect revenue gains such as 24/7 sub-minute response times, reduced customer churn, higher conversion rates on instant lead follow-ups, and improved employee retention resulting from removing repetitive data entry.',
+      'This model deliberately excludes indirect revenue gains such as 24/7 sub-minute response times, reduced customer churn, higher conversion rates on instant lead follow-ups, and improved employee retention resulting from removing repetitive data entry. We keep the calculator conservative on purpose, so the payback figure it shows you is a floor built on hard labor-cost math, not an optimistic number inflated by soft benefits.',
   },
   {
     category: 'costs',
     question: 'What are the recurring token compute costs for running an AI agent in production?',
     answer:
-      'For standard customer support and lead qualification workflows using frontier models behind semantic caching, token costs typically average between $0.02 and $0.07 per resolved conversation thread.',
+      "For standard customer support and lead qualification workflows using frontier models behind semantic caching, token costs typically average between $0.02 and $0.07 per resolved conversation thread. Semantic caching reuses the model's reasoning for repeated question patterns instead of paying full token cost on every single conversation, which is what keeps per-ticket compute cost well under a dollar even at high volume.",
   },
   {
     category: 'costs',
@@ -116,61 +117,91 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'costs',
     question: 'How does FactoryJet structure development fees for custom AI agents?',
     answer:
-      'We scope projects under transparent, fixed milestone pricing based on system integration complexity, custom tool calling logic, and evaluation datasets, rather than unpredictable open-ended hourly billing.',
+      'We scope projects under transparent, fixed milestone pricing based on system integration complexity, custom tool calling logic, and evaluation datasets, rather than unpredictable open-ended hourly billing. You know the total project cost before development begins, and scope changes mid-build are quoted separately rather than silently expanding your existing fixed price.',
   },
   {
     category: 'costs',
     question: 'Are there ongoing maintenance and monitoring fees after deployment?',
     answer:
-      'Following launch and initial warranty verification, we offer optional monthly engineering retainers for prompt tuning, model version upgrades, API connector maintenance, and new workflow expansion.',
+      'Following launch and initial warranty verification, we offer optional monthly engineering retainers for prompt tuning, model version upgrades, API connector maintenance, and new workflow expansion. The retainer is entirely optional. Your internal team, or ours on a project basis, can maintain the agent independently since you own the complete codebase and documentation from day one.',
   },
   {
     category: 'accuracy',
     question: 'What automated ticket deflection rate can we realistically expect?',
     answer:
-      'Realistic production deflection rates range from 65 percent to 80 percent for structured customer support and RMA queues. Unrealistic claims of 99 percent automation often indicate lack of human escalation safety boundaries.',
+      'Realistic production deflection rates range from 65 percent to 80 percent for structured customer support and RMA queues. Unrealistic claims of 99 percent automation often indicate lack of human escalation safety boundaries. A vendor promising near-total automation is usually either measuring a narrow, cherry-picked ticket category or has not built the guardrails that route ambiguous cases to a human.',
   },
   {
     category: 'accuracy',
     question: 'How do you prevent costly hallucinations and incorrect tool calls?',
     answer:
-      'We implement strict JSON schema validation, transaction caps, allow-listed database update scopes, and automated human-in-the-loop escalation triggers for low-confidence or ambiguous requests.',
+      'We implement strict JSON schema validation, transaction caps, allow-listed database update scopes, and automated human-in-the-loop escalation triggers for low-confidence or ambiguous requests. These guardrails sit at the code execution layer rather than in prompt instructions alone, so a refund above your defined dollar cap physically cannot be issued without a human approving it first, regardless of what the model outputs.',
   },
   {
     category: 'accuracy',
     question: 'How is agent accuracy measured before going live to real customers?',
     answer:
-      'We run automated regression evaluation suites against 500 or more historical customer service tickets or transaction transcripts, verifying precision, recall, and tool calling correctness prior to deployment.',
+      'We run automated regression evaluation suites against 500 or more historical customer service tickets or transaction transcripts, verifying precision, recall, and tool calling correctness prior to deployment. The agent must clear your defined accuracy threshold on this benchmark before any live customer traffic reaches it, and we re-run the suite after every prompt or connector update.',
   },
   {
     category: 'accuracy',
     question: 'Can the AI agent handle complex edge cases and angry customers?',
     answer:
-      'Yes. Sentiment analysis and rule-based escalation triggers immediately route agitated customers or edge cases to senior human representatives in Zendesk, Slack, or Freshdesk with an AI-generated situation summary.',
+      'Yes. Sentiment analysis and rule-based escalation triggers immediately route agitated customers or edge cases to senior human representatives in Zendesk, Slack, or Freshdesk with an AI-generated situation summary. The human agent receives the full conversation context and a suggested resolution path already prepared, so they pick up where the agent left off instead of starting the case cold.',
   },
   {
     category: 'ownership',
     question: 'Who owns the code, prompts, and connectors built during the project?',
     answer:
-      'Your organization owns 100 percent of the Git repository, custom Model Context Protocol connectors, orchestration code, prompt architectures, and evaluation suites with zero proprietary runtime lock-in.',
+      "Your organization owns 100 percent of the Git repository, custom Model Context Protocol connectors, orchestration code, prompt architectures, and evaluation suites with zero proprietary runtime lock-in. If you ever choose to bring development in-house or switch vendors, everything we built transfers with full documentation and no dependency on FactoryJet's own infrastructure to keep running.",
   },
   {
     category: 'ownership',
     question: 'Where is the AI agent hosted and how is customer data protected?',
     answer:
-      'Agents deploy inside your own AWS, Google Cloud, or Microsoft Azure private cloud infrastructure using zero-data-retention enterprise API endpoints, ensuring proprietary data never trains external public models.',
+      'Agents deploy inside your own AWS, Google Cloud, or Microsoft Azure private cloud infrastructure using zero-data-retention enterprise API endpoints, ensuring proprietary data never trains external public models. Your customer records, order data, and conversation logs stay inside infrastructure your own security team controls and audits, not a shared multi-tenant vendor database you cannot inspect.',
   },
   {
     category: 'ownership',
     question: 'Which enterprise systems can the AI agent connect to?',
     answer:
-      'We build bi-directional connectors for Zendesk, Gorgias, Intercom, Freshdesk, HubSpot, Salesforce, NetSuite, Dynamics 365, Shopify Plus, and custom SQL databases.',
+      'We build bi-directional connectors for Zendesk, Gorgias, Intercom, Freshdesk, HubSpot, Salesforce, NetSuite, Dynamics 365, Shopify Plus, and custom SQL databases. If your stack includes a system not listed here, we scope a custom REST or GraphQL connector during discovery rather than telling you the platform is unsupported, provided it exposes a documented API.',
   },
   {
     category: 'ownership',
     question: 'How do we schedule an AI agent architectural review and custom ROI audit?',
     answer:
-      'You can schedule a direct 30-minute scoping session with founder Bhavesh Barot. We will analyze your monthly ticket volume, current help desk software, and deliver a custom ROI and feasibility roadmap.',
+      'You can schedule a direct 30-minute scoping session with founder Bhavesh Barot. We will analyze your monthly ticket volume, current help desk software, and deliver a custom ROI and feasibility roadmap. You leave the call with a real payback estimate built from your own numbers, not the general assumptions this calculator uses as a starting benchmark.',
+  },
+  {
+    category: 'usage',
+    question: 'What inputs do I need to enter to get an accurate estimate from this calculator?',
+    answer:
+      'You select a target workflow (support, sales, back-office, or catalog operations), pick your primary system of record from a list of nine common help desk, CRM, and ERP platforms, then set your monthly task volume and fully loaded hourly labor rate on two sliders. The model recalculates net savings, hours recovered, and payback period live as you adjust any input.',
+  },
+  {
+    category: 'usage',
+    question: 'How accurate is the number the calculator shows me?',
+    answer:
+      'The output is a directional planning estimate, not a fixed quote. Deflection rates, average minutes saved, and development cost are set per workflow from benchmarks across projects we have shipped, and token compute is priced from real production usage. Your actual numbers depend on your specific ticket mix and system complexity, which is exactly what a scoping call with founder Bhavesh Barot validates before you get a firm price.',
+  },
+  {
+    category: 'usage',
+    question: 'Are the dollar figures the calculator shows me a guaranteed price?',
+    answer:
+      'No. The net savings and payback figures are a modeled estimate based on the workflow, volume, and rate you select, using a fixed per-workflow development cost benchmark and a flat token compute rate of $0.045 per resolved task plus base infrastructure. Your actual development fee is confirmed as a fixed milestone price only after we review your specific systems and ticket categories on a scoping call.',
+  },
+  {
+    category: 'usage',
+    question: 'What happens after I submit the calculator form on this page?',
+    answer:
+      'Submitting the form sends your name, email, company, and calculated workflow numbers directly to founder Bhavesh Barot, not a sales queue. You see an on-screen confirmation immediately, and Bhavesh personally reviews your inputs and emails a detailed implementation breakdown within 24 hours, along with a link to book a 30-minute discovery call if you want to talk through the numbers live.',
+  },
+  {
+    category: 'usage',
+    question: 'Where do the token compute and labor-cost numbers in this calculator come from?',
+    answer:
+      "Token compute is modeled at $0.045 per resolved task plus a small fixed monthly infrastructure cost, reflecting real production frontier-model pricing behind semantic caching. The hourly labor rate defaults to $28, a commonly cited US fully loaded support and sales rep cost, but you can move the slider from $15 to $75 to match your own team's actual loaded rate before reading the results.",
   },
 ];
 
@@ -238,26 +269,12 @@ export default function AiAgentRoiCalculatorPage() {
     })),
   };
 
-  const schemaOrganization = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    '@id': 'https://factoryjet.com/#organization',
-    name: 'FactoryJet',
-    url: 'https://factoryjet.com',
-    logo: 'https://factoryjet.com/FinalLogo.svg',
-    sameAs: [
-      'https://www.linkedin.com/company/factoryjet',
-      'https://twitter.com/factoryjet',
-    ],
-  };
-
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaWebPage) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaWebApp) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaBreadcrumbs) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaFAQ) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrganization) }} />
 
       <SiteHeader locale="us" />
 
@@ -340,8 +357,8 @@ export default function AiAgentRoiCalculatorPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="p-8 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6]">
+            <ul className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <li className="p-8 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6]">
                 <div className="text-4xl sm:text-5xl font-extrabold text-[#F05A28] font-heading mb-2">
                   60-80%
                 </div>
@@ -354,24 +371,24 @@ export default function AiAgentRoiCalculatorPage() {
                 <div className="text-xs font-mono text-[#6E655F]">
                   Source: Gartner Customer Service &amp; Support Research
                 </div>
-              </div>
+              </li>
 
-              <div className="p-8 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6]">
+              <li className="p-8 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6]">
                 <div className="text-4xl sm:text-5xl font-extrabold text-[#F05A28] font-heading mb-2">
-                  21x
+                  7x
                 </div>
                 <div className="text-sm font-bold text-[#14110F] mb-3">
                   Lead Qualification Speed Advantage
                 </div>
                 <p className="text-sm text-[#46403B] leading-relaxed mb-4">
-                  Responding to inbound sales inquiries within 5 minutes increases qualified lead conversion rates by 21x compared to 30-minute response delays.
+                  Contacting an inbound sales inquiry within the first hour makes a company nearly 7 times more likely to qualify that lead than waiting even one hour longer.
                 </p>
                 <div className="text-xs font-mono text-[#6E655F]">
-                  Source: Harvard Business Review Lead Response Study
+                  Source: Harvard Business Review, &ldquo;The Short Life of Online Sales Leads&rdquo; (2011)
                 </div>
-              </div>
+              </li>
 
-              <div className="p-8 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6]">
+              <li className="p-8 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6]">
                 <div className="text-4xl sm:text-5xl font-extrabold text-[#F05A28] font-heading mb-2">
                   72%
                 </div>
@@ -384,8 +401,8 @@ export default function AiAgentRoiCalculatorPage() {
                 <div className="text-xs font-mono text-[#6E655F]">
                   Source: McKinsey &amp; Company GenAI Economic Analysis
                 </div>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
         </section>
 
@@ -404,8 +421,8 @@ export default function AiAgentRoiCalculatorPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="p-8 rounded-2xl bg-white border border-[#E7DED6] hover:border-[#F05A28]/50 transition-all shadow-sm">
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <li className="p-8 rounded-2xl bg-white border border-[#E7DED6] hover:border-[#F05A28]/50 transition-all shadow-sm">
                 <div className="flex items-center justify-between mb-4">
                   <span className="font-mono text-xs text-[#F05A28] font-bold uppercase">WORKFLOW 01</span>
                   <span className="text-xs font-mono bg-[#FFF8F5] text-[#F05A28] px-2.5 py-1 rounded-full border border-[#F05A28]/20 font-bold">
@@ -422,9 +439,9 @@ export default function AiAgentRoiCalculatorPage() {
                   <span>Average Time Saved: 8 to 10 mins/ticket</span>
                   <span className="font-bold text-[#14110F]">Payback: 2 to 4 Months</span>
                 </div>
-              </div>
+              </li>
 
-              <div className="p-8 rounded-2xl bg-white border border-[#E7DED6] hover:border-[#F05A28]/50 transition-all shadow-sm">
+              <li className="p-8 rounded-2xl bg-white border border-[#E7DED6] hover:border-[#F05A28]/50 transition-all shadow-sm">
                 <div className="flex items-center justify-between mb-4">
                   <span className="font-mono text-xs text-[#F05A28] font-bold uppercase">WORKFLOW 02</span>
                   <span className="text-xs font-mono bg-[#FFF8F5] text-[#F05A28] px-2.5 py-1 rounded-full border border-[#F05A28]/20 font-bold">
@@ -441,9 +458,9 @@ export default function AiAgentRoiCalculatorPage() {
                   <span>Conversion Lift: +20% to +35%</span>
                   <span className="font-bold text-[#14110F]">Payback: 1 to 3 Months</span>
                 </div>
-              </div>
+              </li>
 
-              <div className="p-8 rounded-2xl bg-white border border-[#E7DED6] hover:border-[#F05A28]/50 transition-all shadow-sm">
+              <li className="p-8 rounded-2xl bg-white border border-[#E7DED6] hover:border-[#F05A28]/50 transition-all shadow-sm">
                 <div className="flex items-center justify-between mb-4">
                   <span className="font-mono text-xs text-[#F05A28] font-bold uppercase">WORKFLOW 03</span>
                   <span className="text-xs font-mono bg-[#FFF8F5] text-[#F05A28] px-2.5 py-1 rounded-full border border-[#F05A28]/20 font-bold">
@@ -460,9 +477,9 @@ export default function AiAgentRoiCalculatorPage() {
                   <span>Average Time Saved: 15 mins/invoice</span>
                   <span className="font-bold text-[#14110F]">Payback: 3 to 5 Months</span>
                 </div>
-              </div>
+              </li>
 
-              <div className="p-8 rounded-2xl bg-white border border-[#E7DED6] hover:border-[#F05A28]/50 transition-all shadow-sm">
+              <li className="p-8 rounded-2xl bg-white border border-[#E7DED6] hover:border-[#F05A28]/50 transition-all shadow-sm">
                 <div className="flex items-center justify-between mb-4">
                   <span className="font-mono text-xs text-[#F05A28] font-bold uppercase">WORKFLOW 04</span>
                   <span className="text-xs font-mono bg-[#FFF8F5] text-[#F05A28] px-2.5 py-1 rounded-full border border-[#F05A28]/20 font-bold">
@@ -479,8 +496,8 @@ export default function AiAgentRoiCalculatorPage() {
                   <span>Error Reduction: 99.4%</span>
                   <span className="font-bold text-[#14110F]">Payback: 2 to 4 Months</span>
                 </div>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
         </section>
 

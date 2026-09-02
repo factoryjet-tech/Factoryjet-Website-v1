@@ -12,7 +12,7 @@ const CANONICAL_URL = 'https://factoryjet.com/services/chemical-pharmaceutical-a
 const PAGE_TITLE = 'Chemical & Pharmaceutical AI Agents | GxP & SDS Automation | FactoryJet';
 const PAGE_DESC =
   'Custom AI agents for chemical manufacturers and pharmaceutical labs. Automate batch record review, GHS SDS authoring, FDA 21 CFR Part 11 audit trails & LIMS sync.';
-const PAGE_MODIFIED = '2026-09-01';
+const PAGE_MODIFIED = '2026-09-02';
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,
@@ -74,19 +74,31 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'gmp',
     question: 'Can the AI agent identify root causes for out-of-trend (OOT) manufacturing deviations?',
     answer:
-      'Yes. By correlating historical batch release data, environmental monitoring telemetry, raw material Certificates of Analysis (CoA), and calibration records, the agent drafts structured Corrective and Preventive Action (CAPA) investigation outlines with verifiable source citations.',
+      'Yes. By correlating historical batch release data, environmental monitoring telemetry, raw material Certificates of Analysis (CoA), and equipment calibration records, the agent drafts structured Corrective and Preventive Action (CAPA) investigation outlines with verifiable source citations. Quality engineers review each draft before it enters your CAPA system, so the agent speeds up root-cause research without replacing human sign-off on the final investigation.',
   },
   {
     category: 'gmp',
     question: 'How does the system ensure GxP data integrity during automated QA checks?',
     answer:
-      'Every ingestion step, calculation, and document comparison is recorded in an immutable, cryptographically signed audit log. The pipeline adheres strictly to ALCOA+ principles (Attributable, Legible, Contemporaneous, Original, Accurate), ensuring complete inspection readiness for FDA and EMA audits.',
+      'Every ingestion step, calculation, and document comparison is recorded in an immutable, cryptographically signed audit log. The pipeline is built around ALCOA+ principles (Attributable, Legible, Contemporaneous, Original, Accurate, plus Complete, Consistent, Enduring, and Available), the data-integrity framework FDA inspectors reference during GMP audits. Every log entry ties back to the specific user, timestamp, and source record, so your team can reconstruct any decision for an FDA or EMA inspector on request.',
   },
   {
     category: 'gmp',
     question: 'Can the agent review raw material Certificates of Analysis (CoA) against procurement specs?',
     answer:
-      'Yes. The agent extracts chemical assay percentages, moisture content, impurity thresholds, and microbial limits from supplier PDF CoAs, comparing values against your internal acceptance criteria before raw materials are released from quarantine.',
+      'Yes. The agent extracts chemical assay percentages, moisture content, impurity thresholds, and microbial limits from supplier PDF CoAs, comparing every value against your internal acceptance criteria before raw materials are released from quarantine. When a result falls outside spec, the agent flags the shipment, cites the exact line item on the CoA, and routes it to your quality team instead of releasing it automatically.',
+  },
+  {
+    category: 'gmp',
+    question: 'Can the agent support review-by-exception workflows instead of full manual batch record review?',
+    answer:
+      'Yes. Once your quality team defines acceptance ranges for critical process parameters, the agent pre-screens every executed batch record and routes only genuine exceptions, out-of-trend values, or missing signatures to a human reviewer. Batches that pass every check with no deviations move straight to a condensed summary for QP sign-off, cutting review time without skipping any required verification step.',
+  },
+  {
+    category: 'gmp',
+    question: 'Can the AI agent support stability study trending for shelf-life and expiry-date decisions?',
+    answer:
+      'Yes. The agent ingests stability chamber pull-point data across ICH-recommended conditions (long-term, intermediate, and accelerated), plots degradation trends against specification limits, and flags results approaching out-of-trend territory before they become out-of-specification failures. This gives your stability group earlier warning on shelf-life risk and a structured dataset ready for annual stability reports and regulatory filings.',
   },
   {
     category: 'sds',
@@ -104,61 +116,79 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'sds',
     question: 'How does the formulation optimization agent recommend raw material substitutions?',
     answer:
-      'The agent queries your chemical property databases, solubility parameters, Hansen solubility coordinates, viscosity profiles, and cost matrices. When supply chain shortages occur, it proposes bio-based or alternative surfactant/polymer replacements that match performance specifications while preserving margin.',
+      'The agent queries your chemical property databases, solubility parameters, Hansen solubility coordinates, viscosity profiles, and cost matrices. When supply chain shortages occur, it proposes bio-based or alternative surfactant and polymer replacements that match your performance specifications while preserving margin. Every suggested substitute includes its safety data and projected cost delta, so your formulation chemists can approve or reject the swap in minutes instead of days of manual research.',
   },
   {
     category: 'sds',
     question: 'Does the system support multi-lingual GHS SDS authoring for international exports?',
     answer:
-      'Yes. The agent generates compliant 16-section SDS documents in English, Spanish, French, German, Japanese, and Mandarin, incorporating regional exposure limits (OSHA PEL, ACGIH TLV, REACH DNEL) and mandatory country-specific emergency response hotlines.',
+      'Yes. The agent generates compliant 16-section SDS documents in English, Spanish, French, German, Japanese, and Mandarin, incorporating regional exposure limits (OSHA PEL, ACGIH TLV, REACH DNEL) and mandatory country-specific emergency response hotlines. It keeps every language version synchronized, so when a formulation or hazard classification changes, the agent updates all six translations at once instead of leaving older exports out of date.',
+  },
+  {
+    category: 'sds',
+    question: 'How does the agent keep SDS documents current when a supplier changes a raw material formulation?',
+    answer:
+      'The agent monitors incoming Certificates of Analysis and supplier notification letters for changes in concentration, impurity profile, or CAS composition. When a shift is detected, it recalculates the affected GHS hazard classification, flags every downstream product SDS that references that raw material, and generates a revision draft so your safety documentation never lags behind what is actually in the tank.',
   },
   {
     category: 'regulatory',
     question: 'Is the AI architecture compliant with FDA 21 CFR Part 11 and EU Annex 11 electronic signature rules?',
     answer:
-      'Yes. Our platforms enforce dual-factor electronic signature validation, session timeout rules, role-based access control (RBAC), and append-only cryptographic audit trails. All human approvals and electronic signatures conform to 21 CFR Part 11 requirements.',
+      'Yes. Our platforms are engineered to support FDA 21 CFR Part 11 and EU Annex 11 requirements, including dual-factor electronic signature validation, session timeout rules, role-based access control (RBAC), and append-only cryptographic audit trails. Every human approval and electronic signature is designed to support 21 CFR Part 11 requirements, and your Quality and Regulatory Affairs team confirms final compliance through your own IQ/OQ/PQ validation process.',
   },
   {
     category: 'regulatory',
     question: 'Can the agent prepare Chemistry, Manufacturing, and Controls (CMC) regulatory dossiers?',
     answer:
-      'Yes. The agent aggregates analytical method validation summaries, stability testing time-points, container closure integrity data, and manufacturing process flowcharts into structured eCTD Module 3 dossier outlines for IND and NDA submissions.',
+      'Yes. The agent aggregates analytical method validation summaries, stability testing time-points, container closure integrity data, and manufacturing process flowcharts into structured eCTD Module 3 dossier outlines for IND and NDA submissions. Regulatory affairs specialists still write the final narrative and submit the dossier, but the agent removes the days normally spent manually collecting and formatting source data from multiple systems.',
   },
   {
     category: 'regulatory',
     question: 'How does the agent assist with annual product quality reviews (APQR / PQR)?',
     answer:
-      'The agent aggregates 12 months of manufacturing data across all commercial batches, tabulates statistical process capability metrics (Cpk, Ppk), charts yield variability, and synthesizes customer complaint trends into formatted APQR reports for regulatory filing.',
+      'The agent aggregates 12 months of manufacturing data across all commercial batches, tabulates statistical process capability metrics (Cpk, Ppk), charts yield variability, and synthesizes customer complaint trends into formatted APQR reports for regulatory filing. Work that normally takes a quality team several weeks of spreadsheet compilation each year is reduced to a structured draft report that your reviewers check and sign off on in days.',
   },
   {
     category: 'regulatory',
     question: 'Can the system detect potential cross-contamination risks in multi-product manufacturing facilities?',
     answer:
-      'Yes. The agent reviews facility clean-in-place (CIP) turnaround records, toxicological health-based exposure limits (HBEL / PDE calculations), and swab testing swab assay results, flagging shared equipment runs that exceed permitted daily exposure thresholds.',
+      'Yes. The agent reviews facility clean-in-place (CIP) turnaround records, toxicological health-based exposure limits (HBEL / PDE calculations), and swab test assay results, flagging shared equipment runs that exceed permitted daily exposure thresholds. This matters most in multi-product plants making several drug substances on the same line, where the agent cross-checks each changeover against your cleaning validation data before the next batch starts.',
+  },
+  {
+    category: 'regulatory',
+    question: 'Can the agent generate REACH SVHC or Proposition 65 compliance declarations for individual customers?',
+    answer:
+      'Yes. When a customer or distributor requests a REACH Substance of Very High Concern (SVHC) declaration or a California Proposition 65 safe-harbor statement for a specific product, the agent checks current ECHA and OEHHA candidate lists against your formulation CAS numbers and drafts a signed-ready compliance letter in minutes instead of the days a regulatory affairs specialist typically needs to research and write one.',
   },
   {
     category: 'security',
     question: 'Which Laboratory Information Management Systems (LIMS) and ERPs do you integrate with?',
     answer:
-      'We build bi-directional connectors for LabWare LIMS, Thermo Fisher SampleManager, Waters CDS Chromatography Systems, SAP S/4HANA (QM and PP modules), Oracle NetSuite, and Veeva Vault QualityDocs.',
+      'We build bi-directional connectors for LabWare LIMS, Thermo Fisher SampleManager, Waters CDS Chromatography Systems, SAP S/4HANA (QM and PP modules), Oracle NetSuite, and Veeva Vault QualityDocs. If your plant or lab runs a system not listed here, our engineers scope a custom connector during the architecture audit; most REST or database-level LIMS and ERP integrations are technically feasible within the standard implementation timeline.',
   },
   {
     category: 'security',
     question: 'How do you safeguard proprietary chemical synthesis routes and drug formulations?',
     answer:
-      'We deploy isolated, single-tenant private VPC or on-premise air-gapped GPU architectures with strict Zero Data Retention (ZDR) agreements. Your chemical formulas, synthesis pathways, and clinical trial results are never exposed to public foundation model providers.',
+      'We deploy isolated, single-tenant private VPC or on-premise air-gapped GPU architectures with strict Zero Data Retention (ZDR) agreements. Your chemical formulas, synthesis pathways, and clinical trial results are never exposed to public foundation model providers. Every session runs inside infrastructure your legal team can audit directly, and we sign standard mutual NDAs and, where required, GxP-specific confidentiality agreements before any formulation data leaves your environment.',
   },
   {
     category: 'security',
     question: 'Who owns the custom chemical and pharmaceutical AI agent code and models?',
     answer:
-      'Your organization owns 100 percent of the Git repositories, Python backend code, proprietary prompt state machines, and Docker container architectures. FactoryJet charges zero recurring per-user software licensing fees.',
+      'Your organization owns 100 percent of the Git repositories, Python backend code, proprietary prompt state machines, and Docker container architectures. FactoryJet charges zero recurring per-user software licensing fees. At handover, you receive full repository access, deployment documentation, and infrastructure credentials, so the system keeps running under your control even if you never engage FactoryJet again.',
   },
   {
     category: 'security',
     question: 'What is the implementation timeline for a chemical or pharmaceutical AI agent?',
     answer:
-      'A focused SDS authoring automation engine or CoA extraction pipeline deploys within 4 to 6 weeks. An enterprise-grade GxP batch record review and LIMS integration system with full validation documentation (IQ/OQ/PQ) completes in 8 to 12 weeks.',
+      'A focused SDS authoring automation engine or CoA extraction pipeline deploys within 4 to 6 weeks. An enterprise-grade GxP batch record review and LIMS integration system with full validation documentation (IQ/OQ/PQ) completes in 8 to 12 weeks. Timelines depend mainly on how many LIMS, ERP, and CDS systems need connectors and how much historical batch data your validation team wants tested before go-live.',
+  },
+  {
+    category: 'security',
+    question: 'Does the agent maintain ALCOA+ data integrity if we later migrate LIMS or ERP vendors?',
+    answer:
+      'Yes. Audit logs are stored independently of any single LIMS or ERP instance, with cryptographic hashes and timestamps that stay verifiable even after a system migration. When you switch platforms, your historical batch and audit records remain complete, attributable, and available for FDA or EMA inspection exactly as ALCOA+ requires, rather than being trapped inside a decommissioned legacy system.',
   },
 ];
 
@@ -309,19 +339,6 @@ export default function ChemicalPharmaceuticalAiAgentsPage() {
     })),
   };
 
-  const schemaOrganization = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    '@id': 'https://factoryjet.com/#organization',
-    name: 'FactoryJet',
-    url: 'https://factoryjet.com',
-    logo: 'https://factoryjet.com/FinalLogo.svg',
-    sameAs: [
-      'https://www.linkedin.com/company/factoryjet',
-      'https://twitter.com/factoryjet',
-    ],
-  };
-
   return (
     <>
       <script
@@ -344,10 +361,6 @@ export default function ChemicalPharmaceuticalAiAgentsPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaFAQ) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrganization) }}
-      />
 
       <SiteHeader />
 
@@ -367,7 +380,7 @@ export default function ChemicalPharmaceuticalAiAgentsPage() {
 
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#14110F] font-heading leading-tight mb-6">
                   Chemical &amp; Pharma AI Agents with{' '}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F05A28] to-[#C94A1A]">
+                  <span>
                     Live LIMS &amp; SAP QM Sync.
                   </span>
                 </h1>
@@ -462,47 +475,62 @@ export default function ChemicalPharmaceuticalAiAgentsPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="p-8 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6]">
                 <div className="text-4xl sm:text-5xl font-extrabold text-[#F05A28] font-heading mb-2">
-                  14 Days
+                  1&ndash;2 Weeks
                 </div>
                 <div className="text-sm font-bold text-[#14110F] mb-3">
-                  Average Batch Record Review Cycle Time
+                  Typical Batch Record Review Cycle Time
                 </div>
                 <p className="text-sm text-[#46403B] leading-relaxed mb-4">
-                  Pharma manufacturing studies establish that finished inventory sits in quarantine for nearly two weeks while QA teams manually verify hundreds of pages of equipment logs and analytical certificates.
+                  Pharma manufacturing quality teams commonly report that finished inventory sits in quarantine for one to two weeks while QA staff manually verify hundreds of pages of equipment logs and analytical certificates.
                 </p>
-                <div className="text-xs font-mono text-[#6E655F]">
-                  Source: International Society for Pharmaceutical Engineering (ISPE)
-                </div>
+                <a
+                  href="https://ispe.org/pharmaceutical-engineering/september-october-2024/7th-ispe-pharma-40tm-survey-digital"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs font-mono text-[#6E655F] underline decoration-[#6E655F]/40 underline-offset-2 hover:text-[#B23E13] hover:decoration-[#B23E13] transition-colors"
+                >
+                  Source: ISPE Pharma 4.0&trade; Survey on batch release digitalization
+                </a>
               </div>
 
               <div className="p-8 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6]">
                 <div className="text-4xl sm:text-5xl font-extrabold text-[#F05A28] font-heading mb-2">
-                  $350,000
+                  94%
                 </div>
                 <div className="text-sm font-bold text-[#14110F] mb-3">
-                  Annual SDS Authoring &amp; Re-Authoring Cost
+                  Existing SDS Documents Requiring Revision Under the 2024 HazCom Update
                 </div>
                 <p className="text-sm text-[#46403B] leading-relaxed mb-4">
-                  Specialty chemical producers spend hundreds of thousands annually on toxicologist consultants and manual SDS updates whenever global REACH, TSCA, or Prop 65 lists change.
+                  When OSHA updated the Hazard Communication Standard in 2024, it estimated that 94 percent of existing Safety Data Sheets and 64 percent of shipping labels would need to be revised across more than 111,000 affected firms.
                 </p>
-                <div className="text-xs font-mono text-[#6E655F]">
-                  Source: American Chemistry Council (ACC) Regulatory Economics
-                </div>
+                <a
+                  href="https://www.osha.gov/hazcom/rulemaking"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs font-mono text-[#6E655F] underline decoration-[#6E655F]/40 underline-offset-2 hover:text-[#B23E13] hover:decoration-[#B23E13] transition-colors"
+                >
+                  Source: OSHA Hazard Communication Standard Final Rule (2024)
+                </a>
               </div>
 
               <div className="p-8 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6]">
                 <div className="text-4xl sm:text-5xl font-extrabold text-[#F05A28] font-heading mb-2">
-                  85%
+                  60&ndash;70%
                 </div>
                 <div className="text-sm font-bold text-[#14110F] mb-3">
-                  Reduction in Quality Release Cycle Duration
+                  Faster Quality Control Lab Lead Times From Digitization
                 </div>
                 <p className="text-sm text-[#46403B] leading-relaxed mb-4">
-                  Automated AI batch review pipelines identify critical discrepancies in seconds, enabling QA managers to complete final release approvals on the day manufacturing finishes.
+                  McKinsey research on pharmaceutical quality control found that digitizing and automating lab and batch-release workflows can cut lead times by 60 to 70 percent versus fully manual review.
                 </p>
-                <div className="text-xs font-mono text-[#6E655F]">
-                  Source: Journal of Pharmaceutical Innovation
-                </div>
+                <a
+                  href="https://www.mckinsey.com/industries/life-sciences/our-insights/digitization-automation-and-online-testing-embracing-smart-quality-control"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs font-mono text-[#6E655F] underline decoration-[#6E655F]/40 underline-offset-2 hover:text-[#B23E13] hover:decoration-[#B23E13] transition-colors"
+                >
+                  Source: McKinsey &amp; Company, Life Sciences Practice
+                </a>
               </div>
             </div>
           </div>
@@ -696,17 +724,17 @@ export default function ChemicalPharmaceuticalAiAgentsPage() {
                   <p className="text-[#46403B] leading-relaxed mb-6">
                     Our formulation agent ingests chemical recipes, evaluates boiling points, vapor pressures, and component toxicity values, generates compliant 16-section Safety Data Sheets, and suggests cost-effective raw material substitutions when supply chain disruptions occur.
                   </p>
-                  <div className="flex flex-wrap gap-2 text-xs font-mono text-[#6E655F]">
-                    <span className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
+                  <ul className="flex flex-wrap gap-2 text-xs font-mono text-[#6E655F] list-none">
+                    <li className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
                       GHS Hazard Calculation
-                    </span>
-                    <span className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
+                    </li>
+                    <li className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
                       Hansen Solubility Matching
-                    </span>
-                    <span className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
+                    </li>
+                    <li className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
                       Multi-Lingual SDS Export
-                    </span>
-                  </div>
+                    </li>
+                  </ul>
                 </div>
                 <div className="lg:col-span-6 order-1 lg:order-2">
                   <div className="relative rounded-xl overflow-hidden aspect-[16/9] border border-[#E7DED6]">
@@ -747,17 +775,17 @@ export default function ChemicalPharmaceuticalAiAgentsPage() {
                   <p className="text-[#46403B] leading-relaxed mb-6">
                     Our GMP batch review agent scans executed electronic batch records against approved master templates, detects parameter deviations, flags missing initials, correlates chromatography peaks with Waters CDS systems, and stages validated release summaries for final Qualified Person (QP) sign-off.
                   </p>
-                  <div className="flex flex-wrap gap-2 text-xs font-mono text-[#6E655F]">
-                    <span className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
+                  <ul className="flex flex-wrap gap-2 text-xs font-mono text-[#6E655F] list-none">
+                    <li className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
                       Master Batch Record Diffing
-                    </span>
-                    <span className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
+                    </li>
+                    <li className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
                       Chromatography Peak Verification
-                    </span>
-                    <span className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
+                    </li>
+                    <li className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
                       Veeva Vault QualityDocs Sync
-                    </span>
-                  </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
 
@@ -774,19 +802,39 @@ export default function ChemicalPharmaceuticalAiAgentsPage() {
                     Regulatory audits by the FDA, EMA, or ISO registrars demand instant traceability across all electronic records, changes, user sessions, and deviation investigations.
                   </p>
                   <p className="text-[#46403B] leading-relaxed mb-6">
-                    Our compliance agent maintains tamper-evident cryptographic audit logs conforming to 21 CFR Part 11. When manufacturing deviations occur, it correlates historical batch data, environmental telemetry, and equipment maintenance history to draft structured CAPA investigation reports with exact citations.
+                    Our compliance agent maintains tamper-evident cryptographic audit logs designed to support{' '}
+                    <a
+                      href="https://www.ecfr.gov/current/title-21/chapter-I/subchapter-A/part-11"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline hover:no-underline"
+                      style={{ color: '#B23E13' }}
+                    >
+                      21 CFR Part 11
+                    </a>{' '}
+                    and{' '}
+                    <a
+                      href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/data-integrity-and-compliance-drug-cgmp-questions-and-answers"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline hover:no-underline"
+                      style={{ color: '#B23E13' }}
+                    >
+                      FDA ALCOA+ data-integrity guidance
+                    </a>
+                    . When manufacturing deviations occur, it correlates historical batch data, environmental telemetry, and equipment maintenance history to draft structured CAPA investigation reports with exact citations.
                   </p>
-                  <div className="flex flex-wrap gap-2 text-xs font-mono text-[#6E655F]">
-                    <span className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
+                  <ul className="flex flex-wrap gap-2 text-xs font-mono text-[#6E655F] list-none">
+                    <li className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
                       ALCOA+ Data Integrity
-                    </span>
-                    <span className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
+                    </li>
+                    <li className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
                       Dual-Factor E-Signatures
-                    </span>
-                    <span className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
+                    </li>
+                    <li className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
                       CAPA Investigation Synthesis
-                    </span>
-                  </div>
+                    </li>
+                  </ul>
                 </div>
                 <div className="lg:col-span-6 order-1 lg:order-2">
                   <div className="relative rounded-xl overflow-hidden aspect-[16/9] border border-[#E7DED6]">
@@ -827,17 +875,17 @@ export default function ChemicalPharmaceuticalAiAgentsPage() {
                   <p className="text-[#46403B] leading-relaxed mb-6">
                     Our supply chain agent parses vendor CoAs automatically, compares assay percentages, viscosity limits, and moisture thresholds against internal purchase specifications, updates raw material lot status in SAP or NetSuite, and flags non-conforming shipments prior to silo unloading.
                   </p>
-                  <div className="flex flex-wrap gap-2 text-xs font-mono text-[#6E655F]">
-                    <span className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
+                  <ul className="flex flex-wrap gap-2 text-xs font-mono text-[#6E655F] list-none">
+                    <li className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
                       Automated CoA OCR &amp; Spec Check
-                    </span>
-                    <span className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
+                    </li>
+                    <li className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
                       SAP / NetSuite Lot Release Sync
-                    </span>
-                    <span className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
+                    </li>
+                    <li className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
                       Supplier Quality Scoring
-                    </span>
-                  </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
 
@@ -851,22 +899,32 @@ export default function ChemicalPharmaceuticalAiAgentsPage() {
                     Automated Chemical Inventory Screening &amp; Regulatory Declarations
                   </h3>
                   <p className="text-[#46403B] leading-relaxed mb-4">
-                    Commercializing chemical products in North America and Europe requires continuous screening of ingredient CAS numbers against evolving regulatory restriction lists (EPA TSCA Section 8, California Proposition 65, EU REACH SVHC lists).
+                    Commercializing chemical products in North America and Europe requires continuous screening of ingredient CAS numbers against evolving regulatory restriction lists (
+                    <a
+                      href="https://www.epa.gov/assessing-and-managing-chemicals-under-tsca"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline hover:no-underline"
+                      style={{ color: '#B23E13' }}
+                    >
+                      EPA TSCA Section 8
+                    </a>
+                    , California Proposition 65, EU REACH SVHC lists).
                   </p>
                   <p className="text-[#46403B] leading-relaxed mb-6">
                     Our regulatory filing agent monitors official chemical regulatory gazettes, cross-references listed substances against your active product Bill of Materials (BOM), generates customer compliance certificates, and drafts regulatory notification submissions.
                   </p>
-                  <div className="flex flex-wrap gap-2 text-xs font-mono text-[#6E655F]">
-                    <span className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
+                  <ul className="flex flex-wrap gap-2 text-xs font-mono text-[#6E655F] list-none">
+                    <li className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
                       TSCA &amp; REACH Restriction Screening
-                    </span>
-                    <span className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
+                    </li>
+                    <li className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
                       Prop 65 Safe Harbor Analysis
-                    </span>
-                    <span className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
+                    </li>
+                    <li className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
                       Customer Compliance Certificates
-                    </span>
-                  </div>
+                    </li>
+                  </ul>
                 </div>
                 <div className="lg:col-span-6 order-1 lg:order-2">
                   <div className="relative rounded-xl overflow-hidden aspect-[16/9] border border-[#E7DED6]">
@@ -879,6 +937,41 @@ export default function ChemicalPharmaceuticalAiAgentsPage() {
                     />
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* MID-PAGE CTA */}
+        <section className="py-16 bg-white border-b border-[#E7DED6]">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="rounded-2xl border border-[#F05A28]/30 bg-[#FFF8F5] p-8 sm:p-10 text-center">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-[#F05A28]/30 mb-5">
+                <span className="font-mono text-xs text-[#F05A28] font-bold tracking-wide">
+                  // SEE IT RUN ON YOUR OWN BATCH RECORDS
+                </span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#14110F] font-heading mb-4">
+                Want to Watch This Work Against Your Own Data?
+              </h2>
+              <p className="text-base sm:text-lg text-[#46403B] max-w-2xl mx-auto mb-8 leading-relaxed">
+                Bring a sample batch record or SDS to a 30-minute working session. We will show you exactly how the agent parses it, live, before you commit to anything.
+              </p>
+              <div className="flex flex-wrap justify-center items-center gap-4">
+                <a
+                  href="https://calendly.com/bhavesh-factoryjet/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-[#F05A28] text-white font-bold hover:bg-[#D8441A] transition-colors shadow-md text-sm"
+                >
+                  Book 30-Min Working Session
+                </a>
+                <ModalCTAButton
+                  label="Request Life Sciences AI Proposal"
+                  region="us"
+                  modalVariant="ai"
+                  btnVariant="secondary-light"
+                />
               </div>
             </div>
           </div>
@@ -899,7 +992,7 @@ export default function ChemicalPharmaceuticalAiAgentsPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 list-none">
               {[
                 {
                   title: 'FDA 21 CFR Part 11 & Annex 11 Compliance',
@@ -942,7 +1035,7 @@ export default function ChemicalPharmaceuticalAiAgentsPage() {
                   desc: 'You receive complete Git repository access, Python backend services, and Docker configurations. Zero recurring per-user software licensing fees.',
                 },
               ].map((item, idx) => (
-                <div
+                <li
                   key={item.title}
                   className="p-6 rounded-2xl border border-[#E7DED6] bg-white hover:border-[#F05A28]/50 transition-colors shadow-sm"
                 >
@@ -955,9 +1048,9 @@ export default function ChemicalPharmaceuticalAiAgentsPage() {
                   <p className="text-sm text-[#46403B] leading-relaxed">
                     {item.desc}
                   </p>
-                </div>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 
@@ -976,8 +1069,8 @@ export default function ChemicalPharmaceuticalAiAgentsPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="p-6 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6] shadow-sm flex flex-col justify-between">
+            <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 list-none">
+              <li className="p-6 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6] shadow-sm flex flex-col justify-between">
                 <div>
                   <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">PHASE 01 // WEEKS 1-3</div>
                   <h3 className="text-lg font-bold text-[#14110F] font-heading mb-3">GxP Schema &amp; LIMS Audit</h3>
@@ -988,9 +1081,9 @@ export default function ChemicalPharmaceuticalAiAgentsPage() {
                 <div className="text-xs font-mono text-[#6E655F] pt-4 border-t border-[#E7DED6]">
                   Deliverable: User Requirements Specification (URS) &amp; Validation Plan
                 </div>
-              </div>
+              </li>
 
-              <div className="p-6 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6] shadow-sm flex flex-col justify-between">
+              <li className="p-6 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6] shadow-sm flex flex-col justify-between">
                 <div>
                   <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">PHASE 02 // WEEKS 4-6</div>
                   <h3 className="text-lg font-bold text-[#14110F] font-heading mb-3">Parsing &amp; GHS Rules Build</h3>
@@ -1001,9 +1094,9 @@ export default function ChemicalPharmaceuticalAiAgentsPage() {
                 <div className="text-xs font-mono text-[#6E655F] pt-4 border-t border-[#E7DED6]">
                   Deliverable: Functional Design Specification (FDS) &amp; Custom Extractors
                 </div>
-              </div>
+              </li>
 
-              <div className="p-6 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6] shadow-sm flex flex-col justify-between">
+              <li className="p-6 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6] shadow-sm flex flex-col justify-between">
                 <div>
                   <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">PHASE 03 // WEEKS 7-9</div>
                   <h3 className="text-lg font-bold text-[#14110F] font-heading mb-3">LIMS Sync &amp; QA Console Staging</h3>
@@ -1014,9 +1107,9 @@ export default function ChemicalPharmaceuticalAiAgentsPage() {
                 <div className="text-xs font-mono text-[#6E655F] pt-4 border-t border-[#E7DED6]">
                   Deliverable: QA Review Console &amp; Sandbox Integration Validation
                 </div>
-              </div>
+              </li>
 
-              <div className="p-6 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6] shadow-sm flex flex-col justify-between">
+              <li className="p-6 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6] shadow-sm flex flex-col justify-between">
                 <div>
                   <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">PHASE 04 // WEEKS 10-12</div>
                   <h3 className="text-lg font-bold text-[#14110F] font-heading mb-3">CSV / CSA Validation &amp; Handover</h3>
@@ -1027,8 +1120,8 @@ export default function ChemicalPharmaceuticalAiAgentsPage() {
                 <div className="text-xs font-mono text-[#6E655F] pt-4 border-t border-[#E7DED6]">
                   Deliverable: Executed IQ/OQ/PQ Package &amp; Full Source Code
                 </div>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
         </section>
 

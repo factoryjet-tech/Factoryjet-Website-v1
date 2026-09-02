@@ -12,7 +12,7 @@ const CANONICAL_URL = 'https://factoryjet.com/services/agriculture-equipment-ai-
 const PAGE_TITLE = 'Agriculture Equipment AI Agents | Dealership Service & Telematics | FactoryJet';
 const PAGE_DESC =
   'Custom AI agents for agricultural machinery dealerships and precision ag enterprises. Automate John Deere, Case IH & AGCO parts lookup, ISOBUS fault triage & service dispatch.';
-const PAGE_MODIFIED = '2026-09-01';
+const PAGE_MODIFIED = '2026-09-02';
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,
@@ -159,6 +159,36 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     question: 'What is the implementation timeline for an agricultural equipment AI voice and scheduling system?',
     answer:
       'A standard parts lookup and service booking voice pipeline connecting to your DMS deploys within 4 to 6 weeks. A comprehensive dealership enterprise rollout covering telematics sync, mobile technician dispatch, and precision ag workflows completes in 8 to 10 weeks.',
+  },
+  {
+    category: 'telematics',
+    question: 'Can the agent distinguish between an ISOBUS wiring fault and a genuine sensor failure during diagnosis?',
+    answer:
+      'Yes. The agent cross-references the reported SPN/FMI fault code against known wiring-harness failure patterns, connector pin resistance ranges, and sensor-specific fault signatures from OEM technical manuals. It tells the technician whether to check the harness and connectors first or go straight to the sensor, cutting diagnostic guesswork that otherwise wastes a service call during a tight planting or harvest window.',
+  },
+  {
+    category: 'precision',
+    question: 'How does the agent integrate live data from third-party precision-ag sensors and yield monitors?',
+    answer:
+      'The agent connects to combine yield monitors, soil moisture probes, and weather station feeds through ISO 11783 (ISOBUS) task-controller data and manufacturer APIs including John Deere Operations Center and Climate FieldView. It normalizes readings from different sensor brands into one dataset, so agronomists see field conditions and yield performance in a single view instead of switching between separate manufacturer apps.',
+  },
+  {
+    category: 'dealership',
+    question: 'How does the system handle seasonal dispatch scheduling during the transition from planting to harvest?',
+    answer:
+      'The agent tracks technician certifications, mobile truck parts loadouts, and historical call-volume patterns by week, then rebalances on-call rotations and pre-stages common wear parts before each seasonal surge begins. When planting winds down and harvest calls start climbing, the dispatch board updates automatically instead of requiring a service manager to rebuild the schedule by hand every few weeks.',
+  },
+  {
+    category: 'telematics',
+    question: 'Can the AI agent read fault codes from older equipment that predates ISOBUS and full telematics?',
+    answer:
+      'Yes, within limits. For pre-ISOBUS machines, the agent relies on caller-described symptoms, legacy diagnostic port codes where available, and OEM service bulletins indexed for that model year to narrow down probable causes. It cannot pull live telematics from equipment that was never wired for it, but it still speeds up phone-based troubleshooting using the same technical manual library technicians already reference.',
+  },
+  {
+    category: 'security',
+    question: 'What happens to dispatch and telematics data if we switch Dealer Management Systems later?',
+    answer:
+      'Your historical work orders, technician logs, and telematics records are stored in infrastructure your dealership owns, independent of any single DMS vendor. If you migrate from one system to another, we rebuild the connector for the new DMS and your data moves with you, so a vendor change never means losing years of service history or starting your AI agent over from zero.',
   },
 ];
 
@@ -309,19 +339,6 @@ export default function AgricultureEquipmentAiAgentsPage() {
     })),
   };
 
-  const schemaOrganization = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    '@id': 'https://factoryjet.com/#organization',
-    name: 'FactoryJet',
-    url: 'https://factoryjet.com',
-    logo: 'https://factoryjet.com/FinalLogo.svg',
-    sameAs: [
-      'https://www.linkedin.com/company/factoryjet',
-      'https://twitter.com/factoryjet',
-    ],
-  };
-
   return (
     <>
       <script
@@ -344,10 +361,6 @@ export default function AgricultureEquipmentAiAgentsPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaFAQ) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrganization) }}
-      />
 
       <SiteHeader />
 
@@ -367,7 +380,7 @@ export default function AgricultureEquipmentAiAgentsPage() {
 
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#14110F] font-heading leading-tight mb-6">
                   Agriculture Equipment AI Agents with{' '}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F05A28] to-[#C94A1A]">
+                  <span>
                     Live DMS &amp; Telematics Sync.
                   </span>
                 </h1>
@@ -462,47 +475,62 @@ export default function AgricultureEquipmentAiAgentsPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="p-8 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6]">
                 <div className="text-4xl sm:text-5xl font-extrabold text-[#F05A28] font-heading mb-2">
-                  $2,400
+                  $3,348
                 </div>
                 <div className="text-sm font-bold text-[#14110F] mb-3">
-                  Hourly Crop Loss from Harvest Machine Downtime
+                  Average Per-Season Cost of Equipment Breakdowns to Farmers
                 </div>
                 <p className="text-sm text-[#46403B] leading-relaxed mb-4">
-                  University agronomy extension studies establish that combine harvester and grain cart breakdowns during peak harvest windows cost commercial grain operations thousands per hour in weather risk and yield loss.
+                  A 2023 U.S. PIRG Education Fund study found that unplanned equipment breakdowns and repair delays cost the average farmer thousands of dollars each growing season, with national losses estimated above three billion dollars a year.
                 </p>
-                <div className="text-xs font-mono text-[#6E655F]">
-                  Source: Purdue University Agricultural Economics
-                </div>
+                <a
+                  href="https://www.morningagclips.com/the-true-cost-of-downtime-how-farm-equipment-failures-disrupt-the-food-chain/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs font-mono text-[#6E655F] underline decoration-[#6E655F]/40 underline-offset-2 hover:text-[#B23E13] hover:decoration-[#B23E13] transition-colors"
+                >
+                  Source: U.S. PIRG Education Fund, &ldquo;Out to Pasture&rdquo; (2023)
+                </a>
               </div>
 
               <div className="p-8 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6]">
                 <div className="text-4xl sm:text-5xl font-extrabold text-[#F05A28] font-heading mb-2">
-                  42%
+                  41%
                 </div>
                 <div className="text-sm font-bold text-[#14110F] mb-3">
-                  Dealership Inbound Calls Unanswered During Planting Rushes
+                  Rise in Ag Equipment Parts &amp; Repair Costs Since 2020
                 </div>
                 <p className="text-sm text-[#46403B] leading-relaxed mb-4">
-                  Ag dealership fixed ops studies report that over forty percent of incoming parts counter calls go to voicemail or are abandoned when counter staff assist walk-in growers.
+                  Bureau of Labor Statistics data shows the cost of parts and labor to repair farm machinery has climbed 41 percent since 2020, making fast, accurate parts lookup and first-time-fix diagnostics more valuable to dealerships every season.
                 </p>
-                <div className="text-xs font-mono text-[#6E655F]">
-                  Source: North American Equipment Dealers Association (NAEDA)
-                </div>
+                <a
+                  href="https://investigatemidwest.org/2024/02/07/graphic-cost-to-repair-farm-equipment-rose-50-in-the-last-three-years/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs font-mono text-[#6E655F] underline decoration-[#6E655F]/40 underline-offset-2 hover:text-[#B23E13] hover:decoration-[#B23E13] transition-colors"
+                >
+                  Source: U.S. Bureau of Labor Statistics, via Investigate Midwest
+                </a>
               </div>
 
               <div className="p-8 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6]">
                 <div className="text-4xl sm:text-5xl font-extrabold text-[#F05A28] font-heading mb-2">
-                  92%
+                  56%
                 </div>
                 <div className="text-sm font-bold text-[#14110F] mb-3">
-                  First-Call Parts Lookup &amp; Availability Resolution
+                  Farmers Who Cite Cost as the Top Barrier to More Precision Ag Tech
                 </div>
                 <p className="text-sm text-[#46403B] leading-relaxed mb-4">
-                  DMS-integrated conversational voice AI answers parts availability inquiries, verifies bin locations, quotes price tiers, and reserves parts on the first telephone call.
+                  CNH&rsquo;s 2026 Farmer Pulse survey of 217 North American farmers found cost the single biggest barrier to adopting more precision technology &mdash; the same economics that make owned, zero-license AI infrastructure a better fit than recurring per-seat software fees.
                 </p>
-                <div className="text-xs font-mono text-[#6E655F]">
-                  Source: Precision Ag Machinery Operations Report
-                </div>
+                <a
+                  href="https://www.stocktitan.net/news/CNH/cnh-farmer-pulse-report-finds-precision-technology-is-becoming-gc2izzr7wzrr.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs font-mono text-[#6E655F] underline decoration-[#6E655F]/40 underline-offset-2 hover:text-[#B23E13] hover:decoration-[#B23E13] transition-colors"
+                >
+                  Source: CNH Farmer Pulse: AgTech Adoption Edition (2026)
+                </a>
               </div>
             </div>
           </div>
@@ -696,17 +724,17 @@ export default function AgricultureEquipmentAiAgentsPage() {
                   <p className="text-[#46403B] leading-relaxed mb-6">
                     Our ag dealership voice agent answers every call instantly, decodes machine model numbers and serials, searches bin locations across DIS Corp or CDK Heavy, quotes retail and farm-account trade pricing, and stages pick-up orders for parts personnel.
                   </p>
-                  <div className="flex flex-wrap gap-2 text-xs font-mono text-[#6E655F]">
-                    <span className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
+                  <ul className="flex flex-wrap gap-2 text-xs font-mono text-[#6E655F] list-none">
+                    <li className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
                       DIS Corp &amp; CDK Heavy Sync
-                    </span>
-                    <span className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
+                    </li>
+                    <li className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
                       Bin Stock Location Lookup
-                    </span>
-                    <span className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
+                    </li>
+                    <li className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
                       Pick-up Ticket Staging
-                    </span>
-                  </div>
+                    </li>
+                  </ul>
                 </div>
                 <div className="lg:col-span-6 order-1 lg:order-2">
                   <div className="relative rounded-xl overflow-hidden aspect-[16/9] border border-[#E7DED6]">
@@ -742,22 +770,32 @@ export default function AgricultureEquipmentAiAgentsPage() {
                     Automated J1939 SPN/FMI Translation &amp; Field Troubleshooting
                   </h3>
                   <p className="text-[#46403B] leading-relaxed mb-4">
-                    Modern tractors and combines generate complex ISOBUS error codes when DEF sensors fail, hydraulic proportional valves stick, or CAN-bus modules lose synchronization.
+                    Modern tractors and combines generate complex{' '}
+                    <a
+                      href="https://www.aef-online.org/about-us/isobus.html"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline hover:no-underline"
+                      style={{ color: '#B23E13' }}
+                    >
+                      ISOBUS (ISO 11783)
+                    </a>{' '}
+                    error codes when DEF sensors fail, hydraulic proportional valves stick, or CAN-bus modules lose synchronization.
                   </p>
                   <p className="text-[#46403B] leading-relaxed mb-6">
                     Our telematics diagnostic agent parses machine fault codes by voice or mobile text, retrieves step-by-step OEM troubleshooting procedures, verifies replacement sensor availability in stock, and instructs operators on clearing limp-mode overrides.
                   </p>
-                  <div className="flex flex-wrap gap-2 text-xs font-mono text-[#6E655F]">
-                    <span className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
+                  <ul className="flex flex-wrap gap-2 text-xs font-mono text-[#6E655F] list-none">
+                    <li className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
                       J1939 SPN/FMI Code Triage
-                    </span>
-                    <span className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
+                    </li>
+                    <li className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
                       OEM Service ADVISOR Search
-                    </span>
-                    <span className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
+                    </li>
+                    <li className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
                       CAN-Bus Error Resolution
-                    </span>
-                  </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
 
@@ -771,22 +809,32 @@ export default function AgricultureEquipmentAiAgentsPage() {
                     Multispectral Imagery Parsing &amp; Variable-Rate Prescription Triage
                   </h3>
                   <p className="text-[#46403B] leading-relaxed mb-4">
-                    Agronomy consulting firms and precision ag managers analyze gigabytes of drone multispectral NDVI imagery, satellite vegetative indices, and soil moisture sensor data across thousands of field acres.
+                    Agronomy consulting firms and precision ag managers analyze gigabytes of drone multispectral{' '}
+                    <a
+                      href="https://www.usgs.gov/special-topics/remote-sensing-phenology/science/ndvi-foundation-remote-sensing-phenology"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline hover:no-underline"
+                      style={{ color: '#B23E13' }}
+                    >
+                      NDVI
+                    </a>{' '}
+                    imagery, satellite vegetative indices, and soil moisture sensor data across thousands of field acres.
                   </p>
                   <p className="text-[#46403B] leading-relaxed mb-6">
                     Our precision ag agent synthesizes sensor telemetry, identifies nitrogen deficiency zones and weed outbreaks, correlates yield variability with soil electrical conductivity (EC), and generates formatted variable-rate prescription shapefiles for display controllers.
                   </p>
-                  <div className="flex flex-wrap gap-2 text-xs font-mono text-[#6E655F]">
-                    <span className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
+                  <ul className="flex flex-wrap gap-2 text-xs font-mono text-[#6E655F] list-none">
+                    <li className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
                       NDVI Imagery Synthesis
-                    </span>
-                    <span className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
+                    </li>
+                    <li className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
                       Variable-Rate Prescription Export
-                    </span>
-                    <span className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
+                    </li>
+                    <li className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
                       John Deere Ops Center API
-                    </span>
-                  </div>
+                    </li>
+                  </ul>
                 </div>
                 <div className="lg:col-span-6 order-1 lg:order-2">
                   <div className="relative rounded-xl overflow-hidden aspect-[16/9] border border-[#E7DED6]">
@@ -827,17 +875,17 @@ export default function AgricultureEquipmentAiAgentsPage() {
                   <p className="text-[#46403B] leading-relaxed mb-6">
                     Our mobile service dispatch agent pins field entrance GPS markers via automated SMS, checks mobile service truck inventory for necessary hydraulic hoses and belts, and routes the closest certified technician with turn-by-turn rural navigation.
                   </p>
-                  <div className="flex flex-wrap gap-2 text-xs font-mono text-[#6E655F]">
-                    <span className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
+                  <ul className="flex flex-wrap gap-2 text-xs font-mono text-[#6E655F] list-none">
+                    <li className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
                       Rural GPS Coordinate Pinning
-                    </span>
-                    <span className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
+                    </li>
+                    <li className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
                       Mobile Truck Inventory Sync
-                    </span>
-                    <span className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
+                    </li>
+                    <li className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
                       Emergency Work Order Creation
-                    </span>
-                  </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
 
@@ -854,19 +902,29 @@ export default function AgricultureEquipmentAiAgentsPage() {
                     Commercial ag retailers and custom applicators manage complex herbicide, fungicide, and liquid fertilizer blends, where incorrect mixing orders or incompatible adjuvants cause tank curdling and sprayer downtime.
                   </p>
                   <p className="text-[#46403B] leading-relaxed mb-6">
-                    Our agronomy chemical agent verifies tank-mix compatibility tables, checks EPA chemical registration labels for crop pre-harvest intervals (PHI) and rotational restrictions, and generates formatted batch load sheets for custom applicator operators.
+                    Our agronomy chemical agent verifies tank-mix compatibility tables, checks{' '}
+                    <a
+                      href="https://www.epa.gov/pesticide-labels"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline hover:no-underline"
+                      style={{ color: '#B23E13' }}
+                    >
+                      EPA chemical registration labels
+                    </a>{' '}
+                    for crop pre-harvest intervals (PHI) and rotational restrictions, and generates formatted batch load sheets for custom applicator operators.
                   </p>
-                  <div className="flex flex-wrap gap-2 text-xs font-mono text-[#6E655F]">
-                    <span className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
+                  <ul className="flex flex-wrap gap-2 text-xs font-mono text-[#6E655F] list-none">
+                    <li className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
                       Tank-Mix Order Calculation
-                    </span>
-                    <span className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
+                    </li>
+                    <li className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
                       EPA Pre-Harvest Interval Checks
-                    </span>
-                    <span className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
+                    </li>
+                    <li className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
                       Ag Retail Load Sheet Export
-                    </span>
-                  </div>
+                    </li>
+                  </ul>
                 </div>
                 <div className="lg:col-span-6 order-1 lg:order-2">
                   <div className="relative rounded-xl overflow-hidden aspect-[16/9] border border-[#E7DED6]">
@@ -879,6 +937,41 @@ export default function AgricultureEquipmentAiAgentsPage() {
                     />
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* MID-PAGE CTA */}
+        <section className="py-16 bg-white border-b border-[#E7DED6]">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="rounded-2xl border border-[#F05A28]/30 bg-[#FFF8F5] p-8 sm:p-10 text-center">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-[#F05A28]/30 mb-5">
+                <span className="font-mono text-xs text-[#F05A28] font-bold tracking-wide">
+                  // HEAR IT HANDLE A REAL PARTS CALL
+                </span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#14110F] font-heading mb-4">
+                Want to Hear This Answer a Real Parts Call?
+              </h2>
+              <p className="text-base sm:text-lg text-[#46403B] max-w-2xl mx-auto mb-8 leading-relaxed">
+                Bring us a recording of a typical parts or service inquiry to a 30-minute working session. We will show you exactly how the agent handles it, live, before you commit to anything.
+              </p>
+              <div className="flex flex-wrap justify-center items-center gap-4">
+                <a
+                  href="https://calendly.com/bhavesh-factoryjet/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-[#F05A28] text-white font-bold hover:bg-[#D8441A] transition-colors shadow-md text-sm"
+                >
+                  Book 30-Min Working Session
+                </a>
+                <ModalCTAButton
+                  label="Request Ag Dealership Voice Proposal"
+                  region="us"
+                  modalVariant="ai"
+                  btnVariant="secondary-light"
+                />
               </div>
             </div>
           </div>
@@ -899,7 +992,7 @@ export default function AgricultureEquipmentAiAgentsPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 list-none">
               {[
                 {
                   title: 'Sub-500ms Acoustic Telephony Pipeline',
@@ -942,7 +1035,7 @@ export default function AgricultureEquipmentAiAgentsPage() {
                   desc: 'You receive complete Git repository access, Python backend code, and Docker configurations. Zero recurring per-user software licensing fees.',
                 },
               ].map((item, idx) => (
-                <div
+                <li
                   key={item.title}
                   className="p-6 rounded-2xl border border-[#E7DED6] bg-white hover:border-[#F05A28]/50 transition-colors shadow-sm"
                 >
@@ -955,9 +1048,9 @@ export default function AgricultureEquipmentAiAgentsPage() {
                   <p className="text-sm text-[#46403B] leading-relaxed">
                     {item.desc}
                   </p>
-                </div>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 
@@ -976,8 +1069,8 @@ export default function AgricultureEquipmentAiAgentsPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="p-6 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6] shadow-sm flex flex-col justify-between">
+            <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 list-none">
+              <li className="p-6 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6] shadow-sm flex flex-col justify-between">
                 <div>
                   <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">PHASE 01 // WEEKS 1-2</div>
                   <h3 className="text-lg font-bold text-[#14110F] font-heading mb-3">DMS &amp; Telephony Audit</h3>
@@ -988,9 +1081,9 @@ export default function AgricultureEquipmentAiAgentsPage() {
                 <div className="text-xs font-mono text-[#6E655F] pt-4 border-t border-[#E7DED6]">
                   Deliverable: DMS connector schema &amp; SIP trunking configuration
                 </div>
-              </div>
+              </li>
 
-              <div className="p-6 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6] shadow-sm flex flex-col justify-between">
+              <li className="p-6 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6] shadow-sm flex flex-col justify-between">
                 <div>
                   <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">PHASE 02 // WEEKS 2-3</div>
                   <h3 className="text-lg font-bold text-[#14110F] font-heading mb-3">Acoustic Pipeline &amp; Fault Build</h3>
@@ -1001,9 +1094,9 @@ export default function AgricultureEquipmentAiAgentsPage() {
                 <div className="text-xs font-mono text-[#6E655F] pt-4 border-t border-[#E7DED6]">
                   Deliverable: Low-latency voice agent &amp; diagnostic fault parser
                 </div>
-              </div>
+              </li>
 
-              <div className="p-6 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6] shadow-sm flex flex-col justify-between">
+              <li className="p-6 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6] shadow-sm flex flex-col justify-between">
                 <div>
                   <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">PHASE 03 // WEEKS 3-4</div>
                   <h3 className="text-lg font-bold text-[#14110F] font-heading mb-3">Dispatch Console &amp; Staging</h3>
@@ -1014,9 +1107,9 @@ export default function AgricultureEquipmentAiAgentsPage() {
                 <div className="text-xs font-mono text-[#6E655F] pt-4 border-t border-[#E7DED6]">
                   Deliverable: Dispatch console &amp; staging sandbox validation
                 </div>
-              </div>
+              </li>
 
-              <div className="p-6 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6] shadow-sm flex flex-col justify-between">
+              <li className="p-6 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6] shadow-sm flex flex-col justify-between">
                 <div>
                   <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">PHASE 04 // WEEKS 5-6</div>
                   <h3 className="text-lg font-bold text-[#14110F] font-heading mb-3">Live Telephony Rollout &amp; Handover</h3>
@@ -1027,8 +1120,8 @@ export default function AgricultureEquipmentAiAgentsPage() {
                 <div className="text-xs font-mono text-[#6E655F] pt-4 border-t border-[#E7DED6]">
                   Deliverable: Full source code, Docker configs &amp; operations manual
                 </div>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
         </section>
 

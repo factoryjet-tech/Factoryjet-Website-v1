@@ -13,6 +13,11 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   category: 'Emerging Tech',
   imageUrl: '/images/blog/ai-voice-agent-vs-human-answering-service.jpg',
+  meta: {
+    title: 'AI Voice Agents vs Human Answering: Cost Guide',
+    description:
+      'TCO breakdown comparing in-house BDCs, offshore call centers, and custom AI voice telephony for handling calls.',
+  },
   content: (
     <article className="prose prose-lg max-w-none text-[#14110F]">
       {/* KEY TAKEAWAYS */}
