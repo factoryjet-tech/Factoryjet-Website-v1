@@ -4,6 +4,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
+import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
 import Hero from '@/components/v2/Hero';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import ServiceHeroImageBand from '@/components/v2/ServiceHeroImageBand';
@@ -28,7 +29,7 @@ import WebDesignValueCalculator from '@/components/v2/WebDesignValueCalculator';
 export const metadata: Metadata = {
   title: 'Website Redesign Services USA: 7-Day Refresh | FactoryJet',
   description:
-    'Modern website redesign for US small businesses. Faster loads, better conversions, live in 7 days. Fixed-price. Free site audit + Lighthouse benchmark included.',
+    'Modern website redesign for US small businesses. Faster loads, better conversions, live in 7 days. Fixed-price with free Lighthouse benchmark included.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
@@ -609,15 +610,25 @@ const howToSchema = {
   ],
 };
 
+/** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
+ *  <Breadcrumbs> component and the BreadcrumbList JSON-LD below, so the two
+ *  can never drift into showing a different path than the schema claims. */
+const BREADCRUMB_ITEMS: BreadcrumbItem[] = [
+  { name: 'Home', url: 'https://factoryjet.com' },
+  { name: 'Services', url: 'https://factoryjet.com/services' },
+  { name: 'Website Redesign', url: 'https://factoryjet.com/services/website-redesign' },
+];
+
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   '@id': 'https://factoryjet.com/services/website-redesign#breadcrumb',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-    { '@type': 'ListItem', position: 2, name: 'US Services', item: 'https://factoryjet.com/services' },
-    { '@type': 'ListItem', position: 3, name: 'Website Redesign', item: 'https://factoryjet.com/services/website-redesign' },
-  ],
+  itemListElement: BREADCRUMB_ITEMS.map((item, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: item.name,
+    item: item.url,
+  })),
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -665,6 +676,7 @@ export default function WebsiteRedesignPage() {
       />
 
       <main className="bg-fj-cream">
+        <Breadcrumbs items={BREADCRUMB_ITEMS} />
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero

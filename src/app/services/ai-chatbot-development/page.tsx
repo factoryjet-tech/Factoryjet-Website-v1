@@ -4,6 +4,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
+import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
 import Hero from '@/components/v2/Hero';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
@@ -24,7 +25,7 @@ import FinalCTA from '@/components/v2/FinalCTA';
 export const metadata: Metadata = {
   title: 'Best AI Chatbot Development Company in USA | FactoryJet',
   description:
-    'Custom AI chatbots for US businesses, customer support, lead gen, e-commerce & booking. Deflect 60–70% of support tickets. Delivered in 2–3 weeks. Get a quote.',
+    'Custom AI chatbots for US businesses: support triage, lead gen, and e-commerce booking. Deflect routine tickets. Delivered in 2-3 weeks. Get a quote.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
@@ -163,15 +164,25 @@ const howToSchema = {
   ],
 };
 
+/** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
+ *  <Breadcrumbs> component and the BreadcrumbList JSON-LD below, so the two
+ *  can never drift into showing a different path than the schema claims. */
+const BREADCRUMB_ITEMS: BreadcrumbItem[] = [
+  { name: 'Home', url: 'https://factoryjet.com' },
+  { name: 'Services', url: 'https://factoryjet.com/services' },
+  { name: 'AI Chatbot Development', url: 'https://factoryjet.com/services/ai-chatbot-development' },
+];
+
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   '@id': 'https://factoryjet.com/services/ai-chatbot-development#breadcrumb',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-    { '@type': 'ListItem', position: 2, name: 'US Services', item: 'https://factoryjet.com/services' },
-    { '@type': 'ListItem', position: 3, name: 'AI Chatbot Development', item: 'https://factoryjet.com/services/ai-chatbot-development' },
-  ],
+  itemListElement: BREADCRUMB_ITEMS.map((item, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: item.name,
+    item: item.url,
+  })),
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -662,6 +673,7 @@ export default function AIChatbotDevelopmentPage() {
       />
 
       <main className="bg-fj-cream">
+        <Breadcrumbs items={BREADCRUMB_ITEMS} />
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero

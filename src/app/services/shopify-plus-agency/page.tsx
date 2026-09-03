@@ -8,15 +8,16 @@ import FinalCTA from '@/components/v2/FinalCTA';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
+import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
 const PAGE_MODIFIED = '2026-08-06';
 
 export const metadata: Metadata = {
-  title: 'Shopify Plus Agency | Enterprise Shopify Development | FactoryJet',
+  title: 'Shopify Plus Agency: Enterprise Development | FactoryJet',
   description:
-    'Shopify Plus agency for US brands: checkout extensibility, Shopify Functions, B2B companies and catalogs, expansion stores, Shopify Flow and Launchpad, headless Hydrogen, and ERP integration.',
+    'Enterprise Shopify Plus agency for US brands. Custom checkout extensibility, Shopify Functions, B2B wholesale catalogs, expansion stores, and ERP sync.',
   keywords: [
     'shopify plus agency',
     'shopify plus development agency',
@@ -47,7 +48,13 @@ export const metadata: Metadata = {
     description: 'Enterprise Shopify Plus development: Functions, checkout extensibility, B2B, expansion stores, headless, and ERP integration.',
     images: ['https://factoryjet.com/og-default.png'],
   },
-  alternates: { canonical: 'https://factoryjet.com/services/shopify-plus-agency' },
+  alternates: {
+    canonical: 'https://factoryjet.com/services/shopify-plus-agency',
+    languages: {
+      'en-US': 'https://factoryjet.com/services/shopify-plus-agency',
+      'x-default': 'https://factoryjet.com/services/shopify-plus-agency',
+    },
+  },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
@@ -307,14 +314,24 @@ const ORG_SCHEMA = {
   sameAs: ['https://www.linkedin.com/company/factoryjet'],
 };
 
+/** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
+ *  <Breadcrumbs> component and the BreadcrumbList JSON-LD below, so the two
+ *  can never drift into showing a different path than the schema claims. */
+const BREADCRUMB_ITEMS: BreadcrumbItem[] = [
+  { name: 'Home', url: 'https://factoryjet.com' },
+  { name: 'Services', url: 'https://factoryjet.com/services' },
+  { name: 'Shopify Plus Agency', url: 'https://factoryjet.com/services/shopify-plus-agency' },
+];
+
 const BREADCRUMB_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://factoryjet.com/services' },
-    { '@type': 'ListItem', position: 3, name: 'Shopify Plus Agency', item: 'https://factoryjet.com/services/shopify-plus-agency' },
-  ],
+  itemListElement: BREADCRUMB_ITEMS.map((item, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: item.name,
+    item: item.url,
+  })),
 };
 
 const STATS = [
@@ -464,6 +481,7 @@ export default function ShopifyPlusAgencyPage() {
       <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
       <main className="platpage">
+        <Breadcrumbs items={BREADCRUMB_ITEMS} />
 
         {/* Hero */}
         <section className="pp-dotgrid" style={{ position: 'relative', overflow: 'hidden' }}>

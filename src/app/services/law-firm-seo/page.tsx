@@ -6,6 +6,7 @@ import Script from 'next/script';
 
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
+import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
@@ -174,9 +175,13 @@ const INTAKE_CHECKLIST = [
 export const metadata: Metadata = {
   title: 'Best Law Firm SEO Company | SEO for Attorneys | FactoryJet',
   description:
-    'Law firm SEO agency for US attorneys and legal practices. Content built to Google YMYL standards, Google Screened qualification, and Map Pack dominance for PI, criminal defense, family law, and more. Free audit.',
+    'Law firm SEO agency for US attorneys. Content built to Google YMYL standards, Google Screened setup, and Map Pack dominance for injury and defense firms.',
   alternates: {
     canonical: 'https://factoryjet.com/services/law-firm-seo',
+    languages: {
+      'en-US': 'https://factoryjet.com/services/law-firm-seo',
+      'x-default': 'https://factoryjet.com/services/law-firm-seo',
+    },
   },
   openGraph: {
     url: 'https://factoryjet.com/services/law-firm-seo',
@@ -235,14 +240,24 @@ const schemaWebPage = {
   },
 };
 
+/** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
+ *  <Breadcrumbs> component and the BreadcrumbList JSON-LD below, so the two
+ *  can never drift into showing a different path than the schema claims. */
+const BREADCRUMB_ITEMS: BreadcrumbItem[] = [
+  { name: 'Home', url: 'https://factoryjet.com' },
+  { name: 'Services', url: 'https://factoryjet.com/services' },
+  { name: 'Law Firm SEO', url: 'https://factoryjet.com/services/law-firm-seo' },
+];
+
 const schemaBreadcrumb = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://factoryjet.com/services' },
-    { '@type': 'ListItem', position: 3, name: 'Law Firm SEO', item: 'https://factoryjet.com/services/law-firm-seo' },
-  ],
+  itemListElement: BREADCRUMB_ITEMS.map((item, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: item.name,
+    item: item.url,
+  })),
 };
 
 const schemaService = {
@@ -465,6 +480,7 @@ export default function LawFirmSEOPage() {
 
       <SiteHeader />
       <main>
+        <Breadcrumbs items={BREADCRUMB_ITEMS} />
         <div className="lfseo">
 
         {/* ============================================================

@@ -6,6 +6,7 @@ import Script from 'next/script';
 
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
+import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import ComparisonTable from '@/components/v2/ComparisonTable';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
@@ -21,11 +22,15 @@ import './dental-seo.css';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Dental SEO Agency | Map Pack SEO for Dentists & Dental Practices | FactoryJet',
+  title: 'Dental SEO Agency: Map Pack SEO for Dentists | FactoryJet',
   description:
-    'Dental SEO agency that gets practices into the Google Map Pack. We optimize GBP, build review velocity, and create clinical entity authority. 500+ businesses ranked. Free audit.',
+    'Dental SEO agency getting practices into the Google Map Pack. GBP optimization, review velocity, and clinical entity authority. Free audit.',
   alternates: {
     canonical: 'https://factoryjet.com/services/dental-seo',
+    languages: {
+      'en-US': 'https://factoryjet.com/services/dental-seo',
+      'x-default': 'https://factoryjet.com/services/dental-seo',
+    },
   },
   openGraph: {
     url: 'https://factoryjet.com/services/dental-seo',
@@ -86,14 +91,24 @@ const webPageSchema = {
   },
 };
 
+/** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
+ *  <Breadcrumbs> component and the BreadcrumbList JSON-LD below, so the two
+ *  can never drift into showing a different path than the schema claims. */
+const BREADCRUMB_ITEMS: BreadcrumbItem[] = [
+  { name: 'Home', url: 'https://factoryjet.com' },
+  { name: 'Services', url: 'https://factoryjet.com/services' },
+  { name: 'Dental SEO', url: 'https://factoryjet.com/services/dental-seo' },
+];
+
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://factoryjet.com/services' },
-    { '@type': 'ListItem', position: 3, name: 'Dental SEO', item: 'https://factoryjet.com/services/dental-seo' },
-  ],
+  itemListElement: BREADCRUMB_ITEMS.map((item, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: item.name,
+    item: item.url,
+  })),
 };
 
 const serviceSchema = {
@@ -578,6 +593,7 @@ export default function DentalSEOPage() {
 
       <SiteHeader />
       <main className="dseo">
+        <Breadcrumbs items={BREADCRUMB_ITEMS} />
 
       {/* Cursor glow */}
       <div className="cursor-glow" id="dseo-cursor-glow" aria-hidden="true"></div>

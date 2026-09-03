@@ -9,6 +9,7 @@ import FinalCTA from '@/components/v2/FinalCTA';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
+import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
@@ -29,9 +30,9 @@ import '@/components/v2/PlatformPage.css';
 const PAGE_MODIFIED = '2026-08-06';
 
 export const metadata: Metadata = {
-  title: 'AI Search Optimization Services | GEO & LLM SEO | FactoryJet',
+  title: 'AI Search Optimization & GEO Services | FactoryJet',
   description:
-    'AI search optimization services for US brands: generative engine optimization, LLM SEO and answer engine work that gets you cited in ChatGPT, Perplexity, Claude and Google AI Overviews.',
+    'AI search optimization services: GEO, AEO, and LLM SEO getting your brand cited across ChatGPT, Perplexity, Claude, and Google AI Overviews.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
@@ -48,7 +49,13 @@ export const metadata: Metadata = {
     description: 'GEO, AEO and LLM SEO services for US brands. Get named in AI answers, not just ranked on a results page.',
     images: ['https://factoryjet.com/og-default.png'],
   },
-  alternates: { canonical: 'https://factoryjet.com/services/generative-engine-optimization' },
+  alternates: {
+    canonical: 'https://factoryjet.com/services/generative-engine-optimization',
+    languages: {
+      'en-US': 'https://factoryjet.com/services/generative-engine-optimization',
+      'x-default': 'https://factoryjet.com/services/generative-engine-optimization',
+    },
+  },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
@@ -160,14 +167,24 @@ const ORG_SCHEMA = {
   sameAs: ['https://www.linkedin.com/company/factoryjet'],
 };
 
+/** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
+ *  <Breadcrumbs> component and the BreadcrumbList JSON-LD below, so the two
+ *  can never drift into showing a different path than the schema claims. */
+const BREADCRUMB_ITEMS: BreadcrumbItem[] = [
+  { name: 'Home', url: 'https://factoryjet.com' },
+  { name: 'Services', url: 'https://factoryjet.com/services' },
+  { name: 'Generative Engine Optimization', url: 'https://factoryjet.com/services/generative-engine-optimization' },
+];
+
 const BREADCRUMB_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://factoryjet.com/services' },
-    { '@type': 'ListItem', position: 3, name: 'Generative Engine Optimization', item: 'https://factoryjet.com/services/generative-engine-optimization' },
-  ],
+  itemListElement: BREADCRUMB_ITEMS.map((item, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: item.name,
+    item: item.url,
+  })),
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -350,6 +367,7 @@ export default function GenerativeEngineOptimizationPage() {
       <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
       <main className="platpage">
+        <Breadcrumbs items={BREADCRUMB_ITEMS} />
 
         {/* Hero */}
         <section className="pp-dotgrid" style={{ position: 'relative', overflow: 'hidden' }}>

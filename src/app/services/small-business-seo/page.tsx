@@ -12,6 +12,7 @@ import ComparisonTable from '@/components/v2/ComparisonTable';
 
 import HeroInlineForm from '@/components/HeroInlineForm';
 import MidPageCTA from '@/components/v2/MidPageCTA';
+import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
 import LocalSeoOpportunityEstimator from '@/components/v2/LocalSeoOpportunityEstimator';
 import './small-business-seo.css';
 
@@ -160,9 +161,9 @@ const FAQ_GROUPS: ReadonlyArray<FaqGroup> = [
 const FAQ_FLAT = FAQ_GROUPS.flatMap((g) => g.items);
 
 export const metadata: Metadata = {
-  title: 'Small Business SEO Services in the US: More Customers from Google | FactoryJet',
+  title: 'Small Business SEO Services USA | FactoryJet',
   description:
-    'FactoryJet is a US small business SEO company. Affordable SEO services for small businesses that bring calls and customers from Google, not confusing reports. Founder-led, month-to-month, reported in leads.',
+    'US small business SEO company. Affordable SEO services bringing calls and leads from Google. Founder-led, month-to-month, transparent reporting.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
@@ -229,15 +230,24 @@ const faqSchema = {
   mainEntity: FAQ_FLAT.map((item) => ({ '@type': 'Question', name: item.q, acceptedAnswer: { '@type': 'Answer', text: item.a } })),
 };
 
+/** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
+ *  <Breadcrumbs> component and the BreadcrumbList JSON-LD below, so the two
+ *  can never drift into showing a different path than the schema claims. */
+const BREADCRUMB_ITEMS: BreadcrumbItem[] = [
+  { name: 'Home', url: 'https://factoryjet.com' },
+  { name: 'Services', url: 'https://factoryjet.com/services' },
+  { name: 'Small Business SEO', url: 'https://factoryjet.com/services/small-business-seo' },
+];
+
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-    { '@type': 'ListItem', position: 2, name: 'United States', item: 'https://factoryjet.com' },
-    { '@type': 'ListItem', position: 3, name: 'Services', item: 'https://factoryjet.com/services' },
-    { '@type': 'ListItem', position: 4, name: 'Small Business SEO', item: 'https://factoryjet.com/services/small-business-seo' },
-  ],
+  itemListElement: BREADCRUMB_ITEMS.map((item, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: item.name,
+    item: item.url,
+  })),
 };
 
 function Check({ fill = '#0C7150' }: { fill?: string }) {
@@ -561,6 +571,8 @@ export default function SmallBusinessSeoServicePage() {
       <SiteHeader />
 
       <main className="sbseo">
+        <Breadcrumbs items={BREADCRUMB_ITEMS} />
+
         {/* 1. HERO */}
         <section className="hero">
           <div className="wrap hero-grid">

@@ -12,6 +12,7 @@ import ComparisonTable from '@/components/v2/ComparisonTable';
 
 import HeroInlineForm from '@/components/HeroInlineForm';
 import MidPageCTA from '@/components/v2/MidPageCTA';
+import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
 import LocalSeoOpportunityEstimator from '@/components/v2/LocalSeoOpportunityEstimator';
 import './local-seo.css';
 
@@ -179,9 +180,9 @@ const FAQ_FLAT = FAQ_GROUPS.flatMap((g) => g.items);
 
 /* ── Metadata ─────────────────────────────────────────────────────────────── */
 export const metadata: Metadata = {
-  title: 'Best Local SEO Services in USA: Win the Google Map Pack | FactoryJet',
+  title: 'Local SEO Services USA: Win the Google Map Pack | FactoryJet',
   description:
-    'FactoryJet is a US-focused local SEO agency that gets you into the Google map pack and "near me" results through Google Business Profile, reviews, and local authority. Founder-led, month-to-month, reported in calls and bookings.',
+    'US local SEO agency getting you into the Google map pack via Google Business Profile, reviews, and local citations. Month-to-month, reported in calls.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
@@ -264,15 +265,24 @@ const faqSchema = {
   })),
 };
 
+/** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
+ *  <Breadcrumbs> component and the BreadcrumbList JSON-LD below, so the two
+ *  can never drift into showing a different path than the schema claims. */
+const BREADCRUMB_ITEMS: BreadcrumbItem[] = [
+  { name: 'Home', url: 'https://factoryjet.com' },
+  { name: 'Services', url: 'https://factoryjet.com/services' },
+  { name: 'Local SEO', url: 'https://factoryjet.com/services/local-seo' },
+];
+
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-    { '@type': 'ListItem', position: 2, name: 'United States', item: 'https://factoryjet.com' },
-    { '@type': 'ListItem', position: 3, name: 'Services', item: 'https://factoryjet.com/services' },
-    { '@type': 'ListItem', position: 4, name: 'Local SEO', item: 'https://factoryjet.com/services/local-seo' },
-  ],
+  itemListElement: BREADCRUMB_ITEMS.map((item, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: item.name,
+    item: item.url,
+  })),
 };
 
 /* ── Inline SVG icon helpers ──────────────────────────────────────────────── */
@@ -590,6 +600,8 @@ export default function LocalSeoServicePage() {
       <SiteHeader />
 
       <main className="lseo">
+        <Breadcrumbs items={BREADCRUMB_ITEMS} />
+
         {/* 1. LIGHT HERO */}
         <section className="hero">
           <div className="wrap hero-grid">

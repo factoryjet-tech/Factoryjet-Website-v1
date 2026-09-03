@@ -6,6 +6,7 @@ import Image from 'next/image';
 
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
+import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import RelatedGuides from '@/components/v2/RelatedGuides';
 import Hero from '@/components/v2/Hero';
@@ -30,7 +31,7 @@ import EcommerceRoiCalculator from '@/components/commerce/EcommerceRoiCalculator
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Ecommerce Development Company | Custom Online Stores | FactoryJet',
+  title: 'Ecommerce Development Company USA | FactoryJet',
   description:
     'Hire ecommerce developers for Shopify, WooCommerce & custom stores. We build for brands in India, the US, the UK and the UAE. Fixed-price, quoted upfront.',
   openGraph: {
@@ -98,10 +99,10 @@ const serviceSchema = {
   '@type': 'Service',
   name: 'E-Commerce Development Services',
   provider: {
-    '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
+    '@type': 'Organization',
+    '@id': 'https://factoryjet.com/#organization',
     name: 'FactoryJet',
     url: 'https://factoryjet.com',
-
   },
   // This hub is the canonical parent for 13 India city pages and links 13 US
   // city pages, so areaServed lists every market we actually deliver in rather
@@ -115,6 +116,26 @@ const serviceSchema = {
   serviceType: 'E-Commerce Development',
   description:
     'Custom e-commerce development for businesses in India, the US, the UK and the UAE. Shopify, WooCommerce, BigCommerce, and headless Next.js Commerce. Conversion-optimized, mobile-first, Lighthouse 95+. fixed-price, milestone-paid.',
+};
+
+/** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
+ *  <Breadcrumbs> component and the BreadcrumbList JSON-LD below, so the two
+ *  can never drift into showing a different path than the schema claims. */
+const BREADCRUMB_ITEMS: BreadcrumbItem[] = [
+  { name: 'Home', url: 'https://factoryjet.com' },
+  { name: 'Services', url: 'https://factoryjet.com/services' },
+  { name: 'E-Commerce Development', url: 'https://factoryjet.com/services/ecommerce-development' },
+];
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: BREADCRUMB_ITEMS.map((item, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: item.name,
+    item: item.url,
+  })),
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -659,6 +680,11 @@ export default function EcommerceDevelopmentPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
       />
       <script
+        id="ecommerce-breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
         id="speakable-schema-ecommerce-development"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -684,6 +710,7 @@ export default function EcommerceDevelopmentPage() {
       />
 
       <main className="bg-fj-cream">
+        <Breadcrumbs items={BREADCRUMB_ITEMS} />
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero

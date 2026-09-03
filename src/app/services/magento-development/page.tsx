@@ -5,6 +5,7 @@ import { magentoDevelopmentAlternates } from '@/data/hreflangMap';
 
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
+import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
 import Hero from '@/components/v2/Hero';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
@@ -31,9 +32,9 @@ import FinalCTA from '@/components/v2/FinalCTA';
 --------------------------------------------------------------------------─-- */
 
 export const metadata: Metadata = {
-  title: 'Magento Development Company USA | Hire Magento Developers | FactoryJet',
+  title: 'Magento Development Company USA | FactoryJet',
   description:
-    'Hire certified Magento developers from a US Magento development company. Magento 2 & Adobe Commerce builds, custom modules, migrations & performance: fixed-price. Free consultation.',
+    'US Magento development company. Magento 2 & Adobe Commerce builds, custom modules, migrations, and speed optimization. Fixed-price, milestone-paid.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
@@ -109,19 +110,24 @@ const serviceSchema = {
   serviceType: 'Magento Development',
 };
 
+/** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
+ *  <Breadcrumbs> component and the BreadcrumbList JSON-LD below, so the two
+ *  can never drift into showing a different path than the schema claims. */
+const BREADCRUMB_ITEMS: BreadcrumbItem[] = [
+  { name: 'Home', url: 'https://factoryjet.com' },
+  { name: 'Services', url: 'https://factoryjet.com/services' },
+  { name: 'Magento Development', url: 'https://factoryjet.com/services/magento-development' },
+];
+
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://factoryjet.com/services/ecommerce-development' },
-    {
-      '@type': 'ListItem',
-      position: 3,
-      name: 'Magento Development',
-      item: 'https://factoryjet.com/services/magento-development',
-    },
-  ],
+  itemListElement: BREADCRUMB_ITEMS.map((item, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: item.name,
+    item: item.url,
+  })),
 };
 
 /* ----------------------------------------------------------------------------─
@@ -567,6 +573,8 @@ export default function MagentoDevelopmentPage() {
       />
 
       <main>
+        <Breadcrumbs items={BREADCRUMB_ITEMS} />
+
         {/* -- 1. HERO -------------------------------------------------------- */}
         <Hero
         formSlot={<HeroInlineForm region="us" source="us_services_magento_development_hero" />}
