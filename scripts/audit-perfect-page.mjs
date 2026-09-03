@@ -248,7 +248,7 @@ function measure(url, html) {
   // Two different questions, so two different scopes.
   // E5 asks "can a reader reach us at all" -> whole document, chrome counts.
   // E6 asks "is there a CTA before the footer" -> content only, chrome must not count.
-  const ctaRe = /<a[^>]+href=["'][^"']*(contact|quote|book|call|audit|get-started|thank-you|wa\.me)[^"']*["'][^>]*>/gi;
+  const ctaRe = /<a[^>]+href=["'][^"']*(contact|quote|book|call|audit|get-started|thank-you|wa\.me|calendly\.com|tel:)[^"']*["'][^>]*>/gi;
   const ctaAnywhere = count(html, ctaRe);
   const ctaPositions = [...content.matchAll(ctaRe)].map((m) => m.index / content.length);
   const midCta = ctaPositions.some((r) => r > 0.2 && r < 0.85);

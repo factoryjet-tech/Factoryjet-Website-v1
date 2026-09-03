@@ -29,7 +29,27 @@
     "amplitude", "looker", "metabase", "power bi", "tableau", "snowflake", "bigquery",
     "amazon seller central", "amazon vendor central", "walmart marketplace", "tiktok shop",
     "google merchant center", "meta commerce manager", "ebay", "etsy", "faire",
-    "docker", "kubernetes", "terraform", "github actions", "playwright", "cypress", "jest"
+    "docker", "kubernetes", "terraform", "github actions", "playwright", "cypress", "jest",
+
+    "clio", "mycase", "filevine", "netdocuments", "imanage", "practicepanther", "smokeball",
+    "relativity", "litify",
+    "cdk global", "cdk drive", "reynolds & reynolds", "reynolds and reynolds", "era-ignite",
+    "tekion", "tekion arc", "dealersocket", "mitchell 1", "xtime", "ccc one", "dealertrack",
+    "pbs systems", "auto/mate", "geotab", "samsara",
+    "john deere operations center", "john deere service advisor", "case ih afs connect",
+    "new holland afs connect", "agco fuse", "dis corp", "hbs netview", "climate fieldview",
+    "isobus",
+    "labware", "samplemanager", "waters cds", "veeva vault", "sap qm",
+    "epic", "epic app orchard", "cerner", "oracle health", "athenahealth", "eclinicalworks",
+    "allscripts", "veradigm", "nextgen healthcare", "kareo", "dentrix", "eaglesoft",
+    "open dental", "curve dental", "chirotouch", "jane app",
+    "servicetitan", "jobber", "housecall pro", "fieldedge", "buildertrend", "procore",
+    "workiz", "simpro",
+    "toast", "toast pos", "clover", "brink", "aloha", "ncr voyix", "micros simphony",
+    "spoton", "revel", "lightspeed", "opentable", "resy", "sevenrooms",
+    "apollo.io", "clearbit", "clay", "zoominfo", "pipedrive",
+    "kustomer", "front",
+    "vonage", "genesys", "five9", "aircall", "ringcentral", "dialpad"
   ],
   "capabilities": [
     "erp integration", "erp sync", "punchout catalog", "punchout", "cxml", "oci", "edi",
@@ -61,6 +81,11 @@
     "attribution modelling", "incrementality", "marketing mix modelling",
     "product feed", "feed optimisation", "shopping ads", "performance max",
     "technical seo audit", "log file analysis", "crawl budget", "internal linking",
-    "entity optimisation", "topical authority", "content pruning"
+    "entity optimisation", "topical authority", "content pruning",
+
+    "hipaa", "business associate agreement", "21 cfr part 11", "gxp", "alcoa+",
+    "hazcom", "reach", "tsca", "prop 65", "sae j1939", "vin decode",
+    "warm transfer", "call routing", "ivr", "electronic batch record", "safety data sheet",
+    "field service management", "dispatch board", "work order", "fault code"
   ]
 }

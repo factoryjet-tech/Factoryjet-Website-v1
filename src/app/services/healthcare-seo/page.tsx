@@ -1265,7 +1265,7 @@ export default function HealthcareSeoServicePage() {
           headline={
             <>
               The SEO agency for{' '}
-              <span className="bg-gradient-to-r from-[#F05A28] to-[#FF8C5A] bg-clip-text text-transparent">
+              <span>
                 healthcare companies
               </span>
               <br className="hidden md:block" />

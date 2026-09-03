@@ -1014,6 +1014,40 @@ export default function AIAgentDevelopmentPage() {
           </div>
         </section>
 
+        {/* Vertical AI-agent builds */}
+        <section className="pp-sec">
+          <div className="pp-wrap">
+            <p className="pp-mlabel">{'// by industry'}</p>
+            <h2 style={{ marginTop: '10px' }}>Agent builds by industry</h2>
+            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>
+              Same integration discipline, different systems of record. Each of these is a dedicated build for one
+              vertical&apos;s actual software stack, not a generic voice bot with the industry name swapped in.
+            </p>
+            <ul className="pp-bento" style={{ marginTop: '32px' }}>
+              {[
+                { t: 'Legal AI agents', d: 'Conflict checks, matter intake and e-discovery triage wired into Clio, MyCase and NetDocuments.', href: '/services/legal-ai-agents' },
+                { t: 'Automotive AI voice agents', d: 'VIN decode, recall lookups and service scheduling into CDK, Reynolds & Reynolds and Tekion.', href: '/services/automotive-ai-voice-agents' },
+                { t: 'Chemical & pharma AI agents', d: 'Batch record review and SDS authoring against LabWare, SAP QM and 21 CFR Part 11 audit trails.', href: '/services/chemical-pharmaceutical-ai-agents' },
+                { t: 'Agriculture equipment AI agents', d: 'Parts lookup and ISOBUS fault triage synced with John Deere Operations Center and Case IH.', href: '/services/agriculture-equipment-ai-agents' },
+                { t: 'Manufacturing AI agents', d: 'RFQ quoting and shop-floor questions answered live from the ERP and the machine log.', href: '/services/manufacturing-ai-agents' },
+                { t: 'Healthcare AI agents', d: 'HIPAA-BAA-covered scheduling and intake synced with Epic, Cerner, Dentrix and athenahealth.', href: '/services/healthcare-ai-agents' },
+                { t: 'Contractor AI receptionist', d: 'Emergency triage and job booking wired directly into ServiceTitan and Jobber.', href: '/services/contractor-ai-receptionist' },
+                { t: 'Restaurant AI voice agents', d: 'Phone orders injected straight into Toast, Square and Clover, no separate tablet queue.', href: '/services/restaurant-ai-voice-agents' },
+                { t: 'AI SDR development', d: 'Outbound sequencing and inbound qualification wired into HubSpot, Salesforce and Apollo.', href: '/services/ai-sdr-development' },
+                { t: 'AI customer support agents', d: 'Order status, refunds and billing changes resolved inside Zendesk, Gorgias and NetSuite.', href: '/services/ai-customer-support-agents' },
+                { t: 'Ecommerce CRO agency', d: 'Checkout friction and cart abandonment fixed on Shopify Plus, backed by real A/B testing.', href: '/services/ecommerce-cro-agency' },
+              ].map((a) => (
+                <li className="pp-card" key={a.t}>
+                  <h3 style={{ color: 'var(--pp-orange-dark)' }}>
+                    <Link href={a.href} style={{ color: 'inherit', textDecoration: 'underline' }}>{a.t}</Link>
+                  </h3>
+                  <p>{a.d}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
         {/* E-Commerce & Agentic AI Operations */}
         <section className="pp-sec tint">
           <div className="pp-wrap">

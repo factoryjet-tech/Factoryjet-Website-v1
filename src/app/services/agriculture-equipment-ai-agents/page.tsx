@@ -6,12 +6,13 @@ import SiteFooter from '@/components/v2/SiteFooter';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import FAQ, { type FAQItem, type FAQCategory } from '@/components/v2/FAQ';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
 const CANONICAL_URL = 'https://factoryjet.com/services/agriculture-equipment-ai-agents';
-const PAGE_TITLE = 'Agriculture Equipment AI Agents | Dealership Service & Telematics | FactoryJet';
+const PAGE_TITLE = 'Agriculture Equipment AI Agents | FactoryJet';
 const PAGE_DESC =
-  'Custom AI agents for agricultural machinery dealerships and precision ag enterprises. Automate John Deere, Case IH & AGCO parts lookup, ISOBUS fault triage & service dispatch.';
+  'Custom AI voice agents for ag equipment dealerships. Automate parts lookup, ISOBUS fault triage, and service dispatch across John Deere, Case IH, and AGCO.';
 const PAGE_MODIFIED = '2026-09-02';
 
 export const metadata: Metadata = {
@@ -31,6 +32,10 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: CANONICAL_URL,
+    languages: {
+      'en-US': CANONICAL_URL,
+      'x-default': CANONICAL_URL,
+    },
   },
   openGraph: {
     title: PAGE_TITLE,
@@ -56,6 +61,14 @@ export const metadata: Metadata = {
   },
 };
 
+// Single source of truth for both the visible breadcrumb trail and the
+// BreadcrumbList JSON-LD below, so the two can never drift apart.
+const BREADCRUMB_ITEMS: BreadcrumbItem[] = [
+  { name: 'Home', url: 'https://factoryjet.com' },
+  { name: 'Services', url: 'https://factoryjet.com/services' },
+  { name: 'Agriculture Equipment AI Agents', url: CANONICAL_URL },
+];
+
 const FAQ_CATEGORIES: ReadonlyArray<FAQCategory> = [
   { key: 'dealership', label: 'Dealership BDC & Parts' },
   { key: 'telematics', label: 'ISOBUS & Telematics Faults' },
@@ -68,73 +81,73 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'dealership',
     question: 'How do ag equipment AI voice agents handle inbound parts counter phone calls?',
     answer:
-      'Our voice agents answer dealership phone calls on the first ring with sub-500ms acoustic response times. The agent captures caller equipment serial numbers or part descriptions (such as combine feeder house chains, hydraulic couplers, or disc blades), queries live bin stock across your Dealer Management System (DMS), quotes trade pricing, and stages pick-up tickets for counter specialists.',
+      "Our voice agents answer dealership phone calls on the first ring, with sub-500ms acoustic response times. The agent captures the caller's equipment serial number or part description, things like a combine feeder house chain, a hydraulic coupler, or a disc blade. It queries live bin stock across your Dealer Management System (DMS) and quotes trade pricing. In stock, it stages a pick-up ticket; on backorder, it reads back the ETA instead of a dead end.",
   },
   {
     category: 'dealership',
     question: 'Which Agricultural Dealer Management Systems (DMS) and OEM portals do you integrate with?',
     answer:
-      'We build native bi-directional API connectors for CDK Global Heavy Equipment, DIS Corp, HBS Systems (NetView), Basic Software Inc., John Deere Service ADVISOR and Operations Center APIs, Case IH / New Holland AFS Connect, and AGCO Fuse.',
+      'We build native bi-directional API connectors for the DMS platforms your dealership already runs: CDK Global Heavy Equipment, DIS Corp, HBS NetView, and Basic Software Inc. On the OEM side, we connect to John Deere Service ADVISOR and Operations Center, Case IH AFS Connect, New Holland AFS Connect, and AGCO Fuse.',
   },
   {
     category: 'dealership',
     question: 'Can the voice agent triage emergency service calls during high-intensity planting and harvest windows?',
     answer:
-      'Yes. When farmers call during spring planting or fall harvest with stranded combine harvesters or sprayers, the agent identifies caller urgency, collects machine fault codes and GPS coordinates, checks mobile service truck availability, and warm-transfers the call directly to the on-call field technician with a complete digital summary.',
+      'Yes. When a farmer calls during spring planting or fall harvest with a stranded combine or sprayer, the agent reads the urgency in the call and collects the fault code and GPS coordinates. It checks mobile service truck availability, then warm-transfers the call to the on-call field technician with a complete digital summary.',
   },
   {
     category: 'dealership',
     question: 'Does the system support multi-lingual telephony for Spanish-speaking farm operators and ranch crews?',
     answer:
-      'Yes. The voice agent automatically detects Spanish dialogue and transitions naturally into localized conversational Spanish, recording service symptoms, field locations, and parts inquiries with full English translations in your dealership DMS.',
+      'Yes. The voice agent automatically detects Spanish and switches into natural, conversational Spanish. It records service symptoms, field locations, and parts inquiries, with full English translations logged in your dealership DMS.',
   },
   {
     category: 'telematics',
     question: 'How does the AI agent parse ISOBUS 11783 and SAE J1939 telematics diagnostic fault codes?',
     answer:
-      'The agent ingests machine telematics streams and caller-reported fault codes (such as SPN 651 / FMI 5 injector faults or DEF pressure sensor errors). It cross-references OEM technical service manuals, identifies probable root causes, verifies required replacement parts in inventory, and estimates field repair duration.',
+      'The agent ingests machine telematics streams and caller-reported fault codes, such as an SPN 651 / FMI 5 injector fault or a DEF pressure sensor error. It cross-references OEM technical service manuals to find the probable root cause. Then it checks parts inventory for the replacement part and estimates the field repair time.',
   },
   {
     category: 'telematics',
     question: 'Can the system connect directly to OEM telematics platforms like John Deere Operations Center and Climate FieldView?',
     answer:
-      'Yes. Using certified REST and OAuth2 endpoints, the agent retrieves live machine telematics, fuel consumption rates, engine load percentages, and field boundary coordinates to trigger predictive maintenance alerts before catastrophic mechanical failures occur.',
+      'Yes. Using certified REST and OAuth2 endpoints, a secure sign-in standard, the agent pulls live machine telematics: fuel consumption, engine load, and field boundary coordinates. It uses that feed to trigger a predictive maintenance alert before a small issue becomes a breakdown.',
   },
   {
     category: 'telematics',
     question: 'How does the agent assist field service technicians with technical troubleshooting?',
     answer:
-      'Technicians can query the agent via voice or mobile messaging while in the field. The agent indexes thousands of pages of hydraulic schematics, electrical wiring diagrams, and technical service bulletins (TSBs), delivering step-by-step diagnostic procedures and sensor resistance values instantly.',
+      'Technicians can query the agent by voice or mobile message while in the field. It has indexed thousands of pages of hydraulic schematics, wiring diagrams, and technical service bulletins (TSBs). It answers back with the step-by-step diagnostic procedure and the correct sensor resistance value instantly.',
   },
   {
     category: 'telematics',
     question: 'Can the AI agent monitor machine hours and schedule automated seasonal PM-A and PM-B services?',
     answer:
-      'Yes. The agent tracks cumulative engine hours, separator hours, and calendar intervals across customer equipment fleets. It sends proactive SMS notifications proposing scheduled oil changes, hydraulic filter replacements, and seasonal winterization service slots.',
+      'Yes. The agent tracks cumulative engine hours, separator hours, and calendar intervals across your customer fleet. It sends proactive SMS reminders for scheduled oil changes, hydraulic filter swaps, and seasonal winterization slots.',
   },
   {
     category: 'precision',
     question: 'How does the precision agronomy agent assist with fertilizer and chemical application planning?',
     answer:
-      'The agent processes soil grid sample results, yield map shapefiles, and variable-rate prescription files. It checks chemical application labels for EPA restrictions, calculates recommended nitrogen/potassium blend rates, and verifies tank-mix compatibility tables.',
+      'The agent processes soil grid sample results, yield map shapefiles, and variable-rate prescription files. It checks the chemical label and Safety Data Sheet for EPA restrictions, then calculates the recommended nitrogen and potassium blend rate. It also verifies the tank-mix compatibility table before the rate goes out.',
   },
   {
     category: 'precision',
     question: 'Can the system coordinate mobile service truck routing and parts staging during harvest?',
     answer:
-      'Yes. The agent aggregates active mobile service work orders, maps technician location coordinates, optimizes drive routes across rural county roads, and verifies that the required OEM parts are loaded on the dispatched service truck before departure.',
+      "Yes. The agent aggregates active mobile service work orders and maps each technician's location. It optimizes the drive route across rural county roads and confirms the required OEM parts are loaded on the truck before it leaves.",
   },
   {
     category: 'precision',
     question: 'How does the agent calculate custom application rates and generate farmer work order summaries?',
     answer:
-      'The agent calculates acreage totals, product formulation rates per acre, carrier water volume, and estimated total batch requirements, outputting formatted work orders with EPA chemical registration numbers for commercial ag retail applicators.',
+      'The agent calculates the acreage total, the product rate per acre, and the carrier water volume, then estimates the total batch size needed. It outputs a formatted work order with the EPA chemical registration number for the commercial ag retail applicator.',
   },
   {
     category: 'precision',
     question: 'Can the system handle warranty claim pre-qualification for equipment dealerships?',
     answer:
-      'Yes. The agent cross-references machine delivery dates, cumulative engine hours, extended power-train warranty terms, and service history records to verify warranty eligibility before service work orders are finalized.',
+      'Yes. The agent cross-references the machine delivery date, cumulative engine hours, and extended power-train warranty terms against the service history. It confirms warranty eligibility before the service work order is finalized.',
   },
   {
     category: 'security',
@@ -146,13 +159,13 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'security',
     question: 'Is farmer customer data and field boundary mapping information kept private?',
     answer:
-      'Yes. We deploy single-tenant private cloud instances with strict Zero Data Retention policies. Your customer account records, field boundary coordinates, and proprietary machine pricing tables are never used to train public commercial AI models.',
+      'Yes. We deploy single-tenant private cloud instances with strict Zero Data Retention policies. Dealership staff sign in through single sign-on with role-based access control, so a parts clerk and a service manager only see what their role allows. Your customer records, field boundaries, and machine pricing tables are never used to train public commercial AI models.',
   },
   {
     category: 'security',
     question: 'Can the AI voice agent run alongside our existing parts counter and service desk staff?',
     answer:
-      'Yes. Dealerships deploy our voice agent to handle overflow calls during peak morning rushes, after-hours emergency calls, and lunch-hour counter coverage, ensuring 100 percent of customer phone calls are captured without increasing payroll overhead.',
+      'Yes. Dealerships use our voice agent for overflow calls during peak morning rushes, after-hours emergencies, and lunch-hour counter coverage. Every customer call gets answered, without adding payroll overhead.',
   },
   {
     category: 'security',
@@ -164,31 +177,31 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'telematics',
     question: 'Can the agent distinguish between an ISOBUS wiring fault and a genuine sensor failure during diagnosis?',
     answer:
-      'Yes. The agent cross-references the reported SPN/FMI fault code against known wiring-harness failure patterns, connector pin resistance ranges, and sensor-specific fault signatures from OEM technical manuals. It tells the technician whether to check the harness and connectors first or go straight to the sensor, cutting diagnostic guesswork that otherwise wastes a service call during a tight planting or harvest window.',
+      'Yes. The agent cross-references the reported SPN/FMI fault code against known wiring-harness failure patterns, connector pin resistance ranges, and sensor-specific fault signatures from OEM technical manuals. It tells the technician whether to check the harness and connectors first, or go straight to the sensor. That cuts the diagnostic guesswork that otherwise wastes a service call during a tight planting or harvest window.',
   },
   {
     category: 'precision',
     question: 'How does the agent integrate live data from third-party precision-ag sensors and yield monitors?',
     answer:
-      'The agent connects to combine yield monitors, soil moisture probes, and weather station feeds through ISO 11783 (ISOBUS) task-controller data and manufacturer APIs including John Deere Operations Center and Climate FieldView. It normalizes readings from different sensor brands into one dataset, so agronomists see field conditions and yield performance in a single view instead of switching between separate manufacturer apps.',
+      'The agent connects to combine yield monitors, soil moisture probes, and weather station feeds. It pulls this data through ISO 11783 (ISOBUS) task-controller data and manufacturer APIs, including John Deere Operations Center and Climate FieldView. It then normalizes readings from different sensor brands into one dataset. Agronomists see field conditions and yield performance in a single view, instead of switching between separate manufacturer apps.',
   },
   {
     category: 'dealership',
     question: 'How does the system handle seasonal dispatch scheduling during the transition from planting to harvest?',
     answer:
-      'The agent tracks technician certifications, mobile truck parts loadouts, and historical call-volume patterns by week, then rebalances on-call rotations and pre-stages common wear parts before each seasonal surge begins. When planting winds down and harvest calls start climbing, the dispatch board updates automatically instead of requiring a service manager to rebuild the schedule by hand every few weeks.',
+      'The agent tracks technician certifications, mobile truck parts loadouts, and historical call-volume patterns by week. It rebalances on-call rotations and pre-stages common wear parts before each seasonal surge begins. When planting winds down and harvest calls start climbing, the dispatch board updates on its own, instead of a service manager rebuilding the schedule by hand every few weeks.',
   },
   {
     category: 'telematics',
     question: 'Can the AI agent read fault codes from older equipment that predates ISOBUS and full telematics?',
     answer:
-      'Yes, within limits. For pre-ISOBUS machines, the agent relies on caller-described symptoms, legacy diagnostic port codes where available, and OEM service bulletins indexed for that model year to narrow down probable causes. It cannot pull live telematics from equipment that was never wired for it, but it still speeds up phone-based troubleshooting using the same technical manual library technicians already reference.',
+      'Yes, within limits. For pre-ISOBUS machines, the agent relies on caller-described symptoms, legacy diagnostic codes where available, and OEM bulletins indexed for that model year. If the dealership has bolted on aftermarket telematics, such as Geotab or Samsara, the agent reads that feed too. Otherwise it still speeds up phone-based troubleshooting using the same manual library technicians already trust.',
   },
   {
     category: 'security',
     question: 'What happens to dispatch and telematics data if we switch Dealer Management Systems later?',
     answer:
-      'Your historical work orders, technician logs, and telematics records are stored in infrastructure your dealership owns, independent of any single DMS vendor. If you migrate from one system to another, we rebuild the connector for the new DMS and your data moves with you, so a vendor change never means losing years of service history or starting your AI agent over from zero.',
+      'Your historical work orders, technician logs, and telematics records live in infrastructure your dealership owns, independent of any single DMS vendor. If you migrate to a new system, we rebuild the connector and your data moves with you. A vendor change never means losing years of service history, or starting your AI agent over from zero.',
   },
 ];
 
@@ -260,7 +273,7 @@ export default function AgricultureEquipmentAiAgentsPage() {
           '@type': 'Offer',
           itemOffered: {
             '@type': 'Service',
-            name: 'Bi-Directional DMS & OEM Telematics Sync (CDK, DIS, John Deere, Case IH)',
+            name: 'Bi-Directional DMS & OEM Telematics Sync (CDK Global, DIS Corp, John Deere, Case IH)',
           },
         },
       ],
@@ -304,26 +317,12 @@ export default function AgricultureEquipmentAiAgentsPage() {
   const schemaBreadcrumbs = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Home',
-        item: 'https://factoryjet.com',
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'Services',
-        item: 'https://factoryjet.com/services',
-      },
-      {
-        '@type': 'ListItem',
-        position: 3,
-        name: 'Agriculture Equipment AI Agents',
-        item: CANONICAL_URL,
-      },
-    ],
+    itemListElement: BREADCRUMB_ITEMS.map((item, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: item.name,
+      item: item.url,
+    })),
   };
 
   const schemaFAQ = {
@@ -365,6 +364,8 @@ export default function AgricultureEquipmentAiAgentsPage() {
       <SiteHeader />
 
       <main className="min-h-screen bg-white text-[#14110F]">
+        <Breadcrumbs items={BREADCRUMB_ITEMS} />
+
         {/* HERO SECTION */}
         <section className="relative pt-32 pb-20 border-b border-[#E7DED6] bg-[#FFFFFF] overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(#E7DED6_1px,transparent_1px)] [background-size:20px_20px] opacity-60 pointer-events-none" />
@@ -374,7 +375,7 @@ export default function AgricultureEquipmentAiAgentsPage() {
               <div className="lg:col-span-7">
                 <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#FFF8F5] border border-[#F05A28]/30 mb-6">
                   <span className="font-mono text-xs text-[#F05A28] font-bold tracking-wide">
-                    // AG EQUIPMENT AI AGENTS &amp; DEALERSHIP TELEMATICS
+                    // AG EQUIPMENT AI AGENTS &amp; DEALERSHIP TELEMATICS.
                   </span>
                 </div>
 
@@ -386,7 +387,7 @@ export default function AgricultureEquipmentAiAgentsPage() {
                 </h1>
 
                 <p className="text-lg sm:text-xl text-[#46403B] mb-8 leading-relaxed">
-                  We build custom AI voice and workflow agents for agricultural machinery dealerships, custom harvesters, and commercial ag retailers. Automate 24/7 parts phone lookup, triage ISOBUS J1939 fault codes, dispatch emergency mobile service trucks during harvest windows, and synchronize work orders directly with CDK, DIS Corp, and John Deere Operations Center.
+                  We build custom AI voice and workflow agents for agricultural machinery dealerships, custom harvesters, and commercial ag retailers. The agent answers parts phone calls 24/7, triages ISOBUS J1939 fault codes, and dispatches emergency mobile service trucks during harvest windows. It syncs every work order directly with CDK Global Heavy Equipment, DIS Corp, and John Deere Operations Center.
                 </p>
 
                 <div className="mb-8">
@@ -404,7 +405,7 @@ export default function AgricultureEquipmentAiAgentsPage() {
                   </div>
                   <div className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-[#F05A28]" />
-                    <span>CDK Heavy, DIS Corp &amp; HBS Sync</span>
+                    <span>CDK Global, DIS Corp &amp; HBS NetView Sync</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-[#F05A28]" />
@@ -419,9 +420,10 @@ export default function AgricultureEquipmentAiAgentsPage() {
                     <Image
                       src="/images/agriculture/ag-equipment-dealership-service-parts-ai.jpg"
                       alt="Agricultural equipment dealership service director and master technician reviewing combine diagnostics"
-                      fill
+                      width={1012}
+                      height={676}
                       priority
-                      className="object-cover"
+                      className="absolute inset-0 h-full w-full object-cover"
                       sizes="(max-width: 1024px) 100vw, 40vw"
                     />
                   </div>
@@ -445,13 +447,13 @@ export default function AgricultureEquipmentAiAgentsPage() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="rounded-2xl border border-[#F05A28]/30 bg-white p-6 sm:p-8 shadow-sm">
               <div className="font-mono text-xs text-[#F05A28] font-bold uppercase tracking-wider mb-2">
-                // EXECUTIVE SUMMARY &amp; SYSTEM DEFINITION
+                // EXECUTIVE SUMMARY &amp; SYSTEM DEFINITION.
               </div>
               <h2 className="text-xl sm:text-2xl font-bold text-[#14110F] font-heading mb-4">
                 What is an Agriculture Equipment AI Agent?
               </h2>
               <p className="text-base sm:text-lg text-[#46403B] leading-relaxed">
-                An agriculture equipment AI agent is an enterprise voice and workflow automation system connecting directly to Agricultural Dealer Management Systems (CDK Heavy Equipment, DIS Corp, HBS NetView), OEM telematics platforms (John Deere Operations Center, Case IH AFS Connect), and parts catalogs. It answers farmer and operator phone inquiries on the first ring, checks parts inventory balances, decodes ISOBUS and J1939 diagnostic fault codes, and dispatches mobile service technicians to field breakdown locations in real time.
+                An agriculture equipment AI agent is an enterprise voice and workflow automation system. It connects directly to Agricultural Dealer Management Systems such as CDK Global Heavy Equipment, DIS Corp, and HBS NetView. It also links to OEM telematics platforms like John Deere Operations Center and Case IH AFS Connect, plus your parts catalog. On a call, it answers farmer and operator phone inquiries on the first ring and checks parts inventory balances. Then it decodes ISOBUS and J1939 diagnostic fault codes and dispatches mobile service technicians to the field breakdown location in real time.
               </p>
             </div>
           </div>
@@ -462,7 +464,7 @@ export default function AgricultureEquipmentAiAgentsPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-12">
               <div className="font-mono text-xs text-[#F05A28] font-bold uppercase tracking-wider mb-2">
-                // VERIFIED AG MACHINERY BENCHMARKS
+                // VERIFIED AG MACHINERY BENCHMARKS.
               </div>
               <h2 className="text-3xl font-extrabold text-[#14110F] font-heading">
                 The Economic Impact of Machine Downtime During Harvest
@@ -481,7 +483,7 @@ export default function AgricultureEquipmentAiAgentsPage() {
                   Average Per-Season Cost of Equipment Breakdowns to Farmers
                 </div>
                 <p className="text-sm text-[#46403B] leading-relaxed mb-4">
-                  A 2023 U.S. PIRG Education Fund study found that unplanned equipment breakdowns and repair delays cost the average farmer thousands of dollars each growing season, with national losses estimated above three billion dollars a year.
+                  A 2023 U.S. PIRG Education Fund study found that unplanned equipment breakdowns and repair delays cost the average farmer thousands of dollars each growing season. National losses are estimated above three billion dollars a year.
                 </p>
                 <a
                   href="https://www.morningagclips.com/the-true-cost-of-downtime-how-farm-equipment-failures-disrupt-the-food-chain/"
@@ -501,7 +503,7 @@ export default function AgricultureEquipmentAiAgentsPage() {
                   Rise in Ag Equipment Parts &amp; Repair Costs Since 2020
                 </div>
                 <p className="text-sm text-[#46403B] leading-relaxed mb-4">
-                  Bureau of Labor Statistics data shows the cost of parts and labor to repair farm machinery has climbed 41 percent since 2020, making fast, accurate parts lookup and first-time-fix diagnostics more valuable to dealerships every season.
+                  Bureau of Labor Statistics data shows the cost of parts and labor to repair farm machinery has climbed 41 percent since 2020. That makes fast, accurate parts lookup and first-time-fix diagnostics more valuable to dealerships every season.
                 </p>
                 <a
                   href="https://investigatemidwest.org/2024/02/07/graphic-cost-to-repair-farm-equipment-rose-50-in-the-last-three-years/"
@@ -521,7 +523,7 @@ export default function AgricultureEquipmentAiAgentsPage() {
                   Farmers Who Cite Cost as the Top Barrier to More Precision Ag Tech
                 </div>
                 <p className="text-sm text-[#46403B] leading-relaxed mb-4">
-                  CNH&rsquo;s 2026 Farmer Pulse survey of 217 North American farmers found cost the single biggest barrier to adopting more precision technology &mdash; the same economics that make owned, zero-license AI infrastructure a better fit than recurring per-seat software fees.
+                  CNH&rsquo;s 2026 Farmer Pulse survey of 217 North American farmers found cost is the single biggest barrier to adopting more precision technology. That is the same economics that make owned, zero-license AI infrastructure a better fit than recurring per-seat software fees.
                 </p>
                 <a
                   href="https://www.stocktitan.net/news/CNH/cnh-farmer-pulse-report-finds-precision-technology-is-becoming-gc2izzr7wzrr.html"
@@ -541,7 +543,7 @@ export default function AgricultureEquipmentAiAgentsPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <div className="font-mono text-xs text-[#F05A28] font-bold uppercase tracking-wider mb-2">
-                // ENTERPRISE AG MACHINERY CAPABILITIES
+                // ENTERPRISE AG MACHINERY CAPABILITIES.
               </div>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-4">
                 Engineered for High-Stakes Ag Dealerships and Precision Fleets
@@ -560,17 +562,17 @@ export default function AgricultureEquipmentAiAgentsPage() {
                   Sub-500ms Parts Counter Voice AI
                 </h3>
                 <p className="text-sm text-[#46403B] leading-relaxed mb-4">
-                  Answers incoming parts department calls on the first ring. Recognizes equipment models, parses serial numbers, verifies bin stock balances, and quotes pricing.
+                  Answers incoming parts department calls on the first ring. It recognizes the equipment model, parses the serial number, and verifies bin stock balances. If a part is on backorder, it reads back the ETA instead of a dead end.
                 </p>
                 <ul className="space-y-2 text-xs font-mono text-[#6E655F]">
                   <li className="flex items-center gap-2">
-                    <span className="text-[#F05A28]">&bull;</span> Zero customer hold time
+                    <span className="text-[#F05A28]">&bull;</span> Zero customer hold time.
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-[#F05A28]">&bull;</span> Real-time bin location lookup
+                    <span className="text-[#F05A28]">&bull;</span> Real-time bin location lookup.
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-[#F05A28]">&bull;</span> Multi-store inventory checks
+                    <span className="text-[#F05A28]">&bull;</span> Multi-store inventory checks.
                   </li>
                 </ul>
               </div>
@@ -587,13 +589,13 @@ export default function AgricultureEquipmentAiAgentsPage() {
                 </p>
                 <ul className="space-y-2 text-xs font-mono text-[#6E655F]">
                   <li className="flex items-center gap-2">
-                    <span className="text-[#F05A28]">&bull;</span> SPN / FMI fault translation
+                    <span className="text-[#F05A28]">&bull;</span> SPN / FMI fault translation.
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-[#F05A28]">&bull;</span> OEM service manual search
+                    <span className="text-[#F05A28]">&bull;</span> OEM service manual search.
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-[#F05A28]">&bull;</span> Sensor calibration guidance
+                    <span className="text-[#F05A28]">&bull;</span> Sensor calibration guidance.
                   </li>
                 </ul>
               </div>
@@ -610,13 +612,13 @@ export default function AgricultureEquipmentAiAgentsPage() {
                 </p>
                 <ul className="space-y-2 text-xs font-mono text-[#6E655F]">
                   <li className="flex items-center gap-2">
-                    <span className="text-[#F05A28]">&bull;</span> GPS field coordinate pin
+                    <span className="text-[#F05A28]">&bull;</span> GPS field coordinate pin.
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-[#F05A28]">&bull;</span> Service truck route optimization
+                    <span className="text-[#F05A28]">&bull;</span> Service truck route optimization.
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-[#F05A28]">&bull;</span> Warm technician transfer
+                    <span className="text-[#F05A28]">&bull;</span> Warm technician transfer.
                   </li>
                 </ul>
               </div>
@@ -629,17 +631,17 @@ export default function AgricultureEquipmentAiAgentsPage() {
                   Bi-Directional Ag DMS Integration
                 </h3>
                 <p className="text-sm text-[#46403B] leading-relaxed mb-4">
-                  Synchronizes directly with CDK Heavy Equipment, DIS Corp, and HBS Systems. Creates confirmed work orders and stages pick-up tickets automatically.
+                  Synchronizes directly with CDK Global Heavy Equipment, DIS Corp, and HBS NetView. It creates confirmed work orders and stages pick-up tickets on its own.
                 </p>
                 <ul className="space-y-2 text-xs font-mono text-[#6E655F]">
                   <li className="flex items-center gap-2">
-                    <span className="text-[#F05A28]">&bull;</span> REST and database sync
+                    <span className="text-[#F05A28]">&bull;</span> REST and webhook-triggered sync.
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-[#F05A28]">&bull;</span> Real-time labor op-codes
+                    <span className="text-[#F05A28]">&bull;</span> Real-time labor op-codes.
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-[#F05A28]">&bull;</span> Automated customer billing sync
+                    <span className="text-[#F05A28]">&bull;</span> Automated customer billing sync.
                   </li>
                 </ul>
               </div>
@@ -652,17 +654,17 @@ export default function AgricultureEquipmentAiAgentsPage() {
                   Seasonal Preventive Maintenance Scheduling
                 </h3>
                 <p className="text-sm text-[#46403B] leading-relaxed mb-4">
-                  Tracks separator and engine hours from telematics feeds, sending proactive SMS reminders to schedule pre-season combine and planter inspections.
+                  Tracks separator and engine hours from telematics feeds like John Deere Operations Center or Case IH AFS Connect. It sends proactive SMS reminders to schedule pre-season combine and planter inspections.
                 </p>
                 <ul className="space-y-2 text-xs font-mono text-[#6E655F]">
                   <li className="flex items-center gap-2">
-                    <span className="text-[#F05A28]">&bull;</span> Telematics hour meter sync
+                    <span className="text-[#F05A28]">&bull;</span> Telematics hour meter sync.
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-[#F05A28]">&bull;</span> Pre-season inspection campaigns
+                    <span className="text-[#F05A28]">&bull;</span> Pre-season inspection campaigns.
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-[#F05A28]">&bull;</span> Automated winterization reminders
+                    <span className="text-[#F05A28]">&bull;</span> Automated winterization reminders.
                   </li>
                 </ul>
               </div>
@@ -675,17 +677,17 @@ export default function AgricultureEquipmentAiAgentsPage() {
                   Precision Ag Chemical &amp; Fertilizer Batching
                 </h3>
                 <p className="text-sm text-[#46403B] leading-relaxed mb-4">
-                  Calculates custom application rates per acre, checks chemical label compliance tables, and formats work orders for commercial ag retail applicators.
+                  Calculates custom application rates per acre and checks chemical label compliance tables. It flags the product Safety Data Sheet for handling hazards, then formats a work order for commercial ag retail applicators.
                 </p>
                 <ul className="space-y-2 text-xs font-mono text-[#6E655F]">
                   <li className="flex items-center gap-2">
-                    <span className="text-[#F05A28]">&bull;</span> Tank-mix compatibility triage
+                    <span className="text-[#F05A28]">&bull;</span> Tank-mix compatibility triage.
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-[#F05A28]">&bull;</span> EPA label restriction check
+                    <span className="text-[#F05A28]">&bull;</span> EPA label restriction check.
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-[#F05A28]">&bull;</span> Variable rate prescription export
+                    <span className="text-[#F05A28]">&bull;</span> Variable rate prescription export.
                   </li>
                 </ul>
               </div>
@@ -698,7 +700,7 @@ export default function AgricultureEquipmentAiAgentsPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <div className="font-mono text-xs text-[#F05A28] font-bold uppercase tracking-wider mb-2">
-                // TAILORED AGRICULTURAL MACHINERY VERTICALS
+                // TAILORED AGRICULTURAL MACHINERY VERTICALS.
               </div>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-4">
                 Engineered for High-Stakes Agricultural Operations
@@ -713,7 +715,7 @@ export default function AgricultureEquipmentAiAgentsPage() {
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center bg-[#FAFAF7] p-8 rounded-2xl border border-[#E7DED6] shadow-sm">
                 <div className="lg:col-span-6 order-2 lg:order-1">
                   <div className="font-mono text-xs text-[#F05A28] font-bold uppercase mb-2">
-                    01. AG EQUIPMENT DEALERSHIP PARTS &amp; SERVICE BDCS
+                    01. AG EQUIPMENT DEALERSHIP PARTS &amp; SERVICE BDCS.
                   </div>
                   <h3 className="text-2xl font-bold text-[#14110F] font-heading mb-4">
                     24/7 Parts Phone Ingestion &amp; Live DMS Inventory Synchronization
@@ -722,11 +724,11 @@ export default function AgricultureEquipmentAiAgentsPage() {
                     Franchised farm equipment dealerships (John Deere, Case IH, New Holland, Kubota) receive hundreds of parts inquiry calls daily during planting and harvest. When counter staff are occupied, callers hang up and purchase aftermarket parts online.
                   </p>
                   <p className="text-[#46403B] leading-relaxed mb-6">
-                    Our ag dealership voice agent answers every call instantly, decodes machine model numbers and serials, searches bin locations across DIS Corp or CDK Heavy, quotes retail and farm-account trade pricing, and stages pick-up orders for parts personnel.
+                    Our ag dealership voice agent answers every call instantly. It decodes the machine model number and serial, then searches bin locations across DIS Corp or CDK Global Heavy Equipment. It quotes retail and farm-account trade pricing and stages a pick-up order for parts personnel.
                   </p>
                   <ul className="flex flex-wrap gap-2 text-xs font-mono text-[#6E655F] list-none">
                     <li className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
-                      DIS Corp &amp; CDK Heavy Sync
+                      DIS Corp &amp; CDK Global Sync
                     </li>
                     <li className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
                       Bin Stock Location Lookup
@@ -741,8 +743,9 @@ export default function AgricultureEquipmentAiAgentsPage() {
                     <Image
                       src="/images/agriculture/ag-equipment-dealership-service-parts-ai.jpg"
                       alt="Agricultural machinery dealership parts specialist fulfilling emergency harvest parts request"
-                      fill
-                      className="object-cover"
+                      width={1012}
+                      height={676}
+                      className="absolute inset-0 h-full w-full object-cover"
                       sizes="(max-width: 1024px) 100vw, 50vw"
                     />
                   </div>
@@ -756,15 +759,16 @@ export default function AgricultureEquipmentAiAgentsPage() {
                     <Image
                       src="/images/agriculture/field-diagnostic-telematics-isobus-ai.jpg"
                       alt="Farm equipment technician diagnosing tractor telematics error codes with field tablet"
-                      fill
-                      className="object-cover"
+                      width={1376}
+                      height={768}
+                      className="absolute inset-0 h-full w-full object-cover"
                       sizes="(max-width: 1024px) 100vw, 50vw"
                     />
                   </div>
                 </div>
                 <div className="lg:col-span-6">
                   <div className="font-mono text-xs text-[#F05A28] font-bold uppercase mb-2">
-                    02. FIELD DIAGNOSTIC TELEMATICS &amp; ISOBUS FAULT TRIAGE
+                    02. FIELD DIAGNOSTIC TELEMATICS &amp; ISOBUS FAULT TRIAGE.
                   </div>
                   <h3 className="text-2xl font-bold text-[#14110F] font-heading mb-4">
                     Automated J1939 SPN/FMI Translation &amp; Field Troubleshooting
@@ -783,7 +787,7 @@ export default function AgricultureEquipmentAiAgentsPage() {
                     error codes when DEF sensors fail, hydraulic proportional valves stick, or CAN-bus modules lose synchronization.
                   </p>
                   <p className="text-[#46403B] leading-relaxed mb-6">
-                    Our telematics diagnostic agent parses machine fault codes by voice or mobile text, retrieves step-by-step OEM troubleshooting procedures, verifies replacement sensor availability in stock, and instructs operators on clearing limp-mode overrides.
+                    Our telematics diagnostic agent parses machine fault codes by voice or mobile text. It retrieves step-by-step OEM troubleshooting procedures and checks replacement sensor availability in stock. Then it walks the operator through clearing a limp-mode override, the safe mode a machine drops into when a fault trips.
                   </p>
                   <ul className="flex flex-wrap gap-2 text-xs font-mono text-[#6E655F] list-none">
                     <li className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
@@ -803,7 +807,7 @@ export default function AgricultureEquipmentAiAgentsPage() {
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center bg-[#FAFAF7] p-8 rounded-2xl border border-[#E7DED6] shadow-sm">
                 <div className="lg:col-span-6 order-2 lg:order-1">
                   <div className="font-mono text-xs text-[#F05A28] font-bold uppercase mb-2">
-                    03. PRECISION AG SENSOR &amp; DRONE YIELD DATA SYNTHESIS
+                    03. PRECISION AG SENSOR &amp; DRONE YIELD DATA SYNTHESIS.
                   </div>
                   <h3 className="text-2xl font-bold text-[#14110F] font-heading mb-4">
                     Multispectral Imagery Parsing &amp; Variable-Rate Prescription Triage
@@ -822,7 +826,7 @@ export default function AgricultureEquipmentAiAgentsPage() {
                     imagery, satellite vegetative indices, and soil moisture sensor data across thousands of field acres.
                   </p>
                   <p className="text-[#46403B] leading-relaxed mb-6">
-                    Our precision ag agent synthesizes sensor telemetry, identifies nitrogen deficiency zones and weed outbreaks, correlates yield variability with soil electrical conductivity (EC), and generates formatted variable-rate prescription shapefiles for display controllers.
+                    Our precision ag agent synthesizes sensor telemetry to find nitrogen deficiency zones and weed outbreaks. It correlates yield variability with soil electrical conductivity, a proxy reading for soil texture and moisture. Then it generates a formatted variable-rate prescription shapefile for the display controller.
                   </p>
                   <ul className="flex flex-wrap gap-2 text-xs font-mono text-[#6E655F] list-none">
                     <li className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
@@ -841,8 +845,9 @@ export default function AgricultureEquipmentAiAgentsPage() {
                     <Image
                       src="/images/agriculture/precision-ag-sensor-drone-yield-ai.jpg"
                       alt="Agronomist reviewing precision multispectral field maps and crop yield data on tablet"
-                      fill
-                      className="object-cover"
+                      width={1376}
+                      height={768}
+                      className="absolute inset-0 h-full w-full object-cover"
                       sizes="(max-width: 1024px) 100vw, 50vw"
                     />
                   </div>
@@ -856,24 +861,25 @@ export default function AgricultureEquipmentAiAgentsPage() {
                     <Image
                       src="/images/agriculture/seasonal-harvest-equipment-dispatch-ai.jpg"
                       alt="Ag dealership mobile service truck technician repairing combine harvester in field"
-                      fill
-                      className="object-cover"
+                      width={1376}
+                      height={768}
+                      className="absolute inset-0 h-full w-full object-cover"
                       sizes="(max-width: 1024px) 100vw, 50vw"
                     />
                   </div>
                 </div>
                 <div className="lg:col-span-6">
                   <div className="font-mono text-xs text-[#F05A28] font-bold uppercase mb-2">
-                    04. SEASONAL HARVEST DISPATCH &amp; MOBILE FIELD SERVICE
+                    04. SEASONAL HARVEST DISPATCH &amp; MOBILE FIELD SERVICE.
                   </div>
                   <h3 className="text-2xl font-bold text-[#14110F] font-heading mb-4">
                     Field Coordinate Pinning &amp; Emergency Service Truck Route Optimization
                   </h3>
                   <p className="text-[#46403B] leading-relaxed mb-4">
-                    When combine harvesters or cotton strippers break down miles from paved roads, dealership dispatchers struggle to obtain exact field entrance coordinates, verify technician tool readiness, and route mobile repair units efficiently.
+                    When combine harvesters or cotton strippers break down miles from paved roads, dispatch gets hard fast. Dealership dispatchers struggle to get exact field entrance coordinates, confirm technician tool readiness, and route mobile repair units efficiently.
                   </p>
                   <p className="text-[#46403B] leading-relaxed mb-6">
-                    Our mobile service dispatch agent pins field entrance GPS markers via automated SMS, checks mobile service truck inventory for necessary hydraulic hoses and belts, and routes the closest certified technician with turn-by-turn rural navigation.
+                    Our mobile service dispatch agent pins the field entrance GPS marker by automated SMS. It checks the mobile service truck&rsquo;s inventory for the hydraulic hoses and belts the job needs, and it reads aftermarket telematics feeds like Geotab or Samsara on machines that were retrofitted rather than sold with factory telematics. Then it routes the closest certified technician with turn-by-turn rural navigation.
                   </p>
                   <ul className="flex flex-wrap gap-2 text-xs font-mono text-[#6E655F] list-none">
                     <li className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
@@ -893,16 +899,16 @@ export default function AgricultureEquipmentAiAgentsPage() {
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center bg-[#FAFAF7] p-8 rounded-2xl border border-[#E7DED6] shadow-sm">
                 <div className="lg:col-span-6 order-2 lg:order-1">
                   <div className="font-mono text-xs text-[#F05A28] font-bold uppercase mb-2">
-                    05. COMMERCIAL AGRONOMY CHEMICAL &amp; FERTILIZER BATCHING
+                    05. COMMERCIAL AGRONOMY CHEMICAL &amp; FERTILIZER BATCHING.
                   </div>
                   <h3 className="text-2xl font-bold text-[#14110F] font-heading mb-4">
                     Tank-Mix Compatibility Screening &amp; EPA Registration Label Compliance
                   </h3>
                   <p className="text-[#46403B] leading-relaxed mb-4">
-                    Commercial ag retailers and custom applicators manage complex herbicide, fungicide, and liquid fertilizer blends, where incorrect mixing orders or incompatible adjuvants cause tank curdling and sprayer downtime.
+                    Commercial ag retailers and custom applicators manage complex herbicide, fungicide, and liquid fertilizer blends. An incorrect mixing order or an incompatible adjuvant can curdle the tank mix, which means sprayer downtime.
                   </p>
                   <p className="text-[#46403B] leading-relaxed mb-6">
-                    Our agronomy chemical agent verifies tank-mix compatibility tables, checks{' '}
+                    Our agronomy chemical agent verifies tank-mix compatibility tables and checks the product Safety Data Sheet for handling hazards. It also checks{' '}
                     <a
                       href="https://www.epa.gov/pesticide-labels"
                       target="_blank"
@@ -912,7 +918,14 @@ export default function AgricultureEquipmentAiAgentsPage() {
                     >
                       EPA chemical registration labels
                     </a>{' '}
-                    for crop pre-harvest intervals (PHI) and rotational restrictions, and generates formatted batch load sheets for custom applicator operators.
+                    for the crop pre-harvest interval, the wait time before harvest is safe, and any rotational restrictions. Then it generates a formatted batch load sheet for the custom applicator operator.
+                  </p>
+                  <p className="text-[#46403B] leading-relaxed mb-6">
+                    We reuse the same compliance-checking pattern in our{' '}
+                    <Link href="/services/chemical-pharmaceutical-ai-agents" className="underline hover:no-underline" style={{ color: '#B23E13' }}>
+                      chemical and pharmaceutical AI agents
+                    </Link>{' '}
+                    work, built for other regulated-substance handling.
                   </p>
                   <ul className="flex flex-wrap gap-2 text-xs font-mono text-[#6E655F] list-none">
                     <li className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
@@ -931,8 +944,9 @@ export default function AgricultureEquipmentAiAgentsPage() {
                     <Image
                       src="/images/agriculture/commercial-agronomy-chemical-fertilizer-ai.jpg"
                       alt="Commercial agronomy specialist inspecting crop protection fertilizer blending facility"
-                      fill
-                      className="object-cover"
+                      width={1280}
+                      height={800}
+                      className="absolute inset-0 h-full w-full object-cover"
                       sizes="(max-width: 1024px) 100vw, 50vw"
                     />
                   </div>
@@ -948,7 +962,7 @@ export default function AgricultureEquipmentAiAgentsPage() {
             <div className="rounded-2xl border border-[#F05A28]/30 bg-[#FFF8F5] p-8 sm:p-10 text-center">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-[#F05A28]/30 mb-5">
                 <span className="font-mono text-xs text-[#F05A28] font-bold tracking-wide">
-                  // HEAR IT HANDLE A REAL PARTS CALL
+                  // HEAR IT HANDLE A REAL PARTS CALL.
                 </span>
               </div>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-[#14110F] font-heading mb-4">
@@ -982,13 +996,17 @@ export default function AgricultureEquipmentAiAgentsPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <div className="font-mono text-xs text-[#F05A28] font-bold uppercase tracking-wider mb-2">
-                // SYSTEM ARCHITECTURE &amp; INTEGRATION
+                // SYSTEM ARCHITECTURE &amp; INTEGRATION.
               </div>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-4">
                 Enterprise Ag Equipment AI Engineering Blueprint
               </h2>
               <p className="text-base sm:text-lg text-[#46403B]">
-                How we architect sub-500ms voice telephony pipelines, telematics fault decoders, and deterministic DMS connectors for agricultural dealerships.
+                This build extends our core{' '}
+                <Link href="/services/ai-agent-development/ai-voice-agent" className="underline hover:no-underline" style={{ color: '#B23E13' }}>
+                  AI voice agent engineering
+                </Link>{' '}
+                practice for agriculture. We architect sub-500ms voice telephony pipelines, telematics fault decoders, and deterministic DMS connectors built for agricultural dealerships.
               </p>
             </div>
 
@@ -999,8 +1017,8 @@ export default function AgricultureEquipmentAiAgentsPage() {
                   desc: 'Low-latency SIP trunking and streaming neural voice synthesis provide instant acoustic turn-around for parts inquiries and emergency service calls.',
                 },
                 {
-                  title: 'Bi-Directional CDK Heavy, DIS & HBS Sync',
-                  desc: 'Native REST and database connectors synchronize live parts bin inventories, labor op-codes, and customer account ledgers without manual re-keying.',
+                  title: 'Bi-Directional CDK Global, DIS & HBS Sync',
+                  desc: 'Native REST and webhook connectors synchronize live parts bin inventories, labor op-codes, and customer account ledgers. ERP sync pushes the same data to your back-office accounting system, with no manual re-keying.',
                 },
                 {
                   title: 'ISOBUS 11783 & J1939 Fault Code Decoder',
@@ -1059,7 +1077,7 @@ export default function AgricultureEquipmentAiAgentsPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <div className="font-mono text-xs text-[#F05A28] font-bold uppercase tracking-wider mb-2">
-                // DEPLOYMENT METHODOLOGY
+                // DEPLOYMENT METHODOLOGY.
               </div>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-4">
                 4-Phase Ag Dealership Implementation Roadmap
@@ -1075,11 +1093,11 @@ export default function AgricultureEquipmentAiAgentsPage() {
                   <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">PHASE 01 // WEEKS 1-2</div>
                   <h3 className="text-lg font-bold text-[#14110F] font-heading mb-3">DMS &amp; Telephony Audit</h3>
                   <p className="text-sm text-[#46403B] leading-relaxed mb-4">
-                    We map your DMS parts catalog schemas (DIS Corp, CDK Heavy), customer trade accounts, labor op-codes, and telephony call routing. We configure direct SIP trunking gateways.
+                    We map your DMS parts catalog schemas (DIS Corp, CDK Global Heavy Equipment), customer trade accounts, labor op-codes, and telephony call routing. Then we configure direct SIP trunking gateways.
                   </p>
                 </div>
                 <div className="text-xs font-mono text-[#6E655F] pt-4 border-t border-[#E7DED6]">
-                  Deliverable: DMS connector schema &amp; SIP trunking configuration
+                  Deliverable: DMS connector schema &amp; SIP trunking configuration.
                 </div>
               </li>
 
@@ -1088,11 +1106,11 @@ export default function AgricultureEquipmentAiAgentsPage() {
                   <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">PHASE 02 // WEEKS 2-3</div>
                   <h3 className="text-lg font-bold text-[#14110F] font-heading mb-3">Acoustic Pipeline &amp; Fault Build</h3>
                   <p className="text-sm text-[#46403B] leading-relaxed mb-4">
-                    We calibrate sub-500ms voice synthesis for equipment parts descriptions, train ISOBUS J1939 fault code models, and encode dealership trade pricing rules into deterministic state machines.
+                    We calibrate sub-500ms voice synthesis for equipment parts descriptions and train ISOBUS J1939 fault code models. We also encode dealership trade pricing rules into deterministic state machines, rule sets that always return the same answer for the same input.
                   </p>
                 </div>
                 <div className="text-xs font-mono text-[#6E655F] pt-4 border-t border-[#E7DED6]">
-                  Deliverable: Low-latency voice agent &amp; diagnostic fault parser
+                  Deliverable: Low-latency voice agent &amp; diagnostic fault parser.
                 </div>
               </li>
 
@@ -1101,11 +1119,11 @@ export default function AgricultureEquipmentAiAgentsPage() {
                   <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">PHASE 03 // WEEKS 3-4</div>
                   <h3 className="text-lg font-bold text-[#14110F] font-heading mb-3">Dispatch Console &amp; Staging</h3>
                   <p className="text-sm text-[#46403B] leading-relaxed mb-4">
-                    We deploy parts counter pick-up staging queues and service dispatch screens. Dealership staff test simulated parts lookups, harvest emergency calls, and automated DMS work order creation.
+                    We deploy parts counter pick-up staging queues and a live dispatch board. Dealership staff test simulated parts lookups, harvest emergency calls, and automated DMS work order creation.
                   </p>
                 </div>
                 <div className="text-xs font-mono text-[#6E655F] pt-4 border-t border-[#E7DED6]">
-                  Deliverable: Dispatch console &amp; staging sandbox validation
+                  Deliverable: Dispatch console &amp; staging sandbox validation.
                 </div>
               </li>
 
@@ -1118,7 +1136,7 @@ export default function AgricultureEquipmentAiAgentsPage() {
                   </p>
                 </div>
                 <div className="text-xs font-mono text-[#6E655F] pt-4 border-t border-[#E7DED6]">
-                  Deliverable: Full source code, Docker configs &amp; operations manual
+                  Deliverable: Full source code, Docker configs &amp; operations manual.
                 </div>
               </li>
             </ul>
@@ -1130,13 +1148,17 @@ export default function AgricultureEquipmentAiAgentsPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <div className="font-mono text-xs text-[#F05A28] font-bold uppercase tracking-wider mb-2">
-                // VENDOR COMPARISON
+                // VENDOR COMPARISON.
               </div>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-4">
                 FactoryJet Custom Ag AI vs. Third-Party Answering Services
               </h2>
               <p className="text-base sm:text-lg text-[#46403B]">
-                Why agricultural equipment dealers build owned voice AI infrastructure rather than relying on generic answering services.
+                Why agricultural equipment dealers build owned voice AI infrastructure instead of renting a generic answering service or a rigid IVR menu tree. Run your own numbers first with our{' '}
+                <Link href="/tools/ai-agent-roi-calculator" className="underline hover:no-underline" style={{ color: '#B23E13' }}>
+                  AI agent ROI calculator
+                </Link>
+                .
               </p>
             </div>
 
@@ -1168,7 +1190,7 @@ export default function AgricultureEquipmentAiAgentsPage() {
                   <tr>
                     <td className="p-4 sm:p-6 font-semibold text-[#14110F]">Direct Ag DMS Bin Stock Lookup</td>
                     <td className="p-4 sm:p-6 font-bold text-[#F05A28] bg-[#FFF8F5]">
-                      Native DIS Corp, CDK Heavy Sync
+                      Native DIS Corp, CDK Global Sync
                     </td>
                     <td className="p-4 sm:p-6 text-[#6E655F]">None (Message Pad Only)</td>
                     <td className="p-4 sm:p-6 text-[#6E655F]">Manual Terminal Query</td>
@@ -1200,6 +1222,9 @@ export default function AgricultureEquipmentAiAgentsPage() {
                 </tbody>
               </table>
             </div>
+            <p className="mt-6 text-center text-sm text-[#6E655F]">
+              Every row favors infrastructure your dealership owns outright.
+            </p>
           </div>
         </section>
 
@@ -1213,9 +1238,10 @@ export default function AgricultureEquipmentAiAgentsPage() {
                     <Image
                       src="/bhavesh_image.webp"
                       alt="Bhavesh Barot, Founder &amp; CEO of FactoryJet"
-                      fill
+                      width={682}
+                      height={1024}
                       quality={95}
-                      className="object-cover"
+                      className="absolute inset-0 h-full w-full object-cover"
                       sizes="(max-width: 1024px) 100vw, 40vw"
                     />
                   </div>
@@ -1240,16 +1266,16 @@ export default function AgricultureEquipmentAiAgentsPage() {
 
               <div className="lg:col-span-7">
                 <div className="font-mono text-xs text-[#F05A28] font-bold uppercase tracking-wider mb-2">
-                  // DIRECT AG MACHINERY ARCHITECTURE LEADERSHIP
+                  // DIRECT AG MACHINERY ARCHITECTURE LEADERSHIP.
                 </div>
                 <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-6">
                   Direct Engineering Oversight with Founder Bhavesh Barot
                 </h2>
                 <p className="text-base sm:text-lg text-[#46403B] leading-relaxed mb-6">
-                  Ag equipment fixed operations require instantaneous parts lookups, rock-solid DMS inventory synchronization, and zero tolerance for dropped calls during planting and harvest. At FactoryJet, founder Bhavesh Barot leads every agricultural AI architecture and DMS integration scoping session personally. We evaluate your current DIS Corp, CDK Heavy, or John Deere Operations Center setup in the initial session.
+                  Ag equipment fixed operations need instant parts lookups, rock-solid DMS inventory sync, and zero tolerance for dropped calls during planting and harvest. At FactoryJet, founder Bhavesh Barot leads every agricultural AI architecture and DMS integration scoping session personally. We evaluate your current DIS Corp, CDK Global Heavy Equipment, or John Deere Operations Center setup in that first session.
                 </p>
                 <p className="text-base sm:text-lg text-[#46403B] leading-relaxed mb-8">
-                  You work directly with senior systems architects who have engineered enterprise telephony infrastructure and high-volume data integrations for over a decade. We build dependable, high-converting software that your equipment dealership owns and controls permanently.
+                  You work directly with senior systems architects. They have engineered enterprise telephony infrastructure and high-volume data integrations for over a decade. We build dependable, production-grade software that your equipment dealership owns and controls permanently.
                 </p>
 
                 <div className="flex flex-wrap items-center gap-4">
@@ -1340,7 +1366,7 @@ export default function AgricultureEquipmentAiAgentsPage() {
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-[#F05A28]/30 mb-6">
               <span className="font-mono text-xs text-[#F05A28] font-bold tracking-wide">
-                // ZERO MISSED PARTS CALLS &bull; LIVE DMS SYNC &bull; 100% OWNED
+                // ZERO MISSED PARTS CALLS &bull; LIVE DMS SYNC &bull; 100% OWNED.
               </span>
             </div>
 
@@ -1349,7 +1375,7 @@ export default function AgricultureEquipmentAiAgentsPage() {
             </h2>
 
             <p className="text-lg text-[#46403B] max-w-2xl mx-auto mb-10 leading-relaxed">
-              Book a 30-minute architecture consultation with our founder. We will review your DMS setup, analyze your parts counter phone volume, and deliver a fixed-scope AI voice proposal within 24 hours.
+              Book a 30-minute architecture consultation with our founder. We will review your DMS setup and analyze your parts counter phone volume. Then we will deliver a fixed-scope AI voice proposal within 24 hours.
             </p>
 
             <div className="flex flex-wrap justify-center items-center gap-4">

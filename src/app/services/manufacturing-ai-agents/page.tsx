@@ -387,7 +387,7 @@ export default function ManufacturingAiAgentsPage() {
                 
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#14110F] font-heading leading-tight mb-6">
                   Custom AI Agents for US Manufacturers with{' '}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F05A28] to-[#C94A1A]">
+                  <span>
                     Live ERP Synchronization.
                   </span>
                 </h1>
