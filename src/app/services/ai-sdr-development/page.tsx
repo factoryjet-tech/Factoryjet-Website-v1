@@ -422,35 +422,30 @@ export default function AiSdrDevelopmentPage() {
               </li>
 
               <li className="pp-card p-6 bg-white">
-                <span className="text-3xl font-extrabold text-[#F05A28] font-mono block mb-2">78%</span>
-                <h3 className="text-base font-bold text-[#14110F] mb-2">Buy from First Responder</h3>
+                <span className="text-3xl font-extrabold text-[#F05A28] font-mono block mb-2">10x</span>
+                <h3 className="text-base font-bold text-[#14110F] mb-2">Higher Odds of Contact</h3>
                 <p className="text-sm text-[#46403B] mb-4">
-                  Nearly 80 percent of B2B enterprise software and service buyers purchase from the vendor that responds to their initial inquiry first.
+                  Calling a web-generated lead back within 5 minutes makes you 10 times more likely to reach them, and 6 times more likely to qualify them, than waiting even 30 minutes.
                 </p>
                 <a
-                  href="https://www.insidesales.com"
+                  href="https://www.insidesales.com/what-is-lead-response-management/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-xs text-[#F05A28] font-mono hover:underline"
                 >
-                  Source: Lead Response Management Study &rarr;
+                  Source: InsideSales.com Lead Response Management Study &rarr;
                 </a>
               </li>
 
               <li className="pp-card p-6 bg-white">
-                <span className="text-3xl font-extrabold text-[#F05A28] font-mono block mb-2">50%</span>
+                <span className="text-3xl font-extrabold text-[#F05A28] font-mono block mb-2">More Pipeline</span>
                 <h3 className="text-base font-bold text-[#14110F] mb-2">Higher Sales Productivity</h3>
                 <p className="text-sm text-[#46403B] mb-4">
-                  Sales teams automating top-of-funnel qualification generate up to 50 percent more pipeline per Account Executive by eliminating manual outreach.
+                  Sales teams that automate top-of-funnel qualification consistently report meaningful pipeline and productivity gains in industry gen AI sales research, though the exact lift varies by team and workflow.
                 </p>
-                <a
-                  href="https://www.mckinsey.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs text-[#F05A28] font-mono hover:underline"
-                >
-                  Source: McKinsey Sales AI Benchmark &rarr;
-                </a>
+                <span className="text-xs text-[#6E655F] font-mono">
+                  Directional estimate &mdash; industry gen AI sales research, not a single named study
+                </span>
               </li>
             </ul>
           </div>

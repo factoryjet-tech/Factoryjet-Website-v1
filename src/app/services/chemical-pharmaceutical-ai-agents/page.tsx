@@ -253,7 +253,7 @@ export default function ChemicalPharmaceuticalAiAgentsPage() {
           '@type': 'Offer',
           itemOffered: {
             '@type': 'Service',
-            name: 'FDA 21 CFR Part 11 Compliant Audit Logging & eCTD Module 3 Synthesis',
+            name: 'FDA 21 CFR Part 11-Aligned Audit Logging & eCTD Module 3 Synthesis',
           },
         },
         {
@@ -996,7 +996,7 @@ export default function ChemicalPharmaceuticalAiAgentsPage() {
               {[
                 {
                   title: 'FDA 21 CFR Part 11 & Annex 11 Compliance',
-                  desc: 'Cryptographically signed audit logging, dual-factor authentication, and append-only version control ensure full compliance with FDA and GxP standards.',
+                  desc: 'Cryptographically signed audit logging, dual-factor authentication, and append-only version control are engineered to support FDA and GxP compliance requirements.',
                 },
                 {
                   title: 'Bi-Directional LIMS & CDS Connectivity',

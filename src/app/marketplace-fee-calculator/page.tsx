@@ -622,8 +622,9 @@ export default function MarketplaceFeeCalculatorPage() {
                   </div>
                 </div>
                 <blockquote>
-                  &ldquo;We were live in just 6 days. New inquiries come in every day, and the site is still really
-                  fast.&rdquo;
+                  &ldquo;We were live in 6 days, I genuinely did not believe that was possible. The design is
+                  stunning, the WhatsApp integration brings in inquiries every day, and the site has stayed
+                  lightning fast.&rdquo;
                 </blockquote>
                 <div className="rate">
                   <a href="/case-studies/belle-maison-ecommerce-success" style={{ color: 'var(--pp-orange-dark)', fontWeight: 600, textDecoration: 'underline' }}>

@@ -589,7 +589,6 @@ export default function FaireWholesaleMarketplacePage() {
             <h2 style={{ marginTop: '10px' }}>Real founders, real wholesale scale</h2>
             <div className="pp-tgrid" style={{ marginTop: '32px' }}>
               <div className="pp-tcard">
-                <div style={{ color: 'var(--pp-orange)', fontSize: '13px', letterSpacing: '2px' }}>★★★★★</div>
                 <blockquote>
                   &ldquo;We were live in 6 days, I genuinely did not believe that was possible. The design is
                   stunning, the WhatsApp integration brings in inquiries every day, and the site has stayed
@@ -610,7 +609,6 @@ export default function FaireWholesaleMarketplacePage() {
                 </div>
               </div>
               <div className="pp-tcard">
-                <div style={{ color: 'var(--pp-orange)', fontSize: '13px', letterSpacing: '2px' }}>★★★★★</div>
                 <blockquote>
                   &ldquo;In our business, clients size you up before they ever call. FactoryJet built us a website
                   that finally looks as solid as the work we deliver, and we are getting real project inquiries
@@ -694,8 +692,9 @@ export default function FaireWholesaleMarketplacePage() {
                   </div>
                 </div>
                 <blockquote>
-                  &ldquo;We were live in just 6 days. New inquiries come in every day, and the site is still really
-                  fast.&rdquo;
+                  &ldquo;We were live in 6 days, I genuinely did not believe that was possible. The design is
+                  stunning, the WhatsApp integration brings in inquiries every day, and the site has stayed
+                  lightning fast.&rdquo;
                 </blockquote>
                 <div className="rate">
                   <a href="/case-studies/belle-maison-ecommerce-success" style={{ color: 'var(--pp-orange-dark)', fontWeight: 600, textDecoration: 'underline' }}>

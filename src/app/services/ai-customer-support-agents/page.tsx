@@ -407,17 +407,17 @@ export default function AiCustomerSupportAgentsPage() {
             <ul className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <li className="pp-card p-6 bg-white">
                 <span className="text-3xl font-extrabold text-[#F05A28] font-mono block mb-2">73%</span>
-                <h3 className="text-base font-bold text-[#14110F] mb-2">Demand Instant CX Resolution</h3>
+                <h3 className="text-base font-bold text-[#14110F] mb-2">Will Switch After Repeated Bad Service</h3>
                 <p className="text-sm text-[#46403B] mb-4">
-                  Nearly three-quarters of consumer buyers expect immediate resolution to routine order tracking, exchange, and product inquiries.
+                  Nearly three-quarters of consumers will switch to a competitor after multiple bad customer service experiences, making fast, consistent ticket resolution a retention issue, not just a convenience.
                 </p>
                 <a
-                  href="https://www.zendesk.com"
+                  href="https://www.zendesk.com/blog/customer-service-statistics/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-xs text-[#F05A28] font-mono hover:underline"
                 >
-                  Source: Zendesk CX Trends Report &rarr;
+                  Source: Zendesk Customer Service Statistics &rarr;
                 </a>
               </li>
 
@@ -438,19 +438,14 @@ export default function AiCustomerSupportAgentsPage() {
               </li>
 
               <li className="pp-card p-6 bg-white">
-                <span className="text-3xl font-extrabold text-[#F05A28] font-mono block mb-2">3.8x</span>
-                <h3 className="text-base font-bold text-[#14110F] mb-2">Higher Human Agent Retention</h3>
+                <span className="text-3xl font-extrabold text-[#F05A28] font-mono block mb-2">Less Busywork</span>
+                <h3 className="text-base font-bold text-[#14110F] mb-2">More Time for Complex Cases</h3>
                 <p className="text-sm text-[#46403B] mb-4">
-                  Removing repetitive manual copy-pasting and order lookups significantly improves human customer support agent engagement and retention.
+                  Removing repetitive manual work like copy-pasting order details and status lookups is a widely cited factor in frontline agent engagement, freeing human reps to focus on cases that need real judgment.
                 </p>
-                <a
-                  href="https://hbr.org"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs text-[#F05A28] font-mono hover:underline"
-                >
-                  Source: Harvard Business Review &rarr;
-                </a>
+                <span className="text-xs text-[#6E655F] font-mono">
+                  Directional observation, not a single verified study
+                </span>
               </li>
             </ul>
           </div>

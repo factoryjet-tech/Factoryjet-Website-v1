@@ -72,14 +72,8 @@ export default function FinalCTAUS() {
               </span>
             </div>
             <p className="font-fj-body" style={{ color: 'rgba(255,255,255,0.82)', fontSize: '0.875rem', lineHeight: 1.55, fontStyle: 'italic', borderLeft: '2px solid #F05A28', paddingLeft: 12, marginBottom: 16 }}>
-              &quot;We were live in just 6 days. I honestly did not think that was possible. New inquiries come in every day, and the site is still really fast.&quot;
+              &quot;We were live in 6 days, I genuinely did not believe that was possible. The design is stunning, the WhatsApp integration brings in inquiries every day, and the site has stayed lightning fast.&quot;
             </p>
-            <div className="flex items-center gap-2" style={{ borderTop: '1px solid rgba(255,255,255,0.12)', paddingTop: 14 }}>
-              <span aria-hidden="true" style={{ color: '#F05A28', fontSize: 13, letterSpacing: 1 }}>★★★★★</span>
-              <span className="font-fj-body" style={{ fontSize: 12, color: 'rgba(255,255,255,0.8)' }}>
-                <strong className="text-white">4.9 on Clutch</strong> · 150+ verified reviews
-              </span>
-            </div>
           </div>
         </div>
       </div>

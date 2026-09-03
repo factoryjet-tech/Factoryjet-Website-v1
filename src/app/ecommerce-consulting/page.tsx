@@ -435,7 +435,6 @@ export default function EcommerceConsultingPage() {
             <h2 className="font-fj-display text-3xl font-extrabold tracking-tight md:text-4xl">From the brands we have built for</h2>
             <div className="mt-10 grid gap-5 md:grid-cols-2">
               <figure className="m-0 flex flex-col rounded-2xl border border-[#E7DED6] bg-white p-6">
-                <div className="text-[13px] tracking-[2px] text-[#F05A28]" aria-hidden="true">★★★★★</div>
                 <blockquote className="my-4 font-fj-display text-[18px] font-semibold leading-[1.5] text-[#14110F]">
                   “We were live in 6 days, I genuinely did not believe that was possible. The design is stunning, the WhatsApp integration brings in inquiries every day, and the site has stayed lightning fast.”
                 </blockquote>
@@ -445,7 +444,6 @@ export default function EcommerceConsultingPage() {
                 </figcaption>
               </figure>
               <figure className="m-0 flex flex-col rounded-2xl border border-[#E7DED6] bg-white p-6">
-                <div className="text-[13px] tracking-[2px] text-[#F05A28]" aria-hidden="true">★★★★★</div>
                 <blockquote className="my-4 font-fj-display text-[18px] font-semibold leading-[1.5] text-[#14110F]">
                   “In our business, clients size you up before they ever call. FactoryJet built us a website that finally looks as solid as the work we deliver, and we are getting real project inquiries through it.”
                 </blockquote>

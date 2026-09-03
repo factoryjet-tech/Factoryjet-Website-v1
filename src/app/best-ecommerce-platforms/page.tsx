@@ -718,7 +718,7 @@ export default function BestEcommercePlatformsPage() {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '20px', marginTop: '32px' }}>
               {[
                 {
-                  q: '"We were live in 6 days. I genuinely did not believe that was possible. The design is stunning, the WhatsApp integration brings in inquiries every day, and the site has stayed lightning fast."',
+                  q: '"We were live in 6 days, I genuinely did not believe that was possible. The design is stunning, the WhatsApp integration brings in inquiries every day, and the site has stayed lightning fast."',
                   name: 'Ricky B.',
                   co: 'Founder, Belle Maison',
                   img: '/images/testimonials/ricky-belle-maison-160.webp',
@@ -736,7 +736,6 @@ export default function BestEcommercePlatformsPage() {
                   key={t.name}
                   style={{ border: '1px solid var(--pp-line)', borderRadius: '18px', background: '#fff', padding: '26px', display: 'flex', flexDirection: 'column', margin: 0 }}
                 >
-                  <div style={{ color: 'var(--pp-orange)', fontSize: '13px', letterSpacing: '2px' }}>★★★★★</div>
                   <blockquote style={{ fontFamily: 'var(--pp-disp)', fontWeight: 600, fontSize: '17px', lineHeight: 1.5, color: 'var(--pp-ink)', margin: '14px 0 20px', border: 'none', padding: 0 }}>
                     {t.q}
                   </blockquote>
@@ -818,12 +817,8 @@ export default function BestEcommercePlatformsPage() {
                   </div>
                 </div>
                 <blockquote style={{ fontStyle: 'italic', fontSize: '14px', lineHeight: 1.6, color: 'var(--pp-body)', border: 'none', borderLeft: '2px solid var(--pp-orange)', paddingLeft: '12px', marginBottom: '16px' }}>
-                  "We were live in just 6 days. New inquiries come in every day, and the site is still really fast."
+                  "We were live in 6 days, I genuinely did not believe that was possible. The design is stunning, the WhatsApp integration brings in inquiries every day, and the site has stayed lightning fast."
                 </blockquote>
-                <div style={{ borderTop: '1px solid var(--pp-line)', paddingTop: '14px', display: 'flex', alignItems: 'center', gap: '8px', fontSize: '12px', color: 'var(--pp-muted)' }}>
-                  <span style={{ color: 'var(--pp-orange)', letterSpacing: '1px' }}>★★★★★</span>
-                  <span><strong style={{ color: 'var(--pp-ink)' }}>4.9/5</strong> · average Google review rating</span>
-                </div>
               </div>
             </div>
 

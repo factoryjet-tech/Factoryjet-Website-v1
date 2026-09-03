@@ -251,7 +251,7 @@ export default function AiAgentRoiCalculatorPage() {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-      { '@type': 'ListItem', position: 2, name: 'Tools', item: 'https://factoryjet.com/services' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://factoryjet.com/services' },
       { '@type': 'ListItem', position: 3, name: 'AI Agent ROI Calculator', item: CANONICAL_URL },
     ],
   };
@@ -368,9 +368,14 @@ export default function AiAgentRoiCalculatorPage() {
                 <p className="text-sm text-[#46403B] leading-relaxed mb-4">
                   Autonomous agents resolve Tier-1 customer support requests without human agent intervention across retail and B2B sectors.
                 </p>
-                <div className="text-xs font-mono text-[#6E655F]">
-                  Source: Gartner Customer Service &amp; Support Research
-                </div>
+                <a
+                  href="https://www.gartner.com/en/newsroom/press-releases/2025-03-05-gartner-predicts-agentic-ai-will-autonomously-resolve-80-percent-of-common-customer-service-issues-without-human-intervention-by-20290"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs font-mono text-[#6E655F] hover:text-[#F05A28] hover:underline"
+                >
+                  Source: Gartner Newsroom &rarr;
+                </a>
               </li>
 
               <li className="p-8 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6]">
@@ -383,23 +388,28 @@ export default function AiAgentRoiCalculatorPage() {
                 <p className="text-sm text-[#46403B] leading-relaxed mb-4">
                   Contacting an inbound sales inquiry within the first hour makes a company nearly 7 times more likely to qualify that lead than waiting even one hour longer.
                 </p>
-                <div className="text-xs font-mono text-[#6E655F]">
-                  Source: Harvard Business Review, &ldquo;The Short Life of Online Sales Leads&rdquo; (2011)
-                </div>
+                <a
+                  href="https://hbr.org/2011/03/the-short-life-of-online-sales-leads"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs font-mono text-[#6E655F] hover:text-[#F05A28] hover:underline"
+                >
+                  Source: Harvard Business Review, &ldquo;The Short Life of Online Sales Leads&rdquo; (2011) &rarr;
+                </a>
               </li>
 
               <li className="p-8 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6]">
                 <div className="text-4xl sm:text-5xl font-extrabold text-[#F05A28] font-heading mb-2">
-                  72%
+                  Lower Cost
                 </div>
                 <div className="text-sm font-bold text-[#14110F] mb-3">
                   Lower Cost per Customer Interaction
                 </div>
                 <p className="text-sm text-[#46403B] leading-relaxed mb-4">
-                  AI-first customer contact routing reduces cost per resolution from $6.50 (live human rep) to under $0.45 per automated session.
+                  AI-first contact handling significantly lowers cost per resolution versus a live human rep, a consistent directional finding across industry GenAI cost-efficiency analyses. Exact savings depend on ticket complexity and deflection rate.
                 </p>
                 <div className="text-xs font-mono text-[#6E655F]">
-                  Source: McKinsey &amp; Company GenAI Economic Analysis
+                  Directional estimate &mdash; industry GenAI cost analyses, not a single named study
                 </div>
               </li>
             </ul>

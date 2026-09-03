@@ -513,13 +513,13 @@ export default function RestaurantAiVoiceAgentsPage() {
             <ul className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
               <li className="p-8 rounded-2xl bg-white border border-[#E7DED6]">
                 <div className="text-4xl sm:text-5xl font-extrabold text-[#F05A28] font-heading mb-2">
-                  58%
+                  20%
                 </div>
                 <div className="text-sm font-bold text-[#14110F] mb-3">
                   Restaurant Calls That Go Unanswered
                 </div>
                 <p className="text-sm text-[#46403B] leading-relaxed mb-4">
-                  A 2025 Harris Poll of U.S. adults found most Americans still prefer calling a restaurant directly, yet a majority of those calls go unanswered, and most callers who get no answer do not call back.
+                  A 2025 Harris Poll of U.S. adults found 63% still prefer calling a restaurant directly, but 20% say those calls are always or often ignored — and 69% say they&rsquo;re likely to give up trying if no one picks up.
                 </p>
                 <a
                   href="https://theharrispoll.com/articles/state-of-beverages-2025-trend-report-how-does-gen-z-shop-restaurants-are-losing-business-by-not-answering-the-phone-should-workers-adapt-to-company-culture/"

@@ -13,7 +13,7 @@ const CANONICAL_URL = 'https://factoryjet.com/services/manufacturing-ai-agents';
 const PAGE_TITLE = 'Manufacturing AI Agents & Supply Chain Automation | FactoryJet';
 const PAGE_DESC =
   'Custom AI agents for US manufacturers. Automate RFQ quoting, supplier PO tracking, and shop-floor handovers with direct NetSuite & SAP ERP sync. Get an audit.';
-const PAGE_MODIFIED = '2026-09-01';
+const PAGE_MODIFIED = '2026-09-03';
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,
@@ -470,7 +470,7 @@ export default function ManufacturingAiAgentsPage() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               <div>
                 <div className="text-3xl sm:text-4xl font-extrabold text-[#F05A28] font-mono mb-1">
-                  Up to 85%
+                  60%+
                 </div>
                 <div className="text-xs sm:text-sm text-[#6E655F]">
                   Quoting turnaround reduction

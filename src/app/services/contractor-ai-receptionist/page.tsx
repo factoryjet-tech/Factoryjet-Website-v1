@@ -13,7 +13,7 @@ const CANONICAL_URL = 'https://factoryjet.com/services/contractor-ai-receptionis
 const PAGE_TITLE = 'Contractor AI Receptionist & Voice Dispatch | FactoryJet';
 const PAGE_DESC =
   'Custom 24/7 AI voice receptionists for general contractors, HVAC, roofing, and plumbing companies. Direct ServiceTitan & Jobber dispatch. Get an audit.';
-const PAGE_MODIFIED = '2026-09-01';
+const PAGE_MODIFIED = '2026-09-03';
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,
@@ -462,9 +462,17 @@ export default function ContractorAiReceptionistPage() {
                 <div className="text-sm font-bold text-[#14110F] mb-3">
                   Most Callers Won't Leave One
                 </div>
-                <p className="text-sm text-[#46403B] leading-relaxed">
-                  Most homeowners who reach a contractor's voicemail do not leave a message — they hang up and call the next business on the results page instead.
+                <p className="text-sm text-[#46403B] leading-relaxed mb-4">
+                  Home services businesses miss an average of 27% of inbound calls, according to Invoca research — and most homeowners who reach a contractor's voicemail do not leave a message, they hang up and call the next business on the results page instead.
                 </p>
+                <a
+                  href="https://www.servicetitan.com/blog/ai-virtual-agents-in-hvac"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs font-mono text-[#F05A28] hover:underline"
+                >
+                  Source: Invoca research, via ServiceTitan &rarr;
+                </a>
               </div>
 
               <div className="p-8 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6]">
@@ -474,9 +482,17 @@ export default function ContractorAiReceptionistPage() {
                 <div className="text-sm font-bold text-[#14110F] mb-3">
                   Can Cover a Year of Call Coverage
                 </div>
-                <p className="text-sm text-[#46403B] leading-relaxed">
-                  A single captured emergency call or storm-damage estimate is often worth more than what a fully staffed answering solution costs for the entire year — the math favors picking up the phone.
+                <p className="text-sm text-[#46403B] leading-relaxed mb-4">
+                  A single captured emergency call or storm-damage estimate is often worth more than what a fully staffed answering solution costs for the entire year. Missed calls alone cost the average HVAC company an estimated $45,000 to $120,000 a year in lost business — the math favors picking up the phone.
                 </p>
+                <a
+                  href="https://www.servicetitan.com/blog/ai-virtual-agents-in-hvac"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs font-mono text-[#F05A28] hover:underline"
+                >
+                  Source: ServiceTitan contractor call data &rarr;
+                </a>
               </div>
 
               <div className="p-8 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6]">

@@ -374,7 +374,6 @@ export default function BigCommerceDevelopmentPage() {
             <h2 style={{ marginTop: '10px' }}>Real founders, real builds</h2>
             <div style={{ marginTop: '34px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }} className="pp-bento">
               <figure style={{ border: '1px solid var(--pp-line)', borderRadius: '18px', background: '#fff', padding: '26px', display: 'flex', flexDirection: 'column', margin: 0 }}>
-                <div style={{ color: 'var(--pp-orange)', fontSize: '13px', letterSpacing: '2px' }} aria-hidden="true">★★★★★</div>
                 <blockquote style={{ fontFamily: 'var(--pp-display)', fontWeight: 600, fontSize: '18px', lineHeight: 1.5, color: 'var(--pp-ink)', margin: '14px 0 20px', letterSpacing: '-0.01em' }}>
                   “We were live in 6 days, I genuinely did not believe that was possible. The design is stunning, the WhatsApp integration brings in inquiries every day, and the site has stayed lightning fast.”
                 </blockquote>
@@ -384,7 +383,6 @@ export default function BigCommerceDevelopmentPage() {
                 </figcaption>
               </figure>
               <figure style={{ border: '1px solid var(--pp-line)', borderRadius: '18px', background: '#fff', padding: '26px', display: 'flex', flexDirection: 'column', margin: 0 }}>
-                <div style={{ color: 'var(--pp-orange)', fontSize: '13px', letterSpacing: '2px' }} aria-hidden="true">★★★★★</div>
                 <blockquote style={{ fontFamily: 'var(--pp-display)', fontWeight: 600, fontSize: '18px', lineHeight: 1.5, color: 'var(--pp-ink)', margin: '14px 0 20px', letterSpacing: '-0.01em' }}>
                   “In our business, clients size you up before they ever call. FactoryJet built us a website that finally looks as solid as the work we deliver, and we are getting real project inquiries through it.”
                 </blockquote>
@@ -430,12 +428,8 @@ export default function BigCommerceDevelopmentPage() {
                 <span><b style={{ fontFamily: 'var(--pp-display)', fontSize: '14px', color: 'var(--pp-ink)', display: 'block' }}>Ricky B.</b><span style={{ fontSize: '12px', color: 'var(--pp-muted)' }}>Belle Maison</span></span>
               </div>
               <blockquote style={{ fontStyle: 'italic', fontSize: '14px', lineHeight: 1.55, color: 'var(--pp-body)', borderLeft: '2px solid var(--pp-orange)', paddingLeft: '12px', margin: '0 0 16px' }}>
-                “We were live in just 6 days. New inquiries come in every day, and the site is still really fast.”
+                “We were live in 6 days, I genuinely did not believe that was possible. The design is stunning, the WhatsApp integration brings in inquiries every day, and the site has stayed lightning fast.”
               </blockquote>
-              <div style={{ borderTop: '1px solid var(--pp-line)', paddingTop: '14px', display: 'flex', alignItems: 'center', gap: '8px', fontSize: '12px', color: 'var(--pp-muted)' }}>
-                <span aria-hidden="true" style={{ color: 'var(--pp-orange)', letterSpacing: '1px' }}>★★★★★</span>
-                <span><strong style={{ color: 'var(--pp-ink)' }}>4.9/5</strong> · average Google review rating</span>
-              </div>
             </div>
           </div>
           <div className="pp-wrap" style={{ marginTop: '28px' }}>

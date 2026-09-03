@@ -2,13 +2,17 @@
  * TrustBarUS — slim social-proof strip that sits directly under the /us hero.
  *
  * Replaces the generic LogoBar marquee on the homepage with a static, legible
- * row of REAL client builds + the Clutch rating. Static (not a fast marquee) so
- * the proof is actually readable; names are real and verifiable. Navy carries
- * the trust weight, orange the rating stars — matching the new hero treatment.
+ * row of REAL client builds. Static (not a fast marquee) so the proof is
+ * actually readable; names are real and verifiable.
  *
  * Layout note: client names are spaced wordmarks (no separator dots) so the row
  * wraps cleanly at any width without orphaning a leading "·". Label sits above
- * the names; the Clutch pill stays right-aligned (stacks on mobile).
+ * the names.
+ *
+ * The "4.9 on Clutch · 150+ verified reviews" rating pill that used to sit
+ * right-aligned here was removed: no source for that number exists anywhere
+ * in the repo. Do not re-add a star rating or review count without a real,
+ * cited source.
  *
  * Pure server component.
  */
@@ -46,22 +50,6 @@ export default function TrustBarUS({ className = '' }: TrustBarUSProps) {
                 </span>
               ))}
             </div>
-          </div>
-
-          {/* Right: Clutch rating pill (navy) */}
-          <div
-            className="inline-flex shrink-0 items-center gap-2.5 self-start md:self-auto"
-            style={{ background: '#103A5E', borderRadius: 12, padding: '9px 14px' }}
-          >
-            <span aria-hidden="true" style={{ color: '#F05A28', fontSize: 13, letterSpacing: 1 }}>★★★★★</span>
-            <span>
-              <span className="font-fj-display" style={{ display: 'block', fontWeight: 700, fontSize: 13, color: '#fff', lineHeight: 1.1 }}>
-                4.9 on Clutch
-              </span>
-              <span style={{ display: 'block', fontSize: '10.5px', color: 'rgba(255,255,255,0.72)', marginTop: 1 }}>
-                150+ verified reviews
-              </span>
-            </span>
           </div>
         </div>
       </div>

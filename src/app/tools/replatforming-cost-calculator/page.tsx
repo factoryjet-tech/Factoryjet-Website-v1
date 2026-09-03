@@ -223,21 +223,12 @@ const WEBAPP_SCHEMA = {
   },
 };
 
-const ORG_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
-  '@id': 'https://factoryjet.com/#organization',
-  name: 'FactoryJet',
-  url: 'https://factoryjet.com',
-  sameAs: ['https://www.linkedin.com/company/factoryjet'],
-};
-
 const BREADCRUMB_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-    { '@type': 'ListItem', position: 2, name: 'Tools', item: 'https://factoryjet.com/services' },
+    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://factoryjet.com/services' },
     { '@type': 'ListItem', position: 3, name: 'Replatforming Cost Calculator', item: 'https://factoryjet.com/tools/replatforming-cost-calculator' },
   ],
 };
@@ -247,7 +238,6 @@ export default function ReplatformingCostCalculatorPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBAPP_SCHEMA) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ORG_SCHEMA) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
 
       <SiteHeader locale="us" />
@@ -340,55 +330,55 @@ export default function ReplatformingCostCalculatorPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="pp-card p-6 bg-white">
+            <ul className="grid grid-cols-1 md:grid-cols-3 gap-6 list-none">
+              <li className="pp-card p-6 bg-white">
                 <span className="text-3xl font-extrabold text-[#F05A28] font-mono block mb-2">35%</span>
                 <h3 className="text-base font-bold text-[#14110F] mb-2">Checkout Conversion Lift</h3>
                 <p className="text-sm text-[#46403B] mb-4">
-                  Brands migrating from legacy monolithic checkouts to optimized 1-click accelerated checkout experiences report conversion improvements of up to 35 percent.
+                  Checkout usability research from Baymard Institute finds the average large ecommerce site can lift conversion by up to 35 percent by fixing common checkout friction, the kind of legacy UX debt a full replatform clears in one pass instead of years of incremental patches.
                 </p>
                 <a
-                  href="https://baymard.com"
+                  href="https://baymard.com/research/checkout-usability"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-xs text-[#F05A28] font-mono hover:underline"
                 >
-                  Source: Baymard Institute &rarr;
+                  Source: Baymard Institute Checkout Usability Research &rarr;
                 </a>
-              </div>
+              </li>
 
-              <div className="pp-card p-6 bg-white">
-                <span className="text-3xl font-extrabold text-[#F05A28] font-mono block mb-2">58%</span>
-                <h3 className="text-base font-bold text-[#14110F] mb-2">Lower Maintenance TCO</h3>
+              <li className="pp-card p-6 bg-white">
+                <span className="text-3xl font-extrabold text-[#F05A28] font-mono block mb-2">33%</span>
+                <h3 className="text-base font-bold text-[#14110F] mb-2">Lower Total Cost of Ownership</h3>
                 <p className="text-sm text-[#46403B] mb-4">
-                  Total cost of ownership drops by an average of 58 percent over 3 years when retiring self-hosted server clusters in favor of managed enterprise commerce platforms.
+                  Total cost of ownership for Shopify runs 33 percent lower on average than Adobe Commerce, Salesforce Commerce Cloud, and BigCommerce, factoring in platform fees, implementation, and ongoing operating costs.
                 </p>
                 <a
-                  href="https://www.forrester.com"
+                  href="https://www.shopify.com/compare/tco"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-xs text-[#F05A28] font-mono hover:underline"
                 >
-                  Source: Forrester Total Economic Impact &rarr;
+                  Source: Shopify Total Cost of Ownership Research &rarr;
                 </a>
-              </div>
+              </li>
 
-              <div className="pp-card p-6 bg-white">
+              <li className="pp-card p-6 bg-white">
                 <span className="text-3xl font-extrabold text-[#F05A28] font-mono block mb-2">99.99%</span>
                 <h3 className="text-base font-bold text-[#14110F] mb-2">Peak Flash Sale Uptime</h3>
                 <p className="text-sm text-[#46403B] mb-4">
-                  Modern SaaS cloud architecture handles unlimited concurrent traffic spikes during Black Friday and Cyber Monday without server crashes or capacity throttling.
+                  Shopify Plus carries a contractual 99.99 percent uptime SLA with service credits on breach, keeping stores online through Black Friday and Cyber Monday traffic spikes without capacity throttling.
                 </p>
                 <a
-                  href="https://www.gartner.com"
+                  href="https://www.shopify.com/enterprise/blog/shopify-gartner-magic-quadrant-2025"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-xs text-[#F05A28] font-mono hover:underline"
                 >
-                  Source: Gartner Digital Commerce Magic Quadrant &rarr;
+                  Source: Shopify Plus Service Level Agreement &rarr;
                 </a>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
         </section>
 

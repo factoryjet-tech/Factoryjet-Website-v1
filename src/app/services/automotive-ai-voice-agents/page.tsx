@@ -12,7 +12,7 @@ const CANONICAL_URL = 'https://factoryjet.com/services/automotive-ai-voice-agent
 const PAGE_TITLE = 'Automotive AI Voice Agents & Dealership Service BDC Automation | FactoryJet';
 const PAGE_DESC =
   'Custom automotive AI voice agents for US car dealerships, collision centers & parts counters. 24/7 service BDC booking with direct CDK, Reynolds & Tekion sync.';
-const PAGE_MODIFIED = '2026-09-01';
+const PAGE_MODIFIED = '2026-09-03';
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,
@@ -475,10 +475,10 @@ export default function AutomotiveAiVoiceAgentsPage() {
                   ~20%
                 </div>
                 <div className="text-sm font-bold text-[#14110F] mb-3">
-                  Service Inbound Calls Unanswered or Abandoned
+                  Dealership Calls Unanswered or Abandoned
                 </div>
                 <p className="text-sm text-[#46403B] leading-relaxed mb-4">
-                  Marchex call analytics find that nearly 20 percent of inbound calls to dealership service departments are either unanswered or abandoned by the customer, concentrated in the peak morning drop-off window.
+                  Marchex call analytics find that nearly 20 percent of inbound calls to dealerships overall — sales and service alike — are either unanswered or abandoned by the customer, with losses concentrated in peak call-volume windows like the morning service drop-off rush.
                 </p>
                 <a
                   href="https://www.marchex.com/comprehensive-analysis-the-cost-of-poor-call-handling-in-auto-dealerships/"
@@ -492,13 +492,13 @@ export default function AutomotiveAiVoiceAgentsPage() {
 
               <div className="p-8 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6]">
                 <div className="text-4xl sm:text-5xl font-extrabold text-[#F05A28] font-heading mb-2">
-                  $410
+                  +$230
                 </div>
                 <div className="text-sm font-bold text-[#14110F] mb-3">
-                  Average Customer Pay Repair Order (RO) Value
+                  More Per RO When Dealers Send Photo/Video Updates
                 </div>
                 <p className="text-sm text-[#46403B] leading-relaxed mb-4">
-                  Every unanswered customer call requesting brake service, transmission maintenance, or check engine diagnostics represents hundreds of dollars in lost customer-pay gross profit.
+                  Cox Automotive's ownership research found dealers who send customers photos or videos of recommended repair work capture $640 per repair order on average, versus just $410 when they don't — a $230 gap driven by clear communication about what the vehicle actually needs.
                 </p>
                 <a
                   href="https://www.coxautoinc.com/retail/resources/ownership-study/"
@@ -744,7 +744,7 @@ export default function AutomotiveAiVoiceAgentsPage() {
                     24/7 Service Appointment Booking &amp; Live Recall Cross-Referencing
                   </h3>
                   <p className="text-[#46403B] leading-relaxed mb-4">
-                    Franchised dealerships miss 25 to 40 percent of inbound service calls during morning drop-off rushes and after-hours periods. Frustrated vehicle owners hang up and book routine oil changes, brake repairs, and tire replacements at independent quick-lube chains.
+                    Franchised dealerships miss a meaningful share of inbound service calls during morning drop-off rushes and after-hours periods — the same peak-volume windows where Marchex call analytics put unanswered or abandoned dealership calls at nearly 20 percent industry-wide. Frustrated vehicle owners hang up and book routine oil changes, brake repairs, and tire replacements at independent quick-lube chains.
                   </p>
                   <p className="text-[#46403B] leading-relaxed mb-6">
                     Our franchised dealership voice agent answers every call instantly, identifies returning customers by caller ID, pulls vehicle records from CDK Global or Reynolds &amp; Reynolds, checks for open safety recalls, and inserts confirmed appointments directly into Xtime or your DMS service schedule.
