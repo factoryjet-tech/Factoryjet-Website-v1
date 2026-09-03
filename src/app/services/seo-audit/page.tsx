@@ -12,6 +12,7 @@ import ComparisonTable from '@/components/v2/ComparisonTable';
 
 import HeroInlineForm from '@/components/HeroInlineForm';
 import MidPageCTA from '@/components/v2/MidPageCTA';
+import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
 import AuditFx from './AuditFx';
 import './seo-audit.css';
 
@@ -230,15 +231,24 @@ const faqSchema = {
   mainEntity: FAQ_FLAT.map((item) => ({ '@type': 'Question', name: item.q, acceptedAnswer: { '@type': 'Answer', text: item.a } })),
 };
 
+/** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
+ *  <Breadcrumbs> component and the BreadcrumbList JSON-LD below, so the two
+ *  can never drift into showing a different path than the schema claims. */
+const BREADCRUMB_ITEMS: BreadcrumbItem[] = [
+  { name: 'Home', url: 'https://factoryjet.com' },
+  { name: 'Services', url: 'https://factoryjet.com/services' },
+  { name: 'SEO Audit', url: 'https://factoryjet.com/services/seo-audit' },
+];
+
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-    { '@type': 'ListItem', position: 2, name: 'United States', item: 'https://factoryjet.com' },
-    { '@type': 'ListItem', position: 3, name: 'Services', item: 'https://factoryjet.com/services' },
-    { '@type': 'ListItem', position: 4, name: 'SEO Audit', item: 'https://factoryjet.com/services/seo-audit' },
-  ],
+  itemListElement: BREADCRUMB_ITEMS.map((item, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: item.name,
+    item: item.url,
+  })),
 };
 
 function Check({ fill = '#0C7150' }: { fill?: string }) {
@@ -657,6 +667,8 @@ export default function SeoAuditServicePage() {
       <SiteHeader />
 
       <main className="aseo">
+        <Breadcrumbs items={BREADCRUMB_ITEMS} />
+
         {/* 1. HERO */}
         <section className="hero">
           <div className="aurora" aria-hidden="true"><i className="a1" /><i className="a2" /><i className="a3" /></div>

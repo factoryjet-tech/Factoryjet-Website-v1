@@ -5,6 +5,7 @@ import { woocommerceDevelopmentAlternates } from '@/data/hreflangMap';
 
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
+import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
 import Hero from '@/components/v2/Hero';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
@@ -109,19 +110,24 @@ const serviceSchema = {
   serviceType: 'WooCommerce Development',
 };
 
+/** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
+ *  <Breadcrumbs> component and the BreadcrumbList JSON-LD below, so the two
+ *  can never drift into showing a different path than the schema claims. */
+const BREADCRUMB_ITEMS: BreadcrumbItem[] = [
+  { name: 'Home', url: 'https://factoryjet.com' },
+  { name: 'Services', url: 'https://factoryjet.com/services' },
+  { name: 'WooCommerce Development', url: 'https://factoryjet.com/services/woocommerce-development' },
+];
+
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://factoryjet.com/services/ecommerce-development' },
-    {
-      '@type': 'ListItem',
-      position: 3,
-      name: 'WooCommerce Development',
-      item: 'https://factoryjet.com/services/woocommerce-development',
-    },
-  ],
+  itemListElement: BREADCRUMB_ITEMS.map((item, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: item.name,
+    item: item.url,
+  })),
 };
 
 /* ----------------------------------------------------------------------------─
@@ -555,6 +561,8 @@ export default function WoocommerceDevelopmentPage() {
       />
 
       <main>
+        <Breadcrumbs items={BREADCRUMB_ITEMS} />
+
         {/* -- 1. HERO -------------------------------------------------------- */}
         <Hero
         formSlot={<HeroInlineForm region="us" source="us_services_woocommerce_development_hero" />}

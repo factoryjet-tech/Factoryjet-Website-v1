@@ -4,6 +4,7 @@ import { smallBusinessWebDesignAlternates } from '@/data/hreflangMap';
 
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
+import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
 import RelatedGuides from '@/components/v2/RelatedGuides';
 import Hero from '@/components/v2/Hero';
 import HeroInlineForm from '@/components/HeroInlineForm';
@@ -111,19 +112,24 @@ const serviceSchema = {
   serviceType: 'Small Business Website Design',
 };
 
+/** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
+ *  <Breadcrumbs> component and the BreadcrumbList JSON-LD below, so the two
+ *  can never drift into showing a different path than the schema claims. */
+const BREADCRUMB_ITEMS: BreadcrumbItem[] = [
+  { name: 'Home', url: 'https://factoryjet.com' },
+  { name: 'Services', url: 'https://factoryjet.com/services' },
+  { name: 'Small Business Website Design', url: 'https://factoryjet.com/services/small-business-website-design' },
+];
+
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://factoryjet.com/services/web-design' },
-    {
-      '@type': 'ListItem',
-      position: 3,
-      name: 'Small Business Website Design',
-      item: 'https://factoryjet.com/services/small-business-website-design',
-    },
-  ],
+  itemListElement: BREADCRUMB_ITEMS.map((item, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: item.name,
+    item: item.url,
+  })),
 };
 
 /* ----------------------------------------------------------------------------─
@@ -542,6 +548,8 @@ export default function SmallBusinessWebDesignPage() {
       />
 
       <main>
+        <Breadcrumbs items={BREADCRUMB_ITEMS} />
+
         {/* -- 1. HERO -------------------------------------------------------- */}
         <Hero
         formSlot={<HeroInlineForm region="us" source="us_services_small_business_website_design_hero" />}
