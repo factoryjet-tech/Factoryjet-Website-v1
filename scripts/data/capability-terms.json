@@ -32,7 +32,7 @@
     "docker", "kubernetes", "terraform", "github actions", "playwright", "cypress", "jest",
 
     "clio", "mycase", "filevine", "netdocuments", "imanage", "practicepanther", "smokeball",
-    "relativity", "litify",
+    "relativity", "litify", "docusign", "pacer", "cm/ecf", "tyler technologies", "intapp",
     "cdk global", "cdk drive", "reynolds & reynolds", "reynolds and reynolds", "era-ignite",
     "tekion", "tekion arc", "dealersocket", "mitchell 1", "xtime", "ccc one", "dealertrack",
     "pbs systems", "auto/mate", "geotab", "samsara",
@@ -48,8 +48,15 @@
     "toast", "toast pos", "clover", "brink", "aloha", "ncr voyix", "micros simphony",
     "spoton", "revel", "lightspeed", "opentable", "resy", "sevenrooms",
     "apollo.io", "clearbit", "clay", "zoominfo", "pipedrive",
+    "outreach", "outreach.io", "salesloft", "gong", "chorus", "groove", "orum",
+    "seamless.ai", "6sense", "demandbase", "linkedin sales navigator",
+    "calendly", "chili piper", "google calendar", "microsoft outlook",
     "kustomer", "front",
-    "vonage", "genesys", "five9", "aircall", "ringcentral", "dialpad"
+    "vonage", "genesys", "five9", "aircall", "ringcentral", "dialpad",
+
+    "oracle", "microsoft dynamics", "siemens", "siemens opcenter", "fanuc",
+    "rockwell automation", "allen-bradley", "ignition scada", "kepware", "wonderware",
+    "plex", "iqms", "delmiaworks", "machinemetrics", "tulip"
   ],
   "capabilities": [
     "erp integration", "erp sync", "punchout catalog", "punchout", "cxml", "oci", "edi",
@@ -73,7 +80,7 @@
     "static site generation", "server-side rendering", "edge caching", "cdn",
     "retrieval augmented generation", "rag", "vector search", "embeddings", "fine-tuning",
     "function calling", "tool use", "agent orchestration", "human in the loop",
-    "prompt engineering", "guardrails", "evaluation harness",
+    "prompt engineering", "guardrails", "evaluation harness", "spf", "dkim", "dmarc",
     "data migration", "replatforming", "url mapping", "301 redirect", "redirect map",
     "catalogue migration", "catalog migration", "historical order migration",
     "penetration testing", "pci dss", "soc 2", "gdpr", "wcag", "accessibility audit",
@@ -86,6 +93,16 @@
     "hipaa", "business associate agreement", "21 cfr part 11", "gxp", "alcoa+",
     "hazcom", "reach", "tsca", "prop 65", "sae j1939", "vin decode",
     "warm transfer", "call routing", "ivr", "electronic batch record", "safety data sheet",
-    "field service management", "dispatch board", "work order", "fault code"
+    "field service management", "dispatch board", "work order", "fault code",
+    "tcpa", "bant", "meddpicc", "account-based marketing", "speed to lead",
+
+    "bill of materials", "bom", "manufacturing execution system", "mes",
+    "supervisory control and data acquisition", "scada", "programmable logic controller", "plc",
+    "material requirements planning", "mrp", "overall equipment effectiveness", "oee",
+    "predictive maintenance", "preventive maintenance", "computerized maintenance management system",
+    "cmms", "iso 9001", "six sigma",
+    "shop floor", "production line", "quality control", "quality management system", "qms",
+    "procurement", "supply chain visibility", "barcode scanning", "rfid tracking",
+    "digital twin", "opc-ua", "opc ua", "modbus"
   ]
 }

@@ -412,6 +412,14 @@ export default function EcommerceSpeedCalculatorPage() {
                 FactoryJet engineers sub-second digital storefronts on Shopify Plus, WooCommerce, and Headless Next.js, eliminating
                 third-party script bloat and deploying edge-rendered assets that consistently achieve 95+ Google Lighthouse scores.
               </p>
+              <p>
+                Speed is one input to conversion, not the whole picture. Once your Core Web Vitals are fixed, the next question is what
+                happens on the product page, in the cart, and at checkout. Our{' '}
+                <a href="/services/ecommerce-cro-agency" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
+                  ecommerce CRO agency
+                </a>{' '}
+                services cover that full funnel.
+              </p>
             </div>
           </div>
         </section>

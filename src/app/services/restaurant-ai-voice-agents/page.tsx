@@ -7,13 +7,23 @@ import HeroInlineForm from '@/components/HeroInlineForm';
 import FAQ, { type FAQItem, type FAQCategory } from '@/components/v2/FAQ';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
+import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
 const CANONICAL_URL = 'https://factoryjet.com/services/restaurant-ai-voice-agents';
 const PAGE_TITLE = 'Restaurant AI Voice Agents & Phone Ordering | FactoryJet';
 const PAGE_DESC =
   'Custom 24/7 AI voice phone ordering for US restaurants, pizzerias & franchises. Direct Toast, Square & Clover POS order injection. Zero missed calls. Get audit.';
-const PAGE_MODIFIED = '2026-09-01';
+const PAGE_MODIFIED = '2026-09-03';
+
+/** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
+ *  <Breadcrumbs> component and the BreadcrumbList JSON-LD below, so the two
+ *  can never drift into showing a different path than the schema claims. */
+const BREADCRUMB_ITEMS: BreadcrumbItem[] = [
+  { name: 'Home', url: 'https://factoryjet.com' },
+  { name: 'Services', url: 'https://factoryjet.com/services' },
+  { name: 'Restaurant AI Voice Agents', url: CANONICAL_URL },
+];
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,
@@ -32,6 +42,10 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: CANONICAL_URL,
+    languages: {
+      'en-US': CANONICAL_URL,
+      'x-default': CANONICAL_URL,
+    },
   },
   openGraph: {
     title: PAGE_TITLE,
@@ -69,127 +83,127 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'telephony',
     question: 'How does the restaurant AI voice agent handle incoming customer calls?',
     answer:
-      'The AI voice agent answers on the first ring with sub-500ms natural conversational latency. It greets callers by name if their number exists in your CRM or loyalty database, takes pickup or delivery orders, handles menu modifier questions, takes reservations, and routes complex inquiries to staff.',
+      "The AI voice agent answers on the first ring, in under 500 milliseconds. If the caller's number is already in your CRM or loyalty list, it greets them by name. It takes pickup and delivery orders, answers menu questions, books reservations, and sends anything tricky straight to your staff.",
   },
   {
     category: 'telephony',
     question: 'How many simultaneous phone calls can the AI agent handle during peak dinner rush?',
     answer:
-      'The agent scales elastically to handle unlimited concurrent phone calls with zero busy signals and zero hold times. Whether your restaurant receives 2 calls or 200 simultaneous calls during Friday dinner peak, every customer is served instantly.',
+      'The agent can take as many calls as come in, all at once. There is no busy signal and no hold time. Whether your restaurant gets 2 calls or 200 calls during Friday dinner rush, every caller gets answered right away.',
   },
   {
     category: 'telephony',
     question: 'How does the voice agent sound to calling customers?',
     answer:
-      'We utilize ultra-realistic neural speech synthesis engineered specifically for hospitality pacing. The voice includes natural turn-taking, intelligent interruption handling, polite confirmations, and customizable regional American accents.',
+      'The voice sounds like a real host, not a robot. It knows when to pause and when to talk. It handles interruptions without getting confused. It stays polite. It can also switch between American accents.',
   },
   {
     category: 'telephony',
     question: 'What happens if a customer speaks with heavy background noise or a strong accent?',
     answer:
-      'Our acoustic models employ advanced noise filtering tuned for noisy environments (such as in-car calling or outdoor chatter). If confidence on an item falls below threshold, the agent politely asks for clarification before confirming the ticket.',
+      'The voice model filters out background noise, so a call from a car or a loud patio still comes through clearly. If it is not sure it heard an item right, it asks the caller to confirm before it sends the ticket to the kitchen.',
   },
   {
     category: 'pos',
     question: 'Which POS systems do your restaurant AI voice agents integrate with?',
     answer:
-      'We engineer native bi-directional integrations with Toast POS, Square for Restaurants, Clover, Brink POS, Aloha (NCR Voyix), Micros Simphony, SpotOn, Revel Systems, and Lightspeed.',
+      'We build direct, two-way connections to Toast POS, Square for Restaurants, Clover, Brink POS, Aloha (NCR Voyix), Micros Simphony, SpotOn, Revel Systems, and Lightspeed. Orders flow in. Menu and price changes flow back out, automatically.',
   },
   {
     category: 'pos',
     question: 'How are completed phone orders sent to our kitchen display system (KDS)?',
     answer:
-      'Once the customer confirms the order and completes payment or selects pay-at-pickup, the agent fires an authenticated API call directly to your POS. The ticket prints immediately at the expeditor station and appears on kitchen display screens (KDS) tagged as Phone AI Order.',
+      "Once the customer confirms the order, and pays or picks pay-at-pickup, the agent sends it straight to your POS. The ticket prints right away at the expeditor station. It also shows up on your kitchen display screens (KDS), tagged 'Phone AI Order' so your team knows where it came from.",
   },
   {
     category: 'pos',
     question: 'Does the AI agent check real-time 86-ed items and sold-out specials?',
     answer:
-      'Yes. The agent maintains live webhook synchronization with your POS inventory. If your kitchen 86-es an item (such as wild salmon or gluten-free crust), the agent immediately stops offering it on the phone and suggests designated alternative menu items.',
+      'Yes. The agent stays synced to your POS inventory through a live webhook connection. The moment your kitchen 86-es an item, such as wild salmon or a gluten-free crust, the agent stops offering it on the phone. It suggests a swap you have already approved instead.',
   },
   {
     category: 'pos',
     question: 'How does payment processing work for phone takeout and delivery orders?',
     answer:
-      'The agent can text a secure, PCI-compliant payment link via SMS while the customer is on the phone, process vaulted cards for loyalty members, or stage the order for pay-at-counter pickup based on your store operational preferences.',
+      'While the customer is still on the phone, the agent can text them a secure, PCI DSS-compliant payment link. For loyalty members, it can charge a card already on file. Or it can just stage the order for pay-at-counter pickup, based on how your store likes to run.',
   },
   {
     category: 'modifiers',
     question: 'Can the AI agent handle complex food allergies and custom preparation requests?',
     answer:
-      'Yes. The agent is trained on your complete allergen matrix (dairy, nuts, gluten, shellfish, soy). It warns guests if requested items contain allergens and accurately adds prep notes (such as extra crispy, dressing on side, or no onions) to the POS ticket.',
+      'Yes. The agent knows your full allergen list: dairy, nuts, gluten, shellfish, soy, and anything else you flag. It warns a guest if their order contains an allergen. It also adds prep notes, like extra crispy, dressing on the side, or no onions, straight to the POS ticket.',
   },
   {
     category: 'modifiers',
     question: 'How does the agent handle upselling and combo upgrades?',
     answer:
-      'The agent naturally suggests high-margin pairings based on rule-based hospitality logic (such as suggesting garlic knots with pasta, appetizers, beverages, or dessert specials) without feeling pushy, increasing average ticket value by 14 to 22 percent.',
+      'The agent suggests pairings that make sense, like garlic knots with a pasta order, or a dessert special near the end of the call. The suggestions follow simple house rules, not guesswork, so they never feel pushy. Restaurants using this see ticket size grow by 14 to 22 percent.',
   },
   {
     category: 'modifiers',
     question: 'Can the AI agent book table reservations and private banquet rooms?',
     answer:
-      'Yes. The agent connects to OpenTable, Resy, SevenRooms, or your custom booking calendar, verifying available table inventory for requested party sizes and times, and texting SMS confirmation reminders.',
+      'Yes. The agent connects to OpenTable, Resy, SevenRooms, or your own booking calendar. It checks real table availability for the party size and time the caller wants, books the table, and texts a confirmation reminder.',
   },
   {
     category: 'modifiers',
     question: 'How does the voice agent handle large corporate catering inquiries?',
     answer:
-      'For catering orders above designated thresholds (such as 15+ people or $300+), the agent captures event date, headcount, dietary restrictions, and delivery address, and instantly routes a structured lead to your catering sales director via SMS and email.',
+      "For bigger catering orders, say 15 or more guests or $300 or more, the agent collects the event date, headcount, dietary needs, and delivery address. It sends that lead straight to your catering director by text and email, so a person can close the sale. If your team already runs Zapier or n8n for other workflows, we can wire this into that too.",
   },
   {
     category: 'pos',
     question: 'How does the voice agent handle third-party delivery services like DoorDash or Uber Eats?',
     answer:
-      'The AI agent actively nudges phone callers to order directly through your in-house phone or website delivery channel rather than 30% commission third-party apps, saving your restaurant thousands in marketplace commissions while building your direct first-party customer marketing list.',
+      'The AI agent gently steers phone callers toward ordering direct, through your own phone line or website, instead of a delivery app that charges up to 30 percent commission. That saves your restaurant real money. It also builds your own customer list instead of the app building theirs.',
   },
   {
     category: 'modifiers',
     question: 'Can the AI voice agent recognize custom pizza half-and-half topping splits and crust substitutions?',
     answer:
-      'Yes. Our conversational state engine specifically handles split toppings (such as pepperoni on the left half, mushrooms and extra mozzarella on the right), gluten-free or cauliflower crust swaps, and well-done bake instructions, properly mapping each modifier code to your kitchen thermal ticket printer.',
+      'Yes. The agent is built to handle split toppings, like pepperoni on the left half and mushrooms with extra mozzarella on the right. It also handles gluten-free or cauliflower crust swaps, and bake instructions like well-done. Every modifier maps to the right code on your kitchen printer.',
   },
   {
     category: 'pricing',
     question: 'What is the monthly return on investment (ROI) for an independent restaurant or pizzeria?',
     answer:
-      'High-volume restaurants typically capture an additional $3,500 to $9,000 in monthly gross margin by eliminating missed dinner rush calls, capturing late-night phone orders, and achieving a 16% higher average ticket value through intelligent automated upselling.',
+      'High-volume restaurants typically add $3,500 to $9,000 in monthly gross margin. That comes from three places: no more missed calls during dinner rush, more late-night phone orders captured, and a 16 percent higher average ticket from automatic upselling.',
   },
   {
     category: 'pricing',
     question: 'How is the restaurant AI voice agent priced compared to third-party call centers?',
     answer:
-      'Traditional human call centers charge $1.50 to $2.50 per minute with unpredictable quality. FactoryJet builds custom AI voice infrastructure with a fixed implementation fee. Direct telephony and LLM compute runs at actual wholesale cost (typically $0.05 to $0.08 per minute).',
+      'A traditional human call center charges $1.50 to $2.50 a minute, and the quality varies call to call. FactoryJet builds you a custom AI voice system for a fixed setup fee instead. After that, phone and AI compute run close to wholesale rate, usually $0.05 to $0.08 a minute.',
   },
   {
     category: 'pricing',
     question: 'Does our restaurant franchise own the AI voice agent software?',
     answer:
-      'Yes. You receive 100 percent source code and connector ownership. You own your prompts, POS webhooks, and telephony accounts. You never pay ongoing per-store software license royalties to us.',
+      'Yes. You get 100 percent ownership of the source code and every connector we build. Your prompts, your POS webhooks, your telephony accounts: all yours. You never pay us an ongoing per-store license fee.',
   },
   {
     category: 'pricing',
     question: 'How long does it take to train and launch our restaurant AI agent?',
     answer:
-      'A single-location restaurant with Toast or Square POS launches in 10 to 14 days. Multi-unit franchise groups with 10 to 50 locations deploy within 3 to 4 weeks, including staff training and phone carrier porting.',
+      'A single-location restaurant on Toast or Square POS can launch in 10 to 14 days. A franchise group with 10 to 50 locations usually takes 3 to 4 weeks, including staff training and moving your phone number over.',
   },
   {
     category: 'pos',
     question: 'How fast do phone orders appear on kitchen display screens (KDS) after the call ends?',
     answer:
-      'Orders are injected via real-time webhooks in under 1.5 seconds from caller confirmation. Kitchen expeditor screens and bar printers receive the finalized ticket instantly, with accurate pickup or delivery time stamps.',
+      'The order hits your POS through a live webhook in under 1.5 seconds after the caller confirms it. Your kitchen screen and bar printer get the finished ticket right away, with the correct pickup or delivery time stamped on it.',
   },
   {
     category: 'telephony',
     question: 'Can the restaurant AI voice agent handle Spanish-speaking and bilingual customers?',
     answer:
-      'Yes. The agent automatically detects whether the caller speaks English or Spanish within three seconds and switches dynamically, executing the entire menu ordering, dietary confirmation, and address collection process in fluent Spanish.',
+      'Yes. Within the first three seconds, the agent figures out whether the caller speaks English or Spanish and switches automatically. It can run the whole order, including dietary questions and the delivery address, in fluent Spanish.',
   },
   {
     category: 'pricing',
     question: 'How does our manager monitor call recordings and transcripts?',
     answer:
-      'We provide a secure web dashboard where store managers and operators can review call audio recordings, full text transcripts, order accuracy logs, and customer sentiment metrics in real time.',
+      'You get a secure web dashboard. Store managers and owners can pull up call recordings, full text transcripts, order accuracy logs, and customer sentiment scores, all in real time. Access runs on role-based access control (RBAC), so a shift lead sees less than a franchise owner does, and everyone signs in through single sign-on (SSO).',
   },
 ];
 
@@ -305,26 +319,12 @@ export default function RestaurantAiVoiceAgentsPage() {
   const schemaBreadcrumbs = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Home',
-        item: 'https://factoryjet.com',
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'Services',
-        item: 'https://factoryjet.com/services',
-      },
-      {
-        '@type': 'ListItem',
-        position: 3,
-        name: 'Restaurant AI Voice Agents',
-        item: CANONICAL_URL,
-      },
-    ],
+    itemListElement: BREADCRUMB_ITEMS.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.name,
+      item: item.url,
+    })),
   };
 
   const schemaFAQ = {
@@ -366,6 +366,8 @@ export default function RestaurantAiVoiceAgentsPage() {
       <SiteHeader />
 
       <main className="min-h-screen bg-white text-[#14110F]">
+        <Breadcrumbs items={BREADCRUMB_ITEMS} />
+
         {/* HERO SECTION */}
         <section className="relative pt-32 pb-20 border-b border-[#E7DED6] bg-[#FFFFFF] overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(#E7DED6_1px,transparent_1px)] [background-size:20px_20px] opacity-60 pointer-events-none" />
@@ -387,7 +389,7 @@ export default function RestaurantAiVoiceAgentsPage() {
                 </h1>
                 
                 <p className="text-lg sm:text-xl text-[#46403B] mb-8 leading-relaxed">
-                  We engineer natural, sub-500ms AI voice receptionists for American restaurants, pizzerias, and multi-unit franchises. Answer 100 percent of phone calls, capture every peak-dinner takeout order, and inject tickets directly into Toast, Square, Clover, and Brink POS with zero human hold times.
+                  We build AI phone agents for American restaurants, pizzerias, and multi-location franchises. Calls get answered in under 500 milliseconds, every time. The agent takes every takeout order during the dinner rush and sends the ticket straight into Toast, Square, Clover, or Brink. No hold music. No missed calls.
                 </p>
 
                 <div className="mb-8">
@@ -420,9 +422,10 @@ export default function RestaurantAiVoiceAgentsPage() {
                     <Image
                       src="/images/restaurants/restaurant-ai-phone-ordering.webp"
                       alt="American restaurant hostess managing dining room with modern Toast POS ordering system"
-                      fill
+                      width={1376}
+                      height={768}
                       priority
-                      className="object-cover"
+                      className="absolute inset-0 h-full w-full object-cover"
                       sizes="(max-width: 1024px) 100vw, 40vw"
                     />
                   </div>
@@ -452,7 +455,7 @@ export default function RestaurantAiVoiceAgentsPage() {
                 What is a Restaurant AI Voice Agent?
               </h2>
               <p className="text-base sm:text-lg text-[#46403B] leading-relaxed">
-                A restaurant AI voice agent is an autonomous phone receptionist that answers customer calls 24/7 without hold times. It handles takeout and delivery orders, processes complex modifiers, checks real-time 86-ed inventory, books table reservations, and injects tickets directly into POS systems like Toast, Square, and Clover with zero manual staff intervention.
+                A restaurant AI voice agent is software that answers your phone, day and night, with no hold time. It takes takeout and delivery orders, handles special requests, and checks which menu items are sold out in real time. It books table reservations too. Then it sends the order straight into your POS, such as Toast, Square, or Clover. No staff member has to touch it.
               </p>
             </div>
           </div>
@@ -519,7 +522,11 @@ export default function RestaurantAiVoiceAgentsPage() {
                   Restaurant Calls That Go Unanswered
                 </div>
                 <p className="text-sm text-[#46403B] leading-relaxed mb-4">
-                  A 2025 Harris Poll of U.S. adults found 63% still prefer calling a restaurant directly, but 20% say those calls are always or often ignored — and 69% say they&rsquo;re likely to give up trying if no one picks up.
+                  A 2025 Harris Poll of U.S. adults found that 63% still prefer calling a restaurant directly. But 20% say those calls are always or often ignored, and 69% say they will give up trying if no one picks up. Our{' '}
+                  <Link href="/tools/ai-agent-roi-calculator" className="underline hover:text-[#F05A28]">
+                    AI agent ROI calculator
+                  </Link>{' '}
+                  can show you what a missed call is really worth for your restaurant.
                 </p>
                 <a
                   href="https://theharrispoll.com/articles/state-of-beverages-2025-trend-report-how-does-gen-z-shop-restaurants-are-losing-business-by-not-answering-the-phone-should-workers-adapt-to-company-culture/"
@@ -539,7 +546,7 @@ export default function RestaurantAiVoiceAgentsPage() {
                   Best-Case Order Accuracy, Even at Peak Brands
                 </div>
                 <p className="text-sm text-[#46403B] leading-relaxed mb-4">
-                  Independent mystery-shop research across major chains found order accuracy declined year over year, with even the best-performing daypart topping out around 90 percent and dinner service the most error-prone window.
+                  Independent mystery-shop research across major chains found order accuracy slipping year over year. Even the best time of day topped out around 90 percent. Dinner was the worst time for mistakes.
                 </p>
                 <a
                   href="https://www.intouchinsight.com/blog/drive-thru-trends"
@@ -565,7 +572,7 @@ export default function RestaurantAiVoiceAgentsPage() {
                 Engineered for High-Volume Food & Beverage Concepts
               </h2>
               <p className="text-base sm:text-lg text-[#46403B]">
-                From neighborhood pizzerias overwhelmed with Friday night phone orders to multi-unit franchise groups managing thousands of daily calls, we engineer voice AI tailored to your kitchen operations.
+                Neighborhood pizzerias get swamped with Friday night phone orders. Multi-unit franchise groups handle thousands of calls a day. Either way, we build voice AI tailored to how your kitchen runs.
               </p>
             </div>
 
@@ -580,10 +587,10 @@ export default function RestaurantAiVoiceAgentsPage() {
                     Complex Specialty Pizza Modifiers & Half-and-Half Toppings
                   </h3>
                   <p className="text-[#46403B] leading-relaxed mb-4">
-                    Pizza ordering is notoriously difficult for basic voice bots. Customers order half-and-half specialty pizzas, custom crusts (thin, deep dish, gluten-free), extra sauce on side, and specific baking instructions.
+                    Pizza orders trip up most basic voice bots. Customers ask for half-and-half specialty pizzas, custom crusts (thin, deep dish, gluten-free), sauce on the side, and exact baking instructions.
                   </p>
                   <p className="text-[#46403B] leading-relaxed mb-6">
-                    Our pizza voice agent understands intricate crust, sauce, and topping combinations. It calculates exact modifier upcharges, suggests garlic knots or 2-liter drinks, and sends the ticket straight to your kitchen pizza oven station with zero errors.
+                    Our pizza voice agent handles complex crust, sauce, and topping combos correctly, every time. It works out the right modifier upcharge, suggests garlic knots or a 2-liter drink, and sends the ticket straight to your pizza oven station with no mistakes.
                   </p>
                   <div className="flex flex-wrap gap-2 text-xs font-mono text-[#6E655F]">
                     <span className="px-2.5 py-1 rounded bg-[#FFF8F5] border border-[#F05A28]/20">
@@ -602,8 +609,9 @@ export default function RestaurantAiVoiceAgentsPage() {
                     <Image
                       src="/images/restaurants/pizzeria-kitchen-ai-ticket.webp"
                       alt="American chef taking artisanal pizza from brick oven with digital kitchen display screen in background"
-                      fill
-                      className="object-cover"
+                      width={1376}
+                      height={768}
+                      className="absolute inset-0 h-full w-full object-cover"
                       sizes="(max-width: 1024px) 100vw, 50vw"
                     />
                   </div>
@@ -617,8 +625,9 @@ export default function RestaurantAiVoiceAgentsPage() {
                     <Image
                       src="/images/restaurants/drive-thru-franchise-ai-voice.webp"
                       alt="Modern American fast casual drive-thru ordering lane with digital menu and AI headset system"
-                      fill
-                      className="object-cover"
+                      width={1376}
+                      height={768}
+                      className="absolute inset-0 h-full w-full object-cover"
                       sizes="(max-width: 1024px) 100vw, 50vw"
                     />
                   </div>
@@ -631,10 +640,14 @@ export default function RestaurantAiVoiceAgentsPage() {
                     Sub-30-Second Rapid Order Taking & Loyalty Number Recognition
                   </h3>
                   <p className="text-[#46403B] leading-relaxed mb-4">
-                    Fast-casual brands thrive on speed. Every second saved taking a phone order translates directly to faster kitchen throughput and higher customer satisfaction.
+                    Fast-casual brands run on speed. Every second saved on a phone order means faster kitchen turnaround and a happier customer.
                   </p>
                   <p className="text-[#46403B] leading-relaxed mb-6">
-                    Our QSR voice agent recognizes repeat caller phone numbers, recalls past favorite orders, applies loyalty points or discount codes, and completes order intake in under 35 seconds with immediate Toast or Square kitchen injection.
+                    Our QSR voice agent recognizes a repeat caller&rsquo;s number and pulls up their favorite order. It applies loyalty points or discount codes on its own. The whole call takes under 35 seconds, and the order lands in Toast or Square right away. The same fast, transactional call pattern is what powers our{' '}
+                    <Link href="/services/automotive-ai-voice-agents" className="underline hover:text-[#F05A28]">
+                      automotive AI voice agents
+                    </Link>{' '}
+                    for service-writer phone intake at auto shops.
                   </p>
                   <div className="flex flex-wrap gap-2 text-xs font-mono text-[#6E655F]">
                     <span className="px-2.5 py-1 rounded bg-[#FFF8F5] border border-[#F05A28]/20">
@@ -660,10 +673,10 @@ export default function RestaurantAiVoiceAgentsPage() {
                     OpenTable & Resy Table Reservations with VIP Guest Profiling
                   </h3>
                   <p className="text-[#46403B] leading-relaxed mb-4">
-                    Upscale dining rooms require sophisticated, warm phone etiquette. When guests call during service to book anniversary tables or verify dress codes, hosts are frequently busy seating guests at the front door.
+                    Upscale dining rooms need warm, careful phone manners. When a guest calls during dinner service to book an anniversary table or ask about the dress code, the host is often busy seating people at the door.
                   </p>
                   <p className="text-[#46403B] leading-relaxed mb-6">
-                    Our fine dining voice agent answers with polished tone, queries OpenTable or Resy API for live table availability, records guest seating preferences (booth vs patio), captures anniversary or birthday notes, and sends calendar invites.
+                    Our fine dining voice agent answers in a polished tone. It checks OpenTable or Resy for a real, open table. It notes seating choices, like booth versus patio. It also records anniversary or birthday details, then sends the guest a calendar invite.
                   </p>
                   <div className="flex flex-wrap gap-2 text-xs font-mono text-[#6E655F]">
                     <span className="px-2.5 py-1 rounded bg-[#FFF8F5] border border-[#F05A28]/20">
@@ -682,8 +695,9 @@ export default function RestaurantAiVoiceAgentsPage() {
                     <Image
                       src="/images/restaurants/catering-banquet-ai-booking.webp"
                       alt="American hospitality event coordinator reviewing reservation calendar in upscale dining room"
-                      fill
-                      className="object-cover"
+                      width={1376}
+                      height={768}
+                      className="absolute inset-0 h-full w-full object-cover"
                       sizes="(max-width: 1024px) 100vw, 50vw"
                     />
                   </div>
@@ -697,8 +711,9 @@ export default function RestaurantAiVoiceAgentsPage() {
                     <Image
                       src="/images/restaurants/toast-pos-kitchen-display-ai.webp"
                       alt="Modern restaurant counter with Toast POS terminal and kitchen display screen"
-                      fill
-                      className="object-cover"
+                      width={1376}
+                      height={768}
+                      className="absolute inset-0 h-full w-full object-cover"
                       sizes="(max-width: 1024px) 100vw, 50vw"
                     />
                   </div>
@@ -711,10 +726,17 @@ export default function RestaurantAiVoiceAgentsPage() {
                     Geo-Location Smart Routing & Store-Specific Menu Pricing
                   </h3>
                   <p className="text-[#46403B] leading-relaxed mb-4">
-                    Franchise groups with 5 to 50+ stores often manage a single brand phone number or individual store lines where store menus, local sales tax, and operating hours differ across city lines.
+                    Franchise groups with 5 to 50-plus stores often run one brand phone number, or separate lines per store. Menus, local sales tax, and hours can all differ once you cross a city line.
+                  </p>
+                  <p className="text-[#46403B] leading-relaxed mb-4">
+                    Our multi-unit system finds the closest store from the caller&rsquo;s address or zip code. It pulls up that store&rsquo;s exact menu and pricing, then sends the order into the right branch kitchen. Call routing happens on its own, with no dispatcher needed.
                   </p>
                   <p className="text-[#46403B] leading-relaxed mb-6">
-                    Our multi-unit voice infrastructure automatically identifies the closest store location based on caller address or zip code, references that specific location POS menu and pricing tier, and injects the order into the proper branch kitchen.
+                    The same routing engine powers our general{' '}
+                    <Link href="/services/ai-customer-support-agents" className="underline hover:text-[#F05A28]">
+                      AI customer support agents
+                    </Link>{' '}
+                    for text and web chat. Some franchise groups already run RingCentral, Genesys, Five9, Aircall, or Dialpad for their call center. We connect alongside it. You do not have to rip it out.
                   </p>
                   <div className="flex flex-wrap gap-2 text-xs font-mono text-[#6E655F]">
                     <span className="px-2.5 py-1 rounded bg-[#FFF8F5] border border-[#F05A28]/20">
@@ -740,10 +762,17 @@ export default function RestaurantAiVoiceAgentsPage() {
                     Headcount Tier Pricing, Deposit Capture & Prep Buffer Rules
                   </h3>
                   <p className="text-[#46403B] leading-relaxed mb-4">
-                    Large catering orders ($300 to $3,500+) require detailed logistics: headcounts, dietary mix (vegan, gluten-free, nut allergies), chafing dish hardware, delivery access instructions, and minimum 24-hour lead times.
+                    Large catering orders, from $300 to $3,500 or more, need careful planning. That means headcounts, dietary mix (vegan, gluten-free, nut allergies), chafing dish equipment, delivery access notes, and at least 24 hours of lead time.
+                  </p>
+                  <p className="text-[#46403B] leading-relaxed mb-4">
+                    Our catering voice agent walks event planners through a short set of questions. It works out the right portions and enforces your kitchen&rsquo;s lead-time rules. Then it sends an instant email and text quote, and can collect a deposit securely through Stripe.
                   </p>
                   <p className="text-[#46403B] leading-relaxed mb-6">
-                    Our catering voice agent guides event planners through structured order questionnaires, calculates required portions, enforces kitchen prep lead-time rules, sends instant email and SMS quote breakdowns, and collects deposit payments securely via Stripe or Toast invoicing.
+                    The same after-hours lead-capture pattern shows up in home-service trades. See our{' '}
+                    <Link href="/services/contractor-ai-receptionist" className="underline hover:text-[#F05A28]">
+                      contractor AI receptionist
+                    </Link>{' '}
+                    page for that version. For the invoice itself, we can sync it to QuickBooks or send it straight through Toast.
                   </p>
                   <div className="flex flex-wrap gap-2 text-xs font-mono text-[#6E655F]">
                     <span className="px-2.5 py-1 rounded bg-[#FFF8F5] border border-[#F05A28]/20">
@@ -762,14 +791,68 @@ export default function RestaurantAiVoiceAgentsPage() {
                     <Image
                       src="/images/restaurants/catering-banquet-ai-booking.webp"
                       alt="Catering and banquet table service preparation with corporate luncheon platters"
-                      fill
-                      className="object-cover"
+                      width={1376}
+                      height={768}
+                      className="absolute inset-0 h-full w-full object-cover"
                       sizes="(max-width: 1024px) 100vw, 50vw"
                     />
                   </div>
                 </div>
               </li>
             </ul>
+          </div>
+        </section>
+
+        {/* POS, RESERVATION & PAYMENT SYSTEM COVERAGE */}
+        <section className="py-20 bg-white border-b border-[#E7DED6]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <div className="font-mono text-xs text-[#F05A28] font-bold uppercase tracking-wider mb-2">
+                // SYSTEM COVERAGE
+              </div>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-4">
+                Which POS, Reservation, and Payment Systems We Connect To
+              </h2>
+              <p className="text-lg text-[#46403B]">
+                Every restaurant runs different software at the counter and the host stand. Here is what we connect to today, and what each connection does.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="p-8 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6]">
+                <h3 className="text-lg font-bold text-[#14110F] mb-4">POS &amp; Kitchen Display</h3>
+                <ul className="space-y-3 text-sm text-[#46403B] leading-relaxed list-none">
+                  <li><span className="font-bold text-[#14110F]">Toast POS</span>: order injection, modifiers, and menu sync through the Toast API.</li>
+                  <li><span className="font-bold text-[#14110F]">Square for Restaurants</span>: ticket creation and live menu availability.</li>
+                  <li><span className="font-bold text-[#14110F]">Clover</span>: order and payment sync for counter-service concepts.</li>
+                  <li><span className="font-bold text-[#14110F]">Brink POS</span>: enterprise QSR and franchise order routing.</li>
+                  <li><span className="font-bold text-[#14110F]">Aloha</span> (NCR Voyix): high-volume full-service and franchise ticketing.</li>
+                  <li><span className="font-bold text-[#14110F]">Micros Simphony</span>: hotel, resort, and enterprise food service integration.</li>
+                  <li><span className="font-bold text-[#14110F]">SpotOn, Revel Systems &amp; Lightspeed</span>: order injection and 86-item sync for independent and multi-location restaurants.</li>
+                </ul>
+              </div>
+
+              <div className="p-8 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6]">
+                <h3 className="text-lg font-bold text-[#14110F] mb-4">Reservations &amp; Table Management</h3>
+                <ul className="space-y-3 text-sm text-[#46403B] leading-relaxed list-none">
+                  <li><span className="font-bold text-[#14110F]">OpenTable</span>: live table availability and guest profile lookup.</li>
+                  <li><span className="font-bold text-[#14110F]">Resy</span>: real-time booking and VIP guest notes.</li>
+                  <li><span className="font-bold text-[#14110F]">SevenRooms</span>: table and private event booking for hospitality groups.</li>
+                </ul>
+              </div>
+
+              <div className="p-8 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6]">
+                <h3 className="text-lg font-bold text-[#14110F] mb-4">Payments &amp; Back Office</h3>
+                <ul className="space-y-3 text-sm text-[#46403B] leading-relaxed list-none">
+                  <li><span className="font-bold text-[#14110F]">Stripe</span>: PCI DSS-compliant SMS payment links and deposit capture.</li>
+                  <li><span className="font-bold text-[#14110F]">QuickBooks</span>: invoice and deposit sync for catering and events.</li>
+                  <li><span className="font-bold text-[#14110F]">Toast Online Ordering</span>: card-on-file charges for loyalty members.</li>
+                </ul>
+                <p className="mt-6 text-sm text-[#6E655F] leading-relaxed border-t border-[#E7DED6] pt-4">
+                  Running a system we have not listed? We scope a custom connector against its published API, or its export files if it does not have one.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -790,7 +873,7 @@ export default function RestaurantAiVoiceAgentsPage() {
                 4-Phase Restaurant AI Telephony Implementation Roadmap
               </h2>
               <p className="text-base sm:text-lg text-[#46403B]">
-                From menu hierarchy extraction to live phone cutover with zero kitchen disruption in 2 to 4 weeks.
+                From menu setup to a live phone cutover, with no kitchen disruption, in 2 to 4 weeks.
               </p>
             </div>
 
@@ -800,7 +883,7 @@ export default function RestaurantAiVoiceAgentsPage() {
                   <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">PHASE 01 // WEEKS 1-2</div>
                   <h3 className="text-lg font-bold text-[#14110F] font-heading mb-3">Menu & Modifier Mapping</h3>
                   <p className="text-sm text-[#46403B] leading-relaxed mb-4">
-                    We connect to your Toast, Square, or Clover POS API, pulling item SKUs, nested modifier groups, combo rules, price overrides, and tax configurations.
+                    We connect to your Toast, Square, or Clover POS API. We pull in your item list, modifier groups, combo rules, price overrides, and tax settings.
                   </p>
                 </div>
                 <div className="text-xs font-mono text-[#6E655F] pt-4 border-t border-[#E7DED6]">
@@ -813,7 +896,7 @@ export default function RestaurantAiVoiceAgentsPage() {
                   <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">PHASE 02 // WEEKS 2-3</div>
                   <h3 className="text-lg font-bold text-[#14110F] font-heading mb-3">Acoustic Tuning & SIP Setup</h3>
                   <p className="text-sm text-[#46403B] leading-relaxed mb-4">
-                    We provision dedicated carrier SIP trunks, configure sub-500ms voice pipelines with natural conversational inflection, and train custom phonetic models on your unique menu names.
+                    We set up dedicated phone trunks with your carrier. We tune the voice pipeline to respond in under 500 milliseconds and sound natural. Then we train the model on your specific menu item names.
                   </p>
                 </div>
                 <div className="text-xs font-mono text-[#6E655F] pt-4 border-t border-[#E7DED6]">
@@ -826,7 +909,7 @@ export default function RestaurantAiVoiceAgentsPage() {
                   <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">PHASE 03 // WEEKS 3-4</div>
                   <h3 className="text-lg font-bold text-[#14110F] font-heading mb-3">Kitchen Printer Simulation</h3>
                   <p className="text-sm text-[#46403B] leading-relaxed mb-4">
-                    We execute dozens of test phone orders under noisy background conditions, verifying that kitchen display screens (KDS) and thermal printers print tickets with exact modifier formatting.
+                    We run dozens of test calls, including ones with background noise. We check that your kitchen display screens (KDS) and thermal printers show every modifier correctly on the ticket.
                   </p>
                 </div>
                 <div className="text-xs font-mono text-[#6E655F] pt-4 border-t border-[#E7DED6]">
@@ -839,7 +922,7 @@ export default function RestaurantAiVoiceAgentsPage() {
                   <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">PHASE 04 // GO-LIVE</div>
                   <h3 className="text-lg font-bold text-[#14110F] font-heading mb-3">Live Overflow & Night Cutover</h3>
                   <p className="text-sm text-[#46403B] leading-relaxed mb-4">
-                    We enable conditional call forwarding during peak dinner rush or 100% full-time 24/7 call answering. We monitor real-time order volume, calibrate audio latency, and provide 24/7 support.
+                    You choose the rollout: call forwarding just during peak dinner rush, or full-time 24/7 coverage. We watch order volume in real time, fine-tune audio latency, and stay on call for support.
                   </p>
                 </div>
                 <div className="text-xs font-mono text-[#6E655F] pt-4 border-t border-[#E7DED6]">
@@ -861,7 +944,7 @@ export default function RestaurantAiVoiceAgentsPage() {
                 Enterprise Restaurant AI Telephony Blueprint
               </h2>
               <p className="text-base sm:text-lg text-[#46403B]">
-                How we architect sub-500ms voice agents with live POS synchronization and kitchen printing.
+                How we build sub-500ms voice agents with live POS syncing and kitchen ticket printing.
               </p>
             </div>
 
@@ -869,43 +952,43 @@ export default function RestaurantAiVoiceAgentsPage() {
               {[
                 {
                   title: 'Carrier-Grade Low-Latency SIP Trunking',
-                  desc: 'Direct Twilio and Telnyx SIP trunking with geo-distributed WebRTC media gateways ensuring under 500ms total round-trip audio latency.',
+                  desc: 'We connect through Twilio and Telnyx phone trunks, routed over WebRTC media gateways spread across regions. Total round-trip audio latency stays under 500 milliseconds.',
                 },
                 {
                   title: 'Bi-Directional Toast & Square POS Webhooks',
-                  desc: 'Real-time REST API connectors that sync menu hierarchies, modifiers, pricing tiers, and 86-ed inventory items every 60 seconds.',
+                  desc: 'Real-time API connectors keep your menu, modifiers, and pricing in sync with the POS every 60 seconds. Webhooks push 86-ed items back out just as fast.',
                 },
                 {
                   title: 'Acoustic Noise Filtering & Speech Isolation',
-                  desc: 'Deep neural noise cancellation algorithms tuned to filter car engine noise, street traffic, and background conversation from caller audio.',
+                  desc: 'The voice model filters out car engine noise, street traffic, and background chatter, so it can hear the caller clearly.',
                 },
                 {
                   title: 'Strict Allergen & Food Safety Guardrails',
-                  desc: 'Deterministic safety rules verify customer allergy statements against your menu database, forcing explicit verbal warnings on cross-contamination.',
+                  desc: 'Fixed safety rules check what a customer says against your allergen list. If there is any risk of cross-contact, the agent gives a clear warning out loud, every single time.',
                 },
                 {
-                  title: 'PCI-Compliant SMS Payment Links',
-                  desc: 'Instant SMS text links sent via Stripe or Toast Online Ordering allowing callers to enter credit card details securely on mobile.',
+                  title: 'PCI DSS-Compliant SMS Payment Links',
+                  desc: 'We text callers a secure, PCI DSS-compliant payment link through Stripe or Toast Online Ordering, both hosted on infrastructure like AWS or Google Cloud. Callers enter their card details on their own phone.',
                 },
                 {
                   title: 'Kitchen Display (KDS) & Printer Routing',
-                  desc: 'Completed tickets automatically format with correct preparation modifiers and route directly to the kitchen expeditor and bar printers.',
+                  desc: 'Finished tickets format themselves with the right prep notes. They route straight to the kitchen expeditor screen and the bar printer.',
                 },
                 {
                   title: 'Automated 86-Item Substitution Logic',
-                  desc: 'When kitchen staff mark an ingredient sold out, the voice agent suggests predefined alternatives (such as sweet potato fries when regular fries are out).',
+                  desc: 'When your kitchen marks an item sold out, the agent offers the backup choice you already picked. Think sweet potato fries when regular fries run out.',
                 },
                 {
-                  title: 'Warm Call Transfer with Context Screen-Pop',
-                  desc: 'When a caller requests a manager, the agent executes an immediate SIP warm transfer, displaying the full call transcript and caller name on POS.',
+                  title: 'Warm Transfer with Context Screen-Pop',
+                  desc: "When a caller asks for a manager, the agent starts a warm transfer right away. Your POS screen shows the caller's name and the full call transcript before you even pick up.",
                 },
                 {
                   title: 'OpenTable & Resy Real-Time API Sync',
-                  desc: 'Direct calendar integration to book dining room tables, check party availability, and send SMS confirmation reminders with one-click cancellation.',
+                  desc: 'The system checks OpenTable or Resy for an open table and books the one the guest wants. It texts a reminder. Guests can cancel with one tap.',
                 },
                 {
                   title: '100% Client Code & Prompts Ownership',
-                  desc: 'You receive complete Git source code, custom voice prompts, and direct cloud accounts. Zero third-party per-order commission fees.',
+                  desc: 'You get the full source code in Git, your custom voice prompts, and your own cloud accounts. No third party charges you a commission per order.',
                 },
               ].map((item, idx) => (
                 <li
@@ -938,7 +1021,7 @@ export default function RestaurantAiVoiceAgentsPage() {
                 FactoryJet Custom AI Voice vs. Third-Party Call Centers
               </h2>
               <p className="text-base sm:text-lg text-[#46403B]">
-                Why independent restaurants and multi-unit franchises replace manual call centers with custom AI voice infrastructure.
+                Why independent restaurants and multi-unit franchises replace manual call centers with a custom AI voice system. There is no legacy IVR tree to push through, and no cold transfer to a stranger.
               </p>
             </div>
 
@@ -1015,9 +1098,10 @@ export default function RestaurantAiVoiceAgentsPage() {
                     <Image
                       src="/bhavesh_image.webp"
                       alt="Bhavesh Barot, Founder & CEO of FactoryJet"
-                      fill
+                      width={682}
+                      height={1024}
                       quality={95}
-                      className="object-cover"
+                      className="absolute inset-0 h-full w-full object-cover"
                       sizes="(max-width: 1024px) 100vw, 40vw"
                     />
                   </div>
@@ -1048,10 +1132,21 @@ export default function RestaurantAiVoiceAgentsPage() {
                   Direct Engineering Leadership with Founder Bhavesh Barot
                 </h2>
                 <p className="text-base sm:text-lg text-[#46403B] leading-relaxed mb-6">
-                  Restaurant operations require zero-friction execution. At FactoryJet, founder Bhavesh Barot leads every hospitality discovery and POS integration session directly. We review your current phone volume, Toast or Square POS configuration, and menu modifier structure in the very first conversation.
+                  Restaurant operations leave no room for friction. At FactoryJet, founder Bhavesh Barot leads every discovery call himself. In the first call, we cover your call volume, your POS setup, and how your menu modifiers work.
+                </p>
+                <p className="text-base sm:text-lg text-[#46403B] leading-relaxed mb-6">
+                  You work directly with experienced engineers who build reliable, high-volume voice systems. What we build is yours to keep and run, with no recurring software fee.
                 </p>
                 <p className="text-base sm:text-lg text-[#46403B] leading-relaxed mb-8">
-                  You work directly with experienced systems architects who build reliable, high-throughput voice pipelines. We build infrastructure that you own and operate permanently without recurring software royalties.
+                  You get that same senior team on every FactoryJet build, restaurants included, never a junior subcontractor. Browse our wider{' '}
+                  <Link href="/services/ai-agent-development" className="underline hover:text-[#F05A28]">
+                    AI agent development
+                  </Link>{' '}
+                  work to see the other industries we build for. Need your restaurant&rsquo;s website redone too? See our{' '}
+                  <Link href="/services/restaurant-website-design" className="underline hover:text-[#F05A28]">
+                    restaurant website design
+                  </Link>{' '}
+                  service.
                 </p>
                 
                 <div className="flex flex-wrap items-center gap-4">
@@ -1099,7 +1194,7 @@ export default function RestaurantAiVoiceAgentsPage() {
             </h2>
             
             <p className="text-lg text-[#46403B] max-w-2xl mx-auto mb-10 leading-relaxed">
-              Book a 30-minute technical discovery call with our founder. We will evaluate your current phone call volume, review your POS setup, and deliver a fixed-scope architecture proposal within 24 hours.
+              Book a 30-minute call with our founder. We will look at your phone call volume, review your POS setup, and send a fixed-scope proposal within 24 hours.
             </p>
 
             <div className="flex flex-wrap justify-center items-center gap-4">
