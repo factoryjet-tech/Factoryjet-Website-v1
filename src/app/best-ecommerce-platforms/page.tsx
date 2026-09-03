@@ -6,6 +6,7 @@ import FAQ from '@/components/v2/FAQ';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
+import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
 import EcommerceRoiCalculator from '@/components/commerce/EcommerceRoiCalculator';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
@@ -14,9 +15,9 @@ const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const IMG = '/images/us/platforms';
 
 export const metadata: Metadata = {
-  title: 'Best Ecommerce Platform for Your Business | Platform Comparison | FactoryJet',
+  title: 'Best Ecommerce Platforms Comparison Guide | FactoryJet',
   description:
-    'An honest side-by-side comparison of the best ecommerce platforms: Shopify, BigCommerce, Adobe Commerce, WooCommerce, and Salesforce Commerce Cloud. We are platform-agnostic: we help you pick the fit, build it, and hand you a store you own.',
+    'Side-by-side comparison of the best ecommerce platforms: Shopify, BigCommerce, Adobe Commerce, and WooCommerce. Pick the right platform for your store.',
   openGraph: {
     type: 'website', siteName: 'FactoryJet',
     title: 'Best Ecommerce Platform for Your Business | FactoryJet',
@@ -26,7 +27,13 @@ export const metadata: Metadata = {
     locale: 'en_US',
   },
   twitter: { card: 'summary_large_image', title: 'Best Ecommerce Platform Comparison | FactoryJet', description: 'Shopify vs BigCommerce vs Adobe Commerce vs WooCommerce vs Salesforce, an honest comparison for DTC and B2B brands.', images: ['https://factoryjet.com/og-default.png'] },
-  alternates: { canonical: 'https://factoryjet.com/best-ecommerce-platforms' },
+  alternates: {
+    canonical: 'https://factoryjet.com/best-ecommerce-platforms',
+    languages: {
+      'en-US': 'https://factoryjet.com/best-ecommerce-platforms',
+      'x-default': 'https://factoryjet.com/best-ecommerce-platforms',
+    },
+  },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
@@ -199,13 +206,23 @@ const ORG_SCHEMA = {
   
   sameAs: ['https://www.linkedin.com/company/factoryjet'],
 };
+/** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
+ *  <Breadcrumbs> component and the BreadcrumbList JSON-LD below, so the two
+ *  can never drift into showing a different path than the schema claims. */
+const BREADCRUMB_ITEMS: BreadcrumbItem[] = [
+  { name: 'Home', url: 'https://factoryjet.com' },
+  { name: 'Best Ecommerce Platforms', url: 'https://factoryjet.com/best-ecommerce-platforms' },
+];
+
 const BREADCRUMB_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-    { '@type': 'ListItem', position: 2, name: 'Best Ecommerce Platforms', item: 'https://factoryjet.com/best-ecommerce-platforms' },
-  ],
+  itemListElement: BREADCRUMB_ITEMS.map((item, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: item.name,
+    item: item.url,
+  })),
 };
 
 /* ─────────────────────────────────────────────
@@ -378,6 +395,7 @@ export default function BestEcommercePlatformsPage() {
       <SiteHeader navLinks={[]} cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
       <main className="platpage">
+        <Breadcrumbs items={BREADCRUMB_ITEMS} />
 
         {/* ── Hero ── */}
         <section className="pp-dotgrid">

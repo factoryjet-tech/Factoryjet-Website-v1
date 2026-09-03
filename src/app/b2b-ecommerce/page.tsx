@@ -6,6 +6,7 @@ import SiteFooter from '@/components/v2/SiteFooter';
 import FAQ, { type FAQItem, type FAQCategory } from '@/components/v2/FAQ';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
 import EcommerceRoiCalculator from '@/components/commerce/EcommerceRoiCalculator';
 import B2bWholesaleCalculator from '@/components/commerce/B2bWholesaleCalculator';
 import Net30PaymentComparison from '@/components/commerce/Net30PaymentComparison';
@@ -17,9 +18,9 @@ const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const PAGE_MODIFIED = '2026-08-29';
 
 export const metadata: Metadata = {
-  title: 'B2B E-Commerce Agency | Wholesale & Multi-Channel Commerce Platforms | FactoryJet',
+  title: 'B2B E-Commerce Agency: Wholesale Platforms | FactoryJet',
   description:
-    'B2B ecommerce agency building wholesale commerce and multi-channel commerce platforms. Tiered pricing, net terms, account hierarchies, quote and approval workflows, EDI and punchout, and ERP integration with NetSuite, SAP, Dynamics 365, Sage, Acumatica and Epicor, on Shopify Plus, Adobe Commerce, BigCommerce, or Commerceflo.',
+    'B2B ecommerce agency building wholesale platforms with tiered pricing, net terms, account hierarchies, EDI, punchout, and ERP integration. Free consultation.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
@@ -35,7 +36,13 @@ export const metadata: Metadata = {
     description: 'B2B ecommerce platforms with tiered pricing, net terms, account hierarchies, and ERP integration.',
     images: ['https://factoryjet.com/og-default.png'],
   },
-  alternates: { canonical: 'https://factoryjet.com/b2b-ecommerce' },
+  alternates: {
+    canonical: 'https://factoryjet.com/b2b-ecommerce',
+    languages: {
+      'en-US': 'https://factoryjet.com/b2b-ecommerce',
+      'x-default': 'https://factoryjet.com/b2b-ecommerce',
+    },
+  },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
@@ -150,13 +157,23 @@ const WEBPAGE_SCHEMA = {
   about: { '@id': 'https://factoryjet.com/#organization' },
 };
 
+/** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
+ *  <Breadcrumbs> component and the BreadcrumbList JSON-LD below, so the two
+ *  can never drift into showing a different path than the schema claims. */
+const BREADCRUMB_ITEMS: BreadcrumbItem[] = [
+  { name: 'Home', url: 'https://factoryjet.com' },
+  { name: 'B2B E-Commerce', url: 'https://factoryjet.com/b2b-ecommerce' },
+];
+
 const BREADCRUMB_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-    { '@type': 'ListItem', position: 2, name: 'B2B E-Commerce', item: 'https://factoryjet.com/b2b-ecommerce' },
-  ],
+  itemListElement: BREADCRUMB_ITEMS.map((item, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: item.name,
+    item: item.url,
+  })),
 };
 
 const STATS = [
@@ -267,6 +284,7 @@ export default function B2BEcommercePage() {
       <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
       <main className="platpage">
+        <Breadcrumbs items={BREADCRUMB_ITEMS} />
         {/* ── Hero ── */}
         <section className="pp-dotgrid" style={{ position: 'relative', overflow: 'hidden' }}>
           <div className="pp-wrap" style={{ paddingTop: 'clamp(44px,6vh,84px)', paddingBottom: 'clamp(44px,6vh,84px)', position: 'relative' }}>

@@ -7,6 +7,7 @@ import FAQ from '@/components/v2/FAQ';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
+import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
 import B2bWholesaleCalculator from '@/components/commerce/B2bWholesaleCalculator';
 import Net30PaymentComparison from '@/components/commerce/Net30PaymentComparison';
 import AnswerFirstDefinition from '@/components/commerce/AnswerFirstDefinition';
@@ -16,19 +17,25 @@ import '@/components/v2/PlatformPage.css';
 const PAGE_MODIFIED = '2026-08-02';
 
 export const metadata: Metadata = {
-  title: 'E-Commerce for Manufacturers & Distributors | Dealer Portals | FactoryJet',
+  title: 'E-Commerce for Manufacturers & Distributors | FactoryJet',
   description:
-    'Manufacturer ecommerce and distributor ecommerce built as dealer portals: per-account and contract pricing, territory rules, configurable products, spec sheets, bulk order pads, EDI and punchout, and ERP integration with NetSuite, SAP, Epicor Prophet 21, Infor, and Dynamics 365.',
+    'Manufacturer & distributor ecommerce built as dealer portals: contract pricing, territory rules, spec sheets, EDI, punchout, and ERP integrations.',
   openGraph: {
     type: 'website', siteName: 'FactoryJet',
-    title: 'E-Commerce for Manufacturers & Distributors | Dealer Portals | FactoryJet',
+    title: 'E-Commerce for Manufacturers & Distributors | FactoryJet',
     description: 'B2B ecommerce for manufacturers and distributors: dealer portals, contract pricing, territory rules, bulk ordering, EDI, punchout, and ERP integration.',
     url: 'https://factoryjet.com/ecommerce-for-manufacturers',
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet, e-commerce for manufacturers and distributors' }],
     locale: 'en_US',
   },
   twitter: { card: 'summary_large_image', title: 'E-Commerce for Manufacturers & Distributors | FactoryJet', description: 'Dealer and distributor portals with contract pricing, bulk ordering, EDI, punchout, and ERP integration.', images: ['https://factoryjet.com/og-default.png'] },
-  alternates: { canonical: 'https://factoryjet.com/ecommerce-for-manufacturers' },
+  alternates: {
+    canonical: 'https://factoryjet.com/ecommerce-for-manufacturers',
+    languages: {
+      'en-US': 'https://factoryjet.com/ecommerce-for-manufacturers',
+      'x-default': 'https://factoryjet.com/ecommerce-for-manufacturers',
+    },
+  },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
@@ -97,11 +104,25 @@ const ORG_SCHEMA = {
   description: 'FactoryJet is an e-commerce development agency that builds B2B, wholesale, and manufacturer commerce for US brands.',
   sameAs: ['https://www.linkedin.com/company/factoryjet'],
 };
-const BREADCRUMB_SCHEMA = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-  { '@type': 'ListItem', position: 2, name: 'B2B E-Commerce', item: 'https://factoryjet.com/b2b-ecommerce' },
-  { '@type': 'ListItem', position: 3, name: 'E-Commerce for Manufacturers', item: 'https://factoryjet.com/ecommerce-for-manufacturers' },
-] };
+/** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
+ *  <Breadcrumbs> component and the BreadcrumbList JSON-LD below, so the two
+ *  can never drift into showing a different path than the schema claims. */
+const BREADCRUMB_ITEMS: BreadcrumbItem[] = [
+  { name: 'Home', url: 'https://factoryjet.com' },
+  { name: 'B2B E-Commerce', url: 'https://factoryjet.com/b2b-ecommerce' },
+  { name: 'E-Commerce for Manufacturers', url: 'https://factoryjet.com/ecommerce-for-manufacturers' },
+];
+
+const BREADCRUMB_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: BREADCRUMB_ITEMS.map((item, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: item.name,
+    item: item.url,
+  })),
+};
 
 const STATS = [
   { b: 'Dealer portals', s: 'contract pricing & territories' },
@@ -172,6 +193,7 @@ export default function EcommerceForManufacturersPage() {
       <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
       <main className="platpage">
+        <Breadcrumbs items={BREADCRUMB_ITEMS} />
 
         {/* Hero */}
         <section className="pp-dotgrid" style={{ position: 'relative', overflow: 'hidden' }}>

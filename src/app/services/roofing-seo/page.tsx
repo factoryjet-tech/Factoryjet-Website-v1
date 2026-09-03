@@ -8,6 +8,7 @@ import SiteFooter from '@/components/v2/SiteFooter';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import FinalCTA from '@/components/v2/FinalCTA';
 import FAQ, { type FAQItem, type FAQCategory } from '@/components/v2/FAQ';
+import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
 import HeroInlineForm from '@/components/HeroInlineForm';
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -54,9 +55,9 @@ const LAV_SOFT = '#ECEAFB';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Roofing SEO Services: SEO for Roofers & Roofing Companies | FactoryJet',
+  title: 'Roofing SEO Agency: SEO for Roofing Contractors | FactoryJet',
   description:
-    'Roofing SEO built around how roofs actually get sold: storm spikes, insurance claims, financing questions and a service area instead of a storefront. Founder-led, US roofing contractors, honest about what SEO can and cannot do.',
+    'Roofing SEO built around how roofs actually sell: storm spikes, claims, financing, and service areas. Founder-led for US roofing contractors. Free audit.',
   keywords: [
     'roofing seo',
     'seo for roofers',
@@ -107,6 +108,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: PAGE_URL,
+    languages: {
+      'en-US': PAGE_URL,
+      'x-default': PAGE_URL,
+    },
   },
   robots: {
     index: true,
@@ -707,14 +712,24 @@ const faqSchema = {
   })),
 };
 
+/** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
+ *  <Breadcrumbs> component and the BreadcrumbList JSON-LD below, so the two
+ *  can never drift into showing a different path than the schema claims. */
+const BREADCRUMB_ITEMS: BreadcrumbItem[] = [
+  { name: 'Home', url: 'https://factoryjet.com' },
+  { name: 'Services', url: 'https://factoryjet.com/services' },
+  { name: 'Roofing SEO', url: PAGE_URL },
+];
+
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://factoryjet.com/services' },
-    { '@type': 'ListItem', position: 3, name: 'Roofing SEO', item: PAGE_URL },
-  ],
+  itemListElement: BREADCRUMB_ITEMS.map((item, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: item.name,
+    item: item.url,
+  })),
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -784,6 +799,7 @@ export default function RoofingSeoPage() {
       <SiteHeader />
 
       <main style={{ backgroundColor: CREAM }}>
+        <Breadcrumbs items={BREADCRUMB_ITEMS} />
         {/* ─── 1. HERO ─────────────────────────────────────────────────── */}
         <section className="relative overflow-hidden">
           <div className="mx-auto grid max-w-[1180px] grid-cols-1 items-center gap-12 px-6 py-16 md:px-8 lg:grid-cols-[1.02fr_0.98fr] lg:py-20">

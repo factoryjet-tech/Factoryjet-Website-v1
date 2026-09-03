@@ -8,6 +8,7 @@ import SiteFooter from '@/components/v2/SiteFooter';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import FinalCTA from '@/components/v2/FinalCTA';
 import FAQ, { type FAQItem, type FAQCategory } from '@/components/v2/FAQ';
+import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 
@@ -53,9 +54,9 @@ const LAV_SOFT = '#ECEAFB';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'SaaS Website Design: Marketing Sites That Sell Software | FactoryJet',
+  title: 'SaaS Website Design That Sells Software | FactoryJet',
   description:
-    'SaaS website design for a product nobody can pick up and hold. Free-trial and demo funnels built as two motions, a pricing page that sorts buyers, docs and changelog treated as search assets, and integration and security pages that clear procurement.',
+    'SaaS website design that turns software into revenue. Free-trial and demo funnels, clear pricing tables, and procurement-ready security pages.',
   keywords: [
     'saas website design',
     'saas web design',
@@ -102,6 +103,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: PAGE_URL,
+    languages: {
+      'en-US': PAGE_URL,
+      'x-default': PAGE_URL,
+    },
   },
   robots: {
     index: true,
@@ -565,14 +570,24 @@ const faqSchema = {
   })),
 };
 
+/** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
+ *  <Breadcrumbs> component and the BreadcrumbList JSON-LD below, so the two
+ *  can never drift into showing a different path than the schema claims. */
+const BREADCRUMB_ITEMS: BreadcrumbItem[] = [
+  { name: 'Home', url: 'https://factoryjet.com' },
+  { name: 'Services', url: 'https://factoryjet.com/services' },
+  { name: 'SaaS Website Design', url: PAGE_URL },
+];
+
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://factoryjet.com/services' },
-    { '@type': 'ListItem', position: 3, name: 'SaaS Website Design', item: PAGE_URL },
-  ],
+  itemListElement: BREADCRUMB_ITEMS.map((item, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: item.name,
+    item: item.url,
+  })),
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -638,6 +653,7 @@ export default function SaasWebsiteDesignPage() {
       <SiteHeader />
 
       <main style={{ backgroundColor: CREAM }}>
+        <Breadcrumbs items={BREADCRUMB_ITEMS} />
         {/* ─── 1. HERO ─────────────────────────────────────────────────── */}
         <section className="relative overflow-hidden">
           <div className="mx-auto grid max-w-[1180px] grid-cols-1 items-center gap-12 px-6 py-16 md:px-8 lg:grid-cols-[1.02fr_0.98fr] lg:py-20">

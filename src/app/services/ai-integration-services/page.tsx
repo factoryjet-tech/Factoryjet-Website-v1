@@ -4,6 +4,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
+import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
 import Hero from '@/components/v2/Hero';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
@@ -22,7 +23,7 @@ import FinalCTA from '@/components/v2/FinalCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'AI Integration Services USA | Connect AI to Your Tools | FactoryJet',
+  title: 'AI Integration Services USA: Connect AI to Tools | FactoryJet',
   description:
     'Add AI to your existing business software: CRM, e-commerce, ERP & custom apps. Expert AI integration. Get a quote.',
   openGraph: {
@@ -51,7 +52,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://factoryjet.com/services/ai-integration-services',
-    languages: usServiceAlternates['ai-integration-services'],
+    languages: {
+      'en-US': 'https://factoryjet.com/services/ai-integration-services',
+      'x-default': 'https://factoryjet.com/services/ai-integration-services',
+    },
   },
   robots: {
     index: true,
@@ -163,15 +167,25 @@ const howToSchema = {
   ],
 };
 
+/** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
+ *  <Breadcrumbs> component and the BreadcrumbList JSON-LD below, so the two
+ *  can never drift into showing a different path than the schema claims. */
+const BREADCRUMB_ITEMS: BreadcrumbItem[] = [
+  { name: 'Home', url: 'https://factoryjet.com' },
+  { name: 'Services', url: 'https://factoryjet.com/services' },
+  { name: 'AI Integration Services', url: 'https://factoryjet.com/services/ai-integration-services' },
+];
+
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   '@id': 'https://factoryjet.com/services/ai-integration-services#breadcrumb',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-    { '@type': 'ListItem', position: 2, name: 'US Services', item: 'https://factoryjet.com/services' },
-    { '@type': 'ListItem', position: 3, name: 'AI Integration Services', item: 'https://factoryjet.com/services/ai-integration-services' },
-  ],
+  itemListElement: BREADCRUMB_ITEMS.map((item, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: item.name,
+    item: item.url,
+  })),
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -648,6 +662,7 @@ export default function AIIntegrationServicesPage() {
       />
 
       <main className="bg-fj-cream">
+        <Breadcrumbs items={BREADCRUMB_ITEMS} />
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero

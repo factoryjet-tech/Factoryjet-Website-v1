@@ -8,6 +8,7 @@ import SiteFooter from '@/components/v2/SiteFooter';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import FinalCTA from '@/components/v2/FinalCTA';
 import FAQ, { type FAQItem, type FAQCategory } from '@/components/v2/FAQ';
+import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
 import HeroInlineForm from '@/components/HeroInlineForm';
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -65,9 +66,9 @@ const STEEL_SOFT = '#E4EAF0';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Manufacturing Website Design: Industrial Web Design That Wins RFQs | FactoryJet',
+  title: 'Manufacturing Website Design That Wins RFQs | FactoryJet',
   description:
-    'Manufacturing website design for US manufacturers, machine shops and industrial suppliers. Capability pages engineers can act on, RFQ forms that ask the right questions, spec sheets and CAD downloads, certifications, and distributor locators.',
+    'Manufacturing website design for US manufacturers & machine shops. Capability pages, RFQ forms, spec sheets, CAD downloads, and distributor locators.',
   keywords: [
     'manufacturing website design',
     'manufacturing web design',
@@ -118,6 +119,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: PAGE_URL,
+    languages: {
+      'en-US': PAGE_URL,
+      'x-default': PAGE_URL,
+    },
   },
   robots: {
     index: true,
@@ -625,14 +630,24 @@ const faqSchema = {
   })),
 };
 
+/** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
+ *  <Breadcrumbs> component and the BreadcrumbList JSON-LD below, so the two
+ *  can never drift into showing a different path than the schema claims. */
+const BREADCRUMB_ITEMS: BreadcrumbItem[] = [
+  { name: 'Home', url: 'https://factoryjet.com' },
+  { name: 'Services', url: 'https://factoryjet.com/services' },
+  { name: 'Manufacturing Website Design', url: PAGE_URL },
+];
+
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://factoryjet.com/services' },
-    { '@type': 'ListItem', position: 3, name: 'Manufacturing Website Design', item: PAGE_URL },
-  ],
+  itemListElement: BREADCRUMB_ITEMS.map((item, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: item.name,
+    item: item.url,
+  })),
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -698,6 +713,7 @@ export default function ManufacturingWebsiteDesignPage() {
       <SiteHeader />
 
       <main style={{ backgroundColor: CREAM }}>
+        <Breadcrumbs items={BREADCRUMB_ITEMS} />
         {/* ─── 1. HERO ─────────────────────────────────────────────────── */}
         <section className="relative overflow-hidden">
           <div className="mx-auto grid max-w-[1180px] grid-cols-1 items-center gap-12 px-6 py-16 md:px-8 lg:grid-cols-[1.02fr_0.98fr] lg:py-20">

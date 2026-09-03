@@ -8,6 +8,7 @@ import SiteFooter from '@/components/v2/SiteFooter';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import FinalCTA from '@/components/v2/FinalCTA';
 import FAQ, { type FAQItem, type FAQCategory } from '@/components/v2/FAQ';
+import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 
@@ -67,9 +68,9 @@ const LAV_SOFT = '#ECEAFB';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'AI Agents for Real Estate: Lead Response, Showings & Follow-Up | FactoryJet',
+  title: 'AI Agents for Real Estate Teams & Brokerages | FactoryJet',
   description:
-    'AI agents built for brokerages and real estate teams. Answer every inbound lead in seconds, qualify it, book the showing, keep the follow-up alive for months, and write it all back into Follow Up Boss, Lofty or Sierra. Fair housing guardrails in the tools, a licensed human on anything material.',
+    'AI agents for real estate brokerages and teams. Instant lead response, showing scheduling, long-cycle follow-up, and CRM enrichment. Free demo.',
   keywords: [
     'ai agents for real estate',
     'ai agent for real estate',
@@ -116,6 +117,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: PAGE_URL,
+    languages: {
+      'en-US': PAGE_URL,
+      'x-default': PAGE_URL,
+    },
   },
   robots: {
     index: true,
@@ -677,20 +682,25 @@ const faqSchema = {
   })),
 };
 
+/** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
+ *  <Breadcrumbs> component and the BreadcrumbList JSON-LD below, so the two
+ *  can never drift into showing a different path than the schema claims. */
+const BREADCRUMB_ITEMS: BreadcrumbItem[] = [
+  { name: 'Home', url: 'https://factoryjet.com' },
+  { name: 'Services', url: 'https://factoryjet.com/services' },
+  { name: 'AI Agent Development', url: 'https://factoryjet.com/services/ai-agent-development' },
+  { name: 'AI Agents for Real Estate', url: PAGE_URL },
+];
+
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://factoryjet.com/services' },
-    {
-      '@type': 'ListItem',
-      position: 3,
-      name: 'AI Agent Development',
-      item: 'https://factoryjet.com/services/ai-agent-development',
-    },
-    { '@type': 'ListItem', position: 4, name: 'AI Agents for Real Estate', item: PAGE_URL },
-  ],
+  itemListElement: BREADCRUMB_ITEMS.map((item, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: item.name,
+    item: item.url,
+  })),
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -756,6 +766,7 @@ export default function AiAgentsForRealEstatePage() {
       <SiteHeader />
 
       <main style={{ backgroundColor: CREAM }}>
+        <Breadcrumbs items={BREADCRUMB_ITEMS} />
         {/* ─── 1. HERO ─────────────────────────────────────────────────── */}
         <section className="relative overflow-hidden">
           <div className="mx-auto grid max-w-[1180px] grid-cols-1 items-center gap-12 px-6 py-16 md:px-8 lg:grid-cols-[1.02fr_0.98fr] lg:py-20">

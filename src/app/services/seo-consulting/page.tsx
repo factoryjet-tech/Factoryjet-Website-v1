@@ -8,6 +8,7 @@ import SiteFooter from '@/components/v2/SiteFooter';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import FinalCTA from '@/components/v2/FinalCTA';
 import FAQ, { type FAQItem, type FAQCategory } from '@/components/v2/FAQ';
+import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
 import HeroInlineForm from '@/components/HeroInlineForm';
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -51,9 +52,9 @@ const LAV_SOFT = '#ECEAFB';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'SEO Consulting Services in the US: Audits, Strategy & Roadmaps | FactoryJet',
+  title: 'SEO Consulting Services: Strategy & Roadmaps | FactoryJet',
   description:
-    'SEO consulting services for US teams that already have people who can execute. We diagnose why organic traffic is stuck, set the strategy, and hand your team a roadmap they can actually ship. Founder-led, advisory-first.',
+    'Advisory-first SEO consulting services for US teams. Traffic diagnosis, strategy, keyword research, and an execution roadmap. Free consultation.',
   keywords: [
     'seo consulting services',
     'seo consultants services',
@@ -92,6 +93,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: PAGE_URL,
+    languages: {
+      'en-US': PAGE_URL,
+      'x-default': PAGE_URL,
+    },
   },
   robots: {
     index: true,
@@ -518,14 +523,24 @@ const faqSchema = {
   })),
 };
 
+/** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
+ *  <Breadcrumbs> component and the BreadcrumbList JSON-LD below, so the two
+ *  can never drift into showing a different path than the schema claims. */
+const BREADCRUMB_ITEMS: BreadcrumbItem[] = [
+  { name: 'Home', url: 'https://factoryjet.com' },
+  { name: 'Services', url: 'https://factoryjet.com/services' },
+  { name: 'SEO Consulting', url: PAGE_URL },
+];
+
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://factoryjet.com/services' },
-    { '@type': 'ListItem', position: 3, name: 'SEO Consulting', item: PAGE_URL },
-  ],
+  itemListElement: BREADCRUMB_ITEMS.map((item, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: item.name,
+    item: item.url,
+  })),
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -590,6 +605,7 @@ export default function SeoConsultingPage() {
       <SiteHeader />
 
       <main style={{ backgroundColor: CREAM }}>
+        <Breadcrumbs items={BREADCRUMB_ITEMS} />
         {/* ─── 1. HERO ─────────────────────────────────────────────────── */}
         <section className="relative overflow-hidden">
           <div className="mx-auto grid max-w-[1180px] grid-cols-1 items-center gap-12 px-6 py-16 md:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:py-20">

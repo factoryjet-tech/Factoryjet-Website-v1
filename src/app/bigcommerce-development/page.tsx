@@ -7,6 +7,7 @@ import FAQ from '@/components/v2/FAQ';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
+import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
@@ -14,9 +15,9 @@ const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const IMG = '/images/us/omnichannel';
 
 export const metadata: Metadata = {
-  title: 'BigCommerce Development Agency | BigCommerce Developers | FactoryJet',
+  title: 'BigCommerce Development Agency & Developers | FactoryJet',
   description:
-    'BigCommerce development agency for DTC and B2B brands. We design, build, customize, and migrate BigCommerce stores, with open APIs, B2B Edition, multi-storefront, and headless BigCommerce builds. Get a fixed proposal before any work starts.',
+    'BigCommerce development agency for DTC & B2B brands. Custom themes, B2B Edition, headless builds, and API integrations. Fixed proposal before we start.',
   openGraph: {
     type: 'website', siteName: 'FactoryJet',
     title: 'BigCommerce Development Agency | BigCommerce Developers | FactoryJet',
@@ -26,7 +27,13 @@ export const metadata: Metadata = {
     locale: 'en_US',
   },
   twitter: { card: 'summary_large_image', title: 'BigCommerce Development Agency | FactoryJet', description: 'BigCommerce development: custom themes, B2B Edition, headless, API integrations.', images: ['https://factoryjet.com/og-default.png'] },
-  alternates: { canonical: 'https://factoryjet.com/bigcommerce-development' },
+  alternates: {
+    canonical: 'https://factoryjet.com/bigcommerce-development',
+    languages: {
+      'en-US': 'https://factoryjet.com/bigcommerce-development',
+      'x-default': 'https://factoryjet.com/bigcommerce-development',
+    },
+  },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
@@ -93,10 +100,24 @@ const ORG_SCHEMA = {
   
   sameAs: ['https://www.linkedin.com/company/factoryjet'],
 };
-const BREADCRUMB_SCHEMA = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-  { '@type': 'ListItem', position: 2, name: 'BigCommerce Development', item: 'https://factoryjet.com/bigcommerce-development' },
-] };
+/** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
+ *  <Breadcrumbs> component and the BreadcrumbList JSON-LD below, so the two
+ *  can never drift into showing a different path than the schema claims. */
+const BREADCRUMB_ITEMS: BreadcrumbItem[] = [
+  { name: 'Home', url: 'https://factoryjet.com' },
+  { name: 'BigCommerce Development', url: 'https://factoryjet.com/bigcommerce-development' },
+];
+
+const BREADCRUMB_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: BREADCRUMB_ITEMS.map((item, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: item.name,
+    item: item.url,
+  })),
+};
 
 const STATS = [
   { b: 'Open SaaS', s: 'open APIs, no transaction fees' },
@@ -164,6 +185,7 @@ export default function BigCommerceDevelopmentPage() {
       <SiteHeader navLinks={[]} cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
       <main className="platpage">
+        <Breadcrumbs items={BREADCRUMB_ITEMS} />
         {/* Hero */}
         <section className="pp-dotgrid">
           <div className="pp-wrap" style={{ paddingTop: 'clamp(44px,6vh,84px)', paddingBottom: 'clamp(44px,6vh,84px)' }}>

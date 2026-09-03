@@ -7,6 +7,7 @@ import FAQ from '@/components/v2/FAQ';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
+import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
@@ -14,19 +15,25 @@ const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const IMG = '/images/us/omnichannel';
 
 export const metadata: Metadata = {
-  title: 'Omnichannel Commerce Agency | Omnichannel Ecommerce Solutions | FactoryJet',
+  title: 'Omnichannel Commerce Agency & Solutions | FactoryJet',
   description:
-    'Omnichannel commerce agency for DTC and B2B brands. We build omnichannel ecommerce solutions that connect your web store, retail POS, marketplaces, and B2B portal to one catalog, one inventory, and one customer view, on Shopify, BigCommerce, Adobe Commerce, headless, or Commerceflo.',
+    'Omnichannel commerce agency for DTC and B2B brands. Connect web, retail POS, marketplaces, and B2B into one shared catalog and inventory pool.',
   openGraph: {
     type: 'website', siteName: 'FactoryJet',
-    title: 'Omnichannel Commerce Agency | Omnichannel Ecommerce Solutions | FactoryJet',
+    title: 'Omnichannel Commerce Agency & Solutions | FactoryJet',
     description: 'We build omnichannel ecommerce solutions that connect web, retail POS, marketplaces, and B2B to one catalog and one inventory.',
     url: 'https://factoryjet.com/omnichannel-commerce',
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet, omnichannel commerce agency' }],
     locale: 'en_US',
   },
   twitter: { card: 'summary_large_image', title: 'Omnichannel Commerce Agency | FactoryJet', description: 'Omnichannel ecommerce solutions: one catalog, one inventory, every channel.', images: ['https://factoryjet.com/og-default.png'] },
-  alternates: { canonical: 'https://factoryjet.com/omnichannel-commerce' },
+  alternates: {
+    canonical: 'https://factoryjet.com/omnichannel-commerce',
+    languages: {
+      'en-US': 'https://factoryjet.com/omnichannel-commerce',
+      'x-default': 'https://factoryjet.com/omnichannel-commerce',
+    },
+  },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
@@ -106,10 +113,24 @@ const WEBPAGE_SCHEMA = {
   publisher: { '@id': 'https://factoryjet.com/#organization' },
   isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
 };
-const BREADCRUMB_SCHEMA = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
-  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-  { '@type': 'ListItem', position: 2, name: 'Omnichannel Commerce', item: 'https://factoryjet.com/omnichannel-commerce' },
-] };
+/** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
+ *  <Breadcrumbs> component and the BreadcrumbList JSON-LD below, so the two
+ *  can never drift into showing a different path than the schema claims. */
+const BREADCRUMB_ITEMS: BreadcrumbItem[] = [
+  { name: 'Home', url: 'https://factoryjet.com' },
+  { name: 'Omnichannel Commerce', url: 'https://factoryjet.com/omnichannel-commerce' },
+];
+
+const BREADCRUMB_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: BREADCRUMB_ITEMS.map((item, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: item.name,
+    item: item.url,
+  })),
+};
 
 const STATS = [
   { b: 'One catalog', s: 'across every channel' },
@@ -173,6 +194,7 @@ export default function OmnichannelCommercePage() {
       <SiteHeader navLinks={[]} cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
       <main className="platpage">
+        <Breadcrumbs items={BREADCRUMB_ITEMS} />
         {/* Hero */}
         <section className="pp-dotgrid">
           <div className="pp-wrap" style={{ paddingTop: 'clamp(44px,6vh,84px)', paddingBottom: 'clamp(44px,6vh,84px)' }}>

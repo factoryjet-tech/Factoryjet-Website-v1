@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { websiteCostAlternates } from '@/data/hreflangMap';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
+import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import HeroInlineForm from '@/components/HeroInlineForm';
@@ -541,13 +542,23 @@ const faqSchema = {
   })),
 };
 
+/** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
+ *  <Breadcrumbs> component and the BreadcrumbList JSON-LD below, so the two
+ *  can never drift into showing a different path than the schema claims. */
+const BREADCRUMB_ITEMS: BreadcrumbItem[] = [
+  { name: 'Home', url: 'https://factoryjet.com' },
+  { name: 'Website Cost Guide', url: 'https://factoryjet.com/website-cost' },
+];
+
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
-    { '@type': 'ListItem', position: 2, name: 'Website cost guide', item: 'https://factoryjet.com/website-cost' },
-  ],
+  itemListElement: BREADCRUMB_ITEMS.map((item, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: item.name,
+    item: item.url,
+  })),
 };
 
 /* ── page ─────────────────────────────────────────────────────────────────── */
@@ -566,6 +577,7 @@ export default function WebsiteCostPage() {
       <SiteHeader locale="us" cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
       <main className="bg-white font-fj-body text-[#14110F]">
+        <Breadcrumbs items={BREADCRUMB_ITEMS} />
         {/* ── HERO ──────────────────────────────────────────────────────── */}
         <section className="border-b border-[#E7DED6]">
           <div className="mx-auto grid max-w-[1180px] gap-12 px-5 py-14 md:py-20 lg:grid-cols-12 lg:gap-16">
