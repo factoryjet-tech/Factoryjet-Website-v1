@@ -218,7 +218,10 @@ function measure(url, html) {
     .filter((h) => /^https?:\/\//i.test(h) && !h.startsWith(ORIGIN))
     .map((h) => { try { return new URL(h).hostname.replace(/^www\./, ''); } catch { return null; } })
     .filter(Boolean)
-    .filter((h) => !/facebook|twitter|x\.com|linkedin|instagram|youtube|wa\.me|whatsapp|calendly|goo\.gl|maps\.google/i.test(h)))];
+    // Anchored: an unanchored `x.com` also matched any domain that happens to END in
+    // that substring (e.g. marchex.com), silently dropping a real citation. Only
+    // exclude the actual x.com host (or a subdomain of it).
+    .filter((h) => !/facebook|twitter|linkedin|instagram|youtube|wa\.me|whatsapp|calendly|goo\.gl|maps\.google/i.test(h) && !/(^|\.)x\.com$/i.test(h)))];
 
   // images
   // alt="" is the CORRECT markup for a decorative image, so an attribute-present
