@@ -196,50 +196,50 @@ const INTEGRATION_TYPES = [
   {
     name: 'CRM AI Integration',
     description:
-      'Adds AI-powered capabilities directly inside HubSpot, Salesforce, Pipedrive, or Zoho: one-click email draft generation based on contact history, AI lead scoring, automated follow-up suggestions, and meeting summary generation from call notes, without leaving the CRM your team already uses every day.',
+      'We add AI-powered workflows directly inside HubSpot, Salesforce, Pipedrive, or Zoho. Sales reps generate email drafts with one click based on contact history. AI handles lead scoring and summarizes call notes without leaving your CRM.',
     example: 'Sales reps cut email writing time from 45 min to 8 min per day.',
-    linkLabel: 'See how it works',
-    linkHref: '/contact',
+    linkLabel: 'See AI automation services',
+    linkHref: '/services/ai-workflow-automation',
   },
   {
     name: 'E-Commerce AI Integration',
     description:
-      'Adds AI to Shopify, WooCommerce, or BigCommerce: automated product description generation for new SKUs, customer review sentiment analysis, personalized product recommendation APIs, and AI-written SEO metadata, connected directly to your existing store admin and product database.',
+      'We connect AI directly to Shopify, WooCommerce, or BigCommerce. Automatically generate product descriptions and SEO metadata for every new SKU. Analyze customer review sentiment to surface instant buying recommendations.',
     example: 'Shopify brands see 18–25% higher conversion on AI-written product pages.',
-    linkLabel: 'Start a conversation',
-    linkHref: '/contact',
+    linkLabel: 'Explore ecommerce solutions',
+    linkHref: '/services/ecommerce-development',
   },
   {
     name: 'Support Desk AI Integration',
     description:
-      'Connects AI to Zendesk, Intercom, Freshdesk, or Help Scout to automatically classify and tag incoming tickets by topic and urgency, draft reply suggestions based on your knowledge base, detect customer sentiment, and surface related past tickets, before a support agent opens the conversation.',
+      'We integrate AI with Zendesk, Intercom, Freshdesk, or Help Scout. Incoming tickets are classified and tagged by topic and urgency before an agent opens them. Draft replies pull verified answers from your documentation.',
     example: 'Teams report 35% reduction in average handle time per ticket.',
-    linkLabel: 'See pricing',
-    linkHref: '#pricing',
+    linkLabel: 'Explore AI chatbot services',
+    linkHref: '/services/ai-chatbot-development',
   },
   {
     name: 'Document AI Integration',
     description:
-      'Reads, classifies, and extracts structured data from PDFs, scanned forms, contracts, and invoices, connected to your existing document storage (Google Drive, Box, SharePoint) and downstream tools (QuickBooks, your CRM, your database). No more opening documents one by one.',
+      'Extract structured data from PDFs, scanned forms, contracts, and invoices automatically. Connect document storage in Google Drive or Box directly to QuickBooks and your CRM. Eliminate manual data entry completely.',
     example: 'Processes 200+ documents per hour vs. 10–15 manually.',
-    linkLabel: 'Book a strategy call',
-    linkHref: '/contact',
+    linkLabel: 'See AI agent development',
+    linkHref: '/services/ai-agent-development',
   },
   {
     name: 'Custom App AI Integration',
     description:
-      'Embeds GPT-4o, Claude, or a fine-tuned model directly into your internal web app, admin panel, or customer-facing product via REST API. AI features appear as native parts of your existing interface, no separate tool for your team to learn, no new login to manage.',
+      'Embed GPT-4o, Claude, or custom fine-tuned models directly into your internal web app or admin panel via REST API. AI features appear as native parts of your existing interface. Your team requires no new logins.',
     example: 'Most custom integrations go live in 2–3 weeks from kickoff.',
-    linkLabel: 'Learn more',
-    linkHref: '/contact',
+    linkLabel: 'See web app development',
+    linkHref: '/services/web-application-development',
   },
   {
     name: 'Database & Analytics AI Integration',
     description:
-      'Adds natural-language query capabilities to your existing databases (ask questions in plain English, get SQL results) and AI-powered anomaly detection to your reporting pipelines, flagging unusual patterns in revenue, inventory, or user behavior before they become problems.',
+      'Add natural-language queries to your existing databases. Ask questions in plain English and receive accurate SQL results instantly. Anomaly detection flags unusual revenue or inventory patterns before issues escalate.',
     example: 'Finance teams catch data anomalies days earlier than before.',
-    linkLabel: 'Get a free assessment',
-    linkHref: '/contact',
+    linkLabel: 'Explore AI SEO & data',
+    linkHref: '/services/ai-seo',
   },
 ];
 
@@ -321,7 +321,7 @@ const COMPARISON_COLUMNS = [
 
 const COMPARISON_ROWS = [
   {
-    feature: 'Pricing model',
+    feature: 'Pricing model.',
     values: [
       'Fixed-price, one-time.',
       'Enterprise budgets.',
@@ -330,11 +330,11 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Delivery timeline',
+    feature: 'Delivery timeline.',
     values: ['1–3 weeks.', '2–4 months.', 'Hours (limited capability).', '4–12 weeks.'],
   },
   {
-    feature: 'Custom to your specific workflow',
+    feature: 'Custom to your specific workflow.',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="yes" />,
@@ -343,7 +343,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Connects to your existing CRM / stack',
+    feature: 'Connects to your existing CRM / stack.',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="yes" />,
@@ -352,7 +352,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Prompt engineering optimized for your data',
+    feature: 'Prompt engineering optimized for your data.',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="yes" />,
@@ -361,7 +361,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'You own the integration code',
+    feature: 'You own the integration code.',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="partial" />,
@@ -370,7 +370,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'No ongoing per-user SaaS fees',
+    feature: 'No ongoing per-user SaaS fees.',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="yes" />,
@@ -379,7 +379,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: '30-day post-launch support',
+    feature: '30-day post-launch support.',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="partial" />,
@@ -388,7 +388,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: '12+ years of SMB domain experience',
+    feature: '12+ years of SMB domain experience.',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="no" />,
@@ -481,7 +481,7 @@ const FAQ_ITEMS = [
     category: 'what-is',
     question: 'What kinds of AI integrations does FactoryJet build?',
     answer:
-      'Six core types: CRM AI (email drafts, lead scoring in HubSpot/Salesforce), E-Commerce AI (product descriptions, recommendations for Shopify/WooCommerce), Support Desk AI (ticket classification, reply suggestions in Zendesk/Intercom), Document AI (extract and classify data from PDFs and forms), Custom App AI (embed AI in your internal tools via API), and Data Intelligence AI (natural-language queries and anomaly detection on your databases).',
+      'We build six core integration types. First is CRM AI for email drafts and lead scoring in HubSpot and Salesforce. Second is E-Commerce AI for product descriptions and recommendations on Shopify. Third is Support Desk AI for ticket classification in Zendesk and Intercom. Fourth is Document AI for extracting data from PDFs. Fifth is Custom App AI for internal tools via API. Sixth is Data Intelligence for natural-language queries and anomaly detection.',
   },
   {
     category: 'what-is',
@@ -495,7 +495,7 @@ const FAQ_ITEMS = [
     category: 'process',
     question: 'What does the AI integration process look like?',
     answer:
-      'Four stages: Discover (audit your software stack, identify the highest-value AI integration points, define data flows), Design (API architecture, prompt engineering approach, how outputs surface in your existing UI), Build (develop and test with weekly demos, you see AI working in your actual tools), and Deploy (production launch with monitoring, documentation, and 30-day support). Most integrations don\'t require changes to your existing software UI.',
+      'Our process runs in four clear stages. First is Discover: we audit your stack and identify high-value integration points. Second is Design: we map API architecture and prompt engineering. Third is Build: we develop connectors with weekly demos in your actual tools. Fourth is Deploy: we launch with monitoring, full documentation, and 30-day support. Most builds require zero UI changes.',
   },
   {
     category: 'process',
@@ -521,7 +521,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much do AI integration services cost?',
     answer:
-      'FactoryJet\'s AI integrations are fixed-price and scoped to your build: the main drivers are how many systems you connect, the complexity of the API layer, and any model fine-tuning or compliance needs. Most US SMBs choose our Growth tier, covering multi-system AI integration with a unified API layer and monitoring. Enterprise integrations with custom model fine-tuning, legacy system APIs, and compliance requirements are scoped separately. All pricing is fixed and confirmed upfront after a free quote, no hourly billing, no scope creep.',
+      'FactoryJet AI integrations are fixed-price and scoped to your build. Key drivers include system count, API complexity, and custom fine-tuning needs. Most clients choose our Growth tier with multi-system connectors and unified monitoring. Enterprise integrations with compliance rules and legacy systems are scoped individually. All quotes are fixed upfront with zero hourly billing.',
   },
   {
     category: 'pricing',
@@ -547,13 +547,13 @@ const FAQ_ITEMS = [
     category: 'technical',
     question: 'What software platforms can AI be integrated with?',
     answer:
-      'We integrate AI into: CRMs (HubSpot, Salesforce, Pipedrive, Zoho), e-commerce (Shopify, WooCommerce, BigCommerce), support desks (Zendesk, Intercom, Freshdesk), accounting (QuickBooks, Xero), document management (Google Drive, Box, SharePoint), databases (PostgreSQL, MySQL, Supabase, Firebase), and custom web applications via REST API. If your software has an API or webhook, we can connect AI to it.',
+      'We integrate AI into standard CRMs like HubSpot and Salesforce. We connect e-commerce stores on Shopify, BigCommerce, and WooCommerce. We support Zendesk, QuickBooks, Google Drive, PostgreSQL, and custom web apps via REST API. If your software has an API or webhook, we connect AI to it.',
   },
   {
     category: 'technical',
     question: 'How do you ensure AI outputs are accurate and on-brand?',
     answer:
-      'Four mechanisms: prompt engineering (precise instructions with examples and constraints), output validation (automated checks before outputs reach your team), human-in-the-loop review flows (AI drafts, person approves before sending), and usage monitoring (we review real output samples during the 30-day window and tune prompts based on performance).',
+      'We enforce accuracy through four mechanisms. First is prompt engineering with explicit constraints. Second is automated output validation before data reaches staff. Third is human-in-the-loop review where a person approves drafts. Fourth is continuous usage monitoring and tuning.',
   },
   {
     category: 'technical',
@@ -585,7 +585,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'What are the most common first AI integrations US small businesses build?',
     answer:
-      'The four most common: (1) CRM email draft generation, sales reps get a personalized follow-up draft with one click; (2) support ticket auto-classification, tickets tagged before a human opens them; (3) product description generation, new SKUs get AI-written, SEO-optimized descriptions automatically; (4) document data extraction, invoices and forms read by AI with key fields populated in your database.',
+      'We see four common starting points. First is CRM email draft generation for one-click sales follow-ups. Second is support ticket auto-classification before an agent opens the queue. Third is automatic product description and metadata generation for new SKUs. Fourth is document data extraction from invoices and intake forms.',
   },
   {
     category: 'trust',
