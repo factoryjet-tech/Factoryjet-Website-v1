@@ -56,7 +56,15 @@
 
     "oracle", "microsoft dynamics", "siemens", "siemens opcenter", "fanuc",
     "rockwell automation", "allen-bradley", "ignition scada", "kepware", "wonderware",
-    "plex", "iqms", "delmiaworks", "machinemetrics", "tulip"
+    "plex", "iqms", "delmiaworks", "machinemetrics", "tulip",
+
+    "follow up boss", "kvcore", "boomtown", "real geeks", "lofty", "zillow", "realtor.com",
+    "yardi", "appfolio", "buildium", "dotloop",
+    "acculynx", "roofr", "companycam", "leap", "sumoquote", "hover", "eagleview",
+    "blackbaud", "bloomerang", "donorperfect", "classy", "givebutter", "neon crm", "kindful", "fundraise up",
+    "google search console", "gsc", "ahrefs", "semrush", "screaming frog", "sitebulb", "botify",
+    "deepcrawl", "lumar", "google business profile", "gbp", "brightlocal", "whitespark", "moz",
+    "jobboss", "global shop solutions", "solidworks", "autocad", "autodesk", "ptc creo", "catia", "onshape", "mastercam"
   ],
   "capabilities": [
     "erp integration", "erp sync", "punchout catalog", "punchout", "cxml", "oci", "edi",
@@ -103,6 +111,14 @@
     "cmms", "iso 9001", "six sigma",
     "shop floor", "production line", "quality control", "quality management system", "qms",
     "procurement", "supply chain visibility", "barcode scanning", "rfid tracking",
-    "digital twin", "opc-ua", "opc ua", "modbus"
+    "digital twin", "opc-ua", "opc ua", "modbus",
+
+    "idx feed", "idx search", "mls integration", "rets feed", "reso web api", "property alerts",
+    "showing scheduling", "local map pack", "nap consistency", "citation audit", "google maps ranking",
+    "aerial roof measurement", "storm damage leads", "donor portal", "recurring donation",
+    "gift matching", "pledge management", "peer-to-peer fundraising", "donor retention", "501(c)(3)",
+    "rfq portal", "cad viewer", "step file viewer", "drawing extraction", "as9100", "interactive quoting",
+    "contract manufacturing", "crawl log analysis", "render budget", "canonical audit",
+    "hreflang validation", "indexation strategy", "faceted navigation seo", "serp feature optimization"
   ]
 }

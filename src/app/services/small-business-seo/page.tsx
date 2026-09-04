@@ -1122,6 +1122,9 @@ export default function SmallBusinessSeoServicePage() {
                   Talk to the founder <span aria-hidden="true">&rarr;</span>
                 </Link>
                 <div className="fine">Founder-led. Month-to-month. Reported in leads, not rankings.</div>
+                <div className="mt-4 pt-4 border-t border-black/10 text-xs text-fj-neutral-500">
+                  Related services: <Link href="/services/seo-consulting" className="underline font-semibold text-fj-ink">SEO Consulting Services</Link>, <Link href="/services/seo" className="underline font-semibold text-fj-ink">Managed SEO Services</Link>, and <Link href="/services/small-business-website-design" className="underline font-semibold text-fj-ink">Small Business Web Design</Link>.
+                </div>
               </div>
             </div>
           </div>

@@ -141,36 +141,36 @@ const howToSchema = {
 
 const WEB_DESIGN_TYPES = [
   {
-    name: 'Business Websites',
+    name: 'B2B & Corporate Websites',
     description:
-      'Clean, fast, conversion-focused websites for service businesses, consultants, and local companies. Built on Next.js or WordPress with a CMS so you can update content without touching code.',
-    example: 'Avg. Lighthouse score 98-100 across all four categories on delivery.',
-    linkLabel: 'Get a free audit',
-    linkHref: '/contact',
+      'Websites designed for complex buying committees, procurement review, and lead generation. Built on Next.js or WordPress with full CMS control.',
+    example: 'Built for B2B enterprises, professional services, and high-consideration sales.',
+    linkLabel: 'See B2B web design',
+    linkHref: '/services/b2b-website-design',
   },
   {
-    name: 'Landing Pages',
+    name: 'Manufacturing & Industrial',
     description:
-      'Single-purpose, high-converting landing pages for paid campaigns, product launches, or lead generation. Designed to a specific CTA, A/B-test ready, and built to load in under 1.5 seconds.',
-    example: 'Clients report 30-45% improvement in form conversion vs. homepage CTA.',
-    linkLabel: 'See examples',
-    linkHref: '/contact',
+      'Custom websites for precision manufacturers, OEMs, and distributors with RFQ capture, CAD file specs, and ERP integration.',
+    example: 'Avg. Lighthouse score 98-100 across performance and accessibility.',
+    linkLabel: 'Explore manufacturing web design',
+    linkHref: '/services/manufacturing-website-design',
   },
   {
-    name: 'Shopify Stores',
+    name: 'SaaS & Tech Platforms',
     description:
-      'Custom Shopify storefronts with branded themes, optimized product pages, upsell flows, and checkout customizations. Integrated with your inventory, email platform, and analytics from day one.',
-    example: 'E-commerce clients average 2.3× improvement in mobile add-to-cart rate.',
-    linkLabel: 'See Shopify work',
-    linkHref: '/services/shopify-development',
+      'Product marketing websites for B2B SaaS companies. Interactive product tours, pricing matrices, and CRM lead capture.',
+    example: 'Optimized for high-velocity signups and demo request conversion.',
+    linkLabel: 'See SaaS web design',
+    linkHref: '/services/saas-website-design',
   },
   {
-    name: 'WordPress Sites',
+    name: 'Nonprofit Organizations',
     description:
-      'Headless or traditional WordPress sites with custom block themes, ACF fields, and a content editor your team can actually use. Optimized for Core Web Vitals and long-term editorial flexibility.',
-    example: 'Average Time-to-First-Byte under 180ms on shared hosting after optimization.',
-    linkLabel: 'Start a conversation',
-    linkHref: '/contact',
+      'Engaging, accessible websites for non-profits and foundations with secure recurring donation portals and donor CRM sync.',
+    example: 'WCAG 2.1 AA compliant, integrated with Stripe and donor platforms.',
+    linkLabel: 'See nonprofit web design',
+    linkHref: '/services/nonprofit-website-design',
   },
   {
     name: 'Portfolio & Agency Sites',
@@ -186,7 +186,7 @@ const WEB_DESIGN_TYPES = [
       'We audit your existing site, identify what\'s hurting performance and conversions, preserve your URL structure and SEO equity, and rebuild on a modern tech stack, with zero downtime on launch day.',
     example: 'Clients average 40% improvement in Google PageSpeed score post-redesign.',
     linkLabel: 'Book an audit',
-    linkHref: '/contact',
+    linkHref: '/services/website-redesign',
   },
 ];
 

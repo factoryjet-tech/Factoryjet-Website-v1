@@ -61,6 +61,7 @@ const FAQ_ITEMS = [
   { category: 'working', question: 'How long does a BigCommerce build take?', answer: 'Most builds and migrations run from a few weeks to a few months, depending on catalog size and B2B complexity. You get a phased timeline with milestones after a short scoping call.' },
   { category: 'working', question: 'Do we own the BigCommerce store you build?', answer: 'Yes. You own and operate everything we build. We design, build, implement, and hand it over, and we stay on call to support and scale it. We never run your store for you.' },
   { category: 'working', question: 'Do you work with US BigCommerce brands?', answer: 'Yes, most of the brands we work with are US-based, across DTC and B2B, with a decade-plus of commerce builds behind us.' },
+  { category: 'working', question: 'How does BigCommerce handle high-traffic flash sales and Cyber 5 spikes?', answer: 'BigCommerce operates on Google Cloud Platform with multi-tenant autoscaling infrastructure and Akamai CDN edge caching. The platform effortlessly handles thousands of checkout requests per second without throttling, maintaining sub-second response times during peak holiday spikes.' },
 ];
 // Freshness signal. Benchmark: 56% of AI-Overview-cited pages carry it.
 // Keep honest: bump when the page's content actually changes.
@@ -121,9 +122,9 @@ const BREADCRUMB_SCHEMA = {
 
 const STATS = [
   { b: 'Open SaaS', s: 'open APIs, no transaction fees' },
-  { b: 'B2B Edition', s: 'trade pricing & portals' },
-  { b: 'Headless-ready', s: 'any front end via API' },
-  { b: '10+ yrs', s: 'building commerce' },
+  { b: 'B2B Edition', s: 'trade pricing & buyer portals' },
+  { b: 'Headless-ready', s: 'Next.js & GraphQL APIs' },
+  { b: '10+ yrs', s: 'enterprise commerce builds' },
 ];
 const SOURCED = [
   { v: '$34B', d: 'in merchant GMV across BigCommerce stores in 2024, up about 18% year over year.', src: 'BigCommerce / Statista', href: 'https://www.statista.com/topics/13154/bigcommerce/' },
@@ -131,21 +132,46 @@ const SOURCED = [
   { v: '+26%', d: 'Cyber Week 2024 GMV growth for brands on BigCommerce, outperforming global benchmarks.', src: 'BigCommerce, 2024', href: 'https://investors.bigcommerce.com/news-releases/news-release-details/brands-and-retailers-bigcommerce-outperform-global-benchmarks-26' },
 ];
 const BENEFITS = [
-  { i: '◇', t: 'Open APIs, no transaction fees', d: 'Customize anything through the API and keep more margin, with no per-sale platform fee.' },
-  { i: '▤', t: 'B2B Edition built in', d: 'Price lists, customer groups, quotes, and trade portals without bolting on a separate system.' },
-  { i: '⛓', t: 'Headless-ready', d: 'Run any front end against BigCommerce as the commerce engine when you need custom UX or speed.' },
-  { i: '▦', t: 'Multi-storefront', d: 'Several storefronts, currencies, and catalogs from one BigCommerce account and admin.' },
-  { i: '↻', t: 'Lower total cost', d: 'Hosting, maintenance, and PCI handled, so your team builds instead of babysitting servers.' },
-  { i: '⤢', t: 'Built to scale', d: 'High catalog limits and strong performance for fast-growing mid-market brands.' },
+  { i: '◇', t: 'Open APIs, zero transaction fees', d: 'Full control over your data with unlimited API calls, no penalty fees on third-party payment gateways, and transparent pricing structure.' },
+  { i: '▤', t: 'Native B2B Edition architecture', d: 'Enterprise wholesale features out of the box: customer group pricing, custom quote generation, invoice net terms, and corporate account management.' },
+  { i: '⛓', t: 'Composable headless commerce', d: 'Decouple your presentation layer with BigCommerce GraphQL Storefront APIs and Next.js for sub-second performance across multi-regional storefronts.' },
+  { i: '▦', t: 'Multi-Storefront (MSF) control', d: 'Manage multiple localized storefronts, languages, B2B wholesale portals, and DTC brands from a single consolidated administration dashboard.' },
+  { i: '↻', t: 'Zero server maintenance overhead', d: 'Enterprise PCI DSS Level 1 certified SaaS infrastructure with 99.99% uptime, automated security updates, and global CDN caching.' },
+  { i: '⤢', t: 'Complex catalog scalability', d: 'Native support for up to 600 SKUs per product, 250 product attributes, and massive inventories with automated PIM synchronization.' },
+  { i: '⚙', t: 'Seamless ERP and CRM integration', d: 'Direct bidirectional syncing with NetSuite, SAP, Acumatica, Dynamics 365, Salesforce, and HubSpot for real-time order and inventory management.' },
+  { i: '🛡', t: 'Enterprise checkout customization', d: 'Optimized single-page checkout, custom field injection, automated tax calculation via Avalara, and localized shipping rules.' },
 ];
 const CAPABILITIES = [
-  { t: 'Custom theme & storefront', d: 'A fast, on-brand BigCommerce theme built from your design, not a generic template.' },
-  { t: 'B2B Edition setup', d: 'Customer groups, price lists, net terms, quotes, and trade portals configured for your buyers.' },
-  { t: 'Headless builds', d: 'BigCommerce as the engine behind a Next.js or custom front end, connected via API.' },
-  { t: 'Apps & integrations', d: 'ERP, PIM, POS, 3PL, and marketplace integrations through the BigCommerce API.' },
-  { t: 'Multi-storefront & currency', d: 'Multiple storefronts, regions, and currencies from one account.' },
-  { t: 'Migration to BigCommerce', d: 'Move from Magento, WooCommerce, or others with 301 redirects and SEO preserved.' },
+  { t: 'Custom Stencil Theme Development', d: 'Pixel-perfect, performance-tuned BigCommerce Stencil themes engineered from custom Figma designs with zero template bloat.' },
+  { t: 'B2B Edition Portal Configuration', d: 'Setup corporate account hierarchies, buyer purchasing roles, automated quoting, tier-based price lists, and requisition lists.' },
+  { t: 'Headless Next.js Storefront Engineering', d: 'Ultra-fast composable storefronts powered by Next.js, BigCommerce GraphQL APIs, and Vercel edge deployment for optimal Core Web Vitals.' },
+  { t: 'ERP, PIM, and 3PL Middleware Sync', d: 'Robust middleware development connecting BigCommerce to NetSuite, SAP, Salsify, Akeneo, ShipBob, and custom legacy back-office systems.' },
+  { t: 'Multi-Storefront (MSF) Deployment', d: 'Launch localized international storefronts, sub-brands, and wholesale channels with region-specific currencies and product catalogs.' },
+  { t: 'Enterprise Platform Migration', d: 'Zero-downtime migration from Magento 1/2, Shopify Plus, WooCommerce, and Salesforce Commerce Cloud with strict 301 SEO redirects.' },
+  { t: 'Custom BigCommerce App Development', d: 'Private and public app engineering utilizing BigCommerce REST APIs, Webhooks, and secure app extensions for tailored operational workflows.' },
+  { t: 'Conversion Rate & Speed Optimization', d: 'Core Web Vitals auditing, JavaScript refactoring, image optimization, and checkout conversion tuning to maximize merchant revenue.' },
 ];
+
+const ENTERPRISE_PILLARS = [
+  { t: 'Bidirectional ERP & WMS Synchronization', d: 'We build enterprise connectors connecting BigCommerce to systems like NetSuite, SAP, Acumatica, and Microsoft Dynamics 365 Business Central. Automated webhooks synchronize stock levels across multiple fulfillment centers, handle order routing, and update shipping tracking status without manual data entry.' },
+  { t: 'Corporate B2B Account Hierarchies', d: 'Enable self-service purchasing for enterprise wholesale buyers. With BigCommerce B2B Edition, organizations can assign specific purchasing agents, establish corporate spending limits, approve employee purchase orders, and request custom volume pricing directly inside the trade portal.' },
+  { t: 'Multi-Storefront (MSF) Localization', d: 'Scale into international territories effortlessly. BigCommerce MSF allows merchants to maintain distinct localized storefronts for the US, UK, EU, and Australia with tailored currency pricing, regional inventory buffers, and localized marketing assets managed from a single admin panel.' },
+  { t: 'Composable Architecture & GraphQL APIs', d: 'Leverage BigCommerce as a robust headless backend while running modern frontend frameworks like Next.js and Tailwind CSS. We query the BigCommerce GraphQL Storefront API to deliver sub-second page loads, dynamic client-side filtering, and custom omnichannel touchpoints.' },
+  { t: 'PIM Integration for Complex Catalogs', d: 'For merchants with hundreds of thousands of SKUs and deep technical specifications, we integrate specialized Product Information Management (PIM) systems like Akeneo, Salsify, and Pimcore to maintain pristine product data feeds across storefronts and digital marketplaces.' },
+  { t: 'Tax, Fraud & Compliance Automation', d: 'Ensure full regulatory compliance across domestic and international jurisdictions. We integrate Avalara AvaTax, Vertex, and Signifyd to automate real-time sales tax calculation, cross-border duty collection, and fraud prevention during high-volume peak shopping events.' },
+  { t: 'Subscription & Recurring Revenue Engines', d: 'Transform one-off buyers into predictable recurring revenue. We implement advanced subscription workflows powered by Recharge or native BigCommerce recurring billing engines with self-service customer subscription portals.' },
+  { t: 'Omnichannel Marketplace Distribution', d: 'Centralize your sales footprint across third-party channels. We configure automated catalog and inventory syndication to Amazon, Walmart Marketplace, eBay, TikTok Shop, and Google Shopping with centralized order fulfillment inside BigCommerce.' },
+];
+
+const MIGRATION_WORKFLOW = [
+  { n: '01', t: 'Data Architecture Audit', d: 'We analyze your legacy database schema, product variants, customer histories, B2B price lists, and URL taxonomies to construct a zero-data-loss mapping blueprint.' },
+  { n: '02', t: 'Customer & Order Data Migration', d: 'Historical orders, transaction records, customer accounts, and secure password mapping protocols are executed with complete relational integrity.' },
+  { n: '03', t: 'Theme & UX Engineering', d: 'Custom BigCommerce Stencil or headless Next.js frontend is engineered, tested against strict accessibility standards, and tuned for sub-second Core Web Vitals.' },
+  { n: '04', t: 'Third-Party API & ERP Integration', d: 'Middleware connectors are configured and stress-tested against ERP, PIM, payment gateways, CRM, and fulfillment webhooks to ensure synchronous data flow.' },
+  { n: '05', t: '301 Redirect Mapping & SEO Guardrails', d: 'Every legacy URL is mapped one-to-one to its new destination. Canonical tags, structured data schema, and XML sitemaps are verified to preserve Google rankings.' },
+  { n: '06', t: 'Zero-Downtime DNS Cutover & Support', d: 'Cutover is executed during low-traffic windows with active DNS monitoring, automated synthetic testing, and 24/7 hypercare support post-launch.' },
+];
+
 const USECASES = [
   { t: 'Mid-market DTC brands', img: 'retail-dtc.webp', alt: 'A growing mid-market retail brand serving a customer at a BigCommerce-powered point of sale', d: 'Fast, custom storefronts that scale with a growing catalog, with no transaction fees eating your margin and the open API ready for whatever you bolt on next.' },
   { t: 'B2B on BigCommerce', img: 'wholesale-dtc.webp', alt: 'A wholesale team fulfilling trade orders placed through a BigCommerce B2B Edition store', d: 'B2B Edition with price lists, customer groups, quotes, and net terms, so trade buyers self-serve on the same platform as your DTC store.' },
@@ -163,6 +189,7 @@ const STEPS = [
   { n: '02', t: 'Design & build', d: 'A custom BigCommerce theme plus B2B Edition, checkout, and apps configured for your store.' },
   { n: '03', t: 'Integrate', d: 'ERP, PIM, POS, 3PL, and marketplaces connected through the BigCommerce API.' },
   { n: '04', t: 'Migrate & launch', d: 'Data migration with 301 redirects, staging QA, a clean cutover, then you own and run it.' },
+  { n: '05', t: 'Own and scale', d: 'You own and operate the store completely; we provide proactive support and optimization as you scale.' },
 ];
 
 const imgStyle = { width: '100%', height: 'auto', objectFit: 'cover' as const, borderRadius: '18px', border: '1px solid var(--pp-line)', display: 'block' };
@@ -223,7 +250,7 @@ export default function BigCommerceDevelopmentPage() {
 
         {/* Stat band */}
         <section className="pp-sec tint" style={{ paddingTop: 'clamp(32px,4vh,52px)', paddingBottom: 'clamp(32px,4vh,52px)' }}>
-          <div className="pp-wrap"><div className="pp-stats">{STATS.map((s) => (<div className="pp-stat" key={s.b}><b>{s.b}</b><span>{s.s}</span></div>))}</div></div>
+          <div className="pp-wrap"><ul className="pp-stats">{STATS.map((s) => (<li className="pp-stat" key={s.b}><b>{s.b}</b><span>{s.s}</span></li>))}</ul></div>
         </section>
 
         {/* What is */}
@@ -258,15 +285,15 @@ export default function BigCommerceDevelopmentPage() {
           <div className="pp-wrap">
             <p className="pp-mlabel">// why brands pick BigCommerce</p>
             <h2 style={{ marginTop: '10px' }}>A platform built for scale</h2>
-            <div className="pp-bento" style={{ marginTop: '36px' }}>
+            <ul className="pp-bento" style={{ marginTop: '36px' }}>
               {SOURCED.map((s) => (
-                <article className="pp-card" key={s.v}>
+                <li className="pp-card" key={s.v}>
                   <div style={{ fontFamily: 'var(--pp-display)', fontWeight: 800, fontSize: '32px', lineHeight: 1, color: 'var(--pp-orange-dark)', letterSpacing: '-0.03em' }}>{s.v}</div>
                   <p style={{ marginTop: '10px' }}>{s.d}</p>
                   <a href={s.href} target="_blank" rel="noopener noreferrer" style={{ marginTop: '12px', display: 'inline-block', fontFamily: 'var(--pp-mono)', fontSize: '11px', color: 'var(--pp-muted)', textDecoration: 'underline' }}>Source: {s.src}</a>
-                </article>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 
@@ -275,14 +302,14 @@ export default function BigCommerceDevelopmentPage() {
           <div className="pp-wrap">
             <p className="pp-mlabel">// why it pays off</p>
             <h2 style={{ marginTop: '10px' }}>Why build on BigCommerce</h2>
-            <div className="pp-bento" style={{ marginTop: '36px' }}>
+            <ul className="pp-bento" style={{ marginTop: '36px' }}>
               {BENEFITS.map((b) => (
-                <article className="pp-card" key={b.t}>
+                <li className="pp-card" key={b.t}>
                   <span className="ic" aria-hidden="true" style={{ fontFamily: 'var(--pp-mono)', fontSize: '17px' }}>{b.i}</span>
                   <h3>{b.t}</h3><p>{b.d}</p>
-                </article>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 
@@ -291,18 +318,38 @@ export default function BigCommerceDevelopmentPage() {
           <div className="pp-wrap">
             <p className="pp-mlabel">// what we build</p>
             <h2 style={{ marginTop: '10px' }}>BigCommerce development, end to end</h2>
-            <div className="pp-bento" style={{ marginTop: '36px' }}>
+            <ul className="pp-bento" style={{ marginTop: '36px' }}>
               {CAPABILITIES.map((c) => (
-                <article className="pp-card" key={c.t}>
+                <li className="pp-card" key={c.t}>
                   <h3 style={{ color: 'var(--pp-orange-dark)' }}>{c.t}</h3><p>{c.d}</p>
-                </article>
+                </li>
               ))}
-            </div>
+            </ul>
+          </div>
+        </section>
+
+        {/* Enterprise Architecture Pillars */}
+        <section className="pp-sec">
+          <div className="pp-wrap">
+            <p className="pp-mlabel">// enterprise architecture</p>
+            <h2 style={{ marginTop: '10px' }}>Enterprise BigCommerce architecture & integrations</h2>
+            <p className="pp-lead" style={{ marginTop: '14px', maxWidth: '64ch' }}>
+              Scaling beyond basic ecommerce requires deep systems alignment. We architect high-throughput BigCommerce
+              infrastructure connecting ERPs, custom frontends, and automated back-office workflows.
+            </p>
+            <ul className="pp-bento" style={{ marginTop: '36px' }}>
+              {ENTERPRISE_PILLARS.map((p) => (
+                <li className="pp-card" key={p.t}>
+                  <h3 style={{ color: 'var(--pp-ink)' }}>{p.t}</h3>
+                  <p style={{ marginTop: '8px', fontSize: '14px', lineHeight: 1.6 }}>{p.d}</p>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
 
         {/* Use cases with imagery */}
-        <section className="pp-sec">
+        <section className="pp-sec tint">
           <div className="pp-wrap">
             <p className="pp-mlabel">// who we build for</p>
             <h2 style={{ marginTop: '10px' }}>BigCommerce, by business type</h2>
@@ -322,22 +369,8 @@ export default function BigCommerceDevelopmentPage() {
           </div>
         </section>
 
-        {/* Mid-page CTA */}
-        <section className="pp-sec tint">
-          <div className="pp-wrap" style={{ textAlign: 'center' }}>
-            <p className="pp-mlabel">// before you compare platforms</p>
-            <h2 style={{ marginTop: '10px' }}>Not sure BigCommerce fits your catalog?</h2>
-            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '52ch', marginLeft: 'auto', marginRight: 'auto' }}>
-              Tell us what you sell and where you are migrating from. We will give you a straight answer, not a sales pitch.
-            </p>
-            <div style={{ marginTop: '22px' }}>
-              <ModalCTAButton label="Talk to the Founder" region="us" btnVariant="primary-light" />
-            </div>
-          </div>
-        </section>
-
         {/* Comparison */}
-        <section className="pp-sec tint">
+        <section className="pp-sec">
           <div className="pp-wrap">
             <p className="pp-mlabel">// platforms</p>
             <h2 style={{ marginTop: '10px' }}>BigCommerce vs other platforms</h2>
@@ -350,8 +383,6 @@ export default function BigCommerceDevelopmentPage() {
           </div>
         </section>
 
-    
-
         <MidPageCTA
           headline={'Building or fixing a BigCommerce store?'}
           sub={'Tell us what you sell and what is not working. We will tell you whether BigCommerce is still the right home for it.'}
@@ -363,14 +394,35 @@ export default function BigCommerceDevelopmentPage() {
           <div className="pp-wrap">
             <p className="pp-mlabel">// how we work</p>
             <h2 style={{ marginTop: '10px' }}>From scope to a store you own</h2>
-            <div className="pp-bento" style={{ marginTop: '36px', gridTemplateColumns: 'repeat(4,1fr)' }}>
+            <ol className="pp-bento" style={{ marginTop: '36px', gridTemplateColumns: 'repeat(5,1fr)' }}>
               {STEPS.map((s) => (
-                <article className="pp-card" key={s.n}>
+                <li className="pp-card" key={s.n}>
                   <div style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', fontWeight: 700, color: 'var(--pp-orange-dark)' }}>{s.n}</div>
                   <h3 style={{ marginTop: '8px' }}>{s.t}</h3><p>{s.d}</p>
-                </article>
+                </li>
               ))}
-            </div>
+            </ol>
+          </div>
+        </section>
+
+        {/* Migration Safeguards */}
+        <section className="pp-sec tint">
+          <div className="pp-wrap">
+            <p className="pp-mlabel">// migration protocols</p>
+            <h2 style={{ marginTop: '10px' }}>Zero-downtime BigCommerce migration safeguards</h2>
+            <p className="pp-lead" style={{ marginTop: '14px', maxWidth: '64ch' }}>
+              Migrating an established ecommerce store without risking traffic loss or order delays demands strict
+              execution. Our six-stage migration protocol protects your historical data and organic search rankings.
+            </p>
+            <ol className="pp-bento" style={{ marginTop: '36px', gridTemplateColumns: 'repeat(3,1fr)' }}>
+              {MIGRATION_WORKFLOW.map((m) => (
+                <li className="pp-card" key={m.n}>
+                  <div style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', fontWeight: 700, color: 'var(--pp-orange-dark)' }}>{m.n}</div>
+                  <h3 style={{ marginTop: '8px', color: 'var(--pp-ink)' }}>{m.t}</h3>
+                  <p style={{ marginTop: '8px', fontSize: '14px', lineHeight: 1.6 }}>{m.d}</p>
+                </li>
+              ))}
+            </ol>
           </div>
         </section>
 

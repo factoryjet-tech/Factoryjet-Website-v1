@@ -483,11 +483,11 @@ export default function BestEcommercePlatformsPage() {
         {/* ── Stat band ── */}
         <section className="pp-sec tint" style={{ paddingTop: 'clamp(32px,4vh,52px)', paddingBottom: 'clamp(32px,4vh,52px)' }}>
           <div className="pp-wrap">
-            <div className="pp-stats">
+            <ul className="pp-stats" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
               {STATS.map((s) => (
-                <div className="pp-stat" key={s.b}><b>{s.b}</b><span>{s.s}</span></div>
+                <li className="pp-stat" key={s.b}><b>{s.b}</b><span>{s.s}</span></li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 
@@ -498,33 +498,25 @@ export default function BestEcommercePlatformsPage() {
             <h2 style={{ marginTop: '10px' }}>What is an ecommerce platform?</h2>
             <div style={{ marginTop: '18px', display: 'grid', gap: '16px' }} className="pp-lead">
               <p>
-                An ecommerce platform is the software that runs your online store: product catalog, shopping cart,
-                checkout, payment processing, order management, and the admin you use to run it all. Most modern
-                platforms are cloud-based: the provider handles hosting, security, and software updates, so your team
-                focuses on selling rather than maintaining infrastructure. A cloud-based ecommerce platform like Shopify
-                or BigCommerce eliminates the server management overhead that comes with self-hosted options like
-                WooCommerce or Adobe Commerce.
+                An ecommerce platform is the core software that runs your online store. It powers your product catalog,
+                shopping cart, checkout, payments, and order fulfillment. Most modern platforms are fully cloud-hosted.
+                The provider manages hosting, server security, and software updates. A cloud-based platform like Shopify
+                or BigCommerce eliminates the server overhead of self-hosted tools like WooCommerce or Adobe Commerce.
               </p>
               <p>
-                The differences between platforms that actually matter to a growing business are customizability (how
-                far can you go without rebuilding?), native B2B support (price lists, customer groups, quotes), headless
-                capability (can you run your own front end against the commerce engine?), integration depth (how cleanly
-                does it connect to your ERP, PIM, POS, and 3PL?), and total cost of ownership over a three-to-five year
-                horizon, not just the monthly plan price.
+                Key differences center on customizability, native B2B support, and API depth. Can you run custom front ends?
+                Does it connect cleanly to your ERP, PIM, POS, and 3PL systems? Most importantly, consider the total cost of
+                ownership over three to five years, rather than just the entry-level plan price.
               </p>
               <p>
-                There is no single best ecommerce platform for every business. Shopify holds roughly 30% of the US
-                market and is the right call for many DTC brands. BigCommerce is the right call when you need native B2B
-                alongside DTC and want to avoid per-sale transaction fees. Adobe Commerce handles large, complex
-                catalogs that SaaS platforms cannot flex far enough. Salesforce Commerce Cloud integrates natively with
-                Salesforce CRM for enterprise brands. WooCommerce gives full control if you already run WordPress and
-                want zero platform fees. The right answer is the one that fits your catalog, channels, B2B rules, and
-                where you want to be in three years.
+                There is no single best ecommerce platform for every brand. Shopify holds roughly 30% of the US market and
+                fits fast DTC setups. BigCommerce is the right choice when you need native B2B alongside retail with zero
+                transaction fees. Adobe Commerce and Salesforce Commerce Cloud handle large enterprise data sets. WooCommerce
+                offers complete open-source ownership on WordPress.
               </p>
               <p>
-                We are platform-agnostic. We build on all of these and choose the fit based on your requirements, not a
-                preferred partnership. You get a recommendation with a clear rationale and a fixed proposal before any
-                work starts.
+                We are platform-agnostic. We evaluate your catalog, channels, and operational goals to recommend the right fit.
+                You get a clear architectural rationale and a fixed-price roadmap before any code is written.
               </p>
             </div>
           </div>
@@ -535,9 +527,9 @@ export default function BestEcommercePlatformsPage() {
           <div className="pp-wrap">
             <p className="pp-mlabel">// the landscape</p>
             <h2 style={{ marginTop: '10px' }}>The ecommerce platform market, by the numbers</h2>
-            <div className="pp-bento" style={{ marginTop: '32px' }}>
+            <ul className="pp-bento" style={{ marginTop: '32px', listStyle: 'none', padding: 0 }}>
               {SOURCED.map((s) => (
-                <div className="pp-card" key={s.v}>
+                <li className="pp-card" key={s.v}>
                   <div style={{ fontFamily: 'var(--pp-disp)', fontWeight: 800, fontSize: '36px', color: 'var(--pp-orange-dark)', letterSpacing: '-.03em', lineHeight: 1 }}>{s.v}</div>
                   <p style={{ marginTop: '10px', fontSize: '15px', color: 'var(--pp-body)' }}>{s.d}</p>
                   <a
@@ -548,9 +540,9 @@ export default function BestEcommercePlatformsPage() {
                   >
                     {s.src}
                   </a>
-                </div>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 
@@ -561,17 +553,18 @@ export default function BestEcommercePlatformsPage() {
             <h2 style={{ marginTop: '10px' }}>What the right platform gives you</h2>
             <p className="pp-lead" style={{ marginTop: '14px', maxWidth: '58ch' }}>
               The platform choice affects every part of your commerce operation. These are the capabilities a well-chosen
-              ecommerce platform gives a growing DTC or B2B brand.
+              The platform choice affects every part of your commerce operation. These are the core business 
+              capabilities a well-chosen ecommerce platform delivers to your brand.
             </p>
-            <div className="pp-bento" style={{ marginTop: '32px' }}>
+            <ul className="pp-bento" style={{ marginTop: '32px', listStyle: 'none', padding: 0 }}>
               {BENEFITS.map((b) => (
-                <div className="pp-card" key={b.t}>
+                <li className="pp-card" key={b.t}>
                   <div style={{ fontFamily: 'var(--pp-mono)', fontSize: '20px', color: 'var(--pp-orange-dark)', marginBottom: '10px' }} aria-hidden="true">{b.i}</div>
                   <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '16px', color: 'var(--pp-ink)', marginBottom: '6px' }}>{b.t}</h3>
                   <p style={{ fontSize: '14.5px', color: 'var(--pp-body)' }}>{b.d}</p>
-                </div>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 
@@ -588,17 +581,17 @@ export default function BestEcommercePlatformsPage() {
             <p className="pp-mlabel">// what we build</p>
             <h2 style={{ marginTop: '10px' }}>What we do on your platform</h2>
             <p className="pp-lead" style={{ marginTop: '14px', maxWidth: '58ch' }}>
-              From picking the right platform to building, integrating, and migrating, here is the full scope of what
-              we deliver on Shopify, BigCommerce, Adobe Commerce, WooCommerce, and Salesforce Commerce Cloud.
+              From initial scoping to final migration, we deliver technical expertise across Shopify, 
+              BigCommerce, Adobe Commerce, WooCommerce, and Salesforce Commerce Cloud.
             </p>
-            <div className="pp-bento" style={{ marginTop: '32px', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))' }}>
+            <ul className="pp-bento" style={{ marginTop: '32px', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', listStyle: 'none', padding: 0 }}>
               {CAPABILITIES.map((c) => (
-                <div className="pp-card" key={c.t}>
+                <li className="pp-card" key={c.t}>
                   <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '16px', color: 'var(--pp-ink)', marginBottom: '6px' }}>{c.t}</h3>
                   <p style={{ fontSize: '14.5px', color: 'var(--pp-body)' }}>{c.d}</p>
-                </div>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 
@@ -690,7 +683,7 @@ export default function BestEcommercePlatformsPage() {
               The most common mistake is picking by popularity or price before mapping requirements. Run through these
               decision points first.
             </p>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '16px', marginTop: '32px' }}>
+            <ul style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '16px', marginTop: '32px', listStyle: 'none', padding: 0 }}>
               {[
                 { q: 'Do you need B2B pricing?', a: 'Native B2B matters. BigCommerce B2B Edition and Adobe Commerce handle it natively. Shopify Plus has a B2B module. WooCommerce requires plugins. If B2B is central to your model, start here before anything else.' },
                 { q: 'What is your catalog size?', a: 'Large catalogs with complex variants, bundles, or rules push toward BigCommerce or Adobe Commerce. Simpler catalogs are fine on Shopify or WooCommerce. SaaS platforms have catalog limits that can become constraints at scale.' },
@@ -699,12 +692,12 @@ export default function BestEcommercePlatformsPage() {
                 { q: 'What is your total budget?', a: 'SaaS platforms have predictable subscription costs. Self-hosted options (WooCommerce, Adobe Commerce) have lower platform fees but higher development and hosting costs. Enterprise platforms (Salesforce Commerce Cloud) price on revenue share. Map the three-year total cost of ownership, not just the monthly plan.' },
                 { q: 'Who will maintain it?', a: 'Shopify and BigCommerce are designed to be manageable by a non-technical team with light developer support. Adobe Commerce and WooCommerce require a developer to maintain safely. Match the platform to the team that will run it after launch.' },
               ].map((item) => (
-                <div key={item.q} className="pp-card">
+                <li key={item.q} className="pp-card">
                   <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '16px', color: 'var(--pp-ink)', marginBottom: '8px' }}>{item.q}</h3>
                   <p style={{ fontSize: '14.5px', color: 'var(--pp-body)' }}>{item.a}</p>
-                </div>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 
@@ -716,15 +709,15 @@ export default function BestEcommercePlatformsPage() {
             <p className="pp-lead" style={{ marginTop: '14px', maxWidth: '56ch' }}>
               From a short scoping call to a live store you own, with no handoffs, no hourly billing surprises.
             </p>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '16px', marginTop: '36px' }}>
+            <ul style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '16px', marginTop: '36px', listStyle: 'none', padding: 0 }}>
               {STEPS.map((s) => (
-                <div key={s.n} className="pp-card">
+                <li key={s.n} className="pp-card">
                   <div style={{ fontFamily: 'var(--pp-mono)', fontSize: '11px', fontWeight: 700, color: 'var(--pp-orange-dark)', marginBottom: '10px' }}>{s.n}</div>
                   <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '16px', color: 'var(--pp-ink)', marginBottom: '8px' }}>{s.t}</h3>
                   <p style={{ fontSize: '14.5px', color: 'var(--pp-body)' }}>{s.d}</p>
-                </div>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 

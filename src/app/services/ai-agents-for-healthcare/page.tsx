@@ -224,9 +224,9 @@ type Step = { n: string; title: string; body: string };
 const STEPS: ReadonlyArray<Step> = [
   {
     n: '01',
-    title: 'Sign the BAA before a single record moves',
+    title: 'Execute a HIPAA Business Associate Agreement (BAA)',
     body:
-      'The BAA sets the permitted uses and disclosures of patient data, and it has to run down to every subcontractor, including the model provider.',
+      'A signed BAA is mandatory before moving any protected health information (PHI). We enforce BAAs across all cloud infrastructure and model providers (OpenAI, Anthropic, Google Cloud) with zero training data retention.',
   },
   {
     n: '02',
@@ -242,15 +242,15 @@ const STEPS: ReadonlyArray<Step> = [
   },
   {
     n: '04',
-    title: 'Connect the practice system, and scope it to the minimum',
+    title: 'Connect EHR and practice management via FHIR / HL7 APIs',
     body:
-      'Your EHR or practice management system stays the source of truth. A scheduling agent needs a name, contact method, visit type and availability. It does not need the chart, so do not give it one.',
+      'Direct bidirectional integration with major EHR platforms: Epic Systems, Cerner (Oracle Health), athenahealth, eClinicalWorks, NextGen Healthcare, Kareo (Tebra), Dentrix, and Allscripts. The agent interfaces via standard HL7 and FHIR REST endpoints using minimum-necessary data scopes.',
   },
   {
     n: '05',
-    title: 'Decide the escalation path, including the emergency one',
+    title: 'HIPAA-compliant escalation and emergency safeguards',
     body:
-      'Anything clinical, anyone distressed, anyone asking for a person, anything sounding like an emergency: it leaves the agent immediately. Test that path first.',
+      'Strict protocol handoffs: clinical triage questions, acute distress, or 911 emergencies trigger instant voice transfer via Twilio SIP trunking to on-call clinical staff. Digital consent paperwork routes through DocuSign with audit trails.',
   },
   {
     n: '06',
@@ -877,18 +877,16 @@ export default function AiAgentsForHealthcarePage() {
               </h2>
               <p className="mt-3 max-w-[900px] font-fj-body text-[1.0625rem] leading-[1.7] text-fj-neutral-600">
                 <b className="text-fj-ink">
-                  An AI agent for healthcare is software that handles administrative work for a practice or
-                  health system.
+                  An AI agent for healthcare is software that handles administrative work for a clinic or health system.
                 </b>{' '}
-                Scheduling and reminders, patient intake and forms, insurance eligibility checks, referral
-                coordination, billing questions, and routing messages to the right team. It does not diagnose,
-                treat or advise on care. A licensed clinician stays in the loop on anything clinical.
+                It manages patient scheduling, visit reminders, intake forms, insurance eligibility checks, and billing queries.
+                It routes patient messages to front-desk staff. It never diagnoses, treats, or gives medical care advice.
+                A licensed clinician handles all clinical decisions.
               </p>
               <p className="mt-4 max-w-[900px] font-fj-body text-[1.0625rem] leading-[1.7] text-fj-neutral-600">
-                The difference from a chatbot is that an agent takes an action. A chatbot can say your clinic
-                opens at eight. An agent checks availability, holds the slot, confirms coverage, writes the
-                appointment into your practice system and sends the reminder. It reads and writes real patient
-                records, which is why its limits belong in code, not in a prompt.
+                The difference from a basic chatbot is action. A chatbot only answers basic office hours questions.
+                An AI agent checks live calendar availability. It holds appointments, verifies insurance coverage, and writes records into your EHR.
+                It interacts directly with patient data, which is why strict privacy guardrails belong in code.
               </p>
               <p className="mt-4 max-w-[900px] font-fj-body text-[1.0625rem] leading-[1.7] text-fj-neutral-600">
                 This page is the healthcare build.{' '}

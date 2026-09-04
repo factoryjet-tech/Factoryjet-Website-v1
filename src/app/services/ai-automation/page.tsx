@@ -168,28 +168,28 @@ const AUTOMATION_TYPES = [
     linkHref: '/contact',
   },
   {
-    name: 'Customer Support Triage',
+    name: 'Healthcare Intake & Scheduling',
     description:
-      'Support ticket arrives → AI reads the message, classifies intent (billing / technical / returns / general), extracts the core request, drafts a response suggestion, and routes to the right team member with full context, before anyone opens their inbox.',
-    example: 'Works inside Zendesk, Freshdesk, Intercom or Gorgias. You set which intents it may answer alone and which it drafts for review.',
-    linkLabel: 'See pricing',
-    linkHref: '#pricing',
+      'Patient intake form submitted → AI extracts demographic and insurance details → checks eligibility under a signed BAA → updates EHR schedule in Epic or athenahealth → sends SMS reminders. Full audit trail with no clinical triage.',
+    example: 'HIPAA compliant administrative automation for US medical practices and clinics.',
+    linkLabel: 'See healthcare AI agents',
+    linkHref: '/services/ai-agents-for-healthcare',
   },
   {
-    name: 'Inventory & Reorder Automation',
+    name: 'Real Estate Lead & Tour Automation',
     description:
-      'Stock level drops below threshold → AI checks supplier lead time and current open POs → drafts a purchase order → sends to the approver via Slack or email → auto-submits on approval → updates inventory records on confirmation.',
-    example: 'Watches stock levels in Shopify or the ERP, checks supplier lead time and open POs, and drafts the reorder for an approver rather than placing it.',
-    linkLabel: 'Book a strategy call',
-    linkHref: '/contact',
+      'Inquiry from Zillow or website → AI qualifies buyer criteria and pre-approval status → syncs to Follow Up Boss or kvCORE → books showing directly on the agent calendar → triggers localized property alert sequence.',
+    example: 'Cuts response time from hours to under 60 seconds across real estate brokerages.',
+    linkLabel: 'Explore real estate AI agents',
+    linkHref: '/services/ai-agents-for-real-estate',
   },
   {
-    name: 'Reporting & Analytics Automation',
+    name: 'Custom AI & LLM Model Integration',
     description:
-      'Every Monday at 7am: AI pulls data from your CRM, ad platform, and e-commerce backend → cleans and aggregates it → writes a plain-English performance summary → flags anomalies → delivers to your inbox and Slack. No BI tool. No manual export.',
-    example: 'Pulls from the CRM, the ad platform and the commerce backend, writes a plain-English summary, and flags what moved. No BI tool to learn.',
-    linkLabel: 'Get a free audit',
-    linkHref: '/contact',
+      'Connect LLMs (GPT-4o, Claude) directly into your custom ERP, CRM, and internal databases via secure REST and webhook middleware. Milestone-paid with complete source code ownership.',
+    example: 'Integrates custom intelligence into existing software without rip-and-replace.',
+    linkLabel: 'Explore AI integration services',
+    linkHref: '/services/ai-integration-services',
   },
   {
     name: 'HR & Employee Onboarding',

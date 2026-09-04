@@ -192,57 +192,57 @@ type Deliverable = { n: string; title: string; body: string };
 const DELIVERABLES: ReadonlyArray<Deliverable> = [
   {
     n: '01',
-    title: 'Fix the Business Profile before touching the website',
+    title: 'Google Business Profile audit and citation cleanup',
     body:
-      'For a roofer the profile is often a bigger lever than the site, and it is usually the thing that is broken. Address hidden or shown correctly, service area drawn to something you can actually drive, primary category set to roofing contractor rather than something vague, every service listed, real photos of real jobs, hours that match who answers the phone. This part is unglamorous and it moves the map pack more than any blog post will.',
+      'For a roofing contractor, your Google Business Profile drives more immediate phone calls than any blog post. We configure primary categories, hide or display service addresses in line with Google guidelines, and verify driving radiuses. We audit citations across BrightLocal and Whitespark, ensuring name, address, and phone numbers match your state contractor license.',
   },
   {
     n: '02',
-    title: 'One honest page per city you genuinely work in',
+    title: 'City pages with job proof from CompanyCam and EagleView',
     body:
-      'Google says plainly that distance from the searcher is one of the three things deciding local rank, so a single page cannot serve nine towns. The fix is not three hundred spun doorway pages either, which is the standard roofing SEO product and the reason so many roofing sites carry a quiet penalty. One page per market you actually serve, with jobs you actually did in it.',
+      'Google ranks local roofers partly on proximity. We build dedicated landing pages for each city you genuinely serve. Instead of repetitive doorway text, each page features real project locations, drone imagery, and aerial measurement data synced from CompanyCam, Hover, and EagleView reports.',
   },
   {
     n: '03',
-    title: 'One page per service, split the way you actually sell',
+    title: 'Service architecture mapped to residential and commercial trades',
     body:
-      'Replacement, repair, storm and hail damage, inspection, gutters, metal, and flat or commercial systems such as TPO and EPDM. Commercial roofing is its own buyer with its own query set and does not belong stapled to the bottom of a residential page. Splitting these properly is also what stops your own pages from competing with each other, which is the single most common technical problem we find on established roofing sites.',
+      'Roof replacement, storm repairs, emergency tarping, gutters, and commercial systems like TPO, EPDM, and modified bitumen need separate URL silos. Splitting these prevents keyword cannibalization and routes estimates directly into field CRMs like Jobber, ServiceTitan, or AccuLynx.',
   },
   {
     n: '04',
-    title: 'Storm content that exists before the storm',
+    title: 'Pre-storm damage content published before hail season',
     body:
-      'A hail damage page published the day after a storm typically needs weeks to settle into the index. The storm chasers who show up in your market do not wait for that, they run ads. Your defensive move is to have the page already ranked when the hail lands: what hail damage looks like on each roof type, what to photograph, what to do in the first forty-eight hours, and how to tell a legitimate contractor from a truck with out-of-state plates.',
+      'Publishing hail damage content after a storm hits is too late; search engines take weeks to index and rank new pages. We build weather-event landing pages months ahead. Homeowners search for hail size thresholds, insurance adjuster processes, and emergency inspection steps before storm chasers arrive.',
   },
   {
     n: '05',
-    title: 'Claims and adjuster content, written in plain words',
+    title: 'Insurance claims and adjuster documentation guides',
     body:
-      'Actual cash value versus replacement cost. What a supplement is. What happens when the adjuster misses a slope. Why a denial is not always final. Homeowners search this language constantly and get answered by insurance carriers and law firms, not by roofers. You are the one who has stood on the roof. Writing that down is the easiest authority a roofing company can build.',
+      'Actual cash value versus replacement cost value, depreciation schedules, and insurance supplement protocols are typed by homeowners every day. Providing unbiased claims guidance positions your team as trusted local experts before adjusters arrive on site.',
   },
   {
     n: '06',
-    title: 'Financing and deductible questions answered on your own site',
+    title: 'Financing calculators integrated with Roofr and SumoQuote',
     body:
-      'People who are ready to buy but stalled on how to pay are the warmest traffic in this category and they are almost never targeted. A clear page on payment options, what a deductible actually means for a claim job, and whether partial repair is a false economy will out-convert three more blog posts about shingle types.',
+      'Cost is the number one friction point in roofing. We build interactive payment calculators and quote estimate funnels integrated with Roofr, SumoQuote, or Leap workflows. Homeowners explore monthly payment options on your site instead of bouncing back to competitor directories.',
   },
   {
     n: '07',
-    title: 'Reviews treated as a ranking input, not a vanity metric',
+    title: 'Review generation integrated into CRM job closeout',
     body:
-      'Google states directly that prominence is partly built on how many reviews you have and how well you are rated, and that replying to reviews helps. That makes review generation an SEO deliverable, not a customer service afterthought. We build the ask into your job close, route it properly, and make sure someone actually responds, including to the bad ones.',
+      'Google states that review count and sentiment directly affect map pack prominence. We automate customer review requests triggered when a job completes in AccuLynx, Jobber, or ServiceTitan, helping happy property owners leave detailed feedback on Google Business Profile.',
   },
   {
     n: '08',
-    title: 'A site that loads on a phone standing in a driveway',
+    title: 'Mobile-first performance engineered for homeowners in driveways',
     body:
-      'The emergency buyer is on cellular data, one-handed, looking at a ceiling stain. If your homepage ships a video header and a slider, that call goes to the next result. We rebuild roofing sites around speed, a phone number that is tappable above the fold, and a form short enough to finish while annoyed. This is where our web design side does the work rather than filing a ticket and hoping.',
+      'Emergency buyers looking at water leaking through a ceiling will not wait for slow sliders. We build lightweight, sub-second pages with click-to-call buttons and instant inspection request forms engineered for one-handed phone use.',
   },
   {
     n: '09',
-    title: 'Getting quoted by AI answer engines, not just ranked',
+    title: 'Technical health monitoring and AI search optimization',
     body:
-      'A growing share of roofing questions now get answered inside an AI summary before anyone clicks a result. That does not kill the channel, it changes what wins: clean structure, a direct answer near the top of the page, and enough independent signal that an engine is willing to name you. We treat being cited as a target in its own right rather than a side effect.',
+      'We monitor crawl health and indexing status via Google Search Console and Screaming Frog. We track local map pack visibility in Semrush and Ahrefs. Structured schema markup ensures AI Overviews and answer engines quote your roofing specifications accurately.',
   },
 ];
 
@@ -387,43 +387,19 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'basics',
     question: 'What is roofing SEO?',
     answer:
-      'Roofing SEO is the work of getting a roofing company found in search when someone in its service area needs a roof. In practice that means three surfaces at once: the map pack that sits at the top of local results, the ordinary blue links below it, and increasingly the AI summary that answers the question before either. It differs from generic local SEO because roofing demand is storm-driven rather than steady, because a large share of buyers are mid insurance claim and searching claim language rather than roof language, and because you serve a driving radius instead of a shopfront people walk into.',
-  },
-  {
-    category: 'basics',
-    question: 'What is SEO in construction?',
-    answer:
-      'Same discipline, different buying cycle. A construction SEO programme normally starts with keyword research for the trades and markets you actually serve, a competitor read, a technical review of the site code, structure and content, and an honest look at your presence off the site: links, citations, reviews, social. What changes in construction is that the sale is high value, slow, and often triggered by an external event such as a storm, a survey, or a failed inspection. So the content has to catch people at the trigger, not just at the shopping stage.',
+      'Roofing SEO is the process of getting your roofing business found when local property owners search for roof replacement, storm repairs, or commercial installation. It targets Google map packs, organic rankings, and AI summaries with verified service-area signals and technical schema.',
   },
   {
     category: 'basics',
     question: 'What are the 4 types of SEO?',
     answer:
-      'Most people split it into on-page, off-page, technical and local. On-page is the words and structure on your own pages. Off-page is what other sites and people say about you, mostly links and mentions. Technical is whether search engines can crawl, render and index the thing at all. Local is the map pack layer: your Business Profile, service area, citations and reviews. For a roofer the order of importance is usually local first, technical second, on-page third, off-page fourth, which is close to the reverse of what a software company would need.',
-  },
-  {
-    category: 'basics',
-    question: 'What are the 4 stages of SEO?',
-    answer:
-      'Roughly: find out what is broken, fix the foundation, build the content, then earn the authority. The mistake almost everyone makes is starting at stage three because writing blog posts feels productive. If your Business Profile has the wrong service area and your site takes eight seconds on mobile, a hundred articles will not save you. Diagnosis is boring and it is also the only stage that changes the ceiling on everything after it.',
-  },
-  {
-    category: 'basics',
-    question: 'Is SEO being phased out?',
-    answer:
-      'No, though the shape of it has shifted enough that the question is fair. Technical SEO is very much alive: site speed, crawlability, structured data and mobile performance all still decide whether you are eligible to rank. What has changed is that AI summaries now absorb a chunk of purely informational clicks, so counting raw traffic looks worse than the channel actually is. The high-intent roofing searches, the ones where someone in your county wants a roof, still end in a click and a phone call.',
-  },
-  {
-    category: 'basics',
-    question: 'How do I rank a website?',
-    answer:
-      'Honestly, by being the most useful and most obviously legitimate answer to a specific question in a specific place. Mechanically that means a site a crawler can read, a page dedicated to each thing you want to be known for, a Business Profile set up correctly, reviews arriving steadily, and other credible sites referring to you. There is no lever. Anyone selling you one is selling something that stops working the moment Google notices it.',
+      'The four types are local SEO (Google Business Profile and local citations), on-page SEO (service and city page content), technical SEO (page speed and structured data), and off-page SEO (industry links and supplier citations). For roofers, local and technical SEO deliver the highest immediate return.',
   },
   {
     category: 'basics',
     question: 'Do I need a new website, or can you optimise the one I have?',
     answer:
-      'Usually we can work with what you have, and we would rather. A rebuild is justified when the site cannot be made fast on mobile, when the platform blocks basic things like unique page titles or proper service pages, or when the structure has you competing against yourself across dozens of near-identical city pages. If it is fixable we fix it. If it is not, we will tell you that before you have paid for six months of optimising something that cannot win.',
+      'We optimize existing websites whenever possible. A complete rebuild is only recommended if your current platform cannot pass Core Web Vitals on mobile, lacks clean URL architecture for city pages, or blocks essential schema markup.',
   },
 
   /* ── Roofing leads ──────────────────────────────────────────────────── */
@@ -431,137 +407,59 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'leads',
     question: 'How do I get roofing leads?',
     answer:
-      'There are four real sources and the successful roofers use several at once rather than betting on one. Organic and map pack search, which you own and which compounds. Paid search, which is instant and stops the day you stop. Bought leads from marketplaces, which are fast and usually shared with your competitors. And people: canvassing, referrals, and the crew that leaves a clean job site. Search is the one whose economics improve the longer you run it, which is exactly why it is the one everyone puts off starting.',
+      'Sustainable roofing lead generation combines local organic search and map pack visibility with customer referrals and paid ads. Organic search builds an exclusive lead asset that you own, reducing your reliance on shared lead brokers.',
   },
   {
     category: 'leads',
     question: 'Should I buy roofing leads?',
     answer:
-      'Sometimes yes, as a stopgap. If crews are idle next week, bought leads fill the calendar and that is a legitimate business decision. Understand the structure though: most marketplace leads are sold to several roofers at once, so you are competing on how fast you dial rather than on whether you are good. And the price rises precisely when a storm makes demand spike. Buying leads is renting demand. SEO is building it. Most roofers we talk to want to do less of the first over time, and that only happens if they start the second.',
-  },
-  {
-    category: 'leads',
-    question: 'How much do roofers pay for leads?',
-    answer:
-      'It moves too much for an average to mean anything, so here is what actually drives it. Whether the lead is exclusive or shared with three other roofers. Whether you are in a storm market during a storm, which is when prices climb hardest. Residential versus commercial. Retail replacement versus insurance claim work. And how many roofers in your metro are bidding for the same source. The number matters less than the structure: a shared lead at a low price you lose four times out of five can cost more per signed job than an expensive exclusive one.',
-  },
-  {
-    category: 'leads',
-    question: 'How do I get roofing leads from insurance companies?',
-    answer:
-      'Not by asking carriers to send you work, which is the misunderstanding buried in this question. It comes from being the contractor adjusters and agents are comfortable naming. Build actual relationships with local insurance professionals, be the one who documents a claim properly and does not pad a supplement, keep your paperwork clean, and make yourself visibly expert on the claims process itself. On the search side, the play is owning the claims questions homeowners type before they ever call a roofer, because a homeowner who learned how a claim works from your site tends to call you when it is time to file one.',
-  },
-  {
-    category: 'leads',
-    question: 'How do I get more roofing leads for free?',
-    answer:
-      'Free costs time instead of money, and the highest-return version for a roofer is boring. Get the Google Business Profile complete and correct. Ask every finished job for a review and actually reply to them. Photograph real work and post it. Answer the questions homeowners in your area keep asking, on your own site, in plain words. Get listed accurately anywhere contractors get listed. None of that needs a budget. All of it needs someone to do it every week, which is the part that quietly fails.',
-  },
-  {
-    category: 'leads',
-    question: 'How do I get leads for roofing sales specifically?',
-    answer:
-      'Sales leads and marketing leads are not the same animal and mixing them is why so many roofing sales teams complain about lead quality. A sales lead needs intent and a timeline. What generates those is bottom-of-funnel content: estimate pages, storm damage pages for a named area, financing and deductible pages, and inspection offers. Informational blog traffic feeds the top of the funnel and should be measured differently. If your team is judging an article about shingle types on booked appointments, the article is not the problem.',
+      'Bought marketplace leads can provide quick temporary volume, but they are typically sold to three to five competing contractors simultaneously. Building organic search authority generates exclusive leads where homeowners contact your company directly.',
   },
   {
     category: 'leads',
     question: 'Do you generate commercial roofing leads too?',
     answer:
-      'Yes, and it is a genuinely different build. Commercial roofing searches carry lower volume, longer sales cycles, and a buyer who is a facilities manager or property owner rather than a homeowner. The content has to speak to systems, TPO, EPDM, modified bitumen, warranties and maintenance contracts, not to curb appeal. If you do both residential and commercial, they need separate page trees, otherwise the residential pages absorb the commercial queries and convert none of them.',
+      'Yes. Commercial roofing requires dedicated landing pages targeting property managers, facility directors, and HOAs. Content focuses on commercial membrane systems like TPO, EPDM, and metal, roof coatings, warranty terms, and preventative maintenance agreements.',
   },
 
   /* ── Local, reviews & marketing ─────────────────────────────────────── */
   {
     category: 'local',
-    question: 'How do roofers get business?',
-    answer:
-      'The ones who stay busy layer things rather than relying on a single channel. Search brings people who already decided they need a roof. Reviews and referrals close them faster. Paid fills gaps. Canvassing works hard after a storm. The multiplier comes from the layers touching each other: an article answering how to get a hail claim approved, shared in a local group, seen by a homeowner who then finds forty reviews when they check you out. One channel is fragile. Four that reinforce each other is a business.',
-  },
-  {
-    category: 'local',
-    question: 'What is the best way to advertise a roofing company?',
-    answer:
-      'It depends entirely on what you need this month. If you need calls tomorrow, paid search and Local Services Ads are the honest answer and we will tell you that even though it is not what we sell. If you want the phone to ring in three years without paying per click, it is search, reviews and a site people trust. If a storm just hit, it is a truck, a door and a crew. The wrong question is which channel is best. The right one is which constraint are you solving right now.',
-  },
-  {
-    category: 'local',
-    question: 'How do I market my roofing company?',
-    answer:
-      'Start with the things that compound. A real website that loads fast and explains what you do, in the towns you do it. A Google Business Profile that is complete and gets reviews steadily. A referral programme, because a roofer with happy neighbours has a distribution channel nobody can outbid. A short honest pitch your crew can use when they are already on a street. Show up at local events, industry and otherwise. Then, and only then, spend on ads, because ads pointed at a weak site are just a faster way to lose money.',
-  },
-  {
-    category: 'local',
     question: 'Does my roofing company need a physical address to rank?',
     answer:
-      'You need a real business location, but you should generally not show it. Google classifies roofers as service-area businesses and its own guidance says a service-area business should hide its address, giving the example of a tradesperson running the business from a residential address. It also says your overall service area should not extend farther than around two hours of driving time from where you are based. Plenty of roofing sites break both rules, then wonder why the map pack ignores them.',
+      'Google categorizes roofers as service-area businesses. You need a verified physical address to establish your Google Business Profile, but guidelines allow you to hide your street address while defining a driving radius of up to two hours.',
   },
   {
     category: 'local',
     question: 'How far can my roofing service area realistically reach?',
     answer:
-      'Google gives a hard ceiling and reality gives a lower one. The published ceiling is about two hours of driving from your base. The practical limit is smaller, because distance from the searcher is one of the three factors Google names for local ranking, alongside relevance and prominence. A roofer claiming five counties will lose the map pack in most of them to someone closer. It is nearly always better to genuinely own three towns than to be theoretically available in fifteen.',
+      'Google allows service-area designations up to two hours of driving time from your base. However, map pack prominence is strongest within 20 to 30 miles. It is more profitable to dominate three key counties than to dilute relevance across twelve.',
   },
   {
     category: 'local',
     question: 'Do reviews actually affect roofing rankings?',
     answer:
-      'Yes, and Google says so in its own words. It lists prominence as one of three local ranking factors and states that the count of reviews and your rating feed into it, along with how many sites link to you. It also says replying to reviews helps you stand out. So reviews are not just social proof for humans, they are a ranking input. For a roofing company, where trust is the entire sale, they are probably the highest-return thing you can systematise this quarter.',
-  },
-  {
-    category: 'local',
-    question: 'How do I write a review for a roofing company?',
-    answer:
-      'The reviews that help most are specific. Say what work was done, whether communication held up, whether the site was left clean, whether hidden problems were explained honestly when they turned up, and whether you felt informed or pressured. Five stars with the word great does very little. If you are a roofer reading this the other way round, that is exactly what to ask for: not a rating, a sentence about what actually happened. Those are the reviews future customers read and the ones search engines can make sense of.',
-  },
-  {
-    category: 'local',
-    question: 'What is the best CRM for roofing companies?',
-    answer:
-      'We are an SEO and web team, not a CRM reseller, so take this as a practical opinion rather than a recommendation. The roofing-specific platforms exist because generic CRMs handle estimates, measurement, material orders and production scheduling badly. What matters for our side of the work is far simpler: whichever you pick must record where every lead came from and push that back into your analytics. If you cannot tell which channel produced a signed job, you cannot judge any marketing spend, including ours.',
+      'Yes. Google explicitly names review count and review velocity as primary prominence factors for local map rankings. Consistently gathering customer reviews mentioning specific roofing services and replying to each review directly improves visibility.',
   },
 
   /* ── Scope, timing & results ────────────────────────────────────────── */
   {
     category: 'cost',
+    question: 'What is the best CRM for roofing companies?',
+    answer:
+      'Top roofing CRMs include AccuLynx, Jobber, and ServiceTitan. They manage job estimating, CompanyCam photo integration, and invoicing. We ensure your website tracking sends lead attribution data directly into your CRM so you know exactly which keywords produce revenue.',
+  },
+  {
+    category: 'cost',
     question: 'How long does SEO usually take for a roofing company?',
     answer:
-      'Google says some changes take effect within hours and others take months, and suggests waiting weeks before judging whether something worked. For roofing specifically, Business Profile and map pack fixes often move within a few weeks because they are the fastest surface. Service and city pages usually need a couple of months to settle. Authority and competitive head terms take longer than anyone wants. The honest planning assumption is meaningful movement inside a season and compounding after that.',
-  },
-  {
-    category: 'cost',
-    question: 'How much should I expect to pay for roofing SEO?',
-    answer:
-      'We will not put a figure on a page, because any figure that survives without seeing your situation is a figure aimed at the average rather than at you. What genuinely moves scope: how many markets you want to rank in, how many services you sell, whether the existing site can be fixed or has to be rebuilt, whether you have reviews already or are starting from nothing, how contested your metro is, whether you need content produced or just direction for someone in-house, and whether you are in a storm market that needs seasonal capacity. Tell us those on a call and you get a real number instead of a range.',
-  },
-  {
-    category: 'cost',
-    question: 'How much does it cost to hire someone to do SEO?',
-    answer:
-      'The more useful question is which pricing model you are being offered, because they behave very differently. A monthly retainer buys continuous work and suits an ongoing programme. A fixed-scope project suits a defined job like an audit or a site rebuild. Hourly advisory suits a team that has hands and wants direction. Pay-per-lead sounds attractive to roofers and usually is not, because it quietly incentivises volume over fit, and in roofing a bad lead still costs you a truck roll. Ask which model, ask what happens when you leave, and ask who owns the site.',
-  },
-  {
-    category: 'cost',
-    question: 'What is the average cost of a marketing agency?',
-    answer:
-      'Averages here are close to meaningless because the same phrase covers a one-person consultant and a two-hundred-seat agency with an account team. What you can compare is structure. How much of what you pay reaches actual work rather than account management. Whether content, technical and local are all included or unbundled. Whether there is a lock-in period. And who personally does the thinking, because in this trade the gap between senior and junior work is enormous and completely invisible on an invoice.',
-  },
-  {
-    category: 'cost',
-    question: 'Is it worth paying for SEO services?',
-    answer:
-      'For a roofer with a defined service area and enough patience to let it compound, usually yes, because organic and map pack leads keep arriving after you stop paying and they arrive exclusive. It is not worth it in three situations. If you need work this month to keep crews paid, buy ads or buy leads instead. If you are about to sell the business. Or if nobody in your area searches for what you do, which is rare in roofing but does happen in very small markets. We will tell you if one of those is you.',
-  },
-  {
-    category: 'cost',
-    question: 'Do you guarantee first-page rankings for roofing keywords?',
-    answer:
-      'No, and be careful with anyone who does. Google states directly that nobody can guarantee a number one ranking and warns you off firms claiming a special relationship with it or a priority submission. What we will commit to is the diagnosis, the reasoning behind every recommendation, and telling you when something is not working rather than reframing it in a report.',
+      'Google Business Profile optimizations and citation cleanups often show initial ranking improvements within 30 to 60 days. Competitive city pages and storm-related organic rankings compound over three to six months as domain authority grows.',
   },
   {
     category: 'cost',
     question: 'How do you measure whether roofing SEO is working?',
     answer:
-      'Two layers, set up before the work starts rather than argued about later. Leading indicators show the work is landing: map pack visibility across each town you serve, indexed pages, calls and direction requests from the Business Profile, and where you sit for the queries you chose. Lagging indicators show it mattered: booked inspections, signed jobs, and revenue by source. If your CRM does not record lead source, fixing that is task one, because everything else is guesswork until it does.',
+      'We track leading metrics like map pack rankings across your target zip codes, organic impressions in Google Search Console, and phone clicks. We tie these directly to booked roof inspections and signed job revenue inside your CRM.',
   },
 
   /* ── AI search & 2026 ───────────────────────────────────────────────── */
@@ -569,13 +467,19 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'ai',
     question: 'Do AI Overviews and ChatGPT change roofing SEO?',
     answer:
-      'They change the informational half of it. Questions like what does hail damage look like or how long does a roof last increasingly get answered inside a summary, so those pages earn fewer clicks than they used to even when they rank. What has not changed is the transactional half. Somebody who wants a roof replaced in their town still clicks, still checks reviews, and still calls. The strategic shift is to write the informational content to be quoted and the commercial content to be clicked, and to stop measuring both with one number.',
+      'AI Overviews answer broad informational queries directly in the search results. For contractors, success means structuring content so AI engines cite your business as the authoritative local source, while transactional searches continue driving direct phone calls.',
   },
   {
     category: 'ai',
-    question: 'Can I pay Google to rank my website higher?',
+    question: 'Do you guarantee first-page rankings for roofing keywords?',
     answer:
-      'Not in organic results. Google states plainly that it never accepts money to include or rank sites in search results and that appearing in organic results costs nothing. You can pay for ads, which sit above and around the organic results and are labelled as ads. Anyone offering to pay Google on your behalf for better organic placement is describing something that does not exist.',
+      'No ethical agency guarantees specific rank positions, and Google explicitly warns against firms that do. We guarantee rigorous technical execution, transparent reporting, and proven search architecture built to outperform competitors sustainably.',
+  },
+  {
+    category: 'ai',
+    question: 'Is it worth paying for SEO services?',
+    answer:
+      'For established roofing contractors looking to build a sustainable pipeline of high-margin retail and commercial replacements, SEO offers one of the lowest customer acquisition costs across digital channels.',
   },
 
   /* ── Roofing trade questions ────────────────────────────────────────── */
@@ -583,31 +487,19 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'trade',
     question: 'What is the 25% rule for roofing?',
     answer:
-      'It is a building code idea, not an SEO one, and it comes up constantly on roofing sites so it is worth getting right. Broadly, many jurisdictions adopt a rule that if more than a quarter of a roof section is repaired or replaced within a twelve month period, that whole section has to be brought up to current code rather than patched. It matters commercially because it can turn a repair into a full replacement, and it matters for insurance conversations. Codes are adopted locally and amended locally, so check what your jurisdiction actually enforces before quoting it to a homeowner.',
+      'In many building codes, if more than 25 percent of a roof system is damaged or replaced within a 12-month period, the entire roof section must be brought up to current code. This frequently turns partial repairs into complete insurance replacements.',
   },
   {
     category: 'trade',
     question: 'What are the signs of a bad roofing job?',
     answer:
-      'Visible ones first: uneven or wavy shingle courses, exposed or overdriven nails, flashing reused when it should have been replaced, no drip edge, valleys done sloppily, and debris or nails left in the yard. Then the ones you find later: leaks at penetrations, ridge vent installed wrong, and a warranty nobody will honour because the manufacturer requires certified installation. Documented photos at each stage protect both sides, which is why the roofers who take them tend to be the ones with the best reviews.',
+      'Common indicators include crooked shingle courses, mismatched lot colors, missing drip edges, reused flashing, improperly spaced nails, and neglected ridge ventilation. Highlighting verified installation standards on your site reassures homeowners.',
   },
   {
     category: 'trade',
     question: 'How long does a roofing job usually take?',
     answer:
-      'Most residential asphalt replacements are a one to two day job on a normal house, weather permitting. Wood shakes generally run three to four days depending on size. A flat roof replacement is usually two to three days. Synthetic slate often lands in the three to five day range, and concrete tile is the long one at roughly eight to nine days. Weather, deck repairs found once the old roof is off, and permit inspections are what turn a two day job into a four day one.',
-  },
-  {
-    category: 'trade',
-    question: 'How do I increase roofing sales?',
-    answer:
-      'The pattern among roofers who close well is not a script, it is preparation. Know your materials well enough to explain trade-offs without a brochure. Inspect thoroughly and show what you found rather than describing it. Use the technology you have, drone or satellite measurement, so the homeowner sees the same evidence you do. Break the price down clearly instead of handing over one number. Offer roof-specific financing so cost is a decision and not a wall. Then keep the relationship alive with maintenance rather than disappearing until the next leak.',
-  },
-  {
-    category: 'trade',
-    question: 'Can roofers make six figures a year?',
-    answer:
-      'Plenty do, particularly owners and strong commission salespeople in storm markets, and plenty do not. It tracks with lead flow, close rate and average job value far more than with hours worked. That is the connection back to this page: the roofers who earn well are usually the ones who are not paying a marketplace a cut of every job, because their own site and profile bring work in directly. Owning your lead source is what makes the numbers work rather than working more Saturdays.',
+      'A standard residential architectural shingle replacement on a 2,500-square-foot home typically takes one to two days. Complex steep-slope architectural tile, synthetic slate, or large commercial flat roofs can take three to five days.',
   },
 ];
 

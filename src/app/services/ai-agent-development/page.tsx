@@ -1035,6 +1035,9 @@ export default function AIAgentDevelopmentPage() {
                 { t: 'Restaurant AI voice agents', d: 'Phone orders injected straight into Toast, Square and Clover, no separate tablet queue.', href: '/services/restaurant-ai-voice-agents' },
                 { t: 'AI SDR development', d: 'Outbound sequencing and inbound qualification wired into HubSpot, Salesforce and Apollo.', href: '/services/ai-sdr-development' },
                 { t: 'AI customer support agents', d: 'Order status, refunds and billing changes resolved inside Zendesk, Gorgias and NetSuite.', href: '/services/ai-customer-support-agents' },
+                { t: 'Real estate AI agents', d: 'Lead qualification, property showings and CRM follow-up synced with Follow Up Boss and kvCORE.', href: '/services/ai-agents-for-real-estate' },
+                { t: 'Healthcare administrative AI agents', d: 'Patient intake, scheduling and insurance eligibility under a BAA, wired into Epic and athenahealth.', href: '/services/ai-agents-for-healthcare' },
+                { t: 'AI integration services', d: 'Connect GPT-4o and Claude directly to your CRM, ERP, support desk and internal database.', href: '/services/ai-integration-services' },
                 { t: 'Ecommerce CRO agency', d: 'Checkout friction and cart abandonment fixed on Shopify Plus, backed by real A/B testing.', href: '/services/ecommerce-cro-agency' },
               ].map((a) => (
                 <li className="pp-card" key={a.t}>

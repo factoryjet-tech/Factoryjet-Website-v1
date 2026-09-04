@@ -148,7 +148,7 @@ const READERS: ReadonlyArray<Reader> = [
     tag: '01',
     title: 'The design engineer',
     body:
-      'They have a part in CAD and a deadline. They want your tolerance range, your materials, your machine envelope, and a model they can drop into an assembly. They will not call to find out. If the page does not say it, you are off the list.',
+      'They have a part in SolidWorks, AutoCAD, PTC Creo, or CATIA and a tight deadline. They want your tolerance range, material specs, machine envelope, and a STEP or DXF model they can drop into their CAD assembly. They will not call to find out. If the page does not say it, you are off the list.',
     tint: STEEL_SOFT,
     accent: STEEL,
   },
@@ -156,7 +156,7 @@ const READERS: ReadonlyArray<Reader> = [
     tag: '02',
     title: 'The sourcing or purchasing buyer',
     body:
-      'They are filling a supplier slot and reducing risk. They want certifications with real certificate numbers, your location, your capacity, your lead times, and proof you have made something like this before. Vague copy reads as something to hide.',
+      'They are filling a supplier slot and reducing vendor risk inside NetSuite, SAP, or JobBOSS. They want ISO 9001 and AS9100 certifications with real certificate numbers, your location, your capacity, your lead times, and proof you have made something like this before. Vague copy reads as something to hide.',
     tint: PEACH,
     accent: ORANGE_DARK,
   },
@@ -164,7 +164,7 @@ const READERS: ReadonlyArray<Reader> = [
     tag: '03',
     title: 'The quality manager',
     body:
-      'They decide whether you get onto the approved supplier list at all. They look for the standard, the scope on the certificate, the registrar and the expiry date. A row of logos with nothing behind them fails this reader in seconds.',
+      'They decide whether you get onto the approved supplier list at all. They look for the ISO 9001 or IATF 16949 standard, the scope on the certificate, the registrar, and the expiry date. A row of logos with nothing behind them fails this reader in seconds.',
     tint: GREEN_SOFT,
     accent: GREEN,
   },
@@ -172,7 +172,7 @@ const READERS: ReadonlyArray<Reader> = [
     tag: '04',
     title: 'The distributor or rep',
     body:
-      'They sell your product and need sell sheets, current spec data, images and stock guidance without emailing your marketing person. A lot of manufacturer traffic is your own channel hunting for a document.',
+      'They sell your product and need sell sheets, current spec data, parametric search part catalogs, and stock guidance without emailing your marketing person. A lot of manufacturer traffic is your own channel hunting for a document.',
     tint: STEEL_SOFT,
     accent: STEEL,
   },
@@ -213,9 +213,9 @@ const BUILD_ITEMS: ReadonlyArray<BuildItem> = [
   },
   {
     n: '04',
-    title: 'An RFQ form built for a print, not a message box',
+    title: 'An RFQ form built for engineering prints, not a message box',
     body:
-      'Quantity and whether it is a prototype or an annual release. Material and grade. Target date. Critical tolerances. Surface finish. Quality requirements. And a file upload that accepts STEP, IGES, DXF, DWG, PDF and native CAD without falling over on a large assembly. A name, email and 500 character box is not an RFQ form.',
+      'Capture quantity, prototype versus production releases, material grades, target turnaround, and surface finish tolerances. Support large CAD file uploads accepting STEP, IGES, DXF, DWG, and native formats from SolidWorks, AutoCAD, Autodesk Inventor, PTC Creo, Mastercam, and CATIA without crashing on complex assemblies.',
   },
   {
     n: '05',
@@ -225,21 +225,21 @@ const BUILD_ITEMS: ReadonlyArray<BuildItem> = [
   },
   {
     n: '06',
-    title: 'CAD and drawing downloads in the formats people use',
+    title: 'CAD and drawing downloads with an interactive drawing viewer',
     body:
-      'Neutral formats first, STEP and IGES and Parasolid and DXF, then native files where it helps, plus Revit families if you sell building products. Once your model is in an engineer’s assembly you are designed in, which is worth far more than a form fill.',
+      'Offer neutral formats including STEP, IGES, Parasolid, and DXF, plus native files for SolidWorks, AutoCAD, and Onshape assemblies. An interactive 3D drawing viewer allows engineers to inspect dimensions and tolerances directly on the page before downloading CAD assets.',
   },
   {
     n: '07',
-    title: 'Certifications with the certificate behind them',
+    title: 'Certifications with verifiable documentation',
     body:
-      'Name the standard and the revision, the scope of registration, the registrar and the expiry. Link the certificate itself. ISO 9001, AS9100, IATF 16949, ISO 13485, Nadcap for special processes. A quality manager building a supplier file needs the document, not a logo.',
+      'State specific standards, scopes of registration, registrars, and expiration dates. Link downloadable certificates for ISO 9001, AS9100, IATF 16949, ISO 13485, and Nadcap accreditation to pass quality manager audits immediately.',
   },
   {
     n: '08',
-    title: 'A distributor and rep locator that routes by territory',
+    title: 'Territory routing and ERP integration',
     body:
-      'Zip code or region in, the authorised partner and a real contact out. Not a PDF map. Not an alphabetical list of two hundred companies. And a rule for what happens when an end user in a rep’s territory asks you directly.',
+      'Route engineering RFQ submissions and distributor requests directly into manufacturing ERPs and CRMs including NetSuite, SAP, Epicor, JobBOSS, Infor, Global Shop Solutions, Salesforce, and HubSpot for immediate quote turnaround.',
   },
   {
     n: '09',
@@ -441,7 +441,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'specs',
     question: 'Which CAD formats should we publish?',
     answer:
-      'Neutral formats first, because they open everywhere: STEP, IGES, Parasolid, and DXF for two dimensional profiles. Add native files where a large share of your customers use one system. If you sell building products, add Revit families, because specifiers work inside the model.',
+      'Neutral formats first, because they open everywhere: STEP, IGES, Parasolid, and DXF for two dimensional profiles. Add native files where a large share of your customers use one system: SolidWorks, AutoCAD, Autodesk Inventor, PTC Creo, and CATIA. If you sell building products, add Revit families, because specifiers work inside the model.',
   },
   {
     category: 'specs',

@@ -6,6 +6,7 @@ import SiteFooter from '@/components/v2/SiteFooter';
 import FAQ, { type FAQItem, type FAQCategory } from '@/components/v2/FAQ';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import MidPageCTA from '@/components/v2/MidPageCTA';
 import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
 import EcommerceRoiCalculator from '@/components/commerce/EcommerceRoiCalculator';
 import B2bWholesaleCalculator from '@/components/commerce/B2bWholesaleCalculator';
@@ -338,20 +339,18 @@ export default function B2BEcommercePage() {
                 <h2 style={{ marginTop: '10px' }}>What is B2B e-commerce?</h2>
                 <div style={{ marginTop: '18px', display: 'grid', gap: '14px' }} className="pp-lead">
                   <p>
-                    B2B e-commerce is selling to other businesses online, the way trade buyers actually purchase. Unlike a
-                    direct-to-consumer store with one price for everyone, a B2B ecommerce platform gives each trade account
-                    its own login, its own pricing, and the workflows a business buyer needs: net terms, purchase orders,
-                    quotes, approvals, account hierarchies, and fast reordering.
+                    B2B e-commerce is selling to other businesses online. It matches how commercial buyers actually purchase.
+                    Unlike consumer stores with one public price, a B2B platform gives each account its own login. Buyers see their
+                    contracted prices and specific terms. They use purchase orders, request quotes, route approvals, and reorder in one click.
                   </p>
                   <p>
-                    For manufacturers, distributors, and wholesalers, a good B2B ecommerce solution replaces ordering by
-                    email and phone with self-service that buyers prefer and your team does not have to babysit. It connects
-                    to your ERP so pricing, inventory, and orders stay in one place, and it can run alongside a DTC store on
-                    the same catalog.
+                    For manufacturers and distributors, self-service replaces manual emails and phone calls. Buyers prefer placing orders
+                    directly on their own schedule. Your inside sales team avoids manual re-keying. The portal links directly with your ERP,
+                    so inventory and ledger records stay in sync.
                   </p>
                   <p>
-                    We design, build, and implement that system on the right platform, then hand it over for you to own and
-                    run. You are not buying a tool you rent from us; you are buying a B2B ecommerce platform you own.
+                    We design, build, and deploy that system on the right architecture. Then we hand it over for your team to run.
+                    You do not pay recurring software rent to an agency. You own the code and the store.
                   </p>
                 </div>
               </div>
@@ -466,6 +465,13 @@ export default function B2BEcommercePage() {
             </ul>
           </div>
         </section>
+
+        {/* MidPage CTA */}
+        <MidPageCTA
+          headline="Ordering still living in emails and spreadsheets?"
+          sub="Tell us your catalog size, ERP, and customer pricing rules. We will map how a unified portal replaces manual order entry."
+          label="Talk to the founder"
+        />
 
         {/* ── ERP integration ── */}
         <section className="pp-sec tint">
@@ -700,8 +706,9 @@ export default function B2BEcommercePage() {
                   <Image
                     src="/images/portfolio/bombay-petals-480.webp"
                     alt="Bombay Petals B2B wholesale ecommerce store built by FactoryJet"
-                    fill
-                    style={{ objectFit: 'cover' }}
+                    width={480}
+                    height={220}
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                     sizes="(max-width: 860px) 100vw, 50vw"
                   />
                 </div>
@@ -720,8 +727,9 @@ export default function B2BEcommercePage() {
                   <Image
                     src="/images/portfolio/belle-maison-480.webp"
                     alt="Belle Maison DTC ecommerce storefront built by FactoryJet, ready to add B2B on the same system"
-                    fill
-                    style={{ objectFit: 'cover' }}
+                    width={480}
+                    height={220}
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                     sizes="(max-width: 860px) 100vw, 50vw"
                   />
                 </div>
@@ -751,8 +759,9 @@ export default function B2BEcommercePage() {
                   <Image
                     src="/images/us/commerce/b2b-ecommerce-people-trade-counter-staff.webp"
                     alt="A counter assistant handing a boxed order across a wholesale trade counter"
-                    fill
-                    style={{ objectFit: 'cover' }}
+                    width={600}
+                    height={380}
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                     sizes="(max-width: 768px) 100vw, 50vw"
                     loading="lazy"
                   />
@@ -764,8 +773,9 @@ export default function B2BEcommercePage() {
                   <Image
                     src="/images/us/commerce/b2b-ecommerce-people-warehouse-team.webp"
                     alt="Two warehouse workers checking a pallet against a clipboard"
-                    fill
-                    style={{ objectFit: 'cover' }}
+                    width={600}
+                    height={380}
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                     sizes="(max-width: 768px) 100vw, 50vw"
                     loading="lazy"
                   />

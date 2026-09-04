@@ -158,6 +158,10 @@ const CAPABILITIES = [
   { t: 'B2B portal on the same catalog', d: 'Gated trade ordering with tiered pricing and net terms alongside your DTC store.' },
   { t: 'Customer data & loyalty', d: 'One customer profile and loyalty program that follows the shopper across channels.' },
   { t: 'ERP, PIM & 3PL integration', d: 'NetSuite, SAP Business One, Dynamics 365, Akeneo, Fluent Commerce, ShipBob and your existing 3PL, wired into one order and inventory layer.' },
+  { t: 'Returns & reverse logistics', d: 'Buy online and return in store. Self-service portal returns route straight back into available stock.' },
+  { t: 'Product information management', d: 'Enrich technical attributes and media assets once. Syndicate clean feeds to every selling channel.' },
+  { t: 'Multi-warehouse fulfillment logic', d: 'Intelligent routing based on delivery proximity, split-shipment reduction, and live carrier rates.' },
+  { t: 'Social commerce & headless endpoints', d: 'TikTok Shop and mobile native apps connected via Storefront API to your core inventory.' },
 ];
 const USECASES = [
   { t: 'Retail + DTC brands', img: 'retail-dtc.webp', alt: 'Store associate at a point-of-sale tablet handing a wrapped order to a customer in a boutique', d: 'Connect your online store and retail POS so stock, pricing, and customers are shared. Ship-from-store, buy-online-pickup-in-store, and a single loyalty profile across web and counter mean shoppers get one experience and you get one set of numbers.' },
@@ -228,7 +232,7 @@ export default function OmnichannelCommercePage() {
 
         {/* Stat band */}
         <section className="pp-sec tint" style={{ paddingTop: 'clamp(32px,4vh,52px)', paddingBottom: 'clamp(32px,4vh,52px)' }}>
-          <div className="pp-wrap"><div className="pp-stats">{STATS.map((s) => (<div className="pp-stat" key={s.b}><b>{s.b}</b><span>{s.s}</span></div>))}</div></div>
+          <div className="pp-wrap"><ul className="pp-stats" style={{ listStyle: 'none', padding: 0, margin: 0 }}>{STATS.map((s) => (<li className="pp-stat" key={s.b}><b>{s.b}</b><span>{s.s}</span></li>))}</ul></div>
         </section>
 
         {/* What is */}
@@ -238,23 +242,21 @@ export default function OmnichannelCommercePage() {
             <h2 style={{ marginTop: '10px' }}>What is omnichannel commerce?</h2>
             <div style={{ marginTop: '18px', display: 'grid', gap: '16px' }} className="pp-lead">
               <p>
-                Omnichannel commerce means selling across every channel your customers use, web, mobile, retail,
-                marketplaces, and social, with one connected system behind it. Unlike a multichannel setup where a
-                separate store, POS, and marketplace tool each hold their own stock and pricing, an omnichannel ecommerce
-                platform reads from one catalog and one inventory, so a customer can buy anywhere and you still see one
-                order history and one source of truth.
+                Omnichannel commerce means selling across every channel your buyers use. It covers web, mobile, retail,
+                marketplaces, and social with one connected system. In a multichannel setup, separate stores and POS
+                tools each hold their own stock and pricing. An omnichannel commerce platform changes that. It reads
+                from one catalog and one live inventory. A customer can buy anywhere. You still see one order history
+                and one clear source of truth.
               </p>
               <p>
-                For retail and DTC brands, that is the difference between channels that compete for stock and channels
-                that cooperate. A shopper can buy online and pick up in store, return in one place what they bought in
-                another, and earn loyalty that follows them everywhere. Your team works from one view of inventory,
-                orders, and customers instead of reconciling spreadsheets between systems.
+                For retail and DTC brands, that ends stock competition between channels. A shopper can buy online and
+                pick up in store. They can return items at the counter that they bought on the web. Their loyalty points
+                follow them everywhere. Your team works from one unified inventory view instead of reconciling spreadsheets.
               </p>
               <p>
-                We are the agency that designs and builds that connected system, then hands it over for you to own and
-                run. Multichannel means you sell in many places; omnichannel means those places act as one. That is the
-                difference we engineer, on Shopify, BigCommerce, Adobe Commerce, a headless build, or Commerceflo,
-                whichever fits your catalog and channels best.
+                We design and build that connected architecture, then hand it over for you to own and run. Multichannel
+                means you sell in many places. Omnichannel means those places act as one. We engineer that difference on
+                Shopify, BigCommerce, Adobe Commerce, or custom headless builds.
               </p>
             </div>
           </div>
@@ -314,9 +316,9 @@ export default function OmnichannelCommercePage() {
           <div className="pp-wrap">
             <p className="pp-mlabel">// who we build for</p>
             <h2 style={{ marginTop: '10px' }}>Omnichannel, by business type</h2>
-            <div style={{ marginTop: '34px', display: 'grid', gap: 'clamp(28px,4vw,44px)' }}>
+            <ul style={{ marginTop: '34px', display: 'grid', gap: 'clamp(28px,4vw,44px)', listStyle: 'none', padding: 0, margin: 0 }}>
               {USECASES.map((u, i) => (
-                <div key={u.t} style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(24px,4vw,44px)', alignItems: 'center' }} className="pp-herogrid">
+                <li key={u.t} style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(24px,4vw,44px)', alignItems: 'center' }} className="pp-herogrid">
                   <div style={{ order: i % 2 === 1 ? 2 : 1 }}>
                     <h3 style={{ fontSize: '21px' }}>{u.t}</h3>
                     <p className="pp-lead" style={{ marginTop: '10px', fontSize: '16px' }}>{u.d}</p>
@@ -324,9 +326,9 @@ export default function OmnichannelCommercePage() {
                   <div style={{ order: i % 2 === 1 ? 1 : 2 }}>
                     <Image src={`${IMG}/${u.img}`} alt={u.alt} width={1448} height={1086} sizes="(max-width:760px) 100vw, 50vw" style={imgStyle} />
                   </div>
-                </div>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 

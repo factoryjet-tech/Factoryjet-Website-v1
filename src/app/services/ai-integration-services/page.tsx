@@ -23,7 +23,7 @@ import FinalCTA from '@/components/v2/FinalCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'AI Integration Services USA: Connect AI to Tools | FactoryJet',
+  title: 'AI Integration Services: Connect AI to Tools | FactoryJet',
   description:
     'Add AI to your existing business software: CRM, e-commerce, ERP & custom apps. Expert AI integration. Get a quote.',
   openGraph: {
@@ -461,7 +461,7 @@ const FAQ_CATEGORIES = [
   { key: 'trust',     label: 'Trust & Results' },
 ];
 
-/* ─── FAQ items — 21 conversational Q-A pairs ────────────────────────────── */
+/* ─── FAQ items - 21 conversational Q-A pairs ────────────────────────────── */
 const FAQ_ITEMS = [
 
   /* ── What Is AI Integration ── */
@@ -669,7 +669,7 @@ export default function AIIntegrationServicesPage() {
         formSlot={<HeroInlineForm region="us" source="us_services_ai_integration_services_hero" />}
           eyebrow="AI INTEGRATION SERVICES · USA"
           headline="Add AI to the Tools You Already Use, Without Replacing Them"
-          lead="Your CRM, e-commerce platform, support desk, and internal apps can all be smarter, right now, without a wholesale software replacement. FactoryJet integrates GPT-4o and Claude into your existing stack so your team gets AI capabilities inside the tools they already know."
+          lead="Your CRM, e-commerce store, support desk, and internal apps can all be smarter without replacing your software stack. FactoryJet integrates GPT-4o and Claude directly into your existing tools. Your team gains advanced AI capabilities inside familiar workflows."
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
             '500+ businesses served',
@@ -744,7 +744,7 @@ export default function AIIntegrationServicesPage() {
                 ))}
               </div>
               <p>
-                Most businesses spend months evaluating AI tools, signing up for pilots, and trying to get teams to adopt new software, and the majority never actually ship anything. The faster path is different: keep the tools your team already knows and uses every day, and add AI capabilities directly inside them via API. Your sales team stays in HubSpot. Your support team stays in Zendesk. The AI works behind the scenes.
+                Most businesses spend months evaluating AI tools and signing up for pilots. Most never ship anything meaningful. The faster path is simple. Keep the tools your team already knows. Add AI capabilities directly via API. Your sales team stays in HubSpot. Your support team stays in Zendesk. The AI operates seamlessly behind the scenes.
               </p>
 
               <div className="grid grid-cols-3 gap-3" aria-hidden>
@@ -782,7 +782,7 @@ export default function AIIntegrationServicesPage() {
                 </p>
               </div>
               <p>
-                We connect GPT-4o, Claude, and other AI models to your CRM, e-commerce platform, support desk, or internal apps using their native APIs. Your sales rep gets a personalized follow-up draft with one click inside HubSpot. Your support agent opens Zendesk and the ticket is already classified and has a draft reply. Your Shopify store generates product descriptions automatically when you add a new SKU. The same workflows, with AI-powered results.
+                We connect GPT-4o, Claude, and specialized models using native APIs. A sales rep gets a personalized email draft with one click in HubSpot. A support agent opens Zendesk to find tickets pre-classified with drafted replies. A Shopify store creates optimized product descriptions upon adding a new SKU. Familiar workflows deliver AI-powered efficiency.
               </p>
 
               <div className="grid grid-cols-2 gap-2" aria-hidden>
@@ -921,6 +921,90 @@ export default function AIIntegrationServicesPage() {
           lead="These are the integrations with the clearest, fastest payback for US small and mid-sized businesses. We build all six and help you identify which one to start with."
           sectors={INTEGRATION_TYPES}
         />
+
+        {/* ── 6.5. INTEGRATION ARCHITECTURE & CODE CONNECTIONS ──────────── */}
+        <section className="bg-white py-14 md:py-20 border-t border-b border-fj-neutral-200">
+          <div className="mx-auto max-w-[1180px] px-6 md:px-8">
+            <p className="font-fj-mono text-xs font-semibold uppercase tracking-[0.14em] text-[#B23E13]">
+              API & MIDDLEWARE ARCHITECTURE
+            </p>
+            <h2 className="fj-display mt-3.5 text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-fj-ink">
+              Enterprise AI middleware and secure API connectors
+            </h2>
+            <p className="mt-4 max-w-[760px] font-fj-body text-base leading-relaxed text-fj-neutral-600">
+              We design production-grade middleware that bridges foundational language models with your operational software.
+              Our integrations leverage official{' '}
+              <a
+                href="https://platform.openai.com/docs/guides/function-calling"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold underline underline-offset-2 text-[#B23E13]"
+              >
+                OpenAI Function Calling APIs
+              </a>{' '}
+              and{' '}
+              <a
+                href="https://docs.anthropic.com/en/docs/build-with-claude/tool-use"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold underline underline-offset-2 text-[#B23E13]"
+              >
+                Anthropic Claude Tool Use documentation
+              </a>
+              , ensuring structured, deterministic JSON payloads, role-based access control, and zero data leakage.
+            </p>
+
+            <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="flex flex-col rounded-2xl border border-fj-neutral-200 bg-fj-cream p-5">
+                <img
+                  src="/images/us/services/hero-ai-integration.webp"
+                  alt="Enterprise AI API integration connecting CRM and ERP databases"
+                  width={1200}
+                  height={800}
+                  loading="lazy"
+                  decoding="async"
+                  className="h-48 w-full rounded-xl object-cover border border-fj-neutral-200 shadow-sm"
+                />
+                <h3 className="fj-display mt-4 text-lg font-bold text-fj-ink">CRM & ERP Data Sync</h3>
+                <p className="mt-2 font-fj-body text-sm text-fj-neutral-600">
+                  Bi-directional data pipelines synchronizing HubSpot, Salesforce, NetSuite, and QuickBooks with AI models.
+                </p>
+              </div>
+
+              <div className="flex flex-col rounded-2xl border border-fj-neutral-200 bg-fj-cream p-5">
+                <img
+                  src="/images/us/services/hero-ai-workflow.webp"
+                  alt="Automated AI workflow and asynchronous background processing queue"
+                  width={1200}
+                  height={800}
+                  loading="lazy"
+                  decoding="async"
+                  className="h-48 w-full rounded-xl object-cover border border-fj-neutral-200 shadow-sm"
+                />
+                <h3 className="fj-display mt-4 text-lg font-bold text-fj-ink">Asynchronous Event Queues</h3>
+                <p className="mt-2 font-fj-body text-sm text-fj-neutral-600">
+                  High-throughput background jobs handling document processing, ticket routing, and automated email drafting.
+                </p>
+              </div>
+
+              <div className="flex flex-col rounded-2xl border border-fj-neutral-200 bg-fj-cream p-5">
+                <img
+                  src="/images/us/services/hero-ai-agent-us.webp"
+                  alt="Custom AI agent interface embedded directly into business software"
+                  width={1200}
+                  height={800}
+                  loading="lazy"
+                  decoding="async"
+                  className="h-48 w-full rounded-xl object-cover border border-fj-neutral-200 shadow-sm"
+                />
+                <h3 className="fj-display mt-4 text-lg font-bold text-fj-ink">In-App Native Interfaces</h3>
+                <p className="mt-2 font-fj-body text-sm text-fj-neutral-600">
+                  Embedded chrome extensions, sidebar copilots, and modal assistants operating directly in your daily tools.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* ── 7. MARKET STATS ──────────────────────────────────────────────── */}
         <div className="bg-fj-neutral-50">

@@ -122,55 +122,55 @@ const DELIVERABLES: ReadonlyArray<Deliverable> = [
     n: '01',
     title: 'A diagnosis, not a checklist',
     body:
-      'The first job is finding the actual constraint. Sometimes it is crawlability. Sometimes a thin page template repeated across thousands of URLs. Sometimes the site is fine and nobody has ever earned a link. We work out which is true for you before recommending anything.',
+      'The first job is finding the actual constraint. Sometimes it is crawlability. Sometimes a thin page template repeated across thousands of URLs. Sometimes the site is fine and nobody has ever earned an authoritative backlink. We isolate the root cause before recommending strategic investments.',
   },
   {
     n: '02',
-    title: 'A technical audit your developers can act on',
+    title: 'Deep technical audits combining enterprise crawler logs',
     body:
-      'Crawl and index coverage, rendering, canonical and duplicate-URL handling, internal link architecture, structured data, and Core Web Vitals. Written as tickets with reproduction steps, not a 90-slide PDF nobody opens.',
+      'We run rigorous crawls combining Screaming Frog, Sitebulb, Botify, and Google Search Console (GSC) API log inspection. We diagnose rendering bottlenecks, index coverage, canonical loops, schema validation, and Google Core Web Vitals (LCP, INP, CLS) with actionable developer tickets.',
   },
   {
     n: '03',
-    title: 'Keyword and AI-query research grounded in real data',
+    title: 'Keyword and AI-search intelligence grounded in real data',
     body:
-      'Which queries your buyers actually type, what volume and competitive difficulty look like, and which now get answered inside an AI summary before anyone clicks. We map the terms worth chasing and the ones that are a trap.',
+      'Competitive intelligence utilizing Ahrefs, Semrush, and Google Search Console query logs. We identify commercial search intent, AI Overview citation triggers, and untapped keyword clusters while resolving keyword cannibalization across existing landing pages.',
   },
   {
     n: '04',
     title: 'A content architecture, not a list of blog titles',
     body:
-      'Which pages should exist, what each one is allowed to rank for, and how they link together. This is where most sites bleed: five pages competing for one query, so none of them wins. We assign one owner per topic and fix the collisions.',
+      'Which pages should exist, what each one is allowed to rank for, and how they link together. This is where most sites bleed: multiple pages competing for one query, so none of them wins. We assign one owner per topic and fix internal link hierarchy.',
   },
   {
     n: '05',
-    title: 'A prioritised 90-day roadmap',
+    title: 'A prioritised 90-day execution roadmap',
     body:
-      'Every recommendation gets an expected impact, an effort estimate in engineering or writing time, and a sequence. Your team should be able to pick up item one on Monday morning without asking a follow-up question.',
+      'Every recommendation gets an expected impact score, an effort estimate in engineering or writing hours, and a clear sequence. Your internal engineering team can pick up ticket number one on Monday morning without ambiguity.',
   },
   {
     n: '06',
-    title: 'Competitor teardowns that explain the gap',
+    title: 'Competitor teardowns that explain the visibility gap',
     body:
-      'Not a rank-tracking screenshot. A structural read on why the sites above you are above you: internal linking, page templates, authority sources, and which of those advantages you can realistically close.',
+      'Structural competitive analysis powered by Ahrefs, Semrush, and Moz domain metrics. We dissect why top-ranking competitors win: content depth, page templates, referring domain velocity, and which structural advantages you can close first.',
   },
   {
     n: '07',
-    title: 'Measurement your executives will believe',
+    title: 'Executive measurement in GA4, BigQuery & Looker Studio',
     body:
-      'Search Console and analytics configured so organic performance ties to leads and revenue rather than to a vanity ranking chart. If you cannot prove SEO worked, internal support for it quietly disappears, so this part matters more than people think.',
+      'Performance tracking configured through Google Analytics 4 (GA4), BigQuery exports, and Looker Studio executive dashboards. We tie search impressions and rankings directly to qualified leads, pipeline creation, and closed customer revenue.',
   },
   {
     n: '08',
-    title: 'Training and knowledge transfer',
+    title: 'Multi-location and local citation architecture',
     body:
-      'Working sessions with your writers, developers, and marketing lead so the thinking stays in the building. The goal of good consulting is that you need less of it over time, not more.',
+      'For regional and multi-location brands, we audit and synchronize Google Business Profile (GBP), BrightLocal, and Whitespark citation data to dominate local map pack queries.',
   },
   {
     n: '09',
-    title: 'A standing review, so the plan survives contact with reality',
+    title: 'A standing strategic review and algorithmic monitoring',
     body:
-      'Roadmaps drift. Priorities shift. A recurring review keeps the plan honest, catches new technical regressions after releases, and adjusts as search and AI answer engines change what they reward.',
+      'Recurring advisory reviews to evaluate roadmap execution, audit staging builds for technical regressions, and adapt your SEO strategy to Google core updates and evolving AI search landscapes.',
   },
 ];
 
@@ -733,6 +733,30 @@ export default function SeoConsultingPage() {
                 when your gap is capacity. FactoryJet does both, and we will tell you on the first call which
                 one you actually need.
               </p>
+              <p className="mt-4 max-w-[900px] font-fj-body text-[1.0625rem] leading-[1.7] text-fj-neutral-600">
+                All strategy aligns with official{' '}
+                <a
+                  href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold underline underline-offset-2"
+                  style={{ color: ORANGE_DARK }}
+                >
+                  Google Search Essentials documentation
+                </a>{' '}
+                and Core Web Vitals standards, ensuring sustainable algorithmic visibility without manipulative tactics.
+              </p>
+              <div className="mt-6 overflow-hidden rounded-2xl border border-black/10 shadow-lg">
+                <img
+                  src="/images/us/services/seo/hero-seo.webp"
+                  alt="Enterprise technical SEO consulting audit and organic search performance analysis"
+                  width={1200}
+                  height={800}
+                  loading="lazy"
+                  decoding="async"
+                  className="h-auto w-full object-cover"
+                />
+              </div>
             </div>
           </div>
         </section>
@@ -858,6 +882,46 @@ export default function SeoConsultingPage() {
                 </li>
               ))}
             </ol>
+
+            <div className="mt-10 rounded-2xl bg-white p-7 border" style={{ borderColor: 'rgba(15,15,18,0.09)' }}>
+              <h2 className="fj-display text-[1.35rem] font-bold text-fj-ink mb-3" style={{ letterSpacing: '-0.02em' }}>
+                Technical benchmarks and Core Web Vitals standards
+              </h2>
+              <p className="font-fj-body text-[1.0625rem] leading-[1.7] text-fj-neutral-600">
+                All roadmap initiatives and technical recommendations strictly benchmark against{' '}
+                <a
+                  href="https://developers.google.com/search/docs/appearance/core-web-vitals"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold underline underline-offset-2"
+                  style={{ color: ORANGE_DARK }}
+                >
+                  Google Core Web Vitals guidelines
+                </a>{' '}
+                and official{' '}
+                <a
+                  href="https://web.dev/articles/vitals"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold underline underline-offset-2"
+                  style={{ color: ORANGE_DARK }}
+                >
+                  web.dev Web Vitals documentation
+                </a>
+                , focusing engineering sprints on high-impact optimizations that protect user experience and algorithmic rankings.
+              </p>
+              <div className="mt-6 overflow-hidden rounded-2xl border border-black/10 shadow-lg">
+                <img
+                  src="/images/us/chicago-seo/chicago-strategy-session.webp"
+                  alt="Senior SEO consultant leading an enterprise organic search strategy and technical roadmap session"
+                  width={1448}
+                  height={1086}
+                  loading="lazy"
+                  decoding="async"
+                  className="h-auto w-full object-cover"
+                />
+              </div>
+            </div>
           </div>
         </section>
 

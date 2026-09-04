@@ -222,7 +222,7 @@ const DELIVERABLES: ReadonlyArray<Deliverable> = [
     n: '05',
     title: 'The procurement pages almost nobody builds',
     body:
-      'A security overview in plain words. Where data lives and who touches it. A sub-processor list. An accessibility statement and conformance report. Insurance and legal entity details. These pages get almost no traffic and unblock deals that would otherwise sit in review.',
+      'A trust center and security portal detailing SOC 2 Type II compliance, GDPR alignment, sub-processor registries, and Accessibility Conformance Reports (ACR / VPAT). These pages get almost no traffic and unblock enterprise deals that would otherwise sit in security review.',
   },
   {
     n: '06',
@@ -232,9 +232,9 @@ const DELIVERABLES: ReadonlyArray<Deliverable> = [
   },
   {
     n: '07',
-    title: 'One short form on the page that matters',
+    title: 'High-converting lead routing and CRM integration',
     body:
-      'Two fields on the money page beats eleven fields everywhere. Long qualification forms feel efficient to marketing and read as an obstacle course to a director with four other tabs open. Qualify in the follow-up.',
+      'Frictionless lead routing syncing instantly with HubSpot, Salesforce, Marketo, or Pardot CRM pipelines, enriched via Clearbit, ZoomInfo, or Apollo.io APIs. Two fields on the money page beats eleven fields everywhere.',
   },
   {
     n: '08',
@@ -244,15 +244,15 @@ const DELIVERABLES: ReadonlyArray<Deliverable> = [
   },
   {
     n: '09',
-    title: 'Integration and compatibility, spelled out',
+    title: 'Integration ecosystem and API compatibility',
     body:
-      'The technical evaluator has one question: will this fit what we already run. Nielsen Norman Group lists integration, compatibility and regulatory detail as a core B2B content requirement. Name the systems you connect to, and the ones you do not.',
+      'The technical evaluator has one question: will this fit our existing stack. We build dedicated ecosystem directories highlighting bi-directional API sync with Salesforce, HubSpot, Stripe, Segment, 6sense, Demandbase, NetSuite, and Slack.',
   },
   {
     n: '10',
-    title: 'A speed budget on the templates reps send',
+    title: 'Next.js and Vercel edge performance architecture',
     body:
-      'Google treats an Interaction to Next Paint of 200 milliseconds or less as good responsiveness. That is easy on a static page and easy to lose on the case study template with an embedded video and three tracking scripts, which is the page your reps send most.',
+      'High-performance frontend architecture powered by Next.js, Tailwind CSS, and Vercel edge deployment, passing Google Core Web Vitals (LCP under 2.0s, INP under 150ms). Fast pages protect conversion rates when reps share case studies with busy executives.',
   },
   {
     n: '11',
@@ -404,7 +404,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'basics',
     question: 'What are the top 10 B2B websites in the USA?',
     answer:
-      'No authoritative ranking exists, so any list claiming one is somebody marketing themselves. The question usually means either the largest B2B trading platforms or the best-designed B2B sites. For design, the roundups from Webflow, Superside and Axon Garside are reasonable starting points, not a scoreboard.',
+      'No single official ranking exists. The question usually refers to B2B platforms like ThomasNet or top SaaS websites featured by Webflow and Superside. Focus on benchmark leaders in your specific industry.',
   },
 
   /* ── B2B vs B2C ─────────────────────────────────────────────────────── */
@@ -430,13 +430,13 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'vs',
     question: 'Is Amazon a B2B or B2C company?',
     answer:
-      'Both, through separate businesses. Amazon.com is consumer retail. Amazon Business is a purchasing platform aimed at companies, schools and public bodies. Amazon Web Services sells cloud infrastructure almost entirely to organisations. One brand runs a consumer storefront and a large B2B operation side by side, on deliberately different designs.',
+      'Both, through separate businesses. Amazon.com is consumer retail. Amazon Business is a purchasing platform aimed at businesses. AWS sells cloud infrastructure to enterprises. One brand runs both models on separate digital properties.',
   },
   {
     category: 'vs',
     question: 'Is Google a B2B or B2C company?',
     answer:
-      'Consumer-facing, B2B-funded. Search, Gmail, Maps and Android are used by billions of people who pay nothing. The customers who actually pay are advertisers and cloud buyers, and those are businesses. It is the clearest reason to ask who pays rather than who uses.',
+      'Google is consumer-facing but B2B-funded. Search, Gmail, Maps, and Android are used by consumers for free. The paying customers are advertisers and Google Cloud buyers, which are enterprises. The key question is always who pays for the software.',
   },
   {
     category: 'vs',
@@ -1317,7 +1317,15 @@ export default function B2BWebsiteDesignPage() {
                   <Link href="/services/small-business-website-design" className="font-semibold underline underline-offset-2" style={{ color: ORANGE_DARK }}>
                     small business website design
                   </Link>{' '}
-                  is scoped for that instead.
+                  is scoped for that instead. For specialized verticals, explore our dedicated solutions for{' '}
+                  <Link href="/services/manufacturing-website-design" className="font-semibold underline underline-offset-2" style={{ color: ORANGE_DARK }}>
+                    manufacturing website design
+                  </Link>{' '}
+                  and{' '}
+                  <Link href="/services/saas-website-design" className="font-semibold underline underline-offset-2" style={{ color: ORANGE_DARK }}>
+                    SaaS website design
+                  </Link>
+                  .
                 </p>
               </div>
             </div>
@@ -1515,6 +1523,11 @@ export default function B2BWebsiteDesignPage() {
                   label: 'Web application development',
                   href: '/services/web-application-development',
                   desc: 'When the thing behind the marketing site is a product or a customer portal rather than pages.',
+                },
+                {
+                  label: 'Nonprofit website design',
+                  href: '/services/nonprofit-website-design',
+                  desc: 'Accessible, donor-converting websites for 501(c)(3) foundations, charities, and mission-driven organizations.',
                 },
               ].map((svc) => (
                 <Link

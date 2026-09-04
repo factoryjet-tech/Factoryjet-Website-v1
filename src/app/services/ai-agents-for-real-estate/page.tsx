@@ -202,9 +202,9 @@ type Step = { n: string; title: string; body: string };
 const STEPS: ReadonlyArray<Step> = [
   {
     n: '01',
-    title: 'Pick one queue, not the whole business',
+    title: 'Pick one queue: inbound buyer and seller leads',
     body:
-      'Inbound buyer enquiries from your website and portals: high volume, measurable, and where slow response costs most. Handing an agent everything on day one is the reliable way to fail in public.',
+      'Inbound buyer enquiries from your website, Zillow Premier Agent, Realtor.com, and paid social campaigns. High volume, measurable, and where slow response costs most. Handing an agent everything on day one is the fastest way to fail.',
   },
   {
     n: '02',
@@ -214,9 +214,9 @@ const STEPS: ReadonlyArray<Step> = [
   },
   {
     n: '03',
-    title: 'Connect the CRM as the system of record',
+    title: 'Connect your CRM as the system of record',
     body:
-      'Follow Up Boss, Lofty, Sierra Interactive, kvCORE and BoldTrail, Real Geeks, HubSpot or Salesforce. The agent reads the contact, writes back to named fields, and logs every message. Without CRM writeback you have a chat widget.',
+      'Full two-way synchronization with Follow Up Boss, kvCORE, BoomTown, Real Geeks, Lofty, Sierra Interactive, HubSpot, or Salesforce. For property management teams, sync directly with Yardi, AppFolio, or Buildium to track tenant applications.',
   },
   {
     n: '04',
@@ -226,21 +226,21 @@ const STEPS: ReadonlyArray<Step> = [
   },
   {
     n: '05',
-    title: 'Give it a calendar and a booking path',
+    title: 'Give it a calendar and showing scheduler',
     body:
-      'Google Calendar or Microsoft Outlook for the agent side, plus ShowingTime or BrokerBay where the brokerage uses one. Then the booking rules, which decide whether the calendar stays usable once volume arrives.',
+      'Integrate showing schedulers and calendar availability with ShowingTime, BrokerBay, Google Calendar, and Calendly. The agent enforces booking rules and agent buffers so schedules stay organized.',
   },
   {
     n: '06',
-    title: 'Write the fair housing limits into the tools',
+    title: 'Write fair housing limits into the tools',
     body:
       'Not into a prompt, into the tool definitions and a blocklist. The agent may not describe a neighbourhood in terms of the people who live there, may not steer, may not answer questions about schools, crime or demographics, and may not vary its behaviour by any protected characteristic. Those requests get one neutral reply and a handoff.',
   },
   {
     n: '07',
-    title: 'Decide the handoff rule before launch',
+    title: 'Conversational SMS, voice agents, and contract handoffs',
     body:
-      'Price advice, contract terms, financing, repairs, disclosure, anything emotional, and anyone who asks for a person. Those leave the agent immediately with a summary attached. A handoff rule written after launch is a rule written during an incident.',
+      'Deploy conversational SMS and voice agents with Twilio, Vapi, or Retell AI. Hand off qualified buyers for contract preparation directly in Dotloop or DocuSign, alerting listing agents instantly.',
   },
   {
     n: '08',
@@ -883,18 +883,16 @@ export default function AiAgentsForRealEstatePage() {
               </h2>
               <p className="mt-3 max-w-[900px] font-fj-body text-[1.0625rem] leading-[1.7] text-fj-neutral-600">
                 <b className="text-fj-ink">
-                  An AI agent for real estate is software that works your inbound leads the way a good
-                  assistant would.
+                  An AI agent for real estate works inbound leads like an experienced ISA.
                 </b>{' '}
-                It replies to a new enquiry in seconds, asks qualifying questions, books a showing on a real
-                calendar, updates the CRM record and keeps following up for months. A licensed human still
-                handles advice, negotiation and anything material.
+                It replies to new enquiries in seconds. It asks conversational qualifying questions.
+                It books showings on live agent calendars, updates CRM records, and nurtures buyers for months.
+                Licensed agents handle advisory conversations, pricing negotiations, and closing contracts.
               </p>
               <p className="mt-4 max-w-[900px] font-fj-body text-[1.0625rem] leading-[1.7] text-fj-neutral-600">
-                The difference from a chatbot is that an agent takes an action. A chatbot can tell someone a
-                home has four bedrooms. An agent books Tuesday at six, writes the appointment into Follow Up
-                Boss and flags the lead for a call. It writes to real records, which is why its limits have
-                to be real.
+                The difference from a basic chatbot is action. A chatbot answers questions about bedrooms.
+                An AI agent books Tuesday at six, writes the appointment into Follow Up Boss, and alerts the listing agent.
+                It interacts directly with real records, which makes strict guardrails essential.
               </p>
               <p className="mt-4 max-w-[900px] font-fj-body text-[1.0625rem] leading-[1.7] text-fj-neutral-600">
                 This page is the real estate build.{' '}

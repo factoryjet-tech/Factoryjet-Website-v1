@@ -243,29 +243,38 @@ export default function EcommerceForManufacturersPage() {
                 <h2 style={{ marginTop: '10px' }}>What is manufacturer e-commerce?</h2>
                 <div style={{ marginTop: '18px', display: 'grid', gap: '14px' }} className="pp-lead">
                   <p>
-                    Manufacturer e-commerce is a trade ordering system, not a shop. Dealers, distributors, and specifiers
-                    log in, see the pricing their contract entitles them to, check stock at the warehouse that will serve
-                    them, configure or specify a product, and place or repeat an order without emailing a rep.
+                    Manufacturer e-commerce is a trade ordering system, not a retail shop. Authorized dealers, distributors,
+                    and OEM buyers log in directly. They see the pricing their contract entitles them to. They check live
+                    stock at their assigned regional warehouse. Then they configure parts and place reorders without waiting on email threads.
                   </p>
                   <p>
-                    That makes it a different build from a consumer store. The catalog is technical rather than
-                    persuasive, buyers search by specification rather than by browsing, pricing is per-account rather than
-                    public, and the storefront is only as good as its connection to the ERP that holds the part master,
-                    the price lists, and the stock.
+                    That makes it a different build from a consumer store. The catalog is technical rather than promotional.
+                    Buyers search by exact specification rather than browsing. Pricing is negotiated per account rather than
+                    public. Crucially, the storefront connects directly to your ERP for part numbers, tier pricing, and live inventory.
                   </p>
                   <p>
-                    Distributor e-commerce solves the same problem from the other side of the channel: a broad catalog
-                    sourced from many suppliers, where the difficulty moves from configuration to catalog volume, supplier
-                    data quality, and multi-warehouse inventory accuracy.
+                    Distributor e-commerce solves the same problem from the other side of the channel. It handles a broad catalog
+                    sourced from many suppliers. In distribution, the primary challenges are catalog volume, supplier data quality,
+                    and multi-warehouse inventory accuracy.
                   </p>
                   <p>
-                    We design, build, and implement that system on the platform that fits, then hand it over for you to
-                    own and run. This page covers the manufacturing and distribution case specifically. For the wider
-                    trade-selling picture, see our{' '}
+                    We design, build, and implement that system, then hand it over for you to own and run. This page covers manufacturing
+                    commerce specifically. If you need a lead-generation web presence to capture engineering RFQs, see our{' '}
+                    <Link href="/services/manufacturing-website-design" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
+                      manufacturing website design
+                    </Link>{' '}
+                    service or our broader{' '}
+                    <Link href="/services/b2b-website-design" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
+                      B2B website design
+                    </Link>{' '}
+                    practice. For Shopify-specific enterprise wholesale setups, see{' '}
+                    <Link href="/services/shopify-plus-b2b" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
+                      Shopify Plus B2B
+                    </Link>. For the wider trade-selling picture, see our{' '}
                     <Link href="/b2b-ecommerce" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
                       B2B e-commerce
                     </Link>{' '}
-                    build. If you already run a dealer portal and the platform underneath it is the problem, see{' '}
+                    build. If you already run a dealer portal and the platform underneath it is the problem, explore{' '}
                     <Link href="/replatforming" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
                       e-commerce replatforming
                     </Link>.
@@ -283,21 +292,11 @@ export default function EcommerceForManufacturersPage() {
               </div>
             </div>
 
-            {/* Answer-First Definitions for AI Overviews & Search Engines */}
-            <div style={{ marginTop: '48px', display: 'grid', gap: '18px' }}>
+            {/* Answer-First High-Density Definition Components */}
+            <div style={{ marginTop: '48px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '24px' }}>
               <AnswerFirstDefinition
-                term="Manufacturer Dealer Portals"
-                definition="A manufacturer dealer portal is an authenticated digital ordering hub enabling authorized distributors, dealers, and commercial contractors to place wholesale orders against negotiated contract pricing, check multi-location inventory availability, and submit purchase orders on approved Net terms without sales rep intervention."
-                keyTakeaways={[
-                  'Replaces manual PDF order entry and phone calls with 24/7 self-service ordering',
-                  'Enforces contracted account pricing, volume tiers, and territory exclusions dynamically',
-                  'Integrates directly with factory ERPs for automated sales order ingestion and fulfillment tracking',
-                ]}
-                citationSource="FactoryJet Manufacturing Commerce Architecture Standard (2026)"
-              />
-              <AnswerFirstDefinition
-                term="Parametric & Part Number Search"
-                definition="Parametric search is an engineering-grade product discovery interface allowing industrial buyers to locate replacement components, spare parts, and equipment by filtering on technical specifications (voltage, bore size, pressure rating, material, manufacturer part number) rather than browsing marketing categories."
+                term="Parametric & Fitment Part Search"
+                definition="Parametric search is an engineering-grade discovery interface. Industrial buyers use it to locate replacement components and spare parts. They filter directly on technical specifications like voltage, bore size, pressure rating, and material instead of browsing marketing categories."
                 keyTakeaways={[
                   'Enables rapid lookup across catalogs containing 100,000+ technical SKUs and BOM assemblies',
                   'Supports cross-reference matching against competitor and OEM superseded part numbers',
@@ -307,7 +306,7 @@ export default function EcommerceForManufacturersPage() {
               />
               <AnswerFirstDefinition
                 term="ERP Part Master & Real-Time Stock Synchronization"
-                definition="Real-time ERP synchronization connects an enterprise manufacturer's central system of record (NetSuite, SAP, Epicor Prophet 21, Infor) to the commerce storefront via bi-directional webhook and API pipelines, ensuring customer credit limits, multi-warehouse stock allocations, and custom pricing matrices remain 100% accurate."
+                definition="Real-time ERP synchronization connects your central system of record to the commerce storefront. It links NetSuite, SAP, Epicor Prophet 21, or Infor via bi-directional API pipelines. Customer credit limits, multi-warehouse stock, and contract pricing matrices remain accurate across every channel."
                 keyTakeaways={[
                   'Prevents overselling by calculating available-to-promise (ATP) stock across regional distribution hubs',
                   'Maintains single-source-of-truth customer ledger data in the ERP without duplicate bookkeeping',

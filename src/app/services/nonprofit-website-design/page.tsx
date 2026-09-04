@@ -263,45 +263,45 @@ const DELIVERABLES: ReadonlyArray<Deliverable> = [
   },
   {
     n: '02',
-    title: 'A donation flow rebuilt around the phone',
+    title: 'A donation flow rebuilt around mobile giving',
     body:
-      'Wallet buttons first, then a short card form. Recurring as a real choice. Amounts from your own giving data. Tested on an old Android.',
+      'Digital wallet buttons first (Apple Pay, Google Pay, Venmo), then an optimized card form. We integrate seamless checkout experiences using Stripe, Fundraise Up, or Givebutter to maximize mobile gift completion rates.',
   },
   {
     n: '03',
     title: 'A sustainer programme the site actually supports',
     body:
-      'A monthly giving page, a self-service portal for updating a card, and an honest cancellation path.',
+      'A dedicated recurring giving page, self-service donor portal for card updates, and automated gift receipts syncing directly with Blackbaud, Bloomerang, DonorPerfect, Classy, or Neon CRM.',
   },
   {
     n: '04',
     title: 'The transparency pages grant officers look for',
     body:
-      'Your Form 990 or annual report where somebody can find it, a real board list, a financial summary in plain language, your legal name, EIN and address.',
+      'Public access to your Form 990 returns, 501(c)(3) determination letters, audited financial statements, board rosters, and verified profile seals from Candid GuideStar and Charity Navigator.',
   },
   {
     n: '05',
     title: 'Impact reporting that is not a vanity number',
     body:
-      'Meals served is an activity, not an outcome. We build the page around what changed and how you know. We will not invent a figure for you.',
+      'Meals served is an activity, not an outcome. We build interactive impact reports highlighting verified community outcomes, client testimonials, and measurable year-over-year progress.',
   },
   {
     n: '06',
-    title: 'WCAG 2.1 Level AA built in, not bolted on',
+    title: 'WCAG 2.1 Level AA accessibility built in',
     body:
-      'Keyboard operation, visible focus, contrast, labelled fields, alt text, captions, heading order. Under a government service contract the Department of Justice web rule makes this legal, not preference.',
+      'Keyboard navigation, high-contrast typography, clear form labels, screen-reader semantics, and closed captioning, complying fully with Department of Justice Title II digital accessibility guidelines.',
   },
   {
     n: '07',
-    title: 'A volunteer path with a human at the end of it',
+    title: 'A volunteer recruitment and engagement pipeline',
     body:
-      'A homepage link, honest duties and hours, a short form, and a named person. Nielsen Norman Group found people often want to speak to somebody first.',
+      'Transparent duty descriptions, shift calendars, and qualification criteria with volunteer signup forms routing directly into Salesforce Nonprofit Cloud or HubSpot CRM workflows.',
   },
   {
     n: '08',
     title: 'A service-user path that assumes nothing',
     body:
-      'Hours, eligibility, what to bring, where the door is. Plain reading level, translated where needed, two taps from home.',
+      'Clear hours of operation, intake eligibility criteria, multi-language translation, and accessible directions located two taps from the homepage for community members seeking assistance.',
   },
   {
     n: '09',
@@ -311,9 +311,9 @@ const DELIVERABLES: ReadonlyArray<Deliverable> = [
   },
   {
     n: '10',
-    title: 'An exit you own from day one',
+    title: 'Donor data ownership and CRM integration',
     body:
-      'Your domain in your registrar account, content exportable, donor data in a system you control, code in a repository you own.',
+      'Your domain in your registrar account, automated email workflows in Mailchimp, supporter records synced to Kindful or your ledger, and clean code in a GitHub repository you own.',
   },
   {
     n: '11',

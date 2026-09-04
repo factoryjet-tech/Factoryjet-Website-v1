@@ -175,55 +175,55 @@ const DELIVERABLES: ReadonlyArray<Deliverable> = [
     n: '01',
     title: 'Name the job before you design the hero',
     body:
-      'Not the category, the job. Scheduling software for clinics is a category. Stop the front desk rebooking no-shows by hand is a job. Only one of those survives contact with a real buyer.',
+      'Not the category, the job. Scheduling software for clinics is a category. Stop the front desk rebooking no-shows by hand is a job. We craft high-converting hero messaging focused on tangible ROI, validated by customer interviews and behavioral data.',
   },
   {
     n: '02',
-    title: 'Pick the primary motion, then build the second on purpose',
+    title: 'Pick the primary motion: self-serve or sales-assisted',
     body:
-      'Decide whether the site mainly feeds a trial or a sales team. The other path still exists, it just gets its own page rather than an equal button in the hero.',
+      'Decide whether the site feeds a product-led trial with Stripe and PostHog tracking, or sales-led qualification routing into HubSpot and Salesforce CRM. The secondary path receives its own dedicated landing page rather than competing buttons in the hero.',
   },
   {
     n: '03',
-    title: 'Show the product doing the work, not floating at an angle',
+    title: 'Interactive product tours and live feature demos',
     body:
-      'A tilted screenshot with a blur behind it tells the reader nothing. An annotated sequence of the real screens, in the order a user hits them, tells them whether this fits. Tours beat video, video beats a static image.',
+      'Tilted mockups tell buyers nothing. We build interactive product tours and lightweight clickable sandboxes that demonstrate real UI workflows. Guided walkthroughs let technical buyers evaluate feature depth before scheduling a sales call.',
   },
   {
     n: '04',
-    title: 'Design the pricing page around the unit you charge on',
+    title: 'Pricing architecture with annual billing toggles and ROI calculators',
     body:
-      'Seats, usage, records, sites, whatever it is. That unit is the story of how your product creates value, so it belongs at the top of the table in plain words, before any tier names appear.',
+      'Whether charging per seat, usage, or volume tier, your pricing model tells your value story. We engineer transparent pricing matrices with interactive ROI calculators, monthly and annual billing toggles, add-on configurators, and self-serve checkout flows.',
   },
   {
     n: '05',
-    title: 'Design the signup form and the empty first screen together',
+    title: 'Frictionless onboarding and signup enrichment',
     body:
-      'The form is normally handed to the app team and quietly grows fields, and every field between the button and the product is a place people leave. The first screen a new account then sees should repeat the hero promise and give one obvious next action.',
+      'Every unnecessary input field between the CTA and the product increases drop-off. We design frictionless authentication flows enriched via Clearbit and Apollo.io APIs, syncing account firmographics to Segment, Mixpanel, and Amplitude seamlessly.',
   },
   {
     n: '06',
-    title: 'Put docs on your own domain and date the changelog',
+    title: 'Documentation directories and dated release changelogs',
     body:
-      'Docs answer the exact long-tail questions buyers type, so host them where they can be indexed, linked from the marketing site and read without an account. A changelog that stopped six months ago is worse than none, and a current one is a real freshness signal.',
+      'API docs and changelogs answer high-intent technical search queries. We publish searchable documentation directories on your root domain, giving engineering evaluators transparent release notes and developer quickstarts that index cleanly.',
   },
   {
     n: '07',
-    title: 'Build one page per integration that actually matters',
+    title: 'Ecosystem integrations directory with live API connectors',
     body:
-      'People search for your product next to the tool they already use. Integration pages catch that search and answer the first objection a sales call gets. Do the ten real ones properly rather than generating three hundred thin ones.',
+      'Buyers evaluate SaaS based on stack compatibility. We build dedicated integration pages highlighting two-way sync with Slack, Zapier, Google Workspace, GitHub, Intercom, and Jira, capturing long-tail comparison search intent.',
   },
   {
     n: '08',
-    title: 'Give security and compliance a page a stranger can read',
+    title: 'Trust center and SOC 2 Type II security portal',
     body:
-      'Where data lives, who the sub-processors are, what certifications you hold or are working toward, and how to report a vulnerability. Written to be forwarded to a reviewer you will never speak to, because that is what happens to it.',
+      'Enterprise procurement demands transparent compliance. We build dedicated security centers detailing SOC 2 Type II compliance, GDPR alignment, ISO 27001 data processing agreements, and sub-processor registries ready for infosec review.',
   },
   {
     n: '09',
-    title: 'Hold the performance thresholds Google publishes',
+    title: 'Next.js and Vercel edge infrastructure for Core Web Vitals',
     body:
-      'Google names good as a Largest Contentful Paint inside 2.5 seconds, an Interaction to Next Paint of 200 milliseconds or less, and a Cumulative Layout Shift of 0.1 or less. A SaaS marketing site loaded with animation libraries fails all three by default.',
+      'We build on Next.js and Tailwind CSS with edge caching on Vercel, hitting sub-second page loads that easily pass Google Core Web Vitals (LCP under 2.0s, INP under 150ms). Fast performance elevates conversion rates and organic search rankings.',
   },
 ];
 
