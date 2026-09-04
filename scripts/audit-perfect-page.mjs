@@ -112,10 +112,17 @@ const SLOP = [
 ];
 
 // ── fetch ────────────────────────────────────────────────────────────────────
+const CRAWLER_UA = 'FactoryJetAudit/1.0 (+https://factoryjet.com; crawler)';
 /** Cache-buster + no-cache: Cloudflare serves stale HTML for up to ~20h post-deploy. */
 async function get(url) {
   const bust = url + (url.includes('?') ? '&' : '?') + 'cb=' + Math.random().toString(36).slice(2);
-  const res = await fetch(bust, { headers: { 'Cache-Control': 'no-cache', Pragma: 'no-cache' } });
+  const res = await fetch(bust, {
+    headers: {
+      'Cache-Control': 'no-cache',
+      Pragma: 'no-cache',
+      'User-Agent': CRAWLER_UA,
+    },
+  });
   return { status: res.status, body: await res.text() };
 }
 const locs = (xml) => [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1].trim());

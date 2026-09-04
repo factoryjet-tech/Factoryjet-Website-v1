@@ -273,20 +273,20 @@ const INTEGRATION_JOURNEY_STAGES: ServiceJourneyStage[] = [
 const ROI_STATS = [
   {
     value: '80%',
-    label: 'reduction in copywriting time after AI product description integration',
-    microcopy: 'reported by Shopify brand clients',
+    label: 'reduction in copywriting time after AI product description integration.',
+    microcopy: 'reported by Shopify brand clients.',
     categoryLabel: 'CONTENT CREATION',
   },
   {
     value: '35%',
-    label: 'reduction in support ticket handle time after AI triage integration',
-    microcopy: 'average across FactoryJet support desk integrations',
+    label: 'reduction in support ticket handle time after AI triage integration.',
+    microcopy: 'average across FactoryJet support desk integrations.',
     categoryLabel: 'SUPPORT EFFICIENCY',
   },
   {
     value: 'Fixed Price',
-    label: 'milestone-paid AI integration with full code ownership',
-    microcopy: 'specialized engineers, US-caliber output, predictable from quote to launch',
+    label: 'milestone-paid AI integration with full code ownership.',
+    microcopy: 'specialized engineers, US-caliber output, predictable from quote to launch.',
     categoryLabel: 'PRICING MODEL',
   },
 ];
@@ -294,20 +294,20 @@ const ROI_STATS = [
 const MARKET_STATS = [
   {
     value: '85%',
-    label: 'of US SMBs say they want AI features in their existing software but haven\'t integrated yet',
-    microcopy: 'Salesforce SMB AI Adoption Report 2024',
+    label: 'of US SMBs say they want AI features in their existing software but have not integrated yet.',
+    microcopy: 'Salesforce SMB AI Adoption Report 2024.',
     categoryLabel: 'INTEGRATION GAP',
   },
   {
     value: '4×',
-    label: 'productivity improvement in tasks where humans work alongside AI vs. without it',
-    microcopy: 'Stanford Human-AI Collaboration Study',
+    label: 'productivity improvement in tasks where humans work alongside AI vs. without it.',
+    microcopy: 'Stanford Human-AI Collaboration Study.',
     categoryLabel: 'PRODUCTIVITY LIFT',
   },
   {
     value: '18%',
-    label: 'average conversion rate improvement on AI-generated product descriptions vs. manual copy',
-    microcopy: 'Shopify merchant study: FactoryJet client data',
+    label: 'average conversion rate improvement on AI-generated product descriptions vs. manual copy.',
+    microcopy: 'Shopify merchant study: FactoryJet client data.',
     categoryLabel: 'CONVERSION IMPACT',
   },
 ];
@@ -323,15 +323,15 @@ const COMPARISON_ROWS = [
   {
     feature: 'Pricing model',
     values: [
-      'Fixed-price, one-time',
-      'Enterprise budgets',
-      'Per-user SaaS fees',
-      'Hidden staff-time cost',
+      'Fixed-price, one-time.',
+      'Enterprise budgets.',
+      'Per-user SaaS fees.',
+      'Hidden staff-time cost.',
     ],
   },
   {
     feature: 'Delivery timeline',
-    values: ['1–3 weeks', '2–4 months', 'Hours (limited capability)', '4–12 weeks'],
+    values: ['1–3 weeks.', '2–4 months.', 'Hours (limited capability).', '4–12 weeks.'],
   },
   {
     feature: 'Custom to your specific workflow',
@@ -405,13 +405,13 @@ const PRICING_TIERS = [
     description:
       'A focused AI integration that adds one AI capability to one existing tool. Best for businesses testing AI with a clear, bounded first use case.',
     features: [
-      'Single-system AI integration (CRM, e-commerce, support desk, or custom app)',
-      'GPT-4o or Claude as the underlying model',
-      'Custom prompt engineering optimized for your data and tone',
-      'API integration with output validation',
-      'Lightweight monitoring for output quality',
-      'Full integration documentation and code ownership',
-      '14-day post-launch support window',
+      'Single-system AI integration (CRM, e-commerce, support desk, or custom app).',
+      'GPT-4o or Claude as the underlying model.',
+      'Custom prompt engineering optimized for your data and tone.',
+      'API integration with output validation.',
+      'Lightweight monitoring for output quality.',
+      'Full integration documentation and code ownership.',
+      '14-day post-launch support window.',
     ],
     cta: { label: 'Get a Quote', modal: true as const, region: 'us' as const },
   },
@@ -421,14 +421,14 @@ const PRICING_TIERS = [
     description:
       'AI integrated across 3–5 tools in your stack with a unified API layer and output quality dashboard. The most popular tier for US SMBs ready to go all-in on AI.',
     features: [
-      'Multi-system AI integration (CRM + e-commerce + support desk)',
-      'Unified AI API layer with shared model management',
-      'Output quality monitoring dashboard',
-      'Fine-tuned prompts with A/B testing for best-performing versions',
-      'Human-in-the-loop review flows where needed',
-      'Team training and full prompt library documentation',
-      '30-day post-launch support window',
-      'Monthly retainer option for ongoing optimization',
+      'Multi-system AI integration (CRM + e-commerce + support desk).',
+      'Unified AI API layer with shared model management.',
+      'Output quality monitoring dashboard.',
+      'Fine-tuned prompts with A/B testing for best-performing versions.',
+      'Human-in-the-loop review flows where needed.',
+      'Team training and full prompt library documentation.',
+      '30-day post-launch support window.',
+      'Monthly retainer option for ongoing optimization.',
     ],
     cta: { label: 'Get a Custom Quote', modal: true as const, region: 'us' as const },
     popular: true,
@@ -439,14 +439,14 @@ const PRICING_TIERS = [
     description:
       'Full-stack AI integration with custom model fine-tuning, legacy system APIs, compliance requirements, and a dedicated engineering partner.',
     features: [
-      'Custom LLM fine-tuning on your proprietary content and terminology',
-      'Legacy system and ERP integration',
-      'Private cloud deployment option (no data to third-party model providers)',
-      'HIPAA / SOC 2 pattern-compliant data handling',
-      'Advanced output quality analytics',
-      'Dedicated engineering point of contact',
-      'SLA-backed response and uptime commitments',
-      '90-day post-launch support and model improvement window',
+      'Custom LLM fine-tuning on your proprietary content and terminology.',
+      'Legacy system and ERP integration.',
+      'Private cloud deployment option (no data to third-party model providers).',
+      'HIPAA / SOC 2 pattern-compliant data handling.',
+      'Advanced output quality analytics.',
+      'Dedicated engineering point of contact.',
+      'SLA-backed response and uptime commitments.',
+      '90-day post-launch support and model improvement window.',
     ],
     cta: { label: 'Schedule an Enterprise Call', modal: true as const, region: 'us' as const },
   },
@@ -749,9 +749,9 @@ export default function AIIntegrationServicesPage() {
 
               <div className="grid grid-cols-3 gap-3" aria-hidden>
                 {[
-                  { value: '1–3wk', label: 'To first integration' },
-                  { value: '4×', label: 'Productivity lift' },
-                  { value: '60–90d', label: 'Typical payback' },
+                  { value: '1–3wk', label: 'To first integration.' },
+                  { value: '4×', label: 'Productivity lift.' },
+                  { value: '60–90d', label: 'Typical payback.' },
                 ].map((b) => (
                   <div
                     key={b.value}
@@ -787,12 +787,12 @@ export default function AIIntegrationServicesPage() {
 
               <div className="grid grid-cols-2 gap-2" aria-hidden>
                 {[
-                  'HubSpot & Salesforce',
-                  'Shopify & WooCommerce',
-                  'Zendesk & Intercom',
-                  'Custom web apps',
-                  'QuickBooks & Xero',
-                  'Internal databases',
+                  'HubSpot & Salesforce.',
+                  'Shopify & WooCommerce.',
+                  'Zendesk & Intercom.',
+                  'Custom web apps.',
+                  'QuickBooks & Xero.',
+                  'Internal databases.',
                 ].map((ind) => (
                   <div
                     key={ind}
@@ -824,22 +824,22 @@ export default function AIIntegrationServicesPage() {
                 {([
                   {
                     step: '01',
-                    title: 'User triggers an action',
+                    title: 'User triggers an action.',
                     desc: 'Clicks a button in their existing software, or a background event fires (new ticket, new product, new contact).',
                   },
                   {
                     step: '02',
-                    title: 'Integration fetches context',
+                    title: 'Integration fetches context.',
                     desc: 'Pulls relevant data from your software, contact history, product details, ticket content, to give the AI full context.',
                   },
                   {
                     step: '03',
-                    title: 'AI model processes and generates',
+                    title: 'AI model processes and generates.',
                     desc: 'GPT-4o or Claude reads the context and generates a draft, classification, extraction, or suggestion based on your engineered prompts.',
                   },
                   {
                     step: '04',
-                    title: 'Output surfaces in your existing UI',
+                    title: 'Output surfaces in your existing UI.',
                     desc: 'The result appears inside the tool your team already uses: a draft email in HubSpot, a ticket tag in Zendesk, a description in Shopify.',
                   },
                 ] as const).map((item, i, arr) => (
@@ -890,17 +890,17 @@ export default function AIIntegrationServicesPage() {
             {
               icon: '⏱',
               title: 'Generic AI tools don\'t know your data',
-              body: 'ChatGPT and off-the-shelf AI copilots are powerful but generic. They don\'t know your customer history, your product catalog, your tone of voice, or your specific business rules. The result is outputs that need significant manual editing before they\'re usable, which means your team stops using them within weeks. AI integration connects the model to your actual data so outputs are immediately useful.',
+              body: 'ChatGPT and off-the-shelf AI copilots are powerful but generic. They don\'t know your customer history, your product catalog, your tone of voice, or your specific business rules. The result is outputs that need significant manual editing before they are usable, which means your team stops using them within weeks. AI integration connects the model to your actual data so outputs are immediately useful.',
             },
             {
               icon: '📉',
               title: 'SaaS AI add-ons charge per seat, forever',
-              body: 'Microsoft Copilot and Salesforce Einstein bill per user every month, and Intercom Fin bills by conversation. These fees compound: a 20-person team using multiple AI SaaS add-ons easily spends tens of thousands per year, for capabilities FactoryJet can integrate into your existing tools for a one-time fixed price, with AI costs going directly to the model provider at a fraction of the SaaS markup.',
+              body: 'Microsoft Copilot and Salesforce Einstein bill per user every month. Intercom Fin bills by conversation. These fees compound quickly. A 20-person team using multiple AI add-ons easily spends tens of thousands every year. FactoryJet integrates these capabilities into your existing tools for a one-time fixed price. Your model costs go directly to the provider at raw API rates.',
             },
             {
               icon: '💸',
               title: 'Custom integrations used to require expensive US engineering teams',
-              body: 'Connecting AI to a legacy CRM or custom internal tool requires real engineering, it\'s not a no-code project. US AI integration agencies charge a steep premium for this work. FactoryJet delivers the same engineering quality at fixed-price, with the same level of API architecture, prompt engineering, and production reliability.',
+              body: 'Connecting AI to a legacy CRM or custom internal tool requires real engineering. It is not a no-code project. Traditional US agencies charge steep retainers for this work. FactoryJet delivers production engineering at transparent fixed pricing, with resilient API architecture and prompt engineering.',
             },
           ]}
         />
@@ -916,6 +916,7 @@ export default function AIIntegrationServicesPage() {
 
         {/* ── 6. INTEGRATION TYPES ─────────────────────────────────────────── */}
         <IndustriesGrid
+          variant="cards"
           eyebrow="WHAT WE BUILD"
           headline="Six AI Integration Categories That Deliver Immediate ROI"
           lead="These are the integrations with the clearest, fastest payback for US small and mid-sized businesses. We build all six and help you identify which one to start with."
