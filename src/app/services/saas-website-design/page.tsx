@@ -199,7 +199,7 @@ const DELIVERABLES: ReadonlyArray<Deliverable> = [
     n: '05',
     title: 'Frictionless onboarding and signup enrichment',
     body:
-      'Every unnecessary input field between the CTA and the product increases drop-off. We design frictionless authentication flows enriched via Clearbit and Apollo.io APIs, syncing account firmographics to Segment, Mixpanel, and Amplitude seamlessly.',
+      'Every unnecessary input field between the CTA and the product increases drop-off. We design frictionless authentication flows enriched via Clearbit and Apollo.io APIs, syncing account firmographics to Segment, Mixpanel, and Amplitude directly.',
   },
   {
     n: '06',
@@ -223,7 +223,7 @@ const DELIVERABLES: ReadonlyArray<Deliverable> = [
     n: '09',
     title: 'Next.js and Vercel edge infrastructure for Core Web Vitals',
     body:
-      'We build on Next.js and Tailwind CSS with edge caching on Vercel, hitting sub-second page loads that easily pass Google Core Web Vitals (LCP under 2.0s, INP under 150ms). Fast performance elevates conversion rates and organic search rankings.',
+      'We build on Next.js and Tailwind CSS with edge caching on Vercel, hitting sub-second page loads that easily pass Google Core Web Vitals (LCP under 2.0s, INP under 150ms). Fast performance increases conversion rates and organic search rankings.',
   },
 ];
 

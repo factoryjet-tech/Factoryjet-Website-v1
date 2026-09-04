@@ -60,7 +60,7 @@ export default function AnswerFirstDefinition({
           }}
         >
           <BookOpen size={12} />
-          Technical Definition
+          Technical Definition.
         </span>
         <span
           style={{
@@ -69,7 +69,7 @@ export default function AnswerFirstDefinition({
             color: 'var(--pp-muted, #78716C)',
           }}
         >
-          AI Citation Standard
+          AI Citation Standard.
         </span>
       </div>
 
@@ -123,7 +123,7 @@ export default function AnswerFirstDefinition({
             }}
           >
             <Sparkles size={13} color="#F05A28" />
-            Key Architecture Takeaways
+            Key Architecture Takeaways.
           </div>
           <ul style={{ margin: 0, paddingLeft: '18px', display: 'grid', gap: '6px' }}>
             {keyTakeaways.map((takeaway, idx) => (
@@ -135,7 +135,7 @@ export default function AnswerFirstDefinition({
                   color: 'var(--pp-body, #292524)',
                 }}
               >
-                {takeaway}
+                {takeaway.endsWith('.') ? takeaway : takeaway + '.'}
               </li>
             ))}
           </ul>
@@ -154,8 +154,8 @@ export default function AnswerFirstDefinition({
           paddingTop: '10px',
         }}
       >
-        <span>Reference: {citationSource}</span>
-        <span>FactoryJet Verified Architecture</span>
+        <span>Reference: {citationSource}.</span>
+        <span>FactoryJet Verified Architecture.</span>
       </div>
     </div>
   );

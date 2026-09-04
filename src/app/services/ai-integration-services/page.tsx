@@ -744,7 +744,7 @@ export default function AIIntegrationServicesPage() {
                 ))}
               </div>
               <p>
-                Most businesses spend months evaluating AI tools and signing up for pilots. Most never ship anything meaningful. The faster path is simple. Keep the tools your team already knows. Add AI capabilities directly via API. Your sales team stays in HubSpot. Your support team stays in Zendesk. The AI operates seamlessly behind the scenes.
+                Most businesses spend months evaluating AI tools and signing up for pilots. Most never ship anything meaningful. The faster path is simple. Keep the tools your team already knows. Add AI capabilities directly via API. Your sales team stays in HubSpot. Your support team stays in Zendesk. The AI operates automatically behind the scenes.
               </p>
 
               <div className="grid grid-cols-3 gap-3" aria-hidden>
@@ -932,8 +932,8 @@ export default function AIIntegrationServicesPage() {
               Enterprise AI middleware and secure API connectors
             </h2>
             <p className="mt-4 max-w-[760px] font-fj-body text-base leading-relaxed text-fj-neutral-600">
-              We design production-grade middleware that bridges foundational language models with your operational software.
-              Our integrations leverage official{' '}
+              We design production middleware connecting language models to your operational software.
+              Our pipelines follow official{' '}
               <a
                 href="https://platform.openai.com/docs/guides/function-calling"
                 target="_blank"
@@ -949,9 +949,9 @@ export default function AIIntegrationServicesPage() {
                 rel="noopener noreferrer"
                 className="font-semibold underline underline-offset-2 text-[#B23E13]"
               >
-                Anthropic Claude Tool Use documentation
+                Anthropic Claude Tool Use
               </a>
-              , ensuring structured, deterministic JSON payloads, role-based access control, and zero data leakage.
+              . Every connection enforces strict JSON schemas, role permissions, and zero data leakage.
             </p>
 
             <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">

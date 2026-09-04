@@ -153,7 +153,7 @@ const DIFFERENCES: ReadonlyArray<Difference> = [
     tag: '03',
     title: 'The other half are asking about paying for it',
     body:
-      'A roof is one of the largest unplanned bills a homeowner ever gets handed. A significant slice of roofing search is people who already know they need the work and are stuck on how to fund it. Financing questions, deductible questions, and what happens if I only fix part of it. Answering those on your own site keeps that person on your site instead of sending them back to Google in a worse mood.',
+      'A roof replacement represents a large unplanned expense. Many homeowners search for financing options, deductible rules, and partial repair viability. Addressing payment questions directly on your site builds immediate trust and keeps qualified prospects from bouncing.',
     tint: GREEN_SOFT,
     accent: GREEN,
   },
@@ -161,7 +161,7 @@ const DIFFERENCES: ReadonlyArray<Difference> = [
     tag: '04',
     title: 'You have a service area, not a storefront',
     body:
-      'Google treats roofers as service-area businesses, and its own Business Profile guidance says a service-area business should hide its address and keep its overall service area inside roughly two hours of driving time. Get that setup wrong and you either look like a residential address in the map pack or you claim half a state and rank in none of it.',
+      'Google categorizes contractors as service-area businesses. Official guidelines recommend hiding residential addresses and limiting coverage to a two-hour driving radius. Flawed setups trigger address verification flags or dilute local ranking signals.',
     tint: PEACH,
     accent: ORANGE_DARK,
   },
@@ -169,7 +169,7 @@ const DIFFERENCES: ReadonlyArray<Difference> = [
     tag: '05',
     title: 'Seasonality is regional and unforgiving',
     body:
-      'Phoenix and Minneapolis do not share a roofing calendar. In cold markets the replacement window closes and does not re-open for months, so the content that has to rank in April needs to be indexed and settled in January. Planning an SEO programme on a generic twelve-month content calendar ignores the one constraint that actually governs a roofing business.',
+      'Roofing seasons vary widely by geography. In northern states, cold weather limits roof installations for months. Spring replacement pages must be indexed by January to capture seasonal demand. Our search strategies align strictly with regional weather cycles.',
     tint: LAV_SOFT,
     accent: LAV,
   },
@@ -177,7 +177,7 @@ const DIFFERENCES: ReadonlyArray<Difference> = [
     tag: '06',
     title: 'Emergency and planned are two different buyers',
     body:
-      'One has water coming through a ceiling right now and will call whoever answers. The other is comparing four estimates over three weeks and reading about underlayment. They need different pages, different page speed tolerance, and different calls to action. Most roofing sites are built entirely for the second buyer and quietly lose the first one on mobile.',
+      'Emergency callers need fast phone access during active leaks. Planned replacement buyers compare estimates and research shingle warranties over weeks. We build targeted landing pages with fast mobile click-to-call flows for both customer journeys.',
     tint: GREEN_SOFT,
     accent: GREEN,
   },
@@ -401,6 +401,12 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     answer:
       'We optimize existing websites whenever possible. A complete rebuild is only recommended if your current platform cannot pass Core Web Vitals on mobile, lacks clean URL architecture for city pages, or blocks essential schema markup.',
   },
+  {
+    category: 'basics',
+    question: 'How do storm chasers affect local roofing SEO?',
+    answer:
+      'Out-of-state storm chasers flood search ads after major hailstorms. A strong local SEO foundation with verified local citations and Google Business Profile reviews keeps your trusted company ranking at the top of organic search and local map packs.',
+  },
 
   /* ── Roofing leads ──────────────────────────────────────────────────── */
   {
@@ -408,6 +414,12 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     question: 'How do I get roofing leads?',
     answer:
       'Sustainable roofing lead generation combines local organic search and map pack visibility with customer referrals and paid ads. Organic search builds an exclusive lead asset that you own, reducing your reliance on shared lead brokers.',
+  },
+  {
+    category: 'leads',
+    question: 'How does drone footage improve roofing lead conversion?',
+    answer:
+      'Embedding clear drone inspection videos and aerial damage photos on service area pages builds instant homeowner trust. Verified inspection photos prove real local job activity and help homeowners visualize hail or shingle damage clearly.',
   },
   {
     category: 'leads',
@@ -761,10 +773,10 @@ export default function RoofingSeoPage() {
                 </span>
                 <ul className="mt-3 space-y-2.5">
                   {[
-                    { k: 'roofing seo', v: '2,400 a month', d: 'difficulty 7' },
-                    { k: 'seo for roofers', v: '2,400 a month', d: 'difficulty 12' },
-                    { k: 'roofing leads', v: '1,300 a month', d: 'difficulty 0' },
-                    { k: 'roofing company seo', v: '1,000 a month', d: 'difficulty 8' },
+                    { k: 'roofing seo.', v: '2,400 a month.', d: 'difficulty 7.' },
+                    { k: 'seo for roofers.', v: '2,400 a month.', d: 'difficulty 12.' },
+                    { k: 'roofing leads.', v: '1,300 a month.', d: 'difficulty 0.' },
+                    { k: 'roofing company seo.', v: '1,000 a month.', d: 'difficulty 8.' },
                   ].map((row) => (
                     <li
                       key={row.k}
@@ -814,22 +826,14 @@ export default function RoofingSeoPage() {
                 different job.
               </p>
               <p className="mt-4 max-w-[900px] font-fj-body text-[1.0625rem] leading-[1.7] text-fj-neutral-600">
-                First, demand is event-driven. A dental practice has a flat search curve. A roofer has a flat
-                line and then a hailstorm, and the pages that win that spike had to be ranked before it
-                happened. Second, a large share of buyers are inside an insurance claim, searching adjuster
-                and deductible language rather than roof language. Third, another large share already know
-                they need the work and are searching about how to pay for it. Fourth, you are a service-area
-                business, so distance and service-area setup govern your visibility in a way a shopfront
-                never has to think about.
+                First, demand is event-driven. A dental office has a flat search curve. A roofer sees a sudden spike after severe storms. Pages must be indexed and ranked before the weather hits. Second, many homeowners are navigating insurance claims. They search for adjuster meetings and deductible rules rather than shingles. Third, budget-conscious buyers search for monthly financing options. Fourth, contractors operate as service-area businesses. Distance and service boundaries govern map pack visibility directly.
               </p>
               <p className="mt-4 max-w-[900px] font-fj-body text-[1.0625rem] leading-[1.7] text-fj-neutral-600">
-                Get those four right and search becomes the one lead source you own outright. Get them wrong
-                and you end up renting demand from a marketplace that raises its price the week a storm makes
-                it worth having. If you want the generic version of this work, our{' '}
+                Get those four pillars right and search becomes an exclusive lead asset that you own. Get them wrong and you end up renting shared leads from brokers. If you prefer broader local organic guidance, our{' '}
                 <Link href="/services/local-seo" className="font-semibold underline underline-offset-2" style={{ color: ORANGE_DARK }}>
                   local SEO service
                 </Link>{' '}
-                covers it. This page is the roofing-specific build.
+                covers multi-location storefronts and professional practices.
               </p>
             </div>
           </div>
@@ -849,9 +853,7 @@ export default function RoofingSeoPage() {
               <span className="italic" style={{ color: ORANGE }}>any other local trade</span>
             </h2>
             <p className="mt-4 max-w-[680px] font-fj-body font-medium text-fj-neutral-600" style={{ fontSize: '1.0625rem', lineHeight: 1.6 }}>
-              If someone pitches you the same twelve-month content calendar they use for dentists and law
-              firms, this is the list they have not read. Every one of these changes what gets built and
-              when it has to be live.
+              Generic agencies pitch standard monthly content calendars. That strategy fails for roofers. Roofing demand follows storms and seasonal replacements. Every priority below shapes what we build and when it launches.
             </p>
 
             <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -905,20 +907,20 @@ export default function RoofingSeoPage() {
               <ul className="mt-6 space-y-3">
                 {[
                   {
-                    t: 'Hide the address, keep the location',
-                    s: 'Google says a service-area business should hide its address, and uses a tradesperson working from home as the example',
+                    t: 'Hide the address, keep the location.',
+                    s: 'Google says a service-area business should hide its address, and uses a tradesperson working from home as the example.',
                   },
                   {
-                    t: 'Two hours of driving is the published ceiling',
-                    s: 'Its guidance says your overall service area should not extend farther than roughly two hours of driving from your base',
+                    t: 'Two hours of driving is the published ceiling.',
+                    s: 'Its guidance says your overall service area should not extend farther than roughly two hours of driving from your base.',
                   },
                   {
-                    t: 'Distance is a ranking factor, not a preference',
-                    s: 'Claim five counties and you will lose the map pack in most of them to a roofer who is simply closer',
+                    t: 'Distance is a ranking factor, not a preference.',
+                    s: 'Claim five counties and you will lose the map pack in most of them to a roofer who is simply closer.',
                   },
                   {
-                    t: 'Prominence is partly reviews',
-                    s: 'Google states review count and rating feed prominence, along with how many sites link to you',
+                    t: 'Prominence is partly reviews.',
+                    s: 'Google states review count and rating feed prominence, along with how many sites link to you.',
                   },
                 ].map((item) => (
                   <li key={item.t} className="flex items-start gap-3.5 rounded-2xl bg-white px-5 py-4">

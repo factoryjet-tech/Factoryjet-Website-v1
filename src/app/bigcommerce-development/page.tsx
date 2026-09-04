@@ -62,6 +62,8 @@ const FAQ_ITEMS = [
   { category: 'working', question: 'Do we own the BigCommerce store you build?', answer: 'Yes. You own and operate everything we build. We design, build, implement, and hand it over, and we stay on call to support and scale it. We never run your store for you.' },
   { category: 'working', question: 'Do you work with US BigCommerce brands?', answer: 'Yes, most of the brands we work with are US-based, across DTC and B2B, with a decade-plus of commerce builds behind us.' },
   { category: 'working', question: 'How does BigCommerce handle high-traffic flash sales and Cyber 5 spikes?', answer: 'BigCommerce operates on Google Cloud Platform with multi-tenant autoscaling infrastructure and Akamai CDN edge caching. The platform effortlessly handles thousands of checkout requests per second without throttling, maintaining sub-second response times during peak holiday spikes.' },
+  { category: 'building', question: 'Can BigCommerce handle custom product options and complex rules?', answer: 'Yes. BigCommerce supports 600 SKUs per product and 250 option values natively. We build custom swatch selectors, rule-based pricing updates, and file upload fields for personalized goods.' },
+  { category: 'headless', question: 'How do you handle checkout when running headless BigCommerce?', answer: 'We connect the headless Next.js frontend to BigCommerce Hosted Checkout via GraphQL mutations. Shoppers complete checkout within a secure PCI Level 1 compliant environment while customer data syncs back to your CRM.' },
 ];
 // Freshness signal. Benchmark: 56% of AI-Overview-cited pages carry it.
 // Keep honest: bump when the page's content actually changes.
@@ -138,14 +140,14 @@ const BENEFITS = [
   { i: '▦', t: 'Multi-Storefront (MSF) control', d: 'Manage multiple localized storefronts, languages, B2B wholesale portals, and DTC brands from a single consolidated administration dashboard.' },
   { i: '↻', t: 'Zero server maintenance overhead', d: 'Enterprise PCI DSS Level 1 certified SaaS infrastructure with 99.99% uptime, automated security updates, and global CDN caching.' },
   { i: '⤢', t: 'Complex catalog scalability', d: 'Native support for up to 600 SKUs per product, 250 product attributes, and massive inventories with automated PIM synchronization.' },
-  { i: '⚙', t: 'Seamless ERP and CRM integration', d: 'Direct bidirectional syncing with NetSuite, SAP, Acumatica, Dynamics 365, Salesforce, and HubSpot for real-time order and inventory management.' },
+  { i: '⚙', t: 'Real-time ERP and CRM integration', d: 'Direct bidirectional syncing with NetSuite, SAP, Acumatica, Dynamics 365, Salesforce, and HubSpot for order and inventory management.' },
   { i: '🛡', t: 'Enterprise checkout customization', d: 'Optimized single-page checkout, custom field injection, automated tax calculation via Avalara, and localized shipping rules.' },
 ];
 const CAPABILITIES = [
   { t: 'Custom Stencil Theme Development', d: 'Pixel-perfect, performance-tuned BigCommerce Stencil themes engineered from custom Figma designs with zero template bloat.' },
   { t: 'B2B Edition Portal Configuration', d: 'Setup corporate account hierarchies, buyer purchasing roles, automated quoting, tier-based price lists, and requisition lists.' },
   { t: 'Headless Next.js Storefront Engineering', d: 'Ultra-fast composable storefronts powered by Next.js, BigCommerce GraphQL APIs, and Vercel edge deployment for optimal Core Web Vitals.' },
-  { t: 'ERP, PIM, and 3PL Middleware Sync', d: 'Robust middleware development connecting BigCommerce to NetSuite, SAP, Salsify, Akeneo, ShipBob, and custom legacy back-office systems.' },
+  { t: 'ERP, PIM, and 3PL Middleware Sync', d: 'Production middleware development connecting BigCommerce to NetSuite, SAP, Salsify, Akeneo, ShipBob, and custom legacy back-office systems.' },
   { t: 'Multi-Storefront (MSF) Deployment', d: 'Launch localized international storefronts, sub-brands, and wholesale channels with region-specific currencies and product catalogs.' },
   { t: 'Enterprise Platform Migration', d: 'Zero-downtime migration from Magento 1/2, Shopify Plus, WooCommerce, and Salesforce Commerce Cloud with strict 301 SEO redirects.' },
   { t: 'Custom BigCommerce App Development', d: 'Private and public app engineering utilizing BigCommerce REST APIs, Webhooks, and secure app extensions for tailored operational workflows.' },
@@ -153,14 +155,14 @@ const CAPABILITIES = [
 ];
 
 const ENTERPRISE_PILLARS = [
-  { t: 'Bidirectional ERP & WMS Synchronization', d: 'We build enterprise connectors connecting BigCommerce to systems like NetSuite, SAP, Acumatica, and Microsoft Dynamics 365 Business Central. Automated webhooks synchronize stock levels across multiple fulfillment centers, handle order routing, and update shipping tracking status without manual data entry.' },
-  { t: 'Corporate B2B Account Hierarchies', d: 'Enable self-service purchasing for enterprise wholesale buyers. With BigCommerce B2B Edition, organizations can assign specific purchasing agents, establish corporate spending limits, approve employee purchase orders, and request custom volume pricing directly inside the trade portal.' },
-  { t: 'Multi-Storefront (MSF) Localization', d: 'Scale into international territories effortlessly. BigCommerce MSF allows merchants to maintain distinct localized storefronts for the US, UK, EU, and Australia with tailored currency pricing, regional inventory buffers, and localized marketing assets managed from a single admin panel.' },
-  { t: 'Composable Architecture & GraphQL APIs', d: 'Leverage BigCommerce as a robust headless backend while running modern frontend frameworks like Next.js and Tailwind CSS. We query the BigCommerce GraphQL Storefront API to deliver sub-second page loads, dynamic client-side filtering, and custom omnichannel touchpoints.' },
-  { t: 'PIM Integration for Complex Catalogs', d: 'For merchants with hundreds of thousands of SKUs and deep technical specifications, we integrate specialized Product Information Management (PIM) systems like Akeneo, Salsify, and Pimcore to maintain pristine product data feeds across storefronts and digital marketplaces.' },
-  { t: 'Tax, Fraud & Compliance Automation', d: 'Ensure full regulatory compliance across domestic and international jurisdictions. We integrate Avalara AvaTax, Vertex, and Signifyd to automate real-time sales tax calculation, cross-border duty collection, and fraud prevention during high-volume peak shopping events.' },
-  { t: 'Subscription & Recurring Revenue Engines', d: 'Transform one-off buyers into predictable recurring revenue. We implement advanced subscription workflows powered by Recharge or native BigCommerce recurring billing engines with self-service customer subscription portals.' },
-  { t: 'Omnichannel Marketplace Distribution', d: 'Centralize your sales footprint across third-party channels. We configure automated catalog and inventory syndication to Amazon, Walmart Marketplace, eBay, TikTok Shop, and Google Shopping with centralized order fulfillment inside BigCommerce.' },
+  { t: 'Bidirectional ERP & WMS Synchronization', d: 'We build connectors linking BigCommerce to NetSuite, SAP, Acumatica, and Microsoft Dynamics 365. Automated webhooks synchronize stock levels across multiple fulfillment centers. Orders route automatically and tracking statuses update without manual data entry.' },
+  { t: 'Corporate B2B Account Hierarchies', d: 'Enable self-service purchasing for enterprise wholesale buyers. With BigCommerce B2B Edition, companies assign authorized purchasing agents. You can set spending limits, review employee purchase orders, and offer negotiated price tiers inside the portal.' },
+  { t: 'Multi-Storefront (MSF) Localization', d: 'Expand into global markets with ease. BigCommerce MSF lets merchants launch distinct localized storefronts for the US, UK, EU, and Australia. You control regional pricing, local inventory buffers, and marketing assets from one central admin.' },
+  { t: 'Composable Architecture & GraphQL APIs', d: 'Deploy BigCommerce as an agile headless engine paired with Next.js. We query the GraphQL Storefront API to achieve sub-second page loads and fast client-side filters. This gives buyers an instant, app-like shopping experience.' },
+  { t: 'PIM Integration for Complex Catalogs', d: 'Catalogs with thousands of SKUs require structured product management. We integrate specialized PIM software like Akeneo, Salsify, and Pimcore. Product attributes and digital assets sync reliably to your storefront and marketplaces.' },
+  { t: 'Tax, Fraud & Compliance Automation', d: 'Stay compliant across domestic and international tax zones. We integrate Avalara AvaTax, Vertex, and Signifyd. The system calculates sales tax in real time, handles customs duties, and flags high-risk orders during traffic spikes.' },
+  { t: 'Subscription & Recurring Revenue Engines', d: 'Turn one-time shoppers into repeat subscribers. We build subscription workflows using Recharge or native BigCommerce recurring billing tools. Customers can pause, skip, or modify deliveries through a self-service account portal.' },
+  { t: 'Omnichannel Marketplace Distribution', d: 'Unify sales across all digital channels. We automate product catalog feeds to Amazon, Walmart Marketplace, eBay, and Google Shopping. Orders flow back into BigCommerce so your warehouse packs from a single consolidated queue.' },
 ];
 
 const MIGRATION_WORKFLOW = [
@@ -173,10 +175,10 @@ const MIGRATION_WORKFLOW = [
 ];
 
 const USECASES = [
-  { t: 'Mid-market DTC brands', img: 'retail-dtc.webp', alt: 'A growing mid-market retail brand serving a customer at a BigCommerce-powered point of sale', d: 'Fast, custom storefronts that scale with a growing catalog, with no transaction fees eating your margin and the open API ready for whatever you bolt on next.' },
-  { t: 'B2B on BigCommerce', img: 'wholesale-dtc.webp', alt: 'A wholesale team fulfilling trade orders placed through a BigCommerce B2B Edition store', d: 'B2B Edition with price lists, customer groups, quotes, and net terms, so trade buyers self-serve on the same platform as your DTC store.' },
-  { t: 'Multi-storefront & international', img: 'multi-location.webp', alt: 'An operator managing multiple BigCommerce storefronts and currencies from one admin', d: 'Run several storefronts, regions, and currencies from one BigCommerce account, with catalogs and pricing tuned per market.' },
-  { t: 'Headless & developer-led', img: 'marketplace.webp', alt: 'A developer building a headless BigCommerce storefront connected through the BigCommerce API', d: 'BigCommerce as a headless commerce engine behind a custom front end, with the open API and BigCommerce developer tooling doing the heavy lifting.' },
+  { t: 'Mid-market DTC brands', img: 'retail-dtc.webp', alt: 'A growing mid-market retail brand serving a customer at a BigCommerce-powered point of sale', d: 'Fast, custom storefronts that scale with your growing catalog. Enjoy zero transaction fees eating your profit margins, with open APIs ready for future integrations.' },
+  { t: 'B2B on BigCommerce', img: 'wholesale-dtc.webp', alt: 'A wholesale team fulfilling trade orders placed through a BigCommerce B2B Edition store', d: 'B2B Edition features price lists, customer groups, quotes, and net terms. Trade buyers self-serve on the same platform as your retail store.' },
+  { t: 'Multi-storefront & international', img: 'multi-location.webp', alt: 'An operator managing multiple BigCommerce storefronts and currencies from one admin', d: 'Run several storefronts, regions, and currencies from one account. Catalogs and pricing adapt per target market.' },
+  { t: 'Headless & developer-led', img: 'marketplace.webp', alt: 'A developer building a headless BigCommerce storefront connected through the BigCommerce API', d: 'Use BigCommerce as the commerce engine behind a custom frontend. Open APIs and modern developer tooling handle catalog and order processing.' },
 ];
 const COMPARE = [
   { name: 'BigCommerce', model: 'Open SaaS, no transaction fees', b2b: 'B2B Edition', headless: 'Strong, API-first', best: 'Mid-market DTC + B2B', me: true },
@@ -260,21 +262,13 @@ export default function BigCommerceDevelopmentPage() {
             <h2 style={{ marginTop: '10px' }}>What is BigCommerce development?</h2>
             <div style={{ marginTop: '18px', display: 'grid', gap: '16px' }} className="pp-lead">
               <p>
-                BigCommerce development is designing, building, and customizing an online store on BigCommerce, an
-                open-SaaS ecommerce platform. Open SaaS means you get a hosted, maintained platform with open APIs
-                underneath, so you are not boxed in: themes, checkout, B2B rules, and integrations can all be customized,
-                and the storefront can run headless against any front end.
+                BigCommerce development means engineering an online store on an open-SaaS platform. You get a fully hosted engine paired with open APIs. Themes, checkout flows, B2B logic, and integrations remain completely customizable. You can also run the storefront headless on modern web frameworks.
               </p>
               <p>
-                For mid-market DTC and B2B brands, that openness is the draw. There are no per-sale transaction fees, the
-                API connects to almost anything, B2B Edition handles trade pricing and portals natively, and you can run
-                multiple storefronts and currencies from one admin. It is a platform built to scale with a growing
-                catalog rather than one you outgrow.
+                Mid-market brands choose BigCommerce for flexibility. The platform charges zero per-transaction penalties. Its APIs link directly into modern back-office software. B2B Edition provides custom trade pricing and buyer portals natively. You can manage several storefronts and currencies from a single dashboard.
               </p>
               <p>
-                We build BigCommerce stores for DTC and B2B brands, set up B2B Edition for trade buyers, connect apps and
-                ERPs through the API, build headless front ends where they earn their keep, and migrate stores from
-                Magento, WooCommerce, or other platforms without losing SEO. You own and run what we build.
+                We engineer BigCommerce storefronts for DTC and B2B operations. We configure B2B Edition for wholesale ordering. We connect ERPs and warehouse management systems via webhooks. We also migrate legacy stores from Magento or WooCommerce without losing search rankings.
               </p>
             </div>
           </div>

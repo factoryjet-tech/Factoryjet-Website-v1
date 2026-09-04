@@ -833,12 +833,12 @@ export default function AiAgentsForHealthcarePage() {
                 </span>
                 <ol className="mt-3 space-y-2.5">
                   {[
-                    { k: 'Request arrives', v: 'Phone, text or web form, at any hour' },
-                    { k: 'Identity confirmed', v: 'Against your own verification rules' },
-                    { k: 'Availability checked', v: 'Only slots your rules allow' },
-                    { k: 'Coverage checked', v: 'Standard eligibility inquiry to the payer' },
-                    { k: 'Booked and logged', v: 'Written to the practice system' },
-                    { k: 'Clinical question?', v: 'Handed over, in the patient’s words' },
+                    { k: 'Request arrives.', v: 'Phone, text or web form, at any hour.' },
+                    { k: 'Identity confirmed.', v: 'Against your own verification rules.' },
+                    { k: 'Availability checked.', v: 'Only slots your rules allow.' },
+                    { k: 'Coverage checked.', v: 'Standard eligibility inquiry to the payer.' },
+                    { k: 'Booked and logged.', v: 'Written to the practice system.' },
+                    { k: 'Clinical question?', v: 'Handed over, in the patient’s words.' },
                   ].map((row) => (
                     <li
                       key={row.k}
@@ -942,20 +942,20 @@ export default function AiAgentsForHealthcarePage() {
             <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
               {[
                 {
-                  t: 'BAA before anything connects',
-                  s: 'Signed first, covering subcontractors and the model provider',
+                  t: 'BAA before anything connects.',
+                  s: 'Signed first, covering subcontractors and the model provider.',
                 },
                 {
-                  t: 'Administrative scope only',
-                  s: 'No diagnosis, no symptom triage, no treatment guidance',
+                  t: 'Administrative scope only.',
+                  s: 'No diagnosis, no symptom triage, no treatment guidance.',
                 },
                 {
-                  t: 'Every action logged',
-                  s: 'Trigger, tool calls, what was sent, what changed, who approved',
+                  t: 'Every action logged.',
+                  s: 'Trigger, tool calls, what was sent, what changed, who approved.',
                 },
                 {
-                  t: 'You own the build',
-                  s: 'Repository, connectors, prompts, evaluations, cloud accounts',
+                  t: 'You own the build.',
+                  s: 'Repository, connectors, prompts, evaluations, cloud accounts.',
                 },
               ].map((item) => (
                 <div
@@ -1012,12 +1012,12 @@ export default function AiAgentsForHealthcarePage() {
                   <h3 className="fj-display text-[1.05rem] font-bold text-fj-ink">What it does</h3>
                   <ul className="mt-4 space-y-3">
                     {[
-                      'Books, reschedules, reminds, backfills',
-                      'Completes intake forms before the visit',
-                      'Confirms eligibility with the payer',
-                      'Tracks referral and authorization paperwork',
-                      'Answers account and records questions',
-                      'Routes messages to the right desk',
+                      'Books, reschedules, reminds, backfills.',
+                      'Completes intake forms before the visit.',
+                      'Confirms eligibility with the payer.',
+                      'Tracks referral and authorization paperwork.',
+                      'Answers account and records questions.',
+                      'Routes messages to the right desk.',
                     ].map((line) => (
                       <li
                         key={line}
@@ -1033,12 +1033,12 @@ export default function AiAgentsForHealthcarePage() {
                   <h3 className="fj-display text-[1.05rem] font-bold text-fj-ink">What it never does</h3>
                   <ul className="mt-4 space-y-3">
                     {[
-                      'Diagnose, or suggest what a symptom means',
-                      'Judge how urgent a clinical problem sounds',
-                      'Recommend, change or explain a treatment',
-                      'Interpret a test result or a scan',
-                      'Advise on medication or dosage',
-                      'Answer a clinical question instead of handing it on',
+                      'Diagnose, or suggest what a symptom means.',
+                      'Judge how urgent a clinical problem sounds.',
+                      'Recommend, change or explain a treatment.',
+                      'Interpret a test result or a scan.',
+                      'Advise on medication or dosage.',
+                      'Answer a clinical question instead of handing it on.',
                     ].map((line) => (
                       <li
                         key={line}

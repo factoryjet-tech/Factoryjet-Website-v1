@@ -676,10 +676,10 @@ export default function SeoConsultingPage() {
                 </p>
                 <ul className="mt-4 space-y-3">
                   {[
-                    { p: 'P0', t: 'Collapse 4,180 faceted URLs to 62 indexable variants', e: 'Dev, 3 days' },
-                    { p: 'P0', t: 'Fix canonical loop on paginated category pages', e: 'Dev, 1 day' },
-                    { p: 'P1', t: 'Merge 9 competing posts into one buyer guide', e: 'Content, 1 week' },
-                    { p: 'P1', t: 'Add answer block above the fold on 14 money pages', e: 'Content, 4 days' },
+                    { p: 'P0', t: 'Collapse 4,180 faceted URLs to 62 indexable variants.', e: 'Dev, 3 days.' },
+                    { p: 'P0', t: 'Fix canonical loop on paginated category pages.', e: 'Dev, 1 day.' },
+                    { p: 'P1', t: 'Merge 9 competing posts into one buyer guide.', e: 'Content, 1 week.' },
+                    { p: 'P1', t: 'Add answer block above the fold on 14 money pages.', e: 'Content, 4 days.' },
                   ].map((row) => (
                     <li key={row.t} className="flex items-start gap-3 border-t pt-3 first:border-t-0 first:pt-0" style={{ borderColor: 'rgba(15,15,18,0.08)' }}>
                       <span
@@ -717,13 +717,7 @@ export default function SeoConsultingPage() {
                 What are SEO consulting services?
               </h2>
               <p className="mt-3 max-w-[900px] font-fj-body text-[1.0625rem] leading-[1.7] text-fj-neutral-600">
-                <b className="text-fj-ink">SEO consulting services are advisory work.</b> A consultant audits
-                your site, works out why organic traffic is stuck, decides what to fix and in what order, and
-                hands your team a roadmap they execute. You buy judgement, not hands. That is the difference
-                from an SEO agency retainer, where an outside team does the work for you and takes the
-                knowledge with them when the contract ends. A typical engagement covers a technical audit
-                written as developer tickets, keyword and AI-query research, a content architecture, competitor
-                teardowns, measurement setup, and a prioritised 90-day plan.
+                <b className="text-fj-ink">SEO consulting services provide senior strategic direction.</b> An experienced consultant audits your website and diagnoses traffic drops. We prioritize exact technical fixes into developer tickets. Your internal engineers and writers ship the changes. Strategic knowledge stays inside your company. Engagements cover technical audits, keyword clustering, AI search visibility, and a 90-day execution roadmap.
               </p>
               <p className="mt-4 max-w-[900px] font-fj-body text-[1.0625rem] leading-[1.7] text-fj-neutral-600">
                 Choose consulting when you already have people who can ship and your gap is direction. Choose a{' '}
@@ -796,11 +790,11 @@ export default function SeoConsultingPage() {
                 </p>
                 <ul className="mt-5 space-y-3">
                   {[
-                    'You have writers or developers with spare capacity',
-                    'You need a second opinion on a plan already in flight',
-                    'A migration, replatform, or new market is coming',
-                    'You want senior direction without a full-time hire',
-                    'You want to build internal SEO capability, not rent it',
+                    'You have writers or developers with spare capacity.',
+                    'You need a second opinion on a plan already in flight.',
+                    'A migration, replatform, or new market is coming.',
+                    'You want senior direction without a full-time hire.',
+                    'You want to build internal SEO capability, not rent it.',
                   ].map((line) => (
                     <li key={line} className="flex items-start gap-3 font-fj-body text-[0.9062rem] font-medium text-fj-ink">
                       <CheckCircle size={18} /> {line}
@@ -826,10 +820,10 @@ export default function SeoConsultingPage() {
                 </p>
                 <ul className="mt-5 space-y-3">
                   {[
-                    'Nobody internal has time to implement anything',
-                    'You want one team accountable for the outcome',
-                    'You are starting from close to zero organic traffic',
-                    'A previous roadmap sat unread in a shared drive',
+                    'Nobody internal has time to implement anything.',
+                    'You want one team accountable for the outcome.',
+                    'You are starting from close to zero organic traffic.',
+                    'A previous roadmap sat unread in a shared drive.',
                   ].map((line) => (
                     <li key={line} className="flex items-start gap-3 font-fj-body text-[0.9062rem] font-medium text-fj-ink">
                       <CheckCircle size={18} fill={ORANGE_DARK} /> {line}
@@ -908,7 +902,7 @@ export default function SeoConsultingPage() {
                 >
                   web.dev Web Vitals documentation
                 </a>
-                , focusing engineering sprints on high-impact optimizations that protect user experience and algorithmic rankings.
+                . We focus engineering sprints on high-impact optimizations that protect user experience and rankings.
               </p>
               <div className="mt-6 overflow-hidden rounded-2xl border border-black/10 shadow-lg">
                 <img

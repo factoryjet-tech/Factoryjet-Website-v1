@@ -840,11 +840,11 @@ export default function AiAgentsForRealEstatePage() {
                 </span>
                 <ol className="mt-3 space-y-2.5">
                   {[
-                    { k: 'Portal enquiry lands', v: 'Property matched, contact created' },
-                    { k: 'Reply sent', v: 'Answers the question asked, in your voice' },
-                    { k: 'Two questions back', v: 'Timeline and area, not an interrogation' },
-                    { k: 'Calendar checked', v: 'Only slots that genuinely exist' },
-                    { k: 'CRM updated', v: 'Named fields, stage, written summary' },
+                    { k: 'Portal enquiry lands.', v: 'Property matched, contact created.' },
+                    { k: 'Reply sent.', v: 'Answers the question asked, in your voice.' },
+                    { k: 'Two questions back.', v: 'Timeline and area, not an interrogation.' },
+                    { k: 'Calendar checked.', v: 'Only slots that genuinely exist.' },
+                    { k: 'CRM updated.', v: 'Named fields, stage, written summary.' },
                   ].map((row) => (
                     <li
                       key={row.k}
@@ -895,7 +895,7 @@ export default function AiAgentsForRealEstatePage() {
                 It interacts directly with real records, which makes strict guardrails essential.
               </p>
               <p className="mt-4 max-w-[900px] font-fj-body text-[1.0625rem] leading-[1.7] text-fj-neutral-600">
-                This page is the real estate build.{' '}
+                This page focuses specifically on real estate workflows. For broader applications, explore our{' '}
                 <Link
                   href="/services/ai-agent-development"
                   className="font-semibold underline underline-offset-2"
@@ -903,7 +903,7 @@ export default function AiAgentsForRealEstatePage() {
                 >
                   AI agent development
                 </Link>{' '}
-                is the parent service and covers agents in any industry, including the generic{' '}
+                parent service. We also build dedicated{' '}
                 <Link
                   href="/services/ai-agent-development/ai-sales-agent"
                   className="font-semibold underline underline-offset-2"
@@ -927,8 +927,7 @@ export default function AiAgentsForRealEstatePage() {
                 >
                   voice
                 </Link>{' '}
-                patterns. What is here and not there: portal lead behaviour, showing logistics, MLS and IDX
-                data rules, and fair housing constraints.
+                agents. This real estate solution enforces strict portal lead response, showing logistics, and Fair Housing guardrails.
               </p>
             </div>
           </div>

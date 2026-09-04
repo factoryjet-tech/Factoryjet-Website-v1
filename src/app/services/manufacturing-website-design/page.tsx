@@ -786,11 +786,11 @@ export default function ManufacturingWebsiteDesignPage() {
                 </span>
                 <ul className="mt-3 space-y-2.5">
                   {[
-                    { k: 'Capability pages', v: 'processes, tolerances, machines' },
-                    { k: 'RFQ capture', v: 'drawings, models, quantities' },
-                    { k: 'Spec sheets and CAD', v: 'as text, not only as PDFs' },
-                    { k: 'Certifications', v: 'documents, not logo strips' },
-                    { k: 'Distributor locator', v: 'routed by territory' },
+                    { k: 'Capability pages.', v: 'processes, tolerances, and machine limits.' },
+                    { k: 'RFQ capture.', v: 'engineering drawings, CAD models, and part counts.' },
+                    { k: 'Spec sheets and CAD.', v: 'searchable HTML text, not locked PDFs.' },
+                    { k: 'Certifications.', v: 'verified audit certificates, not empty badges.' },
+                    { k: 'Distributor locator.', v: 'territory-routed dealer maps.' },
                   ].map((row) => (
                     <li
                       key={row.k}
@@ -836,9 +836,7 @@ export default function ManufacturingWebsiteDesignPage() {
                   Manufacturing website design is building a site for the engineers, buyers and quality
                   managers who decide whether your shop can make their part.
                 </b>{' '}
-                It presents capability as real numbers, captures a request for quote with a drawing attached,
-                hands over spec sheets and CAD files without a phone call, and proves your certifications with
-                documents. It is a technical sales tool, not a brochure.
+                It presents capabilities as exact engineering tolerances and equipment specs. It captures RFQ packages with attached CAD prints. It delivers spec sheets instantly without requiring a phone call. It proves certifications with verified audit records.
               </p>
               <p className="mt-4 max-w-[900px] font-fj-body text-[1.0625rem] leading-[1.7] text-fj-neutral-600">
                 Most manufacturing sites fail because they describe the company instead of answering the

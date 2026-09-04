@@ -217,30 +217,30 @@ const FEATURES = [
 ];
 
 const INDUSTRIES = [
-  { t: 'Manufacturers', d: 'Dealer and distributor portals with per-account pricing, net terms, and reordering, synced to your ERP. Configurable products, spec sheets, and warranty registration where the catalog is technical.' },
-  { t: 'Distributors & wholesalers', d: 'Gated wholesale catalogs, volume tiers, minimum order quantities, and fast reordering that replace email-and-phone ordering. Customer-specific catalogs so each account sees its own assortment and price.' },
-  { t: 'Industrial & MRO', d: 'Large, attribute-heavy catalogs with parametric search, compatibility finders, and bulk order pads. Contract pricing and approval workflows for procurement teams.' },
-  { t: 'Food, beverage & CPG', d: 'Case and pallet ordering, lot and expiry handling, route or delivery-window logic, and 3PL integration. Reorder pads for high-frequency wholesale accounts.' },
-  { t: 'Apparel, textiles & home', d: 'Size and color matrices, pre-book and seasonal ordering, line sheets, and B2B linesheet-to-cart flows for buyers placing large, variant-heavy orders.' },
-  { t: 'Health, beauty & supplements', d: 'Wholesale and practitioner portals with gated pricing, compliance-aware product content, subscription reordering, and tiered programs for retailers and clinics.' },
+  { t: 'Manufacturers', d: 'Dealer and distributor portals sync live with your ERP. They provide contracted pricing, Net payment terms, and technical spec sheets.' },
+  { t: 'Distributors & wholesalers', d: 'Gated wholesale catalogs replace phone and email orders. Buyers see personalized assortments, volume tiers, and minimum quantities.' },
+  { t: 'Industrial & MRO', d: 'Parametric search and compatibility finders handle large catalogs. Bulk order pads and approval workflows simplify purchasing.' },
+  { t: 'Food, beverage & CPG', d: 'Case and pallet ordering supports lot and expiry rules. Reorder pads and 3PL routing make repeat wholesale purchasing fast.' },
+  { t: 'Apparel, textiles & home', d: 'Matrix order pads allow buyers to select multiple sizes and colors. Pre-book workflows and digital line sheets speed up wholesale buys.' },
+  { t: 'Health, beauty & supplements', d: 'Wholesale and practitioner portals feature login-gated pricing. Verified accounts can manage subscriptions and volume orders.' },
 ];
 
 const WHOLESALE = [
-  { t: 'Gated wholesale catalogs', d: 'Trade-only products and price lists behind a login, with per-account assortments so a distributor never sees another distributor\'s range or cost.' },
-  { t: 'Volume tiers & MOQs', d: 'Quantity breaks, case and pallet units of measure, minimum order quantities, and order multiples enforced at the cart rather than corrected afterwards.' },
-  { t: 'Trade account onboarding', d: 'Application forms, resale certificate and VAT capture, credit checks, and manual approval before an account sees wholesale pricing.' },
-  { t: 'Net terms & credit control', d: 'Net 30/60/90, credit limits read live from the ERP, on-account checkout, and automatic holds when an account is over limit or past due.' },
-  { t: 'Line sheets & pre-book', d: 'Season-based pre-book ordering, line-sheet-to-cart flows, and size and colour matrices for buyers placing large variant-heavy orders.' },
-  { t: 'Rep-assisted ordering', d: 'Order-on-behalf, shared carts, and quote building so field reps and inside sales work inside the same wholesale platform your buyers use.' },
+  { t: 'Gated wholesale catalogs', d: 'Trade-only products and price lists sit behind a secure login. Buyers only see their assigned catalog and negotiated rates.' },
+  { t: 'Volume tiers & MOQs', d: 'Enforce quantity breaks, case packs, and order minimums directly in the cart. This eliminates checkout and fulfillment errors.' },
+  { t: 'Trade account onboarding', d: 'Capture resale certificates and credit references through digital forms. Accounts gain wholesale access upon manual review.' },
+  { t: 'Net terms & credit control', d: 'Support Net 30, 60, or 90 terms with limits verified by your ERP. Automatic holds pause orders when credit limits are reached.' },
+  { t: 'Line sheets & pre-book', d: 'Run seasonal pre-orders with digital line-sheet-to-cart flows. Multi-variant matrices make bulk ordering fast and simple.' },
+  { t: 'Rep-assisted ordering', d: 'Enable sales reps to create quotes and order on behalf of clients. Field reps and buyers work in the same unified system.' },
 ];
 
 const MULTICHANNEL = [
-  { t: 'Self-service portal', d: 'The trade portal where most reorders land, with each account\'s own pricing, order history, and one-click reordering.' },
-  { t: 'EDI', d: 'For the large accounts that will never use a portal: EDI 850 purchase orders, 855 acknowledgements, 856 ASNs, and 810 invoices mapped to the same order pipeline.' },
-  { t: 'Punchout', d: 'cXML and OCI punchout so buyers inside Coupa, Ariba, Jaggaer, or Oracle procurement shop your catalogue and return an approved requisition.' },
-  { t: 'Sales reps', d: 'Order-on-behalf and quoting tools so rep-written orders carry the same pricing rules and land in the same system.' },
-  { t: 'Marketplaces', d: 'Amazon Business, Faire, and vertical marketplaces fed from the same catalogue and inventory pool.' },
-  { t: 'Retail & POS', d: 'Where you also sell direct, POS and DTC orders draw on one shared inventory instead of a separate stock bucket.' },
+  { t: 'Self-service portal', d: 'A 24/7 trade portal where buyers reorder in seconds. Accounts access order history, custom pricing, and open invoices.' },
+  { t: 'EDI', d: 'Map EDI 850 purchase orders, 855 confirmations, 856 ASNs, and 810 invoices directly to your central ecommerce order pipeline.' },
+  { t: 'Punchout', d: 'Connect via cXML and OCI into Coupa, SAP Ariba, Jaggaer, and Oracle. Procurement teams shop your catalog from within their ERP.' },
+  { t: 'Sales reps', d: 'Provide quoting and order-on-behalf tools for your sales reps. Orders follow the same pricing rules and sync to the ERP.' },
+  { t: 'Marketplaces', d: 'Feed Amazon Business and vertical B2B marketplaces from one shared inventory pool. Prevent overselling across channels.' },
+  { t: 'Retail & POS', d: 'Draw POS, DTC, and wholesale orders from one shared inventory. Maintain accurate stock counts across all channels.' },
 ];
 
 const COMPARE = [
@@ -252,11 +252,11 @@ const COMPARE = [
 ];
 
 const CHOOSE = [
-  'Catalog size and complexity, including variants and channel-specific attributes',
-  'Pricing rules: tiers, contracts, customer-specific catalogs, and minimums',
-  'Integrations you need: ERP, PIM, POS, 3PL, and marketplaces',
-  'Whether you also sell DTC on the same catalog and inventory',
-  'Budget for the build and the ongoing platform license',
+  'Catalog size and complexity, including variants and channel-specific attributes.',
+  'Pricing rules: tiers, contracts, customer-specific catalogs, and minimums.',
+  'Integrations you need: ERP, PIM, POS, 3PL, and marketplaces.',
+  'Whether you also sell DTC on the same catalog and inventory.',
+  'Budget for the build and the ongoing platform license.',
 ];
 
 const STEPS = [
@@ -466,13 +466,6 @@ export default function B2BEcommercePage() {
           </div>
         </section>
 
-        {/* MidPage CTA */}
-        <MidPageCTA
-          headline="Ordering still living in emails and spreadsheets?"
-          sub="Tell us your catalog size, ERP, and customer pricing rules. We will map how a unified portal replaces manual order entry."
-          label="Talk to the founder"
-        />
-
         {/* ── ERP integration ── */}
         <section className="pp-sec tint">
           <div className="pp-wrap">
@@ -640,6 +633,13 @@ export default function B2BEcommercePage() {
             />
           </div>
         </section>
+
+        {/* MidPage CTA */}
+        <MidPageCTA
+          headline="Ordering still living in emails and spreadsheets?"
+          sub="Tell us your catalog size, ERP, and customer pricing rules. We will map how a unified portal replaces manual order entry."
+          label="Talk to the founder"
+        />
 
         {/* ── How to choose ── */}
         <section className="pp-sec">

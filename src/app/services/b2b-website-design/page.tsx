@@ -877,10 +877,10 @@ export default function B2BWebsiteDesignPage() {
           <div className="mx-auto max-w-[1180px] px-6 md:px-8">
             <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
               {[
-                { b: 'Committee-first', s: 'A page for the champion, the engineer, the signer and procurement' },
-                { b: 'Founder-led', s: 'The person who scopes the work is the person who does it' },
-                { b: 'Build and search together', s: 'Design, development and organic visibility in one team' },
-                { b: 'No invented proof', s: 'No borrowed testimonials, no numbers a client has not confirmed' },
+                { b: 'Committee-first.', s: 'A page for the champion, the engineer, the signer and procurement.' },
+                { b: 'Founder-led.', s: 'The person who scopes the work is the person who does it.' },
+                { b: 'Build and search together.', s: 'Design, development and organic visibility in one team.' },
+                { b: 'No invented proof.', s: 'No borrowed testimonials, no numbers a client has not confirmed.' },
               ].map((s) => (
                 <div key={s.b} className="rounded-2xl border p-6" style={{ borderColor: 'rgba(15,15,18,0.09)', background: CREAM }}>
                   <p className="fj-display text-[1.05rem] font-bold text-fj-ink" style={{ letterSpacing: '-0.015em' }}>
@@ -929,11 +929,11 @@ export default function B2BWebsiteDesignPage() {
                 </p>
                 <ul className="mt-5 space-y-3">
                   {[
-                    'The sale ends in a call, a quote or a pilot, not a checkout',
-                    'Your sales cycle is measured in months and involves several people',
-                    'Procurement, security or legal review is part of every deal',
-                    'You need case studies and technical detail more than you need a cart',
-                    'Your reps need pages they can send without explaining them first',
+                    'The sale ends in a call, a quote or a pilot, not a checkout.',
+                    'Your sales cycle is measured in months and involves several people.',
+                    'Procurement, security or legal review is part of every deal.',
+                    'You need case studies and technical detail more than you need a cart.',
+                    'Your reps need pages they can send without explaining them first.',
                   ].map((line) => (
                     <li key={line} className="flex items-start gap-3 font-fj-body text-[0.9062rem] font-medium text-fj-ink">
                       <CheckCircle size={18} /> {line}
@@ -958,11 +958,11 @@ export default function B2BWebsiteDesignPage() {
                 </p>
                 <ul className="mt-5 space-y-3">
                   {[
-                    'Trade accounts log in and place their own orders',
-                    'Pricing differs per account, per tier or per contract',
-                    'You need net terms, purchase orders and approval workflows',
-                    'Orders arrive by portal, by EDI and through procurement punchout',
-                    'It has to stay in sync with your ERP rather than a spreadsheet',
+                    'Trade accounts log in and place their own orders.',
+                    'Pricing differs per account, per tier or per contract.',
+                    'You need net terms, purchase orders and approval workflows.',
+                    'Orders arrive by portal, by EDI and through procurement punchout.',
+                    'It has to stay in sync with your ERP rather than a spreadsheet.',
                   ].map((line) => (
                     <li key={line} className="flex items-start gap-3 font-fj-body text-[0.9062rem] font-medium text-fj-ink">
                       <CheckCircle size={18} fill={ORANGE_DARK} /> {line}

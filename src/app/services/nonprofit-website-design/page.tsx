@@ -265,7 +265,7 @@ const DELIVERABLES: ReadonlyArray<Deliverable> = [
     n: '02',
     title: 'A donation flow rebuilt around mobile giving',
     body:
-      'Digital wallet buttons first (Apple Pay, Google Pay, Venmo), then an optimized card form. We integrate seamless checkout experiences using Stripe, Fundraise Up, or Givebutter to maximize mobile gift completion rates.',
+      'Digital wallet buttons first (Apple Pay, Google Pay, Venmo), then an optimized card form. We integrate frictionless checkout experiences using Stripe, Fundraise Up, or Givebutter to maximize mobile gift completion rates.',
   },
   {
     n: '03',
@@ -872,19 +872,19 @@ export default function NonprofitWebsiteDesignPage() {
                 <ul className="mt-3 space-y-2.5">
                   {[
                     {
-                      k: 'Traffic arriving on a mobile device',
+                      k: 'Traffic arriving on a mobile device.',
                       v: '52%',
-                      w: 'Mobile produced just 28 percent of online revenue',
+                      w: 'Mobile produced just 28 percent of online revenue.',
                     },
                     {
-                      k: 'Mobile donation pages that convert',
+                      k: 'Mobile donation pages that convert.',
                       v: '8%',
-                      w: 'Against 11 percent on desktop',
+                      w: 'Against 11 percent on desktop giving flows.',
                     },
                     {
-                      k: 'Online revenue arriving in December',
+                      k: 'Online revenue arriving in December.',
                       v: '37%',
-                      w: 'With 4 percent landing on December 31 alone',
+                      w: 'With 4 percent landing on December 31 alone.',
                     },
                   ].map((row) => (
                     <li
@@ -929,17 +929,12 @@ export default function NonprofitWebsiteDesignPage() {
               </h2>
               <p className="mt-3 max-w-[900px] font-fj-body text-[1.0625rem] leading-[1.7] text-fj-neutral-600">
                 <b className="text-fj-ink">
-                  Nonprofit website design is the design of a website for a charity, foundation or NGO, where
-                  the same pages have to raise money, recruit volunteers, satisfy funders and serve the people
-                  the organisation exists for.
+                  Nonprofit website design builds digital platforms for charities, foundations, and NGOs.
                 </b>{' '}
-                It is a harder brief than a business site: four audiences read the same pages, and usually
-                nobody technical is on staff to maintain it.
+                The same pages must collect donations, recruit volunteers, satisfy grant officers, and serve community members. It is a demanding brief. Four distinct audiences read every page, and staff rarely have dedicated in-house developers.
               </p>
               <p className="mt-4 max-w-[900px] font-fj-body text-[1.0625rem] leading-[1.7] text-fj-neutral-600">
-                The decisions that matter are not the ones in a portfolio: whether the donation form finishes
-                on a five-year-old phone, whether a grant officer can find your financials without emailing
-                you, and whether the site is still accurate in eighteen months.
+                Core priorities go beyond visual styling. Giving flows must complete quickly on mobile devices. Funder portals must locate Form 990 documents easily. Content management systems must remain easy for non-technical teams to update.
               </p>
             </div>
           </div>

@@ -119,6 +119,57 @@
     "gift matching", "pledge management", "peer-to-peer fundraising", "donor retention", "501(c)(3)",
     "rfq portal", "cad viewer", "step file viewer", "drawing extraction", "as9100", "interactive quoting",
     "contract manufacturing", "crawl log analysis", "render budget", "canonical audit",
-    "hreflang validation", "indexation strategy", "faceted navigation seo", "serp feature optimization"
+    "hreflang validation", "indexation strategy", "faceted navigation seo", "serp feature optimization",
+
+    "roofing", "roofing contractor", "roof repair", "roof replacement", "local seo",
+    "storm damage", "hail damage", "commercial roofing", "residential roofing", "metal roofing",
+    "shingle roofing", "flat roofing", "roof inspection", "drone inspection", "aerial measurement",
+    "local pack", "map pack", "citation building", "service area page", "service area pages",
+    "call tracking", "form tracking", "review management",
+
+    "b2b saas", "saas", "software as a service", "product-led growth", "sales-led growth",
+    "free trial", "interactive demo", "product tour", "interactive product tour", "pricing page",
+    "pricing matrix", "feature comparison", "feature matrix", "changelog", "developer portal",
+    "developer documentation", "api documentation", "integrations directory", "app marketplace",
+    "saml sso", "enterprise tier", "annual recurring revenue", "arr", "monthly recurring revenue",
+    "mrr", "churn rate", "customer acquisition cost", "cac", "lifetime value", "ltv",
+    "demo request", "book a demo", "lead qualification", "buyer persona", "pipeline velocity",
+
+    "nonprofit", "not-for-profit", "charity", "foundation", "donation form",
+    "donation page", "recurring giving", "monthly giving", "donor management", "matching gifts",
+    "capital campaign", "annual fund", "major gifts", "endowment", "grant management",
+    "volunteer management", "tax deductible", "donation receipt", "annual report", "impact report",
+    "form 990", "board governance",
+
+    "real estate", "brokerage", "broker", "realtor", "real estate agent", "property search",
+    "property listing", "property tour", "open house", "buyer lead", "seller lead",
+    "listing presentation", "comparative market analysis", "cma", "mortgage pre-approval",
+    "home valuation", "property management", "tenant screening", "lease signing", "speed to lead",
+
+    "seo consulting", "seo consultant", "seo audit", "technical seo", "organic search",
+    "search strategy", "crawl budget", "rendering budget", "log file analysis", "crawlability",
+    "indexation", "indexability", "xml sitemap", "robots.txt", "canonicalization",
+    "link architecture", "backlink audit", "link equity", "anchor text", "search intent",
+    "keyword research", "keyword clustering", "topical authority", "content pruning", "content decay",
+    "serp analysis", "e-e-a-t", "helpful content", "rank tracking", "search essentials",
+    "search console", "organic traffic", "ranking", "rankings", "query", "queries",
+
+    "b2b web design", "b2b website", "buying committee", "procurement review", "vendor selection",
+    "enterprise sales", "sales pipeline", "lead generation", "gated content", "ungated content",
+    "trust center", "security portal", "soc 2 type ii", "sub-processor",
+    "accessibility conformance report", "vpat", "lead routing", "technical spec",
+    "system compatibility", "sales enablement", "pipeline generation", "decision maker",
+    "executive buyer", "stakeholder alignment",
+
+    "healthcare", "hipaa compliance", "protected health information", "phi",
+    "patient intake", "appointment scheduling", "insurance eligibility", "insurance verification",
+    "prior authorization", "claims processing", "ehr integration", "emr integration",
+    "referral management", "clinical triage", "telehealth", "sms appointment reminder",
+    "patient outreach", "medical practice", "physician clinic", "medical billing", "ehr schedule",
+
+    "custom manufacturing", "precision machining", "cnc machining", "sheet metal fabrication",
+    "injection molding", "tier 1 supplier", "tier 2 supplier", "3d model viewer",
+    "engineering drawing", "itar compliance", "tolerance spec", "material spec",
+    "minimum order quantity", "moq"
   ]
 }

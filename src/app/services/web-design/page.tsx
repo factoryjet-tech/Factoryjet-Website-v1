@@ -858,6 +858,7 @@ export default function WebDesignPage() {
 
         {/* ── 5. WHAT WE BUILD ─────────────────────────────────────────────── */}
         <IndustriesGrid
+          variant="cards"
           eyebrow="WHAT WE BUILD"
           headline="Six Types of Websites We Build for US Businesses"
           lead="Not every business needs the same thing. We match the right platform and design approach to your specific goals, whether you need a lead-gen site, an e-commerce store, or a complete web app."

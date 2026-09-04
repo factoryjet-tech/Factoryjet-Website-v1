@@ -914,6 +914,7 @@ export default function AIAutomationPage() {
 
         {/* ── 7. WHAT WE AUTOMATE ───────────────────────────────────────────── */}
         <IndustriesGrid
+          variant="cards"
           eyebrow="WHAT WE AUTOMATE"
           headline="Six High-ROI Workflow Categories We Automate for US Small Businesses"
           lead="Every business has a different bottleneck. These are the six workflow categories that consistently deliver the highest return on automation investment for the SMBs we work with."

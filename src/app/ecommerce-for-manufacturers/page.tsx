@@ -138,9 +138,9 @@ const SOURCED = [
   { v: 'One third', d: 'of B2B buyers prefer digital self-service at any given stage, alongside a third wanting remote contact and a third wanting in-person. A dealer portal serves one of the three, not all of them.', src: 'McKinsey B2B Pulse', href: 'https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/the-multiplier-effect-of-omnichannel' },
 ];
 const PAINS = [
-  { i: '✉', t: 'Dealers order by email and phone', d: 'Inside sales re-keys orders from inboxes and voicemails, and a typo in a part number becomes a return, a credit note, and a lost afternoon.' },
-  { i: '▦', t: 'Contract pricing lives in PDFs', d: 'Each dealer agreement sits in a file somewhere, so every quote is manual and the price a dealer is given does not always match the one finance expects.' },
-  { i: '⛌', t: 'Nobody trusts the stock figure', d: 'Availability is quoted from memory or a nightly export, so dealers call to check before ordering, which is the phone call the portal was meant to remove.' },
+  { i: '✉', t: 'Dealers order by email and phone', d: 'Inside sales re-keys orders from inboxes and voicemails. A typo in a part number leads to returns, credit notes, and wasted hours.' },
+  { i: '▦', t: 'Contract pricing lives in PDFs', d: 'Dealer agreements sit scattered in static files. Quoting remains slow and manual. Quoted rates often fail to match finance expectations.' },
+  { i: '⛌', t: 'Nobody trusts the stock figure', d: 'Availability is quoted from memory or nightly exports. Buyers call to verify stock before placing orders. This defeats the purpose of self-service.' },
 ];
 const BENEFITS = [
   { i: '↻', t: 'Repeat orders without a rep', d: 'Reorder pads, saved lists, and CSV upload absorb the routine volume that currently occupies your inside sales team.' },
@@ -151,14 +151,14 @@ const BENEFITS = [
   { i: '◎', t: 'Channel visibility', d: 'First-party data on who orders what and how often, instead of inferring demand from distributor forecasts.' },
 ];
 const FEATURES = [
-  { t: 'Dealer & distributor portals', d: 'Per-account logins, assigned assortments, order and invoice history, and reordering for every authorised partner.' },
-  { t: 'Contract & tiered pricing', d: 'Contract, tiered, and volume pricing per account, read live from the ERP rather than maintained twice.' },
-  { t: 'Territory & channel rules', d: 'Region-restricted catalogs and pricing, dealer-locator routing, and tiered dealer programmes.' },
-  { t: 'Product configurators', d: 'Rule-driven configuration with dependent options, dimensional inputs, and derived part numbers, priced or sent to quote.' },
-  { t: 'Parametric & fitment search', d: 'Attribute-level filtering and compatibility finders so buyers identify parts by specification, not by guessing a name.' },
-  { t: 'Bulk order pads & CSV upload', d: 'Paste or upload part numbers and quantities straight to checkout, with case and pallet units enforced at the cart.' },
-  { t: 'EDI & punchout', d: 'EDI 850/855/856/810 and cXML or OCI punchout into Coupa, Ariba, Jaggaer, and Oracle procurement.' },
-  { t: 'ERP integration', d: 'NetSuite, SAP, Epicor Prophet 21 and Kinetic, Infor, Dynamics 365, Sage, Acumatica, IFS, and custom middleware.' },
+  { t: 'Dealer & distributor portals', d: 'Provide per-account logins and assigned product assortments. Buyers access order history, invoices, and rapid reordering.' },
+  { t: 'Contract & tiered pricing', d: 'Display negotiated contract and tiered pricing per account. Data syncs live from your ERP system.' },
+  { t: 'Territory & channel rules', d: 'Enforce regional catalog restrictions and channel pricing rules. Route inquiries with smart dealer locators.' },
+  { t: 'Product configurators', d: 'Build rule-based configurations with dimensional inputs and dependent options. Derive part numbers and quotes in real time.' },
+  { t: 'Parametric & fitment search', d: 'Equip buyers with attribute filtering and compatibility finders. Users find precise parts without guessing names.' },
+  { t: 'Bulk order pads & CSV upload', d: 'Paste or upload part numbers straight into checkout. Enforce minimum order quantities and pallet units automatically.' },
+  { t: 'EDI & punchout', d: 'Connect via EDI 850, 855, 856, and 810 protocols. Support cXML and OCI punchout into Coupa, SAP Ariba, and Oracle.' },
+  { t: 'ERP integration', d: 'Link NetSuite, SAP, Epicor Prophet 21, Infor, and Dynamics 365. Custom middleware bridges legacy back-office software.' },
 ];
 const SEGMENTS = [
   { t: 'Industrial & MRO', d: 'Very large attribute-heavy catalogs, parametric search, compatibility finders, contract pricing, and approval workflows for procurement teams. Multi-warehouse availability that a buyer can act on without calling.' },
@@ -205,9 +205,7 @@ export default function EcommerceForManufacturersPage() {
                   Dealer portals your channel will actually use.
                 </h1>
                 <p className="pp-lead" style={{ maxWidth: '48ch' }}>
-                  We build manufacturer and distributor ecommerce: dealer portals with contract pricing, territory rules,
-                  configurable products, parametric part search, and bulk ordering, integrated with the ERP that already
-                  runs your business. Your dealers self-serve, your inside sales team stops re-keying orders.
+                  We engineer manufacturer and distributor ecommerce portals. We build trade portals with contract pricing, territory rules, configurable parts, and bulk ordering. Everything connects to your ERP. Dealers self-serve quickly, and sales teams stop re-keying orders manually.
                 </p>
                 <HeroInlineForm source="us_mfg_hero" region="us" submitLabel="Get a channel commerce audit" />
               </div>
@@ -258,26 +256,25 @@ export default function EcommerceForManufacturersPage() {
                     and multi-warehouse inventory accuracy.
                   </p>
                   <p>
-                    We design, build, and implement that system, then hand it over for you to own and run. This page covers manufacturing
-                    commerce specifically. If you need a lead-generation web presence to capture engineering RFQs, see our{' '}
+                    We design, build, and deploy that system for you to own. This page covers manufacturing commerce specifically. To capture custom engineering RFQs, see our{' '}
                     <Link href="/services/manufacturing-website-design" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
                       manufacturing website design
                     </Link>{' '}
-                    service or our broader{' '}
+                    service. We also provide broader{' '}
                     <Link href="/services/b2b-website-design" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
                       B2B website design
-                    </Link>{' '}
-                    practice. For Shopify-specific enterprise wholesale setups, see{' '}
+                    </Link>. For Shopify wholesale setups, explore{' '}
                     <Link href="/services/shopify-plus-b2b" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
                       Shopify Plus B2B
-                    </Link>. For the wider trade-selling picture, see our{' '}
+                    </Link>. For trade channels, see our{' '}
                     <Link href="/b2b-ecommerce" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
                       B2B e-commerce
                     </Link>{' '}
-                    build. If you already run a dealer portal and the platform underneath it is the problem, explore{' '}
+                    architecture. If your current portal needs an upgrade, review our{' '}
                     <Link href="/replatforming" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
                       e-commerce replatforming
-                    </Link>.
+                    </Link>{' '}
+                    services.
                   </p>
                 </div>
               </div>
@@ -399,19 +396,17 @@ export default function EcommerceForManufacturersPage() {
                 <p className="pp-mlabel">{'// ERP & integrations'}</p>
                 <h2 style={{ marginTop: '10px' }}>ERP-integrated channel commerce</h2>
                 <p className="pp-lead" style={{ marginTop: '14px' }}>
-                  A dealer portal is only trusted if the numbers in it are the numbers in your ERP. We read pricing,
-                  credit, and inventory from the system of record rather than copying them into the storefront, which is
-                  what stops a dealer being quoted a price finance disagrees with or ordering stock you do not hold.
+                  A dealer portal requires accurate ERP data. We read pricing, credit limits, and inventory directly from your central system of record. Dealers always see contract-accurate rates and real warehouse availability.
                 </p>
                 <ul style={{ marginTop: '20px', display: 'grid', gap: '10px' }}>
                   {[
-                    'ERP: NetSuite, SAP S/4HANA and Business One, Epicor Kinetic and Prophet 21, Infor CloudSuite Industrial, Microsoft Dynamics 365 Business Central, Sage X3 and Intacct, Acumatica, IFS, QuickBooks Enterprise, Odoo',
-                    'What we sync: part master and attributes, dealer account hierarchies, contract and tiered price lists, credit limits and terms, inventory by location, orders, invoices, shipment tracking',
-                    'EDI: 850 purchase orders, 855 acknowledgements, 856 advance ship notices, 810 invoices',
-                    'Punchout: cXML and OCI into Coupa, Ariba, Jaggaer, and Oracle procurement',
-                    'PIM and product data: Akeneo, Salsify, Plytix, plus CAD, BIM, datasheet, and SDS document handling',
-                    'WMS and 3PL: multi-warehouse availability, branch stock, and shipment status',
-                    'Custom middleware where no direct connector exists',
+                    'ERP: NetSuite, SAP S/4HANA and Business One, Epicor Kinetic and Prophet 21, Infor CloudSuite Industrial, Microsoft Dynamics 365 Business Central, Sage X3 and Intacct, Acumatica, IFS, QuickBooks Enterprise, Odoo.',
+                    'What we sync: part master and attributes, dealer account hierarchies, contract and tiered price lists, credit limits and terms, inventory by location, orders, invoices, shipment tracking.',
+                    'EDI: 850 purchase orders, 855 acknowledgements, 856 advance ship notices, 810 invoices.',
+                    'Punchout: cXML and OCI into Coupa, Ariba, Jaggaer, and Oracle procurement.',
+                    'PIM and product data: Akeneo, Salsify, Plytix, plus CAD, BIM, datasheet, and SDS document handling.',
+                    'WMS and 3PL: multi-warehouse availability, branch stock, and shipment status.',
+                    'Custom middleware where no direct connector exists.',
                   ].map((item) => (
                     <li key={item} style={{ display: 'flex', gap: '10px', fontSize: '15px', lineHeight: 1.55, color: 'var(--pp-body)' }}>
                       <span style={{ marginTop: '3px', flex: 'none', display: 'inline-flex', height: '18px', width: '18px', alignItems: 'center', justifyContent: 'center', borderRadius: '999px', background: 'rgba(240,90,40,0.1)', color: 'var(--pp-orange-dark)' }}>{checkIcon}</span>
@@ -479,40 +474,40 @@ export default function EcommerceForManufacturersPage() {
                 <thead><tr><th>Platform</th><th>Best for</th><th>Trade-off</th><th>Our read</th></tr></thead>
                 <tbody>
                   <tr>
-                    <td className="name">Shopify Plus</td>
-                    <td>Clean admin, fast to launch, B2B built in</td>
-                    <td>Variant ceilings on highly configurable products</td>
-                    <td>Fits most dealer portals and distributor catalogues</td>
+                    <td className="name">Shopify Plus.</td>
+                    <td>Clean admin, fast to launch, with native B2B tools.</td>
+                    <td>Variant limits on complex custom configurations.</td>
+                    <td>Fits most dealer portals and distributor catalogs.</td>
                   </tr>
                   <tr>
-                    <td className="name">Adobe Commerce</td>
-                    <td>Very large attribute-heavy catalogues</td>
-                    <td>Hosting, patching and upgrades are yours</td>
-                    <td>Fits deep technical catalogues and complex B2B rules</td>
+                    <td className="name">Adobe Commerce.</td>
+                    <td>Very large attribute-heavy product catalogs.</td>
+                    <td>Hosting, security patches, and upgrades remain your responsibility.</td>
+                    <td>Fits deep technical catalogs and complex enterprise rules.</td>
                   </tr>
                   <tr>
-                    <td className="name">BigCommerce</td>
-                    <td>Strong B2B Edition at mid-market cost</td>
-                    <td>Smaller app ecosystem</td>
-                    <td>Good middle ground for distributors</td>
+                    <td className="name">BigCommerce.</td>
+                    <td>Strong native B2B Edition at predictable mid-market costs.</td>
+                    <td>Smaller third-party app marketplace.</td>
+                    <td>Balanced middle ground for industrial distributors.</td>
                   </tr>
                   <tr>
-                    <td className="name">OroCommerce</td>
-                    <td>Purpose-built for B2B and distribution</td>
-                    <td>Smaller talent pool, heavier implementation</td>
-                    <td>Worth considering for pure-play distribution</td>
+                    <td className="name">OroCommerce.</td>
+                    <td>Purpose-built exclusively for B2B and wholesale distribution.</td>
+                    <td>Smaller developer ecosystem and longer setup cycle.</td>
+                    <td>Reliable choice for high-volume wholesale distribution.</td>
                   </tr>
                   <tr>
-                    <td className="name">NetSuite SuiteCommerce</td>
-                    <td>Native to NetSuite ERP</td>
-                    <td>Weaker storefront flexibility</td>
-                    <td>Compelling only if NetSuite already runs the business</td>
+                    <td className="name">NetSuite SuiteCommerce.</td>
+                    <td>Native data architecture linked to NetSuite ERP.</td>
+                    <td>Rigid frontend templates and slower design iteration.</td>
+                    <td>Viable only when NetSuite already runs core financials.</td>
                   </tr>
                   <tr>
-                    <td className="name">Commerceflo</td>
-                    <td>Unified catalogue, inventory and order engine</td>
-                    <td>Newer platform</td>
-                    <td>Where one engine across channels is the goal</td>
+                    <td className="name">Commerceflo.</td>
+                    <td>Unified product catalog, multi-warehouse stock, and order routing.</td>
+                    <td>Emerging platform footprint.</td>
+                    <td>Ideal when managing all channels through one engine.</td>
                   </tr>
                 </tbody>
               </table>
@@ -604,10 +599,10 @@ export default function EcommerceForManufacturersPage() {
               <div className="pp-card" style={{ padding: 'clamp(24px,3vw,34px)' }}>
                 <ul style={{ display: 'grid', gap: '12px' }}>
                   {[
-                    'Fixed proposal, no hourly billing surprises',
-                    'Platform-agnostic: we recommend fit, not the most expensive option',
-                    'You own the code, the data, and the platform accounts',
-                    'Product data assessed before we quote, not after',
+                    'Fixed proposal with guaranteed milestone pricing.',
+                    'Platform-agnostic recommendations tailored to your catalog.',
+                    'Complete ownership of your source code and data.',
+                    'Product data assessed honestly before scoping.',
                   ].map((item) => (
                     <li key={item} style={{ display: 'flex', gap: '10px', fontSize: '15px', lineHeight: 1.55, color: 'var(--pp-body)' }}>
                       <span style={{ marginTop: '3px', flex: 'none', display: 'inline-flex', height: '18px', width: '18px', alignItems: 'center', justifyContent: 'center', borderRadius: '999px', background: 'rgba(240,90,40,0.1)', color: 'var(--pp-orange-dark)' }}>{checkIcon}</span>
