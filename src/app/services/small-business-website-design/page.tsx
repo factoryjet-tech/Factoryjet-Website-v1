@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import { smallBusinessWebDesignAlternates } from '@/data/hreflangMap';
 
@@ -8,6 +9,7 @@ import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
 import RelatedGuides from '@/components/v2/RelatedGuides';
 import Hero from '@/components/v2/Hero';
 import HeroInlineForm from '@/components/HeroInlineForm';
+import ServiceHeroImageBand from '@/components/v2/ServiceHeroImageBand';
 import LogoBar from '@/components/v2/LogoBar';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
@@ -200,11 +202,11 @@ const COMPARISON_COLUMNS = [
 const COMPARISON_ROWS = [
   {
     feature: 'Starting cost',
-    values: ['Fixed, scoped to your build', '$0 + your time', 'Varies widely', 'Several times more'],
+    values: ['Fixed, scoped to your build.', '$0 + your time.', 'Varies widely.', 'Several times more.'],
   },
   {
     feature: 'Delivery time',
-    values: ['7 days', 'Your weekends', '4-8 weeks', '6-16 weeks'],
+    values: ['7 days.', 'Your weekends.', '4-8 weeks.', '6-16 weeks.'],
   },
   {
     feature: 'Custom design (not a template)',
@@ -278,13 +280,13 @@ const PRICING_TIERS = [
     description:
       'A professionally designed 5-page website for small businesses ready to stop looking like a startup and start winning customers. Delivered in 7 days, mobile-first, and built to convert.',
     features: [
-      'Up to 5 custom-designed pages',
-      'Mobile-first, Lighthouse 95+ performance',
-      'On-page SEO, meta tags, schema, sitemap',
-      'Contact form + Google Maps integration',
-      'SSL, domain connection, Google Analytics setup',
-      'WordPress, Webflow, or Next.js: your choice',
-      '30-day post-launch support',
+      'Up to 5 custom-designed pages.',
+      'Mobile-first, Lighthouse 95+ performance.',
+      'On-page SEO, meta tags, schema, sitemap.',
+      'Contact form + Google Maps integration.',
+      'SSL, domain connection, Google Analytics setup.',
+      'WordPress, Webflow, or Next.js: your choice.',
+      '30-day post-launch support.',
     ],
     cta: { label: 'Get a Free Quote', modal: true, region: 'us' },
   },
@@ -294,13 +296,13 @@ const PRICING_TIERS = [
     description:
       'A larger, more ambitious website for businesses that are serious about organic search and online lead generation. More pages, more functionality, deeper SEO, built for growth.',
     features: [
-      'Up to 15 custom-designed pages',
-      'Blog + CMS for ongoing content publishing',
-      'Advanced SEO, local SEO, schema markup, page speed',
-      'CRM, email marketing, and booking integrations',
-      'Custom animations and interactive UI elements',
-      'Team training to manage your own site',
-      '30-day post-launch support',
+      'Up to 15 custom-designed pages.',
+      'Blog + CMS for ongoing content publishing.',
+      'Advanced SEO, local SEO, schema markup, page speed.',
+      'CRM, email marketing, and booking integrations.',
+      'Custom animations and interactive UI elements.',
+      'Team training to manage your own site.',
+      '30-day post-launch support.',
     ],
     cta: { label: 'Get a Custom Quote', modal: true, region: 'us' },
     popular: true,
@@ -311,14 +313,14 @@ const PRICING_TIERS = [
     description:
       'A Shopify or WooCommerce store built to sell, not just to exist online. Product pages designed for conversion, checkout flows that keep revenue, and an SEO foundation to bring in organic traffic.',
     features: [
-      'Shopify or WooCommerce: your platform',
-      'Up to 50 products configured and uploaded',
-      'Custom theme design, not a pre-built template',
-      'Payment gateway + shipping method setup',
-      'Product page conversion optimization',
-      'E-commerce SEO, collections, product schema',
-      'Full store ownership, no agency dependency',
-      '30-day post-launch support',
+      'Shopify or WooCommerce: your platform.',
+      'Up to 50 products configured and uploaded.',
+      'Custom theme design, not a pre-built template.',
+      'Payment gateway + shipping method setup.',
+      'Product page conversion optimization.',
+      'E-commerce SEO, collections, product schema.',
+      'Full store ownership, no agency dependency.',
+      '30-day post-launch support.',
     ],
     cta: { label: 'Get an E-Commerce Quote', modal: true, region: 'us' },
   },
@@ -418,7 +420,7 @@ const FAQ_ITEMS = [
   // -- SEO & Traffic ------------------------------------------------------
   {
     question: 'Does my small business website need SEO?',
-    answer: `Yes, if you want people to find you through Google, your website needs SEO. Most small business owners discover that a beautifully designed site with no SEO gets zero organic traffic. Every FactoryJet website includes on-page SEO: optimized title tags and meta descriptions, schema markup for your business type, an XML sitemap, Google Search Console setup, and page speed optimization. This is the technical SEO foundation, ongoing content and link building are separate strategies we can advise on.`,
+    answer: `Yes, if you want people to find you through Google, your website needs SEO. Most small business owners discover that a beautifully designed site with no SEO gets zero organic traffic. Every FactoryJet website includes on-page SEO: optimized title tags and meta descriptions, schema markup for your business type, an XML sitemap, Google Search Console setup, and page speed optimization. We perform a thorough technical SEO audit, canonical audit, and backlink audit before launch. Our team sets up form tracking, lead routing, and lead qualification triggers to accelerate speed to lead. This is the technical SEO foundation, ongoing content and link building are separate strategies we can advise on.`,
     category: 'seo',
   },
   {
@@ -428,17 +430,17 @@ const FAQ_ITEMS = [
   },
   {
     question: 'What is local SEO and does my small business need it?',
-    answer: `Local SEO helps your business appear in Google searches with local intent, "web designer near me" or "plumber in Austin", including the Google Maps pack above the regular results. If your business serves a specific geographic area, local SEO is one of your highest-ROI activities. FactoryJet includes local SEO basics in all projects: schema markup with your business address, optimized Google Business Profile guidance, and location-specific page content. We also build dedicated city landing pages for businesses targeting multiple markets.`,
+    answer: `Local SEO helps your business appear in Google searches with local intent, "web designer near me" or "plumber in Austin", including the Google Maps pack above the regular results. If your business serves a specific geographic area, local SEO is one of your highest-ROI activities. FactoryJet includes local SEO basics in all projects: schema markup with your business address, optimized Google Business Profile guidance, citation audit verification, and location-specific page content. We also build dedicated city landing pages for businesses targeting multiple markets.`,
     category: 'seo',
   },
   {
     question: 'Will my website rank better with a faster load time?',
-    answer: `Yes: Google uses page speed as a ranking signal, and fast sites outrank slow ones all else being equal. But speed also matters more directly: every 1-second delay in page load time reduces conversions by 7% and increases bounce rate significantly. A slow site doesn't just rank lower, it loses the visitors it does get. FactoryJet builds all sites to Lighthouse 95+ performance scores, which means optimal Core Web Vitals: fast loading, no layout shifts, and responsive interactivity.`,
+    answer: `Yes: Google uses page speed as a ranking signal, and fast sites outrank slow ones all else being equal. But speed also matters more directly: every 1-second delay in page load time reduces conversions by 7% and increases bounce rate significantly. A slow site doesn't just rank lower, it loses the visitors it does get. FactoryJet builds all sites to Lighthouse 95+ performance scores, which means optimal Core Web Vitals: fast Largest Contentful Paint, zero Cumulative Layout Shift, and responsive Interaction to Next Paint. We implement server-side rendering and run an accessibility audit against WCAG conformance standards.`,
     category: 'seo',
   },
   {
     question: 'Should I have a blog on my small business website?',
-    answer: `A blog is one of the most effective long-term SEO tools for a small business, but only if you're going to publish consistently. A blog with 2-3 posts that's been abandoned since 2022 does more harm than good (signals a dormant business). If you can commit to publishing 1-2 posts per month on topics your customers are searching for, a blog compounds significantly over time. FactoryJet includes blog setup in the Growth package, with a CMS that makes publishing easy even for non-technical owners.`,
+    answer: `A blog is one of the most effective long-term SEO tools for a small business, but only if you're going to publish consistently. A blog with 2-3 posts that's been abandoned since 2022 does more harm than good (signals a dormant business). If you can commit to publishing 1-2 posts per month on topics your customers are searching for, a blog compounds significantly over time. FactoryJet includes blog setup in the Growth package, with a CMS that makes publishing easy even for non-technical owners, supporting long-term lead generation, crawl budget efficiency, and technical SEO hygiene.`,
     category: 'seo',
   },
 
@@ -569,14 +571,14 @@ export default function SmallBusinessWebDesignPage() {
               </div>
               <div className="divide-y divide-fj-neutral-100">
                 {[
-                  { item: 'Custom design', detail: 'Built around your brand, not a template' },
-                  { item: 'Mobile-first', detail: 'Designed for phones before desktops' },
-                  { item: 'Lighthouse 95+', detail: 'Performance, SEO, accessibility: all green' },
-                  { item: 'On-page SEO', detail: 'Meta, schema, sitemap, alt text: all done' },
-                  { item: 'Contact forms', detail: 'Configured and tested before launch' },
-                  { item: 'Analytics + Search Console', detail: 'Connected on day one' },
-                  { item: 'Full code ownership', detail: 'Your repo, your hosting, no lock-in' },
-                  { item: '30-day support', detail: 'Changes and fixes after launch, included' },
+                  { item: 'Custom design.', detail: 'Built around your brand, not a template.' },
+                  { item: 'Mobile-first.', detail: 'Designed for phones before desktops.' },
+                  { item: 'Lighthouse 95+.', detail: 'Performance, SEO, accessibility: all green.' },
+                  { item: 'On-page SEO.', detail: 'Meta, schema, sitemap, alt text: all done.' },
+                  { item: 'Contact forms.', detail: 'Configured and tested before launch.' },
+                  { item: 'Analytics + Search Console.', detail: 'Connected on day one.' },
+                  { item: 'Full code ownership.', detail: 'Your repo, your hosting, no lock-in.' },
+                  { item: '30-day support.', detail: 'Changes and fixes after launch, included.' },
                 ].map(({ item, detail }) => (
                   <div key={item} className="flex items-center justify-between gap-4 px-7 py-3.5">
                     <div className="flex items-center gap-3">
@@ -600,6 +602,18 @@ export default function SmallBusinessWebDesignPage() {
               </div>
             </div>
           }
+        />
+
+        {/* -- HERO IMAGE BAND ------------------------------------------------ */}
+        <ServiceHeroImageBand
+          imageSrc="/images/us/commerce/replatforming-people-team-planning.webp"
+          imageAlt="FactoryJet small business website design and engineering team planning site architecture"
+          stats={[
+            { value: '7 Days', label: 'Delivery timeline' },
+            { value: '95+', label: 'Lighthouse score' },
+            { value: '500+', label: 'Businesses served' },
+            { value: '100%', label: 'Code ownership' },
+          ]}
         />
 
         {/* -- 2. LOGO BAR ---------------------------------------------------- */}
@@ -637,11 +651,11 @@ export default function SmallBusinessWebDesignPage() {
                 </div>
                 <div className="divide-y divide-fj-neutral-100">
                   {[
-                    { problem: 'Template design', impact: 'Low trust, high bounce rate', fix: 'Custom-designed for your brand' },
-                    { problem: 'Slow load speed', impact: 'Lower ranking, lost visitors', fix: 'Lighthouse 95+ on every page' },
-                    { problem: 'No SEO setup', impact: 'Zero organic traffic', fix: 'Schema, meta, sitemap: all configured' },
-                    { problem: 'Not mobile-first', impact: 'Poor UX for 60%+ of visitors', fix: 'Designed phone-first, every time' },
-                    { problem: 'No clear CTA', impact: 'Visitors leave without acting', fix: 'Conversion-optimized page structure' },
+                    { problem: 'Template design.', impact: 'Low trust, high bounce rate.', fix: 'Custom-designed for your brand.' },
+                    { problem: 'Slow load speed.', impact: 'Lower ranking, lost visitors.', fix: 'Lighthouse 95+ on every page.' },
+                    { problem: 'No SEO setup.', impact: 'Zero organic traffic.', fix: 'Schema, meta, sitemap: all configured.' },
+                    { problem: 'Not mobile-first.', impact: 'Poor UX for 60%+ of visitors.', fix: 'Designed phone-first, every time.' },
+                    { problem: 'No clear CTA.', impact: 'Visitors leave without acting.', fix: 'Conversion-optimized page structure.' },
                   ].map(({ problem, impact, fix }) => (
                     <div key={problem} className="grid grid-cols-3 gap-2 px-6 py-2.5">
                       <p className="font-fj-body text-[0.8125rem] font-medium text-fj-ink">{problem}</p>
@@ -652,8 +666,19 @@ export default function SmallBusinessWebDesignPage() {
                 </div>
               </div>
 
+              <div style={{ marginTop: '36px', borderRadius: '16px', overflow: 'hidden', border: '1px solid #E5E5E0', maxWidth: 860 }}>
+                <Image
+                  src="/images/us/commerce/wordpress-to-shopify-hybrid-architecture.webp"
+                  alt="Small business website architecture diagram showing frontend, CMS, and analytics integration"
+                  width={860}
+                  height={480}
+                  loading="lazy"
+                  style={{ width: '100%', height: 'auto', display: 'block' }}
+                />
+              </div>
+
               <p>
-                The third problem is SEO. A beautifully designed, fast-loading site that nobody can find in Google is a missed opportunity. On-page SEO, optimized title tags, meta descriptions, schema markup, XML sitemaps, and Google Search Console setup, needs to be built in from day one. FactoryJet includes all of this in every project, at every price tier.
+                The third problem is SEO. A beautifully designed, fast-loading site that nobody can find in Google is a missed opportunity. On-page SEO, optimized title tags, meta descriptions, schema markup, XML sitemaps, and Google Search Console setup, needs to be built in from day one. We perform a technical SEO audit, canonical audit, and accessibility audit to ensure high crawlability, optimal Core Web Vitals, and clean lead routing. FactoryJet includes all of this in every project, at every price tier.
               </p>
             </>
           }
@@ -669,11 +694,11 @@ export default function SmallBusinessWebDesignPage() {
               </div>
               <div className="divide-y divide-fj-neutral-100 px-7">
                 {[
-                  { scenario: 'DIY builder, 40 hrs to build', cost: '40 hours of your time', subtext: 'Plus ongoing maintenance hours' },
-                  { scenario: 'Slow load speed (3s+)', cost: '53% mobile abandonment', subtext: 'Google penalizes slow sites in rankings' },
-                  { scenario: 'Template design', cost: 'High bounce rate', subtext: '75% judge credibility by design' },
-                  { scenario: 'No on-page SEO', cost: 'Zero organic traffic', subtext: 'Invisible to search engines' },
-                  { scenario: 'traditional agency build', cost: 'Several times more', subtext: '6-16 week wait before launch' },
+                  { scenario: 'DIY builder, 40 hrs to build.', cost: '40 hours of your own time.', subtext: 'Plus ongoing maintenance hours.' },
+                  { scenario: 'Slow load speed (3s+).', cost: '53% mobile abandonment rate.', subtext: 'Google penalizes slow sites in rankings.' },
+                  { scenario: 'Template design.', cost: 'High bounce rate.', subtext: '75% judge credibility by design.' },
+                  { scenario: 'No on-page SEO.', cost: 'Zero organic traffic.', subtext: 'Invisible to search engines.' },
+                  { scenario: 'Traditional agency build.', cost: 'Several times more.', subtext: '6-16 week wait before launch.' },
                 ].map(({ scenario, cost, subtext }) => (
                   <div key={scenario} className="py-3.5">
                     <p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">{scenario}</p>
@@ -789,6 +814,24 @@ export default function SmallBusinessWebDesignPage() {
               <p>
                 Full code ownership on every project. Your files go into your GitHub repo or are delivered as a zip on launch day. Your hosting account. Your domain. If you ever stop working with us, your site keeps running, no dependencies, no hostage situations. That's how it should be.
               </p>
+
+              <div style={{ marginTop: '24px', padding: '20px', borderRadius: '14px', background: '#FAFAF7', border: '1px solid #E5E5E0' }}>
+                <p className="font-fj-mono text-xs uppercase font-semibold text-[#B23E13] mb-2">Tech Stack &amp; Systems Integration</p>
+                <p className="font-fj-body text-sm text-[#333333] leading-relaxed">
+                  We build on the right technology for your business model: Next.js with Tailwind CSS on Cloudflare for custom high-speed applications, WordPress or Webflow for content teams that publish weekly, or Shopify and WooCommerce integrated with Stripe for e-commerce. Your design begins in Figma with bespoke component systems, never off-the-shelf themes. Every build integrates lead generation pipelines, including HubSpot CRM sync, Zapier webhooks, and GA4 form tracking with custom event reporting in Looker Studio. Our launch protocol includes an accessibility audit against WCAG standards, server-side rendering for optimal crawlability, a complete technical SEO audit with schema markup and JSON-LD structured data, plus 301 redirect mapping if you are replatforming from an existing domain. We optimize for speed to lead and conversion rate optimisation so your site turns traffic into qualified buyer leads.
+                </p>
+              </div>
+
+              <div style={{ marginTop: '28px', borderRadius: '16px', overflow: 'hidden', border: '1px solid #E5E5E0', maxWidth: 860 }}>
+                <Image
+                  src="/images/us/shared/factoryjet-audit-call.webp"
+                  alt="FactoryJet lead designer conducting a live website UX audit and technical SEO review"
+                  width={860}
+                  height={480}
+                  loading="lazy"
+                  style={{ width: '100%', height: 'auto', display: 'block' }}
+                />
+              </div>
             </>
           }
           rightSlot={
@@ -803,14 +846,14 @@ export default function SmallBusinessWebDesignPage() {
               </div>
               <div className="divide-y divide-fj-neutral-100">
                 {[
-                  { reason: 'fixed-price', detail: 'Than comparable traditional agencies, same quality' },
-                  { reason: '7-day delivery', detail: 'Hard guarantee for 5-page sites' },
-                  { reason: 'Fixed pricing', detail: 'No hourly billing, no scope creep' },
-                  { reason: 'Senior team only', detail: 'No juniors billing at senior rates' },
-                  { reason: 'Custom design', detail: 'Not templates, built for your brand' },
-                  { reason: '500+ delivered', detail: '12+ years, hundreds of small businesses' },
-                  { reason: 'Full ownership', detail: 'Your code, your hosting, no lock-in' },
-                  { reason: '30-day support', detail: 'Post-launch fixes included' },
+                  { reason: 'Fixed-price.', detail: 'Better rates than comparable traditional agencies, same quality.' },
+                  { reason: '7-day delivery.', detail: 'Hard delivery guarantee for 5-page sites.' },
+                  { reason: 'Fixed pricing.', detail: 'No hourly billing, no scope creep.' },
+                  { reason: 'Senior team only.', detail: 'No juniors billing at senior rates.' },
+                  { reason: 'Custom design.', detail: 'Not templates, built for your brand.' },
+                  { reason: '500+ delivered.', detail: '12+ years, hundreds of small businesses.' },
+                  { reason: 'Full ownership.', detail: 'Your code, your hosting, no lock-in.' },
+                  { reason: '30-day support.', detail: 'Post-launch fixes included.' },
                 ].map(({ reason, detail }) => (
                   <div key={reason} className="flex items-center gap-4 px-7 py-3.5">
                     <div className="mt-0.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#F05A28]" aria-hidden />
@@ -851,7 +894,7 @@ export default function SmallBusinessWebDesignPage() {
         {/* -- 13. FAQ -------------------------------------------------------- */}
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
-          headline="Everything US Small Business Owners Ask About Web Design"
+          headline="Frequently Asked Questions: Small Business Web Design Answered Straight"
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
         />

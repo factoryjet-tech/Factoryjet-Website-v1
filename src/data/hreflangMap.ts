@@ -198,6 +198,12 @@ export const woocommerceDevelopmentAlternates = {
   'x-default': 'https://factoryjet.com/services/woocommerce-development',
 } as const
 
+/** Ecommerce App Development service page (US only — no India equivalent) */
+export const ecommerceAppDevelopmentAlternates = {
+  'en-US': 'https://factoryjet.com/services/ecommerce-app-development',
+  'x-default': 'https://factoryjet.com/services/ecommerce-app-development',
+} as const
+
 /**
  * SEO Services hub page — US only.
  * US:    /us/services/seo

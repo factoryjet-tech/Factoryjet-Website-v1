@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { usServiceAlternates } from '@/data/hreflangMap';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
@@ -26,7 +27,7 @@ import AiAgentRoiCalculator from '@/components/ai-agent/AiAgentRoiCalculator';
 export const metadata: Metadata = {
   title: 'AI Workflow Automation USA | Process AI | FactoryJet',
   description:
-    'Custom AI workflow automation for US businesses: lead nurturing, invoice processing and data sync, wired into the tools you already run. Get a quote.',
+    'Custom AI workflow automation for US businesses. Automate lead follow-up, invoice processing, and data sync across your tools. Get a quote.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
@@ -75,7 +76,7 @@ export const metadata: Metadata = {
 
 // Freshness signal. Benchmark: 56% of AI-Overview-cited pages carry it.
 // Keep honest: bump when the page's content actually changes.
-const PAGE_MODIFIED = '2026-08-04';
+const PAGE_MODIFIED = '2026-09-04';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -136,31 +137,31 @@ const howToSchema = {
       '@type': 'HowToStep',
       position: 1,
       name: 'Stage 1 | Discovery & Use-Case Mapping',
-      text: 'We audit your workflows, identify the highest-ROI automation opportunities, and define the exact scope of your AI solution.',
+      text: 'We audit your workflows to find high-ROI opportunities. We define the exact scope of your solution.',
     },
     {
       '@type': 'HowToStep',
       position: 2,
       name: 'Stage 2 | Architecture & Data Planning',
-      text: 'We design the AI architecture, select the right models and APIs, and map your data sources and integration points.',
+      text: 'We design the AI architecture, select models, and map your data sources cleanly.',
     },
     {
       '@type': 'HowToStep',
       position: 3,
       name: 'Stage 3 | Build & Integrate',
-      text: 'We build your AI agents or automation workflows and integrate them with your existing tools, CRM, and business systems.',
+      text: 'We build your automation workflows and connect them directly to your existing tools.',
     },
     {
       '@type': 'HowToStep',
       position: 4,
       name: 'Stage 4 | Testing & Optimization',
-      text: 'We run comprehensive testing across edge cases, optimize for accuracy and latency, and add monitoring and alerting.',
+      text: 'We test across edge cases and optimize for speed. We configure real-time monitoring.',
     },
     {
       '@type': 'HowToStep',
       position: 5,
       name: 'Stage 5 | Launch & Training',
-      text: 'Your AI solution goes live. We train your team, provide documentation, and offer 30-day post-launch support.',
+      text: 'Your workflows launch in production. We train your team and provide 30-day post-launch support.',
     },
   ],
 };
@@ -194,7 +195,7 @@ const AUTOMATION_TYPES = [
   {
     name: 'Lead Follow-Up & Nurturing Automation',
     description:
-      'Every new lead, from a website form, ad click, or list import, gets a personalized follow-up email within 60 seconds, is scored and classified by intent, and moves through a tailored nurture sequence. Your CRM is updated automatically at every step. No lead falls through the cracks at 2 a.m.',
+      'Every new website lead receives a personalized response within 60 seconds. Our system scores intent and enrolls prospects in tailored nurture sequences. Your CRM updates automatically at each step without manual data entry.',
     example: '35% increase in qualified pipeline reported within 60 days of launch.',
     linkLabel: 'See how it works',
     linkHref: '/contact',
@@ -202,7 +203,7 @@ const AUTOMATION_TYPES = [
   {
     name: 'Invoice & Document Processing',
     description:
-      'Incoming invoices, purchase orders, contracts, and forms are read by AI, key fields extracted (vendor, amount, due date, line items), GL-coded based on your chart of accounts, and routed for approval: all without anyone opening a PDF manually. Connects to QuickBooks, Xero, and NetSuite.',
+      'AI reads incoming invoices, contracts, and vendor receipts automatically. Key fields like totals, due dates, and line items get extracted. Workflows code expenses and route approvals directly to QuickBooks, Xero, or NetSuite.',
     example: '75% reduction in document handling time across client deployments.',
     linkLabel: 'Start a conversation',
     linkHref: '/contact',
@@ -210,7 +211,7 @@ const AUTOMATION_TYPES = [
   {
     name: 'Support Ticket Triage & Routing',
     description:
-      'Incoming support emails, chat messages, and form submissions are classified by topic and urgency, matched to the right team member or queue, and given an AI-drafted reply suggestion, before a human opens the ticket. High-urgency items surface immediately; routine ones are handled in batches.',
+      'Inbound customer messages are classified by topic and urgency instantly. The system drafts recommended replies in Zendesk, Gorgias, or Freshdesk. Urgent tickets escalate immediately to Slack while routine requests resolve automatically.',
     example: 'Average first-response time cut from 4 hours to under 20 minutes.',
     linkLabel: 'See pricing',
     linkHref: '#pricing',
@@ -218,7 +219,7 @@ const AUTOMATION_TYPES = [
   {
     name: 'Employee Onboarding Automation',
     description:
-      'A new hire\'s start date triggers a coordinated sequence: IT account provisioning requests, welcome emails, first-week schedule, training module assignments, check-in reminders, and manager notifications: all automatically, without HR manually tracking a checklist in a spreadsheet.',
+      'New hire start dates trigger automated account provisioning across Google Workspace and Slack. Workflows assign first-week tasks in Jira, training modules, and manager check-ins. HR eliminates manual spreadsheet tracking entirely.',
     example: 'HR teams reclaim 6-8 hours per new hire from manual coordination.',
     linkLabel: 'Book a strategy call',
     linkHref: '/contact',
@@ -226,7 +227,7 @@ const AUTOMATION_TYPES = [
   {
     name: 'Automated Reporting & Dashboards',
     description:
-      'A scheduled workflow pulls data from your CRM, e-commerce platform, ads account, and any connected database, runs the numbers, writes plain-English commentary on the key trends and anomalies, and delivers a formatted report to Slack, email, or a shared Google Doc: every Monday morning.',
+      'Scheduled workflows pull metrics from Salesforce, GA4, ad platforms, and Stripe. AI summarizes key revenue trends and flags anomalies clearly. Clean executive reports sync to Postgres or BigQuery and arrive in Slack every Monday.',
     example: 'Business owners reclaim 5-8 hours per week of manual reporting time.',
     linkLabel: 'Learn more',
     linkHref: '/contact',
@@ -234,7 +235,7 @@ const AUTOMATION_TYPES = [
   {
     name: 'Cross-System Data Sync',
     description:
-      'Keeps your CRM, e-commerce platform, accounting software, and operations database in sync without manual exports and imports. New orders update inventory, customers update the CRM, payments update accounting, in real time, with conflict resolution logic when records don\'t match cleanly.',
+      'Keeps your HubSpot CRM, Shopify store, and accounting tools in sync. Custom n8n and Make.com pipelines update stock levels in real time. Built-in reconciliation prevents duplicate records and webhook sync errors.',
     example: 'Eliminates 10-20 hours per week of copy-paste data entry.',
     linkLabel: 'Get a free assessment',
     linkHref: '/contact',
@@ -246,51 +247,51 @@ const AUTOMATION_JOURNEY_STAGES: ServiceJourneyStage[] = [
     number: '01',
     title: 'Discover',
     description:
-      'A 60-minute session where we map your highest-value workflows, document the decision logic and exception cases, and identify which processes have the clearest ROI to automate first.',
+      'We run a 60-minute strategy session to map your highest-value workflows. We document decision paths, exception rules, and estimated ROI.',
   },
   {
     number: '02',
     title: 'Design',
     description:
-      'We design the workflow logic, define error handling, map every integration point, and specify the AI reasoning layers. You approve the design doc, including what happens when something fails, before we write code.',
+      'We architect the workflow logic, error handling, and API integration specs. You approve the technical blueprint before coding starts.',
   },
   {
     number: '03',
     title: 'Build',
     description:
-      'Development in a staging environment with weekly demos. You see the automation handling real data before it goes anywhere near production. Feedback is incorporated at every stage.',
+      'Our engineers develop the pipelines in staging with weekly live demos. You test real business data before production deployment.',
   },
   {
     number: '04',
     title: 'Validate',
     description:
-      'We run the automation against your actual business scenarios, including edge cases and failure modes. Every exception path is tested. Every error handler is verified. Nothing is deployed until it\'s provably reliable.',
+      'We test every edge case and API failure scenario. Every error handler is verified to ensure zero silent failures.',
   },
   {
     number: '05',
     title: 'Deploy & Monitor',
     description:
-      'Production launch with real-time monitoring, an operations dashboard showing every workflow run, and a 30-day support window. Full team training so your operations staff can manage it without engineering help.',
+      'We launch your automation with live monitoring and a central operations dashboard. Includes full staff training and 30-day support.',
   },
 ];
 
 const ROI_STATS = [
   {
     value: '55%',
-    label: 'average reduction in manual task time across FactoryJet automation deployments',
-    microcopy: 'based on client-reported hours before and after',
+    label: 'average reduction in manual task time across FactoryJet automation deployments.',
+    microcopy: 'based on client-reported hours before and after.',
     categoryLabel: 'TIME SAVED',
   },
   {
     value: '90s',
-    label: 'average lead follow-up time with automation vs. 4+ hours manually',
-    microcopy: 'speed is the single biggest driver of lead close rates',
+    label: 'average lead follow-up time with automation vs. 4+ hours manually.',
+    microcopy: 'speed is the single biggest driver of lead close rates.',
     categoryLabel: 'LEAD RESPONSE',
   },
   {
     value: 'Fixed Price',
-    label: 'milestone-paid automation builds with full code ownership',
-    microcopy: 'specialized engineers, US-caliber output, predictable from quote to launch',
+    label: 'milestone-paid automation builds with full code ownership.',
+    microcopy: 'specialized engineers, US-caliber output, predictable from quote to launch.',
     categoryLabel: 'PRICING MODEL',
   },
 ];
@@ -298,20 +299,20 @@ const ROI_STATS = [
 const MARKET_STATS = [
   {
     value: '$26B',
-    label: 'US intelligent process automation market value by 2028, growing at 13% annually',
-    microcopy: 'MarketsandMarkets 2024',
+    label: 'US intelligent process automation market value by 2028, growing at 13% annually.',
+    microcopy: 'MarketsandMarkets research report.',
     categoryLabel: 'MARKET SIZE',
   },
   {
     value: '45%',
-    label: 'of US SMBs say manual data entry is their biggest operational time drain',
-    microcopy: 'Salesforce Small Business Report 2024',
+    label: 'of US SMBs say manual data entry is their biggest operational time drain.',
+    microcopy: 'Salesforce Small Business Report.',
     categoryLabel: 'SMB PAIN POINT',
   },
   {
     value: '3-6×',
-    label: 'higher ROI from AI-enhanced automation vs. basic rule-based tools like Zapier',
-    microcopy: 'McKinsey, Winning the SMB tech market in a challenging economy',
+    label: 'higher ROI from AI-enhanced automation vs. basic rule-based tools like Zapier.',
+    microcopy: 'McKinsey SMB research findings.',
     categoryLabel: 'AI ADVANTAGE',
   },
 ];
@@ -325,7 +326,7 @@ const COMPARISON_COLUMNS = [
 
 const COMPARISON_ROWS = [
   {
-    feature: 'Pricing model',
+    feature: 'Pricing model.',
     values: [
       'Fixed-price, one-time',
       'Enterprise budgets',
@@ -334,11 +335,11 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Delivery timeline',
+    feature: 'Delivery timeline.',
     values: ['2-4 weeks', '2-5 months', 'Hours (limited capability)', '4-8 weeks (unreliable)'],
   },
   {
-    feature: 'AI decision-making in workflows',
+    feature: 'AI decision-making in workflows.',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="yes" />,
@@ -347,7 +348,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Document & email reading (unstructured data)',
+    feature: 'Document & email reading (unstructured data).',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="yes" />,
@@ -356,7 +357,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Full error handling & monitoring',
+    feature: 'Full error handling & monitoring.',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="yes" />,
@@ -365,7 +366,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'You own the code outright',
+    feature: 'You own the code outright.',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="partial" />,
@@ -374,7 +375,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'No ongoing platform seat fees',
+    feature: 'No ongoing platform seat fees.',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="yes" />,
@@ -383,7 +384,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: '30-day post-launch support',
+    feature: '30-day post-launch support.',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="partial" />,
@@ -392,7 +393,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: '12+ years of SMB domain experience',
+    feature: '12+ years of SMB domain experience.',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="no" />,
@@ -409,13 +410,13 @@ const PRICING_TIERS = [
     description:
       'One focused workflow automation that eliminates your highest-impact manual process. Best for businesses automating their first workflow.',
     features: [
-      'Single workflow automation (lead follow-up, invoice processing, or data sync)',
-      'Connects to 2-3 existing tools via API',
-      'AI reasoning layer for decision-making and classification',
-      'Error handling with Slack or email notifications',
-      'Workflow monitoring dashboard',
-      'Full workflow logic documentation',
-      '14-day post-launch support window',
+      'Single workflow automation (lead follow-up, invoice processing, or data sync).',
+      'Connects to 2-3 existing tools via API.',
+      'AI reasoning layer for decision-making and classification.',
+      'Error handling with Slack or email notifications.',
+      'Workflow monitoring dashboard.',
+      'Full workflow logic documentation.',
+      '14-day post-launch support window.',
     ],
     cta: { label: 'Get a Quote', modal: true as const, region: 'us' as const },
   },
@@ -425,14 +426,14 @@ const PRICING_TIERS = [
     description:
       'A multi-workflow automation platform connecting 3-5 systems with an operations dashboard. The most popular tier for US SMBs ready to automate seriously.',
     features: [
-      'Up to 4 interconnected workflow automations',
-      'Full CRM, e-commerce, or accounting integration',
-      'AI document reading and field extraction',
-      'Operations dashboard showing all workflow runs and exceptions',
-      'Custom error handling and retry logic',
-      'Bi-directional data sync between systems',
-      'Team training session + full documentation',
-      '30-day post-launch support window',
+      'Up to 4 interconnected workflow automations.',
+      'Full CRM, e-commerce, or accounting integration.',
+      'AI document reading and field extraction.',
+      'Operations dashboard showing all workflow runs and exceptions.',
+      'Custom error handling and retry logic.',
+      'Bi-directional data sync between systems.',
+      'Team training session and full documentation.',
+      '30-day post-launch support window.',
     ],
     cta: { label: 'Get a Custom Quote', modal: true as const, region: 'us' as const },
     popular: true,
@@ -443,14 +444,14 @@ const PRICING_TIERS = [
     description:
       'Complex multi-department automation with custom business logic, compliance requirements, and a dedicated engineering partner.',
     features: [
-      'Workflow automations fully scoped per project brief',
-      'Complex multi-branch business logic and decision trees',
-      'Private LLM deployment for sensitive data processing',
-      'Enterprise ERP and legacy system integration',
-      'Compliance-ready audit trails (HIPAA, SOC 2 patterns)',
-      'Custom analytics and reporting layer',
-      'Dedicated engineering point of contact',
-      '90-day post-launch support and iteration window',
+      'Workflow automations fully scoped per project brief.',
+      'Complex multi-branch business logic and decision trees.',
+      'Private LLM deployment for sensitive data processing.',
+      'Enterprise ERP and legacy system integration.',
+      'Compliance-ready audit trails (HIPAA, SOC 2 patterns).',
+      'Custom analytics and reporting layer.',
+      'Dedicated engineering point of contact.',
+      '90-day post-launch support and iteration window.',
     ],
     cta: { label: 'Schedule an Enterprise Call', modal: true as const, region: 'us' as const },
   },
@@ -473,25 +474,25 @@ const FAQ_ITEMS = [
     category: 'what-is',
     question: 'What is AI workflow automation?',
     answer:
-      'AI workflow automation connects your business tools and uses artificial intelligence to execute multi-step processes without manual intervention. Unlike basic Zapier-style automation that just moves data between apps, AI workflow automation can read unstructured inputs (emails, documents, forms), make decisions based on content, handle exceptions, and complete tasks that previously required a person to think, not just click.',
+      'AI workflow automation connects your business tools to run complex processes automatically. It reads unstructured emails, documents, and form submissions. It makes decisions and completes tasks that previously required human manual effort.',
   },
   {
     category: 'what-is',
     question: 'How is AI workflow automation different from tools like Zapier?',
     answer:
-      'Zapier and Make.com move data between apps when specific triggers fire, excellent for simple, predictable routing. AI workflow automation adds intelligence on top: it reads an email and decides what kind of request it is, extracts key fields from an invoice PDF, classifies a support ticket before routing it, or makes a branching decision based on document content. It handles workflows that have too many edge cases for simple if-this-then-that rules.',
+      'Zapier and Make move records when simple triggers fire. AI workflow automation adds intelligent reasoning. It parses incoming invoice PDFs, categorizes customer inquiries, and makes branching decisions based on document context.',
   },
   {
     category: 'what-is',
     question: 'What kinds of workflows can AI automate for my business?',
     answer:
-      'AI workflow automation works best for: lead follow-up and nurturing sequences, invoice and document processing, support ticket classification and routing, employee onboarding task sequences, cross-system data sync, and automated report generation from multiple data sources. If your team does something more than five times per week and it involves reading something or making a simple decision, it can probably be automated.',
+      'High-ROI workflows include HubSpot lead nurturing, QuickBooks invoice processing, and Zendesk ticket routing. It also handles Slack employee onboarding sequences and Shopify inventory data sync across Postgres databases.',
   },
   {
     category: 'what-is',
     question: 'What tools does FactoryJet use to build AI workflow automation?',
     answer:
-      'We build on n8n and Make.com for workflow orchestration, GPT-4o and Claude for the AI reasoning layer, Python for complex data transformation, and LangChain for multi-step AI decision chains. We choose the stack based on your workflow complexity, data sensitivity, and whether you want to self-host. n8n gives a self-hosted option with full audit trails; Make.com is faster for simpler multi-app workflows.',
+      'We orchestrate workflows using n8n and Make.com. AI decision layers run on OpenAI GPT-4o and Anthropic Claude. Complex transformations rely on Python scripts and LangChain agents. We configure self-hosted Docker containers or AWS cloud stacks to suit your privacy needs.',
   },
 
   /* ── Process & Timeline ── */
@@ -499,25 +500,25 @@ const FAQ_ITEMS = [
     category: 'process',
     question: 'What does the workflow automation development process look like?',
     answer:
-      'Five stages: Discover (map your highest-value workflows and decision logic), Design (workflow architecture, error handling, and integration specs), Build (development in staging with weekly demos), Validate (test against real business scenarios including edge cases), and Deploy (production launch with monitoring, training, and 30-day support). Every stage ends with a working demo.',
+      'Our build process includes five clear stages. First, we identify high-value processes in Discovery. Next, we design logic in Design. Then, we connect APIs in Build. Afterward, we test edge cases in Validation. Finally, we launch with full training and support.',
   },
   {
     category: 'process',
     question: 'How long does it take to build and launch AI workflow automation?',
     answer:
-      'A single focused workflow, lead follow-up, invoice processing, or a data sync, goes from kickoff to production in 2-3 weeks. A multi-workflow platform connecting several systems takes 4-6 weeks. Enterprise automation with complex logic and multiple departments runs 8-12 weeks. Timeline is confirmed after the discovery session.',
+      'Single workflow automations launch in 2 to 3 weeks. Multi-system platforms take 4 to 6 weeks. Enterprise deployments across departments run 8 to 12 weeks. We confirm your exact delivery schedule before kickoff.',
   },
   {
     category: 'process',
     question: 'Will I see progress during the build, or just get a final delivery?',
     answer:
-      'Weekly demos throughout: every stage ends with the automation running against real data. Most clients find that seeing it work early surfaces edge cases and refinements they hadn\'t thought of, and we build room to course-correct at every stage. Nothing is a surprise at launch.',
+      'You see working demos every week during development. Testing with live sample data allows early feedback and adjustments. This iterative cadence ensures zero surprises on launch day.',
   },
   {
     category: 'process',
     question: 'What happens after the automation goes live?',
     answer:
-      'Every engagement includes a 30-day post-launch window: we monitor workflow execution, fix any failures, handle API changes from connected platforms, and deliver a team training session. The operations dashboard shows your team every run and exception without engineering involvement. After 30 days you can self-manage or continue on a monthly retainer.',
+      'Every project includes a 30-day post-launch warranty. We monitor execution logs, resolve edge cases, and train your team. An intuitive operations dashboard lets your staff manage daily runs without writing code.',
   },
 
   /* ── Pricing & ROI ── */
@@ -525,25 +526,25 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does AI workflow automation cost?',
     answer:
-      'FactoryJet\'s AI workflow automation is fixed-price and scoped to your build: the main drivers are how many systems you connect, the workflow complexity, and any custom business logic or compliance needs. Most US SMBs choose our Growth tier, covering a multi-workflow automation platform connecting several systems with an operations dashboard and 30-day support. Enterprise automation with complex business logic, custom integrations, and compliance requirements is scoped separately. All pricing is fixed and confirmed upfront after a free quote, no hourly billing, no scope creep.',
+      'Pricing depends on connected tools, logic branches, and compliance rules. Most SMBs choose our Growth tier for multi-system automation. All projects are fixed-price and milestone-paid with guaranteed delivery.',
   },
   {
     category: 'pricing',
     question: 'Why is FactoryJet fixed-price, milestone-paid?',
     answer:
-      'We work fixed-price and milestone-paid: every project scoped upfront with no scope-creep invoices. Our engineering team brings 12+ years of focused expertise serving US businesses. You get production-grade workflow architecture, integration engineering, and delivery. You brief an engineer; that engineer builds it. No account management layers between your brief and the build. Full code ownership at handoff.',
+      'We deliver fixed-price projects backed by 12+ years of software experience. Clients work directly with senior engineers rather than sales reps. This lean model lowers development costs and gives you full code ownership.',
   },
   {
     category: 'pricing',
     question: 'What return on investment can I expect from workflow automation?',
     answer:
-      'The most direct return comes from manual hours eliminated. An invoice processing automation that handles 100 invoices per week pays for itself in 2-3 months based on the staff time it replaces. Lead follow-up automation that contacts every new lead within 60 seconds (instead of waiting for a sales rep to get to it) typically increases qualified pipeline by 25-40%. Most clients see payback within 2-4 months of launch.',
+      'ROI comes from recovered labor hours and faster execution. Automated invoice processing often pays for itself in 2 to 3 months. Instant lead follow-up under 60 seconds typically lifts qualified pipeline by 30%.',
   },
   {
     category: 'pricing',
     question: 'Are there ongoing costs after the automation is built?',
     answer:
-      'Two types: platform costs (n8n self-hosted is free; Make.com charges monthly based on volume) and AI model API costs (these scale with how much AI reasoning your workflows use, paid directly to OpenAI or Anthropic). Neither is marked up by FactoryJet. Optional monthly retainer for new workflow development or ongoing support.',
+      'Ongoing costs include direct model API usage and cloud hosting. Self-hosted n8n instances have zero platform licensing fees. FactoryJet never marks up third-party tool costs.',
   },
 
   /* ── Technical & Integrations ── */
@@ -551,25 +552,25 @@ const FAQ_ITEMS = [
     category: 'technical',
     question: 'What software platforms can the automation connect to?',
     answer:
-      'We integrate via API with: CRMs (HubSpot, Salesforce, Pipedrive, Zoho), e-commerce (Shopify, WooCommerce), accounting (QuickBooks, Xero, FreshBooks), communication (Gmail, Outlook, Slack, Twilio), project management (Notion, Airtable, Asana, Monday.com, ClickUp), cloud storage (Google Drive, Dropbox, Box), and databases (PostgreSQL, MySQL, Supabase, Firebase). If it has a REST API or webhook, we can build to it.',
+      'We connect HubSpot, Salesforce, Shopify, QuickBooks, and Xero. We also sync Slack, Google Workspace, Airtable, and Postgres databases. Any application with a REST API or webhook can be automated.',
   },
   {
     category: 'technical',
     question: 'What happens when an automated workflow fails or hits an edge case?',
     answer:
-      'Every workflow includes explicit error handling: if a step fails, the system logs the error, notifies your team via Slack or email, and either retries automatically or queues the item for manual review. Nothing fails silently. The monitoring dashboard shows exactly where a workflow stopped and why, so it can be fixed quickly.',
+      'Every workflow includes automated error handling and exponential retries. If an API times out, the system alerts your team in Slack and queues items for review. No transaction fails silently.',
   },
   {
     category: 'technical',
     question: 'Can you automate workflows that involve reading emails or documents?',
     answer:
-      'Yes, this is a core strength vs. basic tools. We build workflows that read incoming emails and classify them (support request, billing question, sales inquiry), extract key fields from invoice or contract PDFs, pull data from scanned forms, and summarize documents into structured records. The AI reads the content; the workflow routes it correctly.',
+      'Yes. AI models read incoming emails and extract key data points. They parse PDF invoices, extract line items, and update your accounting software automatically.',
   },
   {
     category: 'technical',
     question: 'Do I need a technical team to manage the automation after launch?',
     answer:
-      'No. The workflow monitoring dashboard shows every run: what triggered it, what it did, whether it succeeded, and what happened when something failed. Your operations team can review logs, rerun failed workflows, and pause automations without writing code. If a platform changes its API, you contact us and we fix it.',
+      'No. The visual dashboard displays run histories, success rates, and errors clearly. Non-technical staff can pause or rerun workflows with a single click.',
   },
 
   /* ── Trust & Results ── */
@@ -577,31 +578,31 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'Is my business data safe in automated workflows?',
     answer:
-      'We use API-level integrations with least-privilege access, full audit trails on every workflow run, and encrypted credential storage. For regulated industries, healthcare, legal, finance, we build workflows that process sensitive data without sending it to third-party AI model providers, using private or local LLM deployments instead.',
+      'We enforce encrypted credential storage, API access controls, and comprehensive audit logs. For healthcare or finance, we configure private LLM deployments that keep data off public servers.',
   },
   {
     category: 'trust',
     question: 'Can AI automation replace our existing Zapier workflows?',
     answer:
-      'Often yes, and for workflows needing AI decision-making, the result is more reliable than basic Zaps. We audit your existing automations during discovery and either migrate them, leave simple ones in place, or rebuild them with added AI capability. We won\'t replace things that are working well just to bill more hours.',
+      'Yes. AI workflows easily replace complex Zapier chains with higher reliability and lower subscription fees. We audit your existing stack and migrate fragile connections cleanly.',
   },
   {
     category: 'trust',
     question: 'Can I start with one workflow and expand later?',
     answer:
-      'Yes, that\'s the most common approach. Start with the workflow that costs your team the most time, prove the value quickly, then expand to adjacent processes. We architect the first workflow to be modular and extensible so you\'re not paying to rebuild the foundation every time you add a new automation.',
+      'Yes, starting with one core workflow is recommended. Once you see tangible time savings, you can connect additional departments using the same modular architecture.',
   },
   {
     category: 'trust',
     question: 'What results have other businesses gotten from FactoryJet automation?',
     answer:
-      'An e-commerce brand\'s order fulfillment automation eliminated 30 hours per week of manual data entry. A professional services firm\'s lead follow-up automation cut average response time from 4 hours to 90 seconds, increasing qualified pipeline by 35%. An accounting firm\'s invoice processing automation cut document handling time by 75%. We share relevant case studies during a discovery call.',
+      'An e-commerce client saved 30 hours per week in order processing. A B2B firm reduced lead response time from 4 hours to 90 seconds. An accounting agency reduced invoice processing time by 75%.',
   },
   {
     category: 'trust',
     question: 'How is FactoryJet different from a US automation consultant?',
     answer:
-      'Three differences: pricing model (fixed-price and milestone-paid: every project scoped upfront with no scope-creep invoices, backed by 12+ years serving US businesses), speed (no layers between your brief and the engineer building it), and SMB depth (500+ small business projects, we understand operations inside a 15-person company, not just enterprise theory). We also won\'t propose AI automation when a simpler solution would do the job.',
+      'We stand apart through fixed pricing, senior engineering, and practical SMB experience. We build reliable software that delivers measurable operational savings from week one.',
   },
 ];
 
@@ -667,12 +668,12 @@ export default function AIWorkflowAutomationPage() {
         formSlot={<HeroInlineForm region="us" source="us_services_ai_workflow_automation_hero" />}
           eyebrow="AI WORKFLOW AUTOMATION · USA"
           headline="Automate the Work That's Eating Your Team's Day"
-          lead="Manual data entry, repetitive follow-ups, document processing, cross-system updates: your team is doing the same tasks over and over. FactoryJet builds AI workflow automation that handles these processes 24/7, connects your existing tools, and costs fixed-price vs a US automation agency."
+          lead="Your team spends valuable hours on repetitive manual data entry and document review. FactoryJet designs custom AI workflows to handle these tasks around the clock. We connect your existing software tools with predictable, fixed-price delivery."
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
-            '500+ businesses served',
-            'Fixed-price, milestone-paid',
-            'Full code ownership',
+            '500+ businesses served.',
+            'Fixed-price, milestone-paid.',
+            'Full code ownership.',
           ]}
           rightSlot={
             <div className="rounded-2xl border border-fj-neutral-200 bg-white p-8 shadow-sm">
@@ -687,9 +688,9 @@ export default function AIWorkflowAutomationPage() {
               </p>
               <div className="mt-6 space-y-3">
                 {[
-                  'New lead fills form → AI qualifies → CRM updated → follow-up email sent in 90 seconds',
-                  'Invoice arrives by email → AI extracts data → coded to GL → routed for approval',
-                  'Monday 7 a.m. → automation pulls 5 data sources → report delivered to Slack',
+                  'New lead fills form → AI qualifies → CRM updated → follow-up email sent in 90 seconds.',
+                  'Invoice arrives by email → AI extracts data → coded to GL → routed for approval.',
+                  'Monday 7 a.m. → automation pulls 5 data sources → report delivered to Slack.',
                 ].map((step, i) => (
                   <div key={i} className="flex items-start gap-3">
                     <span className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#F05A28]/10 font-fj-mono text-[10px] font-bold text-[#B23E13]">
@@ -720,17 +721,17 @@ export default function AIWorkflowAutomationPage() {
         <ServiceExplanation
           eyebrow="AI AUTOMATION EXPLAINED"
           headline="What Is AI Workflow Automation, and Why Is It Different from Zapier?"
-          lead="Basic automation tools move data between apps. AI workflow automation reads unstructured content, makes decisions, handles exceptions, and completes tasks that previously required a person to think them through."
+          lead="Basic automation tools move data between apps. AI workflow automation reads unstructured content, makes decisions, handles exceptions, and completes tasks that previously required human manual effort."
           body={
             <>
               <div className="flex flex-wrap gap-2" aria-hidden>
                 {[
-                  'Read emails & documents',
-                  'Extract & classify data',
-                  'Make branching decisions',
-                  'Update multiple systems',
-                  'Handle exceptions',
-                  'Report automatically',
+                  'Read emails & documents.',
+                  'Extract & classify data.',
+                  'Make branching decisions.',
+                  'Update multiple systems.',
+                  'Handle exceptions.',
+                  'Report automatically.',
                 ].map((cap) => (
                   <span
                     key={cap}
@@ -742,14 +743,14 @@ export default function AIWorkflowAutomationPage() {
                 ))}
               </div>
               <p>
-                Most small business owners have tried Zapier or Make.com at some point. Those tools are great for simple, predictable data routing: when this happens, do that. But most real business workflows aren&apos;t that simple. An incoming email might be a support request, a sales inquiry, a billing question, or a complaint, and each one needs a different response. A Zap can&apos;t tell the difference. An AI workflow can.
+                Many teams start with basic Zapier connectors for simple data routing. However, everyday operations involve unpredictable edge cases. Customer emails arrive with varied inquiries and attachment formats. AI workflows analyze intent, extract critical fields, and route tasks intelligently.
               </p>
 
               <div className="grid grid-cols-3 gap-3" aria-hidden>
                 {[
-                  { value: '55%', label: 'Time saved' },
-                  { value: '24/7', label: 'Runs without you' },
-                  { value: '2-4mo', label: 'Typical payback' },
+                  { value: '55%', label: 'Time saved.' },
+                  { value: '24/7', label: 'Runs continuously.' },
+                  { value: '2-4mo', label: 'Rapid payback.' },
                 ].map((b) => (
                   <div
                     key={b.value}
@@ -780,7 +781,7 @@ export default function AIWorkflowAutomationPage() {
                 </p>
               </div>
               <p>
-                FactoryJet builds AI workflow automation on n8n, Make.com, and LangChain, connected to your CRM, e-commerce platform, accounting software, and communication tools. We handle the engineering; you handle the work that actually needs a human. We&apos;ve been building for US small and mid-sized businesses and understand the operational reality inside a 10-50 person company. The messy data, the exception cases, the Friday afternoon task that someone always forgets, that&apos;s exactly what we build for.
+                FactoryJet builds AI workflow automation on n8n, Make.com, and LangChain. We connect pipelines directly to your CRM, e-commerce store, and accounting tools. Our team handles the engineering. Your team focuses on high-value human work. We know the reality inside growing companies. We automate messy data, edge cases, and repetitive daily tasks.
               </p>
 
               <div className="grid grid-cols-2 gap-2" aria-hidden>
@@ -888,17 +889,17 @@ export default function AIWorkflowAutomationPage() {
             {
               icon: '⏱',
               title: 'Manual processes scale badly and break under volume',
-              body: 'When your business grows 30%, your admin work grows 30% too, unless you automate. Copy-pasting data between systems, manually triggering follow-up emails, and opening invoices one by one don\'t get faster as volume increases. They just require more people. AI workflow automation absorbs volume spikes without adding headcount.',
+              body: 'When your business grows, administrative tasks expand rapidly. Copying records between systems and opening invoices manually drains staff time. AI automation absorbs peak volume effortlessly without extra hiring.',
             },
             {
               icon: '📉',
-              title: 'Slow lead follow-up is costing you closed deals',
-              body: 'A lead that filled out your contact form at 7 p.m. on Thursday is 21× more likely to qualify if you follow up within 5 minutes. If your process is "someone from sales checks the inbox the next morning," you\'re giving deals to whoever responds first, and it isn\'t you. Automated follow-up changes that math completely.',
+              title: 'Slow lead follow-up costs you closed deals',
+              body: 'Leads contacted within five minutes qualify 21 times more often. Delaying outreach until the next morning hands deals to fast competitors. Automated instant follow-up fixes this pipeline leak immediately.',
             },
             {
               icon: '💸',
-              title: 'Enterprise automation tools are priced for enterprise budgets',
-              body: 'Salesforce automation, SAP workflows, and US automation consulting firms charge a steep premium for systems that are frankly overkill for a 20-person business. FactoryJet builds the same capability at fixed-price, because our engineering team has the skills with a radically different cost structure, and we don\'t try to solve simple problems with expensive platforms.',
+              title: 'Enterprise tools charge enterprise subscription prices',
+              body: 'Corporate software vendors charge steep retainers for needlessly complex platforms. FactoryJet builds practical automation at clear, fixed prices. You get senior engineering tailored to your real operations.',
             },
           ]}
         />
@@ -941,10 +942,87 @@ export default function AIWorkflowAutomationPage() {
                 Calculate Your Workflow Automation ROI
               </h2>
               <p className="mt-4 text-lg text-[#333333] font-fj-body">
-                Estimate how many manual labor hours your team can eliminate each week and the direct payroll savings delivered by custom automated workflows.
+                Estimate weekly manual hours eliminated by custom workflows. See projected labor savings across your core business systems.
               </p>
             </div>
             <AiAgentRoiCalculator defaultWorkflow="erp" source="ai-workflow-automation" />
+          </div>
+        </section>
+
+        {/* ── 8C. ARCHITECTURE, ORCHESTRATION & RELIABILITY ──────────────────── */}
+        <section className="py-16 bg-[#FAFAF7] border-b border-[#E5E5DC]">
+          <div className="max-w-6xl mx-auto px-6">
+            <p className="text-sm font-semibold text-[#B23E13] uppercase tracking-widest mb-3">
+              SYSTEM ARCHITECTURE
+            </p>
+            <h2 className="text-3xl font-bold text-[#0F0F12] mb-6">
+              Workflow Orchestration, Error Handling &amp; Data Pipeline Architecture
+            </h2>
+            <p className="text-base text-[#4A4A45] max-w-3xl mb-10 leading-relaxed">
+              Resilient workflow automation requires comprehensive error handling, exponential retry backoff, and idempotent execution.
+              We build event-driven pipelines using self-hosted or cloud nodes detailed in the{' '}
+              <a
+                href="https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.webhook/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#B23E13] underline font-medium"
+              >
+                n8n webhook node documentation
+              </a>
+              . High-throughput queues and asynchronous API calls run on runtimes aligned with the{' '}
+              <a
+                href="https://docs.python.org/3/library/asyncio.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#B23E13] underline font-medium"
+              >
+                Python asyncio documentation
+              </a>
+              . Automated payload validation filters out malformed payloads before database transactions commit.
+              Every pipeline logs runtime events to central dashboards with instant Slack alerts on failure.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="bg-white p-4 rounded-xl border border-[#E5E5DC] shadow-sm">
+                <Image
+                  src="/images/us/services/ai-agency/service-explanation-tech-stack.webp"
+                  alt="Workflow orchestration technical integration diagram"
+                  width={600}
+                  height={400}
+                  className="rounded-lg object-cover w-full h-auto mb-3"
+                />
+                <h3 className="font-semibold text-[#0F0F12] text-lg mb-1">Trigger &amp; Payload Routing</h3>
+                <p className="text-sm text-[#4A4A45]">
+                  Instant webhook listeners capture inbound events from Salesforce, NetSuite, and Shopify with zero data loss.
+                </p>
+              </div>
+              <div className="bg-white p-4 rounded-xl border border-[#E5E5DC] shadow-sm">
+                <Image
+                  src="/images/us/services/ai-agency/service-explanation-before-after.webp"
+                  alt="Automated versus manual data processing performance comparison"
+                  width={600}
+                  height={400}
+                  className="rounded-lg object-cover w-full h-auto mb-3"
+                />
+                <h3 className="font-semibold text-[#0F0F12] text-lg mb-1">AI Reasoning &amp; Extraction</h3>
+                <p className="text-sm text-[#4A4A45]">
+                  LLM parsing with Claude and GPT-4o turns PDF invoices and emails into structured JSON records.
+                </p>
+              </div>
+              <div className="bg-white p-4 rounded-xl border border-[#E5E5DC] shadow-sm">
+                <Image
+                  src="/images/us/services/ai-agency/service-team-ai.webp"
+                  alt="FactoryJet workflow automation engineering team"
+                  width={600}
+                  height={400}
+                  className="rounded-lg object-cover w-full h-auto mb-3"
+                />
+                <h3 className="font-semibold text-[#0F0F12] text-lg mb-1">Monitoring &amp; Alerts</h3>
+                <p className="text-sm text-[#4A4A45]">
+                  Automated retry logic and Slack alerts notify your engineering team before small API timeouts affect customers.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -964,7 +1042,7 @@ export default function AIWorkflowAutomationPage() {
             headline="Fixed-Price AI Workflow Automation. No Hourly Billing."
             lead="Three tiers based on workflow complexity and number of systems involved. Every tier includes full code ownership, error handling, monitoring, and post-launch support."
             tiers={PRICING_TIERS}
-            footnote="Platform costs (n8n self-hosted: free; Make.com: monthly by volume) and AI model API fees are separate and go directly to the provider. You own all code and credentials."
+            footnote="Platform costs and AI model fees go directly to vendors. Self-hosted n8n is free. Make.com bills by volume. You own all code and credentials."
           />
         </div>
 
@@ -972,22 +1050,22 @@ export default function AIWorkflowAutomationPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="We're not a US automation agency with a slick sales deck. That's the point."
-          lead="We've spent more than a decade building software, and have shipped 500+ production systems for real businesses. The workflows we build don't live in a demo environment, they run in production every day and handle real business data."
+          lead="We have built software for over a decade. Our team has shipped 500+ production systems for real businesses. Our workflows run in production every day and handle real company data."
           pillars={[
             {
               icon: '⚡',
               title: 'Speed without cutting corners',
-              body: 'A US automation agency has account managers, solution architects, and a sales team to support. We don\'t. When you brief us, an engineer reads it, not an account rep. That\'s why our timelines are measured in weeks, not quarters, and why the work is done by people who understand the technical details of what you actually need.',
+              body: 'Traditional agencies route requests through layers of account managers. At FactoryJet, clients collaborate directly with senior engineers. This direct model cuts build timelines from quarters to weeks.',
             },
             {
               icon: '💡',
               title: 'We understand SMB operations, not just enterprise theory',
-              body: 'We\'ve built for e-commerce brands, accounting firms, healthcare practices, and SaaS companies. We know what a 15-person company\'s data actually looks like: the messy CRM, the inconsistent CSV exports, the Frankenstein spreadsheet someone built five years ago. We build automation that works with your real data, not a clean demo dataset.',
+              body: 'We build around real operations, including messy CSVs and legacy databases. Our workflows handle real-world exceptions reliably, rather than fragile assumptions from generic slide decks.',
             },
             {
               icon: '🔒',
               title: 'Your code, your data, your infrastructure',
-              body: 'No vendor lock-in, no proprietary platforms, no subscriptions you can\'t cancel. We deliver the full workflow logic, all credentials and documentation, and a self-hostable option if you want it. If you want to take it in-house or switch engineers, you walk away with an asset you fully own.',
+              body: 'You retain full ownership of all code, credentials, and workflow logic. There are zero vendor lock-ins or mandatory ongoing platform fees. You walk away with a permanent business asset.',
             },
           ]}
         />
@@ -1007,10 +1085,10 @@ export default function AIWorkflowAutomationPage() {
             variant="dark"
             eyebrow="READY TO AUTOMATE"
             headline="Book a 30-Minute Workflow Automation Strategy Call"
-            sub="We'll map your highest-value automation opportunity, estimate how many hours per week it would recover, and give you a fixed-price quote, before you commit to anything."
+            sub="We map your top automation opportunities and estimate recovered weekly labor hours. You receive a fixed-price roadmap before committing to anything."
             primaryCta={{ label: 'Get a Quote', modal: true, region: 'us' }}
             secondaryCta={{ label: 'See All AI Services', href: '/services' }}
-            objectionHandler="Most clients see full ROI within 2-4 months. Free call, fixed price, no hidden fees."
+            objectionHandler="Most clients see full ROI within 90 days. Free call, fixed price, no hidden fees."
           />
         </div>
 

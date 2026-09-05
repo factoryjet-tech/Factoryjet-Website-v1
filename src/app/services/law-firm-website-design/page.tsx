@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { usServiceAlternates } from '@/data/hreflangMap';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
@@ -134,51 +135,51 @@ const breadcrumbSchema = {
 
 const LEGAL_SERVICES = [
   {
-    name: 'Practice Area Pages',
+    name: 'Practice Area Pages.',
     description:
-      'The single highest-ROI investment in a law firm website. Each practice area you want to rank for needs its own dedicated page, not a section on a single Services page. We design and build practice area pages with keyword-targeted content, local schema markup, FAQ sections that capture voice search queries, and CTAs positioned where intent is highest.',
-    example: 'Firms with individual practice area pages rank for 3-5× more local search queries than firms with a single Services page.',
-    linkLabel: 'Get a free SEO audit',
+      'The single highest-ROI investment in a law firm website. Each practice area you want to rank for needs its own dedicated page. We design practice area pages with keyword-targeted content, local schema markup, and FAQ sections. Clear call-to-action buttons guide visitors toward consultations.',
+    example: 'Firms with dedicated practice area pages capture 3-5× more local search queries.',
+    linkLabel: 'Get a free SEO audit.',
     linkHref: '/contact',
   },
   {
-    name: 'Attorney Profile Pages',
+    name: 'Attorney Profile Pages.',
     description:
-      'Attorney profiles are the #2 most-visited pages on law firm websites, second only to the homepage. We design attorney profile pages that function as trust pages: professional photography, credentials and bar admissions, case results (where bar rules permit), client testimonials, published articles, and a direct consultation request form specific to that attorney.',
-    example: 'Well-designed attorney profile pages reduce the "consideration gap": the time between first visit and consultation request.',
-    linkLabel: 'See example structure',
+      'Attorney profiles are the second most-visited pages on legal websites. We design attorney pages that function as trust anchors. They highlight professional photography, credentials, bar admissions, case outcomes, and verified testimonials. Each attorney bio includes a direct consultation booking form.',
+    example: 'Authoritative attorney profile pages accelerate trust and boost consultation requests.',
+    linkLabel: 'See example structure.',
     linkHref: '/contact',
   },
   {
-    name: 'Consultation Intake Optimization',
+    name: 'Consultation Intake Optimization.',
     description:
-      'Most law firm contact forms ask for a name and email and leave prospective clients with no idea what happens next. We redesign intake flows with multi-step forms that pre-qualify case type, capture key details the intake team needs, set expectations about response time, and confirm submission in a way that reduces anxiety and drop-off.',
-    example: 'Multi-step intake forms with clear expectations convert 40-60% more consultation requests than single-field contact forms.',
-    linkLabel: 'Book a strategy call',
+      'Most generic law firm contact forms create uncertainty. We build multi-step intake flows tailored to specific practice areas. Forms capture key details for legal intake teams and set clear response expectations. This reduces drop-off and increases consultation requests.',
+    example: 'Multi-step intake forms convert 40-60% more consultation requests than basic forms.',
+    linkLabel: 'Book a strategy call.',
     linkHref: '/contact',
   },
   {
-    name: 'Local Legal SEO Architecture',
+    name: 'Local Legal SEO Architecture.',
     description:
-      'Ranking for "[practice area] attorney [city]" requires more than keyword placement, it requires a technical architecture Google can parse clearly. We implement LegalService, Attorney, and LocalBusiness schema markup, build geographic service area pages for multi-city practices, optimize Google Business Profile integration, and structure internal linking to concentrate authority on practice area pages.',
-    example: 'Law firms with full local SEO architecture rank in the local pack 60% more often than equivalent firms without schema markup.',
-    linkLabel: 'Get a free local SEO audit',
+      'Ranking for local legal searches requires dedicated search architecture. We implement LegalService, Attorney, and LocalBusiness schema markup. We build location pages for multi-office practices. We connect Google Business Profile data and optimize internal links to grow search authority.',
+    example: 'Firms with complete legal schema rank in the local pack 60% more often.',
+    linkLabel: 'Get a free local SEO audit.',
     linkHref: '/contact',
   },
   {
-    name: 'Legal Blog & Thought Leadership',
+    name: 'Legal Blog & Thought Leadership.',
     description:
-      'A law firm blog that covers the questions your prospective clients are actually searching for generates compounding organic traffic over time. We design blog architecture that supports long-tail SEO, integrates with practice area pages through internal linking, and presents attorneys as authoritative voices in their practice area, not just generic legal tips.',
-    example: 'Active law firm blogs with practice area-specific content generate 3-4× more organic sessions within 12 months of launch.',
-    linkLabel: 'See content strategy services',
+      'A targeted legal blog generates compounding organic search traffic over time. We design content architectures that address specific client questions. Articles link to relevant practice areas. They establish your attorneys as authoritative voices in their fields.',
+    example: 'Targeted legal blogs generate 3-4× more organic search traffic within 12 months.',
+    linkLabel: 'See content strategy services.',
     linkHref: '/contact',
   },
   {
-    name: 'Contingency Fee & Pricing Pages',
+    name: 'Contingency Fee & Pricing Pages.',
     description:
-      'Prospective clients search for cost information before they call, and law firms that answer this question clearly on their website capture leads that competitors lose. We design fee structure pages that explain contingency arrangements, flat fees, hourly billing, and retainers in plain language, reducing the price anxiety that prevents consultations.',
-    example: 'Transparent fee pages increase consultation request rates by 25-35%, especially for consumer practice areas.',
-    linkLabel: 'Start a conversation',
+      'Prospective clients search for fee transparency before contacting a lawyer. We design clear fee structure pages explaining contingency arrangements, hourly rates, and retainers. Plain-language pricing reduces client hesitation and increases inquiry conversion.',
+    example: 'Transparent fee pages increase consultation request rates by 25-35% across practice areas.',
+    linkLabel: 'Start a conversation.',
     linkHref: '/contact',
   },
 ];
@@ -188,31 +189,31 @@ const LEGAL_JOURNEY_STAGES: ServiceJourneyStage[] = [
     number: '01',
     title: 'Legal SEO & Competitor Audit',
     description:
-      'We audit your current site\'s local search performance, analyze the top-ranking competing law firms in your market, identify the practice area pages and content gaps holding you back, and map the technical SEO issues we\'ll fix in the rebuild. You get a clear picture of where you are vs. where you could be before any commitment.',
+      'We audit your current local search performance and study competing firms. We identify practice area page gaps and uncover technical SEO barriers. You receive a comprehensive diagnosis before making any project commitment.',
   },
   {
     number: '02',
     title: 'Site Architecture & Content Strategy',
     description:
-      'We design your complete sitemap, homepage, practice area pages, attorney profiles, blog, intake pages, city pages for multi-location practices, and write a content brief for every page. Keyword targets, content length, internal linking structure, and schema markup types are all defined before design starts.',
+      'We define complete sitemaps, practice area hierarchies, and attorney profile structures. We prepare keyword blueprints, internal linking plans, and JSON-LD schema models before visual design starts.',
   },
   {
     number: '03',
     title: 'Visual Design | Authority-First',
     description:
-      'Law firm website design has one primary job: establish credibility fast. We design for authority, professional typography, clean layouts with structured whitespace, credibility signals positioned where trust decisions happen, and visual hierarchy that directs visitors to consultation request CTAs without feeling pushy.',
+      'We establish visual authority using clean legal typography and structured whitespace. Credibility badges, bar association credentials, and client testimonials are placed strategically to maximize trust.',
   },
   {
     number: '04',
     title: 'Development & Schema Implementation',
     description:
-      'We build your approved designs into a fast, mobile-first WordPress website with custom attorney profile templates, practice area page templates with FAQ schema, LegalService and Attorney JSON-LD on every relevant page, consultation intake forms with intake-team notification routing, and performance optimization to pass Core Web Vitals.',
+      'We code custom, high-speed templates for practice areas and attorney bios. We embed LegalService and LocalBusiness schema markup. Every page is optimized to pass Core Web Vitals assessments.',
   },
   {
     number: '05',
     title: 'Launch, Verification & Local SEO Setup',
     description:
-      'Full QA across browsers and devices, 301 redirects for all changed URLs, Google Business Profile optimization (categories, service areas, Q&A responses), Search Console setup and sitemap submission, and a recorded CMS walkthrough so your team can add blog posts and update attorney bios without a developer.',
+      'We perform thorough cross-device QA and implement 301 redirect maps. We optimize Google Business Profile categories and submit sitemaps to Search Console. We also provide CMS training for your legal staff.',
   },
 ];
 
@@ -223,19 +224,19 @@ const LEGAL_STATS = [
     // Legal Services category at roughly $8.58 average CPC, the highest of any
     // industry, which is the real and still-striking number.
     value: '$8.58',
-    label: 'average CPC for the Attorneys & Legal Services category: the highest of any industry in Google Ads',
+    label: 'average CPC for the Attorneys & Legal Services category. The highest of any industry in Google Ads.',
     sourceUrl: 'https://www.wordstream.com/blog/ws/2016/02/29/google-adwords-industry-benchmarks',
     sourceLabel: 'WordStream',
   },
   {
     value: '62%',
-    label: 'of people searching for a lawyer start on Google, and 70% contact the firm on the first page they visit',
+    label: 'of people searching for a lawyer start on Google. 70% contact the firm on the first page they visit.',
     sourceUrl: 'https://www.lscp.net/pages/trends/',
     sourceLabel: 'Legal Services Consumer Panel',
   },
   {
     value: '+190%',
-    label: 'growth in "law firm website design" searches over 3 months, fastest-growing legal services vertical in organic search',
+    label: 'growth in "law firm website design" searches over 3 months. Fastest-growing legal services vertical in organic search.',
     sourceUrl: 'https://trends.google.com/trends/',
     sourceLabel: 'Google Trends',
   },
@@ -250,11 +251,11 @@ const COMPARISON_COLUMNS = [
 
 const COMPARISON_ROWS = [
   {
-    feature: 'Starting price',
-    values: ['Fixed, scoped to your build', 'Several times more', 'Recurring monthly fee (you never own it)', 'Varies widely'],
+    feature: 'Starting price.',
+    values: ['Fixed, scoped to your build.', 'Several times more.', 'Recurring monthly fee (you never own it).', 'Varies widely.'],
   },
   {
-    feature: 'You own the website',
+    feature: 'You own the website.',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="yes" />,
@@ -263,7 +264,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Practice area pages (individual, keyword-targeted)',
+    feature: 'Practice area pages (individual, keyword-targeted).',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="yes" />,
@@ -272,7 +273,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Legal schema markup (LegalService, Attorney)',
+    feature: 'Legal schema markup (LegalService, Attorney).',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="partial" />,
@@ -281,7 +282,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Core Web Vitals pass (mobile)',
+    feature: 'Core Web Vitals pass (mobile).',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="partial" />,
@@ -290,7 +291,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Consultation intake optimization',
+    feature: 'Consultation intake optimization.',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="partial" />,
@@ -299,7 +300,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: '30-day post-launch support',
+    feature: '30-day post-launch support.',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="partial" />,
@@ -308,7 +309,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Fixed-price contract',
+    feature: 'Fixed-price contract.',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="no" />,
@@ -317,7 +318,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Legal advertising disclaimer implementation',
+    feature: 'Legal advertising disclaimer implementation.',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="yes" />,
@@ -329,73 +330,73 @@ const COMPARISON_ROWS = [
 
 const PRICING_TIERS = [
   {
-    name: 'Solo & Small Firm',
-    priceRange: 'Fixed price, scoped to your build',
+    name: 'Solo & Small Firm.',
+    priceRange: 'Fixed price, scoped to your build.',
     description:
-      'A complete professional website for solo attorneys and small practices, up to 10 pages including practice area pages, attorney profile, consultation intake form, and on-page SEO. Everything a small firm needs to outrank template sites and FindLaw profiles.',
+      'A complete professional website for solo attorneys and small practices. Up to 10 pages including dedicated practice areas, attorney bio, intake form, and on-page SEO. Built to outrank template directories and FindLaw profiles.',
     features: [
-      'Up to 10 pages (Home, Practice Areas, Attorney Profile, Blog, Contact)',
-      'Custom design, no legal website templates',
-      'Up to 3 individual practice area pages (keyword-targeted)',
-      'Attorney profile with credentials, bar admissions, and biography',
-      'Consultation request form with intake routing',
-      'LegalService + Attorney JSON-LD schema markup',
-      'On-page SEO: meta tags, heading structure, local keywords',
-      'Google Business Profile optimization guidance',
-      'Mobile-first, Core Web Vitals pass',
-      '14-day post-launch support',
+      'Up to 10 pages (Home, Practice Areas, Attorney Profile, Blog, Contact).',
+      'Custom design, no legal website templates.',
+      'Up to 3 individual practice area pages (keyword-targeted).',
+      'Attorney profile with credentials, bar admissions, and biography.',
+      'Consultation request form with intake routing.',
+      'LegalService + Attorney JSON-LD schema markup.',
+      'On-page SEO: meta tags, heading structure, local keywords.',
+      'Google Business Profile optimization guidance.',
+      'Mobile-first, Core Web Vitals pass.',
+      '14-day post-launch support.',
     ],
-    cta: { label: 'Book a Legal SEO Audit', modal: true, region: 'us' },
+    cta: { label: 'Book a Legal SEO Audit.', modal: true, region: 'us' },
   },
   {
-    name: 'Full Law Firm Website',
-    priceRange: 'Fixed price, scoped to your build',
+    name: 'Full Law Firm Website.',
+    priceRange: 'Fixed price, scoped to your build.',
     description:
-      'A complete law firm website for multi-attorney practices, 15-30 pages with individual attorney profiles, full practice area page architecture, blog, local SEO structure, and intake optimization. The most popular choice for established firms competing for local search visibility.',
+      'A comprehensive website for multi-attorney practices. Up to 30 pages with individual attorney profiles, full practice area architecture, legal blog, and intake routing. The standard choice for firms expanding local search share.',
     features: [
-      '15-30 pages with full content architecture',
-      'Up to 8 individual practice area pages (keyword and location targeted)',
-      'Multiple attorney profile pages with credentials and testimonials',
-      'Legal blog with category architecture for SEO',
-      'Multi-step consultation intake form with case pre-qualification',
-      'Full local SEO schema (LegalService, Attorney, LocalBusiness)',
-      'Google Business Profile integration and optimization',
-      'City/service area landing pages (up to 3 locations)',
-      'Two design revision rounds included',
-      '30-day post-launch support',
+      '15-30 pages with full content architecture.',
+      'Up to 8 individual practice area pages (keyword and location targeted).',
+      'Multiple attorney profile pages with credentials and testimonials.',
+      'Legal blog with category architecture for SEO.',
+      'Multi-step consultation intake form with case pre-qualification.',
+      'Full local SEO schema (LegalService, Attorney, LocalBusiness).',
+      'Google Business Profile integration and optimization.',
+      'City/service area landing pages (up to 3 locations).',
+      'Two design revision rounds included.',
+      '30-day post-launch support.',
     ],
-    cta: { label: 'Get a Custom Quote', modal: true, region: 'us' },
+    cta: { label: 'Get a Custom Quote.', modal: true, region: 'us' },
     popular: true,
   },
   {
-    name: 'Large Firm & Multi-Location',
-    priceRange: 'Fixed price, scoped to your build',
+    name: 'Large Firm & Multi-Location.',
+    priceRange: 'Fixed price, scoped to your build.',
     description:
-      'A comprehensive web presence for large law firms and multi-location practices, full CMS, custom intake workflows, 30+ practice area pages, city-specific landing pages, and a technical SEO architecture built to dominate local search across multiple markets.',
+      'An enterprise web presence for large law firms and multi-location practices. Features 30+ pages, city landing pages, custom CMS workflows, and advanced multi-step intake logic across regional markets.',
     features: [
-      '30+ pages across practice areas, attorneys, and locations',
-      'City-specific landing pages for every service area',
-      'Custom CMS for attorney additions and practice area updates',
-      'Complex multi-step intake with routing to practice-specific teams',
-      'Full schema implementation across all page types',
-      'Internal linking architecture designed for SEO authority flow',
-      'Multi-location Google Business Profile optimization',
-      'Performance-optimized for large content scale',
-      'Dedicated project manager throughout',
-      '60-day post-launch support and iteration window',
+      '30+ pages across practice areas, attorneys, and locations.',
+      'City-specific landing pages for every service area.',
+      'Custom CMS for attorney additions and practice area updates.',
+      'Complex multi-step intake with routing to practice-specific teams.',
+      'Full schema implementation across all page types.',
+      'Internal linking architecture designed for SEO authority flow.',
+      'Multi-location Google Business Profile optimization.',
+      'Performance-optimized for large content scale.',
+      'Dedicated project manager throughout.',
+      '60-day post-launch support and iteration window.',
     ],
-    cta: { label: 'Schedule a Firm Consultation', modal: true, region: 'us' },
+    cta: { label: 'Schedule a Firm Consultation.', modal: true, region: 'us' },
   },
 ] as const;
 
 /* ─── FAQ ──────────────────────────────────────────────────────────────────── */
 
 const FAQ_CATEGORIES = [
-  { key: 'what-law-site-needs', label: 'What a Law Firm Site Needs' },
-  { key: 'process', label: 'Process & Timeline' },
-  { key: 'pricing', label: 'Pricing & Value' },
-  { key: 'seo', label: 'Legal SEO' },
-  { key: 'trust', label: 'Trust & Compliance' },
+  { key: 'what-law-site-needs', label: 'What a Law Firm Site Needs.' },
+  { key: 'process', label: 'Process & Timeline.' },
+  { key: 'pricing', label: 'Pricing & Value.' },
+  { key: 'seo', label: 'Legal SEO.' },
+  { key: 'trust', label: 'Trust & Compliance.' },
 ];
 
 const FAQ_ITEMS = [
@@ -405,25 +406,25 @@ const FAQ_ITEMS = [
     category: 'what-law-site-needs',
     question: 'What should a law firm website include?',
     answer:
-      'A law firm website needs to accomplish three things: rank in local search, establish credibility immediately, and convert visitors into consultation requests. The pages that do this: a focused homepage with a clear practice area statement and geographic service area, individual practice area pages (one page per practice area, not a list), attorney profile pages that function as trust pages (credentials, bar admissions, photos, case results where permitted, testimonials), a multi-step consultation intake form that pre-qualifies and sets expectations, and a legal blog for long-tail SEO. Supporting elements: local schema markup (LegalService, Attorney, LocalBusiness), Google Business Profile integration, case result pages (with required disclaimers), and transparent fee structure pages for consumer practice areas.',
+      'A law firm website needs to accomplish three primary goals. It must rank in local search. It must establish credibility immediately. It must also convert visitors into consultation requests. Core pages include a focused homepage with a clear practice area statement. Each practice area requires its own dedicated page. Attorney profile pages function as trust anchors with credentials, bar admissions, headshots, case results, and verified testimonials. A multi-step consultation intake form pre-qualifies prospective clients and sets expectations. Supporting elements include local schema markup, Google Business Profile integration, case result pages, and clear fee structures.',
   },
   {
     category: 'what-law-site-needs',
     question: 'How is a law firm website different from a general business website?',
     answer:
-      'Several specific requirements: bar advertising rules govern what you can claim (no "specialist" without certification, case results require past-performance disclaimers, geographic claims must be accurate), the trust threshold is higher than most service businesses (clients are making decisions about their livelihood, freedom, or family, credibility signals need to work harder), local SEO schema types are specific to legal (LegalService, Attorney, BarAdmission), and the intake form is more complex, clients need to provide case type, jurisdiction, and urgency information before anyone will invest time in speaking to them. We build all of these requirements into every law firm website.',
+      'Several specific legal requirements exist. Bar advertising rules strictly govern what you can claim. You cannot use the word "specialist" without official certification. Past case results require prominent past-performance disclaimers. Geographic practice claims must be verified. In addition, the trust threshold is far higher than most service businesses. Clients are making life-altering decisions about their livelihood, freedom, or family. Credibility signals must work much harder. Schema markup requires dedicated LegalService, Attorney, and BarAdmission types. Finally, intake forms must capture case type, jurisdiction, and urgency before any attorney commits time. We build all of these requirements into every law firm website.',
   },
   {
     category: 'what-law-site-needs',
     question: 'Do I need a separate page for each practice area?',
     answer:
-      'Yes, this is the single most important structural decision in a law firm website. Google cannot rank a single "Practice Areas" page for "personal injury attorney Austin" and "criminal defense attorney Austin" and "DUI attorney Austin" simultaneously. Each practice area needs its own dedicated page with keyword-targeted content, practice-area-specific FAQ, schema markup, and internal links. Law firms that restructure from a single services page to individual practice area pages consistently see ranking improvements within 60-90 days, not because of better content, but because the structure finally allows Google to understand what each page is about.',
+      'Yes. Dedicated practice area pages are essential. Google ranks pages for distinct keyword intents. A single page cannot rank for multiple legal specialties at once. Each practice area requires its own dedicated page. We include keyword-targeted content, practice FAQs, schema markup, and internal links. Firms switching to dedicated pages see ranking gains within 60 to 90 days. The clear site hierarchy helps search engines index each practice accurately.',
   },
   {
     category: 'what-law-site-needs',
     question: 'How important is mobile optimization for a law firm website?',
     answer:
-      'Extremely important, and the most commonly neglected aspect of legal websites. 60%+ of legal searches happen on mobile, and Google uses mobile page experience as a primary ranking signal. More specifically for legal: criminal defense and family law clients often search in urgent circumstances on their phones. If your site takes 8 seconds to load on mobile, loads a desktop layout that requires pinching and zooming, or buries the phone number in a small header, you are losing consultations to the firm whose site loads in 1.5 seconds with a prominent click-to-call button. Every FactoryJet law firm website is built mobile-first and passes Core Web Vitals on mobile before it launches.',
+      'Mobile optimization is critical for attorney websites. More than 60% of legal searches now happen on mobile devices. Google also uses mobile page experience as a primary ranking signal. In urgent fields like criminal defense or family law, prospective clients search from mobile phones during emergencies. A site that takes eight seconds to load loses consultations immediately. Pinch-to-zoom layouts and buried contact numbers drive clients straight to competing firms. Every FactoryJet law firm site is built mobile-first. Each build passes Google Core Web Vitals assessments before launch.',
   },
 
   /* ── Process & Timeline ── */
@@ -431,25 +432,25 @@ const FAQ_ITEMS = [
     category: 'process',
     question: 'What does the law firm website design process look like?',
     answer:
-      'Five stages: Legal SEO & Competitor Audit (we analyze your current site\'s local search performance, the top-ranking competitors in your market, and the specific practice area pages and content gaps you need to address), Site Architecture & Content Strategy (complete sitemap with keyword targets and content briefs per page, attorney profile structure, schema types for each page type), Visual Design (authority-first design that builds trust: two revision rounds), Development & Schema Implementation (WordPress build with LegalService, Attorney, and LocalBusiness schema, intake form development, Core Web Vitals optimization), and Launch, Verification & Local SEO Setup (GBP optimization, sitemap submission, 301 redirects, CMS walkthrough).',
+      'Our build process follows five structured stages. Stage one is the Legal SEO & Competitor Audit. We analyze your local rankings, study competing practices, and identify content gaps. Stage two covers Site Architecture & Content Strategy. We define sitemaps, practice area keyword targets, attorney profile templates, and schema types. Stage three is Visual Design. We deliver authoritative, custom design concepts across two feedback rounds. Stage four is Development & Schema Implementation. We code the site with LegalService and LocalBusiness schema while optimizing Core Web Vitals. Stage five handles Launch, 301 redirects, Google Business Profile optimization, and CMS training.',
   },
   {
     category: 'process',
     question: 'How long does it take to build a law firm website?',
     answer:
-      'A solo or small firm website (10 pages) takes 4-6 weeks. A full law firm website (15-30 pages, multiple attorneys, blog) runs 6-10 weeks. Large firm builds with 30+ pages and custom intake workflows are 10-14 weeks. The timeline driver is usually content, specifically attorney biography drafts and professional photography. We\'ll flag these requirements at kickoff so you can coordinate photo sessions and content gathering in parallel with design work, keeping the overall timeline tight.',
+      'A solo or small firm website with up to ten pages takes four to six weeks. A full multi-attorney firm site with 15 to 30 pages takes six to ten weeks. Large practices with multiple office locations or complex intake workflows require 10 to 14 weeks. The primary timeline factor is content preparation. Attorney biographies and professional headshots often take the longest to assemble. We identify these needs during kickoff. This allows photography and bio drafts to proceed in parallel with custom design work.',
   },
   {
     category: 'process',
     question: 'What do I need to provide for a law firm website project?',
     answer:
-      'Attorney professional photos (this is non-negotiable for credibility, stock photos of people in suits are immediately recognizable and destroy trust), attorney bios and credentials (bar numbers, law school, years of practice, notable cases or case types), practice area descriptions in your voice (we structure and optimize them, you provide the legal substance), any existing case results or testimonials you want to feature (with required bar compliance disclaimers), and approval authority, ideally one partner who can give us direction without committee review cycles. We provide the content structure and SEO strategy; you provide the legal substance and approvals.',
+      'We require five core assets from your firm. First, professional attorney photography is essential. Stock photos of models in suits undermine trust immediately. Second, attorney bios and bar credentials provide necessary verification. Third, we need practice area outlines in your voice. Our team structures the copy and handles on-page SEO. Fourth, we need case outcomes or testimonials alongside state bar disclaimers. Finally, we need a single designated point of contact with decision authority. This structure prevents committee delays and keeps delivery on schedule.',
   },
   {
     category: 'process',
     question: 'Can you redesign my existing law firm website without losing my Google rankings?',
     answer:
-      'Yes, if the redesign is managed correctly. We conduct a pre-launch SEO audit of all pages that are currently ranking, document every URL and its keyword position, implement 301 redirects for any URL structure changes, preserve all existing meta titles and descriptions unless we\'re improving them, and monitor rankings for 30 days post-launch with immediate investigation of any drops. If your current site has individual practice area pages that are ranking, we preserve and improve them. If it has a single catch-all Services page, we migrate content to individual practice area pages, which consistently improves rankings rather than hurting them.',
+      'Yes. Preserving search equity is our top priority during any redesign. We begin with a complete pre-launch crawl of all ranking URLs. We record every keyword position and map existing pages to new destinations. We create one-to-one 301 redirects for any modified URL structures. We preserve proven metadata, page titles, and body content unless improvements are approved. After launch, we monitor search console metrics daily for 30 days. Transitioning to dedicated practice area URLs consistently improves overall organic search rankings.',
   },
 
   /* ── Pricing & Value ── */
@@ -457,19 +458,19 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does a law firm website design cost?',
     answer:
-      'FactoryJet\'s law firm website design is fixed-price and scoped to your build. The main drivers are the number of practice area pages, attorney profiles, total page count, blog and local SEO scope, and any multi-location or custom intake architecture. We quote the full price up front after a free discovery call, and it comes in significantly below comparable US legal web design agency benchmarks. Our specialized engineering team has built legal websites for US firms for 12+ years.',
+      'FactoryJet delivers law firm website design on a transparent, fixed-price basis. Every project is scoped to your exact specifications. Key cost drivers include total page count, practice area depth, attorney profiles, and multi-location needs. Custom intake logic and legal blog setups also factor into scope. We provide a guaranteed upfront quote following a complimentary discovery call. Our fixed fees come in well below traditional legal agency hourly rates. Our engineering team brings over 12 years of specialized legal web design experience to every build.',
   },
   {
     category: 'pricing',
     question: 'Is a custom law firm website worth the cost vs. FindLaw or Martindale?',
     answer:
-      'Yes, for three reasons. Ownership: FindLaw and Martindale sites are subscription products you pay for monthly and never own. When you stop paying, your site disappears and you have no asset. Differentiation: every other law firm on FindLaw and Martindale is using the same templates, there is no way to design your site to look meaningfully different from a competitor on the same platform. Performance: legal template platforms are not optimized for Core Web Vitals: their sites routinely score poorly on mobile performance, which suppresses search rankings. A custom site you own, designed to your brand, built for performance, is a long-term asset. A FindLaw subscription is a monthly rent payment on a site that doesn\'t build equity.',
+      'Yes, for three fundamental reasons. First is ownership. FindLaw and Martindale platforms charge ongoing monthly fees for templates you never own. If you cancel your subscription, your website disappears completely. Second is differentiation. Directory platforms force competing attorneys into identical layouts. A custom site establishes a distinctive brand. Third is technical performance. Directory templates rarely pass modern Core Web Vitals checks on mobile devices. Poor technical metrics harm search visibility. A custom site is an appreciating firm asset with complete source code ownership.',
   },
   {
     category: 'pricing',
     question: 'What is the ROI of a professional law firm website?',
     answer:
-      'Legal services have among the highest consultation-to-retainer rates of any professional services vertical, clients who contact a law firm are almost always in active need. A single new personal injury, estate planning, or business law client from organic search can be worth $5,000-$50,000+ in retained fees. If a redesigned website increases consultation requests by 40% (a typical result we see), a firm taking 10 consultations/month from organic traffic goes to 14, and if even 2 of those additional consultations convert to retained clients at $10,000 average, the website has paid for itself before the first quarter ends.',
+      'Legal services offer exceptional return on investment due to high case values. Prospective clients searching online have urgent, high-intent needs. A single personal injury or estate retainer can generate $5,000 to $50,000 in legal fees. Increasing inquiries by 40% produces substantial revenue. Moving from 10 to 14 monthly inquiries yields two extra retained clients, covering the build quickly. Most firms achieve full cost recovery within ninety days.',
   },
 
   /* ── Legal SEO ── */
@@ -477,19 +478,19 @@ const FAQ_ITEMS = [
     category: 'seo',
     question: 'How do I rank my law firm on Google?',
     answer:
-      'Local law firm SEO comes down to four things working together: individual practice area pages (one dedicated page per service, targeting "[practice area] attorney [city]" keywords), legal schema markup (LegalService, Attorney, BarAdmission, tells Google exactly what you do and where), Google Business Profile (complete, with photos, accurate hours, active responses to reviews, drives local pack ranking), and mobile performance (Core Web Vitals pass, directly affects ranking for mobile searches). FactoryJet implements all four in every law firm website we build.',
+      'Local law firm search rankings depend on four integrated components. First, you need individual practice area pages. Each page must target specific city and legal service terms. Second, structured schema markup is essential. Schema explicitly informs search crawlers about attorney credentials and locations. Third, Google Business Profile optimization drives local map pack rankings. Active review management, verified categories, and accurate hours are critical. Fourth, mobile performance and Core Web Vitals ensure rapid page loading. FactoryJet implements all four components across every client build.',
   },
   {
     category: 'seo',
     question: 'What is legal schema markup and why does my law firm website need it?',
     answer:
-      'Schema markup is structured data in your website\'s code that tells Google exactly what your pages are about, in a language Google reads directly, not just infers from your content. For law firms, the key schema types are LegalService (your specific legal services and geographic coverage), Attorney (attorney credentials, bar number, law school, and areas of practice), and LocalBusiness (physical address, hours, and phone for local pack ranking). Without schema, Google infers your practice areas from your content, which is less reliable and less direct. With full schema implementation, Google has precise, machine-readable information about every service you offer, which directly supports ranking for those specific services.',
+      'Schema markup is structured code embedded directly into your website pages. It provides search engines with explicit, machine-readable data about your legal practice. Essential schemas include LegalService for practice areas, Attorney for bar numbers, and LocalBusiness for physical offices. Without schema, search engines must guess your specialties based on page text alone. Explicit structured markup eliminates ambiguity. It helps search engines rank your firm for specific legal queries. It also enhances visibility in rich search snippets.',
   },
   {
     category: 'seo',
     question: 'How long does it take for a new law firm website to rank on Google?',
     answer:
-      'For a new site with no existing Google authority, first-page rankings for competitive "[practice area] attorney [city]" queries typically take 6-12 months of consistent publishing and link building. For a redesigned site with existing authority, ranking improvements from better practice area page structure and schema implementation are typically visible within 60-90 days. Local pack appearance (the map with 3 firms at the top of search results) is primarily driven by Google Business Profile optimization and reviews, improvements there can appear within 4-8 weeks of correct optimization. We\'ll set realistic expectations for your specific market and starting position during the initial audit.',
+      'Ranking timelines depend on domain age and local competition. Completely new domains usually require six to twelve months of active publishing and citation building. Redesigned websites with existing domain authority often see noticeable improvements within 60 to 90 days. Restructuring generic pages into dedicated practice area URLs accelerates indexing. Google Business Profile map pack positions can improve in four to eight weeks with consistent reviews. We establish realistic ranking benchmarks during our initial discovery audit.',
   },
 
   /* ── Trust & Compliance ── */
@@ -497,38 +498,37 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'Does a law firm website need advertising disclaimers?',
     answer:
-      'Yes, state bar advertising rules require specific disclaimers on lawyer websites. Common requirements across most state bars: testimonials and client reviews require a disclaimer that "past results do not guarantee future outcomes," case result pages require the same, the terms "specialist" or "expert" cannot be used unless the attorney is certified by the state bar in that specialty, and advertising must accurately represent where you are licensed to practice. FactoryJet implements standard advertising disclaimers in the appropriate locations as part of every law firm website build. Specific compliance review for your state bar rules and your particular claims is your responsibility, we implement the standard framework, you verify it meets your bar\'s specific requirements.',
+      'Yes. State bar associations enforce strict advertising ethics rules for attorney websites. Case results and testimonials require visible disclaimers. Past outcomes cannot guarantee future results. Terms like "expert" or "specialist" are prohibited unless formal board certification exists. Sites must also clarify exact jurisdictions of bar licensure. FactoryJet builds standard ethical disclaimer modules into footers, intake forms, and case result templates. We implement the technical structure while you verify local bar compliance.',
   },
   {
     category: 'trust',
     question: 'How is FactoryJet different from a US legal web design agency?',
     answer:
-      'Three differences: pricing model (fixed-price and milestone-paid: every project scoped upfront with no scope-creep invoices, while US legal web design agencies charge several times more with hourly retainers for the same scope), legal website expertise (we\'ve built legal websites for US firms for 12+ years, we know the schema types, the bar advertising disclosure requirements, the conversion patterns specific to legal, and the local SEO architecture that works for attorney websites specifically), and ownership (you own everything we build, source code, design files, CMS credentials, unlike FindLaw and Martindale subscription products where you pay monthly for a site that was never yours).',
+      'FactoryJet differs in three meaningful ways. First is our transparent pricing model. We work on fixed-price, milestone-based contracts with no open-ended billing. Traditional legal agencies frequently bill high hourly retainers. Second is our specialized technical focus. We possess over 12 years of experience designing high-speed legal websites and schema architectures. Third is true client ownership. We deliver complete source code, design files, and hosting credentials upon completion. You never pay monthly licensing fees to maintain access to your website.',
   },
   {
     category: 'trust',
     question: 'Can you help a law firm without an existing website?',
     answer:
-      'Yes, we build law firm websites from scratch regularly. The process is the same as a redesign minus the audit phase: competitor analysis, site architecture, keyword research, content briefs, design, development, and launch. Starting from scratch has one advantage: no legacy URL structure to maintain, no redirects to worry about, no content that needs to be preserved. The disadvantage is that a new domain starts with no Google authority, which means ranking takes longer than for an established domain with existing backlinks. We build the right foundation and set accurate expectations on the ranking timeline for a new site vs. an established one.',
+      'Yes. We regularly build new websites for launching practices and spin-off partnerships. Brand-new sites benefit from clean architecture without legacy technical debt or broken redirect chains. The main consideration is building initial search authority. New domains require disciplined local SEO, directory citations, and content publishing to build trust. We guide you through Google Business Profile verification, legal directory listings, and review acquisition. This foundation helps new firms establish early local search traction efficiently.',
   },
   {
     category: 'trust',
     question: 'Does the attorney need to be involved in the website design process?',
     answer:
-      'The lead attorney or managing partner needs to be involved at three specific points: kickoff (to align on messaging, practice area priorities, and design direction), design review (to approve the visual direction before development), and content approval (to review attorney bios and practice area copy before they go live). Between those touchpoints, a firm administrator or marketing coordinator can handle day-to-day communication. We structure the project to minimize senior attorney time while ensuring the decisions that need attorney judgment get made by the right person.',
+      'We respect attorney schedules and streamline partner involvement down to three key stages. First is the initial kickoff meeting to define practice goals and firm positioning. Second is visual design review to confirm branding and page layouts. Third is final content approval to review attorney credentials and practice descriptions. Routine communications and asset collection can be handled by practice administrators or legal assistants. This process protects partner billable hours while ensuring complete ethical and stylistic accuracy.',
   },
-
   {
     category: 'trust',
     question: 'Can you build a law firm website with a client intake form, client portal, or scheduling integration?',
     answer:
-      'Yes, functional client intake is one of the most important conversion elements on a law firm website, and one that most agencies treat as an afterthought. FactoryJet builds: multi-step intake forms with practice-area-specific field logic (personal injury intake asks different questions than business formation intake), Calendly or Cal.com scheduling integration for consultation booking directly from the website, secure client portal access using password-protected pages or dedicated portal software (Clio, MyCase, or custom-built), electronic retainer agreement signing via DocuSign or PandaDoc embedded in the intake flow, and CRM routing that creates a new matter record in Clio or Lawmatics automatically when a form is submitted. A well-built intake flow can increase qualified consultation bookings by 40-60% over a contact form alone.',
+      'Yes. Purpose-built client intake significantly increases website conversion rates. We design multi-step intake workflows with conditional question logic tailored by practice area. Personal injury inquiries see different fields than corporate filings. We integrate consultation scheduling tools like Calendly or Cal.com directly into booking flows. We also connect secure client portal solutions including Clio, MyCase, or custom authenticated portals. Furthermore, intake submissions can link directly to Clio or Lawmatics CRM records. This automation eliminates manual data entry and improves response speed.',
   },
   {
     category: 'trust',
     question: 'What ongoing support does FactoryJet offer after a law firm website launches?',
     answer:
-      'Every law firm website project includes a 30-day post-launch support window for bug fixes, content corrections, and attorney bio updates. Beyond that, FactoryJet offers monthly maintenance plans scoped to your site: WordPress or Next.js security updates, plugin and dependency updates, daily backups, uptime monitoring, Google Search Console monitoring for indexing issues, and a set block of content updates per month (new attorney bios, practice area pages, blog posts). Law firm websites require particular attention to state bar advertising rule compliance, FactoryJet reviews all content updates for disclaimer requirements and state-specific ethical rules before publishing. We also offer annual website audits covering Core Web Vitals performance, local SEO health, and conversion rate optimization.',
+      'Every project includes 30 days of comprehensive post-launch support. We handle bug fixes, minor content tweaks, and team onboarding. Following launch, we offer optional monthly maintenance arrangements. These plans cover core security updates, daily offsite backups, and uptime monitoring. We also track Google Search Console for crawl anomalies and provide ongoing speed audits. You retain full site ownership at all times. Retaining our ongoing maintenance is entirely optional and never required.',
   },
 ];
 
@@ -634,14 +634,14 @@ export default function LawFirmWebsiteDesignPage() {
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
         formSlot={<HeroInlineForm region="us" source="us_services_law_firm_website_design_hero" />}
-          eyebrow="LAW FIRM WEBSITE DESIGN · USA"
-          headline="Law Firm Websites That Rank Locally and Convert Visitors Into Consultations"
-          lead="62% of people searching for an attorney start on Google, and 70% contact the first firm whose site earns their trust. FactoryJet designs law firm websites for US attorneys with individual practice area pages, attorney profiles that build credibility, and consultation intake flows that convert. Fixed-price, milestone-paid, scoped to your build."
-          secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
+          eyebrow="LAW FIRM WEBSITE DESIGN · USA."
+          headline="Law Firm Websites That Rank Locally and Convert Visitors Into Consultations."
+          lead="62% of people searching for an attorney start on Google. 70% contact the first firm whose site earns their trust. FactoryJet designs law firm websites for US attorneys. We build dedicated practice area pages, trustworthy attorney bios, and intake flows that convert. Fixed-price, milestone-paid, scoped to your build."
+          secondaryCta={{ label: 'See Pricing.', href: '#pricing' }}
           trustItems={[
-            '500+ professional service sites delivered',
-            'Legal schema markup on every build',
-            'Fixed price, scoped to your build',
+            '500+ professional service sites delivered.',
+            'Legal schema markup on every build.',
+            'Fixed price, scoped to your build.',
           ]}
           rightSlot={
             <div className="rounded-2xl border border-fj-neutral-200 bg-white p-8 shadow-sm">
@@ -657,16 +657,16 @@ export default function LawFirmWebsiteDesignPage() {
               <div className="mt-6 space-y-4">
                 {[
                   {
-                    before: 'Single "Practice Areas" page: Google can\'t rank you for individual services',
-                    after: 'Individual page per practice area, ranked for "[service] attorney [city]" queries',
+                    before: 'Single "Practice Areas" page. Google cannot rank you for individual legal services.',
+                    after: 'Individual page per practice area. Ranked for keyword and location queries.',
                   },
                   {
-                    before: 'FindLaw template site: a monthly fee for a site you don\'t own, identical to 200 competitors',
-                    after: 'Custom site you own, differentiated design, full local schema, faster page load',
+                    before: 'FindLaw template site. A monthly fee for a site you never own, identical to competitors.',
+                    after: 'Custom site you own outright. Differentiated design, full local schema, faster page load.',
                   },
                   {
-                    before: 'Generic contact form, visitors don\'t know what to expect, abandon mid-fill',
-                    after: 'Multi-step intake, pre-qualifies case type, sets expectations, reduces drop-off by 45%',
+                    before: 'Generic contact form. Visitors do not know what to expect and abandon mid-fill.',
+                    after: 'Multi-step intake. Pre-qualifies case type, sets expectations, and boosts conversion rates.',
                   },
                 ].map((row, i) => (
                   <div key={i} className="rounded-xl border border-fj-neutral-100 bg-fj-neutral-50 p-4">
@@ -684,17 +684,17 @@ export default function LawFirmWebsiteDesignPage() {
         {/* ── 1b. HERO IMAGE BAND ──────────────────────────────────────────── */}
         <ServiceHeroImageBand
           imageSrc="/images/services/card-law-firm.webp"
-          imageAlt="Professional law firm website homepage on a MacBook, FactoryJet law firm website design"
+          imageAlt="Professional law firm website homepage on a MacBook. FactoryJet law firm website design."
           stats={[
-            { value: '500+', label: 'Professional Sites Built' },
-            { value: '7 Days', label: 'Delivery Guarantee' },
-            { value: 'Fixed Price', label: 'Scoped to Your Build, Confirmed Upfront' },
-            { value: '10+ Yrs', label: 'Legal Web Expertise' },
+            { value: '500+', label: 'Professional Sites Built.' },
+            { value: '7 Days', label: 'Delivery Guarantee.' },
+            { value: 'Fixed Price', label: 'Scoped to Your Build, Confirmed Upfront.' },
+            { value: '10+ Yrs', label: 'Legal Web Expertise.' },
           ]}
         />
 
         {/* ── 2. LOGO BAR ──────────────────────────────────────────────────── */}
-        <LogoBar tagline="Trusted by 500+ businesses across the US, UK, and UAE" />
+        <LogoBar tagline="Trusted by 500+ businesses across the US, UK, and UAE." />
 
         {/* ── 3. TRUST BLOCK ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
@@ -705,8 +705,8 @@ export default function LawFirmWebsiteDesignPage() {
         {/* ── 4. WHAT MAKES LEGAL DIFFERENT ────────────────────────────────── */}
         <ServiceExplanation
           eyebrow="LAW FIRM WEBSITE DESIGN EXPLAINED"
-          headline="Why a Law Firm Website Is Different From a General Business Site, and What That Means for the Build"
-          lead="A law firm website has a higher credibility threshold, more specific SEO requirements, bar advertising rules governing what you can claim, and a more complex intake process than most business types. Building one correctly requires understanding these requirements before touching a design tool, not discovering them after launch."
+          headline="Why a Law Firm Website Is Different From a General Business Site. What That Means for the Build."
+          lead="A law firm website has a higher credibility threshold and specific SEO requirements. State bar advertising rules strictly govern what you can claim. The consultation intake process is also more complex than standard businesses. Building a site correctly requires understanding these rules before design begins."
           body={
             <>
               <div className="flex flex-wrap gap-2" aria-hidden>
@@ -721,7 +721,7 @@ export default function LawFirmWebsiteDesignPage() {
                 ))}
               </div>
               <p>
-                Legal is the highest-CPC vertical in professional services search, at roughly $8.58 average cost-per-click (WordStream, 2025 Google Ads benchmarks), the organic ranking that replaces a paid click is worth more in legal than in almost any other industry. That competitive intensity means the bar for what a law firm website needs to do is higher than a general business site, and the gap between a well-built site and a poorly built one shows up directly in consultation volume.
+                Legal is the highest-CPC vertical in professional services search. It averages roughly $8.58 per click according to WordStream data. An organic ranking that replaces a paid click provides immense long-term value. That competitive intensity means the bar for a law firm website is exceptionally high. The gap between a well-built site and a template shows up directly in consultation volume.
               </p>
               <div
                 className="border-l-2 border-[#F05A28] pl-5 py-1"
@@ -731,15 +731,26 @@ export default function LawFirmWebsiteDesignPage() {
                   className="font-fj-display font-semibold text-fj-ink"
                   style={{ fontSize: '1.125rem', lineHeight: 1.35, letterSpacing: '-0.02em' }}
                 >
-                  70% of people searching for an attorney contact the first firm whose site earns their trust. That trust decision happens in the first 5 seconds, on mobile, on a slow connection, often in a stressful moment.
+                  70% of people searching for an attorney contact the first firm whose site earns their trust. That trust decision happens in the first 5 seconds on mobile. It often happens in a stressful moment.
                 </p>
               </div>
               <p>
-                FactoryJet builds law firm websites with three primary goals: rank in local search for your specific practice areas and geography, establish credibility the moment a visitor arrives, and convert that visitor into a consultation request with as little friction as possible. The specific technical requirements for each: individual practice area pages with LegalService schema (ranking), authority-first design with professional photography and credentials (credibility), and multi-step intake forms with clear process expectations (conversion).
+                FactoryJet builds law firm websites with three primary goals. First, rank in local search for your specific practice areas. Second, establish immediate credibility. Third, convert visitors into consultations with low friction. Dedicated practice area pages with LegalService schema support rankings. Authority-first design with verified credentials builds credibility. Multi-step intake forms ensure conversion efficiency.
               </p>
               <p>
-                For firms currently on FindLaw, Martindale, or Avvo subscription sites: you are paying a monthly fee for a template you don't own, designed identically to your competitors, that performs poorly on Core Web Vitals. We regularly help firms migrate off these platforms to custom sites, preserving their review history through Google Business Profile and rebuilding their search presence on a foundation they actually own. For firms needing a <a href="/services/website-redesign" className="text-[#B23E13] underline underline-offset-2">full website redesign</a> from an existing template, we handle that migration as well.
+                Firms on FindLaw, Martindale, or Avvo pay monthly fees for templates they never own. These platforms perform poorly on Core Web Vitals and lack distinctive design. We regularly help firms migrate off these platforms to custom websites. We preserve your review history through Google Business Profile. We rebuild your search presence on an owned foundation. For firms needing a <a href="/services/website-redesign" className="text-[#B23E13] underline underline-offset-2">full website redesign</a> from an existing template, we handle that migration completely.
               </p>
+
+              <div style={{ marginTop: '28px', borderRadius: '16px', overflow: 'hidden', border: '1px solid #E5E5E0', maxWidth: 860 }}>
+                <Image
+                  src="/images/us/shared/factoryjet-audit-call.webp"
+                  alt="FactoryJet lead designer conducting a live legal website UX audit and technical SEO review"
+                  width={860}
+                  height={480}
+                  loading="lazy"
+                  style={{ width: '100%', height: 'auto', display: 'block' }}
+                />
+              </div>
             </>
           }
           rightSlot={
@@ -763,14 +774,14 @@ export default function LawFirmWebsiteDesignPage() {
               </div>
               <div className="divide-y divide-fj-neutral-100 px-7">
                 {[
-                  { category: 'Structure', tools: 'Individual practice area pages' },
-                  { category: 'Schema', tools: 'LegalService + Attorney + LocalBusiness' },
-                  { category: 'Profiles', tools: 'Attorney pages with credentials' },
-                  { category: 'Intake', tools: 'Multi-step consultation form' },
-                  { category: 'Local SEO', tools: 'GBP optimization guidance' },
-                  { category: 'Compliance', tools: 'Bar advertising disclaimers' },
-                  { category: 'Mobile', tools: 'Mobile-first, Core Web Vitals pass' },
-                  { category: 'Analytics', tools: 'GA4 + consultation tracking' },
+                  { category: 'Structure', tools: 'Individual practice area pages.' },
+                  { category: 'Schema', tools: 'LegalService + Attorney + LocalBusiness.' },
+                  { category: 'Profiles', tools: 'Attorney pages with credentials.' },
+                  { category: 'Intake', tools: 'Multi-step consultation form.' },
+                  { category: 'Local SEO', tools: 'GBP optimization guidance.' },
+                  { category: 'Compliance', tools: 'Bar advertising disclaimers.' },
+                  { category: 'Mobile', tools: 'Mobile-first, Core Web Vitals pass.' },
+                  { category: 'Analytics', tools: 'GA4 + consultation tracking.' },
                 ].map((item) => (
                   <div key={item.category} className="flex items-center justify-between gap-4 py-3.5">
                     <div className="flex items-center gap-2.5">
@@ -793,21 +804,21 @@ export default function LawFirmWebsiteDesignPage() {
 
         {/* ── 5. THE PROBLEM WITH LEGAL WEBSITES (DARK) ────────────────────── */}
         <StrategicDarkSection
-          eyebrow="THE LEGAL WEBSITE PROBLEM"
+          eyebrow="THE LEGAL WEBSITE PROBLEM."
           headline="A single 'Practice Areas' page cannot rank for 'personal injury attorney Austin' and 'criminal defense attorney Austin' simultaneously. Neither can any other page on your site."
-          lead="Google's ranking system works at the page level, not the site level. If you want to rank for 6 different practice areas in your city, you need 6 pages: one for each, with content, schema, and internal linking dedicated to that specific service. Law firms with a single services page are effectively choosing not to compete for any individual practice area keyword. This is the most common and most expensive SEO mistake in legal web design."
+          lead="Google ranks pages individually, not whole sites at once. To rank for six distinct practice areas in your market, you need six dedicated pages. Each page must feature tailored content, schema markup, and internal links. Law firms with a single services page fail to compete for individual keywords. This remains the most costly mistake in legal website architecture."
           pillars={[
             {
-              title: 'Legal template platforms are monthly rent on a site you don\'t own',
-              body: 'FindLaw, Martindale, Avvo, and their competitors offer subscription products that appear in attorney search results. What they don\'t tell you: you\'re renting a template identical to every other firm on the platform, your site disappears the moment you stop paying, and the platform owns the SEO authority you\'ve built. After several years of monthly payments you own nothing. A custom site built by FactoryJet is an asset you own outright, with source code and design files delivered at handoff.',
+              title: 'Legal template platforms are monthly rent on a site you do not own.',
+              body: 'FindLaw, Martindale, and Avvo offer subscription products for attorney searches. However, you rent a template identical to competing firms. Your site disappears the moment you stop paying. After years of monthly fees, you build zero asset equity. A custom site built by FactoryJet is an asset you own outright. We deliver complete source code and design files at handoff.',
             },
             {
-              title: 'Mobile performance is a consultation problem, not just a ranking problem',
-              body: 'Criminal defense clients search in urgent moments on their phones. Family law clients research late at night from mobile devices. Personal injury clients search immediately after accidents, often on slow connections. If your site takes 8 seconds to load on a 4G connection, displays a desktop layout that requires zooming, or buries the phone number in a cramped mobile header, you are losing consultations in the moments when prospective clients are most motivated to act. Mobile-first design and Core Web Vitals compliance aren\'t technical preferences, they\'re consultation protection.',
+              title: 'Mobile performance is a direct consultation issue, not just a technical metric.',
+              body: 'Criminal defense and personal injury clients search during stressful moments on mobile phones. If your site takes eight seconds to load on a mobile connection, clients click away. Desktop layouts that require zooming or bury phone numbers lose high-value cases. Mobile-first engineering and Core Web Vitals compliance protect your consultation pipeline.',
             },
             {
-              title: 'Local pack ranking is determined before visitors see your site',
-              body: 'The Google local pack (the map with 3 law firms at the top of search results) is the most-clicked area of the search results page for local legal searches, and it\'s determined almost entirely by Google Business Profile quality, not your website. Firms with complete, regularly updated GBPs, with photos, accurate hours, active review responses, and correct practice area categories, appear in the local pack. Those without accurate GBP information don\'t, regardless of website quality. FactoryJet optimizes GBP as part of every law firm website launch.',
+              title: 'Local pack ranking is determined before visitors ever click your website.',
+              body: 'The Google map pack is the most-clicked area of local search results. Map rankings depend on Google Business Profile quality and review signals. Firms with complete, verified profiles and prompt review responses dominate local search. Incomplete listings struggle to gain visibility. FactoryJet optimizes your GBP profile as an essential component of every launch.',
             },
           ]}
         />
@@ -815,44 +826,57 @@ export default function LawFirmWebsiteDesignPage() {
         {/* ── 6. OUR PROCESS ───────────────────────────────────────────────── */}
         <ServiceJourneyRow
           eyebrow="OUR PROCESS"
-          headline="From Legal SEO Audit to Live Law Firm Website: 5 Structured Stages"
-          lead="Every law firm website starts with understanding your market, who you compete with, what queries you should rank for, and where your current site is falling short. Design doesn't start until strategy is approved."
+          headline="From Legal SEO Audit to Live Law Firm Website: Five Structured Stages."
+          lead="Every law firm website starts with understanding your market. We study your competition, keyword opportunities, and current weaknesses. Design begins only after strategy is approved."
           stages={LEGAL_JOURNEY_STAGES}
-          closingNote="5 STAGES · 4 WEEKS (SMALL FIRM) TO 14 WEEKS (LARGE FIRM) · FREE SEO AUDIT BEFORE ANY COMMITMENT"
+          closingNote="5 STAGES. 4 WEEKS (SMALL FIRM) TO 14 WEEKS (LARGE FIRM). FREE SEO AUDIT BEFORE ANY COMMITMENT."
         />
 
         {/* ── 7. WHAT WE BUILD FOR LAW FIRMS ───────────────────────────────── */}
         <IndustriesGrid
           eyebrow="WHAT WE BUILD FOR LAW FIRMS"
-          headline="Six Essential Elements of a High-Performing Law Firm Website"
-          lead="Each element serves a specific function in the ranking-to-conversion path. Here's what we build and why each one matters."
+          headline="Six Essential Elements of a High-Performing Law Firm Website."
+          lead="Each element serves a specific function in the ranking-to-conversion path. Here is what we build and why each element matters."
           sectors={LEGAL_SERVICES}
         />
 
         {/* ── 8. US LEGAL MARKET CONTEXT ───────────────────────────────────── */}
         <CityContextSection
-          eyebrow="THE US LEGAL WEB DESIGN MARKET"
-          headline="Legal Is the Highest-Competition, Highest-Value Vertical in Local Search"
+          eyebrow="THE US LEGAL WEB DESIGN MARKET."
+          headline="Legal Is the Highest-Competition, Highest-Value Vertical in Local Search."
           leadParagraphs={[
-            "At roughly $8.58 average CPC, legal keywords are the most expensive in Google Ads, which means the organic ranking that replaces a paid click is worth more in legal than in any other professional services category. Law firms that invest in proper website architecture for local SEO are systematically replacing heavy monthly ad spend with organic rankings that compound in value over time.",
-            "The search data tells the same story: 'law firm website design' searches have grown +190% in the last 3 months, driven by attorneys who recognize that their current site, whether a FindLaw template, an outdated custom site, or a page builder build, is not competitive in their local market. The firms making this transition now are capturing organic positions before their competitors do the same.",
-            "FactoryJet has delivered professional service websites for US firms across Austin, Miami, Denver, Nashville, Portland, Charlotte, Raleigh, Tampa, and nationwide. We understand the local SEO dynamics specific to legal, the bar advertising rules that vary by state, and the trust-building requirements that make legal website design fundamentally different from other verticals. A law firm consultation is free. Come in and see what your current site is leaving on the table.",
+            "Legal keywords average $8.58 per click in Google Ads. Organic rankings replacing paid ads deliver immense cost savings. Proper site architecture drives local SEO success. Firms replace high ad spend with compounding search authority.",
+            "The search data tells the same story. Legal website design searches have grown +190% over recent months. Attorneys recognize that template platforms and outdated sites fail to compete in local markets. Proactive firms capture organic search positions before their competitors take action.",
+            "FactoryJet delivers professional service websites for US firms nationwide. We serve practices in Austin, Miami, Denver, Nashville, Charlotte, and beyond. We understand local legal SEO dynamics and bar compliance rules. Our initial discovery audit is completely free. We reveal where your current website leaves money on the table.",
           ]}
           stats={LEGAL_STATS}
         />
+
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 my-10">
+          <div style={{ borderRadius: '16px', overflow: 'hidden', border: '1px solid #E5E5E0', maxWidth: 860, margin: '0 auto' }}>
+            <Image
+              src="/images/services/healthcare-seo-map-pack.webp"
+              alt="Local legal search map pack rankings and Google Business Profile visibility audit"
+              width={860}
+              height={480}
+              loading="lazy"
+              style={{ width: '100%', height: 'auto', display: 'block' }}
+            />
+          </div>
+        </div>
 
         {/* ── 8B. INTERACTIVE VALUE ESTIMATOR ──────────────────────────────── */}
         <section className="bg-[#FFF8F5] py-16 md:py-24 border-y border-[#E7DED6]">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-12">
               <span className="inline-block text-sm font-semibold tracking-wider text-[#F05A28] uppercase font-fj-mono">
-                Interactive Consultation & Revenue Estimator
+                Interactive Consultation & Revenue Estimator.
               </span>
               <h2 className="mt-3 text-3xl font-extrabold text-[#0F0F12] sm:text-4xl font-fj-display">
-                Estimate Your Law Firm Website ROI
+                Estimate Your Law Firm Website ROI.
               </h2>
               <p className="mt-4 text-lg text-[#333333] font-fj-body">
-                Calculate estimated organic search traffic value, consultation request lift, and client retainer payback from an authoritative practice website.
+                Calculate estimated organic search traffic value. Project consultation request lift and client retainer payback from an authoritative practice website.
               </p>
             </div>
             <WebDesignValueCalculator region="us" />
@@ -861,40 +885,40 @@ export default function LawFirmWebsiteDesignPage() {
 
         {/* ── 9. COMPARISON TABLE ──────────────────────────────────────────── */}
         <ComparisonTable
-          eyebrow="HOW WE COMPARE"
-          headline="FactoryJet vs. US Legal Agency vs. FindLaw/Martindale vs. Generic Freelancer"
-          lead="Law firm website options vary dramatically in quality, ownership terms, and long-term value. Here's the honest comparison."
+          eyebrow="HOW WE COMPARE."
+          headline="FactoryJet vs. US Legal Agency vs. FindLaw/Martindale vs. Generic Freelancer."
+          lead="Law firm website options vary dramatically in quality, ownership terms, and long-term value. Here is an honest comparison."
           pullQuote={{
-            stat: 'Fixed Price',
-            caption: 'milestone-paid law firm websites with full code ownership, same engineering depth, legal schema expertise, predictable from quote to launch.',
+            stat: 'Fixed Price.',
+            caption: 'Milestone-paid websites with full code ownership. Deep legal schema expertise. Predictable delivery from quote to launch.',
           }}
           columns={COMPARISON_COLUMNS}
           rows={COMPARISON_ROWS}
-          footer="FindLaw/Martindale charge a recurring monthly subscription, you never own the site. FactoryJet fixed-price contracts cover full scope; you own the code and design files at handoff. Traditional agency prices reflect typical legal vertical market rates as of 2026."
+          footer="FindLaw and Martindale charge recurring monthly subscriptions where you never own the site. FactoryJet fixed-price contracts cover full scope. You own all code and design files at handoff. Traditional agency rates reflect typical legal vertical market averages."
         />
 
         {/* ── 10. PRICING ──────────────────────────────────────────────────── */}
         <div id="pricing">
           <PricingTiers
-            eyebrow="TRANSPARENT PRICING"
-            headline="Fixed-Price Law Firm Website Design: Know the Cost Before You Commit"
-            lead="No hourly billing. No monthly subscriptions on a site you don't own. Fixed scope, fixed price, and a site your firm owns outright at handoff."
+            eyebrow="TRANSPARENT PRICING."
+            headline="Fixed-Price Law Firm Website Design: Know the Cost Before You Commit."
+            lead="No hourly billing. No monthly subscriptions on a site you do not own. Fixed scope, fixed price, and a site your firm owns outright at handoff."
             tiers={PRICING_TIERS}
-            footnote="All prices in USD. A small monthly hosting fee, domain registration, and third-party integrations (booking software, live chat) are separate and paid to those providers. You own all source code, design files, and CMS credentials at handoff, no ongoing payments to FactoryJet required after launch."
+            footnote="All prices in USD. A small monthly hosting fee, domain registration, and third-party integrations are separate. You own all source code, design files, and CMS credentials at handoff. No ongoing payments to FactoryJet are required after launch."
           />
         </div>
 
         {/* ── 12. TESTIMONIALS ─────────────────────────────────────────────── */}
         <TestimonialsSection
           region="us"
-          eyebrow="WHAT CLIENTS SAY"
+          eyebrow="WHAT CLIENTS SAY."
           headline="Rated 4.9/5 on Google across 500+ projects."
         />
 
         {/* ── 13. FAQ ──────────────────────────────────────────────────────── */}
         <FAQ
-          eyebrow="FREQUENTLY ASKED QUESTIONS"
-          headline="Every Question Attorneys Ask Before Starting a Website Project, Answered Straight"
+          eyebrow="FREQUENTLY ASKED QUESTIONS."
+          headline="Frequently Asked Questions: Law Firm Website Design Answered Straight."
           lead="No agency spin. No legal jargon. Clear answers to what law firms actually need to know before committing to a website project."
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
@@ -903,11 +927,11 @@ export default function LawFirmWebsiteDesignPage() {
         {/* Related Reading, internal linking to blog posts */}
         <section className="py-10 bg-[#FAFAF7]">
           <div className="max-w-6xl mx-auto px-6">
-            <p className="text-sm font-semibold text-[#B23E13] uppercase tracking-widest mb-3">Related Reading</p>
-            <h2 className="text-2xl font-bold text-[#0F0F12] mb-6">Keep learning before you commit</h2>
+            <p className="text-sm font-semibold text-[#B23E13] uppercase tracking-widest mb-3">Related Reading.</p>
+            <h2 className="text-2xl font-bold text-[#0F0F12] mb-6">Keep learning before you commit.</h2>
             <div className="grid grid-cols-1">
               <a href="/blog/nyc-b2b-corporate-web-design-guide-2026" className="block p-5 rounded-lg border border-[#E5E5E0] bg-white hover:border-[#F05A28] transition-colors">
-                <p className="text-sm font-semibold text-[#0F0F12] leading-snug">NYC B2B corporate web design buyer guide for 2026</p>
+                <p className="text-sm font-semibold text-[#0F0F12] leading-snug">NYC B2B corporate web design buyer guide for 2026.</p>
               </a>
             </div>
           </div>
@@ -916,12 +940,12 @@ export default function LawFirmWebsiteDesignPage() {
         {/* ── 14. FINAL CTA ─────────────────────────────────────────────────── */}
         <FinalCTA
           variant="dark"
-          eyebrow="START WITH A FREE LEGAL SEO AUDIT"
-          headline="Book a Legal SEO Audit and Walk Away With a Clear Picture of Where You Stand"
-          sub="In 30 minutes, we'll audit your current site's local search performance, analyze the top-ranking competing firms in your market, identify the practice area pages and schema gaps that are costing you organic traffic, and tell you exactly what it costs to fix. No agency pitch. No retainer required to get started. Just a straight assessment from a team that's built law firm websites for US attorneys for 12 years."
-          primaryCta={{ label: 'Book Your Free Legal SEO Audit', modal: true, region: 'us' }}
-          secondaryCta={{ label: 'See All Website Redesign Services', href: '/services/website-redesign' }}
-          objectionHandler="Fixed price, scoped to your build. You own everything at handoff. Free audit first. No commitment until you\'ve seen the plan."
+          eyebrow="START WITH A FREE LEGAL SEO AUDIT."
+          headline="Book a Legal SEO Audit and Walk Away With a Clear Picture of Where You Stand."
+          sub="In 30 minutes, we audit your local search rankings. We analyze top-ranking competitors in your market. We identify practice area page gaps and missing schema markup. You receive an exact quote to fix every issue. No sales pitch or retainers are required. Just an honest evaluation from a team with 12 years of legal web experience."
+          primaryCta={{ label: 'Book Your Free Legal SEO Audit.', modal: true, region: 'us' }}
+          secondaryCta={{ label: 'See All Website Redesign Services.', href: '/services/website-redesign' }}
+          objectionHandler="Fixed price, scoped to your build. You own everything at handoff. Free audit first. No commitment until you have seen the plan."
         />
 
       </main>

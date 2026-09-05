@@ -21,6 +21,7 @@ import FinalCTA from '@/components/v2/FinalCTA';
 import ServiceHeroImageBand from '@/components/v2/ServiceHeroImageBand';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import WebDesignValueCalculator from '@/components/v2/WebDesignValueCalculator';
+import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
 import Image from 'next/image';
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -28,15 +29,15 @@ import Image from 'next/image';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Web Design Agency for Small Business USA: Professional Sites, Live in 7 Days | FactoryJet',
+  title: 'Web Design Agency USA: Custom Sites in 7 Days | FactoryJet',
   description:
-    'Web design agency for US small businesses. Custom Next.js, WordPress & Shopify sites built for speed, SEO, and conversions, live in 7 days. Full code ownership. Get a quote in 24 hours.',
+    'Web design agency for US small businesses. Custom Next.js, WordPress & Shopify sites built for speed, SEO, and conversions, live in 7 days. Get a quote today.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Web Design Agency for Small Business USA: Professional Sites, Live in 7 Days | FactoryJet',
+    title: 'Web Design Agency USA: Custom Sites in 7 Days | FactoryJet',
     description:
-      'Web design services for US small businesses. Custom Next.js, WordPress & Shopify sites: Lighthouse 95+, mobile-first, live in 7 days. Full code ownership. Get a quote in 24 hours.',
+      'Web design agency for US small businesses. Custom Next.js, WordPress & Shopify sites built for speed, SEO, and conversions, live in 7 days. Get a quote today.',
     url: 'https://factoryjet.com/services/web-design',
     images: [
       {
@@ -50,9 +51,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Web Design Agency for Small Business USA: Professional Sites, Live in 7 Days | FactoryJet',
+    title: 'Web Design Agency USA: Custom Sites in 7 Days | FactoryJet',
     description:
-      'Web design services for US small businesses. Custom Next.js, WordPress & Shopify sites: Lighthouse 95+, mobile-first, live in 7 days. Full code ownership. Get a quote in 24 hours.',
+      'Web design agency for US small businesses. Custom Next.js, WordPress & Shopify sites built for speed, SEO, and conversions, live in 7 days. Get a quote today.',
     images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: {
@@ -133,6 +134,24 @@ const howToSchema = {
       text: 'Your website goes live. We handle DNS, SSL, final QA, and provide training plus 30-day post-launch support.',
     },
   ],
+};
+
+const BREADCRUMB_ITEMS: BreadcrumbItem[] = [
+  { name: 'Home', url: 'https://factoryjet.com' },
+  { name: 'Services', url: 'https://factoryjet.com/services' },
+  { name: 'Web Design', url: 'https://factoryjet.com/services/web-design' },
+];
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  '@id': 'https://factoryjet.com/services/web-design#breadcrumb',
+  itemListElement: BREADCRUMB_ITEMS.map((item, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: item.name,
+    item: item.url,
+  })),
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -226,20 +245,20 @@ const WEB_JOURNEY_STAGES: ServiceJourneyStage[] = [
 const WEB_STATS = [
   {
     value: '7 days',
-    label: 'average delivery from design sign-off to live launch',
-    microcopy: 'for sites up to 5 pages on our Starter tier',
+    label: 'Average delivery from design sign-off to live launch.',
+    microcopy: 'Applies to sites up to 5 pages on our Starter tier.',
     categoryLabel: 'DELIVERY SPEED',
   },
   {
     value: '100/100',
-    label: 'Lighthouse score target across performance, SEO, accessibility',
-    microcopy: 'verified on every project before handover',
+    label: 'Target Lighthouse score across performance, SEO, and accessibility.',
+    microcopy: 'Verified on every project before final handover.',
     categoryLabel: 'PERFORMANCE',
   },
   {
     value: 'Fixed Price',
-    label: 'milestone-paid web design with full code ownership',
-    microcopy: 'senior Next.js / Figma / Lighthouse engineering, predictable from quote to launch',
+    label: 'Milestone-paid web design with full code ownership.',
+    microcopy: 'Predictable pricing from initial quote to launch.',
     categoryLabel: 'PRICING MODEL',
   },
 ];
@@ -247,19 +266,19 @@ const WEB_STATS = [
 const US_WEB_STATS = [
   {
     value: '94%',
-    label: 'of first impressions are design-related, users judge your credibility in 0.05 seconds',
+    label: 'First impressions are design-related. Users judge credibility in 0.05 seconds.',
     sourceUrl: 'https://www.tandfonline.com/doi/abs/10.1080/01449290500330448',
     sourceLabel: 'University of Surrey Study',
   },
   {
     value: '53%',
-    label: 'of mobile users abandon a site that takes longer than 3 seconds to load',
+    label: 'Mobile users abandon a site that takes longer than 3 seconds to load.',
     sourceUrl: 'https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/',
     sourceLabel: 'Google / SOASTA Research',
   },
   {
     value: 'Per page',
-    label: 'is how most US web agencies bill, at a multiple of what we charge, before revisions, hosting, or ongoing fees',
+    label: 'Most US web agencies bill per page with open-ended revision fees.',
     sourceUrl: 'https://www.upwork.com/resources/how-much-does-website-cost',
     sourceLabel: 'Upwork & Clutch market data',
   },
@@ -274,20 +293,20 @@ const COMPARISON_COLUMNS = [
 
 const COMPARISON_ROWS = [
   {
-    feature: 'Pricing model',
+    feature: 'Pricing model.',
     values: [
-      'Fixed-price, quoted upfront',
-      'Multiples higher, often hourly',
-      'Hourly, no ceiling',
-      'Cheap monthly fee (you build it)',
+      'Fixed-price, quoted upfront.',
+      'Multiples higher, often hourly.',
+      'Hourly, no ceiling.',
+      'Cheap monthly fee (you build it).',
     ],
   },
   {
-    feature: 'Delivery timeline',
-    values: ['7 business days', '6-12 weeks', '4-8 weeks (unreliable)', '~1 day (but you build it)'],
+    feature: 'Delivery timeline.',
+    values: ['7 business days.', '6–12 weeks.', '4–8 weeks (unreliable).', '~1 day (self-built).'],
   },
   {
-    feature: 'Custom design (not a template)',
+    feature: 'Custom design (not a template).',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="yes" />,
@@ -296,7 +315,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Lighthouse 95+ performance',
+    feature: 'Lighthouse 95+ performance.',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="partial" />,
@@ -305,7 +324,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'You own the code & hosting',
+    feature: 'You own the code & hosting.',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="partial" />,
@@ -314,7 +333,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Figma design approval before build',
+    feature: 'Figma design approval before build.',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="yes" />,
@@ -323,7 +342,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Mobile-first + Core Web Vitals green',
+    feature: 'Mobile-first + Core Web Vitals green.',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="partial" />,
@@ -332,7 +351,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Technical SEO included',
+    feature: 'Technical SEO included.',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="partial" />,
@@ -341,7 +360,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: '7-day delivery guarantee',
+    feature: '7-day delivery guarantee.',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="no" />,
@@ -358,14 +377,14 @@ const PRICING_TIERS = [
     description:
       'A clean, fast, conversion-focused website for small businesses that need to look professional and generate leads without breaking the budget.',
     features: [
-      'Up to 5 pages (Home, About, Services, Contact + 1 more)',
-      'Custom Figma design, not a template',
-      'Next.js or WordPress (your choice)',
-      'Mobile-first, Lighthouse 95+ guaranteed',
-      'Technical SEO: meta tags, schema, sitemap, robots.txt',
-      'Contact form with email notifications',
-      '2 rounds of design revisions',
-      '7-business-day delivery from design sign-off',
+      'Up to 5 pages (Home, About, Services, Contact, and Blog).',
+      'Custom Figma design tailored to your brand.',
+      'Next.js or WordPress built for maximum speed.',
+      'Mobile-first layout with Lighthouse 95+ guaranteed.',
+      'Complete technical SEO including metadata and schema.',
+      'Functional contact form with instant notifications.',
+      'Two rounds of structured design revisions.',
+      'Seven business days delivery from design approval.',
     ],
     cta: { label: 'Book an Audit Call', modal: true, region: 'us' },
   },
@@ -375,15 +394,15 @@ const PRICING_TIERS = [
     description:
       'A full business website with a content management system, blog, and advanced SEO setup. The most popular tier for growing US companies.',
     features: [
-      'Up to 15 pages including service and location pages',
-      'CMS integration, update content without touching code',
-      'Blog setup with category and tag architecture',
-      'Advanced SEO: page-level keyword targeting, internal link map',
-      'Google Analytics 4 + Search Console setup',
-      'Lead capture forms with CRM integration (HubSpot, Pipedrive)',
-      'Lighthouse 98-100 across all four categories',
-      '3 rounds of design revisions',
-      'Team content training walkthrough (recorded)',
+      'Up to 15 pages including service and location pages.',
+      'CMS integration allowing content edits without code.',
+      'Blog architecture with categories and author bios.',
+      'Advanced technical and on-page SEO targeting.',
+      'Google Analytics 4 and Search Console integration.',
+      'Lead capture forms connected to your CRM.',
+      'Lighthouse 98 to 100 performance across all pages.',
+      'Three rounds of design revisions.',
+      'Recorded team training session for content management.',
     ],
     cta: { label: 'Get a Custom Quote', modal: true, region: 'us' },
     popular: true,
@@ -394,15 +413,15 @@ const PRICING_TIERS = [
     description:
       'E-commerce stores, Next.js web applications, large marketing sites, and complex builds with third-party API integrations.',
     features: [
-      'Pages & scope defined per project',
-      'Shopify, Next.js Commerce, or custom e-commerce',
-      'Third-party API integrations (Stripe, Twilio, HubSpot, etc.)',
-      'Custom animations and interactive UI components',
-      'Multi-language or multi-region site architecture',
-      'Headless CMS setup (Sanity, Contentful, or WordPress)',
-      'Dedicated engineering point of contact',
-      'Performance SLA: Core Web Vitals green on launch',
-      '30-day post-launch support window',
+      'Custom page count and architecture tailored to scope.',
+      'Shopify, Next.js Commerce, or custom shopping cart.',
+      'Third-party API integrations for Stripe and CRMs.',
+      'Interactive animations and custom UI components.',
+      'Multi-language or multi-region site structure.',
+      'Headless CMS setup on Sanity, Contentful, or WordPress.',
+      'Dedicated senior engineer as single point of contact.',
+      'Performance SLA ensuring green Core Web Vitals.',
+      '30-day post-launch technical support window.',
     ],
     cta: { label: 'Schedule a Scoping Call', modal: true, region: 'us' },
   },
@@ -424,25 +443,25 @@ const FAQ_ITEMS = [
     category: 'process',
     question: 'How long does it take to build a website?',
     answer:
-      'Most small business websites, up to 5 pages, are designed, built, and launched within 7 business days of your approved design sign-off. Larger sites (6-15 pages) typically take 10-14 business days. Shopify or Next.js e-commerce stores with custom product logic take 3-5 weeks depending on catalog size and integration requirements. We give you a firm timeline after the brief, not before, because scope drives everything.',
+      'Most small business sites up to 5 pages launch within 7 business days of design approval. Larger sites with 6 to 15 pages typically require 10 to 14 business days. Custom e-commerce stores on Shopify or Next.js run 3 to 5 weeks depending on catalog complexity. We confirm a binding delivery schedule upfront after your scoping brief.',
   },
   {
     category: 'process',
     question: 'What does your web design process look like?',
     answer:
-      'Five stages: Discover (a 30-minute brief where we map your goals, audience, competitors, and site architecture), Design (full Figma wireframes and visual mockups, you approve the look before we write code), Build (engineering in Next.js, WordPress, or Shopify with daily commits and a staging URL within 48 hours), Review (two rounds of content and design feedback on the live staging site), and Ship (production launch with DNS transfer, SSL, sitemap submission, and a recorded handover walkthrough).',
+      'Our process runs in five clear stages. First is Discover: a 30-minute brief mapping goals and site architecture. Second is Design: full Figma mockups you approve before code starts. Third is Build: engineering in Next.js, WordPress, or Shopify with daily commits. Fourth is Review: two structured feedback rounds on live staging. Fifth is Ship: production launch, SSL setup, and training.',
   },
   {
     category: 'process',
     question: 'Do I get to approve the design before you start building?',
     answer:
-      'Yes, always. We present full Figma mockups for every key page before writing a line of code. If you don\'t love the direction, we revise before we build, not after. This is how we avoid the expensive rework that blows up timelines at most agencies.',
+      'Yes, always. We present complete Figma mockups for every template before writing code. If you want changes, we revise the design first. This eliminates costly rebuilds later and keeps your launch on schedule.',
   },
   {
     category: 'process',
     question: 'Can you redesign my existing website instead of building from scratch?',
     answer:
-      'Yes, and redesigns are one of our most common engagements. We audit your current site, identify what\'s hurting performance and conversions, carry over any content worth keeping, and rebuild with modern standards. If your current site runs on WordPress, we can often redesign in place without disrupting your URL structure or existing SEO equity.',
+      'Yes, redesigns are one of our core service areas. We audit your site, pinpoint conversion barriers, and modernize the design. If you run on WordPress, we can redesign in place. We preserve your URL structure and search rankings throughout.',
   },
 
   /* ── Pricing & Ownership ── */
@@ -450,25 +469,25 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does a custom website cost?',
     answer:
-      'It depends on scope: a 5-page business site, a 15-page site with CMS, and a full e-commerce build are three very different projects. Every FactoryJet engagement is fixed-price with the number confirmed before work starts. Book a free discovery call and you will have a quoted scope within 24 hours, no hourly billing, no scope creep.',
+      'Costs depend directly on project scope. A 5-page marketing site, a multi-page CMS site, and a custom e-commerce store require different engineering hours. Every FactoryJet project is fixed-price and milestone-paid. Schedule a brief call to receive a firm quote within 24 hours.',
   },
   {
     category: 'pricing',
     question: 'Do I own the website and code after the project is done?',
     answer:
-      'Yes, 100%. We transfer the full codebase to your GitHub repository on launch day. You own every line of code, all design files in Figma, and all hosting credentials. There are no monthly platform fees owed to FactoryJet, no lock-in, and no dependencies on us to keep your website running. If you outgrow us, you walk away with an asset.',
+      'Yes, you own 100% of your assets. We transfer the complete code repository to your GitHub account on launch day. You also receive full Figma files and hosting credentials. FactoryJet charges zero platform lock-in fees.',
   },
   {
     category: 'pricing',
     question: 'What are the ongoing costs after launch?',
     answer:
-      'Domain registration (a small yearly fee you own) and hosting (a modest monthly fee paid to the hosting provider directly, not to us, scaling with traffic and platform). WordPress and Next.js sites can be hosted on Vercel, Cloudflare Pages, or any standard host. That\'s it, no monthly agency retainer required unless you want ongoing support.',
+      'You only pay standard infrastructure fees. These include your annual domain registration and your monthly hosting plan. Next.js sites run affordably on Cloudflare Pages or Vercel. We require no mandatory retainer to keep your site live.',
   },
   {
     category: 'pricing',
     question: 'How does FactoryJet keep web design pricing fixed and predictable?',
     answer:
-      'We work fixed-price and milestone-paid: every project is scoped upfront with no hourly billing and no scope-creep invoices. Serving US businesses means we estimate accurately on the first call, so the quote you sign is what you pay. You brief an engineer and a designer who build it directly, no account-management or project-coordinator layers, delivering Next.js expertise, Figma design quality, and Lighthouse 95+ performance, with full code ownership at handoff.',
+      'We work exclusively on fixed-price contracts. Every project is scoped upfront with zero hourly billing. Serving US businesses for 12+ years means our estimates are accurate from day one. You collaborate directly with the engineers and designers building your site, eliminating account overhead.',
   },
 
   /* ── Technical & Performance ── */
@@ -476,25 +495,25 @@ const FAQ_ITEMS = [
     category: 'technical',
     question: 'What platform will my website be built on?',
     answer:
-      'We build on Next.js (for performance-critical business sites, web apps, and headless setups), WordPress (for content-driven sites where non-technical editors need full CMS control), and Shopify (for e-commerce). We recommend the right platform after understanding your goals, not because we prefer one. All platforms are set up for Core Web Vitals green, mobile-first, and zero vendor lock-in.',
+      'We build on Next.js, WordPress, and Shopify. Next.js powers performance-focused sites and custom web apps. WordPress fits content teams needing familiar editorial controls. Shopify serves our e-commerce clients. We recommend the best platform for your goals, ensuring fast mobile speeds and full code ownership.',
   },
   {
     category: 'technical',
     question: 'What Lighthouse score will my website get?',
     answer:
-      'Our Starter tier guarantees Lighthouse 95+ across all four categories (Performance, Accessibility, Best Practices, SEO). Our Growth and Custom tiers target 98-100. We run PageSpeed Insights and Core Web Vitals checks as part of our QA process before every launch, you see the scores before you sign off.',
+      'Our Starter tier guarantees Lighthouse 95+ across Performance, Accessibility, Best Practices, and SEO. Our custom builds routinely hit 98 to 100. We test Core Web Vitals during QA before launch. You review verified audit scores before final sign-off.',
   },
   {
     category: 'technical',
     question: 'Will my website work on mobile?',
     answer:
-      'Every website we build is mobile-first, we design for mobile before desktop, not the other way around. We test on physical iOS and Android devices, not just browser emulators, across multiple screen sizes. Tap targets, font sizes, form inputs, and navigation menus are all validated against mobile UX standards.',
+      'Every site is engineered mobile-first. We design smartphone layouts before desktop views. We test on physical iOS and Android hardware across diverse screen sizes. We validate tap targets, font scales, and form inputs against strict mobile UX guidelines.',
   },
   {
     category: 'technical',
     question: 'Can I update my website content without a developer?',
     answer:
-      'Yes. Every site we build includes a way for non-technical users to update content. WordPress and Shopify clients get a native CMS. Next.js clients get a headless CMS setup (Sanity or Contentful) or a simple Markdown-based content layer. We include a recorded walkthrough of your specific CMS on launch day.',
+      'Yes. Every build includes intuitive content editing. WordPress and Shopify clients use native admin dashboards. Next.js clients receive a headless CMS like Sanity or Contentful. We provide a custom video walkthrough showing your staff how to edit pages.',
   },
 
   /* ── SEO & Visibility ── */
@@ -502,13 +521,13 @@ const FAQ_ITEMS = [
     category: 'seo',
     question: 'Will my website rank on Google?',
     answer:
-      'Every website we deliver includes technical SEO as standard: correct heading structure (H1/H2/H3), optimized meta titles and descriptions, canonical URLs, Open Graph tags, schema markup (Organization, LocalBusiness, FAQPage as appropriate), XML sitemap, robots.txt, and Core Web Vitals optimization. Content-level SEO, keyword research, page-level optimization, and content strategy, is available as a Growth tier add-on.',
+      'Every site includes full technical SEO out of the box. We implement semantic headings, optimized metadata, canonical URLs, and structured schema. We also configure XML sitemaps, robots.txt, and Core Web Vitals optimization. Keyword strategy and content expansion are available as dedicated growth add-ons.',
   },
   {
     category: 'seo',
     question: 'Will a redesign hurt my existing Google rankings?',
     answer:
-      'Not if we do it properly, and we do. Before any redesign, we audit your current URL structure, identify which pages have existing search equity, and architect the new site to preserve all high-value URLs. Where redirects are needed, we implement 301 redirects correctly. Most clients see rankings improve after redesign because their Lighthouse scores and Core Web Vitals improve significantly.',
+      'No, when handled properly search rankings remain protected. We map existing high-performing URLs before redesigning. We establish 301 redirects for any altered paths. Most clients experience ranking gains because page speed and Core Web Vitals improve significantly.',
   },
 
   /* ── Trust & Results ── */
@@ -516,38 +535,37 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from a US web agency?',
     answer:
-      'Three differences that matter: pricing model (fixed-price and milestone-paid: every project scoped upfront with no scope-creep invoices, backed by 12+ years serving US businesses), speed (7-day delivery on standard sites: most traditional agencies quote 6-12 weeks), and ownership (you get the full codebase on launch day, no retainer required to keep your site online). We\'ve delivered 500+ websites for businesses across the US, UK, UAE and India, in every industry. We aren\'t selling you a template with a custom logo.',
+      'We differ on three key measures. First is pricing: fixed-price contracts with no unexpected invoices. Second is speed: 7-day launch on standard sites, compared to 8–12 weeks at traditional firms. Third is ownership: you own the code from day one. We bring over 500 completed client projects across the US and international markets.',
   },
   {
     category: 'trust',
     question: 'Do you have examples of websites you\'ve built?',
     answer:
-      'Yes: our portfolio is at factoryjet.com/portfolio and covers business websites, e-commerce stores, landing pages, and web applications across multiple industries. On strategy calls we\'ll share relevant examples for your specific industry and use case.',
+      'Yes, view our live work at factoryjet.com/portfolio. Our portfolio features B2B corporate sites, local service sites, and e-commerce stores. On our discovery call, we share case studies closely aligned with your industry.',
   },
-
   {
     category: 'technical',
     question: 'Do you build websites with AI features, AI chatbots, or AI-powered functionality?',
     answer:
-      'Yes, AI functionality is increasingly a standard website feature, not a premium add-on. FactoryJet builds: AI chatbots trained on your website content, FAQs, and service catalog (powered by OpenAI or Anthropic, integrated via Vercel AI SDK); AI lead qualification forms that score and route inquiries before they reach your inbox; AI-generated content pipelines that keep your blog and product descriptions updated for AI search (AEO); and AEO-optimized FAQ pages structured to appear in ChatGPT, Perplexity, and Google AI Overviews. AI chatbot integration is a scoped add-on to a standard website project and is available on all platform stacks (Next.js, WordPress, Webflow). We quote it up front on a free discovery call.',
+      'Yes, AI capabilities are now standard elements of modern sites. We integrate OpenAI and Anthropic chatbots trained on your internal documentation. We also build automated lead-routing forms and AEO-optimized content modules. AI features are available across Next.js, WordPress, and Shopify stacks with upfront pricing.',
   },
   {
     category: 'seo',
     question: 'How do you optimize a website for Google and AI search (AEO)?',
     answer:
-      'FactoryJet builds two layers of search visibility into every website: technical SEO (the baseline every site needs) and AEO (Answer Engine Optimization: the new layer that captures AI-generated search results). Technical SEO includes: Core Web Vitals compliance (Lighthouse 90+), structured data schema (Organization, WebSite, FAQPage, BreadcrumbList, Service), sitemap submission to Google Search Console, canonical URL configuration, and mobile-first page architecture. AEO goes further: FAQ content structured as direct answers to how your buyers search in ChatGPT and Perplexity, entity markup that identifies your business to AI knowledge graphs, and \'People Also Ask\' optimization. AEO is 18-24 months ahead of where most US web agencies are, early adopters are winning AI answer positions competitors haven\'t claimed.',
+      'We build two distinct search layers: standard technical SEO and Answer Engine Optimization (AEO). Technical SEO ensures fast indexing, Core Web Vitals compliance, and schema markup. AEO structures content to be cited directly by ChatGPT, Perplexity, and Google AI Overviews. This positions your brand prominently in AI-generated answers.',
   },
   {
     category: 'process',
     question: 'Can you build a website with booking, scheduling, payment, or intake form capabilities?',
     answer:
-      'Yes, functional capabilities beyond content are a standard part of our website builds. We integrate: appointment booking (Calendly, Cal.com, Acuity Scheduling, or custom-built scheduling logic), intake and lead capture forms (with email + CRM routing to HubSpot, Salesforce, or Pipedrive), online payment for services (Stripe Checkout, Stripe Payment Links, or embedded Stripe Elements), client portal logins (members-only content access), and event registration with payment. For law firms, medical practices, home services, and professional services businesses, these functional elements are often the primary conversion mechanism, FactoryJet builds them with the same care as the design.',
+      'Yes, interactive functionality is built into our core workflows. We integrate Calendly, Acuity, or custom booking schedulers. We connect intake forms to CRMs like HubSpot and Salesforce. We also embed secure Stripe payment checkout for client billing and digital deposits.',
   },
   {
     category: 'trust',
     question: 'Does FactoryJet offer website maintenance and ongoing support after launch?',
     answer:
-      'Yes: every website project includes a 14-30 day post-launch support window for bug fixes and minor adjustments. Beyond that, FactoryJet offers monthly website maintenance plans (scoped and quoted up front): WordPress security updates, plugin and theme updates, daily automated backups, uptime monitoring, and a set block of content and minor design changes per month. For Next.js and Webflow sites, maintenance includes dependency updates, performance monitoring, and content updates. Maintenance clients also get priority response windows for urgent issues and access to a dedicated engineer who knows their site\'s codebase. Unmanaged websites develop security vulnerabilities and performance degradation within 6-12 months, maintenance prevents both.',
+      'Yes, every site includes 30 days of post-launch technical support. For ongoing needs, we provide monthly maintenance retainers. Retainers cover security updates, automated backups, uptime checks, and monthly developer hours. Clients receive dedicated support from the original build team.',
   },
 
   // ── Money-query coverage, added 2026-06-11 ──
@@ -555,31 +573,31 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'Who is the best web design agency in USA?',
     answer:
-      'For small and mid-size businesses, FactoryJet makes a strong case: senior-engineer-led builds, fixed pricing, 100/100 Lighthouse scores as standard, and 7-day delivery on sites up to five pages. But the best web design company in USA for you depends on fit: the best website design agency in USA for a DTC brand differs from the best website design company in USA for a law firm. Whoever you shortlist, apply three filters: do they give a fixed-price quote up front, do they show performance scores on live work, and do you own the code? The best web design services in USA, and the best website design services in USA generally, pass all three.',
+      'For small and mid-market firms, FactoryJet provides senior engineering, fixed pricing, and verified 95+ Lighthouse scores. The best agency for your business depends on operational fit. We recommend evaluating three criteria: upfront fixed quotes, live audit scores, and unencumbered code ownership.',
   },
   {
     category: 'trust',
     question: 'What are the top 10 web design companies in USA?',
     answer:
-      'Published lists of the top 10 web design agencies in USA are mostly pay-to-play directories, so treat them as a starting shortlist at best. FactoryJet competes in the top 10 web design companies in USA conversation for SMB work on three measurable dimensions: published pricing, 100/100 Lighthouse performance, and 7-day delivery. Apply the same filters to any roundup of the top 10 website design companies in USA, measurable performance beats portfolio polish.',
+      'Many agency directories feature paid promotional placements. We advise evaluating agencies using measurable metrics rather than directory rankings. FactoryJet competes on clear criteria: transparent pricing, verified performance, and rapid 7-day delivery for standard sites.',
   },
   {
     category: 'pricing',
     question: 'How much does website design cost in USA?',
     answer:
-      'Website design cost in USA varies widely: credible studios charge a multiple of what template work costs, larger agencies charge several times more again, and DIY templates are the cheapest tier but rarely convert. Business owners asking how much a website costs in USA usually mean the all-in number, so add a small monthly hosting fee paid to the host and optional ongoing maintenance. FactoryJet works fixed-price and scoped to your build, you get the full number on a free discovery call, so website cost in USA is never a surprise invoice.',
+      'Web design costs in the US vary by scope and platform. Freelancers and agencies charge varying rates based on customization. FactoryJet operates with transparent, fixed pricing agreed upon before work begins. Schedule a discovery call to receive a comprehensive quote with no surprise fees.',
   },
   {
     category: 'process',
     question: 'Can I really get a website in 7 days?',
     answer:
-      'Yes, 7 day website design is the FactoryJet standard for sites up to five pages: brief on day one, Figma mockups by day two or three, build, review, and launch inside the week. Same week website design only works with a disciplined process, daily commits, one consolidated revision round, and decision-makers available for fast approvals. The fastest web design agency is the one with the tightest process, not the biggest team; speed without a 100/100 performance score is just a rushed template.',
+      'Yes. Our 7-day turnaround applies to custom sites up to 5 pages. We work from an organized brief on day one, deliver Figma mockups by day two, and launch inside seven business days. This speed relies on focused engineer collaboration and rapid client feedback.',
   },
   {
     category: 'trust',
     question: 'Which agency should I hire to build my website?',
     answer:
-      'Hire for evidence, not promises. Small-business owners who ask an AI assistant to recommend a web design agency for my small business get answers assembled from citations and reviews: the same diligence works manually: shortlist three agencies, ask each for a fixed-price quote up front, live performance scores, and two client references you can actually call. FactoryJet puts all three on the table before you commit, which is exactly the standard you should hold every contender to.',
+      'Hire based on verifiable evidence. We recommend shortlisting three agencies. Require each firm to provide fixed pricing upfront, verified Lighthouse audit results, and reachable client references. FactoryJet provides all three upfront before any contract is signed.',
   },
 ];
 
@@ -617,6 +635,11 @@ export default function WebDesignPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
       />
       <script
+        id="web-design-breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
         id="speakable-schema-web-design-service"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -641,6 +664,8 @@ export default function WebDesignPage() {
         ]}
         cta={{ label: 'Book an Audit', modal: true, region: 'us' }}
       />
+
+      <Breadcrumbs items={BREADCRUMB_ITEMS} />
 
       <main className="bg-fj-cream">
 
@@ -943,12 +968,14 @@ export default function WebDesignPage() {
                 className="relative w-full overflow-hidden rounded-2xl"
                 style={{ aspectRatio: '5 / 3' }}
               >
-                <Image
+                <img
                   src="/images/services/web-design-stats-photo.webp"
                   alt="FactoryJet team reviewing a newly launched website with a client"
-                  fill
-                  className="object-cover object-center"
-                  sizes="(max-width: 1024px) 100vw, 380px"
+                  width={600}
+                  height={360}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover object-center"
                 />
               </div>
             </div>

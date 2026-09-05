@@ -758,6 +758,16 @@ export default function SmallBusinessSeoServicePage() {
                 <p>A monthly report tied to calls, form fills, and sales, built from your own GA4 and Google Search Console data in a Looker Studio view you keep. You always know what your SEO marketing is actually earning. No vanity rankings nobody acts on.</p>
               </div>
             </div>
+            <div style={{ marginTop: '36px', borderRadius: '16px', overflow: 'hidden', border: '1px solid var(--ls-line)', maxWidth: 860 }}>
+              <Image
+                src="/images/services/healthcare-seo-map-pack.webp"
+                alt="Google map pack ranking breakdown showing proximity and prominence metrics for small business searches"
+                width={860}
+                height={480}
+                loading="lazy"
+                style={{ width: '100%', height: 'auto', display: 'block' }}
+              />
+            </div>
           </div>
         </section>
 
@@ -940,6 +950,17 @@ export default function SmallBusinessSeoServicePage() {
               </ul>
             </div>
 
+            <div style={{ marginTop: '36px', borderRadius: '16px', overflow: 'hidden', border: '1px solid var(--ls-line)', maxWidth: 860 }}>
+              <Image
+                src="/images/us/shared/factoryjet-audit-call.webp"
+                alt="FactoryJet strategist conducting a live small business SEO audit and Google Search Console review"
+                width={860}
+                height={480}
+                loading="lazy"
+                style={{ width: '100%', height: 'auto', display: 'block' }}
+              />
+            </div>
+
             <h3 style={{ marginTop: 52, fontSize: 22 }}>On the site itself, it is a technical SEO audit before it is anything clever</h3>
             <p className="dek" style={{ marginTop: 10, maxWidth: 760 }}>
               Every page we touch gets schema.org structured data written as JSON-LD, a self-referencing canonical
@@ -1049,7 +1070,14 @@ export default function SmallBusinessSeoServicePage() {
           <div className="wrap team-grid">
             <div className="team-vis">
               <div className="photo">
-                <Image src="/images/us/services/seo/team-cutout.webp" alt="The FactoryJet small business SEO team" fill loading="lazy" sizes="(max-width: 880px) 90vw, 460px" style={{ objectFit: 'cover' }} />
+                <Image
+                  src="/images/us/services/seo/team-cutout.webp"
+                  alt="The FactoryJet small business SEO team"
+                  width={460}
+                  height={520}
+                  loading="lazy"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                />
               </div>
               <div className="ec e1">A senior team</div>
               <div className="ec e2"><span className="star">&#9733;</span> 4.9/5 &middot; average Google review rating</div>
@@ -1074,7 +1102,7 @@ export default function SmallBusinessSeoServicePage() {
         <section className="faqsec" id="faq">
           <div className="wrap">
             <div className="eyebrow">Small business SEO FAQ</div>
-            <h2 style={{ marginTop: 14 }}>Questions, <span className="it">answered straight</span></h2>
+            <h2 style={{ marginTop: 14 }}>Frequently Asked Questions: <span className="it">Small Business SEO Answered Straight</span></h2>
             <div className="faq-wrap">
               <aside className="faq-nav">
                 {FAQ_GROUPS.map((g) => <a key={g.id} href={`#${g.id}`}>{g.label}</a>)}

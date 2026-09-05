@@ -74,50 +74,38 @@ const FAQ_CATEGORIES = [
 ];
 
 const FAQ_ITEMS = [
-  { category: 'basics', question: 'What is generative engine optimization?', answer: 'Generative engine optimization is the work of getting your pages used and named as a source inside AI generated answers. Instead of competing for a link position, you are competing to be one of the few pages an engine pulls from when it writes an answer in ChatGPT, Perplexity, Claude, Gemini or Google AI Overviews.' },
-  { category: 'basics', question: 'What does a generative engine optimization agency actually do?', answer: 'Four things. It makes sure retrieval crawlers can reach your pages. It restructures content so an answer can be lifted out cleanly. It builds the entity footprint that makes an engine confident naming you. And it measures how often you are actually mentioned. The first and last are where most programmes quietly fail.' },
-  { category: 'basics', question: 'What is answer engine optimization?', answer: 'Answer engine optimization is the older sibling of GEO. It began as writing pages so a direct answer could be pulled into a featured snippet, a People Also Ask box or a voice reply. That same extractable structure now feeds AI answers, so AEO and GEO have largely converged.' },
-  { category: 'basics', question: 'What is LLM SEO?', answer: 'LLM SEO is the same work named after the model rather than the surface. Someone saying LLM SEO usually means getting cited by ChatGPT, Claude, Gemini or Copilot. There is no separate methodology behind the label. Treat a vendor who claims otherwise as a marketing problem, not a technical one.' },
-  { category: 'basics', question: 'Is generative engine optimization just SEO with a new name?', answer: 'Partly, and being straight about that matters. Google states there are no additional requirements or special optimizations to appear in AI Overviews or AI Mode. So much of GEO is excellent ordinary SEO. What is genuinely new is per engine crawler access, extractable answer structure, and measuring mentions instead of positions.' },
+  { category: 'basics', question: 'What is generative engine optimization?', answer: 'Generative engine optimization ensures your pages are cited inside AI answers. Instead of competing for ranked blue links, you compete for direct citations. Your brand gets named when engines write answers in ChatGPT, Perplexity, Claude, or Google AI Overviews.' },
+  { category: 'basics', question: 'What does a generative engine optimization agency actually do?', answer: 'Four core tasks. It confirms retrieval crawlers can access your pages. It restructures content so an answer can be lifted cleanly. It strengthens entity signals so engines name your brand with confidence. And it tracks your actual mention frequency across models.' },
+  { category: 'basics', question: 'What is answer engine optimization?', answer: 'Answer engine optimization is the older sibling of GEO. It began as writing pages so direct answers could be pulled into featured snippets and voice replies. That same extractable structure now feeds AI answers, so AEO and GEO have largely converged.' },
 
   { category: 'terms', question: 'What is the difference between GEO and AEO?', answer: 'GEO is about being a source inside a generated answer. AEO is about having a clean extractable answer on the page in the first place. AEO is a component of GEO, not a rival to it. Anyone selling them as two separate retainers is selling the same work twice.' },
   { category: 'terms', question: 'What is the difference between GEO and traditional SEO?', answer: 'Traditional SEO competes for a ranked position and is measured in clicks. GEO competes to be quoted inside an answer and is measured in mentions. The underlying index is largely shared, so the technical foundations overlap heavily, but the winning page shape and the reporting are different.' },
   { category: 'terms', question: 'Should I hire a GEO agency or an AI SEO agency?', answer: 'It depends what you need first. If your organic foundation is weak, start there, and our broader AI SEO services page covers that programme. If you already rank and are simply not being named in AI answers, this page is the right starting point. Most brands do both, in that order.' },
   { category: 'terms', question: 'Does schema markup get me cited by AI?', answer: 'Not on its own, and we will not tell you otherwise. Google states there is no special schema.org structured data you need to add to appear in its AI features. We still ship correct schema because it is cheap and helps entity resolution. We just do not sell it as a citation lever.' },
-  { category: 'terms', question: 'Do I need an llms.txt file?', answer: 'It is harmless and takes minutes, so we ship one. It is not a lever. No major engine has published a commitment to reading it. If an agency puts llms.txt at the centre of its GEO pitch, that tells you how much measured work sits behind the rest of the pitch.' },
 
-  { category: 'engines', question: 'Which AI engines can you actually influence?', answer: 'The ones that retrieve live web content and cite sources: ChatGPT search, Perplexity, Claude, Google AI Overviews and AI Mode, Bing chat answers, and Apple surfaces fed by Applebot. We cannot change what a model memorised in training. We can change what it retrieves and links at answer time.' },
+  { category: 'engines', question: 'Which AI engines can you actually influence?', answer: 'We influence engines that retrieve live web pages. These include ChatGPT search, Perplexity, Claude, Google AI Overviews, and Bing chat. We cannot alter static model training data. We optimize what models fetch, read, and cite in live queries.' },
   { category: 'engines', question: 'How does ChatGPT decide which sites it can cite?', answer: 'Access is the first gate and OpenAI documents it. Sites opted out of the OAI-SearchBot crawler will not be shown in ChatGPT search answers, though they can still appear as navigational links. That makes robots.txt the cheapest and most damaging mistake in the whole discipline.' },
   { category: 'engines', question: 'Does blocking AI crawlers hurt my visibility?', answer: 'It depends which bot. Blocking a training crawler such as GPTBot or ClaudeBot is a rights decision with no documented effect on search citation. Blocking a retrieval crawler such as OAI-SearchBot, Claude-SearchBot or PerplexityBot removes you from that engine. Many sites block both by accident with one broad rule.' },
   { category: 'engines', question: 'What is Google-Extended and should I allow it?', answer: 'Google-Extended is a robots.txt control token, not a crawler. Google documents that it has no separate user agent, and that it does not affect inclusion in Google Search and is not a ranking signal. It governs training and grounding in Gemini apps and the Vertex AI API. Allowing it is a rights call.' },
-  { category: 'engines', question: 'How do I stay in Bing chat answers?', answer: 'By doing nothing, according to Microsoft. Bing published that no action is needed to remain in its chat answers, and that content tagged NOARCHIVE will not be included in them or linked from them. If someone added NOARCHIVE years ago for another reason, it is costing you answer inclusion now.' },
-  { category: 'engines', question: 'Do AI crawlers run the JavaScript on my site?', answer: 'We do not assume they do, and neither should you. Google tells site owners to make sure important content is available in textual form, and the other retrieval crawlers publish nothing at all about rendering. So anything load bearing gets server rendered. If your key content only exists after hydration, treat it as invisible.' },
+  { category: 'engines', question: 'How do I stay in Bing chat answers?', answer: 'By doing nothing, according to Microsoft. Bing published that no action is needed to remain in its chat answers. They confirmed that content tagged NOARCHIVE will not be included or linked. If someone added NOARCHIVE years ago, it costs you answer inclusion now.' },
+  { category: 'engines', question: 'Do AI crawlers run the JavaScript on my site?', answer: 'We do not assume they do, and neither should you. Google tells site owners to make sure important content is available in textual form. Other retrieval crawlers publish nothing at all about rendering. So anything load bearing gets server rendered. If your key content only exists after hydration, treat it as invisible.' },
 
-  { category: 'work', question: 'What happens in the first few weeks?', answer: 'We start with an access and extraction audit: every retrieval crawler token checked by name, rendering checked with JavaScript off, and your top pages scored for whether an answer can be lifted out of them. Alongside that we run a baseline mention sweep so we know where you stand.' },
+  { category: 'work', question: 'What happens in the first few weeks?', answer: 'We start with an access and extraction audit. We verify every retrieval crawler token in robots.txt. We test server rendering with JavaScript disabled. Then we run a baseline prompt sweep across major engines to measure initial mention share.' },
   { category: 'work', question: 'Do you rewrite our existing pages or build new ones?', answer: 'Mostly rewrite. A page that already ranks and already has links is a far better citation candidate than a new page with neither. We restructure it into extractable units, raise the density of named systems and standards, add a real FAQ block, and fix the schema. New pages come later.' },
   { category: 'work', question: 'What actually makes a page more likely to be cited?', answer: 'Self contained factual sentences that survive being lifted out of context. Real list structure instead of long prose. Specific named systems and standards rather than generic claims. An honest last updated date, and a named author. Those are the traits that recur across the pages we measured as cited.' },
 
   { category: 'results', question: 'How long before we get cited?', answer: 'Crawler access fixes can register within about a day, since OpenAI documents that robots.txt changes take roughly twenty four hours to be picked up. Content and entity work is slower and usually shows in months rather than weeks. Anyone promising ChatGPT citations in thirty days is guessing.' },
-  { category: 'results', question: 'How do you measure AI visibility?', answer: 'We run the same buyer questions repeatedly across ChatGPT, Claude, Gemini and Perplexity and record how often you are mentioned, where in the answer, and which competitor domains own it instead. Repeating the prompt matters, because these answers vary run to run. One screenshot is not a measurement.' },
-  { category: 'results', question: 'Can you guarantee we will be cited in ChatGPT?', answer: 'No, and a guarantee would be a red flag. Answers vary between runs on the same prompt, and no engine publishes its selection criteria. What we commit to is a measured baseline, a specific set of changes, and a repeat measurement on the same prompts so you can see whether it moved.' },
+  { category: 'results', question: 'How do you measure AI visibility?', answer: 'We run target buyer questions repeatedly across ChatGPT, Claude, Gemini, and Perplexity. We track how often your brand is mentioned, your citation order, and which competitors appear. We run multiple iterations per prompt to ensure statistical consistency.' },
+  { category: 'results', question: 'Can you guarantee we will be cited in ChatGPT?', answer: 'No, and a guarantee would be a red flag. Answers vary between runs on the same prompt. No engine publishes its selection criteria. What we commit to is a measured baseline and a specific set of changes. Then we repeat measurements on the same prompts so you can see progress.' },
   { category: 'results', question: 'Is AI traffic worth chasing if the volume is small?', answer: 'The visit count is the wrong metric. An answer that names you reaches a buyer at the moment they are building a shortlist, and it works even when nobody clicks. Judge it on mention share across your buying questions, and on how many sales conversations open with a recommendation.' },
 
   { category: 'working', question: 'How do we start?', answer: 'A short call where we look at your robots.txt, your top pages, and the questions your buyers actually ask an assistant. You leave knowing whether you are blocked, whether your pages are extractable, and what a realistic programme looks like. You can also run our free AI visibility check first.' },
 
-  /* ── AI search optimization / LLM SEO ──────────────────────────────────────
-     Added 2026-08-17. The page had 24 mentions of "generative engine
-     optimization" and ZERO of "ai search optimization", which is the term we
-     can actually reach: measured, the weakest page-1 incumbent for
-     "ai search optimization services" holds 42 referring domains and for
-     "llm seo services" holds 15, against our 63. The GEO and AEO agency terms
-     are gated (weakest 350 and 474 respectively) despite carrying KD 0 and
-     KD 6, so they stay in the body as category vocabulary but are no longer
-     what the page targets. See pipeline/research/US-SERVICE-DEMAND-PLAN.md.
-  ─────────────────────────────────────────────────────────────────────────── */
-  { category: 'terms', question: 'What are AI search optimization services?', answer: 'AI search optimization services get your business named in the answers assistants write, rather than just ranked on a page of links. In practice that is four things: making sure the AI crawlers can reach you at all, restructuring pages so an answer can be lifted cleanly out of them, building the entity and citation signals that make an engine trust you as a source, and measuring which engines actually name you month to month. Generative engine optimization, answer engine optimization and LLM SEO are all names for parts of this same job.' },
-  { category: 'terms', question: 'What is LLM SEO, and how is it different from GEO?', answer: 'They are the same discipline under two names. LLM SEO tends to emphasise the model side, meaning crawler access, llms.txt, and how your content is chunked and retrieved. GEO tends to emphasise the answer side, meaning extractable phrasing, statistics worth quoting, and named entities. Anyone selling them as two separate retainers is selling you the same work twice. Ask for one scope and one report.' },
-  { category: 'terms', question: 'Are AI search optimization services just SEO with a new name?', answer: 'No, though plenty of agencies rebadge and hope you will not check. The honest test is the deliverable. Classic SEO optimises for a click on a blue link. AI search optimization optimises for being quoted when there is no blue link, which changes what you write, how you structure it, and what you measure. If an agency cannot show you per-engine citation counts for ChatGPT, Perplexity, Claude and Gemini separately, they are reporting classic SEO with new labels.' },
-  { category: 'results', question: 'How do you price AI search optimization services?', answer: 'Fixed price after a scoping call, month to month, no long lock-in. Scope is driven by how many pages need restructuring, how many engines and prompts you want tracked, and whether crawler access needs fixing first. We start every engagement with a free AI visibility check so you see your baseline before you commit to anything, and so we both know what the starting number was when we report against it later.' },
+  /* ── AI search optimization / LLM SEO ── */
+  { category: 'terms', question: 'What are AI search optimization services?', answer: 'AI search optimization services get your business named in AI answers rather than ranked on a page of links. We ensure AI crawlers can reach your site. We restructure pages so models can lift answers cleanly. We build entity signals so engines trust your brand. Finally, we track monthly mention share across ChatGPT, Claude, and Perplexity.' },
+  { category: 'terms', question: 'What is LLM SEO, and how is it different from GEO?', answer: 'They describe the same discipline under two names. LLM SEO emphasizes crawler access, llms.txt, and content chunking. GEO emphasizes extractable phrasing, credible data, and named entities. Any agency selling them as separate services is charging twice for the same work.' },
+  { category: 'terms', question: 'Are AI search optimization services just SEO with a new name?', answer: 'No. Classic SEO targets clicks on blue links. AI search optimization targets citations when no link is clicked. This changes content structure, schemas, and analytics. If an agency cannot show per-engine citation counts, they are reporting classic SEO under a new label.' },
+  { category: 'results', question: 'How do you price AI search optimization services?', answer: 'We offer fixed milestone pricing on a month-to-month basis. Pricing reflects how many pages need restructuring and how many prompts are tracked. We run a free AI visibility check first. This establishes your baseline before any contract begins.' },
 ];
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -192,10 +180,10 @@ const BREADCRUMB_SCHEMA = {
 ───────────────────────────────────────────────────────────────────────────── */
 
 const STATS = [
-  { b: '4 engines', s: 'measured: ChatGPT, Claude, Gemini, Perplexity' },
-  { b: '12 surfaces', s: 'audited one by one, never by wildcard' },
-  { b: 'Mentions', s: 'the metric, not ranking position' },
-  { b: 'Vendor docs', s: 'every claim traced to the source' },
+  { b: '4 engines', s: 'Measured: ChatGPT, Claude, Gemini, Perplexity.' },
+  { b: '12 surfaces', s: 'Audited one by one, never by wildcard.' },
+  { b: 'Mentions', s: 'The metric, not ranking position.' },
+  { b: 'Vendor docs', s: 'Every claim traced to the source.' },
 ];
 
 // Citations fetch-verified 2026-08-06 against the linked primary sources.
@@ -203,19 +191,19 @@ const STATS = [
 const SOURCED = [
   {
     v: 'The access gate',
-    d: 'OpenAI documents that sites opted out of its OAI-SearchBot crawler "will not be shown in ChatGPT search answers, though can still appear as navigational links." One robots.txt line decides whether the rest of the work is even possible.',
+    d: 'OpenAI states that sites blocking OAI-SearchBot cannot appear in search answers. One robots.txt line decides whether AI citation is possible.',
     src: 'OpenAI, Crawlers',
     href: 'https://developers.openai.com/api/docs/bots',
   },
   {
     v: 'No secret markup',
-    d: 'Google states there are "no additional requirements to appear in AI Overviews or AI Mode, nor other special optimizations necessary," and that there is "no special schema.org structured data that you need to add." Treat any proprietary AI ranking factor claim with suspicion.',
+    d: 'Google states that AI Overviews require no special optimization or schema. Standard technical quality drives inclusion.',
     src: 'Google Search Central',
     href: 'https://developers.google.com/search/docs/appearance/ai-features',
   },
   {
     v: 'Two different bots',
-    d: 'Anthropic documents ClaudeBot as the training crawler, while Claude-SearchBot "navigates the web to improve search result quality for users." Naming only ClaudeBot in robots.txt and assuming Claude visibility is covered is a common and expensive mistake.',
+    d: 'Anthropic uses ClaudeBot for model training and Claude-SearchBot for web retrieval. Naming only ClaudeBot leaves search bots unmanaged.',
     src: 'Anthropic Support',
     href: 'https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler',
   },
@@ -225,31 +213,31 @@ const TERMS = [
   {
     term: 'Generative engine optimization (GEO)',
     means: 'Getting your pages used and named as a source inside a generated answer.',
-    where: 'ChatGPT, Perplexity, Claude, Gemini, Google AI Overviews',
+    where: 'ChatGPT, Perplexity, Claude, Gemini, Google AI Overviews.',
     read: 'The broadest of the labels, and the one with real buyer search demand behind it.',
   },
   {
     term: 'Answer engine optimization (AEO)',
     means: 'Writing pages so a direct answer can be lifted out cleanly.',
-    where: 'Featured snippets, People Also Ask, voice assistants, AI answers',
+    where: 'Featured snippets, People Also Ask, voice assistants, AI answers.',
     read: 'Predates GEO. It is a component of GEO now, not a competing service.',
   },
   {
     term: 'AI optimization (AIO)',
     means: 'Either GEO and AEO together, or Google AI Overviews specifically.',
-    where: 'Mostly Google surfaces',
+    where: 'Mostly Google search surfaces.',
     read: 'The vaguest label of the four. Always ask which of the two meanings is intended.',
   },
   {
     term: 'LLM SEO',
     means: 'The same work, named after the model instead of the surface.',
-    where: 'ChatGPT, Claude, Gemini, Copilot',
+    where: 'ChatGPT, Claude, Gemini, and Copilot.',
     read: 'A synonym for GEO in practice. No separate methodology exists.',
   },
   {
     term: 'Classic SEO',
     means: 'Ranking a link on a results page, measured in clicks.',
-    where: 'Google and Bing organic results',
+    where: 'Google and Bing organic results.',
     read: 'Still the foundation. Google requires a page to be indexed in Search before it can be a supporting link in an AI Overview.',
   },
 ];
@@ -257,88 +245,93 @@ const TERMS = [
 // Every claim in this table was fetch-verified against the vendor's own
 // documentation on 2026-08-06. Quotes are verbatim. Re-verify before editing.
 const SURFACES = [
-  { surface: 'ChatGPT search', token: 'OAI-SearchBot', says: 'Sites opted out "will not be shown in ChatGPT search answers, though can still appear as navigational links."', src: 'OpenAI', href: 'https://developers.openai.com/api/docs/bots' },
-  { surface: 'ChatGPT live fetches', token: 'ChatGPT-User', says: 'Used "for certain user actions in ChatGPT and Custom GPTs" when a question needs a live page.', src: 'OpenAI', href: 'https://developers.openai.com/api/docs/bots' },
-  { surface: 'OpenAI model training', token: 'GPTBot', says: 'Crawls "content that may be used in training our generative AI foundation models." Training, not search.', src: 'OpenAI', href: 'https://developers.openai.com/api/docs/bots' },
-  { surface: 'Claude search results', token: 'Claude-SearchBot', says: '"Navigates the web to improve search result quality for users." Disabling it "may reduce your site’s visibility and accuracy in user search results."', src: 'Anthropic', href: 'https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler' },
-  { surface: 'Claude live fetches', token: 'Claude-User', says: 'Accesses websites when individuals ask Claude questions. Disabling it "may reduce your site’s visibility for user-directed web search."', src: 'Anthropic', href: 'https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler' },
-  { surface: 'Anthropic model training', token: 'ClaudeBot', says: 'Collects "web content that could potentially contribute to their training." Not the search crawler.', src: 'Anthropic', href: 'https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler' },
-  { surface: 'Perplexity answers', token: 'PerplexityBot', says: '"Designed to surface and link websites in search results on Perplexity," and "not used to crawl content for AI foundation models."', src: 'Perplexity', href: 'https://docs.perplexity.ai/guides/bots' },
-  { surface: 'Perplexity live fetches', token: 'Perplexity-User', says: 'Visits a page "to help provide an accurate answer and include a link."', src: 'Perplexity', href: 'https://docs.perplexity.ai/guides/bots' },
-  { surface: 'Google AI Overviews and AI Mode', token: 'Googlebot', says: 'There are "no additional requirements to appear in AI Overviews or AI Mode, nor other special optimizations necessary."', src: 'Google', href: 'https://developers.google.com/search/docs/appearance/ai-features' },
-  { surface: 'Gemini training and grounding', token: 'Google-Extended', says: 'A control token with no separate user agent. It "does not impact a site’s inclusion in Google Search nor is it used as a ranking signal."', src: 'Google', href: 'https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers' },
-  { surface: 'Bing chat answers', token: 'bingbot, NOARCHIVE, NOCACHE', says: '"No action is needed to remain in Bing Chat." Content tagged NOARCHIVE "will not be included in Bing Chat answers, not be linked to in the answers."', src: 'Bing Webmaster Blog', href: 'https://blogs.bing.com/webmaster/september-2023/Announcing-new-options-for-webmasters-to-control-usage-of-their-content-in-Bing-Chat' },
-  { surface: 'Spotlight, Siri and Safari', token: 'Applebot, Applebot-Extended', says: 'Applebot data powers "search technology integrated into many user experiences" including Spotlight, Siri and Safari. Generative training is opted out via Applebot-Extended.', src: 'Apple', href: 'https://support.apple.com/en-us/119829' },
+  { surface: 'ChatGPT search', token: 'OAI-SearchBot', says: 'Sites opted out will not appear in ChatGPT search answers.', src: 'OpenAI', href: 'https://developers.openai.com/api/docs/bots' },
+  { surface: 'ChatGPT live fetches', token: 'ChatGPT-User', says: 'Used when questions require live web content.', src: 'OpenAI', href: 'https://developers.openai.com/api/docs/bots' },
+  { surface: 'OpenAI model training', token: 'GPTBot', says: 'Crawls content used to train foundation models.', src: 'OpenAI', href: 'https://developers.openai.com/api/docs/bots' },
+  { surface: 'Claude search results', token: 'Claude-SearchBot', says: 'Navigates the web to improve user search quality.', src: 'Anthropic', href: 'https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler' },
+  { surface: 'Claude live fetches', token: 'Claude-User', says: 'Accesses web pages for user-directed search queries.', src: 'Anthropic', href: 'https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler' },
+  { surface: 'Anthropic model training', token: 'ClaudeBot', says: 'Collects training data rather than serving search.', src: 'Anthropic', href: 'https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler' },
+  { surface: 'Perplexity answers', token: 'PerplexityBot', says: 'Surfaces and links sources in search answers.', src: 'Perplexity', href: 'https://docs.perplexity.ai/guides/bots' },
+  { surface: 'Perplexity live fetches', token: 'Perplexity-User', says: 'Visits pages to provide accurate live sources.', src: 'Perplexity', href: 'https://docs.perplexity.ai/guides/bots' },
+  { surface: 'Google AI Overviews and AI Mode', token: 'Googlebot', says: 'Requires no special optimization or schema.', src: 'Google', href: 'https://developers.google.com/search/docs/appearance/ai-features' },
+  { surface: 'Gemini training and grounding', token: 'Google-Extended', says: 'Controls training without affecting search indexing.', src: 'Google', href: 'https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers' },
+  { surface: 'Bing chat answers', token: 'bingbot, NOARCHIVE, NOCACHE', says: 'Pages marked NOARCHIVE are excluded from chat.', src: 'Bing Webmaster Blog', href: 'https://blogs.bing.com/webmaster/september-2023/Announcing-new-options-for-webmasters-to-control-usage-of-their-content-in-Bing-Chat' },
+  { surface: 'Spotlight, Siri and Safari', token: 'Applebot, Applebot-Extended', says: 'Applebot powers search. Extended controls training.', src: 'Apple', href: 'https://support.apple.com/en-us/119829' },
 ];
 
 const PAINS = [
-  { i: '⛔', t: 'A robots.txt rule nobody reread', d: 'One broad disallow written to stop scrapers also catches the retrieval bots. The site is absent from an entire engine, with no error anywhere to notice.' },
-  { i: '▤', t: 'Pages that cannot be quoted', d: 'The answer is buried in paragraph six of unbroken prose. Nothing can be lifted out as a self contained unit, so a competitor gets lifted instead.' },
-  { i: '◌', t: 'The brand is not a resolvable entity', d: 'The engine has no confident sense of what your company is or what it sells, so it names one it does have that confidence about.' },
-  { i: '☍', t: 'Nobody is counting mentions', d: 'Reporting shows rankings and sessions, so an answer that recommends a competitor to a ready buyer every day is invisible in the numbers.' },
+  { i: '⛔', t: 'A robots.txt rule nobody reread.', d: 'One broad disallow written to stop scrapers also catches the retrieval bots. The site is absent from an entire engine, with no error anywhere to notice.' },
+  { i: '▤', t: 'Pages that cannot be quoted.', d: 'The answer is buried in paragraph six of unbroken prose. Nothing can be lifted out as a self contained unit, so a competitor gets lifted instead.' },
+  { i: '◌', t: 'The brand is not a resolvable entity.', d: 'The engine has no confident sense of what your company is or what it sells, so it names one it does have that confidence about.' },
+  { i: '☍', t: 'Nobody is counting mentions.', d: 'Reporting shows rankings and sessions, so an answer that recommends a competitor to a ready buyer every day is invisible in the numbers.' },
 ];
 
 const AUDIT_CHECKS = [
-  'Every retrieval crawler token named explicitly in robots.txt, never inheriting from a wildcard',
-  'OAI-SearchBot, Claude-SearchBot, Claude-User, PerplexityBot and Perplexity-User checked one by one',
-  'Training bot policy (GPTBot, ClaudeBot, Google-Extended, Applebot-Extended) stated deliberately, not by accident',
-  'Legacy NOARCHIVE and NOCACHE meta tags found and reviewed against Bing chat inclusion',
-  'nosnippet, data-nosnippet and max-snippet directives audited for over-restriction',
-  'Server rendered HTML checked with JavaScript disabled, so nothing load bearing depends on hydration',
-  'Canonical tags, redirect chains and status codes checked, single hop only',
-  'schema.org coverage: Organization, WebPage, Service, Product, BreadcrumbList, Person, FAQPage',
-  'sameAs entity links pointed at real verified profiles, never invented ones',
-  'Honest dateModified on anything time sensitive, and a named author with Person schema',
-  'sitemap.xml, llms.txt and IndexNow submission wired and actually returning what they claim',
-  'Core Web Vitals sampled on the pages that matter, because a page that fails to load cannot be cited',
+  'Every retrieval crawler token named explicitly in robots.txt, never inheriting from a wildcard.',
+  'OAI-SearchBot, Claude-SearchBot, Claude-User, PerplexityBot and Perplexity-User checked one by one.',
+  'Training bot policy (GPTBot, ClaudeBot, Google-Extended, Applebot-Extended) stated deliberately, not by accident.',
+  'Legacy NOARCHIVE and NOCACHE meta tags found and reviewed against Bing chat inclusion.',
+  'nosnippet, data-nosnippet and max-snippet directives audited for over-restriction.',
+  'Server rendered HTML in Next.js checked with JavaScript disabled, so nothing load bearing depends on hydration.',
+  'Canonical tag validation, 301 redirect chains, and status codes checked, single hop only.',
+  'schema.org structured data coverage: Organization, WebPage, Service, Product, BreadcrumbList, Person, FAQPage in JSON-LD.',
+  'sameAs entity links pointed at real verified profiles, never invented ones.',
+  'Honest dateModified on anything time sensitive, and a named author with Person schema.',
+  'sitemap.xml, llms.txt, hreflang tags, and IndexNow submission wired and actually returning what they claim.',
+  'Core Web Vitals sampled on the pages that matter, because a page that fails to load cannot be cited.',
 ];
 
 const FEATURES = [
-  { t: 'Retrieval access audit', d: 'Every AI crawler token checked by hand: OAI-SearchBot, ChatGPT-User, Claude-SearchBot, Claude-User, PerplexityBot, Perplexity-User, Googlebot, bingbot, Applebot.' },
-  { t: 'Answer extraction rewrite', d: 'Pages restructured into self contained factual units, real list markup, and definitions an engine can lift without the surrounding paragraph.' },
-  { t: 'Named capability density', d: 'Generic claims replaced with real system names, standards and versions, because specificity is what separates a page an engine will quote.' },
-  { t: 'Entity and schema work', d: 'Organization, Service, Product, BreadcrumbList, Person and FAQPage JSON-LD, with sameAs pointed at real verified profiles so your brand resolves as one entity.' },
-  { t: 'FAQ and question coverage', d: 'Buyer questions phrased the way buyers ask them, answered in extractable blocks, mirrored into FAQPage markup with zero drift between the two.' },
-  { t: 'Technical foundations', d: 'Server rendered HTML, single hop redirects, correct canonicals, clean sitemaps, llms.txt, IndexNow submission, and Core Web Vitals kept out of the way.' },
-  { t: 'Comparison and shortlist assets', d: 'The pages engines reach for on "which vendor should I use" questions: honest comparisons, selection criteria, category explainers that name real alternatives.' },
-  { t: 'Mention measurement', d: 'Repeat runs of your real buyer prompts across ChatGPT, Claude, Gemini and Perplexity, recording mention rate, position, and which domains own the answer instead.' },
-  { t: 'Competitor answer teardown', d: 'The domains currently cited on your questions, pulled apart page by page, so the gap is a specific list rather than a feeling.' },
+  { t: 'Retrieval access audit.', d: 'Every AI crawler token checked by hand: OAI-SearchBot, ChatGPT-User, Claude-SearchBot, Claude-User, PerplexityBot, Perplexity-User, Googlebot, bingbot, Applebot.' },
+  { t: 'Answer extraction rewrite.', d: 'Pages restructured into self contained factual units, real list markup, and definitions an engine can lift without the surrounding paragraph.' },
+  { t: 'Named capability density.', d: 'Generic claims replaced with real system names, standards and versions, because specificity is what separates a page an engine will quote.' },
+  { t: 'Entity and schema work.', d: 'Organization, Service, Product, BreadcrumbList, Person and FAQPage JSON-LD, with sameAs pointed at real verified profiles so your brand resolves as one entity.' },
+  { t: 'FAQ and question coverage.', d: 'Buyer questions phrased the way buyers ask them, answered in extractable blocks, mirrored into FAQPage markup with zero drift between the two.' },
+  { t: 'Technical foundations.', d: 'Server rendered HTML, single hop redirects, correct canonicals, clean sitemaps, llms.txt, IndexNow submission, and Core Web Vitals kept out of the way.' },
+  { t: 'Comparison and shortlist assets.', d: 'The pages engines reach for on "which vendor should I use" questions: honest comparisons, selection criteria, category explainers that name real alternatives.' },
+  { t: 'Mention measurement.', d: 'Repeat runs of your real buyer prompts across ChatGPT, Claude, Gemini and Perplexity, recording mention rate, position, and which domains own the answer instead.' },
+  { t: 'Competitor answer teardown.', d: 'The domains currently cited on your questions, pulled apart page by page, so the gap is a specific list rather than a feeling.' },
+  { t: 'Search console & crawler intelligence.', d: 'Log file analysis and Google Search Console (GSC) crawl budget tracking across Cloudflare edge caching, Next.js routes, and verified retrieval bots.' },
+  { t: 'Tooling & platform integration.', d: 'Benchmarking through Screaming Frog, Ahrefs, and Semrush alongside LangChain and vector search pipelines in Pinecone and Weaviate.' },
+  { t: 'Multi-model prompt testing.', d: 'Testing variations across OpenAI GPT-4o, Anthropic Claude 3.5, Google Gemini 1.5, Llama, and Mistral to verify extractable citation share.' },
 ];
 
 const BENEFITS = [
-  { i: '◉', t: 'You are in the shortlist', d: 'When a buyer asks an assistant who to consider, your name appears rather than being absent.' },
-  { i: '⌁', t: 'Visibility without a click', d: 'An answer that names you does work even when nobody visits, which is exactly what classic reporting misses.' },
-  { i: '⚑', t: 'Blocked engines get unblocked', d: 'The access audit usually finds a retrieval bot excluded by an old rule. Fixing it is the fastest win available.' },
-  { i: '◫', t: 'Pages that answer, not waffle', d: 'The rewrite that makes a page extractable also makes it faster to read, so conversion and citation move together.' },
-  { i: '⌸', t: 'A number to argue with', d: 'Mention rate per engine on your own buyer prompts, measured the same way each cycle, instead of one lucky screenshot.' },
-  { i: '⌘', t: 'Your entity resolves cleanly', d: 'Consistent naming, real profile links and correct schema stop engines confusing you with a similarly named company.' },
+  { i: '◉', t: 'You are in the shortlist.', d: 'When a buyer asks an assistant who to consider, your name appears rather than being absent.' },
+  { i: '⌁', t: 'Visibility without a click.', d: 'An answer that names you does work even when nobody visits, which is exactly what classic reporting misses.' },
+  { i: '⚑', t: 'Blocked engines get unblocked.', d: 'The access audit usually finds a retrieval bot excluded by an old rule. Fixing it is the fastest win available.' },
+  { i: '◫', t: 'Pages that answer, not waffle.', d: 'The rewrite that makes a page extractable also makes it faster to read, so conversion and citation move together.' },
+  { i: '⌸', t: 'A number to argue with.', d: 'Mention rate per engine on your own buyer prompts, measured the same way each cycle, instead of one lucky screenshot.' },
+  { i: '⌘', t: 'Your entity resolves cleanly.', d: 'Consistent naming, real profile links and correct schema stop engines confusing you with a similarly named company.' },
 ];
 
 const MEASURE = [
-  'A fixed prompt set built from the questions your buyers actually type, not keyword strings',
-  'Each prompt run repeatedly, because the same question returns different sources run to run',
-  'Mention rate per engine: ChatGPT, Claude, Gemini and Perplexity measured separately',
-  'Position within the answer, since being named third is not the same as being named first',
-  'Linked versus unlinked mentions recorded separately',
-  'The competitor domains currently owning each answer, tracked over time',
-  'Google AI Overview presence checked on the same question set',
-  'Crawler access status per retrieval bot, rechecked every cycle in case a deploy changed robots.txt',
+  'A fixed prompt set built from the questions your buyers actually type, not keyword strings.',
+  'Each prompt run repeatedly, because the same question returns different sources run to run.',
+  'Mention rate per engine: ChatGPT, Claude, Gemini and Perplexity measured separately.',
+  'Prompt engineering evaluation across OpenAI GPT-4o, Anthropic Claude, and Google Gemini.',
+  'Position within the answer, since being named third is not the same as being named first.',
+  'Linked versus unlinked mentions recorded separately across all target queries.',
+  'The competitor domains currently owning each answer, tracked over time.',
+  'Google AI Overview presence and Google Search Console indexing checked on the same question set.',
+  'Crawler access status per retrieval bot, rechecked every cycle in case a deploy changed robots.txt.',
+  'Vector search, embeddings context, and retrieval augmented generation (RAG) chunking evaluation.',
 ];
 
 const STEPS = [
-  { n: '01', t: 'Baseline', d: 'We measure where you stand before touching anything: mention rate per engine on your real buyer prompts, plus a full retrieval access audit. Zeros are common and are a start line, not a verdict.' },
-  { n: '02', t: 'Unblock', d: 'Crawler access, rendering and technical foundations first, because content work is wasted if an engine cannot fetch the page. OpenAI documents roughly a day for robots.txt changes to register.' },
-  { n: '03', t: 'Rewrite', d: 'Your strongest existing pages restructured for extraction and specificity, schema corrected, FAQ blocks added, entity links cleaned up. Existing pages first, new pages second.' },
-  { n: '04', t: 'Remeasure', d: 'The same prompts run again, the same way, and the diff reported honestly including the ones that did not move. Then the next set of pages.' },
+  { n: '01', t: 'Baseline.', d: 'We measure where you stand before touching anything: mention rate per engine on your real buyer prompts, plus a full retrieval access audit. Zeros are common and are a start line, not a verdict.' },
+  { n: '02', t: 'Unblock.', d: 'Crawler access, rendering and technical foundations first, because content work is wasted if an engine cannot fetch the page. OpenAI documents roughly a day for robots.txt changes to register.' },
+  { n: '03', t: 'Rewrite.', d: 'Your strongest existing pages restructured for extraction and specificity, schema corrected, FAQ blocks added, entity links cleaned up. Existing pages first, new pages second.' },
+  { n: '04', t: 'Remeasure.', d: 'The same prompts run again, the same way, and the diff reported honestly including the ones that did not move. Then the next set of pages.' },
 ];
 
 const SEGMENTS = [
-  { t: 'Ecommerce and DTC brands', d: 'Buying guides, category explainers and comparison pages are what assistants reach for on "which brand should I buy" questions. Product pages alone rarely get cited.' },
-  { t: 'B2B and SaaS', d: 'The assistant is often consulted before a vendor list exists. Category definition pages, integration and standards coverage, and honest alternative comparisons get named.' },
-  { t: 'Professional services', d: 'Legal, accounting, medical and consulting answers lean on trust signals. Named authors, credentials, jurisdiction specifics and clean entity resolution beat volume here.' },
-  { t: 'Marketplaces and platforms', d: 'When a category has a famous incumbent, the engine defaults to it. The route in is depth on use cases the incumbent covers thinly, named precisely.' },
-  { t: 'Local and multi location businesses', d: 'Assistants answer near me questions from the index plus local data. Consistent naming across profiles, correct location schema and genuinely distinct location pages.' },
-  { t: 'Publishers and content sites', d: 'Access decisions matter most here, because training and retrieval are separate rights choices. We help make both deliberately rather than by accident.' },
+  { t: 'Ecommerce and DTC brands.', d: 'Buying guides, category explainers and comparison pages are what assistants reach for on "which brand should I buy" questions. Product pages alone rarely get cited.' },
+  { t: 'B2B and SaaS.', d: 'The assistant is often consulted before a vendor list exists. Category definition pages, integration and standards coverage, and honest alternative comparisons get named.' },
+  { t: 'Professional services.', d: 'Legal, accounting, medical and consulting answers lean on trust signals. Named authors, credentials, jurisdiction specifics and clean entity resolution beat volume here.' },
+  { t: 'Marketplaces and platforms.', d: 'When a category has a famous incumbent, the engine defaults to it. The route in is depth on use cases the incumbent covers thinly, named precisely.' },
+  { t: 'Local and multi location businesses.', d: 'Assistants answer near me questions from the index plus local data. Consistent naming across profiles, correct location schema and genuinely distinct location pages.' },
+  { t: 'Publishers and content sites.', d: 'Access decisions matter most here, because training and retrieval are separate rights choices. We help make both deliberately rather than by accident.' },
 ];
 
 const checkIcon = (
@@ -417,19 +410,13 @@ export default function GenerativeEngineOptimizationPage() {
                 <h2 style={{ marginTop: '10px' }}>What is generative engine optimization?</h2>
                 <div style={{ marginTop: '18px', display: 'grid', gap: '14px' }} className="pp-lead">
                   <p>
-                    Generative engine optimization is the work of getting your pages used and named as a source inside AI
-                    generated answers. Rather than competing for a position on a results page, you compete to be one of the
-                    few pages an engine pulls from when it writes an answer.
+                    Generative engine optimization gets your pages named as sources in AI answers. You do not just compete for a spot on a results page. You compete to be one of the few sources an engine cites when writing an answer.
                   </p>
                   <p>
-                    It splits into four jobs, in this order. Can the engine fetch your page at all. Can it lift a clean
-                    answer out of it. Does it know enough about who you are to put your name next to that answer. And are
-                    you counting how often that happens.
+                    It splits into four jobs, in this order. Can the engine fetch your page? Can it lift a clean answer from it? Does it know who you are to put your name next to it? And do you count how often that happens?
                   </p>
                   <p>
-                    Most programmes skip the first and the last. Access is decided by a robots.txt file nobody has reread
-                    in two years, and measurement gets replaced by a screenshot of one good answer. Both are fixable in
-                    days, and both are where we start.
+                    Most programmes skip the first and the last. Access often depends on an old robots.txt file. Measurement is often reduced to a single screenshot. Both are fixable in days. Both are where we start.
                   </p>
                   <p>
                     This page covers GEO, answer engine optimization and LLM SEO specifically. If your organic foundation
@@ -480,8 +467,7 @@ export default function GenerativeEngineOptimizationPage() {
               </table>
             </div>
             <p className="pp-lead" style={{ marginTop: '20px', maxWidth: '68ch' }}>
-              Short version: GEO and LLM SEO are the same thing, AEO is a part of it, AIO means whichever of the two the
-              speaker prefers, and none of them replace classic SEO. They sit on top of it.
+              Short version: GEO and LLM SEO describe the same work. AEO is a subset focusing on direct answers. Neither replaces classic SEO. They build on top of indexed search foundations.
             </p>
           </div>
         </section>
@@ -564,6 +550,7 @@ export default function GenerativeEngineOptimizationPage() {
           headline={'Want to know what AI says about you?'}
           sub={'We will run your brand and your main terms through ChatGPT, Perplexity and Google AI Overviews and send you the raw answers.'}
           label={'Check your AI visibility'}
+          href="/contact"
         />
 
         {/* Audit checklist */}
@@ -578,7 +565,8 @@ export default function GenerativeEngineOptimizationPage() {
                   cheap, fast, and where most of the damage we find has already been done, usually by a well meant rule
                   written for another reason.
                 </p>
-                <div style={{ marginTop: '20px' }}>
+                <div style={{ marginTop: '20px', display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
+                  <Link href="/contact" style={linkStyle}>Book an AI visibility audit &rarr;</Link>
                   <Link href="/ai-visibility-checker" style={linkStyle}>Run the free AI visibility check</Link>
                 </div>
               </div>
@@ -634,7 +622,13 @@ export default function GenerativeEngineOptimizationPage() {
                 will tell you which retrieval crawlers can reach you, which cannot, and whether your top pages can be
                 quoted at all.
               </p>
-              <div style={{ marginTop: '20px' }}>
+              <div style={{ marginTop: '20px', display: 'flex', gap: '14px', flexWrap: 'wrap', alignItems: 'center' }}>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 rounded-full bg-[#F05A28] px-6 py-3 text-base font-semibold text-white transition-opacity hover:opacity-90"
+                >
+                  Check your retrieval access &rarr;
+                </Link>
                 <ModalCTAButton label="Talk to the Founder" region="us" btnVariant="primary-light" />
               </div>
             </div>
@@ -722,7 +716,7 @@ export default function GenerativeEngineOptimizationPage() {
                 'That llms.txt is a technical necessity. We ship one because it costs nothing, and we will not build a strategy on it.',
                 'That longer is better. The pages we measured as cited cluster well below the word counts most agencies pitch.',
                 'That we can guarantee a ChatGPT citation. Answers vary run to run and no engine publishes its selection criteria.',
-                'That AI visibility replaces SEO. Google states a page has to be indexed and eligible to show in Search with a snippet before it can be a supporting link in AI Overviews or AI Mode.',
+                'That AI visibility replaces SEO. Google states a page has to be indexed. It must be eligible to show in Search with a snippet before it can be a supporting link in AI Overviews or AI Mode.',
               ].map((item) => (
                 <li key={item} style={bulletRowStyle}>
                   <span style={bulletStyle}>{checkIcon}</span>
@@ -753,7 +747,7 @@ export default function GenerativeEngineOptimizationPage() {
             variant="dark"
             eyebrow="GENERATIVE ENGINE OPTIMIZATION"
             headline="Find out whether AI answers can even see you."
-            sub="Send us your domain. We check every retrieval crawler by name, look at whether your best pages can be quoted, and run a baseline mention sweep across ChatGPT, Claude, Gemini and Perplexity."
+            sub="Send us your domain. We check every retrieval crawler by name. We check whether your best pages can be quoted. Then we run a baseline mention sweep across ChatGPT, Claude, Gemini and Perplexity."
             primaryCta={{ label: 'Get an AI visibility audit', modal: true, region: 'us' }}
             secondaryCta={{ label: 'Run the free AI visibility check', href: '/ai-visibility-checker' }}
             objectionHandler="No retainer to start. You get the findings whether or not you work with us."

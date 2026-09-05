@@ -146,49 +146,49 @@ type Failure = { tag: string; title: string; body: string; tint: string; accent:
 const FAILURES: ReadonlyArray<Failure> = [
   {
     tag: '01',
-    title: 'The menu is a PDF',
+    title: 'The menu is a PDF.',
     body:
-      'A PDF opens in a viewer, forces pinch and zoom on a phone, has no headings a search engine can quote, and cannot be changed by whoever is on shift when the special sells out. Many are flat artwork with no selectable text at all.',
+      'A PDF forces pinch and zoom on mobile devices. Search crawlers cannot parse dishes cleanly. We implement HTML menus with schema markup and structured data. Kitchen staff update specials in seconds without editing PDFs.',
     tint: PEACH,
     accent: ORANGE_DARK,
   },
   {
     tag: '02',
-    title: 'Hours that are quietly wrong',
+    title: 'Hours that are quietly wrong.',
     body:
-      'A guest who drives to a closed door does not forgive it, and usually leaves a review about it. Hours on the site drift from hours on the Business Profile, and neither one knows about the holiday.',
+      'A guest arriving at a locked door leaves a bad review. Website hours must match Google Business Profile and holiday schedules. We synchronize local SEO citations and NAP consistency across directories.',
     tint: LAV_SOFT,
     accent: LAV,
   },
   {
     tag: '03',
-    title: 'Every order routed through a marketplace',
+    title: 'Every order routed through a marketplace.',
     body:
-      'Delivery apps are a real sales channel and we will not tell you to switch them off. But commission is charged on the order total, the customer belongs to the app, and the reorder happens there. A direct order keeps the margin and the email address.',
+      'Marketplaces take heavy commissions and retain customer data. Direct online ordering via Toast POS, Square, Clover, or Stripe preserves your margins. First-party data lets you build reorder loyalty.',
     tint: GREEN_SOFT,
     accent: GREEN,
   },
   {
     tag: '04',
-    title: 'Photos that came with the template',
+    title: 'Photos that came with the template.',
     body:
-      'A generic bowl of pasta on a slate board tells a guest nothing and looks like every other site in town. Real photographs of your plates, your room at seven in the evening and the people who work there are the cheapest credibility available.',
+      'Stock food photos destroy diner trust immediately. Authentic kitchen, dining room, and dish photography creates appetite appeal. High-resolution WebP images feed Google Business Profile and local map pack rankings.',
     tint: PEACH,
     accent: ORANGE_DARK,
   },
   {
     tag: '05',
-    title: 'It is slow on cellular data',
+    title: 'It is slow on cellular data.',
     body:
-      'People look you up on a pavement outside, on a phone, on a patchy signal, deciding between you and the place across the road. A homepage carrying a full-screen video, a slider and three font families loses that comparison before it renders.',
+      'Hungry guests search on mobile phones with weak signals. Bloated sliders and unoptimized video destroy Core Web Vitals. We optimize Largest Contentful Paint and Cumulative Layout Shift for sub-second speed.',
     tint: GREEN_SOFT,
     accent: GREEN,
   },
   {
     tag: '06',
-    title: 'Locations stacked on one page',
+    title: 'Locations stacked on one page.',
     body:
-      'Two or five sites jammed into one Locations page means no location has an address, hours, a menu or a map of its own. Google has nothing per branch to rank, and a guest searching your name plus a neighbourhood lands on a page about elsewhere.',
+      'Jamming multiple branches onto one URL harms local search. Each branch needs its own location landing page with unique schema markup. Dedicated URLs capture nearby Google maps ranking positions.',
     tint: LAV_SOFT,
     accent: LAV,
   },
@@ -203,63 +203,63 @@ type Deliverable = { n: string; title: string; body: string };
 const DELIVERABLES: ReadonlyArray<Deliverable> = [
   {
     n: '01',
-    title: 'The menu as a real web page, one page per menu',
+    title: 'The menu as a real web page, one page per menu.',
     body:
-      'Brunch, dinner, drinks and the kids menu each get their own URL. Every dish is a heading or a list item with a plain-text description under it, and dietary tags are words in the markup rather than icons. That is what makes a menu quotable.',
+      'Brunch, dinner, bar cocktails, and catering each get dedicated URLs. Dishes use semantic HTML headings with allergen notes. Search engines and AI engines quote items accurately.',
   },
   {
     n: '02',
-    title: 'Menu structured data pointing at that page',
+    title: 'Menu structured data and JSON-LD schema.',
     body:
-      'Google documents a menu property on local business structured data, described as the fully-qualified URL of the menu for food establishments. That field wants a page, not a download. It is one of the few places you hand Google a fact rather than a guess.',
+      'Google supports explicit menu property schema markup on local business listings. We embed JSON-LD schema linking dishes, prices, and dietary tags directly to your domain.',
   },
   {
     n: '03',
-    title: 'Hours in one place, feeding everything else',
+    title: 'Centralized hours synced with Google Business Profile.',
     body:
-      'Regular hours, kitchen close, last seating, and special hours for holidays. Google lets you set special hours for up to six days in a row and recommends confirming them for official holidays even when nothing changes. Site and profile should never disagree.',
+      'Standard service hours, kitchen closing times, and holiday hours live in one place. We ensure NAP consistency across Google Search Console and local directory citations.',
   },
   {
     n: '04',
-    title: 'Order buttons that go where you want them to go',
+    title: 'Direct ordering integration with Toast POS or Clover.',
     body:
-      'Your Business Profile carries links for food ordering, pickup and delivery, and Google lets third-party partners add their own automatically. A marketplace can be taking a cut of orders you never routed to it. Audit the profile, set your preferred link, remove the rest.',
+      'We integrate direct order workflows using Toast POS, Square, Clover, or Brink POS. Customers order without friction while you retain first-party data and full margins.',
   },
   {
     n: '05',
-    title: 'One reservation system, used everywhere',
+    title: 'Single reservation system integration across web and maps.',
     body:
-      'OpenTable, Resy, Tock, SevenRooms, whatever suits your covers. The failure mode is running two, because then the floor plan lives in two places and you double-book a Saturday. Pick one, embed it, add it as the reservation link on the Business Profile.',
+      'We connect OpenTable, Resy, or SevenRooms directly to your booking buttons. Floor plans stay unified without risk of double-booking prime Saturday tables.',
   },
   {
     n: '06',
-    title: 'Your own photography, used at the right size',
+    title: 'High-speed image optimization with explicit dimensions.',
     body:
-      'Plates you actually serve, the room at service, the people who work there. Compressed properly and given explicit width and height so the page does not jump while it loads. The same set feeds the Business Profile.',
+      'Food photography is compressed to modern WebP formats with explicit width and height. Fast edge caching and CDN delivery prevent layout shifts and pass Core Web Vitals.',
   },
   {
     n: '07',
-    title: 'A phone number that dials in one tap',
+    title: 'Tap-to-call mobile header with call tracking.',
     body:
-      'Wrapped in a tel link, in the header, on every page, on mobile. A lot of restaurant sites render the number inside an image or hide it behind a Contact page. For a walk-up guest, the tap is the conversion.',
+      'We place tel links in the mobile header for immediate dialing. Optional call tracking and form tracking measure table inquiries from organic search.',
   },
   {
     n: '08',
-    title: 'Built to load fast on a bad signal',
+    title: 'Lightweight code tuned for mobile Core Web Vitals.',
     body:
-      'No video header, no carousel nobody swipes, no font stack. Images sized for the slot they sit in. This never appears in a mockup and it is where most of the build time goes.',
+      'Zero bloated page builders. We build on Next.js and Tailwind CSS with fast server-side rendering. Every page passes Largest Contentful Paint and Interaction to Next Paint standards.',
   },
   {
     n: '09',
-    title: 'A page per location, and a profile per location',
+    title: 'Dedicated branch landing pages for local map pack dominance.',
     body:
-      'Each branch gets its own URL, address, hours, menu differences, photos and map. Not nine near-identical pages with the town name swapped, which is how groups end up competing against themselves. Then one Business Profile per location, pointing at its own page.',
+      'Multi-unit concepts get unique service area pages with custom schema markup. Each branch links to its verified Google Business Profile to boost local pack rankings.',
   },
   {
     n: '10',
-    title: 'Readable by people who need it to be',
+    title: 'Accessibility audit and WCAG compliance.',
     body:
-      'Real text at a size people can read without zooming, contrast that survives a sunny pavement, alt text on the photographs, and a booking flow that works with a keyboard. Accessibility here is mostly legibility.',
+      'High-contrast typography ensures readability on bright sidewalks. Clear focus states, ARIA labels, and an accessibility audit guarantee full WCAG compliance.',
   },
 ];
 
@@ -271,67 +271,67 @@ type CompRow = { label: string; builder: string; platform: string; template: str
 
 const COMPARISON_ROWS: ReadonlyArray<CompRow> = [
   {
-    label: 'What you are really buying',
-    builder: 'A drag and drop editor and a theme',
-    platform: 'A site bolted to a restaurant stack',
-    template: 'A layout, plus somebody to fit it',
-    custom: 'A site designed around your service model',
+    label: 'What you are really buying.',
+    builder: 'A drag and drop editor and generic templates.',
+    platform: 'A locked proprietary stack tied to hardware.',
+    template: 'A layout theme requiring manual freelance setup.',
+    custom: 'A custom Next.js website with full code ownership.',
   },
   {
-    label: 'Time to live',
-    builder: 'A weekend, genuinely',
-    platform: 'Weeks, waiting on their onboarding',
-    template: 'A week or two with a freelancer',
-    custom: 'Longest of the four',
+    label: 'Time to live.',
+    builder: 'One weekend for simple setups.',
+    platform: 'Several weeks waiting on vendor onboarding.',
+    template: 'Two to three weeks with a designer.',
+    custom: 'Prompt 7 to 14 day delivery window.',
   },
   {
-    label: 'Who updates the menu',
-    builder: 'You, in the editor, easily',
-    platform: 'You, often synced from the POS',
-    template: 'You, if it was set up well',
-    custom: 'You, in a field built for the job',
+    label: 'Menu and POS sync.',
+    builder: 'Manual edits inside a slow page builder.',
+    platform: 'Automated sync from Toast POS or Clover.',
+    template: 'Static text requiring developer code updates.',
+    custom: 'Direct POS integration or intuitive mobile CMS.',
   },
   {
-    label: 'Online ordering',
-    builder: 'A link out to a marketplace',
-    platform: 'Built in, and the reason people buy',
-    template: 'Whatever you wire up yourself',
-    custom: 'Direct checkout or a chosen integration',
+    label: 'Online ordering & payments.',
+    builder: 'External marketplace links taking hefty fees.',
+    platform: 'Bundled ordering with recurring platform cuts.',
+    template: 'Basic third-party widget embeds.',
+    custom: 'Direct Stripe, Apple Pay, and Google Pay checkout.',
   },
   {
-    label: 'Speed on a phone',
-    builder: 'Acceptable, rarely excellent',
-    platform: 'Varies widely by vendor',
-    template: 'Depends entirely on the template',
-    custom: 'The main thing we optimise for',
+    label: 'Speed on mobile phones.',
+    builder: 'Heavy scripts often failing Core Web Vitals.',
+    platform: 'Variable performance loaded with vendor trackers.',
+    template: 'Bloated themes with sluggish load speeds.',
+    custom: 'Sub-second speeds passing Core Web Vitals checks.',
   },
   {
-    label: 'Search and AI visibility',
-    builder: 'Basic. Menus end up as one blob',
-    platform: 'Decent, and outside your control',
-    template: 'Inherits whatever the template does',
-    custom: 'Structured per menu, per branch',
+    label: 'Search and AI visibility.',
+    builder: 'Basic on-page tags. Menus saved as flat text.',
+    platform: 'Decent indexing locked into vendor subdomains.',
+    template: 'Minimal schema markup and inconsistent meta.',
+    custom: 'Full JSON-LD structured data and local SEO schema.',
   },
   {
-    label: 'Multiple locations',
-    builder: 'Awkward past two',
-    platform: 'Usually handled well',
-    template: 'Manual and repetitive',
-    custom: 'Designed in from the start',
+    label: 'Multiple location architecture.',
+    builder: 'Clumsy dropdowns confusing Google crawlers.',
+    platform: 'Standard branch lists with rigid templates.',
+    template: 'Duplicate pages risking search penalties.',
+    custom: 'Dedicated location pages with local map pack SEO.',
   },
   {
-    label: 'If you stop paying',
-    builder: 'Site goes offline',
-    platform: 'Offline, and ordering goes with it',
-    template: 'You keep the files',
-    custom: 'You own the code and the content',
+    label: 'Asset and code ownership.',
+    builder: 'Site disappears if subscription is cancelled.',
+    platform: 'Complete vendor lock-in on menus and ordering.',
+    template: 'You keep theme files but lack ongoing support.',
+    custom: '100% source code, domain, and data ownership.',
   },
   {
-    label: 'Honestly best when',
-    builder: 'One location, small menu, tight budget',
-    platform: 'Ordering volume is the business',
-    template: 'You have taste and a bit of time',
-    custom: 'The site is a revenue channel',
+    label: 'Best fit for operators.',
+    builder: 'Single-unit cafes with short seasonal menus.',
+    platform: 'High-volume takeout spots relying on delivery.',
+    template: 'Operators with ample time for self-setup.',
+    custom: 'Ambitious dining concepts maximizing direct revenue.',
   },
 ];
 
@@ -343,40 +343,40 @@ type Option = { name: string; note: string; detail: string };
 
 const OPTIONS: ReadonlyArray<Option> = [
   {
-    name: 'Canva Website Builder',
-    note: 'Position 3, and free to start',
+    name: 'Canva Website Builder.',
+    note: 'Position 3, and free to start.',
     detail:
-      'A free restaurant website builder ranking third for the head term. One location, a short menu, no budget: this is a real answer. What you give up is menu structure, page speed control and multi-location handling.',
+      'A free drag-and-drop tool ranking well for casual searchers. Ideal for a single location or food truck with a small menu. You sacrifice custom schema markup, Core Web Vitals speed tuning, and multi-unit local SEO architecture.',
   },
   {
-    name: 'Framer and Figma templates',
-    note: 'Positions 5 and 7',
+    name: 'Framer and Figma templates.',
+    note: 'Positions 5 and 7.',
     detail:
-      'Framer ranks with a roundup of restaurant site examples, Figma with a template library. Both assume you will do the work yourself or hand a file to a designer. Good taste, low floor, outcome depends entirely on who finishes it.',
+      'Framer provides sleek restaurant portfolio templates. Figma offers design files for developers. Both require substantial hands-on effort to implement live POS ordering, reservation widgets, and valid JSON-LD structured data.',
   },
   {
-    name: 'BentoBox, now part of Clover',
-    note: 'Position 8, and worth reading the small print',
+    name: 'BentoBox (part of Clover).',
+    note: 'Position 8, with ecosystem lock-in.',
     detail:
-      'A restaurant website, ordering and catering platform. Its own site now states that BentoBox is part of Clover and that BentoBox products are currently available only to Clover point-of-sale customers. That is the platform trade: excellent inside the ecosystem, a migration outside it.',
+      'A popular hospitality web and ordering platform. BentoBox is now integrated into Clover point-of-sale systems. It provides convenient tools for Clover operators, but creates migration hurdles if you switch to Toast POS, Aloha, or Brink POS.',
   },
   {
-    name: 'Dribbble, Pinterest, Awwwards, One Page Love',
-    note: 'Positions 1, 2, 4, 10 and 11',
+    name: 'Dribbble, Pinterest, and Awwwards.',
+    note: 'Positions 1, 2, 4, 10, and 11.',
     detail:
-      'Five of the top twelve results are inspiration galleries, so most people searching this term are collecting ideas rather than hiring. If that is you, browse, then come back with three links you liked and we will say what they would take to build.',
+      'Inspiration galleries dominate search queries for restaurant web design. Operators browse these galleries for visual concepts. We translate high-end visual aesthetics into fast, accessible HTML websites that pass Core Web Vitals audits.',
   },
   {
-    name: 'Reddit and YouTube',
-    note: 'Positions 6 and 12',
+    name: 'Reddit and YouTube discussions.',
+    note: 'Positions 6 and 12.',
     detail:
-      'Owners asking other owners, and a video walkthrough. Both are more candid about running costs and platform lock-in than any vendor page, this one included. Read the thread before you sign anything.',
+      'Restaurant operators share unfiltered experiences regarding merchant processing fees and software lock-in. Threads frequently debate Toast POS vs. Square vs. Clover. Community consensus favors owning your digital assets and customer relationships.',
   },
   {
-    name: 'FactoryJet, which is us',
-    note: 'The custom build, and not always the right call',
+    name: 'FactoryJet custom hospitality builds.',
+    note: 'Custom development with code ownership.',
     detail:
-      'We design and build the site, structure the menus, wire the ordering and reservation integrations, and set up the Business Profile and schema. Worth paying for when the site is a revenue channel, and not when it is a one-location cafe.',
+      'We engineer bespoke restaurant websites with live HTML menus, direct online ordering, and OpenTable or Resy integrations. We implement complete local SEO schema, Google Business Profile optimization, and sub-second mobile page speeds.',
   },
 ];
 
@@ -398,11 +398,11 @@ const OPTIONS: ReadonlyArray<Option> = [
 ───────────────────────────────────────────────────────────────────────────── */
 
 const FAQ_CATEGORIES: ReadonlyArray<FAQCategory> = [
-  { key: 'basics', label: 'Restaurant site basics' },
-  { key: 'menu', label: 'Menus, ordering & booking' },
-  { key: 'local', label: 'Google, maps & AI answers' },
-  { key: 'diy', label: 'Templates, builders & DIY' },
-  { key: 'scope', label: 'Scope, timing & budget' },
+  { key: 'basics', label: 'Restaurant site basics.' },
+  { key: 'menu', label: 'Menus, ordering & booking.' },
+  { key: 'local', label: 'Google, maps & AI answers.' },
+  { key: 'diy', label: 'Templates, builders & DIY.' },
+  { key: 'scope', label: 'Scope, timing & budget.' },
 ];
 
 const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
@@ -411,19 +411,19 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'basics',
     question: 'Do I need a website for my restaurant?',
     answer:
-      'Yes. Your Google Business Profile, the delivery apps and the review sites all describe you, and none of them are yours. The website is the one page you control, the one that holds the full menu, and the only place a direct order can happen without a cut.',
+      'Yes. Your website is the only digital asset your business owns outright. Third-party platforms and social profiles can change algorithms or increase fees overnight. An owned website protects your menu and customer data. It provides the foundation for direct online ordering without commission fees.',
   },
   {
     category: 'basics',
     question: 'What are the key elements of a good restaurant website?',
     answer:
-      'Menu as browsable text, accurate hours including holidays, address with a working map link, a tap-to-call number, an order or reservation path, real photographs of your own food and room, and a page that loads fast on cellular data. More than one location adds a page each.',
+      'Seven core elements determine website performance. First is an HTML menu with structured data. Second is verified hours synchronized with Google Business Profile. Third is an integrated reservation or ordering flow via Toast POS, Square, or OpenTable. Fourth is authentic food photography. Fifth is mobile speed passing Core Web Vitals. Sixth is tap-to-call dialing. Seventh is dedicated location pages with local SEO markup.',
   },
   {
     category: 'basics',
     question: 'Why would a restaurant not have a website?',
     answer:
-      'They think the Instagram account covers it, which fails the moment somebody searches the menu. They think the delivery app listing covers it, which hands the customer away. Theirs went stale and taking it down felt safer than fixing it. Or the last quote felt out of proportion.',
+      'Many operators mistakenly rely on social media profiles or delivery apps. Social profiles cannot rank for local search queries or present structured dietary menus. Third-party delivery listings capture high commissions and keep diner emails. A dedicated website establishes authority and captures direct customer revenue.',
   },
 
   /* ── Menus, ordering & booking ──────────────────────────────────────── */
@@ -431,37 +431,37 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'menu',
     question: 'Should my restaurant menu be a PDF?',
     answer:
-      'No. Google can index PDF files, so the invisibility claim is overstated. The real problem is structure: no headings to quote, no link to your order button, no per-dish detail, and very often no selectable text at all. Publish the menu as a page, keep a PDF for print.',
+      'Never use PDF menus on a modern website. PDFs force pinching and zooming on smartphones. Search crawlers cannot extract individual dishes or allergens from image PDFs. Diners cannot click a dish to begin an order. Publishing live HTML menus with schema markup improves local SEO rankings and conversions.',
   },
   {
     category: 'menu',
     question: 'How do I put my menu online so Google can actually read it?',
     answer:
-      'Make each menu its own page. Use headings for sections and a list for dishes, with a plain-text description under each and dietary information written as words. Then add local business structured data with the menu property pointing at that page, which Google documents as the fully-qualified URL of the menu.',
+      'Create individual web pages for each distinct menu. Format sections using HTML headings and semantic lists. Include dish descriptions, dietary tags, and prices in plain text. Implement JSON-LD structured data using the schema markup menu property. Link this URL directly to your Google Business Profile.',
   },
   {
     category: 'menu',
     question: 'Should I take online orders on my own site or use a delivery app?',
     answer:
-      'Both, deliberately. Marketplaces bring reach. They also charge commission on the order total and keep the customer relationship, so the second order happens in their app rather than yours. Accept that trade for discovery, then make the direct route obviously better: on your site, your profile, the receipt, the bag.',
+      'Use both channels strategically. Third-party marketplaces provide valuable discovery for new diners. Direct online ordering on your website captures repeat business without commission cuts. We integrate direct ordering through Toast POS, Clover, or Stripe. This setup routes regular customers into your direct database.',
   },
   {
     category: 'menu',
     question: 'How much is a restaurant website with online ordering?',
     answer:
-      'Three routes, and the route matters more than the build. A link out to a marketplace is close to free to build and expensive per order. A restaurant platform bundles ordering into a subscription. Direct checkout on your own site is the largest build and the cheapest per order at volume.',
+      'Website costs depend on ordering architecture. Linking out to third-party marketplaces is inexpensive upfront but costs 15% to 30% per order. Platform subscriptions charge recurring monthly fees. A custom build with direct Stripe or Toast POS integration requires upfront investment. However, direct ordering saves substantial money as order volume grows.',
   },
   {
     category: 'menu',
     question: 'Which reservation system should I use?',
     answer:
-      'OpenTable, Resy, Tock and SevenRooms all cover the basics. What differs is cover fees, whether they push diners to you or you to them, and whether the floor plan tools suit your room. What breaks service is running two. Pick one, embed it, use it on your Google profile.',
+      'Popular options include OpenTable, Resy, SevenRooms, and Tock. Choose the platform that best fits your seating volume and diner demographics. Never run two systems simultaneously, as split inventories cause double-bookings. Embed your chosen system cleanly and connect it to your Google Business Profile booking action.',
   },
   {
     category: 'menu',
     question: 'Do I need professional photos of every dish?',
     answer:
-      'Not every dish. You need real photographs of about eight to twelve things: signature plates, the room at service, the bar, the front of the building so people recognise it, and the team. Real and slightly imperfect beats polished and generic, because guests are checking whether the place is real.',
+      'Professional photography for ten to twelve signature items is sufficient. High-quality images of popular entrees, cocktails, your dining room, and exterior storefront build credibility. Compress photos to modern WebP formats with explicit width and height attributes. This preserves page speed and passes Core Web Vitals audits.',
   },
 
   /* ── Google, maps & AI answers ──────────────────────────────────────── */
@@ -469,31 +469,31 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'local',
     question: 'How do I get my restaurant to show up on Google Maps?',
     answer:
-      'Claim and complete the Google Business Profile. Correct category, correct address, correct hours, real photos, menu link, ordering and reservation links, and reviews you reply to. The website supports the profile rather than replacing it. For most restaurants the profile is the higher-traffic surface, and the more neglected one.',
+      'Claim and verify your Google Business Profile. Select accurate primary categories and add complete operating hours. Upload authentic interior photos and link your live HTML menu page. Implement local SEO schema markup on your website. Consistent NAP data across local directories drives local map pack rankings.',
   },
   {
     category: 'local',
     question: 'Do I really need to update my hours for holidays?',
     answer:
-      'Yes. Google lets you set special hours for a temporary change or closure of up to six days in a row, and says it is a good idea to confirm your hours for official holidays even when they match your normal hours. It prevents the review that says you were shut.',
+      'Yes. Google allows businesses to set special hours for holidays and temporary closures. Failing to update holiday hours frustrates hungry customers and generates negative reviews. Confirming holiday hours in your Google Business Profile dashboard protects your local search reputation.',
   },
   {
     category: 'local',
     question: 'Why is a delivery app link showing on my Google profile that I never added?',
     answer:
-      'Because Google works with third-party providers, and those links can appear automatically rather than through you. You can remove a provider from your profile, and Google says providers need to process a removal request within five days. You can also set a preferred link so your own page sits on top.',
+      'Google partners with authorized delivery marketplaces to generate automatic order links. You can manage these links inside Google Business Profile settings. Designate your direct website ordering link as the preferred provider. You can also submit formal removal requests to third-party vendors.',
   },
   {
     category: 'local',
     question: 'How do I handle several restaurant locations on one website?',
     answer:
-      'One page per location, each with its own address, hours, phone, menu differences, photos and map. Not one Locations page listing five branches, and not five near-identical pages with the suburb swapped. Then one Google Business Profile per location, each linking to its own page.',
+      'Build a dedicated landing page for every individual location. Each page needs unique addresses, local phone numbers, hours, menus, and embedded maps. Embed location-specific LocalBusiness schema markup on every page. Connect each page to its verified Google Business Profile to dominate the local pack.',
   },
   {
     category: 'local',
     question: 'Will ChatGPT or AI search recommend my restaurant?',
     answer:
-      'Only if there is text about you to recommend. Assistants assemble answers from pages they can read, so a restaurant whose menu is a PDF and whose only description is an Instagram bio gives them nothing. The fix: menu as text, dietary information in words, hours and location on the page.',
+      'AI search engines recommend restaurants with clear, crawlable information. AI models crawl web pages for structured text, menus, dietary options, and reviews. PDF menus and image-only sites leave AI crawlers blind. Structured HTML data and positive review management ensure inclusion in AI search answers.',
   },
 
   /* ── Templates, builders & DIY ──────────────────────────────────────── */
@@ -501,19 +501,19 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'diy',
     question: 'Can I just use a website builder like Canva, Wix or Squarespace?',
     answer:
-      'For a single location with a short menu and a tight budget, yes, and you should. A builder gets you live this weekend with correct hours and a readable menu, which already puts you ahead of most restaurant sites. What you trade away is speed control, menu structure and multi-location handling.',
+      'Basic builders work well for single-location cafes with simple menus. They provide affordable templates and quick setup. However, generic builders struggle with custom POS integrations, complex multi-location SEO, and strict Core Web Vitals optimization. Larger restaurants benefit from custom code architectures.',
   },
   {
     category: 'diy',
     question: 'Should I use a restaurant website template?',
     answer:
-      'A template is a good starting point and a bad finishing point. What sinks template sites is what comes with them: demo photography nobody replaces, a hero video that wrecks phone speed, a menu pasted in as an image. Buy it, then spend the saved effort on photographs and menu text.',
+      'Templates offer speed but introduce severe limitations. Many templates include bloated JavaScript libraries that hurt mobile performance. They often force menus into awkward accordion widgets. A custom build tailors typography, reservation workflows, and technical SEO specifically to your operational concept.',
   },
   {
     category: 'diy',
     question: 'How do I create a website for my restaurant myself?',
     answer:
-      'In order: register your own domain, because it should never sit inside an agency account. Pick a builder. Write the menu as text before you touch design. Add hours, address, phone and a map. Take real photographs. Wire an order and a booking button. Claim the Business Profile. Stop.',
+      'Start by registering your own domain name under your company account. Choose a reliable hosting provider with SSL security. Write your menu items, descriptions, and prices in plain text. Add your location, hours, and tap-to-call phone number. Finally, configure Google Business Profile and test mobile performance.',
   },
 
   /* ── Scope, timing & budget ─────────────────────────────────────────── */
@@ -521,31 +521,31 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'scope',
     question: 'How much does it cost to design a restaurant website?',
     answer:
-      'We do not publish a number, because a figure set without seeing your situation is aimed at an average, not at you. What moves scope: how many locations, how many separate menus, direct online ordering or just a link out, whether usable photography exists, fresh build or rescue.',
+      'Pricing reflects operational scope rather than arbitrary agency fees. Cost drivers include location count, menu volume, direct POS ordering integrations, and custom reservation flows. We quote fixed-price milestones with guaranteed timelines. You own all source code and assets outright at completion.',
   },
   {
     category: 'scope',
     question: 'Is there a monthly fee to have a website?',
     answer:
-      'There is always some ongoing element. At minimum the domain each year and hosting. Builders and restaurant platforms charge a subscription that bundles hosting and tools. A custom build has hosting plus whatever maintenance you choose. Online ordering adds a per-order fee or a commission. Ask for those lines separately.',
+      'Mandatory ongoing expenses include domain registration and web hosting. Platform builders charge monthly software subscriptions. Custom websites built on modern frameworks avoid mandatory agency retainer fees. Third-party POS ordering systems like Toast POS or Clover charge payment processing fees separately.',
   },
   {
     category: 'scope',
     question: 'Is a very low flat fee a good deal for a restaurant website?',
     answer:
-      'Sometimes it genuinely is, and sometimes it is a template with your logo on it and a menu pasted in as an image. Look at what is delivered: is the menu real text, do you own the domain, can staff update it, does it load fast, does anything happen after launch.',
+      'Low flat fees usually mean recycled templates without technical optimization. Cheap builds often neglect Core Web Vitals, mobile responsiveness, and schema markup. They frequently lock you into proprietary hosting. Investing in proper site architecture delivers measurable return through direct orders and table reservations.',
   },
   {
     category: 'scope',
     question: 'How long does a restaurant website take to build?',
     answer:
-      'A builder site can be live in a weekend. A template fitted by a freelancer, a week or two. A custom build is longer, and the delay is almost never design. It is content: final menu text, photographs taken, a decision on ordering and reservations. Arrive with menu text ready.',
+      'Basic template sites take one to two weeks. A custom restaurant website typically launches within four to six weeks. The primary timeline factor is content assembly. Providing finalized menu copy, high-resolution photography, and POS credentials upfront ensures fast, predictable project delivery.',
   },
   {
     category: 'scope',
     question: 'Who should not hire us for this?',
     answer:
-      'A single-location cafe with a chalkboard menu and no delivery. A pop-up that ends this season. Anyone who needs a site live this week, since a builder does that better. Anyone wanting three hundred neighbourhood pages for suburbs they do not serve. Anyone expecting the site alone to fill tables.',
+      'Single-unit coffee shops with chalkboard menus do not require custom engineering. Pop-up restaurants and seasonal food trucks are better served by simple builder templates. Operators unwilling to provide menu copy or authentic photos should also avoid custom builds. We focus on growing hospitality brands needing direct revenue.',
   },
 ];
 
@@ -807,10 +807,10 @@ export default function RestaurantWebsiteDesignPage() {
                 </span>
                 <ul className="mt-3 space-y-2.5">
                   {[
-                    { k: 'What is on the menu', v: 'text, not a PDF' },
-                    { k: 'Are you open right now', v: 'holidays included' },
-                    { k: 'Where exactly are you', v: 'one tap to a map' },
-                    { k: 'How do I order or book', v: 'one obvious button' },
+                    { k: 'What is on the menu?', v: 'Text, not a PDF.' },
+                    { k: 'Are you open right now?', v: 'Holidays included.' },
+                    { k: 'Where exactly are you?', v: 'One tap to a map.' },
+                    { k: 'How do I order or book?', v: 'One obvious button.' },
                   ].map((row) => (
                     <li
                       key={row.k}
@@ -947,20 +947,20 @@ export default function RestaurantWebsiteDesignPage() {
               <ul className="mt-6 space-y-3">
                 {[
                   {
-                    t: 'Very often there is no text in it at all',
-                    s: 'A menu exported as flat artwork is pictures of words, so nothing can extract a dish name',
+                    t: 'Very often there is no text in it at all.',
+                    s: 'A menu exported as flat artwork is pictures of words, so nothing can extract a dish name.',
                   },
                   {
-                    t: 'No headings, so nothing is quotable',
-                    s: 'An assistant answering a question about your vegetarian options needs structured text',
+                    t: 'No headings, so nothing is quotable.',
+                    s: 'An assistant answering a question about your vegetarian options needs structured text.',
                   },
                   {
-                    t: 'It breaks the path to the money',
-                    s: 'It opens in a viewer with no order button, no booking link and no way back',
+                    t: 'It breaks the path to the money.',
+                    s: 'It opens in a viewer with no order button, no booking link and no way back.',
                   },
                   {
-                    t: 'Staff cannot fix it during service',
-                    s: 'Marking the special sold out should take a phone and a minute, not an email to a designer',
+                    t: 'Staff cannot fix it during service.',
+                    s: 'Marking the special sold out should take a phone and a minute, not an email to a designer.',
                   },
                 ].map((item) => (
                   <li key={item.t} className="flex items-start gap-3.5 rounded-2xl bg-white px-5 py-4">
@@ -1060,20 +1060,20 @@ export default function RestaurantWebsiteDesignPage() {
               <ul className="mt-6 space-y-3">
                 {[
                   {
-                    t: 'Check what is already on your Google profile',
-                    s: 'Third-party ordering links can appear automatically, so a marketplace may be taking orders you never routed to it',
+                    t: 'Check what is already on your Google profile.',
+                    s: 'Third-party ordering links can appear automatically, so a marketplace may be taking orders you never routed to it.',
                   },
                   {
-                    t: 'Set your preferred link',
-                    s: 'Google lets you mark one link as business preferred, so your own page sits on top',
+                    t: 'Set your preferred link.',
+                    s: 'Google lets you mark one link as business preferred, so your own page sits on top.',
                   },
                   {
-                    t: 'Removals are not instant, but they are enforced',
-                    s: 'Google states that providers need to process a removal request within five days',
+                    t: 'Removals are not instant, but they are enforced.',
+                    s: 'Google states that providers need to process a removal request within five days.',
                   },
                   {
-                    t: 'Run one reservation system, not two',
-                    s: 'Your profile carries a reservation link. Two systems is how a Saturday gets double-booked',
+                    t: 'Run one reservation system, not two.',
+                    s: 'Your profile carries a reservation link. Two systems is how a Saturday gets double-booked.',
                   },
                 ].map((item) => (
                   <li key={item.t} className="flex items-start gap-3.5 rounded-2xl bg-white px-5 py-4">
@@ -1251,12 +1251,12 @@ export default function RestaurantWebsiteDesignPage() {
                 <h3 className="fj-display text-[1.25rem] font-bold text-fj-ink">Worth hiring us for</h3>
                 <ul className="mt-5 space-y-3.5">
                   {[
-                    'Several locations, currently jammed onto one page with a dropdown',
-                    'A meaningful share of revenue arrives through ordering and you want it direct',
-                    'Your menu is a PDF and nobody can update it during service',
-                    'You have outgrown a platform and want out without losing visibility',
-                    'Private hire, catering or events the current site does not sell',
-                    'You want it fast on a phone and nobody has ever measured it',
+                    'Several locations, currently jammed onto one page with a dropdown.',
+                    'A meaningful share of revenue arrives through ordering and you want it direct.',
+                    'Your menu is a PDF and nobody can update it during service.',
+                    'You have outgrown a platform and want out without losing visibility.',
+                    'Private hire, catering or events the current site does not sell.',
+                    'You want it fast on a phone and nobody has ever measured it.',
                   ].map((line) => (
                     <li key={line} className="flex items-start gap-3 font-fj-body text-[0.9375rem] font-medium leading-[1.55] text-fj-ink">
                       <CheckCircle size={18} /> {line}
@@ -1269,12 +1269,12 @@ export default function RestaurantWebsiteDesignPage() {
                 <h3 className="fj-display text-[1.25rem] font-bold text-fj-ink">Do not hire us if</h3>
                 <ul className="mt-5 space-y-3.5">
                   {[
-                    'One location and a short menu. A builder does this well, live by Sunday',
-                    'You need a site this week. We are slower than a template',
-                    'You are opening a pop-up or a residency that ends this season',
-                    'Ordering volume is the whole business, and a platform bundles that better',
-                    'You want the site to fix footfall. The food, reviews and profile do that',
-                    'Nobody on your side can supply final menu text or photographs',
+                    'One location and a short menu. A builder does this well, live by Sunday.',
+                    'You need a site this week. We are slower than a template.',
+                    'You are opening a pop-up or a residency that ends this season.',
+                    'Ordering volume is the whole business, and a platform bundles that better.',
+                    'You want the site to fix footfall. The food, reviews and profile do that.',
+                    'Nobody on your side can supply final menu text or photographs.',
                   ].map((line) => (
                     <li key={line} className="flex items-start gap-3 font-fj-body text-[0.9375rem] font-medium leading-[1.55] text-fj-neutral-700">
                       <CrossCircle size={18} /> {line}
@@ -1420,11 +1420,11 @@ export default function RestaurantWebsiteDesignPage() {
                 <h3 className="fj-display text-[1.25rem] font-bold text-fj-ink">How we work</h3>
                 <ul className="mt-5 space-y-3">
                   {[
-                    { t: 'Menu structure before styling', s: 'The menu architecture is written first, because everything hangs off it' },
-                    { t: 'Search and build in one team', s: 'Structured data, Business Profile and page speed are part of the build' },
-                    { t: 'You own everything', s: 'Domain, code and content stay yours, registered in your name from day one' },
-                    { t: 'Staff can update it', s: 'If your team cannot mark an item unavailable from a phone, we have not finished' },
-                    { t: 'We will talk you out of it', s: 'When a builder or a platform is the better buy, we say so on the first call' },
+                    { t: 'Menu structure before styling.', s: 'The menu architecture is written first, because everything hangs off it.' },
+                    { t: 'Search and build in one team.', s: 'Structured data, Business Profile and page speed are part of the build.' },
+                    { t: 'You own everything.', s: 'Domain, code and content stay yours, registered in your name from day one.' },
+                    { t: 'Staff can update it.', s: 'If your team cannot mark an item unavailable from a phone, we have not finished.' },
+                    { t: 'We will talk you out of it.', s: 'When a builder or a platform is the better buy, we say so on the first call.' },
                   ].map((item) => (
                     <li key={item.t} className="flex items-start gap-3.5 rounded-2xl px-5 py-4" style={{ background: CREAM }}>
                       <CheckCircle size={20} fill={LAV} />

@@ -827,6 +827,17 @@ export default function LawFirmSEOPage() {
                 <p className="diff-desc">Google Business Profile ranking in the Map Pack correlates tightly with review recency and volume. A firm with 200 reviews from 2019 loses to a firm with 40 reviews posted this quarter. Review acquisition is part of the SEO work.</p>
               </div>
             </div>
+
+            <div style={{ marginTop: '36px', borderRadius: '16px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.1)', maxWidth: 860 }}>
+              <Image
+                src="/images/services/healthcare-seo-map-pack.webp"
+                alt="Google Map Pack ranking breakdown showing local proximity and prominence factors for legal searches"
+                width={860}
+                height={480}
+                loading="lazy"
+                style={{ width: '100%', height: 'auto', display: 'block' }}
+              />
+            </div>
           </div>
         </section>
 
@@ -1282,7 +1293,7 @@ export default function LawFirmSEOPage() {
         <section className="section-light" id="faq">
           <div className="container">
             <span className="eyebrow reveal">Frequently Asked</span>
-            <h2 className="section-title reveal reveal-delay-1" style={{ marginBottom: '48px' }}>Every question law firm<br />owners actually ask us.</h2>
+            <h2 className="section-title reveal reveal-delay-1" style={{ marginBottom: '48px' }}>Frequently Asked Questions: <br />Law Firm SEO Answered Straight.</h2>
 
             <div className="faq-layout">
               {/* Sidebar navigation */}

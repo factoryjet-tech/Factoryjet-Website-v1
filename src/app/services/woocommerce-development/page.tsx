@@ -32,9 +32,9 @@ import FinalCTA from '@/components/v2/FinalCTA';
 --------------------------------------------------------------------------─-- */
 
 export const metadata: Metadata = {
-  title: 'WooCommerce Development Agency USA | Hire WooCommerce Developers | FactoryJet',
+  title: 'WooCommerce Development Agency USA | FactoryJet',
   description:
-    'Hire WooCommerce developers & experts from a US WooCommerce development agency. Custom stores, store design, plugins & integrations: fixed-price, milestone-paid. Free consultation.',
+    'Hire expert US WooCommerce developers. Custom store builds, plugins, integrations, and performance optimization. Fixed-price, milestone-paid.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
@@ -139,52 +139,52 @@ const JOURNEY_STAGES: ServiceJourneyStage[] = [
     number: '01',
     title: 'Discovery Call',
     description:
-      'A 30-minute call to understand your store requirements, catalog size, integrations, and goals. We discuss the right WooCommerce approach for your business and scope the project accurately, you get a fixed-price proposal before committing.',
+      'A 30-minute call to review your store requirements. We discuss catalog size, third-party integrations, and revenue goals. You receive a fixed-price proposal before committing.',
   },
   {
     number: '02',
     title: 'Design & Architecture',
     description:
-      'For custom stores, we design the theme and user experience before development starts, you approve the design first. For plugin development, we document the technical architecture and data model. No surprises mid-build.',
+      'We design the theme and user experience first. You approve wireframes and design before coding begins. For plugin development, we document data models and hook architecture up front. This prevents surprises mid-build.',
   },
   {
     number: '03',
     title: 'Development & Integration',
     description:
-      'Senior WooCommerce developers build your store or plugin on a staging environment. Payment gateways, shipping integrations, third-party APIs, and custom checkout flows are wired up and tested in isolation before going near production.',
+      'Senior developers build your store on a private staging server. We integrate payment gateways and shipping APIs. We build custom checkout flows and test every integration in isolation.',
   },
   {
     number: '04',
     title: 'QA & Performance Testing',
     description:
-      'Full checkout flow testing, cross-browser and mobile QA, and WooCommerce-specific edge case testing (variable products, backorders, partial fulfillment). We run performance audits and optimize Core Web Vitals before launch clearance.',
+      'We test every checkout step on desktop and mobile. We test edge cases like variable products, backorders, and partial fulfillment. We run Core Web Vitals audits before launch clearance.',
   },
   {
     number: '05',
     title: 'Launch + 30-Day Support',
     description:
-      'We deploy to your live store, verify all payment and fulfillment flows in production, and monitor for issues in the first 48 hours. Every project includes 30 days of post-launch support, no ticket queue, direct line to the team that built it.',
+      'We deploy to production and verify live payment processing. We monitor server logs and orders for 48 hours. Every build includes 30 days of direct developer support. You reach the team that built your store directly.',
   },
 ];
 
 const STATS = [
   {
     value: 'Fixed Price',
-    label: 'scoped and quoted upfront for a custom WooCommerce store',
-    microcopy: 'custom theme, your product catalog, full integrations',
-    categoryLabel: 'PRICING',
+    label: 'scoped and quoted upfront for a custom WooCommerce store.',
+    microcopy: 'custom theme, your product catalog, full integrations.',
+    categoryLabel: 'PRICING.',
   },
   {
     value: 'Fixed Price',
-    label: 'milestone-paid WooCommerce builds with full code ownership',
-    microcopy: 'senior developers on every project, no scope-creep invoices',
-    categoryLabel: 'PRICING MODEL',
+    label: 'milestone-paid WooCommerce builds with full code ownership.',
+    microcopy: 'senior developers on every project, no scope-creep invoices.',
+    categoryLabel: 'PRICING MODEL.',
   },
   {
     value: '25+',
-    label: 'years of WordPress and WooCommerce development',
-    microcopy: '500+ e-commerce projects delivered for US businesses',
-    categoryLabel: 'EXPERIENCE',
+    label: 'years of WordPress and WooCommerce development.',
+    microcopy: '500+ e-commerce projects delivered for US businesses.',
+    categoryLabel: 'EXPERIENCE.',
   },
 ];
 
@@ -197,7 +197,7 @@ const COMPARISON_COLUMNS = [
 
 const COMPARISON_ROWS = [
   {
-    feature: 'Senior WooCommerce developers',
+    feature: 'Senior WooCommerce developers.',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="fl" kind="partial" />,
@@ -206,7 +206,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Fixed-price proposals',
+    feature: 'Fixed-price proposals.',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="fl" kind="no" />,
@@ -215,7 +215,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Custom theme design (not a template)',
+    feature: 'Custom theme design (not a template).',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="fl" kind="partial" />,
@@ -224,7 +224,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Core Web Vitals / performance optimization',
+    feature: 'Core Web Vitals / performance optimization.',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="fl" kind="partial" />,
@@ -233,7 +233,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Payment & shipping integrations',
+    feature: 'Payment & shipping integrations.',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="fl" kind="yes" />,
@@ -242,7 +242,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: '30-day post-launch support',
+    feature: '30-day post-launch support.',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="fl" kind="no" />,
@@ -251,7 +251,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'fixed price, confirmed before any work starts',
+    feature: 'fixed price, confirmed before any work starts.',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="fl" kind="partial" />,
@@ -260,7 +260,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Full code ownership, no lock-in',
+    feature: 'Full code ownership, no lock-in.',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="fl" kind="yes" />,
@@ -269,7 +269,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'WooCommerce hooks/filters (no core edits)',
+    feature: 'WooCommerce hooks/filters (no core edits).',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="fl" kind="partial" />,
@@ -284,15 +284,15 @@ const PRICING_TIERS = [
     name: 'Custom Store',
     priceRange: 'Get a quote',
     description:
-      'A WooCommerce store built on a custom theme, not a Flatsome or Astra template. Designed for your products and customers, configured for performance, and ready to sell from launch day.',
+      'A WooCommerce store built on a custom theme. We do not use generic templates. We design for your products and customers. We configure servers for speed and high order volume.',
     features: [
-      'Custom theme design, not a premium template',
-      'Your product catalog configured and uploaded',
-      'Payment gateway setup (Stripe, PayPal, Authorize.Net)',
-      'Shipping carrier integration (UPS, USPS, FedEx)',
-      'Mobile-first design, Core Web Vitals optimized',
-      'WooCommerce SEO, product schema, sitemaps, canonical',
-      '30-day post-launch support',
+      'Custom theme design, not a premium template.',
+      'Your product catalog configured and uploaded.',
+      'Payment gateway setup (Stripe, PayPal, Authorize.Net).',
+      'Shipping carrier integration (UPS, USPS, FedEx).',
+      'Mobile-first design, Core Web Vitals optimized.',
+      'WooCommerce SEO, product schema, sitemaps, canonical.',
+      '30-day post-launch support.',
     ],
     cta: { label: 'Get a Free Quote', modal: true, region: 'us' },
   },
@@ -300,16 +300,16 @@ const PRICING_TIERS = [
     name: 'Custom Plugin',
     priceRange: 'Get a quote',
     description:
-      `A custom WooCommerce plugin or extension that adds functionality your business needs and existing plugins can't provide, built using WooCommerce hooks and filters, not core file edits.`,
+      `A custom plugin built for your business. We add features that existing extensions cannot provide. We use standard hooks and filters. We never edit core WordPress files.`,
     features: [
-      'Custom WooCommerce plugin architecture',
-      'Proper use of WooCommerce hooks and filters',
-      'Admin settings UI if needed',
-      'Compatibility testing across WooCommerce versions',
-      'PHPDoc inline documentation',
-      'Works with existing plugins, no conflicts',
-      'WordPress.org submission-ready if needed',
-      '30-day post-launch support',
+      'Custom WooCommerce plugin architecture.',
+      'Proper use of WooCommerce hooks and filters.',
+      'Admin settings UI if needed.',
+      'Compatibility testing across WooCommerce versions.',
+      'PHPDoc inline documentation.',
+      'Works with existing plugins, no conflicts.',
+      'WordPress.org submission-ready if needed.',
+      '30-day post-launch support.',
     ],
     cta: { label: 'Get a Plugin Quote', modal: true, region: 'us' },
     popular: true,
@@ -318,16 +318,16 @@ const PRICING_TIERS = [
     name: 'Complex Store',
     priceRange: 'Talk to the founder',
     description:
-      'A WooCommerce store with custom checkout flows, B2B pricing, subscriptions, membership gating, ERP integration, or other complex functionality that goes beyond standard WooCommerce capabilities.',
+      'A custom store with advanced commerce workflows. We build custom checkout flows, B2B wholesale pricing, and recurring subscriptions. We connect ERP and warehouse systems for live sync.',
     features: [
-      'Custom checkout flow and order management',
-      'B2B pricing rules and wholesale user roles',
-      'Subscription or membership functionality',
-      'ERP / CRM / inventory system integration',
-      'Custom product types or configurators',
-      'Advanced shipping rules and rate calculation',
-      'High-performance hosting configuration',
-      '30-day post-launch support',
+      'Custom checkout flow and order management.',
+      'B2B pricing rules and wholesale user roles.',
+      'Subscription or membership functionality.',
+      'ERP / CRM / inventory system integration.',
+      'Custom product types or configurators.',
+      'Advanced shipping rules and rate calculation.',
+      'High-performance hosting configuration.',
+      '30-day post-launch support.',
     ],
     cta: { label: 'Get a Custom Quote', modal: true, region: 'us' },
   },
@@ -346,141 +346,121 @@ const FAQ_ITEMS = [
   // -- Platform & Technology ----------------------------------------------
   {
     question: 'Is WooCommerce free?',
-    answer: `WooCommerce the plugin is free and open source. Your running costs come from hosting (a monthly fee paid to a host that can handle WooCommerce), your domain (a small yearly fee), a theme (a one-time cost, or free if custom-built), and any premium plugins you need (a modest yearly fee each). A basic store runs on a small annual infrastructure budget. A professionally built store with custom development is a fixed-price project quoted up front on a free discovery call, then a small annual amount to run.`,
+    answer: `WooCommerce core is free and open source. Your running costs come from hosting, domain registration, and any premium plugins. A basic store runs on a modest annual hosting budget. Custom store builds are fixed-price projects quoted up front. You pay hosting directly to your provider.`,
     category: 'platform',
   },
   {
     question: 'What is the difference between WooCommerce and Shopify?',
-    answer: `WooCommerce runs on WordPress, you control your hosting, your data, and your code. There are no platform transaction fees, and customization has no hard platform ceiling. Shopify is a hosted SaaS platform, lower technical overhead, but you pay an ongoing monthly platform fee plus transaction fees, and customization has hard limits. WooCommerce has a higher ceiling but requires more technical management. Shopify is simpler but has ongoing platform costs. FactoryJet builds on both. We'll help you choose the right platform on the discovery call.`,
+    answer: `WooCommerce runs on WordPress. You control your hosting, your customer data, and your code. There are zero platform transaction fees. Shopify is a hosted SaaS platform with lower technical maintenance. However, Shopify charges monthly subscription fees plus transaction fees. WooCommerce gives you full ownership. Shopify provides hosted simplicity.`,
     category: 'platform',
   },
   {
     question: 'What hosting does WooCommerce need?',
-    answer: `WooCommerce needs more server resources than a standard WordPress blog, at minimum, 2GB RAM and a PHP 8.1+ environment with OPcache enabled. For most stores, we recommend managed WordPress hosting such as WP Engine, Kinsta, or SiteGround, all of which charge a modest monthly fee. For high-volume stores, a VPS with Redis, Nginx, and object cache is more appropriate. Cheap shared hosting from GoDaddy or Bluehost is almost never appropriate for WooCommerce, it will be slow.`,
+    answer: `WooCommerce requires dedicated server resources. We recommend at least 2GB of RAM and PHP 8.1+ with OPcache. For most stores, managed hosts like WP Engine, Kinsta, or SiteGround work well. High-volume stores benefit from VPS setups with Redis object caching. Cheap shared hosting is too slow for commerce.`,
     category: 'platform',
   },
   {
     question: 'Can WooCommerce handle subscriptions and recurring billing?',
-    answer: `Yes, WooCommerce Subscriptions (a premium plugin by Woo) adds subscription product types, recurring billing, subscription management for customers and admins, and prorated upgrades/downgrades. It works with Stripe, PayPal, and Authorize.Net for recurring payments. Custom subscription logic (custom billing intervals, usage-based billing, hybrid one-time + recurring products) can be built as a custom plugin. This is a common FactoryJet engagement. We've built custom subscription systems for SaaS companies, membership sites, and product subscription boxes.`,
+    answer: `Yes, WooCommerce Subscriptions adds recurring billing and subscription product types. It manages customer renewals, prorated upgrades, and payment retries. It supports Stripe, PayPal, and Authorize.Net. We also build custom subscription plugins for usage-based billing and hybrid product boxes.`,
     category: 'platform',
   },
   {
     question: 'Is WooCommerce good for B2B e-commerce?',
-    answer: `WooCommerce handles B2B use cases well with the right plugins and custom development. B2B WooCommerce setups typically include: wholesale pricing by user role, hidden retail pricing for wholesale accounts, minimum order quantities, purchase order / net payment terms, quote request instead of immediate checkout, and company account management. FactoryJet builds custom B2B WooCommerce solutions using a combination of plugins and custom code, we don't assume a premium plugin covers your exact requirements, we build what you actually need.`,
+    answer: `WooCommerce handles B2B commerce very well. Common setups include wholesale pricing tiers by user role and hidden retail prices. We build custom quote request forms and net payment terms. We also configure minimum order quantities and company accounts. We write custom code to match your exact sales rules.`,
     category: 'platform',
   },
 
   // -- Development Work --------------------------------------------------─
   {
     question: 'What is a WooCommerce custom plugin?',
-    answer: `A custom WooCommerce plugin extends or modifies WooCommerce functionality without editing core files. Custom plugins can add new product types, modify checkout behavior, add admin reports, create custom pricing rules, build custom shipping rate calculators, integrate third-party APIs, or modify the order management workflow. They use WooCommerce's hooks (actions and filters) to modify behavior safely, meaning your customizations survive WooCommerce updates, unlike modifications to template files or core code.`,
+    answer: `A custom plugin adds unique features without modifying core files. Plugins create new product types, custom checkout fields, and wholesale pricing rules. They also calculate custom shipping rates and connect external APIs. Custom plugins use official hooks and filters. They survive WordPress core updates without breaking.`,
     category: 'development',
   },
   {
     question: 'Can you integrate WooCommerce with my ERP or accounting system?',
-    answer: `Yes, WooCommerce ERP and accounting integrations are a significant part of our development work. Common integrations include: QuickBooks Online (order sync, customer sync, tax handling), Xero, NetSuite, Sage, and custom ERP systems. These integrations typically sync orders from WooCommerce to the ERP, inventory and pricing from the ERP back to WooCommerce, and customer account data in both directions. We build direct API integrations as well as middleware-based integrations depending on your ERP's capabilities.`,
+    answer: `Yes, ERP and accounting integrations are core to our work. Common systems include QuickBooks Online, Xero, NetSuite, and Sage. Integrations sync orders from WooCommerce to your ERP. They sync inventory levels and pricing back to your store. We build direct REST API and webhook integrations.`,
     category: 'development',
   },
   {
     question: 'Can you customize the WooCommerce checkout?',
-    answer: `Yes, WooCommerce checkout customization is one of the most common requests. Common customizations include: removing unnecessary checkout fields (which reduces friction and improves conversion), adding custom fields (delivery notes, purchase order numbers, custom product options), reordering checkout steps, adding upsell or cross-sell offers in checkout, integrating buy-now-pay-later options (Klarna, Affirm, Afterpay), and custom thank-you page logic. All customizations use WooCommerce hooks, no core file editing.`,
+    answer: `Yes, checkout optimization is a frequent request. We remove unnecessary checkout fields to reduce cart friction. We add one-step checkout flows, address autocomplete, and order notes. We also integrate buy-now-pay-later options like Klarna and Affirm. All changes use standard WooCommerce hooks.`,
     category: 'development',
   },
   {
     question: 'Do you build WooCommerce stores with variable products?',
-    answer: `Yes, variable products (products with multiple variants like size, color, or material) are standard WooCommerce functionality. For complex variant setups (hundreds of combinations, conditional variant availability, variant-specific pricing tiers, custom attribute types), we extend WooCommerce's native variable product system with custom code. This is especially common for apparel, furniture, and custom-manufactured products where the default WooCommerce variant UI doesn't quite fit the product.`,
+    answer: `Yes, variable products are native to WooCommerce. For complex catalogs, we build custom product configurators. This handles hundreds of color, size, and material combinations. We build conditional variant logic and custom swatch pickers. This is ideal for apparel, furniture, and custom manufacturing.`,
     category: 'development',
   },
   {
     question: 'Can you add wholesale or B2B pricing to an existing WooCommerce store?',
-    answer: `Yes, adding wholesale or B2B pricing to an existing WooCommerce store is a common engagement. The implementation depends on your requirements: if you need simple user-role-based pricing, a combination of plugins handles it. If you need customer-specific pricing, negotiated prices by account, tiered volume pricing, or quote-based purchasing, custom plugin development is needed. We audit your existing store and requirements before proposing an approach. There's a wide range of complexity here.`,
+    answer: `Yes, we frequently add B2B pricing to existing stores. For simple needs, user-role pricing plugins handle the rules. For complex needs, we write custom plugins. These support customer-specific contract prices and tiered volume discounts. We audit your catalog and propose the right technical approach.`,
     category: 'development',
   },
 
   // -- Performance & SEO ------------------------------------------------─
   {
     question: 'Why is my WooCommerce store slow?',
-    answer: `WooCommerce stores are slow for a few common reasons: inadequate hosting (shared hosting doesn't have the RAM for WooCommerce), no caching setup (WooCommerce disables standard WordPress page cache for logged-in users and cart pages, requiring a dedicated WooCommerce caching solution), unoptimized images, too many plugins making excessive database queries, or a bloated theme loading unnecessary scripts. FactoryJet's performance audit identifies the root causes and fixes them, typically a combination of hosting upgrade, caching configuration, and query optimization.`,
+    answer: `WooCommerce stores slow down for several common reasons. Cheap shared hosting lacks required RAM. Missing Redis object caching causes redundant database queries. Bloated plugins and unoptimized product images add heavy load. Our technical audit pinpoints exact bottlenecks. We fix them through server tuning, caching, and code cleanup.`,
     category: 'performance',
   },
   {
     question: 'Does WooCommerce have good SEO?',
-    answer: `WooCommerce has solid SEO foundations: clean URLs, product schema markup support, category and tag pages, and native XML sitemap generation. WordPress's content ecosystem (blog posts, guides) is one of the strongest SEO advantages of WooCommerce over Shopify. Where WooCommerce SEO requires attention: proper configuration of Yoast or RankMath for product and category meta, canonical tag management for variable products (to avoid duplicate content), and pagination handling for large category pages. FactoryJet sets up all of this as part of every store build.`,
+    answer: `WooCommerce has strong organic SEO foundations. It provides clean URLs, category taxonomy, and XML sitemaps. The WordPress blogging engine offers a major content advantage over Shopify. We configure product schema markup, canonical tags, and clean pagination. This prevents duplicate content across product variants.`,
     category: 'performance',
   },
   {
     question: 'Can you improve the Core Web Vitals of my WooCommerce store?',
-    answer: `Yes, Core Web Vitals optimization on WooCommerce is a common engagement. The biggest issues on WooCommerce stores are typically: Largest Contentful Paint (LCP) caused by unoptimized product images or render-blocking scripts, Cumulative Layout Shift (CLS) caused by elements loading asynchronously without reserved space, and Interaction to Next Paint (INP) caused by excessive JavaScript from page builders or poorly coded plugins. We audit the specific failures on your store, prioritize by impact, and fix them, with before/after Lighthouse scores to verify improvement.`,
+    answer: `Yes, Core Web Vitals optimization is standard in our builds. We fix Largest Contentful Paint by optimizing hero images and deferring scripts. We eliminate layout shift by reserving space for dynamic content. We improve interaction speed by trimming heavy plugin scripts. We verify improvements with before and after Lighthouse scores.`,
     category: 'performance',
   },
   {
     question: 'Should I use a page builder like Elementor with WooCommerce?',
-    answer: `Elementor (and similar page builders like Divi or WPBakery) are popular but notorious for adding significant JavaScript and CSS weight to WooCommerce stores, which slows page load and hurts Core Web Vitals. For stores where design flexibility matters more than raw performance, Elementor is workable when configured carefully. For stores where performance is the priority, we recommend purpose-built WooCommerce themes or a custom theme that loads only what's needed. FactoryJet builds custom themes when performance is a hard requirement.`,
+    answer: `Page builders like Elementor add significant JavaScript and CSS weight. That overhead can hurt page speed and Core Web Vitals. If design flexibility is your priority, Elementor can work with careful caching. If conversion speed is your top priority, custom themes perform much better. We build custom lightweight themes for performance-focused brands.`,
     category: 'performance',
   },
 
   // -- Cost & Pricing ----------------------------------------------------─
   {
     question: 'How much does WooCommerce development cost compared to Shopify development?',
-    answer: `WooCommerce development typically costs slightly less than equivalent Shopify development because there are fewer licensing constraints and the platform is more open. A custom WooCommerce store from FactoryJet is priced similarly upfront to a comparable Shopify store, both are fixed-price and quoted on a free discovery call. The ongoing cost difference is more significant: WooCommerce only costs you a modest annual hosting fee, while Shopify charges an ongoing platform fee on top. For businesses with high GMV, WooCommerce's lower ongoing cost often justifies the slightly higher technical management burden.`,
+    answer: `Upfront development costs are similar for custom builds on either platform. FactoryJet quotes all projects at a fixed price up front. The ongoing cost difference is where WooCommerce shines. WooCommerce requires only web hosting fees, with zero platform cuts. Shopify charges monthly subscription fees and platform transaction cuts.`,
     category: 'cost',
   },
   {
     question: 'What plugins do I need to buy for a WooCommerce store?',
-    answer: `The plugins you need depend on your store's requirements. Core plugins most stores need: a payment gateway plugin (Stripe for WooCommerce is free), a shipping plugin (WooCommerce Shipping is free; carrier-specific rate plugins carry a modest annual license), and an SEO plugin (Yoast or RankMath, a small annual license). Optional premium plugins: WooCommerce Subscriptions if you need subscriptions, WooCommerce Bookings for appointment booking, and various marketing integrations, each with its own license fee paid to the plugin vendor. FactoryJet factors plugin costs into the project scope and recommends only what you actually need.`,
+    answer: `Required plugins depend on your store features. Most stores need Stripe for payments and WooCommerce Shipping for carrier rates. Both are free. SEO plugins like Yoast or RankMath carry small annual fees. Optional extensions like Subscriptions or Bookings require annual licenses from Woo. We recommend only the extensions your store truly needs.`,
     category: 'cost',
   },
   {
     question: 'WooCommerce vs Shopify: how do the development and ongoing costs compare?',
-    answer: `The upfront development cost is similar. WooCommerce and Shopify stores built to the same quality level cost roughly the same to develop, and FactoryJet prices both fixed-price, quoted on a free discovery call. The difference shows up in ongoing costs: WooCommerce has no platform fees (you only pay hosting), while Shopify charges an ongoing monthly platform fee plus transaction fees if you don't use Shopify Payments. For a high-revenue store, that adds up to thousands a year in Shopify fees that WooCommerce doesn't charge.`,
+    answer: `Initial development costs are comparable across both platforms. Both require thoughtful design, catalog setup, and custom testing. However, ongoing software costs diverge quickly. WooCommerce charges no platform commission fees. Shopify charges monthly tier fees and third-party app subscriptions. High-volume merchants save thousands each year on WooCommerce.`,
     category: 'cost',
   },
 
   // -- Working with FactoryJet --------------------------------------------─
   {
     question: 'Do you work with existing WooCommerce stores or only new builds?',
-    answer: `Both. A significant portion of FactoryJet's WooCommerce work is extending, optimizing, or fixing existing stores, adding functionality, improving performance, migrating to better hosting, fixing broken plugins, or adding payment and shipping integrations. For existing store work, we start with a technical audit and provide a fixed-price proposal for the specific changes you need. We don't bill by the hour for discovery, you get a clear scope and price before committing.`,
+    answer: `We handle both new store builds and existing store enhancements. Much of our work involves speeding up slow stores and fixing buggy plugins. We also add B2B pricing, new payment gateways, and ERP integrations. We start with a technical audit and deliver a fixed-price proposal before starting.`,
     category: 'factoryjet',
   },
   {
     question: 'Can you migrate my store from Shopify to WooCommerce?',
-    answer: `Yes, Shopify to WooCommerce migration is a common engagement. We migrate products (with variants, images, and metadata), customer accounts, order history, and redirect all Shopify URLs to WooCommerce equivalents to preserve SEO. The main considerations are: your Shopify theme needs to be rebuilt on WooCommerce (themes don't transfer), and any Shopify-specific apps need WooCommerce equivalents or custom plugins. We audit your Shopify store first and scope the full migration cost before you commit.`,
+    answer: `Yes, Shopify to WooCommerce migration is a frequent project. We export products, customer accounts, and past order history. We configure 301 redirects for every old URL to protect organic search rankings. We rebuild your storefront theme on WordPress and replace Shopify apps with native plugins. We provide a complete fixed price before work begins.`,
     category: 'factoryjet',
   },
   {
     question: 'Will I be able to manage my WooCommerce store myself after launch?',
-    answer: `Yes, WooCommerce's admin dashboard is designed to be manageable by non-technical store owners. You can add products, update inventory, process orders, issue refunds, manage coupons, and publish blog posts without any development knowledge. We also provide a training session after launch so you're comfortable with the specific setup of your store. For ongoing technical work (plugin updates, new features, performance monitoring), we offer monthly maintenance retainers.`,
+    answer: `Yes, the WooCommerce admin dashboard is simple and intuitive. You can add new products, update prices, and process customer orders easily. You can issue refunds, create coupons, and publish blog articles without writing code. We provide full team training after launch so you feel confident managing operations.`,
     category: 'factoryjet',
   },
   {
     question: 'Do you offer WooCommerce maintenance and support packages?',
-    answer: `Yes, FactoryJet offers monthly WooCommerce maintenance retainers, scoped and quoted up front. These cover: WordPress and WooCommerce core updates, plugin updates with compatibility testing, daily backups with tested restore capability, uptime monitoring, security scanning, and a defined allocation of development hours for small changes and fixes. All project engagements include 30 days of free post-launch support regardless of whether you're on a retainer.`,
+    answer: `Yes, we provide monthly maintenance retainers. Our retainers cover core WordPress updates, WooCommerce updates, and plugin compatibility testing. We run daily off-site backups with tested restore procedures. We also monitor uptime and conduct regular security scans. Every build includes 30 days of complimentary post-launch support.`,
     category: 'factoryjet',
   },
   {
     question: 'How do I get started with FactoryJet WooCommerce development?',
-    answer: `Book a 30-minute discovery call. We'll discuss your store requirements, your timeline, your budget, and the technical approach that makes sense for your situation. For existing stores, we'll do a quick technical audit before providing a quote. For new builds, we'll scope the project on the call and follow up with a fixed-price proposal within 24–48 hours. No obligation to move forward, and no sales pressure on the call, we focus on figuring out if we're the right fit.`,
+    answer: `Book a 30-minute discovery call with our founder. We review your catalog size, required integrations, and project timeline. For existing stores, we run a quick technical audit. We follow up with a detailed, fixed-price proposal within 48 hours. There is zero sales pressure. We simply determine if our team is the right fit.`,
     category: 'factoryjet',
-  },
-  {
-    question: 'How much does it cost to hire a WooCommerce developer?',
-    answer: `It depends on scope. FactoryJet works on fixed-price projects rather than open-ended hourly billing: a professional WooCommerce store build is scoped to your custom design, plugins, and integrations, with the full price quoted up front. If you want to hire a WooCommerce developer on an ongoing basis, we offer monthly retainers covering core/plugin updates plus a defined block of development hours, also quoted upfront. US freelance WooCommerce developers typically bill hourly with no fixed ceiling, which is why most store owners prefer a fixed-scope quote you approve before work starts.`,
-    category: 'cost',
-  },
-  {
-    question: 'Can I hire a dedicated WooCommerce expert or development team?',
-    answer: `Yes. Every build assigns you a dedicated WooCommerce expert backed by a full team, designer, developer, and QA, with one point of contact, so nothing gets lost in handoffs. After launch you can keep that same expert on a monthly retainer for plugin development, store customization, performance work, and new features. You always have direct access to the person who actually knows your store's code.`,
-    category: 'factoryjet',
-  },
-  {
-    question: 'Do you offer WooCommerce store design and theme customization?',
-    answer: `Both. We design and build custom WooCommerce themes from scratch, and we customize existing themes when a full rebuild isn't needed. A conversion-focused designer handles layout, product-page hierarchy, trust signals, and mobile checkout flow, while our developers implement it in clean, maintainable code. WooCommerce store design and development are one engagement at FactoryJet, not two separate vendors.`,
-    category: 'development',
-  },
-  {
-    question: 'Can you customize my existing WooCommerce store instead of rebuilding it?',
-    answer: `Often, yes. If your store is on a reasonable theme and a current WordPress/WooCommerce/PHP version, we can usually deliver what you need through WooCommerce customization, theme adjustments, custom plugin development, checkout changes, and performance cleanup, without a full rebuild. We assess this in a quick technical audit first and recommend a rebuild only when the existing foundation would cost more to patch than to replace.`,
-    category: 'development',
   },
 ];
 
@@ -515,13 +495,13 @@ const howToSchema = {
     {
       '@type': 'HowToStep',
       position: 3,
-      name: 'Days 3–4 | Design',
+      name: 'Days 3-4 | Design',
       text: 'We design every page with your brand identity, mobile-first layouts, and conversion-focused UX. You review and approve all designs.',
     },
     {
       '@type': 'HowToStep',
       position: 4,
-      name: 'Days 5–6 | Development & SEO',
+      name: 'Days 5-6 | Development & SEO',
       text: 'We build your site in Next.js or WordPress, optimize Core Web Vitals, add structured data, and connect all integrations.',
     },
     {
@@ -568,7 +548,7 @@ export default function WoocommerceDevelopmentPage() {
         formSlot={<HeroInlineForm region="us" source="us_services_woocommerce_development_hero" />}
           eyebrow="WOOCOMMERCE DEVELOPMENT SERVICES"
           headline="Senior WooCommerce developers. Custom stores and plugins. fixed-price, milestone-paid."
-          lead="Custom WooCommerce store builds, plugin development, B2B functionality, ERP integrations, and performance optimization, fixed-price projects delivered by senior developers with a decade-plus of WordPress and WooCommerce experience."
+          lead="We build custom WooCommerce stores and plugins. We engineer B2B wholesale features, live ERP sync, and speed optimization. Every build is a fixed-price project delivered by senior WordPress developers."
           secondaryCta={{ label: 'View Our Work', href: '/portfolio' }}
           rightSlot={
             <div className="w-full overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white shadow-sm">
@@ -582,14 +562,14 @@ export default function WoocommerceDevelopmentPage() {
               </div>
               <div className="divide-y divide-fj-neutral-100">
                 {[
-                  { service: 'Custom Store Builds', detail: 'Designed from scratch, no templates' },
-                  { service: 'Custom Plugin Development', detail: 'Hooks and filters, no core edits' },
-                  { service: 'B2B / Wholesale Stores', detail: 'Role pricing, POs, quote workflows' },
-                  { service: 'Subscription & Membership', detail: 'Recurring billing, gated content' },
-                  { service: 'ERP / CRM Integration', detail: 'QuickBooks, NetSuite, Salesforce, more' },
-                  { service: 'Checkout Customization', detail: 'Convert more without redesigning' },
-                  { service: 'Performance Optimization', detail: 'Core Web Vitals, caching, speed' },
-                  { service: 'Ongoing Maintenance', detail: 'Monthly retainers, scoped to your store' },
+                  { service: 'Custom Store Builds.', detail: 'Designed from scratch, no templates.' },
+                  { service: 'Custom Plugin Development.', detail: 'Hooks and filters, no core edits.' },
+                  { service: 'B2B / Wholesale Stores.', detail: 'Role pricing, POs, quote workflows.' },
+                  { service: 'Subscription & Membership.', detail: 'Recurring billing, gated content.' },
+                  { service: 'ERP / CRM Integration.', detail: 'QuickBooks, NetSuite, Salesforce, more.' },
+                  { service: 'Checkout Customization.', detail: 'Convert more without redesigning.' },
+                  { service: 'Performance Optimization.', detail: 'Core Web Vitals, caching, speed.' },
+                  { service: 'Ongoing Maintenance.', detail: 'Monthly retainers, scoped to your store.' },
                 ].map(({ service, detail }) => (
                   <div key={service} className="flex items-center gap-4 px-7 py-3.5">
                     <div className="mt-0.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#F05A28]" aria-hidden />
@@ -606,7 +586,7 @@ export default function WoocommerceDevelopmentPage() {
                   className="font-fj-display font-semibold text-fj-ink"
                   style={{ fontSize: '1rem', lineHeight: 1.3, letterSpacing: '-0.02em' }}
                 >
-                  Fixed-price WooCommerce projects, scoped and quoted upfront for plugins and full store builds.
+                  Fixed-price WooCommerce projects. Scoped and quoted upfront for plugins and complete store builds.
                 </p>
               </div>
             </div>
@@ -626,15 +606,15 @@ export default function WoocommerceDevelopmentPage() {
         <ServiceExplanation
           eyebrow="WHAT WE BUILD"
           headline="Custom WooCommerce Development That Goes Beyond What Plugins Can Do"
-          lead="Most WooCommerce stores hit a ceiling with off-the-shelf plugins, they almost do what you need, with a workaround for the part they don't. Custom development closes that gap. Here's what we build."
+          lead="Most stores outgrow off-the-shelf plugins. Generic extensions solve part of the problem, leaving awkward workarounds. Custom engineering closes that gap. Here is what we build."
           body={
             <>
               <p>
-                Custom WooCommerce stores are the foundation. We design and build from scratch, no Flatsome, no Astra, no premium template that makes your store look like a thousand others. The theme is purpose-built for your products, your customers, and your conversion goals. Mobile-first, Core Web Vitals optimized, and ready for high traffic from launch day.
+                Custom WooCommerce stores provide a solid foundation. We design and build every theme from scratch. We never use generic templates that look like competitors. Your theme is purpose-built for your product catalog and conversion goals. It is mobile-first, fast, and ready for high traffic.
               </p>
 
               <p>
-                Custom plugin development is where most of our WooCommerce engagements go beyond the standard. A custom shipping rate calculator. A product configurator that sets pricing dynamically based on options. A wholesale pricing engine with customer-specific rates. A WooCommerce-to-ERP sync that keeps inventory accurate across both systems. Plugins built using WooCommerce's hooks and filters, which means they survive WooCommerce updates and don't conflict with other plugins.
+                Custom plugin development handles unique business logic. We build custom shipping rate calculators and dynamic product configurators. We create wholesale pricing engines with customer-specific contract rates. We also build ERP sync plugins to keep stock levels accurate. All plugins use standard hooks and filters so updates never break your store.
               </p>
 
               <div className="overflow-hidden rounded-xl border border-fj-neutral-200 bg-white shadow-sm">
@@ -648,12 +628,12 @@ export default function WoocommerceDevelopmentPage() {
                 </div>
                 <div className="divide-y divide-fj-neutral-100">
                   {[
-                    { project: 'Custom checkout flow', detail: 'Fewer fields, higher conversion, BNPL options' },
-                    { project: 'B2B pricing engine', detail: 'User-role pricing, volume tiers, net terms' },
-                    { project: 'Product configurator', detail: 'Dynamic pricing from custom option selections' },
-                    { project: 'ERP sync plugin', detail: 'Bidirectional order and inventory sync' },
-                    { project: 'Subscription system', detail: 'Custom billing intervals, pausing, upgrades' },
-                    { project: 'Wholesale portal', detail: 'Hidden retail prices, bulk order forms, POs' },
+                    { project: 'Custom checkout flow.', detail: 'Fewer fields, higher conversion, BNPL options.' },
+                    { project: 'B2B pricing engine.', detail: 'User-role pricing, volume tiers, net terms.' },
+                    { project: 'Product configurator.', detail: 'Dynamic pricing from custom option selections.' },
+                    { project: 'ERP sync plugin.', detail: 'Bidirectional order and inventory sync.' },
+                    { project: 'Subscription system.', detail: 'Custom billing intervals, pausing, upgrades.' },
+                    { project: 'Wholesale portal.', detail: 'Hidden retail prices, bulk order forms, POs.' },
                   ].map(({ project, detail }) => (
                     <div key={project} className="grid grid-cols-2 gap-4 px-6 py-2.5">
                       <p className="font-fj-body text-[0.8125rem] font-semibold text-fj-ink">{project}</p>
@@ -664,7 +644,7 @@ export default function WoocommerceDevelopmentPage() {
               </div>
 
               <p>
-                Performance optimization is the third major WooCommerce engagement type. Slow WooCommerce stores are almost always fixable: the culprits are usually inadequate hosting, no WooCommerce-aware caching, unoptimized product images, and plugin bloat. We audit the full stack and fix performance at the root cause, not the symptom.
+                Performance optimization is our third core service. Slow WooCommerce stores hurt sales. Common causes include poor hosting, missing object caching, and heavy plugins. We audit your full stack and fix root causes directly.
               </p>
             </>
           }
@@ -675,16 +655,16 @@ export default function WoocommerceDevelopmentPage() {
                   className="font-fj-mono font-medium uppercase text-fj-neutral-400"
                   style={{ fontSize: '11px', letterSpacing: '0.14em' }}
                 >
-                  WooCommerce Problems We Fix
+                  WooCommerce Problems We Fix.
                 </p>
               </div>
               <div className="divide-y divide-fj-neutral-100 px-7">
                 {[
-                  { problem: 'Slow store (5s+ load)', fix: 'Caching, hosting, image optimization' },
-                  { problem: 'Checkout abandonment', fix: 'Custom flow, fewer fields, BNPL' },
-                  { problem: 'No wholesale pricing', fix: 'Custom B2B plugin or role-based pricing' },
-                  { problem: 'Broken plugin conflicts', fix: 'Plugin audit, conflict resolution' },
-                  { problem: 'Inventory sync errors', fix: 'Custom ERP integration plugin' },
+                  { problem: 'Slow store (5s+ load).', fix: 'Caching, hosting, image optimization.' },
+                  { problem: 'Checkout abandonment.', fix: 'Custom flow, fewer fields, BNPL.' },
+                  { problem: 'No wholesale pricing.', fix: 'Custom B2B plugin or role-based pricing.' },
+                  { problem: 'Broken plugin conflicts.', fix: 'Plugin audit, conflict resolution.' },
+                  { problem: 'Inventory sync errors.', fix: 'Custom ERP integration plugin.' },
                 ].map(({ problem, fix }) => (
                   <div key={problem} className="py-3.5">
                     <p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">{problem}</p>
@@ -719,15 +699,15 @@ export default function WoocommerceDevelopmentPage() {
           pillars={[
             {
               title: 'Core file edits that break on every update',
-              body: `The fastest way to identify a developer who doesn't know WooCommerce: they edit WooCommerce template files directly instead of using child themes and hooks. Template overrides are fine; core WooCommerce PHP edits are not. Core edits get overwritten every time WooCommerce releases an update, which is 8–12 times per year. If your current store requires manual re-application of code changes after every WooCommerce update, your previous developer built it wrong. FactoryJet uses hooks and filters exclusively: your customizations survive every update.`,
+              body: `Untrained developers often edit core WooCommerce files directly. That is a major mistake. Core file changes get overwritten during regular WooCommerce releases. If your store breaks after updates, it was built incorrectly. FactoryJet uses hooks and filters exclusively. Your customizations survive every WordPress and WooCommerce update.`,
             },
             {
               title: 'Plugin bloat that kills store performance',
-              body: `The average WooCommerce store has 20–40 plugins installed. Many do trivial things that should be in the theme or custom code instead. Each plugin adds HTTP requests, database queries, and JavaScript to your store: the aggregate effect is significant. We've seen stores where removing 8 unnecessary plugins reduced page load time by 40%. FactoryJet audits plugins before recommending any, and when a plugin adds weight without sufficient value, we build the functionality in custom code instead.`,
+              body: `Many stores run 30 or more plugins. Many plugins handle trivial tasks that belong in the theme. Each plugin adds extra database queries and script files. Removing unnecessary plugins often speeds up page loads by 40 percent. We audit your plugin stack and replace heavy plugins with clean custom code.`,
             },
             {
               title: `Checkout friction that leaks revenue`,
-              body: `WooCommerce's default checkout has too many fields. Most stores don't need separate billing and shipping addresses on the first order. Most stores don't need a phone number field that 40% of customers leave blank or fill with fake data. Every unnecessary field reduces conversion. We've seen checkout conversion rates improve 15–25% from checkout field optimization alone, no redesign, just removing the friction. FactoryJet builds checkout flows around what your specific customer journey actually needs, not WooCommerce's one-size-fits-all defaults.`,
+              body: `Default WooCommerce checkout forms contain too many fields. Most stores do not need separate address fields on initial orders. Extra form fields increase checkout abandonment. Streamlining checkout fields often boosts conversions by 15 to 25 percent. We design clean checkout flows tailored to your actual buyers.`,
             },
           ]}
         />
@@ -760,11 +740,11 @@ export default function WoocommerceDevelopmentPage() {
           body={
             <>
               <p>
-                FactoryJet has been building on WordPress and WooCommerce since before WooCommerce was called WooCommerce (it started as WooThemes Cart). That's 12+ years of WooCommerce experience, enough depth to know which approaches cause problems 2 years later and which ones hold up. We build for maintainability, not just for launch day.
+                FactoryJet has built on WordPress and WooCommerce for over a decade. We understand what architectures hold up over time. We know which shortcuts create technical debt two years later. We build for longevity and easy maintenance.
               </p>
 
               <p>
-                Every WooCommerce plugin or customization we write uses hooks and filters, WooCommerce's official extension points. No core file modifications, no template file edits that break on updates. Child themes where theme customization is needed. Composer-managed dependencies. Inline documentation. This is the standard for professional WooCommerce development, and it's non-negotiable for us.
+                Every custom plugin uses official WooCommerce hooks and filters. We never modify core files. We build custom child themes, use Composer for dependencies, and document all code. This ensures any WordPress developer can maintain your store.
               </p>
 
               <div className="border-l-2 border-[#F05A28] py-1 pl-5" aria-hidden>
@@ -777,7 +757,7 @@ export default function WoocommerceDevelopmentPage() {
               </div>
 
               <p>
-                Fixed-price proposals on every project. We scope carefully, ask the right questions, and quote accurately, because cost overruns are a failure of scoping, not the client's problem. The price you get after the discovery call is the price you pay. No hourly billing, no scope creep invoices, no surprise additions at the end.
+                We provide fixed-price proposals on every engagement. We scope technical requirements thoroughly before work starts. The price quoted after discovery is the final price you pay. We never bill surprise hours or scope-creep invoices.
               </p>
             </>
           }
@@ -788,18 +768,18 @@ export default function WoocommerceDevelopmentPage() {
                   className="font-fj-mono font-medium uppercase text-fj-neutral-400"
                   style={{ fontSize: '11px', letterSpacing: '0.14em' }}
                 >
-                  Our WooCommerce Development Standards
+                  Our WooCommerce Development Standards.
                 </p>
               </div>
               <div className="divide-y divide-fj-neutral-100">
                 {[
-                  { standard: 'Hooks and filters only', detail: 'No core edits, survives every update' },
-                  { standard: 'Child theme architecture', detail: 'Customizations separate from parent theme' },
-                  { standard: 'Plugin conflict testing', detail: 'Verified against your existing plugin stack' },
-                  { standard: 'Core Web Vitals passing', detail: 'Performance measured, not assumed' },
-                  { standard: 'WooCommerce HPOS ready', detail: 'High-performance order storage compatible' },
-                  { standard: 'Full code documentation', detail: 'Every plugin shipped with inline docs' },
-                  { standard: 'Staging → production', detail: 'No live site development, ever' },
+                  { standard: 'Hooks and filters only.', detail: 'No core edits, survives every update.' },
+                  { standard: 'Child theme architecture.', detail: 'Customizations separate from parent theme.' },
+                  { standard: 'Plugin conflict testing.', detail: 'Verified against your existing plugin stack.' },
+                  { standard: 'Core Web Vitals passing.', detail: 'Performance measured, not assumed.' },
+                  { standard: 'WooCommerce HPOS ready.', detail: 'High-performance order storage compatible.' },
+                  { standard: 'Full code documentation.', detail: 'Every plugin shipped with inline docs.' },
+                  { standard: 'Staging → production.', detail: 'No live site development, ever.' },
                 ].map(({ standard, detail }) => (
                   <div key={standard} className="flex items-center gap-4 px-7 py-3.5">
                     <div className="mt-0.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#F05A28]" aria-hidden />
@@ -852,20 +832,21 @@ export default function WoocommerceDevelopmentPage() {
                 </p>
                 <p>
                   Need ongoing help instead of a one-off build? Hire a dedicated WooCommerce expert on a monthly
-                  retainer for theme work, plugin development, performance, and store customization. For a broader scope,
+                  retainer for theme work, plugin development, performance, and store customization. For mobile storefronts,
+                  explore our{' '}
+                  <Link href="/services/ecommerce-app-development" className="text-[#B23E13] font-medium underline underline-offset-2">ecommerce app development</Link>, or
                   see our{' '}
-                  <Link href="/services/ecommerce-development" className="text-[#B23E13] font-medium underline underline-offset-2">ecommerce development services</Link>, or
-                  weigh platforms in our{' '}
+                  <Link href="/services/ecommerce-development" className="text-[#B23E13] font-medium underline underline-offset-2">ecommerce development services</Link> and{' '}
                   <Link href="/blog/shopify-vs-woocommerce-us-small-business-2026" className="text-[#B23E13] font-medium underline underline-offset-2">Shopify vs WooCommerce guide</Link>.
                 </p>
               </div>
               <div className="rounded-2xl border border-[#E5E5E0] bg-white p-7">
                 <h3 className="text-xl font-bold text-[#0F0F12] mb-3">WooCommerce store design &amp; customization</h3>
                 <ul className="space-y-2.5 text-[#3A3A40] text-[15px]">
-                  <li>• Custom WooCommerce store design &amp; theme builds</li>
-                  <li>• Store customization on your existing site, no full rebuild</li>
-                  <li>• Custom plugin development &amp; integrations</li>
-                  <li>• Speed, Core Web Vitals &amp; checkout optimization</li>
+                  <li>• Custom WooCommerce store design &amp; theme builds.</li>
+                  <li>• Store customization on your existing site, no full rebuild.</li>
+                  <li>• Custom plugin development &amp; integrations.</li>
+                  <li>• Speed, Core Web Vitals &amp; checkout optimization.</li>
                 </ul>
                 <Link
                   href="https://calendly.com/bhavesh-factoryjet/30min"
@@ -896,7 +877,7 @@ export default function WoocommerceDevelopmentPage() {
                 <p className="text-sm font-semibold text-[#0F0F12] leading-snug">Shopify vs WooCommerce: which is right for your US business?</p>
               </a>
               <a href="/blog/custom-web-development-vs-wordpress-us-small-business-2026" className="block p-5 rounded-lg border border-[#E5E5E0] bg-white hover:border-[#F05A28] transition-colors">
-                <p className="text-sm font-semibold text-[#0F0F12] leading-snug">Custom web development vs WordPress for US small businesses</p>
+                <p className="text-sm font-semibold text-[#0F0F12] leading-snug">Custom web development vs WordPress for US small businesses.</p>
               </a>
             </div>
           </div>
@@ -907,10 +888,10 @@ export default function WoocommerceDevelopmentPage() {
           variant="dark"
           eyebrow="GET STARTED"
           headline="Ready to build or improve your WooCommerce store?"
-          sub="Book a 30-minute discovery call. We'll scope your project, answer your technical questions, and give you a fixed-price proposal within 24–48 hours. No obligation."
+          sub="Book a 30-minute discovery call. We'll scope your project, answer your technical questions, and give you a fixed-price proposal within 24-48 hours. No obligation."
           primaryCta={{ label: 'Book Your Free Discovery Call', modal: true, region: 'us' }}
           secondaryCta={{ label: 'View Our E-Commerce Work', href: '/portfolio' }}
-          objectionHandler="No commitment required. Fixed-price proposal within 24–48 hours."
+          objectionHandler="No commitment required. Fixed-price proposal within 24-48 hours."
         />
       </main>
 

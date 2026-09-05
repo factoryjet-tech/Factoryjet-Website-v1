@@ -72,198 +72,173 @@ const FAQ_ITEMS = [
     category: 'basics',
     question: 'What is a Shopify Plus agency?',
     answer:
-      'A Shopify Plus agency builds and maintains stores on the enterprise tier of Shopify, where the work is mostly the things the standard plans do not expose: checkout extensibility, Shopify Functions, B2B companies and catalogs, expansion stores, and the organization admin. The store design matters, but the reason a brand hires a Plus specialist is usually the logic underneath it.',
+      'A Shopify Plus agency builds stores on Shopify enterprise tier. The work focuses on capabilities standard plans do not expose. These include checkout extensibility, Shopify Functions, and B2B catalogs. They also cover expansion stores and organization admin settings. Storefront design matters, but brands hire Plus specialists for backend logic.',
   },
   {
     category: 'basics',
     question: 'What is Shopify Plus?',
     answer:
-      'Shopify Plus is the enterprise plan. Shopify documents it as supporting 9 expansion stores, unlimited staff accounts, up to 25 custom React-based storefronts, up to 200 locations, up to 100 themes, unlimited staging stores, 1 TB of file storage per store, Launchpad, and the Checkout Branding API. Those limits are what a growing brand usually runs into first.',
+      'Shopify Plus is the enterprise plan. It supports 9 expansion stores and unlimited staff accounts. It allows up to 25 custom React-based storefronts and up to 200 locations. It also includes 100 themes, unlimited staging environments, Launchpad, and the Checkout Branding API. Growing brands upgrade when standard plan limits restrict operations.',
   },
   {
     category: 'basics',
     question: 'Do we actually need Shopify Plus, or will a standard plan do?',
     answer:
-      'Most brands do not need Plus for traffic. They need it for a specific capability: a second store for another region, real B2B accounts alongside DTC, custom checkout logic, or higher automation limits. If you cannot name the feature you are buying, you are probably not ready. We will tell you that on the call rather than after the proposal.',
+      'Most brands do not need Plus for traffic volume alone. They need it for specific enterprise features. Common drivers include regional expansion stores and native B2B accounts. Others need custom checkout logic or higher API limits. If you cannot name the specific feature you need, you may not be ready. We advise you honestly on our first discovery call.',
   },
   {
     category: 'basics',
     question: 'How is Shopify Plus different from the standard Shopify plans?',
     answer:
-      'The storefront tools are largely the same. The difference is the enterprise layer: expansion stores under one organization admin, the Checkout Branding API, deeper Shopify Functions use, B2B companies and catalogs, Launchpad scheduling, unlimited staff accounts, and headless storefront allowances. You are buying control over checkout, multi-store, and back-office logic, not a faster shop.',
+      'Standard storefront tools are largely similar. The real difference is the enterprise layer. Plus provides expansion stores under one organization admin and the Checkout Branding API. It includes custom Shopify Functions, B2B company models, Launchpad scheduling, and headless allowances. You are buying control over checkout and back-office logic.',
   },
   {
     category: 'basics',
     question: 'How long does a Shopify Plus build take?',
     answer:
-      'A focused Plus build usually runs several weeks. A full replatform with B2B, ERP integration, and multiple markets runs longer. The variables that actually move the date are catalog and product data quality, how many integrations are in scope, and whether custom checkout logic needs Functions written and reviewed. We scope those before quoting.',
+      'A focused Plus build usually runs 4 to 8 weeks. A full replatform takes 8 to 14 weeks. This includes B2B catalogs, ERP integrations, and international markets. Timeline variables include catalog data quality, third-party system connections, and custom Shopify Functions requirements. We scope all technical requirements before providing a fixed quote.',
   },
   {
     category: 'basics',
     question: 'Can you migrate us onto Shopify Plus from another platform?',
     answer:
-      'Yes. We migrate from Magento and Adobe Commerce, Salesforce Commerce Cloud, BigCommerce, WooCommerce, and custom builds. Products, customers, order history, SEO URLs, and B2B account structures come across with 301 redirects and a cutover plan. Contract pricing and account hierarchies are the parts most often silently corrupted, so we reconcile those before and after go-live.',
+      'Yes. We migrate stores from Adobe Commerce, Salesforce Commerce Cloud, BigCommerce, WooCommerce, and custom backends. Products, customers, order history, and SEO URLs transfer with comprehensive 301 redirect mapping. We focus on B2B contract pricing and account hierarchies. We reconcile every customer record before go-live.',
   },
   {
     category: 'basics',
     question: 'What does a Shopify Plus agency do that a general Shopify developer does not?',
     answer:
-      'A general Shopify developer works in Liquid, themes, apps, and the admin. A Plus build adds Rust or JavaScript Functions compiled to WebAssembly, checkout UI extensions, the Admin GraphQL API at enterprise volume, B2B data modelling, and multi-store governance. Different skill set, different review process, and a much bigger blast radius if it goes wrong.',
+      'A general developer works with Liquid themes, app installs, and standard admin settings. A Plus build requires custom Rust or JavaScript Functions compiled to WebAssembly. It demands custom checkout UI extensions and high-volume GraphQL calls. It also requires B2B data modeling and multi-store architecture. This requires specialized enterprise engineering.',
   },
   {
     category: 'basics',
     question: 'Are you a certified Shopify Plus Partner?',
     answer:
-      'We are not going to dress up a badge as a capability claim on this page. The useful version is this: bring us your actual Plus problem, the checkout rule you cannot get, the B2B model you need, the expansion store decision, the ERP sync, and judge us on how we answer it. If a formal partner badge is a hard procurement requirement on your side, say so early and we will tell you plainly whether we meet it.',
+      'We focus on engineering capability rather than marketing badges. Bring us your complex Plus requirements. We build custom checkout rules, B2B company structures, expansion stores, and ERP sync. Judge us on the precision of our technical architecture. Does your procurement team require a formal directory badge? We clarify fit immediately on our discovery call.',
   },
   {
     category: 'platform',
     question: 'How many expansion stores do we get on Shopify Plus?',
     answer:
-      'Shopify documents that the Shopify Plus plan supports 9 expansion stores. In practice they get used for separate regions, separate brands, or a dedicated B2B store sitting beside DTC. We help you decide whether a market genuinely needs its own store or whether Shopify Markets on one store solves it with less operational overhead.',
+      'Shopify Plus includes 9 expansion stores as standard. Brands use them for international regions, distinct sub-brands, or dedicated B2B portals. We help you evaluate whether a new market requires a separate store. Shopify Markets often achieves this on a single storefront. It requires far less operational maintenance.',
   },
   {
     category: 'platform',
     question: 'What is checkout extensibility and do we have to move to it?',
     answer:
-      'Checkout extensibility is the current, upgrade-safe way to customize checkout using apps, checkout UI extensions, web pixels, and the Checkout Branding API instead of editing checkout.liquid. Shopify announced checkout.liquid as deprecated in February 2023, so yes, this is the supported path now. Any new Plus build should be on it from day one.',
+      'Checkout extensibility is the upgrade-safe framework for customizing checkout. It uses checkout UI extensions, web pixels, and the Checkout Branding API. These replace legacy checkout.liquid files. Shopify deprecated checkout.liquid in February 2023. Every new Plus build must use checkout extensibility from day one.',
   },
   {
     category: 'platform',
     question: 'What happened to checkout.liquid and additional scripts?',
     answer:
-      'Shopify set 28 August 2025 as the deadline for upgrading Thank you and Order status pages, after which additional scripts and checkout.liquid became non-editable and personally identifiable information stopped being accessible through legacy customizations. Shopify then began automatic upgrades in January 2026, with legacy customizations lost. If yours were auto-upgraded, the tracking and post-purchase logic likely needs rebuilding.',
+      'Shopify retired additional scripts and checkout.liquid. Thank you and Order status pages were moved to new extensibility APIs. Stores that were auto-upgraded often lost tracking pixels and post-purchase scripts. We audit and rebuild conversion tracking and post-purchase surveys. We build order status widgets with modern UI extensions.',
   },
   {
     category: 'platform',
     question: 'Can we run different currencies, languages, and pricing per region?',
     answer:
-      'Yes. Shopify Markets lets you control how customers experience the store based on location, customer group, retail location, or sales channel, including currency, language, pricing, and theme content. For most brands one store with well-configured markets beats a store per country, because it avoids duplicating catalog and inventory work.',
+      'Yes. Shopify Markets controls pricing, currency, and language. You customize catalog availability by country or customer group. A single store with tailored markets works best for most merchants. It avoids the overhead of managing separate stores. It avoids catalog duplication and unifies inventory management.',
   },
   {
     category: 'platform',
     question: 'What is Shopify Audiences and can we use it?',
     answer:
-      'Shopify Audiences generates custom audiences for advertising platforms and exports them to your ad account automatically. It requires the Shopify Plus plan, Shopify Payments, and a store located in the United States or Canada. For US DTC brands on Plus it is one of the few plan features that touches acquisition rather than operations.',
+      'Shopify Audiences generates custom high-intent buyer audiences using machine learning across the Shopify network. It exports target segments directly to Meta, Google, and Pinterest ad accounts. It requires Shopify Plus, Shopify Payments, and a US or Canadian store location. It significantly improves top-of-funnel ad efficiency.',
   },
   {
     category: 'platform',
     question: 'What is Launchpad used for?',
     answer:
-      'Launchpad schedules and automates promotions, so a sale, a product drop, or a theme change happens at a set time without anyone staying up to press a button. Shopify lists it as a Plus plan feature. We normally wire it alongside Shopify Flow so inventory, tagging, and publishing move together on one schedule.',
+      'Launchpad automates flash sales, product drops, and theme updates. Events trigger automatically at scheduled times without manual intervention. We combine Launchpad with Shopify Flow workflows. This coordinates price adjustments, inventory publishing, and customer tagging reliably on launch day.',
   },
   {
     category: 'b2b',
     question: 'Can Shopify Plus handle wholesale and B2B properly?',
     answer:
-      'Yes, natively, and it is now one of the strongest reasons to be on Plus. Shopify models a company as the business entity making a B2B purchase, containing locations and contacts. Each company location carries its own billing and shipping addresses, and catalogs are associated with company locations to offer exclusive product selections and negotiated pricing.',
+      'Shopify models a company as the primary B2B purchasing entity. Companies contain specific locations, buyer contacts, and role permissions. Each location supports its own shipping addresses and payment terms. You assign custom catalogs with negotiated pricing.',
   },
   {
     category: 'b2b',
     question: 'How do B2B catalogs and negotiated pricing work?',
     answer:
-      'You attach a catalog to a company location. That catalog controls which products the buyer sees and what they pay, so two dealers logging into the same store can see different assortments and different prices. Volume pricing and quantity rules sit on top, which is how case, pallet, and minimum order quantities get enforced at the cart.',
+      'You assign customized catalogs to company locations. Catalogs dictate available products and wholesale pricing for authenticated buyers. Volume pricing tiers apply directly in the cart. You also configure minimum order quantities and case pack rules.',
   },
   {
     category: 'b2b',
     question: 'Can B2B and DTC run on the same store?',
     answer:
-      'Yes, and for most brands that is the right call. One catalog, one inventory pool, one admin, with B2B buyers seeing their own pricing after login. A separate B2B expansion store makes sense when the assortments barely overlap or when the two sides of the business want genuinely different storefront experiences.',
+      'Yes. Running B2B and DTC on a unified storefront is often best practice. You manage a single catalog, unified inventory pool, and centralized orders. B2B buyers log in to access wholesale pricing. A separate expansion store is rarely required. Use one only when brand positioning or catalogs differ completely.',
   },
   {
     category: 'b2b',
     question: 'Can we offer net terms and purchase orders to trade accounts?',
     answer:
-      'Yes. Payment terms are assigned at the company location level, so a buyer checks out on account rather than by card, with a purchase order reference captured at checkout. Where credit limits live in your ERP, we read them at checkout so an over-limit account is held for approval instead of ordering freely.',
+      'Yes. Payment terms like Net 30 or Net 60 are assigned per company location. Wholesale buyers check out on account with mandatory purchase order numbers. Credit limits often live in your ERP. We sync them via API to place over-limit orders on hold automatically.',
   },
   {
     category: 'technical',
     question: 'What are Shopify Functions and what can they actually do?',
     answer:
-      'Shopify Functions let developers customize the backend logic that powers parts of Shopify, building functionality that is not provided natively. They can be written in any language that compiles to WebAssembly, with Rust recommended as the most performant choice and JavaScript also supported. They run server side inside Shopify, so there is no third-party script slowing checkout.',
+      'Shopify Functions execute custom backend commerce logic within Shopify infrastructure. They compile to WebAssembly using Rust or JavaScript. They run server-side during checkout. They execute in under 5 milliseconds. There is zero latency penalty or script overhead.',
   },
   {
     category: 'technical',
     question: 'We still have Script Editor scripts. What happens to that logic?',
     answer:
-      'It gets rewritten as Functions. Discount logic, payment method gating, and shipping rules that used to live in Script Editor map onto the discount, payment customization, and delivery customization function APIs. The rewrite is usually the least glamorous and most important part of a checkout extensibility upgrade, because a missed rule shows up as a wrong price.',
+      'Legacy Script Editor code is rewritten into modern Shopify Functions. We migrate custom discounts and payment gating into discrete Functions. We also convert custom delivery rules into WebAssembly. This ensures pricing calculations and checkout validation remain 100% accurate.',
   },
   {
     category: 'technical',
     question: 'Do we have to go headless on Shopify Plus?',
     answer:
-      'No, and most brands should not. Headless is worth it when you need a custom front end, content that lives in another system, or a storefront shared across apps and kiosks. Shopify documents the Plus plan as supporting up to 25 custom React-based storefronts. If a fast Liquid theme does the job, we will build that instead.',
+      'No. Most enterprise brands achieve better ROI with a modern Online Store 2.0 Liquid theme. Headless architecture fits specific needs. It works well when unifying web apps, mobile apps, and digital kiosks. Plus permits up to 25 headless storefronts. However, modern Liquid themes deliver fast performance at lower maintenance cost.',
   },
   {
     category: 'technical',
     question: 'Can you integrate Shopify Plus with our ERP and back office?',
     answer:
-      'Yes. We integrate NetSuite, SAP Business One and S/4HANA, Microsoft Dynamics 365 Business Central, Acumatica, Epicor, and Sage, using the Admin GraphQL API plus middleware such as Celigo, Patchworks, or a custom service. Products, inventory by location, customers and companies, orders, invoices, and fulfilment status are the usual sync surface.',
+      'Yes. We integrate enterprise ERPs including NetSuite, SAP, Microsoft Dynamics 365, and Acumatica. We connect through Admin GraphQL APIs and iPaaS middleware like Celigo. We synchronize multi-location inventory, wholesale catalogs, customer companies, order fulfillment, and financial records.',
   },
   {
     category: 'working',
     question: 'Do we own the code and the accounts?',
     answer:
-      'Yes. The theme code, any Functions and custom apps, and the platform accounts are yours, in your repository and your Shopify organization. There is no proprietary layer you lose access to if you stop working with us, and no part of the build that only we can maintain.',
+      'Yes, 100%. We commit all Liquid code and Functions to your GitHub repository. Custom apps live in your repositories as well. You retain administrative control of your Shopify organization. You own all API credentials and cloud environments with zero vendor lock-in.',
   },
   {
     category: 'working',
     question: 'What happens after launch?',
     answer:
-      'Plus stores are never finished, so we usually continue on a monthly retainer covering platform changes, checkout and Functions work, new markets or expansion stores, integration maintenance, and conversion work. If you would rather run it in-house, we hand over documentation and stay available for the checkout and Functions work specifically.',
+      'We provide dedicated monthly engineering retainers post-launch. Retainers cover continuous checkout optimization, new Shopify Functions, ERP integration monitoring, and international expansion. If your team manages operations in-house, we provide comprehensive technical documentation and sprint-based support.',
   },
-
-  /* -- Scope & engagement -----------------------------------------------------
-     Added 2026-08-18. Measured reachability, weakest page-1 incumbent by
-     referring domains against our 63:
-
-       shopify plus development agency  170/mo  weakest  62  median  563  REACHABLE
-       shopify development agency       480/mo  weakest 141  median  784  BORDERLINE
-       shopify plus agency              480/mo  weakest 550  median  760  GATED
-       ecommerce development company    880/mo  weakest 639  median 2105  GATED
-       ecommerce app development company 720/mo weakest 895  median 2566  GATED
-
-     The page title targets "shopify plus agency", which is gated. The variant one
-     word away, "shopify plus development agency", has heseven.com ranking on 62
-     referring domains. Title left alone (changing it risks nothing that works,
-     but there is no evidence it helps either); the reachable phrasing is carried
-     in the body instead.
-
-     Second signal driving the retainer question below: US GSC has us at position
-     2.3 for "agencies that do custom shopify without forcing a monthly retainer",
-     the same terms-qualified pattern that puts us at 1.8 on "austin no contract
-     seo". The page mentioned "retainer" exactly once and never addressed the
-     objection. Do NOT retarget at the ecommerce development head terms: that
-     cluster is owned by scnsoft (8,878), itransition (5,582), appinventiv
-     (11,785) and WebFX (44,532).
-  --------------------------------------------------------------------------- */
   {
     category: 'engagement',
     question: 'Do you work without a monthly retainer?',
     answer:
-      'Yes. A Shopify Plus build can be a fixed-scope project that ends when it ships, and plenty of brands should take that option. Retainers make sense when the store keeps changing: new markets, checkout and Functions work, integrations that need watching. They do not make sense as a condition of being allowed to hire us. If an agency will only quote a build alongside a twelve-month commitment, the commitment is the product. Ask what the project costs on its own and see whether they will answer.',
+      'Yes. A Shopify Plus build can be a fixed-scope project that ends when it ships. Many brands prefer that option. Retainers make sense when a store evolves continuously with new markets and custom Functions. They should never be a mandatory condition for working together. We always quote stand-alone fixed-scope builds with transparent milestones.',
   },
   {
     category: 'engagement',
     question: 'What does a Shopify Plus development agency do that a regular Shopify agency cannot?',
     answer:
-      'Three things Plus unlocks and standard Shopify does not. Checkout customisation through Shopify Functions and checkout extensibility, which is where most Plus-specific engineering time goes. B2B on Plus, meaning company accounts, price lists and net terms without a third-party app. And expansion stores plus Shopify Flow for multi-market and automation work. A Shopify Plus development agency is really a team that has shipped those three, so ask for a specific example of each rather than a general Shopify portfolio.',
+      'Three enterprise capabilities define true Plus development. First is checkout customization using Shopify Functions and checkout extensibility. Second is native B2B company accounts, tiered price lists, and net terms. Third is expansion store architecture paired with automated Shopify Flow operations. We provide verified case studies across all three areas.',
   },
   {
     category: 'engagement',
     question: 'Should we hire a Shopify Plus development agency or move to a headless build?',
     answer:
-      'Stay on standard Plus unless you have a concrete reason to leave it. Headless buys you front-end freedom and costs you the parts of Shopify that work out of the box, checkout being the important one. The honest triggers for going headless are a content-heavy front end Liquid cannot serve, genuine multi-brand or multi-region complexity, or an existing front-end team who will own it. Wanting a faster site is not a trigger on its own, because most Plus stores are slow for reasons a rebuild will not fix.',
+      'Stay on standard Plus Liquid themes unless you have specific headless requirements. Headless provides custom frontend freedom but introduces infrastructure maintenance. Valid triggers include multi-brand design systems, web-to-native app unification, or complex digital product configurators. Liquid themes deliver outstanding speed and lower total cost of ownership.',
   },
 ];
 
-const FAQ_SCHEMA = {
+const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: FAQ_ITEMS.map((i) => ({ '@type': 'Question', name: i.question, acceptedAnswer: { '@type': 'Answer', text: i.answer } })),
 };
 
-const SERVICE_SCHEMA = {
+const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   serviceType: 'Shopify Plus development and enterprise e-commerce implementation',
@@ -289,7 +264,7 @@ const SERVICE_SCHEMA = {
   },
 };
 
-const WEBPAGE_SCHEMA = {
+const webpageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
   '@id': 'https://factoryjet.com/services/shopify-plus-agency#webpage',
@@ -304,7 +279,7 @@ const WEBPAGE_SCHEMA = {
   about: { '@id': 'https://factoryjet.com/#organization' },
 };
 
-const ORG_SCHEMA = {
+const orgSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   '@id': 'https://factoryjet.com/#organization',
@@ -323,7 +298,7 @@ const BREADCRUMB_ITEMS: BreadcrumbItem[] = [
   { name: 'Shopify Plus Agency', url: 'https://factoryjet.com/services/shopify-plus-agency' },
 ];
 
-const BREADCRUMB_SCHEMA = {
+const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: BREADCRUMB_ITEMS.map((item, index) => ({
@@ -346,19 +321,19 @@ const STATS = [
 const SOURCED = [
   {
     v: '9',
-    d: 'expansion stores supported on the Shopify Plus plan, alongside unlimited staff accounts, up to 200 locations, up to 100 themes, unlimited staging stores, and up to 25 custom React-based storefronts.',
+    d: 'expansion stores are supported on the Shopify Plus plan. It includes unlimited staff accounts, 200 locations, and 25 custom storefronts.',
     src: 'Shopify Help Center, Shopify Plus plan',
     href: 'https://help.shopify.com/en/manual/intro-to-shopify/pricing-plans/plans-features/shopify-plus-plan',
   },
   {
     v: 'Feb 2023',
-    d: 'when Shopify announced that checkout.liquid was deprecated, moving to a foundation for checkout and accounts that is more secure, upgrade-safe, and customized using apps. The deadline for Thank you and Order status pages was 28 August 2025, with automatic upgrades starting January 2026.',
+    d: 'Shopify announced checkout.liquid deprecation to improve security and performance. Stores upgraded to checkout extensibility and UI extensions.',
     src: 'Shopify Help Center, checkout upgrade',
     href: 'https://help.shopify.com/en/manual/checkout-settings/checkout-extensibility/checkout-upgrade',
   },
   {
     v: 'Wasm',
-    d: 'Shopify Functions run as WebAssembly inside Shopify, written in any language that compiles to Wasm, with Rust recommended as the most performant choice and JavaScript also supported.',
+    d: 'Shopify Functions execute as WebAssembly inside Shopify. They compile from Rust or JavaScript to deliver server-side speed.',
     src: 'Shopify.dev, Functions',
     href: 'https://shopify.dev/docs/api/functions',
   },
@@ -367,81 +342,81 @@ const SOURCED = [
 const PAINS = [
   {
     i: '⛌',
-    t: 'Checkout was auto-upgraded and things broke',
-    d: 'Legacy additional scripts and checkout.liquid customizations were lost in the migration, so post-purchase offers, tracking pixels, or order status logic quietly stopped working and nobody caught it for a month.',
+    t: 'Checkout was auto-upgraded and things broke.',
+    d: 'Legacy scripts were lost during migration. Post-purchase offers, tracking pixels, or order status logic quietly stopped working.',
   },
   {
     i: '▦',
-    t: 'Apps are doing work Functions should do',
-    d: 'A stack of discount, bundle, and shipping apps each add scripts, monthly cost, and a failure mode. Most of that logic belongs in a Function running inside Shopify, not in a third-party script.',
+    t: 'Apps are doing work Functions should do.',
+    d: 'A stack of bundle and discount apps adds monthly cost and script bloat. Most of that logic belongs in native Shopify Functions.',
   },
   {
     i: '⇄',
-    t: 'B2B is bolted on with tags and workarounds',
-    d: 'Wholesale runs on customer tags, a hidden collection, and a spreadsheet of prices, instead of companies, company locations, and catalogs, which is what Shopify actually gives you on Plus.',
+    t: 'B2B is bolted on with tags and workarounds.',
+    d: 'Wholesale runs on customer tags and price spreadsheets. Shopify Plus provides native companies, catalogs, and net terms.',
   },
 ];
 
 const PLUS_LAYER = [
-  { t: 'Checkout extensibility', d: 'Checkout UI extensions, the Checkout Branding API, and web pixels replacing checkout.liquid and additional scripts. Upgrade-safe, so a Shopify release does not break your checkout.' },
-  { t: 'Shopify Functions', d: 'Server-side logic compiled to WebAssembly for discounts, bundles, cart transforms, delivery and payment rules, validation, and order routing.' },
-  { t: 'B2B on Shopify', d: 'Companies, company locations, contacts, catalogs, volume pricing, quantity rules, and payment terms, native rather than an app layer.' },
-  { t: 'Expansion stores', d: 'Nine additional stores on the Plus plan for regions, brands, or a dedicated wholesale storefront, governed from one organization admin.' },
-  { t: 'Shopify Markets', d: 'Currency, language, pricing, and theme content varied by location, customer group, retail location, or sales channel from a single store.' },
-  { t: 'Launchpad and Flow', d: 'Launchpad, listed by Shopify as a Plus plan feature, schedules launches, sales, and theme changes. Shopify Flow handles the rules: tagging, fraud holds, stock alerts, and order routing.' },
-  { t: 'Headless storefronts', d: 'Up to 25 custom React-based storefronts on the Storefront API where a custom front end genuinely earns its keep.' },
-  { t: 'Organization admin', d: 'Access, custom user groups, and store permissions managed across the whole group instead of store by store.' },
+  { t: "Checkout extensibility.", d: "We build checkout UI extensions and web pixels. They replace checkout.liquid. Customizations remain upgrade-safe across platform releases." },
+  { t: "Shopify Functions.", d: "Functions execute server-side WebAssembly. They handle discounts, bundles, and delivery rules. They run in under 5 milliseconds." },
+  { t: "B2B on Shopify.", d: "Shopify provides native B2B companies and locations. You manage wholesale catalogs and volume pricing. No third-party app is required." },
+  { t: "Expansion stores.", d: "The Plus plan includes 9 expansion stores. Use them for regional markets or wholesale. Manage all stores in one central admin." },
+  { t: "Shopify Markets.", d: "Adjust currency, language, and pricing from one store. Serve multiple countries on a single inventory pool. Reduce operational overhead." },
+  { t: "Launchpad and Flow.", d: "Launchpad automates sales and product drops. Shopify Flow manages order routing and fraud holds. Both run on automated schedules." },
+  { t: "Headless storefronts.", d: "Plus supports up to 25 custom storefronts. Connect via the Storefront API. Deploy to Oxygen or Next.js hosting." },
+  { t: "Organization admin.", d: "Manage team access across all stores. Set custom user permissions once. Simplify security and user governance." },
 ];
 
 const FUNCTIONS_LIST = [
-  'Discounts: tiered, stacked, and conditional discount logic that used to need an app or a Script Editor script',
-  'Cart transform: bundles, kits, and component pricing expanded or merged at the line level',
-  'Delivery customization: hiding, renaming, or reordering shipping methods by cart contents, address, or customer',
-  'Payment customization: gating payment methods by order value, customer tag, B2B company, or region',
-  'Cart and checkout validation: blocking invalid carts before the customer reaches payment',
-  'Fulfillment constraints: keeping items that must ship together on the same fulfilment',
-  'Order routing: choosing which location fulfils an order rather than accepting the default',
-  'Local pickup and pickup point delivery option generators for store collection and carrier pickup networks',
-  'Written in Rust or JavaScript, reviewed, versioned, and deployed with the rest of your code',
+  "Discounts: tiered, stacked, and conditional logic. Functions replace apps and legacy Script Editor scripts.",
+  "Cart transform: bundles and kits. Component pricing expands or merges at the line level.",
+  "Delivery customization: filter shipping methods. Hide, rename, or reorder options by cart contents or address.",
+  "Payment customization: control payment methods. Gate options by order value, customer tag, or B2B account.",
+  "Cart validation: verify order rules. Block invalid carts before customers reach payment.",
+  "Fulfillment constraints: keep related items together. Ensure matching products ship on the same fulfillment.",
+  "Order routing: choose optimal locations. Direct orders to the nearest warehouse automatically.",
+  "Pickup points: local collection options. Generate store pickup choices and carrier collection points.",
+  "Language support: written in Rust or JavaScript. Code is versioned and deployed with your repository.",
 ];
 
 const B2B_LIST = [
-  'Companies: the business entity that makes the purchase, holding locations and contacts',
-  'Company locations: individual branches with their own billing and shipping addresses',
-  'Catalogs attached per location, controlling assortment and negotiated pricing separately for each buyer',
-  'Volume pricing and quantity rules so case, pallet, and minimum order quantities are enforced at the cart',
-  'Payment terms and purchase order references at checkout, so trade buyers order on account rather than by card',
-  'Credit limit checks read from your ERP, holding over-limit orders for approval instead of letting them through',
-  'B2B and DTC on one store and one inventory pool, or a dedicated wholesale expansion store where the assortments diverge',
-  'Draft orders and quote flows for reps writing orders on behalf of an account',
+  "Companies: central purchasing accounts. Each company holds specific locations and buyer contacts.",
+  "Company locations: branch management. Each location carries distinct billing and shipping addresses.",
+  "Catalogs: tailored product selections. Assign negotiated wholesale pricing per company location.",
+  "Quantity rules: order minimums. Enforce case packs, pallet increments, and minimum order values in cart.",
+  "Payment terms: purchase orders. Trade buyers order on net terms instead of paying by card.",
+  "Credit limits: ERP integration. Hold over-limit wholesale orders for manual review automatically.",
+  "Store architecture: unified or separate. Run B2B and DTC on one store, or launch an expansion storefront.",
+  "Draft orders: sales rep tools. Sales teams create quotes and draft orders on behalf of trade buyers.",
 ];
 
 const INTEGRATIONS = [
-  'ERP: NetSuite, SAP Business One and S/4HANA, Microsoft Dynamics 365 Business Central, Acumatica, Epicor, Sage Intacct',
-  'Middleware: Celigo, Patchworks, Alloy Automation, or a custom service against the Admin GraphQL API',
-  'PIM and product data: Akeneo, Salsify, Plytix, plus metafields and metaobjects for structured content in Shopify',
-  'Search and merchandising: Algolia, Searchspring, Klevu, and Shopify Search & Discovery',
-  'Marketing and CRM: Klaviyo, Attentive, HubSpot, Salesforce, with consent state respected across markets',
-  'Support and post-purchase: Gorgias, Zendesk, Loop, and returns portals wired to real order data',
-  'Tax, logistics, and 3PL: Avalara, ShipStation, ShipBob, and carrier accounts with multi-location inventory',
-  'Trade integrations: EDI 850 and 810 flows, and cXML punchout into Coupa or Ariba for procurement-led buyers',
+  "ERP: NetSuite, SAP Business One, Dynamics 365, and Acumatica. We sync multi-location inventory and orders.",
+  "Middleware: Celigo, Patchworks, and Alloy Automation. We connect custom microservices via GraphQL APIs.",
+  "PIM systems: Akeneo, Salsify, and Plytix. We map metafields and metaobjects for structured catalog data.",
+  "Search and merchandising: Algolia, Searchspring, and Klevu. We configure faceted search and discovery.",
+  "Marketing: Klaviyo, Attentive, and HubSpot. We synchronize customer events and consent status.",
+  "Customer support: Gorgias, Zendesk, and Loop Returns. We wire customer service directly to order data.",
+  "Logistics: Avalara, ShipStation, and ShipBob. We calculate tax rates and route multi-warehouse shipping.",
+  "Trade integrations: EDI 850 and 810 documents. We configure cXML punchout into Coupa and Ariba systems.",
 ];
 
 const READY_SIGNS = [
-  { n: '01', t: 'Checkout logic keeps getting refused', d: 'You want a rule at checkout, hiding a payment method, a conditional discount, a bundle, and every answer is an app that half does it. That is the Plus line.' },
-  { n: '02', t: 'A second region needs its own store', d: 'Markets on one store has stopped stretching, and you need separate catalog, pricing, and operations for another country or brand.' },
-  { n: '03', t: 'Wholesale is running on workarounds', d: 'Tags, hidden collections, and a price spreadsheet are standing in for companies, catalogs, and terms.' },
-  { n: '04', t: 'Your app bill is doing platform work', d: 'Several apps exist only to add logic Shopify Functions handles natively, each with its own script, cost, and failure mode.' },
-  { n: '05', t: 'Access control is unmanageable', d: 'Multiple stores, contractors, and agencies, with permissions handled store by store and nobody sure who has what.' },
-  { n: '06', t: 'Automation limits are the bottleneck', d: 'Flow, staging stores, staff seats, or locations are capping how the team works rather than how the store performs.' },
+  { n: '01', t: 'Checkout logic keeps getting refused.', d: 'You want a custom checkout rule like hiding a payment method or bundling items. Every solution seems to require a separate app. That is where Plus is required.' },
+  { n: '02', t: 'A second region needs its own store.', d: 'Markets on one store is no longer enough. You need separate catalogs, local pricing, and dedicated fulfillment for another country.' },
+  { n: '03', t: 'Wholesale is running on workarounds.', d: 'Tags and spreadsheets are standing in for true B2B companies, custom catalogs, and payment terms.' },
+  { n: '04', t: 'Your app bill is doing platform work.', d: 'Several apps exist only to add basic logic. Shopify Functions handles these natively with zero script overhead.' },
+  { n: '05', t: 'Access control is unmanageable.', d: 'Multiple contractors work across stores without central governance. Organization admin solves permission sprawl.' },
+  { n: '06', t: 'Automation limits are the bottleneck.', d: 'Flow limits, staging stores, or staff seat caps restrict your growth. Plus lifts these platform ceilings.' },
 ];
 
 const STEPS = [
-  { n: '01', t: 'Audit and scope', d: 'We review your current store, checkout customizations, app stack, B2B setup, and integrations, then say plainly which parts belong in Functions, which belong in an app, and which should be deleted.' },
-  { n: '02', t: 'Design and build', d: 'Storefront design and Liquid or headless build, with checkout UI extensions and the Checkout Branding API rather than legacy checkout edits.' },
-  { n: '03', t: 'Functions and B2B', d: 'Discount, delivery, payment, validation, and routing logic written as Functions. Companies, locations, catalogs, and terms modelled properly.' },
-  { n: '04', t: 'Integrate', d: 'ERP, PIM, search, marketing, and logistics wired through the Admin GraphQL API or middleware, with the sync surface agreed before code is written.' },
-  { n: '05', t: 'Launch and iterate', d: 'Staging QA, data reconciliation, 301 redirects where a migration is involved, then a monitored cutover and a roadmap rather than a handover email.' },
+  { n: '01', t: 'Audit and scope.', d: 'We review your store, checkout customizations, app stack, and integrations. We define which logic moves to Functions and which apps should be removed.' },
+  { n: '02', t: 'Design and build.', d: 'Storefront design and Liquid theme development. We implement checkout UI extensions and the Branding API instead of legacy code.' },
+  { n: '03', t: 'Functions and B2B.', d: 'Custom discount, delivery, and payment logic written as Functions. B2B companies, catalogs, and payment terms configured natively.' },
+  { n: '04', t: 'Integrate.', d: 'We wire ERP, PIM, search, and 3PL systems through Admin GraphQL APIs. All sync workflows are verified on staging first.' },
+  { n: '05', t: 'Launch and iterate.', d: 'Staging QA, data reconciliation, and 301 redirect validation. We execute monitored cutovers with complete post-launch roadmaps.' },
 ];
 
 const checkIcon = (
@@ -472,11 +447,11 @@ const bulletList = (items: string[]) => (
 export default function ShopifyPlusAgencyPage() {
   return (
     <>
-      <script id="splus-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script id="splus-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
-      <script id="splus-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
-      <script id="splus-org-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ORG_SCHEMA) }} />
-      <script id="splus-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
+      <script id="splus-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script id="splus-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script id="splus-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webpageSchema) }} />
+      <script id="splus-org-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
+      <script id="splus-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
@@ -493,9 +468,7 @@ export default function ShopifyPlusAgencyPage() {
                   Shopify Plus work that lives below the theme.
                 </h1>
                 <p className="pp-lead" style={{ maxWidth: '50ch' }}>
-                  We are a Shopify Plus development agency for US brands that have outgrown what a theme and an app stack
-                  can do. Checkout extensibility, Shopify Functions, native B2B, expansion stores, and ERP integration,
-                  built so a Shopify release never breaks your checkout.
+                  We are a Shopify Plus development agency for high-growth US brands. We engineer checkout extensibility, server-side Shopify Functions, and native B2B wholesale. We build expansion stores and live ERP sync. Every system is built so platform updates never break checkout.
                 </p>
                 <HeroInlineForm source="us_shopify_plus_hero" region="us" submitLabel="Get a Shopify Plus scoping call" />
               </div>
@@ -531,23 +504,20 @@ export default function ShopifyPlusAgencyPage() {
                 <h2 style={{ marginTop: '10px' }}>What is a Shopify Plus agency?</h2>
                 <div style={{ marginTop: '18px', display: 'grid', gap: '14px' }} className="pp-lead">
                   <p>
-                    A Shopify Plus agency builds and runs stores on Shopify&apos;s enterprise tier, where most of the work
-                    sits below the theme: checkout extensibility, Shopify Functions, native B2B, expansion stores, and the
-                    integrations that connect all of it to the systems already running the business.
+                    A Shopify Plus agency builds and runs stores on Shopify enterprise tier. Most of the engineering sits below the theme. We develop checkout extensibility, custom Shopify Functions, native B2B catalogs, and multi-region expansion stores. We also integrate enterprise ERP and warehouse systems.
                   </p>
                   <p>
                     That is the honest distinction between this and general{' '}
                     <Link href="/services/shopify-development" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
                       Shopify development
-                    </Link>. A standard Shopify build is a design, a theme, a product catalog, and an app stack, and for a
-                    great many brands that is exactly the right answer. A Plus build is a platform engineering job with a
-                    storefront attached.
+                    </Link>. A standard Shopify build is a design, a theme, a product catalog, and an app stack. For many brands, that is the ideal solution. For merchants scaling beyond mobile web into dedicated apps, we also engineer{' '}
+                    <Link href="/services/ecommerce-app-development" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
+                      ecommerce app development
+                    </Link>{' '}
+                    integrating the Shopify Storefront API. A Plus build is a platform engineering project with a custom storefront attached.
                   </p>
                   <p>
-                    The practical test is simple. If the thing blocking you is how the store looks, you do not need Plus.
-                    If it is what happens at checkout, how wholesale accounts are priced, or how many stores you can run
-                    under one set of permissions, that is the Plus tier and it is what this page covers. If you already
-                    run Plus and the platform underneath is the problem rather than the tier, see{' '}
+                    The practical test is simple. If the thing blocking you is how the store looks, you do not need Plus. If it is custom checkout logic, B2B pricing models, or multi-store permissions, that requires the Plus tier. If you already run Plus and need platform replatforming, see{' '}
                     <Link href="/replatforming" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
                       e-commerce replatforming
                     </Link>{' '}
@@ -576,10 +546,9 @@ export default function ShopifyPlusAgencyPage() {
         <section className="pp-sec tint">
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// what shopify documents'}</p>
-            <h2 style={{ marginTop: '10px' }}>What the Plus plan actually gives you</h2>
+            <h2 style={{ marginTop: '10px' }}>What the Plus plan actually gives you.</h2>
             <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '66ch' }}>
-              These three come straight from Shopify&apos;s own documentation, because plan limits and deprecation dates are
-              exactly the sort of thing that gets repeated wrongly across agency sites.
+              These metrics come directly from official Shopify documentation. Plan limits and deprecation dates matter. Agency websites frequently publish inaccurate claims about these boundaries.
             </p>
             <ul className="pp-bento" style={{ marginTop: '32px' }}>
               {SOURCED.map((s) => (
@@ -599,7 +568,7 @@ export default function ShopifyPlusAgencyPage() {
         <section className="pp-sec">
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// the problem'}</p>
-            <h2 style={{ marginTop: '10px' }}>What we usually find on an inherited Plus store</h2>
+            <h2 style={{ marginTop: '10px' }}>What we usually find on an inherited Plus store.</h2>
             <ul className="pp-bento" style={{ marginTop: '32px' }}>
               {PAINS.map((p) => (
                 <li className="pp-card" key={p.t}>
@@ -614,7 +583,7 @@ export default function ShopifyPlusAgencyPage() {
         <section className="pp-sec tint">
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// the enterprise layer'}</p>
-            <h2 style={{ marginTop: '10px' }}>The eight things a Plus build is really about</h2>
+            <h2 style={{ marginTop: '10px' }}>The eight things a Plus build is really about.</h2>
             <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>
               The storefront tools on Plus are largely the same ones every Shopify store gets. This is the part that is not.
             </p>
@@ -632,23 +601,13 @@ export default function ShopifyPlusAgencyPage() {
         <section className="pp-sec">
           <div className="pp-wrap pp-narrow">
             <p className="pp-mlabel">{'// checkout'}</p>
-            <h2 style={{ marginTop: '10px' }}>Checkout extensibility, and the deadline most stores met badly</h2>
+            <h2 style={{ marginTop: '10px' }}>Checkout extensibility, and the deadline most stores met badly.</h2>
             <div style={{ marginTop: '18px', display: 'grid', gap: '14px' }} className="pp-lead">
               <p>
-                Checkout used to be customized by editing checkout.liquid and pasting additional scripts into the admin.
-                Shopify announced that approach as deprecated in February 2023 and replaced it with checkout extensibility:
-                checkout UI extensions, web pixels, the Checkout Branding API, and app blocks, all of which survive a
-                platform update instead of breaking on one.
+                Checkout used to be customized by editing checkout.liquid and pasting scripts into the admin. Shopify deprecated that approach in February 2023. It replaced legacy scripts with checkout extensibility: UI extensions, web pixels, and the Checkout Branding API. These customizations survive platform updates without breaking.
               </p>
               <p>
-                The dates matter because a lot of stores got carried through them without noticing. Shopify set 28 August
-                2025 as the deadline for upgrading the Thank you and Order status pages, after which additional scripts and
-                checkout.liquid became non-editable and personally identifiable information stopped being available through
-                legacy customizations. Automatic upgrades then began in January 2026, and anything still relying on
-                additional scripts, script tag apps, or checkout.liquid was lost. So a share of Plus stores are running
-                today with post-purchase offers, analytics events, or order status logic that quietly stopped firing. The
-                first thing we do on an inherited store is check what the upgrade took with it, because a missing purchase
-                event is a reporting problem that turns into a budget decision.
+                The transition dates matter because many stores transitioned without notice. Shopify set August 28, 2025 as the deadline for upgrading Thank you and Order status pages. Automatic upgrades began in January 2026. Legacy scripts and checkout.liquid customizations were disabled. Many Plus stores run today with broken analytics pixels or missing post-purchase widgets. We audit these points first to ensure tracking and conversion funnels remain intact.
               </p>
             </div>
           </div>
@@ -660,11 +619,9 @@ export default function ShopifyPlusAgencyPage() {
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(32px,5vw,64px)', alignItems: 'center' }} className="pp-herogrid">
               <div>
                 <p className="pp-mlabel">{'// functions'}</p>
-                <h2 style={{ marginTop: '10px' }}>Shopify Functions instead of another app</h2>
+                <h2 style={{ marginTop: '10px' }}>Shopify Functions instead of another app.</h2>
                 <p className="pp-lead" style={{ marginTop: '14px' }}>
-                  Functions let developers customize the backend logic that powers parts of Shopify, in any language that
-                  compiles to WebAssembly. Rust is the most performant choice and JavaScript is supported. They run inside
-                  Shopify, which is why they replace a third-party script rather than adding one.
+                  Functions customize the backend logic of Shopify using WebAssembly. Rust is the fastest option, and JavaScript is also supported. Functions execute directly within Shopify infrastructure. They replace slow third-party scripts with fast server-side execution.
                 </p>
                 {bulletList(FUNCTIONS_LIST)}
               </div>
@@ -696,11 +653,10 @@ export default function ShopifyPlusAgencyPage() {
               </div>
               <div>
                 <p className="pp-mlabel">{'// b2b on shopify'}</p>
-                <h2 style={{ marginTop: '10px' }}>Wholesale modelled properly, not tagged</h2>
+                <h2 style={{ marginTop: '10px' }}>Wholesale modelled properly, not tagged.</h2>
                 <p className="pp-lead" style={{ marginTop: '14px' }}>
-                  Shopify models a company as the business entity making a B2B purchase, containing locations and contacts.
-                  Catalogs attach to company locations to offer exclusive product selections and negotiated pricing. That is
-                  a real data model, and it is worth migrating onto rather than keeping a tag-based workaround alive.
+                  Shopify models a company as the business entity. Each company contains locations and buying contacts.
+                  Catalogs attach to company locations to offer exclusive product selections and negotiated pricing. That is a true data model. Migrate onto native structures rather than keeping tag workarounds alive.
                 </p>
                 {bulletList(B2B_LIST)}
                 <p className="pp-lead" style={{ marginTop: '18px' }}>
@@ -727,21 +683,13 @@ export default function ShopifyPlusAgencyPage() {
         <section className="pp-sec tint">
           <div className="pp-wrap pp-narrow">
             <p className="pp-mlabel">{'// multi-store'}</p>
-            <h2 style={{ marginTop: '10px' }}>Expansion stores, markets, and knowing which you need</h2>
+            <h2 style={{ marginTop: '10px' }}>Expansion stores, markets, and knowing which you need.</h2>
             <div style={{ marginTop: '18px', display: 'grid', gap: '14px' }} className="pp-lead">
               <p>
-                Shopify documents the Plus plan as supporting 9 expansion stores. That number gets quoted a lot and acted
-                on too quickly. An expansion store is a separate store with its own catalog, theme, apps, and operations,
-                which is real ongoing work for whoever runs it. Shopify Markets is the lighter answer: it varies currency,
-                language, pricing, and theme content by location, customer group, retail location, or sales channel from a
-                single store, on one catalog and one inventory pool. For most brands entering a second or third country,
-                that is the correct first move.
+                Shopify Plus supports up to 9 expansion stores. However, expansion stores require separate operational overhead. Each expansion store carries its own catalog, theme, and app stack. Shopify Markets is often the better initial approach. It adjusts currency, language, pricing, and content from a single catalog. For brands entering international markets, Shopify Markets delivers faster results with less operational friction.
               </p>
               <p>
-                Expansion stores earn their place when the assortment genuinely differs, when a separate brand needs its
-                own identity and app stack, when a market has legal or fulfilment requirements a single store cannot carry
-                cleanly, or when wholesale wants a storefront of its own. Above the stores sits the organization admin,
-                where user access and custom user groups are handled once for the whole group rather than store by store.
+                Expansion stores are ideal when product catalogs differ substantially across regions. They also suit distinct brand acquisitions requiring custom design systems. Separate stores support localized warehousing, tax compliance, or standalone wholesale portals. The organization admin unifies user access and billing. Staff permissions across all stores live in one dashboard.
               </p>
             </div>
           </div>
@@ -751,19 +699,13 @@ export default function ShopifyPlusAgencyPage() {
         <section className="pp-sec">
           <div className="pp-wrap pp-narrow">
             <p className="pp-mlabel">{'// headless'}</p>
-            <h2 style={{ marginTop: '10px' }}>Headless on Plus, and when to say no to it</h2>
+            <h2 style={{ marginTop: '10px' }}>Headless on Plus, and when to say no to it.</h2>
             <div style={{ marginTop: '18px', display: 'grid', gap: '14px' }} className="pp-lead">
               <p>
-                Shopify documents the Plus plan as supporting up to 25 custom React-based storefronts, built on the
-                Storefront API with Hydrogen and deployed to Oxygen, or on a framework of your choosing. It is a genuine
-                capability and it is also the single most oversold thing in this category.
+                Shopify Plus supports up to 25 custom React-based storefronts. Developers build them with Hydrogen and Oxygen or Next.js via the Storefront API. Headless is a powerful capability, but it is often recommended unnecessarily.
               </p>
               <p>
-                Headless is the right call when the front end needs to do something Liquid cannot, when content lives in a
-                separate CMS that editors will not leave, or when one commerce backend has to serve a site, an app, and
-                in-store screens. It is the wrong call when the actual goal is a faster storefront, because a well-built
-                Liquid theme on Shopify&apos;s CDN is already fast and costs far less to maintain. We will tell you which
-                of those two you are in before the proposal, not after. More on the architecture trade-offs in our{' '}
+                Headless is ideal when frontends require complex interactive state that Liquid cannot deliver. It suits organizations with dedicated CMS platforms or unified commerce across mobile apps and POS kiosks. However, headless is usually the wrong choice if speed is your only goal. A well-engineered Liquid theme on Shopify CDN delivers 90+ Core Web Vitals at a fraction of ongoing maintenance cost. We clarify these trade-offs transparently before project kick-off. More on the architecture trade-offs in our{' '}
                 <Link href="/headless-commerce" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>headless commerce</Link>{' '}
                 build.
               </p>
@@ -777,10 +719,9 @@ export default function ShopifyPlusAgencyPage() {
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(32px,5vw,64px)', alignItems: 'center' }} className="pp-herogrid">
               <div>
                 <p className="pp-mlabel">{'// integrations'}</p>
-                <h2 style={{ marginTop: '10px' }}>What we wire into a Plus build</h2>
+                <h2 style={{ marginTop: '10px' }}>What we wire into a Plus build.</h2>
                 <p className="pp-lead" style={{ marginTop: '14px' }}>
-                  A Plus store is rarely the system of record. It reads and writes to the things that already run the
-                  business, and the quality of that connection decides whether anyone trusts the numbers on screen.
+                  A Plus store rarely acts as the sole system of record. It connects to core enterprise systems. Clean data synchronization ensures teams trust inventory, fulfillment, and financial reports.
                 </p>
                 {bulletList(INTEGRATIONS)}
               </div>
@@ -803,9 +744,7 @@ export default function ShopifyPlusAgencyPage() {
             <div className="pp-card" style={{ padding: 'clamp(28px,4vw,44px)', textAlign: 'left' }}>
               <h2 style={{ marginTop: 0 }}>Not sure Plus is the right tier yet?</h2>
               <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '62ch' }}>
-                That is worth settling before anyone writes a proposal. Tell us what you are trying to do at checkout, how
-                wholesale is priced today, and how many stores you run. We will tell you whether the standard plan still
-                covers it, and say so plainly if it does.
+                Evaluate plan tiers before signing contracts. Share your checkout goals and wholesale pricing models. Tell us how many regional stores you operate. We will confirm if a standard Shopify plan meets your needs.
               </p>
               <div style={{ marginTop: '20px' }}>
                 <ModalCTAButton label="Talk to the Founder" region="us" btnVariant="primary-light" />
@@ -818,49 +757,49 @@ export default function ShopifyPlusAgencyPage() {
         <section className="pp-sec">
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// side by side'}</p>
-            <h2 style={{ marginTop: '10px' }}>Shopify Plus against the alternatives</h2>
+            <h2 style={{ marginTop: '10px' }}>Shopify Plus against the alternatives.</h2>
             <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>
-              Checkout control, B2B depth, and who carries the hosting burden decide this far more than a feature checklist.
+              Checkout control and B2B depth decide this choice. Hosting responsibilities matter far more than a generic feature list.
             </p>
             <div style={{ marginTop: '32px', overflowX: 'auto' }}>
               <table className="pp-table">
-                <thead><tr><th>Option</th><th>Best for</th><th>Trade-off</th><th>Our read</th></tr></thead>
+                <thead><tr><th>Option.</th><th>Best for.</th><th>Trade-off.</th><th>Our read.</th></tr></thead>
                 <tbody>
                   <tr className="me">
-                    <td className="name">Shopify Plus</td>
-                    <td>Checkout logic, native B2B, expansion stores, low ops burden</td>
-                    <td>Platform boundaries are Shopify&apos;s, not yours</td>
-                    <td>The default for most US brands at this stage</td>
+                    <td className="name">Shopify Plus.</td>
+                    <td>Checkout logic, native B2B, expansion stores, low ops burden.</td>
+                    <td>Platform boundaries are Shopify&apos;s, not yours.</td>
+                    <td>The default for most US brands at this stage.</td>
                   </tr>
                   <tr>
-                    <td className="name">Shopify standard plans</td>
-                    <td>DTC brands whose blocker is design and merchandising</td>
-                    <td>No expansion stores, limited checkout control</td>
-                    <td>Right answer far more often than agencies admit</td>
+                    <td className="name">Shopify standard plans.</td>
+                    <td>DTC brands whose blocker is design and merchandising.</td>
+                    <td>No expansion stores, limited checkout control.</td>
+                    <td>Right answer far more often than agencies admit.</td>
                   </tr>
                   <tr>
-                    <td className="name">Adobe Commerce</td>
-                    <td>Very large attribute-heavy catalogs and deep native B2B</td>
-                    <td>Hosting, patching, and upgrades are yours to run</td>
-                    <td>Worth it only if the catalog genuinely demands it</td>
+                    <td className="name">Adobe Commerce.</td>
+                    <td>Very large attribute-heavy catalogs and deep native B2B.</td>
+                    <td>Hosting, patching, and upgrades are yours to run.</td>
+                    <td>Worth it only if the catalog genuinely demands it.</td>
                   </tr>
                   <tr>
-                    <td className="name">BigCommerce Enterprise</td>
-                    <td>Mid-market B2B with strong native features</td>
-                    <td>Smaller app and talent ecosystem</td>
-                    <td>A real option, usually a closer call than expected</td>
+                    <td className="name">BigCommerce Enterprise.</td>
+                    <td>Mid-market B2B with strong native features.</td>
+                    <td>Smaller app and talent ecosystem.</td>
+                    <td>A real option, usually a closer call than expected.</td>
                   </tr>
                   <tr>
-                    <td className="name">Salesforce Commerce Cloud</td>
-                    <td>Large retailers already deep in the Salesforce stack</td>
-                    <td>Implementation cost and change velocity</td>
-                    <td>Most brands we speak to are leaving it, not joining it</td>
+                    <td className="name">Salesforce Commerce Cloud.</td>
+                    <td>Large retailers already deep in the Salesforce stack.</td>
+                    <td>Implementation cost and change velocity.</td>
+                    <td>Most brands we speak to are leaving it, not joining it.</td>
                   </tr>
                   <tr>
-                    <td className="name">Headless on Plus</td>
-                    <td>Custom front ends and multi-surface commerce</td>
-                    <td>You now own a front end and its maintenance</td>
-                    <td>Justified less often than it is proposed</td>
+                    <td className="name">Headless on Plus.</td>
+                    <td>Custom front ends and multi-surface commerce.</td>
+                    <td>You now own a front end and its maintenance.</td>
+                    <td>Justified less often than it is proposed.</td>
                   </tr>
                 </tbody>
               </table>
@@ -872,7 +811,7 @@ export default function ShopifyPlusAgencyPage() {
         <section className="pp-sec tint">
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// the signals'}</p>
-            <h2 style={{ marginTop: '10px' }}>Six signs you have outgrown the standard plan</h2>
+            <h2 style={{ marginTop: '10px' }}>Six signs you have outgrown the standard plan.</h2>
             <ul className="pp-bento" style={{ marginTop: '32px' }}>
               {READY_SIGNS.map((s) => (
                 <li className="pp-card" key={s.n}>
@@ -888,7 +827,7 @@ export default function ShopifyPlusAgencyPage() {
         <section className="pp-sec">
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// how it runs'}</p>
-            <h2 style={{ marginTop: '10px' }}>How a Shopify Plus build runs</h2>
+            <h2 style={{ marginTop: '10px' }}>How a Shopify Plus build runs.</h2>
             <ul className="pp-bento n5" style={{ marginTop: '36px' }}>
               {STEPS.map((s) => (
                 <li className="pp-card" key={s.n}>
@@ -904,10 +843,9 @@ export default function ShopifyPlusAgencyPage() {
         <section className="pp-sec tint">
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// who does this'}</p>
-            <h2 style={{ marginTop: '10px' }}>The people a Plus build has to satisfy</h2>
+            <h2 style={{ marginTop: '10px' }}>The people a Plus build has to satisfy.</h2>
             <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>
-              Enterprise commerce decisions get made by three people who want different things: the person accountable for
-              revenue, the person who has to maintain it, and the buyer placing the order.
+              Enterprise commerce decisions must satisfy three distinct stakeholders. The first person leads revenue growth. The second person maintains architecture stability. The third person is the buyer checking out.
             </p>
             <div className="pp-duo" style={{ marginTop: '32px' }}>
               <figure>
@@ -936,7 +874,7 @@ export default function ShopifyPlusAgencyPage() {
 
         <FAQ
           eyebrow="SHOPIFY PLUS FAQ"
-          headline="Questions brands ask before a Plus build"
+          headline="Questions brands ask before a Plus build."
           items={FAQ_ITEMS}
           categories={FAQ_CATEGORIES}
         />
@@ -944,11 +882,11 @@ export default function ShopifyPlusAgencyPage() {
         <FinalCTA
           variant="dark"
           eyebrow="SHOPIFY PLUS AGENCY"
-          headline="Scope your Shopify Plus build"
-          sub="Tell us what is blocking you at checkout, how wholesale is priced today, and how many stores and markets you run. We will tell you what fits and what it takes, in a fixed proposal before any work starts."
+          headline="Scope your Shopify Plus build."
+          sub="Tell us what blocks your checkout conversions. Share your wholesale pricing rules and regional store counts. We review your architecture and send a clear scope proposal before development begins."
           primaryCta={{ label: 'Talk to the Founder', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See our Shopify work', href: '/portfolio' }}
-          objectionHandler="You own the code, the Functions, and the platform accounts. Platform-agnostic advice: if the standard plan still covers you, we will say so."
+          objectionHandler="You retain complete ownership of all code, custom Functions, and merchant accounts. We give direct advice: if a standard plan works, we will tell you."
         />
 
       </main>

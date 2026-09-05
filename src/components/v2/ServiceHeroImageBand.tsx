@@ -52,8 +52,9 @@ export default function ServiceHeroImageBand({
         <Image
           src={imageSrc}
           alt={imageAlt}
-          fill
-          className="object-cover object-center"
+          width={1600}
+          height={640}
+          className="object-cover object-center w-full h-full"
           sizes="100vw"
           priority
         />

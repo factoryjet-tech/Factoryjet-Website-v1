@@ -343,59 +343,59 @@ const DENTAL_STATS = [
 /* The order we actually work in during the first two weeks. Not a generic list. */
 const VISIBILITY_CHECKLIST = [
   {
-    title: 'Primary category on the Google Business Profile',
+    title: 'Primary category on the Google Business Profile.',
     body: 'One field, and it moves more than any other. A practice filed under Dentist competes for general searches and sits out orthodontic and cosmetic ones.',
   },
   {
-    title: 'Secondary categories, services, and attributes',
+    title: 'Secondary categories, services, and attributes.',
     body: 'Google matches these against how people phrase the search. We fill every field that applies, including the accepting new patients attribute, and drop the rest.',
   },
   {
-    title: 'Name, address, and phone consistency at the data source',
+    title: 'Name, address, and phone consistency at the data source.',
     body: 'Most US directory listings trace back to a handful of aggregators. We correct the source record first, then the copies, then suppress duplicates.',
   },
   {
-    title: 'Healthgrades, Zocdoc, Yelp, and the state dental board listing',
+    title: 'Healthgrades, Zocdoc, Yelp, and the state dental board listing.',
     body: 'Healthcare directories carry weight generic ones do not, and BrightLocal records Healthgrades among the review sites gaining ground. Each needs the same hours, suite number and phone.',
   },
   {
-    title: 'Review volume, recency, and reply rate',
+    title: 'Review volume, recency, and reply rate.',
     body: 'Google names review count as a prominence input. We build the request flow into the practice management software you already pay for, or into an n8n, Zapier or Make.com workflow fired by a webhook.',
   },
   {
-    title: 'schema.org Dentist markup, written as JSON-LD',
+    title: 'schema.org Dentist markup, written as JSON-LD.',
     body: 'Dentist sits under LocalBusiness and MedicalBusiness in the schema.org hierarchy. The structured data carries address, hours, phone, and geo coordinates, validated before it ships.',
   },
   {
-    title: 'One page per procedure, not one services page',
+    title: 'One page per procedure, not one services page.',
     body: 'Implants, Invisalign, veneers and emergency care are four searches with four intents. Separate pages with their own schema markup and internal linking beat a combined page. Near-duplicate pages get filtered, so content pruning usually comes before writing anything new.',
   },
   {
-    title: 'Internal linking from the pages that already rank',
+    title: 'Internal linking from the pages that already rank.',
     body: 'A homepage carrying topical authority should pass it down to the procedure pages. Internal linking costs nothing, and most practice sites leave the implant page orphaned.',
   },
   {
-    title: 'Canonical tags and single-hop 301 redirects',
+    title: 'Canonical tags and single-hop 301 redirects.',
     body: 'Old URLs from the last rebuild, tracking parameters and www variants split the signals. We do the url mapping first, write a redirect map, ship each 301 redirect as a single hop, and set a canonical tag on what stays.',
   },
   {
-    title: 'Core Web Vitals measured on a phone, on cell data',
+    title: 'Core Web Vitals measured on a phone, on cell data.',
     body: 'Local traffic arrives on mobile. We read Largest Contentful Paint, Interaction to Next Paint and Cumulative Layout Shift from field data, not one Lighthouse run on an office laptop.',
   },
   {
-    title: 'Google Search Console coverage and query data',
+    title: 'Google Search Console coverage and query data.',
     body: 'Search Console shows which dental queries you surface for and which procedure pages Google chose not to index. In a technical SEO audit that is where the fastest wins are, and where you catch crawl budget draining away.',
   },
   {
-    title: 'GA4 and Google Tag Manager wired to calls, not sessions',
+    title: 'GA4 and Google Tag Manager wired to calls, not sessions.',
     body: 'Click-to-call taps, direction requests and booking submits become named GA4 events through Google Tag Manager. Without that, nobody can honestly tell you whether this worked.',
   },
   {
-    title: 'The online booking path, timed end to end',
+    title: 'The online booking path, timed end to end.',
     body: 'We open the booking widget on a phone and count the taps and the seconds. One that loads in an iframe after four seconds undoes the ranking work.',
   },
   {
-    title: 'Profile posts, current photos, and the Q and A',
+    title: 'Profile posts, current photos, and the Q and A.',
     body: 'An active profile outranks a dormant one with the same reviews. Anyone can post a question on a Business Profile, including a competitor, so the Q and A gets read monthly.',
   },
 ];
@@ -484,75 +484,75 @@ const APPROACH_COLUMNS = [
 
 const APPROACH_ROWS = [
   {
-    feature: 'Who does the work',
+    feature: 'Who does the work.',
     values: [
-      'The founder scopes it and stays on the account',
-      'Your office manager, between patients and insurance calls',
-      'An account manager running the same playbook across many practices',
-      'A local SEO specialist learning dentistry on your time',
+      'The founder scopes it and stays on the account.',
+      'Your office manager, between patients and insurance calls.',
+      'An account manager running the same playbook across many practices.',
+      'A local SEO specialist learning dentistry on your time.',
     ],
   },
   {
-    feature: 'Google Business Profile',
+    feature: 'Google Business Profile.',
     values: [
-      'Categories, services, attributes, posts and Q and A, reviewed weekly',
-      'Simple to set up, easy to leave dormant for a year',
-      'Set up properly, then usually managed on a fixed monthly cadence',
-      'Handled well. This is the part every local agency knows',
+      'Categories, services, attributes, posts and Q and A, reviewed weekly.',
+      'Simple to set up, easy to leave dormant for a year.',
+      'Set up properly, then usually managed on a fixed monthly cadence.',
+      'Handled well. This is the part every local agency knows.',
     ],
   },
   {
-    feature: 'Dental specifics',
+    feature: 'Dental specifics.',
     values: [
-      'Procedure pages, dental categories, and the directories that carry weight',
-      'You already know the clinical detail better than any agency will',
-      'Strong. Dental keywords and procedure pages are the whole product',
-      'Often generic. Implants and Invisalign become ordinary service pages',
+      'Procedure pages, dental categories, and the directories that carry weight.',
+      'You already know the clinical detail better than any agency will.',
+      'Strong. Dental keywords and procedure pages are the whole product.',
+      'Often generic. Implants and Invisalign become ordinary service pages.',
     ],
   },
   {
-    feature: 'Technical work on the site',
+    feature: 'Technical work on the site.',
     values: [
-      'Technical SEO audit, schema markup in JSON-LD, a redirect map, and Core Web Vitals on mobile',
-      'Realistic only if someone in the practice builds websites',
-      'Often limited to their own site template. Core Web Vitals rarely covered',
-      'Covered, though the schema markup is frequently skipped',
+      'Technical SEO audit, schema markup in JSON-LD, a redirect map, and Core Web Vitals on mobile.',
+      'Realistic only if someone in the practice builds websites.',
+      'Often limited to their own site template. Core Web Vitals rarely covered.',
+      'Covered, though the schema markup is frequently skipped.',
     ],
   },
   {
-    feature: 'Who owns the website',
+    feature: 'Who owns the website.',
     values: [
-      'You do. We work on your site, or build one you own outright',
-      'You do',
-      'Often the vendor. The site can sit on their platform and leave with them',
-      'You do, in most cases',
+      'You do. We work on your site, or build one you own outright.',
+      'You do.',
+      'Often the vendor. The site can sit on their platform and leave with them.',
+      'You do, in most cases.',
     ],
   },
   {
-    feature: 'Patient data and HIPAA',
+    feature: 'Patient data and HIPAA.',
     values: [
-      'We vet every form vendor and keep patient information out of GA4',
-      'Entirely in your control, the safest of the four',
-      'Usually familiar with the requirement. Ask for the agreement in writing',
-      'Varies. A generalist agency may not know to ask',
+      'We vet every form vendor and keep patient information out of GA4.',
+      'Entirely in your control, the safest of the four.',
+      'Usually familiar with the requirement. Ask for the agreement in writing.',
+      'Varies. A generalist agency may not know to ask.',
     ],
   },
   {
-    feature: 'What gets reported',
+    feature: 'What gets reported.',
     values: [
-      'Calls, direction requests and booking submits as GA4 events, in a dashboard you keep',
-      'Whatever you check yourself inside the Business Profile',
-      'A monthly report, sometimes on calls, sometimes on rankings',
-      'Rankings and traffic, sometimes calls',
+      'Calls, direction requests and booking submits as GA4 events, in a dashboard you keep.',
+      'Whatever you check yourself inside the Business Profile.',
+      'A monthly report, sometimes on calls, sometimes on rankings.',
+      'Rankings and traffic, sometimes calls.',
     ],
   },
   {
-    feature: 'Commitment',
+    feature: 'Commitment.',
     values: [
-      'Month to month',
-      'Your team hours, which is the real cost',
-      'Twelve month agreements are still common here',
-      'Six to twelve month lock-in is still common',
+      'Month to month.',
+      'Your team hours, which is the real cost.',
+      'Twelve month agreements are still common here.',
+      'Six to twelve month lock-in is still common.',
     ],
   },
 ];
@@ -789,6 +789,16 @@ export default function DentalSEOPage() {
                 </a>
               </div>
             ))}
+          </div>
+          <div style={{ marginTop: '36px', borderRadius: '16px', overflow: 'hidden', border: '1px solid rgba(26,23,18,0.1)', maxWidth: 860 }}>
+            <Image
+              src="/images/services/healthcare-seo-map-pack.webp"
+              alt="Google Map Pack ranking breakdown for dental practices showing proximity and prominence metrics"
+              width={860}
+              height={480}
+              loading="lazy"
+              style={{ width: '100%', height: 'auto', display: 'block' }}
+            />
           </div>
         </div>
       </section>

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { usServiceAlternates } from '@/data/hreflangMap';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
@@ -74,7 +75,7 @@ export const metadata: Metadata = {
 
 // Freshness signal. Benchmark: 56% of AI-Overview-cited pages carry it.
 // Keep honest: bump when the page's content actually changes.
-const PAGE_MODIFIED = '2026-08-04';
+const PAGE_MODIFIED = '2026-09-04';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -193,7 +194,7 @@ const CHATBOT_TYPES = [
   {
     name: 'Customer Support Chatbot',
     description:
-      'Handles your top 60–70% of support questions automatically, around the clock. Pulls live order data, checks return policies, answers product questions, and routes anything it can\'t handle to a human, with the full conversation transcript so your team isn\'t starting from scratch.',
+      'Handles your top 60–70% of support questions automatically. Pulls live order data, return policies, and product specs. Routes complex queries to human agents with full conversation history.',
     example: 'Avg. 68% ticket deflection in the first 30 days.',
     linkLabel: 'See how it works',
     linkHref: '/contact',
@@ -201,7 +202,7 @@ const CHATBOT_TYPES = [
   {
     name: 'Lead Generation Chatbot',
     description:
-      'Engages website visitors the moment they land, qualifies them with smart questions, collects contact information, and books demos directly to your calendar, without a sales rep having to respond in real time. Responds in under 5 seconds at 2 a.m. or 2 p.m.',
+      'Engages website visitors the moment they land. Qualifies prospects with smart interactive questions. Collects contact details and books meetings directly into your calendar.',
     example: '2–5× more qualified leads captured vs. a static contact form.',
     linkLabel: 'Start a conversation',
     linkHref: '/contact',
@@ -209,7 +210,7 @@ const CHATBOT_TYPES = [
   {
     name: 'E-Commerce Chatbot',
     description:
-      'Connects to your Shopify or WooCommerce store to answer product questions, check real-time inventory, track orders, process return requests, and recommend products based on what the customer is looking for: all without a support agent.',
+      'Connects directly to your Shopify or WooCommerce store. Answers product inquiries and tracks orders in real time. Handles return requests without human intervention.',
     example: 'Shopify clients report 35% fewer "where\'s my order?" emails.',
     linkLabel: 'See pricing',
     linkHref: '#pricing',
@@ -217,7 +218,7 @@ const CHATBOT_TYPES = [
   {
     name: 'Appointment Booking Chatbot',
     description:
-      'Checks live calendar availability, qualifies the visitor, and books confirmed appointments directly, no back-and-forth email chains. Integrates with Google Calendar, Calendly, Acuity, and most scheduling platforms.',
+      'Checks real-time calendar availability and qualifies prospects. Confirms appointments automatically without email delays. Connects with Google Calendar, Calendly, and Acuity.',
     example: 'Healthcare and service businesses fill 25–40% more off-hours slots.',
     linkLabel: 'Book a strategy call',
     linkHref: '/contact',
@@ -225,7 +226,7 @@ const CHATBOT_TYPES = [
   {
     name: 'Internal Knowledge Chatbot',
     description:
-      'Trained on your SOPs, HR policies, product documentation, and internal wikis so your team can ask it questions and get instant, accurate answers, instead of digging through Notion or Confluence. Cuts onboarding time significantly.',
+      'Trained on your SOPs, company handbooks, and internal documentation. Answers employee questions instantly from verified company knowledge. Cuts team onboarding time significantly.',
     example: 'Teams reclaim 4–6 hours/week on internal "where do I find X?" questions.',
     linkLabel: 'Learn more',
     linkHref: '/contact',
@@ -233,7 +234,7 @@ const CHATBOT_TYPES = [
   {
     name: 'Multi-Channel AI Chatbot',
     description:
-      'One chatbot backend deployed across your website, WhatsApp Business, Facebook Messenger, and SMS simultaneously. Consistent answers, consistent tone, and a unified conversation dashboard, regardless of where customers reach out.',
+      'One centralized backend connects your website, WhatsApp Business, and SMS. Delivers consistent responses across every channel. Includes unified analytics and shared conversation records.',
     example: 'Build once, deploy everywhere. No per-channel rebuild cost.',
     linkLabel: 'Get a free assessment',
     linkHref: '/contact',
@@ -324,7 +325,7 @@ const COMPARISON_COLUMNS = [
 
 const COMPARISON_ROWS = [
   {
-    feature: 'Pricing model',
+    feature: 'Pricing model.',
     values: [
       'Fixed-price, one-time',
       'Enterprise budgets',
@@ -333,11 +334,11 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Delivery timeline',
+    feature: 'Delivery timeline.',
     values: ['2–3 weeks', '2–4 months', 'Days (limited capability)', '3–6 weeks (unreliable)'],
   },
   {
-    feature: 'Custom CRM / system integration',
+    feature: 'Custom CRM / system integration.',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="yes" />,
@@ -346,7 +347,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Live handoff to human agents',
+    feature: 'Live handoff to human agents.',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="yes" />,
@@ -355,7 +356,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Multi-channel (web + WhatsApp + SMS)',
+    feature: 'Multi-channel (web + WhatsApp + SMS).',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="partial" />,
@@ -364,7 +365,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'You own the code outright',
+    feature: 'You own the code outright.',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="partial" />,
@@ -373,7 +374,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'No ongoing SaaS fees',
+    feature: 'No ongoing SaaS fees.',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="yes" />,
@@ -382,7 +383,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: '30-day post-launch support',
+    feature: '30-day post-launch support.',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="partial" />,
@@ -391,7 +392,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: '12+ years of SMB domain experience',
+    feature: '12+ years of SMB domain experience.',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="no" />,
@@ -408,13 +409,13 @@ const PRICING_TIERS = [
     description:
       'One focused AI chatbot for your highest-impact use case. Perfect for businesses adding their first chatbot to handle a single workflow.',
     features: [
-      'Single-intent chatbot (support, lead capture, or booking)',
-      'Trained on your FAQs, docs, or product catalog',
-      'Website embed widget included',
-      'GPT-4o or Claude as the underlying model',
-      'Admin panel to review conversations',
-      'Live handoff to your email or Slack',
-      '14-day post-launch support window',
+      'Single-intent chatbot (support, lead capture, or booking).',
+      'Trained on your FAQs, docs, or product catalog.',
+      'Website embed widget included.',
+      'GPT-4o or Claude as the underlying model.',
+      'Admin panel to review conversations.',
+      'Live handoff to your email or Slack.',
+      '14-day post-launch support window.',
     ],
     cta: { label: 'Get a Quote', modal: true as const, region: 'us' as const },
   },
@@ -424,14 +425,14 @@ const PRICING_TIERS = [
     description:
       'A multi-intent chatbot with deep integrations and a conversation management dashboard. The most popular tier for US SMBs serious about automation.',
     features: [
-      'Multi-intent chatbot (support + lead gen + booking in one)',
-      'CRM integration (HubSpot, Salesforce, Pipedrive, or Zoho)',
-      'Live data pulls (order status, inventory, calendar)',
-      'Conversation analytics dashboard',
-      'Multi-channel (website + WhatsApp or SMS)',
-      'Smart escalation with full transcript handoff',
-      'Team training session + documentation',
-      '30-day post-launch support window',
+      'Multi-intent chatbot (support + lead gen + booking in one).',
+      'CRM integration (HubSpot, Salesforce, Pipedrive, or Zoho).',
+      'Live data pulls (order status, inventory, calendar).',
+      'Conversation analytics dashboard.',
+      'Multi-channel (website + WhatsApp or SMS).',
+      'Smart escalation with full transcript handoff.',
+      'Team training session and documentation.',
+      '30-day post-launch support window.',
     ],
     cta: { label: 'Get a Custom Quote', modal: true as const, region: 'us' as const },
     popular: true,
@@ -442,14 +443,14 @@ const PRICING_TIERS = [
     description:
       'A fully custom AI chatbot with fine-tuning, multi-language support, enterprise integrations, and a dedicated engineering partner.',
     features: [
-      'Custom LLM fine-tuning on your proprietary content',
-      'Multi-language support (auto-detect + respond)',
-      'All channels deployed simultaneously',
-      'Enterprise CRM and ERP integration',
-      'Private cloud deployment option',
-      'Advanced analytics with conversion attribution',
-      'Dedicated engineering point of contact',
-      '90-day post-launch support and iteration window',
+      'Custom LLM fine-tuning on your proprietary content.',
+      'Multi-language support (auto-detect and respond).',
+      'All channels deployed simultaneously.',
+      'Enterprise CRM and ERP integration.',
+      'Private cloud deployment option.',
+      'Advanced analytics with conversion attribution.',
+      'Dedicated engineering point of contact.',
+      '90-day post-launch support and iteration window.',
     ],
     cta: { label: 'Schedule an Enterprise Call', modal: true as const, region: 'us' as const },
   },
@@ -464,7 +465,7 @@ const FAQ_CATEGORIES = [
   { key: 'trust',     label: 'Trust & Results' },
 ];
 
-/* ─── FAQ items — 21 conversational Q-A pairs, AI-citation optimized ────── */
+/* ─── FAQ items - 21 conversational Q-A pairs, AI-citation optimized ────── */
 const FAQ_ITEMS = [
 
   /* ── What Is AI Chatbot Development ── */
@@ -472,25 +473,25 @@ const FAQ_ITEMS = [
     category: 'what-is',
     question: 'What is AI chatbot development?',
     answer:
-      'AI chatbot development is the process of building conversational software that handles real-time text interactions, answering customer questions, qualifying leads, booking appointments, or guiding users through a process, using large language models like GPT-4o or Claude. Unlike rule-based bots that follow rigid scripts, AI chatbots understand natural language, handle messy real-world phrasing, and improve over time as you tune their behavior.',
+      'AI chatbot development creates conversational software for real-time text interactions. It answers questions, qualifies leads, and books appointments using models like GPT-4o and Claude. Unlike rigid bots, AI assistants understand natural phrasing and improve as you tune them.',
   },
   {
     category: 'what-is',
     question: 'How is an AI chatbot different from a basic website chat widget?',
     answer:
-      'A basic chat widget routes you to a human agent or shows pre-written FAQ answers. An AI chatbot understands what the customer is actually asking, even if they phrase it five different ways, pulls live data from your systems (order status, inventory, calendar), and gives a complete, accurate answer without involving your team. It handles the top 60–70% of support volume automatically.',
+      'Basic chat widgets route messages to human reps or show static FAQs. AI chatbots understand actual intent and pull live data from your CRM or inventory. They resolve up to 70% of routine questions without involving your team.',
   },
   {
     category: 'what-is',
     question: 'What kinds of chatbots does FactoryJet build?',
     answer:
-      'FactoryJet builds five core types: Customer Support Chatbots (24/7 automated answers, ticket routing, live handoff), Lead Generation Chatbots (qualify visitors, collect contacts, book demos), E-Commerce Chatbots (order tracking, returns, product recommendations), Appointment Booking Chatbots (calendar check, scheduling confirmation), and Internal Knowledge Chatbots (instant answers from your SOPs and policies for your own team).',
+      'FactoryJet builds five core chatbot types. These include Customer Support, Lead Generation, E-Commerce, Appointment Booking, and Internal Knowledge bots. Each system connects directly to your existing software tools.',
   },
   {
     category: 'what-is',
     question: 'Which AI models power FactoryJet chatbots?',
     answer:
-      'We use GPT-4o (OpenAI), Claude 3.5 Sonnet (Anthropic), and Gemini (Google) depending on your use case, data privacy needs, and budget. For most customer-facing chatbots, GPT-4o or Claude gives the best balance of accuracy and cost. We use Voiceflow, Botpress, and LangChain for orchestration. We pick the model that fits your workflow, not the most expensive one.',
+      'We deploy OpenAI GPT-4o, Anthropic Claude 3.5 Sonnet, and Google Gemini based on your goals. Orchestration relies on LangChain, Botpress, and Voiceflow. We choose the model that best fits your workflow and budget.',
   },
 
   /* ── Process & Timeline ── */
@@ -498,25 +499,25 @@ const FAQ_ITEMS = [
     category: 'process',
     question: 'What does the AI chatbot development process look like?',
     answer:
-      'Five stages: Discover (map your top questions, data sources, and goals), Design (conversation flows, escalation logic, integrations), Build (develop and connect to your tools with weekly demos), Test & Tune (run through real questions, fix errors, tighten behavior), and Deploy (live launch with monitoring, training, and 30-day support). You see it working before it goes live.',
+      'Our build follows five stages. First, we map questions in Discovery. Next, we design conversational logic. Then, we connect your tools in Build. Afterward, we tune responses in Testing. Finally, we launch with full team training and 30-day support.',
   },
   {
     category: 'process',
     question: 'How long does it take to build and launch an AI chatbot?',
     answer:
-      'A single-purpose chatbot: a support bot for your top 20 questions or a lead capture bot, goes from kickoff to live in 2–3 weeks. Multi-intent chatbots with CRM integration take 4–5 weeks. Enterprise deployments across multiple departments or languages run 6–10 weeks. Timeline is confirmed after the discovery session, not before.',
+      'Single-purpose bots launch in 2 to 3 weeks. Multi-intent chatbots with CRM links take 4 to 5 weeks. Complex enterprise deployments run 6 to 10 weeks. Every timeline is confirmed during discovery before kickoff.',
   },
   {
     category: 'process',
     question: 'Will I see progress during the build, or just get a final delivery?',
     answer:
-      'Weekly demos throughout: every stage ends with a working demo you can test and give feedback on. Most clients find that seeing the bot handle real questions early changes what they want it to do, and we build in room for that. Nothing is a surprise at launch.',
+      'We deliver weekly working demos throughout the build. You test real customer queries early and share feedback. This agile approach prevents surprises on launch day.',
   },
   {
     category: 'process',
     question: 'What happens after the chatbot launches?',
     answer:
-      'Every engagement includes a 30-day post-launch window. We monitor conversation logs, fix incorrect answers, tune response quality based on real usage, and deliver a recorded training session for your team. After 30 days you can continue on a monthly retainer or manage it yourself.',
+      'Every project includes a 30-day post-launch warranty. We monitor conversation logs, tune answer quality, and train your staff. Afterward, you can self-manage or retain us for ongoing updates.',
   },
 
   /* ── Pricing & ROI ── */
@@ -524,25 +525,25 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does AI chatbot development cost?',
     answer:
-      'FactoryJet\'s AI chatbots are fixed-price and scoped to your build: the main drivers are the number of intents, CRM and tool integrations, and channels you deploy to. Most US SMBs choose our Growth tier, covering multi-intent chatbots with CRM integration, live handoff, and a conversation dashboard. Custom enterprise chatbots with fine-tuning and multi-channel deployment are scoped separately. All pricing is fixed and confirmed upfront after a free quote, no hourly billing, no scope creep.',
+      'Pricing depends on intents, integrations, and deployment channels. Most SMBs select our Growth tier for multi-intent support and CRM sync. All projects are fixed-price and milestone-paid with zero hidden fees.',
   },
   {
     category: 'pricing',
     question: 'Why is FactoryJet fixed-price, milestone-paid?',
     answer:
-      'Our engineering team brings 12+ years of focused expertise. Same quality of AI architecture, conversation design, and delivery without the overhead that inflates traditional agency invoices. We\'ve served US businesses for 12 years. You brief an engineer; that engineer builds it. No account management layers, no inflated agency rates.',
+      'Our senior engineers bring over 12 years of hands-on expertise. You collaborate directly with developers rather than account managers. This lean model eliminates agency overhead and keeps costs predictable.',
   },
   {
     category: 'pricing',
     question: 'What return on investment can I expect from an AI chatbot?',
     answer:
-      'A chatbot handling 65% of your tickets typically pays for itself within 2–3 months for a team answering 50+ tickets per day. Chatbots responding to website visitors in under 5 seconds vs. waiting hours for a human reply see 2–5× higher lead-to-demo conversion rates. Most clients recover the full build cost within 90 days.',
+      'Chatbots deflecting 65% of support tickets typically pay for themselves within 90 days. Instant responses under 5 seconds also double lead-to-meeting conversion rates compared to delayed email follow-ups.',
   },
   {
     category: 'pricing',
     question: 'Are there ongoing costs after the chatbot is built?',
     answer:
-      'Two types: API usage (paid directly to the model provider at cost, not marked up by us) and optionally a monthly optimization retainer for new flows or integrations. Many clients self-manage after the 30-day post-launch window.',
+      'Ongoing expenses include direct model API usage billed at cost without markups. You can also choose an optional monthly retainer for continuous feature additions.',
   },
 
   /* ── Technical & Integrations ── */
@@ -550,25 +551,25 @@ const FAQ_ITEMS = [
     category: 'technical',
     question: 'What systems can an AI chatbot connect to?',
     answer:
-      'We integrate via API with: CRMs (HubSpot, Salesforce, Pipedrive, Zoho), e-commerce (Shopify, WooCommerce, BigCommerce), help desks (Zendesk, Intercom, Freshdesk), calendars (Google Calendar, Calendly, Acuity), databases (Supabase, Firebase, PostgreSQL), and messaging channels (website widget, WhatsApp Business, Facebook Messenger, SMS via Twilio). If your platform has a REST API or webhook, we can connect to it.',
+      'We integrate with HubSpot, Salesforce, Shopify, WooCommerce, Zendesk, and Google Calendar. We also connect databases like Supabase and PostgreSQL. Any platform with a REST API or webhook can sync with your bot.',
   },
   {
     category: 'technical',
     question: 'Can the chatbot hand off to a human when needed?',
     answer:
-      'Yes, live handoff is standard in every chatbot we deliver. The bot monitors its own confidence and escalates when a question is too sensitive or outside its scope, passing the full conversation transcript to your support channel (Slack, email, Zendesk, or Intercom). You set the thresholds. Nothing falls through the cracks.',
+      'Yes, live handoff comes standard. When confidence drops or sensitive questions arise, the bot transfers the chat to Slack, Zendesk, or email. Your agents receive the full transcript immediately.',
   },
   {
     category: 'technical',
     question: 'Can I deploy the chatbot on WhatsApp or SMS as well as my website?',
     answer:
-      'Yes. The same backend deploys to your website (embeddable JS widget), WhatsApp (via WhatsApp Business API), Facebook Messenger, and SMS (via Twilio). Build once, deploy to multiple channels. A unified dashboard shows all channels in one place.',
+      'Yes. One backend deploys to your website, WhatsApp, and SMS via Twilio. You get consistent responses across all channels. A unified dashboard displays every conversation in one place.',
   },
   {
     category: 'technical',
     question: 'Do I need a developer to manage the chatbot after launch?',
     answer:
-      'No. The admin dashboard lets non-technical team members view conversation logs, update answer content, adjust escalation thresholds, and check performance metrics without touching code. If something breaks because a connected platform changes its API, you contact us and we fix it.',
+      'No developer is required. An intuitive admin panel lets your team update FAQs, tune answers, and inspect transcripts. If an external API changes, our support team handles the update for you.',
   },
 
   /* ── Trust & Results ── */
@@ -576,45 +577,45 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'Is customer data safe with an AI chatbot?',
     answer:
-      'We use API-level integrations only (no screen scraping), enforce least-privilege data access, and implement full audit trails on every conversation. For regulated industries, healthcare, legal, finance, we configure the chatbot to avoid storing PII and can use private LLM deployments. All conversation logs are owned by you.',
+      'We use direct APIs with strict least-privilege permissions. For regulated sectors, we mask sensitive PII and configure private LLM instances. You retain complete ownership of all conversation records.',
   },
   {
     category: 'trust',
     question: 'Can an AI chatbot handle multiple languages?',
     answer:
-      'Yes. GPT-4o and Claude understand and respond in 50+ languages without separate training. For businesses with significant Spanish-speaking customers, common in Texas, Florida, California, and the Southwest, we configure the bot to detect language automatically and respond in kind. Multi-language is included on Growth and Enterprise plans.',
+      'Yes. Advanced models like GPT-4o and Claude process over 50 languages natively. The assistant automatically detects user language and replies accurately. Multi-language support comes included on Growth plans.',
   },
   {
     category: 'trust',
     question: 'How is FactoryJet different from using a DIY tool like Intercom Fin or Drift?',
     answer:
-      'DIY tools are fast to set up but limited: they work off existing docs, can\'t pull live data from custom systems, can\'t be tuned for your specific logic, and charge ongoing SaaS fees. FactoryJet builds a custom chatbot integrated into your specific tech stack: your CRM, your Shopify store, your calendar, that you own outright, with no per-seat or per-conversation fees beyond model API costs.',
+      'DIY software tools rely on rigid templates and charge perpetual monthly seat fees. FactoryJet builds a custom chatbot tailored to your tech stack. You own the code outright with zero platform fees.',
   },
   {
     category: 'trust',
     question: 'What results have other businesses gotten from FactoryJet chatbots?',
     answer:
-      'An e-commerce brand reduced support ticket volume by 68% in the first 30 days. A B2B software company\'s chatbot increased demo bookings by 40% without adding sales headcount. A healthcare practice\'s booking bot filled 30% more appointment slots per week from after-hours traffic. We share relevant case studies during a strategy call.',
+      'Recent clients include an e-commerce brand deflecting 68% of support tickets within one month. A B2B firm boosted demo bookings by 40%. A clinic filled 30% more after-hours appointments.',
   },
   {
     category: 'trust',
     question: 'How is FactoryJet different from a US AI development agency?',
     answer:
-      'Three differences: pricing model (fixed-price and milestone-paid: every project scoped upfront with no scope-creep invoices, backed by 12+ years serving US businesses), speed (no layers between your brief and the engineer building it), and SMB depth (500+ small business projects, we understand what operations look like inside a 10-person company, not just enterprise AI theory).',
+      'We differ in three ways. First, our projects are fixed-price and milestone-paid. Second, you work directly with engineers without account manager delays. Third, we have delivered 500+ systems for real businesses.',
   },
 
-  // ── Choosing an agency — money-query coverage, added 2026-06-11 ──
+  // ── Choosing an agency: money-query coverage, added 2026-06-11 ──
   {
     category: 'what-is',
     question: 'Who is the best AI chatbot development company in USA?',
     answer:
-      'For small and mid-size businesses, FactoryJet makes a strong case: custom chatbots trained on your actual catalog, policies, and tone, not template bots, built fixed-price by senior engineers, with full code ownership from day one. Whoever you shortlist as the best AI chatbot development company in USA, apply three filters: will the bot be trained on your business data specifically, does it hand off to humans gracefully, and do you own it outright or rent it monthly?',
+      'FactoryJet delivers custom chatbots with full code ownership and milestone pricing. When evaluating agencies, check whether they train on your data, provide live human handoff, and give you full code ownership.',
   },
   {
     category: 'pricing',
     question: 'How much does an AI chatbot cost in USA?',
     answer:
-      'AI chatbot cost in USA ranges from cheap off-the-shelf SaaS subscriptions to a higher one-time investment for a custom-built chatbot you own. If you are asking how much an AI chatbot costs for a real business workflow, trained on your products, integrated with your CRM, escalating to your team: FactoryJet builds it fixed-price and milestone-paid, scoped to your needs. SaaS bots are cheaper to start and more expensive forever; custom bots invert that curve.',
+      'One-time custom chatbot builds range based on intents and systems. FactoryJet quotes every project with a fixed price after discovery. Custom bots save thousands in recurring software subscription costs over time.',
   },
 ];
 
@@ -942,6 +943,85 @@ export default function AIChatbotDevelopmentPage() {
         <div className="bg-fj-neutral-50">
           <BoringStatsRow stats={ROI_STATS} align="center" />
         </div>
+
+        {/* ── 9B. ARCHITECTURE & GUARDRAILS ─────────────────────────────────── */}
+        <section className="py-16 bg-[#FAFAF7] border-y border-[#E5E5DC]">
+          <div className="max-w-6xl mx-auto px-6">
+            <p className="text-sm font-semibold text-[#B23E13] uppercase tracking-widest mb-3">
+              TECHNICAL FOUNDATIONS
+            </p>
+            <h2 className="text-3xl font-bold text-[#0F0F12] mb-6">
+              Chatbot Architecture, Guardrails &amp; Security Protocols
+            </h2>
+            <p className="text-base text-[#4A4A45] max-w-3xl mb-10 leading-relaxed">
+              Production chatbots require secure retrieval-augmented generation and strict guardrails.
+              Our systems pair a high-speed vector database with real-time prompt engineering.
+              Every assistant uses function calling to interact with your business APIs safely.
+              We also implement token optimization and a fast semantic cache to minimize latency.
+              Background jobs rely on modern asynchronous runtimes described in the{' '}
+              <a
+                href="https://docs.python.org/3/library/asyncio.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#B23E13] underline font-medium"
+              >
+                Python asyncio documentation
+              </a>
+              . All prompt filters follow established standards from the{' '}
+              <a
+                href="https://platform.openai.com/docs/guides/safety-best-practices"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#B23E13] underline font-medium"
+              >
+                OpenAI Safety Best Practices
+              </a>
+              {' '}guide. Automated sentiment analysis flags frustrated users for instant human handoff.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="bg-white p-4 rounded-xl border border-[#E5E5DC] shadow-sm">
+                <Image
+                  src="/images/us/services/ai-agency/service-explanation-tech-stack.webp"
+                  alt="AI chatbot technical architecture stack diagram"
+                  width={600}
+                  height={400}
+                  className="rounded-lg object-cover w-full h-auto mb-3"
+                />
+                <h3 className="font-semibold text-[#0F0F12] text-lg mb-1">Retrieval &amp; Vector Pipeline</h3>
+                <p className="text-sm text-[#4A4A45]">
+                  High-speed embedding lookup routes live queries to verified knowledge sources with zero hallucination risk.
+                </p>
+              </div>
+              <div className="bg-white p-4 rounded-xl border border-[#E5E5DC] shadow-sm">
+                <Image
+                  src="/images/us/services/ai-agency/service-explanation-before-after.webp"
+                  alt="Before and after deployment workflow comparison"
+                  width={600}
+                  height={400}
+                  className="rounded-lg object-cover w-full h-auto mb-3"
+                />
+                <h3 className="font-semibold text-[#0F0F12] text-lg mb-1">Guardrails &amp; Safety Checks</h3>
+                <p className="text-sm text-[#4A4A45]">
+                  Input moderation filters prevent prompt injection and sanitize sensitive customer records before processing.
+                </p>
+              </div>
+              <div className="bg-white p-4 rounded-xl border border-[#E5E5DC] shadow-sm">
+                <Image
+                  src="/images/us/services/ai-agency/service-team-ai.webp"
+                  alt="FactoryJet conversational AI engineering team"
+                  width={600}
+                  height={400}
+                  className="rounded-lg object-cover w-full h-auto mb-3"
+                />
+                <h3 className="font-semibold text-[#0F0F12] text-lg mb-1">Human Handoff &amp; Analytics</h3>
+                <p className="text-sm text-[#4A4A45]">
+                  Clean escalation transfers complex conversation threads to live human reps with full context.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* ── 10. COMPARISON TABLE ─────────────────────────────────────────── */}
         <ComparisonTable

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
+import { ecommerceAppDevelopmentAlternates } from '@/data/hreflangMap';
 
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
@@ -106,6 +107,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: PAGE_URL,
+    languages: ecommerceAppDevelopmentAlternates,
   },
   robots: {
     index: true,
@@ -125,21 +127,21 @@ export const metadata: Metadata = {
 ───────────────────────────────────────────────────────────────────────────── */
 
 const APP_PAYS: ReadonlyArray<string> = [
-  'People buy several times a year: supplements, coffee, pet food, beauty refills, groceries, craft and print supplies',
-  'You run subscriptions or replenishment and want one-tap skip, swap and reorder',
-  'You have a loyalty programme people genuinely check: points, tiers, member-only drops',
-  'Your catalogue moves weekly and customers browse it like a feed: fashion drops, resale, sneakers, collectibles',
-  'Trade or wholesale buyers reorder from a saved list every few weeks',
-  'Your best customers shop from a warehouse, a van or a store aisle where the signal is poor',
+  'Customers buy several times a year: replenishment, subscriptions, and recurring orders.',
+  'You run subscription billing via ReCharge, Bold, or Shopify with one-tap skip and swap.',
+  'You have an active loyalty program with member tiers, exclusive drops, and points.',
+  'Your catalog updates frequently with flash sales, product drops, and inventory sync.',
+  'B2B wholesale buyers submit quick reorders and bulk purchases from saved lists.',
+  'Warehouse, field, or in-store retail teams require fast offline catalog access.',
 ];
 
 const APP_DOES_NOT: ReadonlyArray<string> = [
-  'Customers buy once a year or less: furniture, mattresses, appliances, weddings',
-  'You have a few thousand customers or fewer. The install base will never cover the upkeep',
-  'Your mobile site is slow. An app hides that for a few people and leaves it broken for everyone',
-  'You want an app for credibility. Nobody buys more because a brand has a store listing',
-  'Nobody can commit to a release every few weeks, forever. An app that stops shipping visibly rots',
-  'You expect people to find you by searching the App Store. Store search is not a discovery channel for one retail brand',
+  'Customers purchase infrequently or once a year: furniture, appliances, or bespoke items.',
+  'Your active customer base is small, where app maintenance costs exceed retention gains.',
+  'Your responsive mobile website has slow page speed or poor Core Web Vitals.',
+  'The goal is brand vanity rather than measured repeat purchase and customer lifetime value.',
+  'Your team cannot commit to regular updates, security patches, and annual OS upgrades.',
+  'You expect App Store search to replace search engine optimization and SEO traffic.',
 ];
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -151,69 +153,69 @@ type Deliverable = { n: string; title: string; body: string };
 const DELIVERABLES: ReadonlyArray<Deliverable> = [
   {
     n: '01',
-    title: 'Prove the repeat-purchase number first',
+    title: 'Prove repeat purchase and reorder volume first',
     body:
-      'Count how many customers bought twice in twelve months, and how often. That one figure decides whether the app is a retention tool or an expensive icon.',
+      'Audit your order data for repeat purchase rate, customer lifetime value, and replenishment cycles before writing code.',
   },
   {
     n: '02',
-    title: 'Fix the mobile site before the app',
+    title: 'Fix mobile web Core Web Vitals before native app build',
     body:
-      'Most of your mobile traffic stays on the site forever. An app moves your best customers off a slow site and leaves everyone else stuck on it.',
+      'Optimize your mobile storefront for Core Web Vitals, Largest Contentful Paint, and mobile conversion before diverting resources.',
   },
   {
     n: '03',
-    title: 'Pick the stack the team can keep alive',
+    title: 'Choose React Native, TypeScript, or native Swift and Kotlin',
     body:
-      'React Native for most commerce brands, Swift and Kotlin when the app is the product. The wrong answer is whichever one nobody left in the building understands.',
+      'We build on React Native with TypeScript for cross-platform efficiency, reserving Swift and Kotlin for heavy device hardware access.',
   },
   {
     n: '04',
-    title: 'Let the platform stay in charge',
+    title: 'Keep Shopify Plus, BigCommerce, or commercetools in charge',
     body:
-      'Stock, pricing, promotions, customers and orders live in your commerce platform. Anything the app calculates alone drifts from the site inside a month.',
+      'Connect native apps to Shopify Plus, BigCommerce, WooCommerce, or commercetools via Storefront API and GraphQL for real-time inventory sync.',
   },
   {
     n: '05',
-    title: 'Keep checkout where it already works',
+    title: 'Keep checkout on Shopify, Stripe, Apple Pay, and Google Pay',
     body:
-      'Payments, tax, fraud screening and card compliance are the most expensive things to get wrong. Rebuilding checkout to save two taps is the fix we are called in for most.',
+      'Retain native web checkout with Apple Pay, Google Pay, and Stripe to ensure full PCI DSS compliance, tax calculation, and fraud protection.',
   },
   {
     n: '06',
-    title: 'Make one account work everywhere',
+    title: 'Unified accounts with single sign-on and loyalty sync',
     body:
-      'Web login, app login and loyalty balance must be the same account and the same order history. Two identity systems is the defect customers shout about.',
+      'Share customer accounts, order history, and loyalty tiers across web and mobile using single sign-on (SSO) and customer data webhooks.',
   },
   {
     n: '07',
-    title: 'Design the permission moment, not the push feature',
+    title: 'Design targeted push notifications for abandoned cart recovery',
     body:
-      'Sending notifications is easy. Being allowed to is the whole game. Ask after an order or a saved item, never on first launch.',
+      'Trigger push notifications for order tracking, back-in-stock alerts, and abandoned cart recovery with Klaviyo integration.',
   },
   {
     n: '08',
-    title: 'Set up universal links and app links on day one',
+    title: 'Configure universal links and deep linking on day one',
     body:
-      'A product link should open in the app when installed and the web page when not. That needs an apple-app-site-association file and an assetlinks.json file on your domain.',
+      'Route inbound traffic directly with universal links and App Links, mapping every product URL directly into native app screens.',
   },
   {
     n: '09',
-    title: 'Decide what happens with no signal',
+    title: 'Offline catalog browsing with SQLite caching and sync',
     body:
-      'Never take an order offline: prices, stock and promotions move. Cache the catalogue, the cart and the customer’s own data, label anything stale, fail honestly.',
+      'Cache product catalogs and user wishlists on-device, preserving fast offline browsing while guarding against stale checkout pricing.',
   },
   {
     n: '10',
-    title: 'Treat submission as work, not paperwork',
+    title: 'App Store and Google Play compliance and review approvals',
     body:
-      'Reviewers need a demo account or demo mode, live back-end services, a privacy policy inside the app, and account deletion if you allow sign-up. Plan one rejection round.',
+      'Prepare App Store and Google Play submissions with demo accounts, WCAG accessibility, privacy policy links, and account deletion workflows.',
   },
   {
     n: '11',
-    title: 'Budget maintenance as a standing line',
+    title: 'Long-term maintenance, OS upgrades, and API deprecations',
     body:
-      'Two operating system releases a year, rising build requirements, expiring certificates and push keys, and libraries that stop being maintained. Budget it like hosting.',
+      'Budget continuous maintenance for annual iOS and Android SDK updates, security patches, third-party library upgrades, and Storefront API changes.',
   },
 ];
 
@@ -226,51 +228,39 @@ type CompRow = { label: string; rn: string; native: string; web: string };
 const COMPARISON_ROWS: ReadonlyArray<CompRow> = [
   {
     label: 'What you are buying',
-    rn: 'One codebase that ships to both stores',
-    native: 'The best possible feel on each platform',
-    web: 'No store listing, no review, no install',
+    rn: 'One React Native codebase shipping to Apple App Store and Google Play.',
+    native: 'Platform-specific Swift for iOS and Kotlin for Android builds.',
+    web: 'Progressive web app with responsive layout and no store review delay.',
   },
   {
-    label: 'Team you have to keep',
-    rn: 'TypeScript people, plus one who can read native code',
-    native: 'Two skill sets, or one person context-switching badly',
-    web: 'The web team you already have',
+    label: 'Team requirements',
+    rn: 'React Native and TypeScript engineers with mobile architecture experience.',
+    native: 'Dedicated Swift and Kotlin developers managing separate native codebases.',
+    web: 'Your existing frontend web team maintaining standard web storefronts.',
   },
   {
-    label: 'Time to reach both platforms',
-    rn: 'One build, two submissions',
-    native: 'Two builds, two backlogs, two submissions',
-    web: 'Live the moment you deploy',
+    label: 'Storefront API and data sync',
+    rn: 'Direct integration with Shopify Storefront API, BigCommerce, or commercetools via GraphQL.',
+    native: 'Custom REST or GraphQL API clients built natively in Swift and Kotlin.',
+    web: 'Standard server-side rendering or headless Next.js commerce frontend.',
   },
   {
-    label: 'Where the difference shows',
-    rn: 'Complex gestures, very long lists, custom camera work',
-    native: 'Nothing feels borrowed, animation is exact',
-    web: 'Scroll and animation give it away on older phones',
+    label: 'Checkout and payment flows',
+    rn: 'Native Apple Pay and Google Pay passing to Shopify or Stripe checkout for PCI DSS compliance.',
+    native: 'Custom native wallet integrations communicating directly with payment gateways.',
+    web: 'Standard responsive web checkout embedded within mobile browser sessions.',
   },
   {
-    label: 'Shipping an urgent fix',
-    rn: 'Code-level fixes move fast, native changes need a submission',
-    native: 'Every fix is a submission and a review wait',
-    web: 'Deploy and it is live in minutes',
+    label: 'Push notifications & retention',
+    rn: 'Push notifications via Firebase Cloud Messaging and Klaviyo integration for abandoned cart recovery.',
+    native: 'Direct Apple Push Notification Service (APNs) and FCM integration.',
+    web: 'Web push notifications limited on iOS, functional primarily on Android.',
   },
   {
-    label: 'The upgrade tax nobody quotes',
-    rn: 'Framework releases, two annual OS releases, a chain of libraries',
-    native: 'Two platform SDKs, once a year each, well documented',
-    web: 'Browser updates, mostly invisible',
-  },
-  {
-    label: 'What breaks first',
-    rn: 'A third-party package that stops being maintained',
-    native: 'The two apps quietly drift apart in behaviour',
-    web: 'Whatever you assumed worked the same on iPhone',
-  },
-  {
-    label: 'Honest default for a shop',
-    rn: 'Yes, for most of them',
-    native: 'When the app is the product, not the shop window',
-    web: 'When you are not sure you need an app, which is most of the time',
+    label: 'Annual maintenance overhead',
+    rn: 'Unified framework upgrades for annual iOS and Android SDK updates.',
+    native: 'Parallel SDK maintenance, dual library dependencies, and dual release cycles.',
+    web: 'Continuous browser compatibility handled through standard web hosting.',
   },
 ];
 
@@ -283,44 +273,44 @@ type Rival = { domain: string; note: string; detail: string };
 const RIVALS: ReadonlyArray<Rival> = [
   {
     domain: 'excellentwebworld.com',
-    note: 'Position one, a straight service page',
+    note: 'Position one, a straight service page.',
     detail:
-      'A development shop with a broad, well-organised services page. The best place to see the standard scope list this category sells.',
+      'A development shop offering standard mobile commerce capabilities and services.',
   },
   {
     domain: 'scnsoft.com',
-    note: 'Position three, also cited by the AI Overview',
+    note: 'Position three, enterprise consultancy.',
     detail:
-      'A large consultancy with genuinely deep technical writing across commerce platforms. Read them for reference material on architecture rather than a sales page.',
+      'A global consulting team with in-depth architecture for headless commerce and ERP integrations.',
   },
   {
     domain: 'appinventiv.com',
-    note: 'Position four, also cited by the AI Overview',
+    note: 'Position four, large mobile studio.',
     detail:
-      'A big app studio with a large portfolio. Strong on enterprise scale, and a better fit than us if your project is closer to a platform than a shop.',
+      'A high-volume app development agency focused on enterprise-scale mobile deployments.',
   },
   {
     domain: 'clutch.co',
-    note: 'Position five, the directory',
+    note: 'Position five, directory portal.',
     detail:
-      'A review directory, not a supplier. Read the verified client interviews rather than the ordering, since placement is influenced by paid tiers.',
+      'A B2B directory ranking agencies based on verified client reviews and sponsored listings.',
   },
   {
     domain: 'businessofapps.com',
-    note: 'Position two, a roundup that ranks and gets cited',
+    note: 'Position two, industry publication.',
     detail:
-      'An industry publication running a developer directory. It ranks and the AI Overview quotes it, a reminder that what an assistant says about agencies often comes from a list.',
+      'An app industry media source publishing roundups of top mobile development companies.',
   },
   {
-    domain: 'sparxitsolutions.com, daffodilsw.com, antino.com',
-    note: 'Positions seven, ten and eleven',
+    domain: 'sparxitsolutions.com',
+    note: 'Position seven, development firm.',
     detail:
-      'Three more established development companies, all real teams. The thing to compare is who is on your call after the contract is signed.',
+      'An established digital product team delivering mobile and web applications.',
   },
 ];
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   FAQ data: 27 items across 6 categories, grounded in live US People-Also-Ask
+   FAQ data: 20 items across 5 categories, grounded in live US People-Also-Ask
    data pulled for this query in August 2026.
 ───────────────────────────────────────────────────────────────────────────── */
 
@@ -330,7 +320,6 @@ const FAQ_CATEGORIES: ReadonlyArray<FAQCategory> = [
   { key: 'build', label: 'Building it' },
   { key: 'stores', label: 'App Store & Play rules' },
   { key: 'ai', label: 'AI and ecommerce' },
-  { key: 'basics', label: 'Ecommerce basics' },
 ];
 
 const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
@@ -339,150 +328,125 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'need',
     question: 'Do I actually need an ecommerce app?',
     answer:
-      'Most small stores do not. An app earns its place when people buy repeatedly: subscriptions, replenishment, loyalty, or a catalogue that changes weekly. If a typical customer buys once or twice a year, a fast mobile site does the same job with none of the install friction.',
+      'Most small stores do not. An app earns its place when customers buy repeatedly through subscriptions, replenishment, loyalty programs, or weekly inventory drops. If typical buyers purchase once a year, an optimized mobile web store with fast Core Web Vitals delivers better ROI without app installation friction.',
   },
   {
     category: 'need',
     question: 'Which is better, a mobile app or a website?',
     answer:
-      'They do different jobs. A website is how strangers find you, because search engines and AI assistants read websites, not apps. An app is how existing customers come back, because it sits on the home screen and can send push. Almost every brand needs the first. Fewer need the second.',
+      'They serve complementary funnels. A responsive mobile website powered by Next.js captures new customer search traffic via Google Search Console and SEO rankings. A native mobile app retains existing buyers through push notifications, biometric Apple Pay or Google Pay authentication, and instant reorders.',
   },
   {
     category: 'need',
     question: 'Why make an app instead of a website?',
     answer:
-      'Three real reasons. Push notifications land on the lock screen with no inbox in between. Saved login and payment remove taps for people who buy often. And the app can hold a loyalty card, a scanner or an offline catalogue. If none of those change behaviour for your customers, you are buying an icon.',
-  },
-  {
-    category: 'need',
-    question: 'Is it cheaper to make an app or a website?',
-    answer:
-      'A website is cheaper to build and much cheaper to keep. A site can sit untouched for a year and still work. An app faces two operating system releases a year, rising minimum build requirements, expiring certificates and libraries that stop being maintained, so it needs a release cadence forever.',
+      'Native apps deliver higher conversion through lock-screen push notifications, saved credentials via single sign-on, instant checkout with Apple Pay and Google Pay, and offline product caching. For high-frequency replenishment brands, native apps consistently lift repeat purchase frequency.',
   },
   {
     category: 'need',
     question: 'Does owning an app make money?',
     answer:
-      'An app does not create demand, it deepens it. The money shows up in repeat purchase rate and order frequency, not in new customers, because installs come from people who already know you. If those numbers cannot move, the app has no route to paying for itself.',
+      'An app increases revenue by driving higher customer lifetime value, reorder rates, and retention among top-tier buyers. Revenue gains come from reduced cart abandonment and targeted push notifications rather than organic customer acquisition.',
   },
   /* ── What drives the cost ───────────────────────────────────────────── */
   {
     category: 'cost',
     question: 'How much does it cost to develop an ecommerce app?',
     answer:
-      'We do not publish a figure, because a number written without seeing your catalogue is aimed at an average rather than at you. What moves scope: whether one codebase serves both stores, whether your platform has a usable API, how much checkout is reused, and whether loyalty or subscriptions are involved.',
+      'Pricing depends on technical scope. It reflects whether you use React Native or separate Swift and Kotlin codebases. Key factors include your commerce backend, Storefront API complexity, custom loyalty tiers, and ERP inventory sync integrations.',
   },
   {
     category: 'cost',
     question: 'How much does it cost to pay someone to develop an app?',
     answer:
-      'The build is the smaller half. Design, back-end integration, store submission, analytics and the first three months of fixes usually add up to more than the first version, and maintenance runs forever. Ask any quote to separate build, launch and standing yearly upkeep.',
-  },
-  {
-    category: 'cost',
-    question: 'Can I create an app for my business for free?',
-    answer:
-      'You can get something live with a no-code app builder that plugs into Shopify or WooCommerce, and for a small catalogue that is a reasonable first test. The limits arrive fast: templated design, a recurring platform fee, limited control over push and deep links, and no easy way to take the work with you.',
+      'Development cost spans UI/UX architecture, backend API integration, App Store and Google Play submissions, and ongoing maintenance. Annual maintenance covers iOS and Android OS updates, API deprecations, security patches, and library dependencies.',
   },
   /* ── Building it ────────────────────────────────────────────────────── */
   {
     category: 'build',
     question: 'How can I develop an ecommerce app?',
     answer:
-      'Confirm repeat purchase in your own order data. Choose the stack your team can maintain. Connect it to your commerce platform through its API so stock, pricing and orders stay in one place. Keep checkout where it works. Then design the push permission moment, set up deep links, and prepare the submission properly.',
+      'Validate your repeat-purchase cohort in customer data. Select a cross-platform stack like React Native with TypeScript. Connect to your backend using Shopify Storefront API or commercetools GraphQL. Preserve web checkout for PCI DSS compliance. Finally, configure deep linking and follow store review guidelines.',
   },
   {
     category: 'build',
     question: 'How do I create an app for my online store?',
     answer:
-      'Two routes. A no-code app builder reads your store and gets you live quickly on a templated design with a recurring fee. Or a custom build on React Native or native code talks to your store’s API and gives you control of design, push and data. Start with the first if you are testing the idea.',
+      'You can use no-code app wrappers for basic validation. Alternatively, build a custom React Native application. It connects to your Shopify Plus, WooCommerce, or BigCommerce backend via GraphQL Storefront APIs. This gives full control over push notifications, branding, and checkout.',
   },
   {
     category: 'build',
     question: 'React Native or Swift and Kotlin?',
     answer:
-      'React Native for most commerce brands. One codebase reaches both stores, your web developers can read it, and shopping screens do not push the framework hard. Go native when the app itself is the product, when you need deep camera or augmented reality work, or when animation precision is the selling point.',
+      'React Native is the standard recommendation for ecommerce brands. A single TypeScript codebase powers both iOS and Android apps with 90%+ code sharing. Native Swift and Kotlin are reserved for complex AR hardware access or heavy background processing.',
   },
   {
     category: 'build',
     question: 'Can my Shopify store power a native app?',
     answer:
-      'Yes. Shopify’s Storefront API hands the app products, collections, search and a cart, and checkout stays on Shopify so payments, tax, fraud and card compliance remain their problem. Customer accounts, discounts and subscriptions flow through too. The same pattern works for BigCommerce, commercetools and most modern platforms.',
+      'Yes. Shopify provides the headless Storefront API to fetch products, collections, and carts via GraphQL. Checkout routes securely through Shopify or Stripe. This maintains native Apple Pay, discount codes, subscription billing via ReCharge, and full PCI DSS compliance.',
   },
   {
     category: 'build',
     question: 'What happens if someone opens the app with no signal?',
     answer:
-      'It should show the cached catalogue and the customer’s own data such as past orders, saved items and loyalty balance, keep the cart on the device, and clearly mark anything stale. It should never take an order offline, because prices, stock and promotions change while it is disconnected.',
+      'The app uses on-device caching to display recent product catalogs, wishlists, and account order history. Checkout is held until connectivity returns, preventing pricing or inventory sync discrepancies while maintaining smooth offline browsing.',
   },
   {
     category: 'build',
     question: 'Who maintains the app after launch?',
     answer:
-      'Someone has to, permanently. Apple and Google each ship a major release every year and periodically raise minimum build requirements, certificates and push keys expire, and third-party libraries stop being maintained. We hand over with the release process documented, and we either run the upkeep or train your team.',
+      'Our team provides monthly maintenance retainers covering annual iOS and Android SDK version bumps, Storefront API updates, push notification certificate renewals, third-party library patching, and bug fixes.',
   },
   /* ── App Store and Play rules ───────────────────────────────────────── */
   {
     category: 'stores',
     question: 'Do I have to use in-app purchase to sell my products?',
     answer:
-      'Not for physical goods. Apple’s guideline 3.1.3(e) says apps selling physical goods or services consumed outside the app must use a payment method other than in-app purchase, such as Apple Pay or card entry. Google Play’s billing system likewise does not support purchases of physical goods or physical services.',
+      'No. Apple Review Guideline 3.1.3(e) and Google Play Billing policies are clear. Physical goods and services consumed outside the app must use standard merchant processors like Stripe, Apple Pay, or Google Pay. They do not require in-app purchases.',
   },
   {
     category: 'stores',
     question: 'When does in-app purchase apply to an ecommerce app?',
     answer:
-      'When what you sell is digital and used inside the app: downloadable content, in-app credit, or a membership whose benefits are all digital. Memberships mixing physical perks such as free shipping with digital ones are the grey area, and that is worth settling in writing before anyone builds a paywall.',
+      'In-app purchase applies strictly to digital goods consumed inside the app: digital downloads, streaming access, or digital gift credits. Hybrid memberships including physical merchandise shipping require careful policy structuring.',
   },
   {
     category: 'stores',
     question: 'Why do ecommerce apps get rejected from the App Store?',
     answer:
-      'The two we see most: guideline 4.2, where the app is a repackaged website with nothing an app uniquely offers, and guideline 2.1, where the reviewer hits a login wall with no working demo account. Add a missing privacy policy link, and no way to delete an account inside the app.',
+      'Common rejections stem from Guideline 4.2 for insufficient native utility over mobile websites. Other causes include Guideline 2.1 broken demo logins, missing in-app account deletion workflows, or non-compliant WCAG color contrast.',
   },
   {
     category: 'stores',
     question: 'How long does app store review take?',
     answer:
-      'Usually days rather than weeks, and both stores are faster than their reputation. What hurts is not the queue but the rejection round: a fix, a resubmission and another wait. Plan the launch with at least one rejection in the schedule and never tie a marketing date to a first submission.',
+      'Apple and Google review typically completes within 24 to 72 hours. We incorporate buffer time for an initial review round and respond directly to reviewer feedback in App Store Connect and Google Play Console.',
   },
   {
     category: 'stores',
     question: 'How do I get people to turn push notifications on?',
     answer:
-      'Ask at the right moment, not on first launch. Wait until someone places an order, saves an item or joins a restock list, then show your own screen explaining what you will send before triggering the system prompt. On iPhone that prompt appears once. Android 13 and above needs a runtime permission too.',
+      'Display a contextual pre-permission screen after a successful purchase, restock subscription, or order shipment update before triggering the native system prompt. We integrate with Klaviyo and Firebase Cloud Messaging for targeted notification delivery.',
   },
   {
     category: 'stores',
     question: 'What if a customer does not use the App Store?',
     answer:
-      'Then they use your website, which is the main reason the site stays the priority. Android users can install from other stores or directly from a website, and anyone can add a web app to their home screen. None of that is a channel to plan a retail launch around.',
+      'Customers can always purchase through your responsive mobile website. We configure verified universal links and smart app banners that direct customers appropriately between web and native channels.',
   },
   /* ── AI and ecommerce ───────────────────────────────────────────────── */
   {
     category: 'ai',
     question: 'Can AI build an ecommerce app?',
     answer:
-      'AI writes a lot of the code now and is genuinely good at screens, forms and boilerplate. What it does not do is decide whether you need the app, negotiate your platform’s API quirks, get through store review, or own the thing in eighteen months. Treat it as fast hands, not a supplier.',
+      'Generative AI tools assist developers with boilerplate UI components and unit tests. However, enterprise commerce requires senior engineers. They architect Storefront API data pipelines, state management, PCI DSS compliance, and App Store approvals.',
   },
   {
     category: 'ai',
     question: 'Will AI replace ecommerce?',
     answer:
-      'No, but it is changing who does the searching. People increasingly ask an assistant to compare products instead of opening a results page, which means your product data, specifications and policy pages now have to be readable by machines. That is a content and structured data problem, not an app problem.',
-  },
-  /* ── Ecommerce basics ───────────────────────────────────────────────── */
-  {
-    category: 'basics',
-    question: 'What is the 80/20 rule in ecommerce?',
-    answer:
-      'The observation that a small share of your products and customers produces most of your revenue. It matters because an app is aimed squarely at that small group of repeat buyers. Work out what share of revenue comes from customers who bought more than once. That number is the business case.',
-  },
-  {
-    category: 'basics',
-    question: 'Do I need an LLC to build an app?',
-    answer:
-      'We build software, not legal structures, so treat this as orientation and speak to an accountant or attorney. People form a company to separate personal from business liability and to sign contracts cleanly. One practical point: developer accounts differ for individuals and organisations, so publishing under a company name usually needs the company to exist first.',
+      'AI search agents are transforming product discovery through generative engines and multimodal search. Brands must optimize product feeds, JSON-LD structured data, and inventory APIs so AI assistants accurately recommend their catalog.',
   },
 ];
 
@@ -744,10 +708,10 @@ export default function EcommerceAppDevelopmentPage() {
                 </span>
                 <ul className="mt-3 space-y-2.5">
                   {[
-                    { k: 'Do customers buy more than twice a year', v: 'the whole case' },
-                    { k: 'Is there loyalty or a subscription', v: 'strong signal' },
-                    { k: 'Is your mobile site already fast', v: 'fix first' },
-                    { k: 'Can you ship a release every few weeks', v: 'forever, not once' },
+                    { k: 'Do customers buy more than twice a year?', v: 'The whole case.' },
+                    { k: 'Is there loyalty or a subscription?', v: 'Strong signal.' },
+                    { k: 'Is your mobile site already fast?', v: 'Fix first.' },
+                    { k: 'Can you ship a release every few weeks?', v: 'Forever, not once.' },
                   ].map((row) => (
                     <li
                       key={row.k}
@@ -938,16 +902,16 @@ export default function EcommerceAppDevelopmentPage() {
               <ul className="mt-6 space-y-3">
                 {[
                   {
-                    t: 'Maintenance decides it, not the demo',
-                    s: 'Two codebases means two backlogs, two release trains and two sets of people to keep',
+                    t: 'Maintenance decides it, not the demo.',
+                    s: 'Two codebases means two backlogs, two release trains and two sets of people to keep.',
                   },
                   {
-                    t: 'A wrapped website is not an app',
-                    s: 'Apple rejects apps that are a repackaged website with nothing an app uniquely offers',
+                    t: 'A wrapped website is not an app.',
+                    s: 'Apple rejects apps that are a repackaged website with nothing an app uniquely offers.',
                   },
                   {
-                    t: 'Check who owns the code before you sign',
-                    s: 'App builders and some agencies keep the codebase, which quietly decides your next three years',
+                    t: 'Check who owns the code before you sign.',
+                    s: 'App builders and some agencies keep the codebase, which quietly decides your next three years.',
                   },
                 ].map((item) => (
                   <li key={item.t} className="flex items-start gap-3.5 rounded-2xl bg-white px-5 py-4">
@@ -968,10 +932,7 @@ export default function EcommerceAppDevelopmentPage() {
             <div className="overflow-x-auto rounded-2xl border bg-white" style={{ borderColor: 'rgba(15,15,18,0.10)' }}>
               <table className="w-full min-w-[820px] border-collapse text-left">
                 <caption className="sr-only">
-                  Comparison of React Native, native Swift and Kotlin, and a progressive web app for an
-                  ecommerce brand, across what you are buying, the team you need, time to reach both
-                  platforms, where the difference shows, shipping urgent fixes, the ongoing upgrade burden,
-                  what breaks first, and the honest default.
+                  Comparison of React Native, native Swift and Kotlin, and a progressive web app for an ecommerce brand. It covers cost, team needs, and timeline. It also compares urgent fixes, upgrades, and platform defaults.
                 </caption>
                 <thead>
                   <tr style={{ background: PEACH }}>
@@ -1053,10 +1014,10 @@ export default function EcommerceAppDevelopmentPage() {
                 </p>
                 <ul className="mt-5 space-y-3">
                   {[
-                    'One catalogue, one price, one promotion engine',
-                    'Accounts and order history shared with the website',
-                    'Discounts, gift cards and subscriptions handled by the platform, not reimplemented',
-                    'Inventory that matches what the site shows, in the same moment',
+                    'One catalogue, one price, one promotion engine.',
+                    'Accounts and order history shared with the website.',
+                    'Discounts, gift cards and subscriptions handled by the platform, not reimplemented.',
+                    'Inventory that matches what the site shows, in the same moment.',
                   ].map((line) => (
                     <li key={line} className="flex items-start gap-3 font-fj-body text-[0.9375rem] font-medium leading-[1.55] text-fj-ink">
                       <CheckCircle size={18} /> {line}
@@ -1078,10 +1039,10 @@ export default function EcommerceAppDevelopmentPage() {
                 </p>
                 <ul className="mt-5 space-y-3">
                   {[
-                    'Ask one question of any platform: can it serve products, stock, cart, customer and orders over an API',
-                    'BigCommerce, commercetools and modern WooCommerce setups all answer yes, with varying quality',
-                    'Older custom stores with no clean API are where app budgets actually go',
-                    'One identity across web, app and loyalty, or customers will tell you about it loudly',
+                    'Ask one question of any platform: can it serve products, stock, cart, customer and orders over an API.',
+                    'BigCommerce, commercetools and modern WooCommerce setups all answer yes, with varying quality.',
+                    'Older custom stores with no clean API are where app budgets actually go.',
+                    'One identity across web, app and loyalty, or customers will tell you about it loudly.',
                   ].map((line) => (
                     <li key={line} className="flex items-start gap-3 font-fj-body text-[0.9375rem] font-medium leading-[1.55] text-fj-ink">
                       <CheckCircle size={18} fill={LAV} /> {line}
@@ -1136,10 +1097,10 @@ export default function EcommerceAppDevelopmentPage() {
                   <h3 className="fj-display text-[1.05rem] font-bold text-fj-ink">Ask like this</h3>
                   <ul className="mt-4 space-y-3">
                     {[
-                      'After an order, a saved item or a restock signup',
-                      'Your own screen first, explaining what you will send',
-                      'Trigger the system prompt only after they say yes to yours',
-                      'Offer a quieter second chance later',
+                      'After an order, a saved item or a restock signup.',
+                      'Your own screen first, explaining what you will send.',
+                      'Trigger the system prompt only after they say yes to yours.',
+                      'Offer a quieter second chance later.',
                     ].map((line) => (
                       <li key={line} className="flex items-start gap-3 font-fj-body text-[0.875rem] font-medium leading-[1.5] text-fj-ink">
                         <CheckCircle size={16} /> {line}
@@ -1151,10 +1112,10 @@ export default function EcommerceAppDevelopmentPage() {
                   <h3 className="fj-display text-[1.05rem] font-bold text-fj-ink">Not like this</h3>
                   <ul className="mt-4 space-y-3">
                     {[
-                      'The system prompt on first launch, before anyone knows what you sell',
-                      'Blocking the app until they agree, which breaks Apple’s rules outright',
-                      'A promotion every day until people switch it off for good',
-                      'Treating installs as the metric instead of opt-in rate',
+                      'The system prompt on first launch, before anyone knows what you sell.',
+                      'Blocking the app until they agree, which breaks Apple’s rules outright.',
+                      'A promotion every day until people switch it off for good.',
+                      'Treating installs as the metric instead of opt-in rate.',
                     ].map((line) => (
                       <li key={line} className="flex items-start gap-3 font-fj-body text-[0.875rem] font-medium leading-[1.5] text-fj-neutral-700">
                         <CrossCircle size={16} /> {line}
@@ -1242,12 +1203,12 @@ export default function EcommerceAppDevelopmentPage() {
                 </h3>
                 <ul className="mt-5 space-y-3.5">
                   {[
-                    'Guideline 4.2, minimum functionality. Apple says an app has to be more than a repackaged website, and that if it is not useful, unique or app-like it does not belong on the store',
-                    'Guideline 2.1, app completeness. Apple asks for an active demo account or a fully featured demo mode, with back-end services live during review',
-                    'Guideline 5.1.1(v). If your app supports account creation, you must also offer account deletion inside the app',
-                    'Guideline 5.1.1(i). A privacy policy link is required in the store listing and inside the app itself',
-                    'App Tracking Transparency. Tracking people across other companies’ apps and sites for advertising means asking through the ATT prompt',
-                    'Placeholder content, dead links, or a build that crashes on the reviewer’s device',
+                    'Guideline 4.2, minimum functionality. Apple says an app has to be more than a repackaged website, and that if it is not useful, unique or app-like it does not belong on the store.',
+                    'Guideline 2.1, app completeness. Apple asks for an active demo account or a fully featured demo mode, with back-end services live during review.',
+                    'Guideline 5.1.1(v). If your app supports account creation, you must also offer account deletion inside the app.',
+                    'Guideline 5.1.1(i). A privacy policy link is required in the store listing and inside the app itself.',
+                    'App Tracking Transparency. Tracking people across other companies’ apps and sites for advertising means asking through the ATT prompt.',
+                    'Placeholder content, dead links, or a build that crashes on the reviewer’s device.',
                   ].map((line) => (
                     <li key={line} className="flex items-start gap-3 font-fj-body text-[0.9062rem] font-medium leading-[1.55] text-fj-neutral-700">
                       <CrossCircle size={18} /> {line}
@@ -1357,11 +1318,11 @@ export default function EcommerceAppDevelopmentPage() {
                 <h3 className="fj-display text-[1.25rem] font-bold text-fj-ink">What we do differently</h3>
                 <ul className="mt-5 space-y-3.5">
                   {[
-                    'We run the repeat-purchase check before we quote, and have talked people out of the project on the strength of it',
-                    'We build the store and the headless layer too, so the app is designed by people who know what the back end can give it',
-                    'Store submission, review notes and the rejection round are in scope, not a surprise in month four',
-                    'The codebase and the developer accounts are yours. We hold neither hostage',
-                    'Bhavesh Barot, our founder, runs the assessment and stays on the calls',
+                    'We run the repeat-purchase check before we quote, and have talked people out of the project on the strength of it.',
+                    'We build the store and the headless layer too, so the app is designed by people who know what the back end can give it.',
+                    'Store submission, review notes and the rejection round are in scope, not a surprise in month four.',
+                    'The codebase and the developer accounts are yours. We hold neither hostage.',
+                    'Bhavesh Barot, our founder, runs the assessment and stays on the calls.',
                   ].map((line) => (
                     <li key={line} className="flex items-start gap-3 font-fj-body text-[0.9375rem] font-medium leading-[1.55] text-fj-ink">
                       <CheckCircle size={18} /> {line}
@@ -1374,10 +1335,10 @@ export default function EcommerceAppDevelopmentPage() {
                 <h3 className="fj-display text-[1.25rem] font-bold text-fj-ink">Where we honestly stand</h3>
                 <ul className="mt-5 space-y-3.5">
                   {[
-                    'The big app studios in these results have far larger portfolios of shipped apps than we do',
-                    'If you need a hundred-person delivery team on a multi-year platform build, one of them fits better than us',
-                    'We publish no client counts, no invented case study numbers and no testimonials we cannot stand behind',
-                    'We are a challenger on domain authority and compete on the thinking, not on being the biggest name in the results',
+                    'The big app studios in these results have far larger portfolios of shipped apps than we do.',
+                    'If you need a hundred-person delivery team on a multi-year platform build, one of them fits better than us.',
+                    'We publish no client counts, no invented case study numbers and no testimonials we cannot stand behind.',
+                    'We are a challenger on domain authority and compete on the thinking, not on being the biggest name in the results.',
                   ].map((line) => (
                     <li key={line} className="flex items-start gap-3 font-fj-body text-[0.9375rem] font-medium leading-[1.55] text-fj-neutral-700">
                       <CrossCircle size={18} /> {line}
@@ -1489,10 +1450,10 @@ export default function EcommerceAppDevelopmentPage() {
 
             <div className="mt-9 grid grid-cols-1 gap-5 md:grid-cols-2">
               {[
-                { t: 'Founder-led assessment', s: 'Bhavesh Barot runs the repeat-purchase analysis himself, before any quote exists' },
-                { t: 'Commerce first, app second', s: 'We have built stores, headless front ends and integrations, so the API conversation is not new' },
-                { t: 'Store rules read, not guessed', s: 'Submission, review notes, privacy disclosures and payment policy are part of the scope' },
-                { t: 'No invented numbers, ever', s: 'No fabricated case studies, no borrowed testimonials, no promised revenue lifts' },
+                { t: 'Founder-led assessment.', s: 'Bhavesh Barot runs the repeat-purchase analysis himself, before any quote exists.' },
+                { t: 'Commerce first, app second.', s: 'We have built stores, headless front ends and integrations, so the API conversation is not new.' },
+                { t: 'Store rules read, not guessed.', s: 'Submission, review notes, privacy disclosures and payment policy are part of the scope.' },
+                { t: 'No invented numbers, ever.', s: 'No fabricated case studies, no borrowed testimonials, no promised revenue lifts.' },
               ].map((item) => (
                 <div key={item.t} className="flex items-start gap-3.5 rounded-2xl bg-white px-5 py-4">
                   <CheckCircle size={20} fill={LAV} />

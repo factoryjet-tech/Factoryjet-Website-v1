@@ -229,20 +229,20 @@ const ECOMM_JOURNEY_STAGES: ServiceJourneyStage[] = [
 const ECOMM_STATS = [
   {
     value: '500+',
-    label: 'businesses served across web design, e-commerce, and custom software',
-    microcopy: 'FactoryJet has been building for clients in India, the US, the UK and the UAE for 12+ years',
+    label: 'businesses served across web design, e-commerce, and custom software.',
+    microcopy: 'FactoryJet has been building for clients in India, the US, the UK and the UAE for 12+ years.',
     categoryLabel: 'TRACK RECORD',
   },
   {
     value: '2.3×',
-    label: 'average improvement in add-to-cart rate, custom build vs. generic theme',
-    microcopy: 'measured across FactoryJet e-commerce builds in 2024',
+    label: 'average improvement in add-to-cart rate, custom build vs. generic theme.',
+    microcopy: 'measured across FactoryJet e-commerce builds in 2024.',
     categoryLabel: 'CONVERSION LIFT',
   },
   {
     value: 'Fixed Price',
-    label: 'milestone-paid e-commerce builds with full code ownership',
-    microcopy: 'same design quality, same engineering standard, predictable from quote to launch',
+    label: 'milestone-paid e-commerce builds with full code ownership.',
+    microcopy: 'same design quality, same engineering standard, predictable from quote to launch.',
     categoryLabel: 'PRICING MODEL',
   },
 ];
@@ -250,19 +250,19 @@ const ECOMM_STATS = [
 const US_ECOMM_STATS = [
   {
     value: '$1.19T',
-    label: 'projected US e-commerce sales in 2025, up from $1.06T in 2023',
+    label: 'projected US e-commerce sales in 2025, up from $1.06T in 2023.',
     sourceUrl: 'https://www.emarketer.com/content/us-ecommerce-forecast-2025',
     sourceLabel: 'eMarketer 2025 Forecast',
   },
   {
     value: '21%',
-    label: 'of total US retail sales now happen online, up from 15% in 2020',
+    label: 'of total US retail sales now happen online, up from 15% in 2020.',
     sourceUrl: 'https://www.census.gov/retail/ecommerce.html',
     sourceLabel: 'US Census Bureau Retail Data',
   },
   {
     value: '69%',
-    label: 'average cart abandonment rate across e-commerce, mostly fixable with better UX',
+    label: 'average cart abandonment rate across e-commerce, mostly fixable with better UX.',
     sourceUrl: 'https://baymard.com/lists/cart-abandonment-rate',
     sourceLabel: 'Baymard Institute Research',
   },
@@ -277,29 +277,20 @@ const COMPARISON_COLUMNS = [
 
 const COMPARISON_ROWS = [
   {
-    feature: 'Pricing model',
+    feature: 'Pricing model.',
     values: [
-      'Fixed-price, quoted upfront',
-      'Multiples higher, often hourly',
-      'Hourly, no ceiling',
-      'Cheap monthly fee (you build it)',
+      'Fixed-price, quoted upfront.',
+      'Multiples higher, often hourly.',
+      'Hourly, no ceiling.',
+      'Cheap monthly fee (you build it).',
     ],
   },
   {
-    feature: 'Delivery timeline',
-    values: ['3-5 weeks', '3-6 months', '6-12 weeks (unreliable)', '1 week (but you build it)'],
+    feature: 'Delivery timeline.',
+    values: ['3-5 weeks.', '3-6 months.', '6-12 weeks (unreliable).', '1 week (but you build it).'],
   },
   {
-    feature: 'Custom design (not a template)',
-    values: [
-      <CompareIcon key="fj" kind="yes" />,
-      <CompareIcon key="us" kind="yes" />,
-      <CompareIcon key="fl" kind="partial" />,
-      <CompareIcon key="diy" kind="no" />,
-    ],
-  },
-  {
-    feature: 'Platform migration with SEO preservation',
+    feature: 'Custom design (not a template).',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="yes" />,
@@ -308,7 +299,16 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Checkout + payment testing before launch',
+    feature: 'Platform migration with SEO preservation.',
+    values: [
+      <CompareIcon key="fj" kind="yes" />,
+      <CompareIcon key="us" kind="yes" />,
+      <CompareIcon key="fl" kind="partial" />,
+      <CompareIcon key="diy" kind="no" />,
+    ],
+  },
+  {
+    feature: 'Checkout + payment testing before launch.',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="yes" />,
@@ -317,7 +317,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Lighthouse 95+ performance on delivery',
+    feature: 'Lighthouse 95+ performance on delivery.',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="partial" />,
@@ -326,7 +326,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Technical SEO built in',
+    feature: 'Technical SEO built in.',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="partial" />,
@@ -335,7 +335,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Full code ownership (your GitHub)',
+    feature: 'Full code ownership (your GitHub).',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="partial" />,
@@ -344,7 +344,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Fixed-price contract',
+    feature: 'Fixed-price contract.',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="no" />,
@@ -361,14 +361,14 @@ const PRICING_TIERS = [
     description:
       'A custom-designed Shopify or WooCommerce store, ready to sell on launch day. Best for product-based businesses launching their first online store or replacing a template site.',
     features: [
-      'Platform of your choice: Shopify or WooCommerce',
-      'Custom Figma design, homepage, PDP, collection, cart',
-      'Up to 100 products imported and configured',
-      'Payment setup: Stripe, PayPal, Shop Pay',
-      'Shipping zones and tax configuration',
-      'Technical SEO: schema, sitemaps, canonical URLs',
-      'Google Analytics 4 + Search Console setup',
-      'Lighthouse 95+ on delivery',
+      'Platform of your choice: Shopify or WooCommerce.',
+      'Custom Figma design, homepage, PDP, collection, cart.',
+      'Up to 100 products imported and configured.',
+      'Payment setup: Stripe, PayPal, Shop Pay.',
+      'Shipping zones and tax configuration.',
+      'Technical SEO: schema, sitemaps, canonical URLs.',
+      'Google Analytics 4 + Search Console setup.',
+      'Lighthouse 95+ on delivery.',
     ],
     cta: { label: 'Book a Consultation', modal: true, region: 'us' },
   },
@@ -378,15 +378,15 @@ const PRICING_TIERS = [
     description:
       'A full-featured store with subscription logic, B2B pricing, a product configurator, or multi-channel inventory sync. The right tier for brands with complex selling models.',
     features: [
-      'Everything in Platform Store, plus:',
-      'Subscription products (ReCharge or Skio)',
-      'B2B wholesale portal or tiered pricing',
-      'Product configurator or bundle builder',
-      'Advanced Klaviyo email flows (8+ automated sequences)',
-      'Multi-channel inventory sync (Amazon, eBay, or 3PL)',
-      'Reviews platform integration (Yotpo, Okendo, or Judge.me)',
-      'Post-purchase upsell flow',
-      '30-day post-launch support window',
+      'Everything in Platform Store, plus advanced capabilities.',
+      'Subscription products (ReCharge or Skio).',
+      'B2B wholesale portal or tiered pricing.',
+      'Product configurator or bundle builder.',
+      'Advanced Klaviyo email flows (8+ automated sequences).',
+      'Multi-channel inventory sync (Amazon, eBay, or 3PL).',
+      'Reviews platform integration (Yotpo, Okendo, or Judge.me).',
+      'Post-purchase upsell flow.',
+      '30-day post-launch support window.',
     ],
     cta: { label: 'Get a Custom Quote', modal: true, region: 'us' },
     popular: true,
@@ -397,15 +397,15 @@ const PRICING_TIERS = [
     description:
       'A headless Next.js storefront, fully custom commerce platform, or multi-vendor marketplace. For brands where standard platform themes can\'t meet performance or UX requirements.',
     features: [
-      'Headless Next.js or Remix storefront',
-      'Commerce backend: Shopify, BigCommerce, Medusa, or custom',
-      'Sub-1-second page loads on mobile (streaming SSR)',
-      'Custom product logic, pricing engine, or configurator',
-      'Multi-vendor marketplace with Stripe Connect split payments',
-      'ERP or WMS integration (NetSuite, SAP, Brightpearl)',
-      'International multi-currency and multi-language setup',
-      'Dedicated engineering point of contact',
-      '90-day post-launch support and iteration',
+      'Headless Next.js or Remix storefront.',
+      'Commerce backend: Shopify, BigCommerce, Medusa, or custom.',
+      'Sub-1-second page loads on mobile (streaming SSR).',
+      'Custom product logic, pricing engine, or configurator.',
+      'Multi-vendor marketplace with Stripe Connect split payments.',
+      'ERP or WMS integration (NetSuite, SAP, Brightpearl).',
+      'International multi-currency and multi-language setup.',
+      'Dedicated engineering point of contact.',
+      '90-day post-launch support and iteration.',
     ],
     cta: { label: 'Schedule a Discovery Call', modal: true, region: 'us' },
   },
@@ -440,7 +440,7 @@ const FAQ_ITEMS = [
     category: 'platform',
     question: 'Can you build a multi-vendor marketplace instead of a single-brand store?',
     answer:
-      'Yes. We build custom marketplace platforms with vendor onboarding flows, split payment logic via Stripe Connect, commission management, seller dashboards, product approval workflows, and dispute handling. These are fully custom Next.js builds, Shopify and WooCommerce aren\'t architected for true multi-vendor marketplaces, so we don\'t force them into that shape.',
+      'Yes. We build custom marketplace platforms with vendor onboarding flows. They feature split payment logic via Stripe Connect, commission management, seller dashboards, and dispute handling. These are custom Next.js builds. Shopify and WooCommerce are not built for true multi-vendor marketplaces, so we do not force them into that shape.',
   },
 
   /* ── Pricing & Timeline ── */
@@ -448,19 +448,19 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does e-commerce development cost?',
     answer:
-      'FactoryJet\'s e-commerce development is fixed-price and scoped to your build. The main cost drivers are the platform store itself (Shopify or WooCommerce with a custom theme, products, payments, and launch), advanced features like subscription logic, B2B pricing, or product configurators, and the most complex work, headless storefronts, custom platforms, and multi-vendor marketplaces. Every project is fixed-price and milestone-paid, with the full number confirmed on a free discovery call before work starts, senior engineering without traditional-agency overhead or six-month timelines.',
+      'FactoryJet e-commerce development is fixed-price and scoped to your build. The main cost drivers include the platform store itself with custom theme and payments. Advanced features like subscription logic or B2B pricing add scope. The most complex builds are headless storefronts and multi-vendor marketplaces. Every project is milestone-paid. We confirm the full investment on a discovery call before work begins.',
   },
   {
     category: 'pricing',
     question: 'How long does an e-commerce build take?',
     answer:
-      'A platform store (Shopify or WooCommerce) with a custom theme and standard features takes 3-5 weeks. An advanced store with subscriptions, B2B pricing, or a product configurator takes 5-8 weeks. Headless Next.js storefronts and custom commerce platforms run 8-14 weeks depending on catalog size, integration complexity, and whether we\'re migrating data from an existing store.',
+      'A platform store with a custom theme takes 3 to 5 weeks. An advanced store with subscriptions or B2B pricing takes 5 to 8 weeks. Headless Next.js storefronts and custom platforms run 8 to 14 weeks depending on catalog size, integrations, and migration requirements.',
   },
   {
     category: 'pricing',
     question: 'How does FactoryJet keep e-commerce pricing fixed and predictable?',
     answer:
-      'We work fixed-price and milestone-paid: every store is scoped upfront with no hourly billing and no scope-creep invoices. Twelve years of building the same kinds of stores means we estimate accurately on the first call, so the quote you sign is what you pay. You get the same Figma-first design process, the same platform engineering quality, the same Lighthouse audit before handover, and full code ownership at handoff.',
+      'We work fixed-price and milestone-paid. Every store is scoped upfront with no hourly billing or surprise invoices. Twelve years of building stores means we estimate accurately on the first call. The quote you sign is what you pay. You get Figma-first design, strict platform engineering, a Lighthouse performance audit, and full code ownership.',
   },
 
   /* ── Migrations ── */
@@ -468,13 +468,13 @@ const FAQ_ITEMS = [
     category: 'migration',
     question: 'Can you migrate my existing store to a new platform?',
     answer:
-      'Yes, platform migrations are one of our most common e-commerce engagements. We migrate products (including variants, metafields, and images), customers, order history, and reviews. We map your URL structure and implement 301 redirects for every changed URL before DNS switch. We\'ve migrated stores from WooCommerce, Magento, Squarespace, Wix, PrestaShop, BigCommerce, and custom platforms to Shopify, and from Shopify to headless Next.js.',
+      'Yes. Platform migrations are one of our most common engagements. We migrate products, variants, metafields, images, customers, order history, and reviews. We map your URL structure and implement 301 redirects for every changed URL before DNS switch. We migrate stores from WooCommerce, Magento, Squarespace, Wix, PrestaShop, and BigCommerce to Shopify, or from Shopify to headless Next.js.',
   },
   {
     category: 'migration',
     question: 'Will my Google rankings survive a platform migration?',
     answer:
-      'Yes, if done correctly. Before any migration, we audit your existing URL structure, identify which product and collection pages have rankings worth protecting, and build a complete redirect map before touching DNS. Every changed URL gets a 301 redirect. We submit the new sitemap to Google Search Console on launch day and monitor organic traffic for 30 days post-launch. Most clients see rankings fully recover within 6-8 weeks.',
+      'Yes, if done correctly. Before migration, we audit existing URL structures to protect rankings. We build a complete 301 redirect map before touching DNS. We submit new sitemaps to Google Search Console on launch day. Then we monitor organic traffic for 30 days post-launch. Most clients see organic visibility recover fully within 6 to 8 weeks.',
   },
 
   /* ── Technical & SEO ── */
@@ -482,19 +482,19 @@ const FAQ_ITEMS = [
     category: 'technical',
     question: 'What SEO comes included with an e-commerce build?',
     answer:
-      'Every e-commerce store we build includes technical SEO as standard: Product and BreadcrumbList schema markup for Google Shopping eligibility, optimized title tags and meta descriptions for product and collection page templates, canonical URLs to prevent duplicate content issues (common on Shopify and WooCommerce by default), compressed images with descriptive alt text, XML sitemap submission to Google Search Console, and Core Web Vitals optimization. Content SEO, collection page copy, keyword research, blog strategy, is available as a separate add-on.',
+      'Every e-commerce store we build includes technical SEO as standard. We add Product and BreadcrumbList schema markup for Google Shopping. We write optimized title tags and meta descriptions for templates. We set canonical URLs to prevent duplicate content. We compress images with descriptive alt text and submit XML sitemaps to Google Search Console. Content SEO and keyword research are available as add-ons.',
   },
   {
     category: 'technical',
     question: 'What payment gateways can you integrate?',
     answer:
-      'We configure and test Stripe (our default), PayPal, Shop Pay, Apple Pay, Google Pay, Affirm (buy-now-pay-later), Klarna, and Afterpay depending on your platform and market. For B2B clients, we also integrate net terms via Resolve Pay or similar. All payment flows are tested end-to-end on staging before launch, we don\'t go live with an untested checkout.',
+      'We configure Stripe, PayPal, Shop Pay, Apple Pay, Google Pay, Affirm, Klarna, and Afterpay. For B2B clients, we integrate net terms via Resolve Pay or native tools. All payment flows are tested end-to-end on staging before launch.',
   },
   {
     category: 'technical',
     question: 'Can you integrate my e-commerce store with my ERP, 3PL, or accounting software?',
     answer:
-      'Yes. Common integrations include: ERPs (NetSuite, SAP B1, Brightpearl, Cin7), 3PLs (ShipBob, ShipMonk, custom warehouse systems), accounting (QuickBooks, Xero), shipping (ShipStation, Shippo, EasyPost), and POS systems (Shopify POS, Square, Lightspeed). If your system has an API or supports webhooks, we can connect to it.',
+      'Yes. Common integrations include NetSuite, SAP B1, Brightpearl, and Cin7 for ERP. For fulfillment, we integrate ShipBob and ShipMonk. For finance, we connect QuickBooks and Xero. For retail POS, we integrate Shopify POS, Square, and Lightspeed via REST APIs and webhooks.',
   },
 
   /* ── Working With Us ── */
@@ -502,100 +502,68 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from a US or UK e-commerce agency?',
     answer:
-      'Three things: price (we are an India-based engineering team, so a fixed-price build costs a fraction of a comparable US or UK agency quote), ownership (full codebase delivered to your GitHub on launch day, zero lock-in), and honesty (we\'ll tell you when a simpler solution fits better than a more expensive one). We\'ve delivered 500+ projects for businesses across India, the US, the UK and the UAE. We know what actually drives e-commerce revenue versus what looks good in a proposal.',
+      'Three things: pricing, ownership, and honesty. Our fixed-price builds cost a fraction of typical Western agency quotes. We deliver the full codebase to your GitHub on launch day with zero lock-in. We also tell you when a simpler solution fits better than a more expensive one. We have delivered 500+ projects across the US, the UK, and the UAE.',
   },
   {
     category: 'trust',
     question: 'Do I own the code after the project is done?',
     answer:
-      'Yes, 100%. The full codebase is delivered to your GitHub repository on launch day. You own every file, every integration, and all API credentials. No proprietary platform, no monthly FactoryJet retainer required to keep your store running. Any developer, ours or someone you hire later, can maintain and extend it.',
+      'Yes, 100%. The full codebase is delivered to your GitHub repository on launch day. You own every file, every integration, and all API credentials. No proprietary platform and no recurring agency license is needed. Any qualified developer can maintain and extend the code.',
   },
 
   {
     category: 'platform',
     question: 'Can you build a subscription or recurring-revenue e-commerce store?',
     answer:
-      'Yes, subscription e-commerce is one of the highest-ROI models we build. We implement subscription logic using Recharge (the Shopify standard), Bold Subscriptions, or WooCommerce Subscriptions depending on your platform. Subscription products include: subscription boxes (monthly, quarterly), consumable replenishment programs (coffee, supplements, pet food), digital membership access, and B2B auto-replenishment. Subscription stores generate 30-50% higher customer lifetime value than one-time-purchase stores. We configure cancel flows designed to reduce churn, tiered subscription pricing, and loyalty points for subscribers.',
+      'Yes. Subscription e-commerce is one of our highest-ROI offerings. We implement subscription logic using Recharge, Bold Subscriptions, or WooCommerce Subscriptions. Models include subscription boxes, consumable replenishment, and digital memberships. Subscription stores often generate 30% to 50% higher customer lifetime value. We configure custom cancel flows to reduce churn and build loyalty.',
   },
   {
     category: 'technical',
     question: 'Do you build B2B e-commerce stores with wholesale pricing and net terms?',
     answer:
-      'Yes, B2B e-commerce is a growing part of our work. We build: wholesale ordering portals with tiered dealer pricing (show retail price to consumers, wholesale price to authenticated dealers), net-30/net-60 payment terms via Resolve Pay, Apruve, or Shopify\'s native B2B tools, company account management with multiple users per buyer account, custom price lists per customer segment, minimum order quantity enforcement, purchase order upload, and reorder pads. Shopify Plus includes native B2B features; standard Shopify B2B is handled via apps. WooCommerce B2B uses WholesaleX or B2BKing.',
+      'Yes. B2B e-commerce is a core part of our work. We build wholesale ordering portals with tiered dealer pricing. We configure net-30 and net-60 terms via Resolve Pay or native Shopify B2B tools. Features include company account management, custom price lists per segment, minimum order quantities, and purchase order uploads. Shopify Plus includes native B2B features. WooCommerce B2B uses WholesaleX or B2BKing.',
   },
   {
     category: 'technical',
     question: 'How do I optimize my e-commerce store for mobile shoppers?',
     answer:
-      'Mobile accounts for 65-75% of US e-commerce traffic but only 55-60% of revenue: the gap is caused by poor mobile checkout UX. FactoryJet closes it with: mobile-first layout design (375px screen built before desktop), one-tap Apple Pay and Google Pay checkout (eliminates the single largest cart abandonment point), thumb-friendly product page layouts with sticky Add-to-Cart buttons, lazy-loaded images that deliver fast initial paint on mobile networks, and Google Core Web Vitals compliance (LCP under 2.5s, CLS below 0.1, INP under 200ms). Every store passes Lighthouse 90+ on mobile before delivery.',
+      'Mobile drives 65% to 75% of e-commerce traffic but only 55% of revenue. Poor mobile checkout UX causes that gap. FactoryJet fixes this with mobile-first layouts designed for 375px screens first. We enable one-tap Apple Pay and Google Pay checkout to eliminate cart abandonment. We add thumb-friendly buttons, sticky add-to-cart bars, and lazy-loaded images. Every store passes Google Core Web Vitals with Lighthouse 90+ before launch.',
   },
   {
     category: 'technical',
     question: 'Can you build a multi-language or international e-commerce store?',
     answer:
-      'Yes, international e-commerce configuration is a standard capability. We implement Shopify Markets for multi-language, multi-currency storefronts: automatic currency conversion with presentment currencies, translated product descriptions and collection pages via Shopify\'s Translate & Adapt app or Weglot, international shipping zones with zone-specific carrier rate calculations, duty and import tax display at checkout via Shopify\'s Landed Cost feature, HS tariff code fields for customs declarations, and international payment methods (Klarna for EU, iDEAL for Netherlands, Mercado Pago for Latin America). We also handle IOSS registration guidance for EU sales above €150 thresholds.',
+      'Yes. International e-commerce is a standard capability. We implement Shopify Markets for multi-language and multi-currency storefronts. Features include automatic currency conversion with presentment currencies. We translate pages with Translate & Adapt or Weglot. We configure zone-specific shipping rates and landed cost calculations for duties and taxes at checkout. We also support local payment methods like Klarna and iDEAL.',
   },
   {
     category: 'seo',
     question: 'How does FactoryJet optimize e-commerce stores for Google and AI search?',
     answer:
-      'Beyond standard technical SEO, FactoryJet builds AEO (Answer Engine Optimization) into every store, structured content that appears in ChatGPT, Perplexity, and Google AI Overviews. This means: Product schema with pricing, availability, and ratings for Google Shopping; FAQPage schema targeting transactional questions consumers ask about your category; BreadcrumbList schema for category page signals; collection page copy answering \'what is [product category]\' and \'best [product] for [use case]\' queries; and internal linking that creates topic authority clusters. Early adopters of AEO are winning significant zero-click search positions their competitors haven\'t claimed yet.',
+      'Beyond standard technical SEO, FactoryJet builds answer engine optimization into every store. This gets your brand cited in ChatGPT, Perplexity, and Google AI Overviews. We configure Product schema with pricing, availability, and ratings. We add BreadcrumbList schema and category FAQPage schema. We structure collection copy to answer specific buyer questions and build topic authority.',
   },
   {
     category: 'trust',
     question: 'What ongoing support does FactoryJet offer after my store launches?',
     answer:
-      'Every e-commerce project includes a 14-30 day post-launch support window covering bug fixes, minor adjustments, and launch questions at no additional charge. Beyond that, FactoryJet offers monthly retainer plans (scoped and quoted up front): a set block of development time, priority same-day bug response, and access to a dedicated engineer who knows your codebase. Retainer clients get pre-built seasonal campaign assets, quarterly performance reviews, and priority scheduling for new feature development. We also offer one-time project engagements for specific post-launch work: new collections, checkout A/B tests, app integrations, and performance audits.',
+      'Every e-commerce project includes a 14 to 30 day post-launch support window. This covers bug fixes and launch questions at no added charge. Beyond launch, we offer monthly retainers for ongoing development, priority bug response, and seasonal updates. We also offer one-time sprints for checkout testing, app integrations, and performance audits.',
   },
   {
     category: 'trust',
     question: 'How do I know if I need an e-commerce agency or a freelancer for my store?',
     answer:
-      'A freelancer works well for: a simple theme installation, a single-app integration, or a small catalog store with no custom requirements. An agency makes sense when: you need a custom design (not a theme), you\'re migrating from another platform with SEO equity to protect, you have complex product logic (variants, subscriptions, B2B pricing), or you need the project delivered on a deadline. FactoryJet operates at agency quality with transparent fixed pricing, you get a full team (designer, developer, QA) at the cost of a mid-market freelancer, with a 7-day delivery guarantee on standard Shopify builds.',
-  },
-  {
-    category: 'pricing',
-    question: 'How much does it cost to hire ecommerce developers?',
-    answer:
-      'FactoryJet works on fixed-price scopes rather than open-ended hourly rates. The cost depends on the build: a platform store, an advanced store with subscription or B2B logic, or a fully custom ecommerce platform, and every scope is quoted up front on a free discovery call. If you want to hire ecommerce developers on an ongoing basis, we offer monthly retainers with a set block of dedicated development hours, also quoted upfront. Freelance ecommerce developers typically bill hourly with no ceiling, which is why most businesses prefer our fixed-scope model.',
+      'A freelancer works well for simple theme setups or single app installs. An agency makes sense when you need custom design, an SEO-safe migration, or complex product logic. FactoryJet delivers agency quality at predictable fixed pricing. You get a full team of designer, developer, and QA engineer, with full code ownership on launch day.',
   },
   {
     category: 'trust',
     question: 'What does a custom ecommerce development company actually do?',
     answer:
-      'A custom ecommerce development company designs and builds your online store end to end rather than handing you a template. For FactoryJet that means: custom storefront design, custom theme or platform development, payment and shipping configuration, ERP/3PL/POS integrations, SEO-safe migrations, QA, and launch, delivered by a dedicated team. You get the full codebase on GitHub at launch, so you are never locked into us to keep the store running.',
-  },
-  {
-    category: 'trust',
-    question: 'Can I hire a dedicated ecommerce developer, or only a full team?',
-    answer:
-      'Both options are available. For a build, you get a full team (designer, developer, QA) coordinated by one point of contact. For ongoing work, you can hire a dedicated ecommerce developer on a monthly retainer: the same engineer who knows your codebase, available for feature work, integrations, and conversion experiments without re-onboarding each time.',
+      'A custom ecommerce development company designs and builds your store end to end rather than installing a generic template. For FactoryJet, that means custom storefront design, custom theme code, payment configuration, and ERP integrations. It also includes SEO-safe migrations and rigorous QA. You get the full codebase on GitHub at launch, ensuring zero vendor lock-in.',
   },
   {
     category: 'platform',
     question: 'Do you build custom ecommerce platforms, or only Shopify and WooCommerce stores?',
     answer:
-      'Both. Most businesses are best served by Shopify or WooCommerce, and that is where we start the conversation. But when off-the-shelf platforms can\'t support your product logic, multi-vendor marketplaces, proprietary pricing engines, deep ERP coupling, we operate as a custom ecommerce software development company and build a bespoke platform, typically headless on a React/Next.js front end. We recommend the simplest option that fits, not the most expensive.',
-  },
-
-  // ── Money-query coverage, added 2026-06-11 ──
-  {
-    category: 'trust',
-    question: 'Who is the best ecommerce development company in USA?',
-    answer:
-      'For SMBs and DTC brands, FactoryJet makes a strong case: fixed-price builds quoted upfront, senior engineers on every project, and stores that ship in weeks rather than quarters. But the best ecommerce development agency in USA depends on your stack: the best ecommerce website development company in USA for a Shopify brand is rarely the best ecommerce solutions provider in USA for a custom B2B catalog, and the best ecommerce solution company in USA for B2B may be wrong for DTC. Whoever you shortlist: the best online store development company in USA or the best ecommerce website design company in USA, apply three filters: do engineers scope the build, is pricing fixed up front, and do you own the code from day one? The best ecommerce development services in USA pass all three.',
-  },
-  {
-    category: 'pricing',
-    question: 'How much does ecommerce website cost in USA?',
-    answer:
-      'Ecommerce website cost in USA scales with complexity: a platform store with a custom theme is the entry tier, advanced builds cost more, and fully custom platforms cost the most. FactoryJet quotes a fixed price for your exact build, milestone-paid, after a free discovery call. If you are asking how much an online store costs in USA at the entry level, beware rock-bottom quotes, that is usually template-flipping, and online store cost in USA at that tier tends to balloon after launch when the rework starts.',
-  },
-  {
-    category: 'trust',
-    question: 'What are the top 10 ecommerce development companies in USA?',
-    answer:
-      'Published lists of the top 10 ecommerce development companies in USA mix enterprise integrators with SMB studios, so match the list to your size first. FactoryJet competes in that set for SMB and mid-market stores. Most rankings of top 10 ecommerce website development companies in USA, and the equivalent top 10 ecommerce solution companies in USA, rank on portfolio size; better filters are fixed pricing, senior-led delivery, and post-launch performance numbers like Core Web Vitals.',
+      'Both. Most businesses are best served by Shopify or WooCommerce, and that is where we start the conversation. But when off-the-shelf platforms cannot support your product logic, multi-vendor marketplaces, proprietary pricing engines, deep ERP coupling, we operate as a custom ecommerce software development company and build a bespoke platform, typically headless on a React/Next.js front end. We recommend the simplest option that fits, not the most expensive.',
   },
 ];
 
@@ -858,12 +826,12 @@ export default function EcommerceDevelopmentPage() {
               </div>
               <div className="divide-y divide-fj-neutral-100 px-7">
                 {[
-                  { platform: 'Shopify', best: 'DTC brands, subscriptions, rapid launch', tier: 'Entry' },
-                  { platform: 'WooCommerce', best: 'WordPress-first, content-commerce', tier: 'Entry' },
-                  { platform: 'BigCommerce', best: 'B2B, mid-market, multi-channel', tier: 'Mid' },
-                  { platform: 'Shopify Plus', best: 'Scale, B2B wholesale, checkout UI', tier: 'Scale' },
-                  { platform: 'Headless Next.js', best: 'Performance-critical, custom UX', tier: 'Custom' },
-                  { platform: 'Custom Platform', best: 'Marketplace, proprietary logic', tier: 'Custom' },
+                  { platform: 'Shopify', best: 'DTC brands, subscriptions, rapid launch.', tier: 'Entry' },
+                  { platform: 'WooCommerce', best: 'WordPress-first, content-commerce.', tier: 'Entry' },
+                  { platform: 'BigCommerce', best: 'B2B, mid-market, multi-channel.', tier: 'Mid' },
+                  { platform: 'Shopify Plus', best: 'Scale, B2B wholesale, checkout UI.', tier: 'Scale' },
+                  { platform: 'Headless Next.js', best: 'Performance-critical, custom UX.', tier: 'Custom' },
+                  { platform: 'Custom Platform', best: 'Marketplace, proprietary logic.', tier: 'Custom' },
                 ].map((item) => (
                   <div key={item.platform} className="py-3.5">
                     <div className="flex items-center justify-between gap-4">
@@ -1002,8 +970,9 @@ export default function EcommerceDevelopmentPage() {
                 <Image
                   src="/images/services/web-design-stats-photo.webp"
                   alt="FactoryJet team reviewing a newly launched e-commerce store with a client"
-                  fill
-                  className="object-cover object-center"
+                  width={640}
+                  height={384}
+                  className="object-cover object-center w-full h-full"
                   sizes="(max-width: 1024px) 100vw, 380px"
                 />
               </div>
@@ -1065,13 +1034,13 @@ export default function EcommerceDevelopmentPage() {
               </div>
               <div className="divide-y divide-fj-neutral-100 px-8">
                 {[
-                  { category: 'Storefronts', tools: 'Shopify Liquid, WooCommerce, Next.js' },
-                  { category: 'Design', tools: 'Figma, custom component systems' },
-                  { category: 'Payments', tools: 'Stripe, PayPal, Affirm, Klarna' },
-                  { category: 'Email & SMS', tools: 'Klaviyo, Omnisend, Postscript' },
-                  { category: 'Subscriptions', tools: 'ReCharge, Skio, WooCommerce Sub.' },
-                  { category: 'Shipping', tools: 'ShipStation, Shippo, EasyPost' },
-                  { category: 'Analytics', tools: 'GA4, Meta Pixel, Triple Whale, Northbeam' },
+                  { category: 'Storefronts.', tools: 'Shopify Liquid, WooCommerce, Next.js.' },
+                  { category: 'Design.', tools: 'Figma, custom component systems.' },
+                  { category: 'Payments.', tools: 'Stripe, PayPal, Affirm, Klarna.' },
+                  { category: 'Email & SMS.', tools: 'Klaviyo, Omnisend, Postscript.' },
+                  { category: 'Subscriptions.', tools: 'ReCharge, Skio, WooCommerce Sub.' },
+                  { category: 'Shipping.', tools: 'ShipStation, Shippo, EasyPost.' },
+                  { category: 'Analytics.', tools: 'GA4, Meta Pixel, Triple Whale, Northbeam.' },
                 ].map((item) => (
                   <div key={item.category} className="flex items-center justify-between gap-4 py-3.5">
                     <div className="flex items-center gap-2.5">
@@ -1190,18 +1159,18 @@ export default function EcommerceDevelopmentPage() {
           pillars={[
             {
               icon: '📐',
-              title: 'Platform-agnostic. We recommend what fits | not what we prefer.',
-              body: 'Most agencies have a platform they push regardless of your situation, either because they have a partnership deal or because it\'s all they know. We build on Shopify, WooCommerce, BigCommerce, and custom Next.js. We make the recommendation based on your catalog, your team, and your revenue stage, not our partnership incentives.',
+              title: 'Platform-agnostic. We recommend what fits, not what we prefer.',
+              body: 'Most agencies push a single platform due to partnership deals. We build on Shopify, WooCommerce, BigCommerce, and custom Next.js. We recommend solutions based on your catalog, team, and revenue goals, not vendor incentives.',
             },
             {
               icon: '📊',
-              title: 'Conversion-first design backed by 120+ store builds',
-              body: 'We know from 120+ Shopify builds and hundreds of WooCommerce and custom stores that sticky carts outperform static ones, that social proof within 200px of the Add to Cart button lifts conversion, and that every unnecessary field in checkout reduces completion rate by 1-2%. We design around those data points, not around what looks good in a mockup.',
+              title: 'Conversion-first design backed by 120+ store builds.',
+              body: 'We know from 120+ Shopify builds that sticky carts outperform static ones. Social proof near the Add to Cart button lifts conversion. Every unnecessary checkout field reduces completion by 1% to 2%. We design around real user data, not visual mockups.',
             },
             {
               icon: '🔒',
-              title: 'Your code, your hosting, your GitHub | on launch day.',
-              body: 'The full codebase lands in your repository the day you go live. No proprietary builder that holds your store hostage. No monthly retainer required to keep your site running. No FactoryJet dependency baked into your architecture. You can hire any developer in the world to maintain it tomorrow.',
+              title: 'Your code, your hosting, your GitHub, on launch day.',
+              body: 'The full codebase lands in your repository on launch day. No proprietary builder holds your store hostage. No monthly retainer is required to keep your site running. Any qualified developer can maintain and extend it.',
             },
           ]}
         />
@@ -1210,26 +1179,22 @@ export default function EcommerceDevelopmentPage() {
         <section className="py-14 md:py-20 bg-[#FAFAF7]">
           <div className="max-w-6xl mx-auto px-6">
             <p className="text-sm font-semibold text-[#B23E13] uppercase tracking-widest mb-3">HIRE ECOMMERCE DEVELOPERS</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0F0F12] mb-5 max-w-3xl">Hire ecommerce developers from a custom ecommerce development company</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0F0F12] mb-5 max-w-3xl">Hire ecommerce developers from a custom ecommerce development company.</h2>
             <div className="grid md:grid-cols-2 gap-8 items-start">
               <div className="text-[#3A3A40] leading-relaxed space-y-4">
                 <p>
-                  When you <strong>hire ecommerce developers</strong> through FactoryJet, you get a full team, designer,
-                  developer, and QA, not a single freelancer juggling five other projects. As a custom ecommerce
-                  development company, we&apos;ve delivered 500+ projects for businesses across India, the US, the UK and the UAE,
-                  from first-store DTC brands to multi-vendor marketplaces and ERP-integrated B2B platforms.
+                  When you <strong>hire ecommerce developers</strong> through FactoryJet, you get a full team: designer, developer, and QA engineer. You do not get a single freelancer juggling multiple clients. As a custom ecommerce development company, we have delivered 500+ projects across the US, the UK, and the UAE. We build everything from DTC stores to multi-vendor marketplaces and B2B platforms.
                 </p>
                 <p>
-                  You can hire a dedicated ecommerce developer for a fixed-scope build, or keep a team on retainer for
-                  ongoing feature work. Either way the codebase is yours on GitHub from launch day, no lock-in, no
-                  platform tax. Once the store is live, that same team can carry on as your{' '}
+                  You can hire a dedicated ecommerce developer for a fixed-scope build. Or keep a team on retainer for ongoing feature work. Either way, the codebase is yours on GitHub from launch day with no lock-in. Once the store is live, that same team can carry on as your{' '}
                   <Link href="/services/ecommerce-growth-agency" className="text-[#B23E13] font-medium underline underline-offset-2">ecommerce growth partner</Link>.
                 </p>
                 <p>
                   Know your platform already? Go straight to{' '}
                   <Link href="/services/shopify-development" className="text-[#B23E13] font-medium underline underline-offset-2">Shopify development</Link>,{' '}
                   <Link href="/services/woocommerce-development" className="text-[#B23E13] font-medium underline underline-offset-2">WooCommerce development</Link>,{' '}
-                  <Link href="/services/magento-development" className="text-[#B23E13] font-medium underline underline-offset-2">Magento development</Link>, or compare options in our{' '}
+                  <Link href="/services/magento-development" className="text-[#B23E13] font-medium underline underline-offset-2">Magento development</Link>,{' '}
+                  <Link href="/services/ecommerce-app-development" className="text-[#B23E13] font-medium underline underline-offset-2">ecommerce app development</Link>, or compare options in our{' '}
                   <Link href="/best-ecommerce-platforms" className="text-[#B23E13] font-medium underline underline-offset-2">best ecommerce platforms guide</Link>.
                   If the storefront needs to run separately from the backend, that is a{' '}
                   <Link href="/headless-commerce" className="text-[#B23E13] font-medium underline underline-offset-2">headless commerce</Link> build.
@@ -1246,10 +1211,10 @@ export default function EcommerceDevelopmentPage() {
               <div className="rounded-2xl border border-[#E5E5E0] bg-white p-7">
                 <h3 className="text-xl font-bold text-[#0F0F12] mb-3">What a custom ecommerce development company handles</h3>
                 <ul className="space-y-2.5 text-[#3A3A40] text-[15px]">
-                  <li>• Custom storefronts on Shopify, WooCommerce &amp; Magento</li>
-                  <li>• Fully custom ecommerce platforms &amp; marketplaces</li>
-                  <li>• ERP, 3PL, POS &amp; payment integrations</li>
-                  <li>• Migrations with SEO-safe 301 redirect mapping</li>
+                  <li>• Custom storefronts on Shopify, WooCommerce &amp; Magento.</li>
+                  <li>• Fully custom ecommerce platforms &amp; marketplaces.</li>
+                  <li>• ERP, 3PL, POS &amp; payment integrations.</li>
+                  <li>• Migrations with SEO-safe 301 redirect mapping.</li>
                 </ul>
                 <Link
                   href="https://calendly.com/bhavesh-factoryjet/30min"
@@ -1293,7 +1258,7 @@ export default function EcommerceDevelopmentPage() {
                 { city: 'Fargo, ND', href: '/fargo/ecommerce-development/' },
               ].map(({ city, href }) => (
                 <Link key={href} href={href} className="px-4 py-2 rounded-full border border-[#B23E13] text-[#B23E13] text-sm font-medium hover:bg-[#B23E13] hover:text-white transition-colors">
-                  {city}
+                  {city}.
                 </Link>
               ))}
             </div>
@@ -1301,8 +1266,8 @@ export default function EcommerceDevelopmentPage() {
             {/* India city pages. This page is the canonical parent for
                 /services/ecommerce-development/[city], which are India markets and are
                 listed in sitemap-india. Added 2026-07-26: all 13 had zero inbound links. */}
-            <p className="text-sm font-semibold text-[#B23E13] uppercase tracking-widest mt-12 mb-3">Serving India</p>
-            <h2 className="text-2xl font-bold text-[#0F0F12] mb-6">E-Commerce Development Services in India</h2>
+            <p className="text-sm font-semibold text-[#B23E13] uppercase tracking-widest mt-12 mb-3">Serving India.</p>
+            <h2 className="text-2xl font-bold text-[#0F0F12] mb-6">E-Commerce Development Services in India.</h2>
             <div className="flex flex-wrap gap-3">
               {[
                 { city: 'Mumbai', slug: 'mumbai' },
@@ -1324,7 +1289,7 @@ export default function EcommerceDevelopmentPage() {
                   href={`/services/ecommerce-development/${slug}`}
                   className="px-4 py-2 rounded-full border border-[#B23E13] text-[#B23E13] text-sm font-medium hover:bg-[#B23E13] hover:text-white transition-colors"
                 >
-                  {city}
+                  {city}.
                 </Link>
               ))}
             </div>
@@ -1338,13 +1303,13 @@ export default function EcommerceDevelopmentPage() {
             <h2 className="text-2xl font-bold text-[#0F0F12] mb-6">Keep learning before you commit</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <Link href="/blog/shopify-vs-woocommerce-us-small-business-2026" className="block p-5 rounded-lg border border-[#E5E5E0] bg-white hover:border-[#F05A28] transition-colors">
-                <p className="text-sm font-semibold text-[#0F0F12] leading-snug">Shopify vs WooCommerce for US small businesses in 2026</p>
+                <p className="text-sm font-semibold text-[#0F0F12] leading-snug">Shopify vs WooCommerce for US small businesses in 2026.</p>
               </Link>
               <Link href="/blog/best-ecommerce-platform-tampa-boutiques-dtc-2026" className="block p-5 rounded-lg border border-[#E5E5E0] bg-white hover:border-[#F05A28] transition-colors">
-                <p className="text-sm font-semibold text-[#0F0F12] leading-snug">How Tampa boutiques and DTC brands pick an ecommerce platform</p>
+                <p className="text-sm font-semibold text-[#0F0F12] leading-snug">How Tampa boutiques and DTC brands pick an ecommerce platform.</p>
               </Link>
               <Link href="/blog/austin-ecommerce-checkout-optimization-2026" className="block p-5 rounded-lg border border-[#E5E5E0] bg-white hover:border-[#F05A28] transition-colors">
-                <p className="text-sm font-semibold text-[#0F0F12] leading-snug">Cut cart abandonment: an Austin checkout optimization guide</p>
+                <p className="text-sm font-semibold text-[#0F0F12] leading-snug">Cut cart abandonment: an Austin checkout optimization guide.</p>
               </Link>
             </div>
           </div>
@@ -1367,8 +1332,8 @@ export default function EcommerceDevelopmentPage() {
 
       <RelatedGuides
         links={[
-          { href: '/blog/shopify-vs-custom-website-us-small-business-2026', label: 'Shopify vs a custom website for US small business' },
-          { href: '/blog/mobile-only-design-strategy', label: 'Mobile-only vs responsive design: which to pick' },
+          { href: '/blog/shopify-vs-custom-website-us-small-business-2026', label: 'Shopify vs a custom website for US small business.' },
+          { href: '/blog/mobile-only-design-strategy', label: 'Mobile-only vs responsive design: which to pick.' },
         ]}
       />
       <SiteFooter linkColumns={US_FOOTER_COLUMNS} />

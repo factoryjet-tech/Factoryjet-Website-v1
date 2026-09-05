@@ -162,13 +162,13 @@ const FAQ_GROUPS: ReadonlyArray<FaqGroup> = [
 const FAQ_FLAT = FAQ_GROUPS.flatMap((g) => g.items);
 
 export const metadata: Metadata = {
-  title: 'SEO Audit Services in the US: Free Site Audit & Technical SEO | FactoryJet',
+  title: 'SEO Audit Services & Technical Website Audit | FactoryJet',
   description:
-    'FactoryJet provides expert SEO audit services and technical SEO for US businesses. A free SEO site audit that scores your site, finds what is broken, and hands you a prioritized fix list. Founder-led, read by a human, not a checker tool.',
+    'Expert SEO audit services and technical website analysis for US businesses. Get a prioritized fix list and 90-day roadmap scored by technical SEO specialists.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'SEO Audit Services in the US: Free Site Audit & Technical SEO | FactoryJet',
+    title: 'SEO Audit Services & Technical Website Audit | FactoryJet',
     description:
       'A US technical SEO agency offering a free, expert SEO audit. Technical, on-page, Core Web Vitals, and backlink review with a prioritized 90-day roadmap. Founder-led, month-to-month if you want the fixes.',
     url: 'https://factoryjet.com/services/seo-audit',
@@ -775,6 +775,16 @@ export default function SeoAuditServicePage() {
                 </div>
               ))}
             </div>
+            <div style={{ marginTop: '36px', borderRadius: '16px', overflow: 'hidden', border: '1px solid var(--line)', maxWidth: 860 }}>
+              <Image
+                src="/images/us/shared/factoryjet-audit-call.webp"
+                alt="FactoryJet senior engineer conducting a comprehensive technical SEO website audit and review"
+                width={860}
+                height={480}
+                loading="lazy"
+                style={{ width: '100%', height: 'auto', display: 'block' }}
+              />
+            </div>
           </div>
         </section>
 
@@ -851,6 +861,16 @@ export default function SeoAuditServicePage() {
                 <h3>Backlinks &amp; authority</h3>
                 <p>Link profile health, toxic links, and the authority gap versus competitors, so you know how much trust you need to build to climb.</p>
               </div>
+            </div>
+            <div style={{ marginTop: '36px', borderRadius: '16px', overflow: 'hidden', border: '1px solid var(--line)', maxWidth: 860 }}>
+              <Image
+                src="/images/services/ai-seo.webp"
+                alt="Technical SEO audit performance dashboard tracking crawl health, Core Web Vitals, and indexation"
+                width={860}
+                height={480}
+                loading="lazy"
+                style={{ width: '100%', height: 'auto', display: 'block' }}
+              />
             </div>
           </div>
         </section>
@@ -1059,7 +1079,7 @@ export default function SeoAuditServicePage() {
           <div className="wrap team-grid">
             <div className="team-vis" data-reveal>
               <div className="photo">
-                <Image src="/images/us/services/seo/team-cutout.webp" alt="The FactoryJet technical SEO and audit team" fill loading="lazy" sizes="(max-width: 880px) 90vw, 460px" style={{ objectFit: 'cover' }} />
+                <Image src="/images/us/services/seo/team-cutout.webp" alt="The FactoryJet technical SEO and audit team" width={460} height={520} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               <div className="ec e1">A senior team</div>
               <div className="ec e2"><span className="star">&#9733;</span> 4.9/5 &middot; average Google review rating</div>
