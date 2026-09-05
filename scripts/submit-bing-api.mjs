@@ -107,8 +107,9 @@ async function main() {
   console.log(`\n🔗 Connecting to Bing Webmaster Tools API for site: ${SITE_URL}...`);
   await checkQuota();
 
-  const urls = getAllSiteUrls();
-  console.log(`Found ${urls.length} total URLs on ${HOST}.`);
+  const cliUrls = process.argv.slice(2);
+  const urls = cliUrls.length > 0 ? cliUrls : getAllSiteUrls();
+  console.log(`Submitting ${urls.length} URLs for ${HOST}.`);
 
   await submitBatch(urls);
 }
