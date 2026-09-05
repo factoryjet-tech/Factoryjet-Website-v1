@@ -8,6 +8,7 @@ import FAQ, { type FAQItem, type FAQCategory } from '@/components/v2/FAQ';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
+import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
 const CANONICAL_URL = 'https://factoryjet.com/services/manufacturing-ai-agents';
@@ -113,7 +114,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'erp',
     question: 'How does the agent reconcile supplier purchase order acknowledgements?',
     answer:
-      'When a supplier emails an order confirmation or a PDF acknowledgement, the agent reads it right away. It pulls out the vendor PO number, line item pricing, shipped quantities, and the promised ship date. Then it compares all of that against the open PO in your ERP. It updates delivery schedules on its own and flags any price mismatch.',
+      'When a supplier emails an order confirmation or a PDF acknowledgement, the agent reads it right away. It pulls out the vendor PO number, line item pricing, shipped quantities. The promised ship date. Then it compares all of that against the open PO in your ERP. It updates delivery schedules on its own and flags any price mismatch.',
   },
   {
     category: 'erp',
@@ -161,7 +162,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'security',
     question: 'Does our manufacturing company own the custom AI agent code?',
     answer:
-      'Yes. You get 100 percent ownership of the IP and the source code. We hand over the full Git repository, the Python connectors, the prompt orchestration scripts, and the Docker containers. There is no per-seat fee and no runtime vendor license, ever. Ownership starts on day one. It is not tied to a minimum contract term, so you could hand the repository to your own developer, or a different vendor, at any point. You would not need our permission or a data export process.',
+      'Yes. You get 100 percent ownership of the IP and the source code. We hand over the full Git repository, the Python connectors, the prompt orchestration scripts. The Docker containers. There is no per-seat fee and no runtime vendor license, ever. Ownership starts on day one. It is not tied to a minimum contract term. You could hand the repository to your own developer, or a different vendor, at any point. You would not need our permission or a data export process.',
   },
   {
     category: 'security',
@@ -203,7 +204,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'security',
     question: 'What happens to the agent and its data if we end the engagement?',
     answer:
-      'You keep everything. You already own the full Git repository, the connector code, and the Docker containers from day one. So ending the engagement just means we stop billing and hand over any remaining documentation. There is no data migration fire drill, because your ERP and your infrastructure never left your control in the first place.',
+      'You keep everything. You already own the full Git repository, the connector code. The Docker containers from day one. So ending the engagement just means we stop billing and hand over any remaining documentation. There is no data migration fire drill, because your ERP and your infrastructure never left your control in the first place.',
   },
   {
     category: 'basics',
@@ -213,160 +214,149 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
   },
 ];
 
-export default function ManufacturingAiAgentsPage() {
-  const schemaWebPage = {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    '@id': `${CANONICAL_URL}#webpage`,
-    url: CANONICAL_URL,
-    name: PAGE_TITLE,
-    description: PAGE_DESC,
-    dateModified: PAGE_MODIFIED,
-    publisher: {
-      '@type': 'Organization',
-      name: 'FactoryJet',
-      url: 'https://factoryjet.com',
-      logo: 'https://factoryjet.com/FinalLogo.svg',
-    },
-    author: {
-      '@type': 'Person',
-      name: 'Bhavesh Barot',
-      url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-      jobTitle: 'Founder & CEO, FactoryJet',
-    },
-  };
 
-  const schemaService = {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    '@id': `${CANONICAL_URL}#service`,
-    name: 'Manufacturing AI Agent Development & Supply Chain Automation',
-    serviceType: 'Industrial AI Agent Development',
-    provider: {
-      '@type': 'Organization',
-      name: 'FactoryJet',
-      url: 'https://factoryjet.com',
-    },
-    areaServed: {
-      '@type': 'Country',
-      name: 'United States',
-    },
-    description: PAGE_DESC,
-    hasOfferCatalog: {
-      '@type': 'OfferCatalog',
-      name: 'Industrial AI Automation Solutions',
-      itemListElement: [
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Automated RFQ Quoting & CAD Drawing Extraction',
-          },
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Supplier Purchase Order & Promised Date ERP Sync',
-          },
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Shop Floor Shift Handover & CMMS Maintenance Intelligence',
-          },
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Multi-Level BOM Material Costing & ERP Integration',
-          },
-        },
-      ],
-    },
-  };
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': `${CANONICAL_URL}#webpage`,
+  url: CANONICAL_URL,
+  name: PAGE_TITLE,
+  description: PAGE_DESC,
+  dateModified: PAGE_MODIFIED,
+  publisher: {
+    '@type': 'Organization',
+    name: 'FactoryJet',
+    url: 'https://factoryjet.com',
+    logo: 'https://factoryjet.com/FinalLogo.svg',
+  },
+  author: {
+    '@type': 'Person',
+    name: 'Bhavesh Barot',
+    url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
+    jobTitle: 'Founder & CEO, FactoryJet',
+  },
+};
 
-  const schemaHowTo = {
-    '@context': 'https://schema.org',
-    '@type': 'HowTo',
-    name: 'How FactoryJet Engineers and Deploys Manufacturing AI Agents',
-    description:
-      'A 4-step engineering blueprint to automate quoting, ERP integration, and supply chain operations for American manufacturers.',
-    step: [
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': `${CANONICAL_URL}#service`,
+  name: 'Manufacturing AI Agent Development & Supply Chain Automation',
+  serviceType: 'Industrial AI Agent Development',
+  provider: {
+    '@type': 'Organization',
+    name: 'FactoryJet',
+    url: 'https://factoryjet.com',
+  },
+  areaServed: {
+    '@type': 'Country',
+    name: 'United States',
+  },
+  description: PAGE_DESC,
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Industrial AI Automation Solutions',
+    itemListElement: [
       {
-        '@type': 'HowToStep',
-        position: 1,
-        name: 'ERP Schema & Drawing Data Ingestion Audit',
-        text: 'We map your existing NetSuite, SAP, or Epicor database schema, evaluate sample PDF/CAD drawing packages, and establish baseline pricing models.',
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Automated RFQ Quoting & CAD Drawing Extraction',
+        },
       },
       {
-        '@type': 'HowToStep',
-        position: 2,
-        name: 'Multi-Modal Vision & Parsing Pipeline Construction',
-        text: 'We build vision extraction pipelines to parse title blocks, tolerances, GD&T notes, and line-item part numbers from raw customer RFQ packages.',
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Supplier Purchase Order & Promised Date ERP Sync',
+        },
       },
       {
-        '@type': 'HowToStep',
-        position: 3,
-        name: 'Bi-Directional ERP Connector & Human Approval Workflow',
-        text: 'We wire secure REST and database connectors to create draft quotes and PO reconciliations inside your ERP with human approval gates.',
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Shop Floor Shift Handover & CMMS Maintenance Intelligence',
+        },
       },
       {
-        '@type': 'HowToStep',
-        position: 4,
-        name: 'Shadow Mode Testing & Production Plant Deployment',
-        text: 'The agent runs parallel shadow audits alongside your estimating team to verify pricing accuracy before full autonomous deployment.',
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Multi-Level BOM Material Costing & ERP Integration',
+        },
       },
     ],
-  };
+  },
+};
 
-  const schemaBreadcrumbs = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: BREADCRUMB_ITEMS.map((item, index) => ({
-      '@type': 'ListItem',
-      position: index + 1,
-      name: item.name,
-      item: item.url,
-    })),
-  };
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'How FactoryJet Engineers and Deploys Manufacturing AI Agents',
+  description:
+    'A 4-step engineering blueprint to automate quoting, ERP integration, and supply chain operations for American manufacturers.',
+  step: [
+    {
+      '@type': 'HowToStep',
+      position: 1,
+      name: 'ERP Schema & Drawing Data Ingestion Audit',
+      text: 'We map your existing NetSuite, SAP, or Epicor database schema, evaluate sample PDF/CAD drawing packages, and establish baseline pricing models.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 2,
+      name: 'Multi-Modal Vision & Parsing Pipeline Construction',
+      text: 'We build vision extraction pipelines to parse title blocks, tolerances, GD&T notes, and line-item part numbers from raw customer RFQ packages.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 3,
+      name: 'Bi-Directional ERP Connector & Human Approval Workflow',
+      text: 'We wire secure REST and database connectors to create draft quotes and PO reconciliations inside your ERP with human approval gates.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 4,
+      name: 'Shadow Mode Testing & Production Plant Deployment',
+      text: 'The agent runs parallel shadow audits alongside your estimating team to verify pricing accuracy before full autonomous deployment.',
+    },
+  ],
+};
 
-  const schemaFAQ = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: FAQ_ITEMS.map((item) => ({
-      '@type': 'Question',
-      name: item.question,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: item.answer,
-      },
-    })),
-  };
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+};
+
+
+export default function ManufacturingAiAgentsPage() {
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaWebPage) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaService) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaHowTo) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
       />
+      <BreadcrumbSchema items={BREADCRUMB_ITEMS} />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaBreadcrumbs) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaFAQ) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
       <SiteHeader />
@@ -387,12 +377,10 @@ export default function ManufacturingAiAgentsPage() {
                   </span>
                 </div>
                 
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#14110F] font-heading leading-tight mb-6">
-                  Custom AI Agents for US Manufacturers with{' '}
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#14110F] font-heading leading-tight mb-6">Custom AI Agents for US Manufacturers with{' '}
                   <span>
                     Live ERP Synchronization.
-                  </span>
-                </h1>
+                  </span>.</h1>
                 
                 <p className="text-lg sm:text-xl text-[#46403B] mb-8 leading-relaxed">
                   We build AI agents for American machine shops, equipment fabricators, and contract manufacturers. The agent reads CAD blueprints and turns them into RFQ quotes. It reconciles supplier purchase orders and syncs both ways with NetSuite, SAP, Epicor, and Infor.
@@ -441,7 +429,7 @@ export default function ManufacturingAiAgentsPage() {
                       <span className="text-[#F05A28] font-bold">ACTIVE AGENT</span>
                     </div>
                     <div className="font-bold text-[#14110F]">
-                      NetSuite ERP &bull; 42 RFQ Line Items Reconciled (0.8s)
+                      NetSuite ERP &bull. 42 RFQ Line Items Reconciled (0.8s)
                     </div>
                   </div>
                 </div>
@@ -497,7 +485,7 @@ export default function ManufacturingAiAgentsPage() {
               </div>
               <div>
                 <div className="text-3xl sm:text-4xl font-extrabold text-[#F05A28] font-mono mb-1">
-                  &lt; 20 Min
+                  &lt. 20 Min
                 </div>
                 <div className="text-xs sm:text-sm text-[#6E655F]">
                   Typical RFQ package assembly
@@ -544,9 +532,7 @@ export default function ManufacturingAiAgentsPage() {
               <div className="font-mono text-xs text-[#F05A28] font-bold uppercase tracking-wider mb-2">
                 // TAILORED INDUSTRIAL VERTICALS
               </div>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-4">
-                Engineered for High-Mix, High-Precision Manufacturing
-              </h2>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-4">Engineered for High-Mix, High-Precision Manufacturing.</h2>
               <p className="text-base sm:text-lg text-[#46403B]">
                 Generic chat tools break down against real tolerances, custom tooling, and nested BOM structures. We build AI workflows for your specific manufacturing trade instead.
               </p>
@@ -559,9 +545,7 @@ export default function ManufacturingAiAgentsPage() {
                   <div className="font-mono text-xs text-[#F05A28] font-bold uppercase mb-2">
                     01. PRECISION CNC MACHINING & CONTRACT TOOLING
                   </div>
-                  <h3 className="text-2xl font-bold text-[#14110F] font-heading mb-4">
-                    Automated RFQ Geometry Parsing & Machine Hourly Costing
-                  </h3>
+                  <h3 className="text-2xl font-bold text-[#14110F] font-heading mb-4">Automated RFQ Geometry Parsing & Machine Hourly Costing.</h3>
                   <p className="text-[#46403B] leading-relaxed mb-4">
                     Machine shop estimators spend 15 to 25 hours a week on quoting. They review PDF drawings by hand. They estimate 3-axis and 5-axis mill cycle times. Then they call suppliers just to get raw bar stock pricing.
                   </p>
@@ -570,7 +554,7 @@ export default function ManufacturingAiAgentsPage() {
                   </p>
                   <ul className="flex flex-wrap gap-2 text-xs font-mono text-[#6E655F] list-none">
                     <li className="px-2.5 py-1 rounded bg-[#FFF8F5] border border-[#F05A28]/20">
-                      Fanuc, Haas &amp; Mazak Rate Matching
+                      Fanuc, Haas &amp. Mazak Rate Matching
                     </li>
                     <li className="px-2.5 py-1 rounded bg-[#FFF8F5] border border-[#F05A28]/20">
                       STEP & DWG Extraction
@@ -612,11 +596,9 @@ export default function ManufacturingAiAgentsPage() {
                   <div className="font-mono text-xs text-[#F05A28] font-bold uppercase mb-2">
                     02. INDUSTRIAL EQUIPMENT & HEAVY MACHINERY
                   </div>
-                  <h3 className="text-2xl font-bold text-[#14110F] font-heading mb-4">
-                    Supplier Purchase Order Tracking & Promised Date Reconciliations
-                  </h3>
+                  <h3 className="text-2xl font-bold text-[#14110F] font-heading mb-4">Supplier Purchase Order Tracking & Promised Date Reconciliations.</h3>
                   <p className="text-[#46403B] leading-relaxed mb-4">
-                    Custom equipment builds use hundreds of long-lead parts, like motors, pneumatic actuators, PLCs, and structural framing. Suppliers often email a delayed ship date that just sits in an inbox. Nobody reads it in time, and the assembly line shuts down.
+                    Custom equipment builds use hundreds of long-lead parts, like motors, pneumatic actuators, PLCs, and structural framing. Suppliers often email a delayed ship date that just sits in an inbox. Nobody reads it in time. The assembly line shuts down.
                   </p>
                   <p className="text-[#46403B] leading-relaxed mb-6">
                     Our supply chain AI agent reads every supplier order confirmation as it arrives. It pulls the promised ship date and checks the quantity against your open PO in SAP or Epicor. If a date slips, it alerts your procurement manager right away, giving them real supply chain visibility before the delay hits a customer delivery milestone.
@@ -641,9 +623,7 @@ export default function ManufacturingAiAgentsPage() {
                   <div className="font-mono text-xs text-[#F05A28] font-bold uppercase mb-2">
                     03. ELECTRONICS & PCB ASSEMBLY (PCBA)
                   </div>
-                  <h3 className="text-2xl font-bold text-[#14110F] font-heading mb-4">
-                    Multi-Distributor Component Sourcing & BOM Cross-Referencing
-                  </h3>
+                  <h3 className="text-2xl font-bold text-[#14110F] font-heading mb-4">Multi-Distributor Component Sourcing & BOM Cross-Referencing.</h3>
                   <p className="text-[#46403B] leading-relaxed mb-4">
                     Electronics manufacturing services (EMS) providers get customer BOMs with thousands of lines. Each line is a surface-mount component, IC, or connector, tagged with its own manufacturer part number (MPN).
                   </p>
@@ -694,9 +674,7 @@ export default function ManufacturingAiAgentsPage() {
                   <div className="font-mono text-xs text-[#F05A28] font-bold uppercase mb-2">
                     04. AUTOMOTIVE & AEROSPACE TIER 1 SUPPLIERS
                   </div>
-                  <h3 className="text-2xl font-bold text-[#14110F] font-heading mb-4">
-                    EDI 830/862 Forecast Parsing & JIT Production Scheduling
-                  </h3>
+                  <h3 className="text-2xl font-bold text-[#14110F] font-heading mb-4">EDI 830/862 Forecast Parsing & JIT Production Scheduling.</h3>
                   <p className="text-[#46403B] leading-relaxed mb-4">
                     Tier 1 automotive suppliers get EDI 830 planning schedules and EDI 862 shipping releases from OEM plants, often several times a day. A manual translation error here is expensive. It can trigger a rush shipment fee or a plant line penalty.
                   </p>
@@ -723,9 +701,7 @@ export default function ManufacturingAiAgentsPage() {
                   <div className="font-mono text-xs text-[#F05A28] font-bold uppercase mb-2">
                     05. PLASTICS INJECTION MOLDING & EXTRUSION
                   </div>
-                  <h3 className="text-2xl font-bold text-[#14110F] font-heading mb-4">
-                    Resin Pellet Indexing, Cavitation Costing & Tooling Triage
-                  </h3>
+                  <h3 className="text-2xl font-bold text-[#14110F] font-heading mb-4">Resin Pellet Indexing, Cavitation Costing & Tooling Triage.</h3>
                   <p className="text-[#46403B] leading-relaxed mb-4">
                     Injection molders deal with resin prices that swing week to week, plus complex multi-cavity tooling costs. Working out shot size, cooling time, regrind ratios, and amortization by hand is slow. It delays every bid.
                   </p>
@@ -768,9 +744,7 @@ export default function ManufacturingAiAgentsPage() {
               <div className="font-mono text-xs text-[#F05A28] font-bold uppercase tracking-wider mb-2">
                 // SYSTEM COVERAGE
               </div>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-4">
-                Which ERP, MES, and Shop-Floor Systems We Connect To
-              </h2>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-4">Which ERP, MES, and Shop-Floor Systems We Connect To.</h2>
               <p className="text-lg text-[#46403B]">
                 Every plant runs different software on the floor and in the back office. Here is exactly what we connect to today, and what each connection actually does.
               </p>
@@ -778,7 +752,7 @@ export default function ManufacturingAiAgentsPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="p-8 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6]">
-                <h3 className="text-lg font-bold text-[#14110F] mb-4">ERP &amp; Business Systems</h3>
+                <h3 className="text-lg font-bold text-[#14110F] mb-4">ERP &amp. Business Systems.</h3>
                 <ul className="space-y-3 text-sm text-[#46403B] leading-relaxed list-none">
                   <li><span className="font-bold text-[#14110F]">NetSuite</span>: real-time inventory, MRP (material requirements planning), work orders, and quote-to-cash sync.</li>
                   <li><span className="font-bold text-[#14110F]">SAP S/4HANA</span> and <span className="font-bold text-[#14110F]">SAP Business One</span>: material master data and production order sync.</li>
@@ -791,7 +765,7 @@ export default function ManufacturingAiAgentsPage() {
               </div>
 
               <div className="p-8 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6]">
-                <h3 className="text-lg font-bold text-[#14110F] mb-4">Shop-Floor, MES &amp; SCADA</h3>
+                <h3 className="text-lg font-bold text-[#14110F] mb-4">Shop-Floor, MES &amp. SCADA.</h3>
                 <ul className="space-y-3 text-sm text-[#46403B] leading-relaxed list-none">
                   <li><span className="font-bold text-[#14110F]">Siemens Opcenter</span>: manufacturing execution system (MES) data for work order status, genealogy, and production line changeovers.</li>
                   <li><span className="font-bold text-[#14110F]">Rockwell Automation</span> and <span className="font-bold text-[#14110F]">Allen-Bradley</span>: PLC and SCADA telemetry for machine state and downtime.</li>
@@ -803,7 +777,7 @@ export default function ManufacturingAiAgentsPage() {
               </div>
 
               <div className="p-8 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6]">
-                <h3 className="text-lg font-bold text-[#14110F] mb-4">Sourcing, EDI &amp; Distributor APIs</h3>
+                <h3 className="text-lg font-bold text-[#14110F] mb-4">Sourcing, EDI &amp. Distributor APIs.</h3>
                 <ul className="space-y-3 text-sm text-[#46403B] leading-relaxed list-none">
                   <li><span className="font-bold text-[#14110F]">DigiKey</span>, <span className="font-bold text-[#14110F]">Mouser</span>, <span className="font-bold text-[#14110F]">Newark</span>, and <span className="font-bold text-[#14110F]">Arrow</span>: live stock, price break, and lead-time APIs.</li>
                   <li><span className="font-bold text-[#14110F]">EDI 830, 850, 855, 856, 860, and 862</span>: planning, order, and shipping transaction sets.</li>
@@ -830,9 +804,7 @@ export default function ManufacturingAiAgentsPage() {
               <div className="font-mono text-xs text-[#F05A28] font-bold uppercase tracking-wider mb-2">
                 // SYSTEM ARCHITECTURE & INTEGRATION
               </div>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-4">
-                Enterprise Industrial AI Engineering Blueprint
-              </h2>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-4">Enterprise Industrial AI Engineering Blueprint.</h2>
               <p className="text-base sm:text-lg text-[#46403B]">
                 How we architect secure, deterministic, and fault-tolerant AI agents for American manufacturing operations.
               </p>
@@ -862,7 +834,7 @@ export default function ManufacturingAiAgentsPage() {
                 },
                 {
                   title: 'Supplier Confirmation Email Triage',
-                  desc: 'The agent reads messy vendor emails and PDF attachments the way a person would. It pulls out the PO number, the partial shipment quantity, and the revised delivery date.',
+                  desc: 'The agent reads messy vendor emails and PDF attachments the way a person would. It pulls out the PO number, the partial shipment quantity. The revised delivery date.',
                 },
                 {
                   title: 'Shop Floor Shift Handover Synthesis',
@@ -878,7 +850,7 @@ export default function ManufacturingAiAgentsPage() {
                 },
                 {
                   title: '100% Client Code & Connector Ownership',
-                  desc: 'You get the full Git repository, the Python backend services, and the Docker orchestration files. There is no vendor lock-in and no per-seat fee.',
+                  desc: 'You get the full Git repository, the Python backend services. The Docker orchestration files. There is no vendor lock-in and no per-seat fee.',
                 },
               ].map((item, idx) => (
                 <li
@@ -888,9 +860,7 @@ export default function ManufacturingAiAgentsPage() {
                   <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">
                     ARCH-0{idx + 1}
                   </div>
-                  <h3 className="text-lg font-bold text-[#14110F] font-heading mb-2">
-                    {item.title}
-                  </h3>
+                  <h3 className="text-lg font-bold text-[#14110F] font-heading mb-2">{item.title}.</h3>
                   <p className="text-sm text-[#46403B] leading-relaxed">
                     {item.desc}
                   </p>
@@ -907,9 +877,7 @@ export default function ManufacturingAiAgentsPage() {
               <div className="font-mono text-xs text-[#F05A28] font-bold uppercase tracking-wider mb-2">
                 // DEPLOYMENT METHODOLOGY
               </div>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-4">
-                4-Phase Industrial AI Agent Implementation Roadmap
-              </h2>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-4">4-Phase Industrial AI Agent Implementation Roadmap.</h2>
               <p className="text-base sm:text-lg text-[#46403B]">
                 From your first CAD sample to a live, two-way ERP rollout, in 4 to 6 weeks.
               </p>
@@ -919,7 +887,7 @@ export default function ManufacturingAiAgentsPage() {
               <li className="p-6 rounded-2xl bg-white border border-[#E7DED6] shadow-sm flex flex-col justify-between">
                 <div>
                   <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">PHASE 01 // WEEKS 1-2</div>
-                  <h3 className="text-lg font-bold text-[#14110F] font-heading mb-3">ERP Schema & CAD Audit</h3>
+                  <h3 className="text-lg font-bold text-[#14110F] font-heading mb-3">ERP Schema & CAD Audit.</h3>
                   <p className="text-sm text-[#46403B] leading-relaxed mb-4">
                     We map your ERP tables, machine center hourly rates, raw stock SKUs, and past quote packages. Then we set up secure, read-only access to your NetSuite, SAP, or Epicor sandbox.
                   </p>
@@ -932,7 +900,7 @@ export default function ManufacturingAiAgentsPage() {
               <li className="p-6 rounded-2xl bg-white border border-[#E7DED6] shadow-sm flex flex-col justify-between">
                 <div>
                   <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">PHASE 02 // WEEKS 2-3</div>
-                  <h3 className="text-lg font-bold text-[#14110F] font-heading mb-3">Vision Pipeline & Quoting Logic</h3>
+                  <h3 className="text-lg font-bold text-[#14110F] font-heading mb-3">Vision Pipeline & Quoting Logic.</h3>
                   <p className="text-sm text-[#46403B] leading-relaxed mb-4">
                     We train the vision model on your own 2D prints and STEP files. We also encode your feeds-and-speeds math and setup amortization rules. That becomes a rule-based state machine, so pricing logic works the same way every time.
                   </p>
@@ -945,7 +913,7 @@ export default function ManufacturingAiAgentsPage() {
               <li className="p-6 rounded-2xl bg-white border border-[#E7DED6] shadow-sm flex flex-col justify-between">
                 <div>
                   <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">PHASE 03 // WEEKS 3-4</div>
-                  <h3 className="text-lg font-bold text-[#14110F] font-heading mb-3">Approval Console & ERP Staging</h3>
+                  <h3 className="text-lg font-bold text-[#14110F] font-heading mb-3">Approval Console & ERP Staging.</h3>
                   <p className="text-sm text-[#46403B] leading-relaxed mb-4">
                     We deploy your human review console, with the drawing and the AI&apos;s reading side by side. Your estimator checks the extracted dimensions and the machine run-time math. Then they test one-click quote creation right inside your live ERP sandbox.
                   </p>
@@ -958,7 +926,7 @@ export default function ManufacturingAiAgentsPage() {
               <li className="p-6 rounded-2xl bg-white border border-[#E7DED6] shadow-sm flex flex-col justify-between">
                 <div>
                   <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">PHASE 04 // WEEKS 5-6</div>
-                  <h3 className="text-lg font-bold text-[#14110F] font-heading mb-3">Live Production & Handoff</h3>
+                  <h3 className="text-lg font-bold text-[#14110F] font-heading mb-3">Live Production & Handoff.</h3>
                   <p className="text-sm text-[#46403B] leading-relaxed mb-4">
                     We connect your live customer RFQ inbox to the production agent. We train your staff and hand over the full Git repository with documentation. Code and IP ownership transfer to your engineering team in full.
                   </p>
@@ -978,9 +946,7 @@ export default function ManufacturingAiAgentsPage() {
               <div className="font-mono text-xs text-[#F05A28] font-bold uppercase tracking-wider mb-2">
                 // VENDOR COMPARISON
               </div>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-4">
-                FactoryJet Custom AI vs. Generic SaaS Quoting Tools
-              </h2>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-4">FactoryJet Custom AI vs. Generic SaaS Quoting Tools.</h2>
               <p className="text-base sm:text-lg text-[#46403B]">
                 Why enterprise manufacturers choose owned AI infrastructure over restrictive black-box SaaS software.
               </p>
@@ -990,7 +956,7 @@ export default function ManufacturingAiAgentsPage() {
               <table className="w-full text-left text-sm">
                 <thead>
                   <tr className="border-b border-[#E7DED6] bg-[#FFF8F5]">
-                    <th className="p-4 sm:p-6 font-bold text-[#14110F]">Capability / Feature</th>
+                    <th className="p-4 sm:p-6 font-bold text-[#14110F]">Capability / Feature.</th>
                     <th className="p-4 sm:p-6 font-bold text-[#F05A28] bg-[#FFF8F5]">
                       FactoryJet Custom AI Agent
                     </th>
@@ -1004,44 +970,44 @@ export default function ManufacturingAiAgentsPage() {
                 </thead>
                 <tbody className="divide-y divide-[#E7DED6]">
                   <tr>
-                    <td className="p-4 sm:p-6 font-semibold text-[#14110F]">Average RFQ Turnaround</td>
+                    <td className="p-4 sm:p-6 font-semibold text-[#14110F]">Average RFQ Turnaround.</td>
                     <td className="p-4 sm:p-6 font-bold text-[#F05A28] bg-[#FFF8F5]">
                       Under 20 Minutes
                     </td>
-                    <td className="p-4 sm:p-6 text-[#6E655F]">1 to 2 Business Days</td>
-                    <td className="p-4 sm:p-6 text-[#6E655F]">3 to 7 Business Days</td>
+                    <td className="p-4 sm:p-6 text-[#6E655F]">1 to 2 Business Days.</td>
+                    <td className="p-4 sm:p-6 text-[#6E655F]">3 to 7 Business Days.</td>
                   </tr>
                   <tr>
-                    <td className="p-4 sm:p-6 font-semibold text-[#14110F]">CAD & Drawing Parsing</td>
+                    <td className="p-4 sm:p-6 font-semibold text-[#14110F]">CAD & Drawing Parsing.</td>
                     <td className="p-4 sm:p-6 font-bold text-[#F05A28] bg-[#FFF8F5]">
                       Direct Multi-Modal Vision + GD&T
                     </td>
-                    <td className="p-4 sm:p-6 text-[#6E655F]">Basic Title Block Text Only</td>
-                    <td className="p-4 sm:p-6 text-[#6E655F]">Manual Caliper & Ruler Review</td>
+                    <td className="p-4 sm:p-6 text-[#6E655F]">Basic Title Block Text Only.</td>
+                    <td className="p-4 sm:p-6 text-[#6E655F]">Manual Caliper & Ruler Review.</td>
                   </tr>
                   <tr>
-                    <td className="p-4 sm:p-6 font-semibold text-[#14110F]">ERP Bi-Directional Sync</td>
+                    <td className="p-4 sm:p-6 font-semibold text-[#14110F]">ERP Bi-Directional Sync.</td>
                     <td className="p-4 sm:p-6 font-bold text-[#F05A28] bg-[#FFF8F5]">
                       Native NetSuite, SAP, Epicor API
                     </td>
-                    <td className="p-4 sm:p-6 text-[#6E655F]">Manual CSV Import / Export</td>
-                    <td className="p-4 sm:p-6 text-[#6E655F]">Double Data Entry into ERP</td>
+                    <td className="p-4 sm:p-6 text-[#6E655F]">Manual CSV Import / Export.</td>
+                    <td className="p-4 sm:p-6 text-[#6E655F]">Double Data Entry into ERP.</td>
                   </tr>
                   <tr>
-                    <td className="p-4 sm:p-6 font-semibold text-[#14110F]">Software Licensing & Fees</td>
+                    <td className="p-4 sm:p-6 font-semibold text-[#14110F]">Software Licensing & Fees.</td>
                     <td className="p-4 sm:p-6 font-bold text-[#F05A28] bg-[#FFF8F5]">
                       100% Owned, $0 Per-Seat Fee
                     </td>
-                    <td className="p-4 sm:p-6 text-[#6E655F]">$500 - $1,500 / seat / month</td>
-                    <td className="p-4 sm:p-6 text-[#6E655F]">$85k - $120k / estimator salary</td>
+                    <td className="p-4 sm:p-6 text-[#6E655F]">$500 - $1,500 / seat / month.</td>
+                    <td className="p-4 sm:p-6 text-[#6E655F]">$85k - $120k / estimator salary.</td>
                   </tr>
                   <tr>
-                    <td className="p-4 sm:p-6 font-semibold text-[#14110F]">Proprietary Data Privacy</td>
+                    <td className="p-4 sm:p-6 font-semibold text-[#14110F]">Proprietary Data Privacy.</td>
                     <td className="p-4 sm:p-6 font-bold text-[#F05A28] bg-[#FFF8F5]">
                       Private VPC & Zero Data Retention
                     </td>
-                    <td className="p-4 sm:p-6 text-[#6E655F]">Shared Multi-Tenant Cloud</td>
-                    <td className="p-4 sm:p-6 text-[#6E655F]">Internal Filesystem Only</td>
+                    <td className="p-4 sm:p-6 text-[#6E655F]">Shared Multi-Tenant Cloud.</td>
+                    <td className="p-4 sm:p-6 text-[#6E655F]">Internal Filesystem Only.</td>
                   </tr>
                 </tbody>
               </table>
@@ -1089,9 +1055,7 @@ export default function ManufacturingAiAgentsPage() {
                 <div className="font-mono text-xs text-[#F05A28] font-bold uppercase tracking-wider mb-2">
                   // DIRECT INDUSTRIAL ARCHITECTURE LEADERSHIP
                 </div>
-                <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-6">
-                  Direct Engineering Oversight with Founder Bhavesh Barot
-                </h2>
+                <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-6">Direct Engineering Oversight with Founder Bhavesh Barot.</h2>
                 <p className="text-base sm:text-lg text-[#46403B] leading-relaxed mb-6">
                   Industrial systems need precision. At FactoryJet, founder Bhavesh Barot leads every manufacturing architecture and ERP scoping session in person. In the first session, we look at your NetSuite or SAP data, your drawing formats, and where your quoting process slows down.
                 </p>
@@ -1126,18 +1090,14 @@ export default function ManufacturingAiAgentsPage() {
             <div className="font-mono text-xs text-[#F05A28] font-bold uppercase tracking-wider mb-4">
               // FOCUSED INDUSTRIAL CAPABILITY SPOKES
             </div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#14110F] font-heading mb-8">
-              Explore Our Granular Industrial AI Capabilities
-            </h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#14110F] font-heading mb-8">Explore Our Granular Industrial AI Capabilities.</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <Link
                 href="/services/ai-agent-development/rfq-bidding-agent"
                 className="p-6 rounded-xl bg-white border border-[#E7DED6] hover:border-[#F05A28] transition-colors group"
               >
                 <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">SPOKE 01</div>
-                <h3 className="font-bold text-lg text-[#14110F] group-hover:text-[#F05A28] transition-colors mb-2">
-                  RFQ Bidding & Quoting Agent &rarr;
-                </h3>
+                <h3 className="font-bold text-lg text-[#14110F] group-hover:text-[#F05A28] transition-colors mb-2">RFQ Bidding & Quoting Agent &rarr;.</h3>
                 <p className="text-sm text-[#46403B]">
                   Inbound RFQ parsing from email, PDF drawing packages, buyer portals, and EDI 840.
                 </p>
@@ -1148,9 +1108,7 @@ export default function ManufacturingAiAgentsPage() {
                 className="p-6 rounded-xl bg-white border border-[#E7DED6] hover:border-[#F05A28] transition-colors group"
               >
                 <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">SPOKE 02</div>
-                <h3 className="font-bold text-lg text-[#14110F] group-hover:text-[#F05A28] transition-colors mb-2">
-                  Procurement & Supply Chain Agent &rarr;
-                </h3>
+                <h3 className="font-bold text-lg text-[#14110F] group-hover:text-[#F05A28] transition-colors mb-2">Procurement & Supply Chain Agent &rarr;.</h3>
                 <p className="text-sm text-[#46403B]">
                   Supplier order confirmation triage, promised-date reconciliation, and ERP PO sync.
                 </p>
@@ -1161,9 +1119,7 @@ export default function ManufacturingAiAgentsPage() {
                 className="p-6 rounded-xl bg-white border border-[#E7DED6] hover:border-[#F05A28] transition-colors group"
               >
                 <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">SPOKE 03</div>
-                <h3 className="font-bold text-lg text-[#14110F] group-hover:text-[#F05A28] transition-colors mb-2">
-                  Shop-Floor Operations Agent &rarr;
-                </h3>
+                <h3 className="font-bold text-lg text-[#14110F] group-hover:text-[#F05A28] transition-colors mb-2">Shop-Floor Operations Agent &rarr;.</h3>
                 <p className="text-sm text-[#46403B]">
                   Shift handover drafting, CMMS maintenance triage, predictive maintenance alerts, and downtime reason telemetry.
                 </p>
@@ -1187,7 +1143,7 @@ export default function ManufacturingAiAgentsPage() {
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-[#F05A28]/30 mb-6">
               <span className="font-mono text-xs text-[#F05A28] font-bold tracking-wide">
-                // AUTOMATE RFQS &bull; ZERO SEAT TAXES &bull; 100% CODE OWNERSHIP
+                // AUTOMATE RFQS &bull. ZERO SEAT TAXES &bull. 100% CODE OWNERSHIP
               </span>
             </div>
             

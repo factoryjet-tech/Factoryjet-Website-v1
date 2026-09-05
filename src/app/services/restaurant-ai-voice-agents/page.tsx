@@ -8,6 +8,7 @@ import FAQ, { type FAQItem, type FAQCategory } from '@/components/v2/FAQ';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
+import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
 const CANONICAL_URL = 'https://factoryjet.com/services/restaurant-ai-voice-agents';
@@ -207,160 +208,146 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
   },
 ];
 
-export default function RestaurantAiVoiceAgentsPage() {
-  const schemaWebPage = {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    '@id': `${CANONICAL_URL}#webpage`,
-    url: CANONICAL_URL,
-    name: PAGE_TITLE,
-    description: PAGE_DESC,
-    dateModified: PAGE_MODIFIED,
-    publisher: {
-      '@type': 'Organization',
-      name: 'FactoryJet',
-      url: 'https://factoryjet.com',
-      logo: 'https://factoryjet.com/FinalLogo.svg',
-    },
-    author: {
-      '@type': 'Person',
-      name: 'Bhavesh Barot',
-      url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-      jobTitle: 'Founder & CEO, FactoryJet',
-    },
-  };
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': `${CANONICAL_URL}#webpage`,
+  url: CANONICAL_URL,
+  name: PAGE_TITLE,
+  description: PAGE_DESC,
+  dateModified: PAGE_MODIFIED,
+  publisher: {
+    '@type': 'Organization',
+    name: 'FactoryJet',
+    url: 'https://factoryjet.com',
+    logo: 'https://factoryjet.com/FinalLogo.svg',
+  },
+  author: {
+    '@type': 'Person',
+    name: 'Bhavesh Barot',
+    url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
+    jobTitle: 'Founder & CEO, FactoryJet',
+  },
+};
 
-  const schemaService = {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    '@id': `${CANONICAL_URL}#service`,
-    name: 'Restaurant AI Voice Agents & Phone Ordering Automation',
-    serviceType: 'Hospitality AI Voice Agent Development',
-    provider: {
-      '@type': 'Organization',
-      name: 'FactoryJet',
-      url: 'https://factoryjet.com',
-    },
-    areaServed: {
-      '@type': 'Country',
-      name: 'United States',
-    },
-    description: PAGE_DESC,
-    hasOfferCatalog: {
-      '@type': 'OfferCatalog',
-      name: 'Restaurant Voice Automation Services',
-      itemListElement: [
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: '24/7 AI Phone Ordering with Toast, Square & Clover POS Sync',
-          },
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Real-Time 86-Item Menu & Allergen Modifier Logic',
-          },
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'OpenTable & Resy Automated Table Reservations',
-          },
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Corporate Catering & Banquet Lead Qualification',
-          },
-        },
-      ],
-    },
-  };
-
-  const schemaHowTo = {
-    '@context': 'https://schema.org',
-    '@type': 'HowTo',
-    name: 'How FactoryJet Deploys Restaurant AI Voice Phone Ordering',
-    description:
-      'A 4-step engineering blueprint to eliminate missed phone calls and automate order entry into your restaurant POS.',
-    step: [
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': `${CANONICAL_URL}#service`,
+  name: 'Restaurant AI Voice Agents & Phone Ordering Automation',
+  serviceType: 'Hospitality AI Voice Agent Development',
+  provider: {
+    '@type': 'Organization',
+    name: 'FactoryJet',
+    url: 'https://factoryjet.com',
+  },
+  areaServed: {
+    '@type': 'Country',
+    name: 'United States',
+  },
+  description: PAGE_DESC,
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Restaurant Voice Automation Services',
+    itemListElement: [
       {
-        '@type': 'HowToStep',
-        position: 1,
-        name: 'POS Menu Matrix & Telephony SIP Configuration',
-        text: 'We connect to your Toast, Square, or Clover POS API, ingest your complete menu modifiers and pricing, and configure carrier SIP trunking.',
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: '24/7 AI Phone Ordering with Toast, Square & Clover POS Sync',
+        },
       },
       {
-        '@type': 'HowToStep',
-        position: 2,
-        name: 'Acoustic Model & Modifier Engine Calibration',
-        text: 'We train custom conversational prompts with sub-500ms latency, upselling logic, and strict allergen validation checks.',
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Real-Time 86-Item Menu & Allergen Modifier Logic',
+        },
       },
       {
-        '@type': 'HowToStep',
-        position: 3,
-        name: 'Kitchen Display (KDS) & Payment Webhook Testing',
-        text: 'We execute end-to-end test calls, verifying that tickets print correctly at the expeditor station with accurate tax and modifiers.',
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'OpenTable & Resy Automated Table Reservations',
+        },
       },
       {
-        '@type': 'HowToStep',
-        position: 4,
-        name: 'Production Rollout & Real-Time Call Analytics',
-        text: 'We switch live phone traffic to the AI voice agent, providing your management team with a live dashboard of recordings and order metrics.',
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Corporate Catering & Banquet Lead Qualification',
+        },
       },
     ],
-  };
+  },
+};
 
-  const schemaBreadcrumbs = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: BREADCRUMB_ITEMS.map((item, index) => ({
-      '@type': 'ListItem',
-      position: index + 1,
-      name: item.name,
-      item: item.url,
-    })),
-  };
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'How FactoryJet Deploys Restaurant AI Voice Phone Ordering',
+  description:
+    'A 4-step engineering blueprint to eliminate missed phone calls and automate order entry into your restaurant POS.',
+  step: [
+    {
+      '@type': 'HowToStep',
+      position: 1,
+      name: 'POS Menu Matrix & Telephony SIP Configuration',
+      text: 'We connect to your Toast, Square, or Clover POS API, ingest your complete menu modifiers and pricing, and configure carrier SIP trunking.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 2,
+      name: 'Acoustic Model & Modifier Engine Calibration',
+      text: 'We train custom conversational prompts with sub-500ms latency, upselling logic, and strict allergen validation checks.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 3,
+      name: 'Kitchen Display (KDS) & Payment Webhook Testing',
+      text: 'We execute end-to-end test calls, verifying that tickets print correctly at the expeditor station with accurate tax and modifiers.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 4,
+      name: 'Production Rollout & Real-Time Call Analytics',
+      text: 'We switch live phone traffic to the AI voice agent, providing your management team with a live dashboard of recordings and order metrics.',
+    },
+  ],
+};
 
-  const schemaFAQ = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: FAQ_ITEMS.map((item) => ({
-      '@type': 'Question',
-      name: item.question,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: item.answer,
-      },
-    })),
-  };
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+};
 
+export default function RestaurantAiVoiceAgentsPage() {
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaWebPage) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaService) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaHowTo) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
       />
+      <BreadcrumbSchema items={BREADCRUMB_ITEMS} />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaBreadcrumbs) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaFAQ) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
       <SiteHeader />

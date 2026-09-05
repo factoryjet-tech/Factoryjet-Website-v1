@@ -4,6 +4,7 @@ import Image from 'next/image';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
+import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import FAQ, { type FAQCategory, type FAQItem } from '@/components/v2/FAQ';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
@@ -225,7 +226,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
 /* ─────────────────────────────────────────────────────────────────────────────
    JSON-LD SCHEMAS
 ───────────────────────────────────────────────────────────────────────────── */
-const FAQ_SCHEMA = {
+const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: FAQ_ITEMS.map((item) => ({
@@ -235,7 +236,7 @@ const FAQ_SCHEMA = {
   })),
 };
 
-const SERVICE_SCHEMA = {
+const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   '@id': 'https://factoryjet.com/services/ai-customer-support-agents#service',
@@ -256,7 +257,7 @@ const SERVICE_SCHEMA = {
   },
 };
 
-const HOWTO_SCHEMA = {
+const howToSchema = {
   '@context': 'https://schema.org',
   '@type': 'HowTo',
   name: 'How FactoryJet Builds and Deploys a Custom AI Customer Support Agent',
@@ -285,7 +286,7 @@ const HOWTO_SCHEMA = {
   ],
 };
 
-const BREADCRUMB_SCHEMA = {
+const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: BREADCRUMB_ITEMS.map((item, index) => ({
@@ -296,7 +297,7 @@ const BREADCRUMB_SCHEMA = {
   })),
 };
 
-const WEBPAGE_SCHEMA = {
+const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
   '@id': 'https://factoryjet.com/services/ai-customer-support-agents#webpage',
@@ -326,11 +327,11 @@ const STATS = [
 export default function AiCustomerSupportAgentsPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(HOWTO_SCHEMA) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
+      <BreadcrumbSchema items={BREADCRUMB_ITEMS} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
 
       <SiteHeader locale="us" />
 

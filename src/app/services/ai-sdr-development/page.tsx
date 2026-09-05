@@ -4,6 +4,7 @@ import Image from 'next/image';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
+import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import FAQ, { type FAQCategory, type FAQItem } from '@/components/v2/FAQ';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
@@ -225,7 +226,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
 /* ─────────────────────────────────────────────────────────────────────────────
    JSON-LD SCHEMAS
 ───────────────────────────────────────────────────────────────────────────── */
-const FAQ_SCHEMA = {
+const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: FAQ_ITEMS.map((item) => ({
@@ -235,7 +236,7 @@ const FAQ_SCHEMA = {
   })),
 };
 
-const SERVICE_SCHEMA = {
+const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   '@id': `${CANONICAL_URL}#service`,
@@ -256,7 +257,7 @@ const SERVICE_SCHEMA = {
   },
 };
 
-const HOWTO_SCHEMA = {
+const howToSchema = {
   '@context': 'https://schema.org',
   '@type': 'HowTo',
   name: 'How FactoryJet Builds and Deploys a Custom AI SDR Agent',
@@ -289,7 +290,7 @@ const HOWTO_SCHEMA = {
   ],
 };
 
-const BREADCRUMB_SCHEMA = {
+const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: BREADCRUMB_ITEMS.map((item, index) => ({
@@ -300,7 +301,7 @@ const BREADCRUMB_SCHEMA = {
   })),
 };
 
-const WEBPAGE_SCHEMA = {
+const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
   '@id': `${CANONICAL_URL}#webpage`,
@@ -321,20 +322,20 @@ const WEBPAGE_SCHEMA = {
 };
 
 const STATS = [
-  { b: 'Sub-60s', s: 'speed to lead on all inbound inquiries' },
-  { b: '7x Lift', s: 'in lead qualification odds within the first hour' },
-  { b: 'HubSpot & SFDC', s: 'bi-directional CRM synchronization' },
-  { b: '100% Owned', s: 'private Git repo & zero per-seat fees' },
+  { b: 'Sub-60s.', s: 'Speed to lead on all inbound inquiries.' },
+  { b: '7x Lift.', s: 'In lead qualification odds within the first hour.' },
+  { b: 'HubSpot & SFDC.', s: 'Bi-directional CRM synchronization.' },
+  { b: '100% Owned.', s: 'Private Git repo & zero per-seat fees.' },
 ];
 
 export default function AiSdrDevelopmentPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(HOWTO_SCHEMA) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
+      <BreadcrumbSchema items={BREADCRUMB_ITEMS} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
 
       <SiteHeader locale="us" />
 
@@ -909,42 +910,42 @@ export default function AiSdrDevelopmentPage() {
               <table className="pp-table">
                 <thead>
                   <tr>
-                    <th>Evaluation Criteria</th>
-                    <th>Custom AI SDR (FactoryJet)</th>
-                    <th>Per-Seat AI SDR SaaS Tools</th>
-                    <th>Junior Human SDR Team</th>
+                    <th>Evaluation Criteria.</th>
+                    <th>Custom AI SDR (FactoryJet).</th>
+                    <th>Per-Seat AI SDR SaaS Tools.</th>
+                    <th>Junior Human SDR Team.</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr className="tr-me">
-                    <td className="font-bold">Speed to Inbound Lead</td>
-                    <td className="font-semibold text-[#F05A28]">Sub-60 seconds, 24/7</td>
-                    <td>2-15 minutes, queue dependent</td>
-                    <td>4-42 hours average lag</td>
+                    <td className="font-bold">Speed to Inbound Lead.</td>
+                    <td className="font-semibold text-[#F05A28]">Sub-60 seconds, 24/7.</td>
+                    <td>2-15 minutes, queue dependent.</td>
+                    <td>4-42 hours average lag.</td>
                   </tr>
                   <tr>
-                    <td className="font-bold">Licensing &amp; Seat Fees</td>
-                    <td className="font-semibold text-[#14110F]">$0/month, token compute only</td>
-                    <td>$2K-5K per user, per month</td>
-                    <td>$75k+ salary plus benefits</td>
+                    <td className="font-bold">Licensing &amp; Seat Fees.</td>
+                    <td className="font-semibold text-[#14110F]">$0/month, token compute only.</td>
+                    <td>$2K-5K per user, per month.</td>
+                    <td>$75k+ salary plus benefits.</td>
                   </tr>
                   <tr className="tr-me">
-                    <td className="font-bold">CRM &amp; Database Integration</td>
-                    <td className="font-semibold text-[#F05A28]">Custom REST/GraphQL, bi-directional</td>
-                    <td>Generic CSV/Zapier connectors</td>
-                    <td>Manual CRM record updates</td>
+                    <td className="font-bold">CRM &amp; Database Integration.</td>
+                    <td className="font-semibold text-[#F05A28]">Custom REST/GraphQL, bi-directional.</td>
+                    <td>Generic CSV/Zapier connectors.</td>
+                    <td>Manual CRM record updates.</td>
                   </tr>
                   <tr>
-                    <td className="font-bold">Turnover &amp; Ramp Time</td>
-                    <td className="font-semibold text-[#14110F]">Zero turnover, 3-4 week build</td>
-                    <td>Zero turnover, rigid vendor UI</td>
-                    <td>3-month ramp, 14-month tenure</td>
+                    <td className="font-bold">Turnover &amp; Ramp Time.</td>
+                    <td className="font-semibold text-[#14110F]">Zero turnover, 3-4 week build.</td>
+                    <td>Zero turnover, rigid vendor UI.</td>
+                    <td>3-month ramp, 14-month tenure.</td>
                   </tr>
                   <tr className="tr-me">
-                    <td className="font-bold">Data Privacy &amp; VPC Perimeter</td>
-                    <td className="font-semibold text-[#F05A28]">Private VPC, zero data retention</td>
-                    <td>Shared vendor cloud database</td>
-                    <td>Internal employee device access</td>
+                    <td className="font-bold">Data Privacy &amp; VPC Perimeter.</td>
+                    <td className="font-semibold text-[#F05A28]">Private VPC, zero data retention.</td>
+                    <td>Shared vendor cloud database.</td>
+                    <td>Internal employee device access.</td>
                   </tr>
                 </tbody>
               </table>

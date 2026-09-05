@@ -8,6 +8,7 @@ import FAQ, { type FAQItem, type FAQCategory } from '@/components/v2/FAQ';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import Breadcrumbs from '@/components/v2/Breadcrumbs';
+import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
 const CANONICAL_URL = 'https://factoryjet.com/services/contractor-ai-receptionist';
@@ -23,7 +24,7 @@ const BREADCRUMB_ITEMS = [
   { name: 'Home', url: 'https://factoryjet.com' },
   { name: 'Services', url: 'https://factoryjet.com/services' },
   { name: 'Contractor AI Receptionist', url: CANONICAL_URL },
-] as const;
+];
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,
@@ -180,7 +181,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
   {
     category: 'roi',
     question: 'Does the agent replace our office manager, or work alongside them?',
-    answer: 'Alongside. The agent handles the repetitive first-contact work: answering, qualifying, booking, and triaging. Your office manager spends less time on the phone and more time on estimates, follow-ups, and the calls that actually need a human judgment call. Most of our contractor clients keep their office staff and redeploy their time rather than cut the role.',
+    answer: 'Alongside. The agent handles the repetitive first-contact work: answering, qualifying, booking, and triaging. Your office manager spends less time on the phone and more time on estimates, follow-ups. The calls that actually need a human judgment call. Most of our contractor clients keep their office staff and redeploy their time rather than cut the role.',
   },
   {
     category: 'dispatch',
@@ -194,176 +195,162 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
   },
 ];
 
-export default function ContractorAiReceptionistPage() {
-  const schemaWebPage = {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    '@id': `${CANONICAL_URL}#webpage`,
-    url: CANONICAL_URL,
-    name: PAGE_TITLE,
-    description: PAGE_DESC,
-    datePublished: '2026-09-01T00:00:00Z',
-    dateModified: `${PAGE_MODIFIED}T00:00:00Z`,
-    inLanguage: 'en-US',
-    publisher: {
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': `${CANONICAL_URL}#webpage`,
+  url: CANONICAL_URL,
+  name: PAGE_TITLE,
+  description: PAGE_DESC,
+  datePublished: '2026-09-01T00:00:00Z',
+  dateModified: `${PAGE_MODIFIED}T00:00:00Z`,
+  inLanguage: 'en-US',
+  publisher: {
+    '@type': 'Organization',
+    name: 'FactoryJet',
+    url: 'https://factoryjet.com',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://factoryjet.com/logo.png',
+    },
+  },
+  author: {
+    '@type': 'Person',
+    name: 'Bhavesh Barot',
+    url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
+    jobTitle: 'Founder & CEO',
+    worksFor: {
       '@type': 'Organization',
       name: 'FactoryJet',
-      url: 'https://factoryjet.com',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://factoryjet.com/logo.png',
-      },
     },
-    author: {
-      '@type': 'Person',
-      name: 'Bhavesh Barot',
-      url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-      jobTitle: 'Founder & CEO',
-      worksFor: {
-        '@type': 'Organization',
-        name: 'FactoryJet',
-      },
-    },
-  };
+  },
+};
 
-  const schemaService = {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    '@id': `${CANONICAL_URL}#service`,
-    name: 'AI Receptionist & Voice Dispatch for Contractors & Trades',
-    serviceType: 'Contractor AI Voice Agent Development',
-    description:
-      'Custom 24/7 AI voice receptionists for general contractors, HVAC, roofing, and plumbing companies integrated with ServiceTitan, Jobber, and Housecall Pro.',
-    provider: {
-      '@type': 'Organization',
-      name: 'FactoryJet',
-      url: 'https://factoryjet.com',
-    },
-    areaServed: {
-      '@type': 'Country',
-      name: 'United States',
-    },
-    hasOfferCatalog: {
-      '@type': 'OfferCatalog',
-      name: 'Contractor AI Services',
-      itemListElement: [
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: '24/7 Contractor Emergency Voice Dispatch Agent',
-          },
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'HVAC & Plumbing ServiceTitan Integrated Receptionist',
-          },
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Roofing Storm Damage Estimate Scheduling Agent',
-          },
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'General Contractor Subcontractor & Lead Qualifier',
-          },
-        },
-      ],
-    },
-  };
-
-  const schemaHowTo = {
-    '@context': 'https://schema.org',
-    '@type': 'HowTo',
-    name: 'How We Build and Deploy 24/7 Contractor AI Voice Receptionists',
-    description:
-      'A structured four-phase engineering framework for deploying live ServiceTitan and Jobber-synced AI voice agents.',
-    step: [
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': `${CANONICAL_URL}#service`,
+  name: 'AI Receptionist & Voice Dispatch for Contractors & Trades',
+  serviceType: 'Contractor AI Voice Agent Development',
+  description:
+    'Custom 24/7 AI voice receptionists for general contractors, HVAC, roofing, and plumbing companies integrated with ServiceTitan, Jobber, and Housecall Pro.',
+  provider: {
+    '@type': 'Organization',
+    name: 'FactoryJet',
+    url: 'https://factoryjet.com',
+  },
+  areaServed: {
+    '@type': 'Country',
+    name: 'United States',
+  },
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Contractor AI Services',
+    itemListElement: [
       {
-        '@type': 'HowToStep',
-        position: 1,
-        name: 'Trade Service Scope and FSM API Mapping',
-        text: 'We map your service offerings, pricing ranges, emergency dispatch tiers, technician zones, and connect live API webhooks to ServiceTitan or Jobber.',
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: '24/7 Contractor Emergency Voice Dispatch Agent',
+        },
       },
       {
-        '@type': 'HowToStep',
-        position: 2,
-        name: 'Ultra-Low Latency Voice Telephony Architecture',
-        text: 'We configure dedicated SIP trunking, Deepgram speech models, and realistic American voice synthesis capable of handling conversational interruptions.',
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'HVAC & Plumbing ServiceTitan Integrated Receptionist',
+        },
       },
       {
-        '@type': 'HowToStep',
-        position: 3,
-        name: 'Emergency Triage and SMS Follow-Up Automation',
-        text: 'We program deterministic emergency warm transfer rules for urgent plumbing leaks and no-heat calls, plus automated SMS address confirmation.',
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Roofing Storm Damage Estimate Scheduling Agent',
+        },
       },
       {
-        '@type': 'HowToStep',
-        position: 4,
-        name: 'Parallel Call Testing and Zero-Downtime Phone Cutover',
-        text: 'We test live call scenarios with your field dispatchers, calibrate background noise handling, and route after-hours or overflow phone lines.',
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'General Contractor Subcontractor & Lead Qualifier',
+        },
       },
     ],
-  };
+  },
+};
 
-  const schemaBreadcrumbs = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: BREADCRUMB_ITEMS.map((item, index) => ({
-      '@type': 'ListItem',
-      position: index + 1,
-      name: item.name,
-      item: item.url,
-    })),
-  };
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'How We Build and Deploy 24/7 Contractor AI Voice Receptionists',
+  description:
+    'A structured four-phase engineering framework for deploying live ServiceTitan and Jobber-synced AI voice agents.',
+  step: [
+    {
+      '@type': 'HowToStep',
+      position: 1,
+      name: 'Trade Service Scope and FSM API Mapping',
+      text: 'We map your service offerings, pricing ranges, emergency dispatch tiers, technician zones, and connect live API webhooks to ServiceTitan or Jobber.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 2,
+      name: 'Ultra-Low Latency Voice Telephony Architecture',
+      text: 'We configure dedicated SIP trunking, Deepgram speech models, and realistic American voice synthesis capable of handling conversational interruptions.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 3,
+      name: 'Emergency Triage and SMS Follow-Up Automation',
+      text: 'We program deterministic emergency warm transfer rules for urgent plumbing leaks and no-heat calls, plus automated SMS address confirmation.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 4,
+      name: 'Parallel Call Testing and Zero-Downtime Phone Cutover',
+      text: 'We test live call scenarios with your field dispatchers, calibrate background noise handling, and route after-hours or overflow phone lines.',
+    },
+  ],
+};
 
-  const schemaFAQ = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: FAQ_ITEMS.map((item) => ({
-      '@type': 'Question',
-      name: item.question,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: item.answer,
-      },
-    })),
-  };
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+};
 
+export default function ContractorAiReceptionistPage() {
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaWebPage) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaService) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaHowTo) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
       />
+      <BreadcrumbSchema items={BREADCRUMB_ITEMS} />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaBreadcrumbs) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaFAQ) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
       <SiteHeader />
 
       <main className="min-h-screen bg-white text-[#14110F]">
-        <Breadcrumbs items={BREADCRUMB_ITEMS.map((item) => ({ name: item.name, url: item.url }))} />
+        <Breadcrumbs items={BREADCRUMB_ITEMS} />
 
         {/* HERO SECTION */}
         <section className="relative pt-32 pb-20 border-b border-[#E7DED6] bg-[#FFFFFF] overflow-hidden">
@@ -378,10 +365,8 @@ export default function ContractorAiReceptionistPage() {
                   </span>
                 </div>
                 
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#14110F] font-heading leading-tight mb-6">
-                  Custom AI Voice Receptionists for{' '}
-                  <span className="text-[#F05A28]">Contractors &amp; Trades.</span>
-                </h1>
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#14110F] font-heading leading-tight mb-6">Custom AI Voice Receptionists for{' '}
+                  <span className="text-[#F05A28]">Contractors &amp. Trades.</span>.</h1>
                 
                 <p className="text-lg sm:text-xl text-[#46403B] font-normal leading-relaxed mb-8 max-w-2xl">
                   We engineer 24/7 AI voice phone agents for American general contractors, HVAC, roofing, plumbing, and electrical companies. Never lose an after-hours emergency call, qualify homeowner project budgets, and book jobs directly into ServiceTitan and Jobber.
@@ -460,9 +445,7 @@ export default function ContractorAiReceptionistPage() {
               <div className="font-mono text-xs text-[#F05A28] font-bold uppercase tracking-wider mb-2">
                 // VERIFIED FIELD SERVICE BENCHMARKS
               </div>
-              <h2 className="text-3xl font-extrabold text-[#14110F] font-heading">
-                The Revenue Impact of Speed-to-Lead in Trade Services
-              </h2>
+              <h2 className="text-3xl font-extrabold text-[#14110F] font-heading">The Revenue Impact of Speed-to-Lead in Trade Services.</h2>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -536,9 +519,7 @@ export default function ContractorAiReceptionistPage() {
               <div className="font-mono text-xs text-[#F05A28] font-bold uppercase tracking-wider mb-2">
                 // CONTRACTOR FIELD CAPABILITIES
               </div>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-4">
-                Engineered for High-Volume Residential and Commercial Contractors
-              </h2>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-4">Engineered for High-Volume Residential and Commercial Contractors.</h2>
               <p className="text-lg text-[#46403B]">
                 Capture every profitable job, qualify homeowner budgets, and dispatch crews automatically while your hands are on the tools. None of that helps if homeowners cannot find you first. If the phone is not ringing enough yet, our{' '}
                 <Link href="/services/local-seo" className="underline decoration-[#F05A28]/40 hover:text-[#F05A28]">
@@ -553,9 +534,7 @@ export default function ContractorAiReceptionistPage() {
                 <div className="w-12 h-12 rounded-xl bg-[#FFF8F5] border border-[#F05A28]/20 flex items-center justify-center text-[#F05A28] font-bold font-mono text-lg mb-6">
                   01
                 </div>
-                <h3 className="text-xl font-bold text-[#14110F] mb-3">
-                  24/7/365 Live Emergency Call Answering
-                </h3>
+                <h3 className="text-xl font-bold text-[#14110F] mb-3">24/7/365 Live Emergency Call Answering.</h3>
                 <p className="text-sm text-[#46403B] leading-relaxed mb-4">
                   Answers every call on the first ring, even during midnight storms or busy Sunday mornings. It speaks with real warmth and captures emergency details with precision. That prevents high-ticket customer churn to whichever competitor picks up first.
                 </p>
@@ -576,9 +555,7 @@ export default function ContractorAiReceptionistPage() {
                 <div className="w-12 h-12 rounded-xl bg-[#FFF8F5] border border-[#F05A28]/20 flex items-center justify-center text-[#F05A28] font-bold font-mono text-lg mb-6">
                   02
                 </div>
-                <h3 className="text-xl font-bold text-[#14110F] mb-3">
-                  Direct ServiceTitan &amp; Jobber Sync
-                </h3>
+                <h3 className="text-xl font-bold text-[#14110F] mb-3">Direct ServiceTitan &amp. Jobber Sync.</h3>
                 <p className="text-sm text-[#46403B] leading-relaxed mb-4">
                   Reads real-time technician zone calendars, driving buffers, and on-call availability. It writes new customer profiles, addresses, job categories, and estimate appointments straight onto your dispatch board. Your office does zero manual double-entry.
                 </p>
@@ -599,15 +576,13 @@ export default function ContractorAiReceptionistPage() {
                 <div className="w-12 h-12 rounded-xl bg-[#FFF8F5] border border-[#F05A28]/20 flex items-center justify-center text-[#F05A28] font-bold font-mono text-lg mb-6">
                   03
                 </div>
-                <h3 className="text-xl font-bold text-[#14110F] mb-3">
-                  Address &amp; Project Scope Pre-Qualification
-                </h3>
+                <h3 className="text-xl font-bold text-[#14110F] mb-3">Address &amp. Project Scope Pre-Qualification.</h3>
                 <p className="text-sm text-[#46403B] leading-relaxed mb-4">
                   Validates property zip codes against your service area. Before scheduling a field visit, it gathers the key details: roof age, HVAC system brand, plumbing fixture type, square footage, blueprint status, and insurance claim involvement.
                 </p>
                 <ul className="space-y-2 text-xs font-mono text-[#6E655F]">
                   <li className="flex items-center gap-2">
-                    <span className="text-[#F05A28]">&bull;</span> Service radius geofencing &amp; driving zones
+                    <span className="text-[#F05A28]">&bull;</span> Service radius geofencing &amp. driving zones
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="text-[#F05A28]">&bull;</span> Minimum project budget range confirmation
@@ -622,9 +597,7 @@ export default function ContractorAiReceptionistPage() {
                 <div className="w-12 h-12 rounded-xl bg-[#FFF8F5] border border-[#F05A28]/20 flex items-center justify-center text-[#F05A28] font-bold font-mono text-lg mb-6">
                   04
                 </div>
-                <h3 className="text-xl font-bold text-[#14110F] mb-3">
-                  Automated SMS Confirmations &amp; Photo Links
-                </h3>
+                <h3 className="text-xl font-bold text-[#14110F] mb-3">Automated SMS Confirmations &amp. Photo Links.</h3>
                 <p className="text-sm text-[#46403B] leading-relaxed mb-4">
                   Sends instant calendar text confirmations, arrival tracking notices, and secure photo upload links. Homeowners can submit damage photos of a breaker panel, a leaking pipe, or damaged roof shingles ahead of time. The technician shows up already knowing what to expect.
                 </p>
@@ -633,7 +606,7 @@ export default function ContractorAiReceptionistPage() {
                     <span className="text-[#F05A28]">&bull;</span> Damage photo upload links attached to work orders
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-[#F05A28]">&bull;</span> Automated calendar reminder &amp; arrival window SMS
+                    <span className="text-[#F05A28]">&bull;</span> Automated calendar reminder &amp. arrival window SMS
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="text-[#F05A28]">&bull;</span> Post-service Google review generation requests
@@ -645,9 +618,7 @@ export default function ContractorAiReceptionistPage() {
                 <div className="w-12 h-12 rounded-xl bg-[#FFF8F5] border border-[#F05A28]/20 flex items-center justify-center text-[#F05A28] font-bold font-mono text-lg mb-6">
                   05
                 </div>
-                <h3 className="text-xl font-bold text-[#14110F] mb-3">
-                  On-Call Crew Warm Transfers
-                </h3>
+                <h3 className="text-xl font-bold text-[#14110F] mb-3">On-Call Crew Warm Transfers.</h3>
                 <p className="text-sm text-[#46403B] leading-relaxed mb-4">
                   A severe commercial water main break or a critical electrical failure gets flagged instantly. The AI collects site access codes, then dials your on-call technician right away.
                 </p>
@@ -668,9 +639,7 @@ export default function ContractorAiReceptionistPage() {
                 <div className="w-12 h-12 rounded-xl bg-[#FFF8F5] border border-[#F05A28]/20 flex items-center justify-center text-[#F05A28] font-bold font-mono text-lg mb-6">
                   06
                 </div>
-                <h3 className="text-xl font-bold text-[#14110F] mb-3">
-                  Vendor & Spam Call Filtering
-                </h3>
+                <h3 className="text-xl font-bold text-[#14110F] mb-3">Vendor & Spam Call Filtering.</h3>
                 <p className="text-sm text-[#46403B] leading-relaxed mb-4">
                   Screens out telemarketers, cold vendor pitches, and recruitment spam automatically. Your office staff spend their time on high-margin customer project calls instead.
                 </p>
@@ -703,9 +672,7 @@ export default function ContractorAiReceptionistPage() {
               <div className="font-mono text-xs text-[#F05A28] font-bold uppercase tracking-wider mb-2">
                 // SPECIALIZED TRADE ARCHITECTURES
               </div>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-4">
-                Tailored Workflows for Every Specialty Contractor
-              </h2>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-4">Tailored Workflows for Every Specialty Contractor.</h2>
               <p className="text-lg text-[#46403B]">
                 HVAC emergency dispatch requires different diagnostic logic than residential roofing estimates. We configure custom trade logic for your business.
               </p>
@@ -732,9 +699,7 @@ export default function ContractorAiReceptionistPage() {
                   <div className="font-mono text-xs text-[#F05A28] font-bold uppercase tracking-wider mb-2">
                     // HVAC & REFRIGERATION CONTRACTORS
                   </div>
-                  <h3 className="text-2xl sm:text-3xl font-extrabold text-[#14110F] mb-4">
-                    24/7 Seasonal Emergency Dispatch & Maintenance Upsells
-                  </h3>
+                  <h3 className="text-2xl sm:text-3xl font-extrabold text-[#14110F] mb-4">24/7 Seasonal Emergency Dispatch & Maintenance Upsells.</h3>
                   <p className="text-sm sm:text-base text-[#46403B] leading-relaxed mb-6">
                     When heat waves or winter freezes hit, HVAC phone lines get overwhelmed with emergency calls. Our AI receptionist tells a complete AC breakdown apart from routine maintenance in seconds. It checks technician service zones, books emergency diagnostic windows in ServiceTitan, and dispatches on-call techs immediately. The same sub-500ms voice pipeline also runs our{' '}
                     <Link href="/services/automotive-ai-voice-agents" className="underline decoration-[#F05A28]/40 hover:text-[#F05A28]">
@@ -743,10 +708,10 @@ export default function ContractorAiReceptionistPage() {
                     , so the underlying engineering is proven well outside HVAC too.
                   </p>
                   <ul className="grid grid-cols-2 gap-4 text-xs font-mono text-[#6E655F] pt-4 border-t border-[#E7DED6] list-none">
-                    <li>&bull; Sub-60s Emergency Response</li>
-                    <li>&bull; ServiceTitan Job Booking</li>
-                    <li>&bull; Maintenance Agreement Upsell</li>
-                    <li>&bull; System Age & Brand Capture</li>
+                    <li>&bull. Sub-60s Emergency Response.</li>
+                    <li>&bull. ServiceTitan Job Booking.</li>
+                    <li>&bull. Maintenance Agreement Upsell.</li>
+                    <li>&bull. System Age & Brand Capture.</li>
                   </ul>
                 </div>
               </div>
@@ -757,21 +722,19 @@ export default function ContractorAiReceptionistPage() {
                   <div className="font-mono text-xs text-[#F05A28] font-bold uppercase tracking-wider mb-2">
                     // ROOFING & STORM RESTORATION CONTRACTORS
                   </div>
-                  <h3 className="text-2xl sm:text-3xl font-extrabold text-[#14110F] mb-4">
-                    Storm Damage Lead Capture & Insurance Claim Qualification
-                  </h3>
+                  <h3 className="text-2xl sm:text-3xl font-extrabold text-[#14110F] mb-4">Storm Damage Lead Capture & Insurance Claim Qualification.</h3>
                   <p className="text-sm sm:text-base text-[#46403B] leading-relaxed mb-6">
-                    After a severe hail or wind storm, roofing companies can get hundreds of inbound calls within 48 hours. Our AI agent captures storm damage dates, insurance carrier details, claim numbers, and homeowner contact info. It schedules drone inspection estimates and routes high-probability insurance replacement jobs straight to your top project managers. Storm season also spikes homeowner search volume; our{' '}
+                    After a severe hail or wind storm, roofing companies can get hundreds of inbound calls within 48 hours. Our AI agent captures storm damage dates, insurance carrier details, claim numbers, and homeowner contact info. It schedules drone inspection estimates and routes high-probability insurance replacement jobs straight to your top project managers. Storm season also spikes homeowner search volume. our{' '}
                     <Link href="/services/roofing-seo" className="underline decoration-[#F05A28]/40 hover:text-[#F05A28]">
                       roofing SEO
                     </Link>{' '}
                     service is built for that same surge.
                   </p>
                   <ul className="grid grid-cols-2 gap-4 text-xs font-mono text-[#6E655F] pt-4 border-t border-[#E7DED6] list-none">
-                    <li>&bull; Storm Surge Call Scaling</li>
-                    <li>&bull; Insurance Claim Qualification</li>
-                    <li>&bull; Automated Inspection Booking</li>
-                    <li>&bull; Drone Estimate Scheduling</li>
+                    <li>&bull. Storm Surge Call Scaling.</li>
+                    <li>&bull. Insurance Claim Qualification.</li>
+                    <li>&bull. Automated Inspection Booking.</li>
+                    <li>&bull. Drone Estimate Scheduling.</li>
                   </ul>
                 </div>
                 <div className="lg:col-span-6 order-1 lg:order-2">
@@ -810,17 +773,15 @@ export default function ContractorAiReceptionistPage() {
                   <div className="font-mono text-xs text-[#F05A28] font-bold uppercase tracking-wider mb-2">
                     // PLUMBING & COMMERCIAL ELECTRICAL
                   </div>
-                  <h3 className="text-2xl sm:text-3xl font-extrabold text-[#14110F] mb-4">
-                    Burst Pipe Emergency Triage & Commercial Account Routing
-                  </h3>
+                  <h3 className="text-2xl sm:text-3xl font-extrabold text-[#14110F] mb-4">Burst Pipe Emergency Triage & Commercial Account Routing.</h3>
                   <p className="text-sm sm:text-base text-[#46403B] leading-relaxed mb-6">
                     Plumbers and electricians cannot afford to miss a high-margin emergency call. During an active flood, the system walks the homeowner through the water main shutoff steps and collects breaker box details. Commercial property manager requests route straight to assigned field technicians, PO number included.
                   </p>
                   <ul className="grid grid-cols-2 gap-4 text-xs font-mono text-[#6E655F] pt-4 border-t border-[#E7DED6] list-none">
-                    <li>&bull; Active Flood Shutoff Guidance</li>
-                    <li>&bull; Commercial Facility PO Capture</li>
-                    <li>&bull; Housecall Pro / Jobber Sync</li>
-                    <li>&bull; Real-Time Tech Dispatch SMS</li>
+                    <li>&bull. Active Flood Shutoff Guidance.</li>
+                    <li>&bull. Commercial Facility PO Capture.</li>
+                    <li>&bull. Housecall Pro / Jobber Sync.</li>
+                    <li>&bull. Real-Time Tech Dispatch SMS.</li>
                   </ul>
                 </div>
               </div>
@@ -829,19 +790,17 @@ export default function ContractorAiReceptionistPage() {
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                 <div className="lg:col-span-6 order-2 lg:order-1">
                   <div className="font-mono text-xs text-[#F05A28] font-bold uppercase tracking-wider mb-2">
-                    // GENERAL CONTRACTORS &amp; LUXURY REMODELERS
+                    // GENERAL CONTRACTORS &amp. LUXURY REMODELERS
                   </div>
-                  <h3 className="text-2xl sm:text-3xl font-extrabold text-[#14110F] mb-4">
-                    High-End Remodel Lead Qualification &amp; Subcontractor Inquiries
-                  </h3>
+                  <h3 className="text-2xl sm:text-3xl font-extrabold text-[#14110F] mb-4">High-End Remodel Lead Qualification &amp. Subcontractor Inquiries.</h3>
                   <p className="text-sm sm:text-base text-[#46403B] leading-relaxed mb-6">
                     General contractors lose hours filtering small handyman requests out of six-figure kitchen, bathroom, and home addition leads. Our AI screens homeowner budgets and verifies blueprint readiness up front. It books formal design consultations directly with your estimator.
                   </p>
                   <ul className="grid grid-cols-2 gap-4 text-xs font-mono text-[#6E655F] pt-4 border-t border-[#E7DED6] list-none">
-                    <li>&bull; Minimum Budget Qualification</li>
-                    <li>&bull; Buildertrend / Procore Sync</li>
-                    <li>&bull; Architectural Plan Screening</li>
-                    <li>&bull; Subcontractor Call Routing</li>
+                    <li>&bull. Minimum Budget Qualification.</li>
+                    <li>&bull. Buildertrend / Procore Sync.</li>
+                    <li>&bull. Architectural Plan Screening.</li>
+                    <li>&bull. Subcontractor Call Routing.</li>
                   </ul>
                 </div>
                 <div className="lg:col-span-6 order-1 lg:order-2">
@@ -878,19 +837,17 @@ export default function ContractorAiReceptionistPage() {
                 </div>
                 <div className="lg:col-span-6">
                   <div className="font-mono text-xs text-[#F05A28] font-bold uppercase tracking-wider mb-2">
-                    // COMMERCIAL PROPERTY &amp; FACILITIES MAINTENANCE
+                    // COMMERCIAL PROPERTY &amp. FACILITIES MAINTENANCE
                   </div>
-                  <h3 className="text-2xl sm:text-3xl font-extrabold text-[#14110F] mb-4">
-                    Property Manager Emergency Billing &amp; Recurring Service SLA Routing
-                  </h3>
+                  <h3 className="text-2xl sm:text-3xl font-extrabold text-[#14110F] mb-4">Property Manager Emergency Billing &amp. Recurring Service SLA Routing.</h3>
                   <p className="text-sm sm:text-base text-[#46403B] leading-relaxed mb-6">
                     Commercial facility operators manage strict Service Level Agreements (SLAs) for apartment complexes, retail plazas, and office parks. When a tenant reports a major HVAC chiller failure or a roof leak, our AI logs the commercial account code and the authorized PO billing limit. It routes the work order to the right commercial service team, with a sub-15-minute response logged for the SLA record.
                   </p>
                   <ul className="grid grid-cols-2 gap-4 text-xs font-mono text-[#6E655F] pt-4 border-t border-[#E7DED6] list-none">
-                    <li>&bull; Commercial Account Verification</li>
-                    <li>&bull; Authorized PO Limit Capture</li>
-                    <li>&bull; Building Lockbox &amp; Gate Code Intake</li>
-                    <li>&bull; Guaranteed SLA Telemetry Logging</li>
+                    <li>&bull. Commercial Account Verification.</li>
+                    <li>&bull. Authorized PO Limit Capture.</li>
+                    <li>&bull. Building Lockbox &amp. Gate Code Intake.</li>
+                    <li>&bull. Guaranteed SLA Telemetry Logging.</li>
                   </ul>
                 </div>
               </div>
@@ -905,9 +862,7 @@ export default function ContractorAiReceptionistPage() {
               <div className="font-mono text-xs text-[#F05A28] font-bold uppercase tracking-wider mb-2">
                 // TECHNICAL DISPATCH SPECIFICATION
               </div>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-4">
-                The Contractor AI Voice &amp; Dispatch Integration Stack
-              </h2>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-4">The Contractor AI Voice &amp. Dispatch Integration Stack.</h2>
               <p className="text-lg text-[#46403B]">
                 How we achieve zero hold times, real-time ServiceTitan and Jobber calendar sync, and intelligent emergency technician escalation.
               </p>
@@ -915,8 +870,8 @@ export default function ContractorAiReceptionistPage() {
 
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-8 list-none">
               <li className="p-8 rounded-2xl bg-white border border-[#E7DED6]">
-                <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">01 // TELEPHONY INGRESS &amp; OVERFLOW ROUTING</div>
-                <h3 className="text-lg font-bold text-[#14110F] mb-2">Dedicated SIP Trunking &amp; Smart Hunt Groups</h3>
+                <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">01 // TELEPHONY INGRESS &amp. OVERFLOW ROUTING</div>
+                <h3 className="text-lg font-bold text-[#14110F] mb-2">Dedicated SIP Trunking &amp. Smart Hunt Groups.</h3>
                 <p className="text-sm text-[#46403B] leading-relaxed">
                   We configure carrier-grade SIP trunks through Twilio, wired directly into your existing business numbers. The same Twilio connection that carries the call also carries the SMS confirmations after it. That means one telephony vendor to manage, not three. The AI can run as your full-time 24/7 receptionist. Or it can just handle rollover calls during a morning peak, or take over after 5 PM and on weekends. Either way, zero dropped connections.
                 </p>
@@ -924,47 +879,47 @@ export default function ContractorAiReceptionistPage() {
 
               <li className="p-8 rounded-2xl bg-white border border-[#E7DED6]">
                 <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">02 // FIELD SERVICE MANAGEMENT (FSM) SYNC</div>
-                <h3 className="text-lg font-bold text-[#14110F] mb-2">Bi-Directional ServiceTitan &amp; Jobber Integration</h3>
+                <h3 className="text-lg font-bold text-[#14110F] mb-2">Bi-Directional ServiceTitan &amp. Jobber Integration.</h3>
                 <p className="text-sm text-[#46403B] leading-relaxed">
                   The AI reaches ServiceTitan, Jobber, and Housecall Pro through direct function calling against their APIs, not screen-scraping. It checks real-time technician zone calendars, verifies travel buffers, creates customer records, and books appointment slots. There is no manual double-entry.
                 </p>
               </li>
 
               <li className="p-8 rounded-2xl bg-white border border-[#E7DED6]">
-                <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">03 // EMERGENCY TRIAGE &amp; ON-CALL WARM TRANSFER</div>
-                <h3 className="text-lg font-bold text-[#14110F] mb-2">Instantaneous Technician Phone Routing</h3>
+                <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">03 // EMERGENCY TRIAGE &amp. ON-CALL WARM TRANSFER</div>
+                <h3 className="text-lg font-bold text-[#14110F] mb-2">Instantaneous Technician Phone Routing.</h3>
                 <p className="text-sm text-[#46403B] leading-relaxed">
                   An urgent heating failure in freezing weather, or a burst commercial water pipe, gets recognized right away. The AI collects the property address, then dials your on-call technician line immediately. It briefs the tech on the caller's details before they even pick up.
                 </p>
               </li>
 
               <li className="p-8 rounded-2xl bg-white border border-[#E7DED6]">
-                <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">04 // GEOFENCING &amp; SERVICE RADIUS VALIDATION</div>
-                <h3 className="text-lg font-bold text-[#14110F] mb-2">Automated Postal Code &amp; Territory Filtering</h3>
+                <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">04 // GEOFENCING &amp. SERVICE RADIUS VALIDATION</div>
+                <h3 className="text-lg font-bold text-[#14110F] mb-2">Automated Postal Code &amp. Territory Filtering.</h3>
                 <p className="text-sm text-[#46403B] leading-relaxed">
                   Avoid sending estimators outside your profitable driving radius. The AI checks homeowner zip codes against your service territory database. Out-of-area requests get a polite decline, or a clear long-distance travel fee disclosure, whichever your business runs.
                 </p>
               </li>
 
               <li className="p-8 rounded-2xl bg-white border border-[#E7DED6]">
-                <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">05 // PROJECT BUDGET &amp; SCOPE QUALIFICATION</div>
-                <h3 className="text-lg font-bold text-[#14110F] mb-2">Custom Estimator Lead Qualification Matrix</h3>
+                <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">05 // PROJECT BUDGET &amp. SCOPE QUALIFICATION</div>
+                <h3 className="text-lg font-bold text-[#14110F] mb-2">Custom Estimator Lead Qualification Matrix.</h3>
                 <p className="text-sm text-[#46403B] leading-relaxed">
                   For roofing, remodeling, and electrical panel upgrades, the AI collects property size, equipment age, insurance involvement, and timeline. High-value leads get fast-tracked to senior estimators. Handyman-scale requests get custom guidance instead.
                 </p>
               </li>
 
               <li className="p-8 rounded-2xl bg-white border border-[#E7DED6]">
-                <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">06 // AUTOMATED SMS &amp; PHOTO UPLOAD PIPELINE</div>
-                <h3 className="text-lg font-bold text-[#14110F] mb-2">Pre-Estimate Visual Data Capture via Text</h3>
+                <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">06 // AUTOMATED SMS &amp. PHOTO UPLOAD PIPELINE</div>
+                <h3 className="text-lg font-bold text-[#14110F] mb-2">Pre-Estimate Visual Data Capture via Text.</h3>
                 <p className="text-sm text-[#46403B] leading-relaxed">
                   Before the call even ends, the AI sends an automated SMS with a secure photo upload link. Homeowners can photograph a breaker panel, a leaking under-sink pipe, an HVAC model tag, or hail-damaged shingles. Those images attach automatically to the work order, so the technician arrives with the right replacement parts already on the truck.
                 </p>
               </li>
 
               <li className="p-8 rounded-2xl bg-white border border-[#E7DED6]">
-                <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">07 // BILINGUAL ENGLISH &amp; SPANISH VOICE</div>
-                <h3 className="text-lg font-bold text-[#14110F] mb-2">Dynamic Conversational Language Detection</h3>
+                <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">07 // BILINGUAL ENGLISH &amp. SPANISH VOICE</div>
+                <h3 className="text-lg font-bold text-[#14110F] mb-2">Dynamic Conversational Language Detection.</h3>
                 <p className="text-sm text-[#46403B] leading-relaxed">
                   Bilingual communication matters most in Texas, Florida, California, and across the Southwest. The AI detects English or Spanish speech within three seconds. It runs the entire booking conversation in natural Spanish, then writes standardized English job notes and dispatch tickets inside your CRM. The same language-detection layer runs bilingual phone ordering on our{' '}
                   <Link href="/services/restaurant-ai-voice-agents" className="underline decoration-[#F05A28]/40 hover:text-[#F05A28]">
@@ -975,26 +930,26 @@ export default function ContractorAiReceptionistPage() {
               </li>
 
               <li className="p-8 rounded-2xl bg-white border border-[#E7DED6]">
-                <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">08 // SPAM &amp; VENDOR CALL DEFLECTION</div>
-                <h3 className="text-lg font-bold text-[#14110F] mb-2">Robo-Call Blocking &amp; Material Supplier Routing</h3>
+                <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">08 // SPAM &amp. VENDOR CALL DEFLECTION</div>
+                <h3 className="text-lg font-bold text-[#14110F] mb-2">Robo-Call Blocking &amp. Material Supplier Routing.</h3>
                 <p className="text-sm text-[#46403B] leading-relaxed">
-                  Contractors get dozens of daily telemarketing pitches: lead brokers, recruitment agencies, directory listing sales reps. The AI deflects cold pitches automatically. Material supply delivery confirmations route to your office manager's email instead, so your phone lines stay free for high-margin jobs.
+                  Contractors get dozens of daily telemarketing pitches: lead brokers, recruitment agencies, directory listing sales reps. The AI deflects cold pitches automatically. Material supply delivery confirmations route to your office manager's email instead. Your phone lines stay free for high-margin jobs.
                 </p>
               </li>
 
               <li className="p-8 rounded-2xl bg-white border border-[#E7DED6]">
                 <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">09 // COMMERCIAL PROPERTY MANAGER ACCOUNTS</div>
-                <h3 className="text-lg font-bold text-[#14110F] mb-2">Purchase Order &amp; Facility Access Capture</h3>
+                <h3 className="text-lg font-bold text-[#14110F] mb-2">Purchase Order &amp. Facility Access Capture.</h3>
                 <p className="text-sm text-[#46403B] leading-relaxed">
                   Commercial trade accounts do not work like homeowner calls. The AI captures the facility's commercial account ID, the authorized PO number, building lockbox codes, and emergency billing authorization, all before the call ends.
                 </p>
               </li>
 
               <li className="p-8 rounded-2xl bg-white border border-[#E7DED6]">
-                <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">10 // OPERATIONAL TELEMETRY &amp; CALL RECORDINGS</div>
-                <h3 className="text-lg font-bold text-[#14110F] mb-2">Complete Dispatch Board &amp; Lead Conversion Analytics</h3>
+                <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">10 // OPERATIONAL TELEMETRY &amp. CALL RECORDINGS</div>
+                <h3 className="text-lg font-bold text-[#14110F] mb-2">Complete Dispatch Board &amp. Lead Conversion Analytics.</h3>
                 <p className="text-sm text-[#46403B] leading-relaxed">
-                  You get a live dashboard of daily call volumes, booking conversion rates, average handle times, and technician route efficiency. De-identified call transcripts are included too, so you can track customer satisfaction on an ongoing basis, not just at renewal time. Staff sign in through single sign-on, and role-based access control keeps a dispatcher's view separate from an owner's. We also run periodic penetration testing against the telephony stack, the same practice we hold every voice deployment to.
+                  You get a live dashboard of daily call volumes, booking conversion rates, average handle times, and technician route efficiency. De-identified call transcripts are included too. You can track customer satisfaction on an ongoing basis, not just at renewal time. Staff sign in through single sign-on. Role-based access control keeps a dispatcher view separate from an owner view. We also run periodic penetration testing against the telephony stack, the same practice we hold every voice deployment to.
                 </p>
               </li>
             </ul>
@@ -1008,9 +963,7 @@ export default function ContractorAiReceptionistPage() {
               <div className="font-mono text-xs text-[#F05A28] font-bold uppercase tracking-wider mb-2">
                 // INTEGRATION DEEP DIVE
               </div>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-4">
-                How the ServiceTitan and Jobber Integrations Actually Work
-              </h2>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-4">How the ServiceTitan and Jobber Integrations Actually Work.</h2>
               <p className="text-lg text-[#46403B]">
                 ServiceTitan and Jobber do not share a data model. We build to each platform separately, not to one generic FSM API.
               </p>
@@ -1041,7 +994,7 @@ export default function ContractorAiReceptionistPage() {
                 <div className="font-mono text-xs text-[#F05A28] font-bold uppercase tracking-wider mb-3">
                   // SERVICETITAN DATA MODEL
                 </div>
-                <h3 className="text-xl font-bold text-[#14110F] mb-3">Job, Customer, Location, Dispatch Board</h3>
+                <h3 className="text-xl font-bold text-[#14110F] mb-3">Job, Customer, Location, Dispatch Board.</h3>
                 <p className="text-sm text-[#46403B] leading-relaxed mb-4">
                   In ServiceTitan, the agent creates a Customer record first, then a Location tied to that Customer. It opens a Job against both, tags it with the right business unit and campaign, and drops it onto the Dispatch Board. A technician sees the same Job your office would see if a dispatcher had typed it in by hand.
                 </p>
@@ -1062,7 +1015,7 @@ export default function ContractorAiReceptionistPage() {
                 <div className="font-mono text-xs text-[#F05A28] font-bold uppercase tracking-wider mb-3">
                   // JOBBER DATA MODEL
                 </div>
-                <h3 className="text-xl font-bold text-[#14110F] mb-3">Client, Request, and the Convert-to-Job Step</h3>
+                <h3 className="text-xl font-bold text-[#14110F] mb-3">Client, Request. The Convert-to-Job Step.</h3>
                 <p className="text-sm text-[#46403B] leading-relaxed mb-4">
                   Jobber works differently. The agent creates a Client, then a Request against that Client. Your office reviews the Request and converts it to a Job on its own schedule. That extra approval step is deliberate. It matches how most Jobber shops already run morning triage.
                 </p>
@@ -1084,7 +1037,7 @@ export default function ContractorAiReceptionistPage() {
               The same connector pattern extends past the FSM itself. If your office phone system already runs on RingCentral, Dialpad, or a traditional PBX, we port the number over with no downtime. If your FSM already pushes completed jobs into QuickBooks or Xero, that pass-through keeps working exactly as it does today. If a larger commercial bid pipeline lives in Pipedrive instead of your FSM, we can wire that in too.
             </p>
             <p className="mt-6 text-sm sm:text-base text-[#46403B] leading-relaxed max-w-4xl mx-auto text-center">
-              The phone conversation a homeowner hears is identical either way. Only the field mapping and the API calls underneath change. Both platforms authenticate the connection through OAuth, not a shared login, so you can revoke access instantly if you ever need to. The agent's tool use also stays scoped to a short, named list of actions: check the schedule, create the job, send the SMS. There is no open-ended access to your FSM. If your business runs both platforms, or switches between them, we rebuild the mapping layer instead of asking your team to change how they work. This is the same connector-first approach behind our broader{' '}
+              The phone conversation a homeowner hears is identical either way. Only the field mapping and the API calls underneath change. Both platforms authenticate the connection through OAuth, not a shared login. You can revoke access instantly if you ever need to. The agent's tool use also stays scoped to a short, named list of actions: check the schedule, create the job, send the SMS. There is no open-ended access to your FSM. If your business runs both platforms, or switches between them, we rebuild the mapping layer instead of asking your team to change how they work. This is the same connector-first approach behind our broader{' '}
               <Link href="/services/ai-agent-development" className="underline decoration-[#F05A28]/40 hover:text-[#F05A28]">
                 AI agent development
               </Link>{' '}
@@ -1100,9 +1053,7 @@ export default function ContractorAiReceptionistPage() {
               <div className="font-mono text-xs text-[#F05A28] font-bold uppercase tracking-wider mb-2">
                 // ARCHITECTURAL COMPARISON
               </div>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-4">
-                FactoryJet Contractor AI vs Traditional Answering Services
-              </h2>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-4">FactoryJet Contractor AI vs Traditional Answering Services.</h2>
               <p className="text-lg text-[#46403B]">
                 Why purpose-built field service AI voice infrastructure outperforms generic phone answering centers.
               </p>
@@ -1112,52 +1063,52 @@ export default function ContractorAiReceptionistPage() {
               <table className="w-full text-left border-collapse bg-white rounded-2xl overflow-hidden shadow-sm border border-[#E7DED6]">
                 <thead>
                   <tr className="border-b border-[#E7DED6] bg-[#FAFAF7] text-xs font-mono text-[#6E655F]">
-                    <th className="p-4 sm:p-6 font-bold text-[#14110F]">KEY CAPABILITY</th>
-                    <th className="p-4 sm:p-6 font-bold text-[#F05A28] bg-[#FFF8F5]">FACTORYJET CONTRACTOR AI</th>
-                    <th className="p-4 sm:p-6 font-bold text-[#14110F]">HUMAN ANSWERING (RUBY/ETC)</th>
-                    <th className="p-4 sm:p-6 font-bold text-[#14110F]">GENERIC SAAS PHONE BOTS</th>
+                    <th className="p-4 sm:p-6 font-bold text-[#14110F]">KEY CAPABILITY.</th>
+                    <th className="p-4 sm:p-6 font-bold text-[#F05A28] bg-[#FFF8F5]">FACTORYJET CONTRACTOR AI.</th>
+                    <th className="p-4 sm:p-6 font-bold text-[#14110F]">HUMAN ANSWERING (RUBY/ETC).</th>
+                    <th className="p-4 sm:p-6 font-bold text-[#14110F]">GENERIC SAAS PHONE BOTS.</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-[#E7DED6] text-sm text-[#46403B]">
                   <tr className="bg-[#FFF8F5]/30">
-                    <td className="p-4 sm:p-6 font-bold text-[#14110F]">ServiceTitan / Jobber Live Booking</td>
+                    <td className="p-4 sm:p-6 font-bold text-[#14110F]">ServiceTitan / Jobber Live Booking.</td>
                     <td className="p-4 sm:p-6 font-bold text-[#F05A28] bg-[#FFF8F5]">
                       Direct 2-way dispatch calendar sync
                     </td>
-                    <td className="p-4 sm:p-6 text-[#6E655F]">Takes handwritten text messages</td>
-                    <td className="p-4 sm:p-6 text-[#6E655F]">Basic webhook form posts only</td>
+                    <td className="p-4 sm:p-6 text-[#6E655F]">Takes handwritten text messages.</td>
+                    <td className="p-4 sm:p-6 text-[#6E655F]">Basic webhook form posts only.</td>
                   </tr>
                   <tr>
-                    <td className="p-4 sm:p-6 font-bold text-[#14110F]">Emergency Warm Phone Transfer</td>
+                    <td className="p-4 sm:p-6 font-bold text-[#14110F]">Emergency Warm Phone Transfer.</td>
                     <td className="p-4 sm:p-6 font-bold text-[#F05A28] bg-[#FFF8F5]">
                       Instant on-call tech phone routing
                     </td>
-                    <td className="p-4 sm:p-6 text-[#6E655F]">Delayed manual pager alert</td>
-                    <td className="p-4 sm:p-6 text-[#6E655F]">Not supported</td>
+                    <td className="p-4 sm:p-6 text-[#6E655F]">Delayed manual pager alert.</td>
+                    <td className="p-4 sm:p-6 text-[#6E655F]">Not supported.</td>
                   </tr>
                   <tr className="bg-[#FFF8F5]/30">
-                    <td className="p-4 sm:p-6 font-bold text-[#14110F]">Address Geofencing & Scope Filter</td>
+                    <td className="p-4 sm:p-6 font-bold text-[#14110F]">Address Geofencing & Scope Filter.</td>
                     <td className="p-4 sm:p-6 font-bold text-[#F05A28] bg-[#FFF8F5]">
                       Automated zip code & budget checks
                     </td>
-                    <td className="p-4 sm:p-6 text-[#6E655F]">Passes all callers through</td>
-                    <td className="p-4 sm:p-6 text-[#6E655F]">Rigid menu options</td>
+                    <td className="p-4 sm:p-6 text-[#6E655F]">Passes all callers through.</td>
+                    <td className="p-4 sm:p-6 text-[#6E655F]">Rigid menu options.</td>
                   </tr>
                   <tr>
-                    <td className="p-4 sm:p-6 font-bold text-[#14110F]">Response Latency & Conversational Speed</td>
+                    <td className="p-4 sm:p-6 font-bold text-[#14110F]">Response Latency & Conversational Speed.</td>
                     <td className="p-4 sm:p-6 font-bold text-[#F05A28] bg-[#FFF8F5]">
                       Sub-500ms real-time voice
                     </td>
-                    <td className="p-4 sm:p-6 text-[#6E655F]">Long hold times during surges</td>
-                    <td className="p-4 sm:p-6 text-[#6E655F]">1.5s - 3.0s robotic lag</td>
+                    <td className="p-4 sm:p-6 text-[#6E655F]">Long hold times during surges.</td>
+                    <td className="p-4 sm:p-6 text-[#6E655F]">1.5s - 3.0s robotic lag.</td>
                   </tr>
                   <tr className="bg-[#FFF8F5]/30">
-                    <td className="p-4 sm:p-6 font-bold text-[#14110F]">Pricing Model</td>
+                    <td className="p-4 sm:p-6 font-bold text-[#14110F]">Pricing Model.</td>
                     <td className="p-4 sm:p-6 font-bold text-[#F05A28] bg-[#FFF8F5]">
                       Fixed build fee, zero per-minute tax
                     </td>
-                    <td className="p-4 sm:p-6 text-[#6E655F]">$1.50 - $2.50 per minute billing</td>
-                    <td className="p-4 sm:p-6 text-[#6E655F]">Monthly recurring subscription</td>
+                    <td className="p-4 sm:p-6 text-[#6E655F]">$1.50 - $2.50 per minute billing.</td>
+                    <td className="p-4 sm:p-6 text-[#6E655F]">Monthly recurring subscription.</td>
                   </tr>
                 </tbody>
               </table>
@@ -1172,9 +1123,7 @@ export default function ContractorAiReceptionistPage() {
               <div className="font-mono text-xs text-[#F05A28] font-bold uppercase tracking-wider mb-2">
                 // ROLLOUT PROCESS
               </div>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-4">
-                How We Roll Out Your Contractor AI Receptionist
-              </h2>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-4">How We Roll Out Your Contractor AI Receptionist.</h2>
               <p className="text-lg text-[#46403B]">
                 Four phases, three to five weeks, no downtime on your existing phone number. Here is what happens in each one.
               </p>
@@ -1184,7 +1133,7 @@ export default function ContractorAiReceptionistPage() {
               <li className="flex gap-6 p-6 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6]">
                 <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#F05A28] text-white font-bold font-mono flex items-center justify-center">1</div>
                 <div>
-                  <h3 className="text-lg font-bold text-[#14110F] mb-2">Trade Service Scope &amp; FSM API Mapping</h3>
+                  <h3 className="text-lg font-bold text-[#14110F] mb-2">Trade Service Scope &amp. FSM API Mapping.</h3>
                   <p className="text-sm text-[#46403B] leading-relaxed">
                     We map your service menu, pricing ranges, and emergency dispatch tiers. We connect live API webhooks to ServiceTitan or Jobber and confirm your technician zones. This phase sets the data both sides will rely on later.
                   </p>
@@ -1193,7 +1142,7 @@ export default function ContractorAiReceptionistPage() {
               <li className="flex gap-6 p-6 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6]">
                 <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#F05A28] text-white font-bold font-mono flex items-center justify-center">2</div>
                 <div>
-                  <h3 className="text-lg font-bold text-[#14110F] mb-2">Voice &amp; Telephony Architecture</h3>
+                  <h3 className="text-lg font-bold text-[#14110F] mb-2">Voice &amp. Telephony Architecture.</h3>
                   <p className="text-sm text-[#46403B] leading-relaxed">
                     We configure dedicated SIP trunking, Deepgram speech models, and natural American voice synthesis. The pipeline is tuned to handle mid-sentence interruptions, job-site background noise, and callers who talk over the greeting.
                   </p>
@@ -1202,7 +1151,7 @@ export default function ContractorAiReceptionistPage() {
               <li className="flex gap-6 p-6 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6]">
                 <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#F05A28] text-white font-bold font-mono flex items-center justify-center">3</div>
                 <div>
-                  <h3 className="text-lg font-bold text-[#14110F] mb-2">Emergency Triage &amp; SMS Automation</h3>
+                  <h3 className="text-lg font-bold text-[#14110F] mb-2">Emergency Triage &amp. SMS Automation.</h3>
                   <p className="text-sm text-[#46403B] leading-relaxed">
                     We program deterministic warm transfer rules for burst pipes, no-heat calls, and other true emergencies, built around your own dispatch team's definitions. Automated SMS address confirmations and photo links get wired in during this phase too.
                   </p>
@@ -1211,7 +1160,7 @@ export default function ContractorAiReceptionistPage() {
               <li className="flex gap-6 p-6 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6]">
                 <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#F05A28] text-white font-bold font-mono flex items-center justify-center">4</div>
                 <div>
-                  <h3 className="text-lg font-bold text-[#14110F] mb-2">Parallel Testing &amp; Zero-Downtime Cutover</h3>
+                  <h3 className="text-lg font-bold text-[#14110F] mb-2">Parallel Testing &amp. Zero-Downtime Cutover.</h3>
                   <p className="text-sm text-[#46403B] leading-relaxed">
                     We run the agent through a call-scenario evaluation harness with your field dispatchers before it ever touches a real customer. Background noise handling gets calibrated on real recordings. Your phone number stays live the entire time, since we route after-hours or overflow lines first and cut over fully once every scenario passes.
                   </p>
@@ -1269,9 +1218,7 @@ export default function ContractorAiReceptionistPage() {
                 <div className="font-mono text-xs text-[#F05A28] font-bold uppercase tracking-wider mb-2">
                   // DIRECT CONTRACTOR ARCHITECTURE DISCOVERY
                 </div>
-                <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-6">
-                  Direct Engineering Oversight with Founder Bhavesh Barot
-                </h2>
+                <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-6">Direct Engineering Oversight with Founder Bhavesh Barot.</h2>
                 <p className="text-base sm:text-lg text-[#46403B] leading-relaxed mb-6">
                   Trade contractors cannot afford a lost phone call or a misrouted job. At FactoryJet, founder Bhavesh Barot leads every discovery call himself. We review your ServiceTitan or Jobber setup, walk through your emergency call procedures, and map your custom voice logic. All of that happens before we write a single line of code.
                 </p>

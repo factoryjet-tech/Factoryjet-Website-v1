@@ -7,6 +7,7 @@ import HeroInlineForm from '@/components/HeroInlineForm';
 import FAQ, { type FAQItem, type FAQCategory } from '@/components/v2/FAQ';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
+import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
 const CANONICAL_URL = 'https://factoryjet.com/services/automotive-ai-voice-agents';
@@ -171,7 +172,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'security',
     question: 'How fast can a dealership deploy a custom AI voice receptionist system?',
     answer:
-      'A standard service lane voice booking pipeline, connecting to CDK Global, Reynolds & Reynolds, or Tekion, deploys in 3 to 5 weeks. That covers telephony number porting, DMS sandbox certification, and voice persona tuning for your dealership. Most of that time goes to DMS sandbox certification, and the DMS vendor controls that step, not us. Dealerships that start the certification request in week one typically land on the faster end of the range.',
+      'A standard service lane voice booking pipeline, connecting to CDK Global, Reynolds & Reynolds, or Tekion, deploys in 3 to 5 weeks. That covers telephony number porting, DMS sandbox certification, and voice persona tuning for your dealership. Most of that time goes to DMS sandbox certification. The DMS vendor controls that step, not us. Dealerships that start the certification request in week one typically land on the faster end of the range.',
   },
   {
     category: 'service',
@@ -205,160 +206,149 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
   },
 ];
 
-export default function AutomotiveAiVoiceAgentsPage() {
-  const schemaWebPage = {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    '@id': `${CANONICAL_URL}#webpage`,
-    url: CANONICAL_URL,
-    name: PAGE_TITLE,
-    description: PAGE_DESC,
-    dateModified: PAGE_MODIFIED,
-    publisher: {
-      '@type': 'Organization',
-      name: 'FactoryJet',
-      url: 'https://factoryjet.com',
-      logo: 'https://factoryjet.com/FinalLogo.svg',
-    },
-    author: {
-      '@type': 'Person',
-      name: 'Bhavesh Barot',
-      url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-      jobTitle: 'Founder & CEO, FactoryJet',
-    },
-  };
 
-  const schemaService = {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    '@id': `${CANONICAL_URL}#service`,
-    name: 'Automotive AI Voice Agent Development & Dealership BDC Automation',
-    serviceType: 'Automotive AI Voice Telephony Engineering',
-    provider: {
-      '@type': 'Organization',
-      name: 'FactoryJet',
-      url: 'https://factoryjet.com',
-    },
-    areaServed: {
-      '@type': 'Country',
-      name: 'United States',
-    },
-    description: PAGE_DESC,
-    hasOfferCatalog: {
-      '@type': 'OfferCatalog',
-      name: 'Automotive AI Voice Solutions',
-      itemListElement: [
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: '24/7 Dealership Service Lane AI Voice Booking & Recall Lookup',
-          },
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'DMS Bi-Directional Synchronization (CDK, Reynolds, Tekion, Xtime)',
-          },
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Parts Counter Inbound Phone Lookup & Wholesale Inventory Sync',
-          },
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Collision Center Repair Estimate Intake & Tow Dispatch Voice Agent',
-          },
-        },
-      ],
-    },
-  };
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': `${CANONICAL_URL}#webpage`,
+  url: CANONICAL_URL,
+  name: PAGE_TITLE,
+  description: PAGE_DESC,
+  dateModified: PAGE_MODIFIED,
+  publisher: {
+    '@type': 'Organization',
+    name: 'FactoryJet',
+    url: 'https://factoryjet.com',
+    logo: 'https://factoryjet.com/FinalLogo.svg',
+  },
+  author: {
+    '@type': 'Person',
+    name: 'Bhavesh Barot',
+    url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
+    jobTitle: 'Founder & CEO, FactoryJet',
+  },
+};
 
-  const schemaHowTo = {
-    '@context': 'https://schema.org',
-    '@type': 'HowTo',
-    name: 'How FactoryJet Engineers and Deploys Automotive AI Voice Agents for Dealerships',
-    description:
-      'A 4-step engineering blueprint to automate service lane scheduling, DMS integration, and parts phone triage with sub-500ms voice latency.',
-    step: [
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': `${CANONICAL_URL}#service`,
+  name: 'Automotive AI Voice Agent Development & Dealership BDC Automation',
+  serviceType: 'Automotive AI Voice Telephony Engineering',
+  provider: {
+    '@type': 'Organization',
+    name: 'FactoryJet',
+    url: 'https://factoryjet.com',
+  },
+  areaServed: {
+    '@type': 'Country',
+    name: 'United States',
+  },
+  description: PAGE_DESC,
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Automotive AI Voice Solutions',
+    itemListElement: [
       {
-        '@type': 'HowToStep',
-        position: 1,
-        name: 'DMS & Telephony Telecommunication Infrastructure Audit',
-        text: 'We map your existing Dealer Management System (CDK, Reynolds, Tekion), review service advisor scheduling templates, and configure direct SIP trunking gateways.',
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: '24/7 Dealership Service Lane AI Voice Booking & Recall Lookup',
+        },
       },
       {
-        '@type': 'HowToStep',
-        position: 2,
-        name: 'Acoustic Voice Pipeline & VIN Extraction Calibration',
-        text: 'We build sub-500ms voice conversational models with noise-suppression, NATO phonetic VIN decoding, and dealership service op-code logic.',
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'DMS Bi-Directional Synchronization (CDK, Reynolds, Tekion, Xtime)',
+        },
       },
       {
-        '@type': 'HowToStep',
-        position: 3,
-        name: 'Bi-Directional DMS Connector & Advisor Screen-Pop Integration',
-        text: 'We wire secure REST and SOAP API connectors to insert confirmed repair appointments directly into your live shop loading calendar with warm transfer screen-pops.',
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Parts Counter Inbound Phone Lookup & Wholesale Inventory Sync',
+        },
       },
       {
-        '@type': 'HowToStep',
-        position: 4,
-        name: 'After-Hours Overflow Testing & Production Dealership Rollout',
-        text: 'The voice agent handles after-hours and overflow service traffic before scaling to primary daytime service drive telephony with full code ownership handover.',
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Collision Center Repair Estimate Intake & Tow Dispatch Voice Agent',
+        },
       },
     ],
-  };
+  },
+};
 
-  const schemaBreadcrumbs = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: BREADCRUMB_ITEMS.map((crumb, i) => ({
-      '@type': 'ListItem',
-      position: i + 1,
-      name: crumb.name,
-      item: crumb.url,
-    })),
-  };
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'How FactoryJet Engineers and Deploys Automotive AI Voice Agents for Dealerships',
+  description:
+    'A 4-step engineering blueprint to automate service lane scheduling, DMS integration, and parts phone triage with sub-500ms voice latency.',
+  step: [
+    {
+      '@type': 'HowToStep',
+      position: 1,
+      name: 'DMS & Telephony Telecommunication Infrastructure Audit',
+      text: 'We map your existing Dealer Management System (CDK, Reynolds, Tekion), review service advisor scheduling templates, and configure direct SIP trunking gateways.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 2,
+      name: 'Acoustic Voice Pipeline & VIN Extraction Calibration',
+      text: 'We build sub-500ms voice conversational models with noise-suppression, NATO phonetic VIN decoding, and dealership service op-code logic.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 3,
+      name: 'Bi-Directional DMS Connector & Advisor Screen-Pop Integration',
+      text: 'We wire secure REST and SOAP API connectors to insert confirmed repair appointments directly into your live shop loading calendar with warm transfer screen-pops.',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 4,
+      name: 'After-Hours Overflow Testing & Production Dealership Rollout',
+      text: 'The voice agent handles after-hours and overflow service traffic before scaling to primary daytime service drive telephony with full code ownership handover.',
+    },
+  ],
+};
 
-  const schemaFAQ = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: FAQ_ITEMS.map((item) => ({
-      '@type': 'Question',
-      name: item.question,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: item.answer,
-      },
-    })),
-  };
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+};
+
+
+export default function AutomotiveAiVoiceAgentsPage() {
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaWebPage) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaService) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaHowTo) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
       />
+      <BreadcrumbSchema items={BREADCRUMB_ITEMS} />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaBreadcrumbs) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaFAQ) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
       <SiteHeader />
@@ -375,16 +365,16 @@ export default function AutomotiveAiVoiceAgentsPage() {
               <div className="lg:col-span-7">
                 <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#FFF8F5] border border-[#F05A28]/30 mb-6">
                   <span className="font-mono text-xs text-[#F05A28] font-bold tracking-wide">
-                    // AUTOMOTIVE VOICE AI &amp; DEALERSHIP BDC AUTOMATION
+                    // AUTOMOTIVE VOICE AI &amp. DEALERSHIP BDC AUTOMATION
                   </span>
                 </div>
 
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#14110F] font-heading leading-tight mb-6">
-                  Custom AI Voice Agents for Auto Dealerships with Live CDK &amp; Reynolds DMS Sync.
+                  Custom AI Voice Agents for Auto Dealerships with Live CDK &amp. Reynolds DMS Sync.
                 </h1>
 
                 <p className="text-lg sm:text-xl text-[#46403B] mb-8 leading-relaxed">
-                  We build sub-500ms AI voice receptionists for franchised auto dealerships, independent collision centers, and commercial truck operators. Every inbound service call gets answered on the first ring. Each caller gets a live VIN decode, an open-recall check against OEM databases, and a confirmed appointment. Bookings sync straight into CDK Global, Reynolds &amp; Reynolds, or Tekion the instant the caller hangs up.
+                  We build sub-500ms AI voice receptionists for franchised auto dealerships, independent collision centers, and commercial truck operators. Every inbound service call gets answered on the first ring. Each caller gets a live VIN decode, an open-recall check against OEM databases, and a confirmed appointment. Bookings sync straight into CDK Global, Reynolds &amp. Reynolds, or Tekion the instant the caller hangs up.
                 </p>
 
                 <div className="mb-8">
@@ -402,7 +392,7 @@ export default function AutomotiveAiVoiceAgentsPage() {
                   </div>
                   <div className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-[#F05A28]" />
-                    <span>CDK, Reynolds &amp; Tekion API Sync</span>
+                    <span>CDK, Reynolds &amp. Tekion API Sync</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-[#F05A28]" />
@@ -430,7 +420,7 @@ export default function AutomotiveAiVoiceAgentsPage() {
                       <span className="text-[#F05A28] font-bold">SUB-500MS AUDIO</span>
                     </div>
                     <div className="font-bold text-[#14110F]">
-                      CDK Drive DMS &bull; 2024 Ford F-150 Brake Service Booked (28s)
+                      CDK Drive DMS &bull. 2024 Ford F-150 Brake Service Booked (28s)
                     </div>
                   </div>
                 </div>
@@ -444,7 +434,7 @@ export default function AutomotiveAiVoiceAgentsPage() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="rounded-2xl border border-[#F05A28]/30 bg-white p-6 sm:p-8 shadow-sm">
               <div className="font-mono text-xs text-[#F05A28] font-bold uppercase tracking-wider mb-2">
-                // EXECUTIVE SUMMARY &amp; SYSTEM DEFINITION
+                // EXECUTIVE SUMMARY &amp. SYSTEM DEFINITION
               </div>
               <h2 className="text-xl sm:text-2xl font-bold text-[#14110F] font-heading mb-4">
                 What is an Automotive AI Voice Agent?
@@ -463,9 +453,7 @@ export default function AutomotiveAiVoiceAgentsPage() {
               <div className="font-mono text-xs text-[#F05A28] font-bold uppercase tracking-wider mb-2">
                 // VERIFIED AUTOMOTIVE BDC BENCHMARKS
               </div>
-              <h2 className="text-3xl font-extrabold text-[#14110F] font-heading">
-                The Cost of Missed Calls in Dealership Fixed Operations
-              </h2>
+              <h2 className="text-3xl font-extrabold text-[#14110F] font-heading">The Cost of Missed Calls in Dealership Fixed Operations.</h2>
               <p className="text-base sm:text-lg text-[#46403B] mt-3">
                 How abandoned service calls and delayed phone routing cost American auto dealers millions annually.
               </p>
@@ -534,9 +522,7 @@ export default function AutomotiveAiVoiceAgentsPage() {
               <div className="font-mono text-xs text-[#F05A28] font-bold uppercase tracking-wider mb-2">
                 // ENTERPRISE AUTOMOTIVE CAPABILITIES
               </div>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-4">
-                Engineered for High-Volume Dealership Service Drives
-              </h2>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-4">Engineered for High-Volume Dealership Service Drives.</h2>
               <p className="text-lg text-[#46403B]">
                 Everything you need to automate service lane scheduling, parts lookup, and repair status calls, at sub-500ms voice speed.
               </p>
@@ -547,9 +533,7 @@ export default function AutomotiveAiVoiceAgentsPage() {
                 <div className="w-12 h-12 rounded-xl bg-[#FFF8F5] border border-[#F05A28]/20 flex items-center justify-center text-[#F05A28] font-bold font-mono text-lg mb-6">
                   01
                 </div>
-                <h3 className="text-xl font-bold text-[#14110F] mb-3">
-                  Sub-500ms Conversational Voice Reception
-                </h3>
+                <h3 className="text-xl font-bold text-[#14110F] mb-3">Sub-500ms Conversational Voice Reception.</h3>
                 <p className="text-sm text-[#46403B] leading-relaxed mb-4">
                   Answers incoming dealership calls on the first ring, with sub-500ms acoustic turn-taking. Understands natural vehicle descriptions, service questions, and customer preferences, no phone-tree IVR menu required.
                 </p>
@@ -570,11 +554,9 @@ export default function AutomotiveAiVoiceAgentsPage() {
                 <div className="w-12 h-12 rounded-xl bg-[#FFF8F5] border border-[#F05A28]/20 flex items-center justify-center text-[#F05A28] font-bold font-mono text-lg mb-6">
                   02
                 </div>
-                <h3 className="text-xl font-bold text-[#14110F] mb-3">
-                  Bi-Directional Live DMS Scheduling
-                </h3>
+                <h3 className="text-xl font-bold text-[#14110F] mb-3">Bi-Directional Live DMS Scheduling.</h3>
                 <p className="text-sm text-[#46403B] leading-relaxed mb-4">
-                  Connects directly to CDK Global, Reynolds &amp; Reynolds, Tekion, and Xtime. It checks technician availability and bay lift limits, then inserts the confirmed booking into the service schedule.
+                  Connects directly to CDK Global, Reynolds &amp. Reynolds, Tekion, and Xtime. It checks technician availability and bay lift limits, then inserts the confirmed booking into the service schedule.
                 </p>
                 <ul className="space-y-2 text-xs font-mono text-[#6E655F]">
                   <li className="flex items-center gap-2">
@@ -593,9 +575,7 @@ export default function AutomotiveAiVoiceAgentsPage() {
                 <div className="w-12 h-12 rounded-xl bg-[#FFF8F5] border border-[#F05A28]/20 flex items-center justify-center text-[#F05A28] font-bold font-mono text-lg mb-6">
                   03
                 </div>
-                <h3 className="text-xl font-bold text-[#14110F] mb-3">
-                  Automated VIN Decoding &amp; Recall Checks
-                </h3>
+                <h3 className="text-xl font-bold text-[#14110F] mb-3">Automated VIN Decoding &amp. Recall Checks.</h3>
                 <p className="text-sm text-[#46403B] leading-relaxed mb-4">
                   Runs a VIN decode on every 17-digit number, straight from the caller&apos;s voice. It queries live NHTSA and OEM databases to flag any open safety recall. Recall parts get reserved in inventory automatically.
                 </p>
@@ -616,9 +596,7 @@ export default function AutomotiveAiVoiceAgentsPage() {
                 <div className="w-12 h-12 rounded-xl bg-[#FFF8F5] border border-[#F05A28]/20 flex items-center justify-center text-[#F05A28] font-bold font-mono text-lg mb-6">
                   04
                 </div>
-                <h3 className="text-xl font-bold text-[#14110F] mb-3">
-                  Parts Counter Phone Lookup &amp; Inventory Sync
-                </h3>
+                <h3 className="text-xl font-bold text-[#14110F] mb-3">Parts Counter Phone Lookup &amp. Inventory Sync.</h3>
                 <p className="text-sm text-[#46403B] leading-relaxed mb-4">
                   Answers retail and wholesale trade parts calls. It checks on-hand bin stock balances across warehouses and quotes tiered pricing. Then it stages the pick-up order for parts personnel.
                 </p>
@@ -639,9 +617,7 @@ export default function AutomotiveAiVoiceAgentsPage() {
                 <div className="w-12 h-12 rounded-xl bg-[#FFF8F5] border border-[#F05A28]/20 flex items-center justify-center text-[#F05A28] font-bold font-mono text-lg mb-6">
                   05
                 </div>
-                <h3 className="text-xl font-bold text-[#14110F] mb-3">
-                  Advisor Screen-Pop &amp; Warm Call Transfer
-                </h3>
+                <h3 className="text-xl font-bold text-[#14110F] mb-3">Advisor Screen-Pop &amp. Warm Call Transfer.</h3>
                 <p className="text-sm text-[#46403B] leading-relaxed mb-4">
                   Routes complex mechanical questions to an available human service advisor with a SIP warm transfer. The advisor&apos;s screen, already open behind your dealership single sign-on, shows a live pop-up with the vehicle VIN and customer history.
                 </p>
@@ -662,11 +638,9 @@ export default function AutomotiveAiVoiceAgentsPage() {
                 <div className="w-12 h-12 rounded-xl bg-[#FFF8F5] border border-[#F05A28]/20 flex items-center justify-center text-[#F05A28] font-bold font-mono text-lg mb-6">
                   06
                 </div>
-                <h3 className="text-xl font-bold text-[#14110F] mb-3">
-                  Real-Time Repair Order (RO) Status Updates
-                </h3>
+                <h3 className="text-xl font-bold text-[#14110F] mb-3">Real-Time Repair Order (RO) Status Updates.</h3>
                 <p className="text-sm text-[#46403B] leading-relaxed mb-4">
-                  Answers customer inquiry calls asking: "Is my car ready?" It checks live repair order status in CDK or Reynolds &amp; Reynolds, plus multi-point inspection notes and wash bay readiness. No technician gets interrupted on the floor.
+                  Answers customer inquiry calls asking: "Is my car ready?" It checks live repair order status in CDK or Reynolds &amp. Reynolds, plus multi-point inspection notes and wash bay readiness. No technician gets interrupted on the floor.
                 </p>
                 <ul className="space-y-2 text-xs font-mono text-[#6E655F]">
                   <li className="flex items-center gap-2">
@@ -727,9 +701,7 @@ export default function AutomotiveAiVoiceAgentsPage() {
               <div className="font-mono text-xs text-[#F05A28] font-bold uppercase tracking-wider mb-2">
                 // TAILORED AUTOMOTIVE VERTICALS
               </div>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-4">
-                Engineered for High-Volume Automotive Service Operations
-              </h2>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-4">Engineered for High-Volume Automotive Service Operations.</h2>
               <p className="text-base sm:text-lg text-[#46403B]">
                 Generic phone bots fail on complex transmission clunks or rattle sounds. They fail at VIN lookup too. We build purpose-built voice workflows tailored to your specific automotive sector.
               </p>
@@ -742,18 +714,16 @@ export default function AutomotiveAiVoiceAgentsPage() {
                   <div className="font-mono text-xs text-[#F05A28] font-bold uppercase mb-2">
                     01. FRANCHISED AUTO DEALERSHIP SERVICE BDCS
                   </div>
-                  <h3 className="text-2xl font-bold text-[#14110F] font-heading mb-4">
-                    24/7 Service Appointment Booking &amp; Live Recall Cross-Referencing
-                  </h3>
+                  <h3 className="text-2xl font-bold text-[#14110F] font-heading mb-4">24/7 Service Appointment Booking &amp. Live Recall Cross-Referencing.</h3>
                   <p className="text-[#46403B] leading-relaxed mb-4">
                     Franchised dealerships miss a meaningful share of inbound service calls during morning drop-off rushes and after-hours periods. Those are the same peak-volume windows where Marchex call analytics put unanswered or abandoned dealership calls at nearly 20 percent industry-wide. Frustrated vehicle owners hang up. Many book routine oil changes, brake repairs, and tire replacements at independent quick-lube chains instead.
                   </p>
                   <p className="text-[#46403B] leading-relaxed mb-6">
-                    Our franchised dealership voice agent answers every call instantly. It identifies returning customers by caller ID, pulling a single customer view from CDK Global or Reynolds &amp; Reynolds. It checks for open safety recalls, then inserts the confirmed appointment directly into Xtime or your DMS service schedule.
+                    Our franchised dealership voice agent answers every call instantly. It identifies returning customers by caller ID, pulling a single customer view from CDK Global or Reynolds &amp. Reynolds. It checks for open safety recalls, then inserts the confirmed appointment directly into Xtime or your DMS service schedule.
                   </p>
                   <ul className="flex flex-wrap gap-2 text-xs font-mono text-[#6E655F] list-none">
                     <li className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
-                      CDK Drive &amp; Xtime Sync
+                      CDK Drive &amp. Xtime Sync
                     </li>
                     <li className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
                       NHTSA Open Recall Audit
@@ -793,11 +763,9 @@ export default function AutomotiveAiVoiceAgentsPage() {
                 </div>
                 <div className="lg:col-span-6">
                   <div className="font-mono text-xs text-[#F05A28] font-bold uppercase mb-2">
-                    02. INDEPENDENT COLLISION CENTERS &amp; BODY SHOPS
+                    02. INDEPENDENT COLLISION CENTERS &amp. BODY SHOPS
                   </div>
-                  <h3 className="text-2xl font-bold text-[#14110F] font-heading mb-4">
-                    Estimate Appointment Intake, Tow Truck Dispatch &amp; DRP Claim Routing
-                  </h3>
+                  <h3 className="text-2xl font-bold text-[#14110F] font-heading mb-4">Estimate Appointment Intake, Tow Truck Dispatch &amp. DRP Claim Routing.</h3>
                   <p className="text-[#46403B] leading-relaxed mb-4">
                     Accident victims calling a collision repair center are often stranded on the roadside and stressed. Many need immediate towing help or direct repair program (DRP) insurance guidance right away.
                   </p>
@@ -806,7 +774,7 @@ export default function AutomotiveAiVoiceAgentsPage() {
                   </p>
                   <ul className="flex flex-wrap gap-2 text-xs font-mono text-[#6E655F] list-none">
                     <li className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
-                      CCC ONE &amp; Mitchell 1 Sync
+                      CCC ONE &amp. Mitchell 1 Sync
                     </li>
                     <li className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
                       Tow Partner Integration
@@ -822,11 +790,9 @@ export default function AutomotiveAiVoiceAgentsPage() {
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center bg-[#FAFAF7] p-8 rounded-2xl border border-[#E7DED6] shadow-sm">
                 <div className="lg:col-span-6 order-2 lg:order-1">
                   <div className="font-mono text-xs text-[#F05A28] font-bold uppercase mb-2">
-                    03. OEM &amp; AFTERMARKET PARTS DEPARTMENTS
+                    03. OEM &amp. AFTERMARKET PARTS DEPARTMENTS
                   </div>
-                  <h3 className="text-2xl font-bold text-[#14110F] font-heading mb-4">
-                    Automated Inbound Part Number Lookup &amp; Wholesale Inventory Triage
-                  </h3>
+                  <h3 className="text-2xl font-bold text-[#14110F] font-heading mb-4">Automated Inbound Part Number Lookup &amp. Wholesale Inventory Triage.</h3>
                   <p className="text-[#46403B] leading-relaxed mb-4">
                     Parts counter specialists answer dozens of repetitive daily calls asking: "Do you have front brake pads for a 2022 Silverado in stock?" Typing each part number by hand while the counter line grows frustrates walk-in and wholesale buyers alike.
                   </p>
@@ -875,11 +841,9 @@ export default function AutomotiveAiVoiceAgentsPage() {
                 </div>
                 <div className="lg:col-span-6">
                   <div className="font-mono text-xs text-[#F05A28] font-bold uppercase mb-2">
-                    04. COMMERCIAL FLEET &amp; MUNICIPAL VEHICLE OPERATORS
+                    04. COMMERCIAL FLEET &amp. MUNICIPAL VEHICLE OPERATORS
                   </div>
-                  <h3 className="text-2xl font-bold text-[#14110F] font-heading mb-4">
-                    Driver Work Order Triage &amp; Telematics Preventive Scheduling
-                  </h3>
+                  <h3 className="text-2xl font-bold text-[#14110F] font-heading mb-4">Driver Work Order Triage &amp. Telematics Preventive Scheduling.</h3>
                   <p className="text-[#46403B] leading-relaxed mb-4">
                     Commercial delivery fleets, like sprinter vans, utility box trucks, and service pickups, need fast turnaround service. Otherwise routes get disrupted and drivers sit idle, which costs money.
                   </p>
@@ -904,11 +868,9 @@ export default function AutomotiveAiVoiceAgentsPage() {
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center bg-[#FAFAF7] p-8 rounded-2xl border border-[#E7DED6] shadow-sm">
                 <div className="lg:col-span-6 order-2 lg:order-1">
                   <div className="font-mono text-xs text-[#F05A28] font-bold uppercase mb-2">
-                    05. HEAVY TRUCK &amp; COMMERCIAL SEMI DEALERSHIPS
+                    05. HEAVY TRUCK &amp. COMMERCIAL SEMI DEALERSHIPS
                   </div>
-                  <h3 className="text-2xl font-bold text-[#14110F] font-heading mb-4">
-                    Class 7/8 Diesel Diagnostic Intake &amp; Roadside Service Dispatch
-                  </h3>
+                  <h3 className="text-2xl font-bold text-[#14110F] font-heading mb-4">Class 7/8 Diesel Diagnostic Intake &amp. Roadside Service Dispatch.</h3>
                   <p className="text-[#46403B] leading-relaxed mb-4">
                     Heavy truck dealerships like Freightliner, Peterbilt, Kenworth, Mack, and International handle complex Class 8 diesel repairs. Think Cummins and Detroit Diesel engines, aftertreatment DPF issues, and emergency 24/7 roadside calls.
                   </p>
@@ -923,7 +885,7 @@ export default function AutomotiveAiVoiceAgentsPage() {
                       Roadside Mobile Dispatch
                     </li>
                     <li className="px-2.5 py-1 rounded bg-white border border-[#F05A28]/20">
-                      Cummins &amp; Detroit Diesel Op Codes
+                      Cummins &amp. Detroit Diesel Op Codes
                     </li>
                   </ul>
                 </div>
@@ -949,11 +911,9 @@ export default function AutomotiveAiVoiceAgentsPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <div className="font-mono text-xs text-[#F05A28] font-bold uppercase tracking-wider mb-2">
-                // SYSTEM ARCHITECTURE &amp; INTEGRATION
+                // SYSTEM ARCHITECTURE &amp. INTEGRATION
               </div>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-4">
-                Enterprise Automotive AI Voice Engineering Blueprint
-              </h2>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-4">Enterprise Automotive AI Voice Engineering Blueprint.</h2>
               <p className="text-base sm:text-lg text-[#46403B]">
                 How we architect sub-500ms voice telephony pipelines and deterministic DMS connectors for American automotive dealerships.
               </p>
@@ -1009,9 +969,7 @@ export default function AutomotiveAiVoiceAgentsPage() {
                   <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">
                     AUTO-ARCH-0{idx + 1}
                   </div>
-                  <h3 className="text-lg font-bold text-[#14110F] font-heading mb-2">
-                    {item.title}
-                  </h3>
+                  <h3 className="text-lg font-bold text-[#14110F] font-heading mb-2">{item.title}.</h3>
                   <p className="text-sm text-[#46403B] leading-relaxed">
                     {item.desc}
                   </p>
@@ -1028,9 +986,7 @@ export default function AutomotiveAiVoiceAgentsPage() {
               <div className="font-mono text-xs text-[#F05A28] font-bold uppercase tracking-wider mb-2">
                 // DEPLOYMENT METHODOLOGY
               </div>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-4">
-                4-Phase Dealership AI Voice Agent Implementation Roadmap
-              </h2>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-4">4-Phase Dealership AI Voice Agent Implementation Roadmap.</h2>
               <p className="text-base sm:text-lg text-[#46403B]">
                 From DMS sandbox integration to live service lane telephony rollout in 3 to 5 weeks.
               </p>
@@ -1040,52 +996,52 @@ export default function AutomotiveAiVoiceAgentsPage() {
               <li className="p-6 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6] shadow-sm flex flex-col justify-between">
                 <div>
                   <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">PHASE 01 // WEEKS 1-2</div>
-                  <h3 className="text-lg font-bold text-[#14110F] font-heading mb-3">DMS Schema &amp; Telephony Audit</h3>
+                  <h3 className="text-lg font-bold text-[#14110F] font-heading mb-3">DMS Schema &amp. Telephony Audit.</h3>
                   <p className="text-sm text-[#46403B] leading-relaxed mb-4">
                     We map your CDK, Reynolds, or Tekion labor matrices, advisor scheduling rules, and factory maintenance packages. We configure direct SIP trunking gateways for your telephony call flow.
                   </p>
                 </div>
                 <div className="text-xs font-mono text-[#6E655F] pt-4 border-t border-[#E7DED6]">
-                  Deliverable: DMS API connector schema &amp; telephony trunk configuration
+                  Deliverable: DMS API connector schema &amp. telephony trunk configuration
                 </div>
               </li>
 
               <li className="p-6 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6] shadow-sm flex flex-col justify-between">
                 <div>
                   <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">PHASE 02 // WEEKS 2-3</div>
-                  <h3 className="text-lg font-bold text-[#14110F] font-heading mb-3">Acoustic Pipeline &amp; Op-Code Logic</h3>
+                  <h3 className="text-lg font-bold text-[#14110F] font-heading mb-3">Acoustic Pipeline &amp. Op-Code Logic.</h3>
                   <p className="text-sm text-[#46403B] leading-relaxed mb-4">
                     We calibrate sub-500ms voice synthesis and train NATO phonetic VIN decode models. We encode your labor pricing matrix and recall lookup hooks into deterministic state machines.
                   </p>
                 </div>
                 <div className="text-xs font-mono text-[#6E655F] pt-4 border-t border-[#E7DED6]">
-                  Deliverable: Low-latency voice conversational agent &amp; VIN validator
+                  Deliverable: Low-latency voice conversational agent &amp. VIN validator
                 </div>
               </li>
 
               <li className="p-6 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6] shadow-sm flex flex-col justify-between">
                 <div>
                   <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">PHASE 03 // WEEKS 3-4</div>
-                  <h3 className="text-lg font-bold text-[#14110F] font-heading mb-3">Advisor Screen-Pop &amp; Sandbox Staging</h3>
+                  <h3 className="text-lg font-bold text-[#14110F] font-heading mb-3">Advisor Screen-Pop &amp. Sandbox Staging.</h3>
                   <p className="text-sm text-[#46403B] leading-relaxed mb-4">
                     We deploy advisor screen-pop interfaces for live warm transfer calls. We simulate hundreds of service booking calls inside your DMS sandbox. That verifies bay capacity rules and appointment creation before go-live.
                   </p>
                 </div>
                 <div className="text-xs font-mono text-[#6E655F] pt-4 border-t border-[#E7DED6]">
-                  Deliverable: Advisor desktop screen-pop console &amp; test suite validation
+                  Deliverable: Advisor desktop screen-pop console &amp. test suite validation
                 </div>
               </li>
 
               <li className="p-6 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6] shadow-sm flex flex-col justify-between">
                 <div>
                   <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">PHASE 04 // WEEKS 4-5</div>
-                  <h3 className="text-lg font-bold text-[#14110F] font-heading mb-3">Live Telephony Rollout &amp; Handoff</h3>
+                  <h3 className="text-lg font-bold text-[#14110F] font-heading mb-3">Live Telephony Rollout &amp. Handoff.</h3>
                   <p className="text-sm text-[#46403B] leading-relaxed mb-4">
                     We activate live inbound call routing across your overflow and after-hours numbers first. Then we graduate to your primary service line telephony. We deliver full source code and staff operations documentation.
                   </p>
                 </div>
                 <div className="text-xs font-mono text-[#6E655F] pt-4 border-t border-[#E7DED6]">
-                  Deliverable: Complete source code, Docker orchestration &amp; SLA handover
+                  Deliverable: Complete source code, Docker orchestration &amp. SLA handover
                 </div>
               </li>
             </ul>
@@ -1099,9 +1055,7 @@ export default function AutomotiveAiVoiceAgentsPage() {
               <div className="font-mono text-xs text-[#F05A28] font-bold uppercase tracking-wider mb-2">
                 // VENDOR COMPARISON
               </div>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-4">
-                FactoryJet Custom Voice AI vs. Third-Party BDC Call Centers
-              </h2>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-4">FactoryJet Custom Voice AI vs. Third-Party BDC Call Centers.</h2>
               <p className="text-base sm:text-lg text-[#46403B]">
                 Why top-performing auto groups build owned voice AI infrastructure rather than relying on high-turnover third-party call centers.
               </p>
@@ -1111,7 +1065,7 @@ export default function AutomotiveAiVoiceAgentsPage() {
               <table className="w-full text-left text-sm">
                 <thead>
                   <tr className="border-b border-[#E7DED6] bg-[#FFF8F5]">
-                    <th className="p-4 sm:p-6 font-bold text-[#14110F]">Capability / Feature</th>
+                    <th className="p-4 sm:p-6 font-bold text-[#14110F]">Capability / Feature.</th>
                     <th className="p-4 sm:p-6 font-bold text-[#F05A28] bg-[#FFF8F5]">
                       FactoryJet Custom Voice AI
                     </th>
@@ -1125,44 +1079,44 @@ export default function AutomotiveAiVoiceAgentsPage() {
                 </thead>
                 <tbody className="divide-y divide-[#E7DED6]">
                   <tr>
-                    <td className="p-4 sm:p-6 font-semibold text-[#14110F]">Call Answer Speed</td>
+                    <td className="p-4 sm:p-6 font-semibold text-[#14110F]">Call Answer Speed.</td>
                     <td className="p-4 sm:p-6 font-bold text-[#F05A28] bg-[#FFF8F5]">
                       1st Ring (0 Seconds)
                     </td>
-                    <td className="p-4 sm:p-6 text-[#6E655F]">45 to 90 Seconds Wait</td>
-                    <td className="p-4 sm:p-6 text-[#6E655F]">Rings Out / Voicemail</td>
+                    <td className="p-4 sm:p-6 text-[#6E655F]">45 to 90 Seconds Wait.</td>
+                    <td className="p-4 sm:p-6 text-[#6E655F]">Rings Out / Voicemail.</td>
                   </tr>
                   <tr>
-                    <td className="p-4 sm:p-6 font-semibold text-[#14110F]">Direct DMS Synchronization</td>
+                    <td className="p-4 sm:p-6 font-semibold text-[#14110F]">Direct DMS Synchronization.</td>
                     <td className="p-4 sm:p-6 font-bold text-[#F05A28] bg-[#FFF8F5]">
-                      Native CDK, Reynolds &amp; Tekion API
+                      Native CDK, Reynolds &amp. Tekion API
                     </td>
-                    <td className="p-4 sm:p-6 text-[#6E655F]">Third-Party Callback Form</td>
-                    <td className="p-4 sm:p-6 text-[#6E655F]">Manual Re-Entry</td>
+                    <td className="p-4 sm:p-6 text-[#6E655F]">Third-Party Callback Form.</td>
+                    <td className="p-4 sm:p-6 text-[#6E655F]">Manual Re-Entry.</td>
                   </tr>
                   <tr>
-                    <td className="p-4 sm:p-6 font-semibold text-[#14110F]">Simultaneous Call Capacity</td>
+                    <td className="p-4 sm:p-6 font-semibold text-[#14110F]">Simultaneous Call Capacity.</td>
                     <td className="p-4 sm:p-6 font-bold text-[#F05A28] bg-[#FFF8F5]">
                       Unlimited Concurrent Calls
                     </td>
-                    <td className="p-4 sm:p-6 text-[#6E655F]">Limited by Agent Headcount</td>
-                    <td className="p-4 sm:p-6 text-[#6E655F]">1 Caller at a Time</td>
+                    <td className="p-4 sm:p-6 text-[#6E655F]">Limited by Agent Headcount.</td>
+                    <td className="p-4 sm:p-6 text-[#6E655F]">1 Caller at a Time.</td>
                   </tr>
                   <tr>
-                    <td className="p-4 sm:p-6 font-semibold text-[#14110F]">Cost per Call / Minute</td>
+                    <td className="p-4 sm:p-6 font-semibold text-[#14110F]">Cost per Call / Minute.</td>
                     <td className="p-4 sm:p-6 font-bold text-[#F05A28] bg-[#FFF8F5]">
                       ~$0.05 / min (Wholesale)
                     </td>
-                    <td className="p-4 sm:p-6 text-[#6E655F]">$1.75 - $3.25 / minute</td>
-                    <td className="p-4 sm:p-6 text-[#6E655F]">$4,500 / month / BDC seat</td>
+                    <td className="p-4 sm:p-6 text-[#6E655F]">$1.75 - $3.25 / minute.</td>
+                    <td className="p-4 sm:p-6 text-[#6E655F]">$4,500 / month / BDC seat.</td>
                   </tr>
                   <tr>
-                    <td className="p-4 sm:p-6 font-semibold text-[#14110F]">Software &amp; IP Ownership</td>
+                    <td className="p-4 sm:p-6 font-semibold text-[#14110F]">Software &amp. IP Ownership.</td>
                     <td className="p-4 sm:p-6 font-bold text-[#F05A28] bg-[#FFF8F5]">
                       100% Owned, $0 Per-Seat Fee
                     </td>
-                    <td className="p-4 sm:p-6 text-[#6E655F]">Closed Proprietary Vendor</td>
-                    <td className="p-4 sm:p-6 text-[#6E655F]">N/A (Labor Expense)</td>
+                    <td className="p-4 sm:p-6 text-[#6E655F]">Closed Proprietary Vendor.</td>
+                    <td className="p-4 sm:p-6 text-[#6E655F]">N/A (Labor Expense).</td>
                   </tr>
                 </tbody>
               </table>
@@ -1191,7 +1145,7 @@ export default function AutomotiveAiVoiceAgentsPage() {
                   <div className="relative rounded-xl overflow-hidden aspect-square">
                     <Image
                       src="/bhavesh_image.webp"
-                      alt="Bhavesh Barot, Founder &amp; CEO of FactoryJet"
+                      alt="Bhavesh Barot, Founder &amp. CEO of FactoryJet"
                       width={682}
                       height={1024}
                       quality={95}
@@ -1202,7 +1156,7 @@ export default function AutomotiveAiVoiceAgentsPage() {
                   <div className="pt-4 text-center">
                     <div className="font-bold text-lg text-[#14110F]">Bhavesh Barot</div>
                     <div className="font-mono text-xs text-[#F05A28] font-bold">
-                      Founder &amp; CEO, FactoryJet
+                      Founder &amp. CEO, FactoryJet
                     </div>
                     <div className="mt-3">
                       <a
@@ -1222,9 +1176,7 @@ export default function AutomotiveAiVoiceAgentsPage() {
                 <div className="font-mono text-xs text-[#F05A28] font-bold uppercase tracking-wider mb-2">
                   // DIRECT AUTOMOTIVE ARCHITECTURE LEADERSHIP
                 </div>
-                <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-6">
-                  Direct Engineering Oversight with Founder Bhavesh Barot
-                </h2>
+                <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-6">Direct Engineering Oversight with Founder Bhavesh Barot.</h2>
                 <p className="text-base sm:text-lg text-[#46403B] leading-relaxed mb-6">
                   Automotive dealership telephony needs an instant response, rock-solid DMS sync, and zero tolerance for dropped appointments. At FactoryJet, founder Bhavesh Barot leads every automotive AI architecture and DMS scoping session personally. In that first session, we review your current CDK, Reynolds, or Tekion setup and your telephony call flows.
                 </p>
@@ -1259,18 +1211,14 @@ export default function AutomotiveAiVoiceAgentsPage() {
             <div className="font-mono text-xs text-[#F05A28] font-bold uppercase tracking-wider mb-4">
               // DEEP DIVE CAPABILITY SPOKES
             </div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#14110F] font-heading mb-8">
-              Explore Our Granular Voice &amp; Scheduling Capabilities
-            </h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#14110F] font-heading mb-8">Explore Our Granular Voice &amp. Scheduling Capabilities.</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <Link
                 href="/services/ai-agent-development/ai-voice-agent"
                 className="p-6 rounded-xl bg-white border border-[#E7DED6] hover:border-[#F05A28] transition-colors group"
               >
                 <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">SPOKE 01</div>
-                <h3 className="font-bold text-lg text-[#14110F] group-hover:text-[#F05A28] transition-colors mb-2">
-                  Voice AI Agent Development Hub &rarr;
-                </h3>
+                <h3 className="font-bold text-lg text-[#14110F] group-hover:text-[#F05A28] transition-colors mb-2">Voice AI Agent Development Hub &rarr;.</h3>
                 <p className="text-sm text-[#46403B]">
                   Sub-500ms conversational telephony agents for inbound booking and outbound customer campaigns.
                 </p>
@@ -1281,9 +1229,7 @@ export default function AutomotiveAiVoiceAgentsPage() {
                 className="p-6 rounded-xl bg-white border border-[#E7DED6] hover:border-[#F05A28] transition-colors group"
               >
                 <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">SPOKE 02</div>
-                <h3 className="font-bold text-lg text-[#14110F] group-hover:text-[#F05A28] transition-colors mb-2">
-                  AI Scheduling Agent &rarr;
-                </h3>
+                <h3 className="font-bold text-lg text-[#14110F] group-hover:text-[#F05A28] transition-colors mb-2">AI Scheduling Agent &rarr;.</h3>
                 <p className="text-sm text-[#46403B]">
                   Autonomous calendar management, capacity balancing, and two-way SMS reminder automation.
                 </p>
@@ -1294,11 +1240,9 @@ export default function AutomotiveAiVoiceAgentsPage() {
                 className="p-6 rounded-xl bg-white border border-[#E7DED6] hover:border-[#F05A28] transition-colors group"
               >
                 <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">SPOKE 03</div>
-                <h3 className="font-bold text-lg text-[#14110F] group-hover:text-[#F05A28] transition-colors mb-2">
-                  Contractor &amp; Field Dispatch Voice AI &rarr;
-                </h3>
+                <h3 className="font-bold text-lg text-[#14110F] group-hover:text-[#F05A28] transition-colors mb-2">Contractor &amp. Field Dispatch Voice AI &rarr;.</h3>
                 <p className="text-sm text-[#46403B]">
-                  24/7 AI voice dispatch &amp; emergency booking for HVAC, plumbing, electrical, and commercial fleets.
+                  24/7 AI voice dispatch &amp. emergency booking for HVAC, plumbing, electrical, and commercial fleets.
                 </p>
               </Link>
 
@@ -1307,9 +1251,7 @@ export default function AutomotiveAiVoiceAgentsPage() {
                 className="p-6 rounded-xl bg-white border border-[#E7DED6] hover:border-[#F05A28] transition-colors group"
               >
                 <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">SPOKE 04</div>
-                <h3 className="font-bold text-lg text-[#14110F] group-hover:text-[#F05A28] transition-colors mb-2">
-                  Restaurant AI Voice Agents &rarr;
-                </h3>
+                <h3 className="font-bold text-lg text-[#14110F] group-hover:text-[#F05A28] transition-colors mb-2">Restaurant AI Voice Agents &rarr;.</h3>
                 <p className="text-sm text-[#46403B]">
                   The same low-latency voice architecture, tuned for reservation lines and to-go order calls instead of a service drive.
                 </p>
@@ -1320,7 +1262,7 @@ export default function AutomotiveAiVoiceAgentsPage() {
 
         {/* STRUCTURED FAQ SECTION */}
         <FAQ
-          eyebrow="// AUTOMOTIVE VOICE AI QUESTIONS &amp; ANSWERS"
+          eyebrow="// AUTOMOTIVE VOICE AI QUESTIONS &amp. ANSWERS"
           headline="Frequently Asked Questions on Automotive AI Voice Agents"
           lead="Everything general managers, fixed ops directors, and BDC executives need to know about DMS sync, voice latency, and source code ownership."
           categories={FAQ_CATEGORIES}
@@ -1333,7 +1275,7 @@ export default function AutomotiveAiVoiceAgentsPage() {
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-[#F05A28]/30 mb-6">
               <span className="font-mono text-xs text-[#F05A28] font-bold tracking-wide">
-                // ZERO MISSED SERVICE CALLS &bull; LIVE DMS SYNC &bull; 100% OWNED
+                // ZERO MISSED SERVICE CALLS &bull. LIVE DMS SYNC &bull. 100% OWNED
               </span>
             </div>
 
