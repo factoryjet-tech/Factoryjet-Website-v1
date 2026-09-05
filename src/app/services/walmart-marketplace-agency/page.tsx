@@ -20,9 +20,8 @@ const URL = 'https://factoryjet.com/services/walmart-marketplace-agency';
 
 /* ── SEO / Metadata ─────────────────────────────────────────────────────── */
 export const metadata: Metadata = {
-  title: 'Walmart Marketplace Agency for US Brands: Approval, Ads & WFS | FactoryJet',
-  description:
-    'FactoryJet is a full-service Walmart Marketplace agency for US brands: seller application and approval, Walmart Connect ads, WFS fulfillment, listing optimization, and Buy Box strategy under one senior in-house team. Get a free Walmart audit.',
+  title: 'Walmart Marketplace Agency: Ads, WFS & Ops | FactoryJet',
+  description: 'Full-service Walmart Marketplace agency for US brands: seller approval, Walmart Connect ads, WFS fulfillment, and Buy Box strategy. Free audit.',
   keywords: [
     'walmart marketplace agency',
     'walmart advertising agency',
@@ -42,7 +41,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Walmart Marketplace Agency for US Brands: Approval, Ads & WFS | FactoryJet',
+    title: 'Walmart Marketplace Agency: Ads, WFS & Ops | FactoryJet',
     description:
       'Full-service Walmart Marketplace growth for US brands: seller approval, Walmart Connect ads, WFS fulfillment, listing optimization, and Buy Box strategy under one senior in-house team. Free Walmart audit.',
     url: URL,
@@ -53,7 +52,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Walmart Marketplace Agency for US Brands: Approval, Ads & WFS | FactoryJet',
+    title: 'Walmart Marketplace Agency: Ads, WFS & Ops | FactoryJet',
     description:
       'Full-service Walmart Marketplace growth: seller approval, Connect ads, WFS, and listing optimization, one senior in-house team. Free Walmart audit.',
     images: ['https://factoryjet.com/og-default.png'],
@@ -77,34 +76,136 @@ const FAQ_CATEGORIES: ReadonlyArray<FAQCategory> = [
 ];
 
 const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
-  { category: 'basics', question: 'What does a Walmart Marketplace agency do?', answer: 'A Walmart Marketplace agency handles everything between "we want to sell on Walmart" and "we are selling profitably on Walmart": the seller application, WFS fulfillment setup, Walmart Connect advertising, listing and item-spec optimization, and Buy Box strategy. Instead of hiring separate freelancers, you get one accountable team that gets you approved and then runs the account to ties spend to margin. FactoryJet does this for US brands on Walmart Seller Center.' },
-  { category: 'basics', question: 'How do I get approved to sell on Walmart Marketplace?', answer: 'You apply through Walmart Marketplace Seller Center with your business details, tax ID, product category, and catalog information, and Walmart reviews the application before granting access. Unlike Amazon, where most sellers can self-register instantly, Walmart evaluates brand reputation, category fit, and catalog quality first, and can reject an application or ask for more information. A well-prepared application with the right category selection and clean product data gets approved faster and gets rejected less often.' },
-  { category: 'basics', question: 'How much does it cost to sell on Walmart Marketplace?', answer: 'There is no monthly subscription fee to sell on Walmart Marketplace, unlike Amazon\'s Professional plan. You pay a referral fee on each sale, set per category, plus WFS fulfillment and storage fees if you use Walmart\'s fulfillment program instead of shipping yourself. Because referral rates vary by category, the honest answer is to run your specific products through Walmart\'s own fee tools before pricing, and we do exactly that as part of a free audit.' },
-  { category: 'basics', question: 'Do I need an agency, or can I apply to Walmart myself?', answer: 'You can apply yourself, and many brands do. Where an agency earns its fee is afterward: getting the application approved on the first try with the right category and documentation, then setting up WFS, Connect ads, and listings correctly instead of learning by trial and error while sales sit at zero. A free audit will tell you honestly whether your catalog and business profile are approval-ready yet.' },
-  { category: 'basics', question: 'What is WFS (Walmart Fulfillment Services)?', answer: 'WFS is Walmart\'s equivalent of Amazon FBA: you ship inventory to Walmart\'s fulfillment centers, and Walmart picks, packs, ships, and handles returns and customer service for those orders. WFS listings get faster shipping badges that lift conversion and Buy Box eligibility, similar to how Prime works on Amazon. The trade-off is the same as FBA too: you give up direct control of fulfillment for speed and hands-off logistics, plus you pay fulfillment and storage fees for it.' },
-  { category: 'basics', question: 'Is Walmart Marketplace worth it for brands in 2026?', answer: 'For brands already selling well on Amazon, yes, as a second high-intent marketplace rather than a replacement. Walmart Marketplace buyers are searching to purchase, similar intent to Amazon shoppers, and Walmart.com carries less seller competition in most categories than Amazon does, which can mean an easier path to visibility once you are approved. It is not worth it as your only channel; it works best as part of a marketplace mix.' },
-  { category: 'basics', question: 'How is Walmart Marketplace different from Amazon?', answer: 'The biggest difference is the front door: Walmart requires an application and approval before you can list, while Amazon largely lets sellers self-register instantly. Walmart also has no monthly Professional-style subscription fee, just per-sale referral fees. Once approved, the day-to-day looks similar: WFS mirrors FBA, Walmart Connect mirrors Amazon Ads, and the Buy Box (Walmart calls it the Featured Offer) works on comparable pricing and fulfillment logic.' },
-
-  { category: 'services', question: 'Do you help with the Walmart Marketplace seller application?', answer: 'Yes, and it is often where brands get stuck. We prepare your business documentation, select the right product category, clean up your catalog data, and submit an application built to get approved on the first pass rather than bounced back for missing information. If you have already been rejected once, we will tell you honestly what needs to change before you reapply.' },
-  { category: 'services', question: 'Do you manage Walmart Connect ads?', answer: 'Yes. Walmart Connect is Walmart\'s advertising platform, covering Sponsored Products, Search Brand Amplifier, and display placements on Walmart.com. We run campaigns structured around your best products and margin targets, managed to return on ad spend and profit rather than vanity impressions, with transparent reporting on what each dollar returns.' },
-  { category: 'services', question: 'Do you handle WFS setup and management?', answer: 'Yes. We decide with you whether WFS or shipping orders yourself is the right call for each product, then handle the WFS onboarding, shipment planning, and ongoing inventory and storage management if you go that route. Getting WFS right matters for Buy Box eligibility and delivery-speed badges, so we treat it as core to the account, not an afterthought.' },
-  { category: 'services', question: 'Can you optimize our Walmart product listings?', answer: 'Yes. Walmart is strict about item spec quality, accurate attributes, clean images, and compliant titles, and listings that fail spec checks get suppressed or rejected. We build listings that pass Walmart\'s content requirements the first time and are written to convert, not just to satisfy a checklist.' },
-  { category: 'services', question: 'Do you help us win and keep the Buy Box (Featured Offer)?', answer: 'Yes. Walmart\'s Featured Offer, its version of the Buy Box, is won on a mix of price, fulfillment speed, and seller performance history. We manage pricing discipline and fulfillment choices (including WFS) with Buy Box eligibility as a deliberate target, not a side effect, since losing it on your own listings usually means losing the sale to another seller of the same product.' },
-  { category: 'services', question: 'Do you manage Walmart Marketplace account operations?', answer: 'Yes. That covers Seller Center operations day to day: order and inventory monitoring, case resolution, returns handling, performance metric tracking, and policy compliance. Walmart enforces seller performance standards closely, and falling below them can suspend selling privileges, so we treat account health as an ongoing job, not a one-time setup.' },
-  { category: 'services', question: 'Can you help us launch a new product on Walmart?', answer: 'Yes. A launch needs a compliant, conversion-ready listing, correct WFS or ship-your-own setup before the first order, and an early Walmart Connect push to build initial visibility while the listing has no sales history yet. We plan launches so the product is actually ready to sell profitably the day it goes live, not just technically listed.' },
-  { category: 'services', question: 'Do you also sell on Amazon and TikTok Shop?', answer: 'Yes. Walmart is rarely a brand\'s only marketplace, and we run it alongside Amazon and TikTok Shop so pricing, inventory, and creative stay consistent across all three rather than competing against each other. If you want one team running your whole marketplace presence instead of three disconnected ones, that is exactly how we work.' },
-  { category: 'services', question: 'Can you connect Walmart with my Shopify store?', answer: 'Yes. Your Walmart channel and your own store should feed each other rather than compete. We connect them so inventory and pricing stay in sync, and demand you build off Walmart supports rather than cannibalizes your own site. If you want full-funnel ecommerce growth beyond marketplaces, our ecommerce growth agency team handles the store side too.' },
-
-  { category: 'working', question: 'How long until we see results on Walmart Marketplace?', answer: 'Approval typically takes anywhere from a few days to a few weeks depending on your category and how complete the application is. Once approved, listing and Connect ad fixes often move numbers within the first 30 to 60 days, while Buy Box share and organic ranking build over three to six months as your seller performance history accumulates. We prioritize getting approved and listed correctly first, since nothing else matters until that happens.' },
-  { category: 'working', question: 'Do I have to sign a long contract?', answer: 'No. We work on short, rolling terms and earn the renewal each month with results. If a bigger project like a full catalog onboarding makes sense, we scope it clearly up front so there are no surprises. Good agencies keep clients by performing, not by locking them into a year they cannot leave.' },
-  { category: 'working', question: 'Who will actually work on my account?', answer: 'FactoryJet\'s senior in-house team. The specialists in your kickoff are the people doing the daily work on your application, listings, and ads, not a sales pod that hands you to offshore juniors after you sign. That is a deliberate choice, and it is a big part of why clients stay with us.' },
-  { category: 'working', question: 'What size brands do you work with?', answer: 'Mostly US small and mid-market brands, from sellers applying to Walmart Marketplace for the first time to established Amazon or TikTok Shop sellers adding Walmart as a second or third channel. We scope the engagement to your stage and catalog rather than forcing one package on everyone, and we will tell you honestly if you are not approval-ready yet.' },
-  { category: 'working', question: 'How do you report on Walmart Marketplace performance?', answer: 'You get a dashboard tied to sales, Connect ad efficiency, Buy Box share, and seller performance standing, plus a plain-language monthly review of what we did, what it returned, and what is next. We report on the numbers that decide whether Walmart makes you money and keeps your selling privileges healthy, not vanity metrics like impressions dressed up as progress.' },
-  { category: 'working', question: 'How do we get started?', answer: 'Request the free Walmart Marketplace audit with your brand and your email. If you are not yet approved, we come back with an application readiness review; if you are already selling, we send a teardown of your listings, ads, and account health plus a suggested 90-day plan. Then you decide if you want us to run it. No long sales cycle, and the audit is yours to keep either way.' },
-  { category: 'services', question: 'What is the Walmart Item Page Quality Score (IPQS) and how is it calculated?', answer: 'Walmart Item Page Quality Score (IPQS) measures listing completeness across Content & SEO, Offer (price and shipping speed), and Customer Experience (reviews and returns). Scores above 95% boost algorithmic organic placement across Walmart search results.' },
-  { category: 'services', question: 'How does Walmart Connect Brand Amplifier differ from standard Sponsored Products?', answer: 'Search Brand Amplifier pins your custom brand banner, logo, and a curated row of products at the very top of high-intent search result pages. It provides maximum brand share-of-voice for competitive head keywords.' },
-  { category: 'services', question: 'What are Walmart Pro Seller Badge requirements and benefits?', answer: 'The Walmart Pro Seller Badge is awarded to top-tier merchants maintaining 95%+ On-Time Delivery, 99%+ Valid Tracking Rate, and sub-1.5% cancellation rates. Pro Seller listings display an official badge that lifts conversion by 15%-20%.' },
-  { category: 'services', question: 'How do you handle Walmart Marketplace UPC and GTIN barcode requirements?', answer: 'Walmart strictly enforces GS1-registered GTIN, UPC, and ISBN barcodes. We audit your catalog against GS1 US databases to resolve barcode mismatch errors, brand ownership conflicts, and multi-pack variation mapping issues.' },
+  {
+    category: 'basics',
+    question: 'What does a Walmart Marketplace agency do?',
+    answer: 'A Walmart Marketplace agency manages your entire seller journey. We handle your seller application and setup. We manage WFS fulfillment logistics. Our team runs Walmart Connect ads and listing optimization. We protect your Buy Box status across your catalog. You get one dedicated in-house team. We tie every ad dollar directly to net margin.',
+  },
+  {
+    category: 'basics',
+    question: 'How do I get approved to sell on Walmart Marketplace?',
+    answer: 'You apply through Walmart Marketplace Seller Center. You must provide tax records and catalog data. Walmart checks brand history and product category fit. Applications with clean data get approved quickly. Missing files lead to delays or instant rejection. We prepare your documentation first. We ensure your application passes on the first try.',
+  },
+  {
+    category: 'basics',
+    question: 'How much does it cost to sell on Walmart Marketplace?',
+    answer: 'Walmart charges no monthly subscription fee for sellers. You pay a category referral fee on each sale. You also pay WFS fees if you use Walmart logistics. Referral rates vary by product category. We audit your catalog margins before launching. We calculate your exact fee structure in advance.',
+  },
+  {
+    category: 'basics',
+    question: 'Do I need an agency, or can I apply to Walmart myself?',
+    answer: 'You can apply on your own. However, many self-submitted applications get rejected. An experienced agency saves weeks of frustration. We structure your catalog data correctly. We set up WFS fulfillment and Connect ads immediately. That gets your products selling without trial and error.',
+  },
+  {
+    category: 'basics',
+    question: 'What is WFS (Walmart Fulfillment Services)?',
+    answer: 'WFS is Walmart native fulfillment network. You ship inventory directly to Walmart warehouses. Walmart picks, packs, and delivers customer orders. WFS items receive two-day delivery badges. These badges increase your Buy Box win rate. Walmart also handles customer support and returns.',
+  },
+  {
+    category: 'basics',
+    question: 'Is Walmart Marketplace worth it for brands in 2026?',
+    answer: 'Yes, it is a high-growth channel for US brands. Walmart buyers have strong purchasing intent. The marketplace has lower seller competition than Amazon. This dynamic allows faster organic ranking. It works best as part of an omnichannel sales mix.',
+  },
+  {
+    category: 'basics',
+    question: 'How is Walmart Marketplace different from Amazon?',
+    answer: 'Walmart requires an upfront seller application. Amazon allows instant automated registration. Walmart has zero monthly seller account fees. Day-to-day operations are very similar. WFS mirrors FBA. Walmart Connect mirrors Sponsored Ads. Both reward fast delivery and competitive pricing.',
+  },
+  {
+    category: 'services',
+    question: 'Do you help with the Walmart Marketplace seller application?',
+    answer: 'Yes, we prepare your entire submission package. We verify business documentation and tax records. We select the optimal product categories. We format your initial catalog feed. If you were rejected before, we fix the underlying issues.',
+  },
+  {
+    category: 'services',
+    question: 'Do you manage Walmart Connect ads?',
+    answer: 'Yes, we run full Walmart Connect ad campaigns. We manage Sponsored Products and Search Brand Amplifier. We target high-intent search queries. We manage bids to meet strict margin targets. You receive transparent weekly performance reports.',
+  },
+  {
+    category: 'services',
+    question: 'Do you handle WFS setup and management?',
+    answer: 'Yes, we manage your entire WFS workflow. We help select products suited for WFS. We create inbound shipments and barcode labels. We track warehouse delivery and inventory health. We prevent stockouts and costly storage fees.',
+  },
+  {
+    category: 'services',
+    question: 'Can you optimize our Walmart product listings?',
+    answer: 'Yes, we optimize your full listing content. Walmart enforces strict item spec requirements. We write clear titles, bullet points, and descriptions. We upload compliant high-resolution product imagery. Optimized listings win higher organic search placement.',
+  },
+  {
+    category: 'services',
+    question: 'Do you help us win and keep the Buy Box (Featured Offer)?',
+    answer: 'Yes, winning the Featured Offer is our primary focus. Walmart awards the Buy Box based on price and shipping speed. Seller track record also plays a major role. We maintain competitive pricing rules. We pair listings with WFS for maximum delivery speed.',
+  },
+  {
+    category: 'services',
+    question: 'Do you manage Walmart Marketplace account operations?',
+    answer: 'Yes, we handle daily Seller Center operations. We resolve support tickets and customer inquiries. We monitor order defect rates and tracking metrics. Maintaining high seller ratings protects your account health.',
+  },
+  {
+    category: 'services',
+    question: 'Can you help us launch a new product on Walmart?',
+    answer: 'Yes, we coordinate complete product launches. We audit item specs and prepare inventory. We launch targeted Walmart Connect campaigns on day one. Early ad traction generates sales history and reviews. This flywheel builds compounding organic visibility.',
+  },
+  {
+    category: 'services',
+    question: 'Do you also sell on Amazon and TikTok Shop?',
+    answer: 'Yes, we manage unified omnichannel growth. We coordinate Amazon, Walmart Marketplace, and TikTok Shop. We keep catalog pricing and inventory in sync. You get one unified team across all channels.',
+  },
+  {
+    category: 'services',
+    question: 'Can you connect Walmart with my Shopify store?',
+    answer: 'Yes, we integrate Walmart with your direct store. We sync catalog data with Shopify, BigCommerce, and WooCommerce. Orders and inventory route automatically. This setup prevents overselling and duplicate data entry.',
+  },
+  {
+    category: 'working',
+    question: 'How long until we see results on Walmart Marketplace?',
+    answer: 'Application approval usually takes one to three weeks. Once live, ad and listing fixes impact sales in 30 days. Organic ranking builds over three to six months. We prioritize fast-payback listing fixes first.',
+  },
+  {
+    category: 'working',
+    question: 'Do I have to sign a long contract?',
+    answer: 'No, we work on flexible rolling agreements. We earn your ongoing partnership each month. We outline all project scopes clearly up front. You remain in complete control of your account.',
+  },
+  {
+    category: 'working',
+    question: 'Who will actually work on my account?',
+    answer: 'FactoryJet senior in-house team runs your account. You work directly with experienced marketplace specialists. We never hand client work to offshore juniors. That consistency produces superior growth results.',
+  },
+  {
+    category: 'working',
+    question: 'What size brands do you work with?',
+    answer: 'We partner with small and mid-market US brands. We help emerging brands launch their first marketplace. We also scale established eight-figure merchant accounts. We tailor our scope to your catalog size.',
+  },
+  {
+    category: 'working',
+    question: 'How do you report on Walmart Marketplace performance?',
+    answer: 'You receive custom dashboards tracking net profit. We monitor ad spend efficiency and Buy Box share. We also track order defect rates and return trends. We review numbers and next steps monthly.',
+  },
+  {
+    category: 'working',
+    question: 'How do we get started?',
+    answer: 'Request a free Walmart audit on our site. We review your catalog and approval readiness. We deliver a tailored 90-day action plan. You decide if you want us to execute it.',
+  },
+  {
+    category: 'services',
+    question: 'What is the Walmart Item Page Quality Score (IPQS) and how is it calculated?',
+    answer: 'Item Page Quality Score measures listing completeness. It evaluates content, offer price, and customer reviews. Scores above 95% boost organic placement in search. We optimize all attributes to hit top scores.',
+  },
+  {
+    category: 'services',
+    question: 'How does Walmart Connect Brand Amplifier differ from standard Sponsored Products?',
+    answer: 'Search Brand Amplifier pins your banner at the top of search. It features your brand logo and curated products. It delivers prominent share-of-voice for top search terms. Standard ads appear inside search grids.',
+  },
+  {
+    category: 'services',
+    question: 'What are Walmart Pro Seller Badge requirements and benefits?',
+    answer: 'The Pro Seller Badge rewards top marketplace merchants. Sellers must maintain 95% on-time delivery rates. Cancellation rates must stay below 1.5%. Badge placement increases buyer conversion by up to 20%.',
+  },
+  {
+    category: 'services',
+    question: 'How do you handle Walmart Marketplace UPC and GTIN barcode requirements?',
+    answer: 'Walmart requires valid GS1-registered barcodes. We audit your catalog against GS1 US databases. We resolve barcode mismatch errors and variation conflicts. This ensures fast catalog ingestion without rejections.',
+  },
 ];
 
 /* ── JSON-LD ─────────────────────────────────────────────────────────────── */
@@ -144,42 +245,42 @@ const faqSchema = {
 
 /* ── Small building blocks ───────────────────────────────────────────────── */
 const CHANNELS = [
-  { Icon: ShieldCheck, title: 'Seller application & approval', body: 'Business docs, category selection, and catalog data prepared to get approved on the first pass instead of bounced back for missing information.', link: '/blog/how-to-sell-on-walmart-marketplace-2026', label: 'How Walmart approval works', span: 'w3' },
-  { Icon: Megaphone, title: 'Walmart Connect ads', body: 'Sponsored Products, Search Brand Amplifier, and display, managed to ROAS and profit on Walmart.com, not vanity impressions.', link: '/services/ecommerce-growth-agency', label: 'Full-funnel growth', span: 'w3' },
-  { Icon: ClipboardList, title: 'WFS & account operations', body: 'Fulfillment setup, inventory and storage, case resolution, and performance standards, so small issues never suspend selling privileges.', link: '/contact', label: 'Talk to our team', span: 'cell' },
-  { Icon: Search, title: 'Listing & item spec optimization', body: 'Titles, attributes, and images built to pass Walmart\'s content requirements the first time and convert once they do.', link: '/services/ecommerce-seo', label: 'Ecommerce SEO', span: 'cell' },
-  { Icon: Target, title: 'Buy Box (Featured Offer) strategy', body: 'Pricing and fulfillment discipline aimed at winning and keeping the Featured Offer, not treating it as a side effect.', link: '/portfolio', label: 'See our work', span: 'cell' },
+  { Icon: ShieldCheck, title: 'Seller application & approval', body: 'We prepare your documentation, tax data, and catalog. We ensure fast approval without delays.', link: '/contact', label: 'Get approved', span: 'w3' },
+  { Icon: Megaphone, title: 'Walmart Connect advertising', body: 'Sponsored Products and Search Brand Amplifier ads. We manage bids to strict profit targets.', link: '/services/ecommerce-growth-agency', label: 'Growth agency', span: 'w3' },
+  { Icon: ClipboardList, title: 'WFS fulfillment logistics', body: 'Onboarding, inventory shipments, and two-day delivery badges. Fast delivery lifts Buy Box win rates.', link: '/contact', label: 'WFS logistics', span: 'cell' },
+  { Icon: Search, title: 'Item spec & listing optimization', body: 'Compliant titles, attributes, and rich media. We ensure high Item Page Quality Scores.', link: '/services/ecommerce-seo', label: 'Ecommerce SEO', span: 'cell' },
+  { Icon: Target, title: 'Buy Box & account operations', body: 'Daily Seller Center health, case resolution, and pricing discipline to protect the Featured Offer.', link: '/contact', label: 'Account health', span: 'cell' },
 ];
 
 const LEVERS = [
-  { b: 'An approval-ready application', p: 'The right category, clean catalog data, and complete documentation, so you are not rejected and reapplying weeks later.' },
-  { b: 'WFS done deliberately', p: 'A real WFS-vs-ship-yourself decision per product, not a default, since it affects Buy Box eligibility and delivery badges.' },
-  { b: 'Connect ads tuned to profit', p: 'Sponsored Products and Search placements managed to ROAS and margin, not impressions.' },
-  { b: 'Winning the Featured Offer', p: 'Pricing and fulfillment speed managed as a deliberate target on your competitive listings.' },
-  { b: 'Listings that pass spec', p: 'Item content built to Walmart\'s requirements the first time, so nothing gets suppressed before it can sell.' },
-  { b: 'Performance standards health', p: 'Order defect rate, on-time shipping, and case response tracked so selling privileges never get suspended.' },
+  { b: 'Fast seller approval.', p: 'We prepare documentation and clean catalog feeds. You get approved on the first pass.' },
+  { b: 'WFS fulfillment advantage.', p: 'Two-day delivery badges win buyer trust. Fast shipping lifts Buy Box win rates.' },
+  { b: 'Walmart Connect ads.', p: 'Sponsored Products managed to contribution margin. We eliminate wasted ad spend.' },
+  { b: 'Item spec quality.', p: 'High Item Page Quality Scores boost ranking. Accurate attributes prevent listing suppression.' },
+  { b: 'Buy Box price discipline.', p: 'Automated repricing rules protect the Featured Offer. We defend your sales margins.' },
+  { b: 'Unified multichannel sync.', p: 'We sync inventory with Shopify, BigCommerce, and Amazon. Data stays accurate across channels.' },
 ];
 
 const CHECKS = [
-  { b: 'Has actually gotten sellers approved', p: 'Ask for specifics on the application process. A vague answer means you are the one figuring it out.' },
-  { b: 'Runs WFS and Connect, not just one', p: 'Fulfillment and advertising interact on Buy Box eligibility; an ads-only shop misses half the lever.' },
-  { b: 'Reports on Buy Box share and profit', p: 'If success is defined as impressions or clicks alone, keep looking.' },
-  { b: 'Knows Seller Center and item specs', p: 'Walmart\'s content requirements are stricter than they look. Platform depth beats generic marketing.' },
-  { b: 'Transparent, scoped work', p: 'No mystery retainers. You should know what you get and what comes next.' },
-  { b: 'No long lock-in', p: 'Good agencies earn the renewal monthly. Be wary of year-long contracts up front.' },
+  { b: 'Manages approval and ads.', p: 'Many agencies only run ads. You need support with applications, WFS, and ops.' },
+  { b: 'Reports on net margin.', p: 'Ask how they track success. If they only report ROAS, keep looking.' },
+  { b: 'Named senior specialists.', p: 'Confirm who works on your account. Avoid agencies that hand you to junior staff.' },
+  { b: 'Deep Seller Center skills.', p: 'Look for deep WFS and spec knowledge. Platform expertise matters most.' },
+  { b: 'Transparent monthly terms.', p: 'Avoid long lock-in contracts. Agencies should earn renewals through results.' },
+  { b: 'Multichannel capabilities.', p: 'Ensure they connect Walmart with Amazon, TikTok Shop, and your DTC store.' },
 ];
 
 const STEPS = [
-  { n: 'Step 01', h: 'Audit', p: 'A free readiness review of your application (or account, if already approved), showing exactly what stands between you and selling.' },
-  { n: 'Step 02', h: 'Plan', p: 'A prioritized path to approval and a 90-day growth plan, ranked by impact. Yours to keep.' },
-  { n: 'Step 03', h: 'Build', p: 'We submit or fix the application, set up WFS, launch Connect ads, and ship compliant listings fast.' },
-  { n: 'Step 04', h: 'Scale', p: 'Weekly iteration and profit-based reporting. We double down on what works, cut what does not.' },
+  { n: 'Step 01', h: 'Audit.', p: 'We review your catalog readiness and approval status. We find hidden profit leaks.' },
+  { n: 'Step 02', h: 'Plan.', p: 'We build a 90-day marketplace roadmap. Every initiative focuses on net profit.' },
+  { n: 'Step 03', h: 'Launch.', p: 'We submit your application and set up WFS. We launch targeted Connect ads.' },
+  { n: 'Step 04', h: 'Scale.', p: 'Weekly bid optimization and inventory monitoring. We double down on top sellers.' },
 ];
 
 const PILLARS = [
-  { k: 'One team', h: 'Approval, ads, and ops together', p: 'The application, WFS, Connect ads, and listings handled by people who talk daily. No finger-pointing between vendors.' },
-  { k: 'Senior', h: 'In-house, not offshored juniors', p: 'The specialists in your kickoff are the ones doing the work. A senior team that has shipped 500+ commerce projects.' },
-  { k: 'Profit-first', h: 'We report on Buy Box and margin', p: 'Managed to Featured Offer share and contribution margin, so growth actually reaches your bank account.' },
+  { k: 'One team.', h: 'Application, ads, and ops.', p: 'Seller approval, WFS setup, ads, and catalog managed together. No vendor finger-pointing.' },
+  { k: 'Senior.', h: 'In-house commerce experts.', p: 'Your account is run by seasoned marketplace pros. Over 500 commerce projects delivered.' },
+  { k: 'Profit-first.', h: 'Managed to contribution margin.', p: 'We optimize for bottom-line profit. Ad spend must deliver real cash return.' },
 ];
 
 const PROGRAMS = ['Seller Center', 'WFS', 'Walmart Connect', 'Item Spec & Catalog', 'Returns Center', 'Featured Offer'];
@@ -193,10 +294,10 @@ const STATS = [
 
 /* Real, named Walmart and marketplace agencies brands weigh us against, framed honestly. */
 const RIVALS = [
-  { b: 'Tinuiti', p: 'The largest independent performance agency, strong on Walmart Connect ads. Built for brands already approved and spending heavily on ads each month.' },
-  { b: 'Blue Wheel', p: 'A full-funnel marketplace agency with real Amazon and Walmart strength. A solid option that skews toward larger, established sellers.' },
-  { b: 'Podean', p: 'Marketplace managed services with proprietary tech, Amazon-first and Walmart-capable. A good fit for established brands scaling ad spend.' },
-  { b: 'Where FactoryJet fits', p: 'We start before approval, prep the application, set up WFS, then run Connect ads and listings, sized for SMBs applying to Walmart or adding it as a second channel.' },
+  { b: 'Tinuiti.', p: 'A massive performance agency built for enterprise brands. Requires enterprise-level ad budgets.' },
+  { b: 'Pacvue and Flywheel.', p: 'Software and managed services focused on enterprise retail media. Less focus on catalog ops.' },
+  { b: 'Marketplace-only boutiques.', p: 'Firms that manage Amazon and Walmart alone. They cannot support your direct DTC store.' },
+  { b: 'Where FactoryJet fits.', p: 'One senior team running Walmart, Amazon, and DTC stores. Sized for growing mid-market brands.' },
 ];
 
 const yes = <span style={{ color: '#177a48', fontWeight: 700 }}>Yes</span>;
@@ -261,7 +362,7 @@ export default function WalmartMarketplaceAgencyPage() {
         <section className="wmp-answer">
           <div className="wmp-wrap in">
             <div className="q disp"><span className="ql">Quick answer</span>What does a Walmart Marketplace agency do?</div>
-            <div className="a"><p><b>A Walmart Marketplace agency handles everything between applying and selling profitably:</b> the seller application and approval, WFS fulfillment setup, Walmart Connect advertising, listing and item-spec optimization, and Buy Box strategy. Instead of hiring separate freelancers, you get one accountable team that gets you approved, then runs the account to protect margin. FactoryJet does this for US brands on Walmart Seller Center.</p></div>
+            <div className="a"><p><b>A Walmart Marketplace agency manages your complete seller presence.</b> We handle seller approvals, WFS setup, Walmart Connect ads, listing optimization, and Buy Box strategy. You get one dedicated in-house team that ties spend directly to profit. FactoryJet runs this for US brands across Walmart Seller Center.</p></div>
           </div>
         </section>
 
@@ -373,6 +474,79 @@ export default function WalmartMarketplaceAgencyPage() {
           </div>
         </section>
 
+        
+        {/* WALMART MARKETPLACE INTEGRATIONS & ERP SYNC */}
+        <section className="wmp-sec pt0">
+          <div className="wmp-wrap">
+            <div className="wmp-sh">
+              <span className="wmp-eyebrow">Connected Architecture</span>
+              <h2 className="disp">Walmart Marketplace ERP sync and systems integration</h2>
+              <p>Connect your Walmart storefront directly to your warehouse and backend tools.</p>
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16, marginTop: 24 }}>
+              <div className="wmp-crystal" style={{ padding: '24px' }}>
+                <h3 className="disp" style={{ fontSize: 20, marginBottom: 12 }}>Omnichannel marketplace sync.</h3>
+                <p style={{ fontSize: 14, lineHeight: 1.5, color: '#3a3a38', marginBottom: 12 }}>
+                  We unify Walmart Marketplace with Amazon Seller Central and Amazon Vendor Central. We also connect TikTok Shop.
+                </p>
+                <p style={{ fontSize: 14, lineHeight: 1.5, color: '#3a3a38', marginBottom: 12 }}>
+                  Integrate your catalog with Shopify, Shopify Plus, BigCommerce, WooCommerce, and Magento.
+                </p>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
+                  {['Walmart Marketplace', 'Amazon Seller Central', 'Amazon Vendor Central', 'TikTok Shop', 'Shopify Plus', 'BigCommerce', 'WooCommerce', 'Magento'].map(s => (
+                    <span key={s} style={{ fontSize: 12, padding: '4px 8px', background: '#f5f5f4', borderRadius: 4, fontWeight: 600 }}>{s}.</span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="wmp-crystal" style={{ padding: '24px' }}>
+                <h3 className="disp" style={{ fontSize: 20, marginBottom: 12 }}>ERP sync and warehouse routing.</h3>
+                <p style={{ fontSize: 14, lineHeight: 1.5, color: '#3a3a38', marginBottom: 12 }}>
+                  We implement automated inventory sync across warehouses. We build custom erp integration links for NetSuite, SAP, and QuickBooks.
+                </p>
+                <p style={{ fontSize: 14, lineHeight: 1.5, color: '#3a3a38', marginBottom: 12 }}>
+                  Connect your warehouse management system (wms) and order management system (oms). Manage multi-warehouse stock allocation and 3pl hubs.
+                </p>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
+                  {['inventory sync', 'multi-warehouse', 'stock allocation', 'warehouse management system', 'order management system', '3pl', 'dropshipping'].map(c => (
+                    <span key={c} style={{ fontSize: 12, padding: '4px 8px', background: '#f5f5f4', borderRadius: 4, fontWeight: 600 }}>{c}.</span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="wmp-crystal" style={{ padding: '24px' }}>
+                <h3 className="disp" style={{ fontSize: 20, marginBottom: 12 }}>Product feeds and API automation.</h3>
+                <p style={{ fontSize: 14, lineHeight: 1.5, color: '#3a3a38', marginBottom: 12 }}>
+                  Connect product information management (pim) and digital asset management (dam) systems. We automate your product feed rules.
+                </p>
+                <p style={{ fontSize: 14, lineHeight: 1.5, color: '#3a3a38', marginBottom: 12 }}>
+                  Our team deploys feed optimisation for shopping ads. We set up realtime webhook alerts and admin api connections.
+                </p>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
+                  {['product information management', 'digital asset management', 'product feed', 'feed optimisation', 'webhook', 'admin api', 'api-first'].map(c => (
+                    <span key={c} style={{ fontSize: 12, padding: '4px 8px', background: '#f5f5f4', borderRadius: 4, fontWeight: 600 }}>{c}.</span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="wmp-crystal" style={{ padding: '24px' }}>
+                <h3 className="disp" style={{ fontSize: 20, marginBottom: 12 }}>B2B pricing and wholesale rules.</h3>
+                <p style={{ fontSize: 14, lineHeight: 1.5, color: '#3a3a38', marginBottom: 12 }}>
+                  Support enterprise business buyers. Configure contract pricing, tiered pricing, volume pricing, and custom price list tiers.
+                </p>
+                <p style={{ fontSize: 14, lineHeight: 1.5, color: '#3a3a38', marginBottom: 12 }}>
+                  Set minimum order quantity rules. Enable bulk ordering, quick order tools, reorder workflows, and net terms.
+                </p>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
+                  {['b2b portal', 'contract pricing', 'tiered pricing', 'volume pricing', 'price list', 'minimum order quantity', 'bulk ordering', 'quick order', 'reorder', 'net terms'].map(c => (
+                    <span key={c} style={{ fontSize: 12, padding: '4px 8px', background: '#f5f5f4', borderRadius: 4, fontWeight: 600 }}>{c}.</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* COMPARISON (reused v2 component) */}
         <section className="wmp-sec pt0">
           <div className="wmp-wrap">
@@ -400,7 +574,7 @@ export default function WalmartMarketplaceAgencyPage() {
         {/* NAMED COMPETITORS */}
         <section className="wmp-sec pt0">
           <div className="wmp-wrap">
-            <div className="wmp-sh"><span className="wmp-eyebrow">The landscape</span><h2 className="disp">Named Walmart agencies brands compare us with</h2><p>Most marketplace agencies start after you are approved. Here is where the known names fit, and where we fit.</p></div>
+            <div className="wmp-sh"><span className="wmp-eyebrow">Market Comparison</span><h2 className="disp">Named Walmart agencies brands compare us with</h2><p>Most marketplace agencies start after you are approved. Here is where the known names fit, and where we fit.</p></div>
             <div className="wmp-list">
               {RIVALS.map((r) => (
                 <div key={r.b} className="wmp-crystal wmp-li"><span className="num" /><div><b>{r.b}</b><p>{r.p}</p></div></div>

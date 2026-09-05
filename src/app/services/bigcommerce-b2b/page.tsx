@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import SiteHeader from '@/components/v2/SiteHeader';
+import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
 import SiteFooter from '@/components/v2/SiteFooter';
 import FAQ from '@/components/v2/FAQ';
 import HeroInlineForm from '@/components/HeroInlineForm';
@@ -18,7 +19,7 @@ const IMG = '/images/us/marketplace';
 export const metadata: Metadata = {
   title: 'BigCommerce B2B Edition Agency & Development | FactoryJet',
   description:
-    'Scale enterprise wholesale with BigCommerce B2B Edition. Custom quoting engine, corporate account hierarchies, sales rep masquerade, PunchOut e-procurement, and real-time ERP integration.',
+    'Scale enterprise wholesale with BigCommerce B2B Edition. Custom quoting, corporate account hierarchies, sales rep tools, PunchOut, and real-time ERP sync.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
@@ -42,6 +43,12 @@ export const metadata: Metadata = {
 /* ─────────────────────────────────────────────
    FAQ DATA
 ───────────────────────────────────────────── */
+const BREADCRUMB_ITEMS: BreadcrumbItem[] = [
+  { name: 'Home', url: '/' },
+  { name: 'Services', url: '/services' },
+  { name: 'BigCommerce B2B Edition', url: '/services/bigcommerce-b2b' },
+];
+
 const FAQ_CATEGORIES = [
   { key: 'features', label: 'B2B Edition Features' },
   { key: 'quoting', label: 'Quoting & PunchOut' },
@@ -55,25 +62,25 @@ const FAQ_ITEMS = [
     category: 'features',
     question: 'What is BigCommerce B2B Edition and who is it designed for?',
     answer:
-      'BigCommerce B2B Edition is an enterprise wholesale package built directly on BigCommerce that provides advanced B2B workflows, including multi-tiered corporate account hierarchies, buyer purchasing approval rules, automated request-for-quote (RFQ) negotiation engines, and sales representative order masquerade. It is designed for industrial manufacturers, distributors, and high-volume wholesale brands.',
+      'BigCommerce B2B Edition is an enterprise wholesale suite built on BigCommerce. It gives you multi-tier company hierarchies and buyer approval rules. It includes automated RFQ quoting engines and sales rep masquerade. It is built for manufacturers, distributors, and wholesale brands.',
   },
   {
     category: 'features',
     question: 'How do corporate buyer account hierarchies work in BigCommerce B2B Edition?',
     answer:
-      'Corporate customers can set up structured company accounts with parent-child relationships across multiple corporate divisions and physical facilities. Within each account, corporate administrators can assign granular employee roles, such as Senior Buyer with approval authority versus Junior Requisitioner with order submission limits.',
+      'Corporate clients set up company accounts. They build parent-child links across divisions and branches. Company admins assign granular roles to team members. For example, senior buyers have full approval authority while junior staff have spend limits.',
   },
   {
     category: 'features',
     question: 'Can B2B customers create custom shopping lists and quick-order pads?',
     answer:
-      'Yes. Buyers can create and save unlimited custom shopping lists for recurring facility restocks, search products by exact manufacturer part number (MPN) or SKU, and upload bulk CSV spreadsheets to populate complex multi-thousand-item carts in seconds.',
+      'Yes. Buyers can save custom shopping lists for recurring restocks. They search products by part number or SKU. They can also upload bulk CSV spreadsheets to fill carts in seconds.',
   },
   {
     category: 'features',
     question: 'How are customer-specific price lists managed in BigCommerce B2B?',
     answer:
-      'You can define custom price lists for specific customer groups or individual corporate accounts, supporting percentage discounts, fixed contracted unit prices, volume-tiered discounts, and custom shipping rate schedules.',
+      'You can set custom price lists for customer groups or individual accounts. Support percentage discounts or fixed contract unit prices. You can also assign volume tiers and custom shipping rates.',
   },
 
   // Quoting & PunchOut
@@ -81,19 +88,19 @@ const FAQ_ITEMS = [
     category: 'quoting',
     question: 'How does the automated Request for Quote (RFQ) engine work?',
     answer:
-      'Buyers can convert their shopping cart into a formal quote request with one click, attaching custom notes and target pricing. Internal sales representatives receive immediate notifications, review margin thresholds, adjust line-item discounts, and return a binding digital quote with an expiration window for instant buyer checkout.',
+      'Buyers can convert shopping carts into quote requests with one click. They attach custom notes and target prices. Sales reps get instant alerts. They review margins, adjust line discounts, and return digital quotes. Buyers complete checkout in one click.',
   },
   {
     category: 'quoting',
     question: 'What is PunchOut e-procurement (cXML / OCI) and how is it supported?',
     answer:
-      'PunchOut enables enterprise buyers to access your BigCommerce product catalog directly from within their internal enterprise procurement software (such as SAP Ariba, Coupa, or Jaggaer). When the buyer completes their cart, the order transfers automatically into their corporate procurement system for PO authorization.',
+      'PunchOut lets enterprise buyers access your catalog from within their procurement software. This supports SAP Ariba, Coupa, and Jaggaer. When a buyer completes a cart, items transfer into their ERP for PO approval.',
   },
   {
     category: 'quoting',
     question: 'How does sales representative masquerade work?',
     answer:
-      'Sales representatives and customer service agents can log into the storefront on behalf of any authorized wholesale customer. Reps can view the customer’s contracted pricing, build carts, configure custom quotes, and submit purchase orders on the buyer’s behalf.',
+      'Sales reps can log into the store for any wholesale customer. They view custom pricing and build orders. They configure quotes and submit purchase orders on the buyer’s behalf.',
   },
 
   // ERP & Workflows
@@ -101,19 +108,19 @@ const FAQ_ITEMS = [
     category: 'erp',
     question: 'How does FactoryJet connect BigCommerce B2B Edition to our ERP?',
     answer:
-      'We build bi-directional REST and GraphQL integration middleware connecting BigCommerce B2B Edition to NetSuite, SAP, Microsoft Dynamics 365, Epicor, Infor, or Acumatica. Customer credit balances, open invoices, inventory counts, and purchase orders synchronize in real time.',
+      'We build REST and GraphQL middleware connecting BigCommerce B2B Edition to your ERP. We support NetSuite, SAP, Dynamics 365, Epicor, Infor, and Acumatica. Credit balances, open invoices, inventory counts, and orders sync in real time.',
   },
   {
     category: 'erp',
     question: 'How are invoice payments and Net terms handled?',
     answer:
-      'Wholesale buyers can check out using pre-approved credit limits on Net 30, 60, or 90 terms. The buyer portal provides complete self-service invoice management, allowing accounts payable teams to view open balances, download PDF invoices, and pay multiple invoices via ACH or corporate card.',
+      'Wholesale buyers check out on Net 30, 60, or 90 terms. Credit lines are approved in advance. The portal provides invoice management. Finance teams can view open balances. They download PDF invoices and pay via ACH or card.',
   },
   {
     category: 'erp',
     question: 'Can BigCommerce B2B Edition run a hybrid DTC and B2B model?',
     answer:
-      'Yes. BigCommerce B2B Edition can power a single unified storefront where retail consumers browse standard retail pricing while logged-in wholesale accounts see their custom negotiated price lists, Net terms, and quoting tools.',
+      'Yes. BigCommerce B2B Edition powers unified storefronts. Retail consumers browse standard pricing on the main site. Logged-in wholesale accounts see custom price lists, Net terms, and quoting tools.',
   },
 
   // Commercials & Scoping
@@ -121,86 +128,86 @@ const FAQ_ITEMS = [
     category: 'commercials',
     question: 'How long does a BigCommerce B2B Edition implementation take?',
     answer:
-      'A complete enterprise B2B portal deployment typically takes 5 to 8 weeks, including catalog data mapping, price list configuration, ERP connector integration, and testing.',
+      'A complete enterprise B2B portal deployment takes 5 to 8 weeks. This includes catalog mapping and price list setup. It also covers ERP connector integration and end-to-end testing.',
   },
   {
     category: 'commercials',
     question: 'What is FactoryJet’s pricing model for BigCommerce B2B development?',
     answer:
-      'We work on transparent fixed-price milestone contracts. We never charge percentage revenue shares or hidden hourly overages.',
+      'We work on transparent fixed-price milestone contracts. We never charge percentage revenue shares. We never bill open-ended hourly rates.',
   },
   {
     category: 'commercials',
     question: 'How do we schedule a BigCommerce B2B scoping call with the founder?',
     answer:
-      'You can book a 30-minute scoping consultation directly with Bhavesh Barot. We will analyze your wholesale pricing rules, ERP landscape, and quoting workflows to deliver a comprehensive fixed-scope proposal.',
+      'You can book a 30-minute scoping call directly with Bhavesh Barot. We analyze your wholesale pricing rules and ERP architecture. Then we deliver a comprehensive fixed-scope proposal.',
   },
   {
     category: 'b2b',
     question: 'How do you handle custom trade credit applications and customer onboarding on BigCommerce?',
     answer:
-      'We build automated corporate registration flows where wholesale applicants submit credit references, resale certificates, and company identification. Upon automated credit scoring and admin verification, buyer accounts are assigned custom payment terms and price lists automatically.',
+      'We build automated corporate registration flows. Wholesale applicants submit credit references, resale forms, and company details. Once approved, buyer accounts receive custom payment terms and price lists right away.',
   },
   {
     category: 'b2b',
     question: 'How does BigCommerce B2B Edition support multi-tier customer group pricing?',
     answer:
-      'BigCommerce B2B Edition allows merchants to create unlimited customer groups with custom price lists, volume break discounts, and category-level percentage margins. Corporate buyers automatically see their contracted pricing upon logging into their account.',
+      'Create unlimited customer groups with custom price lists and volume tiers. You can also assign category percentage discounts. Corporate buyers see contracted pricing as soon as they log in.',
   },
   {
     category: 'integrations',
     question: 'How does BigCommerce B2B Edition integrate with warehouse management systems (WMS)?',
     answer:
-      'We build automated bi-directional data pipelines connecting BigCommerce B2B Edition to modern warehouse management systems such as ShipHero, Deposco, SkuVault, and Logiwa. Purchase orders route to designated fulfillment queues instantly, generating compliant pallet shipping labels and triggering automatic ASN (Advanced Shipping Notice) tracking updates back to corporate buyer accounts.',
+      'We link BigCommerce B2B to WMS platforms. We support ShipHero, Deposco, SkuVault, and Logiwa. Orders route to fulfillment queues instantly. The system creates compliant pallet shipping labels. It sends ASN tracking updates to buyer accounts.',
   },
   {
     category: 'integrations',
     question: 'How does BigCommerce B2B connect to Acumatica and QuickBooks Enterprise?',
     answer:
-      'We engineer bi-directional API pipelines that synchronize inventory levels, purchase orders, customer contract terms, and tracking numbers in real time, eliminating manual data entry between your accounting software and digital storefront.',
+      'We build bi-directional API pipelines for Acumatica and QuickBooks. Inventory levels, purchase orders, customer contract terms, and tracking numbers sync in real time. This cuts manual entry completely.',
   },
   {
     category: 'b2b',
     question: 'Can corporate buyers set up multi-user approval workflows with spend limits?',
     answer:
-      'Yes. Enterprise accounts can establish multi-tiered approval chains. For example, junior procurement staff can draft orders, but purchases exceeding $5,000 automatically route to a designated corporate purchasing manager for digital approval prior to fulfillment.',
+      'Yes. Enterprise accounts can set up multi-tier approval chains. Junior buyers can draft orders. Purchases over $5,000 route to a purchasing manager for digital approval prior to fulfillment.',
   },
   {
     category: 'features',
     question: 'How does BigCommerce B2B Edition handle contract pricing for thousands of custom SKUs?',
     answer:
-      'BigCommerce B2B Edition utilizes high-performance price list APIs supporting over 100,000+ custom price list entries. Merchants can assign specific contracted SKU rates, collection percentage margins, or currency overrides to individual corporate account groups without slowing down catalog query speeds.',
+      'Brands assign custom SKU rates and margins. Currency rules apply to accounts without slowing catalog speeds. BigCommerce B2B Edition uses fast price list APIs supporting over 100,000 price entries.',
   },
   {
     category: 'features',
     question: 'Can corporate buyers download official invoices and statement of accounts in PDF?',
     answer:
-      'Yes. Corporate buyers and accounts payable teams have complete self-service access to historical orders, tracking numbers, outstanding balances, and downloadable PDF tax invoices directly within their B2B account portal.',
+      'Yes. Corporate buyers and accounting teams get self-service access to past orders and tracking numbers. They can review open balances and download PDF invoices directly in their B2B portal.',
   },
   {
     category: 'integrations',
     question: 'How does BigCommerce B2B Edition support multi-warehouse inventory routing and LTL freight shipping?',
     answer:
-      'We integrate custom carrier freight APIs and multi-location inventory routing engines. For oversized or palletized orders, the checkout calculates real-time LTL freight rates based on destination dock requirements and routes line items to the nearest regional distribution warehouse.',
+      'We integrate carrier freight APIs and multi-location inventory routing. For oversized or pallet orders, checkout calculates real-time LTL freight rates. Orders route to the nearest warehouse automatically.',
   },
   {
     category: 'commercials',
     question: 'What is the difference between BigCommerce B2B Edition and Adobe Commerce (Magento B2B)?',
     answer:
-      'While Adobe Commerce requires heavy self-hosted server infrastructure, perpetual security patching, and expensive maintenance retainers, BigCommerce B2B Edition delivers an enterprise SaaS architecture with native quoting, PunchOut, and corporate buyer hierarchies at a fraction of the total cost of ownership.',
+      'Adobe Commerce requires heavy self-hosted servers, frequent security patches, and high maintenance costs. BigCommerce B2B Edition delivers an enterprise SaaS setup. It provides native quoting, PunchOut, and corporate hierarchies at a lower cost of ownership.',
   },
   {
     category: 'integrations',
     question: 'How does BigCommerce B2B Edition handle custom freight carrier rate calculation?',
     answer:
-      'We connect specialized LTL freight rating engines (Freightview, ShipHawk, or custom API endpoints) that calculate real-time pallet shipping rates based on shipment weight, freight class, commercial dock delivery, and liftgate requirements.',
+      'We connect LTL freight rating engines like Freightview and ShipHawk. They calculate live freight rates. Quotes factor in freight class, dock access, and liftgate needs.',
   },
 ];
 
 /* ─────────────────────────────────────────────
    SCHEMAS
 ───────────────────────────────────────────── */
-const FAQ_SCHEMA = {
+const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: FAQ_ITEMS.map((item) => ({
@@ -210,7 +217,7 @@ const FAQ_SCHEMA = {
   })),
 };
 
-const SERVICE_SCHEMA = {
+const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   serviceType: 'BigCommerce B2B Edition Development Agency',
@@ -222,7 +229,7 @@ const SERVICE_SCHEMA = {
   audience: { '@type': 'BusinessAudience', name: 'B2B Manufacturers, Distributors, and Enterprises' },
 };
 
-const HOWTO_SCHEMA = {
+const howtoSchema = {
   '@context': 'https://schema.org',
   '@type': 'HowTo',
   name: 'How FactoryJet Deploys BigCommerce B2B Edition Wholesale Portals',
@@ -234,7 +241,7 @@ const HOWTO_SCHEMA = {
   ],
 };
 
-const ORG_SCHEMA = {
+const orgSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   '@id': 'https://factoryjet.com/#organization',
@@ -243,7 +250,7 @@ const ORG_SCHEMA = {
   sameAs: ['https://www.linkedin.com/company/factoryjet'],
 };
 
-const WEBPAGE_SCHEMA = {
+const webpageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
   '@id': 'https://factoryjet.com/services/bigcommerce-b2b#webpage',
@@ -265,7 +272,7 @@ const WEBPAGE_SCHEMA = {
   publisher: { '@id': 'https://factoryjet.com/#organization' },
 };
 
-const BREADCRUMB_SCHEMA = {
+const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
@@ -276,69 +283,71 @@ const BREADCRUMB_SCHEMA = {
 };
 
 const STATS = [
-  { b: 'Enterprise B2B', s: 'RFQ quoting & PunchOut ready' },
-  { b: 'Buyer Roles', s: 'granular corporate permissions' },
-  { b: 'ERP Real-Time', s: 'NetSuite, SAP & Epicor sync' },
-  { b: '0% Rev-Share', s: 'fixed-price project scoping' },
+  { b: 'Enterprise B2B', s: 'RFQ quoting & PunchOut ready.' },
+  { b: 'Buyer Roles', s: 'Granular corporate permissions.' },
+  { b: 'ERP Real-Time', s: 'NetSuite, SAP & Epicor sync.' },
+  { b: '0% Rev-Share', s: 'Fixed-price project scoping.' },
 ];
 
 const SOURCED = [
   {
     v: '50%+',
-    d: 'reduction in wholesale quotation turnaround time achieved by manufacturers deploying automated BigCommerce B2B RFQ engines.',
-    src: 'BigCommerce Enterprise Study',
+    d: 'Quote turnaround time cut achieved by manufacturers using automated BigCommerce B2B RFQ tools.',
+    src: 'BigCommerce Enterprise Study.',
     href: 'https://www.bigcommerce.com/b2b-edition',
   },
   {
     v: '74%',
-    d: 'of enterprise B2B procurement professionals prefer digital PunchOut catalog ordering directly within their ERP systems.',
-    src: 'Gartner B2B Digital Commerce Survey',
+    d: 'Enterprise buyers prefer PunchOut ordering. They buy directly within their internal ERP systems.',
+    src: 'Gartner B2B Digital Commerce Survey.',
     href: 'https://www.gartner.com',
   },
   {
     v: '3.2x',
     d: 'increase in wholesale reorder frequency realized by distributors providing self-service invoice payment portals.',
-    src: 'Forrester B2B Commerce Benchmark',
+    src: 'Forrester B2B Commerce Benchmark.',
     href: 'https://www.forrester.com',
   },
 ];
 
 const BENEFITS = [
-  { i: '◈', t: 'Automated RFQ & Quoting Engine', d: 'Enable buyers to request custom quotes from their carts and allow sales reps to return adjusted pricing with expiration windows.' },
-  { i: '◇', t: 'Corporate Account Hierarchies & Approval Workflows', d: 'Configure multi-level buyer organizations with designated approvers, spend limits, and facility-specific shipping addresses.' },
-  { i: '↯', t: 'Sales Representative Masquerade & Order Creation', d: 'Allow sales teams to browse on behalf of corporate clients, construct custom order proposals, and close deals instantly.' },
-  { i: '▤', t: 'PunchOut E-Procurement (cXML & OCI)', d: 'Connect your catalog directly to buyer ERPs like SAP Ariba and Coupa for automated enterprise requisitioning.' },
-  { i: '⛓', t: 'Self-Service Invoice Portal & Net Terms', d: 'Give corporate accounting teams the ability to view open invoices, download statements, and execute ACH payments.' },
-  { i: '⤢', t: 'Bi-Directional ERP & WMS Connectors', d: 'Synchronize inventory counts, open purchase orders, customer contract pricing, and credit balances across your core ERP.' },
+  { i: '◈', t: 'Automated RFQ & Quoting Engine.', d: 'Buyers request custom quotes from their carts. Sales reps return adjusted pricing with expiration windows.' },
+  { i: '◇', t: 'Corporate Account Hierarchies.', d: 'Configure multi-level buyer organizations. Set spend limits and facility shipping addresses.' },
+  { i: '↯', t: 'Sales Representative Masquerade.', d: 'Sales teams browse on behalf of corporate clients. They construct custom order proposals and close deals instantly.' },
+  { i: '▤', t: 'PunchOut E-Procurement (cXML & OCI).', d: 'Connect your catalog directly to buyer ERPs like SAP Ariba and Coupa. Enable automated enterprise requisitioning.' },
+  { i: '⛓', t: 'Self-Service Invoice Portal & Net Terms.', d: 'Give accounting teams access to open invoices. Let buyers download statements and execute ACH payments.' },
+  { i: '⤢', t: 'Bi-Directional ERP & WMS Connectors.', d: 'Sync inventory counts and open purchase orders. Update contract pricing and credit balances across your core ERP.' },
 ];
 
 export default function BigCommerceB2BPage() {
   return (
     <>
-      <script id="bc-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script id="bc-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
-      <script id="bc-howto-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(HOWTO_SCHEMA) }} />
-      <script id="bc-org-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ORG_SCHEMA) }} />
-      <script id="bc-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
-      <script id="bc-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
+      <script id="bc-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script id="bc-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script id="bc-howto-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howtoSchema) }} />
+      <script id="bc-org-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
+      <script id="bc-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script id="bc-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webpageSchema) }} />
 
       <SiteHeader navLinks={[]} cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
       <main className="platpage">
+        <div className="pp-wrap" style={{ paddingTop: '16px', paddingBottom: '0px' }}>
+          <Breadcrumbs items={BREADCRUMB_ITEMS} />
+        </div>
         {/* ── Hero ── */}
         <section className="pp-dotgrid">
           <div className="pp-wrap" style={{ paddingTop: 'clamp(44px,6vh,84px)', paddingBottom: 'clamp(44px,6vh,84px)' }}>
             <div style={{ display: 'grid', gridTemplateColumns: '1.05fr 0.95fr', gap: 'clamp(32px,5vw,56px)', alignItems: 'center' }} className="pp-herogrid">
               <div>
-                <p className="pp-eyebrow">BigCommerce B2B Edition Agency</p>
+                <p className="pp-eyebrow">BigCommerce B2B Edition Agency.</p>
                 <h1 style={{ margin: '14px 0 12px', maxWidth: '18ch' }}>
-                  Enterprise wholesale on <span className="pp-grad">BigCommerce B2B.</span>
+                  Enterprise wholesale on. <span className="pp-grad">BigCommerce B2B.</span>
                 </h1>
                 <p className="pp-lead" style={{ maxWidth: '48ch' }}>
-                  Custom quoting engine, corporate account hierarchies, sales rep masquerade, PunchOut e-procurement,
-                  and real-time ERP integration for industrial manufacturers and distributors.
+                  Custom quoting engines, corporate hierarchies, and sales rep masquerade. Native PunchOut e-procurement and real-time ERP sync for distributors.
                 </p>
-                <HeroInlineForm source="us_bigcommerce_b2b_hero" region="us" submitLabel="Get a BigCommerce B2B Scope" />
+                <HeroInlineForm source="us_bigcommerce_b2b_hero" region="us" submitLabel="Get a BigCommerce B2B Scope." />
               </div>
 
               {/* Visual Architecture Graphic */}
@@ -366,19 +375,19 @@ export default function BigCommerceB2BPage() {
                     marginBottom: '18px',
                   }}
                 >
-                  BigCommerce B2B Edition Suite
+                  BigCommerce B2B Edition Suite.
                   <small style={{ display: 'block', fontFamily: 'var(--pp-mono)', fontSize: '11px', color: 'var(--pp-orange-dark)', fontWeight: 600, marginTop: '2px' }}>
-                    RFQ Quoting · PunchOut cXML · Buyer Approval · NetSuite / SAP
+                    RFQ Quoting · PunchOut cXML · Buyer Approval · NetSuite / SAP.
                   </small>
                 </div>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '10px' }}>
                   {[
-                    { name: 'RFQ Engine', desc: 'Custom Quotes' },
-                    { name: 'PunchOut', desc: 'Ariba / Coupa' },
-                    { name: 'Buyer Roles', desc: 'Approval Limits' },
-                    { name: 'Rep Masquerade', desc: 'Sales Ordering' },
-                    { name: 'Invoice Hub', desc: 'ACH & Net Terms' },
-                    { name: 'ERP Core', desc: 'SAP / Dynamics' },
+                    { name: 'RFQ Engine', desc: 'Custom Quotes.' },
+                    { name: 'PunchOut', desc: 'Ariba / Coupa.' },
+                    { name: 'Buyer Roles', desc: 'Approval Limits.' },
+                    { name: 'Rep Masquerade', desc: 'Sales Ordering.' },
+                    { name: 'Invoice Hub', desc: 'ACH & Net Terms.' },
+                    { name: 'ERP Core', desc: 'SAP / Dynamics.' },
                   ].map((ch) => (
                     <div key={ch.name} style={{ border: '1px solid var(--pp-line)', borderRadius: '10px', background: '#fff', padding: '12px 8px', textAlign: 'center' }}>
                       <b style={{ fontFamily: 'var(--pp-disp)', fontSize: '13px', display: 'block', color: 'var(--pp-ink)' }}>{ch.name}</b>
@@ -402,9 +411,9 @@ export default function BigCommerceB2BPage() {
                 >
                   <div>
                     <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#10B981', display: 'inline-block', marginRight: '6px' }} />
-                    Enterprise B2B Certified
+                    Enterprise B2B Certified.
                   </div>
-                  <div>Complex Quoting &amp; PunchOut Ready</div>
+                  <div>Complex Quoting &amp; PunchOut Ready.</div>
                 </div>
               </div>
             </div>
@@ -432,60 +441,60 @@ export default function BigCommerceB2BPage() {
             <h2 style={{ marginTop: '10px' }}>What is BigCommerce B2B Edition development?</h2>
             <div className="pp-editorial" style={{ marginTop: '20px' }}>
               <p>
-                BigCommerce B2B Edition development is the enterprise engineering of complex wholesale buyer portals,
-                custom quotation negotiation systems, buyer permission hierarchies, and PunchOut e-procurement integrations
-                built on BigCommerce’s enterprise commerce platform.
+                BigCommerce B2B Edition development is the enterprise engineering of wholesale buyer portals.
+                We build custom quotation negotiation systems and buyer permission hierarchies. We also deploy
+                PunchOut e-procurement integrations on BigCommerce.
               </p>
               <p>
-                Industrial manufacturers and high-volume distributors require capabilities that standard retail platforms
-                cannot support: multi-tier buyer purchasing approval limits, custom negotiated quotes with line-item discounts,
-                PunchOut connections directly into SAP Ariba or Coupa, and sales rep ordering masquerade.
+                Industrial manufacturers and distributors need tools that standard retail platforms lack.
+                They require multi-tier buyer purchasing approval limits. They need custom quotes with line discounts.
+                They also need direct PunchOut links to SAP Ariba or Coupa, plus sales rep masquerade.
               </p>
               <p>
-                FactoryJet builds end-to-end BigCommerce B2B Edition portals. We configure complex price list matrices,
-                deploy automated RFQ workflows, build custom self-service invoice payment hubs, and engineer bi-directional
-                ERP connectors linking NetSuite, SAP, Epicor, or Microsoft Dynamics 365.
+                FactoryJet builds end-to-end BigCommerce B2B Edition portals. We configure complex price list matrices.
+                We deploy automated RFQ workflows and build custom self-service invoice payment hubs. We also engineer
+                bi-directional ERP connectors linking NetSuite, SAP, Epicor, or Dynamics 365.
               </p>
               <p>
-                By digitizing manual order entry and phone-based quotation requests onto BigCommerce B2B Edition, industrial manufacturers and wholesale distributors achieve a 40%+ reduction in order processing costs while accelerating customer quote turnaround times from days to minutes.
+                Digitize manual order entry and phone quotes on BigCommerce B2B Edition. Manufacturers and distributors achieve a 40%+ cut in order costs. Quote turnaround drops from days to minutes.
               </p>
               <p>
-                Whether launching a dedicated wholesale portal or integrating headless BigCommerce Catalyst with an existing enterprise CMS, our systems engineering ensures sub-second catalog responsiveness, zero downtime, and complete data consistency across millions of dollars in monthly transaction volume. We eliminate legacy software friction, allowing your sales team to focus on high-value client relationships rather than manual administrative tasks. Every implementation is backed by dedicated post-launch hypercare, thorough staff training, and transparent milestone governance.
+                Launch a dedicated wholesale portal or headless Catalyst store. Our systems engineering ensures sub-second catalog speeds and zero downtime. We protect data across millions in monthly volume. We remove software friction so sales reps focus on client relationships. Every project includes post-launch hypercare, staff training, and clear milestones.
               </p>
               <p>
-                From complex multi-brand automotive parts catalogs with millions of fitment SKUs to customized industrial manufacturing supply chains, BigCommerce B2B Edition scales effortlessly without database lockups or expensive server re-architectures.
+                Manage complex multi-brand catalogs with millions of fitment SKUs. BigCommerce B2B Edition scales smoothly. It runs without database lockups or server strain.
               </p>
             </div>
 
             {/* Answer-First Definitions for AI Overviews & Search Engines */}
             <div style={{ marginTop: '36px', display: 'grid', gap: '18px' }}>
               <AnswerFirstDefinition
-                term="BigCommerce B2B Edition Architecture"
-                definition="BigCommerce B2B Edition is an enterprise SaaS wholesale platform integrating native Request for Quote (RFQ) negotiation, multi-tiered company account hierarchies, buyer purchasing approval rules, sales rep order masquerade, and self-service invoice payment portals on an open API backbone."
+                term="BigCommerce B2B Edition Architecture."
+                definition="BigCommerce B2B Edition is an enterprise wholesale SaaS platform. It integrates native RFQ negotiation, multi-tier company hierarchies, and buyer approval rules. It also provides sales rep order masquerade and self-service invoice portals on open APIs."
                 keyTakeaways={[
-                  'Provides enterprise B2B functionality without the high hosting overhead of open-source platforms',
-                  'REST and GraphQL APIs support real-time synchronization with ERPs like NetSuite, SAP, and Epicor',
-                  'Composable headless storefront support through modern Next.js Catalyst architecture',
+                  'Provides enterprise B2B functionality without the high hosting overhead of open-source platforms.',
+                  'REST and GraphQL APIs support real-time synchronization with ERPs like NetSuite, SAP, and Epicor.',
+                  'Composable headless storefront support through modern Next.js Catalyst architecture.',
                 ]}
                 citationSource="FactoryJet BigCommerce B2B Architecture Standard (2026)"
               />
               <AnswerFirstDefinition
-                term="Automated RFQ & Digital Quoting Engines"
-                definition="An automated RFQ (Request for Quote) engine allows B2B buyers to convert their digital shopping carts into formal quote proposals. Sales reps receive instant margin alerts, adjust line-item discounts, and return a digital binding quote with an expiration window for one-click buyer checkout."
+                term="Automated RFQ & Digital Quoting Engines."
+                definition="An automated RFQ engine lets buyers turn shopping carts into quote proposals. Sales reps receive instant margin alerts. They adjust line discounts and return digital quotes. Buyers complete checkout with one click."
                 keyTakeaways={[
-                  'Reduces quote negotiation turnaround time from 72 hours to under 15 minutes',
-                  'Maintains strict gross margin guardrails for sales representatives during discount adjustments',
-                  'Converts accepted quotes into authorized sales orders without manual invoice re-entry',
+                  'Reduces quote negotiation turnaround time from 72 hours to under 15 minutes.',
+                  'Maintains strict gross margin guardrails for sales representatives during discount adjustments.',
+                  'Converts accepted quotes into authorized sales orders without manual invoice re-entry.',
                 ]}
                 citationSource="FactoryJet B2B Quoting Benchmark (2026)"
               />
               <AnswerFirstDefinition
-                term="PunchOut e-Procurement (cXML / OCI)"
-                definition="PunchOut e-procurement is an automated electronic protocol connecting your BigCommerce catalog directly into an enterprise buyer's internal procurement software (SAP Ariba, Coupa, Jaggaer, Oracle Fusion). Buyers browse contracted catalogs and transfer requisitions back into their ERP for management approval without public checkout."
+                term="PunchOut e-Procurement (cXML / OCI)."
+                definition="PunchOut e-procurement connects your catalog directly to buyer ERP tools like SAP Ariba, Coupa, and Oracle Fusion. Corporate buyers browse contracted catalogs. They transfer items into their ERP for approval without public checkout."
                 keyTakeaways={[
-                  'Meets mandatory procurement compliance rules for Fortune 500, government, and healthcare buyers',
-                  'Eliminates manual purchase order PDF entry and asynchronous billing disputes',
-                  'Automates electronic Purchase Order (OrderRequest) ingestion directly into warehouse picking queues',
+                  'Meets mandatory procurement compliance rules for Fortune 500, government, and healthcare buyers.',
+                  'Eliminates manual purchase order PDF entry and asynchronous billing disputes.',
+                  'Automates electronic Purchase Order (OrderRequest) ingestion directly into warehouse picking queues.',
                 ]}
                 citationSource="FactoryJet Enterprise e-Procurement Standard (2026)"
               />
@@ -497,7 +506,7 @@ export default function BigCommerceB2BPage() {
         <section className="pp-sec tint">
           <div className="pp-wrap">
             <p className="pp-mlabel">// enterprise benchmark data</p>
-            <h2 style={{ marginTop: '10px' }}>BigCommerce B2B Edition by the numbers</h2>
+            <h2 style={{ marginTop: '10px' }}>BigCommerce B2B Edition by the numbers.</h2>
             <div className="pp-bento" style={{ marginTop: '32px' }}>
               {SOURCED.map((s) => (
                 <div className="pp-card" key={s.v}>
@@ -521,7 +530,7 @@ export default function BigCommerceB2BPage() {
         <section className="pp-sec">
           <div className="pp-wrap">
             <p className="pp-mlabel">// why it matters</p>
-            <h2 style={{ marginTop: '10px' }}>Enterprise capabilities of our BigCommerce B2B builds</h2>
+            <h2 style={{ marginTop: '10px' }}>Enterprise capabilities of our BigCommerce B2B builds.</h2>
             <p className="pp-lead" style={{ marginTop: '14px', maxWidth: '58ch' }}>
               Designed to automate wholesale sales pipelines, accelerate high-ticket RFQs, and eliminate administrative overhead.
             </p>
@@ -556,8 +565,7 @@ export default function BigCommerceB2BPage() {
                 <p className="pp-mlabel">// enterprise quoting showcase</p>
                 <h2 style={{ marginTop: '8px' }}>BigCommerce B2B Quoting &amp; PunchOut Architecture</h2>
                 <p className="pp-lead" style={{ marginTop: '14px' }}>
-                  How FactoryJet configures automated Request for Quote (RFQ) negotiation engines, corporate buyer roles,
-                  and PunchOut e-procurement feeds for enterprise manufacturers.
+                  How FactoryJet configures automated RFQ engines. We set corporate buyer roles and PunchOut feeds for manufacturers.
                 </p>
                 <div style={{ marginTop: '22px' }}>
                   <ModalCTAButton label="Scope BigCommerce B2B" region="us" btnVariant="secondary-light" />
@@ -565,7 +573,7 @@ export default function BigCommerceB2BPage() {
               </div>
               <Image
                 src={`${IMG}/bigcommerce-b2b-edition-quoting.webp`}
-                alt="BigCommerce B2B Edition quotation dashboard and buyer permissions"
+                alt="BigCommerce B2B Edition quotation dashboard and buyer permissions."
                 width={1280}
                 height={800}
                 style={{ width: '100%', height: 'auto', borderRadius: '18px', border: '1px solid var(--pp-line)', display: 'block', objectFit: 'cover' }}
@@ -579,28 +587,22 @@ export default function BigCommerceB2BPage() {
         <section className="pp-sec tint">
           <div className="pp-wrap pp-narrow">
             <p className="pp-mlabel">// enterprise e-procurement</p>
-            <h2 style={{ marginTop: '10px' }}>PunchOut cXML Architecture: Connecting Enterprise Buyers on SAP Ariba and Coupa</h2>
+            <h2 style={{ marginTop: '10px' }}>PunchOut cXML Architecture. Connecting Enterprise Buyers on SAP Ariba and Coupa.</h2>
             <div className="pp-editorial" style={{ marginTop: '20px' }}>
               <p>
-                Enterprise buyers, healthcare systems, and government organizations often mandate PunchOut e-procurement capabilities.
-                Rather than navigating public consumer storefronts, procurement teams access your BigCommerce catalog directly from within
-                their internal Enterprise Resource Planning (ERP) procurement software.
+                Enterprise buyers, healthcare systems, and government teams often mandate PunchOut tools. Procurement teams access your catalog directly from within their internal ERP systems. They avoid public consumer storefronts completely.
               </p>
               <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>1. PunchOut Setup Request (cXML POSR)</h3>
               <p>
-                When an enterprise buyer initiates a purchase requisition in SAP Ariba or Coupa, their system sends an authenticated
-                cXML POSR payload to your BigCommerce store. Our middleware creates an authenticated buyer session with pre-negotiated contract pricing.
+                A buyer initiates a purchase in SAP Ariba or Coupa. Their system sends an authenticated cXML payload to BigCommerce. Our middleware opens a buyer session with pre-negotiated contract pricing.
               </p>
               <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>2. Catalog Browsing &amp; Order Message Transfer (cXML POOM)</h3>
               <p>
-                The buyer browses your technical catalog, builds their bill-of-materials, and clicks "PunchOut". Instead of taking a payment,
-                the BigCommerce store transfers an encrypted cXML POOM payload containing itemized SKUs, descriptions, and contract prices back
-                to the buyer's procurement system for internal management approval.
+                The buyer browses your technical catalog and builds their order list. They click PunchOut. The BigCommerce store transfers itemized SKUs, descriptions, and contract prices back to the buyer ERP for approval.
               </p>
               <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>3. Automated Purchase Order Ingestion (cXML OrderRequest)</h3>
               <p>
-                Once internally approved, the buyer's ERP transmits an electronic Purchase Order (cXML OrderRequest) directly into your BigCommerce
-                order fulfillment queue, generating picking slips in your warehouse management software without human manual data entry.
+                Once approved, the buyer ERP transmits an electronic Purchase Order into your BigCommerce queue. It generates picking slips in your warehouse management software without manual data entry.
               </p>
             </div>
           </div>
@@ -611,27 +613,22 @@ export default function BigCommerceB2BPage() {
         <section className="pp-sec">
           <div className="pp-wrap pp-narrow">
             <p className="pp-mlabel">// headless b2b architecture</p>
-            <h2 style={{ marginTop: '10px' }}>Headless BigCommerce Catalyst Architecture for Enterprise Wholesale</h2>
+            <h2 style={{ marginTop: '10px' }}>Headless BigCommerce Catalyst Architecture for Enterprise Wholesale.</h2>
             <div className="pp-editorial" style={{ marginTop: '20px' }}>
               <p>
-                For high-volume distributors requiring bespoke purchasing interfaces, FactoryJet builds composable frontends
-                using BigCommerce Catalyst on Next.js 15 App Router:
+                For high-volume distributors needing custom buying flows, FactoryJet builds composable frontends. We use BigCommerce Catalyst on Next.js 15 App Router.
               </p>
               <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>1. High-Performance B2B SKU Ordering Grid</h3>
               <p>
-                Rather than forcing buyers through traditional consumer product detail pages, our headless ordering grids allow
-                procurement officers to view 500+ replacement parts simultaneously, enter quantities directly into line-item inputs,
-                and populate a $50,000 order in under 30 seconds.
+                Our headless ordering grids let buyers view 500+ parts at once. They enter quantities directly into line items. Buyers can build a $50,000 order in under 30 seconds.
               </p>
               <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>2. Real-Time Multi-Warehouse Inventory Status</h3>
               <p>
-                Display live inventory availability across specific regional distribution centers (e.g. "142 units in Chicago, 85 units in Atlanta").
-                Corporate buyers select preferred fulfillment locations to reduce transit times and freight expenses.
+                Display live inventory across regional fulfillment centers. Corporate buyers select preferred warehouse locations. This cuts transit times and freight expenses.
               </p>
               <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>3. One-Click Reordering &amp; Scheduled Recurring Deliveries</h3>
               <p>
-                Enable corporate clients to save standard weekly or monthly consumable orders, configure automated recurring replenishment schedules,
-                and download official PDF invoices for internal corporate tax records.
+                Corporate clients save recurring supply orders. They set replenishment schedules and download official PDF tax invoices directly.
               </p>
             </div>
           </div>
@@ -644,19 +641,19 @@ export default function BigCommerceB2BPage() {
             <h2 style={{ marginTop: '10px' }}>Corporate Account Hierarchies &amp; Multi-Tier Buyer Approval Workflows</h2>
             <div className="pp-editorial" style={{ marginTop: '20px' }}>
               <p>
-                Unlike standard consumer e-commerce platforms where each customer operates independently, enterprise B2B purchasing requires strict organizational hierarchies and compliance governance:
+                Consumer stores treat buyers as individuals. Enterprise B2B purchasing demands strict organizational hierarchies and spending controls.
               </p>
               <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>1. Multi-Tiered Corporate Account Structures</h3>
               <p>
-                Configure master corporate accounts with parent-child relationships across multiple operating entities, regional subsidiaries, and physical job sites. Master account administrators have total oversight across company-wide purchasing activity, open invoices, and aggregate credit limits.
+                Configure master corporate accounts with parent-child structures across subsidiaries and job sites. Account admins have full oversight of company orders, invoices, and credit limits.
               </p>
               <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>2. Role-Based Buyer Permissions &amp; Spending Caps</h3>
               <p>
-                Assign granular permissions to individual team members: &ldquo;Senior Buyer&rdquo; (can authorize purchase orders up to $25,000), &ldquo;Junior Requisitioner&rdquo; (can build shopping lists and submit quote requests), and &ldquo;Accounts Payable&rdquo; (manages invoice settlements and ACH payments). Orders exceeding designated thresholds automatically trigger email approvals to senior management.
+                Assign granular roles to team members. Senior buyers authorize orders up to $25,000. Junior requisitioners build quote lists. Accounts payable staff manage ACH payments. Orders exceeding thresholds trigger management approval automatically.
               </p>
               <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>3. Address Book &amp; Billing Entity Isolation</h3>
               <p>
-                Restrict specific buyer logins to authorized shipping locations and tax exemption jurisdictions. Corporate branch managers see only their approved delivery docks, preventing misrouted freight and billing confusion.
+                Restrict buyer logins to authorized delivery addresses and tax jurisdictions. Branch managers see only approved delivery docks. This prevents misrouted shipments and billing errors.
               </p>
             </div>
           </div>
@@ -666,22 +663,22 @@ export default function BigCommerceB2BPage() {
         <section className="pp-sec">
           <div className="pp-wrap pp-narrow">
             <p className="pp-mlabel">// enterprise erp middleware</p>
-            <h2 style={{ marginTop: '10px' }}>Bi-Directional ERP Integration: NetSuite, SAP, Epicor, &amp; Dynamics</h2>
+            <h2 style={{ marginTop: '10px' }}>Bi-Directional ERP Integration: NetSuite, SAP, Epicor, &amp; Dynamics.</h2>
             <div className="pp-editorial" style={{ marginTop: '20px' }}>
               <p>
-                FactoryJet builds high-velocity API integration pipelines connecting BigCommerce B2B Edition directly to your core back-office infrastructure:
+                FactoryJet builds API pipelines connecting BigCommerce B2B Edition to your core ERP systems.
               </p>
               <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>1. Real-Time Customer Contract Pricing Synchronization</h3>
               <p>
-                When negotiated wholesale contracts, customer tier assignments, or volume discounts are updated in your ERP (NetSuite SuiteTalk, SAP OData, Microsoft Dynamics 365 Business Central, Epicor Prophet 21), our automated delta webhooks update BigCommerce B2B price lists asynchronously in bulk, eliminating manual data entry errors.
+                When wholesale contracts or volume discounts update in your ERP, webhooks fire. Our sync updates BigCommerce B2B price lists in bulk instantly. This cuts manual entry errors.
               </p>
               <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>2. Live Credit Line &amp; Aging Invoice Verification</h3>
               <p>
-                Before a wholesale buyer completes checkout on Net 30 or Net 60 terms, our middleware queries ERP accounts receivable ledgers in sub-150ms. If an account has past-due invoices or exceeds its credit ceiling, the checkout automatically prompts for credit card payment.
+                Before checkout on Net terms, our middleware checks ERP ledgers in under 150ms. If an account has past-due balances, checkout pauses. It prompts for credit card payment right away.
               </p>
               <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>3. Automated Purchase Order Ingestion &amp; Fulfillment Routing</h3>
               <p>
-                Submitted purchase orders transmit immediately into your ERP and warehouse management software (WMS), generating picking tickets, reserving inventory across regional warehouses, and returning tracking ASN notifications to the buyer portal.
+                Submitted orders transmit directly into your ERP and WMS. The system creates picking tickets. It reserves warehouse stock and sends ASN updates to the portal.
               </p>
             </div>
           </div>
@@ -691,18 +688,18 @@ export default function BigCommerceB2BPage() {
         <section className="pp-sec tint">
           <div className="pp-wrap pp-narrow">
             <p className="pp-mlabel">// fortune 500 procurement</p>
-            <h2 style={{ marginTop: '10px' }}>PunchOut e-Procurement (cXML / OCI): Connecting to SAP Ariba &amp; Coupa</h2>
+            <h2 style={{ marginTop: '10px' }}>PunchOut e-Procurement (cXML / OCI): Connecting to SAP Ariba &amp; Coupa.</h2>
             <div className="pp-editorial" style={{ marginTop: '20px' }}>
               <p>
-                Enterprise buyers at Fortune 500 corporations, universities, and government agencies often mandate e-procurement integrations as a condition of vendor selection:
+                Fortune 500 corporations, universities, and agencies often mandate e-procurement integrations for approved vendors.
               </p>
               <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>1. Frictionless Procurement Session Handshake</h3>
               <p>
-                Buyers click a PunchOut link inside their procurement software (SAP Ariba, Coupa, Jaggaer, Oracle Fusion) and are authenticated into your customized BigCommerce catalog without separate login credentials.
+                Buyers click PunchOut in tools like SAP Ariba, Coupa, or Oracle Fusion. They enter your custom BigCommerce catalog without separate login credentials.
               </p>
               <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>2. Electronic Bill-of-Materials Transfer</h3>
               <p>
-                When the buyer completes their cart, the line-item details transfer back into their ERP as an internal purchase requisition for management sign-off, completely replacing manual PDF purchase order creation.
+                When the buyer fills their cart, items move to their ERP. They submit as a purchase requisition.
               </p>
             </div>
           </div>
@@ -712,29 +709,29 @@ export default function BigCommerceB2BPage() {
         <section className="pp-sec">
           <div className="pp-wrap pp-narrow">
             <p className="pp-mlabel">// sprint methodology</p>
-            <h2 style={{ marginTop: '10px' }}>The 6-Phase BigCommerce B2B Implementation Sprint Roadmap</h2>
+            <h2 style={{ marginTop: '10px' }}>The 6-Phase BigCommerce B2B Implementation Sprint Roadmap.</h2>
             <div className="pp-editorial" style={{ marginTop: '20px' }}>
               <p>
-                Our structured milestone engineering process guarantees a predictable timeline, resilient ERP synchronization, and smooth customer onboarding:
+                Our structured sprint process guarantees predictable timelines, resilient ERP sync, and smooth buyer onboarding.
               </p>
               <ol style={{ listStyleType: 'decimal', paddingLeft: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1rem', marginTop: '1rem' }}>
                 <li>
-                  <strong>Phase 1: B2B Quoting &amp; Price Matrix Architecture (Week 1):</strong> Scoping customer tier matrices, volume break schedules, corporate account structures, and ERP API endpoint mappings.
+                  <strong>Phase 1: B2B Quoting &amp; Price Matrix Architecture (Week 1).</strong> Scope customer tier matrices and volume breaks. Map corporate account structures and ERP API endpoints.
                 </li>
                 <li>
-                  <strong>Phase 2: Company Accounts &amp; Buyer Hierarchy Setup (Week 2):</strong> Provisioning BigCommerce B2B Edition company records, setting spending thresholds, and configuring staff approval chains.
+                  <strong>Phase 2: Company Accounts &amp; Buyer Hierarchy Setup (Week 2).</strong> Provision BigCommerce B2B Edition company records. Set spend thresholds and build staff approval chains.
                 </li>
                 <li>
-                  <strong>Phase 3: High-Speed Quick Order &amp; CSV Matrix Interface (Week 3):</strong> Developing high-speed SKU bulk entry pads, CSV spreadsheet upload engines, and recurring replenishment tools.
+                  <strong>Phase 3: High-Speed Quick Order &amp; CSV Matrix Interface (Week 3).</strong> Build high-speed SKU bulk entry pads. Develop CSV spreadsheet upload tools and recurring replenishment features.
                 </li>
                 <li>
-                  <strong>Phase 4: Digital Quoting Engine &amp; Sales Rep Masquerade (Week 4):</strong> Configuring automated RFQ workflows, margin lock rules, and sales representative order entry portals.
+                  <strong>Phase 4: Digital Quoting Engine &amp; Sales Rep Masquerade (Week 4).</strong> Configure automated RFQ workflows and margin rules. Launch sales representative order entry portals.
                 </li>
                 <li>
-                  <strong>Phase 5: Bi-Directional ERP &amp; PunchOut Integration (Weeks 5 - 6):</strong> Building and testing real-time connectors for NetSuite, SAP, Epicor, or Coupa e-procurement systems.
+                  <strong>Phase 5: Bi-Directional ERP &amp; PunchOut Integration (Weeks 5 - 6).</strong> Build and test real-time connectors for NetSuite, SAP, Epicor, or Coupa e-procurement systems.
                 </li>
                 <li>
-                  <strong>Phase 6: Buyer UAT, Training &amp; Zero-Downtime Launch (Weeks 7 - 8):</strong> Executing test purchasing cycles with key wholesale partners, training sales and accounting staff, and launching the live portal.
+                  <strong>Phase 6: Buyer UAT, Training &amp; Zero-Downtime Launch (Weeks 7 - 8).</strong> Run test purchasing cycles with key wholesale partners. Train sales and accounting teams. Launch the live portal with zero downtime.
                 </li>
               </ol>
             </div>
@@ -745,7 +742,7 @@ export default function BigCommerceB2BPage() {
         <section className="pp-sec">
           <div className="pp-wrap">
             <p className="pp-mlabel">// platform comparison</p>
-            <h2 style={{ marginTop: '10px' }}>BigCommerce B2B Edition vs. Shopify Plus B2B vs. Magento B2B</h2>
+            <h2 style={{ marginTop: '10px' }}>BigCommerce B2B Edition vs. Shopify Plus B2B vs. Magento B2B.</h2>
             <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>
               Compare enterprise B2B capabilities across the top commercial platforms.
             </p>
@@ -761,40 +758,40 @@ export default function BigCommerceB2BPage() {
                 </thead>
                 <tbody>
                   <tr className="me">
-                    <td className="name">Automated RFQ &amp; Quoting Engine</td>
-                    <td>Native built-in quoting engine</td>
-                    <td>Requires custom draft order apps</td>
-                    <td>Native quoting (complex setup)</td>
+                    <td className="name">Automated RFQ &amp; Quoting Engine.</td>
+                    <td>Native built-in quoting engine.</td>
+                    <td>Requires custom draft order apps.</td>
+                    <td>Native quoting (complex setup).</td>
                   </tr>
                   <tr>
-                    <td className="name">PunchOut E-Procurement (cXML)</td>
-                    <td>Native PunchOut integration suite</td>
-                    <td>Requires third-party middleware</td>
-                    <td>Requires complex custom modules</td>
+                    <td className="name">PunchOut E-Procurement (cXML).</td>
+                    <td>Native PunchOut integration suite.</td>
+                    <td>Requires third-party middleware.</td>
+                    <td>Requires complex custom modules.</td>
                   </tr>
                   <tr className="me">
-                    <td className="name">Sales Rep Masquerade Ordering</td>
-                    <td>Native sales representative login</td>
-                    <td>Draft order creation flow</td>
-                    <td>Admin panel order entry</td>
+                    <td className="name">Sales Rep Masquerade Ordering.</td>
+                    <td>Native sales representative login.</td>
+                    <td>Draft order creation flow.</td>
+                    <td>Admin panel order entry.</td>
                   </tr>
                   <tr>
-                    <td className="name">Corporate Buyer Hierarchies</td>
-                    <td>Granular roles &amp; spend limits</td>
-                    <td>Company location accounts</td>
-                    <td>Company accounts &amp; roles</td>
+                    <td className="name">Corporate Buyer Hierarchies.</td>
+                    <td>Granular roles &amp; spend limits.</td>
+                    <td>Company location accounts.</td>
+                    <td>Company accounts &amp; roles.</td>
                   </tr>
                   <tr className="me">
-                    <td className="name">Maintenance &amp; Hosting Overhead</td>
-                    <td>Fully SaaS hosted (Zero maintenance)</td>
-                    <td>Fully SaaS hosted (Zero maintenance)</td>
-                    <td>Heavy server infrastructure &amp; patches</td>
+                    <td className="name">Maintenance &amp; Hosting Overhead.</td>
+                    <td>Fully SaaS hosted (Zero maintenance).</td>
+                    <td>Fully SaaS hosted (Zero maintenance).</td>
+                    <td>Heavy server infrastructure &amp; patches.</td>
                   </tr>
                   <tr>
-                    <td className="name">Total Cost of Ownership</td>
-                    <td>Predictable SaaS tier</td>
-                    <td>$2,300/mo base Plus fee</td>
-                    <td>High hosting &amp; developer retainers</td>
+                    <td className="name">Total Cost of Ownership.</td>
+                    <td>Predictable SaaS tier.</td>
+                    <td>$2,300/mo base Plus fee.</td>
+                    <td>High hosting &amp; developer retainers.</td>
                   </tr>
                 </tbody>
               </table>
@@ -827,7 +824,7 @@ export default function BigCommerceB2BPage() {
             <p className="pp-mlabel">// enterprise answers</p>
             <div style={{ marginTop: '16px' }}>
               <FAQ
-                headline="Frequently asked questions about BigCommerce B2B Edition"
+                headline="Frequently asked questions about BigCommerce B2B Edition."
                 categories={FAQ_CATEGORIES}
                 items={FAQ_ITEMS}
               />
@@ -843,18 +840,17 @@ export default function BigCommerceB2BPage() {
                 <p className="pp-mlabel">// scale enterprise wholesale</p>
                 <h2 style={{ margin: '12px 0 16px' }}>Ready to launch on BigCommerce B2B Edition?</h2>
                 <p className="pp-lead" style={{ maxWidth: '44ch' }}>
-                  Let us evaluate your B2B quoting workflows, corporate buyer permissions, and ERP landscape to deliver
-                  a fixed-price implementation proposal before any build begins.
+                  Let us evaluate your B2B quoting workflows. We review buyer permissions and your ERP architecture. We deliver a fixed-scope proposal before any build begins.
                 </p>
                 <div style={{ marginTop: '24px' }}>
                   <a className="pp-primary" href={CALENDLY} target="_blank" rel="noopener noreferrer">
-                    Book a 30-Minute Scoping Call
+                    Book a 30-Minute Scoping Call.
                   </a>
                 </div>
                 <div className="founder">
                   <Image
                     src="/bhavesh_image.webp"
-                    alt="Bhavesh Barot, Founder of FactoryJet"
+                    alt="Bhavesh Barot, Founder of FactoryJet."
                     width={46}
                     height={46}
                     quality={95}
@@ -862,7 +858,7 @@ export default function BigCommerceB2BPage() {
                   />
                   <div>
                     <b>Bhavesh Barot</b>
-                    <span>Founder, FactoryJet &bull; 10+ yrs building commerce</span>
+                    <span>Founder, FactoryJet &bull; 10+ yrs building commerce.</span>
                   </div>
                 </div>
               </div>
@@ -870,24 +866,23 @@ export default function BigCommerceB2BPage() {
                 <div className="top">
                   <Image
                     src="/images/testimonials/vishal-impulse-branding-160.webp"
-                    alt="Vishal K, Impulse Branding"
+                    alt="Vishal K, Impulse Branding."
                     width={46}
                     height={46}
                     style={{ borderRadius: '50%', objectFit: 'cover', border: '1px solid var(--pp-line)' }}
                   />
                   <div>
                     <b>Vishal K.</b>
-                    <span>Director, Impulse Branding</span>
+                    <span>Director, Impulse Branding.</span>
                   </div>
                 </div>
                 <blockquote>
                   &ldquo;In our business, clients size you up before they ever call. FactoryJet built us a website
-                  that finally looks as solid as the work we deliver, and we are getting real project inquiries
-                  through it.&rdquo;
+                  that looks as solid as our work. We now get qualified enterprise project inquiries through it.&rdquo;
                 </blockquote>
                 <div className="rate">
                   <a href="/case-studies/impulse-branding-migration" style={{ color: 'var(--pp-orange-dark)', fontWeight: 600, textDecoration: 'underline' }}>
-                    Read the Impulse Branding case study →
+                    Read the Impulse Branding case study &rarr;.
                   </a>
                 </div>
               </div>

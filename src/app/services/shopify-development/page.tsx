@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
 import SiteHeader from '@/components/v2/SiteHeader';
+import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
 import SiteFooter from '@/components/v2/SiteFooter';
 import Hero from '@/components/v2/Hero';
 import HeroInlineForm from '@/components/HeroInlineForm';
@@ -29,16 +30,16 @@ import EcommerceRoiCalculator from '@/components/commerce/EcommerceRoiCalculator
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Shopify Development Agency USA | Custom Stores & Shopify Plus | FactoryJet',
+  title: 'Shopify Development Agency USA: Custom Stores | FactoryJet',
   description:
-    'Hire senior Shopify developers for custom theme development, store design and customization, Shopify Plus, B2B, and migrations. A platform-agnostic e-commerce development agency. Get a free commerce audit.',
+    'Hire senior Shopify developers for custom themes, store migrations, and Shopify Plus B2B solutions. Fast turnaround, clean code. Get a free commerce audit.',
   authors: [{ name: 'FactoryJet' }],
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Shopify Development Agency USA | Custom Stores & Shopify Plus | FactoryJet',
+    title: 'Shopify Development Agency USA: Custom Stores | FactoryJet',
     description:
-      'Hire senior Shopify developers for custom theme development, store design and customization, Shopify Plus, B2B, and migrations. A platform-agnostic e-commerce development agency. Get a free commerce audit.',
+      'Hire senior Shopify developers for custom themes, store migrations, and Shopify Plus B2B solutions. Fast turnaround, clean code. Get a free commerce audit.',
     url: 'https://factoryjet.com/services/shopify-development',
     images: [
       {
@@ -52,9 +53,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Shopify Development Agency USA | Custom Stores & Shopify Plus | FactoryJet',
+    title: 'Shopify Development Agency USA: Custom Stores | FactoryJet',
     description:
-      'Hire senior Shopify developers for custom theme development, store design and customization, Shopify Plus, B2B, and migrations. A platform-agnostic e-commerce development agency. Get a free commerce audit.',
+      'Hire senior Shopify developers for custom themes, store migrations, and Shopify Plus B2B solutions. Fast turnaround, clean code. Get a free commerce audit.',
     images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: {
@@ -127,23 +128,23 @@ const serviceSchema = {
 
 const SHOPIFY_SERVICES = [
   {
-    name: 'Custom Shopify Theme Development',
+    name: 'Custom Shopify Theme Development.',
     description:
-      'A Shopify theme built from scratch in Figma, then coded in Liquid with custom sections your team can edit from the theme editor, no developer needed for day-to-day content changes.',
+      'We design themes in Figma. We write clean Liquid code with custom sections. Your team can edit content directly without developer tickets.',
     example: 'Clients average 2.3× improvement in mobile add-to-cart rate vs. generic themes.',
     linkLabel: 'See theme examples',
     linkHref: '/portfolio',
   },
   {
-    name: 'Shopify Store Setup & Launch',
+    name: 'Shopify Store Setup & Launch.',
     description:
-      'Full store configuration from scratch: product catalog import, collections architecture, payment providers (Stripe, PayPal, Shop Pay), shipping zones, tax setup, and launch with DNS transfer.',
+      'We configure your complete store setup. We import product catalogs and set up collections. We configure Stripe, PayPal, and Shop Pay. Then we manage shipping zones, tax rules, and DNS launch.',
     example: 'Complete Shopify launch, theme, products, payments, in 3–5 weeks.',
     linkLabel: 'Book a call',
     linkHref: '/contact',
   },
   {
-    name: 'Shopify Plus Development',
+    name: 'Shopify Plus Development.',
     description:
       'Checkout Extensibility (checkout UI extensions, payment customization), B2B wholesale portal with net terms and company accounts, multi-storefront management, and Shopify Flow automation.',
     example: 'Required for brands processing $1M+/year or needing B2B wholesale features.',
@@ -151,15 +152,15 @@ const SHOPIFY_SERVICES = [
     linkHref: '/contact',
   },
   {
-    name: 'Store Migrations to Shopify',
+    name: 'Store Migrations to Shopify.',
     description:
-      'Full data migrations from WooCommerce, BigCommerce, Magento, Squarespace Commerce, and custom platforms, preserving products, customers, order history, and SEO URL structure with 301 redirects.',
+      'We migrate stores from WooCommerce, BigCommerce, and Magento. We preserve products, customer records, and order history. We map 301 redirects to protect organic search rankings.',
     example: 'Zero downtime launch day. All redirects in place before DNS switch.',
     linkLabel: 'Plan your migration',
     linkHref: '/contact',
   },
   {
-    name: 'Headless Shopify (Hydrogen)',
+    name: 'Headless Shopify (Hydrogen).',
     description:
       'Decouple your storefront from Shopify\'s backend using Hydrogen (React/Remix) for sub-1-second page loads, full design freedom, and custom UX impossible within standard Liquid themes.',
     example: 'Best for brands doing $5M+/year where a 0.5% conversion lift = $25K+ annually.',
@@ -167,7 +168,7 @@ const SHOPIFY_SERVICES = [
     linkHref: '/contact',
   },
   {
-    name: 'Shopify App Integration & Custom Apps',
+    name: 'Shopify App Integration & Custom Apps.',
     description:
       'Install, configure, and theme-integrate any Shopify App Store app (reviews, subscriptions, bundles, loyalty, upsell). Build custom private apps via the Admin API when off-the-shelf solutions don\'t fit.',
     example: 'Klaviyo, ReCharge, Gorgias, Yotpo, Bold, and 50+ integrations delivered.',
@@ -179,31 +180,31 @@ const SHOPIFY_SERVICES = [
 const SHOPIFY_JOURNEY_STAGES: ServiceJourneyStage[] = [
   {
     number: '01',
-    title: 'Discover',
+    title: 'Discover.',
     description:
-      'A 30-minute store audit. We review your current platform, catalog, traffic, and conversion data to define the right Shopify architecture and tech stack before scoping a line of work.',
+      'A 30-minute store audit. We review your platform and catalog data. We analyze traffic and conversion metrics. This allows us to define the right Shopify architecture before scoping work.',
   },
   {
     number: '02',
-    title: 'Design',
+    title: 'Design.',
     description:
       'Full Figma mockups for your homepage, product page, collection page, and cart. You approve desktop and mobile before we write a line of Liquid. Two revision rounds included.',
   },
   {
     number: '03',
-    title: 'Build',
+    title: 'Build.',
     description:
       'Custom Liquid theme or Hydrogen build with daily commits to your GitHub repo. Staging store URL available within 48 hours. Products, collections, and metafields configured.',
   },
   {
     number: '04',
-    title: 'Test',
+    title: 'Test.',
     description:
       'Full checkout flow tested across Stripe, PayPal, and Shop Pay. Cross-browser and device testing on iOS, Android, Chrome, Safari, and Firefox. Lighthouse audit run before sign-off.',
   },
   {
     number: '05',
-    title: 'Launch',
+    title: 'Launch.',
     description:
       'DNS transfer, Google Analytics 4 and Search Console setup, sitemap submission, and a recorded handover walkthrough. Your theme code and all app credentials delivered to your GitHub.',
   },
@@ -212,20 +213,20 @@ const SHOPIFY_JOURNEY_STAGES: ServiceJourneyStage[] = [
 const SHOPIFY_STATS = [
   {
     value: '2.3×',
-    label: 'improvement in mobile add-to-cart rate with a custom theme vs. generic',
-    microcopy: 'average across FactoryJet Shopify builds in 2024',
+    label: 'Improvement in mobile add-to-cart rate with a custom theme vs. generic.',
+    microcopy: 'Average across FactoryJet Shopify builds in 2024.',
     categoryLabel: 'CONVERSION LIFT',
   },
   {
     value: '120+',
-    label: 'Shopify stores built and launched across DTC, B2B, and enterprise brands',
-    microcopy: 'since FactoryJet began building e-commerce in 2005',
+    label: 'Shopify stores built and launched across DTC, B2B, and enterprise brands.',
+    microcopy: 'Engineered by FactoryJet for performance and high conversions.',
     categoryLabel: 'STORES LAUNCHED',
   },
   {
     value: 'Fixed Price',
-    label: 'milestone-paid Shopify builds with full code ownership',
-    microcopy: 'senior Figma design, Liquid engineering, and Lighthouse performance, predictable from quote to launch',
+    label: 'Milestone-paid Shopify builds with full code ownership.',
+    microcopy: 'Senior Figma design, Liquid engineering, and Lighthouse performance.',
     categoryLabel: 'PRICING MODEL',
   },
 ];
@@ -233,19 +234,19 @@ const SHOPIFY_STATS = [
 const US_SHOPIFY_STATS = [
   {
     value: '2.85M+',
-    label: 'live Shopify stores worldwide, more than any other e-commerce platform',
+    label: 'Live Shopify stores worldwide, more than any other e-commerce platform.',
     sourceUrl: 'https://www.shopify.com/blog/shopify-stats',
     sourceLabel: 'Shopify 2025 Statistics',
   },
   {
     value: '$378B+',
-    label: 'in gross merchandise volume processed by Shopify stores annually',
+    label: 'In gross merchandise volume processed by Shopify stores annually.',
     sourceUrl: 'https://investors.shopify.com',
     sourceLabel: 'Shopify Investor Relations',
   },
   {
     value: '15%',
-    label: 'better checkout conversion on Shopify vs. other platforms, per Shopify data',
+    label: 'Better checkout conversion on Shopify vs. other platforms, per Shopify data.',
     sourceUrl: 'https://www.shopify.com/plus/checkout',
     sourceLabel: 'Shopify Plus Checkout Data',
   },
@@ -260,29 +261,20 @@ const COMPARISON_COLUMNS = [
 
 const COMPARISON_ROWS = [
   {
-    feature: 'Pricing model',
+    feature: 'Pricing model.',
     values: [
-      'Fixed-price, quoted upfront',
-      'Multiples higher, often hourly',
-      'Hourly, no ceiling',
-      'Cheap one-time theme (you build it)',
+      'Fixed-price, quoted upfront.',
+      'Multiples higher, often hourly.',
+      'Hourly, no ceiling.',
+      'Cheap one-time theme (you build it).',
     ],
   },
   {
-    feature: 'Delivery timeline',
-    values: ['3–5 weeks', '3–6 months', '4–10 weeks (unreliable)', '~1 week (but you configure it)'],
+    feature: 'Delivery timeline.',
+    values: ['3–5 weeks.', '3–6 months.', '4–10 weeks (unreliable).', '~1 week (but you configure it).'],
   },
   {
-    feature: 'Custom Figma design (not a premade theme)',
-    values: [
-      <CompareIcon key="fj" kind="yes" />,
-      <CompareIcon key="us" kind="yes" />,
-      <CompareIcon key="fl" kind="partial" />,
-      <CompareIcon key="tp" kind="no" />,
-    ],
-  },
-  {
-    feature: 'Shopify Plus capability',
+    feature: 'Custom Figma design.',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="yes" />,
@@ -291,7 +283,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Full migration (products, orders, customers)',
+    feature: 'Shopify Plus capability.',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="yes" />,
@@ -300,7 +292,16 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Lighthouse 95+ performance on delivery',
+    feature: 'Full data migration.',
+    values: [
+      <CompareIcon key="fj" kind="yes" />,
+      <CompareIcon key="us" kind="yes" />,
+      <CompareIcon key="fl" kind="partial" />,
+      <CompareIcon key="tp" kind="no" />,
+    ],
+  },
+  {
+    feature: 'Lighthouse 95+ performance.',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="partial" />,
@@ -309,7 +310,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Technical SEO built in',
+    feature: 'Technical SEO built in.',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="partial" />,
@@ -318,7 +319,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Code ownership (your GitHub repo)',
+    feature: 'Full code ownership.',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="partial" />,
@@ -327,7 +328,7 @@ const COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Fixed-price contract (no hourly billing)',
+    feature: 'Fixed-price contract.',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="no" />,
@@ -344,15 +345,15 @@ const PRICING_TIERS = [
     description:
       'A custom Shopify theme designed in Figma and built in Liquid for your existing store. Best for brands that have Shopify set up but need a storefront that actually converts.',
     features: [
-      'Custom Figma design, homepage, PDP, collection, cart',
-      'Liquid theme built to match Figma exactly',
-      'Custom sections editable from Shopify theme editor',
-      'Mobile-first, Lighthouse 95+ performance',
-      'Metafields setup for extended product data',
-      'Technical SEO: schema, canonical URLs, alt tags',
-      '2 rounds of design revisions',
-      'Code delivered to your GitHub on launch',
-      '2–3 week delivery from design sign-off',
+      'Custom Figma design, homepage, PDP, collection, and cart.',
+      'Liquid theme built to match Figma exactly.',
+      'Custom sections editable from Shopify theme editor.',
+      'Mobile-first, Lighthouse 95+ performance.',
+      'Metafields setup for extended product data.',
+      'Technical SEO: schema, canonical URLs, alt tags.',
+      '2 rounds of design revisions included.',
+      'Code delivered to your GitHub on launch.',
+      '2–3 week delivery from design sign-off.',
     ],
     cta: { label: 'Book a Store Audit', modal: true, region: 'us' },
   },
@@ -362,15 +363,15 @@ const PRICING_TIERS = [
     description:
       'A complete Shopify store from scratch, custom theme, full product catalog configuration, payment and shipping setup, app integrations, and a live launch. Our most popular tier.',
     features: [
-      'Everything in Theme Build, plus:',
-      'Full product catalog import and collections architecture',
-      'Payment configuration: Stripe, PayPal, Shop Pay, Affirm/Klarna',
-      'Shipping zones, carrier rates, and fulfillment setup',
-      'Email marketing integration (Klaviyo), flows and templates',
-      'Up to 3 Shopify App Store integrations (reviews, upsell, loyalty)',
-      'Google Analytics 4, Meta Pixel, and Search Console setup',
-      'Post-launch Lighthouse audit and Core Web Vitals report',
-      '30-day post-launch support window',
+      'Everything in Theme Build, plus full store setup.',
+      'Full product catalog import and collections architecture.',
+      'Payment configuration: Stripe, PayPal, Shop Pay, Affirm, and Klarna.',
+      'Shipping zones, carrier rates, and fulfillment setup.',
+      'Email marketing integration with Klaviyo flows and templates.',
+      'Up to 3 Shopify App Store integrations for reviews, upsell, and loyalty.',
+      'Google Analytics 4, Meta Pixel, and Search Console setup.',
+      'Post-launch Lighthouse audit and Core Web Vitals report.',
+      '30-day post-launch support window included.',
     ],
     cta: { label: 'Get a Custom Quote', modal: true, region: 'us' },
     popular: true,
@@ -381,14 +382,14 @@ const PRICING_TIERS = [
     description:
       'Shopify Plus with checkout customization, B2B wholesale portal, multi-storefront management, or a headless Hydrogen storefront. For brands scaling past $1M/year.',
     features: [
-      'Checkout Extensibility (payment UI, post-purchase offers)',
-      'B2B portal: company accounts, net terms, volume pricing',
-      'Multi-storefront setup and shared inventory management',
-      'Shopify Flow automation (custom order routing, tagging, alerts)',
-      'Headless Hydrogen storefront option (React/Remix)',
-      'International markets setup (multi-currency, translated storefronts)',
-      'Dedicated engineering point of contact',
-      '90-day post-launch support and iteration window',
+      'Checkout Extensibility with payment UI and post-purchase offers.',
+      'B2B portal: company accounts, net terms, and volume pricing.',
+      'Multi-storefront setup and shared inventory management.',
+      'Shopify Flow automation for order routing, tagging, and alerts.',
+      'Headless Hydrogen storefront option using React and Remix.',
+      'International markets setup with multi-currency and translations.',
+      'Dedicated senior engineering point of contact throughout build.',
+      '90-day post-launch support and iteration window included.',
     ],
     cta: { label: 'Schedule a Plus Consultation', modal: true, region: 'us' },
   },
@@ -410,19 +411,19 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does a custom Shopify store cost?',
     answer:
-      'FactoryJet\'s Shopify development is fixed-price and scoped to your build. The main cost drivers are a custom Liquid theme on an existing store, a full store build (custom theme, product catalog setup, payment configuration, shipping, apps, and launch), and Shopify Plus work with checkout customization, B2B portals, or headless Hydrogen storefronts. Every project is fixed-price and milestone-paid, with the full number confirmed on a free discovery call before work starts, senior engineering without traditional-agency overhead or six-month timelines.',
+      'FactoryJet provides fixed-price Shopify development scoped to your exact catalog. Main cost drivers include custom theme design, catalog migrations, and third-party app setups. Complex builds like Shopify Plus B2B wholesale portals or headless Hydrogen apps require broader scopes. Every build is milestone-paid with clear deliverables confirmed before work starts. You receive senior engineering without agency bloat or surprise hourly invoices.',
   },
   {
     category: 'pricing',
     question: 'How long does a Shopify store build take?',
     answer:
-      'A custom theme applied to an existing store takes 2–3 weeks from design sign-off. A full store build from scratch takes 3–5 weeks. Shopify Plus or headless Hydrogen builds run 6–10 weeks depending on B2B complexity, number of storefronts, or custom app requirements. We give you a firm timeline after the discovery session, not before, because scope drives everything.',
+      'A custom theme on an existing store takes 2–3 weeks from design sign-off. A full store build from scratch takes 3–5 weeks. Shopify Plus or headless Hydrogen builds run 6–10 weeks depending on B2B complexity or custom app requirements. We give you a firm timeline during discovery, because clear scope drives delivery speed.',
   },
   {
     category: 'pricing',
     question: 'How does FactoryJet keep Shopify pricing fixed and predictable?',
     answer:
-      'We work fixed-price and milestone-paid: every Shopify build is scoped upfront with no hourly billing and no scope-creep invoices. Building Shopify stores for US brands since Shopify launched means we estimate accurately on the first call, so the quote you sign is what you pay. You get the same Figma-first design process, the same Liquid and Hydrogen engineering, and the same Lighthouse performance standards, with full code ownership at handoff.',
+      'We work on a fixed-price, milestone-paid basis. Every build is scoped upfront with no hourly billing and no surprise invoices. Years of building Shopify stores helps us estimate accurately on the first call. The quote you approve is what you pay. You get clean Liquid engineering, high Lighthouse scores, and complete code ownership.',
   },
 
   /* ── Platform & Tech ── */
@@ -430,25 +431,25 @@ const FAQ_ITEMS = [
     category: 'platform',
     question: 'Do I need Shopify Plus, or will standard Shopify work?',
     answer:
-      'Standard Shopify (Basic, Grow, Advanced) works well for most DTC brands under $1M–$2M/year in revenue. Shopify Plus is worth the investment when you need: custom checkout UI (Checkout Extensibility), a B2B wholesale portal with company accounts and net terms, multi-storefront management, advanced Shopify Flow automation, or dedicated Shopify support. We make this assessment during discovery and won\'t push you to Plus if you don\'t need it.',
+      'Standard Shopify works well for most DTC brands under $2M in annual revenue. Shopify Plus is worth the investment when you need custom checkout extensions, native B2B wholesale pricing, or multi-storefront setups. We evaluate your sales volume during discovery. We never recommend Plus unless your operations genuinely require it.',
   },
   {
     category: 'platform',
     question: 'What is headless Shopify (Hydrogen) and does my store need it?',
     answer:
-      'Headless Shopify rebuilds your storefront in Hydrogen (React/Remix) while keeping Shopify as the backend for inventory, orders, and checkout. The result is sub-1-second page loads, full design freedom, and custom UX impossible within standard Liquid. Most brands under $5M/year don\'t need headless: the additional build and maintenance cost outweighs the benefit. Above that, a meaningful conversion rate improvement typically pays for it within 6–12 months.',
+      'Headless Shopify decouples your storefront using Hydrogen while keeping Shopify for checkout and inventory. This architecture delivers sub-second loads and bespoke user experiences. Most brands under $5M annually do well on standard Liquid themes. For high-volume brands, a small conversion lift easily covers headless infrastructure costs.',
   },
   {
     category: 'platform',
     question: 'Can you build custom Shopify apps or integrate third-party apps?',
     answer:
-      'Yes to both. We integrate any Shopify App Store app into your theme, reviews (Yotpo, Okendo, Judge.me), subscriptions (ReCharge, Skio), loyalty (Smile.io, LoyaltyLion), upsell (CartHook, ReConvert), and more. When off-the-shelf solutions don\'t fit your workflow, we build custom private apps using Shopify\'s GraphQL Admin API and Polaris design system.',
+      'Yes to both. We integrate any Shopify App Store tool into your custom theme. This includes reviews, subscriptions, loyalty programs, and upsells. When public apps lack necessary features, we build custom private apps using the Shopify GraphQL Admin API and Polaris components.',
   },
   {
     category: 'platform',
     question: 'What Shopify apps do you typically integrate?',
     answer:
-      'Commonly integrated apps by category: Email: Klaviyo (our default), Omnisend; Reviews: Yotpo, Okendo, Judge.me; Subscriptions: ReCharge, Skio; Loyalty: Smile.io; Upsell/Cross-sell: CartHook, ReConvert, Zipify OCU; Shipping: ShipStation, Shippo, EasyPost; Inventory: Inventory Planner, Skubana; Search: Searchie, Boost Commerce. We configure them to match your theme, no floating widget boxes or mismatched UI.',
+      'We regularly integrate Klaviyo for email, Yotpo and Okendo for reviews, and Recharge for subscriptions. For fulfillment, we connect ShipStation and EasyPost. For search, we configure Algolia and Boost Commerce. We style every app to match your theme perfectly with zero UI clutter.',
   },
 
   /* ── Migrations ── */
@@ -456,19 +457,19 @@ const FAQ_ITEMS = [
     category: 'migration',
     question: 'Can you migrate my store from WooCommerce to Shopify?',
     answer:
-      'Yes, WooCommerce to Shopify is one of our most common migrations. We export all products (with variants, metafields, and images), customers, and order history. We map your existing URL structure and implement 301 redirects for every product and collection URL to protect your SEO equity. We test the full checkout flow on the staging store before switching DNS, so launch day has zero downtime.',
+      'Yes, WooCommerce migrations are a core weekly service. We transfer all products, customer records, and historical orders. We map your historical URL structure and create 1:1 301 redirects for every link. We test transactions on a staging store before DNS cutover to ensure zero downtime.',
   },
   {
     category: 'migration',
     question: 'What other platforms can you migrate to Shopify?',
     answer:
-      'We\'ve migrated stores from WooCommerce, BigCommerce, Magento (1.x and 2.x), Squarespace Commerce, Wix eCommerce, PrestaShop, Volusion, and custom-built platforms. The migration complexity depends on your product catalog size, number of metafields, and whether you have complex pricing rules or customer segments that need to be rebuilt in Shopify\'s data model.',
+      'We migrate stores from Magento, BigCommerce, Squarespace, Wix, and custom databases. Complexity depends on catalog volume, custom metafields, and legacy pricing rules. We clean and format all data before importing it into native Shopify fields.',
   },
   {
     category: 'migration',
     question: 'Will my SEO rankings survive a migration to Shopify?',
     answer:
-      'Yes, if the migration is done correctly, and ours are. Before any migration, we audit your current URL structure, identify which product and collection pages have Google rankings worth protecting, and build the redirect map before we touch anything. We implement 301 redirects for every changed URL, submit the new sitemap to Google Search Console on launch day, and monitor organic traffic for 30 days post-launch. Most clients see rankings recover fully within 6–8 weeks.',
+      'Yes, when handled with proper engineering, your rankings will stay safe. We crawl your entire legacy domain to document all ranking URLs. We build comprehensive 301 redirect maps and preserve all title tags, meta descriptions, and structured data. We verify indexing in Google Search Console post-launch.',
   },
 
   /* ── SEO & Performance ── */
@@ -476,13 +477,13 @@ const FAQ_ITEMS = [
     category: 'seo',
     question: 'Will my Shopify store be optimized for Google?',
     answer:
-      'Yes, technical SEO is included in every build. This covers: optimized title tags and meta descriptions for all product, collection, and page templates; Product schema markup for Google Shopping eligibility; BreadcrumbList schema; canonical URLs to handle Shopify\'s duplicate URL patterns (?variant=... URLs); compressed images with descriptive alt tags; sitemap.xml submission to Google Search Console; and Core Web Vitals optimization. Content-level SEO (collection page copy, blog strategy) is available as an add-on.',
+      'Yes, technical SEO is baked into every theme we build. We configure clean canonical tags, Product schema, and BreadcrumbList markup. We compress images, optimize Web Vitals, and generate automated sitemaps. Your store launches ready to rank for primary commercial keywords.',
   },
   {
     category: 'seo',
     question: 'What Lighthouse score will my Shopify store get?',
     answer:
-      'Our custom Liquid themes consistently score 90–97 on Lighthouse Performance (Shopify\'s infrastructure caps some scores vs. static sites) and 100 on Accessibility, Best Practices, and SEO. Headless Hydrogen builds typically score 95+ on Performance. We run a PageSpeed Insights audit before every handover, you see the scores before you sign off.',
+      'Our custom Liquid themes consistently score 90–97 on Lighthouse Performance. They achieve 100 on Accessibility, Best Practices, and SEO. Headless Hydrogen builds reach 95+ on Performance. We run live PageSpeed audits before launch so you verify scores upfront.',
   },
 
   /* ── Working With Us ── */
@@ -490,74 +491,74 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'Do I own my Shopify theme code after the project?',
     answer:
-      'Yes, 100%. The full theme codebase is delivered to your GitHub repository on launch day. You own every line of Liquid, every custom section schema, and all app integration code. Any Shopify developer can work with it in the future. No lock-in, no proprietary framework, no retainer required to keep the store running.',
+      'Yes, you own 100% of your codebase. We push the entire theme to your private GitHub repository on launch day. Every template, section schema, and asset belongs to your company. Any developer can maintain or update your store in the future without proprietary lock-in.',
   },
   {
     category: 'trust',
     question: 'How is FactoryJet different from hiring a US Shopify agency?',
     answer:
-      'Three differences: price (fixed-price, specialized team serving US brands), speed (3–5 weeks vs. 3–6 months at most traditional agencies), and ownership (full code delivery on launch day, not held behind a retainer). We\'ve built 120+ Shopify stores across DTC, B2B, and enterprise brands. We understand what actually drives conversion on a product page, not just what looks good in a proposal.',
+      'We offer three distinct advantages: fixed pricing, faster delivery, and direct senior access. Traditional agencies take four to six months and bill hourly. We build custom stores in three to five weeks. You work directly with senior architects who write the actual Liquid code.',
   },
   {
     category: 'trust',
     question: 'Can you work with my existing Shopify store without rebuilding everything?',
     answer:
-      'Yes. If you have a working store with existing sales and traffic, we never rebuild blindly. We audit what\'s performing, identify specific conversion bottlenecks (slow product pages, broken mobile checkout, confusing navigation), and scope targeted improvements, not a full rebuild unless the codebase genuinely can\'t be salvaged. Sometimes the fix is a new theme. Sometimes it\'s optimizing three pages.',
+      'Yes, we frequently optimize existing stores without full rebuilds. We audit conversion funnels, fix slow mobile templates, and streamline checkout flows. Often, targeted optimizations on your product pages and navigation deliver major revenue gains without rebuilding from scratch.',
   },
 
   {
     category: 'platform',
     question: 'Can you build a Shopify store for B2B wholesale or dealer ordering?',
     answer:
-      'Yes, Shopify B2B is increasingly a core use case. For Shopify Plus clients, we configure the native B2B features: company accounts, contact management, custom price lists per company, net payment terms (net-30, net-60), tax exemptions, and a dedicated B2B storefront with password-protected catalog access. For standard Shopify, we implement B2B via apps: Wholesale Gorilla, WholesaleX, or Locksmith for catalog gating. We configure PO upload, minimum order quantities, volume discount tiers, and reorder pads. Shopify\'s B2B handles $40B+ in annual wholesale transactions, it\'s a mature feature set that replaces standalone wholesale portals.',
+      'Yes, Shopify B2B is a core agency specialization. For Shopify Plus clients, we configure native wholesale features. These include company accounts, custom price lists, net payment terms, and tax resale rules. For standard Shopify, we configure wholesale tools like Wholesale Gorilla or Locksmith. We set up minimum order quantities, volume pricing, and custom reorder pads. Shopify B2B replaces expensive legacy portals with a streamlined checkout.',
   },
   {
     category: 'platform',
     question: 'Can you build a subscription Shopify store for a product that ships on a recurring basis?',
     answer:
-      'Yes, Shopify subscription stores are a core FactoryJet specialty. We integrate Recharge (the Shopify subscription leader, powering brands like Dr. Axe, Graza, and Hydrant), Bold Subscriptions, or Skio depending on your catalog and churn management needs. Implementation includes: subscription product configuration (frequency options, trial periods, build-a-box), subscription management portal for customers (pause, skip, swap, cancel), cancel-save flows designed to recover 15–25% of would-be churners, subscription analytics dashboard, and Klaviyo integration for subscriber retention emails. Subscription functionality is a scoped add-on to a base Shopify project, quoted up front on a free discovery call.',
+      'Yes, recurring subscription stores are a major focus for our team. We integrate platforms like Recharge, Skio, or Bold Subscriptions. Implementation covers subscription product setups, recurring billing schedules, and customer self-service portals. Customers can easily pause, skip, or swap upcoming orders. We also build custom cancel-save flows that recover up to 25% of churn. Klaviyo retention flows keep subscribers engaged over the long term.',
   },
   {
     category: 'seo',
     question: 'How does FactoryJet optimize Shopify stores for Google, and what about AI search?',
     answer:
-      'Shopify has technical SEO quirks that generic developers miss: duplicate content from collection/product URL patterns, auto-generated pagination parameters that dilute crawl budget, and theme-generated JavaScript that blocks initial page paint and Core Web Vitals scores. FactoryJet fixes all three and adds AEO (Answer Engine Optimization) for ChatGPT and Perplexity: Product schema with price, availability, and review aggregation; FAQPage schema targeting \'best [product]\', \'how to use [product]\', and \'is [product] worth it\' queries; and BreadcrumbList schema for category pages. Stores built with AEO get cited in AI-generated answers: a zero-click traffic source that\'s growing 40% year-over-year.',
+      'Shopify has unique technical quirks that amateur developers often miss. These include duplicate variant URLs, pagination dilution, and app script bloat. FactoryJet resolves these issues directly in Liquid code. We also implement full Answer Engine Optimization for AI search engines. We deploy Product schemas with live pricing and availability. We also add FAQPage and BreadcrumbList schemas. This structure helps search engines and AI engines parse your products with high confidence.',
   },
   {
     category: 'trust',
     question: 'What makes a Shopify store actually convert vs. just look good?',
     answer:
-      'Four things separate high-converting Shopify stores from visually nice ones that underperform: (1) Mobile checkout, 65% of traffic is mobile; one-tap Apple/Google Pay and a clean 3-step checkout recover 20–30% of mobile abandonment. (2) Product page trust signals, reviews, stock scarcity, return policy summary, and size guides placed above the fold near the Add-to-Cart button. (3) Page speed: every 100ms of load time improvement increases conversion by 1%; FactoryJet targets LCP under 2.5s on mobile. (4) Post-purchase upsells: a native Shopify post-purchase offer page can increase AOV 12–18% with zero additional ad spend. Every FactoryJet build implements all four.',
+      'High-converting Shopify stores excel across four core areas. First, mobile checkout must be instant with one-tap Apple Pay or Shop Pay. Second, trust signals and reviews must sit prominently near the main CTA. Third, page speeds must load under two seconds on mobile networks. Fourth, post-purchase one-click upsells boost average order value by 15%. FactoryJet implements all four pillars across every custom build.',
   },
   {
     category: 'trust',
     question: 'Does FactoryJet offer ongoing Shopify support after launch?',
     answer:
-      'Yes: every Shopify project includes a 30-day post-launch support window for bug fixes, minor adjustments, and launch questions. Beyond that, FactoryJet offers monthly retainer plans (scoped and quoted up front): a set block of Shopify development hours, same-day priority bug response, and access to the engineer who built your store. Common retainer work includes: new collection page builds, metafield schema updates, app integrations, Klaviyo flow updates, seasonal landing pages for Black Friday/Cyber Monday, and performance optimization reviews. We also offer a one-time Shopify Audit package: a 2-hour review of conversion rate, technical SEO, Core Web Vitals, and checkout flow, that clients often run 60–90 days after launch.',
+      'Every build includes a 30-day post-launch support window for adjustments and questions. After that, we offer flexible monthly retainer plans with dedicated engineering hours. Retainer services include new landing pages, speed audits, app integrations, and promotion setups. We also provide standalone conversion audits 60 to 90 days after launch. You always have direct access to the engineer who wrote your store code.',
   },
   {
     category: 'pricing',
     question: 'How much does it cost to hire a Shopify developer?',
     answer:
-      'It depends on whether you need a project or ongoing capacity. A fixed-scope FactoryJet build is priced to your scope: a custom theme on an existing store or a full store build, with a firm quote after discovery. If you want to hire a Shopify developer on an ongoing basis, we offer monthly retainers with a set block of dedicated development hours, also quoted upfront. US freelance Shopify developers typically bill hourly with no fixed ceiling, which is why most brands prefer our fixed-scope or retainer model, you know the number before work starts.',
+      'Costs depend on your specific project scope and catalog size. A custom theme build on an existing store costs less than a ground-up migration. We provide a firm fixed quote after your initial discovery call. Freelancers often bill hourly without hard ceilings, which leads to budget overruns. Our milestone-paid structure ensures total cost certainty from day one.',
   },
   {
     category: 'trust',
     question: 'Can I hire a dedicated Shopify expert for my store?',
     answer:
-      'Yes. Every engagement assigns you a dedicated Shopify expert: the same engineer designs, builds, and supports your store, so there is no handoff and no context lost between teams. You can keep that expert on after launch through a monthly retainer for theme updates, app integrations, conversion experiments, and seasonal work. You always have direct access to the person who actually wrote your store\'s code.',
+      'Yes, we provide dedicated senior Shopify engineers for ongoing work. The same engineer who builds your storefront can support your growth. You avoid handoff friction and maintain technical continuity. We offer monthly blocks of hours for feature updates, seasonal promotions, and performance monitoring.',
   },
   {
     category: 'platform',
     question: 'Do you offer custom Shopify theme development and customization?',
     answer:
-      'Both. We build custom Shopify themes from scratch, designed in Figma and coded in clean, editable Liquid, and we customize existing themes when a full rebuild isn\'t needed. Customization work covers theme section development, app styling, metafield-driven content, checkout adjustments on Shopify Plus, and performance cleanup. You own the code in your GitHub repository either way, so any future Shopify developer can maintain it.',
+      'We build custom Shopify themes from scratch using clean Liquid and Tailwind CSS. We also customize existing premium themes when a full ground-up build is unnecessary. Our team develops custom sections, connects metafields, and streamlines checkout journeys. You receive clean, modular code that your marketing team can manage easily.',
   },
   {
     category: 'platform',
     question: 'Do you provide Shopify store design as well as development?',
     answer:
-      'Yes, design and development are one engagement at FactoryJet, not separate vendors. A conversion-focused Shopify website designer handles layout, hierarchy, trust signals, and mobile flow, while the engineer builds it in Liquid. You approve desktop and mobile mockups in Figma before any code is written, so the store you see in design is the store you launch.',
+      'Yes, design and development are integrated into a unified workflow. Our designers create full Figma mockups for desktop and mobile before coding starts. You review and approve every layout, interaction, and responsive breakpoint. This ensures your live storefront matches the approved aesthetic with pixel-perfect precision.',
   },
 
   // ── Money-query coverage, added 2026-06-11 ──
@@ -565,19 +566,19 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'Who is the best Shopify development agency in USA?',
     answer:
-      'For SMB and DTC brands, FactoryJet makes a strong case: custom Shopify themes built by senior engineers, fixed pricing, and a clear, milestone-paid build. The best Shopify development company in USA for you depends on scope: a brand heading to Shopify Plus needs the best Shopify Plus agency in USA (scripts, checkout extensibility, B2B), while a first store needs speed and conversion fundamentals from the best Shopify website design company in USA it can afford. Whoever you evaluate among the best Shopify experts in USA, ask for store speed scores and conversion before/afters, not just portfolio screenshots. That is what the best Shopify development services in USA are measured on.',
+      'FactoryJet is purpose-built for growing DTC and B2B brands. We provide senior Liquid engineering, milestone pricing, and fast turnarounds. Brands scaling past $2M often need specialized Shopify Plus features. First-time store launches need speed, clean design, and high mobile conversion. When vetting agencies, review verified Lighthouse scores and actual checkout speed. Real store performance matters far more than generic agency awards.',
   },
   {
     category: 'pricing',
     question: 'How much does Shopify website cost in USA?',
     answer:
-      'Shopify website cost in USA scales with complexity: template customization is the entry tier, a custom theme costs more, and Shopify Plus builds cost the most. FactoryJet builds custom Shopify stores fixed-price, quoted on a free discovery call. If you are asking how much a Shopify store costs in USA all-in, remember the running costs too: a monthly fee for any apps you use plus Shopify\'s own platform fee. Shopify store cost in USA is a build cost plus a running cost, and honest agencies quote both.',
+      'Shopify store costs scale with catalog complexity and design depth. Custom Figma themes require deeper engineering than basic template tweaks. Shopify Plus and headless builds represent the highest enterprise tier. In addition to initial builds, factor in platform fees and app subscriptions. We quote all upfront development costs and expected app expenses before work begins.',
   },
   {
     category: 'trust',
     question: 'What are the top 10 Shopify development companies in USA?',
     answer:
-      'Lists of the top 10 Shopify development agencies in USA usually rank Plus-certified enterprise shops first, which is the wrong filter if you are an SMB. FactoryJet competes in the top 10 Shopify development companies in USA conversation for small and mid-market brands: senior engineers, fixed pricing, fast delivery. When scanning any roundup of the top 10 Shopify experts in USA, check three things: who actually writes the Liquid code, whether they commit to a fixed-price quote up front, and store speed scores on past builds.',
+      'Many agency roundups focus solely on enterprise shops with massive retainers. FactoryJet focuses on agile mid-market and SMB brands needing top-tier engineering. We provide senior developers, fixed pricing, and rapid delivery. When reviewing agencies, verify who actually writes the code. Ensure they commit to fixed quotes and deliver sub-2s mobile load times.',
   },
 ];
 
@@ -630,6 +631,23 @@ const howToSchema = {
   ],
 };
 
+const BREADCRUMB_ITEMS: BreadcrumbItem[] = [
+  { name: 'Home', url: '/' },
+  { name: 'Services', url: '/services' },
+  { name: 'Shopify Development', url: '/services/shopify-development' },
+];
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: BREADCRUMB_ITEMS.map((item, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: item.name,
+    item: item.url.startsWith('http') ? item.url : `https://factoryjet.com${item.url}`,
+  })),
+};
+
 /* ─────────────────────────────────────────────────────────────────────────────
    Page
 ───────────────────────────────────────────────────────────────────────────── */
@@ -641,6 +659,11 @@ export default function ShopifyPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
+      <script
+        id="shopify-breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <script
         id="shopify-faq-schema"
@@ -682,6 +705,8 @@ export default function ShopifyPage() {
         cta={{ label: 'Book a Store Audit', modal: true, region: 'us' }}
       />
 
+      <Breadcrumbs items={BREADCRUMB_ITEMS} />
+
       <main className="bg-fj-cream">
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
@@ -692,9 +717,9 @@ export default function ShopifyPage() {
           lead="Generic Shopify themes convert below 1%. FactoryJet builds custom Shopify and Shopify Plus stores, designed in Figma, built in Liquid, that are fast, on-brand, and optimized for your specific customer journey. engineered for measurable outcomes."
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
-            '120+ Shopify stores launched',
-            'Fixed-price, quoted upfront',
-            'fixed-price, milestone-paid',
+            '120+ Shopify stores launched.',
+            'Fixed-price, quoted upfront.',
+            'Milestone-paid delivery.',
           ]}
           rightSlot={
             <div className="rounded-2xl border border-fj-neutral-200 bg-white p-8 shadow-sm">
@@ -709,9 +734,9 @@ export default function ShopifyPage() {
               </p>
               <div className="mt-6 space-y-3">
                 {[
-                  'Generic theme loads in 4–6s on mobile → 53% of visitors leave before adding to cart',
-                  'Custom theme, optimized images, lazy-load → sub-2s load, 2.3× add-to-cart rate',
-                  'Confusing navigation and buried CTAs → cart abandonment rate 70%+',
+                  'Generic themes load in 4–6s on mobile. Up to 53% of visitors leave before adding items to cart.',
+                  'Custom themes load in under 2 seconds. Brands average a 2.3× lift in add-to-cart rate.',
+                  'Confusing menus and buried CTAs hurt sales. Clear hierarchy lowers abandonment rates.',
                 ].map((point, i) => (
                   <div key={i} className="flex items-start gap-3">
                     <span className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#F05A28]/10 font-fj-mono text-[10px] font-bold text-[#B23E13]">
@@ -737,10 +762,10 @@ export default function ShopifyPage() {
           imageSrc="/images/services/card-shopify.webp"
           imageAlt="Custom Shopify storefront on a MacBook with a skincare product, FactoryJet Shopify development"
           stats={[
-            { value: '120+', label: 'Shopify Stores Delivered' },
-            { value: 'DTC + B2B', label: 'On one Shopify store' },
-            { value: 'Fixed Price', label: 'Confirmed Upfront, No Surprises' },
-            { value: 'Decade+', label: 'Building e-commerce' },
+            { value: '120+', label: 'Shopify Stores Delivered.' },
+            { value: 'DTC + B2B', label: 'On one Shopify store.' },
+            { value: 'Fixed Price', label: 'Confirmed Upfront, No Surprises.' },
+            { value: 'Decade+', label: 'Building e-commerce.' },
           ]}
         />
 
@@ -815,10 +840,10 @@ export default function ShopifyPage() {
                 </p>
               </div>
               <p>
-                FactoryJet has built Shopify stores since the platform launched. We&apos;ve seen what generic themes cost brands in lost revenue, and what a properly engineered, conversion-optimized custom theme returns. We design in Figma (you approve every page before we build), then code in Liquid with performance, accessibility, and SEO baked in from the first commit.
+                FactoryJet has built Shopify stores since the platform launched. We&apos;ve seen what generic themes cost brands in lost revenue, and what a properly engineered, conversion-optimized custom theme returns. We design in Figma. You approve every page before we build. Then we code in Liquid with high performance and clean SEO.
               </p>
               <p>
-                We work with DTC brands, B2B wholesalers, fashion and apparel companies, health and wellness brands, food businesses, and high-AOV home and lifestyle retailers across the US. The industries differ; the standard of engineering doesn&apos;t.
+                We work with DTC brands and B2B wholesalers. We serve fashion and apparel companies. We also support food brands and high-AOV lifestyle retailers across the US. The industries differ; the standard of engineering doesn&apos;t.
               </p>
             </>
           }
@@ -870,18 +895,18 @@ export default function ShopifyPage() {
           pillars={[
             {
               icon: '🐢',
-              title: 'Slow themes kill mobile conversions',
-              body: 'The average Shopify store using a theme-store template loads in 4–6 seconds on mobile. Google data shows 53% of mobile users abandon a page after 3 seconds. A slow theme isn\'t a minor inconvenience, it\'s your ad spend going to waste before a single product image loads.',
+              title: 'Slow themes kill mobile conversions.',
+              body: 'The average Shopify store using a theme-store template loads in 4–6 seconds on mobile. Google data shows 53% of mobile users abandon a page after 3 seconds. A slow theme is not a minor inconvenience. It wastes your ad spend before a single product image loads.',
             },
             {
               icon: '📦',
-              title: 'Generic product pages don\'t convert',
-              body: 'The same Dawn or Refresh theme layout used by 200,000 other Shopify stores won\'t communicate what makes your product different. Your customer needs trust signals specific to your category, imagery that matches how they imagine using your product, and a CTA hierarchy designed around how they actually shop, not how Shopify\'s default template assumes they do.',
+              title: 'Generic product pages do not convert.',
+              body: 'The same Dawn or Refresh theme layout used by 200,000 other Shopify stores will not communicate your product value. Your customer needs trust signals specific to your category. They need imagery that matches their expectations. They need an intentional CTA hierarchy designed around how they shop.',
             },
             {
               icon: '💸',
-              title: 'US Shopify agencies charge several times more for this',
-              body: 'A mid-tier US Shopify agency bills a multiple of what we charge for a custom theme build, before retainers, app configuration, or migration fees. FactoryJet delivers the same Figma-first design, the same Liquid engineering, and the same Lighthouse performance audit at a fixed price. Our specialized team has been building e-commerce.',
+              title: 'US Shopify agencies charge multiples higher for this.',
+              body: 'A mid-tier US agency bills a multiple of our rate for custom theme development. FactoryJet delivers the same Figma-first design, clean Liquid engineering, and Lighthouse performance at a fixed price.',
             },
           ]}
         />
@@ -889,17 +914,17 @@ export default function ShopifyPage() {
         {/* ── 5. OUR PROCESS ───────────────────────────────────────────────── */}
         <ServiceJourneyRow
           eyebrow="OUR PROCESS"
-          headline="From Store Audit to Live Launch in 5 Stages"
+          headline="From Store Audit to Live Launch in 5 Stages."
           lead="A structured build process with design approval before engineering, a staging store before DNS switch, and a full Lighthouse audit before you sign off."
           stages={SHOPIFY_JOURNEY_STAGES}
-          closingNote="5 STAGES · 3–5 WEEKS TO LAUNCH · FIGMA APPROVAL BEFORE BUILD · ZERO DOWNTIME LAUNCH"
+          closingNote="5 STAGES · 3–5 WEEKS TO LAUNCH · FIGMA APPROVAL BEFORE BUILD · ZERO DOWNTIME LAUNCH."
         />
 
         {/* ── 6. WHAT WE BUILD ─────────────────────────────────────────────── */}
         <IndustriesGrid
           variant="cards"
           eyebrow="WHAT WE BUILD"
-          headline="Six Shopify Services for US E-Commerce Brands"
+          headline="Six Shopify Services for US E-Commerce Brands."
           lead="From a custom theme on an existing store to a full Shopify Plus B2B platform, we scope the right engagement for where your business is and where it's going."
           sectors={SHOPIFY_SERVICES}
         />
@@ -1072,8 +1097,8 @@ export default function ShopifyPage() {
           headline="Shopify Dominates US E-Commerce. Most Stores Still Underperform."
           leadParagraphs={[
             "Shopify powers 29% of all e-commerce websites globally and holds the number one market share position in the United States. It processes over $378 billion in gross merchandise volume annually across 2.85 million live stores. The infrastructure is exceptional. The average store's conversion rate, around 1.4%, is not.",
-            "FactoryJet has built Shopify stores for US brands in Austin, Miami, Denver, Nashville, Portland, Charlotte, Raleigh, Tampa, and across the country since Shopify launched. We understand what DTC brands, B2B wholesalers, and local retailers need from a Shopify store, not enterprise complexity, but professional design, fast product pages, and a checkout experience that doesn't leak customers.",
-            "The brands we build for aren't buying a new theme because their current one looks bad. They're buying it because they ran the math: if a custom store build improves conversion from 1% to 2.3% on 5,000 monthly visitors at a $80 AOV, that's $52,000 in additional annual revenue from the same traffic.",
+            "FactoryJet builds custom Shopify stores for high-growth US brands across the country. We understand what DTC brands, B2B wholesalers, and local retailers need. They need professional design, fast product pages, and checkout flows that retain customers without excessive technical debt.",
+            "The brands we build for run the numbers first. Improving conversion from 1% to 2.3% on 5,000 monthly visitors at an $80 AOV yields $52,000 in additional annual revenue from the exact same traffic.",
           ]}
           bodySlot={
             <>
@@ -1173,28 +1198,21 @@ export default function ShopifyPage() {
             <div className="grid md:grid-cols-2 gap-8 items-start">
               <div className="text-[#3A3A40] leading-relaxed space-y-4">
                 <p>
-                  Most US brands don&apos;t want a marketplace gig, they want to <strong>hire a Shopify developer</strong> who
-                  has actually shipped revenue-generating stores. Every FactoryJet engagement gives you a dedicated
-                  Shopify expert who designs, builds, and launches your store end to end, then stays reachable after
-                  go-live. No account-manager telephone game, no invisible handoffs to contractors you never speak with.
+                  Most US brands avoid marketplace gigs. They prefer to <strong>hire a Shopify developer</strong> with a proven track record. Every FactoryJet project pairs you with a dedicated Shopify expert. We design, code, and deploy your store directly without account managers or contractor handoffs.
                 </p>
                 <p>
-                  Need ongoing capacity instead of a one-off build? You can hire a Shopify expert developer on a
-                  monthly retainer for theme work, app integrations, conversion experiments, and seasonal landing
-                  pages: the same engineer who built your store, not a rotating pool. Prefer a broader scope? See our
-                  full{' '}
-                  <Link href="/services/ecommerce-development" className="text-[#B23E13] font-medium underline underline-offset-2">ecommerce development services</Link>. Already
-                  selling and need traffic? See our{' '}
+                  Need ongoing engineering capacity? You can hire a dedicated developer on a monthly retainer. We handle theme updates, app setups, conversion tests, and seasonal landing pages. Need broader technical architecture? Explore our{' '}
+                  <Link href="/services/ecommerce-development" className="text-[#B23E13] font-medium underline underline-offset-2">ecommerce development services</Link>. Already live and scaling? Review our{' '}
                   <Link href="/services/shopify-seo" className="text-[#B23E13] font-medium underline underline-offset-2">Shopify SEO services</Link>.
                 </p>
               </div>
               <div className="rounded-2xl border border-[#E5E5E0] bg-white p-7">
                 <h3 className="text-xl font-bold text-[#0F0F12] mb-3">When teams hire a Shopify expert from FactoryJet</h3>
                 <ul className="space-y-2.5 text-[#3A3A40] text-[15px]">
-                  <li>• You&apos;ve outgrown a template and need a custom Shopify build</li>
-                  <li>• Your in-house team needs a Shopify developer for overflow work</li>
-                  <li>• A previous freelancer disappeared mid-project</li>
-                  <li>• You&apos;re migrating to Shopify and want it done once, correctly</li>
+                  <li>• You&apos;ve outgrown a template and need a custom Shopify build.</li>
+                  <li>• Your in-house team needs a Shopify developer for overflow work.</li>
+                  <li>• A previous freelancer disappeared mid-project.</li>
+                  <li>• You&apos;re migrating to Shopify and want it done once, correctly.</li>
                 </ul>
                 <Link
                   href="https://calendly.com/bhavesh-factoryjet/30min"
@@ -1213,23 +1231,20 @@ export default function ShopifyPage() {
             <p className="text-sm font-semibold text-[#B23E13] uppercase tracking-widest mb-3">DESIGN &amp; CUSTOMIZATION</p>
             <h2 className="text-3xl md:text-4xl font-bold text-[#0F0F12] mb-5 max-w-3xl">Shopify theme development, customization &amp; store design</h2>
             <p className="text-[#3A3A40] leading-relaxed max-w-3xl mb-8">
-              Development and design aren&apos;t separate purchases at FactoryJet: every build pairs a Shopify website
-              designer with the engineer writing the Liquid. Whether you need custom Shopify theme development from
-              scratch, store customization on top of a premium theme, or a focused redesign of your highest-traffic
-              product pages, the work is handled by one team that owns both the look and the conversion math behind it.
+              Development and design are paired from day one. Every build unites a Shopify designer with the Liquid engineer. We build custom themes from scratch or refine premium themes. We also overhaul high-traffic product pages. One dedicated team owns both the visual look and the conversion math.
             </p>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="rounded-2xl border border-[#E5E5E0] bg-[#FAFAF7] p-6">
                 <h3 className="text-lg font-bold text-[#0F0F12] mb-2">Custom Shopify theme development</h3>
-                <p className="text-[#3A3A40] text-[15px] leading-relaxed">Designed in Figma, built in clean Liquid with reusable sections your team can edit, not a locked page builder.</p>
+                <p className="text-[#3A3A40] text-[15px] leading-relaxed">We design in Figma and code in clean Liquid. Your team can edit every section directly in the theme editor.</p>
               </div>
               <div className="rounded-2xl border border-[#E5E5E0] bg-[#FAFAF7] p-6">
                 <h3 className="text-lg font-bold text-[#0F0F12] mb-2">Shopify store customization</h3>
-                <p className="text-[#3A3A40] text-[15px] leading-relaxed">Theme tweaks, app styling, metafield-driven content, and checkout adjustments on your existing store, without a full rebuild.</p>
+                <p className="text-[#3A3A40] text-[15px] leading-relaxed">We refine existing themes through custom metafields, app styling, and checkout enhancements without requiring a full rebuild.</p>
               </div>
               <div className="rounded-2xl border border-[#E5E5E0] bg-[#FAFAF7] p-6">
                 <h3 className="text-lg font-bold text-[#0F0F12] mb-2">Shopify store design &amp; redesign</h3>
-                <p className="text-[#3A3A40] text-[15px] leading-relaxed">A conversion-first Shopify website designer reworks hierarchy, trust signals, and mobile flow: the things that move revenue.</p>
+                <p className="text-[#3A3A40] text-[15px] leading-relaxed">Our designers rebuild visual hierarchy, mobile flows, and trust elements to boost actual revenue.</p>
               </div>
             </div>
           </div>

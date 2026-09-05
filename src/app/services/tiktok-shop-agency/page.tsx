@@ -20,9 +20,8 @@ const URL = 'https://factoryjet.com/services/tiktok-shop-agency';
 
 /* ── SEO / Metadata ─────────────────────────────────────────────────────── */
 export const metadata: Metadata = {
-  title: 'TikTok Shop Agency for US Brands: Ads & Affiliates | FactoryJet',
-  description:
-    'FactoryJet is a full-service TikTok Shop agency for US brands: shop setup and management, TikTok Shop ads, affiliate and creator programs, LIVE selling, and listing optimization under one senior in-house team. Get a free TikTok Shop audit.',
+  title: 'TikTok Shop Agency: Ads, Creators & Ops | FactoryJet',
+  description: 'Full-service TikTok Shop agency for US brands: shop management, TikTok ads, creator affiliate programs, and LIVE selling. Get a free audit.',
   keywords: [
     'tiktok shop agency',
     'tiktok shop marketing agency',
@@ -38,7 +37,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'TikTok Shop Agency for US Brands: Ads & Affiliates | FactoryJet',
+    title: 'TikTok Shop Agency: Ads, Creators & Ops | FactoryJet',
     description:
       'Full-service TikTok Shop growth for US brands: shop management, ads, affiliate and creator programs, and LIVE selling under one senior in-house team. Free TikTok Shop audit.',
     url: URL,
@@ -49,7 +48,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'TikTok Shop Agency for US Brands: Ads & Affiliates | FactoryJet',
+    title: 'TikTok Shop Agency: Ads, Creators & Ops | FactoryJet',
     description:
       'Full-service TikTok Shop growth: management, ads, affiliates, and LIVE selling, one senior in-house team. Free TikTok Shop audit.',
     images: ['https://factoryjet.com/og-default.png'],
@@ -420,6 +419,79 @@ export default function TikTokShopAgencyPage() {
           </div>
         </section>
 
+        
+        {/* TIKTOK SHOP INTEGRATIONS & ERP SYNC */}
+        <section className="tts-sec pt0">
+          <div className="tts-wrap">
+            <div className="tts-sh">
+              <span className="tts-eyebrow">Connected Architecture</span>
+              <h2 className="disp">TikTok Shop ERP sync and omnichannel integration</h2>
+              <p>Connect TikTok Shop directly to your warehouse, inventory, and fulfillment tech stack.</p>
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16, marginTop: 24 }}>
+              <div className="tts-crystal" style={{ padding: '24px' }}>
+                <h3 className="disp" style={{ fontSize: 20, marginBottom: 12 }}>Omnichannel marketplace sync.</h3>
+                <p style={{ fontSize: 14, lineHeight: 1.5, color: '#3a3a38', marginBottom: 12 }}>
+                  We unify TikTok Shop with Amazon Seller Central, Amazon Vendor Central, and Walmart Marketplace.
+                </p>
+                <p style={{ fontSize: 14, lineHeight: 1.5, color: '#3a3a38', marginBottom: 12 }}>
+                  Sync product listings with Shopify, Shopify Plus, BigCommerce, WooCommerce, and Magento storefronts.
+                </p>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
+                  {['TikTok Shop', 'Amazon Seller Central', 'Walmart Marketplace', 'Shopify Plus', 'BigCommerce', 'WooCommerce', 'Magento'].map(s => (
+                    <span key={s} style={{ fontSize: 12, padding: '4px 8px', background: '#f5f5f4', borderRadius: 4, fontWeight: 600 }}>{s}.</span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="tts-crystal" style={{ padding: '24px' }}>
+                <h3 className="disp" style={{ fontSize: 20, marginBottom: 12 }}>ERP sync and warehouse routing.</h3>
+                <p style={{ fontSize: 14, lineHeight: 1.5, color: '#3a3a38', marginBottom: 12 }}>
+                  We build real-time inventory sync pipelines. We create custom erp integration connectors for NetSuite, SAP, and QuickBooks.
+                </p>
+                <p style={{ fontSize: 14, lineHeight: 1.5, color: '#3a3a38', marginBottom: 12 }}>
+                  Route orders to your warehouse management system (wms) and order management system (oms). Manage 3pl logistics and stock allocation.
+                </p>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
+                  {['inventory sync', 'multi-warehouse', 'stock allocation', 'warehouse management system', 'order management system', '3pl', 'dropshipping'].map(c => (
+                    <span key={c} style={{ fontSize: 12, padding: '4px 8px', background: '#f5f5f4', borderRadius: 4, fontWeight: 600 }}>{c}.</span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="tts-crystal" style={{ padding: '24px' }}>
+                <h3 className="disp" style={{ fontSize: 20, marginBottom: 12 }}>Tracking and creator feeds.</h3>
+                <p style={{ fontSize: 14, lineHeight: 1.5, color: '#3a3a38', marginBottom: 12 }}>
+                  We configure server-side tracking and conversion api pipelines. Track creator conversions using verified first-party data.
+                </p>
+                <p style={{ fontSize: 14, lineHeight: 1.5, color: '#3a3a38', marginBottom: 12 }}>
+                  Deploy automated product feed rules with digital asset management (dam) media. Connect realtime webhook triggers and admin api routes.
+                </p>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
+                  {['conversion api', 'server-side tracking', 'first-party data', 'product feed', 'feed optimisation', 'webhook', 'admin api'].map(c => (
+                    <span key={c} style={{ fontSize: 12, padding: '4px 8px', background: '#f5f5f4', borderRadius: 4, fontWeight: 600 }}>{c}.</span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="tts-crystal" style={{ padding: '24px' }}>
+                <h3 className="disp" style={{ fontSize: 20, marginBottom: 12 }}>Fulfillment and customer retention.</h3>
+                <p style={{ fontSize: 14, lineHeight: 1.5, color: '#3a3a38', marginBottom: 12 }}>
+                  Maintain low Late Dispatch Rates to satisfy strict SLAs. Automatically transmit carrier tracking info for fast delivery confirmation.
+                </p>
+                <p style={{ fontSize: 14, lineHeight: 1.5, color: '#3a3a38', marginBottom: 12 }}>
+                  Integrate customer support and automate reorder loops. Prevent stockouts during viral creator spikes.
+                </p>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
+                  {['inventory sync', 'multi-warehouse', 'reorder', 'bulk ordering', 'dropshipping', 'api-first'].map(c => (
+                    <span key={c} style={{ fontSize: 12, padding: '4px 8px', background: '#f5f5f4', borderRadius: 4, fontWeight: 600 }}>{c}.</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* COMPARISON (reused v2 component) */}
         <section className="tts-sec pt0">
           <div className="tts-wrap">
@@ -447,7 +519,7 @@ export default function TikTokShopAgencyPage() {
         {/* NAMED COMPETITORS */}
         <section className="tts-sec pt0">
           <div className="tts-wrap">
-            <div className="tts-sh"><span className="tts-eyebrow">The landscape</span><h2 className="disp">Named TikTok Shop agencies brands compare us with</h2><p>Most TikTok Shop help is creative or influencer only. Here is where the known names fit, and where we fit.</p></div>
+            <div className="tts-sh"><span className="tts-eyebrow">Market Comparison</span><h2 className="disp">Named TikTok Shop agencies brands compare us with</h2><p>Most TikTok Shop help is creative or influencer only. Here is where the known names fit, and where we fit.</p></div>
             <div className="tts-list">
               {RIVALS.map((r) => (
                 <div key={r.b} className="tts-crystal tts-li"><span className="num" /><div><b>{r.b}</b><p>{r.p}</p></div></div>

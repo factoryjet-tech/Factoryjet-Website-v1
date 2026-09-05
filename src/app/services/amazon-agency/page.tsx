@@ -21,8 +21,7 @@ const URL = 'https://factoryjet.com/services/amazon-agency';
 /* ── SEO / Metadata ─────────────────────────────────────────────────────── */
 export const metadata: Metadata = {
   title: 'Amazon Agency for US Brands: Ads, SEO & PPC | FactoryJet',
-  description:
-    'FactoryJet is a full-service Amazon agency for US brands: Amazon advertising, PPC management, SEO and listing optimization, account management, and brand protection under one senior in-house team. Get a free Amazon audit.',
+  description: 'Full-service Amazon agency for US brands: Amazon PPC ads, listing optimization, account management, FBA inventory sync, and brand registry protection.',
   keywords: [
     'amazon agency',
     'amazon advertising agency',
@@ -397,10 +396,83 @@ export default function AmazonAgencyPage() {
           </div>
         </section>
 
+        
+        {/* MARKETPLACE INTEGRATION ARCHITECTURE */}
+        <section className="amz-sec pt0">
+          <div className="amz-wrap">
+            <div className="amz-sh">
+              <span className="amz-eyebrow">Connected Architecture</span>
+              <h2 className="disp">Amazon marketplace integration and ERP sync</h2>
+              <p>We connect your sales channels directly to your backend ops. Data flows smoothly across every system.</p>
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16, marginTop: 24 }}>
+              <div className="amz-crystal" style={{ padding: '24px' }}>
+                <h3 className="disp" style={{ fontSize: 20, marginBottom: 12 }}>Core marketplace systems.</h3>
+                <p style={{ fontSize: 14, lineHeight: 1.5, color: '#3a3a38', marginBottom: 12 }}>
+                  We support Amazon Seller Central and Amazon Vendor Central accounts. We connect Amazon with Walmart Marketplace and TikTok Shop.
+                </p>
+                <p style={{ fontSize: 14, lineHeight: 1.5, color: '#3a3a38', marginBottom: 12 }}>
+                  Our team unifies storefront data with Shopify, Shopify Plus, BigCommerce, WooCommerce, and Magento.
+                </p>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
+                  {['Amazon Seller Central', 'Amazon Vendor Central', 'Walmart Marketplace', 'TikTok Shop', 'Shopify Plus', 'BigCommerce', 'WooCommerce', 'Magento'].map(s => (
+                    <span key={s} style={{ fontSize: 12, padding: '4px 8px', background: '#f5f5f4', borderRadius: 4, fontWeight: 600 }}>{s}.</span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="amz-crystal" style={{ padding: '24px' }}>
+                <h3 className="disp" style={{ fontSize: 20, marginBottom: 12 }}>ERP sync and warehouse ops.</h3>
+                <p style={{ fontSize: 14, lineHeight: 1.5, color: '#3a3a38', marginBottom: 12 }}>
+                  Automate real-time inventory sync and order routing. We build erp integration connectors for NetSuite, SAP, QuickBooks, and Odoo.
+                </p>
+                <p style={{ fontSize: 14, lineHeight: 1.5, color: '#3a3a38', marginBottom: 12 }}>
+                  Connect your warehouse management system (wms) and order management system (oms). Sync stock allocation across 3pl hubs.
+                </p>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
+                  {['inventory sync', 'multi-warehouse', 'stock allocation', 'warehouse management system', 'order management system', '3pl', 'dropshipping'].map(c => (
+                    <span key={c} style={{ fontSize: 12, padding: '4px 8px', background: '#f5f5f4', borderRadius: 4, fontWeight: 600 }}>{c}.</span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="amz-crystal" style={{ padding: '24px' }}>
+                <h3 className="disp" style={{ fontSize: 20, marginBottom: 12 }}>Catalog feed and data quality.</h3>
+                <p style={{ fontSize: 14, lineHeight: 1.5, color: '#3a3a38', marginBottom: 12 }}>
+                  Connect product information management (pim) and digital asset management (dam) assets. We manage your product feed rules.
+                </p>
+                <p style={{ fontSize: 14, lineHeight: 1.5, color: '#3a3a38', marginBottom: 12 }}>
+                  We implement feed optimisation for shopping ads. We configure webhook triggers and admin api endpoints.
+                </p>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
+                  {['product information management', 'digital asset management', 'product feed', 'feed optimisation', 'webhook', 'admin api', 'api-first'].map(c => (
+                    <span key={c} style={{ fontSize: 12, padding: '4px 8px', background: '#f5f5f4', borderRadius: 4, fontWeight: 600 }}>{c}.</span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="amz-crystal" style={{ padding: '24px' }}>
+                <h3 className="disp" style={{ fontSize: 20, marginBottom: 12 }}>B2B wholesale pricing rules.</h3>
+                <p style={{ fontSize: 14, lineHeight: 1.5, color: '#3a3a38', marginBottom: 12 }}>
+                  Sell to commercial buyers on Amazon Business. Configure contract pricing, tiered pricing, volume pricing, and custom price list tiers.
+                </p>
+                <p style={{ fontSize: 14, lineHeight: 1.5, color: '#3a3a38', marginBottom: 12 }}>
+                  Enable minimum order quantity thresholds. Support bulk ordering, quick order entries, reorder workflows, and net terms.
+                </p>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
+                  {['b2b portal', 'contract pricing', 'tiered pricing', 'volume pricing', 'price list', 'minimum order quantity', 'bulk ordering', 'quick order', 'reorder', 'net terms'].map(c => (
+                    <span key={c} style={{ fontSize: 12, padding: '4px 8px', background: '#f5f5f4', borderRadius: 4, fontWeight: 600 }}>{c}.</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* NAMED COMPETITORS */}
         <section className="amz-sec pt0">
           <div className="amz-wrap">
-            <div className="amz-sh"><span className="amz-eyebrow">The landscape</span><h2 className="disp">Named Amazon agencies brands compare us with</h2><p>We would rather you choose with eyes open. Here is where the well-known Amazon agencies fit, and where we fit.</p></div>
+            <div className="amz-sh"><span className="amz-eyebrow">Market Comparison</span><h2 className="disp">Named Amazon agencies brands compare us with</h2><p>We would rather you choose with eyes open. Here is where the well-known Amazon agencies fit, and where we fit.</p></div>
             <div className="amz-list">
               {RIVALS.map((r) => (
                 <div key={r.b} className="amz-crystal amz-li"><span className="num" /><div><b>{r.b}</b><p>{r.p}</p></div></div>
