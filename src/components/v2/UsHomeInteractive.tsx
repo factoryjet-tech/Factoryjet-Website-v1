@@ -7,6 +7,7 @@
    prefers-reduced-motion. Styles come from UsHomeSections.css (scoped .ushome). */
 
 import { useEffect, useRef, useState } from 'react';
+import Link from 'next/link';
 import { useContactModal } from '../../context/ContactModalContext';
 import './UsHomeSections.css';
 
@@ -145,7 +146,7 @@ export function GrowthSurfaces() {
                 <div className="pk">Ecommerce &amp; omnichannel SEO</div>
                 <h3>We rank your whole catalog</h3>
                 <p>Category and product pages that earn organic traffic across your store and every storefront you run.</p>
-                <div className="more">Explore SEO →</div>
+                <Link className="more block" href="/services/ecommerce-seo">Explore SEO →</Link>
               </div>
             </article>
 
@@ -162,7 +163,7 @@ export function GrowthSurfaces() {
                 <div className="pk">AI SEO · AEO + GEO</div>
                 <h3>We get you cited in AI answers</h3>
                 <p>Be the brand ChatGPT, Perplexity, and Gemini name when buyers ask what to buy, not the one they skip.</p>
-                <div className="more">Explore AI visibility →</div>
+                <Link className="more block" href="/services/ai-seo">Explore AI visibility →</Link>
               </div>
             </article>
 
@@ -184,7 +185,7 @@ export function GrowthSurfaces() {
                 <div className="pk">Amazon &amp; marketplace SEO</div>
                 <h3>We rank you and win the Buy Box</h3>
                 <p>Listings tuned to each marketplace&apos;s algorithm so you place high and convert on Amazon, Walmart, and TikTok Shop.</p>
-                <div className="more">Explore marketplace SEO →</div>
+                <Link className="more block" href="/marketplace-management">Explore marketplace growth →</Link>
               </div>
             </article>
           </div>

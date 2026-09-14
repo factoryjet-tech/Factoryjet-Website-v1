@@ -6,7 +6,7 @@ import SiteFooter from '@/components/v2/SiteFooter'
 import Heading from '@/components/v2/Heading'
 import TalkToFounder from '@/components/v2/TalkToFounder'
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns'
-import { CASE_STUDIES } from '@/data/case-studies'
+import { CASE_STUDIES, CLIENT_ENGAGEMENTS } from '@/data/case-studies'
 
 /**
  * Case studies index — `/case-studies/`.
@@ -23,18 +23,19 @@ const ORANGE = '#F05A28'
 const ORANGE_DEEP = '#C94A1A'
 const CHARCOAL = '#0F0F12'
 const CREAM = '#FAFAF7'
+const PAGE_MODIFIED = '2026-09-14'
 
 export const metadata: Metadata = {
   title: 'Case Studies | FactoryJet',
   description:
-    'Real FactoryJet client wins, measurable revenue, traffic, and efficiency gains from web design, Shopify, and custom development projects.',
+    'Explore FactoryJet website, B2B commerce, SEO, and AI search engagements, including delivered work and projects in progress.',
   alternates: { canonical: 'https://factoryjet.com/case-studies' },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
     title: 'Case Studies | FactoryJet',
     description:
-      'Real FactoryJet client wins, measurable revenue, traffic, and efficiency gains from web design, Shopify, and custom development projects.',
+      'Explore FactoryJet website, B2B commerce, SEO, and AI search engagements, including delivered work and projects in progress.',
     url: 'https://factoryjet.com/case-studies',
     images: [
       {
@@ -50,7 +51,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Case Studies | FactoryJet',
     description:
-      'Real FactoryJet client wins, measurable revenue, traffic, and efficiency gains from web design, Shopify, and custom development projects.',
+      'Explore FactoryJet website, B2B commerce, SEO, and AI search engagements, including delivered work and projects in progress.',
     images: ['https://factoryjet.com/og-default.png'],
   },
 }
@@ -61,6 +62,12 @@ export default function CaseStudiesIndexPage() {
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        '@context': 'https://schema.org', '@type': 'CollectionPage',
+        '@id': 'https://factoryjet.com/case-studies#webpage', url: 'https://factoryjet.com/case-studies',
+        name: 'FactoryJet case studies', dateModified: PAGE_MODIFIED,
+        publisher: { '@id': 'https://factoryjet.com/#organization' },
+      }) }} />
       <SiteHeader />
       <main>
         {/* ── HERO ─────────────────────────────────────────────────────── */}
@@ -95,15 +102,15 @@ export default function CaseStudiesIndexPage() {
               size="hero"
               className="mt-4 max-w-[820px] text-fj-ink"
             >
-              Real client wins, audited numbers, zero filler.
+              See the work behind our services.
             </Heading>
             <p
               className="mt-5 max-w-[640px] font-fj-body text-fj-neutral-600"
               style={{ fontSize: '1.125rem', lineHeight: 1.6 }}
             >
-              Every case below is a real FactoryJet engagement, measurable revenue,
-              traffic, or efficiency gains, with the client&apos;s permission to
-              publish. No fabricated logos, no mock metrics.
+              Explore the websites, commerce systems, and search engagements we work on.
+              Each story explains the client’s needs and our contribution.
+              The engagement list below distinguishes delivered websites from builds in progress.
             </p>
           </div>
         </section>
@@ -174,10 +181,10 @@ export default function CaseStudiesIndexPage() {
                         </p>
 
                         {stat && (
-                          <div className="mt-auto flex items-center gap-3 border-t border-black/[0.06] pt-5">
+                          <div className="mt-auto flex flex-col items-start gap-3 border-t border-black/[0.06] pt-5">
                             <p
                               className="fj-display font-fj-display font-bold leading-none tracking-[-0.025em]"
-                              style={{ color: ORANGE, fontSize: '1.625rem' }}
+                              style={{ color: ORANGE, fontSize: '1.5rem', overflowWrap: 'anywhere', maxWidth: '100%' }}
                             >
                               {stat.value}
                             </p>
@@ -234,6 +241,31 @@ export default function CaseStudiesIndexPage() {
             </div>
           </section>
         )}
+
+        <section className="bg-white py-14 md:py-20" aria-labelledby="engagements-heading">
+          <div className="mx-auto max-w-[1120px] px-6 md:px-8">
+            <h2 id="engagements-heading" className="font-fj-display text-3xl font-bold">Client engagements at a glance</h2>
+            <p className="mt-4 max-w-[68ch] font-fj-body text-[#46403B]">Website delivery and ongoing search work are different milestones. These statuses describe the work, rather than a promise of ranking or revenue results.</p>
+            <div className="mt-8 grid gap-4 md:grid-cols-2">
+              {CLIENT_ENGAGEMENTS.map((engagement) => (
+                <article key={engagement.client} className="rounded-2xl border border-[#E7DED6] p-6">
+                  <p className="font-fj-mono text-xs font-semibold uppercase text-[#C94A1A]">{engagement.status}</p>
+                  <h3 className="mt-3 font-fj-display text-xl font-bold">{engagement.client}</h3>
+                  <p className="mt-2 font-fj-body text-[#46403B]">{engagement.scope}</p>
+                  <div className="mt-4 flex flex-wrap gap-4 text-sm font-semibold text-[#C94A1A]">
+                    {engagement.caseSlug && <Link href={`/case-studies/${engagement.caseSlug}`} className="underline">Read project details →</Link>}
+                    {engagement.url && <a href={engagement.url} target="_blank" rel="noopener noreferrer" className="underline">Visit client website →</a>}
+                  </div>
+                </article>
+              ))}
+            </div>
+            <div className="mt-8 flex flex-wrap gap-5 font-fj-body font-semibold text-[#C94A1A]">
+              <Link href="/b2b-ecommerce" className="underline">Explore B2B ecommerce →</Link>
+              <Link href="/services/seo" className="underline">Explore SEO services →</Link>
+              <Link href="/pricing" className="underline">Discuss scope and pricing →</Link>
+            </div>
+          </div>
+        </section>
 
         {/* ── Founder banner ──────────────────────────────────────────── */}
         <TalkToFounder

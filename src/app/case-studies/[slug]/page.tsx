@@ -13,6 +13,7 @@ import { BreadcrumbSchema } from '@/components/BreadcrumbSchema'
 
 import {
   CASE_STUDIES,
+  CLIENT_ENGAGEMENTS,
   getCaseStudyBySlug,
   type CaseStudy,
   type CaseStudyMetric,
@@ -110,7 +111,7 @@ function articleJsonLd(cs: CaseStudy, slug: string) {
     description: cs.summary,
     image,
     datePublished: new Date(cs.publishedDate).toISOString(),
-    dateModified: new Date(cs.publishedDate).toISOString(),
+    dateModified: new Date(cs.modifiedDate ?? cs.publishedDate).toISOString(),
     author: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
     publisher: {
       '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
@@ -141,14 +142,13 @@ function faqJsonLd(faqs: ReadonlyArray<{ q: string; a: string }>) {
   }
 }
 
-function localBusinessJsonLd(cs: CaseStudy, slug: string) {
+function clientOrganizationJsonLd(cs: CaseStudy, slug: string) {
   return {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    '@id': `https://factoryjet.com/case-studies/${slug}#client-localbusiness`,
+    '@type': 'Organization',
+    '@id': `https://factoryjet.com/case-studies/${slug}#client-organization`,
     name: cs.client,
     ...(cs.clientUrl ? { url: cs.clientUrl } : {}),
-    address: { '@type': 'PostalAddress', addressLocality: cs.location },
   }
 }
 
@@ -206,6 +206,7 @@ function CrystalCard({
 
 // ───── SECTION 1 — HERO ─────────────────────────────────────────────────────
 function HeroSection({ cs }: { cs: CaseStudy }) {
+  const engagement = CLIENT_ENGAGEMENTS.find((entry) => entry.caseSlug === cs.slug)
   const stats = cs.heroStats ?? []
   return (
     <section
@@ -237,6 +238,11 @@ function HeroSection({ cs }: { cs: CaseStudy }) {
             <Heading as="h1" size="hero" className="mt-4 text-fj-ink">
               {cs.headline}
             </Heading>
+            {engagement && (
+              <p className="mt-4 font-fj-mono text-sm text-[#C94A1A]">
+                {engagement.status}
+              </p>
+            )}
             {cs.tagline && (
               <p
                 className="mt-5 max-w-[620px] font-fj-body text-fj-neutral-600"
@@ -248,12 +254,13 @@ function HeroSection({ cs }: { cs: CaseStudy }) {
 
             {/* Hero maxi-stats row (3) */}
             {stats.length > 0 && (
-              <div className="mt-10 grid grid-cols-3 gap-4 sm:gap-8 border-t border-black/[0.08] pt-8">
+              <div className="mt-10 grid gap-6 border-t border-black/[0.08] pt-8"
+                style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 220px), 1fr))' }}>
                 {stats.slice(0, 3).map((s, i) => (
-                  <div key={i}>
+                  <div key={i} style={{ minWidth: 0 }}>
                     <p
-                      className="fj-display font-fj-display text-[1.75rem] sm:text-[2.5rem] font-bold leading-none tracking-[-0.025em]"
-                      style={{ color: ORANGE }}
+                      className="fj-display font-fj-display font-bold tracking-[-0.025em]"
+                      style={{ color: ORANGE, fontSize: s.value.length > 8 ? 'clamp(1.25rem, 2vw, 1.75rem)' : 'clamp(1.75rem, 3vw, 2.5rem)', lineHeight: 1.2, overflowWrap: 'anywhere' }}
                     >
                       {s.value}
                     </p>
@@ -383,7 +390,7 @@ function AtAGlanceSection({ tiles }: { tiles: CaseStudyGlanceTile[] }) {
               >
                 {t.label}
               </p>
-              <p className="fj-display font-fj-display mt-3 text-[1.5rem] font-semibold leading-[1.2] tracking-[-0.015em] text-fj-ink md:text-[1.625rem]">
+              <p style={{ overflowWrap: 'anywhere' }} className="fj-display font-fj-display mt-3 text-[1.5rem] font-semibold leading-[1.2] tracking-[-0.015em] text-fj-ink md:text-[1.625rem]">
                 {t.value}
               </p>
               {t.note && (
@@ -556,7 +563,7 @@ function SolutionSection({
         <div className="mb-10 max-w-[760px]">
           <Eyebrow>What We Built</Eyebrow>
           <Heading as="h2" size="h3" className="mt-4 text-fj-ink">
-            The solution we shipped.
+            The project implementation.
           </Heading>
         </div>
 
@@ -666,7 +673,7 @@ function ResultsSection({
           <div className="mb-14 border-y border-white/10 py-10">
             <p
               className="fj-display font-fj-display font-bold leading-none tracking-[-0.035em]"
-              style={{ color: ORANGE, fontSize: 'clamp(3.5rem, 9vw, 6rem)' }}
+              style={{ color: ORANGE, fontSize: headlineMetric.value.length > 12 ? 'clamp(1.75rem, 4vw, 3.5rem)' : 'clamp(2.5rem, 7vw, 6rem)', lineHeight: 1.15, overflowWrap: 'anywhere' }}
             >
               {headlineMetric.value}
             </p>
@@ -691,7 +698,7 @@ function ResultsSection({
               <CrystalCard key={i} dark>
                 <p
                   className="fj-display font-fj-display font-bold leading-none tracking-[-0.025em]"
-                  style={{ color: ORANGE, fontSize: '2.25rem' }}
+                  style={{ color: ORANGE, fontSize: 'clamp(1.25rem, 2.5vw, 2rem)', lineHeight: 1.2, overflowWrap: 'anywhere' }}
                 >
                   {m.value}
                 </p>
@@ -871,10 +878,10 @@ function RelatedCasesSection({ current }: { current: CaseStudy }) {
                     {r.summary}
                   </p>
                   {stat && (
-                    <div className="mt-6 flex items-center gap-3 border-t border-black/[0.06] pt-5">
+                    <div className="mt-6 flex flex-col items-start gap-3 border-t border-black/[0.06] pt-5">
                       <p
                         className="fj-display font-fj-display font-bold leading-none tracking-[-0.025em]"
-                        style={{ color: ORANGE, fontSize: '1.625rem' }}
+                        style={{ color: ORANGE, fontSize: '1.5rem', overflowWrap: 'anywhere', maxWidth: '100%' }}
                       >
                         {stat.value}
                       </p>
@@ -921,7 +928,7 @@ export default async function CaseStudyPage({ params }: Props) {
 
   const articleSchema = articleJsonLd(cs, slug)
   const faqSchema = cs.faqs?.length ? faqJsonLd(cs.faqs) : null
-  const localBizSchema = cs.location ? localBusinessJsonLd(cs, slug) : null
+  const clientSchema = clientOrganizationJsonLd(cs, slug)
 
   return (
     <>
@@ -944,11 +951,11 @@ export default async function CaseStudyPage({ params }: Props) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
       )}
-      {localBizSchema && (
+      {clientSchema && (
         <script
           id="case-study-localbiz-jsonld"
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBizSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(clientSchema) }}
         />
       )}
 

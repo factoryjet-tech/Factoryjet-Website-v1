@@ -16,7 +16,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
-const PAGE_MODIFIED = '2026-08-29';
+const PAGE_MODIFIED = '2026-09-14';
 
 export const metadata: Metadata = {
   title: 'B2B E-Commerce Agency: Wholesale Platforms | FactoryJet',
@@ -700,7 +700,7 @@ export default function B2BEcommercePage() {
           <div className="pp-wrap">
             <p className="pp-mlabel">// select client work</p>
             <h2 style={{ marginTop: '10px' }}>Wholesale ordering, online</h2>
-            <div style={{ marginTop: '28px', display: 'grid', gridTemplateColumns: 'repeat(2,1fr)', gap: '16px' }}>
+            <div style={{ marginTop: '28px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '16px' }}>
               <article style={{ border: '1px solid var(--pp-line)', borderRadius: '18px', overflow: 'hidden', background: '#fff' }}>
                 <div style={{ position: 'relative', height: '220px', overflow: 'hidden' }}>
                   <Image
@@ -726,7 +726,7 @@ export default function B2BEcommercePage() {
                 <div style={{ position: 'relative', height: '220px', overflow: 'hidden' }}>
                   <Image
                     src="/images/portfolio/belle-maison-480.webp"
-                    alt="Belle Maison DTC ecommerce storefront built by FactoryJet, ready to add B2B on the same system"
+                    alt="Belle Maison DTC and B2B ecommerce storefront built by FactoryJet"
                     width={480}
                     height={220}
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
@@ -734,15 +734,30 @@ export default function B2BEcommercePage() {
                   />
                 </div>
                 <div style={{ padding: '24px' }}>
-                  <div style={{ fontFamily: 'var(--pp-mono)', fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.06em', color: 'var(--pp-orange-dark)' }}>Belle Maison · B2B</div>
-                  <p className="pp-lead" style={{ marginTop: '10px', fontSize: '15px' }}>A direct-to-consumer storefront for an artificial plants and flowers brand, built to convert shoppers and scale its catalog across channels, ready to add a B2B portal on the same system.</p>
+                  <div style={{ fontFamily: 'var(--pp-mono)', fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.06em', color: 'var(--pp-orange-dark)' }}>Belle Maison · DTC + B2B</div>
+                  <p className="pp-lead" style={{ marginTop: '10px', fontSize: '15px' }}>A Commerceflo storefront serving retail shoppers and B2B trade buyers. The trade journey connects account pricing, quotes, and orders, while retail customers can explore the same plants and decor catalog.</p>
                   <div style={{ marginTop: '14px', display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-                    {['DTC', 'Storefront build', 'Multi-channel ready'].map((t) => (
+                    {['DTC + B2B', 'Retail and trade', 'Commerceflo'].map((t) => (
                       <span key={t} style={{ borderRadius: '999px', background: '#F4EEE9', padding: '4px 12px', fontFamily: 'var(--pp-mono)', fontSize: '11px', color: '#5C564F' }}>{t}</span>
                     ))}
                   </div>
+                  <Link href="/case-studies/belle-maison-ecommerce-success" className="rv-btn-secondary" style={{ marginTop: '18px' }}>Read the Belle Maison case study →</Link>
                 </div>
               </article>
+              <article className="pp-card">
+                <p className="pp-mlabel">GPSUK · B2B commerce</p>
+                <h3>Trade ordering for a promotional products supplier</h3>
+                <p className="pp-lead" style={{ marginTop: '16px', fontSize: '15px' }}>FactoryJet built GPSUK’s Commerceflo storefront for UK trade buyers. Account-based pricing and quote-to-order workflows support customers buying against agreed terms. We also provide ongoing SEO and AI search work.</p>
+                <Link href="/case-studies/gpsuk-promotional-products" className="rv-btn-secondary" style={{ marginTop: '18px' }}>Read the GPSUK case study →</Link>
+              </article>
+            </div>
+            <div className="pp-card" style={{ marginTop: '28px' }}>
+              <h3>Bring one real trade-order workflow to the scoping call</h3>
+              <p className="pp-lead" style={{ marginTop: '12px', fontSize: '16px' }}>Show us how a customer gets a price, places an order, and receives an invoice today. We can map which steps belong in the storefront, which stay in your ERP, and what needs to be built first.</p>
+              <div className="rv-actions" style={{ marginTop: '20px' }}>
+                <ModalCTAButton label="Scope my B2B commerce project" region="us" btnVariant="primary-dark" />
+                <Link href="/pricing#commerce" className="rv-btn-secondary">How we scope and quote →</Link>
+              </div>
             </div>
           </div>
         </section>

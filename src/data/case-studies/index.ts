@@ -126,6 +126,8 @@ export type CaseStudy = {
   ogImageUrl: string
   /** ISO 8601 publish date. */
   publishedDate: string
+  /** Last substantive update, separate from original publication. */
+  modifiedDate?: string
   /** 4-6 FAQs per Report 19 Decision 5 (tight, not 20+). */
   faqs: CaseStudyFaq[]
   /** Slugs of 2 related case studies rendered in Section 9. */
@@ -149,40 +151,41 @@ export type CaseStudy = {
  *   GroFresh Agro -> Fliying Pixel -> Rukman Transport.
  */
 export const CASE_STUDIES: CaseStudy[] = [
-  // ─── 1. Belle Maison — B2B wholesale distribution on Commerceflo ─────────
+  // ─── 1. Belle Maison: DTC + B2B commerce on Commerceflo ─────────────────
   // REWRITTEN 2026-08-04. The previous version was fabricated end to end: it
   // described a "DTC luxury home brand" on Shopify Plus with $180K revenue in
   // 120 days, 800 SKUs, a 3.8% conversion rate and a Klaviyo/Redis stack. Belle
   // Maison is a Mumbai wholesale distributor of artificial plants and lighting,
-  // and the build is a B2B quote-to-cash store on Commerceflo. No metric below
+  // and the current confirmed scope is DTC + B2B on Commerceflo. No metric below
   // is asserted unless it can be checked. Do not add numbers without a source.
   {
     slug: 'belle-maison-ecommerce-success',
     client: 'Belle Maison',
-    tagline: 'A Mumbai wholesale distributor moving trade buyers off WhatsApp and spreadsheets onto a real quote-to-cash storefront.',
-    industry: 'B2B Wholesale Distribution',
+    tagline: 'A Commerceflo storefront for retail shoppers and trade buyers.',
+    industry: 'DTC + B2B Commerce',
     services: [
+      'DTC Storefront',
       'Commerceflo B2B Storefront',
       'Quote-to-Cash Workflow',
       'Trade Pricing Tiers',
       'Account-Based Ordering',
       'Catalog Structuring',
     ],
-    headline: 'Taking a Wholesale Plant and Lighting Catalog From WhatsApp Orders to Quote-to-Cash',
+    headline: 'One Storefront for Belle Maison’s Retail and Trade Buyers',
     summary:
-      'Belle Maison distributes artificial plants, flowers, flower runners, home decor and LED lighting to trade buyers across India. Orders arrived over WhatsApp and phone, priced by hand against per-account rates. FactoryJet built their B2B quote-to-cash store on Commerceflo, so a logged-in buyer sees their own contracted pricing, builds a basket, and raises a quote that becomes an order without anyone retyping it.',
+      'FactoryJet built Belle Maison’s DTC + B2B storefront on Commerceflo. Retail shoppers can explore its plants and decor catalog, while trade accounts use account-based pricing and quote-to-order workflows.',
     category: 'E-Comm',
     heroStats: [
-      { value: 'B2B', label: 'Quote-to-cash storefront' },
+      { value: 'DTC + B2B', label: 'Retail and trade buyers' },
       { value: 'Commerceflo', label: 'Platform built on' },
       { value: 'Mumbai', label: 'Wholesale distributor' },
     ],
     glanceTiles: [
-      { label: 'INDUSTRY', value: 'Wholesale Distribution' },
+      { label: 'INDUSTRY', value: 'DTC + B2B Commerce' },
       { label: 'SERVICES', value: 'B2B Storefront + Quote-to-Cash' },
       { label: 'PLATFORM', value: 'Commerceflo' },
       { label: 'CATALOG', value: 'Plants, Decor, LED Lighting' },
-      { label: 'BUYERS', value: 'Trade Accounts' },
+      { label: 'BUYERS', value: 'Retail + Trade' },
       { label: 'MARKET', value: 'India' },
     ],
     keyMetrics: [
@@ -205,7 +208,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       { label: 'Manual Re-entry', value: 'Removed' },
     ],
     challenge:
-      'Belle Maison sells to trade buyers, not shoppers, and trade buying does not fit a normal storefront. Different accounts pay different rates, buyers order the same items repeatedly in large quantities, and most purchases start as a quote rather than a checkout. All of that was being handled by hand: a buyer messaged on WhatsApp, someone looked up that account\'s agreed pricing, typed a quote, and re-entered it again as an order once approved. It worked, but it tied every order to a person being available, and it left no record a buyer could serve themselves from.',
+      'Belle Maison serves retail shoppers and trade buyers with different buying needs. A retail customer needs clear product information and a straightforward path to purchase. Trade accounts need their agreed pricing, repeat ordering, and a quote process. The storefront needs to support both journeys without making either buyer work through an unsuitable checkout.',
     challengePullQuote:
       'Every order started as a message and got priced by hand. That does not scale past the people answering the phone.',
     approach:
@@ -214,17 +217,12 @@ export const CASE_STUDIES: CaseStudy[] = [
     solution:
       'The storefront shows a logged-in buyer their own contracted pricing, not a public list price. Buyers build a basket, raise a quote, and that quote carries through to an order without being retyped. Repeat ordering is account-based, so a returning buyer works from what they actually bought before. The catalog is structured around the categories trade buyers search, including artificial plants, flowers, flower runners, home decor and LED lighting.',
     results:
-      'Belle Maison\'s trade buyers can now price and order themselves instead of waiting for a quote to be written by hand, and the step where a quote was re-entered as an order is gone. We have deliberately not published revenue, conversion or SKU figures for this build. The previous version of this page carried numbers that were never measured, and we would rather show the work than quote a figure we cannot stand behind.',
-    testimonial: {
-      quote:
-        'We were live in 6 days, I genuinely did not believe that was possible. The design is stunning, the WhatsApp integration brings in inquiries every day, and the site has stayed lightning fast.',
-      author: 'Ricky B.',
-      title: 'Founder, Belle Maison',
-    },
+      'The build serves retail shoppers and trade accounts on Commerceflo. Its trade workflow connects account pricing, quotes, and orders. This case describes the implementation; it does not attribute a revenue or conversion uplift to the project.',
+
     imageUrl: '/images/case-studies/belle-maison-ecommerce-success-hero.jpg',
     ogImageUrl: '/images/case-studies/belle-maison-ecommerce-success-og.png',
     publishedDate: '2026-05-28',
-    ctaTeaser: 'If you sell to trade accounts with their own pricing, we can build the same quote-to-cash flow on Commerceflo.',
+    ctaTeaser: 'Selling to retail shoppers and trade accounts? We can scope both buying journeys on one commerce system.',
     relatedSlugs: ['impulse-branding-migration', 'fliying-pixel-agency'],
     faqs: [
       {
@@ -248,95 +246,58 @@ export const CASE_STUDIES: CaseStudy[] = [
         a: 'Yes, and that matters more than it sounds. Trade buyers who prefer to message still can. The portal removes the requirement that every order goes through a person, rather than removing the option.',
       },
     ],
+    clientUrl: 'https://app.commerceflo.ai/store/belle-maison',
+    location: 'Mumbai, India',
+    modifiedDate: '2026-09-14',
   },
 
-  // ─── 2. Impulse Branding — rapid migration to WordPress + Breakdance ─────
+  // ─── 2. Impulse Branding: website, SEO and AI search engagement ──────────
   {
     slug: 'impulse-branding-migration',
-    client: 'Impulse Branding',
-    tagline: 'A bid-driven branding agency that needed a modern, founder-editable site before the next industry summit.',
+    client: 'Impulse Branding Solutions',
+    tagline: 'Website delivery with ongoing SEO and AI search work for a branding business.',
     industry: 'Branding & Architecture',
     services: [
-      'WordPress + Breakdance Build',
-      'Legacy HTML Migration',
-      'GEO/AIO SEO Strategy',
-      'Cloudflare Performance Stack',
-      'Portfolio CMS Setup',
+      'Website Development',
+      'SEO',
+      'AI Search',
     ],
-    headline: 'Modern Stack Migration Drove $360K in Influenced Pipeline (14-Day Build)',
+    headline: 'A Website and Search Presence for Impulse Branding Solutions',
     summary:
-      'Impulse Branding was bidding on major architectural contracts off a legacy hand-coded HTML site they could not update themselves. FactoryJet migrated them to WordPress + Breakdance in 14 days, layered GEO/AIO SEO, and influenced $360K USD in pipeline within 6 months.',
+      'FactoryJet built a website for Impulse Branding Solutions and provides ongoing SEO and AI search work. The engagement connects the company’s service and portfolio content with the questions prospective customers ask.',
     category: 'Corporate',
     heroStats: [
-      { value: '$360K', label: 'Pipeline influenced (6 mo)' },
-      { value: '14 days', label: 'Build to launch' },
-      { value: '+125%', label: 'Organic traffic' },
+      { value: 'Website', label: 'Built by FactoryJet' },
+      { value: 'SEO', label: 'Ongoing engagement' },
+      { value: 'AI Search', label: 'Ongoing engagement' },
     ],
     glanceTiles: [
-      { label: 'INDUSTRY', value: 'Branding & Architecture' },
-      { label: 'SERVICES', value: 'WordPress + Breakdance + GEO SEO' },
-      { label: 'TIMELINE', value: '14 Days' },
-      { label: 'SCALE', value: '15+ Pages' },
-      { label: 'OUTCOME', value: '$360K Pipeline' },
-      { label: 'TECH', value: 'WordPress, Breakdance, Cloudflare' },
+      { label: 'CLIENT', value: 'Impulse Branding Solutions' },
+      { label: 'SERVICES', value: 'Website + SEO + AI Search' },
     ],
-    keyMetrics: [
-      { label: 'Pipeline (6 Mo)', value: '$360K USD', note: '≈ ₹3 Cr equivalent' },
-      { label: 'Dev Time', value: '2 Weeks' },
-      { label: 'Organic Traffic', value: '+125%' },
-      { label: 'Pages Live', value: '15+' },
-    ],
-    headlineMetric: {
-      label: 'Pipeline Influenced in 6 Months',
-      value: '$360K USD',
-      note: '≈ ₹3 Cr equivalent, driven by modernized portfolio + GEO SEO',
-    },
-    resultsMetrics: [
-      { label: 'Pipeline (6 Mo)', value: '$360K USD' },
-      { label: 'Organic Traffic', value: '+125%' },
-      { label: 'Dev Time', value: '2 Weeks' },
-      { label: 'Pages Live', value: '15+' },
-      { label: 'CMS Editors', value: 'Non-Tech Team' },
-      { label: 'Hosting', value: 'Cloudflare Edge' },
-    ],
+    keyMetrics: [],
+
     challenge:
-      'Impulse Branding was stuck on a legacy hand-coded HTML site that was impossible to update without a developer. This rigidity meant their portfolio was always outdated, costing them bids on major contracts. They needed a rapid transformation to showcase their new architectural projects before a major industry summit: a hard calendar deadline that left no room for a 90-day rebuild. They also needed the new site to be editable by their non-technical team so the portfolio would never go stale again.',
-    challengePullQuote:
-      'We were losing bids before they even saw our best work, because our best work was not on the site yet.',
+      'A branding business needs its website to explain its services and make relevant work easy for prospective customers to assess. Search visitors also need a clear route from a service question to an inquiry.',
+
     approach:
-      'We picked WordPress + Breakdance specifically because the visual builder lets a non-technical team add a new project page in under fifteen minutes, no developer required. The two-week build was sequenced around the summit date: discovery and design system in week one, page builds and content migration in week two, with the GEO/AIO SEO layer baked into the page templates from day one rather than bolted on later. Cloudflare went in front for performance and caching so the team would not need to think about hosting infrastructure post-launch.',
-    techStack: ['WordPress', 'Breakdance', 'PHP', 'MySQL', 'Cloudflare'],
+      'FactoryJet built the website and continues to work on SEO and AI search. The focus is on clear service information, accessible project evidence, and a site structure that helps visitors find the right next step.',
+
     solution:
-      'FactoryJet executed a lightning-fast migration to a modern WordPress + Breakdance setup in just 14 days. We built a dynamic portfolio system that allows their non-technical team to upload projects instantly. The site was optimized for Generative Engine Optimization, structured data, citation-friendly section markup, and FAQ blocks, so the brand started showing up in AI answer engines for its niche queries. Cloudflare handled CDN, image optimization, and edge caching.',
+      'The engagement covers website development and ongoing search work. The current website project uses Next.js. This case keeps the implementation scope separate from claims about sales or search performance.',
     results:
-      'Inside six months the modern stack drove a 125% increase in organic traffic and influenced roughly $360K USD in pipeline revenue (about ₹3 Cr equivalent). The portfolio is now updated weekly by the in-house team, the summit launch hit on schedule, and the bid win-rate climbed meaningfully because prospects could see current work the moment they landed on the site.',
+      'The website engagement and ongoing SEO and AI search work are confirmed. This case describes that scope without attributing pipeline revenue or traffic growth to the work.',
     imageUrl: '/images/case-studies/impulse-branding-migration-hero.jpg',
     ogImageUrl: '/images/case-studies/impulse-branding-migration-og.png',
     publishedDate: '2026-05-28',
-    ctaTeaser: 'Stuck on a legacy site you can not edit? We migrate to a modern, founder-editable stack in 7–14 days.',
+    ctaTeaser: 'We can connect your service pages, portfolio, and inquiry journey as one website and search engagement.',
     relatedSlugs: ['belle-maison-ecommerce-success', 'fliying-pixel-agency'],
     faqs: [
-      {
-        q: 'Why WordPress + Breakdance over a custom React build?',
-        a: 'A custom React build would have shipped six weeks later and required a developer for every portfolio update. Breakdance gives the team a visual editor on top of WordPress, which means future content changes cost zero developer hours.',
-      },
-      {
-        q: 'What does Generative Engine Optimization (GEO) actually add?',
-        a: 'GEO is the discipline of structuring content so AI answer engines (ChatGPT, Perplexity, Google AI Overviews) cite you. We add structured data, citation-friendly section markup, named-entity reinforcement, and FAQ blocks: the things AI engines look for when picking sources.',
-      },
-      {
-        q: 'How can a 14-day build still be SEO-strong?',
-        a: 'Templates carry the SEO discipline. Every page template we ship has correct H1/H2 hierarchy, schema markup, internal linking patterns, and FAQ blocks baked in. The team only writes the body copy; the technical SEO is structural.',
-      },
-      {
-        q: 'What was the deciding factor in winning more bids?',
-        a: 'The portfolio. Prospects on legacy sites were seeing 2-year-old work and bouncing. Once the team could publish a finished project the same week it shipped, the perceived activity level of the firm jumped, which translated directly to win-rate.',
-      },
-      {
-        q: 'Is the 14-day timeline repeatable?',
-        a: 'For sites in the 15–25 page range with a clear brand and existing content assets, yes. The bottleneck is usually content readiness, not development speed, we ship up to 5-page sites in 7 days under our standard delivery guarantee.',
-      },
+      { q: 'What work does FactoryJet provide for Impulse Branding Solutions?', a: 'FactoryJet built the website and provides ongoing SEO and AI search work.' },
+      { q: 'Does this case claim a measured revenue uplift?', a: 'No. This case describes the engagement and its implementation scope. It does not report a measured revenue or traffic uplift.' },
     ],
+    clientUrl: 'https://impulsebranding.in/',
+    modifiedDate: '2026-09-14',
   },
 
   // ─── 3. Formative Concepts — BIM consultancy, zero to global ──────────────
@@ -695,98 +656,64 @@ export const CASE_STUDIES: CaseStudy[] = [
     ],
   },
 
-  // ─── 7. Sow Easy — distributor + white-label portal on Commerceflo ───────
+  // ─── 7. Sow Easy: current WooCommerce and Odoo build, in progress ─────────
   // Added 2026-08-04 from Bhavesh's brief. No metrics are asserted: the build
   // is described, not scored. Do not add numbers without a measured source.
   // The public site is still in development, so no live URL is published here.
   {
     slug: 'sow-easy-distributor-portal',
     client: 'Sow Easy',
-    tagline: 'A distributor network that needed its partners to sell onward, not just order.',
+    tagline: 'A B2B commerce build in progress, connecting WooCommerce ordering with Odoo.',
     industry: 'B2B Distribution',
     services: [
-      'Commerceflo B2B Storefront',
-      'Distributor Portal',
-      'White-Label Partner Mini-Sites',
-      'Trade Pricing Tiers',
-      'Sample Ordering',
-      'UI/UX Design',
-      'AI SEO',
+      'WooCommerce Website Development',
+      'Odoo Integration',
+      'Trade Ordering',
+      'SEO',
+      'AI Search',
     ],
-    headline: 'A Distributor Portal Where Partners Can Launch Their Own Storefronts',
+    headline: 'Building a WooCommerce Trade Store Connected to Odoo',
     summary:
-      'Sow Easy sells through distributors and trade partners rather than direct to consumers. FactoryJet built their B2B commerce on Commerceflo with a full distributor portal, trade pricing that resolves per account at login, and sample ordering. The part that makes it unusual is white-labelling: a distributor can launch their own mini-site for their end customers off the same catalogue. We built the same pattern for two sibling brands in the group, Buddyburst and Seedsticks.',
+      'FactoryJet is building Sow Easy’s B2B ecommerce website on WooCommerce, with Odoo integration for stock, pricing, and product identifiers. Website development, SEO, and AI search work are ongoing.',
     category: 'E-Comm',
     heroStats: [
-      { value: 'White-label', label: 'Partner mini-sites' },
-      { value: 'Commerceflo', label: 'Platform built on' },
-      { value: '3 brands', label: 'Sow Easy, Buddyburst, Seedsticks' },
+      { value: 'In progress', label: 'Website build' },
+      { value: 'WooCommerce', label: 'Storefront' },
+      { value: 'Odoo', label: 'Stock and pricing source' },
     ],
     glanceTiles: [
-      { label: 'INDUSTRY', value: 'B2B Distribution' },
-      { label: 'SERVICES', value: 'Distributor Portal + White-Label' },
-      { label: 'PLATFORM', value: 'Commerceflo' },
-      { label: 'PRICING', value: 'Trade Tiers on Login' },
-      { label: 'ORDERING', value: 'Samples + Trade Orders' },
-      { label: 'GROUP', value: 'Buddyburst, Seedsticks' },
+      { label: 'STATUS', value: 'Build in progress' },
+      { label: 'PLATFORM', value: 'WooCommerce' },
+      { label: 'ERP', value: 'Odoo' },
+      { label: 'SERVICES', value: 'Website + SEO + AI Search' },
     ],
-    keyMetrics: [
-      { label: 'Partner Model', value: 'White-label mini-sites', note: 'Distributors sell onward under their own brand' },
-      { label: 'Pricing', value: 'Per-account tiers', note: 'Resolved at login, not a public list price' },
-      { label: 'Sampling', value: 'Sample ordering built in' },
-      { label: 'Group Builds', value: 'Buddyburst, Seedsticks' },
-    ],
-    headlineMetric: {
-      label: 'What Makes This Different',
-      value: 'Partners get their own storefront',
-      note: 'A distributor can launch a branded mini-site for their end customers off the same catalogue',
-    },
-    resultsMetrics: [
-      { label: 'Distributor Portal', value: 'Live' },
-      { label: 'White-Label Mini-Sites', value: 'Supported' },
-      { label: 'Trade Pricing', value: 'Per account, on login' },
-      { label: 'Sample Ordering', value: 'Built in' },
-      { label: 'Search', value: 'AI SEO in progress' },
-      { label: 'Sibling Builds', value: 'Buddyburst, Seedsticks' },
-    ],
+    keyMetrics: [],
+
     challenge:
-      'Selling through distributors creates a problem a normal storefront does not solve. The distributor is a buyer, so they need trade pricing and bulk ordering. But they are also a seller, so they need something to sell with, and most of them do not have their own ecommerce. Left alone, that gap gets filled by PDFs, spreadsheets and phone calls, and the brand loses any view of what happens past the distributor.',
-    challengePullQuote:
-      'A distributor is a buyer and a seller at the same time. Build for only one of those and the other half breaks.',
+      'Trade buyers need product information, account pricing, and ordering tools that reflect the systems used by the supplier. The store also needs to support the team managing products and orders without creating conflicting copies of stock and price data.',
+
     approach:
-      'We treated the distributor as two users in one account. As a buyer they get contracted pricing, sample ordering and repeat ordering. As a seller they get a white-label mini-site they can point their own customers at, running off the same catalogue so nothing has to be re-keyed or kept in sync by hand. Commerceflo carries the account-based pricing and quote logic natively, which keeps trade rules in the platform instead of in custom code. We then applied the same pattern to Buddyburst and Seedsticks in the same group.',
-    techStack: ['Commerceflo'],
+      'The current project uses WooCommerce for the storefront and Odoo as the source of stock, pricing, and SKU data. Development and validation take place on staging before launch. The work includes product presentation, trade ordering, and the integration between the store and ERP.',
+    techStack: [
+      'WordPress',
+      'WooCommerce',
+      'Odoo',
+    ],
     solution:
-      'Trade partners log in and see their own pricing tier rather than a public price. They can order samples before committing to volume, which matters in a category where buyers want to handle the product first. Distributors who want to sell onward get a white-label storefront for their end customers, drawing on the same catalogue. Alongside the build we designed the UI/UX and started AI SEO so the brand is findable in AI answers as well as in search.',
+      'FactoryJet is implementing the website and its commerce workflows while testing product data and ordering behavior against Odoo staging. SEO and AI search work run alongside the build. The public case study describes the current engagement, rather than treating staging functionality as a completed launch.',
     results:
-      'Sow Easy now has a distributor channel that can transact and resell without the brand hand-holding every order, and the same pattern is running for Buddyburst and Seedsticks. The public site is still in development, so we are not publishing traffic or revenue figures for it. We would rather describe the build accurately than attach a number to it before there is one worth quoting.',
+      'The website build is in progress. Launch results, traffic changes, and sales outcomes are not reported for this unfinished build.',
     imageUrl: '/images/case-studies/sow-easy-distributor-portal-hero.jpg',
     ogImageUrl: '/images/case-studies/sow-easy-distributor-portal-og.png',
     publishedDate: '2026-08-04',
-    ctaTeaser: 'If you sell through distributors and want them selling onward under their own brand, this is the pattern.',
+    ctaTeaser: 'If your trade store needs to work with an existing ERP, we can scope the storefront and integration together.',
     relatedSlugs: ['belle-maison-ecommerce-success', 'gpsuk-promotional-products'],
     faqs: [
-      {
-        q: 'What is a white-label distributor mini-site?',
-        a: 'It is a small storefront your distributor runs under their own branding, selling your catalogue to their customers. They do not have to build or maintain ecommerce themselves, and you are not stuck rebuilding a separate site for every partner.',
-      },
-      {
-        q: 'Why does sample ordering need to be built in?',
-        a: 'In trade categories buyers usually want to handle the product before ordering volume. If sampling happens over email it sits outside the system, so nobody can see which samples led to which orders. Building it into the portal keeps that history attached to the account.',
-      },
-      {
-        q: 'What does "trade pricing tiers on login" actually mean?',
-        a: 'Different partners have agreed different rates with you. Rather than showing one public price and correcting it later in a quote, the storefront resolves the right price for that account the moment they log in. What they see is what they pay.',
-      },
-      {
-        q: 'Can this work for a group with several brands?',
-        a: 'Yes, and Sow Easy is the example. The same distributor and white-label pattern runs across Buddyburst and Seedsticks in the same group, so partners get a consistent way to buy and resell across all three.',
-      },
-      {
-        q: 'Do distributors need technical skill to run a mini-site?',
-        a: 'No. That is the point of white-labelling it. The catalogue, pricing and ordering all come from the parent system, so the distributor is running a storefront rather than building one.',
-      },
+      { q: 'Is the Sow Easy website build complete?', a: 'The build is in progress. FactoryJet is developing and testing the WooCommerce website and Odoo integration on staging, alongside ongoing SEO and AI search work.' },
+      { q: 'Which system owns stock and pricing?', a: 'Odoo is the source of stock, pricing, and SKU data in the current project. WooCommerce uses that data in the storefront rather than becoming a separate source of truth.' },
+      { q: 'Does this case study report sales results?', a: 'No. It describes an active implementation. It does not present staging activity as customer sales or claim a completed launch.' },
     ],
+    modifiedDate: '2026-09-14',
   },
 
   // ─── 8. GPSUK — promotional products, B2B storefront on Commerceflo ──────
@@ -800,6 +727,8 @@ export const CASE_STUDIES: CaseStudy[] = [
       'Trade Account Ordering',
       'Catalogue Structuring',
       'Quote-to-Order Workflow',
+      'SEO',
+      'AI Search',
     ],
     headline: 'Putting a UK Promotional Products Catalogue in Front of Trade Buyers',
     summary:
@@ -845,7 +774,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     solution:
       'GPSUK trade customers log in to a catalogue priced for their account. Where an order needs quoting first, the quote carries through to the order rather than being retyped. The catalogue is structured so buyers can find products the way they describe them, which matters in a category with a very wide range and a lot of near-identical items.',
     results:
-      'GPSUK now has a trade storefront their customers can serve themselves from, with pricing and quoting handled in the system rather than in email. We have not published revenue or traffic figures for this build, because we do not have measured ones to publish.',
+      'GPSUK has a Commerceflo trade storefront with account-based pricing and quote-to-order workflows. FactoryJet also provides ongoing SEO and AI search work. This case describes the delivered commerce functionality without attributing a measured revenue or traffic uplift.',
     imageUrl: '/images/case-studies/gpsuk-promotional-products-hero.jpg',
     ogImageUrl: '/images/case-studies/gpsuk-promotional-products-og.png',
     publishedDate: '2026-08-04',
@@ -869,6 +798,9 @@ export const CASE_STUDIES: CaseStudy[] = [
         a: 'Structure. If products are only findable by exact code, buyers give up and email instead. We organise the catalogue around how buyers describe what they want, so search and browsing both land on the right item.',
       },
     ],
+    modifiedDate: '2026-09-14',
+    clientUrl: 'https://app.commerceflo.ai/store/gpsuk',
+    location: 'United Kingdom',
   },
 
   // ─── 9. Yadav Entrance Automation — site build plus SEO and AI SEO ───────
@@ -951,6 +883,9 @@ export const CASE_STUDIES: CaseStudy[] = [
         a: 'Branded searches for the company name tend to come first, usually within weeks of launch. Competitive service terms take longer, typically months, and depend on how contested the category is. Anyone promising a fixed timeline is guessing.',
       },
     ],
+    modifiedDate: '2026-09-14',
+    clientUrl: 'https://yadaventranceautomation.com/',
+    location: 'India',
   },
 
 ]
@@ -962,3 +897,20 @@ export const CASE_STUDIES: CaseStudy[] = [
 export function getCaseStudyBySlug(slug: string): CaseStudy | undefined {
   return CASE_STUDIES.find((cs) => cs.slug === slug)
 }
+
+/** Engagement facts confirmed by Bhavesh on 2026-09-12.
+ * Development URLs remain private; an in-progress build is never labeled live.
+ * No outcome metric is inferred from an engagement's status.
+ */
+export const CLIENT_ENGAGEMENTS = [
+  { client: 'Yadav Entrance Automation', status: 'Website built', scope: 'Website, ongoing SEO and AI search', url: 'https://yadaventranceautomation.com/', caseSlug: 'yadav-entrance-automation-website-seo' },
+  { client: 'Belle Maison', status: 'Storefront built', scope: 'DTC + B2B commerce', url: 'https://app.commerceflo.ai/store/belle-maison', caseSlug: 'belle-maison-ecommerce-success' },
+  { client: 'Impulse Branding Solutions', status: 'Website built', scope: 'Website, ongoing SEO and AI search', url: 'https://impulsebranding.in/', caseSlug: 'impulse-branding-migration' },
+  { client: 'Sow Easy', status: 'Build in progress', scope: 'Website development, ongoing SEO and AI search', caseSlug: 'sow-easy-distributor-portal' },
+  { client: 'GPSUK', status: 'Website built', scope: 'B2B commerce, ongoing SEO and AI search', url: 'https://app.commerceflo.ai/store/gpsuk', caseSlug: 'gpsuk-promotional-products' },
+  { client: 'Holistico', status: 'Build in progress', scope: 'Website development, ongoing SEO and AI search' },
+  { client: 'DTF Virginia', status: 'Build in progress', scope: 'Website development, ongoing SEO and AI search', url: 'https://dtfvirginia.com/' },
+  { client: 'Commerceflo.ai', status: 'Website built', scope: 'Website, ongoing SEO and AI search', url: 'https://commerceflo.ai/' },
+  { client: 'Alertmi Technologies', status: 'Website built', scope: 'Website, ongoing SEO and AI search', url: 'https://alertmi.com/' },
+  { client: 'Akanksha Barot', status: 'Website built', scope: 'Personal-profile website, ongoing SEO and AI search', url: 'https://akankshabarot.com/' },
+] satisfies Array<{ client: string; status: string; scope: string; url?: string; caseSlug?: string }>;

@@ -8,11 +8,10 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import LocalSeoArchitectureBlueprint from '@/components/v2/LocalSeoArchitectureBlueprint';
 import AuthorCard from '@/components/v2/AuthorCard';
 import LocalSeoOpportunityEstimator from '@/components/v2/LocalSeoOpportunityEstimator';
-import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-30';
+const PAGE_MODIFIED = '2026-09-14';
 const CANONICAL = 'https://factoryjet.com/nashville/seo';
 
 export const metadata: Metadata = {
@@ -51,10 +50,10 @@ const PARTNERS = [
 ];
 
 const STAT_CARDS = [
-  { num: 'Top 3', title: 'Google Maps Ranking SLA', desc: 'Engineered for dominance in Google Local 3-Pack across high-value Nashville commercial corridors.', icon: '📍' },
-  { num: '4.7x', title: 'Inbound Lead Velocity', desc: 'Average qualified local phone call and consultation lead growth within 90 days of rollout.', icon: '📈' },
-  { num: '100%', title: 'Clean Entity Attribution', desc: 'Structured JSON-LD schemas linking your Google Knowledge Graph, address, and practitioner licenses.', icon: '🛡️' },
-  { num: '0', title: 'Spammy Link Networks', desc: 'Strict white-hat local citation authority and real editorial publication placements only.', icon: '⚡' },
+  { num: 'Maps', title: 'Business Profile Review', desc: 'Check business details, categories, services, and the areas you actually serve.', icon: '📍' },
+  { num: 'Leads', title: 'Inquiry Tracking', desc: 'Agree which calls, forms, and booked conversations count as useful inquiries.', icon: '📈' },
+  { num: 'Site', title: 'Technical SEO Review', desc: 'Find indexing, mobile usability, and service-page issues that interrupt the path to an inquiry.', icon: '🛠️' },
+  { num: 'Plan', title: 'Prioritized Next Steps', desc: 'See what needs fixing first, who will implement it, and how progress will be reviewed.', icon: '📋' },
 ];
 
 const DISTRICTS = [
@@ -208,23 +207,23 @@ const ROADMAP_STEPS = [
 const EVALUATION_CRITERIA = [
   {
     label: 'Ranking Target',
-    factoryjet: 'Top 3 Google Maps Local Pack & Organic Page 1 for high-intent local commercial terms.',
-    traditional: 'Generic keyword impressions and vanity organic traffic that fails to produce paying local clients.',
+    factoryjet: 'Qualified inquiries from searches for the services you actually sell. Rankings are tracked, never guaranteed.',
+    traditional: 'Ask which customer inquiries they measure and how they report them.',
   },
   {
     label: 'Structured Data',
     factoryjet: 'Deep server-rendered JSON-LD schema (LocalBusiness, GeoCoordinates, OpeningHours, Service, FAQPage).',
-    traditional: 'Basic WordPress SEO plugin meta tags without connected entity graphs or practitioner credentials.',
+    traditional: 'Ask who performs technical work and which deliverables are included.',
   },
   {
     label: 'Citation Quality',
     factoryjet: 'Direct API synchronization with major data providers and verified local chamber/industry publications.',
-    traditional: 'Automated spam submissions to hundreds of low-quality link directories that risk Google penalties.',
+    traditional: 'Ask which listings or publications are relevant to your actual business.',
   },
   {
     label: 'AI Search Preparedness',
     factoryjet: 'Semantic entity engineering optimized for ChatGPT Search, Perplexity AI, and Google AI Overviews.',
-    traditional: 'Outdated keyword stuffing techniques with no consideration for conversational search platforms.',
+    traditional: 'Ask how they validate search content and describe any limitations.',
   },
 ];
 
@@ -247,19 +246,19 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'Are there any hidden citation fees or third-party listing markups?',
     answer:
-      'No. All direct directory submissions, data aggregator distribution fees, schema deployments, and ranking grid audits are fully included in your monthly program fee.',
+      'Your proposal identifies the work included in our fee and any separate tools, directory charges, or subscriptions. We agree additional costs before starting the related work. Ask for setup costs and ongoing costs to be shown separately when comparing SEO proposals.',
   },
   {
     category: 'pricing',
     question: 'Do you require long-term lock-in contracts for SEO retainers?',
     answer:
-      'No. We operate on flexible month-to-month agreements after an initial 90-day foundational sprint. We earn your continued business through transparent rank improvements, phone call growth, and measurable local revenue.',
+      'Your proposal sets out the initial work, ongoing monthly scope, any minimum term, and cancellation notice before you sign. Ask us to separate setup work from continuing SEO so you can compare the commitment clearly. The agreement, rather than a ranking promise, defines what we deliver.',
   },
   {
     category: 'timeline',
     question: 'How quickly can our Nashville business expect to see Google Maps rank improvements?',
     answer:
-      'Foundational GBP optimizations, schema deployments, and NAP deduplication typically produce noticeable ranking improvements within 30 to 60 days. Highly competitive queries in West End or Brentwood generally achieve solid Top 3 Local Pack dominance within 90 to 120 days of consistent entity authority building.',
+      'Timing depends on your starting point, competition, location, and the fixes needed. We establish a baseline and agree the first priorities after the audit. We report completed work alongside changes in visibility and inquiries. No agency can guarantee a top-three position or a fixed date for reaching it.',
   },
   {
     category: 'timeline',
@@ -361,7 +360,7 @@ const FAQ_ITEMS = [
     category: 'technical',
     question: 'What technical SEO factors are most critical for competitive Nashville enterprises?',
     answer:
-      'Sub-500ms server response times, 100/100 Core Web Vitals, clean Next.js static HTML pre-rendering, nested Schema.org medical and legal schemas, and zero render-blocking JavaScript files.',
+      'We check whether important pages can be crawled and indexed, whether mobile visitors can use them easily, and whether internal links and structured data describe the business accurately. Core Web Vitals help diagnose loading, responsiveness, and layout problems. There is no single speed score that guarantees a ranking.',
   },
   {
     category: 'citations',
@@ -373,7 +372,7 @@ const FAQ_ITEMS = [
     category: 'reviews',
     question: 'What is your review generation framework for Nashville medical clinics and hospitality groups?',
     answer:
-      'We implement automated SMS and email review request workflows triggered post-consultation or post-stay, directing happy clients to Google Maps while capturing feedback internally.',
+      'We help create a consistent request for honest feedback after a completed service. Customers receive the same opportunity to leave a review regardless of whether their experience was positive or negative. We do not buy reviews, offer incentives, or filter unhappy customers away from public review platforms.',
   },
   {
     category: 'schema',
@@ -420,34 +419,6 @@ const FAQ_SCHEMA = {
   })),
 };
 
-const LOCAL_BUSINESS_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  name: 'FactoryJet - Nashville Local SEO Agency',
-  image: 'https://factoryjet.com/og-default.png',
-  url: CANONICAL,
-  telephone: '+1-832-998-8422',
-  priceRange: '$$',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Nashville',
-    addressRegion: 'TN',
-    addressCountry: 'US',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 36.1627,
-    longitude: -86.7816,
-  },
-  areaServed: [
-    { '@type': 'City', name: 'Nashville' },
-    { '@type': 'City', name: 'Brentwood' },
-    { '@type': 'City', name: 'Franklin' },
-    { '@type': 'City', name: 'Murfreesboro' },
-    { '@type': 'City', name: 'Hendersonville' },
-  ],
-};
-
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
@@ -470,7 +441,7 @@ const SERVICE_SCHEMA = {
   serviceType: 'Local SEO, Google Business Profile Management & AI Search Optimization',
   description:
     'Senior engineering-led local search engine optimization, Google Maps 3-Pack capture, structured data graphs, and AI citation engineering for Nashville businesses.',
-  areaServed: { '@type': 'State', name: 'Tennessee' },
+  areaServed: [{ '@type': 'City', name: 'Nashville' }, { '@type': 'State', name: 'Tennessee' }],
 };
 
 const WEBPAGE_SCHEMA = {
@@ -506,7 +477,6 @@ export default function NashvilleSeoPage() {
   return (
     <>
       <script id="bna-seo-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script id="bna-seo-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
       <script id="bna-seo-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
       <script id="bna-seo-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
       <script id="bna-seo-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
@@ -524,19 +494,19 @@ export default function NashvilleSeoPage() {
                   <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                     <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
                   </svg>
-                  <span>Nashville Local SEO &amp; AI Citation Authority</span>
+                  <span>Local SEO for Nashville businesses</span>
                 </div>
 
                 <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
-                  Nashville Local SEO Agency for Market Leaders
+                  Nashville Local SEO Agency for Service Businesses
                 </h1>
 
                 <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
-                  Dominate the Google Maps 3-Pack, organic search rankings, and AI conversational search across Music Row, West End, and Brentwood. Engineered for verified inbound calls and high-ticket consultations.
+                  Help nearby customers find the services you sell. We improve your Google Business Profile, service pages, and technical SEO, with reporting focused on calls, inquiries, and booked conversations.
                 </p>
 
                 <div className="rv-actions">
-                  <ModalCTAButton label="Get a Free Local SEO Audit" region="us" btnVariant="primary-dark" modalVariant="seo" />
+                  <ModalCTAButton label="Get my free Nashville SEO audit" region="us" btnVariant="primary-dark" modalVariant="seo" />
                   <a href="#bna-districts" className="rv-btn-secondary">
                     <div className="rv-video-circle">
                       <svg width="14" height="16" viewBox="0 0 14 16" fill="#141414">
@@ -817,9 +787,21 @@ export default function NashvilleSeoPage() {
 
         {/* ── 07. ARCHITECTURE BLUEPRINT ── */}
         <div id="local-seo-blueprint">
-          <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: '48px 0 16px' }}>
+          <section className="pp-sec tint" aria-labelledby="nashville-client-proof">
           <div className="pp-wrap">
-            <RegionalBenchmarkCard city="Nashville" vertical="seo" />
+            <p className="pp-mlabel">Website and ongoing search work</p>
+            <h2 id="nashville-client-proof">Helping a specialist service business explain what it does</h2>
+            <p className="pp-lead" style={{ maxWidth: '68ch', marginTop: '16px' }}>
+              FactoryJet built Yadav Entrance Automation’s website and continues its SEO and AI search work. The content explains the entrance systems the business installs and services, so buyers can understand their options before getting in touch.
+            </p>
+            <p className="pp-lead" style={{ maxWidth: '68ch', marginTop: '12px', fontSize: '15px' }}>
+              This is an example of our implementation work for an Indian client. Your Nashville audit starts with your services, your customers, and your local competitors.
+            </p>
+            <div className="rv-actions" style={{ marginTop: '24px' }}>
+              <Link href="/case-studies/yadav-entrance-automation-website-seo" className="rv-btn-secondary">Read the client project →</Link>
+              <ModalCTAButton label="Request my Nashville SEO audit" region="us" btnVariant="primary-dark" modalVariant="seo" />
+            </div>
+            <p style={{ marginTop: '20px' }}><Link href="/pricing#seo" className="rv-btn-secondary">How SEO scope and fees work →</Link></p>
           </div>
         </section>
 
@@ -911,7 +893,7 @@ export default function NashvilleSeoPage() {
                 Evaluating Nashville SEO Agencies: What to Ask
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                Compare engineering-led local search optimization against traditional marketing agencies before you sign:
+                Compare the work, reporting, and ownership in each proposal before you sign:
               </p>
             </div>
 
@@ -919,7 +901,7 @@ export default function NashvilleSeoPage() {
               <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1.4fr 1.4fr', background: '#141414', color: '#FFFFFF', padding: '16px 24px', fontWeight: 700, fontSize: '13.5px' }}>
                 <div>Evaluation Factor</div>
                 <div style={{ color: '#FF5622' }}>FactoryJet Engineering Model</div>
-                <div style={{ color: '#A0A0B0' }}>Traditional SEO Agencies</div>
+                <div style={{ color: '#A0A0B0' }}>Questions to ask any agency</div>
               </div>
 
               {EVALUATION_CRITERIA.map((crit, cIdx) => (

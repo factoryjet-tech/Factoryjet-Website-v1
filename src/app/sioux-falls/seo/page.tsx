@@ -8,11 +8,10 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import LocalSeoArchitectureBlueprint from '@/components/v2/LocalSeoArchitectureBlueprint';
 import AuthorCard from '@/components/v2/AuthorCard';
 import LocalSeoOpportunityEstimator from '@/components/v2/LocalSeoOpportunityEstimator';
-import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-30';
+const PAGE_MODIFIED = '2026-09-13';
 const CANONICAL = 'https://factoryjet.com/sioux-falls/seo';
 
 export const metadata: Metadata = {
@@ -51,10 +50,10 @@ const PARTNERS = [
 ];
 
 const STAT_CARDS = [
-  { num: '44%', title: 'Map Pack Clicks', desc: 'Direct phone calls and clicks won by the top 3 Google local profiles.', icon: '📍' },
-  { num: '250+', title: 'Monthly Head Demand', desc: 'Verified monthly searches across Sioux Falls SEO company and agency queries.', icon: '📈' },
-  { num: '500+', title: 'Client Deployments', desc: 'Websites and local profiles optimized across healthcare, finance, and services.', icon: '🏢' },
-  { num: '100%', title: 'Direct Engineer Access', desc: 'Month-to-month terms with direct access to senior technical engineers.', icon: '⚡' },
+  { num: 'Maps', title: 'Business Profile Review', desc: 'Review the categories, services, and business details customers see in local search.', icon: '📍' },
+  { num: 'Site', title: 'Technical SEO Review', desc: 'Find crawl, performance, and usability issues that get between a search and an inquiry.', icon: '📈' },
+  { num: 'Pages', title: 'Service Content Review', desc: 'Check whether each important service has a clear page that answers buyers’ questions.', icon: '🏢' },
+  { num: 'Leads', title: 'Inquiry Tracking', desc: 'Connect SEO activity to calls and form submissions instead of reporting rankings alone.', icon: '⚡' },
 ];
 
 const DISTRICTS = [
@@ -330,7 +329,7 @@ const FAQ_ITEMS = [
     category: 'technical',
     question: 'Why does website loading speed directly impact Google search rankings?',
     answer:
-      'Google utilizes Core Web Vitals as an official ranking metric. Fast-loading websites deliver superior user experiences, resulting in lower bounce rates and higher session engagement. If your site takes longer than two seconds to load on mobile networks, search algorithms demote your listings in favor of faster competitors.',
+      'Page experience and Core Web Vitals are among the signals Google can use, but speed alone does not determine rankings. A faster mobile experience also makes it easier for visitors to read, call, or submit a form. We improve performance because it supports both search visibility and conversion, without promising that one speed score will produce a particular position.',
   },
   {
     category: 'technical',
@@ -342,7 +341,7 @@ const FAQ_ITEMS = [
     category: 'timeline',
     question: 'How long does it take to see organic ranking improvements in Sioux Falls?',
     answer:
-      'Initial technical fixes and low-competition neighborhood keyword wins typically show results within 30 to 60 days. Competitive high-volume head terms and stable top-3 Map Pack placements generally mature within 3 to 6 months of continuous optimization.',
+      'Timing depends on your starting position, competition, location, website, listings, and review profile. Technical and business-profile fixes can be completed early, while meaningful ranking and inquiry growth usually takes sustained work. We establish a baseline first, report progress each month, and do not guarantee a specific Map Pack position or deadline.',
   },
   {
     category: 'timeline',
@@ -407,34 +406,6 @@ const FAQ_SCHEMA = {
   })),
 };
 
-const LOCAL_BUSINESS_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  name: 'FactoryJet - Sioux Falls SEO Company & Local Agency',
-  image: 'https://factoryjet.com/og-default.png',
-  url: CANONICAL,
-  telephone: '+1-832-998-8422',
-  priceRange: '$$',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Sioux Falls',
-    addressRegion: 'SD',
-    addressCountry: 'US',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 43.5460,
-    longitude: -96.7313,
-  },
-  areaServed: [
-    { '@type': 'City', name: 'Sioux Falls' },
-    { '@type': 'City', name: 'Brandon' },
-    { '@type': 'City', name: 'Harrisburg' },
-    { '@type': 'City', name: 'Tea' },
-    { '@type': 'City', name: 'Hartford' },
-  ],
-};
-
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
@@ -493,7 +464,6 @@ export default function SiouxFallsSeoPage() {
   return (
     <>
       <script id="fsd-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script id="fsd-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
       <script id="fsd-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
       <script id="fsd-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
       <script id="fsd-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
@@ -521,11 +491,11 @@ export default function SiouxFallsSeoPage() {
                 </h1>
 
                 <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
-                  Win the Google 3-Pack Map results, dominate high-intent South Dakota search terms, and earn citations across AI search engines. No long-term contracts. Talk directly with senior technical engineers.
+                  Help more Sioux Falls customers find your business and get in touch. FactoryJet works on your Google Business Profile, service pages, and website performance, with reporting focused on calls and form submissions.
                 </p>
 
                 <div className="rv-actions">
-                  <ModalCTAButton label="Claim Free Sioux Falls SEO Audit" region="us" btnVariant="primary-dark" />
+                  <ModalCTAButton label="Request my free SEO audit" region="us" btnVariant="primary-dark" modalVariant="seo" />
                   <a href="#fsd-districts" className="rv-btn-secondary">
                     <div className="rv-video-circle">
                       <svg width="14" height="16" viewBox="0 0 14 16" fill="#141414">
@@ -810,7 +780,16 @@ export default function SiouxFallsSeoPage() {
         {/* ── 07. ARCHITECTURE BLUEPRINT (AUTO-ROTATING TABS) ── */}
         <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: '48px 0 16px' }}>
           <div className="pp-wrap">
-            <RegionalBenchmarkCard city="Sioux Falls" vertical="seo" />
+            <div className="rounded-2xl border border-[#E6E6EC] bg-[#FFFFFF] p-6 md:p-8 transition-all shadow-sm" style={{ maxWidth: '960px', margin: '0 auto' }}>
+              <p className="pp-mlabel">Implementation example</p>
+              <h2>A specialist service website built around buyers’ questions</h2>
+              <p className="pp-lead">
+                FactoryJet built Yadav Entrance Automation’s website from scratch and continues its SEO and AI search work. The site explains the entrance systems the business installs and services, with content structured around the questions customers ask before getting in touch.
+              </p>
+              <Link href="/case-studies/yadav-entrance-automation-website-seo" className="rv-btn-secondary">
+                Read the Yadav Entrance Automation case study <span aria-hidden="true">→</span>
+              </Link>
+            </div>
           </div>
         </section>
 

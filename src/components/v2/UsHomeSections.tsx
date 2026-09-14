@@ -117,7 +117,7 @@ export function PillarsSection() {
                 <h3>We unify everything you sell</h3>
                 <p>We design, build, and implement the system that ties your storefront, marketplaces, and B2B together, so every channel works from the same data instead of its own copy.</p>
                 <div className="meta">one catalog · one inventory · one order engine · powered by Commerceflo</div>
-                <div className="more">See how it works →</div>
+                <Link className="more block" href="/omnichannel-commerce">Explore unified commerce →</Link>
               </div>
               <div className="zvis viz-hub" aria-hidden="true">
                 <svg className="hub-svg" viewBox="0 0 280 175" preserveAspectRatio="xMidYMid meet">
@@ -138,7 +138,7 @@ export function PillarsSection() {
                 <h3>Win on the marketplaces</h3>
                 <p>List, hold the Buy Box, and grow on the marketplaces that move your category.</p>
                 <div className="meta">Amazon · Walmart · TikTok Shop · Etsy · eBay</div>
-                <div className="more">Explore →</div>
+                <Link className="more block" href="/marketplace-management">Explore marketplace management →</Link>
               </div>
               <div className="zvis viz-list" aria-hidden="true">
                 <div className="v-card">
@@ -155,7 +155,7 @@ export function PillarsSection() {
                 <div className="pk">Omnichannel / DTC</div>
                 <h3>Store, social, and retail in sync</h3>
                 <p>Your online store, social shops, and retail floor reading the same stock and the same customer.</p>
-                <div className="more">Explore →</div>
+                <Link className="more block" href="/omnichannel-commerce">Explore omnichannel commerce →</Link>
               </div>
               <div className="zvis viz-omni" aria-hidden="true">
                 <div className="trio"><span className="vchip">Store</span><span className="vchip">Social</span><span className="vchip">Retail</span></div>
@@ -186,7 +186,7 @@ export function PillarsSection() {
                 <div className="pk">Commerce AI Agents</div>
                 <h3>Agents that act, not just suggest</h3>
                 <p>Agents we build and deploy that list, sync, reprice, and fix issues across every channel, working on your live data.</p>
-                <div className="more">Meet the agents →</div>
+                <Link className="more block" href="/services/ai-agent-development">Explore commerce AI development →</Link>
               </div>
               <div className="zvis viz-feed" aria-hidden="true">
                 <div className="feed">
@@ -315,12 +315,12 @@ export function ProofSection() {
                 </div>
               </article>
               <article className="pf-card">
-                <div className="pf-kicker">Belle Maison · B2B</div>
-                <h3 className="pf-name">A DTC store built to convert and scale</h3>
-                <p className="pf-built">A direct-to-consumer storefront for an artificial plants and flowers brand, built to convert shoppers and scale its catalog across channels.</p>
-                <div className="pf-tags"><span className="ptag">DTC</span><span className="ptag">Storefront build</span><span className="ptag">Multi-channel ready</span><span className="ptag">Home &amp; decor</span></div>
+                <div className="pf-kicker">Belle Maison · DTC + B2B</div>
+                <h3 className="pf-name">A storefront for retail and trade buyers</h3>
+                <p className="pf-built">A storefront for an artificial plants and flowers brand, serving retail shoppers and B2B trade buyers.</p>
+                <div className="pf-tags"><span className="ptag">DTC + B2B</span><span className="ptag">Storefront build</span><span className="ptag">Multi-channel ready</span><span className="ptag">Home &amp; decor</span></div>
                 <div className="pf-facts">
-                  <div className="pf-fact"><b>DTC</b><span>storefront build</span></div>
+                  <div className="pf-fact"><b>DTC + B2B</b><span>retail and trade buyers</span></div>
                   <div className="pf-fact"><b>Multi-channel</b><span>ready catalog</span></div>
                 </div>
               </article>

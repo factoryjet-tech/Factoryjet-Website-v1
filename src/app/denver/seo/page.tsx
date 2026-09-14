@@ -8,12 +8,11 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import LocalSeoArchitectureBlueprint from '@/components/v2/LocalSeoArchitectureBlueprint';
 import AuthorCard from '@/components/v2/AuthorCard';
 import LocalSeoOpportunityEstimator from '@/components/v2/LocalSeoOpportunityEstimator';
-import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-30';
+const PAGE_MODIFIED = '2026-09-13';
 const CANONICAL = 'https://factoryjet.com/denver/seo';
 
 export const metadata: Metadata = {
@@ -52,10 +51,10 @@ const PARTNERS = [
 ];
 
 const STAT_CARDS = [
-  { num: 'Top 3', title: 'Google Maps Ranking SLA', desc: 'Engineered for dominance in Google Local 3-Pack across high-value Denver commercial corridors.', icon: '📍' },
-  { num: '4.8x', title: 'Inbound Lead Velocity', desc: 'Average qualified local phone call and consultation lead growth within 90 days of rollout.', icon: '📈' },
-  { num: '100%', title: 'Clean Entity Attribution', desc: 'Structured JSON-LD schemas linking your Google Knowledge Graph, address, and practitioner licenses.', icon: '🛡️' },
-  { num: '0', title: 'Spammy Link Networks', desc: 'Strict white-hat local citation authority and real editorial publication placements only.', icon: '⚡' },
+  { num: 'Maps', title: 'Business Profile Review', desc: 'Review your categories, services, and business details against what customers need to find.', icon: '📍' },
+  { num: 'Leads', title: 'Inquiry Tracking', desc: 'Identify the calls and website inquiries that matter to your business and plan how to measure them.', icon: '📈' },
+  { num: 'Data', title: 'Listing Consistency', desc: 'Check your business name, address, and phone number across your website and business listings.', icon: '🛡️' },
+  { num: 'Site', title: 'Technical SEO Review', desc: 'Find crawl issues, unclear service pages, and usability problems that get between a search and an inquiry.', icon: '⚡' },
 ];
 
 const DISTRICTS = [
@@ -209,7 +208,7 @@ const ROADMAP_STEPS = [
 const EVALUATION_CRITERIA = [
   {
     label: 'Ranking Target',
-    factoryjet: 'Top 3 Google Maps Local Pack & Organic Page 1 for high-intent local commercial terms.',
+    factoryjet: 'Qualified calls and inquiries from the local searches that matter to your business.',
     traditional: 'Generic keyword impressions and vanity organic traffic that fails to produce paying local clients.',
   },
   {
@@ -338,7 +337,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'attribution',
     question: 'How quickly can our Denver business expect to see Google Maps rank improvements?',
     answer:
-      'Foundational GBP optimizations, schema deployments, and NAP deduplication typically produce noticeable ranking improvements within 30 to 60 days. Highly competitive queries in Cherry Creek, LoDo, or the DTC generally achieve solid Top 3 Local Pack dominance within 90 to 120 days of consistent authority building.',
+      'Timing depends on your starting position, competition, location, website, listings, and review profile. Technical and business-profile fixes can be completed early, while meaningful ranking and inquiry growth usually takes sustained work. We establish a baseline first, report movement each month, and do not guarantee a specific Map Pack position or deadline.',
   },
   {
     category: 'attribution',
@@ -395,33 +394,6 @@ const FAQ_SCHEMA = {
       text: item.answer,
     },
   })),
-};
-
-const LOCAL_BUSINESS_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  name: 'FactoryJet - Denver Local SEO Agency',
-  image: 'https://factoryjet.com/og-default.png',
-  url: CANONICAL,
-  telephone: '+1-832-998-8422',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Denver',
-    addressRegion: 'CO',
-    addressCountry: 'US',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 39.7392,
-    longitude: -104.9903,
-  },
-  areaServed: [
-    { '@type': 'City', name: 'Denver' },
-    { '@type': 'City', name: 'Boulder' },
-    { '@type': 'City', name: 'Greenwood Village' },
-    { '@type': 'City', name: 'Cherry Creek' },
-    { '@type': 'City', name: 'Lakewood' },
-  ],
 };
 
 const SERVICE_SCHEMA = {
@@ -495,7 +467,6 @@ export default function DenverSeoPage() {
   return (
     <>
       <script id="den-seo-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script id="den-seo-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
       <script id="den-seo-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
       <script id="den-seo-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
       <script id="den-seo-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
@@ -513,7 +484,7 @@ export default function DenverSeoPage() {
                   <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                     <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
                   </svg>
-                  <span>Denver Local SEO &amp; AI Citation Authority</span>
+                  <span>Local SEO for Denver businesses</span>
                 </div>
 
                 <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
@@ -521,18 +492,18 @@ export default function DenverSeoPage() {
                 </h1>
 
                 <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 24px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
-                  Dominate the Google Maps 3-Pack, capture high-intent Front Range search queries, and earn citations across AI conversational search engines. No long-term contracts. Talk directly with senior technical engineers.
+                  Help customers find your business when they search for the services you sell. FactoryJet works on your Google Business Profile, service pages, and technical SEO, with a focus on qualified inquiries.
                 </p>
 
                 {/* Answer-First Brief */}
                 <div style={{ background: '#F6F6F9', borderLeft: '3px solid #FF5622', padding: '14px 18px', borderRadius: '0 12px 12px 0', marginBottom: '28px', maxWidth: '52ch' }}>
                   <p style={{ fontSize: '13.5px', color: '#141414', lineHeight: 1.55, margin: 0, fontWeight: 500 }}>
-                    <strong style={{ color: '#FF5622' }}>Executive Brief:</strong> FactoryJet delivers senior engineering-led Denver local SEO services: Google Business Profile geo-radius expansion, 100% NAP citation synchronization across major aggregators, structured LocalBusiness Schema.org graphs, and high-intent local conversion engineering across the Front Range with transparent call tracking and zero locked monthly retainers.
+                    <strong style={{ color: '#FF5622' }}>Where we start:</strong> We check how customers find your business, which services matter most, and where your website or business listings lose them. Then we prioritize profile updates, website fixes, and content around those opportunities, so the work follows how your customers choose a provider.
                   </p>
                 </div>
 
                 <div className="rv-actions">
-                  <ModalCTAButton label="Get a Free Local SEO Audit" region="us" btnVariant="primary-dark" modalVariant="seo" />
+                  <ModalCTAButton label="Get my free Denver SEO audit" region="us" btnVariant="primary-dark" modalVariant="seo" />
                   <a href="#den-seo-districts" className="rv-btn-secondary">
                     <div className="rv-video-circle">
                       <svg width="14" height="16" viewBox="0 0 14 16" fill="#141414">
@@ -834,7 +805,16 @@ export default function DenverSeoPage() {
         {/* ── 07. ARCHITECTURE BLUEPRINT ── */}
         <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: '48px 0 16px' }}>
           <div className="pp-wrap">
-            <RegionalBenchmarkCard city="Denver" vertical="seo" />
+            <div className="pp-card">
+              <p className="pp-mlabel">Website and ongoing search work</p>
+              <h2>Yadav Entrance Automation</h2>
+              <p className="pp-lead">
+                FactoryJet built the website for Yadav Entrance Automation, a business that installs and services automatic entrance systems. We also provide ongoing SEO and AI search work, with content organized around the systems customers need and the services they buy.
+              </p>
+              <Link href="/case-studies/yadav-entrance-automation-website-seo" className="rv-btn-secondary">
+                Explore the Yadav Entrance Automation project
+              </Link>
+            </div>
           </div>
         </section>
 

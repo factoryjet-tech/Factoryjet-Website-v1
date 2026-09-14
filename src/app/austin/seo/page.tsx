@@ -8,12 +8,11 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import LocalSeoArchitectureBlueprint from '@/components/v2/LocalSeoArchitectureBlueprint';
 import AuthorCard from '@/components/v2/AuthorCard';
 import LocalSeoOpportunityEstimator from '@/components/v2/LocalSeoOpportunityEstimator';
-import RegionalBenchmarkCard from '@/components/v2/RegionalBenchmarkCard';
 import SeoCityLinksUS from '@/components/v2/SeoCityLinksUS';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-29';
+const PAGE_MODIFIED = '2026-09-14';
 const CANONICAL = 'https://factoryjet.com/austin/seo';
 
 export const metadata: Metadata = {
@@ -26,7 +25,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'Austin Local SEO Agency | Google Maps 3-Pack | FactoryJet',
     description:
-      'Austin SEO company built for the most crowded market in Texas. No-contract local SEO, technical Core Web Vitals engineering, and direct senior engineer access.',
+      'Austin SEO company built for the most crowded market in Texas. Local SEO, technical website improvements, and clear engagement terms.',
     url: CANONICAL,
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Austin SEO Company & Agency' }],
     locale: 'en_US',
@@ -52,10 +51,10 @@ const PARTNERS = [
 ];
 
 const STAT_CARDS = [
-  { num: '44%', title: 'Map Pack Clicks', desc: 'Direct calls and clicks captured by the top 3 Google local business listings in Austin.', icon: '📍' },
-  { num: '8,740+', title: 'Monthly Search Volume', desc: 'Verified monthly searches across Austin SEO agency and local commercial queries.', icon: '📈' },
-  { num: '42,000+', title: 'Austin SMB Competitors', desc: 'Registered commercial entities competing for local search visibility across Travis County.', icon: '🏢' },
-  { num: '100%', title: 'Direct Engineer Access', desc: 'Month-to-month terms with direct communication with senior technical engineers.', icon: '⚡' },
+  { num: 'Maps', title: 'Business Profile Review', desc: 'Check business details, categories, services, and the areas you actually serve.', icon: '📍' },
+  { num: 'Leads', title: 'Inquiry Tracking', desc: 'Agree which calls, forms, and booked conversations count as useful inquiries.', icon: '📈' },
+  { num: 'Site', title: 'Technical SEO Review', desc: 'Find indexing, mobile usability, and service-page issues that interrupt the path to an inquiry.', icon: '🛠️' },
+  { num: 'Plan', title: 'Prioritized Next Steps', desc: 'See what needs fixing first, who will implement it, and how progress will be reviewed.', icon: '📋' },
 ];
 
 const DISTRICTS = [
@@ -63,7 +62,7 @@ const DISTRICTS = [
     corridor: 'Downtown & The Capitol District',
     query: 'personal injury lawyer austin',
     focus: 'Law Firms, Financial Advisory & Corporate Services',
-    desc: 'Dense commercial core spanning Congress Avenue, West 6th, and Seaholm. Corporate buyers and legal clients evaluate technical credentials, page speed, and practice area depth before calling. Over 44 percent of clicks go straight to the top 3 Map Pack listings.',
+    desc: 'Dense commercial core spanning Congress Avenue, West 6th, and Seaholm. Corporate buyers and legal clients evaluate technical credentials, page speed, and practice area depth before calling.',
   },
   {
     corridor: 'The Domain & Silicon Hills',
@@ -229,33 +228,33 @@ const ROADMAP_STEPS = [
 const EVALUATION_CRITERIA = [
   {
     label: 'Contract Flexibility',
-    factoryjet: 'Month-to-month agreements based on performance and trust.',
-    traditional: 'Rigid 6 to 12 month binding contracts with steep cancellation fees.',
+    factoryjet: 'Written scope, review cadence, and cancellation terms agreed before work starts.',
+    traditional: 'Ask which customer inquiries they measure and how they report them.',
   },
   {
     label: 'Team Seniority',
     factoryjet: 'Direct access to senior software engineers and technical SEO architects.',
-    traditional: 'Junior account coordinators acting as communication intermediaries.',
+    traditional: 'Ask who performs technical work and which deliverables are included.',
   },
   {
     label: 'Technical Implementation',
     factoryjet: 'We write and deploy clean code directly to your Next.js or CMS repository.',
-    traditional: 'Provides spreadsheets of generic recommendations for your team to code.',
+    traditional: 'Ask which listings or publications are relevant to your actual business.',
   },
   {
     label: 'Lead Attribution',
     factoryjet: 'Monitors real phone calls, qualified form leads, and closed pipeline value.',
-    traditional: 'Reports on keyword impressions and unverified ranking screenshots.',
+    traditional: 'Ask how they validate search content and describe any limitations.',
   },
   {
     label: 'Data & Account Ownership',
     factoryjet: 'You maintain 100% ownership of your accounts, analytics data, and code.',
-    traditional: 'Holds landing pages and tracking accounts hostage inside proprietary tools.',
+    traditional: 'Ask who owns accounts and what happens when the engagement ends.',
   },
   {
     label: 'AI & Generative Search',
     factoryjet: 'Builds entity graph schema formatted for ChatGPT, Perplexity, and Google AI.',
-    traditional: 'Relies on outdated 2018 keyword stuffing and doorway page tactics.',
+    traditional: 'Ask what is included in implementation and what requires a separate quote.',
   },
 ];
 
@@ -272,7 +271,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'contracts',
     question: 'Why do you offer no-contract SEO agreements for Austin businesses?',
     answer:
-      'We believe agency retention must be earned every thirty days through measurable revenue outcomes rather than enforced through legal lock-ins. When agencies hide behind annual commitments, technical momentum stalls. Our month-to-month model aligns our engineering incentives directly with your ongoing commercial growth.',
+      'If you are comparing no-contract SEO, check what that means in writing: the initial scope, any minimum term, the notice period, and ownership of accounts and content. Our proposal spells out the engagement terms before work starts. Ask us to separate initial setup from ongoing work so you can compare like for like.',
   },
   {
     category: 'contracts',
@@ -284,7 +283,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'contracts',
     question: 'What hidden onboarding or setup fees do traditional agencies charge?',
     answer:
-      'Many traditional agencies bill extra onboarding fees, charge separately for Google Business Profile setup, or invoice extra hourly rates for code adjustments. With FactoryJet, our agreement covers full technical execution, on-page optimization, content production, citation synchronization, and conversion tracking with zero hidden surcharges.',
+      'Fees vary by provider and scope. Ask each agency to list setup work, monthly deliverables, third-party subscriptions, and out-of-scope changes separately. Our proposal documents what is included and how additional work is agreed, so you can evaluate the full commitment before signing.',
   },
   {
     category: 'contracts',
@@ -302,7 +301,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'local',
     question: 'How important are customer reviews for local search rankings in Austin?',
     answer:
-      'Google customer reviews are one of the most powerful direct ranking factors in local search algorithms. Both review quantity and the frequency of new reviews directly influence your Map Pack proximity radius. We help your team implement automated post-service SMS and email review collection workflows that consistently generate verified customer feedback.',
+      'Google describes local results in terms of relevance, distance, and prominence. Reviews can help customers evaluate a business and contribute to prominence, but they do not remove the effect of distance. We help you request honest feedback consistently, without incentives or filtering customers by how positively they respond.',
   },
   {
     category: 'local',
@@ -332,7 +331,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'technical',
     question: 'Why does website loading speed directly impact Google search rankings?',
     answer:
-      'Google utilizes Core Web Vitals as an official ranking metric. Fast-loading websites deliver superior user experiences, resulting in lower bounce rates and higher session engagement. If your site takes longer than two seconds to load on mobile networks, search algorithms demote your listings in favor of faster competitors.',
+      'A usable website helps visitors read your services and contact you. Core Web Vitals measure loading, responsiveness, and layout stability and are part of the broader page experience. There is no universal two-second cutoff that automatically demotes a page. We fix measured usability issues alongside relevance and content quality.',
   },
   {
     category: 'technical',
@@ -362,7 +361,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'attribution',
     question: 'How long does it take to see measurable SEO ranking improvements in Austin?',
     answer:
-      'Initial technical fixes, Google Business Profile corrections, and low-competition neighborhood keyword wins typically produce measurable visibility gains within 30 to 60 days. Highly competitive commercial terms and dominant top-three Map Pack placements generally mature within 3 to 6 months of continuous optimization.',
+      'Timing varies with your starting point, the work required, and competition. We first record a baseline and agree the implementation priorities. Monthly reviews separate completed work from changes in rankings, calls, and qualified inquiries. We do not promise a top-three placement or a fixed deadline for results.',
   },
   {
     category: 'attribution',
@@ -401,34 +400,6 @@ const FAQ_SCHEMA = {
       text: item.answer,
     },
   })),
-};
-
-const LOCAL_BUSINESS_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  name: 'FactoryJet - Austin SEO Company & Local Agency',
-  image: 'https://factoryjet.com/og-default.png',
-  url: CANONICAL,
-  telephone: '+1-832-998-8422',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Austin',
-    addressRegion: 'TX',
-    addressCountry: 'US',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 30.2672,
-    longitude: -97.7431,
-  },
-  areaServed: [
-    { '@type': 'City', name: 'Austin' },
-    { '@type': 'City', name: 'Round Rock' },
-    { '@type': 'City', name: 'Cedar Park' },
-    { '@type': 'City', name: 'West Lake Hills' },
-    { '@type': 'City', name: 'Lakeway' },
-    { '@type': 'City', name: 'Pflugerville' },
-  ],
 };
 
 const SERVICE_SCHEMA = {
@@ -502,7 +473,6 @@ export default function AustinSeoPage() {
   return (
     <>
       <script id="austin-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script id="austin-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
       <script id="austin-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
       <script id="austin-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
       <script id="austin-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
@@ -522,7 +492,7 @@ export default function AustinSeoPage() {
                   <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                     <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
                   </svg>
-                  <span>No-Contract Austin SEO Engineering</span>
+                  <span>Austin SEO with clear scope and terms</span>
                 </div>
 
                 <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
@@ -530,18 +500,18 @@ export default function AustinSeoPage() {
                 </h1>
 
                 <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 24px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
-                  Win the Google 3-Pack Map results, capture high-intent Central Texas commercial queries, and earn citations across AI answer engines. No long-term contracts. Talk directly with senior technical software engineers.
+                  Help Austin customers find your business, understand your services, and get in touch. We improve your Google Business Profile, service pages, and technical SEO, with direct access to the team doing the work.
                 </p>
 
                 {/* Answer-First Brief */}
                 <div style={{ background: '#F6F6F9', borderLeft: '3px solid #FF5622', padding: '14px 18px', borderRadius: '0 12px 12px 0', marginBottom: '28px', maxWidth: '52ch' }}>
                   <p style={{ fontSize: '13.5px', color: '#141414', lineHeight: 1.55, margin: 0, fontWeight: 500 }}>
-                    <strong style={{ color: '#FF5622' }}>Executive Brief:</strong> FactoryJet delivers senior engineering-led Austin local SEO services: Google Business Profile optimization, multi-radius geo-grid proximity expansion, 100% NAP citation synchronization across major aggregators, structured LocalBusiness Schema.org graphs, and high-intent local conversion engineering across Travis County with transparent call tracking and zero locked monthly retainers.
+                    <strong style={{ color: '#FF5622' }}>Considering no-contract SEO?</strong> Compare the work included, the notice period, and who owns your accounts. We put the scope, reporting, and engagement terms in writing before work starts, so you can decide what fits your business.
                   </p>
                 </div>
 
                 <div className="rv-actions">
-                  <ModalCTAButton label="Claim Free Austin SEO Audit" region="us" btnVariant="primary-dark" />
+                  <ModalCTAButton label="Get my free Austin SEO audit" region="us" btnVariant="primary-dark" modalVariant="seo" />
                   <a href="#austin-districts" className="rv-btn-secondary">
                     <div className="rv-video-circle">
                       <svg width="14" height="16" viewBox="0 0 14 16" fill="#141414">
@@ -583,7 +553,7 @@ export default function AustinSeoPage() {
                 How Central Texas Businesses Win the Google Map Pack and AI Search
               </h2>
               <p style={{ fontSize: '14.5px', color: '#494852', lineHeight: 1.6, margin: 0 }}>
-                Over 44% of local commercial clicks in Austin go directly to the top 3 Google Business Profile listings. Ranking requires four verified technical assets: selecting the primary Google Business Profile category with highest transaction intent, maintaining synchronized NAP citations across Tier 1 Texas directories, structuring LocalBusiness JSON-LD markup on sub-second Next.js pages, and deploying automated post-service review collection workflows.
+                Local SEO helps nearby customers find and evaluate your business. We check your Google Business Profile, service pages, business listings, and inquiry paths. The audit identifies what is missing or inconsistent, then prioritizes fixes around the services you sell and the areas you genuinely serve.
               </p>
             </div>
           </div>
@@ -643,7 +613,7 @@ export default function AustinSeoPage() {
                 </h2>
 
                 <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
-                  With over 42,000 active businesses competing across Travis County, standard generic agency tactics fail. We combine sub-second Core Web Vitals speed optimization, Google Business Profile dominance, and localized corridor authority to capture real commercial leads.
+                  Your website needs to explain what you do and make it easy to contact you. We connect accurate business listings with useful service content, technical fixes, and inquiry tracking, so each monthly review covers both implementation and customer response.
                 </p>
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
@@ -844,9 +814,21 @@ export default function AustinSeoPage() {
         </section>
 
         {/* ── 07. ARCHITECTURE BLUEPRINT ── */}
-        <section className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: '48px 0 16px' }}>
+        <section className="pp-sec tint" aria-labelledby="austin-client-proof">
           <div className="pp-wrap">
-            <RegionalBenchmarkCard city="Austin" vertical="seo" />
+            <p className="pp-mlabel">Website and ongoing search work</p>
+            <h2 id="austin-client-proof">Helping a specialist service business explain what it does</h2>
+            <p className="pp-lead" style={{ maxWidth: '68ch', marginTop: '16px' }}>
+              FactoryJet built Yadav Entrance Automation’s website and continues its SEO and AI search work. The content explains the entrance systems the business installs and services, so buyers can understand their options before getting in touch.
+            </p>
+            <p className="pp-lead" style={{ maxWidth: '68ch', marginTop: '12px', fontSize: '15px' }}>
+              This is an example of our implementation work for an Indian client. Your Austin audit starts with your services, your customers, and your local competitors.
+            </p>
+            <div className="rv-actions" style={{ marginTop: '24px' }}>
+              <Link href="/case-studies/yadav-entrance-automation-website-seo" className="rv-btn-secondary">Read the client project →</Link>
+              <ModalCTAButton label="Request my Austin SEO audit" region="us" btnVariant="primary-dark" modalVariant="seo" />
+            </div>
+            <p style={{ marginTop: '20px' }}><Link href="/pricing#seo" className="rv-btn-secondary">How SEO scope and fees work →</Link></p>
           </div>
         </section>
 
@@ -939,7 +921,7 @@ export default function AustinSeoPage() {
                 Evaluating Austin SEO Companies: What to Ask
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                Compare engineering-led execution against traditional marketing agency retainers before you sign:
+                Use these questions to compare implementation, reporting, and ownership before you sign:
               </p>
             </div>
 
@@ -947,7 +929,7 @@ export default function AustinSeoPage() {
               <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1.4fr 1.4fr', background: '#141414', color: '#FFFFFF', padding: '16px 24px', fontWeight: 700, fontSize: '13.5px' }}>
                 <div>Evaluation Factor</div>
                 <div style={{ color: '#FF5622' }}>FactoryJet Engineering Model</div>
-                <div style={{ color: '#A0A0B0' }}>Traditional Marketing Agencies</div>
+                <div style={{ color: '#A0A0B0' }}>Questions to ask any agency</div>
               </div>
 
               {EVALUATION_CRITERIA.map((crit, cIdx) => (
