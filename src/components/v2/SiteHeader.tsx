@@ -84,7 +84,8 @@ const US_AI_AGENTS_NAV = [
   { icon: Wrench,        label: 'AI Receptionist',      href: '/services/ai-receptionist',                    desc: '24/7 AI phone answering' },
   { icon: Headphones,    label: 'AI Customer Support',    href: '/services/ai-customer-support-agents',         desc: 'Deflect 70%+ of support tickets' },
   { icon: TrendingUp,    label: 'AI SDR & BDR Agents',    href: '/services/ai-sdr',                 desc: 'Inbound qualification & CRM booking' },
-  { icon: GitBranch,     label: 'Workflow Automation',    href: '/services/ai-agent-development/ai-workflow-automation', desc: 'Connect ERP, CRM & databases' },
+  { icon: RefreshCw,     label: 'AI Agent Monitoring',    href: '/services/ai-agent-monitoring',    desc: 'Support, evals & model upgrades' },
+  { icon: GitBranch,     label: 'Workflow Automation',    href: '/services/ai-workflow-automation', desc: 'Connect ERP, CRM & databases' },
   { icon: Mic,           label: 'Voice AI Agents',        href: '/services/ai-agent-development/ai-voice-agent',         desc: 'Inbound & outbound voice calling' },
   { icon: Calculator,    label: 'AI Agent ROI Calculator',href: '/tools/ai-agent-roi-calculator',               desc: 'Calculate headcount & payback' },
 ] as const;
@@ -95,6 +96,7 @@ const US_SOLUTIONS_CORE = [
   { icon: Layers,        label: 'Omnichannel Commerce',     href: '/omnichannel-commerce',           desc: 'One catalog, inventory & order engine' },
   { icon: Store,         label: 'B2B E-Commerce',           href: '/b2b-ecommerce',                  desc: 'Portals, tiered pricing, net terms' },
   { icon: ShoppingCart,  label: 'E-Commerce Development',   href: '/services/ecommerce-development',  desc: 'End-to-end online stores' },
+  { icon: Wrench,        label: 'Store Support & Maintenance', href: '/services/shopify-maintenance-services', desc: 'Retainers with published response times' },
   { icon: Search,        label: 'E-Commerce Consulting',    href: '/ecommerce-consulting',           desc: 'Platform, migration & scope' },
 ] as const;
 
@@ -130,7 +132,7 @@ const US_PLATFORMS = [
   { icon: Layers,       label: 'BigCommerce',              href: '/bigcommerce-development',          desc: 'Mid-market B2B value' },
   { icon: Layers,       label: 'BigCommerce B2B Edition',  href: '/services/bigcommerce-b2b',          desc: 'Enterprise RFQ & PunchOut' },
   { icon: Code,         label: 'Headless / composable',    href: '/headless-commerce',               desc: 'Custom front end, any backend' },
-  { icon: Zap,          label: 'Commerceflo',              href: '/commerceflo',                     desc: 'AI operator: audits & fixes your store' },
+  { icon: Zap,          label: 'Commerceflo',              href: '/commerceflo',                     desc: 'Our AI commerce operator, early access' },
 ] as const;
 
 // Replatforming (US) — migration hub + its spokes
@@ -258,7 +260,7 @@ const GB_PLATFORMS = [
   { icon: FileCode,     label: 'WooCommerce',              href: '/services/woocommerce-development', desc: 'WordPress commerce' },
   { icon: Layers,       label: 'BigCommerce',              href: '/bigcommerce-development',          desc: 'Mid-market B2B value' },
   { icon: Code,         label: 'Headless / composable',    href: '/headless-commerce',               desc: 'Custom front end, any backend' },
-  { icon: Zap,          label: 'Commerceflo',              href: '/commerceflo',                     desc: 'AI operator: audits & fixes your store' },
+  { icon: Zap,          label: 'Commerceflo',              href: '/commerceflo',                     desc: 'Our AI commerce operator, early access' },
 ] as const;
 
 const GB_SUPPORT_SERVICES = [
@@ -323,12 +325,12 @@ const IN_AI_HUB_HREF = '/services/ai-agent-development';
 
 // All 7 India AI agents — used in desktop mega grid + mobile drawer
 const IN_AI_AGENTS = [
-  { icon: MessageSquare, label: 'AI Chatbot',             href: '/services/ai-agent-development/ai-chatbot',             desc: 'Smart 24/7 support' },
-  { icon: TrendingUp,    label: 'AI Sales Agent',         href: '/services/ai-agent-development/ai-sales-agent',         desc: 'Automated outreach' },
+  { icon: MessageSquare, label: 'AI Chatbot',             href: '/services/ai-chatbot-development',                      desc: 'Smart 24/7 support' },
+  { icon: TrendingUp,    label: 'AI SDR Agent',           href: '/services/ai-sdr',                                      desc: 'Automated outreach' },
   { icon: Megaphone,     label: 'AI Marketing Agent',     href: '/services/ai-agent-development/ai-marketing-agent',     desc: 'Automate campaigns' },
   { icon: Mic,           label: 'AI Voice Agent',         href: '/services/ai-agent-development/ai-voice-agent',         desc: 'Voice-based AI calls' },
-  { icon: GitBranch,     label: 'AI Workflow Automation', href: '/services/ai-agent-development/ai-workflow-automation', desc: 'End-to-end automation' },
-  { icon: Headphones,    label: 'AI Customer Support',    href: '/services/ai-agent-development/ai-customer-support',    desc: 'Resolve tickets faster' },
+  { icon: GitBranch,     label: 'AI Workflow Automation', href: '/services/ai-workflow-automation',                      desc: 'End-to-end automation' },
+  { icon: Headphones,    label: 'AI Customer Support',    href: '/services/ai-customer-support-agents',                  desc: 'Resolve tickets faster' },
   { icon: CalendarClock, label: 'AI Scheduling Agent',    href: '/services/ai-agent-development/ai-scheduling-agent',    desc: 'Smart bookings & calendar' },
 ] as const;
 
@@ -393,8 +395,8 @@ const UAE_WEB_SERVICES = [
 ] as const;
 
 const UAE_AI_SERVICES = [
-  { icon: MessageSquare, label: 'AI Chatbot',    href: '/services/ai-agent-development/ai-chatbot',             desc: 'Smart customer support' },
-  { icon: Zap,           label: 'AI Automation', href: '/services/ai-agent-development/ai-workflow-automation', desc: 'Automate repetitive work' },
+  { icon: MessageSquare, label: 'AI Chatbot',    href: '/services/ai-chatbot-development',                      desc: 'Smart customer support' },
+  { icon: Zap,           label: 'AI Workflow Automation', href: '/services/ai-workflow-automation',             desc: 'Automate repetitive work' },
   { icon: Bot,           label: 'AI Voice Agent',href: '/services/ai-agent-development/ai-voice-agent',         desc: 'Voice-based AI assistants' },
 ] as const;
 

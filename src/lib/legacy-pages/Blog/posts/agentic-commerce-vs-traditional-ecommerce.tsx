@@ -782,11 +782,11 @@ export const post: BlogPost = {
         , so agent readiness for us is product data, schema, feeds, bot rules and checkout paths in
         your live platform.{' '}
         <a href="/commerceflo" className="text-[#B23E13] underline">
-          Commerceflo
+          Commerceflo by FactoryJet
         </a>{' '}
-        is our AI commerce operator, which audits a storefront, ranks what is holding growth back, and
-        applies fixes on approval, and a large share of what it finds is exactly the data hygiene this
-        article is about.
+        is our AI commerce operator: its agents flag problems such as prices that differ between channels,
+        stock at risk of running out and gaps in listings, then make the fix once you approve it. Listing
+        gaps and price mismatches are the same data hygiene problems this article is about.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4 text-gray-900">

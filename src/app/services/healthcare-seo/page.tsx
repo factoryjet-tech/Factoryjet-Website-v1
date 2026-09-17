@@ -648,7 +648,7 @@ const RELATED_SERVICES: ReadonlyArray<{ href: string; title: string; body: strin
     body: 'A technical and content audit when you need the diagnosis before the plan.',
   },
   {
-    href: '/services/ai-agents-for-healthcare',
+    href: '/services/healthcare-ai-agents',
     title: 'AI agents for healthcare',
     body: 'Scheduling, intake and front office work handled by AI agents, with a clear clinical boundary.',
   },
@@ -954,7 +954,7 @@ function AnswerFirst() {
             business-to-business (B2B) search: integration, security and proof pages that a hospital buying
             committee and an AI assistant can both trust. Dentists have a dedicated <InternalLink href="/services/dental-seo">dental SEO</InternalLink>{' '}
             service, and front desk automation lives under{' '}
-            <InternalLink href="/services/ai-agents-for-healthcare">AI agents for healthcare</InternalLink>.
+            <InternalLink href="/services/healthcare-ai-agents">AI agents for healthcare</InternalLink>.
           </p>
         </div>
       </div>

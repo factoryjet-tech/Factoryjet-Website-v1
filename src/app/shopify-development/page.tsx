@@ -1137,7 +1137,7 @@ export default function ShopifyDevelopmentPage() {
               industry: 'Interior Décor · Shopify',
               title: 'Belle Maison | Mumbai',
               description:
-                'Belle Maison is a Mumbai wholesale distributor of artificial plants, flowers, flower runners, home décor, and LED lighting. FactoryJet built their B2B quote-to-cash store on Commerceflo, with trade pricing tiers, quote-to-order workflows, and account-based ordering.',
+                'Belle Maison is a Mumbai wholesale distributor of artificial plants, flowers, flower runners, home décor, and LED lighting. Their B2B quote-to-cash store runs on Commerceflo by FactoryJet and was built by our team with trade pricing tiers, quote-to-order workflows, and account-based ordering.',
               imageSrc: '/images/portfolio/belle-maison.webp',
               stat1: 'Lighthouse 95+',
               stat2: 'Razorpay + WhatsApp',

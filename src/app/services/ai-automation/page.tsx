@@ -173,7 +173,7 @@ const AUTOMATION_TYPES = [
       'Intake submissions trigger automated data parsing. AI extracts patient and insurance data securely. The workflow checks eligibility and updates schedules in Epic or athenahealth with full audit logs.',
     example: 'HIPAA compliant administrative automation for medical practices and specialty clinics.',
     linkLabel: 'See healthcare AI agents',
-    linkHref: '/services/ai-agents-for-healthcare',
+    linkHref: '/services/healthcare-ai-agents',
   },
   {
     name: 'Real Estate Lead & Tour Automation',

@@ -4,7 +4,7 @@
     {
       "name": "explore-services",
       "type": "skill-md",
-      "description": "Understand what FactoryJet does — e-commerce design, development, implementation and scaling on Shopify, Shopify Plus, Magento, WooCommerce, BigCommerce and Commerceflo, plus web design, AI agent development and AI SEO. Use when a user asks who FactoryJet is or which commerce/AI service fits their need.",
+      "description": "Understand what FactoryJet does: e-commerce design, development, implementation and scaling on Shopify, Shopify Plus, Magento, WooCommerce, BigCommerce and Commerceflo by FactoryJet (its own AI commerce operator), plus web design, AI agent development and AI SEO. Use when a user asks who FactoryJet is or which commerce/AI service fits their need.",
       "url": "/.well-known/agent-skills/explore-services/SKILL.md"
     },
     {

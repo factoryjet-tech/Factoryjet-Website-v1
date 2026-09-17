@@ -107,7 +107,7 @@ const CATEGORIES: ReadonlyArray<Category> = [
       { slug: 'replatforming', term: 'Replatforming', def: `Replatforming, or migration, is moving a store from one commerce platform to another, transferring catalog, customers, orders, content, and URLs while preserving SEO and minimizing downtime.` },
       { slug: 'aov', term: 'Average order value (AOV)', def: `Average order value (AOV) is the average amount a customer spends per order, calculated as total revenue divided by number of orders. Raising AOV through bundling, upsells, and free-shipping thresholds is a common growth lever.` },
       { slug: 'cro', term: 'Conversion rate optimization (CRO)', def: `Conversion rate optimization (CRO) is the practice of increasing the share of visitors who take a desired action, such as buying or submitting a lead, by testing and improving design, copy, and flow.` },
-      { slug: 'commerce-ai-operator', term: 'Commerce AI operator', def: `A commerce AI operator is software that does the operating work of running a store, not just reporting on it. It audits the storefront, ranks issues by revenue impact, and executes approved fixes across every channel. FactoryJet's Commerceflo is an example.` },
+      { slug: 'commerce-ai-operator', term: 'Commerce AI operator', def: `A commerce AI operator is software that does the operating work of running a store, not just reporting on it. It reads live data from your channels, flags problems such as low stock or a price gap between channels, proposes the fix, and carries it out once a person approves. Commerceflo by FactoryJet is an example.` },
     ],
   },
   {

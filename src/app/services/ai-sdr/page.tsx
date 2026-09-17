@@ -14,7 +14,7 @@ import '@/components/v2/PlatformPage.css';
 
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const CANONICAL_URL = 'https://factoryjet.com/services/ai-sdr';
-const PAGE_MODIFIED = '2026-09-07';
+const PAGE_MODIFIED = '2026-09-17';
 
 /** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
  *  <Breadcrumbs> component and the BreadcrumbList JSON-LD below, so the two
@@ -157,6 +157,19 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     answer:
       'Yes. For fast-moving B2B teams and local service businesses, the agent can text or WhatsApp a lead within seconds of a form being submitted. It follows TCPA rules, the US law that governs text message consent, at every step. Every text thread logs to the same CRM record as email and chat. So an Account Executive sees the whole conversation in one place, not scattered across different tools.',
   },
+  // Ported 2026-09-17 from the retired duplicate sales agent page (301 to this URL).
+  {
+    category: 'integrations',
+    question: 'What happens when a new lead is already a customer or has an open deal?',
+    answer:
+      'The agent checks your CRM before it sends anything. If the email address or company domain matches an existing customer or an open deal, it skips qualification and routes the message to the account owner instead. That keeps a current customer from getting a cold sales pitch, and it stops two reps from chasing the same account without knowing it.',
+  },
+  {
+    category: 'integrations',
+    question: 'How does the AI SDR handle several people from the same company?',
+    answer:
+      'It links them to one company record in your CRM, using the email domain and enrichment data. If a second person from an account the agent is already working fills out a form, the agent does not start a separate sequence. It alerts the assigned rep instead, because interest from several people at one company is worth a human look.',
+  },
   {
     category: 'cadences',
     question: 'How do you prevent AI sales emails from landing in spam folders?',
@@ -234,6 +247,19 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     question: 'Can the AI SDR re-engage deals that have gone quiet in HubSpot or Salesforce?',
     answer:
       "Yes. The agent watches the deal stage and last-activity date directly inside HubSpot or Salesforce. Once a deal passes your stale-deal threshold, it drafts a re-engagement email that references the earlier conversation. It logs the attempt on the CRM timeline. If there's still no reply after two tries, it flags the deal for an Account Executive to review.",
+  },
+  // Ported 2026-09-17 from the retired duplicate sales agent page (301 to this URL).
+  {
+    category: 'workflows',
+    question: 'Can the AI SDR brief the sales rep before a booked call?',
+    answer:
+      'Yes. Shortly before the meeting, the agent posts a short brief in Slack or on the CRM record. It covers who the person is, what their company does, the answers they gave during qualification, and any objections they raised. The rep starts the call with that context instead of repeating questions the lead has already answered.',
+  },
+  {
+    category: 'workflows',
+    question: 'Can a sales rep take over a conversation the AI SDR started?',
+    answer:
+      'Yes, at any point. When a rep replies in the thread, the agent detects the human reply, pauses its own follow-ups for that lead, and marks the rep as the owner in the CRM. The rep can also hand the lead back to the agent later for scheduling or follow-up. The agent and the rep never send on the same thread at the same time.',
   },
 ];
 
@@ -967,6 +993,77 @@ export default function AiSdrPage() {
             <p className="text-xs text-[#6E655F] text-center mt-6">
               Figures above show our own pricing model next to typical published vendor rates.
             </p>
+          </div>
+        </section>
+
+        {/* HONEST FIT CHECK
+            Ported 2026-09-17 from the retired duplicate sales agent page (301 to
+            this URL). CAN-SPAM and Gmail sender rules fetch-verified that day on
+            ftc.gov and support.google.com. */}
+        <section className="pp-section">
+          <div className="pp-container">
+            <div className="max-w-3xl mb-10">
+              <h2 className="pp-h2">When an AI SDR Is the Wrong Build</h2>
+              <p className="text-base text-[#46403B] mt-3 leading-relaxed">
+                We build AI SDRs, so read this knowing we have a stake in the answer. An agent helps when there are
+                enough real leads to work and each sale is worth a meeting. These three situations call for something
+                else first.
+              </p>
+            </div>
+
+            <ol className="grid grid-cols-1 md:grid-cols-3 gap-6 list-none p-0 m-0">
+              <li className="pp-card p-6 bg-white">
+                <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#F05A28] block mb-2">
+                  01
+                </span>
+                <h3 className="text-lg font-bold text-[#14110F] mb-2">You do not have enough inbound leads yet.</h3>
+                <p className="text-sm text-[#46403B] leading-relaxed">
+                  An AI SDR speeds up your response to leads you already get. It cannot create demand. If only a handful
+                  of inquiries arrive each month, put the budget into content, search, or paid campaigns first, then add
+                  the agent once there is a queue to work.
+                </p>
+              </li>
+              <li className="pp-card p-6 bg-white">
+                <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#F05A28] block mb-2">
+                  02
+                </span>
+                <h3 className="text-lg font-bold text-[#14110F] mb-2">Your deals are too small for a sales call.</h3>
+                <p className="text-sm text-[#46403B] leading-relaxed">
+                  If most customers buy a low-priced plan on their own, pushing them toward meetings adds friction. A
+                  clear self-serve signup and onboarding flow is often the better path.
+                </p>
+              </li>
+              <li className="pp-card p-6 bg-white">
+                <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#F05A28] block mb-2">
+                  03
+                </span>
+                <h3 className="text-lg font-bold text-[#14110F] mb-2">You want mass cold email to scraped contact lists.</h3>
+                <p className="text-sm text-[#46403B] leading-relaxed">
+                  We do not build that. The{' '}
+                  <a
+                    href="https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline hover:text-[#F05A28]"
+                  >
+                    CAN-SPAM Act
+                  </a>{' '}
+                  makes no exception for business-to-business email. It requires accurate headers, subject lines that
+                  match the message, a valid postal address, and opt-outs honored within 10 business days. Gmail also
+                  requires bulk senders to set up SPF, DKIM, and DMARC authentication, offer one-click unsubscribe, and
+                  keep reported spam rates below 0.3% (
+                  <a
+                    href="https://support.google.com/a/answer/81126"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline hover:text-[#F05A28]"
+                  >
+                    Gmail sender guidelines
+                  </a>
+                  ).
+                </p>
+              </li>
+            </ol>
           </div>
         </section>
 

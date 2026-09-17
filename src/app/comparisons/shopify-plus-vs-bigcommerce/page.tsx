@@ -98,7 +98,7 @@ const FAQ_ITEMS = [
     category: 'tco',
     question: 'How do Shopify Plus and BigCommerce Enterprise pricing models compare?',
     answer:
-      'Shopify Plus begins at $2,500/month on a 3-year term (or $2,300/month on 1-year) for stores generating up to $800,000 in monthly GMV, after which a 0.40% variable fee applies. BigCommerce Enterprise features custom tiered pricing starting around $1,500 to $2,500/month based on order volume, with zero additional transaction fees regardless of the payment gateway used.',
+      'In the US, Shopify Plus starts at $2,300 a month on a 3-year term or $2,500 a month on a 1-year term, and Shopify says more complex, higher-volume businesses may pay a variable platform fee based on revenue and business model instead. BigCommerce renamed its Enterprise plan to Performance on June 1, 2026 and lists it as custom pricing starting as low as $1,499 a month. Its Open Payment Provider Fee does not apply to Performance plans under contracted terms.',
   },
   {
     category: 'tco',
@@ -482,8 +482,28 @@ export default function ShopifyVsBigCommercePage() {
                 <tbody>
                   <tr className="me">
                     <td className="name">Base Enterprise Licensing Cost</td>
-                    <td>$2,500/mo (3-yr) or $2,300/mo (1-yr) + 0.40% over $800k/mo</td>
-                    <td>$1,500 to $3,000/mo tiered based on annual order volume</td>
+                    <td>
+                      $2,300/mo (3-yr) or $2,500/mo (1-yr); variable platform fee for higher-volume businesses, per{' '}
+                      <a
+                        href="https://help.shopify.com/en/manual/intro-to-shopify/pricing-plans/plans-features/shopify-plus-plan"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}
+                      >
+                        Shopify
+                      </a>
+                    </td>
+                    <td>
+                      Performance plan (renamed from Enterprise on June 1, 2026): custom pricing starting as low as $1,499/mo, per{' '}
+                      <a
+                        href="https://www.bigcommerce.com/dm/plan-pricing-updates-2026"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}
+                      >
+                        BigCommerce
+                      </a>
+                    </td>
                   </tr>
                   <tr>
                     <td className="name">Third-Party Payment Gateway Fee</td>

@@ -635,7 +635,11 @@ export default function BestEcommercePlatformsPage() {
             <h2 style={{ marginTop: '10px' }}>Top ecommerce platforms, side by side</h2>
             <p className="pp-lead" style={{ marginTop: '14px', maxWidth: '60ch' }}>
               This is a guide, not a verdict. The right ecommerce platform depends on your catalog, channels, B2B needs,
-              and budget. Scroll right on mobile.
+              and budget. Selling to trade accounts? Our{' '}
+              <a href="/blog/best-b2b-ecommerce-platform-manufacturers-distributors-2026" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
+                B2B platform comparison for manufacturers and distributors
+              </a>{' '}
+              adds OroCommerce, Sana Commerce and SAP Commerce Cloud. Scroll right on mobile.
             </p>
             <div style={{ overflowX: 'auto', marginTop: '28px' }}>
               <table className="pp-table" style={{ width: '100%', borderCollapse: 'collapse', fontSize: '14px', background: '#fff', border: '1px solid var(--pp-line)', borderRadius: '14px', overflow: 'hidden' }}>

@@ -1196,7 +1196,7 @@ export default function ChemicalPharmaceuticalAiAgentsPage() {
               </Link>
 
               <Link
-                href="/services/ai-agent-development/ai-workflow-automation"
+                href="/services/ai-workflow-automation"
                 className="p-6 rounded-xl bg-white border border-[#E7DED6] hover:border-[#F05A28] transition-colors group"
               >
                 <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">SPOKE 03.</div>

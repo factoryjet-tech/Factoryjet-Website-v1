@@ -423,7 +423,9 @@ export const post: BlogPost = {
         Model bill, plus monitoring, plus the human who reviews escalations, plus the maintenance
         when a vendor changes an API or your policy changes and the agent needs to know. Budget for
         the reviewer. An agent with nobody watching the escalation queue is an agent that quietly
-        stops working and nobody notices for six weeks.
+        stops working and nobody notices for six weeks. What that upkeep includes, and what drives
+        its monthly cost, is on our{' '}
+        <a href="/services/ai-agent-monitoring">AI agent monitoring and support</a> page.
       </p>
       <p>
         To run the payback math on your own numbers, use our{' '}
@@ -592,7 +594,7 @@ export const post: BlogPost = {
           AI customer support agent architecture
         </a>{' '}
         and the service is{' '}
-        <a href="/services/ai-agent-development/ai-customer-support">AI customer support agents</a>.
+        <a href="/services/ai-customer-support-agents">AI customer support agents</a>.
       </p>
       <p>
         <strong>Quote and RFQ handling.</strong> Reads an inbound RFQ, usually a PDF or an email
@@ -608,14 +610,14 @@ export const post: BlogPost = {
         schedule, and books the meeting straight into the calendar. Stops the moment a human
         replies. Detail in{' '}
         <a href="/blog/how-to-build-custom-ai-sdr-b2b-sales-2026">how to build a custom AI SDR</a>;
-        the service is <a href="/services/ai-agent-development/ai-sales-agent">AI sales agents</a>.
+        the service is <a href="/services/ai-sdr">AI SDR agents</a>.
       </p>
       <p>
         <strong>Back-office reconciliation.</strong> Matches purchase orders to invoices to
         receipts, flags the mismatches, and files the clean ones. Boring, unglamorous, and the one
         with the clearest payback, because you can count the hours it replaces. The plumbing under
         it is ordinary{' '}
-        <a href="/services/ai-agent-development/ai-workflow-automation">workflow automation</a> with
+        <a href="/services/ai-workflow-automation">workflow automation</a> with
         a judgment step in the middle.
       </p>
       <p>

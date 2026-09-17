@@ -40,11 +40,11 @@ export const post: BlogPost = {
           </li>
           <li className="flex items-start gap-2">
             <span className="text-[#F05A28] font-bold">&bull;</span>
-            <span><strong>NetSuite SuiteTalk REST Integration:</strong> Token-Based Authentication (TBA / OAuth 1.0a) with concurrency governance queues prevents 429 rate limits when synthesizing multi-line sales orders, inventory lot adjustments, and customer deposit records.</span>
+            <span><strong>NetSuite SuiteTalk REST Integration:</strong> OAuth 2.0 authentication and a request queue sized to the account concurrency limit prevent rejected calls (HTTP 429 from REST web services, HTTP 400 from RESTlets) when creating multi-line sales orders, inventory lot adjustments, and customer deposit records.</span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-[#F05A28] font-bold">&bull;</span>
-            <span><strong>SAP S/4HANA OData &amp; BAPI Connectors:</strong> Bi-directional synchronization leverages SAP Core Data Services (CDS) views and RFC / BAPI transaction wrappers with two-phase commit protocols for atomic production order releases and material master updates.</span>
+            <span><strong>SAP S/4HANA OData &amp; BAPI Connectors:</strong> Bi-directional synchronization uses SAP Core Data Services (CDS) views and RFC / BAPI calls with an explicit commit or rollback (BAPI_TRANSACTION_COMMIT / BAPI_TRANSACTION_ROLLBACK) for production order releases and material master updates.</span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-[#F05A28] font-bold">&bull;</span>
@@ -87,6 +87,14 @@ export const post: BlogPost = {
         Each major enterprise ERP architecture presents distinct authentication protocols, concurrency limits, transaction schemas, and error-handling mechanisms. Engineering a reliable AI agent requires deep alignment with each platform native API architecture.
       </p>
 
+      <p>
+        If you run Odoo or SAP Business One, or NetSuite at mid-market scale, our guide to{' '}
+        <Link href="/blog/ai-agents-erp-netsuite-odoo-sap-business-one-2026">
+          AI agents inside NetSuite, Odoo and SAP Business One
+        </Link>{' '}
+        covers the APIs, limits and approval patterns for those systems.
+      </p>
+
       <div className="not-prose my-8 overflow-x-auto rounded-2xl border border-[#E7DED6] bg-white shadow-sm">
         <table className="w-full text-left text-sm">
           <thead>
@@ -102,8 +110,8 @@ export const post: BlogPost = {
             <tr>
               <td className="p-4 sm:p-6 font-semibold text-[#14110F]">Oracle NetSuite</td>
               <td className="p-4 sm:p-6 text-[#46403B]">SuiteTalk REST Web Services &amp; SuiteScript 2.1 RESTlets</td>
-              <td className="p-4 sm:p-6 text-[#46403B]">Token-Based Auth (TBA OAuth 1.0a / OAuth 2.0 M2M)</td>
-              <td className="p-4 sm:p-6 text-[#46403B]">Account-level concurrent thread governance (5 to 15 threads)</td>
+              <td className="p-4 sm:p-6 text-[#46403B]">OAuth 2.0 (client credentials for machine-to-machine); no new token-based authentication (TBA) integrations from release 2027.1</td>
+              <td className="p-4 sm:p-6 text-[#46403B]">One account-wide limit shared by web services and RESTlets: 5, 15 or 20 by service tier, plus 10 per SuiteCloud Plus license</td>
               <td className="p-4 sm:p-6 text-[#46403B]">Single-record atomic commits with SuiteScript rollback hooks</td>
             </tr>
             <tr>
@@ -111,7 +119,7 @@ export const post: BlogPost = {
               <td className="p-4 sm:p-6 text-[#46403B]">OData v2/v4 APIs &amp; SAP RFC / BAPI Business Functions</td>
               <td className="p-4 sm:p-6 text-[#46403B]">OAuth 2.0 SAML Bearer / X.509 Mutual TLS Client Certificates</td>
               <td className="p-4 sm:p-6 text-[#46403B]">SAP Gateway queue throttling &amp; work process load balancing</td>
-              <td className="p-4 sm:p-6 text-[#46403B]">Two-phase commit (BAPI_TRANSACTION_COMMIT / ROLLBACK)</td>
+              <td className="p-4 sm:p-6 text-[#46403B]">Explicit commit or rollback per unit of work (BAPI_TRANSACTION_COMMIT / ROLLBACK)</td>
             </tr>
             <tr>
               <td className="p-4 sm:p-6 font-semibold text-[#14110F]">Epicor Kinetic</td>
@@ -133,9 +141,21 @@ export const post: BlogPost = {
         When building AI agents for Oracle NetSuite, architects face two primary integration avenues: standard SuiteTalk REST web services and custom SuiteScript 2.1 RESTlets. While SuiteTalk REST provides standardized CRUD access to standard NetSuite records (such as Sales Orders, Customers, and Purchase Orders), custom RESTlets are required when orchestrating complex multi-record workflows that must execute within a single NetSuite governance context.
       </p>
 
+      <p>
+        Build new NetSuite agents on OAuth 2.0.{' '}
+        <a
+          href="https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/article_2104046421.html"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          NetSuite&apos;s SOAP removal FAQ
+        </a>{' '}
+        says new integrations should use REST web services with OAuth 2.0 starting with the 2026.1 release, and from 2027.1 you can&apos;t create new integrations that use token-based authentication (TBA). The TBA signing pattern below only applies to maintaining an existing integration until it moves to the OAuth 2.0 client credentials flow.
+      </p>
+
       <div className="not-prose my-8 p-6 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6]">
         <div className="font-mono text-xs font-bold text-[#F05A28] uppercase mb-2">
-          // CODE PATTERN: PYTHON AGENT RESTLET CALL WITH OAUTH 1.0A TBA
+          // LEGACY PATTERN: OAUTH 1.0A TBA HEADER FOR AN EXISTING RESTLET INTEGRATION
         </div>
         <pre className="p-4 rounded-xl bg-[#14110F] text-[#FAFAF7] text-xs font-mono overflow-x-auto">
 {`import hmac
@@ -188,7 +208,7 @@ def generate_netsuite_tba_header(
       </div>
 
       <p>
-        The AI agent uses this authentication layer to submit structured purchase orders parsed from customer emails. Before inserting records into NetSuite, the agent validates:
+        The AI agent uses its authentication layer to submit structured purchase orders parsed from customer emails. Before inserting records into NetSuite, the agent validates:
       </p>
       <ul>
         <li><strong>Entity Resolution:</strong> Matches the customer tax ID and domain name to active NetSuite entity IDs.</li>
@@ -249,7 +269,7 @@ def generate_netsuite_tba_header(
           },
           {
             q: 'How do you handle rate limits and concurrency locks in NetSuite SuiteTalk?',
-            a: 'We build an asynchronous Celery and Redis queuing layer that throttles outbound API calls to match your NetSuite account allocated concurrent web service threads. The queue manages exponential backoff retries when 429 concurrency limit errors occur.',
+            a: 'We build an asynchronous Celery and Redis queuing layer that throttles outbound API calls to stay within your NetSuite account concurrency limit, which web services and RESTlets share. The queue retries with exponential backoff when NetSuite rejects a request for exceeding that limit: HTTP 429 from REST web services, or HTTP 400 with SSS_REQUEST_LIMIT_EXCEEDED from RESTlets.',
           },
           {
             q: 'Can the AI agent update custom fields (Custom Entity Fields, Custom Segmentations) in NetSuite and SAP?',
@@ -261,7 +281,7 @@ def generate_netsuite_tba_header(
           },
           {
             q: 'Is customer personally identifiable information (PII) and financial ledger data kept secure?',
-            a: 'Yes. We deploy enterprise AI agents within single-tenant private VPCs or on-premise enclaves with strict Zero Data Retention agreements. Financial ledger balances, customer credit details, and vendor pricing are never transmitted to public foundation models.',
+            a: 'Yes, when the deployment is designed for it. We can deploy enterprise AI agents in a private cloud network (VPC) or on-premise, use model providers under zero data retention terms where the provider approves them, and keep ledger balances, customer credit details and vendor pricing out of model prompts unless a workflow needs them.',
           },
           {
             q: 'Can the AI agent trigger automated inventory reorders when stock levels breach reorder points?',
@@ -289,7 +309,7 @@ def generate_netsuite_tba_header(
           },
           {
             q: 'How do you test and validate ERP AI agents before pushing to live production?',
-            a: 'We conduct rigorous simulation testing inside your dedicated ERP sandbox environment (e.g. NetSuite Sandbox, SAP Quality / QAS system, Epicor Pilot database), running hundreds of synthetic and historical transaction batches to certify 100 percent accounting accuracy and rollback stability.',
+            a: 'We conduct rigorous simulation testing inside your dedicated ERP sandbox environment (e.g. NetSuite Sandbox, SAP Quality / QAS system, Epicor Pilot database), running synthetic and historical transaction batches to check accounting accuracy and rollback behavior before go-live.',
           },
         ].map((item, idx) => (
           <div
@@ -315,7 +335,7 @@ def generate_netsuite_tba_header(
       </h2>
 
       <p>
-        Building autonomous AI agents that interact reliably with enterprise ERPs requires deep systems architecture expertise, strict transactional governance, and complete data sovereignty. By replacing manual data entry with deterministic, schema-validated AI pipelines, enterprise organizations eliminate order entry delays, reduce inventory carrying costs, and accelerate cash flow cycles.
+        Building autonomous AI agents that interact reliably with enterprise ERPs requires deep systems architecture expertise, strict transactional governance, and complete data sovereignty. By replacing manual data entry with deterministic, schema-validated AI pipelines, enterprise organizations can cut order entry delays, reduce inventory carrying costs, and speed up cash flow cycles.
       </p>
 
       <p>

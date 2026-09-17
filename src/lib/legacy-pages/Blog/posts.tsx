@@ -118,10 +118,17 @@ import { post as magentoToShopifyPlusMigrationChecklist2026Post } from './posts/
 import { post as multiAgentWorkflowsLanggraphN8nEnterpriseErp2026Post } from './posts/multi-agent-workflows-langgraph-n8n-enterprise-erp-2026';
 import { post as tiktokShopAmazonShopifyPlusMultiChannelInventorySync2026Post } from './posts/tiktok-shop-amazon-shopify-plus-multi-channel-inventory-sync-2026';
 import { post as tiktokShopFeesAndAgencyCost2026Post } from './posts/tiktok-shop-fees-and-agency-cost-2026';
+import { post as aiAgentsErpNetsuiteOdooSapBusinessOne2026Post } from './posts/ai-agents-erp-netsuite-odoo-sap-business-one-2026';
+import { post as bestAiAgentsForEcommerce2026Post } from './posts/best-ai-agents-for-ecommerce-2026';
+import { post as bestB2bEcommercePlatformManufacturersDistributors2026Post } from './posts/best-b2b-ecommerce-platform-manufacturers-distributors-2026';
 import { post as ecommerceWebsiteCost2026Post } from './posts/ecommerce-website-cost-2026';
 import { post as localSeoCost2026Post } from './posts/local-seo-cost-2026';
 
 export const POSTS: BlogPost[] = [
+  // --- WAVE 1 ORGANIC LEADS (2026-09-17) ---
+  bestAiAgentsForEcommerce2026Post,
+  bestB2bEcommercePlatformManufacturersDistributors2026Post,
+  aiAgentsErpNetsuiteOdooSapBusinessOne2026Post,
   tiktokShopFeesAndAgencyCost2026Post,
   ecommerceWebsiteCost2026Post,
   localSeoCost2026Post,

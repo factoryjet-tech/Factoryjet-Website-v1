@@ -15,7 +15,7 @@ const CANONICAL_URL = 'https://factoryjet.com/services/healthcare-ai-agents';
 const PAGE_TITLE = 'Healthcare AI Agents & Medical Receptionists | FactoryJet';
 const PAGE_DESC =
   'Custom HIPAA-compliant healthcare AI agents and medical voice receptionists for US practices, dental clinics, and hospitals. Real EHR sync. Get an audit.';
-const PAGE_MODIFIED = '2026-09-03';
+const PAGE_MODIFIED = '2026-09-17';
 
 /** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
  *  <Breadcrumbs> component and the BreadcrumbList JSON-LD below, so the two
@@ -81,7 +81,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
   {
     category: 'hipaa',
     question: 'Is your healthcare AI voice receptionist fully HIPAA compliant?',
-    answer: 'Yes. Every healthcare AI agent we build operates under a direct Business Associate Agreement (BAA). That is a HIPAA contract that makes us legally responsible for the data we touch. Voice audio and patient transcripts are encrypted in transit with TLS 1.3. Protected health information (PHI) is encrypted at rest with AES-256. We run zero data retention on every speech-to-text and LLM endpoint. Patient data is never cached, and never used to train a public model.',
+    answer: 'It is built to support your HIPAA compliance, which rests on contracts and controls rather than a label. Every healthcare AI agent we build operates under a direct Business Associate Agreement (BAA). That is a HIPAA contract that makes us legally responsible for the data we touch. Voice audio and patient transcripts are encrypted in transit with TLS 1.3. Protected health information (PHI) is encrypted at rest with AES-256. We run zero data retention on every speech-to-text and LLM endpoint. Patient data is never cached, and never used to train a public model.',
   },
   {
     category: 'hipaa',
@@ -182,6 +182,35 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'hipaa',
     question: 'What happens to call recordings and transcripts after the call ends?',
     answer: 'Under our standard zero-retention setup, raw audio is not stored after the call ends. Only the structured appointment or message data gets written to your EHR. Your clinic may want call recordings kept for QA or compliance. We configure encrypted, access-logged storage inside your own BAA-covered cloud. It is never a third-party archive outside your control.',
+  },
+  // Ported 2026-09-17 from the retired duplicate healthcare page (301 to this
+  // URL). Legal points fetch-verified that day on eCFR (45 CFR 160.102 and
+  // 160.103, title 45 current as of 9/15/2026) and on the CMS page for rule
+  // CMS-0057-F. None of these answers is legal advice.
+  {
+    category: 'hipaa',
+    question: 'Is ChatGPT HIPAA compliant?',
+    answer: 'No AI product is HIPAA compliant on its label alone. HIPAA rules apply to health plans, clearinghouses, providers that handle standard transactions electronically, and the business associates that work with patient data for them. So ask whether the vendor will sign a business associate agreement covering the exact product and plan you would use. If it will not, keep patient information out of that tool.',
+  },
+  {
+    category: 'ehr',
+    question: 'Can an AI agent help with prior authorization?',
+    answer: 'It can take the paperwork side: gathering the documents a payer asks for, tracking the request, and flagging a response that is running late. Clinical staff still write the medical justification. The process is moving to software as well. Under CMS rule CMS-0057-F, impacted payers had to implement certain provisions by January 1, 2026, with most API requirements due by January 1, 2027.',
+  },
+  {
+    category: 'deployment',
+    question: 'Who is responsible if the AI agent makes a mistake?',
+    answer: 'Both sides carry duties. Your practice stays accountable for patient care and for its own HIPAA compliance. A vendor acting as a business associate must follow its agreement and the HIPAA rules that apply to business associates. Good design limits what a mistake can do: hard limits on what the agent can touch, clinical questions sent to your staff, and a log of every action. This is not legal advice.',
+  },
+  {
+    category: 'deployment',
+    question: 'Will an AI receptionist replace our front desk staff?',
+    answer: 'It changes their day more than it removes them. The agent takes after-hours calls, routine booking, and the questions staff answer many times a day. Your team keeps the conversations that need a person, such as an upset patient, a billing dispute, or a complicated insurance problem. Staff also review what the agent escalates, so their time shifts toward the harder cases.',
+  },
+  {
+    category: 'deployment',
+    question: 'What are the biggest risks of using AI agents in a medical practice?',
+    answer: 'Four stand out. The agent gives a confident but wrong answer. Patient data reaches a tool that has no business associate agreement. The agent drifts away from the process your staff think it follows. And nobody reads the logs, so problems go unnoticed. Each one has a matching safeguard: answers grounded in your own rules, a signed agreement at every step, regular testing, and a named person who reviews escalations.',
   },
 ];
 
@@ -756,9 +785,9 @@ export default function HealthcareAiAgentsPage() {
                   </div>
                   <h3 className="text-2xl sm:text-3xl font-extrabold text-[#14110F] mb-4">After-Hours New Patient Capture &amp; Treatment Plan Follow-Ups.</h3>
                   <p className="text-sm sm:text-base text-[#46403B] leading-relaxed mb-6">
-                    Independent practitioners often run with just one front-desk coordinator, who cannot answer the phone while checking in a patient. Our voice agent answers every after-hours call instead. It explains initial consultation fees and collects injury history. It also books the first adjustment into ChiroTouch or Jane App, and texts the intake paperwork automatically. The same after-hours capture pattern shows up in home-service trades. see our{' '}
+                    Independent practitioners often run with just one front-desk coordinator, who cannot answer the phone while checking in a patient. Our voice agent answers every after-hours call instead. It explains initial consultation fees and collects injury history. It also books the first adjustment into ChiroTouch or Jane App, and texts the intake paperwork automatically. The same after-hours capture pattern shows up in home-service trades. See our{' '}
                     <Link href="/services/ai-receptionist" className="underline hover:text-[#F05A28]">
-                      contractor AI receptionist
+                      AI receptionist
                     </Link>{' '}
                     page for that version.
                   </p>
@@ -779,7 +808,7 @@ export default function HealthcareAiAgentsPage() {
                   </div>
                   <h3 className="text-2xl sm:text-3xl font-extrabold text-[#14110F] mb-4">Pre-Op Instructions &amp; Urgent Care Wait-Time Guidance.</h3>
                   <p className="text-sm sm:text-base text-[#46403B] leading-relaxed mb-6">
-                    Ambulatory surgery centers (ASCs) and urgent care clinics get heavy call volume from anxious patients. Most calls ask about fasting rules, arrival times, or walk-in wait times. Our voice agent gives clear, rule-based pre-op fasting instructions, confirms transportation, and updates patients on the current wait. If a caller sounds non-compliant, it flags the case directly to a surgical coordinator. The same rule-based approach carries over to other regulated settings. our{' '}
+                    Ambulatory surgery centers (ASCs) and urgent care clinics get heavy call volume from anxious patients. Most calls ask about fasting rules, arrival times, or walk-in wait times. Our voice agent gives clear, rule-based pre-op fasting instructions, confirms transportation, and updates patients on the current wait. If a caller sounds non-compliant, it flags the case directly to a surgical coordinator. The same rule-based approach carries over to other regulated settings. Our{' '}
                     <Link href="/services/chemical-pharmaceutical-ai-agents" className="underline hover:text-[#F05A28]">
                       chemical and pharmaceutical AI agents
                     </Link>{' '}
@@ -863,7 +892,7 @@ export default function HealthcareAiAgentsPage() {
         </section>
 
         <MidPageCTA
-          headline="Not sure which calls an agent should handle.?"
+          headline="Not sure which calls an agent should handle?"
           sub="Tell us your call volume and EHR system. We'll map exactly what the agent answers, books, and escalates to your staff."
           label="Get a healthcare AI audit"
         />
@@ -1081,6 +1110,116 @@ export default function HealthcareAiAgentsPage() {
                 </tbody>
               </table>
             </div>
+          </div>
+        </section>
+
+        {/* VENDOR DUE DILIGENCE
+            Ported 2026-09-17 from the retired duplicate healthcare page (301 to
+            this URL). Each rule cited below was fetch-verified that day on eCFR
+            (title 45, current as of 9/15/2026). Not legal advice. */}
+        <section className="py-20 bg-white border-b border-[#E7DED6]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl mb-12">
+              <div className="font-mono text-xs text-[#F05A28] font-bold uppercase tracking-wider mb-2">
+                {'// VENDOR DUE DILIGENCE'}
+              </div>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-4">Six Questions to Ask Any Healthcare AI Vendor.</h2>
+              <p className="text-lg text-[#46403B]">
+                A vendor&apos;s HIPAA claim is only as strong as the contract and the controls behind it. These are the
+                questions we expect a practice to ask us, each with the regulation it comes from. None of this is legal
+                advice. Your privacy or compliance officer makes the final call.
+              </p>
+            </div>
+
+            <ol className="grid grid-cols-1 md:grid-cols-2 gap-8 list-none">
+              <li className="p-8 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6]">
+                <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">QUESTION 01</div>
+                <h3 className="text-lg font-bold text-[#14110F] mb-2">Will you sign a business associate agreement (BAA) before any patient data moves?</h3>
+                <p className="text-sm text-[#46403B] leading-relaxed">
+                  A vendor that creates, receives, maintains, or transmits protected health information (PHI) for your
+                  practice is a business associate under 45 CFR 160.103. The contract must spell out how that vendor may
+                  use and disclose PHI, under{' '}
+                  <a
+                    href="https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-E/section-164.504"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline hover:text-[#F05A28]"
+                  >
+                    45 CFR 164.504(e)
+                  </a>
+                  .
+                </p>
+              </li>
+
+              <li className="p-8 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6]">
+                <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">QUESTION 02</div>
+                <h3 className="text-lg font-bold text-[#14110F] mb-2">Do your subcontractors agree to the same terms?</h3>
+                <p className="text-sm text-[#46403B] leading-relaxed">
+                  The same rule requires a business associate to make sure its subcontractors agree to the same
+                  restrictions on PHI. For a voice agent, that chain usually includes the cloud host, the phone carrier,
+                  and the speech-to-text provider.
+                </p>
+              </li>
+
+              <li className="p-8 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6]">
+                <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">QUESTION 03</div>
+                <h3 className="text-lg font-bold text-[#14110F] mb-2">What is the smallest slice of patient data the agent can see?</h3>
+                <p className="text-sm text-[#46403B] leading-relaxed">
+                  The minimum necessary standard in 45 CFR 164.502(b) asks for reasonable efforts to limit PHI to what a
+                  task needs. A scheduling agent needs a name, contact details, and open slots, not the whole chart.
+                </p>
+              </li>
+
+              <li className="p-8 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6]">
+                <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">QUESTION 04</div>
+                <h3 className="text-lg font-bold text-[#14110F] mb-2">Does every person and service get its own login?</h3>
+                <p className="text-sm text-[#46403B] leading-relaxed">
+                  Unique user identification is a required safeguard under{' '}
+                  <a
+                    href="https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-C/section-164.312"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline hover:text-[#F05A28]"
+                  >
+                    45 CFR 164.312(a)(2)(i)
+                  </a>
+                  . Shared logins make it hard to trace who opened a record.
+                </p>
+              </li>
+
+              <li className="p-8 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6]">
+                <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">QUESTION 05</div>
+                <h3 className="text-lg font-bold text-[#14110F] mb-2">Is every action written to an audit log?</h3>
+                <p className="text-sm text-[#46403B] leading-relaxed">
+                  The audit controls standard in 45 CFR 164.312(b) calls for tools that record and examine activity in
+                  systems holding electronic PHI. Ask the vendor to show you a real log entry for a booked appointment.
+                </p>
+              </li>
+
+              <li className="p-8 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6]">
+                <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">QUESTION 06</div>
+                <h3 className="text-lg font-bold text-[#14110F] mb-2">How long are logs and compliance records kept?</h3>
+                <p className="text-sm text-[#46403B] leading-relaxed">
+                  Security Rule documentation must be kept for 6 years from the date it was created or last in effect,
+                  whichever is later, under{' '}
+                  <a
+                    href="https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-C/section-164.316"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline hover:text-[#F05A28]"
+                  >
+                    45 CFR 164.316(b)(2)(i)
+                  </a>
+                  . Retention for agent logs and policies belongs in the design from day one.
+                </p>
+              </li>
+            </ol>
+
+            <p className="mt-8 max-w-3xl text-sm text-[#46403B] leading-relaxed">
+              One more detail worth knowing: the current Security Rule lists encryption as an addressable safeguard, not a
+              required one, under 45 CFR 164.312(a)(2)(iv). We treat encryption in transit and at rest as required on every
+              healthcare build anyway.
+            </p>
           </div>
         </section>
 

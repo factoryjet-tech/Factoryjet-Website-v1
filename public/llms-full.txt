@@ -2,7 +2,7 @@
 
 > Companion to https://factoryjet.com/llms.txt. Canonical paths only. US is served from the root (no `/us/` prefix). Facts, positioning, and citation rules live in llms.txt. Do not copy prices, review counts, or city lists of countries FactoryJet does not serve from older versions of this file.
 
-Updated: 21 Aug 2026.
+Updated: 17 Sep 2026.
 
 ## Core
 - https://factoryjet.com/
@@ -24,9 +24,11 @@ Updated: 21 Aug 2026.
 - https://factoryjet.com/b2b-ecommerce
 - https://factoryjet.com/ecommerce-consulting
 - https://factoryjet.com/replatforming
+- [Magento to Shopify Plus Migration: Cost, Timeline and Runbook](https://factoryjet.com/replatforming/magento-to-shopify): Sourced 2026 cost and timeline ranges, Adobe Commerce end-of-support dates and an 11-phase migration runbook.
 - https://factoryjet.com/best-ecommerce-platforms
 - https://factoryjet.com/agentic-commerce
 - https://factoryjet.com/ecommerce-for-manufacturers
+- [Shopify Maintenance Services and Retainers](https://factoryjet.com/services/shopify-maintenance-services): Support and maintenance retainers for Shopify, Shopify Plus, WooCommerce, Magento / Adobe Commerce, BigCommerce and Commerceflo by FactoryJet stores, with included hours and first-response times published per plan.
 
 ## Platforms
 - https://factoryjet.com/services/shopify-development
@@ -56,6 +58,7 @@ Updated: 21 Aug 2026.
 - https://factoryjet.com/services/ai-automation
 - https://factoryjet.com/services/ai-chatbot-development
 - https://factoryjet.com/services/ai-workflow-automation
+- [AI Agent Monitoring, Support and Maintenance](https://factoryjet.com/services/ai-agent-monitoring): Support for AI agents after launch: monitoring, evaluation runs, drift checks, model retirement planning and fixes.
 
 ## Supporting web
 - https://factoryjet.com/services/web-design
@@ -75,3 +78,6 @@ US city pages use https://factoryjet.com/{city}/{service} with no `/us/` prefix.
 - https://factoryjet.com/blog/how-to-show-up-in-google-ai-overviews-small-business
 - https://factoryjet.com/blog/seo-cost-small-business-2026
 - https://factoryjet.com/blog/seo-audit-cost-2026
+- [AI Agents Inside Your ERP: NetSuite, Odoo and SAP Business One (2026)](https://factoryjet.com/blog/ai-agents-erp-netsuite-odoo-sap-business-one-2026): APIs, limits and approval steps for AI agents in NetSuite, Odoo and SAP Business One, checked against vendor documentation.
+- [Best AI Agents for Ecommerce in 2026, and When a Custom Agent Wins](https://factoryjet.com/blog/best-ai-agents-for-ecommerce-2026): Gorgias, Fin, Zendesk, Klaviyo, Rep AI, Alhena, Algolia and Shopify Sidekick compared by job from vendor pricing pages and docs.
+- [Best B2B Ecommerce Platform for Manufacturers and Distributors (2026)](https://factoryjet.com/blog/best-b2b-ecommerce-platform-manufacturers-distributors-2026): OroCommerce, Shopify Plus, BigCommerce B2B Edition, Adobe Commerce, Sana Commerce, SAP Commerce Cloud and commercetools compared on ERP sync, quotes, punchout and net terms.

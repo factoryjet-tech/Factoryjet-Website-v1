@@ -174,7 +174,7 @@ export const post: BlogPost = {
       </p>
       <p className="mb-4">
         In commerce, that choice is concrete. Keeping one product listing accurate is a single-agent job. Running discovery, pricing, and inventory across your store and marketplaces is agentic AI at work, and it is exactly what we build with{' '}
-        <a href="/blog/what-is-agentic-ai" className="text-[#B23E13] underline hover:text-[#F05A28]">agentic AI</a> and deliver through <a href="/commerceflo" className="text-[#B23E13] underline hover:text-[#F05A28]">Commerceflo</a>, our AI commerce operator. If you want the bigger picture of where this is heading for brands, start with the{' '}
+        <a href="/blog/what-is-agentic-ai" className="text-[#B23E13] underline hover:text-[#F05A28]">agentic AI</a> and deliver through <a href="/commerceflo" className="text-[#B23E13] underline hover:text-[#F05A28]">Commerceflo by FactoryJet</a>, our AI commerce operator. If you want the bigger picture of where this is heading for brands, start with the{' '}
         <a href="/agentic-commerce" className="text-[#B23E13] underline hover:text-[#F05A28]">agentic commerce guide</a>. The label matters far less than picking the right shape for the job.
       </p>
     </>

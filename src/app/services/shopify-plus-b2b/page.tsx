@@ -770,7 +770,11 @@ export default function ShopifyPlusB2BPage() {
             <p className="pp-mlabel">// architectural comparison</p>
             <h2 style={{ marginTop: '10px' }}>Shopify Plus Native B2B vs. Legacy Apps vs. Clone Stores.</h2>
             <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>
-              Why top B2B brands migrate to native Shopify Plus B2B setups.
+              Why top B2B brands migrate to native Shopify Plus B2B setups. Still choosing a platform? Our guide shows{' '}
+              <Link href="/blog/best-b2b-ecommerce-platform-manufacturers-distributors-2026" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
+                how Shopify Plus compares with OroCommerce, BigCommerce B2B Edition and Adobe Commerce
+              </Link>
+              {' '}for manufacturers and distributors.
             </p>
             <div style={{ marginTop: '32px', overflowX: 'auto' }}>
               <table className="pp-table">

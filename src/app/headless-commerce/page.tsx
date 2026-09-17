@@ -132,7 +132,7 @@ export default function HeadlessCommercePage() {
                 </h1>
                 <p className="pp-lead" style={{ maxWidth: '47ch' }}>
                   Headless commerce decouples your storefront from the platform underneath, so you get sub-second loads
-                  and full design freedom while Shopify, BigCommerce, or Commerceflo run catalog, cart, and checkout.
+                  and full design freedom while Shopify, BigCommerce, or Commerceflo by FactoryJet run catalog, cart, and checkout.
                 </p>
                 <HeroInlineForm source="us_headless_hero" region="us" submitLabel="Get a headless audit" />
               </div>

@@ -94,6 +94,12 @@ const nextConfig = {
       { source: '/services/ai-agency',                       destination: '/services/ai-agent-development', permanent: true },
       { source: '/services/ai-agents',                       destination: '/services/ai-agent-development', permanent: true },
       { source: '/services/whatsapp-chatbot',                destination: '/services/ai-chatbot-development', permanent: true },
+      // AI agent duplicate merge (2026-09-17). Prod layer is /public/_redirects
+      { source: '/services/ai-agent-development/ai-workflow-automation', destination: '/services/ai-workflow-automation',     permanent: true },
+      { source: '/services/ai-agent-development/ai-chatbot',             destination: '/services/ai-chatbot-development',     permanent: true },
+      { source: '/services/ai-agent-development/ai-customer-support',    destination: '/services/ai-customer-support-agents', permanent: true },
+      { source: '/services/ai-agents-for-healthcare',                    destination: '/services/healthcare-ai-agents',       permanent: true },
+      { source: '/services/ai-agent-development/ai-sales-agent',         destination: '/services/ai-sdr',                     permanent: true },
       // UK sitemap legacy URLs
       { source: '/uk/sitemap-index.xml',    destination: '/sitemap.xml',            permanent: true },
       { source: '/uk/sitemap-cities.xml',   destination: '/sitemap-uk/sitemap.xml', permanent: true },

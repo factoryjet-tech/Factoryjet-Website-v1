@@ -1355,7 +1355,7 @@ export default function ManufacturingOperationsAgentPage() {
               </Link>
               ,{' '}
               <Link
-                href="/services/ai-agent-development/ai-workflow-automation"
+                href="/services/ai-workflow-automation"
                 className="font-semibold underline"
                 style={{ color: '#B23E13' }}
               >
@@ -1363,7 +1363,7 @@ export default function ManufacturingOperationsAgentPage() {
               </Link>
               , and{' '}
               <Link
-                href="/services/ai-agent-development/ai-customer-support"
+                href="/services/ai-customer-support-agents"
                 className="font-semibold underline"
                 style={{ color: '#B23E13' }}
               >

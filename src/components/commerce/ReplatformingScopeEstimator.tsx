@@ -10,7 +10,6 @@ import {
   ArrowRight,
   TrendingUp,
   Server,
-  Zap,
   FileCheck,
 } from 'lucide-react';
 import { useContactModal } from '@/context/ContactModalContext';
@@ -182,7 +181,7 @@ export default function ReplatformingScopeEstimator({
             Migration Scope Engine
           </span>
           <span style={{ fontFamily: 'var(--pp-mono, monospace)', fontSize: '11px', color: '#A8A29E' }}>
-            Zero-Downtime Replatforming Blueprint
+            Replatforming Scope Blueprint
           </span>
         </div>
 
@@ -413,7 +412,7 @@ export default function ReplatformingScopeEstimator({
                   {overallRisk}
                 </div>
                 <div style={{ fontSize: '11px', color: 'var(--pp-muted, #78716C)', marginTop: '2px' }}>
-                  Zero-downtime cutover
+                  Planned cutover
                 </div>
               </div>
 
@@ -438,31 +437,10 @@ export default function ReplatformingScopeEstimator({
                 <div style={{ fontSize: '20px', fontWeight: 800, color: 'var(--pp-ink, #14110F)', fontFamily: 'var(--pp-mono, monospace)' }}>
                   ${projectedDevopsSavings.toLocaleString()}/yr
                 </div>
-                <div style={{ fontSize: '11px', color: '#16A34A', marginTop: '2px', fontWeight: 600 }}>
-                  Eliminated DevOps retainers
+                <div style={{ fontSize: '11px', color: 'var(--pp-muted, #78716C)', marginTop: '2px' }}>
+                  Illustrative estimate, not a quote
                 </div>
               </div>
-            </div>
-
-            {/* Protocol Guarantee Box */}
-            <div
-              style={{
-                background: '#FFFFFF',
-                borderRadius: '12px',
-                padding: '14px 16px',
-                border: '1px solid var(--pp-line, #E5E0DA)',
-                marginBottom: '18px',
-              }}
-            >
-              <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '12px', fontWeight: 700, color: 'var(--pp-ink, #14110F)', marginBottom: '6px' }}>
-                <Zap size={14} color="#F05A28" />
-                FactoryJet Migration Guarantees
-              </div>
-              <ul style={{ margin: 0, paddingLeft: '18px', display: 'grid', gap: '4px', fontSize: '12px', color: 'var(--pp-body, #292524)' }}>
-                <li>100% 1-to-1 single-hop 301 URL redirect mapping (Zero SEO equity loss).</li>
-                <li>Zero-downtime DNS cutover with staging delta synchronization.</li>
-                <li>Fixed milestone proposal with no hourly billing surprises.</li>
-              </ul>
             </div>
           </div>
 

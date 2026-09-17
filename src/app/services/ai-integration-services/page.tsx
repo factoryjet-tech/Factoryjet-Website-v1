@@ -969,6 +969,14 @@ export default function AIIntegrationServicesPage() {
                 <h3 className="fj-display mt-4 text-lg font-bold text-fj-ink">CRM & ERP Data Sync</h3>
                 <p className="mt-2 font-fj-body text-sm text-fj-neutral-600">
                   Bi-directional data pipelines synchronizing HubSpot, Salesforce, NetSuite, and QuickBooks with AI models.
+                  {' '}For NetSuite, Odoo and SAP Business One specifics, read{' '}
+                  <a
+                    href="/blog/ai-agents-erp-netsuite-odoo-sap-business-one-2026"
+                    className="font-semibold underline underline-offset-2 text-[#B23E13]"
+                  >
+                    AI agents inside NetSuite, Odoo and SAP Business One
+                  </a>
+                  .
                 </p>
               </div>
 

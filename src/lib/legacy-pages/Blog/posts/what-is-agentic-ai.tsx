@@ -152,7 +152,7 @@ export const post: BlogPost = {
       <p className="mb-4">
         The practical way to start is small: pick one repetitive task where errors are cheap and reversible, let an agent handle it end to end with a human checking the output, prove the time savings, then expand. In ecommerce specifically, this shift has a name, agentic commerce, where agents discover and buy for shoppers and your own agents keep your catalog accurate for them to buy from. If that is your world, the{' '}
         <a href="/agentic-commerce" className="text-[#B23E13] underline hover:text-[#F05A28]">agentic commerce field guide</a> is the place to start, and{' '}
-        <a href="/commerceflo" className="text-[#B23E13] underline hover:text-[#F05A28]">Commerceflo</a>, our AI commerce operator, is how we put agentic AI to work across a store. Generative AI made everyone faster at creating. Agentic AI is about to make software actually do the work.
+        <a href="/commerceflo" className="text-[#B23E13] underline hover:text-[#F05A28]">Commerceflo by FactoryJet</a>, our AI commerce operator, is how we put agentic AI to work across a store. Generative AI made everyone faster at creating. Agentic AI is about to make software actually do the work.
       </p>
     </>
   ),

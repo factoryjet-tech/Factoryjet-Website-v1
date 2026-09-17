@@ -76,7 +76,7 @@ export const metadata: Metadata = {
 
 // Freshness signal. Benchmark: 56% of AI-Overview-cited pages carry it.
 // Keep honest: bump when the page's content actually changes.
-const PAGE_MODIFIED = '2026-09-04';
+const PAGE_MODIFIED = '2026-09-17';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -343,7 +343,7 @@ const COMPARISON_ROWS = [
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="us" kind="yes" />,
-      <CompareIcon key="diy" kind="no" />,
+      <CompareIcon key="diy" kind="partial" />,
       <CompareIcon key="fl" kind="partial" />,
     ],
   },
@@ -466,7 +466,11 @@ const FAQ_CATEGORIES = [
   { key: 'trust',     label: 'Trust & Results' },
 ];
 
-/* ─── FAQ items: 21 conversational Q-A pairs, AI-citation optimized ────── */
+/* ─── FAQ items: 27 conversational Q-A pairs, AI-citation optimized ────── */
+/* 6 were ported 2026-09-17 from the retired duplicate workflow page (now a 301
+   to this URL). Every fact in them was fetch-verified that day: Zapier and Make
+   pricing pages, n8n editions and queue mode docs, RFC 6585, Stripe webhook
+   docs, and Shopify API versioning docs. */
 const FAQ_ITEMS = [
 
   /* ── What Is AI Workflow Automation ── */
@@ -546,6 +550,12 @@ const FAQ_ITEMS = [
     answer:
       'Ongoing costs include direct model API usage and cloud hosting. Self-hosted n8n instances have zero platform licensing fees. FactoryJet never marks up third-party tool costs.',
   },
+  {
+    category: 'pricing',
+    question: 'Should we self-host n8n or pay for Zapier or Make?',
+    answer:
+      'It depends on your volume and whether someone can run a server. Zapier bills by tasks and Make bills by credits, so cost rises as usage grows. The n8n Community edition is free to self-host, so you pay for hosting instead of per run. The trade is upkeep: updates, backups, and monitoring become your job, and features like Git version control and single sign-on need a paid n8n plan.',
+  },
 
   /* ── Technical & Integrations ── */
   {
@@ -570,7 +580,37 @@ const FAQ_ITEMS = [
     category: 'technical',
     question: 'Do I need a technical team to manage the automation after launch?',
     answer:
-      'No. The visual dashboard displays run histories, success rates, and errors clearly. Non-technical staff can pause or rerun workflows with a single click.',
+      'Not for day-to-day use. The visual dashboard displays run histories, success rates, and errors clearly. Non-technical staff can pause or rerun workflows with a single click. If n8n is self-hosted, someone still has to own server updates, backups, and monitoring.',
+  },
+  {
+    category: 'technical',
+    question: 'How does self-hosted n8n handle a sudden spike in volume?',
+    answer:
+      'We run it in queue mode. The main n8n instance receives each trigger and passes the job to Redis, which holds the queue of waiting jobs. Separate worker processes pick jobs off that queue and run them, so you add workers when volume climbs. The n8n docs advise against SQLite for queue mode, so we pair it with a PostgreSQL database.',
+  },
+  {
+    category: 'technical',
+    question: 'What happens when a connected app rate-limits the workflow?',
+    answer:
+      'The app replies with HTTP status 429, which means too many requests in a given amount of time, and it may include a Retry-After header saying how long to wait. The workflow waits and retries instead of dropping the record. Jobs stay queued while it waits, and your team gets an alert if the retries keep failing.',
+  },
+  {
+    category: 'technical',
+    question: 'How do you stop duplicate records when a webhook fires twice?',
+    answer:
+      'A webhook is an automatic message one app sends another when something happens. Stripe documentation warns that webhook endpoints might occasionally receive the same event more than once, and it recommends logging the event IDs you have processed. We store every processed ID and skip repeats. Stripe also notes that two separate events can describe the same change in some cases, so we check the underlying record ID too before writing anything.',
+  },
+  {
+    category: 'technical',
+    question: 'What happens when one of our software tools changes its API?',
+    answer:
+      'An API is the connection point other software uses to talk to a tool. We pin each connection to a specific API version when the vendor offers one. Shopify, for example, releases a new API version every three months and supports each stable version for at least 12 months, which leaves time to test before switching. Incoming data is also checked against the fields the workflow expects, so a renamed field stops the run and alerts your team instead of writing bad data.',
+  },
+  {
+    category: 'technical',
+    question: 'Can you automate an older system that has no API?',
+    answer:
+      'Often, yes. If the system can export files, we collect them on a schedule from a secure file drop, usually SFTP (secure file transfer), and push the results onward. If it runs on a database, we can read from it over a private network connection such as a VPN. We agree on that route with your IT team first, because direct database access carries more risk than an API.',
   },
 
   /* ── Trust & Results ── */
@@ -1023,6 +1063,89 @@ export default function AIWorkflowAutomationPage() {
                 </p>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* ── 8D. HONEST FIT CHECK ─────────────────────────────────────────────
+            Ported 2026-09-17 from the retired duplicate workflow page (301 to
+            this URL). Pricing models and n8n edition facts fetch-verified that
+            day on zapier.com/pricing, make.com/en/pricing and docs.n8n.io. */}
+        <section className="py-16 bg-white border-b border-[#E5E5DC]">
+          <div className="max-w-6xl mx-auto px-6">
+            <p className="text-sm font-semibold text-[#B23E13] uppercase tracking-widest mb-3">
+              HONEST FIT CHECK
+            </p>
+            <h2 className="text-3xl font-bold text-[#0F0F12] mb-6">
+              When a Custom Workflow Build Is the Wrong Call
+            </h2>
+            <p className="text-base text-[#4A4A45] max-w-3xl mb-10 leading-relaxed">
+              We build custom workflows, so read this list knowing we have a stake in the answer. A custom
+              pipeline pays off when the work runs often, the data is messy, and the process touches several
+              systems. If one of these three situations sounds like yours, a simpler route will serve you better.
+            </p>
+
+            <ol className="grid grid-cols-1 md:grid-cols-3 gap-6 list-none p-0">
+              <li className="bg-[#FAFAF7] p-6 rounded-xl border border-[#E5E5DC]">
+                <p className="font-fj-mono text-xs font-bold text-[#B23E13] mb-2">01</p>
+                <h3 className="font-semibold text-[#0F0F12] text-lg mb-2">
+                  Your volume is low and the steps are simple.
+                </h3>
+                <p className="text-sm text-[#4A4A45] leading-relaxed">
+                  A hosted tool is usually the better buy. Zapier counts a task each time an action in a Zap, its
+                  name for a workflow, runs successfully. Triggers and built-in tools such as Filter and Formatter
+                  do not count (
+                  <a
+                    href="https://zapier.com/pricing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#B23E13] underline font-medium"
+                  >
+                    Zapier pricing
+                  </a>
+                  ). Make bills in credits, and most actions use one credit (
+                  <a
+                    href="https://www.make.com/en/pricing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#B23E13] underline font-medium"
+                  >
+                    Make pricing
+                  </a>
+                  ). When volume is low, usage-based billing stays small and nobody has to run a server.
+                </p>
+              </li>
+              <li className="bg-[#FAFAF7] p-6 rounded-xl border border-[#E5E5DC]">
+                <p className="font-fj-mono text-xs font-bold text-[#B23E13] mb-2">02</p>
+                <h3 className="font-semibold text-[#0F0F12] text-lg mb-2">
+                  A built-in integration already covers it.
+                </h3>
+                <p className="text-sm text-[#4A4A45] leading-relaxed">
+                  Many apps ship their own sync with each other. If that native connection already moves the
+                  fields you need, a custom pipeline adds upkeep without adding value. Check what your CRM,
+                  store, or accounting tool already offers before paying anyone to rebuild it.
+                </p>
+              </li>
+              <li className="bg-[#FAFAF7] p-6 rounded-xl border border-[#E5E5DC]">
+                <p className="font-fj-mono text-xs font-bold text-[#B23E13] mb-2">03</p>
+                <h3 className="font-semibold text-[#0F0F12] text-lg mb-2">
+                  Nobody can own a self-hosted server.
+                </h3>
+                <p className="text-sm text-[#4A4A45] leading-relaxed">
+                  The Community edition of n8n is free to self-host (
+                  <a
+                    href="https://docs.n8n.io/deploy/host-n8n/community-edition-features"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#B23E13] underline font-medium"
+                  >
+                    n8n editions
+                  </a>
+                  ), but someone still has to apply updates, run backups, and watch for failures. Git version
+                  control and single sign-on (SSO) are not part of the free edition either. If nobody on your
+                  side can own that work, a hosted plan is the safer choice.
+                </p>
+              </li>
+            </ol>
           </div>
         </section>
 

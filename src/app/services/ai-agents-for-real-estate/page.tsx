@@ -25,10 +25,10 @@ import MidPageCTA from '@/components/v2/MidPageCTA';
 
    Does NOT own, and must not cannibalise:
      /services/ai-agent-development            general agent building, the parent
-     /services/ai-agent-development/ai-sales-agent      generic inbound lead agent
+     /services/ai-sdr                                   generic inbound lead agent
      /services/ai-agent-development/ai-voice-agent      generic voice
      /services/ai-agent-development/ai-scheduling-agent generic booking
-     /services/ai-agent-development/ai-chatbot          generic site chat
+     /services/ai-chatbot-development                   generic site chat
      /services/real-estate-website-design               the website build
    Each is linked up or across rather than restated. The split is stated in the
    answer-first block in plain words so a reader and a model both see it.
@@ -902,7 +902,7 @@ export default function AiAgentsForRealEstatePage() {
                 </Link>{' '}
                 parent service. We also build dedicated{' '}
                 <Link
-                  href="/services/ai-agent-development/ai-sales-agent"
+                  href="/services/ai-sdr"
                   className="font-semibold underline underline-offset-2"
                   style={{ color: ORANGE_DARK }}
                 >
@@ -1526,8 +1526,8 @@ export default function AiAgentsForRealEstatePage() {
                   desc: 'The parent service. Custom agents for support, sales and back-office queues.',
                 },
                 {
-                  label: 'AI sales agent',
-                  href: '/services/ai-agent-development/ai-sales-agent',
+                  label: 'AI SDR agent',
+                  href: '/services/ai-sdr',
                   desc: 'The generic inbound lead pattern: enrich, qualify, route, write back to the CRM.',
                 },
                 {

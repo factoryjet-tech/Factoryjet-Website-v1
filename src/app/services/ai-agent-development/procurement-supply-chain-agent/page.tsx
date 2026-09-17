@@ -701,7 +701,7 @@ export default function ProcurementSupplyChainAgentPage() {
             <p style={{ marginTop: '28px', fontSize: '14px', color: 'var(--pp-muted)' }}>
               Related:{' '}
               <Link href="/services/ai-agent-development" style={{ fontWeight: 600, color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>AI agent development</Link>,{' '}
-              <Link href="/services/ai-agent-development/ai-workflow-automation" style={{ fontWeight: 600, color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>AI workflow automation</Link>,{' '}
+              <Link href="/services/ai-workflow-automation" style={{ fontWeight: 600, color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>AI workflow automation</Link>,{' '}
               <Link href="/b2b-ecommerce" style={{ fontWeight: 600, color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>B2B e-commerce</Link>, and{' '}
               <Link href="/ecommerce-for-manufacturers" style={{ fontWeight: 600, color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>e-commerce for manufacturers</Link>.
             </p>

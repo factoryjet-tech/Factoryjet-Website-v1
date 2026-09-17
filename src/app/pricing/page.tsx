@@ -88,7 +88,7 @@ const FAQ_SCHEMA = {
 };
 
 const DRIVERS = [
-  { k: 'Platform', d: 'Shopify and Shopify Plus, Adobe Commerce (Magento), BigCommerce, WooCommerce, headless, or Commerceflo. We recommend the fit, not the priciest option.' },
+  { k: 'Platform', d: 'Shopify and Shopify Plus, Adobe Commerce (Magento), BigCommerce, WooCommerce, headless, or Commerceflo by FactoryJet. We recommend the fit, not the priciest option.' },
   { k: 'Catalog size', d: 'The number of products, variants, and attributes, and how often they change across channels.' },
   { k: 'DTC, B2B, or both', d: 'Trade buyers need tiered pricing, net terms, account hierarchies, and reordering on top of the retail store.' },
   { k: 'Integrations', d: 'ERP, POS, 3PL, and marketplace connections that put every system on one order and inventory layer.' },

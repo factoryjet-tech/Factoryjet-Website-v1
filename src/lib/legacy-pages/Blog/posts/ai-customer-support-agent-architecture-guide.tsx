@@ -281,7 +281,7 @@ export const post: BlogPost = {
         </p>
         <div className="flex flex-wrap gap-4">
           <a
-            href="/services/ai-agent-development/ai-customer-support"
+            href="/services/ai-customer-support-agents"
             className="inline-block bg-orange-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-orange-700 transition-colors"
           >
             Explore AI Customer Support Services

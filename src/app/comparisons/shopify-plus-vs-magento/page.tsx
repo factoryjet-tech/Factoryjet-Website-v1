@@ -569,6 +569,13 @@ export default function ShopifyVsMagentoPage() {
                 We crawl every indexed URL from Google Search Console, map 1-to-1 redirects to new Shopify paths, and execute automated
                 HTTP status code checks on staging to guarantee zero 404 errors prior to DNS cutover.
               </p>
+              <p>
+                For published cost ranges, realistic timelines and the full 11-phase runbook, see our{' '}
+                <a href="/replatforming/magento-to-shopify#migration-runbook" style={{ color: 'var(--pp-orange-dark)', fontWeight: 600, textDecoration: 'underline' }}>
+                  Magento to Shopify Plus migration guide
+                </a>
+                .
+              </p>
             </div>
           </div>
         </section>

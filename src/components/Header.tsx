@@ -31,12 +31,12 @@ interface HeaderProps {
 }
 
 const AI_SERVICES: SubMenuItem[] = [
-  { label: 'AI Chatbot', href: '/services/ai-agent-development/ai-chatbot', icon: MessageSquare, desc: 'Intelligent chatbot solutions', isRoute: true },
-  { label: 'AI Sales Agent', href: '/services/ai-agent-development/ai-sales-agent', icon: TrendingUp, desc: 'AI-powered sales automation', isRoute: true },
+  { label: 'AI Chatbot', href: '/services/ai-chatbot-development', icon: MessageSquare, desc: 'Intelligent chatbot solutions', isRoute: true },
+  { label: 'AI SDR Agent', href: '/services/ai-sdr', icon: TrendingUp, desc: 'AI-powered sales automation', isRoute: true },
   { label: 'AI Marketing Agent', href: '/services/ai-agent-development/ai-marketing-agent', icon: Megaphone, desc: 'Smart marketing automation', isRoute: true },
   { label: 'AI Scheduling Agent', href: '/services/ai-agent-development/ai-scheduling-agent', icon: Calendar, desc: 'Automated scheduling & booking', isRoute: true },
-  { label: 'AI Workflow Automation', href: '/services/ai-agent-development/ai-workflow-automation', icon: Workflow, desc: 'End-to-end workflow automation', isRoute: true },
-  { label: 'AI Customer Support', href: '/services/ai-agent-development/ai-customer-support', icon: Headphones, desc: '24/7 AI support agents', isRoute: true },
+  { label: 'AI Workflow Automation', href: '/services/ai-workflow-automation', icon: Workflow, desc: 'End-to-end workflow automation', isRoute: true },
+  { label: 'AI Customer Support', href: '/services/ai-customer-support-agents', icon: Headphones, desc: '24/7 AI support agents', isRoute: true },
   { label: 'AI Voice Agent', href: '/services/ai-agent-development/ai-voice-agent', icon: Phone, desc: 'Voice-powered AI assistants', isRoute: true },
 ];
 

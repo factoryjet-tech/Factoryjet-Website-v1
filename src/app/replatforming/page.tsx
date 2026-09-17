@@ -17,24 +17,25 @@ import '@/components/v2/PlatformPage.css';
 
 // Lazy-load the estimator as a separate chunk so its ~255 KiB JS doesn't block
 // initial render. ssr stays true (required in a Server Component) so the
-// Migration Guarantees list still renders in the static HTML for crawlers.
+// estimator's default output still renders in the static HTML for crawlers.
+// (The "Migration Guarantees" box was removed on 2026-09-17: unverifiable claims.)
 const ReplatformingScopeEstimator = dynamic(
   () => import('@/components/commerce/ReplatformingScopeEstimator'),
   { ssr: true }
 );
 
-const PAGE_MODIFIED = '2026-08-24';
+const PAGE_MODIFIED = '2026-09-17';
 
 export const metadata: Metadata = {
   title: 'E-Commerce Replatforming & Migration | FactoryJet',
   description:
-    'Enterprise e-commerce replatforming services between Magento, NetSuite, BigCommerce, WooCommerce & Shopify Plus with zero downtime & 100% SEO.',
+    'Ecommerce replatforming between Magento, NetSuite, BigCommerce, WooCommerce and Shopify Plus, with redirect mapping, ERP integration and a staged cutover.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
     title: 'E-Commerce Replatforming & Migration | FactoryJet',
     description:
-      'Enterprise e-commerce replatforming services between Magento, NetSuite, BigCommerce, WooCommerce & Shopify Plus with zero downtime & 100% SEO.',
+      'Ecommerce replatforming between Magento, NetSuite, BigCommerce, WooCommerce and Shopify Plus, with redirect mapping, ERP integration and a staged cutover.',
     url: 'https://factoryjet.com/replatforming',
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet e-commerce replatforming and migration services' }],
     locale: 'en_US',
@@ -55,7 +56,7 @@ const FAQ_CATEGORIES = [
   { key: 'data', label: 'Data & Order History' },
   { key: 'erp', label: 'ERP & Integrations' },
   { key: 'process', label: 'Process & Timeline' },
-  { key: 'guarantee', label: 'Fixed-Price Guarantee' },
+  { key: 'guarantee', label: 'Pricing and scope' },
 ];
 
 const FAQ_ITEMS = [
@@ -117,7 +118,7 @@ const FAQ_ITEMS = [
     category: 'process',
     question: 'Will our online store experience downtime during cutover?',
     answer:
-      'Zero downtime. We build and QA everything on a private staging environment, run a final delta sync of latest customer transactions, and switch DNS during scheduled off-peak hours with real-time order monitoring.',
+      'We plan every cutover to avoid downtime and to keep any disruption short. Everything is built and tested on a private staging store first. Just before launch we run a final sync of the latest orders and customers, switch DNS during scheduled off-peak hours and watch orders in real time. A written rollback trigger decides when to switch back if checkout or order sync fails.',
   },
   {
     category: 'process',
@@ -138,7 +139,7 @@ const SPOKES = [
     slug: 'magento-to-shopify',
     name: 'Magento / Adobe Commerce to Shopify Plus',
     badge: 'Enterprise Flagship',
-    desc: 'Escape slow MariaDB databases, PHP server patching, and EAV attribute bottlenecks. Full ERP integration and zero downtime cutover.',
+    desc: 'Published cost and timeline ranges, Adobe Commerce end-of-support dates and an 11-phase runbook for moving Magento or Adobe Commerce to Shopify Plus.',
     icon: '⚡',
   },
   {

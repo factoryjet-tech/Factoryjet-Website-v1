@@ -161,7 +161,7 @@ export const CASE_STUDIES: CaseStudy[] = [
   {
     slug: 'belle-maison-ecommerce-success',
     client: 'Belle Maison',
-    tagline: 'A Commerceflo storefront for retail shoppers and trade buyers.',
+    tagline: 'A Commerceflo by FactoryJet storefront for retail shoppers and trade buyers.',
     industry: 'DTC + B2B Commerce',
     services: [
       'DTC Storefront',
@@ -173,7 +173,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     ],
     headline: 'One Storefront for Belle Maison’s Retail and Trade Buyers',
     summary:
-      'FactoryJet built Belle Maison’s DTC + B2B storefront on Commerceflo. Retail shoppers can explore its plants and decor catalog, while trade accounts use account-based pricing and quote-to-order workflows.',
+      'Belle Maison’s DTC + B2B storefront runs on Commerceflo by FactoryJet and was built by our team. Retail shoppers can explore its plants and decor catalog, while trade accounts use account-based pricing and quote-to-order workflows.',
     category: 'E-Comm',
     heroStats: [
       { value: 'DTC + B2B', label: 'Retail and trade buyers' },
@@ -235,7 +235,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       },
       {
         q: 'Why Commerceflo rather than Shopify or WooCommerce?',
-        a: 'Account-based pricing and quote-to-order are native to Commerceflo rather than added by apps. For a distributor whose pricing differs per buyer, keeping that logic in the platform rather than in custom code is what makes it maintainable.',
+        a: 'Account-based pricing and quote-to-order are native to Commerceflo, FactoryJet’s own platform, rather than added by apps. For a distributor whose pricing differs per buyer, keeping that logic in the platform rather than in custom code is what makes it maintainable.',
       },
       {
         q: 'Does this work for a catalog that changes often?',
@@ -248,7 +248,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     ],
     clientUrl: 'https://app.commerceflo.ai/store/belle-maison',
     location: 'Mumbai, India',
-    modifiedDate: '2026-09-14',
+    modifiedDate: '2026-09-17',
   },
 
   // ─── 2. Impulse Branding: website, SEO and AI search engagement ──────────
@@ -736,7 +736,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     category: 'E-Comm',
     heroStats: [
       { value: 'B2B', label: 'Trade account storefront' },
-      { value: 'Commerceflo', label: 'Platform built on' },
+      { value: 'Commerceflo by FactoryJet', label: 'Platform built on' },
       { value: 'UK', label: 'Market served' },
     ],
     glanceTiles: [
@@ -798,7 +798,7 @@ export const CASE_STUDIES: CaseStudy[] = [
         a: 'Structure. If products are only findable by exact code, buyers give up and email instead. We organise the catalogue around how buyers describe what they want, so search and browsing both land on the right item.',
       },
     ],
-    modifiedDate: '2026-09-14',
+    modifiedDate: '2026-09-17',
     clientUrl: 'https://app.commerceflo.ai/store/gpsuk',
     location: 'United Kingdom',
   },
@@ -910,7 +910,7 @@ export const CLIENT_ENGAGEMENTS = [
   { client: 'GPSUK', status: 'Website built', scope: 'B2B commerce, ongoing SEO and AI search', url: 'https://app.commerceflo.ai/store/gpsuk', caseSlug: 'gpsuk-promotional-products' },
   { client: 'Holistico', status: 'Build in progress', scope: 'Website development, ongoing SEO and AI search' },
   { client: 'DTF Virginia', status: 'Build in progress', scope: 'Website development, ongoing SEO and AI search', url: 'https://dtfvirginia.com/' },
-  { client: 'Commerceflo.ai', status: 'Website built', scope: 'Website, ongoing SEO and AI search', url: 'https://commerceflo.ai/' },
+  { client: 'Commerceflo by FactoryJet', status: 'Website built', scope: 'Website, ongoing SEO and AI search', url: 'https://commerceflo.ai/' },
   { client: 'Alertmi Technologies', status: 'Website built', scope: 'Website, ongoing SEO and AI search', url: 'https://alertmi.com/' },
   { client: 'Akanksha Barot', status: 'Website built', scope: 'Personal-profile website, ongoing SEO and AI search', url: 'https://akankshabarot.com/' },
 ] satisfies Array<{ client: string; status: string; scope: string; url?: string; caseSlug?: string }>;

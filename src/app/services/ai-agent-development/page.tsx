@@ -736,7 +736,11 @@ export default function AIAgentDevelopmentPage() {
               ))}
             </ul>
             <p className="pp-lead" style={{ marginTop: '26px', maxWidth: '70ch' }}>
-              If a system exposes an API or webhook, an agent can interact with it. If it lacks endpoints, we identify constraints during scoping. For storefront implementations, explore our{' '}
+              If a system exposes an API or webhook, an agent can interact with it. If it lacks endpoints, we identify constraints during scoping. Running NetSuite, Odoo or SAP Business One? Our guide to{' '}
+              <Link href="/blog/ai-agents-erp-netsuite-odoo-sap-business-one-2026" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
+                AI agents inside NetSuite, Odoo and SAP Business One
+              </Link>{' '}
+              covers each ERP&apos;s API, limits and approval steps. For storefront implementations, explore our{' '}
               <Link href="/b2b-ecommerce" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
                 B2B e-commerce
               </Link>{' '}
@@ -886,6 +890,13 @@ export default function AIAgentDevelopmentPage() {
                 </li>
               ))}
             </ul>
+            <p className="pp-lead" style={{ marginTop: '26px', maxWidth: '70ch' }}>
+              After launch, an agent still needs monitoring, regular test runs against that evaluation set, and a plan for model retirements. That work is covered on our{' '}
+              <Link href="/services/ai-agent-monitoring" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
+                AI agent monitoring and support
+              </Link>{' '}
+              page.
+            </p>
           </div>
         </section>
 
@@ -945,12 +956,12 @@ export default function AIAgentDevelopmentPage() {
             </p>
             <ul className="pp-bento n8" style={{ marginTop: '32px' }}>
               {[
-                { t: 'Customer support agent.', d: 'Resolves routine help desk tickets. Triages complex edge cases with summaries.', href: '/services' + '/ai-agent-development/ai-customer-support' },
-                { t: 'Sales agent.', d: 'Enriches and qualifies inbound leads. Logs qualification reasoning in CRM records.', href: '/services' + '/ai-agent-development/ai-sales-agent' },
-                { t: 'Workflow automation agent.', d: 'Executes back-office tasks across ERP, CRM, and messaging tools.', href: '/services' + '/ai-agent-development/ai-workflow-automation' },
+                { t: 'Customer support agent.', d: 'Resolves routine help desk tickets. Triages complex edge cases with summaries.', href: '/services' + '/ai-customer-support-agents' },
+                { t: 'Sales agent.', d: 'Enriches and qualifies inbound leads. Logs qualification reasoning in CRM records.', href: '/services' + '/ai-sdr' },
+                { t: 'Workflow automation agent.', d: 'Executes back-office tasks across ERP, CRM, and messaging tools.', href: '/services' + '/ai-workflow-automation' },
                 { t: 'Scheduling agent.', d: 'Books and confirms appointments against live calendar capacity rules.', href: '/services' + '/ai-agent-development/ai-scheduling-agent' },
                 { t: 'Voice agent.', d: 'Answers phone calls via Twilio. Collects details and routes callers.', href: '/services' + '/ai-agent-development/ai-voice-agent' },
-                { t: 'AI chatbot.', d: 'Answers questions using verified documentation. Escalates edge cases to staff.', href: '/services' + '/ai-agent-development/ai-chatbot' },
+                { t: 'AI chatbot.', d: 'Answers questions using verified documentation. Escalates edge cases to staff.', href: '/services' + '/ai-chatbot-development' },
                 { t: 'Marketing agent.', d: 'Drafts and schedules campaign assets. Human staff approve published materials.', href: '/services' + '/ai-agent-development/ai-marketing-agent' },
                 { t: 'AI SEO and answer engines.', d: 'Optimizes content for citations in ChatGPT, Perplexity, and AI Overviews.', href: '/services' + '/ai-seo' },
               ].map((a) => (
@@ -1011,7 +1022,6 @@ export default function AIAgentDevelopmentPage() {
                 { t: 'AI SDR and BDR agents.', d: 'Outbound sequences and lead qualification synced with HubSpot and Salesforce.', href: '/services' + '/ai-sdr' },
                 { t: 'AI customer support agents.', d: 'Order inquiries and refund processing synced with Zendesk and Gorgias.', href: '/services' + '/ai-customer-support-agents' },
                 { t: 'Real estate AI agents.', d: 'Lead qualification and showings synced with Follow Up Boss and kvCORE.', href: '/services' + '/ai-agents-for-real-estate' },
-                { t: 'Healthcare administrative AI agents.', d: 'Insurance verification and intake workflows under HIPAA BAA agreements.', href: '/services' + '/ai-agents-for-healthcare' },
                 { t: 'AI integration services.', d: 'Connect LLMs directly to CRM, ERP, and internal databases securely.', href: '/services' + '/ai-integration-services' },
                 { t: 'Ecommerce CRO agency.', d: 'Checkout friction and cart abandonment optimization on Shopify Plus.', href: '/services' + '/ecommerce-cro-agency' },
               ].map((a) => (

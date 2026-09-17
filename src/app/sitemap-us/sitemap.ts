@@ -86,13 +86,13 @@ const US_ROUTES: { path: string; source: string }[] = [
   // agent", 2,900/mo) that are not buyer intent. Size expectations accordingly;
   // see pipeline/research/US-ONLY-REALITY-2026-08-17.md.
   { path: '/services/ai-agent-development',                source: 'src/app/services/ai-agent-development/page.tsx' },
-  { path: '/services/ai-agent-development/ai-chatbot',     source: 'src/app/services/ai-agent-development/ai-chatbot/page.tsx' },
-  { path: '/services/ai-agent-development/ai-customer-support', source: 'src/app/services/ai-agent-development/ai-customer-support/page.tsx' },
+  // 2026-09-17: the chatbot, customer support, sales agent and workflow automation
+  // children were merged by 301 into /services/ai-chatbot-development,
+  // /services/ai-customer-support-agents, /services/ai-sdr and
+  // /services/ai-workflow-automation, which are each listed once below.
   { path: '/services/ai-agent-development/ai-marketing-agent',  source: 'src/app/services/ai-agent-development/ai-marketing-agent/page.tsx' },
-  { path: '/services/ai-agent-development/ai-sales-agent', source: 'src/app/services/ai-agent-development/ai-sales-agent/page.tsx' },
   { path: '/services/ai-agent-development/ai-scheduling-agent', source: 'src/app/services/ai-agent-development/ai-scheduling-agent/page.tsx' },
   { path: '/services/ai-agent-development/ai-voice-agent', source: 'src/app/services/ai-agent-development/ai-voice-agent/page.tsx' },
-  { path: '/services/ai-agent-development/ai-workflow-automation', source: 'src/app/services/ai-agent-development/ai-workflow-automation/page.tsx' },
   // ── Manufacturer/distributor capability spokes, added 2026-08-06 ───────────
   // Built as LLM-citation and sales-collateral assets, NOT SEO pages: the whole
   // US vertical-agent keyword space measured 7 keywords / 730 per month / zero
@@ -128,7 +128,8 @@ const US_ROUTES: { path: string; source: string }[] = [
   { path: '/services/restaurant-website-design',            source: 'src/app/services/restaurant-website-design/page.tsx' },
   { path: '/services/nonprofit-website-design',             source: 'src/app/services/nonprofit-website-design/page.tsx' },
   { path: '/services/ai-agents-for-real-estate',            source: 'src/app/services/ai-agents-for-real-estate/page.tsx' },
-  { path: '/services/ai-agents-for-healthcare',             source: 'src/app/services/ai-agents-for-healthcare/page.tsx' },
+  // 2026-09-17: the healthcare agents page built in this wave was merged by 301
+  // into /services/healthcare-ai-agents, listed once further down.
   { path: '/services/ecommerce-app-development',            source: 'src/app/services/ecommerce-app-development/page.tsx' },
   // 2026-08-12 US build: 12 new major-metro city pages. Targets verified live on DataForSEO,
   // see pipeline/research/data/us4_city_demand.csv and pipeline/research/briefs/.
@@ -182,6 +183,7 @@ const US_ROUTES: { path: string; source: string }[] = [
   { path: '/omnichannel-vs-multichannel-commerce',         source: 'src/app/omnichannel-vs-multichannel-commerce/page.tsx' },
   { path: '/agentic-commerce-for-brands',                  source: 'src/app/agentic-commerce-for-brands/page.tsx' },
   { path: '/services/shopify-plus-b2b',                    source: 'src/app/services/shopify-plus-b2b/page.tsx' },
+  { path: '/services/shopify-maintenance-services',        source: 'src/app/services/shopify-maintenance-services/page.tsx' },
   { path: '/services/bigcommerce-b2b',                     source: 'src/app/services/bigcommerce-b2b/page.tsx' },
   { path: '/services/amazon-agency',                       source: 'src/app/services/amazon-agency/page.tsx' },
   { path: '/services/tiktok-shop-agency',                  source: 'src/app/services/tiktok-shop-agency/page.tsx' },
@@ -218,6 +220,7 @@ const US_ROUTES: { path: string; source: string }[] = [
   { path: '/tools/replatforming-cost-calculator',          source: 'src/app/tools/replatforming-cost-calculator/page.tsx' },
   { path: '/services/ai-customer-support-agents',          source: 'src/app/services/ai-customer-support-agents/page.tsx' },
   { path: '/services/ai-sdr',                  source: 'src/app/services/ai-sdr/page.tsx' },
+  { path: '/services/ai-agent-monitoring',                 source: 'src/app/services/ai-agent-monitoring/page.tsx' },
   { path: '/services/ecommerce-cro-agency',                source: 'src/app/services/ecommerce-cro-agency/page.tsx' },
   { path: '/comparisons/n8n-vs-langchain-vs-crewai-enterprise', source: 'src/app/comparisons/n8n-vs-langchain-vs-crewai-enterprise/page.tsx' },
   { path: '/comparisons/shopify-plus-vs-custom-headless-nextjs', source: 'src/app/comparisons/shopify-plus-vs-custom-headless-nextjs/page.tsx' },

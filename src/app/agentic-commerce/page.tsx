@@ -356,7 +356,7 @@ export default function AgenticCommercePage() {
         {/* PLAYERS */}
         <section className="agc-sec pt0">
           <div className="agc-wrap">
-            <div className="agc-sh"><span className="agc-eyebrow">The landscape</span><h2 className="disp">Who is building agentic commerce</h2><p>As of early 2026, the payment and platform giants are laying the rails. The standards are still settling, which is exactly why brands should prepare now.</p></div>
+            <div className="agc-sh"><span className="agc-eyebrow">The landscape</span><h2 className="disp">Who is building agentic commerce</h2><p>As of early 2026, the payment and platform giants are laying the rails. The standards are still settling, which is exactly why brands should prepare now. For store-side AI agents you can install today, see our comparison of the{' '}<Link href="/blog/best-ai-agents-for-ecommerce-2026" style={{ color: 'var(--pp-orange-dark)', fontWeight: 700, textDecoration: 'underline' }}>best AI agents for ecommerce in 2026</Link>.</p></div>
             <div className="agc-defs three">
               {PLAYERS.map((pl) => (
                 <div key={pl.n} className="agc-crystal agc-defcard"><div className="term">{pl.n}</div><p>{pl.p}</p></div>

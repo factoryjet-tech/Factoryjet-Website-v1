@@ -75,7 +75,7 @@ export const metadata: Metadata = {
 
 // Freshness signal. Benchmark: 56% of AI-Overview-cited pages carry it.
 // Keep honest: bump when the page's content actually changes.
-const PAGE_MODIFIED = '2026-09-04';
+const PAGE_MODIFIED = '2026-09-17';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -456,6 +456,38 @@ const PRICING_TIERS = [
   },
 ] as const;
 
+/* ─── Chatbot layers table (section 9C) ──────────────────────────────────────
+   Ported 2026-09-17 from the retired duplicate chatbot page (301 to this URL).
+   Tool names only; capability wording checked that day against pgvector's
+   README and Anthropic's tool use documentation. */
+const CHATBOT_LAYERS = [
+  {
+    layer: 'Language model',
+    does: 'Reads the customer message and writes the reply in plain language.',
+    tools: 'Claude, GPT-4o, or Gemini, chosen per project',
+  },
+  {
+    layer: 'Knowledge retrieval',
+    does: 'Finds the right passages in your documents before the model answers, so replies come from your policies instead of a guess.',
+    tools: 'pgvector (vector search inside Postgres) or Pinecone',
+  },
+  {
+    layer: 'Tool calls',
+    does: 'Looks up live data or takes an approved action, such as checking an order or booking a slot.',
+    tools: 'Function calling into Shopify, HubSpot, Zendesk, Stripe, or Google Calendar',
+  },
+  {
+    layer: 'Channels',
+    does: 'Carries the conversation to the places customers already use.',
+    tools: 'Website widget, SMS through Twilio, WhatsApp Business Platform',
+  },
+  {
+    layer: 'Guardrails and handoff',
+    does: 'Decides when to stop and passes the chat to a person with the full transcript.',
+    tools: 'Escalation rules in code, handoff to Zendesk, Slack, or email',
+  },
+] as const;
+
 /* ─── FAQ categories ─────────────────────────────────────────────────────── */
 const FAQ_CATEGORIES = [
   { key: 'what-is',    label: 'What Is AI Chatbot Dev' },
@@ -465,7 +497,11 @@ const FAQ_CATEGORIES = [
   { key: 'trust',     label: 'Trust & Results' },
 ];
 
-/* ─── FAQ items - 21 conversational Q-A pairs, AI-citation optimized ────── */
+/* ─── FAQ items - 28 conversational Q-A pairs, AI-citation optimized ────── */
+/* 5 were ported 2026-09-17 from the retired duplicate chatbot page (now a 301
+   to this URL). Facts fetch-verified that day: 47 CFR 64.1200 on eCFR, FCC
+   rulings FCC 24-17 and FCC 24-24, WhatsApp Business Platform pricing docs, and
+   Anthropic's embeddings and evaluation guides. */
 const FAQ_ITEMS = [
 
   /* ── What Is AI Chatbot Development ── */
@@ -493,6 +529,12 @@ const FAQ_ITEMS = [
     answer:
       'We deploy OpenAI GPT-4o, Anthropic Claude 3.5 Sonnet, and Google Gemini based on your goals. Orchestration relies on LangChain, Botpress, and Voiceflow. We choose the model that best fits your workflow and budget.',
   },
+  {
+    category: 'what-is',
+    question: 'What is the difference between an AI chatbot and a scripted chatbot?',
+    answer:
+      'A scripted chatbot follows a fixed decision tree of buttons and keywords. It works until a customer phrases something the script did not expect, then it loops or gives up. An AI chatbot uses a language model to understand the question in plain words, answers from your own documents, and can check live data such as order status. Scripts cost less to run and behave the same way every time, so they still fit simple menus.',
+  },
 
   /* ── Process & Timeline ── */
   {
@@ -518,6 +560,12 @@ const FAQ_ITEMS = [
     question: 'What happens after the chatbot launches?',
     answer:
       'Every project includes a 30-day post-launch warranty. We monitor conversation logs, tune answer quality, and train your staff. Afterward, you can self-manage or retain us for ongoing updates.',
+  },
+  {
+    category: 'process',
+    question: 'How do you test a chatbot before customers use it?',
+    answer:
+      'We build a test set from real questions your team already gets, including awkward and off-topic ones. Each answer is graded, automatically where possible, on whether it is correct, whether it used the right source, and whether it handed off when it should. Anthropic, which makes Claude, advises that tests mirror real-world use and include edge cases. We rerun the same set after every prompt or data change.',
   },
 
   /* ── Pricing & ROI ── */
@@ -571,6 +619,18 @@ const FAQ_ITEMS = [
     answer:
       'No developer is required. An intuitive admin panel lets your team update FAQs, tune answers, and inspect transcripts. If an external API changes, our support team handles the update for you.',
   },
+  {
+    category: 'technical',
+    question: 'How do you train a chatbot on our own documents?',
+    answer:
+      'Usually we do not retrain the model at all. We split your documents into short passages and turn each one into an embedding, a list of numbers that captures meaning. When a question arrives, the bot finds the closest passages and answers from them. This method is called retrieval augmented generation (RAG). It cuts down on made-up answers but does not remove them, so we test it and keep a human handoff in place.',
+  },
+  {
+    category: 'technical',
+    question: 'Can the chatbot message customers first, not just reply?',
+    answer:
+      'Yes, when an event triggers it, such as a shipped order or an appointment reminder. Each channel sets its own rules. On WhatsApp, a business can send free-form messages for 24 hours after a customer writes in, and only template messages outside that window. In the US, automated marketing texts also need prior express written consent from the customer, and opt-out requests must be honored.',
+  },
 
   /* ── Trust & Results ── */
   {
@@ -589,7 +649,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from using a DIY tool like Intercom Fin or Drift?',
     answer:
-      'DIY software tools rely on rigid templates and charge perpetual monthly seat fees. FactoryJet builds a custom chatbot tailored to your tech stack. You own the code outright with zero platform fees.',
+      'Tools like Intercom Fin are faster to switch on. Fin bills per outcome, and its data connectors can reach other systems that have an API. FactoryJet builds a custom chatbot tailored to your tech stack instead. You own the code outright and pay no platform fees after delivery, only your own model and hosting costs. We build custom chatbots, so weigh this answer with that interest in mind.',
   },
   {
     category: 'trust',
@@ -602,6 +662,12 @@ const FAQ_ITEMS = [
     question: 'How is FactoryJet different from a US AI development agency?',
     answer:
       'We differ in three ways. First, our projects are fixed-price and milestone-paid. Second, you work directly with engineers without account manager delays. Third, we have delivered 500+ systems for real businesses.',
+  },
+  {
+    category: 'trust',
+    question: 'Do SMS and voice chatbots have to follow TCPA rules?',
+    answer:
+      'Yes. Under the Telephone Consumer Protection Act (TCPA), the FCC treats a text sent with an autodialer as a call. In 2024 it also ruled that AI-generated voices count as artificial voices, so those calls need prior express consent from the person being called. Automated marketing calls and texts need prior express written consent. People can opt out in any reasonable way, and the request must be honored within ten business days.',
   },
 
   // ── Choosing an agency: money-query coverage, added 2026-06-11 ──
@@ -681,7 +747,7 @@ export default function AIChatbotDevelopmentPage() {
         formSlot={<HeroInlineForm region="us" source="us_services_ai_chatbot_development_hero" />}
           eyebrow="AI CHATBOT DEVELOPMENT · USA"
           headline="A Chatbot That Answers, Qualifies, and Books, While You're Asleep"
-          lead="Your best customers expect an answer in seconds, not hours. FactoryJet builds custom AI chatbots, for customer support, lead generation, e-commerce, and appointment booking, that respond instantly, connect to your existing tools, and cost fixed-price vs a US chatbot agency."
+          lead="Your best customers expect an answer in seconds, not hours. FactoryJet builds custom AI chatbots, for customer support, lead generation, e-commerce, and appointment booking, that respond instantly, connect to your existing tools, and come with a fixed price set after discovery."
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
             '500+ businesses served',
@@ -912,7 +978,7 @@ export default function AIChatbotDevelopmentPage() {
             {
               icon: '💸',
               title: 'DIY chatbot tools charge you forever and still need manual work',
-              body: 'SaaS chatbot tools like Intercom Fin, Drift, or Tidio charge recurring annual fees and still require your team to write and maintain the knowledge base. They can\'t pull live data from your custom systems. FactoryJet builds a chatbot that connects to your actual tools and that you own outright, no monthly seat fees after delivery.',
+              body: 'SaaS chatbot tools like Intercom Fin, Drift, or Tidio charge recurring fees and still require your team to write and maintain the knowledge base. FactoryJet builds a chatbot that connects to your actual tools and that you own outright, no monthly seat fees after delivery.',
             },
           ]}
         />
@@ -990,7 +1056,7 @@ export default function AIChatbotDevelopmentPage() {
                 />
                 <h3 className="font-semibold text-[#0F0F12] text-lg mb-1">Retrieval &amp; Vector Pipeline</h3>
                 <p className="text-sm text-[#4A4A45]">
-                  High-speed embedding lookup routes live queries to verified knowledge sources with zero hallucination risk.
+                  High-speed embedding lookup grounds each answer in your verified knowledge sources, which cuts down on made-up answers.
                 </p>
               </div>
               <div className="bg-white p-4 rounded-xl border border-[#E5E5DC] shadow-sm">
@@ -1020,6 +1086,91 @@ export default function AIChatbotDevelopmentPage() {
                 </p>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* ── 9C. THE BUILD, LAYER BY LAYER ────────────────────────────────────
+            Ported 2026-09-17 from the retired duplicate chatbot page (301 to
+            this URL). Linked claims fetch-verified that day. */}
+        <section className="py-16 bg-white border-b border-[#E5E5DC]">
+          <div className="max-w-6xl mx-auto px-6">
+            <p className="text-sm font-semibold text-[#B23E13] uppercase tracking-widest mb-3">
+              THE BUILD, LAYER BY LAYER
+            </p>
+            <h2 className="text-3xl font-bold text-[#0F0F12] mb-6">
+              What a Production AI Chatbot Is Made Of
+            </h2>
+            <p className="text-base text-[#4A4A45] max-w-3xl mb-8 leading-relaxed">
+              A chatbot that answers from your real data is several parts working together, and each part can
+              fail on its own. Here is what each layer does, and the tools we usually pick for it.
+            </p>
+
+            <div className="overflow-x-auto rounded-xl border border-[#E5E5DC]">
+              <table className="w-full min-w-[640px] text-left">
+                <caption className="sr-only">
+                  The five layers of a production AI chatbot, what each layer does, and the tools commonly used for it
+                </caption>
+                <thead>
+                  <tr className="border-b border-[#E5E5DC] bg-[#FAFAF7]">
+                    <th scope="col" className="px-5 py-3 font-fj-mono text-[11px] font-semibold uppercase tracking-widest text-[#4A4A45]">
+                      Layer
+                    </th>
+                    <th scope="col" className="px-5 py-3 font-fj-mono text-[11px] font-semibold uppercase tracking-widest text-[#4A4A45]">
+                      What it does
+                    </th>
+                    <th scope="col" className="px-5 py-3 font-fj-mono text-[11px] font-semibold uppercase tracking-widest text-[#4A4A45]">
+                      Tools we usually use
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-[#E5E5DC]">
+                  {CHATBOT_LAYERS.map((row) => (
+                    <tr key={row.layer} className="bg-white">
+                      <th scope="row" className="px-5 py-4 align-top text-sm font-semibold text-[#0F0F12]">
+                        {row.layer}
+                      </th>
+                      <td className="px-5 py-4 align-top text-sm text-[#4A4A45]">{row.does}</td>
+                      <td className="px-5 py-4 align-top text-sm text-[#4A4A45]">{row.tools}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <p className="text-base text-[#4A4A45] max-w-3xl mt-8 leading-relaxed">
+              Two details decide how safe the chatbot is. Retrieval runs on embeddings, which are lists of numbers
+              that capture what a passage means, so a question can find the right policy even when the wording
+              differs (
+              <a
+                href="https://platform.claude.com/docs/en/build-with-claude/embeddings"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#B23E13] underline font-medium"
+              >
+                embeddings guide
+              </a>
+              ). With tool calling, the model never touches your systems directly. It returns a structured
+              request, and your application decides whether to run it (
+              <a
+                href="https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#B23E13] underline font-medium"
+              >
+                tool use documentation
+              </a>
+              ). Channels add their own rules as well. On WhatsApp, a business can send free-form replies for 24
+              hours after a customer writes in, and only template messages after that (
+              <a
+                href="https://developers.facebook.com/docs/whatsapp/pricing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#B23E13] underline font-medium"
+              >
+                WhatsApp Business Platform docs
+              </a>
+              ).
+            </p>
           </div>
         </section>
 

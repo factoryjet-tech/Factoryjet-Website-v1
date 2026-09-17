@@ -53,9 +53,9 @@ const Footer: React.FC = () => {
               <li><Link href="/services/web-design" onClick={() => trackNavigation('Web Design', '/services/web-design', 'footer')} className="hover:text-jet-blue transition-colors">Web Design</Link></li>
               <li><Link href="/services/ecommerce-development" onClick={() => trackNavigation('E-Commerce', '/services/ecommerce-development', 'footer')} className="hover:text-jet-blue transition-colors">E-Commerce</Link></li>
               <li><Link href="/services/ai-agent-development" onClick={() => trackNavigation('AI Agent Development', '/services/ai-agent-development', 'footer')} className="hover:text-jet-blue transition-colors">AI Agent Development</Link></li>
-              <li><Link href="/services/ai-agent-development/ai-chatbot" onClick={() => trackNavigation('AI Chatbot', '/services/ai-agent-development/ai-chatbot', 'footer')} className="hover:text-jet-blue transition-colors">AI Chatbot</Link></li>
-              <li><Link href="/services/ai-agent-development/ai-sales-agent" onClick={() => trackNavigation('AI Sales Agent', '/services/ai-agent-development/ai-sales-agent', 'footer')} className="hover:text-jet-blue transition-colors">AI Sales Agent</Link></li>
-              <li><Link href="/services/ai-agent-development/ai-customer-support" onClick={() => trackNavigation('AI Customer Support', '/services/ai-agent-development/ai-customer-support', 'footer')} className="hover:text-jet-blue transition-colors">AI Customer Support</Link></li>
+              <li><Link href="/services/ai-chatbot-development" onClick={() => trackNavigation('AI Chatbot', '/services/ai-chatbot-development', 'footer')} className="hover:text-jet-blue transition-colors">AI Chatbot</Link></li>
+              <li><Link href="/services/ai-sdr" onClick={() => trackNavigation('AI SDR Agent', '/services/ai-sdr', 'footer')} className="hover:text-jet-blue transition-colors">AI SDR Agent</Link></li>
+              <li><Link href="/services/ai-customer-support-agents" onClick={() => trackNavigation('AI Customer Support', '/services/ai-customer-support-agents', 'footer')} className="hover:text-jet-blue transition-colors">AI Customer Support</Link></li>
               <li><Link href="/services/ai-agent-development/ai-voice-agent" onClick={() => trackNavigation('AI Voice Agent', '/services/ai-agent-development/ai-voice-agent', 'footer')} className="hover:text-jet-blue transition-colors">AI Voice Agent</Link></li>
             </ul>
           </div>

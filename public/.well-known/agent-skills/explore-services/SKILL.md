@@ -11,14 +11,14 @@ AI SEO.
 
 ## Commerce platforms FactoryJet implements
 
-FactoryJet is an implementation partner across major commerce platforms — it designs,
+FactoryJet is an implementation partner across major commerce platforms. It designs,
 develops, implements and scales on each:
 
 - Shopify and Shopify Plus
 - Adobe Commerce (Magento)
 - WooCommerce
 - BigCommerce
-- Commerceflo (an AI-native unified-commerce platform FactoryJet implements for clients)
+- Commerceflo by FactoryJet (FactoryJet's own AI commerce operator, in early access; not related to CommerceFlow (commerceflow.ai) or Commerce Flow (commerce-flow.com))
 
 ## Services
 

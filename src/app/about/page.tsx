@@ -91,7 +91,7 @@ const WHAT_WE_DO = [
   { k: 'Scale', d: 'We stay through launch and beyond, tuning performance, adding channels, and handing your team a system they own and run.' },
 ];
 
-const PLATFORMS = ['Shopify', 'Shopify Plus', 'Adobe Commerce (Magento)', 'BigCommerce', 'WooCommerce', 'Headless', 'Commerceflo'];
+const PLATFORMS = ['Shopify', 'Shopify Plus', 'Adobe Commerce (Magento)', 'BigCommerce', 'WooCommerce', 'Headless', 'Commerceflo by FactoryJet'];
 
 const DIFFERENT = [
   { t: 'A services partner, not a tool', b: 'You hire us to build and implement commerce, then you own and operate it. There is no FactoryJet subscription and no lock-in.' },

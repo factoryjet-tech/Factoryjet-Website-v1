@@ -110,7 +110,7 @@ const TARGETS = [
     .map((c) => [`/${c}/seo`, `src/app/${c}/seo/page.tsx`, 'city']),
   ...['b2b-website-design', 'manufacturing-website-design', 'saas-website-design',
       'restaurant-website-design', 'nonprofit-website-design', 'ai-agents-for-real-estate',
-      'ai-agents-for-healthcare', 'ecommerce-app-development']
+      'healthcare-ai-agents', 'ecommerce-app-development']
     .map((s) => [`/services/${s}`, `src/app/services/${s}/page.tsx`, 'service']),
 ];
 

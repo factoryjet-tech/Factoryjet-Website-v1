@@ -13,7 +13,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
-const PAGE_MODIFIED = '2026-09-03';
+const PAGE_MODIFIED = '2026-09-17';
 const CANONICAL_URL = 'https://factoryjet.com/services/ai-customer-support-agents';
 
 /** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'AI Customer Support Agent Development USA | FactoryJet',
     description:
-      'Build custom autonomous support agents that resolve tickets in Zendesk, Gorgias, and Intercom with human-in-the-loop governance and zero hallucination risk.',
+      'Build custom autonomous support agents that resolve tickets in Zendesk, Gorgias, and Intercom with human-in-the-loop governance and hard limits on every action.',
     images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: {
@@ -119,6 +119,15 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     answer:
       "Yes. The agent speaks English and Spanish natively. It detects which language the customer is using from their very first message. Then it answers in that same language, pulling from a translated knowledge base. A Spanish-speaking customer never has to pick a language option. They never get routed through an English-first menu first. They just get a real answer, in Spanish, right away.",
   },
+  // Ported 2026-09-17 from the retired duplicate support page (301 to this URL).
+  // Vendor billing and connector facts fetch-verified that day on intercom.com
+  // and zendesk.com (pricing pages and help center articles).
+  {
+    category: 'basics',
+    question: 'How is a custom support agent different from Intercom Fin or Zendesk AI agents?',
+    answer:
+      'Vendor agents are the fastest way to start. Intercom Fin bills per outcome and Zendesk bills per automated resolution, and both can reach outside systems through their own connectors or actions. A custom agent makes more sense when you need write actions and approval rules that span several systems, or when you want to own the code outright. We build custom agents, so weigh our view with that interest in mind.',
+  },
   {
     category: 'integrations',
     question: 'Which help desk platforms and ticketing systems do you integrate with?',
@@ -167,6 +176,20 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     answer:
       'The architecture is built for compliance. It meets SOC 2 Type II controls. It follows the California Consumer Privacy Act and PCI DSS payment standards. Sensitive card numbers are tokenized, so the agent never stores or logs the real number in plain text. A customer can ask to delete their data, or make a request under CCPA. That request routes to a documented manual review process.',
   },
+  // Ported 2026-09-17 (see note above). OWASP Top 10 for LLM Applications 2025
+  // and Twilio Verify docs fetch-verified that day.
+  {
+    category: 'safety',
+    question: 'How does the agent confirm who a customer is before sharing order details?',
+    answer:
+      'It starts with what you already know. The agent checks that the email address or phone number matches the order record, and it can ask for the order number as well. For riskier requests, such as changing a shipping address or a payment method, it first sends a one-time code by text or email through a service such as Twilio Verify, and acts only after the customer enters it.',
+  },
+  {
+    category: 'safety',
+    question: 'How do you stop prompt injection, like a customer telling the agent to ignore its rules?',
+    answer:
+      'Prompt injection is a message written to change how the AI behaves. OWASP puts it first in its Top 10 risks for large language model applications. We assume some attempts will get past the prompt, so the model never writes to your systems directly. Every action passes through code that checks permissions and dollar limits, and high-risk actions wait for a person to approve them.',
+  },
   {
     category: 'process',
     question: 'What is the typical timeline to build and deploy a custom AI support agent?',
@@ -195,7 +218,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'scenarios',
     question: 'Can the AI agent look up live shipment tracking instead of giving a generic "processing" reply?',
     answer:
-      "Yes. For an order-status question, the agent looks up the order in Shopify or NetSuite. Then it pulls live tracking straight from the carrier's own API. The customer gets the real current location and delivery window, not a generic processing label. It only escalates to a human when a shipment is marked lost, badly delayed, or when the carrier's API itself fails to respond.",
+      "Yes. For an order-status question, the agent looks up the order in Shopify or NetSuite. Then it pulls live tracking straight from the carrier's own API. The customer gets the real current location and delivery window, not a generic processing label. It only escalates to a human when a shipment is marked lost, badly delayed, or when the carrier's API still fails to respond after retries.",
   },
   {
     category: 'scenarios',
@@ -220,6 +243,20 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     question: 'Beyond English and Spanish, can the AI support agent be extended to additional languages?',
     answer:
       'The agent ships with native English and Spanish support out of the box. Those cover what most US commerce brands need first. Its answers come from a shared RAG knowledge base, not hard-coded scripts. That matters for adding new languages later. We just translate the knowledge base and check the tone. We do not have to rebuild the agent\'s underlying logic.',
+  },
+  // Ported 2026-09-17 (see note above). Image handling guidance fetch-verified
+  // that day in Anthropic's vision documentation.
+  {
+    category: 'scenarios',
+    question: 'Can the agent read photos customers attach, like a damaged item?',
+    answer:
+      'Yes. Current models such as Claude can read images, so the agent can describe the damage, match the photo to the order, and draft a return or warranty case. Anthropic, which makes Claude, tells builders not to rely on image readings for high-stakes decisions without human review. So a person approves any refund or replacement that rests on a photo before it goes out.',
+  },
+  {
+    category: 'scenarios',
+    question: 'What happens if Shopify or a carrier API is down when a ticket arrives?',
+    answer:
+      'The agent does not guess. If a lookup fails or times out, it tells the customer it is still checking and will follow up, then holds the ticket and retries on a schedule. If the outage lasts, the ticket goes to a person with a note saying which system failed. The agent never sends an order status it could not confirm from a live system.',
   },
 ];
 
@@ -803,7 +840,8 @@ export default function AiCustomerSupportAgentsPage() {
             <div className="text-center max-w-3xl mx-auto mb-10">
               <h2 className="pp-h2 text-center">Support Automation Approaches Compared</h2>
               <p className="text-base text-[#46403B] mt-3">
-                Detailed comparison of custom engineered AI agents versus standard alternatives.
+                How a custom agent compares with the usual alternatives. We build custom agents, so weigh this
+                table with that interest in mind.
               </p>
             </div>
 
@@ -813,7 +851,7 @@ export default function AiCustomerSupportAgentsPage() {
                   <tr>
                     <th>Capabilities</th>
                     <th>Custom AI Agent (FactoryJet)</th>
-                    <th>Generic SaaS Add-on Bots</th>
+                    <th>Help Desk Vendor AI Agents</th>
                     <th>Offshore Support Outsourcing</th>
                   </tr>
                 </thead>
@@ -821,31 +859,31 @@ export default function AiCustomerSupportAgentsPage() {
                   <tr className="tr-me">
                     <td className="font-bold">Integration Depth</td>
                     <td className="font-semibold text-[#F05A28]">Deep custom ERP, WMS &amp; Shopify APIs</td>
-                    <td>Surface-level FAQ text replies</td>
+                    <td>Vendor connectors and actions, within the vendor&apos;s limits</td>
                     <td>Manual UI clicks across screens</td>
                   </tr>
                   <tr>
                     <td className="font-bold">First Response Time</td>
                     <td className="font-semibold text-[#14110F]">Sub-60 seconds 24/7/365</td>
-                    <td>Instant but limited to fixed scripts</td>
+                    <td>Instant, inside the vendor&apos;s platform</td>
                     <td>15 to 45 minute queue lag</td>
                   </tr>
                   <tr className="tr-me">
                     <td className="font-bold">Hallucination Safeguards</td>
                     <td className="font-semibold text-[#F05A28]">Typed JSON schemas &amp; refund limits</td>
-                    <td>Prompt-level warnings only</td>
+                    <td>Set by the vendor&apos;s platform</td>
                     <td>Dependent on agent training</td>
                   </tr>
                   <tr>
                     <td className="font-bold">IP &amp; Code Ownership</td>
                     <td className="font-semibold text-[#14110F]">100% Client Owned (Private Git)</td>
-                    <td>0% (Locked into vendor subscription)</td>
+                    <td>None, you subscribe to the vendor&apos;s agent</td>
                     <td>N/A</td>
                   </tr>
                   <tr className="tr-me">
                     <td className="font-bold">Evaluation Harness</td>
                     <td className="font-semibold text-[#F05A28]">Pre-launch testing on 500+ real cases</td>
-                    <td>Untested generic LLM baseline</td>
+                    <td>Varies by vendor</td>
                     <td>Sample QA call audits</td>
                   </tr>
                 </tbody>
@@ -975,7 +1013,128 @@ export default function AiCustomerSupportAgentsPage() {
                   <Link href="/services/healthcare-ai-agents" className="underline hover:text-[#F05A28]">
                     healthcare AI agents
                   </Link>{' '}
-                  work, where the stakes for a mistake are even higher.
+                  work, where the stakes for a mistake are even higher. After rollout, ongoing monitoring, test runs and
+                  model upgrades are covered by our{' '}
+                  <Link href="/services/ai-agent-monitoring" className="underline hover:text-[#F05A28]">
+                    AI agent monitoring and support
+                  </Link>{' '}
+                  plans.
+                </p>
+              </li>
+            </ol>
+          </div>
+        </section>
+
+        {/* HONEST FIT CHECK
+            Ported 2026-09-17 from the retired duplicate support page (301 to this
+            URL). Every vendor fact below was fetch-verified that day on the
+            vendor's own pricing page or documentation. FactoryJet's interest is
+            disclosed in the intro, as the honest-comparison rule requires. */}
+        <section className="pp-section">
+          <div className="pp-container">
+            <div className="max-w-3xl mb-10">
+              <h2 className="pp-h2">When a Custom Support Agent Is the Wrong Call</h2>
+              <p className="text-base text-[#46403B] mt-3 leading-relaxed">
+                We build custom agents, so read this knowing we have a stake in the answer. Your help desk vendor may
+                already sell an AI agent that covers your queue, and switching one on is faster than any build. Here
+                is how three of them work, described from their own documentation. For a wider comparison that adds
+                Klaviyo, Rep AI, Alhena, Algolia and Shopify Sidekick, see our guide to the{' '}
+                <Link href="/blog/best-ai-agents-for-ecommerce-2026" className="underline hover:text-[#F05A28]">
+                  best AI agents for ecommerce in 2026
+                </Link>
+                .
+              </p>
+            </div>
+
+            <div className="overflow-x-auto mb-10">
+              <table className="pp-table">
+                <thead>
+                  <tr>
+                    <th>Option</th>
+                    <th>How it bills</th>
+                    <th>Can it act in other systems?</th>
+                    <th>Worth knowing</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="font-bold">Intercom Fin</td>
+                    <td>
+                      $0.99 per outcome, per{' '}
+                      <a
+                        href="https://www.intercom.com/pricing"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline hover:text-[#F05A28]"
+                      >
+                        Intercom pricing
+                      </a>
+                    </td>
+                    <td>Yes. Data connectors can fetch live data and take actions in any system with an API, such as Shopify or Stripe.</td>
+                    <td>A minimum monthly commitment applies when Fin runs on top of another help desk.</td>
+                  </tr>
+                  <tr>
+                    <td className="font-bold">Zendesk AI agents</td>
+                    <td>Per automated resolution</td>
+                    <td>Yes. Custom actions can update data outside Zendesk through an API you specify.</td>
+                    <td>Included in every Zendesk Suite and Support plan.</td>
+                  </tr>
+                  <tr>
+                    <td className="font-bold">Gorgias AI Agent</td>
+                    <td>Charged only when it resolves a conversation</td>
+                    <td>Yes, including Shopify order actions such as cancel order and edit shipping address.</td>
+                    <td>
+                      Those Shopify changes are not passed on to third-party logistics (3PL) or fulfillment apps, per{' '}
+                      <a
+                        href="https://docs.gorgias.com/en-US/ai-agent-actions-make-changes-to-shopify-orders-757792"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline hover:text-[#F05A28]"
+                      >
+                        Gorgias documentation
+                      </a>
+                      .
+                    </td>
+                  </tr>
+                  <tr className="tr-me">
+                    <td className="font-bold">Custom agent (FactoryJet)</td>
+                    <td>Fixed-price build, then your own model and hosting costs</td>
+                    <td>Yes, any system with an API, with limits and approvals written in code you own.</td>
+                    <td>Slower to launch than switching on a vendor agent, and your team owns the upkeep.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <ol className="grid grid-cols-1 md:grid-cols-3 gap-6 list-none p-0 m-0">
+              <li className="pp-card p-6 bg-white">
+                <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#F05A28] block mb-2">
+                  01
+                </span>
+                <h3 className="text-lg font-bold text-[#14110F] mb-2">Your help desk agent already covers the queue.</h3>
+                <p className="text-sm text-[#46403B] leading-relaxed">
+                  Switch it on and test it on a sample of your real tickets first. If it resolves your top ticket types
+                  within your rules, a custom build adds cost without adding much.
+                </p>
+              </li>
+              <li className="pp-card p-6 bg-white">
+                <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#F05A28] block mb-2">
+                  02
+                </span>
+                <h3 className="text-lg font-bold text-[#14110F] mb-2">Your policies live only in people&apos;s heads.</h3>
+                <p className="text-sm text-[#46403B] leading-relaxed">
+                  An agent cannot follow return, refund, or warranty rules that nobody has written down. Write the rules
+                  first, then automate them.
+                </p>
+              </li>
+              <li className="pp-card p-6 bg-white">
+                <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#F05A28] block mb-2">
+                  03
+                </span>
+                <h3 className="text-lg font-bold text-[#14110F] mb-2">Your order data has no API.</h3>
+                <p className="text-sm text-[#46403B] leading-relaxed">
+                  If order records sit in a system with no way to read or update them, an agent can talk but cannot act.
+                  Fix the data access before you pay for an agent.
                 </p>
               </li>
             </ol>

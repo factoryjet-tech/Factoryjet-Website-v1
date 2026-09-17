@@ -284,7 +284,7 @@ export const post: BlogPost = {
         </p>
         <div className="flex flex-wrap gap-4">
           <a
-            href="/services/ai-agent-development/ai-sales-agent"
+            href="/services/ai-sdr"
             className="inline-block bg-orange-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-orange-700 transition-colors"
           >
             Explore AI Sales &amp; SDR Services

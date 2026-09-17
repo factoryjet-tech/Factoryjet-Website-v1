@@ -16,7 +16,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
-const PAGE_MODIFIED = '2026-09-14';
+const PAGE_MODIFIED = '2026-09-17';
 
 export const metadata: Metadata = {
   title: 'B2B E-Commerce Agency: Wholesale Platforms | FactoryJet',
@@ -61,11 +61,11 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
   { category: 'basics', question: 'What is the difference between B2B and DTC ecommerce?', answer: 'A DTC site sells to consumers at one price. A B2B site adds logins for trade accounts, tiered or contract pricing, net terms, quotes and approvals, account hierarchies, and gated catalogs. We can run both on one unified system.' },
   { category: 'basics', question: 'What are some examples of B2B ecommerce?', answer: 'A manufacturer letting distributors place and reorder online; a wholesaler giving each trade account its own price list and net terms; a brand running a DTC store and a gated B2B portal on the same catalog; a distributor with quote-and-approve workflows for large orders. We build all of these.' },
   { category: 'basics', question: 'How do you scope and price B2B ecommerce projects?', answer: 'We scope each engagement on integration depth, catalog complexity, and custom trade workflows. We send a fixed milestone proposal before any work starts, ensuring total cost transparency without hourly billing surprises.' },
-  { category: 'basics', question: 'Who else builds B2B ecommerce platforms?', answer: 'Specialist B2B platform vendors such as OroCommerce and Virto Commerce sell software built for distribution. Large generalist agencies take on B2B builds alongside DTC work. We build on Shopify Plus, Adobe Commerce, BigCommerce, or Commerceflo and focus on the ERP-integrated end of B2B.' },
+  { category: 'basics', question: 'Who else builds B2B ecommerce platforms?', answer: 'Specialist B2B platform vendors such as OroCommerce and Virto Commerce sell software built for distribution. Large generalist agencies take on B2B builds alongside DTC work. We build on Shopify Plus, Adobe Commerce, BigCommerce, or our own Commerceflo and focus on the ERP-integrated end of B2B.' },
   { category: 'basics', question: 'What are the benefits of B2B ecommerce?', answer: 'Self-service ordering your buyers prefer, fewer manual errors, faster reorders, larger average orders, and hours back for your sales team. One system replaces the email-and-phone process that slows everyone down.' },
   { category: 'basics', question: 'How big is the B2B ecommerce market?', answer: 'US B2B ecommerce sales across sites, password-protected portals, and apps reached roughly $2.3 trillion in 2023, growing 17% year over year, according to Digital Commerce 360.' },
   { category: 'basics', question: 'Can DTC and B2B run on one site with different pricing?', answer: 'Yes. We build one storefront that serves retail shoppers and gives trade buyers their own login with tiered or contract pricing, net terms, and reordering, on one catalog and one inventory.' },
-  { category: 'platforms', question: 'What is the best B2B ecommerce platform?', answer: 'There is no single best one; it depends on your catalog size, B2B rules, and budget. Shopify Plus suits a clean DTC-plus-B2B model on one store, Adobe Commerce (Magento) suits deep native B2B and very large catalogs, BigCommerce offers strong mid-market B2B value, and Commerceflo fits when a unified multi-channel engine is the goal.' },
+  { category: 'platforms', question: 'What is the best B2B ecommerce platform?', answer: 'There is no single best one; it depends on your catalog size, B2B rules, and budget. Shopify Plus suits a clean DTC-plus-B2B model on one store, Adobe Commerce (Magento) suits deep native B2B and very large catalogs, BigCommerce offers strong mid-market B2B value, and our own Commerceflo fits when a unified multi-channel engine is the goal.' },
   { category: 'platforms', question: 'How do I choose a B2B ecommerce platform?', answer: 'Match the platform to five things: your catalog size and complexity, your pricing rules (tiers, contracts, customer-specific catalogs), the integrations you need (ERP, PIM, POS, marketplaces), whether you also sell DTC, and your budget.' },
   { category: 'platforms', question: 'Shopify Plus vs Adobe Commerce vs BigCommerce for B2B?', answer: 'Shopify Plus for speed, a clean admin, and DTC + B2B on one store. Adobe Commerce for deep native B2B (company accounts, shared catalogs, requisition lists) and very large catalogs. BigCommerce for strong B2B features at mid-market value.' },
   { category: 'platforms', question: 'Is there an open-source B2B ecommerce platform?', answer: 'Yes. Adobe Commerce (Magento Open Source) and WooCommerce are open-source options we build B2B on. They offer full control and no platform fees, in exchange for hosting and maintenance you own.' },
@@ -248,7 +248,7 @@ const COMPARE = [
   { name: 'Adobe Commerce (Magento)', best: 'Deep, complex B2B', b2b: 'Requisition lists, shared catalogs, quotes, company accounts', catalog: 'Large to very large', me: false },
   { name: 'BigCommerce', best: 'Mid-market B2B value', b2b: 'Price lists, customer groups, B2B Edition', catalog: 'Mid to large', me: false },
   { name: 'Salesforce Commerce Cloud', best: 'Enterprise B2B', b2b: 'B2B Commerce, accounts, contracts at scale', catalog: 'Very large', me: false },
-  { name: 'WooCommerce / Commerceflo', best: 'Full control / unified engine', b2b: 'B2B via build; unified catalog and inventory', catalog: 'Small to mid / any', me: true },
+  { name: 'WooCommerce / Commerceflo (ours)', best: 'Full control / unified engine', b2b: 'B2B via build; unified catalog and inventory', catalog: 'Small to mid / any', me: true },
 ];
 
 const CHOOSE = [
@@ -549,7 +549,7 @@ export default function B2BEcommercePage() {
               Wholesale is B2B with its own rules. A wholesale ecommerce platform has to hold trade-only pricing behind a
               login, enforce minimums and case quantities, onboard accounts with credit checks, and let a buyer reorder
               forty SKUs without rebuilding the basket. We build that on Shopify Plus, Adobe Commerce, BigCommerce, or
-              Commerceflo, wired to the ERP that already holds your price lists.
+              Commerceflo by FactoryJet, wired to the ERP that already holds your price lists.
             </p>
             <ul className="pp-bento" style={{ marginTop: '36px' }}>
               {WHOLESALE.map((u) => (
@@ -593,7 +593,11 @@ export default function B2BEcommercePage() {
             <p className="pp-mlabel">// platforms</p>
             <h2 style={{ marginTop: '10px' }}>B2B ecommerce platform comparison</h2>
             <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '62ch' }}>
-              We are platform-agnostic. Here is how the leading B2B ecommerce platforms compare, so you can see where each fits.
+              We are platform-agnostic. Here is how the leading B2B ecommerce platforms compare, so you can see where each fits. For a deeper comparison built from each vendor&apos;s own documentation, including OroCommerce, Sana Commerce, SAP Commerce Cloud and commercetools, read our{' '}
+              <Link href="/blog/best-b2b-ecommerce-platform-manufacturers-distributors-2026" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
+                B2B ecommerce platform guide for manufacturers and distributors
+              </Link>
+              .
             </p>
             <div style={{ marginTop: '28px', overflowX: 'auto' }}>
               <table className="pp-table">

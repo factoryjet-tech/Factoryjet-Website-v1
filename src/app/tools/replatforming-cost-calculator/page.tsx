@@ -18,12 +18,12 @@ const ReplatformingScopeEstimator = dynamic(
 );
 
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
-const PAGE_MODIFIED = '2026-09-01';
+const PAGE_MODIFIED = '2026-09-17';
 
 export const metadata: Metadata = {
   title: 'Ecommerce Replatforming Cost Calculator | FactoryJet',
   description:
-    'Estimate ecommerce replatforming costs to Shopify Plus. Model SKU catalog volume, custom ERP connectors, and zero-downtime cutover schedules. Get an audit.',
+    'Estimate replatforming scope for Shopify Plus. Model SKU catalog volume, ERP connectors and cutover timelines, then compare published cost ranges.',
   keywords: [
     'ecommerce replatforming cost',
     'shopify plus migration calculator',
@@ -48,7 +48,13 @@ export const metadata: Metadata = {
     description: 'Calculate ecommerce replatforming scope, migration timelines, and maintenance savings with our interactive estimator.',
     images: ['https://factoryjet.com/og-default.png'],
   },
-  alternates: { canonical: 'https://factoryjet.com/tools/replatforming-cost-calculator' },
+  alternates: {
+    canonical: 'https://factoryjet.com/tools/replatforming-cost-calculator',
+    languages: {
+      'en-US': 'https://factoryjet.com/tools/replatforming-cost-calculator',
+      'x-default': 'https://factoryjet.com/tools/replatforming-cost-calculator',
+    },
+  },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
@@ -74,25 +80,25 @@ const FAQ_ITEMS = [
     category: 'scope',
     question: 'How long does an enterprise migration to Shopify Plus or BigCommerce take?',
     answer:
-      'Standard mid-market replatforming deployments typically take between 4 and 8 weeks. Highly customized enterprise architectures with deep NetSuite, SAP, or Dynamics 365 ERP synchronization take between 8 and 14 weeks. The timeline scales primarily with the number of systems that must stay synchronized during cutover, not with catalog size alone, since ERP integration testing is usually the longest single phase.',
+      'Shopify says Shopify Plus migrations average three to four months from kickoff to go-live, and a full replatform usually takes 3 to 6 months. Published agency plans vary with scope: 1Digital plans 12 weeks for a mid-market Magento 2 store and 16 to 20 weeks for larger, multi-store or B2B stores. Timelines grow with the number of systems that must stay in sync during cutover, and ERP integration testing is often the longest phase.',
   },
   {
     category: 'scope',
     question: 'Why do brands migrate from Magento and Salesforce to Shopify Plus?',
     answer:
-      'Brands migrate to eliminate mandatory security patching, server hosting maintenance, high developer retainers, and brittle monolithic extensions, replacing them with a fully managed cloud architecture backed by 99.99 percent uptime and native 1-click Shop Pay checkout. Most brands we talk to are also reacting to a specific pain point, a Black Friday outage on legacy servers or a checkout conversion gap versus competitors.',
+      'Brands migrate to stop managing security patches, server hosting, dependency upgrades and brittle extensions, and to move onto a hosted platform where Shopify reports 99.99 percent uptime on average during the biggest sales events of the year, with Shop Pay accelerated checkout built in. Many are also reacting to a specific pain point, such as an outage during a peak sale or an upgrade deadline on their current version.',
   },
   {
     category: 'scope',
     question: 'What ongoing maintenance cost savings occur after replatforming?',
     answer:
-      'By moving from self-hosted monolithic servers to Shopify Plus or BigCommerce, brands typically save $35,000 to $85,000 annually in dedicated cloud hosting, security monitoring, server patching, and emergency DevOps contractor retainers. That figure excludes the developer time freed up to work on merchandising and growth instead of firefighting server incidents during peak traffic events.',
+      'It depends on what you pay today. Moving from self-hosted servers to a hosted platform such as Shopify Plus or BigCommerce removes server hosting, security patching and dependency upgrades from your budget, but adds a platform fee and app subscriptions. Pull 12 months of hosting invoices, security retainers and developer time spent on upgrades, then compare that total with the new platform fees before you count any savings.',
   },
   {
     category: 'data',
     question: 'How are customer accounts and passwords migrated safely?',
     answer:
-      'Because customer passwords are encrypted using one-way cryptographic hashes (such as bcrypt or Argon2) in legacy databases, passwords cannot be decrypted. We migrate customer records using automated Multipass token activation or secure password-reset invitation funnels. Customers with an active session on launch day are signed in automatically through Multipass without ever noticing a password change was required.',
+      "Legacy platforms store customer passwords as one-way hashes (such as bcrypt or Argon2), so they cannot be decrypted, and Shopify says passwords can't be migrated with a CSV import. Most migrations send account activation emails so customers set a new password, or use new customer accounts with a one-time sign-in code. Shopify Multipass needs Plus and legacy customer accounts, and it only signs in customers who are already logged in on your own external site.",
   },
   {
     category: 'data',
@@ -108,7 +114,7 @@ const FAQ_ITEMS = [
   },
   {
     category: 'data',
-    question: 'What data validation processes ensure zero record loss during migration?',
+    question: 'How do you validate that no records are lost during migration?',
     answer:
       'We run automated reconciliation scripts that perform line-by-line checksum verification across legacy database exports and staging imports, ensuring exact record parity before DNS cutover. Every product, customer, and order record count is verified against the legacy source before we allow a go-live decision, so a partial or dropped import is caught in staging, not discovered by a customer after launch.',
   },
@@ -122,13 +128,13 @@ const FAQ_ITEMS = [
     category: 'seo',
     question: 'What happens to legacy URL structures that Shopify cannot support?',
     answer:
-      'Legacy deep category hierarchies (such as /category/subcategory/product.html) are redirected via strict 301 server rules to their corresponding /products/ or /collections/ paths, passing complete link equity to the new pages. We build the full redirect map before cutover, not after, so no URL is ever live on the new platform without its permanent redirect already in place.',
+      'Legacy deep category paths (such as /category/subcategory/product.html) get single-hop 301 redirects to their matching /products/ or /collections/ paths, which Google uses as a signal that the new URL should be the canonical one. Shopify stores can hold up to 100,000 redirects, or 20 million on Plus. We build the full redirect map before cutover, not after, so every changed URL has its permanent redirect in place at launch.',
   },
   {
     category: 'seo',
     question: 'How quickly should search engine rankings stabilize after launch?',
     answer:
-      'With complete 1-to-1 301 redirect mapping, indexation updates, and XML sitemap submissions to Google Search Console, organic traffic typically stabilizes within 7 to 14 days without long-term ranking drops. We monitor Search Console coverage reports daily through that window and correct any redirect gap or crawl error the moment it appears, rather than waiting for a scheduled check-in.',
+      "Google says rankings can fluctuate during a site move and that a medium-sized site can take a few weeks or more for Google to show the new URLs. Shopify's Magento migration guide calls a 5% to 10% dip in the first week common even with correct redirects, and says a sustained drop of more than 20% needs immediate investigation. We check Search Console daily through that window and fix redirect gaps as they appear.",
   },
   {
     category: 'seo',
@@ -144,21 +150,21 @@ const FAQ_ITEMS = [
   },
   {
     category: 'erp',
-    question: 'What is delta migration and why is it essential for zero-downtime launches?',
+    question: 'What is delta migration and why does it matter at launch?',
     answer:
-      'Delta migration is the process of migrating all new customer accounts, orders, and inventory adjustments generated on the legacy store during the final staging build window immediately prior to DNS cutover, ensuring zero data gap. Without it, any order placed on the old store during the final build hours would be permanently invisible to the new platform, a silent data loss most brands only discover during month-end reconciliation.',
+      'Delta migration is the process of migrating all new customer accounts, orders, and inventory adjustments generated on the legacy store during the final staging build window immediately prior to DNS cutover, so no recent records are left behind. Without it, any order placed on the old store during the final build hours would be permanently invisible to the new platform, a silent data loss most brands only discover during month-end reconciliation.',
   },
   {
     category: 'erp',
-    question: 'How does FactoryJet ensure zero downtime during domain DNS switch?',
+    question: 'How does FactoryJet keep downtime low during the domain DNS switch?',
     answer:
-      'We execute a choreographed cutover protocol: pre-warming CDN caches, lowering DNS TTL values 48 hours in advance, running real-time delta imports, switching records, and validating checkout within a 15-minute maintenance window. We schedule the cutover during your lowest-traffic hours and keep the legacy environment on standby so we can roll back within minutes if validation fails.',
+      'We lower DNS TTL values 24 to 48 hours in advance, as Shopify recommends, stage every redirect before the switch, run a final delta import of new orders and customers, then point the domain and place test orders. We schedule the cutover for your lowest-traffic hours, keep the legacy store on standby, and agree in writing on what triggers a rollback before launch day.',
   },
   {
     category: 'erp',
     question: 'How do we schedule a replatforming architecture review with founder Bhavesh Barot?',
     answer:
-      'You can schedule a direct 30-minute discovery session. We will evaluate your existing database schemas, ERP connectors, and deliver a detailed scope breakdown with fixed project milestones. You leave the call with a specific week-by-week timeline and fixed price tied to your actual catalog and integration complexity, not a generic range pulled from an average project.',
+      'You can schedule a direct 30-minute discovery session. We review your existing database schemas and ERP connectors and list the decisions that drive your timeline and cost. After the call we send a written scope, with milestones and a quote tied to your actual catalog and integration complexity, not a generic range pulled from an average project.',
   },
   {
     category: 'usage',
@@ -176,7 +182,7 @@ const FAQ_ITEMS = [
     category: 'usage',
     question: 'Are the annual DevOps savings figures guaranteed?',
     answer:
-      'No. The savings figure is modeled from typical hosting, patching, and contractor costs tied to your current source platform, with a modest upward adjustment for enterprise-scale catalogs. It is meant to size the opportunity, not replace an audit of your actual hosting invoices, security retainers, and DevOps contractor spend, which we review directly during a scoping call before quoting a fixed migration price.',
+      'No. The savings figure is modeled from typical hosting, patching, and contractor costs tied to your current source platform, with a modest upward adjustment for enterprise-scale catalogs. It is meant to size the opportunity, not replace an audit of your actual hosting invoices, security retainers, and DevOps contractor spend, which we review directly during a scoping call before quoting a migration.',
   },
   {
     category: 'usage',
@@ -252,7 +258,7 @@ export default function ReplatformingCostCalculatorPage() {
                 Ecommerce <span className="pp-grad">Replatforming Scope</span> Calculator
               </h1>
               <p className="pp-lead">
-                Estimate migration timelines, technical complexity, and DevOps savings. Model catalog volume, custom ERP connectors, SEO preservation, and zero-downtime cutover schedules.
+                Estimate migration timelines, technical complexity, and DevOps savings. Model catalog volume, custom ERP connectors, SEO redirects, and cutover schedules.
               </p>
               <HeroInlineForm
                 source="tools_replatforming_cost_calculator"
@@ -263,29 +269,36 @@ export default function ReplatformingCostCalculatorPage() {
 
             <div className="pp-hero-card">
               <div className="flex items-center justify-between border-b border-[#E7DED6] pb-3 mb-4">
-                <span className="text-xs font-mono font-semibold uppercase tracking-wider text-[#F05A28]">
-                  Migration Benchmarks
+                <span className="text-xs font-mono font-semibold uppercase tracking-wider text-[#B23E13]">
+                  Published Benchmarks
                 </span>
-                <span className="text-xs text-[#8C827A]">Enterprise US Metrics</span>
+                <span className="text-xs text-[#6E635A]">US, checked Sep 17, 2026</span>
               </div>
               <div className="space-y-3 text-sm">
-                <div className="flex justify-between py-1 border-b border-[#F5EFEA]">
-                  <span className="text-[#46403B]">Target Timeline:</span>
-                  <span className="font-semibold text-[#14110F]">4 to 8 Weeks</span>
+                <div className="flex justify-between gap-4 py-1 border-b border-[#F5EFEA]">
+                  <span className="text-[#46403B]">Average Shopify Plus migration:</span>
+                  <span className="font-semibold text-[#14110F] text-right">3 to 4 months</span>
                 </div>
-                <div className="flex justify-between py-1 border-b border-[#F5EFEA]">
-                  <span className="text-[#46403B]">SEO Link Preservation:</span>
-                  <span className="font-semibold text-[#14110F]">100% 1-to-1 Mapped</span>
+                <div className="flex justify-between gap-4 py-1 border-b border-[#F5EFEA]">
+                  <span className="text-[#46403B]">Magento 2 to Shopify Plus project:</span>
+                  <span className="font-semibold text-[#14110F] text-right">$20,000 to $150,000+</span>
                 </div>
-                <div className="flex justify-between py-1 border-b border-[#F5EFEA]">
-                  <span className="text-[#46403B]">Annual DevOps Savings:</span>
-                  <span className="font-semibold text-[#14110F]">$35k to $85k / yr</span>
+                <div className="flex justify-between gap-4 py-1 border-b border-[#F5EFEA]">
+                  <span className="text-[#46403B]">Shopify Plus plan fee:</span>
+                  <span className="font-semibold text-[#14110F] text-right">$2,300/mo on a 3-year term</span>
                 </div>
-                <div className="flex justify-between py-1">
-                  <span className="text-[#46403B]">Cutover Downtime:</span>
-                  <span className="font-semibold text-[#F05A28]">Zero Downtime Protocol</span>
+                <div className="flex justify-between gap-4 py-1">
+                  <span className="text-[#46403B]">URL redirects on Plus:</span>
+                  <span className="font-semibold text-[#14110F] text-right">Up to 20 million</span>
                 </div>
               </div>
+              <p className="mt-4 text-xs leading-relaxed text-[#6E635A]">
+                Sources:{' '}
+                <a href="https://www.shopify.com/enterprise/blog/shopify-plus-data-migration-service" target="_blank" rel="noopener noreferrer" className="text-[#B23E13] underline">Shopify</a>,{' '}
+                <a href="https://litextension.com/blog/shopify-plus-migration-cost/" target="_blank" rel="noopener noreferrer" className="text-[#B23E13] underline">LitExtension</a>,{' '}
+                <a href="https://www.shopify.com/plus/pricing" target="_blank" rel="noopener noreferrer" className="text-[#B23E13] underline">Shopify Plus pricing</a>,{' '}
+                <a href="https://help.shopify.com/en/manual/online-store/menus-and-links/url-redirect" target="_blank" rel="noopener noreferrer" className="text-[#B23E13] underline">Shopify URL redirects</a>.
+              </p>
             </div>
           </div>
         </section>
@@ -298,7 +311,9 @@ export default function ReplatformingCostCalculatorPage() {
                 Executive Answer: True Ecommerce Replatforming Scope
               </span>
               <p className="text-base md:text-lg text-[#14110F] leading-relaxed font-medium">
-                An ecommerce replatforming project involves migrating catalog data, customer history, custom ERP and 3PL integrations, theme frontend architecture, and 1-to-1 SEO redirect maps to a modern commerce engine. Completed in 4 to 12 weeks, replatforming eliminates legacy hosting maintenance, boosts checkout conversion, and saves brands $35,000 to $85,000 annually in server overhead.
+                An ecommerce replatforming project moves catalog data, customer history, ERP and 3PL integrations, the storefront theme and a 1-to-1 SEO redirect map to a new commerce platform.{' '}
+                <a href="https://www.shopify.com/enterprise/blog/shopify-plus-data-migration-service" target="_blank" rel="noopener noreferrer" className="text-[#B23E13] underline">Shopify says</a>{' '}
+                the data migration takes weeks, a full replatform usually takes 3 to 6 months, and Shopify Plus migrations average three to four months. Moving to a hosted platform also takes server hosting and patching off your team.
               </p>
             </div>
           </div>
@@ -310,7 +325,8 @@ export default function ReplatformingCostCalculatorPage() {
             <div className="text-center max-w-3xl mx-auto mb-10">
               <h2 className="pp-h2 text-center">Interactive Replatforming Scope Estimator</h2>
               <p className="text-base text-[#46403B] mt-3">
-                Select your source platform, target engine, catalog size, and ERP requirements to calculate estimated sprint milestones and annual maintenance savings.
+                Select your source platform, target engine, catalog size, and ERP requirements to calculate estimated sprint milestones and annual maintenance savings. If you are moving off Magento, compare your estimate with the published cost ranges and timelines in our{' '}
+                <Link href="/replatforming/magento-to-shopify#migration-cost" className="text-[#B23E13] underline">Magento to Shopify Plus migration guide</Link>.
               </p>
             </div>
 
@@ -326,7 +342,7 @@ export default function ReplatformingCostCalculatorPage() {
             <div className="text-center max-w-3xl mx-auto mb-10">
               <h2 className="pp-h2 text-center">Industry Replatforming &amp; Conversion Research</h2>
               <p className="text-base text-[#46403B] mt-3">
-                Authoritative data on the impact of legacy infrastructure retirement and modern checkout migration.
+                Published research on checkout usability, platform cost and uptime, with who ran or funded each study.
               </p>
             </div>
 
@@ -335,7 +351,7 @@ export default function ReplatformingCostCalculatorPage() {
                 <span className="text-3xl font-extrabold text-[#F05A28] font-mono block mb-2">35%</span>
                 <h3 className="text-base font-bold text-[#14110F] mb-2">Checkout Conversion Lift</h3>
                 <p className="text-sm text-[#46403B] mb-4">
-                  Checkout usability research from Baymard Institute finds the average large ecommerce site can lift conversion by up to 35 percent by fixing common checkout friction, the kind of legacy UX debt a full replatform clears in one pass instead of years of incremental patches.
+                  Baymard Institute&apos;s checkout usability testing finds the average large ecommerce site can gain a 35 percent increase in conversion rate through better checkout design. A replatform is a natural time to fix that friction, but the gain comes from the checkout design, not from the move itself.
                 </p>
                 <a
                   href="https://baymard.com/research/checkout-usability"
@@ -349,9 +365,9 @@ export default function ReplatformingCostCalculatorPage() {
 
               <li className="pp-card p-6 bg-white">
                 <span className="text-3xl font-extrabold text-[#F05A28] font-mono block mb-2">33%</span>
-                <h3 className="text-base font-bold text-[#14110F] mb-2">Lower Total Cost of Ownership</h3>
+                <h3 className="text-base font-bold text-[#14110F] mb-2">Better TCO in Shopify-Funded Research</h3>
                 <p className="text-sm text-[#46403B] mb-4">
-                  Total cost of ownership for Shopify runs 33 percent lower on average than Adobe Commerce, Salesforce Commerce Cloud, and BigCommerce, factoring in platform fees, implementation, and ongoing operating costs.
+                  Shopify says research it commissioned from an independent consulting firm found Shopify has 33 percent better total cost of ownership on average than competitors such as Adobe Commerce, Salesforce Commerce Cloud and BigCommerce. It is vendor-funded research, so check it against your own quotes.
                 </p>
                 <a
                   href="https://www.shopify.com/compare/tco"
@@ -365,17 +381,17 @@ export default function ReplatformingCostCalculatorPage() {
 
               <li className="pp-card p-6 bg-white">
                 <span className="text-3xl font-extrabold text-[#F05A28] font-mono block mb-2">99.99%</span>
-                <h3 className="text-base font-bold text-[#14110F] mb-2">Peak Flash Sale Uptime</h3>
+                <h3 className="text-base font-bold text-[#14110F] mb-2">Average Uptime at Peak Sales</h3>
                 <p className="text-sm text-[#46403B] mb-4">
-                  Shopify Plus carries a contractual 99.99 percent uptime SLA with service credits on breach, keeping stores online through Black Friday and Cyber Monday traffic spikes without capacity throttling.
+                  Shopify reports 99.99 percent uptime on average across its platform during the biggest sales events of the year. Its help center says the Plus plan might include a 99.99 percent uptime SLA, so confirm the uptime terms in your own contract.
                 </p>
                 <a
-                  href="https://www.shopify.com/enterprise/blog/shopify-gartner-magic-quadrant-2025"
+                  href="https://www.shopify.com/plus/pricing"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xs text-[#F05A28] font-mono hover:underline"
+                  className="text-xs text-[#B23E13] font-mono hover:underline"
                 >
-                  Source: Shopify Plus Service Level Agreement &rarr;
+                  Source: Shopify Plus pricing &rarr;
                 </a>
               </li>
             </ul>
@@ -405,33 +421,33 @@ export default function ReplatformingCostCalculatorPage() {
                 <tbody>
                   <tr className="tr-me">
                     <td className="font-bold">Hosting &amp; Server Maintenance</td>
-                    <td className="font-semibold text-[#F05A28]">Fully Managed (Zero server patches)</td>
-                    <td>High (Dedicated AWS/Cloud clusters)</td>
-                    <td>Proprietary NetSuite Cloud bundle</td>
+                    <td className="font-semibold text-[#B23E13]">Hosted by Shopify (no servers to patch)</td>
+                    <td>Self-hosted or Adobe Commerce on Cloud; merchant keeps PHP and services on supported versions</td>
+                    <td>Hosted by Oracle NetSuite</td>
                   </tr>
                   <tr>
-                    <td className="font-bold">Security &amp; PCI Level 1</td>
-                    <td className="font-semibold text-[#14110F]">Native Level 1 PCI Compliance</td>
-                    <td>Requires quarterly manual patching</td>
-                    <td>Native PCI compliance</td>
+                    <td className="font-bold">Security &amp; PCI</td>
+                    <td className="font-semibold text-[#14110F]">Level 1 PCI DSS compliant by default</td>
+                    <td>Merchant applies Adobe security patches</td>
+                    <td>Confirm PCI scope with NetSuite</td>
                   </tr>
                   <tr className="tr-me">
-                    <td className="font-bold">Accelerated 1-Click Checkout</td>
-                    <td className="font-semibold text-[#F05A28]">Shop Pay (Highest converting in US)</td>
-                    <td>Standard multi-step forms</td>
-                    <td>Standard NetSuite checkout flow</td>
+                    <td className="font-bold">Accelerated Checkout</td>
+                    <td className="font-semibold text-[#B23E13]">Shop Pay built in</td>
+                    <td>Multi-step checkout, extended with modules</td>
+                    <td>SuiteCommerce checkout flow</td>
                   </tr>
                   <tr>
                     <td className="font-bold">B2B Wholesale &amp; Net Terms</td>
-                    <td className="font-semibold text-[#14110F]">Native Shopify Plus B2B Catalogs</td>
-                    <td>Requires complex custom modules</td>
+                    <td className="font-semibold text-[#14110F]">Native Shopify B2B (unlimited catalogs on Plus)</td>
+                    <td>Adobe Commerce B2B extension (not in Magento Open Source)</td>
                     <td>Native ERP connection</td>
                   </tr>
                   <tr className="tr-me">
-                    <td className="font-bold">Speed to Market for New Features</td>
-                    <td className="font-semibold text-[#F05A28]">Days to weeks via Theme App Extensions</td>
-                    <td>Months of custom PHP engineering</td>
-                    <td>Slow SuiteScript development cycles</td>
+                    <td className="font-bold">How New Features Get Built</td>
+                    <td className="font-semibold text-[#B23E13]">Apps, theme app extensions and Shopify Functions</td>
+                    <td>Custom PHP modules and extensions</td>
+                    <td>SuiteScript customization</td>
                   </tr>
                 </tbody>
               </table>
@@ -457,7 +473,7 @@ export default function ReplatformingCostCalculatorPage() {
                 Schedule a 30-Minute Replatforming Scoping Call
               </h2>
               <p className="text-base text-[#46403B] max-w-2xl mx-auto mb-8">
-                Speak directly with founder Bhavesh Barot. We will audit your current database size, ERP integrations, and custom app requirements to provide a fixed-price migration proposal with zero downtime guarantees.
+                Speak directly with founder Bhavesh Barot. We will audit your current database size, ERP integrations, and custom app requirements, then send a written migration proposal covering scope, timeline and risks.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a

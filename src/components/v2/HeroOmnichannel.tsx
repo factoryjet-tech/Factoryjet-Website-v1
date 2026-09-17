@@ -60,7 +60,7 @@ export default function HeroOmnichannel() {
             <p className="ho-sub">
               An omnichannel commerce development and implementation agency for DTC and B2B brands.
               One catalog, one inventory, one order engine, built on Shopify, Magento, WooCommerce,
-              or Commerceflo, and engineered to scale.
+              or Commerceflo by FactoryJet, and engineered to scale.
             </p>
 
             <HeroInlineForm source="us_hero_inline" region="us" submitLabel="Get a commerce audit" />

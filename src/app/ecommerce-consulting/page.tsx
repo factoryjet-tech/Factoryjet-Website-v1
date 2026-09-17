@@ -49,7 +49,7 @@ const FAQ_ITEMS = [
   { category: 'what', question: 'What is ecommerce strategy consulting?', answer: 'Ecommerce strategy consulting is the work of deciding where to sell and in what order: how to run DTC and B2B together, which marketplaces to add, how to connect inventory across channels, and what to sequence first for the best return. We put that into a written plan you can act on.' },
   { category: 'what', question: 'Can you audit our existing store?', answer: 'Yes. An ecommerce audit reviews your platform, conversion, operations, integrations, and channel setup, then gives you a prioritized list of what to fix and what to build next. It is the fastest way to see where you are losing sales and hours.' },
   { category: 'what', question: 'Do you offer ecommerce business consulting beyond the tech?', answer: 'Yes. We advise on the commercial model as well as the build: catalog and pricing structure, trade versus retail, fulfillment and 3PL, and how the systems support the way you actually sell.' },
-  { category: 'platforms', question: 'Can you help us choose between Shopify, Magento, and BigCommerce?', answer: 'Yes. We match the platform to your catalog size, B2B rules, integrations, and budget on a scoping call, and recommend the fit rather than pushing one platform. We consult across Shopify and Shopify Plus, Adobe Commerce (Magento), BigCommerce, WooCommerce, headless, and Commerceflo.' },
+  { category: 'platforms', question: 'Can you help us choose between Shopify, Magento, and BigCommerce?', answer: 'Yes. We match the platform to your catalog size, B2B rules, integrations, and budget on a scoping call, and recommend the fit rather than pushing one platform. We consult across Shopify and Shopify Plus, Adobe Commerce (Magento), BigCommerce, WooCommerce, headless, and our own Commerceflo.' },
   { category: 'platforms', question: 'Do you provide ecommerce migration services?', answer: 'Yes. We plan and run replatforming and migration: a cutover that moves products, customers, orders, and B2B pricing to the new platform without losing SEO rankings or uptime. The plan comes first, so the migration has no surprises.' },
   { category: 'platforms', question: 'How does ecommerce replatforming work?', answer: 'We lock the target platform, map the data, plan redirects to protect SEO, rebuild the B2B rules and integrations, then cut over on a schedule that fits your business. Most brands replatform every five to seven years, so we scope the new platform to last that long.' },
   { category: 'platforms', question: 'Do you consult on selling across marketplaces?', answer: 'Yes. We plan how to sell on Amazon, Walmart, and your own store from one catalog and one live inventory, so channels stop drifting out of sync. This ties directly into an omnichannel commerce build if you want it.' },
@@ -108,7 +108,7 @@ const BREADCRUMB_SCHEMA = {
 
 const CREDS = [
   { k: '10+ yrs', d: 'building and shipping commerce for DTC and B2B brands' },
-  { k: '6 platforms', d: 'Shopify Plus, Adobe Commerce, BigCommerce, WooCommerce, headless, Commerceflo' },
+  { k: '6 platforms', d: 'Shopify Plus, Adobe Commerce, BigCommerce, WooCommerce, headless, Commerceflo by FactoryJet' },
   { k: 'DTC + B2B', d: 'retail and trade running on one system' },
   { k: 'You own it', d: 'full code and data, no lock-in to us' },
 ];

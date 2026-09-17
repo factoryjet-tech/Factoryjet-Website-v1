@@ -14,7 +14,7 @@ import AnswerFirstDefinition from '@/components/commerce/AnswerFirstDefinition';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-02';
+const PAGE_MODIFIED = '2026-09-17';
 
 export const metadata: Metadata = {
   title: 'E-Commerce for Manufacturers & Distributors | FactoryJet',
@@ -71,7 +71,7 @@ const FAQ_ITEMS = [
   { category: 'integrations', question: 'Can you connect Epicor Prophet 21 to an ecommerce storefront?', answer: 'Yes. Prophet 21 is common in distribution and exposes the objects a portal needs: items, customers, contract pricing, availability, orders, and invoices. We scope which objects sync, in which direction, and at what frequency before writing code, because near-real-time inventory and nightly price list updates are very different builds with very different costs.' },
   { category: 'integrations', question: 'How do credit limits and net terms work against the ERP?', answer: 'At checkout the portal reads the account credit limit and open balance from the ERP. Within limit and current, the dealer checks out on account with net terms. Over limit or past due, the order is either held for approval or restricted to card payment, whichever rule you prefer. Nothing relies on a manually maintained copy of the balance.' },
   { category: 'integrations', question: 'Can you integrate a CPQ or quoting system?', answer: 'Yes. Where quotes need engineering or margin approval, we either build the quote workflow into the portal or integrate an existing CPQ so the configured quote, approval chain, and resulting order stay connected. The important part is that an accepted quote becomes an order without anyone re-keying it.' },
-  { category: 'working', question: 'Which platform is best for a manufacturer?', answer: 'It depends on catalog size and how much configuration you need. Shopify Plus suits a manageable catalog with clean B2B rules and is the fastest to launch. Adobe Commerce suits very large catalogs and deep native B2B. BigCommerce sits well in the mid-market. Commerceflo fits when a unified engine across channels is the goal. We compare them against your part count, configuration complexity, and ERP on a scoping call.' },
+  { category: 'working', question: 'Which platform is best for a manufacturer?', answer: 'It depends on catalog size and how much configuration you need. Shopify Plus suits a manageable catalog with clean B2B rules and is the fastest to launch. Adobe Commerce suits very large catalogs and deep native B2B. BigCommerce sits well in the mid-market. Our own Commerceflo fits when a unified engine across channels is the goal. We compare them against your part count, configuration complexity, and ERP on a scoping call.' },
   { category: 'working', question: 'How much does a manufacturer ecommerce build cost?', answer: 'It depends on catalog size, whether products are configurable, the state of your product data, and the depth of ERP integration. Those four things drive most of the variance. We scope on a short call and send a fixed proposal before any work starts, so you are not signing up to an hourly estimate that moves.' },
   { category: 'working', question: 'Can you replatform our existing dealer portal?', answer: 'Yes. We handle migration of products, dealer accounts, contract pricing, and order history, with 301 redirects and a cutover plan that protects rankings and uptime. Contract pricing and account hierarchies are the parts most often lost in a bad migration, so we reconcile them against the ERP before and after cutover.' },
   { category: 'working', question: 'Do we own what you build?', answer: 'Yes. You own the code, the data, and the platform accounts. We are not renting you a tool you lose access to if you stop working with us, and there is no proprietary layer you cannot maintain without us.' },
@@ -468,7 +468,13 @@ export default function EcommerceForManufacturersPage() {
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// side by side'}</p>
             <h2 style={{ marginTop: '10px' }}>Which platform fits a manufacturer or distributor</h2>
-            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>Part count, configuration complexity, and ERP depth decide this far more than a feature checklist.</p>
+            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>
+              Part count, configuration complexity, and ERP depth decide this far more than a feature checklist. Our{' '}
+              <Link href="/blog/best-b2b-ecommerce-platform-manufacturers-distributors-2026" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
+                full B2B platform comparison
+              </Link>{' '}
+              also covers Sana Commerce, SAP Commerce Cloud and commercetools.
+            </p>
             <div style={{ marginTop: '32px', overflowX: 'auto' }}>
               <table className="pp-table">
                 <thead><tr><th>Platform</th><th>Best for</th><th>Trade-off</th><th>Our read</th></tr></thead>
@@ -504,7 +510,7 @@ export default function EcommerceForManufacturersPage() {
                     <td>Viable only when NetSuite already runs core financials.</td>
                   </tr>
                   <tr>
-                    <td className="name">Commerceflo.</td>
+                    <td className="name">Commerceflo by FactoryJet.</td>
                     <td>Unified product catalog, multi-warehouse stock, and order routing.</td>
                     <td>Emerging platform footprint.</td>
                     <td>Ideal when managing all channels through one engine.</td>

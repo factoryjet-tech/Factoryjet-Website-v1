@@ -205,7 +205,7 @@ export const post: BlogPost = {
       </p>
       <p className="mb-4">
         In ecommerce, that execution layer has a name: agentic commerce, where AI agents discover products, compare options, and check out on a shopper behalf, and where your own agents keep your catalog, pricing, and inventory accurate across channels. It is the same shift, applied to buying and selling. If that is where your business lives, it is worth understanding early, which is exactly why we wrote the{' '}
-        <a href="/agentic-commerce" className="text-[#B23E13] underline hover:text-[#F05A28]">agentic commerce field guide</a>{' '}and built <a href="/commerceflo" className="text-[#B23E13] underline hover:text-[#F05A28]">Commerceflo</a>, our AI commerce operator, to put agentic AI to work across a store.
+        <a href="/agentic-commerce" className="text-[#B23E13] underline hover:text-[#F05A28]">agentic commerce field guide</a>{' '}and built <a href="/commerceflo" className="text-[#B23E13] underline hover:text-[#F05A28]">Commerceflo by FactoryJet</a>, our AI commerce operator, to put agentic AI to work across a store.
       </p>
       <p className="mb-4">
         The takeaway is simple. Generative AI made everyone faster at creating. Agentic AI is about to make software actually do the work. Understand the difference now, decide where you want agents acting for you, and you will be ready for the part of AI that changes how business gets done, not just how fast content gets made.

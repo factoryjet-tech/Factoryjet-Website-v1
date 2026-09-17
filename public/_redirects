@@ -68,6 +68,17 @@
 /services/ai-agents /services/ai-agent-development 301
 # whatsapp-chatbot US namespace was a noindex double-hop stub → point straight at the US twin
 /services/whatsapp-chatbot /services/ai-chatbot-development 301
+# 2026-09-17 AI agent duplicate merge. Five pairs of indexable, self-canonical
+# pages covered one topic each. Every retired page was merged into the twin with
+# more Google impressions (the kept support page is also the one ChatGPT and
+# Perplexity cite), after its unique FAQs and sections were ported across. All
+# five destinations are live pages and none is a source of another rule in this
+# file, so each redirect is a single hop.
+/services/ai-agent-development/ai-workflow-automation /services/ai-workflow-automation 301
+/services/ai-agent-development/ai-chatbot /services/ai-chatbot-development 301
+/services/ai-agent-development/ai-customer-support /services/ai-customer-support-agents 301
+/services/ai-agents-for-healthcare /services/healthcare-ai-agents 301
+/services/ai-agent-development/ai-sales-agent /services/ai-sdr 301
 
 # ── LEGACY PAGE RETIREMENT (Task C, 2026-05-14) ──────────────────────────────
 # NOTE: NYC /services rule moved to canonical block below (line ~58) to avoid

@@ -217,6 +217,13 @@ const SERVICE_RULES: ServiceRule[] = [
     weight: 3,
   },
   {
+    href: '/services/ai-customer-support-agents',
+    label: 'AI Customer Support Agents',
+    blurb: 'Support agents that look up orders, apply your policies and hand off to your team with context.',
+    keywords: ['customer support agent', 'ai customer service', 'ai customer support', 'ai agents for ecommerce'],
+    weight: 4,
+  },
+  {
     href: '/services/ai-receptionist',
     label: 'AI Receptionist',
     blurb: 'A custom AI receptionist that answers every call and books it into your system.',
@@ -229,6 +236,15 @@ const SERVICE_RULES: ServiceRule[] = [
     blurb: 'Automate the repetitive work a small team should not be doing.',
     keywords: ['ai automation', 'workflow automation', 'sales automation', 'n8n', 'zapier', 'rpa'],
     weight: 3,
+  },
+  {
+    href: '/services/ai-integration-services',
+    label: 'AI Integration Services',
+    blurb: 'Connect AI agents to NetSuite, Odoo, SAP Business One and the systems you already run.',
+    // 'erp' is 3 characters (at or under WORD_MATCH_MAX_LEN), so it gets the word-boundary
+    // match: it fires on "ERP" but never inside "enterprise" or "ERPNext".
+    keywords: ['erp', 'netsuite', 'odoo', 'sap business one', 'ai integration'],
+    weight: 4,
   },
   {
     href: '/services/ai-agent-development',
@@ -260,9 +276,23 @@ const SERVICE_RULES: ServiceRule[] = [
     weight: 3,
   },
   {
+    href: '/b2b-ecommerce',
+    label: 'B2B Ecommerce',
+    blurb: 'Trade portals with account pricing, net terms, quotes and ERP sync.',
+    keywords: ['b2b ecommerce', 'b2b commerce', 'b2b platform', 'wholesale ecommerce', 'wholesale portal', 'distributors', 'dealer portal'],
+    weight: 4,
+  },
+  {
+    href: '/ecommerce-for-manufacturers',
+    label: 'Ecommerce for Manufacturers',
+    blurb: 'Dealer and distributor portals connected to the ERP that runs the plant.',
+    keywords: ['manufacturers', 'manufacturer ecommerce', 'ecommerce for manufacturers', 'dealer portal', 'distributor portal'],
+    weight: 4,
+  },
+  {
     href: '/commerceflo',
-    label: 'Commerceflo',
-    blurb: 'The AI operator that runs the repetitive work behind a storefront.',
+    label: 'Commerceflo by FactoryJet',
+    blurb: 'Our AI commerce operator: agents propose store fixes and act after you approve.',
     keywords: ['commerceflo', 'ai commerce', 'ai for ecommerce', 'ai for e-commerce', 'commerce operator'],
     weight: 3,
   },
@@ -420,7 +450,9 @@ const SERVICE_FAMILY: Record<string, ServiceFamily> = {
   '/uk/seo': 'search',
   // ai: agents, automation, chatbots (build-an-AI-system intent, not visibility intent)
   '/services/ai-chatbot-development': 'ai',
+  '/services/ai-customer-support-agents': 'ai',
   '/services/ai-automation': 'ai',
+  '/services/ai-integration-services': 'ai',
   '/services/ai-agent-development': 'ai',
   '/uk/ai-agents': 'ai',
   // web: design and build
@@ -440,6 +472,8 @@ const SERVICE_FAMILY: Record<string, ServiceFamily> = {
   '/services/tiktok-shop-agency': 'ecommerce',
   '/headless-commerce': 'ecommerce',
   '/best-ecommerce-platforms': 'ecommerce',
+  '/b2b-ecommerce': 'ecommerce',
+  '/ecommerce-for-manufacturers': 'ecommerce',
   '/services/ecommerce-growth-agency': 'ecommerce',
   '/uk/ecommerce-development': 'ecommerce',
 };

@@ -29,7 +29,7 @@ export const post: BlogPost = {
     },
     {
       q: 'Which ERP systems support automated draft quote injection?',
-      a: 'We support NetSuite, SAP S/4HANA, SAP Business One, Epicor Prophet 21, Epicor Kinetic, Infor CloudSuite Industrial, Microsoft Dynamics 365, Acumatica, and JobBOSS.',
+      a: 'Any ERP whose API can create a draft quote or estimate record. NetSuite (estimates), SAP Business One (sales quotations) and Odoo (quotations) all expose these through their APIs. We confirm the exact API for your ERP and version during the audit.',
     },
     {
       q: 'How does the agent handle outside processing like heat treatment or anodizing?',
@@ -37,7 +37,7 @@ export const post: BlogPost = {
     },
     {
       q: 'Does the AI agent replace our existing human estimating engineers?',
-      a: 'No. The agent eliminates 80 percent of manual transcription and math lookups, allowing your senior estimators to review, refine, and approve four times more quotes daily.',
+      a: 'No. The agent takes over transcription and cost lookups, so your senior estimators spend their time reviewing, adjusting and approving quotes instead of typing them.',
     },
     {
       q: 'How does the agent reconcile supplier PO confirmations in purchasing?',
@@ -45,7 +45,7 @@ export const post: BlogPost = {
     },
     {
       q: 'What happens when drawing dimensions or tolerances are unreadable?',
-      a: 'If the computer vision confidence score falls below strict 95 percent safety thresholds, the agent flags the ambiguous callout with a red bounding box and routes it to the human estimator with a pre-written clarification question for the customer.',
+      a: 'If the extraction confidence for a dimension or tolerance falls below the threshold you set, the agent flags the ambiguous callout with a red bounding box and routes it to the human estimator with a pre-written clarification question for the customer.',
     },
     {
       q: 'Can the AI agent estimate assembly weldments and sheet metal fabrication?',
@@ -53,11 +53,11 @@ export const post: BlogPost = {
     },
     {
       q: 'How are volatile raw metal prices factored into quote margins?',
-      a: 'The agent connects to live metal spot pricing feeds (such as COMEX/LME indices for aluminum and copper scrap/billet), applying real-time surcharge formulas so your quotes never erode gross margins.',
+      a: 'The agent can pull current metal prices from a market data feed you subscribe to and apply your surcharge formula, so quotes reflect current material costs instead of an old price sheet.',
     },
     {
       q: 'Is the AI deployment compliant with ITAR and defense data regulations?',
-      a: 'Yes. We deploy within sovereign AWS GovCloud or Microsoft Azure Government environments with signed Zero Data Retention agreements and citizen-only access controls.',
+      a: 'It can be, but ITAR compliance depends on your whole setup, and your export compliance lead should approve the design. For ITAR-controlled drawings we can deploy in a government cloud such as AWS GovCloud (US), limit access to U.S. persons, and keep controlled data away from any model provider not approved for it.',
     },
     {
       q: 'What is the implementation timeline for a custom manufacturing AI agent?',
@@ -86,7 +86,7 @@ export const post: BlogPost = {
         <ul className="space-y-2.5 text-sm sm:text-base text-[#14110F]">
           <li className="flex items-start gap-2">
             <span className="text-[#F05A28] font-bold">&bull;</span>
-            <span><strong>RFQ Turnaround Reduction:</strong> Custom manufacturing AI agents compress complex quotation cycles from 3 to 5 business days down to under 20 minutes by automating multi-page PDF engineering print ingestion, title block extraction, and geometric feature decomposition.</span>
+            <span><strong>RFQ Turnaround Reduction:</strong> Custom manufacturing AI agents shorten quotation cycles by automating multi-page PDF engineering print ingestion, title block extraction, and geometric feature decomposition, with an estimator approving every quote.</span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-[#F05A28] font-bold">&bull;</span>
@@ -98,7 +98,7 @@ export const post: BlogPost = {
           </li>
           <li className="flex items-start gap-2">
             <span className="text-[#F05A28] font-bold">&bull;</span>
-            <span><strong>Supply Chain PO Reconciliation:</strong> Purchasing AI agents parse incoming vendor order acknowledgements and PDF confirmations, reconciling promised delivery dates against open purchase orders to eliminate unexpected assembly line downtime.</span>
+            <span><strong>Supply Chain PO Reconciliation:</strong> Purchasing AI agents parse incoming vendor order acknowledgements and PDF confirmations, reconciling promised delivery dates against open purchase orders to reduce unexpected assembly line downtime.</span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-[#F05A28] font-bold">&bull;</span>
@@ -113,13 +113,13 @@ export const post: BlogPost = {
 
       <h2>The Quoting Bottleneck in Mid-Market American Manufacturing</h2>
       <p>
-        For American precision CNC machine shops, custom fabricators, and contract manufacturers ($5M to $50M annual revenue), the estimating department is often the single greatest operational bottleneck. Estimating teams receive hundreds of inbound RFQs weekly across customer email inboxes, supplier bidding portals, and EDI feeds.
+        For American precision CNC machine shops, custom fabricators, and contract manufacturers ($5M to $50M annual revenue), the estimating department is often the single greatest operational bottleneck. Estimating teams receive a steady flow of inbound RFQs across customer email inboxes, supplier bidding portals, and EDI feeds.
       </p>
       <p>
         Each RFQ package typically includes multi-page PDF engineering prints, 3D CAD STEP files, complex geometric dimensioning and tolerancing (GD&amp;T) specifications, surface treatment requirements (such as anodizing, passivating, or heat-treating), and custom packaging standards.
       </p>
       <p>
-        Senior estimating engineers currently spend between 65 and 80 percent of their working hours manually transcribing part dimensions into Excel spreadsheets, looking up standard raw stock material costs, calculating machine cycle times, and manually re-keying line items into ERP sales order screens. By the time a detailed quote is returned to the customer three to five days later, agile competitors have already captured the business.
+        Senior estimating engineers spend much of their working time manually transcribing part dimensions into Excel spreadsheets, looking up standard raw stock material costs, calculating machine cycle times, and manually re-keying line items into ERP sales order screens. When a detailed quote takes days to go back to the customer, faster competitors can win the business first.
       </p>
 
       <h2>The 5-Stage Multi-Modal Industrial AI Architecture</h2>
@@ -163,63 +163,65 @@ export const post: BlogPost = {
       <p>
         The agent generates a draft quote inside your ERP (NetSuite, SAP S/4HANA, Epicor Prophet 21, or JobBOSS) and presents the package to the lead estimator in a side-by-side web dashboard. The estimator reviews highlighted drawing callouts, verifies machine time estimates, makes any necessary adjustments, and clicks approve to issue the formal customer proposal.
       </p>
+      <p>
+        If your quotes live in NetSuite, Odoo or SAP Business One, our guide to{' '}
+        <Link href="/blog/ai-agents-erp-netsuite-odoo-sap-business-one-2026">
+          AI agents inside NetSuite, Odoo and SAP Business One
+        </Link>{' '}
+        explains how each of those ERPs handles draft records, API limits and approvals.
+      </p>
 
-      <h2>Financial Comparison: Manual Estimating vs. Custom AI Agent</h2>
+      <h2>How Estimating Work Changes: Manual Estimating vs. Custom AI Agent</h2>
       <div className="overflow-x-auto my-8">
         <table className="w-full text-left text-sm border border-[#E7DED6]">
           <thead className="bg-[#FFF8F5] border-b border-[#E7DED6]">
             <tr>
-              <th className="p-4 font-bold text-[#14110F]">Operational Metric</th>
-              <th className="p-4 font-bold text-[#F05A28]">FactoryJet Custom AI Agent</th>
-              <th className="p-4 font-bold text-[#6E655F]">Manual Senior Estimator</th>
+              <th className="p-4 font-bold text-[#14110F]">What Changes</th>
+              <th className="p-4 font-bold text-[#B23E13]">Custom AI Agent (Estimator Approves)</th>
+              <th className="p-4 font-bold text-[#6E655F]">Manual Estimating</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-[#E7DED6]">
             <tr>
-              <td className="p-4 font-semibold">Average RFQ Assembly Time</td>
-              <td className="p-4 font-bold text-[#F05A28]">12 to 20 Minutes</td>
-              <td className="p-4 text-[#6E655F]">2.5 to 4.5 Hours</td>
+              <td className="p-4 font-semibold">Assembling the quote package</td>
+              <td className="p-4">The agent extracts drawing data, looks up costs and drafts the quote; the estimator reviews it</td>
+              <td className="p-4 text-[#6E655F]">The estimator transcribes prints and looks up every cost by hand</td>
             </tr>
             <tr>
-              <td className="p-4 font-semibold">Weekly RFQ Capacity</td>
-              <td className="p-4 font-bold text-[#F05A28]">250+ RFQ Packages</td>
-              <td className="p-4 text-[#6E655F]">20 to 35 RFQ Packages</td>
+              <td className="p-4 font-semibold">What limits capacity</td>
+              <td className="p-4">Review time, since typing and lookups are automated</td>
+              <td className="p-4 text-[#6E655F]">How many packages an estimator can key in each week</td>
             </tr>
             <tr>
-              <td className="p-4 font-semibold">Quote Win Rate (Illustrative, Speed-to-Lead Pattern)*</td>
-              <td className="p-4 font-bold text-[#F05A28]">32% to 41%</td>
-              <td className="p-4 text-[#6E655F]">14% to 19%</td>
+              <td className="p-4 font-semibold">Data entry into the ERP</td>
+              <td className="p-4">Fields are checked against a schema and your part master before anything is written; mismatches go to a person</td>
+              <td className="p-4 text-[#6E655F]">Line items are retyped, so typos can reach the ERP</td>
             </tr>
             <tr>
-              <td className="p-4 font-semibold">Direct ERP Data Entry Errors</td>
-              <td className="p-4 font-bold text-[#F05A28]">0% (Schema Validated)</td>
-              <td className="p-4 text-[#6E655F]">4% to 7% of Line Items</td>
-            </tr>
-            <tr>
-              <td className="p-4 font-semibold">Annual Cost per Estimating Seat</td>
-              <td className="p-4 font-bold text-[#F05A28]">$0 User Tax (100% Owned)</td>
-              <td className="p-4 text-[#6E655F]">$95,000 to $130,000 Salary**</td>
+              <td className="p-4 font-semibold">Ongoing cost</td>
+              <td className="p-4">Model usage, hosting and upkeep; no per-seat license on code you own</td>
+              <td className="p-4 text-[#6E655F]">Estimator salaries*</td>
             </tr>
           </tbody>
         </table>
       </div>
       <p className="text-xs text-[#6E655F] italic">
-        *Illustrative modeling, not a verified manufacturing-industry statistic. It reflects the broadly documented speed-to-lead pattern in B2B sales, where faster response and turnaround times correlate with higher close rates; actual win-rate lift depends on your product, market, and existing sales process. **Senior manufacturing estimator compensation, reflecting deep technical and ERP expertise. Per the{' '}
+        *Per the{' '}
         <a href="https://www.bls.gov/ooh/business-and-financial/cost-estimators.htm" target="_blank" rel="noopener noreferrer">U.S. Bureau of Labor Statistics</a>{' '}
-        (May 2025), the median cost estimator salary in manufacturing specifically was $75,940/year, with the highest-paid 10% of cost estimators nationally earning over $130,820/year; senior estimators with manufacturing/ERP specialization typically fall toward the upper end of that range before payroll taxes and benefits load.
+        (May 2025), the median annual wage for cost estimators in manufacturing was $75,940, and the highest-paid 10% of cost estimators nationally earned more than $130,820, before payroll taxes and benefits.
       </p>
 
       <h2>Data Security, ITAR, and CMMC Compliance</h2>
       <p>
-        Manufacturing enterprises handle sensitive defense, aerospace, and commercial intellectual property. Commercial cloud chatbots that store training data violate ITAR (International Traffic in Arms Regulations) and CMMC (Cybersecurity Maturity Model Certification) mandates.
+        Manufacturing enterprises handle sensitive defense, aerospace, and commercial intellectual property. Consumer AI chatbots that store conversations or train on them are the wrong place for drawings covered by ITAR (International Traffic in Arms Regulations) or CMMC (Cybersecurity Maturity Model Certification) requirements, and your export compliance lead should approve any AI design that touches that data.
       </p>
       <p>
-        FactoryJet architects private, sovereign AI deployments:
+        FactoryJet designs private AI deployments for this work:
       </p>
       <ul>
-        <li><strong>Zero Data Retention (ZDR):</strong> Enterprise API agreements guarantee that customer CAD prints and pricing models are never cached or used for model training.</li>
-        <li><strong>Sovereign Cloud Enclaves:</strong> Defense suppliers operate models inside AWS GovCloud (US) or Microsoft Azure Government with US-citizen access restrictions.</li>
-        <li><strong>Air-Gapped &amp; On-Premise Execution:</strong> For classified manufacturing programs, models run locally on private GPU clusters (NVIDIA H100/A100) behind physical plant firewalls.</li>
+        <li><strong>Zero Data Retention (ZDR):</strong> OpenAI and Anthropic offer zero data retention arrangements to approved API customers, which limit how long prompts containing CAD prints and pricing are stored. Check each provider&apos;s terms for exceptions.</li>
+        <li><strong>Government Cloud Regions:</strong> Defense suppliers can run workloads in a government cloud such as AWS GovCloud (US), which AWS describes as isolated U.S. regions operated by U.S. citizens, with access limited to U.S. persons.</li>
+        <li><strong>On-Premise Execution:</strong> When data cannot leave your network, open-weight models can run on your own GPU servers behind your firewall.</li>
       </ul>
 
       <h2>Technical Schema Architecture &amp; ERP Payload Structure</h2>
@@ -237,7 +239,7 @@ export const post: BlogPost = {
     "stock_unit_cost_usd": 42.15
   },
   "machining_operations": [
-    { "step": 1, "machine": "Haas VF-4 (5-Axis)", "setup_hours": 1.25, "cycle_min": 18.4 },
+    { "step": 1, "machine": "Haas VF-4", "setup_hours": 1.25, "cycle_min": 18.4 },
     { "step": 2, "machine": "Wire EDM AgieCharmilles", "setup_hours": 0.50, "cycle_min": 8.2 }
   ],
   "critical_tolerances": [
@@ -256,10 +258,12 @@ export const post: BlogPost = {
 
       <h2>Token Compute Economics &amp; Infrastructure Costs</h2>
       <p>
-        A frequent concern for Chief Information Officers is ongoing token compute expenses. Parsing a complex 10-page drawing package using multi-modal vision models consumes approximately 14,000 to 22,000 input tokens and 1,800 output tokens.
+        A frequent concern for Chief Information Officers is ongoing token compute expenses. As an illustration, suppose parsing a 10-page drawing package with a multi-modal vision model uses 22,000 input tokens and 1,800 output tokens. Image-heavy packages can use more.
       </p>
       <p>
-        At current enterprise cloud inference pricing, parsing a drawing package this way costs a small fraction of a cent in raw compute, not a per-seat or per-hour rate. Even at high monthly RFQ volumes, total inference and hosting spend for a contract manufacturer stays a rounding error next to the fully-loaded cost of hiring an additional full-time estimator, which is the comparison CIOs actually care about.
+        At{' '}
+        <a href="https://claude.com/pricing" target="_blank" rel="noopener noreferrer">Anthropic&apos;s published API prices</a>{' '}
+        for Claude Sonnet 5 ($2 per million input tokens and $10 per million output tokens, checked September 17, 2026), that package costs about 6 cents in model usage: $0.044 for input and $0.018 for output. Even at 1,000 packages a month, model usage comes to about $62, which is small next to the fully-loaded cost of hiring another full-time estimator. Hosting, monitoring and upkeep come on top of model usage.
       </p>
 
       <div className="my-10 p-8 rounded-2xl bg-[#FFF8F5] border border-[#E7DED6] text-center not-prose">

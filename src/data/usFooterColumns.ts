@@ -30,14 +30,23 @@ import type { SiteFooterColumn } from '@/components/v2/SiteFooter';
  * links exist in the HTML crawlers receive. This footer is the crawlable path to
  * money pages. 13 menu destinations in the AI agent, ecommerce and replatforming
  * lines had no crawlable sitewide link and were added. City pages stay out on
- * purpose (see point 1). /services/ai-workflow-automation is left out because it
- * duplicates /services/ai-agent-development/ai-workflow-automation.
+ * purpose (see point 1).
+ *
+ * 2026-09-17 (later): the duplicate workflow automation page under the AI agent
+ * hub was merged by 301 into /services/ai-workflow-automation, so the "AI
+ * Workflow Automation" link below now points at the kept page directly.
+ *
+ * 2026-09-17 (wave 1 wiring): added the two new support pages
+ * (/services/shopify-maintenance-services, /services/ai-agent-monitoring) and
+ * renamed the Commerceflo link to "Commerceflo by FactoryJet" so the maker's
+ * name sits in the sitewide crawl path.
  */
 export const US_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
   {
     heading: 'Commerce',
     links: [
       { label: 'E-Commerce Development', href: '/services/ecommerce-development' },
+      { label: 'Shopify Maintenance & Support', href: '/services/shopify-maintenance-services' },
       { label: 'Ecommerce Consulting',   href: '/ecommerce-consulting' },
       { label: 'Ecommerce Growth Agency', href: '/services/ecommerce-growth-agency' },
       { label: 'Ecommerce CRO Agency',   href: '/services/ecommerce-cro-agency' },
@@ -78,7 +87,7 @@ export const US_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
       { label: 'WooCommerce Development', href: '/services/woocommerce-development' },
       { label: 'BigCommerce Development', href: '/bigcommerce-development' },
       { label: 'BigCommerce B2B Edition', href: '/services/bigcommerce-b2b' },
-      { label: 'Commerceflo',             href: '/commerceflo' },
+      { label: 'Commerceflo by FactoryJet', href: '/commerceflo' },
       { label: 'WordPress Development',   href: '/services/wordpress-development' },
     ],
   },
@@ -99,8 +108,9 @@ export const US_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
       { label: 'AI Receptionist',              href: '/services/ai-receptionist' },
       { label: 'AI Customer Support Agents',  href: '/services/ai-customer-support-agents' },
       { label: 'AI SDR & BDR Agents',         href: '/services/ai-sdr' },
+      { label: 'AI Agent Monitoring & Support', href: '/services/ai-agent-monitoring' },
       { label: 'AI Agent ROI Calculator',     href: '/tools/ai-agent-roi-calculator' },
-      { label: 'AI Workflow Automation',      href: '/services/ai-agent-development/ai-workflow-automation' },
+      { label: 'AI Workflow Automation',      href: '/services/ai-workflow-automation' },
       { label: 'n8n vs LangChain vs CrewAI',  href: '/comparisons/n8n-vs-langchain-vs-crewai-enterprise' },
       { label: 'Voice AI Agents',             href: '/services/ai-agent-development/ai-voice-agent' },
       { label: 'n8n Automation',              href: '/n8n-automation' },

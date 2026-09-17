@@ -4,9 +4,9 @@ import type { BlogPost } from '../data.types';
 export const post: BlogPost = {
   id: '253',
   slug: 'magento-to-shopify-plus-migration-checklist-2026',
-  title: 'The 2026 Magento to Shopify Plus Migration Checklist: Step-by-Step Architecture, SEO Preservation & Zero Downtime',
+  title: 'The 2026 Magento to Shopify Plus Migration Checklist: Step-by-Step Architecture, SEO Preservation & Cutover',
   excerpt:
-    'An exhaustive 3,200-word engineering blueprint for migrating enterprise Adobe Commerce / Magento 2 stores to Shopify Plus: database schema transformations, customer password tokenization, 1-to-1 301 redirect mapping, B2B price lists, and ERP delta cutover.',
+    'An engineering checklist for migrating Adobe Commerce and Magento 2 stores to Shopify Plus: data mapping, customer passwords and sign-in, 1-to-1 301 redirect mapping, B2B price lists, and ERP delta cutover.',
   category: 'E-Commerce Development',
   author: 'Bhavesh Barot',
   date: 'Sep 1, 2026',
@@ -15,25 +15,25 @@ export const post: BlogPost = {
   meta: {
     title: 'Magento to Shopify Plus Migration Checklist 2026 | Guide',
     description:
-      'Step-by-step technical checklist for migrating from Magento to Shopify Plus in 2026: database ETL, customer password hashes, 301 redirects, and ERP cutover.',
+      'Step-by-step checklist for migrating from Magento to Shopify Plus in 2026: database ETL, customer passwords and sign-in, 301 redirects, and ERP cutover.',
   },
   keyTakeaways: [
-    'Retiring legacy Magento 2 / Adobe Commerce eliminates $45,000 to $85,000 in annual AWS cloud hosting, security monitoring, quarterly patch installations, and DevOps emergency retainers.',
-    'Customer passwords cannot be decrypted from Magento bcrypt or SHA-256 hashes: migrate users via Shopify Multipass SSO tokens or automated password-reset invitation funnels.',
+    'Retiring a self-hosted Magento 2 or Adobe Commerce store takes server hosting, security patching and dependency upgrades off your team. Adobe makes merchants responsible for keeping PHP, MariaDB, OpenSearch and Redis on supported versions.',
+    'Magento stores customer passwords as one-way hashes (SHA-256, or Argon2 on newer versions), and Shopify says passwords cannot be migrated with a CSV. Send account activation emails, or use new customer accounts with one-time sign-in codes. Multipass needs Shopify Plus and only works with legacy customer accounts, which Shopify B2B cannot use.',
     'Preserving SEO link equity requires a comprehensive pre-migration crawl of all legacy Magento URLs, generating a 1-to-1 301 redirect map for deep category and product paths.',
-    'Complex matrix items and custom EAV attribute sets must be flattened and transformed into Shopify 2,000-variant schemas and structured JSON metafields.',
-    'B2B wholesale customer groups, tiered volume pricing matrices, and Net 30 payment terms migrate directly into Shopify Plus native B2B company profiles.',
+    'Complex configurable products and custom EAV attribute sets must be restructured to fit Shopify limits of three options and 2,048 variants per product, with the remaining data in metafields.',
+    'B2B customer groups, volume pricing and Net 30 payment terms map to Shopify B2B companies, catalogs, quantity price breaks and payment terms. Shopify Plus adds unlimited catalogs and catalogs assigned directly to a company.',
     'Delta migration is the critical cutover protocol: syncing all new orders, customers, and inventory adjustments created on Magento during final staging build windows.',
-    'Executing zero-downtime cutover requires pre-warming CDN edge caches, lowering DNS TTL to 300 seconds 48 hours in advance, and performing final delta sync during a 15-minute maintenance window.',
+    'A low-risk cutover lowers the DNS TTL 24 to 48 hours before the switch, as Shopify recommends, freezes catalog changes on Magento, and runs a final delta sync of new orders and customers just before the domain moves.',
   ],
   faqs: [
     {
       q: 'How long does an enterprise migration from Magento 2 to Shopify Plus take?',
-      a: 'A standard mid-market migration takes 6 to 8 weeks. Complex enterprise deployments with 100,000+ SKUs, multi-region storefronts, and deep NetSuite or SAP ERP integrations typically take 10 to 14 weeks.',
+      a: "Shopify says Shopify Plus migrations average three to four months from kickoff to go-live. 1Digital plans 12 weeks for a Magento 2 store with 5,000 to 25,000 SKUs and one storefront, and 16 to 20 weeks for larger, multi-store or B2B stores. Enterprise builds with SAP or NetSuite integrations run 8 to 14 months in Elogic's 2026 cost index.",
     },
     {
       q: 'How do you handle customer passwords when migrating from Magento to Shopify Plus?',
-      a: 'Because passwords in Magento are one-way cryptographic hashes, they cannot be transferred directly into Shopify standard authentication database. We use two proven strategies: Shopify Multipass SSO integration for instant background login, or automated email invitation campaigns prompting customers to activate their account and set a new password.',
+      a: "Magento stores passwords as one-way hashes, and Shopify says you can't migrate customer passwords with a CSV import. The usual route is an account activation email that asks each customer to set a new password, or new customer accounts, where customers sign in with a one-time 6-digit code. Multipass needs Shopify Plus, a login on your own external site and legacy customer accounts, which Shopify B2B buyers can't use.",
     },
     {
       q: 'How do you prevent organic search ranking drops during the Magento cutover?',
@@ -56,16 +56,16 @@ export const post: BlogPost = {
       a: 'Monolithic PHP modules are retired and replaced with modern Shopify Theme App Extensions, native Shopify Flow automations, or serverless microservices connecting to Shopify GraphQL APIs.',
     },
     {
-      q: 'How do you ensure zero data loss between final staging testing and live DNS cutover?',
+      q: 'How do you avoid data loss between final staging tests and the live DNS cutover?',
       a: 'We run an automated delta sync immediately prior to DNS switch, migrating all new customers, guest checkouts, orders, and inventory changes generated on Magento during the staging deployment window.',
     },
     {
       q: 'How does checkout performance and speed compare between Magento and Shopify Plus?',
-      a: 'Shopify Plus 1-click Shop Pay checkout converts up to 35 percent higher than standard Magento multi-step checkouts, while eliminating server resource spikes during holiday flash sale traffic surges.',
+      a: 'Shopify runs checkout on its own infrastructure, so there are no servers for your team to scale before a sale. Its Shopify Plus pricing page reports load-tested capacity of more than 10,000 checkouts per minute and 99.99% uptime on average across Shopify during the biggest sales events of the year. Self-hosted Magento stores plan and pay for that capacity themselves.',
     },
     {
       q: 'What is the role of ERP middleware (Celigo, Boomi, Workato) during replatforming?',
-      a: 'ERP middleware connectors are re-pointed from Magento SOAP/REST APIs to Shopify Admin GraphQL webhooks, ensuring live bi-directional synchronization of inventory, orders, and fulfillment updates.',
+      a: "ERP middleware connectors are re-pointed from Magento's SOAP and REST APIs to Shopify's Admin GraphQL API and webhooks, so inventory, orders and fulfillment updates keep syncing in both directions.",
     },
     {
       q: 'How do you handle multi-store views and international currency pricing from Magento?',
@@ -84,11 +84,11 @@ export const post: BlogPost = {
           <li>1. Executive Overview: The TCO Equation Behind Leaving Magento 2</li>
           <li>2. Pre-Migration Audit: Catalog Complexity, App Inventory &amp; ERP Mapping</li>
           <li>3. Database ETL Architecture: Transforming Magento EAV to Shopify Metafields</li>
-          <li>4. The Customer Password Problem: Multipass SSO vs. Automated Activation Funnels</li>
+          <li>4. The Customer Password Problem: Activation Emails, New Customer Accounts and Multipass</li>
           <li>5. SEO Equity Preservation: 1-to-1 301 Redirect Mapping &amp; URL Normalization</li>
           <li>6. B2B Wholesale Architecture: Migrating Custom Pricing &amp; Net 30 Terms</li>
           <li>7. ERP &amp; WMS Integration Cutover: NetSuite, SAP &amp; Dynamics 365 Choreography</li>
-          <li>8. The Zero-Downtime DNS Cutover Playbook: TTL Strategy &amp; Delta Sync</li>
+          <li>8. The DNS Cutover Playbook: TTL Strategy &amp; Delta Sync</li>
           <li>9. Post-Launch QA Checklist: Payment Gateways, Webhooks &amp; Analytics Audit</li>
         </ul>
       </div>
@@ -97,10 +97,10 @@ export const post: BlogPost = {
         1. Executive Overview: The TCO Equation Behind Leaving Magento 2
       </h2>
       <p className="text-base leading-relaxed text-gray-700 mb-4">
-        For over a decade, Magento (Adobe Commerce) was the default choice for high-volume enterprise ecommerce. However, the operational reality of managing self-hosted Magento instances has shifted dramatically. Mid-market brands processing $2M to $20M in annual revenue face escalating cloud hosting fees on AWS, mandatory quarterly security patches, brittle third-party PHP extensions, and high developer retainers.
+        For over a decade, Magento (Adobe Commerce) was the default choice for high-volume enterprise ecommerce. However, the operational reality of managing self-hosted Magento instances has shifted. Mid-market brands carry cloud hosting bills, regular security patches, PHP and dependency upgrades, brittle third-party PHP extensions, and developer retainers. Adobe also gives each release a fixed support window, so a version upgrade is never optional for long.
       </p>
       <p className="text-base leading-relaxed text-gray-700 mb-6">
-        Migrating to Shopify Plus replaces legacy server maintenance with a fully managed cloud architecture backed by 99.99 percent uptime and 1-click Shop Pay checkout. However, an enterprise replatforming project is a complex engineering endeavor. A botched migration risks lost customer data, broken ERP syncs, and catastrophic drops in organic search rankings. This checklist outlines the exact architectural methodology for executing a flawless, zero-downtime cutover.
+        Migrating to Shopify Plus replaces server maintenance with a hosted platform. Shopify reports 99.99% uptime on average across its platform during the biggest sales events of the year on its <a href="https://www.shopify.com/plus/pricing" target="_blank" rel="noopener noreferrer" className="text-[#B23E13] underline">Shopify Plus pricing page</a>, and Shop Pay provides accelerated checkout. However, an enterprise replatforming project is a complex engineering effort. A botched migration risks lost customer data, broken ERP syncs, and sharp drops in organic search traffic. This checklist outlines the methodology for a controlled, low-risk cutover. For published cost ranges and realistic timelines by store size, see our <a href="/replatforming/magento-to-shopify#migration-timeline" className="text-[#B23E13] underline">Magento to Shopify Plus migration cost and timeline guide</a>.
       </p>
 
       <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">
@@ -132,13 +132,13 @@ export const post: BlogPost = {
       </p>
 
       <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">
-        4. The Customer Password Problem: Multipass SSO vs. Automated Activation Funnels
+        4. The Customer Password Problem: Activation Emails, New Customer Accounts and Multipass
       </h2>
       <p className="text-base leading-relaxed text-gray-700 mb-4">
-        A common point of confusion during Magento migrations is customer password transfer. Because Magento stores passwords using one-way cryptographic hashes (typically bcrypt or SHA-256 with salts), passwords cannot be decrypted or injected into Shopify native authentication tables.
+        A common point of confusion during Magento migrations is customer password transfer. Magento stores passwords as salted one-way hashes (SHA-256, or Argon2 on newer Magento 2 versions), and <a href="https://help.shopify.com/en/manual/customers/import-export-customers" target="_blank" rel="noopener noreferrer" className="text-[#B23E13] underline">Shopify says</a> you can&apos;t migrate customer passwords from another store with a CSV import.
       </p>
       <p className="text-base leading-relaxed text-gray-700 mb-6">
-        For enterprise brands on Shopify Plus, the optimal solution is <strong>Shopify Multipass</strong>. We deploy a secure authentication proxy: when an existing customer enters their email and password on Shopify, the proxy verifies credentials against a secure hash validator and generates an encrypted Multipass token, logging the customer in instantly without resetting their password. For standard migrations, we deploy automated customer invitation campaigns with personalized activation links.
+        Plan the sign-in experience before launch. Most stores send account activation emails so each customer sets a new password, or switch to new customer accounts, where customers sign in with a one-time 6-digit code and no password. <a href="https://shopify.dev/docs/api/customer-authentication/multipass" target="_blank" rel="noopener noreferrer" className="text-[#B23E13] underline">Shopify Multipass</a> lets customers who are signed in on your own external site log in to Shopify with a signed token, but it requires Shopify Plus and only works with legacy customer accounts. Shopify B2B requires new customer accounts, so do not plan around Multipass if you sell wholesale on Shopify.
       </p>
 
       <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">
@@ -155,12 +155,12 @@ export const post: BlogPost = {
         6. B2B Wholesale Architecture: Migrating Custom Pricing &amp; Net 30 Terms
       </h2>
       <p className="text-base leading-relaxed text-gray-700 mb-4">
-        If you operate wholesale channels on Magento, migrating customer group pricing is paramount. Shopify Plus delivers native B2B functionality without requiring expensive third-party apps:
+        If you operate wholesale channels on Magento, migrating customer group pricing is paramount. Shopify B2B is native on the Basic, Grow, Advanced and Plus plans, and Plus adds unlimited catalogs, catalogs assigned directly to a company, deposits and partial payments (<a href="https://help.shopify.com/en/manual/b2b/getting-started/plan-features" target="_blank" rel="noopener noreferrer" className="text-[#B23E13] underline">Shopify B2B features by plan</a>):
       </p>
       <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-6">
-        <li><strong>Company Profiles &amp; Multiple Locations:</strong> Map wholesale accounts with multiple purchasing locations, buyer roles, and custom billing rules.</li>
-        <li><strong>Price Lists &amp; Volume Tiering:</strong> Configure percentage discounts or fixed currency price lists assigned to specific company accounts.</li>
-        <li><strong>Payment Terms:</strong> Assign Net 15, Net 30, or Net 60 terms with automatic invoice generation and customer portal payment tracking.</li>
+        <li><strong>Company Profiles &amp; Multiple Locations:</strong> Map wholesale accounts to companies with several locations, each buyer set to location admin or ordering only.</li>
+        <li><strong>Catalogs &amp; Volume Pricing:</strong> Build catalogs with percentage adjustments or fixed prices, plus quantity rules and price breaks. Assigning a catalog directly to one company needs Plus.</li>
+        <li><strong>Payment Terms:</strong> Assign terms from Net 7 to Net 90, or due on fulfillment or on receipt, per company location, and send invoices from draft orders.</li>
       </ul>
 
       <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">
@@ -174,16 +174,16 @@ export const post: BlogPost = {
       </p>
 
       <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">
-        8. The Zero-Downtime DNS Cutover Playbook: TTL Strategy &amp; Delta Sync
+        8. The DNS Cutover Playbook: TTL Strategy &amp; Delta Sync
       </h2>
       <p className="text-base leading-relaxed text-gray-700 mb-4">
-        Executing a zero-downtime cutover follows an exact chronological timeline:
+        A controlled cutover follows a set timeline:
       </p>
       <ol className="list-decimal pl-6 space-y-2 text-gray-700 mb-6">
-        <li><strong>T-Minus 48 Hours:</strong> Lower DNS Time-to-Live (TTL) on your domain registrar to 300 seconds (5 minutes).</li>
+        <li><strong>T-Minus 24 to 48 Hours:</strong> Lower the DNS Time-to-Live (TTL) on your domain, as Shopify&apos;s Magento migration guide recommends, so the switch spreads quickly.</li>
         <li><strong>T-Minus 2 Hours:</strong> Freeze new catalog updates and content changes on the legacy Magento instance.</li>
         <li><strong>T-Minus 30 Minutes:</strong> Execute automated delta import scripts to migrate all new customers and orders placed on Magento during the staging window.</li>
-        <li><strong>T-Minus 0:</strong> Switch DNS A-records and CNAMEs to Shopify edge servers (<code className="bg-gray-100 px-2 py-1 rounded">shops.myshopify.com</code>).</li>
+        <li><strong>T-Minus 0:</strong> Point your A record to Shopify&apos;s IP address (<code className="bg-gray-100 px-2 py-1 rounded">23.227.38.65</code>) and your www CNAME record to <code className="bg-gray-100 px-2 py-1 rounded">shops.myshopify.com</code>, per <a href="https://help.shopify.com/en/manual/domains/add-a-domain/connecting-domains/connect-domain-manual" target="_blank" rel="noopener noreferrer" className="text-[#B23E13] underline">Shopify&apos;s domain setup guide</a>.</li>
         <li><strong>T-Plus 15 Minutes:</strong> Execute end-to-end live test transactions with real credit cards and verify ERP order ingestion.</li>
       </ol>
 
@@ -197,7 +197,7 @@ export const post: BlogPost = {
       <div className="bg-[#FFF8F5] p-6 rounded-lg border border-[#F05A28]/20 mt-8 text-center">
         <h3 className="text-xl font-bold text-gray-900 mb-2">Planning a Magento to Shopify Plus Migration?</h3>
         <p className="text-sm text-gray-600 mb-4 max-w-xl mx-auto">
-          Speak directly with founder Bhavesh Barot. We will audit your current database schemas, ERP connectors, and provide a fixed-price migration roadmap with zero downtime guarantees.
+          Speak directly with founder Bhavesh Barot. We will audit your current database schemas and ERP connectors, then send a written migration roadmap and scope.
         </p>
         <a
           href="https://calendly.com/bhavesh-factoryjet/30min"
