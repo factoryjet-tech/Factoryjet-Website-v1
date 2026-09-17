@@ -98,6 +98,40 @@ async function writeLeadToFirestore(env, lead) {
 // them here: this repository is public on GitHub.
 const DEFAULT_ERPNEXT_URL = 'https://erp.factoryjet.com';
 
+// ERPNext must never hold up the visitor or the email alert. Each ERPNext request
+// gets its own time limit, and the lead request only waits a short grace period
+// for the CRM record (so the alert can link it) before answering the visitor and
+// letting the sync finish in the background via context.waitUntil.
+// 2026-09-17: the first live test took 16s because an ERPNext call stalled.
+const ERP_FETCH_TIMEOUT_MS = 8000;
+const ERP_EMAIL_GRACE_MS = 2500;
+const ERP_HEADERS = {
+  Accept: 'application/json',
+  'User-Agent': 'FactoryJet-LeadSync/1.0 (+https://factoryjet.com)',
+};
+
+/** fetch() with a hard time limit. Throws an AbortError when the limit is hit. */
+async function fetchWithTimeout(url, options, timeoutMs) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), timeoutMs);
+  try {
+    return await fetch(url, { ...options, signal: controller.signal });
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+/** Short, non-sensitive description of a failed request, for logs and the health check. */
+function describeFetchError(err) {
+  if (err && err.name === 'AbortError') return 'timeout';
+  return `network_error: ${String((err && err.message) || err).slice(0, 120)}`;
+}
+
+function erpTimeout(env) {
+  const n = Number(env && env.ERPNEXT_TIMEOUT_MS);
+  return Number.isFinite(n) && n > 0 ? n : ERP_FETCH_TIMEOUT_MS;
+}
+
 /**
  * Direct push to ERPNext CRM Lead via REST API, plus follow-up task assignment.
  * Ensures every incoming web lead directly registers inside ERPNext with an
@@ -119,12 +153,14 @@ async function writeLeadToERPNext(env, lead) {
   let leadId = null;
   if (lead.docId) {
     try {
-      const checkRes = await fetch(
+      const checkRes = await fetchWithTimeout(
         `${erpUrl}/api/resource/Lead?filters=${encodeURIComponent(JSON.stringify([["custom_firebase_doc_id", "=", lead.docId]]))}&fields=${encodeURIComponent(JSON.stringify(["name"]))}`,
         {
-          headers: { 'Authorization': authHeader },
-        }
+          headers: { ...ERP_HEADERS, 'Authorization': authHeader },
+        },
+        erpTimeout(env)
       );
+      if (!checkRes.ok) console.warn('ERPNext duplicate check returned HTTP', checkRes.status);
       if (checkRes.ok) {
         const checkData = await checkRes.json();
         if (checkData.data && checkData.data.length > 0) {
@@ -134,7 +170,7 @@ async function writeLeadToERPNext(env, lead) {
         }
       }
     } catch (err) {
-      console.warn('ERPNext deduplication check warning:', err);
+      console.warn('ERPNext deduplication check warning:', describeFetchError(err));
     }
   }
 
@@ -157,26 +193,28 @@ async function writeLeadToERPNext(env, lead) {
   };
 
   try {
-    const res = await fetch(`${erpUrl}/api/resource/Lead`, {
+    const res = await fetchWithTimeout(`${erpUrl}/api/resource/Lead`, {
       method: 'POST',
       headers: {
+        ...ERP_HEADERS,
         'Content-Type': 'application/json',
         'Authorization': authHeader,
       },
       body: JSON.stringify(payload),
-    });
+    }, erpTimeout(env));
 
     if (res.ok) {
       const data = await res.json();
       leadId = data?.data?.name;
     } else {
-      const errText = await res.text();
+      const errText = (await res.text()).slice(0, 500);
       console.error('ERPNext Lead write failed:', res.status, errText);
-      return { saved: false, status: res.status, error: errText };
+      return { saved: false, status: res.status, error: `http_${res.status}` };
     }
   } catch (err) {
-    console.error('ERPNext Lead write error:', err);
-    return { saved: false, error: String(err) };
+    const kind = describeFetchError(err);
+    console.error('ERPNext Lead write error:', kind);
+    return { saved: false, error: kind };
   }
 
   // 3. Create high-priority follow-up ToDo task assigned to bhavesh@factoryjet.com
@@ -195,14 +233,15 @@ async function writeLeadToERPNext(env, lead) {
         date: new Date().toISOString().slice(0, 10),
       };
 
-      const todoRes = await fetch(`${erpUrl}/api/resource/ToDo`, {
+      const todoRes = await fetchWithTimeout(`${erpUrl}/api/resource/ToDo`, {
         method: 'POST',
         headers: {
+          ...ERP_HEADERS,
           'Content-Type': 'application/json',
           'Authorization': authHeader,
         },
         body: JSON.stringify(todoPayload),
-      });
+      }, erpTimeout(env));
 
       if (todoRes.ok) {
         const todoData = await todoRes.json();
@@ -211,7 +250,7 @@ async function writeLeadToERPNext(env, lead) {
         console.warn('ERPNext ToDo creation warning:', await todoRes.text());
       }
     } catch (todoErr) {
-      console.warn('ERPNext ToDo creation exception:', todoErr);
+      console.warn('ERPNext ToDo creation exception:', describeFetchError(todoErr));
     }
   }
 
@@ -489,17 +528,25 @@ export async function onRequestPost(context) {
     turnstileToken: body.turnstileToken, turnstileVerdict,
   });
 
-  // ── (1b) Concurrently push lead to ERPNext CRM ─────────────────────────────
-  let erpResult = { saved: false };
-  try {
-    erpResult = await writeLeadToERPNext(env, {
-      docId: fsResult.docId || docId,
-      name, email, phone, company, service, message, region, source, page,
-      ...attribution,
-    });
-  } catch (err) {
-    console.error('ERPNext lead sync exception:', err);
-  }
+  // ── (1b) Push lead to ERPNext CRM without ever blocking the visitor ────────
+  // Wait at most ERP_EMAIL_GRACE_MS so a quick CRM write can be linked in the
+  // alert email; otherwise answer now and let the sync finish in the background.
+  const erpPromise = writeLeadToERPNext(env, {
+    docId: fsResult.docId || docId,
+    name, email, phone, company, service, message, region, source, page,
+    ...attribution,
+  }).then((result) => {
+    if (!result.saved) console.error('ERPNext lead sync did not save:', result.error || result.status || 'unknown');
+    return result;
+  }).catch((err) => {
+    console.error('ERPNext lead sync exception:', describeFetchError(err));
+    return { saved: false, error: describeFetchError(err) };
+  });
+  if (typeof context.waitUntil === 'function') context.waitUntil(erpPromise);
+  const erpResult = await Promise.race([
+    erpPromise,
+    new Promise((resolve) => setTimeout(() => resolve({ saved: false, pending: true }), ERP_EMAIL_GRACE_MS)),
+  ]);
 
   // ── (2) Notify by email via Resend (best-effort) ───────────────────────────
   let emailed = false;
@@ -543,6 +590,7 @@ export async function onRequestPost(context) {
       ok,
       saved: fsResult.saved,
       erpLeadId: erpResult.leadId || null,
+      erpPending: Boolean(erpResult.pending),
       emailed,
       docId: fsResult.docId || docId,
     }),
@@ -552,6 +600,58 @@ export async function onRequestPost(context) {
       headers: { 'Content-Type': 'application/json', ...corsHeaders },
     },
   );
+}
+
+/**
+ * CRM health check that creates nothing: GET /api/notify-lead?check=crm
+ *
+ * Reports whether ERPNext credentials are configured, whether ERPNext is
+ * reachable from Cloudflare, and whether the credentials authenticate, with
+ * timings. It never returns secrets or the API user's name. Use it to verify the
+ * CRM layer of lead tracking without sending a test lead.
+ */
+export async function onRequestGet(context) {
+  const { request, env } = context;
+  const url = new URL(request.url);
+  const json = (obj, status) => new Response(JSON.stringify(obj), {
+    status,
+    headers: { 'Content-Type': 'application/json', 'Cache-Control': 'no-store' },
+  });
+  if (url.searchParams.get('check') !== 'crm') {
+    return json({ error: 'POST a lead, or GET ?check=crm for the CRM health check' }, 405);
+  }
+
+  const erpUrl = (env && env.ERPNEXT_URL) || DEFAULT_ERPNEXT_URL;
+  const configured = Boolean(env && env.ERPNEXT_API_KEY && env.ERPNEXT_API_SECRET);
+  const crm = { configured, reachable: null, authOk: null, httpStatus: null, pingMs: null, authMs: null, error: null };
+
+  let started = Date.now();
+  try {
+    const ping = await fetchWithTimeout(`${erpUrl}/api/method/ping`, { headers: ERP_HEADERS }, erpTimeout(env));
+    crm.reachable = ping.ok;
+    crm.httpStatus = ping.status;
+  } catch (err) {
+    crm.reachable = false;
+    crm.error = describeFetchError(err);
+  }
+  crm.pingMs = Date.now() - started;
+
+  if (configured && crm.reachable) {
+    started = Date.now();
+    try {
+      const auth = await fetchWithTimeout(`${erpUrl}/api/method/frappe.auth.get_logged_user`, {
+        headers: { ...ERP_HEADERS, Authorization: `token ${env.ERPNEXT_API_KEY}:${env.ERPNEXT_API_SECRET}` },
+      }, erpTimeout(env));
+      crm.authOk = auth.ok;
+      crm.httpStatus = auth.status;
+    } catch (err) {
+      crm.authOk = false;
+      crm.error = describeFetchError(err);
+    }
+    crm.authMs = Date.now() - started;
+  }
+
+  return json({ crm }, 200);
 }
 
 /** Handle CORS preflight */
