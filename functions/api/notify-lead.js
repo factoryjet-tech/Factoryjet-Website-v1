@@ -103,6 +103,7 @@ const DEFAULT_ERPNEXT_URL = 'https://erp.factoryjet.com';
 // for the CRM record (so the alert can link it) before answering the visitor and
 // letting the sync finish in the background via context.waitUntil.
 // 2026-09-17: the first live test took 16s because an ERPNext call stalled.
+const LEAD_OWNER = 'bhavesh@factoryjet.com';
 const ERP_FETCH_TIMEOUT_MS = 8000;
 const ERP_EMAIL_GRACE_MS = 2500;
 const ERP_HEADERS = {
@@ -174,47 +175,97 @@ async function writeLeadToERPNext(env, lead) {
     }
   }
 
-  // 2. Create Lead
-  const payload = {
-    lead_name: lead.name || 'Website Inquiry',
-    email_id: lead.email || '',
-    mobile_no: lead.phone || '',
-    company_name: lead.company || lead.name || 'Individual',
-    source: 'Website',
-    status: 'Open',
-    lead_owner: 'bhavesh@factoryjet.com',
-    custom_firebase_doc_id: lead.docId || '',
-    custom_sequence_status: 'Not Contacted',
-    notes: [
-      {
-        note: `Came from: ${channelLabel(lead)}\n${attributionLines(lead)}Form: ${lead.source || 'Website'}\nForm page: https://factoryjet.com${lead.page || ''}\nService: ${serviceLabel(lead.service)}\nRegion: ${lead.region ? String(lead.region).toUpperCase() : 'Not specified'}\nMessage: ${lead.message || 'N/A'}\nFirebase Doc ID: ${lead.docId || 'N/A'}`
+  const noteText = `Came from: ${channelLabel(lead)}\n${attributionLines(lead)}Form: ${lead.source || 'Website'}\nForm page: https://factoryjet.com${lead.page || ''}\nService: ${serviceLabel(lead.service)}\nRegion: ${lead.region ? String(lead.region).toUpperCase() : 'Not specified'}\nMessage: ${lead.message || 'N/A'}\nFirebase Doc ID: ${lead.docId || 'N/A'}`;
+
+  // 2. Returning prospect? ERPNext rejects a second Lead with the same email while
+  // CRM Settings "Allow Lead Duplication based on Emails" is off (it was off on
+  // 2026-09-17), so a returning prospect's new inquiry would silently never reach
+  // the CRM. Attach it to the existing Lead instead.
+  let returning = false;
+  if (lead.email) {
+    try {
+      const byEmail = await fetchWithTimeout(
+        `${erpUrl}/api/resource/Lead?filters=${encodeURIComponent(JSON.stringify([["email_id", "=", String(lead.email).trim()]]))}&fields=${encodeURIComponent(JSON.stringify(["name"]))}&limit_page_length=1`,
+        { headers: { ...ERP_HEADERS, 'Authorization': authHeader } },
+        erpTimeout(env)
+      );
+      if (byEmail.ok) {
+        const found = ((await byEmail.json()) || {}).data || [];
+        if (found.length > 0) {
+          leadId = found[0].name;
+          returning = true;
+        }
+      } else {
+        console.warn('ERPNext email lookup returned HTTP', byEmail.status);
       }
-    ]
-  };
-
-  try {
-    const res = await fetchWithTimeout(`${erpUrl}/api/resource/Lead`, {
-      method: 'POST',
-      headers: {
-        ...ERP_HEADERS,
-        'Content-Type': 'application/json',
-        'Authorization': authHeader,
-      },
-      body: JSON.stringify(payload),
-    }, erpTimeout(env));
-
-    if (res.ok) {
-      const data = await res.json();
-      leadId = data?.data?.name;
-    } else {
-      const errText = (await res.text()).slice(0, 500);
-      console.error('ERPNext Lead write failed:', res.status, errText);
-      return { saved: false, status: res.status, error: `http_${res.status}` };
+    } catch (err) {
+      console.warn('ERPNext email lookup warning:', describeFetchError(err));
     }
-  } catch (err) {
-    const kind = describeFetchError(err);
-    console.error('ERPNext Lead write error:', kind);
-    return { saved: false, error: kind };
+  }
+
+  if (returning) {
+    // 3a. Add the new inquiry to the existing Lead's timeline as a comment.
+    try {
+      const commentRes = await fetchWithTimeout(`${erpUrl}/api/resource/Comment`, {
+        method: 'POST',
+        headers: {
+          ...ERP_HEADERS,
+          'Content-Type': 'application/json',
+          'Authorization': authHeader,
+        },
+        body: JSON.stringify({
+          comment_type: 'Comment',
+          reference_doctype: 'Lead',
+          reference_name: leadId,
+          content: `<p><strong>New website inquiry from a returning lead</strong></p><p>${escapeHtml(noteText).replace(/\n/g, '<br>')}</p>`,
+        }),
+      }, erpTimeout(env));
+      if (!commentRes.ok) {
+        console.warn('ERPNext returning-lead comment returned HTTP', commentRes.status, (await commentRes.text()).slice(0, 300));
+      }
+    } catch (err) {
+      console.warn('ERPNext returning-lead comment warning:', describeFetchError(err));
+    }
+  } else {
+    // 3b. Create a new Lead. ERPNext also rejects a Lead whose email equals its
+    // owner, so an internal test from the owner's own address gets no owner set.
+    const payload = {
+      lead_name: lead.name || 'Website Inquiry',
+      email_id: lead.email || '',
+      mobile_no: lead.phone || '',
+      company_name: lead.company || lead.name || 'Individual',
+      source: 'Website',
+      status: 'Open',
+      ...(String(lead.email || '').trim().toLowerCase() !== LEAD_OWNER ? { lead_owner: LEAD_OWNER } : {}),
+      custom_firebase_doc_id: lead.docId || '',
+      custom_sequence_status: 'Not Contacted',
+      notes: [{ note: noteText }],
+    };
+
+    try {
+      const res = await fetchWithTimeout(`${erpUrl}/api/resource/Lead`, {
+        method: 'POST',
+        headers: {
+          ...ERP_HEADERS,
+          'Content-Type': 'application/json',
+          'Authorization': authHeader,
+        },
+        body: JSON.stringify(payload),
+      }, erpTimeout(env));
+
+      if (res.ok) {
+        const data = await res.json();
+        leadId = data?.data?.name;
+      } else {
+        const errText = (await res.text()).slice(0, 500);
+        console.error('ERPNext Lead write failed:', res.status, errText);
+        return { saved: false, status: res.status, error: `http_${res.status}` };
+      }
+    } catch (err) {
+      const kind = describeFetchError(err);
+      console.error('ERPNext Lead write error:', kind);
+      return { saved: false, error: kind };
+    }
   }
 
   // 3. Create high-priority follow-up ToDo task assigned to bhavesh@factoryjet.com
@@ -223,10 +274,10 @@ async function writeLeadToERPNext(env, lead) {
     try {
       const serviceName = serviceLabel(lead.service);
       const todoPayload = {
-        description: `Follow up with ${lead.name || 'Website Lead'} (${lead.company || 'Individual'})\nService: ${serviceName} · Page: ${lead.page || '/'}\nCame from: ${channelLabel(lead)}${lead.landingPage ? ` · Landed on: ${lead.landingPage}` : ''}\nPhone: ${lead.phone || 'N/A'} · Email: ${lead.email || 'N/A'}\nInquiry: ${lead.message || 'N/A'}`,
+        description: `${returning ? 'Returning lead, new inquiry. ' : ''}Follow up with ${lead.name || 'Website Lead'} (${lead.company || 'Individual'})\nService: ${serviceName} · Page: ${lead.page || '/'}\nCame from: ${channelLabel(lead)}${lead.landingPage ? ` · Landed on: ${lead.landingPage}` : ''}\nPhone: ${lead.phone || 'N/A'} · Email: ${lead.email || 'N/A'}\nInquiry: ${lead.message || 'N/A'}`,
         status: 'Open',
         priority: 'High',
-        allocated_to: 'bhavesh@factoryjet.com',
+        allocated_to: LEAD_OWNER,
         assigned_by: 'Administrator',
         reference_type: 'Lead',
         reference_name: leadId,
@@ -254,7 +305,7 @@ async function writeLeadToERPNext(env, lead) {
     }
   }
 
-  return { saved: true, leadId, todoId };
+  return { saved: true, leadId, todoId, returning };
 }
 
 
@@ -338,7 +389,7 @@ function attributionLines(lead) {
 }
 
 /** Build a clean HTML email body */
-function buildHtml({ name, email, phone, company, service, message, region, page, turnstileVerdict, erpLeadId, attribution }) {
+function buildHtml({ name, email, phone, company, service, message, region, page, turnstileVerdict, erpLeadId, erpReturning, attribution }) {
   const a = attribution || {};
   const now = new Date().toLocaleString('en-US', {
     timeZone: 'Asia/Kolkata',
@@ -380,7 +431,7 @@ function buildHtml({ name, email, phone, company, service, message, region, page
                 ${row('Service', `<span style="display:inline-block;background:#FFF1EB;color:#F05A28;padding:3px 10px;border-radius:20px;font-weight:600;font-size:13px;">${serviceLabel(service)}</span>`)}
                 ${row('Region',  (region || '').toUpperCase() || '—')}
                 ${message ? row('Message', `<span style="color:#374151;">${message}</span>`) : ''}
-                ${erpLeadId ? row('CRM Lead', `<a href="https://erp.factoryjet.com/app/lead/${encodeURIComponent(erpLeadId)}" style="color:#F05A28;font-weight:600;text-decoration:none;">${erpLeadId} (Assigned to Bhavesh)</a>`) : ''}
+                ${erpLeadId ? row('CRM Lead', `<a href="https://erp.factoryjet.com/app/lead/${encodeURIComponent(erpLeadId)}" style="color:#F05A28;font-weight:600;text-decoration:none;">${erpLeadId} ${erpReturning ? '(returning lead, new inquiry added)' : '(Assigned to Bhavesh)'}</a>`) : ''}
                 ${row('Came from', `<strong>${escapeHtml(channelLabel(a))}</strong>`)}
                 ${a.landingPage ? row('Landing page', `<a href="https://factoryjet.com${escapeHtml(a.landingPage)}" style="color:#6B7280;font-size:12px;">factoryjet.com${escapeHtml(a.landingPage)}</a>`) : ''}
                 ${a.utmCampaign ? row('Campaign', escapeHtml(a.utmCampaign)) : ''}
@@ -569,7 +620,7 @@ export async function onRequestPost(context) {
           subject,
           html: buildHtml({
             name, email, phone, company, service, message, region, page,
-            turnstileVerdict, erpLeadId: erpResult.leadId, attribution,
+            turnstileVerdict, erpLeadId: erpResult.leadId, erpReturning: Boolean(erpResult.returning), attribution,
           }),
           reply_to: email,
         }),
