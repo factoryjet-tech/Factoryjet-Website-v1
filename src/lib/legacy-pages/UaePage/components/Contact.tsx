@@ -138,8 +138,8 @@ const Contact: React.FC = () => {
             <a href="#industries" className="hover:text-white transition-colors">Industries</a>
             <a href="#portfolio" className="hover:text-white transition-colors">Portfolio</a>
             <a href="#pricing" className="hover:text-white transition-colors">Pricing</a>
-            <a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="/terms" className="hover:text-white transition-colors">Terms of Service</a>
+            <a href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</a>
+            <a href="/terms-and-conditions" className="hover:text-white transition-colors">Terms of Service</a>
           </div>
 
           <div className="flex gap-4">

@@ -146,6 +146,33 @@ const GETS = [
   'Every claim backed by the verbatim AI answer, with the engine and date.',
 ];
 
+/* ── Paid AI Search Audit (static upsell section below the free tool) ──────
+   Describes the done-by-us audit for mid-size and enterprise teams. No prices,
+   by house rule: every audit is scoped and quoted. Engines and method mirror
+   what the audit pipeline actually runs (ChatGPT, Claude, Gemini, Perplexity,
+   plus Google AI Overviews and organic results, repeated runs per question). */
+const AUDIT_FOR = [
+  'Mid-size and enterprise teams with several products, brands or markets to cover.',
+  'Marketing and growth leaders who need evidence for a budget decision, not one score.',
+  'Teams whose free check showed a gap and who want the reasons behind it.',
+];
+
+const AUDIT_INCLUDES = [
+  { h: 'Engines tested', p: 'ChatGPT, Claude, Gemini and Perplexity, plus Google AI Overviews and the normal Google results.' },
+  { h: 'Buyer questions', p: 'A question set built with you from how your customers really ask, with each question run several times per engine, because AI answers change from run to run.' },
+  { h: 'Competitor comparison', p: 'Who gets named instead of you, how often, in what order, and which websites the engines cite as their sources.' },
+  { h: 'Technical fixes', p: 'Which AI bots your robots.txt allows or blocks, whether your key content is in the page HTML, and the schema and crawl issues holding you back.' },
+  { h: 'Content fixes', p: 'The pages to rewrite so an answer can be quoted from them, and the third-party sites where your category gets discussed.' },
+  { h: 'A prioritized plan', p: 'Every fix ranked by likely impact and effort, so your team knows what to do first, second and later.' },
+];
+
+const AUDIT_STEPS = [
+  { n: '01', h: 'Tell us your market', p: 'Share your site, your main competitors and who you sell to. One short call is enough.' },
+  { n: '02', h: 'Agree the questions', p: 'We draft the buyer questions for your category and agree them with you before anything runs.' },
+  { n: '03', h: 'We run every answer', p: 'Each question goes to every engine several times. We record who is named, in what order, and which sources are cited.' },
+  { n: '04', h: 'You get the plan', p: 'A written report with the evidence behind every finding and a prioritized fix list, walked through with you on a call.' },
+];
+
 export default function AiVisibilityCheckerPage() {
   return (
     <>
@@ -245,6 +272,58 @@ export default function AiVisibilityCheckerPage() {
                 </li>
               ))}
             </ul>
+          </div>
+        </section>
+
+        {/* PAID AI SEARCH AUDIT: the deeper, done-for-you option for bigger teams.
+            Static. No prices by house rule; links to the GEO service page. */}
+        <section className="pp-sec tint" id="ai-search-audit" style={{ scrollMarginTop: 80 }}>
+          <div className="pp-wrap">
+            <div className="avc-get-grid">
+              <div>
+                <p className="pp-eyebrow">// for bigger teams</p>
+                <h2 style={{ marginTop: 12 }}>Need more than a one-minute check? Get an AI Search Audit.</h2>
+                <p className="pp-lead" style={{ marginTop: 16, maxWidth: '48ch' }}>
+                  The free checker is a quick read: three engines, six buyer questions, about a minute. The AI Search Audit is
+                  a paid, in-depth review our team runs for mid-size and enterprise companies that need to know where they
+                  stand in AI answers, why, and what to fix first.
+                </p>
+                <h3 style={{ marginTop: 24, fontSize: 17 }}>Who it is for</h3>
+                <ul className="avc-trust-list">
+                  {AUDIT_FOR.map((a) => (
+                    <li key={a}>{a}</li>
+                  ))}
+                </ul>
+                <div className="avc-cta-row" style={{ marginTop: 24 }}>
+                  <Link href="/contact" className="avc-btn avc-btn--primary">Request an AI Search Audit</Link>
+                  <Link href="/services/generative-engine-optimization" className="avc-btn avc-btn--ghost">See our GEO agency services</Link>
+                </div>
+                <p className="avc-fineprint">Every audit is scoped to your site and market, and quoted before any work starts.</p>
+              </div>
+              <div>
+                <h3 style={{ fontSize: 17 }}>What is included</h3>
+                <ul className="avc-get-list" style={{ marginTop: 14 }}>
+                  {AUDIT_INCLUDES.map((item) => (
+                    <li key={item.h}>
+                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+                        <path d="M4.5 9.5l3 3 6-7" stroke="#C94A1A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                      <span><strong>{item.h}.</strong> {item.p}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+            <p className="pp-mlabel" style={{ marginTop: 40 }}>// how the audit works</p>
+            <div className="avc-steps" style={{ marginTop: 16 }}>
+              {AUDIT_STEPS.map((s) => (
+                <div key={s.n} className="avc-step">
+                  <span className="avc-step-n">{s.n}</span>
+                  <h3>{s.h}</h3>
+                  <p>{s.p}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 

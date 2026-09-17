@@ -40,6 +40,7 @@ export const US_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
       { label: 'Agentic Commerce',       href: '/agentic-commerce' },
       { label: 'For Manufacturers',      href: '/ecommerce-for-manufacturers' },
       { label: 'Amazon Agency',          href: '/services/amazon-agency' },
+      { label: 'TikTok Shop Agency',     href: '/services/tiktok-shop-agency' },
       { label: 'Target Plus Marketplace',href: '/target-plus-marketplace' },
       { label: 'Faire Wholesale Agency', href: '/faire-wholesale-marketplace' },
       { label: 'Replatforming Calculator', href: '/tools/replatforming-cost-calculator' },

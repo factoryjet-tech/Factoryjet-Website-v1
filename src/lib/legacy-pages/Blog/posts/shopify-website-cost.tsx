@@ -2,258 +2,250 @@ import React from 'react';
 import Link from 'next/link';
 import type { BlogPost } from '../data.types';
 
+const cell: React.CSSProperties = { padding: '8px 12px', border: '1px solid #e2e8f0' };
+const headCell: React.CSSProperties = { padding: '8px 12px', border: '1px solid #e2e8f0', textAlign: 'left' };
+
 export const post: BlogPost = {
   id: '231',
   slug: 'shopify-website-cost',
   title: 'How Much Does a Shopify Website Cost in 2026? (Real Numbers)',
   excerpt:
-    'The shopify website cost ranges from $2,000 to $50,000+ depending on design complexity, custom features, and integrations. Here are the real numbers broken down by project type, verified against 2026 market data and 500+ store builds.',
+    'For many stores the Shopify plan is not the biggest bill. Here is the full cost of owning a Shopify store in 2026, from the plan and card fees to themes, apps and domain, with every Shopify price checked against Shopify\'s own pages and three example budgets you can copy.',
   category: 'E-Commerce Development',
   author: 'Bhavesh Barot',
-  date: 'Jun 13, 2026',
-  readTime: '11 min read',
+  date: 'Sep 17, 2026',
+  readTime: '12 min read',
   imageUrl: '/blog-images/shopify-website-cost-2026.webp',
   meta: {
     title: 'How Much Does a Shopify Website Cost in 2026? (Real Numbers)',
     description:
-      'Shopify website cost in 2026: $2,000–$50,000+ by project type. Real numbers on Shopify plans, custom themes, dev rates, and hidden costs for US small businesses.',
+      'What a Shopify store costs to own in 2026: plans from $29 to $2,300 a month, card fees, themes, apps and domain, checked on Shopify\'s own pricing pages.',
   },
   keyTakeaways: [
-    'A Shopify website costs $2,000–$50,000+ to build depending on complexity. DIY setup with a free theme costs as little as $468 in Year 1 according to Shopify\'s own cost guide.',
-    'There are four cost buckets: Shopify plan fee (ongoing), theme (one-time), development/setup (one-time), and apps (ongoing). Most owners budget only for the platform fee.',
-    'US agency rates run $120–$200/hour. A standard SMB store build runs $2,999–$6,000 as a fixed-price project. FactoryJet delivers these in 7 days (disclosure: this is us).',
-    'Hidden costs matter: apps average $50–$500/month, transaction fees run 0.5–2% if you skip Shopify Payments, and email marketing is a separate line item.',
-    'A $4,999 custom store converting at 2% vs 1% on $50K/month GMV generates $12,000 in additional annual revenue, paying for itself in 5 months.',
-    'Shopify Plus costs $2,300/month as of June 2026 per Shopify\'s pricing page. Full enterprise/headless builds run $40,000–$200,000+.',
+    'Shopify plans cost $29 (Basic), $79 (Grow) and $299 (Advanced) a month billed yearly, or $39, $105 and $399 billed monthly. Shopify Plus starts at $2,300 a month. All from Shopify\'s US pricing page, September 16, 2026.',
+    'Card fees grow with you. On Basic, Shopify Payments charges 2.9% + 30¢ per online card sale, so Shopify keeps $3.20 of a $100 sale. Past about $1,000 a month in online sales, card fees cost more than the Basic plan.',
+    'Use a payment provider other than Shopify Payments and Shopify adds its own fee: 2% on Basic, 1% on Grow, 0.6% on Advanced and 0.2% on Plus.',
+    'A lean first year on Basic with a free theme, a $9 domain and free apps costs about $357 before card fees. A growing store on Grow with a paid theme and two paid apps costs about $1,477 to $1,877.',
+    'Paid themes cost $100 to $500 once, and 24 themes are free. Apps are the cost that creeps, because most start free and charge more as you grow.',
+    'Upgrading from Basic to Grow only pays for itself on card fees at about $25,000 a month in online sales. Upgrade for features, not for the card rate.',
+    'Building the store is a separate, one-time bill. Developer and agency rates are in our Shopify development cost guide.',
   ],
   faqs: [
     {
       q: 'How much does a Shopify website cost in 2026?',
-      a: 'A Shopify website cost ranges from $2,000 to $50,000+ for a professionally built store. A DIY store using a free Shopify theme costs $468–$1,068 in Year 1 including the Basic plan at $29–$39/month and a domain, according to Shopify\'s official cost guide. A custom-designed store for a small US business typically costs $2,999–$6,000 one-time for development, plus $39–$105/month for the platform. Enterprise and headless builds start at $40,000. Most US small businesses fall in the $2,999–$8,000 range.',
+      a: 'To own and run, a Shopify store costs $29 to $399 a month for the plan: Basic $29, Grow $79 and Advanced $299 billed yearly, or $39, $105 and $399 billed monthly, per Shopify\'s US pricing page in September 2026. Add card fees of 2.25% to 2.9% + 30¢ per online sale, a domain from $9 a year, an optional theme at $100 to $500 once, and apps. A lean first year on Basic costs about $357 before card fees. Building the store is a separate, one-time cost.',
     },
     {
-      q: 'How much does it cost to build a Shopify store from scratch?',
-      a: 'The cost to build a Shopify store from scratch depends on your approach. A developer doing everything from scratch, custom design, custom Liquid theme, app integration, product upload, payment configuration, typically runs $3,000–$15,000. A template-based store built by an agency (selecting a premium theme, customizing it, and setting it up for launch) runs $1,500–$5,000. FactoryJet\'s template store tier starts at $2,999 and includes Shopify setup, product upload up to 50 items, payment configuration, and a mobile-first build, delivered in 7 days. The tiers are starting points, checked against your actual catalogue on a call.',
+      q: 'How much does a Shopify store cost per month?',
+      a: 'The plan costs $29 (Basic), $79 (Grow) or $299 (Advanced) a month on yearly billing, or $39, $105 or $399 paid monthly. Shopify Plus starts at $2,300 a month. Apps usually add to that: Judge.me reviews is free or $15 a month, and Klaviyo email is free up to 250 contacts, then $20 a month for up to 500. Card fees come on top and grow with your sales.',
     },
     {
-      q: 'What is the total shopify website cost for a small business?',
-      a: 'For a US small business, the total shopify website cost including development and Year 1 ongoing fees typically runs $4,500–$12,000 all-in. That breaks down as: $2,999–$6,000 one-time development, $468–$1,260 for the Shopify plan over 12 months, $0–$200 for a theme, and $600–$3,000 for a basic app stack (reviews, email marketing, upsells). Content ready at kickoff cuts development costs by 30–50%.',
+      q: 'How much is Shopify a year?',
+      a: 'On yearly billing, Basic costs $348 a year, Grow $948 and Advanced $3,588, per Shopify\'s US pricing page in September 2026. Paying monthly instead costs $468, $1,260 and $4,788 a year, so yearly billing saves $120 to $1,200. Add a domain from $9 a year. Card fees, apps and any paid theme are extra.',
     },
     {
-      q: 'What is the shopify development cost for a custom store?',
-      a: 'Shopify development cost for a custom store, unique design, custom brand fonts and palette, conversion-optimized layouts, runs $4,999–$15,000 for most US small businesses. FactoryJet\'s custom theme tier is $4,999 (disclosure: that\'s us) and covers unique design built to your brand specifications, mobile-first build, and product setup up to 50 items. Agencies in the US and UK charge $120–$200/hour for custom work, so a 30–50 hour engagement lands in that range.',
-    },
-    {
-      q: 'What does a shopify developer cost per hour?',
-      a: 'Shopify developer cost per hour depends on experience and location. Junior developers charge $25–$45/hour. Mid-level developers charge $45–$90/hour. Senior Shopify developers charge $90–$160/hour. US and UK agency rates run $120–$200/hour with project management and QA included. For a contained task like a section update or app integration, a freelancer at mid-level rates is reasonable. For a full store build, a fixed-price agency engagement typically produces more predictable results. Source: CartCoders developer rate breakdown, March 2026.',
-    },
-    {
-      q: 'How much does a Shopify store cost per month to run?',
-      a: 'A Shopify store costs $39–$399/month in platform fees on standard plans. The Basic plan is $39/month (or $29/month billed annually), the Grow plan is $105/month ($79/month annually), and Advanced is $399/month ($299/month annually), per Shopify\'s pricing page as of June 2026. Add apps: a basic stack of reviews, email marketing, and upsell tools runs $50–$250/month, and your monthly operating cost is typically $89–$650/month for most SMBs.',
-    },
-    {
-      q: 'What is the shopify website cost for a small business that just needs a basic store?',
-      a: 'A basic Shopify website cost for a small business needing a clean, functional store, homepage, collection pages, product pages, about, and contact, runs $2,000–$4,000 for professional setup. FactoryJet\'s template store starts at $2,999 with Shopify setup, up to 50 products uploaded, payment configuration, and 7-day delivery. Using Shopify Basic at $29/month billed annually, your first year all-in is roughly $4,350–$5,350.',
+      q: 'How much does Shopify take from a $100 sale?',
+      a: 'On the Basic plan with Shopify Payments, a $100 online sale paid with a standard card costs $3.20 (2.9% + 30¢), so you keep $96.80. In person it costs $2.70 (2.6% + 10¢). On Grow the online fee drops to $3.00, on Advanced to $2.80 and on Plus to $2.55. If you use a different payment provider, Shopify takes 2% on Basic ($2) on top of that provider\'s own fee.',
     },
     {
       q: 'How much does Shopify charge in fees?',
-      a: 'Shopify charges monthly plan fees of $39–$399/month (or $29–$299/month on annual billing) plus transaction fees of 0.5–2% if you use a third-party payment processor instead of Shopify Payments. Shopify Payments eliminates the transaction fee but has its own credit card processing rates: 2.9% + 30¢ on Basic, scaling down on higher plans. Shopify Plus costs $2,300/month. There are no setup fees from Shopify itself, only from any developer or agency you hire.',
+      a: 'Three kinds. The monthly plan fee. Card processing through Shopify Payments, with online standard card rates of 2.9% on Basic, 2.7% on Grow, 2.5% on Advanced and 2.25% on Plus, each plus 30¢. And a third-party transaction fee only if you use another payment provider: 2%, 1%, 0.6% or 0.2% by plan. Shopify says there are no setup fees on any plan. Premium and international cards cost more.',
     },
     {
-      q: 'What does it cost to hire a Shopify developer or agency?',
-      a: 'The cost to hire a Shopify developer ranges from $500 for a simple task to $15,000+ for a full custom store build. Freelancers on Upwork charge $25–$90/hour depending on experience. US and UK agencies bill $75–$200/hour. Fixed-price project quotes from agencies for a standard SMB store typically run $2,500–$8,000. A dedicated Shopify developer on retainer costs $3,000–$6,000/month for offshore talent and $7,000–$12,000/month for US-based developers, per CartCoders\' March 2026 breakdown.',
+      q: 'How much is the Shopify transaction fee?',
+      a: 'Shopify only charges a transaction fee when you use a payment provider other than Shopify Payments: 2% on Basic, 1% on Grow, 0.6% on Advanced and 0.2% on Plus, per Shopify\'s US pricing page in September 2026. With Shopify Payments there is no separate transaction fee, just the card rate, which starts at 2.9% + 30¢ online on Basic.',
     },
     {
-      q: 'What does a shopify custom theme cost?',
-      a: 'A Shopify custom theme cost, where a developer designs and codes a completely original theme rather than customizing an existing one, runs $3,000–$15,000 one-time. Customization of an existing paid Shopify theme costs $1,500–$8,000 depending on scope. Paid themes from the Shopify Theme Store are $0–$200 one-time. FactoryJet\'s custom theme tier at $4,999 includes unique design with brand fonts and palette, built on a clean codebase, with mobile-first layouts and performance optimization.',
+      q: 'What is the total cost of a Shopify store for a small business?',
+      a: 'Using Shopify\'s September 2026 prices, a lean first year on Basic with a free theme, a $9 domain and free apps costs about $357 before card fees. A growing store on Grow with a paid theme, a paid reviews app and Klaviyo email for up to 500 contacts costs about $1,477 to $1,877. Card fees come on top: a Basic store selling $2,000 a month online in 40 orders pays about $840 a year.',
     },
     {
-      q: 'What is shopify headless development cost?',
-      a: 'Shopify headless development cost, building a custom Next.js or React frontend that connects to Shopify\'s commerce backend via API, runs $60,000–$200,000+. FactoryJet\'s headless tier starts at $8,999 for smaller-scale implementations, while full enterprise headless architecture with custom checkout, CDN optimization, and complex integrations is priced separately. Headless development makes financial sense when annual revenue is above $500,000 and performance or design flexibility requirements cannot be met by a standard Shopify theme.',
+      q: 'What does a basic Shopify store cost?',
+      a: 'A basic Shopify store you set up yourself costs $29 a month on the Basic plan billed yearly, or $39 billed monthly, plus a domain from $9 a year. Shopify offers 24 free themes, and apps like Judge.me reviews and Shopify\'s built-in email (10,000 emails a month free) have free options. That puts year one at about $357 before card fees. Hiring someone to set it up is a separate one-time cost.',
     },
     {
-      q: 'Is Shopify cheaper or more expensive than WooCommerce?',
-      a: 'Shopify vs WooCommerce cost comparison: Shopify has higher monthly platform fees ($39–$399/month) but includes hosting, SSL, and CDN. WooCommerce is free to install but requires separate hosting ($5–$200/month), paid plugins ($200–$800/year for a standard stack), and ongoing maintenance. Development costs are comparable, $2,000–$8,000 for a professional build on either platform. Total 3-year cost of ownership is similar for most SMB store sizes. Shopify wins on predictability; WooCommerce wins on flexibility and lower entry cost if you manage hosting yourself.',
+      q: 'How much is the Shopify Grow plan?',
+      a: 'Grow costs $79 a month billed yearly ($948 a year) or $105 a month billed monthly, per Shopify\'s US pricing page in September 2026. It lowers the online card rate to 2.7% + 30¢ and the third-party payment fee to 1%, and adds up to 5 staff accounts. On card fees alone, upgrading from Basic only pays for itself at about $25,000 a month in online sales.',
     },
     {
       q: 'How much does Shopify Plus cost?',
-      a: 'Shopify Plus costs $2,300/month as listed on Shopify\'s pricing page as of June 2026. Enterprise brands on annual contracts may negotiate different terms. The Plus plan includes custom checkout via Shopify Functions, B2B wholesale portals, multi-store architecture, dedicated account management, and advanced automation via Shopify Flow. Development on top of Shopify Plus typically adds $40,000–$120,000 for a full custom build. Shopify Plus makes financial sense when annual revenue exceeds $1 million.',
+      a: 'Shopify Plus starts at $2,300 a month, according to Shopify\'s US pricing page in September 2026. Card rates on Plus start at 2.25% + 30¢ online, and the fee for using another payment provider is 0.2%. Plus adds features such as unlimited staff accounts, a fully customizable checkout and unlimited B2B catalogs. Our separate guide to the true cost of Shopify Plus covers when the upgrade pays off.',
     },
     {
-      q: 'What is the shopify website cost in the UK?',
-      a: 'Shopify website cost in the UK is similar to US pricing since Shopify plans are priced in USD globally ($29–$299/month on annual billing). UK agency development rates run £80–£150/hour (roughly $100–$190/hour), slightly below US rates. A professionally built Shopify store for a UK SMB typically costs £2,500–£8,000 for development. FactoryJet serves UK small businesses at the same pricing tiers as US clients, $2,999 for template stores, $4,999 for custom themes.',
+      q: 'Does Shopify still have a Starter plan?',
+      a: 'Shopify\'s US pricing page does not list a Starter plan. As of September 16, 2026 it lists Basic, Grow, Advanced and Plus, plus an Agentic plan at $0 a month for selling in AI channels, where you pay card rates from 2.9% + 30¢ when you make a sale. The old shopify.com/starter address now sends visitors to Shopify\'s free trial page.',
     },
     {
-      q: 'What is the shopify website cost in India?',
-      a: 'Shopify website cost in India for development is significantly lower than Western markets, Indian Shopify agencies and freelancers typically charge $15–$50/hour, making a full custom store build $2,000–$6,000. Shopify platform fees are the same globally ($29–$299/month USD on annual billing). Quality varies significantly, verify Shopify Partner certification, review live store examples, and confirm mobile performance scores before hiring. FactoryJet is India-based and builds for US and UK clients at $2,999–$8,999+.',
+      q: 'How much does a Shopify theme cost?',
+      a: 'Shopify\'s Theme Store lists 24 free themes and 1,248 paid themes. Paid themes cost $100 to $500 as a one-time payment with a lifetime license for your store, so there is no monthly theme fee. A fully custom theme built by a developer is a different, much larger cost, covered in our Shopify development cost guide.',
     },
     {
-      q: 'How long does it take to build a Shopify store?',
-      a: 'How long it takes to build a Shopify store depends on scope. A basic template-based store with products and payment setup: 3–7 days. A standard custom store with a unique design, optimized product pages, and core app integrations: 2–4 weeks. An advanced store with custom product logic, third-party integrations, or subscription systems: 4–8 weeks. Headless or enterprise builds: 3–6 months. FactoryJet delivers template and custom theme stores in 7 days for up to 5-page builds with a delivery guarantee.',
+      q: 'How much does a domain cost on Shopify?',
+      a: 'Shopify says its domains typically start at $9 a year, billed annually, and the price includes registration, automatic renewal and free WHOIS privacy protection. Premium names and some extensions cost more. You can also connect a domain you already own from another registrar.',
     },
     {
-      q: 'What is included in Shopify development?',
-      a: 'A full Shopify development engagement typically includes: Shopify account setup, theme selection or custom theme build, homepage design and layout, collection and product page templates, product upload (quantity varies by scope), payment gateway configuration, shipping settings, domain connection, mobile optimization, basic SEO setup (meta tags, sitemap, canonical tags), and testing across devices. FactoryJet\'s tiers include product upload up to 50 items, payment configuration, and mobile-first builds. Apps, email marketing, and ongoing content are usually scoped separately.',
+      q: 'How much do Shopify apps cost?',
+      a: 'Most popular apps start free and charge as you grow. Judge.me reviews has a free plan and an Awesome plan at $15 a month. Klaviyo is free for up to 250 email contacts and $20 a month for 251 to 500, with SMS from $15 a month. Shopify\'s own email tool sends 10,000 emails a month free, then $1 per 1,000. The real cost is the number of apps, so review your list every quarter.',
     },
     {
-      q: 'How much should I budget for a Shopify store launch?',
-      a: 'For a US small business launching a Shopify store in 2026, a realistic budget is $3,500–$8,000 all-in for the first year. That covers: $2,999–$5,000 for professional development, $348–$948 for the Shopify plan (annually billed), $0–$200 for a premium theme, and $600–$2,400 for a basic app stack (reviews, email, analytics). Add a domain ($14–$20/year) and you have a complete, professional Shopify store. Product photography and copy are separate and often the biggest hidden cost outside of development.',
+      q: 'Does Shopify have setup fees or hidden fees?',
+      a: 'Shopify says there are no setup fees on any plan. The costs people miss are not hidden, just easy to overlook: the third-party transaction fee if you do not use Shopify Payments, higher rates for premium and international cards, a 1% fee on synced marketplace orders above 50 a month (capped at $99), POS Pro at $89 a month per location, and app subscriptions.',
+    },
+    {
+      q: 'Is Shopify still worth it in 2026?',
+      a: 'For most stores that sell mainly online, yes. For $29 to $399 a month you get hosting, an SSL certificate, checkout and payments in one place, with no setup fees. It stops being good value when apps pile up, when you pay the extra 0.2% to 2% fee for using another payment provider, or when a marketplace like Etsy would bring buyers you cannot yet reach yourself. Run the numbers for your sales volume first.',
+    },
+    {
+      q: 'What is the downside of Shopify?',
+      a: 'Mostly cost creep. The plan fee is fixed, but card fees grow with sales, apps add monthly charges, and using a payment provider other than Shopify Payments adds a 0.2% to 2% Shopify fee on top. Shopify Payments is only available in certain countries. Paid themes and custom features cost extra, and moving a large store off Shopify later takes real work.',
+    },
+    {
+      q: 'Is it cheaper to sell on Etsy or Shopify?',
+      a: 'Etsy is cheaper to start and Shopify is cheaper to grow. Etsy has no monthly plan but charges $0.20 per listing and a 6.5% transaction fee on each sale, plus payment processing. Shopify Basic costs $29 a month billed yearly plus card fees. Etsy\'s 6.5% equals Shopify Basic\'s plan fee at about $446 of monthly sales, so above that Shopify usually costs less. Etsy brings its own shoppers; on Shopify you find your own.',
+    },
+    {
+      q: 'Is Shopify cheaper than WooCommerce?',
+      a: 'Not on paper. WooCommerce has no monthly platform fee and is free to download, while Shopify Basic costs $29 a month billed yearly. But WooCommerce needs hosting, security and updates that you pay for or handle yourself, and Shopify includes hosting and an SSL certificate. For owners who do not want to manage a website, Shopify is usually the cheaper total. Our Shopify vs WooCommerce breakdown runs the numbers.',
     },
     {
       q: 'Can I build a Shopify store myself without a developer?',
-      a: 'Yes, you can build a Shopify store yourself using Shopify\'s drag-and-drop editor. Shopify is designed for non-technical users, you can select a free theme, add products, set up payments, and launch without writing a line of code. A self-built store is reasonable for validating a product idea or launching with a limited budget. Hire a developer when you need custom functionality, complex integrations, or your time as a business owner is worth more than the $2,000–$5,000 you\'d save by doing it yourself.',
+      a: 'Yes. Shopify is built for non-technical owners: you can pick one of the 24 free themes, add products, set up payments and launch without code. Doing it yourself keeps year one on Basic to about $357 before card fees. Hire help when you need custom features or integrations, or when your time is worth more than the setup cost, which our Shopify development cost guide breaks down.',
     },
     {
-      q: 'What does a Shopify migration cost?',
-      a: 'Shopify migration cost depends on the source platform. WooCommerce to Shopify migration typically costs $3,000–$12,000 and covers product data transfer, URL redirects for SEO preservation, customer data migration, and theme build. Magento to Shopify migration runs $7,000–$25,000 due to complex database structures. Squarespace or Wix to Shopify migrations are simpler at $1,500–$5,000. The SEO redirect work, mapping old URLs to new ones to avoid losing organic rankings, is often the most time-consuming part.',
-    },
-    {
-      q: 'What does a Shopify website redesign cost?',
-      a: 'A Shopify website redesign cost, where you keep your existing store but replace the theme and update the design, runs $2,000–$10,000 for most SMBs. A light redesign customizing an existing theme costs $1,500–$4,000. A full redesign with a new custom theme, updated product pages, and conversion optimization runs $4,999–$12,000. FactoryJet\'s custom theme tier at $4,999 covers complete redesigns for existing Shopify stores. Redesigns typically take 2–4 weeks for standard scope.',
-    },
-    {
-      q: 'How much does Shopify SEO cost?',
-      a: 'Shopify SEO cost depends on what\'s included. A basic technical SEO setup on a new store, structured data, canonical tags, sitemap, image alt text, meta titles, costs $500–$1,500 as part of a development project. FactoryJet includes basic SEO setup in every build. Ongoing Shopify SEO with keyword targeting, content creation, and link building typically runs $1,500–$5,000/month from a specialized agency. A one-time SEO audit for an existing store costs $500–$2,000 and identifies the highest-priority fixes.',
+      q: 'How much should I budget for a Shopify store launch?',
+      a: 'Split it into two budgets. The owning budget, from Shopify\'s September 2026 prices, is about $357 for a lean first year on Basic, or $1,477 to $1,877 for a growing store on Grow with a paid theme and two paid apps, before card fees. The build budget is separate and depends on who sets the store up and how custom it is. Product photos and copy are the costs people most often forget.',
     },
   ],
   content: (
     <>
-      <p className="text-sm text-gray-500 mb-6">
-        By Bhavesh Barot | Returns on your time | Jun 13, 2026 | 11 min read
-      </p>
+      <div className="bg-[#FFF3EE] border-l-4 border-[#F05A28] p-5 rounded-r-xl mb-8">
+        <p className="font-semibold text-gray-900 mb-2">Quick Answer</p>
+        <p className="text-gray-700">
+          A Shopify store costs <strong>$29 to $399 a month</strong> for the plan: Basic $29, Grow
+          $79 and Advanced $299 billed yearly, or $39, $105 and $399 billed monthly. Shopify Plus
+          starts at $2,300 a month. On top of that you pay card fees of 2.25% to 2.9% + 30¢ per
+          online sale through Shopify Payments, a domain from $9 a year, an optional theme at $100
+          to $500 once, and any apps. A lean first year on Basic costs about $357 before card fees.
+        </p>
+      </div>
 
       <p className="text-lg leading-relaxed mb-4">
-        A Shopify website costs <strong>$2,000–$50,000+</strong> depending on complexity. A DIY
-        store with a free theme costs $468–$1,068 in Year 1. A professionally built custom store
-        for a US small business runs $2,999–$8,000 one-time. Enterprise and headless builds start
-        at $40,000. Here&apos;s what actually drives that number, and how to know what your build
-        will cost before you talk to a single developer.
+        Most Shopify cost guides blend two different bills. One is what you pay once to get a store
+        built. The other is what you pay every month for as long as the store exists: the plan, card
+        fees, apps, theme and domain. This guide is about the second bill, the cost of owning a
+        Shopify store. If you are pricing a developer or an agency, our{' '}
+        <Link href="/blog/shopify-development-cost-2026" className="text-[#B23E13] hover:underline">
+          Shopify development cost guide
+        </Link>{' '}
+        covers that bill.
       </p>
 
       <p className="mb-8">
-        We&apos;ve built over 500 Shopify stores for small businesses across the US, UK, UAE and India at FactoryJet. The cost
-        breakdowns below are based on what we&apos;ve seen across real projects, verified against
-        current 2026 data from{' '}
+        Every Shopify price below comes from Shopify&apos;s own pages: plan prices and payment
+        rates from{' '}
         <a
-          href="https://www.shopify.com/blog/ecommerce-website-cost"
+          href="https://www.shopify.com/pricing"
           target="_blank"
           rel="noopener noreferrer"
           className="text-[#B23E13] hover:underline"
         >
-          Shopify&apos;s official cost guide
+          Shopify&apos;s US pricing page
+        </a>{' '}
+        as listed on September 16, 2026, and theme, domain and email prices from the{' '}
+        <a
+          href="https://themes.shopify.com/themes"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[#B23E13] hover:underline"
+        >
+          Shopify Theme Store
         </a>
         ,{' '}
         <a
-          href="https://cartcoders.com/blog/shopify-development/shopify-developer-cost-hourly-rate-project-pricing/"
+          href="https://www.shopify.com/domains"
           target="_blank"
           rel="noopener noreferrer"
           className="text-[#B23E13] hover:underline"
         >
-          CartCoders&apos; March 2026 developer rate breakdown
-        </a>
-        , and{' '}
+          Shopify Domains
+        </a>{' '}
+        and{' '}
         <a
-          href="https://ogresto.com/blogs/shopify-development-cost-2026"
+          href="https://www.shopify.com/email-marketing"
           target="_blank"
           rel="noopener noreferrer"
           className="text-[#B23E13] hover:underline"
         >
-          Ogresto&apos;s 2026 Shopify cost analysis
-        </a>
-        .
+          Shopify Messaging
+        </a>{' '}
+        pages, checked September 17, 2026. App prices come from each app&apos;s Shopify App Store
+        listing. Prices change, so check them again before you commit.
       </p>
 
       <hr className="my-8 border-gray-200" />
 
-      <h2 className="text-2xl font-bold mt-8 mb-4">
-        Shopify Website Cost at a Glance: The Full Breakdown Table
+      <h2 id="plans" className="text-2xl font-bold mt-8 mb-4">
+        Shopify Plans and Monthly Fees in 2026
       </h2>
       <p className="mb-4">
-        Here&apos;s the table most cost guides won&apos;t give you: all four cost buckets in one
-        place, by store type:
+        Every Shopify store pays for one plan. Here is what each costs and what it charges on card
+        payments:
       </p>
 
       <div className="overflow-x-auto mb-4">
         <table style={{ width: '100%', borderCollapse: 'collapse' }}>
           <thead>
             <tr style={{ backgroundColor: '#1f2937', color: '#fff' }}>
-              <th style={{ padding: '8px 12px', border: '1px solid #e2e8f0', textAlign: 'left' }}>
-                Store Type
-              </th>
-              <th style={{ padding: '8px 12px', border: '1px solid #e2e8f0', textAlign: 'left' }}>
-                Build Cost
-              </th>
-              <th style={{ padding: '8px 12px', border: '1px solid #e2e8f0', textAlign: 'left' }}>
-                Shopify Plan/mo
-              </th>
-              <th style={{ padding: '8px 12px', border: '1px solid #e2e8f0', textAlign: 'left' }}>
-                Apps (avg/mo)
-              </th>
-              <th style={{ padding: '8px 12px', border: '1px solid #e2e8f0', textAlign: 'left' }}>
-                Timeline
-              </th>
-              <th style={{ padding: '8px 12px', border: '1px solid #e2e8f0', textAlign: 'left' }}>
-                Best For
-              </th>
+              <th style={headCell}>Plan</th>
+              <th style={headCell}>Billed yearly</th>
+              <th style={headCell}>Billed monthly</th>
+              <th style={headCell}>Online card rate (Shopify Payments)</th>
+              <th style={headCell}>Fee with another payment provider</th>
             </tr>
           </thead>
           <tbody>
             <tr style={{ backgroundColor: '#fff' }}>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>
-                <strong>Shopify Starter</strong>
+              <td style={cell}>
+                <strong>Basic</strong>
               </td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>$0 (DIY)</td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>$5/mo</td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>$0–$20</td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>1–2 days</td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>
-                Selling via social/links only, no storefront
-              </td>
+              <td style={cell}>$29/mo</td>
+              <td style={cell}>$39/mo</td>
+              <td style={cell}>2.9% + 30¢</td>
+              <td style={cell}>2%</td>
             </tr>
             <tr style={{ backgroundColor: '#f9fafb' }}>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>
-                <strong>Template Store</strong>
+              <td style={cell}>
+                <strong>Grow</strong>
               </td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>$2,999–$4,000</td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>$29/mo (Basic)</td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>$50–$150</td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>5–7 days</td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>
-                Launch-ready SMB store, custom branding on a solid theme
-              </td>
+              <td style={cell}>$79/mo</td>
+              <td style={cell}>$105/mo</td>
+              <td style={cell}>2.7% + 30¢</td>
+              <td style={cell}>1%</td>
             </tr>
             <tr style={{ backgroundColor: '#fff' }}>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>
-                <strong>Custom Theme</strong>
+              <td style={cell}>
+                <strong>Advanced</strong>
               </td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>$4,999–$10,000</td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>$79/mo (Grow)</td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>$100–$300</td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>2–4 weeks</td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>
-                Unique design, brand fonts/palette, strong visual identity
-              </td>
+              <td style={cell}>$299/mo</td>
+              <td style={cell}>$399/mo</td>
+              <td style={cell}>2.5% + 30¢</td>
+              <td style={cell}>0.6%</td>
             </tr>
             <tr style={{ backgroundColor: '#f9fafb' }}>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>
-                <strong>Headless / Composable</strong>
+              <td style={cell}>
+                <strong>Plus</strong>
               </td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>$8,999–$200,000+</td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>
-                $299/mo+ (Advanced)
-              </td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>$200–$1,000+</td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>6–24 weeks</td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>
-                Next.js/React frontend, max performance, design flexibility
-              </td>
+              <td style={cell}>Not listed</td>
+              <td style={cell}>Starts at $2,300/mo</td>
+              <td style={cell}>2.25% + 30¢</td>
+              <td style={cell}>0.2%</td>
             </tr>
           </tbody>
         </table>
       </div>
-      <p className="text-sm text-gray-500 mb-8">
+      <p className="text-sm text-gray-500 mb-6">
         <em>
-          Shopify plan costs verified on{' '}
+          Source:{' '}
           <a
             href="https://www.shopify.com/pricing"
             target="_blank"
@@ -262,577 +254,572 @@ export const post: BlogPost = {
           >
             shopify.com/pricing
           </a>{' '}
-          June 13, 2026. Build cost ranges based on 500+ store projects and verified market data.
+          (US), as listed on September 16, 2026. Card rates are for standard online card payments.
         </em>
       </p>
 
+      <p className="mb-4">
+        Shopify says there are <strong>no setup fees on any plan</strong>, and every plan includes
+        hosting, a free SSL certificate (the padlock that encrypts your checkout) and a custom domain
+        connection. New stores get a 3-day free
+        trial, and Shopify&apos;s current offer is $1 a month for the first 3 months on most plans.
+        Offers change, so budget with the full price.
+      </p>
+      <p className="mb-4">
+        Yearly billing is the easiest saving on this page. Compared with paying monthly, it cuts $120
+        a year off Basic, $312 off Grow and $1,200 off Advanced.
+      </p>
+      <p className="mb-8">
+        Shopify also lists an <strong>Agentic plan at $0 a month</strong> for selling in AI
+        channels. You add products to Shopify&apos;s Catalog, choose which AI channels to sell in,
+        and pay card rates from 2.9% + 30¢ when you make a sale. If AI shopping assistants matter to
+        your store, our{' '}
+        <Link href="/agentic-commerce" className="text-[#B23E13] hover:underline">
+          agentic commerce guide
+        </Link>{' '}
+        covers getting a store ready for AI agents that browse and buy.
+      </p>
+
       <hr className="my-8 border-gray-200" />
 
-      <h2 className="text-2xl font-bold mt-8 mb-4">
-        What Actually Drives Shopify Website Cost Up
+      <h2 id="payment-fees" className="text-2xl font-bold mt-8 mb-4">
+        What Shopify Takes From a $100 Sale
       </h2>
       <p className="mb-4">
-        Four factors move the needle more than anything else:
+        Card fees are the part of the bill that grows with your sales, so it helps to see them in
+        dollars. Here is what Shopify keeps from a $100 sale on each plan, worked out from
+        Shopify&apos;s listed rates:
       </p>
 
-      <h3 className="text-xl font-bold mt-6 mb-3">Design Complexity</h3>
-      <p className="mb-4">
-        Customizing a premium Shopify theme adds $1,000–$4,000 to a base build. Building a
-        completely original design from scratch, wireframes, UI design, then development, adds
-        $2,000–$8,000 for design work alone before a single line of code. If you have strong brand
-        guidelines and specific visual requirements, a custom theme build at $4,999–$10,000 is
-        usually the right call. If you&apos;re launching to test product-market fit, a template at
-        $2,999 gets you live and selling in 7 days.
-      </p>
-
-      <h3 className="text-xl font-bold mt-6 mb-3">Custom Features and Integrations</h3>
-      <p className="mb-4">
-        Standard Shopify handles most common ecommerce needs out of the box. Costs escalate when you
-        need custom functionality:
-      </p>
-      <ul className="list-disc pl-6 mb-6 space-y-2">
-        <li>
-          <strong>Product configurators</strong> (build-your-own bundles, variant logic): add
-          $2,000–$6,000
-        </li>
-        <li>
-          <strong>Subscription and recurring billing</strong> (via Recharge or custom): add
-          $1,500–$5,000
-        </li>
-        <li>
-          <strong>ERP or inventory system integration</strong> (NetSuite, Brightpearl): add
-          $5,000–$25,000
-        </li>
-        <li>
-          <strong>B2B pricing tiers and wholesale portals</strong>: add $3,000–$10,000
-        </li>
-        <li>
-          <strong>Custom checkout logic</strong> via Shopify Functions (Plus only): add
-          $3,000–$10,000
-        </li>
-      </ul>
-
-      <h3 className="text-xl font-bold mt-6 mb-3">Product Count and Content Readiness</h3>
-      <p className="mb-4">
-        Most agencies include product upload for up to 50 SKUs in a standard build. Stores with
-        500+ products need structured data migration plans and often a PIM system, add $2,000–$8,000
-        for large catalog work. More importantly: having photography, copy, and brand assets ready at
-        kickoff cuts development time by 30–50%. At $120–$200/hour agency rates, that&apos;s real
-        money. The biggest hidden cost for most store owners isn&apos;t development, it&apos;s
-        content they haven&apos;t prepared.
-      </p>
-
-      <h3 className="text-xl font-bold mt-6 mb-3">Developer Location and Experience Level</h3>
-      <p className="mb-4">
-        Current 2026 hourly rates by developer type, sourced from CartCoders&apos; March 2026
-        breakdown:
-      </p>
-      <div className="overflow-x-auto mb-8">
+      <div className="overflow-x-auto mb-4">
         <table style={{ width: '100%', borderCollapse: 'collapse' }}>
           <thead>
             <tr style={{ backgroundColor: '#1f2937', color: '#fff' }}>
-              <th style={{ padding: '8px 12px', border: '1px solid #e2e8f0', textAlign: 'left' }}>
-                Developer Type
-              </th>
-              <th style={{ padding: '8px 12px', border: '1px solid #e2e8f0', textAlign: 'left' }}>
-                Hourly Rate
-              </th>
-              <th style={{ padding: '8px 12px', border: '1px solid #e2e8f0', textAlign: 'left' }}>
-                Notes
-              </th>
+              <th style={headCell}>Plan</th>
+              <th style={headCell}>Online card sale</th>
+              <th style={headCell}>In-person card sale</th>
+              <th style={headCell}>Another payment provider</th>
             </tr>
           </thead>
           <tbody>
             <tr style={{ backgroundColor: '#fff' }}>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>
-                Junior Shopify developer
+              <td style={cell}>
+                <strong>Basic</strong>
               </td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>$25–$45/hr</td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>
-                Good for simple tweaks; risky for complex builds
-              </td>
+              <td style={cell}>$3.20</td>
+              <td style={cell}>$2.70</td>
+              <td style={cell}>$2.00 plus the provider&apos;s fee</td>
             </tr>
             <tr style={{ backgroundColor: '#f9fafb' }}>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>
-                Mid-level developer
+              <td style={cell}>
+                <strong>Grow</strong>
               </td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>$45–$90/hr</td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>
-                Most SMB builds; verify Shopify Partner certification
-              </td>
+              <td style={cell}>$3.00</td>
+              <td style={cell}>$2.60</td>
+              <td style={cell}>$1.00 plus the provider&apos;s fee</td>
             </tr>
             <tr style={{ backgroundColor: '#fff' }}>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>
-                Senior Shopify developer
+              <td style={cell}>
+                <strong>Advanced</strong>
               </td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>$90–$160/hr</td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>
-                Complex integrations, custom apps, headless architecture
-              </td>
+              <td style={cell}>$2.80</td>
+              <td style={cell}>$2.50</td>
+              <td style={cell}>$0.60 plus the provider&apos;s fee</td>
             </tr>
             <tr style={{ backgroundColor: '#f9fafb' }}>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>
-                Mid-tier US agency
+              <td style={cell}>
+                <strong>Plus</strong>
               </td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>$75–$140/hr</td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>
-                Includes PM and QA; predictable delivery
-              </td>
-            </tr>
-            <tr style={{ backgroundColor: '#fff' }}>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>
-                Premium US/UK agency
-              </td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>$120–$200/hr</td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>
-                Top-tier strategy, design, and development bundled
-              </td>
+              <td style={cell}>$2.55</td>
+              <td style={cell}>$2.40</td>
+              <td style={cell}>$0.20 plus the provider&apos;s fee</td>
             </tr>
           </tbody>
         </table>
       </div>
+      <p className="text-sm text-gray-500 mb-6">
+        <em>
+          Standard cards. Shopify lists premium cards at 3.5% + 30¢ online on Basic and adds 1% for
+          international cards.
+        </em>
+      </p>
+
+      <p className="mb-4">
+        <strong>The upgrade math most owners never run.</strong> Grow costs $50 a month more than
+        Basic on yearly billing and saves 0.2 percentage points on online card fees. On card fees
+        alone, that only pays for itself once you sell about $25,000 a month online. Advanced saves
+        another 0.2 points for $220 more a month than Grow, which breaks even around $110,000 a
+        month. Upgrade for features you need, such as more staff accounts, not for the card rate.
+      </p>
+      <p className="mb-8">
+        <strong>Using a payment provider other than Shopify Payments</strong> adds Shopify&apos;s
+        own fee on top of that provider&apos;s charges: 2% on Basic, 1% on Grow, 0.6% on Advanced
+        and 0.2% on Plus. On $10,000 of monthly sales on Basic, that is $200 a month to Shopify
+        before the provider takes its cut. Shopify Payments is only available in certain countries,
+        so check yours before you budget.
+      </p>
 
       <hr className="my-8 border-gray-200" />
 
-      <h2 className="text-2xl font-bold mt-8 mb-4">
-        Hidden Shopify Costs That Catch Store Owners Off Guard
+      <h2 id="themes-apps" className="text-2xl font-bold mt-8 mb-4">
+        Themes, Domain and Apps
       </h2>
-      <p className="mb-4">
-        The build cost is what you see. These are what you&apos;ll discover after launch:
-      </p>
 
-      <h3 className="text-xl font-bold mt-6 mb-3">Apps: $50–$500+/Month</h3>
+      <h3 className="text-xl font-bold mt-6 mb-3">Theme: $0, or $100 to $500 Paid Once</h3>
       <p className="mb-4">
-        Shopify&apos;s app ecosystem has over 8,000 apps, many free, many not. A typical SMB app
-        stack:
-      </p>
-      <div className="overflow-x-auto mb-6">
-        <table style={{ width: '100%', borderCollapse: 'collapse' }}>
-          <thead>
-            <tr style={{ backgroundColor: '#1f2937', color: '#fff' }}>
-              <th style={{ padding: '8px 12px', border: '1px solid #e2e8f0', textAlign: 'left' }}>
-                App Category
-              </th>
-              <th style={{ padding: '8px 12px', border: '1px solid #e2e8f0', textAlign: 'left' }}>
-                Popular Options
-              </th>
-              <th style={{ padding: '8px 12px', border: '1px solid #e2e8f0', textAlign: 'left' }}>
-                Monthly Cost
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr style={{ backgroundColor: '#fff' }}>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>Product reviews</td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>
-                Judge.me, Okendo
-              </td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>$0–$199</td>
-            </tr>
-            <tr style={{ backgroundColor: '#f9fafb' }}>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>Email marketing</td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>
-                Klaviyo, Omnisend
-              </td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>$20–$150</td>
-            </tr>
-            <tr style={{ backgroundColor: '#fff' }}>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>Subscriptions</td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>
-                Recharge, Seal Subscriptions
-              </td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>$99–$499</td>
-            </tr>
-            <tr style={{ backgroundColor: '#f9fafb' }}>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>Upsells</td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>
-                ReConvert, Zipify
-              </td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>$29–$99</td>
-            </tr>
-            <tr style={{ backgroundColor: '#fff' }}>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>
-                Loyalty programs
-              </td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>
-                Smile.io, LoyaltyLion
-              </td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>$49–$199</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p className="mb-6">
-        A minimum viable app stack (reviews + email + analytics) runs $50–$150/month. A full growth
-        stack with subscriptions, upsells, and loyalty adds $300–$700/month on top. Build your app
-        list before launch and include it in your monthly budget.
-      </p>
-
-      <h3 className="text-xl font-bold mt-6 mb-3">Transaction Fees: 0.5–2%</h3>
-      <p className="mb-4">
-        If you use a third-party payment processor instead of Shopify Payments, Shopify charges a
-        transaction fee of 2% on Basic, 1% on Grow, and 0.5% on Advanced. On $50,000/month GMV,
-        that&apos;s $1,000/month on the Basic plan, $12,000/year, in fees that disappear if you
-        switch to Shopify Payments. Shopify Payments has its own processing rates (2.9% + 30¢ on
-        Basic), but no separate transaction fee. For most US small businesses, Shopify Payments is
-        the right default.
-      </p>
-
-      <h3 className="text-xl font-bold mt-6 mb-3">Theme Purchases: $0–$400</h3>
-      <p className="mb-4">
-        Free themes from Shopify are fully functional. Paid themes from the{' '}
+        Shopify&apos;s{' '}
         <a
-          href="https://themes.shopify.com"
+          href="https://themes.shopify.com/themes"
           target="_blank"
           rel="noopener noreferrer"
           className="text-[#B23E13] hover:underline"
         >
-          Shopify Theme Store
+          Theme Store
         </a>{' '}
-        run $0–$200 one-time. Niche-specific themes from third-party marketplaces can run $150–$400.
-        A theme purchase is a one-time cost, but factor it into your build budget if you&apos;re not
-        going with a fully custom build.
+        lists 24 free themes and 1,248 paid ones. Paid themes cost $100 to $500 as a one-time
+        payment, with a lifetime license for your store and no expiration. A free theme is enough to
+        launch. Pay for a theme when it already does something your catalog needs that you would
+        otherwise pay a developer to build.
       </p>
 
-      <h3 className="text-xl font-bold mt-6 mb-3">Annual Billing Discount: Worth Taking</h3>
+      <h3 className="text-xl font-bold mt-6 mb-3">Domain: From $9 a Year</h3>
       <p className="mb-4">
-        Switching from monthly to annual billing on Shopify saves $10/month on Basic, $26/month on
-        Grow, and $100/month on Advanced. Over 12 months that&apos;s $120–$1,200 back in your
-        pocket. If you&apos;re committed to the platform (and you should be before you invest in
-        development), annual billing is an easy win.
+        Shopify sells domains that typically start at $9 a year, billed annually, including
+        automatic renewal and free WHOIS privacy protection, which keeps your personal contact
+        details out of public domain lookups. Premium names and some extensions cost
+        more. If you already own a domain, you can connect it to your store instead of buying a new
+        one.
       </p>
 
-      <hr className="my-8 border-gray-200" />
-
-      <h2 className="text-2xl font-bold mt-8 mb-4">
-        FactoryJet&apos;s Shopify Pricing Tiers (Disclosure: This Is Us)
-      </h2>
+      <h3 className="text-xl font-bold mt-6 mb-3">Apps: The Monthly Cost That Creeps</h3>
       <p className="mb-4">
-        We include ourselves in these comparisons with full disclosure. FactoryJet is an AI-native
-        web development agency based in India, building Shopify stores for US small businesses.
-        Here&apos;s what we charge:
+        Apps are where a cheap store quietly becomes an expensive one. Most popular apps start free
+        and charge more as you grow, so the bill rises without anyone deciding to spend more. Four
+        real examples, from their Shopify App Store listings and Shopify&apos;s own email pricing page:
       </p>
       <div className="overflow-x-auto mb-4">
         <table style={{ width: '100%', borderCollapse: 'collapse' }}>
           <thead>
             <tr style={{ backgroundColor: '#1f2937', color: '#fff' }}>
-              <th style={{ padding: '8px 12px', border: '1px solid #e2e8f0', textAlign: 'left' }}>
-                Tier
-              </th>
-              <th style={{ padding: '8px 12px', border: '1px solid #e2e8f0', textAlign: 'left' }}>
-                Price
-              </th>
-              <th style={{ padding: '8px 12px', border: '1px solid #e2e8f0', textAlign: 'left' }}>
-                What&apos;s Included
-              </th>
-              <th style={{ padding: '8px 12px', border: '1px solid #e2e8f0', textAlign: 'left' }}>
-                Timeline
-              </th>
+              <th style={headCell}>What it does</th>
+              <th style={headCell}>Tool</th>
+              <th style={headCell}>Free option</th>
+              <th style={headCell}>First paid step</th>
             </tr>
           </thead>
           <tbody>
             <tr style={{ backgroundColor: '#fff' }}>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>
-                <strong>Template Store</strong>
-              </td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>$2,999</td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>
-                Shopify setup, custom branding on a premium theme, product upload up to 50, payment
-                config, mobile-first build
-              </td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>7 days</td>
+              <td style={cell}>Product reviews</td>
+              <td style={cell}>Judge.me</td>
+              <td style={cell}>Forever Free plan</td>
+              <td style={cell}>$15/mo (Awesome plan)</td>
             </tr>
             <tr style={{ backgroundColor: '#f9fafb' }}>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>
-                <strong>Custom Theme</strong>
-              </td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>$4,999</td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>
-                Unique design, brand fonts/palette, custom layouts, product upload up to 50, payment
-                config, mobile-first build
-              </td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>7 days</td>
+              <td style={cell}>Email marketing</td>
+              <td style={cell}>Klaviyo</td>
+              <td style={cell}>Free up to 250 contacts</td>
+              <td style={cell}>$20/mo for 251–500 contacts</td>
             </tr>
             <tr style={{ backgroundColor: '#fff' }}>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>
-                <strong>Headless / Custom</strong>
-              </td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>$8,999+</td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>
-                Next.js/React frontend, Shopify backend, maximum performance and design flexibility
-              </td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>4–8 weeks</td>
+              <td style={cell}>SMS marketing</td>
+              <td style={cell}>Klaviyo</td>
+              <td style={cell}>150 free SMS/MMS credits</td>
+              <td style={cell}>$15/mo for up to 1,250 credits</td>
+            </tr>
+            <tr style={{ backgroundColor: '#f9fafb' }}>
+              <td style={cell}>Email built into Shopify</td>
+              <td style={cell}>Shopify Messaging</td>
+              <td style={cell}>10,000 emails a month</td>
+              <td style={cell}>$1 per 1,000 extra emails</td>
             </tr>
           </tbody>
         </table>
       </div>
-      <p className="mb-8">
-        All tiers include Shopify setup, product upload (up to 50 items), payment configuration, and
-        mobile-first build. We deliver most builds in 7 days with a delivery guarantee. See our{' '}
-        <Link href="/services/shopify-development" className="text-[#B23E13] hover:underline">
-          Shopify development service page
-        </Link>{' '}
-        for full scope details.
-      </p>
-
-      <hr className="my-8 border-gray-200" />
-
-      <h2 className="text-2xl font-bold mt-8 mb-4">
-        The ROI Math: Why $4,999 Pays for Itself Fast
-      </h2>
-      <p className="mb-4">
-        Here&apos;s a calculation worth running before you debate spending $2,999 vs $4,999:
-      </p>
-      <p className="mb-3">
-        A store doing <strong>$50,000/month in GMV</strong> at a <strong>1% conversion rate</strong>{' '}
-        generates 500 visits/month and 5 sales per 1,000 visitors.
-      </p>
-      <p className="mb-3">
-        A custom theme build, better layouts, stronger product photography presentation,
-        mobile-optimized checkout, faster load times, commonly moves conversion from 1% to 2%.
-        That&apos;s documented in Google&apos;s Core Web Vitals research showing 8–20% conversion
-        improvements from speed and UX improvements.
-      </p>
-      <p className="mb-3">
-        At 2% conversion on $50K/month GMV: that&apos;s <strong>$100,000/month</strong> in revenue
-        from the same traffic. The difference is <strong>$50,000/month</strong>, or{' '}
-        <strong>$600,000/year</strong> in additional revenue. Even at a more conservative lift of
-        0.2%, you&apos;re looking at $12,000/year in additional revenue from a $4,999 investment.
-        That&apos;s a 5-month payback period.
+      <p className="text-sm text-gray-500 mb-6">
+        <em>
+          Sources:{' '}
+          <a
+            href="https://apps.shopify.com/judgeme"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#B23E13] hover:underline"
+          >
+            Judge.me
+          </a>{' '}
+          and{' '}
+          <a
+            href="https://apps.shopify.com/klaviyo-email-marketing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#B23E13] hover:underline"
+          >
+            Klaviyo
+          </a>{' '}
+          Shopify App Store listings and{' '}
+          <a
+            href="https://www.shopify.com/email-marketing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#B23E13] hover:underline"
+          >
+            Shopify Messaging pricing
+          </a>
+          , checked September 17, 2026.
+        </em>
       </p>
       <p className="mb-8">
-        The question isn&apos;t &quot;is $4,999 too much?&quot; The question is: &quot;what does
-        your current conversion rate cost you every month?&quot;
+        The trap is not one app. It is ten small subscriptions that nobody reviews after launch. Put
+        every app on a list with its monthly price, and check that list every quarter.
       </p>
+
+      <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg mb-8">
+        <h3 className="text-lg font-bold mb-3">Want the setup cost added to this?</h3>
+        <p className="mb-4">This page covers what Shopify charges you to own a store. If you also want the build priced, FactoryJet scopes Shopify projects on a short call and puts the figure in writing before any work starts.</p>
+        <a href="/services/shopify-development" className="inline-block bg-[#B23E13] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#9A3510] transition-colors">See Shopify development &rarr;</a>
+      </div>
 
       <hr className="my-8 border-gray-200" />
 
-      <h2 className="text-2xl font-bold mt-8 mb-4">
-        How to Choose a Shopify Developer: Red Flags and Green Flags
+      <h2 id="total-cost" className="text-2xl font-bold mt-8 mb-4">
+        Total Cost of Owning a Shopify Store: Three Example Budgets
       </h2>
       <p className="mb-4">
-        Most bad Shopify builds come from one of three problems: hourly billing with no ceiling,
-        vague scope, or developers who haven&apos;t built in your industry before.
+        Here is what the first year looks like for three kinds of store, using only the prices
+        above. Card fees are left out of the table because they depend on your sales, and they come
+        right after it.
       </p>
 
-      <h3 className="text-xl font-bold mt-6 mb-3">Questions to Ask Before Signing</h3>
-      <ul className="list-disc pl-6 mb-6 space-y-2">
-        <li>
-          <strong>Fixed price or hourly?</strong> Hourly with no ceiling is a financial risk for the
-          client. Fixed-price projects give you budget certainty. If a developer won&apos;t quote a
-          fixed price for defined scope, walk.
-        </li>
-        <li>
-          <strong>Who owns the code?</strong> You should own everything after delivery. Some agencies
-          build on proprietary systems that lock you in. Get this in writing before kickoff.
-        </li>
-        <li>
-          <strong>What&apos;s included post-launch?</strong> Most agencies offer 30 days of bug
-          fixes. Anything beyond that should be scoped separately. Know exactly where the engagement
-          ends.
-        </li>
-        <li>
-          <strong>Can you show me stores in my industry?</strong> A developer who has built 20
-          apparel stores understands apparel conversion patterns. A general portfolio doesn&apos;t
-          tell you that.
-        </li>
-        <li>
-          <strong>What&apos;s your mobile performance score?</strong> Over 70% of Shopify traffic is
-          mobile. Ask for a PageSpeed Insights score on a recent build. Sub-3-second LCP on mobile
-          is the standard.
-        </li>
-      </ul>
-
-      <h3 className="text-xl font-bold mt-6 mb-3">Red Flags in Shopify Developer Proposals</h3>
-      <ul className="list-disc pl-6 mb-8 space-y-2">
-        <li>No contract or written scope of work</li>
-        <li>Delivery timelines longer than 4 weeks for a standard SMB build</li>
-        <li>No examples of live Shopify stores they&apos;ve built</li>
-        <li>Hourly billing with no estimate of total hours</li>
-        <li>
-          Promises of &quot;guaranteed rankings&quot; or other claims that have nothing to do with
-          development
-        </li>
-        <li>Unwillingness to provide a fixed-price quote after a scoping call</li>
-      </ul>
-
-      <hr className="my-8 border-gray-200" />
-
-      <h2 className="text-2xl font-bold mt-8 mb-4">
-        Shopify Platform Costs: What Shopify Itself Charges
-      </h2>
-      <p className="mb-4">
-        All Shopify plan pricing verified on{' '}
-        <a
-          href="https://www.shopify.com/pricing"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-[#B23E13] hover:underline"
-        >
-          shopify.com/pricing
-        </a>{' '}
-        on June 13, 2026:
-      </p>
-      <div className="overflow-x-auto mb-8">
+      <div className="overflow-x-auto mb-4">
         <table style={{ width: '100%', borderCollapse: 'collapse' }}>
           <thead>
             <tr style={{ backgroundColor: '#1f2937', color: '#fff' }}>
-              <th style={{ padding: '8px 12px', border: '1px solid #e2e8f0', textAlign: 'left' }}>
-                Plan
-              </th>
-              <th style={{ padding: '8px 12px', border: '1px solid #e2e8f0', textAlign: 'left' }}>
-                Monthly Billing
-              </th>
-              <th style={{ padding: '8px 12px', border: '1px solid #e2e8f0', textAlign: 'left' }}>
-                Annual Billing
-              </th>
-              <th style={{ padding: '8px 12px', border: '1px solid #e2e8f0', textAlign: 'left' }}>
-                Transaction Fee*
-              </th>
+              <th style={headCell}>Cost line</th>
+              <th style={headCell}>Lean start</th>
+              <th style={headCell}>Growing store</th>
+              <th style={headCell}>Established store</th>
             </tr>
           </thead>
           <tbody>
             <tr style={{ backgroundColor: '#fff' }}>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>
-                <strong>Starter</strong>
+              <td style={cell}>
+                <strong>Plan, billed yearly</strong>
               </td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>$5/mo</td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>$5/mo</td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>5%</td>
+              <td style={cell}>Basic: $348</td>
+              <td style={cell}>Grow: $948</td>
+              <td style={cell}>Advanced: $3,588</td>
             </tr>
             <tr style={{ backgroundColor: '#f9fafb' }}>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>
-                <strong>Basic</strong>
+              <td style={cell}>
+                <strong>Domain</strong>
               </td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>$39/mo</td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>$29/mo</td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>2%</td>
+              <td style={cell}>$9+</td>
+              <td style={cell}>$9+</td>
+              <td style={cell}>$9+</td>
             </tr>
             <tr style={{ backgroundColor: '#fff' }}>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>
-                <strong>Grow (Shopify)</strong>
+              <td style={cell}>
+                <strong>Theme (one-time)</strong>
               </td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>$105/mo</td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>$79/mo</td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>1%</td>
+              <td style={cell}>$0 (free theme)</td>
+              <td style={cell}>$100–$500</td>
+              <td style={cell}>$100–$500</td>
             </tr>
             <tr style={{ backgroundColor: '#f9fafb' }}>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>
-                <strong>Advanced</strong>
+              <td style={cell}>
+                <strong>Reviews app</strong>
               </td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>$399/mo</td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>$299/mo</td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>0.5%</td>
+              <td style={cell}>$0 (Judge.me free plan)</td>
+              <td style={cell}>$180 (Judge.me Awesome)</td>
+              <td style={cell}>$180 (Judge.me Awesome)</td>
             </tr>
             <tr style={{ backgroundColor: '#fff' }}>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>
-                <strong>Shopify Plus</strong>
+              <td style={cell}>
+                <strong>Email marketing</strong>
               </td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>$2,300/mo</td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>
-                Negotiable on annual
+              <td style={cell}>$0 (Shopify Messaging, under 10,000 emails a month)</td>
+              <td style={cell}>$240 (Klaviyo, 251–500 contacts)</td>
+              <td style={cell}>Depends on list size</td>
+            </tr>
+            <tr style={{ backgroundColor: '#f9fafb' }}>
+              <td style={cell}>
+                <strong>Selling in person</strong>
               </td>
-              <td style={{ padding: '8px 12px', border: '1px solid #e2e8f0' }}>0.15%</td>
+              <td style={cell}>Not needed</td>
+              <td style={cell}>Not needed</td>
+              <td style={cell}>$1,068 per location (POS Pro)</td>
+            </tr>
+            <tr style={{ backgroundColor: '#fff' }}>
+              <td style={cell}>
+                <strong>Year-one total, before card fees</strong>
+              </td>
+              <td style={cell}>
+                <strong>About $357</strong>
+              </td>
+              <td style={cell}>
+                <strong>About $1,477–$1,877</strong>
+              </td>
+              <td style={cell}>
+                <strong>About $4,945–$5,345, plus email</strong>
+              </td>
             </tr>
           </tbody>
         </table>
       </div>
-      <p className="text-sm text-gray-500 mb-8">
+      <p className="text-sm text-gray-500 mb-6">
         <em>
-          *Transaction fees apply only when using a payment processor other than Shopify Payments.
+          Our arithmetic on the published prices above. POS Pro is $89 a month per location.
         </em>
       </p>
 
-      <hr className="my-8 border-gray-200" />
-
-      <h2 className="text-2xl font-bold mt-8 mb-4">The Bottom Line on Shopify Website Cost</h2>
       <p className="mb-4">
-        Shopify website cost in 2026 comes down to what you actually need: a template store at
-        $2,999 gets a product-first brand live and selling in 7 days. A custom theme build at $4,999
-        gives you a distinct visual identity that performs. Headless architecture at $8,999+ is for
-        brands where performance is a competitive advantage and the standard Shopify theme system
-        genuinely can&apos;t deliver what the product requires.
+        <strong>Now add card fees.</strong> A Basic store selling $2,000 a month online across 40
+        orders pays about $70 a month at 2.9% + 30¢, or $840 a year, more than double its $348 plan.
+        That is normal, not a warning sign: the fee only exists because you are selling. Once a store
+        sells more than about $1,000 a month online, card fees usually cost more than the Basic plan
+        itself.
       </p>
-      <p className="mb-4">
-        Most US small businesses doing $500K–$5M per year in revenue land in the $4,999 custom theme
-        tier. The ROI math closes in under 6 months at typical ecommerce conversion improvement
-        rates. If you&apos;re still deciding between Shopify and another platform, the{' '}
+      <p className="mb-8">
+        The pattern across all three budgets: the plan is the predictable part, card fees scale with
+        revenue, and apps are the part you control. For a platform-level comparison over several
+        years, see our{' '}
         <Link
           href="/blog/shopify-vs-woocommerce-us-small-business-2026"
           className="text-[#B23E13] hover:underline"
         >
           Shopify vs WooCommerce breakdown
-        </Link>{' '}
-        covers how the two compare on total cost of ownership. For a deeper look at development cost
-        by project type, see our{' '}
-        <Link
-          href="/blog/shopify-development-cost-2026"
-          className="text-[#F05A28] font-semibold underline hover:text-[#C94818]"
-        >
-          Shopify development cost guide
-        </Link>
-        , or compare platforms directly in our{' '}
-        <Link
-          href="/comparisons/shopify-vs-woocommerce"
-          className="text-[#F05A28] font-semibold underline hover:text-[#C94818]"
-        >
-          Shopify vs WooCommerce 2026 breakdown
         </Link>
         .
       </p>
+
+      <hr className="my-8 border-gray-200" />
+
+      <h2 id="hidden-costs" className="text-2xl font-bold mt-8 mb-4">
+        Ongoing Costs People Forget
+      </h2>
+      <ul className="list-disc pl-6 mb-8 space-y-2">
+        <li>
+          <strong>Premium and international cards.</strong> Shopify lists premium cards at 3.5% +
+          30¢ online on Basic, and adds 1% for international cards.
+        </li>
+        <li>
+          <strong>Marketplace orders.</strong> Syncing orders from marketplaces is free for the first
+          50 a month, then 1% of those sales, capped at $99 a month.
+        </li>
+        <li>
+          <strong>Selling in person.</strong> POS Pro costs $89 a month per location, and in-person
+          card rates run from 2.6% + 10¢ on Basic down to 2.3% + 10¢ on Plus.
+        </li>
+        <li>
+          <strong>Email volume.</strong> Shopify Messaging is free up to 10,000 emails a month, then
+          $1 per 1,000 emails, with lower rates after 300,000 a month.
+        </li>
+        <li>
+          <strong>Apps after free trials.</strong> Many apps start with a free trial and then bill
+          monthly. Check your app list before each renewal.
+        </li>
+        <li>
+          <strong>Changes after launch.</strong> New sections, integrations and fixes need a
+          developer&apos;s time. Our{' '}
+          <Link href="/blog/shopify-development-cost-2026" className="text-[#B23E13] hover:underline">
+            Shopify development cost guide
+          </Link>{' '}
+          covers those rates.
+        </li>
+        <li>
+          <strong>Moving to Shopify Plus.</strong> Plus starts at $2,300 a month. Read{' '}
+          <Link href="/blog/the-true-cost-of-shopify-plus-2026" className="text-[#B23E13] hover:underline">
+            the true cost of Shopify Plus
+          </Link>{' '}
+          before your sales make the upgrade look inevitable.
+        </li>
+      </ul>
+
+      <hr className="my-8 border-gray-200" />
+
+      <h2 id="developer-cost" className="text-2xl font-bold mt-8 mb-4">
+        Where Developer and Agency Costs Fit
+      </h2>
       <p className="mb-4">
-        FactoryJet has built Shopify stores for US small businesses across{' '}
-        <Link href="/austin" className="text-[#F05A28] font-semibold underline hover:text-[#C94818]">
+        Hiring help is a one-time cost that sits on top of everything above. A developer or agency
+        can set up your theme, load products, connect payments and shipping, and build custom
+        features. What you pay depends on scope, experience and where the developer is based. Our{' '}
+        <Link
+          href="/blog/shopify-development-cost-2026"
+          className="text-[#B23E13] font-semibold underline hover:text-[#9A3510]"
+        >
+          Shopify development cost guide
+        </Link>{' '}
+        breaks down hourly rates and project prices, so this page does not repeat them.
+      </p>
+      <p className="mb-8">
+        Two things cut that bill no matter who you hire: product photos, copy and brand assets ready
+        before work starts, and a theme that already does most of what you need. When you want a
+        fixed scope for your own store, our{' '}
+        <Link href="/services/shopify-development" className="text-[#B23E13] hover:underline">
+          Shopify development team
+        </Link>{' '}
+        will price it.
+      </p>
+
+      <hr className="my-8 border-gray-200" />
+
+      <h2 id="compare" className="text-2xl font-bold mt-8 mb-4">
+        Shopify vs Etsy vs WooCommerce: What Each Costs to Run
+      </h2>
+      <div className="overflow-x-auto mb-4">
+        <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+          <thead>
+            <tr style={{ backgroundColor: '#1f2937', color: '#fff' }}>
+              <th style={headCell}>Cost</th>
+              <th style={headCell}>Shopify (Basic)</th>
+              <th style={headCell}>Etsy</th>
+              <th style={headCell}>WooCommerce</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style={{ backgroundColor: '#fff' }}>
+              <td style={cell}>
+                <strong>Monthly platform fee</strong>
+              </td>
+              <td style={cell}>$29 billed yearly, $39 monthly</td>
+              <td style={cell}>None</td>
+              <td style={cell}>None for the plugin</td>
+            </tr>
+            <tr style={{ backgroundColor: '#f9fafb' }}>
+              <td style={cell}>
+                <strong>Fee per sale</strong>
+              </td>
+              <td style={cell}>2.9% + 30¢ card rate (Shopify Payments)</td>
+              <td style={cell}>6.5% transaction fee, plus payment processing</td>
+              <td style={cell}>Your payment processor&apos;s fee</td>
+            </tr>
+            <tr style={{ backgroundColor: '#fff' }}>
+              <td style={cell}>
+                <strong>Listing fee</strong>
+              </td>
+              <td style={cell}>None</td>
+              <td style={cell}>$0.20 per item</td>
+              <td style={cell}>None</td>
+            </tr>
+            <tr style={{ backgroundColor: '#f9fafb' }}>
+              <td style={cell}>
+                <strong>Hosting</strong>
+              </td>
+              <td style={cell}>Included</td>
+              <td style={cell}>Not needed (marketplace)</td>
+              <td style={cell}>You pay for it separately</td>
+            </tr>
+            <tr style={{ backgroundColor: '#fff' }}>
+              <td style={cell}>
+                <strong>Who brings the shoppers</strong>
+              </td>
+              <td style={cell}>You do</td>
+              <td style={cell}>Etsy&apos;s marketplace</td>
+              <td style={cell}>You do</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p className="text-sm text-gray-500 mb-6">
+        <em>
+          Sources: Shopify US pricing page (September 16, 2026);{' '}
+          <a
+            href="https://www.etsy.com/legal/fees/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#B23E13] hover:underline"
+          >
+            Etsy Fees &amp; Payments Policy
+          </a>{' '}
+          (August 2026);{' '}
+          <a
+            href="https://woocommerce.com/woocommerce/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#B23E13] hover:underline"
+          >
+            WooCommerce
+          </a>
+          .
+        </em>
+      </p>
+      <p className="mb-8">
+        Etsy is cheaper to start and Shopify is cheaper to grow. Etsy&apos;s 6.5% transaction fee
+        equals Shopify Basic&apos;s $29 plan at about $446 of monthly sales, so above that level
+        Shopify&apos;s flat fee usually costs less, before counting card processing on either
+        platform. The bigger difference is traffic: Etsy brings shoppers, and on Shopify you find
+        your own. For Shopify against WooCommerce in more detail, see our{' '}
+        <Link
+          href="/comparisons/shopify-vs-woocommerce"
+          className="text-[#B23E13] font-semibold underline hover:text-[#9A3510]"
+        >
+          Shopify vs WooCommerce 2026 comparison
+        </Link>
+        .
+      </p>
+
+      <hr className="my-8 border-gray-200" />
+
+      <h2 id="bottom-line" className="text-2xl font-bold mt-8 mb-4">
+        The Bottom Line on Shopify Website Cost
+      </h2>
+      <p className="mb-4">
+        In our three example budgets, the first year of owning a Shopify store runs from about $357
+        to about $5,345 before card fees, depending on the plan, theme, apps and whether you sell in
+        person. The plan is the predictable part. Card fees grow with your sales, which is a good
+        problem to have. Apps are the line that quietly creeps, so review them every quarter.
+      </p>
+      <p className="mb-4">
+        Choose your plan on features, not card rates. Bill yearly once you are committed. Start with
+        free themes and apps until revenue justifies paid ones. When you are ready to price the build
+        itself, FactoryJet builds Shopify stores for US businesses, with local ecommerce pages for{' '}
+        <Link href="/austin/ecommerce-development" className="text-[#B23E13] font-semibold underline hover:text-[#9A3510]">
           Austin
         </Link>
         ,{' '}
-        <Link href="/miami" className="text-[#F05A28] font-semibold underline hover:text-[#C94818]">
+        <Link href="/miami/ecommerce-development" className="text-[#B23E13] font-semibold underline hover:text-[#9A3510]">
           Miami
-        </Link>
-        ,{' '}
-        <Link href="/nashville" className="text-[#F05A28] font-semibold underline hover:text-[#C94818]">
+        </Link>{' '}
+        and{' '}
+        <Link href="/nashville/ecommerce-development" className="text-[#B23E13] font-semibold underline hover:text-[#9A3510]">
           Nashville
         </Link>
-        , and{' '}
-        <Link href="/services/ecommerce-development" className="text-[#F05A28] font-semibold underline hover:text-[#C94818]">
-          across the US
-        </Link>
-        : all with a 7-day delivery guarantee and fixed-price quotes.
+        .
       </p>
 
-      {/* High-Converting CTA Box */}
-      <div className="bg-gradient-to-r from-gray-900 to-gray-800 text-white rounded-2xl p-6 md:p-8 my-8 shadow-lg">
-        <div className="max-w-2xl">
-          <span className="inline-block px-3 py-1 bg-[#F05A28] text-white text-xs font-bold uppercase rounded-full tracking-wider mb-3">
-            7-Day Delivery Turnaround
-          </span>
-          <h3 className="text-xl md:text-2xl font-display font-bold text-white mb-2">
-            Get an Exact Fixed-Price Scope for Your Shopify Store
-          </h3>
-          <p className="text-gray-300 text-sm md:text-base leading-relaxed mb-6">
-            FactoryJet has engineered 500+ custom Shopify stores and migrations for US small businesses. Book a 30-minute scoping consultation with founder Bhavesh Barot.
-          </p>
-          <div className="flex flex-wrap gap-3">
-            <a
-              href="https://calendly.com/bhavesh-factoryjet/30min"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-[#F05A28] hover:bg-[#C94818] text-white font-semibold text-sm px-6 py-3 rounded-lg transition-colors"
-            >
-              Book 30-Min Consultation
-            </a>
-            <Link
-              href="/services/shopify-development"
-              className="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 text-white border border-white/20 font-semibold text-sm px-6 py-3 rounded-lg transition-colors"
-            >
-              Explore Shopify Services
-            </Link>
-          </div>
+      <div className="bg-[#FAF8F5] border-2 border-[#E5DFD7] p-6 sm:p-8 rounded-xl my-10 shadow-sm">
+        <p className="font-fj-mono text-xs font-bold uppercase tracking-wider text-[#B23E13] mb-2">
+          Shopify scoping call
+        </p>
+        <h3 className="text-xl sm:text-2xl font-bold text-[#1F2937] mb-3">
+          Get a Fixed Scope for Your Shopify Store
+        </h3>
+        <p className="text-[#4B5563] text-base leading-relaxed mb-6">
+          Tell us what you sell and how you sell it. In a 30-minute call with founder Bhavesh Barot we
+          will map the plan, apps and build your store actually needs, and put the build price in
+          writing.
+        </p>
+        <div className="flex flex-wrap items-center gap-4">
+          <a
+            href="https://calendly.com/bhavesh-factoryjet/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-[#B23E13] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#9A3510] transition-colors shadow-sm"
+          >
+            Book 30-Min Consultation
+          </a>
+          <Link
+            href="/services/shopify-development"
+            className="inline-flex items-center gap-2 bg-white text-[#1F2937] border border-gray-300 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
+          >
+            Explore Shopify Development
+          </Link>
         </div>
       </div>
 
       <p className="text-sm text-gray-500 italic">
-        Prices in this post were verified on June 13, 2026. Shopify plan pricing:{' '}
+        Prices in this post were checked on September 16 and 17, 2026. Shopify plan prices, card
+        rates, third-party fees, POS Pro and marketplace fees:{' '}
         <a
           href="https://www.shopify.com/pricing"
           target="_blank"
@@ -841,25 +828,34 @@ export const post: BlogPost = {
         >
           shopify.com/pricing
         </a>
-        . Developer rate ranges cross-referenced against{' '}
+        . Theme prices:{' '}
         <a
-          href="https://cartcoders.com/blog/shopify-development/shopify-developer-cost-hourly-rate-project-pricing/"
+          href="https://themes.shopify.com/themes"
           target="_blank"
           rel="noopener noreferrer"
           className="text-[#B23E13] hover:underline"
         >
-          CartCoders
-        </a>{' '}
-        (March 2026) and{' '}
+          Shopify Theme Store
+        </a>
+        . Domain prices:{' '}
         <a
-          href="https://ogresto.com/blogs/shopify-development-cost-2026"
+          href="https://www.shopify.com/domains"
           target="_blank"
           rel="noopener noreferrer"
           className="text-[#B23E13] hover:underline"
         >
-          Ogresto
-        </a>{' '}
-        (June 2026). FactoryJet pricing is our own published tiers, disclosed as such.
+          shopify.com/domains
+        </a>
+        . Email prices:{' '}
+        <a
+          href="https://www.shopify.com/email-marketing"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[#B23E13] hover:underline"
+        >
+          Shopify Messaging
+        </a>
+        . Example budgets and per-sale fees are our arithmetic on those published prices.
       </p>
     </>
   ),

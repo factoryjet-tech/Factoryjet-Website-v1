@@ -836,9 +836,11 @@ export default function LocalSeoServicePage() {
                 <Link href="/services/seo" style={LINK_STYLE}>SEO services</Link>, because local SEO is ordinary SEO
                 with a geography constraint bolted on. The{' '}
                 <Link href="/services/seo-audit" style={LINK_STYLE}>free SEO audit</Link> runs this same list and hands
-                you the findings whether or not you hire us. Single-location owners usually start with{' '}
+                you the findings whether or not you hire us. To see what this work usually costs, job by job, read our{' '}
+                <Link href="/blog/local-seo-cost-2026" style={LINK_STYLE}>local SEO cost guide</Link>. Single-location owners usually start with{' '}
                 <Link href="/services/small-business-seo" style={LINK_STYLE}>small business SEO</Link>. We also offer vertical programs including{' '}
-                <Link href="/services/dental-seo" style={LINK_STYLE}>dental SEO</Link> and{' '}
+                <Link href="/services/dental-seo" style={LINK_STYLE}>dental SEO</Link>,{' '}
+                <Link href="/services/healthcare-seo" style={LINK_STYLE}>healthcare SEO</Link> and{' '}
                 <Link href="/services/law-firm-seo" style={LINK_STYLE}>law firm SEO</Link>. If you also
                 sell online, the product and collection side sits on{' '}
                 <Link href="/services/ecommerce-seo" style={LINK_STYLE}>ecommerce SEO</Link>, and product reviews

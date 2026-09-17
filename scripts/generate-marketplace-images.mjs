@@ -17,7 +17,13 @@ if (existsSync(ENV_FILE)) {
     if (m && !process.env[m[1]]) process.env[m[1]] = m[2].replace(/^["']|["']$/g, '');
   }
 }
-const API_KEY = process.env.RUNWARE_API_KEY || 'H0UZlC6wrDpk6BzNDAHVmcHIQDxGCOLl';
+// Read from the environment only (.env.local is loaded above and is git-ignored).
+// This repo is public, so the key must never be written into this file.
+const API_KEY = process.env.RUNWARE_API_KEY;
+if (!API_KEY) {
+  console.error('Missing RUNWARE_API_KEY. Add it to .env.local (git-ignored) or export it in your shell. Never paste the key into this script.');
+  process.exit(1);
+}
 
 const OUT_DIR = join('public', 'images', 'us', 'marketplace');
 await mkdir(OUT_DIR, { recursive: true });

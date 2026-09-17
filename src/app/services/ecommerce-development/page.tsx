@@ -1198,6 +1198,9 @@ export default function EcommerceDevelopmentPage() {
                   <Link href="/best-ecommerce-platforms" className="text-[#B23E13] font-medium underline underline-offset-2">best ecommerce platforms guide</Link>.
                   If the storefront needs to run separately from the backend, that is a{' '}
                   <Link href="/headless-commerce" className="text-[#B23E13] font-medium underline underline-offset-2">headless commerce</Link> build.
+                  Still setting a budget? Our guide to{' '}
+                  <Link href="/blog/ecommerce-website-cost-2026" className="text-[#B23E13] font-medium underline underline-offset-2">what an ecommerce website costs in 2026</Link>{' '}
+                  prices Shopify, WooCommerce, BigCommerce and custom builds side by side.
                 </p>
                 <p>
                   Most of the stores we build sell in more than one place. If the marketplaces are part of the plan, we

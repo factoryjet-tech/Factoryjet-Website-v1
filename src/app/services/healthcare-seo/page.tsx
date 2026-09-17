@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import type { CSSProperties, ReactNode } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -6,92 +7,120 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
+import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
 import Hero from '@/components/v2/Hero';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
 import StrategicDarkSection from '@/components/v2/StrategicDarkSection';
 import ServiceJourneyRow, { type ServiceJourneyStage } from '@/components/v2/ServiceJourneyRow';
 import ComparisonTable, { CompareIcon } from '@/components/v2/ComparisonTable';
-import IndustriesGrid from '@/components/v2/IndustriesGrid';
 import FAQ, { type FAQItem, type FAQCategory } from '@/components/v2/FAQ';
-import TalkToFounder from '@/components/v2/TalkToFounder';
 import FinalCTA from '@/components/v2/FinalCTA';
-import LocalSeoOpportunityEstimator from '@/components/v2/LocalSeoOpportunityEstimator';
-
-import HealthcareSpecialtiesTabs from './HealthcareSpecialtiesTabs';
-import StatsRowAnimated from './StatsRowAnimated';
+import TalkToFounder from '@/components/v2/TalkToFounder';
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   /us/services/healthcare-seo, v2 rebuild 2026-06-13
+   /services/healthcare-seo, rebuilt 2026-09-17 (ranking diagnosis + health tech offer)
 
-   Primary keywords (highest-CPC cluster on DataForSEO gap list):
-     seo agency healthcare        1,900 vol  KD 2   CPC $215.84
-     healthcare seo agency        1,900 vol  KD 18
-     seo agency for healthcare    1,900 vol  KD 12
-   Secondary:
-     healthcare seo services      1,600 vol  KD 15
-     seo for healthcare companies   880 vol  KD 8
-     medical seo agency             720 vol  KD 10
-     dental seo                   27,100 vol KD 28   (sub-specialty)
-     healthcare seo near me        1,300 vol KD 4
+   Why this rebuild (Search Console + URL Inspection + live HTML, 2026-09-17):
+   - The 47.9 average position (243 impressions, Jun 17 to Sep 15) is a blend, not
+     a ranking. Of the 138 query-attributed impressions, 91% landed on or before
+     Aug 2, 94% sat at position 45 or deeper, 94% were desktop, and 61% were
+     pharma, biotech, medical device or diagnostics queries this page never
+     targeted. The head term "healthcare seo agency" logged 1 impression, at 78.
+     Since Aug 3 the page has had about one query-attributed impression a week.
+   - Indexing was never the problem: URL Inspection PASS, Google canonical equals
+     ours, last crawl Aug 30, single-hop 301 from /us/services/healthcare-seo.
+   - Real limits: page one for the head term is authority-gated (weakest result
+     100 referring domains), only four internal links point here, the H1 never
+     said "healthcare SEO agency", most of the page was local-practice SEO that
+     overlaps /services/dental-seo and /services/local-seo, and a YMYL page had
+     trust defects: unsourced stats, a false "GA4 Business Associate Agreement"
+     claim, "HIPAA-compliant" claims, a count-up counter that server-rendered
+     "0+ businesses served", tab content missing from the HTML, and IndustriesGrid
+     rendering unverified percentage claims.
 
-   v2 improvements over v1:
-   - Original data table (Healthcare Practice Type SEO Priority Matrix)
-   - Sourced statistics with linked citations (rater8, BrightEdge, sagapixel)
-   - Listicle section: 6 healthcare specialties with highest SEO ROI
-   - "seo agency for healthcare" seeded 4× (was 0× in v1)
-   - "dental seo" dedicated section and FAQs
-   - "near me" seeded 6× (was 1×)
-   - 25 FAQs (was 21), all conversational practice-owner questions
-   - Answer-first H2s throughout
-   - dateModified in WebPage schema + REVIEWED_DATE constant
-   - Organization.sameAs fixed to external URLs
-   - Quick Answer block with real sourced stats
+   Rules for editing this page:
+   - Every statistic links to a fetch-verified source in SOURCE_LIST.
+   - Never claim HIPAA certification or compliance status. We describe a process;
+     the client's privacy officer or counsel decides.
+   - Never name, describe or hint at any healthcare client or prospect.
+   - No invented results, no pricing figures, no em dashes.
+   - Exactly one dark section: StrategicDarkSection.
+   - Schema is derived, never hand-copied: FAQPage from FAQ_ITEMS, Service offers
+     from ENGAGEMENTS, BreadcrumbList from BREADCRUMB_ITEMS, WebPage citations
+     from SOURCE_LIST.
 
-   Schema: WebPage + BreadcrumbList + Service + FAQPage + Organization JSON-LD.
-   Pricing: quote-first, no dollar figures (no-pricing rule 2026-06-11).
-   Alternates: canonical-only.
+   Keywords (US Google Ads volumes via DataForSEO): healthcare seo agency 1,600
+   (shares its volume with "seo agency for healthcare"), healthcare seo services
+   590, seo for healthcare 590, medical seo services 590, healthcare seo 390,
+   healthcare seo company 320, medical seo agency 260, medical seo company 260.
+   People Also Ask pulled 2026-09-17 for: healthcare seo, medical seo, hipaa
+   compliant seo, medical device seo, healthtech marketing, b2b healthcare
+   marketing, healthcare it marketing.
 ───────────────────────────────────────────────────────────────────────────── */
 
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
-const REVIEWED_DATE = 'June 13, 2026';
+const PAGE_URL = 'https://factoryjet.com/services/healthcare-seo';
+const HERO_IMAGE = 'https://factoryjet.com/images/services/healthcare-seo.webp';
+const PAGE_TITLE = 'Healthcare SEO Agency for Clinics & Health Tech | FactoryJet';
+const PAGE_DESCRIPTION =
+  'Healthcare SEO agency for practices, clinics and health tech companies. Get found on Google and in AI answers with pages your compliance team can approve.';
+const H1_TEXT = 'Healthcare SEO agency for practices, clinics and health tech companies.';
+const PAGE_MODIFIED = '2026-09-17';
+const REVIEWED_DATE = 'September 17, 2026';
+
+const ORANGE = '#F05A28';
+const ORANGE_DARK = '#B23E13';
+const INK = '#0F0F12';
+const CREAM = '#FAFAF7';
+
+const H2_STYLE: CSSProperties = {
+  fontSize: 'clamp(1.625rem, 3vw, 2.375rem)',
+  lineHeight: 1.1,
+  letterSpacing: '-0.025em',
+};
+const H3_STYLE: CSSProperties = {
+  fontSize: 'clamp(1.25rem, 2.2vw, 1.5rem)',
+  lineHeight: 1.2,
+  letterSpacing: '-0.02em',
+  color: INK,
+};
+const LEAD_STYLE: CSSProperties = { fontSize: '1.0625rem', lineHeight: 1.65 };
+const BODY_STYLE: CSSProperties = { color: 'rgba(15,15,18,0.74)', fontSize: '1rem', lineHeight: 1.7 };
+const LINK_CLASS = 'font-semibold underline underline-offset-2';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    SEO / Metadata
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  // 58 chars - fits Google's ~60-char SERP truncation limit
-  title: 'Healthcare SEO Agency for Medical Practices & Clinics | FactoryJet',
-  // ~156 chars - within Google's ~160-char description preview
-  description:
-    'Healthcare SEO agency for US practices and clinics. We build YMYL E-E-A-T, dominate map packs, earn AI citations, and run HIPAA-safe analytics. Free audit.',
+  title: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Healthcare SEO Agency for Medical Practices & Clinics | FactoryJet',
-    description:
-      'Healthcare SEO agency for US practices and clinics. We build YMYL E-E-A-T, dominate map packs, earn AI citations, and run HIPAA-safe analytics. Free audit.',
-    url: 'https://factoryjet.com/services/healthcare-seo',
+    title: PAGE_TITLE,
+    description: PAGE_DESCRIPTION,
+    url: PAGE_URL,
     images: [
       {
-        // Page-specific image - correct dimensions for social card previews
-        url: 'https://factoryjet.com/images/services/healthcare-seo.webp',
+        url: HERO_IMAGE,
         width: 1344,
         height: 1024,
-        alt: 'FactoryJet, Healthcare SEO agency for US medical practices and health companies',
+        alt: 'FactoryJet healthcare SEO agency for practices, clinics and health tech companies',
       },
     ],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Healthcare SEO Agency for Medical Practices & Clinics | FactoryJet',
+    title: PAGE_TITLE,
     description:
-      'Healthcare SEO agency for US practices and clinics. YMYL E-E-A-T, map pack, AI citations, HIPAA-safe analytics. Free audit.',
-    images: ['https://factoryjet.com/images/services/healthcare-seo.webp'],
+      'Healthcare SEO for practices, clinics and health tech companies: Google rankings, AI answers and compliance-aware content.',
+    images: [HERO_IMAGE],
   },
   alternates: {
+    // Literal on purpose: scripts/validate-build.mjs checks canonical literals against the route.
     canonical: 'https://factoryjet.com/services/healthcare-seo',
   },
   robots: {
@@ -108,28 +137,397 @@ export const metadata: Metadata = {
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   Section data, pillars, journey stages
+   Sources. Every URL fetch-verified on 2026-09-17 with the quoted wording
+   present on the page. Rendered in the Sources section AND in WebPage.citation.
 ───────────────────────────────────────────────────────────────────────────── */
 
-const PILLARS = [
+interface Source {
+  title: string;
+  publisher: string;
+  url: string;
+}
+
+const SOURCE_RATER8_AI: Source = {
+  title: '2026 Patient Choice Report (press release, June 3, 2026)',
+  publisher: 'rater8',
+  url: 'https://www.prnewswire.com/news-releases/rater8-study-finds-that-patients-searching-for-a-new-doctor-trust-ai-tools-more-than-google-and-physician-referrals-302789633.html',
+};
+const SOURCE_RATER8_REVIEWS: Source = {
+  title: 'How Patients Choose Their Doctors (press release, February 12, 2025)',
+  publisher: 'rater8',
+  url: 'https://www.prnewswire.com/news-releases/rater8-study-finds-that-online-reviews-inform-care-decisions-but-more-than-half-of-patients-are-not-leaving-them-302374399.html',
+};
+const SOURCE_FORRESTER: Source = {
+  title: 'The State Of Business Buying, 2026 (press release, January 21, 2026)',
+  publisher: 'Forrester',
+  url: 'https://www.forrester.com/press-newsroom/forrester-2026-the-state-of-business-buying/',
+};
+const SOURCE_GOOGLE_HELPFUL: Source = {
+  title: 'Creating helpful, reliable, people-first content',
+  publisher: 'Google Search Central',
+  url: 'https://developers.google.com/search/docs/fundamentals/creating-helpful-content',
+};
+const SOURCE_GOOGLE_AI_FEATURES: Source = {
+  title: 'AI features and your website',
+  publisher: 'Google Search Central',
+  url: 'https://developers.google.com/search/docs/appearance/ai-features',
+};
+const SOURCE_GOOGLE_LOCAL: Source = {
+  title: 'Tips to improve your local ranking on Google',
+  publisher: 'Google Business Profile Help',
+  url: 'https://support.google.com/business/answer/7091',
+};
+const SOURCE_GA_HIPAA: Source = {
+  title: 'HIPAA and Google Analytics',
+  publisher: 'Google Analytics Help',
+  url: 'https://support.google.com/analytics/answer/13297105',
+};
+const SOURCE_OPENAI_BOTS: Source = {
+  title: 'Overview of OpenAI crawlers',
+  publisher: 'OpenAI',
+  url: 'https://developers.openai.com/api/docs/bots',
+};
+const SOURCE_HL7_FHIR: Source = {
+  title: 'FHIR summary',
+  publisher: 'HL7',
+  url: 'https://hl7.org/fhir/summary.html',
+};
+const SOURCE_FTC_HEALTH: Source = {
+  title: 'Health Products Compliance Guidance',
+  publisher: 'Federal Trade Commission',
+  url: 'https://www.ftc.gov/business-guidance/resources/health-products-compliance-guidance',
+};
+
+const SOURCE_LIST: ReadonlyArray<Source> = [
+  SOURCE_RATER8_AI,
+  SOURCE_RATER8_REVIEWS,
+  SOURCE_FORRESTER,
+  SOURCE_GOOGLE_HELPFUL,
+  SOURCE_GOOGLE_AI_FEATURES,
+  SOURCE_GOOGLE_LOCAL,
+  SOURCE_GA_HIPAA,
+  SOURCE_OPENAI_BOTS,
+  SOURCE_HL7_FHIR,
+  SOURCE_FTC_HEALTH,
+];
+
+function SourceLink({ source, children }: { source: Source; children: ReactNode }) {
+  return (
+    <a
+      href={source.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={LINK_CLASS}
+      style={{ color: ORANGE_DARK }}
+    >
+      {children}
+    </a>
+  );
+}
+
+function InternalLink({ href, children }: { href: string; children: ReactNode }) {
+  return (
+    <Link href={href} className={LINK_CLASS} style={{ color: ORANGE_DARK }}>
+      {children}
+    </Link>
+  );
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Breadcrumbs: one array feeds the visible trail AND the BreadcrumbList schema.
+───────────────────────────────────────────────────────────────────────────── */
+
+const BREADCRUMB_ITEMS: BreadcrumbItem[] = [
+  { name: 'Home', url: 'https://factoryjet.com' },
+  { name: 'Services', url: 'https://factoryjet.com/services' },
+  { name: 'Healthcare SEO', url: PAGE_URL },
+];
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Section data
+───────────────────────────────────────────────────────────────────────────── */
+
+const FACTS: ReadonlyArray<{ figure: string; text: string; source: Source; sourceLabel: string }> = [
   {
-    title: 'YMYL E-E-A-T is not optional | it is the ranking floor for health content',
-    body:
-      'Health content falls under Google\'s "Your Money or Your Life" category, where weak Experience, Expertise, Authoritativeness, and Trustworthiness signals earn manual quality reviews and ranking suppression. Provider bylines with credentials, About pages with verifiable licensure, peer-reviewed citations, and clear editorial policies are not best practices, they are the minimum requirement before Google will rank your healthcare content. Most generalist SEO agencies run a standard technical checklist and wonder why rankings do not respond. As a healthcare SEO agency, we build E-E-A-T into every page from the first draft, not as a fix when rankings plateau.',
-    image: '/images/services/healthcare-seo-eeat.webp',
-    imageAlt: 'Medical professional reviewing E-E-A-T compliant healthcare content with peer-reviewed citations',
+    figure: '36%',
+    text: 'of US patients who searched for a doctor in the past year named AI tools like ChatGPT as an influence on their choice, ahead of Google search (34%) and doctor recommendations (32%).',
+    source: SOURCE_RATER8_AI,
+    sourceLabel: 'rater8, 2026 Patient Choice Report',
   },
   {
-    title: '84% of patients check reviews before choosing a provider | and review signals directly affect rankings',
-    body:
-      'According to rater8\'s 2025 Patient Survey, 84% of patients check online reviews before selecting a new healthcare provider. What most practices miss: review velocity and review count are confirmed Google Business Profile ranking signals, they add E-E-A-T signals to organic rankings, and ChatGPT and Perplexity surface practices with strong review authority when patients ask for recommendations. Three ranking systems, one input. A healthcare SEO agency that does not run a systematic review-request workflow for your practice is leaving the highest-leverage signal untouched. We build and run that workflow for every local retainer: HIPAA-compliant, with response templates for positive and negative reviews.',
+    figure: '84%',
+    text: 'of patients say they check online reviews before choosing a new healthcare provider.',
+    source: SOURCE_RATER8_REVIEWS,
+    sourceLabel: 'rater8 patient survey, 2025',
   },
   {
-    title: 'Default GA4 on a patient-facing site creates HIPAA liability most SEO agencies never mention',
-    body:
-      'Standard Google Analytics 4 implementation on a healthcare website can expose Protected Health Information through referral URLs, form submission events, and session data, creating HIPAA liability that has nothing to do with SEO performance, but everything to do with whether you can keep running digital marketing. Google\'s GA4 Business Associate Agreement covers limited use cases that most healthcare sites do not satisfy out of the box. A healthcare SEO agency that fires standard GA4 onto a patient-facing site without reviewing this is a compliance risk, not a marketing asset. We audit your GA4 configuration for HIPAA-risk events as part of every engagement baseline, before a single ranking dollar is spent.',
-    image: '/images/services/healthcare-seo-hipaa.webp',
-    imageAlt: 'HIPAA-compliant analytics dashboard configuration for healthcare website',
+    figure: '13',
+    text: 'people inside the buying company take part in a typical B2B buying decision, plus nine outside influencers. Forrester also found that searches in generative AI (genAI) tools are now where B2B buyers start.',
+    source: SOURCE_FORRESTER,
+    sourceLabel: 'Forrester, The State Of Business Buying, 2026',
+  },
+  {
+    figure: 'No BAA',
+    text: 'Google does not offer a Business Associate Agreement for Google Analytics. That is the contract HIPAA, the US federal health privacy law, requires before a vendor handles patient health information for you. Google says HIPAA-regulated organizations must not use Google Analytics in a way that exposes that information to Google.',
+    source: SOURCE_GA_HIPAA,
+    sourceLabel: 'Google Analytics Help',
+  },
+];
+
+interface Priority {
+  number: string;
+  title: string;
+  body: ReactNode;
+  signal: string;
+}
+
+const PRACTICE_PRIORITIES: ReadonlyArray<Priority> = [
+  {
+    number: '01',
+    title: 'A Google Business Profile that matches reality',
+    body: 'Correct categories, every service you offer, accurate hours, real photos and one profile per location. Wrong or missing categories keep good practices out of map results for services they provide.',
+    signal: 'Map results for near me searches',
+  },
+  {
+    number: '02',
+    title: 'A review program that protects patient privacy',
+    body: 'Ask every patient at the same point in their visit, and reply without confirming anyone is a patient or mentioning their care. Your privacy officer approves the reply templates first.',
+    signal: 'Review count, rating and replies',
+  },
+  {
+    number: '03',
+    title: 'Provider pages with real credentials',
+    body: 'Each clinician gets a page with licensure, board certifications, training and the conditions they treat. These pages carry the experience and expertise Google looks for on health content.',
+    signal: 'Trust signals on every clinical page',
+  },
+  {
+    number: '04',
+    title: 'Service and condition pages your clinician signs off',
+    body: 'One page per service or condition patients search for, answering their real questions, with sources and a named reviewer and date. We draft. Your clinician corrects and approves.',
+    signal: 'Rankings for treatments and conditions',
+  },
+  {
+    number: '05',
+    title: 'Structured data that matches the page',
+    body: (
+      <>
+        Schema markup such as MedicalClinic, Physician and MedicalProcedure labels what each page is about.{' '}
+        <SourceLink source={SOURCE_GOOGLE_AI_FEATURES}>Google advises</SourceLink> making sure structured data
+        matches the visible text, so we only mark up what the page shows.
+      </>
+    ),
+    signal: 'Clear signals for Google and AI answers',
+  },
+  {
+    number: '06',
+    title: 'Tracking that keeps patient data out',
+    body: 'Appointment forms, patient portals and condition pages are where analytics and ad tags can pick up health information. We map every tag, flag risky ones and set up measurement your compliance team accepts.',
+    signal: 'Measurement without privacy risk',
+  },
+];
+
+const MATRIX_ROWS: ReadonlyArray<{
+  type: string;
+  looks: string;
+  pages: string;
+  schema: string;
+  proof: string;
+}> = [
+  {
+    type: 'Private practice or clinic',
+    looks: 'Google map results, reviews, AI assistants',
+    pages: 'Service, condition and provider pages',
+    schema: 'MedicalClinic, Physician',
+    proof: 'Reviews, credentials, named reviewers',
+  },
+  {
+    type: 'Dental practice',
+    looks: 'Google map results and reviews',
+    pages: 'Treatment pages, such as implants and aligners',
+    schema: 'Dentist, MedicalProcedure',
+    proof: 'Reviews, dentist credentials',
+  },
+  {
+    type: 'Hospital or health system',
+    looks: 'Local results for each location, condition searches',
+    pages: 'Location, service line and doctor finder pages',
+    schema: 'Hospital, MedicalClinic, Physician',
+    proof: 'Accreditations, physician credentials',
+  },
+  {
+    type: 'Telehealth or digital health app',
+    looks: 'Google, AI assistants, app stores',
+    pages: 'Condition, coverage and how-it-works pages',
+    schema: 'Organization, MedicalWebPage',
+    proof: 'Clinician reviewers, a clear privacy policy',
+  },
+  {
+    type: 'EHR-connected or healthcare IT software',
+    looks: 'AI assistants, Google, ratings sites such as KLAS and G2',
+    pages: 'Integration, security and role pages',
+    schema: 'SoftwareApplication, Organization',
+    proof: 'Live integrations, security audits or certifications you actually hold',
+  },
+  {
+    type: 'Billing and claims (revenue cycle management) software vendor',
+    looks: 'AI assistants, Google, ratings sites',
+    pages: 'Workflow, denial and prior authorization pages',
+    schema: 'SoftwareApplication, FAQPage',
+    proof: 'Customer results you are cleared to share',
+  },
+  {
+    type: 'Medical device company',
+    looks: 'Google, AI assistants, specialty publications',
+    pages: 'Product, indication and evidence summary pages',
+    schema: 'Product, Organization',
+    proof: 'Regulatory status stated exactly as cleared or approved',
+  },
+];
+
+const MISTAKES = [
+  {
+    title: 'Trust signals added last instead of first',
+    body: 'Google gives extra weight to trust on health topics. A page with no named author, reviewer, sources or credentials can have clean technical SEO and still lose to a page that shows who stands behind it. We build bylines, reviewers and sources into the first draft.',
+  },
+  {
+    title: 'Reviews left to chance',
+    body: 'Reviews help local rankings and shape which provider a patient books. Asking only when someone remembers leaves that lever idle. A steady, privacy-safe review program moves rankings and bookings at the same time.',
+  },
+  {
+    title: 'Analytics tags that can see patient data',
+    body: 'Google does not offer a Business Associate Agreement for Google Analytics. The risk hides in tags on appointment forms, portals and condition pages. We map your tags and flag the risks, and your privacy officer or counsel makes the call.',
+  },
+];
+
+const BUYING_PATH: ReadonlyArray<{ title: string; body: ReactNode }> = [
+  {
+    title: 'The shortlist starts in an answer.',
+    body: (
+      <>
+        <SourceLink source={SOURCE_FORRESTER}>Forrester&apos;s 2026 buyer research</SourceLink> found that genAI
+        searches are the starting point for B2B buyers. Someone types a question like &quot;best prior authorization
+        software for a mid-size health system&quot; into ChatGPT or Google, and the vendors named in that answer make
+        the first list.
+      </>
+    ),
+  },
+  {
+    title: 'Every committee member checks a different claim.',
+    body: 'Forrester puts a typical buying decision at 13 people inside the buying company and nine outside influencers. The CIO looks up integrations, the security team looks for proof of security audits, clinical leaders look at workflow and finance looks for a return on the investment. Each needs a page that answers their question.',
+  },
+  {
+    title: 'AI answers can only use pages they can reach.',
+    body: (
+      <>
+        <SourceLink source={SOURCE_GOOGLE_AI_FEATURES}>Google says</SourceLink> a page must be indexed and eligible to
+        show a snippet to appear as a link in AI Overviews and AI Mode.{' '}
+        <SourceLink source={SOURCE_OPENAI_BOTS}>OpenAI says</SourceLink> sites that block OAI-SearchBot will not be
+        shown in ChatGPT search answers. Text locked behind a form or a login cannot be read at all.
+      </>
+    ),
+  },
+  {
+    title: 'Buyers verify before they trust.',
+    body: 'Forrester also found that AI search tools often give incomplete or unreliable information, so buyers look for validation from trusted sources. For a health tech vendor, that means peer reviews, analyst coverage, partner listings and precise product pages.',
+  },
+];
+
+const HEALTHTECH_CONTENT: ReadonlyArray<{ title: string; body: ReactNode }> = [
+  {
+    title: 'Integration pages, one per system.',
+    body: 'A page for each EHR or platform you connect to, such as Epic, Oracle Health or athenahealth, stating what data moves, in which direction, and how: a FHIR API, an HL7 v2 interface or a file transfer. List only integrations that are live.',
+  },
+  {
+    title: 'Interoperability in plain words.',
+    body: (
+      <>
+        FHIR, short for Fast Healthcare Interoperability Resources, is a{' '}
+        <SourceLink source={SOURCE_HL7_FHIR}>standards framework created by HL7</SourceLink> that systems use to share
+        health data. Say which FHIR version and resources you support, and what that means for a hospital IT team.
+      </>
+    ),
+  },
+  {
+    title: 'A security and privacy center reviewers can use.',
+    body: 'Explain how you handle and store data, which security audits or certifications you actually hold, and how to request documents. Public answers save your team from retyping the same security questionnaire answers for every deal.',
+  },
+  {
+    title: 'Revenue cycle proof pages.',
+    body: "If you sell revenue cycle management (RCM) software, the tools behind billing, claims and payments, describe the problem in your buyer's words, such as denials or prior authorization delays. Show the workflow step by step, and use only results a customer has approved you to share.",
+  },
+  {
+    title: 'Pages for each role on the committee.',
+    body: 'Short pages for the CIO, the chief information security officer (CISO), clinical leaders, the billing and claims lead and the purchasing team, each answering what that person has to approve.',
+  },
+  {
+    title: 'Fair comparison pages.',
+    body: 'Buyers ask AI assistants to compare vendors. A specific, honest comparison you publish gives those answers accurate material to draw on.',
+  },
+  {
+    title: 'A glossary of buyer terms.',
+    body: 'Clear one-paragraph definitions of terms like prior authorization, clearinghouse or FHIR API are easy for AI answers to quote and easy for buyers to forward to colleagues.',
+  },
+];
+
+const TECHNICAL_WORK: ReadonlyArray<ReactNode> = [
+  <>
+    Put product, integration and documentation text in the HTML.{' '}
+    <SourceLink source={SOURCE_GOOGLE_AI_FEATURES}>Google lists</SourceLink> making important content available in
+    textual form among its best practices for AI features.
+  </>,
+  'Publish an ungated summary for every gated guide, so search engines and AI assistants can read the main points.',
+  'Allow the crawlers you want to be cited by, such as Googlebot, Bingbot, OAI-SearchBot and PerplexityBot. Recheck your robots.txt file and your CDN (content delivery network) settings after every site change, since either one can block them.',
+  'Add structured data that matches what the page shows: Organization, SoftwareApplication and FAQPage where they fit.',
+  'Link problem pages to solution, integration, security and proof pages, so readers and crawlers can follow the path.',
+  "Track whether AI answers name you for your buyers' key questions, next to rankings and demo requests.",
+];
+
+const EEAT_CARDS: ReadonlyArray<{ title: string; body: string }> = [
+  {
+    title: 'Experience',
+    body: 'Has the author actually done this? On a practice site, the treating clinician. On a health tech site, the person who has led real implementations.',
+  },
+  {
+    title: 'Expertise',
+    body: 'Does the author know the subject deeply? Licensure and credentials for clinical topics, real technical depth for FHIR, security or revenue cycle topics.',
+  },
+  {
+    title: 'Authoritativeness',
+    body: 'Do others vouch for you? Mentions in trade press, peer reviews, analyst coverage, partner listings and links from respected sites.',
+  },
+  {
+    title: 'Trustworthiness',
+    body: 'Is the page accurate, honest and safe? Sources for claims, a named reviewer and date, clear privacy information and no overpromising. Google calls trust the most important of the four.',
+  },
+];
+
+const REVIEW_STEPS: ReadonlyArray<{ title: string; body: ReactNode }> = [
+  {
+    title: 'Source first.',
+    body: (
+      <>
+        Every claim gets a source before drafting starts. The{' '}
+        <SourceLink source={SOURCE_FTC_HEALTH}>FTC expects</SourceLink> claims about the health benefits or safety of
+        health products to be backed by competent and reliable scientific evidence, so an unsourced claim stays a note,
+        not copy.
+      </>
+    ),
+  },
+  {
+    title: 'Plain-language draft.',
+    body: 'We write for the reader, explain every term on first use, and mark each claim with its source.',
+  },
+  {
+    title: 'Expert review.',
+    body: 'Your clinician, product lead or engineer checks accuracy and corrects anything we got wrong.',
+  },
+  {
+    title: 'Compliance and legal review.',
+    body: "Your team checks regulated wording, such as privacy statements, security claims and how a device's regulatory status is described. We flag risky lines. We do not give legal advice.",
+  },
+  {
+    title: 'Publish with a named reviewer and date.',
+    body: 'Then re-review on a schedule, and sooner when a regulation, product or guideline changes.',
   },
 ];
 
@@ -138,377 +536,373 @@ const HEALTHCARE_SEO_JOURNEY: ReadonlyArray<ServiceJourneyStage> = [
     number: '01',
     title: 'Healthcare SEO audit',
     description:
-      'We crawl your site and Google Business Profile the way a patient would: E-E-A-T signals, YMYL red flags, local citations, analytics configuration, structured data, and the near-me and condition queries you should rank for but do not. Output: a healthcare SEO scorecard scoped to your practice type and market, and a prioritized 90-day roadmap. The audit is a standalone deliverable. You own it whether or not you continue to a retainer.',
+      'We review technical health, trust signals, local or B2B visibility, tracking risk and the questions you should rank for. You get a scorecard and a 90-day plan you own.',
   },
   {
     number: '02',
-    title: 'Technical and compliance baseline',
+    title: 'Technical and trust baseline',
     description:
-      'We resolve E-E-A-T gaps (provider bylines, credentials, citations), audit your GA4 implementation for HIPAA-risk events and configure appropriate exclusions, fix medical schema (MedicalClinic, Physician, FAQPage, LocalBusiness), correct NAP inconsistencies across directories, and address Core Web Vitals issues. Structural work that unlocks everything else, ranking signals that have been suppressed can recover quickly once the compliance baseline is clean.',
+      'We fix crawl and speed problems, add bylines, reviewers and sources, correct structured data, and clean up risky tracking.',
   },
   {
     number: '03',
-    title: 'Local authority and map pack',
+    title: 'Local or B2B visibility',
     description:
-      'We optimize your Google Business Profile for every category and service offered, build citation coverage across the 40+ directories Google cross-references (including medical specialty directories: Healthgrades, Vitals, WebMD Physician Directory, Zocdoc, and relevant specialty boards), and implement a review-request workflow that grows review velocity sustainably. The Google Map Pack captures 42% of local search clicks, for most private practices, this is the highest-leverage ranking asset we work on.',
+      'Practices: Google Business Profile, listings such as Healthgrades and Zocdoc, and reviews. Health tech: integration, security and comparison pages, plus the review sites and partner listings buyers check.',
   },
   {
     number: '04',
-    title: 'YMYL-compliant content',
+    title: 'Reviewed content',
     description:
-      'We write condition, service, and FAQ content that answers the queries patients search, structured for Google ranking and AI-engine citation. Every page carries a licensed provider byline, peer-reviewed citations where clinical claims are made, and schema (MedicalCondition, Physician, FAQPage). No thin content, no LLM boilerplate, no pages that will trigger a YMYL quality review. Dental SEO content, service-line pages, condition pages, and local landing pages all follow the same E-E-A-T process.',
+      'Service, condition, role and proof pages in plain language, sourced and approved by your reviewers before they go live.',
   },
   {
     number: '05',
-    title: 'Monthly reporting and iteration',
+    title: 'Monthly reporting',
     description:
-      'Monthly reporting covers: map pack positions, organic keyword rankings, organic sessions, Google Business Profile calls and direction requests, review count and score, and AI citation checks in ChatGPT and Perplexity. No vanity metrics. You see patient-facing outcomes, and we adjust scope every quarter based on what is moving and what is not.',
+      'Rankings, map positions or demo requests, and AI answer visibility for your key questions, in one monthly report.',
   },
 ];
 
-const PRICING_TIERS = [
+interface Engagement {
+  name: string;
+  cadence: string;
+  description: string;
+  features: ReadonlyArray<string>;
+  ctaLabel: string;
+}
+
+const ENGAGEMENTS: ReadonlyArray<Engagement> = [
   {
     name: 'Healthcare SEO Audit',
-    price: 'Custom quote',
-    cadence: 'one-time',
+    cadence: 'One-time project',
     description:
-      'Uncover every technical, E-E-A-T, local, and HIPAA-analytics gap before committing to a retainer. Own the roadmap no matter what you do next.',
+      'A full review of technical health, trust signals, visibility and tracking risk, with a 90-day plan you own.',
     features: [
-      'YMYL E-E-A-T gap analysis',
-      'Google Business Profile audit',
-      'HIPAA-analytics risk review',
-      'Schema and local citations audit',
-      '1 strategy call with the founder',
+      'Technical and E-E-A-T gap review',
+      'Local or B2B visibility review',
+      'Tracking and patient data risk review',
+      'AI answer visibility check',
+      'One strategy call with the founder',
     ],
     ctaLabel: 'Book the audit',
-    ctaHref: CALENDLY,
-    popular: false,
-    isContact: false,
   },
   {
-    name: 'Local Practice Growth',
-    price: 'Custom quote',
-    cadence: 'per month',
-    description:
-      'For private practices that need to dominate local search, dental, medical, chiropractic, therapy, optometry, and fill their appointment calendar.',
+    name: 'Practice and Clinic Growth',
+    cadence: 'Monthly retainer',
+    description: 'For practices and clinics that want more patients from local search.',
     features: [
-      'All audit deliverables included',
-      'GBP optimization + review strategy',
-      'Citation building across 40+ directories',
-      'Monthly local rank + GBP performance report',
+      'Google Business Profile and listings',
+      'Privacy-safe review program',
+      'Provider, service and condition pages',
+      'Monthly local rankings report',
     ],
-    ctaLabel: 'Start Local Growth',
-    ctaHref: CALENDLY,
-    popular: false,
-    isContact: false,
+    ctaLabel: 'Talk about local growth',
   },
   {
-    name: 'Healthcare Authority',
-    price: 'Custom quote',
-    cadence: 'per month',
+    name: 'Health Tech Authority',
+    cadence: 'Monthly retainer',
     description:
-      'Full-stack SEO agency for healthcare companies: E-E-A-T content, map pack, AI citations, and HIPAA-safe analytics: all in one retainer.',
+      'For health tech, healthcare IT and medical device companies that sell to hospitals, clinics and health insurers.',
     features: [
-      'Everything in Local Practice Growth',
-      'YMYL-compliant condition/service content',
-      'AI-citation positioning (ChatGPT, Perplexity, AIO)',
+      'Integration, security and proof pages',
+      'Compliance-aware review workflow',
+      'AI answer visibility for buyer questions',
       'Bi-weekly review with the founder',
     ],
-    ctaLabel: 'Talk to the Founder',
-    ctaHref: CALENDLY,
-    popular: true,
-    isContact: false,
+    ctaLabel: 'Talk about health tech SEO',
   },
   {
-    name: 'Enterprise / Multi-Location',
-    price: 'Talk to the Founder',
-    cadence: '',
-    description:
-      'Custom scope for hospital systems, health tech companies, or multi-location practices with three or more locations.',
+    name: 'Enterprise and Multi-location',
+    cadence: 'Custom scope',
+    description: 'For health systems, multi-location groups and larger health tech companies.',
     features: [
-      'Custom scope per engagement',
-      'Multi-location GBP management',
-      'HIPAA-safe analytics infrastructure',
+      'Custom scope and reporting',
+      'Plans across many locations or products',
+      'Review governance for many approvers',
       'Quarterly executive review',
     ],
-    ctaLabel: 'Talk to the Founder',
-    ctaHref: CALENDLY,
-    popular: false,
-    isContact: true,
+    ctaLabel: 'Talk to the founder',
+  },
+];
+
+const RELATED_SERVICES: ReadonlyArray<{ href: string; title: string; body: string }> = [
+  {
+    href: '/services/dental-seo',
+    title: 'Dental SEO',
+    body: 'Map results, reviews and treatment pages for dental practices.',
+  },
+  {
+    href: '/services/local-seo',
+    title: 'Local SEO',
+    body: 'Google Business Profile work and local rankings for any location-based business.',
+  },
+  {
+    href: '/services/ai-seo',
+    title: 'AI SEO',
+    body: 'Getting named in ChatGPT, Perplexity and Google AI Overviews answers.',
+  },
+  {
+    href: '/services/seo-audit',
+    title: 'SEO audit',
+    body: 'A technical and content audit when you need the diagnosis before the plan.',
+  },
+  {
+    href: '/services/ai-agents-for-healthcare',
+    title: 'AI agents for healthcare',
+    body: 'Scheduling, intake and front office work handled by AI agents, with a clear clinical boundary.',
+  },
+  {
+    href: '/services/saas-website-design',
+    title: 'SaaS website design',
+    body: 'Product websites for software companies, including health tech.',
   },
 ];
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   FAQ data, 25 conversational items in 6 categories
+   FAQ data. Questions grounded in People Also Ask (pulled 2026-09-17), job and
+   career questions excluded. FAQPage schema is generated from this array.
 ───────────────────────────────────────────────────────────────────────────── */
 
 const FAQ_CATEGORIES: ReadonlyArray<FAQCategory> = [
-  { key: 'what', label: 'What is healthcare SEO' },
-  { key: 'local', label: 'Local & map pack' },
-  { key: 'dental', label: 'Dental SEO' },
-  { key: 'eeat', label: 'YMYL & E-E-A-T' },
-  { key: 'hipaa', label: 'HIPAA & analytics' },
-  { key: 'pricing', label: 'Pricing & engagement' },
+  { key: 'basics', label: 'Healthcare SEO basics' },
+  { key: 'practices', label: 'Practices and clinics' },
+  { key: 'healthtech', label: 'Health tech and healthcare IT' },
+  { key: 'ai', label: 'AI search' },
+  { key: 'privacy', label: 'Privacy and compliance' },
+  { key: 'engagement', label: 'Cost and choosing an agency' },
 ];
 
 const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
-  // ── What is healthcare SEO ────────────────────────────────────────────────
+  // ── Healthcare SEO basics ─────────────────────────────────────────────────
   {
-    category: 'what',
-    question: 'What is healthcare SEO and why does it matter for my practice?',
+    category: 'basics',
+    question: 'What is SEO in healthcare?',
     answer:
-      'Healthcare SEO is optimizing medical and health websites so they rank in Google and get cited by AI engines when patients search for providers or conditions. It matters because 77% of patients search online before booking a healthcare appointment, and in 2023, online search officially surpassed physician referrals as the leading way Americans find new doctors. If you are not ranking, patients are finding your competitors. Healthcare SEO adds a compliance layer on top of standard SEO: YMYL E-E-A-T signals, HIPAA-safe analytics, medical schema types, and Google Business Profile optimization. An agency that skips that layer will leave you with technical work done and rankings that still do not respond.',
+      "SEO stands for search engine optimization. In healthcare, it means making a practice, hospital or health tech company easy to find when people search for care, a condition or a product, on Google and in AI answers. It covers the site's technical setup, pages that answer real questions, reviews and mentions, and proof that the content is accurate. Google holds health topics to a higher trust bar than most subjects.",
   },
   {
-    category: 'what',
-    question: 'Is healthcare SEO different from regular SEO?',
+    category: 'basics',
+    question: 'Is medical SEO the same as healthcare SEO?',
     answer:
-      'Significantly. Healthcare content falls under Google\'s "Your Money or Your Life" (YMYL) category, where Google applies elevated quality scrutiny before ranking it. You need provider bylines with licensure, peer-reviewed citations, comprehensive About pages, and Trust signals that most industries never require. Add HIPAA-safe analytics, medical schema types (MedicalClinic, Physician, MedicalCondition), and Google Business Profile nuances for patient-facing practices, and you have a discipline materially different from SEO for a SaaS company or retail brand.',
+      'Mostly. People say medical SEO when they mean doctors, dentists and clinics, and healthcare SEO as the wider term that also covers hospitals and the companies that sell to them. The core work is the same. What changes is the buyer: a clinic needs local visibility and booked visits, while a health tech company needs to be named when hospital teams research vendors.',
   },
   {
-    category: 'what',
-    question: 'What types of healthcare organizations do you work with as a healthcare SEO agency?',
+    category: 'basics',
+    question: 'Is SEO still worth it for healthcare in 2026?',
     answer:
-      'We work with private practices (dental, medical, chiropractic, optometry, therapy, dermatology), multi-location clinics, healthcare staffing agencies, medical device companies, health tech and telehealth platforms, and healthcare SaaS businesses. The right SEO strategy differs across types: a dental practice needs map pack dominance; a health tech company needs E-E-A-T content and AI citations. We scope each engagement to your specific growth goal.',
+      'Yes, and the goal is wider than rankings now. In a 2026 rater8 survey of US patients who searched for a doctor, 36% named AI tools as an influence, 34% named Google search and 32% named doctor recommendations. AI answers and search results both draw on public web pages, so strong SEO supports both. What no longer works is thin content with no real expertise behind it.',
   },
   {
-    category: 'what',
-    question: 'Can a generalist SEO agency handle healthcare SEO effectively?',
+    category: 'basics',
+    question: 'How long does healthcare SEO take to work?',
     answer:
-      'They can do the commodity work, title tags, page speed, backlinks. But they will likely miss the YMYL E-E-A-T layer, which is where Google penalizes weak healthcare content. They may implement GA4 in a way that creates HIPAA risk. They will probably not know the schema types that earn medical rich results, or how GBP categories interact with local healthcare queries. Healthcare SEO has enough domain-specific rules that a generalist agency without healthcare experience will leave the highest-value work undone. If you want an SEO agency for healthcare companies, you need one that has actually worked inside the YMYL framework.',
-  },
-  {
-    category: 'what',
-    question: 'How long before I see results from healthcare SEO?',
-    answer:
-      'Technical and E-E-A-T fixes, schema, GBP optimization, bylines, citations, can improve rankings within 4-8 weeks because they unlock pages Google was previously suppressing under YMYL review. Local map pack movement typically shows within 2-3 months once citation and GBP work is complete. Content and authority work compounds over 3-6 months. Healthcare SEO has a longer initial setup than a typical ecommerce site because the compliance baseline takes time, but once built, it is a durable competitive advantage most practices never invest in.',
+      'Technical and trust fixes often show movement within one to three months, because they remove problems that were holding pages back. Map results for a practice tend to move once the profile, listings and reviews are in shape. New content and authority usually take three to six months or longer, and competitive markets or health tech categories can take more. You see progress in a monthly report.',
   },
 
-  // ── Local & map pack ──────────────────────────────────────────────────────
+  // ── Practices and clinics ─────────────────────────────────────────────────
   {
-    category: 'local',
-    question: 'How do I get my medical practice to rank in the Google Map Pack near me searches?',
+    category: 'practices',
+    question: 'What is local SEO for doctors?',
     answer:
-      'Map pack ranking for a medical practice depends on three factors: proximity to the searcher, Google Business Profile completeness and activity, and NAP (name, address, phone) consistency across directories. We optimize your GBP primary and secondary categories, add services and attributes, build citation coverage across the 40+ directories Google cross-references (Healthgrades, Zocdoc, Vitals, Yelp, Apple Maps, and general directories), and implement a review-request workflow. The Google 3-Pack captures 42% of local search clicks, for most private practices, ranking there is the single highest-ROI SEO investment.',
+      "Local SEO for doctors is getting a practice to show up when nearby patients search for care, especially in Google's map results. It covers your Google Business Profile, matching name, address and phone details across listings such as Healthgrades and Zocdoc, reviews, and location and service pages on your site. Google says more reviews and positive ratings can help a business rank locally.",
   },
   {
-    category: 'local',
-    question: 'What is the difference between local SEO and map pack SEO for healthcare practices?',
+    category: 'practices',
+    question: "How do I get my practice into Google's map results for near me searches?",
     answer:
-      'Local SEO is broader, it covers organic page-one rankings for location-based queries like "physical therapist Austin." Map pack SEO is specifically about earning one of the three GBP listings in the map results above the organic results. Both matter: patients click both map listings and organic links. A new-to-market practice should prioritize the map pack first; an established practice with strong GBP rankings should expand to organic local landing pages for surrounding neighborhoods and specific conditions or services.',
+      "Start with a complete Google Business Profile: the right primary category, every service, accurate hours and real photos. Keep your name, address and phone number identical everywhere they appear online. Grow reviews steadily and reply without mentioning anyone's care. Then give each service and location its own page. Distance from the searcher also matters, and no agency can change that, so focus on what you control.",
   },
   {
-    category: 'local',
-    question: 'Do patient reviews affect healthcare SEO rankings?',
+    category: 'practices',
+    question: 'Do patient reviews affect healthcare SEO?',
     answer:
-      'Reviews affect three ranking systems simultaneously: Google Business Profile rankings (review count and score are confirmed signals), organic rankings (review schema adds E-E-A-T signals), and AI-engine citations (ChatGPT and Perplexity surface practices with strong review authority when asked for recommendations). Beyond ranking, a practice with 200 reviews at 4.8 converts searchers far faster than one with 30. According to rater8\'s 2025 Patient Survey, 84% of patients check online reviews before selecting a new provider. We build a HIPAA-compliant review-request workflow into every local retainer.',
+      "Yes, in two ways. Google says more reviews and positive ratings can help a business's local ranking. Reviews also shape the decision itself: in a rater8 survey, 84% of patients said they check online reviews before choosing a new provider. The safe way to grow reviews is to ask every patient consistently and reply without confirming anyone is a patient or discussing their care.",
   },
   {
-    category: 'local',
-    question: 'Can you help with Healthgrades, Zocdoc, and specialty medical directories?',
+    category: 'practices',
+    question: 'How do you handle SEO for a practice with several locations?',
     answer:
-      'Yes. Beyond the 40+ general citation directories (Google, Apple Maps, Yelp, Facebook), we build and verify listings on medical specialty directories: Healthgrades, Vitals, WebMD Physician Directory, Castle Connolly, Zocdoc, RateMDs, and relevant specialty boards. Each directory has its own verification process and optimization parameters, we handle all of it. Consistent, accurate listings across these directories strengthen both GBP ranking signals and the trustworthiness signals Google evaluates under YMYL.',
-  },
-  {
-    category: 'local',
-    question: 'How do you handle SEO for a multi-location medical practice?',
-    answer:
-      'Each location gets its own dedicated GBP profile, location-specific landing page with unique content (not templated duplicates), and citation profile across directories. We configure schema with @type: MedicalClinic + hasMap + location-specific address for every location. Reporting separates map pack positions and organic sessions by location so you see which markets are performing and which need more investment. Scope is quoted per location with a bundle discount for practices with three or more locations.',
+      'Each location gets its own Google Business Profile, its own page with details that are true for that location, and consistent listings. We avoid pages that only swap the city name, because they give patients and search engines little reason to choose them. Reporting splits rankings and calls by location, so you can see which markets are growing and which need attention.',
   },
 
-  // ── Dental SEO ────────────────────────────────────────────────────────────
+  // ── Health tech and healthcare IT ─────────────────────────────────────────
   {
-    category: 'dental',
-    question: 'What is dental SEO and how is it different from general healthcare SEO?',
+    category: 'healthtech',
+    question: 'Do you work with health tech and healthcare IT companies?',
     answer:
-      'Dental SEO is the subset of healthcare SEO focused on dental practices: family dentistry, cosmetic dentistry, orthodontics, oral surgery, and dental implants. It is more map-pack-intensive than most healthcare categories because nearly every dental query shows a 3-pack, "dentist near me," "emergency dentist," "dental implants [city]." Beyond map pack, dental SEO also covers high-value service pages (Invisalign, cosmetic dentistry, implants) that carry significant per-appointment revenue and rank well with proper E-E-A-T content. We handle dental SEO as a primary service category: GBP optimization, dental directory citations, review strategy, and service-page content, within the same month-to-month retainer model.',
+      'Yes, and it is a different job from practice SEO. Health tech and healthcare IT companies sell to hospitals, clinics and health insurers through long deals decided by a committee. The work centers on integration, security, proof and comparison pages, plus technical access for search and AI crawlers, all reviewed by your product and compliance experts. The goal is qualified demo requests and being named in AI answers, not patient traffic.',
   },
   {
-    category: 'dental',
-    question: 'How do I rank my dental practice for "dentist near me" searches?',
+    category: 'healthtech',
+    question: 'What do health tech companies do?',
     answer:
-      '"Dentist near me" and related near-me searches are almost exclusively won in the Google Map Pack, not organic results. To rank there: your GBP needs to be fully optimized for every dental category (General Dentist, Cosmetic Dentist, Orthodontist, whichever applies), have strong review count and score, and be backed by consistent NAP across dental directories (Zocdoc, 1-800-Dentist, Healthgrades, local dental association listings). We also optimize your website\'s LocalBusiness schema and MedicalClinic markup so Google has structured confirmation of your practice address and services. Proximity matters but it is not the only factor: a practice 1.5 miles away with 180 reviews and a complete GBP beats a competitor 0.5 miles away with 20 reviews and an incomplete listing.',
+      'Health tech companies build software, devices or services that help deliver or run healthcare. Examples include electronic health record (EHR) software, telehealth platforms, revenue cycle management tools that handle billing and claims, interoperability tools that move data between systems, and remote monitoring devices. Their buyers are usually hospitals, clinics, health insurers or employers, so their SEO looks more like B2B software marketing than local marketing.',
   },
   {
-    category: 'dental',
-    question: 'What dental directories matter for local SEO?',
+    category: 'healthtech',
+    question: 'Can you write accurately about EHR integration, FHIR or revenue cycle topics?',
     answer:
-      'The highest-value dental directories for NAP consistency and ranking signals: Google Business Profile (primary), Healthgrades, Zocdoc, 1-800-Dentist, WebMD, Vitals, RateMDs, Yelp, Bing Places, Apple Maps, Facebook, and your state\'s dental association directory. Beyond these, we also cover general citation networks (Neustar/Localeze, Data Axle, Foursquare) that distribute NAP data to hundreds of downstream directories. We build and verify all of them as part of the Local Practice Growth retainer.',
-  },
-  {
-    category: 'dental',
-    question: 'Can dental SEO help with cosmetic dentistry and high-value procedures?',
-    answer:
-      'Yes, and this is where organic rankings (not just map pack) become important. Queries like "dental implants [city]," "Invisalign provider [city]," and "cosmetic dentist near me" have significant commercial intent and per-appointment value. We build YMYL-compliant service pages for each high-value procedure, with provider byline, cited clinical information, before/after case examples, and schema (MedicalProcedure, Physician). These pages can rank both in organic results and trigger AI-engine citations when patients ask ChatGPT or Perplexity for cosmetic dentist recommendations.',
+      'We write them with your experts, not instead of them. We research the topic, draft in plain language and attach a source to every claim, then your engineers or revenue cycle leads correct and approve the technical detail. Public definitions can come from the standard itself, such as HL7 for FHIR, but which resources and workflows you support must come from your team.',
   },
 
-  // ── YMYL & E-E-A-T ───────────────────────────────────────────────────────
+  // ── AI search ─────────────────────────────────────────────────────────────
   {
-    category: 'eeat',
-    question: 'What does YMYL mean and why does it affect my healthcare website rankings?',
+    category: 'ai',
+    question: 'Can ChatGPT do SEO for a healthcare website?',
     answer:
-      '"Your Money or Your Life" is Google\'s classification for content that could affect a reader\'s health, finances, or safety. Healthcare is the canonical YMYL category. Google\'s quality raters apply higher scrutiny to YMYL pages, and the algorithm reflects this, weak E-E-A-T signals (no author, no credentials, no citations) often cause healthcare content to rank below its link profile would predict. For patient-facing medical content, E-E-A-T is not a bonus you layer on later; it is the prerequisite before any other SEO signal can work.',
+      "It can help with parts of the job, such as outlining a page or listing questions to answer. It cannot verify its own health claims, know which integrations you actually support, get your clinician's approval or fix a site that search engines cannot read. On health topics, accuracy and trust carry extra weight, so use AI to speed up drafts and keep people responsible for facts and review.",
   },
   {
-    category: 'eeat',
-    question: 'What are the most important E-E-A-T signals for a medical practice website?',
+    category: 'ai',
+    question: 'Is SEO being replaced by AI search?',
     answer:
-      'The five that move rankings most: (1) provider bylines on every clinical page with name, credentials (MD, DMD, PT, LCSW), and years of experience; (2) an About page with verifiable provider profiles, medical school, board certifications, and state license links; (3) citations to peer-reviewed sources (PubMed, Mayo Clinic, CDC) wherever clinical claims are made; (4) a clear editorial policy stating who reviews and publishes health content; (5) consistent presence in authoritative external directories (Healthgrades, WebMD, state medical board). We audit and address all five as part of the technical baseline.',
+      'No, it is being extended. Google says there are no additional requirements to appear in AI Overviews or AI Mode: a page must be indexed and eligible to show a snippet, which is ordinary SEO. ChatGPT search relies on its OAI-SearchBot crawler being allowed to reach your site. The foundations are shared. What changes is measurement: being named and linked in answers, not only rankings.',
   },
   {
-    category: 'eeat',
-    question: 'Do you handle AI-engine citations for healthcare companies and practices?',
+    category: 'ai',
+    question: 'How do I get my healthcare company mentioned in ChatGPT and Google AI Overviews?',
     answer:
-      'Yes. ChatGPT, Perplexity, and Google AI Overviews are increasingly where patients start their healthcare searches, "best dermatologist in [city]," "what is the recovery time for [procedure]," "explain [condition] to me." Getting cited in those answers requires strong third-party brand mentions, structured FAQ and condition pages with answer-first formatting, and schema that AI engines can extract. We structure content and earn citations specifically for AI-engine visibility and report AI citations alongside Google rankings every month.',
-  },
-  {
-    category: 'eeat',
-    question: 'How do you write healthcare content that satisfies E-E-A-T requirements?',
-    answer:
-      'We write condition, service, and FAQ content using a process that layers E-E-A-T from the start: identify the patient search intent → structure the answer for the featured snippet → add peer-reviewed citations → attach a licensed provider byline → mark up with appropriate schema (MedicalCondition, Physician, FAQPage). We never publish AI-generated filler on healthcare pages. Every clinical claim is verified and cited. Everything is reviewed by a human with healthcare domain knowledge before publication.',
+      'Make your pages easy to reach and easy to quote. Allow the crawlers behind AI search, keep key text in the HTML, and answer the exact questions patients or buyers ask in plain sentences. Then earn mentions on sites those answers already trust, such as reputable directories, trade press and peer review sites. We track whether you are named for your key questions every month.',
   },
 
-  // ── HIPAA & analytics ─────────────────────────────────────────────────────
+  // ── Privacy and compliance ────────────────────────────────────────────────
   {
-    category: 'hipaa',
-    question: 'Is Google Analytics 4 HIPAA compliant for a healthcare website?',
+    category: 'privacy',
+    question: 'Can Google Analytics be HIPAA compliant?',
     answer:
-      'Not by default. GA4 can collect IP addresses, referral URLs that may contain condition or appointment data, and form interaction events that qualify as Protected Health Information under HIPAA. Google\'s GA4 Business Associate Agreement covers limited use cases that most healthcare sites do not satisfy out of the box. We audit your GA4 implementation, identify events and parameters that create HIPAA risk, configure appropriate exclusions and filters, and advise on whether a HIPAA-compliant analytics alternative (Plausible, or a BAA-covered stack) is warranted for your use case.',
+      'Google says it makes no representations that Google Analytics satisfies HIPAA requirements and does not offer Business Associate Agreements for it. HIPAA-regulated organizations must not use it in a way that exposes patient health information to Google. In practice, that means keeping it away from pages and events that could reveal health information, or using a different tool. Your privacy officer or counsel decides. We map the tags and flag the risks.',
   },
   {
-    category: 'hipaa',
-    question: 'Can I run Google Ads for my medical practice without violating HIPAA?',
+    category: 'privacy',
+    question: 'What does HIPAA-compliant SEO mean?',
     answer:
-      'Yes, with guardrails. Google\'s healthcare and medicine ads policy requires certification for some categories. The HIPAA interaction with remarketing pixels means you cannot retarget users who visited condition-specific pages without a proper BAA with Google. Standard remarketing audiences built from site visitors are high-risk for HIPAA-covered entities. We configure your analytics and ad tracking with these constraints in mind, you can still run effective Google Ads, just with the compliance guardrails in place from day one.',
+      'Ask any agency using the phrase exactly what it means in their process, because it can mean very different things. For us it means SEO work that keeps protected health information out entirely: no patient details in analytics, ad tags, review replies or case examples. We design the work so we never need patient data, and your compliance team approves anything that touches privacy.',
   },
   {
-    category: 'hipaa',
-    question: 'What schema types are most valuable for healthcare websites?',
+    category: 'privacy',
+    question: 'Will you need access to patient data?',
     answer:
-      'The highest-impact schema types for healthcare: MedicalClinic (clinics and practices, enables rich results with address, hours, and specialties), Physician (individual provider pages, shows name, specialty, and credentials), MedicalCondition and MedicalProcedure (condition and service pages, helps AI engines extract and cite your answers), FAQPage (question-answer content, drives featured snippets and AI citations), and LocalBusiness with MedicalSpecialty (reinforces GBP data for map pack). We implement all applicable schema types as part of the technical baseline.',
-  },
-  {
-    category: 'hipaa',
-    question: 'Do you work with health tech and telehealth companies, not just brick-and-mortar practices?',
-    answer:
-      'Yes. Health tech and telehealth have different SEO priorities than a physical practice: the map pack matters less, but national organic rankings, condition-page authority, and AI-engine citations matter significantly more. We build E-E-A-T-compliant content strategies for health tech companies, handle the technical SEO for Next.js and React health apps, and position platforms to be cited by AI engines when users ask for condition management tools or telehealth options. HIPAA analytics configuration is equally critical for health tech, often more so, because platforms handle more patient-side data than a typical practice website.',
+      'No. SEO runs on your public pages, search data such as Google Search Console, and analytics set up to exclude patient information. We do not need records, form submissions with health details or call recordings. If a task would ever touch protected health information, we stop, and your compliance team decides the next step, including whether any agreement is required first.',
   },
 
-  // ── Pricing & engagement ───────────────────────────────────────────────────
+  // ── Cost and choosing an agency ───────────────────────────────────────────
   {
-    category: 'pricing',
-    question: 'How much does hiring a healthcare SEO agency cost?',
+    category: 'engagement',
+    question: 'How much does healthcare SEO cost?',
     answer:
-      'Healthcare SEO scope depends on practice type, market competitiveness, number of locations, existing technical health, and whether you need HIPAA analytics work, content, or local optimization as the priority. We quote each engagement individually rather than publishing fixed rates, you get a clear scope and price before any work starts, with no annual contracts. Book a discovery call and we will scope it on the spot based on your specific situation.',
+      'It depends on scope, so we quote each engagement instead of publishing rates. The biggest cost drivers are the number of locations or products, how competitive your market is, how much content needs expert and compliance review, the current state of your site, and whether you need local SEO, B2B content or both. Hospitals and multi-location groups cost more mainly because of scale and extra review layers.',
   },
   {
-    category: 'pricing',
+    category: 'engagement',
     question: 'Can I start with just a healthcare SEO audit?',
     answer:
-      'Yes. The audit is a standalone deliverable: a written scorecard covering E-E-A-T gaps, Google Business Profile, HIPAA-analytics risk, schema, citation coverage, and keyword opportunity, plus a prioritized 90-day roadmap. Many practices use it as a one-time strategic input and run the roadmap with their own team. If you continue into a retainer within 30 days, the audit fee is credited toward your first month. You own all deliverables regardless.',
+      'Yes. The audit is a standalone project: a written review of technical health, trust signals, local or B2B visibility, tracking risk and keyword opportunity, plus a 90-day plan. Some teams run the plan themselves and others continue with us. You own the deliverables either way. If you want a quick view first, the free first look gives you a short fix list.',
   },
   {
-    category: 'pricing',
-    question: 'Do you require annual contracts for healthcare SEO?',
+    category: 'engagement',
+    question: 'Do you require annual contracts?',
     answer:
-      'No. Every healthcare SEO retainer is month-to-month. If we are not earning our keep, rankings improving, GBP calls increasing, new patients attributable to organic, you can leave with one billing-cycle notice. The work should retain you, not the paperwork. Most practices continue voluntarily because the map pack positions and organic rankings keep delivering new patient volume.',
+      "No. Standard retainers are month-to-month, with one billing cycle's notice to stop. Larger enterprise programs are scoped individually, and any term is agreed in writing before work starts. The work should keep you as a client, not the paperwork.",
   },
   {
-    category: 'pricing',
+    category: 'engagement',
+    question: 'What are the top healthcare SEO agencies in the US?',
+    answer:
+      "No single ranking settles it. When we checked Google on September 17, 2026, the 'best agencies' lists on page one for 'healthcare SEO agency' came from First Page Sage, Intrepy and Percepture, which are marketing agencies themselves, and the AI Overview cited pages from firms including Cardinal Digital Marketing, OuterBox, Percepture, Thrive and Medicotech. FactoryJet was not among them. Judge any agency on verifiable healthcare work, its review process and who does the work.",
+  },
+  {
+    category: 'engagement',
     question: 'What makes FactoryJet different from other healthcare SEO agencies?',
     answer:
-      'Three differences matter: First, we build the HIPAA-analytics and YMYL E-E-A-T compliance baseline before content or links, not as an afterthought. Most healthcare SEO agencies skip this because it is not billable on a "number of keywords" basis. Second, we report AI citations (ChatGPT, Perplexity, Google AI Overviews) alongside map pack and organic rankings in every monthly report, because that is where a growing share of patient discovery happens. Third, founder access: you talk to the person doing the work, not an account manager. Every retainer includes direct access to the founder for questions, strategy, and quarterly reviews.',
+      'Three things. We cover both sides of healthcare search, local practices and B2B health tech, so the plan fits how your buyer decides. We put trust and privacy basics first: sources, named reviewers and a tracking review before content volume. And you work directly with the founder, not an account manager. If what you need is outside what we do well, we will say so.',
   },
 ];
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   JSON-LD Schema (WebPage + BreadcrumbList + Service + FAQPage + Organization)
+   JSON-LD. WebPage + BreadcrumbList + Service + FAQPage. The sitewide
+   Organization node (@id https://factoryjet.com/#organization) comes from the
+   root layout, so this page references it instead of repeating it.
 ───────────────────────────────────────────────────────────────────────────── */
+
+const AUTHOR_PERSON = {
+  '@type': 'Person',
+  name: 'Bhavesh Barot',
+  jobTitle: 'Founder & CEO',
+  url: 'https://factoryjet.com/author/bhavesh-barot',
+  sameAs: ['https://www.linkedin.com/in/bhavesh-ai-gtm-expert/'],
+  worksFor: { '@id': 'https://factoryjet.com/#organization' },
+};
 
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'Healthcare SEO Agency | SEO Agency for Healthcare Companies & Medical Practices',
-  url: 'https://factoryjet.com/services/healthcare-seo',
-  description:
-    'Healthcare SEO agency for US medical practices, clinics, and health companies. We build YMYL E-E-A-T signals, dominate local map packs, implement HIPAA-safe analytics, and earn AI citations. Senior-led, month-to-month.',
+  '@id': `${PAGE_URL}#webpage`,
+  url: PAGE_URL,
+  name: 'Healthcare SEO Agency for Practices, Clinics and Health Tech Companies',
+  description: PAGE_DESCRIPTION,
   inLanguage: 'en-US',
-  dateModified: '2026-06-13',
-  isPartOf: {
-    '@type': 'WebSite',
-    name: 'FactoryJet',
-    url: 'https://factoryjet.com',
+  dateModified: PAGE_MODIFIED,
+  lastReviewed: PAGE_MODIFIED,
+  isPartOf: { '@type': 'WebSite', name: 'FactoryJet', url: 'https://factoryjet.com' },
+  about: { '@type': 'Thing', name: 'Healthcare SEO' },
+  primaryImageOfPage: { '@type': 'ImageObject', url: HERO_IMAGE, width: 1344, height: 1024 },
+  author: AUTHOR_PERSON,
+  reviewedBy: AUTHOR_PERSON,
+  speakable: {
+    '@type': 'SpeakableSpecification',
+    cssSelector: ['#answer-first'],
   },
+  citation: SOURCE_LIST.map((source) => ({
+    '@type': 'CreativeWork',
+    name: source.title,
+    url: source.url,
+    publisher: { '@type': 'Organization', name: source.publisher },
+  })),
 };
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
-  itemListElement: [
-    {
-      '@type': 'ListItem',
-      position: 1,
-      name: 'Home',
-      item: 'https://factoryjet.com',
-    },
-    {
-      '@type': 'ListItem',
-      position: 2,
-      name: 'Services',
-      item: 'https://factoryjet.com/services',
-    },
-    {
-      '@type': 'ListItem',
-      position: 3,
-      name: 'Healthcare SEO',
-      item: 'https://factoryjet.com/services/healthcare-seo',
-    },
-  ],
+  itemListElement: BREADCRUMB_ITEMS.map((item, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: item.name,
+    item: item.url,
+  })),
 };
 
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
+  '@id': `${PAGE_URL}#service`,
   name: 'Healthcare SEO Services',
+  url: PAGE_URL,
   provider: {
-    '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
+    '@type': 'Organization',
+    '@id': 'https://factoryjet.com/#organization',
     name: 'FactoryJet',
     url: 'https://factoryjet.com',
   },
-  areaServed: {
-    '@type': 'Country',
-    name: 'United States',
-  },
-  serviceType: 'Healthcare SEO / Medical SEO',
-  description:
-    'Healthcare SEO services for US medical practices, clinics, and health companies: YMYL E-E-A-T content, Google Business Profile optimization, HIPAA-safe analytics, medical schema, and AI-citation positioning. Audit + monthly retainer, month-to-month.',
-  offers: [
+  areaServed: { '@type': 'Country', name: 'United States' },
+  serviceType: 'Healthcare SEO / Medical SEO / Health Tech SEO / Healthcare IT SEO',
+  audience: [
     {
-      '@type': 'Offer',
-      name: 'Healthcare SEO Audit',
-      description:
-        'E-E-A-T gap analysis, GBP audit, HIPAA-analytics risk review, schema and citation audit, plus a prioritized 90-day roadmap. One-time engagement, quoted per practice.',
+      '@type': 'BusinessAudience',
+      name: 'US medical practices, clinics, dental groups and health systems',
     },
     {
-      '@type': 'Offer',
-      name: 'Local Practice Growth',
-      description:
-        'Monthly healthcare SEO retainer: GBP optimization, citation building across 40+ medical and general directories, review strategy, and local rank reporting. Quoted per practice.',
-    },
-    {
-      '@type': 'Offer',
-      name: 'Healthcare Authority',
-      description:
-        'Full-stack SEO agency for healthcare companies: E-E-A-T content, map pack, AI citations, HIPAA-safe analytics, and bi-weekly founder reviews. Quoted per engagement.',
-    },
-    {
-      '@type': 'Offer',
-      name: 'Enterprise / Multi-Location',
-      description:
-        'Custom scope for hospital systems, health tech companies, or multi-location practices. Pricing on application.',
+      '@type': 'BusinessAudience',
+      name: 'Health tech, healthcare IT and medical device companies that sell to hospitals, clinics and health insurers',
     },
   ],
-  
+  description:
+    'Healthcare SEO for US practices, clinics, health systems and health tech companies: technical SEO, E-E-A-T trust signals, local visibility, B2B integration and security content, AI answer visibility, and a compliance-aware review workflow. Quoted per engagement.',
+  offers: ENGAGEMENTS.map((engagement) => ({
+    '@type': 'Offer',
+    name: engagement.name,
+    description: engagement.description,
+  })),
 };
 
 const faqSchema = {
@@ -524,490 +918,483 @@ const faqSchema = {
   })),
 };
 
-const organizationSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
-  name: 'FactoryJet',
-  url: 'https://factoryjet.com',
-  logo: 'https://factoryjet.com/logo.png',
-  // sameAs = external URLs only - never self-reference (schema audit rule 2026-06-13)
-  sameAs: [
-    'https://www.linkedin.com/company/factoryjet',
-  ],
-};
-
 /* ─────────────────────────────────────────────────────────────────────────────
-   Inline section components
+   Inline section components (all server-rendered, no client JS)
 ───────────────────────────────────────────────────────────────────────────── */
 
-function QuickAnswerBlock() {
-  const stats = [
-    {
-      figure: '77%',
-      label: 'of patients search online before booking',
-      source: 'Industry data via Saga Pixel / Evokad, 2025',
-    },
-    {
-      figure: '84%',
-      label: 'check reviews before choosing a provider',
-      source: 'rater8 2025 Patient Survey',
-    },
-    {
-      figure: '42%',
-      label: 'of local search clicks go to the Map Pack',
-      source: 'BrightEdge / industry aggregate, 2025',
-    },
-  ];
-
+function AnswerFirst() {
   return (
-    <section
-      aria-label="Healthcare SEO quick facts"
-      style={{
-        backgroundColor: '#0F0F12',
-        borderTop: '2px solid #F05A28',
-        borderBottom: '1px solid rgba(240,90,40,0.20)',
-      }}
-    >
-      <div className="mx-auto max-w-[1120px] px-6 md:px-8 py-8 md:py-10">
-        <div className="flex flex-col md:flex-row md:items-center gap-3 mb-7">
-          <span
-            className="inline-block font-fj-mono font-bold uppercase"
-            style={{
-              fontSize: '10px',
-              letterSpacing: '0.16em',
-              color: '#F05A28',
-              backgroundColor: 'rgba(240,90,40,0.12)',
-              padding: '4px 10px',
-              borderRadius: '4px',
-            }}
-          >
-            Quick Answer
-          </span>
+    <section id="answer-first" className="py-12 md:py-16" style={{ backgroundColor: '#FFFFFF' }}>
+      <div className="mx-auto max-w-[1120px] px-6 md:px-8">
+        <div className="rounded-2xl p-7 md:p-9" style={{ backgroundColor: CREAM, borderLeft: `5px solid ${ORANGE}` }}>
           <p
-            className="font-fj-body font-medium"
-            style={{ color: 'rgba(250,250,247,0.80)', fontSize: '0.9375rem' }}
+            className="font-fj-mono font-bold uppercase"
+            style={{ fontSize: '11px', letterSpacing: '0.13em', color: ORANGE_DARK }}
           >
-            Most patient journeys begin with a search bar, not a referral. Here is why that matters for your practice.
+            Short answer
+          </p>
+          <h2
+            className="fj-display mt-3 font-bold text-fj-ink"
+            style={{ fontSize: 'clamp(1.375rem, 2.4vw, 1.75rem)', lineHeight: 1.2, letterSpacing: '-0.02em' }}
+          >
+            What does a healthcare SEO agency do?
+          </h2>
+          <p className="mt-3 max-w-[880px] font-fj-body text-fj-neutral-600" style={{ fontSize: '1.0625rem', lineHeight: 1.7 }}>
+            <strong className="text-fj-ink">
+              A healthcare SEO agency makes a medical practice, clinic or health tech company easy to find on Google
+              and in AI answers, while meeting the higher trust bar Google sets for health topics.
+            </strong>{' '}
+            The work covers four things: a website search engines can read, pages that answer real patient or buyer
+            questions, reviews and mentions on trusted sites, and a named expert and a source behind every health
+            claim.
+          </p>
+          <p className="mt-4 max-w-[880px] font-fj-body text-fj-neutral-600" style={{ fontSize: '1.0625rem', lineHeight: 1.7 }}>
+            We run two versions of that job. For practices and clinics, it is local search: your Google Business
+            Profile, reviews, and provider and service pages. For health tech and healthcare IT companies, it is
+            business-to-business (B2B) search: integration, security and proof pages that a hospital buying
+            committee and an AI assistant can both trust. Dentists have a dedicated <InternalLink href="/services/dental-seo">dental SEO</InternalLink>{' '}
+            service, and front desk automation lives under{' '}
+            <InternalLink href="/services/ai-agents-for-healthcare">AI agents for healthcare</InternalLink>.
           </p>
         </div>
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-          {stats.map((s) => (
-            <div
-              key={s.figure}
-              className="rounded-xl p-5"
-              style={{
-                backgroundColor: 'rgba(250,250,247,0.04)',
-                border: '1px solid rgba(240,90,40,0.18)',
-              }}
-            >
-              <p
-                className="fj-display font-bold"
-                style={{
-                  color: '#F05A28',
-                  fontSize: 'clamp(2.25rem, 3.5vw, 3rem)',
-                  lineHeight: 1,
-                  letterSpacing: '-0.025em',
-                }}
-              >
-                {s.figure}
-              </p>
-              <p
-                className="mt-2 font-fj-body font-semibold"
-                style={{ color: '#FAFAF7', fontSize: '0.9375rem', lineHeight: 1.4 }}
-              >
-                {s.label}
-              </p>
-              <p
-                className="mt-2 font-fj-body"
-                style={{
-                  color: 'rgba(250,250,247,0.45)',
-                  fontSize: '0.75rem',
-                  fontStyle: 'italic',
-                }}
-              >
-                {s.source}
-              </p>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );
 }
 
-function StatsRow() {
+function ReviewedBy() {
   return (
-    <section
-      className="py-10 md:py-14"
-      style={{
-        backgroundColor: '#FAFAF7',
-        borderTop: '1.5px solid rgba(240,90,40,0.20)',
-        borderBottom: '1.5px solid rgba(240,90,40,0.20)',
-      }}
-    >
-      <div className="mx-auto max-w-[1120px] px-6 md:px-8">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-3 md:gap-12">
-          {[
-            {
-              value: '500+',
-              suffix: 'businesses served',
-              label: 'across 10+ industries including healthcare',
-              body: 'We have worked with medical, dental, health tech, and healthcare staffing clients alongside our broader SMB portfolio, enough to know where generalist SEO agencies fall short in regulated verticals.',
-            },
-            {
-              value: 'YMYL',
-              suffix: 'specialist',
-              label: 'E-E-A-T built in from the first draft',
-              body: 'Healthcare content lives or dies on E-E-A-T. We build provider bylines, licensed citations, and verifiable credentials into every page from the start, not as a fix when rankings plateau after months of investment.',
-            },
-            {
-              value: 'Google + AI',
-              suffix: 'both covered',
-              label: 'map pack + AI citations in one monthly report',
-              body: 'Patients search Google Maps and ask ChatGPT for provider recommendations. We optimize for both and report both, map pack positions, organic rankings, and AI-engine citations side by side every month.',
-            },
-          ].map((stat) => (
-            <div key={stat.value}>
-              <div className="flex items-baseline gap-2">
-                <p
-                  className="fj-display font-bold"
-                  style={{
-                    color: '#F05A28',
-                    fontSize: 'clamp(2.5rem, 4vw, 3.5rem)',
-                    lineHeight: 1,
-                    letterSpacing: '-0.02em',
-                  }}
-                >
-                  {stat.value}
-                </p>
-                <p
-                  className="font-fj-body font-semibold"
-                  style={{
-                    color: '#0F0F12',
-                    fontSize: '1.0625rem',
-                    letterSpacing: '0.005em',
-                  }}
-                >
-                  {stat.suffix}
-                </p>
-              </div>
-              <p
-                className="mt-1 font-fj-body"
-                style={{
-                  color: 'rgba(15,15,18,0.55)',
-                  fontSize: '0.8125rem',
-                  letterSpacing: '0.06em',
-                  textTransform: 'uppercase',
-                  fontWeight: 600,
-                }}
-              >
-                {stat.label}
-              </p>
-              <p
-                className="mt-4 font-fj-body"
-                style={{
-                  color: 'rgba(15,15,18,0.72)',
-                  fontSize: '1rem',
-                  lineHeight: 1.6,
-                }}
-              >
-                {stat.body}
-              </p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* Original data table: Healthcare Practice Type SEO Priority Matrix */
-function HealthcareDataTable() {
-  const rows = [
-    {
-      type: 'Dental practice',
-      primaryQuery: '"dentist near me" (550K+ mo)',
-      focus: 'Map Pack first',
-      schema: 'MedicalClinic, Dentist',
-      topDirectory: 'Zocdoc, 1-800-Dentist',
-    },
-    {
-      type: 'Family / internal medicine',
-      primaryQuery: '"doctor near me" (246K+ mo)',
-      focus: 'Map Pack first',
-      schema: 'Physician, MedicalClinic',
-      topDirectory: 'Healthgrades, Vitals',
-    },
-    {
-      type: 'Chiropractic',
-      primaryQuery: '"chiropractor near me" (246K+ mo)',
-      focus: 'Map Pack first',
-      schema: 'MedicalClinic',
-      topDirectory: 'Healthgrades, Yelp',
-    },
-    {
-      type: 'Mental health / therapy',
-      primaryQuery: '"therapist near me" (110K+ mo)',
-      focus: 'Map Pack + Organic',
-      schema: 'Physician, PsychiatricService',
-      topDirectory: 'Psychology Today',
-    },
-    {
-      type: 'Dermatology',
-      primaryQuery: '"dermatologist near me" (135K+ mo)',
-      focus: 'Map Pack + Organic',
-      schema: 'Physician, MedicalSpecialty',
-      topDirectory: 'Zocdoc, Healthgrades',
-    },
-    {
-      type: 'Telehealth platform',
-      primaryQuery: '"online doctor" (27K+ mo)',
-      focus: 'Organic + AI citations',
-      schema: 'MedicalClinic, OnlineBusiness',
-      topDirectory: 'G2, Capterra',
-    },
-    {
-      type: 'Health tech / SaaS',
-      primaryQuery: '[condition] software / tool',
-      focus: 'Organic + AI citations',
-      schema: 'SoftwareApplication',
-      topDirectory: 'G2, Capterra, ProductHunt',
-    },
-  ];
-
-  const thStyle: React.CSSProperties = {
-    padding: '10px 14px',
-    textAlign: 'left',
-    fontFamily: 'inherit',
-    fontSize: '0.75rem',
-    fontWeight: 700,
-    letterSpacing: '0.08em',
-    textTransform: 'uppercase' as const,
-    color: 'rgba(15,15,18,0.50)',
-    borderBottom: '2px solid rgba(240,90,40,0.25)',
-    whiteSpace: 'nowrap' as const,
-  };
-
-  const tdStyle: React.CSSProperties = {
-    padding: '11px 14px',
-    fontSize: '0.875rem',
-    color: 'rgba(15,15,18,0.78)',
-    borderBottom: '1px solid rgba(15,15,18,0.07)',
-    lineHeight: 1.45,
-    verticalAlign: 'top',
-  };
-
-  const tdBold: React.CSSProperties = {
-    ...tdStyle,
-    fontWeight: 600,
-    color: '#0F0F12',
-  };
-
-  return (
-    <div className="mt-8 overflow-x-auto rounded-xl" style={{ border: '1px solid rgba(15,15,18,0.10)' }}>
-      <p
-        className="px-5 pt-5 pb-3 fj-display font-semibold"
-        style={{ fontSize: '1rem', color: '#0F0F12', letterSpacing: '-0.01em' }}
-      >
-        Healthcare Practice Type: SEO Priority Matrix
+    <div className="mx-auto max-w-[1120px] px-6 md:px-8 py-4" style={{ borderBottom: '1px solid rgba(15,15,18,0.08)' }}>
+      <p className="font-fj-body" style={{ color: 'rgba(15,15,18,0.70)', fontSize: '0.875rem', lineHeight: 1.6 }}>
+        <span style={{ fontWeight: 600, color: INK }}>
+          Written and reviewed by{' '}
+          <InternalLink href="/author/bhavesh-barot">Bhavesh Barot</InternalLink>
+        </span>
+        {', Founder & CEO, FactoryJet. Last reviewed '}
+        <time dateTime={PAGE_MODIFIED}>{REVIEWED_DATE}</time>
+        {'. Every statistic on this page names its source, and all sources are listed at the bottom.'}
       </p>
-      <p
-        className="px-5 pb-4 font-fj-body"
-        style={{ fontSize: '0.8125rem', color: 'rgba(15,15,18,0.50)', fontStyle: 'italic' }}
-      >
-        Query volumes: Google Keyword Planner estimated ranges, June 2026. Focus column = highest-ROI starting point per type.
-      </p>
-      <table
-        style={{
-          width: '100%',
-          borderCollapse: 'collapse',
-          backgroundColor: '#FFFFFF',
-          minWidth: '680px',
-        }}
-      >
-        <thead>
-          <tr style={{ backgroundColor: 'rgba(240,90,40,0.04)' }}>
-            <th style={thStyle}>Practice type</th>
-            <th style={thStyle}>Primary query</th>
-            <th style={thStyle}>SEO focus</th>
-            <th style={thStyle}>Key schema types</th>
-            <th style={thStyle}>Top directory</th>
-          </tr>
-        </thead>
-        <tbody>
-          {rows.map((row, i) => (
-            <tr
-              key={row.type}
-              style={{ backgroundColor: i % 2 === 0 ? '#FFFFFF' : 'rgba(240,90,40,0.015)' }}
-            >
-              <td style={tdBold}>{row.type}</td>
-              <td style={tdStyle}>{row.primaryQuery}</td>
-              <td style={{ ...tdStyle, color: '#B23E13', fontWeight: 600 }}>{row.focus}</td>
-              <td style={{ ...tdStyle, fontFamily: 'var(--font-geist-mono, monospace)', fontSize: '0.8rem' }}>
-                {row.schema}
-              </td>
-              <td style={tdStyle}>{row.topDirectory}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
     </div>
   );
 }
 
-/* Listicle: 6 healthcare specialties with highest SEO ROI */
-function HealthcareSpecialtiesSection() {
-  const specialties = [
-    {
-      number: '01',
-      name: 'Dental practices',
-      why:
-        '"Dentist near me" drives over 550,000 monthly searches in the US. Dental implants and restorative procedures carry among the highest per-appointment values in healthcare. A practice ranking in the 3-Pack in a mid-size market can attribute 30-60 new patients per month to organic alone, with zero ongoing ad spend once the map pack position is held.',
-      signal: 'Map pack + dental directory citations',
-    },
-    {
-      number: '02',
-      name: 'Mental health and therapy practices',
-      why:
-        'Demand for therapists, psychologists, and counselors surged post-2020 and has not receded. "Therapist near me" sees 110,000+ monthly searches with relatively low competition in smaller markets. Psychology Today\'s directory alone can drive significant referral volume, but only if your organic presence supports and validates the listing.',
-      signal: 'Map pack + Psychology Today listing + condition pages',
-    },
-    {
-      number: '03',
-      name: 'Chiropractic and physical therapy',
-      why:
-        'Chiropractic and PT have high visit frequency, patients return weekly for months. A new patient acquired through SEO has a significantly higher lifetime value than a single-appointment specialty. "Chiropractor near me" and "physical therapist near me" both drive 200,000+ monthly searches nationally, with strong near-me intent that is almost entirely won in the Map Pack.',
-      signal: 'Map pack dominance + GBP review velocity',
-    },
-    {
-      number: '04',
-      name: 'Dermatology (cosmetic and medical)',
-      why:
-        'Dermatology blends medical intent ("dermatologist for eczema") with cosmetic intent ("Botox provider near me"), giving practices two distinct content and ranking tracks. Cosmetic procedure pages (laser resurfacing, filler, Botox) rank well with proper E-E-A-T content and earn AI citations when patients ask ChatGPT for provider recommendations.',
-      signal: 'Map pack + cosmetic service pages + AI citations',
-    },
-    {
-      number: '05',
-      name: 'Telehealth platforms',
-      why:
-        'Telehealth SEO is national-reach, content-led, and increasingly dependent on AI citations. When a patient asks ChatGPT "what is the best telehealth platform for anxiety" or "online psychiatry that takes insurance," the platforms with the strongest FAQ and condition-page E-E-A-T are cited. No map pack required, pure content and AI-citation strategy.',
-      signal: 'AI citations + national organic + condition pages',
-    },
-    {
-      number: '06',
-      name: 'Orthopedics and sports medicine',
-      why:
-        'Orthopedic and sports medicine practices handle high-value elective procedures (ACL repair, joint replacement, rotator cuff surgery) where the patient often researches extensively before choosing a surgeon. E-E-A-T-compliant procedure pages with surgeon bylines, peer-reviewed citations, and outcome data, structured for both Google and AI Overviews, capture this high-intent research phase.',
-      signal: 'E-E-A-T procedure pages + surgeon bylines + AI citations',
-    },
-  ];
-
+function FactsSection() {
   return (
-    <section className="py-14 md:py-20" style={{ backgroundColor: '#FAFAF7' }}>
+    <section className="py-14 md:py-20" style={{ backgroundColor: CREAM }}>
       <div className="mx-auto max-w-[1120px] px-6 md:px-8">
         <div className="max-w-[720px]">
-          <p className="fj-eyebrow">HEALTHCARE SEO ROI</p>
-          <h2
-            className="fj-display font-semibold text-fj-ink mt-3"
-            style={{
-              fontSize: 'clamp(1.625rem, 3vw, 2.375rem)',
-              lineHeight: 1.1,
-              letterSpacing: '-0.025em',
-            }}
-          >
-            6 healthcare specialties where SEO generates the clearest, most measurable ROI.
+          <p className="fj-eyebrow">WHAT THE DATA SAYS</p>
+          <h2 className="fj-display font-semibold text-fj-ink mt-3" style={H2_STYLE}>
+            Four facts that shape healthcare SEO in 2026.
           </h2>
-          <p
-            className="mt-4 font-fj-body text-fj-neutral-600"
-            style={{ fontSize: '1rem', lineHeight: 1.65 }}
-          >
-            Not every healthcare category gets the same return from SEO investment. These six specialties share a combination of high patient search volume, clear local intent, and repeat or high-value appointments that make SEO the most efficient patient acquisition channel available.
+          <p className="mt-4 font-fj-body text-fj-neutral-600" style={LEAD_STYLE}>
+            We only use numbers we could check at the source. Each card links to where the figure comes from.
           </p>
         </div>
+        <ul className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2">
+          {FACTS.map((fact) => (
+            <li
+              key={fact.figure}
+              className="rounded-2xl p-6 md:p-7"
+              style={{ backgroundColor: '#FFFFFF', border: '1px solid rgba(15,15,18,0.09)' }}
+            >
+              <p
+                className="fj-display font-bold"
+                style={{ color: ORANGE, fontSize: 'clamp(2.25rem, 3.5vw, 2.75rem)', lineHeight: 1, letterSpacing: '-0.025em' }}
+              >
+                {fact.figure}
+              </p>
+              <p className="mt-3 font-fj-body" style={{ color: INK, fontSize: '1rem', lineHeight: 1.6 }}>
+                {fact.text}
+              </p>
+              <p className="mt-3 font-fj-body" style={{ color: 'rgba(15,15,18,0.70)', fontSize: '0.8125rem' }}>
+                {'Source: '}
+                <SourceLink source={fact.source}>{fact.sourceLabel}</SourceLink>
+              </p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  );
+}
 
-        <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {specialties.map((s) => (
-            <div
-              key={s.number}
+function AudienceJumpCard() {
+  const options = [
+    {
+      href: '#practices',
+      title: 'Practices and clinics',
+      body: 'Map results, reviews, provider pages and privacy-safe tracking.',
+    },
+    {
+      href: '#health-tech',
+      title: 'Health tech and healthcare IT',
+      body: 'Integration, security and proof content, AI answer visibility and compliance-aware review.',
+    },
+  ];
+  return (
+    <div
+      className="w-full rounded-2xl border p-7"
+      style={{ borderColor: 'rgba(15,15,18,0.10)', backgroundColor: '#FFFFFF' }}
+    >
+      <p
+        className="font-fj-mono font-bold uppercase"
+        style={{ fontSize: '11px', letterSpacing: '0.14em', color: ORANGE_DARK }}
+      >
+        Jump to your version
+      </p>
+      <ul className="mt-5 space-y-4">
+        {options.map((option) => (
+          <li key={option.href}>
+            <a
+              href={option.href}
+              className="block rounded-xl p-4 transition-colors hover:bg-[#FAFAF7]"
+              style={{ border: '1px solid rgba(15,15,18,0.09)' }}
+            >
+              <span className="block fj-display font-semibold" style={{ color: INK, fontSize: '1.0625rem' }}>
+                {option.title} <span aria-hidden="true">→</span>
+              </span>
+              <span className="mt-1 block font-fj-body" style={{ color: 'rgba(15,15,18,0.72)', fontSize: '0.9375rem', lineHeight: 1.5 }}>
+                {option.body}
+              </span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function PracticePriorities() {
+  return (
+    <section id="practices" className="py-14 md:py-20" style={{ backgroundColor: '#FFFFFF' }}>
+      <div className="mx-auto max-w-[1120px] px-6 md:px-8">
+        <div className="max-w-[760px]">
+          <p className="fj-eyebrow">FOR PRACTICES AND CLINICS</p>
+          <h2 className="fj-display font-semibold text-fj-ink mt-3" style={H2_STYLE}>
+            6 healthcare SEO priorities for practices and clinics, in the order we tackle them.
+          </h2>
+          <p className="mt-4 font-fj-body text-fj-neutral-600" style={LEAD_STYLE}>
+            This order clears what blocks rankings first, then builds the pages and reviews that win patients.
+          </p>
+        </div>
+        <ol className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-2">
+          {PRACTICE_PRIORITIES.map((item) => (
+            <li
+              key={item.number}
               className="rounded-2xl p-7"
+              style={{ backgroundColor: CREAM, border: '1px solid rgba(15,15,18,0.09)' }}
+            >
+              <div className="flex items-start gap-4">
+                <span
+                  className="fj-display font-bold shrink-0"
+                  style={{ color: ORANGE, fontSize: '1.75rem', lineHeight: 1 }}
+                  aria-hidden="true"
+                >
+                  {item.number}
+                </span>
+                <h3 className="fj-display font-semibold" style={{ ...H3_STYLE, fontSize: '1.125rem' }}>
+                  {item.title}
+                </h3>
+              </div>
+              <p className="mt-4 font-fj-body" style={BODY_STYLE}>
+                {item.body}
+              </p>
+              <p
+                className="mt-4 inline-block rounded-lg px-3 py-2 font-fj-body"
+                style={{ backgroundColor: 'rgba(240,90,40,0.07)', color: INK, fontSize: '0.8125rem', fontWeight: 500 }}
+              >
+                <span className="font-fj-mono font-bold uppercase" style={{ fontSize: '10px', letterSpacing: '0.12em', color: ORANGE_DARK }}>
+                  {'Moves: '}
+                </span>
+                {item.signal}
+              </p>
+            </li>
+          ))}
+        </ol>
+        <p className="mt-8 font-fj-body" style={BODY_STYLE}>
+          Running a dental practice? See <InternalLink href="/services/dental-seo">dental SEO</InternalLink>. Need
+          local rankings for a business outside healthcare? See <InternalLink href="/services/local-seo">local SEO</InternalLink>.
+        </p>
+      </div>
+    </section>
+  );
+}
+
+function PriorityMatrix() {
+  const thStyle: CSSProperties = {
+    padding: '12px 14px',
+    textAlign: 'left',
+    fontSize: '0.75rem',
+    fontWeight: 700,
+    letterSpacing: '0.08em',
+    textTransform: 'uppercase',
+    color: 'rgba(15,15,18,0.70)',
+    borderBottom: '2px solid rgba(240,90,40,0.25)',
+    verticalAlign: 'bottom',
+  };
+  const tdStyle: CSSProperties = {
+    padding: '12px 14px',
+    fontSize: '0.875rem',
+    color: 'rgba(15,15,18,0.80)',
+    borderBottom: '1px solid rgba(15,15,18,0.07)',
+    lineHeight: 1.5,
+    verticalAlign: 'top',
+  };
+
+  return (
+    <section className="py-14 md:py-20" style={{ backgroundColor: CREAM }}>
+      <div className="mx-auto max-w-[1120px] px-6 md:px-8">
+        <div className="max-w-[760px]">
+          <p className="fj-eyebrow">PRIORITY MATRIX</p>
+          <h2 className="fj-display font-semibold text-fj-ink mt-3" style={H2_STYLE}>
+            Healthcare SEO priorities by organization type.
+          </h2>
+          <p className="mt-4 font-fj-body text-fj-neutral-600" style={LEAD_STYLE}>
+            Where your buyers look first decides where the work starts. Find your row, then read across.
+          </p>
+        </div>
+        <div className="mt-8 overflow-x-auto rounded-xl" style={{ border: '1px solid rgba(15,15,18,0.10)' }}>
+          <table style={{ width: '100%', borderCollapse: 'collapse', backgroundColor: '#FFFFFF', minWidth: '760px' }}>
+            <caption className="sr-only">
+              Healthcare SEO priorities by organization type: where buyers look first, the pages that matter most,
+              useful schema types and the proof buyers expect.
+            </caption>
+            <thead>
+              <tr style={{ backgroundColor: 'rgba(240,90,40,0.04)' }}>
+                <th scope="col" style={thStyle}>Organization type</th>
+                <th scope="col" style={thStyle}>Where buyers look first</th>
+                <th scope="col" style={thStyle}>Pages that matter most</th>
+                <th scope="col" style={thStyle}>Useful schema types</th>
+                <th scope="col" style={thStyle}>Proof buyers expect</th>
+              </tr>
+            </thead>
+            <tbody>
+              {MATRIX_ROWS.map((row) => (
+                <tr key={row.type}>
+                  <th scope="row" style={{ ...tdStyle, fontWeight: 600, color: INK, textAlign: 'left' }}>
+                    {row.type}
+                  </th>
+                  <td style={tdStyle}>{row.looks}</td>
+                  <td style={tdStyle}>{row.pages}</td>
+                  <td style={{ ...tdStyle, fontFamily: 'var(--font-geist-mono, monospace)', fontSize: '0.8rem' }}>
+                    {row.schema}
+                  </td>
+                  <td style={tdStyle}>{row.proof}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="mt-4 font-fj-body" style={{ color: 'rgba(15,15,18,0.70)', fontSize: '0.8125rem' }}>
+          Schema type names are from schema.org. Mark up only what the page visibly shows.
+        </p>
+      </div>
+    </section>
+  );
+}
+
+function HealthTechSection() {
+  return (
+    <section
+      id="health-tech"
+      className="py-16 md:py-24"
+      style={{ backgroundColor: '#FFFFFF', borderTop: `4px solid ${ORANGE}` }}
+    >
+      <div className="mx-auto max-w-[1120px] px-6 md:px-8">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-12">
+          <div className="lg:col-span-7">
+            <p
+              className="inline-block rounded-full font-fj-mono font-bold uppercase"
               style={{
-                backgroundColor: '#FFFFFF',
-                border: '1px solid rgba(15,15,18,0.09)',
-                boxShadow: '0 1px 4px rgba(15,15,18,0.04)',
+                fontSize: '11px',
+                letterSpacing: '0.12em',
+                color: ORANGE_DARK,
+                backgroundColor: 'rgba(240,90,40,0.08)',
+                border: '1px solid rgba(240,90,40,0.25)',
+                padding: '6px 12px',
               }}
             >
-              <div className="flex items-center gap-3 mb-4">
-                <span
-                  className="fj-display font-bold"
-                  style={{ color: 'rgba(240,90,40,0.30)', fontSize: '1.75rem', lineHeight: 1 }}
-                >
-                  {s.number}
-                </span>
-                <p
-                  className="fj-display font-semibold"
-                  style={{ color: '#0F0F12', fontSize: '1.0625rem', lineHeight: 1.2 }}
-                >
-                  {s.name}
-                </p>
-              </div>
-              <p
-                className="font-fj-body"
-                style={{ color: 'rgba(15,15,18,0.70)', fontSize: '0.9375rem', lineHeight: 1.6 }}
-              >
-                {s.why}
-              </p>
-              <div
-                className="mt-5 rounded-lg px-4 py-3"
-                style={{ backgroundColor: 'rgba(240,90,40,0.06)' }}
-              >
-                <p
-                  className="font-fj-mono font-bold uppercase"
-                  style={{ fontSize: '10px', letterSpacing: '0.12em', color: '#B23E13' }}
-                >
-                  Primary signal
-                </p>
-                <p
-                  className="mt-1 font-fj-body"
-                  style={{ color: '#0F0F12', fontSize: '0.8125rem', fontWeight: 500 }}
-                >
-                  {s.signal}
-                </p>
-              </div>
-            </div>
-          ))}
+              For health tech and healthcare IT companies
+            </p>
+            <h2 className="fj-display font-semibold text-fj-ink mt-4" style={H2_STYLE}>
+              SEO for health tech companies that sell to hospitals, clinics and health insurers.
+            </h2>
+          </div>
+          <div className="lg:col-span-5 lg:pt-10">
+            <p className="font-fj-body text-fj-neutral-600" style={LEAD_STYLE}>
+              If you sell EHR integrations, billing and claims software, tools that move data between health systems
+              or digital health products, your SEO goal is not patient traffic. It is being the vendor Google and AI assistants name
+              when a buying committee researches the problem you solve, with pages that survive every committee
+              member&apos;s checks.
+            </p>
+          </div>
         </div>
 
-        <div className="mt-10 flex flex-col sm:flex-row gap-4">
-          <a
-            href={CALENDLY}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full px-6 py-3 font-fj-body text-sm font-semibold transition-all hover:opacity-90"
-            style={{
-              backgroundColor: '#B23E13',
-              color: '#FFFFFF',
-              boxShadow: '0 4px 16px rgba(178,62,19,0.28)',
-            }}
-          >
-            Book a free healthcare SEO audit <span aria-hidden="true">→</span>
-          </a>
-          <Link
-            href="/services/local-seo"
-            className="inline-flex items-center gap-2 rounded-full px-6 py-3 font-fj-body text-sm font-semibold transition-all hover:opacity-90"
-            style={{
-              color: '#B23E13',
-              border: '1.5px solid #B23E13',
-            }}
-          >
-            See our local SEO service
-          </Link>
+        {/* A. How AI answers and Google shape the purchase */}
+        <div className="mt-14 max-w-[860px]">
+          <h3 className="fj-display font-semibold" style={H3_STYLE}>
+            How AI answers and Google shape a healthcare IT purchase
+          </h3>
+          <p className="mt-3 font-fj-body" style={BODY_STYLE}>
+            Healthcare IT deals take months, and much of the research happens before anyone fills in your demo form.
+            Here is the path, and what each step asks of your website.
+          </p>
+          <ol className="mt-6 space-y-5">
+            {BUYING_PATH.map((step, index) => (
+              <li key={step.title} className="flex items-start gap-4">
+                <span
+                  className="mt-0.5 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full font-fj-mono font-bold"
+                  style={{ backgroundColor: ORANGE_DARK, color: '#FFFFFF', fontSize: '0.8125rem' }}
+                  aria-hidden="true"
+                >
+                  {index + 1}
+                </span>
+                <p className="font-fj-body" style={BODY_STYLE}>
+                  <strong style={{ color: INK }}>{step.title}</strong> {step.body}
+                </p>
+              </li>
+            ))}
+          </ol>
+        </div>
+
+        {/* B. Content that wins deals */}
+        <div className="mt-14">
+          <h3 className="fj-display font-semibold max-w-[860px]" style={H3_STYLE}>
+            The content that wins healthcare IT deals
+          </h3>
+          <ol className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-2">
+            {HEALTHTECH_CONTENT.map((item, index) => (
+              <li
+                key={item.title}
+                className="rounded-2xl p-6"
+                style={{ backgroundColor: CREAM, border: '1px solid rgba(15,15,18,0.09)' }}
+              >
+                <p className="font-fj-mono font-bold" style={{ color: ORANGE_DARK, fontSize: '0.8125rem', letterSpacing: '0.08em' }}>
+                  {String(index + 1).padStart(2, '0')}
+                </p>
+                <p className="mt-2 font-fj-body" style={BODY_STYLE}>
+                  <strong style={{ color: INK }}>{item.title}</strong> {item.body}
+                </p>
+              </li>
+            ))}
+          </ol>
+        </div>
+
+        {/* C. Technical work */}
+        <div className="mt-14 grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-12">
+          <div className="lg:col-span-7">
+            <h3 className="fj-display font-semibold" style={H3_STYLE}>
+              Technical SEO that matters on health tech sites
+            </h3>
+            <ul className="mt-6 space-y-4">
+              {TECHNICAL_WORK.map((item, index) => (
+                <li key={index} className="flex items-start gap-3 font-fj-body" style={BODY_STYLE}>
+                  <span
+                    className="mt-2 inline-block h-2 w-2 shrink-0 rounded-full"
+                    style={{ backgroundColor: ORANGE }}
+                    aria-hidden="true"
+                  />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* D. E-E-A-T explained plainly */}
+          <div className="lg:col-span-5">
+            <h3 className="fj-display font-semibold" style={H3_STYLE}>
+              E-E-A-T for health topics, explained plainly
+            </h3>
+            <p className="mt-3 font-fj-body" style={BODY_STYLE}>
+              E-E-A-T stands for Experience, Expertise, Authoritativeness and Trustworthiness.{' '}
+              <SourceLink source={SOURCE_GOOGLE_HELPFUL}>Google says</SourceLink> its systems give even more weight
+              to these signals on topics that could affect people&apos;s health, money or safety, which it calls Your
+              Money or Your Life (YMYL) topics, and that trust matters most.
+            </p>
+            <ul className="mt-5 space-y-3">
+              {EEAT_CARDS.map((card) => (
+                <li
+                  key={card.title}
+                  className="rounded-xl p-4"
+                  style={{ backgroundColor: CREAM, borderLeft: `3px solid ${ORANGE}` }}
+                >
+                  <p className="fj-display font-semibold" style={{ color: INK, fontSize: '1rem' }}>
+                    {card.title}
+                  </p>
+                  <p className="mt-1 font-fj-body" style={{ color: 'rgba(15,15,18,0.74)', fontSize: '0.9375rem', lineHeight: 1.6 }}>
+                    {card.body}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {/* E. Compliance-aware content review */}
+        <div className="mt-14 grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-12">
+          <div className="lg:col-span-7">
+            <h3 className="fj-display font-semibold" style={H3_STYLE}>
+              Compliance-aware content review: how a page goes live
+            </h3>
+            <p className="mt-3 font-fj-body" style={BODY_STYLE}>
+              Health content needs a review step that a normal content calendar skips. Ours has five steps, and your
+              experts keep the final say.
+            </p>
+            <ol className="mt-6 space-y-4">
+              {REVIEW_STEPS.map((step, index) => (
+                <li key={step.title} className="flex items-start gap-4">
+                  <span
+                    className="mt-0.5 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full font-fj-mono font-bold"
+                    style={{ border: `1.5px solid ${ORANGE_DARK}`, color: ORANGE_DARK, fontSize: '0.8125rem' }}
+                    aria-hidden="true"
+                  >
+                    {index + 1}
+                  </span>
+                  <p className="font-fj-body" style={BODY_STYLE}>
+                    <strong style={{ color: INK }}>{step.title}</strong> {step.body}
+                  </p>
+                </li>
+              ))}
+            </ol>
+          </div>
+          <div className="lg:col-span-5">
+            <div className="rounded-2xl p-7" style={{ backgroundColor: CREAM, border: '1px solid rgba(15,15,18,0.10)' }}>
+              <p className="fj-display font-semibold" style={{ color: INK, fontSize: '1.125rem', lineHeight: 1.3 }}>
+                What we never need: patient data.
+              </p>
+              <p className="mt-3 font-fj-body" style={BODY_STYLE}>
+                Our SEO work runs on your public pages, search data and analytics set up to exclude patient
+                information. If a task would ever touch protected health information, we stop, and your compliance
+                team decides the next step.
+              </p>
+              <div className="mt-6 flex flex-col gap-3">
+                <a
+                  href={CALENDLY}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 font-fj-body text-sm font-semibold transition-all hover:opacity-90"
+                  style={{ backgroundColor: ORANGE_DARK, color: '#FFFFFF' }}
+                >
+                  Talk to the founder about health tech SEO <span aria-hidden="true">→</span>
+                </a>
+                <Link
+                  href="/services/ai-seo"
+                  className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 font-fj-body text-sm font-semibold transition-all hover:opacity-90"
+                  style={{ color: ORANGE_DARK, border: `1.5px solid ${ORANGE_DARK}` }}
+                >
+                  How we approach AI search visibility
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   );
 }
 
-function HealthcareSEOPricingGrid() {
+function EngagementsSection() {
   return (
     <section
       id="pricing"
@@ -1015,201 +1402,139 @@ function HealthcareSEOPricingGrid() {
       style={{
         backgroundImage: 'radial-gradient(circle, rgba(0,0,0,0.065) 1px, transparent 1px)',
         backgroundSize: '28px 28px',
-        backgroundColor: '#FAFAF7',
+        backgroundColor: CREAM,
       }}
     >
       <div className="mx-auto max-w-[1120px] px-6 md:px-8">
         <div className="max-w-[760px]">
-          <p className="fj-eyebrow">HEALTHCARE SEO PRICING</p>
-          <h2
-            className="fj-display font-semibold text-fj-ink mt-3"
-            style={{
-              fontSize: 'clamp(1.625rem, 3vw, 2.5rem)',
-              lineHeight: 1.1,
-              letterSpacing: '-0.025em',
-            }}
-          >
-            Quote-first pricing, scoped to your practice type and market.
+          <p className="fj-eyebrow">ENGAGEMENTS AND PRICING</p>
+          <h2 className="fj-display font-semibold text-fj-ink mt-3" style={H2_STYLE}>
+            Quote-first engagements, scoped to your organization.
           </h2>
-          <p
-            className="mt-4 max-w-[600px] font-fj-body text-fj-neutral-600"
-            style={{ fontSize: '1rem', lineHeight: 1.65 }}
-          >
-            Healthcare SEO scope varies significantly by practice type, market competitiveness, and number of locations. We quote each engagement individually rather than publishing flat rates, you get a clear scope and price before any work starts, with no annual contracts. Start with an audit and move to a retainer once you see where the highest-value opportunity is.
+          <p className="mt-4 max-w-[640px] font-fj-body text-fj-neutral-600" style={LEAD_STYLE}>
+            Scope depends on whether you are a practice or a health tech company, how competitive your market is,
+            how many locations or products you have, and how much content needs expert review. We quote each
+            engagement before any work starts.
           </p>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4 items-start">
-          {PRICING_TIERS.map((tier) => {
-            const isPopular = tier.popular;
-            const isContact = tier.isContact;
-            return (
-              <div
-                key={tier.name}
-                className={`relative flex flex-col rounded-2xl overflow-hidden ${
-                  isPopular ? 'lg:-mt-3' : ''
-                }`}
-                style={{
-                  backgroundColor: isPopular ? '#0F0F12' : '#FFFFFF',
-                  border: isPopular ? 'none' : '1px solid rgba(15,15,18,0.10)',
-                  boxShadow: isPopular
-                    ? '0 12px 48px rgba(240,90,40,0.25), 0 4px 16px rgba(15,15,18,0.20)'
-                    : '0 1px 3px rgba(15,15,18,0.04)',
-                }}
+        <ul className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+          {ENGAGEMENTS.map((engagement) => (
+            <li
+              key={engagement.name}
+              className="flex flex-col rounded-2xl p-7"
+              style={{ backgroundColor: '#FFFFFF', border: '1px solid rgba(15,15,18,0.10)', borderTop: `3px solid ${ORANGE}` }}
+            >
+              <p className="font-fj-mono font-bold uppercase" style={{ fontSize: '10px', letterSpacing: '0.12em', color: ORANGE_DARK }}>
+                {engagement.cadence}
+              </p>
+              <h3 className="mt-2 fj-display font-semibold" style={{ color: INK, fontSize: '1.125rem', lineHeight: 1.25 }}>
+                {engagement.name}
+              </h3>
+              <p className="mt-2 fj-display font-bold" style={{ color: ORANGE, fontSize: '1.5rem', lineHeight: 1.1 }}>
+                Custom quote
+              </p>
+              <p className="mt-3 font-fj-body" style={{ color: 'rgba(15,15,18,0.74)', fontSize: '0.9375rem', lineHeight: 1.55 }}>
+                {engagement.description}
+              </p>
+              <ul className="mt-5 flex-1 space-y-3">
+                {engagement.features.map((feature) => (
+                  <li
+                    key={feature}
+                    className="flex items-start gap-3 font-fj-body"
+                    style={{ color: 'rgba(15,15,18,0.82)', fontSize: '0.875rem', lineHeight: 1.5 }}
+                  >
+                    <span
+                      className="mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full"
+                      style={{ backgroundColor: ORANGE_DARK }}
+                      aria-hidden="true"
+                    >
+                      <svg width="9" height="9" viewBox="0 0 10 10" fill="none">
+                        <path d="M2 5l2 2 4-4" stroke="#FFFFFF" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+              <a
+                href={CALENDLY}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-full px-5 py-3 font-fj-body text-sm font-semibold transition-all hover:opacity-90"
+                style={{ color: ORANGE_DARK, border: `1.5px solid ${ORANGE_DARK}` }}
               >
-                <div
-                  style={{ height: '3px', backgroundColor: '#F05A28' }}
-                  aria-hidden="true"
-                />
+                {engagement.ctaLabel} <span aria-hidden="true">→</span>
+              </a>
+            </li>
+          ))}
+        </ul>
 
-                {isPopular && (
-                  <div
-                    className="absolute"
-                    style={{
-                      top: '0.75rem',
-                      right: '0.75rem',
-                      backgroundColor: '#B23E13',
-                      color: '#FFFFFF',
-                      fontSize: '10px',
-                      fontWeight: 600,
-                      letterSpacing: '0.10em',
-                      textTransform: 'uppercase',
-                      padding: '4px 10px',
-                      borderRadius: '9999px',
-                    }}
-                  >
-                    Most popular
-                  </div>
-                )}
-
-                <div className="flex-1 flex flex-col p-7">
-                  <p
-                    className="font-fj-body font-semibold"
-                    style={{ color: isPopular ? '#FAFAF7' : '#0F0F12', fontSize: '0.9375rem' }}
-                  >
-                    {tier.name}
-                  </p>
-
-                  <div className="mt-3 flex items-baseline gap-2 flex-wrap">
-                    <p
-                      className="fj-display font-bold"
-                      style={{
-                        color: '#F05A28',
-                        fontSize: isContact ? '1.5rem' : '1.75rem',
-                        lineHeight: 1.1,
-                        letterSpacing: '-0.02em',
-                      }}
-                    >
-                      {tier.price}
-                    </p>
-                    {tier.cadence && (
-                      <p
-                        className="font-fj-body"
-                        style={{
-                          color: isPopular ? 'rgba(250,250,247,0.70)' : 'rgba(15,15,18,0.55)',
-                          fontSize: '0.875rem',
-                        }}
-                      >
-                        {tier.cadence}
-                      </p>
-                    )}
-                  </div>
-
-                  <p
-                    className="mt-4 font-fj-body"
-                    style={{
-                      color: isPopular ? 'rgba(250,250,247,0.80)' : 'rgba(15,15,18,0.70)',
-                      fontSize: '0.9375rem',
-                      lineHeight: 1.55,
-                    }}
-                  >
-                    {tier.description}
-                  </p>
-
-                  <ul className="mt-6 space-y-3 flex-1">
-                    {tier.features.map((feature) => (
-                      <li
-                        key={feature}
-                        className="flex items-start gap-3 font-fj-body"
-                        style={{
-                          color: isPopular ? 'rgba(250,250,247,0.85)' : 'rgba(15,15,18,0.80)',
-                          fontSize: '0.875rem',
-                          lineHeight: 1.5,
-                        }}
-                      >
-                        <span
-                          className="mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full"
-                          style={{ backgroundColor: '#F05A28' }}
-                          aria-hidden="true"
-                        >
-                          <svg width="9" height="9" viewBox="0 0 10 10" fill="none">
-                            <path
-                              d="M2 5l2 2 4-4"
-                              stroke="#FFFFFF"
-                              strokeWidth="1.75"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                          </svg>
-                        </span>
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <div className="mt-7">
-                    <a
-                      href={tier.ctaHref}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex w-full items-center justify-center gap-2 rounded-full px-5 py-3 font-fj-body text-sm font-semibold transition-all hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
-                      style={{
-                        background: isPopular ? '#B23E13' : 'transparent',
-                        color: isPopular ? '#FFFFFF' : '#B23E13',
-                        border: isPopular ? 'none' : '1.5px solid #B23E13',
-                        outlineColor: '#F05A28',
-                        boxShadow: isPopular ? '0 4px 16px rgba(178,62,19,0.30)' : 'none',
-                      }}
-                    >
-                      {tier.ctaLabel}
-                      <span aria-hidden="true">→</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-
-        <p
-          className="mt-10 text-center font-fj-body"
-          style={{
-            color: 'rgba(15,15,18,0.55)',
-            fontSize: '0.8125rem',
-            letterSpacing: '0.04em',
-            fontWeight: 500,
-          }}
-        >
-          Month-to-month. Full data ownership from day one. Start with an audit, no required retainer.
+        <p className="mt-10 font-fj-body" style={{ color: 'rgba(15,15,18,0.70)', fontSize: '0.875rem', fontWeight: 500 }}>
+          Standard retainers are month-to-month. You own every deliverable from day one.
         </p>
       </div>
     </section>
   );
 }
 
-/* Byline / reviewed bar */
-function ReviewedBy() {
+function RelatedServices() {
   return (
-    <div
-      className="mx-auto max-w-[1120px] px-6 md:px-8 py-4"
-      style={{ borderBottom: '1px solid rgba(15,15,18,0.08)' }}
-    >
-      <p className="font-fj-body" style={{ color: 'rgba(15,15,18,0.50)', fontSize: '0.8125rem' }}>
-        <span style={{ fontWeight: 600, color: 'rgba(15,15,18,0.70)' }}>Written and reviewed by Bhavesh Barot</span>
-        {' '}: Founder, FactoryJet. Last reviewed:{' '}
-        <time dateTime="2026-06-13">{REVIEWED_DATE}</time>.
-      </p>
-    </div>
+    <section className="py-14 md:py-20" style={{ backgroundColor: '#FFFFFF' }}>
+      <div className="mx-auto max-w-[1120px] px-6 md:px-8">
+        <div className="max-w-[720px]">
+          <p className="fj-eyebrow">RELATED SERVICES</p>
+          <h2 className="fj-display font-semibold text-fj-ink mt-3" style={H2_STYLE}>
+            Related services for healthcare teams.
+          </h2>
+        </div>
+        <ul className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {RELATED_SERVICES.map((service) => (
+            <li key={service.href}>
+              <Link
+                href={service.href}
+                className="block h-full rounded-2xl p-6 transition-colors hover:bg-[#FAFAF7]"
+                style={{ border: '1px solid rgba(15,15,18,0.10)' }}
+              >
+                <span className="block fj-display font-semibold" style={{ color: INK, fontSize: '1.0625rem' }}>
+                  {service.title} <span aria-hidden="true">→</span>
+                </span>
+                <span className="mt-2 block font-fj-body" style={{ color: 'rgba(15,15,18,0.72)', fontSize: '0.9375rem', lineHeight: 1.55 }}>
+                  {service.body}
+                </span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  );
+}
+
+function SourcesSection() {
+  return (
+    <section className="py-12 md:py-16" style={{ backgroundColor: '#FFFFFF', borderTop: '1px solid rgba(15,15,18,0.08)' }}>
+      <div className="mx-auto max-w-[1120px] px-6 md:px-8">
+        <p className="fj-eyebrow">SOURCES</p>
+        <h2 className="fj-display font-semibold text-fj-ink mt-3" style={{ ...H2_STYLE, fontSize: 'clamp(1.375rem, 2.4vw, 1.75rem)' }}>
+          Sources for the facts on this page.
+        </h2>
+        <p className="mt-3 font-fj-body" style={{ color: 'rgba(15,15,18,0.72)', fontSize: '0.9375rem' }}>
+          {'Checked on '}
+          <time dateTime={PAGE_MODIFIED}>{REVIEWED_DATE}</time>
+          {'. When a source changes, we update the page.'}
+        </p>
+        <ol className="mt-6 grid grid-cols-1 gap-x-10 gap-y-3 md:grid-cols-2">
+          {SOURCE_LIST.map((source) => (
+            <li key={source.url} className="font-fj-body" style={{ color: 'rgba(15,15,18,0.80)', fontSize: '0.9375rem', lineHeight: 1.55 }}>
+              <span style={{ fontWeight: 600, color: INK }}>{source.publisher}</span>
+              {': '}
+              <SourceLink source={source}>{source.title}</SourceLink>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
   );
 }
 
@@ -1220,7 +1545,7 @@ function ReviewedBy() {
 export default function HealthcareSeoServicePage() {
   return (
     <>
-      {/* JSON-LD schemas */}
+      {/* JSON-LD schemas, all derived from the arrays that render below */}
       <script
         id="healthcare-seo-webpage-schema"
         type="application/ld+json"
@@ -1241,298 +1566,127 @@ export default function HealthcareSeoServicePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <script
-        id="healthcare-seo-organization-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-      />
 
       <SiteHeader />
       <main>
+        <Breadcrumbs items={BREADCRUMB_ITEMS} />
 
-        {/* ─── 1. Hero ─────────────────────────────────────────────────────── */}
-        {/*
-          NON-NEGOTIABLES (2026-06-13):
-          - Hero fits single viewport on desktop + mobile, no scroll required
-          - Lead ≤ 2 sentences, ≤ 50 words
-          - rightSlot hidden on mobile (hidden lg:block), preserves text LCP
-          - Gradient accent on primary noun in headline (CSS only, zero perf cost)
-          - Image max-h capped so it never forces hero taller than viewport
-        */}
+        {/* ─── 1. Hero (light, form-first) ─────────────────────────────────── */}
         <Hero
           formSlot={<HeroInlineForm region="us" source="us_services_healthcare_seo_hero" />}
           eyebrow="HEALTHCARE SEO AGENCY"
-          headline={
-            <>
-              The SEO agency for{' '}
-              <span>
-                healthcare companies
-              </span>
-              <br className="hidden md:block" />
-              that does the compliance work other agencies skip.
-            </>
-          }
-          lead="77% of patients search online before booking, and the practices ranking in Google's Map Pack win the patient. We build the full compliance-aware stack: YMYL E-E-A-T, HIPAA-safe analytics, map pack dominance, and monthly reporting on patient outcomes."
-          secondaryCta={{
-            label: 'See our approach',
-            href: '#pricing',
-          }}
+          headline={H1_TEXT}
+          lead="We help healthcare organizations get found on Google and named in AI answers from ChatGPT and Google AI Overviews. Practices reach patients ready to book, and health tech companies show up where buyers at hospitals and health insurers start their research."
+          secondaryCta={{ label: 'See the health tech plan', href: '#health-tech' }}
           trustItems={[
-            '77% of patients search online before booking',
-            'YMYL E-E-A-T built into every page',
-            'Map pack + AI citations in one monthly report',
+            'Every health claim sourced and reviewer-approved',
+            'No patient data needed for our SEO work',
+            'Google rankings and AI answers in one report',
           ]}
           rightSlot={
-            /* hidden on mobile - image is never the LCP element; desktop-only visual */
+            /* Desktop-only visual; never the mobile LCP element */
             <div className="hidden lg:block relative w-full rounded-2xl overflow-hidden shadow-2xl ring-1 ring-black/10">
               <Image
                 src="/images/services/healthcare-seo.webp"
-                alt="Healthcare SEO agency, doctor reviewing patient acquisition analytics on laptop"
+                alt="Clinician reviewing website search analytics on a laptop in a clinic office"
                 width={1344}
                 height={1024}
                 className="w-full object-cover max-h-[520px]"
                 priority={false}
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
             </div>
           }
         />
 
-        {/* ─── 2. Quick Answer block, sourced stats ────────────────────────── */}
-        <QuickAnswerBlock />
+        {/* ─── 2. Answer-first block ──────────────────────────────────────── */}
+        <AnswerFirst />
 
-        {/* ─── 3. Stats row, animated counters (client component) ─────────── */}
-        <StatsRowAnimated />
-
-        {/* ─── 4. Reviewed-by byline ───────────────────────────────────────── */}
+        {/* ─── 3. Byline ──────────────────────────────────────────────────── */}
         <ReviewedBy />
 
-        {/* ─── 5. Service explanation, what healthcare SEO covers ─────────── */}
-        {/*
-          DESIGN RULE (2026-06-13): Table extracted to its own full-width section below.
-          Table inside a 2-col left body prop clips its rightmost columns, always
-          put data tables in standalone sections with overflow-x-auto.
-          rightSlot fills dead space with AI map-pack image below Quick Facts.
-        */}
+        {/* ─── 4. Sourced facts ───────────────────────────────────────────── */}
+        <FactsSection />
+
+        {/* ─── 5. Two audiences ───────────────────────────────────────────── */}
         <ServiceExplanation
-          eyebrow="WHAT HEALTHCARE SEO COVERS"
-          headline="Standard SEO handles about 60% of the job. The other 40% is healthcare-specific, and it is where rankings stall."
-          lead="For a SaaS company, SEO is technical and content work. For a medical practice or health company, there is an entire compliance and trust layer underneath: YMYL E-E-A-T, HIPAA-safe analytics, medical schema types, Google Business Profile for patient acquisition, and specialty directory coverage. The agencies that skip that layer leave healthcare clients wondering why their rankings do not reflect their link profile or content investment."
+          eyebrow="WHO WE HELP"
+          headline="Two kinds of healthcare companies, two different SEO jobs."
+          lead="A dental group and a company that sells electronic health record (EHR) software both work in healthcare, but their buyers search in completely different ways. We plan the work around how your buyer actually decides."
           body={
             <>
-              <p
-                className="mt-6 font-fj-body text-fj-neutral-600"
-                style={{ fontSize: '1.0625rem', lineHeight: 1.7 }}
-              >
-                As a full-stack SEO agency for healthcare companies, we cover: the technical E-E-A-T baseline (provider bylines, citations, About pages, schema), Google Business Profile optimization and citation building for local practices, HIPAA-safe analytics configuration, condition and service content authored with licensed provider attribution, and AI-citation positioning so your practice is cited when patients ask ChatGPT or Perplexity for provider recommendations. Monthly reporting separates map pack positions from organic sessions from AI citations, so you know exactly where patient acquisition is coming from.
+              <p>
+                Patients decide fast and close to home. They search for a service nearby, read reviews, sometimes ask
+                an AI assistant, and book. For a practice, SEO lives in map results, provider and service pages, and
+                reviews. <SourceLink source={SOURCE_GOOGLE_LOCAL}>Google says</SourceLink> more reviews and positive
+                ratings can help a business rank locally.
               </p>
-              <p
-                className="mt-4 font-fj-body text-fj-neutral-600"
-                style={{ fontSize: '1.0625rem', lineHeight: 1.7 }}
-              >
-                Need SEO for a non-healthcare business? Our{' '}
-                <Link href="/services/local-seo" className="text-[#B23E13] font-medium underline underline-offset-2">
-                  local SEO service
-                </Link>{' '}
-                covers any category, and our{' '}
-                <Link href="/services/seo" className="text-[#B23E13] font-medium underline underline-offset-2">
-                  core SEO service
-                </Link>{' '}
-                applies the same E-E-A-T and AI-citation playbook to non-regulated industries.
+              <p>
+                Hospitals and health insurers decide slowly and in groups. The chief information officer (CIO) checks
+                integrations, the security team checks data protection, the billing and claims lead checks the workflow,
+                and the purchasing team checks risk. For a health
+                tech company, SEO means being the vendor that search results and AI answers name, with pages that hold
+                up when each of those people checks your claims.
               </p>
             </>
           }
-          rightSlot={
-            <div
-              className="rounded-2xl border p-7"
-              style={{
-                borderColor: 'rgba(15,15,18,0.10)',
-                backgroundColor: '#FFFFFF',
-                boxShadow: '0 1px 3px rgba(15,15,18,0.04)',
-              }}
-            >
-              <p
-                className="font-fj-mono font-bold uppercase"
-                style={{ fontSize: '11px', letterSpacing: '0.14em', color: '#B23E13' }}
-              >
-                Quick facts
-              </p>
-              <ul className="mt-5 space-y-4">
-                {[
-                  {
-                    stat: '2023',
-                    detail:
-                      'Online search surpassed physician referrals as the #1 way Americans find new doctors.',
-                  },
-                  {
-                    stat: '94%',
-                    detail:
-                      'of prospective patients choose their provider based on online reputation.',
-                  },
-                  {
-                    stat: '50%+',
-                    detail:
-                      'increase in patient calls when a practice ranks in the Google Map Pack.',
-                  },
-                  {
-                    stat: 'YMYL',
-                    detail:
-                      'Google applies elevated quality review to all healthcare content, bylines + citations are ranking prerequisites.',
-                  },
-                ].map((f) => (
-                  <li key={f.stat} className="flex items-start gap-3">
-                    <span
-                      className="fj-display font-bold shrink-0"
-                      style={{ color: '#F05A28', fontSize: '1.125rem', lineHeight: 1.2 }}
-                    >
-                      {f.stat}
-                    </span>
-                    <p
-                      className="font-fj-body"
-                      style={{ color: 'rgba(15,15,18,0.68)', fontSize: '0.875rem', lineHeight: 1.5 }}
-                    >
-                      {f.detail}
-                    </p>
-                  </li>
-                ))}
-              </ul>
-              <p
-                className="mt-5 font-fj-body"
-                style={{ color: 'rgba(15,15,18,0.40)', fontSize: '0.75rem', fontStyle: 'italic' }}
-              >
-                Sources: netoneclick.com, industry aggregate data, BrightEdge 2025.
-              </p>
-            </div>
-          }
+          rightSlot={<AudienceJumpCard />}
         />
 
-        {/* ─── 5b. Data table, full-width standalone (extracted from left col) ── */}
-        {/*
-          DESIGN RULE: tables always go in standalone full-width sections.
-          Never nest a multi-column table inside a 2-col layout's body prop.
-        */}
-        <section className="pb-14 md:pb-20" style={{ backgroundColor: '#FFFFFF' }}>
-          <div className="mx-auto max-w-[1120px] px-6 md:px-8">
-            <HealthcareDataTable />
-          </div>
-        </section>
+        {/* ─── 6. Practices and clinics listicle ──────────────────────────── */}
+        <PracticePriorities />
 
-        {/* ─── 6. Strategic dark, 3 problems most agencies miss ───────────── */}
+        {/* ─── 7. Priority matrix table (both audiences) ──────────────────── */}
+        <PriorityMatrix />
+
+        {/* ─── 8. The one dark section ────────────────────────────────────── */}
         <StrategicDarkSection
-          eyebrow="WHY HEALTHCARE SEO IS DIFFERENT"
-          headline="Three healthcare SEO failures that stall rankings, and that most agencies never fix."
-          lead="The highest-impact gaps in healthcare SEO sit below the standard SEO checklist. These are the three places most generalist agencies leave money on the table."
-          pillars={PILLARS}
+          eyebrow="WHERE HEALTHCARE SEO STALLS"
+          headline="Three healthcare SEO mistakes that quietly cap your rankings."
+          lead="Each one sits below a standard SEO checklist, which is why generic audits miss them."
+          pillars={MISTAKES}
         />
 
-        {/* ─── 7. Specialties, interactive tabs (client component) ───────── */}
-        <HealthcareSpecialtiesTabs />
+        {/* ─── 9. Health tech and healthcare IT (clearly separated section) ─ */}
+        <HealthTechSection />
 
-        {/* ─── 8. Process, visual intro + 5-step journey ──────────────────── */}
-        {/* Visual break image before the 5-step cards, reduces text density */}
-        <div
-          className="relative w-full overflow-hidden"
-          style={{ maxHeight: '400px', backgroundColor: '#0F0F12' }}
-          aria-hidden="true"
-        >
-          <Image
-            src="/images/services/healthcare-seo-process.webp"
-            alt="Healthcare SEO strategy session with ranking charts showing upward trend"
-            width={1344}
-            height={768}
-            className="w-full object-cover opacity-80"
-            style={{ maxHeight: '400px' }}
-            loading="lazy"
-          />
-          {/* Gradient overlays, top and bottom fade to blend with adjacent sections */}
-          <div
-            className="absolute inset-x-0 top-0 h-24 pointer-events-none"
-            style={{ background: 'linear-gradient(to bottom, rgba(15,15,18,0.85) 0%, transparent 100%)' }}
-          />
-          <div
-            className="absolute inset-x-0 bottom-0 h-32 pointer-events-none"
-            style={{ background: 'linear-gradient(to top, rgba(15,15,18,0.90) 0%, transparent 100%)' }}
-          />
-          {/* Floating caption */}
-          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <div className="text-center px-6">
-              <p
-                className="font-fj-mono font-bold uppercase"
-                style={{ fontSize: '11px', letterSpacing: '0.18em', color: '#F05A28' }}
-              >
-                OUR 5-STEP HEALTHCARE SEO PROCESS
-              </p>
-              <p
-                className="mt-2 fj-display font-semibold"
-                style={{
-                  color: '#FAFAF7',
-                  fontSize: 'clamp(1.25rem, 2.5vw, 1.875rem)',
-                  lineHeight: 1.15,
-                  letterSpacing: '-0.02em',
-                  textShadow: '0 2px 16px rgba(0,0,0,0.60)',
-                }}
-              >
-                Audit → Compliance → Rankings → Content → Report
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <ServiceJourneyRow
-          eyebrow="OUR 5-STEP HEALTHCARE SEO PROCESS"
-          headline="From audit to map pack rankings, AI citations, and a full patient-acquisition report."
-          lead="Every healthcare engagement follows the same five steps. The audit defines the compliance and opportunity baseline. The roadmap drives the retainer. Every step ships a deliverable."
-          stages={HEALTHCARE_SEO_JOURNEY}
-          closingNote="Every step ships a deliverable. Every month you see map pack positions, organic rankings, and AI citations in one consolidated report."
-        />
-
-        {/* ─── 8b. Mid-page modal CTA, lower-friction path after specialties ── */}
+        {/* ─── 10. Mid-page CTA (light) ───────────────────────────────────── */}
         <FinalCTA
           variant="light"
-          eyebrow="FREE HEALTHCARE SEO AUDIT"
-          headline="Not sure where your practice stands? Start with a free audit."
-          sub="We'll review your Google Business Profile, top service pages, and local rankings, and send you a prioritized fix list within 48 hours. No sales call required to get started."
-          primaryCta={{ label: 'Get My Free Audit', modal: true, region: 'us' }}
-          secondaryCta={{ label: 'See our approach', href: '#pricing' }}
+          eyebrow="FREE FIRST LOOK"
+          headline="Not sure where you stand? Start with a free first look."
+          sub="Tell us about your site. We will review your Google visibility and the trust signals on your key pages, then send a short, prioritized fix list within 48 hours. No sales call required."
+          primaryCta={{ label: 'Get my free first look', modal: true, region: 'us' }}
+          secondaryCta={{ label: 'See engagement options', href: '#pricing' }}
         />
 
-        {/* ─── 8C. INTERACTIVE OPPORTUNITY ESTIMATOR ──────────────────────── */}
-        <section className="bg-[#FFF8F5] py-16 md:py-24 border-y border-[#E7DED6]">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="text-center max-w-3xl mx-auto mb-12">
-              <span className="inline-block text-sm font-semibold tracking-wider text-[#F05A28] uppercase font-fj-mono">
-                Interactive Practice Growth & Map Pack Estimator
-              </span>
-              <h2 className="mt-3 text-3xl font-extrabold text-[#0F0F12] sm:text-4xl font-fj-display">
-                Estimate Your Healthcare Local SEO Opportunity
-              </h2>
-              <p className="mt-4 text-lg text-[#333333] font-fj-body">
-                Calculate estimated local search patient volume, map pack traffic value, and appointment acquisition returns for your practice.
-              </p>
-            </div>
-            <LocalSeoOpportunityEstimator region="us" />
-          </div>
-        </section>
+        {/* ─── 11. Process ────────────────────────────────────────────────── */}
+        <ServiceJourneyRow
+          eyebrow="HOW AN ENGAGEMENT RUNS"
+          headline="Five steps from audit to rankings, AI answers and a monthly report."
+          lead="Practices and health tech companies follow the same five steps. What changes is the pages we build and the people who review them."
+          stages={HEALTHCARE_SEO_JOURNEY}
+          closingNote="Every step ships a deliverable, and nothing health-related goes live without your reviewer's approval."
+        />
 
-        {/* ─── 9. Comparison vs generalist / freelancer / in-house ─────────── */}
+        {/* ─── 12. Comparison ─────────────────────────────────────────────── */}
         <ComparisonTable
           eyebrow="HOW WE COMPARE"
-          headline="FactoryJet vs agencies, freelancers, and in-house teams."
-          lead="Four ways healthcare organizations approach SEO, and where a healthcare-specialist, compliance-aware model differs in practice."
+          headline="FactoryJet vs generalist agencies, freelancers and in-house teams."
+          lead="Four common ways healthcare organizations staff SEO, and where a health-focused, compliance-aware approach differs."
           columns={[
             { label: 'FactoryJet', isFactoryJet: true },
-            { label: 'Generalist Agency' },
+            { label: 'Generalist agency' },
             { label: 'Freelancer' },
-            { label: 'In-House' },
+            { label: 'In-house' },
           ]}
           rows={[
             {
               feature: 'Contract terms',
-              values: ['Month-to-month', 'Annual common', 'Hourly / project', 'Fixed salary'],
+              values: ['Month-to-month', 'Annual contracts common', 'Hourly or per project', 'Salaried staff'],
             },
             {
-              feature: 'YMYL E-E-A-T expertise',
+              feature: 'Health trust signals (E-E-A-T)',
               values: [
                 <CompareIcon key="fj-eeat" kind="yes" />,
                 <CompareIcon key="gen-eeat" kind="partial" />,
@@ -1541,76 +1695,74 @@ export default function HealthcareSeoServicePage() {
               ],
             },
             {
-              feature: 'HIPAA-safe analytics review',
+              feature: 'Tracking review for patient data risk',
               values: [
-                <CompareIcon key="fj-hipaa" kind="yes" />,
-                <CompareIcon key="gen-hipaa" kind="no" />,
-                <CompareIcon key="free-hipaa" kind="no" />,
-                <CompareIcon key="house-hipaa" kind="partial" />,
+                <CompareIcon key="fj-track" kind="yes" />,
+                <CompareIcon key="gen-track" kind="no" />,
+                <CompareIcon key="free-track" kind="no" />,
+                <CompareIcon key="house-track" kind="partial" />,
               ],
             },
             {
-              feature: 'Google Business Profile + map pack',
+              feature: 'Local SEO for practices',
               values: [
-                <CompareIcon key="fj-gbp" kind="yes" />,
-                <CompareIcon key="gen-gbp" kind="partial" />,
-                <CompareIcon key="free-gbp" kind="partial" />,
-                <CompareIcon key="house-gbp" kind="partial" />,
+                <CompareIcon key="fj-local" kind="yes" />,
+                <CompareIcon key="gen-local" kind="partial" />,
+                <CompareIcon key="free-local" kind="partial" />,
+                <CompareIcon key="house-local" kind="partial" />,
               ],
             },
             {
-              feature: 'Medical schema (MedicalClinic, Physician)',
+              feature: 'B2B health tech content (integrations, security, proof)',
               values: [
-                <CompareIcon key="fj-schema" kind="yes" />,
-                <CompareIcon key="gen-schema" kind="no" />,
-                <CompareIcon key="free-schema" kind="partial" />,
-                <CompareIcon key="house-schema" kind="partial" />,
+                <CompareIcon key="fj-b2b" kind="yes" />,
+                <CompareIcon key="gen-b2b" kind="partial" />,
+                <CompareIcon key="free-b2b" kind="no" />,
+                <CompareIcon key="house-b2b" kind="partial" />,
               ],
             },
             {
-              feature: 'AI citations (ChatGPT / Perplexity / AIO)',
+              feature: 'AI answer visibility reporting',
               values: [
                 <CompareIcon key="fj-ai" kind="yes" />,
-                <CompareIcon key="gen-ai" kind="no" />,
+                <CompareIcon key="gen-ai" kind="partial" />,
                 <CompareIcon key="free-ai" kind="no" />,
                 <CompareIcon key="house-ai" kind="partial" />,
               ],
             },
             {
-              feature: 'Dental SEO + specialty directories',
+              feature: 'Reviewer approval built into publishing',
               values: [
-                <CompareIcon key="fj-dental" kind="yes" />,
-                <CompareIcon key="gen-dental" kind="partial" />,
-                <CompareIcon key="free-dental" kind="partial" />,
-                <CompareIcon key="house-dental" kind="no" />,
+                <CompareIcon key="fj-review" kind="yes" />,
+                <CompareIcon key="gen-review" kind="no" />,
+                <CompareIcon key="free-review" kind="no" />,
+                <CompareIcon key="house-review" kind="partial" />,
               ],
             },
           ]}
-          footer="Comparison reflects typical offerings in each category as of June 2026. Individual providers vary."
+          footer="Comparison reflects typical offerings in each category as of September 2026. Individual providers vary."
         />
 
-        {/* ─── 10. Pricing, custom 4-card grid ────────────────────────────── */}
-        <HealthcareSEOPricingGrid />
+        {/* ─── 13. Engagements (no pricing figures) ───────────────────────── */}
+        <EngagementsSection />
 
-        {/* ─── 11. Industries served ───────────────────────────────────────── */}
-        <IndustriesGrid />
+        {/* ─── 14. Related services (internal links) ──────────────────────── */}
+        <RelatedServices />
 
-        {/* ─── 12. FAQ, 25 items, 6 categories ────────────────────────────── */}
+        {/* ─── 15. FAQ, schema derived from FAQ_ITEMS ─────────────────────── */}
         <FAQ
           eyebrow="HEALTHCARE SEO FAQ"
           headline="Healthcare SEO questions, answered plainly."
-          lead="Questions from practice owners, health tech founders, and dental office managers. If yours is not below, send it in, answers usually come back within 24 hours."
+          lead="The questions practice owners, marketing leads and health tech founders ask most, including the ones people type into Google."
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
         />
 
-        {/* ─── 13. Closing CTA ─────────────────────────────────────────────── */}
-        <TalkToFounder
-          variant="full"
-          theme="dark"
-          eyebrow="FOUNDER ACCESS"
-        />
+        {/* ─── 16. Sources ────────────────────────────────────────────────── */}
+        <SourcesSection />
 
+        {/* ─── 17. Closing CTA (light, keeps the page at one dark section) ── */}
+        <TalkToFounder variant="full" theme="light" eyebrow="FOUNDER ACCESS" />
       </main>
       <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>

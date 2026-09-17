@@ -34,7 +34,13 @@ function loadEnv() {
 loadEnv();
 
 const POSTIZ_BASE_URL = process.env.POSTIZ_URL || 'https://post.factoryjet.com';
-const POSTIZ_API_KEY = process.env.POSTIZ_API_KEY || '8a06467c6521371c4cc3c6c2e1e31969b2d35b4e8dfc12b41005ddbd665cd029';
+// Read from the environment only (.env is loaded above and is git-ignored).
+// This repo is public, so the key must never be written into this file.
+const POSTIZ_API_KEY = process.env.POSTIZ_API_KEY;
+if (!POSTIZ_API_KEY) {
+  console.error('Missing POSTIZ_API_KEY. Add it to .env (git-ignored) or export it in your shell. Never paste the key into this script.');
+  process.exit(1);
+}
 
 function parseArgs() {
   const args = process.argv.slice(2);

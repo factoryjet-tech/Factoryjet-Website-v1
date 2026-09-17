@@ -53,7 +53,7 @@ const MIGRATION_PLATFORMS = [
   {
     name: 'Magento / Adobe Commerce',
     slug: 'magento-to-shopify',
-    link: '/replatforming/magento',
+    link: '/replatforming/magento-to-shopify',
     badge: 'High Enterprise Demand',
     pain: 'Costly cloud hosting bills reach $4,000 to $15,000 monthly. Teams battle endless PHP security patches and fragile extensions. Slow catalog rendering hurts conversions.',
     solution: 'Automated database ETL converts complex EAV catalogs into clean Shopify metafields. Multipass preserves customer passwords. Brands lower ongoing ownership costs by 70%.',
@@ -62,7 +62,7 @@ const MIGRATION_PLATFORMS = [
   {
     name: 'WooCommerce / WordPress',
     slug: 'woocommerce-to-shopify',
-    link: '/replatforming/woocommerce',
+    link: '/replatforming/woocommerce-to-shopify',
     badge: 'DTC & High-Growth Brands',
     pain: 'High-volume flash sales trigger database deadlocks and cart crashes. Plugin updates frequently break checkout steps. Slow mobile speeds degrade user experience.',
     solution: 'We migrate all products, order histories, and subscription tokens to Shopify Plus. Customers enjoy one-tap Shop Pay checkout backed by a 99.99% uptime SLA.',
@@ -71,7 +71,7 @@ const MIGRATION_PLATFORMS = [
   {
     name: 'BigCommerce Enterprise',
     slug: 'bigcommerce-to-shopify-plus',
-    link: '/replatforming/bigcommerce',
+    link: '/replatforming/bigcommerce-to-shopify-plus',
     badge: 'B2B & Multi-Storefront',
     pain: 'Store owners face restrictive checkout customization limits and fragmented app tools. Sluggish API response times degrade speed during catalog promotions.',
     solution: 'We migrate B2B price lists and company accounts to Shopify Plus. We set Net terms and custom rules in Checkout Extensibility.',
@@ -80,7 +80,7 @@ const MIGRATION_PLATFORMS = [
   {
     name: 'Salesforce Commerce Cloud (SFCC)',
     slug: 'salesforce-commerce-cloud-to-shopify-plus',
-    link: '/replatforming/sfcc-to-shopify',
+    link: '/replatforming/salesforce-commerce-cloud-to-shopify-plus',
     badge: 'Global Enterprise Scale',
     pain: 'Brands face steep percentage-of-GMV licensing fees and proprietary vendor lock-in. Multi-month developer onboarding cycles stall product releases.',
     solution: 'We migrate multi-location catalogs to Shopify Plus Markets and modern Next.js frontends. Brands save over $300,000 annually in licensing and hosting fees.',
@@ -98,7 +98,7 @@ const MIGRATION_PLATFORMS = [
   {
     name: 'Squarespace / Wix',
     slug: 'squarespace-to-shopify',
-    link: '/replatforming/squarespace',
+    link: '/replatforming/squarespace-to-shopify',
     badge: 'Scaling SMBs',
     pain: 'Brands face strict catalog size limits and rigid checkouts. Basic platforms lack advanced ERP sync and global currency tools.',
     solution: 'We migrate catalogs and collections to custom Shopify themes. Stores gain multi-carrier shipping automation and higher conversions.',

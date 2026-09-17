@@ -407,7 +407,7 @@ export default function WalmartMarketplaceAgencyPage() {
                 <div>
                   <div className="ic"><Workflow size={22} strokeWidth={2} /></div>
                   <h3 className="disp">Walmart + Amazon + TikTok Shop</h3>
-                  <p>We connect Walmart Marketplace with Amazon, TikTok Shop, and your Shopify or DTC store, so pricing, inventory, and creative stay consistent instead of competing against each other.</p>
+                  <p>We connect Walmart Marketplace with Amazon, <Link href="/services/tiktok-shop-agency" className="wmp-inline-link">TikTok Shop</Link>, and your Shopify or DTC store, so pricing, inventory, and creative stay consistent instead of competing against each other.</p>
                 </div>
                 <div className="mini"><span>Cross-channel</span><span>Consistent pricing</span><span>Shared inventory</span><span>Amazon · TikTok Shop</span></div>
               </div>

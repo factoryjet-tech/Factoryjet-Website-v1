@@ -117,8 +117,14 @@ import { post as aiAgentArchitectureManufacturingRfqErpSync2026Post } from './po
 import { post as magentoToShopifyPlusMigrationChecklist2026Post } from './posts/magento-to-shopify-plus-migration-checklist-2026';
 import { post as multiAgentWorkflowsLanggraphN8nEnterpriseErp2026Post } from './posts/multi-agent-workflows-langgraph-n8n-enterprise-erp-2026';
 import { post as tiktokShopAmazonShopifyPlusMultiChannelInventorySync2026Post } from './posts/tiktok-shop-amazon-shopify-plus-multi-channel-inventory-sync-2026';
+import { post as tiktokShopFeesAndAgencyCost2026Post } from './posts/tiktok-shop-fees-and-agency-cost-2026';
+import { post as ecommerceWebsiteCost2026Post } from './posts/ecommerce-website-cost-2026';
+import { post as localSeoCost2026Post } from './posts/local-seo-cost-2026';
 
 export const POSTS: BlogPost[] = [
+  tiktokShopFeesAndAgencyCost2026Post,
+  ecommerceWebsiteCost2026Post,
+  localSeoCost2026Post,
   enterpriseErpAiAgentsNetsuiteSapEpicorImplementationGuidePost,
   aiVoiceAgentsVsHumanAnsweringServicesCostComparison2026Post,
   aiAgentArchitectureManufacturingRfqErpSync2026Post,
@@ -419,7 +425,7 @@ export const POSTS: BlogPost[] = [
         Two platforms dominate the conversation: React and WordPress. One powers nearly half the internet. The other is reshaping how high-performance websites are built.
       </p>
       <p className="mb-8">
-        In this guide, the team at <a href="https://www.factoryjet.com/" className="text-blue-600 underline">FactoryJet</a> breaks down React vs WordPress across performance, SEO, cost, and scalability. By the end, you will know exactly which platform fits your business.
+        In this guide, the team at <a href="https://factoryjet.com/" className="text-blue-600 underline">FactoryJet</a> breaks down React vs WordPress across performance, SEO, cost, and scalability. By the end, you will know exactly which platform fits your business.
       </p>
 
       <div className="bg-blue-50 p-6 rounded-xl border-l-4 border-blue-500 mb-10">
@@ -4449,7 +4455,7 @@ export const POSTS: BlogPost[] = [
         Unlike agencies that focus only on design aesthetics, FactoryJet approaches every project from a <strong>business-growth and conversion-first perspective</strong>.
       </p>
       <p className="mb-4">
-        At FactoryJet, <strong>our <a href="https://factoryjet.com/services/web-design/mumbai" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 transition-colors">web design services in Mumbai</a></strong> are built around lead generation and measurable growth.
+        At FactoryJet, <strong>our <a href="https://factoryjet.com/web-design/mumbai" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 transition-colors">web design services in Mumbai</a></strong> are built around lead generation and measurable growth.
       </p>
       <ul className="list-disc pl-6 space-y-2 mb-4">
         <li>conversion rate optimization (CRO)</li>
@@ -4639,7 +4645,7 @@ export const POSTS: BlogPost[] = [
         <li><strong>Ongoing support</strong>, They offer maintenance plans so your website stays healthy after launch</li>
       </ul>
       <p className="mb-6">
-        For Mumbai businesses that want <a href="https://factoryjet.com/services/web-design/mumbai" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 transition-colors">website development services in Mumbai</a> focused on actual business growth, FactoryJet is a top recommendation.
+        For Mumbai businesses that want <a href="https://factoryjet.com/web-design/mumbai" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 transition-colors">website development services in Mumbai</a> focused on actual business growth, FactoryJet is a top recommendation.
       </p>
 
       <NativeAd />

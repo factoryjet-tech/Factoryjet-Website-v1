@@ -1026,12 +1026,11 @@ export default function WordPressDevelopmentPage() {
                   { label: 'Surat', slug: 'surat' },
                   { label: 'Jaipur', slug: 'jaipur' },
                   { label: 'Kolkata', slug: 'kolkata' },
-                  { label: 'Lucknow', slug: 'lucknow' },
                   { label: 'Kochi', slug: 'kochi' },
                 ].map(({ label, slug }) => (
                   <a
                     key={slug}
-                    href={`/wordpress-development/${slug}`}
+                    href={`/web-design/${slug}`}
                     className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-medium text-[#B23E13] hover:bg-[rgba(240,90,40,0.15)] transition-colors"
                     style={{ fontSize: '10px', letterSpacing: '0.08em' }}
                   >

@@ -20,7 +20,7 @@ const CITIES = [
 
 const SERVICES = [
   { name: "Web Design UK", slug: "web-design" },
-  { name: "E-Commerce Development UK", slug: "ecommerce" },
+  { name: "E-Commerce Development UK", slug: "ecommerce-development" },
   { name: "AI Agent Development UK", slug: "ai-agents" },
   { name: "AI SEO UK", slug: "ai-seo" },
 ];

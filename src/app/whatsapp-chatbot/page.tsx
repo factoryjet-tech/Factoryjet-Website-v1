@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     title: 'WhatsApp Chatbot Development India | FactoryJet',
     description:
       'WhatsApp chatbots built for Indian businesses, automate support, orders, lead capture & payments. Fixed-price, scoped after a free call. 7-day delivery. Hindi, Tamil, Telugu & more.',
-    url: 'https://factoryjet.com/whatsapp-chatbot/',
+    url: 'https://factoryjet.com/whatsapp-chatbot',
     images: [
       {
         url: 'https://factoryjet.com/images/services/whatsapp-chatbot.webp',
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     images: ['https://factoryjet.com/images/services/whatsapp-chatbot.webp'],
   },
   alternates: {
-    canonical: 'https://factoryjet.com/whatsapp-chatbot/',
+    canonical: 'https://factoryjet.com/whatsapp-chatbot',
   },
   robots: {
     index: true,
@@ -137,7 +137,7 @@ const breadcrumbSchema = {
       '@type': 'ListItem',
       position: 3,
       name: 'WhatsApp Chatbot India',
-      item: 'https://factoryjet.com/whatsapp-chatbot/',
+      item: 'https://factoryjet.com/whatsapp-chatbot',
     },
   ],
 };
@@ -150,7 +150,7 @@ const speakableSchema = {
     '@type': 'SpeakableSpecification',
     cssSelector: ['h1', 'h2:first-of-type'],
   },
-  url: 'https://factoryjet.com/whatsapp-chatbot/',
+  url: 'https://factoryjet.com/whatsapp-chatbot',
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -214,8 +214,8 @@ const WHATSAPP_MARKET_STATS = [
   },
   {
     value: '7 Days',
-    label: 'Average build-to-live time for a FactoryJet WhatsApp chatbot, fastest in India',
-    sourceUrl: 'https://factoryjet.com/india/7-day-website-delivery/',
+    label: 'Average build-to-live time for a FactoryJet WhatsApp chatbot, fastest globally',
+    sourceUrl: 'https://factoryjet.com/case-studies',
     sourceLabel: 'FactoryJet Track Record',
   },
   {
@@ -233,7 +233,7 @@ const WHATSAPP_INDUSTRIES = [
       'Show your digital menu on WhatsApp, take orders, confirm reservations, handle table bookings, and collect customer reviews: all automatically, even during peak hours. No app download needed for your customers.',
     example: 'Restaurants report 25% more completed orders during peak times with chatbot ordering.',
     linkLabel: 'Learn more',
-    linkHref: '/whatsapp-chatbot/',
+    linkHref: '/whatsapp-chatbot',
   },
   {
     name: 'D2C & Ecommerce',
@@ -458,7 +458,7 @@ export default function WhatsAppChatbotINPage() {
         locale="in"
         navLinks={[
           { label: 'Services', href: '/services' },
-          { label: 'WhatsApp Bot', href: '/whatsapp-chatbot/' },
+          { label: 'WhatsApp Bot', href: '/whatsapp-chatbot' },
           { label: 'Portfolio', href: '/portfolio' },          { label: 'Contact', modal: true, region: 'in' },
         ]}
         cta={{ label: 'Get a Free Demo', modal: true, region: 'in' }}
@@ -468,7 +468,7 @@ export default function WhatsAppChatbotINPage() {
         items={[
           { name: 'Home', url: 'https://factoryjet.com' },
           { name: 'Services', url: 'https://factoryjet.com/services' },
-          { name: 'WhatsApp Chatbot India', url: 'https://factoryjet.com/whatsapp-chatbot/' },
+          { name: 'WhatsApp Chatbot India', url: 'https://factoryjet.com/whatsapp-chatbot' },
         ]}
       />
 
@@ -476,7 +476,7 @@ export default function WhatsAppChatbotINPage() {
       <Breadcrumbs items={[
           { name: 'Home', url: 'https://factoryjet.com' },
           { name: 'Services', url: 'https://factoryjet.com/services' },
-          { name: 'WhatsApp Chatbot India', url: 'https://factoryjet.com/whatsapp-chatbot/' },
+          { name: 'WhatsApp Chatbot India', url: 'https://factoryjet.com/whatsapp-chatbot' },
         ]} />
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
@@ -821,7 +821,7 @@ export default function WhatsAppChatbotINPage() {
                     desc: '12+ years building for Indian businesses. We know Razorpay, Zoho, Shiprocket, and the Indian payments stack inside out.',
                   },
                   {
-                    title: '7-day delivery | fastest in India',
+                    title: '7-day delivery | fastest globally',
                     desc: 'Discovery to live chatbot in 7 days. No other agency at this quality level matches this timeline.',
                   },
                   {

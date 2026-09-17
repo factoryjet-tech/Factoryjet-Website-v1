@@ -174,6 +174,15 @@ export const post: BlogPost = {
         Data based on FactoryJet&apos;s analysis of 500+ web projects across India, the US, the UK and the UAE, plus current market rates.
       </p>
 
+      <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg mb-10">
+        <h3 className="text-lg font-bold mb-3 text-gray-900">Found your range? Get the exact figure for your site</h3>
+        <p className="mb-4 text-gray-700 leading-relaxed">
+          Your final price depends on three things: how many pages you need, which features you want (such as Razorpay payments, WhatsApp alerts or online booking), and your launch date. Share those with us and we will send a written quote before any work starts. To see how we plan and build sites for Indian businesses, read about our{' '}
+          <a href="/web-design" className="text-[#B23E13] underline">web design services in India</a>.
+        </p>
+        <a href="/contact" className="inline-block bg-[#B23E13] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#9A3510] transition-colors">Get a free website quote &rarr;</a>
+      </div>
+
       {/* ── What Goes Into the Price ───────────────────────────────────────── */}
       <h2 className="text-2xl font-bold mt-10 mb-4">
         What Actually Goes Into the Price of a Website in India

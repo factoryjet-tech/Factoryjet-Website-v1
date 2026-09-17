@@ -1195,9 +1195,6 @@ export default function ShopifySeoPage() {
       <li><a href="/uk/shopify-development" className="blog-card">
         <p><strong>Shopify development, UK.</strong> For building or rebuilding the store itself rather than tuning one that already exists. &#8594;</p>
       </a></li>
-      <li><a href="/blog/shopify-seo-audit-guide-uk" className="blog-card">
-        <p><strong>How to audit your own Shopify store.</strong> The same checks from the reference above, written as a guide you can run yourself. &#8594;</p>
-      </a></li>
     </ul>
 
     {/* Visible counterpart to dateModified in the WebPage schema above. Both read from

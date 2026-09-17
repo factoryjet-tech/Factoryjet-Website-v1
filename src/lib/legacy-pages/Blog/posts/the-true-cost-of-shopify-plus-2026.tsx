@@ -311,6 +311,16 @@ export const post: BlogPost = {
         </table>
       </div>
 
+      <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg mb-8">
+        <h3 className="text-lg font-bold mb-3 text-gray-900">Want this cost model run on your own numbers?</h3>
+        <p className="mb-4 text-gray-700 leading-relaxed">
+          The table assumes an $85 average order and a standard app stack. Your real total depends on your sales volume, the apps you already pay for, and the systems your store has to connect to, like inventory or accounting software. Send us those details and we will put a written cost estimate for your brand together before any work starts. You can also read how our{' '}
+          <a href="/services/shopify-plus-agency" className="text-[#B23E13] underline">Shopify Plus agency services</a>{' '}
+          work.
+        </p>
+        <a href="/contact" className="inline-block bg-[#B23E13] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#9A3510] transition-colors">Request a Shopify Plus cost estimate &rarr;</a>
+      </div>
+
       <h2 className="text-2xl font-bold mt-10 mb-4 text-gray-900">
         5. Native Plus Features That Eliminate Third-Party App Costs
       </h2>
@@ -492,13 +502,13 @@ export const post: BlogPost = {
           <strong>Lock in a 3-Year Prepaid Rate ($2,300/mo):</strong> By committing to a 3-year term upfront, you save $7,200 across the contract lifecycle and secure grandfathered rate protection against future price increases.
         </li>
         <li>
-          <strong>Negotiate Shopify Payments Basis Points:</strong> Brands processing over $10M annually can request custom custom interchange-plus pricing or reduced domestic basis points (e.g. 2.05% instead of 2.15%), yielding tens of thousands in annual savings.
+          <strong>Negotiate Shopify Payments Basis Points:</strong> Brands processing over $10M annually can request custom interchange-plus pricing or reduced domestic basis points (e.g. 2.05% instead of 2.15%), yielding tens of thousands in annual savings.
         </li>
         <li>
           <strong>Request Additional Free Expansion Stores:</strong> If you operate across 12+ international markets, request 2-5 additional expansion stores bundled into your base agreement, saving up to $15,000 over 3 years.
         </li>
         <li>
-          <strong>Utilize Partner Merchant Success Managers (MSMs):</strong> Working through certified Shopify Plus partner agencies like FactoryJet ensures your RFP is routed to senior enterprise tier specialists with discretionary contract flexibility.
+          <strong>Utilize Partner Merchant Success Managers (MSMs):</strong> Working through a certified Shopify Plus partner agency can help your request for proposal (RFP) reach senior enterprise specialists who have more room to negotiate contract terms.
         </li>
       </ol>
 

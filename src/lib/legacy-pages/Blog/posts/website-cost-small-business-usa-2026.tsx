@@ -190,6 +190,15 @@ export const post: BlogPost = {
         </table>
       </div>
 
+      <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg mb-8">
+        <h3 className="text-lg font-bold mb-3 text-gray-900">Not sure which of these four fits you?</h3>
+        <p className="mb-4 text-gray-700 leading-relaxed">
+          Three answers usually settle it: how many pages you need, how much of the upkeep you want to handle yourself, and when you need to launch. Send us those and we will tell you which option makes sense, then send a written quote before any work starts. To see what a professional build includes, read about our{' '}
+          <a href="/services/web-design" className="text-[#B23E13] underline">web design services</a>.
+        </p>
+        <a href="/contact" className="inline-block bg-[#B23E13] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#9A3510] transition-colors">Get a website quote &rarr;</a>
+      </div>
+
       <h2 className="text-2xl font-bold mt-8 mb-4 text-gray-900">Tier 1: DIY Website Builders ($0-$780/year)</h2>
       <p className="mb-4 text-gray-700 leading-relaxed">
         Wix, Squarespace, and GoDaddy Website Builder charge $23-$65/month for business plans. The upfront cash cost is low, but the real cost is time and opportunity. Building a five-page Wix site takes most non-designers 40-80 hours of learning, building, and editing. At an average US SMB owner hourly value of $75-$150, that is $3,000-$12,000 in opportunity cost before the site is even live.

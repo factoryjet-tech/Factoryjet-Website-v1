@@ -139,6 +139,15 @@ export const post: BlogPost = {
         </table>
       </div>
 
+      <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg mb-8">
+        <h3 className="text-lg font-bold mb-3 text-gray-900">Want a real number for your website?</h3>
+        <p className="mb-4 text-gray-700 leading-relaxed">
+          The table shows ranges because scope sets the price. Tell us how many pages you need, what the site has to connect to (a booking tool, online payments, your customer list), and when it needs to go live. We will send a written scope and quote before any work starts. To see what a build includes, read about our{' '}
+          <a href="/services/web-design" className="text-[#B23E13] underline">web design services</a>.
+        </p>
+        <a href="/contact" className="inline-block bg-[#B23E13] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#9A3510] transition-colors">Get a written quote &rarr;</a>
+      </div>
+
       <h2 className="text-2xl font-bold mt-8 mb-4 text-gray-900">What Drives Website Costs Up (and Down)</h2>
       <p className="mb-4 text-gray-700 leading-relaxed">
         <strong>Technology stack.</strong> Custom Next.js architectures require specialized engineering talent compared to pre-made WordPress templates, but they reliably produce sub-second load times and Lighthouse 95+ scores. This speed advantage converts searchers into leads at a 3x higher rate.

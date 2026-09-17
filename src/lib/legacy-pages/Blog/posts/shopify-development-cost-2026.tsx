@@ -86,7 +86,7 @@ export const post: BlogPost = {
     },
     {
       q: 'Does Shopify charge transaction fees?',
-      a: "Yes, if you don't use Shopify Payments. Transaction fees are 2% on Basic, 1% on Grow, and 0.5% on Advanced. Using Shopify Payments eliminates these fees, but Shopify Payments has its own processing rates (2.9% + 30 cents on Basic, scaling down on higher plans).",
+      a: "Yes, if you don't use Shopify Payments. Transaction fees are 2% on Basic, 1% on Grow, and 0.6% on Advanced. Using Shopify Payments eliminates these fees, but Shopify Payments has its own processing rates (2.9% + 30 cents on Basic, scaling down on higher plans).",
     },
     {
       q: 'Is Shopify good for B2B?',
@@ -230,13 +230,13 @@ export const post: BlogPost = {
               <td className="border p-3">Advanced</td>
               <td className="border p-3">$399/month</td>
               <td className="border p-3">$299/month</td>
-              <td className="border p-3">0.5%</td>
+              <td className="border p-3">0.6%</td>
             </tr>
             <tr className="bg-gray-50">
               <td className="border p-3">Shopify Plus</td>
               <td className="border p-3">$2,300/month</td>
               <td className="border p-3">Lower on annual contract</td>
-              <td className="border p-3">0.15%</td>
+              <td className="border p-3">0.2%</td>
             </tr>
           </tbody>
         </table>
@@ -711,7 +711,7 @@ export const post: BlogPost = {
         </a>{' '}
         puts both of them next to the rest of the field. FactoryJet has delivered Shopify builds
         for US small businesses across markets like{' '}
-        <a href="/nashville" className="text-[#F05A28] font-semibold underline hover:text-[#C94818]">
+        <a href="/nashville/ecommerce-development" className="text-[#F05A28] font-semibold underline hover:text-[#C94818]">
           Nashville
         </a>{' '}
         and beyond, all with a 7-day delivery guarantee.

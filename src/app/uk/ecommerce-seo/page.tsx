@@ -1260,9 +1260,6 @@ export default function EcommerceSeoPage() {
       <a href="/uk/shopify-development" className="blog-card">
         <p>Need the shop built first? UK Shopify development →</p>
       </a>
-      <a href="/blog/ecommerce-seo-vs-paid-ads-uk-2026" className="blog-card">
-        <p>UK ecommerce SEO vs paid ads: the maths in 2026</p>
-      </a>
     </div>
   </div>
 </section>

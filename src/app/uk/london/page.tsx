@@ -37,7 +37,7 @@ const SNAPSHOT = [
   { kw: 'web design london', sub: ' · agency', v: '4,400', w: '100%', href: '/uk/london/web-design' },
   { kw: 'seo agency london', sub: '', v: '3,600', w: '82%', href: '/uk/london/seo' },
   { kw: 'web design agency london', sub: '', v: '2,400', w: '55%', href: '/uk/london/web-design' },
-  { kw: 'ecommerce web design london', sub: '', v: '320', w: '18%', href: '/uk/london/ecommerce-development' },
+  { kw: 'ecommerce web design london', sub: '', v: '320', w: '18%', href: '/uk/ecommerce-development' },
   { kw: 'local seo london', sub: '', v: '260', w: '14%', href: '/uk/london/seo' },
 ];
 
@@ -60,7 +60,7 @@ const ROUTES: {
     rt: 'E-Commerce',
     h: 'Ecommerce Development London',
     p: 'DTC and B2B stores built to convert, on Shopify, WooCommerce, or headless. Product pages, checkout, and the SEO to get found.',
-    href: '/uk/london/ecommerce-development',
+    href: '/uk/ecommerce-development',
     kv: [['Platforms', 'Shopify · Woo'], ['B2B + DTC', 'Yes'], ['Own the code', '100%']],
   },
   {
@@ -665,7 +665,7 @@ export default function LondonHubPage() {
                   <span className="ic"><svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" strokeWidth="2" /><path d="m21 21-4.3-4.3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></span>
                   <div><h3><mark>SEO Agency London</mark></h3><p>Technical, <mark>local seo london</mark>, ecommerce SEO, and <mark>ai seo london</mark> (GEO and AEO). Rank on Google and get cited by AI.</p><span className="go">Explore SEO London →</span></div>
                 </a>
-                <a className="scard" href="/uk/london/ecommerce-development">
+                <a className="scard" href="/uk/ecommerce-development">
                   <span className="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" /><path d="M3 6h18M16 10a4 4 0 0 1-8 0" stroke="currentColor" strokeWidth="2" /></svg></span>
                   <div><h3>E-Commerce Development</h3><p><mark>Ecommerce website design london</mark> for DTC and B2B, built to convert on Shopify, WooCommerce, or headless.</p><span className="go">Explore ecommerce →</span></div>
                 </a>
