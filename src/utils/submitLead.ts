@@ -24,6 +24,7 @@
 
 import { doc, setDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '@/firebase';
+import { readLeadAttribution } from '@/utils/leadAttribution';
 
 export interface LeadInput {
   name: string;
@@ -48,6 +49,8 @@ export interface LeadResult {
   ok: boolean;
   /** The Firestore document id used (shared by both write paths). */
   docId: string;
+  /** The ERPNext CRM Lead ID, if successfully created. */
+  erpLeadId?: string | null;
 }
 
 /** Build a readable, collision-resistant doc id: 2026-06-22_11-04-31_JohnDoe_a1b2 */
@@ -61,7 +64,10 @@ function makeDocId(name: string): string {
 }
 
 /** POST to the edge function with a hard timeout so it can never hang. */
-async function postNotifyLead(payload: Record<string, unknown>, timeoutMs: number): Promise<boolean> {
+async function postNotifyLead(
+  payload: Record<string, unknown>,
+  timeoutMs: number
+): Promise<{ ok: boolean; erpLeadId?: string | null }> {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), timeoutMs);
   try {
@@ -72,9 +78,13 @@ async function postNotifyLead(payload: Record<string, unknown>, timeoutMs: numbe
       signal: controller.signal,
       keepalive: true,
     });
-    return res.ok;
+    if (res.ok) {
+      const data = await res.json().catch(() => null);
+      return { ok: true, erpLeadId: data?.erpLeadId || null };
+    }
+    return { ok: false };
   } catch {
-    return false;
+    return { ok: false };
   } finally {
     clearTimeout(timer);
   }
@@ -84,6 +94,9 @@ export async function submitLead(input: LeadInput): Promise<LeadResult> {
   const docId = makeDocId(input.name);
   const page = input.page ?? (typeof window !== 'undefined' ? window.location.pathname : '');
   const collection = input.collection || 'contactus';
+  // Where this visitor came from (landing page, referring site, UTM tags), so the
+  // lead email and CRM record say which page and channel produced this lead.
+  const attribution = readLeadAttribution();
 
   const payload = {
     docId,
@@ -97,12 +110,15 @@ export async function submitLead(input: LeadInput): Promise<LeadResult> {
     region: input.region || '',
     source: input.source,
     page,
+    ...attribution,
     turnstileToken: input.turnstileToken || '',
   };
 
   // (1) Authoritative: server-side write + email. Timeout 8s, then one 6s retry.
-  let ok = await postNotifyLead(payload, 8000);
-  if (!ok) ok = await postNotifyLead(payload, 6000);
+  let postRes = await postNotifyLead(payload, 8000);
+  if (!postRes.ok) postRes = await postNotifyLead(payload, 6000);
+  const ok = postRes.ok;
+  const erpLeadId = postRes.erpLeadId;
 
   // (2) Best-effort secondary: client Firestore write. Fire-and-forget — never
   //     awaited, so a hung/slow SDK cannot block the user. Same docId keeps it
@@ -121,6 +137,7 @@ export async function submitLead(input: LeadInput): Promise<LeadResult> {
         source: input.source,
         // `page` MUST be mirrored here — see the merge note below.
         page,
+        ...attribution,
         turnstileToken: input.turnstileToken || '',
         createdAt: serverTimestamp(),
         status: 'new',
@@ -139,5 +156,5 @@ export async function submitLead(input: LeadInput): Promise<LeadResult> {
     /* ignore — never block on the client SDK */
   }
 
-  return { ok, docId };
+  return { ok, docId, erpLeadId };
 }

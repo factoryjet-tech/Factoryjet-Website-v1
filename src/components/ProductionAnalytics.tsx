@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
+import { captureLeadAttribution } from '@/utils/leadAttribution';
 
 /**
  * ProductionAnalytics — loads the GTM container ONLY, and ONLY on the production
@@ -20,12 +21,22 @@ import { usePathname } from 'next/navigation';
  * This component also listens to App Router client-side transitions via `usePathname()`
  * to push `page_view` events with `page_path` and `page_location` on every route change,
  * preventing SPA navigation from dropping landing paths into `(not set)`.
+ *
+ * It also records where the visitor came from (landing page, referring site,
+ * UTM tags) in the visitor's own browser, so submitLead can attach it to the
+ * lead record. That step makes no network call and pushes nothing to the
+ * dataLayer, so it cannot affect GA4 or Ads counts. See utils/leadAttribution.ts.
  */
 
 const PROD_HOSTS = ['factoryjet.com', 'www.factoryjet.com'];
 
 export default function ProductionAnalytics() {
   const pathname = usePathname();
+
+  // 0. Remember where this visitor came from, for the lead record (all hosts, no network)
+  useEffect(() => {
+    captureLeadAttribution();
+  }, []);
 
   // 1. Initial GTM Container Load (production host gated)
   useEffect(() => {
