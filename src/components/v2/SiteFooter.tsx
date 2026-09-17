@@ -87,7 +87,7 @@ const IN_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
       { label: 'Shopify Development',  href: '/shopify-development' },
       { label: 'WordPress Development', href: '/wordpress-development' },
       { label: 'n8n Automation',       href: '/n8n-automation' },
-      { label: 'WhatsApp Chatbot',     href: '/whatsapp-chatbot/' },
+      { label: 'WhatsApp Chatbot',     href: '/whatsapp-chatbot' },
       { label: 'AI Agent Development', href: '/services/ai-agent-development' },
     ],
   },

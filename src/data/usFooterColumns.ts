@@ -25,12 +25,21 @@ import type { SiteFooterColumn } from '@/components/v2/SiteFooter';
  * link to it, and counting sitemaps once made every US link look safe to cut.
  * At the last run, /colorado-springs/seo was the single US page at risk; it is
  * kept reachable from /services/seo.
+ *
+ * 2026-09-17: the SiteHeader dropdown panels only mount on hover, so none of their
+ * links exist in the HTML crawlers receive. This footer is the crawlable path to
+ * money pages. 13 menu destinations in the AI agent, ecommerce and replatforming
+ * lines had no crawlable sitewide link and were added. City pages stay out on
+ * purpose (see point 1). /services/ai-workflow-automation is left out because it
+ * duplicates /services/ai-agent-development/ai-workflow-automation.
  */
 export const US_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
   {
     heading: 'Commerce',
     links: [
       { label: 'E-Commerce Development', href: '/services/ecommerce-development' },
+      { label: 'Ecommerce Consulting',   href: '/ecommerce-consulting' },
+      { label: 'Ecommerce Growth Agency', href: '/services/ecommerce-growth-agency' },
       { label: 'Ecommerce CRO Agency',   href: '/services/ecommerce-cro-agency' },
       { label: 'B2B E-Commerce',         href: '/b2b-ecommerce' },
       { label: 'Omnichannel Commerce',   href: '/omnichannel-commerce' },
@@ -41,6 +50,7 @@ export const US_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
       { label: 'For Manufacturers',      href: '/ecommerce-for-manufacturers' },
       { label: 'Amazon Agency',          href: '/services/amazon-agency' },
       { label: 'TikTok Shop Agency',     href: '/services/tiktok-shop-agency' },
+      { label: 'Walmart Marketplace Agency', href: '/services/walmart-marketplace-agency' },
       { label: 'Target Plus Marketplace',href: '/target-plus-marketplace' },
       { label: 'Faire Wholesale Agency', href: '/faire-wholesale-marketplace' },
       { label: 'Replatforming Calculator', href: '/tools/replatforming-cost-calculator' },
@@ -59,6 +69,9 @@ export const US_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
       { label: 'Headless vs Monolithic',  href: '/comparisons/headless-commerce-vs-monolithic' },
       { label: 'BigCommerce to Shopify',  href: '/replatforming/bigcommerce-to-shopify-plus' },
       { label: 'SuiteCommerce to Shopify',href: '/replatforming/netsuite-suitecommerce-to-shopify-plus' },
+      { label: 'Magento to Shopify',      href: '/replatforming/magento-to-shopify' },
+      { label: 'WooCommerce to Shopify',  href: '/replatforming/woocommerce-to-shopify' },
+      { label: 'Salesforce CC to Shopify Plus', href: '/replatforming/salesforce-commerce-cloud-to-shopify-plus' },
       { label: 'Shopify Development',     href: '/services/shopify-development' },
       { label: 'Shopify Plus B2B',        href: '/services/shopify-plus-b2b' },
       { label: 'Magento Development',     href: '/services/magento-development' },
@@ -73,6 +86,9 @@ export const US_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
     heading: 'AI Agents & Automation',
     links: [
       { label: 'Custom AI Agent Development', href: '/services/ai-agent-development' },
+      { label: 'AI Automation Agency',        href: '/services/ai-automation' },
+      { label: 'AI Chatbot Development',      href: '/services/ai-chatbot-development' },
+      { label: 'AI Integration Services',     href: '/services/ai-integration-services' },
       { label: 'Chemical & Pharma AI Agents', href: '/services/chemical-pharmaceutical-ai-agents' },
       { label: 'Ag Equipment AI Agents',      href: '/services/agriculture-equipment-ai-agents' },
       { label: 'Legal AI Agents',             href: '/services/legal-ai-agents' },
@@ -89,6 +105,7 @@ export const US_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
       { label: 'Voice AI Agents',             href: '/services/ai-agent-development/ai-voice-agent' },
       { label: 'n8n Automation',              href: '/n8n-automation' },
       { label: 'AI SEO & Visibility',         href: '/services/ai-seo' },
+      { label: 'GEO Agency',                  href: '/services/generative-engine-optimization' },
       { label: 'AI Visibility Checker',       href: '/ai-visibility-checker' },
     ],
   },
@@ -98,7 +115,10 @@ export const US_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
       { label: 'Web Design',             href: '/services/web-design' },
       { label: 'SEO Services',           href: '/services/seo' },
       { label: 'E-Commerce SEO',         href: '/services/ecommerce-seo' },
+      { label: 'Shopify SEO',            href: '/services/shopify-seo' },
       { label: 'Local SEO',              href: '/services/local-seo' },
+      { label: 'Healthcare SEO',         href: '/services/healthcare-seo' },
+      { label: 'Web App Development',    href: '/services/web-application-development' },
       { label: 'All Services',           href: '/services' },
     ],
   },

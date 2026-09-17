@@ -315,7 +315,7 @@ const IN_WEB_SERVICES = [
   { icon: ShoppingCart,   label: 'E-Commerce',          href: '/services/ecommerce-development', desc: 'End-to-end online stores' },
   { icon: ShoppingBag,    label: 'Shopify Development', href: '/shopify-development',            desc: 'Custom storefronts & themes' },
   { icon: Workflow,       label: 'n8n Automation',      href: '/n8n-automation',                 desc: 'No-code workflow automation' },
-  { icon: MessageSquare,  label: 'WhatsApp Chatbot',    href: '/whatsapp-chatbot/',              desc: 'Automate orders, leads & support' },
+  { icon: MessageSquare,  label: 'WhatsApp Chatbot',    href: '/whatsapp-chatbot',               desc: 'Automate orders, leads & support' },
 ] as const;
 
 // Hub page href used in both desktop mega and mobile drawer
