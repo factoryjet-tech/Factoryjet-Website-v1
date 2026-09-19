@@ -142,25 +142,29 @@ const faqs = [
     q: 'What should I do first if I want an AI agent?',
     a: 'Count one queue for two weeks. How many items, how long each takes, how many follow the same rule. That single spreadsheet decides whether you need an agent, a workflow, or a process fix, and it is worth more than any vendor demo you will sit through.',
   },
+  {
+    q: 'What determines which cost tier my AI agent falls into?',
+    a: 'Four things push a build from simple to complex: how many systems it has to connect to, how much compliance or safety logic those systems require, how messy or large the data is, and how much ongoing monitoring the result needs. A single-workflow agent on one clean API, like a helpdesk, sits at the simple end. An agent touching an ERP with compliance requirements and an ongoing governance commitment sits at the complex end. See the build-cost tiers earlier in this article for the full breakdown, or "How much does it cost to build an AI agent?" above for the published dollar range.',
+  },
 ];
 
 export const post: BlogPost = {
   id: '427',
   slug: 'what-is-an-ai-agent-cost-2026',
-  title: 'How Much Does an AI Agent Cost in 2026? Build, Run or Rent One',
+  title: 'How Much Does AI Agent Development Cost in 2026? Build, Run or Rent One',
   excerpt:
     'Most AI agent price guides quote one number and hide the other two. Here are all three: what the model calls cost on published rates, what renting an agent costs per result, and why the build is where the money goes. Plus the one test that tells you whether you are buying an agent or a chatbot.',
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
-  date: 'Sep 17, 2026',
+  date: 'Sep 19, 2026',
   readTime: '17 min read',
   imageUrl: '/blog-images/what-is-an-ai-agent-cost-2026.webp',
   imageAlt:
     'A desk with a laptop showing a support ticket queue beside a printed integration diagram and a calculator, representing the real cost of running an AI agent',
   meta: {
-    title: 'How Much Does an AI Agent Cost? Build, Run or Rent (2026)',
+    title: 'AI Agent Development Cost in 2026: Build, Run or Rent',
     description:
-      'What an AI agent costs in 2026: model bills in the tens of dollars a month, rented agents at $0.99 per outcome, and builds from $5,000 to $180,000+.',
+      'AI agent development cost in 2026: model bills in the tens of dollars a month, rented agents at $0.99 per outcome, and builds from $5,000 to $180,000+.',
   },
   keyTakeaways: [
     'An AI agent has three costs: the model calls it makes, the build that connects it to your systems, and the people and monitoring that keep it working. Vendors tend to quote whichever one looks smallest.',
@@ -377,31 +381,43 @@ export const post: BlogPost = {
         $10,000 to $40,000. Treat those as a seller's ranges rather than a quote, but notice what
         they say: connecting the agent to your systems costs more than the AI.
       </p>
-      <p>What moves your number:</p>
+      <p>
+        <strong>Three tiers, in practice.</strong> The ProductCrafters range above is wide because
+        "AI agent" covers three different projects under one label, and which tier yours lands in
+        decides where in that range it sits.
+      </p>
       <ul className="list-disc pl-6 space-y-2 mb-6">
         <li>
-          <strong>How many systems it writes to.</strong> A single-queue agent on systems with clean
-          APIs (Shopify, Zendesk, HubSpot) is the cheap case.
+          <strong>Simple, single-workflow agent.</strong> One queue, one or two tools, systems with
+          clean APIs (Shopify, Zendesk, HubSpot). A refund-and-reship agent on a single helpdesk is
+          the standard example. Fewest integration points, the simplest permission model, and the
+          cheapest to build and to run.
         </li>
         <li>
-          <strong>Anything touching an ERP</strong>, the system that runs inventory, orders and
-          accounting (NetSuite, SAP, an on-prem system, or a database somebody's cousin designed in
-          2009). It costs meaningfully more, and the estimate is
-          mostly a guess until someone has looked at the data.
+          <strong>Mid-complexity agent.</strong> Connects to one or two core business systems
+          instead of one, and at least one tool moves money or changes a record, so it needs a
+          permission gate, an audit log, and idempotency (a retry cannot repeat the action) on top
+          of the model work. A quote or RFQ agent that reads a CRM, checks inventory and drafts an
+          order is a typical example.
         </li>
         <li>
-          <strong>Money and permissions.</strong> A tool like <code>issue_refund</code> needs a
-          spend cap, a permission gate, an audit log, and idempotency, which means a retry cannot
-          refund twice. That is engineering, not prompting.
-        </li>
-        <li>
-          <strong>Testing.</strong> Before launch you need a set of real past tickets and a way to
-          score the agent's answers against them. Skipping this is how demos turn into incidents.
+          <strong>Complex, multi-system agent.</strong> Several systems, usually including one
+          legacy or ERP integration with messy or undocumented data (NetSuite, SAP, an on-prem
+          system, or a database somebody's cousin designed in 2009), compliance or safety logic
+          beyond a simple rule, and ongoing governance: continuous monitoring, a maintenance
+          commitment, and re-testing against real data every time something changes, not just
+          before launch. This is the tier that fills out the top of the ProductCrafters range.
         </li>
       </ul>
       <p>
-        The variable is never the model. It is how many systems have to be touched and how bad their
-        data is.
+        One requirement applies to all three tiers: before launch you need a set of real past
+        tickets or transactions and a way to score the agent's answers against them. Skipping this
+        step is how demos turn into incidents, regardless of tier.
+      </p>
+      <p>
+        What moves a project up a tier is never the model. It is how many systems it has to touch,
+        how much compliance or safety logic those systems require, how messy the data is, and how
+        much ongoing monitoring the result needs.
       </p>
       <p>
         What we recommend first, every time: <strong>a pilot on one narrow queue, two to four weeks

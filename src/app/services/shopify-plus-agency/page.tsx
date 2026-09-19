@@ -12,12 +12,12 @@ import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-06';
+const PAGE_MODIFIED = '2026-09-19';
 
 export const metadata: Metadata = {
-  title: 'Shopify Plus Agency: Enterprise Development | FactoryJet',
+  title: 'Shopify Plus Development Agency | FactoryJet',
   description:
-    'Enterprise Shopify Plus agency for US brands. Custom checkout extensibility, Shopify Functions, B2B wholesale catalogs, expansion stores, and ERP sync.',
+    'Enterprise Shopify Plus development agency for US brands. Checkout extensibility, Shopify Functions, B2B wholesale catalogs, expansion stores, and ERP sync.',
   keywords: [
     'shopify plus agency',
     'shopify plus development agency',
@@ -465,7 +465,7 @@ export default function ShopifyPlusAgencyPage() {
               <div>
                 <p className="pp-eyebrow">Shopify Plus agency</p>
                 <h1 style={{ margin: '14px 0 12px', maxWidth: '19ch' }}>
-                  Shopify Plus work that lives below the theme.
+                  Shopify Plus development that lives below the theme.
                 </h1>
                 <p className="pp-lead" style={{ maxWidth: '50ch' }}>
                   We are a Shopify Plus development agency for high-growth US brands. We engineer checkout extensibility, server-side Shopify Functions, and native B2B wholesale. We build expansion stores and live ERP sync. Every system is built so platform updates never break checkout.
