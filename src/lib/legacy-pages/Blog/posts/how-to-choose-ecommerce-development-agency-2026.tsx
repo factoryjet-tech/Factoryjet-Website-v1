@@ -120,7 +120,7 @@ export const post: BlogPost = {
   author: 'Bhavesh Barot',
   date: 'Sep 19, 2026',
   readTime: '15 min read',
-  imageUrl: '/blog-images/how-to-choose-ecommerce-development-agency-2026.webp',
+  imageUrl: '/blog-images/best-ecommerce-development-agencies-usa.webp',
   imageAlt:
     'A business owner reviewing an ecommerce agency proposal and portfolio on a laptop before a hiring decision',
   meta: {

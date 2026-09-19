@@ -739,6 +739,7 @@ export default function AiReceptionistPage() {
                 { h: 'Auto dealerships and service centres', d: 'Service bookings, parts availability, and trade-in enquiries routed to the right department instead of a hold queue.', href: '/services/automotive-ai-voice-agents' },
                 { h: 'Manufacturers and distributors', d: 'Inbound RFQ capture, order status calls, and supplier routing handled without pulling anyone off the floor.', href: '/services/manufacturing-ai-agents' },
                 { h: 'Property management and leasing', d: 'Prospective-tenant tours, application FAQs, and fair-housing-safe screening booked straight into AppFolio or Yardi.', href: '/services/property-management-ai-agents' },
+                { h: 'Dental support organizations', d: 'Centralized answering and scheduling across every location, standardized on Denticon or Dentrix Ascend, under a HIPAA BAA.', href: '/services/dental-support-organization-ai-agents' },
               ].map((x) => (
                 <div key={x.h} className="p-6 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6]">
                   <h3 className="text-lg font-bold text-[#14110F] mb-2">{x.h}</h3>
