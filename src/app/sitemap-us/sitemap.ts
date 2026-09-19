@@ -225,6 +225,7 @@ const US_ROUTES: { path: string; source: string }[] = [
   { path: '/comparisons/n8n-vs-langchain-vs-crewai-enterprise', source: 'src/app/comparisons/n8n-vs-langchain-vs-crewai-enterprise/page.tsx' },
   { path: '/comparisons/shopify-plus-vs-custom-headless-nextjs', source: 'src/app/comparisons/shopify-plus-vs-custom-headless-nextjs/page.tsx' },
   { path: '/services/healthcare-ai-agents',                 source: 'src/app/services/healthcare-ai-agents/page.tsx' },
+  { path: '/services/property-management-ai-agents',        source: 'src/app/services/property-management-ai-agents/page.tsx' },
   { path: '/services/ai-receptionist',           source: 'src/app/services/ai-receptionist/page.tsx' },
   { path: '/services/manufacturing-ai-agents',              source: 'src/app/services/manufacturing-ai-agents/page.tsx' },
   { path: '/services/restaurant-ai-voice-agents',           source: 'src/app/services/restaurant-ai-voice-agents/page.tsx' },

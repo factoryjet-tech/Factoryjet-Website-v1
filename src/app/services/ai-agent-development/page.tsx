@@ -1022,6 +1022,7 @@ export default function AIAgentDevelopmentPage() {
                 { t: 'AI SDR and BDR agents.', d: 'Outbound sequences and lead qualification synced with HubSpot and Salesforce.', href: '/services' + '/ai-sdr' },
                 { t: 'AI customer support agents.', d: 'Order inquiries and refund processing synced with Zendesk and Gorgias.', href: '/services' + '/ai-customer-support-agents' },
                 { t: 'Real estate AI agents.', d: 'Lead qualification and showings synced with Follow Up Boss and kvCORE.', href: '/services' + '/ai-agents-for-real-estate' },
+                { t: 'Property management AI agents.', d: 'Leasing tours and fair-housing-safe screening synced with AppFolio and Yardi.', href: '/services' + '/property-management-ai-agents' },
                 { t: 'AI integration services.', d: 'Connect LLMs directly to CRM, ERP, and internal databases securely.', href: '/services' + '/ai-integration-services' },
                 { t: 'Ecommerce CRO agency.', d: 'Checkout friction and cart abandonment optimization on Shopify Plus.', href: '/services' + '/ecommerce-cro-agency' },
               ].map((a) => (

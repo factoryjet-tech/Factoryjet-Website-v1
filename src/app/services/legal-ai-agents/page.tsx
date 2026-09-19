@@ -11,10 +11,10 @@ import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
 const CANONICAL_URL = 'https://factoryjet.com/services/legal-ai-agents';
-const PAGE_TITLE = 'Legal AI Agents & Law Firm Automation | FactoryJet';
+const PAGE_TITLE = 'Legal AI Agents & AI Receptionist for Law Firms | FactoryJet';
 const PAGE_DESC =
-  'Custom legal AI agents for US law firms. Automate client intake, contract redlining, and discovery with direct Clio, MyCase & Filevine sync. Get an audit.';
-const PAGE_MODIFIED = '2026-09-01';
+  'Custom AI receptionist and legal AI agents for law firms. Automate intake, contract redlining & discovery with Clio, MyCase & Filevine sync. Get an audit.';
+const PAGE_MODIFIED = '2026-09-19';
 
 /** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
  *  <Breadcrumbs> component and the BreadcrumbList JSON-LD below. So the two
@@ -39,6 +39,9 @@ export const metadata: Metadata = {
     'ai document discovery legal',
     'law firm workflow automation',
     'attorney client privilege ai',
+    'ai receptionist for law firms',
+    'virtual receptionist for law firms',
+    'law firm ai receptionist',
   ],
   alternates: {
     canonical: CANONICAL_URL,
@@ -204,6 +207,24 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     question: 'Can the agent process scanned or handwritten documents, not just clean digital PDFs?',
     answer:
       'Yes. The parsing pipeline runs legal-tuned OCR. Scanned pleadings index cleanly. Faxed medical records get processed. Handwritten intake notes parse accurately. Low-confidence passages flag for human review. The system avoids silent guesses. Citation accuracy remains intact.',
+  },
+  {
+    category: 'intake',
+    question: 'How much does an AI receptionist cost for a law firm?',
+    answer:
+      'Cost mostly depends on three things: how many calls and web inquiries your firm handles, how many systems the agent has to connect to (your practice management platform, document repository, and phone lines), and how much conflict-check and jurisdiction logic it needs to run. A solo practice connecting to one system costs far less to build than a multi-office firm that needs Clio, Filevine, and NetDocuments wired together with state-specific intake rules. Most firms weigh that one-time build cost against what they already spend on an answering service or lose from missed after-hours calls. Ask any vendor for a scoped quote based on your own call volume and systems, not a flat number that ignores your setup.',
+  },
+  {
+    category: 'intake',
+    question: 'Is an AI receptionist a good idea for a law firm?',
+    answer:
+      'For most firms, yes, with the right guardrails. An AI receptionist that answers on the first ring, captures the facts of a case, and checks statute of limitations dates converts far more first-time callers than voicemail or a full inbox. The risk is not the technology, it is scope. The agent should qualify and route, not give legal advice or guarantee case value. A firm that keeps a clear line between what the agent handles and what only an attorney can decide gets the upside of a faster response and fewer missed calls without the downside of unauthorized practice of law or a bad promise made to a prospective client.',
+  },
+  {
+    category: 'intake',
+    question: 'Who has the best AI receptionist for law firms?',
+    answer:
+      'There is no single best answer, it depends on your practice area, call volume, and practice management system. When you evaluate any AI receptionist for a law firm, check five things: does it run real conflict checks against your actual client database before a consultation gets booked, does it read and write to your practice management system in real time such as Clio, Filevine, or MyCase, does it stick to intake questions instead of drifting into legal advice, do you own the workflow and code or rent it every month, and can you hear a real call recording or see a live demo before you commit. A generic customer-service bot can take a message. A law firm usually needs something built to check conflicts, capture statute of limitations dates, and hand off cleanly to an attorney.',
   },
 ];
 
@@ -371,7 +392,7 @@ export default function LegalAiAgentsPage() {
                 </div>
 
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#14110F] font-heading leading-tight mb-6">
-                  Custom Legal AI Agents with Live Clio &amp; Filevine Sync.
+                  Custom Legal AI Agents &amp; AI Receptionist for Law Firms.
                 </h1>
 
                 <p className="text-lg sm:text-xl text-[#46403B] mb-8 leading-relaxed">

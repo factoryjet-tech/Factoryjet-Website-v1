@@ -196,12 +196,93 @@ export function decideGeoRedirect({ path, country, userAgent }) {
   )
 }
 
+// ─── AI-agent Accept-header probe (added 2026-09-09) ───
+// WHY: deciding whether to pay for Cloudflare's "Markdown for Agents" (needs the Pro
+// plan, ~$20/mo) turns on one fact no public source answers: does any AI crawler
+// actually send `Accept: text/markdown`? Cloudflare only converts when a client asks,
+// so if nothing asks, the feature is inert and the money is wasted. This records who
+// asks for what, on our own traffic, for free. Read it after ~2 weeks (query in
+// docs/AGENT-ACCEPT-PROBE.md), then either act on it or delete this block.
+//
+// Deliberately NARROWER than EXEMPT_CRAWLER_UA above: that list is over-inclusive on
+// purpose (it matches 'bot/', '+http' and social unfurlers) because a false positive
+// there is harmless. Here a false positive is noise that buries the signal.
+export const AI_AGENT_UA = [
+  'gptbot', 'oai-searchbot', 'chatgpt-user',
+  'claudebot', 'claude-searchbot', 'claude-user', 'anthropic-ai',
+  'perplexitybot', 'perplexity-user',
+  'google-extended', 'googleother', 'applebot-extended', 'meta-externalagent',
+  'bytespider', 'ccbot', 'cohere', 'amazonbot', 'diffbot', 'omgilibot',
+  'youbot', 'timpibot',
+]
+
+/**
+ * Why this request is worth recording, or null to skip it.
+ * Pure function — covered by scripts/test-agent-probe.mjs.
+ */
+export function classifyAgentRequest({ userAgent, accept }) {
+  // Checked FIRST and independently of the UA list: an agent we have never heard of
+  // asking for markdown is the single most valuable thing this probe can catch, and
+  // a UA allowlist would throw exactly that observation away.
+  if ((accept || '').toLowerCase().includes('markdown')) return 'markdown-requested'
+  const ua = (userAgent || '').toLowerCase()
+  if (!ua) return null
+  return AI_AGENT_UA.some((sig) => ua.includes(sig)) ? 'ai-agent' : null
+}
+
+// Blob cap. Analytics Engine allows 16 KB of blobs per data point; a hostile or
+// broken client can send a multi-KB UA, and we would rather truncate than drop.
+const PROBE_FIELD_CAP = 256
+
+/**
+ * Fire-and-forget telemetry. CONTRACT: this must never throw and never await.
+ * A probe failure may not cost us a page render, so every path is swallowed.
+ */
+function recordAgentRequest(env, request, path) {
+  try {
+    const userAgent = request.headers.get('user-agent') || ''
+    const accept = request.headers.get('accept') || ''
+    const reason = classifyAgentRequest({ userAgent, accept })
+    if (!reason) return
+
+    const blobs = [
+      reason,
+      userAgent.slice(0, PROBE_FIELD_CAP),
+      accept.slice(0, PROBE_FIELD_CAP),
+      path.slice(0, PROBE_FIELD_CAP),
+      request.headers.get('cf-ipcountry') || '',
+    ]
+
+    const ds = env && env.AGENT_ACCEPT_LOG
+    if (ds && typeof ds.writeDataPoint === 'function') {
+      // writeDataPoint is non-blocking and adds no latency to the response.
+      ds.writeDataPoint({
+        indexes: [reason], // Analytics Engine allows exactly 1 index, max 96 bytes
+        blobs,
+        doubles: [1],
+      })
+      return
+    }
+
+    // Binding absent (not yet deployed, or plan does not carry Analytics Engine).
+    // Still observable via `wrangler pages deployment tail` — the probe must never
+    // go completely silent, or we would read "no data" as "no bot asked".
+    console.log(JSON.stringify({ probe: 'agent-accept', blobs }))
+  } catch {
+    // Intentionally empty. See the contract above.
+  }
+}
+
 // --- Cloudflare Pages Functions entrypoint ---
 export async function onRequest(context) {
-  const { request, next } = context
+  const { request, next, env } = context
   try {
     const url = new URL(request.url)
     const path = url.pathname
+
+    // Probe runs on EVERY request, so it must sit above the early return below —
+    // most AI-bot traffic lands on paths that are not geo-sensitive.
+    recordAgentRequest(env, request, path)
 
     // Only geo-sensitive paths are country/UA-dependent. Everything else passes
     // straight through untouched (keeps its normal edge caching + the /api function).

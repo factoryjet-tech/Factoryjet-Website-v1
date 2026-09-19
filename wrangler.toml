@@ -4,3 +4,12 @@
 name = "factoryjet"
 compatibility_date = "2024-01-01"
 pages_build_output_dir = "out"
+
+# Accept-header probe → see the AI-agent probe block in functions/_middleware.js.
+# Answers "does any AI crawler ask for text/markdown?" before we pay for Cloudflare's
+# Markdown for Agents (Pro plan). The dataset is created implicitly on first write —
+# nothing to provision in the dashboard. Free tier covers 10M writes/month; this
+# probe writes only for AI user-agents, so it will not come close.
+[[analytics_engine_datasets]]
+binding = "AGENT_ACCEPT_LOG"
+dataset = "fj_agent_accept"
