@@ -90,6 +90,7 @@ import { post as howToSellOnWalmartMarketplace2026Post } from './posts/how-to-se
 import { post as whatIsAgenticAiPost } from './posts/what-is-agentic-ai';
 import { post as howToChooseDigitalMarketingAgencyIndia2026Post } from './posts/how-to-choose-digital-marketing-agency-india-2026';
 import { post as howToChooseEcommerceDevelopmentAgency2026Post } from './posts/how-to-choose-ecommerce-development-agency-2026';
+import { post as howToChooseHeadlessCommerceAgency2026Post } from './posts/how-to-choose-headless-commerce-agency-2026';
 import { post as aiAgentBuildVsBuy2026Post } from './posts/ai-agent-build-vs-buy-2026';
 import { post as digitalMarketingForSmallBusinessIndiaPost } from './posts/digital-marketing-for-small-business-india';
 import { post as whatIsAgenticCommercePost } from './posts/what-is-agentic-commerce';
@@ -169,6 +170,7 @@ export const POSTS: BlogPost[] = [
   howToChooseDigitalMarketingAgencyIndia2026Post,
   digitalMarketingForSmallBusinessIndiaPost,
   howToChooseEcommerceDevelopmentAgency2026Post,
+  howToChooseHeadlessCommerceAgency2026Post,
   aiAgentBuildVsBuy2026Post,
   // --- WEB DESIGN & STRATEGY ---
 { 

@@ -36,6 +36,11 @@ import type { SiteFooterColumn } from '@/components/v2/SiteFooter';
  * hub was merged by 301 into /services/ai-workflow-automation, so the "AI
  * Workflow Automation" link below now points at the kept page directly.
  *
+ * 2026-09-20 (Tier 1 content swarm): added /services/ecommerce-audit (free
+ * commerce audit offer page) and /services/dtc-ecommerce-agency (DTC scaling
+ * partner page) to Commerce for the same crawlable-path reason as the
+ * 2026-09-17 note above.
+ *
  * 2026-09-17 (wave 1 wiring): added the two new support pages
  * (/services/shopify-maintenance-services, /services/ai-agent-monitoring) and
  * renamed the Commerceflo link to "Commerceflo by FactoryJet" so the maker's
@@ -46,6 +51,8 @@ export const US_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
     heading: 'Commerce',
     links: [
       { label: 'E-Commerce Development', href: '/services/ecommerce-development' },
+      { label: 'DTC Ecommerce Agency',   href: '/services/dtc-ecommerce-agency' },
+      { label: 'Free Ecommerce Audit',   href: '/services/ecommerce-audit' },
       { label: 'Shopify Maintenance & Support', href: '/services/shopify-maintenance-services' },
       { label: 'Ecommerce Consulting',   href: '/ecommerce-consulting' },
       { label: 'Ecommerce Growth Agency', href: '/services/ecommerce-growth-agency' },

@@ -176,6 +176,8 @@ const US_ROUTES: { path: string; source: string }[] = [
   { path: '/services/ecommerce-development',               source: 'src/app/services/ecommerce-development/page.tsx' },
   { path: '/services/ecommerce-growth-agency',             source: 'src/app/services/ecommerce-growth-agency/page.tsx' },
   { path: '/services/ecommerce-marketing-agency',          source: 'src/app/services/ecommerce-marketing-agency/page.tsx' },
+  { path: '/services/ecommerce-audit',                     source: 'src/app/services/ecommerce-audit/page.tsx' },
+  { path: '/services/dtc-ecommerce-agency',                source: 'src/app/services/dtc-ecommerce-agency/page.tsx' },
   { path: '/marketplace-management',                       source: 'src/app/marketplace-management/page.tsx' },
   { path: '/faire-wholesale-marketplace',                  source: 'src/app/faire-wholesale-marketplace/page.tsx' },
   { path: '/target-plus-marketplace',                      source: 'src/app/target-plus-marketplace/page.tsx' },
