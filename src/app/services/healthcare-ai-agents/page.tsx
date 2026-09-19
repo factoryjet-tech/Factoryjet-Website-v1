@@ -15,7 +15,7 @@ const CANONICAL_URL = 'https://factoryjet.com/services/healthcare-ai-agents';
 const PAGE_TITLE = 'Healthcare AI Agents & Medical Receptionists | FactoryJet';
 const PAGE_DESC =
   'Custom HIPAA-compliant healthcare AI agents and medical voice receptionists for US practices, dental clinics, and hospitals. Real EHR sync. Get an audit.';
-const PAGE_MODIFIED = '2026-09-17';
+const PAGE_MODIFIED = '2026-09-19';
 
 /** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
  *  <Breadcrumbs> component and the BreadcrumbList JSON-LD below, so the two
@@ -211,6 +211,16 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'deployment',
     question: 'What are the biggest risks of using AI agents in a medical practice?',
     answer: 'Four stand out. The agent gives a confident but wrong answer. Patient data reaches a tool that has no business associate agreement. The agent drifts away from the process your staff think it follows. And nobody reads the logs, so problems go unnoticed. Each one has a matching safeguard: answers grounded in your own rules, a signed agreement at every step, regular testing, and a named person who reviews escalations.',
+  },
+  {
+    category: 'deployment',
+    question: 'How much does an AI receptionist cost?',
+    answer: 'Cost mostly depends on three things: how many calls your practice takes, how many systems the agent has to connect to (your EHR, your insurance clearinghouse, your phone lines), and how much clinical safety logic it needs to run. A single dental office connecting to one system costs far less to build than a hospital network that needs Epic credentialing and multiple languages. Most practices weigh that one-time build cost against what they already pay for an answering service or lose to missed calls, which the return-on-investment question above walks through. Ask any vendor for a scoped quote based on your own call volume and systems, not a flat number that ignores your setup.',
+  },
+  {
+    category: 'deployment',
+    question: 'Which AI medical receptionist is the best?',
+    answer: 'There is no single best answer. It depends on your practice size, your EHR system, and your call volume. When evaluating any AI medical receptionist, check five things: does it sign a direct Business Associate Agreement (BAA) with your practice, does it read and write to your actual EHR or dental system in real time, does it run rule-based safety checks for emergency symptoms, do you own the workflow and code or rent it monthly, and can you see a real demo or call log first. A generic customer-service bot handles simple booking fine. A practice handling insurance verification or emergency triage usually needs something built specifically for healthcare, not a generic bot retrofitted for medicine.',
   },
 ];
 
