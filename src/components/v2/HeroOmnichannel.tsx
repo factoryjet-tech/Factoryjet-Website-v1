@@ -1,82 +1,56 @@
-'use client';
-
-import { useEffect, useState } from 'react';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import './HeroOmnichannel.css';
 
 /**
- * HeroOmnichannel — /us homepage hero, ported faithfully from the approved
- * mockup (research/mockup-us-problem-v1.html). Locked copy. White background,
- * single orange accent, brand fonts. The right-side "constellation" shows any
- * channel/marketplace flowing into one unified commerce engine.
+ * HeroOmnichannel — homepage hero.
  *
- * Functional lead capture is preserved via the existing HeroInlineForm
- * (name + email -> /thank-you conversion path), not the mockup's dummy form.
- * The kinetic platform swap respects prefers-reduced-motion.
+ * Static server component. The kinetic platform swapper was removed 2026-09-20:
+ * it was the only client-side code in this file, and because it rendered just
+ * SWAP_WORDS[0] into the served HTML, every other platform name was invisible
+ * to non-rendering crawlers and AI fetchers. The platform row is plain static
+ * text now, so all of it ships in the HTML.
+ *
+ * Positioning: ecommerce design / development / implementation / support, plus
+ * the AI agents we build for commerce. Marketplace listing and management
+ * services are deliberately not sold from this hero.
+ *
+ * Lead capture stays on the existing HeroInlineForm (name + email -> /thank-you).
  */
 
-const SWAP_WORDS = [
-  'Shopify Plus',
-  'BigCommerce',
-  'Adobe Commerce',
-  'Amazon',
-  'Walmart',
-  'TikTok Shop',
-  'any marketplace',
-];
+const PLATFORMS = ['Commerceflo', 'Shopify', 'Shopify Plus', 'WooCommerce', 'Headless'];
 
 export default function HeroOmnichannel() {
-  const [swapIndex, setSwapIndex] = useState(0);
-  const [visible, setVisible] = useState(true);
-
-  useEffect(() => {
-    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (reduce) return;
-    const id = setInterval(() => {
-      setVisible(false);
-      const t = setTimeout(() => {
-        setSwapIndex((i) => (i + 1) % SWAP_WORDS.length);
-        setVisible(true);
-      }, 300);
-      return () => clearTimeout(t);
-    }, 2200);
-    return () => clearInterval(id);
-  }, []);
-
   return (
-    <section className="hero-omni" aria-label="Omnichannel and B2B commerce development">
+    <section
+      className="hero-omni"
+      aria-label="Ecommerce development and AI commerce agents for DTC and B2B brands"
+    >
       <div className="ho-wrap">
         <div className="ho-grid">
           {/* Left: copy + lead form */}
           <div>
-            <p className="ho-eyebrow">Omnichannel &amp; B2B commerce solutions</p>
-            <h1>We design and build commerce that sells everywhere.</h1>
-            <p className="ho-kin">
-              Development &amp; implementation partner for{' '}
-              <span className="ho-swap" style={{ opacity: visible ? 1 : 0 }}>
-                {SWAP_WORDS[swapIndex]}
-              </span>
-            </p>
+            <p className="ho-eyebrow">Ecommerce development for the AI era</p>
+            <h1>We build your ecommerce. And the AI agents that keep it running.</h1>
             <p className="ho-sub">
-              An omnichannel commerce development and implementation agency for DTC and B2B brands.
-              One catalog, one inventory, one order engine, built on Shopify, Magento, WooCommerce,
-              or Commerceflo by FactoryJet, and engineered to scale.
+              Design, development, implementation and support for DTC and B2B brands.
             </p>
+
+            <p className="ho-platforms">{PLATFORMS.join(' · ')}</p>
 
             <HeroInlineForm source="us_hero_inline" region="us" submitLabel="Get a commerce audit" />
 
             <div className="ho-stats">
               <div>
-                <b>Any</b>
-                <small>channel or marketplace, worldwide</small>
-              </div>
-              <div>
-                <b>1</b>
-                <small>catalog, inventory and order engine</small>
-              </div>
-              <div>
                 <b>10+</b>
                 <small>years building commerce</small>
+              </div>
+              <div>
+                <b>500+</b>
+                <small>businesses served</small>
+              </div>
+              <div>
+                <b>Any</b>
+                <small>platform, DTC or B2B</small>
               </div>
             </div>
           </div>

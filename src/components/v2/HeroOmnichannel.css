@@ -56,26 +56,21 @@
   line-height: 1.07;
   text-wrap: balance;
   margin: 14px 0 10px;
-  max-width: 20ch;
+  max-width: 26ch;
 }
 
-.hero-omni .ho-kin {
+.hero-omni .ho-platforms {
   font-family: var(--ho-mono);
-  font-size: 13.5px;
+  font-size: 13px;
   color: var(--ho-muted);
-  margin-bottom: 16px;
-}
-.hero-omni .ho-kin .ho-swap {
-  color: var(--ho-orange);
-  font-weight: 600;
-  transition: opacity 0.3s ease;
+  margin-bottom: 20px;
 }
 
 .hero-omni .ho-sub {
   font-size: clamp(15.5px, 1.8vw, 18.5px);
   color: #46403B;
   max-width: 580px;
-  margin-bottom: 22px;
+  margin-bottom: 14px;
   line-height: 1.6;
 }
 
@@ -212,5 +207,4 @@
   .hero-omni .ho-node,
   .hero-omni .ho-glow,
   .hero-omni .ho-ring { animation: none !important; }
-  .hero-omni .ho-kin .ho-swap { transition: none !important; }
 }
