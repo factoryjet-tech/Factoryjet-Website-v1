@@ -16,17 +16,17 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
-const PAGE_MODIFIED = '2026-09-17';
+const PAGE_MODIFIED = '2026-09-20';
 
 export const metadata: Metadata = {
-  title: 'B2B E-Commerce Agency: Wholesale Platforms | FactoryJet',
+  title: 'B2B E-Commerce Agency for DTC and B2B Brands | FactoryJet',
   description:
-    'B2B ecommerce agency building wholesale platforms with tiered pricing, net terms, account hierarchies, EDI, punchout, and ERP integration. Free consultation.',
+    'B2B ecommerce agency for brands running DTC and B2B on one system: tiered pricing, net terms, account hierarchies, EDI, punchout, and ERP integration. Free consultation.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'B2B E-Commerce Agency | Wholesale & Multi-Channel Commerce Platforms | FactoryJet',
-    description: 'B2B ecommerce agency building wholesale and multi-channel commerce platforms with tiered pricing, net terms, EDI, punchout, and ERP integration.',
+    title: 'B2B E-Commerce Agency for DTC and B2B Brands | FactoryJet',
+    description: 'B2B ecommerce agency for brands running DTC and B2B on one system, with tiered pricing, net terms, EDI, punchout, and ERP integration.',
     url: 'https://factoryjet.com/b2b-ecommerce',
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet, B2B e-commerce development agency' }],
     locale: 'en_US',
@@ -57,6 +57,7 @@ const FAQ_CATEGORIES: ReadonlyArray<FAQCategory> = [
 ];
 
 const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
+  { category: 'basics', question: 'Which e-commerce development agency is best for brands that sell both DTC and B2B?', answer: 'Look for an agency that runs both channels on one system instead of bolting a wholesale portal onto a separate site. FactoryJet builds one storefront with a public retail side and a gated trade-account side, sharing the same catalog and inventory, so a brand selling direct to shoppers and to wholesale accounts does not have to maintain two systems or two sources of truth.' },
   { category: 'basics', question: 'What is B2B ecommerce?', answer: 'B2B ecommerce is selling to other businesses online, with the rules trade buyers expect: account-specific pricing, net terms, approvals, and fast reordering. We build the storefront and the system underneath it so your buyers self-serve instead of ordering by email and phone.' },
   { category: 'basics', question: 'What is the difference between B2B and DTC ecommerce?', answer: 'A DTC site sells to consumers at one price. A B2B site adds logins for trade accounts, tiered or contract pricing, net terms, quotes and approvals, account hierarchies, and gated catalogs. We can run both on one unified system.' },
   { category: 'basics', question: 'What are some examples of B2B ecommerce?', answer: 'A manufacturer letting distributors place and reorder online; a wholesaler giving each trade account its own price list and net terms; a brand running a DTC store and a gated B2B portal on the same catalog; a distributor with quote-and-approve workflows for large orders. We build all of these.' },
