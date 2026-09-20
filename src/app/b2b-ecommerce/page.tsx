@@ -19,22 +19,22 @@ const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const PAGE_MODIFIED = '2026-09-20';
 
 export const metadata: Metadata = {
-  title: 'B2B E-Commerce Agency for DTC and B2B Brands | FactoryJet',
+  title: 'B2B Ecommerce Website Development for DTC + B2B Brands | FactoryJet',
   description:
-    'B2B ecommerce agency for brands running DTC and B2B on one system: tiered pricing, net terms, account hierarchies, EDI, punchout, and ERP integration. Free consultation.',
+    'B2B ecommerce website development for brands running DTC and B2B on one system: tiered pricing, net terms, account hierarchies, EDI, punchout, and ERP integration. Free consultation.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'B2B E-Commerce Agency for DTC and B2B Brands | FactoryJet',
-    description: 'B2B ecommerce agency for brands running DTC and B2B on one system, with tiered pricing, net terms, EDI, punchout, and ERP integration.',
+    title: 'B2B Ecommerce Website Development for DTC + B2B Brands | FactoryJet',
+    description: 'B2B ecommerce website development for brands running DTC and B2B on one system, with tiered pricing, net terms, EDI, punchout, and ERP integration.',
     url: 'https://factoryjet.com/b2b-ecommerce',
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet, B2B e-commerce development agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'B2B E-Commerce Development Agency | FactoryJet',
-    description: 'B2B ecommerce platforms with tiered pricing, net terms, account hierarchies, and ERP integration.',
+    title: 'B2B Ecommerce Website Development Agency | FactoryJet',
+    description: 'B2B ecommerce website development with tiered pricing, net terms, account hierarchies, and ERP integration.',
     images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: {
@@ -88,6 +88,10 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
   { category: 'working', question: 'Can you migrate our existing B2B store without losing SEO?', answer: 'Yes. We handle replatforming and data migration, including products, customers, orders, and B2B pricing, with 301 redirects and a cutover plan that protects your rankings and uptime.' },
   { category: 'working', question: 'How long does a B2B ecommerce build take?', answer: 'Most B2B builds and migrations run from a few weeks to a few months, depending on catalog complexity, custom pricing rules, and ERP integration. You get a phased timeline with milestones after scoping.' },
   { category: 'working', question: 'Do you work with US B2B brands?', answer: 'Yes, most of the brands we work with are US-based, across DTC and B2B, with a decade-plus of commerce builds. You own and operate everything we build.' },
+  { category: 'working', question: 'What do you need from us before the build starts?', answer: 'Your current catalog or ERP export, a list of account types and pricing rules such as tiers, contracts, and net terms, and one real example of how a buyer orders today. That is enough for us to scope accounts, pricing, and integrations before writing a proposal.' },
+  { category: 'working', question: 'Who owns the code and the platform after launch?', answer: 'You do. We hand over the full codebase, admin access, and platform ownership at launch. There is no agency subscription or software rent; you run the store and pay only your own platform and hosting costs.' },
+  { category: 'working', question: 'What happens after our B2B ecommerce site launches?', answer: 'We support the cutover period, fix anything that surfaces under real order volume, and train your team on the admin, pricing rules, and ERP sync. After that you can run it yourself or keep us on for ongoing support and new features.' },
+  { category: 'working', question: 'How is building a B2B ecommerce site different from a normal ecommerce build, process-wise?', answer: 'A DTC build mostly needs product pages, cart, and checkout. A B2B build adds account hierarchies, per-account pricing logic, quote and approval workflows, and ERP or EDI integration, so more of the work happens in mapping data and business rules before any storefront design starts.' },
 ];
 
 const FAQ_SCHEMA = {
@@ -116,18 +120,29 @@ const SERVICE_SCHEMA = {
   audience: { '@type': 'BusinessAudience', name: 'B2B brands, wholesalers, and distributors' },
 };
 
+/** Single source of truth for the "how we build it" process. Feeds BOTH the
+ *  visible step list in the Process section AND the HowTo JSON-LD below, so
+ *  the schema can never list a different number of steps than the page shows. */
+const STEPS = [
+  { n: '01', t: 'Requirements & ERP mapping', d: 'We map your catalog, account types, and the ERP you already run (NetSuite, SAP, Dynamics 365, Acumatica, or another), so pricing rules and integrations come from your real data, not a template.' },
+  { n: '02', t: 'Account hierarchy & pricing design', d: 'We design your account tiers, parent and child company hierarchies, contract and volume pricing, and approval rules, so each buyer logs in and sees only their catalog and their price.' },
+  { n: '03', t: 'Storefront build', d: 'We build the storefront and trade portal on the platform we recommended in scoping: gated catalogs, PO checkout, quote and approval workflows, and one-click reordering.' },
+  { n: '04', t: 'ERP, EDI & punchout integration and testing', d: 'We connect your ERP, PIM, and 3PL, wire up EDI 850/855/856/810 and cXML or OCI punchout where you need it, then test every order path, from a rep quote to an ERP-synced invoice, before go-live.' },
+  { n: '05', t: 'Migrate & launch', d: 'We migrate products, customers, orders, and B2B pricing with 301 redirects, run staging QA against real accounts, and cut over on a schedule that protects uptime and your SEO.' },
+  { n: '06', t: 'Buyer onboarding & handover', d: 'We help onboard your first wave of trade accounts, train your team on the admin and pricing rules, and hand over the code and the system. You own it from day one.' },
+];
+
 const HOWTO_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'HowTo',
-  name: 'How FactoryJet builds a B2B ecommerce platform',
-  description: 'Our process for designing, building, and implementing a B2B ecommerce platform for US brands, distributors, and wholesalers.',
-  step: [
-    { '@type': 'HowToStep', position: 1, name: 'Scope', text: 'We map your catalog, accounts, pricing rules, and ERP, then recommend the B2B ecommerce platform that fits and write a fixed proposal.' },
-    { '@type': 'HowToStep', position: 2, name: 'Design and build', text: 'We design and build the storefront and the trade portal: tiered pricing, net terms, quotes, approvals, gated catalogs, and reordering.' },
-    { '@type': 'HowToStep', position: 3, name: 'Integrate', text: 'We connect your ERP, PIM, POS, 3PL, and marketplaces into one order and inventory layer.' },
-    { '@type': 'HowToStep', position: 4, name: 'Migrate and launch', text: 'We migrate products, customers, orders, and B2B pricing with 301 redirects, test on staging, and run a clean cutover.' },
-    { '@type': 'HowToStep', position: 5, name: 'Own and scale', text: 'You own and operate the system; we support and scale it as you add accounts and channels.' },
-  ],
+  name: 'How FactoryJet builds a B2B ecommerce website',
+  description: 'Our step-by-step process for building a B2B ecommerce website: requirements and ERP mapping, account and pricing design, storefront build, integration and testing, launch, and buyer onboarding.',
+  step: STEPS.map((s, index) => ({
+    '@type': 'HowToStep',
+    position: index + 1,
+    name: s.t,
+    text: s.d,
+  })),
 };
 
 const ORG_SCHEMA = {
@@ -258,13 +273,6 @@ const CHOOSE = [
   'Integrations you need: ERP, PIM, POS, 3PL, and marketplaces.',
   'Whether you also sell DTC on the same catalog and inventory.',
   'Budget for the build and the ongoing platform license.',
-];
-
-const STEPS = [
-  { n: '01', t: 'Scope', d: 'We map your catalog, accounts, pricing rules, and ERP, then recommend the platform and write a fixed proposal.' },
-  { n: '02', t: 'Design & build', d: 'Storefront plus trade portal: tiered pricing, net terms, quotes, approvals, gated catalogs, and reordering.' },
-  { n: '03', t: 'Integrate', d: 'ERP, PIM, POS, 3PL, and marketplaces wired into one order and inventory layer.' },
-  { n: '04', t: 'Migrate & launch', d: 'Data migration with 301 redirects, staging QA, then a clean cutover that protects your SEO.' },
 ];
 
 const checkIcon = (
@@ -677,8 +685,12 @@ export default function B2BEcommercePage() {
                 />
               </div>
               <div>
-                <p className="pp-mlabel">// how we work</p>
-                <h2 style={{ marginTop: '10px' }}>From scope to a system you own</h2>
+                <p className="pp-mlabel">// how we build it</p>
+                <h2 style={{ marginTop: '10px' }}>How we build your B2B ecommerce website</h2>
+                <p className="pp-lead" style={{ marginTop: '14px' }}>
+                  The same six steps whether you are moving off spreadsheets and email orders for the first time or
+                  replacing a B2B platform you have outgrown.
+                </p>
                 <div style={{ marginTop: '32px', display: 'grid', gap: '0' }}>
                   {STEPS.map((s, i) => (
                     <div key={s.n} style={{ display: 'flex', gap: '16px', paddingBottom: i < STEPS.length - 1 ? '28px' : '0', position: 'relative' }}>

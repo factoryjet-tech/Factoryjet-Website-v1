@@ -93,6 +93,7 @@ import { post as howToChooseEcommerceDevelopmentAgency2026Post } from './posts/h
 import { post as howToChooseHeadlessCommerceAgency2026Post } from './posts/how-to-choose-headless-commerce-agency-2026';
 import { post as topB2bEcommerceDevelopmentAgenciesPortals2026Post } from './posts/top-b2b-ecommerce-development-agencies-portals-2026';
 import { post as bestOmnichannelCommerceSolutionShopifyPlus2026Post } from './posts/best-omnichannel-commerce-solution-shopify-plus-2026';
+import { post as howToHireAnAiAgentDeveloper2026Post } from './posts/how-to-hire-an-ai-agent-developer-2026';
 import { post as aiAgentBuildVsBuy2026Post } from './posts/ai-agent-build-vs-buy-2026';
 import { post as digitalMarketingForSmallBusinessIndiaPost } from './posts/digital-marketing-for-small-business-india';
 import { post as whatIsAgenticCommercePost } from './posts/what-is-agentic-commerce';
@@ -175,6 +176,7 @@ export const POSTS: BlogPost[] = [
   howToChooseHeadlessCommerceAgency2026Post,
   topB2bEcommerceDevelopmentAgenciesPortals2026Post,
   bestOmnichannelCommerceSolutionShopifyPlus2026Post,
+  howToHireAnAiAgentDeveloper2026Post,
   aiAgentBuildVsBuy2026Post,
   // --- WEB DESIGN & STRATEGY ---
 { 
