@@ -185,7 +185,7 @@ export default function AiAgentDevelopmentSections() {
             <div className="ledgercell">
               <div className="k">Founded</div>
               <div className="v">
-                <strong className="ledger-number">2020</strong>
+                <strong className="ledger-number">2014</strong>
               </div>
             </div>
             <div className="ledgercell">
