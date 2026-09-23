@@ -29,17 +29,17 @@ const PAGE_URL =
   'https://factoryjet.com/services/ai-agent-development/manufacturing-operations-agent';
 
 export const metadata: Metadata = {
-  title: 'AI Agents for Manufacturing Operations | FactoryJet',
+  title: 'Manufacturing Operations AI Agent for Plant Questions | FactoryJet',
   description:
-    'We build AI agents that read ERP, CMMS, historian and shop-floor data to answer questions, draft handovers and route issues. Read-only information layer.',
+    'A read-only AI agent for plant managers. It answers floor questions, drafts shift handovers and rolls up downtime from your ERP, CMMS and historian data.',
   keywords: [
+    'manufacturing operations AI agent',
     'manufacturing operations agent',
-    'AI agent for manufacturing',
+    'plant floor AI assistant',
     'shift handover automation',
     'downtime reason capture',
     'work order status AI',
     'maintenance request triage',
-    'ERP AI agent manufacturing',
     'CMMS AI integration',
     'plant manager AI assistant',
     'production schedule Q and A',
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'AI Agents for Manufacturing Operations | FactoryJet',
+    title: 'Manufacturing Operations AI Agent for Plant Questions | FactoryJet',
     description:
       'AI agents that read ERP, CMMS, historian and SOP data to answer floor questions, draft shift handovers and route issues. Read-only by design.',
     url: PAGE_URL,
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI Agents for Manufacturing Operations | FactoryJet',
+    title: 'Manufacturing Operations AI Agent for Plant Questions | FactoryJet',
     description:
       'Agents that answer floor questions from ERP, CMMS and historian data. Information layer only, never machine control.',
     images: ['https://factoryjet.com/og-default.png'],
@@ -88,7 +88,7 @@ export const metadata: Metadata = {
 
 /* Freshness signal. Bump this when the page content actually changes, not on
    every unrelated deploy. */
-const PAGE_MODIFIED = '2026-08-06';
+const PAGE_MODIFIED = '2026-09-23';
 
 /* External citations. Every URL below was fetched and the claim confirmed on
    the page on 2026-08-06. Do not edit a claim here without re-fetching. */
@@ -596,7 +596,7 @@ const webPageSchema = {
   '@type': 'WebPage',
   '@id': `${PAGE_URL}#webpage`,
   url: PAGE_URL,
-  name: 'AI Agents for Manufacturing Operations',
+  name: 'Manufacturing Operations AI Agent for Plant Questions',
   description:
     'How a manufacturing operations AI agent reads ERP, CMMS, historian and SOP data to answer floor questions, and why it never touches the control layer.',
   dateModified: PAGE_MODIFIED,
@@ -677,11 +677,6 @@ export default function ManufacturingOperationsAgentPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <script
-        id="mfg-ops-agent-webpage-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
-      />
 
       <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
       <BreadcrumbSchema items={BREADCRUMB_ITEMS} />
@@ -691,7 +686,7 @@ export default function ManufacturingOperationsAgentPage() {
 
         <Hero
           eyebrow="MANUFACTURING OPERATIONS AGENT"
-          headline="The answer is already in your systems. Getting it should not take a walk around the plant."
+          headline="A manufacturing operations AI agent that answers floor questions from the records you already keep."
           lead="Schedules sit in the ERP, downtime sits in a spreadsheet, the next changeover is on a whiteboard, and the rest is in the heads of two long-serving supervisors. We build AI agents that read all of it and answer the question, without ever touching a machine."
           formSlot={
             <HeroInlineForm
@@ -796,6 +791,21 @@ export default function ManufacturingOperationsAgentPage() {
                   as ordinary as &ldquo;why did line 3 stop&rdquo; means a person walking around
                   asking other people. That walk is what the agent removes. Not the supervisor, not
                   the judgement, not the decision. The walk.
+                </p>
+                <p
+                  className="mt-4 font-fj-body text-fj-neutral-500"
+                  style={{ fontSize: '0.9375rem', lineHeight: 1.7 }}
+                >
+                  Want an agent that drafts quotes and supplier PO updates and writes them into your
+                  ERP for approval? That is a different build, covered on our{' '}
+                  <Link
+                    href="/services/manufacturing-ai-agents"
+                    className="font-semibold underline"
+                    style={{ color: '#B23E13' }}
+                  >
+                    manufacturing AI agents for quoting and ERP automation
+                  </Link>{' '}
+                  page.
                 </p>
               </div>
               <div className="lg:col-span-5">

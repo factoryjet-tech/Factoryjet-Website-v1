@@ -12,10 +12,10 @@ import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
 const CANONICAL_URL = 'https://factoryjet.com/services/manufacturing-ai-agents';
-const PAGE_TITLE = 'Manufacturing AI Agents & ERP Automation | FactoryJet';
+const PAGE_TITLE = 'Manufacturing AI Agents for Quoting & ERP Automation | FactoryJet';
 const PAGE_DESC =
-  'Custom AI agents for US manufacturers. Automate RFQ quoting, supplier PO tracking, and shop-floor handovers with direct NetSuite & SAP ERP sync. Get an audit.';
-const PAGE_MODIFIED = '2026-09-03';
+  'AI agents for US manufacturers that read RFQs and drawings, draft quotes, reconcile supplier POs and write approved drafts into NetSuite, SAP or Epicor.';
+const PAGE_MODIFIED = '2026-09-23';
 
 /** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
  *  <Breadcrumbs> component and the BreadcrumbList JSON-LD below, so the two
@@ -30,10 +30,11 @@ export const metadata: Metadata = {
   title: PAGE_TITLE,
   description: PAGE_DESC,
   keywords: [
-    'ai agents for manufacturing',
-    'manufacturing ai automation',
+    'manufacturing ai agents',
+    'manufacturing quoting automation',
+    'manufacturing erp automation',
     'ai rfq automation manufacturing',
-    'ai supply chain automation',
+    'supplier po reconciliation ai',
     'erp ai integration manufacturing',
     'ai bill of materials extraction',
     'ai for precision machine shops',
@@ -275,13 +276,6 @@ const serviceSchema = {
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Service',
-          name: 'Shop Floor Shift Handover & CMMS Maintenance Intelligence',
-        },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
           name: 'Multi-Level BOM Material Costing & ERP Integration',
         },
       },
@@ -377,13 +371,10 @@ export default function ManufacturingAiAgentsPage() {
                   </span>
                 </div>
                 
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#14110F] font-heading leading-tight mb-6">Custom AI Agents for US Manufacturers with{' '}
-                  <span>
-                    Live ERP Synchronization.
-                  </span>.</h1>
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#14110F] font-heading leading-tight mb-6">Manufacturing AI Agents for Quoting and ERP Automation.</h1>
                 
                 <p className="text-lg sm:text-xl text-[#46403B] mb-8 leading-relaxed">
-                  We build AI agents for American machine shops, equipment fabricators, and contract manufacturers. The agent reads CAD blueprints and turns them into RFQ quotes. It reconciles supplier purchase orders and syncs both ways with NetSuite, SAP, Epicor, and Infor.
+                  We build AI agents for American machine shops, equipment fabricators, and contract manufacturers. The agent reads RFQs and CAD drawings and drafts the quote. It reconciles supplier purchase orders. Then it writes each draft into NetSuite, SAP, Epicor, or Infor for your team to approve.
                 </p>
 
                 <div className="mb-8">
@@ -450,6 +441,16 @@ export default function ManufacturingAiAgentsPage() {
               </h2>
               <p className="text-base sm:text-lg text-[#46403B] leading-relaxed">
                 A manufacturing AI agent is software that connects directly to your ERP, such as NetSuite, SAP, Epicor, or Infor. It reads incoming RFQ packages from customers. It pulls the specs straight off CAD drawings and PDF prints. It checks your raw material stock and machine run times. Then it stages a draft quote or PO reconciliation in seconds, with a full audit trail, for a human to approve.
+              </p>
+              <p className="mt-4 text-sm sm:text-base text-[#6E655F] leading-relaxed">
+                Need an agent that only reads your ERP, CMMS, and historian to answer floor questions and draft shift handovers, and never writes back? Read about our{' '}
+                <Link
+                  href="/services/ai-agent-development/manufacturing-operations-agent"
+                  className="underline text-[#B23E13] hover:text-[#F05A28]"
+                >
+                  manufacturing operations agent
+                </Link>
+                {' '}instead.
               </p>
             </div>
           </div>
@@ -770,7 +771,6 @@ export default function ManufacturingAiAgentsPage() {
                   <li><span className="font-bold text-[#14110F]">Siemens Opcenter</span>: manufacturing execution system (MES) data for work order status, genealogy, and production line changeovers.</li>
                   <li><span className="font-bold text-[#14110F]">Rockwell Automation</span> and <span className="font-bold text-[#14110F]">Allen-Bradley</span>: PLC and SCADA telemetry for machine state and downtime.</li>
                   <li><span className="font-bold text-[#14110F]">Ignition SCADA</span> and <span className="font-bold text-[#14110F]">Kepware</span>: OPC-UA and Modbus gateways for real-time machine data.</li>
-                  <li><span className="font-bold text-[#14110F]">Wonderware</span>: historian and SCADA data for shift handover reporting.</li>
                   <li><span className="font-bold text-[#14110F]">Plex</span>, <span className="font-bold text-[#14110F]">IQMS</span> (DELMIAworks), and <span className="font-bold text-[#14110F]">MachineMetrics</span>: cloud MES and overall equipment effectiveness (OEE) data for scheduling agents.</li>
                   <li><span className="font-bold text-[#14110F]">Tulip</span>: frontline operations data for digital work instructions and quality control checks.</li>
                 </ul>
@@ -797,7 +797,7 @@ export default function ManufacturingAiAgentsPage() {
           label="Get a manufacturing AI audit"
         />
 
-        {/* 10-POINT TECHNICAL ARCHITECTURE BLUEPRINT */}
+        {/* 9-POINT TECHNICAL ARCHITECTURE BLUEPRINT */}
         <section className="py-20 bg-white border-b border-[#E7DED6]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-16">
@@ -835,10 +835,6 @@ export default function ManufacturingAiAgentsPage() {
                 {
                   title: 'Supplier Confirmation Email Triage',
                   desc: 'The agent reads messy vendor emails and PDF attachments the way a person would. It pulls out the PO number, the partial shipment quantity. The revised delivery date.',
-                },
-                {
-                  title: 'Shop Floor Shift Handover Synthesis',
-                  desc: 'The agent gathers machine telemetry, operator downtime notes, scrap counts, and open work orders from the shop floor. It turns all of it into one clean handover brief for the next shift supervisor.',
                 },
                 {
                   title: 'Zero-Data-Retention Security SLA',
@@ -1119,9 +1115,9 @@ export default function ManufacturingAiAgentsPage() {
                 className="p-6 rounded-xl bg-white border border-[#E7DED6] hover:border-[#F05A28] transition-colors group"
               >
                 <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">SPOKE 03</div>
-                <h3 className="font-bold text-lg text-[#14110F] group-hover:text-[#F05A28] transition-colors mb-2">Shop-Floor Operations Agent &rarr;.</h3>
+                <h3 className="font-bold text-lg text-[#14110F] group-hover:text-[#F05A28] transition-colors mb-2">Manufacturing Operations Agent &rarr;.</h3>
                 <p className="text-sm text-[#46403B]">
-                  Shift handover drafting, CMMS maintenance triage, predictive maintenance alerts, and downtime reason telemetry.
+                  Read-only answers from ERP, CMMS, and historian data: shift handovers, downtime rollups, and maintenance request triage.
                 </p>
               </Link>
             </div>
@@ -1148,7 +1144,7 @@ export default function ManufacturingAiAgentsPage() {
             </div>
             
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#14110F] font-heading mb-6">
-              Ready to Modernize Your Manufacturing Operations with Custom AI?
+              Ready to Automate Quoting and ERP Updates with Custom AI?
             </h2>
             
             <p className="text-lg text-[#46403B] max-w-2xl mx-auto mb-10 leading-relaxed">
