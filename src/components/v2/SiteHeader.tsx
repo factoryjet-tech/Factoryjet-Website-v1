@@ -48,6 +48,7 @@ import {
 import { useContactModal } from '../../context/ContactModalContext';
 import type { ModalRegion } from '../../context/ContactModalContext';
 import Wordmark from './Wordmark';
+import { MegaNavDesktop, MegaNavMobile } from './MegaNav';
 
 // ─── Locale type ──────────────────────────────────────────────────────────────
 
@@ -554,6 +555,8 @@ export default function SiteHeader({
   // Who-we-serve/Company mega structure. Non-commerce locales (India/UAE) keep
   // the simpler Services + Locations layout.
   const isCommerce = locale === 'us' || locale === 'gb';
+  // US uses the four-hub mega menu (MegaNav.tsx); other locales keep the legacy menus.
+  const useMegaNav = (locale as string) === 'us';
   const SOLUTIONS   = locale === 'gb' ? GB_SOLUTIONS          : US_SOLUTIONS;
   const SOLUTIONS_CORE = locale === 'gb' ? GB_SOLUTIONS_CORE : US_SOLUTIONS_CORE;
   const SOLUTIONS_MARKETPLACES = locale === 'gb' ? GB_SOLUTIONS_MARKETPLACES : US_SOLUTIONS_MARKETPLACES;
@@ -636,6 +639,9 @@ export default function SiteHeader({
 
             {/* Desktop nav */}
             <nav aria-label="Primary" className="hidden items-center gap-0.5 md:flex">
+
+              {useMegaNav && <MegaNavDesktop />}
+              {!useMegaNav && (<>
 
               {/* Services trigger + mega-dropdown (India / UAE only, US uses commerce menus below) */}
               {!isCommerce && (
@@ -1559,6 +1565,7 @@ export default function SiteHeader({
                 </>
               )}
 
+              </>)}
             </nav>
 
             {/* Right side: CTA + hamburger */}
@@ -1607,7 +1614,7 @@ export default function SiteHeader({
         role="dialog"
         aria-modal="true"
         aria-label="Navigation menu"
-        className={`fixed inset-y-0 right-0 z-50 flex w-[88vw] max-w-[360px] flex-col bg-white shadow-2xl transition-transform duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] md:hidden ${
+        className={`fixed right-0 top-0 z-50 flex h-[100dvh] w-[88vw] max-w-[360px] flex-col bg-white shadow-2xl transition-transform duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] md:hidden ${
           mobileOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
@@ -1632,7 +1639,10 @@ export default function SiteHeader({
         </div>
 
         {/* Scrollable nav area */}
-        <nav className="flex-1 overflow-y-auto px-4 py-3" aria-label="Mobile navigation">
+        <nav className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-4 py-3" aria-label="Mobile navigation">
+
+          {useMegaNav && <MegaNavMobile onNavigate={() => setMobileOpen(false)} />}
+          {!useMegaNav && (<>
 
           {/* Services accordion */}
           <div className="border-b border-fj-neutral-100">
@@ -1908,10 +1918,11 @@ export default function SiteHeader({
             </Link>
           )}
 
+          </>)}
         </nav>
 
         {/* Drawer footer CTA */}
-        <div className="flex-shrink-0 border-t border-fj-neutral-100 p-4">
+        <div className="flex-shrink-0 border-t border-fj-neutral-100 px-4 pt-4 pb-[calc(1rem+env(safe-area-inset-bottom))]">
           <button
             type="button"
             onClick={() => {
