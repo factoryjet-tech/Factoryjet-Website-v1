@@ -1122,13 +1122,9 @@ export default function B2BWebsiteDesignPage() {
             </ol>
 
             <p className="mt-8 max-w-[820px] font-fj-body text-[0.9375rem] leading-[1.65] text-fj-neutral-700">
-              Item eleven is run by our{' '}
+              Item eleven and the rest of the search work are run by our{' '}
               <Link href="/services/ai-seo" className="font-semibold underline underline-offset-2" style={{ color: ORANGE_DARK }}>
-                AI SEO practice
-              </Link>{' '}
-              and the search side by our{' '}
-              <Link href="/services/seo" className="font-semibold underline underline-offset-2" style={{ color: ORANGE_DARK }}>
-                SEO team
+                AI search and SEO team
               </Link>
               , who sit with the people writing the templates. That is why the speed budget in item ten
               survives launch.
@@ -1510,14 +1506,9 @@ export default function B2BWebsiteDesignPage() {
                   desc: 'When the structure is sound and the problem is presentation and search continuity.',
                 },
                 {
-                  label: 'SEO services',
-                  href: '/services/seo',
-                  desc: 'The organic programme that gets the B2B pages found in the first place.',
-                },
-                {
-                  label: 'AI SEO',
+                  label: 'AI search and SEO',
                   href: '/services/ai-seo',
-                  desc: 'Getting named inside ChatGPT, Perplexity and Google AI Overviews, which already answer this query.',
+                  desc: 'The organic programme that gets the B2B pages found, in Google and inside ChatGPT, Perplexity and Google AI Overviews.',
                 },
                 {
                   label: 'Web application development',

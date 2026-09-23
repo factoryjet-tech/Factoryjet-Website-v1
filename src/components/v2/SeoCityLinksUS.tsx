@@ -4,7 +4,9 @@ import Link from 'next/link'
 // so the 17 existing SEO city pages had no sibling cross-linking at all. Internal linking is
 // one of the few levers we control while domain authority is the binding constraint, so this
 // exists to stop new SEO city pages shipping as orphans.
-const ALL_CITIES = [
+// Exported 2026-09-23 so the /services/ai-seo hub renders the same city list
+// instead of keeping a second copy that drifts.
+export const US_SEO_CITY_PAGES = [
   { slug: 'arlington',        label: 'Arlington, TX' },
   { slug: 'atlanta',          label: 'Atlanta, GA' },
   { slug: 'austin',           label: 'Austin, TX' },
@@ -41,7 +43,7 @@ interface Props {
 }
 
 export default function SeoCityLinksUS({ currentCity }: Props) {
-  const otherCities = ALL_CITIES.filter((c) => c.slug !== currentCity)
+  const otherCities = US_SEO_CITY_PAGES.filter((c) => c.slug !== currentCity)
 
   return (
     <section className="bg-[#FAFAF7] py-14 md:py-20 border-t border-gray-100">
@@ -73,10 +75,10 @@ export default function SeoCityLinksUS({ currentCity }: Props) {
 
         <div className="text-center">
           <Link
-            href="/services/seo/"
+            href="/services/ai-seo"
             className="text-sm font-semibold text-[#B23E13] hover:underline underline-offset-4"
           >
-            See all US SEO services →
+            See all US SEO and AI search services →
           </Link>
         </div>
       </div>

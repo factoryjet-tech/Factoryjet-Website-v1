@@ -140,7 +140,7 @@ for (const file of sources) {
    because an image is referenced by string path, not by `import`.
 
    Deliberately conservative: only paths that start with "/" AND end in a known
-   asset extension are checked, so route strings like href="/services/seo" and
+   asset extension are checked, so route strings like href="/services/ai-seo" and
    API paths like "/api/notify-lead" are never mistaken for files.
    ─────────────────────────────────────────────────────────────────────────── */
 const ASSET_EXT = /\.(webp|jpe?g|png|svg|avif|gif|ico|mp4|webm|pdf|txt|xml|json)$/i

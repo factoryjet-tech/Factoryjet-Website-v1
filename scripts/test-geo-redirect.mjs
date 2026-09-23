@@ -33,10 +33,12 @@ expect('US human /web-design (hub) → US web-design',
   decideNaRedirect({ path: '/web-design', country: 'US', userAgent: CHROME }), '/services/web-design')
 expect('CA human /services/ecommerce-development/mumbai → US ecommerce hub',
   decideNaRedirect({ path: '/services/ecommerce-development/mumbai', country: 'CA', userAgent: CHROME }), '/services/ecommerce-development')
-expect('US human /seo/hyderabad → US seo',
-  decideNaRedirect({ path: '/seo/hyderabad', country: 'US', userAgent: CHROME }), '/services/seo')
-expect('US human /seo (hub) → US seo',
-  decideNaRedirect({ path: '/seo', country: 'US', userAgent: CHROME }), '/services/seo')
+// Repointed 2026-09-23: /services/seo 301s to /services/ai-seo, so the geo layer
+// sends NA humans straight to the hub instead of into a two-hop chain.
+expect('US human /seo/hyderabad → US SEO hub',
+  decideNaRedirect({ path: '/seo/hyderabad', country: 'US', userAgent: CHROME }), '/services/ai-seo')
+expect('US human /seo (hub) → US SEO hub',
+  decideNaRedirect({ path: '/seo', country: 'US', userAgent: CHROME }), '/services/ai-seo')
 // Changed 2026-08-06: the agent cluster was retargeted from India to the US, so a
 // North American visitor now belongs on it. The old rule bounced every US visitor
 // off the page, which made the retarget meaningless.
@@ -90,7 +92,11 @@ expect('US human /services/web-design (US twin) → NOT redirected (no loop)',
   decideNaRedirect({ path: '/services/web-design', country: 'US', userAgent: CHROME }), null)
 expect('US human /services/ecommerce-development (US hub, no trailing) → NOT redirected (no loop)',
   decideNaRedirect({ path: '/services/ecommerce-development', country: 'US', userAgent: CHROME }), null)
-expect('US human /services/seo (US twin) → NOT redirected',
+expect('US human /services/ai-seo (US hub) → NOT redirected',
+  decideNaRedirect({ path: '/services/ai-seo', country: 'US', userAgent: CHROME }), null)
+// /services/seo was retired 2026-09-23 (301 to /services/ai-seo). Regression guard:
+// the geo layer must leave it to the CDN redirect in both directions.
+expect('US human /services/seo (retired, 301 handled at the CDN) → NOT redirected by geo',
   decideNaRedirect({ path: '/services/seo', country: 'US', userAgent: CHROME }), null)
 // /services/ai-agents was retired 2026-08-06 (301 to /services/ai-agent-development).
 // Kept as a regression guard: the geo layer must stay out of the way so the CDN
@@ -127,8 +133,10 @@ console.log('\nIndia-visitor mirror — cases:')
 
 expect('IN human /services/web-design → /web-design',
   decideInRedirect({ path: '/services/web-design', country: 'IN', userAgent: CHROME }), '/web-design')
-expect('IN human /services/seo → /seo',
-  decideInRedirect({ path: '/services/seo', country: 'IN', userAgent: CHROME }), '/seo')
+expect('IN human /services/ai-seo → /ai-seo',
+  decideInRedirect({ path: '/services/ai-seo', country: 'IN', userAgent: CHROME }), '/ai-seo')
+expect('IN human /services/seo (retired) → NOT redirected by geo',
+  decideInRedirect({ path: '/services/seo', country: 'IN', userAgent: CHROME }), null)
 // Changed 2026-08-06: /services/ai-agent-development is now the US page, so it is
 // no longer a valid India destination. There is no India twin for the agent
 // cluster, and routing India traffic from one US page to another is not a mirror.
@@ -139,12 +147,12 @@ expect('IN human /services/ai-agent-development → NOT redirected (US page, no 
 expect('IN human trailing slash normalised',
   decideInRedirect({ path: '/services/ai-seo/', country: 'IN', userAgent: CHROME }), '/ai-seo')
 expect('country case-insensitive',
-  decideInRedirect({ path: '/services/seo', country: 'in', userAgent: CHROME }), '/seo')
+  decideInRedirect({ path: '/services/web-design', country: 'in', userAgent: CHROME }), '/web-design')
 
 // Crawlers are never redirected, in either direction. Same reasoning as the NA rules:
 // a redirected crawler deindexes the page it was trying to read.
-expect('Googlebot on /services/seo from IN → NOT redirected',
-  decideInRedirect({ path: '/services/seo', country: 'IN', userAgent: GOOGLEBOT }), null)
+expect('Googlebot on /services/ai-seo from IN → NOT redirected',
+  decideInRedirect({ path: '/services/ai-seo', country: 'IN', userAgent: GOOGLEBOT }), null)
 expect('GPTBot on /services/web-design from IN → NOT redirected',
   decideInRedirect({ path: '/services/web-design', country: 'IN', userAgent: GPTBOT }), null)
 
@@ -158,28 +166,30 @@ expect('IN human /b2b-ecommerce → NOT redirected (no India twin)',
 expect('IN human /services/ai-workflow-automation → NOT redirected (reverse would narrow)',
   decideInRedirect({ path: '/services/ai-workflow-automation', country: 'IN', userAgent: CHROME }), null)
 expect('US human on a US page → NOT redirected',
-  decideInRedirect({ path: '/services/seo', country: 'US', userAgent: CHROME }), null)
+  decideInRedirect({ path: '/services/ai-seo', country: 'US', userAgent: CHROME }), null)
 expect('unknown country → NOT redirected (fail open)',
-  decideInRedirect({ path: '/services/seo', country: 'XX', userAgent: CHROME }), null)
+  decideInRedirect({ path: '/services/ai-seo', country: 'XX', userAgent: CHROME }), null)
 
 // --- no redirect loop: the two directions must never bounce a visitor back ---
-// An IN visitor sent /services/seo → /seo must then be served /seo, not sent back.
+// An IN visitor sent /services/ai-seo → /ai-seo must then be served /ai-seo, not sent back.
 expect('LOOP CHECK: IN visitor landing on the India target is served, not redirected',
+  decideGeoRedirect({ path: '/ai-seo', country: 'IN', userAgent: CHROME }), null)
+expect('LOOP CHECK: IN visitor on the India SEO hub is served, not redirected',
   decideGeoRedirect({ path: '/seo', country: 'IN', userAgent: CHROME }), null)
 expect('LOOP CHECK: US visitor landing on the US target is served, not redirected',
   decideGeoRedirect({ path: '/services/web-design', country: 'US', userAgent: CHROME }), null)
 
 // --- combined entry point routes both directions ---
 expect('decideGeoRedirect US on India path → US target',
-  decideGeoRedirect({ path: '/seo/mumbai', country: 'US', userAgent: CHROME }), '/services/seo')
+  decideGeoRedirect({ path: '/seo/mumbai', country: 'US', userAgent: CHROME }), '/services/ai-seo')
 expect('decideGeoRedirect IN on US path → India target',
-  decideGeoRedirect({ path: '/services/seo', country: 'IN', userAgent: CHROME }), '/seo')
+  decideGeoRedirect({ path: '/services/web-design', country: 'IN', userAgent: CHROME }), '/web-design')
 expect('decideGeoRedirect GB visitor → null (neither direction)',
-  decideGeoRedirect({ path: '/services/seo', country: 'GB', userAgent: CHROME }), null)
+  decideGeoRedirect({ path: '/services/ai-seo', country: 'GB', userAgent: CHROME }), null)
 
 // --- isGeoSensitivePath drives cache-stripping; must cover BOTH rule sets ---
 expect('isGeoSensitivePath(/seo) = true (India cluster)', isGeoSensitivePath('/seo'), true)
-expect('isGeoSensitivePath(/services/seo) = true (now has an India twin)', isGeoSensitivePath('/services/seo'), true)
+expect('isGeoSensitivePath(/services/ai-seo) = true (has an India twin)', isGeoSensitivePath('/services/ai-seo'), true)
 expect('isGeoSensitivePath(/replatforming) = false (keeps edge caching)', isGeoSensitivePath('/replatforming'), false)
 expect('isGeoSensitivePath(/) = false', isGeoSensitivePath('/'), false)
 expect('usTarget(/replatforming) = null', usTarget('/replatforming'), null)

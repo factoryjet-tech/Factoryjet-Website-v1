@@ -1158,13 +1158,9 @@ export default function NonprofitWebsiteDesignPage() {
             </ol>
 
             <p className="mt-8 max-w-[840px] font-fj-body text-[0.9375rem] leading-[1.65] text-fj-neutral-700">
-              Item twelve is run by our{' '}
+              Item twelve and the rest of the search work are run by our{' '}
               <Link href="/services/ai-seo" className="font-semibold underline underline-offset-2" style={{ color: ORANGE_DARK }}>
-                AI SEO practice
-              </Link>{' '}
-              and the search side by our{' '}
-              <Link href="/services/seo" className="font-semibold underline underline-offset-2" style={{ color: ORANGE_DARK }}>
-                SEO team
+                AI search and SEO team
               </Link>
               . If you are staying on WordPress, our{' '}
               <Link href="/services/wordpress-development" className="font-semibold underline underline-offset-2" style={{ color: ORANGE_DARK }}>
@@ -1590,14 +1586,9 @@ export default function NonprofitWebsiteDesignPage() {
                   desc: 'The platform most nonprofits are on, built so anyone can run it.',
                 },
                 {
-                  label: 'SEO services',
-                  href: '/services/seo',
-                  desc: 'Gets your programme pages found by people looking for help.',
-                },
-                {
-                  label: 'AI SEO',
+                  label: 'AI search and SEO',
                   href: '/services/ai-seo',
-                  desc: 'Getting named inside ChatGPT, Perplexity and Google AI Overviews.',
+                  desc: 'Gets your programme pages found by people looking for help, in Google and inside ChatGPT, Perplexity and Google AI Overviews.',
                 },
                 {
                   label: 'Web design',

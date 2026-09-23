@@ -205,16 +205,9 @@ export const ecommerceAppDevelopmentAlternates = {
 } as const
 
 /**
- * SEO Services hub page — US only.
- * US:    /us/services/seo
- * The India /seo hub is India-positioned (different market, pricing, copy) and
- * is not treated as a true locale alternate, so this page emits only
- * en-US + x-default per the single-country page rule. Added 2026-06-01.
+ * seoServicesAlternatesUS removed 2026-09-23: /services/seo was retired with a
+ * 301 to /services/ai-seo, which uses aiSeoAlternates below.
  */
-export const seoServicesAlternatesUS = {
-  'en-US': 'https://factoryjet.com/services/seo',
-  'x-default': 'https://factoryjet.com/services/seo',
-} as const
 
 /**
  * Local SEO service hub — US-only. The India local-seo page (/seo/local-seo)

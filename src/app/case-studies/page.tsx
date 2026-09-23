@@ -261,7 +261,7 @@ export default function CaseStudiesIndexPage() {
             </div>
             <div className="mt-8 flex flex-wrap gap-5 font-fj-body font-semibold text-[#C94A1A]">
               <Link href="/b2b-ecommerce" className="underline">Explore B2B ecommerce →</Link>
-              <Link href="/services/seo" className="underline">Explore SEO services →</Link>
+              <Link href="/services/ai-seo" className="underline">Explore SEO services →</Link>
               <Link href="/pricing" className="underline">Discuss scope and pricing →</Link>
             </div>
           </div>

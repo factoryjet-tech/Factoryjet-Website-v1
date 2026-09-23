@@ -272,7 +272,7 @@ export const post: BlogPost = {
         <p className="mb-4">The right answer depends on how competitive your market is and how much you can execute in house. FactoryJet scopes SEO engagements to the work that will actually move rankings and leads, quoted before anything begins.</p>
         <div className="flex flex-wrap items-center gap-4">
           <a href="/contact" className="inline-block bg-[#B23E13] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#9A3510] transition-colors">Get a written SEO quote &rarr;</a>
-          <a href="/services/seo" className="inline-block bg-white text-[#1F2937] border border-gray-300 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors">See SEO services</a>
+          <a href="/services/ai-seo" className="inline-block bg-white text-[#1F2937] border border-gray-300 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors">See SEO services</a>
         </div>
       </div>
 

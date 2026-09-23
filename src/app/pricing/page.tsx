@@ -171,8 +171,7 @@ export default function PricingPage() {
             </div>
             <div className="mt-8 flex flex-wrap items-center gap-5">
               <ModalCTAButton label="Request my SEO audit" region="us" btnVariant="primary-dark" modalVariant="seo" />
-              <Link href="/services/seo" className="font-semibold text-[#C94A1A] underline">Explore SEO services →</Link>
-              <Link href="/services/ai-seo" className="font-semibold text-[#C94A1A] underline">Explore AI search services →</Link>
+              <Link href="/services/ai-seo" className="font-semibold text-[#C94A1A] underline">Explore SEO and AI search services →</Link>
             </div>
           </div>
         </section>

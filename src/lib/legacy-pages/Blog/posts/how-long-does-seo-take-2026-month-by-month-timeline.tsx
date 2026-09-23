@@ -276,7 +276,7 @@ export const post: BlogPost = {
             Schedule 30-Min Technical SEO Scoping →
           </a>
           <a
-            href="/services/seo"
+            href="/services/ai-seo"
             className="inline-flex items-center gap-2 bg-white text-[#1F2937] border border-gray-300 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
           >
             Explore Technical SEO Services

@@ -16,6 +16,7 @@ import IndustriesGrid from '@/components/v2/IndustriesGrid';
 import FAQ, { type FAQItem, type FAQCategory } from '@/components/v2/FAQ';
 import TalkToFounder from '@/components/v2/TalkToFounder';
 import AiVisibilityCtaBand from '@/components/ai-visibility/AiVisibilityCtaBand';
+import { US_SEO_CITY_PAGES } from '@/components/v2/SeoCityLinksUS';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    /us/services/ai-seo - PR #2 Framework B+ launch (2026-05-25)
@@ -63,6 +64,13 @@ import AiVisibilityCtaBand from '@/components/ai-visibility/AiVisibilityCtaBand'
      - One en dash in PILLARS removed (house rule is no em or en dashes in copy).
      - GEO/AEO h2 no longer exact-matches the head term of the sibling page at
        /services/generative-engine-optimization. That page owns it; this one links to it.
+
+   2026-09-23 SEO hub merge. /services/seo now 301s here (see public/_redirects and
+   docs/SEO-HUB-MERGE-2026-09-23.md). Added ClassicSeoServices (links to every SEO
+   cluster page, industry SEO pages and US city SEO pages, which the old page used
+   to carry) and a 'classic' FAQ category of 7 questions the old page answered and
+   this one did not. FAQ is now 30 across 7 categories, still one array feeding
+   both the visible FAQ and FAQPage JSON-LD. Metadata and head terms unchanged.
 ───────────────────────────────────────────────────────────────────────────── */
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -406,6 +414,53 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     answer:
       'Not in practice. Generative engine optimization services describe the same work as AI SEO services, with a narrower emphasis on engines that write answers. If a generative engine optimization company quotes you one number for AI SEO and a second for GEO, ask what sits in the second line item that is not already in the first. Usually the honest answer is nothing.',
   },
+
+  // ── G. Classic SEO (7) ─────────────────────────────────────────────────
+  // Ported 2026-09-23 from the retired /services/seo page (301 to here). Only the
+  // questions this page did not already answer were kept. See
+  // docs/SEO-HUB-MERGE-2026-09-23.md for what was merged, moved or dropped.
+  {
+    category: 'classic',
+    question: 'Do you still do traditional SEO, or only AI SEO?',
+    answer:
+      'Both, on the same retainer. Technical fixes, content and authority are the base that Google rankings and AI citations both sit on, so we do not split them into two products. If all you want is classic SEO, we can scope that too. The pages for local, small business, ecommerce, Shopify SEO, audits and consulting are linked in the classic SEO section above.',
+  },
+  {
+    category: 'classic',
+    question: 'How long does SEO take to work?',
+    answer:
+      'You will usually see a first measurable lift in 30 to 90 days from technical fixes and quick-win content, with momentum building by month four to six. AI citations can move faster once the retrieval crawlers are unblocked, because that part is a switch, not a slow climb. Anyone promising page one in a week is selling something that will not last.',
+  },
+  {
+    category: 'classic',
+    question: 'Do you guarantee first-page Google rankings?',
+    answer:
+      'No. No honest SEO company can promise a specific ranking, because Google and the AI engines decide that, not us. What we do promise is the work, full visibility into it, and a monthly report that shows what changed. Because every engagement is month to month, you are never stuck paying for work that is not moving the numbers.',
+  },
+  {
+    category: 'classic',
+    question: 'What is technical SEO, and who should run it?',
+    answer:
+      'Technical SEO makes sure search engines and AI crawlers can read, render and trust your site: crawlability, indexing, structured data, internal links and Core Web Vitals. It is engineering work, so the people who run the audit should be the people who ship the fixes. Otherwise the audit turns into a PDF nobody implements.',
+  },
+  {
+    category: 'classic',
+    question: 'Can you optimize my current website, or do I need a new one?',
+    answer:
+      'Usually we optimize what you already have. If the site is too slow or cannot be crawled properly, we can rebuild it in about seven days at a 100/100 Lighthouse score. That is a recommendation when the numbers call for it, never a forced upsell.',
+  },
+  {
+    category: 'classic',
+    question: 'Should I hire an SEO agency near me or a remote one?',
+    answer:
+      'Search for an SEO agency near me and you mostly get local generalists who also do social media and print. For search work alone, a specialist that works remotely often does better, because what matters is who does the work, not their zip code. We work with US clients in every state, and for map pack work our local SEO team covers your service area directly.',
+  },
+  {
+    category: 'classic',
+    question: 'Which SEO companies publish affordable pricing?',
+    answer:
+      'Very few. Checked against their own sites on 31 July 2026, Third Marble Marketing listed tiers from $499 to $3,499 a month, Rankstar about $100 an hour with a $1,000 monthly minimum, SeoProfy from around $1,600 a month, SEO.co a $2,000 to $3,000 monthly minimum, and Searchbloom from around $3,000 a month. Most others ask for a call first. We do not publish a rate card either, but you get a fixed quote on the scoping call.',
+  },
 ];
 
 const FAQ_CATEGORIES: ReadonlyArray<FAQCategory> = [
@@ -415,6 +470,7 @@ const FAQ_CATEGORIES: ReadonlyArray<FAQCategory> = [
   { key: 'measure', label: 'Measurement' },
   { key: 'pricing', label: 'Pricing & engagement' },
   { key: 'compare', label: 'Agencies & tools' },
+  { key: 'classic', label: 'Classic SEO' },
 ];
 
 /**
@@ -489,7 +545,7 @@ const COMPETITORS = [
  * PAGE_MODIFIED - the honest last-substantive-edit date. Update it only when the
  * page content actually changes, never on a routine build.
  */
-const PAGE_MODIFIED = '2026-08-06';
+const PAGE_MODIFIED = '2026-09-23';
 
 const webPageSchema = {
   '@context': 'https://schema.org',
@@ -1183,6 +1239,164 @@ function AiSearchStats() {
   );
 }
 
+/**
+ * ClassicSeoServices - the classic SEO half of the hub. Added 2026-09-23 when
+ * /services/seo was retired with a 301 to this page (GSC, 90 days: this page 435
+ * impressions at avg position 16, /services/seo 186 at avg position 64). The old
+ * page was the pillar linking to every SEO cluster page and the US city SEO pages,
+ * so that job moves here. Short on purpose: each linked page carries its own depth.
+ * City list comes from SeoCityLinksUS so the two never drift apart.
+ */
+const CLASSIC_SEO_LINKS: ReadonlyArray<{ href: string; label: string; blurb: string }> = [
+  { href: '/services/local-seo', label: 'Local SEO', blurb: 'Google Business Profile, the map pack and near me searches.' },
+  { href: '/services/small-business-seo', label: 'Small business SEO', blurb: 'Search growth sized for a small team and a real budget.' },
+  { href: '/services/ecommerce-seo', label: 'Ecommerce SEO', blurb: 'Category pages, product schema and organic revenue.' },
+  { href: '/services/shopify-seo', label: 'Shopify SEO', blurb: 'Built around how Shopify actually handles URLs and content.' },
+  { href: '/services/seo-audit', label: 'SEO audit', blurb: 'Find what is holding the site back before you spend more.' },
+  { href: '/services/seo-consulting', label: 'SEO consulting', blurb: 'Strategy and roadmaps for teams with people in house.' },
+];
+
+const INDUSTRY_SEO_LINKS: ReadonlyArray<{ href: string; label: string }> = [
+  { href: '/services/law-firm-seo', label: 'Law firm SEO' },
+  { href: '/services/dental-seo', label: 'Dental SEO' },
+  { href: '/services/healthcare-seo', label: 'Healthcare SEO' },
+  { href: '/services/roofing-seo', label: 'Roofing SEO' },
+];
+
+const CLASSIC_SEO_WORK = [
+  'Technical SEO: crawlability, indexing, schema, internal links and Core Web Vitals',
+  'Answer-first content written on real expertise, four to eight pieces a month',
+  'Authority from reviews, directory citations and digital PR, never bought links',
+  'A monthly report tied to leads and calls, not a wall of keyword positions',
+];
+
+function ClassicSeoServices() {
+  return (
+    <section id="classic-seo" className="py-14 md:py-20" style={{ backgroundColor: '#FFFFFF' }}>
+      <div className="mx-auto max-w-[1120px] px-6 md:px-8">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:gap-12">
+          <div className="md:col-span-5">
+            <p className="fj-eyebrow">CLASSIC SEO SERVICES</p>
+            <h2
+              className="fj-display font-semibold text-fj-ink mt-3"
+              style={{
+                fontSize: 'clamp(1.625rem, 3vw, 2.5rem)',
+                lineHeight: 1.1,
+                letterSpacing: '-0.025em',
+              }}
+            >
+              Looking for classic SEO? It is the same retainer.
+            </h2>
+            <p
+              className="mt-4 font-fj-body text-fj-neutral-600"
+              style={{ fontSize: '1rem', lineHeight: 1.65 }}
+            >
+              Google rankings and AI citations are built on the same base, so we run them as one job.
+              Here is what the classic SEO side covers every month.
+            </p>
+            <ul className="mt-6 space-y-2.5">
+              {CLASSIC_SEO_WORK.map((item) => (
+                <li
+                  key={item}
+                  className="flex items-start gap-2.5 font-fj-body"
+                  style={{ color: 'rgba(15,15,18,0.78)', fontSize: '0.9375rem', lineHeight: 1.55 }}
+                >
+                  <span
+                    className="mt-2 inline-block h-1.5 w-1.5 shrink-0 rounded-full"
+                    style={{ backgroundColor: '#B23E13' }}
+                    aria-hidden="true"
+                  />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="md:col-span-7">
+            <h3
+              className="fj-display font-semibold text-fj-ink"
+              style={{ fontSize: '1.1875rem', lineHeight: 1.3, letterSpacing: '-0.015em' }}
+            >
+              Pick the SEO service that fits
+            </h3>
+            <ul className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2">
+              {CLASSIC_SEO_LINKS.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="block h-full rounded-2xl border p-5 transition-colors hover:border-[#F05A28]"
+                    style={{
+                      borderColor: 'rgba(15,15,18,0.10)',
+                      backgroundColor: '#FAFAF7',
+                    }}
+                  >
+                    <span className="fj-display block font-semibold text-fj-ink" style={{ fontSize: '1.0625rem' }}>
+                      {link.label} <span aria-hidden="true">&rarr;</span>
+                    </span>
+                    <span
+                      className="mt-1.5 block font-fj-body"
+                      style={{ color: 'rgba(15,15,18,0.68)', fontSize: '0.875rem', lineHeight: 1.5 }}
+                    >
+                      {link.blurb}
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <p
+              className="mt-6 font-fj-body"
+              style={{ color: 'rgba(15,15,18,0.72)', fontSize: '0.9375rem', lineHeight: 1.65 }}
+            >
+              By industry:{' '}
+              {INDUSTRY_SEO_LINKS.map((link, i) => (
+                <span key={link.href}>
+                  <Link href={link.href} className="font-semibold underline" style={{ color: '#B23E13' }}>
+                    {link.label}
+                  </Link>
+                  {i < INDUSTRY_SEO_LINKS.length - 1 ? ', ' : '.'}
+                </span>
+              ))}{' '}
+              Still shortlisting? Our{' '}
+              <Link href="/blog/best-seo-agencies-usa" className="font-semibold underline" style={{ color: '#B23E13' }}>
+                comparison of US SEO agencies
+              </Link>{' '}
+              lists what each one publishes about pricing.
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-12 border-t pt-8" style={{ borderColor: 'rgba(15,15,18,0.10)' }}>
+          <h3
+            className="fj-display font-semibold text-fj-ink"
+            style={{ fontSize: '1.1875rem', lineHeight: 1.3, letterSpacing: '-0.015em' }}
+          >
+            SEO in your city
+          </h3>
+          <p
+            className="mt-2 max-w-[680px] font-fj-body"
+            style={{ color: 'rgba(15,15,18,0.72)', fontSize: '0.9375rem', lineHeight: 1.6 }}
+          >
+            Local search works differently in every market. Each city page covers the competitors and
+            what ranking in that map pack actually takes.
+          </p>
+          <ul className="mt-5 flex flex-wrap gap-2.5">
+            {US_SEO_CITY_PAGES.map((city) => (
+              <li key={city.slug}>
+                <Link
+                  href={`/${city.slug}/seo`}
+                  className="inline-flex items-center rounded-full border px-4 py-2 font-fj-body text-[0.875rem] font-medium text-fj-ink transition-colors hover:border-[#F05A28]"
+                  style={{ borderColor: 'rgba(15,15,18,0.12)', backgroundColor: '#FFFFFF' }}
+                >
+                  {city.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+  );
+}
 
 /**
  * GeoAeoServices - covers generative engine optimization services and answer
@@ -1763,6 +1977,10 @@ export default function AiSeoServicePage() {
           }
         />
 
+        {/* ─── 3-classic. Classic SEO services + cluster links (added 2026-09-23,
+             when /services/seo was merged into this page) ─────────────────── */}
+        <ClassicSeoServices />
+
         {/* ─── 3a. GEO + AEO services detail ───────────────────────────────── */}
         <GeoAeoServices />
 
@@ -1874,10 +2092,10 @@ export default function AiSeoServicePage() {
         {/* ─── 9b. Free AI Visibility Checker - lead magnet funnel ───────── */}
         <AiVisibilityCtaBand />
 
-        {/* ─── 10. FAQ - 23 across 6 categories ────────────────────────────── */}
+        {/* ─── 10. FAQ - 30 across 7 categories ────────────────────────────── */}
         <FAQ
           eyebrow="AI SEO FAQ"
-          headline="Twenty-three questions, answered the way Bhavesh would on the discovery call."
+          headline="Thirty questions, answered the way Bhavesh would on the discovery call."
           lead="If your question is not below, send a written brief. Answers usually come back inside 24 hours."
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}

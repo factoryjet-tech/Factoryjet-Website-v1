@@ -1044,7 +1044,7 @@ export default function DentalSEOPage() {
           <div style={{ maxWidth: 780, marginTop: 44 }}>
             <p style={{ fontSize: 16, lineHeight: 1.75, color: 'var(--n600)' }}>
               Most of that is ordinary{' '}
-              <Link href="/services/seo" style={LINK_STYLE}>SEO</Link> with a geography constraint bolted on, which
+              <Link href="/services/ai-seo" style={LINK_STYLE}>SEO</Link> with a geography constraint bolted on, which
               is why a dental practice and a plumbing company get the same first fortnight. The{' '}
               <Link href="/services/seo-audit" style={LINK_STYLE}>free SEO audit</Link> runs this exact list either
               way. Single-location owners usually start with{' '}

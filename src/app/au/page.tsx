@@ -402,7 +402,7 @@ export default function AUHomePage() {
                   <span className="bico" style={{ color: 'var(--orange-d)' }}><Ic id="i-chart" /></span>
                   <h3>SEO Services, Local SEO to AI SEO</h3>
                   <p>{"An SEO agency inside your web team: local SEO for your city, technical SEO, content, Google Business Profile, and AI SEO audits so you show up in ChatGPT and Google's AI results."}</p>
-                  <Link className="blink" href="/services/seo">SEO services Australia <Ic id="i-arrow" /></Link>
+                  <Link className="blink" href="/services/ai-seo">SEO services Australia <Ic id="i-arrow" /></Link>
                 </div>
                 <div className="bcard b-3">
                   <span className="bico" style={{ color: 'var(--green)' }}><Ic id="i-bot" /></span>

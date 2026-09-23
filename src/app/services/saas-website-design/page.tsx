@@ -23,7 +23,7 @@ import MidPageCTA from '@/components/v2/MidPageCTA';
 
    Does NOT own: building the software itself (/services/web-application-development),
    generic marketing sites (/services/web-design), rebuilds of an existing site
-   (/services/website-redesign), or search work (/services/seo, /services/ai-seo).
+   (/services/website-redesign), or search work (/services/ai-seo, which absorbed /services/seo on 2026-09-23).
    Each is linked rather than duplicated.
 
    Build rules honoured: no em dashes, no currency figures anywhere, plain <img>
@@ -1297,7 +1297,7 @@ export default function SaasWebsiteDesignPage() {
                     website redesign
                   </Link>{' '}
                   is the cheaper answer. If the problem is that nobody finds you at all, start with{' '}
-                  <Link href="/services/seo" className="font-semibold underline underline-offset-2" style={{ color: ORANGE_DARK }}>
+                  <Link href="/services/ai-seo" className="font-semibold underline underline-offset-2" style={{ color: ORANGE_DARK }}>
                     SEO
                   </Link>{' '}
                   instead of a rebuild.
@@ -1465,14 +1465,9 @@ export default function SaasWebsiteDesignPage() {
                   desc: 'When the structure is sound and the site is dated, out of step with the product, or slow.',
                 },
                 {
-                  label: 'SEO services',
-                  href: '/services/seo',
-                  desc: 'The organic programme, including turning documentation into a traffic engine.',
-                },
-                {
-                  label: 'AI SEO',
+                  label: 'AI search and SEO',
                   href: '/services/ai-seo',
-                  desc: 'Getting your product named inside ChatGPT, Perplexity and Google AI Overviews.',
+                  desc: 'The organic programme, including turning documentation into a traffic engine, and getting your product named inside ChatGPT, Perplexity and Google AI Overviews.',
                 },
                 {
                   label: 'Small business website design',

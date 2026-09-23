@@ -164,7 +164,9 @@ const US_SUPPORT_SERVICES = [
 // SEO Services and Local SEO live here rather than in US_SUPPORT_SERVICES so the
 // same link does not render twice in one panel. AI SEO stays in supporting
 // services: it is the "get cited" answer box, a different intent from ranking.
-const US_SEO_HUB_HREF = '/services/seo';
+// /services/seo was merged into /services/ai-seo on 2026-09-23 (301), so the
+// SEO hub link now lands on the AI Search & SEO hub.
+const US_SEO_HUB_HREF = '/services/ai-seo';
 const US_SEO_SERVICES = [
   { icon: MapPin,        label: 'Local SEO',          href: '/services/local-seo',          desc: 'Map pack & near-me' },
   { icon: ShoppingCart,  label: 'E-commerce SEO',     href: '/services/ecommerce-seo',      desc: 'Product & collection SEO' },

@@ -89,6 +89,7 @@ US is served from the root. There is no `/us/` prefix. Prefer these URLs; do not
 - [Magento to Shopify Plus Migration: Cost, Timeline and Runbook](https://factoryjet.com/replatforming/magento-to-shopify): Sourced 2026 cost and timeline ranges from published migration guides, Adobe Commerce end-of-support dates and an 11-phase migration runbook; none of the figures are FactoryJet prices.
 - https://factoryjet.com/best-ecommerce-platforms
 - https://factoryjet.com/agentic-commerce
+- [AI Search and SEO services](https://factoryjet.com/services/ai-seo): FactoryJet's SEO hub, covering classic Google SEO and citations in ChatGPT, Perplexity, Claude, Gemini and Google AI Overviews on one month-to-month retainer.
 - https://factoryjet.com/services/small-business-seo
 - https://factoryjet.com/services/generative-engine-optimization
 

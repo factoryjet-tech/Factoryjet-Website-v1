@@ -833,7 +833,7 @@ export default function LocalSeoServicePage() {
             <div style={{ maxWidth: 760, marginTop: 40 }}>
               <p className="dek" style={{ maxWidth: 760 }}>
                 Most of that overlaps with our wider{' '}
-                <Link href="/services/seo" style={LINK_STYLE}>SEO services</Link>, because local SEO is ordinary SEO
+                <Link href="/services/ai-seo" style={LINK_STYLE}>SEO services</Link>, because local SEO is ordinary SEO
                 with a geography constraint bolted on. The{' '}
                 <Link href="/services/seo-audit" style={LINK_STYLE}>free SEO audit</Link> runs this same list and hands
                 you the findings whether or not you hire us. To see what this work usually costs, job by job, read our{' '}

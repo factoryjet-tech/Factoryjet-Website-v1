@@ -64,8 +64,10 @@ export const INDIA_TO_US_RULES = [
   // while it stood. The cluster is now US-owned and serves NA traffic directly.
   // India web-design hub + city pages → US /services/web-design
   { match: (p) => p === '/web-design' || p.startsWith('/web-design/'), target: '/services/web-design' },
-  // India SEO hub + city + discipline pages → US /services/seo
-  { match: (p) => p === '/seo' || p.startsWith('/seo/'), target: '/services/seo' },
+  // India SEO hub + city + discipline pages → US SEO hub. Repointed 2026-09-23:
+  // /services/seo was merged into /services/ai-seo (301), so targeting the old URL
+  // would make every redirected visitor take a second hop.
+  { match: (p) => p === '/seo' || p.startsWith('/seo/'), target: '/services/ai-seo' },
   // standalone India service pages → precise US twins
   { match: (p) => p === '/ai-seo', target: '/services/ai-seo' },
   { match: (p) => p === '/shopify-development', target: '/services/shopify-development' },
@@ -95,7 +97,9 @@ export const IN_COUNTRIES = new Set(['IN'])
 //      only about n8n is a downgrade. Not mirrored.
 export const US_TO_INDIA_RULES = [
   { match: (p) => p === '/services/web-design',           target: '/web-design' },
-  { match: (p) => p === '/services/seo',                  target: '/seo' },
+  // REMOVED 2026-09-23: /services/seo → /seo. /services/seo is now a 301 to
+  // /services/ai-seo, and an India visitor who follows it is mirrored by the
+  // /services/ai-seo rule below instead.
   { match: (p) => p === '/services/ai-seo',               target: '/ai-seo' },
   { match: (p) => p === '/services/shopify-development',  target: '/shopify-development' },
   { match: (p) => p === '/services/wordpress-development', target: '/wordpress-development' },

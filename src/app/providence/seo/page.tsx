@@ -485,7 +485,7 @@ const BREADCRUMB_SCHEMA = {
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com/' },
-    { '@type': 'ListItem', position: 2, name: 'Local SEO', item: 'https://factoryjet.com/services/seo' },
+    { '@type': 'ListItem', position: 2, name: 'Local SEO', item: 'https://factoryjet.com/services/ai-seo' },
     { '@type': 'ListItem', position: 3, name: 'Providence', item: CANONICAL },
   ],
 };

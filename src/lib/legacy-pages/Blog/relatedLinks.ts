@@ -104,9 +104,13 @@ const SERVICE_RULES: ServiceRule[] = [
     keywords: ['small business seo', 'seo for small business', 'seo cost', 'how long does seo', 'seo tips'],
     weight: 3,
   },
+  // /services/seo was merged into /services/ai-seo on 2026-09-23. This generic
+  // 'seo' rule now points at the hub. It shares an href with the AI SEO rule
+  // above, so BY_HREF keeps the first rule per href (the AI SEO label) and the
+  // seen-set in getRelatedServices never emits the hub twice.
   {
-    href: '/services/seo',
-    label: 'SEO Services',
+    href: '/services/ai-seo',
+    label: 'SEO and AI Search',
     blurb: 'Search strategy, technical fixes and content that compounds.',
     keywords: ['seo'],
     weight: 1,
@@ -411,7 +415,9 @@ const UK_CATEGORY_FALLBACK: Record<string, string[]> = {
   'Maintenance & Security': ['/uk/web-design', '/uk/seo-audit', '/uk/seo'],
 };
 
-const BY_HREF = new Map(SERVICE_RULES.map((r) => [r.href, r]));
+// First rule wins per href: two rules can share a destination (see the 'seo' rule).
+const BY_HREF = new Map<string, ServiceRule>();
+for (const r of SERVICE_RULES) if (!BY_HREF.has(r.href)) BY_HREF.set(r.href, r);
 
 /**
  * Topical family per money page, used ONLY to order the category fallback chain.
@@ -441,7 +447,6 @@ const SERVICE_FAMILY: Record<string, ServiceFamily> = {
   '/services/ecommerce-seo': 'search',
   '/services/shopify-seo': 'search',
   '/services/small-business-seo': 'search',
-  '/services/seo': 'search',
   '/services/roofing-seo': 'search',
   '/ai-visibility-checker': 'search',
   '/uk/ai-seo': 'search',
@@ -506,7 +511,7 @@ function keywordHit(hay: string, kw: string): boolean {
 /**
  * Pick the money pages most relevant to a post. Deterministic.
  * Specific rules (weight 3-4) beat generic parents (weight 1-2), so a Shopify SEO
- * post links to /services/shopify-seo rather than the generic /services/seo.
+ * post links to /services/shopify-seo rather than the generic SEO hub.
  */
 export function getRelatedServices(post: BlogPost, limit = 3): RelatedService[] {
   const hay = haystack(post);

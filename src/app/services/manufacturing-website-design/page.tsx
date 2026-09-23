@@ -1454,14 +1454,9 @@ export default function ManufacturingWebsiteDesignPage() {
                   desc: 'The general service. Same team, same speed standards, outside manufacturing.',
                 },
                 {
-                  label: 'AI SEO',
+                  label: 'AI search and SEO',
                   href: '/services/ai-seo',
-                  desc: 'Getting named inside ChatGPT, Perplexity and Google AI Overviews when a sourcing engineer asks who can make a part.',
-                },
-                {
-                  label: 'SEO services',
-                  href: '/services/seo',
-                  desc: 'Ongoing search work. Process pages, technical content and the authority an industrial site needs.',
+                  desc: 'Ongoing search work, and getting named inside ChatGPT, Perplexity and Google AI Overviews when a sourcing engineer asks who can make a part.',
                 },
                 {
                   label: 'SEO audit',

@@ -640,7 +640,7 @@ export default function SeoConsultingPage() {
                   <span aria-hidden="true">&rarr;</span>
                 </Link>
                 <Link
-                  href="/services/seo"
+                  href="/services/ai-seo"
                   className="font-fj-body text-[0.9375rem] font-semibold underline underline-offset-4"
                   style={{ color: ORANGE_DARK }}
                 >
@@ -721,7 +721,7 @@ export default function SeoConsultingPage() {
               </p>
               <p className="mt-4 max-w-[900px] font-fj-body text-[1.0625rem] leading-[1.7] text-fj-neutral-600">
                 Choose consulting when you already have people who can ship and your gap is direction. Choose a{' '}
-                <Link href="/services/seo" className="font-semibold underline underline-offset-2" style={{ color: ORANGE_DARK }}>
+                <Link href="/services/ai-seo" className="font-semibold underline underline-offset-2" style={{ color: ORANGE_DARK }}>
                   done-for-you SEO retainer
                 </Link>{' '}
                 when your gap is capacity. FactoryJet does both, and we will tell you on the first call which
@@ -831,7 +831,7 @@ export default function SeoConsultingPage() {
                   ))}
                 </ul>
                 <Link
-                  href="/services/seo"
+                  href="/services/ai-seo"
                   className="mt-6 inline-flex items-center gap-2 font-fj-body text-[0.9375rem] font-bold"
                   style={{ color: ORANGE_DARK }}
                 >
@@ -1123,7 +1123,7 @@ export default function SeoConsultingPage() {
                 </ul>
                 <p className="mt-6 font-fj-body text-[0.9062rem] leading-[1.6] text-fj-neutral-700">
                   If the first line describes you, our{' '}
-                  <Link href="/services/seo" className="font-semibold underline underline-offset-2" style={{ color: ORANGE_DARK }}>
+                  <Link href="/services/ai-seo" className="font-semibold underline underline-offset-2" style={{ color: ORANGE_DARK }}>
                     done-for-you SEO services
                   </Link>{' '}
                   are the better door. If you are a small local business,{' '}
@@ -1276,7 +1276,7 @@ export default function SeoConsultingPage() {
               {[
                 {
                   label: 'SEO services',
-                  href: '/services/seo',
+                  href: '/services/ai-seo',
                   desc: 'The done-for-you retainer. We run technical, content, and authority work end to end.',
                 },
                 {
@@ -1342,7 +1342,7 @@ export default function SeoConsultingPage() {
           headline="Find out what is actually holding your organic growth back"
           sub="Book a call with the founder. We will look at your site, your Search Console data, and the queries you care about, then tell you plainly whether consulting is the right shape of help or whether you need something else."
           primaryCta={{ label: 'Book a diagnosis call', modal: true, region: 'us' }}
-          secondaryCta={{ label: 'See done-for-you SEO', href: '/services/seo' }}
+          secondaryCta={{ label: 'See done-for-you SEO', href: '/services/ai-seo' }}
           objectionHandler="Founder-led. Month to month. You keep the roadmap and the reasoning behind every item."
         />
       </main>

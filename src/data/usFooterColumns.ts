@@ -132,7 +132,7 @@ export const US_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
     heading: 'Services & SEO',
     links: [
       { label: 'Web Design',             href: '/services/web-design' },
-      { label: 'SEO Services',           href: '/services/seo' },
+      { label: 'SEO Services',           href: '/services/ai-seo' },
       { label: 'E-Commerce SEO',         href: '/services/ecommerce-seo' },
       { label: 'Shopify SEO',            href: '/services/shopify-seo' },
       { label: 'Local SEO',              href: '/services/local-seo' },

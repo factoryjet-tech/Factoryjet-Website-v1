@@ -1117,7 +1117,7 @@ export default function LawFirmSEOPage() {
               It depends on size. A two-attorney practice is better served by the sequencing in{' '}
               <Link href="/services/small-business-seo" style={LINK_STYLE}>small business SEO</Link> than a
               full legal program bought at once. For the parent discipline, start at{' '}
-              <Link href="/services/seo" style={LINK_STYLE}>SEO services</Link>. Firms fighting for one
+              <Link href="/services/ai-seo" style={LINK_STYLE}>SEO services</Link>. Firms fighting for one
               metro usually want the city page:{' '}
               <Link href="/austin/seo" style={LINK_STYLE}>Austin</Link>,{' '}
               <Link href="/chicago/seo" style={LINK_STYLE}>Chicago</Link>,{' '}

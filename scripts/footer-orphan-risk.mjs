@@ -74,7 +74,7 @@ function templateLiteralCovered(href) {
   const esc = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
   // Both shapes occur in this codebase and BOTH have caused a false orphan report:
-  //   slug-first: href={`/${c.slug}/seo`}        (/services/seo hub)
+  //   slug-first: href={`/${c.slug}/seo`}        (/services/ai-seo hub)
   //   slug-last:  href={`/web-design/${c.slug}`} (/web-design hub)
   const candidates = [
     // slug first, rest is the fixed tail

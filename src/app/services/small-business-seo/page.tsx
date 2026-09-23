@@ -811,7 +811,7 @@ export default function SmallBusinessSeoServicePage() {
               </p>
               <p className="dek" style={{ maxWidth: 760, marginTop: 16 }}>
                 Most of this overlaps with our wider{' '}
-                <Link href="/services/seo" style={LINK_STYLE}>SEO services</Link>, because small business SEO is
+                <Link href="/services/ai-seo" style={LINK_STYLE}>SEO services</Link>, because small business SEO is
                 ordinary SEO with a smaller budget and less patience for busywork. The{' '}
                 <Link href="/services/seo-audit" style={LINK_STYLE}>free SEO audit</Link> runs this exact list and
                 hands you the findings whether or not you hire us. If most of your customers arrive through the map
@@ -1151,7 +1151,7 @@ export default function SmallBusinessSeoServicePage() {
                 </Link>
                 <div className="fine">Founder-led. Month-to-month. Reported in leads, not rankings.</div>
                 <div className="mt-4 pt-4 border-t border-black/10 text-xs text-fj-neutral-500">
-                  Related services: <Link href="/services/seo-consulting" className="underline font-semibold text-fj-ink">SEO Consulting Services</Link>, <Link href="/services/seo" className="underline font-semibold text-fj-ink">Managed SEO Services</Link>, and <Link href="/services/small-business-website-design" className="underline font-semibold text-fj-ink">Small Business Web Design</Link>.
+                  Related services: <Link href="/services/seo-consulting" className="underline font-semibold text-fj-ink">SEO Consulting Services</Link>, <Link href="/services/ai-seo" className="underline font-semibold text-fj-ink">Managed SEO Services</Link>, and <Link href="/services/small-business-website-design" className="underline font-semibold text-fj-ink">Small Business Web Design</Link>.
                 </div>
               </div>
             </div>

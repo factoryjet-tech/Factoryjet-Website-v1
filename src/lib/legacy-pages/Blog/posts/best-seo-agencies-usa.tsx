@@ -148,7 +148,7 @@ export const post: BlogPost = {
       <p className="mb-4">
         <strong>Which page do you actually need?</strong> This one is a shortlist for working out who to
         approach. If you have already decided to hire and want scope, process and terms, go to our{' '}
-        <a href="/services/seo" className="text-orange-600 underline">
+        <a href="/services/ai-seo" className="text-orange-600 underline">
           US SEO services page
         </a>{' '}
         instead. If your question is about being cited by ChatGPT and AI Overviews rather than ranking on
@@ -342,7 +342,7 @@ export const post: BlogPost = {
         <strong>Where competitors beat us:</strong> if you want a forty person account team, a national brand
         campaign or a proprietary reporting platform, WebFX or Ignite Visibility will serve you better and we
         will say so on the call. Our numbers are in the section below, including the unflattering one.{' '}
-        <a href="/services/seo" className="text-orange-600 underline">
+        <a href="/services/ai-seo" className="text-orange-600 underline">
           See our SEO service.
         </a>
       </p>
@@ -541,7 +541,7 @@ export const post: BlogPost = {
         We have no enterprise case studies to show you and we are not going to invent any. What we do have is a
         delivery model most of this list cannot offer at our size: the founder runs the account, reporting is
         tied to enquiries, and terms are month to month. If that trade appeals, the detail is on our{' '}
-        <a href="/services/seo" className="text-orange-600 underline">
+        <a href="/services/ai-seo" className="text-orange-600 underline">
           US SEO services page
         </a>
         . If it does not, hire the incumbent and go in knowing exactly what you bought.
@@ -676,7 +676,7 @@ export const post: BlogPost = {
             book a 30 minute call
           </a>{' '}
           or start on our{' '}
-          <a href="/services/seo" className="text-orange-600 underline">
+          <a href="/services/ai-seo" className="text-orange-600 underline">
             US SEO services page
           </a>
           .

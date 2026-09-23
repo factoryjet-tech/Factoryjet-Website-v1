@@ -94,6 +94,8 @@ const nextConfig = {
       { source: '/services/ai-agency',                       destination: '/services/ai-agent-development', permanent: true },
       { source: '/services/ai-agents',                       destination: '/services/ai-agent-development', permanent: true },
       { source: '/services/whatsapp-chatbot',                destination: '/services/ai-chatbot-development', permanent: true },
+      // SEO hub merge (2026-09-23). Prod layer is /public/_redirects
+      { source: '/services/seo',                             destination: '/services/ai-seo', permanent: true },
       // AI agent duplicate merge (2026-09-17). Prod layer is /public/_redirects
       { source: '/services/ai-agent-development/ai-workflow-automation', destination: '/services/ai-workflow-automation',     permanent: true },
       { source: '/services/ai-agent-development/ai-chatbot',             destination: '/services/ai-chatbot-development',     permanent: true },

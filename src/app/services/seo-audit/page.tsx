@@ -915,7 +915,7 @@ export default function SeoAuditServicePage() {
               <p className="dek" style={{ maxWidth: 780 }}>
                 An audit is a diagnosis, and the diagnosis decides the treatment. When the crawl comes back clean and
                 the problem is simply that nobody has built topical depth, the answer is ordinary{' '}
-                <Link href="/services/seo" style={LINK_STYLE}>SEO services</Link>, or{' '}
+                <Link href="/services/ai-seo" style={LINK_STYLE}>SEO services</Link>, or{' '}
                 <Link href="/services/small-business-seo" style={LINK_STYLE}>small business SEO</Link> if you are a
                 single owner with limited hours. When the map pack is the missing channel, it is{' '}
                 <Link href="/services/local-seo" style={LINK_STYLE}>local SEO</Link>. When faceted URLs are burning

@@ -23,9 +23,9 @@ import HeroInlineForm from '@/components/HeroInlineForm';
      roofing seo agency (260/mo, KD 1) · local seo for roofing companies (260/mo)
      · roofing leads (1,300/mo, KD 0) and its variants.
 
-   Does NOT own: generic local SEO (/services/local-seo), generic retainer
-   (/services/seo), audits (/services/seo-audit), AI answer engines
-   (/services/ai-seo). Each is linked rather than duplicated.
+   Does NOT own: generic local SEO (/services/local-seo), the generic retainer
+   and AI answer engines (/services/ai-seo, which absorbed /services/seo on
+   2026-09-23), audits (/services/seo-audit). Each is linked rather than duplicated.
 
    Build rules honoured: no em dashes, no currency figures anywhere, plain <img>
    only, FinalCTA (never GetFreeQuoteCTA), exactly one dark section (the closing
@@ -1367,19 +1367,14 @@ export default function RoofingSeoPage() {
                   desc: 'Map pack, Google Business Profile and near-me search for any service-area business, roofing or otherwise.',
                 },
                 {
-                  label: 'SEO services',
-                  href: '/services/seo',
-                  desc: 'The done-for-you retainer. Technical, content and authority work run end to end by our team.',
-                },
-                {
                   label: 'SEO audit',
                   href: '/services/seo-audit',
                   desc: 'Find out what is actually broken before committing to a programme. A prioritised fix list you can act on.',
                 },
                 {
-                  label: 'AI SEO',
+                  label: 'AI search and SEO',
                   href: '/services/ai-seo',
-                  desc: 'Getting named and cited inside ChatGPT, Perplexity and Google AI Overviews, not just ranked in blue links.',
+                  desc: 'The done-for-you retainer: technical, content and authority work, plus getting named inside ChatGPT, Perplexity and Google AI Overviews.',
                 },
                 {
                   label: 'Small business SEO',
