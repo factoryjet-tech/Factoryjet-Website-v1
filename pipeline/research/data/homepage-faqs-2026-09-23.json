@@ -1,0 +1,182 @@
+[
+ {
+  "category": "what-we-do",
+  "question": "What does an omnichannel commerce agency actually do?",
+  "answer": "We design, build, and implement the systems that let you sell across your store, marketplaces, and B2B from one catalog, one inventory, and one order engine. In plain terms, we are the team you hire to build unified commerce, not a tool you subscribe to."
+ },
+ {
+  "category": "what-we-do",
+  "question": "What is the difference between omnichannel and unified commerce?",
+  "answer": "Omnichannel is about the customer experience across channels. Unified commerce is the architecture underneath it that keeps products, inventory, orders, and customers in sync in real time. We build that unified layer so your channels stop drifting apart."
+ },
+ {
+  "category": "what-we-do",
+  "question": "Is FactoryJet a software product or an agency?",
+  "answer": "An agency. We are a services partner that consults, designs, develops, and implements commerce for you. You own and operate what we build, and there is no FactoryJet subscription."
+ },
+ {
+  "category": "what-we-do",
+  "question": "Can you fix our existing store, or only build from scratch?",
+  "answer": "Both. Most of our work is improving or replatforming what you already run, then adding the unified layer. We audit what you have, fix what is broken, and build what is missing."
+ },
+ {
+  "category": "platforms",
+  "question": "Which ecommerce platform is best for B2B and DTC?",
+  "answer": "There is no single best one; it depends on your catalog size, B2B rules, and budget. We build on Shopify and Shopify Plus, Adobe Commerce (Magento), BigCommerce, WooCommerce, headless, and our own Commerceflo, and recommend the fit rather than pushing one platform."
+ },
+ {
+  "category": "platforms",
+  "question": "Shopify Plus vs Adobe Commerce vs BigCommerce, which should we choose?",
+  "answer": "Shopify Plus for speed and a clean DTC-plus-B2B model on one store, Adobe Commerce for deep native B2B and very large catalogs, BigCommerce for strong mid-market B2B value. We match it to your SKUs, pricing rules, and integrations on a scoping call."
+ },
+ {
+  "category": "platforms",
+  "question": "Can you migrate us off Magento (or another platform) without losing SEO?",
+  "answer": "Yes. We handle replatforming and data migration, products, customers, orders, and B2B pricing, with 301 redirects and a cutover plan that protects your rankings and uptime."
+ },
+ {
+  "category": "platforms",
+  "question": "Do you connect our store to our ERP, POS, and marketplaces?",
+  "answer": "Yes. We integrate ERPs, POS, 3PLs, and marketplaces into one order and inventory layer so every system reads the same live data instead of its own copy."
+ },
+ {
+  "category": "dtc-b2b",
+  "question": "How do we sell on Amazon, Walmart, and our own store at the same time?",
+  "answer": "You put every channel on one catalog and one live inventory, so a sale anywhere updates everywhere. We build that connection plus the listing, pricing, and order flows each marketplace expects."
+ },
+ {
+  "category": "dtc-b2b",
+  "question": "How do we stop overselling across channels?",
+  "answer": "Overselling happens when each tool keeps its own stock count. We build a single live inventory that every channel reads from, so when the last unit sells on one channel it goes unavailable on the rest within moments."
+ },
+ {
+  "category": "dtc-b2b",
+  "question": "Can DTC and B2B run on one site with different pricing?",
+  "answer": "Yes. We build one storefront that serves retail shoppers and gives trade buyers their own login with tiered or contract pricing, net terms, and fast reordering, on one catalog and inventory."
+ },
+ {
+  "category": "dtc-b2b",
+  "question": "What B2B ecommerce features can you build?",
+  "answer": "Tiered and contract pricing, quote and approval workflows, account hierarchies, net terms, gated catalogs, and reordering, all integrated with your ERP."
+ },
+ {
+  "category": "ai-agents",
+  "question": "Can AI manage my inventory and pricing across channels?",
+  "answer": "Yes, and the technology is mature now. We build and implement agents that sync inventory, reprice to hold the Buy Box, and keep listings consistent across channels, all acting on your live data."
+ },
+ {
+  "category": "ai-agents",
+  "question": "What can AI agents actually do for an ecommerce business?",
+  "answer": "The repetitive channel work: listing new products in each marketplace's format, fixing suppressed listings, repricing, reconciling feeds, and answering order questions. They take the busywork off your team, not the strategy."
+ },
+ {
+  "category": "ai-agents",
+  "question": "Is this just an AI chatbot?",
+  "answer": "No. These are task agents that take action across your channels, listing, pricing, and inventory, not a question-and-answer widget on your site."
+ },
+ {
+  "category": "ai-agents",
+  "question": "Do you run the AI agents, or do we?",
+  "answer": "We build and implement them into your stack; they run inside your system and hand the exceptions to your team. You stay in control of the business."
+ },
+ {
+  "category": "working-together",
+  "question": "What should we ask before hiring an ecommerce development agency?",
+  "answer": "Ask about their B2B experience specifically, their discovery and scoping process, how they handle integrations, who owns the relationship after launch, and to see comparable builds. We are happy to answer all of those on a call."
+ },
+ {
+  "category": "platforms",
+  "question": "How much does it cost to build an ecommerce website?",
+  "answer": "Setting up a store yourself on a hosted platform starts around $29 a month. An agency build on Shopify, WooCommerce, or BigCommerce usually costs $2,000 to $25,000, and custom or headless builds start around $25,000 and can pass $250,000, based on Shopify's and BigCommerce's own 2026 cost guides. B2B pricing rules and ERP integrations push a build toward the higher end. We scope yours on a short call and send a fixed proposal before any work starts."
+ },
+ {
+  "category": "working-together",
+  "question": "How long does an ecommerce build or migration take?",
+  "answer": "Most mid-market builds and migrations run from a few weeks to a few months, depending on custom integrations and catalog complexity. You get a phased timeline with milestones after scoping."
+ },
+ {
+  "category": "working-together",
+  "question": "Do you work with US brands?",
+  "answer": "Yes, most of the brands we work with are US-based, across DTC and B2B, and we bring a decade-plus of commerce builds to every engagement."
+ },
+ {
+  "category": "what-we-do",
+  "question": "What is ecommerce development?",
+  "answer": "Ecommerce development is the work of designing, building, and connecting an online store: the storefront, checkout, product catalog, and payments, plus the integrations to your inventory, ERP, marketplaces, and shipping. An ecommerce development company does that work on a platform like Shopify, Adobe Commerce, BigCommerce, or WooCommerce, then supports the store after launch."
+ },
+ {
+  "category": "what-we-do",
+  "question": "What is an ecommerce agency?",
+  "answer": "An ecommerce agency is a team you hire to build, fix, or grow an online store. Some only design themes and some only run ads. A full-service ecommerce agency like FactoryJet covers design, development, integrations, B2B ordering, and SEO, so one partner owns the whole system instead of five vendors each owning a piece."
+ },
+ {
+  "category": "what-we-do",
+  "question": "What are the best ecommerce development companies?",
+  "answer": "The best one for you is the one that has already built something like your store. Check four things: comparable builds on your platform, real B2B and integration experience if you need it, who supports the store after launch, and whether they commit to a fixed proposal. Directories like Clutch list reviewed agencies. Ask each firm on your shortlist for two clients you can call."
+ },
+ {
+  "category": "platforms",
+  "question": "How much does it cost to hire a Shopify developer?",
+  "answer": "US and Canadian Shopify agency rates run about $120 to $200 an hour, and a professionally built custom Shopify store for a US small business typically costs $2,000 to $6,000 one-time plus the monthly Shopify plan. Shopify Plus, B2B, and ERP integrations cost more. Price comes from scope, not hours, so ask any agency for a fixed proposal."
+ },
+ {
+  "category": "platforms",
+  "question": "Can I pay someone to build my Shopify store?",
+  "answer": "Yes. That is most of what a Shopify development agency does. We design and build Shopify and Shopify Plus stores, migrate your products, customers, and orders, and connect the store to your inventory, marketplaces, and ERP. The store and the Shopify account stay in your name, so you own everything we build."
+ },
+ {
+  "category": "dtc-b2b",
+  "question": "What is a B2B ecommerce agency?",
+  "answer": "A B2B ecommerce agency builds online ordering for manufacturers, wholesalers, and distributors: account-specific pricing, quote requests, net terms, bulk and repeat ordering, and ERP integration so orders flow straight into the back office. We build B2B portals on Shopify Plus, Adobe Commerce, BigCommerce, or Commerceflo, often on the same catalog as a DTC store."
+ },
+ {
+  "category": "ai-agents",
+  "question": "What does an AI development company do?",
+  "answer": "An AI development company builds software that uses AI models to read information, make a decision, and take action inside your business: agents, integrations, and automations connected to your ERP, CRM, store, and support desk. FactoryJet builds custom AI agents with a human approval step wherever the decision matters, and you own the code and the agent."
+ },
+ {
+  "category": "ai-agents",
+  "question": "How much does custom AI agent development cost?",
+  "answer": "Custom AI agent development typically runs $10,000 to $100,000+ depending on complexity, and most well-scoped projects reach a first production deployment in 3 to 12 weeks. A single-task agent on one system sits at the low end. Agents that work across several systems, with approvals and monitoring, sit higher. We scope to a fixed outcome, not an hourly meter."
+ },
+ {
+  "category": "ai-agents",
+  "question": "What is agentic commerce?",
+  "answer": "Agentic commerce is buying and selling where AI agents do part of the work. A shopper's assistant searches, compares, and sometimes checks out, while a brand's agents keep listings, prices, and stock accurate. For a store, it means your product data has to be clean and machine-readable, because an AI assistant is more and more often the first thing that reads it."
+ },
+ {
+  "category": "ai-agents",
+  "question": "Will AI replace ecommerce stores?",
+  "answer": "No. AI is changing how people find and choose products, not removing the need for a store. Shoppers increasingly start in ChatGPT, Perplexity, or Google AI Overviews, and those assistants still send them to a real product page and checkout. What changes is that your product data, reviews, and page structure have to be readable by AI, not just by people."
+ },
+ {
+  "category": "ai-search-web",
+  "question": "What is an AI SEO agency?",
+  "answer": "An AI SEO agency works to get your brand named and cited in answers from ChatGPT, Claude, Gemini, Perplexity, and Google AI Overviews, while your pages keep ranking in classic Google results. The work is also called generative engine optimization (GEO) or answer engine optimization (AEO): answer-first pages, schema, open AI crawler access, and mentions on the sites AI assistants trust."
+ },
+ {
+  "category": "ai-search-web",
+  "question": "How much does AI SEO cost?",
+  "answer": "When an agency runs it, generative engine optimization costs about $1,500 to $5,000 a month for most small businesses and $5,000 to $25,000+ for mid-size companies, according to WebFX's May 2026 pricing guide. One-off audits run $5,000 to $50,000. You can see where you stand first, for free, with our AI Visibility Checker."
+ },
+ {
+  "category": "ai-search-web",
+  "question": "Is SEO still worth it in 2026?",
+  "answer": "Yes, but it has changed. Google still sends most search traffic, and AI assistants often build their answers from pages that already rank. What stopped working is thin pages written around a keyword. Pages that answer real buyer questions directly, cite their sources, and show real experience now win in Google and in AI answers."
+ },
+ {
+  "category": "ai-search-web",
+  "question": "What does a web design company do?",
+  "answer": "A web design company plans, designs, builds, and launches your website: page structure, visual design, development, speed, and SEO basics, and usually hosting and support after launch. FactoryJet designs custom websites and redesigns for B2B and service businesses, built to load fast and structured so Google and AI assistants can read them from day one."
+ },
+ {
+  "category": "ai-search-web",
+  "question": "How much should I pay for a website?",
+  "answer": "A US small business website costs roughly $500 with a DIY builder up to $25,000+ with a premium agency in 2026, and most custom professional sites land between about $2,000 and $8,000. Ecommerce and B2B sites cost more because of the catalog, checkout, and integrations. Ask for a fixed proposal that lists every page and integration."
+ },
+ {
+  "category": "ai-search-web",
+  "question": "Is AI replacing web designers?",
+  "answer": "No. AI tools now draft layouts and code quickly, but they don't know your buyers, your offer, or why someone should call you instead of a competitor. The job has moved from pushing pixels to strategy, content, speed, and conversion. Good web design teams use AI to move faster, not to skip the thinking."
+ }
+]

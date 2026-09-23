@@ -1,0 +1,1631 @@
+{
+ "volume": {
+  "ecommerce development agency": {
+   "sv": 210,
+   "cpc": 14.64,
+   "comp": "LOW",
+   "kd": 32
+  },
+  "ecommerce development company": {
+   "sv": 880,
+   "cpc": 60.93,
+   "comp": "LOW",
+   "kd": 28
+  },
+  "ecommerce development services": {
+   "sv": 720,
+   "cpc": null,
+   "comp": "LOW",
+   "kd": 18
+  },
+  "ecommerce agency": {
+   "sv": 2400,
+   "cpc": 56.37,
+   "comp": "LOW",
+   "kd": 34
+  },
+  "ecommerce website development": {
+   "sv": 1300,
+   "cpc": 49.55,
+   "comp": "LOW",
+   "kd": 26
+  },
+  "ecommerce web design": {
+   "sv": 1600,
+   "cpc": 26.38,
+   "comp": "LOW",
+   "kd": 22
+  },
+  "ecommerce website design": {
+   "sv": 1600,
+   "cpc": 26.38,
+   "comp": "LOW",
+   "kd": 19
+  },
+  "ecommerce website development company": {
+   "sv": 320,
+   "cpc": 32.84,
+   "comp": "LOW",
+   "kd": 37
+  },
+  "ecommerce development": {
+   "sv": 720,
+   "cpc": 17.06,
+   "comp": "LOW",
+   "kd": 41
+  },
+  "b2b ecommerce agency": {
+   "sv": 170,
+   "cpc": 27.73,
+   "comp": "MEDIUM",
+   "kd": 1
+  },
+  "b2b ecommerce development": {
+   "sv": 70,
+   "cpc": 6.67,
+   "comp": "LOW",
+   "kd": 0
+  },
+  "b2b ecommerce platform": {
+   "sv": 1600,
+   "cpc": 45.31,
+   "comp": "LOW",
+   "kd": 11
+  },
+  "omnichannel commerce": {
+   "sv": 140,
+   "cpc": 35.13,
+   "comp": "LOW",
+   "kd": 20
+  },
+  "unified commerce": {
+   "sv": 260,
+   "cpc": 13.86,
+   "comp": "LOW",
+   "kd": 12
+  },
+  "shopify development agency": {
+   "sv": 480,
+   "cpc": 39.24,
+   "comp": "LOW",
+   "kd": 31
+  },
+  "shopify plus agency": {
+   "sv": 590,
+   "cpc": 51.78,
+   "comp": "LOW",
+   "kd": 16
+  },
+  "shopify development partner": {
+   "sv": 14800,
+   "cpc": 26.82,
+   "comp": "LOW",
+   "kd": 36
+  },
+  "shopify developers": {
+   "sv": 2400,
+   "cpc": 23.22,
+   "comp": "LOW",
+   "kd": 53
+  },
+  "magento development company": {
+   "sv": 390,
+   "cpc": null,
+   "comp": "LOW",
+   "kd": 26
+  },
+  "adobe commerce agency": {
+   "sv": 90,
+   "cpc": null,
+   "comp": "MEDIUM",
+   "kd": 10
+  },
+  "bigcommerce agency": {
+   "sv": 90,
+   "cpc": 11.12,
+   "comp": "LOW",
+   "kd": 13
+  },
+  "woocommerce development": {
+   "sv": 140,
+   "cpc": 48.26,
+   "comp": "MEDIUM",
+   "kd": 50
+  },
+  "headless commerce agency": {
+   "sv": 20,
+   "cpc": null,
+   "comp": "LOW",
+   "kd": 0
+  },
+  "ecommerce replatforming": {
+   "sv": 110,
+   "cpc": 43.86,
+   "comp": "LOW",
+   "kd": 0
+  },
+  "ecommerce migration services": {
+   "sv": 140,
+   "cpc": 32.66,
+   "comp": "LOW",
+   "kd": 0
+  },
+  "ecommerce consulting": {
+   "sv": 720,
+   "cpc": 32.39,
+   "comp": "LOW",
+   "kd": 6
+  },
+  "agentic commerce": {
+   "sv": 5400,
+   "cpc": 14.17,
+   "comp": "MEDIUM",
+   "kd": 40
+  },
+  "ai ecommerce agency": {
+   "sv": null,
+   "cpc": null,
+   "comp": null,
+   "kd": null
+  },
+  "ai for ecommerce": {
+   "sv": 1900,
+   "cpc": 30.8,
+   "comp": "LOW",
+   "kd": 26
+  },
+  "ecommerce marketing agency": {
+   "sv": 720,
+   "cpc": 85.14,
+   "comp": "LOW",
+   "kd": 16
+  },
+  "ai development company": {
+   "sv": 2900,
+   "cpc": 40.09,
+   "comp": "LOW",
+   "kd": 25
+  },
+  "ai development services": {
+   "sv": 2400,
+   "cpc": 54.53,
+   "comp": "LOW",
+   "kd": 33
+  },
+  "ai agent development": {
+   "sv": 590,
+   "cpc": 31.12,
+   "comp": "LOW",
+   "kd": 26
+  },
+  "ai agent development company": {
+   "sv": 720,
+   "cpc": 33.58,
+   "comp": "LOW",
+   "kd": 9
+  },
+  "ai agent development services": {
+   "sv": 480,
+   "cpc": 33.37,
+   "comp": "LOW",
+   "kd": 0
+  },
+  "agentic ai development": {
+   "sv": 260,
+   "cpc": 21.52,
+   "comp": "MEDIUM",
+   "kd": 39
+  },
+  "ai agency": {
+   "sv": 49500,
+   "cpc": 20.9,
+   "comp": "MEDIUM",
+   "kd": 24
+  },
+  "ai automation agency": {
+   "sv": 4400,
+   "cpc": 19.48,
+   "comp": "LOW",
+   "kd": 19
+  },
+  "custom ai development": {
+   "sv": 210,
+   "cpc": 27.04,
+   "comp": "LOW",
+   "kd": 0
+  },
+  "ai integration services": {
+   "sv": 720,
+   "cpc": 45.81,
+   "comp": "LOW",
+   "kd": 1
+  },
+  "ai consulting services": {
+   "sv": 2400,
+   "cpc": 106.49,
+   "comp": "LOW",
+   "kd": 8
+  },
+  "ai solutions company": {
+   "sv": 390,
+   "cpc": 31,
+   "comp": "MEDIUM",
+   "kd": 15
+  },
+  "ai software development company": {
+   "sv": 1000,
+   "cpc": 143.43,
+   "comp": "LOW",
+   "kd": 34
+  },
+  "ai seo": {
+   "sv": 6600,
+   "cpc": 44.48,
+   "comp": "MEDIUM",
+   "kd": 41
+  },
+  "ai seo agency": {
+   "sv": 1600,
+   "cpc": 45.01,
+   "comp": "LOW",
+   "kd": 0
+  },
+  "ai seo services": {
+   "sv": 1300,
+   "cpc": 41.06,
+   "comp": "LOW",
+   "kd": 2
+  },
+  "generative engine optimization": {
+   "sv": 4400,
+   "cpc": 31.83,
+   "comp": "MEDIUM",
+   "kd": 54
+  },
+  "generative engine optimization services": {
+   "sv": 720,
+   "cpc": 40.11,
+   "comp": "LOW",
+   "kd": 19
+  },
+  "geo agency": {
+   "sv": 720,
+   "cpc": 44.22,
+   "comp": "MEDIUM",
+   "kd": 24
+  },
+  "answer engine optimization": {
+   "sv": 2400,
+   "cpc": 25.49,
+   "comp": "LOW",
+   "kd": 43
+  },
+  "aeo agency": {
+   "sv": 590,
+   "cpc": 49.53,
+   "comp": "LOW",
+   "kd": 1
+  },
+  "llm seo": {
+   "sv": 720,
+   "cpc": 34.43,
+   "comp": "MEDIUM",
+   "kd": 8
+  },
+  "ai search optimization": {
+   "sv": 1300,
+   "cpc": 48.74,
+   "comp": "MEDIUM",
+   "kd": 33
+  },
+  "chatgpt seo": {
+   "sv": 390,
+   "cpc": 34.17,
+   "comp": "LOW",
+   "kd": 22
+  },
+  "ecommerce seo agency": {
+   "sv": 1000,
+   "cpc": 24.9,
+   "comp": "LOW",
+   "kd": 7
+  },
+  "ecommerce seo services": {
+   "sv": 1300,
+   "cpc": 123.78,
+   "comp": "LOW",
+   "kd": 4
+  },
+  "seo agency": {
+   "sv": 27100,
+   "cpc": 39.88,
+   "comp": "LOW",
+   "kd": 19
+  },
+  "seo services": {
+   "sv": 60500,
+   "cpc": 47.77,
+   "comp": "LOW",
+   "kd": 34
+  },
+  "seo company": {
+   "sv": 22200,
+   "cpc": 55.2,
+   "comp": "LOW",
+   "kd": 34
+  },
+  "web design company": {
+   "sv": 14800,
+   "cpc": 29.74,
+   "comp": "LOW",
+   "kd": 37
+  },
+  "web design agency": {
+   "sv": 12100,
+   "cpc": 19.03,
+   "comp": "LOW",
+   "kd": 35
+  },
+  "website design services": {
+   "sv": 5400,
+   "cpc": 28.5,
+   "comp": "LOW",
+   "kd": 41
+  },
+  "website development company": {
+   "sv": 4400,
+   "cpc": 41.76,
+   "comp": "LOW",
+   "kd": 24
+  },
+  "web development company": {
+   "sv": 4400,
+   "cpc": 41.76,
+   "comp": "LOW",
+   "kd": 50
+  },
+  "web development services": {
+   "sv": 4400,
+   "cpc": 50.5,
+   "comp": "LOW",
+   "kd": 39
+  },
+  "custom website design": {
+   "sv": 1000,
+   "cpc": 16.04,
+   "comp": "MEDIUM",
+   "kd": 100
+  },
+  "web design and development company": {
+   "sv": 1000,
+   "cpc": 58.1,
+   "comp": "LOW",
+   "kd": 25
+  },
+  "website redesign services": {
+   "sv": 6600,
+   "cpc": 24.08,
+   "comp": "LOW",
+   "kd": 10
+  },
+  "b2b web design agency": {
+   "sv": 480,
+   "cpc": 48.11,
+   "comp": "LOW",
+   "kd": 33
+  }
+ },
+ "seeds": {
+  "ecommerce": [
+   "ecommerce development agency",
+   "ecommerce development company",
+   "ecommerce development services",
+   "ecommerce agency",
+   "ecommerce website development",
+   "ecommerce web design",
+   "ecommerce website design",
+   "ecommerce website development company",
+   "ecommerce development",
+   "b2b ecommerce agency",
+   "b2b ecommerce development",
+   "b2b ecommerce platform",
+   "omnichannel commerce",
+   "unified commerce",
+   "shopify development agency",
+   "shopify plus agency",
+   "shopify development partner",
+   "shopify developers",
+   "magento development company",
+   "adobe commerce agency",
+   "bigcommerce agency",
+   "woocommerce development",
+   "headless commerce agency",
+   "ecommerce replatforming",
+   "ecommerce migration services",
+   "ecommerce consulting",
+   "agentic commerce",
+   "ai ecommerce agency",
+   "ai for ecommerce",
+   "ecommerce marketing agency"
+  ],
+  "ai_development": [
+   "ai development company",
+   "ai development services",
+   "ai agent development",
+   "ai agent development company",
+   "ai agent development services",
+   "agentic ai development",
+   "ai agency",
+   "ai automation agency",
+   "custom ai development",
+   "ai integration services",
+   "ai consulting services",
+   "ai solutions company",
+   "ai software development company"
+  ],
+  "ai_search_seo": [
+   "ai seo",
+   "ai seo agency",
+   "ai seo services",
+   "generative engine optimization",
+   "generative engine optimization services",
+   "geo agency",
+   "answer engine optimization",
+   "aeo agency",
+   "llm seo",
+   "ai search optimization",
+   "chatgpt seo",
+   "ecommerce seo agency",
+   "ecommerce seo services",
+   "seo agency",
+   "seo services",
+   "seo company"
+  ],
+  "web_design": [
+   "web design company",
+   "web design agency",
+   "website design services",
+   "website development company",
+   "web development company",
+   "web development services",
+   "custom website design",
+   "web design and development company",
+   "website redesign services",
+   "b2b web design agency"
+  ]
+ },
+ "serp": {
+  "ecommerce development agency": {
+   "organic": [
+    {
+     "rank": 1,
+     "domain": "clutch.co",
+     "title": "Top E-Commerce Development Agencies",
+     "url": "https://clutch.co/developers/ecommerce"
+    },
+    {
+     "rank": 2,
+     "domain": "absoluteweb.com",
+     "title": "Ecommerce Strategy & Development Agency | Miami, FL",
+     "url": "https://absoluteweb.com/"
+    },
+    {
+     "rank": 3,
+     "domain": "www.50pros.com",
+     "title": "Top Ecommerce Development Companies",
+     "url": "https://www.50pros.com/hire/ecommerce-development"
+    },
+    {
+     "rank": 4,
+     "domain": "netlynxinc.com",
+     "title": "Ecommerce Web Development Agency",
+     "url": "https://netlynxinc.com/ecommerce-web-development-services/"
+    },
+    {
+     "rank": 5,
+     "domain": "selectedfirms.co",
+     "title": "Top Ecommerce Development Companies in USA (2026)",
+     "url": "https://selectedfirms.co/companies/ecommerce-development/usa"
+    },
+    {
+     "rank": 6,
+     "domain": "www.agentosupport.com",
+     "title": "Ecommerce Development Company in USA | Best Ecom ...",
+     "url": "https://www.agentosupport.com/ecommerce-development/"
+    },
+    {
+     "rank": 7,
+     "domain": "www.orbitmedia.com",
+     "title": "Ecommerce Web Design and Development",
+     "url": "https://www.orbitmedia.com/ecommerce-web-design/"
+    },
+    {
+     "rank": 8,
+     "domain": "www.designrush.com",
+     "title": "Top eCommerce Agencies in USA | 2026",
+     "url": "https://www.designrush.com/agency/ecommerce/us"
+    },
+    {
+     "rank": 9,
+     "domain": "ecommercepartners.com",
+     "title": "Shopify & B2B Ecommerce Development Agency | ECP",
+     "url": "https://ecommercepartners.com/"
+    },
+    {
+     "rank": 10,
+     "domain": "www.upwork.com",
+     "title": "Top 50+ Ecommerce Development agencies",
+     "url": "https://www.upwork.com/agencies/ecommerce-development-agencies/"
+    }
+   ],
+   "paa": [],
+   "aio": null,
+   "types": [
+    "organic",
+    "local_pack",
+    "related_searches"
+   ]
+  },
+  "ecommerce development company": {
+   "organic": [
+    {
+     "rank": 1,
+     "domain": "www.scnsoft.com",
+     "title": "Ecommerce Website Design & Development Services",
+     "url": "https://www.scnsoft.com/ecommerce/services/development"
+    },
+    {
+     "rank": 2,
+     "domain": "www.rightfirms.co",
+     "title": "Top ecommerce Development Companies | 2025",
+     "url": "https://www.rightfirms.co/directory/e-commerce-development"
+    },
+    {
+     "rank": 3,
+     "domain": "www.orbitmedia.com",
+     "title": "Ecommerce Web Design and Development",
+     "url": "https://www.orbitmedia.com/ecommerce-web-design/"
+    },
+    {
+     "rank": 4,
+     "domain": "netlynxinc.com",
+     "title": "Ecommerce Web Development Agency",
+     "url": "https://netlynxinc.com/ecommerce-web-development-services/"
+    },
+    {
+     "rank": 5,
+     "domain": "clutch.co",
+     "title": "Top E-Commerce Developers in the United States",
+     "url": "https://clutch.co/us/developers/ecommerce"
+    },
+    {
+     "rank": 6,
+     "domain": "www.itransition.com",
+     "title": "Ecommerce Development Services",
+     "url": "https://www.itransition.com/ecommerce/development"
+    },
+    {
+     "rank": 7,
+     "domain": "ecomdevelopment.us",
+     "title": "Ecommerce Development & Marketing Services | Ecom ...",
+     "url": "https://ecomdevelopment.us/"
+    },
+    {
+     "rank": 8,
+     "domain": "www.clickpost.ai",
+     "title": "Best eCommerce Development Service Companies in USA",
+     "url": "https://www.clickpost.ai/en-us/blog/ecommerce-development-usa"
+    },
+    {
+     "rank": 9,
+     "domain": "www.anchorgroup.tech",
+     "title": "Ecommerce Store Development Companies | List",
+     "url": "https://www.anchorgroup.tech/blog/ecommerce-store-development-companies-list"
+    }
+   ],
+   "paa": [
+    {
+     "q": "What are the best e-commerce development companies?",
+     "a": ""
+    },
+    {
+     "q": "What is an e-commerce developer?",
+     "a": ""
+    },
+    {
+     "q": "What are the top 5 ecommerce companies?",
+     "a": ""
+    },
+    {
+     "q": "What is ecommerce development?",
+     "a": ""
+    },
+    {
+     "q": "How does ecommerce make money?",
+     "a": ""
+    },
+    {
+     "q": "Will AI replace e-commerce?",
+     "a": ""
+    }
+   ],
+   "aio": null,
+   "types": [
+    "local_pack",
+    "organic",
+    "people_also_ask",
+    "related_searches"
+   ]
+  },
+  "ecommerce agency": {
+   "organic": [
+    {
+     "rank": 1,
+     "domain": "coalitiontechnologies.com",
+     "title": "The Best Ecommerce Agencies in 2026",
+     "url": "https://coalitiontechnologies.com/best-ecommerce-agencies"
+    },
+    {
+     "rank": 2,
+     "domain": "www.stryde.com",
+     "title": "STRYDE: eCommerce Digital Marketing & Ad Agency",
+     "url": "https://www.stryde.com/"
+    },
+    {
+     "rank": 3,
+     "domain": "www.outsourceaccelerator.com",
+     "title": "Top 40 ecommerce agencies worldwide",
+     "url": "https://www.outsourceaccelerator.com/guide/top-e-commerce-agencies-worldwide/"
+    },
+    {
+     "rank": 4,
+     "domain": "www.onemagnify.com",
+     "title": "eCommerce Marketing Agency Services",
+     "url": "https://www.onemagnify.com/services/ecommerce"
+    },
+    {
+     "rank": 5,
+     "domain": "agencies.semrush.com",
+     "title": "Best Ecommerce Digital Marketing Agencies in Los ...",
+     "url": "https://agencies.semrush.com/list/ecommerce/los-angeles/"
+    },
+    {
+     "rank": 6,
+     "domain": "1ecommerceagency.com",
+     "title": "1eCommerce Agency | eCommerce Design & Development ...",
+     "url": "https://1ecommerceagency.com/"
+    },
+    {
+     "rank": 7,
+     "domain": "clutch.co",
+     "title": "Top eCommerce Marketing Agencies - Sep 2026 Rankings",
+     "url": "https://clutch.co/agencies/ecommerce-marketing"
+    },
+    {
+     "rank": 8,
+     "domain": "www.designrush.com",
+     "title": "Top eCommerce Agencies in USA | 2026",
+     "url": "https://www.designrush.com/agency/ecommerce/us"
+    },
+    {
+     "rank": 9,
+     "domain": "webecommercepros.com",
+     "title": "Ecommerce Services Agency in Chicago",
+     "url": "https://webecommercepros.com/pages/ecommerce-agency-in-chicago"
+    }
+   ],
+   "paa": [
+    {
+     "q": "What is an ecommerce agency?",
+     "a": ""
+    },
+    {
+     "q": "How legit is ecommerce?",
+     "a": ""
+    },
+    {
+     "q": "What are the largest e-commerce agencies in the USA?",
+     "a": ""
+    },
+    {
+     "q": "Do I need an LLC for ecommerce?",
+     "a": ""
+    },
+    {
+     "q": "What are 5 disadvantages of e-commerce?",
+     "a": ""
+    },
+    {
+     "q": "What's the easiest LLC to start?",
+     "a": ""
+    }
+   ],
+   "aio": null,
+   "types": [
+    "local_pack",
+    "organic",
+    "people_also_ask",
+    "related_searches"
+   ]
+  },
+  "shopify development agency": {
+   "organic": [
+    {
+     "rank": 1,
+     "domain": "www.conspireagency.com",
+     "title": "Shopify Website Design & Development Agency | Conspire",
+     "url": "https://www.conspireagency.com/"
+    },
+    {
+     "rank": 2,
+     "domain": "www.reddit.com",
+     "title": "Top Shopify Agencies (high end)?",
+     "url": "https://www.reddit.com/r/shopify/comments/1al93je/top_shopify_agencies_high_end/"
+    },
+    {
+     "rank": 3,
+     "domain": "netlynxinc.com",
+     "title": "Get Excellent Shopify Website Design Services Today",
+     "url": "https://netlynxinc.com/shopify-development-services/"
+    },
+    {
+     "rank": 4,
+     "domain": "www.charleagency.com",
+     "title": "Shopify Agency | Ecommerce Web Designers",
+     "url": "https://www.charleagency.com/"
+    },
+    {
+     "rank": 5,
+     "domain": "eastsideco.com",
+     "title": "Shopify Platinum Partner Agency | E-Commerce Website ...",
+     "url": "https://eastsideco.com/"
+    },
+    {
+     "rank": 6,
+     "domain": "swiftotter.com",
+     "title": "Best Shopify Development Agencies",
+     "url": "https://swiftotter.com/technical/merchant-articles/best-shopify-development-agencies"
+    },
+    {
+     "rank": 7,
+     "domain": "netalico.com",
+     "title": "Shopify Agency | Premier Partner, Rated 5.0 by Clients",
+     "url": "https://netalico.com/pages/shopify-agencies?srsltid=AU7gw4Vhu5LTn-Vtjh_2TpY8VozXg2veMEty3-dv71qgmP2sD7BYzlQG"
+    },
+    {
+     "rank": 8,
+     "domain": "clutch.co",
+     "title": "Top Shopify Designers & Developers - Sep 2026 Rankings",
+     "url": "https://clutch.co/developers/shopify"
+    },
+    {
+     "rank": 9,
+     "domain": "www.shopify.com",
+     "title": "Best Website Design Companies: 10 Shopify Agencies",
+     "url": "https://www.shopify.com/blog/best-website-design-companies"
+    }
+   ],
+   "paa": [
+    {
+     "q": "How much does it cost to hire a Shopify developer?",
+     "a": ""
+    },
+    {
+     "q": "Can I pay someone to build my Shopify store?",
+     "a": ""
+    },
+    {
+     "q": "What is Shopify development services?",
+     "a": ""
+    },
+    {
+     "q": "How much do Shopify developers make?",
+     "a": ""
+    },
+    {
+     "q": "Are Shopify developers in demand?",
+     "a": ""
+    },
+    {
+     "q": "How much does Shopify take from a $100 sale?",
+     "a": ""
+    }
+   ],
+   "aio": {
+    "refs": [
+     "www.conspireagency.com",
+     "eastsideco.com",
+     "www.sleeplessmedia.com",
+     "www.charleagency.com",
+     "netalico.com",
+     "netalico.com",
+     "www.aitrillion.com",
+     "www.youtube.com"
+    ],
+    "text": "A Shopify development agency builds, customizes, and scales online stores on the Shopify and Shopify Plus platforms. Custom Theme Development: Building unique, high-speed storefronts using Liquid, HTML, CSS, and modern JavaScript instead of relying on generic templates. Platform Migrations: Moving existing data, customer accounts, and order history securely from legacy or competing systems like Magento or BigCommerce. App Integration and Development: Connecting third-party software\u2014such as ERP, CRM, and inventory management tools\u2014or building custom private apps via Shopify APIs. Conversion Rate Optimization (CRO) & SEO: Tuning site performance, streamlining user journeys, and implementing search-first technical foundations to boost sales. Shopify Partner Status: Look for verified Premier or Platinum Partners with proven enterprise or Shopify Plus experience. In-House Teams: Prioritize agencies with dedicated in-house designers, developers, and strategists rather than heavy reliance on outsourced or offshore rework. Long-Term Support: Choose partners who provide ongoing monthly growth retainers and maintenance rather than just a one-off launch. If you want to narrow down your choice"
+   },
+   "types": [
+    "ai_overview",
+    "organic",
+    "people_also_ask",
+    "related_searches"
+   ]
+  },
+  "b2b ecommerce agency": {
+   "organic": [
+    {
+     "rank": 1,
+     "domain": "b2becommerceagency.com",
+     "title": "The B2B eCommerce Agency: B2B eCommerce for ...",
+     "url": "https://b2becommerceagency.com/"
+    },
+    {
+     "rank": 2,
+     "domain": "www.onemagnify.com",
+     "title": "B2B eCommerce Services",
+     "url": "https://www.onemagnify.com/ecommerce/b2b-ecommerce"
+    },
+    {
+     "rank": 3,
+     "domain": "coalitiontechnologies.com",
+     "title": "Best B2B Ecommerce Agency",
+     "url": "https://coalitiontechnologies.com/b2b-ecommerce-agency"
+    },
+    {
+     "rank": 4,
+     "domain": "www.digitalcommerce360.com",
+     "title": "Leading B2B Ecommerce Agencies",
+     "url": "https://www.digitalcommerce360.com/2026/07/13/leading-b2b-ecommerce-agencies/"
+    },
+    {
+     "rank": 5,
+     "domain": "www.groovecommerce.com",
+     "title": "B2B eCommerce Agency",
+     "url": "https://www.groovecommerce.com/b2b-ecommerce-agency"
+    },
+    {
+     "rank": 6,
+     "domain": "www.iwdagency.com",
+     "title": "Best B2B eCommerce Agencies - Top 12",
+     "url": "https://www.iwdagency.com/blogs/news/best-b2b-ecommerce-agencies/"
+    },
+    {
+     "rank": 7,
+     "domain": "magnetoitsolutions.com",
+     "title": "B2B ecommerce website development",
+     "url": "https://magnetoitsolutions.com/services/b2b-ecommerce-solutions"
+    },
+    {
+     "rank": 8,
+     "domain": "directiveconsulting.com",
+     "title": "20 Best eCommerce Agencies for B2B in 2026",
+     "url": "https://directiveconsulting.com/blog/the-top-20-b2b-commerce-agencies/"
+    }
+   ],
+   "paa": [
+    {
+     "q": "Which B2B agencies are the best?",
+     "a": ""
+    },
+    {
+     "q": "What is a B2B agency?",
+     "a": ""
+    },
+    {
+     "q": "What are the top 10 B2B e-commerce platforms?",
+     "a": ""
+    },
+    {
+     "q": "What are the top 10 B2B websites in the USA?",
+     "a": ""
+    },
+    {
+     "q": "What are the best B2B websites for 2026?",
+     "a": ""
+    },
+    {
+     "q": "Is Walmart a B2B company?",
+     "a": ""
+    }
+   ],
+   "aio": {
+    "refs": [
+     "b2becommerceagency.com",
+     "coalitiontechnologies.com",
+     "www.onemagnify.com",
+     "www.groovecommerce.com",
+     "www.digitalcommerce360.com",
+     "www.websolutionsnyc.com",
+     "www.journeyh.io",
+     "directiveconsulting.com",
+     "ciobulletin.com"
+    ],
+    "text": "A B2B eCommerce Agency is a specialized partner that helps manufacturers, wholesalers, and distributors build, optimize, and manage digital sales platforms tailored to business-to-business transactions. System Integrations: Connects your online storefront directly to back-office systems like ERP and CRM (Enterprise Resource Planning and Customer Relationship Management) to automate inventory, customer data, and order processing. Complex Pricing & Catalogs: Sets up account-specific pricing, multi-tier bulk discounts, and custom catalogs for different buyers. Advanced Workflows: Implements corporate purchasing structures such as purchase orders (POs), Net-30 payment terms, quote requests (RFQs), and multi-user approval hierarchies. Growth Marketing: Drives qualified traffic and pipeline growth through B2B-focused SEO, paid advertising, and email marketing. Coalition Technologies : Offers full-service design, development, and digital marketing across major platforms like BigCommerce, Shopify, and Magento. OneMagnify : Focuses on enterprise-level platforms, AI-driven purchasing workflows, and deep system integrations for manufacturing and distribution. Platform Ecosystems: Top agencies"
+   },
+   "types": [
+    "ai_overview",
+    "organic",
+    "people_also_ask",
+    "related_searches"
+   ]
+  },
+  "ai development company": {
+   "organic": [
+    {
+     "rank": 1,
+     "domain": "www.scnsoft.com",
+     "title": "Artificial Intelligence (AI) Software Development Company",
+     "url": "https://www.scnsoft.com/artificial-intelligence/software-development"
+    },
+    {
+     "rank": 2,
+     "domain": "silentinfotech.com",
+     "title": "AI Development Company",
+     "url": "https://silentinfotech.com/ai-development-company"
+    },
+    {
+     "rank": 3,
+     "domain": "clutch.co",
+     "title": "Top Artificial Intelligence Development Companies",
+     "url": "https://clutch.co/developers/artificial-intelligence"
+    },
+    {
+     "rank": 4,
+     "domain": "masterofcode.com",
+     "title": "Top 20+ Best AI Development Companies [2026]",
+     "url": "https://masterofcode.com/blog/top-ai-development-companies"
+    },
+    {
+     "rank": 5,
+     "domain": "www.coherentsolutions.com",
+     "title": "Artificial Intelligence Development Services | AI Software",
+     "url": "https://www.coherentsolutions.com/artificial-intelligence"
+    },
+    {
+     "rank": 6,
+     "domain": "xchange.avixa.org",
+     "title": "Top 10 AI Development Companies in USA for Startups & ...",
+     "url": "https://xchange.avixa.org/posts/top-10-ai-development-companies-in-usa-for-startups-and-enterprises-2026-updated-list"
+    },
+    {
+     "rank": 7,
+     "domain": "appinventiv.com",
+     "title": "AI Development Services",
+     "url": "https://appinventiv.com/ai-development-services/"
+    },
+    {
+     "rank": 8,
+     "domain": "www.sapphiresolutions.net",
+     "title": "Artificial Intelligence Development Company in USA",
+     "url": "https://www.sapphiresolutions.net/artificial-intelligence-development-company"
+    },
+    {
+     "rank": 9,
+     "domain": "www.linkedin.com",
+     "title": "Leading AI Development Companies in the USA",
+     "url": "https://www.linkedin.com/pulse/leading-ai-development-companies-usa-innovation-m3gnc"
+    }
+   ],
+   "paa": [
+    {
+     "q": "What company is leading AI development?",
+     "a": ""
+    },
+    {
+     "q": "What are the top 10 AI development companies?",
+     "a": ""
+    },
+    {
+     "q": "Who are the big 5 AI companies?",
+     "a": ""
+    },
+    {
+     "q": "Who are the big 4 in AI?",
+     "a": ""
+    },
+    {
+     "q": "What are the top 10 AI companies?",
+     "a": ""
+    },
+    {
+     "q": "Which 3 jobs will survive AI?",
+     "a": ""
+    }
+   ],
+   "aio": {
+    "refs": [
+     "www.scnsoft.com",
+     "appinventiv.com",
+     "www.coherentsolutions.com",
+     "geniusee.com",
+     "www.linkedin.com",
+     "www.daffodilsw.com"
+    ],
+    "text": "An AI development company builds custom artificial intelligence solutions, machine learning models, and automated workflows for businesses. Custom AI and ML Models: Designing and training specific models for unique business data. Generative AI Integration: Implementing large language models (LLMs) and retrieval-augmented generation (RAG). Autonomous AI Agents: Building systems that handle multi-step tasks without human help. AI Software Modernization: Adding intelligence features to legacy apps and platforms. Appinventiv provides end-to-end enterprise AI engineering and product development. ScienceSoft delivers AI consulting, model training, and custom implementations with decades of tech experience. Coherent Solutions offers continuous delivery loops and embedded AI experts for product engineering. Data Readiness: Verify your company data is clean and organized before starting. Security Standards: Ensure the provider follows compliance and responsible AI protocols. Case Studies: Review past projects in your specific industry. If you want to move forward, tell me:What specific business problem do you want AI to solve?\nWhat is your estimated budget range ?\nI can help you narrow down"
+   },
+   "types": [
+    "ai_overview",
+    "organic",
+    "people_also_ask",
+    "local_pack",
+    "related_searches"
+   ]
+  },
+  "ai agent development company": {
+   "organic": [
+    {
+     "rank": 1,
+     "domain": "www.n-ix.com",
+     "title": "AI agent development services",
+     "url": "https://www.n-ix.com/ai-agent-development-services/"
+    },
+    {
+     "rank": 2,
+     "domain": "appinventiv.com",
+     "title": "AI Agent Development Services",
+     "url": "https://appinventiv.com/ai-agent-development-services/"
+    },
+    {
+     "rank": 3,
+     "domain": "clutch.co",
+     "title": "Top AI Agent Development Companies - Sep 2026 Rankings",
+     "url": "https://clutch.co/developers/artificial-intelligence/agents"
+    },
+    {
+     "rank": 4,
+     "domain": "www.leewayhertz.com",
+     "title": "AI Agent Development Company",
+     "url": "https://www.leewayhertz.com/ai-agent-development-company/"
+    },
+    {
+     "rank": 5,
+     "domain": "devcom.com",
+     "title": "Top 15 AI Agent Development Companies in 2026 - DevCom",
+     "url": "https://devcom.com/tech-blog/top-ai-agent-development-companies-in-the-usa/"
+    },
+    {
+     "rank": 6,
+     "domain": "www.npgroup.net",
+     "title": "We Build Custom AI Agents for Your Business",
+     "url": "https://www.npgroup.net/automation/ai-agent-development/"
+    },
+    {
+     "rank": 7,
+     "domain": "www.intuz.com",
+     "title": "AI Agent Development Company and Services for Production",
+     "url": "https://www.intuz.com/ai-agents-for-business-automation/"
+    },
+    {
+     "rank": 8,
+     "domain": "tech.us",
+     "title": "Top 10 AI Agents Development Companies in USA",
+     "url": "https://tech.us/blog/top-ai-agent-development-companies-usa"
+    },
+    {
+     "rank": 9,
+     "domain": "www.moveworks.com",
+     "title": "The Best AI Agent Development Companies & Key ...",
+     "url": "https://www.moveworks.com/us/en/resources/blog/ai-agent-development-company"
+    }
+   ],
+   "paa": [
+    {
+     "q": "What are the top 10 AI agent development companies?",
+     "a": ""
+    },
+    {
+     "q": "Who are the big 4 AI agents?",
+     "a": ""
+    },
+    {
+     "q": "Can I develop my own AI agent?",
+     "a": ""
+    },
+    {
+     "q": "What company is leading AI development?",
+     "a": ""
+    },
+    {
+     "q": "Which companies are developing AI agents?",
+     "a": ""
+    },
+    {
+     "q": "Which 3 jobs will survive AI?",
+     "a": ""
+    }
+   ],
+   "aio": {
+    "refs": [
+     "neurons-lab.com",
+     "www.reddit.com",
+     "tech.us",
+     "www.youtube.com",
+     "www.lumay.ai",
+     "adaptsoftware365.com",
+     "www.straive.com"
+    ],
+    "text": "AI agent development companies design, build, and deploy autonomous multi-agent systems, custom workflows, and tool-integrated AI applications for businesses. EffectiveSoft : Builds advanced automation systems with natural language processing and decision-making capabilities. Markovate : Focuses on custom enterprise AI agents, multi-agent orchestration, and real-time vector database integrations. LeewayHertz : Develops bespoke enterprise-grade autonomous workflows and intelligent software agents. HatchWorks AI : Specializes in custom AI software development, solution design, and end-to-end integration. Emerline : Offers rapid MVP creation, AI consulting, and custom AI agent training for global startups and enterprises. According to discussions on platforms like Reddit, users agree that partners generally fall into two main categories: AI Automation Agencies : Smaller, cost-effective teams using visual tools like Make or n8n for sequential or lighter workflow automations. AI Consulting & Custom Software Firms : Established engineering agencies building high-ticket, deeply integrated, and secure custom agent systems with high productivity ceilings. If you share your project goals, bu"
+   },
+   "types": [
+    "ai_overview",
+    "organic",
+    "people_also_ask",
+    "related_searches"
+   ]
+  },
+  "ai seo agency": {
+   "organic": [
+    {
+     "rank": 1,
+     "domain": "www.reddit.com",
+     "title": "The 7 Leading AI SEO Agencies for Modern Search",
+     "url": "https://www.reddit.com/r/b2bmarketing/comments/1t546si/the_7_leading_ai_seo_agencies_for_modern_search/"
+    },
+    {
+     "rank": 2,
+     "domain": "www.level.agency",
+     "title": "AI SEO\u200b Performance Digital Marketing",
+     "url": "https://www.level.agency/ai-seo/"
+    },
+    {
+     "rank": 3,
+     "domain": "www.outerboxdesign.com",
+     "title": "AEO & GEO Optimization AI SEO Agency",
+     "url": "https://www.outerboxdesign.com/digital-marketing-services/seo/ai/"
+    },
+    {
+     "rank": 4,
+     "domain": "thriveagency.com",
+     "title": "AI SEO Services | AI-Driven Search Engine Optimization ...",
+     "url": "https://thriveagency.com/digital-marketing-services/ai-seo-services/"
+    },
+    {
+     "rank": 5,
+     "domain": "www.yesoptimist.com",
+     "title": "The 7 Best AI SEO Agencies Helping Clients Win AI Search in ...",
+     "url": "https://www.yesoptimist.com/best-ai-seo-agencies/"
+    },
+    {
+     "rank": 6,
+     "domain": "coalitiontechnologies.com",
+     "title": "Rank in ChatGPT and AI Overviews with AI SEO",
+     "url": "https://coalitiontechnologies.com/ai-seo-company"
+    },
+    {
+     "rank": 7,
+     "domain": "www.searchbloom.com",
+     "title": "Best AI SEO Companies + Services in the US 2026 (AEO ...",
+     "url": "https://www.searchbloom.com/strategy/best-ai-seo-agency-companies-services-usa/"
+    },
+    {
+     "rank": 8,
+     "domain": "www.spicymargarita.co",
+     "title": "10 Top AI SEO Agencies in 2026",
+     "url": "https://www.spicymargarita.co/blog/top-ai-seo-agencies-for-b2b"
+    },
+    {
+     "rank": 9,
+     "domain": "percepture.com",
+     "title": "Best AI SEO Agencies In The USA: Search Growth Guide for",
+     "url": "https://percepture.com/geo-insights/best-ai-seo-agencies-usa/"
+    }
+   ],
+   "paa": [
+    {
+     "q": "Is there an AI that can do SEO?",
+     "a": ""
+    },
+    {
+     "q": "What is an AI SEO agency?",
+     "a": ""
+    },
+    {
+     "q": "How much does AI SEO cost?",
+     "a": ""
+    },
+    {
+     "q": "Which AI SEO agencies are the best?",
+     "a": ""
+    },
+    {
+     "q": "Is SEO still worth it in 2026?",
+     "a": ""
+    },
+    {
+     "q": "Can ChatGPT do SEO?",
+     "a": ""
+    }
+   ],
+   "aio": {
+    "refs": [
+     "www.reddit.com",
+     "www.level.agency",
+     "coalitiontechnologies.com",
+     "www.revvgrowth.com",
+     "www.yesoptimist.com",
+     "percepture.com",
+     "www.stackmatix.com"
+    ],
+    "text": "An AI SEO agency optimizes your digital presence to get your brand cited, summarized, and recommended by generative search engines and AI assistants like ChatGPT, Claude, Perplexity, Gemini, and Google AI Overviews. Unlike traditional SEO\u2014which focuses strictly on keyword rankings and blue links on a search engine results page\u2014AI SEO (also known as Answer Engine Optimization or Generative Engine Optimization) targets machine-synthesized answers. Entity and Topic Mapping: Structures your brand data so large language models (LLMs) recognize your company as a primary authority in your niche. Third-Party Authority Building: Focuses heavily on digital PR, Reddit mentions, niche community discussions, and review sites, which AI models frequently scrape for real-world consensus. Machine-Readable Content: Restructures website content using clear headings, comparison tables, and advanced schema markup to increase the odds of AI citation. AI Visibility Tracking: Measures brand sentiment, model coverage, and citation frequency across various AI platforms rather than tracking traditional keyword rank alone. Optimist : Best for B2B SaaS and tech companies, focusing on pipeline revenue and brand"
+   },
+   "types": [
+    "ai_overview",
+    "organic",
+    "people_also_ask",
+    "related_searches"
+   ]
+  },
+  "generative engine optimization services": {
+   "organic": [
+    {
+     "rank": 1,
+     "domain": "percepture.com",
+     "title": "Generative Engine Optimization Services | GEO Agency",
+     "url": "https://percepture.com/services/geo-services"
+    },
+    {
+     "rank": 2,
+     "domain": "developers.google.com",
+     "title": "Google's Guide to Optimizing for Generative AI Features on ...",
+     "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide"
+    },
+    {
+     "rank": 3,
+     "domain": "www.orangemantra.com",
+     "title": "Generative Engine Optimization Services | GEO Agency",
+     "url": "https://www.orangemantra.com/services/generative-engine-optimization/"
+    },
+    {
+     "rank": 4,
+     "domain": "en.wikipedia.org",
+     "title": "Generative engine optimization",
+     "url": "https://en.wikipedia.org/wiki/Generative_engine_optimization"
+    },
+    {
+     "rank": 5,
+     "domain": "powerdigitalmarketing.com",
+     "title": "Generative Engine Optimization (GEO) Services",
+     "url": "https://powerdigitalmarketing.com/services/generative-engine-optimization-services/"
+    },
+    {
+     "rank": 6,
+     "domain": "thedigitalelevator.com",
+     "title": "The 12 Best Generative Engine Optimization (GEO) ...",
+     "url": "https://thedigitalelevator.com/blog/best-generative-engine-optimization-geo-agencies/"
+    },
+    {
+     "rank": 7,
+     "domain": "www.semrush.com",
+     "title": "Generative Engine Optimization (GEO): A Practical Guide",
+     "url": "https://www.semrush.com/blog/generative-engine-optimization/"
+    },
+    {
+     "rank": 8,
+     "domain": "www.epicwebstudios.com",
+     "title": "Generative Engine Optimization Services",
+     "url": "https://www.epicwebstudios.com/generative-engine-optimization"
+    },
+    {
+     "rank": 9,
+     "domain": "www.epicslope.partners",
+     "title": "Top Generative Engine Optimization Agencies in 2026 ...",
+     "url": "https://www.epicslope.partners/buyers-guide/generative-engine-optimization-agencies"
+    }
+   ],
+   "paa": [],
+   "aio": {
+    "refs": [
+     "percepture.com",
+     "developers.google.com",
+     "www.youtube.com",
+     "powerdigitalmarketing.com",
+     "www.youtube.com",
+     "www.tripledart.com"
+    ],
+    "text": "Generative Engine Optimization (GEO) services help your business get cited, recommended, and named by AI search tools like ChatGPT, Perplexity, Gemini, and Google AI Overviews. Unlike traditional SEO that targets blue links on a results page, GEO focuses on making your brand a trusted source inside conversational AI answers. AI Visibility Audits: Agencies check how often and how accurately large language models (LLMs) currently mention your brand or products. Content Restructuring: Writers and strategists format your web pages with clear FAQs, direct answers, and bullet points that AI can easily read and quote. Schema Markup: Technical experts add structured data to your code so machines understand your business details, products, and services. Entity Building: Providers strengthen your topical authority across the web so AI recognizes your brand as an industry leader. Digital PR and Mentions: Teams secure brand mentions on trusted third-party sites like review platforms, forums, and industry blogs that LLMs use for consensus. Tracking and Analytics: Agencies monitor AI sentiment, mentions, and referral traffic to measure your return on investment. Read the official Google AI Optim"
+   },
+   "types": [
+    "ai_overview",
+    "organic",
+    "related_searches"
+   ]
+  },
+  "web design company": {
+   "organic": [
+    {
+     "rank": 1,
+     "domain": "coalitiontechnologies.com",
+     "title": "2026's Top Web Design and Development Agency",
+     "url": "https://coalitiontechnologies.com/web-design"
+    },
+    {
+     "rank": 2,
+     "domain": "clutch.co",
+     "title": "Top Web Design Companies - Sep 2026 Rankings",
+     "url": "https://clutch.co/web-designers"
+    },
+    {
+     "rank": 3,
+     "domain": "www.americaneagle.com",
+     "title": "Americaneagle.com | Web Design Company | Digital ...",
+     "url": "https://www.americaneagle.com/"
+    },
+    {
+     "rank": 4,
+     "domain": "www.builtinseattle.com",
+     "title": "Top Seattle Web Design and Development Companies",
+     "url": "https://www.builtinseattle.com/articles/seattle-web-design-companies-development"
+    },
+    {
+     "rank": 5,
+     "domain": "dd.nyc",
+     "title": "Award-Winning Web Design Agency in New York",
+     "url": "https://dd.nyc/services/web-design/"
+    },
+    {
+     "rank": 6,
+     "domain": "www.designrush.com",
+     "title": "Top US Website Design Companies - Sep 2026",
+     "url": "https://www.designrush.com/agency/website-design-development/us"
+    },
+    {
+     "rank": 7,
+     "domain": "www.bigdropinc.com",
+     "title": "Web Design & Development Agency in New York / NYC | Big ...",
+     "url": "https://www.bigdropinc.com/"
+    },
+    {
+     "rank": 8,
+     "domain": "www.10bestdesign.com",
+     "title": "Best Web Design Companies & Developers (Top 26 ...",
+     "url": "https://www.10bestdesign.com/firms/"
+    },
+    {
+     "rank": 9,
+     "domain": "themanifest.com",
+     "title": "The Best Web Design Companies - Sep 2026 | The Manifest",
+     "url": "https://themanifest.com/web-design/agencies"
+    },
+    {
+     "rank": 10,
+     "domain": "thriveagency.com",
+     "title": "Miami Web Design Company | Custom Website Development",
+     "url": "https://thriveagency.com/miami-web-design-company/"
+    }
+   ],
+   "paa": [
+    {
+     "q": "Which company is best for web designing?",
+     "a": ""
+    },
+    {
+     "q": "How much should I pay a website designer?",
+     "a": ""
+    },
+    {
+     "q": "What does a web design company do?",
+     "a": ""
+    },
+    {
+     "q": "Is web design still worth it in 2026?",
+     "a": ""
+    },
+    {
+     "q": "Is AI replacing web designers?",
+     "a": ""
+    },
+    {
+     "q": "What is a web design salary?",
+     "a": ""
+    }
+   ],
+   "aio": null,
+   "types": [
+    "organic",
+    "local_pack",
+    "people_also_ask",
+    "related_searches"
+   ]
+  },
+  "web development company": {
+   "organic": [
+    {
+     "rank": 1,
+     "domain": "coalitiontechnologies.com",
+     "title": "2026's Top Web Design and Development Agency",
+     "url": "https://coalitiontechnologies.com/web-design"
+    },
+    {
+     "rank": 2,
+     "domain": "clutch.co",
+     "title": "Top Web Development Companies - Sep 2026 Rankings",
+     "url": "https://clutch.co/web-developers"
+    },
+    {
+     "rank": 3,
+     "domain": "www.americaneagle.com",
+     "title": "Americaneagle.com | Web Design Company | Digital ...",
+     "url": "https://www.americaneagle.com/"
+    },
+    {
+     "rank": 4,
+     "domain": "agencies.semrush.com",
+     "title": "Best Web Development Companies in United States 2026",
+     "url": "https://agencies.semrush.com/list/web-development/united-states/"
+    },
+    {
+     "rank": 5,
+     "domain": "www.bigdropinc.com",
+     "title": "Web Design & Development Agency in New York / NYC | Big ...",
+     "url": "https://www.bigdropinc.com/"
+    },
+    {
+     "rank": 6,
+     "domain": "www.builtinseattle.com",
+     "title": "Top Seattle Web Design and Development Companies",
+     "url": "https://www.builtinseattle.com/articles/seattle-web-design-companies-development"
+    },
+    {
+     "rank": 7,
+     "domain": "www.orbitmedia.com",
+     "title": "Chicago Web Design and Digital Marketing Agency | Orbit ...",
+     "url": "https://www.orbitmedia.com/"
+    },
+    {
+     "rank": 8,
+     "domain": "www.sodapopmedia.com",
+     "title": "Top Custom Web Development Company in Dallas, Texas",
+     "url": "https://www.sodapopmedia.com/services/web-development/"
+    },
+    {
+     "rank": 9,
+     "domain": "www.hugeinc.com",
+     "title": "Huge Inc.",
+     "url": "https://www.hugeinc.com/"
+    },
+    {
+     "rank": 10,
+     "domain": "www.designrush.com",
+     "title": "Top Web Development Companies in US - Sep 2026",
+     "url": "https://www.designrush.com/agency/web-development-companies/us"
+    }
+   ],
+   "paa": [
+    {
+     "q": "What do web development companies do?",
+     "a": ""
+    },
+    {
+     "q": "Which company is best for web developers?",
+     "a": ""
+    },
+    {
+     "q": "How much does it cost to pay someone to build my website?",
+     "a": ""
+    },
+    {
+     "q": "What are the top 10 web development companies in the USA?",
+     "a": ""
+    },
+    {
+     "q": "What are the big 3 of web development?",
+     "a": ""
+    },
+    {
+     "q": "Is web design still in demand in 2026?",
+     "a": ""
+    }
+   ],
+   "aio": null,
+   "types": [
+    "organic",
+    "local_pack",
+    "people_also_ask",
+    "related_searches"
+   ]
+  },
+  "ecommerce website development": {
+   "organic": [
+    {
+     "rank": 1,
+     "domain": "www.wix.com",
+     "title": "eCommerce Website Builder: Build An eCommerce Site",
+     "url": "https://www.wix.com/ecommerce/website"
+    },
+    {
+     "rank": 2,
+     "domain": "www.bigcommerce.com",
+     "title": "Ecommerce Website Development Complete Guide (2026)",
+     "url": "https://www.bigcommerce.com/articles/ecommerce-website-development/"
+    },
+    {
+     "rank": 3,
+     "domain": "www.reddit.com",
+     "title": "How to build e-commerce website from scratch",
+     "url": "https://www.reddit.com/r/learnjavascript/comments/bdyrad/how_to_build_ecommerce_website_from_scratch/"
+    },
+    {
+     "rank": 4,
+     "domain": "www.orbitmedia.com",
+     "title": "Ecommerce Web Design and Development",
+     "url": "https://www.orbitmedia.com/ecommerce-web-design/"
+    },
+    {
+     "rank": 5,
+     "domain": "mailchimp.com",
+     "title": "Ecommerce Website Development Tips & Best Practices",
+     "url": "https://mailchimp.com/resources/ecommerce-website-development/"
+    },
+    {
+     "rank": 6,
+     "domain": "www.globalmediainsight.com",
+     "title": "Ecommerce Website Development [Ultimate Guide 2026]",
+     "url": "https://www.globalmediainsight.com/blog/ecommerce-website-development/"
+    },
+    {
+     "rank": 7,
+     "domain": "innowise.com",
+     "title": "Ecommerce Website Development: A Guide to Successful ...",
+     "url": "https://innowise.com/blog/plan-your-own-ecommerce-website-development-step-by-step/"
+    },
+    {
+     "rank": 8,
+     "domain": "www.odoo.com",
+     "title": "eCommerce website design",
+     "url": "https://www.odoo.com/app/ecommerce"
+    },
+    {
+     "rank": 9,
+     "domain": "www.zoho.com",
+     "title": "Ecommerce website development made simple (2026)",
+     "url": "https://www.zoho.com/commerce/academy/ecommerce-website-development.html"
+    }
+   ],
+   "paa": [
+    {
+     "q": "How much does it cost to have an eCommerce website built?",
+     "a": ""
+    },
+    {
+     "q": "What is the 80/20 rule in eCommerce?",
+     "a": ""
+    },
+    {
+     "q": "Is eCommerce still profitable in 2026?",
+     "a": ""
+    },
+    {
+     "q": "Do I need an LLC for eCommerce?",
+     "a": ""
+    },
+    {
+     "q": "What are 5 disadvantages of e-commerce?",
+     "a": ""
+    },
+    {
+     "q": "Do I need a tax ID to sell on Shopify?",
+     "a": ""
+    }
+   ],
+   "aio": {
+    "refs": [
+     "www.reddit.com",
+     "www.youtube.com",
+     "innowise.com",
+     "www.wix.com",
+     "www.zoho.com",
+     "www.odoo.com",
+     "www.youtube.com"
+    ],
+    "text": "Ecommerce website development is the process of building, designing, and maintaining an online store to sell products or services over the internet. Choose a platform: Select a managed platform or builder like Wix for all-in-one hosting and payments, or use self-hosted tools like WordPress with WooCommerce. Design the user interface: Create clear product pages, intuitive menus, and a mobile-friendly layout optimized for touch navigation. Add products and inventory: Upload high-quality images, write descriptive titles and prices, and configure real-time stock management. Set up payments and security: Connect secure payment gateways (like Stripe or PayPal) and ensure compliance with data privacy laws. Configure shipping and taxes: Define shipping regions, rates, and automated tax calculations before launching the site. Platform-based (No-Code/Low-Code): Best for most small-to-medium businesses and beginners; features built-in security, lower upfront time, and manageable maintenance. Custom/From-Scratch Development: Offers complete technical control and flexibility via custom frontend and backend code, but requires higher budgets, longer timelines, and specialized expertise. If you wa"
+   },
+   "types": [
+    "ai_overview",
+    "organic",
+    "people_also_ask",
+    "related_searches"
+   ]
+  }
+ },
+ "balance_after": 20.670141
+}
