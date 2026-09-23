@@ -96,11 +96,13 @@ export const IN_COUNTRIES = new Set(['IN'])
 //      reverse is not true: sending someone from "AI workflow automation" to a page
 //      only about n8n is a downgrade. Not mirrored.
 export const US_TO_INDIA_RULES = [
-  { match: (p) => p === '/services/web-design',           target: '/web-design' },
+  // REMOVED 2026-09-23 at Bhavesh's request: /services/web-design → /web-design and
+  // /services/ai-seo → /ai-seo. Both hubs were rebuilt to serve the US and India
+  // (market-neutral copy), so India visitors now stay on them. The India pages
+  // remain live and reachable; NA visitors on them are still sent to these hubs.
   // REMOVED 2026-09-23: /services/seo → /seo. /services/seo is now a 301 to
   // /services/ai-seo, and an India visitor who follows it is mirrored by the
   // /services/ai-seo rule below instead.
-  { match: (p) => p === '/services/ai-seo',               target: '/ai-seo' },
   { match: (p) => p === '/services/shopify-development',  target: '/shopify-development' },
   { match: (p) => p === '/services/wordpress-development', target: '/wordpress-development' },
   // REMOVED 2026-08-06: this sent Indian visitors from /services/ai-agents to

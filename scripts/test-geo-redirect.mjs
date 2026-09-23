@@ -131,10 +131,14 @@ expect('isIndiaPath(/api/notify-lead) = false (function passthrough)', isIndiaPa
 // ─── India visitors on US pages → India twin (added 2026-08-03) ───────────────
 console.log('\nIndia-visitor mirror — cases:')
 
-expect('IN human /services/web-design → /web-design',
-  decideInRedirect({ path: '/services/web-design', country: 'IN', userAgent: CHROME }), '/web-design')
-expect('IN human /services/ai-seo → /ai-seo',
-  decideInRedirect({ path: '/services/ai-seo', country: 'IN', userAgent: CHROME }), '/ai-seo')
+// Changed 2026-09-23: the web design and AI SEO hubs now serve the US and India,
+// so India visitors stay on them (Bhavesh's request). Regression guards:
+expect('IN human /services/web-design → NOT redirected (hub serves US + India)',
+  decideInRedirect({ path: '/services/web-design', country: 'IN', userAgent: CHROME }), null)
+expect('IN human /services/ai-seo → NOT redirected (hub serves US + India)',
+  decideInRedirect({ path: '/services/ai-seo', country: 'IN', userAgent: CHROME }), null)
+expect('IN human /services/shopify-development → /shopify-development (twin still mirrored)',
+  decideInRedirect({ path: '/services/shopify-development', country: 'IN', userAgent: CHROME }), '/shopify-development')
 expect('IN human /services/seo (retired) → NOT redirected by geo',
   decideInRedirect({ path: '/services/seo', country: 'IN', userAgent: CHROME }), null)
 // Changed 2026-08-06: /services/ai-agent-development is now the US page, so it is
@@ -145,9 +149,9 @@ expect('IN human /services/ai-agents (retired) → NOT redirected by geo',
 expect('IN human /services/ai-agent-development → NOT redirected (US page, no mirror)',
   decideInRedirect({ path: '/services/ai-agent-development', country: 'IN', userAgent: CHROME }), null)
 expect('IN human trailing slash normalised',
-  decideInRedirect({ path: '/services/ai-seo/', country: 'IN', userAgent: CHROME }), '/ai-seo')
+  decideInRedirect({ path: '/services/shopify-development/', country: 'IN', userAgent: CHROME }), '/shopify-development')
 expect('country case-insensitive',
-  decideInRedirect({ path: '/services/web-design', country: 'in', userAgent: CHROME }), '/web-design')
+  decideInRedirect({ path: '/services/wordpress-development', country: 'in', userAgent: CHROME }), '/wordpress-development')
 
 // Crawlers are never redirected, in either direction. Same reasoning as the NA rules:
 // a redirected crawler deindexes the page it was trying to read.
@@ -183,13 +187,14 @@ expect('LOOP CHECK: US visitor landing on the US target is served, not redirecte
 expect('decideGeoRedirect US on India path → US target',
   decideGeoRedirect({ path: '/seo/mumbai', country: 'US', userAgent: CHROME }), '/services/ai-seo')
 expect('decideGeoRedirect IN on US path → India target',
-  decideGeoRedirect({ path: '/services/web-design', country: 'IN', userAgent: CHROME }), '/web-design')
+  decideGeoRedirect({ path: '/services/shopify-development', country: 'IN', userAgent: CHROME }), '/shopify-development')
 expect('decideGeoRedirect GB visitor → null (neither direction)',
   decideGeoRedirect({ path: '/services/ai-seo', country: 'GB', userAgent: CHROME }), null)
 
 // --- isGeoSensitivePath drives cache-stripping; must cover BOTH rule sets ---
 expect('isGeoSensitivePath(/seo) = true (India cluster)', isGeoSensitivePath('/seo'), true)
-expect('isGeoSensitivePath(/services/ai-seo) = true (has an India twin)', isGeoSensitivePath('/services/ai-seo'), true)
+expect('isGeoSensitivePath(/services/ai-seo) = false (hub serves US + India, keeps edge caching)', isGeoSensitivePath('/services/ai-seo'), false)
+expect('isGeoSensitivePath(/services/shopify-development) = true (has an India twin)', isGeoSensitivePath('/services/shopify-development'), true)
 expect('isGeoSensitivePath(/replatforming) = false (keeps edge caching)', isGeoSensitivePath('/replatforming'), false)
 expect('isGeoSensitivePath(/) = false', isGeoSensitivePath('/'), false)
 expect('usTarget(/replatforming) = null', usTarget('/replatforming'), null)
