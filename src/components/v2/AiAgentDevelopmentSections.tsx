@@ -30,6 +30,73 @@ function AiAgentFaqAccordion() {
   );
 }
 
+const AGENT_DIRECTORY: { group: string; lead: string; items: { title: string; href: string; line: string }[] }[] = [
+  { group: 'By job', lead: 'Agents that take a specific job off a team.', items: [
+    { title: 'AI Voice Agents', href: '/services/ai-agent-development/ai-voice-agent', line: 'Inbound calls, qualification and booking by phone' },
+    { title: 'AI Receptionist', href: '/services/ai-receptionist', line: 'Answers every call 24/7 and books into your calendar' },
+    { title: 'AI Customer Support Agents', href: '/services/ai-customer-support-agents', line: 'Resolves Zendesk, Gorgias and Intercom tickets' },
+    { title: 'AI SDR & BDR Agents', href: '/services/ai-sdr', line: 'Replies to inbound leads, qualifies, books meetings' },
+    { title: 'AI Scheduling Agent', href: '/services/ai-agent-development/ai-scheduling-agent', line: 'Booking, reminders and calendar sync' },
+    { title: 'AI Marketing Agent', href: '/services/ai-agent-development/ai-marketing-agent', line: 'Email, SMS and CRM campaigns in your brand voice' },
+    { title: 'AI Chatbot Development', href: '/services/ai-chatbot-development', line: 'Website chat that answers from your own content' },
+  ] },
+  { group: 'Operations & ERP', lead: 'Agents that work inside your back office systems.', items: [
+    { title: 'RFQ Automation Agent', href: '/services/ai-agent-development/rfq-bidding-agent', line: 'Reads RFQs and drafts quotes for approval' },
+    { title: 'Procurement & Supply Chain Agent', href: '/services/ai-agent-development/procurement-supply-chain-agent', line: 'Supplier emails, PO acknowledgements, open-PO follow-up' },
+    { title: 'Manufacturing Operations Agent', href: '/services/ai-agent-development/manufacturing-operations-agent', line: 'Answers from ERP, CMMS and shop-floor data' },
+    { title: 'AI Workflow Automation', href: '/services/ai-workflow-automation', line: 'Multi-step processes across your tools' },
+    { title: 'AI Integration Services', href: '/services/ai-integration-services', line: 'Connect AI to your CRM, ERP and apps' },
+    { title: 'AI Automation', href: '/services/ai-automation', line: 'Lead follow-up, invoicing and reporting, automated' },
+    { title: 'AI Agent Monitoring', href: '/services/ai-agent-monitoring', line: 'Support, evaluations and upkeep after launch' },
+  ] },
+  { group: 'By industry', lead: 'Agents built around one industry’s systems and rules.', items: [
+    { title: 'Manufacturing', href: '/services/manufacturing-ai-agents', line: 'Quoting, ERP integration and supply chain' },
+    { title: 'Healthcare', href: '/services/healthcare-ai-agents', line: 'HIPAA-aware receptionists and clinical workflows' },
+    { title: 'Legal', href: '/services/legal-ai-agents', line: 'Intake, document review and practice management' },
+    { title: 'Real Estate', href: '/services/ai-agents-for-real-estate', line: 'Lead response, showings and follow-up' },
+    { title: 'Property Management', href: '/services/property-management-ai-agents', line: 'Leasing agents for AppFolio, Yardi and more' },
+    { title: 'Dental Support Organizations', href: '/services/dental-support-organization-ai-agents', line: 'Central answering and scheduling for every location' },
+    { title: 'Restaurants', href: '/services/restaurant-ai-voice-agents', line: 'Phone ordering straight into your POS' },
+    { title: 'Automotive Dealers', href: '/services/automotive-ai-voice-agents', line: 'Service scheduling and DMS integration' },
+    { title: 'Chemical & Pharma', href: '/services/chemical-pharmaceutical-ai-agents', line: 'Batch records, SDS and LIMS under GxP' },
+    { title: 'Agriculture Equipment', href: '/services/agriculture-equipment-ai-agents', line: 'Parts lookup, fault triage and tech dispatch' },
+  ] },
+];
+
+function AgentDirectory() {
+  return (
+    <section className="section agentdir" id="all-agents">
+      <div className="wrap">
+        <div className="section-head">
+          <div className="eyebrow">Directory</div>
+          <h2>Every AI Agent We Build</h2>
+          <p>Each agent has its own page: what it does, the systems it connects to, and how we build it.</p>
+        </div>
+        {AGENT_DIRECTORY.map((g) => (
+          <div className="agentdir-group" key={g.group}>
+            <div className="agentdir-label">
+              <h3>{g.group}</h3>
+              <p>{g.lead}</p>
+              <span className="mono agentdir-count">{g.items.length} agents</span>
+            </div>
+            <ul className="agentdir-grid">
+              {g.items.map((it) => (
+                <li key={it.href}>
+                  <a href={it.href}>
+                    <span className="agentdir-t">{it.title}</span>
+                    <span className="agentdir-l">{it.line}</span>
+                    <span className="agentdir-go" aria-hidden="true">↗</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function WorkflowIcon({ step }: { step: number }) {
   const paths = [
     'M6 3h8l4 4v14H6V3Zm8 0v5h4M9 12h6M9 16h4',
@@ -296,7 +363,7 @@ export default function AiAgentDevelopmentSections() {
               <h2>AI Agent Development Services</h2>
             </div>
             <div className="capgrid">
-              <a className="cap cap-1" href="/contact">
+              <a className="cap cap-1" href="/services/ai-agent-development/rfq-bidding-agent">
                 <div className="caphead">
                   <span className="capid">CAP‑01</span>
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C94A1A" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -314,7 +381,7 @@ export default function AiAgentDevelopmentSections() {
                   <span>Odoo</span>
                 </div>
               </a>
-              <a className="cap cap-2" href="/contact">
+              <a className="cap cap-2" href="/services/ai-agent-development/manufacturing-operations-agent">
                 <div className="caphead">
                   <span className="capid">CAP‑02</span>
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C94A1A" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -330,7 +397,7 @@ export default function AiAgentDevelopmentSections() {
                   <span>SCADA</span>
                 </div>
               </a>
-              <a className="cap cap-3" href="/contact">
+              <a className="cap cap-3" href="/services/ai-agent-development/ai-voice-agent">
                 <div className="caphead">
                   <span className="capid">CAP‑03</span>
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C94A1A" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -344,7 +411,7 @@ export default function AiAgentDevelopmentSections() {
                   <span>Telephony</span>
                 </div>
               </a>
-              <a className="cap cap-4" href="/contact">
+              <a className="cap cap-4" href="/services/ai-customer-support-agents">
                 <div className="caphead">
                   <span className="capid">CAP‑04</span>
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C94A1A" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -362,7 +429,7 @@ export default function AiAgentDevelopmentSections() {
                   <span>Salesforce</span>
                 </div>
               </a>
-              <a className="cap cap-5" href="/contact">
+              <a className="cap cap-5" href="/services/ai-sdr">
                 <div className="caphead">
                   <span className="capid">CAP‑05</span>
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C94A1A" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -378,7 +445,7 @@ export default function AiAgentDevelopmentSections() {
                   <span>Salesforce</span>
                 </div>
               </a>
-              <a className="cap cap-6" href="/contact">
+              <a className="cap cap-6" href="/services/ai-integration-services">
                 <div className="caphead">
                   <span className="capid">CAP‑06</span>
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C94A1A" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -400,6 +467,7 @@ export default function AiAgentDevelopmentSections() {
             </div>
           </div>
         </section>
+        <AgentDirectory />
         <section className="photobreak" id="photobreak">
           <img className="kenburns" width="2000" height="667" src="/images/us/services/ai-agent-tolerance-check.webp" alt="AI-generated model of a software workflow moving through architecture, processing, verification, and output" loading="lazy" decoding="async" />
           <div className="caption"><span className="dot" />FIELD REFERENCE &#8212; TOLERANCE CHECK</div>
