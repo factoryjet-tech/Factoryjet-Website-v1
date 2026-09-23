@@ -1,0 +1,73 @@
+/* Website Design hub on top of AiAgentDevelopmentSections.css (same design system).
+   Every rule is scoped under .webDesignHub so nothing leaks into other .aiAgentPage pages.
+   Platform-index rules mirror HomeSections.css, rescoped. */
+.webDesignHub .fact p a { color: var(--accent-text); font-family: var(--mono); font-size: 11px; text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; }
+.webDesignHub .fact .stat { color: var(--ink); font-weight: 600; }
+.webDesignHub .vlog .client { font-family: var(--mono); font-size: 10px; color: var(--muted); margin-top: 14px; letter-spacing: .04em; }
+.webDesignHub .vlog .client a { color: var(--accent-text); text-decoration: underline; text-underline-offset: 3px; }
+.webDesignHub .vlog .section-head p { margin-top: 16px; color: var(--body); font-size: 16px; line-height: 1.75; }
+.webDesignHub .finalcta .ctas { display: flex; flex-wrap: wrap; gap: 12px; flex-shrink: 0; margin-bottom: 5px; }
+.webDesignHub .finalcta .ctas .btn { margin: 0; }
+.webDesignHub .refs { grid-template-columns: repeat(4,minmax(0,1fr)); row-gap: 22px; }
+.webDesignHub .hero-alt { margin-top: 16px; font-size: 13px; color: var(--muted); }
+.webDesignHub .hero-alt a { color: var(--accent-text); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.webDesignHub .tablenote { margin-top: 16px; font-size: 13px; color: var(--muted); }
+.webDesignHub .tablenote a { color: var(--accent-text); text-decoration: underline; text-underline-offset: 3px; }
+
+/* Platform index */
+.webDesignHub .platforms { border-top: 1px solid var(--line); }
+.webDesignHub .plat-head { max-width: none; display: grid; grid-template-columns: minmax(0,5fr) minmax(0,7fr); gap: 20px 64px; align-items: end; }
+.webDesignHub .plat-head h2 { margin-top: 16px; }
+.webDesignHub .plat-head p { color: var(--body); font-size: 16px; line-height: 1.75; max-width: 60ch; }
+.webDesignHub .plat-head p a { color: var(--accent-text); text-decoration: underline; text-underline-offset: 3px; }
+.webDesignHub .plat-head .stat { color: var(--ink); font-weight: 600; }
+.webDesignHub .platlist { border-top: 1px solid var(--ink); }
+.webDesignHub .plat { display: grid; grid-template-columns: 64px minmax(0,2.6fr) minmax(0,3.3fr) minmax(0,4.6fr) 28px; gap: 24px; align-items: start; padding: 26px 16px; border-bottom: 1px solid var(--line); transition: background .18s ease; }
+.webDesignHub a.plat:hover { background: var(--accent-wash); }
+.webDesignHub a.plat:hover h3, .webDesignHub a.plat:hover .plat-go { color: var(--accent-text); }
+.webDesignHub .plat .capid { padding-top: 6px; }
+.webDesignHub .plat h3 { font-size: 22px; line-height: 1.2; }
+.webDesignHub .plat-go { color: var(--muted); font-size: 19px; padding-top: 2px; text-align: right; }
+.webDesignHub .plat .k, .webDesignHub .pw-shop .k { display: block; font-family: var(--mono); font-size: 9px; font-weight: 400; color: var(--muted); letter-spacing: .06em; text-transform: uppercase; margin-bottom: 6px; }
+.webDesignHub .pw-fit { margin-top: 12px; font-size: 14px; color: var(--ink); font-weight: 500; line-height: 1.6; }
+.webDesignHub .pw-build { font-size: 14px; color: var(--body); line-height: 1.7; }
+.webDesignHub .pw-trade { display: grid; grid-template-columns: max-content minmax(0,1fr); gap: 7px 14px; margin: 0; font-size: 13px; line-height: 1.55; }
+.webDesignHub .pw-trade dt { font-family: var(--mono); font-size: 9.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); padding-top: 3px; }
+.webDesignHub .pw-trade dd { margin: 0; color: var(--body); }
+.webDesignHub .pw-shop { display: grid; grid-template-columns: minmax(0,3fr) minmax(0,9fr); gap: 20px 40px; margin-top: 34px; padding-top: 26px; border-top: 1px solid var(--line-strong); }
+.webDesignHub .pw-shop-label p { font-size: 14px; color: var(--body); line-height: 1.65; }
+.webDesignHub .pw-shopgrid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; }
+.webDesignHub .pw-shopgrid a { display: block; height: 100%; box-sizing: border-box; border: 1px solid var(--line); border-radius: 10px; padding: 16px; background: white; transition: border-color .18s ease; }
+.webDesignHub .pw-shopgrid a:hover { border-color: var(--accent); }
+.webDesignHub .pw-shop-t { display: block; font-weight: 600; color: var(--ink); font-size: 15px; }
+.webDesignHub .pw-shopgrid a:hover .pw-shop-t { color: var(--accent-text); }
+.webDesignHub .pw-shop-l { display: block; margin-top: 6px; font-size: 13px; color: var(--body); line-height: 1.6; }
+.webDesignHub .plat-foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 32px; margin-top: 26px; font-size: 14px; color: var(--body); }
+.webDesignHub .plat-foot a { color: var(--accent-text); font-weight: 600; }
+
+/* Platform comparison table */
+.webDesignHub .pw-compare .section-head { row-gap: 18px; }
+.webDesignHub .pw-compare .section-head p { grid-column: 2; margin: 0; color: var(--body); font-size: 16px; line-height: 1.75; max-width: 70ch; }
+.webDesignHub .pw-compare tbody th { font-weight: 500; }
+
+.webDesignHub .faqsrc { font-family: var(--mono); font-size: 11px; color: var(--accent-text); text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; }
+.webDesignHub .definition-copy p + p { margin-top: 16px; }
+.webDesignHub .definition-copy a, .webDesignHub .section-head p a { color: var(--accent-text); text-decoration: underline; text-underline-offset: 3px; }
+
+@media (max-width: 1080px) {
+  .webDesignHub .plat { grid-template-columns: 56px minmax(0,1fr) minmax(0,1.3fr) 20px; }
+  .webDesignHub .plat .plat-name { grid-column: 2; grid-row: 1; }
+  .webDesignHub .plat .pw-build { grid-column: 2; grid-row: 2; }
+  .webDesignHub .plat .pw-trade { grid-column: 3; grid-row: 1 / span 2; }
+  .webDesignHub .plat .plat-go { grid-column: 4; grid-row: 1; }
+}
+@media (max-width: 820px) {
+  .webDesignHub .plat-head { grid-template-columns: 1fr; }
+  .webDesignHub .plat { grid-template-columns: minmax(0,1fr) 20px; gap: 10px; padding: 22px 4px; }
+  .webDesignHub .plat .capid, .webDesignHub .plat .plat-name, .webDesignHub .plat .pw-build, .webDesignHub .plat .pw-trade { grid-column: 1; grid-row: auto; padding: 0; }
+  .webDesignHub .plat .plat-go { grid-column: 2; grid-row: 1; }
+  .webDesignHub .pw-shop { grid-template-columns: 1fr; }
+  .webDesignHub .pw-shopgrid { grid-template-columns: 1fr; }
+  .webDesignHub .pw-compare .section-head p { margin-top: 16px; }
+  .webDesignHub .refs { grid-template-columns: 1fr; }
+}
