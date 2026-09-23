@@ -515,6 +515,79 @@ async function verifyTurnstile(env, token, ip) {
   }
 }
 
+// ─────────────────────────────────────────────────────────────────────────────
+// Lead enrichment (step 2). After the inline name+email form saves a lead, a
+// modal asks for phone, company and a free-text brief. Those details are
+// attached to the SAME lead here. Spec:
+// docs/superpowers/specs/2026-09-23-lead-enrichment-modal-design.md
+//
+// The create response carries an enrichToken, "<issuedAtMs>.<hmac>", which the
+// modal sends back. The HMAC key is LEAD_ENRICH_SECRET, else ERPNEXT_API_SECRET
+// (already configured; used only as key material, never exposed).
+// ─────────────────────────────────────────────────────────────────────────────
+const ENRICH_MAX_AGE_MS = 2 * 60 * 60 * 1000;
+const ENRICH_CLOCK_SKEW_MS = 60 * 1000;
+const ENRICH_LOOKUP_DELAYS_MS = [0, 2000, 3000];
+
+function enrichKey(env) {
+  return (env && (env.LEAD_ENRICH_SECRET || env.ERPNEXT_API_SECRET)) || '';
+}
+
+async function hmacHex(key, text) {
+  const enc = new TextEncoder();
+  const cryptoKey = await crypto.subtle.importKey('raw', enc.encode(key), { name: 'HMAC', hash: 'SHA-256' }, false, ['sign']);
+  const sig = await crypto.subtle.sign('HMAC', cryptoKey, enc.encode(text));
+  return [...new Uint8Array(sig)].map((b) => b.toString(16).padStart(2, '0')).join('');
+}
+
+/** Same sanitizing writeLeadToFirestore applies, so client and server ids agree. */
+export function sanitizeDocId(docId) {
+  return docId == null ? '' : String(docId).replace(/[^A-Za-z0-9_-]/g, '');
+}
+
+export async function signEnrichToken(key, docId, issuedAt = Date.now()) {
+  if (!key || !docId) return null;
+  return `${issuedAt}.${await hmacHex(key, `${docId}.${issuedAt}`)}`;
+}
+
+export async function verifyEnrichToken(key, docId, token, now = Date.now()) {
+  if (!key || !docId || typeof token !== 'string') return false;
+  const dot = token.indexOf('.');
+  if (dot < 1) return false;
+  const issuedAt = Number(token.slice(0, dot));
+  if (!Number.isFinite(issuedAt)) return false;
+  if (issuedAt > now + ENRICH_CLOCK_SKEW_MS || now - issuedAt > ENRICH_MAX_AGE_MS) return false;
+  const expected = await hmacHex(key, `${docId}.${issuedAt}`);
+  const given = token.slice(dot + 1);
+  if (given.length !== expected.length) return false;
+  let diff = 0;
+  for (let i = 0; i < expected.length; i++) diff |= expected.charCodeAt(i) ^ given.charCodeAt(i);
+  return diff === 0;
+}
+
+export function cleanEnrichInput(body) {
+  const b = body || {};
+  return {
+    phone: clipText(b.phone, 100),
+    company: clipText(b.company, 100),
+    message: clipText(b.message, 10000),
+  };
+}
+
+/** PATCH request that touches only the filled enrich fields on contactus/<docId>. */
+export function buildEnrichFirestoreRequest(env, docId, fields, source, nowIso = new Date().toISOString()) {
+  const project = (env && env.FIREBASE_PROJECT_ID) || FB_PROJECT;
+  const apiKey  = (env && (env.FIREBASE_API_KEY || env.NEXT_PUBLIC_FIREBASE_API_KEY)) || FB_API_KEY;
+  const s = (v) => ({ stringValue: v == null ? '' : String(v) });
+  const out = {};
+  for (const k of ['phone', 'company', 'message']) if (fields[k]) out[k] = s(fields[k]);
+  out.enrichedAt = { timestampValue: nowIso };
+  out.enrichSource = s(source);
+  const mask = Object.keys(out).map((p) => `updateMask.fieldPaths=${p}`).join('&');
+  const url = `https://firestore.googleapis.com/v1/projects/${project}/databases/(default)/documents/contactus/${encodeURIComponent(docId)}?${mask}&key=${apiKey}`;
+  return { url, body: { fields: out } };
+}
+
 /** Cloudflare Pages Function entry point */
 export async function onRequestPost(context) {
   const { request, env } = context;

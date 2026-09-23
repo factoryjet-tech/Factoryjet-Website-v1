@@ -14,6 +14,7 @@
     "preview": "next start",
     "pages:build": "node scripts/check-tracked-imports.mjs && node scripts/check-watermarks.mjs && node scripts/validate-build.mjs && node scripts/test-geo-redirect.mjs && npx @cloudflare/next-on-pages",
     "typecheck": "tsc --noEmit",
+    "test": "node --test \"tests/*.test.mjs\"",
     "check:watermarks": "node scripts/check-watermarks.mjs",
     "indexnow": "node scripts/submit-indexnow.mjs",
     "bing:submit": "node scripts/submit-bing-api.mjs",
