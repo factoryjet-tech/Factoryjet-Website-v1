@@ -26,6 +26,7 @@ import {
   trackFormSuccess,
   trackFormError,
 } from '@/utils/gtm';
+import { useLeadEnrichment } from '@/components/lead/useLeadEnrichment';
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -42,11 +43,13 @@ const BlogLeadCapture: React.FC<BlogLeadCaptureProps> = ({ slug }) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const startedRef = useRef(false);
+  const enrichment = useLeadEnrichment();
 
   const onFirstInteraction = () => {
     if (startedRef.current) return;
     startedRef.current = true;
     trackFormStart(source);
+    enrichment.prefetch();
   };
 
   const canSubmit = name.trim() !== '' && EMAIL_RE.test(email);
@@ -60,18 +63,15 @@ const BlogLeadCapture: React.FC<BlogLeadCaptureProps> = ({ slug }) => {
     setError(null);
     trackFormSubmit(source, { service: '' });
     try {
-      const { docId } = await submitLead({ name, email, region: 'us', source });
+      const { ok, docId, enrichToken } = await submitLead({ name, email, region: 'us', source });
       trackFormSuccess(source);
-      // Hard navigation so /thank-you always loads fresh (conversion lives there).
-      window.location.assign(
-        `/thank-you?source=${encodeURIComponent(source)}&service=unknown&region=us&lid=${encodeURIComponent(docId)}`
-      );
-      return;
+      // Counts the lead now, then opens the step-2 details modal; it goes to
+      // /thank-you?...&counted=1 when the visitor sends or skips.
+      enrichment.start({ ok, docId, enrichToken, name, email, source, region: 'us' });
     } catch (err) {
       console.error('Blog lead capture error:', err);
       trackFormError(source, 'submit_failed');
       setError('Something went wrong. Please try again.');
-    } finally {
       setIsSubmitting(false);
     }
   };
@@ -164,6 +164,7 @@ const BlogLeadCapture: React.FC<BlogLeadCaptureProps> = ({ slug }) => {
           {error && <p className="mt-2 font-fj-body text-[13px]" style={{ color: '#FCA5A5' }}>{error}</p>}
         </form>
       </div>
+      {enrichment.modal}
     </section>
   );
 };

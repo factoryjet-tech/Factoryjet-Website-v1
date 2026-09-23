@@ -23,11 +23,15 @@
  * GTM (single source of truth) listens for the `lead_converted` custom event and
  * fires: GA4 generate_lead + the region-routed Google Ads conversion (UK ->
  * AW-11127037244 London, US -> AW-18185532850). This page issues NO gtag() calls.
+ *
+ * Since 2026-09-23 the inline forms (HeroInlineForm, BlogLeadCapture) count the
+ * lead on their own page before the step-2 details modal and arrive here with
+ * counted=1, which this page honours by not firing again.
  */
 
 import { useEffect } from 'react';
 import { CheckCircle, CalendarClock, ArrowRight } from 'lucide-react';
-import { pushToDataLayer } from '@/utils/gtm';
+import { fireLeadConversion } from '@/utils/leadConversion';
 
 const CALENDLY_URL = 'https://calendly.com/bhavesh-factoryjet/30min';
 
@@ -37,11 +41,13 @@ export default function ThankYouContent() {
     let lid = '';
     let source = '';
     let region = 'us';
+    let counted = false;
     try {
       const sp = new URLSearchParams(window.location.search);
       lid = sp.get('lid') ?? '';
       source = sp.get('source') ?? '';
       region = (sp.get('region') || 'us').toLowerCase();
+      counted = sp.get('counted') === '1';
     } catch {
       /* no-op */
     }
@@ -51,25 +57,12 @@ export default function ThankYouContent() {
     // the page but never fire the conversion, so the count stays clean.
     if (!lid) return;
 
-    // One dataLayer push -> GTM fires GA4 generate_lead + the region-routed Ads
-    // conversion. region tells GTM which Ads account to credit (uk|us|…).
-    const fire = () =>
-      pushToDataLayer({
-        event: 'lead_converted',
-        region,
-        lead_source: source || 'unknown',
-        lead_id: lid,
-      });
+    // The inline forms already counted this lead on their own page (counted=1).
+    if (counted) return;
 
-    const key = `fj_conv_${lid}`;
-    try {
-      if (sessionStorage.getItem(key)) return; // already counted this submission
-      fire();
-      sessionStorage.setItem(key, '1');
-    } catch {
-      // sessionStorage blocked (private mode etc.) — still count the conversion.
-      fire();
-    }
+    // One dataLayer push -> GTM fires GA4 generate_lead + the region-routed Ads
+    // conversion. Deduped per lid; see src/utils/leadConversion.ts.
+    fireLeadConversion({ lid, region, source });
   }, []);
 
   return (

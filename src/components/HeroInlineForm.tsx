@@ -6,7 +6,8 @@
  * Mirrors the lead pipeline of ContactFormModal / LeadFormInline so leads land
  * identically: writes name+email to the `contactus` Firestore collection, fires
  * the same GA4/GTM events (form_start, form_submit, form_success/error), sends
- * the notify-lead email, and redirects to /thank-you (single conversion source).
+ * the notify-lead email, counts the lead, opens the step-2 details modal
+ * (useLeadEnrichment), then goes to /thank-you.
  * Only name + email are required. Honeypot for spam; no blocking CAPTCHA.
  */
 
@@ -18,6 +19,7 @@ import {
   trackFormSuccess,
   trackFormError,
 } from '@/utils/gtm';
+import { useLeadEnrichment } from '@/components/lead/useLeadEnrichment';
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -36,11 +38,13 @@ const HeroInlineForm: React.FC<HeroInlineFormProps> = ({ source = 'us_hero_inlin
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const startedRef = useRef(false);
+  const enrichment = useLeadEnrichment();
 
   const onFirstInteraction = () => {
     if (startedRef.current) return;
     startedRef.current = true;
     trackFormStart(source);
+    enrichment.prefetch();
   };
 
   const canSubmit = name.trim() !== '' && EMAIL_RE.test(email);
@@ -56,18 +60,15 @@ const HeroInlineForm: React.FC<HeroInlineFormProps> = ({ source = 'us_hero_inlin
     trackFormSubmit(source, { service: '' });
     try {
       // Durable, server-first capture — never hangs on the browser Firestore SDK.
-      const { docId } = await submitLead({ name, email, region, source });
+      const { ok, docId, enrichToken } = await submitLead({ name, email, region, source });
       trackFormSuccess(source);
-      // Hard navigation so /thank-you always loads fresh (conversion lives there).
-      window.location.assign(
-        `/thank-you?source=${encodeURIComponent(source)}&service=unknown&region=${encodeURIComponent(region || 'us')}&lid=${encodeURIComponent(docId)}`
-      );
-      return;
+      // Counts the lead now, then opens the step-2 details modal; it goes to
+      // /thank-you?...&counted=1 when the visitor sends or skips.
+      enrichment.start({ ok, docId, enrichToken, name, email, source, region: region || 'us' });
     } catch (err) {
       console.error('Hero inline form error:', err);
       trackFormError(source, 'submit_failed');
       setError('Something went wrong. Please try again.');
-    } finally {
       setIsSubmitting(false);
     }
   };
@@ -75,6 +76,7 @@ const HeroInlineForm: React.FC<HeroInlineFormProps> = ({ source = 'us_hero_inlin
   const inputStyle: React.CSSProperties = { height: 46, border: '1px solid rgba(15,33,56,0.16)' };
 
   return (
+    <>
     <form onSubmit={handleSubmit} onFocus={onFirstInteraction} className="mt-6 max-w-[540px]">
       <div
         className="rounded-2xl bg-white p-3.5 sm:p-4"
@@ -124,6 +126,8 @@ const HeroInlineForm: React.FC<HeroInlineFormProps> = ({ source = 'us_hero_inlin
         {error && <p className="mt-2 font-fj-body text-[13px]" style={{ color: '#b3261e' }}>{error}</p>}
       </div>
     </form>
+    {enrichment.modal}
+    </>
   );
 };
 
