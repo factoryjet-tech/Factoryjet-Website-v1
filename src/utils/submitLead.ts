@@ -51,6 +51,8 @@ export interface LeadResult {
   docId: string;
   /** The ERPNext CRM Lead ID, if successfully created. */
   erpLeadId?: string | null;
+  /** Server-signed token that lets the step-2 modal attach details to this lead. */
+  enrichToken?: string | null;
 }
 
 /** Build a readable, collision-resistant doc id: 2026-06-22_11-04-31_JohnDoe_a1b2 */
@@ -67,7 +69,7 @@ function makeDocId(name: string): string {
 async function postNotifyLead(
   payload: Record<string, unknown>,
   timeoutMs: number
-): Promise<{ ok: boolean; erpLeadId?: string | null }> {
+): Promise<{ ok: boolean; erpLeadId?: string | null; enrichToken?: string | null }> {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), timeoutMs);
   try {
@@ -80,7 +82,7 @@ async function postNotifyLead(
     });
     if (res.ok) {
       const data = await res.json().catch(() => null);
-      return { ok: true, erpLeadId: data?.erpLeadId || null };
+      return { ok: true, erpLeadId: data?.erpLeadId || null, enrichToken: data?.enrichToken || null };
     }
     return { ok: false };
   } catch {
@@ -119,6 +121,7 @@ export async function submitLead(input: LeadInput): Promise<LeadResult> {
   if (!postRes.ok) postRes = await postNotifyLead(payload, 6000);
   const ok = postRes.ok;
   const erpLeadId = postRes.erpLeadId;
+  const enrichToken = postRes.enrichToken ?? null;
 
   // (2) Best-effort secondary: client Firestore write. Fire-and-forget — never
   //     awaited, so a hung/slow SDK cannot block the user. Same docId keeps it
@@ -156,5 +159,5 @@ export async function submitLead(input: LeadInput): Promise<LeadResult> {
     /* ignore — never block on the client SDK */
   }
 
-  return { ok, docId, erpLeadId };
+  return { ok, docId, erpLeadId, enrichToken };
 }
