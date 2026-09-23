@@ -57,6 +57,15 @@ priced — this avoids the USD/GBP bugs. (Decision 2026-07-02.)
    `{ event: 'lead_converted', region, lead_source, lead_id }`.
 3. GTM fires GA4 `generate_lead` + the region-routed Ads conversion off that event.
 
+**Inline forms (HeroInlineForm, BlogLeadCapture), since 2026-09-23:** the form
+fires `lead_converted` itself the moment `submitLead()` succeeds
+(`src/utils/leadConversion.ts`, same event and `fj_conv_<lid>` dedupe), opens the
+step-2 details modal, then redirects to `/thank-you?...&counted=1`. `/thank-you`
+does not fire when `counted=1` is present. The live GTM lead triggers have no
+page-path condition (verified 2026-09-23), so this is counted identically.
+Modal behaviour events (dataLayer only, no GA4 tag): `lead_enrich_shown`,
+`lead_enrich_submitted` (`fields_filled`), `lead_enrich_skipped`.
+
 `region` comes from each form's existing region prop/context. Missing/other
 regions still record GA4, just no Ads conversion.
 
