@@ -588,6 +588,180 @@ export function buildEnrichFirestoreRequest(env, docId, fields, source, nowIso =
   return { url, body: { fields: out } };
 }
 
+const EMAIL_SHAPE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+async function erpFindLead(env, erpUrl, authHeader, field, value) {
+  const res = await fetchWithTimeout(
+    `${erpUrl}/api/resource/Lead?filters=${encodeURIComponent(JSON.stringify([[field, '=', value]]))}&fields=${encodeURIComponent(JSON.stringify(['name']))}&limit_page_length=1`,
+    { headers: { ...ERP_HEADERS, Authorization: authHeader } },
+    erpTimeout(env),
+  );
+  if (!res.ok) { console.warn('ERPNext enrich lookup returned HTTP', res.status); return null; }
+  const rows = ((await res.json()) || {}).data || [];
+  return rows.length ? rows[0].name : null;
+}
+
+/**
+ * Attach step-2 details to the Lead created from this docId. The create call may
+ * still be running (it finishes in waitUntil), so look up a few times. A visitor
+ * whose email already existed had their inquiry attached to the older Lead as a
+ * comment at step 1; their details go there too, without overwriting its fields.
+ * The comment is written BEFORE the field update: ERPNext rejects phone text it
+ * cannot parse, and the comment must survive that.
+ */
+export async function enrichLeadInERPNext(env, lead, sleep = (ms) => new Promise((r) => setTimeout(r, ms))) {
+  const erpUrl = (env && env.ERPNEXT_URL) || DEFAULT_ERPNEXT_URL;
+  if (!env || !env.ERPNEXT_API_KEY || !env.ERPNEXT_API_SECRET) return { saved: false, error: 'not configured' };
+  const authHeader = `token ${env.ERPNEXT_API_KEY}:${env.ERPNEXT_API_SECRET}`;
+
+  let leadId = null;
+  for (const delay of ENRICH_LOOKUP_DELAYS_MS) {
+    if (delay) await sleep(delay);
+    try { leadId = await erpFindLead(env, erpUrl, authHeader, 'custom_firebase_doc_id', lead.docId); }
+    catch (err) { console.warn('ERPNext enrich lookup warning:', describeFetchError(err)); }
+    if (leadId) break;
+  }
+  let returning = false;
+  if (!leadId && lead.email) {
+    try { leadId = await erpFindLead(env, erpUrl, authHeader, 'email_id', String(lead.email).trim()); }
+    catch (err) { console.warn('ERPNext enrich email lookup warning:', describeFetchError(err)); }
+    returning = Boolean(leadId);
+  }
+  if (!leadId) {
+    console.error('ERPNext enrich: no Lead found for docId', lead.docId);
+    return { saved: false, error: 'lead_not_found' };
+  }
+
+  const send = (path, method, payload) => fetchWithTimeout(`${erpUrl}${path}`, {
+    method,
+    headers: { ...ERP_HEADERS, 'Content-Type': 'application/json', Authorization: authHeader },
+    body: JSON.stringify(payload),
+  }, erpTimeout(env));
+
+  const text = [
+    returning ? 'Details added on the website (returning lead)' : 'Details added on the website',
+    lead.phone && `Phone: ${lead.phone}`,
+    lead.company && `Company: ${lead.company}`,
+    lead.message && `Message:\n${lead.message}`,
+  ].filter(Boolean).join('\n');
+  let commented = false;
+  try {
+    const res = await send('/api/resource/Comment', 'POST', {
+      comment_type: 'Comment',
+      reference_doctype: 'Lead',
+      reference_name: leadId,
+      content: `<p>${escapeHtml(text).replace(/\n/g, '<br>')}</p>`,
+    });
+    commented = res.ok;
+    if (!res.ok) console.warn('ERPNext enrich comment returned HTTP', res.status);
+  } catch (err) {
+    console.warn('ERPNext enrich comment warning:', describeFetchError(err));
+  }
+
+  if (!returning) {
+    const update = {};
+    if (lead.phone) update.mobile_no = lead.phone;
+    if (lead.company) update.company_name = lead.company;
+    if (Object.keys(update).length) {
+      try {
+        const res = await send(`/api/resource/Lead/${encodeURIComponent(leadId)}`, 'PUT', update);
+        if (!res.ok) console.warn('ERPNext enrich field update returned HTTP', res.status, 'fields', Object.keys(update).join(','));
+      } catch (err) {
+        console.warn('ERPNext enrich field update warning:', describeFetchError(err));
+      }
+    }
+  }
+  return { saved: commented, leadId, returning };
+}
+
+function buildEnrichHtml({ name, email, phone, company, message, erpLeadId, returning }) {
+  const erpLink = erpLeadId
+    ? `<a href="${DEFAULT_ERPNEXT_URL}/app/lead/${encodeURIComponent(erpLeadId)}">${escapeHtml(erpLeadId)}</a>${returning ? ' (returning lead)' : ''}`
+    : 'Updating in the background';
+  return `<!DOCTYPE html><html><body style="margin:0;padding:24px;background:#f6f5f3;font-family:Arial,Helvetica,sans-serif;">
+  <table width="100%" cellpadding="0" cellspacing="0" style="max-width:560px;margin:0 auto;background:#ffffff;border:1px solid #e7ded6;border-radius:10px;">
+    <tr><td style="padding:22px 26px 6px;">
+      <div style="font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#B23E13;font-weight:700;">Details added</div>
+      <div style="font-size:20px;font-weight:700;color:#14110F;margin-top:6px;">${escapeHtml(name || email)} added project details</div>
+    </td></tr>
+    <tr><td style="padding:8px 26px 22px;"><table width="100%" cellpadding="0" cellspacing="0">
+      ${row('Name', escapeHtml(name || 'N/A'))}
+      ${row('Email', escapeHtml(email || 'N/A'))}
+      ${row('Phone', escapeHtml(phone || 'Not given'))}
+      ${row('Company', escapeHtml(company || 'Not given'))}
+      ${row('Message', message ? escapeHtml(message).replace(/\n/g, '<br>') : 'Not given')}
+      ${row('CRM lead', erpLink)}
+    </table></td></tr>
+  </table></body></html>`;
+}
+
+async function sendEnrichEmail(env, data) {
+  if (!env || !env.RESEND_API_KEY) { console.error('RESEND_API_KEY not set, enrich email skipped'); return false; }
+  try {
+    const res = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: { Authorization: `Bearer ${env.RESEND_API_KEY}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        from: NOTIFY_FROM,
+        to: [NOTIFY_TO],
+        subject: `📝 Details added: ${(data.name || data.email || 'website lead').replace(/[\r\n]+/g, ' ')}`,
+        html: buildEnrichHtml(data),
+        ...(EMAIL_SHAPE.test(data.email || '') ? { reply_to: data.email } : {}),
+      }),
+    });
+    if (!res.ok) console.error('Resend enrich error:', res.status);
+    return res.ok;
+  } catch (err) {
+    console.error('Resend enrich fetch error:', err);
+    return false;
+  }
+}
+
+async function handleEnrich(context, body, corsHeaders) {
+  const { env } = context;
+  const reply = (obj, status = 200) => new Response(JSON.stringify(obj), {
+    status, headers: { 'Content-Type': 'application/json', ...corsHeaders },
+  });
+
+  if (body.honeypot && String(body.honeypot).trim()) return reply({ ok: true, enriched: false });
+  const docId = sanitizeDocId(body.docId);
+  if (!(await verifyEnrichToken(enrichKey(env), docId, body.enrichToken))) {
+    return reply({ ok: false, error: 'invalid token' }, 403);
+  }
+  const fields = cleanEnrichInput(body);
+  if (!fields.phone && !fields.company && !fields.message) return reply({ ok: true, enriched: false });
+
+  const name = clipText(body.name, 120);
+  const email = clipText(body.email, 200);
+  const source = clipText(body.source, 80).replace(/[<>"'`]/g, '');
+
+  // (1) AUTHORITATIVE: patch only the new fields onto the existing Firestore doc.
+  let saved = false;
+  try {
+    const { url, body: fsBody } = buildEnrichFirestoreRequest(env, docId, fields, source);
+    const res = await fetch(url, { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(fsBody) });
+    saved = res.ok;
+    if (!res.ok) console.error('Firestore enrich write failed:', res.status, (await res.text()).slice(0, 300));
+  } catch (err) {
+    console.error('Firestore enrich write error:', err);
+  }
+
+  // (2) ERPNext in the background; wait briefly so the email can link the Lead.
+  const erpPromise = enrichLeadInERPNext(env, { docId, email, name, ...fields })
+    .catch((err) => ({ saved: false, error: describeFetchError(err) }));
+  if (typeof context.waitUntil === 'function') context.waitUntil(erpPromise);
+  const erp = await Promise.race([
+    erpPromise,
+    new Promise((resolve) => setTimeout(() => resolve({ pending: true }), ERP_EMAIL_GRACE_MS)),
+  ]);
+
+  // (3) Tell the inbox.
+  const emailed = await sendEnrichEmail(env, { name, email, ...fields, erpLeadId: erp.leadId, returning: erp.returning });
+
+  const ok = saved || emailed;
+  return reply({ ok, saved, emailed }, ok ? 200 : 502);
+}
+
 /** Cloudflare Pages Function entry point */
 export async function onRequestPost(context) {
   const { request, env } = context;
@@ -610,6 +784,9 @@ export async function onRequestPost(context) {
       status: 400, headers: { 'Content-Type': 'application/json', ...corsHeaders },
     });
   }
+
+  // Step-2 details from the enrichment modal attach to an existing lead.
+  if (body && body.mode === 'enrich') return handleEnrich(context, body, corsHeaders);
 
   const { docId, collection, name, email, phone, company, service, message, region, source, page } = body;
 
@@ -709,6 +886,8 @@ export async function onRequestPost(context) {
 
   // Capture is successful if the lead was saved OR an alert email was sent.
   const ok = fsResult.saved || erpResult.saved || emailed;
+  // Lets the step-2 modal attach phone/company/message to THIS lead.
+  const enrichToken = await signEnrichToken(enrichKey(env), sanitizeDocId(fsResult.docId || docId));
   return new Response(
     JSON.stringify({
       ok,
@@ -717,6 +896,7 @@ export async function onRequestPost(context) {
       erpPending: Boolean(erpResult.pending),
       emailed,
       docId: fsResult.docId || docId,
+      enrichToken,
     }),
     {
       // 502 only when ALL paths failed, so the client retries.
