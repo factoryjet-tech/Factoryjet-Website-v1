@@ -126,8 +126,10 @@ key never exposes it, so this needs no new Cloudflare secret. `submitLead()` ret
 token alongside `docId`.
 
 ### 6.2 New enrich path
-Same endpoint, body `{ mode: 'enrich', docId, enrichToken, phone, company, message,
-source, honeypot }`.
+Same endpoint, body `{ mode: 'enrich', docId, enrichToken, name, email, phone,
+company, message, source, honeypot }`. `name` and `email` come from step 1 and are
+used only for the returning-lead lookup and the notification email; the enrich path never
+writes them to Firestore or ERPNext.
 
 1. **Guard:** the token must match `HMAC(key, docId)` (constant-time compare), and the
    timestamp embedded in `docId` must be under 2 hours old. Otherwise 403. A filled
