@@ -527,7 +527,9 @@ async function verifyTurnstile(env, token, ip) {
 // ─────────────────────────────────────────────────────────────────────────────
 const ENRICH_MAX_AGE_MS = 2 * 60 * 60 * 1000;
 const ENRICH_CLOCK_SKEW_MS = 60 * 1000;
-const ENRICH_LOOKUP_DELAYS_MS = [0, 2000, 3000];
+// The create's ERPNext work runs in waitUntil and has taken 16s live, so keep
+// looking for ~14s before falling back to the email match.
+const ENRICH_LOOKUP_DELAYS_MS = [0, 2000, 4000, 8000];
 
 function enrichKey(env) {
   return (env && (env.LEAD_ENRICH_SECRET || env.ERPNEXT_API_SECRET)) || '';
@@ -574,31 +576,35 @@ export function cleanEnrichInput(body) {
   };
 }
 
-/** PATCH request that touches only the filled enrich fields on contactus/<docId>. */
+/**
+ * Create-only write of the step-2 details to contactus/<docId>_details.
+ * The live Firestore rules allow create but deny update on contactus (verified
+ * 2026-09-23), so the lead doc itself cannot be patched. exists=false also makes
+ * a retried or replayed request fail instead of saving the details twice.
+ */
 export function buildEnrichFirestoreRequest(env, docId, fields, source, nowIso = new Date().toISOString()) {
   const project = (env && env.FIREBASE_PROJECT_ID) || FB_PROJECT;
   const apiKey  = (env && (env.FIREBASE_API_KEY || env.NEXT_PUBLIC_FIREBASE_API_KEY)) || FB_API_KEY;
   const s = (v) => ({ stringValue: v == null ? '' : String(v) });
-  const out = {};
+  const out = { leadDocId: s(docId) };
   for (const k of ['phone', 'company', 'message']) if (fields[k]) out[k] = s(fields[k]);
   out.enrichedAt = { timestampValue: nowIso };
   out.enrichSource = s(source);
-  const mask = Object.keys(out).map((p) => `updateMask.fieldPaths=${p}`).join('&');
-  const url = `https://firestore.googleapis.com/v1/projects/${project}/databases/(default)/documents/contactus/${encodeURIComponent(docId)}?${mask}&key=${apiKey}`;
+  const url = `https://firestore.googleapis.com/v1/projects/${project}/databases/(default)/documents/contactus/${encodeURIComponent(`${docId}_details`)}?currentDocument.exists=false&key=${apiKey}`;
   return { url, body: { fields: out } };
 }
 
 const EMAIL_SHAPE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-async function erpFindLead(env, erpUrl, authHeader, field, value) {
+async function erpFindLead(env, erpUrl, authHeader, field, value, fields = ['name']) {
   const res = await fetchWithTimeout(
-    `${erpUrl}/api/resource/Lead?filters=${encodeURIComponent(JSON.stringify([[field, '=', value]]))}&fields=${encodeURIComponent(JSON.stringify(['name']))}&limit_page_length=1`,
+    `${erpUrl}/api/resource/Lead?filters=${encodeURIComponent(JSON.stringify([[field, '=', value]]))}&fields=${encodeURIComponent(JSON.stringify(fields))}&limit_page_length=1`,
     { headers: { ...ERP_HEADERS, Authorization: authHeader } },
     erpTimeout(env),
   );
   if (!res.ok) { console.warn('ERPNext enrich lookup returned HTTP', res.status); return null; }
   const rows = ((await res.json()) || {}).data || [];
-  return rows.length ? rows[0].name : null;
+  return rows.length ? rows[0] : null;
 }
 
 /**
@@ -617,15 +623,21 @@ export async function enrichLeadInERPNext(env, lead, sleep = (ms) => new Promise
   let leadId = null;
   for (const delay of ENRICH_LOOKUP_DELAYS_MS) {
     if (delay) await sleep(delay);
-    try { leadId = await erpFindLead(env, erpUrl, authHeader, 'custom_firebase_doc_id', lead.docId); }
+    try { leadId = ((await erpFindLead(env, erpUrl, authHeader, 'custom_firebase_doc_id', lead.docId)) || {}).name || null; }
     catch (err) { console.warn('ERPNext enrich lookup warning:', describeFetchError(err)); }
     if (leadId) break;
   }
   let returning = false;
   if (!leadId && lead.email) {
-    try { leadId = await erpFindLead(env, erpUrl, authHeader, 'email_id', String(lead.email).trim()); }
-    catch (err) { console.warn('ERPNext enrich email lookup warning:', describeFetchError(err)); }
-    returning = Boolean(leadId);
+    try {
+      const row = await erpFindLead(env, erpUrl, authHeader, 'email_id', String(lead.email).trim(), ['name', 'custom_firebase_doc_id']);
+      if (row) {
+        leadId = row.name;
+        // A create that finished after the docId retries is this visitor's new
+        // Lead, not an older one: treat it as new so its fields get updated.
+        returning = row.custom_firebase_doc_id !== lead.docId;
+      }
+    } catch (err) { console.warn('ERPNext enrich email lookup warning:', describeFetchError(err)); }
   }
   if (!leadId) {
     console.error('ERPNext enrich: no Lead found for docId', lead.docId);
@@ -735,13 +747,19 @@ async function handleEnrich(context, body, corsHeaders) {
   const email = clipText(body.email, 200);
   const source = clipText(body.source, 80).replace(/[<>"'`]/g, '');
 
-  // (1) AUTHORITATIVE: patch only the new fields onto the existing Firestore doc.
+  // (1) AUTHORITATIVE: create contactus/<docId>_details (create-only).
   let saved = false;
   try {
     const { url, body: fsBody } = buildEnrichFirestoreRequest(env, docId, fields, source);
     const res = await fetch(url, { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(fsBody) });
     saved = res.ok;
-    if (!res.ok) console.error('Firestore enrich write failed:', res.status, (await res.text()).slice(0, 300));
+    if (!res.ok) {
+      const errText = (await res.text()).slice(0, 300);
+      // Already saved: a retry or replay of the same details. Do not comment or
+      // email a second time.
+      if (res.status === 409 || /ALREADY_EXISTS|FAILED_PRECONDITION/.test(errText)) return reply({ ok: true, duplicate: true });
+      console.error('Firestore enrich write failed:', res.status, errText);
+    }
   } catch (err) {
     console.error('Firestore enrich write error:', err);
   }

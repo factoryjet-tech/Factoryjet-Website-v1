@@ -37,3 +37,12 @@ test('thankYouUrl encodes params and flags counted', () => {
   );
   assert.equal(thankYouUrl({ lid: 'z' }), '/thank-you?source=unknown&service=unknown&region=us&lid=z');
 });
+
+// ── Final-review fix I1: only a loaded modal may pre-count the lead ──────────
+import { afterSubmitPlan } from '../src/utils/leadConversion.ts';
+
+test('afterSubmitPlan opens the modal only for a saved lead with a token', () => {
+  assert.equal(afterSubmitPlan({ ok: true, enrichToken: '1.abc' }), 'modal');
+  assert.equal(afterSubmitPlan({ ok: true, enrichToken: null }), 'thank-you');
+  assert.equal(afterSubmitPlan({ ok: false, enrichToken: '1.abc' }), 'thank-you');
+});

@@ -37,7 +37,11 @@ export default function LeadEnrichModal({ firstName, onSubmit, onSkip }: LeadEnr
   const sendingRef = useRef(false);
 
   useEffect(() => {
-    phoneRef.current?.focus();
+    // Desktop: start in the phone field. Touch: focus the dialog itself, so the
+    // keyboard does not open over the intro before the visitor has read it.
+    const finePointer = typeof window.matchMedia === 'function' && window.matchMedia('(pointer: fine)').matches;
+    if (finePointer) phoneRef.current?.focus();
+    else cardRef.current?.focus();
     const prevOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
     const onKey = (e: KeyboardEvent) => {
@@ -74,7 +78,7 @@ export default function LeadEnrichModal({ firstName, onSubmit, onSkip }: LeadEnr
 
   return createPortal(
     <div className="lem-backdrop" onMouseDown={(e) => { if (e.target === e.currentTarget) skip(); }}>
-      <div className="lem-card" ref={cardRef} role="dialog" aria-modal="true" aria-labelledby="lem-title" aria-describedby="lem-lead">
+      <div className="lem-card" ref={cardRef} tabIndex={-1} role="dialog" aria-modal="true" aria-labelledby="lem-title" aria-describedby="lem-lead">
         <button type="button" className="lem-close" aria-label="Close and continue" onClick={skip}>
           <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 2l10 10M12 2 2 12" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" /></svg>
         </button>

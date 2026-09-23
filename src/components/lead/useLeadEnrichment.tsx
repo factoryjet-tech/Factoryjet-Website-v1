@@ -2,16 +2,17 @@
 
 /**
  * useLeadEnrichment — what an inline lead form does after submitLead() succeeds:
- *   1. count the lead now (fireLeadConversion), so a visitor who closes the tab
- *      with the modal open is still a conversion;
- *   2. lazy-load and open LeadEnrichModal;
+ *   1. lazy-load LeadEnrichModal;
+ *   2. once it has loaded, count the lead (fireLeadConversion) and open it, so a
+ *      visitor who closes the tab with the modal open is still a conversion;
  *   3. on Send or Skip, go to /thank-you?...&counted=1 (no second count there).
  * If the save failed, there is no token, or the modal code fails to load, it goes
- * straight to /thank-you as the forms always did.
+ * straight to /thank-you WITHOUT counted=1, and that page counts the lead as it
+ * always has (see afterSubmitPlan).
  */
 
 import React, { useCallback, useRef, useState } from 'react';
-import { fireLeadConversion, thankYouUrl } from '@/utils/leadConversion';
+import { afterSubmitPlan, fireLeadConversion, thankYouUrl } from '@/utils/leadConversion';
 import { enrichLead } from '@/utils/enrichLead';
 import { pushToDataLayer } from '@/utils/gtm';
 import type { EnrichFields, LeadEnrichModalProps } from './LeadEnrichModal';
@@ -42,16 +43,23 @@ export function useLeadEnrichment() {
 
   const prefetch = useCallback(() => { loadModal().catch(() => {}); }, []);
 
+  // Straight to /thank-you, uncounted, so the destination page counts the lead.
+  const bail = useCallback((ctx: EnrichStart) => {
+    if (doneRef.current) return;
+    doneRef.current = true;
+    window.location.assign(thankYouUrl({ lid: ctx.docId, region: ctx.region, source: ctx.source }));
+  }, []);
+
   const start = useCallback((ctx: EnrichStart) => {
-    fireLeadConversion({ lid: ctx.docId, region: ctx.region, source: ctx.source });
-    if (!ctx.ok || !ctx.enrichToken) { finish(ctx); return; }
+    if (afterSubmitPlan(ctx) === 'thank-you') { bail(ctx); return; }
     loadModal()
       .then((Modal) => {
+        fireLeadConversion({ lid: ctx.docId, region: ctx.region, source: ctx.source });
         pushToDataLayer({ event: 'lead_enrich_shown', form_name: ctx.source });
         setActive({ ctx, Modal });
       })
-      .catch(() => finish(ctx));
-  }, [finish]);
+      .catch(() => bail(ctx));
+  }, [bail]);
 
   const onSkip = useCallback(() => {
     if (!active) return;

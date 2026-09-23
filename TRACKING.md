@@ -58,9 +58,11 @@ priced — this avoids the USD/GBP bugs. (Decision 2026-07-02.)
 3. GTM fires GA4 `generate_lead` + the region-routed Ads conversion off that event.
 
 **Inline forms (HeroInlineForm, BlogLeadCapture), since 2026-09-23:** the form
-fires `lead_converted` itself the moment `submitLead()` succeeds
+fires `lead_converted` itself once the step-2 details modal has loaded
 (`src/utils/leadConversion.ts`, same event and `fj_conv_<lid>` dedupe), opens the
-step-2 details modal, then redirects to `/thank-you?...&counted=1`. `/thank-you`
+modal, then redirects to `/thank-you?...&counted=1`. If the modal cannot open, it
+redirects without `counted=1` and `/thank-you` counts the lead as before. Step-2
+details are stored in Firestore as `contactus/<docId>_details` (create-only). `/thank-you`
 does not fire when `counted=1` is present. The live GTM lead triggers have no
 page-path condition (verified 2026-09-23), so this is counted identically.
 Modal behaviour events (dataLayer only, no GA4 tag): `lead_enrich_shown`,

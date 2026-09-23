@@ -104,8 +104,10 @@ needed.
   `fireLeadConversion({ lid, region, source })` pushes
   `{ event: 'lead_converted', region, lead_source, lead_id }` once per `lid`,
   deduped via `sessionStorage` key `fj_conv_<lid>` (same key as today).
-- The inline forms call it the moment `submitLead()` succeeds, before the modal opens.
-  A visitor who closes the tab with the modal open is still counted.
+- The inline forms call it once the modal code has loaded, just before the modal opens.
+  A visitor who closes the tab with the modal open is still counted. If the save
+  failed, there is no token, or the modal cannot load, the form goes to `/thank-you`
+  without `counted=1` and that page counts the lead as before.
 - `ThankYouContent.tsx` uses the same helper and additionally skips firing when the URL
   carries `counted=1`. That prevents a double count even when `sessionStorage` is
   blocked (private browsing).
@@ -136,10 +138,13 @@ writes them to Firestore or ERPNext.
    honeypot returns 200 and does nothing.
 2. **Clean input:** trim; phone and company clipped to 100 chars; message to 10,000.
    All three empty: return `{ ok: true, enriched: false }`.
-3. **Firestore:** `PATCH` the same doc (`contactus/<docId>`) with
-   `updateMask.fieldPaths` = `phone`, `company`, `message`, `enrichedAt`,
-   `enrichSource`. **Only these fields change**; `createdAt`, `status`, and attribution
-   are never overwritten. This is the authoritative write.
+3. **Firestore:** create `contactus/<docId>_details` (create-only, precondition
+   `currentDocument.exists=false`) with `leadDocId`, the filled fields, `enrichedAt`,
+   `enrichSource`. *Revised 2026-09-23 after the final review:* the live Firestore
+   rules allow create but deny update on `contactus` (verified with a no-write probe),
+   so the lead doc itself cannot be patched. A second request for the same lead
+   (retry or replay) fails the precondition and returns `{ ok: true, duplicate: true }`
+   without commenting or emailing again.
 4. **ERPNext**, in `waitUntil` so the visitor never waits:
    - Find the Lead by `custom_firebase_doc_id = docId`. The create call may still be
      running, so try at 0s, 2s, and 5s.
