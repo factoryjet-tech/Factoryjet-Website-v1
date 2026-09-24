@@ -38,18 +38,21 @@ const CITIES = [
   "plymouth",
 ];
 
-// 2026-09-24: all 11 UK hubs. seo, local-seo and seo-audit were missing, so each
+// 2026-09-24: all 13 UK hubs. seo, local-seo and seo-audit were missing, so each
 // was linked from only 26-27 of the 33 other UK pages (measured on live HTML)
-// while every other hub had 33 of 33. Order leads with the two focus lines:
-// AI agents, then ecommerce.
+// while every other hub had 33 of 33. ai-consulting and magento were added the
+// same day as new pages. Order leads with the two focus lines: AI agents, then
+// ecommerce.
 const SERVICES = [
   { name: "AI Agents",           slug: "ai-agents" },
+  { name: "AI Consulting",       slug: "ai-consulting" },
   // 2026-08-03: was `ecommerce`, which produced /uk/ecommerce. That URL has
   // never existed and returns 404 (verified live). The real hub slug is
   // ecommerce-development. This was a sitewide UK footer link, so it 404'd
   // from every UK page.
   { name: "E-Commerce",          slug: "ecommerce-development" },
   { name: "Shopify Development", slug: "shopify-development" },
+  { name: "Magento",             slug: "magento" },
   { name: "Web Design",          slug: "web-design" },
   { name: "SEO",                 slug: "seo" },
   { name: "Ecommerce SEO",       slug: "ecommerce-seo" },

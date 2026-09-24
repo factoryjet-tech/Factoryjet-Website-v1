@@ -1,0 +1,19 @@
+Images for /uk/magento, generated 2026-09-24
+Model: openai:gpt-image@2 (GPT Image 2) via Runware API, 1536x1024 PNG, resized with ImageMagick, converted with cwebp -q 84.
+All images reviewed at full size (hands, faces, on-screen text) before use. First attempt accepted for both; none rejected.
+
+Shared style suffix:
+"Bright high-key commercial photography in a UK office. Clean white and very light grey environment, large sunlit windows, abundant soft diffused daylight. Crisp sharp focus, deep depth of field. Airy, calm, confident mood. Accurate natural skin tones. Hands anatomically correct with exactly five natural fingers in relaxed natural poses. Exactly one warm orange object in frame as the only strong colour accent. Photorealistic, professional colour grading, no illustration."
+
+magento-hero.webp (1400x933) and magento-og.webp (1200x630, centre crop of the same image)
+Prompt: "A senior software developer in her forties with short grey hair and a navy jumper sits at a tidy white desk, smiling slightly while reviewing a large monitor. The monitor shows a clean ecommerce admin dashboard with simple coloured tiles, a small product table and a single short heading "Orders". No logos anywhere, no real brand names. A laptop beside it shows neatly formatted code. An orange mug on the desk" + style suffix.
+Note: the on-screen table renders small invented order rows (names, dates, amounts). Legible, not garbled, no real brand.
+
+magento-team.webp (1200x800)
+Prompt: "Three colleagues in a bright modern UK office standing at a large whiteboard, one man pointing at a hand-drawn diagram of connected boxes and arrows with no writing on it, the other two listening and smiling, casual smart clothing, a laptop open on a table nearby with a blank light screen, an orange marker pen in one hand. No text, no logos" + style suffix.
+
+2026-09-24 (orchestrator): magento-hero.webp and magento-og.webp REPLACED. The first hero's
+monitor showed an orders table with GBP amounts and 2024 dates (breaks the no-prices rule,
+reads stale). Regenerated with openai:gpt-image@2 via Runware, prompt: senior ecommerce
+developer at a white desk, monitor showing a product grid with no words or numbers, laptop
+with unreadable code, one orange mug. Reviewed at full size: hands and face correct, no text.

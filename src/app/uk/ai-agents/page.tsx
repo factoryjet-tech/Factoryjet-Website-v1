@@ -7,7 +7,7 @@ import MidPageCTA from '@/components/v2/MidPageCTA';
 import './ai-agents.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/ai-agents';
-const UPDATED = '2026-08-25';
+const UPDATED = '2026-09-24';
 
 /* ONE array drives the visible trail AND the BreadcrumbList JSON-LD, so the
    schema can never describe a trail a human cannot see. Never hand-copy a
@@ -43,22 +43,18 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     answer: 'The Office for National Statistics reports that self-reported AI use among UK businesses with 10 or more employees rose from around 12% in late 2023 to around 35% by June 2026. Use is uneven by sector: 58% in information and communication against 13% in construction. So roughly a third have started, and two thirds have not.' },
   { category: 'basics', question: 'Is most UK business AI use deep or shallow?',
     answer: 'Shallow, on the official numbers. The ONS found that the average number of AI technologies used per adopting business moved only from about 1.4 to about 1.6 between late 2023 and June 2026. Adoption spread sideways much faster than it went deep. Most firms bought one tool and stopped. That gap is where automation work still pays.' },
-  { category: 'basics', question: 'What do AI automation agencies do?',
-    answer: 'An AI automation agency designs, builds, and integrates AI agents and automated workflows for a business, rather than selling software off the shelf. That covers mapping which processes are worth automating, building the agent or workflow, wiring it into your existing tools, and keeping it running and accurate after launch.' },
   { category: 'basics', question: 'What is an AI agent versus a chatbot?',
     answer: 'A chatbot mostly answers questions inside a chat window, following a script or a language model reply. An AI agent goes further: it can take action across your systems on its own, looking up an order, updating a record, booking a slot, or escalating a case, without a person doing every step by hand.' },
   { category: 'basics', question: 'Is ChatGPT an agent or a language model?',
     answer: 'ChatGPT is a language model with some agent-like features layered on top, such as browsing or connecting to a calendar. It is not, by itself, an agent built around your business. An AI agent development company takes that same class of model and wires it into your specific tools, data, and rules.' },
-  { category: 'basics', question: 'What is the difference between the big foundation model providers and an AI agent development agency?',
-    answer: 'OpenAI, Google, and Anthropic build the underlying models. An AI agent development agency takes that model and builds the specific thing your business needs on top of it: the integrations, the guardrails, the testing, and the ongoing support. Most businesses need the second part far more than direct access to the first.' },
   { category: 'basics', question: 'What are the best AI automation agencies?',
     answer: 'It depends what you need automated and which systems you run. A strong AI automation agency should show real production builds, not just demos, explain exactly what it can integrate with, and be upfront about what an agent cannot yet do reliably. Ask any agency you are considering for examples, including us.' },
   { category: 'basics', question: 'How do companies typically adopt or roll out AI agents?',
     answer: 'Most businesses start with one narrow, well-defined process, often customer support or lead follow-up, run it alongside the existing team for a few weeks, then expand once it is proven. Rolling out several agents at once with no pilot is the most common way adoption goes wrong.' },
-  { category: 'basics', question: 'Which companies are leading in AI agents?',
-    answer: 'At the model layer, OpenAI, Google, and Anthropic are the names to know. At the application layer, where agents actually get built for real businesses, the field is far more fragmented and regional: strong UK and specialist teams often out-execute big-name platforms on the specific integration a business actually needs.' },
-  { category: 'basics', question: 'What are the best AI agent development companies in 2026?',
-    answer: 'Look past the marketing and check three things: can they show agents running in production, not just a demo, do they explain your integrations in plain language, and do you own what gets built. A lot of agencies in this space resell a template built by someone else. Ask directly whether yours does.' },
+  { category: 'basics', question: 'What is agentic AI?',
+    answer: 'Agentic AI is AI that works towards a goal over several steps and uses tools to get there, instead of producing one answer and stopping. It might read an email, look up the order, check stock, draft a reply, and ask a person to approve a refund. The word agentic just means it acts, within limits you set.' },
+  { category: 'basics', question: 'What is the difference between agentic AI and generative AI?',
+    answer: 'Generative AI creates content: text, images, a summary, a draft reply. Agentic AI uses that ability to take actions across your systems towards a goal, such as updating a record or booking a slot. Most business agents use both: generative AI to write, agentic design to decide what to do next and when to ask a person.' },
 
   // ── What we build ──
   { category: 'build', question: 'What can you actually automate for my business?',
@@ -75,6 +71,10 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     answer: 'Usually it removes the repetitive part of a role, not the role. A support agent handling routine questions frees your team for the calls that need judgment. Most clients use the time it buys back to handle more volume with the same headcount, rather than to cut the team.' },
   { category: 'build', question: 'What happens if the AI gets something wrong?',
     answer: 'Every agent we build ships with monitoring, clear escalation rules, and a boundary around what it is allowed to decide on its own. Mistakes get caught early because you can see what the agent did, and anything outside its confidence or its rules hands off to a person automatically.' },
+  { category: 'build', question: 'Can AI answer customer service calls?',
+    answer: 'Yes. A voice agent, often called an AI receptionist, can answer calls, understand what the caller needs, answer routine questions, take a message, book an appointment, and put urgent calls through to a person. It works best when the common call types are known and the escalation rules are clear. We design those rules with you before launch.' },
+  { category: 'build', question: 'Can I build my own AI agent instead of hiring an agency?',
+    answer: 'For a simple, single-step task, yes: tools like no-code builders make a basic agent possible in an afternoon. The work gets harder when the agent must touch live customer data, several systems, and real edge cases. That is where testing, security, monitoring, and support matter, and where most DIY agents stall. We will tell you honestly which side of that line you are on.' },
 
   // ── Integrations & ownership ──
   { category: 'integrations', question: 'Which tools do you integrate with?',
@@ -117,16 +117,25 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     answer: 'We tell you. Plenty of problems that look like automation problems are really a broken process, a missing integration, or software your team never finished setting up. If that is what the audit finds, we say so rather than selling you an agent. It costs us a project and saves you a bad build.' },
   { category: 'results', question: 'How do we get started?',
     answer: 'Send your name and work email through the form on this page. The founder replies within 24 hours to book a short call, where we run a free automation audit on your business, show you which processes are worth automating first, and map what a build would involve. That first look costs nothing.' },
+  { category: 'results', question: 'Should I hire an AI consultant or an AI agency first?',
+    answer: 'If you do not yet know which process to automate, start with a consultant, or a readiness assessment, so you spend on the right thing. If you already know the process, go straight to an agency that builds. We do both: our UK AI consultancy runs the assessment, and the same team builds what it recommends, so nothing gets lost in a handover.' },
 ];
 
 /* ─── Named UK AI automation / agent agencies (open self-disclosure, ItemList) ─ */
 const AI_AUTOMATION_AGENCIES: { name: string; note: string }[] = [
-  { name: 'FactoryJet', note: 'That is us. Engineers who design and build custom AI agents wired into your real tools, with the founder on every build and you owning what we ship, not a reseller of a template someone else built.' },
-  { name: 'Ronins', note: 'A UK-based automation and AI agency working across workflow automation and AI integration projects for small and mid-sized businesses.' },
-  { name: 'AI Automation Agency London', note: 'A London-focused automation agency named directly for the service, working on AI-driven process automation for local businesses.' },
-  { name: 'Coding Sprint', note: 'A UK development studio offering AI automation and agent-building alongside broader software development work.' },
-  { name: 'Elevate AI', note: 'An AI consultancy and automation provider working with UK businesses on AI adoption and workflow projects.' },
-  { name: 'OpScaling', note: 'An operations-focused automation agency helping UK companies scale processes with AI and workflow tooling.' },
+  // Refreshed 2026-09-24 from live UK Google results for AI automation terms and
+  // from the agencies ChatGPT, Claude, Gemini and Perplexity named for UK buyers.
+  // Each note paraphrases the company's own homepage, fetched that day. Dropped:
+  // Coding Sprint (site behind a bot wall, could not verify) and AI Automation
+  // Agency London (site did not load).
+  { name: 'FactoryJet', note: 'That is us. Engineers who design, build, and support custom AI agents wired into your real tools, with the founder on every build and you owning what we ship, not a reseller of a template someone else built.' },
+  { name: 'Softomate Solutions', note: 'An AI chatbot development and business automation agency based in Stanmore, London. The UK agency the AI assistants named most often when we asked who builds AI agents for small businesses.' },
+  { name: 'Ronins', note: 'A digital growth agency in London and Surrey that combines marketing, product, and AI automation work.' },
+  { name: 'MQLFlow', note: 'A UK AI automation agency that positions its automation services around return on investment and productivity.' },
+  { name: 'London Axion', note: 'A London AI automation agency offering automation services built around each business, starting from a free audit.' },
+  { name: 'GoAgentic', note: 'A UK team building bespoke AI agents for small and medium businesses, with a plain-English approach.' },
+  { name: 'Elevate AI', note: 'A UK provider of practical AI consulting, alongside a managed outbound sales service for B2B firms.' },
+  { name: 'OpScaling', note: 'A UK AI automation agency that also sells AI consultancy services.' },
 ];
 
 /* ─── JSON-LD ────────────────────────────────────────────────────── */
@@ -148,12 +157,12 @@ const jsonLd = {
       '@type': 'Service',
       '@id': `${CANONICAL}#service`,
       name: 'AI Automation Agency UK',
-      serviceType: 'AI automation, AI agent development, and AI workflow integration',
+      serviceType: 'AI automation, AI agent development, agentic AI development, and AI integration services',
       provider: { '@id': 'https://factoryjet.com/#organization' },
       areaServed: { '@type': 'Country', name: 'United Kingdom' },
       url: CANONICAL,
       description:
-        'AI automation agency in the UK. We design, build, and integrate custom AI agents for customer support, sales, scheduling, and operations, wired into the tools a business already runs.',
+        'AI automation agency and AI development company in the UK and London. We design, build, integrate, and support custom AI agents and agentic AI systems for customer support, AI receptionists, sales, scheduling, and operations, wired into the tools a business already runs.',
     },
     {
       '@type': 'BreadcrumbList',
@@ -169,7 +178,7 @@ const jsonLd = {
       '@type': ['WebPage', 'Article'],
       '@id': CANONICAL,
       url: CANONICAL,
-      name: 'AI Automation Agency UK | Custom AI Agents | FactoryJet',
+      name: 'AI Automation Agency UK | AI Agent Development | FactoryJet',
       headline: 'The UK AI Automation Agency That Builds Agents Into Your Actual Tools',
       inLanguage: 'en-GB',
       datePublished: '2026-07-25',
@@ -209,12 +218,12 @@ const jsonLd = {
 };
 
 export const metadata: Metadata = {
-  title: 'AI Automation Agency UK | Custom AI Agents | FactoryJet',
+  title: 'AI Automation Agency UK | AI Agent Development | FactoryJet',
   description:
-    'FactoryJet is a UK AI automation agency building custom AI agents for support, sales and operations, wired into the tools you run. You own the build.',
+    'UK and London AI automation agency. We design, build and support custom AI agents, agentic AI and AI integrations wired into the tools you run. You own it.',
   alternates: { canonical: CANONICAL, languages: { 'en-GB': CANONICAL, 'x-default': CANONICAL } },
   openGraph: {
-    title: 'AI Automation Agency UK | Custom AI Agents | FactoryJet',
+    title: 'AI Automation Agency UK | AI Agent Development | FactoryJet',
     description:
       'A UK AI automation agency and AI agent development team. We design and build custom AI agents for customer support, sales, and operations, wired into the tools you already run. You own what we build. Free automation audit.',
     url: CANONICAL,
@@ -249,15 +258,16 @@ export default function AiAgentsUKPage() {
                 </div>
                 <h1>The UK AI Automation Agency That Builds Agents Into Your Actual Tools</h1>
                 <p className="lead mt-6" style={{ maxWidth: 560 }}>
-                  FactoryJet is an AI automation agency working with businesses across the UK. We design and build
-                  custom AI agents (customer support, sales, scheduling, ops, chatbots) that plug into the tools
-                  you already run: your CRM, helpdesk, email, and WhatsApp. You own what we build, not us.
+                  FactoryJet is an AI automation agency and AI development company working with businesses across
+                  the UK, from London to Leeds. We design, build, and support custom AI agents (customer support,
+                  AI receptionists, sales, scheduling, operations) that plug into the tools you already run: your
+                  CRM, helpdesk, phone line, email, and WhatsApp. You own what we build, not us.
                 </p>
 
                 <div className="byline mt-6" style={{ maxWidth: 560 }}>
                   <div className="av">BB</div>
                   <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ projects delivered</span></div>
-                  <div className="upd">Last updated<br />25 August 2026</div>
+                  <div className="upd">Last updated<br />24 September 2026</div>
                 </div>
 
                 <div className="mt-6" style={{ maxWidth: 560 }}>
@@ -311,6 +321,15 @@ export default function AiAgentsUKPage() {
                 An AI agent is software that takes actions and completes multi-step tasks across your tools,
                 rather than only answering questions in a chat window. It can look something up, update a record,
                 send a message, or book a slot on its own. That is the difference between a chatbot and an agent.
+              </p>
+            </div>
+            <div className="def mt-6" style={{ maxWidth: 940 }}>
+              <span className="lab">What does an AI development company do?</span>
+              <p>
+                An AI development company takes a language model from a provider such as OpenAI, Anthropic, or
+                Google and builds the part your business actually needs around it: the connections to your
+                systems, the rules for what it may do alone, the testing on your real data, and the support after
+                launch. The model is bought. Everything that makes it useful to you is built.
               </p>
             </div>
             <p className="lead mt-8" style={{ maxWidth: 920 }}>
@@ -498,6 +517,52 @@ export default function AiAgentsUKPage() {
                 <p className="mt-4">You own the agent, the code, and the integrations. We track the outcome that matters, tickets resolved, hours saved, meetings booked, and report it monthly.</p>
               </li>
             </ul>
+          </div>
+        </section>
+
+        {/* ═══ 6a. WHAT WE BUILD: AI DEVELOPMENT SERVICES (added 2026-09-24) ═══ */}
+        <section className="sec-lg">
+          <div className="wrap">
+            <div style={{ maxWidth: 760 }}>
+              <span className="eyebrow">AI development services</span>
+              <h2>AI agent development, agentic AI and AI integration: what we build</h2>
+              <p className="lead mt-4">
+                UK buyers search for this work under several names: AI development company, AI development
+                services, agentic AI development, AI integration services. They mostly mean one of six things. Here
+                is each one in plain English, and what it looks like when we build it.
+              </p>
+            </div>
+            <ul className="col-3 mt-12">
+              <li className="svc-card">
+                <h3>Custom AI agent development</h3>
+                <p className="mt-4">An agent built around one job in your business, such as answering support tickets or qualifying leads, using your own documents and records. Designed for your rules, not a template we reuse across clients.</p>
+              </li>
+              <li className="svc-card">
+                <h3>Agentic AI development</h3>
+                <p className="mt-4">Agentic AI means AI that plans and carries out several steps towards a goal, using tools along the way, rather than writing one reply. Generative AI writes the email. Agentic AI reads the order, checks stock, drafts the email, and asks a person before anything irreversible happens.</p>
+              </li>
+              <li className="svc-card">
+                <h3>AI integration services</h3>
+                <p className="mt-4">Connecting AI to the systems UK teams already run, for example HubSpot, Salesforce, Microsoft Dynamics 365, Xero, Sage, Zendesk, Shopify, Microsoft 365, and Google Workspace, so the agent reads and writes real records instead of living in a separate chat window.</p>
+              </li>
+              <li className="svc-card">
+                <h3>AI receptionists and phone agents</h3>
+                <p className="mt-4">A voice agent that answers calls, takes messages, books appointments, and routes urgent calls to a person, at any hour. It is one of the fastest growing things UK firms ask us for. See our <a href="/services/ai-agent-development/ai-voice-agent" style={{ textDecoration: 'underline' }}>AI voice agent build</a>.</p>
+              </li>
+              <li className="svc-card">
+                <h3>AI customer service agents</h3>
+                <p className="mt-4">Agents that resolve routine questions in chat, email, and WhatsApp, look up orders and accounts, and hand the hard cases to your team with the full context attached, so nobody asks the customer to repeat themselves.</p>
+              </li>
+              <li className="svc-card">
+                <h3>Internal knowledge and operations agents</h3>
+                <p className="mt-4">Agents your own staff talk to: answering process questions from your handbook, preparing reports, matching invoices, or chasing suppliers. Less glamorous than a chatbot, and often the biggest time saving.</p>
+              </li>
+            </ul>
+            <p className="mt-8" style={{ maxWidth: 760 }}>
+              Not sure which of these you need yet? Start with our <a href="/uk/ai-consulting" style={{ textDecoration: 'underline' }}>AI consultancy</a>:
+              a readiness assessment that tells you which processes are worth an agent, and which are not. When you
+              are ready to build, the same team builds it.
+            </p>
           </div>
         </section>
 
@@ -732,7 +797,9 @@ export default function AiAgentsUKPage() {
                     commercial-intent search: someone looking for a team to hire, not a definition to read.
                     Meanwhile &quot;ai agent development uk&quot;, the phrase most agencies write their pages
                     around, has effectively no search volume at all. We named this page after the search that
-                    exists.
+                    exists. The other real searches are &quot;ai development company&quot; and &quot;ai development
+                    services&quot;, from buyers comparing firms, and &quot;ai receptionist uk&quot;, from businesses
+                    tired of missed calls.
                   </p>
                   <p>
                     Whether you are searching for an AI automation agency UK-wide or specifically in London,
@@ -757,13 +824,14 @@ export default function AiAgentsUKPage() {
                 <div style={{ padding: '4px 18px 14px' }}>
                   <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
                     {[
-                      { kw: 'ai automation agency', v: '720', w: '100%', kd: 'KD 10 · The head term' },
-                      { kw: 'ai automation agency uk', v: '210', w: '29%', kd: 'KD 10 · Commercial intent' },
-                      { kw: 'ai agents for business', v: '110', w: '15%', kd: 'KD 16 · Winnable' },
-                      { kw: 'seo ai agents', v: '90', w: '13%', kd: 'KD 17 · Winnable' },
-                      { kw: 'ai automation agency london', v: '70', w: '10%', kd: 'KD 10 · Local, winnable' },
-                      { kw: 'ai chatbot development services', v: '40', w: '6%', kd: 'KD 0 · Quick win' },
-                      { kw: 'ai agent development uk', v: '0', w: '1%', kd: 'No measurable demand' },
+                      { kw: 'ai automation agency', v: '720', w: '100%', kd: 'KD 21 · The head term' },
+                      { kw: 'ai development company', v: '320', w: '44%', kd: 'KD 39 · Buyers comparing firms' },
+                      { kw: 'ai receptionist uk', v: '320', w: '44%', kd: 'KD 0 · Fast growing' },
+                      { kw: 'ai development services', v: '260', w: '36%', kd: 'KD 20 · Commercial intent' },
+                      { kw: 'ai automation agency uk', v: '210', w: '29%', kd: 'KD 0 · Commercial intent' },
+                      { kw: 'ai agency london', v: '110', w: '15%', kd: 'KD 0 · Local' },
+                      { kw: 'ai automation agency london', v: '70', w: '10%', kd: 'KD 0 · Local' },
+                      { kw: 'ai agent development uk', v: '<10', w: '1%', kd: 'No measurable demand' },
                     ].map((r) => (
                       <li key={r.kw} className="demand-row">
                         <div className="demand-top"><span className="demand-kw">{r.kw}</span><span className="demand-v">{r.v}<span style={{ fontSize: 9, color: 'var(--n400)' }}> searches</span></span></div>
@@ -772,8 +840,46 @@ export default function AiAgentsUKPage() {
                       </li>
                     ))}
                   </ul>
-                  <p style={{ textAlign: 'center', fontFamily: 'var(--fm)', fontSize: 10, color: 'var(--n400)', marginTop: 10 }}>Source: DataForSEO, United Kingdom, August 2026</p>
+                  <p style={{ textAlign: 'center', fontFamily: 'var(--fm)', fontSize: 10, color: 'var(--n400)', marginTop: 10 }}>Source: DataForSEO, United Kingdom, September 2026</p>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ═══ 11b. LONDON (added 2026-09-24) ═══ */}
+        <section className="sec-lg dot-grid">
+          <div className="wrap">
+            <div className="col-6040">
+              <div>
+                <span className="eyebrow">AI automation agency London</span>
+                <h2>Looking for an AI agency in London?</h2>
+                <div className="stack mt-6">
+                  <p>
+                    London is where most UK searches for an AI agency, an AI automation agency, and an AI
+                    consultancy come from. If that is you, the practical question is not whether a team has a
+                    London address. It is whether the people you meet on the first call are the people who will
+                    build and support your agent.
+                  </p>
+                  <p>
+                    With us they are. We work with London businesses the same way we work with the rest of the UK:
+                    video calls, a shared workspace, and a build that runs on your systems rather than ours. There is
+                    no London premium for a sales office, and no handover to a different team after the contract is
+                    signed.
+                  </p>
+                  <p>
+                    If you want a plan before a build, our <a href="/uk/ai-consulting" style={{ textDecoration: 'underline' }}>AI consultancy</a> runs
+                    a readiness assessment first. If you already know the process you want automated, start with a
+                    free automation audit below.
+                  </p>
+                </div>
+              </div>
+              <div className="card card-top-orange">
+                <span className="eyebrow">What London firms ask us to build first</span>
+                <div className="scorecard-row"><div><div className="scorecard-metric">AI receptionist</div><div className="scorecard-note">answers, books, and routes calls</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Phone</div></div>
+                <div className="scorecard-row"><div><div className="scorecard-metric">Lead qualification agent</div><div className="scorecard-note">replies in minutes, books the call</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Sales</div></div>
+                <div className="scorecard-row"><div><div className="scorecard-metric">Support agent</div><div className="scorecard-note">trained on your help centre</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Service</div></div>
+                <div className="scorecard-row"><div><div className="scorecard-metric">Document and inbox agent</div><div className="scorecard-note">reads, sorts, and drafts</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Ops</div></div>
               </div>
             </div>
           </div>
@@ -802,7 +908,7 @@ export default function AiAgentsUKPage() {
               ))}
             </ul>
             <p style={{ fontFamily: 'var(--fm)', fontSize: 11, color: 'var(--n400)', marginTop: 14 }}>
-              Agencies named from live UK search results for AI automation terms, July 2026. Listing is not endorsement, and we are one option among them.
+              Agencies named from live UK Google results for AI automation terms and from UK answers by ChatGPT, Claude, Gemini, and Perplexity, September 2026. Listing is not endorsement, and we are one option among them.
             </p>
           </div>
         </section>
