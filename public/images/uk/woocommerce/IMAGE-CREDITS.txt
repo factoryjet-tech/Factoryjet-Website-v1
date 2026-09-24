@@ -12,3 +12,11 @@ Review: hands and faces correct; laptop screen shows only product photos and col
 woocommerce-developer.webp (1200x800)
 Prompt: "A male software developer in his forties with a short beard and a grey shirt sits at a tidy white desk in a bright UK office, focused on a large monitor showing abstract blocks of coloured code-like lines that are blurred and unreadable, with no words and no numbers legible anywhere on screen. A closed notebook and a small plant on the desk. Exactly one orange coffee mug on the desk. No logos, no real brand names" + style suffix.
 Review: both hands correct on keyboard; code is blurred and unreadable; no logos; one orange mug.
+
+2026-09-24 (orchestrator, after Bhavesh's review): hero + og REPLACED. The first hero showed the laptop
+screen facing the camera while the people sat behind it (they would have been looking at the back of the
+lid). Regenerated with openai:gpt-image@2 via Runware using an over-the-shoulder camera from behind the
+people, so the screen faces them and the viewer. Prompt adds: "the camera is positioned behind and
+slightly to the side of the people ... The screen faces the people and the camera. The people are in front
+of the screen, never behind it." Reviewed at full size: geometry, hands, faces, no text, no logos.
+woocommerce-developer.webp also replaced the same way (man now viewed from behind, facing the monitor).

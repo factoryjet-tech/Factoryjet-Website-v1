@@ -43,7 +43,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'start', question: "How much does it cost to build an ecommerce website in the UK?",
     answer: "There is no single number, because a five-product DTC launch and a two-thousand-SKU B2B catalogue with ERP integration are different jobs. SKU means stock keeping unit, one sellable product or variant. What sets the scope is product count, the platform, how many systems you integrate (payments, stock, CRM), and how custom the design is. We scope every project after a call, so you know the shape of the investment before you commit to anything." },
   { category: 'start', question: "How long does it take to build an ecommerce store?",
-    answer: "As a rough guide from our own projects: a focused Shopify store takes about 4 to 8 weeks, a custom-designed Shopify or WooCommerce store about 8 to 14 weeks, a replatform or Shopify Plus build about 12 to 20 weeks, and a Magento or B2B build with ERP integration about 16 to 28 weeks. The biggest delays are usually late product data and slow sign-off, not the code." },
+    answer: "A platform store with a custom theme takes 3 to 5 weeks. An advanced store with subscriptions, B2B pricing or a migration takes 5 to 8 weeks. Headless builds and custom platforms run 8 to 14 weeks, depending on catalogue size, integrations and migration needs. The biggest delays are usually late product data and slow sign-off, not the code." },
   { category: 'start', question: "Is ecommerce still profitable in 2026?",
     answer: "For well-run stores, yes. The Office for National Statistics reported that online sales were 28.8 percent of all Great Britain retail sales in August 2026, so close to three in every ten retail pounds are spent online. Profit comes from margins, delivery costs, returns and repeat customers, not from having a store at all. A fast store with a clear checkout and honest delivery costs protects those margins." },
   { category: 'start', question: "Do I own the code and the store when it's finished?",
@@ -132,20 +132,18 @@ const PLATFORMS: { name: string; href: string; fit: string; catalogue: string; b
 
 /* ─── Typical timelines (our own project ranges, not promises) ──────── */
 const TIMELINES: { type: string; weeks: string; drivers: string }[] = [
-  { type: 'Focused Shopify store, adapted premium theme', weeks: '4–8 weeks', drivers: 'Product data ready, few integrations' },
-  { type: 'Custom-designed Shopify or WooCommerce store', weeks: '8–14 weeks', drivers: 'Bespoke design, reviews, payments, email' },
-  { type: 'Replatform or Shopify Plus build with migration', weeks: '12–20 weeks', drivers: 'URL mapping, data migration, redirects' },
-  { type: 'Magento, B2B or manufacturing store with ERP', weeks: '16–28 weeks', drivers: 'Trade pricing, ERP sync, account rules' },
-  { type: 'Headless or fully custom commerce', weeks: '16–30 weeks', drivers: 'Custom front end, many channels, testing' },
+  { type: 'Platform store with a custom theme (Shopify, WooCommerce)', weeks: '3–5 weeks', drivers: 'Product data ready, few integrations' },
+  { type: 'Advanced store: subscriptions, B2B pricing or a migration', weeks: '5–8 weeks', drivers: 'Trade pricing, data migration, redirects' },
+  { type: 'Headless or custom platform, ERP-heavy or large catalogue', weeks: '8–14 weeks', drivers: 'Catalogue size, integrations, migration needs' },
 ];
 
 /* ─── What an ecommerce agency does, start to finish ───────────────── */
 const STAGES: { n: string; t: string; w: string; d: string }[] = [
-  { n: '01', t: 'Discovery and platform choice', w: 'Weeks 1–2', d: 'We look at your catalogue, customers, current store, stock and accounts systems, and where you sell. You get a written scope, a platform recommendation with reasons, and a timeline with sign-off points.' },
-  { n: '02', t: 'UX and wireframes', w: 'Weeks 2–4', d: 'UX means user experience, how easy the store is to use. We map the path from landing page to paid order as simple page layouts first, so structure gets agreed before anyone argues about colours.' },
-  { n: '03', t: 'Visual design', w: 'Weeks 3–6', d: 'Home, category, product, basket and checkout designed around your brand and your photography, mobile first. You approve the designs before development starts.' },
-  { n: '04', t: 'Development and integrations', w: 'Weeks 5–12', d: 'Senior engineers build the store and connect payments, stock, delivery, CRM, email and, for B2B, your ERP. Product data and content go in as the build progresses.' },
-  { n: '05', t: 'Migration, testing and launch', w: 'Final 2–3 weeks', d: 'Old URLs mapped with single redirects, real orders placed on real phones, speed and accessibility checked, tracking live. Then we launch on a quiet day, never before a bank holiday weekend.' },
+  { n: '01', t: 'Discovery and platform choice', w: 'Week 1', d: 'We look at your catalogue, customers, current store, stock and accounts systems, and where you sell. You get a written scope, a platform recommendation with reasons, and a timeline with sign-off points.' },
+  { n: '02', t: 'UX and wireframes', w: 'Weeks 1–2', d: 'UX means user experience, how easy the store is to use. We map the path from landing page to paid order as simple page layouts first, so structure gets agreed before anyone argues about colours.' },
+  { n: '03', t: 'Visual design', w: 'Weeks 2–3', d: 'Home, category, product, basket and checkout designed around your brand and your photography, mobile first. You approve the designs before development starts.' },
+  { n: '04', t: 'Development and integrations', w: 'Weeks 3–12, by scope', d: 'Senior engineers build the store and connect payments, stock, delivery, CRM, email and, for B2B, your ERP. Product data and content go in as the build progresses.' },
+  { n: '05', t: 'Migration, testing and launch', w: 'Final 1–2 weeks', d: 'Old URLs mapped with single redirects, real orders placed on real phones, speed and accessibility checked, tracking live. Then we launch on a quiet day, never before a bank holiday weekend.' },
   { n: '06', t: 'Support and growth after launch', w: 'Ongoing', d: 'Close watch for the first weeks, then ad-hoc fixes, a monthly support plan, or growth sprints. We track rankings, speed and conversion so improvements are based on data, not guesses.' },
 ];
 

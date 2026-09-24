@@ -182,9 +182,9 @@ const FAQ_ITEMS: { question: string; answer: string; category: FaqCategory }[] =
   },
   {
     category: 'Scope and timeline',
-    question: 'What does the 7 day delivery guarantee cover?',
+    question: 'What does 7-day delivery cover?',
     answer:
-      'It covers straightforward builds: a custom theme applied to an existing store, or a new store of up to five templates with core pages, payment setup and launch. It does not cover complex migrations, multi-storefront Plus builds, or catalogues running to thousands of variants, because those genuinely take longer. We confirm on the discovery call whether your project qualifies before anyone commits to a date.',
+      '7-day delivery covers websites and stores of up to five pages: a custom theme applied to an existing store, or a new store with core pages, payment setup and launch. It does not cover complex migrations, multi-storefront Plus builds, or catalogues running to thousands of variants, because those genuinely take longer. We confirm on the discovery call whether your project qualifies before anyone commits to a date.',
   },
 
   /* ── Platform and Shopify Plus ── */
@@ -1156,7 +1156,7 @@ export default function ShopifyDevelopmentPage() {
       <p style={{ fontSize: '15px', color: 'var(--ink)', fontWeight: '500', lineHeight: '1.6', marginBottom: '16px' }}>&#8220;We were live in 6 days, I genuinely did not believe that was possible. The design is stunning, the WhatsApp integration brings in inquiries every day, and the site has stayed lightning fast.&#8221;</p>
       <div style={{ borderTop: '1px solid var(--n200)', paddingTop: '16px' }}>
         <p style={{ fontSize: '13px', fontWeight: '600', color: 'var(--ink)' }}>Ricky B, Founder, Belle Maison</p>
-        <p style={{ fontSize: '13px', color: 'var(--n400)' }}>Artificial plants and home décor, direct to consumer</p>
+        <p style={{ fontSize: '13px', color: 'var(--n400)' }}>Artificial plants and home décor, direct to consumer. Store built on Commerceflo.</p>
       </div>
     </div>
   </div>

@@ -12,3 +12,10 @@ Review: hands and faces correct, screen shows six product tiles with no text or 
 ecommerce-consultant-team.webp (1200x800)
 Prompt: "A small team of four people, mixed ages and backgrounds, stand and sit around a large pale oak table in a bright UK warehouse office. On the table are neatly packed brown cardboard parcels with plain unprinted labels, a roll of packing tape and an open laptop whose screen shows only product photographs and colour blocks, with no words and no numbers on screen. One person gestures towards the parcels while the others listen, smart casual clothing. One orange tape dispenser is the only strong colour. No logos, no real brand names, no readable text anywhere." + style suffix.
 Review: four people, hands correct, parcels unprinted, laptop shows product thumbnails only, no text or logos.
+
+2026-09-24 (orchestrator, after Bhavesh's review): hero + og REPLACED. The first hero showed the laptop
+screen facing the camera while the people sat behind it (they would have been looking at the back of the
+lid). Regenerated with openai:gpt-image@2 via Runware using an over-the-shoulder camera from behind the
+people, so the screen faces them and the viewer. Prompt adds: "the camera is positioned behind and
+slightly to the side of the people ... The screen faces the people and the camera. The people are in front
+of the screen, never behind it." Reviewed at full size: geometry, hands, faces, no text, no logos.
