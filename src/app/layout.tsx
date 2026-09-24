@@ -14,6 +14,7 @@ import ScrollToTop from '../components/ScrollToTop'
 import MobileStickyCTA from '../components/MobileStickyCTA'
 import ConditionalContactModal from '../components/ConditionalContactModal'
 import ProductionAnalytics from '../components/ProductionAnalytics'
+import { ORGANIZATION_SCHEMA } from '@/data/organization';
 
 // Plus Jakarta Sans — primary display font (Sprint 8, replaces Clash Display).
 // Geometric humanist sans: precise yet warm, professional for US SMB market.
@@ -151,53 +152,7 @@ export default function RootLayout({
           id="organization-schema"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "@id": "https://factoryjet.com/#organization",
-              "name": "FactoryJet",
-              "alternateName": "FactoryJet Digital Solutions",
-              "url": "https://factoryjet.com",
-              "logo": "https://factoryjet.com/FinalLogo.svg",
-              "description": "FactoryJet is a leading web & eCommerce development company delivering scalable, secure, and high-performance digital solutions.",
-              "foundingDate": "2014",
-              "founder": {
-                "@type": "Person",
-                "name": "Bhavesh Barot",
-                "jobTitle": "Founder & CEO"
-              },
-              "email": "connect@factoryjet.com",
-              "telephone": "+919699977699",
-              "address": {
-                "@type": "PostalAddress",
-                "addressCountry": "IN"
-              },
-              "sameAs": [
-                "https://www.linkedin.com/company/factoryjet",
-                "https://www.instagram.com/factoryjetb2b",
-                "https://www.facebook.com/factoryjetb2b",
-                "https://x.com/FactoryJet_Tech",
-                "https://clutch.co/profile/factoryjet-private",
-                "https://www.goodfirms.co/company/factoryjet-private-limited",
-                "https://www.designrush.com/agency/profile/factoryjet",
-                "https://www.softwaresuggest.com/factoryjet",
-                "https://www.crunchbase.com/organization/factoryjet"
-              ],
-              "areaServed": [
-                { "@type": "Country", "name": "United Kingdom" },
-                { "@type": "Country", "name": "United States" },
-                { "@type": "Country", "name": "United Arab Emirates" },
-                { "@type": "Country", "name": "India" }
-              ],
-              "serviceType": [
-                "Web Design & Development",
-                "E-Commerce Development",
-                "AI Agent Development",
-                "AI SEO & GEO Optimization",
-                "Shopify Development",
-                "Digital Marketing"
-              ]
-            })
+            __html: JSON.stringify(ORGANIZATION_SCHEMA)
           }}
         />
 
@@ -209,8 +164,10 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
+              "@id": "https://factoryjet.com/#website",
               "name": "FactoryJet",
-              "url": "https://factoryjet.com"
+              "url": "https://factoryjet.com",
+              "publisher": { "@id": "https://factoryjet.com/#organization" }
             })
           }}
         />
