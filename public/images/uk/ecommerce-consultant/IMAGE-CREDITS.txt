@@ -1,0 +1,14 @@
+Images for /uk/ecommerce-consultant, generated 2026-09-24
+Model: openai:gpt-image@2 (GPT Image 2) via Runware API, 1536x1024 PNG, resized/cropped with ImageMagick, converted with cwebp -q 82.
+All images reviewed at full size (hands, faces, on-screen text, brands) before use. First attempt accepted for both; none rejected.
+
+Shared style suffix (same as /uk/magento):
+"Bright high-key commercial photography in a UK office. Clean white and very light grey environment, large sunlit windows, abundant soft diffused daylight. Crisp sharp focus, deep depth of field. Airy, calm, confident mood. Accurate natural skin tones. Hands anatomically correct with exactly five natural fingers in relaxed natural poses. Exactly one warm orange object in frame as the only strong colour accent. Photorealistic, professional colour grading, no illustration."
+
+ecommerce-consultant-hero.webp (1400x933) and ecommerce-consultant-og.webp (1200x630, centre crop of the same image)
+Prompt: "A senior ecommerce consultant in his fifties with a neat grey beard and a light blue shirt sits beside a UK brand owner, a woman in her thirties with dark curly hair and a cream knit jumper, at a pale oak table in a bright studio and warehouse office. They are both looking at an open laptop and she is pointing at the screen. The laptop screen shows a simple online shop layout made only of product photographs and plain colour blocks, with no words and no numbers on screen. Behind them are tidy white shelves of folded textiles, ceramics and boxed products. An orange mug on the table. No logos, no real brand names, no readable text anywhere." + style suffix.
+Review: hands and faces correct, screen shows six product tiles with no text or numbers, no logos.
+
+ecommerce-consultant-team.webp (1200x800)
+Prompt: "A small team of four people, mixed ages and backgrounds, stand and sit around a large pale oak table in a bright UK warehouse office. On the table are neatly packed brown cardboard parcels with plain unprinted labels, a roll of packing tape and an open laptop whose screen shows only product photographs and colour blocks, with no words and no numbers on screen. One person gestures towards the parcels while the others listen, smart casual clothing. One orange tape dispenser is the only strong colour. No logos, no real brand names, no readable text anywhere." + style suffix.
+Review: four people, hands correct, parcels unprinted, laptop shows product thumbnails only, no text or logos.

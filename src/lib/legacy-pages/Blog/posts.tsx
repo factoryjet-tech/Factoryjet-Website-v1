@@ -25,9 +25,7 @@ import { post as bestLeadGenerationWebsitesSmallBusiness2026Post } from './posts
 import { post as websiteRedesignSmallBusinessUk2026AiPoweredPost } from './posts/website-redesign-small-business-uk-2026-ai-powered';
 import { post as howToBuildOnlineStoreUkSmbGuide2026Post } from './posts/how-to-build-online-store-uk-smb-guide-2026';
 import { post as topEcommerceDevelopmentAgenciesUk2026Post } from './posts/top-ecommerce-development-agencies-uk-2026';
-import { post as createAiAgentsBusinessUkSmbGuide2026Post } from './posts/create-ai-agents-business-uk-smb-guide-2026';
 import { post as bestAiAutomationToolsSmallBusinessUk2026Post } from './posts/best-ai-automation-tools-small-business-uk-2026';
-import { post as buildAiAgentsSmallBusinessDiyVsAgency2026Post } from './posts/build-ai-agents-small-business-diy-vs-agency-2026';
 import { post as aiAgentsBusinessOperationsUkSmbs2026Post } from './posts/ai-agents-business-operations-uk-smbs-2026';
 import { post as aiAutomationServicesSmallBusinessUk2026Post } from './posts/ai-automation-services-small-business-uk-2026';
 import { post as aiSeoAgencyUkGeoAeoOrganicGrowthPost } from './posts/ai-seo-agency-uk-geo-aeo-organic-growth';
@@ -96,6 +94,7 @@ import { post as bestOmnichannelCommerceSolutionShopifyPlus2026Post } from './po
 import { post as howToHireAnAiAgentDeveloper2026Post } from './posts/how-to-hire-an-ai-agent-developer-2026';
 import { post as aiAgentsRealEstateConstructionBuyersGuide2026Post } from './posts/ai-agents-real-estate-construction-buyers-guide-2026';
 import { post as aiAgentBuildVsBuy2026Post } from './posts/ai-agent-build-vs-buy-2026';
+import { post as howToBuildAnAiAgentUk2026Post } from './posts/how-to-build-an-ai-agent-uk-2026';
 import { post as digitalMarketingForSmallBusinessIndiaPost } from './posts/digital-marketing-for-small-business-india';
 import { post as whatIsAgenticCommercePost } from './posts/what-is-agentic-commerce';
 import { post as agenticCommerceVsTraditionalEcommercePost } from './posts/agentic-commerce-vs-traditional-ecommerce';
@@ -180,6 +179,7 @@ export const POSTS: BlogPost[] = [
   howToHireAnAiAgentDeveloper2026Post,
   aiAgentsRealEstateConstructionBuyersGuide2026Post,
   aiAgentBuildVsBuy2026Post,
+  howToBuildAnAiAgentUk2026Post,
   // --- WEB DESIGN & STRATEGY ---
 { 
   id: '1',
@@ -4778,9 +4778,7 @@ export const POSTS: BlogPost[] = [
   websiteRedesignSmallBusinessUk2026AiPoweredPost,
   howToBuildOnlineStoreUkSmbGuide2026Post,
   topEcommerceDevelopmentAgenciesUk2026Post,
-  createAiAgentsBusinessUkSmbGuide2026Post,
   bestAiAutomationToolsSmallBusinessUk2026Post,
-  buildAiAgentsSmallBusinessDiyVsAgency2026Post,
   aiAgentsBusinessOperationsUkSmbs2026Post,
   aiAutomationServicesSmallBusinessUk2026Post,
   aiSeoAgencyUkGeoAeoOrganicGrowthPost,

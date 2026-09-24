@@ -448,8 +448,8 @@ export const post: BlogPost = {
         <a href="/tools/ai-agent-roi-calculator">AI agent cost and ROI calculator</a>. The full
         comparison of doing it yourself against hiring it out, including what a competent internal
         developer can realistically ship, is in{' '}
-        <a href="/blog/build-ai-agents-small-business-diy-vs-agency-2026">
-          build AI agents, DIY vs agency
+        <a href="/blog/how-to-build-an-ai-agent-uk-2026">
+          how to build an AI agent, step by step
         </a>
         .
       </p>

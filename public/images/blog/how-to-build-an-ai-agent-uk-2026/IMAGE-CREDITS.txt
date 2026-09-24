@@ -1,0 +1,14 @@
+Images for /blog/how-to-build-an-ai-agent-uk-2026, generated 2026-09-24
+Model: openai:gpt-image@2 (GPT Image 2) via Runware API, 1536x1024 PNG, resized/cropped with ImageMagick (-strip), converted with cwebp -q 82.
+All images reviewed at full size and in zoomed crops (hands, faces, on-screen text, logos) before use.
+
+Shared style suffix:
+"Bright high-key commercial photography in a UK office. Clean white and very light grey environment, large sunlit windows, abundant soft diffused daylight. Crisp sharp focus, deep depth of field. Airy, calm, confident mood. Accurate natural skin tones. Hands anatomically correct with exactly five natural fingers in relaxed natural poses. Exactly one warm orange object in frame as the only strong colour accent. Photorealistic, professional colour grading, no illustration."
+
+how-to-build-an-ai-agent-uk-hero.webp (1400x933) and how-to-build-an-ai-agent-uk-og.webp (1200x630, centre crop of the same image)
+Prompt: "A UK small business owner, a woman in her fifties with shoulder-length auburn hair wearing a cream cardigan, sits at a light oak table beside a younger male developer in his thirties with short dark hair and a grey shirt. Between them is an open laptop and a sheet of plain paper on which he is sketching a simple workflow of hand-drawn boxes joined by arrows, using only boxes and arrows with no letters, no words and no numbers anywhere on the paper. The laptop screen shows only soft abstract coloured blocks, no words and no numbers on screen. She is pointing at one box on the paper and both are smiling slightly in conversation. No logos, no brand names, no text anywhere" + style suffix.
+Review: first attempt accepted. Hands correct (five fingers each), faces natural, paper has boxes and arrows only, laptop shows colour blocks only, no logos.
+
+agent-workflow-whiteboard.webp (1200x800)
+Prompt: "A clean white whiteboard on a wall in a bright UK office showing a hand-drawn diagram of about seven rectangular boxes connected by arrows and lines in black and grey marker, forming a branching workflow, with one box outlined in orange. Absolutely no writing, no letters, no words and no numbers anywhere on the whiteboard, only shapes and arrows. A marker tray below with a few pens. No people, no logos, no text anywhere" + style suffix.
+Review: the full frame had a pseudo-text label on a marker pen and Apple-style monitors in the background office, so the image was cropped to the whiteboard only (1020x680 from x455,y60, then resized). Final image contains boxes and arrows only, no text, no brands.

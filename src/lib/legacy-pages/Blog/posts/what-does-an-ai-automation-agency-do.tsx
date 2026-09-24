@@ -365,7 +365,7 @@ export const post: BlogPost = {
           </tbody>
         </table>
       </div>
-      <p className="mb-4">The honest middle path most small businesses land on: use the agency for the first two or three builds, insist on documentation and account ownership, then keep one internal person as the light-touch owner. We wrote the fuller comparison in <a href="/blog/build-ai-agents-small-business-diy-vs-agency-2026" className="text-[#B23E13] underline">building AI agents, DIY vs agency</a>.</p>
+      <p className="mb-4">The honest middle path most small businesses land on: use the agency for the first two or three builds, insist on documentation and account ownership, then keep one internal person as the light-touch owner. We wrote the fuller comparison in <a href="/blog/how-to-build-an-ai-agent-uk-2026" className="text-[#B23E13] underline">how to build an AI agent yourself</a>.</p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">How many US small businesses are actually doing this</h2>
       <p className="mb-4">Two credible sources give wildly different answers, and the gap is genuinely useful rather than confusing.</p>

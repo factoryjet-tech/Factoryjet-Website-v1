@@ -537,7 +537,7 @@ export default function AiAgentsUKPage() {
               </li>
               <li className="svc-card">
                 <h3>AI receptionists and phone agents</h3>
-                <p className="mt-4">A voice agent that answers calls, takes messages, books appointments, and routes urgent calls to a person, at any hour. It is one of the fastest growing things UK firms ask us for. See our <a href="/services/ai-agent-development/ai-voice-agent" style={{ textDecoration: 'underline' }}>AI voice agent build</a>.</p>
+                <p className="mt-4">A voice agent that answers calls, takes messages, books appointments, and routes urgent calls to a person, at any hour. It is one of the fastest growing things UK firms ask us for. See our <a href="/uk/ai-receptionist" style={{ textDecoration: 'underline' }}>AI receptionist service for UK businesses</a> and the <a href="/services/ai-agent-development/ai-voice-agent" style={{ textDecoration: 'underline' }}>AI voice agent build</a>.</p>
               </li>
               <li className="svc-card">
                 <h3>AI customer service agents</h3>
@@ -645,6 +645,11 @@ export default function AiAgentsUKPage() {
           <div className="wrap">
             <span className="eyebrow">How we compare</span>
             <h2 style={{ maxWidth: 680 }}>FactoryJet vs a generic AI automation reseller vs DIY no-code</h2>
+            <p className="lead mt-4" style={{ maxWidth: 680 }}>
+              Want to try it yourself first? Our step-by-step guide on{' '}
+              <a href="/blog/how-to-build-an-ai-agent-uk-2026" style={{ textDecoration: 'underline' }}>how to build an AI agent</a>{' '}
+              covers the tools, the steps and the UK GDPR checks.
+            </p>
             <div className="card mt-8" style={{ padding: 0, overflow: 'hidden' }}>
               <table className="cmp-table">
                 <thead>

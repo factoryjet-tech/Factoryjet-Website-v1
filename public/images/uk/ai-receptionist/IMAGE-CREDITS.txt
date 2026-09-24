@@ -1,0 +1,14 @@
+Images for /uk/ai-receptionist, generated 2026-09-24
+Model: openai:gpt-image@2 (GPT Image 2) via Runware API, 1536x1024 PNG, resized with ImageMagick, converted with cwebp -q 82.
+All images reviewed at full size and cropped close-ups (hands, faces, on-screen text, logos) before use. First attempt accepted for both; none rejected.
+
+Shared style suffix:
+"Bright high-key commercial photography in a UK office. Clean white and very light grey environment, large sunlit windows, abundant soft diffused daylight. Crisp sharp focus, deep depth of field. Airy, calm, confident mood. Accurate natural skin tones. Hands anatomically correct with exactly five natural fingers in relaxed natural poses. Exactly one warm orange object in frame as the only strong colour accent. Photorealistic, professional colour grading, no illustration."
+
+ai-receptionist-hero.webp (1400x933) and ai-receptionist-og.webp (1200x630, centre crop of the same image)
+Prompt: "A friendly receptionist in her thirties with dark curly hair, wearing a light blue blouse and a slim phone headset, sits at the front desk of a small, bright UK dental and medical clinic reception, smiling as she talks to a caller. On the white desk: a monitor showing a simple calendar grid of soft coloured blocks with no words and no numbers on screen, a desk phone, a small potted plant and an orange mug. Behind her, a calm waiting area with a couple of chairs. No logos, no signage text, no real brand names." + style suffix.
+Review: hands and face correct; monitor shows only coloured calendar blocks, no text or numbers; desk phone display blank; no logos.
+
+ai-receptionist-call-flow.webp (1200x800)
+Prompt: "A small business owner in his fifties, a UK tradesman in a navy work polo shirt, stands in a bright tidy workshop office holding a smartphone to his ear, listening and smiling, one hand resting on a clipboard with a blank page. Beside him, a whiteboard shows a simple hand-drawn flow of empty boxes connected by arrows with no writing on it. An orange hard hat on a shelf. No text, no logos, no real brand names, no words and no numbers on any screen." + style suffix.
+Review: both hands correct (five fingers), whiteboard boxes empty, clipboard blank, background monitor blank, no logos.

@@ -1,0 +1,14 @@
+Images for /uk/b2b-ecommerce, generated 2026-09-24
+Model: openai:gpt-image@2 (GPT Image 2) via Runware API, 1536x1024 PNG, resized with ImageMagick, converted with cwebp -q 82.
+All images reviewed at full size (hands, faces, on-screen content, labels) before use. Both accepted on first clean attempt.
+
+Shared style suffix (magento suffix, with the "in a UK office" location dropped because the location is set in each prompt):
+"Bright high-key commercial photography. Clean white and very light grey environment, abundant soft diffused daylight. Crisp sharp focus, deep depth of field. Airy, calm, confident mood. Accurate natural skin tones. Hands anatomically correct with exactly five natural fingers in relaxed natural poses. Exactly one warm orange object in frame as the only strong colour accent. Photorealistic, professional colour grading, no illustration."
+
+b2b-ecommerce-hero.webp (1400x933) and b2b-ecommerce-og.webp (1200x630, centre crop of the same image)
+Prompt: "A bright glass-walled office corner inside a modern UK wholesale distribution warehouse. A man in his thirties with a short beard, wearing a navy quarter-zip jumper, sits at a white desk working on an open laptop, looking at the screen with a calm focused expression. The laptop screen shows a simple abstract layout of light grey product tiles and soft coloured blocks, with no words and no numbers on screen. Through the large glass window behind him, tall pale grey pallet racking holds plain unbranded brown cardboard boxes, neatly stacked. No logos anywhere, no labels, no readable text, no real brand names. An orange mug on the desk." + style suffix.
+Review: both hands correct on keyboard/trackpad, face natural, screen shows only grey/green/blue tiles, boxes unbranded, no text.
+
+b2b-ecommerce-warehouse.webp (1200x800)
+Prompt: "Two colleagues standing in a clean, brightly lit UK warehouse aisle between pale grey pallet racks stacked with plain unbranded brown cardboard boxes. A woman in her fifties with shoulder-length hair wearing a light grey fleece holds a tablet, and a younger man in a navy polo shirt stands beside her, both looking at the tablet and smiling slightly as they check an order. The tablet screen shows a simple abstract list of light grey rows and small coloured squares, with no words and no numbers on screen. No logos, no labels, no readable text anywhere, no real brand names. The man wears an orange hi-vis vest as the only strong colour accent." + style suffix.
+Review: hands holding tablet correct (five fingers each), faces natural, tablet shows blank grey rows only, a few small blank shelf labels with no legible text.

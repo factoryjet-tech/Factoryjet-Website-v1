@@ -67,6 +67,10 @@ const NATIONAL_SERVICE_PAGE_SLUGS = [
   // 2026-09-24: UK research build (UK-MARKET-RESEARCH-2026-09-24.md).
   'ai-consulting',
   'magento',
+  // 2026-09-24: UK Wave 3 (winnable terms).
+  'ai-receptionist',
+  'ecommerce-consultant',
+  'b2b-ecommerce',
 ] as const
 
 export default function sitemap(): MetadataRoute.Sitemap {

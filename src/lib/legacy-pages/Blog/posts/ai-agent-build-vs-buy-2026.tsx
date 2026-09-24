@@ -410,7 +410,7 @@ export const post: BlogPost = {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
           <a href="/services/ai-agent-development" className="text-[#F05A28] hover:underline">AI Agent Development Services</a>
           <a href="/blog/what-is-an-ai-agent-cost-2026" className="text-[#F05A28] hover:underline">What Does an AI Agent Cost?</a>
-          <a href="/blog/build-ai-agents-small-business-diy-vs-agency-2026" className="text-[#F05A28] hover:underline">DIY vs. Agency for AI Agents</a>
+          <a href="/blog/how-to-build-an-ai-agent-uk-2026" className="text-[#F05A28] hover:underline">How to Build an AI Agent, Step by Step</a>
           <a href="/blog/ai-chatbots-vs-ai-agents-business" className="text-[#F05A28] hover:underline">AI Chatbots vs. AI Agents</a>
         </div>
       </div>

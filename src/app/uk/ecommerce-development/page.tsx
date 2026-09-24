@@ -619,7 +619,7 @@ export default function EcommerceDevelopmentUKPage() {
               </li>
               <li className="svc-card">
                 <h3>B2B and wholesale brands</h3>
-                <p className="mt-4">Businesses selling to other businesses, often with account pricing, bulk ordering, or a quote process layered on top of a normal storefront. We build the commerce logic B2B actually needs, not a DTC template with a login wall.</p>
+                <p className="mt-4">Businesses selling to other businesses, often with account pricing, bulk ordering, or a quote process layered on top of a normal storefront. We build the commerce logic B2B actually needs, not a DTC template with a login wall. See <a href="/uk/b2b-ecommerce" style={{ textDecoration: 'underline' }}>B2B ecommerce for UK manufacturers and wholesalers</a>.</p>
               </li>
               <li className="svc-card">
                 <h3>Scaling multi-channel retailers</h3>
@@ -736,6 +736,11 @@ export default function EcommerceDevelopmentUKPage() {
                     and integration work. A business replatforming from an ageing Magento or custom system needs
                     migration planning first, so nothing breaks and no rankings get lost in the move. We scope it
                     after a short call, so the plan matches your store rather than a generic tier.
+                  </p>
+                  <p>
+                    Not sure yet what to build, or whether to replatform at all? Start with our{' '}
+                    <a href="/uk/ecommerce-consultant" style={{ textDecoration: 'underline' }}>ecommerce consultant</a>{' '}
+                    service: a ranked list of what to fix first, which you can build with us or hand to your own team.
                   </p>
                 </div>
                 <h3 className="mt-8" style={{ fontSize: 18 }}>What we do not do</h3>

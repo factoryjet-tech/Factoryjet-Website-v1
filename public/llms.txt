@@ -99,6 +99,9 @@ US is served from the root. There is no `/us/` prefix. Prefer these URLs; do not
 
 ### Markets
 - https://factoryjet.com/uk
+- [UK AI receptionist](https://factoryjet.com/uk/ai-receptionist): FactoryJet designs, builds and supports custom AI receptionists for UK businesses that answer calls, book into the diary and hand urgent calls to a person.
+- [UK B2B ecommerce](https://factoryjet.com/uk/b2b-ecommerce): trade portals for UK manufacturers and wholesalers with account pricing, quick order, credit terms and ERP integration.
+- [UK ecommerce consultant](https://factoryjet.com/uk/ecommerce-consultant): senior ecommerce consultancy for UK online stores, with a ranked fix list you can build with FactoryJet or your own team.
 - https://factoryjet.com/uae
 - https://factoryjet.com/au
 
