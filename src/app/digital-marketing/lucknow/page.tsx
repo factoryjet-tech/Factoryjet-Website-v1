@@ -576,14 +576,7 @@ const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'Digital Marketing Services in Lucknow',
-  provider: {
-    '@type': 'Organization',
-    '@id': 'https://factoryjet.com/#organization',
-    name: 'FactoryJet Technologies',
-    url: 'https://factoryjet.com',
-    telephone: '+919699977699',
-    address: { '@type': 'PostalAddress', addressCountry: 'IN' },
-  },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   areaServed: { '@type': 'City', name: 'Lucknow' },
   serviceType: 'Digital Marketing',
   description:

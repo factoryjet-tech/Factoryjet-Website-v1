@@ -174,7 +174,7 @@ export const UK_FAQS: UkFaq[] = [
   {
     cat: "general",
     q: "How do I get started with FactoryJet?",
-    a: "Start with a free digital audit. We analyse your current website, search visibility across Google and AI platforms, competitor positioning, and growth opportunities. The audit takes 48 hours to complete and includes specific, actionable recommendations. From there, we provide a custom proposal with transparent, fixed-price quoting, clear deliverables, and a realistic timeline. No obligation, no high-pressure sales. Contact us via WhatsApp at +91 96999 77699 or email connect@factoryjet.com to begin.",
+    a: "Start with a free digital audit. We analyse your current website, search visibility across Google and AI platforms, competitor positioning, and growth opportunities. The audit takes 48 hours to complete and includes specific, actionable recommendations. From there, we provide a custom proposal with transparent, fixed-price quoting, clear deliverables, and a realistic timeline. No obligation, no high-pressure sales. Message us on WhatsApp or email connect@factoryjet.com to begin.",
   },
 ];
 

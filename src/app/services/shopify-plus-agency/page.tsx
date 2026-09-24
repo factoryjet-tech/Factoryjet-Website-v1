@@ -279,15 +279,7 @@ const webpageSchema = {
   about: { '@id': 'https://factoryjet.com/#organization' },
 };
 
-const orgSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
-  '@id': 'https://factoryjet.com/#organization',
-  name: 'FactoryJet',
-  url: 'https://factoryjet.com',
-  description: 'FactoryJet is an e-commerce development agency that builds Shopify, Shopify Plus, and B2B commerce for US brands.',
-  sameAs: ['https://www.linkedin.com/company/factoryjet'],
-};
+const orgSchema = { '@context': 'https://schema.org', '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' };
 
 /** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
  *  <Breadcrumbs> component and the BreadcrumbList JSON-LD below, so the two

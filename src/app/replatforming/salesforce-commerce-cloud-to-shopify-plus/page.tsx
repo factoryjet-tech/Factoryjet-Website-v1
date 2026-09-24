@@ -140,7 +140,7 @@ const SERVICE_SCHEMA = {
   author: {
     '@type': 'Person',
     name: 'Bhavesh Barot',
-    jobTitle: 'Chief Technical Architect',
+    jobTitle: 'Founder & CEO',
     url: 'https://factoryjet.com/about',
     sameAs: [
       'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
@@ -168,15 +168,7 @@ const WEBPAGE_SCHEMA = {
   isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
 };
 
-const ORG_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
-  '@id': 'https://factoryjet.com/#organization',
-  name: 'FactoryJet',
-  url: 'https://factoryjet.com',
-  description: 'FactoryJet is an enterprise commerce engineering agency specializing in zero-downtime platform migrations and modern architecture.',
-  sameAs: ['https://www.linkedin.com/company/factoryjet'],
-};
+const ORG_SCHEMA = { '@context': 'https://schema.org', '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' };
 
 const BREADCRUMB_SCHEMA = {
   '@context': 'https://schema.org',

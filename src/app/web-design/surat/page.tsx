@@ -126,10 +126,10 @@ export default function Page() {
   const localBusinessSchema = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
+    parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
     name: 'FactoryJet Web Design Surat',
     description: 'Professional web design company serving Surat businesses across diamond, textile, MSME manufacturing, and trading sectors.',
     url: 'https://factoryjet.com/web-design/surat',
-    telephone: '+91 96999 77699',
     areaServed: [
       { '@type': 'City', name: 'Surat' },
       { '@type': 'City', name: 'Navsari' },

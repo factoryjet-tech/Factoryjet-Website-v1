@@ -367,12 +367,7 @@ const headlessPageSchema = {
       name: 'Headless Shopify Development Services',
       description:
         'Enterprise headless Shopify Plus engineering agency specializing in sub-second Next.js 15 storefronts, GraphQL Storefront API integration, and headless CMS architecture.',
-      provider: {
-        '@type': 'Organization',
-        name: 'FactoryJet',
-        url: 'https://factoryjet.com',
-        logo: 'https://factoryjet.com/FinalLogo.svg',
-      },
+      provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
       serviceType: 'E-Commerce Development',
       areaServed: [
         { '@type': 'Country', name: 'United States' },

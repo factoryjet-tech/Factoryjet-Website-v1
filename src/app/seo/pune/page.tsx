@@ -72,12 +72,12 @@ const webPageSchema = {
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
+  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
   '@id': 'https://factoryjet.com/seo/pune#localbusiness',
   name: 'FactoryJet | SEO Company in Pune',
   description:
     'FactoryJet provides SEO services in Pune for IT companies, automotive suppliers, manufacturing firms, real estate developers, education businesses, and local service providers across Hinjewadi, Kharadi, Baner, Koregaon Park, Viman Nagar, Pimple Saudagar, and Wakad.',
   url: 'https://factoryjet.com/seo/pune',
-  telephone: '+919699977699',
   email: 'connect@factoryjet.com',
   areaServed: [
     { '@type': 'City', name: 'Pune' },
@@ -104,7 +104,7 @@ const serviceSchema = {
   description:
     'SEO services in Pune for IT companies, auto suppliers, manufacturing firms, real estate developers, education institutions, and local businesses. Serving Hinjewadi, Kharadi, Baner, Koregaon Park, Viman Nagar, Wakad, Pimple Saudagar, and Pimpri-Chinchwad.',
   url: 'https://factoryjet.com/seo/pune',
-  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet Technologies', url: 'https://factoryjet.com', telephone: '+919699977699' },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   areaServed: { '@type': 'City', name: 'Pune' },
 };
 

@@ -138,23 +138,7 @@ const competitorListSchema = {
   })),
 };
 
-const organizationSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
-  '@id': 'https://factoryjet.com/#organization',
-  name: 'FactoryJet',
-  url: 'https://factoryjet.com',
-  logo: 'https://factoryjet.com/logo.png',
-  foundingDate: '2014',
-  sameAs: [
-    'https://www.linkedin.com/company/factoryjet',
-    'https://clutch.co/profile/factoryjet-private',
-    'https://www.goodfirms.co/company/factoryjet-private-limited',
-    'https://www.designrush.com/agency/profile/factoryjet',
-    'https://www.softwaresuggest.com/factoryjet',
-    'https://www.crunchbase.com/organization/factoryjet',
-  ],
-};
+const organizationSchema = { '@context': 'https://schema.org', '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' };
 
 export default function AiSeoServicePage() {
   return (

@@ -30,7 +30,6 @@ const Footer = () => {
             <h4 className="text-white font-bold mb-6">Contact Us</h4>
             <ul className="space-y-4 text-sm">
               <li>connect@factoryjet.com</li>
-              <li>+91 96999 77699</li>
               <li>
                 India<br />
                 (Serving Global Markets)

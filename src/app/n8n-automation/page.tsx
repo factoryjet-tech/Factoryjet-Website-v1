@@ -103,18 +103,7 @@ const N8N_SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
   name: 'n8n Automation Services India',
-  provider: {
-    '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
-    name: 'FactoryJet',
-    url: 'https://factoryjet.com',
-    address: {
-      '@type': 'PostalAddress',
-      addressCountry: 'IN',
-    },
-    telephone: '+919699977699',
-    email: 'connect@factoryjet.com',
-    
-  },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   areaServed: {
     '@type': 'Country',
     name: 'India',

@@ -72,12 +72,12 @@ const webPageSchema = {
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
+  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
   '@id': 'https://factoryjet.com/seo/bangalore#localbusiness',
   name: 'FactoryJet | SEO Company in Bangalore',
   description:
     'FactoryJet provides SEO services in Bangalore for tech companies, SaaS startups, D2C brands, IT services firms, and local businesses across Koramangala, Indiranagar, Whitefield, Electronic City, HSR Layout, and Marathahalli.',
   url: 'https://factoryjet.com/seo/bangalore',
-  telephone: '+919699977699',
   email: 'connect@factoryjet.com',
   areaServed: [
     { '@type': 'City', name: 'Bangalore' },
@@ -110,12 +110,7 @@ const serviceSchema = {
   description:
     'SEO services in Bangalore covering local SEO, technical SEO, B2B content SEO, ecommerce SEO, and link building for tech companies, startups, and local businesses. Serving Koramangala, Indiranagar, Whitefield, Electronic City, HSR Layout, and Marathahalli.',
   url: 'https://factoryjet.com/seo/bangalore',
-  provider: {
-    '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
-    name: 'FactoryJet Technologies',
-    url: 'https://factoryjet.com',
-    telephone: '+919699977699',
-  },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   areaServed: { '@type': 'City', name: 'Bangalore' },
 };
 

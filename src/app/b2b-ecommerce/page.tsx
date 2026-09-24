@@ -145,15 +145,7 @@ const HOWTO_SCHEMA = {
   })),
 };
 
-const ORG_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
-  '@id': 'https://factoryjet.com/#organization',
-  name: 'FactoryJet',
-  url: 'https://factoryjet.com',
-  description: 'FactoryJet is an e-commerce development agency that builds B2B and omnichannel commerce for DTC and B2B brands.',
-  sameAs: ['https://www.linkedin.com/company/factoryjet'],
-};
+const ORG_SCHEMA = { '@context': 'https://schema.org', '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' };
 
 const WEBPAGE_SCHEMA = {
   '@context': 'https://schema.org',

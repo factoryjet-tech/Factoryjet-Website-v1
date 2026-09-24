@@ -183,18 +183,11 @@ const ARTICLE_SCHEMA = {
   description:
     'Comprehensive architectural breakdown of omnichannel vs multichannel commerce systems, inventory orchestration, and ERP data unification for retail brands.',
   author: { '@type': 'Person', name: 'Bhavesh Barot', url: 'https://factoryjet.com/author/bhavesh-barot' },
-  publisher: { '@type': 'Organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
+  publisher: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   url: 'https://factoryjet.com/omnichannel-vs-multichannel-commerce',
 };
 
-const ORG_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
-  '@id': 'https://factoryjet.com/#organization',
-  name: 'FactoryJet',
-  url: 'https://factoryjet.com',
-  sameAs: ['https://www.linkedin.com/company/factoryjet'],
-};
+const ORG_SCHEMA = { '@context': 'https://schema.org', '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' };
 
 const BREADCRUMB_SCHEMA = {
   '@context': 'https://schema.org',

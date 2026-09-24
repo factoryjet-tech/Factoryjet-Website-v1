@@ -96,12 +96,7 @@ const HOWTO_SCHEMA = {
     { '@type': 'HowToStep', position: 5, name: 'Own and scale', text: 'You own and run the system; we support and add channels as you grow.' },
   ],
 };
-const ORG_SCHEMA = {
-  '@context': 'https://schema.org', '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com',
-  description: 'FactoryJet is an e-commerce development agency that builds omnichannel and B2B commerce for DTC and B2B brands.',
-  
-  sameAs: ['https://www.linkedin.com/company/factoryjet'],
-};
+const ORG_SCHEMA = { '@context': 'https://schema.org', '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' };
 const PAGE_MODIFIED = '2026-08-30';
 const WEBPAGE_SCHEMA = {
   '@context': 'https://schema.org', '@type': 'WebPage',

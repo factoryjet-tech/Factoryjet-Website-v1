@@ -426,10 +426,10 @@ const FAQ_SCHEMA = {
 const LOCAL_BUSINESS_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
+  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
   name: 'FactoryJet - Tampa Web Design Agency',
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
-  telephone: '+1-832-998-8422',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Tampa',

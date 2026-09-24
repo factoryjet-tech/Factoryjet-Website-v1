@@ -437,10 +437,10 @@ const FAQ_SCHEMA = {
 const LOCAL_BUSINESS_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
+  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
   name: 'FactoryJet - Detroit Web Design Agency',
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
-  telephone: '+1-832-998-8422',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Detroit',
@@ -467,7 +467,7 @@ const SERVICE_SCHEMA = {
   author: {
     '@type': 'Person',
     name: 'Bhavesh Barot',
-    jobTitle: 'Chief Technical Architect',
+    jobTitle: 'Founder & CEO',
     url: 'https://factoryjet.com/about',
     sameAs: [
       'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
@@ -475,11 +475,7 @@ const SERVICE_SCHEMA = {
     ],
   },
   name: 'Detroit Web Design & Next.js Development',
-  provider: {
-    '@type': 'Organization',
-    name: 'FactoryJet',
-    url: 'https://factoryjet.com',
-  },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   serviceType: 'Web Design, Next.js Development, UI/UX Design & Headless CMS',
   description:
     'Custom Next.js web design and engineering in Detroit MI. Sub-second performance, full IP code ownership, and rapid 7-day delivery for Michigan businesses.',
@@ -496,7 +492,7 @@ const WEBPAGE_SCHEMA = {
   author: {
     '@type': 'Person',
     name: 'Bhavesh Barot',
-    jobTitle: 'Chief Technical Architect',
+    jobTitle: 'Founder & CEO',
     url: 'https://factoryjet.com/about',
     sameAs: [
       'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',

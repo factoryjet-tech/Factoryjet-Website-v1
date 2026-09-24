@@ -72,12 +72,12 @@ const webPageSchema = {
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
+  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
   '@id': 'https://factoryjet.com/seo/chennai#localbusiness',
   name: 'FactoryJet | SEO Company in Chennai',
   description:
     'FactoryJet provides SEO services in Chennai for manufacturing companies, automotive suppliers, IT services, healthcare providers, and local businesses across Anna Nagar, T. Nagar, Velachery, OMR, Ambattur, and Guindy.',
   url: 'https://factoryjet.com/seo/chennai',
-  telephone: '+919699977699',
   email: 'connect@factoryjet.com',
   areaServed: [
     { '@type': 'City', name: 'Chennai' },
@@ -104,7 +104,7 @@ const serviceSchema = {
   description:
     'SEO services in Chennai for manufacturing, automotive, IT services, healthcare, and local businesses. Serving Anna Nagar, T. Nagar, Velachery, OMR, Guindy, Ambattur, and Perungudi.',
   url: 'https://factoryjet.com/seo/chennai',
-  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet Technologies', url: 'https://factoryjet.com', telephone: '+919699977699' },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   areaServed: { '@type': 'City', name: 'Chennai' },
 };
 

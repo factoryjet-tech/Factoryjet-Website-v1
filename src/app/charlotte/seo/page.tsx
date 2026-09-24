@@ -404,10 +404,10 @@ const FAQ_SCHEMA = {
 const LOCAL_BUSINESS_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
+  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
   name: 'FactoryJet - Charlotte SEO Company & Local Agency',
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
-  telephone: '+1-832-998-8422',
   priceRange: '$$',
   address: {
     '@type': 'PostalAddress',
@@ -435,7 +435,7 @@ const SERVICE_SCHEMA = {
   author: {
     '@type': 'Person',
     name: 'Bhavesh Barot',
-    jobTitle: 'Chief Technical Architect',
+    jobTitle: 'Founder & CEO',
     url: 'https://factoryjet.com/about',
     sameAs: [
       'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
@@ -443,11 +443,7 @@ const SERVICE_SCHEMA = {
     ],
   },
   name: 'Charlotte SEO Services & Local Search Optimization',
-  provider: {
-    '@type': 'Organization',
-    name: 'FactoryJet',
-    url: 'https://factoryjet.com',
-  },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   serviceType: 'Local SEO, Technical SEO & Generative Engine Optimization',
   description:
     'Senior engineering-led local SEO, Google Map Pack rankings, technical Core Web Vitals optimization, and AI answer citations for Charlotte businesses.',
@@ -464,7 +460,7 @@ const WEBPAGE_SCHEMA = {
   author: {
     '@type': 'Person',
     name: 'Bhavesh Barot',
-    jobTitle: 'Chief Technical Architect',
+    jobTitle: 'Founder & CEO',
     url: 'https://factoryjet.com/about',
     sameAs: [
       'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',

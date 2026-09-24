@@ -103,14 +103,7 @@ const serviceSchema = {
   name: 'Small Business Website Design',
   description:
     'Custom website design and development for US small businesses. Mobile-first, SEO-optimized websites built on WordPress, Webflow, or Next.js: fixed-price, delivered in 7 days.',
-  provider: {
-    '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
-    name: 'FactoryJet',
-    url: 'https://factoryjet.com',
-    foundingDate: '2014',
-    areaServed: 'US',
-    
-  },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   serviceType: 'Small Business Website Design',
 };
 

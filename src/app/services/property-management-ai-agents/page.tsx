@@ -264,24 +264,13 @@ const webPageSchema = {
   datePublished: '2026-09-19T00:00:00Z',
   dateModified: `${PAGE_MODIFIED}T00:00:00Z`,
   inLanguage: 'en-US',
-  publisher: {
-    '@type': 'Organization',
-    name: 'FactoryJet',
-    url: 'https://factoryjet.com',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://factoryjet.com/logo.png',
-    },
-  },
+  publisher: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   author: {
     '@type': 'Person',
     name: 'Bhavesh Barot',
     url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
     jobTitle: 'Founder & CEO',
-    worksFor: {
-      '@type': 'Organization',
-      name: 'FactoryJet',
-    },
+    worksFor: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   },
 };
 
@@ -293,11 +282,7 @@ const serviceSchema = {
   serviceType: 'Property Management AI Agent Development',
   description:
     'Custom AI leasing agents for property management companies, integrated with AppFolio, Yardi, RealPage, Buildium, and Entrata, with deterministic Fair Housing Act guardrails.',
-  provider: {
-    '@type': 'Organization',
-    name: 'FactoryJet',
-    url: 'https://factoryjet.com',
-  },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   areaServed: {
     '@type': 'Country',
     name: 'United States',

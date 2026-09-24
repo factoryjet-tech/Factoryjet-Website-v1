@@ -217,11 +217,7 @@ const ARTICLE_SCHEMA = {
     jobTitle: 'Founder & Principal Commerce Architect',
     url: 'https://factoryjet.com',
   },
-  publisher: {
-    '@type': 'Organization',
-    name: 'FactoryJet',
-    url: 'https://factoryjet.com',
-  },
+  publisher: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   url: 'https://factoryjet.com/comparisons/headless-commerce-vs-monolithic',
 };
 

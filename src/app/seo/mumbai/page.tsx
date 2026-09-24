@@ -72,12 +72,12 @@ const webPageSchema = {
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
+  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
   '@id': 'https://factoryjet.com/seo/mumbai#localbusiness',
   name: 'FactoryJet | SEO Company in Mumbai',
   description:
     'FactoryJet provides SEO services in Mumbai for local businesses, D2C brands, ecommerce stores, and enterprises across BKC, Andheri, Bandra, Worli, Thane, and Navi Mumbai.',
   url: 'https://factoryjet.com/seo/mumbai',
-  telephone: '+919699977699',
   email: 'connect@factoryjet.com',
   areaServed: [
     { '@type': 'City', name: 'Mumbai' },
@@ -109,12 +109,7 @@ const serviceSchema = {
   description:
     'SEO services in Mumbai covering local SEO, technical SEO, ecommerce SEO, link building, and SEO audits. Serving BKC, Andheri, Bandra, Worli, Thane, Navi Mumbai and all of Greater Mumbai.',
   url: 'https://factoryjet.com/seo/mumbai',
-  provider: {
-    '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
-    name: 'FactoryJet Technologies',
-    url: 'https://factoryjet.com',
-    telephone: '+919699977699',
-  },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   areaServed: { '@type': 'City', name: 'Mumbai' },
 };
 

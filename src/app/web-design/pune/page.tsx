@@ -102,13 +102,13 @@ const webPageSchema = {
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
+  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
   '@id': 'https://factoryjet.com/web-design/pune#localbusiness',
   name: 'FactoryJet | Web Design in Pune',
   image: 'https://factoryjet.com/images/services/web-design.webp',
   description:
     'Web design company in Pune building fast, SEO-optimised websites for IT services, auto-tier suppliers, education, and D2C businesses. 7-day delivery guarantee.',
   url: 'https://factoryjet.com/web-design/pune',
-  telephone: '+919699977699',
   email: 'connect@factoryjet.com',
   areaServed: [
     { '@type': 'City', name: 'Pune' },

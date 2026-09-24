@@ -377,12 +377,7 @@ const themePageSchema = {
       name: 'Custom Shopify Theme Development Services',
       description:
         'Custom Shopify Online Store 2.0 theme development agency engineering sub-second Liquid themes from scratch with 95+ Core Web Vitals, zero app bloat, and full GitHub code ownership.',
-      provider: {
-        '@type': 'Organization',
-        name: 'FactoryJet',
-        url: 'https://factoryjet.com',
-        logo: 'https://factoryjet.com/FinalLogo.svg',
-      },
+      provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
       serviceType: 'E-Commerce Development',
       areaServed: [
         { '@type': 'Country', name: 'United States' },

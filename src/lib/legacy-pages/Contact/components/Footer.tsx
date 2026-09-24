@@ -49,7 +49,6 @@ const Footer: React.FC = () => {
             <h4 className="text-lg font-bold mb-6 text-white">Contact</h4>
             <ul className="space-y-3 text-slate-400">
               <li>India (Serving Global)</li>
-              <li>+91 96999 77699</li>
               <li>connect@factoryjet.com</li>
               <li className="text-sm text-jet-orange font-bold mt-4">Response Time: &lt; 2 Hrs</li>
             </ul>
@@ -67,7 +66,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="text-center text-slate-500 text-sm flex flex-col md:flex-row justify-between items-center gap-3 md:gap-4">
-          <p>&copy; {new Date().getFullYear()} FactoryJet Technologies Pvt. Ltd. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} FactoryJet Private Limited All rights reserved.</p>
           <div className="flex gap-6">
             <Link href="/privacy" className="hover:text-white">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-white">Terms of Service</Link>

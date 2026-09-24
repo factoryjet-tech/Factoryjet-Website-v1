@@ -177,7 +177,7 @@ const LOCALE_COLUMNS: Record<SiteFooterLocale, ReadonlyArray<SiteFooterColumn>> 
 const DEFAULT_COLUMNS = US_FOOTER_COLUMNS;
 
 const DEFAULT_BOTTOM_ROW = {
-  copyright: '© 2026 FactoryJet Technologies',
+  copyright: '© 2026 FactoryJet',
   links: [
     { label: 'Privacy Policy', href: '/privacy-policy' },
     { label: 'Terms & Conditions', href: '/terms-and-conditions' },

@@ -137,26 +137,7 @@ const FAQ_SCHEMA = {
 // sameAs = only profiles already used in the site's schema (layout.tsx, recognitionProfiles.ts,
 // llms.txt "Profiles"). Checked 2026-09-17: LinkedIn, SoftwareSuggest, Facebook and X resolve to
 // FactoryJet; Clutch, GoodFirms, DesignRush, Crunchbase and Instagram block bots, no contrary evidence.
-const ORG_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
-  '@id': 'https://factoryjet.com/#organization',
-  name: 'FactoryJet',
-  url: 'https://factoryjet.com',
-  logo: 'https://factoryjet.com/logo.png',
-  founder: { '@type': 'Person', name: 'Bhavesh Barot' },
-  sameAs: [
-    'https://www.linkedin.com/company/factoryjet',
-    'https://clutch.co/profile/factoryjet-private',
-    'https://www.goodfirms.co/company/factoryjet-private-limited',
-    'https://www.designrush.com/agency/profile/factoryjet',
-    'https://www.softwaresuggest.com/factoryjet',
-    'https://www.crunchbase.com/organization/factoryjet',
-    'https://www.instagram.com/factoryjetb2b',
-    'https://www.facebook.com/factoryjetb2b',
-    'https://x.com/FactoryJet_Tech',
-  ],
-};
+const ORG_SCHEMA = { '@context': 'https://schema.org', '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' };
 
 // The product entity. No offers block: nothing is priced publicly, so any price (even "0") would be false.
 const SOFTWAREAPP_SCHEMA = {

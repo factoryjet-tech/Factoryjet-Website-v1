@@ -107,23 +107,13 @@ const ECOM_AGENCIES: { name: string; note: string }[] = [
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
-    {
-      '@type': 'Organization',
-      '@id': 'https://factoryjet.com/#organization',
-      name: 'FactoryJet',
-      url: 'https://factoryjet.com',
-      logo: 'https://factoryjet.com/logo.png',
-      sameAs: [
-        'https://www.linkedin.com/company/factoryjet',
-        'https://www.crunchbase.com/organization/factoryjet',
-      ],
-    },
+    { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
     {
       '@type': 'LocalBusiness',
+      parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
       '@id': `${CANONICAL}#localbusiness`,
       name: 'FactoryJet',
       url: CANONICAL,
-      telephone: '+91 96999 77699',
       email: 'connect@factoryjet.com',
       address: {
         '@type': 'PostalAddress',

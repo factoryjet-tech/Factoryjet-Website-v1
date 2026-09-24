@@ -412,7 +412,7 @@ const SERVICE_SCHEMA = {
   author: {
     '@type': 'Person',
     name: 'Bhavesh Barot',
-    jobTitle: 'Chief Technical Architect',
+    jobTitle: 'Founder & CEO',
     url: 'https://factoryjet.com/about',
     sameAs: [
       'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
@@ -420,11 +420,7 @@ const SERVICE_SCHEMA = {
     ],
   },
   name: 'Sioux Falls SEO Services & Local Search Optimization',
-  provider: {
-    '@type': 'Organization',
-    name: 'FactoryJet',
-    url: 'https://factoryjet.com',
-  },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   serviceType: 'Local SEO, Technical SEO & Generative Engine Optimization',
   description:
     'Senior engineering-led local SEO, Google Map Pack rankings, technical Core Web Vitals optimization, and AI answer citations for Sioux Falls businesses.',
@@ -441,7 +437,7 @@ const WEBPAGE_SCHEMA = {
   author: {
     '@type': 'Person',
     name: 'Bhavesh Barot',
-    jobTitle: 'Chief Technical Architect',
+    jobTitle: 'Founder & CEO',
     url: 'https://factoryjet.com/about',
     sameAs: [
       'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',

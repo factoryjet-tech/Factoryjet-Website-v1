@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Mail, MapPin, Phone, Linkedin, Instagram, Facebook, Twitter } from 'lucide-react';
+import { Mail, MapPin, Linkedin, Instagram, Facebook, Twitter } from 'lucide-react';
 import { trackNavigation, trackSocialClick, trackContactClick } from '../utils/gtm';
 
 const Footer: React.FC = () => {
@@ -91,10 +91,6 @@ const Footer: React.FC = () => {
           <div className="col-span-2 md:col-span-1">
             <h3 className="font-bold text-base md:text-lg mb-4 md:mb-6">Get in Touch</h3>
             <ul className="space-y-3 md:space-y-4 text-gray-400 text-sm md:text-base">
-              <li className="flex items-start gap-3">
-                <Phone className="shrink-0 text-jetOrange w-4 h-4 md:w-5 md:h-5 mt-0.5" />
-                <span>+91 96999 77699</span>
-              </li>
               <li className="flex items-start gap-3">
                 <Mail className="shrink-0 text-jetOrange w-4 h-4 md:w-5 md:h-5 mt-0.5" />
                 <span>connect@factoryjet.com</span>

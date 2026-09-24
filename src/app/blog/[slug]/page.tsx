@@ -106,14 +106,7 @@ function generateArticleJsonLd(post: typeof POSTS[0], slug: string) {
     datePublished: new Date(post.date).toISOString(),
     dateModified: new Date(post.date).toISOString(),
     author: authorSchema,
-    publisher: {
-      '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
-      name: 'FactoryJet',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://factoryjet.com/FinalLogo.svg',
-      },
-    },
+    publisher: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': `https://factoryjet.com/blog/${slug}`,

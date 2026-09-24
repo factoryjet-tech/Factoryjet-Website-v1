@@ -99,12 +99,7 @@ const DATASET_SCHEMA = {
   }],
   variableMeasured: ['rendered word count', 'H1/H2/H3 counts', 'list item count', 'table count', 'JSON-LD schema types', 'visible FAQ presence', 'dateModified presence'],
 };
-const ORG_SCHEMA = {
-  '@context': 'https://schema.org', '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
-  name: 'FactoryJet', url: 'https://factoryjet.com',
-  description: 'FactoryJet is an e-commerce development agency that builds and migrates commerce platforms for US brands.',
-  sameAs: ['https://www.linkedin.com/company/factoryjet'],
-};
+const ORG_SCHEMA = { '@context': 'https://schema.org', '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' };
 const BREADCRUMB_SCHEMA = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
   { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
   { '@type': 'ListItem', position: 2, name: 'AI Citation Study', item: 'https://factoryjet.com/ai-citation-study' },

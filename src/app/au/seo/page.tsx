@@ -70,7 +70,7 @@ export const metadata: Metadata = {
 const AUTHOR = {
   '@type': 'Person',
   name: 'Bhavesh Barot',
-  jobTitle: 'Chief Technical Architect',
+  jobTitle: 'Founder & CEO',
   url: 'https://factoryjet.com/about',
   sameAs: [
     'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
@@ -82,17 +82,7 @@ const AUTHOR = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
-    {
-      '@type': 'Organization',
-      '@id': 'https://factoryjet.com/#organization',
-      name: 'FactoryJet Technologies',
-      url: 'https://factoryjet.com',
-      logo: 'https://factoryjet.com/logo.png',
-      sameAs: [
-        'https://www.linkedin.com/company/factoryjet',
-        'https://www.crunchbase.com/organization/factoryjet',
-      ],
-    },
+    { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
     {
       '@type': 'BreadcrumbList',
       '@id': `${CANONICAL}#breadcrumbs`,

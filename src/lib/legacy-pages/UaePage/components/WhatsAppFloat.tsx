@@ -27,7 +27,7 @@ const WhatsAppFloat: React.FC = () => {
     >
       <WhatsAppIcon size={32} />
       <span className="absolute right-full mr-3 bg-white text-navy px-3 py-1 rounded shadow-md text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
-        +91 96999 77699
+        Message us on WhatsApp
       </span>
     </a>
   );

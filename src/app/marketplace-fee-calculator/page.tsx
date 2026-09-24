@@ -205,14 +205,7 @@ const WEBAPP_SCHEMA = {
     'Interactive calculator comparing net unit profit margins, platform commissions, and fulfillment costs across Amazon FBA, Walmart WFS, Target Plus DVS, Faire Wholesale, and Shopify DTC.',
 };
 
-const ORG_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
-  '@id': 'https://factoryjet.com/#organization',
-  name: 'FactoryJet',
-  url: 'https://factoryjet.com',
-  sameAs: ['https://www.linkedin.com/company/factoryjet'],
-};
+const ORG_SCHEMA = { '@context': 'https://schema.org', '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' };
 
 const BREADCRUMB_SCHEMA = {
   '@context': 'https://schema.org',

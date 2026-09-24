@@ -195,18 +195,11 @@ const ARTICLE_SCHEMA = {
   description:
     'Comprehensive architectural guide for brands preparing for autonomous AI shopping agents, machine-readable catalogs, MCP servers, and tokenized checkout protocols.',
   author: { '@type': 'Person', name: 'Bhavesh Barot', url: 'https://factoryjet.com/author/bhavesh-barot' },
-  publisher: { '@type': 'Organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
+  publisher: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   url: 'https://factoryjet.com/agentic-commerce-for-brands',
 };
 
-const ORG_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
-  '@id': 'https://factoryjet.com/#organization',
-  name: 'FactoryJet',
-  url: 'https://factoryjet.com',
-  sameAs: ['https://www.linkedin.com/company/factoryjet'],
-};
+const ORG_SCHEMA = { '@context': 'https://schema.org', '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' };
 
 const BREADCRUMB_SCHEMA = {
   '@context': 'https://schema.org',

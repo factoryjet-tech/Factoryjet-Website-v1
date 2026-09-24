@@ -104,12 +104,12 @@ const webPageSchema = {
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
+  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
   '@id': 'https://factoryjet.com/web-design/kolkata#organization',
   name: 'FactoryJet',
   description:
     'Web design company in Kolkata building fast, SEO-optimized websites for jute & tea traders, IT firms, logistics businesses, and growing SMBs. 7-day delivery guarantee.',
   url: 'https://factoryjet.com/web-design/kolkata',
-  telephone: '+919699977699',
   email: 'connect@factoryjet.com',
   areaServed: [
     { '@type': 'City', name: 'Kolkata' },

@@ -43,24 +43,14 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
-    {
-      '@type': 'Organization',
-      '@id': 'https://factoryjet.com/#organization',
-      name: 'FactoryJet Technologies',
-      url: 'https://factoryjet.com',
-      logo: 'https://factoryjet.com/logo.png',
-      sameAs: [
-        'https://www.linkedin.com/company/factoryjet',
-        'https://www.crunchbase.com/organization/factoryjet',
-      ],
-    },
+    { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
     // No aggregateRating: there is no review corpus behind a number, and Google
     // treats review markup it can't trace to real reviews as a structured-data
     // policy problem. Add it back only with real, verifiable reviews.
     {
       '@type': 'LocalBusiness',
       '@id': `${CANONICAL}#business`,
-      name: 'FactoryJet Technologies: Sheffield',
+      name: 'FactoryJet: Sheffield',
       url: CANONICAL,
       parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
       description:
@@ -114,7 +104,7 @@ const jsonLd = {
       author: {
         '@type': 'Person',
         name: 'Bhavesh Barot',
-        jobTitle: 'Chief Technical Architect',
+        jobTitle: 'Founder & CEO',
         url: 'https://factoryjet.com/about',
         sameAs: [
           'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',

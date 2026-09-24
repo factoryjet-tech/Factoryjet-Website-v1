@@ -60,12 +60,7 @@ const jsonLdWebPage = {
     name: 'FactoryJet',
     url: 'https://factoryjet.com',
   },
-  publisher: {
-    '@type': 'Organization',
-    name: 'FactoryJet Private Limited',
-    url: 'https://factoryjet.com',
-    logo: 'https://factoryjet.com/FinalLogo.svg',
-  },
+  publisher: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
 };
 
 const jsonLdBreadcrumbs = {

@@ -72,12 +72,12 @@ const webPageSchema = {
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
+  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
   '@id': 'https://factoryjet.com/seo/hyderabad#localbusiness',
   name: 'FactoryJet | SEO Company in Hyderabad',
   description:
     'FactoryJet provides SEO services in Hyderabad for pharma companies, IT services, real estate developers, healthcare providers, and local businesses across Banjara Hills, Jubilee Hills, Madhapur, Gachibowli, HITEC City, and Secunderabad.',
   url: 'https://factoryjet.com/seo/hyderabad',
-  telephone: '+919699977699',
   email: 'connect@factoryjet.com',
   areaServed: [
     { '@type': 'City', name: 'Hyderabad' },
@@ -104,7 +104,7 @@ const serviceSchema = {
   description:
     'SEO services in Hyderabad for pharma, IT, real estate, healthcare, and local businesses. Serving Banjara Hills, Jubilee Hills, Madhapur, Gachibowli, HITEC City, Ameerpet, and Secunderabad.',
   url: 'https://factoryjet.com/seo/hyderabad',
-  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet Technologies', url: 'https://factoryjet.com', telephone: '+919699977699' },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   areaServed: { '@type': 'City', name: 'Hyderabad' },
 };
 

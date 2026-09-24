@@ -126,6 +126,7 @@ const serviceSchema = {
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
+  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
   name: 'FactoryJet Ecommerce Development Jaipur',
   url: 'https://factoryjet.com/services/ecommerce-development/jaipur',
   image: 'https://factoryjet.com/logo.png',

@@ -45,14 +45,14 @@ export default function Footer() {
                 maxWidth: "400px",
               }}
             >
-              FactoryJet Technologies is an AI-native web design agency serving
+              FactoryJet is an AI-native web design agency serving
               businesses across Manchester, Salford, Stockport, Trafford, and
               the wider Greater Manchester region. We specialise in custom web
               design, e-commerce development (Shopify, WooCommerce, headless
               commerce), AI agent development, and AI-powered SEO (GEO, AEO,
               AIO). Our Manchester web design services are built on Next.js 15,
-              Tailwind CSS 4, and GSAP, delivering enterprise-grade websites
-              at startup-friendly prices. Whether you&apos;re a tech startup in
+              Tailwind CSS 4, and GSAP, and you own everything we build.
+              Whether you&apos;re a tech startup in
               the Northern Quarter, a financial services firm in Spinningfields,
               a media company at MediaCityUK, or a manufacturer in Trafford
               Park, FactoryJet builds websites that convert visitors into
@@ -146,7 +146,7 @@ export default function Footer() {
           }}
         >
           <p style={{ fontSize: "13px", color: "rgba(255,255,255,0.65)" }}>
-            © 2026 FactoryJet Technologies. All rights reserved.
+            © 2026 FactoryJet. All rights reserved.
           </p>
 
           <div className="flex flex-wrap items-center justify-center" style={{ gap: "4px" }}>

@@ -73,12 +73,12 @@ const webPageSchema = {
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
+  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
   '@id': 'https://factoryjet.com/seo/delhi#localbusiness',
   name: 'FactoryJet | SEO Company in Delhi',
   description:
     'FactoryJet provides SEO services in Delhi NCR for exporters, traders, wholesalers, clinics, coaching institutes, and local businesses across Connaught Place, Nehru Place, Rohini, Dwarka, South Delhi, Noida, and Gurugram.',
   url: 'https://factoryjet.com/seo/delhi',
-  telephone: '+919699977699',
   email: 'connect@factoryjet.com',
   areaServed: [
     { '@type': 'City', name: 'Delhi' },
@@ -106,12 +106,7 @@ const serviceSchema = {
   description:
     'SEO services in Delhi covering local SEO, technical SEO, ecommerce SEO, export SEO, link building, and SEO audits. Serving Connaught Place, Nehru Place, Rohini, Dwarka, South Delhi, Noida, and Gurugram.',
   url: 'https://factoryjet.com/seo/delhi',
-  provider: {
-    '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
-    name: 'FactoryJet Technologies',
-    url: 'https://factoryjet.com',
-    telephone: '+919699977699',
-  },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   areaServed: { '@type': 'City', name: 'Delhi' },
 };
 

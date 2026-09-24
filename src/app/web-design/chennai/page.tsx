@@ -126,10 +126,10 @@ export default function Page() {
   const localBusinessSchema = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
+    parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
     name: 'FactoryJet Web Design Chennai',
     description: 'Professional web design company serving Chennai businesses across automotive, IT, healthcare, and manufacturing sectors.',
     url: 'https://factoryjet.com/web-design/chennai',
-    telephone: '+91 96999 77699',
     areaServed: [
       { '@type': 'City', name: 'Chennai' },
       { '@type': 'City', name: 'Tambaram' },

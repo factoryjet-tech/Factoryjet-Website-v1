@@ -23,7 +23,6 @@ export default function TermsAndConditions() {
         gstin: '29AAECF3218J1ZK',
         address: '70/1, Willow Herbs, Tigalarpalya, Kundalahalli, Bengaluru, Karnataka - 560037, India',
         email: 'connect@factoryjet.com',
-        phone: '+91 96999 77699',
         hours: 'Monday to Friday, 10:00 AM - 6:00 PM IST',
       },
     },
@@ -179,7 +178,6 @@ export default function TermsAndConditions() {
       contact: {
         company: 'FactoryJet Private Limited',
         email: 'connect@factoryjet.com',
-        phone: '+91 96999 77699',
       },
     },
   ];
@@ -274,7 +272,7 @@ export default function TermsAndConditions() {
                       <p><strong>GSTIN:</strong> <span className="font-mono">{section.company.gstin}</span></p>
                       <p><strong>Registered Address:</strong> {section.company.address}</p>
                       <p><strong>Official Email:</strong> <span className="font-mono">{section.company.email}</span></p>
-                      <p><strong>Contact Phone:</strong> <span className="font-mono">{section.company.phone}</span> ({section.company.hours})</p>
+                      <p><strong>Hours:</strong> {section.company.hours}</p>
                     </div>
                   )}
 
@@ -324,7 +322,6 @@ export default function TermsAndConditions() {
                     <div className="bg-[#FAFAF7] rounded-xl p-5 border border-[#E5E5DF] my-4 space-y-2 text-xs md:text-sm text-gray-800">
                       <p className="font-bold text-gray-900">{section.contact.company}</p>
                       <p>Email: <a href={`mailto:${section.contact.email}`} className="text-[#F05A28] font-mono hover:underline">{section.contact.email}</a></p>
-                      <p>Phone: <span className="font-mono">{section.contact.phone}</span></p>
                     </div>
                   )}
                 </article>

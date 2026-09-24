@@ -264,17 +264,7 @@ const faqSchema = {
   })),
 };
 
-const organizationSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
-  name: 'FactoryJet',
-  url: 'https://factoryjet.com',
-  logo: 'https://factoryjet.com/logo.png',
-  sameAs: [
-    'https://www.linkedin.com/company/factoryjet',
-    'https://www.crunchbase.com/organization/factoryjet',
-  ],
-};
+const organizationSchema = { '@context': 'https://schema.org', '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' };
 
 /* ─────────────────────────────────────────────────────────────────────────────
    Additive strengthening pass, 2026-08-13. ADD ONLY: nothing above this block

@@ -346,11 +346,7 @@ const shopifySeoPageSchema = {
       name: 'Shopify SEO Agency Services',
       description:
         'Technical Shopify SEO agency engineering services for US stores: duplicate URL elimination, collection page architecture, Core Web Vitals speed optimization, and AI answer engine citations.',
-      provider: {
-        '@type': 'Organization',
-        name: 'FactoryJet',
-        url: 'https://factoryjet.com',
-      },
+      provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
       areaServed: 'US',
       serviceType: 'Shopify SEO & Answer Engine Optimization',
     },

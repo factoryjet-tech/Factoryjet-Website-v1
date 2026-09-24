@@ -1,5 +1,5 @@
 // JSON-LD schema for /uk
-// Included: Organization, 4 Services, FAQPage, BreadcrumbList.
+// Included: founder Person, 4 Services, FAQPage, BreadcrumbList.
 // Injected via <script type="application/ld+json"> in page.tsx.
 //
 // The FAQPage block is derived from ./faqData.ts, the same array the visible
@@ -9,52 +9,21 @@ import { UK_FAQS } from "./faqData";
 
 const URL = "https://factoryjet.com/uk";
 
-const organization = {
+// The Organization itself is defined once, sitewide, in src/data/organization.ts
+// (rendered by the root layout). This page only adds the founder as a Person
+// linked to it, never a second copy of the company's facts.
+const founder = {
   "@context": "https://schema.org",
-  "@type": "Organization", "@id": "https://factoryjet.com/#organization",
-  name: "FactoryJet Technologies",
-  url: "https://factoryjet.com",
-  logo: "https://factoryjet.com/logo.png",
-  description:
-    "FactoryJet is an AI-native digital agency for UK businesses. Web design, Shopify and WooCommerce development, custom AI agents and AI SEO (GEO/AEO/AIO). Every project is scoped and quoted in writing before work starts.",
-  author: {
-    '@type': 'Person',
-    name: 'Bhavesh Barot',
-    jobTitle: 'Chief Technical Architect',
-    url: 'https://factoryjet.com/about',
-    sameAs: [
-      'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-      'https://github.com/factoryjet-tech',
-    ],
-  },
-  // No aggregateRating: there is no review corpus behind a number, and Google
-  // treats review markup it can't trace to real reviews as a structured-data
-  // policy problem. Add it back only with real, verifiable reviews.
-  areaServed: {
-    "@type": "Country",
-    name: "United Kingdom",
-  },
-  sameAs: [
-    "https://www.linkedin.com/company/factoryjet",
-    "https://www.crunchbase.com/organization/factoryjet",
-  ],
-  contactPoint: [
-    {
-      "@type": "ContactPoint",
-      contactType: "customer support",
-      email: "connect@factoryjet.com",
-      telephone: "+91-9699-977-699",
-      areaServed: "GB",
-      availableLanguage: ["English"],
-    },
-  ],
+  "@type": "Person",
+  "@id": "https://factoryjet.com/#bhavesh-barot",
+  name: "Bhavesh Barot",
+  jobTitle: "Founder & CEO",
+  url: "https://factoryjet.com/author/bhavesh-barot",
+  worksFor: { "@id": "https://factoryjet.com/#organization" },
+  sameAs: ["https://www.linkedin.com/in/bhavesh-ai-gtm-expert/"],
 };
 
-const provider = {
-  "@type": "Organization", "@id": "https://factoryjet.com/#organization",
-  name: "FactoryJet Technologies",
-  url: "https://factoryjet.com",
-};
+const provider = { "@type": "Organization", "@id": "https://factoryjet.com/#organization", "name": "FactoryJet", "url": "https://factoryjet.com" };
 
 const areaServed = { "@type": "Country", name: "United Kingdom" };
 
@@ -148,7 +117,7 @@ const breadcrumb = {
 
 // Ordered array so page.tsx can map each JSON-LD block into its own <script> tag.
 export const ukSchemas: Array<{ id: string; data: unknown }> = [
-  { id: "ld-organization", data: organization },
+  { id: "ld-founder", data: founder },
   { id: "ld-service-web-design", data: services[0] },
   { id: "ld-service-ecommerce", data: services[1] },
   { id: "ld-service-ai-agents", data: services[2] },

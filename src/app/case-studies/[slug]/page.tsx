@@ -113,11 +113,7 @@ function articleJsonLd(cs: CaseStudy, slug: string) {
     datePublished: new Date(cs.publishedDate).toISOString(),
     dateModified: new Date(cs.modifiedDate ?? cs.publishedDate).toISOString(),
     author: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
-    publisher: {
-      '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
-      name: 'FactoryJet',
-      logo: { '@type': 'ImageObject', url: 'https://factoryjet.com/FinalLogo.svg' },
-    },
+    publisher: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
     about: {
       '@type': 'Organization',
       name: cs.client,

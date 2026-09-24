@@ -70,13 +70,13 @@ const webPageSchema = {
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
+  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
   '@id': 'https://factoryjet.com/seo/noida#localbusiness',
   name: 'FactoryJet SEO Company in Noida',
   image: 'https://factoryjet.com/images/services/seo.webp',
   description:
     'SEO company in Noida for IT, software, startups, and online brands. We fix your site, get you into the top three businesses on the map, into Google results, and into Google AI answers. No lock-in.',
   url: 'https://factoryjet.com/seo/noida',
-  telephone: '+919699977699',
   email: 'connect@factoryjet.com',
   areaServed: [
     { '@type': 'City', name: 'Noida' },
@@ -96,7 +96,7 @@ const serviceSchema = {
   name: 'SEO Company in Noida by FactoryJet',
   description: 'SEO company in Noida for IT, software, startups, and online brands. Get into the top three businesses on the map, into Google results, and into Google AI answers. No lock-in.',
   url: 'https://factoryjet.com/seo/noida',
-  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet Technologies', url: 'https://factoryjet.com' },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   areaServed: { '@type': 'City', name: 'Noida' },
 };
 

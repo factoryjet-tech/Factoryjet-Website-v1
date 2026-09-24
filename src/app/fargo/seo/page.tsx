@@ -405,10 +405,10 @@ const FAQ_SCHEMA = {
 const LOCAL_BUSINESS_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
+  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
   name: 'FactoryJet - Fargo Local SEO Agency',
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
-  telephone: '+1-832-998-8422',
   priceRange: '$$$',
   address: {
     '@type': 'PostalAddress',
@@ -436,7 +436,7 @@ const SERVICE_SCHEMA = {
   author: {
     '@type': 'Person',
     name: 'Bhavesh Barot',
-    jobTitle: 'Chief Technical Architect',
+    jobTitle: 'Founder & CEO',
     url: 'https://factoryjet.com/about',
     sameAs: [
       'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
@@ -444,11 +444,7 @@ const SERVICE_SCHEMA = {
     ],
   },
   name: 'Fargo Local SEO & Google Maps Optimization',
-  provider: {
-    '@type': 'Organization',
-    name: 'FactoryJet',
-    url: 'https://factoryjet.com',
-  },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   serviceType: 'Local SEO, Google Business Profile Optimization, Schema Markup & AI Citation Strategy',
   description:
     'Fargo local SEO agency. Dominate Google Maps 3-Pack, organic rankings, and AI search citations across Downtown, West Fargo, NDSU, and Cass County.',
@@ -465,7 +461,7 @@ const WEBPAGE_SCHEMA = {
   author: {
     '@type': 'Person',
     name: 'Bhavesh Barot',
-    jobTitle: 'Chief Technical Architect',
+    jobTitle: 'Founder & CEO',
     url: 'https://factoryjet.com/about',
     sameAs: [
       'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',

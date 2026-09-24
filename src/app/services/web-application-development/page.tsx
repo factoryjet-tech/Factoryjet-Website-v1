@@ -70,14 +70,7 @@ const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   serviceType: 'Web Application Development',
-  provider: {
-    '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
-    name: 'FactoryJet',
-    url: 'https://factoryjet.com',
-    logo: 'https://factoryjet.com/logo.png',
-    areaServed: { '@type': 'Country', name: 'United States' },
-    
-  },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
 };
 
 const breadcrumbSchema = {

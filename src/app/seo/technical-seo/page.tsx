@@ -74,7 +74,7 @@ const serviceSchema = {
   name: 'Technical SEO Services by FactoryJet',
   description: 'Technical SEO services in India: full technical SEO audit, site speed, making sure Google can find and read every page, the hidden code that explains your pages, a tidy site structure and sitemap, and fixing broken or duplicate pages. No lock-in.',
   url: 'https://factoryjet.com/seo/technical-seo',
-  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet Technologies', url: 'https://factoryjet.com', telephone: '+919699977699' },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   areaServed: { '@type': 'Country', name: 'India' },
 };
 

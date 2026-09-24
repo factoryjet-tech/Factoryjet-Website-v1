@@ -99,14 +99,7 @@ const serviceSchema = {
   name: 'WooCommerce Development Services',
   description:
     'Custom WooCommerce store development, plugin development, theme customization, and integrations for US e-commerce businesses. Fixed-price projects, senior developers.',
-  provider: {
-    '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
-    name: 'FactoryJet',
-    url: 'https://factoryjet.com',
-    foundingDate: '2014',
-    areaServed: 'US',
-    
-  },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   serviceType: 'WooCommerce Development',
 };
 

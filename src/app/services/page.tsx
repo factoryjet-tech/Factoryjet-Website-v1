@@ -412,18 +412,7 @@ const jsonLd = {
         { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://factoryjet.com/services' },
       ],
     },
-    {
-      '@type': 'Organization',
-      '@id': 'https://factoryjet.com/#organization',
-      name: 'FactoryJet',
-      url: 'https://factoryjet.com',
-      logo: 'https://factoryjet.com/logo.png',
-      sameAs: [
-        'https://www.linkedin.com/company/factoryjet',
-        'https://www.crunchbase.com/organization/factoryjet',
-      ],
-      
-    },
+    { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
     {
       '@type': 'FAQPage',
       mainEntity: FAQS.map((item) => ({

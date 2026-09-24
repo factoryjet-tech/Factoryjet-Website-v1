@@ -1,6 +1,6 @@
 # UK Home Page — Complete Extraction
 
-This directory contains a fully functional, standalone UK home page for FactoryJet Technologies.
+This directory contains a fully functional, standalone UK home page for FactoryJet.
 
 ## 🎯 Quick Start
 

@@ -70,12 +70,12 @@ const webPageSchema = {
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
+  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
   '@id': 'https://factoryjet.com/seo/ahmedabad#localbusiness',
   name: 'FactoryJet SEO Company in Ahmedabad',
   image: 'https://factoryjet.com/images/services/seo.webp',
   description: 'SEO company in Ahmedabad for pharma and denim exporters, chemical makers, and engineering firms. We make your site fast and easy for Google to read, build a search plan for orders from abroad and across India, and get you named in Google AI answers. No long contracts.',
   url: 'https://factoryjet.com/seo/ahmedabad',
-  telephone: '+919699977699',
   email: 'connect@factoryjet.com',
   areaServed: [
     { '@type': 'City', name: 'Ahmedabad' },
@@ -95,7 +95,7 @@ const serviceSchema = {
   name: 'SEO Company in Ahmedabad by FactoryJet',
   description: 'SEO company in Ahmedabad for pharma and denim exporters, chemical makers, and engineering firms. Win orders from abroad, win across India, and get named in Google AI answers. No long contracts.',
   url: 'https://factoryjet.com/seo/ahmedabad',
-  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet Technologies', url: 'https://factoryjet.com' },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   areaServed: { '@type': 'City', name: 'Ahmedabad' },
 };
 

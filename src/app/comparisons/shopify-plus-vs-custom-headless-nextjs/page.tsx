@@ -201,15 +201,7 @@ const ARTICLE_SCHEMA = {
     url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
     jobTitle: 'Founder, FactoryJet',
   },
-  publisher: {
-    '@type': 'Organization',
-    '@id': 'https://factoryjet.com/#organization',
-    name: 'FactoryJet',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://factoryjet.com/FinalLogo.svg',
-    },
-  },
+  publisher: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': 'https://factoryjet.com/comparisons/shopify-plus-vs-custom-headless-nextjs',

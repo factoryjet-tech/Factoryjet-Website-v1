@@ -216,12 +216,7 @@ const webPageSchema = {
   name: PAGE_TITLE,
   description: PAGE_DESC,
   dateModified: PAGE_MODIFIED,
-  publisher: {
-    '@type': 'Organization',
-    name: 'FactoryJet',
-    url: 'https://factoryjet.com',
-    logo: 'https://factoryjet.com/FinalLogo.svg',
-  },
+  publisher: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   author: {
     '@type': 'Person',
     name: 'Bhavesh Barot',
@@ -236,11 +231,7 @@ const serviceSchema = {
   '@id': `${CANONICAL_URL}#service`,
   name: 'Restaurant AI Voice Agents & Phone Ordering Automation',
   serviceType: 'Hospitality AI Voice Agent Development',
-  provider: {
-    '@type': 'Organization',
-    name: 'FactoryJet',
-    url: 'https://factoryjet.com',
-  },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   areaServed: {
     '@type': 'Country',
     name: 'United States',

@@ -70,12 +70,12 @@ const webPageSchema = {
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
+  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
   '@id': 'https://factoryjet.com/seo/vadodara#localbusiness',
   name: 'FactoryJet SEO Agency in Vadodara',
   image: 'https://factoryjet.com/images/services/seo.webp',
   description: 'SEO agency in Vadodara for engineering, petrochemical, pharmaceutical, and manufacturing firms. We give you a fast site Google can read, the right search plan to win business across India and abroad, and a place in Google AI answers. No lock-in.',
   url: 'https://factoryjet.com/seo/vadodara',
-  telephone: '+919699977699',
   email: 'connect@factoryjet.com',
   areaServed: [
     { '@type': 'City', name: 'Vadodara' },
@@ -95,7 +95,7 @@ const serviceSchema = {
   name: 'SEO Agency in Vadodara by FactoryJet',
   description: 'SEO agency in Vadodara for engineering, petrochemical, pharma, and manufacturing firms. Win business across India, win export orders, and get named in Google AI answers. No lock-in.',
   url: 'https://factoryjet.com/seo/vadodara',
-  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet Technologies', url: 'https://factoryjet.com' },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   areaServed: { '@type': 'City', name: 'Vadodara' },
 };
 

@@ -105,48 +105,7 @@ const webPageSchema = {
   publisher: { '@id': 'https://factoryjet.com/#organization' },
 };
 
-const localBusinessSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  '@id': 'https://factoryjet.com/#organization',
-  name: 'FactoryJet | Web Design Indore',
-  description:
-    'Web design company in Indore building fast, SEO-optimized websites for D2C brands, coaching institutes, manufacturers, and SMBs. 7-day delivery guarantee.',
-  url: 'https://factoryjet.com/web-design/indore',
-  telephone: '+919699977699',
-  email: 'connect@factoryjet.com',
-  areaServed: [
-    { '@type': 'City', name: 'Indore' },
-    { '@type': 'City', name: 'Pithampur' },
-    { '@type': 'City', name: 'Mhow' },
-    { '@type': 'AdministrativeArea', name: 'Madhya Pradesh' },
-  ],
-  serviceType: 'Web Design and Development',
-  
-  hasOfferCatalog: {
-    '@type': 'OfferCatalog',
-    name: 'Web Design Services Indore',
-    itemListElement: [
-      {
-        '@type': 'Offer',
-        name: 'Starter Website',
-        description: '5-page business website, mobile-responsive, basic SEO, contact form.',
-      },
-      {
-        '@type': 'Offer',
-        name: 'Growth Website',
-        description:
-          '10–15 page website with blog CMS, lead capture, GA4, and advanced SEO.',
-      },
-      {
-        '@type': 'Offer',
-        name: 'Custom Website',
-        description:
-          'Custom Next.js build with e-commerce, booking systems, or AI integrations.',
-      },
-    ],
-  },
-};
+const localBusinessSchema = { '@context': 'https://schema.org', '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' };
 
 const howToSchema = {
   '@context': 'https://schema.org',

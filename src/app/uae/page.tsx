@@ -8,9 +8,9 @@ import SiteFooter from '@/components/v2/SiteFooter'
 const localBusinessJsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
+  "parentOrganization": { "@id": "https://factoryjet.com/#organization" },
   "name": "FactoryJet",
   "url": "https://factoryjet.com/uae",
-  "telephone": "+91 96999 77699",
   "email": "connect@factoryjet.com",
   "address": {
     "@type": "PostalAddress",
@@ -27,18 +27,7 @@ const localBusinessJsonLd = {
 }
 
 // Organization structured data
-const organizationJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "@id": "https://factoryjet.com/#organization",
-  "name": "FactoryJet Technologies",
-  "url": "https://factoryjet.com",
-  "logo": "https://factoryjet.com/logo.png",
-  "sameAs": [
-    "https://www.linkedin.com/company/factoryjet",
-    "https://www.crunchbase.com/organization/factoryjet",
-  ],
-}
+const organizationJsonLd = { "@context": "https://schema.org", "@type": "Organization", "@id": "https://factoryjet.com/#organization", "name": "FactoryJet", "url": "https://factoryjet.com" }
 
 // Breadcrumb structured data
 const breadcrumbJsonLd = {

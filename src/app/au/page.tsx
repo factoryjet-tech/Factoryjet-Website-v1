@@ -176,20 +176,7 @@ const FAQ_SCHEMA = {
   })),
 };
 
-const ORG_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
-  '@id': 'https://factoryjet.com/#organization',
-  name: 'FactoryJet',
-  url: 'https://factoryjet.com',
-  logo: 'https://factoryjet.com/logo.png',
-  sameAs: [
-    'https://www.linkedin.com/company/factoryjet',
-    'https://www.crunchbase.com/organization/factoryjet',
-  ],
-  areaServed: { '@type': 'Country', name: 'Australia' },
-  
-};
+const ORG_SCHEMA = { '@context': 'https://schema.org', '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' };
 
 const BREADCRUMB_SCHEMA = {
   '@context': 'https://schema.org',

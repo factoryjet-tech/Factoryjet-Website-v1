@@ -106,56 +106,7 @@ const webPageSchema = {
   publisher: { '@id': 'https://factoryjet.com/#organization' },
 };
 
-const SHOPIFY_serviceSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  '@id': 'https://factoryjet.com/#organization',
-  name: 'FactoryJet',
-  description:
-    'Custom Shopify and Shopify Plus development for Indian D2C brands and e-commerce businesses. Razorpay, UPI, GST invoicing, Shiprocket integrated. 7-day delivery.',
-  url: 'https://factoryjet.com/shopify-development',
-  telephone: '+919699977699',
-  email: 'connect@factoryjet.com',
-  address: {
-    '@type': 'PostalAddress',
-    addressCountry: 'IN',
-  },
-  areaServed: {
-    '@type': 'Country',
-    name: 'India',
-  },
-  serviceType: [
-    'Shopify Development',
-    'Shopify Plus Development',
-    'Shopify Theme Development',
-    'Shopify Store Migration',
-    'Shopify SEO',
-  ],
-  
-  hasOfferCatalog: {
-    '@type': 'OfferCatalog',
-    name: 'Shopify Development Services India',
-    itemListElement: [
-      {
-        '@type': 'Offer',
-        name: 'Shopify Starter Store',
-        description: 'Custom Shopify theme applied to an existing store with Razorpay + UPI integration.',
-      },
-      {
-        '@type': 'Offer',
-        name: 'Full Shopify Store Build',
-        description:
-          'Complete Shopify store from scratch, custom theme, products, Razorpay + UPI, GST invoicing, Shiprocket, and launch.',
-      },
-      {
-        '@type': 'Offer',
-        name: 'Shopify Plus & Scale',
-        description:
-          'Shopify Plus with Checkout Extensibility, B2B wholesale portal, multi-storefront, or headless Hydrogen.',
-      },
-    ],
-  },
-};
+const SHOPIFY_serviceSchema = { '@context': 'https://schema.org', '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' };
 
 const SHOPIFY_howToSchema = {
   '@context': 'https://schema.org',

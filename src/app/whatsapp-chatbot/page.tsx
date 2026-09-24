@@ -104,13 +104,7 @@ const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'WhatsApp Chatbot Development India',
-  provider: {
-    '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
-    name: 'FactoryJet',
-    url: 'https://factoryjet.com',
-    address: { '@type': 'PostalAddress', addressCountry: 'IN' },
-    
-  },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   description:
     'WhatsApp chatbot development and WhatsApp Business API integration for Indian businesses. Automate orders, support, lead capture and payments. Fixed-price, scoped after a free call.',
   areaServed: { '@type': 'Country', name: 'India' },

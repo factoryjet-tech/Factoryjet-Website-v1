@@ -70,12 +70,12 @@ const webPageSchema = {
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
+  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
   '@id': 'https://factoryjet.com/seo/kolkata#localbusiness',
   name: 'FactoryJet SEO Company in Kolkata',
   image: 'https://factoryjet.com/images/services/seo.webp',
   description: 'SEO company in Kolkata for leather, jute, and tea exporters, Sector V IT firms, B2B suppliers, and local businesses. We make your site fast and easy for Google to read, and help you win abroad, all over India, and in Google AI answers. No long contracts.',
   url: 'https://factoryjet.com/seo/kolkata',
-  telephone: '+919699977699',
   email: 'connect@factoryjet.com',
   areaServed: [
     { '@type': 'City', name: 'Kolkata' },
@@ -96,7 +96,7 @@ const serviceSchema = {
   name: 'SEO Company in Kolkata by FactoryJet',
   description: 'SEO company in Kolkata for exporters, B2B suppliers, IT firms, and local businesses. Win abroad, all over India, and in Google AI answers. No long contracts.',
   url: 'https://factoryjet.com/seo/kolkata',
-  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet Technologies', url: 'https://factoryjet.com' },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   areaServed: { '@type': 'City', name: 'Kolkata' },
 };
 

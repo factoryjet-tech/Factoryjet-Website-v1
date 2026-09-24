@@ -108,17 +108,7 @@ const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'Ecommerce Development Mumbai',
-  provider: {
-    '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
-    name: 'FactoryJet',
-    url: 'https://factoryjet.com',
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: 'Mumbai',
-      addressRegion: 'Maharashtra',
-      addressCountry: 'IN',
-    },
-  },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   serviceType: 'Ecommerce Development',
   areaServed: {
     '@type': 'City',
@@ -132,6 +122,7 @@ const serviceSchema = {
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
+  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
   name: 'FactoryJet Ecommerce Development Mumbai',
   url: 'https://factoryjet.com/services/ecommerce-development/mumbai',
   image: 'https://factoryjet.com/logo.png',

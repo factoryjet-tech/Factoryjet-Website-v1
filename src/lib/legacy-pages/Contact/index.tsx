@@ -51,34 +51,7 @@ const ContactPage: React.FC = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "ContactPage",
-    "mainEntity": {
-      "@type": "Organization", "@id": "https://factoryjet.com/#organization",
-      "name": "FactoryJet",
-      "url": "https://factoryjet.com",
-      "logo": "https://factoryjet.com/logo.png",
-      "contactPoint": [
-        {
-          "@type": "ContactPoint",
-          "telephone": "+91 96999 77699",
-          "contactType": "customer service",
-          "email": "connect@factoryjet.com",
-          "areaServed": "IN",
-          "availableLanguage": ["English", "Hindi"]
-        },
-        {
-          "@type": "ContactPoint",
-          "telephone": "+91 96999 77699",
-          "contactType": "sales",
-          "email": "connect@factoryjet.com",
-          "areaServed": "IN",
-          "availableLanguage": ["English", "Hindi"]
-        }
-      ],
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "IN"
-      }
-    }
+    "mainEntity": { "@type": "Organization", "@id": "https://factoryjet.com/#organization", "name": "FactoryJet", "url": "https://factoryjet.com" }
   };
 
   return (

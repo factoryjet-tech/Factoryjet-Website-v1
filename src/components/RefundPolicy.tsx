@@ -260,7 +260,6 @@ Company: FactoryJet Private Limited
 CIN: U74999KA2020PTC140850
 Address: 70/1, Willow Herbs, Tigalarpalya, Kundalahalli, Bengaluru, Karnataka - 560037, India
 Email: connect@factoryjet.com
-Phone: +91 96999 77699
 Working Hours: Monday to Friday, 10:00 AM - 6:00 PM IST
 Response SLA: Acknowledgment within 48 hours; resolution within 15 business days.`,
         },
@@ -275,7 +274,6 @@ Response SLA: Acknowledgment within 48 hours; resolution within 15 business days
         {
           title: 'FactoryJet Private Limited',
           content: `Email: connect@factoryjet.com
-Support Phone: +91 96999 77699
 Founder Direct: bhavesh@factoryjet.com
 Corporate Address: 70/1, Willow Herbs, Tigalarpalya, Kundalahalli, Bengaluru, Karnataka - 560037, India
 Website: https://factoryjet.com`,

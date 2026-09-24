@@ -242,7 +242,7 @@ export default function CityHubPage({ city }: CityHubPageProps) {
     author: {
       '@type': 'Person',
       name: 'Bhavesh Barot',
-      jobTitle: 'Chief Technical Architect',
+      jobTitle: 'Founder & CEO',
       url: 'https://factoryjet.com/about',
       sameAs: [
         'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',

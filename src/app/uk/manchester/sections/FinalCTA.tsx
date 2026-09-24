@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "@/lib/gsap";
-import { CheckCircle2, MessageCircle, Mail, Phone } from "lucide-react";
+import { CheckCircle2, MessageCircle, Mail } from "lucide-react";
 import LeadFormInline from "@/components/LeadFormInline";
 
 const TRUST_POINTS = [
@@ -123,15 +123,6 @@ export default function FinalCTA() {
                 <Mail size={17} style={{ color: "#F05A28", flexShrink: 0 }} aria-hidden="true" />
                 <span style={{ fontSize: "14px", color: "rgba(255,255,255,0.6)" }}>
                   connect@factoryjet.com
-                </span>
-              </a>
-              <a
-                href="tel:+919699977699"
-                className="flex items-center gap-3 transition-opacity duration-200 hover:opacity-80"
-              >
-                <Phone size={17} style={{ color: "#FF6B35", flexShrink: 0 }} aria-hidden="true" />
-                <span style={{ fontSize: "14px", color: "rgba(255,255,255,0.6)" }}>
-                  +91 96999 77699 (US)
                 </span>
               </a>
             </div>

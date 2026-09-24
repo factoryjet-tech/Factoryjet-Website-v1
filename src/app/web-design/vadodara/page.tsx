@@ -105,45 +105,7 @@ const webPageSchema = {
   publisher: { '@id': 'https://factoryjet.com/#organization' },
 };
 
-const localBusinessSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  '@id': 'https://factoryjet.com/#organization',
-  name: 'FactoryJet',
-  description:
-    'Web design company in Vadodara building fast, SEO-optimized websites for chemical exporters, engineering manufacturers, pharma companies, and B2B trading firms. 7-day delivery guarantee.',
-  url: 'https://factoryjet.com/web-design/vadodara',
-  telephone: '+919699977699',
-  email: 'connect@factoryjet.com',
-  areaServed: [
-    { '@type': 'City', name: 'Vadodara' },
-    { '@type': 'City', name: 'Baroda' },
-    { '@type': 'City', name: 'Anand' },
-  ],
-  serviceType: 'Web Design and Development',
-  
-  hasOfferCatalog: {
-    '@type': 'OfferCatalog',
-    name: 'Web Design Services Vadodara',
-    itemListElement: [
-      {
-        '@type': 'Offer',
-        name: 'Starter Website',
-        description: '5-page business website, mobile-responsive, basic SEO, contact form.',
-      },
-      {
-        '@type': 'Offer',
-        name: 'Growth Website',
-        description: '10–15 page website with blog CMS, lead capture, GA4, and advanced SEO.',
-      },
-      {
-        '@type': 'Offer',
-        name: 'Custom Website',
-        description: 'Custom Next.js build with e-commerce, booking systems, or AI integrations.',
-      },
-    ],
-  },
-};
+const localBusinessSchema = { '@context': 'https://schema.org', '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' };
 
 /* ─────────────────────────────────────────────────────────────────────────────
    Section data

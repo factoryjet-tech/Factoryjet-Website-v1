@@ -31,21 +31,12 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
-    {
-      '@type': 'Organization',
-      '@id': 'https://factoryjet.com/#organization',
-      name: 'FactoryJet Technologies',
-      url: 'https://factoryjet.com',
-      logo: 'https://factoryjet.com/logo.png',
-      sameAs: [
-        'https://www.linkedin.com/company/factoryjet',
-        'https://www.crunchbase.com/organization/factoryjet',
-      ],
-    },
+    { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
     {
       '@type': 'LocalBusiness',
+      parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
       '@id': `${CANONICAL}#business`,
-      name: 'FactoryJet Technologies: Manchester',
+      name: 'FactoryJet: Manchester',
       url: CANONICAL,
       description: 'SEO, web design, e-commerce and AI search agency serving Manchester and the North West.',
       areaServed: {
@@ -60,7 +51,7 @@ const jsonLd = {
       author: {
         '@type': 'Person',
         name: 'Bhavesh Barot',
-        jobTitle: 'Chief Technical Architect',
+        jobTitle: 'Founder & CEO',
         url: 'https://factoryjet.com/about',
         sameAs: [
           'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
@@ -83,7 +74,7 @@ const jsonLd = {
       author: {
         '@type': 'Person',
         name: 'Bhavesh Barot',
-        jobTitle: 'Chief Technical Architect',
+        jobTitle: 'Founder & CEO',
         url: 'https://factoryjet.com/about',
         sameAs: [
           'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
@@ -100,7 +91,7 @@ const jsonLd = {
       author: {
         '@type': 'Person',
         name: 'Bhavesh Barot',
-        jobTitle: 'Chief Technical Architect',
+        jobTitle: 'Founder & CEO',
         url: 'https://factoryjet.com/about',
         sameAs: [
           'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',

@@ -89,18 +89,7 @@ const WP_serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
   name: 'WordPress Development Services India',
-  provider: {
-    '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
-    name: 'FactoryJet',
-    url: 'https://factoryjet.com',
-    address: {
-      '@type': 'PostalAddress',
-      addressCountry: 'IN',
-    },
-    telephone: '+919699977699',
-    email: 'connect@factoryjet.com',
-    
-  },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   areaServed: {
     '@type': 'Country',
     name: 'India',

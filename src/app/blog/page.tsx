@@ -13,14 +13,7 @@ const blogListJsonLd = {
   name: 'FactoryJet Blog',
   description: 'Expert insights on web development, e-commerce, and digital marketing for growing businesses.',
   url: 'https://factoryjet.com/blog',
-  publisher: {
-    '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
-    name: 'FactoryJet',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://factoryjet.com/FinalLogo.svg',
-    },
-  },
+  publisher: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
 }
 
 export const metadata: Metadata = {

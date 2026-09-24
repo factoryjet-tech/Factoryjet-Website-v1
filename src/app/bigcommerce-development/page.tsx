@@ -97,12 +97,7 @@ const HOWTO_SCHEMA = {
     { '@type': 'HowToStep', position: 5, name: 'Own and scale', text: 'You own and operate the store; we support and scale it as you grow.' },
   ],
 };
-const ORG_SCHEMA = {
-  '@context': 'https://schema.org', '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com',
-  description: 'FactoryJet is an e-commerce development agency that builds BigCommerce, omnichannel, and B2B commerce for DTC and B2B brands.',
-  
-  sameAs: ['https://www.linkedin.com/company/factoryjet'],
-};
+const ORG_SCHEMA = { '@context': 'https://schema.org', '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' };
 /** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
  *  <Breadcrumbs> component and the BreadcrumbList JSON-LD below, so the two
  *  can never drift into showing a different path than the schema claims. */

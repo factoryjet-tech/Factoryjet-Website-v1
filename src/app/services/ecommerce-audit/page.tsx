@@ -136,22 +136,7 @@ const serviceSchema = {
   url: CANONICAL_URL,
 };
 
-const organizationSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
-  '@id': 'https://factoryjet.com/#organization',
-  name: 'FactoryJet',
-  url: 'https://factoryjet.com',
-  logo: 'https://factoryjet.com/logo.png',
-  sameAs: [
-    'https://www.linkedin.com/company/factoryjet',
-    'https://clutch.co/profile/factoryjet-private',
-    'https://www.goodfirms.co/company/factoryjet-private-limited',
-    'https://www.designrush.com/agency/profile/factoryjet',
-    'https://www.softwaresuggest.com/factoryjet',
-    'https://www.crunchbase.com/organization/factoryjet',
-  ],
-};
+const organizationSchema = { '@context': 'https://schema.org', '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' };
 
 /* ── FAQ. Single array, rendered visibly below AND used to build the
    FAQPage JSON-LD. Never hand-duplicate this list near the ld+json block. ── */

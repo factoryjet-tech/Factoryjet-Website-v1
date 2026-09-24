@@ -39,7 +39,7 @@ export const ukMetadata: Metadata = {
       "FactoryJet is an AI-native digital agency for UK businesses. Web design, Shopify and WooCommerce builds, AI agents and AI SEO, across 21 UK cities. Free audit.",
     url: "https://factoryjet.com/uk",
     type: "website",
-    siteName: "FactoryJet Technologies",
+    siteName: "FactoryJet",
     locale: "en_GB",
     images: [
       {

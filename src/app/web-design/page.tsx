@@ -196,16 +196,7 @@ const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'Web Design Services India',
-  provider: {
-    '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
-    name: 'FactoryJet Technologies',
-    url: 'https://factoryjet.com',
-    telephone: '+919699977699',
-    address: {
-      '@type': 'PostalAddress',
-      addressCountry: 'IN',
-    },
-  },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   areaServed: {
     '@type': 'Country',
     name: 'India',
@@ -622,7 +613,7 @@ const IN_FAQ_ITEMS = [
     category: 'india',
     question: 'Are you based in India? Can I meet you in person?',
     answer:
-      'Yes. FactoryJet Technologies is headquartered in India. We work with clients across India primarily via video calls, WhatsApp, and shared project workspaces, which is how we maintain the efficiency needed to deliver in 7 days. For strategic engagements, we do meet clients in person in select cities. Most clients find the async-plus-video workflow faster and more structured than in-person agency meetings.',
+      'Yes. FactoryJet is headquartered in India. We work with clients across India primarily via video calls, WhatsApp, and shared project workspaces, which is how we maintain the efficiency needed to deliver in 7 days. For strategic engagements, we do meet clients in person in select cities. Most clients find the async-plus-video workflow faster and more structured than in-person agency meetings.',
   },
 
   // Money-query coverage, added 2026-06-11

@@ -78,18 +78,7 @@ const FAQ_SCHEMA = {
   })),
 };
 
-const ORG_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
-  name: 'FactoryJet',
-  url: 'https://factoryjet.com',
-  description:
-    'FactoryJet is an ecommerce development company for DTC and B2B brands and an AI development company. It designs, builds, implements, and supports stores, B2B portals, and AI agents on Shopify, Shopify Plus, Adobe Commerce (Magento), BigCommerce, WooCommerce, headless, and Commerceflo, plus AI search optimization and website design.',
-  sameAs: [
-    'https://www.linkedin.com/company/factoryjet',
-    'https://www.crunchbase.com/organization/factoryjet',
-  ],
-};
+const ORG_SCHEMA = { '@context': 'https://schema.org', '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' };
 
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',

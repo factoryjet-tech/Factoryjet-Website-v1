@@ -8,13 +8,7 @@ const App: React.FC = () => {
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Web Development & E-Commerce Pricing",
-    "provider": {
-      "@type": "Organization", "@id": "https://factoryjet.com/#organization",
-      "name": "FactoryJet",
-      "url": "https://factoryjet.com",
-      "telephone": "+91 96999 77699",
-      "email": "connect@factoryjet.com"
-    },
+    "provider": { "@type": "Organization", "@id": "https://factoryjet.com/#organization", "name": "FactoryJet", "url": "https://factoryjet.com" },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Web Development Services",

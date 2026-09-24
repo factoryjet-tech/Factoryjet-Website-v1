@@ -70,12 +70,12 @@ const webPageSchema = {
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
+  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
   '@id': 'https://factoryjet.com/seo/jaipur#localbusiness',
   name: 'FactoryJet SEO Company in Jaipur',
   image: 'https://factoryjet.com/images/services/seo.webp',
   description: 'SEO company in Jaipur for gem and jewellery exporters, handicraft brands, hotels, and IT firms. We fix your site, help you win abroad, win the top three businesses on the map, and get named in Google AI answers. No lock-in.',
   url: 'https://factoryjet.com/seo/jaipur',
-  telephone: '+919699977699',
   email: 'connect@factoryjet.com',
   areaServed: [
     { '@type': 'City', name: 'Jaipur' },
@@ -94,7 +94,7 @@ const serviceSchema = {
   name: 'SEO Company in Jaipur by FactoryJet',
   description: 'SEO company in Jaipur for gem and jewellery exporters, handicraft brands, hotels, and IT firms. Win abroad, win the top three businesses on the map, and get named in Google AI answers. No lock-in.',
   url: 'https://factoryjet.com/seo/jaipur',
-  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet Technologies', url: 'https://factoryjet.com' },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   areaServed: { '@type': 'City', name: 'Jaipur' },
 };
 

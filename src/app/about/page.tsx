@@ -45,35 +45,11 @@ const jsonLd = {
       '@id': 'https://factoryjet.com/about#webpage',
       url: 'https://factoryjet.com/about',
       // Freshness signal. Keep honest: bump when content actually changes.
-      dateModified: '2026-08-04',
+      dateModified: '2026-09-24',
       isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
       publisher: { '@id': 'https://factoryjet.com/#organization' },
     },
-    {
-      '@type': 'Organization',
-      '@id': 'https://factoryjet.com/#organization',
-      name: 'FactoryJet',
-      url: 'https://factoryjet.com',
-      logo: { '@type': 'ImageObject', url: 'https://factoryjet.com/logo.png', width: 1200, height: 240 },
-      description:
-        'FactoryJet is an e-commerce development agency for DTC and B2B brands. We consult, design, develop, and implement omnichannel commerce across the store, marketplaces, and B2B portals on Shopify, Shopify Plus, Adobe Commerce (Magento), BigCommerce, WooCommerce, headless, and Commerceflo. Clients own and operate what we build.',
-      foundingDate: '2014',
-      areaServed: { '@type': 'Country', name: 'United States' },
-      knowsAbout: [
-        'E-commerce development',
-        'Omnichannel commerce',
-        'Unified commerce',
-        'B2B e-commerce',
-        'Shopify development',
-        'Adobe Commerce (Magento) development',
-        'WooCommerce development',
-        'Marketplace integration',
-        'Commerce AI agents',
-      ],
-      contactPoint: { '@type': 'ContactPoint', contactType: 'customer service', email: 'connect@factoryjet.com', availableLanguage: 'English', areaServed: 'US' },
-      sameAs: ['https://www.linkedin.com/company/factoryjet'],
-      
-    },
+    { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
     {
       '@type': 'BreadcrumbList',
       itemListElement: [
@@ -192,6 +168,12 @@ export default function AboutPage() {
             <p className="mt-4 max-w-[60ch] text-[16px] leading-relaxed text-[#46403B]">
               Bhavesh Barot leads FactoryJet and takes the discovery call himself. Tell us what you sell and where, and
               we will map your channels, catalog, and B2B into one system you own.
+            </p>
+            <p className="mt-4 max-w-[60ch] text-[15px] leading-relaxed text-[#46403B]">
+              Bhavesh started FactoryJet in India in 2014 as a B2B marketplace for construction materials. The same
+              company now builds ecommerce, AI agents, AI search and SEO, and websites for brands. FactoryJet is run by
+              FactoryJet Private Limited, 70/1, Willow Herbs, Tigalarpalya, Kundalahalli, Bengaluru, Karnataka 560037,
+              India.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a

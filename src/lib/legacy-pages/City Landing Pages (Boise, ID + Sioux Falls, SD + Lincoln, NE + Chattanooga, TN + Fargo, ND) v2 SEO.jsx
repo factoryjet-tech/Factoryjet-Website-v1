@@ -326,8 +326,8 @@ function SchemaBlock({ c }) {
   const url = `https://factoryjet.com/ecommerce-development-${c.slug}/`;
   const schema = { "@context": "https://schema.org", "@graph": [
     { "@type": "WebPage", "@id": url, url, name: c.metaTitle, description: c.metaDesc, isPartOf: { "@id": "https://factoryjet.com/#website" }, breadcrumb: { "@id": `${url}#breadcrumb` }, about: { "@id": `${url}#service` }, inLanguage: "en-US" },
-    { "@type": "WebSite", "@id": "https://factoryjet.com/#website", url: "https://factoryjet.com/", name: "FactoryJet Technologies", publisher: { "@id": "https://factoryjet.com/#organization" }, inLanguage: "en-US" },
-    { "@type": "Organization", "@id": "https://factoryjet.com/#organization", name: "FactoryJet Technologies", url: "https://factoryjet.com/", description: "Enterprise-grade digital transformation agency — e-commerce development, web design, and AI agent development for SMBs.", sameAs: ["https://www.linkedin.com/company/factoryjet"], contactPoint: { "@type": "ContactPoint", contactType: "sales", availableLanguage: "English" }, aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "127", bestRating: "5" } },
+    { "@type": "WebSite", "@id": "https://factoryjet.com/#website", url: "https://factoryjet.com/", name: "FactoryJet", publisher: { "@id": "https://factoryjet.com/#organization" }, inLanguage: "en-US" },
+    { "@type": "Organization", "@id": "https://factoryjet.com/#organization", "name": "FactoryJet", "url": "https://factoryjet.com" },
     { "@type": "Service", "@id": `${url}#service`, name: `E-Commerce Development in ${c.city}, ${c.state}`, description: c.hero.sub, provider: { "@id": "https://factoryjet.com/#organization" }, areaServed: { "@type": "City", name: c.city, containedInPlace: { "@type": "State", name: c.stateFullName, sameAs: `https://en.wikipedia.org/wiki/${c.stateFullName.replace(/ /g,"_")}` } }, serviceType: ["E-Commerce Development", "Shopify Development", "WooCommerce Development", "AI Agent Development", "Custom Web Development"], offers: { "@type": "AggregateOffer", lowPrice: "2999", highPrice: "15999", priceCurrency: "USD" }, hasOfferCatalog: { "@type": "OfferCatalog", name: "E-Commerce Services", itemListElement: SERVICES.map(s => ({ "@type": "Offer", name: s.title, description: s.desc })) } },
     { "@type": "FAQPage", "@id": `${url}#faq`, mainEntity: c.faqs.map(f => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) },
     { "@type": "BreadcrumbList", "@id": `${url}#breadcrumb`, itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: "https://factoryjet.com/" }, { "@type": "ListItem", position: 2, name: "E-Commerce Development", item: "https://factoryjet.com/ecommerce-development/" }, { "@type": "ListItem", position: 3, name: `${c.city}, ${c.state}`, item: url }] },
@@ -451,7 +451,7 @@ function LandingPage({ cityKey }) {
       {/* ── NAV (semantic <header> wrapping <nav>) ── */}
       <header>
         <nav className="fj-nav" aria-label="Main navigation">
-          <a href="/" className="fj-nav-logo" aria-label="FactoryJet Technologies - Home">
+          <a href="/" className="fj-nav-logo" aria-label="FactoryJet - Home">
             <div className="fj-nav-mark" aria-hidden="true">FJ</div>
             <div><span className="fj-nav-name">FactoryJet</span><span className="fj-nav-sub">Digital Transformation Agency</span></div>
           </a>
@@ -634,7 +634,7 @@ function LandingPage({ cityKey }) {
         <div className="fj-container">
           <div className="fj-footer-grid">
             <div>
-              <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:8}}><div className="fj-nav-mark" style={{width:28,height:28,fontSize:11}}>FJ</div><span style={{fontWeight:700,fontSize:15,color:"#fff"}}>FactoryJet Technologies</span></div>
+              <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:8}}><div className="fj-nav-mark" style={{width:28,height:28,fontSize:11}}>FJ</div><span style={{fontWeight:700,fontSize:15,color:"#fff"}}>FactoryJet</span></div>
               <p style={{fontSize:12,color:"rgba(255,255,255,.35)",maxWidth:280}}>Enterprise-grade e-commerce, web design, and AI solutions at startup-friendly prices.</p>
             </div>
             <div>
@@ -647,7 +647,7 @@ function LandingPage({ cityKey }) {
             </div>
           </div>
           <div className="fj-footer-bottom">
-            <p style={{fontSize:12,color:"rgba(255,255,255,.2)"}}>© 2026 FactoryJet Technologies. E-Commerce Development for {c.city}, {c.state}.</p>
+            <p style={{fontSize:12,color:"rgba(255,255,255,.2)"}}>© 2026 FactoryJet. E-Commerce Development for {c.city}, {c.state}.</p>
             <div style={{display:"flex",gap:16,fontSize:12,color:"rgba(255,255,255,.2)"}}><span>Privacy</span><span>Terms</span><span>Sitemap</span></div>
           </div>
         </div>

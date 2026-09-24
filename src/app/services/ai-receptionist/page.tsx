@@ -257,24 +257,13 @@ const webPageSchema = {
   datePublished: '2026-09-01T00:00:00Z',
   dateModified: `${PAGE_MODIFIED}T00:00:00Z`,
   inLanguage: 'en-US',
-  publisher: {
-    '@type': 'Organization',
-    name: 'FactoryJet',
-    url: 'https://factoryjet.com',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://factoryjet.com/logo.png',
-    },
-  },
+  publisher: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   author: {
     '@type': 'Person',
     name: 'Bhavesh Barot',
     url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
     jobTitle: 'Founder & CEO',
-    worksFor: {
-      '@type': 'Organization',
-      name: 'FactoryJet',
-    },
+    worksFor: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   },
 };
 
@@ -286,11 +275,7 @@ const serviceSchema = {
   serviceType: 'AI Receptionist and AI Phone Answering Service Development',
   description:
     'Custom-built AI receptionists that answer inbound calls 24/7, qualify and route the caller, and book appointments directly inside the CRM or scheduling software a business already runs.',
-  provider: {
-    '@type': 'Organization',
-    name: 'FactoryJet',
-    url: 'https://factoryjet.com',
-  },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   areaServed: {
     '@type': 'Country',
     name: 'United States',

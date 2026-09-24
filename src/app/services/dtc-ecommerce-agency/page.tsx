@@ -307,24 +307,13 @@ const webPageSchema = {
   datePublished: '2026-09-20T00:00:00Z',
   dateModified: `${PAGE_MODIFIED}T00:00:00Z`,
   inLanguage: 'en-US',
-  publisher: {
-    '@type': 'Organization',
-    name: 'FactoryJet',
-    url: 'https://factoryjet.com',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://factoryjet.com/logo.png',
-    },
-  },
+  publisher: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   author: {
     '@type': 'Person',
     name: 'Bhavesh Barot',
     url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
     jobTitle: 'Founder & CEO',
-    worksFor: {
-      '@type': 'Organization',
-      name: 'FactoryJet',
-    },
+    worksFor: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   },
 };
 
@@ -336,11 +325,7 @@ const serviceSchema = {
   serviceType: 'DTC Ecommerce Agency Services',
   description:
     'Ecommerce development for scaling direct-to-consumer brands: platform replatforming and migration, headless and composable builds, international and multi-currency expansion, and subscription commerce.',
-  provider: {
-    '@type': 'Organization',
-    name: 'FactoryJet',
-    url: 'https://factoryjet.com',
-  },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   areaServed: {
     '@type': 'Country',
     name: 'United States',

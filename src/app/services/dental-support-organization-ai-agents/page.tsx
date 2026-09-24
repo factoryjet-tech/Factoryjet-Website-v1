@@ -252,24 +252,13 @@ const webPageSchema = {
   datePublished: '2026-09-19T00:00:00Z',
   dateModified: `${PAGE_MODIFIED}T00:00:00Z`,
   inLanguage: 'en-US',
-  publisher: {
-    '@type': 'Organization',
-    name: 'FactoryJet',
-    url: 'https://factoryjet.com',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://factoryjet.com/logo.png',
-    },
-  },
+  publisher: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   author: {
     '@type': 'Person',
     name: 'Bhavesh Barot',
     url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
     jobTitle: 'Founder & CEO',
-    worksFor: {
-      '@type': 'Organization',
-      name: 'FactoryJet',
-    },
+    worksFor: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   },
 };
 
@@ -281,11 +270,7 @@ const serviceSchema = {
   serviceType: 'Dental Support Organization AI Agent Development',
   description:
     'Custom HIPAA-compliant AI receptionist and scheduling agents for dental support organizations, centralizing answering across every location and integrating with Denticon, Dentrix Ascend, and practice-level legacy systems.',
-  provider: {
-    '@type': 'Organization',
-    name: 'FactoryJet',
-    url: 'https://factoryjet.com',
-  },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   areaServed: {
     '@type': 'Country',
     name: 'United States',

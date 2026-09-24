@@ -122,7 +122,7 @@ const Hero = React.memo(({ searchValue, onSearchChange }: { searchValue: string;
         </h1>
 
         <p className="text-lg md:text-xl text-fj-charcoal-muted font-fj-body mb-10 max-w-2xl mx-auto leading-relaxed">
-          Find answers about our AI-native workflows, startup-friendly pricing, and multi-platform SEO strategies.
+          Answers about how we build ecommerce, AI agents, AI search and SEO, and websites, and how working with us goes.
         </p>
 
         {/* Search bar */}

@@ -296,7 +296,7 @@ export default function Footer() {
               fontSize: 13,
             }}
           >
-            © {year} FactoryJet Technologies. All rights reserved.
+            © {year} FactoryJet. All rights reserved.
           </p>
           <p
             style={{

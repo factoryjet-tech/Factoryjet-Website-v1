@@ -155,17 +155,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
-    {
-      '@type': 'Organization',
-      '@id': 'https://factoryjet.com/#organization',
-      name: 'FactoryJet',
-      url: 'https://factoryjet.com',
-      logo: 'https://factoryjet.com/logo.png',
-      sameAs: [
-        'https://www.linkedin.com/company/factoryjet',
-        'https://www.crunchbase.com/organization/factoryjet',
-      ],
-    },
+    { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
     {
       '@type': 'Service',
       '@id': `${CANONICAL}#service`,
@@ -177,6 +167,7 @@ const jsonLd = {
     },
     {
       '@type': 'LocalBusiness',
+      parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
       '@id': `${CANONICAL}#business`,
       name: 'FactoryJet Web Design London',
       url: CANONICAL,

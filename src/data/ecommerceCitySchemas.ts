@@ -81,25 +81,11 @@ function buildSchema(c: CitySchemaInput, faqs: readonly FAQItem[]): string {
         '@type': 'WebSite',
         '@id': 'https://factoryjet.com/#website',
         url: 'https://factoryjet.com/',
-        name: 'FactoryJet Technologies',
+        name: 'FactoryJet',
         publisher: { '@id': 'https://factoryjet.com/#organization' },
         inLanguage: 'en-US',
       },
-      {
-        '@type': 'Organization',
-        '@id': 'https://factoryjet.com/#organization',
-        name: 'FactoryJet Technologies',
-        url: 'https://factoryjet.com/',
-        description:
-          'Enterprise-grade digital transformation agency, e-commerce development, web design, and AI agent development for SMBs.',
-        sameAs: ['https://www.linkedin.com/company/factoryjet'],
-        contactPoint: {
-          '@type': 'ContactPoint',
-          contactType: 'sales',
-          availableLanguage: 'English',
-        },
-        
-      },
+      { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
       {
         '@type': 'Service',
         '@id': `${url}#service`,

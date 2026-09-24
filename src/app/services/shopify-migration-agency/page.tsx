@@ -339,12 +339,7 @@ const migrationPageSchema = {
       name: 'Enterprise Shopify Migration & Replatforming Services',
       description:
         'Enterprise Shopify Plus migration agency specializing in zero-downtime database ETL replatforming from Magento, WooCommerce, BigCommerce, and Salesforce to Shopify Plus with 100% SEO preservation.',
-      provider: {
-        '@type': 'Organization',
-        name: 'FactoryJet',
-        url: 'https://factoryjet.com',
-        logo: 'https://factoryjet.com/FinalLogo.svg',
-      },
+      provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
       serviceType: 'E-Commerce Development',
       areaServed: [
         { '@type': 'Country', name: 'United States' },

@@ -431,10 +431,10 @@ const FAQ_SCHEMA = {
 const LOCAL_BUSINESS_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
+  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
   name: 'FactoryJet - Salt Lake City E-Commerce Development Agency',
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
-  telephone: '+1-832-998-8422',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Salt Lake City',
@@ -461,7 +461,7 @@ const SERVICE_SCHEMA = {
   author: {
     '@type': 'Person',
     name: 'Bhavesh Barot',
-    jobTitle: 'Chief Technical Architect',
+    jobTitle: 'Founder & CEO',
     url: 'https://factoryjet.com/about',
     sameAs: [
       'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
@@ -469,11 +469,7 @@ const SERVICE_SCHEMA = {
     ],
   },
   name: 'Salt Lake City E-Commerce Development & Headless Shopify Plus Engineering',
-  provider: {
-    '@type': 'Organization',
-    name: 'FactoryJet',
-    url: 'https://factoryjet.com',
-  },
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   serviceType: 'Headless E-Commerce Development, Shopify Plus, BigCommerce B2B & ERP Integration',
   description:
     'Custom headless Next.js ecommerce engineering, Shopify Plus architectures, NetSuite ERP integrations, and sub-second performance for Utah brands.',
@@ -490,7 +486,7 @@ const WEBPAGE_SCHEMA = {
   author: {
     '@type': 'Person',
     name: 'Bhavesh Barot',
-    jobTitle: 'Chief Technical Architect',
+    jobTitle: 'Founder & CEO',
     url: 'https://factoryjet.com/about',
     sameAs: [
       'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',

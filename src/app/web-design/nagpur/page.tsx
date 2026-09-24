@@ -109,12 +109,12 @@ const webPageSchema = {
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
+  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
   '@id': 'https://factoryjet.com/web-design/nagpur#organization',
   name: 'FactoryJet',
   description:
     'Web design company in Nagpur building fast, SEO-optimized websites for logistics firms, MIHAN SEZ businesses, agri-exporters, MSME manufacturers, and growing Vidarbha region businesses. 7-day delivery guarantee.',
   url: 'https://factoryjet.com/web-design/nagpur',
-  telephone: '+919699977699',
   email: 'connect@factoryjet.com',
   areaServed: [
     { '@type': 'City', name: 'Nagpur' },

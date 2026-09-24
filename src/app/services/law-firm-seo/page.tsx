@@ -419,17 +419,7 @@ const schemaFAQ = {
   })),
 };
 
-const schemaOrganization = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization', '@id': 'https://factoryjet.com/#organization',
-  name: 'FactoryJet',
-  url: 'https://factoryjet.com',
-  logo: 'https://factoryjet.com/logo.png',
-  sameAs: [
-    'https://www.linkedin.com/company/factoryjet',
-    'https://www.crunchbase.com/organization/factoryjet',
-  ],
-};
+const schemaOrganization = { '@context': 'https://schema.org', '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' };
 
 /* ─────────────────────────────────────────────────────────────────────────────
    Page component

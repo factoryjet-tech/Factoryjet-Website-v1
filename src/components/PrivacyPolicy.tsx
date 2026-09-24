@@ -22,7 +22,6 @@ export default function PrivacyPolicy() {
         cin: 'U74999KA2020PTC140850',
         gstin: '29AAECF3218J1ZK',
         address: '70/1, Willow Herbs, Tigalarpalya, Kundalahalli, Bengaluru, Karnataka - 560037, India',
-        phone: '+91 96999 77699',
         hours: 'Monday to Friday, 10:00 AM - 6:00 PM IST',
         email: 'connect@factoryjet.com',
       },
@@ -136,7 +135,6 @@ export default function PrivacyPolicy() {
         cin: 'U74999KA2020PTC140850',
         gstin: '29AAECF3218J1ZK',
         address: '70/1, Willow Herbs, Tigalarpalya, Kundalahalli, Bengaluru, Karnataka - 560037, India',
-        phone: '+91 96999 77699',
         hours: 'Monday to Friday, 10:00 AM - 6:00 PM IST',
         email: 'connect@factoryjet.com',
       },
@@ -239,7 +237,7 @@ export default function PrivacyPolicy() {
                       <p><strong>GSTIN:</strong> <span className="font-mono">{section.company.gstin}</span></p>
                       <p><strong>Address:</strong> {section.company.address}</p>
                       <p><strong>Email:</strong> <a href={`mailto:${section.company.email}`} className="text-[#F05A28] font-mono hover:underline">{section.company.email}</a></p>
-                      <p><strong>Phone:</strong> <span className="font-mono">{section.company.phone}</span> ({section.company.hours})</p>
+                      <p><strong>Hours:</strong> {section.company.hours}</p>
                     </div>
                   )}
 

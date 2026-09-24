@@ -260,14 +260,7 @@ const webpageSchema = {
   publisher: { '@id': 'https://factoryjet.com/#organization' },
 };
 
-const orgSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
-  '@id': 'https://factoryjet.com/#organization',
-  name: 'FactoryJet',
-  url: 'https://factoryjet.com',
-  sameAs: ['https://www.linkedin.com/company/factoryjet'],
-};
+const orgSchema = { '@context': 'https://schema.org', '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' };
 
 const BREADCRUMB_ITEMS: BreadcrumbItem[] = [
   { name: 'Home', url: '/' },

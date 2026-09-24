@@ -107,45 +107,7 @@ const webPageSchema = {
   publisher: { '@id': 'https://factoryjet.com/#organization' },
 };
 
-const localBusinessSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  '@id': 'https://factoryjet.com/#organization',
-  name: 'FactoryJet',
-  description:
-    'Web design company in Rajkot building fast, SEO-optimized websites for auto component exporters, engineering manufacturers, foundry and casting units, pump and valve companies, and MSME businesses. 7-day delivery guarantee.',
-  url: 'https://factoryjet.com/web-design/rajkot',
-  telephone: '+919699977699',
-  email: 'connect@factoryjet.com',
-  areaServed: [
-    { '@type': 'City', name: 'Rajkot' },
-    { '@type': 'City', name: 'Gondal' },
-    { '@type': 'City', name: 'Morbi' },
-  ],
-  serviceType: 'Web Design and Development',
-  
-  hasOfferCatalog: {
-    '@type': 'OfferCatalog',
-    name: 'Web Design Services Rajkot',
-    itemListElement: [
-      {
-        '@type': 'Offer',
-        name: 'Starter Website',
-        description: '5-page business website, mobile-responsive, basic SEO, contact form.',
-      },
-      {
-        '@type': 'Offer',
-        name: 'Growth Website',
-        description: '10–15 page website with blog CMS, lead capture, GA4, and advanced SEO.',
-      },
-      {
-        '@type': 'Offer',
-        name: 'Custom Website',
-        description: 'Custom Next.js build with product catalogs, export portals, or API integrations for Rajkot manufacturers.',
-      },
-    ],
-  },
-};
+const localBusinessSchema = { '@context': 'https://schema.org', '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' };
 
 /* ─────────────────────────────────────────────────────────────────────────────
    Section data
