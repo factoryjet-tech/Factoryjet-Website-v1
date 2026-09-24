@@ -1,0 +1,14 @@
+Images for /uk/woocommerce, generated 2026-09-24
+Model: openai:gpt-image@2 (GPT Image 2) via Runware API, 1536x1024 PNG, resized with ImageMagick, converted with cwebp -q 82.
+All images reviewed at full size (hands, faces, on-screen text, brands) before use. First attempt accepted for both; none rejected.
+
+Shared style suffix:
+"Bright high-key commercial photography in a UK small business setting. Clean white and very light grey environment, large sunlit windows, abundant soft diffused daylight. Crisp sharp focus, deep depth of field. Airy, calm, confident mood. Accurate natural skin tones. Hands anatomically correct with exactly five natural fingers in relaxed natural poses. Exactly one warm orange object in frame as the only strong colour accent. Photorealistic, professional colour grading, no illustration."
+
+woocommerce-hero.webp (1400x933) and woocommerce-og.webp (1200x630, centre crop of the same image)
+Prompt: "A UK small business owner, a woman in her thirties with a canvas apron over a light jumper, sits beside a friendly male web developer in his thirties at a white workbench inside a bright workshop-style shop. Behind them, plain white wooden shelves hold handmade goods: ceramic bowls, candles in plain glass jars, folded linen and woven baskets, with no labels or packaging text. They look together at an open laptop showing a clean online shop layout made only of product photographs and blocks of soft colour, with no words and no numbers on screen. No logos anywhere, no real brand names, no signage. One orange ceramic vase on a shelf" + style suffix.
+Review: hands and faces correct; laptop screen shows only product photos and colour blocks, no text or numbers; no logos. Screen includes one orange colour block alongside the orange vase.
+
+woocommerce-developer.webp (1200x800)
+Prompt: "A male software developer in his forties with a short beard and a grey shirt sits at a tidy white desk in a bright UK office, focused on a large monitor showing abstract blocks of coloured code-like lines that are blurred and unreadable, with no words and no numbers legible anywhere on screen. A closed notebook and a small plant on the desk. Exactly one orange coffee mug on the desk. No logos, no real brand names" + style suffix.
+Review: both hands correct on keyboard; code is blurred and unreadable; no logos; one orange mug.

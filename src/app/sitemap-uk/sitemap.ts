@@ -71,6 +71,10 @@ const NATIONAL_SERVICE_PAGE_SLUGS = [
   'ai-receptionist',
   'ecommerce-consultant',
   'b2b-ecommerce',
+  // 2026-09-24: UK Wave 2 (gated terms).
+  'ai-development',
+  'shopify-plus',
+  'woocommerce',
 ] as const
 
 export default function sitemap(): MetadataRoute.Sitemap {

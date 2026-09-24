@@ -319,7 +319,9 @@ export default function AiAgentsUKPage() {
                 An AI development company takes a language model from a provider such as OpenAI, Anthropic, or
                 Google and builds the part your business actually needs around it: the connections to your
                 systems, the rules for what it may do alone, the testing on your real data, and the support after
-                launch. The model is bought. Everything that makes it useful to you is built.
+                launch. The model is bought. Everything that makes it useful to you is built. For AI work beyond
+                agents, such as integrating AI into your existing software or taking a pilot into production, see
+                our <a href="/uk/ai-development" style={{ textDecoration: 'underline' }}>AI development company page</a>.
               </p>
             </div>
             <p className="lead mt-8" style={{ maxWidth: 920 }}>
@@ -519,7 +521,9 @@ export default function AiAgentsUKPage() {
               <p className="lead mt-4">
                 UK buyers search for this work under several names: AI development company, AI development
                 services, agentic AI development, AI integration services. They mostly mean one of six things. Here
-                is each one in plain English, and what it looks like when we build it.
+                is each one in plain English, and what it looks like when we build it. For custom AI software,
+                AI integration and AI implementation projects, go to{' '}
+                <a href="/uk/ai-development" style={{ textDecoration: 'underline' }}>AI development services in the UK</a>.
               </p>
             </div>
             <ul className="col-3 mt-12">

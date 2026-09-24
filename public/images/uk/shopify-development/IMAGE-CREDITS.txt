@@ -1,0 +1,14 @@
+Images for /uk/shopify-development, generated 2026-09-24
+Model: openai:gpt-image@2 (GPT Image 2) via Runware API, 1536x1024 PNG, resized with ImageMagick, converted with cwebp -q 82.
+All images reviewed at full size, with hands and screen regions cropped and checked (hands, faces, on-screen text, brands). First attempt accepted for both; none rejected.
+
+Shared style suffix (same as /uk/magento):
+"Bright high-key commercial photography in a UK office. Clean white and very light grey environment, large sunlit windows, abundant soft diffused daylight. Crisp sharp focus, deep depth of field. Airy, calm, confident mood. Accurate natural skin tones. Hands anatomically correct with exactly five natural fingers in relaxed natural poses. Exactly one warm orange object in frame as the only strong colour accent. Photorealistic, professional colour grading, no illustration."
+
+shopify-development-hero.webp (1400x933) and shopify-development-og.webp (1200x630, centre crop of the same image)
+Prompt: "A Shopify developer in his thirties with a short beard and a light grey knitted jumper sits at a tidy white desk beside a woman in her forties, the owner of a small homeware brand, wearing a cream blouse. They look together at a large monitor showing a clean online shop product page for an invented homeware brand: a large photo of a ceramic vase, a few small product thumbnails and a plain add to basket button shape. No words and no numbers on screen, no logos, no real brand names. A laptop beside them shows blurred unreadable code. An orange ceramic mug on the desk." + style suffix.
+Review: hands correct (five fingers, natural), faces natural, button label is an illegible faint smudge, no brand, no prices.
+
+shopify-development-team.webp (1200x800)
+Prompt: "Two colleagues in a bright modern UK office stand at a large wall-mounted screen showing a simple wireframe of an online shop page made of plain grey boxes and image placeholders, no words and no numbers on screen. One woman in her thirties with dark curly hair gestures toward the screen with an open relaxed hand, a man in his fifties with glasses listens holding a closed notebook. An orange notebook on the table in front of them. No logos, no text anywhere." + style suffix.
+Review: open hand correct, no text on screen, no brands.

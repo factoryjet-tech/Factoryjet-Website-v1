@@ -38,13 +38,15 @@ const CITIES = [
   "plymouth",
 ];
 
-// 2026-09-24: all 16 UK hubs (ai-receptionist, b2b-ecommerce, ecommerce-consultant added in Wave 3). seo, local-seo and seo-audit were missing, so each
+// 2026-09-24: all 19 UK hubs (ai-receptionist, b2b-ecommerce, ecommerce-consultant added in Wave 3;
+// ai-development, shopify-plus, woocommerce in Wave 2). seo, local-seo and seo-audit were missing, so each
 // was linked from only 26-27 of the 33 other UK pages (measured on live HTML)
 // while every other hub had 33 of 33. ai-consulting and magento were added the
 // same day as new pages. Order leads with the two focus lines: AI agents, then
 // ecommerce.
 const SERVICES = [
   { name: "AI Agents",           slug: "ai-agents" },
+  { name: "AI Development",      slug: "ai-development" },
   { name: "AI Consulting",       slug: "ai-consulting" },
   { name: "AI Receptionist",     slug: "ai-receptionist" },
   // 2026-08-03: was `ecommerce`, which produced /uk/ecommerce. That URL has
@@ -55,6 +57,8 @@ const SERVICES = [
   { name: "B2B Ecommerce",       slug: "b2b-ecommerce" },
   { name: "Ecommerce Consultant", slug: "ecommerce-consultant" },
   { name: "Shopify Development", slug: "shopify-development" },
+  { name: "Shopify Plus",        slug: "shopify-plus" },
+  { name: "WooCommerce",         slug: "woocommerce" },
   { name: "Magento",             slug: "magento" },
   { name: "Web Design",          slug: "web-design" },
   { name: "SEO",                 slug: "seo" },

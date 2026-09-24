@@ -1,0 +1,14 @@
+Images for /uk/shopify-plus, generated 2026-09-24
+Model: openai:gpt-image@2 (GPT Image 2) via Runware API, 1536x1024 PNG, resized with ImageMagick, converted with cwebp -q 82, metadata stripped.
+All images reviewed at full size and with cropped close-ups of every hand (fingers, faces, on-screen content) before use. First attempt accepted for both; none rejected.
+
+Shared style suffix:
+"Bright high-key commercial photography in a UK workspace. Clean white and very light grey environment, large sunlit windows, abundant soft diffused daylight. Crisp sharp focus, deep depth of field. Airy, calm, confident mood. Accurate natural skin tones. Hands anatomically correct with exactly five natural fingers in relaxed natural poses. Exactly one warm orange object in frame as the only strong colour accent. Photorealistic, professional colour grading, no illustration."
+
+shopify-plus-hero.webp (1400x933) and shopify-plus-og.webp (1200x630, centre crop of the same image)
+Prompt: "A small UK direct-to-consumer homeware brand team of three in a bright white photo studio, a woman in her thirties and two colleagues standing at a desk reviewing an online storefront on a large monitor. The monitor shows a clean ecommerce product page layout with large product photos of ceramic vases and cushions, image tiles only, no words and no numbers on screen, no logos. Product samples and ceramic vases on a table nearby, one orange ceramic vase. Relaxed, engaged, one person pointing at the screen." + style suffix.
+Review: screen shows product photo tiles only, no text, no numbers, no logos. Hands and faces correct.
+
+shopify-plus-packing.webp (1200x800)
+Prompt: "A tidy packing station in a bright small UK warehouse unit: brown cardboard parcels and kraft paper mailers stacked neatly, tissue paper, a tape dispenser, a roll of plain unprinted labels, and an open laptop on the bench showing a simple order list layout made of grey bars and product thumbnails, no words and no numbers on screen, no logos and no brand names on any box. One orange tape dispenser. A person's hands folding tissue paper into a box, only hands and forearms visible." + style suffix.
+Review: laptop shows grey placeholder bars and thumbnails only, boxes unbranded, both hands five fingers.

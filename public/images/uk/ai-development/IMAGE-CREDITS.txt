@@ -1,0 +1,14 @@
+Images for /uk/ai-development, generated 2026-09-24
+Model: openai:gpt-image@2 (GPT Image 2) via Runware API, 1536x1024 PNG, resized with ImageMagick, converted with cwebp -q 82.
+All images reviewed at full size (hands, faces, on-screen text) before use. First attempt accepted for both; none rejected.
+
+Shared style suffix:
+"Bright high-key commercial photography in a UK office. Clean white and very light grey environment, large sunlit windows, abundant soft diffused daylight. Crisp sharp focus, deep depth of field. Airy, calm, confident mood. Accurate natural skin tones. Hands anatomically correct with exactly five natural fingers in relaxed natural poses. Exactly one warm orange object in frame as the only strong colour accent. Photorealistic, professional colour grading, no illustration."
+
+ai-development-hero.webp (1400x933) and ai-development-og.webp (1200x630, centre crop of the same image)
+Prompt: "A small UK team of two in a bright modern office: a software developer in his thirties with a short beard and a grey crew-neck jumper sits at a desk, and a business owner in her fifties with shoulder-length dark hair and a cream blazer leans in beside him, both looking at a large monitor and smiling slightly. The monitor shows a clean internal business tool made only of simple pale rectangles, cards and soft coloured blocks, no words and no numbers on screen, no logos. A laptop beside it is closed. One orange notebook on the desk" + style suffix.
+Review: hands correct (five fingers, natural poses), faces natural, screen shows only coloured blocks, no text, no logos.
+
+ai-development-engineer.webp (1200x800)
+Prompt: "A software engineer in her late twenties with curly auburn hair tied back and a white shirt sits at a tidy white desk with two monitors, typing on a keyboard. Both monitors show abstract layouts of pale grey and soft blue blocks and simple connected boxes, no words and no numbers on screen, no logos. One orange mug on the desk. Seen from a three-quarter angle behind her shoulder" + style suffix.
+Review: hands correct on keyboard, face in profile natural, monitors show only abstract blocks and lines (one small magnifier icon), no text, no logos.
