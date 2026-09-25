@@ -223,7 +223,7 @@ export default function BigThreeTrustBlock({
                 className="mt-1.5 font-fj-body text-fj-neutral-500"
                 style={{ fontSize: '0.8125rem', lineHeight: 1.55, fontWeight: 500 }}
               >
-                Custom web design, live in 7 days, or you don&apos;t pay
+                Custom websites up to 5 pages, live in 7 days
               </p>
             </div>
 

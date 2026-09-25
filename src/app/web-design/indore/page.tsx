@@ -224,7 +224,7 @@ const INDORE_FAQ_ITEMS = [
     category: 'pricing',
     question: '7 din mein website ban sakti hai kya?',
     answer:
-      'Haan, bilkul. FactoryJet ki 7-day delivery written contract mein hoti hai. Jab aap brand assets aur content ready karte ho, usi din se countdown shuru hota hai. Discovery, design, development, SEO, aur launch, sab 7 din mein. Agar deadline miss ho toh payment nahi dena padta.',
+      'Haan, bilkul. FactoryJet ki 7-day delivery written contract mein hoti hai. Jab aap brand assets aur content ready karte ho, usi din se countdown shuru hota hai. Discovery, design, development, SEO, aur launch, sab 7 din mein.',
   },
   {
     category: 'pricing',
@@ -703,7 +703,7 @@ export default function IndoreWebDesignPage() {
           pillars={[
             {
               icon: '⚡',
-              title: '7-day delivery. In writing. Or you do not pay.',
+              title: '7-day delivery. In writing.',
               body: "Indore's market moves fast, whether you are launching a new coaching batch in June or opening a Shopify store before Diwali. Waiting 10 weeks for an agency to deliver a website you briefed in September is not a plan, it is lost revenue. FactoryJet delivers in 7 days, with the delivery date written into the project agreement. We have delivered on time on 97% of all projects.",
             },
             {

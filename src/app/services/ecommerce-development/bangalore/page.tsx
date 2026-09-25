@@ -215,7 +215,7 @@ const BANGALORE_ECOM_FAQ_ITEMS = [
     category: 'pricing',
     question: 'What happens if my store is not ready in 7 days?',
     answer:
-      'If we miss the 7-day deadline for reasons within our control, we refund 20% of the project value automatically, no questions asked. We have delivered on time for 97% of all builds. The remaining 3% delays are almost always due to client-side delays in providing product images, content, or payment gateway credentials, which we flag upfront in the onboarding checklist.',
+      'We have delivered on time for 97% of all builds. When a build does run over, the cause is almost always a delay in receiving product images, content, or payment gateway credentials, which we flag upfront in the onboarding checklist.',
   },
 
   /* ── Platform & Tech ── */
@@ -574,7 +574,7 @@ export default function BangaloreEcommercePage() {
           pillars={[
             {
               icon: '⚡',
-              title: '7-day delivery. In writing. Or you do not pay the balance.',
+              title: '7-day delivery. In writing.',
               body: "Bangalore's market moves fast. Waiting 16 weeks for an agency to deliver a store you briefed in April is not a plan; it is a liability. FactoryJet delivers Shopify and WooCommerce stores in 7 days, with the delivery date written into the project agreement. We have delivered on time for 97% of all builds.",
             },
             {

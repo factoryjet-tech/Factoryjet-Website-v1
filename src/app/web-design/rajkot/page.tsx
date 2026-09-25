@@ -179,7 +179,7 @@ const RJT_FAQ_ITEMS = [
     category: 'pricing',
     question: 'What does 7-day delivery include?',
     answer:
-      'If we miss the agreed delivery date, you do not pay. The 7-day timeline covers the development phase we control, design, build, content, and launch. We have delivered on time on 97% of all projects.',
+      'The 7-day timeline covers the development phase we control, design, build, content, and launch. We have delivered on time on 97% of all projects.',
   },
 
   /* ── What's Included ── */
@@ -659,7 +659,7 @@ export default function RajkotWebDesignPage() {
           pillars={[
             {
               icon: '⚡',
-              title: '7-day delivery. In writing. Or you do not pay.',
+              title: '7-day delivery. In writing.',
               body: "Rajkot's engineering and manufacturing businesses operate on tight delivery schedules: the website should be no different. Waiting 12 weeks for a site briefed in March is not acceptable when the export season is already underway. FactoryJet delivers in 7 days, with the delivery date written into the project agreement. We have delivered on time on 97% of all projects.",
             },
             {

@@ -179,7 +179,7 @@ const TVM_FAQ_ITEMS = [
     category: 'pricing',
     question: 'What does 7-day delivery include?',
     answer:
-      'If we miss the agreed delivery date, you do not pay. The 7-day timeline covers the development phase we control, design, build, content, and launch. We have delivered on time on 97% of all projects.',
+      'The 7-day timeline covers the development phase we control, design, build, content, and launch. We have delivered on time on 97% of all projects.',
   },
 
   /* ── What's Included ── */
@@ -691,7 +691,7 @@ export default function ThiruvananthapuramWebDesignPage() {
           pillars={[
             {
               icon: '⚡',
-              title: '7-day delivery. In writing. Or you do not pay.',
+              title: '7-day delivery. In writing.',
               body: "Thiruvananthapuram's Technopark companies, government contractors, and startup founders move fast. Waiting 14 weeks for a website that should have been live in April is not acceptable when KSUM's demo day is in three weeks. FactoryJet delivers in 7 days, with the delivery date written into the project agreement. We have delivered on time on 97% of all projects.",
             },
             {

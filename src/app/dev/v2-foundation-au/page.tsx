@@ -153,7 +153,7 @@ export default function V2FoundationAUPage() {
         pillars={[
           { title: 'AI-native', body: 'Every site is built with AI-assisted workflow | compressing build time without compressing quality. We have run 500+ projects through this system.' },
           { title: 'Transparent', body: 'Pricing on the first call. No discovery fees, no "it depends" quotes that arrive three weeks later. Fixed price. Agreed up front.' },
-          { title: 'On time', body: "7-day delivery. If we miss the deadline, you don't pay. We have delivered on time on 97% of all projects." },
+          { title: 'On time', body: "7-day delivery. We have delivered on time on 97% of all projects." },
         ]}
       />
 

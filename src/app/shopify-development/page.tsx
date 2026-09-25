@@ -419,7 +419,7 @@ const SHOPIFY_FAQ_ITEMS = [
     category: 'cost',
     question: 'What does 7-day delivery include?',
     answer:
-      "7-day delivery covers standard Shopify theme builds and full store builds. The clock starts from design sign-off, not from the first call. If we miss the agreed delivery date, you do not pay for that phase. We have delivered on time on 97% of all projects. Shopify Plus and headless Hydrogen builds have longer, separately agreed timelines, but we still put them in writing.",
+      "7-day delivery covers standard Shopify theme builds and full store builds. The clock starts from design sign-off, not from the first call. We have delivered on time on 97% of all projects. Shopify Plus and headless Hydrogen builds have longer, separately agreed timelines, but we still put them in writing.",
   },
 
   /* ── India-Specific ── */

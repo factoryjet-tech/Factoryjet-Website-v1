@@ -316,7 +316,7 @@ const FAQ_ITEMS = [
   {
     category: 'process',
     question: 'How long does it take to build a real estate website?',
-    answer: "FactoryJet delivers custom real estate agent websites in 7 business days for sites up to 10 pages. Brokerage sites with team rosters take 14-21 days. Property management platforms with tenant/owner portals take 3-6 weeks. Timeline starts from design approval.",
+    answer: "FactoryJet delivers custom real estate agent websites in 7 business days for sites up to 5 pages. Brokerage sites with team rosters take 14-21 days. Property management platforms with tenant/owner portals take 3-6 weeks. Timeline starts from design approval.",
   },
   {
     category: 'process',
@@ -570,7 +570,7 @@ export default function RealEstateWebsiteDesignPage() {
               { item: 'Buyer & seller resource pages', note: 'Content that converts fence-sitters' },
               { item: 'CRM integration', note: 'Follow Up Boss, HubSpot, and more' },
               { item: 'On-page SEO setup', note: 'Schema markup, meta, Search Console' },
-              { item: '7-day delivery', note: 'Agent sites up to 10 pages' },
+              { item: '7-day delivery', note: 'Agent sites up to 5 pages' },
             ].map(({ item, note }) => (
               <div key={item} className="flex items-start gap-3 py-2 border-t border-fj-charcoal/10 first:border-0">
                 <div className="w-2 h-2 rounded-full bg-[#F05A28] mt-1.5 shrink-0" />
@@ -640,7 +640,7 @@ export default function RealEstateWebsiteDesignPage() {
         leadParagraphs={[
           "FactoryJet builds real estate websites for agents, teams, and brokerages in every US market. Our SEO work is US-market-specific, we research neighborhood-level search terms in your city and build pages that target them.",
           "We've built sites for agents in competitive markets including Austin, Miami, Denver, Nashville, Charlotte, Portland, Raleigh, and Tampa. Each market has different neighborhood vocabulary, different search intent patterns, and different IDX providers, we know the nuances.",
-          "7-day delivery applies to agent sites up to 10 pages. Every site includes the same fixed-price package: IDX integration, neighborhood pages, lead capture, CRM connection, and on-page SEO setup.",
+          "7-day delivery applies to agent sites up to 5 pages. Every site includes the same fixed-price package: IDX integration, neighborhood pages, lead capture, CRM connection, and on-page SEO setup.",
         ]}
         stats={MARKET_STATS}
       />
