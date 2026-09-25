@@ -3,6 +3,21 @@
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap, ScrollTrigger } from "@/lib/gsap";
+import { JetBrains_Mono } from "next/font/google";
+
+// Self-hosted via next/font (was a <link rel="stylesheet"> to
+// fonts.googleapis.com in src/app/uk/page.tsx). That link sat in <body> above
+// the hero, so the browser held back painting the hero (the LCP text) until a
+// third-party stylesheet arrived over a fresh DNS/TLS connection. next/font
+// serves the same face from our own origin; preload:false keeps the woff2 off
+// the critical path since this ticker is far below the fold.
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  display: "swap",
+  preload: false,
+  fallback: ["ui-monospace", "SFMono-Regular", "Menlo", "monospace"],
+});
 
 // ── Tech badge data (verbatim from content.md) ───────────────────────────────
 type Tech = {
@@ -363,7 +378,7 @@ export default function TechStack() {
           style={{
             width: "max-content",
             fontFamily:
-              "var(--font-mono, 'JetBrains Mono'), ui-monospace, SFMono-Regular, Menlo, monospace",
+              `var(--font-mono, ${jetbrainsMono.style.fontFamily}), ui-monospace, SFMono-Regular, Menlo, monospace`,
             fontSize: 14.5,
             letterSpacing: "0.01em",
           }}

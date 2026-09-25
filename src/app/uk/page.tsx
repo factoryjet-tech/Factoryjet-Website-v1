@@ -40,8 +40,9 @@ export default function UKPage() {
 
       {/* LCP image preload, homepage hero only (moved out of the shared UK layout) */}
       <link rel="preload" as="image" type="image/webp" href="/images/uk/hero-uk.webp" fetchPriority="high" />
-      {/* JetBrains Mono, used by the TechStack section on this page */}
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" />
+      {/* JetBrains Mono for the TechStack ticker is self-hosted via next/font
+          inside ./sections/TechStack.tsx. Do NOT re-add a fonts.googleapis.com
+          <link> here: in <body> above the hero it blocks the hero (LCP) paint. */}
 
       {/* JSON-LD: Organization, Service ×4, FAQPage, BreadcrumbList */}
       {ukSchemas.map((s) => (

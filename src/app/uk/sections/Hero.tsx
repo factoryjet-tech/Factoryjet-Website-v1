@@ -76,14 +76,11 @@ export default function Hero() {
         });
       }
 
-      // 3. Subhead
-      gsap.from(subheadRef.current, {
-        y: 24,
-        autoAlpha: 0,
-        duration: 0.8,
-        delay: 0.9,
-        ease: "power3.out",
-      });
+      // 3. Subhead: intentionally NOT animated. Its first <p> is the page's
+      //    LCP element. The old gsap.from({ autoAlpha: 0, delay: 0.9 }) hid it
+      //    after hydration and revealed it ~1.7s later, which pushed LCP past
+      //    the reveal on slow phones where hydration lands before first paint.
+      //    subheadRef is kept for layout parity; do not re-add an entrance.
 
       // 4. CTAs, fromTo so the final state is guaranteed even if the tween is
       //    interrupted (HMR, fast refresh, StrictMode double-invoke).

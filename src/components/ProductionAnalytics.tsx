@@ -54,13 +54,51 @@ export default function ProductionAnalytics() {
     // Guard against double-load
     if (document.querySelector('script[data-fj-gtm]')) return;
 
-    (w.dataLayer as unknown[]).push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+    // Load GTM once the page has finished its own work: after window load, when the
+    // browser is idle (at most 2 s later). A tap, key press or scroll loads it at once,
+    // so a visitor who acts early (or converts) is never missed. dataLayer pushes made
+    // before this point (page_view, lead events) are queued and replayed by GTM.
+    const events = ['pointerdown', 'keydown', 'scroll', 'touchstart'] as const;
+    let idleId: number | undefined;
+    let timeoutId: ReturnType<typeof setTimeout> | undefined;
 
-    const gtm = document.createElement('script');
-    gtm.async = true;
-    gtm.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-PKWD8SHF';
-    gtm.setAttribute('data-fj-gtm', '1');
-    document.head.appendChild(gtm);
+    const load = () => {
+      cleanup();
+      if (document.querySelector('script[data-fj-gtm]')) return;
+      (w.dataLayer as unknown[]).push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+      const gtm = document.createElement('script');
+      gtm.async = true;
+      gtm.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-PKWD8SHF';
+      gtm.setAttribute('data-fj-gtm', '1');
+      document.head.appendChild(gtm);
+    };
+
+    // Two animation frames guarantee the first paint has happened before GTM starts,
+    // so its ~350 KB of scripts never compete with the hero text (LCP) on slow phones.
+    const scheduleIdle = () => {
+      requestAnimationFrame(() =>
+        requestAnimationFrame(() => {
+          if ('requestIdleCallback' in window) {
+            idleId = window.requestIdleCallback(load, { timeout: 2000 });
+          } else {
+            timeoutId = setTimeout(load, 1500);
+          }
+        }),
+      );
+    };
+
+    function cleanup() {
+      events.forEach((e) => window.removeEventListener(e, load));
+      window.removeEventListener('load', scheduleIdle);
+      if (idleId !== undefined && 'cancelIdleCallback' in window) window.cancelIdleCallback(idleId);
+      if (timeoutId !== undefined) clearTimeout(timeoutId);
+    }
+
+    events.forEach((e) => window.addEventListener(e, load, { once: true, passive: true }));
+    if (document.readyState === 'complete') scheduleIdle();
+    else window.addEventListener('load', scheduleIdle, { once: true });
+
+    return cleanup;
   }, []);
 
   // 2. Client-side App Router Pageview Tracking (fixes SPA "(not set)" landing pages)
