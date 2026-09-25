@@ -1,0 +1,26 @@
+Images for /au/ai-receptionist, generated 2026-09-25
+Model: openai:gpt-image@2 (GPT Image 2) via Runware API, 1536x1024 PNG, resized/cropped with ImageMagick, converted with cwebp -q 82.
+All five images reviewed at full size plus cropped close-ups (hands, faces, screens, signage, logos). First attempt accepted for all five; none rejected.
+
+Shared style suffix:
+"Bright high-key commercial photography in Australia. Natural Australian daylight, clean light environment, crisp sharp focus, deep depth of field. Airy, calm, confident mood. Accurate natural skin tones. Hands anatomically correct with exactly five natural fingers in relaxed natural poses. Exactly one warm orange object in frame as the only strong colour accent. Photorealistic, professional colour grading, no illustration. No text, no logos, no signage lettering, no real brand names, no words and no numbers on any screen or surface."
+
+ai-receptionist-hero.webp (1400x933) and ai-receptionist-og.webp (1200x630, centre crop of the same image)
+Prompt: "Over-the-shoulder style three-quarter view of an Australian plumber in his late thirties, wearing a hi-vis orange work shirt and navy work shorts, standing beside an open white work van (ute-style tradie van with no markings) in the driveway of a suburban Brisbane house with a gum tree and a brick home behind. He holds a smartphone to his ear with one hand, smiling and listening, the other hand resting on a closed toolbox on the van floor. Blue sky, bright midday sun." + style suffix.
+Review: Hands correct (five fingers on phone hand and toolbox hand), natural face, van unmarked, no text or logos anywhere, suburban Brisbane brick home and gum tree read as Australian. Multiple orange items (hi-vis shirt and toolbox) accepted as on-theme.
+
+ai-receptionist-clinic.webp (1200x800)
+Prompt: "Over-the-shoulder camera from behind and slightly to the side of a receptionist in her forties with short grey-blonde hair, wearing a slim phone headset and a sage green top, seated at the front desk of a bright Melbourne physiotherapy clinic. Her monitor faces her and the camera sees it at an angle from behind her shoulder: it shows only a simple calendar grid of soft coloured blocks, no words and no numbers. She smiles while greeting a patient who stands at the counter in front of her. Timber counter, white walls, indoor plants, large window, an orange water bottle on the desk." + style suffix.
+Review: Screen faces the receptionist and is seen over her shoulder; shows only coloured calendar blocks, no words or numbers. Hands correct. Small dark plaque above doorway is blank. No logos.
+
+ai-receptionist-dental.webp (1200x800)
+Prompt: "A dental practice manager in her thirties with long dark hair tied back, wearing navy scrubs, stands behind the front counter of a modern Sydney dental practice, reading a smartphone held in her hand, looking at it calmly. The phone screen faces her, not the camera. Behind her a bright, clean reception with pale timber, white cabinets and a large window with harbour-city daylight. A small orange succulent pot on the counter." + style suffix.
+Review: Phone screen faces her, not the camera. Hands correct. City skyline is generic, no identifiable landmarks or signage. No logos or text.
+
+ai-receptionist-workshop.webp (1200x800)
+Prompt: "A small business owner, a woman in her fifties who runs a café, sits at a timber table in a bright Adelaide café after hours with a FactoryJet consultant, a man in his thirties in a plain light blue shirt. Both look at a whiteboard propped on an easel beside them, on which the consultant has drawn a simple flow of empty boxes joined by arrows, with no writing at all. The owner holds a smartphone face down on the table. Coffee cups, a potted plant, an orange ceramic jug. Both people are beside the whiteboard, facing it, seen from a side angle." + style suffix.
+Review: Both people sit beside the whiteboard and face it; whiteboard shows three empty boxes and arrows, no writing. Hands correct. Phone face down. Shirt carries no logo despite the prompt naming FactoryJet.
+
+ai-receptionist-lawfirm.webp (1200x800)
+Prompt: "Over-the-shoulder camera from behind a lawyer in her forties with shoulder-length auburn hair, in a navy blazer, seated at a desk in a bright small Perth law office, looking at her laptop. The laptop screen faces her and is seen at an angle from behind her shoulder: it shows only soft grey placeholder blocks and lines, no words and no numbers. Bookshelves with plain unmarked spines, a large window with city daylight, an orange notebook on the desk, a desk phone beside the laptop." + style suffix.
+Review: Over-the-shoulder: laptop faces her; screen shows grey placeholder blocks only, no words or numbers. Book spines unmarked. Desk phone display blank. Hands correct.

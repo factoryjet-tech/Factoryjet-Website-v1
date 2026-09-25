@@ -1,0 +1,26 @@
+Images for /au (FactoryJet Australia hub), generated 2026-09-25
+Model: openai:gpt-image@2 (GPT Image 2) via Runware API, 1536x1024 PNG, resized with ImageMagick, converted with cwebp -q 82.
+All images reviewed at full size for hands, faces, garbled text, real logos and screen geometry. First attempt accepted for all six; none rejected.
+AI-generated people (permitted per CLAUDE.md, ban lifted 2026-08-03). None resembles an identifiable real person.
+
+Shared style suffix:
+"Bright high-key commercial photography in Australia, natural warm Australian daylight. Clean white and very light grey environment, large sunlit windows. Crisp sharp focus, deep depth of field. Airy, calm, confident mood. Accurate natural skin tones. Hands anatomically correct with exactly five natural fingers in relaxed natural poses. Exactly one warm orange object in frame as the only strong colour accent. No words, no letters and no numbers anywhere in the image, no logos, no real brand names. Photorealistic, professional colour grading, no illustration."
+
+au-hub-hero.webp (1400x933) and au-hub-og.webp (1200x630, centre crop). Review: over-the-shoulder, laptop screen faces both people; screen shows coloured blocks and a room photo, no text. Sydney Harbour Bridge visible through window (a landmark, not a logo). Hands correct.
+Prompt: "Over-the-shoulder camera angle from behind two people seated side by side at a white table in a bright Sydney office with tall windows and green trees outside. A woman business owner in her forties with dark curly hair and a man in his thirties in a light blue shirt both look at an open laptop in front of them; the laptop screen faces them and the camera sees it from behind their shoulders. The screen shows a simple website layout made of soft coloured rectangles and a large photo block, with no words and no numbers on screen. Paper notes with sketches of boxes on the table, an orange coffee cup" + style suffix.
+
+au-hub-ecommerce.webp (1200x800). Review: plain unlabelled cartons, no text; she is packing, not looking at the tablet; tablet angled toward her side. Hands correct.
+Prompt: "A smiling woman in her thirties with a ponytail and a green apron packing an order into a plain brown cardboard box on a clean wooden packing bench in a bright small Melbourne warehouse, white shelving with neat plain unlabelled cartons behind her, daylight from a roller door, a tablet on a stand beside her turned toward her, an orange roll of tape on the bench" + style suffix.
+
+au-hub-ai-agents.webp (1200x800). Review: monitor faces the seated man (camera over his shoulder); colleague stands beside the monitor, not behind it. Screen is grey chat bubbles, no words. Hands correct.
+Prompt: "Over-the-shoulder camera angle from behind a man in his fifties with grey stubble and a navy polo shirt sitting at a desk in a bright Brisbane office with timber details and indoor plants. He looks at a large monitor in front of him that faces him; the screen shows a simple chat interface made of rounded speech-bubble shapes and grey bars with no words and no numbers. A colleague stands beside him, leaning in and smiling, pointing at the screen. An orange notebook on the desk" + style suffix.
+
+au-hub-web-design.webp (1200x800). Review: camera behind both people, monitor faces them; layout of image blocks, no text. Pinned sheets show colour swatches only. Hands correct.
+Prompt: "A web designer woman in her twenties with short blonde hair and a man client in his forties with glasses seated together at a standing-height white desk in a bright Melbourne design studio with exposed brick painted white. Camera behind and slightly to the side of them, looking over their shoulders at a large monitor that faces them, showing a clean website page layout in soft colours with image blocks and button shapes, no words and no numbers on screen. Printed layout sketches pinned on a board, one orange chair" + style suffix.
+
+au-hub-ai-search.webp (1200x800). Review: over-the-shoulder, phone screen faces her; grey bars and a map pin, no words. Hands correct.
+Prompt: "Over-the-shoulder camera angle from behind a smiling cafe owner in her thirties with olive skin and dark hair tied back, standing at the counter of a bright Adelaide cafe with white tiles, pastries under a glass dome and indoor plants. She holds a smartphone in front of her with the screen facing her; the camera sees the screen from behind her shoulder, showing a simple search results layout of grey bars and a small map shape, no words and no numbers. An orange ceramic cup on the counter" + style suffix.
+
+au-hub-how-we-work.webp (1200x800). Review: tablet back faces the camera, he reads it; ute has no lettering. Hands correct.
+Prompt: "A tradesman in his forties with a short beard in a navy work shirt stands beside his plain white ute with no lettering on a sunny leafy Australian suburban street with a weatherboard house behind. He holds a tablet in both hands with the screen facing himself, reading it with a slight smile, camera positioned to his side so the back of the tablet faces the camera. An orange toolbox on the ute tray" + style suffix.
+

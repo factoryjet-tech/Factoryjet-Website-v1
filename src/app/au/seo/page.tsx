@@ -16,7 +16,7 @@ import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import AuthorCard from '@/components/v2/AuthorCard';
 import CityLinksAU from '@/components/v2/CityLinksAU';
-import AuSubpageHeader from '@/app/au/components/SubpageHeader';
+import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import { AU_FOOTER_COLUMNS } from '@/data/auFooterColumns';
 
@@ -150,7 +150,7 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <AuSubpageHeader current="/au/seo" />
+      <SiteHeader locale="au" logoHref="/au" />
 
       <AuSeoPage>
         <Breadcrumbs items={CRUMBS} />

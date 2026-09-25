@@ -435,3 +435,184 @@ export const UK_SIMPLE_MENUS: SimpleMenu[] = [
     feature: { image: '/images/menu/menu-web-design-model.webp', kicker: 'Talk to us', title: 'Talk to the founder', body: 'Bhavesh reads every request and replies within 24 hours on business days.', href: '/contact', cta: 'Start a conversation' },
   },
 ];
+
+/**
+ * Australia mega menu data (2026-09-25). Same four hubs and structure as the
+ * US and UK menus. AU pages first (/au/...), shared non-US pages otherwise.
+ * Website Design has no AU detail page: the /au hub covers it.
+ */
+export const AU_SERVICE_HUBS: ServiceHub[] = [
+  {
+    key: 'ecommerce', title: 'E-Commerce', rail: 'Stores, B2B portals, platforms, marketplaces',
+    hub: '/au/ecommerce-development', hubLabel: 'Explore E-Commerce',
+    summary: 'Ecommerce development for Australian DTC and B2B brands, on the platform that fits your catalogue and budget.',
+    columns: [
+      { heading: 'Build & run', kind: 'rich', items: [
+        { icon: Store, label: 'E-Commerce Development', href: '/au/ecommerce-development' },
+        { icon: ShoppingBag, label: 'Shopify Development', href: '/au/shopify-development' },
+        { icon: Layers, label: 'Omnichannel Commerce', href: '/omnichannel-commerce' },
+        { icon: ShoppingCart, label: 'Agentic Commerce', href: '/agentic-commerce' },
+        { icon: Wrench, label: 'Store Support & Maintenance', href: '/services/shopify-maintenance-services' },
+      ] },
+      { heading: 'Platforms', kind: 'compact', items: [
+        { label: 'Commerceflo', href: '/commerceflo', badge: 'Our platform' },
+        { label: 'Shopify & Shopify Plus', href: '/au/shopify-development' },
+        { label: 'Adobe Commerce (Magento)', href: '/services/magento-development' },
+        { label: 'WooCommerce', href: '/services/woocommerce-development' },
+        { label: 'BigCommerce', href: '/bigcommerce-development' },
+        { label: 'Headless Commerce', href: '/headless-commerce' },
+      ], more: { label: 'Compare platforms', href: '/best-ecommerce-platforms' } },
+      { heading: 'Marketplaces & migration', kind: 'compact', items: [
+        { label: 'Amazon Agency', href: '/services/amazon-agency' },
+        { label: 'TikTok Shop Agency', href: '/services/tiktok-shop-agency' },
+        { label: 'Replatforming', href: '/replatforming' },
+        { label: 'B2B E-Commerce', href: '/b2b-ecommerce' },
+      ] },
+    ],
+    feature: { image: '/images/menu/menu-ecommerce.webp', kicker: 'Guide', title: 'Best ecommerce agencies in Australia', body: 'How Australian small businesses compare ecommerce agencies, and what to ask.', href: '/blog/best-ecommerce-agency-small-business-australia-2026', cta: 'Read the guide' },
+    note: { lead: 'Not sure where to start?', label: 'Talk to the founder', href: '/contact' },
+  },
+  {
+    key: 'ai', title: 'AI Agent Development', rail: 'Custom agents wired into your systems',
+    hub: '/au/ai-agents', hubLabel: 'Explore AI Agent Development',
+    summary: 'Custom AI agents built into your CRM, accounting, store and support desk, with a person approving anything that matters.',
+    columns: [
+      { heading: 'Build', kind: 'rich', items: [
+        { icon: Bot, label: 'AI Agents & Automation', href: '/au/ai-agents' },
+        { icon: Plug, label: 'AI Development & Integration', href: '/au/ai-development' },
+        { icon: Compass, label: 'AI Consulting', href: '/au/ai-consulting' },
+        { icon: Mic, label: 'AI Receptionist', href: '/au/ai-receptionist' },
+        { icon: MessageSquare, label: 'AI Chatbot Development', href: '/services/ai-chatbot-development' },
+        { icon: Activity, label: 'AI Agent Monitoring', href: '/services/ai-agent-monitoring' },
+      ] },
+      { heading: 'By job', kind: 'compact', items: [
+        { label: 'AI Customer Support Agents', href: '/services/ai-customer-support-agents' },
+        { label: 'AI SDR & BDR Agents', href: '/services/ai-sdr' },
+        { label: 'AI Voice Agents', href: '/services/ai-agent-development/ai-voice-agent' },
+        { label: 'AI Scheduling Agent', href: '/services/ai-agent-development/ai-scheduling-agent' },
+        { label: 'AI Workflow Automation', href: '/services/ai-workflow-automation' },
+      ] },
+      { heading: 'By industry', kind: 'compact', items: [
+        { label: 'Manufacturing', href: '/services/manufacturing-ai-agents' },
+        { label: 'Healthcare', href: '/services/healthcare-ai-agents' },
+        { label: 'Legal', href: '/services/legal-ai-agents' },
+        { label: 'Property Management', href: '/services/property-management-ai-agents' },
+        { label: 'Real Estate', href: '/services/ai-agents-for-real-estate' },
+      ] },
+    ],
+    feature: { image: '/images/menu/menu-ai-agents.webp', kicker: 'Free tool', title: 'AI Agent ROI Calculator', body: 'Estimate the payback on an agent before you commit to building one.', href: '/tools/ai-agent-roi-calculator', cta: 'Run the numbers' },
+    note: { lead: 'Have a workflow in mind?', label: 'Scope your AI agent', href: '/contact' },
+  },
+  {
+    key: 'web', title: 'Website Design & Development', rail: 'Custom sites, redesigns, web apps',
+    hub: '/au', hubLabel: 'Explore Website Design',
+    summary: 'Custom websites for Australian businesses: fast, easy to update, and readable by Google and AI assistants.',
+    columns: [
+      { heading: 'Services', kind: 'rich', items: [
+        { icon: LayoutTemplate, label: 'Web Design Australia', href: '/au' },
+        { icon: RefreshCw, label: 'Website Redesign', href: '/services/website-redesign' },
+        { icon: Globe, label: 'WordPress Development', href: '/services/wordpress-development' },
+        { icon: Code2, label: 'Web Application Development', href: '/services/web-application-development' },
+        { icon: Building2, label: 'B2B Website Design', href: '/services/b2b-website-design' },
+      ] },
+      { heading: 'Australian cities', kind: 'compact', items: [
+        { label: 'Melbourne', href: '/au/melbourne' },
+        { label: 'Brisbane', href: '/au/brisbane' },
+        { label: 'Adelaide', href: '/au/adelaide' },
+        { label: 'Canberra', href: '/au/canberra' },
+      ] },
+      { heading: 'Australian guides', kind: 'compact', items: [
+        { label: 'Best web design companies', href: '/blog/best-web-design-companies-small-business-australia' },
+        { label: 'Best WordPress developers', href: '/blog/best-wordpress-development-companies-australia-2026' },
+        { label: 'Best ecommerce agencies', href: '/blog/best-ecommerce-agency-small-business-australia-2026' },
+      ] },
+    ],
+    feature: { image: '/images/menu/menu-web-design-model.webp', kicker: 'Guide', title: 'Best web design companies in Australia', body: 'How Australian small businesses choose a web design company.', href: '/blog/best-web-design-companies-small-business-australia', cta: 'Read the guide' },
+    note: { lead: 'Planning a new site?', label: 'Talk to the founder', href: '/contact' },
+  },
+  {
+    key: 'seo', title: 'AI Search & SEO', rail: 'Get cited by AI, rank on Google',
+    hub: '/au/seo', hubLabel: 'Explore AI Search & SEO',
+    summary: 'Get named when Australian buyers ask ChatGPT, Claude, Gemini, Perplexity or Google AI Overviews, and keep ranking in classic search.',
+    columns: [
+      { heading: 'AI search & SEO', kind: 'rich', items: [
+        { icon: Sparkles, label: 'AI SEO & GEO Australia', href: '/au/ai-seo' },
+        { icon: Search, label: 'SEO Services Australia', href: '/au/seo' },
+        { icon: BarChart3, label: 'AI Visibility Checker', href: '/ai-visibility-checker', badge: 'Free' },
+        { icon: ClipboardCheck, label: 'AI Citation Study', href: '/ai-citation-study' },
+      ] },
+      { heading: 'By focus', kind: 'compact', items: [
+        { label: 'E-commerce SEO', href: '/services/ecommerce-seo' },
+        { label: 'Shopify SEO', href: '/services/shopify-seo' },
+        { label: 'Local SEO', href: '/services/local-seo' },
+      ] },
+    ],
+    feature: { image: '/images/menu/menu-ai-search-model.webp', kicker: 'Free tool', title: 'Does AI recommend you?', body: 'See which brands ChatGPT, Perplexity and AI Overviews name in your category.', href: '/ai-visibility-checker', cta: 'Check for free' },
+    note: { lead: 'Want a second opinion?', label: 'Talk to the founder', href: '/contact' },
+  },
+];
+
+export const AU_SIMPLE_MENUS: SimpleMenu[] = [
+  {
+    key: 'industries', label: 'Industries',
+    columns: [
+      { heading: 'Commerce', kind: 'rich', items: [
+        { icon: Store, label: 'DTC & E-Commerce Brands', href: '/au/ecommerce-development' },
+        { icon: Building2, label: 'B2B, Wholesale & Distributors', href: '/b2b-ecommerce' },
+        { icon: Factory, label: 'Manufacturers', href: '/ecommerce-for-manufacturers' },
+        { icon: ShoppingCart, label: 'Marketplace Sellers', href: '/services/amazon-agency' },
+      ] },
+      { heading: 'AI agents by industry', kind: 'compact', items: [
+        { label: 'Trades & Field Services', href: '/au/ai-receptionist' },
+        { label: 'Manufacturing', href: '/services/manufacturing-ai-agents' },
+        { label: 'Healthcare', href: '/services/healthcare-ai-agents' },
+        { label: 'Legal', href: '/services/legal-ai-agents' },
+        { label: 'Real Estate', href: '/services/ai-agents-for-real-estate' },
+      ] },
+      { heading: 'Websites by industry', kind: 'compact', items: [
+        { label: 'Law Firms', href: '/services/law-firm-website-design' },
+        { label: 'Manufacturing', href: '/services/manufacturing-website-design' },
+        { label: 'SaaS', href: '/services/saas-website-design' },
+        { label: 'Nonprofits', href: '/services/nonprofit-website-design' },
+      ] },
+    ],
+    feature: { image: '/images/menu/menu-ecommerce.webp', kicker: 'Case studies', title: 'Commerce we have built and launched', body: 'B2B wholesale, DTC plus trade, and AI agent work.', href: '/case-studies', cta: 'See the work' },
+  },
+  {
+    key: 'resources', label: 'Resources',
+    columns: [
+      { heading: 'Learn', kind: 'rich', items: [
+        { icon: BookOpen, label: 'Blog', href: '/blog' },
+        { icon: Star, label: 'Case Studies', href: '/case-studies' },
+        { icon: LayoutTemplate, label: 'Portfolio', href: '/portfolio' },
+        { icon: BarChart3, label: 'AI Citation Study', href: '/ai-citation-study' },
+      ] },
+      { heading: 'Australian guides', kind: 'compact', items: [
+        { label: 'Best ecommerce agencies in Australia', href: '/blog/best-ecommerce-agency-small-business-australia-2026' },
+        { label: 'Best web design companies in Australia', href: '/blog/best-web-design-companies-small-business-australia' },
+        { label: 'Best WordPress developers in Australia', href: '/blog/best-wordpress-development-companies-australia-2026' },
+        { label: 'How to build an AI agent', href: '/blog/how-to-build-an-ai-agent-uk-2026' },
+      ] },
+      { heading: 'Free tools', kind: 'compact', items: [
+        { label: 'AI Visibility Checker', href: '/ai-visibility-checker' },
+        { label: 'AI Agent ROI Calculator', href: '/tools/ai-agent-roi-calculator' },
+        { label: 'Ecommerce Speed Calculator', href: '/ecommerce-speed-calculator' },
+        { label: 'Glossary', href: '/glossary' },
+        { label: 'FAQ', href: '/faq' },
+      ] },
+    ],
+    feature: { image: '/images/menu/menu-ai-search-model.webp', kicker: 'Free tool', title: 'Does AI recommend you?', body: 'See which brands AI assistants name in your category.', href: '/ai-visibility-checker', cta: 'Check for free' },
+  },
+  {
+    key: 'company', label: 'Company',
+    columns: [
+      { heading: 'Company', kind: 'rich', items: [
+        { icon: User, label: 'About FactoryJet', href: '/about' },
+        { icon: Globe, label: 'FactoryJet Australia', href: '/au' },
+        { icon: Star, label: 'Case Studies', href: '/case-studies' },
+        { icon: Mail, label: 'Contact', href: '/contact' },
+      ] },
+    ],
+    feature: { image: '/images/menu/menu-web-design-model.webp', kicker: 'Talk to us', title: 'Talk to the founder', body: 'Bhavesh reads every request and replies within 24 hours on business days.', href: '/contact', cta: 'Start a conversation' },
+  },
+];

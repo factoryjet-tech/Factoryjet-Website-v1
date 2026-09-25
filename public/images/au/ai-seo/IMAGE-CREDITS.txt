@@ -1,0 +1,26 @@
+Images for /au/ai-seo, generated 2026-09-25
+Model: openai:gpt-image@2 (GPT Image 2) via Runware API, 1536x1024 PNG, resized and cropped with ImageMagick (-strip), converted with cwebp -q 82.
+All images reviewed at full size for hands, faces, garbled text, real logos and screen geometry. First attempt accepted for all four source images; none rejected.
+
+Shared style suffix:
+"Bright high-key commercial photography in Australia, natural Australian daylight, clean white and light timber interiors, large sunlit windows. Crisp sharp focus, deep depth of field. Calm, confident mood. Accurate natural skin tones. Hands anatomically correct with exactly five natural fingers in relaxed poses. Exactly one warm orange object in frame as the only strong colour accent. No logos, no brand names, no readable text or numbers anywhere, all screens show only soft abstract shapes and blank bars with no words and no numbers. Photorealistic, professional colour grading, no illustration."
+
+ai-seo-hero.webp (1400x933) and ai-seo-og.webp (1200x630, centre crop of the same image)
+Prompt: "Over-the-shoulder camera view from behind two people seated at a white desk in a bright Sydney office with harbour-side windows. A woman marketing manager in her thirties and a male specialist in his forties both look at the same laptop screen that faces them ... The screen shows a simple chat-style layout of soft grey rounded blocks and blank bars, no words and no numbers. She points calmly at the screen with an open hand. An orange notebook on the desk." + style suffix.
+Review: camera behind both people, laptop screen faces them (correct geometry). Screen shows blank grey bubbles only, no text or numbers. Open hand has five fingers, natural. Faces in profile, no artifacts. Harbour Bridge and Opera House visible through window (landmarks, no logos). Laptop has no visible brand mark.
+
+ai-seo-tradie.webp (1200x800)
+Prompt: "Over-the-shoulder camera view from the back seat of a white work van parked on a sunny suburban Brisbane street. A tradesman in his thirties in a navy work polo sits in the driver seat holding a smartphone in his right hand, looking down at it, the phone screen faces him ... a chat layout with soft grey rounded bubbles and blank bars, no words and no numbers. An orange high-visibility vest folded on the passenger seat." + style suffix.
+Review: right-hand-drive cab (correct for Australia). Phone faces the driver, seen from behind his shoulder. Screen blank grey bubbles, no text. Hand holding phone correct. No vehicle badge or logo visible; dashboard screen is blank.
+
+ai-seo-workshop.webp (1200x800)
+Prompt: "Two colleagues in a bright Melbourne office with timber floors stand at a large whiteboard covered in rows of blank pale yellow sticky notes arranged in columns, with simple hand-drawn arrows and boxes but no writing at all. A woman in her fifties with short silver hair places a blank sticky note while a younger man holds an orange marker pen and listens ... A laptop on a nearby table is closed." + style suffix.
+Review: every sticky note blank, arrows only, no writing. Hands correct (placing note; holding marker). Faces natural. Closed laptop, no logo.
+
+ai-seo-warehouse.webp (1200x800)
+Prompt: "A small online homewares business owner, a woman in her forties, packs an order at a clean timber packing bench in a bright Melbourne warehouse with shelves of neutral boxed products and cardboard cartons with no labels or printing. A colleague in his twenties beside her holds a tablet angled toward himself ... A single orange roll of packing tape on the bench." + style suffix.
+Review: tablet screen is angled toward the man who is reading it (correct geometry); visible edge shows blank grey bars only. Cartons unprinted. Hands correct on both people. No logos.
+
+2026-09-25 (orchestrator review): ai-seo-warehouse.webp REPLACED. The first version showed the tablet screen
+angled toward the camera while the man looked at it from the side. Regenerated with openai:gpt-image@2
+using an over-the-shoulder camera so the screen faces him and the viewer. Reviewed at full size.

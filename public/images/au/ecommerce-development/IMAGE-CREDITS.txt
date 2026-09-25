@@ -1,0 +1,22 @@
+Images for /au/ecommerce-development, generated 2026-09-25
+Model: openai:gpt-image@2 (GPT Image 2) via Runware API, 1536x1024 PNG, resized/cropped with ImageMagick (-strip), converted with cwebp -q 82.
+All images reviewed at full size plus zoomed crops of every hand before use. All four accepted on the first attempt.
+
+Shared style suffix (AU suffix used across the AU build):
+"Bright high-key commercial photography in Australia. Clean white and light timber interior, large windows, abundant soft natural Australian daylight. Crisp sharp focus, deep depth of field. Airy, calm, confident mood. Accurate natural skin tones. Hands anatomically correct with exactly five natural fingers in relaxed natural poses. Exactly one warm orange object in frame as the only strong colour accent. No readable text anywhere, no logos, no brand names. Photorealistic, professional colour grading, no illustration."
+
+ecommerce-development-hero.webp (1400x933) and ecommerce-development-og.webp (1200x630, centre crop of the same image)
+Prompt: "Over-the-shoulder view from behind and slightly to the side of a woman in her late thirties with dark wavy hair, wearing a cream linen shirt, sitting at a pale timber desk in the bright office of a Melbourne homewares brand. She looks at an open laptop whose screen faces her and the camera from behind her shoulder, showing a simple abstract online store layout of soft beige product image tiles and light grey blocks, with no words and no numbers on screen. Beside the desk, open shelving holds folded cushions and plain ceramic vases in neutral tones. Large window with soft morning light. An orange ceramic mug on the desk." + style suffix.
+Review: screen faces her (over-the-shoulder), shows six product photo tiles only, no words or numbers; both hands on keyboard with correct fingers; face in profile natural; no logos (laptop lid not visible); OG crop keeps head, laptop and mug.
+
+ecommerce-development-packing.webp (1200x800)
+Prompt: "A bright, tidy small ecommerce fulfilment room in a Sydney warehouse unit. A young man with short curly hair in a grey t-shirt and a woman in her forties with a blonde ponytail in a navy apron pack plain unbranded kraft cardboard boxes at a long white packing bench, both looking down at their work and smiling slightly. Neat shelves of plain unlabelled boxes behind them. One roll of orange packing tape on the bench. No labels, no printed text, no shipping logos anywhere." + style suffix.
+Review: four hands checked zoomed, five fingers each; faces natural; boxes plain, no labels or courier logos; smartwatch face blank.
+
+ecommerce-development-trade.webp (1200x800)
+Prompt: "Over-the-shoulder view in a bright Brisbane wholesale showroom with polished concrete floor and pale timber shelving of plain unbranded ceramic and textile samples. A trade customer, a man in his fifties with grey hair wearing a light blue work shirt, holds a tablet whose screen faces him, and a younger woman sales rep in a dark green polo stands beside him, both looking down at the tablet. The tablet screen shows a simple abstract grid of light grey rows and small coloured squares, with no words and no numbers. She holds an orange folder." + style suffix.
+Review: tablet screen faces both people, camera behind them; screen shows grey bars and colour swatches only; hands on tablet and folder correct; no text, no logos on shelves.
+
+ecommerce-development-planning.webp (1200x800)
+Prompt: "A small planning workshop in a bright Sydney office with white walls and timber table. A woman in her thirties with short black hair and a man in his forties with glasses stand at a large whiteboard, both facing the whiteboard, sketching simple wireframe boxes, arrows and empty rectangles for a website layout, with no words and no numbers written anywhere. Seen from a side angle so both faces are partly visible in profile. Sticky notes on the board are blank. An orange marker in the woman's hand." + style suffix.
+Review: whiteboard holds boxes, arrows and blank rectangles only, no writing; sticky notes blank; writing hand zoomed, correct grip and fingers; man's hands relaxed and correct; closed laptop on table shows no logo.

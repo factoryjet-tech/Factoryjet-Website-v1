@@ -1,0 +1,22 @@
+Images for /au/ai-agents, generated 2026-09-25
+Model: openai:gpt-image@2 (GPT Image 2) via Runware API, 1536x1024 PNG, resized/cropped with ImageMagick (-strip), converted with cwebp -q 82.
+All four source images reviewed at full size plus zoomed crops (hands, faces, on-screen content, screen geometry, logos, stray text). First attempt accepted for all four; none rejected.
+
+Shared style suffix:
+"Bright high-key commercial photography in Australia, natural Australian daylight, clean white and very light grey surroundings, crisp sharp focus, deep depth of field, airy calm confident mood, accurate natural skin tones, hands anatomically correct with exactly five natural fingers in relaxed poses, exactly one warm orange object in frame as the only strong colour accent. No logos, no brand names, no readable text anywhere. Photorealistic, professional colour grading, no illustration."
+
+ai-agents-hero.webp (1400x933) and ai-agents-og.webp (1200x630, crop of the same image, biased 20px from top so the standing man's head is not clipped)
+Prompt: "Over-the-shoulder camera view from behind and slightly to the side of an Australian operations manager, a woman in her forties with shoulder-length brown hair and a light linen shirt, seated at a tidy white desk in a bright Sydney office with harbour-side light through large windows. She faces a large monitor that faces her and the camera from behind her shoulder; the monitor shows a simple workflow diagram of rounded coloured boxes joined by lines, with no words and no numbers on screen. A male colleague in his thirties stands beside her, leaning in and pointing at the screen with a relaxed open hand. A potted plant and an orange ceramic mug on the desk." + style suffix
+Review: screen faces the seated woman (camera over her shoulder); colleague beside her, not behind the screen. Screen shows coloured boxes only, no words or numbers. Pointing hand and keyboard hand both five fingers, natural. Harbour Bridge and Opera House visible through the window (landmarks, no logos or text).
+
+ai-agents-tradie.webp (1200x800)
+Prompt: "An Australian tradesman in his thirties, a plumber wearing a navy work shirt with high-visibility orange stripes, stands beside the open side door of a plain white work van on a leafy suburban Brisbane street on a sunny morning. He holds a smartphone in one hand, looking down at it with a small satisfied smile; the phone screen faces him and is not visible to the camera. Neatly organised tools and pipe fittings on shelves inside the van. Blue sky, jacaranda tree in the background. The high-visibility stripes are the orange accent." + style suffix
+Review: phone back faces camera, screen faces him. Hand holding phone correct; other hand in pocket. No text on van or shirt. Orange toolbox in van is a second orange accent; acceptable.
+
+ai-agents-warehouse.webp (1200x800)
+Prompt: "Inside a bright, clean Australian ecommerce warehouse in Melbourne with tall white shelving and neatly stacked cardboard parcels. Over-the-shoulder camera view from behind a young woman warehouse coordinator in a grey t-shirt holding a tablet at chest height; the tablet screen faces her and the camera from behind, showing a simple grid of coloured tiles with no words and no numbers. A colleague in the background pushes a trolley of parcels. Skylights let in soft daylight. One orange parcel tape dispenser on a packing bench." + style suffix
+Review: tablet faces her, shows coloured tiles only. Both hands on tablet correct. Box labels are small blank white rectangles, no legible text. Background worker natural.
+
+ai-agents-workshop.webp (1200x800)
+Prompt: "A small process-mapping workshop in a bright Melbourne office meeting room. A software engineer in his thirties in a white shirt stands at a large whiteboard drawing a simple flowchart of empty boxes connected by arrows with no writing at all. A clinic owner, a woman in her fifties with short silver hair, and a younger colleague sit at a white table watching and smiling, with a closed laptop and paper notebooks. Large windows with city light. The engineer holds an orange marker pen." + style suffix
+Review: whiteboard has empty boxes and arrows only. Laptop closed. Hands (marker hand, pen hand, clasped hands) all correct. No logos.

@@ -49,11 +49,11 @@ import { useContactModal } from '../../context/ContactModalContext';
 import type { ModalRegion } from '../../context/ContactModalContext';
 import Wordmark from './Wordmark';
 import { MegaNavDesktop, MegaNavMobile } from './MegaNav';
-import { UK_SERVICE_HUBS, UK_SIMPLE_MENUS } from './megaNavData';
+import { AU_SERVICE_HUBS, AU_SIMPLE_MENUS, UK_SERVICE_HUBS, UK_SIMPLE_MENUS } from './megaNavData';
 
 // ─── Locale type ──────────────────────────────────────────────────────────────
 
-export type SiteHeaderLocale = 'us' | 'gb' | 'in' | 'uae';
+export type SiteHeaderLocale = 'us' | 'gb' | 'au' | 'in' | 'uae';
 
 // ─── US nav data ──────────────────────────────────────────────────────────────
 
@@ -300,6 +300,13 @@ const GB_KNOWLEDGE_HUB = [
   { icon: Layers,        label: 'Glossary',     href: '/glossary',     desc: 'Commerce & AI terms defined' },
 ] as const;
 
+const AU_LOCATIONS = [
+  { label: 'Melbourne', state: 'VIC', href: '/au/melbourne' },
+  { label: 'Brisbane',  state: 'QLD', href: '/au/brisbane' },
+  { label: 'Adelaide',  state: 'SA',  href: '/au/adelaide' },
+  { label: 'Canberra',  state: 'ACT', href: '/au/canberra' },
+];
+
 const GB_LOCATIONS = [
   { label: 'London',     state: 'ENG', href: '/uk/london' },
   { label: 'Manchester', state: 'ENG', href: '/uk/manchester' },
@@ -452,6 +459,24 @@ const LOCALE_CONFIG = {
     modalRegion:     'uk' as ModalRegion,
     defaultCtaLabel: 'Talk to the Founder',
   },
+  // 2026-09-25: Australia uses the four-hub mega menu (AU_SERVICE_HUBS); these
+  // values only feed the shared CTA and modal region.
+  au: {
+    webServices:     GB_SUPPORT_SERVICES,
+    aiServices:      US_AI_SERVICES,
+    locations:       AU_LOCATIONS,
+    locationsLabel:  'Australian Cities We Serve',
+    portfolioHref:   '/portfolio',
+    pricingHref:     '/pricing',
+    aboutHref:       '/about',
+    featuredHeadline:'One system, every channel',
+    featuredBody:    'One catalog, one inventory, and one order engine across your store, marketplaces, and B2B.',
+    featuredStats:   ['DTC + B2B on one system', 'A decade-plus building commerce', 'You own what we build'],
+    featuredCtaLabel:'Explore commerce solutions',
+    featuredCtaHref: '/omnichannel-commerce',
+    modalRegion:     'au' as ModalRegion,
+    defaultCtaLabel: 'Talk to the Founder',
+  },
   in: {
     webServices:     IN_WEB_SERVICES,
     aiServices:      IN_AI_AGENTS,
@@ -557,11 +582,12 @@ export default function SiteHeader({
   // Commerce-first locales (US + UK) share the Solutions/Platforms/Services/
   // Who-we-serve/Company mega structure. Non-commerce locales (India/UAE) keep
   // the simpler Services + Locations layout.
-  const isCommerce = locale === 'us' || locale === 'gb';
+  const isCommerce = locale === 'us' || locale === 'gb' || locale === 'au';
   // US and UK use the four-hub mega menu (MegaNav.tsx), UK with its own links
   // (megaNavData UK_*). India and UAE keep the legacy menus.
-  const useMegaNav = locale === 'us' || locale === 'gb';
-  const megaData = locale === 'gb' ? { hubs: UK_SERVICE_HUBS, menus: UK_SIMPLE_MENUS } : {};
+  const useMegaNav = locale === 'us' || locale === 'gb' || locale === 'au';
+  const megaData = locale === 'gb' ? { hubs: UK_SERVICE_HUBS, menus: UK_SIMPLE_MENUS }
+    : locale === 'au' ? { hubs: AU_SERVICE_HUBS, menus: AU_SIMPLE_MENUS } : {};
   const SOLUTIONS   = locale === 'gb' ? GB_SOLUTIONS          : US_SOLUTIONS;
   const SOLUTIONS_CORE = locale === 'gb' ? GB_SOLUTIONS_CORE : US_SOLUTIONS_CORE;
   const SOLUTIONS_MARKETPLACES = locale === 'gb' ? GB_SOLUTIONS_MARKETPLACES : US_SOLUTIONS_MARKETPLACES;

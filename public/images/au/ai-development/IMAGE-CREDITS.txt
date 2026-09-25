@@ -1,0 +1,22 @@
+Images for /au/ai-development, generated 2026-09-25
+Model: openai:gpt-image@2 (GPT Image 2) via Runware API, 1536x1024 PNG, resized/cropped with ImageMagick, converted with cwebp -q 82.
+All images reviewed at full size (hands, faces, on-screen text, logos, screen geometry). First attempt accepted for all four; none rejected.
+
+Shared style suffix:
+"Bright high-key commercial photography in Australia. Clean white and light timber interior, large windows, abundant soft natural Australian daylight. Crisp sharp focus, deep depth of field. Airy, calm, confident mood. Accurate natural skin tones. Hands anatomically correct with exactly five natural fingers in relaxed natural poses. Exactly one warm orange object in frame as the only strong colour accent. No readable text anywhere, no logos, no brand names. Photorealistic, professional colour grading, no illustration."
+
+ai-development-hero.webp (1400x933) and ai-development-og.webp (1200x630 centre crop)
+Prompt: "Over-the-shoulder camera angle from behind two people in a bright Sydney office with harbour-side light: a software developer in his thirties with short dark hair and a navy t-shirt sits at a light timber desk, and a business owner in her forties with sun-streaked blonde hair and a white linen shirt leans in beside him. Both face a large monitor that faces them and away from us at a slight angle, so we see the screen over their shoulders. The monitor shows a clean internal business tool made only of pale rectangles, cards and soft blue blocks, no words and no numbers on screen. A potted fiddle-leaf fig by the window. One orange ceramic mug on the desk." + style suffix.
+Review: over-the-shoulder, monitor faces both people; hands natural (five fingers); screen shows only pale blocks, no text or numbers; monitor has no logo; Sydney Harbour Bridge and Opera House visible through window as location cue (landmarks, not brands).
+
+ai-development-engineer.webp (1200x800)
+Prompt: "Three-quarter over-the-shoulder view from behind an AI engineer in her late twenties with black hair in a low bun and a light grey knit top, sitting at a tidy white desk in a Melbourne warehouse-conversion office with exposed brick and tall steel windows. She faces two monitors that face her; we see the screens over her shoulder. The monitors show abstract diagrams of simple connected boxes and lines in pale grey and soft blue, no words and no numbers on screen. Her hands rest on a keyboard. One orange notebook beside the keyboard." + style suffix.
+Review: over-the-shoulder, both monitors face her; hands on keyboard natural; screens show abstract box diagrams only, no text; no logos on monitors or keyboard.
+
+ai-development-warehouse.webp (1200x800)
+Prompt: "A bright Brisbane wholesale warehouse with tall racking of plain unbranded cardboard cartons and natural light from high skylights. A warehouse manager in his fifties with a grey beard and a high-visibility vest over a polo shirt stands in the aisle holding a tablet, looking down at it. Camera is behind and slightly to the side of his shoulder so the tablet screen faces him and we glimpse it over his shoulder; the tablet shows only simple pale cards and soft coloured blocks, no words and no numbers. One orange safety helmet on a nearby shelf." + style suffix.
+Review: camera behind his shoulder, tablet faces him; both hands natural; tablet shows coloured blocks only; cartons unbranded; blurred window pattern at back checked at 200% zoom, not readable text.
+
+ai-development-pilot.webp (1200x800)
+Prompt: "A small pilot review meeting in a bright Perth office with light timber and white walls: three colleagues sit around a round white table, a woman in her thirties with curly brown hair in a green blouse, a man in his twenties of South Asian heritage in a white shirt, and a man in his sixties with glasses and a cardigan. They are talking and looking at each other, one gesturing at printed pages of plain coloured bar shapes with no words or numbers. A closed laptop on the table. No screens visible. One orange folder on the table." + style suffix.
+Review: no screens facing anyone (laptop closed); faces natural for all three; hands correct including pointing hand; printed pages show coloured bars with faint illegible marks at 200% zoom, no readable words or numbers.

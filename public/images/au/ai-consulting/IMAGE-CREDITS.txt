@@ -1,0 +1,17 @@
+Images for /au/ai-consulting. Generated 2026-09-25 with Runware, model openai:gpt-image@2 (GPT Image 2), 1536x1024 PNG, first attempt each.
+Reviewed at full size plus cropped close-ups of every hand: five fingers, natural poses. Faces natural, no artefacts. No logos, no readable text; sticky notes, checklist and whiteboard boxes are blank.
+Screen geometry: readiness (laptop) and build (tablet) are over-the-shoulder shots; each screen faces the people using it, and shows only abstract pale shapes with no words or numbers. Hero and workshop have no open screens.
+No person resembles an identifiable real individual. Post-processing: ImageMagick resize/crop + strip, cwebp -q 82.
+Style suffix appended to every prompt: Bright high-key commercial photography in a modern Australian workplace. Clean white and very light grey environment, large sunlit windows, abundant soft natural Australian daylight. Crisp sharp focus with deep depth of field. Airy, calm, confident mood. Accurate natural skin tones, natural relaxed faces. Hands anatomically correct with exactly five natural fingers in relaxed natural poses. Exactly one warm orange object in frame as the only strong colour accent. Photorealistic, no illustration, no robots, no glowing effects, no circuit boards, no logos, no readable text anywhere, no words and no numbers on any screen or paper.
+
+ai-consulting-hero.webp (1400x933) and ai-consulting-og.webp (1200x630, centre crop of the same source)
+Prompt: An AI consultant in a navy knit jumper and the owner of a small Australian business in a linen shirt sitting side by side at a pale timber meeting table, both smiling and looking down at a large sheet of paper covered in blank coloured sticky notes arranged in three neat columns, the owner pointing at one sticky note, a closed laptop beside them, an orange ceramic mug on the table, bright Sydney office with gum trees and blue sky visible through tall windows.
+
+ai-consulting-readiness.webp (1200x800)
+Prompt: Over-the-shoulder view from behind two colleagues seated at a desk in a bright Melbourne warehouse office, a woman operations manager and a male consultant, both looking at a laptop screen that faces them and away from the camera side angle so the screen shows only simple abstract pale coloured blocks and shapes, a printed checklist sheet with blank tick boxes on the desk, shelving with cardboard boxes softly visible through a glass wall, an orange folder on the desk.
+
+ai-consulting-workshop.webp (1200x800)
+Prompt: A small AI strategy workshop of four colleagues in a bright white meeting room in Melbourne, one person standing at a whiteboard drawing a simple flow of four empty rectangular boxes joined by arrows with no writing inside, the other three seated at a white table with notebooks, relaxed and engaged, one orange chair among white chairs, daylight from tall windows with a leafy street outside.
+
+ai-consulting-build.webp (1200x800)
+Prompt: Over-the-shoulder view of a software engineer and a distribution business owner standing together in a bright Brisbane warehouse, both looking down at a tablet held by the engineer with its screen facing them, the screen showing only simple abstract pale shapes, neat racking and cardboard cartons behind them, natural light from high skylights, the owner wearing an orange hi-vis vest as the only strong colour.

@@ -17,26 +17,48 @@ import type { SiteFooterColumn } from '@/components/v2/SiteFooter';
  *   import { AU_FOOTER_COLUMNS } from '@/data/auFooterColumns';
  *   <SiteFooter linkColumns={AU_FOOTER_COLUMNS} />
  */
+// 2026-09-25: repointed at the AU build (7 new /au pages + the /au hub).
+// Every link below is an AU page or a shared non-US page; keep it that way.
 export const AU_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
   {
-    heading: 'Services',
+    heading: 'E-Commerce & Web',
     links: [
-      { label: 'Web Design',               href: '/services/web-design' },
-      { label: 'Website Development',      href: '/services/web-application-development' },
-      { label: 'Ecommerce Web Design',     href: '/services/ecommerce-development' },
-      { label: 'Shopify Developers',       href: '/services/shopify-development' },
-      { label: 'SEO Services',             href: '/services/ai-seo' },
-      { label: 'AI SEO & AI Agents',       href: '/services/ai-agent-development' },
+      { label: 'Ecommerce Development',    href: '/au/ecommerce-development' },
+      { label: 'Shopify Development',      href: '/au/shopify-development' },
+      { label: 'Web Design Australia',     href: '/au' },
+      { label: 'Website Redesign',         href: '/services/website-redesign' },
+      { label: 'WordPress Development',    href: '/services/wordpress-development' },
+    ],
+  },
+  {
+    heading: 'AI & Search',
+    links: [
+      { label: 'AI Agents & Automation',   href: '/au/ai-agents' },
+      { label: 'AI Development',           href: '/au/ai-development' },
+      { label: 'AI Consulting',            href: '/au/ai-consulting' },
+      { label: 'AI Receptionist',          href: '/au/ai-receptionist' },
+      { label: 'AI SEO & GEO',             href: '/au/ai-seo' },
+      { label: 'SEO Services',             href: '/au/seo' },
+    ],
+  },
+  {
+    heading: 'Australia',
+    links: [
+      { label: 'FactoryJet Australia',     href: '/au' },
+      { label: 'Melbourne',                href: '/au/melbourne' },
+      { label: 'Brisbane',                 href: '/au/brisbane' },
+      { label: 'Adelaide',                 href: '/au/adelaide' },
+      { label: 'Canberra',                 href: '/au/canberra' },
     ],
   },
   {
     heading: 'Company',
     links: [
+      { label: 'About',                    href: '/about' },
       { label: 'Case Studies',             href: '/case-studies' },
       { label: 'Blog',                     href: '/blog' },
-      { label: 'FAQ',                      href: '/au#faq' },
-      { label: 'WhatsApp Us',              href: 'https://wa.me/919699977699?text=Hi%20FactoryJet%2C%20I%27m%20interested%20in%20a%20website%20for%20my%20Australian%20business.' },
-      { label: 'connect@factoryjet.com',   href: 'mailto:connect@factoryjet.com' },
+      { label: 'Contact',                  href: '/contact' },
+      { label: 'WhatsApp Us',              href: 'https://wa.me/919699977699?text=Hi%20FactoryJet%2C%20I%27m%20interested%20in%20working%20with%20you%20on%20my%20Australian%20business.' },
     ],
   },
 ];

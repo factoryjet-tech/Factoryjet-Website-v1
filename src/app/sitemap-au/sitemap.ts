@@ -22,6 +22,13 @@ const SITE_URL = 'https://factoryjet.com'
  */
 const CITY_PAGES = ['brisbane', 'melbourne', 'adelaide', 'canberra'] as const
 
+// 2026-09-25: AU build from AU-MARKET-RESEARCH-2026-09-25.md (AI and ecommerce
+// searches that are winnable without a Maps pack).
+const SERVICE_PAGES = [
+  'ai-agents', 'ai-consulting', 'ai-development', 'ai-receptionist', 'ai-seo',
+  'shopify-development', 'ecommerce-development',
+] as const
+
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
@@ -36,6 +43,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.8,
     },
+    ...SERVICE_PAGES.map((slug) => ({
+      url: `${SITE_URL}/au/${slug}`,
+      lastModified: getFileLastMod(`src/app/au/${slug}/page.tsx`),
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    })),
     ...CITY_PAGES.map((slug) => ({
       url: `${SITE_URL}/au/${slug}`,
       lastModified: getFileLastMod(`src/app/au/${slug}/page.tsx`),

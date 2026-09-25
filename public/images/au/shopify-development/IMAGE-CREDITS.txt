@@ -1,0 +1,22 @@
+Images for /au/shopify-development, generated 2026-09-25
+Model: openai:gpt-image@2 (GPT Image 2) via Runware API, 1536x1024 JPG, resized/cropped with ImageMagick, converted with cwebp -q 82, metadata stripped.
+All images reviewed at full size plus zoomed crops of every hand, face and screen before use. First attempt accepted for all four source images; none regenerated.
+
+Shared style suffix:
+"Bright high-key commercial photography in Australia, natural Australian daylight, clean white and light timber interior, large sunlit windows, crisp sharp focus. Calm, confident mood. Accurate natural skin tones. Hands anatomically correct with exactly five natural fingers in relaxed poses. Exactly one warm orange object in frame as the only strong colour accent. No logos, no brand names, no readable text anywhere. Any screen shows only simple product photo tiles and shapes with no words and no numbers. Photorealistic, professional colour grading, no illustration."
+
+shopify-development-hero.webp (1400x933) and shopify-development-og.webp (1200x630, centre crop of the same image)
+Prompt: "Over-the-shoulder view from behind two people seated side by side at a light timber table in a bright Sydney studio office: a woman in her thirties who owns a skincare brand and a male Shopify developer in his forties with a short beard. Both face a laptop whose screen faces them and the camera behind them, showing an online store layout of simple product photo tiles of small skincare bottles. Their faces are seen in three-quarter profile, relaxed and engaged. A few real skincare bottles sit on the table beside an orange notebook." + style suffix.
+Review: over-the-shoulder camera, the laptop screen faces the two people (geometry correct). Screen shows six product photo tiles, no words or numbers. The man's hand on the trackpad has five natural fingers. Faces natural, three-quarter profile. Sydney Harbour Bridge visible through the window (a landmark, not a brand). Skincare bottles carry no labels.
+
+shopify-development-warehouse.webp (1200x800)
+Prompt: "A small Australian ecommerce warehouse in Brisbane with open roller door and bright daylight: a young woman in a plain grey t-shirt packs an order into a plain brown cardboard box at a packing bench, a stack of plain unbranded satchels beside her, shelving of plain boxes behind. A handheld barcode scanner rests on the bench. An orange tape dispenser on the bench. No labels with text, no courier branding." + style suffix.
+Review: both hands correct inside the box. Monitor at left faces the camera but the person stands beside it, not behind it (geometry correct); it shows product tiles only, no text. Satchels and boxes are plain, no courier branding, no labels.
+
+shopify-development-build.webp (1200x800)
+Prompt: "Over-the-shoulder view from behind a woman developer in her late twenties with dark hair tied back, sitting at a desk in a bright Melbourne office. Her two monitors face her and the camera behind her: the left shows blurred abstract coloured lines of code that cannot be read, the right shows a simple mobile store layout of product photo tiles. A colleague stands beside her pointing at the right monitor. An orange coffee cup on the desk. Screens face the people." + style suffix.
+Review: both monitors face the seated developer (over-the-shoulder, geometry correct). Code screen is small unreadable coloured lines. Pointing hand correct. Handbag tile has a tiny plain clasp, no logo.
+
+shopify-development-integrations.webp (1200x800)
+Prompt: "Three people in a bright Perth meeting room with ocean-light windows standing around a large whiteboard covered in simple hand-drawn boxes and arrows with no writing, mapping how an online store connects to accounting, stock and shipping. One man in a navy shirt holds an orange marker and points at a box, a woman in a linen blazer and an older man listen and smile. A closed laptop on the table. No text on the whiteboard." + style suffix.
+Review: whiteboard boxes and arrows carry no writing. Marker hand correct. The source frame had a tablet in the bottom-left corner showing text-like shapes; it was cropped out (1440x960 crop from x=96, y=0, then resized). Ocean light through windows reads as Perth coast.
