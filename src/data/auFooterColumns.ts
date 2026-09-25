@@ -25,9 +25,8 @@ export const AU_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
     links: [
       { label: 'Ecommerce Development',    href: '/au/ecommerce-development' },
       { label: 'Shopify Development',      href: '/au/shopify-development' },
-      { label: 'Web Design Australia',     href: '/au' },
-      { label: 'Website Redesign',         href: '/services/website-redesign' },
-      { label: 'WordPress Development',    href: '/services/wordpress-development' },
+      { label: 'Web Design Australia',     href: '/au#web-design' },
+      { label: 'Website Cost',             href: '/au#website-cost' },
     ],
   },
   {

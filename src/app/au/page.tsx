@@ -110,7 +110,7 @@ const FAQ_CATEGORIES = [
 const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   // ── Working with FactoryJet ──
   { category: 'about', question: 'Is FactoryJet an Australian company?',
-    answer: 'FactoryJet is a services company founded in 2014, with a senior engineering team based in India, and we work with businesses in Australia, the US and the UK. For Australian clients everything runs remotely: calls are booked in your time zone, work is shared in writing, and the founder, Bhavesh Barot, stays involved from the first call to launch and beyond.' },
+    answer: 'FactoryJet is a services company founded in 2014, and we work with businesses in Australia, the US and the UK. For Australian clients everything runs remotely: calls are booked in your time zone, work is shared in writing, and the founder, Bhavesh Barot, stays involved from the first call to launch and beyond.' },
   { category: 'about', question: 'Do you work with businesses anywhere in Australia?',
     answer: 'Yes. We work with businesses in every state and territory, from Sydney, Melbourne and Brisbane to Perth, Adelaide, Hobart, Darwin and regional towns. Calls are scheduled in your hours, whether you run on AEST, ACST or AWST. None of our services needs anyone on-site, so a business in Toowoomba gets the same senior team as one in the Sydney CBD.' },
   { category: 'about', question: 'Who will I actually deal with?',
@@ -782,7 +782,7 @@ export default function AustraliaHubPage() {
                 <span className="eyebrow">How we work with Australian businesses</span>
                 <h2>Time zones, invoices and Australian privacy law, handled</h2>
                 <ul className="int-group mt-6">
-                  <li><b>Your time zone.</b> Calls are booked in your hours, whether you are on AEST, ACST or AWST. Our senior engineering team works from India, which sits a few hours behind the east coast, so our working day overlaps with your afternoon and progress is often waiting for you the next morning.</li>
+                  <li><b>Your time zone.</b> Calls are booked in your hours, whether you are on AEST, ACST or AWST. Work is shared in writing, so you always know what has moved and what is next.</li>
                   <li><b>Written, fixed-scope quotes.</b> A fixed price per stage, agreed before work starts. No hourly billing and no surprise change requests.</li>
                   <li><b>Clear invoices.</b> Itemised invoices per stage that your bookkeeper can match in Xero or MYOB. We confirm how GST applies to our invoices for your business before you sign.</li>
                   <li><b>GST on what we build.</b> Your store and your forms handle GST properly for your customers: GST-inclusive prices, tax invoices with your ABN, and reports your accountant can use.</li>

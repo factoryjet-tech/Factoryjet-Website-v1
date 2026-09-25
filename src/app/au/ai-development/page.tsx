@@ -96,7 +96,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'choosing', question: 'How do I choose an AI development company in Australia?',
     answer: 'Ask to see AI systems they have put live, not demos. Ask who will write the code and whether the same team supports it after launch. Confirm you will own the code, prompts and data. Ask how they measure accuracy, how they handle the Privacy Act and where your data will be hosted, and when they would tell you to buy a tool instead. Clear answers to all of these are a good sign.' },
   { category: 'choosing', question: 'Are you an Australian company?',
-    answer: 'No, and we would rather say so up front. FactoryJet is headquartered in Bengaluru, India, and works with Australian businesses remotely. What we offer is a senior team, the founder involved on every project, systems hosted in Australian cloud regions where your data needs it, and code you own outright. If an onshore team is a hard requirement for you, the local firms listed on this page are good places to start.' },
+    answer: 'We work with Australian businesses remotely rather than from a local office, and we would rather say so up front. What we offer is a senior team, the founder involved on every project, systems hosted in Australian cloud regions where your data needs it, and code you own outright. If an onshore team is a hard requirement for you, the local firms listed on this page are good places to start.' },
   { category: 'choosing', question: 'Should I use a freelancer or an AI development company?',
     answer: 'A freelancer suits a small prototype or a single contained script. A company makes more sense when the AI must connect to several systems, handle personal information, or run every day for years. That work needs testing, security, holiday cover and someone on call when a connected system changes. Plenty of businesses start with a freelancer and move to a team once the idea proves itself.' },
   { category: 'choosing', question: 'Should we buy an off-the-shelf AI tool or build custom AI?',
@@ -147,7 +147,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
        ItemList). Each note is based on the company’s own homepage, fetched
        2026-09-25. ──────────────────────────────────────────────────────── */
 const AI_DEV_COMPANIES: { name: string; note: string }[] = [
-  { name: 'FactoryJet', note: 'That is us. A founder-led AI development company working remotely with Australian SMEs and mid-market firms, headquartered in Bengaluru, India. Strongest where AI has to connect to commerce and operations systems: Xero, MYOB, CRM, ERP, ecommerce, helpdesk and Microsoft 365. You own the code, and the same team supports it.' },
+  { name: 'FactoryJet', note: 'That is us. A founder-led AI development company working remotely with Australian SMEs and mid-market firms. Strongest where AI has to connect to commerce and operations systems: Xero, MYOB, CRM, ERP, ecommerce, helpdesk and Microsoft 365. You own the code, and the same team supports it.' },
   { name: 'Avenue Group', note: 'Head office in Perth, with a presence in Melbourne and Sydney. Builds custom chatbots, machine learning, computer vision and agentic automation, and offers onshore data centre and cloud hosting from Perth.' },
   { name: 'Osher Digital', note: 'A Brisbane-based firm offering custom AI development, AI agent development, AI consulting, process automation and custom ERP software for clients across Australia.' },
   { name: 'ZenityAI', note: 'A Sydney-based AI engineering firm focused on government and enterprise work: custom models, agentic systems, governance and compliance frameworks, and secure deployment.' },
@@ -553,33 +553,30 @@ export default function AiDevelopmentAUPage() {
           </div>
         </section>
 
-        {/* ═══ 7. WORKED EXAMPLE, WAREHOUSE IMAGE ═══ */}
+        {/* ═══ 7. GOOD FIRST PROJECT, WAREHOUSE IMAGE ═══ */}
         <section className="sec-lg">
           <div className="wrap">
             <div className="col-6040">
               <div>
                 <span className="eyebrow">What a first project looks like</span>
-                <h2>A worked example: purchase orders at a wholesale distributor</h2>
-                <p className="mt-4" style={{ fontFamily: T.fm, fontSize: 11, color: T.n400 }}>
-                  An illustrative example of a typical scope, not a client story.
-                </p>
+                <h2>What makes a good first AI development project</h2>
                 <div className="stack mt-6">
                   <p>
-                    Picture a Brisbane distributor whose trade customers email purchase orders as PDFs, spreadsheets
-                    and the odd phone photo. Two people spend most mornings keying them into the ERP, and mistakes
-                    show up as wrong deliveries a week later.
+                    The best first project is small, repeated every day and easy to measure. Think of work where
+                    people read something messy (an emailed order, a PDF invoice, a support request), type it into
+                    another system, and fix the mistakes later. That kind of job has past examples you can test
+                    against, so you know how accurate the system is before anyone relies on it.
                   </p>
                   <p>
-                    In <b>discovery</b> we agree the goal: orders keyed the same morning, with fewer errors. In{' '}
-                    <b>data preparation</b> we collect a few months of past orders with the correct ERP entries, which
-                    become the test set. The <b>prototype</b> reads each order, matches customer and product codes, and
-                    flags anything it is unsure about. In the <b>build</b> it writes draft sales orders into the ERP
-                    and never confirms them itself. The <b>pilot</b> runs alongside the two staff for a few weeks while
-                    we measure accuracy on every order.
+                    We start in <b>discovery</b> by agreeing one goal you can measure. In <b>data preparation</b> we
+                    collect past cases with the correct answers, which become the test set. The <b>prototype</b> shows
+                    the idea working on your data, the <b>build</b> connects it to your systems with drafts rather than
+                    final actions, and the <b>pilot</b> runs alongside your team while we measure accuracy on every
+                    case.
                   </p>
                   <p>
-                    The two people still own the orders. They now check and approve instead of type, and the hard
-                    cases (new customers, odd units, handwritten changes) come to them first.
+                    Your people stay in charge. They check and approve instead of re-typing, and anything unusual goes
+                    to them first.
                   </p>
                 </div>
               </div>
@@ -590,7 +587,7 @@ export default function AiDevelopmentAUPage() {
                   <div className="scorecard-row"><div className="scorecard-metric">Repeated every day</div><div className="scorecard-val" style={{ fontSize: 14 }}>Yes</div></div>
                   <div className="scorecard-row"><div className="scorecard-metric">Easy to measure</div><div className="scorecard-val" style={{ fontSize: 14 }}>Yes</div></div>
                   <div className="scorecard-row"><div className="scorecard-metric">Past data to test against</div><div className="scorecard-val" style={{ fontSize: 14 }}>Yes</div></div>
-                  <div className="scorecard-row"><div className="scorecard-metric">A person approves each order</div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Always</div></div>
+                  <div className="scorecard-row"><div className="scorecard-metric">A person approves each result</div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Always</div></div>
                 </div>
               </div>
             </div>
@@ -631,8 +628,7 @@ export default function AiDevelopmentAUPage() {
               </table>
             </div>
             <p className="mt-6" style={{ maxWidth: 800 }}>
-              A note on honesty: FactoryJet’s own engineering team works from India, so the difference in this table
-              is not geography. It is who owns the outcome. A typical offshore dev shop builds to a specification and
+              The real difference in this table is who owns the outcome. A typical offshore dev shop builds to a specification and
               moves the team on. We scope the job with you, measure accuracy against your own cases, host where your
               data needs to live, and the same senior people support it for as long as you want them to.
             </p>
