@@ -22,9 +22,39 @@
  * always advances within a couple of seconds.
  */
 
-import { doc, setDoc, serverTimestamp } from 'firebase/firestore';
-import { db } from '@/firebase';
 import { readLeadAttribution } from '@/utils/leadAttribution';
+
+/*
+ * 2026-09-25 (performance): the Firebase SDK (~110 KB transferred, ~97 KB of it
+ * unused at load per PageSpeed) used to be imported statically here, so it was
+ * downloaded and parsed on EVERY page for EVERY visitor, because every form
+ * imports this file. It is only needed for the best-effort mirror below, after a
+ * real submit and after the authoritative server write. It is now loaded on
+ * demand. Load order is deliberate: 'firebase/firestore' first (registers the
+ * firestore service), then '@/firebase' (which calls initializeFirestore at module
+ * eval). That ordering avoids the service-registration race behind the
+ * 2026-07-07 outage. ContactFormModal still pre-warms '@/firebase' when it opens.
+ */
+function mirrorToFirestore(collection: string, docId: string, data: Record<string, unknown>): void {
+  import('firebase/firestore')
+    .then((fs) => import('@/firebase').then(({ db }) => ({ fs, db })))
+    .then(({ fs, db }) => {
+      if (!db) return;
+      return fs.setDoc(
+        fs.doc(db, collection, docId),
+        { ...data, createdAt: fs.serverTimestamp(), status: 'new' },
+        // merge:true is load-bearing, not a nicety. setDoc() WITHOUT it replaces the
+        // whole document. This write is fire-and-forget, so it frequently lands AFTER
+        // the server write and used to clobber the richer server record, dropping the
+        // `page` and `capturedBy` fields the server had just written. That is why 113
+        // of 156 stored leads had no source page and attribution was impossible.
+        // With merge, whichever path lands second tops the record up instead of
+        // flattening it, and a field written by either path always survives.
+        { merge: true },
+      );
+    })
+    .catch(() => { /* server path is authoritative; ignore */ });
+}
 
 export interface LeadInput {
   name: string;
@@ -128,35 +158,22 @@ export async function submitLead(input: LeadInput): Promise<LeadResult> {
   //     idempotent with the server write (merged, so neither path can clobber
   //     fields written by the other, and no duplicates are created).
   try {
-    if (db) {
-      void setDoc(doc(db, collection, docId), {
-        name: input.name,
-        email: input.email,
-        phone: input.phone || '',
-        company: input.company || '',
-        service: input.service || '',
-        message: input.message || '',
-        region: input.region || '',
-        source: input.source,
-        // `page` MUST be mirrored here — see the merge note below.
-        page,
-        ...attribution,
-        turnstileToken: input.turnstileToken || '',
-        createdAt: serverTimestamp(),
-        status: 'new',
-      },
-      // merge:true is load-bearing, not a nicety. setDoc() WITHOUT it replaces the
-      // whole document. This write is fire-and-forget, so it frequently lands AFTER
-      // the server write and used to clobber the richer server record — dropping the
-      // `page` and `capturedBy` fields the server had just written. That is why 113
-      // of 156 stored leads have no source page and attribution was impossible.
-      // With merge, whichever path lands second tops the record up instead of
-      // flattening it, and a field written by either path always survives.
-      { merge: true }
-      ).catch(() => { /* server path is authoritative; ignore */ });
-    }
+    mirrorToFirestore(collection, docId, {
+      name: input.name,
+      email: input.email,
+      phone: input.phone || '',
+      company: input.company || '',
+      service: input.service || '',
+      message: input.message || '',
+      region: input.region || '',
+      source: input.source,
+      // `page` MUST be mirrored here (see the merge note in mirrorToFirestore).
+      page,
+      ...attribution,
+      turnstileToken: input.turnstileToken || '',
+    });
   } catch {
-    /* ignore — never block on the client SDK */
+    /* ignore: never block on the client SDK */
   }
 
   return { ok, docId, erpLeadId, enrichToken };
