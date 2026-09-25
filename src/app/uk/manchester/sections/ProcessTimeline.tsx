@@ -1,8 +1,3 @@
-"use client";
-
-import { useRef } from "react";
-import { useGSAP } from "@gsap/react";
-import { gsap } from "@/lib/gsap";
 import { STEPS, type ProcessStep } from "../process-steps";
 
 /*
@@ -83,87 +78,12 @@ function CardBody({ step }: { step: ProcessStep }) {
 }
 
 export default function ProcessTimeline() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const desktopLineRef = useRef<HTMLDivElement>(null);
-  const mobileLineRef = useRef<HTMLDivElement>(null);
-  const stepRefs = useRef<(HTMLDivElement | null)[]>([]);
-
-  useGSAP(
-    () => {
-      const prefersReduced =
-        window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      if (prefersReduced) return;
-
-      function animateLine(lineEl: Element | null) {
-        if (!lineEl) return;
-        gsap.fromTo(
-          lineEl,
-          { scaleY: 0 },
-          {
-            scaleY: 1,
-            ease: "none",
-            scrollTrigger: {
-              trigger: sectionRef.current,
-              start: "top 70%",
-              end: "bottom 30%",
-              scrub: 1,
-            },
-          }
-        );
-      }
-
-      const mm = gsap.matchMedia();
-
-      mm.add("(min-width: 768px)", () => {
-        animateLine(desktopLineRef.current);
-
-        stepRefs.current.forEach((stepEl, i) => {
-          if (!stepEl) return;
-          const card = stepEl.querySelector(".step-card");
-          if (!card) return;
-
-          gsap.from(card, {
-            x: i % 2 === 0 ? -20 : 20,
-            autoAlpha: 0,
-            duration: 0.7,
-            ease: "power3.out",
-            scrollTrigger: {
-              trigger: stepEl,
-              start: "top 80%",
-              toggleActions: "play none none none",
-            },
-          });
-        });
-      });
-
-      mm.add("(max-width: 767px)", () => {
-        animateLine(mobileLineRef.current);
-
-        stepRefs.current.forEach((stepEl) => {
-          if (!stepEl) return;
-          const card = stepEl.querySelector(".step-card");
-          if (!card) return;
-
-          gsap.from(card, {
-            y: 20,
-            autoAlpha: 0,
-            duration: 0.7,
-            ease: "power3.out",
-            scrollTrigger: {
-              trigger: stepEl,
-              start: "top 80%",
-              toggleActions: "play none none none",
-            },
-          });
-        });
-      });
-    },
-    { scope: sectionRef }
-  );
+  // 2026-09-26 (perf): the GSAP scroll-scrubbed timeline line draw and the step
+  // card slide-ins were removed; this section is a server component. The line and
+  // every card paint in their final state.
 
   return (
     <section
-      ref={sectionRef}
       id="process-timeline"
       className="bg-fj-cream"
       style={{ padding: "96px 0", overflow: "hidden" }}
@@ -182,7 +102,6 @@ export default function ProcessTimeline() {
 
           {/* Vertical line, desktop centre */}
           <div
-            ref={desktopLineRef}
             className="pointer-events-none absolute inset-y-0 hidden md:block"
             style={{
               left: "calc(50% - 1px)",
@@ -194,7 +113,6 @@ export default function ProcessTimeline() {
 
           {/* Vertical line, mobile left, centred on the 56px node */}
           <div
-            ref={mobileLineRef}
             className="pointer-events-none absolute inset-y-0 md:hidden"
             style={{
               left: "27px",
@@ -210,9 +128,6 @@ export default function ProcessTimeline() {
             return (
               <div
                 key={step.title}
-                ref={(el) => {
-                  stepRefs.current[i] = el;
-                }}
                 className="relative mb-10 md:mb-14"
               >
                 <div className="flex items-start gap-5 md:items-center md:gap-0">

@@ -17,6 +17,13 @@ export default function BirminghamPage({
   children: React.ReactNode;
 }) {
   useEffect(() => {
+    // Perf (2026-09-26): Lenis only smooths wheel scrolling; touch scrolling is
+    // native either way. On phones and tablets it did nothing visible but still
+    // downloaded Lenis and ScrollTrigger at hydration and ran a
+    // requestAnimationFrame loop for the life of the page. It now starts only
+    // on devices with a fine pointer that can hover (mouse or trackpad).
+    if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+
     let lenis: import("lenis").default | null = null;
     let rafId: number | null = null;
     let cancelled = false;

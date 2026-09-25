@@ -1,10 +1,4 @@
-"use client";
-
-import { useRef } from "react";
-import { useGSAP } from "@gsap/react";
-import { gsap } from "@/lib/gsap";
-import { useContactModal } from "@/context/ContactModalContext";
-import { trackButtonClick, trackCTAClick } from "@/utils/gtm";
+import UkAuditButton from "@/app/uk/sections/UkAuditButton";
 
 // 2026-08-25: this hero was #0A0F1C with a WebGL mesh gradient, a full-bleed image at 40%
 // overlay and a grain layer. Three problems. The brand rule is that the hero is never dark.
@@ -23,129 +17,15 @@ const LANDMARKS = [
   "Curzon Street",
 ];
 
+// 2026-09-26 (perf): now a server component. The GSAP entrance (eyebrow rule
+// draw, H1 word stagger that rewrote the H1 innerHTML after hydration, subhead
+// fade-up that hid the LCP paragraph until ~1.7 s, CTA and trust-bar fade-ups,
+// skyline rise) is gone: everything paints in its final state with the HTML.
+// The scroll cue fade is a CSS scroll-driven animation (see the <style> below).
+// Only the review button hydrates, via the shared UK UkAuditButton island.
 export default function Hero() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const labelRef = useRef<HTMLParagraphElement>(null);
-  const labelRuleRef = useRef<HTMLSpanElement>(null);
-  const headingRef = useRef<HTMLHeadingElement>(null);
-  const subheadRef = useRef<HTMLDivElement>(null);
-  const ctaRef = useRef<HTMLDivElement>(null);
-  const trustRef = useRef<HTMLDivElement>(null);
-  const scrollCueRef = useRef<HTMLDivElement>(null);
-  const skylineRef = useRef<SVGGElement>(null);
-  const { openModal: openContactModal } = useContactModal();
-  const openModal = () => openContactModal("uk", "default");
-
-  useGSAP(
-    () => {
-      const prefersReduced =
-        window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      if (prefersReduced) return;
-
-      gsap.fromTo(
-        labelRuleRef.current,
-        { scaleX: 0 },
-        {
-          scaleX: 1,
-          duration: 0.8,
-          delay: 0.5,
-          ease: "power2.out",
-          transformOrigin: "50% 50%",
-        }
-      );
-      gsap.from(labelRef.current, {
-        y: 10,
-        autoAlpha: 0,
-        duration: 0.5,
-        ease: "power3.out",
-      });
-
-      const h1 = headingRef.current;
-      if (h1) {
-        const text = h1.textContent ?? "";
-        h1.innerHTML = text
-          .split(" ")
-          .map(
-            (w) =>
-              `<span class="bham-word" style="display:inline-block;overflow:hidden;"><span class="bham-word-inner" style="display:inline-block;will-change:transform,opacity;">${w}&nbsp;</span></span>`
-          )
-          .join("");
-        const inners =
-          h1.querySelectorAll<HTMLSpanElement>(".bham-word-inner");
-        gsap.from(inners, {
-          yPercent: 110,
-          autoAlpha: 0,
-          duration: 1.1,
-          stagger: 0.035,
-          ease: "expo.out",
-          delay: 0.25,
-        });
-      }
-
-      gsap.from(subheadRef.current, {
-        y: 24,
-        autoAlpha: 0,
-        duration: 0.8,
-        delay: 0.9,
-        ease: "power3.out",
-      });
-
-      const ctaChildren = ctaRef.current
-        ? Array.from(ctaRef.current.children)
-        : [];
-      if (ctaChildren.length) {
-        gsap.fromTo(
-          ctaChildren,
-          { y: 16, opacity: 0 },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 0.5,
-            stagger: 0.08,
-            delay: 1.15,
-            ease: "power3.out",
-            clearProps: "transform,opacity",
-          }
-        );
-      }
-
-      gsap.from(trustRef.current, {
-        y: 14,
-        autoAlpha: 0,
-        duration: 0.6,
-        delay: 1.45,
-        ease: "power3.out",
-      });
-
-      const buildings = skylineRef.current?.children;
-      if (buildings && buildings.length) {
-        gsap.from(buildings, {
-          y: 20,
-          autoAlpha: 0,
-          duration: 0.9,
-          stagger: 0.05,
-          ease: "power3.out",
-          delay: 0.2,
-        });
-      }
-
-      gsap.to(scrollCueRef.current, {
-        autoAlpha: 0,
-        ease: "none",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top top",
-          end: "bottom top",
-          scrub: true,
-        },
-      });
-    },
-    { scope: sectionRef }
-  );
-
   return (
     <section
-      ref={sectionRef}
       id="hero"
       aria-label="FactoryJet Birmingham, hero"
       className="relative flex w-full items-start justify-center overflow-hidden"
@@ -155,6 +35,17 @@ export default function Hero() {
         @keyframes bham-scroll-bounce {
           0%, 100% { transform: translateY(0); }
           50% { transform: translateY(6px); }
+        }
+        .bham-hero-scroll-cue { animation: bham-scroll-bounce 2s ease-in-out infinite; }
+        @keyframes bham-hero-cue-fade { to { opacity: 0; visibility: hidden; } }
+        @media (prefers-reduced-motion: no-preference) {
+          @supports (animation-timeline: scroll()) {
+            .bham-hero-scroll-cue {
+              animation: bham-scroll-bounce 2s ease-in-out infinite, bham-hero-cue-fade linear both;
+              animation-timeline: auto, scroll(root);
+              animation-range: normal, 0 88vh;
+            }
+          }
         }
       `}</style>
 
@@ -166,7 +57,7 @@ export default function Hero() {
         className="absolute bottom-0 left-0 w-full pointer-events-none"
         style={{ height: 200, zIndex: 1, color: "rgba(26,26,26,0.06)" }}
       >
-        <g ref={skylineRef} fill="currentColor">
+        <g fill="currentColor">
           {/* Far left low buildings */}
           <rect x="0" y="155" width="45" height="45" />
           <rect x="48" y="145" width="30" height="55" />
@@ -257,7 +148,6 @@ export default function Hero() {
           <div>
             {/* Eyebrow */}
             <p
-              ref={labelRef}
               className="relative inline-flex flex-col items-start pb-2 font-fj-mono"
               style={{
                 color: "#B23E13",
@@ -269,7 +159,6 @@ export default function Hero() {
             >
               SEO agency, Birmingham and the West Midlands
               <span
-                ref={labelRuleRef}
                 aria-hidden="true"
                 className="mt-2 block h-px w-24"
                 style={{ backgroundColor: "#B23E13" }}
@@ -278,7 +167,6 @@ export default function Hero() {
 
             {/* H1 */}
             <h1
-              ref={headingRef}
               className="font-fj-display mt-6"
               style={{
                 color: "#1A1A1A",
@@ -293,7 +181,7 @@ export default function Hero() {
             </h1>
 
             {/* Sub-headline */}
-            <div ref={subheadRef} className="mt-6">
+            <div className="mt-6">
               <p
                 className="font-fj-body"
                 style={{
@@ -324,21 +212,16 @@ export default function Hero() {
 
             {/* CTAs */}
             <div
-              ref={ctaRef}
               className="mt-8 flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4"
             >
-              <button
-                type="button"
-                onClick={() => {
-                  trackCTAClick("free_birmingham_site_review", "hero", "primary");
-                  trackButtonClick("free_birmingham_site_review", "hero");
-                  openModal();
-                }}
+              <UkAuditButton
+                trackName="free_birmingham_site_review"
+                location="hero"
                 className="font-fj-body w-full sm:w-auto rounded-lg px-7 py-3.5 text-[16px] font-semibold text-white transition-transform duration-200 will-change-transform hover:-translate-y-0.5"
                 style={{ backgroundColor: "#B23E13", minHeight: 48 }}
               >
                 Get a free Birmingham site review
-              </button>
+              </UkAuditButton>
               <a
                 href="#engagement"
                 className="font-fj-body w-full sm:w-auto rounded-lg border px-7 py-3.5 text-center text-[16px] font-semibold transition-colors duration-200 hover:bg-white"
@@ -355,7 +238,6 @@ export default function Hero() {
 
             {/* Trust bar */}
             <div
-              ref={trustRef}
               className="font-fj-body mt-8 flex flex-wrap items-center gap-x-4 gap-y-2 text-[clamp(11.5px,1.2vw,13px)]"
               style={{ color: "#4A4A45", fontWeight: 500 }}
             >
@@ -421,13 +303,11 @@ export default function Hero() {
 
       {/* Scroll cue */}
       <div
-        ref={scrollCueRef}
         aria-hidden="true"
-        className="absolute left-1/2 -translate-x-1/2"
+        className="bham-hero-scroll-cue absolute left-1/2 -translate-x-1/2"
         style={{
           bottom: 16,
           zIndex: 4,
-          animation: "bham-scroll-bounce 2s ease-in-out infinite",
           // #FF6B35 measured about 2.6:1 against the cream hero. Fine on the old dark
           // background, not on this one.
           color: "#B23E13",

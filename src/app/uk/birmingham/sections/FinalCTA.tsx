@@ -1,8 +1,5 @@
-"use client";
-
 import Link from "next/link";
-import { useContactModal } from "@/context/ContactModalContext";
-import { trackButtonClick, trackCTAClick } from "@/utils/gtm";
+import UkAuditButton from "@/app/uk/sections/UkAuditButton";
 
 const CITIES = [
   { name: "Leeds", slug: "leeds" },
@@ -54,8 +51,8 @@ const WATERMARKS: Array<{
  * also the ONE dark section this page is allowed, sitting directly above the footer.
  */
 export default function FinalCTA() {
-  const { openModal: openContactModal } = useContactModal();
-  const openModal = () => openContactModal("uk", "default");
+  // 2026-09-26 (perf): server component. The review button is the shared
+  // UkAuditButton island with the same tracking calls it made inline.
 
   return (
     <section
@@ -170,17 +167,9 @@ export default function FinalCTA() {
 
           {/* CTAs */}
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <button
-              type="button"
-              onClick={() => {
-                trackCTAClick(
-                  "free_birmingham_site_review",
-                  "final_cta",
-                  "primary"
-                );
-                trackButtonClick("free_birmingham_site_review", "final_cta");
-                openModal();
-              }}
+            <UkAuditButton
+              trackName="free_birmingham_site_review"
+              location="final_cta"
               className="inline-flex items-center justify-center gap-2"
               style={{
                 backgroundColor: "#FFFFFF",
@@ -201,7 +190,7 @@ export default function FinalCTA() {
               <span aria-hidden="true" style={{ fontSize: 18, lineHeight: 1 }}>
                 →
               </span>
-            </button>
+            </UkAuditButton>
             <a
               href="https://wa.me/919699977699"
               target="_blank"

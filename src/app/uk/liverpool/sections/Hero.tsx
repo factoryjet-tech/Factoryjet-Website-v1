@@ -1,16 +1,10 @@
-"use client";
-
 // Light hero. Cream background, ink type, one orange accent.
 // Rebuilt 2026-08-25: the previous version shipped a dark WebGL hero, which
 // breaks the house rule that the hero is never dark and cost a chunk of the
 // page's Perfect Page score. No mesh gradient, no glow, no particles.
 
-import { useRef } from "react";
 import Image from "next/image";
-import { useGSAP } from "@gsap/react";
-import { gsap } from "@/lib/gsap";
-import { useContactModal } from "@/context/ContactModalContext";
-import { trackButtonClick, trackCTAClick } from "@/utils/gtm";
+import UkAuditButton from "@/app/uk/sections/UkAuditButton";
 
 const TRUST: string[] = [
   "Liverpool City Region and Merseyside",
@@ -27,40 +21,12 @@ const ANSWER_POINTS: string[] = [
 ];
 
 export default function Hero() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const introRef = useRef<HTMLDivElement>(null);
-  const { openModal: openContactModal } = useContactModal();
-  const openModal = () => openContactModal("uk", "default");
-
-  useGSAP(
-    () => {
-      const prefersReduced = window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
-      ).matches;
-      if (prefersReduced) return;
-
-      const els = introRef.current?.querySelectorAll<HTMLElement>("[data-hero-item]");
-      if (!els || !els.length) return;
-
-      gsap.fromTo(
-        els,
-        { y: 18, autoAlpha: 0 },
-        {
-          y: 0,
-          autoAlpha: 1,
-          duration: 0.6,
-          ease: "power3.out",
-          stagger: 0.07,
-          clearProps: "transform,opacity,visibility",
-        }
-      );
-    },
-    { scope: sectionRef }
-  );
+  // 2026-09-26 (perf): server component. The GSAP fade-up stagger on the intro
+  // items (eyebrow, H1, subhead, CTAs) was removed, so the LCP text paints in its
+  // final state with the HTML. Only the audit button hydrates, via UkAuditButton.
 
   return (
     <section
-      ref={sectionRef}
       id="hero"
       aria-label="SEO agency in Liverpool"
       className="relative w-full overflow-hidden bg-fj-cream"
@@ -120,7 +86,7 @@ export default function Hero() {
       <div className="relative mx-auto w-full max-w-[1120px] px-6 pb-20 pt-10 md:px-8 md:pb-28 md:pt-14">
         {/* Asymmetric 55/45 split, left aligned. */}
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[55%_1fr] lg:gap-14">
-          <div ref={introRef}>
+          <div>
             <p
               data-hero-item
               className="font-fj-mono text-xs font-semibold uppercase tracking-[0.18em] text-[#B23E13]"
@@ -168,17 +134,13 @@ export default function Hero() {
               data-hero-item
               className="mt-8 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center"
             >
-              <button
-                type="button"
-                onClick={() => {
-                  trackCTAClick("get_a_free_site_review", "hero", "primary");
-                  trackButtonClick("get_a_free_site_review", "hero");
-                  openModal();
-                }}
+              <UkAuditButton
+                trackName="get_a_free_site_review"
+                location="hero"
                 className="inline-flex min-h-[48px] items-center justify-center rounded-full bg-[#F05A28] px-7 py-3 text-lg font-semibold text-white transition-opacity hover:opacity-90"
               >
                 Get a free site review
-              </button>
+              </UkAuditButton>
               <a
                 href="#what-you-get"
                 className="inline-flex min-h-[48px] items-center justify-center rounded-full border border-fj-neutral-200 bg-white px-7 py-3 font-fj-body text-[15px] font-semibold text-fj-ink transition-colors hover:border-[#B23E13]"

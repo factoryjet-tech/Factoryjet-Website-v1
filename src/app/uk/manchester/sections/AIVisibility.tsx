@@ -1,8 +1,3 @@
-"use client";
-
-import { useRef } from "react";
-import { useGSAP } from "@gsap/react";
-import { gsap } from "@/lib/gsap";
 
 /*
  * AIVisibility.
@@ -48,37 +43,11 @@ const INFO_CARDS = [
 ];
 
 export default function AIVisibility() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const leftRef = useRef<HTMLDivElement>(null);
-  const cardsRef = useRef<HTMLUListElement>(null);
-
-  useGSAP(
-    () => {
-      const prefersReduced =
-        window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      if (prefersReduced) return;
-
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 80%",
-          toggleActions: "play none none none",
-        },
-      });
-
-      tl.from(leftRef.current, { y: 40, autoAlpha: 0, duration: 0.8, ease: "power3.out" })
-        .from(
-          cardsRef.current ? cardsRef.current.querySelectorAll(".info-card") : [],
-          { x: 30, autoAlpha: 0, duration: 0.7, stagger: 0.15, ease: "power3.out" },
-          "-=0.5"
-        );
-    },
-    { scope: sectionRef }
-  );
+  // 2026-09-26 (perf): the GSAP scroll entrance (fade/slide-in) was removed; this
+  // section is a server component and paints in its final state.
 
   return (
     <section
-      ref={sectionRef}
       id="ai-visibility"
       className="bg-white"
       style={{ padding: "96px 0", overflow: "hidden" }}
@@ -87,7 +56,7 @@ export default function AIVisibility() {
         <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-[55fr_45fr] lg:gap-16">
 
           {/* LEFT */}
-          <div ref={leftRef}>
+          <div>
             <p className="font-fj-mono text-xs font-semibold uppercase tracking-[0.15em] text-[#B23E13]">
               AI search visibility
             </p>
@@ -124,7 +93,7 @@ export default function AIVisibility() {
           </div>
 
           {/* RIGHT */}
-          <ul ref={cardsRef} className="flex flex-col gap-4">
+          <ul className="flex flex-col gap-4">
             {INFO_CARDS.map(({ badge, title, description }) => (
               <li
                 key={badge}

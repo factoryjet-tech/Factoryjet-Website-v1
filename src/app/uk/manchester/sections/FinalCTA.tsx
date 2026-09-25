@@ -1,8 +1,3 @@
-"use client";
-
-import { useRef } from "react";
-import { useGSAP } from "@gsap/react";
-import { gsap } from "@/lib/gsap";
 import { CheckCircle2, MessageCircle, Mail } from "lucide-react";
 import LeadFormInline from "@/components/LeadFormInline";
 
@@ -15,33 +10,11 @@ const TRUST_POINTS = [
 
 // ── Main Component ────────────────────────────────────────────────────────────
 export default function FinalCTA() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const leftRef = useRef<HTMLDivElement>(null);
-  const rightRef = useRef<HTMLDivElement>(null);
-
-  useGSAP(
-    () => {
-      const prefersReduced =
-        window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      if (prefersReduced) return;
-
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 80%",
-          toggleActions: "play none none none",
-        },
-      });
-
-      tl.from(leftRef.current, { x: -30, autoAlpha: 0, duration: 0.8, ease: "power3.out" })
-        .from(rightRef.current, { x: 30, autoAlpha: 0, duration: 0.8, ease: "power3.out" }, "-=0.65");
-    },
-    { scope: sectionRef }
-  );
+  // 2026-09-26 (perf): the GSAP scroll entrance (fade/slide-in) was removed; this
+  // section is a server component and paints in its final state.
 
   return (
     <section
-      ref={sectionRef}
       id="final-cta"
       style={{ background: "#0a0f1c", padding: "128px 0", overflow: "hidden" }}
     >
@@ -49,7 +22,7 @@ export default function FinalCTA() {
         <div className="grid grid-cols-1 lg:grid-cols-[45fr_55fr] gap-12 lg:gap-16 items-start">
 
           {/* ── LEFT: copy ────────────────────────────────────────────────── */}
-          <div ref={leftRef}>
+          <div>
             <p
               className="font-semibold uppercase"
               style={{
@@ -129,7 +102,7 @@ export default function FinalCTA() {
           </div>
 
           {/* ── RIGHT: standard lead form ─────────────────────────────────── */}
-          <div ref={rightRef}>
+          <div>
             <LeadFormInline
               region="uk"
               source="uk_manchester_final_cta"

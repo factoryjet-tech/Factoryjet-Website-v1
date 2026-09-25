@@ -1,8 +1,3 @@
-"use client";
-
-import { useRef } from "react";
-import { useGSAP } from "@gsap/react";
-import { gsap, ScrollTrigger } from "@/lib/gsap";
 
 type Platform = {
   id: string;
@@ -83,51 +78,11 @@ function PlatformCard({ platform }: { platform: Platform }) {
 }
 
 export default function TechStack() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const gridRef = useRef<HTMLDivElement>(null);
-
-  useGSAP(
-    () => {
-      const prefersReduced = window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
-      ).matches;
-      if (prefersReduced) return;
-
-      const cards =
-        gridRef.current?.querySelectorAll<HTMLElement>("[data-platform-card]");
-      if (!cards || !cards.length) return;
-
-      gsap.fromTo(
-        cards,
-        { y: 20, autoAlpha: 0 },
-        {
-          y: 0,
-          autoAlpha: 1,
-          duration: 0.5,
-          ease: "power2.out",
-          stagger: 0.04,
-          scrollTrigger: {
-            trigger: gridRef.current,
-            start: "top 85%",
-            toggleActions: "play none none reverse",
-          },
-        }
-      );
-
-      return () => {
-        ScrollTrigger.getAll().forEach((t) => {
-          if (t.trigger && sectionRef.current?.contains(t.trigger as Node)) {
-            t.kill();
-          }
-        });
-      };
-    },
-    { scope: sectionRef }
-  );
+  // 2026-09-26 (perf): the GSAP card stagger-in on scroll was removed; this
+  // section is a server component. The CSS ticker below is unchanged.
 
   return (
     <section
-      ref={sectionRef}
       id="technology-stack"
       aria-label="Our technology stack"
       className="relative w-full overflow-hidden"
@@ -245,7 +200,6 @@ export default function TechStack() {
 
         {/* Platform grid */}
         <div
-          ref={gridRef}
           className="mt-16 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4"
         >
           {PLATFORMS.map((p) => (

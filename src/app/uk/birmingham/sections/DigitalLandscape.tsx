@@ -1,6 +1,3 @@
-"use client";
-
-import { useRef } from "react";
 import { Landmark, Building2, Users, TrendingUp } from "lucide-react";
 
 type Stat = {
@@ -43,11 +40,8 @@ const STATS: Stat[] = [
 ];
 
 export default function DigitalLandscape() {
-  const sectionRef = useRef<HTMLElement>(null);
-
   return (
     <section
-      ref={sectionRef}
       id="digital-landscape"
       aria-label="The Birmingham digital opportunity"
       className="relative w-full"

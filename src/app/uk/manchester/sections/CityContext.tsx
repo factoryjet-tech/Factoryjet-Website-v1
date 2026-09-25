@@ -1,9 +1,4 @@
-"use client";
-
-import { useRef } from "react";
 import Image from "next/image";
-import { useGSAP } from "@gsap/react";
-import { gsap } from "@/lib/gsap";
 
 /*
  * CityContext.
@@ -33,43 +28,11 @@ const PARAGRAPHS = [
 ];
 
 export default function CityContext() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const headingRef = useRef<HTMLHeadingElement>(null);
-  const parasRef = useRef<HTMLDivElement>(null);
-  const statsRef = useRef<HTMLDivElement>(null);
-
-  useGSAP(
-    () => {
-      const prefersReduced =
-        window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      if (prefersReduced) return;
-
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 75%",
-          toggleActions: "play none none none",
-        },
-      });
-
-      tl.from(headingRef.current, { y: 40, autoAlpha: 0, duration: 0.7, ease: "power3.out" })
-        .from(
-          parasRef.current ? parasRef.current.querySelectorAll(".body-para") : [],
-          { y: 25, autoAlpha: 0, duration: 0.6, stagger: 0.12, ease: "power3.out" },
-          "-=0.4"
-        )
-        .from(
-          statsRef.current ? statsRef.current.querySelectorAll(".stat-row") : [],
-          { x: 20, autoAlpha: 0, duration: 0.5, stagger: 0.08, ease: "power3.out" },
-          "-=0.3"
-        );
-    },
-    { scope: sectionRef }
-  );
+  // 2026-09-26 (perf): the GSAP scroll entrance (fade/slide-in) was removed; this
+  // section is a server component and paints in its final state.
 
   return (
     <section
-      ref={sectionRef}
       id="city-context"
       className="bg-white"
       style={{ padding: "96px 0", overflow: "hidden" }}
@@ -81,7 +44,6 @@ export default function CityContext() {
         </p>
 
         <h2
-          ref={headingRef}
           className="mt-3 mb-10 max-w-3xl font-fj-display text-3xl font-bold leading-tight text-fj-ink md:text-4xl"
         >
           Manchester is growing faster than any UK city outside London
@@ -92,7 +54,7 @@ export default function CityContext() {
 
           {/* LEFT: body text plus the photo */}
           <div>
-            <div ref={parasRef} className="flex flex-col gap-5">
+            <div className="flex flex-col gap-5">
               {PARAGRAPHS.map((para) => (
                 <p
                   key={para.slice(0, 24)}
@@ -117,7 +79,7 @@ export default function CityContext() {
           </div>
 
           {/* RIGHT: stat panel, sticky on desktop */}
-          <div ref={statsRef} className="lg:sticky lg:top-[120px]">
+          <div className="lg:sticky lg:top-[120px]">
             <h3 className="font-fj-display text-lg font-bold text-fj-ink">
               Greater Manchester at a glance
             </h3>

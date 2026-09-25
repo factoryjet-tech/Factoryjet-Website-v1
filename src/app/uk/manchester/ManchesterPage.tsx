@@ -1,7 +1,3 @@
-"use client";
-
-import { useEffect } from "react";
-
 import Breadcrumbs from "@/components/v2/Breadcrumbs";
 import MidPageCTA from "@/components/v2/MidPageCTA";
 import { crumbs } from "./crumbs";
@@ -24,48 +20,16 @@ import SocialProof from "./sections/SocialProof";
 import FinalCTA from "./sections/FinalCTA";
 import LogoMarquee from "./sections/LogoMarquee";
 import Footer from "@/app/uk/sections/Footer";
+import ManchesterLenisFx from "./ManchesterLenisFx";
+
+// 2026-09-26 (perf): server component. It used to be "use client" for the Lenis
+// effect alone, which pulled every section below into the client bundle and
+// hydrated all of them. Lenis now lives in the ./ManchesterLenisFx island.
 
 export default function ManchesterPage({ children }: { children?: React.ReactNode }) {
-  useEffect(() => {
-    let lenis: import("lenis").default | null = null;
-    let rafId: number | null = null;
-
-    async function initLenis() {
-      const [{ default: Lenis }, { ScrollTrigger }] =
-        await Promise.all([
-          import("lenis"),
-          import("gsap/ScrollTrigger"),
-        ]);
-
-      // Lenis with optimized settings for smooth scroll
-      lenis = new Lenis({
-        lerp: 0.05,
-        wheelMultiplier: 0.8,
-        touchMultiplier: 1.2,
-        infinite: false,
-        duration: 1.2,
-      });
-
-      lenis.on("scroll", ScrollTrigger.update);
-
-      let rafId: number | null = null;
-      function raf(time: number) {
-        lenis!.raf(time);
-        rafId = requestAnimationFrame(raf);
-      }
-      rafId = requestAnimationFrame(raf);
-    }
-
-    initLenis();
-
-    return () => {
-      if (rafId !== null) cancelAnimationFrame(rafId);
-      if (lenis) lenis.destroy();
-    };
-  }, []);
-
   return (
     <main id="main-content">
+      <ManchesterLenisFx />
       {/* Visible trail. Same `crumbs` array feeds the BreadcrumbList JSON-LD in
           layout.tsx, so the markup and the schema cannot drift apart. */}
       <Breadcrumbs items={crumbs} />

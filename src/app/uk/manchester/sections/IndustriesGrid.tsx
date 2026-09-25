@@ -1,10 +1,4 @@
-"use client";
-
-import { useRef } from "react";
 import Image from "next/image";
-import { useGSAP } from "@gsap/react";
-import { gsap, ScrollTrigger } from "@/lib/gsap";
-
 
 interface Industry {
   name: string;
@@ -59,56 +53,18 @@ const INDUSTRIES: Industry[] = [
 ];
 
 export default function IndustriesGrid() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const headerRef  = useRef<HTMLDivElement>(null);
-  const gridRef    = useRef<HTMLUListElement>(null);
-
-  useGSAP(
-    () => {
-      const prefersReduced =
-        window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      if (prefersReduced) return;
-
-      gsap.from(headerRef.current, {
-        y: 40,
-        autoAlpha: 0,
-        duration: 0.8,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 80%",
-          toggleActions: "play none none none",
-        },
-      });
-
-      if (gridRef.current) {
-        gsap.from(gridRef.current.querySelectorAll(".industry-card"), {
-          y: 30,
-          autoAlpha: 0,
-          duration: 0.6,
-          stagger: 0.1,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: gridRef.current,
-            start: "top 85%",
-            toggleActions: "play none none none",
-          },
-        });
-      }
-    },
-    { scope: sectionRef }
-  );
+  // 2026-09-26 (perf): the GSAP scroll entrance (fade/slide-in) was removed; this
+  // section is a server component and paints in its final state.
 
   return (
     <section
-      ref={sectionRef}
       id="industries-grid"
       style={{ background: "#FFFFFF", padding: "128px 0" }}
     >
       <div className="mx-auto px-4 sm:px-6 lg:px-8" style={{ maxWidth: "1400px" }}>
 
         {/* ── Header ───────────────────────────────────────────────────── */}
-        <div ref={headerRef}>
+        <div>
           <p
             className="font-semibold uppercase"
             style={{
@@ -138,7 +94,6 @@ export default function IndustriesGrid() {
 
         {/* ── Photography grid ─────────────────────────────────────────── */}
         <ul
-          ref={gridRef}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           {INDUSTRIES.map(({ name, description, image, imageAlt }) => (

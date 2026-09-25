@@ -1,12 +1,5 @@
-"use client";
-
-import { useRef } from "react";
-import { useGSAP } from "@gsap/react";
-import { gsap, ScrollTrigger } from "@/lib/gsap";
 import { CheckCircle2 } from "lucide-react";
-import { useContactModal } from "@/context/ContactModalContext";
-import { trackButtonClick, trackCTAClick } from "@/utils/gtm";
-
+import UkAuditButton from "@/app/uk/sections/UkAuditButton";
 
 const PRICING_ROWS = [
   {
@@ -47,48 +40,19 @@ const INCLUDES = [
 ];
 
 export default function Pricing() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const headerRef = useRef<HTMLDivElement>(null);
-  const tableRef = useRef<HTMLTableSectionElement>(null);
-  const footerRef = useRef<HTMLDivElement>(null);
-  const { openModal: openContactModal } = useContactModal();
-  const openModal = () => openContactModal('uk', 'default');
-
-  useGSAP(
-    () => {
-      const prefersReduced =
-        window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      if (prefersReduced) return;
-
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 80%",
-          toggleActions: "play none none none",
-        },
-      });
-
-      tl.from(headerRef.current, { y: 40, autoAlpha: 0, duration: 0.8, ease: "power3.out" })
-        .from(
-          tableRef.current ? tableRef.current.querySelectorAll("tr") : [],
-          { y: 10, autoAlpha: 0, duration: 0.5, stagger: 0.07, ease: "power2.out" },
-          "-=0.4"
-        )
-        .from(footerRef.current, { y: 20, autoAlpha: 0, duration: 0.7, ease: "power3.out" }, "-=0.2");
-    },
-    { scope: sectionRef }
-  );
+  // 2026-09-26 (perf): the GSAP header/row/footer entrance was removed; this
+  // section is a server component. The WhatsApp hover is Tailwind hover: classes
+  // and the audit button is the shared UkAuditButton island.
 
   return (
     <section
-      ref={sectionRef}
       id="pricing"
       style={{ background: "#F8FAFC", padding: "128px 0 32px" }}
     >
       <div className="mx-auto px-4 sm:px-6 lg:px-8" style={{ maxWidth: "1200px" }}>
 
         {/* ── Header ───────────────────────────────────────────────────── */}
-        <div ref={headerRef}>
+        <div>
           <p
             className="font-semibold uppercase"
             style={{
@@ -175,7 +139,7 @@ export default function Pricing() {
               </tr>
             </thead>
 
-            <tbody ref={tableRef}>
+            <tbody>
               {PRICING_ROWS.map(({ service, included }, i) => (
                 <tr
                   key={service}
@@ -217,7 +181,7 @@ export default function Pricing() {
         </div>
 
         {/* ── Footer: includes box + CTA ───────────────────────────────── */}
-        <div ref={footerRef}>
+        <div>
 
           {/* What's included */}
           <div
@@ -274,35 +238,20 @@ export default function Pricing() {
 
           {/* CTA row */}
           <div className="flex flex-wrap gap-4">
-            <button
-              onClick={() => {
-                trackCTAClick('get_your_free_quote', 'manchester_pricing', 'primary');
-                trackButtonClick('get_your_free_quote', 'manchester_pricing');
-                openModal();
-              }}
+            <UkAuditButton
+              trackName="get_your_free_quote"
+              location="manchester_pricing"
               className="px-8 py-4 rounded-lg text-white font-semibold text-center transition-all duration-200 hover:brightness-110"
               style={{ background: "#B23E13", fontSize: "15px" }}
             >
               Get Your Free Quote →
-            </button>
+            </UkAuditButton>
             <a
               href="https://wa.me/919699977699"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 rounded-lg font-semibold text-center transition-all duration-200"
-              style={{
-                border: "1px solid #E5E7EB",
-                color: "#374151",
-                fontSize: "15px",
-              }}
-              onMouseEnter={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.borderColor = "#B23E13";
-                (e.currentTarget as HTMLAnchorElement).style.color = "#B23E13";
-              }}
-              onMouseLeave={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.borderColor = "#E5E7EB";
-                (e.currentTarget as HTMLAnchorElement).style.color = "#374151";
-              }}
+              className="px-8 py-4 rounded-lg font-semibold text-center transition-all duration-200 border border-solid border-[#E5E7EB] text-[#374151] hover:border-[#B23E13] hover:text-[#B23E13]"
+              style={{ fontSize: "15px" }}
             >
               WhatsApp Us Now
             </a>

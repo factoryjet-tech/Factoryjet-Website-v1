@@ -1,9 +1,4 @@
-"use client";
-
-import { useRef, useEffect } from "react";
 import Image from "next/image";
-import { useGSAP } from "@gsap/react";
-import { gsap, ScrollTrigger } from "@/lib/gsap";
 import { BarChart3, Zap, Globe, Code, Target, CheckCircle2 } from "lucide-react";
 
 
@@ -62,112 +57,32 @@ const STANDARD_CARDS: StandardCard[] = [
 ];
 
 export default function ServiceExplanation() {
-  const sectionRef      = useRef<HTMLElement>(null);
-  const headerRef       = useRef<HTMLDivElement>(null);
-  const featuredRef     = useRef<HTMLDivElement>(null);
-  const standardGridRef = useRef<HTMLUListElement>(null);
-
-  // ── GSAP: header + featured card reveals ─────────────────────────────────
-  // Service cards are handled separately by IntersectionObserver below.
-  useGSAP(
-    () => {
-      const prefersReduced =
-        window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      if (prefersReduced) return;
-
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 80%",
-          toggleActions: "play none none none",
-        },
-      });
-
-      tl.from(headerRef.current, { y: 40, autoAlpha: 0, duration: 0.8, ease: "power3.out" })
-        .from(featuredRef.current, { y: 30, autoAlpha: 0, duration: 0.7, ease: "power3.out" }, "-=0.5");
-    },
-    { scope: sectionRef }
-  );
-
-  // ── IntersectionObserver: stagger reveal for service cards ────────────────
-  // Uses direct DOM manipulation so transition-delay doesn't bleed into hover.
-  // Phase 1 (reveal): opacity 700ms ease-out + per-card transitionDelay.
-  // Phase 2 (hover):  after animation settles, swap to 300ms hover transition.
-  useEffect(() => {
-    const el = standardGridRef.current;
-    if (!el) return;
-
-    const cards = Array.from(el.querySelectorAll<HTMLElement>(".service-card"));
-    const prefersReduced =
-      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-    if (prefersReduced) {
-      // Show everything immediately, no animation
-      cards.forEach((card) => {
-        card.style.opacity = "1";
-        card.style.transform = "translateY(0)";
-      });
-      return;
-    }
-
-    // ── Set initial hidden state ──────────────────────────────────────────
-    cards.forEach((card, i) => {
-      card.style.opacity = "0";
-      card.style.transform = "translateY(24px)";
-      card.style.transition = "opacity 700ms ease-out, transform 700ms ease-out";
-      card.style.transitionDelay = `${i * 150}ms`;
-    });
-
-    const REVEAL_DURATION = 700; // ms, matches transition duration above
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (!entry.isIntersecting) return;
-
-        cards.forEach((card, i) => {
-          const delay = i * 150;
-
-          // Trigger the CSS transition
-          card.style.opacity = "1";
-          card.style.transform = "translateY(0)";
-
-          // After this card's animation fully settles, swap to hover transition
-          const timerId = window.setTimeout(() => {
-            card.style.transition =
-              "transform 300ms ease, box-shadow 300ms ease, border-color 300ms ease";
-            card.style.transitionDelay = "0ms";
-          }, REVEAL_DURATION + delay);
-
-          // Clean up timer if component unmounts mid-animation
-          card.dataset.revealTimer = String(timerId);
-        });
-
-        observer.disconnect();
-      },
-      { threshold: 0.1 }
-    );
-
-    observer.observe(el);
-
-    return () => {
-      observer.disconnect();
-      cards.forEach((card) => {
-        const id = Number(card.dataset.revealTimer);
-        if (id) window.clearTimeout(id);
-      });
-    };
-  }, []);
+  // 2026-09-26 (perf): server component. Removed: the GSAP header and featured
+  // card fade-up on scroll, and the IntersectionObserver that hid every service
+  // card (opacity 0) until it scrolled into view and then staggered them in.
+  // Cards now paint in their final state. The card hover lift is CSS (see the
+  // <style> below) with the same values the inline handlers used to set.
 
   return (
     <section
-      ref={sectionRef}
       id="service-explanation"
       style={{ background: "#F8FAFC", padding: "128px 0" }}
     >
+      <style>{`
+        .mcr-service-card {
+          border: 1px solid #E5E7EB;
+          transition: transform 300ms ease, box-shadow 300ms ease, border-color 300ms ease;
+        }
+        .mcr-service-card:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1), 0 4px 10px -2px rgba(0,0,0,0.05);
+          border-color: #F05A28;
+        }
+      `}</style>
       <div className="mx-auto px-4 sm:px-6 lg:px-8" style={{ maxWidth: "1400px" }}>
 
         {/* ── Header ───────────────────────────────────────────────────── */}
-        <div ref={headerRef}>
+        <div>
           <p
             className="font-semibold uppercase"
             style={{
@@ -215,7 +130,6 @@ export default function ServiceExplanation() {
 
           {/* FEATURED CARD, spans 2 columns */}
           <div
-            ref={featuredRef}
             className="lg:col-span-2 rounded-xl"
             style={{
               background: "white",
@@ -277,34 +191,18 @@ export default function ServiceExplanation() {
 
           {/* STANDARD CARDS, 2×2 grid inside the 2-col outer grid */}
           <ul
-            ref={standardGridRef}
             className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 items-start"
             style={{ gap: "20px" }}
           >
             {STANDARD_CARDS.map(({ icon: Icon, title, description, image }) => (
               <li
                 key={title}
-                className="service-card rounded-xl"
+                className="service-card mcr-service-card rounded-xl"
                 style={{
                   background: "white",
-                  border: "1px solid #E5E7EB",
                   padding: "24px",
                   cursor: "default",
                   alignSelf: "start",   // prevents grid from stretching this card to match taller neighbours
-                  // opacity / transform / transition are set by the useEffect
-                }}
-                onMouseEnter={(e) => {
-                  const el = e.currentTarget;
-                  el.style.transform = "translateY(-3px)";
-                  el.style.boxShadow =
-                    "0 10px 25px -5px rgba(0,0,0,0.1), 0 4px 10px -2px rgba(0,0,0,0.05)";
-                  el.style.borderColor = "#F05A28";
-                }}
-                onMouseLeave={(e) => {
-                  const el = e.currentTarget;
-                  el.style.transform = "translateY(0)";
-                  el.style.boxShadow = "none";
-                  el.style.borderColor = "#E5E7EB";
                 }}
               >
                 {/* Icon */}

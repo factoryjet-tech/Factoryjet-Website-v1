@@ -1,9 +1,5 @@
-"use client";
-
-import { useRef } from "react";
 import Image from "next/image";
-import { useGSAP } from "@gsap/react";
-import { gsap, ScrollTrigger } from "@/lib/gsap";
+import ServicesPinFx from "@/app/uk/sections/ServicesPinFx";
 
 // ── Service data ─────────────────────────────────────────────────────────────
 type Service = {
@@ -191,118 +187,13 @@ function Panel({ service }: { service: Service }) {
 
 // ── Section ──────────────────────────────────────────────────────────────────
 export default function Services() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const pinRef = useRef<HTMLDivElement>(null);
-  const trackRef = useRef<HTMLDivElement>(null);
-  const dotsRef = useRef<HTMLDivElement>(null);
-  const activeNameRef = useRef<HTMLSpanElement>(null);
-
-  useGSAP(
-    () => {
-      const prefersReduced = window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
-      ).matches;
-
-      const mm = gsap.matchMedia();
-
-      // ── Desktop: pinned horizontal scroll ──────────────────────────────
-      mm.add("(min-width: 1024px)", () => {
-        if (!pinRef.current || !trackRef.current) return;
-
-        const panels =
-          trackRef.current.querySelectorAll<HTMLElement>("[data-panel]");
-        const panelCount = panels.length;
-        if (!panelCount) return;
-
-        const xTarget = -((panelCount - 1) / panelCount) * 100;
-
-        const dwellUnits = 1;
-        const totalUnits = panelCount + dwellUnits;
-        const moveFraction = panelCount / totalUnits;
-
-        const tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: pinRef.current,
-            pin: true,
-            scrub: 1,
-            anticipatePin: 1,
-            end: `+=${totalUnits * 100}%`,
-            invalidateOnRefresh: true,
-            onUpdate: (self) => {
-              const mapped = Math.min(1, self.progress / moveFraction);
-              const idx = Math.min(
-                panelCount - 1,
-                Math.max(0, Math.round(mapped * (panelCount - 1)))
-              );
-              const dots =
-                dotsRef.current?.querySelectorAll<HTMLSpanElement>(
-                  "[data-dot]"
-                );
-              dots?.forEach((d, i) => {
-                d.dataset.active = i === idx ? "true" : "false";
-                d.style.backgroundColor =
-                  i === idx ? "#FF6B35" : "rgba(255,255,255,0.25)";
-                d.style.transform = i === idx ? "scale(1.25)" : "scale(1)";
-              });
-              if (activeNameRef.current) {
-                activeNameRef.current.textContent = SERVICES[idx].name;
-              }
-            },
-          },
-        });
-        tl.to(trackRef.current, {
-          xPercent: xTarget,
-          ease: "none",
-          duration: panelCount,
-        });
-        tl.to({}, { duration: dwellUnits });
-
-        const tween = tl;
-
-        if (!prefersReduced) {
-          panels.forEach((panel) => {
-            const img = panel.querySelector<HTMLElement>("[data-panel-image]");
-            if (!img) return;
-            gsap.fromTo(
-              img,
-              { scale: 0.9, autoAlpha: 0.6 },
-              {
-                scale: 1,
-                autoAlpha: 1,
-                ease: "power2.out",
-                scrollTrigger: {
-                  trigger: panel,
-                  containerAnimation: tween,
-                  start: "left 80%",
-                  end: "left 40%",
-                  scrub: true,
-                },
-              }
-            );
-          });
-        }
-      });
-
-      // ── Mobile: no pin. Panels stack vertically. ───────────────────────
-      mm.add("(max-width: 1023px)", () => {
-        // Plain vertical layout via CSS.
-      });
-
-      return () => {
-        mm.revert();
-        ScrollTrigger.getAll().forEach((t) => {
-          if (t.trigger && sectionRef.current?.contains(t.trigger as Node)) {
-            t.kill();
-          }
-        });
-      };
-    },
-    { scope: sectionRef }
-  );
+  // 2026-09-26 (perf): server component. The desktop-only pinned horizontal
+  // scroll (same timeline, dwell, dots and image scale) is wired by the shared UK
+  // ServicesPinFx island, which loads GSAP with a dynamic import only at 1024px and
+  // wider. Phones, where the panels simply stack, never download or run GSAP here.
 
   return (
     <section
-      ref={sectionRef}
       id="services"
       aria-label="Search services for Liverpool businesses"
       className="relative w-full"
@@ -354,12 +245,12 @@ export default function Services() {
 
       {/* Pinned horizontal scroll container (dark) */}
       <div
-        ref={pinRef}
+        data-services-pin
         className="relative w-full overflow-hidden"
         style={{ backgroundColor: "#0A0F1C" }}
       >
         <div
-          ref={trackRef}
+          data-services-track
           className="flex w-full flex-col lg:w-[400vw] lg:flex-row lg:flex-nowrap"
           style={{ willChange: "transform" }}
         >
@@ -373,7 +264,7 @@ export default function Services() {
           className="pointer-events-none absolute bottom-6 left-1/2 z-20 hidden -translate-x-1/2 items-center gap-5 lg:flex"
           aria-hidden="true"
         >
-          <div ref={dotsRef} className="flex items-center gap-2.5">
+          <div data-services-dots className="flex items-center gap-2.5">
             {SERVICES.map((s, i) => (
               <span
                 key={s.id}
@@ -392,7 +283,7 @@ export default function Services() {
             style={{ backgroundColor: "rgba(255,255,255,0.2)" }}
           />
           <span
-            ref={activeNameRef}
+            data-services-active
             className="text-[12px] uppercase tracking-[0.18em]"
             style={{
               color: "rgba(255,255,255,0.75)",
@@ -404,6 +295,7 @@ export default function Services() {
           </span>
         </div>
       </div>
+      <ServicesPinFx sectionId="services" names={SERVICES.map((s) => s.name)} />
     </section>
   );
 }

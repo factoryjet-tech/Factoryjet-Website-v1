@@ -1,10 +1,4 @@
-"use client";
-
-import { useRef } from "react";
 import Image from "next/image";
-import { useGSAP } from "@gsap/react";
-import { gsap, ScrollTrigger } from "@/lib/gsap";
-
 
 const BODY_PARAGRAPHS = [
   "Walk through the Northern Quarter, Spinningfields or MediaCityUK and you will find businesses spending real money on fit-outs, branding and location. Then look at their websites. Slow WordPress themes last touched in 2021, mobile pages that feel like desktop afterthoughts, no schema, and nothing at all in AI search results.",
@@ -12,39 +6,11 @@ const BODY_PARAGRAPHS = [
 ];
 
 export default function ProblemStatement() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const headingRef = useRef<HTMLHeadingElement>(null);
-  const pullRef = useRef<HTMLQuoteElement>(null);
-  const parasRef = useRef<HTMLDivElement>(null);
-
-  useGSAP(
-    () => {
-      const prefersReduced =
-        window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      if (prefersReduced) return;
-
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 75%",
-          toggleActions: "play none none none",
-        },
-      });
-
-      tl.from(headingRef.current, { y: 35, autoAlpha: 0, duration: 0.7, ease: "power3.out" })
-        .from(pullRef.current, { x: -25, autoAlpha: 0, duration: 0.6, ease: "power3.out" }, "-=0.4")
-        .from(
-          parasRef.current ? parasRef.current.querySelectorAll(".problem-para") : [],
-          { y: 20, autoAlpha: 0, duration: 0.6, stagger: 0.1, ease: "power3.out" },
-          "-=0.3"
-        );
-    },
-    { scope: sectionRef }
-  );
+  // 2026-09-26 (perf): the GSAP scroll entrance (fade/slide-in) was removed; this
+  // section is a server component and paints in its final state.
 
   return (
     <section
-      ref={sectionRef}
       id="problem-statement"
       className="pt-16 md:pt-24"
       style={{
@@ -56,7 +22,6 @@ export default function ProblemStatement() {
 
         {/* ── H2, architectural heading ───────────────────────────────── */}
         <h2
-          ref={headingRef}
           className="font-clash"
           style={{
             fontSize: "clamp(2.5rem, 2rem + 2vw, 4rem)",
@@ -72,7 +37,6 @@ export default function ProblemStatement() {
 
         {/* ── Pull quote, full container width ────────────────────────── */}
         <blockquote
-          ref={pullRef}
           style={{
             borderLeft: "4px solid #F05A28",
             paddingLeft: "32px",
@@ -99,7 +63,6 @@ export default function ProblemStatement() {
 
           {/* LEFT 60%: body paragraphs */}
           <div
-            ref={parasRef}
             className="lg:col-span-3 space-y-6"
           >
             {BODY_PARAGRAPHS.map((para, i) => (

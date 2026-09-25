@@ -1,5 +1,3 @@
-"use client";
-
 // Birmingham FAQ. Fully static, no accordion and no filter logic, so every answer is
 // permanently visible in the DOM and any crawler reading the HTML source sees all of them.
 //
@@ -7,81 +5,14 @@
 // Counts below are derived from FAQS.length rather than typed as a number, because the copy
 // "12 answers" survived here for weeks after the array had stopped having twelve entries.
 
-import { useRef } from "react";
-import { useGSAP } from "@gsap/react";
-import { gsap, ScrollTrigger } from "@/lib/gsap";
-
 import { FAQS } from '../faqData';
 
-
 export default function FAQ() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const headerRef = useRef<HTMLDivElement>(null);
-  const listRef = useRef<HTMLDivElement>(null);
-
-  useGSAP(
-    () => {
-      const prefersReduced = window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
-      ).matches;
-      if (prefersReduced) return;
-
-      const headerEls =
-        headerRef.current?.querySelectorAll<HTMLElement>("[data-faq-head]");
-      if (headerEls && headerEls.length) {
-        gsap.fromTo(
-          headerEls,
-          { y: 18, autoAlpha: 0 },
-          {
-            y: 0,
-            autoAlpha: 1,
-            duration: 0.55,
-            ease: "power2.out",
-            stagger: 0.07,
-            scrollTrigger: {
-              trigger: sectionRef.current,
-              start: "top 80%",
-              toggleActions: "play none none reverse",
-            },
-          }
-        );
-      }
-
-      const cards =
-        listRef.current?.querySelectorAll<HTMLElement>("[data-faq-card]");
-      if (cards && cards.length) {
-        gsap.fromTo(
-          cards,
-          { y: 15, autoAlpha: 0 },
-          {
-            y: 0,
-            autoAlpha: 1,
-            duration: 0.5,
-            ease: "power2.out",
-            stagger: 0.04,
-            scrollTrigger: {
-              trigger: listRef.current,
-              start: "top 85%",
-              toggleActions: "play none none reverse",
-            },
-          }
-        );
-      }
-
-      return () => {
-        ScrollTrigger.getAll().forEach((t) => {
-          if (t.trigger && sectionRef.current?.contains(t.trigger as Node)) {
-            t.kill();
-          }
-        });
-      };
-    },
-    { scope: sectionRef }
-  );
+  // 2026-09-26 (perf): the GSAP header and card stagger-in on scroll was removed.
+  // Every card now paints in its final state; this section is a server component.
 
   return (
     <section
-      ref={sectionRef}
       id="faq"
       aria-label="Frequently asked questions, Birmingham web design"
       className="relative w-full"
@@ -101,7 +32,7 @@ export default function FAQ() {
 
           {/* Left, section header, sticky on desktop */}
           <aside>
-            <div ref={headerRef} className="lg:sticky lg:top-[120px]">
+            <div className="lg:sticky lg:top-[120px]">
               <p
                 data-faq-head
                 style={{
@@ -147,7 +78,7 @@ export default function FAQ() {
           </aside>
 
           {/* Right: every card, permanently expanded */}
-          <div ref={listRef} className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4">
             {FAQS.map((item, i) => (
               <div
                 key={item.q}

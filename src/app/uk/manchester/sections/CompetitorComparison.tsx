@@ -1,10 +1,4 @@
-"use client";
-
-import { useRef } from "react";
-import { useGSAP } from "@gsap/react";
-import { gsap, ScrollTrigger } from "@/lib/gsap";
 import { Check } from "lucide-react";
-
 
 const TABLE_ROWS = [
   {
@@ -77,52 +71,18 @@ const COMPETITOR_CARDS = [
 ];
 
 export default function CompetitorComparison() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const headerRef = useRef<HTMLDivElement>(null);
-  const tableBodyRef = useRef<HTMLTableSectionElement>(null);
-  const cardsRef = useRef<HTMLUListElement>(null);
-  const calloutRef = useRef<HTMLDivElement>(null);
-
-  useGSAP(
-    () => {
-      const prefersReduced =
-        window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      if (prefersReduced) return;
-
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 80%",
-          toggleActions: "play none none none",
-        },
-      });
-
-      tl.from(headerRef.current, { y: 40, autoAlpha: 0, duration: 0.8, ease: "power3.out" })
-        .from(
-          tableBodyRef.current ? tableBodyRef.current.querySelectorAll("tr") : [],
-          { y: 10, autoAlpha: 0, duration: 0.5, stagger: 0.05, ease: "power2.out" },
-          "-=0.4"
-        )
-        .from(
-          cardsRef.current ? cardsRef.current.querySelectorAll(".competitor-card") : [],
-          { y: 20, autoAlpha: 0, duration: 0.6, stagger: 0.1, ease: "power3.out" },
-          "-=0.3"
-        )
-        .from(calloutRef.current, { y: 20, autoAlpha: 0, duration: 0.7, ease: "power3.out" }, "-=0.3");
-    },
-    { scope: sectionRef }
-  );
+  // 2026-09-26 (perf): the GSAP scroll entrance (fade/slide-in) was removed; this
+  // section is a server component and paints in its final state.
 
   return (
     <section
-      ref={sectionRef}
       id="competitor-comparison"
       style={{ background: "#FFFFFF", padding: "128px 0" }}
     >
       <div className="mx-auto px-4 sm:px-6 lg:px-8" style={{ maxWidth: "1400px" }}>
 
         {/* ── Header ───────────────────────────────────────────────────── */}
-        <div ref={headerRef}>
+        <div>
           <p
             className="font-semibold uppercase"
             style={{ color: "#B23E13", fontSize: "13px", letterSpacing: "0.15em", marginBottom: "16px" }}
@@ -218,7 +178,7 @@ export default function CompetitorComparison() {
             </thead>
 
             {/* Data rows */}
-            <tbody ref={tableBodyRef}>
+            <tbody>
               {TABLE_ROWS.map(({ feature, factoryjet, competitor }, i) => (
                 <tr
                   key={feature}
@@ -278,7 +238,6 @@ export default function CompetitorComparison() {
 
         {/* ── Competitor profile cards ──────────────────────────────────── */}
         <ul
-          ref={cardsRef}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mt-12"
           style={{ gap: "16px" }}
         >
@@ -318,7 +277,6 @@ export default function CompetitorComparison() {
 
         {/* ── "Why the price difference?" callout ──────────────────────── */}
         <div
-          ref={calloutRef}
           className="rounded-xl"
           style={{
             background: "#F0F4FF",
