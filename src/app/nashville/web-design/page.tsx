@@ -430,17 +430,6 @@ const LOCAL_BUSINESS_SCHEMA = {
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
   priceRange: '$$',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Nashville',
-    addressRegion: 'TN',
-    addressCountry: 'US',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 36.1627,
-    longitude: -86.7816,
-  },
   areaServed: [
     { '@type': 'City', name: 'Nashville' },
     { '@type': 'City', name: 'Brentwood' },

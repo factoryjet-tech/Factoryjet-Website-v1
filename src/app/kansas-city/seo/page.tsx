@@ -404,17 +404,6 @@ const LOCAL_BUSINESS_SCHEMA = {
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
   priceRange: '$$',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Kansas City',
-    addressRegion: 'MO',
-    addressCountry: 'US',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 39.0997,
-    longitude: -94.5786,
-  },
   areaServed: [
     { '@type': 'City', name: 'Kansas City' },
     { '@type': 'City', name: 'Overland Park' },

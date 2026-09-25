@@ -442,17 +442,6 @@ const LOCAL_BUSINESS_SCHEMA = {
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
   priceRange: '$$$',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'New York',
-    addressRegion: 'NY',
-    addressCountry: 'US',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 40.7128,
-    longitude: -74.006,
-  },
   areaServed: [
     { '@type': 'City', name: 'New York' },
     { '@type': 'City', name: 'Manhattan' },

@@ -115,14 +115,6 @@ const jsonLd = {
       name: 'FactoryJet',
       url: CANONICAL,
       email: 'connect@factoryjet.com',
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: 'ITPL Main Rd, Tigalarpalya, Brookefield',
-        addressLocality: 'Bengaluru',
-        addressRegion: 'Karnataka',
-        postalCode: '560037',
-        addressCountry: 'IN',
-      },
       areaServed: { '@type': 'Country', name: 'United Arab Emirates' },
     },
     {

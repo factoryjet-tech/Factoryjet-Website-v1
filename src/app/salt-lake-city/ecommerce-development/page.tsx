@@ -435,17 +435,6 @@ const LOCAL_BUSINESS_SCHEMA = {
   name: 'FactoryJet - Salt Lake City E-Commerce Development Agency',
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Salt Lake City',
-    addressRegion: 'UT',
-    addressCountry: 'US',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 40.7608,
-    longitude: -111.891,
-  },
   areaServed: [
     { '@type': 'City', name: 'Salt Lake City' },
     { '@type': 'City', name: 'Lehi' },

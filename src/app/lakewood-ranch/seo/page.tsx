@@ -415,17 +415,6 @@ const LOCAL_BUSINESS_SCHEMA = {
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
   priceRange: '$$',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Lakewood Ranch',
-    addressRegion: 'FL',
-    addressCountry: 'US',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 27.4294,
-    longitude: -82.3831,
-  },
   areaServed: [
     { '@type': 'City', name: 'Lakewood Ranch' },
     { '@type': 'City', name: 'Sarasota' },

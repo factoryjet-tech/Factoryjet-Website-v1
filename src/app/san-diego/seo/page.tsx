@@ -410,17 +410,6 @@ const LOCAL_BUSINESS_SCHEMA = {
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
   priceRange: '$$',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'San Diego',
-    addressRegion: 'CA',
-    addressCountry: 'US',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 32.7157,
-    longitude: -117.1611,
-  },
   areaServed: [
     { '@type': 'City', name: 'San Diego' },
     { '@type': 'City', name: 'La Jolla' },

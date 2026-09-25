@@ -430,17 +430,6 @@ const LOCAL_BUSINESS_SCHEMA = {
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
   priceRange: '$$',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Portland',
-    addressRegion: 'OR',
-    addressCountry: 'US',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 45.5152,
-    longitude: -122.6784,
-  },
   areaServed: [
     { '@type': 'City', name: 'Portland' },
     { '@type': 'City', name: 'Beaverton' },

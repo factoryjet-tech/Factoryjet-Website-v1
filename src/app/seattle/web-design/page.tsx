@@ -441,17 +441,6 @@ const LOCAL_BUSINESS_SCHEMA = {
   name: 'FactoryJet - Seattle Web Design Agency',
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Seattle',
-    addressRegion: 'WA',
-    addressCountry: 'US',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 47.6062,
-    longitude: -122.3321,
-  },
   areaServed: [
     { '@type': 'City', name: 'Seattle' },
     { '@type': 'City', name: 'Bellevue' },

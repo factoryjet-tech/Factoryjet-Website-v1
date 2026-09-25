@@ -84,12 +84,6 @@ const localBusinessSchema = {
     { '@type': 'City', name: 'Thane' },
     { '@type': 'City', name: 'Navi Mumbai' },
   ],
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Mumbai',
-    addressRegion: 'Maharashtra',
-    addressCountry: 'IN',
-  },
   openingHoursSpecification: {
     '@type': 'OpeningHoursSpecification',
     dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],

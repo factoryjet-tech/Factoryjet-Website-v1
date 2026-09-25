@@ -436,17 +436,6 @@ const LOCAL_BUSINESS_SCHEMA = {
   name: 'FactoryJet - Austin Ecommerce Development Agency',
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Austin',
-    addressRegion: 'TX',
-    addressCountry: 'US',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 30.2672,
-    longitude: -97.7431,
-  },
   areaServed: [
     { '@type': 'City', name: 'Austin' },
     { '@type': 'City', name: 'Round Rock' },

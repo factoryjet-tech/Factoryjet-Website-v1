@@ -410,17 +410,6 @@ const LOCAL_BUSINESS_SCHEMA = {
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
   priceRange: '$$',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Minneapolis',
-    addressRegion: 'MN',
-    addressCountry: 'US',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 44.9778,
-    longitude: -93.265,
-  },
   areaServed: [
     { '@type': 'City', name: 'Minneapolis' },
     { '@type': 'City', name: 'St. Paul' },

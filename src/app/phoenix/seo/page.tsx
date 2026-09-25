@@ -422,17 +422,6 @@ const LOCAL_BUSINESS_SCHEMA = {
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
   priceRange: '$$',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Phoenix',
-    addressRegion: 'AZ',
-    addressCountry: 'US',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 33.4484,
-    longitude: -112.074,
-  },
   areaServed: [
     { '@type': 'City', name: 'Phoenix' },
     { '@type': 'City', name: 'Scottsdale' },

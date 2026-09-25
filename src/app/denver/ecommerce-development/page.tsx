@@ -436,17 +436,6 @@ const LOCAL_BUSINESS_SCHEMA = {
   name: 'FactoryJet - Denver E-Commerce Development Agency',
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Denver',
-    addressRegion: 'CO',
-    addressCountry: 'US',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 39.7392,
-    longitude: -104.9903,
-  },
   areaServed: [
     { '@type': 'City', name: 'Denver' },
     { '@type': 'City', name: 'Boulder' },

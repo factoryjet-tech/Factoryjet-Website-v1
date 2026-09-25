@@ -422,17 +422,6 @@ const LOCAL_BUSINESS_SCHEMA = {
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
   priceRange: '$$$',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Chattanooga',
-    addressRegion: 'TN',
-    addressCountry: 'US',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 35.0456,
-    longitude: -85.3097,
-  },
   areaServed: [
     { '@type': 'City', name: 'Chattanooga' },
     { '@type': 'City', name: 'Cleveland' },

@@ -430,17 +430,6 @@ const LOCAL_BUSINESS_SCHEMA = {
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
   priceRange: '$$',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Miami',
-    addressRegion: 'FL',
-    addressCountry: 'US',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 25.7617,
-    longitude: -80.1918,
-  },
   areaServed: [
     { '@type': 'City', name: 'Miami' },
     { '@type': 'City', name: 'Miami Beach' },

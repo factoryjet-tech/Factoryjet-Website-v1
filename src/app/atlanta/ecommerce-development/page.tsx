@@ -435,17 +435,6 @@ const LOCAL_BUSINESS_SCHEMA = {
   name: 'FactoryJet - Atlanta E-Commerce Development Agency',
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Atlanta',
-    addressRegion: 'GA',
-    addressCountry: 'US',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 33.7490,
-    longitude: -84.3880,
-  },
   areaServed: [
     { '@type': 'City', name: 'Atlanta' },
     { '@type': 'City', name: 'Alpharetta' },

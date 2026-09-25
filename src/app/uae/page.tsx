@@ -3,6 +3,7 @@ import { homeAlternates } from '@/data/hreflangMap'
 import UaePage from '@/pages/UaePage'
 import SiteHeader from '@/components/v2/SiteHeader'
 import SiteFooter from '@/components/v2/SiteFooter'
+import { ORGANIZATION_SCHEMA } from '@/data/organization'
 
 // LocalBusiness structured data for SEO
 const localBusinessJsonLd = {
@@ -12,14 +13,7 @@ const localBusinessJsonLd = {
   "name": "FactoryJet",
   "url": "https://factoryjet.com/uae",
   "email": "connect@factoryjet.com",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "ITPL Main Rd, Tigalarpalya, Brookefield",
-    "addressLocality": "Bengaluru",
-    "addressRegion": "Karnataka",
-    "postalCode": "560037",
-    "addressCountry": "IN"
-  },
+  "address": ORGANIZATION_SCHEMA.address,
   "areaServed": {
     "@type": "Place",
     "name": "Dubai"

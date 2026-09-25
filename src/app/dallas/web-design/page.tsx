@@ -430,17 +430,6 @@ const LOCAL_BUSINESS_SCHEMA = {
   name: 'FactoryJet - Dallas Web Design Agency',
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Dallas',
-    addressRegion: 'TX',
-    addressCountry: 'US',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 32.7767,
-    longitude: -96.797,
-  },
   areaServed: [
     { '@type': 'City', name: 'Dallas' },
     { '@type': 'City', name: 'Plano' },

@@ -128,12 +128,6 @@ const localBusinessSchema = {
   image: 'https://factoryjet.com/logo.png',
   description:
     'Ecommerce development company serving Mumbai businesses. Shopify, WooCommerce, and custom stores. Razorpay + UPI + COD integrated. GST-compliant. 7-day delivery.',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Mumbai',
-    addressRegion: 'Maharashtra',
-    addressCountry: 'IN',
-  },
   areaServed: [
     'Andheri', 'Bandra', 'BKC', 'Lower Parel', 'Navi Mumbai',
     'Thane', 'Powai', 'Malad', 'Goregaon', 'Kurla',

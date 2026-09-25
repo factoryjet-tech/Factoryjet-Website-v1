@@ -415,17 +415,6 @@ const LOCAL_BUSINESS_SCHEMA = {
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
   priceRange: '$$',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Colorado Springs',
-    addressRegion: 'CO',
-    addressCountry: 'US',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 38.8339,
-    longitude: -104.8214,
-  },
   areaServed: [
     { '@type': 'City', name: 'Colorado Springs' },
     { '@type': 'City', name: 'Briargate' },

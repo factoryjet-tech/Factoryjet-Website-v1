@@ -410,17 +410,6 @@ const LOCAL_BUSINESS_SCHEMA = {
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
   priceRange: '$$$',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Corpus Christi',
-    addressRegion: 'TX',
-    addressCountry: 'US',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 27.8006,
-    longitude: -97.3964,
-  },
   areaServed: [
     { '@type': 'City', name: 'Corpus Christi' },
     { '@type': 'City', name: 'Portland' },

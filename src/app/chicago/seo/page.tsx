@@ -381,17 +381,6 @@ const LOCAL_BUSINESS_SCHEMA = {
   name: 'FactoryJet - Chicago Local SEO Agency',
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Chicago',
-    addressRegion: 'IL',
-    addressCountry: 'US',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 41.8781,
-    longitude: -87.6298,
-  },
   areaServed: [
     { '@type': 'City', name: 'Chicago' },
     { '@type': 'City', name: 'Naperville' },

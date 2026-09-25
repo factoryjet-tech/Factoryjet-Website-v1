@@ -464,17 +464,6 @@ const LOCAL_BUSINESS_SCHEMA = {
   name: 'FactoryJet - Charlotte Ecommerce Development Agency',
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Charlotte',
-    addressRegion: 'NC',
-    addressCountry: 'US',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 35.2271,
-    longitude: -80.8431,
-  },
   areaServed: [
     { '@type': 'City', name: 'Charlotte' },
     { '@type': 'City', name: 'Huntersville' },

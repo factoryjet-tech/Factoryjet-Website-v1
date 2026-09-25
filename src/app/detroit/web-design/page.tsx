@@ -441,17 +441,6 @@ const LOCAL_BUSINESS_SCHEMA = {
   name: 'FactoryJet - Detroit Web Design Agency',
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Detroit',
-    addressRegion: 'MI',
-    addressCountry: 'US',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 42.3314,
-    longitude: -83.0458,
-  },
   areaServed: [
     { '@type': 'City', name: 'Detroit' },
     { '@type': 'City', name: 'Troy' },

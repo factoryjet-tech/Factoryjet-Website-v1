@@ -410,17 +410,6 @@ const LOCAL_BUSINESS_SCHEMA = {
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
   priceRange: '$$$',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Huntington Beach',
-    addressRegion: 'CA',
-    addressCountry: 'US',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 33.6595,
-    longitude: -117.9988,
-  },
   areaServed: [
     { '@type': 'City', name: 'Huntington Beach' },
     { '@type': 'City', name: 'Fountain Valley' },

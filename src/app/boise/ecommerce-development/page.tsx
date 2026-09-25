@@ -442,17 +442,6 @@ const LOCAL_BUSINESS_SCHEMA = {
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
   priceRange: '$$$',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Boise',
-    addressRegion: 'ID',
-    addressCountry: 'US',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 43.615,
-    longitude: -116.2023,
-  },
   areaServed: [
     { '@type': 'City', name: 'Boise' },
     { '@type': 'City', name: 'Meridian' },

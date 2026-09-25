@@ -442,17 +442,6 @@ const LOCAL_BUSINESS_SCHEMA = {
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
   priceRange: '$$$',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Fargo',
-    addressRegion: 'ND',
-    addressCountry: 'US',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 46.8772,
-    longitude: -96.7898,
-  },
   areaServed: [
     { '@type': 'City', name: 'Fargo' },
     { '@type': 'City', name: 'West Fargo' },

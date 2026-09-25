@@ -430,17 +430,6 @@ const LOCAL_BUSINESS_SCHEMA = {
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
   priceRange: '$$',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Atlanta',
-    addressRegion: 'GA',
-    addressCountry: 'US',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 33.749,
-    longitude: -84.388,
-  },
   areaServed: [
     { '@type': 'City', name: 'Atlanta' },
     { '@type': 'City', name: 'Alpharetta' },

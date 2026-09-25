@@ -410,17 +410,6 @@ const LOCAL_BUSINESS_SCHEMA = {
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
   priceRange: '$$',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Las Vegas',
-    addressRegion: 'NV',
-    addressCountry: 'US',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 36.1699,
-    longitude: -115.1398,
-  },
   areaServed: [
     { '@type': 'City', name: 'Las Vegas' },
     { '@type': 'City', name: 'Henderson' },

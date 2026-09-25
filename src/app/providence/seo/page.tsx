@@ -416,17 +416,6 @@ const LOCAL_BUSINESS_SCHEMA = {
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
   priceRange: '$$$',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Providence',
-    addressRegion: 'RI',
-    addressCountry: 'US',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 41.824,
-    longitude: -71.4128,
-  },
   areaServed: [
     { '@type': 'City', name: 'Providence' },
     { '@type': 'City', name: 'Warwick' },

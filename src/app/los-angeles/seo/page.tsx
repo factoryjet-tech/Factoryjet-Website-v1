@@ -410,17 +410,6 @@ const LOCAL_BUSINESS_SCHEMA = {
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
   priceRange: '$$',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Los Angeles',
-    addressRegion: 'CA',
-    addressCountry: 'US',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 34.0522,
-    longitude: -118.2437,
-  },
   areaServed: [
     { '@type': 'City', name: 'Los Angeles' },
     { '@type': 'City', name: 'Beverly Hills' },

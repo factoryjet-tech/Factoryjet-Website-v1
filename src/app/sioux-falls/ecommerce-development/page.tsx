@@ -464,17 +464,6 @@ const LOCAL_BUSINESS_SCHEMA = {
   name: 'FactoryJet - Sioux Falls Ecommerce Development Agency',
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Sioux Falls',
-    addressRegion: 'SD',
-    addressCountry: 'US',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 43.5460,
-    longitude: -96.7313,
-  },
   areaServed: [
     { '@type': 'City', name: 'Sioux Falls' },
     { '@type': 'City', name: 'Brandon' },

@@ -416,17 +416,6 @@ const LOCAL_BUSINESS_SCHEMA = {
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
   priceRange: '$$',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Boston',
-    addressRegion: 'MA',
-    addressCountry: 'US',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 42.3601,
-    longitude: -71.0589,
-  },
   areaServed: [
     { '@type': 'City', name: 'Boston' },
     { '@type': 'City', name: 'Cambridge' },

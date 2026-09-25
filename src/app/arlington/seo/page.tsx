@@ -410,17 +410,6 @@ const LOCAL_BUSINESS_SCHEMA = {
   name: 'FactoryJet - Arlington TX Local SEO Agency',
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Arlington',
-    addressRegion: 'TX',
-    addressCountry: 'US',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 32.7357,
-    longitude: -97.1081,
-  },
   areaServed: [
     { '@type': 'City', name: 'Arlington' },
     { '@type': 'City', name: 'Grand Prairie' },

@@ -430,17 +430,6 @@ const LOCAL_BUSINESS_SCHEMA = {
   name: 'FactoryJet - Tampa E-Commerce Development Agency',
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Tampa',
-    addressRegion: 'FL',
-    addressCountry: 'US',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 27.9506,
-    longitude: -82.4572,
-  },
   areaServed: [
     { '@type': 'City', name: 'Tampa' },
     { '@type': 'City', name: 'St. Petersburg' },

@@ -385,17 +385,6 @@ const LOCAL_BUSINESS_SCHEMA = {
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
   priceRange: '$$',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Cleveland',
-    addressRegion: 'OH',
-    addressCountry: 'US',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 41.4993,
-    longitude: -81.6944,
-  },
   areaServed: [
     { '@type': 'City', name: 'Cleveland' },
     { '@type': 'City', name: 'Lakewood' },

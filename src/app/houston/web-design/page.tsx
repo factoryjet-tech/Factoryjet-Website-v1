@@ -442,17 +442,6 @@ const LOCAL_BUSINESS_SCHEMA = {
   name: 'FactoryJet - Houston Web Design Agency',
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Houston',
-    addressRegion: 'TX',
-    addressCountry: 'US',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 29.7604,
-    longitude: -95.3698,
-  },
   areaServed: [
     { '@type': 'City', name: 'Houston' },
     { '@type': 'City', name: 'The Woodlands' },

@@ -442,17 +442,6 @@ const LOCAL_BUSINESS_SCHEMA = {
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
   priceRange: '$$$',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Raleigh',
-    addressRegion: 'NC',
-    addressCountry: 'US',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 35.7796,
-    longitude: -78.6382,
-  },
   areaServed: [
     { '@type': 'City', name: 'Raleigh' },
     { '@type': 'City', name: 'Durham' },

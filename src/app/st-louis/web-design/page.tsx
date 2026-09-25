@@ -435,17 +435,6 @@ const LOCAL_BUSINESS_SCHEMA = {
   name: 'FactoryJet - St. Louis Web Design Agency',
   image: 'https://factoryjet.com/og-default.png',
   url: CANONICAL,
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'St. Louis',
-    addressRegion: 'MO',
-    addressCountry: 'US',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 38.627,
-    longitude: -90.1994,
-  },
   areaServed: [
     { '@type': 'City', name: 'St. Louis' },
     { '@type': 'City', name: 'Clayton' },
