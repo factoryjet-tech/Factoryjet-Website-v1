@@ -741,7 +741,7 @@ export default function EcommerceDevelopmentPage() {
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
           headline="500+ businesses served. 12 years of e-commerce. Four markets trust the results."
-          description="Websites designed and built for businesses across India, the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and a 7-day delivery guarantee."
+          description="Websites designed and built for businesses across India, the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and 7-day delivery."
         />
 
         {/* ── 3. WHAT GREAT E-COMMERCE LOOKS LIKE ─────────────────────────── */}

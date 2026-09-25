@@ -24,7 +24,7 @@ export const post: BlogPost = {
     'E-commerce adds $1,500 to $8,000 to a basic site cost depending on product volume, payment complexity, and inventory system integrations.',
     'US domestic agencies charge $8,000 to $25,000 primarily due to local overhead, office space, and domestic payroll rather than technical output differences.',
     'Lighthouse 95+ scores (the performance standard that directly influences Core Web Vitals rankings) are achievable at any price point above $1,999 with proper engineering.',
-    'FactoryJet builds custom US small business websites starting at $1,999 with Lighthouse 95+, full technical SEO, WCAG 2.2 compliance, and guaranteed 7-day delivery.',
+    'FactoryJet builds custom US small business websites starting at $1,999 with Lighthouse 95+, full technical SEO, WCAG 2.2 compliance, and 7-day delivery.',
   ],
   faqs: [
     {
@@ -192,7 +192,7 @@ export const post: BlogPost = {
       <div className="bg-gradient-to-r from-gray-900 to-gray-800 text-white rounded-2xl p-6 md:p-8 my-8 shadow-lg">
         <div className="max-w-2xl">
           <span className="inline-block px-3 py-1 bg-[#F05A28] text-white text-xs font-bold uppercase rounded-full tracking-wider mb-3">
-            7-Day Delivery Guarantee
+            7-Day Delivery
           </span>
           <h3 className="text-xl md:text-2xl font-display font-bold text-white mb-2">
             Get an Exact Fixed-Price Scope for Your Website Build

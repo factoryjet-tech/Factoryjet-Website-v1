@@ -147,7 +147,7 @@ export default function Page() {
     primaryCTA: { label: 'Start Your Project', modal: true as const, region: 'in' as const },
     secondaryCTA: { label: 'View Our Work', href: '/portfolio' },
     stats: [
-      { value: '7-Day', label: 'Delivery Guarantee' },
+      { value: '7-Day', label: 'Delivery' },
       { value: '500+', label: 'Businesses Served' },
       { value: '25+ yrs', label: 'Web Engineering' },
     ],
@@ -454,7 +454,7 @@ const MDU_FAQ_ITEMS = [
         <HeroBrowserMockup />
         <LogoBar />
         <BigThreeTrustBlock
-          description="Websites designed and built for businesses across India, the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and a 7-day delivery guarantee."
+          description="Websites designed and built for businesses across India, the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and 7-day delivery."
         />
         <CityContextSection {...cityContextProps} />
         <ServiceExplanation

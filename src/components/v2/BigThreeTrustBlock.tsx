@@ -26,7 +26,7 @@ const DEFAULT_DESCRIPTION =
   'Websites designed and built for US small businesses, Shopify stores, ' +
   'B2B companies, and DTC brands. Affordable web design services, ' +
   'at a fixed, transparent price, your codebase delivered in full, ' +
-  'and a 7-day delivery guarantee.';
+  'and 7-day delivery.';
 
 export interface BigThreeTrustBlockProps {
   eyebrow?: string;
@@ -40,7 +40,7 @@ export interface BigThreeTrustBlockProps {
   /**
    * Render mode.
    *  - undefined / 'showcase' (default): the hardcoded US stat block
-   *    (523+, Fixed Price, 7-day guarantee). Used by ~105 pages — unchanged.
+   *    (523+, Fixed Price, 7-day delivery). Used by ~105 pages — unchanged.
    *  - 'statement': a clean cream band rendering only the eyebrow + headline
    *    you pass. Used by the India SEO pages (no US price, no /contact CTA).
    */
@@ -217,7 +217,7 @@ export default function BigThreeTrustBlock({
                 className="mt-2 font-fj-body font-semibold text-fj-ink"
                 style={{ fontSize: '0.9375rem' }}
               >
-                Website Delivery Guarantee
+                Website Delivery
               </p>
               <p
                 className="mt-1.5 font-fj-body text-fj-neutral-500"

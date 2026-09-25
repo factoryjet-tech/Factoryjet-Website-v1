@@ -609,7 +609,7 @@ export default function AIMarketingAgentUSPage() {
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
           headline="500+ businesses. 12 years of building. One goal: your results."
-          description="Custom AI agents and software built for US businesses. Fixed transparent pricing and full codebase ownership. Fixed, transparent pricing, your codebase delivered in full, and a 7-day delivery guarantee."
+          description="Custom AI agents and software built for US businesses. Fixed transparent pricing and full codebase ownership. Fixed, transparent pricing, your codebase delivered in full, and 7-day delivery."
         />
 
         {/* ── 4. WHAT IS AN AI MARKETING AGENT ─────────────────────────────── */}

@@ -324,7 +324,7 @@ const FAQS = [
   },
   {
     q: 'How is FactoryJet different from Fiverr or Upwork freelancers?',
-    a: 'FactoryJet is a structured agency with a defined process, dedicated project managers, quality review layers, and a delivery guarantee. Freelancers can be great, but you\'re taking on the management risk yourself. With us, you get one point of contact, predictable delivery, and someone accountable if something goes wrong.',
+    a: 'FactoryJet is a structured agency with a defined process, dedicated project managers, quality review layers, and a committed delivery date. Freelancers can be great, but you\'re taking on the management risk yourself. With us, you get one point of contact, predictable delivery, and someone accountable if something goes wrong.',
   },
   {
     q: 'Do you sign NDAs?',
@@ -359,8 +359,8 @@ const FAQS = [
     a: 'We work on transparent, milestone-governed fixed-price agreements: 50% deposit to kick off strategy and Figma design, and 50% upon final QA and production launch approval. We never charge hidden hourly overages or unexpected change-order fees.',
   },
   {
-    q: 'What is the FactoryJet 7-Day Sprint delivery guarantee and how does it work?',
-    a: 'For standard custom business websites up to 5 pages, we guarantee full design and development delivery within 7 business days from Figma milestone approval. Our structured daily milestones and dedicated senior engineering pods eliminate the multi-month delays common with traditional creative agencies.',
+    q: 'What is the FactoryJet 7-Day Sprint and how does it work?',
+    a: 'For standard custom business websites up to 5 pages, we deliver full design and development within 7 business days from Figma milestone approval. Our structured daily milestones and dedicated senior engineering pods eliminate the multi-month delays common with traditional creative agencies.',
   },
   {
     q: 'How do you handle multi-currency, multi-language international e-commerce localization?',
@@ -526,7 +526,7 @@ export default function USServicesHubPage() {
             </div>
 
             <div className="mt-8 flex flex-wrap gap-2">
-              {['500+ websites delivered', '7-day delivery guarantee', 'Fixed price confirmed upfront', 'Full code ownership'].map((item) => (
+              {['500+ websites delivered', '7-day delivery', 'Fixed price confirmed upfront', 'Full code ownership'].map((item) => (
                 <span
                   key={item}
                   className="inline-flex items-center rounded-full font-fj-mono font-medium"
@@ -1019,7 +1019,7 @@ export default function USServicesHubPage() {
           sub="Tell us what you need. We\'ll review your current site, recommend the right service, and send a fixed-price proposal within 24 hours. No hourly billing. No surprises."
           primaryCta={{ label: 'Get a Quote', modal: true, region: 'us' }}
           secondaryCta={{ label: 'See Our Portfolio', href: '/portfolio' }}
-          objectionHandler="Fixed price confirmed upfront. Full code ownership. 7-day delivery guarantee."
+          objectionHandler="Fixed price confirmed upfront. Full code ownership. 7-day delivery."
         />
 
       </main>

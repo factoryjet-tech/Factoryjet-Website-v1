@@ -17,7 +17,7 @@
  *     pillars={[
  *       { title: 'AI-native',   body: '...', image: '/images/services/foo.webp' },
  *       { title: 'Transparent', body: '...' },
- *       { title: 'Guaranteed',  body: '...' },
+ *       { title: 'On time',  body: '...' },
  *     ]}
  *   />
  *

@@ -27,7 +27,7 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 export const metadata: Metadata = {
   title: 'Ecommerce Development in Surat | FactoryJet',
   description:
-    'Shopify & WooCommerce stores for Surat brands. Razorpay, UPI & COD. GST-compliant. Shiprocket integrated. 7-day delivery guarantee.',
+    'Shopify & WooCommerce stores for Surat brands. Razorpay, UPI & COD. GST-compliant. Shiprocket integrated. 7-day delivery.',
   keywords: [
     'ecommerce development company surat',
     'ecommerce website development surat',
@@ -410,10 +410,10 @@ export default function SuratEcommercePage() {
         formSlot={<HeroInlineForm region="in" source="services_ecommerce_development_surat_hero" />}
           eyebrow="ECOMMERCE DEVELOPMENT · SURAT"
           headline="Surat's Most Trusted Ecommerce Agency: Store Live in 7 Days"
-          lead="FactoryJet builds Shopify, WooCommerce, and custom D2C stores for Surat brands: Razorpay and UPI integrated, GST-compliant, Shiprocket connected, and Lighthouse 90+ before we hand you the keys. 7-day delivery guarantee."
+          lead="FactoryJet builds Shopify, WooCommerce, and custom D2C stores for Surat brands: Razorpay and UPI integrated, GST-compliant, Shiprocket connected, and Lighthouse 90+ before we hand you the keys. 7-day delivery."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
-            '7-day delivery guarantee',
+            '7-day delivery',
             'Razorpay + UPI + COD ready',
           ]}
           rightSlot={<HeroBrowserMockup />}
@@ -425,8 +425,8 @@ export default function SuratEcommercePage() {
         {/* ── 3. TRUST BLOCK ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
-          headline="500+ stores launched. 12 years of ecommerce engineering. One 7-day guarantee."
-          description="Websites designed and built for businesses across India, the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and a 7-day delivery guarantee."
+          headline="500+ stores launched. 12 years of ecommerce engineering. 7-day delivery."
+          description="Websites designed and built for businesses across India, the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and 7-day delivery."
         />
 
         {/* ── 4. PLATFORM EXPLANATION ──────────────────────────────────────── */}
@@ -568,12 +568,12 @@ export default function SuratEcommercePage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Surat Brands Choose FactoryJet Over Local Agencies"
-          lead="Surat ecommerce agencies often charge several times more for a comparable project and take 10 to 20 weeks to deliver, usually without telling you the price upfront. FactoryJet gives you a fixed quote before you speak to us, guarantees 7-day delivery in writing, and builds to Lighthouse 90+ on mobile. The price is fixed and confirmed in writing, and the codebase is yours to keep."
+          lead="Surat ecommerce agencies often charge several times more for a comparable project and take 10 to 20 weeks to deliver, usually without telling you the price upfront. FactoryJet gives you a fixed quote before you speak to us, puts 7-day delivery in writing, and builds to Lighthouse 90+ on mobile. The price is fixed and confirmed in writing, and the codebase is yours to keep."
           pillars={[
             {
               icon: '⚡',
               title: '7-day delivery. In writing. Or you do not pay the balance.',
-              body: "Surat's business community moves at Gujarat speed. Decisions are made fast and execution is expected to match. FactoryJet delivers Shopify and WooCommerce stores in 7 days, with the guarantee written into the project agreement. We have delivered on time for 97% of all builds.",
+              body: "Surat's business community moves at Gujarat speed. Decisions are made fast and execution is expected to match. FactoryJet delivers Shopify and WooCommerce stores in 7 days, with the delivery date written into the project agreement. We have delivered on time for 97% of all builds.",
             },
             {
               icon: '📱',
@@ -604,7 +604,7 @@ export default function SuratEcommercePage() {
           leadParagraphs={[
             "Surat is one of the world's fastest-growing cities and India's diamond city, handling 90% of global diamond polishing and supplying 40% of India's synthetic textile market. This manufacturing supremacy is creating one of India's most concentrated B2B ecommerce opportunities, with diamond traders, textile wholesalers, and fabric manufacturers all building digital-first procurement portals for the first time.",
             "Surat's ecommerce opportunity is defined by the B2B-to-B2C transition at scale. Ring Road fabric traders are building Shopify stores with international shipping and dollar-denominated pricing for export buyers. Katargam embroidery manufacturers are launching D2C bridal fabric stores with WhatsApp-native product catalogues. Diamond polishing businesses are creating private B2B portals with RTGS payment flows. And GIDC food manufacturers are building D2C subscription operations with FSSAI compliance and pan-India logistics.",
-            "Surat's business community is characterised by Gujarat's entrepreneurial speed. Decisions are made fast and execution is expected to match. FactoryJet's 7-day delivery guarantee, transparent pricing, and fixed-scope builds are the exact signals Surat founders respond to. We have built for the Surat textile and diamond ecosystem and understand the specific B2B and D2C requirements that each vertical demands.",
+            "Surat's business community is characterised by Gujarat's entrepreneurial speed. Decisions are made fast and execution is expected to match. FactoryJet's 7-day delivery, transparent pricing, and fixed-scope builds are the exact signals Surat founders respond to. We have built for the Surat textile and diamond ecosystem and understand the specific B2B and D2C requirements that each vertical demands.",
           ]}
           stats={[
             {

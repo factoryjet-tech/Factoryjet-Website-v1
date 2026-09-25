@@ -48,7 +48,7 @@ export const post: BlogPost = {
     },
     {
       q: 'How long should a web design agency take to build a small business website?',
-      a: "A 5-page professional website should take 7–21 days with a modern agency. US domestic agencies typically take 8–16 weeks due to project management overhead and sequential processes. Agencies using Next.js, component libraries, and CI/CD pipelines deliver faster because their workflows are engineered for speed. FactoryJet's 7-day delivery guarantee is based on a productized 5-page process with parallel design and development tracks. Longer timelines often indicate disorganized processes, not higher quality.",
+      a: "A 5-page professional website should take 7–21 days with a modern agency. US domestic agencies typically take 8–16 weeks due to project management overhead and sequential processes. Agencies using Next.js, component libraries, and CI/CD pipelines deliver faster because their workflows are engineered for speed. FactoryJet's 7-day delivery is based on a productized 5-page process with parallel design and development tracks. Longer timelines often indicate disorganized processes, not higher quality.",
     },
     {
       q: 'Should I hire a local web design agency near me or a remote agency?',

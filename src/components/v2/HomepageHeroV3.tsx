@@ -15,7 +15,7 @@ import gsap from 'gsap';
 
 const trustItems = [
   '500+ sites delivered',
-  '7-day guarantee',
+  '7-day delivery',
   '60–70% cheaper',
 ] as const;
 
@@ -199,7 +199,7 @@ export default function HomepageHeroV3() {
                 7 Days.
               </em>
               <br />
-              Guaranteed.
+              Delivered.
             </h1>
 
             {/* Sub-headline */}

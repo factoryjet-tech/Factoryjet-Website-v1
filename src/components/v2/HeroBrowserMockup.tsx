@@ -119,7 +119,7 @@ export default function HeroBrowserMockup({
               <span className="mb-1.5 block h-3 w-[85%] rounded-md bg-white/80" />
               <span className="mb-4 block h-3 w-[65%] rounded-md bg-white/55" />
               <div className="grid grid-cols-3 gap-2">
-                {['AI-native', 'Transparent', 'Guaranteed'].map((t) => (
+                {['AI-native', 'Transparent', '7-day'].map((t) => (
                   <div
                     key={t}
                     className="rounded-lg p-2.5"

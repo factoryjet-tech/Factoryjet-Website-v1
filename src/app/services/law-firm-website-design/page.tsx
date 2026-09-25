@@ -687,7 +687,7 @@ export default function LawFirmWebsiteDesignPage() {
           imageAlt="Professional law firm website homepage on a MacBook. FactoryJet law firm website design."
           stats={[
             { value: '500+', label: 'Professional Sites Built.' },
-            { value: '7 Days', label: 'Delivery Guarantee.' },
+            { value: '7 Days', label: 'Delivery Time.' },
             { value: 'Fixed Price', label: 'Scoped to Your Build, Confirmed Upfront.' },
             { value: '10+ Yrs', label: 'Legal Web Expertise.' },
           ]}

@@ -3,7 +3,7 @@ import { Search, PenTool, FileText, Code, CheckCircle, Rocket, BookOpen, Setting
 
 // 2026-08-04: these steps previously ran "Week 1-2" through "Week 12-13", a 13-week timeline that
 // contradicted both the "5-7 Days" delivery stat on this same page and FactoryJet's sitewide 7-day
-// delivery guarantee. Owner confirmed 7 days is the correct figure. Day numbering follows the
+// delivery promise. Owner confirmed 7 days is the correct figure. Day numbering follows the
 // canonical sequence already used on the web-design pages: Day 1 Discovery through Day 7 Launch.
 const steps = [
   { step: 1, title: "Discovery & Strategy", time: "Day 1", desc: "Understand business goals, analyze competition, identify target audience, define success metrics, create project roadmap.", icon: Search },

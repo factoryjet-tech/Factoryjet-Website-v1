@@ -74,7 +74,7 @@ export const post: BlogPost = {
     },
     {
       q: 'How long does Shopify development take?',
-      a: 'Basic setup: 3 to 7 days. Standard custom build: 2 to 4 weeks. Advanced custom build: 4 to 8 weeks. Headless or enterprise: 3 to 6 months. FactoryJet delivers up to 5-page Shopify stores in 7 days with a delivery guarantee.',
+      a: 'Basic setup: 3 to 7 days. Standard custom build: 2 to 4 weeks. Advanced custom build: 4 to 8 weeks. Headless or enterprise: 3 to 6 months. FactoryJet delivers Shopify stores of up to 5 pages in 7 days.',
     },
     {
       q: "What's the difference between a Shopify theme and a custom build?",
@@ -714,7 +714,7 @@ export const post: BlogPost = {
         <a href="/nashville/ecommerce-development" className="text-[#F05A28] font-semibold underline hover:text-[#C94818]">
           Nashville
         </a>{' '}
-        and beyond, all with a 7-day delivery guarantee.
+        and beyond, all with 7-day delivery.
       </p>
 
       {/* High-Converting CTA Box */}

@@ -74,7 +74,7 @@ export default function GetFreeQuoteCTA({
           style={{ fontSize: '0.8125rem' }}
         >
           {[
-            '7-day delivery guarantee',
+            '7-day delivery',
             'Fixed price · no surprises',
             '500+ businesses served',
             '30-day post-launch support',

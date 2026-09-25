@@ -31,7 +31,7 @@ export const AUTHORS: Record<string, AuthorProfile> = {
   credentials: [
     '500+ websites delivered to US, UK, and UAE clients',
     'Lighthouse 95+ performance standard on all FactoryJet projects',
-    '7-day delivery guarantee methodology, 97% on-time delivery rate',
+    '7-day delivery methodology, 97% on-time delivery rate',
     'Direct experience with web design agency pricing across US, UK, and offshore markets',
     'A decade-plus in digital strategy and web development business leadership',
   ],

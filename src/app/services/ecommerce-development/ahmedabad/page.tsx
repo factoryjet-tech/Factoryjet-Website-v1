@@ -27,7 +27,7 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 export const metadata: Metadata = {
   title: 'Ecommerce Development in Ahmedabad | FactoryJet',
   description:
-    'Shopify & WooCommerce stores for Ahmedabad brands. Razorpay, UPI & COD. GST-compliant. Shiprocket integrated. 7-day delivery guarantee.',
+    'Shopify & WooCommerce stores for Ahmedabad brands. Razorpay, UPI & COD. GST-compliant. Shiprocket integrated. 7-day delivery.',
   keywords: [
     'ecommerce development company ahmedabad',
     'ecommerce website development ahmedabad',
@@ -410,10 +410,10 @@ export default function AhmedabadEcommercePage() {
         formSlot={<HeroInlineForm region="in" source="services_ecommerce_development_ahmedabad_hero" />}
           eyebrow="ECOMMERCE DEVELOPMENT · AHMEDABAD"
           headline="Ahmedabad's Most Trusted Ecommerce Agency: Store Live in 7 Days"
-          lead="FactoryJet builds Shopify, WooCommerce, and custom D2C stores for Ahmedabad brands: Razorpay and UPI integrated, GST-compliant, Shiprocket connected, and Lighthouse 90+ before we hand you the keys. 7-day delivery guarantee."
+          lead="FactoryJet builds Shopify, WooCommerce, and custom D2C stores for Ahmedabad brands: Razorpay and UPI integrated, GST-compliant, Shiprocket connected, and Lighthouse 90+ before we hand you the keys. 7-day delivery."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
-            '7-day delivery guarantee',
+            '7-day delivery',
             'Razorpay + UPI + COD ready',
           ]}
           rightSlot={<HeroBrowserMockup />}
@@ -425,8 +425,8 @@ export default function AhmedabadEcommercePage() {
         {/* ── 3. TRUST BLOCK ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
-          headline="500+ stores launched. 12 years of ecommerce engineering. One 7-day guarantee."
-          description="Websites designed and built for businesses across India, the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and a 7-day delivery guarantee."
+          headline="500+ stores launched. 12 years of ecommerce engineering. 7-day delivery."
+          description="Websites designed and built for businesses across India, the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and 7-day delivery."
         />
 
         {/* ── 4. PLATFORM EXPLANATION ──────────────────────────────────────── */}
@@ -568,12 +568,12 @@ export default function AhmedabadEcommercePage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Ahmedabad Brands Choose FactoryJet Over Local Agencies"
-          lead="Ahmedabad ecommerce agencies often charge several times more for a comparable project and take 10 to 20 weeks to deliver, usually without telling you the price upfront. FactoryJet gives you a fixed quote before you speak to us, guarantees 7-day delivery in writing, and builds to Lighthouse 90+ on mobile. The price is fixed and confirmed in writing, and the codebase is yours to keep."
+          lead="Ahmedabad ecommerce agencies often charge several times more for a comparable project and take 10 to 20 weeks to deliver, usually without telling you the price upfront. FactoryJet gives you a fixed quote before you speak to us, puts 7-day delivery in writing, and builds to Lighthouse 90+ on mobile. The price is fixed and confirmed in writing, and the codebase is yours to keep."
           pillars={[
             {
               icon: '⚡',
               title: '7-day delivery. In writing. Or you do not pay the balance.',
-              body: "Ahmedabad's market moves fast. Waiting 16 weeks for an agency to deliver a store you briefed in April is not a plan; it is a liability. FactoryJet delivers Shopify and WooCommerce stores in 7 days, with the guarantee written into the project agreement. We have delivered on time for 97% of all builds.",
+              body: "Ahmedabad's market moves fast. Waiting 16 weeks for an agency to deliver a store you briefed in April is not a plan; it is a liability. FactoryJet delivers Shopify and WooCommerce stores in 7 days, with the delivery date written into the project agreement. We have delivered on time for 97% of all builds.",
             },
             {
               icon: '📱',
@@ -604,7 +604,7 @@ export default function AhmedabadEcommercePage() {
           leadParagraphs={[
             "Ahmedabad's ecommerce market is anchored by the city's extraordinary manufacturing depth: textiles, diamonds, pharmaceuticals, food processing, and industrial chemicals. Gujarat's entrepreneurial culture, combined with the state's dominant position in India's export economy, creates a unique ecommerce market where wholesale-to-D2C transitions, B2B procurement portals, and international export stores all represent major opportunities.",
             "Ahmedabad's ecommerce transitions are accelerating. SG Highway textile traders are launching Shopify stores with NRI-targeted international shipping and COD-heavy domestic checkout. GIDC pharma manufacturers are building B2B procurement portals with CDSCO-compliant product pages. Prahlad Nagar food brands are building D2C subscription operations with FSSAI compliance. And Kutch artisan cooperatives are reaching global buyers through Shopify international with automatic currency conversion and GST export invoicing.",
-            "Gujarat's entrepreneurial culture means Ahmedabad business owners are fast decision-makers who demand transparency in pricing and delivery timelines. FactoryJet's transparent pricing, fixed project scope, and 7-day delivery guarantee are precisely the signals that resonate with Ahmedabad founders who have dealt with agencies that charge discovery fees and deliver after 20 weeks.",
+            "Gujarat's entrepreneurial culture means Ahmedabad business owners are fast decision-makers who demand transparency in pricing and delivery timelines. FactoryJet's transparent pricing, fixed project scope, and 7-day delivery are precisely the signals that resonate with Ahmedabad founders who have dealt with agencies that charge discovery fees and deliver after 20 weeks.",
           ]}
           stats={[
             {

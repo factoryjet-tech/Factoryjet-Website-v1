@@ -580,7 +580,7 @@ export default function N8nAutomationPage() {
           lead="Indian businesses on Zapier pay a steep recurring fee for high automation volumes. n8n self-hosted runs the same workflows for an affordable monthly server cost only, no per-task fees. FactoryJet builds, deploys, and maintains your n8n automation for Indian tools: Razorpay, Tally, WhatsApp, Zoho, Shiprocket, and 400+ more."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
-            '7-day delivery guarantee',
+            '7-day delivery',
             'Razorpay + Tally + WhatsApp ready',
           ]}
           rightSlot={
@@ -631,7 +631,7 @@ export default function N8nAutomationPage() {
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
           headline="400+ integrations. 80% lower cost than Zapier. Built for Indian business tools."
-          description="Websites designed and built for businesses across India, the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and a 7-day delivery guarantee."
+          description="Websites designed and built for businesses across India, the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and 7-day delivery."
         />
 
         {/* ── 4. n8n EXPLAINED ─────────────────────────────────────────────── */}

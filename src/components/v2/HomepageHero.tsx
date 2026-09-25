@@ -37,7 +37,7 @@ export function HomepageHero() {
 
             {/* Headline: Clash Display 700, tight tracking */}
             <h1 className="font-clash font-bold text-[clamp(2.75rem,5vw,3.5rem)] leading-[1.05] tracking-tight text-fj-ink">
-              Your Website. 7 Days. Guaranteed.
+              Your Website. Live in 7 Days.
             </h1>
 
             {/* Subtext */}

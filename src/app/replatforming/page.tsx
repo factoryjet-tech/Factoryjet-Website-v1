@@ -124,7 +124,7 @@ const FAQ_ITEMS = [
     category: 'process',
     question: 'How long does an enterprise replatforming project take?',
     answer:
-      'Standard migrations take between 3 to 8 weeks depending on catalog size, custom ERP middleware, and B2B pricing rules. We provide a guaranteed delivery timeline before work begins.',
+      'Standard migrations take between 3 to 8 weeks depending on catalog size, custom ERP middleware, and B2B pricing rules. We confirm the delivery timeline in writing before work begins.',
   },
   {
     category: 'guarantee',

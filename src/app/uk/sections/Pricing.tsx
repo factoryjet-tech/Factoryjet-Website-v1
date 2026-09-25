@@ -1,10 +1,4 @@
-"use client";
-
-import { useRef } from "react";
-import { useGSAP } from "@gsap/react";
-import { gsap, ScrollTrigger } from "@/lib/gsap";
-import { useContactModal } from "@/context/ContactModalContext";
-import { trackButtonClick, trackCTAClick } from "@/utils/gtm";
+import UkAuditButton from "./UkAuditButton";
 
 // ── Pricing scope data (numberless — what's included / how we scope) ──────────
 type Row = {
@@ -47,55 +41,12 @@ const ROWS: Row[] = [
 ];
 
 // ── Section ──────────────────────────────────────────────────────────────────
+// Server component. The row stagger-in on scroll was removed for performance
+// (rows paint in their final state). Button hover states are plain CSS below;
+// the audit button is the ./UkAuditButton island.
 export default function Pricing() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const tableRef = useRef<HTMLDivElement>(null);
-  const { openModal: openContactModal } = useContactModal();
-  const openModal = () => openContactModal('uk', 'default');
-
-  useGSAP(
-    () => {
-      const prefersReduced = window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
-      ).matches;
-      if (prefersReduced) return;
-
-      const rows = tableRef.current?.querySelectorAll<HTMLElement>(
-        "[data-pricing-row]"
-      );
-      if (!rows || !rows.length) return;
-
-      gsap.fromTo(
-        rows,
-        { y: 24, autoAlpha: 0 },
-        {
-          y: 0,
-          autoAlpha: 1,
-          duration: 0.6,
-          ease: "power3.out",
-          stagger: 0.07,
-          scrollTrigger: {
-            trigger: tableRef.current,
-            start: "top 82%",
-            toggleActions: "play none none reverse",
-          },
-        }
-      );
-
-      return () => {
-        ScrollTrigger.getAll().forEach((t) => {
-          if (t.trigger && sectionRef.current?.contains(t.trigger as Node)) {
-            t.kill();
-          }
-        });
-      };
-    },
-    { scope: sectionRef }
-  );
-
   return (
     <section
-      ref={sectionRef}
       id="pricing"
       aria-label="UK pricing"
       className="relative w-full"
@@ -131,6 +82,21 @@ export default function Pricing() {
         }
         @media (min-width: 768px) {
           .fj-price-fade { display: none; }
+        }
+        /* Hover states, same values the buttons used to set from JS. */
+        .uk-price-cta {
+          box-shadow: 0 4px 12px rgba(0,82,204,0.25);
+        }
+        .uk-price-cta:hover {
+          transform: translateY(-1px);
+          box-shadow: 0 8px 20px rgba(0,82,204,0.32);
+        }
+        .uk-price-wa {
+          border: 1px solid #E2E8F0;
+        }
+        .uk-price-wa:hover {
+          border-color: #F05A28;
+          transform: translateY(-1px);
         }
       `}</style>
 
@@ -199,7 +165,6 @@ export default function Pricing() {
         <div className="relative mt-14">
           <div className="fj-price-scroll relative">
             <div
-              ref={tableRef}
               className="relative overflow-hidden"
               style={{
                 minWidth: 760,
@@ -323,14 +288,10 @@ export default function Pricing() {
 
         {/* CTA */}
         <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <button
-            type="button"
-            onClick={() => {
-              trackCTAClick('get_your_free_digital_audit', 'pricing', 'primary');
-              trackButtonClick('get_your_free_digital_audit', 'pricing');
-              openModal();
-            }}
-            className="inline-flex items-center justify-center"
+          <UkAuditButton
+            trackName="get_your_free_digital_audit"
+            location="pricing"
+            className="uk-price-cta inline-flex items-center justify-center"
             style={{
               backgroundColor: "#B23E13",
               color: "#FFFFFF",
@@ -340,30 +301,19 @@ export default function Pricing() {
               fontWeight: 600,
               fontSize: 15,
               letterSpacing: "0.01em",
-              boxShadow: "0 4px 12px rgba(0,82,204,0.25)",
               transition: "transform 0.2s ease-out, box-shadow 0.2s ease-out",
               border: "none",
               cursor: "pointer",
               minHeight: 48,
             }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = "translateY(-1px)";
-              e.currentTarget.style.boxShadow =
-                "0 8px 20px rgba(0,82,204,0.32)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = "translateY(0)";
-              e.currentTarget.style.boxShadow =
-                "0 4px 12px rgba(0,82,204,0.25)";
-            }}
           >
             Get Your Free Digital Audit
-          </button>
+          </UkAuditButton>
           <a
             href="https://wa.me/919699977699"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2"
+            className="uk-price-wa inline-flex items-center justify-center gap-2"
             style={{
               backgroundColor: "#FFFFFF",
               color: "#0A0F1C",
@@ -372,16 +322,7 @@ export default function Pricing() {
               fontFamily: "var(--font-sans)",
               fontWeight: 600,
               fontSize: 15,
-              border: "1px solid #E2E8F0",
               transition: "border-color 0.2s ease-out, transform 0.2s ease-out",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.borderColor = "#F05A28";
-              e.currentTarget.style.transform = "translateY(-1px)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.borderColor = "#E2E8F0";
-              e.currentTarget.style.transform = "translateY(0)";
             }}
           >
             <svg

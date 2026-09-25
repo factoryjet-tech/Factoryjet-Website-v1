@@ -1,11 +1,5 @@
-"use client";
-
-import { useRef } from "react";
 import Image from "next/image";
-import { useGSAP } from "@gsap/react";
-import { gsap } from "@/lib/gsap";
-import { useContactModal } from "@/context/ContactModalContext";
-import { trackButtonClick, trackCTAClick } from "@/utils/gtm";
+import UkAuditButton from "./UkAuditButton";
 
 // ── Hero ─────────────────────────────────────────────────────────────────────
 //
@@ -13,139 +7,16 @@ import { trackButtonClick, trackCTAClick } from "@/utils/gtm";
 // gradient, a grain overlay and a photo in `mix-blend-mode: overlay`. That broke
 // the house rule that the hero is always light, and the WebGL canvas was pure
 // client cost on the first paint of the whole UK section. It is now a light
-// cream hero on an asymmetric 7/5 split: copy left, photograph right. Every
-// GSAP ref is unchanged, so the entrance animation still runs exactly as before.
+// cream hero on an asymmetric 7/5 split: copy left, photograph right.
+//
+// 2026-09-25 (perf): now a server component. The GSAP entrance (eyebrow rule
+// draw, H1 word stagger that rewrote the H1 innerHTML after hydration, CTA and
+// trust-bar fade-ups, skyline rise) is gone: everything paints in its final
+// state with the HTML. The scroll cue fade is CSS scroll-driven (see the
+// <style> below). Only the audit button hydrates, via ./UkAuditButton.
 export default function Hero() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const labelRef = useRef<HTMLParagraphElement>(null);
-  const labelRuleRef = useRef<HTMLSpanElement>(null);
-  const headingRef = useRef<HTMLHeadingElement>(null);
-  const subheadRef = useRef<HTMLDivElement>(null);
-  const ctaRef = useRef<HTMLDivElement>(null);
-  const trustRef = useRef<HTMLUListElement>(null);
-  const scrollCueRef = useRef<HTMLDivElement>(null);
-  const skylineRef = useRef<SVGGElement>(null);
-  const { openModal: openContactModal } = useContactModal();
-  const openModal = () => openContactModal('uk', 'default');
-
-  useGSAP(
-    () => {
-      const prefersReduced =
-        window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      if (prefersReduced) return;
-
-      // 1. Eyebrow rule draws in from the left
-      gsap.fromTo(
-        labelRuleRef.current,
-        { scaleX: 0 },
-        {
-          scaleX: 1,
-          duration: 0.8,
-          delay: 0.5,
-          ease: "power2.out",
-          transformOrigin: "0% 50%",
-        }
-      );
-      gsap.from(labelRef.current, {
-        y: 10,
-        autoAlpha: 0,
-        duration: 0.5,
-        ease: "power3.out",
-      });
-
-      // 2. H1, word-based stagger. Reads textContent, so keep the heading
-      //    plain text with no nested elements.
-      const h1 = headingRef.current;
-      if (h1) {
-        const text = h1.textContent ?? "";
-        h1.innerHTML = text
-          .split(" ")
-          .map(
-            (w) =>
-              `<span class="uk-word" style="display:inline-block;overflow:hidden;"><span class="uk-word-inner" style="display:inline-block;will-change:transform,opacity;">${w}&nbsp;</span></span>`
-          )
-          .join("");
-        const inners = h1.querySelectorAll<HTMLSpanElement>(".uk-word-inner");
-        gsap.from(inners, {
-          yPercent: 110,
-          autoAlpha: 0,
-          duration: 1.1,
-          stagger: 0.035,
-          ease: "expo.out",
-          delay: 0.25,
-        });
-      }
-
-      // 3. Subhead: intentionally NOT animated. Its first <p> is the page's
-      //    LCP element. The old gsap.from({ autoAlpha: 0, delay: 0.9 }) hid it
-      //    after hydration and revealed it ~1.7s later, which pushed LCP past
-      //    the reveal on slow phones where hydration lands before first paint.
-      //    subheadRef is kept for layout parity; do not re-add an entrance.
-
-      // 4. CTAs, fromTo so the final state is guaranteed even if the tween is
-      //    interrupted (HMR, fast refresh, StrictMode double-invoke).
-      const ctaChildren = ctaRef.current
-        ? Array.from(ctaRef.current.children)
-        : [];
-      if (ctaChildren.length) {
-        // Opacity + transform only, no visibility toggle, so the animation
-        // stays compositor-driven. autoAlpha writes `visibility` and trips
-        // the Lighthouse "non-composited animations" audit.
-        gsap.fromTo(
-          ctaChildren,
-          { y: 16, opacity: 0 },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 0.5,
-            stagger: 0.08,
-            delay: 1.15,
-            ease: "power3.out",
-            clearProps: "transform,opacity",
-          }
-        );
-      }
-
-      // 5. Trust bar
-      gsap.from(trustRef.current, {
-        y: 14,
-        autoAlpha: 0,
-        duration: 0.6,
-        delay: 1.45,
-        ease: "power3.out",
-      });
-
-      // 6. Skyline rise
-      const buildings = skylineRef.current?.children;
-      if (buildings && buildings.length) {
-        gsap.from(buildings, {
-          y: 20,
-          autoAlpha: 0,
-          duration: 0.9,
-          stagger: 0.05,
-          ease: "power3.out",
-          delay: 0.2,
-        });
-      }
-
-      // 7. Scroll cue fades as the reader leaves the hero
-      gsap.to(scrollCueRef.current, {
-        autoAlpha: 0,
-        ease: "none",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top top",
-          end: "bottom top",
-          scrub: true,
-        },
-      });
-    },
-    { scope: sectionRef }
-  );
-
   return (
     <section
-      ref={sectionRef}
       id="hero"
       aria-label="FactoryJet UK, hero"
       className="relative flex w-full items-center overflow-hidden bg-fj-cream"
@@ -159,7 +30,7 @@ export default function Hero() {
         className="pointer-events-none absolute bottom-0 left-0 w-full"
         style={{ height: 160, zIndex: 0, color: "rgba(20,17,15,0.05)" }}
       >
-        <g ref={skylineRef} fill="currentColor">
+        <g fill="currentColor">
           <rect x="0" y="130" width="60" height="70" />
           <rect x="62" y="110" width="40" height="90" />
           <rect x="104" y="140" width="70" height="60" />
@@ -208,7 +79,6 @@ export default function Hero() {
         <div className="lg:col-span-7">
           {/* Eyebrow */}
           <p
-            ref={labelRef}
             className="font-fj-mono relative inline-flex flex-col items-start pb-2"
             style={{
               color: "#B23E13",
@@ -220,16 +90,14 @@ export default function Hero() {
           >
             AI-native digital agency, United Kingdom
             <span
-              ref={labelRuleRef}
               aria-hidden="true"
               className="mt-2 block h-px w-24"
               style={{ backgroundColor: "#F05A28" }}
             />
           </p>
 
-          {/* H1. Plain text only, the word-stagger reads textContent. */}
+          {/* H1. Plain text, painted in its final state (no word stagger). */}
           <h1
-            ref={headingRef}
             className="font-fj-display mt-5 text-fj-ink"
             style={{
               fontWeight: 700,
@@ -242,7 +110,7 @@ export default function Hero() {
             Digital Agency UK: Web Design, E-Commerce, AI Agents and AI SEO
           </h1>
 
-          <div ref={subheadRef} className="mt-5">
+          <div className="mt-5">
             <p
               className="font-fj-body text-fj-neutral-600"
               style={{
@@ -271,21 +139,16 @@ export default function Hero() {
 
           {/* CTAs */}
           <div
-            ref={ctaRef}
             className="mt-7 flex flex-col items-stretch gap-3 sm:flex-row sm:flex-wrap sm:items-center"
           >
-            <button
-              type="button"
-              onClick={() => {
-                trackCTAClick('get_your_free_digital_audit', 'hero', 'primary');
-                trackButtonClick('get_your_free_digital_audit', 'hero');
-                openModal();
-              }}
+            <UkAuditButton
+              trackName="get_your_free_digital_audit"
+              location="hero"
               className="font-fj-body w-full rounded-2xl px-7 py-3.5 text-[15px] font-semibold text-white transition-transform duration-200 will-change-transform hover:-translate-y-0.5 sm:w-auto"
               style={{ backgroundColor: "#B23E13", minHeight: 48 }}
             >
               Get your free UK digital audit
-            </button>
+            </UkAuditButton>
             <a
               href="/portfolio"
               className="font-fj-body w-full rounded-2xl border border-fj-neutral-200 bg-white px-7 py-3.5 text-center text-[15px] font-semibold text-fj-ink transition-colors duration-200 hover:border-fj-ink sm:w-auto"
@@ -303,7 +166,6 @@ export default function Hero() {
 
           {/* Trust bar */}
           <ul
-            ref={trustRef}
             className="font-fj-body mt-7 flex list-none flex-wrap items-center gap-x-5 gap-y-2 p-0 text-[13px] text-fj-neutral-600"
           >
             {[
@@ -351,16 +213,31 @@ export default function Hero() {
 
       {/* Scroll cue */}
       <div
-        ref={scrollCueRef}
         aria-hidden="true"
-        className="absolute left-1/2 -translate-x-1/2"
+        className="uk-hero-scroll-cue absolute left-1/2 -translate-x-1/2"
         style={{
           bottom: 16,
           zIndex: 4,
-          animation: "uk-scroll-bounce 2s ease-in-out infinite",
           color: "#B23E13",
         }}
       >
+        {/* Fades out as the reader scrolls through the hero. Was a GSAP
+            ScrollTrigger scrub; now a CSS scroll-driven animation, same
+            reduced-motion opt-out, zero JS. Browsers without scroll timelines
+            simply keep the cue visible. */}
+        <style>{`
+          .uk-hero-scroll-cue { animation: uk-scroll-bounce 2s ease-in-out infinite; }
+          @keyframes uk-hero-cue-fade { to { opacity: 0; visibility: hidden; } }
+          @media (prefers-reduced-motion: no-preference) {
+            @supports (animation-timeline: scroll()) {
+              .uk-hero-scroll-cue {
+                animation: uk-scroll-bounce 2s ease-in-out infinite, uk-hero-cue-fade linear both;
+                animation-timeline: auto, scroll(root);
+                animation-range: normal, 0 88vh;
+              }
+            }
+          }
+        `}</style>
         <svg
           width="22"
           height="22"

@@ -1,8 +1,5 @@
-"use client";
-
 import Link from "next/link";
-import { useContactModal } from "@/context/ContactModalContext";
-import { trackButtonClick, trackCTAClick } from "@/utils/gtm";
+import UkAuditButton from "./UkAuditButton";
 import RecognitionStrip from "@/components/RecognitionStrip";
 
 // 2026-08-03: extended from 10 to all 21 UK city roots.
@@ -85,8 +82,6 @@ const COMPANY_LINKS = [
 
 export default function Footer() {
   const year = new Date().getFullYear();
-  const { openModal: openContactModal } = useContactModal();
-  const openModal = () => openContactModal('uk', 'default');
 
   return (
     <footer
@@ -274,13 +269,9 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <button
-                  type="button"
-                  onClick={() => {
-                    trackCTAClick('free_digital_audit', 'footer', 'primary');
-                    trackButtonClick('free_digital_audit', 'footer');
-                    openModal();
-                  }}
+                <UkAuditButton
+                  trackName="free_digital_audit"
+                  location="footer"
                   style={{
                     color: "rgba(255,255,255,0.85)",
                     fontFamily: "var(--font-sans)",
@@ -294,7 +285,7 @@ export default function Footer() {
                   className="hover:text-white"
                 >
                   Free Digital Audit
-                </button>
+                </UkAuditButton>
               </li>
             </ul>
             <p

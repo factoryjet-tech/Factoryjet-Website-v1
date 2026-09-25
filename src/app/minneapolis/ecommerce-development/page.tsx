@@ -279,7 +279,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How do you guarantee that project budgets remain fixed without overages?',
     answer:
-      'We complete an exhaustive scope definition and architectural plan before writing a single line of code. All design components, page templates, and integrations are documented in a binding scope of work that guarantees delivery at the agreed investment level.',
+      'We complete an exhaustive scope definition and architectural plan before writing a single line of code. All design components, page templates, and integrations are documented in a binding scope of work that commits us to delivery at the agreed investment level.',
   },
   {
     category: 'timeline',

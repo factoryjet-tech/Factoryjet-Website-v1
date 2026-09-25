@@ -228,7 +228,7 @@ export const post: BlogPost = {
         The highest-leverage option for US SMBs is the offshore-with-US-support model: agencies with global engineering teams, dedicated US-hours project management, US-governed contracts, and US-based client references. These agencies deliver the same technical output as domestic firms at 60-70% lower cost.
       </p>
       <p className="mb-4 text-gray-700 leading-relaxed">
-        Lighthouse scores, WCAG compliance, Core Web Vitals, and JSON-LD schema markup do not have a geography. What matters is engineering rigor and communication reliability. FactoryJet operates on this model: full code ownership, 7-day delivery guarantee, and verified Lighthouse 95+ performance.
+        Lighthouse scores, WCAG compliance, Core Web Vitals, and JSON-LD schema markup do not have a geography. What matters is engineering rigor and communication reliability. FactoryJet operates on this model: full code ownership, 7-day delivery, and verified Lighthouse 95+ performance.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4 text-gray-900">E-Commerce Website Costs: Shopify vs. WooCommerce vs. Custom</h2>

@@ -279,7 +279,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How do you guarantee that project budgets remain fixed without overages?',
     answer:
-      'We complete an exhaustive technical scoping process, API inventory, and data mapping plan before writing code. All design components, custom features, and third-party integrations are locked into a binding scope of work that guarantees delivery at the agreed investment level.',
+      'We complete an exhaustive technical scoping process, API inventory, and data mapping plan before writing code. All design components, custom features, and third-party integrations are locked into a binding scope of work that commits us to delivery at the agreed investment level.',
   },
   {
     category: 'tech',

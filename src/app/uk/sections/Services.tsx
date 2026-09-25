@@ -1,9 +1,5 @@
-"use client";
-
-import { useRef } from "react";
 import Image from "next/image";
-import { useGSAP } from "@gsap/react";
-import { gsap, ScrollTrigger } from "@/lib/gsap";
+import ServicesPinFx from "./ServicesPinFx";
 
 // ── Service data ─────────────────────────────────────────────────────────────
 type Service = {
@@ -225,140 +221,12 @@ function Panel({ service }: { service: Service }) {
 }
 
 // ── Section ──────────────────────────────────────────────────────────────────
+// Server component. The desktop pinned horizontal scroll lives in the
+// ./ServicesPinFx island, which only loads GSAP at 1024px and wider; on phones
+// the panels stack and nothing hydrates here.
 export default function Services() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const pinRef = useRef<HTMLDivElement>(null);
-  const trackRef = useRef<HTMLDivElement>(null);
-  const dotsRef = useRef<HTMLDivElement>(null);
-  const activeNameRef = useRef<HTMLSpanElement>(null);
-
-  useGSAP(
-    () => {
-      const prefersReduced = window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
-      ).matches;
-
-      const mm = gsap.matchMedia();
-
-      // ── Desktop / large screens: pinned horizontal scroll ──────────────
-      mm.add("(min-width: 1024px)", () => {
-        if (!pinRef.current || !trackRef.current) return;
-
-        const panels =
-          trackRef.current.querySelectorAll<HTMLElement>("[data-panel]");
-        const panelCount = panels.length;
-        if (!panelCount) return;
-
-        // xPercent from 0 to -((n-1)/n * 100) slides the track left by
-        // (n-1) viewports — i.e. 4 panels require the track to shift by 3
-        // viewport widths (75% of its own width since the track is 400% wide).
-        const xTarget = -((panelCount - 1) / panelCount) * 100;
-
-        // The scroll distance is (panelCount + 1) viewports: one per panel
-        // PLUS one extra trailing viewport that holds on panel 4 so the user
-        // has time to read it before the section unpins. Implemented as a
-        // timeline with a trailing no-op tween — the scrub maps linearly to
-        // tl.progress, so the last 1/(n+1) of scroll is "dwell time" with
-        // the track parked at its final xPercent.
-        const dwellUnits = 1;
-        const totalUnits = panelCount + dwellUnits;
-        // Fraction of scroll progress that corresponds to horizontal movement.
-        const moveFraction = panelCount / totalUnits;
-
-        const tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: pinRef.current,
-            pin: true,
-            scrub: 1,
-            anticipatePin: 1,
-            end: `+=${totalUnits * 100}%`,
-            invalidateOnRefresh: true,
-            onUpdate: (self) => {
-              // Map raw scroll progress onto the panelCount range. During the
-              // dwell tail (progress > moveFraction), the expression saturates
-              // at the final panel index so the Jet Orange dot and active
-              // name stay locked on the last service while the user finishes
-              // reading it.
-              const mapped = Math.min(1, self.progress / moveFraction);
-              const idx = Math.min(
-                panelCount - 1,
-                Math.max(0, Math.round(mapped * (panelCount - 1)))
-              );
-              // Progress dots
-              const dots = dotsRef.current?.querySelectorAll<HTMLSpanElement>(
-                "[data-dot]"
-              );
-              dots?.forEach((d, i) => {
-                d.dataset.active = i === idx ? "true" : "false";
-                d.style.backgroundColor =
-                  i === idx ? "#FF6B35" : "rgba(255,255,255,0.25)";
-                d.style.transform = i === idx ? "scale(1.25)" : "scale(1)";
-              });
-              if (activeNameRef.current) {
-                activeNameRef.current.textContent = SERVICES[idx].name;
-              }
-            },
-          },
-        });
-        // Horizontal slide over `panelCount` time units.
-        tl.to(trackRef.current, {
-          xPercent: xTarget,
-          ease: "none",
-          duration: panelCount,
-        });
-        // Trailing dwell — a no-op tween that just consumes timeline time so
-        // the ScrollTrigger has extra scroll distance while the track is
-        // already parked on panel 4.
-        tl.to({}, { duration: dwellUnits });
-
-        // Back-compat alias — the image scale trigger below uses this name.
-        const tween = tl;
-
-        // Image scale 0.9 → 1 as each panel enters the viewport horizontally.
-        if (!prefersReduced) {
-          panels.forEach((panel) => {
-            const img = panel.querySelector<HTMLElement>("[data-panel-image]");
-            if (!img) return;
-            gsap.fromTo(
-              img,
-              { scale: 0.9, autoAlpha: 0.6 },
-              {
-                scale: 1,
-                autoAlpha: 1,
-                ease: "power2.out",
-                scrollTrigger: {
-                  trigger: panel,
-                  containerAnimation: tween,
-                  start: "left 80%",
-                  end: "left 40%",
-                  scrub: true,
-                },
-              }
-            );
-          });
-        }
-      });
-
-      // ── Mobile: no pin. Panels stack and scroll vertically as normal. ─
-      mm.add("(max-width: 1023px)", () => {
-        // Nothing to animate — plain vertical layout via CSS.
-      });
-
-      return () => {
-        mm.revert();
-        ScrollTrigger.getAll().forEach((t) => {
-          if (t.trigger && sectionRef.current?.contains(t.trigger as Node)) {
-            t.kill();
-          }
-        });
-      };
-    },
-    { scope: sectionRef }
-  );
-
   return (
     <section
-      ref={sectionRef}
       id="services"
       aria-label="Our services for UK businesses"
       className="relative w-full"
@@ -426,7 +294,7 @@ export default function Services() {
 
       {/* ── Pinned horizontal scroll container (dark) ──────────────────── */}
       <div
-        ref={pinRef}
+        data-services-pin
         className="relative w-full overflow-hidden"
         style={{ backgroundColor: "#0A0F1C" }}
       >
@@ -436,7 +304,7 @@ export default function Services() {
           Mobile: track collapses to flex-col, full width, normal scroll.
         */}
         <div
-          ref={trackRef}
+          data-services-track
           className="flex w-full flex-col lg:w-[400vw] lg:flex-row lg:flex-nowrap"
           style={{ willChange: "transform" }}
         >
@@ -450,7 +318,7 @@ export default function Services() {
           className="pointer-events-none absolute bottom-6 left-1/2 z-20 hidden -translate-x-1/2 items-center gap-5 lg:flex"
           aria-hidden="true"
         >
-          <div ref={dotsRef} className="flex items-center gap-2.5">
+          <div data-services-dots className="flex items-center gap-2.5">
             {SERVICES.map((s, i) => (
               <span
                 key={s.id}
@@ -469,7 +337,7 @@ export default function Services() {
             style={{ backgroundColor: "rgba(255,255,255,0.2)" }}
           />
           <span
-            ref={activeNameRef}
+            data-services-active
             className="text-[12px] uppercase tracking-[0.18em]"
             style={{
               color: "rgba(255,255,255,0.75)",
@@ -481,6 +349,10 @@ export default function Services() {
           </span>
         </div>
       </div>
+      <ServicesPinFx
+        sectionId="services"
+        names={SERVICES.map((svc) => svc.name)}
+      />
     </section>
   );
 }

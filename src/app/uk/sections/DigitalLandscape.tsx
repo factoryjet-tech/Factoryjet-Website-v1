@@ -1,6 +1,3 @@
-"use client";
-
-import { useRef } from "react";
 import Image from "next/image";
 import { Sparkles, Bot, ShoppingBag, TrendingUp } from "lucide-react";
 
@@ -54,11 +51,8 @@ const STATS: Stat[] = [
 ];
 
 export default function DigitalLandscape() {
-  const sectionRef = useRef<HTMLElement>(null);
-
   return (
     <section
-      ref={sectionRef}
       id="digital-landscape"
       aria-label="The UK digital landscape in 2026"
       className="relative w-full"

@@ -160,7 +160,7 @@ const PAIN_POINTS = [
   },
   {
     num: '02',
-    title: 'Eliminating 6-Month Agency Delivery Delays with Guaranteed 7-Day Sprints',
+    title: 'Eliminating 6-Month Agency Delivery Delays with 7-Day Sprints',
     problem: 'Traditional agencies take months of endless discovery meetings, bill by the hour, and stall your market launch while burning your marketing budget.',
     solution: 'FactoryJet operates on fixed-price, milestone-based sprints. We deliver your production-ready, fully responsive website in 7 days from kickoff.',
   },
@@ -233,7 +233,7 @@ const EVALUATION_CRITERIA = [
   },
   {
     label: 'Delivery Speed SLA',
-    factoryjet: 'Guaranteed 7-day sprint delivery from signed scope to live production.',
+    factoryjet: '7-day sprint delivery from signed scope to live production.',
     traditional: 'Open-ended timelines dragging projects out for 4 to 8 months.',
   },
   {
@@ -799,7 +799,7 @@ export default function ClevelandWebDesignPage() {
                 <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                   <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
                 </svg>
-                <span>Guaranteed 7-Day Sprint</span>
+                <span>7-Day Sprint</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
                 Our 7-Day Delivery Sprint Protocol

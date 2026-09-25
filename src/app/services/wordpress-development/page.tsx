@@ -660,7 +660,7 @@ export default function WordPressDevelopmentPage() {
           imageAlt="WordPress Gutenberg editor on a MacBook with a clean editorial site, FactoryJet WordPress development"
           stats={[
             { value: '500+', label: 'WordPress Projects Delivered' },
-            { value: '7 Days', label: 'Delivery Guarantee' },
+            { value: '7 Days', label: 'Delivery Time' },
             { value: 'Fixed Price', label: 'Confirmed Upfront, No Surprises' },
             { value: '10+ Yrs', label: 'WordPress Expertise' },
           ]}

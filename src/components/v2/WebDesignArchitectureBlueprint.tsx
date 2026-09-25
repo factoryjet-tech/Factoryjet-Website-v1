@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import type { ModalRegion } from '@/context/ContactModalContext';
 
@@ -116,8 +116,41 @@ export default function WebDesignArchitectureBlueprint({
 
   const activeEvent = SIMULATION_EVENTS[activeEventIndex];
 
+  // Perf (2026-09-25): the auto-advance timers below re-render this whole
+  // component every 50 ms. They used to start at hydration and run for the
+  // life of the page even while the section was far off screen (about 250 DOM
+  // mutations a second on /uk), which showed up as Total Blocking Time on
+  // every page that renders this block. They now run only while the section
+  // is on screen and the tab is visible. What a reader sees is unchanged.
+  const sectionRef = useRef<HTMLElement>(null);
+  const [isActive, setIsActive] = useState(false);
+
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el || typeof IntersectionObserver === 'undefined') {
+      setIsActive(true);
+      return;
+    }
+    let onScreen = false;
+    const update = () => setIsActive(onScreen && document.visibilityState === 'visible');
+    const io = new IntersectionObserver(
+      (entries) => {
+        onScreen = entries.some((e) => e.isIntersecting);
+        update();
+      },
+      { rootMargin: '200px 0px' }
+    );
+    io.observe(el);
+    document.addEventListener('visibilitychange', update);
+    return () => {
+      io.disconnect();
+      document.removeEventListener('visibilitychange', update);
+    };
+  }, []);
+
   // Auto-scroll progress timer across tabs
   useEffect(() => {
+    if (!isActive) return;
     const intervalTime = 50;
     const stepIncrement = (intervalTime / AUTO_SCROLL_DURATION) * 100;
 
@@ -136,11 +169,11 @@ export default function WebDesignArchitectureBlueprint({
     }, intervalTime);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [isActive]);
 
   // When dataflow tab is active, auto-advance simulation events
   useEffect(() => {
-    if (activeTab !== 'dataflow') return;
+    if (activeTab !== 'dataflow' || !isActive) return;
 
     const eventTimer = setInterval(() => {
       setActiveEventIndex((prev) => (prev + 1) % SIMULATION_EVENTS.length);
@@ -150,7 +183,7 @@ export default function WebDesignArchitectureBlueprint({
     }, 2500);
 
     return () => clearInterval(eventTimer);
-  }, [activeTab]);
+  }, [activeTab, isActive]);
 
   const handleTabClick = (tabId: TabType) => {
     setActiveTab(tabId);
@@ -165,7 +198,8 @@ export default function WebDesignArchitectureBlueprint({
   };
 
   return (
-    <section 
+    <section
+      ref={sectionRef}
       className="relative overflow-hidden bg-gradient-to-b from-[#FFF9F6] via-[#FAF7F2] to-[#FFFFFF] text-[#1E293B] py-20 md:py-28 font-fj-body border-y border-[#E8DFD8]"
     >
       <div

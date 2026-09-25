@@ -530,7 +530,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does AI workflow automation cost?',
     answer:
-      'Pricing depends on connected tools, logic branches, and compliance rules. Most SMBs choose our Growth tier for multi-system automation. All projects are fixed-price and milestone-paid with guaranteed delivery.',
+      'Pricing depends on connected tools, logic branches, and compliance rules. Most SMBs choose our Growth tier for multi-system automation. All projects are fixed-price and milestone-paid with delivery dates agreed in writing.',
   },
   {
     category: 'pricing',

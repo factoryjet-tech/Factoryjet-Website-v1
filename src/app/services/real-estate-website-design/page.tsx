@@ -493,7 +493,7 @@ export default function RealEstateWebsiteDesignPage() {
         headline="Real Estate Websites That Rank Locally and Convert Visitors Into Leads"
         lead="Custom agent, team, and brokerage websites with IDX integration and neighborhood pages, built to outrank generic templates on local search. Fixed price, scoped to your build. 7-day delivery. No ongoing platform fees."
         secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
-        trustItems={['IDX integration included', '7-day delivery guarantee', 'No ongoing platform fees']}
+        trustItems={['IDX integration included', '7-day delivery', 'No ongoing platform fees']}
         rightSlot={
           <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm p-6 space-y-4">
             <p className="text-xs font-fj-mono uppercase tracking-widest text-white/50">Platform Comparison</p>
@@ -526,7 +526,7 @@ export default function RealEstateWebsiteDesignPage() {
         imageAlt="Real estate agent website with property listings on a MacBook, FactoryJet real estate website design"
         stats={[
           { value: '500+', label: 'Agent Sites Built' },
-          { value: '7 Days', label: 'Delivery Guarantee' },
+          { value: '7 Days', label: 'Delivery Time' },
           { value: 'Fixed Price', label: 'Scoped to Your Build, IDX Included' },
           { value: '10+ Yrs', label: 'Real Estate Web Expertise' },
         ]}
@@ -640,7 +640,7 @@ export default function RealEstateWebsiteDesignPage() {
         leadParagraphs={[
           "FactoryJet builds real estate websites for agents, teams, and brokerages in every US market. Our SEO work is US-market-specific, we research neighborhood-level search terms in your city and build pages that target them.",
           "We've built sites for agents in competitive markets including Austin, Miami, Denver, Nashville, Charlotte, Portland, Raleigh, and Tampa. Each market has different neighborhood vocabulary, different search intent patterns, and different IDX providers, we know the nuances.",
-          "Our 7-day delivery guarantee applies to agent sites up to 10 pages. Every site includes the same fixed-price package: IDX integration, neighborhood pages, lead capture, CRM connection, and on-page SEO setup.",
+          "7-day delivery applies to agent sites up to 10 pages. Every site includes the same fixed-price package: IDX integration, neighborhood pages, lead capture, CRM connection, and on-page SEO setup.",
         ]}
         stats={MARKET_STATS}
       />

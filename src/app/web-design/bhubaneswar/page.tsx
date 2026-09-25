@@ -28,7 +28,7 @@ import WebDesignCityLinksIN from '@/components/v2/WebDesignCityLinksIN';
 export const metadata: Metadata = {
   title: 'Web Design Company in Bhubaneswar | FactoryJet',
   description:
-    'Web design company in Bhubaneswar for IT firms, government contractors & Odisha businesses. Fast, custom websites with a 7-day delivery guarantee. Serving Infocity IT Park, STPI & Startup Odisha ecosystem.',
+    'Web design company in Bhubaneswar for IT firms, government contractors & Odisha businesses. Fast, custom websites with 7-day delivery. Serving Infocity IT Park, STPI & Startup Odisha ecosystem.',
   keywords: [
     'web design company in Bhubaneswar',
     'website design Bhubaneswar',
@@ -179,9 +179,9 @@ const BBSR_FAQ_ITEMS = [
   },
   {
     category: 'pricing',
-    question: 'What is the 7-day delivery guarantee?',
+    question: 'What does 7-day delivery include?',
     answer:
-      'If we miss the agreed delivery date, you do not pay. The guarantee applies to the development phase we control, design, build, content, and launch. We have delivered on time on 97% of all projects.',
+      'If we miss the agreed delivery date, you do not pay. The 7-day timeline covers the development phase we control, design, build, content, and launch. We have delivered on time on 97% of all projects.',
   },
 
   /* ── What's Included ── */
@@ -259,7 +259,7 @@ const BBSR_FAQ_ITEMS = [
     category: 'local',
     question: 'How does FactoryJet compare to Bhubaneswar web agencies?',
     answer:
-      "Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. You get a faster website, a shorter timeline, and a codebase you own outright.",
+      "Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, puts 7-day delivery in writing, and builds in Next.js rather than WordPress. You get a faster website, a shorter timeline, and a codebase you own outright.",
   },
   {
     category: 'local',
@@ -401,7 +401,7 @@ const BBSR_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: '7-day delivery guarantee',
+    feature: '7-day delivery',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="aa" kind="no" />,
@@ -514,10 +514,10 @@ export default function BhubaneswarWebDesignPage() {
         formSlot={<HeroInlineForm region="in" source="web_design_bhubaneswar_hero" />}
           eyebrow="WEB DESIGN · BHUBANESWAR"
           headline="Website Design in Bhubaneswar for IT Companies, Odisha Startups, and Growing Businesses"
-          lead="Bhubaneswar is Eastern India's fastest-growing IT hub: India's first planned Smart City, home to Infocity IT Park (Infosys, TCS, Wipro, Mindtree), STPI Bhubaneswar, 1,500+ registered startups, and one of India's most tech-forward state governments. From the Infocity tech corridor and KIIT University zone to the Temple City heritage district and Odisha's export businesses, FactoryJet builds Figma-designed, Next.js-built websites with a 7-day delivery guarantee, your codebase delivered in full."
+          lead="Bhubaneswar is Eastern India's fastest-growing IT hub: India's first planned Smart City, home to Infocity IT Park (Infosys, TCS, Wipro, Mindtree), STPI Bhubaneswar, 1,500+ registered startups, and one of India's most tech-forward state governments. From the Infocity tech corridor and KIIT University zone to the Temple City heritage district and Odisha's export businesses, FactoryJet builds Figma-designed, Next.js-built websites with 7-day delivery, your codebase delivered in full."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
-            '7-day delivery guarantee',
+            '7-day delivery',
             '500+ businesses built',
           ]}
           rightSlot={<HeroBrowserMockup />}
@@ -529,8 +529,8 @@ export default function BhubaneswarWebDesignPage() {
         {/* ── 3. TRUST BLOCK ─────────────────────────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
-          headline="500+ websites built. 12 years of web engineering. One 7-day guarantee."
-          description="Websites designed and built for businesses across India, the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and a 7-day delivery guarantee."
+          headline="500+ websites built. 12 years of web engineering. 7-day delivery."
+          description="Websites designed and built for businesses across India, the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and 7-day delivery."
         />
 
         {/* ── 4. CITY CONTEXT ────────────────────────────────────────────────────────────────── */}
@@ -679,12 +679,12 @@ export default function BhubaneswarWebDesignPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Bhubaneswar Businesses Choose FactoryJet Over Local Agencies"
-          lead="Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress, faster load times, no monthly plugin overhead, a codebase you own outright. Pricing is fixed and agreed upfront, no surprises."
+          lead="Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, puts 7-day delivery in writing, and builds in Next.js rather than WordPress, faster load times, no monthly plugin overhead, a codebase you own outright. Pricing is fixed and agreed upfront, no surprises."
           pillars={[
             {
               icon: '⚡',
               title: '7-day delivery. In writing. Or you do not pay.',
-              body: "Bhubaneswar's IT ecosystem moves fast: Startup Odisha companies are pitching investors, IT firms are responding to RFPs, and government contractors are building credibility for the next tender cycle. Waiting 12 weeks for a website that should have been live last quarter is not a strategy. FactoryJet delivers in 7 days, with the guarantee written into the project agreement. We have delivered on time on 97% of all projects.",
+              body: "Bhubaneswar's IT ecosystem moves fast: Startup Odisha companies are pitching investors, IT firms are responding to RFPs, and government contractors are building credibility for the next tender cycle. Waiting 12 weeks for a website that should have been live last quarter is not a strategy. FactoryJet delivers in 7 days, with the delivery date written into the project agreement. We have delivered on time on 97% of all projects.",
             },
             {
               icon: '🏗️',

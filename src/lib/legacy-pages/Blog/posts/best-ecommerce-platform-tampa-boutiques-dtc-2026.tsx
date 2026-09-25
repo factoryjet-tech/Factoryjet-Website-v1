@@ -53,7 +53,7 @@ export const post: BlogPost = {
     },
     {
       q: 'How long does it take FactoryJet to launch a Tampa boutique store?',
-      a: 'Seven days for a standard Shopify build, on our delivery guarantee. That covers theme customization, up to 50 product imports, Florida sales tax setup via Shopify Tax, local pickup configuration for one or two pickup points, a hurricane-season banner workflow, basic schema markup, and Lighthouse performance tuning. Larger catalogs (500+ SKUs), custom subscription flows, or WooCommerce builds run 2–4 weeks. The 7-day pace works because design, content load, and configuration run in parallel, not because we cut corners on accessibility, schema, or performance.',
+      a: 'Seven days for a standard Shopify build, on our standard delivery timeline. That covers theme customization, up to 50 product imports, Florida sales tax setup via Shopify Tax, local pickup configuration for one or two pickup points, a hurricane-season banner workflow, basic schema markup, and Lighthouse performance tuning. Larger catalogs (500+ SKUs), custom subscription flows, or WooCommerce builds run 2–4 weeks. The 7-day pace works because design, content load, and configuration run in parallel, not because we cut corners on accessibility, schema, or performance.',
     },
   ],
   content: (
@@ -191,7 +191,7 @@ export const post: BlogPost = {
         FactoryJet builds Shopify and custom ecommerce stores for Tampa-area boutiques and DTC brands in 7 days, from $2,499 for Shopify and $3,999 for custom builds. Both are entry points: catalogue size and integrations move the number, and we fix it in writing before starting. Every Tampa-area store ships with: theme customization on a current Shopify Online Store 2.0 architecture, Florida sales tax setup via Shopify Tax, local pickup configured for your pickup point in Hyde Park, SoHo, Ybor, Tampa Heights, or wherever you operate, a hurricane-season banner and pause-shipping workflow already wired up, schema markup for Product and Organization, Lighthouse mobile performance above 90 on launch, and US business-hour project management throughout the build.
       </p>
       <p className="mb-4">
-        Bigger projects, 500+ SKU catalogs, custom subscription flows, B2B wholesale layers, or WooCommerce migrations, run 2–4 weeks and are scoped during discovery. The pricing stays transparent. The 7-day delivery guarantee applies to standard Shopify builds with client assets ready at kickoff.
+        Bigger projects, 500+ SKU catalogs, custom subscription flows, B2B wholesale layers, or WooCommerce migrations, run 2–4 weeks and are scoped during discovery. The pricing stays transparent. 7-day delivery applies to standard Shopify builds with client assets ready at kickoff.
       </p>
       <p className="mb-4">
         If you also need the marketing site separated from the storefront, for example a content-heavy editorial layer with the store running on a subdomain: our <a href="/tampa/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">Tampa web design service</a> covers that build path.

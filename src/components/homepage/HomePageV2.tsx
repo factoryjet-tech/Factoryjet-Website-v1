@@ -28,13 +28,13 @@ const FAQ_ITEMS = [
   {
     question: 'What exactly does FactoryJet do?',
     answer:
-      'FactoryJet builds high-performance websites, Shopify and custom e-commerce stores, and AI SEO campaigns for growing businesses, primarily in India, the US, and the UK. We combine fast delivery (7-day guarantee on starter sites), a Next.js tech stack, and AI-native SEO to help businesses generate more leads and revenue online.',
+      'FactoryJet builds high-performance websites, Shopify and custom e-commerce stores, and AI SEO campaigns for growing businesses, primarily in India, the US, and the UK. We combine fast delivery (7 days on starter sites), a Next.js tech stack, and AI-native SEO to help businesses generate more leads and revenue online.',
     category: 'general',
   },
   {
     question: 'How is FactoryJet different from a typical web agency?',
     answer:
-      'Three things: fixed-price quotes confirmed up front (no surprise invoices), a 7-day delivery guarantee on Starter sites, and a Next.js tech stack that outperforms WordPress on speed and SEO. We also ship every project with JSON-LD schema configured for AI search crawlers, something most agencies charge extra for, or skip entirely.',
+      'Three things: fixed-price quotes confirmed up front (no surprise invoices), 7-day delivery on Starter sites, and a Next.js tech stack that outperforms WordPress on speed and SEO. We also ship every project with JSON-LD schema configured for AI search crawlers, something most agencies charge extra for, or skip entirely.',
     category: 'general',
   },
   {
@@ -58,7 +58,7 @@ const FAQ_ITEMS = [
   {
     question: 'How fast can you build my website?',
     answer:
-      'Starter sites (5 pages) ship in 7 days, that is our delivery guarantee. Growth projects (10–15 pages with CMS and lead capture) typically run 2–3 weeks. Scale builds with custom integrations are scoped individually. The clock starts from the day your brand assets and content are in our shared workspace.',
+      'Starter sites (5 pages) ship in 7 days. Growth projects (10–15 pages with CMS and lead capture) typically run 2–3 weeks. Scale builds with custom integrations are scoped individually. The clock starts from the day your brand assets and content are in our shared workspace.',
     category: 'web',
   },
   {
@@ -185,7 +185,7 @@ const PORTFOLIO_CARDS = [
 const WHY_FJ_PILLARS = [
   {
     icon: '⚡',
-    title: '7-Day Delivery Guarantee',
+    title: '7-Day Delivery',
     body: 'Starter sites go live in 7 days, not 6 weeks. We reverse-engineer your deadline, not pad a timeline to justify a retainer. Every milestone is in the project brief before we start.',
   },
   {

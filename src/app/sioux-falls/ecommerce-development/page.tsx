@@ -279,7 +279,7 @@ const EVALUATION_CRITERIA = [
   },
   {
     label: 'Pricing & Delivery Terms',
-    factoryjet: 'Fixed-price milestone contracts with guaranteed sprint delivery timelines.',
+    factoryjet: 'Fixed-price milestone contracts with agreed sprint delivery timelines.',
     traditional: 'Open-ended hourly billing that drags projects out for 6 to 9 months.',
   },
 ];

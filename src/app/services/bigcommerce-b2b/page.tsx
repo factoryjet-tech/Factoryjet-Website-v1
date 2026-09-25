@@ -705,7 +705,7 @@ export default function BigCommerceB2BPage() {
             <h2 style={{ marginTop: '10px' }}>The 6-Phase BigCommerce B2B Implementation Sprint Roadmap.</h2>
             <div className="pp-editorial" style={{ marginTop: '20px' }}>
               <p>
-                Our structured sprint process guarantees predictable timelines, resilient ERP sync, and smooth buyer onboarding.
+                Our structured sprint process keeps timelines predictable and delivers resilient ERP sync and smooth buyer onboarding.
               </p>
               <ol style={{ listStyleType: 'decimal', paddingLeft: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1rem', marginTop: '1rem' }}>
                 <li>

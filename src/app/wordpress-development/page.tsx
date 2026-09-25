@@ -208,7 +208,7 @@ const WP_STATS = [
   },
   {
     value: '7 Days',
-    label: 'delivery guarantee for standard WordPress business sites, theme, pages, SEO, and launch',
+    label: 'delivery for standard WordPress business sites, theme, pages, SEO, and launch',
     microcopy: 'the fastest professional WordPress build timeline in India',
     categoryLabel: 'DELIVERY',
   },
@@ -349,9 +349,9 @@ const WP_FAQ_ITEMS = [
   },
   {
     category: 'pricing',
-    question: 'How does the 7-day WordPress delivery guarantee work?',
+    question: 'How does 7-day WordPress delivery work?',
     answer:
-      "The 7-day guarantee applies to standard WordPress business sites: 5–8 pages, custom theme, contact forms, basic SEO, GA4, and launch. The clock starts from design sign-off, not from first call. Day 1–2: Figma design delivered and approved. Day 3–5: WordPress theme built and staging URL live. Day 6: content loaded, SEO configured, speed tested. Day 7: DNS transfer and launch. WooCommerce stores (14–21 days) and large multi-page sites are scoped separately with their own timelines.",
+      "7-day delivery applies to standard WordPress business sites: 5–8 pages, custom theme, contact forms, basic SEO, GA4, and launch. The clock starts from design sign-off, not from first call. Day 1–2: Figma design delivered and approved. Day 3–5: WordPress theme built and staging URL live. Day 6: content loaded, SEO configured, speed tested. Day 7: DNS transfer and launch. WooCommerce stores (14–21 days) and large multi-page sites are scoped separately with their own timelines.",
   },
   {
     category: 'pricing',
@@ -499,7 +499,7 @@ const WP_FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does website development cost in India?',
     answer:
-      'Website development cost in India varies widely: a simple WordPress site sits at the low end, while custom web applications cost considerably more. FactoryJet quotes a fixed price after a short call, milestone-paid, and the 7-day delivery guarantee applies to standard sites up to five pages.',
+      'Website development cost in India varies widely: a simple WordPress site sits at the low end, while custom web applications cost considerably more. FactoryJet quotes a fixed price after a short call, milestone-paid, and 7-day delivery applies to standard sites up to five pages.',
   },
 ];
 
@@ -573,7 +573,7 @@ export default function WordPressDevelopmentPage() {
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '500+ websites built',
-            '7-day delivery guarantee',
+            '7-day delivery',
           ]}
           rightSlot={
             <div className="rounded-2xl border border-fj-neutral-200 bg-white p-8 shadow-sm">
@@ -623,7 +623,7 @@ export default function WordPressDevelopmentPage() {
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
           headline="500+ websites built. 12 years of web development expertise."
-          description="Websites designed and built for businesses across India, the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and a 7-day delivery guarantee."
+          description="Websites designed and built for businesses across India, the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and 7-day delivery."
         />
 
         {/* ── 4. WORDPRESS EXPLAINED ───────────────────────────────────────── */}

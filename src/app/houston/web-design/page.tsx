@@ -189,7 +189,7 @@ const PAIN_POINTS = [
     num: '02',
     title: 'Eliminating Endless 6-Month Agency Timelines & Scope Creep',
     problem: 'Legacy digital agencies trap clients in endless discovery meetings and protracted timelines, taking 6 to 9 months to launch basic corporate websites.',
-    solution: 'Our disciplined 7-day agile sprint model delivers fully custom Figma UI/UX designs and production-ready React code within guaranteed milestone windows.',
+    solution: 'Our disciplined 7-day agile sprint model delivers fully custom Figma UI/UX designs and production-ready React code within agreed milestone windows.',
   },
   {
     num: '03',
@@ -280,7 +280,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How do you guarantee that project budgets remain fixed without overages?',
     answer:
-      'We complete an exhaustive scope definition and architectural plan before writing a single line of code. All design components, page templates, and integrations are documented in a binding scope of work that guarantees delivery at the agreed investment level.',
+      'We complete an exhaustive scope definition and architectural plan before writing a single line of code. All design components, page templates, and integrations are documented in a binding scope of work that commits us to delivery at the agreed investment level.',
   },
   {
     category: 'pricing',

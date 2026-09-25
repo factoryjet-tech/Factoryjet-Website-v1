@@ -173,7 +173,7 @@ const STATS = [
   },
   {
     value: '7 days',
-    label: 'delivery guarantee for 5-page websites',
+    label: 'delivery for 5-page websites',
     microcopy: 'vs. 6-16 weeks at most traditional agencies',
     categoryLabel: 'DELIVERY SPEED',
   },
@@ -369,7 +369,7 @@ const FAQ_ITEMS = [
   },
   {
     question: 'How long does a small business website take to build?',
-    answer: `FactoryJet delivers 5-page websites in 7 days: a hard delivery guarantee from when you send us your content. Larger sites (up to 15 pages) take 2-3 weeks. E-commerce stores take 2-4 weeks depending on product count. Traditional agencies typically quote 6-16 weeks for the same scope. Our speed comes from a structured build process and a senior-only team that doesn't have project handoff delays or internal review bottlenecks.`,
+    answer: `FactoryJet delivers 5-page websites in 7 days, counted from when you send us your content. Larger sites (up to 15 pages) take 2-3 weeks. E-commerce stores take 2-4 weeks depending on product count. Traditional agencies typically quote 6-16 weeks for the same scope. Our speed comes from a structured build process and a senior-only team that doesn't have project handoff delays or internal review bottlenecks.`,
     category: 'design',
   },
   {
@@ -460,7 +460,7 @@ const FAQ_ITEMS = [
   },
   {
     question: 'What makes FactoryJet different from other small business web designers?',
-    answer: `Three things separate FactoryJet: speed (7-day delivery guarantee on 5-page sites), value (fixed-price, milestone-paid), and track record (500+ websites built). Most web designers are solo freelancers or small agencies juggling 10-15 clients, which means slow turnarounds, inconsistent quality, and limited accountability. FactoryJet is a structured engineering team that has refined a repeatable process over 12 years. Senior engineers on every project, fixed pricing, and a support window after launch.`,
+    answer: `Three things separate FactoryJet: speed (7-day delivery on 5-page sites), value (fixed-price, milestone-paid), and track record (500+ websites built). Most web designers are solo freelancers or small agencies juggling 10-15 clients, which means slow turnarounds, inconsistent quality, and limited accountability. FactoryJet is a structured engineering team that has refined a repeatable process over 12 years. Senior engineers on every project, fixed pricing, and a support window after launch.`,
     category: 'factoryjet',
   },
 ];
@@ -733,7 +733,7 @@ export default function SmallBusinessWebDesignPage() {
             },
             {
               title: '6-16 weeks to launch when you need 7 days',
-              body: `A small business replacing an outdated website or launching a new one doesn't have 3-4 months to wait. Every month without a working site is a month of missed leads. Traditional agencies have long timelines because they have long internal review cycles, multiple approval stages, and too many projects running simultaneously. FactoryJet's process is designed for speed: one senior team, one project at a time, 7-day delivery guarantee.`,
+              body: `A small business replacing an outdated website or launching a new one doesn't have 3-4 months to wait. Every month without a working site is a month of missed leads. Traditional agencies have long timelines because they have long internal review cycles, multiple approval stages, and too many projects running simultaneously. FactoryJet's process is designed for speed: one senior team, one project at a time, 7-day delivery.`,
             },
             {
               title: `Templates dressed up as custom design`,
@@ -749,7 +749,7 @@ export default function SmallBusinessWebDesignPage() {
           lead="Four ways to get a small business website. Here's what the decision actually looks like when you compare on the things that matter, cost, speed, quality, and ownership."
           pullQuote={{
             stat: '7 days',
-            caption: 'delivery guarantee for 5-page small business websites. Traditional agencies average 6-16 weeks for the same scope.',
+            caption: 'delivery for 5-page small business websites. Traditional agencies average 6-16 weeks for the same scope.',
           }}
           columns={COMPARISON_COLUMNS}
           rows={COMPARISON_ROWS}
@@ -840,7 +840,7 @@ export default function SmallBusinessWebDesignPage() {
               <div className="divide-y divide-fj-neutral-100">
                 {[
                   { reason: 'Fixed-price.', detail: 'Better rates than comparable traditional agencies, same quality.' },
-                  { reason: '7-day delivery.', detail: 'Hard delivery guarantee for 5-page sites.' },
+                  { reason: '7-day delivery.', detail: 'For sites up to 5 pages.' },
                   { reason: 'Fixed pricing.', detail: 'No hourly billing, no scope creep.' },
                   { reason: 'Senior team only.', detail: 'No juniors billing at senior rates.' },
                   { reason: 'Custom design.', detail: 'Not templates, built for your brand.' },

@@ -29,7 +29,7 @@ import WebDesignCityLinksIN from '@/components/v2/WebDesignCityLinksIN';
 export const metadata: Metadata = {
   title: 'Web Design Company in Bangalore | FactoryJet',
   description:
-    'Web design company in Bangalore for startups, IT firms & D2C brands. Fast, SEO-optimized websites with a 7-day delivery guarantee. Serving Koramangala & Whitefield.',
+    'Web design company in Bangalore for startups, IT firms & D2C brands. Fast, SEO-optimized websites with 7-day delivery. Serving Koramangala & Whitefield.',
   keywords: [
     'web design company in Bangalore',
     'website design Bangalore',
@@ -173,9 +173,9 @@ const BLR_FAQ_ITEMS = [
   },
   {
     category: 'pricing',
-    question: 'What is the 7-day delivery guarantee?',
+    question: 'What does 7-day delivery include?',
     answer:
-      'If we miss the agreed delivery date, you do not pay. The guarantee applies to the development phase we control, design, build, content, and launch. If your internal approvals take longer, we agree a revised schedule upfront. We have delivered on time on 97% of all projects.',
+      'If we miss the agreed delivery date, you do not pay. The 7-day timeline covers the development phase we control, design, build, content, and launch. If your internal approvals take longer, we agree a revised schedule upfront. We have delivered on time on 97% of all projects.',
   },
 
   /* ── What's Included ── */
@@ -253,7 +253,7 @@ const BLR_FAQ_ITEMS = [
     category: 'local',
     question: 'How does FactoryJet compare to Bangalore web agencies?',
     answer:
-      "Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. You get a faster website, a shorter timeline, and a codebase you own outright.",
+      "Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, puts 7-day delivery in writing, and builds in Next.js rather than WordPress. You get a faster website, a shorter timeline, and a codebase you own outright.",
   },
 
   /* ── Support & Ownership ── */
@@ -383,7 +383,7 @@ const BLR_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: '7-day delivery guarantee',
+    feature: '7-day delivery',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ba" kind="no" />,
@@ -496,10 +496,10 @@ export default function BangaloreWebDesignPage() {
         formSlot={<HeroInlineForm region="in" source="web_design_bangalore_hero" />}
           eyebrow="WEB DESIGN · BANGALORE"
           headline="Website Design in Bangalore Built for Startups, IT Companies, and D2C Brands"
-          lead="Bangalore drives $20B+ in annual IT exports, hosts 15,000+ registered startups, and is India's fastest-growing D2C city. Koramangala, Whitefield, HSR Layout, and Electronic City are home to businesses that compete globally, and your website is the first impression every buyer gets. FactoryJet builds Figma-designed, Next.js-built websites with a 7-day delivery guarantee, your codebase delivered in full."
+          lead="Bangalore drives $20B+ in annual IT exports, hosts 15,000+ registered startups, and is India's fastest-growing D2C city. Koramangala, Whitefield, HSR Layout, and Electronic City are home to businesses that compete globally, and your website is the first impression every buyer gets. FactoryJet builds Figma-designed, Next.js-built websites with 7-day delivery, your codebase delivered in full."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
-            '7-day delivery guarantee',
+            '7-day delivery',
             '500+ businesses built',
           ]}
           rightSlot={<HeroBrowserMockup />}
@@ -511,8 +511,8 @@ export default function BangaloreWebDesignPage() {
         {/* ── 3. TRUST BLOCK ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
-          headline="500+ websites built. 12 years of web engineering. One 7-day guarantee."
-          description="Websites designed and built for businesses across India, the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and a 7-day delivery guarantee."
+          headline="500+ websites built. 12 years of web engineering. 7-day delivery."
+          description="Websites designed and built for businesses across India, the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and 7-day delivery."
         />
 
         {/* ── 4. CITY CONTEXT ──────────────────────────────────────────────── */}
@@ -651,12 +651,12 @@ export default function BangaloreWebDesignPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Bangalore Businesses Choose FactoryJet Over Local Agencies"
-          lead="Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress, faster load times, no monthly plugin overhead, a codebase you own outright. Pricing is fixed and agreed upfront, no surprises."
+          lead="Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, puts 7-day delivery in writing, and builds in Next.js rather than WordPress, faster load times, no monthly plugin overhead, a codebase you own outright. Pricing is fixed and agreed upfront, no surprises."
           pillars={[
             {
               icon: '⚡',
               title: '7-day delivery. In writing. Or you do not pay.',
-              body: "Bangalore moves fast: a startup waiting 16 weeks for a website they briefed in April is losing ground to the competitor that shipped in week one. FactoryJet delivers in 7 days, with the guarantee written into the project agreement. We have delivered on time on 97% of all projects.",
+              body: "Bangalore moves fast: a startup waiting 16 weeks for a website they briefed in April is losing ground to the competitor that shipped in week one. FactoryJet delivers in 7 days, with the delivery date written into the project agreement. We have delivered on time on 97% of all projects.",
             },
             {
               icon: '🏗️',

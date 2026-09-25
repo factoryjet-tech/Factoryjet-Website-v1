@@ -49,7 +49,7 @@ export const post: BlogPost = {
     },
     {
       q: "How long does it take to launch a Shopify store for a Boise business?",
-      a: "Seven days on FactoryJet's standard Shopify delivery guarantee. That covers theme customization on a current Shopify Online Store 2.0 architecture, up to 50 product imports with SEO-optimized titles and descriptions, Idaho sales tax setup via Shopify Tax (and multi-state nexus tracking), local pickup configuration for one or two pickup points, payment gateway integration (Shopify Payments, Stripe, or PayPal), shipping zones with USPS, UPS, and FedEx options configured for Treasure Valley fulfillment, Product and Organization schema markup, Lighthouse mobile Performance above 90 on launch, and Google Analytics 4 plus Search Console connected. Larger catalogs (500+ SKUs), custom subscription flows, or fully custom ecommerce builds run 2–4 weeks and are scoped during discovery.",
+      a: "Seven days on FactoryJet's standard Shopify delivery timeline. That covers theme customization on a current Shopify Online Store 2.0 architecture, up to 50 product imports with SEO-optimized titles and descriptions, Idaho sales tax setup via Shopify Tax (and multi-state nexus tracking), local pickup configuration for one or two pickup points, payment gateway integration (Shopify Payments, Stripe, or PayPal), shipping zones with USPS, UPS, and FedEx options configured for Treasure Valley fulfillment, Product and Organization schema markup, Lighthouse mobile Performance above 90 on launch, and Google Analytics 4 plus Search Console connected. Larger catalogs (500+ SKUs), custom subscription flows, or fully custom ecommerce builds run 2–4 weeks and are scoped during discovery.",
     },
     {
       q: 'How should a Boise outdoor or craft food brand handle seasonal traffic on Shopify?',
@@ -159,7 +159,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Realistic Timelines: 7 Days vs. 2–4 Weeks</h2>
       <p className="mb-4">
-        A standard Boise Shopify build, up to 50 products, custom theme configuration, full payment and tax setup, local pickup, schema, and Lighthouse tuning, ships in 7 days on FactoryJet's delivery guarantee, with one condition: client assets ready at kickoff. The 7-day pace works because design, content load, and configuration run in parallel, not because corners are cut on accessibility, schema, or performance.
+        A standard Boise Shopify build, up to 50 products, custom theme configuration, full payment and tax setup, local pickup, schema, and Lighthouse tuning, ships in 7 days on FactoryJet's standard delivery timeline, with one condition: client assets ready at kickoff. The 7-day pace works because design, content load, and configuration run in parallel, not because corners are cut on accessibility, schema, or performance.
       </p>
       <p className="mb-4">
         Larger or more custom projects run 2–4 weeks and are scoped during discovery. The common drivers: 500+ SKU catalogs with complex variants, custom subscription flows beyond what Recharge handles out of the box, bundle and build-your-own-box configurators, multi-location local pickup with different operational rules, B2B wholesale layers, or full custom ecommerce builds outside of Shopify entirely.
@@ -190,7 +190,7 @@ export const post: BlogPost = {
         FactoryJet builds Shopify and custom ecommerce stores for Boise and Treasure Valley brands in 7 days, starting at $2,999 for standard Shopify and from $3,999 for fully custom ecommerce. Every Boise store ships with theme customization on Shopify Online Store 2.0, Idaho sales tax plus multi-state nexus through Shopify Tax, local pickup for your Downtown, Boise Bench, North End, Eagle, Meridian, or Garden City location, payment gateway setup, USPS / UPS / FedEx shipping zones, schema markup, Klaviyo abandoned cart, and Lighthouse mobile Performance above 90 on launch.
       </p>
       <p className="mb-4">
-        Bigger projects, 500+ SKU catalogs, custom subscription flows, bundle configurators, B2B wholesale layers, or WooCommerce migrations, run 2–4 weeks and are scoped during discovery. The pricing stays transparent. The 7-day delivery guarantee applies to standard Shopify builds with client assets ready at kickoff.
+        Bigger projects, 500+ SKU catalogs, custom subscription flows, bundle configurators, B2B wholesale layers, or WooCommerce migrations, run 2–4 weeks and are scoped during discovery. The pricing stays transparent. 7-day delivery applies to standard Shopify builds with client assets ready at kickoff.
       </p>
       <p className="mb-4">
         Talk to the founder directly, Bhavesh runs every Boise discovery call himself. Book a 30-minute slot at <a href="https://calendly.com/bhavesh-factoryjet/30min" className="text-blue-600 underline hover:text-blue-800 transition-colors">calendly.com/bhavesh-factoryjet</a> or email <a href="mailto:bhavesh@factoryjet.com" className="text-blue-600 underline hover:text-blue-800 transition-colors">me</a>.

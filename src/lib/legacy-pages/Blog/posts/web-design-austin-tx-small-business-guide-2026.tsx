@@ -33,7 +33,7 @@ export const post: BlogPost = {
     },
     {
       q: 'How long does it take to build a website for an Austin small business?',
-      a: 'Austin local agencies typically take 6–16 weeks for a professional small business website. Agencies using modern tooling: Next.js, component libraries, CI/CD pipelines, can deliver a 5-page custom site in 7–14 days. FactoryJet\'s 7-day delivery guarantee applies to standard 5-page builds with client-supplied content. If you\'re launching a new product, entering a new Austin market, or rebranding before a campaign, timeline matters. Getting live in 7 days vs. 12 weeks is a significant competitive advantage.',
+      a: 'Austin local agencies typically take 6–16 weeks for a professional small business website. Agencies using modern tooling: Next.js, component libraries, CI/CD pipelines, can deliver a 5-page custom site in 7–14 days. FactoryJet\'s 7-day delivery applies to standard 5-page builds with client-supplied content. If you\'re launching a new product, entering a new Austin market, or rebranding before a campaign, timeline matters. Getting live in 7 days vs. 12 weeks is a significant competitive advantage.',
     },
     {
       q: 'Do Austin small businesses need a local web design agency?',

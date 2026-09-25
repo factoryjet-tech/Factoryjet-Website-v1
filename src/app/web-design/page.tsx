@@ -415,7 +415,7 @@ const IN_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: '7-day delivery guarantee',
+    feature: '7-day delivery',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="in" kind="no" />,
@@ -734,7 +734,7 @@ export default function WebDesignServicePage() {
           trustItems={[
             '500+ websites delivered',
             'Full code ownership',
-            '7-day delivery guarantee',
+            '7-day delivery',
           ]}
           rightSlot={
             <div className="rounded-2xl border border-fj-neutral-200 bg-white p-8 shadow-sm">
@@ -799,7 +799,7 @@ export default function WebDesignServicePage() {
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
           headline="India's Trusted Web Design Company, 500+ Websites Delivered, 12+ Years of Building"
-          description="Websites designed and built for businesses across India, the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and a 7-day delivery guarantee."
+          description="Websites designed and built for businesses across India, the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and 7-day delivery."
         />
 
         {/* ── 4. WHAT GREAT WEB DESIGN ACTUALLY DOES ───────────────────────────── */}
@@ -937,7 +937,7 @@ export default function WebDesignServicePage() {
             {
               icon: '💸',
               title: 'Most agencies hide their rates and timelines',
-              body: 'A typical web agency quotes a business website without a published timeline, without guaranteed Lighthouse performance, and without a codebase you own. FactoryJet gives you a fixed-price quote before you commit, delivers the same Figma-first design, Next.js engineering, and Lighthouse 95+ quality, and backs it with a 7-day delivery guarantee in writing.',
+              body: 'A typical web agency quotes a business website without a published timeline, without guaranteed Lighthouse performance, and without a codebase you own. FactoryJet gives you a fixed-price quote before you commit, delivers the same Figma-first design, Next.js engineering, and Lighthouse 95+ quality, and puts 7-day delivery in writing.',
             },
           ]}
         />

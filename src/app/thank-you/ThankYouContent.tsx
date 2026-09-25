@@ -145,7 +145,7 @@ export default function ThankYouContent() {
         <span className="text-[#F05A28]">•</span>
         <span>12+ years expertise</span>
         <span className="text-[#F05A28]">•</span>
-        <span>7-day delivery guarantee</span>
+        <span>7-day delivery</span>
       </div>
 
       <a

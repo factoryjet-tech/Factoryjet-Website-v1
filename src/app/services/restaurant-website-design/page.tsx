@@ -521,7 +521,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'scope',
     question: 'How much does it cost to design a restaurant website?',
     answer:
-      'Pricing reflects operational scope rather than arbitrary agency fees. Cost drivers include location count, menu volume, direct POS ordering integrations, and custom reservation flows. We quote fixed-price milestones with guaranteed timelines. You own all source code and assets outright at completion.',
+      'Pricing reflects operational scope rather than arbitrary agency fees. Cost drivers include location count, menu volume, direct POS ordering integrations, and custom reservation flows. We quote fixed-price milestones with agreed timelines. You own all source code and assets outright at completion.',
   },
   {
     category: 'scope',

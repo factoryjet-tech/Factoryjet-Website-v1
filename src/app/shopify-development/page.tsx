@@ -263,7 +263,7 @@ const SHOPIFY_STATS = [
   },
   {
     value: '7 Days',
-    label: 'delivery guarantee for standard Shopify store builds, theme, products, payments, and launch',
+    label: 'delivery for standard Shopify store builds, theme, products, payments, and launch',
     microcopy: 'the fastest professional Shopify build timeline in India',
     categoryLabel: 'DELIVERY',
   },
@@ -417,9 +417,9 @@ const SHOPIFY_FAQ_ITEMS = [
   },
   {
     category: 'cost',
-    question: 'What is the 7-day delivery guarantee?',
+    question: 'What does 7-day delivery include?',
     answer:
-      "The 7-day guarantee covers standard Shopify theme builds and full store builds. The clock starts from design sign-off, not from the first call. If we miss the agreed delivery date, you do not pay for that phase. We have delivered on time on 97% of all projects. Shopify Plus and headless Hydrogen builds have longer, separately agreed timelines, but we still put them in writing.",
+      "7-day delivery covers standard Shopify theme builds and full store builds. The clock starts from design sign-off, not from the first call. If we miss the agreed delivery date, you do not pay for that phase. We have delivered on time on 97% of all projects. Shopify Plus and headless Hydrogen builds have longer, separately agreed timelines, but we still put them in writing.",
   },
 
   /* ── India-Specific ── */
@@ -525,7 +525,7 @@ const SHOPIFY_FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from a Shopify Partner agency in India?',
     answer:
-      "Three things: specialisation (we build Shopify stores and web projects exclusively, no social media campaigns, no print design, no SEO retainers disconnected from the build), speed (7-day delivery guarantee for standard builds: the fastest in India), and ownership (full Liquid codebase to your GitHub on launch day, zero lock-in). We have delivered 120+ Shopify stores for Indian and global brands. We know what actually converts on Shopify, and we build around those data points, not around what looks impressive in a mock-up.",
+      "Three things: specialisation (we build Shopify stores and web projects exclusively, no social media campaigns, no print design, no SEO retainers disconnected from the build), speed (7-day delivery for standard builds: the fastest in India), and ownership (full Liquid codebase to your GitHub on launch day, zero lock-in). We have delivered 120+ Shopify stores for Indian and global brands. We know what actually converts on Shopify, and we build around those data points, not around what looks impressive in a mock-up.",
   },
   {
     category: 'trust',
@@ -618,7 +618,7 @@ export default function ShopifyDevelopmentPage() {
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '120+ Shopify stores launched',
-            '7-day delivery guarantee',
+            '7-day delivery',
           ]}
           rightSlot={
             <div className="rounded-2xl border border-fj-neutral-200 bg-white p-8 shadow-sm">
@@ -668,7 +668,7 @@ export default function ShopifyDevelopmentPage() {
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
           headline="India's Trusted Shopify Website Development Company, 120+ Stores, 12+ Years of E-Commerce"
-          description="Websites designed and built for businesses across India, the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and a 7-day delivery guarantee."
+          description="Websites designed and built for businesses across India, the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and 7-day delivery."
         />
 
         {/* ── 4. SHOPIFY EXPLAINED ─────────────────────────────────────────── */}

@@ -58,7 +58,7 @@ export const post: BlogPost = {
     },
     {
       q: 'How long does it take FactoryJet to ship checkout and conversion improvements for an Austin store?',
-      a: 'Seven days for a standard Shopify checkout-optimization engagement on our delivery guarantee. That covers: express payment activation, address autocomplete, Texas sales tax setup via Shopify Tax, a three-message abandoned-cart flow in Klaviyo, GA4 event configuration, Meta CAPI activation, trust-signal placement on the cart and checkout, and a free-shipping threshold proposal based on your current AOV. Larger WooCommerce engagements or full conversion-rate-optimization programs run 2–4 weeks and are scoped during discovery. The 7-day pace works because most of these improvements are configuration, not custom code.',
+      a: 'Seven days for a standard Shopify checkout-optimization engagement on our standard delivery timeline. That covers: express payment activation, address autocomplete, Texas sales tax setup via Shopify Tax, a three-message abandoned-cart flow in Klaviyo, GA4 event configuration, Meta CAPI activation, trust-signal placement on the cart and checkout, and a free-shipping threshold proposal based on your current AOV. Larger WooCommerce engagements or full conversion-rate-optimization programs run 2–4 weeks and are scoped during discovery. The 7-day pace works because most of these improvements are configuration, not custom code.',
     },
   ],
   content: (
@@ -210,7 +210,7 @@ export const post: BlogPost = {
         FactoryJet builds conversion-optimized Shopify and WooCommerce stores for Austin DTC brands and boutiques in 7 days. Every Austin engagement ships with: a one-page checkout configured for mobile-heavy traffic, express payment (Apple Pay, Google Pay, Shop Pay) activated at cart and product page, address autocomplete, Texas sales tax automation via Shopify Tax or TaxJar, a three-message abandoned-cart flow in Klaviyo, GA4 events configured for the full ecommerce funnel, Meta Conversions API wired up, trust-signal placement near the buy button, a free-shipping threshold proposal based on your current AOV, and Lighthouse mobile Performance above 90 on launch.
       </p>
       <p className="mb-4">
-        Larger engagements, full conversion-rate-optimization programs, WooCommerce migrations, AI cart-recovery agents, Shopify Plus checkout extensibility builds, run 2–4 weeks and are scoped during discovery. The 7-day delivery guarantee applies to standard checkout-optimization engagements with payment provider access and tracking pixel access ready at kickoff.
+        Larger engagements, full conversion-rate-optimization programs, WooCommerce migrations, AI cart-recovery agents, Shopify Plus checkout extensibility builds, run 2–4 weeks and are scoped during discovery. 7-day delivery applies to standard checkout-optimization engagements with payment provider access and tracking pixel access ready at kickoff.
       </p>
       <p className="mb-4">
         Talk to the founder directly, Bhavesh runs every Austin discovery call himself. Book a 30-minute slot at <a href="https://calendly.com/bhavesh-factoryjet/30min" className="text-blue-600 underline hover:text-blue-800 transition-colors">calendly.com/bhavesh-factoryjet</a> or email <a href="mailto:bhavesh@factoryjet.com" className="text-blue-600 underline hover:text-blue-800 transition-colors">me</a>.

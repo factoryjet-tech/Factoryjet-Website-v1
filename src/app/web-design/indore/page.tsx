@@ -29,7 +29,7 @@ import WebDesignCityLinksIN from '@/components/v2/WebDesignCityLinksIN';
 export const metadata: Metadata = {
   title: 'Web Design Company in Indore | Website Development Indore | FactoryJet',
   description:
-    'Best web design company in Indore. Professional, custom websites with a 7-day delivery guarantee, 500+ businesses served. Serving Vijay Nagar, AB Road, Palasia, Scheme 54, Rau & all of Indore.',
+    'Best web design company in Indore. Professional, custom websites with 7-day delivery, 500+ businesses served. Serving Vijay Nagar, AB Road, Palasia, Scheme 54, Rau & all of Indore.',
   keywords: [
     'web design company in Indore',
     'website design Indore',
@@ -224,7 +224,7 @@ const INDORE_FAQ_ITEMS = [
     category: 'pricing',
     question: '7 din mein website ban sakti hai kya?',
     answer:
-      'Haan, bilkul. FactoryJet ki 7-day delivery guarantee written contract mein hoti hai. Jab aap brand assets aur content ready karte ho, usi din se countdown shuru hota hai. Discovery, design, development, SEO, aur launch, sab 7 din mein. Agar deadline miss ho toh payment nahi dena padta.',
+      'Haan, bilkul. FactoryJet ki 7-day delivery written contract mein hoti hai. Jab aap brand assets aur content ready karte ho, usi din se countdown shuru hota hai. Discovery, design, development, SEO, aur launch, sab 7 din mein. Agar deadline miss ho toh payment nahi dena padta.',
   },
   {
     category: 'pricing',
@@ -296,7 +296,7 @@ const INDORE_FAQ_ITEMS = [
     category: 'local',
     question: 'Which is the best web design company in Indore?',
     answer:
-      "FactoryJet brings 12+ years of web engineering experience and 500+ businesses served, far exceeding the typical Indore agency's 2–5 years and 50–200 client portfolio. We build in Next.js (not WordPress), give you a fixed-price quote before the first call, and guarantee 7-day delivery in writing. Our clients across Madhya Pradesh consistently report Lighthouse 95+ scores and first-page Google rankings within 3–6 months. We let the work and the numbers make the case.",
+      "FactoryJet brings 12+ years of web engineering experience and 500+ businesses served, far exceeding the typical Indore agency's 2–5 years and 50–200 client portfolio. We build in Next.js (not WordPress), give you a fixed-price quote before the first call, and put 7-day delivery in writing. Our clients across Madhya Pradesh consistently report Lighthouse 95+ scores and first-page Google rankings within 3–6 months. We let the work and the numbers make the case.",
   },
   {
     category: 'local',
@@ -326,7 +326,7 @@ const INDORE_FAQ_ITEMS = [
     category: 'local',
     question: 'How does FactoryJet compare to Indore web design agencies?',
     answer:
-      "Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress. You get a faster website, a shorter timeline, and a codebase you own outright.",
+      "Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, puts 7-day delivery in writing, and builds in Next.js rather than WordPress. You get a faster website, a shorter timeline, and a codebase you own outright.",
   },
   {
     category: 'local',
@@ -456,7 +456,7 @@ const INDORE_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: '7-day delivery guarantee',
+    feature: '7-day delivery',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ia" kind="no" />,
@@ -522,7 +522,7 @@ export default function IndoreWebDesignPage() {
         formSlot={<HeroInlineForm region="in" source="web_design_indore_hero" />}
           eyebrow="WEB DESIGN · INDORE"
           headline="Web Design Company in Indore"
-          lead="Indore is Madhya Pradesh's commercial capital, home to 65,000+ SMEs, 500+ startups, a booming D2C ecosystem, and IT parks at Scheme 78 and Bengali Square that are attracting serious tech investment. From coaching institutes in Vijay Nagar to FMCG exporters on AB Road to manufacturers in Pithampur, Indore's businesses are competing for customers online every day. FactoryJet builds high-performance, Figma-designed, Next.js-built websites with a 7-day delivery guarantee, your codebase delivered in full."
+          lead="Indore is Madhya Pradesh's commercial capital, home to 65,000+ SMEs, 500+ startups, a booming D2C ecosystem, and IT parks at Scheme 78 and Bengali Square that are attracting serious tech investment. From coaching institutes in Vijay Nagar to FMCG exporters on AB Road to manufacturers in Pithampur, Indore's businesses are competing for customers online every day. FactoryJet builds high-performance, Figma-designed, Next.js-built websites with 7-day delivery, your codebase delivered in full."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-Day Delivery',
@@ -541,8 +541,8 @@ export default function IndoreWebDesignPage() {
         */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
-          headline="500+ websites built. 12 years of web engineering. One 7-day guarantee."
-          description="Websites designed and built for businesses across India, the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and a 7-day delivery guarantee."
+          headline="500+ websites built. 12 years of web engineering. 7-day delivery."
+          description="Websites designed and built for businesses across India, the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and 7-day delivery."
         />
 
         {/* ── 4. CITY CONTEXT ──────────────────────────────────────────────── */}
@@ -699,12 +699,12 @@ export default function IndoreWebDesignPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Indore Businesses Choose FactoryJet Over Local Agencies"
-          lead="Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, guarantees 7-day delivery in writing, and builds in Next.js rather than WordPress, faster load times, no monthly plugin overhead, a codebase you own outright. Pricing is fixed and agreed upfront, no surprises."
+          lead="Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, puts 7-day delivery in writing, and builds in Next.js rather than WordPress, faster load times, no monthly plugin overhead, a codebase you own outright. Pricing is fixed and agreed upfront, no surprises."
           pillars={[
             {
               icon: '⚡',
               title: '7-day delivery. In writing. Or you do not pay.',
-              body: "Indore's market moves fast, whether you are launching a new coaching batch in June or opening a Shopify store before Diwali. Waiting 10 weeks for an agency to deliver a website you briefed in September is not a plan, it is lost revenue. FactoryJet delivers in 7 days, with the guarantee written into the project agreement. We have delivered on time on 97% of all projects.",
+              body: "Indore's market moves fast, whether you are launching a new coaching batch in June or opening a Shopify store before Diwali. Waiting 10 weeks for an agency to deliver a website you briefed in September is not a plan, it is lost revenue. FactoryJet delivers in 7 days, with the delivery date written into the project agreement. We have delivered on time on 97% of all projects.",
             },
             {
               icon: '🏗️',

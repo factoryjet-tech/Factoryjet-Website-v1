@@ -10,9 +10,7 @@
 // The category filter DOES use conditional rendering, but the default active
 // filter is "all", so the initial server-rendered HTML contains every Q&A.
 
-import { useRef, useState } from "react";
-import { useGSAP } from "@gsap/react";
-import { gsap, ScrollTrigger } from "@/lib/gsap";
+import { useState } from "react";
 
 // ── Types & data ───────────────────────────────────────────────────
 // The Q&A content lives in ../faqData so this component and the FAQPage
@@ -80,10 +78,6 @@ function PlusIcon({ open }: { open: boolean }) {
 
 // ── Section ──────────────────────────────────────────────────────────────────
 export default function FAQ() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const headerRef = useRef<HTMLDivElement>(null);
-  const listRef = useRef<HTMLDivElement>(null);
-
   const [active, setActive] = useState<CategoryId>("all");
 
   // First FAQ open by default. Stored as a Set of stable IDs so multiple items
@@ -104,100 +98,13 @@ export default function FAQ() {
   const visible =
     active === "all" ? FAQS : FAQS.filter((f) => f.cat === active);
 
-  // Header stagger-in on scroll
-  useGSAP(
-    () => {
-      const prefersReduced = window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
-      ).matches;
-      if (prefersReduced) return;
-
-      const headerEls = headerRef.current?.querySelectorAll<HTMLElement>(
-        "[data-faq-head]"
-      );
-      if (headerEls && headerEls.length) {
-        gsap.fromTo(
-          headerEls,
-          { y: 18, autoAlpha: 0 },
-          {
-            y: 0,
-            autoAlpha: 1,
-            duration: 0.55,
-            ease: "power2.out",
-            stagger: 0.07,
-            scrollTrigger: {
-              trigger: sectionRef.current,
-              start: "top 80%",
-              toggleActions: "play none none reverse",
-            },
-          }
-        );
-      }
-
-      const cards = listRef.current?.querySelectorAll<HTMLElement>(
-        "[data-faq-card]"
-      );
-      if (cards && cards.length) {
-        gsap.fromTo(
-          cards,
-          { y: 15, autoAlpha: 0 },
-          {
-            y: 0,
-            autoAlpha: 1,
-            duration: 0.5,
-            ease: "power2.out",
-            stagger: 0.04,
-            scrollTrigger: {
-              trigger: listRef.current,
-              start: "top 85%",
-              toggleActions: "play none none reverse",
-            },
-          }
-        );
-      }
-
-      return () => {
-        ScrollTrigger.getAll().forEach((t) => {
-          if (t.trigger && sectionRef.current?.contains(t.trigger as Node)) {
-            t.kill();
-          }
-        });
-      };
-    },
-    { scope: sectionRef }
-  );
-
-  // Re-stagger on filter change so the newly-visible cards feel intentional.
-  useGSAP(
-    () => {
-      const prefersReduced = window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
-      ).matches;
-      if (prefersReduced) return;
-
-      const cards = listRef.current?.querySelectorAll<HTMLElement>(
-        "[data-faq-card]"
-      );
-      if (!cards || !cards.length) return;
-
-      gsap.fromTo(
-        cards,
-        { y: 10, autoAlpha: 0 },
-        {
-          y: 0,
-          autoAlpha: 1,
-          duration: 0.35,
-          ease: "power2.out",
-          stagger: 0.025,
-        }
-      );
-    },
-    { dependencies: [active], scope: sectionRef }
-  );
+  // 2026-09-25 (perf): the GSAP header/card stagger-in on scroll and the
+  // re-stagger on filter change were removed. They pulled GSAP and
+  // ScrollTrigger into the page bundle and ran ScrollTrigger setup during
+  // hydration. The accordion and category filter are unchanged.
 
   return (
     <section
-      ref={sectionRef}
       id="faq"
       aria-label="Frequently asked questions"
       className="relative w-full"
@@ -238,7 +145,7 @@ export default function FAQ() {
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[35%_1fr] lg:gap-16">
           {/* ── LEFT SIDEBAR ─────────────────────────────────────────── */}
           <aside className="relative">
-            <div ref={headerRef} className="lg:sticky lg:top-[120px]">
+            <div className="lg:sticky lg:top-[120px]">
               <p
                 data-faq-head
                 style={{
@@ -383,7 +290,7 @@ export default function FAQ() {
           </aside>
 
           {/* ── RIGHT, ACCORDION LIST ───────────────────────────────── */}
-          <div ref={listRef}>
+          <div>
             {visible.map((item) => {
               const id = idFor(item.q);
               const isOpen = openSet.has(id);

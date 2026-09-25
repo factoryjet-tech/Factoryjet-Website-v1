@@ -279,7 +279,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How do you guarantee that project budgets remain fixed without overruns?',
     answer:
-      'We complete an exhaustive architectural discovery and data mapping phase before development begins. All APIs, data schemas, design components, and integration requirements are documented in a binding scope of work that guarantees delivery at the agreed investment level.',
+      'We complete an exhaustive architectural discovery and data mapping phase before development begins. All APIs, data schemas, design components, and integration requirements are documented in a binding scope of work that commits us to delivery at the agreed investment level.',
   },
   {
     category: 'replatforming',

@@ -176,7 +176,7 @@ export const post: BlogPost = {
 
       <div className="bg-green-50 border border-green-200 rounded-lg p-6 mt-8">
         <h3 className="text-lg font-bold mb-2 text-green-900">Shopify Launch Pre-Kickoff Checklist</h3>
-        <p className="text-green-800 mb-3">Have these ready before Day 1 to guarantee a 7-day launch:</p>
+        <p className="text-green-800 mb-3">Have these ready before Day 1 to keep a 7-day launch on track:</p>
         <ul className="list-disc pl-5 space-y-1 text-green-800">
           <li>Product photos (1000×1000px minimum, all products)</li>
           <li>Product titles, descriptions, pricing, and SKU list</li>

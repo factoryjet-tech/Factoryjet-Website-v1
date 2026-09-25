@@ -685,7 +685,7 @@ export default function WebsiteRedesignPage() {
           imageAlt="Before and after website redesign shown side by side in a browser, FactoryJet website redesign"
           stats={[
             { value: '500+', label: 'Redesigns Delivered' },
-            { value: '7 Days', label: 'Delivery Guarantee' },
+            { value: '7 Days', label: 'Delivery Time' },
             { value: 'Fixed', label: 'Price, Milestone-Paid' },
             { value: '10+ Yrs', label: 'Web Design Expertise' },
           ]}

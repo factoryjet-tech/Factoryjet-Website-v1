@@ -1,8 +1,5 @@
-"use client";
-
 import Link from "next/link";
-import { useContactModal } from "@/context/ContactModalContext";
-import { trackButtonClick, trackCTAClick } from "@/utils/gtm";
+import UkAuditButton from "./UkAuditButton";
 
 // ── Link data (verbatim from content.md) ─────────────────────────────────────
 const CITIES = [
@@ -39,8 +36,6 @@ const WATERMARKS: Array<{
 ];
 
 export default function FinalCTA() {
-  const { openModal: openContactModal } = useContactModal();
-  const openModal = () => openContactModal('uk', 'default');
 
   return (
     <section
@@ -149,13 +144,9 @@ export default function FinalCTA() {
 
           {/* CTAs */}
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <button
-              type="button"
-              onClick={() => {
-                trackCTAClick('get_your_free_digital_audit', 'final_cta', 'primary');
-                trackButtonClick('get_your_free_digital_audit', 'final_cta');
-                openModal();
-              }}
+            <UkAuditButton
+              trackName="get_your_free_digital_audit"
+              location="final_cta"
               className="inline-flex items-center justify-center gap-2"
               style={{
                 backgroundColor: "#FFFFFF",
@@ -176,7 +167,7 @@ export default function FinalCTA() {
               <span aria-hidden="true" style={{ fontSize: 18, lineHeight: 1 }}>
                 →
               </span>
-            </button>
+            </UkAuditButton>
             <a
               href="https://wa.me/919699977699"
               target="_blank"

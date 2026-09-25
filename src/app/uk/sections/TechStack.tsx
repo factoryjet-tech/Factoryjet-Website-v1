@@ -1,9 +1,5 @@
-"use client";
-
-import { useRef } from "react";
-import { useGSAP } from "@gsap/react";
-import { gsap, ScrollTrigger } from "@/lib/gsap";
 import { JetBrains_Mono } from "next/font/google";
+import TechParallaxFx from "./TechParallaxFx";
 
 // Self-hosted via next/font (was a <link rel="stylesheet"> to
 // fonts.googleapis.com in src/app/uk/page.tsx). That link sat in <body> above
@@ -179,59 +175,11 @@ function TechBadge({ tech }: { tech: Tech }) {
 }
 
 // ── Section ──────────────────────────────────────────────────────────────────
+// Server component. The desktop-only badge parallax is the ./TechParallaxFx
+// island, which loads GSAP only at 1024px and wider.
 export default function TechStack() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const gridRef = useRef<HTMLDivElement>(null);
-
-  useGSAP(
-    () => {
-      const prefersReduced = window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
-      ).matches;
-      if (prefersReduced) return;
-
-      // Parallax: only runs on desktop viewports where the asymmetric layout
-      // actually applies. On narrow screens the badges stack and the offset
-      // would just feel like jitter.
-      const desktop = window.matchMedia("(min-width: 1024px)");
-      if (!desktop.matches) return;
-
-      const badges =
-        gridRef.current?.querySelectorAll<HTMLElement>("[data-tech-badge]");
-      if (!badges || !badges.length) return;
-
-      badges.forEach((el) => {
-        const amount = Number(el.getAttribute("data-parallax") ?? "0");
-        gsap.fromTo(
-          el,
-          { y: -amount / 2 },
-          {
-            y: amount / 2,
-            ease: "none",
-            scrollTrigger: {
-              trigger: sectionRef.current,
-              start: "top bottom",
-              end: "bottom top",
-              scrub: 0.8,
-            },
-          }
-        );
-      });
-
-      return () => {
-        ScrollTrigger.getAll().forEach((t) => {
-          if (t.trigger && sectionRef.current?.contains(t.trigger as Node)) {
-            t.kill();
-          }
-        });
-      };
-    },
-    { scope: sectionRef }
-  );
-
   return (
     <section
-      ref={sectionRef}
       id="technology-stack"
       aria-label="Our technology stack"
       className="relative w-full overflow-hidden"
@@ -333,7 +281,6 @@ export default function TechStack() {
 
         {/* Floating tech badges, asymmetric, parallax on scroll */}
         <div
-          ref={gridRef}
           className="mt-20 grid grid-cols-1 gap-6 sm:gap-7 lg:grid-cols-12 lg:gap-8"
         >
           {TECH.map((t) => (
@@ -400,6 +347,7 @@ export default function TechStack() {
           ))}
         </div>
       </div>
+      <TechParallaxFx sectionId="technology-stack" />
     </section>
   );
 }

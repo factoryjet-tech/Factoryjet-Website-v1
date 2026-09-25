@@ -1,10 +1,6 @@
-"use client";
-
-import { useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useGSAP } from "@gsap/react";
-import { gsap, ScrollTrigger } from "@/lib/gsap";
+import CityTiltFx from "./CityTiltFx";
 
 // ── City data (verbatim from content.md) ─────────────────────────────────────
 type City = {
@@ -105,40 +101,13 @@ const CITIES: City[] = [
 ];
 
 // ── Card ─────────────────────────────────────────────────────────────────────
+// Server-rendered. The desktop hover tilt and shadow are attached by the
+// ./CityTiltFx island (same handlers, same values).
 function CityCard({ city }: { city: City }) {
-  const cardRef = useRef<HTMLAnchorElement>(null);
-  const imgRef = useRef<HTMLDivElement>(null);
-
-  // 3D hover tilt — skipped on touch devices via CSS @media (hover: hover).
-  const onMove = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    const card = cardRef.current;
-    if (!card) return;
-    // Only run on devices that truly support hover (desktop pointers).
-    if (!window.matchMedia("(hover: hover)").matches) return;
-    const rect = card.getBoundingClientRect();
-    const x = (e.clientX - rect.left) / rect.width;
-    const y = (e.clientY - rect.top) / rect.height;
-    const rotY = (x - 0.5) * 10;   // ±5deg
-    const rotX = -(y - 0.5) * 10;  // ±5deg
-    card.style.transform = `perspective(1000px) rotateX(${rotX.toFixed(2)}deg) rotateY(${rotY.toFixed(2)}deg)`;
-    if (imgRef.current) imgRef.current.style.transform = "scale(1.05)";
-  };
-
-  const onLeave = () => {
-    const card = cardRef.current;
-    if (!card) return;
-    card.style.transform =
-      "perspective(1000px) rotateX(0deg) rotateY(0deg)";
-    if (imgRef.current) imgRef.current.style.transform = "scale(1)";
-  };
-
   return (
     <Link
-      ref={cardRef}
       href={`/uk/${city.slug}`}
       data-city-card
-      onMouseMove={onMove}
-      onMouseLeave={onLeave}
       className={[
         "group relative block overflow-hidden transition-shadow duration-300",
         "sm:col-span-1",
@@ -151,21 +120,10 @@ function CityCard({ city }: { city: City }) {
         willChange: "transform",
         transition: "transform 0.3s ease-out, box-shadow 0.3s ease-out",
       }}
-      onMouseEnter={(e) => {
-        e.currentTarget.style.boxShadow =
-          "0 20px 60px -15px rgba(0,82,204,0.45), 0 4px 12px rgba(0,0,0,0.08)";
-      }}
-      onFocus={(e) => {
-        e.currentTarget.style.boxShadow =
-          "0 20px 60px -15px rgba(0,82,204,0.45), 0 4px 12px rgba(0,0,0,0.08)";
-      }}
-      onBlur={(e) => {
-        e.currentTarget.style.boxShadow = "0 1px 3px rgba(0,0,0,0.04)";
-      }}
     >
       {/* Photo background */}
       <div
-        ref={imgRef}
+        data-city-img
         className="absolute inset-0"
         style={{
           transition: "transform 0.4s ease-out",
@@ -273,53 +231,11 @@ function CityCard({ city }: { city: City }) {
 }
 
 // ── Section ──────────────────────────────────────────────────────────────────
+// Server component. The scroll-in stagger of the city cards was removed for
+// performance (cards paint in their final state); hover tilt is ./CityTiltFx.
 export default function Cities() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const gridRef = useRef<HTMLDivElement>(null);
-
-  useGSAP(
-    () => {
-      const prefersReduced = window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
-      ).matches;
-      if (prefersReduced) return;
-
-      const cards =
-        gridRef.current?.querySelectorAll<HTMLElement>("[data-city-card]");
-      if (!cards || !cards.length) return;
-
-      gsap.fromTo(
-        cards,
-        { y: 40, scale: 0.95, autoAlpha: 0 },
-        {
-          y: 0,
-          scale: 1,
-          autoAlpha: 1,
-          duration: 0.7,
-          ease: "power3.out",
-          stagger: 0.08,
-          scrollTrigger: {
-            trigger: gridRef.current,
-            start: "top 80%",
-            toggleActions: "play none none reverse",
-          },
-        }
-      );
-
-      return () => {
-        ScrollTrigger.getAll().forEach((t) => {
-          if (t.trigger && sectionRef.current?.contains(t.trigger as Node)) {
-            t.kill();
-          }
-        });
-      };
-    },
-    { scope: sectionRef }
-  );
-
   return (
     <section
-      ref={sectionRef}
       id="cities"
       aria-label="Cities we serve across the UK"
       className="relative w-full"
@@ -396,7 +312,6 @@ export default function Cities() {
 
         {/* Bento grid */}
         <div
-          ref={gridRef}
           className="mt-16 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-6"
         >
           {CITIES.map((city) => (
@@ -404,6 +319,7 @@ export default function Cities() {
           ))}
         </div>
       </div>
+      <CityTiltFx sectionId="cities" />
     </section>
   );
 }

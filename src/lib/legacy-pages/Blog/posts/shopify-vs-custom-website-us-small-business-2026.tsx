@@ -326,7 +326,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What FactoryJet Builds for US Small Businesses</h2>
       <p className="mb-4">
-        FactoryJet builds both platforms for US small businesses with the same quality standard, the same 7-day delivery guarantee, and the same pricing transparency. We don't favor one over the other, we recommend based on your actual business model.
+        FactoryJet builds both platforms for US small businesses with the same quality standard, the same 7-day delivery, and the same pricing transparency. We don't favor one over the other, we recommend based on your actual business model.
       </p>
       <p className="mb-4">
         <strong>Shopify stores:</strong> Custom theme development, product catalog setup, payment gateway configuration, SEO optimization, and app integration. Starting at $2,499 for up to 50 products, delivered in 7 days.
