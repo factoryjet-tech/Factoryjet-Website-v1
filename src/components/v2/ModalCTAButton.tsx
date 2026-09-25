@@ -9,7 +9,7 @@
  *
  * Variants map to the four CTA appearances used across v2 sections:
  *   primary-light   — orange fill, light-bg sections (Hero, FinalCTA light)
- *   primary-dark    — orange fill + glow, dark sections (FinalCTA dark)
+ *   primary-dark    — orange fill, dark sections (FinalCTA dark)
  *   secondary-light — frosted glass, light-bg sections (Hero secondary)
  *   secondary-dark  — ghost/border, dark sections (FinalCTA dark secondary)
  *
@@ -57,9 +57,10 @@ export default function ModalCTAButton({
   const resolvedStyle: CSSProperties = isPrimary
     ? {
         // #C2440F (deeper burnt orange) gives ~5:1 white-text contrast for a safe
-        // WCAG AA margin; #F05A28 was 3.38:1 and failed. Glow keeps the brand feel.
+        // WCAG AA margin; #F05A28 was 3.38:1 and failed. 2026-09-25: the orange glow
+        // was removed (design rule: no glow); a quiet neutral shadow keeps the lift.
         background: '#C2440F',
-        boxShadow: '0 4px 20px rgba(240,90,40,0.38), 0 1px 4px rgba(240,90,40,0.22)',
+        boxShadow: '0 1px 2px rgba(15,15,18,0.14)',
         outlineColor: '#C2440F',
         ...style,
       }

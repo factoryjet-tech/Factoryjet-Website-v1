@@ -20,3 +20,30 @@ Review: tablet screen faces both people, camera behind them; screen shows grey b
 ecommerce-development-planning.webp (1200x800)
 Prompt: "A small planning workshop in a bright Sydney office with white walls and timber table. A woman in her thirties with short black hair and a man in his forties with glasses stand at a large whiteboard, both facing the whiteboard, sketching simple wireframe boxes, arrows and empty rectangles for a website layout, with no words and no numbers written anywhere. Seen from a side angle so both faces are partly visible in profile. Sticky notes on the board are blank. An orange marker in the woman's hand." + style suffix.
 Review: whiteboard holds boxes, arrows and blank rectangles only, no writing; sticky notes blank; writing hand zoomed, correct grip and fingers; man's hands relaxed and correct; closed laptop on table shows no logo.
+
+==========================================================================
+QA refresh, 2026-09-25 (afternoon). Model: openai:gpt-image@2.5-flare via Runware, 1536x1024 PNG,
+resized/cropped to 1200x800 with ImageMagick (-strip), cwebp -q 82. Same AU style suffix as above.
+Why: the whiteboard and box-packing scenes duplicated the shopify-development, hub, ai-seo and
+ai-agents images; the page also had long text-only stretches. Hero, og and trade kept (unique, pass review).
+All five new images passed full-size review first time; hands zoomed on each.
+
+ecommerce-development-planning.webp (OVERWRITTEN; was whiteboard workshop, now paper wireframes, stages section)
+Prompt: "Over-the-shoulder view from behind and slightly above a UX designer, a man in his thirties with a short beard in a sage green shirt, sitting at a pale timber desk in a bright Sydney studio, sketching mobile phone screen outlines in a large open paper sketchbook with a pencil: three tall rounded rectangles filled with simple empty boxes, lines and one circle, with no words and no numbers anywhere. Beside the sketchbook, a smartphone lying face up showing a plain light grey screen, and a closed laptop with no logo. One orange pencil case on the desk. Window light from the left." + style suffix.
+Review: over-the-shoulder; sketchbook shows three phone outlines with boxes/lines/circle, no writing; phone screen dark and blank; laptop closed, no logo; writing hand and resting hand five fingers; Sydney Harbour through window.
+
+ecommerce-development-packing.webp (OVERWRITTEN; was two people packing boxes, now operations manager with synced orders, integrations section)
+Prompt: "Over-the-shoulder view from behind an operations manager, a woman in her fifties with short silver hair and reading glasses, in the bright back office of a Melbourne online homewares brand. She sits at a white desk looking at a laptop whose screen faces her, showing an abstract dashboard of neat light grey rows, small green circles and simple grey bar blocks, with no words and no numbers. Beside the laptop, a small white thermal label printer feeding out a blank white label, and a neat stack of plain grey courier satchels with no printing. One orange stapler on the desk." + style suffix.
+Review: laptop screen faces her, shows grey rows, green dots and bars only; label printer label blank; satchels unprinted; both hands on keyboard correct; no logos.
+
+ecommerce-development-mobile.webp (NEW, ecommerce website design section)
+Prompt: "Over-the-shoulder close view from behind a woman in her twenties with long light brown hair, sitting on a timber bench at a sunny Brisbane cafe, holding a smartphone in her left hand with the screen facing her and the camera, browsing an online store product page: a large photo of a plain beige ceramic vase, three small round colour swatches below it and one wide orange button, with no words and no numbers on the screen. Softly blurred cafe tables and green plants in the background. A flat white coffee in a white cup on the table." + style suffix.
+Review: phone faces her (over the shoulder); screen shows vase photo, three swatches, orange button, no text; holding hand five fingers zoomed; no logos on cup or phone.
+
+ecommerce-development-migration.webp (NEW, migration section)
+Prompt: "Over-the-shoulder view from behind two ecommerce engineers, a man in his thirties with dark hair in a navy t-shirt and a woman in her twenties with a long braid in a white shirt, sitting side by side at a long desk in a bright Adelaide office. They look at two large monitors facing them: the left monitor shows two columns of plain light grey rows joined by thin connecting lines, the right monitor shows a simple abstract online store page layout of beige product image tiles. A smartphone on a small stand shows the same store layout. No words and no numbers on any screen. An orange notebook on the desk." + style suffix.
+Review: both monitors face the engineers, camera behind; left = two columns of grey rows joined by lines (redirect map), right = product tiles, no words or numbers; phone on stand same layout; woman's hand at chin zoomed, correct.
+
+ecommerce-development-remote.webp (NEW, replaces keyword-volume panel in the 'across Australia' section)
+Prompt: "Over-the-shoulder view from behind the owner of a small Perth homewares and gift shop, a man in his forties with light brown hair wearing a linen shirt, sitting at a timber desk in the back room of his shop, with shelves of plain unbranded ceramics and candles on the wall beyond the laptop. He is on a video call: the laptop screen faces him and shows two smiling people in two simple video tiles in bright offices, with no text, no names and no numbers on screen. Warm Western Australian afternoon light through a window. One orange ceramic cup on the desk." + style suffix.
+Review: laptop faces him; two video tiles show two people, no names or text; shelves of plain ceramics and candles, no labels; hand on trackpad correct; Perth river skyline through window.

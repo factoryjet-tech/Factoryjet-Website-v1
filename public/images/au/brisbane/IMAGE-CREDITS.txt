@@ -1,0 +1,32 @@
+Images for /au/brisbane, generated 2026-09-25 (redesign into the AU design system)
+Model: openai:gpt-image@2.5-flare via Runware API, 1536x1024 PNG, resized with ImageMagick (resize ^ + centre extent), converted with cwebp -q 82.
+All images reviewed at full size for hands, faces, garbled text, real logos and screen geometry (screens face the people using them, or are seen edge-on/from behind).
+AI-generated people (permitted per CLAUDE.md, ban lifted 2026-08-03). None resembles an identifiable real person. None reused on any other AU page.
+
+Shared style suffix appended to every prompt: "Bright high-key commercial photography in Australia, natural warm Australian daylight. Crisp sharp focus. Airy, calm, confident mood. Accurate natural skin tones. Hands anatomically correct with exactly five natural fingers in relaxed natural poses. One warm orange object in frame as the only strong colour accent. No words, no letters and no numbers anywhere in the image, no signage text, no logos, no real brand names. Photorealistic, professional colour grading, no illustration."
+
+Removed 2026-09-25 (no longer referenced after the redesign): hero-owner-*.webp/.avif, brisbane-interior-*.webp, process-desk-*.webp, team-*.webp.
+
+brisbane-hero.webp (1400x933) + brisbane-og.webp (1200x630 centre crop)
+Review: Hero. Over-the-shoulder, monitor faces both; screen shows photos and colour swatches, no text. Story Bridge, Brisbane River, timber louvres, palms. Hands correct.
+Prompt: "Over-the-shoulder camera angle from behind two people seated side by side at a white desk in a bright open office in Fortitude Valley, Brisbane, with timber louvre windows open to a humid sunny day, tropical palms outside and the Story Bridge visible in the distance. A web designer woman in her twenties with long dark braids and a man business owner in his forties with a tan and short hair in a short-sleeved shirt both look at a large monitor in front of them that faces them; the camera sees the screen from behind their shoulders. The screen shows a clean website homepage layout of photo blocks and soft coloured rectangles, no words and no numbers on screen. An orange desk fan." + style suffix
+
+brisbane-tradie.webp (1200x800)
+Review: SEO / local search section. White Queenslander with verandah, jacaranda in flower, phone back faces camera, plain orange toolbox. Hands correct.
+Prompt: "An electrician in his forties with sunglasses pushed up on his head, in a khaki work shirt, stands on the front steps of a white timber Queenslander house on stilts with a wide verandah in a leafy Brisbane suburb, a purple flowering jacaranda tree beside the house, bright subtropical sunlight. He holds a smartphone at chest height looking at it, camera to his side so the back of the phone faces the camera. An orange toolbox on the step." + style suffix
+
+brisbane-planning.webp (1200x800)
+Review: Process section. West End warehouse studio, louvres, ceiling fans; sitemap cards on string are blank. Hands correct (pointing hand).
+Prompt: "A small web design studio in a renovated West End Brisbane warehouse with polished concrete floor, ceiling fans and big louvred windows. A man designer in his thirties and a woman client in her fifties stand at a wall covered in blank pastel sticky notes and paper cards arranged in a website sitemap tree connected by string, no writing on any note. She points at one card while he listens, both smiling. Tropical plants, an orange paper card among the pastel ones." + style suffix
+
+brisbane-cafe.webp (1200x800)
+Review: "Who we build for" section. South Bank riverside cafe, Brisbane River, CBD skyline, Wheel of Brisbane (landmark, no branding). Phone back faces camera. Hands correct.
+Prompt: "A smiling cafe owner man in his thirties with curly hair and an apron stands behind the counter of a bright open-air cafe near the Brisbane River at South Bank with timber benches, hanging greenery and the river and city in the background. He holds a smartphone in front of him looking at it, camera positioned to his side so the back of the phone faces the camera. An orange ceramic cup on the counter." + style suffix
+
+brisbane-industrial.webp (1200x800)
+Review: Ecommerce/B2B section. Distribution warehouse near the TradeCoast, eucalypt outside, plain cartons, tablet back faces camera. Hands correct.
+Prompt: "Inside a large bright industrial distribution warehouse near the Brisbane TradeCoast with a high roller door open to strong subtropical sun and a eucalyptus tree outside. A man sales manager in his fifties with grey hair in a polo shirt and a woman buyer in her thirties stand at a packing bench beside neat pallets of plain unlabelled cartons; he holds a tablet with the screen facing the two of them, camera behind the tablet so only its back is visible. An orange pallet jack nearby." + style suffix
+
+brisbane-clinic.webp (1200x800)
+Review: Integrations section. Chermside dental clinic, timber slats, subtropical greenery; monitor seen edge-on facing the receptionist. Coffee-table magazine has no legible text. Hands correct.
+Prompt: "Waiting area and front desk of a modern dental clinic in Chermside, Brisbane, with timber slat walls, indoor plants and big windows with subtropical greenery outside. A receptionist man in his twenties sits at the desk looking at a monitor that faces him, camera beside the desk so only the side edge of the monitor is visible. A mother and young daughter sit on a bench smiling. An orange cushion on the bench." + style suffix

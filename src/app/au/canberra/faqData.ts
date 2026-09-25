@@ -9,8 +9,10 @@
  * selling into the public sector, so the set covers accessibility, tender and procurement
  * questions the other city pages do not.
  *
- * The ONLY copy of these questions. sections/FAQ.tsx renders it, page.tsx maps it into
- * FAQPage JSON-LD.
+ * 2026-09-25 redesign: seven questions added, grounded in the September 2026 Google AU People
+ * Also Ask data for web design and SEO searches (pipeline/research/data/market-au-2026-09-24/).
+ *
+ * The ONLY copy of these questions. page.tsx renders it AND maps it into FAQPage JSON-LD.
  */
 
 export interface Faq {
@@ -34,12 +36,23 @@ export const FAQS: Faq[] = [
   {
     q: 'Can you make an existing website accessible?',
     topic: 'Accessibility and compliance',
-    a: 'Usually yes, and it is often cheaper than a rebuild. We audit against the WCAG success criteria, list what fails, and rank the failures by how many people they actually block. Contrast, missing labels and keyboard traps are typically quick to fix. Sites built entirely on a drag-and-drop builder are the hard case, because the underlying code is not yours to correct.',
+    a: 'Usually yes, and it is often less work than a rebuild. We audit against the WCAG success criteria, list what fails, and rank the failures by how many people they actually block. Contrast, missing labels and keyboard traps are typically quick to fix. Sites built entirely on a drag-and-drop builder are the hard case, because the underlying code is not yours to correct.',
   },
   {
     q: 'What do government tenders ask about websites?',
     topic: 'Accessibility and compliance',
     a: 'Commonly: whether the site meets a named accessibility standard, where the data is hosted, how you handle personal information, who owns the code, and whether you can demonstrate the same work elsewhere. The pattern is that they want evidence rather than assurance. Being able to point at a live site and a test result answers more of the form than any amount of description.',
+  },
+
+  {
+    q: 'Which WCAG level should a Canberra website aim for?',
+    topic: 'Accessibility and compliance',
+    a: 'WCAG sets three levels of conformance: A, AA and AAA. Level AA is the one most organisations and most tender forms mean when they ask about accessibility, and it is what we build to by default. AAA is stricter and not realistic for every page of a typical site. Check what your own contracts or funding agreements name, and build to that version, currently WCAG 2.1 or 2.2.',
+  },
+  {
+    q: 'Can a site built on a website builder be made accessible?',
+    topic: 'Accessibility and compliance',
+    a: 'Partly. You can fix what you control: image descriptions, heading order, link text, colour contrast in the theme, and plain language. What you usually cannot fix is the underlying code the builder generates, such as menus that trap keyboard users or forms without proper labels. If an audit finds failures in those parts, the realistic options are a different theme, a different platform, or a rebuild.',
   },
 
   // ---------- Cost and scope ----------
@@ -57,6 +70,12 @@ export const FAQS: Faq[] = [
     q: 'Is there a monthly fee to have a website?',
     topic: 'Cost and scope',
     a: 'Yes, usually small: the domain yearly and hosting monthly or yearly. If your site takes memberships, event bookings or payments there is normally a platform or transaction fee too. What you should not pay is a monthly fee simply to keep pages online with an agency holding the keys. That arrangement is common and it is worth checking your current contract for.',
+  },
+
+  {
+    q: 'How much does a web designer cost in Canberra?',
+    topic: 'Cost and scope',
+    a: 'We do not publish a figure, because it moves with four things: the number of pages, whether the content exists, what the site connects to (memberships, events, payments), and how much accessibility and security evidence your contracts need. A freelancer, a Canberra studio and a senior remote team will quote the same brief differently. Give each the same written scope, including the accessibility level, so the quotes are comparable.',
   },
 
   // ---------- Websites ----------
@@ -86,6 +105,12 @@ export const FAQS: Faq[] = [
     a: 'No, there is no general legal requirement to have one. What is often effectively required is being findable and verifiable, which matters more in Canberra than most places because so much work here starts with someone checking whether an organisation is legitimate before making contact. A complete Google Business Profile can cover that at the very small end.',
   },
 
+  {
+    q: 'Is web design still in demand in 2026?',
+    topic: 'Websites',
+    a: 'Yes. Google Australia data from September 2026 shows around 1,000 searches a month for web design in Canberra and its close variants, and 880 for a web designer in Canberra. What buyers expect has moved: fast pages on a phone, accessible by default, and content clear enough for AI search tools to quote. Sites that only look good are the part of the market losing ground.',
+  },
+
   // ---------- SEO ----------
   {
     q: 'How long does SEO take to show results in 2026?',
@@ -111,6 +136,17 @@ export const FAQS: Faq[] = [
     q: 'Why is Google not crawling my website?',
     topic: 'SEO',
     a: 'The usual causes, in the order worth checking: a robots.txt rule blocking the pages, a noindex tag left from a staging site, content that only appears once JavaScript runs, no internal links pointing at the page, or a site too new to have been reached. Search Console names the exact cause in its page indexing report, which is the fastest place to look.',
+  },
+
+  {
+    q: 'Is SEO replaced by AI?',
+    topic: 'SEO',
+    a: 'No. People still search Google, and when we measured the main Canberra web design and SEO searches in August 2026 Google showed no AI Overview on either, so an ordinary ranking still earns the visit. Buyers also ask ChatGPT and Perplexity for recommendations, and those tools read the same pages. Specific, well-structured, accessible pages serve both. Our AI SEO page covers the AI side.',
+  },
+  {
+    q: 'Where can I find SEO services in Canberra?',
+    topic: 'SEO',
+    a: 'Look at who ranks in the ordinary results for the terms you want, ask organisations in your sector who they used, and ask each candidate who does the work, how they report, and what you keep if you leave. Canberra is a small market, so many providers serve it remotely, us included. What matters is whether their answer to your specific problem is concrete.',
   },
 
   // ---------- Google and local search ----------
@@ -143,5 +179,10 @@ export const FAQS: Faq[] = [
     q: 'Can anyone make a Google Business Profile?',
     topic: 'Google and local search',
     a: 'Anyone with a business that has customers can, but Google requires the business to make in-person contact with customers, either at a location or by travelling to them. A business operating entirely online with no face-to-face contact does not qualify. That rules out a fair number of Canberra consultancies, and trying anyway usually ends in a suspension.',
+  },
+  {
+    q: 'Does FactoryJet have an office in Canberra?',
+    topic: 'Google and local search',
+    a: 'No. We work with Canberra organisations remotely, with video workshops and calls in Australian business hours, and the founder is involved in every project. If a tender asks for a local presence, tell us early so we can answer it honestly. Your own Google Maps ranking is unaffected: it depends on your address and listing, not on where your web designer sits.',
   },
 ];

@@ -1,0 +1,31 @@
+Images for /au/canberra, generated 2026-09-25
+Model: openai:gpt-image@2.5-flare via Runware API, 1536x1024 PNG, resized/cropped with ImageMagick (-strip), converted with cwebp -q 82.
+Hero 1400x933, og 1200x630 (centre crop of the hero source), in-body images 1200x800.
+Every image reviewed at full size (hands, faces, screen geometry, text, logos, scene match); first attempt accepted for all six, none rejected.
+
+Shared style suffix:
+"Bright high-key commercial photography in Australia, natural Australian daylight, clean light surroundings, crisp sharp focus, airy calm confident mood, accurate natural skin tones, hands anatomically correct with exactly five natural fingers in relaxed poses, one warm orange object in frame as the only strong colour accent. No logos, no brand names, no readable text or numbers anywhere, including on screens, signs and packaging. Photorealistic, professional colour grading, no illustration."
+
+canberra-hero.webp and canberra-og.webp
+Prompt: "Over-the-shoulder camera view from behind and slightly to the side of a communications manager at a Canberra member association, a woman in her forties with short dark hair and a navy blazer, seated at a white desk in a bright office in Barton. She faces a large monitor that faces her and the camera from behind her shoulder, showing a clean, high-contrast website layout of large simple blocks and one photo placeholder, no words and no numbers. A male web developer in his thirties sits beside her, pointing at the screen with a relaxed open hand. Through the large window: the calm blue water of Lake Burley Griffin, green trees and the rounded hills of Canberra under a clear sky. An orange notebook on the desk." + style suffix
+Review: Screen faces the seated manager (over-the-shoulder); developer beside her, open hand five fingers. Screen: high-contrast blocks and a landscape tile, grey placeholder lines, no words or numbers. Lake Burley Griffin and the Black Mountain tower through the window (landmark, no text).
+
+canberra-accessibility.webp
+Prompt: "Over-the-shoulder camera view from behind a man in his fifties with grey hair wearing over-ear headphones, testing a website with only a keyboard at a tidy desk in a bright Canberra office. The monitor faces him and the camera from behind, showing a simple web page of large high-contrast blocks with one block outlined by a thick bright focus ring, no words and no numbers on screen. His hands rest on a keyboard, fingers on the arrow and tab keys. A colleague in her thirties sits beside him taking notes on paper. An orange desk lamp. Large windows with soft daylight and gum trees outside." + style suffix
+Review: Monitor faces the tester (over-the-shoulder), large blocks with a yellow focus ring, no words or numbers. Both hands on keyboard natural; note-taker hands correct, notebook lines unreadable. Headphones unbranded.
+
+canberra-tender.webp
+Prompt: "A small team of three at a Canberra consultancy, a woman in her thirties, a man in his fifties and a younger man, seated around a white meeting table in a bright Civic office, reviewing a neat stack of printed tender documents and a checklist on paper, with the pages showing only grey blurred lines and no readable text. A laptop on the table is closed. One of them points to a page with a pen. Floor-to-ceiling windows show modern low-rise Canberra buildings and trees. An orange folder on the table." + style suffix
+Review: Tender papers show grey lines and checkbox shapes only, nothing readable. Laptop closed. All six hands checked, correct. Canberra skyline with the Black Mountain tower.
+
+canberra-documents.webp
+Prompt: "A bright, calm office at a Canberra not-for-profit in Braddon, with exposed brick and plants. A policy officer in her twenties with long dark hair sits at a desk beside a tidy stack of bound printed reports, working on a laptop; over-the-shoulder camera view from behind her so the laptop screen faces her and the camera, showing a clean readable-looking web article layout of grey text lines and a simple chart shape, no real words and no numbers. A colleague in the background waters a plant. An orange ring binder on the shelf." + style suffix
+Review: Laptop faces the officer (over-the-shoulder), article layout of grey lines and a bar chart without numbers. Report stack covers carry tiny unreadable marks only (zoomed to check). Hands correct. Braddon-style brick wall.
+
+canberra-tradie.webp
+Prompt: "An Australian plumber in his forties in a navy work shirt with orange high-visibility stripes stands beside a plain white ute in a quiet street of modern single-storey homes in Gungahlin, Canberra, with the Brindabella Ranges faint and blue on the horizon on a crisp clear autumn morning with golden leaves on the street trees. He looks down at a smartphone held in one hand, the phone screen facing him and not visible to the camera. No writing on the vehicle." + style suffix
+Review: Gungahlin-style modern single-storey street, autumn street trees, ranges on the horizon. Phone faces him. Hand correct, other in pocket. No writing on ute.
+
+canberra-workshop.webp
+Prompt: "A website planning workshop in a bright Canberra meeting room with pale timber walls. A web strategist in his thirties stands at a whiteboard arranging blank coloured sticky notes into two separate columns of empty boxes, representing two audience paths, with no writing on anything. Three people from a peak body, two women and a man in their forties and fifties, sit at a white table watching and smiling, with paper notebooks and a closed laptop. The strategist holds an orange marker pen." + style suffix
+Review: Two columns of blank sticky notes (two audience paths), no writing. Laptop closed. Hands correct. Parliament House flagpole visible through the window (landmark, no text).

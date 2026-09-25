@@ -1,3 +1,43 @@
+QA image refresh, 2026-09-25 (supersedes the earlier set below)
+Model: openai:gpt-image@2.5-flare via Runware, 1536x1024 PNG. Resized/cropped with ImageMagick (-strip), cwebp -q 82.
+Every image reviewed at full size, plus zoomed crops of hands and screens. Checks: five fingers, faces, no readable text or numbers,
+no logos or real brands, screen geometry (screens face the people using them; camera over the shoulder), scene matches its section,
+and no scene repeated from another AU page.
+Style suffix for all prompts: "Bright high-key commercial photography in Australia, natural Australian daylight, clean white and very light grey surroundings, crisp sharp focus, airy calm confident mood, accurate natural skin tones, hands anatomically correct with exactly five natural fingers in relaxed poses, one warm orange object as the main colour accent. No logos, no brand names, no readable text or numbers anywhere, including on screens, paper, clothing and vehicles. Photorealistic, professional colour grading, no illustration."
+
+ai-agents-hero.webp + ai-agents-og.webp (1400x933; og 1200x630 top-anchored crop so both heads stay in frame), section: hero (AI agents built into the tools you already run; people approve what matters)
+Prompt: "Over-the-shoulder camera view from behind and to the right of an Australian small-business owner, a man in his forties with short greying hair and a rolled-sleeve chambray shirt, seated at a timber desk in a bright converted-warehouse office in Sydney's inner west with exposed white brick and tall steel-framed windows. He looks at an open laptop whose screen faces him and the camera from behind his shoulder; the screen shows a simple row of rounded coloured cards joined by thin lines, one card highlighted in green as if waiting for a click, with no words and no numbers on screen. His right hand rests on the trackpad. Beside him, a female operations manager in her thirties leans in holding a coffee cup, looking at the same screen and smiling. A notebook and one orange ceramic mug on the desk." + style suffix
+Review: Over-the-shoulder; laptop faces the seated owner, colleague beside him. Screen shows five coloured cards joined by lines, one highlighted green, no text. Trackpad hand and cup hand both correct. Harbour Bridge through the window, no signage. PASS first attempt.
+
+ai-agents-property.webp (1200x800), section: "Where AI agents earn their keep" (industries; caption is a tenant maintenance request)
+Prompt: "Over-the-shoulder camera view from behind a property manager, a woman in her late twenties with a dark ponytail and navy blazer, standing at a white reception counter in a bright Perth real estate agency office. She holds a tablet at chest height; the tablet screen faces her and the camera from behind her shoulder, showing a simple list of three coloured rows with small icons, no words and no numbers. A ring of house keys with plain round tags lies on the counter. Through the glass shopfront behind her, a sunny Perth street with low-rise buildings and a palm tree. One orange key tag is the colour accent." + style suffix
+Review: Tablet faces her, camera over her shoulder; screen shows three coloured rows with house photos and icons, no words. Both hands zoom-checked, five fingers. Listing photos in the window have no text. Replaces the tradie-by-van shot, which repeated the tradie scenes on /au/ai-seo and /au/ai-receptionist. PASS.
+
+ai-agents-integrations.webp (1200x800), section: "Built into Xero, MYOB, HubSpot, ServiceM8" (new image)
+Prompt: "Over-the-shoulder camera view from behind an Australian bookkeeper, a man in his fifties with glasses and a pale blue shirt, seated at a tidy desk in a bright Adelaide accounting practice. He holds a printed supplier invoice in his left hand, the paper blank apart from faint grey lines with no readable text. In front of him two monitors face him and the camera from behind his shoulder: the left shows a simple document thumbnail shape, the right shows a clean form made of empty grey boxes with one green tick, no words and no numbers. A desk plant, a calculator with no visible digits, and one orange folder." + style suffix
+Review: Both monitors face him, camera over his shoulder. Document icon and empty form fields with one green tick, no text. Paper invoice lines are blank grey bars. Calculator display blank. Hand on mouse and hand holding paper correct. PASS.
+
+ai-agents-approval.webp (1200x800), section: "Agents do the routine steps. People approve what matters." (new image)
+Prompt: "An Australian operations lead, a woman in her thirties with curly dark hair and a cream knit top, standing by the window of a bright Melbourne office kitchen with a coffee in one hand and a smartphone in the other. Over-the-shoulder camera view from behind her shoulder: the phone screen faces her and the camera, showing a simple notification card with two large rounded buttons, one green and one light grey, no words and no numbers. Soft morning light over Melbourne rooftops and trees outside. One orange mug on the bench." + style suffix
+Review: Phone faces her, camera over her shoulder; one green and one grey button, no text. Phone hand and mug hand correct. Melbourne skyline, no signage. PASS.
+
+ai-agents-workshop.webp (1200x800 (filename kept)), section: "AI agent development in seven steps" (replaces the whiteboard scene, which repeated across four AU pages)
+Prompt: "A process-mapping session around a large white table in a bright Brisbane office. Top-down three-quarter view: a FactoryJet engineer in his thirties in a white shirt and the owner of a physiotherapy clinic, a woman in her fifties with short silver hair, arrange rows of blank pale-yellow and orange sticky notes connected by hand-drawn pencil arrows on a long sheet of white paper. No writing on the sticky notes. Both are smiling and pointing at the same note. A closed laptop, two coffee cups and a potted plant on the table, sunlight through large windows with leafy trees outside." + style suffix
+Review: Sticky notes blank, arrows only. Two pointing hands zoom-checked, correct. Laptop closed. Orange top on the owner is the accent. PASS.
+
+ai-agents-privacy.webp (1200x800), section: "Australian privacy rules shape the agent" (new image)
+Prompt: "A calm planning meeting in a quiet, bright Canberra office meeting room with pale timber and white walls. Two Australian professionals, a woman in her forties in a grey blazer and a man in his thirties in a navy jumper, sit side by side at a round table reviewing a printed diagram of simple circles and arrows on paper with no words, one of them pointing with a pen. A closed laptop and a glass of water on the table. Large window with soft overcast daylight and gum trees outside. Relaxed, thoughtful, unhurried mood. One orange notebook on the table." + style suffix
+Review: No screens (laptop closed). Printed diagram of circles and arrows, no words. Pen hand and resting hands correct. Black Mountain Tower visible through the window (Canberra landmark, no text). PASS.
+
+ai-agents-orders.webp (1200x800 (replaces ai-agents-warehouse.webp, which repeated the warehouse-with-tablet scene on /au/ai-seo and /au/ai-development)), section: "A worked example: the order inbox in an online store"
+Prompt: "Back office of a small Melbourne online homewares store. Over-the-shoulder camera view from behind a customer-service team member, a young man with short dark hair in a green t-shirt, seated at a desk. The monitor faces him and the camera from behind his shoulder and shows a simple inbox layout of stacked coloured rows, a few marked with small green dots, no words and no numbers. Behind the desk, timber shelves hold neatly stacked brown cardboard parcels and folded linen. A roll of orange packing tape on the desk. Bright natural daylight from a high window." + style suffix
+Review: Monitor faces him, camera over his shoulder; coloured inbox rows with green dots, no text. Mouse hand correct. Parcels unlabelled. PASS.
+
+Removed: ai-agents-tradie.webp, ai-agents-warehouse.webp (no longer referenced).
+
+------------------------------------------------------------
+PREVIOUS SET (2026-09-25 build, openai:gpt-image@2), kept for history:
+
 Images for /au/ai-agents, generated 2026-09-25
 Model: openai:gpt-image@2 (GPT Image 2) via Runware API, 1536x1024 PNG, resized/cropped with ImageMagick (-strip), converted with cwebp -q 82.
 All four source images reviewed at full size plus zoomed crops (hands, faces, on-screen content, screen geometry, logos, stray text). First attempt accepted for all four; none rejected.

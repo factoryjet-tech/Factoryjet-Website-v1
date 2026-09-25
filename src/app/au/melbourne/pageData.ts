@@ -17,12 +17,12 @@ export interface Citation {
   source: string;
   title: string;
   url: string;
-  /** What this source actually says. Fetch-verified 2026-08-25, all HTTP 200. */
+  /** What this source actually says. Fetch-verified 2026-08-25 and re-verified 2026-09-25, all HTTP 200. */
   claim: string;
 }
 
 /**
- * External citations, every URL fetched with curl on 2026-08-25 and the claim text read
+ * External citations, every URL fetched with curl on 2026-08-25 (re-fetched 2026-09-25) and the claim text read
  * out of the response body. business.gov.au and the ACCC guidance pages were considered
  * and rejected: both return 200 but render body copy with JavaScript, so nothing in them
  * can be verified from the fetched HTML.

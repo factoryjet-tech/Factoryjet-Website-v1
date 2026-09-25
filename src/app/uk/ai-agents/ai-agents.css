@@ -444,7 +444,7 @@
 
   .uk-aiagents .col-3 {grid-template-columns:1fr!important}
 
-  .uk-aiagents nav {display:none}
+  .uk-aiagents .faq-sidebar-nav, .uk-aiagents .faq-sidebar-topics {display:none}
 
   .uk-aiagents .hdr-in {padding:0 16px}
 

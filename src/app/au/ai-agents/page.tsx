@@ -21,7 +21,7 @@ const T = {
   ink: '#0F0F12',
   n200: '#E5E5E0',
   n400: '#6E6E68',
-  orange: '#FF5C00',
+  orange: '#F05A28',
   green: '#047857',
   small: '#B23E13',
   fm: "'Geist Mono',monospace",
@@ -274,7 +274,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     locale: 'en_AU',
     type: 'website',
-    images: [{ url: '/images/au/ai-agents/ai-agents-og.webp', width: 1200, height: 630, alt: 'AI automation agency Australia: an operations manager in a Sydney office reviewing an AI agent workflow with a FactoryJet engineer' }],
+    images: [{ url: '/images/au/ai-agents/ai-agents-og.webp', width: 1200, height: 630, alt: 'AI automation agency Australia: a Sydney business owner approving the next step of an AI agent workflow on his laptop' }],
   },
   robots: { index: true, follow: true },
 };
@@ -296,7 +296,7 @@ export default function AiAgentsAUPage() {
         <Breadcrumbs items={crumbs} />
 
         {/* ═══ 1. HERO ═══ */}
-        <section className="sec-lg dot-grid" style={{ position: 'relative' }}>
+        <section className="sec-lg dot-grid" style={{ position: 'relative', paddingTop: 36 }}>
           <div className="wrap">
             <div className="col-6040">
               <div>
@@ -305,7 +305,7 @@ export default function AiAgentsAUPage() {
                   <span className="chip">AI Agent Development</span>
                   <span className="chip">Human Approval Built In</span>
                 </div>
-                <h1>{H1}</h1>
+                <h1 style={{ fontSize: 'clamp(2.1rem, 3.9vw, 3.05rem)' }}>{H1}</h1>
                 <p className="lead mt-6" style={{ maxWidth: 560 }}>
                   FactoryJet is an AI automation agency for Australian businesses. We design, build and support custom
                   AI agents that work inside Xero, MYOB, HubSpot, Salesforce, ServiceM8, Shopify, Microsoft 365 and
@@ -324,7 +324,7 @@ export default function AiAgentsAUPage() {
               </div>
 
               <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/ai-agents/ai-agents-hero.webp" width={1400} height={933} fetchPriority="high" decoding="async" alt="An operations manager in a bright Sydney office reviews an AI agent workflow on her monitor while a FactoryJet engineer points to the approval step" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+                <img src="/images/au/ai-agents/ai-agents-hero.webp" width={1400} height={933} fetchPriority="high" decoding="async" alt="Over the shoulder of a Sydney business owner approving the next step of an AI agent workflow on his laptop while his operations manager looks on" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
                 <div style={{ padding: '14px 12px 8px' }}>
                   <span className="eyebrow">What every build includes</span>
                   <div className="scorecard-row">
@@ -407,7 +407,7 @@ export default function AiAgentsAUPage() {
                 agency, including us.
               </p>
             </div>
-            <ol className="stack mt-10" style={{ maxWidth: 900 }}>
+            <ol className="col-2 mt-10" style={{ gap: 16 }}>
               {[
                 { n: '01', t: 'Map how the work runs today', d: 'Before any AI, someone should draw your process as it really runs, with the people who do it. The best automation targets are usually a step where someone copies information between two screens, or answers the same question many times a week.' },
                 { n: '02', t: 'Tell you what not to automate', d: 'Some problems are a broken process or unfinished software setup, not an AI problem. An honest agency says so, even when it costs them a project.' },
@@ -419,7 +419,7 @@ export default function AiAgentsAUPage() {
                 { n: '08', t: 'Stay on after launch', d: 'Models, software and your business all change. Someone has to watch the logs, review the hand-offs, update the rules and fix breakages. The OAIC is clear that AI should not be a set-and-forget product.' },
               ].map((s) => (
                 <li key={s.n} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
-                  <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.orange, minWidth: 34 }}>{s.n}</span>
+                  <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.small, minWidth: 34 }}>{s.n}</span>
                   <div>
                     <h3 style={{ fontSize: 18 }}>{s.t}</h3>
                     <p className="mt-2" style={{ marginTop: 6 }}>{s.d}</p>
@@ -443,11 +443,11 @@ export default function AiAgentsAUPage() {
                 </p>
               </div>
               <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/ai-agents/ai-agents-tradie.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A Brisbane plumber beside his work van approves a job an AI agent booked into his schedule, checking it on his phone" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+                <img src="/images/au/ai-agents/ai-agents-property.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over the shoulder of a Perth property manager at the agency counter checking maintenance requests an AI agent has sorted, on a tablet" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
                 <div style={{ padding: '12px 10px 6px' }}>
                   <p style={{ fontSize: 14 }}>
-                    A tradie gets a booking request by email at 9pm. The agent checks the schedule in ServiceM8, drafts
-                    the job and a reply, and the tradie approves both from his phone in the morning.
+                    A tenant emails about a leaking tap at 9pm. The agent logs the request in the property system,
+                    suggests the right tradie and drafts the reply. The property manager approves both in the morning.
                   </p>
                 </div>
               </div>
@@ -487,7 +487,8 @@ export default function AiAgentsAUPage() {
         {/* ═══ 6. INTEGRATIONS ═══ */}
         <section className="sec-lg dot-grid">
           <div className="wrap">
-            <div style={{ maxWidth: 760 }}>
+            <div className="col-6040">
+              <div>
               <span className="eyebrow">Where our agents plug in</span>
               <h2>AI automation services built into Xero, MYOB, HubSpot, ServiceM8 and more</h2>
               <p className="lead mt-4">
@@ -495,6 +496,13 @@ export default function AiAgentsAUPage() {
                 team already opens every morning, using each platform’s official connections and a separate login with
                 only the access the job needs.
               </p>
+              </div>
+              <figure className="card" style={{ padding: 8, margin: 0 }}>
+                <img src="/images/au/ai-agents/ai-agents-integrations.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over the shoulder of an Adelaide bookkeeper comparing a paper supplier invoice with the draft bill an AI agent prepared on his second monitor" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+                <figcaption style={{ padding: '12px 10px 6px', fontSize: 14 }}>
+                  The agent reads the supplier invoice and prepares a draft bill in Xero or MYOB. The bookkeeper checks it against the paper and approves. Nothing posts on its own.
+                </figcaption>
+              </figure>
             </div>
             <ul className="col-4 mt-10" style={{ gap: 16 }}>
               {[
@@ -543,6 +551,13 @@ export default function AiAgentsAUPage() {
                   </p>
                 </div>
               </div>
+              <div className="stack">
+                <figure className="card" style={{ padding: 8, margin: 0 }}>
+                  <img src="/images/au/ai-agents/ai-agents-approval.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over the shoulder of a Melbourne operations lead approving an action an AI agent drafted, on her phone, with a coffee in her other hand" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+                  <figcaption style={{ padding: '12px 10px 6px', fontSize: 14 }}>
+                    Approval arrives where your team already is. One tap to approve, one to send it back with a note.
+                  </figcaption>
+                </figure>
               <div className="card card-top-orange">
                 <span className="eyebrow">A typical approval split</span>
                 <div className="scorecard-row"><div><div className="scorecard-metric">Reading and sorting enquiries</div><div className="scorecard-note">labels, routing, summaries</div></div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Automatic</div></div>
@@ -550,6 +565,7 @@ export default function AiAgentsAUPage() {
                 <div className="scorecard-row"><div><div className="scorecard-metric">Sending to a customer</div><div className="scorecard-note">until trust is proven</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Approve</div></div>
                 <div className="scorecard-row"><div><div className="scorecard-metric">Money, refunds, pricing</div><div className="scorecard-note">payments, credits, discounts</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Always approve</div></div>
                 <div className="scorecard-row"><div><div className="scorecard-metric">Deleting data, clinical advice</div><div className="scorecard-note">outside the agent’s job</div></div><div className="scorecard-val" style={{ color: T.small, fontSize: 14 }}>Never</div></div>
+              </div>
               </div>
             </div>
           </div>
@@ -579,10 +595,10 @@ export default function AiAgentsAUPage() {
                 </div>
               </div>
               <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/ai-agents/ai-agents-workshop.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A FactoryJet engineer draws a clinic’s booking process as a simple flowchart on a whiteboard while the clinic owner and her practice manager watch" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+                <img src="/images/au/ai-agents/ai-agents-workshop.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A FactoryJet engineer and a Brisbane physiotherapy clinic owner map her booking process with sticky notes and arrows on a large sheet of paper" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
                 <div style={{ padding: '14px 12px 8px' }}>
                   <p style={{ fontSize: 14 }}>
-                    Step one is always a whiteboard, not code. We draw the process with the people who do it, and the
+                    Step one is always paper, not code. We lay out the process with the people who do it, and the
                     right first agent usually becomes obvious within the hour.
                   </p>
                 </div>
@@ -720,6 +736,13 @@ export default function AiAgentsAUPage() {
                   <a href={SRC_OAIC_APP1} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>OAIC, APP guidelines chapter 1</a>.
                 </p>
               </div>
+              <div className="stack">
+                <figure className="card" style={{ padding: 8, margin: 0 }}>
+                  <img src="/images/au/ai-agents/ai-agents-privacy.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Two colleagues in a calm Canberra meeting room review a printed data flow diagram before any AI agent is built" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+                  <figcaption style={{ padding: '12px 10px 6px', fontSize: 14 }}>
+                    Privacy is planned on paper first: which information the agent sees, where it goes, and who can check it.
+                  </figcaption>
+                </figure>
               <div className="card card-top-orange">
                 <span className="eyebrow">What that means in each build</span>
                 <div className="scorecard-row"><div><div className="scorecard-metric">Only the fields it needs</div><div className="scorecard-note">names and details masked where possible</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>APP 6</div></div>
@@ -727,6 +750,7 @@ export default function AiAgentsAUPage() {
                 <div className="scorecard-row"><div><div className="scorecard-metric">Chatbots say they are AI</div><div className="scorecard-note">clear to every customer</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>OAIC</div></div>
                 <div className="scorecard-row"><div><div className="scorecard-metric">Record of what each agent decides</div><div className="scorecard-note">ready for your privacy policy</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>APP 1</div></div>
                 <div className="scorecard-row"><div><div className="scorecard-metric">Where data is stored and processed</div><div className="scorecard-note">Australian regions where available</div></div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Disclosed</div></div>
+              </div>
               </div>
             </div>
             <ul className="col-3 mt-10">
@@ -846,9 +870,9 @@ export default function AiAgentsAUPage() {
         {/* ═══ 14. WAREHOUSE / OPERATIONS STORY ═══ */}
         <section className="sec-lg dot-grid">
           <div className="wrap">
-            <div className="col-6040">
+            <div className="col-4060">
               <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/ai-agents/ai-agents-warehouse.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A warehouse coordinator in a bright Melbourne ecommerce warehouse checks the day’s exceptions an AI agent flagged, on a tablet" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+                <img src="/images/au/ai-agents/ai-agents-orders.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over the shoulder of a customer service team member in a Melbourne online store’s back office, working through an order inbox an AI agent has already sorted" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
               </div>
               <div>
                 <span className="eyebrow">What good looks like</span>
@@ -891,10 +915,10 @@ export default function AiAgentsAUPage() {
                 company says on its own website. Talk to two or three and pick the fit.
               </p>
             </div>
-            <ul className="stack mt-10" style={{ maxWidth: 900 }}>
+            <ul className="col-2 mt-10" style={{ gap: 16 }}>
               {AGENCIES.map((a, i) => (
                 <li key={a.name} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
-                  <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.orange, minWidth: 30 }}>{i + 1}</span>
+                  <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.small, minWidth: 30 }}>{i + 1}</span>
                   <div>
                     <h3 style={{ fontSize: 18 }}>{a.name}{a.name === 'FactoryJet' && <span style={{ fontFamily: T.fm, fontSize: 10, background: T.small, color: '#fff', borderRadius: 999, padding: '2px 8px', marginLeft: 8, verticalAlign: 'middle' }}>That is us</span>}</h3>
                     <p className="mt-2" style={{ marginTop: 6 }}>{a.note}</p>
@@ -936,7 +960,8 @@ export default function AiAgentsAUPage() {
         {/* ═══ 17. FAQ (canonical Linear Minimal) ═══ */}
         <section className="sec-lg" id="faq">
           <div className="wrap">
-            <div style={{ textAlign: 'center' }}>
+            <style>{'.au-svc .faq-item summary::after{content:none;display:none}'}</style>
+            <div style={{ maxWidth: 760 }}>
               <span className="eyebrow">FAQ</span>
               <h2>AI agents and automation: questions Australian business owners ask</h2>
             </div>
@@ -1002,7 +1027,7 @@ export default function AiAgentsAUPage() {
       </main>
       </div>
 
-      <SiteFooter linkColumns={AU_FOOTER_COLUMNS} variant="dark" tagline="Ecommerce, AI agents, websites and AI search for Australian businesses. Built by senior engineers, supported after launch, owned by you." />
+      <SiteFooter locale="au" linkColumns={AU_FOOTER_COLUMNS} variant="dark" tagline="Ecommerce, AI agents, websites and AI search for Australian businesses. Built by senior engineers, supported after launch, owned by you." />
     </>
   );
 }

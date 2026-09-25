@@ -86,19 +86,19 @@ const HeroInlineForm: React.FC<HeroInlineFormProps> = ({ source = 'us_hero_inlin
           <input
             aria-label="Your name" type="text" autoComplete="name" placeholder="Your name"
             value={name} onChange={(e) => setName(e.target.value)}
-            className="min-w-0 flex-1 rounded-xl px-3.5 font-fj-body text-[15px] outline-none"
+            className="min-w-0 w-full sm:w-auto sm:flex-1 rounded-xl px-3.5 font-fj-body text-[15px] outline-none"
             style={inputStyle}
           />
           <input
             aria-label="Work email" type="email" autoComplete="email" placeholder="Work email"
             value={email} onChange={(e) => setEmail(e.target.value)}
-            className="min-w-0 flex-1 rounded-xl px-3.5 font-fj-body text-[15px] outline-none"
+            className="min-w-0 w-full sm:w-auto sm:flex-1 rounded-xl px-3.5 font-fj-body text-[15px] outline-none"
             style={inputStyle}
           />
           <button
             type="submit" disabled={isSubmitting}
             className="inline-flex items-center justify-center gap-2 rounded-xl px-5 font-fj-display text-[15px] font-semibold text-white"
-            style={{ height: 46, background: '#B23E13', boxShadow: '0 4px 16px rgba(178,62,19,0.32)', whiteSpace: 'nowrap', opacity: isSubmitting ? 0.7 : 1 }}
+            style={{ height: 46, background: '#B23E13', boxShadow: '0 1px 2px rgba(15,15,18,0.14)', whiteSpace: 'nowrap', opacity: isSubmitting ? 0.7 : 1 }}
           >
             {isSubmitting ? 'Sending…' : submitLabel}
             {!isSubmitting && (

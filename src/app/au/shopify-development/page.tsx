@@ -245,19 +245,38 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     locale: 'en_AU',
     type: 'website',
-    images: [{ url: '/images/au/shopify-development/shopify-development-og.webp', width: 1200, height: 630, alt: 'Shopify agency Australia: a FactoryJet Shopify developer reviewing a new store with a brand owner in Sydney' }],
+    images: [{ url: '/images/au/shopify-development/shopify-development-og.webp', width: 1200, height: 630, alt: 'Shopify agency Australia: a Shopify developer and a skincare brand founder reviewing her new store in a Melbourne warehouse studio' }],
   },
   robots: { index: true, follow: true },
 };
 
+/* Page-scoped fixes from the 2026-09-25 visual QA pass. Rendered only on this
+   page, so the shared au-service.css is untouched:
+   1. FAQ rows showed two open/close icons (the chevron AND the generic "+"
+      that au-service.css adds to every summary). Keep the chevron only.
+   2. au-service.css hides every <nav> inside .au-svc below 768px, which also
+      hid the breadcrumb trail on phones. Bring the trail back.
+   3. Comparison tables: give them a minimum width and let them scroll
+      sideways on phones. The agency table was clipped by overflow:hidden,
+      so the in-house column was cut off with no way to reach it. */
+const PAGE_CSS = `
+.au-svc details.faq-item summary::after,.au-svc details.faq-item[open] summary::after{content:none}
+.au-svc .cmp-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.au-svc .cmp-scroll .cmp-table{min-width:680px}
+.au-svc .tbl-hint{display:none;font-family:'Geist Mono',monospace;font-size:11px;color:#6E6E68;margin-top:10px}
+@media(max-width:768px){.au-svc nav[aria-label="Breadcrumb"]{display:block!important}.au-svc .tbl-hint{display:block}}
+`;
+
 const srcNote = { fontFamily: T.fm, fontSize: 11, color: T.n400, marginTop: 12 } as const;
 const srcLink = { textDecoration: 'underline' } as const;
+const inLink = { color: T.small, textDecoration: 'underline' } as const;
 
 export default function ShopifyDevelopmentAUPage() {
   return (
     <>
       <script id="ld-au-shopify-development" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <style dangerouslySetInnerHTML={{ __html: PAGE_CSS }} />
 
       <SiteHeader locale="au" logoHref="/au" />
 
@@ -296,7 +315,7 @@ export default function ShopifyDevelopmentAUPage() {
               </div>
 
               <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/shopify-development/shopify-development-hero.webp" width={1400} height={933} fetchPriority="high" decoding="async" alt="A FactoryJet Shopify developer and an Australian skincare brand owner reviewing their new Shopify store on a laptop in a bright Sydney office" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+                <img src="/images/au/shopify-development/shopify-development-hero.webp" width={1400} height={933} fetchPriority="high" decoding="async" alt="Over-the-shoulder view of a Shopify developer building a skincare brand's new store while the founder, holding one of her amber bottles, points at a product tile on his laptop in their Melbourne warehouse studio" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
                 <div style={{ padding: '14px 12px 8px' }}>
                   <span className="eyebrow">What you get</span>
                   <div className="scorecard-row">
@@ -379,7 +398,7 @@ export default function ShopifyDevelopmentAUPage() {
                 7-day delivery store to a Shopify Plus project.
               </p>
             </div>
-            <ol className="stack mt-10" style={{ maxWidth: 900 }}>
+            <ol className="col-2 mt-10">
               {[
                 { n: '01', t: 'A discovery session before any design', d: 'We map your products, variants, stock locations, shipping zones and the systems you already run. Most Shopify problems are decided here, long before anyone opens a design tool.' },
                 { n: '02', t: 'A theme built or adapted for your catalogue', d: 'Either a proven theme adapted to your brand, or a custom theme built in Liquid. Collection pages, filters and product pages are shaped around how your customers actually shop.' },
@@ -416,7 +435,7 @@ export default function ShopifyDevelopmentAUPage() {
                 The difference is what Plus lets you change underneath. Here is the honest comparison.
               </p>
             </div>
-            <div className="card mt-8" style={{ padding: 0, overflow: 'hidden' }}>
+            <div className="card mt-8 cmp-scroll" style={{ padding: 0 }}>
               <table className="cmp-table">
                 <thead>
                   <tr>
@@ -439,6 +458,7 @@ export default function ShopifyDevelopmentAUPage() {
                 </tbody>
               </table>
             </div>
+            <p className="tbl-hint">Swipe sideways to see the Shopify Plus column →</p>
             <p style={srcNote}>
               Plus figures from <a href={SRC_PLUS_PLAN} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>Shopify Help Center, Shopify Plus plan</a>, checked 25 September 2026. For current plan fees, see <a href={SRC_PRICING} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>Shopify’s Australian pricing page</a>.
             </p>
@@ -540,7 +560,7 @@ export default function ShopifyDevelopmentAUPage() {
                     We rehearse the move on a copy of your store, fix what the rehearsal finds, then switch the domain
                     at a quiet time. For the first weeks after launch we watch Google Search Console every day. If your
                     move also involves a new platform decision, our{' '}
-                    <a href="/au/ecommerce-development">ecommerce development team in Australia</a> can compare Shopify
+                    <a href="/au/ecommerce-development" style={inLink}>ecommerce development team in Australia</a> can compare Shopify
                     with the alternatives first.
                   </p>
                 </div>
@@ -579,11 +599,12 @@ export default function ShopifyDevelopmentAUPage() {
                 </ul>
               </div>
               <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/shopify-development/shopify-development-integrations.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A Shopify developer mapping how an online store connects to accounting, stock and shipping on a whiteboard with two business owners in a bright Perth meeting room" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+                <img src="/images/au/shopify-development/shopify-development-integrations.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over-the-shoulder view of a Sydney online store's dispatch desk: an order dashboard on the laptop, a label printer feeding out a shipping label and a stack of courier satchels ready to go" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
                 <div style={{ padding: '14px 12px 8px' }}>
                   <p style={{ fontSize: 14 }}>
-                    Before we connect anything, we draw it. Which system owns stock? Where do prices come from? What
-                    happens to a refund? Ten minutes at a whiteboard saves weeks of fixing mismatched numbers.
+                    When the integrations are right, one order does everything: the label prints, stock drops, the
+                    invoice lands in Xero or MYOB and the customer gets a tracking email. Before we connect anything we
+                    agree which system owns stock, prices and refunds.
                   </p>
                 </div>
               </div>
@@ -594,7 +615,8 @@ export default function ShopifyDevelopmentAUPage() {
         {/* ═══ 9. B2B ═══ */}
         <section className="sec-lg">
           <div className="wrap">
-            <div style={{ maxWidth: 780 }}>
+            <div className="col-6040">
+            <div>
               <span className="eyebrow">B2B on Shopify</span>
               <h2>Wholesale and trade ordering on Shopify, done properly</h2>
               <div className="stack mt-6">
@@ -611,6 +633,16 @@ export default function ShopifyDevelopmentAUPage() {
                   the same books.
                 </p>
               </div>
+            </div>
+            <div className="card" style={{ padding: 8 }}>
+              <img src="/images/au/shopify-development/shopify-development-b2b.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over-the-shoulder view of a Brisbane homewares boutique owner reordering ceramic vases from a wholesale supplier's trade store on a tablet at her shop counter" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+              <div style={{ padding: '14px 12px 8px' }}>
+                <p style={{ fontSize: 14 }}>
+                  This is what B2B looks like from the stockist&apos;s side: her own prices, her usual products, and a
+                  reorder in a couple of taps instead of an email and a spreadsheet.
+                </p>
+              </div>
+            </div>
             </div>
             <ul className="col-3 mt-10">
               <li className="card"><h3>Trade-only pricing</h3><p className="mt-4">Wholesale prices shown only to logged-in trade buyers, with quantity breaks and minimum order rules.</p></li>
@@ -641,12 +673,12 @@ export default function ShopifyDevelopmentAUPage() {
                   </p>
                   <p>
                     For ongoing work, including content, collection page copy and visibility in AI answers from ChatGPT,
-                    Perplexity and Google, see our <a href="/au/ai-seo">AI SEO service for Australian businesses</a>.
+                    Perplexity and Google, see our <a href="/au/ai-seo" style={inLink}>AI SEO service for Australian businesses</a>.
                   </p>
                 </div>
               </div>
               <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/shopify-development/shopify-development-build.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A Shopify developer in a Melbourne office checking a mobile product page layout while a colleague points at the product grid on her monitor" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+                <img src="/images/au/shopify-development/shopify-development-build.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over-the-shoulder view of a Shopify developer in a Melbourne office checking a product page on her phone against the desktop version on her laptop" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
                 <div style={{ padding: '14px 12px 8px' }}>
                   <p style={{ fontSize: 14 }}>
                     We review every template on mobile first. Most Australian shoppers browse on their phones, and a
@@ -667,7 +699,7 @@ export default function ShopifyDevelopmentAUPage() {
               All three are sensible choices for someone. The right one depends on how much you are building and how
               much you need to change after launch.
             </p>
-            <div className="card mt-8" style={{ padding: 0, overflow: 'hidden' }}>
+            <div className="card mt-8 cmp-scroll" style={{ padding: 0 }}>
               <table className="cmp-table">
                 <thead>
                   <tr>
@@ -688,12 +720,14 @@ export default function ShopifyDevelopmentAUPage() {
                 </tbody>
               </table>
             </div>
+            <p className="tbl-hint">Swipe sideways to see every column →</p>
 
             {/* "Which option fits you" checklist */}
-            <div className="mt-10" style={{ maxWidth: 900 }}>
+            <div className="mt-10">
               <h3>Which option fits you?</h3>
-              <div className="mt-4">
-                <details>
+              <p className="mt-2" style={{ fontSize: 14.5 }}>Tick through each list. Tap a heading to fold it away.</p>
+              <div className="col-3 mt-6">
+                <details open className="card" style={{ padding: '4px 22px 8px' }}>
                   <summary>Pick a freelance Shopify developer if…</summary>
                   <ul className="scope-list yes-list" style={{ padding: '0 0 18px' }}>
                     <li>Your store already works and you need a new section, a fix or a small tweak.</li>
@@ -701,7 +735,7 @@ export default function ShopifyDevelopmentAUPage() {
                     <li>No accounting, shipping or ERP connection is involved.</li>
                   </ul>
                 </details>
-                <details>
+                <details open className="card card-top-orange" style={{ padding: '4px 22px 8px' }}>
                   <summary>Pick a Shopify agency like us if…</summary>
                   <ul className="scope-list yes-list" style={{ padding: '0 0 18px' }}>
                     <li>You are launching a new store, redesigning, or moving to Shopify from another platform.</li>
@@ -710,7 +744,7 @@ export default function ShopifyDevelopmentAUPage() {
                     <li>You want one accountable team before and after launch.</li>
                   </ul>
                 </details>
-                <details>
+                <details open className="card" style={{ padding: '4px 22px 8px' }}>
                   <summary>Hire in-house if…</summary>
                   <ul className="scope-list yes-list" style={{ padding: '0 0 18px' }}>
                     <li>You ship changes to the store every week and have a roadmap for years.</li>
@@ -791,11 +825,11 @@ export default function ShopifyDevelopmentAUPage() {
                 </p>
               </div>
               <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/shopify-development/shopify-development-warehouse.webp" width={1200} height={800} loading="lazy" decoding="async" alt="An Australian online store owner packing an order into a plain cardboard box in a bright Brisbane warehouse, with a barcode scanner and satchels on the bench" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+                <img src="/images/au/shopify-development/shopify-development-warehouse.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A team member at a Sydney online fashion store inspecting a returned pair of white sneakers at the returns bench before processing the refund" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
                 <div style={{ padding: '14px 12px 8px' }}>
                   <p style={{ fontSize: 14 }}>
-                    A store is only as good as the order that arrives at the packing bench. We test shipping rules to
-                    metro and regional postcodes before launch, not after the first complaint.
+                    Returns are where the consumer guarantees get real. We build a clear refund and replacement
+                    process into the store, so your team and your customers both know the steps.
                   </p>
                 </div>
               </div>
@@ -835,13 +869,25 @@ export default function ShopifyDevelopmentAUPage() {
                   <a className="city-pill" href="/au">FactoryJet Australia</a>
                   <a className="city-pill" href="/au/melbourne">Melbourne</a>
                   <a className="city-pill" href="/au/brisbane">Brisbane</a>
+                  <a className="city-pill" href="/au/adelaide">Adelaide</a>
+                  <a className="city-pill" href="/au/canberra">Canberra</a>
                   <a className="city-pill" href="/au/seo">SEO Australia</a>
                   <a className="city-pill" href="/contact">Contact us</a>
                 </div>
               </div>
 
+              <div className="stack">
+              <div className="card" style={{ padding: 8 }}>
+                <img src="/images/au/shopify-development/shopify-development-dispatch.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A Perth online store team member handing a stack of courier satchels to a driver loading a white van outside their warehouse on a sunny morning" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+                <div style={{ padding: '14px 12px 8px' }}>
+                  <p style={{ fontSize: 14 }}>
+                    From Perth, most customers are a long way east. Shipping rules and courier cut-offs get set up
+                    for where your orders actually go.
+                  </p>
+                </div>
+              </div>
               <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: `1px solid ${T.n200}`, padding: '14px 18px' }}>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, justifyContent: 'space-between', alignItems: 'center', borderBottom: `1px solid ${T.n200}`, padding: '14px 18px' }}>
                   <span style={{ fontFamily: T.fm, fontSize: 10, letterSpacing: '.13em', textTransform: 'uppercase', color: T.n400 }}>Australia · Monthly Search Demand</span>
                   <span style={{ background: T.small, color: '#fff', fontFamily: T.fm, fontSize: 10, borderRadius: 999, padding: '3px 9px' }}>DataForSEO</span>
                 </div>
@@ -867,6 +913,7 @@ export default function ShopifyDevelopmentAUPage() {
                   <p style={{ textAlign: 'center', fontFamily: T.fm, fontSize: 10, color: T.n400, marginTop: 10 }}>Source: DataForSEO, Australia, September 2026</p>
                 </div>
               </div>
+              </div>
             </div>
           </div>
         </section>
@@ -883,9 +930,9 @@ export default function ShopifyDevelopmentAUPage() {
                 them. Check any claim in Shopify’s own Partner Directory, talk to two or three, and pick the fit.
               </p>
             </div>
-            <ul className="stack mt-10" style={{ maxWidth: 900 }}>
+            <ul className="col-2 mt-10">
               {SHOPIFY_AGENCIES.map((a, i) => (
-                <li key={a.name} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
+                <li key={a.name} className={a.name === 'FactoryJet' ? 'card card-top-orange' : 'card'} style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
                   <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.orange, minWidth: 30 }}>{i + 1}</span>
                   <div>
                     <h3 style={{ fontSize: 18 }}>{a.name}{a.name === 'FactoryJet' && <span style={{ fontFamily: T.fm, fontSize: 10, background: T.small, color: '#fff', borderRadius: 999, padding: '2px 8px', marginLeft: 8, verticalAlign: 'middle' }}>That is us</span>}</h3>
@@ -935,9 +982,12 @@ export default function ShopifyDevelopmentAUPage() {
               <h2>Beyond the Shopify build</h2>
             </div>
             <ul className="col-3 mt-10">
-              <li><a className="svc-card" href="/au/ecommerce-development" style={{ display: 'block', height: '100%' }}><h3>Ecommerce development Australia</h3><p className="mt-4">Not sure Shopify is the right platform? We compare it with the alternatives for your catalogue and systems.</p></a></li>
-              <li><a className="svc-card" href="/au/ai-agents" style={{ display: 'block', height: '100%' }}><h3>AI agents for Australian businesses</h3><p className="mt-4">AI agents that answer order questions, handle returns and update records across Shopify and your other systems.</p></a></li>
-              <li><a className="svc-card" href="/au/ai-seo" style={{ display: 'block', height: '100%' }}><h3>AI SEO Australia</h3><p className="mt-4">Ongoing Shopify SEO plus visibility in ChatGPT, Perplexity and Google AI answers.</p></a></li>
+              <li><a className="svc-card" href="/au/ecommerce-development" style={{ display: 'block', height: '100%' }}><h3>Ecommerce development Australia</h3><p className="mt-4">Not sure Shopify is the right platform? We compare it with the alternatives for your catalogue and systems.</p><span className="eyebrow mt-4">Explore ecommerce →</span></a></li>
+              <li><a className="svc-card" href="/au/ai-agents" style={{ display: 'block', height: '100%' }}><h3>AI agents for Australian businesses</h3><p className="mt-4">AI agents that answer order questions, handle returns and update records across Shopify and your other systems.</p><span className="eyebrow mt-4">Explore AI agents →</span></a></li>
+              <li><a className="svc-card" href="/au/ai-seo" style={{ display: 'block', height: '100%' }}><h3>AI SEO Australia</h3><p className="mt-4">Ongoing Shopify SEO plus visibility in ChatGPT, Perplexity and Google AI answers.</p><span className="eyebrow mt-4">Explore AI SEO →</span></a></li>
+              <li><a className="svc-card" href="/au/seo" style={{ display: 'block', height: '100%' }}><h3>SEO services Australia</h3><p className="mt-4">Technical SEO, collection page content and local search for stores that need more organic traffic.</p><span className="eyebrow mt-4">Explore SEO →</span></a></li>
+              <li><a className="svc-card" href="/au/ai-development" style={{ display: 'block', height: '100%' }}><h3>AI development</h3><p className="mt-4">AI built into your store and back office, from product data clean-up to order and returns handling.</p><span className="eyebrow mt-4">Explore AI development →</span></a></li>
+              <li><a className="svc-card" href="/au" style={{ display: 'block', height: '100%' }}><h3>FactoryJet Australia</h3><p className="mt-4">Everything we do for Australian businesses: ecommerce, AI agents, websites and AI search.</p><span className="eyebrow mt-4">Visit the Australia hub →</span></a></li>
             </ul>
           </div>
         </section>
@@ -949,6 +999,14 @@ export default function ShopifyDevelopmentAUPage() {
               <span className="eyebrow">FAQ</span>
               <h2>Shopify agency and Shopify developer questions Australians ask</h2>
             </div>
+            <nav className="faq-pill-nav" aria-label="FAQ categories">
+              {FAQ_CATEGORIES.map((c) => (
+                <a key={c.key} href={`#faq-${c.key}`}>
+                  {c.label}{' '}
+                  <span className="pill-count">{FAQ_ITEMS.filter((f) => f.category === c.key).length}</span>
+                </a>
+              ))}
+            </nav>
             <div className="faq-grid">
               <aside className="faq-sidebar">
                 <span className="faq-sidebar-topics">Topics</span>
@@ -1016,7 +1074,7 @@ export default function ShopifyDevelopmentAUPage() {
       </main>
       </div>
 
-      <SiteFooter linkColumns={AU_FOOTER_COLUMNS} variant="dark" tagline="Ecommerce, AI agents, websites and AI search for Australian businesses. Built by senior engineers, supported after launch, owned by you." />
+      <SiteFooter locale="au" linkColumns={AU_FOOTER_COLUMNS} variant="dark" tagline="Ecommerce, AI agents, websites and AI search for Australian businesses. Built by senior engineers, supported after launch, owned by you." />
     </>
   );
 }

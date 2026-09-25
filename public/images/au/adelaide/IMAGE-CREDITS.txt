@@ -1,0 +1,31 @@
+Images for /au/adelaide, generated 2026-09-25
+Model: openai:gpt-image@2.5-flare via Runware API, 1536x1024 PNG, resized/cropped with ImageMagick (-strip), converted with cwebp -q 82.
+Hero 1400x933, og 1200x630 (centre crop of the hero source), in-body images 1200x800.
+Every image reviewed at full size (hands, faces, screen geometry, text, logos, scene match); first attempt accepted for all six, none rejected.
+
+Shared style suffix:
+"Bright high-key commercial photography in Australia, natural Australian daylight, clean light surroundings, crisp sharp focus, airy calm confident mood, accurate natural skin tones, hands anatomically correct with exactly five natural fingers in relaxed poses, one warm orange object in frame as the only strong colour accent. No logos, no brand names, no readable text or numbers anywhere, including on screens, signs and packaging. Photorealistic, professional colour grading, no illustration."
+
+adelaide-hero.webp and adelaide-og.webp
+Prompt: "Over-the-shoulder camera view from behind and slightly to the side of a South Australian small business owner, a woman in her late thirties with dark curly hair and a cream linen blouse, seated at a timber table in a bright first-floor studio in Adelaide's East End. She faces an open laptop whose screen faces her and the camera from behind her shoulder, showing a clean website layout of soft coloured blocks and image placeholders with no words and no numbers. A male web designer in his thirties sits beside her, pointing at the screen with a relaxed open hand. Through the tall window behind them: a leafy Adelaide street of nineteenth-century sandstone and bluestone shopfronts with verandahs, and the low blue line of the Adelaide Hills in the distance. An orange ceramic mug on the table." + style suffix
+Review: Screen faces the seated owner, camera over her shoulder; designer beside her, pointing hand five fingers. Screen shows colour blocks and photo tiles only. Window view: sandstone and bluestone shopfronts with verandahs and the Adelaide Hills. No logos or text.
+
+adelaide-manufacturing.webp
+Prompt: "Inside a clean, bright advanced manufacturing workshop in Adelaide's northern suburbs, with a large CNC machine, neatly racked aluminium components and high skylights. Over-the-shoulder camera view from behind a production engineer in his forties wearing a navy work shirt and safety glasses pushed up on his head, holding a tablet at chest height; the tablet screen faces him and the camera from behind, showing a simple product specification page layout of grey blocks and a photo of a machined part, no words and no numbers. A colleague in the background inspects a part at a bench. One orange safety helmet on a shelf." + style suffix
+Review: Tablet faces the engineer (over-the-shoulder); shows grey blocks and a machined part, no words or numbers. Both hands correct. CNC control panel has tiny unreadable buttons only. No brand marks.
+
+adelaide-cellar-door.webp
+Prompt: "A family-run cellar door in the Barossa Valley, South Australia, on a sunny late-morning. A winemaker in her fifties with silver-streaked hair and a denim shirt arranges three unlabelled wine bottles and glasses on a rustic stone-and-timber counter while a younger man photographs them with a camera for their website. Through the open doors behind: rows of green grapevines rolling over gentle hills, a gum tree and blue sky. An orange enamel jug on the counter. Bottles have plain blank labels." + style suffix
+Review: Barossa-style vineyard hills and gum tree. Bottles have blank labels. Winemaker hands on bottles correct; photographer hands on camera correct. Camera has no visible brand. Orange enamel jug is the accent.
+
+adelaide-tradie.webp
+Prompt: "An Australian electrician in his thirties in a grey work shirt with orange high-visibility stripes stands beside a plain white work van parked on a leafy Unley street in Adelaide, lined with single-storey bluestone villas with red-painted iron roofs and bullnose verandahs. He looks down at a smartphone held in one hand, the phone screen facing him and not visible to the camera, with a small satisfied smile. Jacaranda and plane trees, clear blue sky, morning light. No writing on the van." + style suffix
+Review: Unley-style bluestone villas with bullnose verandahs, jacaranda and plane trees. Phone screen faces him, not visible to camera. Hand on phone five fingers, other hand in pocket. No writing on van or shirt.
+
+adelaide-workshop.webp
+Prompt: "A website planning workshop in a bright Norwood office in Adelaide with an exposed sandstone wall and large windows. A web strategist in her thirties stands at a whiteboard arranging blank coloured sticky notes into a simple site map tree of empty boxes joined by lines, no writing on anything. Two business owners, a man in his sixties with a grey beard and a woman in her forties, sit at a white table watching and nodding, with a closed laptop and paper notebooks. The strategist holds an orange marker pen." + style suffix
+Review: Sandstone wall, whiteboard with blank sticky notes in a site-map tree, no writing. Laptop closed. All hands correct. Church spire and city through window, no signage.
+
+adelaide-glenelg.webp
+Prompt: "A small independent café on Jetty Road in Glenelg, Adelaide, on a bright morning, with the beach and the long timber jetty visible at the end of the street. Over-the-shoulder camera view from behind the café owner, a man in his forties in a dark apron, standing at his counter holding a smartphone; the phone screen faces him and the camera from behind, showing a simple map with a few pins and star shapes, no words and no numbers. Pastries under a glass dome, a coffee machine, and an orange paper coffee cup on the counter." + style suffix
+Review: Jetty Road style street leading to the beach and the Glenelg jetty. Phone faces the owner (over-the-shoulder), shows a map with pins and stars, no words or numbers. Hand correct. Orange cup has no print.

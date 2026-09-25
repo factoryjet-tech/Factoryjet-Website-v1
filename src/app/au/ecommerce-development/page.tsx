@@ -21,7 +21,6 @@ const T = {
   ink: '#0F0F12',
   n200: '#E5E5E0',
   n400: '#6E6E68',
-  orange: '#FF5C00',
   green: '#047857',
   small: '#B23E13',
   fm: "'Geist Mono',monospace",
@@ -63,7 +62,7 @@ const SRC_ACCC_REVIEWS =
   'https://www.accc.gov.au/business/advertising-and-promotions/online-reviews-for-product-and-services';
 // business.gov.au: "All businesses selling goods and services in Australia
 // must comply with the ACL. This includes businesses that are overseas";
-// receipts for goods or services over $75; no store policy overriding
+// receipts above a set value; no store policy overriding
 // consumer guarantees. fetch-verified 2026-09-25
 const SRC_BGA_ACL = 'https://business.gov.au/legal/fair-trading/australian-consumer-law-and-your-business';
 // business.gov.au Ecommerce (selling online): terms clear and easy to find,
@@ -359,6 +358,7 @@ export const metadata: Metadata = {
 const srcNote = { fontFamily: T.fm, fontSize: 11, color: T.n400, marginTop: 12 } as const;
 const srcLink = { textDecoration: 'underline' } as const;
 const tableCard = { padding: 0, overflowX: 'auto' } as const;
+const tableMin = (w: number) => ({ minWidth: w }) as const;
 
 export default function EcommerceDevelopmentAUPage() {
   return (
@@ -460,11 +460,62 @@ export default function EcommerceDevelopmentAUPage() {
                 { v: '2,000+', t: 'retail websites checked by the ACCC for misleading return policies', s: 'ACCC, February 2025', u: SRC_ACCC_SWEEP },
               ].map((r) => (
                 <li key={r.t}>
-                  <div style={{ fontFamily: T.fd, fontWeight: 800, fontSize: 26, color: T.orange }}>{r.v}</div>
+                  <div style={{ fontFamily: T.fd, fontWeight: 800, fontSize: 26, color: T.small }}>{r.v}</div>
                   <p style={{ fontSize: 13.5, color: T.ink, marginTop: 4 }}>{r.t}</p>
                   <a href={r.u} target="_blank" rel="noopener noreferrer nofollow" style={{ fontFamily: T.fm, fontSize: 10, color: T.n400, textDecoration: 'underline' }}>{r.s}</a>
                 </li>
               ))}
+            </ul>
+          </div>
+        </section>
+
+        {/* ═══ 3b. HUB: the E-Commerce category's services (hover cards) ═══ */}
+        <section className="sec-lg">
+          <div className="wrap">
+            <div style={{ maxWidth: 760 }}>
+              <span className="eyebrow">Ecommerce services in Australia</span>
+              <h2>Everything we do for Australian online stores, in one place</h2>
+              <p className="lead mt-4">
+                This page is the overview. Two services have their own detailed pages: Shopify development, for brands
+                on Shopify or moving to it, and AI SEO, for stores that want to be named when shoppers ask ChatGPT or
+                Google for a recommendation. Pick the one that matches where you are, or read on for the full picture.
+              </p>
+            </div>
+            <ul className="mt-10" style={{ display: 'grid', gridTemplateColumns: '7fr 5fr', gap: 20 }}>
+              <li>
+                <a className="svc-card" href="/au/shopify-development" style={{ display: 'flex', flexDirection: 'column', height: '100%', color: 'inherit', textDecoration: 'none' }}>
+                  <span className="eyebrow">Most asked for</span>
+                  <h3 style={{ fontSize: 24 }}>Shopify development Australia</h3>
+                  <p className="mt-4">
+                    Custom Shopify and Shopify Plus themes, apps chosen with care, B2B wholesale on Shopify, and
+                    migrations from Maropost (Neto), WooCommerce or Magento without losing your Google rankings.
+                    Built by a registered Shopify Partner, connected to Xero or MYOB, Australia Post and Afterpay.
+                  </p>
+                  <ul className="scope-list mt-4" style={{ fontSize: 14 }}>
+                    <li>Theme builds and redesigns</li>
+                    <li>Shopify Plus and B2B</li>
+                    <li>Migrations to Shopify</li>
+                  </ul>
+                  <span style={{ marginTop: 'auto', paddingTop: 16, fontFamily: T.fm, fontSize: 12, color: T.small }}>See Shopify development in Australia →</span>
+                </a>
+              </li>
+              <li>
+                <a className="svc-card" href="/au/ai-seo" style={{ display: 'flex', flexDirection: 'column', height: '100%', color: 'inherit', textDecoration: 'none' }}>
+                  <span className="eyebrow">New way shoppers search</span>
+                  <h3 style={{ fontSize: 24 }}>AI SEO for online stores</h3>
+                  <p className="mt-4">
+                    Shoppers now ask ChatGPT, Perplexity and Google AI Overviews which brand to buy from. AI SEO works on
+                    getting your store and products named in those answers, with clean product data and pages AI tools
+                    can read and quote.
+                  </p>
+                  <span style={{ marginTop: 'auto', paddingTop: 16, fontFamily: T.fm, fontSize: 12, color: T.small }}>See AI SEO for Australian brands →</span>
+                </a>
+              </li>
+            </ul>
+            <ul className="col-3 mt-6">
+              <li><a className="svc-card" href="/au/seo" style={{ display: 'block', height: '100%', color: 'inherit', textDecoration: 'none' }}><h3 style={{ fontSize: 18 }}>Ecommerce SEO</h3><p className="mt-2" style={{ fontSize: 14 }}>Category and product pages that rank on Google, plus the technical fixes behind them.</p><span style={{ fontFamily: T.fm, fontSize: 12, color: T.small }}>SEO Australia →</span></a></li>
+              <li><a className="svc-card" href="/au/ai-agents" style={{ display: 'block', height: '100%', color: 'inherit', textDecoration: 'none' }}><h3 style={{ fontSize: 18 }}>AI agents for your store</h3><p className="mt-2" style={{ fontSize: 14 }}>Agents that answer order questions and keep listings and stock in step, with you approving the actions.</p><span style={{ fontFamily: T.fm, fontSize: 12, color: T.small }}>AI agents →</span></a></li>
+              <li><a className="svc-card" href="/commerceflo" style={{ display: 'block', height: '100%', color: 'inherit', textDecoration: 'none' }}><h3 style={{ fontSize: 18 }}>Commerceflo</h3><p className="mt-2" style={{ fontSize: 14 }}>Our own AI commerce operator for brands running DTC, B2B and marketplaces on one data model.</p><span style={{ fontFamily: T.fm, fontSize: 12, color: T.small }}>About Commerceflo →</span></a></li>
             </ul>
           </div>
         </section>
@@ -495,18 +546,18 @@ export default function EcommerceDevelopmentAUPage() {
                 </div>
               </div>
               <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/ecommerce-development/ecommerce-development-planning.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Two members of an ecommerce design team sketching store page wireframes on a whiteboard in a bright Sydney office" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+                <img src="/images/au/ecommerce-development/ecommerce-development-planning.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A designer in a Sydney studio sketching mobile product page wireframes in a paper sketchbook, seen over his shoulder, with a phone and closed laptop beside him" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
                 <div style={{ padding: '14px 12px 8px' }}>
                   <p style={{ fontSize: 14 }}>
-                    Structure before colour. We agree how a shopper moves from a search to a paid order as simple boxes
-                    on a board, then design the pages around that path.
+                    Structure before colour. We sketch how a shopper moves from a search to a paid order as simple
+                    boxes on a phone-sized page, then design around that path.
                   </p>
                 </div>
               </div>
             </div>
 
             <div className="card mt-12" style={tableCard}>
-              <table className="cmp-table">
+              <table className="cmp-table" style={tableMin(600)}>
                 <thead>
                   <tr><th>Type of ecommerce build</th><th className="fj">Typical timeline</th><th>What moves the date</th></tr>
                 </thead>
@@ -534,7 +585,7 @@ export default function EcommerceDevelopmentAUPage() {
               </p>
             </div>
             <div className="card mt-8" style={tableCard}>
-              <table className="cmp-table">
+              <table className="cmp-table" style={tableMin(820)}>
                 <thead>
                   <tr><th>Platform</th><th>Best fit</th><th>B2B</th><th>Who runs hosting</th><th>Watch out for</th></tr>
                 </thead>
@@ -585,7 +636,8 @@ export default function EcommerceDevelopmentAUPage() {
         {/* ═══ 6. ECOMMERCE WEBSITE DESIGN ═══ */}
         <section className="sec-lg dot-grid">
           <div className="wrap">
-            <div style={{ maxWidth: 780 }}>
+            <div className="col-6040">
+            <div>
               <span className="eyebrow">Ecommerce website design</span>
               <h2>Ecommerce web design that answers the buyer’s questions before they ask</h2>
               <div className="stack mt-6">
@@ -601,6 +653,16 @@ export default function EcommerceDevelopmentAUPage() {
                   Google’s measures of how quickly a page loads, how fast it responds and whether it jumps around while
                   loading. A slow store loses sales quietly, one abandoned cart at a time.
                 </p>
+              </div>
+            </div>
+              <div className="card" style={{ padding: 8 }}>
+                <img src="/images/au/ecommerce-development/ecommerce-development-mobile.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A shopper at a sunny Brisbane riverside cafe browsing a product page for a ceramic vase on her phone, seen over her shoulder" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+                <div style={{ padding: '14px 12px 8px' }}>
+                  <p style={{ fontSize: 14 }}>
+                    This is where the sale happens: one hand, a phone, a few spare minutes. Photo, options and the buy
+                    button all fit on the first screen.
+                  </p>
+                </div>
               </div>
             </div>
             <ul className="col-3 mt-10">
@@ -641,11 +703,11 @@ export default function EcommerceDevelopmentAUPage() {
                 </p>
               </div>
               <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/ecommerce-development/ecommerce-development-packing.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Two team members packing online orders into plain cardboard boxes at a bright fulfilment bench in a Sydney warehouse unit" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+                <img src="/images/au/ecommerce-development/ecommerce-development-packing.webp" width={1200} height={800} loading="lazy" decoding="async" alt="An operations manager at a Melbourne online homewares brand checking synced orders on her laptop, with a label printer and courier satchels ready beside her" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
                 <div style={{ padding: '14px 12px 8px' }}>
                   <p style={{ fontSize: 14 }}>
-                    When the store, stock and couriers are connected, the packing bench gets a clean list of orders
-                    with labels ready, instead of a stack of emails to retype.
+                    When the store, accounts, stock and couriers are connected, orders arrive already synced and the
+                    label prints itself, instead of a stack of emails to retype.
                   </p>
                 </div>
               </div>
@@ -664,7 +726,7 @@ export default function EcommerceDevelopmentAUPage() {
                   <p>
                     B2B ecommerce means selling to other businesses online. Your trade customers log in, see their own
                     prices, reorder in seconds and pay on account, and each order lands in your ERP without anyone
-                    typing it. Australian search demand for the phrase is small, but the need is not: plenty of
+                    typing it. B2B gets less attention than DTC, but the need is real: plenty of Australian
                     wholesalers still take orders by phone, email and PDF.
                   </p>
                   <p>
@@ -690,7 +752,7 @@ export default function EcommerceDevelopmentAUPage() {
               </div>
             </div>
             <div className="card mt-10" style={tableCard}>
-              <table className="cmp-table">
+              <table className="cmp-table" style={tableMin(560)}>
                 <thead><tr><th>Area</th><th>B2B (trade)</th><th>DTC (public)</th></tr></thead>
                 <tbody>
                   <tr><td className="feat">Who buys</td><td>Businesses, often several buyers per account</td><td>One person</td></tr>
@@ -738,10 +800,11 @@ export default function EcommerceDevelopmentAUPage() {
                 often lose search traffic. It is avoidable. This is the process we follow on every ecommerce migration.
               </p>
             </div>
-            <ol className="stack mt-10" style={{ maxWidth: 900 }}>
+            <div className="col-6040 mt-10">
+            <ol className="stack">
               {MIGRATION_STEPS.map((s) => (
                 <li key={s.n} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
-                  <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.orange, minWidth: 34 }}>{s.n}</span>
+                  <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.small, minWidth: 34 }}>{s.n}</span>
                   <div>
                     <h3 style={{ fontSize: 18 }}>{s.t}</h3>
                     <p style={{ marginTop: 6 }}>{s.d}</p>
@@ -749,6 +812,18 @@ export default function EcommerceDevelopmentAUPage() {
                 </li>
               ))}
             </ol>
+              <div>
+                <div className="card" style={{ padding: 8, position: 'sticky', top: 96 }}>
+                  <img src="/images/au/ecommerce-development/ecommerce-development-migration.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Two ecommerce engineers in a bright Adelaide office checking a redirect map on one monitor against the new store on another, with a phone on a stand for mobile testing" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+                  <div style={{ padding: '14px 12px 8px' }}>
+                    <p style={{ fontSize: 14 }}>
+                      Old addresses on the left, new store on the right. Every line on that map becomes one 301
+                      redirect, and each one is tested on the staging store before launch.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
             <p className="mt-8" style={{ maxWidth: 820 }}>
               For platform-specific moves, see our <a href="/replatforming" style={{ color: T.small, textDecoration: 'underline' }}>replatforming guides</a>{' '}
               and the <a href="/blog/magento-to-shopify-plus-migration-checklist-2026" style={{ color: T.small, textDecoration: 'underline' }}>Magento to Shopify Plus migration checklist</a>.
@@ -841,7 +916,7 @@ export default function EcommerceDevelopmentAUPage() {
 
             <h3 className="mt-12" style={{ fontSize: 22, maxWidth: 720 }}>Ecommerce agency vs freelancer vs in-house developer</h3>
             <div className="card mt-6" style={tableCard}>
-              <table className="cmp-table">
+              <table className="cmp-table" style={tableMin(680)}>
                 <thead>
                   <tr><th>What you get</th><th className="fj">FactoryJet</th><th>Solo freelancer</th><th>In-house developer</th></tr>
                 </thead>
@@ -919,34 +994,20 @@ export default function EcommerceDevelopmentAUPage() {
                   <a className="city-pill" href="/au">FactoryJet Australia</a>
                   <a className="city-pill" href="/au/melbourne">Melbourne</a>
                   <a className="city-pill" href="/au/brisbane">Brisbane</a>
+                  <a className="city-pill" href="/au/adelaide">Adelaide</a>
+                  <a className="city-pill" href="/au/canberra">Canberra</a>
                   <a className="city-pill" href="/au/seo">SEO Australia</a>
                 </div>
               </div>
 
-              <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: `1px solid ${T.n200}`, padding: '14px 18px' }}>
-                  <span style={{ fontFamily: T.fm, fontSize: 10, letterSpacing: '.13em', textTransform: 'uppercase', color: T.n400 }}>Australia · Monthly Search Demand</span>
-                  <span style={{ background: T.small, color: '#fff', fontFamily: T.fm, fontSize: 10, borderRadius: 999, padding: '3px 9px' }}>DataForSEO</span>
-                </div>
-                <div style={{ padding: '4px 18px 14px' }}>
-                  <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
-                    {[
-                      { kw: 'ecommerce website design', v: '590', w: '100%', kd: 'The head term cluster' },
-                      { kw: 'ecommerce website design / development sydney', v: '390', w: '66%', kd: 'City intent' },
-                      { kw: 'ecommerce website design / development melbourne', v: '390', w: '66%', kd: 'City intent' },
-                      { kw: 'ecommerce agency', v: '320', w: '54%', kd: 'Buyer intent' },
-                      { kw: 'ecommerce web development', v: '260', w: '44%', kd: 'Development intent' },
-                      { kw: 'ecommerce website design brisbane / perth', v: '260', w: '44%', kd: 'City intent' },
-                      { kw: 'ecommerce website design agency', v: '140', w: '24%', kd: 'Wants a team' },
-                    ].map((r) => (
-                      <li key={r.kw} className="demand-row">
-                        <div className="demand-top"><span className="demand-kw">{r.kw}</span><span className="demand-v">{r.v}<span style={{ fontSize: 9, color: T.n400 }}> searches</span></span></div>
-                        <div className="demand-bar"><i style={{ width: r.w }} /></div>
-                        <div className="demand-kd">{r.kd}</div>
-                      </li>
-                    ))}
-                  </ul>
-                  <p style={{ textAlign: 'center', fontFamily: T.fm, fontSize: 10, color: T.n400, marginTop: 10 }}>Source: DataForSEO, Australia, September 2026. Close variants grouped.</p>
+              <div className="card" style={{ padding: 8 }}>
+                <img src="/images/au/ecommerce-development/ecommerce-development-remote.webp" width={1200} height={800} loading="lazy" decoding="async" alt="The owner of a Perth homewares and gift shop on a video call with his ecommerce team from the back room of his store, seen over his shoulder" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+                <div style={{ padding: '14px 12px 8px' }}>
+                  <p style={{ fontSize: 14 }}>
+                    A weekly call from the back of the shop, a shared board and a staging store you can open any time.
+                    That is how projects run for brands in Sydney, Melbourne, Brisbane, Perth, Adelaide and regional
+                    Australia alike.
+                  </p>
                 </div>
               </div>
             </div>
@@ -968,7 +1029,7 @@ export default function EcommerceDevelopmentAUPage() {
             <ul className="stack mt-10" style={{ maxWidth: 900 }}>
               {AU_AGENCIES.map((a, i) => (
                 <li key={a.name} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
-                  <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.orange, minWidth: 30 }}>{i + 1}</span>
+                  <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.small, minWidth: 30 }}>{i + 1}</span>
                   <div>
                     <h3 style={{ fontSize: 18 }}>{a.name}{a.name === 'FactoryJet' && <span style={{ fontFamily: T.fm, fontSize: 10, background: T.small, color: '#fff', borderRadius: 999, padding: '2px 8px', marginLeft: 8, verticalAlign: 'middle' }}>That is us</span>}</h3>
                     <p style={{ marginTop: 6 }}>{a.note}</p>
@@ -1003,9 +1064,17 @@ export default function EcommerceDevelopmentAUPage() {
         {/* ═══ 17. FAQ (canonical Linear Minimal) ═══ */}
         <section className="sec-lg" id="faq">
           <div className="wrap">
-            <div style={{ textAlign: 'center' }}>
+            <div style={{ maxWidth: 760 }}>
               <span className="eyebrow">FAQ</span>
               <h2>Ecommerce agency questions Australian business owners ask</h2>
+            </div>
+            <div className="faq-pill-nav" aria-label="FAQ topics">
+              {FAQ_CATEGORIES.map((c) => (
+                <a key={c.key} href={`#faq-${c.key}`}>
+                  {c.label}
+                  <span className="pill-count">{FAQ_ITEMS.filter((f) => f.category === c.key).length}</span>
+                </a>
+              ))}
             </div>
             <div className="faq-grid">
               <aside className="faq-sidebar">
@@ -1068,7 +1137,7 @@ export default function EcommerceDevelopmentAUPage() {
       </main>
       </div>
 
-      <SiteFooter linkColumns={AU_FOOTER_COLUMNS} variant="dark" tagline="Ecommerce, AI agents, websites and AI search for Australian businesses. Built by senior engineers, supported after launch, owned by you." />
+      <SiteFooter locale="au" linkColumns={AU_FOOTER_COLUMNS} variant="dark" tagline="Ecommerce, AI agents, websites and AI search for Australian businesses. Built by senior engineers, supported after launch, owned by you." />
     </>
   );
 }

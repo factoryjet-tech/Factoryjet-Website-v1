@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
+import { AU_FOOTER_COLUMNS } from '@/data/auFooterColumns';
 import { RECOGNITION_PROFILES } from '@/data/recognitionProfiles';
 import Wordmark from './Wordmark';
 
@@ -27,7 +28,7 @@ export interface SiteFooterColumn {
   links: ReadonlyArray<SiteFooterLink>;
 }
 
-export type SiteFooterLocale = 'us' | 'in' | 'uae';
+export type SiteFooterLocale = 'us' | 'in' | 'uae' | 'au';
 
 /**
  * Region switcher.
@@ -56,6 +57,7 @@ const REGION_LABEL: Record<SiteFooterLocale, string> = {
   us: 'United States',
   in: 'India',
   uae: 'United Arab Emirates',
+  au: 'Australia',
 };
 
 export interface SiteFooterProps {
@@ -169,6 +171,7 @@ const LOCALE_COLUMNS: Record<SiteFooterLocale, ReadonlyArray<SiteFooterColumn>> 
   in:  IN_COLUMNS,
   uae: UAE_COLUMNS,
   us:  US_FOOTER_COLUMNS, // US is the primary domain: its footer must never fall back to India routes
+  au:  AU_FOOTER_COLUMNS,
 };
 
 /** @deprecated kept for backwards-compat — callers should pass locale prop instead.
@@ -279,7 +282,7 @@ export default function SiteFooter({
         {showRecognition && (
           <div className={`mt-14 flex flex-wrap items-center gap-x-5 gap-y-2 border-t pt-7 ${dividerClass}`}>
             <span className={`font-fj-mono text-[11px] font-medium uppercase tracking-[0.16em] ${headingClass}`}>
-              Recognized on
+              {locale === 'us' ? 'Recognized on' : 'Recognised on'}
             </span>
             <ul className="flex flex-wrap items-center gap-x-5 gap-y-2">
               {RECOGNITION_PROFILES.map((p) => (

@@ -313,10 +313,21 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     locale: 'en_AU',
     type: 'website',
-    images: [{ url: '/images/au/ai-consulting/ai-consulting-og.webp', width: 1200, height: 630, alt: 'AI consulting in Australia: a FactoryJet consultant mapping AI use cases with a business owner in a bright Sydney office' }],
+    images: [{ url: '/images/au/ai-consulting/ai-consulting-og.webp', width: 1200, height: 630, alt: 'AI consulting in Australia: a consultant and a Sydney business owner choosing the three AI use cases worth doing first' }],
   },
   robots: { index: true, follow: true },
 };
+
+/* Page-scoped layout fixes (QA 2026-09-25). The shared au-service.css adds a
+   '+' via summary::after to every <details>, which doubles up with the FAQ
+   chevron; tables need a minimum width so they scroll sideways on phones
+   instead of squashing; the demand card header must wrap on narrow screens. */
+const PAGE_CSS = `
+.au-aic .faq-item summary::after{content:none}
+.au-aic .cmp-table{min-width:720px}
+.au-aic .demand-head{flex-wrap:wrap;gap:8px}
+.au-aic .eq-grid>li{height:100%}
+`;
 
 const srcNote = { fontFamily: T.fm, fontSize: 11, color: T.n400, marginTop: 12 } as const;
 const srcLink = { textDecoration: 'underline' } as const;
@@ -330,7 +341,9 @@ export default function AiConsultingAUPage() {
 
       <SiteHeader locale="au" logoHref="/au" />
 
-      <div className="au-svc">
+      <style dangerouslySetInnerHTML={{ __html: PAGE_CSS }} />
+
+      <div className="au-svc au-aic">
       <main>
 
         <Breadcrumbs items={crumbs} />
@@ -365,7 +378,7 @@ export default function AiConsultingAUPage() {
               </div>
 
               <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/ai-consulting/ai-consulting-hero.webp" width={1400} height={933} fetchPriority="high" decoding="async" alt="An AI consultant and an Australian business owner sorting blank sticky notes into three columns to choose which processes to improve with AI, in a bright Sydney office" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+                <img src="/images/au/ai-consulting/ai-consulting-hero.webp" width={1400} height={933} fetchPriority="high" decoding="async" alt="An AI consultant and the owner of a Sydney trades business picking three sticky notes out of a pile of ideas to decide where AI will pay off first, with Sydney Harbour through the window" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
                 <div style={{ padding: '14px 12px 8px' }}>
                   <span className="eyebrow">What you leave with</span>
                   <div className="scorecard-row">
@@ -447,7 +460,7 @@ export default function AiConsultingAUPage() {
                 Australia. Here is the honest answer, in the order the work usually happens.
               </p>
             </div>
-            <ol className="stack mt-10" style={{ maxWidth: 900 }}>
+            <ol className="col-2 eq-grid mt-10">
               {[
                 { n: '01', t: 'Listens before recommending anything', d: 'Interviews the people who do the work, not just the owner. The best use cases hide in the steps someone repeats forty times a week.' },
                 { n: '02', t: 'Maps how the work flows today', d: 'Draws each process box by box: where requests arrive, who touches them, which systems they copy between. AI fits where information moves by hand.' },
@@ -459,7 +472,7 @@ export default function AiConsultingAUPage() {
                 { n: '08', t: 'Gets it live and keeps it working', d: 'Usage rules, training, monitoring and support. This is where most AI consulting stops, and where FactoryJet keeps going.' },
               ].map((s) => (
                 <li key={s.n} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
-                  <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.orange, minWidth: 34 }}>{s.n}</span>
+                  <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.small, minWidth: 34 }}>{s.n}</span>
                   <div>
                     <h3 style={{ fontSize: 18 }}>{s.t}</h3>
                     <p style={{ marginTop: 6 }}>{s.d}</p>
@@ -555,6 +568,8 @@ export default function AiConsultingAUPage() {
         {/* ═══ 7. ENGAGEMENT STAGES (interactive <details>) ═══ */}
         <section className="sec-lg">
           <div className="wrap">
+            <div className="col-6040">
+            <div>
             <div style={{ maxWidth: 760 }}>
               <span className="eyebrow">How an engagement runs</span>
               <h2>AI implementation consulting in six stages, from first call to a working system</h2>
@@ -563,7 +578,7 @@ export default function AiConsultingAUPage() {
                 keep everything we have produced.
               </p>
             </div>
-            <div className="card mt-8" style={{ maxWidth: 900, padding: '4px 24px' }}>
+            <div className="card mt-8" style={{ padding: '4px 24px' }}>
               {STAGES.map((s) => (
                 <details key={s.n}>
                   <summary><span><span style={{ fontFamily: T.fm, color: T.small, marginRight: 12 }}>{s.n}</span>{s.t}</span></summary>
@@ -573,6 +588,19 @@ export default function AiConsultingAUPage() {
                   </div>
                 </details>
               ))}
+            </div>
+            </div>
+            <div className="card" style={{ padding: 8 }}>
+              <img src="/images/au/ai-consulting/ai-consulting-workshop.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A readiness workshop in a bright Melbourne meeting room: a consultant draws a four-step process flow of empty boxes on a whiteboard while three staff who do the work look on" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+              <div style={{ padding: '14px 12px 8px' }}>
+                <span className="eyebrow">Stage two in practice</span>
+                <p style={{ fontSize: 14 }}>
+                  The readiness workshop starts by drawing the process as it runs today, box by box, with the people who
+                  do the work in the room. The best AI use case is usually a step where someone copies information
+                  between two screens, or answers the same question many times a week.
+                </p>
+              </div>
+            </div>
             </div>
           </div>
         </section>
@@ -664,7 +692,8 @@ export default function AiConsultingAUPage() {
         {/* ═══ 10. PRIVACY & GOVERNANCE ═══ */}
         <section className="sec-lg dot-grid">
           <div className="wrap">
-            <div style={{ maxWidth: 800 }}>
+            <div className="col-6040">
+            <div>
               <span className="eyebrow">AI governance, in plain English</span>
               <h2>The Privacy Act and safe, responsible AI shape the plan before the engineering does</h2>
               <div className="stack mt-6">
@@ -704,6 +733,18 @@ export default function AiConsultingAUPage() {
                 <a href={SRC_OAIC_ADM} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>OAIC, transparency in automated decision making</a>;{' '}
                 <a href={SRC_AI6} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>Allens, FAQs on the Guidance for AI Adoption</a>.
               </p>
+            </div>
+            <div className="card" style={{ padding: 8 }}>
+              <img src="/images/au/ai-consulting/ai-consulting-privacy.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Three colleagues in a calm, bright Canberra office reading and marking up a printed draft AI usage policy together, with Parliament House in the distance" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+              <div style={{ padding: '14px 12px 8px' }}>
+                <span className="eyebrow">What governance looks like</span>
+                <p style={{ fontSize: 14 }}>
+                  Usually a short, plain-English AI usage policy that the owner, the privacy lead and the people who use
+                  the tools read and agree together. Which tools are allowed, what data can go in them, and who checks
+                  the output.
+                </p>
+              </div>
+            </div>
             </div>
             <ul className="col-3 mt-10">
               <li className="card"><h3>What we do</h3><p className="mt-4">Map the personal information each use case touches, check which AI providers would see it and on what terms, write your AI usage policy, and prepare the inputs for a Privacy Impact Assessment.</p></li>
@@ -838,7 +879,7 @@ export default function AiConsultingAUPage() {
               </div>
 
               <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: `1px solid ${T.n200}`, padding: '14px 18px' }}>
+                <div className="demand-head" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: `1px solid ${T.n200}`, padding: '14px 18px' }}>
                   <span style={{ fontFamily: T.fm, fontSize: 10, letterSpacing: '.13em', textTransform: 'uppercase', color: T.n400 }}>Australia · Monthly Search Demand</span>
                   <span style={{ background: T.small, color: '#fff', fontFamily: T.fm, fontSize: 10, borderRadius: 999, padding: '3px 9px' }}>DataForSEO</span>
                 </div>
@@ -880,10 +921,10 @@ export default function AiConsultingAUPage() {
                 on its own website. Talk to a few and pick the fit.
               </p>
             </div>
-            <ul className="stack mt-10" style={{ maxWidth: 900 }}>
+            <ul className="col-2 eq-grid mt-10">
               {AI_CONSULTANCIES.map((a, i) => (
-                <li key={a.name} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
-                  <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.orange, minWidth: 30 }}>{i + 1}</span>
+                <li key={a.name} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start', ...(i === 0 ? { borderColor: T.small } : {}) }}>
+                  <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.small, minWidth: 30 }}>{String(i + 1).padStart(2, '0')}</span>
                   <div>
                     <h3 style={{ fontSize: 18 }}>{a.name}{a.name === 'FactoryJet' && <span style={{ fontFamily: T.fm, fontSize: 10, background: T.small, color: '#fff', borderRadius: 999, padding: '2px 8px', marginLeft: 8, verticalAlign: 'middle' }}>That is us</span>}</h3>
                     <p style={{ marginTop: 6 }}>{a.note}</p>
@@ -918,12 +959,11 @@ export default function AiConsultingAUPage() {
                 </ul>
               </div>
               <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/ai-consulting/ai-consulting-workshop.webp" width={1200} height={800} loading="lazy" decoding="async" alt="An AI strategy workshop in a bright Melbourne meeting room, with a consultant drawing a four-step process flow of empty boxes on a whiteboard while three colleagues take notes" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+                <img src="/images/au/ai-consulting/ai-consulting-questions.webp" width={1200} height={800} loading="lazy" decoding="async" alt="The owner of a Melbourne wholesale business, pen and notepad in hand, questions an AI consultant across a round table before deciding whether to hire him" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
                 <div style={{ padding: '14px 12px 8px' }}>
                   <p style={{ fontSize: 14 }}>
-                    We start by drawing the process as it runs today, box by box. The best AI use case is usually a step
-                    where someone copies information between two screens, or answers the same question many times a
-                    week.
+                    Interview the consultant the way you would interview a senior hire. Write their answers down, and
+                    compare them side by side with the other firms on your shortlist.
                   </p>
                 </div>
               </div>
@@ -938,6 +978,14 @@ export default function AiConsultingAUPage() {
               <span className="eyebrow">FAQ</span>
               <h2>AI consulting questions Australian business owners actually ask</h2>
             </div>
+            <nav className="faq-pill-nav" aria-label="FAQ topics">
+              {FAQ_CATEGORIES.map((c) => (
+                <a key={c.key} href={`#faq-${c.key}`}>
+                  {c.label}
+                  <span className="pill-count">{FAQ_ITEMS.filter((f) => f.category === c.key).length}</span>
+                </a>
+              ))}
+            </nav>
             <div className="faq-grid">
               <aside className="faq-sidebar">
                 <span className="faq-sidebar-topics">Topics</span>
@@ -1000,7 +1048,7 @@ export default function AiConsultingAUPage() {
       </main>
       </div>
 
-      <SiteFooter linkColumns={AU_FOOTER_COLUMNS} variant="dark" tagline="Ecommerce, AI agents, websites and AI search for Australian businesses. Built by senior engineers, supported after launch, owned by you." />
+      <SiteFooter locale="au" linkColumns={AU_FOOTER_COLUMNS} variant="dark" tagline="Ecommerce, AI agents, websites and AI search for Australian businesses. Built by senior engineers, supported after launch, owned by you." />
     </>
   );
 }

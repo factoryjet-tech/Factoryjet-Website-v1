@@ -1,3 +1,32 @@
+QA image refresh, 2026-09-25 (supersedes the earlier set below)
+Model: openai:gpt-image@2.5-flare via Runware, 1536x1024 PNG. Resized/cropped with ImageMagick (-strip), cwebp -q 82.
+Every image reviewed at full size, plus zoomed crops of hands and screens. Checks: five fingers, faces, no readable text or numbers,
+no logos or real brands, screen geometry (screens face the people using them; camera over the shoulder), scene matches its section,
+and no scene repeated from another AU page.
+Style suffix for all prompts: "Bright high-key commercial photography in Australia, natural Australian daylight, clean white and very light grey surroundings, crisp sharp focus, airy calm confident mood, accurate natural skin tones, hands anatomically correct with exactly five natural fingers in relaxed poses, one warm orange object as the main colour accent. No logos, no brand names, no readable text or numbers anywhere, including on screens, paper, clothing and vehicles. Photorealistic, professional colour grading, no illustration."
+
+ai-receptionist-hero.webp + ai-receptionist-og.webp (1400x933; og 1200x630 top-anchored crop), section: hero (answers every call while you are on the tools)
+Prompt: "A Sydney electrician in his thirties wearing a navy work shirt with orange high-visibility panels stands on the floor of a bright laundry in a renovated suburban home, both hands busy working inside an open grey electrical switchboard mounted on the wall at chest height, holding an insulated screwdriver, concentrating. In the sharp foreground, on the lid of his closed tool case on the bench, his smartphone lies face up at a natural small size and its screen is lit with an incoming-call screen showing only a round green call icon and a soft sound-wave graphic, no words and no numbers. Sunny window light, white walls, a potted plant on the windowsill." + style suffix
+Review: Attempt 1 rejected: the electrician stood behind a step ladder with his legs passing through it, and the phone was oversized. Attempt 2 (switchboard version, variant 1 of 2) passes: both hands in the switchboard zoom-checked, five fingers; phone at natural size shows only a green call icon and sound-wave graphic; breaker labels are unreadable blocks; terracotta roof through the window. PASS.
+
+ai-receptionist-handover.webp (1200x800), section: "How the AI hands a call over to a person" (new image)
+Prompt: "Over-the-shoulder camera view from behind an office coordinator at a Brisbane plumbing business, a woman in her forties with a blonde bob and a lightweight headset, seated at a desk in a small bright office. She is mid-conversation on the headset, smiling. Her monitor faces her and the camera from behind her shoulder and shows a short summary card made of grey lines with one orange flag icon, no words and no numbers. Through the window, white work vans parked in a sunny yard. A potted plant and one orange mug on the desk." + style suffix
+Review: Monitor faces her, camera over her shoulder; summary card of grey bars plus an orange flag, no text. Hand at microphone and mouse hand correct. White vans in the yard carry no signage. PASS.
+
+ai-receptionist-listening.webp (1200x800 (replaces ai-receptionist-workshop.webp, a whiteboard scene repeated on other AU pages)), section: "How we build your AI receptionist" (step 01 is listening to your calls)
+Prompt: "A FactoryJet engineer, a man in his thirties with a short beard in a light shirt, and a veterinary clinic practice manager, a woman in her forties with dark hair tied back in green scrubs, sit side by side at a small table in a bright clinic staff room in Adelaide, each wearing one wireless earbud, listening carefully. An open laptop on the table faces both of them, camera from behind and to the side so only the laptop's back is visible. She takes notes in a paper notebook with a pen; he holds a coffee cup. One orange notebook, sunlight through the window." + style suffix
+Review: Laptop faces both people; camera sees only its back. Earbuds visible. Writing hand, cup hand correct. Notebook page blank. Pet poster has no text. PASS.
+
+ai-receptionist-dental.webp (1200x800 (filename kept)), section: "AI receptionists for tradies, clinics, dental practices..." (health businesses paragraph)
+Prompt: "A friendly dental receptionist, a woman in her twenties with dark hair in a neat bun wearing navy scrubs, stands behind the white front desk of a bright modern Brisbane dental practice, greeting a smiling patient, a man in his sixties, who is arriving at the desk. On the desk a cordless phone sits in its cradle with a small green light glowing. Calm waiting area with timber chairs and a large plant behind the patient. Bright natural daylight. One orange vase on the counter." + style suffix
+Review: Previous image (one woman in scrubs looking at a phone in an empty room) was weak for the section. New: receptionist greets a patient face to face; monitor faces her, back to camera. Cordless phone keypad zoom-checked: no legible digits or brand. Patient hand on counter correct. PASS.
+
+Kept after full-size re-review: ai-receptionist-clinic.webp (monitor faces the receptionist, patient in front of the desk) and ai-receptionist-lawfirm.webp (over-the-shoulder laptop, screen faces her).
+Removed: ai-receptionist-workshop.webp (no longer referenced).
+
+------------------------------------------------------------
+PREVIOUS SET (2026-09-25 build), kept for history:
+
 Images for /au/ai-receptionist, generated 2026-09-25
 Model: openai:gpt-image@2 (GPT Image 2) via Runware API, 1536x1024 PNG, resized/cropped with ImageMagick, converted with cwebp -q 82.
 All five images reviewed at full size plus cropped close-ups (hands, faces, screens, signage, logos). First attempt accepted for all five; none rejected.

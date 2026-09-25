@@ -23,12 +23,12 @@ export interface Citation {
   source: string;
   title: string;
   url: string;
-  /** What this source actually says. Fetch-verified 2026-08-25, all HTTP 200. */
+  /** What this source actually says. Fetch-verified 2026-08-25 and re-verified 2026-09-25, all HTTP 200. */
   claim: string;
 }
 
 /**
- * External citations. Every URL below was fetched with curl on 2026-08-25, returned
+ * External citations. Every URL below was fetched with curl on 2026-08-25 (re-fetched 2026-09-25), returned
  * HTTP 200, and the `claim` text was read out of the fetched page body. Nothing here is
  * paraphrased from memory.
  *

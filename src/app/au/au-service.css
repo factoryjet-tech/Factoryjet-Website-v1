@@ -5,7 +5,7 @@
   --cream:   #FAFAF7;
   --white:   #FFFFFF;
   --ink:     #0F0F12;
-  --orange:  #FF5C00;
+  --orange:  #F05A28;
   --orange2: #F05A28;
   --orange-h:#d94d20;
   --orange-bg: rgba(255,92,0,.08);
@@ -444,7 +444,7 @@
 
   .au-svc .col-3 {grid-template-columns:1fr!important}
 
-  .au-svc nav {display:none}
+  .au-svc .faq-sidebar-nav, .au-svc .faq-sidebar-topics {display:none}
 
   .au-svc .hdr-in {padding:0 16px}
 
@@ -507,7 +507,7 @@
 
 /* ─── Web Design page extras ─────────────────────────── */
 .au-svc .byline {display:flex;align-items:center;gap:11px;padding:12px 14px;background:var(--white);border:1px solid var(--n200);border-radius:14px}
-.au-svc .byline .av {width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#FF5C00,#FF8C00);color:#fff;display:grid;place-items:center;font-family:var(--fd);font-weight:800;font-size:15px;flex-shrink:0}
+.au-svc .byline .av {width:38px;height:38px;border-radius:50%;background:#B23E13;color:#fff;display:grid;place-items:center;font-family:var(--fd);font-weight:800;font-size:15px;flex-shrink:0}
 .au-svc .byline .who {font-size:12.5px;line-height:1.4}
 .au-svc .byline .who b {color:var(--ink)}
 .au-svc .byline .who span {color:var(--n400)}
@@ -576,3 +576,15 @@
 }
 .au-svc .int-group li:last-child {border-bottom:none}
 .au-svc .int-group li b {color:var(--ink);font-weight:600}
+
+/* ── 2026-09-25 QA fixes (AU QA swarm) ───────────────────────────────── */
+/* FAQ items that render their own chevron should not also show the "+". */
+.au-svc .faq-item summary:has(.chevron)::after {content:none}
+/* Comparison tables scroll sideways on narrow screens instead of squashing. */
+.au-svc .cmp-table {min-width:680px}
+.au-svc .card:has(> .cmp-table), .au-svc div:has(> .cmp-table) {overflow-x:auto!important;-webkit-overflow-scrolling:touch}
+/* On phones, a two-column section whose first column is an image shows the
+   heading and text first, then the image. */
+@media (max-width:960px){
+  .au-svc .col-4060 > :first-child:has(img) {order:2}
+}

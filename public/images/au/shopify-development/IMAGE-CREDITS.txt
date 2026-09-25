@@ -20,3 +20,57 @@ Review: both monitors face the seated developer (over-the-shoulder, geometry cor
 shopify-development-integrations.webp (1200x800)
 Prompt: "Three people in a bright Perth meeting room with ocean-light windows standing around a large whiteboard covered in simple hand-drawn boxes and arrows with no writing, mapping how an online store connects to accounting, stock and shipping. One man in a navy shirt holds an orange marker and points at a box, a woman in a linen blazer and an older man listen and smile. A closed laptop on the table. No text on the whiteboard." + style suffix.
 Review: whiteboard boxes and arrows carry no writing. Marker hand correct. The source frame had a tablet in the bottom-left corner showing text-like shapes; it was cropped out (1440x960 crop from x=96, y=0, then resized). Ocean light through windows reads as Perth coast.
+
+==========================================================================
+2026-09-25 VISUAL QA REFRESH (qa-au-seo-shopify)
+Model: openai:gpt-image@2.5-flare via Runware, 1536x1024 PNG, resized/cropped with ImageMagick (-strip),
+cwebp -q 82 (hero -q 74 for LCP). Every image opened and reviewed at full size.
+Why: the old hero was near-identical to the /au/ai-seo hero; the whiteboard (integrations) and packing-bench
+(warehouse) scenes repeated genres used on three other AU pages; B2B and the city section were text-only.
+
+Style suffix (all prompts): same as /au/ai-seo QA refresh: "Bright high-key commercial photography in Australia,
+natural Australian daylight. Crisp sharp focus, deep depth of field. Calm, confident mood. Accurate natural skin
+tones. Hands anatomically correct with exactly five natural fingers in relaxed poses. Exactly one warm orange
+object in frame as the only strong colour accent. No logos, no brand names, no readable text or numbers anywhere;
+all screens show only soft abstract shapes, photos and blank bars with no words and no numbers. Photorealistic,
+professional colour grading, no illustration."
+
+shopify-development-hero.webp (1400x933) + shopify-development-og.webp (1200x630 centre crop). REPLACED. Section: hero.
+Prompt: over-the-shoulder view behind a Shopify developer at a timber workbench in a converted red-brick warehouse
+studio in Melbourne (a small skincare brand); windows show only eucalyptus gum trees and blue sky; laptop shows a
+store homepage (banner of amber bottles, four product tiles, grey bars); the curly-haired founder holds an
+unlabelled amber bottle and points at a tile; shelves of unlabelled bottles; orange tape roll.
+Review: laptop faces the developer (geometry correct). Store layout has no text. Pointing hand and bottle hand
+natural. Bottles unlabelled. ATTEMPT 1 REJECTED: a New York style skyline (Empire State shape) through the window.
+ATTEMPT 2 REJECTED: London-looking terraces with chimney pots. ATTEMPT 3 passed (gum trees).
+
+shopify-development-integrations.webp (1200x800). REPLACED (was whiteboard). Section: apps and integrations.
+Prompt: over-the-shoulder view behind a woman at the dispatch desk of a small Sydney online store; laptop shows an
+abstract dashboard of three coloured panels and bar shapes; thermal label printer feeding a blank label; plain grey
+satchels; tray of blank paper; orange stapler.
+Review: laptop faces her. Dashboard has no text or numbers. Printer carries only tiny unreadable panel marks, no
+brand. Harbour Bridge and Opera House through the window (landmarks, not logos). First attempt passed.
+
+shopify-development-build.webp (1200x800). REPLACED. Section: Shopify SEO basics (mobile-first review).
+Prompt: over-the-shoulder view behind a developer with a dark ponytail in a Melbourne office holding a phone that
+shows a mobile product page (canvas tote photo, thumbnails, grey bars), laptop behind showing the same page at
+desktop width; orange coffee cup.
+Review: both screens face her. No text. Phone hand natural. Yarra River and Melbourne skyline outside. First attempt passed.
+
+shopify-development-warehouse.webp (1200x800). REPLACED (was packing bench). Section: Australian rules (ACL,
+refunds and replacements).
+Prompt: back room of a small Sydney online fashion business; man in a denim shirt inspects a returned white
+sneaker from an open plain box at a returns bench; blank paper slip; garment rails; orange tape dispenser.
+Review: hands natural on the shoe. Monitor at left faces the camera but nobody stands behind it (geometry fine),
+shows a beach photo only. No logos on shoes. First attempt passed. Filename kept for stability.
+
+shopify-development-b2b.webp (1200x800). NEW. Section: B2B on Shopify.
+Prompt: over-the-shoulder view behind a Brisbane homewares boutique owner at her counter holding a tablet that
+shows a reorder grid of vase photos with empty boxes and plain buttons; timber shelves of ceramics; orange vase.
+Review: tablet faces her. No text or numbers on screen. Both hands natural. First attempt passed.
+
+shopify-development-dispatch.webp (1200x800). NEW. Section: Shopify developers in every capital (Perth logistics).
+Prompt: outside a small warehouse on an industrial street in Perth, sunny morning, eucalyptus tree; woman in a navy
+polo hands plain grey satchels to a courier loading a plain white van through its sliding door; orange cone.
+Review: no lettering on van, satchels or buildings (one distant sign too small to read). Sliding door on the kerb
+side, correct for Australia. Four hands on the satchels, natural. First attempt passed.

@@ -269,7 +269,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     locale: 'en_AU',
     type: 'website',
-    images: [{ url: '/images/au/hub/au-hub-og.webp', width: 1200, height: 630, alt: 'An Australian business owner and a FactoryJet consultant reviewing a new website layout in a bright Sydney office' }],
+    images: [{ url: '/images/au/hub/au-hub-og.webp', width: 1200, height: 630, alt: 'A Sydney homewares shop owner and a FactoryJet engineer reviewing her online store product grid on a monitor, with an AI chat on the phone beside it' }],
   },
   twitter: {
     card: 'summary_large_image',
@@ -279,6 +279,14 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
 };
+
+const HUB_CSS = `
+@media(min-width:961px) and (min-height:860px){
+  .au-svc .hub-sticky{position:sticky;top:96px}
+}
+@media(max-width:960px){
+  .au-svc .hub-flip > :first-child{order:2}
+}`;
 
 const srcNote = { fontFamily: T.fm, fontSize: 11, color: T.n400, marginTop: 12 } as const;
 const srcLink = { textDecoration: 'underline' } as const;
@@ -308,6 +316,9 @@ export default function AustraliaHubPage() {
       <SiteHeader locale="au" logoHref="/au" />
 
       <div className="au-svc">
+      {/* Hub-only layout helpers (scoped): media-first sections put the text
+          first on mobile, and side media stays in view on desktop. */}
+      <style dangerouslySetInnerHTML={{ __html: HUB_CSS }} />
       <main>
 
         <Breadcrumbs items={crumbs} />
@@ -344,7 +355,7 @@ export default function AustraliaHubPage() {
               </div>
 
               <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/hub/au-hub-hero.webp" width={1400} height={933} fetchPriority="high" decoding="async" alt="An Australian business owner and a FactoryJet consultant reviewing a new website layout on a laptop in a bright Sydney office" style={imgStyle} />
+                <img src="/images/au/hub/au-hub-hero.webp" width={1400} height={933} fetchPriority="high" decoding="async" alt="Over-the-shoulder view of a Sydney homewares shop owner and a FactoryJet engineer reviewing her online store on a monitor in the shop, with an AI chat open on a phone beside it and the Harbour Bridge through the window" style={imgStyle} />
                 <div style={{ padding: '14px 12px 8px' }}>
                   <span className="eyebrow">What you get, whichever service</span>
                   <div className="scorecard-row">
@@ -482,9 +493,9 @@ export default function AustraliaHubPage() {
                 </div>
                 <HubLinks hub="ecommerce" />
               </div>
-              <div>
+              <div className="hub-sticky">
                 <div className="card" style={{ padding: 8 }}>
-                  <img src="/images/au/hub/au-hub-ecommerce.webp" width={1200} height={800} loading="lazy" decoding="async" alt="An Australian online store owner packing a customer order in a bright Melbourne warehouse" style={imgStyle} />
+                  <img src="/images/au/hub/au-hub-ecommerce.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over-the-shoulder view of a shopper at a Melbourne café near Flinders Street checking out a linen cushion on a mobile online store" style={imgStyle} />
                 </div>
                 <div className="card card-top-orange mt-6">
                   <span className="eyebrow">Set up before launch</span>
@@ -505,10 +516,10 @@ export default function AustraliaHubPage() {
         {/* ═══ 6. HUB 2: AI AGENT DEVELOPMENT ═══ */}
         <section className="sec-lg dot-grid" id="ai">
           <div className="wrap">
-            <div className="col-4060">
-              <div>
+            <div className="col-4060 hub-flip">
+              <div className="hub-sticky">
                 <div className="card" style={{ padding: 8 }}>
-                  <img src="/images/au/hub/au-hub-ai-agents.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A FactoryJet engineer showing a Brisbane business owner an AI agent conversation on his office monitor" style={imgStyle} />
+                  <img src="/images/au/hub/au-hub-ai-agents.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over-the-shoulder view of an office manager at a Brisbane building supplies trade counter watching an AI agent workflow complete on her laptop, beside a tray of paper order forms" style={imgStyle} />
                 </div>
                 <div className="card mt-6">
                   <span className="eyebrow">Which AI service fits you?</span>
@@ -602,7 +613,7 @@ export default function AustraliaHubPage() {
                   Source: <a href={SRC_WCAG} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>W3C Web Accessibility Initiative, WCAG 2 overview</a>.
                 </p>
               </div>
-              <div className="card" style={{ padding: 8 }}>
+              <div className="card hub-sticky" style={{ padding: 8 }}>
                 <img src="/images/au/hub/au-hub-web-design.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A web designer and her client reviewing a website page layout on a large monitor in a bright Melbourne design studio" style={imgStyle} />
                 <div style={{ padding: '14px 12px 8px' }}>
                   <span className="eyebrow">Every website ships with</span>
@@ -705,7 +716,7 @@ export default function AustraliaHubPage() {
                   Whatever you build, we quote a fixed price per stage after a short call. No hourly billing, no surprise invoices.
                 </p>
               </div>
-              <div className="card card-top-orange">
+              <div className="card card-top-orange hub-sticky">
                 <span className="eyebrow">What moves your quote</span>
                 <div className="scorecard-row"><div className="scorecard-metric">Unique page designs</div><div className="scorecard-val" style={{ fontSize: 14 }}>Design</div></div>
                 <div className="scorecard-row"><div className="scorecard-metric">Copywriting and photos</div><div className="scorecard-val" style={{ fontSize: 14 }}>Content</div></div>
@@ -752,8 +763,8 @@ export default function AustraliaHubPage() {
                 </div>
                 <HubLinks hub="search" />
               </div>
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/hub/au-hub-ai-search.webp" width={1200} height={800} loading="lazy" decoding="async" alt="An Adelaide café owner checking how her business appears in local search results on her phone" style={imgStyle} />
+              <div className="card hub-sticky" style={{ padding: 8 }}>
+                <img src="/images/au/hub/au-hub-ai-search.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over-the-shoulder view of a woman in a Perth apartment reading an AI assistant answer that recommends local businesses on her phone" style={imgStyle} />
                 <div style={{ padding: '14px 12px 8px' }}>
                   <span className="eyebrow">Where buyers look now</span>
                   <div className="scorecard-row"><div><div className="scorecard-metric">Google search and Maps</div><div className="scorecard-note">technical and local SEO</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>SEO</div></div>
@@ -768,9 +779,9 @@ export default function AustraliaHubPage() {
         {/* ═══ 10. HOW WE WORK WITH AUSTRALIAN BUSINESSES ═══ */}
         <section className="sec-lg dot-grid" id="how-we-work">
           <div className="wrap">
-            <div className="col-4060">
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/hub/au-hub-how-we-work.webp" width={1200} height={800} loading="lazy" decoding="async" alt="An Australian tradesman beside his ute checking a project update on a tablet on a sunny suburban street" style={imgStyle} />
+            <div className="col-4060 hub-flip">
+              <div className="card hub-sticky" style={{ padding: 8 }}>
+                <img src="/images/au/hub/au-hub-how-we-work.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over-the-shoulder view of a Perth business owner on an early-morning video call with the FactoryJet team from his home office" style={imgStyle} />
                 <div style={{ padding: '14px 12px 8px' }}>
                   <p style={{ fontSize: 14 }}>
                     Most of our Australian clients are busy running the business. So updates come in writing, decisions
@@ -881,7 +892,8 @@ export default function AustraliaHubPage() {
                 Use these with every provider on your shortlist, including us. A good one will answer them straight away.
               </p>
             </div>
-            <ol className="stack mt-10" style={{ maxWidth: 900, listStyle: 'none' }}>
+            <div className="col-6040 mt-10">
+            <ol className="stack" style={{ listStyle: 'none' }}>
               {[
                 { n: '01', t: 'Who exactly will build it?', d: 'Get names. Ask whether the person on the sales call will be anywhere near your project once you sign.' },
                 { n: '02', t: 'What is the fixed scope and timeline?', d: 'A clear page list, feature list and date. Ask what happens, and who pays, if the date slips.' },
@@ -901,6 +913,17 @@ export default function AustraliaHubPage() {
                 </li>
               ))}
             </ol>
+            <div className="card hub-sticky" style={{ padding: 8 }}>
+              <img src="/images/au/hub/au-hub-hiring.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Two Adelaide business partners at their kitchen table comparing three printed proposals side by side before choosing a provider" style={imgStyle} />
+              <div style={{ padding: '14px 12px 8px' }}>
+                <span className="eyebrow">How to use this list</span>
+                <p style={{ fontSize: 14 }}>
+                  Put your shortlisted proposals side by side and ask each provider the same eight questions. Vague
+                  answers on ownership, scope or support after launch are the warning signs to act on.
+                </p>
+              </div>
+            </div>
+            </div>
           </div>
         </section>
 
@@ -930,7 +953,11 @@ export default function AustraliaHubPage() {
                   ))}
                 </ul>
               </div>
-              <div className="card card-top-orange">
+              <div>
+              <div className="card" style={{ padding: 8 }}>
+                <img src="/images/au/hub/au-hub-cities.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A Brisbane café owner rolling up his shopfront shutter on a sunny morning street lined with jacaranda trees and timber Queenslander buildings" style={imgStyle} />
+              </div>
+              <div className="card card-top-orange mt-6">
                 <span className="eyebrow">Australian time zones we work to</span>
                 <div className="scorecard-row"><div><div className="scorecard-metric">AEST / AEDT</div><div className="scorecard-note">NSW, VIC, QLD, ACT, TAS</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Covered</div></div>
                 <div className="scorecard-row"><div><div className="scorecard-metric">ACST / ACDT</div><div className="scorecard-note">SA, NT</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Covered</div></div>
@@ -940,6 +967,7 @@ export default function AustraliaHubPage() {
                     <a key={p.href} className="city-pill" href={p.href}>{p.name}</a>
                   ))}
                 </div>
+              </div>
               </div>
             </div>
           </div>
@@ -980,9 +1008,6 @@ export default function AustraliaHubPage() {
                       <li key={f.question}><details className="faq-item">
                         <summary>
                           <span className="q-text">{f.question}</span>
-                          <span className="chevron">
-                            <svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5L7 9L11 5" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" /></svg>
-                          </span>
                         </summary>
                         <div className="faq-ans"><p>{f.answer}</p></div>
                       </details></li>
@@ -1014,7 +1039,7 @@ export default function AustraliaHubPage() {
       </main>
       </div>
 
-      <SiteFooter
+      <SiteFooter locale="au"
         linkColumns={AU_FOOTER_COLUMNS}
         variant="dark"
         tagline="Ecommerce, AI agents, websites and AI search for Australian businesses. Built by senior engineers, supported after launch, owned by you."

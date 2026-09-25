@@ -21,7 +21,7 @@ const T = {
   ink: '#0F0F12',
   n200: '#E5E5E0',
   n400: '#6E6E68',
-  orange: '#FF5C00',
+  orange: '#F05A28',
   green: '#047857',
   small: '#B23E13',
   fm: "'Geist Mono',monospace",
@@ -243,7 +243,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     locale: 'en_AU',
     type: 'website',
-    images: [{ url: '/images/au/ai-receptionist/ai-receptionist-og.webp', width: 1200, height: 630, alt: 'AI receptionist Australia: a plumber in hi-vis taking a call beside his work ute in a suburban driveway' }],
+    images: [{ url: '/images/au/ai-receptionist/ai-receptionist-og.webp', width: 1200, height: 630, alt: 'AI receptionist Australia: a Sydney electrician busy at a switchboard while a call comes in on his phone' }],
   },
   robots: { index: true, follow: true },
 };
@@ -294,7 +294,7 @@ export default function AiReceptionistAUPage() {
         <Breadcrumbs items={crumbs} />
 
         {/* ═══ 1. HERO ═══ */}
-        <section className="sec-lg dot-grid" style={{ position: 'relative' }}>
+        <section className="sec-lg dot-grid" style={{ position: 'relative', paddingTop: 36 }}>
           <div className="wrap">
             <div className="col-6040">
               <div>
@@ -303,7 +303,7 @@ export default function AiReceptionistAUPage() {
                   <span className="chip">24/7 AI Call Answering</span>
                   <span className="chip">Built, Supported, Yours</span>
                 </div>
-                <h1>{H1}</h1>
+                <h1 style={{ fontSize: 'clamp(2.1rem, 3.9vw, 3.05rem)' }}>{H1}</h1>
                 <p className="lead mt-6" style={{ maxWidth: 560 }}>
                   FactoryJet builds custom AI receptionists for Australian businesses. Yours answers the phone day and
                   night, works out what each caller needs, answers routine questions, books straight into your calendar,
@@ -323,7 +323,7 @@ export default function AiReceptionistAUPage() {
               </div>
 
               <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/ai-receptionist/ai-receptionist-hero.webp" width={1400} height={933} fetchPriority="high" decoding="async" alt="An Australian plumber in a hi-vis shirt taking a call beside his open work ute in a suburban Brisbane driveway" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+                <img src="/images/au/ai-receptionist/ai-receptionist-hero.webp" width={1400} height={933} fetchPriority="high" decoding="async" alt="A Sydney electrician with both hands in a switchboard while a call comes in on the phone lying on his tool case, ready for an AI receptionist to answer" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
                 <div style={{ padding: '14px 12px 8px' }}>
                   <span className="eyebrow">What it does on every call</span>
                   <div className="scorecard-row">
@@ -495,6 +495,13 @@ export default function AiReceptionistAUPage() {
                   </p>
                 </div>
               </div>
+              <div className="stack">
+                <figure className="card" style={{ padding: 8, margin: 0 }}>
+                  <img src="/images/au/ai-receptionist/ai-receptionist-handover.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over the shoulder of an office coordinator at a Brisbane plumbing business taking a transferred call on her headset, with the AI’s call summary on her screen" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+                  <figcaption style={{ padding: '12px 10px 6px', fontSize: 14 }}>
+                    The call arrives with a summary already on screen, so the caller never has to start again.
+                  </figcaption>
+                </figure>
               <div className="card card-top-orange">
                 <span className="eyebrow">Typical handover triggers</span>
                 <div className="scorecard-row"><div><div className="scorecard-metric">Caller asks for a person</div><div className="scorecard-note">any wording, any time</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Transfer</div></div>
@@ -502,6 +509,7 @@ export default function AiReceptionistAUPage() {
                 <div className="scorecard-row"><div><div className="scorecard-metric">Upset or confused caller</div><div className="scorecard-note">repeated misunderstanding counts</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Transfer</div></div>
                 <div className="scorecard-row"><div><div className="scorecard-metric">Question with no approved answer</div><div className="scorecard-note">it never guesses</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Message</div></div>
                 <div className="scorecard-row"><div><div className="scorecard-metric">Nobody available</div><div className="scorecard-note">summary plus SMS to the right person</div></div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Call back</div></div>
+              </div>
               </div>
             </div>
           </div>
@@ -572,11 +580,11 @@ export default function AiReceptionistAUPage() {
                 </div>
               </div>
               <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/ai-receptionist/ai-receptionist-workshop.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A consultant sketching a simple call flow of connected boxes on a whiteboard with an Adelaide café owner at a timber table" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+                <img src="/images/au/ai-receptionist/ai-receptionist-listening.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A FactoryJet engineer and an Adelaide vet clinic practice manager share earbuds to listen to real incoming calls while she takes notes" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
                 <div style={{ padding: '14px 12px 8px' }}>
                   <p style={{ fontSize: 14 }}>
-                    We draw your call flow before we write any code: every type of call, what should happen, and where
-                    a person takes over. The whiteboard version is what you sign off.
+                    Step one is listening. We go through a sample of your real calls with you, then map every type of
+                    call, what should happen, and where a person takes over. That call map is what you sign off.
                   </p>
                 </div>
               </div>
@@ -769,7 +777,7 @@ export default function AiReceptionistAUPage() {
                 </p>
               </div>
               <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/ai-receptionist/ai-receptionist-dental.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A dental practice manager in navy scrubs reading a booking alert on her phone at the front counter of a bright Sydney dental practice" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+                <img src="/images/au/ai-receptionist/ai-receptionist-dental.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A dental receptionist at a bright Brisbane practice greets an arriving patient face to face while the desk phone stays quiet" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
               </div>
             </div>
           </div>
@@ -845,10 +853,10 @@ export default function AiReceptionistAUPage() {
                 website.
               </p>
             </div>
-            <ul className="stack mt-10" style={{ maxWidth: 900 }}>
+            <ul className="col-2 mt-10" style={{ gap: 16 }}>
               {PROVIDERS.map((p, i) => (
                 <li key={p.name} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
-                  <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.orange, minWidth: 30 }}>{i + 1}</span>
+                  <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.small, minWidth: 30 }}>{i + 1}</span>
                   <div>
                     <h3 style={{ fontSize: 18 }}>{p.name}{p.name === 'FactoryJet' && <span style={{ fontFamily: T.fm, fontSize: 10, background: T.small, color: '#fff', borderRadius: 999, padding: '2px 8px', marginLeft: 8, verticalAlign: 'middle' }}>That is us</span>}</h3>
                     <p className="mt-2" style={{ marginTop: 6 }}>{p.note}</p>
@@ -900,7 +908,8 @@ export default function AiReceptionistAUPage() {
         {/* ═══ 16. FAQ (canonical Linear Minimal) ═══ */}
         <section className="sec-lg dot-grid" id="faq">
           <div className="wrap">
-            <div style={{ textAlign: 'center' }}>
+            <style>{'.au-svc .faq-item summary::after{content:none;display:none}'}</style>
+            <div style={{ maxWidth: 760 }}>
               <span className="eyebrow">FAQ</span>
               <h2>AI receptionist questions Australian business owners actually ask</h2>
             </div>
@@ -965,7 +974,7 @@ export default function AiReceptionistAUPage() {
 
       </main>
       </div>
-      <SiteFooter linkColumns={AU_FOOTER_COLUMNS} variant="dark" tagline="Ecommerce, AI agents, websites and AI search for Australian businesses. Built by senior engineers, supported after launch, owned by you." />
+      <SiteFooter locale="au" linkColumns={AU_FOOTER_COLUMNS} variant="dark" tagline="Ecommerce, AI agents, websites and AI search for Australian businesses. Built by senior engineers, supported after launch, owned by you." />
     </>
   );
 }

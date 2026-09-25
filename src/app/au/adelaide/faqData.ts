@@ -10,8 +10,10 @@
  * authority. The set therefore leans towards "is this worth doing at all" and value
  * questions rather than Melbourne's vendor-selection anxiety or Brisbane's cost focus.
  *
- * The ONLY copy of these questions. sections/FAQ.tsx renders it, page.tsx maps it into
- * FAQPage JSON-LD.
+ * 2026-09-25 redesign: eight questions added from the September 2026 Google AU People Also Ask
+ * data for Adelaide web design and SEO searches (pipeline/research/data/market-au-2026-09-24/serps.json).
+ *
+ * The ONLY copy of these questions. page.tsx renders it AND maps it into FAQPage JSON-LD.
  */
 
 export interface Faq {
@@ -45,7 +47,13 @@ export const FAQS: Faq[] = [
   {
     q: 'Is it cheaper to build a website myself?',
     topic: 'Is it worth it',
-    a: 'In cash, usually yes. In total cost, often no. A builder subscription is cheap, but the hours spent on layout, copy and fixing the mobile view are hours not spent earning. The test is your own hourly value. If a week of your time is worth more than the build, doing it yourself is the expensive option. If you are pre-revenue and time-rich, build it yourself and come back later.',
+    a: 'In cash, usually yes. In total cost, often no. A builder subscription costs little, but the hours spent on layout, copy and fixing the mobile view are hours not spent earning. The test is your own hourly value. If a week of your time is worth more than the build, doing it yourself is the expensive option. If you are pre-revenue and time-rich, build it yourself and come back later.',
+  },
+
+  {
+    q: 'Is web design still in demand in 2026?',
+    topic: 'Is it worth it',
+    a: 'Yes. Google Australia data from September 2026 shows around 1,300 searches a month for website design in Adelaide and its close variants, and a similar number for an SEO agency in Adelaide. What has changed is what buyers expect: a site that loads fast on a phone, answers questions plainly, and can be read by AI search tools as well as by people. Template sites with nothing specific to say are the part of the market shrinking.',
   },
 
   // ---------- Cost and scope ----------
@@ -68,6 +76,12 @@ export const FAQS: Faq[] = [
     q: 'Is there a monthly fee to have a website?',
     topic: 'Cost and scope',
     a: 'Yes, usually small. The domain is billed yearly and hosting monthly or yearly. If the site takes bookings or payments there is normally a platform or transaction fee too. What you should not be paying is a monthly fee purely to keep pages online with an agency holding the keys. Our work is yours outright, including the domain.',
+  },
+
+  {
+    q: 'How much does it cost for a website designer in Adelaide?',
+    topic: 'Cost and scope',
+    a: 'We do not publish a number, because the honest answer depends on four things: how many pages you need, whether the words and photos already exist, what the site must connect to (bookings, a store, a CRM), and how much search work comes with it. A freelancer, a large Adelaide agency and a senior remote team will all quote differently for the same brief. Ask each one to price the same written scope so you can compare like with like.',
   },
 
   // ---------- Websites ----------
@@ -102,6 +116,17 @@ export const FAQS: Faq[] = [
     a: 'There is no single best one and anyone naming one without asking what you sell is guessing. For a simple site you will maintain yourself, a hosted builder is sensible. For products, a dedicated commerce platform is better. If you need bookings, logins or a link to software you already run, a builder will fight you and a purpose-built site will not.',
   },
 
+  {
+    q: "What are the 7 C's of a website?",
+    topic: 'Websites',
+    a: "It is a checklist from e-commerce teaching: context (layout and look), content (what is on the page), community (reviews and conversation), customisation (tailoring to the visitor), communication (ways to talk to you), connection (links to and from other sites) and commerce (the ability to buy). For a small Adelaide business the useful ones are content, communication and connection. If a site says clearly what you do, makes contact easy and is linked from real local sites, it is ahead of most.",
+  },
+  {
+    q: 'Can you build an online store for an Adelaide business?',
+    topic: 'Websites',
+    a: 'Yes. Online stores are the work FactoryJet has done longest, for more than a decade. For most Adelaide retailers and producers we recommend Shopify, because it handles GST, Afterpay and Australia Post shipping well out of the box. Wineries and wholesalers with trade pricing sometimes need more. Our Shopify development and ecommerce development pages for Australia explain how we choose the platform and what a store build involves.',
+  },
+
   // ---------- SEO ----------
   {
     q: 'How long does SEO take to show results in 2026?',
@@ -134,6 +159,22 @@ export const FAQS: Faq[] = [
     a: 'No. Paid link schemes breach Google spam policies and the cleanup after a manual penalty costs more than the links did, on top of the traffic lost while it is in place. If an agency offers a fixed number of links per month for a fixed fee, ask exactly where they come from. A vague answer is the answer.',
   },
 
+  {
+    q: 'Where can I find SEO services in Adelaide?',
+    topic: 'SEO',
+    a: 'Search the exact terms you want to win and look at who ranks in the ordinary results below the map, since that shows skill rather than claims it. Ask other South Australian business owners who they used and what happened after launch. Then ask every candidate three things: who does the work, how they report on enquiries rather than rankings, and what you keep if you leave. A remote team can serve Adelaide well; what matters is who does the work.',
+  },
+  {
+    q: 'Which SEO agency is the best in Adelaide?',
+    topic: 'SEO',
+    a: 'No agency is best for everyone, and one that answers this with its own name is showing you how it sells. Adelaide has capable local studios, national agencies with an Adelaide page, and remote teams like ours. The right one depends on whether you need local map visibility, national B2B reach, or a site rebuilt first. Pick the one whose answer to your specific problem is the most concrete, and whose reports you could actually act on.',
+  },
+  {
+    q: 'Is SEO replaced by AI?',
+    topic: 'SEO',
+    a: 'No, but it has widened. People still search Google, and when we checked in September 2026 Google showed no AI Overview on the main Adelaide web design and SEO searches, so ordinary rankings still earn the click there. At the same time buyers ask ChatGPT and Perplexity for recommendations, and those tools read the same pages Google does. Clear, specific pages with real facts serve both. Our AI SEO page covers the AI side in detail.',
+  },
+
   // ---------- Google and local search ----------
   {
     q: 'How can I get my business to show up on Google Maps?',
@@ -154,5 +195,10 @@ export const FAQS: Faq[] = [
     q: 'Why is my business not showing up on Google?',
     topic: 'Google and local search',
     a: 'Most often the profile is unverified, duplicates an older listing, or has been suspended for a guidelines breach. It can also be that you are checking from an address far from the business, since Maps results move with the searcher. Check the profile status, then search your own business name for duplicates, then look at whether your categories describe what you actually sell.',
+  },
+  {
+    q: 'Does FactoryJet have an office in Adelaide?',
+    topic: 'Google and local search',
+    a: 'No, and we would rather say so than imply one. We work with Adelaide businesses remotely, with video workshops and calls in Australian business hours, and the founder is involved in every project. For your own Google Maps ranking this makes no difference: the map results depend on your business address and your listing, not on where your web designer sits.',
   },
 ];

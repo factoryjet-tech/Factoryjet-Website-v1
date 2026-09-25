@@ -1,0 +1,30 @@
+Images for /au/melbourne, generated 2026-09-25 (redesign into the AU design system)
+Model: openai:gpt-image@2.5-flare via Runware API, 1536x1024 PNG, resized with ImageMagick (resize ^ + centre extent), converted with cwebp -q 82.
+All images reviewed at full size for hands, faces, garbled text, real logos and screen geometry (screens face the people using them, or are seen edge-on/from behind).
+AI-generated people (permitted per CLAUDE.md, ban lifted 2026-08-03). None resembles an identifiable real person. None reused on any other AU page.
+
+Shared style suffix appended to every prompt: "Bright high-key commercial photography in Australia, natural warm Australian daylight. Crisp sharp focus. Airy, calm, confident mood. Accurate natural skin tones. Hands anatomically correct with exactly five natural fingers in relaxed natural poses. One warm orange object in frame as the only strong colour accent. No words, no letters and no numbers anywhere in the image, no signage text, no logos, no real brand names. Photorealistic, professional colour grading, no illustration."
+
+melbourne-hero.webp (1400x933) + melbourne-og.webp (1200x630 centre crop)
+Review: Hero. Over-the-shoulder, monitor faces both people; screen shows image blocks and bars, no text. Green and cream Melbourne tram and plane trees outside, CBD towers. Hands correct (her pointing hand five fingers).
+Prompt: "Over-the-shoulder camera angle from behind two people seated side by side at a long timber desk in a converted red-brick warehouse studio in Collingwood, Melbourne, with tall steel-framed windows showing a Melbourne street with a green and cream tram passing and bare plane trees. A web designer man in his thirties with a beard and a woman business owner in her fifties with silver bob hair both look at a large monitor in front of them that faces them; the camera sees the screen from behind their shoulders. The screen shows a clean website homepage layout of a large photo block, soft coloured rectangles and button shapes, no words and no numbers on screen. A printed sitemap sketch of boxes on the desk, an orange mug." + style suffix
+
+melbourne-laneway.webp (1200x800)
+Review: "Who we build for" section. Bluestone laneway, abstract murals (shapes only), phone back faces camera. Hands correct. No signage text.
+Prompt: "A smiling cafe owner in her forties with dark hair tied back stands in the doorway of her small cafe in a narrow cobbled bluestone Melbourne CBD laneway with outdoor stools, hanging plants and colourful painted walls with abstract murals of shapes only. She holds a smartphone in front of her looking at it, the camera positioned to her side so the back of the phone faces the camera. Morning light down the laneway, an orange stool." + style suffix
+
+melbourne-workshop.webp (1200x800)
+Review: Process section. Southbank meeting room, Yarra River and bridge below, CBD towers. Whiteboard has empty boxes and arrows only; sticky notes blank. Hands correct.
+Prompt: "A planning workshop in a bright Southbank office meeting room in Melbourne with floor-to-ceiling windows overlooking the Yarra River and city towers. A web strategist woman in her thirties stands at a whiteboard drawing a website sitemap made only of connected empty boxes and arrows, no writing. Two business owners, a man in his sixties and a younger woman, sit at the table watching and smiling, sticky notes blank in pastel colours on the table, an orange folder." + style suffix
+
+melbourne-trades.webp (1200x800)
+Review: SEO consulting / local search section. Red-brick Edwardian houses with iron lace verandahs, autumn plane trees, van has no lettering, phone back faces camera. Hands correct.
+Prompt: "A plumber in his thirties in a navy work shirt stands beside his plain white van with no lettering on a quiet tree-lined street of Edwardian red-brick houses with verandahs in suburban Melbourne on a clear autumn morning. He holds a smartphone at chest height reading it with a slight smile, camera to his side so the back of the phone faces the camera. An orange toolbag at his feet." + style suffix
+
+melbourne-clinic.webp (1200x800)
+Review: Integrations section. Attempt 1 rejected: faux lettering on shopfronts across the street; a local blur landed on the patient face, so the image was regenerated with a frosted window. Attempt 2 accepted: monitor seen edge-on, facing the receptionist; anatomy chart on wall has no text. Hands correct.
+Prompt: "Front reception desk of a calm allied health physiotherapy clinic inside a renovated Victorian terrace in Richmond, Melbourne, with an ornate pressed-metal ceiling, timber floorboards, a heritage arched window with frosted glass letting in soft light, and indoor plants. A receptionist woman in her twenties with glasses sits behind the desk looking at a monitor that faces her, camera placed beside the desk so the monitor is seen only from its side edge. A patient man in his fifties stands at the counter smiling. An orange vase of native flowers on the counter. Nothing visible through the window except soft light." + style suffix
+
+melbourne-b2b.webp (1200x800)
+Review: Ecommerce/B2B section. Dandenong South light-industrial warehouse, plain unlabelled cartons, tablet back faces camera, orange forklift has no branding. Hands correct.
+Prompt: "Inside a bright clean light-industrial manufacturing warehouse in Dandenong South, Melbourne, with a high roller door open to daylight and neat racking of plain unlabelled boxes. A woman operations manager in her forties in a high-visibility vest over a shirt stands beside a stainless steel workbench holding a tablet with the screen facing herself, talking with a male warehouse worker who points at a pallet of plain boxes. Camera to the side so the back of the tablet faces the camera. An orange forklift in the background." + style suffix

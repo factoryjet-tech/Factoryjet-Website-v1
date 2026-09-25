@@ -257,10 +257,26 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     locale: 'en_AU',
     type: 'website',
-    images: [{ url: '/images/au/ai-seo/ai-seo-og.webp', width: 1200, height: 630, alt: 'AI SEO in Australia: a FactoryJet specialist and a marketing manager reviewing AI assistant answers in a Sydney office' }],
+    images: [{ url: '/images/au/ai-seo/ai-seo-og.webp', width: 1200, height: 630, alt: 'AI SEO in Australia: a marketing manager in Brisbane comparing an AI assistant answer on her phone with search results on her laptop' }],
   },
   robots: { index: true, follow: true },
 };
+
+/* Page-scoped fixes from the 2026-09-25 visual QA pass. Rendered only on this
+   page, so the shared au-service.css is untouched:
+   1. FAQ rows showed two open/close icons (the chevron AND the generic "+"
+      that au-service.css adds to every summary). Keep the chevron only.
+   2. au-service.css hides every <nav> inside .au-svc below 768px, which also
+      hid the breadcrumb trail on phones. Bring the trail back.
+   3. Comparison table: give it a minimum width and let it scroll sideways on
+      phones instead of squashing the FactoryJet column off-screen. */
+const PAGE_CSS = `
+.au-svc details.faq-item summary::after,.au-svc details.faq-item[open] summary::after{content:none}
+.au-svc .cmp-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.au-svc .cmp-scroll .cmp-table{min-width:720px}
+.au-svc .tbl-hint{display:none;font-family:'Geist Mono',monospace;font-size:11px;color:#6E6E68;margin-top:10px}
+@media(max-width:768px){.au-svc nav[aria-label="Breadcrumb"]{display:block!important}.au-svc .tbl-hint{display:block}}
+`;
 
 const srcNote = { fontFamily: T.fm, fontSize: 11, color: T.n400, marginTop: 12 } as const;
 const srcLink = { textDecoration: 'underline' } as const;
@@ -271,6 +287,7 @@ export default function AiSeoAUPage() {
     <>
       <script id="ld-au-ai-seo" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <style dangerouslySetInnerHTML={{ __html: PAGE_CSS }} />
 
       <SiteHeader locale="au" logoHref="/au" />
       <div className="au-svc">
@@ -308,7 +325,7 @@ export default function AiSeoAUPage() {
               </div>
 
               <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/ai-seo/ai-seo-hero.webp" width={1400} height={933} fetchPriority="high" decoding="async" alt="A FactoryJet AI SEO specialist and an Australian marketing manager reviewing AI assistant answers on a laptop in a Sydney office overlooking the harbour" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+                <img src="/images/au/ai-seo/ai-seo-hero.webp" width={1400} height={933} fetchPriority="high" decoding="async" alt="Over-the-shoulder view of an Australian marketing manager in a Brisbane office comparing an AI assistant's answer on her phone with a search results page on her laptop, with a FactoryJet AI SEO specialist beside her" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
                 <div style={{ padding: '14px 12px 8px' }}>
                   <span className="eyebrow">What we measured before writing this page</span>
                   <div className="scorecard-row">
@@ -455,7 +472,7 @@ export default function AiSeoAUPage() {
             </div>
             <div className="col-6040 mt-10">
               <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: `1px solid ${T.n200}`, padding: '14px 18px' }}>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, justifyContent: 'space-between', alignItems: 'center', borderBottom: `1px solid ${T.n200}`, padding: '14px 18px' }}>
                   <span style={{ fontFamily: T.fm, fontSize: 10, letterSpacing: '.13em', textTransform: 'uppercase', color: T.n400 }}>Sources cited · 51 AI answers</span>
                   <span style={{ background: T.small, color: '#fff', fontFamily: T.fm, fontSize: 10, borderRadius: 999, padding: '3px 9px' }}>FactoryJet test</span>
                 </div>
@@ -494,9 +511,9 @@ export default function AiSeoAUPage() {
 
             <h3 className="mt-12" style={{ maxWidth: 760 }}>What this means for your business</h3>
             <ul className="col-3 mt-6">
-              <li className="svc-card"><h3>Your directory profiles are now marketing</h3><p className="mt-4">If assistants build shortlists from Clutch, GoodFirms and similar sites, an empty or out-of-date profile is a missed mention. Complete profiles with accurate services, locations and genuine reviews matter more than they used to.</p></li>
-              <li className="svc-card"><h3>Being on the lists matters</h3><p className="mt-4">“Best of” lists feed a large share of answers. You cannot buy your way onto honest ones, but you can make sure the people who write them know you exist and can check your claims easily.</p></li>
-              <li className="svc-card"><h3>Your own site still has to be readable</h3><p className="mt-4">Assistants check the businesses they name. A site that blocks AI crawlers, hides key facts in images, or never says plainly what you do and where makes that check harder.</p></li>
+              <li className="card"><h3>Your directory profiles are now marketing</h3><p className="mt-4">If assistants build shortlists from Clutch, GoodFirms and similar sites, an empty or out-of-date profile is a missed mention. Complete profiles with accurate services, locations and genuine reviews matter more than they used to.</p></li>
+              <li className="card"><h3>Being on the lists matters</h3><p className="mt-4">“Best of” lists feed a large share of answers. You cannot buy your way onto honest ones, but you can make sure the people who write them know you exist and can check your claims easily.</p></li>
+              <li className="card"><h3>Your own site still has to be readable</h3><p className="mt-4">Assistants check the businesses they name. A site that blocks AI crawlers, hides key facts in images, or never says plainly what you do and where makes that check harder.</p></li>
             </ul>
           </div>
         </section>
@@ -510,7 +527,7 @@ export default function AiSeoAUPage() {
               AI SEO does not replace classic SEO. It changes the scoreboard and adds new work on top. This table
               shows where the two differ, and how we run them together.
             </p>
-            <div className="card mt-8" style={{ padding: 0, overflow: 'auto' }}>
+            <div className="card mt-8 cmp-scroll" style={{ padding: 0 }}>
               <table className="cmp-table">
                 <thead>
                   <tr>
@@ -533,6 +550,7 @@ export default function AiSeoAUPage() {
                 </tbody>
               </table>
             </div>
+            <p className="tbl-hint">Swipe sideways to see the FactoryJet column →</p>
             <p className="mt-6" style={{ maxWidth: 780 }}>
               If most of your enquiries come from Google Maps or local searches, classic local SEO is still the
               bigger lever, and our <a href="/au/seo" style={inLink}>SEO services for Australian businesses</a> page
@@ -571,11 +589,11 @@ export default function AiSeoAUPage() {
                 </div>
               </div>
               <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/ai-seo/ai-seo-workshop.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Two colleagues in a bright Melbourne office mapping buyer questions on a whiteboard with rows of sticky notes" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+                <img src="/images/au/ai-seo/ai-seo-workshop.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Two people at a timber meeting table in a Melbourne office sorting blank index cards of buyer questions into three columns" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
                 <div style={{ padding: '14px 12px 8px' }}>
                   <p style={{ fontSize: 14 }}>
-                    Step one happens on a whiteboard, not in a tool. We sort buyer questions by how close each one is
-                    to a sale. “What is GEO?” is research. “Best GEO agency in Sydney” is someone ready to call.
+                    Step one happens at a table, not in a tool. We sort buyer questions into piles by how close each
+                    one is to a sale. “What is GEO?” is research. “Best GEO agency in Sydney” is someone ready to call.
                   </p>
                 </div>
               </div>
@@ -639,13 +657,13 @@ export default function AiSeoAUPage() {
               <span className="eyebrow">Be honest with yourself</span>
               <h2>Do you need AI SEO now, or classic SEO first?</h2>
               <p className="lead mt-4">
-                Open the list that sounds most like you. If you tick three or more in one list, that is probably
-                where to start.
+                Read the list that sounds most like you (tap a heading to fold it away). If you tick three or more in
+                one list, that is probably where to start.
               </p>
             </div>
             <div className="col-2 mt-8" style={{ gap: 24 }}>
               <div className="card">
-                <details>
+                <details open>
                   <summary>AI SEO is worth doing now if...</summary>
                   <ul className="scope-list" style={{ paddingBottom: 12 }}>
                     <li>Your buyers are business owners or managers who research suppliers before calling.</li>
@@ -658,7 +676,7 @@ export default function AiSeoAUPage() {
                 </details>
               </div>
               <div className="card">
-                <details>
+                <details open>
                   <summary>Classic SEO should come first if...</summary>
                   <ul className="scope-list" style={{ paddingBottom: 12 }}>
                     <li>Most of your work comes from Google Maps and “near me” searches.</li>
@@ -743,7 +761,13 @@ export default function AiSeoAUPage() {
                 </div>
               </div>
               <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/ai-seo/ai-seo-warehouse.webp" width={1200} height={800} loading="lazy" decoding="async" alt="An online homewares business owner packing an order in a bright Melbourne warehouse while a colleague checks orders on a tablet" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+                <img src="/images/au/ai-seo/ai-seo-warehouse.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A FactoryJet web engineer checking a product page on his laptop while the owner of a Melbourne linen brand stands beside him holding a folded sheet" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+                <div style={{ padding: '14px 12px 8px' }}>
+                  <p style={{ fontSize: 14 }}>
+                    Product facts an assistant can repeat start on the product page: clear names, sizes, materials,
+                    stock and delivery details, written as text and marked up with structured data.
+                  </p>
+                </div>
               </div>
             </div>
             <ul className="col-3 mt-12">
@@ -760,7 +784,8 @@ export default function AiSeoAUPage() {
         {/* ═══ 12. HONEST LIMITS + ACCC ═══ */}
         <section className="sec-lg dot-grid">
           <div className="wrap">
-            <div style={{ maxWidth: 780 }}>
+            <div className="col-6040">
+            <div>
               <span className="eyebrow">What we will not do</span>
               <h2>Shortcuts that can hurt your business, and why we avoid them</h2>
               <div className="stack mt-6">
@@ -786,6 +811,16 @@ export default function AiSeoAUPage() {
                 Sources: <a href={SRC_ACCC} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>ACCC, online product and service reviews</a>;{' '}
                 <a href={SRC_GEO_PAPER} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>Aggarwal et al., GEO: Generative Engine Optimization (arXiv:2311.09735)</a>.
               </p>
+            </div>
+            <div className="card" style={{ padding: 8 }}>
+              <img src="/images/au/ai-seo/ai-seo-reviews.webp" width={1200} height={800} loading="lazy" decoding="async" alt="The owner of a small Adelaide bakery chatting with a regular customer as she hands him his bread across the counter" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+              <div style={{ padding: '14px 12px 8px' }}>
+                <p style={{ fontSize: 14 }}>
+                  The reviews worth having come from moments like this one. We help you ask real customers at the
+                  right time. We never write a review for you or pay for one.
+                </p>
+              </div>
+            </div>
             </div>
             <ul className="col-3 mt-10">
               <li className="card"><h3>What we do</h3><p className="mt-4">Help you ask real customers for honest reviews, complete your listings, and publish pages with facts an assistant can check.</p></li>
@@ -823,11 +858,23 @@ export default function AiSeoAUPage() {
                   <a className="city-pill" href="/au/ecommerce-development">Ecommerce development Australia</a>
                   <a className="city-pill" href="/au/melbourne">Melbourne</a>
                   <a className="city-pill" href="/au/brisbane">Brisbane</a>
+                  <a className="city-pill" href="/au/adelaide">Adelaide</a>
+                  <a className="city-pill" href="/au/canberra">Canberra</a>
                 </div>
               </div>
 
+              <div className="stack">
+              <div className="card" style={{ padding: 8 }}>
+                <img src="/images/au/ai-seo/ai-seo-remote.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A Perth business owner on a video call with the FactoryJet team, reviewing a shared AI visibility report on his laptop, with the Swan River outside his office window" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+                <div style={{ padding: '14px 12px 8px' }}>
+                  <p style={{ fontSize: 14 }}>
+                    Perth, Hobart or Parramatta: the monthly review is a video call over the same shared report, in
+                    your business hours.
+                  </p>
+                </div>
+              </div>
               <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: `1px solid ${T.n200}`, padding: '14px 18px' }}>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, justifyContent: 'space-between', alignItems: 'center', borderBottom: `1px solid ${T.n200}`, padding: '14px 18px' }}>
                   <span style={{ fontFamily: T.fm, fontSize: 10, letterSpacing: '.13em', textTransform: 'uppercase', color: T.n400 }}>Australia · Monthly Search Demand</span>
                   <span style={{ background: T.small, color: '#fff', fontFamily: T.fm, fontSize: 10, borderRadius: 999, padding: '3px 9px' }}>DataForSEO</span>
                 </div>
@@ -853,6 +900,7 @@ export default function AiSeoAUPage() {
                   <p style={{ textAlign: 'center', fontFamily: T.fm, fontSize: 10, color: T.n400, marginTop: 10 }}>Source: DataForSEO, Australia, September 2026</p>
                 </div>
               </div>
+              </div>
             </div>
           </div>
         </section>
@@ -870,9 +918,9 @@ export default function AiSeoAUPage() {
                 position before you sign.
               </p>
             </div>
-            <ul className="stack mt-10" style={{ maxWidth: 900 }}>
+            <ul className="col-2 mt-10">
               {AU_AGENCIES.map((a, i) => (
-                <li key={a.name} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
+                <li key={a.name} className={a.name === 'FactoryJet' ? 'card card-top-orange' : 'card'} style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
                   <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.orange, minWidth: 30 }}>{i + 1}</span>
                   <div>
                     <h3 style={{ fontSize: 18 }}>{a.name}{a.name === 'FactoryJet' && <span style={{ fontFamily: T.fm, fontSize: 10, background: T.small, color: '#fff', borderRadius: 999, padding: '2px 8px', marginLeft: 8, verticalAlign: 'middle' }}>That is us</span>}</h3>
@@ -906,6 +954,14 @@ export default function AiSeoAUPage() {
               <span className="eyebrow">FAQ</span>
               <h2>AI SEO questions Australian business owners actually ask</h2>
             </div>
+            <nav className="faq-pill-nav" aria-label="FAQ categories">
+              {FAQ_CATEGORIES.map((c) => (
+                <a key={c.key} href={`#faq-${c.key}`}>
+                  {c.label}{' '}
+                  <span className="pill-count">{FAQ_ITEMS.filter((f) => f.category === c.key).length}</span>
+                </a>
+              ))}
+            </nav>
             <div className="faq-grid">
               <aside className="faq-sidebar">
                 <span className="faq-sidebar-topics">Topics</span>
@@ -967,7 +1023,7 @@ export default function AiSeoAUPage() {
 
       </main>
       </div>
-      <SiteFooter linkColumns={AU_FOOTER_COLUMNS} variant="dark" tagline="Ecommerce, AI agents, websites and AI search for Australian businesses. Built by senior engineers, supported after launch, owned by you." />
+      <SiteFooter locale="au" linkColumns={AU_FOOTER_COLUMNS} variant="dark" tagline="Ecommerce, AI agents, websites and AI search for Australian businesses. Built by senior engineers, supported after launch, owned by you." />
     </>
   );
 }

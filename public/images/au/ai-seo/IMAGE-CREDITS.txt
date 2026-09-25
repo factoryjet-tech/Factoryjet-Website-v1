@@ -24,3 +24,54 @@ Review: tablet screen is angled toward the man who is reading it (correct geomet
 2026-09-25 (orchestrator review): ai-seo-warehouse.webp REPLACED. The first version showed the tablet screen
 angled toward the camera while the man looked at it from the side. Regenerated with openai:gpt-image@2
 using an over-the-shoulder camera so the screen faces him and the viewer. Reviewed at full size.
+
+==========================================================================
+2026-09-25 VISUAL QA REFRESH (qa-au-seo-shopify)
+Model: openai:gpt-image@2.5-flare via Runware, 1536x1024 PNG, resized/cropped with ImageMagick (-strip),
+cwebp -q 82 (hero -q 74 for LCP). Every image opened and reviewed at full size.
+Why: the old hero was near-identical to the /au/shopify-development hero (same two people, same laptop,
+same harbour view); the whiteboard and packing-bench scenes repeated a genre used on /au/ai-agents,
+/au/ecommerce-development and /au/shopify-development. Two text-only sections needed an image.
+
+Style suffix (all prompts): "Bright high-key commercial photography in Australia, natural Australian daylight.
+Crisp sharp focus, deep depth of field. Calm, confident mood. Accurate natural skin tones. Hands anatomically
+correct with exactly five natural fingers in relaxed poses. Exactly one warm orange object in frame as the only
+strong colour accent. No logos, no brand names, no readable text or numbers anywhere; all screens show only soft
+abstract shapes, photos and blank bars with no words and no numbers. Photorealistic, professional colour
+grading, no illustration."
+
+ai-seo-hero.webp (1400x933) + ai-seo-og.webp (1200x630 centre crop). REPLACED. Section: hero.
+Prompt: over-the-shoulder view behind a marketing manager of an Australian homewares brand at a timber desk in a
+bright Brisbane office (timber verandah, palms), phone in her hand showing a chat-style answer of grey bubbles,
+laptop showing a search results layout with a highlighted summary box; male colleague beside her; orange mug.
+Review: both screens face her (geometry correct). Screens show only grey bubbles/bars and image placeholders.
+Brisbane skyline and palms through window. Colleague's hand on desk, five fingers. No logos. First attempt passed.
+
+ai-seo-workshop.webp (1200x800). REPLACED (was whiteboard + sticky notes). Section: process, step one.
+Prompt: angled top-down view of a timber meeting table in a Melbourne office, two people's hands sorting about
+thirty blank index cards into three columns; closed laptop, glass of water, orange pencil case; hands only.
+Review: all cards blank. Four hands, each natural. Tablet and book in corners show photos of a river skyline,
+no text. First attempt passed.
+
+ai-seo-warehouse.webp (1200x800). REPLACED (was packing bench). Section: "AI SEO works better when the same
+team can fix the site" (product data readable by machines; text mentions linen sheets).
+Prompt: over-the-shoulder view behind a web engineer at a work table in a Melbourne linen brand's studio, folded
+linen stacks beside him, laptop showing a product page (one linen photo, grey bars); the grey-haired owner stands
+beside him holding a folded sheet; orange cup.
+Review: laptop faces him (geometry correct). Hands natural. Mood-board photos on the wall carry no text.
+Filename kept for stability. First attempt passed.
+
+ai-seo-reviews.webp (1200x800). NEW. Section: "Shortcuts that can hurt your business" (honest reviews, ACCC).
+Prompt: small bakery cafe in Adelaide, morning light; owner in linen apron hands a paper bag of bread to a smiling
+regular customer in his sixties; pastry cabinet; no signs or menu boards; orange enamel cup.
+Review: four hands on the bag, all natural. No signage, no text, espresso machine unbranded. First attempt passed.
+
+ai-seo-remote.webp (1200x800). NEW. Section: "AI SEO services across Sydney, Melbourne, Brisbane and beyond"
+(remote delivery, video reviews and shared reports).
+Prompt: over-the-shoulder view behind a Perth business owner in his fifties, Swan River and Perth skyline through
+the window, laptop showing a video call with two small video tiles and a report of coloured bar shapes with no
+labels; open-hand gesture; orange notepad.
+Review: laptop faces him (geometry correct). Chart has no axes, labels or numbers. Gesturing hand has five
+fingers. Faces in the video tiles natural. First attempt passed.
+
+ai-seo-tradie.webp: KEPT. Distinct scene (inside a right-hand-drive van cab) that matches its section.

@@ -11,7 +11,7 @@ import '../au-service.css';
 const CANONICAL = 'https://factoryjet.com/au/ai-development';
 const UPDATED = '2026-09-25';
 const TITLE = 'AI Development Company Australia | Custom AI | FactoryJet';
-const H1 = 'The AI Development Company for Australian Businesses That Want AI Inside the Systems They Already Run';
+const H1 = 'AI Development Company in Australia: Custom AI Built Into the Systems You Already Run';
 const DESCRIPTION =
   'AI development company in Australia for SMEs and mid-market. Custom AI development, AI integration with Xero, MYOB, CRM and ERP, and AI implementation you own.';
 
@@ -259,6 +259,16 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
+/* Page-scoped layout fixes (QA 2026-09-25). The shared au-service.css adds a
+   '+' via summary::after to every <details>, which doubles up with the
+   chevron on .faq-item expanders; tables need a minimum width so they scroll
+   sideways on phones instead of squashing; the demand card header must wrap. */
+const PAGE_CSS = `
+.au-adv .faq-item summary::after{content:none}
+.au-adv .cmp-table{min-width:720px}
+.au-adv .demand-head{flex-wrap:wrap;gap:8px}
+`;
+
 const srcNote = { fontFamily: T.fm, fontSize: 11, color: T.n400, marginTop: 12 } as const;
 const srcLink = { textDecoration: 'underline' } as const;
 const detailBody = { padding: '0 0 20px', maxWidth: 820 } as const;
@@ -306,7 +316,9 @@ export default function AiDevelopmentAUPage() {
 
       <SiteHeader locale="au" logoHref="/au" />
 
-      <div className="au-svc">
+      <style dangerouslySetInnerHTML={{ __html: PAGE_CSS }} />
+
+      <div className="au-svc au-adv">
       <main>
 
         <Breadcrumbs items={crumbs} />
@@ -427,23 +439,24 @@ export default function AiDevelopmentAUPage() {
                 first is working. None of them asks you to replace the software you run today.
               </p>
             </div>
-            <ol className="stack mt-10" style={{ maxWidth: 920 }}>
-              {[
+            <ol className="col-2 mt-10">
+              {([
                 { n: '01', t: 'Answers from your own documents', d: 'A private search box that answers staff or customer questions from your policies, manuals, contracts and price lists, and shows which page each answer came from. Example: a Brisbane wholesaler’s sales team asks about trade terms for a new customer and gets the exact clause, not a guess.' },
                 { n: '02', t: 'AI with Xero and MYOB', d: 'AI that reads supplier bills and receipts from an inbox, suggests the account code and GST treatment based on how you have coded similar bills before, and leaves a draft for your bookkeeper to approve. Nothing posts without a person.' },
                 { n: '03', t: 'Document and email processing', d: 'AI that reads purchase orders, delivery dockets, application forms or claims and pulls the key details into your systems. Example: emailed purchase orders from trade buyers become draft sales orders in your ERP, ready for a person to check.' },
                 { n: '04', t: 'AI inside your CRM', d: 'Call and email summaries on the customer record, suggested next steps, and first-draft quotes and follow-ups written in your tone. Example: after a sales call, the notes, actions and a draft reply are waiting in HubSpot or Salesforce before the rep has put the phone down.' },
-                { n: '05', t: 'AI for ecommerce operations', d: 'Product descriptions drafted from supplier data, cleaner attributes and categories, better on-site search, and returns reasons sorted into themes. This is our home ground; see our Australian ecommerce development and Shopify development work.' },
+                { n: '05', t: 'AI for ecommerce operations', d: 'Product descriptions drafted from supplier data, cleaner attributes and categories, better on-site search, and returns reasons sorted into themes. This is our home ground.', link: { href: '/au/ecommerce-development', label: 'Ecommerce development in Australia' } },
                 { n: '06', t: 'Helpdesk and inbox triage', d: 'Incoming tickets and emails sorted, tagged, prioritised and given a suggested reply, with anything sensitive routed straight to a person. Example: “where is my order” questions get a drafted answer with tracking pulled in; complaints go to a manager.' },
                 { n: '07', t: 'AI in Microsoft 365', d: 'Connections between AI and SharePoint, Outlook, Teams and Excel, so answers and actions happen where your team already works. Example: a Teams assistant that finds the latest signed version of a supplier agreement in SharePoint.' },
                 { n: '08', t: 'Internal AI tools and apps', d: 'Small, focused applications for one team: a quote builder, a compliance checker, a report writer that pulls numbers from three systems. Example: a weekly trading summary drafted from your shop, ERP and ad accounts, checked by a person, sent on Monday.' },
-                { n: '09', t: 'AI agents that take actions', d: 'AI that carries out multi-step tasks across your systems within rules you set, such as chasing an overdue invoice or rebooking a delivery. Agents need extra design care, so they have their own page: AI agents for Australian businesses.' },
-              ].map((s) => (
-                <li key={s.n} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
-                  <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.orange, minWidth: 34 }}>{s.n}</span>
+                { n: '09', t: 'AI agents that take actions', d: 'AI that carries out multi-step tasks across your systems within rules you set, such as chasing an overdue invoice or rebooking a delivery. Agents need extra design care, so they have their own page.', link: { href: '/au/ai-agents', label: 'AI agents for Australian businesses' } },
+              ] as { n: string; t: string; d: string; link?: { href: string; label: string } }[]).map((s) => (
+                <li key={s.n} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start', ...(s.n === '09' ? { gridColumn: '1 / -1' } : {}) }}>
+                  <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.small, minWidth: 34 }}>{s.n}</span>
                   <div>
                     <h3 style={{ fontSize: 18 }}>{s.t}</h3>
                     <p className="mt-2" style={{ marginTop: 6 }}>{s.d}</p>
+                    {s.link && <p style={{ marginTop: 8 }}><a href={s.link.href} style={{ color: T.small, textDecoration: 'underline' }}>{s.link.label}</a></p>}
                   </div>
                 </li>
               ))}
@@ -518,6 +531,8 @@ export default function AiDevelopmentAUPage() {
         {/* ═══ 6. PHASED DELIVERY (details expanders) ═══ */}
         <section className="sec-lg dot-grid">
           <div className="wrap">
+            <div className="col-6040">
+            <div>
             <div style={{ maxWidth: 780 }}>
               <span className="eyebrow">The AI development life cycle</span>
               <h2>AI implementation, step by step: six phases and how long each takes</h2>
@@ -527,7 +542,7 @@ export default function AiDevelopmentAUPage() {
                 total is shorter than the sum. Open each phase to see what happens and what you get at the end.
               </p>
             </div>
-            <ul className="faq-list mt-10" style={{ maxWidth: 920 }}>
+            <ul className="faq-list mt-10">
               {PHASES.map((p) => (
                 <li key={p.n}>
                   <details className="faq-item">
@@ -550,6 +565,18 @@ export default function AiDevelopmentAUPage() {
               integrations, older on-premise systems or sensitive health and financial data push toward the top of
               each range.
             </p>
+            </div>
+            <div className="card" style={{ padding: 8 }}>
+              <img src="/images/au/ai-development/ai-development-pilot.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Three colleagues in a bright Perth office talking through printed pilot results, shown as plain coloured bars, for a new AI tool at a round white table" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+              <div style={{ padding: '14px 12px 8px' }}>
+                <span className="eyebrow">Phase five in practice</span>
+                <p style={{ fontSize: 14 }}>
+                  The pilot review is a conversation with the people who used the tool on real work: where it was
+                  right, where it struggled, and whether the goal agreed in discovery has been met.
+                </p>
+              </div>
+            </div>
+            </div>
           </div>
         </section>
 
@@ -581,7 +608,7 @@ export default function AiDevelopmentAUPage() {
                 </div>
               </div>
               <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/ai-development/ai-development-warehouse.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A warehouse manager in a Brisbane distribution centre checking orders on a tablet in an aisle of stacked cartons" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+                <img src="/images/au/ai-development/ai-development-orders.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over-the-shoulder view of an office administrator at a Perth wholesaler holding a printed purchase order beside a stack of orders and dockets waiting to be keyed into the system" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
                 <div style={{ padding: '14px 12px 8px' }}>
                   <span className="eyebrow">Why this is a good first project</span>
                   <div className="scorecard-row"><div className="scorecard-metric">Repeated every day</div><div className="scorecard-val" style={{ fontSize: 14 }}>Yes</div></div>
@@ -672,7 +699,8 @@ export default function AiDevelopmentAUPage() {
         {/* ═══ 10. PRIVACY ACT + AUSTRALIAN HOSTING ═══ */}
         <section className="sec-lg dot-grid">
           <div className="wrap">
-            <div style={{ maxWidth: 780 }}>
+            <div className="col-6040">
+            <div>
               <span className="eyebrow">Privacy Act and APPs, in plain English</span>
               <h2>AI development services with Australian privacy designed in, not bolted on</h2>
               <div className="stack mt-6">
@@ -711,6 +739,17 @@ export default function AiDevelopmentAUPage() {
                 <a href={SRC_AZURE_REGIONS} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>Microsoft Learn, Azure regions</a>.
               </p>
             </div>
+            <div className="card" style={{ padding: 8 }}>
+              <img src="/images/au/ai-development/ai-development-privacy.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A privacy officer in a calm, bright Adelaide office reviewing a printed data map of boxes and arrows that shows where each piece of information in an AI system goes" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+              <div style={{ padding: '14px 12px 8px' }}>
+                <span className="eyebrow">What your privacy lead receives</span>
+                <p style={{ fontSize: 14 }}>
+                  A plain data map: which information the system reads, where it is stored, which AI provider sees it
+                  and in which country. It is the starting point for a Privacy Impact Assessment.
+                </p>
+              </div>
+            </div>
+            </div>
             <ul className="col-3 mt-10">
               <li className="card"><h3>What we do</h3><p className="mt-4">Map the personal information each feature uses, remove what it does not need, choose providers with business terms that do not train on your inputs, and prepare the inputs for your Privacy Impact Assessment.</p></li>
               <li className="card"><h3>How we secure it</h3><p className="mt-4">Role-based access, secrets kept out of code, Australian hosting where you need it, logs of every AI action, and a person approving anything with real consequences.</p></li>
@@ -722,6 +761,8 @@ export default function AiDevelopmentAUPage() {
         {/* ═══ 11. WHICH FITS YOU (details checklist) ═══ */}
         <section className="sec-lg">
           <div className="wrap">
+            <div className="col-6040">
+            <div>
             <div style={{ maxWidth: 760 }}>
               <span className="eyebrow">Build, buy or integrate?</span>
               <h2>Which kind of AI project fits your business?</h2>
@@ -730,7 +771,7 @@ export default function AiDevelopmentAUPage() {
                 to have before you talk to any AI development company.
               </p>
             </div>
-            <ul className="faq-list mt-8" style={{ maxWidth: 920 }}>
+            <ul className="faq-list mt-8">
               {FIT.map((f) => (
                 <li key={f.t}>
                   <details className="faq-item">
@@ -751,6 +792,17 @@ export default function AiDevelopmentAUPage() {
                 </li>
               ))}
             </ul>
+            </div>
+            <div className="card card-top-orange">
+              <span className="eyebrow">The quick version</span>
+              <div className="scorecard-row"><div><div className="scorecard-metric">Writing, summaries, meeting notes</div><div className="scorecard-note">general work, no customer data</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Buy</div></div>
+              <div className="scorecard-row"><div><div className="scorecard-metric">Copying between two systems</div><div className="scorecard-note">Xero or MYOB, CRM, ERP, helpdesk</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Integrate</div></div>
+              <div className="scorecard-row"><div><div className="scorecard-metric">An AI tool nobody uses</div><div className="scorecard-note">usually not connected to your data</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Integrate</div></div>
+              <div className="scorecard-row"><div><div className="scorecard-metric">Rules only your business knows</div><div className="scorecard-note">pricing, approvals, exceptions</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Build</div></div>
+              <div className="scorecard-row"><div><div className="scorecard-metric">Personal information must stay onshore</div><div className="scorecard-note">Australian cloud regions</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Build</div></div>
+              <div className="scorecard-row"><div><div className="scorecard-metric">Still not sure</div><div className="scorecard-note">start with a short assessment</div></div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}><a href="/au/ai-consulting" style={{ textDecoration: 'underline' }}>Consult</a></div></div>
+            </div>
+            </div>
           </div>
         </section>
 
@@ -765,8 +817,10 @@ export default function AiDevelopmentAUPage() {
                 A weak one will steer you back to the demo.
               </p>
             </div>
-            <ol className="faq-list mt-8" style={{ maxWidth: 920, listStyle: 'none' }}>
-              {CHOOSE.map((c, i) => (
+            <div className="col-2 mt-8" style={{ gap: '0 48px' }}>
+            {[CHOOSE.slice(0, 5), CHOOSE.slice(5)].map((half, h) => (
+            <ol key={h} className="faq-list" start={h * 5 + 1} style={{ listStyle: 'none' }}>
+              {half.map((c, j) => { const i = h * 5 + j; return (
                 <li key={c.t}>
                   <details className="faq-item">
                     <summary>
@@ -778,8 +832,10 @@ export default function AiDevelopmentAUPage() {
                     <div style={detailBody}><p>{c.d}</p></div>
                   </details>
                 </li>
-              ))}
+              ); })}
             </ol>
+            ))}
+            </div>
           </div>
         </section>
 
@@ -812,7 +868,7 @@ export default function AiDevelopmentAUPage() {
                 </div>
               </div>
               <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/ai-development/ai-development-pilot.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Three colleagues in a bright Perth office reviewing pilot results for a new AI tool on printed charts around a white table" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+                <img src="/images/au/ai-development/ai-development-commerce.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over-the-shoulder view of a FactoryJet engineer and the owner of a Melbourne homewares wholesaler reviewing an internal tool on a laptop at the showroom counter" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
                 <div style={{ padding: '14px 12px 8px' }}>
                   <span className="eyebrow">What sets the scope</span>
                   <div className="scorecard-row"><div className="scorecard-metric">Number of systems to connect</div><div className="scorecard-val" style={{ fontSize: 14 }}>Reach</div></div>
@@ -886,7 +942,7 @@ export default function AiDevelopmentAUPage() {
               </div>
 
               <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: `1px solid ${T.n200}`, padding: '14px 18px' }}>
+                <div className="demand-head" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: `1px solid ${T.n200}`, padding: '14px 18px' }}>
                   <span style={{ fontFamily: T.fm, fontSize: 10, letterSpacing: '.13em', textTransform: 'uppercase', color: T.n400 }}>Australia · Monthly Search Demand</span>
                   <span style={{ background: T.small, color: '#fff', fontFamily: T.fm, fontSize: 10, borderRadius: 999, padding: '3px 9px' }}>DataForSEO</span>
                 </div>
@@ -928,10 +984,10 @@ export default function AiDevelopmentAUPage() {
                 what the company says on its own website. Talk to a few and pick the fit.
               </p>
             </div>
-            <ul className="stack mt-10" style={{ maxWidth: 900 }}>
+            <ul className="col-2 mt-10">
               {AI_DEV_COMPANIES.map((a, i) => (
-                <li key={a.name} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
-                  <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.orange, minWidth: 30 }}>{i + 1}</span>
+                <li key={a.name} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start', ...(i === 0 ? { borderColor: T.small } : {}), ...(i === AI_DEV_COMPANIES.length - 1 && AI_DEV_COMPANIES.length % 2 === 1 ? { gridColumn: '1 / -1' } : {}) }}>
+                  <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.small, minWidth: 30 }}>{String(i + 1).padStart(2, '0')}</span>
                   <div>
                     <h3 style={{ fontSize: 18 }}>{a.name}{a.name === 'FactoryJet' && <span style={{ fontFamily: T.fm, fontSize: 10, background: T.small, color: '#fff', borderRadius: 999, padding: '2px 8px', marginLeft: 8, verticalAlign: 'middle' }}>That is us</span>}</h3>
                     <p className="mt-2" style={{ marginTop: 6 }}>{a.note}</p>
@@ -952,6 +1008,14 @@ export default function AiDevelopmentAUPage() {
               <span className="eyebrow">FAQ</span>
               <h2>AI development questions Australian business owners actually ask</h2>
             </div>
+            <nav className="faq-pill-nav" aria-label="FAQ topics">
+              {FAQ_CATEGORIES.map((c) => (
+                <a key={c.key} href={`#faq-${c.key}`}>
+                  {c.label}
+                  <span className="pill-count">{FAQ_ITEMS.filter((f) => f.category === c.key).length}</span>
+                </a>
+              ))}
+            </nav>
             <div className="faq-grid">
               <aside className="faq-sidebar">
                 <span className="faq-sidebar-topics">Topics</span>
@@ -1014,7 +1078,7 @@ export default function AiDevelopmentAUPage() {
       </main>
       </div>
 
-      <SiteFooter linkColumns={AU_FOOTER_COLUMNS} variant="dark" tagline="Ecommerce, AI agents, websites and AI search for Australian businesses. Built by senior engineers, supported after launch, owned by you." />
+      <SiteFooter locale="au" linkColumns={AU_FOOTER_COLUMNS} variant="dark" tagline="Ecommerce, AI agents, websites and AI search for Australian businesses. Built by senior engineers, supported after launch, owned by you." />
     </>
   );
 }
