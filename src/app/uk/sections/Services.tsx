@@ -18,11 +18,14 @@ type Service = {
   body: string[];
   // "text | image" vs "image | text" — alternating rhythm.
   imageSide: "left" | "right";
+  // 2026-09-25: crawlable links to the UK pages for this service.
+  links: { label: string; href: string }[];
 };
 
 const SERVICES: Service[] = [
   {
     id: "web-design",
+    links: [{ label: "Web design UK", href: "/uk/web-design" }, { label: "London web design", href: "/uk/london/web-design" }, { label: "WooCommerce", href: "/uk/woocommerce" }],
     number: "01",
     name: "Web Design",
     heading: "Web Design & Development for UK Businesses",
@@ -39,6 +42,7 @@ const SERVICES: Service[] = [
   },
   {
     id: "ecommerce",
+    links: [{ label: "Ecommerce agency UK", href: "/uk/ecommerce-development" }, { label: "Shopify", href: "/uk/shopify-development" }, { label: "Shopify Plus", href: "/uk/shopify-plus" }, { label: "B2B ecommerce", href: "/uk/b2b-ecommerce" }, { label: "Ecommerce consultant", href: "/uk/ecommerce-consultant" }, { label: "Magento", href: "/uk/magento" }],
     number: "02",
     name: "E-Commerce",
     heading: "E-Commerce Development for UK Retailers & Brands",
@@ -55,6 +59,7 @@ const SERVICES: Service[] = [
   },
   {
     id: "ai-agents",
+    links: [{ label: "AI agents UK", href: "/uk/ai-agents" }, { label: "AI development", href: "/uk/ai-development" }, { label: "AI consulting", href: "/uk/ai-consulting" }, { label: "AI receptionist", href: "/uk/ai-receptionist" }],
     number: "03",
     name: "AI Agents",
     heading: "AI Agent Development for UK Businesses",
@@ -72,6 +77,7 @@ const SERVICES: Service[] = [
   },
   {
     id: "ai-seo",
+    links: [{ label: "AI SEO UK", href: "/uk/ai-seo" }, { label: "SEO agency UK", href: "/uk/seo" }, { label: "SEO audit", href: "/uk/seo-audit" }, { label: "Local SEO", href: "/uk/local-seo" }, { label: "Ecommerce SEO", href: "/uk/ecommerce-seo" }],
     number: "04",
     name: "AI SEO",
     heading:
@@ -203,6 +209,13 @@ function Panel({ service }: { service: Service }) {
             {service.body.map((p, i) => (
               <p key={i}>{p}</p>
             ))}
+            <p style={{ display: "flex", flexWrap: "wrap", gap: "8px 16px", marginTop: 4 }}>
+              {service.links.map((l) => (
+                <a key={l.href} href={l.href} style={{ color: "#FF8A5B", fontWeight: 600, textDecoration: "underline", textUnderlineOffset: 3 }}>
+                  {l.label} →
+                </a>
+              ))}
+            </p>
           </div>
 
         </div>

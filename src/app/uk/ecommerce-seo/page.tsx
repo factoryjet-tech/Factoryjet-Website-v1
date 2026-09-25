@@ -344,7 +344,7 @@ export default function EcommerceSeoPage() {
         <div style={{ background: 'var(--cream)', border: '1px solid var(--n200)', borderRadius: '16px', padding: '22px 24px' }}>
           <p style={{ fontFamily: 'var(--fm)', fontSize: '10px', letterSpacing: '.12em', textTransform: 'uppercase', color: '#B23E13', marginBottom: '12px' }}>WHO THIS IS FOR</p>
           <ul className="check-list">
-            <li>UK shops on <strong>Shopify, WooCommerce, Magento, BigCommerce</strong></li>
+            <li>UK shops on <strong><a href="/uk/shopify-development">Shopify</a>, <a href="/uk/woocommerce">WooCommerce</a>, <a href="/uk/magento">Magento</a>, BigCommerce</strong></li>
             <li>Brands whose <strong>organic revenue is flat</strong> while paid spend rises</li>
             <li>Anyone whose last agency <strong>reported rankings, never revenue</strong></li>
             <li>Shops that have <strong>never had a technical SEO audit</strong></li>

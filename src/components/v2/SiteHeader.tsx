@@ -49,6 +49,7 @@ import { useContactModal } from '../../context/ContactModalContext';
 import type { ModalRegion } from '../../context/ContactModalContext';
 import Wordmark from './Wordmark';
 import { MegaNavDesktop, MegaNavMobile } from './MegaNav';
+import { UK_SERVICE_HUBS, UK_SIMPLE_MENUS } from './megaNavData';
 
 // ─── Locale type ──────────────────────────────────────────────────────────────
 
@@ -557,8 +558,10 @@ export default function SiteHeader({
   // Who-we-serve/Company mega structure. Non-commerce locales (India/UAE) keep
   // the simpler Services + Locations layout.
   const isCommerce = locale === 'us' || locale === 'gb';
-  // US uses the four-hub mega menu (MegaNav.tsx); other locales keep the legacy menus.
-  const useMegaNav = (locale as string) === 'us';
+  // US and UK use the four-hub mega menu (MegaNav.tsx), UK with its own links
+  // (megaNavData UK_*). India and UAE keep the legacy menus.
+  const useMegaNav = locale === 'us' || locale === 'gb';
+  const megaData = locale === 'gb' ? { hubs: UK_SERVICE_HUBS, menus: UK_SIMPLE_MENUS } : {};
   const SOLUTIONS   = locale === 'gb' ? GB_SOLUTIONS          : US_SOLUTIONS;
   const SOLUTIONS_CORE = locale === 'gb' ? GB_SOLUTIONS_CORE : US_SOLUTIONS_CORE;
   const SOLUTIONS_MARKETPLACES = locale === 'gb' ? GB_SOLUTIONS_MARKETPLACES : US_SOLUTIONS_MARKETPLACES;
@@ -642,7 +645,7 @@ export default function SiteHeader({
             {/* Desktop nav */}
             <nav aria-label="Primary" className="hidden items-center gap-0.5 md:flex">
 
-              {useMegaNav && <MegaNavDesktop />}
+              {useMegaNav && <MegaNavDesktop {...megaData} />}
               {!useMegaNav && (<>
 
               {/* Services trigger + mega-dropdown (India / UAE only, US uses commerce menus below) */}
@@ -1643,7 +1646,7 @@ export default function SiteHeader({
         {/* Scrollable nav area */}
         <nav className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-4 py-3" aria-label="Mobile navigation">
 
-          {useMegaNav && <MegaNavMobile onNavigate={() => setMobileOpen(false)} />}
+          {useMegaNav && <MegaNavMobile onNavigate={() => setMobileOpen(false)} {...megaData} />}
           {!useMegaNav && (<>
 
           {/* Services accordion */}

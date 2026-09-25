@@ -23,7 +23,7 @@ import FAQ from "./sections/FAQ";
 import SocialProof from "./sections/SocialProof";
 import FinalCTA from "./sections/FinalCTA";
 import LogoMarquee from "./sections/LogoMarquee";
-import Footer from "./sections/Footer";
+import Footer from "@/app/uk/sections/Footer";
 
 export default function ManchesterPage({ children }: { children?: React.ReactNode }) {
   useEffect(() => {

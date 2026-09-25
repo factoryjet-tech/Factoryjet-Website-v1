@@ -524,7 +524,11 @@ export default function MagentoUKPage() {
               <p className="lead mt-4">
                 We build on both, so we have no reason to push you either way. Here is how we actually decide.
                 If most of your answers sit in the right-hand column, a Magento to Shopify migration is probably
-                worth scoping. If they sit in the middle, fix Magento and stay.
+                worth scoping. If they sit in the middle, fix Magento and stay. If you do move, see our{' '}
+                <a href="/uk/shopify-plus" style={{ textDecoration: 'underline' }}>Shopify Plus agency</a> page for
+                how a migration to Plus runs, or our{' '}
+                <a href="/uk/woocommerce" style={{ textDecoration: 'underline' }}>WooCommerce developers</a> page if you
+                would rather stay open source.
               </p>
             </div>
             <div className="card mt-8" style={{ padding: 0, overflow: 'hidden' }}>

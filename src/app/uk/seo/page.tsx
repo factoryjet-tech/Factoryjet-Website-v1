@@ -561,7 +561,7 @@ export default function SeoUKPage() {
               </li>
               <li className="card">
                 <h3>Local SEO</h3>
-                <p className="mt-4">Google Business Profile, consistent name, address, and phone signals, local reviews, and pages built for the areas you serve. For any business with a location or service area, this is often the fastest route to enquiries.</p>
+                <p className="mt-4">Google Business Profile, consistent name, address, and phone signals, local reviews, and pages built for the areas you serve. For any business with a location or service area, this is often the fastest route to enquiries. See <a href="/uk/local-seo" style={{ textDecoration: 'underline' }}>local SEO for UK businesses</a>.</p>
               </li>
               <li className="card">
                 <h3>Ecommerce SEO</h3>

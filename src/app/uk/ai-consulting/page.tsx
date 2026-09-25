@@ -523,7 +523,10 @@ export default function AiConsultingUKPage() {
                     When the plan calls for a build, the work moves straight into our{' '}
                     <a href="/uk/ai-agents">UK AI agent development service</a>, with the same people. For more
                     depth on how we build agents, see our{' '}
-                    <a href="/services/ai-agent-development">AI agent development hub</a>.
+                    <a href="/services/ai-agent-development">AI agent development hub</a>. Wider AI builds, such as
+                    integrating AI into your CRM or ERP, run through our{' '}
+                    <a href="/uk/ai-development">UK AI development service</a>, and if the plan points at your phones,
+                    see our <a href="/uk/ai-receptionist">AI receptionist for UK businesses</a>.
                   </p>
                 </div>
               </div>

@@ -461,7 +461,10 @@ export default function B2bEcommerceUKPage() {
               <p className="lead mt-4">
                 Every one of these B2B ecommerce platforms can run a trade portal. They differ in how much they do
                 out of the box, how big a catalogue they are happy with, and how much hosting and developer effort
-                they need. We build on all four, so we have no reason to push one.
+                they need. We build on all four, so we have no reason to push one. For platform detail, see our{' '}
+                <a href="/uk/shopify-plus" style={{ textDecoration: 'underline' }}>Shopify Plus agency</a>,{' '}
+                <a href="/uk/magento" style={{ textDecoration: 'underline' }}>Magento</a> and{' '}
+                <a href="/uk/woocommerce" style={{ textDecoration: 'underline' }}>WooCommerce developers</a> pages.
               </p>
             </div>
             <div className="card mt-8" style={{ padding: 0, overflow: 'hidden' }}>

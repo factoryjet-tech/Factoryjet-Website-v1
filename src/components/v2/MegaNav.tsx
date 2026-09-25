@@ -1,7 +1,8 @@
 'use client';
 
 /**
- * MegaNav — US mega menu (desktop) and drawer menu (mobile), 2026-09-23.
+ * MegaNav: mega menu (desktop) and drawer menu (mobile), 2026-09-23. US by default;
+ * UK pages pass UK_SERVICE_HUBS / UK_SIMPLE_MENUS (2026-09-25).
  *
  * Crawlability: every panel and every link is rendered into the HTML on every
  * page and only toggled with the `hidden` attribute. The previous header only
@@ -14,7 +15,10 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { ArrowRight, ChevronDown, ChevronRight } from 'lucide-react';
-import { SERVICE_HUBS, SIMPLE_MENUS, type NavColumn, type NavFeature } from './megaNavData';
+import { SERVICE_HUBS as US_HUBS, SIMPLE_MENUS as US_MENUS, type NavColumn, type NavFeature, type ServiceHub, type SimpleMenu } from './megaNavData';
+
+/** Menu data for one locale. Defaults to the US menu. */
+type MenuData = { hubs?: ServiceHub[]; menus?: SimpleMenu[] };
 import './MegaNav.css';
 
 type TopKey = 'services' | string;
@@ -65,7 +69,7 @@ function Feature({ f, note, onNavigate }: { f: NavFeature; note?: { lead: string
 }
 
 /** Desktop: top-level triggers plus floating mega panels. */
-export function MegaNavDesktop() {
+export function MegaNavDesktop({ hubs: SERVICE_HUBS = US_HUBS, menus: SIMPLE_MENUS = US_MENUS }: MenuData = {}) {
   const [open, setOpen] = useState<TopKey | null>(null);
   const [cat, setCat] = useState(SERVICE_HUBS[0].key);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -183,7 +187,7 @@ export function MegaNavDesktop() {
 }
 
 /** Mobile drawer content: Services opens on the four hubs, each hub link first. */
-export function MegaNavMobile({ onNavigate }: { onNavigate: () => void }) {
+export function MegaNavMobile({ onNavigate, hubs: SERVICE_HUBS = US_HUBS, menus: SIMPLE_MENUS = US_MENUS }: { onNavigate: () => void } & MenuData) {
   const [section, setSection] = useState<string | null>('services');
   const [cat, setCat] = useState<string | null>(SERVICE_HUBS[0].key);
 

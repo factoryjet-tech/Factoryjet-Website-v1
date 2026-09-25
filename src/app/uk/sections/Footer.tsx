@@ -38,7 +38,7 @@ const CITIES = [
   "plymouth",
 ];
 
-// 2026-09-24: all 19 UK hubs (ai-receptionist, b2b-ecommerce, ecommerce-consultant added in Wave 3;
+// 2026-09-24: all 18 UK hubs (ai-receptionist, b2b-ecommerce, ecommerce-consultant added in Wave 3;
 // ai-development, shopify-plus, woocommerce in Wave 2). seo, local-seo and seo-audit were missing, so each
 // was linked from only 26-27 of the 33 other UK pages (measured on live HTML)
 // while every other hub had 33 of 33. ai-consulting and magento were added the
@@ -67,6 +67,20 @@ const SERVICES = [
   { name: "Local SEO",           slug: "local-seo" },
   { name: "SEO Audit",           slug: "seo-audit" },
   { name: "AI SEO",              slug: "ai-seo" },
+];
+
+// 2026-09-25: company, London service pages and legal links, so every UK page
+// links to them (they were reachable from the UK footer nowhere before).
+const COMPANY_LINKS = [
+  { label: "FactoryJet UK", href: "/uk" },
+  { label: "London SEO", href: "/uk/london/seo" },
+  { label: "London Web Design", href: "/uk/london/web-design" },
+  { label: "About", href: "/about" },
+  { label: "Case Studies", href: "/case-studies" },
+  { label: "Blog", href: "/blog" },
+  { label: "Contact", href: "/contact" },
+  { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Terms", href: "/terms-and-conditions" },
 ];
 
 export default function Footer() {
@@ -282,6 +296,32 @@ export default function Footer() {
                   Free Digital Audit
                 </button>
               </li>
+            </ul>
+            <p
+              className="mt-8"
+              style={{
+                color: "rgba(255,255,255,0.55)",
+                fontFamily: "var(--font-sans)",
+                fontWeight: 600,
+                fontSize: 12,
+                letterSpacing: "0.16em",
+                textTransform: "uppercase",
+                marginBottom: 14,
+              }}
+            >
+              Company
+            </p>
+            <ul
+              className="flex flex-col gap-3"
+              style={{ listStyle: "none", padding: 0, margin: 0 }}
+            >
+              {COMPANY_LINKS.map((l) => (
+                <li key={l.href}>
+                  <Link href={l.href} className="hover:text-white">
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
