@@ -368,7 +368,7 @@ export default function AiConsultingAUPage() {
 
                 <div className="byline mt-6" style={{ maxWidth: 560 }}>
                   <div className="av">BB</div>
-                  <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ projects delivered since 2014</span></div>
+                  <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
                   <div className="upd">Last updated<br />25 September 2026</div>
                 </div>
 

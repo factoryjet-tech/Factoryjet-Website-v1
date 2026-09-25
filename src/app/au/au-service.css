@@ -588,3 +588,11 @@
 @media (max-width:960px){
   .au-svc .col-4060 > :first-child:has(img) {order:2}
 }
+
+/* 2026-09-25 live QA: keep the hero lead form inside the first screen on a
+   1440x900 laptop (measured on all 13 AU pages; 8 had the form below the fold).
+   !important because some pages set an inline H1 size. Desktop only. */
+@media (min-width:769px){
+  .au-svc h1 {font-size:clamp(2.1rem,3.6vw,2.9rem)!important}
+  .au-svc main > section:first-of-type {padding-top:44px!important}
+}
