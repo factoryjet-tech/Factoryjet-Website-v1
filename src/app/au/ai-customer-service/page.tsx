@@ -320,11 +320,11 @@ const SIBLINGS: { href: string; t: string; d: string }[] = [
 /* Visual slot page key (route without /au/). */
 const PAGE_KEY = 'ai-customer-service';
 
-/* H1 split for the Family A hero emphasis. Same string as H1 (schema headline); only the
-   benefit clause after the colon is wrapped in .hero-emphasis. */
-const H1_SPLIT = H1.indexOf(': ');
-const H1_LEAD = H1.slice(0, H1_SPLIT + 1);
-const H1_EMPHASIS = H1.slice(H1_SPLIT + 2);
+/* Visible hero heading, kept to about four lines at 62px so the inline form starts in the first
+   desktop screen. H1 above stays the schema headline; the rest of it opens the hero lead, so no
+   copy is lost. */
+const HERO_H1_LEAD = 'AI Customer Service for';
+const HERO_H1_EMPHASIS = 'Australian Support Teams';
 
 const STEP_ICON = { width: 24, height: 24, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', strokeWidth: 1.5, strokeLinecap: 'round', strokeLinejoin: 'round' } as const;
 const CAP_ICON = { width: 24, height: 24, viewBox: '0 0 24 24', fill: 'none', stroke: '#C94A1A', strokeWidth: 1.6, strokeLinecap: 'round', strokeLinejoin: 'round', 'aria-hidden': true } as const;
@@ -354,9 +354,9 @@ export default function AiCustomerServiceAUPage() {
           <div className="wrap hero-grid">
             <div className="hero-copy">
               <div className="eyebrow">AI Customer Service Australia</div>
-              <h1>{H1_LEAD} <span className="hero-emphasis">{H1_EMPHASIS}</span></h1>
+              <h1>{HERO_H1_LEAD} <span className="hero-emphasis">{HERO_H1_EMPHASIS}</span></h1>
               <p className="lead">
-                FactoryJet builds AI customer service agents for Australian support teams. Yours answers chat and
+                Faster answers, after-hours cover, and people on the hard cases. FactoryJet builds AI customer service agents for Australian support teams. Yours answers chat and
                 email from your approved content, drafts replies for staff to check, triages tickets in Zendesk,
                 Freshdesk, Gorgias or HubSpot, reads order data from Shopify, and hands complaints and complex cases
                 to a person with a summary. We build it around your helpdesk, support it after launch, and you own it.

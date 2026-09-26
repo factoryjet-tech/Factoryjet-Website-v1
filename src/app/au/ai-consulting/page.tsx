@@ -1,12 +1,16 @@
 import type { Metadata } from 'next';
+import { Fragment } from 'react';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
-import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import { AU_FOOTER_COLUMNS } from '@/data/auFooterColumns';
-import '../au-service.css';
+import AuFaq from '../components/AuFaq';
+import VisualSlot from '../components/VisualSlot';
+import '@/components/v2/AiAgentDevelopmentSections.css';
+import '../au-page.css';
+import './page.css';
 
 const CANONICAL = 'https://factoryjet.com/au/ai-consulting';
 const UPDATED = '2026-09-26';
@@ -14,19 +18,6 @@ const TITLE = 'AI Consulting Australia | Consultants Who Build | FactoryJet';
 const DESCRIPTION =
   'AI consulting for Australian SMEs: we find where AI pays off, check your data and Privacy Act duties, decide buy or build, then build it. Founder-led.';
 const H1 = 'AI Consulting in Australia: Find Where AI Pays Off, Then Build It';
-
-/* Design tokens, copied by value from ../au-service.css so inline styles stay
-   on-system without CSS custom property references in this file. */
-const T = {
-  ink: '#0F0F12',
-  n200: '#E5E5E0',
-  n400: '#6E6E68',
-  orange: '#FF5C00',
-  green: '#047857',
-  small: '#B23E13',
-  fm: "'Geist Mono',monospace",
-  fd: "'Plus Jakarta Sans',sans-serif",
-};
 
 /* ONE array drives the visible trail AND the BreadcrumbList JSON-LD, so the
    schema can never describe a trail a human cannot see. Never hand-copy a
@@ -67,6 +58,7 @@ const FAQ_CATEGORIES = [
   { key: 'choosing',   label: 'Choosing an AI consultant' },
   { key: 'engagement', label: 'Cost & how it works' },
   { key: 'data',       label: 'Privacy, data & build' },
+  { key: 'chatgpt',    label: 'ChatGPT for business' },
 ] as const;
 
 const FAQ_ITEMS: { category: string; question: string; answer: string; links?: { href: string; label: string }[] }[] = [
@@ -155,6 +147,19 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
     answer: 'Yes, and that is the main reason to choose us. FactoryJet is an engineering company first. If the plan points to a custom AI agent or an integration, our team designs, builds, tests and supports it, and you own the code. If it points to an off-the-shelf tool, we help you set it up properly. You can also take our plan to someone else.' },
   { category: 'data', question: 'We bought an AI tool that nobody uses. Can you help?',
     answer: 'Yes, and it is a common starting point. Usually the tool is fine and the problem is setup: it is not connected to the right data, nobody agreed what it is for, or staff were never shown how it fits their day. We look at what you have, fix what is fixable, and only suggest something new if the tool genuinely cannot do the job.' },
+  // ── ChatGPT for business ──
+  { category: 'chatgpt', question: 'Can I use ChatGPT for my business?',
+    answer: 'Yes, and many Australian businesses already do, for drafting emails, quotes, job ads, policies and first-pass analysis of spreadsheets. The catch is data. The OAIC recommends businesses do not enter personal information, and particularly sensitive information, into publicly available generative AI tools. So set rules first: which account staff use, what they may paste in, and who checks the output before it reaches a customer.',
+    links: [{ href: SRC_OAIC_AI, label: 'OAIC guidance on commercially available AI' }] },
+  { category: 'chatgpt', question: 'Is it worth getting ChatGPT for business?',
+    answer: 'Usually yes, if more than a couple of people already use AI through personal accounts. A business plan gives you central control of who has access and the data terms your privacy lead will want to read, instead of customer details sitting in private chats. It is worth it once you have picked three or four tasks to use it for. Buying seats with no use cases is the common way it ends up unused.' },
+  { category: 'chatgpt', question: 'Should we choose ChatGPT, Microsoft Copilot or Google Gemini?',
+    answer: 'Start from where your work already lives. Copilot sits inside Microsoft 365, so it suits businesses whose files are in SharePoint and Outlook. Gemini sits inside Google Workspace. ChatGPT and Claude are strong standalone assistants for writing and analysis. We test the two likeliest options on your own real tasks for a week or two, then recommend one. We do not resell any of them.' },
+  { category: 'chatgpt', question: 'How do we roll out ChatGPT to our team safely?',
+    answer: 'Keep it short and practical. Write a one-page AI use policy saying what staff may and may not paste in. Set up business accounts rather than personal ones. Pick a few tasks per role and share tested prompts for them. Name who checks AI output before it goes to a customer. Review after a month. We run this as a short engagement, and it often shows where custom AI is worth building next.' },
+  { category: 'chatgpt', question: 'When is ChatGPT not enough, and custom AI worth building?',
+    answer: 'When the job needs your own systems, rules and approvals. A general chat assistant is not set up to post orders into your ERP with an approval step, draft bills into Xero under your coding rules, or answer from your whole document library while respecting who may see what. If the same copy-paste task happens hundreds of times a week across systems, a custom build connected to those systems usually beats staff pasting into a chat window.',
+    links: [{ href: '/au/ai-development', label: 'Custom AI development' }] },
 ];
 
 /* ─── Named Australian AI consultancies (open self-disclosure, ItemList).
@@ -333,20 +338,52 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-/* Page-scoped layout fixes (QA 2026-09-25). The shared au-service.css adds a
-   '+' via summary::after to every <details>, which doubles up with the FAQ
-   chevron; tables need a minimum width so they scroll sideways on phones
-   instead of squashing; the demand card header must wrap on narrow screens. */
-const PAGE_CSS = `
-.au-aic .faq-item summary::after{content:none}
-.au-aic .cmp-table{min-width:720px}
-.au-aic .demand-head{flex-wrap:wrap;gap:8px}
-.au-aic .eq-grid>li{height:100%}
-`;
+const extLink = { target: '_blank', rel: 'noopener noreferrer nofollow' } as const;
+/* What an AI consultant does, in the order the work usually happens (was an inline card list). */
+const CONSULTANT_JOBS: { n: string; t: string; d: string }[] = [
+  { n: '01', t: 'Listens before recommending anything', d: 'Interviews the people who do the work, not just the owner. The best use cases hide in the steps someone repeats forty times a week.' },
+  { n: '02', t: 'Maps how the work flows today', d: 'Draws each process box by box: where requests arrive, who touches them, which systems they copy between. AI fits where information moves by hand.' },
+  { n: '03', t: 'Finds the two or three use cases worth doing', d: 'Scores every idea on value and risk, then drops most of them. A long list of AI opportunities is not a strategy.' },
+  { n: '04', t: 'Checks your data', d: 'Where the information lives (Xero, MYOB, your CRM, shared drives, email), whether it is accurate, and whether you are allowed to use it this way.' },
+  { n: '05', t: 'Checks your legal and privacy duties', d: 'Which Australian Privacy Principles apply, what personal information each use case touches, and which AI providers would see it and on what terms.' },
+  { n: '06', t: 'Decides buy or build', d: 'Recommends an off-the-shelf tool when one does the job, and a custom build only when the job is specific to your business.' },
+  { n: '07', t: 'Proves it with a pilot', d: 'Runs one use case with real users and real data against a success measure agreed upfront, before anyone spends on a full rollout.' },
+  { n: '08', t: 'Gets it live and keeps it working', d: 'Usage rules, training, monitoring and support. This is where most AI consulting stops, and where FactoryJet keeps going.' },
+];
 
-const srcNote = { fontFamily: T.fm, fontSize: 11, color: T.n400, marginTop: 12 } as const;
-const srcLink = { textDecoration: 'underline' } as const;
-const inLink = { color: T.small, textDecoration: 'underline' } as const;
+/* Icons and visual-slot subjects for the eight job cards (same order as CONSULTANT_JOBS). */
+const JOB_ICONS = [
+  'M4 5h16v11H9l-5 4V5Zm4 5h8M8 13h5',
+  'M4 5h5v5H4V5Zm11 9h5v5h-5v-5ZM6.5 10v4a2 2 0 0 0 2 2H15',
+  'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm0 4a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 4a1 1 0 1 0 0 2 1 1 0 0 0 0-2Z',
+  'M4 6c0-1.7 3.6-3 8-3s8 1.3 8 3-3.6 3-8 3-8-1.3-8-3Zm0 0v12c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3',
+  'M12 3 4 6v6c0 4.5 3.4 8 8 9 4.6-1 8-4.5 8-9V6l-8-3Zm-3 9 2 2 4-4',
+  'M12 20v-7m0 0L6 6m6 7 6-7M4 6h4M16 6h4',
+  'M9 3h6M10 3v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3M7.5 15h9',
+  'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm-4 9 3 3 5-6',
+] as const;
+const JOB_SUBJECTS = [
+  'AI-generated model: a white speech bubble beside a small human figure at a workbench, with an orange note card being handed across',
+  'AI-generated model: a row of white process boxes joined by lines, one orange box marking where information is copied by hand',
+  'AI-generated model: a pile of white idea cards with three orange cards lifted out and set apart',
+  'AI-generated model: white stacked data discs labelled by shape only, one orange disc being checked with a small magnifier',
+  'AI-generated model: a white shield with an orange tick resting on a folder of customer record cards',
+  'AI-generated model: a white path splitting in two, an orange box on the build side and a white box on the buy side',
+  'AI-generated model: a small white test bench with one orange component under a measuring gauge',
+  'AI-generated model: a white machine running on a plinth with an orange status light and a small maintenance tag',
+] as const;
+
+/* Visual slot page key (route without /au/). */
+const PAGE_KEY = 'ai-consulting';
+
+/* H1 split for the Family A hero emphasis. Same string as H1 (schema headline); only the
+   benefit clause after the colon is wrapped in .hero-emphasis. */
+const H1_SPLIT = H1.indexOf(': ');
+const H1_LEAD = H1.slice(0, H1_SPLIT + 1);
+const H1_EMPHASIS = H1.slice(H1_SPLIT + 2);
+
+const STEP_ICON = { width: 24, height: 24, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', strokeWidth: 1.5, strokeLinecap: 'round', strokeLinejoin: 'round' } as const;
+const CAP_ICON = { width: 24, height: 24, viewBox: '0 0 24 24', fill: 'none', stroke: '#C94A1A', strokeWidth: 1.6, strokeLinecap: 'round', strokeLinejoin: 'round', 'aria-hidden': true } as const;
 
 export default function AiConsultingAUPage() {
   return (
@@ -355,162 +392,198 @@ export default function AiConsultingAUPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <SiteHeader locale="au" logoHref="/au" />
+      <div className="aiAgentPage auPage">
+      <nav className="crumbs" aria-label="Breadcrumb">
+        <div className="wrap">
+          {crumbs.map((item, index) => (
+            <Fragment key={item.url}>
+              {index > 0 && ' / '}
+              {index === crumbs.length - 1 ? <b aria-current="page">{item.name}</b> : <a href={item.url}>{item.name}</a>}
+            </Fragment>
+          ))}
+        </div>
+      </nav>
+      <main id="au-content">
 
-      <style dangerouslySetInnerHTML={{ __html: PAGE_CSS }} />
+        {/* ═══ HERO (US web-design hub hero: copy + inline form left, spec panel right) ═══ */}
+        <section className="hero" id="hero">
+          <div className="wrap hero-grid">
+            <div className="hero-copy">
+              <div className="eyebrow">AI Consulting Australia</div>
+              <h1>{H1_LEAD} <span className="hero-emphasis">{H1_EMPHASIS}</span></h1>
+              <p className="lead">
+                FactoryJet offers AI consulting for Australian SMEs and mid-market firms. We find the two or three
+                places where AI will genuinely pay off, check your data and your Privacy Act duties, tell you
+                whether to buy a tool or build something, and then our engineers can build it. Advice and delivery
+                from one senior team.
+              </p>
+              <HeroInlineForm region="au" source="au_ai_consulting_hero" submitLabel="Book my AI readiness call" />
+            </div>
 
-      <div className="au-svc au-aic">
-      <main>
+            <form
+              className="specpanel"
+              aria-label="What you leave with after AI consulting"
+              data-visual-slot={`${PAGE_KEY}:hero`}
+              data-visual-kind="diagram"
+              data-visual-subject="What a client leaves with: two or three ranked use cases, a written buy or build decision, and a Privacy Act and APP check"
+              data-visual-ratio="1:1"
+              data-visual-status="filled"
+            >
+              <div className="specpanel-bar">
+                <span className="statusdot"></span>
+                <span>INCLUDED · WHAT YOU LEAVE WITH</span>
+                <span className="sys"><span>READINESS</span><span>ADVISE</span><span>BUILD</span></span>
+              </div>
+              <div className="workflow-controls">
+                <label className="workflow-toggle" title="Pause or resume the animation">
+                  <input type="checkbox" className="workflow-pause" aria-label="Pause animation" />
+                  <svg className="pause-icon" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M5 3v10M11 3v10" fill="none" stroke="currentColor" strokeWidth="2" /></svg>
+                  <svg className="play-icon" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="m5 3 8 5-8 5Z" fill="currentColor" /></svg>
+                </label>
+                <button type="reset" className="workflow-replay" aria-label="Replay animation" title="Replay animation">
+                  <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M3 6a5 5 0 1 1 0 4M3 2v4h4" /></svg>
+                </button>
+              </div>
+              <div className="specpanel-body" role="radiogroup" aria-label="Explore what you leave with">
+                <label className="specrow run">
+                  <input className="workflow-select" type="radio" name="aic-step" value="1" />
+                  <span className="workflow-icon" aria-hidden="true"><svg {...STEP_ICON}><path d={JOB_ICONS[2]} /></svg></span>
+                  <span className="idx">ranked by value and risk</span>
+                  <span className="title">Use cases worth doing</span>
+                  <span className="tag">Two or three</span>
+                </label>
+                <label className="specrow run">
+                  <input className="workflow-select" type="radio" name="aic-step" value="2" />
+                  <span className="workflow-icon" aria-hidden="true"><svg {...STEP_ICON}><path d={JOB_ICONS[5]} /></svg></span>
+                  <span className="idx">tool-neutral, no resale deals</span>
+                  <span className="title">Buy or build decision</span>
+                  <span className="tag">Written</span>
+                </label>
+                <label className="specrow hold">
+                  <input className="workflow-select" type="radio" name="aic-step" value="3" />
+                  <span className="workflow-icon" aria-hidden="true"><svg {...STEP_ICON}><path d={JOB_ICONS[4]} /></svg></span>
+                  <span className="idx">from day one, not after launch</span>
+                  <span className="title">Privacy Act and APP check</span>
+                  <span className="tag">Included</span>
+                </label>
+              </div>
+              <div className="specpanel-foot">RULE · You can stop after any stage and keep everything we have produced.</div>
+            </form>
+          </div>
+        </section>
 
-        <Breadcrumbs items={crumbs} />
-
-        {/* ═══ 1. HERO ═══ */}
-        <section className="sec-lg dot-grid" style={{ position: 'relative' }}>
+        {/* ═══ LEDGER (was the facts band; verified only, no count-ups) ═══ */}
+        <div className="ledger">
           <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <div className="flex-wrap mb-6">
-                  <span className="chip"><span className="dot dot-orange" />AI Consulting Australia</span>
-                  <span className="chip">Readiness Assessment</span>
-                  <span className="chip">Advise, Then Build</span>
-                </div>
-                <h1>{H1}</h1>
-                <p className="lead mt-6" style={{ maxWidth: 560 }}>
-                  FactoryJet offers AI consulting for Australian SMEs and mid-market firms. We find the two or three
-                  places where AI will genuinely pay off, check your data and your Privacy Act duties, tell you
-                  whether to buy a tool or build something, and then our engineers can build it. Advice and delivery
-                  from one senior team.
-                </p>
-
-                <div className="byline mt-6" style={{ maxWidth: 560 }}>
-                  <div className="av">BB</div>
-                  <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
-                  <div className="upd">Last updated<br />26 September 2026</div>
-                </div>
-
-                <div className="mt-6" style={{ maxWidth: 560 }}>
-                  <HeroInlineForm region="au" source="au_ai_consulting_hero" submitLabel="Book my AI readiness call" />
+            {[
+              { v: 'All', t: 'uses of AI involving personal information are covered by the Privacy Act', s: 'OAIC guidance', u: SRC_OAIC_AI },
+              { v: '13', t: 'Australian Privacy Principles set the rules for collecting, using and securing personal information', s: 'OAIC', u: SRC_OAIC_APPS },
+              { v: '10 Dec 2026', t: 'new privacy policy duty for automated decisions that use personal information', s: 'OAIC', u: SRC_OAIC_ADM },
+              { v: '6', t: 'essential practices in the National AI Centre’s Guidance for AI Adoption', s: 'Allens summary', u: SRC_AI6 },
+            ].map((r) => (
+              <div className="ledgercell" key={r.t}>
+                <div className="k"><a href={r.u} {...extLink}>{r.s}</a></div>
+                <div className="v">
+                  <strong className={/\d/.test(r.v) ? 'ledger-number' : 'ledger-word'}>{r.v}</strong>
+                  {r.t}
                 </div>
               </div>
+            ))}
+          </div>
+        </div>
 
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/ai-consulting/ai-consulting-hero.webp" width={1400} height={933} fetchPriority="high" decoding="async" alt="An AI consultant and the owner of a Sydney trades business picking three sticky notes out of a pile of ideas to decide where AI will pay off first, with Sydney Harbour through the window" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
-                <div style={{ padding: '14px 12px 8px' }}>
-                  <span className="eyebrow">What you leave with</span>
-                  <div className="scorecard-row">
-                    <div><div className="scorecard-metric">Use cases worth doing</div><div className="scorecard-note">ranked by value and risk</div></div>
-                    <div className="scorecard-val" style={{ fontSize: 15 }}>Two or three</div>
-                  </div>
-                  <div className="scorecard-row">
-                    <div><div className="scorecard-metric">Buy or build decision</div><div className="scorecard-note">tool-neutral, no resale deals</div></div>
-                    <div className="scorecard-val" style={{ fontSize: 15 }}>Written</div>
-                  </div>
-                  <div className="scorecard-row">
-                    <div><div className="scorecard-metric">Privacy Act and APP check</div><div className="scorecard-note">from day one, not after launch</div></div>
-                    <div className="scorecard-val" style={{ color: T.green, fontSize: 15 }}>Included</div>
+        <div className="wrap byline">
+          <div className="av">BB</div>
+          <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
+          <div className="upd">Last updated<br />26 September 2026</div>
+        </div>
+
+        {/* ═══ ANSWER-FIRST DEFINITION (GEO) → Family A facts ═══ */}
+        <section className="section facts" id="facts">
+          <div className="wrap">
+            <div className="section-head">
+              <h2 data-speakable="true">What does an AI consultant do for an Australian business?</h2>
+            </div>
+            <div className="factswrap">
+              <div className="factlist">
+                <div className="fact">
+                  <div className="sec">§01</div>
+                  <p data-speakable="true">
+                    <span className="stat">An AI consultant finds where AI will save your business real time or money, and where it will not.</span>{' '}
+                    They review how your team works, pick the two or three best use cases, check your data and your
+                    duties under the Privacy Act, and advise whether to buy a tool or build one. The best AI consulting
+                    firms then help you put it live and keep it working.
+                  </p>
+                </div>
+                <div className="fact">
+                  <div className="sec">§02</div>
+                  <div>
+                    <div className="factlabel">Three terms we use a lot</div>
+                    <p>
+                      A <b>use case</b> is one specific job AI could do, such as drafting quote replies or sorting supplier
+                      invoices. An <b>AI readiness assessment</b> is a structured check of your goals, data, systems, people
+                      and rules, so you know which use cases you can do now. <b>Governance</b> simply means the rules for how
+                      AI is used, checked and owned in your business.
+                    </p>
                   </div>
                 </div>
+                <div className="fact">
+                  <div className="sec">§03</div>
+                  <p>
+                    Most Australian businesses we speak to are not short of AI tools. Staff already use ChatGPT or Copilot in
+                    a browser tab. What is missing is a decision: which jobs AI should do, with what data, under which rules,
+                    and who owns the result. That is what good AI consulting services deliver, and it is why we do the
+                    engineering too.
+                  </p>
+                </div>
               </div>
+              <VisualSlot page={PAGE_KEY} slot="facts" kind="photo" ratio="3:2" className="factphoto"
+                subject="An AI consultant and a trades business owner picking three sticky notes out of a pile of ideas">
+                <img src="/images/au/ai-consulting/ai-consulting-hero.webp" width={1400} height={933} loading="lazy" decoding="async" alt="An AI consultant and the owner of a Sydney trades business picking three sticky notes out of a pile of ideas to decide where AI will pay off first, with Sydney Harbour through the window" />
+              </VisualSlot>
             </div>
           </div>
         </section>
 
-        {/* ═══ 2. ANSWER-FIRST DEFINITION (GEO) ═══ */}
-        <section className="sec">
+        {/* ═══ LISTICLE: WHAT AN AI CONSULTANT DOES → capgrid ═══ */}
+        <section className="section capabilities" id="what-a-consultant-does">
           <div className="wrap">
-            <div className="def" style={{ maxWidth: 940 }} data-speakable="true">
-              <span className="lab">What does an AI consultant do for an Australian business?</span>
-              <p>
-                An AI consultant finds where AI will save your business real time or money, and where it will not.
-                They review how your team works, pick the two or three best use cases, check your data and your
-                duties under the Privacy Act, and advise whether to buy a tool or build one. The best AI consulting
-                firms then help you put it live and keep it working.
-              </p>
-            </div>
-            <div className="def mt-6" style={{ maxWidth: 940 }}>
-              <span className="lab">Three terms we use a lot</span>
-              <p>
-                A <b>use case</b> is one specific job AI could do, such as drafting quote replies or sorting supplier
-                invoices. An <b>AI readiness assessment</b> is a structured check of your goals, data, systems, people
-                and rules, so you know which use cases you can do now. <b>Governance</b> simply means the rules for how
-                AI is used, checked and owned in your business.
-              </p>
-            </div>
-            <p className="lead mt-8" style={{ maxWidth: 920 }}>
-              Most Australian businesses we speak to are not short of AI tools. Staff already use ChatGPT or Copilot in
-              a browser tab. What is missing is a decision: which jobs AI should do, with what data, under which rules,
-              and who owns the result. That is what good AI consulting services deliver, and it is why we do the
-              engineering too.
-            </p>
-          </div>
-        </section>
-
-        {/* ═══ 3. FACTS BAND (verified only, no count-ups) ═══ */}
-        <section className="stats-band">
-          <div className="wrap">
-            <ul className="col-4" style={{ gap: 20 }}>
-              {[
-                { v: 'All', t: 'uses of AI involving personal information are covered by the Privacy Act', s: 'OAIC guidance', u: SRC_OAIC_AI },
-                { v: '13', t: 'Australian Privacy Principles set the rules for collecting, using and securing personal information', s: 'OAIC', u: SRC_OAIC_APPS },
-                { v: '10 Dec 2026', t: 'new privacy policy duty for automated decisions that use personal information', s: 'OAIC', u: SRC_OAIC_ADM },
-                { v: '6', t: 'essential practices in the National AI Centre’s Guidance for AI Adoption', s: 'Allens summary', u: SRC_AI6 },
-              ].map((r) => (
-                <li key={r.t}>
-                  <div style={{ fontFamily: T.fd, fontWeight: 800, fontSize: 26, color: T.orange }}>{r.v}</div>
-                  <p style={{ fontSize: 13.5, color: T.ink, marginTop: 4 }}>{r.t}</p>
-                  <a href={r.u} target="_blank" rel="noopener noreferrer nofollow" style={{ fontFamily: T.fm, fontSize: 10, color: T.n400, textDecoration: 'underline' }}>{r.s}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-
-        {/* ═══ 4. LISTICLE: WHAT AN AI CONSULTANT DOES ═══ */}
-        <section className="sec-lg dot-grid">
-          <div className="wrap">
-            <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">The job, step by step</span>
+            <div className="section-head">
+              <div className="eyebrow">The job, step by step</div>
               <h2>What an AI consultant actually does: eight jobs in plain English</h2>
-              <p className="lead mt-4">
+              <p className="lead">
                 &ldquo;What does an AI consultant actually do?&rdquo; is one of the most searched AI consulting questions in
                 Australia. Here is the honest answer, in the order the work usually happens.
               </p>
             </div>
-            <ol className="col-2 eq-grid mt-10">
-              {[
-                { n: '01', t: 'Listens before recommending anything', d: 'Interviews the people who do the work, not just the owner. The best use cases hide in the steps someone repeats forty times a week.' },
-                { n: '02', t: 'Maps how the work flows today', d: 'Draws each process box by box: where requests arrive, who touches them, which systems they copy between. AI fits where information moves by hand.' },
-                { n: '03', t: 'Finds the two or three use cases worth doing', d: 'Scores every idea on value and risk, then drops most of them. A long list of AI opportunities is not a strategy.' },
-                { n: '04', t: 'Checks your data', d: 'Where the information lives (Xero, MYOB, your CRM, shared drives, email), whether it is accurate, and whether you are allowed to use it this way.' },
-                { n: '05', t: 'Checks your legal and privacy duties', d: 'Which Australian Privacy Principles apply, what personal information each use case touches, and which AI providers would see it and on what terms.' },
-                { n: '06', t: 'Decides buy or build', d: 'Recommends an off-the-shelf tool when one does the job, and a custom build only when the job is specific to your business.' },
-                { n: '07', t: 'Proves it with a pilot', d: 'Runs one use case with real users and real data against a success measure agreed upfront, before anyone spends on a full rollout.' },
-                { n: '08', t: 'Gets it live and keeps it working', d: 'Usage rules, training, monitoring and support. This is where most AI consulting stops, and where FactoryJet keeps going.' },
-              ].map((s) => (
-                <li key={s.n} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
-                  <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.small, minWidth: 34 }}>{s.n}</span>
-                  <div>
-                    <h3 style={{ fontSize: 18 }}>{s.t}</h3>
-                    <p style={{ marginTop: 6 }}>{s.d}</p>
-                  </div>
-                </li>
+            <div className="capgrid">
+              {CONSULTANT_JOBS.map((j, i) => (
+                <div key={j.n} className={`cap cap-${i + 1}`}>
+                  <div className="caphead"><span className="capid">CAP‑{j.n}</span><svg {...CAP_ICON}><path d={JOB_ICONS[i]} /></svg></div>
+                  <VisualSlot page={PAGE_KEY} slot={`capability-${j.n}`} kind="diagram" ratio="11:4" className="cap-diagram" subject={JOB_SUBJECTS[i]} />
+                  <h3>{j.t}</h3>
+                  <p>{j.d}</p>
+                </div>
               ))}
-            </ol>
+            </div>
           </div>
         </section>
 
-        {/* ═══ 5. FOUR KINDS OF ADVICE + COMPARISON TABLE ═══ */}
-        <section className="sec-lg">
+        {/* ═══ FOUR KINDS OF ADVICE + COMPARISON TABLE ═══ */}
+        <section className="section comparison" id="comparison">
           <div className="wrap">
-            <div style={{ maxWidth: 780 }}>
-              <span className="eyebrow">Know what you are buying</span>
-              <h2>Big Four, independent consultant, software vendor or an AI consulting firm that builds?</h2>
-              <p className="lead mt-4">
-                Search for an AI consultant in Australia and the results mix four very different businesses. Each is
-                right for someone. The trick is knowing which one you are talking to before the proposal arrives.
-              </p>
+            <div className="section-head head-split">
+              <div className="eyebrow">Know what you are buying</div>
+              <div>
+                <h2>Big Four, independent consultant, software vendor or an AI consulting firm that builds?</h2>
+                <p className="lead">
+                  Search for an AI consultant in Australia and the results mix four very different businesses. Each is
+                  right for someone. The trick is knowing which one you are talking to before the proposal arrives.
+                </p>
+              </div>
             </div>
-            <div className="card mt-8" style={{ padding: 0, overflow: 'auto' }}>
-              <table className="cmp-table">
+            <div className="tablewrap">
+              <table>
                 <thead>
                   <tr>
                     <th>What you get</th>
@@ -521,205 +594,193 @@ export default function AiConsultingAUPage() {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td className="feat">Best fit</td><td className="fj"><span className="yes">Australian SMEs and mid-market</span></td><td><span className="partial">Large enterprises and government</span></td><td><span className="partial">Small teams, training, second opinions</span></td><td><span className="partial">Buyers already sure of the product</span></td></tr>
-                  <tr><td className="feat">Who does the work</td><td className="fj"><span className="yes">Senior engineers + founder</span></td><td><span className="partial">Mixed seniority, large teams</span></td><td>One person</td><td><span className="partial">Sales and onboarding staff</span></td></tr>
-                  <tr><td className="feat">AI readiness assessment</td><td className="fj"><span className="yes">Yes</span></td><td><span className="yes">Yes</span></td><td><span className="partial">Sometimes</span></td><td><span className="no">Rarely independent</span></td></tr>
-                  <tr><td className="feat">Tool-neutral buy or build advice</td><td className="fj"><span className="yes">Yes, no resale deals</span></td><td><span className="partial">Often tied to alliances</span></td><td><span className="partial">Varies</span></td><td><span className="no">Recommends its own product</span></td></tr>
-                  <tr><td className="feat">Builds what it recommends</td><td className="fj"><span className="yes">Yes, same team</span></td><td><span className="partial">Via separate delivery teams</span></td><td><span className="no">Rarely</span></td><td><span className="partial">Configures its own tool only</span></td></tr>
-                  <tr><td className="feat">Privacy Act and APP support</td><td className="fj"><span className="yes">Built into the assessment</span></td><td><span className="yes">Yes</span></td><td><span className="partial">Varies</span></td><td><span className="partial">For its own product</span></td></tr>
-                  <tr><td className="feat">Support after launch</td><td className="fj"><span className="yes">Yes, same team</span></td><td><span className="partial">Separate contract</span></td><td><span className="no">Rarely</span></td><td><span className="yes">For its product, on its terms</span></td></tr>
-                  <tr><td className="feat">Typical end product</td><td className="fj"><span className="yes">A working system you own</span></td><td><span className="partial">Strategy and program plan</span></td><td><span className="partial">Recommendations, training</span></td><td><span className="partial">A subscription</span></td></tr>
+                  <tr><th scope="row">Best fit</th><td className="fj">Australian SMEs and mid-market</td><td>Large enterprises and government</td><td>Small teams, training, second opinions</td><td>Buyers already sure of the product</td></tr>
+                  <tr><th scope="row">Who does the work</th><td className="fj">Senior engineers + founder</td><td>Mixed seniority, large teams</td><td>One person</td><td>Sales and onboarding staff</td></tr>
+                  <tr><th scope="row">AI readiness assessment</th><td className="fj">Yes</td><td>Yes</td><td>Sometimes</td><td>Rarely independent</td></tr>
+                  <tr><th scope="row">Tool-neutral buy or build advice</th><td className="fj">Yes, no resale deals</td><td>Often tied to alliances</td><td>Varies</td><td>Recommends its own product</td></tr>
+                  <tr><th scope="row">Builds what it recommends</th><td className="fj">Yes, same team</td><td>Via separate delivery teams</td><td>Rarely</td><td>Configures its own tool only</td></tr>
+                  <tr><th scope="row">Privacy Act and APP support</th><td className="fj">Built into the assessment</td><td>Yes</td><td>Varies</td><td>For its own product</td></tr>
+                  <tr><th scope="row">Support after launch</th><td className="fj">Yes, same team</td><td>Separate contract</td><td>Rarely</td><td>For its product, on its terms</td></tr>
+                  <tr><th scope="row">Typical end product</th><td className="fj">A working system you own</td><td>Strategy and program plan</td><td>Recommendations, training</td><td>A subscription</td></tr>
                 </tbody>
               </table>
             </div>
-            <ul className="col-2 mt-10">
-              <li className="svc-card">
-                <h3>When a big firm is the right call</h3>
-                <p className="mt-4">If AI is changing every division at once, you need formal change management across thousands of staff, or your regulator expects a household name on the report, a Big Four firm or a large consultancy such as Mantel is a sensible choice. Most businesses of 20 to 200 people are not in that position.</p>
-              </li>
-              <li className="svc-card">
-                <h3>When an independent consultant is enough</h3>
-                <p className="mt-4">If you mainly want staff trained on ChatGPT or Copilot, or a quick second opinion on a vendor pitch, an independent AI consultant is quick to hire and often excellent. The limit is capacity: one person rarely builds, integrates and supports a real system.</p>
-              </li>
+            <div className="platlist" role="list">
+              <div className="plat plat-2col" role="listitem"><span className="capid">01</span><div className="plat-name"><h3>When a big firm is the right call</h3></div><p className="plat-build">If AI is changing every division at once, you need formal change management across thousands of staff, or your regulator expects a household name on the report, a Big Four firm or a large consultancy such as Mantel is a sensible choice. Most businesses of 20 to 200 people are not in that position.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">02</span><div className="plat-name"><h3>When an independent consultant is enough</h3></div><p className="plat-build">If you mainly want staff trained on ChatGPT or Copilot, or a quick second opinion on a vendor pitch, an independent AI consultant is quick to hire and often excellent. The limit is capacity: one person rarely builds, integrates and supports a real system.</p></div>
+            </div>
+          </div>
+        </section>
+
+        {/* ═══ READINESS CHECKLIST (<details>) → vlog ═══ */}
+        <section className="vlog" id="readiness">
+          <div className="wrap">
+            <div className="section-head">
+              <div className="eyebrow">Check yourself first</div>
+              <h2>AI readiness checklist: five areas, fifteen questions</h2>
+              <p>
+                Open each area and tick off what is already true for your business. Three or more gaps in one area
+                is normal. It tells you where an AI readiness assessment should start.
+              </p>
+              <VisualSlot page={PAGE_KEY} slot="proof" kind="photo" ratio="3:2" captionClassName="figcap"
+                subject="An operations manager and an AI consultant reviewing a laptop and a blank checklist in a warehouse office"
+                caption="A readiness assessment is a working session, not a quiz. We sit with the people who run the process, look at the actual systems, and write down what is true today, gaps included.">
+                <img src="/images/au/ai-consulting/ai-consulting-readiness.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over-the-shoulder view of an operations manager and an AI consultant reviewing a laptop and a blank checklist in a bright Melbourne warehouse office" />
+              </VisualSlot>
+            </div>
+            <div className="ventries">
+              {READINESS.map((r) => (
+                <details key={r.area} className="ventry">
+                  <summary><h3>{r.area}: {r.lead}</h3><span className="chev" aria-hidden="true">+</span></summary>
+                  <ul className="chg-list">
+                    {r.checks.map((c) => (<li key={c}><span>{c}</span></li>))}
+                  </ul>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ═══ PHOTOBREAK (US template visual, no AU image yet) ═══ */}
+        <VisualSlot page={PAGE_KEY} slot="photobreak" kind="illustration" ratio="12:5" className="photobreak"
+          subject="AI-generated model: a long white table of process boxes, three orange boxes lifted onto a small plinth for a pilot" />
+
+        {/* ═══ ENGAGEMENT STAGES → process timeline (stages stay openable, as the copy says) ═══ */}
+        <section className="section process" id="how-it-runs">
+          <div className="wrap">
+            <div className="head-media">
+              <div className="section-head">
+                <div className="eyebrow">How an engagement runs</div>
+                <h2>AI implementation consulting in six stages, from first call to a working system</h2>
+                <p className="lead">
+                  Open a stage to see what happens and what you get at the end of it. You can stop after any stage and
+                  keep everything we have produced.
+                </p>
+              </div>
+              <VisualSlot page={PAGE_KEY} slot="process" kind="photo" ratio="3:2" captionClassName="figcap"
+                subject="A consultant drawing a four-step process flow of empty boxes on a whiteboard while three staff look on"
+                caption={<><b>Stage two in practice.</b> The readiness workshop starts by drawing the process as it runs today, box by box, with the people who do the work in the room. The best AI use case is usually a step where someone copies information between two screens, or answers the same question many times a week.</>}>
+                <img src="/images/au/ai-consulting/ai-consulting-workshop.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A readiness workshop in a bright Melbourne meeting room: a consultant draws a four-step process flow of empty boxes on a whiteboard while three staff who do the work look on" />
+              </VisualSlot>
+            </div>
+            <div className="timeline timeline-3">
+              {STAGES.map((s) => (
+                <details key={s.n} className="tnode">
+                  <summary>
+                    <div className="idx">{s.n}</div>
+                    <h3>{s.t}<span className="chev" aria-hidden="true">+</span></h3>
+                  </summary>
+                  <p>{s.d}</p>
+                  <p><b>You leave with:</b> {s.out}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <div className="au-midcta">
+          <MidPageCTA
+            headline={'Not sure where AI fits in your business?'}
+            sub={'Tell us what takes up your team’s week. On a short call with the founder, we will tell you where AI would genuinely help, where it would not, and whether an AI readiness assessment is worth doing at all.'}
+            label={'Book my AI readiness call'}
+          />
+        </div>
+
+        {/* ═══ BUY OR BUILD → facts + rule-of-thumb panel ═══ */}
+        <section className="section facts" id="buy-or-build">
+          <div className="wrap">
+            <div className="section-head">
+              <div className="eyebrow">The decision most consultants skip</div>
+              <h2>Buy or build: an off-the-shelf AI tool or a custom AI agent?</h2>
+            </div>
+            <div className="factswrap">
+              <div className="factlist">
+                <div className="fact"><div className="sec">§01</div><p>
+                  Generative AI is AI that writes, summarises or creates content when you ask it to. Microsoft
+                  Copilot, ChatGPT Enterprise, Claude and Google Gemini are generative AI for the whole company. For
+                  general work such as drafting emails, summarising meetings or searching your own documents, one of
+                  them is often the right answer. Buying is faster and cheaper than building, and we will say so.
+                </p></div>
+                <div className="fact"><div className="sec">§02</div><p>
+                  Agentic AI is different. An AI agent can take actions across your systems on its own, within rules
+                  you set: checking an order, updating a record in Xero, chasing an overdue invoice, routing a
+                  customer request. That is where a custom build earns its place, because no general tool knows your
+                  pricing rules, your stock system or your approval steps.
+                </p></div>
+                <div className="fact"><div className="sec">§03</div><p>
+                  When the plan calls for a build, the work moves straight into our{' '}
+                  <a href="/au/ai-agents">AI agent development service for Australian businesses</a>, with
+                  the same people. Wider builds, such as adding AI to your CRM, ERP or ecommerce platform, run through{' '}
+                  <a href="/au/ai-development">custom AI development in Australia</a>. If the bottleneck is
+                  the phone, see our <a href="/au/ai-receptionist">AI receptionist for Australian SMEs</a>.
+                  For the difference between chatbots and agents, read{' '}
+                  <a href="/blog/ai-chatbots-vs-ai-agents-business">AI chatbots vs AI agents</a>.
+                </p></div>
+              </div>
+              <div className="au-panel">
+                <div className="eyebrow">A simple rule of thumb</div>
+                <ul className="trigrows">
+                  <li><span className="m">General writing and summaries</span><span className="n">Copilot, ChatGPT Enterprise, Claude, Gemini</span><span className="t">Buy</span></li>
+                  <li><span className="m">Searching your own documents</span><span className="n">often covered by the tools above</span><span className="t">Buy first</span></li>
+                  <li><span className="m">Work across several of your systems</span><span className="n">Xero or MYOB, CRM, stock, helpdesk</span><span className="t">Build</span></li>
+                  <li><span className="m">Rules only your business knows</span><span className="n">pricing, approvals, exceptions</span><span className="t">Build</span></li>
+                  <li><span className="m">A tool you bought that nobody uses</span><span className="n">usually a setup problem</span><span className="t">Fix it</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ═══ WHERE THE PLAN LEADS → definition module (photo left, copy + link tiles right) ═══ */}
+        <section className="definition" id="next-steps">
+          <div>
+            <VisualSlot page={PAGE_KEY} slot="definition" kind="photo" ratio="3:2" className="definition-image"
+              subject="A FactoryJet engineer and a distribution business owner reviewing a tablet together on a warehouse floor">
+              <img src="/images/au/ai-consulting/ai-consulting-build.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over-the-shoulder view of a FactoryJet engineer and a distribution business owner in a hi-vis vest reviewing a tablet together in a bright Brisbane warehouse" />
+            </VisualSlot>
+            <p className="figcap">
+              The engineer who helped write your plan is on the warehouse floor when it goes live. That is the
+              difference between AI consulting and a slide deck.
+            </p>
+          </div>
+          <div className="definition-copy">
+            <div className="eyebrow">After the advice</div>
+            <h2>Where an AI strategy usually leads next</h2>
+            <p>
+              AI strategy consulting is only worth paying for if something ships at the end. These are the four
+              places our plans most often land, each handled by the same team that wrote the plan.
+            </p>
+            <ul className="agentdir-grid">
+              {NEXT_STEPS.map((s) => (
+                <li key={s.href}>
+                  <a href={s.href}>
+                    <span className="agentdir-t">{s.t}</span>
+                    <span className="agentdir-l">{s.d}</span>
+                    <span className="agentdir-go" aria-hidden="true">↗</span>
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         </section>
 
-        {/* ═══ 6. READINESS CHECKLIST (interactive <details>) ═══ */}
-        <section className="sec-lg dot-grid">
+        {/* ═══ PRIVACY & GOVERNANCE → facts + photo + ruled rows ═══ */}
+        <section className="section facts" id="governance">
           <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <span className="eyebrow">Check yourself first</span>
-                <h2>AI readiness checklist: five areas, fifteen questions</h2>
-                <p className="lead mt-4" style={{ maxWidth: 560 }}>
-                  Open each area and tick off what is already true for your business. Three or more gaps in one area
-                  is normal. It tells you where an AI readiness assessment should start.
-                </p>
-                <div className="card mt-6" style={{ maxWidth: 600, padding: '4px 22px' }}>
-                  {READINESS.map((r) => (
-                    <details key={r.area}>
-                      <summary>{r.area}: {r.lead}</summary>
-                      <ul className="scope-list" style={{ paddingBottom: 18 }}>
-                        {r.checks.map((c) => (<li key={c}>{c}</li>))}
-                      </ul>
-                    </details>
-                  ))}
-                </div>
-              </div>
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/ai-consulting/ai-consulting-readiness.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over-the-shoulder view of an operations manager and an AI consultant reviewing a laptop and a blank checklist in a bright Melbourne warehouse office" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
-                <div style={{ padding: '14px 12px 8px' }}>
-                  <p style={{ fontSize: 14 }}>
-                    A readiness assessment is a working session, not a quiz. We sit with the people who run the
-                    process, look at the actual systems, and write down what is true today, gaps included.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ═══ 7. ENGAGEMENT STAGES (interactive <details>) ═══ */}
-        <section className="sec-lg">
-          <div className="wrap">
-            <div className="col-6040">
-            <div>
-            <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">How an engagement runs</span>
-              <h2>AI implementation consulting in six stages, from first call to a working system</h2>
-              <p className="lead mt-4">
-                Open a stage to see what happens and what you get at the end of it. You can stop after any stage and
-                keep everything we have produced.
-              </p>
-            </div>
-            <div className="card mt-8" style={{ padding: '4px 24px' }}>
-              {STAGES.map((s) => (
-                <details key={s.n}>
-                  <summary><span><span style={{ fontFamily: T.fm, color: T.small, marginRight: 12 }}>{s.n}</span>{s.t}</span></summary>
-                  <div style={{ paddingBottom: 18 }}>
-                    <p>{s.d}</p>
-                    <p style={{ marginTop: 8 }}><b style={{ color: T.ink }}>You leave with:</b> {s.out}</p>
-                  </div>
-                </details>
-              ))}
-            </div>
-            </div>
-            <div className="card" style={{ padding: 8 }}>
-              <img src="/images/au/ai-consulting/ai-consulting-workshop.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A readiness workshop in a bright Melbourne meeting room: a consultant draws a four-step process flow of empty boxes on a whiteboard while three staff who do the work look on" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
-              <div style={{ padding: '14px 12px 8px' }}>
-                <span className="eyebrow">Stage two in practice</span>
-                <p style={{ fontSize: 14 }}>
-                  The readiness workshop starts by drawing the process as it runs today, box by box, with the people who
-                  do the work in the room. The best AI use case is usually a step where someone copies information
-                  between two screens, or answers the same question many times a week.
-                </p>
-              </div>
-            </div>
-            </div>
-          </div>
-        </section>
-
-        <MidPageCTA
-          headline={'Not sure where AI fits in your business?'}
-          sub={'Tell us what takes up your team’s week. On a short call with the founder, we will tell you where AI would genuinely help, where it would not, and whether an AI readiness assessment is worth doing at all.'}
-          label={'Book my AI readiness call'}
-        />
-
-        {/* ═══ 8. BUY OR BUILD ═══ */}
-        <section className="sec-lg dot-grid">
-          <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <span className="eyebrow">The decision most consultants skip</span>
-                <h2>Buy or build: an off-the-shelf AI tool or a custom AI agent?</h2>
-                <div className="stack mt-6">
-                  <p>
-                    Generative AI is AI that writes, summarises or creates content when you ask it to. Microsoft
-                    Copilot, ChatGPT Enterprise, Claude and Google Gemini are generative AI for the whole company. For
-                    general work such as drafting emails, summarising meetings or searching your own documents, one of
-                    them is often the right answer. Buying is faster and cheaper than building, and we will say so.
-                  </p>
-                  <p>
-                    Agentic AI is different. An AI agent can take actions across your systems on its own, within rules
-                    you set: checking an order, updating a record in Xero, chasing an overdue invoice, routing a
-                    customer request. That is where a custom build earns its place, because no general tool knows your
-                    pricing rules, your stock system or your approval steps.
-                  </p>
-                  <p>
-                    When the plan calls for a build, the work moves straight into our{' '}
-                    <a href="/au/ai-agents" style={inLink}>AI agent development service for Australian businesses</a>, with
-                    the same people. Wider builds, such as adding AI to your CRM, ERP or ecommerce platform, run through{' '}
-                    <a href="/au/ai-development" style={inLink}>custom AI development in Australia</a>. If the bottleneck is
-                    the phone, see our <a href="/au/ai-receptionist" style={inLink}>AI receptionist for Australian SMEs</a>.
-                    For the difference between chatbots and agents, read{' '}
-                    <a href="/blog/ai-chatbots-vs-ai-agents-business" style={inLink}>AI chatbots vs AI agents</a>.
-                  </p>
-                </div>
-              </div>
-              <div className="card card-top-orange">
-                <span className="eyebrow">A simple rule of thumb</span>
-                <div className="scorecard-row"><div><div className="scorecard-metric">General writing and summaries</div><div className="scorecard-note">Copilot, ChatGPT Enterprise, Claude, Gemini</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Buy</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Searching your own documents</div><div className="scorecard-note">often covered by the tools above</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Buy first</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Work across several of your systems</div><div className="scorecard-note">Xero or MYOB, CRM, stock, helpdesk</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Build</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Rules only your business knows</div><div className="scorecard-note">pricing, approvals, exceptions</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Build</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">A tool you bought that nobody uses</div><div className="scorecard-note">usually a setup problem</div></div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Fix it</div></div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ═══ 9. WHERE THE PLAN LEADS (hover cards to sibling pages) ═══ */}
-        <section className="sec-lg">
-          <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <span className="eyebrow">After the advice</span>
-                <h2>Where an AI strategy usually leads next</h2>
-                <p className="lead mt-4" style={{ maxWidth: 560 }}>
-                  AI strategy consulting is only worth paying for if something ships at the end. These are the four
-                  places our plans most often land, each handled by the same team that wrote the plan.
-                </p>
-                <ul className="col-2 mt-8">
-                  {NEXT_STEPS.map((s) => (
-                    <li key={s.href}>
-                      <a className="svc-card" href={s.href} style={{ display: 'block', height: '100%' }}>
-                        <h3 style={{ fontSize: 17 }}>{s.t} <span style={{ color: T.small }}>&rarr;</span></h3>
-                        <p className="mt-4">{s.d}</p>
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/ai-consulting/ai-consulting-build.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over-the-shoulder view of a FactoryJet engineer and a distribution business owner in a hi-vis vest reviewing a tablet together in a bright Brisbane warehouse" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
-                <div style={{ padding: '14px 12px 8px' }}>
-                  <p style={{ fontSize: 14 }}>
-                    The engineer who helped write your plan is on the warehouse floor when it goes live. That is the
-                    difference between AI consulting and a slide deck.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ═══ 10. PRIVACY & GOVERNANCE ═══ */}
-        <section className="sec-lg dot-grid">
-          <div className="wrap">
-            <div className="col-6040">
-            <div>
-              <span className="eyebrow">AI governance, in plain English</span>
+            <div className="section-head">
+              <div className="eyebrow">AI governance, in plain English</div>
               <h2>The Privacy Act and safe, responsible AI shape the plan before the engineering does</h2>
-              <div className="stack mt-6">
-                <p>
+            </div>
+            <div className="factswrap">
+              <div className="factlist">
+                <div className="fact"><div className="sec">§01</div><p>
                   If AI will touch personal information, meaning anything about a customer, patient, tenant or
                   employee, the Privacy Act 1988 is the starting point. The Office of the Australian Information
                   Commissioner (OAIC) is direct: the Privacy Act applies to all uses of AI involving personal
                   information. The 13 Australian Privacy Principles (APPs) then set the rules for how that
                   information is collected, used, disclosed, kept accurate and kept secure.
-                </p>
-                <p>
+                </p></div>
+                <div className="fact"><div className="sec">§02</div><p>
                   The OAIC’s guidance on commercially available AI products gives three practical instructions we
                   build into every engagement. Do due diligence on any AI product before you adopt it. Take a
                   &ldquo;privacy by design&rdquo; approach, which includes a Privacy Impact Assessment (a written check of
@@ -727,153 +788,148 @@ export default function AiConsultingAUPage() {
                   enter personal information, especially sensitive information, into publicly available generative AI
                   tools. The guidance also reminds businesses that APP 10 requires reasonable steps to keep personal
                   information accurate, which matters because AI can produce confident, wrong answers.
-                </p>
-                <p>
+                </p></div>
+                <div className="fact"><div className="sec">§03</div><p>
                   A new duty starts on 10 December 2026. Under the Privacy and Other Legislation Amendment Act 2024,
                   organisations covered by the Privacy Act that use personal information in automated decisions that
                   could affect people’s rights or interests must explain this in their privacy policy. If a system we
                   design will help make decisions about customers or staff, we flag it at the assessment stage.
-                </p>
-                <p>
-                  On the wider &ldquo;safe and responsible AI&rdquo; front, the Australian Government’s National AI Centre
-                  published the Guidance for AI Adoption, which updates and replaces the earlier Voluntary AI Safety
-                  Standard. It is voluntary, and its six essential practices make a sensible governance checklist for
-                  any business: decide who is accountable, understand impacts and plan accordingly, measure and manage
-                  risks, share essential information, test and monitor, and maintain human control.
-                </p>
+                </p></div>
+                <div className="fact"><div className="sec">§04</div><div>
+                  <p>
+                    On the wider &ldquo;safe and responsible AI&rdquo; front, the Australian Government’s National AI Centre
+                    published the Guidance for AI Adoption, which updates and replaces the earlier Voluntary AI Safety
+                    Standard. It is voluntary, and its six essential practices make a sensible governance checklist for
+                    any business: decide who is accountable, understand impacts and plan accordingly, measure and manage
+                    risks, share essential information, test and monitor, and maintain human control.
+                  </p>
+                  <p className="au-note">
+                    Sources: <a href={SRC_OAIC_AI} {...extLink}>OAIC, guidance on privacy and the use of commercially available AI products</a>;{' '}
+                    <a href={SRC_OAIC_APPS} {...extLink}>OAIC, Australian Privacy Principles</a>;{' '}
+                    <a href={SRC_OAIC_ADM} {...extLink}>OAIC, transparency in automated decision making</a>;{' '}
+                    <a href={SRC_AI6} {...extLink}>Allens, FAQs on the Guidance for AI Adoption</a>.
+                  </p>
+                </div></div>
               </div>
-              <p style={srcNote}>
-                Sources: <a href={SRC_OAIC_AI} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>OAIC, guidance on privacy and the use of commercially available AI products</a>;{' '}
-                <a href={SRC_OAIC_APPS} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>OAIC, Australian Privacy Principles</a>;{' '}
-                <a href={SRC_OAIC_ADM} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>OAIC, transparency in automated decision making</a>;{' '}
-                <a href={SRC_AI6} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>Allens, FAQs on the Guidance for AI Adoption</a>.
-              </p>
+              <VisualSlot page={PAGE_KEY} slot="facts-2" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
+                subject="Three colleagues reading and marking up a printed draft AI usage policy together in a bright office"
+                caption={<><b>What governance looks like.</b> Usually a short, plain-English AI usage policy that the owner, the privacy lead and the people who use the tools read and agree together. Which tools are allowed, what data can go in them, and who checks the output.</>}>
+                <img src="/images/au/ai-consulting/ai-consulting-privacy.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Three colleagues in a calm, bright Canberra office reading and marking up a printed draft AI usage policy together, with Parliament House in the distance" />
+              </VisualSlot>
             </div>
-            <div className="card" style={{ padding: 8 }}>
-              <img src="/images/au/ai-consulting/ai-consulting-privacy.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Three colleagues in a calm, bright Canberra office reading and marking up a printed draft AI usage policy together, with Parliament House in the distance" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
-              <div style={{ padding: '14px 12px 8px' }}>
-                <span className="eyebrow">What governance looks like</span>
-                <p style={{ fontSize: 14 }}>
-                  Usually a short, plain-English AI usage policy that the owner, the privacy lead and the people who use
-                  the tools read and agree together. Which tools are allowed, what data can go in them, and who checks
-                  the output.
-                </p>
-              </div>
+            <div className="platlist span-all" role="list">
+              <div className="plat plat-2col" role="listitem"><span className="capid">01</span><div className="plat-name"><h3>What we do</h3></div><p className="plat-build">Map the personal information each use case touches, check which AI providers would see it and on what terms, write your AI usage policy, and prepare the inputs for a Privacy Impact Assessment.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">02</span><div className="plat-name"><h3>What you keep</h3></div><p className="plat-build">You stay accountable for your customers’ information. We make that easier to meet with scoped access, a record of what the system did, and a human in charge of decisions that matter.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">03</span><div className="plat-name"><h3>What we do not do</h3></div><p className="plat-build">We are not lawyers and do not give legal sign-off. We build to the requirements you and your adviser set, and document everything your adviser needs to review.</p></div>
             </div>
-            </div>
-            <ul className="col-3 mt-10">
-              <li className="card"><h3>What we do</h3><p className="mt-4">Map the personal information each use case touches, check which AI providers would see it and on what terms, write your AI usage policy, and prepare the inputs for a Privacy Impact Assessment.</p></li>
-              <li className="card"><h3>What you keep</h3><p className="mt-4">You stay accountable for your customers’ information. We make that easier to meet with scoped access, a record of what the system did, and a human in charge of decisions that matter.</p></li>
-              <li className="card"><h3>What we do not do</h3><p className="mt-4">We are not lawyers and do not give legal sign-off. We build to the requirements you and your adviser set, and document everything your adviser needs to review.</p></li>
-            </ul>
           </div>
         </section>
 
-        {/* ═══ 11. WHO IT IS FOR ═══ */}
-        <section className="sec-lg">
+        {/* ═══ WHO IT IS FOR → ruled rows ═══ */}
+        <section className="section platforms" id="who-we-work-with">
           <div className="wrap">
-            <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">Who we work with</span>
-              <h2>AI consulting for small businesses and mid-market firms across Australia</h2>
-              <p className="lead mt-4">
+            <div className="section-head plat-head">
+              <div>
+                <div className="eyebrow">Who we work with</div>
+                <h2>AI consulting for small businesses and mid-market firms across Australia</h2>
+              </div>
+              <p>
                 Our AI consulting for small businesses and growing firms works best where a repeated, paper-heavy or
                 inbox-heavy process eats up skilled people’s time. These groups make up most of our conversations.
               </p>
             </div>
-            <ul className="col-3 mt-12">
-              <li className="svc-card"><h3>Professional services</h3><p className="mt-4">Accounting practices, law firms, recruiters and agencies. Drafting, document review, client onboarding and time recording are common first use cases.</p></li>
-              <li className="svc-card"><h3>Trades and field services</h3><p className="mt-4">Builders, electricians, plumbers and maintenance firms. Quoting, job booking, after-hours calls and turning site notes into invoices in Xero or MYOB.</p></li>
-              <li className="svc-card"><h3>Wholesalers and distributors</h3><p className="mt-4">Order entry from emailed purchase orders, stock questions, supplier chasing and freight updates, often around an ERP nobody wants to replace.</p></li>
-              <li className="svc-card"><h3>Ecommerce brands</h3><p className="mt-4">Customer service, returns under the Australian Consumer Law, product data and marketplace listings. This is our home ground; see our <a href="/au" style={inLink}>Australian services hub</a>.</p></li>
-              <li className="svc-card"><h3>Property and real estate</h3><p className="mt-4">Agencies, strata managers and developers. Tenant and buyer enquiries, maintenance requests and document handling, with care over personal information.</p></li>
-              <li className="svc-card"><h3>Clinics and allied health</h3><p className="mt-4">On the admin side only: bookings, referrals, letters and inbox triage. Health information is sensitive information under the Privacy Act, so the privacy work comes first.</p></li>
-            </ul>
+            <div className="platlist" role="list">
+              <div className="plat plat-2col" role="listitem"><span className="capid">01</span><div className="plat-name"><h3>Professional services</h3></div><p className="plat-build">Accounting practices, law firms, recruiters and agencies. Drafting, document review, client onboarding and time recording are common first use cases.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">02</span><div className="plat-name"><h3>Trades and field services</h3></div><p className="plat-build">Builders, electricians, plumbers and maintenance firms. Quoting, job booking, after-hours calls and turning site notes into invoices in Xero or MYOB.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">03</span><div className="plat-name"><h3>Wholesalers and distributors</h3></div><p className="plat-build">Order entry from emailed purchase orders, stock questions, supplier chasing and freight updates, often around an ERP nobody wants to replace.</p></div>
+              <div className="plat plat-2col plat-own" role="listitem"><span className="capid">04</span><div className="plat-name"><h3>Ecommerce brands</h3></div><p className="plat-build">Customer service, returns under the Australian Consumer Law, product data and marketplace listings. This is our home ground; see our <a href="/au">Australian services hub</a>.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">05</span><div className="plat-name"><h3>Property and real estate</h3></div><p className="plat-build">Agencies, strata managers and developers. Tenant and buyer enquiries, maintenance requests and document handling, with care over personal information.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">06</span><div className="plat-name"><h3>Clinics and allied health</h3></div><p className="plat-build">On the admin side only: bookings, referrals, letters and inbox triage. Health information is sensitive information under the Privacy Act, so the privacy work comes first.</p></div>
+            </div>
           </div>
         </section>
 
-        {/* ═══ 12. ENGAGEMENT SHAPES + COST DRIVERS (no pricing) ═══ */}
-        <section className="sec-lg dot-grid">
+        {/* ═══ ENGAGEMENT SHAPES + COST DRIVERS (no pricing) → openable rows + cost panel ═══ */}
+        <section className="section platforms" id="engagement">
           <div className="wrap">
-            <div className="col-6040">
+            <div className="section-head plat-head">
               <div>
-                <span className="eyebrow">Scope, not packages</span>
+                <div className="eyebrow">Scope, not packages</div>
                 <h2>Four ways to work with our AI consultants. Which one fits you?</h2>
-                <p className="lead mt-4" style={{ maxWidth: 560 }}>
-                  Every engagement is quoted for your scope, with a fixed price per stage. Open each shape to see who it
-                  suits.
-                </p>
-                <div className="card mt-6" style={{ maxWidth: 600, padding: '4px 22px' }}>
+              </div>
+              <p>
+                Every engagement is quoted for your scope, with a fixed price per stage. Open each shape to see who it
+                suits.
+              </p>
+            </div>
+            <div className="au-split">
+              <div>
+                <div className="ventries">
                   {SHAPES.map((s) => (
-                    <details key={s.t}>
-                      <summary>{s.t}</summary>
-                      <div style={{ paddingBottom: 18 }}>
-                        <p>{s.d}</p>
-                        <p style={{ marginTop: 10, fontFamily: T.fm, fontSize: 11, letterSpacing: '.1em', textTransform: 'uppercase', color: T.small }}>This fits you if</p>
-                        <ul className="scope-list" style={{ marginTop: 6 }}>
-                          {s.fits.map((f) => (<li key={f}>{f}</li>))}
-                        </ul>
-                      </div>
+                    <details key={s.t} className="ventry">
+                      <summary><h3>{s.t}</h3><span className="chev" aria-hidden="true">+</span></summary>
+                      <p>{s.d}</p>
+                      <span className="vtag">This fits you if</span>
+                      <ul className="chg-list">
+                        {s.fits.map((f) => (<li key={f}><span>{f}</span></li>))}
+                      </ul>
                     </details>
                   ))}
                 </div>
-                <div className="mt-8">
-                  <ModalCTAButton label="Book my AI readiness call" region="au" modalVariant="default" btnVariant="primary-light" />
-                </div>
+                <ModalCTAButton label="Book my AI readiness call" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
               </div>
-              <div className="card card-top-orange">
-                <span className="eyebrow">How much does an AI consultant cost?</span>
-                <p style={{ fontSize: 14, marginTop: 8, marginBottom: 6 }}>
+              <div className="au-panel">
+                <div className="eyebrow">How much does an AI consultant cost?</div>
+                <p>
                   There is no honest single number. These five things move the cost of AI consulting more than anything
                   else:
                 </p>
-                <div className="scorecard-row"><div className="scorecard-metric">Teams and processes in scope</div><div className="scorecard-val" style={{ fontSize: 14 }}>Breadth</div></div>
-                <div className="scorecard-row"><div className="scorecard-metric">State of your data</div><div className="scorecard-val" style={{ fontSize: 14 }}>Prep</div></div>
-                <div className="scorecard-row"><div className="scorecard-metric">Systems to connect</div><div className="scorecard-val" style={{ fontSize: 14 }}>Reach</div></div>
-                <div className="scorecard-row"><div className="scorecard-metric">Privacy and sector rules</div><div className="scorecard-val" style={{ fontSize: 14 }}>Governance</div></div>
-                <div className="scorecard-row"><div className="scorecard-metric">Advice only, or advice plus build</div><div className="scorecard-val" style={{ fontSize: 14 }}>Delivery</div></div>
-                <div className="scorecard-row"><div className="scorecard-metric">First call with the founder</div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Free</div></div>
+                <ul className="trigrows">
+                  <li><span className="m">Teams and processes in scope</span><span className="t">Breadth</span></li>
+                  <li><span className="m">State of your data</span><span className="t">Prep</span></li>
+                  <li><span className="m">Systems to connect</span><span className="t">Reach</span></li>
+                  <li><span className="m">Privacy and sector rules</span><span className="t">Governance</span></li>
+                  <li><span className="m">Advice only, or advice plus build</span><span className="t">Delivery</span></li>
+                  <li><span className="m">First call with the founder</span><span className="t">Free</span></li>
+                </ul>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ═══ 13. SYDNEY + MELBOURNE ═══ */}
-        <section className="sec-lg">
+        {/* ═══ SYDNEY + MELBOURNE → ruled rows + split (prose, links | demand) ═══ */}
+        <section className="section platforms" id="locations">
           <div className="wrap">
-            <div style={{ maxWidth: 780 }}>
-              <span className="eyebrow">Sydney, Melbourne and Australia-wide</span>
-              <h2>AI consulting in Sydney and Melbourne, and everywhere else in Australia</h2>
-              <p className="lead mt-4">
+            <div className="section-head plat-head">
+              <div>
+                <div className="eyebrow">Sydney, Melbourne and Australia-wide</div>
+                <h2>AI consulting in Sydney and Melbourne, and everywhere else in Australia</h2>
+              </div>
+              <p>
                 Plenty of people search for an AI consultant in Sydney or Melbourne, or type &ldquo;AI consulting near
                 me&rdquo;, expecting to need someone down the road. For this kind of work you do not. What matters is who
                 turns up to the workshop and who is still there after launch.
               </p>
             </div>
-            <div className="col-2 mt-10">
-              <div className="card">
-                <h3>AI consulting Sydney</h3>
-                <p className="mt-4">
-                  Sydney has the deepest pool of AI consulting firms in the country, from Big Four practices in the CBD
-                  to boutique builders. That makes choosing harder, not easier. Sydney businesses we talk to are often
-                  in professional services, finance-adjacent work and distribution, where the first use cases are
-                  document-heavy: reading contracts, drafting client letters, processing purchase orders. Privacy and
-                  record-keeping expectations run high, so our Sydney engagements put the APP check and a written AI
-                  usage policy right at the start.
-                </p>
-              </div>
-              <div className="card">
-                <h3>AI consulting Melbourne</h3>
-                <p className="mt-4">
-                  Melbourne has a strong mix of manufacturers, wholesalers, health and education providers and
-                  ecommerce brands. Our Melbourne AI consulting work often starts in operations: order entry, stock and
-                  supplier questions, customer service queues, and connecting Xero or MYOB to the systems around it.
-                  Melbourne firms also tend to ask hard questions about ownership, which suits us, because everything we
-                  build is yours: code, prompts, integrations and documentation.
-                </p>
-              </div>
+            <div className="platlist" role="list">
+              <div className="plat plat-2col" role="listitem"><span className="capid">01</span><div className="plat-name"><h3>AI consulting Sydney</h3></div><p className="plat-build">
+                Sydney has the deepest pool of AI consulting firms in the country, from Big Four practices in the CBD
+                to boutique builders. That makes choosing harder, not easier. Sydney businesses we talk to are often
+                in professional services, finance-adjacent work and distribution, where the first use cases are
+                document-heavy: reading contracts, drafting client letters, processing purchase orders. Privacy and
+                record-keeping expectations run high, so our Sydney engagements put the APP check and a written AI
+                usage policy right at the start.
+              </p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">02</span><div className="plat-name"><h3>AI consulting Melbourne</h3></div><p className="plat-build">
+                Melbourne has a strong mix of manufacturers, wholesalers, health and education providers and
+                ecommerce brands. Our Melbourne AI consulting work often starts in operations: order entry, stock and
+                supplier questions, customer service queues, and connecting Xero or MYOB to the systems around it.
+                Melbourne firms also tend to ask hard questions about ownership, which suits us, because everything we
+                build is yours: code, prompts, integrations and documentation.
+              </p></div>
             </div>
-            <div className="col-6040 mt-10">
-              <div className="stack">
+            <div className="au-split">
+              <div>
                 <p>
                   We run engagements remotely, with video workshops, shared process maps and written reports, and plan
                   sessions around Australian business hours. The same model serves Brisbane, Perth, Adelaide, Canberra
@@ -882,192 +938,135 @@ export default function AiConsultingAUPage() {
                 </p>
                 <p>
                   If AI visibility is also on your list, meaning how your business shows up in ChatGPT, Perplexity and
-                  Google AI answers, that is a separate service: see <a href="/au/ai-seo" style={inLink}>AI SEO in Australia</a>.
+                  Google AI answers, that is a separate service: see <a href="/au/ai-seo">AI SEO in Australia</a>.
                 </p>
-                <div className="flex-wrap">
-                  <a className="city-pill" href="/au">FactoryJet Australia</a>
-                  <a className="city-pill" href="/au/ai-agents">AI agents Australia</a>
-                  <a className="city-pill" href="/au/ai-development">AI development Australia</a>
-                  <a className="city-pill" href="/au/melbourne">Melbourne</a>
-                  <a className="city-pill" href="/au/brisbane">Brisbane</a>
-                </div>
+                <ul className="city-list">
+                  <li><a href="/au">FactoryJet Australia</a></li>
+                  <li><a href="/au/ai-agents">AI agents Australia</a></li>
+                  <li><a href="/au/ai-development">AI development Australia</a></li>
+                  <li><a href="/au/melbourne">Melbourne</a></li>
+                  <li><a href="/au/brisbane">Brisbane</a></li>
+                </ul>
               </div>
-
-              <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
-                <div className="demand-head" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: `1px solid ${T.n200}`, padding: '14px 18px' }}>
-                  <span style={{ fontFamily: T.fm, fontSize: 10, letterSpacing: '.13em', textTransform: 'uppercase', color: T.n400 }}>Australia · Monthly Search Demand</span>
-                  <span style={{ background: T.small, color: '#fff', fontFamily: T.fm, fontSize: 10, borderRadius: 999, padding: '3px 9px' }}>DataForSEO</span>
-                </div>
-                <div style={{ padding: '4px 18px 14px' }}>
-                  <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
-                    {[
-                      { kw: 'ai consulting / consultant / consultancy', v: '1,000', w: '100%', kd: 'The head term cluster' },
-                      { kw: 'ai consulting services', v: '170', w: '17%', kd: 'Buyer intent' },
-                      { kw: 'ai consulting firm / company', v: '140', w: '14%', kd: 'Comparing providers' },
-                      { kw: 'ai consulting australia', v: '110', w: '11%', kd: 'National search' },
-                      { kw: 'ai consulting sydney', v: '110', w: '11%', kd: 'Local intent' },
-                      { kw: 'ai consulting melbourne', v: '110', w: '11%', kd: 'Local intent' },
-                      { kw: 'ai strategy consulting', v: '70', w: '7%', kd: 'Leadership searches' },
-                      { kw: 'ai implementation consulting', v: '50', w: '5%', kd: 'Wants delivery, not slides' },
-                    ].map((r) => (
-                      <li key={r.kw} className="demand-row">
-                        <div className="demand-top"><span className="demand-kw">{r.kw}</span><span className="demand-v">{r.v}<span style={{ fontSize: 9, color: T.n400 }}> searches</span></span></div>
-                        <div className="demand-bar"><i style={{ width: r.w }} /></div>
-                        <div className="demand-kd">{r.kd}</div>
-                      </li>
-                    ))}
-                  </ul>
-                  <p style={{ textAlign: 'center', fontFamily: T.fm, fontSize: 10, color: T.n400, marginTop: 10 }}>Source: DataForSEO, Australia, September 2026</p>
-                </div>
+              <div className="demand">
+                <div className="demand-head"><span>Australia · Monthly Search Demand</span><b>DataForSEO</b></div>
+                <ul>
+                  {[
+                    { kw: 'ai consulting / consultant / consultancy', v: '1,000', w: '100%', kd: 'The head term cluster' },
+                    { kw: 'ai consulting services', v: '170', w: '17%', kd: 'Buyer intent' },
+                    { kw: 'ai consulting firm / company', v: '140', w: '14%', kd: 'Comparing providers' },
+                    { kw: 'ai consulting australia', v: '110', w: '11%', kd: 'National search' },
+                    { kw: 'ai consulting sydney', v: '110', w: '11%', kd: 'Local intent' },
+                    { kw: 'ai consulting melbourne', v: '110', w: '11%', kd: 'Local intent' },
+                    { kw: 'ai strategy consulting', v: '70', w: '7%', kd: 'Leadership searches' },
+                    { kw: 'ai implementation consulting', v: '50', w: '5%', kd: 'Wants delivery, not slides' },
+                  ].map((r) => (
+                    <li key={r.kw} className="demand-row">
+                      <div className="demand-top"><span className="demand-kw">{r.kw}</span><span className="demand-v">{r.v}<small> searches</small></span></div>
+                      <div className="demand-bar"><i style={{ width: r.w }} /></div>
+                      <div className="demand-kd">{r.kd}</div>
+                    </li>
+                  ))}
+                </ul>
+                <p className="demand-src">Source: DataForSEO, Australia, September 2026</p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ═══ 14. COMPETITOR LIST (self-disclosure, ItemList) ═══ */}
-        <section className="sec-lg dot-grid">
+        {/* ═══ COMPETITOR LIST (self-disclosure, ItemList from AI_CONSULTANCIES) → ruled rows ═══ */}
+        <section className="section platforms" id="providers">
           <div className="wrap">
-            <div style={{ maxWidth: 780 }}>
-              <span className="eyebrow">The honest landscape</span>
-              <h2>Australian AI consulting firms worth knowing</h2>
-              <p className="lead mt-4">
+            <div className="section-head plat-head">
+              <div>
+                <div className="eyebrow">The honest landscape</div>
+                <h2>Australian AI consulting firms worth knowing</h2>
+              </div>
+              <p>
                 We are one option, not the only one. These AI consulting companies show up when Australians search for
                 an AI consultancy or ask AI assistants for a recommendation. Each note is based on what the company says
                 on its own website. Talk to a few and pick the fit.
               </p>
             </div>
-            <ul className="col-2 eq-grid mt-10">
+            <div className="platlist" role="list">
               {AI_CONSULTANCIES.map((a, i) => (
-                <li key={a.name} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start', ...(i === 0 ? { borderColor: T.small } : {}) }}>
-                  <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.small, minWidth: 30 }}>{String(i + 1).padStart(2, '0')}</span>
-                  <div>
-                    <h3 style={{ fontSize: 18 }}>{a.name}{a.name === 'FactoryJet' && <span style={{ fontFamily: T.fm, fontSize: 10, background: T.small, color: '#fff', borderRadius: 999, padding: '2px 8px', marginLeft: 8, verticalAlign: 'middle' }}>That is us</span>}</h3>
-                    <p style={{ marginTop: 6 }}>{a.note}</p>
-                  </div>
-                </li>
+                <div key={a.name} className={a.name === 'FactoryJet' ? 'plat plat-2col plat-own' : 'plat plat-2col'} role="listitem">
+                  <span className="capid">{String(i + 1).padStart(2, '0')}</span>
+                  <div className="plat-name"><h3>{a.name}</h3>{a.name === 'FactoryJet' && <span className="plat-flag">That is us</span>}</div>
+                  <p className="plat-build">{a.note}</p>
+                </div>
               ))}
-            </ul>
-            <p style={srcNote}>
+            </div>
+            <p className="sub-note">
               Firms named from live Australian search results and AI assistant answers for AI consulting queries, September 2026. Each company’s own website was checked on 26 September 2026 for an Australian office and the services named. Listing is not endorsement.
             </p>
-            <p className="mt-4" style={{ maxWidth: 760 }}>
+            <p className="sub-note">
               For a wider shortlist, we compare 13 Australian AI consultancies and agencies by location, client size,
-              platforms and published prices in our <a href="/blog/best-ai-agencies-australia-2026" style={srcLink}>AI consultancies and agencies compared</a> guide.
+              platforms and published prices in our <a href="/blog/best-ai-agencies-australia-2026">AI consultancies and agencies compared</a> guide.
             </p>
           </div>
         </section>
 
-        {/* ═══ 15. QUESTIONS TO ASK + WORKSHOP IMAGE ═══ */}
-        <section className="sec-lg">
+        {/* ═══ QUESTIONS TO ASK → facts + photo ═══ */}
+        <section className="section facts" id="questions-to-ask">
           <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <span className="eyebrow">Before you sign anything</span>
-                <h2>Six questions to ask any AI consulting firm</h2>
-                <p className="lead mt-4" style={{ maxWidth: 560 }}>
-                  Use these with every AI consulting firm on your shortlist, including us. A good AI consultant will
-                  enjoy answering them. A weak one will change the subject.
-                </p>
-                <ul className="scope-list num-list mt-6" style={{ maxWidth: 580 }}>
-                  <li><b>What have you actually put live?</b> Ask for systems running in a real business today, not demos or workshop photos.</li>
-                  <li><b>Who will do the work?</b> Get the name of the person who runs your assessment, and ask whether they would also build what they recommend.</li>
-                  <li><b>When would you tell us not to use AI?</b> If they have never told a client no, their advice is really a sales process.</li>
-                  <li><b>Do you resell any AI platform?</b> Partnerships are fine if disclosed. A buy or build recommendation shaped by a commission is not.</li>
-                  <li><b>How will you handle our personal information?</b> Ask which APPs they check, which AI providers would see your data, and on what terms.</li>
-                  <li><b>What do we own, and what happens after launch?</b> Code, prompts and documentation should be yours, and someone should be watching the system after go-live.</li>
-                </ul>
+            <div className="section-head">
+              <div className="eyebrow">Before you sign anything</div>
+              <h2>Six questions to ask any AI consulting firm</h2>
+              <p className="lead">
+                Use these with every AI consulting firm on your shortlist, including us. A good AI consultant will
+                enjoy answering them. A weak one will change the subject.
+              </p>
+            </div>
+            <div className="factswrap">
+              <div className="factlist">
+                <div className="fact"><div className="sec">Q1</div><p><b>What have you actually put live?</b> Ask for systems running in a real business today, not demos or workshop photos.</p></div>
+                <div className="fact"><div className="sec">Q2</div><p><b>Who will do the work?</b> Get the name of the person who runs your assessment, and ask whether they would also build what they recommend.</p></div>
+                <div className="fact"><div className="sec">Q3</div><p><b>When would you tell us not to use AI?</b> If they have never told a client no, their advice is really a sales process.</p></div>
+                <div className="fact"><div className="sec">Q4</div><p><b>Do you resell any AI platform?</b> Partnerships are fine if disclosed. A buy or build recommendation shaped by a commission is not.</p></div>
+                <div className="fact"><div className="sec">Q5</div><p><b>How will you handle our personal information?</b> Ask which APPs they check, which AI providers would see your data, and on what terms.</p></div>
+                <div className="fact"><div className="sec">Q6</div><p><b>What do we own, and what happens after launch?</b> Code, prompts and documentation should be yours, and someone should be watching the system after go-live.</p></div>
               </div>
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/ai-consulting/ai-consulting-questions.webp" width={1200} height={800} loading="lazy" decoding="async" alt="The owner of a Melbourne wholesale business, pen and notepad in hand, questions an AI consultant across a round table before deciding whether to hire him" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
-                <div style={{ padding: '14px 12px 8px' }}>
-                  <p style={{ fontSize: 14 }}>
-                    Interview the consultant the way you would interview a senior hire. Write their answers down, and
-                    compare them side by side with the other firms on your shortlist.
-                  </p>
-                </div>
-              </div>
+              <VisualSlot page={PAGE_KEY} slot="facts-3" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
+                subject="A wholesale business owner with pen and notepad questioning an AI consultant across a round table"
+                caption="Interview the consultant the way you would interview a senior hire. Write their answers down, and compare them side by side with the other firms on your shortlist.">
+                <img src="/images/au/ai-consulting/ai-consulting-questions.webp" width={1200} height={800} loading="lazy" decoding="async" alt="The owner of a Melbourne wholesale business, pen and notepad in hand, questions an AI consultant across a round table before deciding whether to hire him" />
+              </VisualSlot>
             </div>
           </div>
         </section>
 
-        {/* ═══ 16. FAQ (canonical Linear Minimal) ═══ */}
-        <section className="sec-lg dot-grid" id="faq">
+        {/* ═══ FAQ (Family A accordion; same FAQ_ITEMS array as the FAQPage JSON-LD) ═══ */}
+        <AuFaq
+          categories={FAQ_CATEGORIES}
+          items={FAQ_ITEMS}
+          heading="AI consulting questions Australian business owners actually ask"
+          askLabel="Still have a question? Ask the founder →"
+          askNote="Replies within 24 hours."
+        />
+
+        {/* ═══ FINAL CTA (light, US finalcta) ═══ */}
+        <section className="finalcta" id="finalcta">
           <div className="wrap">
-            <div style={{ textAlign: 'center' }}>
-              <span className="eyebrow">FAQ</span>
-              <h2>AI consulting questions Australian business owners actually ask</h2>
+            <div>
+              <div className="eyebrow">Ready when you are</div>
+              <h2>Find out where AI will actually pay off in your business</h2>
+              <p>
+                Send your name and work email. The founder replies within 24 hours to book a short call about your
+                business, the use cases worth looking at, and whether an AI readiness assessment is the right first
+                step. No spam, no obligation.
+              </p>
             </div>
-            <nav className="faq-pill-nav" aria-label="FAQ topics">
-              {FAQ_CATEGORIES.map((c) => (
-                <a key={c.key} href={`#faq-${c.key}`}>
-                  {c.label}
-                  <span className="pill-count">{FAQ_ITEMS.filter((f) => f.category === c.key).length}</span>
-                </a>
-              ))}
-            </nav>
-            <div className="faq-grid">
-              <aside className="faq-sidebar">
-                <span className="faq-sidebar-topics">Topics</span>
-                <nav className="faq-sidebar-nav">
-                  {FAQ_CATEGORIES.map((c) => (
-                    <a key={c.key} href={`#faq-${c.key}`}>
-                      {c.label}
-                      <span className="faq-nav-count">{FAQ_ITEMS.filter((f) => f.category === c.key).length}</span>
-                    </a>
-                  ))}
-                </nav>
-                <div className="faq-sidebar-cta">
-                  <ModalCTAButton label="Still have a question? Ask the founder →" region="au" modalVariant="default" btnVariant="secondary-light" />
-                  <p>Replies within 24 hours.</p>
-                </div>
-              </aside>
-
-              <div>
-                {FAQ_CATEGORIES.map((c) => (
-                  <div key={c.key} id={`faq-${c.key}`} style={{ marginBottom: 40 }}>
-                    <div className="faq-cat-header">
-                      <span className="faq-cat-bar" />
-                      <p className="faq-cat-label">{c.label}</p>
-                    </div>
-                    <ul className="faq-list">{FAQ_ITEMS.filter((f) => f.category === c.key).map((f) => (
-                      <li key={f.question}><details className="faq-item">
-                        <summary>
-                          <span className="q-text">{f.question}</span>
-                          <span className="chevron">
-                            <svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5L7 9L11 5" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" /></svg>
-                          </span>
-                        </summary>
-                        <div className="faq-ans"><p>{f.answer}</p>{f.links ? <p style={{ marginTop: 8 }}>{f.links.map((l) => <a key={l.href} href={l.href} style={{ ...srcLink, marginRight: 16 }}>{l.label}</a>)}</p> : null}</div>
-                      </details></li>
-                    ))}</ul>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ═══ 17. FINAL CTA (the only dark section) ═══ */}
-        <section className="dark-sec">
-          <div className="wrap" style={{ textAlign: 'center', maxWidth: 640 }}>
-            <span className="eyebrow">Ready when you are</span>
-            <h2>Find out where AI will actually pay off in your business</h2>
-            <p className="mt-4">
-              Send your name and work email. The founder replies within 24 hours to book a short call about your
-              business, the use cases worth looking at, and whether an AI readiness assessment is the right first
-              step. No spam, no obligation.
-            </p>
-            <div className="mt-8" style={{ display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap' }}>
-              <ModalCTAButton label="Book my AI readiness call" region="au" modalVariant="default" btnVariant="primary-light" />
-              <a className="btn btn-outline" href="/au/ai-agents" style={{ color: '#fff', borderColor: 'rgba(255,255,255,.25)' }}>See AI agents for Australia</a>
+            <div className="ctas">
+              <ModalCTAButton label="Book my AI readiness call" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
+              <a className="btn btn-ghost" href="/au/ai-agents">See AI agents for Australia</a>
             </div>
           </div>
         </section>
 
       </main>
       </div>
-
-      <SiteFooter locale="au" linkColumns={AU_FOOTER_COLUMNS} variant="dark" tagline="Ecommerce, AI agents, websites and AI search for Australian businesses. Built by senior engineers, supported after launch, owned by you." />
+      <SiteFooter locale="au" linkColumns={AU_FOOTER_COLUMNS} tagline="Ecommerce, AI agents, websites and AI search for Australian businesses. Built by senior engineers, supported after launch, owned by you." />
     </>
   );
 }

@@ -1,0 +1,6 @@
+/* /au/accounts-payable-automation only. While the definition slot is an unfilled placeholder
+   (hidden by au-page.css), collapse the definition module to one column so the copy does not sit
+   beside an empty column. Once the visual pass fills the slot, the Family A two-column layout returns. */
+.aiAgentPage.auPage .definition:not(:has(.vslot[data-visual-status='filled'])) { grid-template-columns: minmax(0,1fr); }
+.aiAgentPage.auPage .definition:not(:has(.vslot[data-visual-status='filled'])) > div:first-child { display: none; }
+.aiAgentPage.auPage .definition:not(:has(.vslot[data-visual-status='filled'])) .definition-copy { max-width: 740px; }

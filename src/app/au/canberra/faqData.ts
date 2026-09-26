@@ -12,6 +12,9 @@
  * 2026-09-25 redesign: seven questions added, grounded in the September 2026 Google AU People
  * Also Ask data for web design and SEO searches (pipeline/research/data/market-au-2026-09-24/).
  *
+ * 2026-09-26: two WCAG questions added from the AU People Also Ask pass for "wcag compliance australia";
+ * sources fetch-verified 2026-09-26 (W3C WAI Australia policy page, WebAIM Million 2026).
+ *
  * The ONLY copy of these questions. page.tsx renders it AND maps it into FAQPage JSON-LD.
  */
 
@@ -29,6 +32,18 @@ export const FAQS: Faq[] = [
     q: 'What is web accessibility and does my site need it?',
     topic: 'Accessibility and compliance',
     a: 'Accessibility means people using a screen reader, a keyboard instead of a mouse, or a magnified screen can still use your site. The international standard is WCAG, published by the W3C. Whether you are formally required to meet it depends on who you are and who you contract with, and that is a question for your own legal advice. What is not in doubt is that Canberra tenders ask about it, so being unable to answer costs you work.',
+  },
+  {
+    q: 'Is WCAG a legal requirement in Australia?',
+    topic: 'Accessibility and compliance',
+    a: 'WCAG itself is not written into law for most private businesses, but disability discrimination law still applies. The Disability Discrimination Act 1992 applies to government, public sector and private organisations, and it does not name a WCAG version. The Australian Human Rights Commission says all organisations should aim to provide equal access to digital goods and services. For federal government, the Digital Experience Policy points to WCAG 2.2. In practice, WCAG 2.2 level AA is the benchmark to build to. For your own obligations, get legal advice.',
+    links: [{ href: 'https://www.w3.org/WAI/policies/australia/', label: 'W3C WAI: web accessibility laws and policies in Australia' }],
+  },
+  {
+    q: 'What are common WCAG violations?',
+    topic: 'Accessibility and compliance',
+    a: 'The WebAIM Million, an annual automated scan of one million home pages worldwide, found detected WCAG failures on 95.9% of them in 2026. The six most common were low contrast text, images missing alternative text, form fields without labels, empty links, empty buttons and a missing page language. WebAIM says those six make up about 96% of all errors it detected. Most are quick to fix once someone looks.',
+    links: [{ href: 'https://webaim.org/projects/million/', label: 'WebAIM Million report' }],
   },
   {
     q: 'What makes a website accessible?',

@@ -19,6 +19,9 @@ const SITE_URL = 'https://factoryjet.com'
  * There is no /au/web-design entry because /au itself targets the national web design term.
  * A second national web design page would compete with it, which is the cannibalisation
  * that forced two US service pages to be retired by 301 in July 2026.
+ * /au/small-business-web-design (wave 5) is NOT a second national web design page: it owns
+ * the small business buying intent (small business web design, website design packages,
+ * affordable websites for small business) while /au keeps "web design Australia".
  */
 const CITY_PAGES = ['brisbane', 'melbourne', 'adelaide', 'canberra'] as const
 
@@ -26,10 +29,16 @@ const CITY_PAGES = ['brisbane', 'melbourne', 'adelaide', 'canberra'] as const
 // searches that are winnable without a Maps pack).
 // 2026-09-26: AU wave 4 adds ecommerce SEO, AI customer service, website maintenance and
 // two industry pages (tradies, dental practices).
+// 2026-09-26: AU wave 5 adds small business web design, local SEO, small business SEO,
+// accounts payable automation and four industry pages (law firms, NDIS providers, real
+// estate agencies, accounting firms).
 const SERVICE_PAGES = [
-  'ai-agents', 'ai-consulting', 'ai-development', 'ai-receptionist', 'ai-customer-service', 'ai-seo',
+  'ai-agents', 'ai-consulting', 'ai-development', 'ai-receptionist', 'ai-customer-service',
+  'accounts-payable-automation', 'ai-seo',
   'shopify-development', 'ecommerce-development', 'ecommerce-seo',
-  'website-maintenance', 'websites-for-tradies', 'dental-website-design',
+  'small-business-web-design', 'local-seo', 'small-business-seo', 'law-firm-seo',
+  'website-maintenance', 'websites-for-tradies', 'dental-website-design', 'accountant-website-design',
+  'ndis-website-design', 'real-estate-websites',
 ] as const
 
 export default function sitemap(): MetadataRoute.Sitemap {

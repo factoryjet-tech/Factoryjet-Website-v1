@@ -1,12 +1,16 @@
 import type { Metadata } from 'next';
+import { Fragment } from 'react';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import { AU_FOOTER_COLUMNS } from '@/data/auFooterColumns';
 import HeroInlineForm from '@/components/HeroInlineForm';
-import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
-import '../au-service.css';
+import AuFaq from '../components/AuFaq';
+import VisualSlot from '../components/VisualSlot';
+import '@/components/v2/AiAgentDevelopmentSections.css';
+import '../au-page.css';
+import './page.css';
 
 /* /au/ai-seo: AI SEO and generative engine optimisation (GEO) for Australian
    businesses. Built 2026-09-25 from brief_au_ai_seo.json and the AU market
@@ -19,20 +23,7 @@ const UPDATED = '2026-09-25';
 const TITLE = 'AI SEO Agency Australia | GEO & AEO Services | FactoryJet';
 const DESCRIPTION =
   'AI SEO agency in Australia. Generative engine optimisation (GEO) and AEO to get you named in ChatGPT, Perplexity and AI Overviews. Free AI visibility check.';
-const H1 = 'AI SEO Agency Australia: Get Named When Buyers Ask ChatGPT, Not Only Found on Google';
-
-/* Design tokens, copied by value from ../au-service.css so inline styles stay
-   on-system. */
-const T = {
-  ink: '#0F0F12',
-  n200: '#E5E5E0',
-  n400: '#6E6E68',
-  orange: '#FF5C00',
-  green: '#047857',
-  small: '#B23E13',
-  fm: "'Geist Mono',monospace",
-  fd: "'Plus Jakarta Sans',sans-serif",
-};
+const H1 = 'AI SEO Agency Australia: Get Named When Buyers Ask ChatGPT';
 
 /* ONE array drives the visible trail AND the BreadcrumbList JSON-LD. */
 const crumbs = [
@@ -278,234 +269,301 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-/* Page-scoped fixes from the 2026-09-25 visual QA pass. Rendered only on this
-   page, so the shared au-service.css is untouched:
-   1. FAQ rows showed two open/close icons (the chevron AND the generic "+"
-      that au-service.css adds to every summary). Keep the chevron only.
-   2. au-service.css hides every <nav> inside .au-svc below 768px, which also
-      hid the breadcrumb trail on phones. Bring the trail back.
-   3. Comparison table: give it a minimum width and let it scroll sideways on
-      phones instead of squashing the FactoryJet column off-screen. */
-const PAGE_CSS = `
-.au-svc details.faq-item summary::after,.au-svc details.faq-item[open] summary::after{content:none}
-.au-svc .cmp-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
-.au-svc .cmp-scroll .cmp-table{min-width:720px}
-.au-svc .tbl-hint{display:none;font-family:'Geist Mono',monospace;font-size:11px;color:#6E6E68;margin-top:10px}
-@media(max-width:768px){.au-svc nav[aria-label="Breadcrumb"]{display:block!important}.au-svc .tbl-hint{display:block}}
-`;
+const extLink = { target: '_blank', rel: 'noopener noreferrer nofollow' } as const;
 
-const srcNote = { fontFamily: T.fm, fontSize: 11, color: T.n400, marginTop: 12 } as const;
-const srcLink = { textDecoration: 'underline' } as const;
-const inLink = { color: T.small, textDecoration: 'underline' } as const;
+/* Visual slot page key (route without /au/). */
+const PAGE_KEY = 'ai-seo';
+
+/* H1 split for the Family A hero emphasis. Same string as H1 (schema headline); only the
+   short benefit phrase is wrapped in .hero-emphasis. */
+const H1_EMPHASIS = 'Get Named';
+const H1_AT = H1.indexOf(H1_EMPHASIS);
+const H1_LEAD = H1.slice(0, H1_AT).trimEnd();
+const H1_REST = H1.slice(H1_AT + H1_EMPHASIS.length);
+
+const STEP_ICON = { width: 24, height: 24, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', strokeWidth: 1.5, strokeLinecap: 'round', strokeLinejoin: 'round' } as const;
+
+/* Hero spec-panel icons (AI answers tested, AI Overviews seen, FactoryJet named). */
+const HERO_ICONS = [
+  'M4 5h16v11H9l-5 4V5Zm4 5h8M8 13h5',
+  'M11 4a7 7 0 1 0 0 14 7 7 0 0 0 0-14Zm9 16-4-4',
+  'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm-4 9h8',
+] as const;
+
+/* Seven-step process (steps open, as the copy says). */
+const STEPS: { n: string; t: string; d: string }[] = [
+  { n: '01', t: 'Agree the buyer questions', d: 'We write 20 to 50 questions your customers really ask, the way Australians phrase them: “best ecommerce agency in Melbourne”, “who can fix my Shopify store in Brisbane?”, “how much does an AI receptionist cost in Australia?”. You approve the list. It becomes the test we re-run every month.' },
+  { n: '02', t: 'Measure where you stand', d: 'We run every question across ChatGPT, Claude, Gemini, Perplexity and Google, and record whether you are named, which competitors are named, what the answer says about you, and which websites are cited. This is your baseline. Our free AI visibility checker gives you a quick first look.' },
+  { n: '03', t: 'Fix what machines cannot read', d: 'We check robots.txt so AI search crawlers are allowed, make sure key content is in the page HTML rather than hidden behind scripts, add accurate structured data, and fix speed and indexing problems. This is technical SEO with AI crawlers added to the list.' },
+  { n: '04', t: 'Make your business facts consistent', d: 'Your name, services, locations and details should say the same thing on your site, your Google Business Profile, Clutch, GoodFirms, LinkedIn and every directory the assistants cite for your category. Mixed facts confuse machines. We clean them up and complete what is missing.' },
+  { n: '05', t: 'Write pages that answer questions', d: 'For each important question, a page that answers it plainly near the top, then backs it up with specifics: your process, real examples, honest limits and sources. Question-style headings and FAQs make the answer easy to lift. No filler written to hit a word count.' },
+  { n: '06', t: 'Earn mentions on sites AI reads', d: 'Directory profiles with genuine reviews, inclusion in honest “best of” lists where you deserve it, industry associations, local media and partner pages. We never buy fake reviews or write them for you. Under Australian Consumer Law that is illegal, and it would put your reputation at risk.' },
+  { n: '07', t: 'Re-test, report and adjust', d: 'Every month we re-run the same questions and show you what changed: mentions, accuracy, competitors, citations, alongside Google rankings, traffic and enquiries. When something is not working, we say so and change the plan.' },
+];
+
+const SIBLINGS: { href: string; t: string; d: string; go: string }[] = [
+  { href: '/au/seo', t: 'SEO services Australia', d: 'Classic rankings, technical SEO and local search. The foundation that AI Overviews draw from.', go: 'Explore SEO →' },
+  { href: '/au/ai-agents', t: 'AI agent development', d: 'Custom AI agents that answer enquiries, handle orders and connect to Xero, MYOB and your CRM.', go: 'Explore AI agents →' },
+  { href: '/au/ecommerce-development', t: 'Ecommerce development', d: 'Stores built with clean product data and structured data, so both Google and AI assistants can read them.', go: 'Explore ecommerce →' },
+  { href: '/au/ai-consulting', t: 'AI consulting', d: 'Not sure where AI fits in your business beyond search? Start with a focused AI readiness assessment.', go: 'Explore AI consulting →' },
+  { href: '/au/ai-development', t: 'AI development', d: 'AI built into your existing systems, from document handling to customer service tools.', go: 'Explore AI development →' },
+  { href: '/au', t: 'FactoryJet Australia', d: 'Everything we do for Australian businesses: ecommerce, AI agents, websites and AI search.', go: 'Visit the Australia hub →' },
+];
 
 export default function AiSeoAUPage() {
   return (
     <>
       <script id="ld-au-ai-seo" type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <style dangerouslySetInnerHTML={{ __html: PAGE_CSS }} />
 
       <SiteHeader locale="au" logoHref="/au" />
-      <div className="au-svc">
-      <main>
+      <div className="aiAgentPage auPage">
+      <nav className="crumbs" aria-label="Breadcrumb">
+        <div className="wrap">
+          {crumbs.map((item, index) => (
+            <Fragment key={item.url}>
+              {index > 0 && ' / '}
+              {index === crumbs.length - 1 ? <b aria-current="page">{item.name}</b> : <a href={item.url}>{item.name}</a>}
+            </Fragment>
+          ))}
+        </div>
+      </nav>
+      <main id="au-content">
 
-        <Breadcrumbs items={crumbs} />
+        {/* ═══ HERO (US web-design hub hero: copy + inline form left, spec panel right) ═══ */}
+        <section className="hero" id="hero">
+          <div className="wrap hero-grid">
+            <div className="hero-copy">
+              <div className="eyebrow">AI SEO Australia</div>
+              <h1>{H1_LEAD} <span className="hero-emphasis">{H1_EMPHASIS}</span>{H1_REST}</h1>
+              <p className="lead">
+                FactoryJet is an AI SEO agency for Australian businesses that want to be named, not only found on
+                Google. We use generative engine optimisation (GEO) and answer engine optimisation (AEO) to get you
+                named when buyers ask ChatGPT, Claude, Gemini, Perplexity or Google AI Overviews for a recommendation,
+                while keeping the Google rankings you already have. And we measure where you stand before we sell you
+                anything.
+              </p>
+              <HeroInlineForm region="au" source="au_ai_seo_hero" submitLabel="Get my AI visibility check" />
+            </div>
 
-        {/* ═══ 1. HERO ═══ */}
-        <section className="sec-lg dot-grid" style={{ position: 'relative' }}>
+            <form
+              className="specpanel"
+              aria-label="What we measured before writing this page"
+              data-visual-slot={`${PAGE_KEY}:hero`}
+              data-visual-kind="diagram"
+              data-visual-subject="What we measured before writing this page: 68 AI answers to Australian buyer questions, AI Overviews on 18 of 18 AI SEO searches, and FactoryJet named 0 times"
+              data-visual-ratio="1:1"
+              data-visual-status="filled"
+            >
+              <div className="specpanel-bar">
+                <span className="statusdot"></span>
+                <span>MEASURED · WHAT WE MEASURED BEFORE WRITING THIS PAGE</span>
+                <span className="sys"><span>Generative Engine Optimisation</span><span>Measured Before We Sell</span></span>
+              </div>
+              <div className="workflow-controls">
+                <label className="workflow-toggle" title="Pause or resume the animation">
+                  <input type="checkbox" className="workflow-pause" aria-label="Pause animation" />
+                  <svg className="pause-icon" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M5 3v10M11 3v10" fill="none" stroke="currentColor" strokeWidth="2" /></svg>
+                  <svg className="play-icon" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="m5 3 8 5-8 5Z" fill="currentColor" /></svg>
+                </label>
+                <button type="reset" className="workflow-replay" aria-label="Replay animation" title="Replay animation">
+                  <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M3 6a5 5 0 1 1 0 4M3 2v4h4" /></svg>
+                </button>
+              </div>
+              <div className="specpanel-body" role="radiogroup" aria-label="Explore what we measured">
+                <label className="specrow run">
+                  <input className="workflow-select" type="radio" name="aiseo-au-step" value="1" />
+                  <span className="workflow-icon" aria-hidden="true"><svg {...STEP_ICON}><path d={HERO_ICONS[0]} /></svg></span>
+                  <span className="idx">ChatGPT, Claude, Gemini, Perplexity</span>
+                  <span className="title">AI answers to Australian buyer questions</span>
+                  <span className="tag">68</span>
+                </label>
+                <label className="specrow run">
+                  <input className="workflow-select" type="radio" name="aiseo-au-step" value="2" />
+                  <span className="workflow-icon" aria-hidden="true"><svg {...STEP_ICON}><path d={HERO_ICONS[1]} /></svg></span>
+                  <span className="idx">Google Australia, September 2026</span>
+                  <span className="title">AI SEO searches with an AI Overview</span>
+                  <span className="tag">18 of 18</span>
+                </label>
+                <label className="specrow hold">
+                  <input className="workflow-select" type="radio" name="aiseo-au-step" value="3" />
+                  <span className="workflow-icon" aria-hidden="true"><svg {...STEP_ICON}><path d={HERO_ICONS[2]} /></svg></span>
+                  <span className="idx">yes, we test ourselves too</span>
+                  <span className="title">Answers that named FactoryJet</span>
+                  <span className="tag">0</span>
+                </label>
+              </div>
+              <div className="specpanel-foot">RULE · AI answers vary from run to run. A single screenshot proves little.</div>
+            </form>
+          </div>
+        </section>
+
+        {/* ═══ LEDGER (our measurement, sourced) ═══ */}
+        <div className="ledger">
           <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <div className="flex-wrap mb-6">
-                  <span className="chip"><span className="dot dot-orange" />AI SEO Australia</span>
-                  <span className="chip">Generative Engine Optimisation</span>
-                  <span className="chip">Measured Before We Sell</span>
-                </div>
-                <h1>{H1}</h1>
-                <p className="lead mt-6" style={{ maxWidth: 560 }}>
-                  FactoryJet is an AI SEO agency for Australian businesses. We use generative engine optimisation
-                  (GEO) and answer engine optimisation (AEO) to get you named when buyers ask ChatGPT, Claude,
-                  Gemini, Perplexity or Google AI Overviews for a recommendation, while keeping the Google rankings
-                  you already have. And we measure where you stand before we sell you anything.
-                </p>
-
-                <div className="byline mt-6" style={{ maxWidth: 560 }}>
-                  <div className="av">BB</div>
-                  <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
-                  <div className="upd">Last updated<br />25 September 2026</div>
-                </div>
-
-                <div className="mt-6" style={{ maxWidth: 560 }}>
-                  <HeroInlineForm region="au" source="au_ai_seo_hero" submitLabel="Get my AI visibility check" />
+            {[
+              { v: '68%', t: 'of 154 Australian buyer searches showed a Google AI Overview', s: 'FactoryJet test, Sep 2026' },
+              { v: '20', t: 'AI answers cited Clutch, the single most cited source for Australian buyers', s: 'FactoryJet test, Sep 2026' },
+              { v: '35 of 51', t: 'answers with visible sources cited an agency directory or a “best of” list', s: 'FactoryJet test, Sep 2026' },
+              { v: '25+', t: 'agencies named by four assistants asked the same AI SEO question, and none by all four', s: 'FactoryJet test, Sep 2026' },
+            ].map((r) => (
+              <div className="ledgercell" key={r.t}>
+                <div className="k">{r.s}</div>
+                <div className="v">
+                  <strong className={/\d/.test(r.v) ? 'ledger-number' : 'ledger-word'}>{r.v}</strong>
+                  {r.t}
                 </div>
               </div>
+            ))}
+          </div>
+        </div>
 
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/ai-seo/ai-seo-hero.webp" width={1400} height={933} fetchPriority="high" decoding="async" alt="Over-the-shoulder view of an Australian marketing manager in a Brisbane office comparing an AI assistant's answer on her phone with a search results page on her laptop, with a FactoryJet AI SEO specialist beside her" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
-                <div style={{ padding: '14px 12px 8px' }}>
-                  <span className="eyebrow">What we measured before writing this page</span>
-                  <div className="scorecard-row">
-                    <div><div className="scorecard-metric">AI answers to Australian buyer questions</div><div className="scorecard-note">ChatGPT, Claude, Gemini, Perplexity</div></div>
-                    <div className="scorecard-val" style={{ fontSize: 15 }}>68</div>
-                  </div>
-                  <div className="scorecard-row">
-                    <div><div className="scorecard-metric">AI SEO searches with an AI Overview</div><div className="scorecard-note">Google Australia, September 2026</div></div>
-                    <div className="scorecard-val" style={{ fontSize: 15 }}>18 of 18</div>
-                  </div>
-                  <div className="scorecard-row">
-                    <div><div className="scorecard-metric">Answers that named FactoryJet</div><div className="scorecard-note">yes, we test ourselves too</div></div>
-                    <div className="scorecard-val" style={{ color: T.small, fontSize: 15 }}>0</div>
+        <div className="wrap byline">
+          <div className="av">BB</div>
+          <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
+          <div className="upd">Last updated<br />25 September 2026</div>
+        </div>
+
+        {/* ═══ ANSWER-FIRST DEFINITION (GEO) → Family A facts ═══ */}
+        <section className="section facts" id="facts">
+          <div className="wrap">
+            <div className="section-head">
+              <h2 data-speakable="true">What does an AI SEO agency do for an Australian business?</h2>
+            </div>
+            <div className="factswrap">
+              <div className="factlist">
+                <div className="fact">
+                  <div className="sec">§01</div>
+                  <p data-speakable="true">
+                    <span className="stat">An AI SEO agency gets your business named in answers from ChatGPT, Gemini, Claude, Perplexity and
+                    Google AI Overviews, as well as ranked on Google.</span> It tests the questions your buyers ask, records
+                    who gets named and which sources are cited, then fixes your site, content and directory listings
+                    so AI assistants can find you and trust what they read.
+                  </p>
+                </div>
+                <div className="fact">
+                  <div className="sec">§02</div>
+                  <div>
+                    <div className="factlabel">Three terms, in plain English</div>
+                    <p>
+                      <b>Generative engine optimisation (GEO)</b> means making your business easy for AI assistants to
+                      mention. <b>Answer engine optimisation (AEO)</b> means shaping your pages so an engine can lift a
+                      clear answer from them. <b>AI visibility</b> is simply how often, and how accurately, AI answers
+                      mention you when buyers ask about what you sell.
+                    </p>
                   </div>
                 </div>
+                <div className="fact">
+                  <div className="sec">§03</div>
+                  <p>
+                    Here is why this matters now. Search interest in AI SEO and GEO in Australia has doubled in a year,
+                    and when we checked 154 Australian buyer searches in September 2026, Google showed an AI Overview on
+                    68% of them. Buyers increasingly read a written answer before they see a single link. If that answer
+                    names three of your competitors and not you, you lose the job before you know it existed.
+                  </p>
+                </div>
               </div>
+              <VisualSlot page={PAGE_KEY} slot="facts" kind="photo" ratio="3:2" className="factphoto"
+                subject="A marketing manager comparing an AI assistant answer on her phone with search results on her laptop, a FactoryJet specialist beside her">
+                <img src="/images/au/ai-seo/ai-seo-hero.webp" width={1400} height={933} loading="lazy" decoding="async" alt="Over-the-shoulder view of an Australian marketing manager in a Brisbane office comparing an AI assistant's answer on her phone with a search results page on her laptop, with a FactoryJet AI SEO specialist beside her" />
+              </VisualSlot>
             </div>
           </div>
         </section>
 
-        {/* ═══ 2. ANSWER-FIRST DEFINITION (GEO) ═══ */}
-        <section className="sec">
+        {/* ═══ HOW AI ASSISTANTS CHOOSE WHO TO NAME → facts + "observed" panel ═══ */}
+        <section className="section facts" id="how-ai-chooses">
           <div className="wrap">
-            <div className="def" style={{ maxWidth: 940 }} data-speakable="true">
-              <span className="lab">What does an AI SEO agency do for an Australian business?</span>
-              <p>
-                An AI SEO agency gets your business named in answers from ChatGPT, Gemini, Claude, Perplexity and
-                Google AI Overviews, as well as ranked on Google. It tests the questions your buyers ask, records
-                who gets named and which sources are cited, then fixes your site, content and directory listings
-                so AI assistants can find you and trust what they read.
-              </p>
+            <div className="section-head">
+              <div className="eyebrow">What we know, and what nobody knows</div>
+              <h2>How AI assistants choose which businesses to name</h2>
             </div>
-            <div className="def mt-6" style={{ maxWidth: 940 }}>
-              <span className="lab">Three terms, in plain English</span>
-              <p>
-                <b>Generative engine optimisation (GEO)</b> means making your business easy for AI assistants to
-                mention. <b>Answer engine optimisation (AEO)</b> means shaping your pages so an engine can lift a
-                clear answer from them. <b>AI visibility</b> is simply how often, and how accurately, AI answers
-                mention you when buyers ask about what you sell.
-              </p>
-            </div>
-            <p className="lead mt-8" style={{ maxWidth: 920 }}>
-              Here is why this matters now. Search interest in AI SEO and GEO in Australia has doubled in a year,
-              and when we checked 154 Australian buyer searches in September 2026, Google showed an AI Overview on
-              68% of them. Buyers increasingly read a written answer before they see a single link. If that answer
-              names three of your competitors and not you, you lose the job before you know it existed.
-            </p>
-          </div>
-        </section>
-
-        {/* ═══ 3. FACTS BAND (our measurement, sourced) ═══ */}
-        <section className="stats-band">
-          <div className="wrap">
-            <ul className="col-4" style={{ gap: 20 }}>
-              {[
-                { v: '68%', t: 'of 154 Australian buyer searches showed a Google AI Overview', s: 'FactoryJet test, Sep 2026' },
-                { v: '20', t: 'AI answers cited Clutch, the single most cited source for Australian buyers', s: 'FactoryJet test, Sep 2026' },
-                { v: '35 of 51', t: 'answers with visible sources cited an agency directory or a “best of” list', s: 'FactoryJet test, Sep 2026' },
-                { v: '25+', t: 'agencies named by four assistants asked the same AI SEO question, and none by all four', s: 'FactoryJet test, Sep 2026' },
-              ].map((r) => (
-                <li key={r.t}>
-                  <div style={{ fontFamily: T.fd, fontWeight: 800, fontSize: 26, color: T.orange }}>{r.v}</div>
-                  <p style={{ fontSize: 13.5, color: T.ink, marginTop: 4 }}>{r.t}</p>
-                  <span style={{ fontFamily: T.fm, fontSize: 10, color: T.n400 }}>{r.s}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-
-        {/* ═══ 4. HOW AI ASSISTANTS CHOOSE WHO TO NAME ═══ */}
-        <section className="sec-lg dot-grid">
-          <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <span className="eyebrow">What we know, and what nobody knows</span>
-                <h2>How AI assistants choose which businesses to name</h2>
-                <div className="stack mt-6">
-                  <p>
-                    Let us start with the honest part. OpenAI, Anthropic, Google and Perplexity do not publish the
-                    rules their assistants use to pick one business over another. Any agency that tells you it
-                    knows the exact formula is guessing, and some of the confident advice online contradicts itself.
-                    So we stick to what can be observed and tested.
-                  </p>
-                  <p>
-                    <b>They look things up.</b> When you ask an AI assistant for a recommendation, it usually
-                    searches the web first, reads a handful of pages and then writes its answer from them. Each
-                    company runs its own search crawler for this: OpenAI’s is called OAI-SearchBot, Anthropic’s is
-                    Claude-SearchBot and Perplexity’s is PerplexityBot. OpenAI states plainly that sites blocking
-                    OAI-SearchBot will not be shown in ChatGPT search answers. If your site blocks these crawlers,
-                    you have taken yourself out of the running.
-                  </p>
-                  <p>
-                    <b>They lean on lists.</b> For “who should I hire” questions, the pages they read are very often
-                    agency directories and “top 10” blog lists, not the agencies’ own websites. That pattern shows
-                    up clearly in our Australian data further down.
-                  </p>
-                  <p>
-                    <b>They disagree with each other.</b> We asked ChatGPT, Claude, Gemini and Perplexity the same
-                    question: which Australian agencies help businesses show up in ChatGPT and Google AI Overviews?
-                    Between them they named more than 25 agencies. No agency appeared in all four answers, and
-                    ChatGPT’s shortlist shared no names with the other three. Visibility in one assistant tells you
-                    little about the others, which is why we test all of them.
-                  </p>
+            <div className="factswrap">
+              <div className="factlist">
+                <div className="fact"><div className="sec">§01</div><p>
+                  Let us start with the honest part. OpenAI, Anthropic, Google and Perplexity do not publish the
+                  rules their assistants use to pick one business over another. Any agency that tells you it
+                  knows the exact formula is guessing, and some of the confident advice online contradicts itself.
+                  So we stick to what can be observed and tested.
+                </p></div>
+                <div className="fact"><div className="sec">§02</div><p>
+                  <b>They look things up.</b> When you ask an AI assistant for a recommendation, it usually
+                  searches the web first, reads a handful of pages and then writes its answer from them. Each
+                  company runs its own search crawler for this: OpenAI’s is called OAI-SearchBot, Anthropic’s is
+                  Claude-SearchBot and Perplexity’s is PerplexityBot. OpenAI states plainly that sites blocking
+                  OAI-SearchBot will not be shown in ChatGPT search answers. If your site blocks these crawlers,
+                  you have taken yourself out of the running.
+                </p></div>
+                <div className="fact"><div className="sec">§03</div><p>
+                  <b>They lean on lists.</b> For “who should I hire” questions, the pages they read are very often
+                  agency directories and “top 10” blog lists, not the agencies’ own websites. That pattern shows
+                  up clearly in our Australian data further down.
+                </p></div>
+                <div className="fact"><div className="sec">§04</div><p>
+                  <b>They disagree with each other.</b> We asked ChatGPT, Claude, Gemini and Perplexity the same
+                  question: which Australian agencies help businesses show up in ChatGPT and Google AI Overviews?
+                  Between them they named more than 25 agencies. No agency appeared in all four answers, and
+                  ChatGPT’s shortlist shared no names with the other three. Visibility in one assistant tells you
+                  little about the others, which is why we test all of them.
+                </p></div>
+                <div className="fact"><div className="sec">§05</div><div>
                   <p>
                     <b>Google keeps it simple.</b> For AI Overviews, Google’s own documentation says there are no
                     additional requirements and no special optimisations needed beyond normal SEO best practice.
                     That is useful: it means your classic SEO foundations, covered on our{' '}
-                    <a href="/au/seo" style={inLink}>SEO services Australia</a> page, are also your entry ticket to
+                    <a href="/au/seo">SEO services Australia</a> page, are also your entry ticket to
                     AI Overviews.
                   </p>
-                </div>
-                <p style={srcNote}>
-                  Sources: <a href={SRC_OPENAI} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>OpenAI, overview of OpenAI crawlers</a>;{' '}
-                  <a href={SRC_ANTHROPIC} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>Anthropic, web crawling and site owners</a>;{' '}
-                  <a href={SRC_PERPLEXITY} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>Perplexity crawlers</a>;{' '}
-                  <a href={SRC_GOOGLE} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>Google Search Central, AI features and your website</a>.
-                </p>
+                  <p className="au-note">
+                    Sources: <a href={SRC_OPENAI} {...extLink}>OpenAI, overview of OpenAI crawlers</a>;{' '}
+                    <a href={SRC_ANTHROPIC} {...extLink}>Anthropic, web crawling and site owners</a>;{' '}
+                    <a href={SRC_PERPLEXITY} {...extLink}>Perplexity crawlers</a>;{' '}
+                    <a href={SRC_GOOGLE} {...extLink}>Google Search Central, AI features and your website</a>.
+                  </p>
+                </div></div>
               </div>
-              <div className="card card-top-orange">
-                <span className="eyebrow">Observed, not assumed</span>
-                <div className="scorecard-row"><div><div className="scorecard-metric">They search the web live</div><div className="scorecard-note">blocked crawlers mean no mention</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Known</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">They cite directories and lists</div><div className="scorecard-note">35 of 51 Australian answers</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Measured</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">They name different businesses</div><div className="scorecard-note">no agency named by all four</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Measured</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">AI Overviews follow SEO basics</div><div className="scorecard-note">Google’s own documentation</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Stated</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">The exact ranking formula</div><div className="scorecard-note">not published by anyone</div></div><div className="scorecard-val" style={{ color: T.small, fontSize: 14 }}>Unknown</div></div>
+              <div className="au-panel">
+                <div className="eyebrow">Observed, not assumed</div>
+                <ul className="trigrows">
+                  <li><span className="m">They search the web live</span><span className="n">blocked crawlers mean no mention</span><span className="t">Known</span></li>
+                  <li><span className="m">They cite directories and lists</span><span className="n">35 of 51 Australian answers</span><span className="t">Measured</span></li>
+                  <li><span className="m">They name different businesses</span><span className="n">no agency named by all four</span><span className="t">Measured</span></li>
+                  <li><span className="m">AI Overviews follow SEO basics</span><span className="n">Google’s own documentation</span><span className="t">Stated</span></li>
+                  <li><span className="m">The exact ranking formula</span><span className="n">not published by anyone</span><span className="t">Unknown</span></li>
+                </ul>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ═══ 5. REAL DATA: WHICH SOURCES AI CITES ═══ */}
-        <section className="sec-lg">
+        {/* ═══ REAL DATA: WHICH SOURCES AI CITES → split (bars + prose) + ruled rows ═══ */}
+        <section className="section platforms" id="cited-sources">
           <div className="wrap">
-            <div style={{ maxWidth: 780 }}>
-              <span className="eyebrow">Real Australian data</span>
+            <div className="section-head">
+              <div className="eyebrow">Real Australian data</div>
               <h2>Which websites AI assistants cite when Australians ask who to hire</h2>
-              <p className="lead mt-4">
+              <p className="lead">
                 In September 2026 we asked ChatGPT, Claude, Gemini and Perplexity 17 questions Australian buyers
                 really ask, from “who is the best AI automation agency in Australia?” to “which SEO agencies are best
                 for small businesses?”. That gave us 68 answers. Gemini hides its sources behind redirect links, so
                 the counts below come from the 51 answers where we could see every source.
               </p>
             </div>
-            <div className="col-6040 mt-10">
-              <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, justifyContent: 'space-between', alignItems: 'center', borderBottom: `1px solid ${T.n200}`, padding: '14px 18px' }}>
-                  <span style={{ fontFamily: T.fm, fontSize: 10, letterSpacing: '.13em', textTransform: 'uppercase', color: T.n400 }}>Sources cited · 51 AI answers</span>
-                  <span style={{ background: T.small, color: '#fff', fontFamily: T.fm, fontSize: 10, borderRadius: 999, padding: '3px 9px' }}>FactoryJet test</span>
-                </div>
-                <div style={{ padding: '4px 18px 14px' }}>
-                  <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
-                    {CITED_SOURCES.map((r) => (
-                      <li key={r.name} className="demand-row">
-                        <div className="demand-top"><span className="demand-kw">{r.name}</span><span className="demand-v">{r.n}<span style={{ fontSize: 9, color: T.n400 }}> answers</span></span></div>
-                        <div className="demand-bar"><i style={{ width: `${Math.round((r.n / 51) * 100)}%` }} /></div>
-                        <div className="demand-kd">{r.kind}</div>
-                      </li>
-                    ))}
-                  </ul>
-                  <p style={{ textAlign: 'center', fontFamily: T.fm, fontSize: 10, color: T.n400, marginTop: 10 }}>Answers from ChatGPT, Claude and Perplexity to 17 Australian buyer questions, 24–25 September 2026</p>
-                </div>
+            <div className="au-split au-split-top">
+              <div className="demand">
+                <div className="demand-head"><span>Sources cited · 51 AI answers</span><b>FactoryJet test</b></div>
+                <ul>
+                  {CITED_SOURCES.map((r) => (
+                    <li key={r.name} className="demand-row">
+                      <div className="demand-top"><span className="demand-kw">{r.name}</span><span className="demand-v">{r.n}<small> answers</small></span></div>
+                      <div className="demand-bar"><i style={{ width: `${Math.round((r.n / 51) * 100)}%` }} /></div>
+                      <div className="demand-kd">{r.kind}</div>
+                    </li>
+                  ))}
+                </ul>
+                <p className="demand-src">Answers from ChatGPT, Claude and Perplexity to 17 Australian buyer questions, 24–25 September 2026</p>
               </div>
-              <div className="stack">
+              <div>
                 <p>
                   Clutch appeared in 20 answers. GoodFirms and DesignRush appeared in nine each, the Semrush agency
                   directory in seven and Sortlist in six. Separately, 26 answers cited a “best agencies” or “top 10”
@@ -524,27 +582,30 @@ export default function AiSeoAUPage() {
                 </p>
               </div>
             </div>
-
-            <h3 className="mt-12" style={{ maxWidth: 760 }}>What this means for your business</h3>
-            <ul className="col-3 mt-6">
-              <li className="card"><h3>Your directory profiles are now marketing</h3><p className="mt-4">If assistants build shortlists from Clutch, GoodFirms and similar sites, an empty or out-of-date profile is a missed mention. Complete profiles with accurate services, locations and genuine reviews matter more than they used to.</p></li>
-              <li className="card"><h3>Being on the lists matters</h3><p className="mt-4">“Best of” lists feed a large share of answers. You cannot buy your way onto honest ones, but you can make sure the people who write them know you exist and can check your claims easily.</p></li>
-              <li className="card"><h3>Your own site still has to be readable</h3><p className="mt-4">Assistants check the businesses they name. A site that blocks AI crawlers, hides key facts in images, or never says plainly what you do and where makes that check harder.</p></li>
-            </ul>
+            <h3 className="au-subhead">What this means for your business</h3>
+            <div className="platlist" role="list">
+              <div className="plat plat-2col" role="listitem"><span className="capid">01</span><div className="plat-name"><h3>Your directory profiles are now marketing</h3></div><p className="plat-build">If assistants build shortlists from Clutch, GoodFirms and similar sites, an empty or out-of-date profile is a missed mention. Complete profiles with accurate services, locations and genuine reviews matter more than they used to.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">02</span><div className="plat-name"><h3>Being on the lists matters</h3></div><p className="plat-build">“Best of” lists feed a large share of answers. You cannot buy your way onto honest ones, but you can make sure the people who write them know you exist and can check your claims easily.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">03</span><div className="plat-name"><h3>Your own site still has to be readable</h3></div><p className="plat-build">Assistants check the businesses they name. A site that blocks AI crawlers, hides key facts in images, or never says plainly what you do and where makes that check harder.</p></div>
+            </div>
           </div>
         </section>
 
-        {/* ═══ 6. COMPARISON TABLE: CLASSIC SEO VS AI SEO / GEO ═══ */}
-        <section className="sec-lg dot-grid">
+        {/* ═══ COMPARISON TABLE: CLASSIC SEO VS AI SEO / GEO ═══ */}
+        <section className="section comparison" id="comparison">
           <div className="wrap">
-            <span className="eyebrow">Side by side</span>
-            <h2 style={{ maxWidth: 760 }}>Classic SEO vs AI SEO and generative engine optimisation: what changes</h2>
-            <p className="lead mt-4" style={{ maxWidth: 760 }}>
-              AI SEO does not replace classic SEO. It changes the scoreboard and adds new work on top. This table
-              shows where the two differ, and how we run them together.
-            </p>
-            <div className="card mt-8 cmp-scroll" style={{ padding: 0 }}>
-              <table className="cmp-table">
+            <div className="section-head head-split">
+              <div className="eyebrow">Side by side</div>
+              <div>
+                <h2>Classic SEO vs AI SEO and generative engine optimisation: what changes</h2>
+                <p className="lead">
+                  AI SEO does not replace classic SEO. It changes the scoreboard and adds new work on top. This table
+                  shows where the two differ, and how we run them together.
+                </p>
+              </div>
+            </div>
+            <div className="tablewrap">
+              <table>
                 <thead>
                   <tr>
                     <th>What matters</th>
@@ -554,498 +615,428 @@ export default function AiSeoAUPage() {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td className="feat">The goal</td><td>Rank a page in Google’s results</td><td>Be named or cited inside an AI answer</td><td className="fj"><span className="yes">Both, on one plan</span></td></tr>
-                  <tr><td className="feat">Where buyers see you</td><td>Google results and Maps</td><td>ChatGPT, Claude, Gemini, Perplexity, AI Overviews</td><td className="fj"><span className="yes">All of them, tested monthly</span></td></tr>
-                  <tr><td className="feat">What gets measured</td><td>Positions, clicks, traffic, enquiries</td><td>Mentions, citations, accuracy, competitors named</td><td className="fj"><span className="yes">One report, both sets</span></td></tr>
-                  <tr><td className="feat">Research starts with</td><td>Keywords and search volume</td><td>Questions buyers ask assistants</td><td className="fj"><span className="yes">Keywords mapped to real questions</span></td></tr>
-                  <tr><td className="feat">Crawler access</td><td>Googlebot</td><td>OAI-SearchBot, Claude-SearchBot, PerplexityBot and others</td><td className="fj"><span className="yes">Checked line by line</span></td></tr>
-                  <tr><td className="feat">Off-site work</td><td>Backlinks</td><td>Directory profiles, reviews, lists, consistent business facts</td><td className="fj"><span className="yes">Links plus directory and list work</span></td></tr>
-                  <tr><td className="feat">Content style</td><td>Topic coverage for ranking</td><td>Plain answers near the top, easy to quote</td><td className="fj"><span className="yes">Answer first, then depth</span></td></tr>
-                  <tr><td className="feat">Speed of feedback</td><td>Weeks to months</td><td>Varies by assistant and by day</td><td className="fj"><span className="partial">Same questions, re-run every month</span></td></tr>
-                  <tr><td className="feat">Guarantees</td><td>None honest</td><td>None honest</td><td className="fj"><span className="partial">Transparent testing, no promises</span></td></tr>
+                  <tr><th scope="row">The goal</th><td>Rank a page in Google’s results</td><td>Be named or cited inside an AI answer</td><td className="fj">Both, on one plan</td></tr>
+                  <tr><th scope="row">Where buyers see you</th><td>Google results and Maps</td><td>ChatGPT, Claude, Gemini, Perplexity, AI Overviews</td><td className="fj">All of them, tested monthly</td></tr>
+                  <tr><th scope="row">What gets measured</th><td>Positions, clicks, traffic, enquiries</td><td>Mentions, citations, accuracy, competitors named</td><td className="fj">One report, both sets</td></tr>
+                  <tr><th scope="row">Research starts with</th><td>Keywords and search volume</td><td>Questions buyers ask assistants</td><td className="fj">Keywords mapped to real questions</td></tr>
+                  <tr><th scope="row">Crawler access</th><td>Googlebot</td><td>OAI-SearchBot, Claude-SearchBot, PerplexityBot and others</td><td className="fj">Checked line by line</td></tr>
+                  <tr><th scope="row">Off-site work</th><td>Backlinks</td><td>Directory profiles, reviews, lists, consistent business facts</td><td className="fj">Links plus directory and list work</td></tr>
+                  <tr><th scope="row">Content style</th><td>Topic coverage for ranking</td><td>Plain answers near the top, easy to quote</td><td className="fj">Answer first, then depth</td></tr>
+                  <tr><th scope="row">Speed of feedback</th><td>Weeks to months</td><td>Varies by assistant and by day</td><td className="fj">Same questions, re-run every month</td></tr>
+                  <tr><th scope="row">Guarantees</th><td>None honest</td><td>None honest</td><td className="fj">Transparent testing, no promises</td></tr>
                 </tbody>
               </table>
             </div>
-            <p className="tbl-hint">Swipe sideways to see the FactoryJet column →</p>
-            <p className="mt-6" style={{ maxWidth: 780 }}>
+            <p className="tablenote">
               If most of your enquiries come from Google Maps or local searches, classic local SEO is still the
-              bigger lever, and our <a href="/au/seo" style={inLink}>SEO services for Australian businesses</a> page
+              bigger lever, and our <a href="/au/seo">SEO services for Australian businesses</a> page
               covers that in depth. If your buyers research on ChatGPT before they call, or you sell a service where
               people ask an assistant “who should I use?”, AI SEO deserves a place in the plan.
             </p>
           </div>
         </section>
 
-        {/* ═══ 7. PROCESS LISTICLE (interactive <details>) ═══ */}
-        <section className="sec-lg">
+        {/* ═══ PHOTOBREAK (US template visual, no AU image yet) ═══ */}
+        <VisualSlot page={PAGE_KEY} slot="photobreak" kind="illustration" ratio="12:5" className="photobreak"
+          subject="AI-generated model: white question cards feeding into four white answer panels, one orange card naming a business in all four" />
+
+        {/* ═══ PROCESS (<details>) → timeline, photo beside the head ═══ */}
+        <section className="section process" id="process">
           <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <span className="eyebrow">Our process</span>
+            <div className="head-media">
+              <div className="section-head">
+                <div className="eyebrow">Our process</div>
                 <h2>Our AI SEO process in seven steps</h2>
-                <p className="lead mt-4" style={{ maxWidth: 560 }}>
+                <p className="lead">
                   Tap any step to see what happens and what you get. Steps one and two are the AI visibility audit.
                   Some businesses stop there, and that is a fine outcome.
                 </p>
-                <div className="mt-6" style={{ maxWidth: 580 }}>
-                  {[
-                    { n: '01', t: 'Agree the buyer questions', d: 'We write 20 to 50 questions your customers really ask, the way Australians phrase them: “best ecommerce agency in Melbourne”, “who can fix my Shopify store in Brisbane?”, “how much does an AI receptionist cost in Australia?”. You approve the list. It becomes the test we re-run every month.' },
-                    { n: '02', t: 'Measure where you stand', d: 'We run every question across ChatGPT, Claude, Gemini, Perplexity and Google, and record whether you are named, which competitors are named, what the answer says about you, and which websites are cited. This is your baseline. Our free AI visibility checker gives you a quick first look.' },
-                    { n: '03', t: 'Fix what machines cannot read', d: 'We check robots.txt so AI search crawlers are allowed, make sure key content is in the page HTML rather than hidden behind scripts, add accurate structured data, and fix speed and indexing problems. This is technical SEO with AI crawlers added to the list.' },
-                    { n: '04', t: 'Make your business facts consistent', d: 'Your name, services, locations and details should say the same thing on your site, your Google Business Profile, Clutch, GoodFirms, LinkedIn and every directory the assistants cite for your category. Mixed facts confuse machines. We clean them up and complete what is missing.' },
-                    { n: '05', t: 'Write pages that answer questions', d: 'For each important question, a page that answers it plainly near the top, then backs it up with specifics: your process, real examples, honest limits and sources. Question-style headings and FAQs make the answer easy to lift. No filler written to hit a word count.' },
-                    { n: '06', t: 'Earn mentions on sites AI reads', d: 'Directory profiles with genuine reviews, inclusion in honest “best of” lists where you deserve it, industry associations, local media and partner pages. We never buy fake reviews or write them for you. Under Australian Consumer Law that is illegal, and it would put your reputation at risk.' },
-                    { n: '07', t: 'Re-test, report and adjust', d: 'Every month we re-run the same questions and show you what changed: mentions, accuracy, competitors, citations, alongside Google rankings, traffic and enquiries. When something is not working, we say so and change the plan.' },
-                  ].map((s) => (
-                    <details key={s.n}>
-                      <summary><span><span style={{ fontFamily: T.fm, color: T.small, marginRight: 12 }}>{s.n}</span>{s.t}</span></summary>
-                      <p style={{ paddingBottom: 18 }}>{s.d}</p>
-                    </details>
-                  ))}
-                </div>
               </div>
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/ai-seo/ai-seo-workshop.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Two people at a timber meeting table in a Melbourne office sorting blank index cards of buyer questions into three columns" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
-                <div style={{ padding: '14px 12px 8px' }}>
-                  <p style={{ fontSize: 14 }}>
-                    Step one happens at a table, not in a tool. We sort buyer questions into piles by how close each
-                    one is to a sale. “What is GEO?” is research. “Best GEO agency in Sydney” is someone ready to call.
-                  </p>
-                </div>
-              </div>
+              <VisualSlot page={PAGE_KEY} slot="process" kind="photo" ratio="3:2" captionClassName="figcap"
+                subject="Two people at a meeting table sorting index cards of buyer questions into three columns"
+                caption="Step one happens at a table, not in a tool. We sort buyer questions into piles by how close each one is to a sale. “What is GEO?” is research. “Best GEO agency in Sydney” is someone ready to call.">
+                <img src="/images/au/ai-seo/ai-seo-workshop.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Two people at a timber meeting table in a Melbourne office sorting blank index cards of buyer questions into three columns" />
+              </VisualSlot>
+            </div>
+            <div className="timeline timeline-4">
+              {STEPS.map((s) => (
+                <details key={s.n} className="tnode">
+                  <summary>
+                    <div className="idx">{s.n}</div>
+                    <h3>{s.t}<span className="chev" aria-hidden="true">+</span></h3>
+                  </summary>
+                  <p>{s.d}</p>
+                </details>
+              ))}
             </div>
           </div>
         </section>
 
-        <MidPageCTA
-          headline={'Want to know what ChatGPT says about your business?'}
-          sub={'Tell us what you sell and where. On a short call with the founder we will show you how AI assistants answer your buyers’ questions today, who they name instead of you, and whether AI SEO is worth doing for you right now.'}
-          label={'Get my AI visibility check'}
-        />
+        <div className="au-midcta">
+          <MidPageCTA
+            headline={'Want to know what ChatGPT says about your business?'}
+            sub={'Tell us what you sell and where. On a short call with the founder we will show you how AI assistants answer your buyers’ questions today, who they name instead of you, and whether AI SEO is worth doing for you right now.'}
+            label={'Get my AI visibility check'}
+          />
+        </div>
 
-        {/* ═══ 8. WHAT WE MEASURE ═══ */}
-        <section className="sec-lg dot-grid">
+        {/* ═══ WHAT WE MEASURE → facts + monthly report panel ═══ */}
+        <section className="section facts" id="what-we-measure">
           <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <span className="eyebrow">We measure before we sell</span>
-                <h2>What we measure, and how you will see it</h2>
-                <div className="stack mt-6">
-                  <p>
-                    Most AI SEO reports are either a vague “AI visibility score” from a tool, or nothing at all. We
-                    think you should see the actual questions, the actual answers and the actual names. So that is
-                    what our reports show.
-                  </p>
-                  <p>
-                    Before any engagement, we run your buyer questions and show you the results. If you want a
-                    quick look on your own first, our free{' '}
-                    <a href="/ai-visibility-checker" style={inLink}>AI visibility checker</a> scans how ChatGPT,
-                    Perplexity and Google AI Overviews respond for your business. It takes a couple of minutes and
-                    you do not need to talk to anyone.
-                  </p>
+            <div className="section-head">
+              <div className="eyebrow">We measure before we sell</div>
+              <h2>What we measure, and how you will see it</h2>
+            </div>
+            <div className="factswrap">
+              <div className="factlist">
+                <div className="fact"><div className="sec">§01</div><p>
+                  Most AI SEO reports are either a vague “AI visibility score” from a tool, or nothing at all. We
+                  think you should see the actual questions, the actual answers and the actual names. So that is
+                  what our reports show.
+                </p></div>
+                <div className="fact"><div className="sec">§02</div><p>
+                  Before any engagement, we run your buyer questions and show you the results. If you want a
+                  quick look on your own first, our free{' '}
+                  <a href="/ai-visibility-checker">AI visibility checker</a> scans how ChatGPT,
+                  Perplexity and Google AI Overviews respond for your business. It takes a couple of minutes and
+                  you do not need to talk to anyone.
+                </p></div>
+                <div className="fact"><div className="sec">§03</div><div>
                   <p>
                     One caution we give every client: AI answers vary from run to run. A single screenshot proves
                     little. That is why we use a fixed set of questions, run them the same way every month, and look
                     at the trend rather than any one answer.
                   </p>
-                </div>
-                <div className="mt-8">
-                  <a className="btn btn-primary" href="/ai-visibility-checker">Run the free AI visibility checker</a>
-                </div>
+                  <a className="btn btn-primary fact-cta" href="/ai-visibility-checker">Run the free AI visibility checker</a>
+                </div></div>
               </div>
-              <div className="card card-top-orange">
-                <span className="eyebrow">Your monthly report</span>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Mention rate</div><div className="scorecard-note">share of test questions where you are named</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Per assistant</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Accuracy</div><div className="scorecard-note">is what they say about you correct?</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Checked</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Competitors named</div><div className="scorecard-note">who gets the mention instead</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Listed</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Sources cited</div><div className="scorecard-note">which sites the answers lean on</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Listed</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">AI Overview presence</div><div className="scorecard-note">shown, and are you cited in it?</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Tracked</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Google rankings and enquiries</div><div className="scorecard-note">the classic scoreboard, kept</div></div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Included</div></div>
+              <div className="au-panel">
+                <div className="eyebrow">Your monthly report</div>
+                <ul className="trigrows">
+                  <li><span className="m">Mention rate</span><span className="n">share of test questions where you are named</span><span className="t">Per assistant</span></li>
+                  <li><span className="m">Accuracy</span><span className="n">is what they say about you correct?</span><span className="t">Checked</span></li>
+                  <li><span className="m">Competitors named</span><span className="n">who gets the mention instead</span><span className="t">Listed</span></li>
+                  <li><span className="m">Sources cited</span><span className="n">which sites the answers lean on</span><span className="t">Listed</span></li>
+                  <li><span className="m">AI Overview presence</span><span className="n">shown, and are you cited in it?</span><span className="t">Tracked</span></li>
+                  <li><span className="m">Google rankings and enquiries</span><span className="n">the classic scoreboard, kept</span><span className="t">Included</span></li>
+                </ul>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ═══ 9. WHICH OPTION FITS YOU (interactive checklist) ═══ */}
-        <section className="sec-lg">
+        {/* ═══ WHICH OPTION FITS YOU (<details open>) → vlog ═══ */}
+        <section className="vlog" id="fit-check">
           <div className="wrap">
-            <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">Be honest with yourself</span>
+            <div className="section-head">
+              <div className="eyebrow">Be honest with yourself</div>
               <h2>Do you need AI SEO now, or classic SEO first?</h2>
-              <p className="lead mt-4">
+              <p>
                 Read the list that sounds most like you (tap a heading to fold it away). If you tick three or more in
                 one list, that is probably where to start.
               </p>
+              <VisualSlot page={PAGE_KEY} slot="proof" kind="photo" ratio="3:2"
+                subject="A business owner at a café table reading a short AI assistant answer on her phone next to a Google Maps listing" />
             </div>
-            <div className="col-2 mt-8" style={{ gap: 24 }}>
-              <div className="card">
-                <details open>
-                  <summary>AI SEO is worth doing now if...</summary>
-                  <ul className="scope-list" style={{ paddingBottom: 12 }}>
-                    <li>Your buyers are business owners or managers who research suppliers before calling.</li>
-                    <li>You sell a considered service or product where people ask “who should I use?”.</li>
-                    <li>New customers have mentioned finding you, or a competitor, through ChatGPT.</li>
-                    <li>You already rank reasonably well on Google but competitors get named in AI answers.</li>
-                    <li>Your details on directories and review sites are thin, old or inconsistent.</li>
-                    <li>You want one agency to handle Google and AI search together.</li>
-                  </ul>
-                </details>
-              </div>
-              <div className="card">
-                <details open>
-                  <summary>Classic SEO should come first if...</summary>
-                  <ul className="scope-list" style={{ paddingBottom: 12 }}>
-                    <li>Most of your work comes from Google Maps and “near me” searches.</li>
-                    <li>Your website is slow, hard to crawl, or barely indexed.</li>
-                    <li>You do not yet rank on page one for anything your buyers search.</li>
-                    <li>Your Google Business Profile is incomplete or unverified.</li>
-                    <li>You have fewer than a handful of genuine reviews anywhere.</li>
-                  </ul>
-                  <p style={{ paddingBottom: 18 }}>If this sounds like you, start with <a href="/au/seo" style={inLink}>SEO services Australia</a>. The same foundations feed AI answers later.</p>
-                </details>
-              </div>
+            <div className="ventries">
+              <details open className="ventry">
+                <summary><h3>AI SEO is worth doing now if...</h3><span className="chev" aria-hidden="true">+</span></summary>
+                <ul className="chg-list chg-list-1col">
+                  <li><span>Your buyers are business owners or managers who research suppliers before calling.</span></li>
+                  <li><span>You sell a considered service or product where people ask “who should I use?”.</span></li>
+                  <li><span>New customers have mentioned finding you, or a competitor, through ChatGPT.</span></li>
+                  <li><span>You already rank reasonably well on Google but competitors get named in AI answers.</span></li>
+                  <li><span>Your details on directories and review sites are thin, old or inconsistent.</span></li>
+                  <li><span>You want one agency to handle Google and AI search together.</span></li>
+                </ul>
+              </details>
+              <details open className="ventry">
+                <summary><h3>Classic SEO should come first if...</h3><span className="chev" aria-hidden="true">+</span></summary>
+                <ul className="chg-list chg-list-1col">
+                  <li><span>Most of your work comes from Google Maps and “near me” searches.</span></li>
+                  <li><span>Your website is slow, hard to crawl, or barely indexed.</span></li>
+                  <li><span>You do not yet rank on page one for anything your buyers search.</span></li>
+                  <li><span>Your Google Business Profile is incomplete or unverified.</span></li>
+                  <li><span>You have fewer than a handful of genuine reviews anywhere.</span></li>
+                </ul>
+                <p>If this sounds like you, start with <a href="/au/seo">SEO services Australia</a>. The same foundations feed AI answers later.</p>
+              </details>
             </div>
           </div>
         </section>
 
-        {/* ═══ 10. WHO WE HELP + TRADIE STORY ═══ */}
-        <section className="sec-lg dot-grid">
-          <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <span className="eyebrow">Where the questions are asked</span>
-                <h2>AI search happens in the van, the café and the boardroom</h2>
-                <div className="stack mt-6">
-                  <p>
-                    It is easy to picture AI search as something only tech buyers do. In practice, the question
-                    “who is a good electrician in Paddington who can start this week?” gets typed into a phone
-                    between jobs. So does “best Shopify agency in Australia for a homewares store” and “which
-                    accountants in Adelaide use Xero?”.
-                  </p>
-                  <p>
-                    Each of those is a moment where an assistant writes a short list, and the businesses on it get
-                    the call. Local businesses still win most of their work through Google Maps, so we never ignore
-                    it. But the higher the value of the job, the more research buyers do, and the more likely that
-                    research now includes an AI assistant.
-                  </p>
-                  <p>
-                    For deeper reading, our guides on{' '}
-                    <a href="/blog/how-to-get-chatgpt-to-recommend-your-business-2026" style={inLink}>how to get ChatGPT to recommend your business</a>{' '}
-                    and{' '}
-                    <a href="/blog/how-to-show-up-in-google-ai-overviews-small-business" style={inLink}>showing up in Google AI Overviews as a small business</a>{' '}
-                    go step by step, and our{' '}
-                    <a href="/blog/generative-engine-optimization-guide" style={inLink}>generative engine optimisation guide</a>{' '}
-                    covers the research behind GEO.
-                  </p>
-                </div>
-              </div>
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/ai-seo/ai-seo-tradie.webp" width={1200} height={800} loading="lazy" decoding="async" alt="An Australian tradesman in his work van on a Brisbane street asking an AI assistant a question on his phone" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
-                <div style={{ padding: '14px 12px 8px' }}>
-                  <p style={{ fontSize: 14 }}>
-                    Your next customer may be asking an assistant between jobs. The answer they get is written in
-                    seconds, from pages and listings that already exist.
-                  </p>
-                </div>
-              </div>
-            </div>
+        {/* ═══ WHO WE HELP + TRADIE STORY → definition module (image left, copy right) ═══ */}
+        <section className="definition" id="where-questions-are-asked">
+          <div>
+            <VisualSlot page={PAGE_KEY} slot="definition" kind="photo" ratio="3:2" className="definition-image"
+              subject="A tradesman in his work van asking an AI assistant a question on his phone">
+              <img src="/images/au/ai-seo/ai-seo-tradie.webp" width={1200} height={800} loading="lazy" decoding="async" alt="An Australian tradesman in his work van on a Brisbane street asking an AI assistant a question on his phone" />
+            </VisualSlot>
+            <p className="figcap">
+              Your next customer may be asking an assistant between jobs. The answer they get is written in
+              seconds, from pages and listings that already exist.
+            </p>
+          </div>
+          <div className="definition-copy">
+            <div className="eyebrow">Where the questions are asked</div>
+            <h2>AI search happens in the van, the café and the boardroom</h2>
+            <p>
+              It is easy to picture AI search as something only tech buyers do. In practice, the question
+              “who is a good electrician in Paddington who can start this week?” gets typed into a phone
+              between jobs. So does “best Shopify agency in Australia for a homewares store” and “which
+              accountants in Adelaide use Xero?”.
+            </p>
+            <p>
+              Each of those is a moment where an assistant writes a short list, and the businesses on it get
+              the call. Local businesses still win most of their work through Google Maps, so we never ignore
+              it. But the higher the value of the job, the more research buyers do, and the more likely that
+              research now includes an AI assistant.
+            </p>
+            <p>
+              For deeper reading, our guides on{' '}
+              <a href="/blog/how-to-get-chatgpt-to-recommend-your-business-2026">how to get ChatGPT to recommend your business</a>{' '}
+              and{' '}
+              <a href="/blog/how-to-show-up-in-google-ai-overviews-small-business">showing up in Google AI Overviews as a small business</a>{' '}
+              go step by step, and our{' '}
+              <a href="/blog/generative-engine-optimization-guide">generative engine optimisation guide</a>{' '}
+              covers the research behind GEO.
+            </p>
           </div>
         </section>
 
-        {/* ═══ 11. ECOMMERCE + SIBLING SERVICES (hover cards) ═══ */}
-        <section className="sec-lg">
+        {/* ═══ ECOMMERCE + SIBLING SERVICES → facts + photo + directory tiles ═══ */}
+        <section className="section facts" id="built-by-engineers">
           <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <span className="eyebrow">Built by engineers</span>
-                <h2>AI SEO works better when the same team can fix the site</h2>
-                <div className="stack mt-6">
-                  <p>
-                    A lot of AI SEO advice ends with a list of changes your developer “should make”. Then nothing
-                    happens for three months. FactoryJet is an engineering company first. We build websites,
-                    ecommerce stores and AI agents, so when the audit says your product pages hide their details
-                    in scripts, or your store blocks a crawler, we fix it ourselves.
-                  </p>
-                  <p>
-                    That matters most for online stores. Shoppers now ask assistants which Australian brand makes the
-                    best linen sheets or where to buy a specific part with fast shipping. Clear product data,
-                    accurate stock and delivery details, and consistent reviews give an assistant something solid to
-                    repeat. Our <a href="/au/ecommerce-development" style={inLink}>ecommerce development in Australia</a>{' '}
-                    and <a href="/au/shopify-development" style={inLink}>Shopify development</a> teams build stores
-                    that are readable by machines from day one. For stores, this sits inside our{' '}
-                    <a href="/au/ecommerce-seo" style={inLink}>ecommerce SEO services</a>, alongside collection pages and
-                    Google Shopping.
-                  </p>
-                  <p>
-                    Health practices have extra rules to follow. See{' '}
-                    <a href="/au/dental-website-design#ahpra" style={inLink}>how the Ahpra advertising guidelines shape a dental website</a>.
-                  </p>
-                </div>
-              </div>
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/ai-seo/ai-seo-warehouse.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A FactoryJet web engineer checking a product page on his laptop while the owner of a Melbourne linen brand stands beside him holding a folded sheet" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
-                <div style={{ padding: '14px 12px 8px' }}>
-                  <p style={{ fontSize: 14 }}>
-                    Product facts an assistant can repeat start on the product page: clear names, sizes, materials,
-                    stock and delivery details, written as text and marked up with structured data.
-                  </p>
-                </div>
-              </div>
+            <div className="section-head">
+              <div className="eyebrow">Built by engineers</div>
+              <h2>AI SEO works better when the same team can fix the site</h2>
             </div>
-            <ul className="col-3 mt-12">
-              <li><a className="svc-card" href="/au/seo" style={{ display: 'block', height: '100%' }}><h3>SEO services Australia</h3><p className="mt-4">Classic rankings, technical SEO and local search. The foundation that AI Overviews draw from.</p><span className="eyebrow mt-4">Explore SEO →</span></a></li>
-              <li><a className="svc-card" href="/au/ai-agents" style={{ display: 'block', height: '100%' }}><h3>AI agent development</h3><p className="mt-4">Custom AI agents that answer enquiries, handle orders and connect to Xero, MYOB and your CRM.</p><span className="eyebrow mt-4">Explore AI agents →</span></a></li>
-              <li><a className="svc-card" href="/au/ecommerce-development" style={{ display: 'block', height: '100%' }}><h3>Ecommerce development</h3><p className="mt-4">Stores built with clean product data and structured data, so both Google and AI assistants can read them.</p><span className="eyebrow mt-4">Explore ecommerce →</span></a></li>
-              <li><a className="svc-card" href="/au/ai-consulting" style={{ display: 'block', height: '100%' }}><h3>AI consulting</h3><p className="mt-4">Not sure where AI fits in your business beyond search? Start with a focused AI readiness assessment.</p><span className="eyebrow mt-4">Explore AI consulting →</span></a></li>
-              <li><a className="svc-card" href="/au/ai-development" style={{ display: 'block', height: '100%' }}><h3>AI development</h3><p className="mt-4">AI built into your existing systems, from document handling to customer service tools.</p><span className="eyebrow mt-4">Explore AI development →</span></a></li>
-              <li><a className="svc-card" href="/au" style={{ display: 'block', height: '100%' }}><h3>FactoryJet Australia</h3><p className="mt-4">Everything we do for Australian businesses: ecommerce, AI agents, websites and AI search.</p><span className="eyebrow mt-4">Visit the Australia hub →</span></a></li>
+            <div className="factswrap">
+              <div className="factlist">
+                <div className="fact"><div className="sec">§01</div><p>
+                  A lot of AI SEO advice ends with a list of changes your developer “should make”. Then nothing
+                  happens for three months. FactoryJet is an engineering company first. We build websites,
+                  ecommerce stores and AI agents, so when the audit says your product pages hide their details
+                  in scripts, or your store blocks a crawler, we fix it ourselves.
+                </p></div>
+                <div className="fact"><div className="sec">§02</div><p>
+                  That matters most for online stores. Shoppers now ask assistants which Australian brand makes the
+                  best linen sheets or where to buy a specific part with fast shipping. Clear product data,
+                  accurate stock and delivery details, and consistent reviews give an assistant something solid to
+                  repeat. Our <a href="/au/ecommerce-development">ecommerce development in Australia</a>{' '}
+                  and <a href="/au/shopify-development">Shopify development</a> teams build stores
+                  that are readable by machines from day one. For stores, this sits inside our{' '}
+                  <a href="/au/ecommerce-seo">ecommerce SEO services</a>, alongside collection pages and
+                  Google Shopping.
+                </p></div>
+                <div className="fact"><div className="sec">§03</div><p>
+                  Health practices have extra rules to follow. See{' '}
+                  <a href="/au/dental-website-design#ahpra">how the Ahpra advertising guidelines shape a dental website</a>.
+                </p></div>
+              </div>
+              <VisualSlot page={PAGE_KEY} slot="facts-2" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
+                subject="A web engineer checking a product page on his laptop beside the owner of a linen brand holding a folded sheet"
+                caption="Product facts an assistant can repeat start on the product page: clear names, sizes, materials, stock and delivery details, written as text and marked up with structured data.">
+                <img src="/images/au/ai-seo/ai-seo-warehouse.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A FactoryJet web engineer checking a product page on his laptop while the owner of a Melbourne linen brand stands beside him holding a folded sheet" />
+              </VisualSlot>
+            </div>
+            <ul className="agentdir-grid span-all">
+              {SIBLINGS.map((s) => (
+                <li key={s.href}>
+                  <a href={s.href}>
+                    <span className="agentdir-t">{s.t}</span>
+                    <span className="agentdir-l">{s.d}</span>
+                    <span className="agentdir-more">{s.go}</span>
+                    <span className="agentdir-go" aria-hidden="true">↗</span>
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         </section>
 
-        {/* ═══ 12. HONEST LIMITS + ACCC ═══ */}
-        <section className="sec-lg dot-grid">
+        {/* ═══ HONEST LIMITS + ACCC → facts + photo + three ruled rows ═══ */}
+        <section className="section facts" id="what-we-will-not-do">
           <div className="wrap">
-            <div className="col-6040">
-            <div>
-              <span className="eyebrow">What we will not do</span>
+            <div className="section-head">
+              <div className="eyebrow">What we will not do</div>
               <h2>Shortcuts that can hurt your business, and why we avoid them</h2>
-              <div className="stack mt-6">
-                <p>
+            </div>
+            <div className="factswrap">
+              <div className="factlist">
+                <div className="fact"><div className="sec">§01</div><p>
                   Because directories and reviews feed AI answers, some agencies now sell shortcuts: batches of
                   reviews, planted comments on forums, or pages stuffed with the same phrases. We stay away from all
                   of it, for two reasons.
-                </p>
-                <p>
+                </p></div>
+                <div className="fact"><div className="sec">§02</div><p>
                   First, it is often illegal. The ACCC is clear that it is against the law for a business to create
                   fake or misleading reviews, or to arrange for others to do so. Offering incentives for positive
                   reviews also risks breaching the Australian Consumer Law. An AI assistant repeating a fake review
                   does not make it any less fake.
+                </p></div>
+                <div className="fact"><div className="sec">§03</div><div>
+                  <p>
+                    Second, it tends not to work. The research paper that named generative engine optimisation found
+                    that some methods, such as adding sources and statistics, could lift visibility in AI answers by up
+                    to 40% in its tests, while old-style keyword stuffing performed poorly. The authors also found the
+                    best method changes from topic to topic. Real substance beats tricks.
+                  </p>
+                  <p className="au-note">
+                    Sources: <a href={SRC_ACCC} {...extLink}>ACCC, online product and service reviews</a>;{' '}
+                    <a href={SRC_GEO_PAPER} {...extLink}>Aggarwal et al., GEO: Generative Engine Optimization (arXiv:2311.09735)</a>.
+                  </p>
+                </div></div>
+              </div>
+              <VisualSlot page={PAGE_KEY} slot="facts-3" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
+                subject="The owner of a small bakery chatting with a regular customer as she hands him his bread across the counter"
+                caption="The reviews worth having come from moments like this one. We help you ask real customers at the right time. We never write a review for you or pay for one.">
+                <img src="/images/au/ai-seo/ai-seo-reviews.webp" width={1200} height={800} loading="lazy" decoding="async" alt="The owner of a small Adelaide bakery chatting with a regular customer as she hands him his bread across the counter" />
+              </VisualSlot>
+            </div>
+            <div className="platlist span-all" role="list">
+              <div className="plat plat-2col" role="listitem"><span className="capid">01</span><div className="plat-name"><h3>What we do</h3></div><p className="plat-build">Help you ask real customers for honest reviews, complete your listings, and publish pages with facts an assistant can check.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">02</span><div className="plat-name"><h3>What we never do</h3></div><p className="plat-build">Write reviews, buy reviews, post as customers on forums, or promise you a place in ChatGPT answers.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">03</span><div className="plat-name"><h3>What you keep</h3></div><p className="plat-build">Every page, profile and piece of content we create is yours. If you stop working with us, it all keeps working.</p></div>
+            </div>
+          </div>
+        </section>
+
+        {/* ═══ AUSTRALIAN DEMAND → full-width head + split (prose + links | photo + demand) ═══ */}
+        <section className="section platforms" id="australia-wide">
+          <div className="wrap">
+            <div className="section-head">
+              <div className="eyebrow">Australia-wide</div>
+              <h2>AI SEO services across Sydney, Melbourne, Brisbane and beyond</h2>
+            </div>
+            <div className="au-split au-split-top">
+              <div>
+                <p>
+                  Australians search for this service under a lot of different names: AI SEO, AI SEO services,
+                  generative engine optimisation, GEO agency, answer engine optimisation, ChatGPT SEO and LLM SEO.
+                  Interest in the topic has roughly doubled in a year. Most of these searches are still small,
+                  which tells you the market is early and buyers are still learning the language.
                 </p>
                 <p>
-                  Second, it tends not to work. The research paper that named generative engine optimisation found
-                  that some methods, such as adding sources and statistics, could lift visibility in AI answers by up
-                  to 40% in its tests, while old-style keyword stuffing performed poorly. The authors also found the
-                  best method changes from topic to topic. Real substance beats tricks.
+                  We run AI SEO remotely for businesses in Sydney, Melbourne, Brisbane, Perth, Adelaide, Canberra
+                  and regional Australia, with video reviews and shared reports. Where you are makes no difference
+                  to the work. What does matter is that the test questions sound Australian, because an assistant
+                  answering “best agency in Parramatta” reads different sources from one answering a US question.
                 </p>
+                <ul className="city-list">
+                  <li><a href="/au">FactoryJet Australia</a></li>
+                  <li><a href="/au/seo">SEO services Australia</a></li>
+                  <li><a href="/au/ai-agents">AI agents Australia</a></li>
+                  <li><a href="/au/ecommerce-development">Ecommerce development Australia</a></li>
+                  <li><a href="/au/melbourne">Melbourne</a></li>
+                  <li><a href="/au/brisbane">Brisbane</a></li>
+                  <li><a href="/au/adelaide">Adelaide</a></li>
+                  <li><a href="/au/canberra">Canberra</a></li>
+                </ul>
+                <VisualSlot page={PAGE_KEY} slot="platforms" kind="photo" ratio="3:2" className="au-split-photo" captionClassName="figcap"
+                  subject="A business owner on a video call with the FactoryJet team, reviewing a shared AI visibility report on his laptop"
+                  caption="Perth, Hobart or Parramatta: the monthly review is a video call over the same shared report, in your business hours.">
+                  <img src="/images/au/ai-seo/ai-seo-remote.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A Perth business owner on a video call with the FactoryJet team, reviewing a shared AI visibility report on his laptop, with the Swan River outside his office window" />
+                </VisualSlot>
               </div>
-              <p style={srcNote}>
-                Sources: <a href={SRC_ACCC} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>ACCC, online product and service reviews</a>;{' '}
-                <a href={SRC_GEO_PAPER} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>Aggarwal et al., GEO: Generative Engine Optimization (arXiv:2311.09735)</a>.
-              </p>
-            </div>
-            <div className="card" style={{ padding: 8 }}>
-              <img src="/images/au/ai-seo/ai-seo-reviews.webp" width={1200} height={800} loading="lazy" decoding="async" alt="The owner of a small Adelaide bakery chatting with a regular customer as she hands him his bread across the counter" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
-              <div style={{ padding: '14px 12px 8px' }}>
-                <p style={{ fontSize: 14 }}>
-                  The reviews worth having come from moments like this one. We help you ask real customers at the
-                  right time. We never write a review for you or pay for one.
-                </p>
+              <div className="demand">
+                <div className="demand-head"><span>Australia · Monthly Search Demand</span><b>DataForSEO</b></div>
+                <ul>
+                  {[
+                    { kw: 'ai seo / ai for seo', v: '1,000', w: '100%', kd: 'The head term cluster' },
+                    { kw: 'ai seo agency', v: '390', w: '39%', kd: 'Buyer intent' },
+                    { kw: 'ai seo services', v: '320', w: '32%', kd: 'Buyer intent' },
+                    { kw: 'generative engine optimization', v: '260', w: '26%', kd: 'US spelling, still common here' },
+                    { kw: 'generative engine optimisation', v: '210', w: '21%', kd: 'Australian spelling' },
+                    { kw: 'geo agency', v: '170', w: '17%', kd: 'Buyer intent' },
+                    { kw: 'answer engine optimisation', v: '110', w: '11%', kd: 'Research stage' },
+                    { kw: 'ai seo audit', v: '40', w: '4%', kd: 'Where most start' },
+                  ].map((r) => (
+                    <li key={r.kw} className="demand-row">
+                      <div className="demand-top"><span className="demand-kw">{r.kw}</span><span className="demand-v">{r.v}<small> searches</small></span></div>
+                      <div className="demand-bar"><i style={{ width: r.w }} /></div>
+                      <div className="demand-kd">{r.kd}</div>
+                    </li>
+                  ))}
+                </ul>
+                <p className="demand-src">Source: DataForSEO, Australia, September 2026</p>
               </div>
             </div>
-            </div>
-            <ul className="col-3 mt-10">
-              <li className="card"><h3>What we do</h3><p className="mt-4">Help you ask real customers for honest reviews, complete your listings, and publish pages with facts an assistant can check.</p></li>
-              <li className="card"><h3>What we never do</h3><p className="mt-4">Write reviews, buy reviews, post as customers on forums, or promise you a place in ChatGPT answers.</p></li>
-              <li className="card"><h3>What you keep</h3><p className="mt-4">Every page, profile and piece of content we create is yours. If you stop working with us, it all keeps working.</p></li>
-            </ul>
           </div>
         </section>
 
-        {/* ═══ 13. AUSTRALIAN DEMAND ═══ */}
-        <section className="sec-lg">
+        {/* ═══ AGENCY LIST (self-disclosure, ItemList from AU_AGENCIES) → ruled rows ═══ */}
+        <section className="section platforms" id="agencies">
           <div className="wrap">
-            <div className="col-6040">
+            <div className="section-head plat-head">
               <div>
-                <span className="eyebrow">Australia-wide</span>
-                <h2>AI SEO services across Sydney, Melbourne, Brisbane and beyond</h2>
-                <div className="stack mt-6">
-                  <p>
-                    Australians search for this service under a lot of different names: AI SEO, AI SEO services,
-                    generative engine optimisation, GEO agency, answer engine optimisation, ChatGPT SEO and LLM SEO.
-                    Interest in the topic has roughly doubled in a year. Most of these searches are still small,
-                    which tells you the market is early and buyers are still learning the language.
-                  </p>
-                  <p>
-                    We run AI SEO remotely for businesses in Sydney, Melbourne, Brisbane, Perth, Adelaide, Canberra
-                    and regional Australia, with video reviews and shared reports. Where you are makes no difference
-                    to the work. What does matter is that the test questions sound Australian, because an assistant
-                    answering “best agency in Parramatta” reads different sources from one answering a US question.
-                  </p>
-                </div>
-                <div className="flex-wrap mt-6">
-                  <a className="city-pill" href="/au">FactoryJet Australia</a>
-                  <a className="city-pill" href="/au/seo">SEO services Australia</a>
-                  <a className="city-pill" href="/au/ai-agents">AI agents Australia</a>
-                  <a className="city-pill" href="/au/ecommerce-development">Ecommerce development Australia</a>
-                  <a className="city-pill" href="/au/melbourne">Melbourne</a>
-                  <a className="city-pill" href="/au/brisbane">Brisbane</a>
-                  <a className="city-pill" href="/au/adelaide">Adelaide</a>
-                  <a className="city-pill" href="/au/canberra">Canberra</a>
-                </div>
+                <div className="eyebrow">The honest landscape</div>
+                <h2>Australian AI SEO and GEO agencies worth knowing</h2>
               </div>
-
-              <div className="stack">
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/ai-seo/ai-seo-remote.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A Perth business owner on a video call with the FactoryJet team, reviewing a shared AI visibility report on his laptop, with the Swan River outside his office window" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
-                <div style={{ padding: '14px 12px 8px' }}>
-                  <p style={{ fontSize: 14 }}>
-                    Perth, Hobart or Parramatta: the monthly review is a video call over the same shared report, in
-                    your business hours.
-                  </p>
-                </div>
-              </div>
-              <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, justifyContent: 'space-between', alignItems: 'center', borderBottom: `1px solid ${T.n200}`, padding: '14px 18px' }}>
-                  <span style={{ fontFamily: T.fm, fontSize: 10, letterSpacing: '.13em', textTransform: 'uppercase', color: T.n400 }}>Australia · Monthly Search Demand</span>
-                  <span style={{ background: T.small, color: '#fff', fontFamily: T.fm, fontSize: 10, borderRadius: 999, padding: '3px 9px' }}>DataForSEO</span>
-                </div>
-                <div style={{ padding: '4px 18px 14px' }}>
-                  <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
-                    {[
-                      { kw: 'ai seo / ai for seo', v: '1,000', w: '100%', kd: 'The head term cluster' },
-                      { kw: 'ai seo agency', v: '390', w: '39%', kd: 'Buyer intent' },
-                      { kw: 'ai seo services', v: '320', w: '32%', kd: 'Buyer intent' },
-                      { kw: 'generative engine optimization', v: '260', w: '26%', kd: 'US spelling, still common here' },
-                      { kw: 'generative engine optimisation', v: '210', w: '21%', kd: 'Australian spelling' },
-                      { kw: 'geo agency', v: '170', w: '17%', kd: 'Buyer intent' },
-                      { kw: 'answer engine optimisation', v: '110', w: '11%', kd: 'Research stage' },
-                      { kw: 'ai seo audit', v: '40', w: '4%', kd: 'Where most start' },
-                    ].map((r) => (
-                      <li key={r.kw} className="demand-row">
-                        <div className="demand-top"><span className="demand-kw">{r.kw}</span><span className="demand-v">{r.v}<span style={{ fontSize: 9, color: T.n400 }}> searches</span></span></div>
-                        <div className="demand-bar"><i style={{ width: r.w }} /></div>
-                        <div className="demand-kd">{r.kd}</div>
-                      </li>
-                    ))}
-                  </ul>
-                  <p style={{ textAlign: 'center', fontFamily: T.fm, fontSize: 10, color: T.n400, marginTop: 10 }}>Source: DataForSEO, Australia, September 2026</p>
-                </div>
-              </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ═══ 14. COMPETITOR LIST (self-disclosure, ItemList) ═══ */}
-        <section className="sec-lg dot-grid">
-          <div className="wrap">
-            <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">The honest landscape</span>
-              <h2>Australian AI SEO and GEO agencies worth knowing</h2>
-              <p className="lead mt-4">
+              <p>
                 We are one option, not the only one. These agencies show up when Australians search for an AI SEO
                 agency or ask AI assistants for a recommendation. Each note is based on what the company says on its
                 own website. Talk to a few, and ask every one of them, including us, to show you your starting
                 position before you sign.
               </p>
             </div>
-            <ul className="col-2 mt-10">
+            <div className="platlist" role="list">
               {AU_AGENCIES.map((a, i) => (
-                <li key={a.name} className={a.name === 'FactoryJet' ? 'card card-top-orange' : 'card'} style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
-                  <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.orange, minWidth: 30 }}>{i + 1}</span>
-                  <div>
-                    <h3 style={{ fontSize: 18 }}>{a.name}{a.name === 'FactoryJet' && <span style={{ fontFamily: T.fm, fontSize: 10, background: T.small, color: '#fff', borderRadius: 999, padding: '2px 8px', marginLeft: 8, verticalAlign: 'middle' }}>That is us</span>}</h3>
-                    <p className="mt-2" style={{ marginTop: 6 }}>{a.note}</p>
-                  </div>
-                </li>
+                <div key={a.name} className={a.name === 'FactoryJet' ? 'plat plat-2col plat-own' : 'plat plat-2col'} role="listitem">
+                  <span className="capid">{String(i + 1).padStart(2, '0')}</span>
+                  <div className="plat-name"><h3>{a.name}</h3>{a.name === 'FactoryJet' && <span className="plat-flag">That is us</span>}</div>
+                  <p className="plat-build">{a.note}</p>
+                </div>
               ))}
-            </ul>
-            <p style={srcNote}>
+            </div>
+            <p className="sub-note">
               Agencies named from live Australian search results and AI assistant answers for AI SEO queries, September 2026. Notes reflect each company’s own website on 25 September 2026. Listing is not endorsement.
             </p>
-
-            <div className="card mt-10" style={{ maxWidth: 900 }}>
-              <h3 style={{ fontSize: 18 }}>Six questions to ask any AI SEO agency</h3>
-              <ol className="scope-list num-list mt-4">
-                <li><b>Can you show me where I stand today?</b> Ask for the exact questions they ran and the answers they got.</li>
-                <li><b>Which assistants do you test?</b> ChatGPT alone is not enough. Ask about Claude, Gemini, Perplexity and AI Overviews.</li>
-                <li><b>How do you handle answers changing from day to day?</b> A good answer involves a fixed question set and trends over time.</li>
-                <li><b>What will you change on my website, and who does it?</b> Recommendations without implementation go nowhere.</li>
-                <li><b>How do you get mentions on other sites?</b> Listen for honest reviews, listings and PR, not bought reviews.</li>
-                <li><b>Do you guarantee results?</b> The right answer is no, with a clear explanation of what they can influence.</li>
+            <div className="au-panel au-panel-wide">
+              <h3 className="au-panel-title">Six questions to ask any AI SEO agency</h3>
+              <ol className="au-numlist">
+                <li><span><b>Can you show me where I stand today?</b> Ask for the exact questions they ran and the answers they got.</span></li>
+                <li><span><b>Which assistants do you test?</b> ChatGPT alone is not enough. Ask about Claude, Gemini, Perplexity and AI Overviews.</span></li>
+                <li><span><b>How do you handle answers changing from day to day?</b> A good answer involves a fixed question set and trends over time.</span></li>
+                <li><span><b>What will you change on my website, and who does it?</b> Recommendations without implementation go nowhere.</span></li>
+                <li><span><b>How do you get mentions on other sites?</b> Listen for honest reviews, listings and PR, not bought reviews.</span></li>
+                <li><span><b>Do you guarantee results?</b> The right answer is no, with a clear explanation of what they can influence.</span></li>
               </ol>
             </div>
           </div>
         </section>
 
-        {/* ═══ 15. FAQ ═══ */}
-        <section className="sec-lg" id="faq">
+        {/* ═══ FAQ (Family A accordion; same FAQ_ITEMS array as the FAQPage JSON-LD) ═══ */}
+        <AuFaq
+          categories={FAQ_CATEGORIES}
+          items={FAQ_ITEMS}
+          heading="AI SEO questions Australian business owners actually ask"
+          askLabel="Still have a question? Ask the founder →"
+          askNote="Replies within 24 hours."
+        />
+
+        {/* ═══ FINAL CTA (light, US finalcta) ═══ */}
+        <section className="finalcta" id="finalcta">
           <div className="wrap">
-            <div style={{ textAlign: 'center' }}>
-              <span className="eyebrow">FAQ</span>
-              <h2>AI SEO questions Australian business owners actually ask</h2>
+            <div>
+              <div className="eyebrow">Ready when you are</div>
+              <h2>Find out what AI assistants say about your business</h2>
+              <p>
+                Send your name and work email. The founder replies within 24 hours to book a short call. We will run
+                your buyers’ questions across ChatGPT, Claude, Gemini, Perplexity and Google, show you who gets named,
+                and tell you honestly whether AI SEO is worth doing for you. No spam, no obligation.
+              </p>
             </div>
-            <nav className="faq-pill-nav" aria-label="FAQ categories">
-              {FAQ_CATEGORIES.map((c) => (
-                <a key={c.key} href={`#faq-${c.key}`}>
-                  {c.label}{' '}
-                  <span className="pill-count">{FAQ_ITEMS.filter((f) => f.category === c.key).length}</span>
-                </a>
-              ))}
-            </nav>
-            <div className="faq-grid">
-              <aside className="faq-sidebar">
-                <span className="faq-sidebar-topics">Topics</span>
-                <nav className="faq-sidebar-nav">
-                  {FAQ_CATEGORIES.map((c) => (
-                    <a key={c.key} href={`#faq-${c.key}`}>
-                      {c.label}
-                      <span className="faq-nav-count">{FAQ_ITEMS.filter((f) => f.category === c.key).length}</span>
-                    </a>
-                  ))}
-                </nav>
-                <div className="faq-sidebar-cta">
-                  <ModalCTAButton label="Still have a question? Ask the founder →" region="au" modalVariant="default" btnVariant="secondary-light" />
-                  <p>Replies within 24 hours.</p>
-                </div>
-              </aside>
-
-              <div>
-                {FAQ_CATEGORIES.map((c) => (
-                  <div key={c.key} id={`faq-${c.key}`} style={{ marginBottom: 40 }}>
-                    <div className="faq-cat-header">
-                      <span className="faq-cat-bar" />
-                      <p className="faq-cat-label">{c.label}</p>
-                    </div>
-                    <ul className="faq-list">{FAQ_ITEMS.filter((f) => f.category === c.key).map((f) => (
-                      <li key={f.question}><details className="faq-item">
-                        <summary>
-                          <span className="q-text">{f.question}</span>
-                          <span className="chevron">
-                            <svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5L7 9L11 5" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" /></svg>
-                          </span>
-                        </summary>
-                        <div className="faq-ans"><p>{f.answer}</p>{f.links ? <p style={{ marginTop: 8 }}>{f.links.map((l) => <a key={l.href} href={l.href} style={{ ...srcLink, marginRight: 16 }}>{l.label}</a>)}</p> : null}</div>
-                      </details></li>
-                    ))}</ul>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ═══ 16. FINAL CTA (the only dark section) ═══ */}
-        <section className="dark-sec">
-          <div className="wrap" style={{ textAlign: 'center', maxWidth: 640 }}>
-            <span className="eyebrow">Ready when you are</span>
-            <h2>Find out what AI assistants say about your business</h2>
-            <p className="mt-4">
-              Send your name and work email. The founder replies within 24 hours to book a short call. We will run
-              your buyers’ questions across ChatGPT, Claude, Gemini, Perplexity and Google, show you who gets named,
-              and tell you honestly whether AI SEO is worth doing for you. No spam, no obligation.
-            </p>
-            <div className="mt-8" style={{ display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap' }}>
-              <ModalCTAButton label="Get my AI visibility check" region="au" modalVariant="default" btnVariant="primary-light" />
-              <a className="btn btn-outline" href="/ai-visibility-checker" style={{ color: '#fff', borderColor: 'rgba(255,255,255,.25)' }}>Try the free checker</a>
+            <div className="ctas">
+              <ModalCTAButton label="Get my AI visibility check" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
+              <a className="btn btn-ghost" href="/ai-visibility-checker">Try the free checker</a>
             </div>
           </div>
         </section>
 
       </main>
       </div>
-      <SiteFooter locale="au" linkColumns={AU_FOOTER_COLUMNS} variant="dark" tagline="Ecommerce, AI agents, websites and AI search for Australian businesses. Built by senior engineers, supported after launch, owned by you." />
+      <SiteFooter locale="au" linkColumns={AU_FOOTER_COLUMNS} tagline="Ecommerce, AI agents, websites and AI search for Australian businesses. Built by senior engineers, supported after launch, owned by you." />
     </>
   );
 }

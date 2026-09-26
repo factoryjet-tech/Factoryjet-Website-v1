@@ -1,32 +1,25 @@
 import type { Metadata } from 'next';
+import { Fragment } from 'react';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
-import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import { AU_FOOTER_COLUMNS } from '@/data/auFooterColumns';
-import '../au-service.css';
+import AuFaq from '../components/AuFaq';
+import VisualSlot from '../components/VisualSlot';
+import '@/components/v2/AiAgentDevelopmentSections.css';
+import '../au-page.css';
+import '../au-hub.css';
 
 const CANONICAL = 'https://factoryjet.com/au/ai-agents';
 const UPDATED = '2026-09-26';
 const TITLE = 'AI Automation Agency Australia | AI Agents | FactoryJet';
-const H1 = 'AI Automation Agency Australia: Custom AI Agents Built Into the Tools You Already Run';
+/* Shortened 2026-09-26 so the hero form sits in the first desktop screen; "the tools you already
+   run" moved into the hero lead. */
+const H1 = 'AI Automation Agency Australia: Custom AI Agents Built Into Your Tools';
 const DESCRIPTION =
   'FactoryJet is an AI automation agency for Australian businesses. We build custom AI agents inside Xero, HubSpot, ServiceM8 and Microsoft 365. You own them.';
-
-/* Design tokens, copied by value from ../au-service.css so inline styles stay
-   on-system without CSS custom property references in this file. */
-const T = {
-  ink: '#0F0F12',
-  n200: '#E5E5E0',
-  n400: '#6E6E68',
-  orange: '#F05A28',
-  green: '#047857',
-  small: '#B23E13',
-  fm: "'Geist Mono',monospace",
-  fd: "'Plus Jakarta Sans',sans-serif",
-};
 
 /* ONE array drives the visible trail AND the BreadcrumbList JSON-LD, so the
    schema can never describe a trail a human cannot see. Never hand-copy a
@@ -99,6 +92,16 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   { category: 'basics', question: 'Is AI automation still in demand in Australia?',
     answer: 'Yes, and it is early. The Australian Bureau of Statistics found about 12% of Australian businesses used AI in 2024–25, up from 1% in 2021–22. Use is highest in professional services at 24%, and still low in construction at 6% and transport, postal and warehousing at 1%. That gap is where practical, well-scoped automation tends to pay off first.' },
 
+  { category: 'basics', question: 'What is business process automation?',
+    answer: 'Business process automation means using software to run a repeatable business process from start to finish with less manual handling: a new order creates an invoice, a signed quote creates a job, a supplier bill gets coded and sent for approval. It works best on processes that happen often, follow clear steps and currently involve copying data between systems. Adding AI lets it handle messy inputs such as emails and PDFs.' },
+  { category: 'basics', question: 'Can you give me an example of business process automation?',
+    answer: 'A common Australian example is accounts payable. A supplier emails a PDF invoice. The automation reads it, pulls out the supplier, ABN, amounts and GST, matches it to the purchase order, creates a draft bill in Xero or MYOB and asks the right person to approve it. Another is order to cash: a web order creates the invoice, books the courier and sends tracking without anyone retyping.',
+    links: [{ href: '/au/accounts-payable-automation', label: 'Accounts payable automation' }] },
+  { category: 'basics', question: 'Is RPA better than AI?',
+    answer: 'Neither is better, they do different jobs. IBM describes robotic process automation as rule-based software that follows the workflow you define, while AI learns patterns from data, including unstructured data. RPA is cheaper and more predictable when the screens and inputs never change. AI is better when inputs vary, such as emails, scanned documents and call notes. Most reliable builds use both.',
+    links: [{ href: 'https://www.ibm.com/think/topics/rpa', label: 'IBM: what is RPA' }] },
+  { category: 'basics', question: 'Is RPA still a thing?',
+    answer: 'Yes. Robotic process automation is still widely used for high-volume, rule-based work in older systems that have no API, such as copying data between legacy screens. What has changed is that many new builds now connect systems directly through their APIs, and add AI where inputs are messy. We use RPA where a system offers no other way in, and avoid it where a direct connection exists, because screen-copying bots break when a screen changes.' },
   { category: 'basics', question: 'What is RPA, and is it the same as AI automation?',
     answer: 'No. RPA, robotic process automation, is software that copies the clicks and keystrokes a person makes in a system and repeats them exactly. It is fast and cheap for fixed, predictable steps, but it breaks when a screen changes or an input looks different. AI automation reads messy inputs such as emails, PDFs and call notes and decides what they mean. Most good builds use fixed rules or RPA for the predictable steps and AI only where judgement is needed.' },
   { category: 'basics', question: 'What is an AI automation consultant?',
@@ -124,6 +127,9 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
     answer: 'You do not hire the agent itself; you hire a team to build it for your process, or you subscribe to a ready-made tool. Start by writing down one job, how often it happens and how you measure it today. Then talk to two or three developers, ask for systems they have put live, and get a fixed-scope quote with a supervised pilot. Check who owns the code and who supports it after launch.' },
   { category: 'choosing', question: 'Should I use Zapier, Make or n8n myself, or hire an agency?',
     answer: 'Do it yourself if the job is simple, low risk and someone on your team enjoys building it. No-code tools are great for moving data between two apps. Hire help when the job touches several systems, involves customer or financial data, needs an approval step, or would hurt if it silently broke. Many of our builds use n8n or similar tools underneath, set up properly and monitored.' },
+  { category: 'choosing', question: 'Do you build with n8n, Make or Zapier?',
+    answer: 'Yes, all three, and we pick per job. Zapier and Make are hosted tools that suit quick links between popular apps. n8n can run on n8n’s cloud or be self-hosted on your own server, which helps when data has to stay in an Australian region. For work that touches money, customer records or several systems, we often write custom code instead. Either way, you own the accounts, and we document and monitor what we build.',
+    links: [{ href: 'https://docs.n8n.io/choose-how-to-use-n8n/', label: 'n8n: ways to use n8n' }] },
   { category: 'choosing', question: 'Which platform is best for AI automation?',
     answer: 'There is no single best platform. Microsoft 365 businesses often start with Copilot Studio and Power Automate. Teams on Google Workspace, HubSpot or Xero often use n8n, Make or custom code calling models from OpenAI, Anthropic or Google. We pick based on the systems you already run, where your data can live, and who will maintain it. We do not resell any platform.' },
   { category: 'choosing', question: 'Does Microsoft have an AI agent platform?',
@@ -302,8 +308,91 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-const srcNote = { fontFamily: T.fm, fontSize: 11, color: T.n400, marginTop: 12 } as const;
-const srcLink = { textDecoration: 'underline' } as const;
+const extLink = { target: '_blank', rel: 'noopener noreferrer nofollow' } as const;
+
+/* Visual slot page key (route without /au/). */
+const PAGE_KEY = 'ai-agents';
+
+/* H1 split for the Family A hero emphasis. Same string as H1 (schema headline). */
+const H1_SPLIT = H1.indexOf(': ');
+const H1_LEAD = H1.slice(0, H1_SPLIT + 1);
+const H1_EMPHASIS = H1.slice(H1_SPLIT + 2);
+
+const STEP_ICON = { width: 24, height: 24, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', strokeWidth: 1.5, strokeLinecap: 'round', strokeLinejoin: 'round' } as const;
+const CAP_ICON = { width: 24, height: 24, viewBox: '0 0 24 24', fill: 'none', stroke: '#C94A1A', strokeWidth: 1.6, strokeLinecap: 'round', strokeLinejoin: 'round', 'aria-hidden': true } as const;
+
+/* Hero spec panel icons (same order as the three spec rows). */
+const HERO_ICONS = [
+  'M5 12l4 4 10-10M4 20h16',
+  'M12 3 4 7v5c0 5 8 9 8 9s8-4 8-9V7l-8-4Z',
+  'm8 8-4 4 4 4M16 8l4 4-4 4M13 5l-2 14',
+] as const;
+
+/* What an AI automation agency should do (was the 8 numbered cards). */
+const AGENCY_JOBS: { n: string; t: string; d: string }[] = [
+  { n: '01', t: 'Map how the work runs today', d: 'Before any AI, someone should draw your process as it really runs, with the people who do it. The best automation targets are usually a step where someone copies information between two screens, or answers the same question many times a week.' },
+  { n: '02', t: 'Tell you what not to automate', d: 'Some problems are a broken process or unfinished software setup, not an AI problem. An honest agency says so, even when it costs them a project.' },
+  { n: '03', t: 'Design the agent’s rules and limits', d: 'What the agent may do alone, what needs approval, and what it must never touch. Written down, agreed with you, and reflected in the permissions it is given.' },
+  { n: '04', t: 'Connect it to the tools you already use', d: 'Real integration with Xero, MYOB, HubSpot, ServiceM8, Shopify or Microsoft 365 through official connections, not a copy-paste workaround. You should not need to change software to get value.' },
+  { n: '05', t: 'Check privacy before building', d: 'Which personal information the agent sees, which AI provider processes it, where it is stored, and how that fits the Australian Privacy Principles. The OAIC recommends a privacy by design approach, including a Privacy Impact Assessment.' },
+  { n: '06', t: 'Test on real examples, then pilot with people watching', d: 'Past cases first, including the awkward ones. Then a supervised pilot where a person checks every action until the numbers show it is ready.' },
+  { n: '07', t: 'Train your team and write simple usage rules', d: 'People trust an agent they understand. Short, role-specific training and a one-page rule sheet do more for adoption than any demo.' },
+  { n: '08', t: 'Stay on after launch', d: 'Models, software and your business all change. Someone has to watch the logs, review the hand-offs, update the rules and fix breakages. The OAIC is clear that AI should not be a set-and-forget product.' },
+];
+
+/* Icons and visual-slot subjects for the eight cards (same order as AGENCY_JOBS). */
+const JOB_ICONS = [
+  'M4 5h6v6H4zM14 5h6M14 9h4M4 15h16M4 19h10',
+  'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18ZM6 6l12 12',
+  'M4 6h16M4 12h10M4 18h6M17 15l3 3-3 3',
+  'M9 15 15 9M8 11l-2 2a4 4 0 0 0 6 6l2-2M16 13l2-2a4 4 0 0 0-6-6l-2 2',
+  'M12 3 4 7v5c0 5 8 9 8 9s8-4 8-9V7l-8-4Zm-3 9 2 2 4-4',
+  'M9 3h6M10 3v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3',
+  'M4 19V5h16v14H4Zm4-10h8M8 13h5',
+  'M3 12h4l3 7 4-14 3 7h4',
+] as const;
+const JOB_SUBJECTS = [
+  'AI-generated model: a white paper process map with sticky-note boxes and one orange arrow marking the slow step',
+  'AI-generated model: a white workflow block with an orange stop sign placed in front of it',
+  'AI-generated model: a white rule card with three rows (alone, approve, never) and an orange tick on the middle row',
+  'AI-generated model: white software tiles joined to one small agent block by orange cables',
+  'AI-generated model: a white document passing through an orange shield before reaching a small server',
+  'AI-generated model: a row of white past-case cards run through a checker, a small human figure watching',
+  'AI-generated model: a one-page white rule sheet pinned on a board beside a small group of figures',
+  'AI-generated model: a white monitoring screen with a steady orange line and a small wrench beside it',
+] as const;
+
+/* Use cases by Australian industry (was the six service cards). */
+const INDUSTRIES: { t: string; d: string }[] = [
+  { t: 'Trades and home services', d: 'Turn emailed and web enquiries into booked jobs in ServiceM8, Simpro or Tradify, send quote follow-ups, chase overdue invoices from Xero, and collect photos and details before the visit. Construction sits at 6% AI use in the ABS data, so the head start is real.' },
+  { t: 'Healthcare clinics', d: 'Admin only, never clinical decisions: sorting the practice inbox, drafting referral and recall letters, answering booking questions and preparing intake forms in tools like Cliniko. Health information is sensitive information under the Privacy Act, so approval steps and access limits are tighter.' },
+  { t: 'Professional services', d: 'Accountants, law firms, advisers and agencies: client onboarding, collecting documents, summarising meetings into your practice management system, drafting routine letters and preparing month-end data from Xero or MYOB for a person to check.' },
+  { t: 'Ecommerce and retail', d: 'Order status and returns questions answered from Shopify and courier tracking, product data cleaned and enriched, supplier purchase orders drafted from stock levels, and refunds routed for approval under your Australian Consumer Law returns policy.' },
+  { t: 'Logistics and wholesale', d: 'Emailed purchase orders turned into sales orders, delivery exceptions flagged before the customer calls, proof-of-delivery matched to invoices, and B2B reorder reminders. Transport, postal and warehousing sits at 1% AI use in the ABS figures.' },
+  { t: 'Property and real estate', d: 'Tenant maintenance requests sorted and passed to the right trade, rental enquiries answered and inspections booked, and routine notices drafted in tools like PropertyMe for a property manager to approve.' },
+];
+
+/* Where the agents plug in (was the eight integration cards). */
+const INTEGRATIONS: { t: string; d: string }[] = [
+  { t: 'Xero and MYOB', d: 'Read supplier invoices into draft bills, match payments, chase overdue invoices, prepare month-end data. GST coding suggested, never posted without approval.' },
+  { t: 'HubSpot and Salesforce', d: 'Create and enrich leads and deals from enquiries, draft follow-ups, log calls and keep pipeline stages current.' },
+  { t: 'ServiceM8, Simpro, Tradify', d: 'Turn enquiries into jobs, collect photos and site details, confirm bookings and send reminders.' },
+  { t: 'Shopify', d: 'Answer order and returns questions, flag stock issues, draft purchase orders and tidy product data.' },
+  { t: 'Microsoft 365', d: 'Outlook inbox triage, Teams hand-offs, SharePoint document search, Copilot Studio and Power Automate where they fit.' },
+  { t: 'Google Workspace', d: 'Gmail sorting and drafting, Sheets reporting, Drive document filing and Calendar booking.' },
+  { t: 'Practice and property tools', d: 'Cliniko, PropertyMe and practice management systems, through their official connections where available.' },
+  { t: 'Your own systems', d: 'Older ERPs, databases and spreadsheets. If a system has an API or a structured export, an agent can usually work with it.' },
+];
+
+/* Related AI services directory (agentdir, as on /services/ai-agent-development). */
+const RELATED: { h: string; t: string; d: string }[] = [
+  { h: '/au/ai-customer-service', t: 'AI customer service', d: 'Chat and email answers, draft replies and ticket triage inside Zendesk, Gorgias or HubSpot.' },
+  { h: '/au/ai-consulting', t: 'AI consulting', d: 'Not sure where AI fits? A readiness assessment ranks the use cases worth doing first.' },
+  { h: '/au/ai-development', t: 'AI development', d: 'Larger builds: AI inside your product, custom apps and deeper system integration.' },
+  { h: '/au/ai-receptionist', t: 'AI receptionist', d: 'A voice agent that answers, qualifies and books calls, day and night.' },
+  { h: '/au/ai-seo', t: 'AI SEO', d: 'Get your business named in ChatGPT, Perplexity and Google AI answers.' },
+  { h: '/blog/ai-cost-australia-2026', t: 'AI cost guide', d: 'Published Australian price ranges for AI agents, chatbots and receptionists, with sources and GST basis.' },
+];
 
 export default function AiAgentsAUPage() {
   return (
@@ -313,340 +402,355 @@ export default function AiAgentsAUPage() {
 
       <SiteHeader locale="au" logoHref="/au" />
 
-      <div className="au-svc">
-      <main>
+      <div className="aiAgentPage auPage">
+      <nav className="crumbs" aria-label="Breadcrumb">
+        <div className="wrap">
+          {crumbs.map((item, index) => (
+            <Fragment key={item.url}>
+              {index > 0 && ' / '}
+              {index === crumbs.length - 1 ? <b aria-current="page">{item.name}</b> : <a href={item.url}>{item.name}</a>}
+            </Fragment>
+          ))}
+        </div>
+      </nav>
+      <main id="au-content">
 
-        <Breadcrumbs items={crumbs} />
+        {/* ═══ HERO (US web-design hub hero: copy + inline form left, spec panel right) ═══ */}
+        <section className="hero" id="hero">
+          <div className="wrap hero-grid">
+            <div className="hero-copy">
+              <div className="eyebrow">AI Automation Agency Australia</div>
+              <h1>{H1_LEAD} <span className="hero-emphasis">{H1_EMPHASIS}</span></h1>
+              <p className="lead">
+                FactoryJet is an AI automation agency for Australian businesses. We design, build and support custom
+                AI agents built into the tools you already run: Xero, MYOB, HubSpot, Salesforce, ServiceM8, Shopify,
+                Microsoft 365 and Google Workspace. People approve what matters, every action is logged, and you own the code.
+              </p>
+              <HeroInlineForm region="au" source="au_ai_agents_hero" submitLabel="Map my first AI agent" />
+            </div>
 
-        {/* ═══ 1. HERO ═══ */}
-        <section className="sec-lg dot-grid" style={{ position: 'relative', paddingTop: 36 }}>
+            <form
+              className="specpanel"
+              aria-label="What every AI agent build includes"
+              data-visual-slot={`${PAGE_KEY}:hero`}
+              data-visual-kind="diagram"
+              data-visual-subject="What every build includes: human approval steps on anything that matters, a Privacy Act and APP check before code, and code, prompts and integrations owned by the client"
+              data-visual-ratio="1:1"
+              data-visual-status="filled"
+            >
+              <div className="specpanel-bar">
+                <span className="statusdot"></span>
+                <span>INCLUDED · WHAT EVERY BUILD INCLUDES</span>
+                <span className="sys"><span>AI AGENTS</span><span>APPROVAL</span></span>
+              </div>
+              <div className="workflow-controls">
+                <label className="workflow-toggle" title="Pause or resume the animation">
+                  <input type="checkbox" className="workflow-pause" aria-label="Pause animation" />
+                  <svg className="pause-icon" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M5 3v10M11 3v10" fill="none" stroke="currentColor" strokeWidth="2" /></svg>
+                  <svg className="play-icon" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="m5 3 8 5-8 5Z" fill="currentColor" /></svg>
+                </label>
+                <button type="reset" className="workflow-replay" aria-label="Replay animation" title="Replay animation">
+                  <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M3 6a5 5 0 1 1 0 4M3 2v4h4" /></svg>
+                </button>
+              </div>
+              <div className="specpanel-body" role="radiogroup" aria-label="Explore what every build includes">
+                <label className="specrow run">
+                  <input className="workflow-select" type="radio" name="agents-step" value="1" />
+                  <span className="workflow-icon" aria-hidden="true"><svg {...STEP_ICON}><path d={HERO_ICONS[0]} /></svg></span>
+                  <span className="idx">on anything that matters</span>
+                  <span className="title">Human approval steps</span>
+                  <span className="tag">Built in</span>
+                </label>
+                <label className="specrow run">
+                  <input className="workflow-select" type="radio" name="agents-step" value="2" />
+                  <span className="workflow-icon" aria-hidden="true"><svg {...STEP_ICON}><path d={HERO_ICONS[1]} /></svg></span>
+                  <span className="idx">before a line of code</span>
+                  <span className="title">Privacy Act and APP check</span>
+                  <span className="tag">Included</span>
+                </label>
+                <label className="specrow hold">
+                  <input className="workflow-select" type="radio" name="agents-step" value="3" />
+                  <span className="workflow-icon" aria-hidden="true"><svg {...STEP_ICON}><path d={HERO_ICONS[2]} /></svg></span>
+                  <span className="idx">no platform lock-in</span>
+                  <span className="title">Code, prompts and integrations</span>
+                  <span className="tag">Yours</span>
+                </label>
+              </div>
+              <div className="specpanel-foot">RULE · Agents do the routine steps. People approve what matters.</div>
+            </form>
+          </div>
+        </section>
+
+        {/* ═══ LEDGER (was the facts band; verified only) ═══ */}
+        <div className="ledger">
           <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <div className="flex-wrap mb-6">
-                  <span className="chip"><span className="dot dot-orange" />AI Automation Agency Australia</span>
-                  <span className="chip">AI Agent Development</span>
-                  <span className="chip">Human Approval Built In</span>
-                </div>
-                <h1 style={{ fontSize: 'clamp(2.1rem, 3.9vw, 3.05rem)' }}>{H1}</h1>
-                <p className="lead mt-6" style={{ maxWidth: 560 }}>
-                  FactoryJet is an AI automation agency for Australian businesses. We design, build and support custom
-                  AI agents that work inside Xero, MYOB, HubSpot, Salesforce, ServiceM8, Shopify, Microsoft 365 and
-                  Google Workspace. People approve what matters, every action is logged, and you own the code.
-                </p>
-
-                <div className="byline mt-6" style={{ maxWidth: 560 }}>
-                  <div className="av">BB</div>
-                  <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
-                  <div className="upd">Last updated<br />26 September 2026</div>
-                </div>
-
-                <div className="mt-6" style={{ maxWidth: 560 }}>
-                  <HeroInlineForm region="au" source="au_ai_agents_hero" submitLabel="Map my first AI agent" />
+            {[
+              { v: '12%', t: 'of Australian businesses used AI in 2024–25, up from 1% in 2021–22', s: 'ABS, 2024–25', u: SRC_ABS },
+              { v: '24%', t: 'AI use in professional, scientific and technical services, the highest of any large sector', s: 'ABS, 2024–25', u: SRC_ABS },
+              { v: '13', t: 'Australian Privacy Principles apply to personal information your AI agents handle', s: 'OAIC', u: SRC_OAIC_APPS },
+              { v: '10 Dec 2026', t: 'new privacy policy rules start for computer programs that make significant decisions', s: 'OAIC, APP 1', u: SRC_OAIC_APP1 },
+            ].map((r) => (
+              <div className="ledgercell" key={r.t}>
+                <div className="k"><a href={r.u} {...extLink}>{r.s}</a></div>
+                <div className="v">
+                  <strong className={r.v.length > 8 ? 'ledger-number ledger-long' : 'ledger-number'}>{r.v}</strong>
+                  {r.t}
                 </div>
               </div>
+            ))}
+          </div>
+        </div>
 
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/ai-agents/ai-agents-hero.webp" width={1400} height={933} fetchPriority="high" decoding="async" alt="Over the shoulder of a Sydney business owner approving the next step of an AI agent workflow on his laptop while his operations manager looks on" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
-                <div style={{ padding: '14px 12px 8px' }}>
-                  <span className="eyebrow">What every build includes</span>
-                  <div className="scorecard-row">
-                    <div><div className="scorecard-metric">Human approval steps</div><div className="scorecard-note">on anything that matters</div></div>
-                    <div className="scorecard-val" style={{ fontSize: 15 }}>Built in</div>
-                  </div>
-                  <div className="scorecard-row">
-                    <div><div className="scorecard-metric">Privacy Act and APP check</div><div className="scorecard-note">before a line of code</div></div>
-                    <div className="scorecard-val" style={{ fontSize: 15 }}>Included</div>
-                  </div>
-                  <div className="scorecard-row">
-                    <div><div className="scorecard-metric">Code, prompts and integrations</div><div className="scorecard-note">no platform lock-in</div></div>
-                    <div className="scorecard-val" style={{ color: T.green, fontSize: 15 }}>Yours</div>
+        <div className="wrap byline">
+          <div className="av">BB</div>
+          <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
+          <div className="upd">Last updated<br />26 September 2026</div>
+        </div>
+
+        {/* ═══ ANSWER-FIRST (GEO) → Family A facts ═══ */}
+        <section className="section facts" id="facts">
+          <div className="wrap">
+            <div className="section-head">
+              <h2 data-speakable="true">What does an AI automation agency do for an Australian business?</h2>
+            </div>
+            <div className="factswrap">
+              <div className="factlist">
+                <div className="fact">
+                  <div className="sec">§01</div>
+                  <p data-speakable="true">
+                    <span className="stat">An AI automation agency maps the repetitive work in your business, then designs, builds and supports AI
+                    agents that do it inside your existing software, such as Xero, HubSpot or ServiceM8.</span> A good one adds
+                    human approval where it matters, follows the Privacy Act and the Australian Privacy Principles, and
+                    stays on after launch to keep the system accurate.
+                  </p>
+                </div>
+                <div className="fact">
+                  <div className="sec">§02</div>
+                  <div>
+                    <div className="factlabel">Three terms, in plain English</div>
+                    <p>
+                      An <b>AI agent</b> is software that reads a situation, decides the next step and takes an action in
+                      another system, within rules you set. <b>AI automation</b> is any workflow where AI handles part of the
+                      job, such as reading an invoice. <b>Business process automation</b> is the older, rules-only version:
+                      if this happens, do that. Most good systems combine all three.
+                    </p>
                   </div>
                 </div>
+                <div className="fact">
+                  <div className="sec">§03</div>
+                  <p>
+                    Australian businesses are only getting started. The Australian Bureau of Statistics found about 12% of
+                    businesses used AI in 2024–25, up from 1% in 2021–22. Use is highest in professional services and lowest
+                    in construction and transport, the industries with the most phone calls, paperwork and double entry. That
+                    is the gap an AI automation service is built to close.
+                  </p>
+                </div>
               </div>
+              <VisualSlot page={PAGE_KEY} slot="facts" kind="photo" ratio="3:2" className="factphoto"
+                subject="A Sydney business owner approving the next step of an AI agent workflow on his laptop while his operations manager looks on">
+                <img src="/images/au/ai-agents/ai-agents-hero.webp" width={1400} height={933} loading="lazy" decoding="async" alt="Over the shoulder of a Sydney business owner approving the next step of an AI agent workflow on his laptop while his operations manager looks on" />
+              </VisualSlot>
             </div>
           </div>
         </section>
 
-        {/* ═══ 2. ANSWER-FIRST (GEO) ═══ */}
-        <section className="sec">
+        {/* ═══ WHAT AN AI AUTOMATION AGENCY DOES → capgrid (eight cards) ═══ */}
+        <section className="section capabilities" id="what-you-get">
           <div className="wrap">
-            <div className="def" style={{ maxWidth: 940 }} data-speakable="true">
-              <span className="lab">What does an AI automation agency do for an Australian business?</span>
-              <p>
-                An AI automation agency maps the repetitive work in your business, then designs, builds and supports AI
-                agents that do it inside your existing software, such as Xero, HubSpot or ServiceM8. A good one adds
-                human approval where it matters, follows the Privacy Act and the Australian Privacy Principles, and
-                stays on after launch to keep the system accurate.
-              </p>
-            </div>
-            <div className="def mt-6" style={{ maxWidth: 940 }}>
-              <span className="lab">Three terms, in plain English</span>
-              <p>
-                An <b>AI agent</b> is software that reads a situation, decides the next step and takes an action in
-                another system, within rules you set. <b>AI automation</b> is any workflow where AI handles part of the
-                job, such as reading an invoice. <b>Business process automation</b> is the older, rules-only version:
-                if this happens, do that. Most good systems combine all three.
-              </p>
-            </div>
-            <p className="lead mt-8" style={{ maxWidth: 920 }}>
-              Australian businesses are only getting started. The Australian Bureau of Statistics found about 12% of
-              businesses used AI in 2024–25, up from 1% in 2021–22. Use is highest in professional services and lowest
-              in construction and transport, the industries with the most phone calls, paperwork and double entry. That
-              is the gap an AI automation service is built to close.
-            </p>
-          </div>
-        </section>
-
-        {/* ═══ 3. FACTS BAND (verified only) ═══ */}
-        <section className="stats-band">
-          <div className="wrap">
-            <ul className="col-4" style={{ gap: 20 }}>
-              {[
-                { v: '12%', t: 'of Australian businesses used AI in 2024–25, up from 1% in 2021–22', s: 'ABS, 2024–25', u: SRC_ABS },
-                { v: '24%', t: 'AI use in professional, scientific and technical services, the highest of any large sector', s: 'ABS, 2024–25', u: SRC_ABS },
-                { v: '13', t: 'Australian Privacy Principles apply to personal information your AI agents handle', s: 'OAIC', u: SRC_OAIC_APPS },
-                { v: '10 Dec 2026', t: 'new privacy policy rules start for computer programs that make significant decisions', s: 'OAIC, APP 1', u: SRC_OAIC_APP1 },
-              ].map((r) => (
-                <li key={r.t}>
-                  <div style={{ fontFamily: T.fd, fontWeight: 800, fontSize: 26, color: T.orange }}>{r.v}</div>
-                  <p style={{ fontSize: 13.5, color: T.ink, marginTop: 4 }}>{r.t}</p>
-                  <a href={r.u} target="_blank" rel="noopener noreferrer nofollow" style={{ fontFamily: T.fm, fontSize: 10, color: T.n400, textDecoration: 'underline' }}>{r.s}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-
-        {/* ═══ 4. LISTICLE: WHAT AN AI AUTOMATION AGENCY DOES ═══ */}
-        <section className="sec-lg dot-grid">
-          <div className="wrap">
-            <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">The job, step by step</span>
+            <div className="section-head">
+              <div className="eyebrow">The job, step by step</div>
               <h2>What an AI automation agency does: eight things you should get</h2>
-              <p className="lead mt-4">
+              <p className="lead">
                 Plenty of businesses now call themselves an AI automation agency, from solo course graduates to large IT
                 firms. These eight things are what the work should actually include. Use the list to compare any
                 agency, including us.
               </p>
             </div>
-            <ol className="col-2 mt-10" style={{ gap: 16 }}>
-              {[
-                { n: '01', t: 'Map how the work runs today', d: 'Before any AI, someone should draw your process as it really runs, with the people who do it. The best automation targets are usually a step where someone copies information between two screens, or answers the same question many times a week.' },
-                { n: '02', t: 'Tell you what not to automate', d: 'Some problems are a broken process or unfinished software setup, not an AI problem. An honest agency says so, even when it costs them a project.' },
-                { n: '03', t: 'Design the agent’s rules and limits', d: 'What the agent may do alone, what needs approval, and what it must never touch. Written down, agreed with you, and reflected in the permissions it is given.' },
-                { n: '04', t: 'Connect it to the tools you already use', d: 'Real integration with Xero, MYOB, HubSpot, ServiceM8, Shopify or Microsoft 365 through official connections, not a copy-paste workaround. You should not need to change software to get value.' },
-                { n: '05', t: 'Check privacy before building', d: 'Which personal information the agent sees, which AI provider processes it, where it is stored, and how that fits the Australian Privacy Principles. The OAIC recommends a privacy by design approach, including a Privacy Impact Assessment.' },
-                { n: '06', t: 'Test on real examples, then pilot with people watching', d: 'Past cases first, including the awkward ones. Then a supervised pilot where a person checks every action until the numbers show it is ready.' },
-                { n: '07', t: 'Train your team and write simple usage rules', d: 'People trust an agent they understand. Short, role-specific training and a one-page rule sheet do more for adoption than any demo.' },
-                { n: '08', t: 'Stay on after launch', d: 'Models, software and your business all change. Someone has to watch the logs, review the hand-offs, update the rules and fix breakages. The OAIC is clear that AI should not be a set-and-forget product.' },
-              ].map((s) => (
-                <li key={s.n} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
-                  <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.small, minWidth: 34 }}>{s.n}</span>
-                  <div>
-                    <h3 style={{ fontSize: 18 }}>{s.t}</h3>
-                    <p className="mt-2" style={{ marginTop: 6 }}>{s.d}</p>
-                  </div>
-                </li>
+            <div className="capgrid">
+              {AGENCY_JOBS.map((j, i) => (
+                <div key={j.n} className={`cap cap-${i + 1}`}>
+                  <div className="caphead"><span className="capid">CAP‑{j.n}</span><svg {...CAP_ICON}><path d={JOB_ICONS[i]} /></svg></div>
+                  <VisualSlot page={PAGE_KEY} slot={`capability-${j.n}`} kind="diagram" ratio="11:4" className="cap-diagram" subject={JOB_SUBJECTS[i]} />
+                  <h3>{j.t}</h3>
+                  <p>{j.d}</p>
+                </div>
               ))}
-            </ol>
+            </div>
           </div>
         </section>
 
-        {/* ═══ 5. USE CASES BY AUSTRALIAN INDUSTRY ═══ */}
-        <section className="sec-lg">
+        {/* ═══ USE CASES BY AUSTRALIAN INDUSTRY → facts ═══ */}
+        <section className="section facts au-top" id="industries">
           <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <span className="eyebrow">AI agents for business, by industry</span>
-                <h2>Where AI agents earn their keep in Australian businesses</h2>
-                <p className="lead mt-4" style={{ maxWidth: 580 }}>
-                  These are the AI agent examples we are asked about most. Each one keeps a person in charge of the
-                  decision and takes the repeated steps off their plate.
+            <div className="section-head">
+              <div className="eyebrow">AI agents for business, by industry</div>
+              <h2>Where AI agents earn their keep in Australian businesses</h2>
+              <p className="lead">
+                These are the AI agent examples we are asked about most. Each one keeps a person in charge of the
+                decision and takes the repeated steps off their plate.
+              </p>
+            </div>
+            <div className="factswrap">
+              <div className="factlist">
+                {INDUSTRIES.map((c, i) => (
+                  <div className="fact" key={c.t}>
+                    <div className="sec">§{String(i + 1).padStart(2, '0')}</div>
+                    <div>
+                      <h3>{c.t}</h3>
+                      <p>{c.d}</p>
+                      {i === INDUSTRIES.length - 1 ? (
+                        <p className="au-note">
+                          Industry AI use figures: <a href={SRC_ABS} {...extLink}>ABS, Characteristics of Australian Business, 2024–25</a>.
+                        </p>
+                      ) : null}
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <VisualSlot page={PAGE_KEY} slot="facts-2" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
+                subject="A Perth property manager at the agency counter checking maintenance requests an AI agent has sorted, on a tablet"
+                caption="A tenant emails about a leaking tap at 9pm. The agent logs the request in the property system, suggests the right tradie and drafts the reply. The property manager approves both in the morning.">
+                <img src="/images/au/ai-agents/ai-agents-property.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over the shoulder of a Perth property manager at the agency counter checking maintenance requests an AI agent has sorted, on a tablet" />
+              </VisualSlot>
+            </div>
+          </div>
+        </section>
+
+        {/* ═══ INTEGRATIONS → head with photo + ruled platform rows ═══ */}
+        <section className="section platforms" id="integrations">
+          <div className="wrap">
+            <div className="head-media">
+              <div className="section-head">
+                <div className="eyebrow">Where our agents plug in</div>
+                <h2>AI automation services built into Xero, MYOB, HubSpot, ServiceM8 and more</h2>
+                <p className="lead">
+                  You should not have to change software to get value from AI. We build the agent around the tools your
+                  team already opens every morning, using each platform’s official connections and a separate login with
+                  only the access the job needs.
                 </p>
               </div>
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/ai-agents/ai-agents-property.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over the shoulder of a Perth property manager at the agency counter checking maintenance requests an AI agent has sorted, on a tablet" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
-                <div style={{ padding: '12px 10px 6px' }}>
-                  <p style={{ fontSize: 14 }}>
-                    A tenant emails about a leaking tap at 9pm. The agent logs the request in the property system,
-                    suggests the right tradie and drafts the reply. The property manager approves both in the morning.
-                  </p>
+              <VisualSlot page={PAGE_KEY} slot="platforms" kind="photo" ratio="3:2" captionClassName="figcap"
+                subject="An Adelaide bookkeeper comparing a paper supplier invoice with the draft bill an AI agent prepared on his second monitor"
+                caption="The agent reads the supplier invoice and prepares a draft bill in Xero or MYOB. The bookkeeper checks it against the paper and approves. Nothing posts on its own.">
+                <img src="/images/au/ai-agents/ai-agents-integrations.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over the shoulder of an Adelaide bookkeeper comparing a paper supplier invoice with the draft bill an AI agent prepared on his second monitor" />
+              </VisualSlot>
+            </div>
+            <div className="platlist" role="list">
+              {INTEGRATIONS.map((c, i) => (
+                <div key={c.t} className="plat plat-2col" role="listitem">
+                  <span className="capid">{String(i + 1).padStart(2, '0')}</span>
+                  <div className="plat-name"><h3>{c.t}</h3></div>
+                  <p className="plat-build">{c.d}</p>
                 </div>
-              </div>
-            </div>
-            <ul className="col-3 mt-12">
-              <li className="svc-card">
-                <h3>Trades and home services</h3>
-                <p className="mt-4">Turn emailed and web enquiries into booked jobs in ServiceM8, Simpro or Tradify, send quote follow-ups, chase overdue invoices from Xero, and collect photos and details before the visit. Construction sits at 6% AI use in the ABS data, so the head start is real.</p>
-              </li>
-              <li className="svc-card">
-                <h3>Healthcare clinics</h3>
-                <p className="mt-4">Admin only, never clinical decisions: sorting the practice inbox, drafting referral and recall letters, answering booking questions and preparing intake forms in tools like Cliniko. Health information is sensitive information under the Privacy Act, so approval steps and access limits are tighter.</p>
-              </li>
-              <li className="svc-card">
-                <h3>Professional services</h3>
-                <p className="mt-4">Accountants, law firms, advisers and agencies: client onboarding, collecting documents, summarising meetings into your practice management system, drafting routine letters and preparing month-end data from Xero or MYOB for a person to check.</p>
-              </li>
-              <li className="svc-card">
-                <h3>Ecommerce and retail</h3>
-                <p className="mt-4">Order status and returns questions answered from Shopify and courier tracking, product data cleaned and enriched, supplier purchase orders drafted from stock levels, and refunds routed for approval under your Australian Consumer Law returns policy.</p>
-              </li>
-              <li className="svc-card">
-                <h3>Logistics and wholesale</h3>
-                <p className="mt-4">Emailed purchase orders turned into sales orders, delivery exceptions flagged before the customer calls, proof-of-delivery matched to invoices, and B2B reorder reminders. Transport, postal and warehousing sits at 1% AI use in the ABS figures.</p>
-              </li>
-              <li className="svc-card">
-                <h3>Property and real estate</h3>
-                <p className="mt-4">Tenant maintenance requests sorted and passed to the right trade, rental enquiries answered and inspections booked, and routine notices drafted in tools like PropertyMe for a property manager to approve.</p>
-              </li>
-            </ul>
-            <p style={srcNote}>
-              Industry AI use figures: <a href={SRC_ABS} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>ABS, Characteristics of Australian Business, 2024–25</a>.
-            </p>
-          </div>
-        </section>
-
-        {/* ═══ 6. INTEGRATIONS ═══ */}
-        <section className="sec-lg dot-grid">
-          <div className="wrap">
-            <div className="col-6040">
-              <div>
-              <span className="eyebrow">Where our agents plug in</span>
-              <h2>AI automation services built into Xero, MYOB, HubSpot, ServiceM8 and more</h2>
-              <p className="lead mt-4">
-                You should not have to change software to get value from AI. We build the agent around the tools your
-                team already opens every morning, using each platform’s official connections and a separate login with
-                only the access the job needs.
-              </p>
-              </div>
-              <figure className="card" style={{ padding: 8, margin: 0 }}>
-                <img src="/images/au/ai-agents/ai-agents-integrations.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over the shoulder of an Adelaide bookkeeper comparing a paper supplier invoice with the draft bill an AI agent prepared on his second monitor" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
-                <figcaption style={{ padding: '12px 10px 6px', fontSize: 14 }}>
-                  The agent reads the supplier invoice and prepares a draft bill in Xero or MYOB. The bookkeeper checks it against the paper and approves. Nothing posts on its own.
-                </figcaption>
-              </figure>
-            </div>
-            <ul className="col-4 mt-10" style={{ gap: 16 }}>
-              {[
-                { t: 'Xero and MYOB', d: 'Read supplier invoices into draft bills, match payments, chase overdue invoices, prepare month-end data. GST coding suggested, never posted without approval.' },
-                { t: 'HubSpot and Salesforce', d: 'Create and enrich leads and deals from enquiries, draft follow-ups, log calls and keep pipeline stages current.' },
-                { t: 'ServiceM8, Simpro, Tradify', d: 'Turn enquiries into jobs, collect photos and site details, confirm bookings and send reminders.' },
-                { t: 'Shopify', d: 'Answer order and returns questions, flag stock issues, draft purchase orders and tidy product data.' },
-                { t: 'Microsoft 365', d: 'Outlook inbox triage, Teams hand-offs, SharePoint document search, Copilot Studio and Power Automate where they fit.' },
-                { t: 'Google Workspace', d: 'Gmail sorting and drafting, Sheets reporting, Drive document filing and Calendar booking.' },
-                { t: 'Practice and property tools', d: 'Cliniko, PropertyMe and practice management systems, through their official connections where available.' },
-                { t: 'Your own systems', d: 'Older ERPs, databases and spreadsheets. If a system has an API or a structured export, an agent can usually work with it.' },
-              ].map((c) => (
-                <li key={c.t} className="card">
-                  <h3 style={{ fontSize: 16 }}>{c.t}</h3>
-                  <p className="mt-2" style={{ marginTop: 8, fontSize: 14 }}>{c.d}</p>
-                </li>
               ))}
-            </ul>
-          </div>
-        </section>
-
-        {/* ═══ 7. HUMAN APPROVAL ═══ */}
-        <section className="sec-lg">
-          <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <span className="eyebrow">Human in the loop</span>
-                <h2>Agents do the routine steps. People approve what matters.</h2>
-                <div className="stack mt-6">
-                  <p>
-                    The most common fear about agentic AI is that it will do something expensive or embarrassing on its
-                    own. That fear is reasonable, and it is a design problem, not a reason to avoid AI. Every agent we
-                    build has a written list of actions it may take alone, actions that need a person to approve, and
-                    actions it can never take.
-                  </p>
-                  <p>
-                    Approval happens where your team already works: a Teams or Slack message, an email with approve and
-                    edit buttons, or a queue inside your CRM. The agent does the reading, looking up and drafting. A
-                    person makes the call. As the logs show the agent getting things right, you can move low-risk
-                    actions to automatic. High-risk ones stay with a person for good.
-                  </p>
-                  <p>
-                    Every action is logged with what the agent saw and why it acted, and there is a single switch to
-                    pause it. That record is also what you will want if you ever need to explain an automated decision
-                    to a customer or to the OAIC.
-                  </p>
-                </div>
-              </div>
-              <div className="stack">
-                <figure className="card" style={{ padding: 8, margin: 0 }}>
-                  <img src="/images/au/ai-agents/ai-agents-approval.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over the shoulder of a Melbourne operations lead approving an action an AI agent drafted, on her phone, with a coffee in her other hand" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
-                  <figcaption style={{ padding: '12px 10px 6px', fontSize: 14 }}>
-                    Approval arrives where your team already is. One tap to approve, one to send it back with a note.
-                  </figcaption>
-                </figure>
-              <div className="card card-top-orange">
-                <span className="eyebrow">A typical approval split</span>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Reading and sorting enquiries</div><div className="scorecard-note">labels, routing, summaries</div></div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Automatic</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Drafting replies and records</div><div className="scorecard-note">emails, jobs, deals, bills</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Draft only</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Sending to a customer</div><div className="scorecard-note">until trust is proven</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Approve</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Money, refunds, pricing</div><div className="scorecard-note">payments, credits, discounts</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Always approve</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Deleting data, clinical advice</div><div className="scorecard-note">outside the agent’s job</div></div><div className="scorecard-val" style={{ color: T.small, fontSize: 14 }}>Never</div></div>
-              </div>
-              </div>
             </div>
           </div>
         </section>
 
-        {/* ═══ 8. BUILD PROCESS (interactive <details>) ═══ */}
-        <section className="sec-lg dot-grid">
+        {/* ═══ HUMAN APPROVAL → facts with approval split rows ═══ */}
+        <section className="section facts au-top" id="approval">
           <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <span className="eyebrow">How we build AI agents</span>
+            <div className="section-head">
+              <div className="eyebrow">Human in the loop</div>
+              <h2>Agents do the routine steps. People approve what matters.</h2>
+            </div>
+            <div className="factswrap">
+              <div className="factlist">
+                <div className="fact"><div className="sec">§01</div><p>
+                  The most common fear about agentic AI is that it will do something expensive or embarrassing on its
+                  own. That fear is reasonable, and it is a design problem, not a reason to avoid AI. Every agent we
+                  build has a written list of actions it may take alone, actions that need a person to approve, and
+                  actions it can never take.
+                </p></div>
+                <div className="fact"><div className="sec">§02</div><p>
+                  Approval happens where your team already works: a Teams or Slack message, an email with approve and
+                  edit buttons, or a queue inside your CRM. The agent does the reading, looking up and drafting. A
+                  person makes the call. As the logs show the agent getting things right, you can move low-risk
+                  actions to automatic. High-risk ones stay with a person for good.
+                </p></div>
+                <div className="fact"><div className="sec">§03</div><p>
+                  Every action is logged with what the agent saw and why it acted, and there is a single switch to
+                  pause it. That record is also what you will want if you ever need to explain an automated decision
+                  to a customer or to the OAIC.
+                </p></div>
+                <div className="fact"><div className="sec">§04</div><div>
+                  <div className="factlabel">A typical approval split</div>
+                  <ul className="trigrows">
+                    <li><span className="m">Reading and sorting enquiries</span><span className="n">labels, routing, summaries</span><span className="t">Automatic</span></li>
+                    <li><span className="m">Drafting replies and records</span><span className="n">emails, jobs, deals, bills</span><span className="t">Draft only</span></li>
+                    <li><span className="m">Sending to a customer</span><span className="n">until trust is proven</span><span className="t">Approve</span></li>
+                    <li><span className="m">Money, refunds, pricing</span><span className="n">payments, credits, discounts</span><span className="t">Always approve</span></li>
+                    <li><span className="m">Deleting data, clinical advice</span><span className="n">outside the agent’s job</span><span className="t">Never</span></li>
+                  </ul>
+                </div></div>
+              </div>
+              <VisualSlot page={PAGE_KEY} slot="facts-3" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
+                subject="A Melbourne operations lead approving an action an AI agent drafted, on her phone"
+                caption="Approval arrives where your team already is. One tap to approve, one to send it back with a note.">
+                <img src="/images/au/ai-agents/ai-agents-approval.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over the shoulder of a Melbourne operations lead approving an action an AI agent drafted, on her phone, with a coffee in her other hand" />
+              </VisualSlot>
+            </div>
+          </div>
+        </section>
+
+        {/* ═══ PHOTOBREAK (US template visual, no AU image yet) ═══ */}
+        <VisualSlot page={PAGE_KEY} slot="photobreak" kind="illustration" ratio="12:5" className="photobreak"
+          subject="AI-generated model: white software tiles on a long table connected by orange cables to one small agent block, a hand resting on an approve switch" />
+
+        {/* ═══ BUILD PROCESS → process timeline (steps stay openable, as the copy says) ═══ */}
+        <section className="section process" id="how-we-build">
+          <div className="wrap">
+            <div className="head-media">
+              <div className="section-head">
+                <div className="eyebrow">How we build AI agents</div>
                 <h2>AI agent development in seven steps, from process map to live system</h2>
-                <p className="lead mt-4" style={{ maxWidth: 560 }}>
+                <p className="lead">
                   Open any step to see what happens and what you get at the end of it. Each stage has a fixed price, and
                   you can stop after any of them.
                 </p>
-                <div className="card mt-8" style={{ padding: '4px 22px' }}>
-                  {BUILD_STEPS.map((s) => (
-                    <details key={s.n}>
-                      <summary><span><span style={{ fontFamily: T.fm, color: T.small, marginRight: 10 }}>{s.n}</span>{s.t}</span></summary>
-                      <div style={{ paddingBottom: 18 }}>
-                        <p style={{ fontSize: 15 }}>{s.d}</p>
-                        <p style={{ fontSize: 14, marginTop: 8 }}><b>You get:</b> {s.out}</p>
-                      </div>
-                    </details>
-                  ))}
-                </div>
               </div>
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/ai-agents/ai-agents-workshop.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A FactoryJet engineer and a Brisbane physiotherapy clinic owner map her booking process with sticky notes and arrows on a large sheet of paper" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
-                <div style={{ padding: '14px 12px 8px' }}>
-                  <p style={{ fontSize: 14 }}>
-                    Step one is always paper, not code. We lay out the process with the people who do it, and the
-                    right first agent usually becomes obvious within the hour.
-                  </p>
-                </div>
-              </div>
+              <VisualSlot page={PAGE_KEY} slot="process" kind="photo" ratio="3:2" captionClassName="figcap"
+                subject="A FactoryJet engineer and a physiotherapy clinic owner mapping her booking process with sticky notes on a large sheet of paper"
+                caption="Step one is always paper, not code. We lay out the process with the people who do it, and the right first agent usually becomes obvious within the hour.">
+                <img src="/images/au/ai-agents/ai-agents-workshop.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A FactoryJet engineer and a Brisbane physiotherapy clinic owner map her booking process with sticky notes and arrows on a large sheet of paper" />
+              </VisualSlot>
+            </div>
+            <div className="timeline timeline-4">
+              {BUILD_STEPS.map((s) => (
+                <details key={s.n} className="tnode">
+                  <summary>
+                    <div className="idx">{s.n}</div>
+                    <h3>{s.t}<span className="chev" aria-hidden="true">+</span></h3>
+                  </summary>
+                  <p>{s.d}</p>
+                  <p><b>You get:</b> {s.out}</p>
+                </details>
+              ))}
             </div>
           </div>
         </section>
 
-        <MidPageCTA
-          headline={'Which job in your business should an AI agent take first?'}
-          sub={'Tell us which task eats your team’s week. On a short call with the founder, we will tell you whether an AI agent, a simpler automation or no AI at all is the right answer, and what a first build would involve.'}
-          label={'Talk to the Founder'}
-        />
+        <div className="au-midcta">
+          <MidPageCTA
+            headline={'Which job in your business should an AI agent take first?'}
+            sub={'Tell us which task eats your team’s week. On a short call with the founder, we will tell you whether an AI agent, a simpler automation or no AI at all is the right answer, and what a first build would involve.'}
+            label={'Talk to the Founder'}
+          />
+        </div>
 
-        {/* ═══ 9. COMPARISON TABLE ═══ */}
-        <section className="sec-lg">
+        {/* ═══ COMPARISON TABLE ═══ */}
+        <section className="section comparison" id="comparison">
           <div className="wrap">
-            <span className="eyebrow">Side by side</span>
-            <h2 style={{ maxWidth: 760 }}>DIY no-code vs an automation reseller vs a freelancer vs FactoryJet</h2>
-            <p className="lead mt-4" style={{ maxWidth: 760 }}>
-              Each option is right for someone. The table shows where each one tends to be strong, so you can match the
-              option to the job.
-            </p>
-            <div className="card mt-8" style={{ padding: 0, overflowX: 'auto' }}>
-              <table className="cmp-table">
+            <div className="section-head head-stack">
+              <div className="eyebrow">Side by side</div>
+              <h2>DIY no-code vs an automation reseller vs a freelancer vs FactoryJet</h2>
+              <p className="lead">
+                Each option is right for someone. The table shows where each one tends to be strong, so you can match the
+                option to the job.
+              </p>
+            </div>
+            <div className="tablewrap">
+              <table>
                 <thead>
                   <tr>
                     <th>What you get</th>
@@ -657,94 +761,86 @@ export default function AiAgentsAUPage() {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td className="feat">Best fit</td><td className="fj"><span className="yes">Multi-system jobs with real data</span></td><td><span className="partial">Simple two-app tasks</span></td><td><span className="partial">Standard, packaged workflows</span></td><td><span className="partial">One-off, well-defined builds</span></td></tr>
-                  <tr><td className="feat">Process mapping first</td><td className="fj"><span className="yes">Always</span></td><td><span className="no">You do it</span></td><td><span className="partial">Sometimes</span></td><td><span className="partial">Varies</span></td></tr>
-                  <tr><td className="feat">Custom AI agent development</td><td className="fj"><span className="yes">Yes, senior engineers</span></td><td><span className="partial">Template agents</span></td><td><span className="partial">Their platform’s agents</span></td><td><span className="partial">Depends on the person</span></td></tr>
-                  <tr><td className="feat">Human approval steps designed in</td><td className="fj"><span className="yes">Every build</span></td><td><span className="partial">If you add them</span></td><td><span className="partial">Varies</span></td><td><span className="partial">Varies</span></td></tr>
-                  <tr><td className="feat">Privacy Act and APP check</td><td className="fj"><span className="yes">Before building</span></td><td><span className="no">On you</span></td><td><span className="partial">Varies</span></td><td><span className="partial">Rarely formal</span></td></tr>
-                  <tr><td className="feat">Tool-neutral advice</td><td className="fj"><span className="yes">No resale deals</span></td><td><span className="partial">One tool</span></td><td><span className="no">Tied to what they resell</span></td><td><span className="yes">Usually</span></td></tr>
-                  <tr><td className="feat">Monitoring and fixes after launch</td><td className="fj"><span className="yes">Same team</span></td><td><span className="no">On you</span></td><td><span className="yes">Often, on their platform</span></td><td><span className="partial">If available</span></td></tr>
-                  <tr><td className="feat">Who owns it</td><td className="fj"><span className="yes">You: code, prompts, integrations</span></td><td><span className="yes">You, inside the tool</span></td><td><span className="partial">Often licensed to you</span></td><td><span className="partial">Check the contract</span></td></tr>
-                  <tr><td className="feat">Risk if the builder disappears</td><td className="fj"><span className="yes">Low: documented and yours</span></td><td><span className="partial">Depends on who built it</span></td><td><span className="partial">Platform dependency</span></td><td><span className="no">High without documentation</span></td></tr>
+                  <tr><th scope="row">Best fit</th><td className="fj">Multi-system jobs with real data</td><td>Simple two-app tasks</td><td>Standard, packaged workflows</td><td>One-off, well-defined builds</td></tr>
+                  <tr><th scope="row">Process mapping first</th><td className="fj">Always</td><td>You do it</td><td>Sometimes</td><td>Varies</td></tr>
+                  <tr><th scope="row">Custom AI agent development</th><td className="fj">Yes, senior engineers</td><td>Template agents</td><td>Their platform’s agents</td><td>Depends on the person</td></tr>
+                  <tr><th scope="row">Human approval steps designed in</th><td className="fj">Every build</td><td>If you add them</td><td>Varies</td><td>Varies</td></tr>
+                  <tr><th scope="row">Privacy Act and APP check</th><td className="fj">Before building</td><td>On you</td><td>Varies</td><td>Rarely formal</td></tr>
+                  <tr><th scope="row">Tool-neutral advice</th><td className="fj">No resale deals</td><td>One tool</td><td>Tied to what they resell</td><td>Usually</td></tr>
+                  <tr><th scope="row">Monitoring and fixes after launch</th><td className="fj">Same team</td><td>On you</td><td>Often, on their platform</td><td>If available</td></tr>
+                  <tr><th scope="row">Who owns it</th><td className="fj">You: code, prompts, integrations</td><td>You, inside the tool</td><td>Often licensed to you</td><td>Check the contract</td></tr>
+                  <tr><th scope="row">Risk if the builder disappears</th><td className="fj">Low: documented and yours</td><td>Depends on who built it</td><td>Platform dependency</td><td>High without documentation</td></tr>
                 </tbody>
               </table>
             </div>
           </div>
         </section>
 
-        {/* ═══ 10. WHICH OPTION FITS (interactive checklist) ═══ */}
-        <section className="sec-lg dot-grid">
+        {/* ═══ WHICH OPTION FITS (<details>) → vlog ═══ */}
+        <section className="vlog" id="fit-check">
           <div className="wrap">
-            <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">Which option fits you</span>
+            <div className="section-head">
+              <div className="eyebrow">Which option fits you</div>
               <h2>A quick check: do you need an AI automation agency at all?</h2>
-              <p className="lead mt-4">
+              <p>
                 Open the description that sounds most like your business. The honest answer is not always us.
               </p>
+              <VisualSlot page={PAGE_KEY} slot="proof" kind="illustration" ratio="3:2"
+                subject="AI-generated model: six white signposts at a fork, one orange sign pointing to the right kind of AI help" />
             </div>
-            <div className="card mt-8" style={{ padding: '4px 22px', maxWidth: 900 }}>
-              <details>
-                <summary>We want to move data between two apps, and nothing sensitive is involved</summary>
-                <div style={{ paddingBottom: 18 }}>
-                  <p style={{ fontSize: 15 }}><b>Try DIY first.</b> Zapier, Make or n8n will likely do it in an afternoon. Bring in help only if it keeps breaking or starts touching customer or financial data.</p>
-                </div>
+            <div className="ventries">
+              <details className="ventry">
+                <summary><h3>We want to move data between two apps, and nothing sensitive is involved</h3><span className="chev" aria-hidden="true">+</span></summary>
+                <p><b>Try DIY first.</b> Zapier, Make or n8n will likely do it in an afternoon. Bring in help only if it keeps breaking or starts touching customer or financial data.</p>
               </details>
-              <details>
-                <summary>We are not sure where AI fits, and several teams have different ideas</summary>
-                <div style={{ paddingBottom: 18 }}>
-                  <p style={{ fontSize: 15 }}><b>Start with advice, not a build.</b> A short readiness assessment ranks the ideas by value and risk. See our <a href="/au/ai-consulting" style={srcLink}>AI consulting service for Australian businesses</a>.</p>
-                </div>
+              <details className="ventry">
+                <summary><h3>We are not sure where AI fits, and several teams have different ideas</h3><span className="chev" aria-hidden="true">+</span></summary>
+                <p><b>Start with advice, not a build.</b> A short readiness assessment ranks the ideas by value and risk. See our <a href="/au/ai-consulting">AI consulting service for Australian businesses</a>.</p>
               </details>
-              <details>
-                <summary>One job is clearly eating hours, and it runs across two or more of our systems</summary>
-                <div style={{ paddingBottom: 18 }}>
-                  <p style={{ fontSize: 15 }}><b>This is what an AI automation agency is for.</b> A custom agent with approval steps, built into the systems you already run and supported after launch. This page is the right place.</p>
-                </div>
+              <details className="ventry">
+                <summary><h3>One job is clearly eating hours, and it runs across two or more of our systems</h3><span className="chev" aria-hidden="true">+</span></summary>
+                <p><b>This is what an AI automation agency is for.</b> A custom agent with approval steps, built into the systems you already run and supported after launch. This page is the right place.</p>
               </details>
-              <details>
-                <summary>Our problem is the phones: missed calls, after-hours enquiries, bookings</summary>
-                <div style={{ paddingBottom: 18 }}>
-                  <p style={{ fontSize: 15 }}><b>Look at a voice agent.</b> See our <a href="/au/ai-receptionist" style={srcLink}>AI receptionist for Australian businesses</a>, which answers, qualifies and books calls into your calendar or job system.</p>
-                </div>
+              <details className="ventry">
+                <summary><h3>Our problem is the phones: missed calls, after-hours enquiries, bookings</h3><span className="chev" aria-hidden="true">+</span></summary>
+                <p><b>Look at a voice agent.</b> See our <a href="/au/ai-receptionist">AI receptionist for Australian businesses</a>, which answers, qualifies and books calls into your calendar or job system.</p>
               </details>
-              <details>
-                <summary>We need a bigger AI build: a new app, AI inside our product, or a data platform</summary>
-                <div style={{ paddingBottom: 18 }}>
-                  <p style={{ fontSize: 15 }}><b>That is software development with AI in it.</b> See our <a href="/au/ai-development" style={srcLink}>AI development service in Australia</a>.</p>
-                </div>
+              <details className="ventry">
+                <summary><h3>We need a bigger AI build: a new app, AI inside our product, or a data platform</h3><span className="chev" aria-hidden="true">+</span></summary>
+                <p><b>That is software development with AI in it.</b> See our <a href="/au/ai-development">AI development service in Australia</a>.</p>
               </details>
-              <details>
-                <summary>We want ChatGPT and Google AI answers to recommend our business</summary>
-                <div style={{ paddingBottom: 18 }}>
-                  <p style={{ fontSize: 15 }}><b>That is AI search visibility, not automation.</b> See our <a href="/au/ai-seo" style={srcLink}>AI SEO service for Australian businesses</a>.</p>
-                </div>
+              <details className="ventry">
+                <summary><h3>We want ChatGPT and Google AI answers to recommend our business</h3><span className="chev" aria-hidden="true">+</span></summary>
+                <p><b>That is AI search visibility, not automation.</b> See our <a href="/au/ai-seo">AI SEO service for Australian businesses</a>.</p>
               </details>
             </div>
           </div>
         </section>
 
-        {/* ═══ 11. PRIVACY ACT / APPs / OAIC ═══ */}
-        <section className="sec-lg">
+        {/* ═══ PRIVACY ACT / APPs / OAIC → facts + ruled rows ═══ */}
+        <section className="section facts" id="privacy">
           <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <span className="eyebrow">Privacy Act, APPs and OAIC guidance</span>
-                <h2>Australian privacy rules shape the agent before the code does</h2>
-                <div className="stack mt-6">
-                  <p>
-                    If your business is covered by the Privacy Act 1988 and an agent handles personal information, the
-                    Australian Privacy Principles apply. Personal information means anything about an identifiable
-                    person: a customer, a patient, a tenant or a staff member. There are 13 principles, and the Office of
-                    the Australian Information Commissioner (OAIC) has published specific guidance on AI.
-                  </p>
-                  <p>
-                    That guidance makes a few points that directly change how an AI agent is built. Privacy obligations
-                    apply to personal information you put into an AI system and to AI output that contains it. Under
-                    APP 6, you can generally only use information for the purpose it was collected for, unless a
-                    secondary use would be reasonably expected or you have consent. As best practice, the OAIC
-                    recommends not entering personal information, and especially sensitive information, into publicly
-                    available AI chatbots.
-                  </p>
+            <div className="section-head">
+              <div className="eyebrow">Privacy Act, APPs and OAIC guidance</div>
+              <h2>Australian privacy rules shape the agent before the code does</h2>
+            </div>
+            <div className="factswrap">
+              <div className="factlist">
+                <div className="fact"><div className="sec">§01</div><p>
+                  If your business is covered by the Privacy Act 1988 and an agent handles personal information, the
+                  Australian Privacy Principles apply. Personal information means anything about an identifiable
+                  person: a customer, a patient, a tenant or a staff member. There are 13 principles, and the Office of
+                  the Australian Information Commissioner (OAIC) has published specific guidance on AI.
+                </p></div>
+                <div className="fact"><div className="sec">§02</div><p>
+                  That guidance makes a few points that directly change how an AI agent is built. Privacy obligations
+                  apply to personal information you put into an AI system and to AI output that contains it. Under
+                  APP 6, you can generally only use information for the purpose it was collected for, unless a
+                  secondary use would be reasonably expected or you have consent. As best practice, the OAIC
+                  recommends not entering personal information, and especially sensitive information, into publicly
+                  available AI chatbots.
+                </p></div>
+                <div className="fact"><div className="sec">§03</div><div>
                   <p>
                     The OAIC also says public-facing AI tools such as chatbots should be clearly identified as AI, that
                     businesses should take a privacy by design approach including a Privacy Impact Assessment, and that
@@ -752,303 +848,252 @@ export default function AiAgentsAUPage() {
                     require your privacy policy to explain when a computer program uses personal information to make
                     decisions that could significantly affect someone.
                   </p>
-                </div>
-                <p style={srcNote}>
-                  Sources: <a href={SRC_OAIC_AI} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>OAIC, guidance on privacy and the use of commercially available AI products</a>;{' '}
-                  <a href={SRC_OAIC_APPS} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>OAIC, Australian Privacy Principles</a>;{' '}
-                  <a href={SRC_OAIC_APP1} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>OAIC, APP guidelines chapter 1</a>.
-                </p>
-              </div>
-              <div className="stack">
-                <figure className="card" style={{ padding: 8, margin: 0 }}>
-                  <img src="/images/au/ai-agents/ai-agents-privacy.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Two colleagues in a calm Canberra meeting room review a printed data flow diagram before any AI agent is built" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
-                  <figcaption style={{ padding: '12px 10px 6px', fontSize: 14 }}>
-                    Privacy is planned on paper first: which information the agent sees, where it goes, and who can check it.
-                  </figcaption>
-                </figure>
-              <div className="card card-top-orange">
-                <span className="eyebrow">What that means in each build</span>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Only the fields it needs</div><div className="scorecard-note">names and details masked where possible</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>APP 6</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Business AI terms, not consumer apps</div><div className="scorecard-note">no training on your data</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>OAIC</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Chatbots say they are AI</div><div className="scorecard-note">clear to every customer</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>OAIC</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Record of what each agent decides</div><div className="scorecard-note">ready for your privacy policy</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>APP 1</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Where data is stored and processed</div><div className="scorecard-note">Australian regions where available</div></div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Disclosed</div></div>
-              </div>
-              </div>
-            </div>
-            <ul className="col-3 mt-10">
-              <li className="card"><h3>What we do</h3><p className="mt-4">Map the personal information each agent touches, check which AI provider sees it and on what terms, keep access to the minimum, and draft the inputs for your Privacy Impact Assessment.</p></li>
-              <li className="card"><h3>What you keep</h3><p className="mt-4">You remain responsible for the personal information you hold. We make that easier with scoped access, logs of what the agent did, and a written usage policy your team can follow.</p></li>
-              <li className="card"><h3>What we do not do</h3><p className="mt-4">We are not lawyers and do not give legal sign-off. We build to the requirements you and your adviser set, and document everything they need to review.</p></li>
-            </ul>
-          </div>
-        </section>
-
-        {/* ═══ 12. COST DRIVERS + ENGAGEMENT SHAPES (no pricing) ═══ */}
-        <section className="sec-lg dot-grid">
-          <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <span className="eyebrow">Scope, not packages</span>
-                <h2>What decides the cost of an AI automation service</h2>
-                <p className="lead mt-4" style={{ maxWidth: 560 }}>
-                  We do not publish prices, because two agents with the same name can be very different jobs. Every
-                  engagement is quoted after a free call, with a fixed price per stage. It usually takes one of four
-                  shapes.
-                </p>
-                <ul className="scope-list num-list mt-6" style={{ maxWidth: 580 }}>
-                  <li><b>Process mapping sprint.</b> We map one or two processes, rank the automation options and hand you a written plan and quote. Some businesses take the plan to another builder, and that is fine.</li>
-                  <li><b>Single-agent build.</b> One AI agent doing one job across your systems, taken through testing and a supervised pilot to go-live.</li>
-                  <li><b>Automation programme.</b> Several agents and workflows across teams, built in order of value, sharing the same logging, approval and privacy setup.</li>
-                  <li><b>Monthly support.</b> Monitoring, rule updates, fixes when connected tools change, and a regular report on what your agents did.</li>
-                </ul>
-                <div className="mt-8">
-                  <ModalCTAButton label="Talk to the Founder" region="au" modalVariant="default" btnVariant="primary-light" />
-                </div>
-              </div>
-              <div className="card card-top-orange">
-                <span className="eyebrow">What moves the scope</span>
-                <div className="scorecard-row"><div className="scorecard-metric">Number of systems to connect</div><div className="scorecard-val" style={{ fontSize: 14 }}>Reach</div></div>
-                <div className="scorecard-row"><div className="scorecard-metric">How messy the inputs are</div><div className="scorecard-val" style={{ fontSize: 14 }}>Handling</div></div>
-                <div className="scorecard-row"><div className="scorecard-metric">Approval and logging needs</div><div className="scorecard-val" style={{ fontSize: 14 }}>Control</div></div>
-                <div className="scorecard-row"><div className="scorecard-metric">Sensitive or health information</div><div className="scorecard-val" style={{ fontSize: 14 }}>Privacy</div></div>
-                <div className="scorecard-row"><div className="scorecard-metric">AI model usage</div><div className="scorecard-val" style={{ fontSize: 14 }}>Paid direct</div></div>
-                <div className="scorecard-row"><div className="scorecard-metric">Support after launch</div><div className="scorecard-val" style={{ fontSize: 14 }}>Optional</div></div>
-                <div className="scorecard-row"><div className="scorecard-metric">First call with the founder</div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Free</div></div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ═══ 13. SYDNEY / MELBOURNE / BRISBANE + DEMAND ═══ */}
-        <section className="sec-lg">
-          <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <span className="eyebrow">Australia-wide</span>
-                <h2>An AI automation agency for Sydney, Melbourne, Brisbane, Perth and beyond</h2>
-                <div className="stack mt-6">
-                  <p>
-                    People search for an AI automation agency in Sydney or Melbourne expecting to need someone nearby.
-                    For this work you do not. We run projects remotely with video workshops, shared process maps and
-                    written plans, and we keep calls inside Australian business hours for Sydney, Melbourne, Brisbane,
-                    Perth, Adelaide, Canberra and regional towns.
+                  <p className="au-note">
+                    Sources: <a href={SRC_OAIC_AI} {...extLink}>OAIC, guidance on privacy and the use of commercially available AI products</a>;{' '}
+                    <a href={SRC_OAIC_APPS} {...extLink}>OAIC, Australian Privacy Principles</a>;{' '}
+                    <a href={SRC_OAIC_APP1} {...extLink}>OAIC, APP guidelines chapter 1</a>.
                   </p>
-                  <p>
-                    What matters more than a postcode is who does the work. FactoryJet has served more than 500
-                    businesses since 2014, with a decade-plus in commerce: B2B ordering for brands such as Bombay
-                    Petals and DTC stores such as Belle Maison. That is why our agents tend to sit where
-                    ecommerce, finance and operations meet. If your agent needs to live inside a store, see our{' '}
-                    <a href="/au/shopify-development" style={srcLink}>Shopify development</a> and{' '}
-                    <a href="/au/ecommerce-development" style={srcLink}>ecommerce development</a> work in Australia.
-                  </p>
-                  <p>
-                    For background reading, our guides on{' '}
-                    <a href="/blog/agentic-ai-vs-ai-agents" style={srcLink}>agentic AI vs AI agents</a>,{' '}
-                    <a href="/blog/ai-chatbots-vs-ai-agents-business" style={srcLink}>AI chatbots vs AI agents</a> and{' '}
-                    <a href="/blog/how-to-hire-an-ai-agent-developer-2026" style={srcLink}>how to hire an AI agent developer</a>{' '}
-                    go deeper on the questions buyers ask most.
-                  </p>
-                </div>
-                <div className="flex-wrap mt-6">
-                  <a className="city-pill" href="/au">FactoryJet Australia</a>
-                  <a className="city-pill" href="/au/melbourne">Melbourne</a>
-                  <a className="city-pill" href="/au/brisbane">Brisbane</a>
-                  <a className="city-pill" href="/au/adelaide">Adelaide</a>
-                  <a className="city-pill" href="/au/canberra">Canberra</a>
-                </div>
-              </div>
-
-              <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: `1px solid ${T.n200}`, padding: '14px 18px' }}>
-                  <span style={{ fontFamily: T.fm, fontSize: 10, letterSpacing: '.13em', textTransform: 'uppercase', color: T.n400 }}>Australia · Monthly Search Demand</span>
-                  <span style={{ background: T.small, color: '#fff', fontFamily: T.fm, fontSize: 10, borderRadius: 999, padding: '3px 9px' }}>DataForSEO</span>
-                </div>
-                <div style={{ padding: '4px 18px 14px' }}>
-                  <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
-                    {[
-                      { kw: 'ai agents', v: '6,600', w: '100%', kd: 'Mostly research, some buyers' },
-                      { kw: 'ai automation', v: '1,000', w: '15%', kd: 'Growing, mixed intent' },
-                      { kw: 'autonomous ai agents', v: '720', w: '11%', kd: 'Agentic AI research' },
-                      { kw: 'ai automation agency', v: '390', w: '6%', kd: 'Buyer intent' },
-                      { kw: 'business process automation', v: '260', w: '4%', kd: 'Buyer intent, higher value' },
-                      { kw: 'ai agents australia', v: '140', w: '2%', kd: 'Local intent' },
-                      { kw: 'ai automation service', v: '90', w: '1.4%', kd: 'Buyer intent' },
-                      { kw: 'ai agent for business', v: '70', w: '1.1%', kd: 'Buyer intent' },
-                    ].map((r) => (
-                      <li key={r.kw} className="demand-row">
-                        <div className="demand-top"><span className="demand-kw">{r.kw}</span><span className="demand-v">{r.v}<span style={{ fontSize: 9, color: T.n400 }}> searches</span></span></div>
-                        <div className="demand-bar"><i style={{ width: r.w }} /></div>
-                        <div className="demand-kd">{r.kd}</div>
-                      </li>
-                    ))}
+                </div></div>
+                <div className="fact"><div className="sec">§04</div><div>
+                  <div className="factlabel">What that means in each build</div>
+                  <ul className="trigrows">
+                    <li><span className="m">Only the fields it needs</span><span className="n">names and details masked where possible</span><span className="t">APP 6</span></li>
+                    <li><span className="m">Business AI terms, not consumer apps</span><span className="n">no training on your data</span><span className="t">OAIC</span></li>
+                    <li><span className="m">Chatbots say they are AI</span><span className="n">clear to every customer</span><span className="t">OAIC</span></li>
+                    <li><span className="m">Record of what each agent decides</span><span className="n">ready for your privacy policy</span><span className="t">APP 1</span></li>
+                    <li><span className="m">Where data is stored and processed</span><span className="n">Australian regions where available</span><span className="t">Disclosed</span></li>
                   </ul>
-                  <p style={{ textAlign: 'center', fontFamily: T.fm, fontSize: 10, color: T.n400, marginTop: 10 }}>Source: DataForSEO, Australia, September 2026</p>
-                </div>
+                </div></div>
               </div>
+              <VisualSlot page={PAGE_KEY} slot="facts-4" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
+                subject="Two colleagues in a Canberra meeting room reviewing a printed data flow diagram before an AI agent is built"
+                caption="Privacy is planned on paper first: which information the agent sees, where it goes, and who can check it.">
+                <img src="/images/au/ai-agents/ai-agents-privacy.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Two colleagues in a calm Canberra meeting room review a printed data flow diagram before any AI agent is built" />
+              </VisualSlot>
+            </div>
+            <div className="platlist span-all" role="list">
+              <div className="plat plat-2col" role="listitem"><span className="capid">01</span><div className="plat-name"><h3>What we do</h3></div><p className="plat-build">Map the personal information each agent touches, check which AI provider sees it and on what terms, keep access to the minimum, and draft the inputs for your Privacy Impact Assessment.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">02</span><div className="plat-name"><h3>What you keep</h3></div><p className="plat-build">You remain responsible for the personal information you hold. We make that easier with scoped access, logs of what the agent did, and a written usage policy your team can follow.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">03</span><div className="plat-name"><h3>What we do not do</h3></div><p className="plat-build">We are not lawyers and do not give legal sign-off. We build to the requirements you and your adviser set, and document everything they need to review.</p></div>
             </div>
           </div>
         </section>
 
-        {/* ═══ 14. WAREHOUSE / OPERATIONS STORY ═══ */}
-        <section className="sec-lg dot-grid">
+        {/* ═══ COST DRIVERS + ENGAGEMENT SHAPES (no pricing) → list + scope panel ═══ */}
+        <section className="section au-top" id="cost">
           <div className="wrap">
-            <div className="col-4060">
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/ai-agents/ai-agents-orders.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over the shoulder of a customer service team member in a Melbourne online store’s back office, working through an order inbox an AI agent has already sorted" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
-              </div>
+            <div className="section-head">
+              <div className="eyebrow">Scope, not packages</div>
+              <h2>What decides the cost of an AI automation service</h2>
+              <p className="lead">
+                We do not publish prices, because two agents with the same name can be very different jobs. Every
+                engagement is quoted after a free call, with a fixed price per stage. It usually takes one of four
+                shapes.
+              </p>
+            </div>
+            <div className="au-split">
               <div>
-                <span className="eyebrow">What good looks like</span>
-                <h2>A worked example: the order inbox in an online store’s warehouse</h2>
-                <div className="stack mt-6">
-                  <p>
-                    Here is the kind of AI workflow automation we build, described step by step. It is an illustration,
-                    not a client case study.
-                  </p>
-                  <p>
-                    A Melbourne ecommerce business gets order questions by email and web chat: where is my parcel, can I
-                    change the size, how do I return this. Each one means opening Shopify, then the courier’s tracking,
-                    then writing a reply.
-                  </p>
-                  <p>
-                    The agent reads each message, finds the order in Shopify, checks tracking, and drafts a reply with
-                    the real status. Simple status questions go out after a person approves them in bulk. Returns are
-                    checked against the store’s policy and the Australian Consumer Law rules the business has set, then
-                    passed to a person with everything attached. Anything angry or unusual goes straight to a human.
-                  </p>
-                  <p>
-                    The coordinator starts the day with a short list of exceptions instead of a full inbox. The team
-                    still owns every customer relationship. They just spend less of the day copying order numbers.
-                  </p>
-                </div>
+                <ol className="au-numlist">
+                  <li><span><b>Process mapping sprint.</b> We map one or two processes, rank the automation options and hand you a written plan and quote. Some businesses take the plan to another builder, and that is fine.</span></li>
+                  <li><span><b>Single-agent build.</b> One AI agent doing one job across your systems, taken through testing and a supervised pilot to go-live.</span></li>
+                  <li><span><b>Automation programme.</b> Several agents and workflows across teams, built in order of value, sharing the same logging, approval and privacy setup.</span></li>
+                  <li><span><b>Monthly support.</b> Monitoring, rule updates, fixes when connected tools change, and a regular report on what your agents did.</span></li>
+                </ol>
+                <ModalCTAButton label="Talk to the Founder" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
+              </div>
+              <div className="au-panel">
+                <div className="eyebrow">What moves the scope</div>
+                <ul className="trigrows">
+                  <li><span className="m">Number of systems to connect</span><span className="t">Reach</span></li>
+                  <li><span className="m">How messy the inputs are</span><span className="t">Handling</span></li>
+                  <li><span className="m">Approval and logging needs</span><span className="t">Control</span></li>
+                  <li><span className="m">Sensitive or health information</span><span className="t">Privacy</span></li>
+                  <li><span className="m">AI model usage</span><span className="t">Paid direct</span></li>
+                  <li><span className="m">Support after launch</span><span className="t">Optional</span></li>
+                  <li><span className="m">First call with the founder</span><span className="t">Free</span></li>
+                </ul>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ═══ 15. COMPETITOR LIST (self-disclosure, ItemList) ═══ */}
-        <section className="sec-lg">
+        {/* ═══ SYDNEY / MELBOURNE / BRISBANE + DEMAND → prose + demand bars ═══ */}
+        <section className="section au-top" id="australia-wide">
+          <div className="wrap au-split">
+            <div className="au-prose">
+              <div className="eyebrow">Australia-wide</div>
+              <h2>An AI automation agency for Sydney, Melbourne, Brisbane, Perth and beyond</h2>
+              <p>
+                People search for an AI automation agency in Sydney or Melbourne expecting to need someone nearby.
+                For this work you do not. We run projects remotely with video workshops, shared process maps and
+                written plans, and we keep calls inside Australian business hours for Sydney, Melbourne, Brisbane,
+                Perth, Adelaide, Canberra and regional towns.
+              </p>
+              <p>
+                What matters more than a postcode is who does the work. FactoryJet has served more than 500
+                businesses since 2014, with a decade-plus in commerce: B2B ordering for brands such as Bombay
+                Petals and DTC stores such as Belle Maison. That is why our agents tend to sit where
+                ecommerce, finance and operations meet. If your agent needs to live inside a store, see our{' '}
+                <a href="/au/shopify-development">Shopify development</a> and{' '}
+                <a href="/au/ecommerce-development">ecommerce development</a> work in Australia.
+              </p>
+              <p>
+                For background reading, our guides on{' '}
+                <a href="/blog/agentic-ai-vs-ai-agents">agentic AI vs AI agents</a>,{' '}
+                <a href="/blog/ai-chatbots-vs-ai-agents-business">AI chatbots vs AI agents</a> and{' '}
+                <a href="/blog/how-to-hire-an-ai-agent-developer-2026">how to hire an AI agent developer</a>{' '}
+                go deeper on the questions buyers ask most.
+              </p>
+              <ul className="city-list">
+                <li><a href="/au">FactoryJet Australia</a></li>
+                <li><a href="/au/melbourne">Melbourne</a></li>
+                <li><a href="/au/brisbane">Brisbane</a></li>
+                <li><a href="/au/adelaide">Adelaide</a></li>
+                <li><a href="/au/canberra">Canberra</a></li>
+              </ul>
+            </div>
+            <div className="demand">
+              <div className="demand-head"><span>Australia · Monthly Search Demand</span><b>DataForSEO</b></div>
+              <ul>
+                {[
+                  { kw: 'ai agents', v: '6,600', w: '100%', kd: 'Mostly research, some buyers' },
+                  { kw: 'ai automation', v: '1,000', w: '15%', kd: 'Growing, mixed intent' },
+                  { kw: 'autonomous ai agents', v: '720', w: '11%', kd: 'Agentic AI research' },
+                  { kw: 'ai automation agency', v: '390', w: '6%', kd: 'Buyer intent' },
+                  { kw: 'business process automation', v: '260', w: '4%', kd: 'Buyer intent, higher value' },
+                  { kw: 'ai agents australia', v: '140', w: '2%', kd: 'Local intent' },
+                  { kw: 'ai automation service', v: '90', w: '1.4%', kd: 'Buyer intent' },
+                  { kw: 'ai agent for business', v: '70', w: '1.1%', kd: 'Buyer intent' },
+                ].map((r) => (
+                  <li key={r.kw} className="demand-row">
+                    <div className="demand-top"><span className="demand-kw">{r.kw}</span><span className="demand-v">{r.v}<small> searches</small></span></div>
+                    <div className="demand-bar"><i style={{ width: r.w }} /></div>
+                    <div className="demand-kd">{r.kd}</div>
+                  </li>
+                ))}
+              </ul>
+              <p className="demand-src">Source: DataForSEO, Australia, September 2026</p>
+            </div>
+          </div>
+        </section>
+
+        {/* ═══ WORKED EXAMPLE (warehouse / operations story) → definition module ═══ */}
+        <section className="definition" id="worked-example">
+          <div>
+            <VisualSlot page={PAGE_KEY} slot="definition" kind="photo" ratio="3:2" className="definition-image"
+              subject="A customer service team member in an online store's back office working through an order inbox an AI agent has already sorted">
+              <img src="/images/au/ai-agents/ai-agents-orders.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over the shoulder of a customer service team member in a Melbourne online store’s back office, working through an order inbox an AI agent has already sorted" />
+            </VisualSlot>
+          </div>
+          <div className="definition-copy">
+            <div className="eyebrow">What good looks like</div>
+            <h2>A worked example: the order inbox in an online store’s warehouse</h2>
+            <p>
+              Here is the kind of AI workflow automation we build, described step by step. It is an illustration,
+              not a client case study.
+            </p>
+            <p>
+              A Melbourne ecommerce business gets order questions by email and web chat: where is my parcel, can I
+              change the size, how do I return this. Each one means opening Shopify, then the courier’s tracking,
+              then writing a reply.
+            </p>
+            <p>
+              The agent reads each message, finds the order in Shopify, checks tracking, and drafts a reply with
+              the real status. Simple status questions go out after a person approves them in bulk. Returns are
+              checked against the store’s policy and the Australian Consumer Law rules the business has set, then
+              passed to a person with everything attached. Anything angry or unusual goes straight to a human.
+            </p>
+            <p>
+              The coordinator starts the day with a short list of exceptions instead of a full inbox. The team
+              still owns every customer relationship. They just spend less of the day copying order numbers.
+            </p>
+          </div>
+        </section>
+
+        {/* ═══ AGENCIES (self-disclosure, ItemList from AGENCIES) → ruled rows ═══ */}
+        <section className="section platforms" id="agencies">
           <div className="wrap">
-            <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">The honest landscape</span>
-              <h2>AI automation agencies in Australia worth knowing</h2>
-              <p className="lead mt-4">
+            <div className="section-head plat-head">
+              <div>
+                <div className="eyebrow">The honest landscape</div>
+                <h2>AI automation agencies in Australia worth knowing</h2>
+              </div>
+              <p>
                 We are one option, not the only one. These Australian AI automation agencies show up when people search
                 for AI agents or ask ChatGPT, Gemini and Perplexity for a recommendation. Each note is based on what the
                 company says on its own website. Talk to two or three and pick the fit.
               </p>
             </div>
-            <ul className="col-2 mt-10" style={{ gap: 16 }}>
+            <div className="platlist" role="list">
               {AGENCIES.map((a, i) => (
-                <li key={a.name} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
-                  <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.small, minWidth: 30 }}>{i + 1}</span>
-                  <div>
-                    <h3 style={{ fontSize: 18 }}>{a.name}{a.name === 'FactoryJet' && <span style={{ fontFamily: T.fm, fontSize: 10, background: T.small, color: '#fff', borderRadius: 999, padding: '2px 8px', marginLeft: 8, verticalAlign: 'middle' }}>That is us</span>}</h3>
-                    <p className="mt-2" style={{ marginTop: 6 }}>{a.note}</p>
-                  </div>
-                </li>
+                <div key={a.name} className={a.name === 'FactoryJet' ? 'plat plat-2col plat-own' : 'plat plat-2col'} role="listitem">
+                  <span className="capid">{String(i + 1).padStart(2, '0')}</span>
+                  <div className="plat-name"><h3>{a.name}</h3>{a.name === 'FactoryJet' && <span className="plat-flag">That is us</span>}</div>
+                  <p className="plat-build">{a.note}</p>
+                </div>
               ))}
-            </ul>
-            <p style={srcNote}>
+            </div>
+            <p className="sub-note">
               Agencies named from live Australian search results and AI assistant answers for AI automation agency queries, September 2026. Each company’s own website was checked on 26 September 2026 for an Australian office and the services named. Listing is not endorsement.
             </p>
-            <p className="mt-4" style={{ maxWidth: 760 }}>
+            <p className="au-after">
               Want more detail on each one? We compare 13 of them, including us, by location, client size, platforms and
-              published prices in our guide to the <a href="/blog/best-ai-agencies-australia-2026" style={srcLink}>best AI agencies in Australia</a>.
+              published prices in our guide to the <a href="/blog/best-ai-agencies-australia-2026">best AI agencies in Australia</a>.
             </p>
           </div>
         </section>
 
-        {/* ═══ 16. SIBLING SERVICES (hover cards) ═══ */}
-        <section className="sec-lg dot-grid">
+        {/* ═══ RELATED AI SERVICES → agentdir (grouped directory, as on /services/ai-agent-development) ═══ */}
+        <section className="section agentdir" id="related">
           <div className="wrap">
-            <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">Related AI services in Australia</span>
+            <div className="section-head">
+              <div className="eyebrow">Related AI services in Australia</div>
               <h2>Not quite an AI agent? These may fit better</h2>
             </div>
-            <ul className="col-3 mt-10" style={{ gap: 16 }}>
-              {[
-                { h: '/au/ai-customer-service', t: 'AI customer service', d: 'Chat and email answers, draft replies and ticket triage inside Zendesk, Gorgias or HubSpot.' },
-                { h: '/au/ai-consulting', t: 'AI consulting', d: 'Not sure where AI fits? A readiness assessment ranks the use cases worth doing first.' },
-                { h: '/au/ai-development', t: 'AI development', d: 'Larger builds: AI inside your product, custom apps and deeper system integration.' },
-                { h: '/au/ai-receptionist', t: 'AI receptionist', d: 'A voice agent that answers, qualifies and books calls, day and night.' },
-                { h: '/au/ai-seo', t: 'AI SEO', d: 'Get your business named in ChatGPT, Perplexity and Google AI answers.' },
-                { h: '/blog/ai-cost-australia-2026', t: 'AI cost guide', d: 'Published Australian price ranges for AI agents, chatbots and receptionists, with sources and GST basis.' },
-              ].map((c) => (
-                <li key={c.h}>
-                  <a href={c.h} className="svc-card" style={{ display: 'block', height: '100%' }}>
-                    <h3 style={{ fontSize: 17 }}>{c.t} <span aria-hidden="true" style={{ color: T.small }}>→</span></h3>
-                    <p className="mt-2" style={{ marginTop: 8, fontSize: 14 }}>{c.d}</p>
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-
-        {/* ═══ 17. FAQ (canonical Linear Minimal) ═══ */}
-        <section className="sec-lg" id="faq">
-          <div className="wrap">
-            <style>{'.au-svc .faq-item summary::after{content:none;display:none}'}</style>
-            <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">FAQ</span>
-              <h2>AI agents and automation: questions Australian business owners ask</h2>
-            </div>
-            <div className="faq-grid">
-              <aside className="faq-sidebar">
-                <span className="faq-sidebar-topics">Topics</span>
-                <nav className="faq-sidebar-nav">
-                  {FAQ_CATEGORIES.map((c) => (
-                    <a key={c.key} href={`#faq-${c.key}`}>
-                      {c.label}
-                      <span className="faq-nav-count">{FAQ_ITEMS.filter((f) => f.category === c.key).length}</span>
-                    </a>
-                  ))}
-                </nav>
-                <div className="faq-sidebar-cta">
-                  <ModalCTAButton label="Still have a question? Ask the founder →" region="au" modalVariant="default" btnVariant="secondary-light" />
-                  <p>Replies within 24 hours.</p>
-                </div>
-              </aside>
-
-              <div>
-                {FAQ_CATEGORIES.map((c) => (
-                  <div key={c.key} id={`faq-${c.key}`} style={{ marginBottom: 40 }}>
-                    <div className="faq-cat-header">
-                      <span className="faq-cat-bar" />
-                      <p className="faq-cat-label">{c.label}</p>
-                    </div>
-                    <ul className="faq-list">{FAQ_ITEMS.filter((f) => f.category === c.key).map((f) => (
-                      <li key={f.question}><details className="faq-item">
-                        <summary>
-                          <span className="q-text">{f.question}</span>
-                          <span className="chevron">
-                            <svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5L7 9L11 5" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" /></svg>
-                          </span>
-                        </summary>
-                        <div className="faq-ans"><p>{f.answer}</p>{f.links ? <p style={{ marginTop: 8 }}>{f.links.map((l) => <a key={l.href} href={l.href} style={{ ...srcLink, marginRight: 16 }}>{l.label}</a>)}</p> : null}</div>
-                      </details></li>
-                    ))}</ul>
-                  </div>
-                ))}
+            <div className="agentdir-group">
+              <div className="agentdir-label">
+                <h3>AI services in Australia</h3>
+                <span className="mono agentdir-count">{RELATED.length} pages</span>
               </div>
+              <ul className="agentdir-grid au-grid-2">
+                {RELATED.map((c) => (
+                  <li key={c.h}>
+                    <a href={c.h}>
+                      <span className="agentdir-t">{c.t}</span>
+                      <span className="agentdir-l">{c.d}</span>
+                      <span className="agentdir-go" aria-hidden="true">↗</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </section>
 
-        {/* ═══ 18. FINAL CTA (the only dark section) ═══ */}
-        <section className="dark-sec">
-          <div className="wrap" style={{ textAlign: 'center', maxWidth: 640 }}>
-            <span className="eyebrow">Ready when you are</span>
-            <h2>See which job an AI agent could take off your team’s plate</h2>
-            <p className="mt-4">
-              Send your name and work email. The founder replies within 24 hours to book a short call about your
-              systems, the task you want to automate, and whether an AI agent is the right answer. No spam, no
-              obligation.
-            </p>
-            <div className="mt-8" style={{ display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap' }}>
-              <ModalCTAButton label="Talk to the Founder" region="au" modalVariant="default" btnVariant="primary-light" />
-              <a className="btn btn-outline" href="/au/ai-consulting" style={{ color: '#fff', borderColor: 'rgba(255,255,255,.25)' }}>Start with AI consulting</a>
+        {/* ═══ FAQ (Family A accordion; same FAQ_ITEMS array as the FAQPage JSON-LD) ═══ */}
+        <AuFaq
+          categories={FAQ_CATEGORIES}
+          items={FAQ_ITEMS}
+          heading="AI agents and automation: questions Australian business owners ask"
+          askLabel="Still have a question? Ask the founder →"
+          askNote="Replies within 24 hours."
+        />
+
+        {/* ═══ FINAL CTA (light, US finalcta) ═══ */}
+        <section className="finalcta" id="finalcta">
+          <div className="wrap">
+            <div>
+              <div className="eyebrow">Ready when you are</div>
+              <h2>See which job an AI agent could take off your team’s plate</h2>
+              <p>
+                Send your name and work email. The founder replies within 24 hours to book a short call about your
+                systems, the task you want to automate, and whether an AI agent is the right answer. No spam, no
+                obligation.
+              </p>
+            </div>
+            <div className="ctas">
+              <ModalCTAButton label="Talk to the Founder" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
+              <a className="btn btn-ghost" href="/au/ai-consulting">Start with AI consulting</a>
             </div>
           </div>
         </section>
@@ -1056,7 +1101,7 @@ export default function AiAgentsAUPage() {
       </main>
       </div>
 
-      <SiteFooter locale="au" linkColumns={AU_FOOTER_COLUMNS} variant="dark" tagline="Ecommerce, AI agents, websites and AI search for Australian businesses. Built by senior engineers, supported after launch, owned by you." />
+      <SiteFooter locale="au" linkColumns={AU_FOOTER_COLUMNS} tagline="Ecommerce, AI agents, websites and AI search for Australian businesses. Built by senior engineers, supported after launch, owned by you." />
     </>
   );
 }

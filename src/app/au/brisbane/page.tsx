@@ -1,14 +1,18 @@
 import type { Metadata } from 'next';
+import { Fragment } from 'react';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
-import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import { AU_FOOTER_COLUMNS } from '@/data/auFooterColumns';
 import { CANONICAL, CRUMBS, CITATIONS, SERVICE_AREAS } from './pageData';
 import { FAQ_CATEGORIES, FAQ_ITEMS } from './faqData';
-import '../au-service.css';
+import AuFaq from '../components/AuFaq';
+import VisualSlot from '../components/VisualSlot';
+import '@/components/v2/AiAgentDevelopmentSections.css';
+import '../au-page.css';
+import '../au-city.css';
 
 /* Primary terms (DataForSEO, Australia, fetched 2026-09-24, close variants collapsed):
    web design brisbane 2,400 (same cluster: website design brisbane, web design company
@@ -21,18 +25,6 @@ const TITLE = 'Web Design & SEO Brisbane | Fast Sites | FactoryJet';
 const H1 = 'Web design and SEO for Brisbane businesses';
 const DESCRIPTION =
   'Brisbane web design and SEO for businesses that need enquiries. Fast sites by senior engineers, Google Business Profile done properly, and you own it all.';
-
-/* Design tokens, copied by value from ../au-service.css (same as /au/ai-agents). */
-const T = {
-  ink: '#0F0F12',
-  n200: '#E5E5E0',
-  n400: '#6E6E68',
-  orange: '#FF5C00',
-  green: '#047857',
-  small: '#B23E13',
-  fm: "'Geist Mono',monospace",
-  fd: "'Plus Jakarta Sans',sans-serif",
-};
 
 const [SRC_ABS, SRC_CWV, SRC_SEO_GUIDE] = CITATIONS;
 
@@ -226,9 +218,41 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-const srcNote = { fontFamily: T.fm, fontSize: 11, color: T.n400, marginTop: 12 } as const;
-const srcLink = { textDecoration: 'underline' } as const;
-const imgStyle = { width: '100%', height: 'auto', borderRadius: 12, display: 'block' } as const;
+const extLink = { target: '_blank', rel: 'noopener noreferrer nofollow' } as const;
+
+/* Visual slot page key (route without /au/). */
+const PAGE_KEY = 'brisbane';
+
+/* H1 split for the Family A hero emphasis. Rendered text stays byte-identical to H1 (schema headline). */
+const H1_SPLIT = H1.lastIndexOf(' for ');
+const H1_LEAD = H1.slice(0, H1_SPLIT);
+const H1_EMPHASIS = H1.slice(H1_SPLIT + 1);
+
+const STEP_ICON = { width: 24, height: 24, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', strokeWidth: 1.5, strokeLinecap: 'round', strokeLinejoin: 'round' } as const;
+const CAP_ICON = { width: 24, height: 24, viewBox: '0 0 24 24', fill: 'none', stroke: '#C94A1A', strokeWidth: 1.6, strokeLinecap: 'round', strokeLinejoin: 'round', 'aria-hidden': true } as const;
+
+/* Hero spec panel rows (the old "What you get, in short" hero card rows). */
+const HERO_ROWS: { note: string; metric: string; val: string; icon: string }[] = [
+  { note: 'websites up to 5 pages', metric: '7-day delivery', val: '7 days', icon: 'M4 5h16v15H4V5Zm0 5h16M8 3v4m8-4v4' },
+  { note: 'on every build, measured', metric: 'Largest Contentful Paint target', val: 'Under 2.5s', icon: 'M4 16a8 8 0 1 1 16 0M12 16l4-5' },
+  { note: 'in your name from day one', metric: 'Domain, site and every account', val: 'Yours', icon: 'M14 4a6 6 0 1 1-4.2 10.3L4 20m2-2 2 2m1-5 2 2' },
+];
+
+/* Icons and visual-slot subjects for the five web design cards (same order as WEB_DESIGN). */
+const WEB_DESIGN_ICONS = [
+  'M8 3h8a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Zm3 15h2',
+  'M4 5h16M4 12h11M4 19h7',
+  'M6 3h9l4 4v14H6V3Zm3 8h7m-7 4h7',
+  'M5 4h4l2 5-3 2a11 11 0 0 0 5 5l2-3 5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1Z',
+  'M14 4a6 6 0 1 1-4.2 10.3L4 20m2-2 2 2m1-5 2 2',
+] as const;
+const WEB_DESIGN_SUBJECTS = [
+  'AI-generated model: a white phone with a fast-loading page and a small orange speed gauge beside it',
+  'AI-generated model: a row of white page cards, each labelled with the plain name a customer would search',
+  'AI-generated model: a white page card with an orange answer block at the top and plain text lines below',
+  'AI-generated model: a white phone with one large orange call button beside a laptop showing a short form',
+  'AI-generated model: an orange key being handed from one small figure to another in front of a white website card',
+] as const;
 
 export default function BrisbanePage() {
   return (
@@ -237,139 +261,168 @@ export default function BrisbanePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <SiteHeader locale="au" logoHref="/au" />
-
-      <div className="au-svc">
+      <div className="aiAgentPage auPage">
+      <nav className="crumbs" aria-label="Breadcrumb">
+        <div className="wrap">
+          {CRUMBS.map((item, index) => (
+            <Fragment key={item.url}>
+              {index > 0 && ' / '}
+              {index === CRUMBS.length - 1 ? <b aria-current="page">{item.name}</b> : <a href={item.url}>{item.name}</a>}
+            </Fragment>
+          ))}
+        </div>
+      </nav>
       <main id="main-content">
 
-        <Breadcrumbs items={CRUMBS} />
+        {/* ═══ HERO (US web-design hub hero: copy + inline form left, spec panel right) ═══ */}
+        <section className="hero" id="hero">
+          <div className="wrap hero-grid">
+            <div className="hero-copy">
+              <div className="eyebrow">Brisbane, Queensland</div>
+              <h1>{H1_LEAD} <span className="hero-emphasis">{H1_EMPHASIS}</span></h1>
+              <p className="lead">
+                Web design in Brisbane for businesses with a real sales process behind the website. We build fast
+                websites for Brisbane companies and get them found in Google and Google Maps. Senior engineers do the
+                work, you own everything at the end, and we tell you which parts of a search plan pay back in weeks
+                and which take quarters.
+              </p>
+              <HeroInlineForm region="au" source="au_brisbane_hero_inline" submitLabel="Get my free site review" />
+            </div>
 
-        {/* ═══ 1. HERO ═══ */}
-        <section className="sec-lg dot-grid" style={{ position: 'relative' }}>
+            <form
+              className="specpanel"
+              aria-label="What you get, in short"
+              data-visual-slot={`${PAGE_KEY}:hero`}
+              data-visual-kind="diagram"
+              data-visual-subject="What every Brisbane build includes: 7-day delivery for small sites, a measured speed target, and every account in the client's name"
+              data-visual-ratio="1:1"
+              data-visual-status="filled"
+            >
+              <div className="specpanel-bar">
+                <span className="statusdot"></span>
+                <span>INCLUDED · WHAT YOU GET, IN SHORT</span>
+                <span className="sys"><span>WEB DESIGN</span><span>SEO &amp; LOCAL SEARCH</span></span>
+              </div>
+              <div className="workflow-controls">
+                <label className="workflow-toggle" title="Pause or resume the animation">
+                  <input type="checkbox" className="workflow-pause" aria-label="Pause animation" />
+                  <svg className="pause-icon" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M5 3v10M11 3v10" fill="none" stroke="currentColor" strokeWidth="2" /></svg>
+                  <svg className="play-icon" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="m5 3 8 5-8 5Z" fill="currentColor" /></svg>
+                </label>
+                <button type="reset" className="workflow-replay" aria-label="Replay animation" title="Replay animation">
+                  <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M3 6a5 5 0 1 1 0 4M3 2v4h4" /></svg>
+                </button>
+              </div>
+              <div className="specpanel-body" role="radiogroup" aria-label="Explore what you get">
+                {HERO_ROWS.map((r, i) => (
+                  <label key={r.metric} className={i === HERO_ROWS.length - 1 ? 'specrow hold' : 'specrow run'}>
+                    <input className="workflow-select" type="radio" name="brisbane-step" value={String(i + 1)} />
+                    <span className="workflow-icon" aria-hidden="true"><svg {...STEP_ICON}><path d={r.icon} /></svg></span>
+                    <span className="idx">{r.note}</span>
+                    <span className="title">{r.metric}</span>
+                    <span className="tag">{r.val}</span>
+                  </label>
+                ))}
+              </div>
+              <div className="specpanel-foot">RULE · If you leave, nothing breaks and nothing needs to be bought back.</div>
+            </form>
+          </div>
+        </section>
+
+        {/* ═══ LEDGER (was the facts band) ═══ */}
+        <div className="ledger">
           <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <div className="flex-wrap mb-6">
-                  <span className="chip"><span className="dot dot-orange" />Brisbane, Queensland</span>
-                  <span className="chip">Web Design</span>
-                  <span className="chip">SEO &amp; Local Search</span>
-                </div>
-                <h1>{H1}</h1>
-                <p className="lead mt-6" style={{ maxWidth: 560 }}>
-                  Web design in Brisbane for businesses with a real sales process behind the website. We build fast
-                  websites for Brisbane companies and get them found in Google and Google Maps. Senior engineers do the
-                  work, you own everything at the end, and we tell you which parts of a search plan pay back in weeks
-                  and which take quarters.
-                </p>
-
-                <div className="byline mt-6" style={{ maxWidth: 560 }}>
-                  <div className="av">BB</div>
-                  <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
-                  <div className="upd">Last updated<br />26 September 2026</div>
-                </div>
-
-                <div className="mt-6" style={{ maxWidth: 560 }}>
-                  <HeroInlineForm region="au" source="au_brisbane_hero_inline" submitLabel="Get my free site review" />
+            {[
+              { v: '2,400', t: 'monthly searches for “web design brisbane” and its close variants', s: 'DataForSEO, Sep 2026', u: '' },
+              { v: '19,244', t: 'more businesses in Queensland across 2025–26', s: 'ABS, Aug 2026', u: SRC_ABS.url },
+              { v: '22', t: 'websites linking to the weakest page-one site for “brisbane web designer”', s: 'Google AU, 24 Sep 2026', u: '' },
+              { v: '2.5s', t: 'Google’s Largest Contentful Paint mark for a good page experience', s: 'Google Search Central', u: SRC_CWV.url },
+            ].map((r) => (
+              <div className="ledgercell" key={r.t}>
+                <div className="k">{r.u ? <a href={r.u} {...extLink}>{r.s}</a> : r.s}</div>
+                <div className="v">
+                  <strong className={/^[\d.,]+s?$/.test(r.v) ? 'ledger-number' : 'ledger-word'}>{r.v}</strong>
+                  {r.t}
                 </div>
               </div>
+            ))}
+          </div>
+        </div>
 
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/brisbane/brisbane-hero.webp" width={1400} height={933} fetchPriority="high" decoding="async" alt="A Brisbane web designer and a business owner review a new homepage design on a monitor in a Fortitude Valley office with timber louvres, palms and the Story Bridge outside" style={imgStyle} />
-                <div style={{ padding: '14px 12px 8px' }}>
-                  <span className="eyebrow">What you get, in short</span>
-                  <div className="scorecard-row">
-                    <div><div className="scorecard-metric">7-day delivery</div><div className="scorecard-note">websites up to 5 pages</div></div>
-                    <div className="scorecard-val" style={{ fontSize: 15 }}>7 days</div>
-                  </div>
-                  <div className="scorecard-row">
-                    <div><div className="scorecard-metric">Largest Contentful Paint target</div><div className="scorecard-note">on every build, measured</div></div>
-                    <div className="scorecard-val" style={{ fontSize: 15 }}>Under 2.5s</div>
-                  </div>
-                  <div className="scorecard-row">
-                    <div><div className="scorecard-metric">Domain, site and every account</div><div className="scorecard-note">in your name from day one</div></div>
-                    <div className="scorecard-val" style={{ color: T.green, fontSize: 15 }}>Yours</div>
-                  </div>
+        <div className="wrap byline">
+          <div className="av">BB</div>
+          <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
+          <div className="upd">Last updated<br />26 September 2026</div>
+        </div>
+
+        {/* ═══ ANSWER-FIRST (GEO) → facts ═══ */}
+        <section className="section facts" id="answer">
+          <div className="wrap">
+            <div className="section-head">
+              <h2 data-speakable="true">What does a web design and SEO agency in Brisbane actually do?</h2>
+            </div>
+            <div className="factswrap">
+              <div className="factlist">
+                <div className="fact">
+                  <div className="sec">§01</div>
+                  <p data-speakable="true">
+                    A web design and SEO agency in Brisbane builds a site that loads quickly and explains what you sell,
+                    then gets it found by people searching in this city. That is three jobs done in order: fix the
+                    technical faults that stop Google reading the site, build pages that answer what Brisbane buyers type
+                    and connect them to a correct Google Business Profile, then earn mentions from real Queensland sites.
+                  </p>
+                </div>
+                <div className="fact">
+                  <div className="sec">§02</div>
+                  <p>
+                    FactoryJet does all three and reports on enquiries rather than rankings. The order matters more than most
+                    agencies admit. Publishing content on a site Google struggles to crawl is money spent on pages nobody will
+                    be shown. Chasing links before the map listing is right is effort spent on the slowest lever first. So we
+                    sequence the work by what pays back soonest, and say out loud which parts take a couple of quarters.
+                  </p>
                 </div>
               </div>
+              <VisualSlot page={PAGE_KEY} slot="facts" kind="photo" ratio="3:2" className="factphoto"
+                subject="A Brisbane web designer and a business owner reviewing a new homepage on a monitor in a Fortitude Valley office">
+                <img src="/images/au/brisbane/brisbane-hero.webp" width={1400} height={933} loading="lazy" decoding="async" alt="A Brisbane web designer and a business owner review a new homepage design on a monitor in a Fortitude Valley office with timber louvres, palms and the Story Bridge outside" />
+              </VisualSlot>
             </div>
           </div>
         </section>
 
-        {/* ═══ 2. ANSWER-FIRST (GEO) ═══ */}
-        <section className="sec">
+        {/* ═══ FIRST NINETY DAYS → facts, at-a-glance card as the side panel ═══ */}
+        <section className="section facts" id="first-ninety-days">
           <div className="wrap">
-            <div className="def" style={{ maxWidth: 940 }} data-speakable="true">
-              <span className="lab">What does a web design and SEO agency in Brisbane actually do?</span>
-              <p>
-                A web design and SEO agency in Brisbane builds a site that loads quickly and explains what you sell,
-                then gets it found by people searching in this city. That is three jobs done in order: fix the
-                technical faults that stop Google reading the site, build pages that answer what Brisbane buyers type
-                and connect them to a correct Google Business Profile, then earn mentions from real Queensland sites.
+            <div className="section-head">
+              <div className="eyebrow">What happens first</div>
+              <h2>Web design and SEO in Brisbane: six things in the first ninety days</h2>
+              <p className="lead">
+                Whether you start with a new site or with search repair, these are the six things a good Brisbane
+                engagement delivers in its first quarter. Use the list to compare any agency, including us.
               </p>
             </div>
-            <p className="lead mt-8" style={{ maxWidth: 920 }}>
-              FactoryJet does all three and reports on enquiries rather than rankings. The order matters more than most
-              agencies admit. Publishing content on a site Google struggles to crawl is money spent on pages nobody will
-              be shown. Chasing links before the map listing is right is effort spent on the slowest lever first. So we
-              sequence the work by what pays back soonest, and say out loud which parts take a couple of quarters.
-            </p>
-          </div>
-        </section>
-
-        {/* ═══ 3. FACTS BAND ═══ */}
-        <section className="stats-band">
-          <div className="wrap">
-            <ul className="col-4" style={{ gap: 20 }}>
-              {[
-                { v: '2,400', t: 'monthly searches for “web design brisbane” and its close variants', s: 'DataForSEO, Sep 2026', u: '' },
-                { v: '19,244', t: 'more businesses in Queensland across 2025–26', s: 'ABS, Aug 2026', u: SRC_ABS.url },
-                { v: '22', t: 'websites linking to the weakest page-one site for “brisbane web designer”', s: 'Google AU, 24 Sep 2026', u: '' },
-                { v: '2.5s', t: 'Google’s Largest Contentful Paint mark for a good page experience', s: 'Google Search Central', u: SRC_CWV.url },
-              ].map((r) => (
-                <li key={r.t}>
-                  <div style={{ fontFamily: T.fd, fontWeight: 800, fontSize: 26, color: T.orange }}>{r.v}</div>
-                  <p style={{ fontSize: 13.5, color: T.ink, marginTop: 4 }}>{r.t}</p>
-                  {r.u ? (
-                    <a href={r.u} target="_blank" rel="noopener noreferrer nofollow" style={{ fontFamily: T.fm, fontSize: 10, color: T.n400, textDecoration: 'underline' }}>{r.s}</a>
-                  ) : (
-                    <span style={{ fontFamily: T.fm, fontSize: 10, color: T.n400 }}>{r.s}</span>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-
-        {/* ═══ 4. FIRST NINETY DAYS ═══ */}
-        <section className="sec-lg dot-grid">
-          <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <span className="eyebrow">What happens first</span>
-                <h2>Web design and SEO in Brisbane: six things in the first ninety days</h2>
-                <p className="lead mt-4" style={{ maxWidth: 560 }}>
-                  Whether you start with a new site or with search repair, these are the six things a good Brisbane
-                  engagement delivers in its first quarter. Use the list to compare any agency, including us.
-                </p>
-                <ol className="stack mt-8">
-                  {FIRST_NINETY.map((item, i) => (
-                    <li key={item} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
-                      <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.orange, minWidth: 34 }}>{String(i + 1).padStart(2, '0')}</span>
-                      <p style={{ margin: 0 }}>{item}</p>
-                    </li>
-                  ))}
-                </ol>
+            <div className="factswrap">
+              <div className="factlist">
+                {FIRST_NINETY.map((item, i) => (
+                  <div key={item} className="fact">
+                    <div className="sec">§{String(i + 1).padStart(2, '0')}</div>
+                    <p>{item}</p>
+                  </div>
+                ))}
               </div>
-              <div className="card card-top-orange">
-                <span className="eyebrow">Brisbane web design and SEO at a glance</span>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Where we work</div><div className="scorecard-note">Brisbane City to Ipswich, Logan, Redlands, Moreton Bay</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>SEQ</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Who it is for</div><div className="scorecard-note">trades, professional services, clinics, B2B, retail</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>SMBs</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">How it starts</div><div className="scorecard-note">site and Google listing review, then a written scope</div></div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Free</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">How we meet</div><div className="scorecard-note">video calls in Queensland business hours</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Remote</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">What we will not do</div><div className="scorecard-note">buy links, publish thin suburb pages, hold your domain</div></div><div className="scorecard-val" style={{ color: T.small, fontSize: 14 }}>Never</div></div>
-                <p style={{ fontSize: 13, color: T.n400, marginTop: 12 }}>
+              <div className="au-panel">
+                <div className="eyebrow">Brisbane web design and SEO at a glance</div>
+                <ul className="trigrows">
+                  <li><span className="m">Where we work</span><span className="n">Brisbane City to Ipswich, Logan, Redlands, Moreton Bay</span><span className="t">SEQ</span></li>
+                  <li><span className="m">Who it is for</span><span className="n">trades, professional services, clinics, B2B, retail</span><span className="t">SMBs</span></li>
+                  <li><span className="m">How it starts</span><span className="n">site and Google listing review, then a written scope</span><span className="t">Free</span></li>
+                  <li><span className="m">How we meet</span><span className="n">video calls in Queensland business hours</span><span className="t">Remote</span></li>
+                  <li><span className="m">What we will not do</span><span className="n">buy links, publish thin suburb pages, hold your domain</span><span className="t">Never</span></li>
+                </ul>
+                <p className="au-note">
                   No price figures appear on this page on purpose. Brisbane quotes vary by how much repair a site needs
                   and how much content already exists. You get yours in writing after the free review. Our{' '}
-                  <a href="/blog/website-cost-australia-2026" style={srcLink}>Australian website cost guide</a> shows the
+                  <a href="/blog/website-cost-australia-2026">Australian website cost guide</a> shows the
                   published market ranges.
                 </p>
               </div>
@@ -377,74 +430,70 @@ export default function BrisbanePage() {
           </div>
         </section>
 
-        {/* ═══ 5. BRISBANE MARKET + DEMAND ═══ */}
-        <section className="sec-lg">
+        {/* ═══ BRISBANE MARKET + DEMAND → prose/demand split, then city table ═══ */}
+        <section className="section market" id="market">
           <div className="wrap">
-            <div className="col-6040">
+            <div className="section-head">
+              <div className="eyebrow">The Brisbane search market</div>
+              <h2>What competing for website design in Brisbane actually looks like</h2>
+            </div>
+            <div className="au-split au-split-flush">
               <div>
-                <span className="eyebrow">The Brisbane search market</span>
-                <h2>What competing for website design in Brisbane actually looks like</h2>
-                <div className="stack mt-6">
-                  <p>
-                    Queensland gained 19,244 businesses across 2025–26, part of a national count of 2,814,778 actively
-                    trading businesses at 30 June 2026. The same ABS release puts the national entry rate at 16.9% and
-                    the exit rate at 13.8%. Roughly one in six businesses around you is new, and roughly one in seven
-                    will be gone within the year.
-                  </p>
-                  <p>
-                    For search, that churn cuts both ways. New competitors appear constantly, which is why a site left
-                    alone for three years slides. But it also means part of the Brisbane page-one field has not been
-                    building authority for long. We checked on 24 September 2026, counting how many separate websites
-                    link to each page-one result (referring domains, the main measure of authority). For “brisbane web
-                    designer” the weakest site had links from 22 websites and the middle of the pack about 55. In
-                    Melbourne, the middle of page one for the same search sat at around 960.
-                  </p>
-                  <p>
-                    That makes the Brisbane web design searches among the more reachable we measured for a site
-                    that is fast, clear and genuinely useful. The SEO agency searches are harder: the middle of page one
-                    for “brisbane seo agency” had about 610 linking sites. We tell you which of your terms sit where
-                    before you spend anything.
-                  </p>
-                  <p>
-                    Most of these searches also show a Google Maps pack above the ordinary results, and that pack goes
-                    to businesses with a nearby Brisbane address. We do not have a Brisbane office and will not invent
-                    one. What we do is set up your own Google Business Profile so you are the one in it.
-                  </p>
-                </div>
-                <p style={srcNote}>
-                  Sources: <a href={SRC_ABS.url} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>{SRC_ABS.source}, {SRC_ABS.title}</a>;
+                <p>
+                  Queensland gained 19,244 businesses across 2025–26, part of a national count of 2,814,778 actively
+                  trading businesses at 30 June 2026. The same ABS release puts the national entry rate at 16.9% and
+                  the exit rate at 13.8%. Roughly one in six businesses around you is new, and roughly one in seven
+                  will be gone within the year.
+                </p>
+                <p>
+                  For search, that churn cuts both ways. New competitors appear constantly, which is why a site left
+                  alone for three years slides. But it also means part of the Brisbane page-one field has not been
+                  building authority for long. We checked on 24 September 2026, counting how many separate websites
+                  link to each page-one result (referring domains, the main measure of authority). For “brisbane web
+                  designer” the weakest site had links from 22 websites and the middle of the pack about 55. In
+                  Melbourne, the middle of page one for the same search sat at around 960.
+                </p>
+                <p>
+                  That makes the Brisbane web design searches among the more reachable we measured for a site
+                  that is fast, clear and genuinely useful. The SEO agency searches are harder: the middle of page one
+                  for “brisbane seo agency” had about 610 linking sites. We tell you which of your terms sit where
+                  before you spend anything.
+                </p>
+                <p>
+                  Most of these searches also show a Google Maps pack above the ordinary results, and that pack goes
+                  to businesses with a nearby Brisbane address. We do not have a Brisbane office and will not invent
+                  one. What we do is set up your own Google Business Profile so you are the one in it.
+                </p>
+                <p className="au-note">
+                  Sources: <a href={SRC_ABS.url} {...extLink}>{SRC_ABS.source}, {SRC_ABS.title}</a>;
                   {' '}search volumes and page-one checks from DataForSEO, Google Australia, 24 September 2026.
                 </p>
               </div>
-
-              <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: `1px solid ${T.n200}`, padding: '14px 18px' }}>
-                  <span style={{ fontFamily: T.fm, fontSize: 10, letterSpacing: '.13em', textTransform: 'uppercase', color: T.n400 }}>Brisbane · Monthly Searches</span>
-                  <span style={{ background: T.small, color: '#fff', fontFamily: T.fm, fontSize: 10, borderRadius: 999, padding: '3px 9px' }}>DataForSEO</span>
-                </div>
-                <div style={{ padding: '4px 18px 14px' }}>
-                  <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
-                    {DEMAND.map((r) => (
-                      <li key={r.kw} className="demand-row">
-                        <div className="demand-top"><span className="demand-kw">{r.kw}</span><span className="demand-v">{r.v}<span style={{ fontSize: 9, color: T.n400 }}> searches</span></span></div>
-                        <div className="demand-bar"><i style={{ width: r.w }} /></div>
-                        <div className="demand-kd">{r.note}</div>
-                      </li>
-                    ))}
-                  </ul>
-                  <p style={{ textAlign: 'center', fontFamily: T.fm, fontSize: 10, color: T.n400, marginTop: 10 }}>Google Australia, September 2026. Close variants overlap.</p>
-                </div>
+              <div className="demand">
+                <div className="demand-head"><span>Brisbane · Monthly Searches</span><b>DataForSEO</b></div>
+                <ul>
+                  {DEMAND.map((r) => (
+                    <li key={r.kw} className="demand-row">
+                      <div className="demand-top"><span className="demand-kw">{r.kw}</span><span className="demand-v">{r.v}<small> searches</small></span></div>
+                      <div className="demand-bar"><i style={{ width: r.w }} /></div>
+                      <div className="demand-kd">{r.note}</div>
+                    </li>
+                  ))}
+                </ul>
+                <p className="demand-src">Google Australia, September 2026. Close variants overlap.</p>
               </div>
             </div>
 
-            <h3 className="mt-12" style={{ maxWidth: 760 }}>How Brisbane compares with other Australian cities</h3>
-            <p className="mt-4" style={{ maxWidth: 760 }}>
-              Monthly searches that name each city, across the web design, SEO and ecommerce terms we track. Brisbane
-              has fewer searches than Sydney or Melbourne, and far fewer agencies with deep link profiles competing for
-              them. Add the Gold Coast next door and South East Queensland is a sizeable market in its own right.
-            </p>
-            <div className="card mt-6" style={{ padding: 0, overflowX: 'auto' }}>
-              <table className="cmp-table">
+            <div className="city-sub">
+              <h3>How Brisbane compares with other Australian cities</h3>
+              <p>
+                Monthly searches that name each city, across the web design, SEO and ecommerce terms we track. Brisbane
+                has fewer searches than Sydney or Melbourne, and far fewer agencies with deep link profiles competing for
+                them. Add the Gold Coast next door and South East Queensland is a sizeable market in its own right.
+              </p>
+            </div>
+            <div className="tablewrap">
+              <table>
                 <thead>
                   <tr>
                     <th>City</th>
@@ -457,7 +506,7 @@ export default function BrisbanePage() {
                 <tbody>
                   {CITIES.map((c) => (
                     <tr key={c.city}>
-                      <td className="feat">{c.href ? <a href={c.href} style={srcLink}>{c.city}</a> : c.city}{c.city === 'Brisbane' ? ' (this page)' : ''}</td>
+                      <th scope="row">{c.href ? <a href={c.href}>{c.city}</a> : c.city}{c.city === 'Brisbane' ? ' (this page)' : ''}</th>
                       <td>{c.total}</td>
                       <td className="fj">{c.web}</td>
                       <td>{c.seo}</td>
@@ -467,207 +516,218 @@ export default function BrisbanePage() {
                 </tbody>
               </table>
             </div>
-            <p style={srcNote}>DataForSEO, Google Australia, keyword volumes fetched 24 September 2026, close variants collapsed. City totals group terms by topic, so they differ from single-keyword volumes above.</p>
+            <p className="tablenote">DataForSEO, Google Australia, keyword volumes fetched 24 September 2026, close variants collapsed. City totals group terms by topic, so they differ from single-keyword volumes above.</p>
           </div>
         </section>
 
-        {/* ═══ 6. WHO WE BUILD FOR ═══ */}
-        <section className="sec-lg dot-grid">
+        {/* ═══ WHO WE BUILD FOR → ruled rows + suburb pills + city-map slot ═══ */}
+        <section className="section platforms" id="who-we-build-for">
           <div className="wrap">
-            <div className="col-6040">
+            <div className="section-head plat-head">
               <div>
-                <span className="eyebrow">Who we build for in Brisbane</span>
+                <div className="eyebrow">Who we build for in Brisbane</div>
                 <h2>Small business website design for Brisbane and South East Queensland</h2>
-                <p className="lead mt-4" style={{ maxWidth: 580 }}>
-                  Most of our Brisbane work is for businesses whose enquiries come from people searching rather than
-                  walking past a shopfront. Every industry buys differently, so the site has to match how your customers
-                  decide.
-                </p>
               </div>
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/brisbane/brisbane-cafe.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A cafe owner at a riverside cafe in South Bank, Brisbane, checks his cafe’s listing on his phone, with the Brisbane River, the city skyline and the Wheel of Brisbane behind him" style={imgStyle} />
-                <div style={{ padding: '12px 10px 6px' }}>
-                  <p style={{ fontSize: 14 }}>
-                    For a South Bank cafe, discovery happens in Google Maps on a phone. Opening hours, the menu and
-                    reviews do more work than the homepage.
-                  </p>
+              <p>
+                Most of our Brisbane work is for businesses whose enquiries come from people searching rather than
+                walking past a shopfront. Every industry buys differently, so the site has to match how your customers
+                decide.
+              </p>
+            </div>
+            <div className="platlist" role="list">
+              {SECTORS.map((s, i) => (
+                <div key={s.name} className="plat" role="listitem">
+                  <span className="capid">{String(i + 1).padStart(2, '0')}</span>
+                  <div className="plat-name"><h3>{s.name}</h3></div>
+                  <p className="plat-fit">{s.where}</p>
+                  <p className="plat-build">{s.note}</p>
                 </div>
+              ))}
+            </div>
+            <div className="city-areas">
+              <VisualSlot page={PAGE_KEY} slot="platforms" kind="photo" ratio="3:2" captionClassName="figcap"
+                subject="A cafe owner at a riverside cafe in South Bank checking his cafe's listing on his phone"
+                caption="For a South Bank cafe, discovery happens in Google Maps on a phone. Opening hours, the menu and reviews do more work than the homepage.">
+                <img src="/images/au/brisbane/brisbane-cafe.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A cafe owner at a riverside cafe in South Bank, Brisbane, checks his cafe’s listing on his phone, with the Brisbane River, the city skyline and the Wheel of Brisbane behind him" />
+              </VisualSlot>
+              <div>
+                <div className="factlabel">Areas we work across</div>
+                <ul className="city-list">
+                  {SERVICE_AREAS.map((a) => (<li key={a}><span>{a}</span></li>))}
+                </ul>
+                <p className="city-areas-more">And the rest of Queensland.</p>
+                <VisualSlot page={PAGE_KEY} slot="city-map" kind="map" ratio="3:2"
+                  subject="A plain map of Brisbane and South East Queensland with the listed areas marked as small dots; no office pin, because FactoryJet has no Brisbane office" />
               </div>
             </div>
-            <ul className="col-3 mt-12">
-              {SECTORS.map((s) => (
-                <li key={s.name} className="svc-card">
-                  <h3>{s.name}</h3>
-                  <p style={{ fontFamily: T.fm, fontSize: 11, color: T.small, marginTop: 6, textTransform: 'uppercase', letterSpacing: '.06em' }}>{s.where}</p>
-                  <p className="mt-4">{s.note}</p>
-                </li>
-              ))}
-            </ul>
-            <p className="mt-8" style={{ fontSize: 14, color: T.n400 }}>
-              Areas we work across: {SERVICE_AREAS.join(', ')}, and the rest of Queensland.
-            </p>
           </div>
         </section>
 
-        {/* ═══ 7. WEB DESIGN ═══ */}
-        <section className="sec-lg" id="web-design-brisbane">
+        {/* ═══ WEB DESIGN → capgrid ═══ */}
+        <section className="section capabilities" id="web-design-brisbane">
           <div className="wrap">
-            <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">Web design Brisbane</span>
+            <div className="section-head">
+              <div className="eyebrow">Web design Brisbane</div>
               <h2>Website design in Brisbane: five things every site we build gets</h2>
-              <p className="lead mt-4">
+              <p className="lead">
                 We design and build the site, write or rework the content with you, and launch it. Websites of up to
                 five pages qualify for our 7-day delivery from an approved scope. Larger builds with bookings, customer
                 logins or integrations take longer, and we give you a date at scope rather than discovering it later.
               </p>
             </div>
-            <ol className="stack mt-10" style={{ maxWidth: 900 }}>
-              {WEB_DESIGN.map((s, i) => (
-                <li key={s.t} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
-                  <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.orange, minWidth: 34 }}>{String(i + 1).padStart(2, '0')}</span>
-                  <div>
-                    <h3 style={{ fontSize: 18 }}>{s.t}</h3>
-                    <p style={{ marginTop: 6 }}>{s.d}</p>
+            <div className="capgrid capgrid-odd">
+              {WEB_DESIGN.map((s, i) => {
+                const n = String(i + 1).padStart(2, '0');
+                return (
+                  <div key={s.t} className={`cap cap-${i + 1}`}>
+                    <div className="caphead"><span className="capid">CAP‑{n}</span><svg {...CAP_ICON}><path d={WEB_DESIGN_ICONS[i]} /></svg></div>
+                    <VisualSlot page={PAGE_KEY} slot={`capability-${n}`} kind="diagram" ratio="11:4" className="cap-diagram" subject={WEB_DESIGN_SUBJECTS[i]} />
+                    <h3>{s.t}</h3>
+                    <p>{s.d}</p>
                   </div>
-                </li>
-              ))}
-            </ol>
-            <p style={srcNote}>
-              Core Web Vitals marks: <a href={SRC_CWV.url} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>{SRC_CWV.source}, {SRC_CWV.title}</a>.
+                );
+              })}
+            </div>
+            <p className="tablenote">
+              Core Web Vitals marks: <a href={SRC_CWV.url} {...extLink}>{SRC_CWV.source}, {SRC_CWV.title}</a>.
             </p>
           </div>
         </section>
 
-        {/* ═══ 8. INTEGRATIONS + CLINIC ═══ */}
-        <section className="sec-lg dot-grid">
-          <div className="wrap">
-            <div className="col-6040">
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/brisbane/brisbane-clinic.webp" width={1200} height={800} loading="lazy" decoding="async" alt="The receptionist at a dental clinic in Chermside, Brisbane, checks the booking system while a mother and daughter wait in a bright room with subtropical greenery outside" style={imgStyle} />
-              </div>
-              <div>
-                <span className="eyebrow">Beyond the brochure site</span>
-                <h2>A website that works with the systems behind the front desk</h2>
-                <div className="stack mt-6">
-                  <p>
-                    A Chermside dental practice, a Milton law firm or a Newstead accountant rarely needs a prettier
-                    homepage. They need the booking button to write into the practice system, the enquiry form to land in
-                    the CRM, and invoices to reach Xero or MYOB without someone retyping them.
-                  </p>
-                  <p>
-                    That is where a custom build earns its keep over a template. We connect the site to the tools you
-                    already run through their official connections, and say plainly when a tool has no way in, so you can
-                    decide whether to change it or live with a manual step.
-                  </p>
-                  <p>
-                    If the repeated admin behind the website is the real problem, such as answering the same enquiry
-                    fifty times a week or copying orders between systems, look at <a href="/au/ai-agents" style={srcLink}>AI agents built into your existing tools</a>.
-                    If missed calls are the problem, see our <a href="/au/ai-receptionist" style={srcLink}>AI receptionist for Australian businesses</a>.
-                  </p>
-                </div>
-              </div>
-            </div>
+        {/* ═══ INTEGRATIONS + CLINIC → definition (image left, copy right) ═══ */}
+        <section className="definition" id="integrations">
+          <div>
+            <VisualSlot page={PAGE_KEY} slot="definition" kind="photo" ratio="3:2" className="definition-image"
+              subject="The receptionist at a Chermside dental clinic checking the booking system while a mother and daughter wait">
+              <img src="/images/au/brisbane/brisbane-clinic.webp" width={1200} height={800} loading="lazy" decoding="async" alt="The receptionist at a dental clinic in Chermside, Brisbane, checks the booking system while a mother and daughter wait in a bright room with subtropical greenery outside" />
+            </VisualSlot>
           </div>
-        </section>
-
-        <MidPageCTA
-          headline="See what is actually holding your Brisbane site back"
-          sub="Send us the address and we will crawl the site, check your Google Business Profile and read your own Search Console data, then send a short written summary of the three biggest problems. No charge, and no obligation to go further."
-          label="Get a free site review"
-          note="Bhavesh replies within one business day, Australian hours."
-        />
-
-        {/* ═══ 9. SEO ═══ */}
-        <section className="sec-lg" id="seo-brisbane">
-          <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <span className="eyebrow">SEO Brisbane</span>
-                <h2>SEO and local search in Brisbane, in the order that pays back</h2>
-                <p className="lead mt-4" style={{ maxWidth: 580 }}>
-                  About 1,900 Brisbane searches a month are for an SEO agency and another 390 for local SEO. Google
-                  itself says some changes take effect in a few hours and others take several months, and advises
-                  waiting a few weeks before judging a change. We plan against that reality rather than a launch date.
-                  See <a href="/blog/seo-cost-australia-2026#seo-cost-by-city" style={srcLink}>SEO cost by city</a> for
-                  published Australian price ranges.
-                </p>
-              </div>
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/brisbane/brisbane-tradie.webp" width={1200} height={800} loading="lazy" decoding="async" alt="An electrician on the front steps of a white Queenslander house with a jacaranda in flower checks a new job enquiry on his phone" style={imgStyle} />
-                <div style={{ padding: '12px 10px 6px' }}>
-                  <p style={{ fontSize: 14 }}>
-                    A Brisbane sparky gets most new work from the Maps pack on a customer’s phone. A complete Business
-                    Profile with honest service areas is the first job, not the last. More on{' '}
-                    <a href="/au/websites-for-tradies" style={srcLink}>websites and local SEO for tradies</a>.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <ul className="col-3 mt-12">
-              {SEO_WORK.map((a) => (
-                <li key={a.t} className="card">
-                  <h3 style={{ fontSize: 17 }}>{a.t}</h3>
-                  <p className="mt-4" style={{ fontSize: 14.5 }}>{a.d}</p>
-                </li>
-              ))}
-            </ul>
-            <p style={srcNote}>
-              Timing guidance: <a href={SRC_SEO_GUIDE.url} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>{SRC_SEO_GUIDE.source}, {SRC_SEO_GUIDE.title}</a>.
-              {' '}For the full service, see <a href="/au/seo" style={srcLink}>SEO services in Australia</a>; for visibility in ChatGPT and Google AI answers, see <a href="/au/ai-seo" style={srcLink}>AI SEO for Australian businesses</a>.
+          <div className="definition-copy">
+            <div className="eyebrow">Beyond the brochure site</div>
+            <h2>A website that works with the systems behind the front desk</h2>
+            <p>
+              A Chermside dental practice, a Milton law firm or a Newstead accountant rarely needs a prettier
+              homepage. They need the booking button to write into the practice system, the enquiry form to land in
+              the CRM, and invoices to reach Xero or MYOB without someone retyping them.
+            </p>
+            <p>
+              That is where a custom build earns its keep over a template. We connect the site to the tools you
+              already run through their official connections, and say plainly when a tool has no way in, so you can
+              decide whether to change it or live with a manual step.
+            </p>
+            <p>
+              If the repeated admin behind the website is the real problem, such as answering the same enquiry
+              fifty times a week or copying orders between systems, look at <a href="/au/ai-agents">AI agents built into your existing tools</a>.
+              If missed calls are the problem, see our <a href="/au/ai-receptionist">AI receptionist for Australian businesses</a>.
             </p>
           </div>
         </section>
 
-        {/* ═══ 10. PROCESS (<details>) ═══ */}
-        <section className="sec-lg dot-grid">
+        {/* ═══ SEO → facts ═══ */}
+        <section className="section facts" id="seo-brisbane">
           <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <span className="eyebrow">How a Brisbane project runs</span>
+            <div className="section-head">
+              <div className="eyebrow">SEO Brisbane</div>
+              <h2>SEO and local search in Brisbane, in the order that pays back</h2>
+              <p className="lead">
+                About 1,900 Brisbane searches a month are for an SEO agency and another 390 for local SEO. Google
+                itself says some changes take effect in a few hours and others take several months, and advises
+                waiting a few weeks before judging a change. We plan against that reality rather than a launch date.
+                See <a href="/blog/seo-cost-australia-2026#seo-cost-by-city">SEO cost by city</a> for
+                published Australian price ranges.
+              </p>
+            </div>
+            <div className="factswrap">
+              <div className="factlist">
+                {SEO_WORK.map((a, i) => (
+                  <div key={a.t} className="fact">
+                    <div className="sec">§{String(i + 1).padStart(2, '0')}</div>
+                    <div>
+                      <h3>{a.t}</h3>
+                      <p>{a.d}</p>
+                      {i === SEO_WORK.length - 1 ? (
+                        <p className="au-note">
+                          Timing guidance: <a href={SRC_SEO_GUIDE.url} {...extLink}>{SRC_SEO_GUIDE.source}, {SRC_SEO_GUIDE.title}</a>.
+                          {' '}For the full service, see <a href="/au/seo">SEO services in Australia</a>; for visibility in ChatGPT and Google AI answers, see <a href="/au/ai-seo">AI SEO for Australian businesses</a>.
+                        </p>
+                      ) : null}
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <VisualSlot page={PAGE_KEY} slot="facts-2" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
+                subject="An electrician on the front steps of a Queenslander house checking a new job enquiry on his phone"
+                caption={<>A Brisbane sparky gets most new work from the Maps pack on a customer’s phone. A complete Business Profile with honest service areas is the first job, not the last. More on{' '}<a href="/au/websites-for-tradies">websites and local SEO for tradies</a>.</>}>
+                <img src="/images/au/brisbane/brisbane-tradie.webp" width={1200} height={800} loading="lazy" decoding="async" alt="An electrician on the front steps of a white Queenslander house with a jacaranda in flower checks a new job enquiry on his phone" />
+              </VisualSlot>
+            </div>
+          </div>
+        </section>
+
+        {/* ═══ PHOTOBREAK (US template visual, no AU image yet) ═══ */}
+        <VisualSlot page={PAGE_KEY} slot="photobreak" kind="illustration" ratio="12:5" className="photobreak"
+          subject="AI-generated model: a white Queenslander house model beside a row of white website page cards, one card lifted in orange" />
+
+        {/* ═══ PROCESS (steps stay openable, as the copy says) ═══ */}
+        <section className="section process" id="process">
+          <div className="wrap">
+            <div className="head-media">
+              <div className="section-head">
+                <div className="eyebrow">How a Brisbane project runs</div>
                 <h2>From free review to live website in seven steps</h2>
-                <p className="lead mt-4" style={{ maxWidth: 560 }}>
+                <p className="lead">
                   Open any step to see what happens and what you get at the end of it. You can stop after the review or
                   after the scope, and keep what we gave you.
                 </p>
-                <div className="card mt-8" style={{ padding: '4px 22px' }}>
-                  {STEPS.map((s) => (
-                    <details key={s.n}>
-                      <summary><span><span style={{ fontFamily: T.fm, color: T.small, marginRight: 10 }}>{s.n}</span>{s.t}</span></summary>
-                      <div style={{ paddingBottom: 18 }}>
-                        <p style={{ fontSize: 15 }}>{s.d}</p>
-                        <p style={{ fontSize: 14, marginTop: 8 }}><b>You get:</b> {s.out}</p>
-                      </div>
-                    </details>
-                  ))}
-                </div>
-                <p className="mt-4" style={{ fontSize: 14 }}>
-                  Monthly fixes and updates are covered by our <a href="/au/website-maintenance" style={srcLink}>website maintenance</a> plans.
-                </p>
               </div>
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/brisbane/brisbane-planning.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A web designer and a business owner plan a website sitemap with pastel cards pinned to a wall in a West End Brisbane studio with louvred windows and ceiling fans" style={imgStyle} />
-                <div style={{ padding: '14px 12px 8px' }}>
-                  <p style={{ fontSize: 14 }}>
-                    Step three is the sitemap: every page named after something Brisbane buyers search, agreed with you
-                    before anyone opens a design tool.
-                  </p>
-                </div>
-              </div>
+              <VisualSlot page={PAGE_KEY} slot="process" kind="photo" ratio="3:2" captionClassName="figcap"
+                subject="A web designer and a business owner planning a sitemap with cards pinned to a wall in a West End studio"
+                caption="Step three is the sitemap: every page named after something Brisbane buyers search, agreed with you before anyone opens a design tool.">
+                <img src="/images/au/brisbane/brisbane-planning.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A web designer and a business owner plan a website sitemap with pastel cards pinned to a wall in a West End Brisbane studio with louvred windows and ceiling fans" />
+              </VisualSlot>
             </div>
+            <div className="timeline timeline-4">
+              {STEPS.map((s) => (
+                <details key={s.n} className="tnode">
+                  <summary>
+                    <div className="idx">{s.n}</div>
+                    <h3>{s.t}<span className="chev" aria-hidden="true">+</span></h3>
+                  </summary>
+                  <p>{s.d}</p>
+                  <p><b>You get:</b> {s.out}</p>
+                </details>
+              ))}
+            </div>
+            <p className="tablenote">
+              Monthly fixes and updates are covered by our <a href="/au/website-maintenance">website maintenance</a> plans.
+            </p>
           </div>
         </section>
 
-        {/* ═══ 11. COMPARISON TABLE ═══ */}
-        <section className="sec-lg">
+        <div className="au-midcta">
+          <MidPageCTA
+            headline="See what is actually holding your Brisbane site back"
+            sub="Send us the address and we will crawl the site, check your Google Business Profile and read your own Search Console data, then send a short written summary of the three biggest problems. No charge, and no obligation to go further."
+            label="Get a free site review"
+            note="Bhavesh replies within one business day, Australian hours."
+          />
+        </div>
+
+        {/* ═══ COMPARISON TABLE ═══ */}
+        <section className="section comparison" id="comparison">
           <div className="wrap">
-            <span className="eyebrow">Side by side</span>
-            <h2 style={{ maxWidth: 760 }}>FactoryJet vs a freelancer vs a traditional Brisbane web design agency</h2>
-            <p className="lead mt-4" style={{ maxWidth: 760 }}>
-              The last two rows are the ones worth reading. Every comparison table on the internet has the author
-              winning every line, which is why nobody believes them.
-            </p>
-            <div className="card mt-8" style={{ padding: 0, overflowX: 'auto' }}>
-              <table className="cmp-table">
+            <div className="section-head head-split">
+              <div className="eyebrow">Side by side</div>
+              <div>
+                <h2>FactoryJet vs a freelancer vs a traditional Brisbane web design agency</h2>
+                <p className="lead">
+                  The last two rows are the ones worth reading. Every comparison table on the internet has the author
+                  winning every line, which is why nobody believes them.
+                </p>
+              </div>
+            </div>
+            <div className="tablewrap">
+              <table>
                 <thead>
                   <tr>
                     <th>What you get</th>
@@ -677,142 +737,147 @@ export default function BrisbanePage() {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td className="feat">Who writes the code</td><td className="fj"><span className="yes">Senior engineers, the same people you speak to</span></td><td><span className="yes">The freelancer</span></td><td><span className="partial">Often a junior team or a subcontractor you never meet</span></td></tr>
-                  <tr><td className="feat">Time to launch</td><td className="fj"><span className="yes">7-day delivery for websites up to 5 pages</span></td><td><span className="partial">Depends on their workload</span></td><td><span className="partial">Often several weeks for a comparable site</span></td></tr>
-                  <tr><td className="feat">SEO and Google Business Profile</td><td className="fj"><span className="yes">Built into the project</span></td><td><span className="partial">Sometimes basic</span></td><td><span className="yes">Usually, often a separate retainer</span></td></tr>
-                  <tr><td className="feat">Ownership</td><td className="fj"><span className="yes">Domain, site, content and every account in your name from day one</span></td><td><span className="partial">Check the contract</span></td><td><span className="partial">Frequently held by the agency until exit</span></td></tr>
-                  <tr><td className="feat">Ongoing fee to stay online</td><td className="fj"><span className="yes">None. Hosting and domain only, and you can move them</span></td><td><span className="partial">Varies</span></td><td><span className="partial">Sometimes a monthly fee keeps the site published</span></td></tr>
-                  <tr><td className="feat">Link building</td><td className="fj"><span className="yes">Earned only, never bought</span></td><td><span className="partial">Rarely offered</span></td><td><span className="partial">Varies. Paid placement is still sold in this market</span></td></tr>
-                  <tr><td className="feat">Where we are the wrong choice</td><td className="fj"><span className="no">Brand campaigns, TV, print or a full marketing department</span></td><td><span className="partial">Not offered either</span></td><td><span className="yes">A full-service agency is genuinely better here</span></td></tr>
-                  <tr><td className="feat">Also the wrong choice if</td><td className="fj"><span className="no">You want a Brisbane office to visit weekly. We work remotely</span></td><td><span className="partial">Sometimes local</span></td><td><span className="yes">A local studio with an office wins, plainly</span></td></tr>
+                  <tr><th scope="row">Who writes the code</th><td className="fj">Senior engineers, the same people you speak to</td><td>The freelancer</td><td>Often a junior team or a subcontractor you never meet</td></tr>
+                  <tr><th scope="row">Time to launch</th><td className="fj">7-day delivery for websites up to 5 pages</td><td>Depends on their workload</td><td>Often several weeks for a comparable site</td></tr>
+                  <tr><th scope="row">SEO and Google Business Profile</th><td className="fj">Built into the project</td><td>Sometimes basic</td><td>Usually, often a separate retainer</td></tr>
+                  <tr><th scope="row">Ownership</th><td className="fj">Domain, site, content and every account in your name from day one</td><td>Check the contract</td><td>Frequently held by the agency until exit</td></tr>
+                  <tr><th scope="row">Ongoing fee to stay online</th><td className="fj">None. Hosting and domain only, and you can move them</td><td>Varies</td><td>Sometimes a monthly fee keeps the site published</td></tr>
+                  <tr><th scope="row">Link building</th><td className="fj">Earned only, never bought</td><td>Rarely offered</td><td>Varies. Paid placement is still sold in this market</td></tr>
+                  <tr><th scope="row">Where we are the wrong choice</th><td className="fj">Brand campaigns, TV, print or a full marketing department</td><td>Not offered either</td><td>A full-service agency is genuinely better here</td></tr>
+                  <tr><th scope="row">Also the wrong choice if</th><td className="fj">You want a Brisbane office to visit weekly. We work remotely</td><td>Sometimes local</td><td>A local studio with an office wins, plainly</td></tr>
                 </tbody>
               </table>
             </div>
           </div>
         </section>
 
-        {/* ═══ 12. SIX QUESTIONS + WHO RANKS ═══ */}
-        <section className="sec-lg dot-grid" id="choosing">
+        {/* ═══ SIX QUESTIONS + WHO RANKS → ruled rows + panel ═══ */}
+        <section className="section platforms" id="choosing">
           <div className="wrap">
-            <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">Before you choose anyone</span>
-              <h2>Six questions worth asking every Brisbane web design agency, including us</h2>
-              <p className="lead mt-4">
+            <div className="section-head plat-head">
+              <div>
+                <div className="eyebrow">Before you choose anyone</div>
+                <h2>Six questions worth asking every Brisbane web design agency, including us</h2>
+              </div>
+              <p>
                 These questions separate agencies quickly. We have written down why each one matters so you can use
                 them on us as well as everyone else. If our answers do not satisfy you, that is useful information too.
               </p>
             </div>
-            <ul className="col-3 mt-10">
+            <div className="platlist" role="list">
               {QUESTIONS.map((item, i) => (
-                <li key={item.q} className="card">
-                  <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 14, color: T.small }}>{String(i + 1).padStart(2, '0')}</span>
-                  <h3 style={{ fontSize: 17, marginTop: 6 }}>{item.q}</h3>
-                  <p className="mt-4" style={{ fontSize: 14.5 }}>{item.why}</p>
-                </li>
+                <div key={item.q} className="plat plat-2col" role="listitem">
+                  <span className="capid">{String(i + 1).padStart(2, '0')}</span>
+                  <div className="plat-name"><h3>{item.q}</h3></div>
+                  <p className="plat-build">{item.why}</p>
+                </div>
               ))}
-            </ul>
-            <div className="card card-top-orange mt-10" style={{ maxWidth: 900 }}>
+            </div>
+            <div className="au-panel au-panel-wide">
               <h3>Who Google showed on page one</h3>
-              <p className="mt-4" style={{ fontSize: 14.5 }}>
+              <p>
                 For “web design companies brisbane” on 24 September 2026, with directories removed, page one held these
                 sites. It is a record of the results page, not a recommendation, and a sensible place to start your own
                 shortlist before you ask the six questions.
               </p>
-              <ul className="flex-wrap mt-4" style={{ listStyle: 'none', padding: 0 }}>
-                {PAGE_ONE.map((d) => (<li key={d} className="chip">{d}</li>))}
+              <ul className="city-list">
+                {PAGE_ONE.map((d) => (<li key={d}><span>{d}</span></li>))}
               </ul>
             </div>
           </div>
         </section>
 
-        {/* ═══ 13. ECOMMERCE / B2B ═══ */}
-        <section className="sec-lg">
+        {/* ═══ ECOMMERCE / B2B → facts ═══ */}
+        <section className="section facts" id="ecommerce">
           <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <span className="eyebrow">Ecommerce website design Brisbane</span>
-                <h2>When the website has to take orders, not just enquiries</h2>
-                <div className="stack mt-6">
-                  <p>
-                    About 260 Brisbane searches a month are for ecommerce website design, and some of the most valuable
-                    buyers behind them are wholesalers and manufacturers around the TradeCoast, Ipswich and Logan who
-                    want trade customers to reorder online.
-                  </p>
-                  <p>
-                    That is a different build from a brochure site. Stock has to sync, GST has to be right, trade prices
-                    must show only to logged-in accounts, shipping has to work with Australia Post and couriers, and
-                    orders have to land in Xero or MYOB. FactoryJet has spent more than a decade on commerce builds,
-                    including B2B ordering for Bombay Petals.
-                  </p>
-                  <p>
-                    For store builds, see our <a href="/au/ecommerce-development" style={srcLink}>ecommerce development service in Australia</a>.
-                    If you are on or moving to Shopify, see <a href="/au/shopify-development" style={srcLink}>Shopify development for Australian businesses</a>;
-                    we are a registered Shopify Partner.
-                  </p>
-                </div>
+            <div className="section-head">
+              <div className="eyebrow">Ecommerce website design Brisbane</div>
+              <h2>When the website has to take orders, not just enquiries</h2>
+            </div>
+            <div className="factswrap">
+              <div className="factlist">
+                <div className="fact"><div className="sec">§01</div><p>
+                  About 260 Brisbane searches a month are for ecommerce website design, and some of the most valuable
+                  buyers behind them are wholesalers and manufacturers around the TradeCoast, Ipswich and Logan who
+                  want trade customers to reorder online.
+                </p></div>
+                <div className="fact"><div className="sec">§02</div><p>
+                  That is a different build from a brochure site. Stock has to sync, GST has to be right, trade prices
+                  must show only to logged-in accounts, shipping has to work with Australia Post and couriers, and
+                  orders have to land in Xero or MYOB. FactoryJet has spent more than a decade on commerce builds,
+                  including B2B ordering for Bombay Petals.
+                </p></div>
+                <div className="fact"><div className="sec">§03</div><p>
+                  For store builds, see our <a href="/au/ecommerce-development">ecommerce development service in Australia</a>.
+                  If you are on or moving to Shopify, see <a href="/au/shopify-development">Shopify development for Australian businesses</a>;
+                  we are a registered Shopify Partner.
+                </p></div>
               </div>
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/brisbane/brisbane-industrial.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A sales manager shows a trade buyer a tablet beside pallets of plain cartons in a bright distribution warehouse near the Brisbane TradeCoast" style={imgStyle} />
-                <div style={{ padding: '12px 10px 6px' }}>
-                  <p style={{ fontSize: 14 }}>
-                    Near the TradeCoast, the website is an ordering system. It has to agree with the pallets on the floor
-                    and the invoice in the accounts.
-                  </p>
-                </div>
-              </div>
+              <VisualSlot page={PAGE_KEY} slot="facts-3" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
+                subject="A sales manager showing a trade buyer a tablet beside pallets of cartons in a warehouse near the Brisbane TradeCoast"
+                caption="Near the TradeCoast, the website is an ordering system. It has to agree with the pallets on the floor and the invoice in the accounts.">
+                <img src="/images/au/brisbane/brisbane-industrial.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A sales manager shows a trade buyer a tablet beside pallets of plain cartons in a bright distribution warehouse near the Brisbane TradeCoast" />
+              </VisualSlot>
             </div>
           </div>
         </section>
 
-        {/* ═══ 14. WHICH OPTION FITS (<details>) ═══ */}
-        <section className="sec-lg dot-grid">
+        {/* ═══ WHICH OPTION FITS (<details>) → vlog ═══ */}
+        <section className="vlog" id="which-option">
           <div className="wrap">
-            <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">Which option fits you</span>
+            <div className="section-head">
+              <div className="eyebrow">Which option fits you</div>
               <h2>A quick check: what does your Brisbane business actually need?</h2>
-              <p className="lead mt-4">Open the line that sounds most like you. The honest answer is not always this page.</p>
+              <p>Open the line that sounds most like you. The honest answer is not always this page.</p>
             </div>
-            <div className="card mt-8" style={{ padding: '4px 22px', maxWidth: 900 }}>
-              <details>
-                <summary>We need a new website, up to five pages, and our content is mostly ready</summary>
-                <div style={{ paddingBottom: 18 }}><p style={{ fontSize: 15 }}><b>This page is the right place.</b> Websites up to 5 pages qualify for our 7-day delivery from approved scope. Start with the free review so the scope is right.</p></div>
+            <div className="ventries">
+              <details className="ventry">
+                <summary><h3>We need a new website, up to five pages, and our content is mostly ready</h3><span className="chev" aria-hidden="true">+</span></summary>
+                <span className="vtag">This page is the right place.</span>
+                <p>Websites up to 5 pages qualify for our 7-day delivery from approved scope. Start with the free review so the scope is right.</p>
               </details>
-              <details>
-                <summary>Our site is fine, but we do not show up in Google or on Maps</summary>
-                <div style={{ paddingBottom: 18 }}><p style={{ fontSize: 15 }}><b>You need SEO, not a redesign.</b> Start with a technical audit and your Google Business Profile. See our <a href="/au/seo" style={srcLink}>SEO services for Australian businesses</a>.</p></div>
+              <details className="ventry">
+                <summary><h3>Our site is fine, but we do not show up in Google or on Maps</h3><span className="chev" aria-hidden="true">+</span></summary>
+                <span className="vtag">You need SEO, not a redesign.</span>
+                <p>Start with a technical audit and your Google Business Profile. See our <a href="/au/seo">SEO services for Australian businesses</a>.</p>
               </details>
-              <details>
-                <summary>We sell products online, or want trade customers to order online</summary>
-                <div style={{ paddingBottom: 18 }}><p style={{ fontSize: 15 }}><b>An ecommerce build.</b> See <a href="/au/ecommerce-development" style={srcLink}>ecommerce development</a> or <a href="/au/shopify-development" style={srcLink}>Shopify development</a> in Australia.</p></div>
+              <details className="ventry">
+                <summary><h3>We sell products online, or want trade customers to order online</h3><span className="chev" aria-hidden="true">+</span></summary>
+                <span className="vtag">An ecommerce build.</span>
+                <p>See <a href="/au/ecommerce-development">ecommerce development</a> or <a href="/au/shopify-development">Shopify development</a> in Australia.</p>
               </details>
-              <details>
-                <summary>We want ChatGPT, Perplexity and Google AI answers to name our business</summary>
-                <div style={{ paddingBottom: 18 }}><p style={{ fontSize: 15 }}><b>That is AI search visibility.</b> See our <a href="/au/ai-seo" style={srcLink}>AI SEO service for Australian businesses</a>.</p></div>
+              <details className="ventry">
+                <summary><h3>We want ChatGPT, Perplexity and Google AI answers to name our business</h3><span className="chev" aria-hidden="true">+</span></summary>
+                <span className="vtag">That is AI search visibility.</span>
+                <p>See our <a href="/au/ai-seo">AI SEO service for Australian businesses</a>.</p>
               </details>
-              <details>
-                <summary>We miss calls and after-hours enquiries</summary>
-                <div style={{ paddingBottom: 18 }}><p style={{ fontSize: 15 }}><b>Look at a voice agent.</b> See our <a href="/au/ai-receptionist" style={srcLink}>AI receptionist</a>, which answers, qualifies and books calls into your calendar or job system.</p></div>
+              <details className="ventry">
+                <summary><h3>We miss calls and after-hours enquiries</h3><span className="chev" aria-hidden="true">+</span></summary>
+                <span className="vtag">Look at a voice agent.</span>
+                <p>See our <a href="/au/ai-receptionist">AI receptionist</a>, which answers, qualifies and books calls into your calendar or job system.</p>
               </details>
-              <details>
-                <summary>Our real problem is admin: enquiries, orders and invoices copied by hand</summary>
-                <div style={{ paddingBottom: 18 }}><p style={{ fontSize: 15 }}><b>Look at automation.</b> See <a href="/au/ai-agents" style={srcLink}>AI agents built into Xero, HubSpot, ServiceM8 and your other tools</a>.</p></div>
+              <details className="ventry">
+                <summary><h3>Our real problem is admin: enquiries, orders and invoices copied by hand</h3><span className="chev" aria-hidden="true">+</span></summary>
+                <span className="vtag">Look at automation.</span>
+                <p>See <a href="/au/ai-agents">AI agents built into Xero, HubSpot, ServiceM8 and your other tools</a>.</p>
               </details>
-              <details>
-                <summary>We want a brand campaign, TV or print, or an office we can visit weekly</summary>
-                <div style={{ paddingBottom: 18 }}><p style={{ fontSize: 15 }}><b>Not us.</b> A Brisbane full-service agency or local studio is the better fit, and we would say so on a call.</p></div>
+              <details className="ventry">
+                <summary><h3>We want a brand campaign, TV or print, or an office we can visit weekly</h3><span className="chev" aria-hidden="true">+</span></summary>
+                <span className="vtag">Not us.</span>
+                <p>A Brisbane full-service agency or local studio is the better fit, and we would say so on a call.</p>
               </details>
             </div>
           </div>
         </section>
 
-        {/* ═══ 15. SIBLINGS + CITIES (hover cards) ═══ */}
-        <section className="sec-lg">
+        {/* ═══ SIBLINGS + CITIES → agentdir + city pills ═══ */}
+        <section className="section agentdir" id="more-services">
           <div className="wrap">
-            <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">FactoryJet Australia</span>
+            <div className="section-head">
+              <div className="eyebrow">FactoryJet Australia</div>
               <h2>More services for Brisbane businesses</h2>
             </div>
-            <ul className="col-3 mt-10" style={{ gap: 16 }}>
+            <ul className="agentdir-grid">
               {[
                 { h: '/au', t: 'FactoryJet Australia', d: 'Web design, ecommerce, AI agents and AI search for Australian businesses, in one place.' },
                 { h: '/au/seo', t: 'SEO services Australia', d: 'Technical repair, content and local search, reported on enquiries rather than rankings.' },
@@ -822,103 +887,69 @@ export default function BrisbanePage() {
                 { h: '/au/ai-seo', t: 'AI SEO', d: 'Get your business named in ChatGPT, Perplexity and Google AI answers.' },
               ].map((c) => (
                 <li key={c.h}>
-                  <a href={c.h} className="svc-card" style={{ display: 'block', height: '100%' }}>
-                    <h3 style={{ fontSize: 17 }}>{c.t} <span aria-hidden="true" style={{ color: T.small }}>→</span></h3>
-                    <p style={{ marginTop: 8, fontSize: 14 }}>{c.d}</p>
+                  <a href={c.h}>
+                    <span className="agentdir-t">{c.t}</span>
+                    <span className="agentdir-l">{c.d}</span>
+                    <span className="agentdir-go" aria-hidden="true">↗</span>
                   </a>
                 </li>
               ))}
             </ul>
-            <p className="mt-10" style={{ fontSize: 15 }}>Web design and SEO in other Australian cities:</p>
-            <div className="flex-wrap mt-4">
-              <a className="city-pill" href="/au/melbourne">Web design Melbourne</a>
-              <a className="city-pill" href="/au/adelaide">Web design Adelaide</a>
-              <a className="city-pill" href="/au/canberra">Web design Canberra</a>
-              <a className="city-pill" href="/au">All of Australia</a>
+            <div className="city-links">
+              <p>Web design and SEO in other Australian cities:</p>
+              <ul className="city-list">
+                <li><a href="/au/melbourne">Web design Melbourne</a></li>
+                <li><a href="/au/adelaide">Web design Adelaide</a></li>
+                <li><a href="/au/canberra">Web design Canberra</a></li>
+                <li><a href="/au">All of Australia</a></li>
+              </ul>
             </div>
           </div>
         </section>
 
-        {/* ═══ 16. FAQ ═══ */}
-        <section className="sec-lg dot-grid" id="faq">
+        {/* ═══ FAQ (Family A accordion; same FAQ_ITEMS array as the FAQPage JSON-LD) ═══ */}
+        <AuFaq
+          categories={FAQ_CATEGORIES}
+          items={FAQ_ITEMS}
+          heading="Web design and SEO in Brisbane: questions businesses actually ask"
+          askLabel="Still have a question? Ask the founder →"
+          askNote="Replies within 24 hours."
+        />
+
+        {/* ═══ SOURCES → references ═══ */}
+        <section className="section referencesSection references" id="sources">
           <div className="wrap">
-            <div style={{ textAlign: 'center' }}>
-              <span className="eyebrow">FAQ</span>
-              <h2>Web design and SEO in Brisbane: questions businesses actually ask</h2>
-            </div>
-            <div className="faq-grid">
-              <aside className="faq-sidebar">
-                <span className="faq-sidebar-topics">Topics</span>
-                <nav className="faq-sidebar-nav">
-                  {FAQ_CATEGORIES.map((c) => (
-                    <a key={c.key} href={`#faq-${c.key}`}>
-                      {c.label}
-                      <span className="faq-nav-count">{FAQ_ITEMS.filter((f) => f.category === c.key).length}</span>
-                    </a>
-                  ))}
-                </nav>
-                <div className="faq-sidebar-cta">
-                  <ModalCTAButton label="Still have a question? Ask the founder →" region="au" modalVariant="default" btnVariant="secondary-light" />
-                  <p>Replies within 24 hours.</p>
-                </div>
-              </aside>
-              <div>
-                {FAQ_CATEGORIES.map((c) => (
-                  <div key={c.key} id={`faq-${c.key}`} style={{ marginBottom: 40 }}>
-                    <div className="faq-cat-header">
-                      <span className="faq-cat-bar" />
-                      <p className="faq-cat-label">{c.label}</p>
-                    </div>
-                    <ul className="faq-list">{FAQ_ITEMS.filter((f) => f.category === c.key).map((f) => (
-                      <li key={f.question}><details className="faq-item">
-                        <summary>
-                          <span className="q-text">{f.question}</span>
-                          <span className="chevron">
-                            <svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5L7 9L11 5" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" /></svg>
-                          </span>
-                        </summary>
-                        <div className="faq-ans"><p>{f.answer}</p>{f.links ? <p style={{ marginTop: 8 }}>{f.links.map((l) => <a key={l.href} href={l.href} style={{ ...srcLink, marginRight: 16 }}>{l.label}</a>)}</p> : null}</div>
-                      </details></li>
-                    ))}</ul>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ═══ 17. SOURCES ═══ */}
-        <section className="sec">
-          <div className="wrap" style={{ maxWidth: 900 }}>
-            <span className="eyebrow">Sources</span>
-            <ol className="stack mt-4" style={{ paddingLeft: 18 }}>
+            <div className="eyebrow">Sources</div>
+            <div className="refs refs-claims">
               {CITATIONS.map((c) => (
-                <li key={c.id} style={{ fontSize: 14 }}>
-                  <a href={c.url} target="_blank" rel="noopener noreferrer" style={srcLink}>{c.source}: {c.title}</a>
-                  <p style={{ fontSize: 13.5, color: T.n400, marginTop: 4 }}>{c.claim}</p>
-                </li>
+                <div className="ref" key={c.id}>
+                  <a href={c.url} target="_blank" rel="noopener noreferrer">{c.source}: {c.title}</a>
+                  <p>{c.claim}</p>
+                </div>
               ))}
-            </ol>
-            <p style={srcNote}>
+            </div>
+            <p className="au-note">
               Search volumes, page-one link counts, Maps pack and AI Overview presence were measured by FactoryJet with
               DataForSEO against Google Australia on 24 September 2026.
             </p>
           </div>
         </section>
 
-        {/* ═══ 18. FINAL CTA (the only dark section) ═══ */}
-        <section className="dark-sec">
-          <div className="wrap" style={{ textAlign: 'center', maxWidth: 640 }}>
-            <span className="eyebrow">Next step</span>
-            <h2>Find out what is actually holding your Brisbane site back</h2>
-            <p className="mt-4">
-              Send us the address. We crawl the site, check your Google Business Profile and read your own Search
-              Console data, then send back a short written summary of the three biggest problems and what each one is
-              costing you. No charge, and no obligation to go any further.
-            </p>
-            <div className="mt-8" style={{ display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap' }}>
-              <ModalCTAButton label="Get a free site review" region="au" modalVariant="default" btnVariant="primary-light" />
-              <a className="btn btn-outline" href="/au/seo" style={{ color: '#fff', borderColor: 'rgba(255,255,255,.25)' }}>See SEO services</a>
+        {/* ═══ FINAL CTA (light, US finalcta) ═══ */}
+        <section className="finalcta" id="finalcta">
+          <div className="wrap">
+            <div>
+              <div className="eyebrow">Next step</div>
+              <h2>Find out what is actually holding your Brisbane site back</h2>
+              <p>
+                Send us the address. We crawl the site, check your Google Business Profile and read your own Search
+                Console data, then send back a short written summary of the three biggest problems and what each one is
+                costing you. No charge, and no obligation to go any further.
+              </p>
+            </div>
+            <div className="ctas">
+              <ModalCTAButton label="Get a free site review" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
+              <a className="btn btn-ghost" href="/au/seo">See SEO services</a>
             </div>
           </div>
         </section>
@@ -926,7 +957,7 @@ export default function BrisbanePage() {
       </main>
       </div>
 
-      <SiteFooter locale="au" linkColumns={AU_FOOTER_COLUMNS} variant="dark" tagline="Ecommerce, AI agents, websites and AI search for Australian businesses. Built by senior engineers, supported after launch, owned by you." />
+      <SiteFooter locale="au" linkColumns={AU_FOOTER_COLUMNS} tagline="Ecommerce, AI agents, websites and AI search for Australian businesses. Built by senior engineers, supported after launch, owned by you." />
     </>
   );
 }

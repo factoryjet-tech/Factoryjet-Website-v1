@@ -1,0 +1,8 @@
+/* /au/ndis-website-design only. Scoped to this page's section id so it cannot affect other AU pages
+   (Next.js bundles route CSS globally once loaded).
+   The definition module's image slot is a placeholder until the visual pass fills it, and au-page.css
+   hides placeholders. Without this rule the copy would sit beside an empty half-width column.
+   Once the slot is filled (data-visual-status="filled") the normal two-column layout returns. */
+.aiAgentPage.auPage #ndis-marketing.definition:not(:has(.vslot[data-visual-status='filled'])) { grid-template-columns: minmax(0,1fr); }
+.aiAgentPage.auPage #ndis-marketing.definition:not(:has(.vslot[data-visual-status='filled'])) > div:first-child { display: none; }
+.aiAgentPage.auPage #ndis-marketing.definition:not(:has(.vslot[data-visual-status='filled'])) .definition-copy { max-width: 760px; }

@@ -495,6 +495,72 @@ const SERVICE_RULES: ServiceRule[] = [
     weight: 3,
     market: 'australia',
   },
+  // AU wave 5 (2026-09-26). Keywords are deliberately specific: a loose 'small business'
+  // would pull the small business web design page onto the ecommerce agency post.
+  {
+    href: '/au/small-business-web-design',
+    label: 'Small Business Web Design (Australia)',
+    blurb: 'Websites for Australian small businesses in four scope sizes, with 7-day delivery up to five pages.',
+    keywords: ['web design companies for small business', 'wordpress development companies', 'small business website', 'small business web design', 'website packages', 'website cost'],
+    weight: 4,
+    market: 'australia',
+  },
+  {
+    href: '/au/local-seo',
+    label: 'Local SEO (Australia)',
+    blurb: 'Google Business Profile repair, reviews within Google policy, citations and service-area pages.',
+    keywords: ['local seo', 'google business profile', 'google maps', 'map pack'],
+    weight: 4,
+    market: 'australia',
+  },
+  {
+    href: '/au/small-business-seo',
+    label: 'Small Business SEO (Australia)',
+    blurb: 'What an Australian small business should buy from an SEO company first, and what to skip.',
+    keywords: ['small business seo', 'seo for small business', 'seo packages', 'seo cost'],
+    weight: 4,
+    market: 'australia',
+  },
+  {
+    href: '/au/accounts-payable-automation',
+    label: 'Accounts Payable Automation (Australia)',
+    blurb: 'AI agents that read supplier invoices, match POs and route approvals into Xero or MYOB.',
+    keywords: ['accounts payable', 'invoice processing', 'invoice automation', 'xero', 'myob', 'bookkeeping'],
+    weight: 4,
+    market: 'australia',
+  },
+  {
+    href: '/au/law-firm-seo',
+    label: 'Law Firm SEO (Australia)',
+    blurb: 'SEO and websites for Australian law firms, written for solicitor sign-off.',
+    keywords: ['law firm', 'lawyer', 'solicitor', 'legal practice'],
+    weight: 4,
+    market: 'australia',
+  },
+  {
+    href: '/au/ndis-website-design',
+    label: 'NDIS Website Design (Australia)',
+    blurb: 'Accessible NDIS provider websites with Easy Read pages and NDIS logo rules built in.',
+    keywords: ['ndis', 'disability'],
+    weight: 4,
+    market: 'australia',
+  },
+  {
+    href: '/au/real-estate-websites',
+    label: 'Real Estate Websites (Australia)',
+    blurb: 'Agency websites with CRM listing feeds, suburb pages and underquoting-safe price display.',
+    keywords: ['real estate', 'property agenc'],
+    weight: 4,
+    market: 'australia',
+  },
+  {
+    href: '/au/accountant-website-design',
+    label: 'Accountant Website Design (Australia)',
+    blurb: 'Websites and SEO for accounting firms, checked against Tax Practitioners Board rules.',
+    keywords: ['accountant', 'accounting firm', 'bookkeeper', 'tax agent'],
+    weight: 4,
+    market: 'australia',
+  },
   {
     href: '/au',
     label: 'Web Design (Australia)',
@@ -537,9 +603,9 @@ const UK_CATEGORY_FALLBACK: Record<string, string[]> = {
  * link limit so the family reordering below still has same-topic pages to promote.
  */
 const AU_CATEGORY_FALLBACK: Record<string, string[]> = {
-  'Web Design & Strategy': ['/au', '/au/website-maintenance', '/au/websites-for-tradies', '/au/seo'],
+  'Web Design & Strategy': ['/au', '/au/small-business-web-design', '/au/website-maintenance', '/au/websites-for-tradies', '/au/seo'],
   'E-Commerce Development': ['/au/ecommerce-development', '/au/shopify-development', '/au/ecommerce-seo', '/au/ai-customer-service'],
-  'Emerging Tech': ['/au/ai-agents', '/au/ai-seo', '/au/seo', '/au/ecommerce-seo', '/au/ai-consulting', '/au/ai-development'],
+  'Emerging Tech': ['/au/ai-agents', '/au/ai-seo', '/au/seo', '/au/local-seo', '/au/small-business-seo', '/au/ecommerce-seo', '/au/ai-consulting', '/au/ai-development', '/au/accounts-payable-automation'],
   'Maintenance & Security': ['/au/website-maintenance', '/au', '/au/seo'],
 };
 
@@ -584,6 +650,9 @@ const SERVICE_FAMILY: Record<string, ServiceFamily> = {
   '/au/ai-seo': 'search',
   '/au/seo': 'search',
   '/au/ecommerce-seo': 'search',
+  '/au/local-seo': 'search',
+  '/au/small-business-seo': 'search',
+  '/au/law-firm-seo': 'search',
   // ai: agents, automation, chatbots (build-an-AI-system intent, not visibility intent)
   '/services/ai-chatbot-development': 'ai',
   '/services/ai-customer-support-agents': 'ai',
@@ -596,6 +665,7 @@ const SERVICE_FAMILY: Record<string, ServiceFamily> = {
   '/au/ai-development': 'ai',
   '/au/ai-receptionist': 'ai',
   '/au/ai-customer-service': 'ai',
+  '/au/accounts-payable-automation': 'ai',
   // web: design and build
   '/services/website-redesign': 'web',
   '/services/small-business-website-design': 'web',
@@ -606,6 +676,10 @@ const SERVICE_FAMILY: Record<string, ServiceFamily> = {
   '/au/website-maintenance': 'web',
   '/au/websites-for-tradies': 'web',
   '/au/dental-website-design': 'web',
+  '/au/small-business-web-design': 'web',
+  '/au/ndis-website-design': 'web',
+  '/au/real-estate-websites': 'web',
+  '/au/accountant-website-design': 'web',
   // ecommerce: storefronts, platforms, marketplaces
   '/services/shopify-development': 'ecommerce',
   '/services/woocommerce-development': 'ecommerce',

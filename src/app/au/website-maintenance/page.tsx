@@ -1,12 +1,15 @@
 import type { Metadata } from 'next';
+import { Fragment, type ReactNode } from 'react';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import { AU_FOOTER_COLUMNS } from '@/data/auFooterColumns';
-import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
-import '../au-service.css';
+import AuFaq from '../components/AuFaq';
+import VisualSlot from '../components/VisualSlot';
+import '@/components/v2/AiAgentDevelopmentSections.css';
+import '../au-page.css';
 
 const CANONICAL = 'https://factoryjet.com/au/website-maintenance';
 const UPDATED = '2026-09-26';
@@ -14,19 +17,6 @@ const TITLE = 'Website Maintenance Services Australia | FactoryJet';
 const H1 = 'Website Maintenance Services for Australian Businesses: Updates, Security, Backups and Changes, Handled';
 const DESCRIPTION =
   'Website maintenance services and care plans for Australian WordPress and Shopify sites: tested updates, backups, security checks and fixes. Ask the founder.';
-
-/* Design tokens, copied by value from ../au-service.css so inline styles stay
-   on-system without CSS custom property references in this file. */
-const T = {
-  ink: '#0F0F12',
-  n200: '#E5E5E0',
-  n400: '#6E6E68',
-  orange: '#F05A28',
-  green: '#047857',
-  small: '#B23E13',
-  fm: "'Geist Mono',monospace",
-  fd: "'Plus Jakarta Sans',sans-serif",
-};
 
 /* ONE array drives the visible trail AND the BreadcrumbList JSON-LD. */
 const crumbs = [
@@ -53,6 +43,18 @@ const SRC_OAIC_SMALL = 'https://www.oaic.gov.au/privacy/privacy-for-organisation
 // W3C WAI: "WCAG 2.2 was published on 5 October 2023"; "W3C encourages you to use
 // the latest version of WCAG." HTTP 200.
 const SRC_WCAG = 'https://www.w3.org/WAI/standards-guidelines/wcag/';
+// W3C WAI, Web Accessibility Laws & Policies, Australia: the Disability
+// Discrimination Act 1992 applies to government, public sector and private
+// sector and names no WCAG version; AHRC guidance says "all organisations should
+// aim to avoid discrimination by providing equal access to digital goods and
+// services to everyone"; the Digital Experience Policy (2024) references WCAG 2.2
+// for government. fetch-verified 2026-09-26
+const SRC_WAI_AU = 'https://www.w3.org/WAI/policies/australia/';
+// WebAIM Million 2026: 95.9% of home pages had detected WCAG 2 failures; top six
+// = low contrast text, missing alt text, missing form labels, empty links, empty
+// buttons, missing document language; "96% of all errors detected fall into these
+// six categories". fetch-verified 2026-09-26
+const SRC_WEBAIM = 'https://webaim.org/projects/million/';
 
 /* ─── FAQ source of truth (drives UI + FAQPage schema) ─────────────── */
 const FAQ_CATEGORIES = [
@@ -63,7 +65,7 @@ const FAQ_CATEGORIES = [
   { key: 'security', label: 'Security, SEO & ownership' },
 ] as const;
 
-const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
+const FAQ_ITEMS: { category: string; question: string; answer: string; links?: { href: string; label: string }[] }[] = [
   // ── Basics ──
   { category: 'basics', question: 'What are website maintenance services?',
     answer: 'Website maintenance services are the ongoing work that keeps a live website safe, working and current. That means updating the software it runs on, taking and testing backups, watching for downtime and attacks, fixing things that break, making small content and design changes, and checking speed and SEO. A good provider also tells you each month what they did, what they found and what needs a decision from you.' },
@@ -127,6 +129,12 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     answer: 'We take the site offline or into maintenance mode if needed, restore a clean backup where one exists, find and close the way the attacker got in (often an old plugin or a weak login), remove malicious code, reset passwords and keys, and ask Google to review the site if it was flagged. If personal information may have been exposed and your business is covered by the Privacy Act, you may need to notify affected people and the OAIC under the Notifiable Data Breaches scheme.' },
   { category: 'security', question: 'Do I own my website and hosting if I leave?',
     answer: 'With us, yes. The domain, hosting account, Shopify store, analytics, Search Console and every licence stay in your business name, and our team works through its own logins that you can remove at any time. When you leave, you get a full backup, a list of every plugin, app and integration, and notes on anything custom. We do not hold websites hostage, and we think no provider should.' },
+  { category: 'security', question: 'Is WCAG a legal requirement in Australia?',
+    answer: 'WCAG itself is not written into law for most private businesses, but disability discrimination law still applies. The Disability Discrimination Act 1992 applies to government, public sector and private organisations, and it does not name a WCAG version. The Australian Human Rights Commission says all organisations should aim to provide equal access to digital goods and services. For federal government, the Digital Experience Policy points to WCAG 2.2. In practice, WCAG 2.2 level AA is the benchmark to build to. For your own obligations, get legal advice.',
+    links: [{ href: SRC_WAI_AU, label: 'W3C WAI: web accessibility laws and policies in Australia' }] },
+  { category: 'security', question: 'What are common WCAG violations?',
+    answer: 'The WebAIM Million, an annual automated scan of one million home pages worldwide, found detected WCAG failures on 95.9% of them in 2026. The six most common were low contrast text, images missing alternative text, form fields without labels, empty links, empty buttons and a missing page language. WebAIM says those six make up about 96% of all errors it detected. Most are quick to fix during routine maintenance.',
+    links: [{ href: SRC_WEBAIM, label: 'WebAIM Million report' }] },
   { category: 'security', question: 'Does website maintenance help SEO?',
     answer: 'It helps the technical side of SEO. A maintained site loads faster, stays online, has fewer broken links and errors, keeps its SSL certificate valid and keeps structured data working after updates. Those are things search engines and AI assistants notice. Maintenance does not replace SEO work such as keyword research, new content or links. If you want that too, our SEO and AI SEO services build on the same site.' },
   { category: 'security', question: 'Does website maintenance require downtime?',
@@ -313,9 +321,46 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-const srcNote = { fontFamily: T.fm, fontSize: 11, color: T.n400, marginTop: 12 } as const;
-const srcLink = { textDecoration: 'underline' } as const;
 const extLink = { target: '_blank', rel: 'noopener noreferrer nofollow' } as const;
+
+/* Industries we look after (capability grid). Icons and visual-slot subjects share its order.
+   Descriptions are JSX because three of them end in an internal link. */
+const INDUSTRIES: { t: string; d: ReactNode }[] = [
+  { t: 'Tradies and home services', d: <>Quote forms and call buttons tested after every update, service areas and photos kept current, and a site that loads fast on a phone at a job site. See our <a href="/au/websites-for-tradies">websites for tradies</a>.</> },
+  { t: 'Dental and allied health', d: <>Online booking links checked, practitioner and fee pages kept accurate, and extra care with patient data because health providers are covered by the Privacy Act. See <a href="/au/dental-website-design">dental website design</a>.</> },
+  { t: 'Online stores', d: <>Checkout, payment, shipping and stock sync tested after updates, with extra care before end of financial year sales, Black Friday and Christmas. See <a href="/au/ecommerce-development">ecommerce development</a>.</> },
+  { t: 'Professional services', d: 'Accountants, lawyers and consultants: enquiry forms that always arrive, team pages kept current, and security taken seriously because clients trust you with their details.' },
+  { t: 'Hospitality and venues', d: 'Menus, opening hours, function packs and booking links updated quickly, so the website never tells customers something that stopped being true last month.' },
+  { t: 'Membership and community groups', d: 'Member logins, event pages and payment forms kept working, with volunteers able to edit content safely without breaking the site.' },
+];
+const INDUSTRY_ICONS = [
+  'M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9l-3.8 3.8Z',
+  'M9 3h6v6h6v6h-6v6H9v-6H3V9h6V3Z',
+  'M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4H6ZM3 6h18m-5 4a4 4 0 0 1-8 0',
+  'M4 7h16v13H4V7Zm5 0V4h6v3M4 13h16',
+  'M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8Zm4-7v3m4-3v3m4-3v3',
+  'M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm13 10v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8',
+] as const;
+const INDUSTRY_SUBJECTS = [
+  'AI-generated model: a white phone showing a quote form with an orange tick, beside a small toolbox',
+  'AI-generated model: a white booking calendar card and a padlocked patient record card with an orange lock',
+  'AI-generated model: a white shopping cart passing through an orange checkout gate with a stock counter beside it',
+  'AI-generated model: a white enquiry form envelope arriving in an orange inbox tray on a desk',
+  'AI-generated model: a white menu board and opening-hours card being swapped for an updated orange card',
+  'AI-generated model: a white member login card and event ticket with an orange edit pencil beside them',
+] as const;
+
+/* Visual slot page key (route without /au/). */
+const PAGE_KEY = 'website-maintenance';
+
+/* Visible hero heading, kept to about four lines at 62px so the inline form starts in the first
+   desktop screen. H1 above stays the schema headline; the rest of it opens the hero lead, so no
+   copy is lost. */
+const HERO_H1_LEAD = 'Website Maintenance Services for';
+const HERO_H1_EMPHASIS = 'Australian Businesses';
+
+const STEP_ICON = { width: 24, height: 24, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', strokeWidth: 1.5, strokeLinecap: 'round', strokeLinejoin: 'round' } as const;
+const CAP_ICON = { width: 24, height: 24, viewBox: '0 0 24 24', fill: 'none', stroke: '#C94A1A', strokeWidth: 1.6, strokeLinecap: 'round', strokeLinejoin: 'round', 'aria-hidden': true } as const;
 
 export default function WebsiteMaintenanceAUPage() {
   return (
@@ -324,257 +369,319 @@ export default function WebsiteMaintenanceAUPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <SiteHeader locale="au" logoHref="/au" />
-      <div className="au-svc">
-      <main>
+      <div className="aiAgentPage auPage">
+      <nav className="crumbs" aria-label="Breadcrumb">
+        <div className="wrap">
+          {crumbs.map((item, index) => (
+            <Fragment key={item.url}>
+              {index > 0 && ' / '}
+              {index === crumbs.length - 1 ? <b aria-current="page">{item.name}</b> : <a href={item.url}>{item.name}</a>}
+            </Fragment>
+          ))}
+        </div>
+      </nav>
+      <main id="au-content">
 
-        <Breadcrumbs items={crumbs} />
+        {/* ═══ HERO (US web-design hub hero: copy + inline form left, spec panel right) ═══ */}
+        <section className="hero" id="hero">
+          <div className="wrap hero-grid">
+            <div className="hero-copy">
+              <div className="eyebrow">Website Maintenance Australia</div>
+              <h1>{HERO_H1_LEAD} <span className="hero-emphasis">{HERO_H1_EMPHASIS}</span></h1>
+              <p className="lead">
+                Updates, security, backups and changes, handled. FactoryJet provides website maintenance services for
+                Australian businesses on WordPress, WooCommerce and Shopify. We test every update on a private copy of
+                your site before it goes live, keep backups off the server, watch for downtime and attacks, fix what
+                breaks, and make the changes you need each month. Every account stays in your name, including sites
+                another agency built.
+              </p>
+              <HeroInlineForm region="au" source="au_website_maintenance_hero" submitLabel="Get a free site check" />
+            </div>
 
-        {/* ═══ 1. HERO ═══ */}
-        <section className="sec-lg dot-grid" style={{ position: 'relative', paddingTop: 36 }}>
+            <form
+              className="specpanel"
+              aria-label="What a care plan does every month"
+              data-visual-slot={`${PAGE_KEY}:hero`}
+              data-visual-kind="diagram"
+              data-visual-subject="The three things a care plan does every month: updates tested on staging, backups kept off the server, accounts kept in the client's name"
+              data-visual-ratio="1:1"
+              data-visual-status="filled"
+            >
+              <div className="specpanel-bar">
+                <span className="statusdot"></span>
+                <span>INCLUDED · WHAT A CARE PLAN DOES EVERY MONTH</span>
+                <span className="sys"><span>WORDPRESS</span><span>SHOPIFY</span><span>YOUR ACCOUNTS</span></span>
+              </div>
+              <div className="workflow-controls">
+                <label className="workflow-toggle" title="Pause or resume the animation">
+                  <input type="checkbox" className="workflow-pause" aria-label="Pause animation" />
+                  <svg className="pause-icon" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M5 3v10M11 3v10" fill="none" stroke="currentColor" strokeWidth="2" /></svg>
+                  <svg className="play-icon" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="m5 3 8 5-8 5Z" fill="currentColor" /></svg>
+                </label>
+                <button type="reset" className="workflow-replay" aria-label="Replay animation" title="Replay animation">
+                  <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M3 6a5 5 0 1 1 0 4M3 2v4h4" /></svg>
+                </button>
+              </div>
+              <div className="specpanel-body" role="radiogroup" aria-label="Explore what a care plan does">
+                <label className="specrow run">
+                  <input className="workflow-select" type="radio" name="maint-step" value="1" />
+                  <span className="workflow-icon" aria-hidden="true"><svg {...STEP_ICON}><path d="M12 2 2 7l10 5 10-5-10-5ZM2 17l10 5 10-5M2 12l10 5 10-5" /></svg></span>
+                  <span className="idx">on a private staging copy</span>
+                  <span className="title">Updates tested before going live</span>
+                  <span className="tag">Staging</span>
+                </label>
+                <label className="specrow run">
+                  <input className="workflow-select" type="radio" name="maint-step" value="2" />
+                  <span className="workflow-icon" aria-hidden="true"><svg {...STEP_ICON}><path d="M12 8c5 0 9-1.3 9-3s-4-3-9-3-9 1.3-9 3 4 3 9 3Zm-9-3v14c0 1.7 4 3 9 3s9-1.3 9-3V5M3 12c0 1.7 4 3 9 3s9-1.3 9-3" /></svg></span>
+                  <span className="idx">and a restore we have tested</span>
+                  <span className="title">Backups kept off the server</span>
+                  <span className="tag">Off-site</span>
+                </label>
+                <label className="specrow hold">
+                  <input className="workflow-select" type="radio" name="maint-step" value="3" />
+                  <span className="workflow-icon" aria-hidden="true"><svg {...STEP_ICON}><path d="M2 18v3h4v-2h2v-2h2l1.4-1.4A6 6 0 1 0 8.4 10.6L2 17Zm14.5-10.5h.01" /></svg></span>
+                  <span className="idx">always in your business name</span>
+                  <span className="title">Domain, hosting and logins</span>
+                  <span className="tag">Yours</span>
+                </label>
+              </div>
+              <div className="specpanel-foot">RULE · Every account stays in your name, including sites another agency built.</div>
+            </form>
+          </div>
+        </section>
+
+        {/* ═══ LEDGER (was the facts band; verified only) ═══ */}
+        <div className="ledger">
           <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <div className="flex-wrap mb-6">
-                  <span className="chip"><span className="dot dot-orange" />Website Maintenance Australia</span>
-                  <span className="chip">WordPress &amp; Shopify Care Plans</span>
-                  <span className="chip">Your Accounts, Your Site</span>
-                </div>
-                <h1 style={{ fontSize: 'clamp(2.1rem, 3.9vw, 3.05rem)' }}>{H1}</h1>
-                <p className="lead mt-6" style={{ maxWidth: 560 }}>
-                  FactoryJet provides website maintenance services for Australian businesses on WordPress, WooCommerce
-                  and Shopify. We test every update on a private copy of your site before it goes live, keep backups off
-                  the server, watch for downtime and attacks, fix what breaks, and make the changes you need each month.
-                  Every account stays in your name, including sites another agency built.
-                </p>
-
-                <div className="byline mt-6" style={{ maxWidth: 560 }}>
-                  <div className="av">BB</div>
-                  <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
-                  <div className="upd">Last updated<br />26 September 2026</div>
-                </div>
-
-                <div className="mt-6" style={{ maxWidth: 560 }}>
-                  <HeroInlineForm region="au" source="au_website_maintenance_hero" submitLabel="Get a free site check" />
+            {[
+              { v: '500+', t: 'businesses served by FactoryJet since 2014, founder-led on every account', s: 'About FactoryJet', u: '/about' },
+              { v: 'PHP 8.3', t: 'or greater is what WordPress recommends; older versions have reached end of life', s: 'WordPress.org, requirements', u: SRC_WP_REQ },
+              { v: 'Quarterly', t: 'is how often Shopify releases a new API version that custom apps must keep up with', s: 'Shopify, API versioning', u: SRC_SHOPIFY_API },
+              { v: 'Notify', t: 'affected people and the OAIC if a covered business has a breach likely to cause serious harm', s: 'OAIC, data breaches', u: SRC_OAIC_NDB },
+            ].map((r) => (
+              <div className="ledgercell" key={r.t}>
+                <div className="k"><a href={r.u} {...(r.u.startsWith('http') ? extLink : {})}>{r.s}</a></div>
+                <div className="v">
+                  <strong className={/\d/.test(r.v) ? 'ledger-number' : 'ledger-word'}>{r.v}</strong>
+                  {r.t}
                 </div>
               </div>
+            ))}
+          </div>
+        </div>
 
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/website-maintenance/website-maintenance-hero.webp" width={1400} height={933} fetchPriority="high" decoding="async" alt="Over the shoulder of a Sydney homewares shop owner wrapping a ceramic vase for an order, with her online shop open on the laptop beside her" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
-                <div style={{ padding: '14px 12px 8px' }}>
-                  <span className="eyebrow">What a care plan does every month</span>
-                  <div className="scorecard-row">
-                    <div><div className="scorecard-metric">Updates tested before going live</div><div className="scorecard-note">on a private staging copy</div></div>
-                    <div className="scorecard-val" style={{ fontSize: 15 }}>Staging</div>
-                  </div>
-                  <div className="scorecard-row">
-                    <div><div className="scorecard-metric">Backups kept off the server</div><div className="scorecard-note">and a restore we have tested</div></div>
-                    <div className="scorecard-val" style={{ fontSize: 15 }}>Off-site</div>
-                  </div>
-                  <div className="scorecard-row">
-                    <div><div className="scorecard-metric">Domain, hosting and logins</div><div className="scorecard-note">always in your business name</div></div>
-                    <div className="scorecard-val" style={{ color: T.green, fontSize: 15 }}>Yours</div>
+        <div className="wrap byline">
+          <div className="av">BB</div>
+          <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
+          <div className="upd">Last updated<br />26 September 2026</div>
+        </div>
+
+        {/* ═══ ANSWER-FIRST DEFINITION (GEO) → Family A facts ═══ */}
+        <section className="section facts" id="answer">
+          <div className="wrap">
+            <div className="section-head">
+              <h2 data-speakable="true">What are website maintenance services, and does my site need them?</h2>
+            </div>
+            <div className="factswrap">
+              <div className="factlist">
+                <div className="fact">
+                  <div className="sec">§01</div>
+                  <p data-speakable="true">
+                    <span className="stat">Website maintenance services keep a live website safe, working and current.</span> They cover software
+                    updates tested before going live, off-site backups, uptime and security monitoring, fixes, small content
+                    changes, and speed and SEO checks. Any Australian business whose site brings in enquiries, bookings or
+                    sales needs them, usually monthly.
+                  </p>
+                </div>
+                <div className="fact">
+                  <div className="sec">§02</div>
+                  <div>
+                    <div className="factlabel">Four terms we use a lot</div>
+                    <p>
+                      <b>Staging</b> is a private copy of your site where we test changes before customers see them. A
+                      <b> plugin</b> is an add-on that gives WordPress a feature, such as a booking form. <b>Uptime
+                      monitoring</b> checks every few minutes that your site is online and alerts us if it is not. A
+                      <b> care plan</b> is a monthly agreement where one provider takes responsibility for all of the above.
+                    </p>
                   </div>
                 </div>
+                <div className="fact">
+                  <div className="sec">§03</div>
+                  <p>
+                    Most websites do not fail in one dramatic moment. They drift. A plugin stops being supported, the server
+                    runs an old version of PHP (the language WordPress is written in), a contact form quietly stops sending,
+                    the SSL certificate lapses, and speed slips a little every month. Website maintenance is the habit that
+                    stops that drift, and a website care plan puts one accountable team in charge of it.
+                  </p>
+                </div>
               </div>
+              <VisualSlot page={PAGE_KEY} slot="facts" kind="photo" ratio="3:2" className="factphoto"
+                subject="A homewares shop owner wrapping an order, with her online shop open on the laptop beside her">
+                <img src="/images/au/website-maintenance/website-maintenance-hero.webp" width={1400} height={933} loading="lazy" decoding="async" alt="Over the shoulder of a Sydney homewares shop owner wrapping a ceramic vase for an order, with her online shop open on the laptop beside her" />
+              </VisualSlot>
             </div>
           </div>
         </section>
 
-        {/* ═══ 2. ANSWER-FIRST DEFINITION (GEO) ═══ */}
-        <section className="sec">
+        {/* ═══ WHAT'S INCLUDED (listicle) → facts rows + "also covered" panel ═══ */}
+        <section className="section facts" id="included">
           <div className="wrap">
-            <div className="def" style={{ maxWidth: 940 }} data-speakable="true">
-              <span className="lab">What are website maintenance services, and does my site need them?</span>
-              <p>
-                Website maintenance services keep a live website safe, working and current. They cover software
-                updates tested before going live, off-site backups, uptime and security monitoring, fixes, small content
-                changes, and speed and SEO checks. Any Australian business whose site brings in enquiries, bookings or
-                sales needs them, usually monthly.
-              </p>
-            </div>
-            <div className="def mt-6" style={{ maxWidth: 940 }}>
-              <span className="lab">Four terms we use a lot</span>
-              <p>
-                <b>Staging</b> is a private copy of your site where we test changes before customers see them. A
-                <b> plugin</b> is an add-on that gives WordPress a feature, such as a booking form. <b>Uptime
-                monitoring</b> checks every few minutes that your site is online and alerts us if it is not. A
-                <b> care plan</b> is a monthly agreement where one provider takes responsibility for all of the above.
-              </p>
-            </div>
-            <p className="lead mt-8" style={{ maxWidth: 920 }}>
-              Most websites do not fail in one dramatic moment. They drift. A plugin stops being supported, the server
-              runs an old version of PHP (the language WordPress is written in), a contact form quietly stops sending,
-              the SSL certificate lapses, and speed slips a little every month. Website maintenance is the habit that
-              stops that drift, and a website care plan puts one accountable team in charge of it.
-            </p>
-          </div>
-        </section>
-
-        {/* ═══ 3. FACTS BAND (verified only) ═══ */}
-        <section className="stats-band">
-          <div className="wrap">
-            <ul className="col-4" style={{ gap: 20 }}>
-              {[
-                { v: '500+', t: 'businesses served by FactoryJet since 2014, founder-led on every account', s: 'About FactoryJet', u: '/about' },
-                { v: 'PHP 8.3', t: 'or greater is what WordPress recommends; older versions have reached end of life', s: 'WordPress.org, requirements', u: SRC_WP_REQ },
-                { v: 'Quarterly', t: 'is how often Shopify releases a new API version that custom apps must keep up with', s: 'Shopify, API versioning', u: SRC_SHOPIFY_API },
-                { v: 'Notify', t: 'affected people and the OAIC if a covered business has a breach likely to cause serious harm', s: 'OAIC, data breaches', u: SRC_OAIC_NDB },
-              ].map((r) => (
-                <li key={r.t}>
-                  <div style={{ fontFamily: T.fd, fontWeight: 800, fontSize: 26, color: T.orange }}>{r.v}</div>
-                  <p style={{ fontSize: 13.5, color: T.ink, marginTop: 4 }}>{r.t}</p>
-                  <a href={r.u} {...(r.u.startsWith('http') ? extLink : {})} style={{ fontFamily: T.fm, fontSize: 10, color: T.n400, textDecoration: 'underline' }}>{r.s}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-
-        {/* ═══ 4. WHAT'S INCLUDED (listicle) ═══ */}
-        <section className="sec-lg dot-grid">
-          <div className="wrap">
-            <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">What is included</span>
+            <div className="section-head">
+              <div className="eyebrow">What is included</div>
               <h2>10 things proper website maintenance services cover</h2>
-              <p className="lead mt-4">
+              <p className="lead">
                 Plenty of web maintenance packages in Australia stop at &ldquo;we click update.&rdquo; This is the full list we
                 work to. If a provider you are comparing skips several of these, ask why.
               </p>
             </div>
-            <div className="col-6040 mt-12">
-              <ol className="scope-list num-list">
-                <li><b>Tested software updates.</b> WordPress core, themes and plugins, or Shopify theme and app changes, applied on staging first and then on the live site.</li>
-                <li><b>Server and PHP upgrades.</b> Keeping the server on a supported PHP version, planned so nothing breaks on the day.</li>
-                <li><b>Off-site backups you can restore.</b> Daily backups stored away from the server, with a restore actually tested, not just assumed.</li>
-                <li><b>Uptime monitoring.</b> A check every few minutes that the site is online, with alerts to us, not a customer email to you.</li>
-                <li><b>Security monitoring.</b> Malware scans, login protection, removal of old admin users, and a watch on file changes.</li>
-                <li><b>Form, booking and checkout testing.</b> Proof that enquiries arrive and orders go through after every update.</li>
-                <li><b>Fixes.</b> When something breaks, a named person finds the cause and fixes it, then tells you what happened.</li>
-                <li><b>Content and design changes.</b> New pages, staff updates, prices, images and banners, so the site stays accurate.</li>
-                <li><b>Speed and technical SEO checks.</b> Page speed, broken links, redirects, structured data and search console errors.</li>
-                <li><b>A plain-English monthly report.</b> What we updated, what we fixed, what we found and what needs your decision.</li>
-              </ol>
-              <div className="card card-top-orange">
-                <span className="eyebrow">Also covered, and often missed</span>
-                <div className="scorecard-row"><div><div className="scorecard-metric">SSL and domain renewals</div><div className="scorecard-note">no surprise expiry warnings</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Checked</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Plugin and app licences</div><div className="scorecard-note">in your name, kept current</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Checked</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Unused plugins and apps</div><div className="scorecard-note">removed to cut risk and load time</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Removed</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Accessibility basics</div><div className="scorecard-note">contrast, alt text, keyboard use</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Reviewed</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">AI search readiness</div><div className="scorecard-note">structured data and crawler access</div></div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Kept working</div></div>
+            <div className="factswrap">
+              <div className="factlist" role="list">
+                <div className="fact" role="listitem"><div className="sec">§01</div><p><b>Tested software updates.</b> WordPress core, themes and plugins, or Shopify theme and app changes, applied on staging first and then on the live site.</p></div>
+                <div className="fact" role="listitem"><div className="sec">§02</div><p><b>Server and PHP upgrades.</b> Keeping the server on a supported PHP version, planned so nothing breaks on the day.</p></div>
+                <div className="fact" role="listitem"><div className="sec">§03</div><p><b>Off-site backups you can restore.</b> Daily backups stored away from the server, with a restore actually tested, not just assumed.</p></div>
+                <div className="fact" role="listitem"><div className="sec">§04</div><p><b>Uptime monitoring.</b> A check every few minutes that the site is online, with alerts to us, not a customer email to you.</p></div>
+                <div className="fact" role="listitem"><div className="sec">§05</div><p><b>Security monitoring.</b> Malware scans, login protection, removal of old admin users, and a watch on file changes.</p></div>
+                <div className="fact" role="listitem"><div className="sec">§06</div><p><b>Form, booking and checkout testing.</b> Proof that enquiries arrive and orders go through after every update.</p></div>
+                <div className="fact" role="listitem"><div className="sec">§07</div><p><b>Fixes.</b> When something breaks, a named person finds the cause and fixes it, then tells you what happened.</p></div>
+                <div className="fact" role="listitem"><div className="sec">§08</div><p><b>Content and design changes.</b> New pages, staff updates, prices, images and banners, so the site stays accurate.</p></div>
+                <div className="fact" role="listitem"><div className="sec">§09</div><p><b>Speed and technical SEO checks.</b> Page speed, broken links, redirects, structured data and search console errors.</p></div>
+                <div className="fact" role="listitem"><div className="sec">§10</div><p><b>A plain-English monthly report.</b> What we updated, what we fixed, what we found and what needs your decision.</p></div>
+              </div>
+              <div className="au-panel">
+                <div className="eyebrow">Also covered, and often missed</div>
+                <ul className="trigrows">
+                  <li><span className="m">SSL and domain renewals</span><span className="n">no surprise expiry warnings</span><span className="t">Checked</span></li>
+                  <li><span className="m">Plugin and app licences</span><span className="n">in your name, kept current</span><span className="t">Checked</span></li>
+                  <li><span className="m">Unused plugins and apps</span><span className="n">removed to cut risk and load time</span><span className="t">Removed</span></li>
+                  <li><span className="m">Accessibility basics</span><span className="n">contrast, alt text, keyboard use</span><span className="t">Reviewed</span></li>
+                  <li><span className="m">AI search readiness</span><span className="n">structured data and crawler access</span><span className="t">Kept working</span></li>
+                </ul>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ═══ 5. PLAN SHAPES + FIT CHECK ═══ */}
-        <section className="sec-lg" id="care-plans">
+        {/* ═══ PLAN SHAPES → ruled rows ═══ */}
+        <section className="section platforms" id="care-plans">
           <div className="wrap">
-            <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">Website care plans</span>
-              <h2>Three levels of website care, described by scope, not a price list</h2>
-              <p className="lead mt-4">
+            <div className="section-head plat-head">
+              <div>
+                <div className="eyebrow">Website care plans</div>
+                <h2>Three levels of website care, described by scope, not a price list</h2>
+              </div>
+              <p>
                 Every site is different, so we do not publish a rate card. We check your site first, then quote a fixed
                 monthly scope. These are the three shapes a care plan usually takes. Response times and the amount of
                 change work included are agreed in writing for your site.
               </p>
             </div>
-            <ul className="col-3 mt-10">
-              {PLAN_SHAPES.map((p) => (
-                <li key={p.name} className="svc-card">
-                  <span className="eyebrow">{p.fit}</span>
-                  <h3 style={{ marginTop: 8 }}>{p.name}</h3>
-                  <ul className="scope-list mt-4">
+            <div className="platlist" role="list">
+              {PLAN_SHAPES.map((p, i) => (
+                <div key={p.name} className="plat" role="listitem">
+                  <span className="capid">{String(i + 1).padStart(2, '0')}</span>
+                  <div className="plat-name"><h3>{p.name}</h3></div>
+                  <p className="plat-fit">{p.fit}</p>
+                  <ul className="plat-items">
                     {p.items.map((it) => (<li key={it}>{it}</li>))}
                   </ul>
-                </li>
+                </div>
               ))}
-            </ul>
-            <div className="col-6040 mt-12">
-              <div>
-                <span className="eyebrow">Which care plan fits you?</span>
-                <h3 style={{ fontSize: 22, marginTop: 8 }}>A 30-second check</h3>
-                <p className="mt-4" style={{ maxWidth: 560 }}>
-                  Tap the line that sounds most like your website. The answer is honest, even when the answer is that
-                  you can do it yourself.
-                </p>
-                <div className="card mt-6" style={{ padding: '4px 20px' }}>
-                  {FIT_CHECK.map((f) => (
-                    <details key={f.q}>
-                      <summary style={{ gap: 16, textAlign: 'left' }}>{f.q}</summary>
-                      <div style={{ paddingBottom: 18 }}>
-                        <span style={{ fontFamily: T.fm, fontSize: 10, background: T.small, color: '#fff', borderRadius: 999, padding: '3px 9px', letterSpacing: '.06em' }}>{f.verdict}</span>
-                        <p style={{ marginTop: 10 }}>{f.a}</p>
-                      </div>
-                    </details>
-                  ))}
-                </div>
-              </div>
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/website-maintenance/website-maintenance-report.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over the shoulder of an Adelaide tradesman sitting in the side door of his work van, reading his monthly website report on a tablet" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
-                <div style={{ padding: '14px 12px 8px' }}>
-                  <p style={{ fontSize: 14 }}>
-                    The monthly report is written to be read in two minutes between jobs: what we updated, what we
-                    fixed, whether enquiries are arriving, and anything that needs your decision.
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
         </section>
 
-        {/* ═══ 6. HOW WE UPDATE SAFELY ═══ */}
-        <section className="sec-lg dot-grid" id="how-we-update">
+        {/* ═══ FIT CHECK (<details>) → vlog ═══ */}
+        <section className="vlog" id="fit-check">
           <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <span className="eyebrow">How we work</span>
+            <div className="section-head">
+              <div className="eyebrow">Which care plan fits you?</div>
+              <h2>A 30-second check</h2>
+              <p>
+                Tap the line that sounds most like your website. The answer is honest, even when the answer is that
+                you can do it yourself.
+              </p>
+              <VisualSlot page={PAGE_KEY} slot="proof" kind="photo" ratio="3:2" captionClassName="figcap"
+                subject="A tradesman sitting in the side door of his work van, reading his monthly website report on a tablet"
+                caption="The monthly report is written to be read in two minutes between jobs: what we updated, what we fixed, whether enquiries are arriving, and anything that needs your decision.">
+                <img src="/images/au/website-maintenance/website-maintenance-report.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over the shoulder of an Adelaide tradesman sitting in the side door of his work van, reading his monthly website report on a tablet" />
+              </VisualSlot>
+            </div>
+            <div className="ventries">
+              {FIT_CHECK.map((f) => (
+                <details key={f.q} className="ventry">
+                  <summary><h3>{f.q}</h3><span className="chev" aria-hidden="true">+</span></summary>
+                  <span className="vtag">{f.verdict}</span>
+                  <p>{f.a}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ═══ PHOTOBREAK (US template visual, no AU image yet) ═══ */}
+        <VisualSlot page={PAGE_KEY} slot="photobreak" kind="illustration" ratio="12:5" className="photobreak"
+          subject="AI-generated model: two white website frames side by side, staging and live, with an orange update card passing from one to the other" />
+
+        {/* ═══ HOW WE UPDATE SAFELY → process timeline (steps stay openable, as the copy says) ═══ */}
+        <section className="section process" id="how-we-update">
+          <div className="wrap">
+            <div className="head-media">
+              <div className="section-head">
+                <div className="eyebrow">How we work</div>
                 <h2>How we update your website without breaking it</h2>
-                <p className="lead mt-4" style={{ maxWidth: 560 }}>
+                <p className="lead">
                   The most common way a small business website breaks is an update applied straight to the live site.
                   WordPress website maintenance done properly follows the same five steps every time. Open any step to
                   see what happens in it.
                 </p>
-                <div className="card mt-6" style={{ padding: '4px 20px' }}>
-                  {UPDATE_STEPS.map((s) => (
-                    <details key={s.n}>
-                      <summary style={{ gap: 16, textAlign: 'left' }}>
-                        <span><span style={{ fontFamily: T.fm, color: T.small, marginRight: 12 }}>{s.n}</span>{s.t}</span>
-                      </summary>
-                      <p style={{ paddingBottom: 18 }}>{s.d}</p>
-                    </details>
-                  ))}
-                </div>
-                <p style={srcNote}>
-                  Why PHP matters: WordPress.org recommends PHP 8.3 or greater and warns that older versions have reached
-                  end of life and may expose a site to security vulnerabilities.{' '}
-                  <a href={SRC_WP_REQ} {...extLink} style={srcLink}>WordPress.org, requirements</a>.
-                </p>
               </div>
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/website-maintenance/website-maintenance-staging.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over the shoulder of two web developers in a Melbourne studio comparing the staging and live versions of a client website side by side on one monitor" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
-                <div style={{ padding: '14px 12px 8px' }}>
-                  <p style={{ fontSize: 14 }}>
-                    Staging and live, side by side. If the updated copy looks or behaves differently from the live site,
-                    we find out why before any customer does.
-                  </p>
-                </div>
-              </div>
+              <VisualSlot page={PAGE_KEY} slot="process" kind="photo" ratio="3:2" captionClassName="figcap"
+                subject="Two web developers comparing the staging and live versions of a client website side by side on one monitor"
+                caption="Staging and live, side by side. If the updated copy looks or behaves differently from the live site, we find out why before any customer does.">
+                <img src="/images/au/website-maintenance/website-maintenance-staging.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over the shoulder of two web developers in a Melbourne studio comparing the staging and live versions of a client website side by side on one monitor" />
+              </VisualSlot>
             </div>
+            <div className="timeline">
+              {UPDATE_STEPS.map((s) => (
+                <details key={s.n} className="tnode">
+                  <summary>
+                    <div className="idx">{s.n}</div>
+                    <h3>{s.t}<span className="chev" aria-hidden="true">+</span></h3>
+                  </summary>
+                  <p>{s.d}</p>
+                </details>
+              ))}
+            </div>
+            <p className="tablenote">
+              Why PHP matters: WordPress.org recommends PHP 8.3 or greater and warns that older versions have reached
+              end of life and may expose a site to security vulnerabilities.{' '}
+              <a href={SRC_WP_REQ} {...extLink}>WordPress.org, requirements</a>.
+            </p>
           </div>
         </section>
 
-        {/* ═══ 7. PLATFORM TABLE ═══ */}
-        <section className="sec-lg">
+        <div className="au-midcta">
+          <MidPageCTA
+            headline={'Not sure what state your website is in?'}
+            sub={'Send us your web address. On a short call with the founder, we will tell you what we would check first, whether your updates, backups and security are in order, and whether you need a care plan at all.'}
+            label={'Get a free site check'}
+          />
+        </div>
+
+        {/* ═══ PLATFORM TABLE ═══ */}
+        <section className="section" id="by-platform">
           <div className="wrap">
-            <span className="eyebrow">By platform</span>
-            <h2 style={{ maxWidth: 820 }}>What website maintenance means on WordPress, WooCommerce, Shopify and custom sites</h2>
-            <p className="lead mt-4" style={{ maxWidth: 760 }}>
-              &ldquo;Website maintenance&rdquo; covers very different work depending on what your site runs on. Shopify
-              looks after much of the platform for you. A self-hosted WordPress site puts all of it on you or your
-              provider.
-            </p>
-            <div className="card mt-8" style={{ padding: 0, overflowX: 'auto' }}>
-              <table className="cmp-table" style={{ minWidth: 760 }}>
+            <div className="section-head">
+              <div className="eyebrow">By platform</div>
+              <h2>What website maintenance means on WordPress, WooCommerce, Shopify and custom sites</h2>
+              <p className="lead">
+                &ldquo;Website maintenance&rdquo; covers very different work depending on what your site runs on. Shopify
+                looks after much of the platform for you. A self-hosted WordPress site puts all of it on you or your
+                provider.
+              </p>
+            </div>
+            <div className="tablewrap">
+              <table>
                 <thead>
                   <tr>
                     <th>Task</th>
@@ -585,143 +692,139 @@ export default function WebsiteMaintenanceAUPage() {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td className="feat">Hosting and server</td><td>Your host, your responsibility</td><td>Your host, needs more resources</td><td><span className="yes">Included by Shopify</span></td><td>Your host or cloud provider</td></tr>
-                  <tr><td className="feat">Core platform updates</td><td>WordPress core, tested on staging</td><td>WordPress plus WooCommerce</td><td><span className="yes">Handled by Shopify</span></td><td>Framework and libraries</td></tr>
-                  <tr><td className="feat">Add-ons to keep current</td><td>Plugins and theme</td><td>Extensions, payment gateways</td><td>Apps and theme code</td><td>Packages and dependencies</td></tr>
-                  <tr><td className="feat">Security patching</td><td><span className="partial">On you or your provider</span></td><td><span className="partial">On you, plus payment risk</span></td><td><span className="yes">Platform patched by Shopify</span></td><td><span className="partial">On you or your provider</span></td></tr>
-                  <tr><td className="feat">Backups</td><td>Files and database, off-site</td><td>Plus orders and customers</td><td>Theme and product data exports</td><td>Code, database and media</td></tr>
-                  <tr><td className="feat">Integrations to watch</td><td>Forms, CRM, bookings</td><td>Xero or MYOB, stock, shipping</td><td>Apps, Xero, 3PL, API versions</td><td>Everything custom</td></tr>
-                  <tr><td className="feat">Biggest risk if ignored</td><td><span className="no">Hacked via old plugin</span></td><td><span className="no">Broken checkout</span></td><td><span className="no">App conflicts, slow theme</span></td><td><span className="no">Unsupported code</span></td></tr>
+                  <tr><th scope="row">Hosting and server</th><td>Your host, your responsibility</td><td>Your host, needs more resources</td><td>Included by Shopify</td><td>Your host or cloud provider</td></tr>
+                  <tr><th scope="row">Core platform updates</th><td>WordPress core, tested on staging</td><td>WordPress plus WooCommerce</td><td>Handled by Shopify</td><td>Framework and libraries</td></tr>
+                  <tr><th scope="row">Add-ons to keep current</th><td>Plugins and theme</td><td>Extensions, payment gateways</td><td>Apps and theme code</td><td>Packages and dependencies</td></tr>
+                  <tr><th scope="row">Security patching</th><td>On you or your provider</td><td>On you, plus payment risk</td><td>Platform patched by Shopify</td><td>On you or your provider</td></tr>
+                  <tr><th scope="row">Backups</th><td>Files and database, off-site</td><td>Plus orders and customers</td><td>Theme and product data exports</td><td>Code, database and media</td></tr>
+                  <tr><th scope="row">Integrations to watch</th><td>Forms, CRM, bookings</td><td>Xero or MYOB, stock, shipping</td><td>Apps, Xero, 3PL, API versions</td><td>Everything custom</td></tr>
+                  <tr><th scope="row">Biggest risk if ignored</th><td>Hacked via old plugin</td><td>Broken checkout</td><td>App conflicts, slow theme</td><td>Unsupported code</td></tr>
                 </tbody>
               </table>
             </div>
-            <p style={srcNote}>
+            <p className="tablenote">
               Shopify releases a new API version every three months and supports each stable version for at least twelve
               months, so custom apps and integrations need planned updates.{' '}
-              <a href={SRC_SHOPIFY_API} {...extLink} style={srcLink}>Shopify, API versioning</a>. We are a registered
-              Shopify Partner. For store builds, see <a href="/au/shopify-development" style={srcLink}>Shopify development in Australia</a>.
+              <a href={SRC_SHOPIFY_API} {...extLink}>Shopify, API versioning</a>. We are a registered
+              Shopify Partner. For store builds, see <a href="/au/shopify-development">Shopify development in Australia</a>.
             </p>
           </div>
         </section>
 
-        <MidPageCTA
-          headline={'Not sure what state your website is in?'}
-          sub={'Send us your web address. On a short call with the founder, we will tell you what we would check first, whether your updates, backups and security are in order, and whether you need a care plan at all.'}
-          label={'Get a free site check'}
-        />
-
-        {/* ═══ 8. TAKEOVER ═══ */}
-        <section className="sec-lg dot-grid" id="takeover">
+        {/* ═══ TAKEOVER → facts + photo + checklist ═══ */}
+        <section className="section facts" id="takeover">
           <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <span className="eyebrow">Built by someone else?</span>
-                <h2>Taking over a website another agency or freelancer built</h2>
-                <div className="stack mt-6">
-                  <p>
-                    Many of the sites we look after were built by someone else. The agency closed, the freelancer moved
-                    on, or support just stopped answering. That is fine. You do not need a new website to get proper
-                    website support services. You need someone to take stock of what you have.
-                  </p>
-                  <p>
-                    Every takeover starts with an audit. Before we change anything, we work out who owns what, what the
-                    site runs on, what is out of date, and what could break. You get a plain-English report and a
-                    recommendation, and only then do you choose a care plan.
-                  </p>
-                </div>
-                <span className="eyebrow" style={{ display: 'block', marginTop: 28 }}>The takeover audit, in 10 checks</span>
-                <ol className="scope-list num-list mt-4">
-                  {TAKEOVER_CHECKS.map((c) => (<li key={c}>{c}</li>))}
-                </ol>
+            <div className="section-head">
+              <div className="eyebrow">Built by someone else?</div>
+              <h2>Taking over a website another agency or freelancer built</h2>
+            </div>
+            <div className="factswrap">
+              <div className="factlist">
+                <div className="fact"><div className="sec">§01</div><p>
+                  Many of the sites we look after were built by someone else. The agency closed, the freelancer moved
+                  on, or support just stopped answering. That is fine. You do not need a new website to get proper
+                  website support services. You need someone to take stock of what you have.
+                </p></div>
+                <div className="fact"><div className="sec">§02</div><p>
+                  Every takeover starts with an audit. Before we change anything, we work out who owns what, what the
+                  site runs on, what is out of date, and what could break. You get a plain-English report and a
+                  recommendation, and only then do you choose a care plan.
+                </p></div>
+                <div className="fact"><div className="sec">§03</div><div>
+                  <div className="factlabel">The takeover audit, in 10 checks</div>
+                  <ol className="au-numlist">
+                    {TAKEOVER_CHECKS.map((c) => (<li key={c}><span>{c}</span></li>))}
+                  </ol>
+                </div></div>
+                <div className="fact"><div className="sec">§04</div><div>
+                  <div className="factlabel">What you should own, always</div>
+                  <ul className="trigrows">
+                    <li><span className="m">Domain name</span><span className="n">registrar account in your business name</span><span className="t">You</span></li>
+                    <li><span className="m">Hosting or Shopify account</span><span className="n">billing and owner login</span><span className="t">You</span></li>
+                    <li><span className="m">Analytics and Search Console</span><span className="n">history you cannot recreate</span><span className="t">You</span></li>
+                    <li><span className="m">Premium theme and plugin licences</span><span className="n">so updates keep coming</span><span className="t">You</span></li>
+                    <li><span className="m">Our access</span><span className="n">named logins you can remove</span><span className="t">Revocable</span></li>
+                  </ul>
+                </div></div>
               </div>
-              <div className="stack">
-                <figure className="card" style={{ padding: 8, margin: 0 }}>
-                  <img src="/images/au/website-maintenance/website-maintenance-takeover.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A Brisbane physiotherapy clinic owner passes a folder of website logins and notes across the table to a FactoryJet web engineer at the start of a site takeover" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
-                  <figcaption style={{ padding: '12px 10px 6px', fontSize: 14 }}>
-                    A takeover starts with a handover of whatever you have: logins, invoices from your host, emails
-                    from the old developer. We turn it into a clean, documented list.
-                  </figcaption>
-                </figure>
-                <div className="card card-top-orange">
-                  <span className="eyebrow">What you should own, always</span>
-                  <div className="scorecard-row"><div><div className="scorecard-metric">Domain name</div><div className="scorecard-note">registrar account in your business name</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>You</div></div>
-                  <div className="scorecard-row"><div><div className="scorecard-metric">Hosting or Shopify account</div><div className="scorecard-note">billing and owner login</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>You</div></div>
-                  <div className="scorecard-row"><div><div className="scorecard-metric">Analytics and Search Console</div><div className="scorecard-note">history you cannot recreate</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>You</div></div>
-                  <div className="scorecard-row"><div><div className="scorecard-metric">Premium theme and plugin licences</div><div className="scorecard-note">so updates keep coming</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>You</div></div>
-                  <div className="scorecard-row"><div><div className="scorecard-metric">Our access</div><div className="scorecard-note">named logins you can remove</div></div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Revocable</div></div>
-                </div>
-              </div>
+              <VisualSlot page={PAGE_KEY} slot="facts-2" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
+                subject="A physiotherapy clinic owner passing a folder of website logins and notes to a FactoryJet web engineer at the start of a site takeover"
+                caption="A takeover starts with a handover of whatever you have: logins, invoices from your host, emails from the old developer. We turn it into a clean, documented list.">
+                <img src="/images/au/website-maintenance/website-maintenance-takeover.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A Brisbane physiotherapy clinic owner passes a folder of website logins and notes across the table to a FactoryJet web engineer at the start of a site takeover" />
+              </VisualSlot>
             </div>
           </div>
         </section>
 
-        {/* ═══ 9. SECURITY + PRIVACY ACT ═══ */}
-        <section className="sec-lg">
+        {/* ═══ SECURITY + PRIVACY ACT → facts + photo + ruled rows ═══ */}
+        <section className="section facts" id="security">
           <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <span className="eyebrow">Security, in plain English</span>
-                <h2>What happens if your website gets hacked, and what the Privacy Act expects</h2>
-                <div className="stack mt-6">
-                  <p>
-                    Most small business sites are not hacked by someone targeting them. They are found by automated
-                    tools scanning the internet for a known weakness, usually an old plugin, an abandoned theme or a
-                    weak admin password. That is why tested updates and removing what you do not use matter so much.
-                  </p>
-                  <p>
-                    <b>If it happens,</b> we take the site into maintenance mode if needed, restore a clean backup where
-                    one exists, find and close the way in, remove malicious code, reset passwords and keys, and ask
-                    Google to review the site if it has been flagged. Then we tell you what happened, in writing.
-                  </p>
-                  <p>
-                    <b>Personal information.</b> If your site holds customer details, such as enquiry form entries,
-                    accounts or orders, a hack can be a data breach. The OAIC says any organisation covered by the
-                    Privacy Act 1988 must notify affected individuals and the OAIC when a data breach is likely to
-                    result in serious harm. Many small businesses under a turnover threshold are exempt, but some are
-                    covered whatever their size, including health service providers, so a small clinic or dental
-                    practice is covered.
-                  </p>
+            <div className="section-head">
+              <div className="eyebrow">Security, in plain English</div>
+              <h2>What happens if your website gets hacked, and what the Privacy Act expects</h2>
+            </div>
+            <div className="factswrap">
+              <div className="factlist">
+                <div className="fact"><div className="sec">§01</div><p>
+                  Most small business sites are not hacked by someone targeting them. They are found by automated
+                  tools scanning the internet for a known weakness, usually an old plugin, an abandoned theme or a
+                  weak admin password. That is why tested updates and removing what you do not use matter so much.
+                </p></div>
+                <div className="fact"><div className="sec">§02</div><p>
+                  <b>If it happens,</b> we take the site into maintenance mode if needed, restore a clean backup where
+                  one exists, find and close the way in, remove malicious code, reset passwords and keys, and ask
+                  Google to review the site if it has been flagged. Then we tell you what happened, in writing.
+                </p></div>
+                <div className="fact"><div className="sec">§03</div><p>
+                  <b>Personal information.</b> If your site holds customer details, such as enquiry form entries,
+                  accounts or orders, a hack can be a data breach. The OAIC says any organisation covered by the
+                  Privacy Act 1988 must notify affected individuals and the OAIC when a data breach is likely to
+                  result in serious harm. Many small businesses under a turnover threshold are exempt, but some are
+                  covered whatever their size, including health service providers, so a small clinic or dental
+                  practice is covered.
+                </p></div>
+                <div className="fact"><div className="sec">§04</div><div>
                   <p>
                     <b>Accessibility.</b> Maintenance is also when accessibility slips or improves. We check new content
                     against the basics of WCAG 2.2, the current version of the web accessibility guidelines, such as
                     colour contrast, image descriptions and keyboard use.
                   </p>
-                </div>
-                <p style={srcNote}>
-                  Sources: <a href={SRC_OAIC_NDB} {...extLink} style={srcLink}>OAIC, Notifiable Data Breaches scheme</a>;{' '}
-                  <a href={SRC_OAIC_SMALL} {...extLink} style={srcLink}>OAIC, small business</a>;{' '}
-                  <a href={SRC_WCAG} {...extLink} style={srcLink}>W3C, WCAG 2 overview</a>. This is general information, not legal advice.
-                </p>
-              </div>
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/website-maintenance/website-maintenance-hacked.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over the shoulder of a Perth practice manager and a web engineer at her desk, relieved as the security checks on her cleaned website all come back clear" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
-                <div style={{ padding: '14px 12px 8px' }}>
-                  <p style={{ fontSize: 14 }}>
-                    After a clean-up, we walk you through what happened, what we changed, and what stops it happening
-                    again. No jargon, no blame.
+                  <p className="au-note">
+                    Sources: <a href={SRC_OAIC_NDB} {...extLink}>OAIC, Notifiable Data Breaches scheme</a>;{' '}
+                    <a href={SRC_OAIC_SMALL} {...extLink}>OAIC, small business</a>;{' '}
+                    <a href={SRC_WCAG} {...extLink}>W3C, WCAG 2 overview</a>. This is general information, not legal advice.
                   </p>
-                </div>
+                </div></div>
               </div>
+              <VisualSlot page={PAGE_KEY} slot="facts-3" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
+                subject="A practice manager and a web engineer at her desk, relieved as the security checks on her cleaned website come back clear"
+                caption="After a clean-up, we walk you through what happened, what we changed, and what stops it happening again. No jargon, no blame.">
+                <img src="/images/au/website-maintenance/website-maintenance-hacked.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over the shoulder of a Perth practice manager and a web engineer at her desk, relieved as the security checks on her cleaned website all come back clear" />
+              </VisualSlot>
             </div>
-            <ul className="col-3 mt-10">
-              <li className="card"><h3>What we do</h3><p className="mt-4">Tested updates, off-site backups, login protection, malware scanning, removal of unused plugins and old users, and a documented plan for what happens if something goes wrong.</p></li>
-              <li className="card"><h3>What you keep</h3><p className="mt-4">You stay responsible for the personal information your site collects. We make that easier by keeping forms lean, storing less, and documenting where data goes.</p></li>
-              <li className="card"><h3>What we do not do</h3><p className="mt-4">We are not lawyers and do not decide whether a breach is notifiable. If personal information may be involved, we give you the facts to take to your adviser quickly.</p></li>
-            </ul>
+            <div className="platlist span-all" role="list">
+              <div className="plat plat-2col" role="listitem"><span className="capid">01</span><div className="plat-name"><h3>What we do</h3></div><p className="plat-build">Tested updates, off-site backups, login protection, malware scanning, removal of unused plugins and old users, and a documented plan for what happens if something goes wrong.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">02</span><div className="plat-name"><h3>What you keep</h3></div><p className="plat-build">You stay responsible for the personal information your site collects. We make that easier by keeping forms lean, storing less, and documenting where data goes.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">03</span><div className="plat-name"><h3>What we do not do</h3></div><p className="plat-build">We are not lawyers and do not decide whether a breach is notifiable. If personal information may be involved, we give you the facts to take to your adviser quickly.</p></div>
+            </div>
           </div>
         </section>
 
-        {/* ═══ 10. COMPARISON TABLE ═══ */}
-        <section className="sec-lg dot-grid">
+        {/* ═══ COMPARISON TABLE ═══ */}
+        <section className="section comparison" id="comparison">
           <div className="wrap">
-            <span className="eyebrow">Side by side</span>
-            <h2 style={{ maxWidth: 820 }}>Do it yourself vs freelancer vs hosting company vs an agency website care plan</h2>
-            <p className="lead mt-4" style={{ maxWidth: 760 }}>
-              Four common ways Australian businesses keep a website running. Each is the right answer for someone. This
-              compares them on what changes day to day, not on price.
-            </p>
-            <div className="card mt-8" style={{ padding: 0, overflowX: 'auto' }}>
-              <table className="cmp-table" style={{ minWidth: 760 }}>
+            <div className="section-head head-split">
+              <div className="eyebrow">Side by side</div>
+              <div>
+                <h2>Do it yourself vs freelancer vs hosting company vs an agency website care plan</h2>
+                <p className="lead">
+                  Four common ways Australian businesses keep a website running. Each is the right answer for someone. This
+                  compares them on what changes day to day, not on price.
+                </p>
+              </div>
+            </div>
+            <div className="tablewrap">
+              <table>
                 <thead>
                   <tr>
                     <th>What you get</th>
@@ -732,164 +835,166 @@ export default function WebsiteMaintenanceAUPage() {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td className="feat">Updates tested before going live</td><td className="fj"><span className="yes">Yes, on staging</span></td><td><span className="partial">Depends on the person</span></td><td><span className="partial">Often automatic, untested</span></td><td><span className="partial">If you set up staging</span></td></tr>
-                  <tr><td className="feat">Fixes when a plugin or app breaks</td><td className="fj"><span className="yes">Included in scope</span></td><td><span className="yes">Usually, when available</span></td><td><span className="no">Rarely, server only</span></td><td><span className="partial">If you can find the cause</span></td></tr>
-                  <tr><td className="feat">Cover when someone is away</td><td className="fj"><span className="yes">A team, not one person</span></td><td><span className="no">One person</span></td><td><span className="yes">Support desk</span></td><td><span className="no">Just you</span></td></tr>
-                  <tr><td className="feat">Content and design changes</td><td className="fj"><span className="yes">Agreed amount each month</span></td><td><span className="yes">Usually, by the hour</span></td><td><span className="no">No</span></td><td><span className="yes">Yes, your time</span></td></tr>
-                  <tr><td className="feat">Checks that forms and checkout work</td><td className="fj"><span className="yes">After every update</span></td><td><span className="partial">Sometimes</span></td><td><span className="no">No</span></td><td><span className="partial">If you remember</span></td></tr>
-                  <tr><td className="feat">Speed and technical SEO</td><td className="fj"><span className="yes">Checked monthly</span></td><td><span className="partial">Depends on skills</span></td><td><span className="partial">Server speed only</span></td><td><span className="partial">With tools and time</span></td></tr>
-                  <tr><td className="feat">Written monthly report</td><td className="fj"><span className="yes">Plain English</span></td><td><span className="partial">Sometimes</span></td><td><span className="partial">Automated emails</span></td><td>Not needed</td></tr>
-                  <tr><td className="feat">Accounts in your name</td><td className="fj"><span className="yes">Always</span></td><td><span className="partial">Check the contract</span></td><td><span className="yes">Usually</span></td><td><span className="yes">Yes</span></td></tr>
-                  <tr><td className="feat">Best for</td><td className="fj">Sites that earn money every week</td><td>Simple sites, trusted person</td><td>Server uptime only</td><td>Small sites, confident owners</td></tr>
+                  <tr><th scope="row">Updates tested before going live</th><td className="fj">Yes, on staging</td><td>Depends on the person</td><td>Often automatic, untested</td><td>If you set up staging</td></tr>
+                  <tr><th scope="row">Fixes when a plugin or app breaks</th><td className="fj">Included in scope</td><td>Usually, when available</td><td>Rarely, server only</td><td>If you can find the cause</td></tr>
+                  <tr><th scope="row">Cover when someone is away</th><td className="fj">A team, not one person</td><td>One person</td><td>Support desk</td><td>Just you</td></tr>
+                  <tr><th scope="row">Content and design changes</th><td className="fj">Agreed amount each month</td><td>Usually, by the hour</td><td>No</td><td>Yes, your time</td></tr>
+                  <tr><th scope="row">Checks that forms and checkout work</th><td className="fj">After every update</td><td>Sometimes</td><td>No</td><td>If you remember</td></tr>
+                  <tr><th scope="row">Speed and technical SEO</th><td className="fj">Checked monthly</td><td>Depends on skills</td><td>Server speed only</td><td>With tools and time</td></tr>
+                  <tr><th scope="row">Written monthly report</th><td className="fj">Plain English</td><td>Sometimes</td><td>Automated emails</td><td>Not needed</td></tr>
+                  <tr><th scope="row">Accounts in your name</th><td className="fj">Always</td><td>Check the contract</td><td>Usually</td><td>Yes</td></tr>
+                  <tr><th scope="row">Best for</th><td className="fj">Sites that earn money every week</td><td>Simple sites, trusted person</td><td>Server uptime only</td><td>Small sites, confident owners</td></tr>
                 </tbody>
               </table>
             </div>
           </div>
         </section>
 
-        {/* ═══ 11. COST DRIVERS + DEMAND ═══ */}
-        <section className="sec-lg" id="cost">
+        {/* ═══ COST DRIVERS + DEMAND → ruled rows + split ═══ */}
+        <section className="section platforms" id="cost">
           <div className="wrap">
-            <div className="col-6040">
+            <div className="section-head plat-head">
               <div>
-                <span className="eyebrow">What it costs</span>
+                <div className="eyebrow">What it costs</div>
                 <h2>What drives the cost of website maintenance in Australia</h2>
-                <p className="lead mt-4" style={{ maxWidth: 560 }}>
-                  We do not publish a price list, because two sites that look the same can need very different care. We
-                  check your site, then quote a fixed monthly scope. These are the things that move it.
-                </p>
-                <ol className="scope-list num-list mt-6" style={{ maxWidth: 580 }}>
-                  <li><b>Platform.</b> Shopify takes hosting and platform security off the list. Self-hosted WordPress and WooCommerce put them on it.</li>
-                  <li><b>Plugins, apps and integrations.</b> Every add-on is something to update and test. Integrations with Xero, MYOB, stock or booking systems add more.</li>
-                  <li><b>Payments and personal data.</b> Sites that take orders or hold customer accounts need more testing and closer security.</li>
-                  <li><b>Change work each month.</b> Update-only plans cost less than plans with regular page, product or design changes.</li>
-                  <li><b>Response time.</b> How quickly you need a first response when the site is down, and whether that includes weekends.</li>
-                  <li><b>Hosting.</b> Whether hosting is part of the plan or stays with your own provider.</li>
-                  <li><b>Starting condition.</b> A tidy, current site costs less to look after than one with years of skipped updates. The first month often includes clean-up.</li>
-                </ol>
-                <p className="mt-6" style={{ maxWidth: 560 }}>
+              </div>
+              <p>
+                We do not publish a price list, because two sites that look the same can need very different care. We
+                check your site, then quote a fixed monthly scope. These are the things that move it.
+              </p>
+            </div>
+            <div className="platlist" role="list">
+              <div className="plat plat-2col" role="listitem"><span className="capid">01</span><div className="plat-name"><h3>Platform.</h3></div><p className="plat-build">Shopify takes hosting and platform security off the list. Self-hosted WordPress and WooCommerce put them on it.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">02</span><div className="plat-name"><h3>Plugins, apps and integrations.</h3></div><p className="plat-build">Every add-on is something to update and test. Integrations with Xero, MYOB, stock or booking systems add more.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">03</span><div className="plat-name"><h3>Payments and personal data.</h3></div><p className="plat-build">Sites that take orders or hold customer accounts need more testing and closer security.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">04</span><div className="plat-name"><h3>Change work each month.</h3></div><p className="plat-build">Update-only plans cost less than plans with regular page, product or design changes.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">05</span><div className="plat-name"><h3>Response time.</h3></div><p className="plat-build">How quickly you need a first response when the site is down, and whether that includes weekends.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">06</span><div className="plat-name"><h3>Hosting.</h3></div><p className="plat-build">Whether hosting is part of the plan or stays with your own provider.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">07</span><div className="plat-name"><h3>Starting condition.</h3></div><p className="plat-build">A tidy, current site costs less to look after than one with years of skipped updates. The first month often includes clean-up.</p></div>
+            </div>
+            <div className="au-split">
+              <div>
+                <p>
                   Want typical Australian price ranges from independent sources, including GST treatment? Read our{' '}
                   <a href="/blog/website-cost-australia-2026">website cost guide for Australia in 2026</a>. Those are
                   market ranges, not our prices.
                 </p>
-                <div className="mt-8">
-                  <ModalCTAButton label="Get a free site check" region="au" modalVariant="default" btnVariant="primary-light" />
-                </div>
+                <ModalCTAButton label="Get a free site check" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
               </div>
-
-              <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: `1px solid ${T.n200}`, padding: '14px 18px' }}>
-                  <span style={{ fontFamily: T.fm, fontSize: 10, letterSpacing: '.13em', textTransform: 'uppercase', color: T.n400 }}>Australia · Monthly Search Demand</span>
-                  <span style={{ background: T.small, color: '#fff', fontFamily: T.fm, fontSize: 10, borderRadius: 999, padding: '3px 9px' }}>DataForSEO</span>
-                </div>
-                <div style={{ padding: '4px 18px 14px' }}>
-                  <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
-                    {[
-                      { kw: 'website maintenance', v: '480', w: '100%', kd: 'The broad term' },
-                      { kw: 'website maintenance services', v: '320', w: '67%', kd: 'Looking for a provider' },
-                      { kw: 'wordpress maintenance services', v: '320', w: '67%', kd: 'WordPress sites' },
-                      { kw: 'web maintenance packages', v: '210', w: '44%', kd: 'Comparing plans' },
-                      { kw: 'wordpress website maintenance', v: '140', w: '29%', kd: 'Owners of WordPress sites' },
-                      { kw: 'website care plan', v: '140', w: '29%', kd: 'Ongoing care' },
-                      { kw: 'website maintenance australia', v: '30', w: '6%', kd: 'Australia specific' },
-                    ].map((r) => (
-                      <li key={r.kw} className="demand-row">
-                        <div className="demand-top"><span className="demand-kw">{r.kw}</span><span className="demand-v">{r.v}<span style={{ fontSize: 9, color: T.n400 }}> searches</span></span></div>
-                        <div className="demand-bar"><i style={{ width: r.w }} /></div>
-                        <div className="demand-kd">{r.kd}</div>
-                      </li>
-                    ))}
-                  </ul>
-                  <p style={{ textAlign: 'center', fontFamily: T.fm, fontSize: 10, color: T.n400, marginTop: 10 }}>Source: DataForSEO, Australia, September 2026</p>
-                </div>
+              <div className="demand">
+                <div className="demand-head"><span>Australia · Monthly Search Demand</span><b>DataForSEO</b></div>
+                <ul>
+                  {[
+                    { kw: 'website maintenance', v: '480', w: '100%', kd: 'The broad term' },
+                    { kw: 'website maintenance services', v: '320', w: '67%', kd: 'Looking for a provider' },
+                    { kw: 'wordpress maintenance services', v: '320', w: '67%', kd: 'WordPress sites' },
+                    { kw: 'web maintenance packages', v: '210', w: '44%', kd: 'Comparing plans' },
+                    { kw: 'wordpress website maintenance', v: '140', w: '29%', kd: 'Owners of WordPress sites' },
+                    { kw: 'website care plan', v: '140', w: '29%', kd: 'Ongoing care' },
+                    { kw: 'website maintenance australia', v: '30', w: '6%', kd: 'Australia specific' },
+                  ].map((r) => (
+                    <li key={r.kw} className="demand-row">
+                      <div className="demand-top"><span className="demand-kw">{r.kw}</span><span className="demand-v">{r.v}<small> searches</small></span></div>
+                      <div className="demand-bar"><i style={{ width: r.w }} /></div>
+                      <div className="demand-kd">{r.kd}</div>
+                    </li>
+                  ))}
+                </ul>
+                <p className="demand-src">Source: DataForSEO, Australia, September 2026</p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ═══ 12. INDUSTRIES ═══ */}
-        <section className="sec-lg dot-grid">
+        {/* ═══ INDUSTRIES → capgrid ═══ */}
+        <section className="section capabilities" id="industries">
           <div className="wrap">
-            <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">Who we look after</span>
+            <div className="section-head">
+              <div className="eyebrow">Who we look after</div>
               <h2>Website management for tradies, clinics, online stores and professional firms</h2>
-              <p className="lead mt-4">
+              <p className="lead">
                 The same care, shaped around what your website has to do for your business every day.
               </p>
             </div>
-            <ul className="col-3 mt-12">
-              <li className="svc-card"><h3>Tradies and home services</h3><p className="mt-4">Quote forms and call buttons tested after every update, service areas and photos kept current, and a site that loads fast on a phone at a job site. See our <a href="/au/websites-for-tradies">websites for tradies</a>.</p></li>
-              <li className="svc-card"><h3>Dental and allied health</h3><p className="mt-4">Online booking links checked, practitioner and fee pages kept accurate, and extra care with patient data because health providers are covered by the Privacy Act. See <a href="/au/dental-website-design">dental website design</a>.</p></li>
-              <li className="svc-card"><h3>Online stores</h3><p className="mt-4">Checkout, payment, shipping and stock sync tested after updates, with extra care before end of financial year sales, Black Friday and Christmas. See <a href="/au/ecommerce-development">ecommerce development</a>.</p></li>
-              <li className="svc-card"><h3>Professional services</h3><p className="mt-4">Accountants, lawyers and consultants: enquiry forms that always arrive, team pages kept current, and security taken seriously because clients trust you with their details.</p></li>
-              <li className="svc-card"><h3>Hospitality and venues</h3><p className="mt-4">Menus, opening hours, function packs and booking links updated quickly, so the website never tells customers something that stopped being true last month.</p></li>
-              <li className="svc-card"><h3>Membership and community groups</h3><p className="mt-4">Member logins, event pages and payment forms kept working, with volunteers able to edit content safely without breaking the site.</p></li>
-            </ul>
+            <div className="capgrid">
+              {INDUSTRIES.map((j, i) => {
+                const n = String(i + 1).padStart(2, '0');
+                return (
+                  <div key={j.t} className={`cap cap-${i + 1}`}>
+                    <div className="caphead"><span className="capid">CAP‑{n}</span><svg {...CAP_ICON}><path d={INDUSTRY_ICONS[i]} /></svg></div>
+                    <VisualSlot page={PAGE_KEY} slot={`capability-${n}`} kind="diagram" ratio="11:4" className="cap-diagram" subject={INDUSTRY_SUBJECTS[i]} />
+                    <h3>{j.t}</h3>
+                    <p>{j.d}</p>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </section>
 
-        {/* ═══ 13. PROVIDER LIST (self-disclosure, ItemList) ═══ */}
-        <section className="sec-lg">
+        {/* ═══ PROVIDER LIST (self-disclosure, ItemList from PROVIDERS) → ruled rows ═══ */}
+        <section className="section platforms" id="providers">
           <div className="wrap">
-            <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">The honest landscape</span>
-              <h2>Australian website maintenance providers worth knowing</h2>
-              <p className="lead mt-4">
+            <div className="section-head plat-head">
+              <div>
+                <div className="eyebrow">The honest landscape</div>
+                <h2>Australian website maintenance providers worth knowing</h2>
+              </div>
+              <p>
                 We are one option, not the only one. These Australian agencies rank for website maintenance services
                 searches. Each note is based on what the company says on its own maintenance page. None of them lists
                 Shopify store care on those pages, which is one reason we do.
               </p>
             </div>
-            <ul className="col-2 mt-10" style={{ gap: 16 }}>
+            <div className="platlist" role="list">
               {PROVIDERS.map((p, i) => (
-                <li key={p.name} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
-                  <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.small, minWidth: 30 }}>{i + 1}</span>
-                  <div>
-                    <h3 style={{ fontSize: 18 }}>{p.name}{p.name === 'FactoryJet' && <span style={{ fontFamily: T.fm, fontSize: 10, background: T.small, color: '#fff', borderRadius: 999, padding: '2px 8px', marginLeft: 8, verticalAlign: 'middle' }}>That is us</span>}</h3>
-                    <p style={{ marginTop: 6 }}>{p.note}</p>
-                  </div>
-                </li>
+                <div key={p.name} className={p.name === 'FactoryJet' ? 'plat plat-2col plat-own' : 'plat plat-2col'} role="listitem">
+                  <span className="capid">{String(i + 1).padStart(2, '0')}</span>
+                  <div className="plat-name"><h3>{p.name}</h3>{p.name === 'FactoryJet' && <span className="plat-flag">That is us</span>}</div>
+                  <p className="plat-build">{p.note}</p>
+                </div>
               ))}
-            </ul>
-            <p style={srcNote}>
+            </div>
+            <p className="sub-note">
               Providers named from live Australian search results for website maintenance queries, September 2026. Notes reflect each company’s own maintenance page on 26 September 2026. Listing is not endorsement.
             </p>
-            <div className="card mt-8" style={{ maxWidth: 900 }}>
-              <span className="eyebrow">Questions to ask any provider, including us</span>
-              <ol className="scope-list num-list mt-4">
-                <li><b>Do you test updates before they reach my live site?</b> Ask what happens when a plugin or app update breaks something.</li>
-                <li><b>Where are backups kept, and when did you last restore one?</b> A backup nobody has restored is a hope, not a plan.</li>
-                <li><b>How fast do you respond when the site is down, including weekends?</b> Get it in writing.</li>
-                <li><b>What changes are included each month?</b> Know what counts as a change and what gets quoted separately.</li>
-                <li><b>Whose name are the domain, hosting and licences in?</b> The only good answer is yours.</li>
-                <li><b>What do I get back if I leave?</b> A full backup, every login and notes on anything custom.</li>
+            <div className="au-panel au-panel-wide">
+              <div className="eyebrow">Questions to ask any provider, including us</div>
+              <ol className="au-numlist">
+                <li><span><b>Do you test updates before they reach my live site?</b> Ask what happens when a plugin or app update breaks something.</span></li>
+                <li><span><b>Where are backups kept, and when did you last restore one?</b> A backup nobody has restored is a hope, not a plan.</span></li>
+                <li><span><b>How fast do you respond when the site is down, including weekends?</b> Get it in writing.</span></li>
+                <li><span><b>What changes are included each month?</b> Know what counts as a change and what gets quoted separately.</span></li>
+                <li><span><b>Whose name are the domain, hosting and licences in?</b> The only good answer is yours.</span></li>
+                <li><span><b>What do I get back if I leave?</b> A full backup, every login and notes on anything custom.</span></li>
               </ol>
             </div>
           </div>
         </section>
 
-        {/* ═══ 14. SIBLING SERVICES (hover cards) ═══ */}
-        <section className="sec-lg dot-grid">
+        {/* ═══ SIBLING SERVICES → agentdir ═══ */}
+        <section className="section agentdir" id="more-services">
           <div className="wrap">
-            <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">Beyond maintenance</span>
+            <div className="section-head">
+              <div className="eyebrow">Beyond maintenance</div>
               <h2>The rest of what we build and support for Australian businesses</h2>
-              <p className="lead mt-4">
+              <p>
                 A well-maintained website is the base everything else sits on. These are the natural next steps, built
                 by the same team.
               </p>
             </div>
-            <ul className="col-3 mt-10">
+            <ul className="agentdir-grid">
               {SIBLINGS.map((s) => (
-                <li key={s.href} className="svc-card" style={{ padding: 0 }}>
-                  <a href={s.href} style={{ display: 'block', padding: 24, height: '100%' }}>
-                    <h3>{s.t} <span style={{ color: T.small }} aria-hidden="true">→</span></h3>
-                    <p className="mt-4">{s.d}</p>
+                <li key={s.href}>
+                  <a href={s.href}>
+                    <span className="agentdir-t">{s.t}</span>
+                    <span className="agentdir-l">{s.d}</span>
+                    <span className="agentdir-go" aria-hidden="true">↗</span>
                   </a>
                 </li>
               ))}
             </ul>
-            <p className="mt-8" style={{ maxWidth: 760 }}>
+            <p className="tablenote">
               Further reading: <a href="/blog/importance-of-website-maintenance-seo">why website maintenance matters for SEO</a>,{' '}
               <a href="/blog/wordpress-security-audit-guide">our WordPress security audit guide</a>, and{' '}
               <a href="/blog/best-wordpress-development-companies-australia-2026">the best WordPress development companies in Australia</a>.
@@ -897,75 +1002,36 @@ export default function WebsiteMaintenanceAUPage() {
           </div>
         </section>
 
-        {/* ═══ 15. FAQ (canonical Linear Minimal) ═══ */}
-        <section className="sec-lg" id="faq">
+        {/* ═══ FAQ (Family A accordion; same FAQ_ITEMS array as the FAQPage JSON-LD) ═══ */}
+        <AuFaq
+          categories={FAQ_CATEGORIES}
+          items={FAQ_ITEMS}
+          heading="Website maintenance questions Australian business owners actually ask"
+          askLabel="Still have a question? Ask the founder →"
+          askNote="Replies within 24 hours."
+        />
+
+        {/* ═══ FINAL CTA (light, US finalcta) ═══ */}
+        <section className="finalcta" id="finalcta">
           <div className="wrap">
-            <style>{'.au-svc .faq-item summary::after{content:none;display:none}'}</style>
-            <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">FAQ</span>
-              <h2>Website maintenance questions Australian business owners actually ask</h2>
+            <div>
+              <div className="eyebrow">Ready when you are</div>
+              <h2>Hand over the updates, the backups and the worry</h2>
+              <p>
+                Send your name and work email. The founder replies within 24 hours to book a short call about your website,
+                what it runs on, what state it is in, and which level of care fits. No spam, no obligation.
+              </p>
             </div>
-            <div className="faq-grid">
-              <aside className="faq-sidebar">
-                <span className="faq-sidebar-topics">Topics</span>
-                <nav className="faq-sidebar-nav">
-                  {FAQ_CATEGORIES.map((c) => (
-                    <a key={c.key} href={`#faq-${c.key}`}>
-                      {c.label}
-                      <span className="faq-nav-count">{FAQ_ITEMS.filter((f) => f.category === c.key).length}</span>
-                    </a>
-                  ))}
-                </nav>
-                <div className="faq-sidebar-cta">
-                  <ModalCTAButton label="Still have a question? Ask the founder →" region="au" modalVariant="default" btnVariant="secondary-light" />
-                  <p>Replies within 24 hours.</p>
-                </div>
-              </aside>
-
-              <div>
-                {FAQ_CATEGORIES.map((c) => (
-                  <div key={c.key} id={`faq-${c.key}`} style={{ marginBottom: 40 }}>
-                    <div className="faq-cat-header">
-                      <span className="faq-cat-bar" />
-                      <p className="faq-cat-label">{c.label}</p>
-                    </div>
-                    <ul className="faq-list">{FAQ_ITEMS.filter((f) => f.category === c.key).map((f) => (
-                      <li key={f.question}><details className="faq-item">
-                        <summary>
-                          <span className="q-text">{f.question}</span>
-                          <span className="chevron">
-                            <svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5L7 9L11 5" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" /></svg>
-                          </span>
-                        </summary>
-                        <div className="faq-ans"><p>{f.answer}</p></div>
-                      </details></li>
-                    ))}</ul>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ═══ 16. FINAL CTA (the only dark section) ═══ */}
-        <section className="dark-sec">
-          <div className="wrap" style={{ textAlign: 'center', maxWidth: 640 }}>
-            <span className="eyebrow">Ready when you are</span>
-            <h2>Hand over the updates, the backups and the worry</h2>
-            <p className="mt-4">
-              Send your name and work email. The founder replies within 24 hours to book a short call about your website,
-              what it runs on, what state it is in, and which level of care fits. No spam, no obligation.
-            </p>
-            <div className="mt-8" style={{ display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap' }}>
-              <ModalCTAButton label="Get a free site check" region="au" modalVariant="default" btnVariant="primary-light" />
-              <a className="btn btn-outline" href="/au" style={{ color: '#fff', borderColor: 'rgba(255,255,255,.25)' }}>See FactoryJet Australia</a>
+            <div className="ctas">
+              <ModalCTAButton label="Get a free site check" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
+              <a className="btn btn-ghost" href="/au">See FactoryJet Australia</a>
             </div>
           </div>
         </section>
 
       </main>
       </div>
-      <SiteFooter locale="au" linkColumns={AU_FOOTER_COLUMNS} variant="dark" tagline="Ecommerce, AI agents, websites and AI search for Australian businesses. Built by senior engineers, supported after launch, owned by you." />
+      <SiteFooter locale="au" linkColumns={AU_FOOTER_COLUMNS} tagline="Ecommerce, AI agents, websites and AI search for Australian businesses. Built by senior engineers, supported after launch, owned by you." />
     </>
   );
 }

@@ -1,31 +1,25 @@
 import type { Metadata } from 'next';
+import { Fragment } from 'react';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
-import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import { AU_FOOTER_COLUMNS } from '@/data/auFooterColumns';
-import '../au-service.css';
+import AuFaq from '../components/AuFaq';
+import VisualSlot from '../components/VisualSlot';
+import '@/components/v2/AiAgentDevelopmentSections.css';
+import '../au-page.css';
+import '../au-hub.css';
 
 const CANONICAL = 'https://factoryjet.com/au/ecommerce-development';
 const UPDATED = '2026-09-26';
 const TITLE = 'Ecommerce Agency & Development Australia | FactoryJet';
 const DESCRIPTION =
   'FactoryJet is an ecommerce agency for Australia. Ecommerce design, development and support for Shopify, WooCommerce, Adobe Commerce and B2B stores. You own it.';
-const H1 = 'Ecommerce Agency Australia: Ecommerce Development for DTC and B2B Brands, Supported After Launch';
-
-/* Design tokens, copied by value from ../au-service.css so inline styles stay
-   on-system without CSS custom property references in this file. */
-const T = {
-  ink: '#0F0F12',
-  n200: '#E5E5E0',
-  n400: '#6E6E68',
-  green: '#047857',
-  small: '#B23E13',
-  fm: "'Geist Mono',monospace",
-  fd: "'Plus Jakarta Sans',sans-serif",
-};
+/* Shortened 2026-09-26 so the hero form sits in the first desktop screen; "DTC and B2B brands" and
+   "ecommerce development" stay in the hero lead, which already says we stay on after launch. */
+const H1 = 'Ecommerce Agency Australia: Development for DTC and B2B Brands';
 
 /* ONE array drives the visible trail AND the BreadcrumbList JSON-LD, so the
    schema can never describe a trail a human cannot see. Never hand-copy a
@@ -69,6 +63,14 @@ const SRC_BGA_ACL = 'https://business.gov.au/legal/fair-trading/australian-consu
 // tell customers about consumer guarantees, secure payments, protect personal
 // information. fetch-verified 2026-09-25
 const SRC_BGA_ECOM = 'https://business.gov.au/online-and-digital/ecommerce';
+
+// Shopify Help Center, "Shopify B2B features by plan": "You can use Shopify B2B
+// on the Basic, Grow, Advanced, and Shopify Plus plans"; all plans get company
+// profiles and locations, net payment terms, quantity rules, quantity price
+// breaks, vaulted cards, draft orders with PO numbers; Basic/Grow/Advanced get 3
+// active B2B catalogs, Plus unlimited plus company-level catalogs, deposits and
+// partial payments. fetch-verified 2026-09-26
+const SRC_SHOPIFY_B2B = 'https://help.shopify.com/en/manual/b2b/getting-started/plan-features';
 
 /* ─── Answer-first block (drives visible block) ───────────────────── */
 const ANSWER_FIRST =
@@ -160,6 +162,18 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
     answer: 'Yes, and this is where a lot of DIY migrations go wrong. We map every old URL to its new address with one permanent (301) redirect, keep the product and category structure Google already trusts, carry over structured data and reviews, and test on a staging store first. After launch we watch rankings and traffic so anything that slips gets fixed early.' },
   { category: 'build', question: 'Do you build B2B ecommerce and trade portals?',
     answer: 'Yes. B2B ecommerce needs trade logins, account-specific prices, quick order by SKU, bulk upload, quotes, pay on account with credit limits, and prices shown ex-GST for trade buyers. We build it on Shopify Plus, Adobe Commerce, BigCommerce or WooCommerce, connected to your ERP or accounts software. We built this kind of B2B ordering for Bombay Petals.' },
+  { category: 'build', question: 'Which Australian agency should I hire to build a B2B ecommerce website?',
+    answer: 'Hire one that has built a live trade portal connected to an ERP, not just DTC stores. Ask to log in to a B2B store they built, ask how they sync customer prices and credit limits from your ERP, and ask who supports it after launch. FactoryJet builds B2B stores for Australian wholesalers and manufacturers, working remotely with no Australian office. Compare us with the agencies listed on this page.' },
+  { category: 'build', question: 'What is B2B ecommerce?',
+    answer: 'B2B ecommerce is selling to other businesses online instead of to the public. Trade buyers log in, see their own prices and payment terms, reorder quickly by SKU and pay on account. Behind the store, orders, stock and credit usually come from an ERP or accounting system. For wholesalers it replaces orders taken by phone, email and PDF with orders that arrive complete.' },
+  { category: 'build', question: 'Can Shopify be used for B2B?',
+    answer: 'Yes. Shopify says its B2B features work on the Basic, Grow, Advanced and Shopify Plus plans. Every plan gets company profiles with locations, net payment terms, minimum and maximum order quantities, quantity price breaks, saved cards and draft orders with PO numbers. Plus adds unlimited B2B catalogues, prices set per company, deposits and partial payments. Very complex quoting or pricing logic may still need an app or custom work.',
+    links: [{ href: SRC_SHOPIFY_B2B, label: 'Shopify Help: B2B features by plan' }] },
+  { category: 'build', question: 'Is Shopify B2B worth it?',
+    answer: 'For many Australian wholesalers, yes, especially if you already sell DTC on Shopify and want trade buyers in the same store and stock pool. It is less suited if every customer has a negotiated price across thousands of SKUs on a non-Plus plan, since those plans allow three active B2B catalogues. We check your price lists, payment terms and ERP before recommending it.' },
+  { category: 'build', question: 'What does Shopify B2B cost?',
+    answer: 'Shopify says B2B is included on the Basic, Grow, Advanced and Plus plans, so on those plans you are not paying for a separate B2B add-on. What you do pay for is the Shopify plan that fits your catalogue and pricing, any apps, and the build work: trade theme, price lists, ERP or Xero and MYOB integration, and migration. Our Shopify cost guide has Australian ranges.',
+    links: [{ href: '/blog/shopify-cost-australia-2026', label: 'Shopify cost in Australia' }] },
   { category: 'build', question: 'Can our store also sell on Amazon Australia, eBay and Kogan?',
     answer: 'Yes. We connect your store to Amazon Australia, eBay Australia and Kogan Marketplace so products, prices and stock are managed in one place and orders flow back to one system. The rule is one source of truth for stock, so you never sell the same last item twice. Catch is no longer an option: Wesfarmers wound it down in 2025.' },
 
@@ -233,8 +247,8 @@ const TIMELINES: { type: string; weeks: string; drivers: string }[] = [
 
 /* ─── Platform comparison (drives the platform table) ─────────────── */
 const PLATFORMS: { name: string; href: string; fit: string; b2b: string; runs: string; watch: string }[] = [
-  { name: 'Shopify', href: '/au/shopify-development', fit: 'Most DTC brands and growing catalogues', b2b: 'Basic, via apps', runs: 'Shopify hosts and patches it', watch: 'App fees and app bloat add up' },
-  { name: 'Shopify Plus', href: '/au/shopify-development', fit: 'High-volume, multi-store and wholesale brands', b2b: 'Built-in B2B features', runs: 'Shopify hosts and patches it', watch: 'Only worth it once standard plans limit you' },
+  { name: 'Shopify', href: '/au/shopify-development', fit: 'Most DTC brands and growing catalogues', b2b: 'Built in on every plan, up to 3 trade catalogues', runs: 'Shopify hosts and patches it', watch: 'App fees and app bloat add up' },
+  { name: 'Shopify Plus', href: '/au/shopify-development', fit: 'High-volume, multi-store and wholesale brands', b2b: 'Unlimited catalogues and per-company prices', runs: 'Shopify hosts and patches it', watch: 'Only worth it once standard plans limit you' },
   { name: 'WooCommerce', href: '', fit: 'Content-heavy brands already on WordPress', b2b: 'Via plugins', runs: 'You, or us, on your hosting', watch: 'Needs real speed and security upkeep' },
   { name: 'BigCommerce', href: '', fit: 'Larger catalogues that want a hosted platform', b2b: 'B2B Edition available', runs: 'BigCommerce hosts it', watch: 'Check your apps and connectors exist' },
   { name: 'Adobe Commerce (Magento)', href: '', fit: 'Complex, multi-brand and B2B catalogues', b2b: 'Strong: accounts, quotes, approvals', runs: 'You, or us, on your hosting', watch: 'Needs specialist developers and upkeep' },
@@ -376,10 +390,43 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-const srcNote = { fontFamily: T.fm, fontSize: 11, color: T.n400, marginTop: 12 } as const;
-const srcLink = { textDecoration: 'underline' } as const;
-const tableCard = { padding: 0, overflowX: 'auto' } as const;
-const tableMin = (w: number) => ({ minWidth: w }) as const;
+const extLink = { target: '_blank', rel: 'noopener noreferrer nofollow' } as const;
+
+/* Visual slot page key (route without /au/). */
+const PAGE_KEY = 'ecommerce-development';
+
+/* H1 split for the Family A hero emphasis. Same string as H1 (schema headline). */
+const H1_SPLIT = H1.indexOf(': ');
+const H1_LEAD = H1.slice(0, H1_SPLIT + 1);
+const H1_EMPHASIS = H1.slice(H1_SPLIT + 2);
+
+const STEP_ICON = { width: 24, height: 24, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', strokeWidth: 1.5, strokeLinecap: 'round', strokeLinejoin: 'round' } as const;
+const CAP_ICON = { width: 24, height: 24, viewBox: '0 0 24 24', fill: 'none', stroke: '#C94A1A', strokeWidth: 1.6, strokeLinecap: 'round', strokeLinejoin: 'round', 'aria-hidden': true } as const;
+
+/* Hero spec panel icons (same order as the three spec rows), reused on the two service cards. */
+const HERO_ICONS = [
+  'M3 4h2l2 11h11l2-8H6M9 20a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm8 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z',
+  'M9 15 15 9M8 11l-2 2a4 4 0 0 0 6 6l2-2M16 13l2-2a4 4 0 0 0-6-6l-2 2',
+  'M15 7a4 4 0 1 1-3.5 6L5 19.5V21h3v-2h2v-2h2l1.5-1.5A4 4 0 0 1 15 7Z',
+  'M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M6 18l2.5-2.5M15.5 8.5 18 6',
+] as const;
+
+/* The other ecommerce pages in the hub (was the three small hover cards). */
+const HUB_MORE: { h: string; t: string; d: string; l: string }[] = [
+  { h: '/au/ecommerce-seo', t: 'Ecommerce SEO', d: 'Category and product pages that rank on Google, plus the technical fixes behind them.', l: 'Ecommerce SEO Australia →' },
+  { h: '/au/ai-agents', t: 'AI agents for your store', d: 'Agents that answer order questions and keep listings and stock in step, with you approving the actions.', l: 'AI agents →' },
+  { h: '/commerceflo', t: 'Commerceflo', d: 'Our own AI commerce operator for brands running DTC, B2B and marketplaces on one data model.', l: 'About Commerceflo →' },
+];
+
+/* Related AU services (was the six hover cards). */
+const RELATED: { h: string; t: string; d: string; l: string }[] = [
+  { h: '/au/shopify-development', t: 'Shopify development Australia', d: 'Shopify and Shopify Plus themes, apps, B2B and migrations to Shopify, in depth.', l: 'See Shopify development →' },
+  { h: '/au/ai-agents', t: 'AI agents for your store', d: 'Agents that answer order questions, update listings and chase stock, connected to your systems.', l: 'See AI agents →' },
+  { h: '/au/ai-seo', t: 'AI SEO', d: 'Getting your brand and products named in ChatGPT, Perplexity and Google AI Overviews.', l: 'See AI SEO →' },
+  { h: '/au/seo', t: 'SEO services', d: 'Ecommerce SEO for category and product pages, technical fixes and content that ranks.', l: 'See SEO Australia →' },
+  { h: '/au/ai-development', t: 'AI development', d: 'AI built into your ERP, CRM or store: product data, search and support workflows.', l: 'See AI development →' },
+  { h: '/au', t: 'FactoryJet Australia', d: 'Everything we do for Australian businesses: ecommerce, AI agents, websites and AI search.', l: 'Back to the hub →' },
+];
 
 export default function EcommerceDevelopmentAUPage() {
   return (
@@ -389,776 +436,837 @@ export default function EcommerceDevelopmentAUPage() {
 
       <SiteHeader locale="au" logoHref="/au" />
 
-      <div className="au-svc">
-      <main>
+      <div className="aiAgentPage auPage">
+      <nav className="crumbs" aria-label="Breadcrumb">
+        <div className="wrap">
+          {crumbs.map((item, index) => (
+            <Fragment key={item.url}>
+              {index > 0 && ' / '}
+              {index === crumbs.length - 1 ? <b aria-current="page">{item.name}</b> : <a href={item.url}>{item.name}</a>}
+            </Fragment>
+          ))}
+        </div>
+      </nav>
+      <main id="au-content">
 
-        <Breadcrumbs items={crumbs} />
-
-        {/* ═══ 1. HERO ═══ */}
-        <section className="sec-lg dot-grid" style={{ position: 'relative' }}>
-          <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <div className="flex-wrap mb-6">
-                  <span className="chip"><span className="dot dot-orange" />Australian Ecommerce Agency</span>
-                  <span className="chip">DTC and B2B</span>
-                  <span className="chip">Build, Then Support</span>
-                </div>
-                <h1>{H1}</h1>
-                <p className="lead mt-6" style={{ maxWidth: 560 }}>
-                  FactoryJet is an ecommerce agency for Australian brands. Our ecommerce development team designs,
-                  builds and supports online stores on Shopify, WooCommerce, Adobe Commerce, BigCommerce and headless
-                  stacks, connected to Xero or MYOB, Australia Post and your couriers, Afterpay and Zip. Then we stay
-                  on after launch, and you own everything we build.
-                </p>
-
-                <div className="byline mt-6" style={{ maxWidth: 560 }}>
-                  <div className="av">BB</div>
-                  <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
-                  <div className="upd">Last updated<br />26 September 2026</div>
-                </div>
-
-                <div className="mt-6" style={{ maxWidth: 560 }}>
-                  <HeroInlineForm region="au" source="au_ecommerce_development_hero" submitLabel="Talk to the Founder" />
-                </div>
-              </div>
-
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/ecommerce-development/ecommerce-development-hero.webp" width={1400} height={933} fetchPriority="high" decoding="async" alt="The owner of a Melbourne homewares brand reviewing product pages on her online store, seen over her shoulder at a bright timber desk" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
-                <div style={{ padding: '14px 12px 8px' }}>
-                  <span className="eyebrow">What you get</span>
-                  <div className="scorecard-row">
-                    <div><div className="scorecard-metric">Platform store, custom theme</div><div className="scorecard-note">Shopify, WooCommerce, BigCommerce</div></div>
-                    <div className="scorecard-val" style={{ fontSize: 15 }}>3 to 5 weeks</div>
-                  </div>
-                  <div className="scorecard-row">
-                    <div><div className="scorecard-metric">Xero, MYOB, couriers, Afterpay</div><div className="scorecard-note">connected and tested before launch</div></div>
-                    <div className="scorecard-val" style={{ fontSize: 15 }}>Included</div>
-                  </div>
-                  <div className="scorecard-row">
-                    <div><div className="scorecard-metric">Code, accounts and domain</div><div className="scorecard-note">in your name from day one</div></div>
-                    <div className="scorecard-val" style={{ color: T.green, fontSize: 15 }}>Yours</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ═══ 2. ANSWER-FIRST DEFINITION (GEO) ═══ */}
-        <section className="sec">
-          <div className="wrap">
-            <div className="def" style={{ maxWidth: 940 }} data-speakable="true">
-              <span className="lab">What does an ecommerce agency do for an Australian business?</span>
-              <p>{ANSWER_FIRST}</p>
-            </div>
-            <div className="def mt-6" style={{ maxWidth: 940 }}>
-              <span className="lab">Three terms we use a lot</span>
-              <p>
-                <b>DTC</b> (direct to consumer) means selling straight to shoppers. <b>B2B</b> (business to business)
-                means selling to trade customers, usually at account prices and on credit. A <b>platform</b> is the
-                software your store runs on, such as Shopify or WooCommerce. <b>Ecommerce development</b> is the
-                engineering that turns a design into a working store on that platform.
+        {/* ═══ HERO (US web-design hub hero: copy + inline form left, spec panel right) ═══ */}
+        <section className="hero" id="hero">
+          <div className="wrap hero-grid">
+            <div className="hero-copy">
+              <div className="eyebrow">Australian Ecommerce Agency</div>
+              <h1>{H1_LEAD} <span className="hero-emphasis">{H1_EMPHASIS}</span></h1>
+              <p className="lead">
+                FactoryJet is an ecommerce agency for Australian DTC and B2B brands. Our ecommerce development team designs,
+                builds and supports online stores on Shopify, WooCommerce, Adobe Commerce, BigCommerce and headless
+                stacks, connected to Xero or MYOB, Australia Post and your couriers, Afterpay and Zip. Then we stay
+                on after launch, and you own everything we build.
               </p>
+              <HeroInlineForm region="au" source="au_ecommerce_development_hero" submitLabel="Talk to the Founder" />
             </div>
-            <p className="lead mt-8" style={{ maxWidth: 920 }}>
-              Here is why this matters. The Australian Bureau of Statistics reported that online sales made up 12.7% of
-              all Australian retail in June 2025, up from 11.6% a year before, and 19.0% of non-food retail. Your
-              customers already buy online. The question is whether your store is the one they trust enough to finish
-              the checkout.
-            </p>
+
+            <form
+              className="specpanel"
+              aria-label="What you get from an ecommerce build"
+              data-visual-slot={`${PAGE_KEY}:hero`}
+              data-visual-kind="diagram"
+              data-visual-subject="What you get: a platform store with a custom theme, Xero, MYOB, courier and Afterpay connections tested before launch, and code, accounts and domain in the client's name"
+              data-visual-ratio="1:1"
+              data-visual-status="filled"
+            >
+              <div className="specpanel-bar">
+                <span className="statusdot"></span>
+                <span>INCLUDED · WHAT YOU GET</span>
+                <span className="sys"><span>DTC</span><span>B2B</span><span>SUPPORT</span></span>
+              </div>
+              <div className="workflow-controls">
+                <label className="workflow-toggle" title="Pause or resume the animation">
+                  <input type="checkbox" className="workflow-pause" aria-label="Pause animation" />
+                  <svg className="pause-icon" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M5 3v10M11 3v10" fill="none" stroke="currentColor" strokeWidth="2" /></svg>
+                  <svg className="play-icon" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="m5 3 8 5-8 5Z" fill="currentColor" /></svg>
+                </label>
+                <button type="reset" className="workflow-replay" aria-label="Replay animation" title="Replay animation">
+                  <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M3 6a5 5 0 1 1 0 4M3 2v4h4" /></svg>
+                </button>
+              </div>
+              <div className="specpanel-body" role="radiogroup" aria-label="Explore what you get">
+                <label className="specrow run">
+                  <input className="workflow-select" type="radio" name="ecom-step" value="1" />
+                  <span className="workflow-icon" aria-hidden="true"><svg {...STEP_ICON}><path d={HERO_ICONS[0]} /></svg></span>
+                  <span className="idx">Shopify, WooCommerce, BigCommerce</span>
+                  <span className="title">Platform store, custom theme</span>
+                  <span className="tag">3 to 5 weeks</span>
+                </label>
+                <label className="specrow run">
+                  <input className="workflow-select" type="radio" name="ecom-step" value="2" />
+                  <span className="workflow-icon" aria-hidden="true"><svg {...STEP_ICON}><path d={HERO_ICONS[1]} /></svg></span>
+                  <span className="idx">connected and tested before launch</span>
+                  <span className="title">Xero, MYOB, couriers, Afterpay</span>
+                  <span className="tag">Included</span>
+                </label>
+                <label className="specrow hold">
+                  <input className="workflow-select" type="radio" name="ecom-step" value="3" />
+                  <span className="workflow-icon" aria-hidden="true"><svg {...STEP_ICON}><path d={HERO_ICONS[2]} /></svg></span>
+                  <span className="idx">in your name from day one</span>
+                  <span className="title">Code, accounts and domain</span>
+                  <span className="tag">Yours</span>
+                </label>
+              </div>
+              <div className="specpanel-foot">RULE · The rule behind every integration is simple: each piece of data has one owner.</div>
+            </form>
           </div>
         </section>
 
-        {/* ═══ 3. FACTS BAND (verified only) ═══ */}
-        <section className="stats-band">
+        {/* ═══ LEDGER (was the facts band; verified only) ═══ */}
+        <div className="ledger">
           <div className="wrap">
-            <ul className="col-4" style={{ gap: 20 }}>
-              {[
-                { v: '12.7%', t: 'of all Australian retail sales were made online in June 2025', s: 'ABS, Retail Trade, June 2025', u: SRC_ABS },
-                { v: '19.0%', t: 'of non-food retail sales were made online in June 2025', s: 'ABS, Retail Trade, June 2025', u: SRC_ABS },
-                { v: '13.0%', t: 'growth in online retail sales over the year to June 2025', s: 'ABS, seasonally adjusted', u: SRC_ABS },
-                { v: '2,000+', t: 'retail websites checked by the ACCC for misleading return policies', s: 'ACCC, February 2025', u: SRC_ACCC_SWEEP },
-              ].map((r) => (
-                <li key={r.t}>
-                  <div style={{ fontFamily: T.fd, fontWeight: 800, fontSize: 26, color: T.small }}>{r.v}</div>
-                  <p style={{ fontSize: 13.5, color: T.ink, marginTop: 4 }}>{r.t}</p>
-                  <a href={r.u} target="_blank" rel="noopener noreferrer nofollow" style={{ fontFamily: T.fm, fontSize: 10, color: T.n400, textDecoration: 'underline' }}>{r.s}</a>
-                </li>
-              ))}
-            </ul>
+            {[
+              { v: '12.7%', t: 'of all Australian retail sales were made online in June 2025', s: 'ABS, Retail Trade, June 2025', u: SRC_ABS },
+              { v: '19.0%', t: 'of non-food retail sales were made online in June 2025', s: 'ABS, Retail Trade, June 2025', u: SRC_ABS },
+              { v: '13.0%', t: 'growth in online retail sales over the year to June 2025', s: 'ABS, seasonally adjusted', u: SRC_ABS },
+              { v: '2,000+', t: 'retail websites checked by the ACCC for misleading return policies', s: 'ACCC, February 2025', u: SRC_ACCC_SWEEP },
+            ].map((r) => (
+              <div className="ledgercell" key={r.t}>
+                <div className="k"><a href={r.u} {...extLink}>{r.s}</a></div>
+                <div className="v">
+                  <strong className={r.v.length > 8 ? 'ledger-number ledger-long' : 'ledger-number'}>{r.v}</strong>
+                  {r.t}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="wrap byline">
+          <div className="av">BB</div>
+          <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
+          <div className="upd">Last updated<br />26 September 2026</div>
+        </div>
+
+        {/* ═══ ANSWER-FIRST DEFINITION (GEO) → Family A facts ═══ */}
+        <section className="section facts" id="facts">
+          <div className="wrap">
+            <div className="section-head">
+              <h2 data-speakable="true">What does an ecommerce agency do for an Australian business?</h2>
+            </div>
+            <div className="factswrap">
+              <div className="factlist">
+                <div className="fact">
+                  <div className="sec">§01</div>
+                  <p data-speakable="true">{ANSWER_FIRST}</p>
+                </div>
+                <div className="fact">
+                  <div className="sec">§02</div>
+                  <div>
+                    <div className="factlabel">Three terms we use a lot</div>
+                    <p>
+                      <b>DTC</b> (direct to consumer) means selling straight to shoppers. <b>B2B</b> (business to business)
+                      means selling to trade customers, usually at account prices and on credit. A <b>platform</b> is the
+                      software your store runs on, such as Shopify or WooCommerce. <b>Ecommerce development</b> is the
+                      engineering that turns a design into a working store on that platform.
+                    </p>
+                  </div>
+                </div>
+                <div className="fact">
+                  <div className="sec">§03</div>
+                  <p>
+                    Here is why this matters. The Australian Bureau of Statistics reported that online sales made up 12.7% of
+                    all Australian retail in June 2025, up from 11.6% a year before, and 19.0% of non-food retail. Your
+                    customers already buy online. The question is whether your store is the one they trust enough to finish
+                    the checkout.
+                  </p>
+                </div>
+              </div>
+              <VisualSlot page={PAGE_KEY} slot="facts" kind="photo" ratio="3:2" className="factphoto"
+                subject="The owner of a Melbourne homewares brand reviewing product pages on her online store at a timber desk">
+                <img src="/images/au/ecommerce-development/ecommerce-development-hero.webp" width={1400} height={933} loading="lazy" decoding="async" alt="The owner of a Melbourne homewares brand reviewing product pages on her online store, seen over her shoulder at a bright timber desk" />
+              </VisualSlot>
+            </div>
           </div>
         </section>
 
-        {/* ═══ 3b. HUB: the E-Commerce category's services (hover cards) ═══ */}
-        <section className="sec-lg">
+        {/* ═══ HUB: the E-Commerce category's services → capgrid (two feature cards) + directory ═══ */}
+        <section className="section capabilities au-top" id="services">
           <div className="wrap">
-            <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">Ecommerce services in Australia</span>
+            <div className="section-head">
+              <div className="eyebrow">Ecommerce services in Australia</div>
               <h2>Everything we do for Australian online stores, in one place</h2>
-              <p className="lead mt-4">
+              <p className="lead">
                 This page is the overview. Two services have their own detailed pages: Shopify development, for brands
                 on Shopify or moving to it, and AI SEO, for stores that want to be named when shoppers ask ChatGPT or
                 Google for a recommendation. Pick the one that matches where you are, or read on for the full picture.
               </p>
             </div>
-            <ul className="mt-10" style={{ display: 'grid', gridTemplateColumns: '7fr 5fr', gap: 20 }}>
-              <li>
-                <a className="svc-card" href="/au/shopify-development" style={{ display: 'flex', flexDirection: 'column', height: '100%', color: 'inherit', textDecoration: 'none' }}>
-                  <span className="eyebrow">Most asked for</span>
-                  <h3 style={{ fontSize: 24 }}>Shopify development Australia</h3>
-                  <p className="mt-4">
-                    Custom Shopify and Shopify Plus themes, apps chosen with care, B2B wholesale on Shopify, and
-                    migrations from Maropost (Neto), WooCommerce or Magento without losing your Google rankings.
-                    Built by a registered Shopify Partner, connected to Xero or MYOB, Australia Post and Afterpay.
-                  </p>
-                  <ul className="scope-list mt-4" style={{ fontSize: 14 }}>
-                    <li>Theme builds and redesigns</li>
-                    <li>Shopify Plus and B2B</li>
-                    <li>Migrations to Shopify</li>
-                  </ul>
-                  <span style={{ marginTop: 'auto', paddingTop: 16, fontFamily: T.fm, fontSize: 12, color: T.small }}>See Shopify development in Australia →</span>
-                </a>
-              </li>
-              <li>
-                <a className="svc-card" href="/au/ai-seo" style={{ display: 'flex', flexDirection: 'column', height: '100%', color: 'inherit', textDecoration: 'none' }}>
-                  <span className="eyebrow">New way shoppers search</span>
-                  <h3 style={{ fontSize: 24 }}>AI SEO for online stores</h3>
-                  <p className="mt-4">
-                    Shoppers now ask ChatGPT, Perplexity and Google AI Overviews which brand to buy from. AI SEO works on
-                    getting your store and products named in those answers, with clean product data and pages AI tools
-                    can read and quote.
-                  </p>
-                  <span style={{ marginTop: 'auto', paddingTop: 16, fontFamily: T.fm, fontSize: 12, color: T.small }}>See AI SEO for Australian brands →</span>
-                </a>
-              </li>
-            </ul>
-            <ul className="col-3 mt-6">
-              <li><a className="svc-card" href="/au/ecommerce-seo" style={{ display: 'block', height: '100%', color: 'inherit', textDecoration: 'none' }}><h3 style={{ fontSize: 18 }}>Ecommerce SEO</h3><p className="mt-2" style={{ fontSize: 14 }}>Category and product pages that rank on Google, plus the technical fixes behind them.</p><span style={{ fontFamily: T.fm, fontSize: 12, color: T.small }}>Ecommerce SEO Australia →</span></a></li>
-              <li><a className="svc-card" href="/au/ai-agents" style={{ display: 'block', height: '100%', color: 'inherit', textDecoration: 'none' }}><h3 style={{ fontSize: 18 }}>AI agents for your store</h3><p className="mt-2" style={{ fontSize: 14 }}>Agents that answer order questions and keep listings and stock in step, with you approving the actions.</p><span style={{ fontFamily: T.fm, fontSize: 12, color: T.small }}>AI agents →</span></a></li>
-              <li><a className="svc-card" href="/commerceflo" style={{ display: 'block', height: '100%', color: 'inherit', textDecoration: 'none' }}><h3 style={{ fontSize: 18 }}>Commerceflo</h3><p className="mt-2" style={{ fontSize: 14 }}>Our own AI commerce operator for brands running DTC, B2B and marketplaces on one data model.</p><span style={{ fontFamily: T.fm, fontSize: 12, color: T.small }}>About Commerceflo →</span></a></li>
-            </ul>
+            <div className="capgrid capgrid-2">
+              <a className="cap cap-1" href="/au/shopify-development">
+                <div className="caphead"><span className="capid">Most asked for</span><svg {...CAP_ICON}><path d={HERO_ICONS[0]} /></svg></div>
+                <VisualSlot page={PAGE_KEY} slot="capability-01" kind="diagram" ratio="11:4" className="cap-diagram"
+                  subject="AI-generated model: a white Shopify-style storefront block with an orange theme panel sliding into place" />
+                <h3>Shopify development Australia</h3>
+                <p>
+                  Custom Shopify and Shopify Plus themes, apps chosen with care, B2B wholesale on Shopify, and
+                  migrations from Maropost (Neto), WooCommerce or Magento without losing your Google rankings.
+                  Built by a registered Shopify Partner, connected to Xero or MYOB, Australia Post and Afterpay.
+                </p>
+                <div className="systags"><span>Theme builds and redesigns</span><span>Shopify Plus and B2B</span><span>Migrations to Shopify</span></div>
+                <span className="cap-go">See Shopify development in Australia →</span>
+              </a>
+              <a className="cap cap-2" href="/au/ai-seo">
+                <div className="caphead"><span className="capid">New way shoppers search</span><svg {...CAP_ICON}><path d={HERO_ICONS[3]} /></svg></div>
+                <VisualSlot page={PAGE_KEY} slot="capability-02" kind="diagram" ratio="11:4" className="cap-diagram"
+                  subject="AI-generated model: a white chat bubble quoting a small product card, with an orange citation marker" />
+                <h3>AI SEO for online stores</h3>
+                <p>
+                  Shoppers now ask ChatGPT, Perplexity and Google AI Overviews which brand to buy from. AI SEO works on
+                  getting your store and products named in those answers, with clean product data and pages AI tools
+                  can read and quote.
+                </p>
+                <span className="cap-go">See AI SEO for Australian brands →</span>
+              </a>
+            </div>
+            <div className="agentdir-group">
+              <div className="agentdir-label">
+                <h3>More ecommerce services</h3>
+                <span className="mono agentdir-count">{HUB_MORE.length} pages</span>
+              </div>
+              <ul className="agentdir-grid au-grid-3">
+                {HUB_MORE.map((c) => (
+                  <li key={c.h}>
+                    <a href={c.h}>
+                      <span className="agentdir-t">{c.t}</span>
+                      <span className="agentdir-l">{c.d}</span>
+                      <span className="agentdir-more">{c.l}</span>
+                      <span className="agentdir-go" aria-hidden="true">↗</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </section>
 
-        {/* ═══ 4. START TO FINISH (interactive <details> stages) ═══ */}
-        <section className="sec-lg dot-grid">
+        {/* ═══ PHOTOBREAK (US template visual, no AU image yet) ═══ */}
+        <VisualSlot page={PAGE_KEY} slot="photobreak" kind="illustration" ratio="12:5" className="photobreak"
+          subject="AI-generated model: a white online store on a phone-sized stand, connected by orange cables to small accounts, stock and courier blocks" />
+
+        {/* ═══ START TO FINISH → process timeline (stages stay openable, as the copy says) + timelines table ═══ */}
+        <section className="section process" id="start-to-finish">
           <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <span className="eyebrow">Start to finish</span>
+            <div className="head-media">
+              <div className="section-head">
+                <div className="eyebrow">Start to finish</div>
                 <h2>What an ecommerce agency does, from first call to a store that sells</h2>
-                <p className="lead mt-4" style={{ maxWidth: 580 }}>
+                <p className="lead">
                   Every ecommerce website development project we run follows the same six stages. Open each one to see
                   what happens and what you walk away with.
                 </p>
-                <div className="card mt-8" style={{ padding: '4px 22px' }}>
-                  {STAGES.map((s) => (
-                    <details key={s.n}>
-                      <summary>
-                        <span><span style={{ fontFamily: T.fm, color: T.small, marginRight: 10 }}>{s.n}</span>{s.t} <span style={{ fontFamily: T.fm, fontSize: 11, color: T.n400, fontWeight: 400, marginLeft: 6 }}>{s.w}</span></span>
-                      </summary>
-                      <div style={{ paddingBottom: 18 }}>
-                        <p>{s.d}</p>
-                        <p className="mt-2" style={{ marginTop: 8, fontSize: 14 }}><b>You get:</b> {s.get}</p>
-                      </div>
-                    </details>
-                  ))}
-                </div>
               </div>
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/ecommerce-development/ecommerce-development-planning.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A designer in a Sydney studio sketching mobile product page wireframes in a paper sketchbook, seen over his shoulder, with a phone and closed laptop beside him" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
-                <div style={{ padding: '14px 12px 8px' }}>
-                  <p style={{ fontSize: 14 }}>
-                    Structure before colour. We sketch how a shopper moves from a search to a paid order as simple
-                    boxes on a phone-sized page, then design around that path.
-                  </p>
-                </div>
-              </div>
+              <VisualSlot page={PAGE_KEY} slot="process" kind="photo" ratio="3:2" captionClassName="figcap"
+                subject="A designer sketching mobile product page wireframes in a paper sketchbook, a phone and closed laptop beside him"
+                caption="Structure before colour. We sketch how a shopper moves from a search to a paid order as simple boxes on a phone-sized page, then design around that path.">
+                <img src="/images/au/ecommerce-development/ecommerce-development-planning.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A designer in a Sydney studio sketching mobile product page wireframes in a paper sketchbook, seen over his shoulder, with a phone and closed laptop beside him" />
+              </VisualSlot>
+            </div>
+            <div className="timeline timeline-4 timeline-3">
+              {STAGES.map((s) => (
+                <details key={s.n} className="tnode">
+                  <summary>
+                    <div className="idx">{s.n}</div>
+                    <h3>{s.t}<span className="chev" aria-hidden="true">+</span></h3>
+                  </summary>
+                  <p className="tnode-meta">{s.w}</p>
+                  <p>{s.d}</p>
+                  <p><b>You get:</b> {s.get}</p>
+                </details>
+              ))}
             </div>
 
-            <div className="card mt-12" style={tableCard}>
-              <table className="cmp-table" style={tableMin(600)}>
+            <div className="tablewrap">
+              <table>
                 <thead>
                   <tr><th>Type of ecommerce build</th><th className="fj">Typical timeline</th><th>What moves the date</th></tr>
                 </thead>
                 <tbody>
                   {TIMELINES.map((r) => (
-                    <tr key={r.type}><td className="feat">{r.type}</td><td className="fj">{r.weeks}</td><td>{r.drivers}</td></tr>
+                    <tr key={r.type}><th scope="row">{r.type}</th><td className="fj">{r.weeks}</td><td>{r.drivers}</td></tr>
                   ))}
                 </tbody>
               </table>
             </div>
-            <p style={srcNote}>Our own project ranges, not promises. Late product data and slow sign-offs move dates more than code does.</p>
+            <p className="tablenote">Our own project ranges, not promises. Late product data and slow sign-offs move dates more than code does.</p>
           </div>
         </section>
 
-        {/* ═══ 5. PLATFORM COMPARISON TABLE ═══ */}
-        <section className="sec-lg">
+        {/* ═══ PLATFORM CHOICE → homepage-style platform rows + chooser ═══ */}
+        <section className="section platforms" id="platforms">
           <div className="wrap">
-            <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">Platform choice</span>
-              <h2>Shopify, WooCommerce, Adobe Commerce, BigCommerce, headless or Commerceflo?</h2>
-              <p className="lead mt-4">
+            <div className="section-head plat-head">
+              <div>
+                <div className="eyebrow">Platform choice</div>
+                <h2>Shopify, WooCommerce, Adobe Commerce, BigCommerce, headless or Commerceflo?</h2>
+              </div>
+              <p>
                 We build on all of them, so we have no reason to push one. The right ecommerce platform depends on your
                 catalogue, whether you sell to trade, how much your team wants to manage, and what it needs to connect
                 to. Here is how they compare for Australian stores.
               </p>
             </div>
-            <div className="card mt-8" style={tableCard}>
-              <table className="cmp-table" style={tableMin(820)}>
-                <thead>
-                  <tr><th>Platform</th><th>Best fit</th><th>B2B</th><th>Who runs hosting</th><th>Watch out for</th></tr>
-                </thead>
-                <tbody>
-                  {PLATFORMS.map((p) => (
-                    <tr key={p.name}>
-                      <td className="feat">{p.href ? <a href={p.href} style={{ color: T.small, textDecoration: 'underline' }}>{p.name}</a> : p.name}</td>
-                      <td>{p.fit}</td><td>{p.b2b}</td><td>{p.runs}</td><td><span className="partial">{p.watch}</span></td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+            <div className="platlist" role="list">
+              {PLATFORMS.map((p, i) => {
+                const inner = (
+                  <>
+                    <span className="capid">{String(i + 1).padStart(2, '0')}</span>
+                    <div className="plat-name"><h3>{p.name}</h3></div>
+                    <div className="plat-fit"><span className="k">Best fit</span>{p.fit}</div>
+                    <dl className="pw-trade">
+                      <dt>B2B</dt><dd>{p.b2b}</dd>
+                      <dt>Who runs hosting</dt><dd>{p.runs}</dd>
+                      <dt>Watch out for</dt><dd>{p.watch}</dd>
+                    </dl>
+                    {p.href ? <span className="plat-go" aria-hidden="true">↗</span> : null}
+                  </>
+                );
+                const cls = `plat plat-link${p.name === 'Commerceflo' ? ' plat-own' : ''}`;
+                return p.href ? (
+                  <a key={p.name} className={cls} role="listitem" href={p.href}>{inner}</a>
+                ) : (
+                  <div key={p.name} className={cls} role="listitem">{inner}</div>
+                );
+              })}
             </div>
-            <p className="mt-6" style={{ maxWidth: 820 }}>
+            <p className="au-after">
               Shopify is the most common answer for Australian DTC brands, and it has its own page: our{' '}
-              <a href="/au/shopify-development" style={{ color: T.small, textDecoration: 'underline' }}>Shopify development service for Australia</a>{' '}
+              <a href="/au/shopify-development">Shopify development service for Australia</a>{' '}
               covers themes, Shopify Plus, apps and Shopify migrations in depth. If you run DTC, a trade portal and
-              marketplaces together, read how <a href="/commerceflo" style={{ color: T.small, textDecoration: 'underline' }}>Commerceflo</a>,
+              marketplaces together, read how <a href="/commerceflo">Commerceflo</a>,
               FactoryJet’s own AI commerce operator, handles all three on one data model. Our DTC client Belle Maison
               runs on it. See every Shopify plan price and fee in AUD in our{' '}
-              <a href="/blog/shopify-cost-australia-2026" style={{ color: T.small, textDecoration: 'underline' }}>Shopify pricing Australia guide</a>, or compare
-              all the platforms in our <a href="/blog/best-ecommerce-platform-australia-2026" style={{ color: T.small, textDecoration: 'underline' }}>best ecommerce platform in Australia guide</a>.
+              <a href="/blog/shopify-cost-australia-2026">Shopify pricing Australia guide</a>, or compare
+              all the platforms in our <a href="/blog/best-ecommerce-platform-australia-2026">best ecommerce platform in Australia guide</a>.
             </p>
 
-            {/* Which platform fits you (interactive chooser) */}
-            <div className="col-6040 mt-12">
+            <div className="au-split">
               <div>
-                <h3 style={{ fontSize: 22 }}>Which platform fits you? Pick the line that sounds most like your business</h3>
-                <div className="card mt-6" style={{ padding: '4px 22px' }}>
-                  {FIT_CHECKS.map((f) => (
+                <h3>Which platform fits you? Pick the line that sounds most like your business</h3>
+                <div className="au-acc">
+                  {FIT_CHECKS.map((f, i) => (
                     <details key={f.q}>
-                      <summary><span>{f.q}</span></summary>
-                      <p style={{ paddingBottom: 18 }}>{f.a}</p>
+                      <summary><span className="n">{String(i + 1).padStart(2, '0')}</span><span className="t">{f.q}</span><span className="chev" aria-hidden="true">+</span></summary>
+                      <div className="body"><p>{f.a}</p></div>
                     </details>
                   ))}
                 </div>
               </div>
-              <div className="card card-top-orange">
-                <span className="eyebrow">A rule of thumb</span>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Small catalogue, DTC</div><div className="scorecard-note">least to manage</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Shopify</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Content-led, on WordPress</div><div className="scorecard-note">keep it in one place</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>WooCommerce</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Trade and retail together</div><div className="scorecard-note">account prices, terms</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Shopify Plus</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Complex B2B, huge catalogue</div><div className="scorecard-note">quotes, approvals, ERP</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Adobe Commerce</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Not sure yet</div><div className="scorecard-note">we will tell you honestly</div></div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Ask us</div></div>
+              <div className="au-panel">
+                <div className="eyebrow">A rule of thumb</div>
+                <ul className="trigrows">
+                  <li><span className="m">Small catalogue, DTC</span><span className="n">least to manage</span><span className="t">Shopify</span></li>
+                  <li><span className="m">Content-led, on WordPress</span><span className="n">keep it in one place</span><span className="t">WooCommerce</span></li>
+                  <li><span className="m">Trade and retail together</span><span className="n">account prices, terms</span><span className="t">Shopify Plus</span></li>
+                  <li><span className="m">Complex B2B, huge catalogue</span><span className="n">quotes, approvals, ERP</span><span className="t">Adobe Commerce</span></li>
+                  <li><span className="m">Not sure yet</span><span className="n">we will tell you honestly</span><span className="t">Ask us</span></li>
+                </ul>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ═══ 6. ECOMMERCE WEBSITE DESIGN ═══ */}
-        <section className="sec-lg dot-grid">
+        {/* ═══ ECOMMERCE WEBSITE DESIGN → facts ═══ */}
+        <section className="section facts au-top" id="design">
           <div className="wrap">
-            <div className="col-6040">
-            <div>
-              <span className="eyebrow">Ecommerce website design</span>
+            <div className="section-head">
+              <div className="eyebrow">Ecommerce website design</div>
               <h2>Ecommerce web design that answers the buyer’s questions before they ask</h2>
-              <div className="stack mt-6">
-                <p>
+            </div>
+            <div className="factswrap">
+              <div className="factlist">
+                <div className="fact"><div className="sec">§01</div><p>
                   Good ecommerce website design is not decoration. It is the order in which a shopper gets answers.
                   What does it cost, including delivery? When will it arrive? Can I pay with Afterpay? What if it does
                   not fit? A product page that answers those four questions near the top sells more than one with a
                   bigger hero image.
-                </p>
-                <p>
+                </p></div>
+                <div className="fact"><div className="sec">§02</div><p>
                   We design mobile first, because that is where most shoppers arrive, and we test on a mid-range phone
                   on a normal connection, not a fast laptop in an office. We aim for strong Core Web Vitals, which are
                   Google’s measures of how quickly a page loads, how fast it responds and whether it jumps around while
                   loading. A slow store loses sales quietly, one abandoned cart at a time.
-                </p>
+                </p></div>
+                <div className="fact"><div className="sec">§03</div><div>
+                  <h3>Product pages that sell</h3>
+                  <p>Real photography from the angles people want, clear variants, stock status you can trust, delivery estimate by postcode, and the returns promise in plain words.</p>
+                </div></div>
+                <div className="fact"><div className="sec">§04</div><div>
+                  <h3>Category pages that rank</h3>
+                  <p>Filters that work on a phone, clean URLs, and a short intro that answers what someone searched for. Category pages are where most ecommerce SEO is won. See <a href="/au/ecommerce-seo">ecommerce SEO for category and product pages</a>.</p>
+                </div></div>
+                <div className="fact"><div className="sec">§05</div><div>
+                  <h3>A checkout with nothing extra</h3>
+                  <p>Guest checkout, address lookup, the total price shown up front, and payment options your customers actually use. Every extra field costs orders.</p>
+                </div></div>
               </div>
-            </div>
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/ecommerce-development/ecommerce-development-mobile.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A shopper at a sunny Brisbane riverside cafe browsing a product page for a ceramic vase on her phone, seen over her shoulder" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
-                <div style={{ padding: '14px 12px 8px' }}>
-                  <p style={{ fontSize: 14 }}>
-                    This is where the sale happens: one hand, a phone, a few spare minutes. Photo, options and the buy
-                    button all fit on the first screen.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <ul className="col-3 mt-10">
-              <li className="svc-card"><h3>Product pages that sell</h3><p className="mt-4">Real photography from the angles people want, clear variants, stock status you can trust, delivery estimate by postcode, and the returns promise in plain words.</p></li>
-              <li className="svc-card"><h3>Category pages that rank</h3><p className="mt-4">Filters that work on a phone, clean URLs, and a short intro that answers what someone searched for. Category pages are where most ecommerce SEO is won. See <a href="/au/ecommerce-seo" style={srcLink}>ecommerce SEO for category and product pages</a>.</p></li>
-              <li className="svc-card"><h3>A checkout with nothing extra</h3><p className="mt-4">Guest checkout, address lookup, the total price shown up front, and payment options your customers actually use. Every extra field costs orders.</p></li>
-            </ul>
-          </div>
-        </section>
-
-        <MidPageCTA
-          headline={'Planning a new store or a replatform?'}
-          sub={'Tell us what you sell, where you sell it and what is not working. On a short call the founder will tell you which platform fits, what drives the cost, and how long it will really take.'}
-          label={'Talk to the Founder'}
-        />
-
-        {/* ═══ 7. INTEGRATIONS (Australian stack) ═══ */}
-        <section className="sec-lg">
-          <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <span className="eyebrow">Integrations</span>
-                <h2>Connected to Xero or MYOB, Australia Post, Afterpay, Zip and your ERP</h2>
-                <p className="lead mt-4" style={{ maxWidth: 580 }}>
-                  An online store that does not talk to your accounts, stock and couriers just moves the work to
-                  someone’s keyboard. These are the connections we set up on most Australian builds.
-                </p>
-                <ul className="scope-list num-list mt-6" style={{ maxWidth: 580 }}>
-                  {INTEGRATIONS.map((i) => (
-                    <li key={i.t}><b>{i.t}.</b> {i.d}</li>
-                  ))}
-                </ul>
-                <p className="mt-6" style={{ maxWidth: 580 }}>
-                  The rule behind every integration is simple: each piece of data has one owner. Usually your ERP or
-                  Xero owns price and stock, and the store owns the shopping experience. That stops two systems arguing
-                  about which number is right. If you want AI to take over repetitive order work on top of this, such as
-                  answering where-is-my-order emails, see our <a href="/au/ai-agents" style={{ color: T.small, textDecoration: 'underline' }}>AI agents for Australian businesses</a>.
-                </p>
-              </div>
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/ecommerce-development/ecommerce-development-packing.webp" width={1200} height={800} loading="lazy" decoding="async" alt="An operations manager at a Melbourne online homewares brand checking synced orders on her laptop, with a label printer and courier satchels ready beside her" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
-                <div style={{ padding: '14px 12px 8px' }}>
-                  <p style={{ fontSize: 14 }}>
-                    When the store, accounts, stock and couriers are connected, orders arrive already synced and the
-                    label prints itself, instead of a stack of emails to retype.
-                  </p>
-                </div>
-              </div>
+              <VisualSlot page={PAGE_KEY} slot="facts-2" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
+                subject="A shopper at a riverside cafe browsing a product page for a ceramic vase on her phone"
+                caption="This is where the sale happens: one hand, a phone, a few spare minutes. Photo, options and the buy button all fit on the first screen.">
+                <img src="/images/au/ecommerce-development/ecommerce-development-mobile.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A shopper at a sunny Brisbane riverside cafe browsing a product page for a ceramic vase on her phone, seen over her shoulder" />
+              </VisualSlot>
             </div>
           </div>
         </section>
 
-        {/* ═══ 8. B2B ECOMMERCE ═══ */}
-        <section className="sec-lg dot-grid">
+        <div className="au-midcta">
+          <MidPageCTA
+            headline={'Planning a new store or a replatform?'}
+            sub={'Tell us what you sell, where you sell it and what is not working. On a short call the founder will tell you which platform fits, what drives the cost, and how long it will really take.'}
+            label={'Talk to the Founder'}
+          />
+        </div>
+
+        {/* ═══ INTEGRATIONS (Australian stack) → definition module (image left, copy right) ═══ */}
+        <section className="definition" id="integrations">
+          <div>
+            <VisualSlot page={PAGE_KEY} slot="definition" kind="photo" ratio="3:2" className="definition-image"
+              subject="An operations manager at an online homewares brand checking synced orders on her laptop beside a label printer and courier satchels">
+              <img src="/images/au/ecommerce-development/ecommerce-development-packing.webp" width={1200} height={800} loading="lazy" decoding="async" alt="An operations manager at a Melbourne online homewares brand checking synced orders on her laptop, with a label printer and courier satchels ready beside her" />
+            </VisualSlot>
+            <p className="figcap">
+              When the store, accounts, stock and couriers are connected, orders arrive already synced and the
+              label prints itself, instead of a stack of emails to retype.
+            </p>
+          </div>
+          <div className="definition-copy">
+            <div className="eyebrow">Integrations</div>
+            <h2>Connected to Xero or MYOB, Australia Post, Afterpay, Zip and your ERP</h2>
+            <p>
+              An online store that does not talk to your accounts, stock and couriers just moves the work to
+              someone’s keyboard. These are the connections we set up on most Australian builds.
+            </p>
+            <ol className="au-numlist">
+              {INTEGRATIONS.map((i) => (
+                <li key={i.t}><span><b>{i.t}.</b> {i.d}</span></li>
+              ))}
+            </ol>
+            <p>
+              The rule behind every integration is simple: each piece of data has one owner. Usually your ERP or
+              Xero owns price and stock, and the store owns the shopping experience. That stops two systems arguing
+              about which number is right. If you want AI to take over repetitive order work on top of this, such as
+              answering where-is-my-order emails, see our <a href="/au/ai-agents">AI agents for Australian businesses</a>.
+            </p>
+          </div>
+        </section>
+
+        {/* ═══ B2B ECOMMERCE → facts + comparison table ═══ */}
+        <section className="section facts" id="b2b">
           <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <span className="eyebrow">B2B ecommerce</span>
-                <h2>B2B ecommerce and trade portals for Australian wholesalers and manufacturers</h2>
-                <div className="stack mt-6">
-                  <p>
-                    B2B ecommerce means selling to other businesses online. Your trade customers log in, see their own
-                    prices, reorder in seconds and pay on account, and each order lands in your ERP without anyone
-                    typing it. B2B gets less attention than DTC, but the need is real: plenty of Australian
-                    wholesalers still take orders by phone, email and PDF.
-                  </p>
-                  <p>
-                    What a trade portal needs is different from a DTC shop. Account approval before prices show.
-                    Price lists per customer. Quick order by SKU and bulk upload. Quotes for large orders. Credit limits
-                    read from your ERP. And prices shown ex-GST, which the ACCC allows when prices are displayed only to
-                    other businesses. We built this kind of B2B ordering for Bombay Petals.
-                  </p>
-                  <p>
-                    For a deeper look at platforms for trade selling, read our guide to the{' '}
-                    <a href="/blog/best-b2b-ecommerce-platform-manufacturers-distributors-2026" style={{ color: T.small, textDecoration: 'underline' }}>best B2B ecommerce platforms for manufacturers and distributors</a>.
-                  </p>
-                </div>
-              </div>
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/ecommerce-development/ecommerce-development-trade.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A trade customer and a sales rep in a Brisbane wholesale showroom looking at a trade ordering portal on a tablet" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
-                <div style={{ padding: '14px 12px 8px' }}>
-                  <p style={{ fontSize: 14 }}>
-                    A good trade portal gives your reps a tool to sell with, not a website to compete with. They can
-                    log in as a customer and place the order for them.
-                  </p>
-                </div>
-              </div>
+            <div className="section-head">
+              <div className="eyebrow">B2B ecommerce</div>
+              <h2>B2B ecommerce and trade portals for Australian wholesalers and manufacturers</h2>
             </div>
-            <div className="card mt-10" style={tableCard}>
-              <table className="cmp-table" style={tableMin(560)}>
+            <div className="factswrap">
+              <div className="factlist">
+                <div className="fact"><div className="sec">§01</div><p>
+                  B2B ecommerce means selling to other businesses online. Your trade customers log in, see their own
+                  prices, reorder in seconds and pay on account, and each order lands in your ERP without anyone
+                  typing it. B2B gets less attention than DTC, but the need is real: plenty of Australian
+                  wholesalers still take orders by phone, email and PDF.
+                </p></div>
+                <div className="fact"><div className="sec">§02</div><p>
+                  What a trade portal needs is different from a DTC shop. Account approval before prices show.
+                  Price lists per customer. Quick order by SKU and bulk upload. Quotes for large orders. Credit limits
+                  read from your ERP. And prices shown ex-GST, which the ACCC allows when prices are displayed only to
+                  other businesses. We built this kind of B2B ordering for Bombay Petals.
+                </p></div>
+                <div className="fact"><div className="sec">§03</div><div>
+                  <h3>Which Australian agency should I hire to build a B2B ecommerce website?</h3>
+                  <p>
+                    Hire an agency that has built a live trade portal connected to an ERP, not one that has only
+                    launched DTC stores. B2B projects succeed or fail on the back office: customer price lists, credit
+                    limits, stock across warehouses and orders that post cleanly into NetSuite, Pronto, MYOB or Xero.
+                    Before you sign, ask four things. Can we log in as a trade buyer on a B2B store you built? How do
+                    you sync prices and credit from our ERP, and how often? What happens when a sync fails at 2am? Who
+                    supports the portal after launch, and how fast do they reply?
+                  </p>
+                  <p>
+                    FactoryJet designs, builds and supports B2B stores for Australian wholesalers and manufacturers. We
+                    work remotely, with no Australian office, and calls booked in your business day. If you would rather
+                    sit across a table, the <a href="#agencies">Australian ecommerce agencies listed below</a> include
+                    several with B2B and ERP integration teams in Brisbane, Sydney and Melbourne.
+                  </p>
+                </div></div>
+                <div className="fact"><div className="sec">§04</div><div>
+                  <h3>Shopify B2B: what you get on each plan</h3>
+                  <p>
+                    Shopify says its B2B features now work on the Basic, Grow, Advanced and Shopify Plus plans. Every
+                    plan gets company profiles with multiple locations and buyers, net payment terms, minimum, maximum
+                    and increment quantity rules, quantity price breaks, saved cards and draft orders with PO numbers.
+                    The limits show up on price lists: Basic, Grow and Advanced allow three active B2B catalogues across
+                    your markets, while Plus allows unlimited catalogues, prices assigned to a single company, deposits
+                    and partial payments. If each trade customer has their own negotiated price, that is usually the
+                    line that decides the plan.
+                  </p>
+                  <p className="au-note">
+                    Source: <a href={SRC_SHOPIFY_B2B} {...extLink}>Shopify Help Center, Shopify B2B features by plan</a>. See also our{' '}
+                    <a href="/au/shopify-development">Shopify development service</a>.
+                  </p>
+                </div></div>
+                <div className="fact"><div className="sec">§05</div><p>
+                  For a deeper look at platforms for trade selling, read our guide to the{' '}
+                  <a href="/blog/best-b2b-ecommerce-platform-manufacturers-distributors-2026">best B2B ecommerce platforms for manufacturers and distributors</a>.
+                </p></div>
+              </div>
+              <VisualSlot page={PAGE_KEY} slot="facts-3" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
+                subject="A trade customer and a sales rep in a wholesale showroom looking at a trade ordering portal on a tablet"
+                caption="A good trade portal gives your reps a tool to sell with, not a website to compete with. They can log in as a customer and place the order for them.">
+                <img src="/images/au/ecommerce-development/ecommerce-development-trade.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A trade customer and a sales rep in a Brisbane wholesale showroom looking at a trade ordering portal on a tablet" />
+              </VisualSlot>
+            </div>
+            <div className="tablewrap span-all">
+              <table>
                 <thead><tr><th>Area</th><th>B2B (trade)</th><th>DTC (public)</th></tr></thead>
                 <tbody>
-                  <tr><td className="feat">Who buys</td><td>Businesses, often several buyers per account</td><td>One person</td></tr>
-                  <tr><td className="feat">Price</td><td>Per account, price bands, contract prices</td><td>One price for everyone</td></tr>
-                  <tr><td className="feat">GST display</td><td>Ex-GST allowed for business-only prices</td><td>Total price including GST</td></tr>
-                  <tr><td className="feat">Payment</td><td>On account, card or bank transfer</td><td>Card, wallet, Afterpay, Zip</td></tr>
-                  <tr><td className="feat">Ordering</td><td>Quick order, upload, reorder, quotes</td><td>Browse and add to cart</td></tr>
-                  <tr><td className="feat">Back office</td><td>ERP owns prices, stock and credit</td><td>Platform or Xero often enough</td></tr>
+                  <tr><th scope="row">Who buys</th><td>Businesses, often several buyers per account</td><td>One person</td></tr>
+                  <tr><th scope="row">Price</th><td>Per account, price bands, contract prices</td><td>One price for everyone</td></tr>
+                  <tr><th scope="row">GST display</th><td>Ex-GST allowed for business-only prices</td><td>Total price including GST</td></tr>
+                  <tr><th scope="row">Payment</th><td>On account, card or bank transfer</td><td>Card, wallet, Afterpay, Zip</td></tr>
+                  <tr><th scope="row">Ordering</th><td>Quick order, upload, reorder, quotes</td><td>Browse and add to cart</td></tr>
+                  <tr><th scope="row">Back office</th><td>ERP owns prices, stock and credit</td><td>Platform or Xero often enough</td></tr>
                 </tbody>
               </table>
             </div>
           </div>
         </section>
 
-        {/* ═══ 9. MARKETPLACES ═══ */}
-        <section className="sec-lg">
+        {/* ═══ MARKETPLACES → facts (head left, two facts right) ═══ */}
+        <section className="section facts au-top" id="marketplaces">
           <div className="wrap">
-            <div style={{ maxWidth: 780 }}>
-              <span className="eyebrow">Marketplaces</span>
+            <div className="section-head">
+              <div className="eyebrow">Marketplaces</div>
               <h2>Selling on Amazon Australia, eBay and Kogan from one stock pool</h2>
-              <div className="stack mt-6">
-                <p>
+            </div>
+            <div className="factswrap">
+              <div className="factlist">
+                <div className="fact"><div className="sec">§01</div><p>
                   Many Australian brands sell on their own store and on one or two marketplaces. That works well until
                   stock lives in three places and the last unit sells twice. We connect your store to Amazon Australia,
                   eBay Australia and Kogan Marketplace so products, prices and stock are managed from one place and
                   every order flows back to one system.
-                </p>
-                <p>
+                </p></div>
+                <div className="fact"><div className="sec">§02</div><p>
                   One note if you are working from an older plan: Catch is no longer a channel. Wesfarmers wound the
                   Catch marketplace down in 2025, so any listings or connectors built for it need retiring.
-                </p>
+                </p></div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ═══ 10. MIGRATION (listicle) ═══ */}
-        <section className="sec-lg dot-grid">
+        {/* ═══ MIGRATION (six steps) → facts with numbered rows ═══ */}
+        <section className="section facts au-top" id="migration">
           <div className="wrap">
-            <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">Migration</span>
+            <div className="section-head">
+              <div className="eyebrow">Migration</div>
               <h2>Six steps to move your online store without losing Google rankings</h2>
-              <p className="lead mt-4">
+              <p className="lead">
                 Replatforming from Maropost (Neto), old Magento, WooCommerce or a custom build is where stores most
                 often lose search traffic. It is avoidable. This is the process we follow on every ecommerce migration.
               </p>
             </div>
-            <div className="col-6040 mt-10">
-            <ol className="stack">
-              {MIGRATION_STEPS.map((s) => (
-                <li key={s.n} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
-                  <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.small, minWidth: 34 }}>{s.n}</span>
-                  <div>
-                    <h3 style={{ fontSize: 18 }}>{s.t}</h3>
-                    <p style={{ marginTop: 6 }}>{s.d}</p>
-                  </div>
-                </li>
-              ))}
-            </ol>
-              <div>
-                <div className="card" style={{ padding: 8, position: 'sticky', top: 96 }}>
-                  <img src="/images/au/ecommerce-development/ecommerce-development-migration.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Two ecommerce engineers in a bright Adelaide office checking a redirect map on one monitor against the new store on another, with a phone on a stand for mobile testing" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
-                  <div style={{ padding: '14px 12px 8px' }}>
-                    <p style={{ fontSize: 14 }}>
-                      Old addresses on the left, new store on the right. Every line on that map becomes one 301
-                      redirect, and each one is tested on the staging store before launch.
-                    </p>
-                  </div>
-                </div>
-              </div>
+            <div className="factswrap">
+              <ol className="factlist">
+                {MIGRATION_STEPS.map((s, i) => (
+                  <li className="fact" key={s.n}>
+                    <div className="sec">{s.n}</div>
+                    <div>
+                      <h3>{s.t}</h3>
+                      <p>{s.d}</p>
+                      {i === MIGRATION_STEPS.length - 1 ? (
+                        <p>
+                          For platform-specific moves, see our <a href="/replatforming">replatforming guides</a>{' '}
+                          and the <a href="/blog/magento-to-shopify-plus-migration-checklist-2026">Magento to Shopify Plus migration checklist</a>.
+                        </p>
+                      ) : null}
+                    </div>
+                  </li>
+                ))}
+              </ol>
+              <VisualSlot page={PAGE_KEY} slot="facts-4" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
+                subject="Two ecommerce engineers checking a redirect map on one monitor against the new store on another, a phone on a stand for mobile testing"
+                caption="Old addresses on the left, new store on the right. Every line on that map becomes one 301 redirect, and each one is tested on the staging store before launch.">
+                <img src="/images/au/ecommerce-development/ecommerce-development-migration.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Two ecommerce engineers in a bright Adelaide office checking a redirect map on one monitor against the new store on another, with a phone on a stand for mobile testing" />
+              </VisualSlot>
             </div>
-            <p className="mt-8" style={{ maxWidth: 820 }}>
-              For platform-specific moves, see our <a href="/replatforming" style={{ color: T.small, textDecoration: 'underline' }}>replatforming guides</a>{' '}
-              and the <a href="/blog/magento-to-shopify-plus-migration-checklist-2026" style={{ color: T.small, textDecoration: 'underline' }}>Magento to Shopify Plus migration checklist</a>.
-            </p>
           </div>
         </section>
 
-        {/* ═══ 11. AUSTRALIAN CONSUMER LAW ═══ */}
-        <section className="sec-lg">
+        {/* ═══ AUSTRALIAN CONSUMER LAW → facts + default-build panel ═══ */}
+        <section className="section facts au-top" id="consumer-law">
           <div className="wrap">
-            <div style={{ maxWidth: 800 }}>
-              <span className="eyebrow">Australian Consumer Law, in plain English</span>
+            <div className="section-head">
+              <div className="eyebrow">Australian Consumer Law, in plain English</div>
               <h2>ACCC essentials every Australian online store must get right</h2>
-              <div className="stack mt-6">
-                <p>
+            </div>
+            <div className="factswrap">
+              <div className="factlist">
+                <div className="fact"><div className="sec">§01</div><p>
                   The Australian Consumer Law, or ACL, applies to every online store selling to Australians.
                   business.gov.au says all businesses selling goods and services in Australia must comply with it,
                   including businesses that are overseas. The ACCC (Australian Competition and Consumer Commission)
                   enforces it. Three areas touch your store’s design and code directly: returns, prices and reviews.
+                </p></div>
+                <div className="fact"><div className="sec">§02</div><div>
+                  <h3>Returns and refunds</h3>
+                  <p>
+                    You cannot have a store policy that overrides consumer guarantees, so no blanket &ldquo;no
+                    refunds&rdquo; lines. Change-of-mind returns are optional, but if you offer them you must follow your
+                    own policy. In February 2025 the ACCC reported a sweep of over 2,000 retail websites that found
+                    statements such as &ldquo;sale items cannot be returned&rdquo;, restocking fees on faulty goods,
+                    and customers paying return postage for faulty items.
+                  </p>
+                </div></div>
+                <div className="fact"><div className="sec">§03</div><div>
+                  <h3>Prices and GST</h3>
+                  <p>
+                    The ACCC says businesses must display the total price as a single figure, including GST and any
+                    unavoidable fees. Extra fees must be disclosed at the start of checkout, not dripped in at the end.
+                    If prices are shown only to other businesses, such as in a trade portal, GST does not need to be
+                    included. We build both into product pages, cart and checkout.
+                  </p>
+                </div></div>
+                <div className="fact"><div className="sec">§04</div><div>
+                  <h3>Reviews and testimonials</h3>
+                  <p>
+                    It is against the law to create fake or misleading reviews, or to arrange for others to. You must
+                    not hide or edit genuine negative reviews, and any incentive for leaving a review must not depend on
+                    it being positive and must be disclosed. We set up review apps so every genuine review can publish.
+                  </p>
+                  <p className="au-note">
+                    Sources: <a href={SRC_BGA_ACL} {...extLink}>business.gov.au, Australian Consumer Law and your business</a>;{' '}
+                    <a href={SRC_BGA_ECOM} {...extLink}>business.gov.au, Ecommerce (selling online)</a>;{' '}
+                    <a href={SRC_ACCC_SWEEP} {...extLink}>ACCC, online return policies sweep (4 February 2025)</a>;{' '}
+                    <a href={SRC_ACCC_PRICE} {...extLink}>ACCC, price displays</a>;{' '}
+                    <a href={SRC_ACCC_REVIEWS} {...extLink}>ACCC, online reviews</a>.
+                  </p>
+                </div></div>
+              </div>
+              <div className="au-panel">
+                <div className="eyebrow">What we build in by default</div>
+                <p>
+                  Clear terms and a returns page that are easy to find, as business.gov.au recommends; consumer guarantee
+                  wording on faulty goods; single total prices including GST; delivery costs shown before the last step;
+                  a privacy notice for the personal information you collect; and a review setup with no star-rating
+                  filter. We are not lawyers, so have your terms checked by one. We build to what they sign off.
                 </p>
               </div>
             </div>
-            <ul className="col-3 mt-10">
-              <li className="card">
-                <h3>Returns and refunds</h3>
-                <p className="mt-4">
-                  You cannot have a store policy that overrides consumer guarantees, so no blanket &ldquo;no
-                  refunds&rdquo; lines. Change-of-mind returns are optional, but if you offer them you must follow your
-                  own policy. In February 2025 the ACCC reported a sweep of over 2,000 retail websites that found
-                  statements such as &ldquo;sale items cannot be returned&rdquo;, restocking fees on faulty goods,
-                  and customers paying return postage for faulty items.
-                </p>
-              </li>
-              <li className="card">
-                <h3>Prices and GST</h3>
-                <p className="mt-4">
-                  The ACCC says businesses must display the total price as a single figure, including GST and any
-                  unavoidable fees. Extra fees must be disclosed at the start of checkout, not dripped in at the end.
-                  If prices are shown only to other businesses, such as in a trade portal, GST does not need to be
-                  included. We build both into product pages, cart and checkout.
-                </p>
-              </li>
-              <li className="card">
-                <h3>Reviews and testimonials</h3>
-                <p className="mt-4">
-                  It is against the law to create fake or misleading reviews, or to arrange for others to. You must
-                  not hide or edit genuine negative reviews, and any incentive for leaving a review must not depend on
-                  it being positive and must be disclosed. We set up review apps so every genuine review can publish.
-                </p>
-              </li>
-            </ul>
-            <div className="def mt-8" style={{ maxWidth: 940 }}>
-              <span className="lab">What we build in by default</span>
-              <p>
-                Clear terms and a returns page that are easy to find, as business.gov.au recommends; consumer guarantee
-                wording on faulty goods; single total prices including GST; delivery costs shown before the last step;
-                a privacy notice for the personal information you collect; and a review setup with no star-rating
-                filter. We are not lawyers, so have your terms checked by one. We build to what they sign off.
-              </p>
-            </div>
-            <p style={srcNote}>
-              Sources: <a href={SRC_BGA_ACL} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>business.gov.au, Australian Consumer Law and your business</a>;{' '}
-              <a href={SRC_BGA_ECOM} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>business.gov.au, Ecommerce (selling online)</a>;{' '}
-              <a href={SRC_ACCC_SWEEP} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>ACCC, online return policies sweep (4 February 2025)</a>;{' '}
-              <a href={SRC_ACCC_PRICE} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>ACCC, price displays</a>;{' '}
-              <a href={SRC_ACCC_REVIEWS} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>ACCC, online reviews</a>.
-            </p>
           </div>
         </section>
 
-        {/* ═══ 12. HOW TO CHOOSE (interactive checklist + comparison) ═══ */}
-        <section className="sec-lg dot-grid">
+        {/* ═══ HOW TO CHOOSE (checklist) → vlog ═══ */}
+        <section className="vlog" id="how-to-choose">
           <div className="wrap">
-            <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">Before you sign anything</span>
+            <div className="section-head">
+              <div className="eyebrow">Before you sign anything</div>
               <h2>How to choose an ecommerce agency: an eight-point checklist</h2>
-              <p className="lead mt-4">
+              <p>
                 Use these with any ecommerce development company in Australia, including us. Tap each one for what a
                 good answer sounds like.
               </p>
+              <VisualSlot page={PAGE_KEY} slot="proof" kind="illustration" ratio="3:2"
+                subject="AI-generated model: a white eight-line checklist on a clipboard, orange ticks on each line" />
             </div>
-            <div className="card mt-8" style={{ padding: '4px 22px', maxWidth: 900 }}>
+            <div className="ventries">
               {CHOOSE_TIPS.map((c, i) => (
-                <details key={c.t}>
-                  <summary><span><span style={{ fontFamily: T.fm, color: T.small, marginRight: 10 }}>{String(i + 1).padStart(2, '0')}</span>{c.t}</span></summary>
-                  <p style={{ paddingBottom: 18 }}>{c.d}</p>
+                <details key={c.t} className="ventry">
+                  <summary><h3>{c.t}</h3><span className="chev" aria-hidden="true">+</span></summary>
+                  <span className="vtag">{String(i + 1).padStart(2, '0')}</span>
+                  <p>{c.d}</p>
                 </details>
               ))}
             </div>
+          </div>
+        </section>
 
-            <h3 className="mt-12" style={{ fontSize: 22, maxWidth: 720 }}>Ecommerce agency vs freelancer vs in-house developer</h3>
-            <div className="card mt-6" style={tableCard}>
-              <table className="cmp-table" style={tableMin(680)}>
+        {/* ═══ AGENCY vs FREELANCER vs IN-HOUSE → comparison ═══ */}
+        <section className="section comparison" id="comparison">
+          <div className="wrap">
+            <div className="section-head head-stack">
+              <div className="eyebrow">Side by side</div>
+              <h2>Ecommerce agency vs freelancer vs in-house developer</h2>
+            </div>
+            <div className="tablewrap">
+              <table>
                 <thead>
                   <tr><th>What you get</th><th className="fj">FactoryJet</th><th>Solo freelancer</th><th>In-house developer</th></tr>
                 </thead>
                 <tbody>
-                  <tr><td className="feat">Best fit</td><td className="fj"><span className="yes">New builds, replatforms, B2B</span></td><td><span className="partial">Small, defined tasks</span></td><td><span className="partial">Steady weekly workload</span></td></tr>
-                  <tr><td className="feat">Design, development and integrations</td><td className="fj"><span className="yes">One team</span></td><td><span className="partial">Usually one of the three</span></td><td><span className="partial">Depends on the hire</span></td></tr>
-                  <tr><td className="feat">Cover when someone is away</td><td className="fj"><span className="yes">Yes</span></td><td><span className="no">No</span></td><td><span className="no">No</span></td></tr>
-                  <tr><td className="feat">Xero, MYOB, ERP and courier experience</td><td className="fj"><span className="yes">Yes</span></td><td><span className="partial">Varies</span></td><td><span className="partial">Varies</span></td></tr>
-                  <tr><td className="feat">Migration that protects rankings</td><td className="fj"><span className="yes">Built into every replatform</span></td><td><span className="partial">Varies</span></td><td><span className="partial">Varies</span></td></tr>
-                  <tr><td className="feat">Code and accounts in your name</td><td className="fj"><span className="yes">Always</span></td><td><span className="partial">Check the contract</span></td><td><span className="yes">Yes</span></td></tr>
-                  <tr><td className="feat">Support after launch</td><td className="fj"><span className="yes">Same team</span></td><td><span className="partial">If they are free</span></td><td><span className="yes">Yes</span></td></tr>
+                  <tr><th scope="row">Best fit</th><td className="fj">New builds, replatforms, B2B</td><td>Small, defined tasks</td><td>Steady weekly workload</td></tr>
+                  <tr><th scope="row">Design, development and integrations</th><td className="fj">One team</td><td>Usually one of the three</td><td>Depends on the hire</td></tr>
+                  <tr><th scope="row">Cover when someone is away</th><td className="fj">Yes</td><td>No</td><td>No</td></tr>
+                  <tr><th scope="row">Xero, MYOB, ERP and courier experience</th><td className="fj">Yes</td><td>Varies</td><td>Varies</td></tr>
+                  <tr><th scope="row">Migration that protects rankings</th><td className="fj">Built into every replatform</td><td>Varies</td><td>Varies</td></tr>
+                  <tr><th scope="row">Code and accounts in your name</th><td className="fj">Always</td><td>Check the contract</td><td>Yes</td></tr>
+                  <tr><th scope="row">Support after launch</th><td className="fj">Same team</td><td>If they are free</td><td>Yes</td></tr>
                 </tbody>
               </table>
             </div>
           </div>
         </section>
 
-        {/* ═══ 13. SUPPORT AFTER LAUNCH + scope shapes (no pricing) ═══ */}
-        <section className="sec-lg">
+        {/* ═══ SUPPORT AFTER LAUNCH + scope shapes (no pricing) → list + cost panel ═══ */}
+        <section className="section" id="after-launch">
           <div className="wrap">
-            <div className="col-6040">
+            <div className="section-head">
+              <div className="eyebrow">After launch</div>
+              <h2>Support after launch, from the people who built it</h2>
+              <p className="lead">
+                The most common complaint we hear from Australian store owners is not about design. It is about an
+                agency that vanished the week after launch. We do the opposite. Here are the four ways to work with
+                us, from smallest to largest.
+              </p>
+            </div>
+            <div className="au-split">
               <div>
-                <span className="eyebrow">After launch</span>
-                <h2>Support after launch, from the people who built it</h2>
-                <p className="lead mt-4" style={{ maxWidth: 560 }}>
-                  The most common complaint we hear from Australian store owners is not about design. It is about an
-                  agency that vanished the week after launch. We do the opposite. Here are the four ways to work with
-                  us, from smallest to largest.
-                </p>
-                <ul className="scope-list num-list mt-6" style={{ maxWidth: 580 }}>
-                  <li><b>Store audit and fix list.</b> A review of speed, checkout, SEO, integrations and consumer law wording on your current store, with a ranked list of fixes. Some brands stop here and do the fixes themselves.</li>
-                  <li><b>Fixed-scope build or replatform.</b> A new ecommerce website, or a move to a new platform, quoted at a fixed price per stage.</li>
-                  <li><b>Monthly support plan.</b> Updates, security patches, small improvements and a named engineer who knows your store.</li>
-                  <li><b>Growth sprints.</b> Planned blocks of work on new features, B2B, marketplaces or conversion, measured against numbers you already track.</li>
-                </ul>
-                <p className="mt-6" style={{ maxWidth: 580 }}>
-                  For WooCommerce and Shopify stores, our <a href="/au/website-maintenance" style={srcLink}>monthly website maintenance plan</a> covers
+                <ol className="au-numlist">
+                  <li><span><b>Store audit and fix list.</b> A review of speed, checkout, SEO, integrations and consumer law wording on your current store, with a ranked list of fixes. Some brands stop here and do the fixes themselves.</span></li>
+                  <li><span><b>Fixed-scope build or replatform.</b> A new ecommerce website, or a move to a new platform, quoted at a fixed price per stage.</span></li>
+                  <li><span><b>Monthly support plan.</b> Updates, security patches, small improvements and a named engineer who knows your store.</span></li>
+                  <li><span><b>Growth sprints.</b> Planned blocks of work on new features, B2B, marketplaces or conversion, measured against numbers you already track.</span></li>
+                </ol>
+                <p>
+                  For WooCommerce and Shopify stores, our <a href="/au/website-maintenance">monthly website maintenance plan</a> covers
                   tested updates, checkout testing and backups. Once orders grow,{' '}
-                  <a href="/au/ai-customer-service" style={srcLink}>AI customer service for online stores</a> can take the
+                  <a href="/au/ai-customer-service">AI customer service for online stores</a> can take the
                   order-status and returns questions off your team.
                 </p>
-                <div className="mt-8">
-                  <ModalCTAButton label="Talk to the Founder" region="au" modalVariant="default" btnVariant="primary-light" />
-                </div>
+                <ModalCTAButton label="Talk to the Founder" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
               </div>
-              <div className="card card-top-orange">
-                <span className="eyebrow">What drives the cost</span>
-                <div className="scorecard-row"><div className="scorecard-metric">Number of products and variants</div><div className="scorecard-val" style={{ fontSize: 14 }}>Catalogue</div></div>
-                <div className="scorecard-row"><div className="scorecard-metric">Platform and paid apps</div><div className="scorecard-val" style={{ fontSize: 14 }}>Platform</div></div>
-                <div className="scorecard-row"><div className="scorecard-metric">Custom design vs adapted theme</div><div className="scorecard-val" style={{ fontSize: 14 }}>Design</div></div>
-                <div className="scorecard-row"><div className="scorecard-metric">Xero, MYOB, ERP, couriers, marketplaces</div><div className="scorecard-val" style={{ fontSize: 14 }}>Integrations</div></div>
-                <div className="scorecard-row"><div className="scorecard-metric">Data and URLs to move</div><div className="scorecard-val" style={{ fontSize: 14 }}>Migration</div></div>
-                <div className="scorecard-row"><div className="scorecard-metric">First call with the founder</div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Free</div></div>
+              <div className="au-panel">
+                <div className="eyebrow">What drives the cost</div>
+                <ul className="trigrows">
+                  <li><span className="m">Number of products and variants</span><span className="t">Catalogue</span></li>
+                  <li><span className="m">Platform and paid apps</span><span className="t">Platform</span></li>
+                  <li><span className="m">Custom design vs adapted theme</span><span className="t">Design</span></li>
+                  <li><span className="m">Xero, MYOB, ERP, couriers, marketplaces</span><span className="t">Integrations</span></li>
+                  <li><span className="m">Data and URLs to move</span><span className="t">Migration</span></li>
+                  <li><span className="m">First call with the founder</span><span className="t">Free</span></li>
+                </ul>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ═══ 14. CITIES + DEMAND ═══ */}
-        <section className="sec-lg dot-grid">
+        {/* ═══ CITIES → definition module (image left, copy + city links right) ═══ */}
+        <section className="definition" id="australia-wide">
+          <div>
+            <VisualSlot page={PAGE_KEY} slot="definition-2" kind="photo" ratio="3:2" className="definition-image"
+              subject="The owner of a homewares and gift shop on a video call with his ecommerce team from the back room of his store">
+              <img src="/images/au/ecommerce-development/ecommerce-development-remote.webp" width={1200} height={800} loading="lazy" decoding="async" alt="The owner of a Perth homewares and gift shop on a video call with his ecommerce team from the back room of his store, seen over his shoulder" />
+            </VisualSlot>
+            <p className="figcap">
+              A weekly call from the back of the shop, a shared board and a staging store you can open any time.
+              That is how projects run for brands in Sydney, Melbourne, Brisbane, Perth, Adelaide and regional
+              Australia alike.
+            </p>
+          </div>
+          <div className="definition-copy">
+            <div className="eyebrow">Sydney, Melbourne, Brisbane, Perth and beyond</div>
+            <h2>Ecommerce website design and development across Australia</h2>
+            <p>
+              Most people look for ecommerce website design in Sydney, ecommerce web development in Melbourne, or
+              an ecommerce developer in Brisbane or Perth, expecting to need someone nearby. For this kind of work
+              you do not. We run projects remotely with video calls, a shared board and a staging store, for
+              brands in every capital city and regional Australia.
+            </p>
+            <p>
+              What matters more than a postcode is who turns up. At FactoryJet the founder is involved in scoping
+              every project, and the senior engineers who build your online store are the ones who support it.
+              FactoryJet has worked in commerce since 2014 and served 500+ businesses, from B2B sellers such as
+              Bombay Petals to DTC brands such as Belle Maison.
+            </p>
+            <ul className="city-list">
+              <li><a href="/au">FactoryJet Australia</a></li>
+              <li><a href="/au/melbourne">Melbourne</a></li>
+              <li><a href="/au/brisbane">Brisbane</a></li>
+              <li><a href="/au/adelaide">Adelaide</a></li>
+              <li><a href="/au/canberra">Canberra</a></li>
+              <li><a href="/au/seo">SEO Australia</a></li>
+            </ul>
+          </div>
+        </section>
+
+        {/* ═══ AGENCIES (self-disclosure, ItemList from AU_AGENCIES) → ruled rows ═══ */}
+        <section className="section platforms" id="agencies">
           <div className="wrap">
-            <div className="col-6040">
+            <div className="section-head plat-head">
               <div>
-                <span className="eyebrow">Sydney, Melbourne, Brisbane, Perth and beyond</span>
-                <h2>Ecommerce website design and development across Australia</h2>
-                <div className="stack mt-6">
-                  <p>
-                    Most people look for ecommerce website design in Sydney, ecommerce web development in Melbourne, or
-                    an ecommerce developer in Brisbane or Perth, expecting to need someone nearby. For this kind of work
-                    you do not. We run projects remotely with video calls, a shared board and a staging store, for
-                    brands in every capital city and regional Australia.
-                  </p>
-                  <p>
-                    What matters more than a postcode is who turns up. At FactoryJet the founder is involved in scoping
-                    every project, and the senior engineers who build your online store are the ones who support it.
-                    FactoryJet has worked in commerce since 2014 and served 500+ businesses, from B2B sellers such as
-                    Bombay Petals to DTC brands such as Belle Maison.
-                  </p>
-                </div>
-                <div className="flex-wrap mt-6">
-                  <a className="city-pill" href="/au">FactoryJet Australia</a>
-                  <a className="city-pill" href="/au/melbourne">Melbourne</a>
-                  <a className="city-pill" href="/au/brisbane">Brisbane</a>
-                  <a className="city-pill" href="/au/adelaide">Adelaide</a>
-                  <a className="city-pill" href="/au/canberra">Canberra</a>
-                  <a className="city-pill" href="/au/seo">SEO Australia</a>
-                </div>
+                <div className="eyebrow">The honest landscape</div>
+                <h2>Australian ecommerce agencies worth knowing</h2>
               </div>
-
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/ecommerce-development/ecommerce-development-remote.webp" width={1200} height={800} loading="lazy" decoding="async" alt="The owner of a Perth homewares and gift shop on a video call with his ecommerce team from the back room of his store, seen over his shoulder" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
-                <div style={{ padding: '14px 12px 8px' }}>
-                  <p style={{ fontSize: 14 }}>
-                    A weekly call from the back of the shop, a shared board and a staging store you can open any time.
-                    That is how projects run for brands in Sydney, Melbourne, Brisbane, Perth, Adelaide and regional
-                    Australia alike.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ═══ 15. COMPETITOR LIST (self-disclosure, ItemList) ═══ */}
-        <section className="sec-lg">
-          <div className="wrap">
-            <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">The honest landscape</span>
-              <h2>Australian ecommerce agencies worth knowing</h2>
-              <p className="lead mt-4">
+              <p>
                 We are one option, not the only one. These ecommerce agencies show up when Australians search for an
                 ecommerce development company or ask AI assistants for a recommendation. Each note is based on what the
                 company says on its own website. Talk to two or three and pick the fit.
               </p>
             </div>
-            <ul className="stack mt-10" style={{ maxWidth: 900 }}>
+            <div className="platlist" role="list">
               {AU_AGENCIES.map((a, i) => (
-                <li key={a.name} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
-                  <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.small, minWidth: 30 }}>{i + 1}</span>
-                  <div>
-                    <h3 style={{ fontSize: 18 }}>{a.name}{a.name === 'FactoryJet' && <span style={{ fontFamily: T.fm, fontSize: 10, background: T.small, color: '#fff', borderRadius: 999, padding: '2px 8px', marginLeft: 8, verticalAlign: 'middle' }}>That is us</span>}</h3>
-                    <p style={{ marginTop: 6 }}>{a.note}</p>
-                  </div>
-                </li>
+                <div key={a.name} className={a.name === 'FactoryJet' ? 'plat plat-2col plat-own' : 'plat plat-2col'} role="listitem">
+                  <span className="capid">{String(i + 1).padStart(2, '0')}</span>
+                  <div className="plat-name"><h3>{a.name}</h3>{a.name === 'FactoryJet' && <span className="plat-flag">That is us</span>}</div>
+                  <p className="plat-build">{a.note}</p>
+                </div>
               ))}
-            </ul>
-            <p style={srcNote}>
+            </div>
+            <p className="sub-note">
               Agencies named from live Australian search results and AI assistant answers for ecommerce agency queries, September 2026. Notes reflect each company’s own website on 25 September 2026. Listing is not endorsement.
             </p>
           </div>
         </section>
 
-        {/* ═══ 16. RELATED AU SERVICES (hover cards) ═══ */}
-        <section className="sec-lg dot-grid">
+        {/* ═══ RELATED AU SERVICES → agentdir ═══ */}
+        <section className="section agentdir" id="related">
           <div className="wrap">
-            <div style={{ maxWidth: 740 }}>
-              <span className="eyebrow">More from FactoryJet Australia</span>
+            <div className="section-head">
+              <div className="eyebrow">More from FactoryJet Australia</div>
               <h2>Other ways we help Australian online stores grow</h2>
             </div>
-            <ul className="col-3 mt-10">
-              <li><a className="svc-card" href="/au/shopify-development" style={{ display: 'block', height: '100%', color: 'inherit', textDecoration: 'none' }}><h3>Shopify development Australia</h3><p className="mt-4">Shopify and Shopify Plus themes, apps, B2B and migrations to Shopify, in depth.</p><span style={{ fontFamily: T.fm, fontSize: 12, color: T.small }}>See Shopify development →</span></a></li>
-              <li><a className="svc-card" href="/au/ai-agents" style={{ display: 'block', height: '100%', color: 'inherit', textDecoration: 'none' }}><h3>AI agents for your store</h3><p className="mt-4">Agents that answer order questions, update listings and chase stock, connected to your systems.</p><span style={{ fontFamily: T.fm, fontSize: 12, color: T.small }}>See AI agents →</span></a></li>
-              <li><a className="svc-card" href="/au/ai-seo" style={{ display: 'block', height: '100%', color: 'inherit', textDecoration: 'none' }}><h3>AI SEO</h3><p className="mt-4">Getting your brand and products named in ChatGPT, Perplexity and Google AI Overviews.</p><span style={{ fontFamily: T.fm, fontSize: 12, color: T.small }}>See AI SEO →</span></a></li>
-              <li><a className="svc-card" href="/au/seo" style={{ display: 'block', height: '100%', color: 'inherit', textDecoration: 'none' }}><h3>SEO services</h3><p className="mt-4">Ecommerce SEO for category and product pages, technical fixes and content that ranks.</p><span style={{ fontFamily: T.fm, fontSize: 12, color: T.small }}>See SEO Australia →</span></a></li>
-              <li><a className="svc-card" href="/au/ai-development" style={{ display: 'block', height: '100%', color: 'inherit', textDecoration: 'none' }}><h3>AI development</h3><p className="mt-4">AI built into your ERP, CRM or store: product data, search and support workflows.</p><span style={{ fontFamily: T.fm, fontSize: 12, color: T.small }}>See AI development →</span></a></li>
-              <li><a className="svc-card" href="/au" style={{ display: 'block', height: '100%', color: 'inherit', textDecoration: 'none' }}><h3>FactoryJet Australia</h3><p className="mt-4">Everything we do for Australian businesses: ecommerce, AI agents, websites and AI search.</p><span style={{ fontFamily: T.fm, fontSize: 12, color: T.small }}>Back to the hub →</span></a></li>
+            <ul className="agentdir-grid">
+              {RELATED.map((c) => (
+                <li key={c.h}>
+                  <a href={c.h}>
+                    <span className="agentdir-t">{c.t}</span>
+                    <span className="agentdir-l">{c.d}</span>
+                    <span className="agentdir-more">{c.l}</span>
+                    <span className="agentdir-go" aria-hidden="true">↗</span>
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         </section>
 
-        {/* ═══ 17. FAQ (canonical Linear Minimal) ═══ */}
-        <section className="sec-lg" id="faq">
+        {/* ═══ FAQ (Family A accordion; same FAQ_ITEMS array as the FAQPage JSON-LD) ═══ */}
+        <AuFaq
+          categories={FAQ_CATEGORIES}
+          items={FAQ_ITEMS}
+          heading="Ecommerce agency questions Australian business owners ask"
+          askLabel="Still have a question? Ask the founder →"
+          askNote="Replies within 24 hours."
+        />
+
+        {/* ═══ FINAL CTA (light, US finalcta) ═══ */}
+        <section className="finalcta" id="finalcta">
           <div className="wrap">
-            <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">FAQ</span>
-              <h2>Ecommerce agency questions Australian business owners ask</h2>
+            <div>
+              <div className="eyebrow">Ready when you are</div>
+              <h2>Build an online store that sells, and a team that stays</h2>
+              <p>
+                Send your name and work email. The founder replies within 24 hours to book a short call about your
+                catalogue, your platform and what a realistic timeline looks like. No spam, no obligation.
+              </p>
             </div>
-            <div className="faq-pill-nav" aria-label="FAQ topics">
-              {FAQ_CATEGORIES.map((c) => (
-                <a key={c.key} href={`#faq-${c.key}`}>
-                  {c.label}
-                  <span className="pill-count">{FAQ_ITEMS.filter((f) => f.category === c.key).length}</span>
-                </a>
-              ))}
-            </div>
-            <div className="faq-grid">
-              <aside className="faq-sidebar">
-                <span className="faq-sidebar-topics">Topics</span>
-                <nav className="faq-sidebar-nav">
-                  {FAQ_CATEGORIES.map((c) => (
-                    <a key={c.key} href={`#faq-${c.key}`}>
-                      {c.label}
-                      <span className="faq-nav-count">{FAQ_ITEMS.filter((f) => f.category === c.key).length}</span>
-                    </a>
-                  ))}
-                </nav>
-                <div className="faq-sidebar-cta">
-                  <ModalCTAButton label="Still have a question? Ask the founder →" region="au" modalVariant="default" btnVariant="secondary-light" />
-                  <p>Replies within 24 hours.</p>
-                </div>
-              </aside>
-
-              <div>
-                {FAQ_CATEGORIES.map((c) => (
-                  <div key={c.key} id={`faq-${c.key}`} style={{ marginBottom: 40 }}>
-                    <div className="faq-cat-header">
-                      <span className="faq-cat-bar" />
-                      <p className="faq-cat-label">{c.label}</p>
-                    </div>
-                    <ul className="faq-list">{FAQ_ITEMS.filter((f) => f.category === c.key).map((f) => (
-                      <li key={f.question}><details className="faq-item">
-                        <summary>
-                          <span className="q-text">{f.question}</span>
-                          <span className="chevron">
-                            <svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5L7 9L11 5" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" /></svg>
-                          </span>
-                        </summary>
-                        <div className="faq-ans"><p>{f.answer}</p>{f.links ? <p style={{ marginTop: 8 }}>{f.links.map((l) => <a key={l.href} href={l.href} style={{ ...srcLink, marginRight: 16 }}>{l.label}</a>)}</p> : null}</div>
-                      </details></li>
-                    ))}</ul>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ═══ 18. FINAL CTA (the only dark section) ═══ */}
-        <section className="dark-sec">
-          <div className="wrap" style={{ textAlign: 'center', maxWidth: 640 }}>
-            <span className="eyebrow">Ready when you are</span>
-            <h2>Build an online store that sells, and a team that stays</h2>
-            <p className="mt-4">
-              Send your name and work email. The founder replies within 24 hours to book a short call about your
-              catalogue, your platform and what a realistic timeline looks like. No spam, no obligation.
-            </p>
-            <div className="mt-8" style={{ display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap' }}>
-              <ModalCTAButton label="Talk to the Founder" region="au" modalVariant="default" btnVariant="primary-light" />
-              <a className="btn btn-outline" href="/au/shopify-development" style={{ color: '#fff', borderColor: 'rgba(255,255,255,.25)' }}>See Shopify development</a>
+            <div className="ctas">
+              <ModalCTAButton label="Talk to the Founder" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
+              <a className="btn btn-ghost" href="/au/shopify-development">See Shopify development</a>
             </div>
           </div>
         </section>
@@ -1166,7 +1274,7 @@ export default function EcommerceDevelopmentAUPage() {
       </main>
       </div>
 
-      <SiteFooter locale="au" linkColumns={AU_FOOTER_COLUMNS} variant="dark" tagline="Ecommerce, AI agents, websites and AI search for Australian businesses. Built by senior engineers, supported after launch, owned by you." />
+      <SiteFooter locale="au" linkColumns={AU_FOOTER_COLUMNS} tagline="Ecommerce, AI agents, websites and AI search for Australian businesses. Built by senior engineers, supported after launch, owned by you." />
     </>
   );
 }

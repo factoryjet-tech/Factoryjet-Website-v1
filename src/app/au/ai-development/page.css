@@ -1,0 +1,35 @@
+/* /au/ai-development add-on to au-page.css. Scoped to .aiAgentPage.auPage; loaded only by this page.
+   Rules here cover modules this page combines in ways the shared file does not yet style. */
+
+/* Nine service cards: the ninth spans the full row (as it did before the conversion) */
+.aiAgentPage.auPage .capgrid > .cap:nth-child(9) { grid-column: 1 / -1; }
+.aiAgentPage.auPage .cap p + p { margin-top: -12px; }
+
+/* Phase duration under each timeline title */
+.aiAgentPage.auPage details.tnode summary .vtag { display: block; margin-top: 8px; }
+
+/* Checklist bullets inside openable rows: one column, spaced from the summary */
+.aiAgentPage.auPage .ventry .chg-list { grid-template-columns: minmax(0,1fr); margin-top: 12px; }
+.aiAgentPage.auPage .ventry .chg-list + p { margin-top: 14px; }
+
+/* Quick-version panel inside the sticky vlog head */
+.aiAgentPage.auPage .vlog .section-head .au-panel { margin-top: 28px; }
+.aiAgentPage.auPage .trigrows .t a { text-decoration: underline; text-underline-offset: 3px; }
+
+/* Ten-point checklist: openable rows in two columns, number before the question */
+.aiAgentPage.auPage .ventries.choose-grid { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 16px; align-items: start; }
+.aiAgentPage.auPage .choose-grid summary h3 .capid { margin-right: 8px; }
+
+/* CTA under the scope rows inside a fact */
+.aiAgentPage.auPage .fact .btn { margin-top: 22px; }
+
+/* Australia-wide split: paragraph rhythm, prose links, location pills (mirror of AiSeoHubSections.css .city-list) */
+.aiAgentPage.auPage .au-split > div > p + p { margin-top: 14px; }
+.aiAgentPage.auPage .au-split p a { color: var(--accent-text); text-decoration: underline; text-underline-offset: 3px; }
+.aiAgentPage.auPage .city-list { list-style: none; margin: 22px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; align-content: start; }
+.aiAgentPage.auPage .city-list a { display: inline-flex; align-items: center; min-height: 40px; padding: 8px 14px; border: 1px solid var(--line); border-radius: 999px; background: white; color: var(--ink); font-size: 13px; font-weight: 500; transition: border-color .18s ease, color .18s ease; }
+.aiAgentPage.auPage .city-list a:hover { border-color: var(--accent); color: var(--accent-text); }
+
+@media (max-width: 820px) {
+  .aiAgentPage.auPage .ventries.choose-grid { grid-template-columns: minmax(0,1fr); }
+}

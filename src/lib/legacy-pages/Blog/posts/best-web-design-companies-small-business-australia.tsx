@@ -98,6 +98,13 @@ export const post: BlogPost = {
         The best web design company for an Australian small business is one that shows you live sites in your industry, gives you a written scope with a fixed price, builds speed and search setup into the first version, and stays reachable after launch. Australian price guides put a small business site at roughly $3,500 to $7,000 in 2026. Below are six companies whose Australian base and services we checked on their own websites, including us, plus the checks that tell a good agency from a risky one.
       </p>
 
+      <div className="bg-orange-50 border-l-4 border-orange-600 p-5 rounded-r-lg mb-8">
+        <p className="font-semibold mb-2">Ready to hire, not just compare?</p>
+        <p className="mb-0">
+          If you already know you want a site built, see our <a href="/au/small-business-web-design" className={linkCls}>small business web design service for Australia</a>. It explains what we build, how the 7-day delivery works for sites up to 5 pages, and what you own at the end. The comparison below still applies: run the same checks on us.
+        </p>
+      </div>
+
       <h2 className="text-2xl font-bold mt-8 mb-4">What Australian Small Businesses Need from Web Design Agencies in 2026</h2>
       <p className="mb-4">Start with mobile. Google ranks your site on its mobile version, and many of your customers will find you on a phone, often on mobile data. Every page should work cleanly on a mid-range Android phone and an iPhone without sideways scrolling or buttons too small to tap. Then speed: Google's <a href="/glossary" className={linkCls}>Core Web Vitals</a> measure how fast real visitors see and use your pages, and slow pages waste the ad spend and search clicks that brought people there. Search setup belongs in the build, not a later project: page titles, meta descriptions, headings, structured data for your business details, an XML sitemap submitted to Google Search Console and alt text on images. Pricing should be itemised, showing design, development, platform costs and support terms, so scope creep has nowhere to hide. References should be live websites and named people you can phone, not portfolio screenshots. And the basics of the Privacy Act 1988 should be handled: a privacy policy, clear consent on forms, and care with the data your forms collect. An agency that treats any of this as an extra is telling you how the project will go.</p>
 

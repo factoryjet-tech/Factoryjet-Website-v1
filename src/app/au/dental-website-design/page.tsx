@@ -1,12 +1,15 @@
 import type { Metadata } from 'next';
+import { Fragment } from 'react';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import { AU_FOOTER_COLUMNS } from '@/data/auFooterColumns';
-import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
-import '../au-service.css';
+import AuFaq from '../components/AuFaq';
+import VisualSlot from '../components/VisualSlot';
+import '@/components/v2/AiAgentDevelopmentSections.css';
+import '../au-page.css';
 
 const CANONICAL = 'https://factoryjet.com/au/dental-website-design';
 const UPDATED = '2026-09-26';
@@ -14,19 +17,6 @@ const TITLE = 'Dental Website Design & Dental SEO Australia | FactoryJet';
 const H1 = 'Dental Website Design and Dental SEO for Australian Practices, Built Around the AHPRA Rules';
 const DESCRIPTION =
   'Dental website design and dental SEO for Australian practices: AHPRA-aware content, online booking into your practice software, and support after launch.';
-
-/* Design tokens, copied by value from ../au-service.css so inline styles stay
-   on-system without CSS custom property references in this file. */
-const T = {
-  ink: '#0F0F12',
-  n200: '#E5E5E0',
-  n400: '#6E6E68',
-  orange: '#F05A28',
-  green: '#047857',
-  small: '#B23E13',
-  fm: "'Geist Mono',monospace",
-  fd: "'Plus Jakarta Sans',sans-serif",
-};
 
 /* ONE array drives the visible trail AND the BreadcrumbList JSON-LD. */
 const crumbs = [
@@ -82,7 +72,7 @@ const FAQ_CATEGORIES = [
   { key: 'working', label: 'Cost, timing & working with us' },
 ] as const;
 
-const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
+const FAQ_ITEMS: { category: string; question: string; answer: string; links?: { href: string; label: string }[] }[] = [
   // ── Dental website design ──
   { category: 'design', question: 'What makes a good dental website?',
     answer: 'A good dental website answers three questions within seconds: can this practice help me, is it near me, and can I book now. That means clear treatment pages written in plain English, real photos of your team and rooms, your address, hours and parking, health fund and payment details, and a booking button on every page. It loads fast on a phone, works for people with low vision, and follows the AHPRA advertising rules.' },
@@ -104,6 +94,9 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     answer: 'Google says local results are based on relevance, distance and prominence. You cannot change distance, but you can work on the other two: a complete, accurate Google Business Profile with the right categories, hours and photos; a website page for each location that matches it; consistent practice details across directories; and steady, genuine reviews, which Google says can help local ranking.' },
   { category: 'seo', question: 'Is Google Business Profile free?',
     answer: 'Yes. Google states that creating a Business Profile and listing your business on Google is free. It is also the single most important listing for a dental practice, because it drives the map results for searches such as "dentist near me". The work is in keeping it complete and accurate: categories, services, hours, holiday hours, photos, booking link, and answering questions patients post.' },
+  { category: 'seo', question: 'What is local SEO for a dental practice?',
+    answer: 'Local SEO for dentists is the part of dental SEO that wins patients within driving distance: the Google Maps results and the "dentist near me" searches. It means a complete Google Business Profile for each location, a website page per location that matches it, consistent details across directories, and a steady flow of genuine reviews handled within the AHPRA rules. For most single-location practices it is the highest-return SEO work there is. Our local SEO page explains how we run it.',
+    links: [{ href: '/au/local-seo', label: 'Local SEO services in Australia' }, { href: SRC_GOOGLE_LOCAL, label: 'Google: how local results are ranked' }] },
   { category: 'seo', question: 'How long does dental SEO take to work?',
     answer: 'Fixes to your Google Business Profile and website can show results within weeks. Ranking treatment pages for competitive suburbs usually takes several months of steady work, and longer in dense city areas where many practices compete. Anyone promising first place on Google by a date is guessing. We agree what to measure up front, such as calls, bookings and map views, and report on those.' },
   { category: 'seo', question: 'Is SEO worth the money for a dental practice?',
@@ -262,8 +255,6 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-const srcNote = { fontFamily: T.fm, fontSize: 11, color: T.n400, marginTop: 12 } as const;
-const srcLink = { textDecoration: 'underline' } as const;
 const extLink = { target: '_blank', rel: 'noopener noreferrer nofollow' } as const;
 
 /* "Can we put this on our website?" checker. Rendered as <details> so it
@@ -308,6 +299,44 @@ const SIBLINGS: { href: string; t: string; d: string }[] = [
   { href: '/au', t: 'FactoryJet Australia', d: 'Everything we build for Australian businesses: ecommerce, websites, AI agents and AI search.' },
 ];
 
+/* Practice types (capability grid). Icons and visual-slot subjects share its order. */
+const PRACTICE_TYPES: { t: string; d: string }[] = [
+  { t: 'Single-location general practices', d: 'A focused site with strong treatment pages, a new patient page, online booking and a Google Business Profile that works hard for your suburb.' },
+  { t: 'Multi-location groups', d: 'One domain with a page per location, each with its own hours, team, booking link and matching Google profile, plus consistent content that is easy to keep compliant.' },
+  { t: 'Specialist practices', d: 'Orthodontists, periodontists, endodontists and oral surgeons, with referral information for dentists and titles used exactly as registration allows.' },
+  { t: 'Family and children’s dentistry', d: 'Parent-friendly pages, family booking back to back, and clear information about child dental benefit and health fund options you accept.' },
+  { t: 'Cosmetic and implant dentistry', d: 'Higher-value treatments where the Ahpra rules on images, offers and expectations matter most. Careful copy, honest imagery and a consult request path.' },
+  { t: 'Medical and allied health', d: 'The same approach to medical website design for GPs, physios and other clinics under the same national advertising law.' },
+];
+const PRACTICE_ICONS = [
+  'M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12Zm0-9a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z',
+  'M3 21h18M5 21V7l7-4 7 4v14M9 9h1m4 0h1M9 13h1m4 0h1M9 17h1m4 0h1',
+  'M6 3v6a4 4 0 0 0 8 0V3m-4 10v3a5 5 0 0 0 10 0v-2m0 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z',
+  'M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm13 10v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8',
+  'M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3Z',
+  'M9 3h6v6h6v6h-6v6H9v-6H3V9h6V3Z',
+] as const;
+const PRACTICE_SUBJECTS = [
+  'AI-generated model: a single white practice building on a suburb map with an orange booking pin',
+  'AI-generated model: three white practice buildings linked to one domain card, each with its own orange location tag',
+  'AI-generated model: a white referral form card passing from a general practice model to a specialist practice model',
+  'AI-generated model: a white calendar with two back-to-back orange appointment blocks for a parent and child',
+  'AI-generated model: a white consult request card beside an honest, unedited photo frame with no before-and-after pair',
+  'AI-generated model: a row of white clinic models for a GP, a physio and a dental practice under one orange guideline card',
+] as const;
+
+/* Visual slot page key (route without /au/). */
+const PAGE_KEY = 'dental-website-design';
+
+/* Visible hero heading, kept to about four lines at 62px so the inline form starts in the first
+   desktop screen. H1 above stays the schema headline; the rest of it opens the hero lead, so no
+   copy is lost. */
+const HERO_H1_LEAD = 'Dental Website Design and Dental SEO for';
+const HERO_H1_EMPHASIS = 'Australian Practices';
+
+const STEP_ICON = { width: 24, height: 24, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', strokeWidth: 1.5, strokeLinecap: 'round', strokeLinejoin: 'round' } as const;
+const CAP_ICON = { width: 24, height: 24, viewBox: '0 0 24 24', fill: 'none', stroke: '#C94A1A', strokeWidth: 1.6, strokeLinecap: 'round', strokeLinejoin: 'round', 'aria-hidden': true } as const;
+
 export default function DentalWebsiteDesignAUPage() {
   return (
     <>
@@ -315,182 +344,230 @@ export default function DentalWebsiteDesignAUPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <SiteHeader locale="au" logoHref="/au" />
-      <div className="au-svc">
-      <main>
+      <div className="aiAgentPage auPage">
+      <nav className="crumbs" aria-label="Breadcrumb">
+        <div className="wrap">
+          {crumbs.map((item, index) => (
+            <Fragment key={item.url}>
+              {index > 0 && ' / '}
+              {index === crumbs.length - 1 ? <b aria-current="page">{item.name}</b> : <a href={item.url}>{item.name}</a>}
+            </Fragment>
+          ))}
+        </div>
+      </nav>
+      <main id="au-content">
 
-        <Breadcrumbs items={crumbs} />
+        {/* ═══ HERO (US web-design hub hero: copy + inline form left, spec panel right) ═══ */}
+        <section className="hero" id="hero">
+          <div className="wrap hero-grid">
+            <div className="hero-copy">
+              <div className="eyebrow">Dental Website Design Australia</div>
+              <h1>{HERO_H1_LEAD} <span className="hero-emphasis">{HERO_H1_EMPHASIS}</span></h1>
+              <p className="lead">
+                Built around the AHPRA rules. FactoryJet designs and builds dental websites for Australian practices,
+                then helps patients find them. Your site gets real photos, clear treatment pages, online booking straight
+                into your practice software, local dental SEO, and copy checked against the Ahpra advertising guidelines.
+                We support it after launch, and your practice owns all of it.
+              </p>
+              <HeroInlineForm region="au" source="au_dental_website_hero" submitLabel="Plan my dental website" />
+            </div>
 
-        {/* ═══ 1. HERO ═══ */}
-        <section className="sec-lg dot-grid" style={{ position: 'relative', paddingTop: 36 }}>
+            <form
+              className="specpanel"
+              aria-label="What every practice site we build does"
+              data-visual-slot={`${PAGE_KEY}:hero`}
+              data-visual-kind="diagram"
+              data-visual-subject="The three things every dental practice site does: books into the practice software, copy checked against Ahpra guidance, built to be found locally"
+              data-visual-ratio="1:1"
+              data-visual-status="filled"
+            >
+              <div className="specpanel-bar">
+                <span className="statusdot"></span>
+                <span>INCLUDED · WHAT EVERY PRACTICE SITE WE BUILD DOES</span>
+                <span className="sys"><span>DENTAL SEO</span><span>AHPRA-AWARE</span></span>
+              </div>
+              <div className="workflow-controls">
+                <label className="workflow-toggle" title="Pause or resume the animation">
+                  <input type="checkbox" className="workflow-pause" aria-label="Pause animation" />
+                  <svg className="pause-icon" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M5 3v10M11 3v10" fill="none" stroke="currentColor" strokeWidth="2" /></svg>
+                  <svg className="play-icon" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="m5 3 8 5-8 5Z" fill="currentColor" /></svg>
+                </label>
+                <button type="reset" className="workflow-replay" aria-label="Replay animation" title="Replay animation">
+                  <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M3 6a5 5 0 1 1 0 4M3 2v4h4" /></svg>
+                </button>
+              </div>
+              <div className="specpanel-body" role="radiogroup" aria-label="Explore what every practice site does">
+                <label className="specrow run">
+                  <input className="workflow-select" type="radio" name="dental-step" value="1" />
+                  <span className="workflow-icon" aria-hidden="true"><svg {...STEP_ICON}><path d="M8 2v4m8-4v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z" /></svg></span>
+                  <span className="idx">real available times, on any phone</span>
+                  <span className="title">Books into your practice software</span>
+                  <span className="tag">Live</span>
+                </label>
+                <label className="specrow run">
+                  <input className="workflow-select" type="radio" name="dental-step" value="2" />
+                  <span className="workflow-icon" aria-hidden="true"><svg {...STEP_ICON}><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6Zm0 0v6h6M9 15l2 2 4-4" /></svg></span>
+                  <span className="idx">testimonials, offers, images, titles</span>
+                  <span className="title">Copy checked against Ahpra guidance</span>
+                  <span className="tag">Every page</span>
+                </label>
+                <label className="specrow hold">
+                  <input className="workflow-select" type="radio" name="dental-step" value="3" />
+                  <span className="workflow-icon" aria-hidden="true"><svg {...STEP_ICON}><path d={PRACTICE_ICONS[0]} /></svg></span>
+                  <span className="idx">Google Maps, search and AI answers</span>
+                  <span className="title">Built to be found locally</span>
+                  <span className="tag">Day one</span>
+                </label>
+              </div>
+              <div className="specpanel-foot">RULE · Every page is reviewed with a dentist from your practice before it goes live.</div>
+            </form>
+          </div>
+        </section>
+
+        {/* ═══ LEDGER (was the facts band; verified only) ═══ */}
+        <div className="ledger">
           <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <div className="flex-wrap mb-6">
-                  <span className="chip"><span className="dot dot-orange" />Dental Website Design Australia</span>
-                  <span className="chip">Dental SEO</span>
-                  <span className="chip">AHPRA-aware content</span>
-                </div>
-                <h1 style={{ fontSize: 'clamp(2.1rem, 3.9vw, 3.05rem)' }}>{H1}</h1>
-                <p className="lead mt-6" style={{ maxWidth: 560 }}>
-                  FactoryJet designs and builds dental websites for Australian practices, then helps patients find them.
-                  Your site gets real photos, clear treatment pages, online booking straight into your practice software,
-                  local dental SEO, and copy checked against the Ahpra advertising guidelines. We support it after launch,
-                  and your practice owns all of it.
-                </p>
-
-                <div className="byline mt-6" style={{ maxWidth: 560 }}>
-                  <div className="av">BB</div>
-                  <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
-                  <div className="upd">Last updated<br />26 September 2026</div>
-                </div>
-
-                <div className="mt-6" style={{ maxWidth: 560 }}>
-                  <HeroInlineForm region="au" source="au_dental_website_hero" submitLabel="Plan my dental website" />
+            {[
+              { v: '500+', t: 'businesses served by FactoryJet since 2014, founder-led on every project', s: 'About FactoryJet', u: '/about' },
+              { v: 'No clinical', t: 'testimonials in health advertising, including your own website and social media', s: 'Ahpra, testimonial guidance', u: SRC_AHPRA_TESTIMONIALS },
+              { v: 'Any size', t: 'health service providers are covered by the Privacy Act, whatever their turnover', s: 'OAIC, small business', u: SRC_OAIC_SMALL },
+              { v: 'Free', t: 'to create a Google Business Profile, the listing behind "dentist near me" map results', s: 'Google Business Profile', u: SRC_GOOGLE_GBP },
+            ].map((r) => (
+              <div className="ledgercell" key={r.t}>
+                <div className="k"><a href={r.u} {...(r.u.startsWith('http') ? extLink : {})}>{r.s}</a></div>
+                <div className="v">
+                  <strong className={/\d/.test(r.v) ? 'ledger-number' : 'ledger-word'}>{r.v}</strong>
+                  {r.t}
                 </div>
               </div>
+            ))}
+          </div>
+        </div>
 
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/dental-website-design/dental-website-hero.webp" width={1400} height={933} fetchPriority="high" decoding="async" alt="Over the shoulder of a Melbourne dental practice owner reviewing her new dental website on a laptop, with a treatment room behind the glass wall" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
-                <div style={{ padding: '14px 12px 8px' }}>
-                  <span className="eyebrow">What every practice site we build does</span>
-                  <div className="scorecard-row">
-                    <div><div className="scorecard-metric">Books into your practice software</div><div className="scorecard-note">real available times, on any phone</div></div>
-                    <div className="scorecard-val" style={{ fontSize: 15 }}>Live</div>
-                  </div>
-                  <div className="scorecard-row">
-                    <div><div className="scorecard-metric">Copy checked against Ahpra guidance</div><div className="scorecard-note">testimonials, offers, images, titles</div></div>
-                    <div className="scorecard-val" style={{ fontSize: 15 }}>Every page</div>
-                  </div>
-                  <div className="scorecard-row">
-                    <div><div className="scorecard-metric">Built to be found locally</div><div className="scorecard-note">Google Maps, search and AI answers</div></div>
-                    <div className="scorecard-val" style={{ color: T.green, fontSize: 15 }}>Day one</div>
+        <div className="wrap byline">
+          <div className="av">BB</div>
+          <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
+          <div className="upd">Last updated<br />26 September 2026</div>
+        </div>
+
+        {/* ═══ ANSWER-FIRST (GEO) → Family A facts ═══ */}
+        <section className="section facts" id="answer">
+          <div className="wrap">
+            <div className="section-head">
+              <h2 data-speakable="true">What does good dental website design look like in Australia?</h2>
+            </div>
+            <div className="factswrap">
+              <div className="factlist">
+                <div className="fact">
+                  <div className="sec">§01</div>
+                  <p data-speakable="true">
+                    <span className="stat">Good dental website design makes booking easy and trust obvious.</span> Patients see real photos, plain-English
+                    treatment pages, location details and a booking button that shows live times from your practice software.
+                    In Australia it must also follow the Ahpra advertising rules: no clinical testimonials, clear terms on any
+                    offer, and no misleading claims or images.
+                  </p>
+                </div>
+                <div className="fact">
+                  <div className="sec">§02</div>
+                  <div>
+                    <div className="factlabel">Four terms we use on this page</div>
+                    <p>
+                      <b>Ahpra</b> is the Australian Health Practitioner Regulation Agency, which works with the Dental Board of
+                      Australia. <b>Section 133 of the National Law</b> is the law that sets the rules for advertising a health
+                      service, and your website counts as advertising. <b>Dental SEO</b> means helping your practice show up when
+                      local people search for a dentist. <b>Practice management software</b> is the system that holds your
+                      appointment book, such as Dental4Windows, Praktika, Core Practice or EXACT.
+                    </p>
                   </div>
                 </div>
+                <div className="fact">
+                  <div className="sec">§03</div>
+                  <p>
+                    Most dental website design in Australia comes from two places: dental-only agencies with ready-made
+                    templates, and general web agencies that treat a practice like any other small business. Templates are quick
+                    but look like the practice down the road. General agencies often miss the health advertising rules. We sit in
+                    between: a custom dentist website design built around your patients, your practice software and the Ahpra
+                    guidance, with SEO planned from the first page rather than bolted on later.
+                  </p>
+                </div>
               </div>
+              <VisualSlot page={PAGE_KEY} slot="facts" kind="photo" ratio="3:2" className="factphoto"
+                subject="A dental practice owner reviewing her new dental website on a laptop, a treatment room behind the glass wall">
+                <img src="/images/au/dental-website-design/dental-website-hero.webp" width={1400} height={933} loading="lazy" decoding="async" alt="Over the shoulder of a Melbourne dental practice owner reviewing her new dental website on a laptop, with a treatment room behind the glass wall" />
+              </VisualSlot>
             </div>
           </div>
         </section>
 
-        {/* ═══ 2. ANSWER-FIRST (GEO) ═══ */}
-        <section className="sec">
+        {/* ═══ TEN MUST-HAVES (listicle) → facts rows + "leave off" group ═══ */}
+        <section className="section facts" id="must-haves">
           <div className="wrap">
-            <div className="def" style={{ maxWidth: 940 }} data-speakable="true">
-              <span className="lab">What does good dental website design look like in Australia?</span>
-              <p>
-                Good dental website design makes booking easy and trust obvious. Patients see real photos, plain-English
-                treatment pages, location details and a booking button that shows live times from your practice software.
-                In Australia it must also follow the Ahpra advertising rules: no clinical testimonials, clear terms on any
-                offer, and no misleading claims or images.
+            <div className="section-head">
+              <div className="eyebrow">What makes a good dental website</div>
+              <h2>10 things every dental practice website needs</h2>
+              <p className="lead">
+                These come from the questions Australian patients actually search, and the pages that practices most
+                often leave out. Use it as a checklist for your current site, whoever built it.
               </p>
             </div>
-            <div className="def mt-6" style={{ maxWidth: 940 }}>
-              <span className="lab">Four terms we use on this page</span>
-              <p>
-                <b>Ahpra</b> is the Australian Health Practitioner Regulation Agency, which works with the Dental Board of
-                Australia. <b>Section 133 of the National Law</b> is the law that sets the rules for advertising a health
-                service, and your website counts as advertising. <b>Dental SEO</b> means helping your practice show up when
-                local people search for a dentist. <b>Practice management software</b> is the system that holds your
-                appointment book, such as Dental4Windows, Praktika, Core Practice or EXACT.
-              </p>
+            <div className="factswrap">
+              <div className="factlist" role="list">
+                {MUST_HAVES.map((m, i) => (
+                  <div key={m.t} className="fact" role="listitem">
+                    <div className="sec">§{String(i + 1).padStart(2, '0')}</div>
+                    <p><b>{m.t}.</b> {m.d}</p>
+                  </div>
+                ))}
+              </div>
+              <VisualSlot page={PAGE_KEY} slot="facts-2" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
+                subject="A dentist in scrubs photographing her practice's bright waiting room for the new website"
+                caption="Real photos of your rooms and team do more for trust than any stock smile, and they are honest, which matters under the Ahpra rules.">
+                <img src="/images/au/dental-website-design/dental-website-photos.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A Sydney dentist in navy scrubs photographing her practice’s bright waiting room for the new website, with a softbox light beside her" />
+              </VisualSlot>
             </div>
-            <p className="lead mt-8" style={{ maxWidth: 920 }}>
-              Most dental website design in Australia comes from two places: dental-only agencies with ready-made
-              templates, and general web agencies that treat a practice like any other small business. Templates are quick
-              but look like the practice down the road. General agencies often miss the health advertising rules. We sit in
-              between: a custom dentist website design built around your patients, your practice software and the Ahpra
-              guidance, with SEO planned from the first page rather than bolted on later.
-            </p>
-          </div>
-        </section>
-
-        {/* ═══ 3. FACTS BAND (verified only) ═══ */}
-        <section className="stats-band">
-          <div className="wrap">
-            <ul className="col-4" style={{ gap: 20 }}>
-              {[
-                { v: '500+', t: 'businesses served by FactoryJet since 2014, founder-led on every project', s: 'About FactoryJet', u: '/about' },
-                { v: 'No clinical', t: 'testimonials in health advertising, including your own website and social media', s: 'Ahpra, testimonial guidance', u: SRC_AHPRA_TESTIMONIALS },
-                { v: 'Any size', t: 'health service providers are covered by the Privacy Act, whatever their turnover', s: 'OAIC, small business', u: SRC_OAIC_SMALL },
-                { v: 'Free', t: 'to create a Google Business Profile, the listing behind "dentist near me" map results', s: 'Google Business Profile', u: SRC_GOOGLE_GBP },
-              ].map((r) => (
-                <li key={r.t}>
-                  <div style={{ fontFamily: T.fd, fontWeight: 800, fontSize: 26, color: T.orange }}>{r.v}</div>
-                  <p style={{ fontSize: 13.5, color: T.ink, marginTop: 4 }}>{r.t}</p>
-                  <a href={r.u} {...(r.u.startsWith('http') ? extLink : {})} style={{ fontFamily: T.fm, fontSize: 10, color: T.n400, textDecoration: 'underline' }}>{r.s}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-
-        {/* ═══ 4. TEN MUST-HAVES (listicle) ═══ */}
-        <section className="sec-lg dot-grid">
-          <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <span className="eyebrow">What makes a good dental website</span>
-                <h2>10 things every dental practice website needs</h2>
-                <p className="lead mt-4" style={{ maxWidth: 580 }}>
-                  These come from the questions Australian patients actually search, and the pages that practices most
-                  often leave out. Use it as a checklist for your current site, whoever built it.
-                </p>
-                <ol className="scope-list num-list mt-6" style={{ maxWidth: 600 }}>
-                  {MUST_HAVES.map((m) => (
-                    <li key={m.t}><b>{m.t}.</b> {m.d}</li>
-                  ))}
-                </ol>
-              </div>
-              <div className="stack">
-                <figure className="card" style={{ padding: 8, margin: 0 }}>
-                  <img src="/images/au/dental-website-design/dental-website-photos.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A Sydney dentist in navy scrubs photographing her practice’s bright waiting room for the new website, with a softbox light beside her" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
-                  <figcaption style={{ padding: '12px 10px 6px', fontSize: 14 }}>
-                    Real photos of your rooms and team do more for trust than any stock smile, and they are honest, which
-                    matters under the Ahpra rules.
-                  </figcaption>
-                </figure>
-                <div className="card card-top-orange">
-                  <span className="eyebrow">What to leave off</span>
-                  <ul className="scope-list mt-4">
-                    <li><b>Patient stories about results.</b> They are testimonials under the National Law.</li>
-                    <li><b>Unqualified before-and-after galleries.</b> High risk of misleading patients.</li>
-                    <li><b>&quot;Pain-free&quot; or &quot;guaranteed&quot; claims.</b> They create unreasonable expectations.</li>
-                    <li><b>Countdown offers.</b> Urgency tied to health is a red flag for Ahpra.</li>
-                    <li><b>Stock photos of strangers.</b> Patients notice, and it undercuts trust.</li>
-                  </ul>
-                </div>
-              </div>
+            <div className="agentdir-group chg-group span-all">
+              <div className="agentdir-label"><span className="capid">GRP‑01</span><h3>What to leave off</h3></div>
+              <ul className="chg-list">
+                <li><span><b>Patient stories about results.</b> They are testimonials under the National Law.</span></li>
+                <li><span><b>Unqualified before-and-after galleries.</b> High risk of misleading patients.</span></li>
+                <li><span><b>&quot;Pain-free&quot; or &quot;guaranteed&quot; claims.</b> They create unreasonable expectations.</span></li>
+                <li><span><b>Countdown offers.</b> Urgency tied to health is a red flag for Ahpra.</span></li>
+                <li><span><b>Stock photos of strangers.</b> Patients notice, and it undercuts trust.</span></li>
+              </ul>
             </div>
           </div>
         </section>
 
-        {/* ═══ 5. AHPRA RULES + CHECKER ═══ */}
-        <section className="sec-lg" id="ahpra">
+        {/* ═══ AHPRA RULES → facts ═══ */}
+        <section className="section facts" id="ahpra">
           <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <span className="eyebrow">The Ahpra advertising guidelines, in plain English</span>
-                <h2>What a dental website can and cannot say under the Ahpra advertising rules</h2>
-                <div className="stack mt-6">
-                  <p>
-                    Section 133 of the Health Practitioner Regulation National Law says a person must not advertise a
-                    regulated health service in a way that is false, misleading or deceptive. Ahpra and the National
-                    Boards, including the Dental Board of Australia, explain what that means in the Guidelines for
-                    advertising a regulated health service. Your website, Google Business Profile posts, social media and
-                    emails to patients all count as advertising.
-                  </p>
-                  <p>
-                    <b>Testimonials.</b> Ahpra defines a testimonial as a positive statement about the clinical aspects of
-                    a health service: the symptom or reason for treatment, the diagnosis or treatment, or the outcome or
-                    the practitioner’s skill. These cannot be used in advertising. Comments about customer service or
-                    communication style that do not mention clinical aspects are not testimonials, so a kind word about
-                    your front desk is fine.
-                  </p>
-                  <p>
-                    <b>Reviews.</b> Patients can post reviews on Google and other sites, and Ahpra says you do not have to
-                    remove reviews on sites you do not control. The line is crossed when you reuse a clinical review in
-                    your own advertising. Ahpra also advises care when engaging with reviews on third-party sites, because
-                    that may be treated as using a testimonial to advertise.
-                  </p>
+            <div className="section-head">
+              <div className="eyebrow">The Ahpra advertising guidelines, in plain English</div>
+              <h2>What a dental website can and cannot say under the Ahpra advertising rules</h2>
+            </div>
+            <div className="factswrap">
+              <div className="factlist">
+                <div className="fact"><div className="sec">§01</div><p>
+                  Section 133 of the Health Practitioner Regulation National Law says a person must not advertise a
+                  regulated health service in a way that is false, misleading or deceptive. Ahpra and the National
+                  Boards, including the Dental Board of Australia, explain what that means in the Guidelines for
+                  advertising a regulated health service. Your website, Google Business Profile posts, social media and
+                  emails to patients all count as advertising.
+                </p></div>
+                <div className="fact"><div className="sec">§02</div><p>
+                  <b>Testimonials.</b> Ahpra defines a testimonial as a positive statement about the clinical aspects of
+                  a health service: the symptom or reason for treatment, the diagnosis or treatment, or the outcome or
+                  the practitioner’s skill. These cannot be used in advertising. Comments about customer service or
+                  communication style that do not mention clinical aspects are not testimonials, so a kind word about
+                  your front desk is fine.
+                </p></div>
+                <div className="fact"><div className="sec">§03</div><p>
+                  <b>Reviews.</b> Patients can post reviews on Google and other sites, and Ahpra says you do not have to
+                  remove reviews on sites you do not control. The line is crossed when you reuse a clinical review in
+                  your own advertising. Ahpra also advises care when engaging with reviews on third-party sites, because
+                  that may be treated as using a testimonial to advertise.
+                </p></div>
+                <div className="fact"><div className="sec">§04</div><div>
                   <p>
                     <b>Offers, images and titles.</b> Offers must state their terms and conditions. Before-and-after
                     images need to be consistent and honest, or left out. Urgency such as &quot;limited time only&quot;
@@ -498,100 +575,107 @@ export default function DentalWebsiteDesignAUPage() {
                     Whoever controls the advertising is responsible for it, including content written by a marketing
                     agency. So we write every page with these rules in mind, and you approve it.
                   </p>
-                </div>
-                <p style={srcNote}>
-                  Sources: <a href={SRC_AHPRA_GUIDE} {...extLink} style={srcLink}>Ahpra, Guidelines for advertising a regulated health service</a>;{' '}
-                  <a href={SRC_AHPRA_TESTIMONIALS} {...extLink} style={srcLink}>Ahpra, testimonials and reviews</a>. General information, not legal advice. Check specific cases with Ahpra, your indemnity insurer or your professional association.
+                  <p className="au-note">
+                    Sources: <a href={SRC_AHPRA_GUIDE} {...extLink}>Ahpra, Guidelines for advertising a regulated health service</a>;{' '}
+                    <a href={SRC_AHPRA_TESTIMONIALS} {...extLink}>Ahpra, testimonials and reviews</a>. General information, not legal advice. Check specific cases with Ahpra, your indemnity insurer or your professional association.
+                  </p>
+                </div></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ═══ AHPRA CHECKER (<details>) → vlog ═══ */}
+        <section className="vlog" id="ahpra-check">
+          <div className="wrap">
+            <div className="section-head">
+              <h2>Can we put this on our website? Tap to check</h2>
+              <VisualSlot page={PAGE_KEY} slot="proof" kind="photo" ratio="3:2" captionClassName="figcap"
+                subject="A dentist and a FactoryJet content strategist reviewing website copy together on a laptop in a practice staff room"
+                caption="Every page is reviewed with a dentist from your practice before it goes live. You stay the advertiser, so you get the final say.">
+                <img src="/images/au/dental-website-design/dental-website-review.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A dentist and a FactoryJet content strategist reviewing website copy together on a laptop in an Adelaide practice staff room" />
+              </VisualSlot>
+            </div>
+            <div className="ventries">
+              {AHPRA_CHECK.map((f) => (
+                <details key={f.q} className="ventry">
+                  <summary><h3>{f.q}</h3><span className="chev" aria-hidden="true">+</span></summary>
+                  <span className="vtag">{f.verdict}</span>
+                  <p>{f.a}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ═══ ONLINE BOOKING + PRACTICE SOFTWARE → facts + photo + label rows ═══ */}
+        <section className="section facts" id="booking">
+          <div className="wrap">
+            <div className="section-head">
+              <div className="eyebrow">Online booking</div>
+              <h2>Online booking that lands straight in your practice software</h2>
+            </div>
+            <div className="factswrap">
+              <div className="factlist">
+                <div className="fact"><div className="sec">§01</div><p>
+                  The most useful thing a dental website can do is take a booking at 9pm on a Sunday, when the phone is
+                  off and a patient finally has a minute. A contact form that says &quot;we will call you back&quot; is
+                  not the same. Many patients never answer the callback.
+                </p></div>
+                <div className="fact"><div className="sec">§02</div><p>
+                  Most Australian dental practice software offers online booking or connects to a booking platform. We
+                  work with what you already use, such as Dental4Windows from Centaur Software, Praktika, Core Practice
+                  or EXACT from Software of Excellence, and platforms such as HotDoc. We set up which appointment types
+                  patients can book themselves (new patient exam, check-up and clean, children’s check-up), how long each
+                  takes, which dentists offer them, and what patients must tell you first.
+                </p></div>
+                <div className="fact"><div className="sec">§03</div><p>
+                  Then we put that booking tool in the right places: a sticky button on mobile, each treatment and
+                  location page, and your Google Business Profile. We test the full path on real phones, from a Google
+                  search to a confirmed appointment in your book. Longer or complex treatments usually stay as a request
+                  that your team confirms, which is safer and keeps your schedule under control.
+                </p></div>
+                <div className="fact"><div className="sec">§04</div><p>
+                  If you also want the phone answered after hours, an{' '}
+                  <a href="/au/ai-receptionist">AI receptionist for dental practices</a> can take routine bookings and
+                  questions by voice and pass anything urgent to your team. For chat and email enquiries, see{' '}
+                  <a href="/au/ai-customer-service">AI customer service for Australian businesses</a>.
+                </p></div>
+                <div className="fact"><div className="sec">§05</div><div>
+                  <div className="factlabel">What patients book online, and what stays with your team</div>
+                  <ul className="trigrows">
+                    <li><span className="m">New patient exam and clean</span><span className="n">fixed length, any listed dentist</span><span className="t">Online</span></li>
+                    <li><span className="m">Six-monthly check-up</span><span className="n">existing patients, with reminders</span><span className="t">Online</span></li>
+                    <li><span className="m">Children’s check-up</span><span className="n">family bookings back to back</span><span className="t">Online</span></li>
+                    <li><span className="m">Implant or aligner consult</span><span className="n">team confirms length and dentist</span><span className="t">Request</span></li>
+                    <li><span className="m">Pain or swelling</span><span className="n">emergency page, then a person</span><span className="t">Call us</span></li>
+                  </ul>
+                </div></div>
+              </div>
+              <VisualSlot page={PAGE_KEY} slot="facts-3" kind="photo" ratio="3:2" className="factphoto"
+                subject="A man in his kitchen choosing an appointment time on a dental practice booking screen on his phone">
+                <img src="/images/au/dental-website-design/dental-website-booking.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over the shoulder of a man in a Brisbane kitchen choosing an appointment time on a dental practice booking screen on his phone" />
+              </VisualSlot>
+            </div>
+          </div>
+        </section>
+
+        {/* ═══ COMPARISON TABLE ═══ */}
+        <section className="section comparison" id="comparison">
+          <div className="wrap">
+            <div className="section-head head-split">
+              <div className="eyebrow">Side by side</div>
+              <div>
+                <h2>DIY website builder vs dental template agency vs general web agency vs a custom dental web design</h2>
+                <p className="lead">
+                  Four common ways an Australian practice gets a website. Each suits someone. This compares what changes day
+                  to day, not price. For market price ranges, see our{' '}
+                  <a href="/blog/website-cost-australia-2026">website cost guide for Australia</a>.
                 </p>
               </div>
-              <div className="stack">
-                <div className="card" style={{ padding: '4px 20px' }}>
-                  <p style={{ fontFamily: T.fm, fontSize: 11, letterSpacing: '.1em', textTransform: 'uppercase', color: T.small, padding: '16px 0 4px' }}>Can we put this on our website? Tap to check</p>
-                  {AHPRA_CHECK.map((f) => (
-                    <details key={f.q}>
-                      <summary style={{ gap: 16, textAlign: 'left' }}>{f.q}</summary>
-                      <div style={{ paddingBottom: 18 }}>
-                        <span style={{ fontFamily: T.fm, fontSize: 10, background: T.small, color: '#fff', borderRadius: 999, padding: '3px 9px', letterSpacing: '.06em' }}>{f.verdict}</span>
-                        <p style={{ marginTop: 10 }}>{f.a}</p>
-                      </div>
-                    </details>
-                  ))}
-                </div>
-                <figure className="card" style={{ padding: 8, margin: 0 }}>
-                  <img src="/images/au/dental-website-design/dental-website-review.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A dentist and a FactoryJet content strategist reviewing website copy together on a laptop in an Adelaide practice staff room" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
-                  <figcaption style={{ padding: '12px 10px 6px', fontSize: 14 }}>
-                    Every page is reviewed with a dentist from your practice before it goes live. You stay the advertiser,
-                    so you get the final say.
-                  </figcaption>
-                </figure>
-              </div>
             </div>
-          </div>
-        </section>
-
-        {/* ═══ 6. ONLINE BOOKING + PRACTICE SOFTWARE ═══ */}
-        <section className="sec-lg dot-grid">
-          <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <span className="eyebrow">Online booking</span>
-                <h2>Online booking that lands straight in your practice software</h2>
-                <div className="stack mt-6">
-                  <p>
-                    The most useful thing a dental website can do is take a booking at 9pm on a Sunday, when the phone is
-                    off and a patient finally has a minute. A contact form that says &quot;we will call you back&quot; is
-                    not the same. Many patients never answer the callback.
-                  </p>
-                  <p>
-                    Most Australian dental practice software offers online booking or connects to a booking platform. We
-                    work with what you already use, such as Dental4Windows from Centaur Software, Praktika, Core Practice
-                    or EXACT from Software of Excellence, and platforms such as HotDoc. We set up which appointment types
-                    patients can book themselves (new patient exam, check-up and clean, children’s check-up), how long each
-                    takes, which dentists offer them, and what patients must tell you first.
-                  </p>
-                  <p>
-                    Then we put that booking tool in the right places: a sticky button on mobile, each treatment and
-                    location page, and your Google Business Profile. We test the full path on real phones, from a Google
-                    search to a confirmed appointment in your book. Longer or complex treatments usually stay as a request
-                    that your team confirms, which is safer and keeps your schedule under control.
-                  </p>
-                  <p>
-                    If you also want the phone answered after hours, an{' '}
-                    <a href="/au/ai-receptionist">AI receptionist for dental practices</a> can take routine bookings and
-                    questions by voice and pass anything urgent to your team. For chat and email enquiries, see{' '}
-                    <a href="/au/ai-customer-service">AI customer service for Australian businesses</a>.
-                  </p>
-                </div>
-              </div>
-              <div className="stack">
-                <div className="card" style={{ padding: 8 }}>
-                  <img src="/images/au/dental-website-design/dental-website-booking.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over the shoulder of a man in a Brisbane kitchen choosing an appointment time on a dental practice booking screen on his phone" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
-                </div>
-                <div className="card card-top-orange">
-                  <span className="eyebrow">What patients book online, and what stays with your team</span>
-                  <div className="scorecard-row"><div><div className="scorecard-metric">New patient exam and clean</div><div className="scorecard-note">fixed length, any listed dentist</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Online</div></div>
-                  <div className="scorecard-row"><div><div className="scorecard-metric">Six-monthly check-up</div><div className="scorecard-note">existing patients, with reminders</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Online</div></div>
-                  <div className="scorecard-row"><div><div className="scorecard-metric">Children’s check-up</div><div className="scorecard-note">family bookings back to back</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Online</div></div>
-                  <div className="scorecard-row"><div><div className="scorecard-metric">Implant or aligner consult</div><div className="scorecard-note">team confirms length and dentist</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Request</div></div>
-                  <div className="scorecard-row"><div><div className="scorecard-metric">Pain or swelling</div><div className="scorecard-note">emergency page, then a person</div></div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Call us</div></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ═══ 7. COMPARISON TABLE ═══ */}
-        <section className="sec-lg">
-          <div className="wrap">
-            <span className="eyebrow">Side by side</span>
-            <h2 style={{ maxWidth: 860 }}>DIY website builder vs dental template agency vs general web agency vs a custom dental web design</h2>
-            <p className="lead mt-4" style={{ maxWidth: 780 }}>
-              Four common ways an Australian practice gets a website. Each suits someone. This compares what changes day
-              to day, not price. For market price ranges, see our{' '}
-              <a href="/blog/website-cost-australia-2026">website cost guide for Australia</a>.
-            </p>
-            <div className="card mt-8" style={{ padding: 0, overflowX: 'auto' }}>
-              <table className="cmp-table" style={{ minWidth: 780 }}>
+            <div className="tablewrap">
+              <table>
                 <thead>
                   <tr>
                     <th>What you get</th>
@@ -602,59 +686,55 @@ export default function DentalWebsiteDesignAUPage() {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td className="feat">Looks like your practice</td><td className="fj"><span className="yes">Designed around your brand and photos</span></td><td><span className="partial">Shared template, your colours</span></td><td><span className="yes">Usually custom</span></td><td><span className="partial">Theme you choose</span></td></tr>
-                  <tr><td className="feat">Knows the Ahpra advertising rules</td><td className="fj"><span className="yes">Every page checked</span></td><td><span className="yes">Usually</span></td><td><span className="no">Often not</span></td><td><span className="no">Up to you</span></td></tr>
-                  <tr><td className="feat">Booking into practice software</td><td className="fj"><span className="yes">Connected and tested end to end</span></td><td><span className="partial">Common systems only</span></td><td><span className="partial">Often a contact form</span></td><td><span className="partial">Embed it yourself</span></td></tr>
-                  <tr><td className="feat">Dental SEO planned in</td><td className="fj"><span className="yes">From the first page</span></td><td><span className="partial">Often a separate package</span></td><td><span className="partial">Varies</span></td><td><span className="no">Up to you</span></td></tr>
-                  <tr><td className="feat">AI search (ChatGPT, AI Overviews)</td><td className="fj"><span className="yes">Structured for it</span></td><td><span className="partial">Varies</span></td><td><span className="partial">Varies</span></td><td><span className="no">Rarely</span></td></tr>
-                  <tr><td className="feat">Accessibility (WCAG 2.2 AA)</td><td className="fj"><span className="yes">Built and checked</span></td><td><span className="partial">Depends on template</span></td><td><span className="partial">Varies</span></td><td><span className="partial">Depends on theme</span></td></tr>
-                  <tr><td className="feat">Who owns site and accounts</td><td className="fj"><span className="yes">Your practice</span></td><td><span className="partial">Sometimes the agency</span></td><td><span className="partial">Check the contract</span></td><td><span className="yes">You, on their platform</span></td></tr>
-                  <tr><td className="feat">Setup effort for you</td><td className="fj"><span className="partial">Workshops and approvals</span></td><td><span className="yes">Low</span></td><td><span className="partial">Medium</span></td><td><span className="no">High, all on you</span></td></tr>
-                  <tr><td className="feat">Support after launch</td><td className="fj"><span className="yes">Same team, ongoing</span></td><td><span className="yes">Usually included</span></td><td><span className="partial">Varies</span></td><td><span className="partial">Help desk</span></td></tr>
+                  <tr><th scope="row">Looks like your practice</th><td className="fj">Designed around your brand and photos</td><td>Shared template, your colours</td><td>Usually custom</td><td>Theme you choose</td></tr>
+                  <tr><th scope="row">Knows the Ahpra advertising rules</th><td className="fj">Every page checked</td><td>Usually</td><td>Often not</td><td>Up to you</td></tr>
+                  <tr><th scope="row">Booking into practice software</th><td className="fj">Connected and tested end to end</td><td>Common systems only</td><td>Often a contact form</td><td>Embed it yourself</td></tr>
+                  <tr><th scope="row">Dental SEO planned in</th><td className="fj">From the first page</td><td>Often a separate package</td><td>Varies</td><td>Up to you</td></tr>
+                  <tr><th scope="row">AI search (ChatGPT, AI Overviews)</th><td className="fj">Structured for it</td><td>Varies</td><td>Varies</td><td>Rarely</td></tr>
+                  <tr><th scope="row">Accessibility (WCAG 2.2 AA)</th><td className="fj">Built and checked</td><td>Depends on template</td><td>Varies</td><td>Depends on theme</td></tr>
+                  <tr><th scope="row">Who owns site and accounts</th><td className="fj">Your practice</td><td>Sometimes the agency</td><td>Check the contract</td><td>You, on their platform</td></tr>
+                  <tr><th scope="row">Setup effort for you</th><td className="fj">Workshops and approvals</td><td>Low</td><td>Medium</td><td>High, all on you</td></tr>
+                  <tr><th scope="row">Support after launch</th><td className="fj">Same team, ongoing</td><td>Usually included</td><td>Varies</td><td>Help desk</td></tr>
                 </tbody>
               </table>
             </div>
-            <p style={srcNote}>
+            <p className="tablenote">
               A dental template agency can be the right choice for a single-dentist practice that wants something fast and
               standard. We will tell you that if it fits you better.
             </p>
           </div>
         </section>
 
-        <MidPageCTA
-          headline={'Want a dental website that books patients and stays on the right side of Ahpra?'}
-          sub={'Tell us about your practice, your locations and the software you book into. On a short call with the founder, we will look at your current site and tell you what to fix first, whether or not you work with us.'}
-          label={'Plan my dental website'}
-        />
-
-        {/* ═══ 8. DENTAL SEO ═══ */}
-        <section className="sec-lg dot-grid" id="dental-seo">
+        {/* ═══ DENTAL SEO → facts + monthly report panel ═══ */}
+        <section className="section facts" id="dental-seo">
           <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <span className="eyebrow">Dental SEO</span>
-                <h2>Dental SEO: how Australian practices get found on Google, Maps and AI search</h2>
-                <div className="stack mt-6">
-                  <p>
-                    Dental SEO is the ongoing work that helps local patients find your practice when they search for a
-                    dentist, a treatment or an emergency appointment. For most practices, the biggest source of new
-                    patients from search is the map results, which come from your Google Business Profile. Google says
-                    local results depend on relevance, distance and prominence, and that more reviews and positive
-                    ratings can help local ranking.
-                  </p>
-                  <p>
-                    The second source is your website’s treatment and location pages. A patient in Parramatta searching
-                    &quot;emergency dentist near me&quot; or a parent in Brisbane searching for a children’s dentist should
-                    land on a page written for exactly that, with a booking button. Local SEO for dentists is mostly about
-                    doing those basics very well across every location, not about tricks.
-                  </p>
-                  <p>
-                    The third, newer source is AI search. Google shows AI Overviews on both &quot;dental website design&quot;
-                    and &quot;dental SEO&quot; searches in Australia, and patients increasingly ask ChatGPT or Perplexity to
-                    recommend a dentist. These tools pull from websites, listings and reviews. Clear, factual pages with
-                    structured data are easier for them to describe correctly. Our{' '}
-                    <a href="/au/ai-seo">AI SEO service</a> covers that side in depth.
-                  </p>
+            <div className="section-head">
+              <div className="eyebrow">Dental SEO</div>
+              <h2>Dental SEO: how Australian practices get found on Google, Maps and AI search</h2>
+            </div>
+            <div className="factswrap">
+              <div className="factlist">
+                <div className="fact"><div className="sec">§01</div><p>
+                  Dental SEO is the ongoing work that helps local patients find your practice when they search for a
+                  dentist, a treatment or an emergency appointment. For most practices, the biggest source of new
+                  patients from search is the map results, which come from your Google Business Profile. Google says
+                  local results depend on relevance, distance and prominence, and that more reviews and positive
+                  ratings can help local ranking.
+                </p></div>
+                <div className="fact"><div className="sec">§02</div><p>
+                  The second source is your website’s treatment and location pages. A patient in Parramatta searching
+                  &quot;emergency dentist near me&quot; or a parent in Brisbane searching for a children’s dentist should
+                  land on a page written for exactly that, with a booking button. Local SEO for dentists is mostly about
+                  doing those basics very well across every location, not about tricks.
+                </p></div>
+                <div className="fact"><div className="sec">§03</div><p>
+                  The third, newer source is AI search. Google shows AI Overviews on both &quot;dental website design&quot;
+                  and &quot;dental SEO&quot; searches in Australia, and patients increasingly ask ChatGPT or Perplexity to
+                  recommend a dentist. These tools pull from websites, listings and reviews. Clear, factual pages with
+                  structured data are easier for them to describe correctly. Our{' '}
+                  <a href="/au/ai-seo">AI SEO service</a> covers that side in depth.
+                </p></div>
+                <div className="fact"><div className="sec">§04</div><div>
                   <p>
                     Reviews need care in dentistry. You can ask patients to leave a genuine Google review, but you should not
                     reuse clinical reviews in your own advertising. When
@@ -662,225 +742,244 @@ export default function DentalWebsiteDesignAUPage() {
                     privacy. For the full picture of our wider service, see{' '}
                     <a href="/au/seo">SEO services in Australia</a>.
                   </p>
-                </div>
-                <p style={srcNote}>
-                  Source: <a href={SRC_GOOGLE_LOCAL} {...extLink} style={srcLink}>Google Business Profile Help, how to improve your local ranking</a>.
-                </p>
+                  <p className="au-note">
+                    Source: <a href={SRC_GOOGLE_LOCAL} {...extLink}>Google Business Profile Help, how to improve your local ranking</a>.
+                  </p>
+                </div></div>
               </div>
-              <div>
-                <div className="card" style={{ padding: '4px 20px' }}>
-                  <p style={{ fontFamily: T.fm, fontSize: 11, letterSpacing: '.1em', textTransform: 'uppercase', color: T.small, padding: '16px 0 4px' }}>Our dental SEO plan, step by step</p>
-                  {SEO_STEPS.map((s) => (
-                    <details key={s.n}>
-                      <summary style={{ gap: 16, textAlign: 'left' }}>
-                        <span><span style={{ fontFamily: T.fm, color: T.small, marginRight: 12 }}>{s.n}</span>{s.t}</span>
-                      </summary>
-                      <p style={{ paddingBottom: 18 }}>{s.d}</p>
-                    </details>
-                  ))}
-                </div>
-                <div className="card card-top-orange mt-6">
-                  <span className="eyebrow">What we report each month</span>
-                  <div className="scorecard-row"><div><div className="scorecard-metric">Calls and bookings from search</div><div className="scorecard-note">the numbers that pay the rent</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Tracked</div></div>
-                  <div className="scorecard-row"><div><div className="scorecard-metric">Map views and direction requests</div><div className="scorecard-note">per location</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Tracked</div></div>
-                  <div className="scorecard-row"><div><div className="scorecard-metric">Rankings for treatment and suburb terms</div><div className="scorecard-note">the ones patients use</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Tracked</div></div>
-                  <div className="scorecard-row"><div><div className="scorecard-metric">How AI assistants describe you</div><div className="scorecard-note">ChatGPT, Perplexity, AI Overviews</div></div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Checked</div></div>
-                </div>
+              <div className="au-panel">
+                <div className="eyebrow">What we report each month</div>
+                <ul className="trigrows">
+                  <li><span className="m">Calls and bookings from search</span><span className="n">the numbers that pay the rent</span><span className="t">Tracked</span></li>
+                  <li><span className="m">Map views and direction requests</span><span className="n">per location</span><span className="t">Tracked</span></li>
+                  <li><span className="m">Rankings for treatment and suburb terms</span><span className="n">the ones patients use</span><span className="t">Tracked</span></li>
+                  <li><span className="m">How AI assistants describe you</span><span className="n">ChatGPT, Perplexity, AI Overviews</span><span className="t">Checked</span></li>
+                </ul>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ═══ 9. PRIVACY + ACCESSIBILITY ═══ */}
-        <section className="sec-lg">
+        {/* ═══ PHOTOBREAK (US template visual, no AU image yet) ═══ */}
+        <VisualSlot page={PAGE_KEY} slot="photobreak" kind="illustration" ratio="12:5" className="photobreak"
+          subject="AI-generated model: a white dental practice building on a map, with an orange booking card travelling from a phone into an appointment book" />
+
+        {/* ═══ DENTAL SEO PLAN → process timeline ═══ */}
+        <section className="section process" id="seo-plan">
           <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <span className="eyebrow">Privacy and accessibility</span>
-                <h2>Patient privacy and accessibility, built in rather than bolted on</h2>
-                <div className="stack mt-6">
-                  <p>
-                    <b>Privacy.</b> Many small businesses are exempt from the Privacy Act, but the OAIC says health
-                    service providers are covered whatever their turnover. A dental practice is one. The Australian
-                    Privacy Principles expect you to tell people what you collect and why (APP 5) and to keep it secure
-                    (APP 11). On a website that means short forms that do not ask for clinical detail, booking data held in
-                    your booking system rather than in email inboxes, secure hosting, careful choice of tracking tools, and
-                    a privacy policy that matches what the site really does.
-                  </p>
-                  <p>
-                    <b>Accessibility.</b> Your patients include older people, people with low vision, and people who use a
-                    keyboard or screen reader. The Disability Discrimination Act 1992 applies to private businesses as well
-                    as government, and the accepted benchmark for websites is the Web Content Accessibility Guidelines
-                    (WCAG). The current version, WCAG 2.2, was published by the W3C in October 2023. We build to WCAG 2.2
-                    level AA: strong contrast, text that resizes cleanly, clear focus states, labelled forms, captions on
-                    videos, and descriptive image text.
-                  </p>
+            <div className="section-head head-stack">
+              <h2>Our dental SEO plan, step by step</h2>
+            </div>
+            <div className="timeline timeline-3">
+              {SEO_STEPS.map((s) => (
+                <div key={s.n} className="tnode">
+                  <div className="idx">{s.n}</div>
+                  <h3>{s.t}</h3>
+                  <p>{s.d}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <div className="au-midcta">
+          <MidPageCTA
+            headline={'Want a dental website that books patients and stays on the right side of Ahpra?'}
+            sub={'Tell us about your practice, your locations and the software you book into. On a short call with the founder, we will look at your current site and tell you what to fix first, whether or not you work with us.'}
+            label={'Plan my dental website'}
+          />
+        </div>
+
+        {/* ═══ PRIVACY + ACCESSIBILITY → facts + photo + ruled rows ═══ */}
+        <section className="section facts" id="privacy-accessibility">
+          <div className="wrap">
+            <div className="section-head">
+              <div className="eyebrow">Privacy and accessibility</div>
+              <h2>Patient privacy and accessibility, built in rather than bolted on</h2>
+            </div>
+            <div className="factswrap">
+              <div className="factlist">
+                <div className="fact"><div className="sec">§01</div><p>
+                  <b>Privacy.</b> Many small businesses are exempt from the Privacy Act, but the OAIC says health
+                  service providers are covered whatever their turnover. A dental practice is one. The Australian
+                  Privacy Principles expect you to tell people what you collect and why (APP 5) and to keep it secure
+                  (APP 11). On a website that means short forms that do not ask for clinical detail, booking data held in
+                  your booking system rather than in email inboxes, secure hosting, careful choice of tracking tools, and
+                  a privacy policy that matches what the site really does.
+                </p></div>
+                <div className="fact"><div className="sec">§02</div><p>
+                  <b>Accessibility.</b> Your patients include older people, people with low vision, and people who use a
+                  keyboard or screen reader. The Disability Discrimination Act 1992 applies to private businesses as well
+                  as government, and the accepted benchmark for websites is the Web Content Accessibility Guidelines
+                  (WCAG). The current version, WCAG 2.2, was published by the W3C in October 2023. We build to WCAG 2.2
+                  level AA: strong contrast, text that resizes cleanly, clear focus states, labelled forms, captions on
+                  videos, and descriptive image text.
+                </p></div>
+                <div className="fact"><div className="sec">§03</div><div>
                   <p>
                     Accessible sites also tend to be faster and easier for everyone to use, which helps bookings and SEO at
                     the same time. It is one of the few improvements with no downside.
                   </p>
-                </div>
-                <p style={srcNote}>
-                  Sources: <a href={SRC_OAIC_SMALL} {...extLink} style={srcLink}>OAIC, small business and the Privacy Act</a>;{' '}
-                  <a href={SRC_OAIC_APPS} {...extLink} style={srcLink}>OAIC, Australian Privacy Principles quick reference</a>;{' '}
-                  <a href={SRC_WCAG} {...extLink} style={srcLink}>W3C, WCAG overview</a>;{' '}
-                  <a href={SRC_W3C_AU} {...extLink} style={srcLink}>W3C, web accessibility laws in Australia</a>. General information, not legal advice.
-                </p>
-              </div>
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/dental-website-design/dental-website-access.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over the shoulder of an older woman in a Perth living room using a high-contrast dental practice website with large buttons on her tablet" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
-                <div style={{ padding: '14px 12px 8px' }}>
-                  <p style={{ fontSize: 14 }}>
-                    Large, high-contrast buttons and text that resizes cleanly help older patients book on their own,
-                    without calling the front desk for help.
+                  <p className="au-note">
+                    Sources: <a href={SRC_OAIC_SMALL} {...extLink}>OAIC, small business and the Privacy Act</a>;{' '}
+                    <a href={SRC_OAIC_APPS} {...extLink}>OAIC, Australian Privacy Principles quick reference</a>;{' '}
+                    <a href={SRC_WCAG} {...extLink}>W3C, WCAG overview</a>;{' '}
+                    <a href={SRC_W3C_AU} {...extLink}>W3C, web accessibility laws in Australia</a>. General information, not legal advice.
                   </p>
-                </div>
+                </div></div>
               </div>
+              <VisualSlot page={PAGE_KEY} slot="facts-4" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
+                subject="An older woman at home using a high-contrast dental practice website with large buttons on her tablet"
+                caption="Large, high-contrast buttons and text that resizes cleanly help older patients book on their own, without calling the front desk for help.">
+                <img src="/images/au/dental-website-design/dental-website-access.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over the shoulder of an older woman in a Perth living room using a high-contrast dental practice website with large buttons on her tablet" />
+              </VisualSlot>
             </div>
-            <ul className="col-3 mt-10">
-              <li className="card"><h3>What we do</h3><p className="mt-4">Keep forms short, route bookings to your booking system, choose secure hosting, limit tracking, build to WCAG 2.2 AA, and document where data goes so your privacy policy is accurate.</p></li>
-              <li className="card"><h3>What you keep</h3><p className="mt-4">You stay responsible for the patient information you collect and for your advertising. We make both easier with plain-English notes and a content approval step on every page.</p></li>
-              <li className="card"><h3>What we do not do</h3><p className="mt-4">We are not lawyers and do not give legal sign-off. For unusual cases, check with Ahpra, your indemnity insurer, your professional association or a privacy adviser.</p></li>
-            </ul>
+            <div className="platlist span-all" role="list">
+              <div className="plat plat-2col" role="listitem"><span className="capid">01</span><div className="plat-name"><h3>What we do</h3></div><p className="plat-build">Keep forms short, route bookings to your booking system, choose secure hosting, limit tracking, build to WCAG 2.2 AA, and document where data goes so your privacy policy is accurate.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">02</span><div className="plat-name"><h3>What you keep</h3></div><p className="plat-build">You stay responsible for the patient information you collect and for your advertising. We make both easier with plain-English notes and a content approval step on every page.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">03</span><div className="plat-name"><h3>What we do not do</h3></div><p className="plat-build">We are not lawyers and do not give legal sign-off. For unusual cases, check with Ahpra, your indemnity insurer, your professional association or a privacy adviser.</p></div>
+            </div>
           </div>
         </section>
 
-        {/* ═══ 10. PRACTICE TYPES ═══ */}
-        <section className="sec-lg dot-grid">
+        {/* ═══ PRACTICE TYPES → capgrid ═══ */}
+        <section className="section capabilities" id="practice-types">
           <div className="wrap">
-            <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">Who we build for</span>
+            <div className="section-head">
+              <div className="eyebrow">Who we build for</div>
               <h2>Dental clinic website design for every kind of practice</h2>
-              <p className="lead mt-4">
+              <p className="lead">
                 The same foundations, shaped by how each practice finds and books patients.
               </p>
             </div>
-            <ul className="col-3 mt-12">
-              <li className="svc-card"><h3>Single-location general practices</h3><p className="mt-4">A focused site with strong treatment pages, a new patient page, online booking and a Google Business Profile that works hard for your suburb.</p></li>
-              <li className="svc-card"><h3>Multi-location groups</h3><p className="mt-4">One domain with a page per location, each with its own hours, team, booking link and matching Google profile, plus consistent content that is easy to keep compliant.</p></li>
-              <li className="svc-card"><h3>Specialist practices</h3><p className="mt-4">Orthodontists, periodontists, endodontists and oral surgeons, with referral information for dentists and titles used exactly as registration allows.</p></li>
-              <li className="svc-card"><h3>Family and children’s dentistry</h3><p className="mt-4">Parent-friendly pages, family booking back to back, and clear information about child dental benefit and health fund options you accept.</p></li>
-              <li className="svc-card"><h3>Cosmetic and implant dentistry</h3><p className="mt-4">Higher-value treatments where the Ahpra rules on images, offers and expectations matter most. Careful copy, honest imagery and a consult request path.</p></li>
-              <li className="svc-card"><h3>Medical and allied health</h3><p className="mt-4">The same approach to medical website design for GPs, physios and other clinics under the same national advertising law.</p></li>
-            </ul>
+            <div className="capgrid">
+              {PRACTICE_TYPES.map((j, i) => {
+                const n = String(i + 1).padStart(2, '0');
+                return (
+                  <div key={j.t} className={`cap cap-${i + 1}`}>
+                    <div className="caphead"><span className="capid">CAP‑{n}</span><svg {...CAP_ICON}><path d={PRACTICE_ICONS[i]} /></svg></div>
+                    <VisualSlot page={PAGE_KEY} slot={`capability-${n}`} kind="diagram" ratio="11:4" className="cap-diagram" subject={PRACTICE_SUBJECTS[i]} />
+                    <h3>{j.t}</h3>
+                    <p>{j.d}</p>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </section>
 
-        {/* ═══ 11. ENGAGEMENT SHAPES + DEMAND ═══ */}
-        <section className="sec-lg">
+        {/* ═══ ENGAGEMENT SHAPES + DEMAND → ruled rows + split ═══ */}
+        <section className="section platforms" id="engagement">
           <div className="wrap">
-            <div className="col-6040">
+            <div className="section-head plat-head">
               <div>
-                <span className="eyebrow">Scope, not packages</span>
+                <div className="eyebrow">Scope, not packages</div>
                 <h2>Three ways to work with us on your dental website and SEO</h2>
-                <p className="lead mt-4" style={{ maxWidth: 560 }}>
-                  Every project is quoted for your scope, with a fixed price for the build and any ongoing work shown
-                  separately. These are the shapes it usually takes.
-                </p>
-                <ul className="scope-list num-list mt-6" style={{ maxWidth: 580 }}>
-                  <li><b>Website build.</b> Design, copy, photos plan, Ahpra review, online booking, Google Business Profile setup, accessibility and launch. A small site of up to five pages can be delivered in 7 days once content is ready.</li>
-                  <li><b>Build plus dental SEO.</b> The website, then monthly SEO: location and treatment pages, Google Business Profile management, reviews process, local links and AI search checks, with reporting on calls and bookings.</li>
-                  <li><b>Care and improvement.</b> For an existing site: fixes, speed, security, compliance checks, booking improvements and new pages, by the same team every month.</li>
-                </ul>
-                <p className="mt-6" style={{ maxWidth: 560 }}>
+              </div>
+              <p>
+                Every project is quoted for your scope, with a fixed price for the build and any ongoing work shown
+                separately. These are the shapes it usually takes.
+              </p>
+            </div>
+            <div className="platlist" role="list">
+              <div className="plat plat-2col" role="listitem"><span className="capid">01</span><div className="plat-name"><h3>Website build.</h3></div><p className="plat-build">Design, copy, photos plan, Ahpra review, online booking, Google Business Profile setup, accessibility and launch. A small site of up to five pages can be delivered in 7 days once content is ready.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">02</span><div className="plat-name"><h3>Build plus dental SEO.</h3></div><p className="plat-build">The website, then monthly SEO: location and treatment pages, Google Business Profile management, reviews process, local links and AI search checks, with reporting on calls and bookings.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">03</span><div className="plat-name"><h3>Care and improvement.</h3></div><p className="plat-build">For an existing site: fixes, speed, security, compliance checks, booking improvements and new pages, by the same team every month.</p></div>
+            </div>
+            <div className="au-split">
+              <div>
+                <p>
                   What moves the scope: the number of treatments and locations, custom design or adapted layout, the
                   booking system, whether we write the copy and organise photography, how competitive your suburbs are for
                   SEO, and the support you want. For Australian market ranges, read our{' '}
                   <a href="/blog/website-cost-australia-2026">website cost guide</a> and{' '}
                   <a href="/blog/seo-cost-australia-2026">SEO cost guide</a>. Across our projects, 97% are delivered on time.
                 </p>
-                <div className="mt-8">
-                  <ModalCTAButton label="Plan my dental website" region="au" modalVariant="default" btnVariant="primary-light" />
-                </div>
+                <ModalCTAButton label="Plan my dental website" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
               </div>
-
-              <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: `1px solid ${T.n200}`, padding: '14px 18px' }}>
-                  <span style={{ fontFamily: T.fm, fontSize: 10, letterSpacing: '.13em', textTransform: 'uppercase', color: T.n400 }}>Australia · Monthly Search Demand</span>
-                  <span style={{ background: T.small, color: '#fff', fontFamily: T.fm, fontSize: 10, borderRadius: 999, padding: '3px 9px' }}>DataForSEO</span>
-                </div>
-                <div style={{ padding: '4px 18px 14px' }}>
-                  <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
-                    {[
-                      { kw: 'dental website design', v: '390', w: '100%', kd: 'Includes dentist and dental web design' },
-                      { kw: 'dental seo', v: '390', w: '100%', kd: 'Practices wanting more patients' },
-                      { kw: 'dental seo services', v: '210', w: '54%', kd: 'Buyer intent' },
-                      { kw: 'local seo for dentists', v: '170', w: '44%', kd: 'Google Maps and near me' },
-                      { kw: 'dental seo company', v: '170', w: '44%', kd: 'Comparing providers' },
-                      { kw: 'dental seo agency', v: '140', w: '36%', kd: 'Comparing agencies' },
-                      { kw: 'medical website design', v: '70', w: '18%', kd: 'Clinics beyond dental' },
-                      { kw: 'healthcare seo services', v: '50', w: '13%', kd: 'Wider health sector' },
-                    ].map((r) => (
-                      <li key={r.kw} className="demand-row">
-                        <div className="demand-top"><span className="demand-kw">{r.kw}</span><span className="demand-v">{r.v}<span style={{ fontSize: 9, color: T.n400 }}> searches</span></span></div>
-                        <div className="demand-bar"><i style={{ width: r.w }} /></div>
-                        <div className="demand-kd">{r.kd}</div>
-                      </li>
-                    ))}
-                  </ul>
-                  <p style={{ textAlign: 'center', fontFamily: T.fm, fontSize: 10, color: T.n400, marginTop: 10 }}>Source: DataForSEO, Australia, September 2026</p>
-                </div>
+              <div className="demand">
+                <div className="demand-head"><span>Australia · Monthly Search Demand</span><b>DataForSEO</b></div>
+                <ul>
+                  {[
+                    { kw: 'dental website design', v: '390', w: '100%', kd: 'Includes dentist and dental web design' },
+                    { kw: 'dental seo', v: '390', w: '100%', kd: 'Practices wanting more patients' },
+                    { kw: 'dental seo services', v: '210', w: '54%', kd: 'Buyer intent' },
+                    { kw: 'local seo for dentists', v: '170', w: '44%', kd: 'Google Maps and near me' },
+                    { kw: 'dental seo company', v: '170', w: '44%', kd: 'Comparing providers' },
+                    { kw: 'dental seo agency', v: '140', w: '36%', kd: 'Comparing agencies' },
+                    { kw: 'medical website design', v: '70', w: '18%', kd: 'Clinics beyond dental' },
+                    { kw: 'healthcare seo services', v: '50', w: '13%', kd: 'Wider health sector' },
+                  ].map((r) => (
+                    <li key={r.kw} className="demand-row">
+                      <div className="demand-top"><span className="demand-kw">{r.kw}</span><span className="demand-v">{r.v}<small> searches</small></span></div>
+                      <div className="demand-bar"><i style={{ width: r.w }} /></div>
+                      <div className="demand-kd">{r.kd}</div>
+                    </li>
+                  ))}
+                </ul>
+                <p className="demand-src">Source: DataForSEO, Australia, September 2026</p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ═══ 12. PROVIDER LIST (self-disclosure, ItemList) ═══ */}
-        <section className="sec-lg dot-grid">
+        {/* ═══ PROVIDER LIST (self-disclosure, ItemList from PROVIDERS) → ruled rows ═══ */}
+        <section className="section platforms" id="providers">
           <div className="wrap">
-            <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">The honest landscape</span>
-              <h2>Australian dental website design and dental SEO providers worth knowing</h2>
-              <p className="lead mt-4">
+            <div className="section-head plat-head">
+              <div>
+                <div className="eyebrow">The honest landscape</div>
+                <h2>Australian dental website design and dental SEO providers worth knowing</h2>
+              </div>
+              <p>
                 We are one option, not the only one. These providers appear in Australian search results for dental
                 website design and dental SEO. Some are dental-only, some are general agencies with a dental service. Each
                 note is based on what the company says on its own website.
               </p>
             </div>
-            <ul className="col-2 mt-10" style={{ gap: 16 }}>
+            <div className="platlist" role="list">
               {PROVIDERS.map((p, i) => (
-                <li key={p.name} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
-                  <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.small, minWidth: 30 }}>{i + 1}</span>
-                  <div>
-                    <h3 style={{ fontSize: 18 }}>{p.name}{p.name === 'FactoryJet' && <span style={{ fontFamily: T.fm, fontSize: 10, background: T.small, color: '#fff', borderRadius: 999, padding: '2px 8px', marginLeft: 8, verticalAlign: 'middle' }}>That is us</span>}</h3>
-                    <p style={{ marginTop: 6 }}>{p.note}</p>
-                  </div>
-                </li>
+                <div key={p.name} className={p.name === 'FactoryJet' ? 'plat plat-2col plat-own' : 'plat plat-2col'} role="listitem">
+                  <span className="capid">{String(i + 1).padStart(2, '0')}</span>
+                  <div className="plat-name"><h3>{p.name}</h3>{p.name === 'FactoryJet' && <span className="plat-flag">That is us</span>}</div>
+                  <p className="plat-build">{p.note}</p>
+                </div>
               ))}
-            </ul>
-            <p style={srcNote}>
+            </div>
+            <p className="sub-note">
               Providers named from live Australian search results for dental website design and dental SEO, September 2026. Notes reflect each company’s own website on 26 September 2026. Listing is not endorsement.
             </p>
-            <div className="card mt-8" style={{ maxWidth: 900 }}>
-              <span className="eyebrow">Questions to ask any dental web designer, including us</span>
-              <ol className="scope-list num-list mt-4">
-                <li><b>How do you check copy against the Ahpra guidelines?</b> Ask who reviews it and what they look for.</li>
-                <li><b>Will booking land in our practice software?</b> Ask to see a test booking arrive in your appointment book.</li>
-                <li><b>Who owns the domain, hosting and Google Business Profile?</b> They should all be in your practice’s name.</li>
-                <li><b>Is the site built to WCAG 2.2 AA?</b> Ask how they test it, not just whether they do.</li>
-                <li><b>What do you report on for SEO?</b> Calls and bookings matter more than a rankings chart.</li>
-                <li><b>What happens if we leave?</b> Ask how you get the site, content and accounts back.</li>
+            <div className="au-panel au-panel-wide">
+              <div className="eyebrow">Questions to ask any dental web designer, including us</div>
+              <ol className="au-numlist">
+                <li><span><b>How do you check copy against the Ahpra guidelines?</b> Ask who reviews it and what they look for.</span></li>
+                <li><span><b>Will booking land in our practice software?</b> Ask to see a test booking arrive in your appointment book.</span></li>
+                <li><span><b>Who owns the domain, hosting and Google Business Profile?</b> They should all be in your practice’s name.</span></li>
+                <li><span><b>Is the site built to WCAG 2.2 AA?</b> Ask how they test it, not just whether they do.</span></li>
+                <li><span><b>What do you report on for SEO?</b> Calls and bookings matter more than a rankings chart.</span></li>
+                <li><span><b>What happens if we leave?</b> Ask how you get the site, content and accounts back.</span></li>
               </ol>
             </div>
           </div>
         </section>
 
-        {/* ═══ 13. SIBLING SERVICES (hover cards) ═══ */}
-        <section className="sec-lg">
+        {/* ═══ SIBLING SERVICES → agentdir ═══ */}
+        <section className="section agentdir" id="more-services">
           <div className="wrap">
-            <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">Beyond the website</span>
+            <div className="section-head">
+              <div className="eyebrow">Beyond the website</div>
               <h2>More of what we build for Australian practices and businesses</h2>
-              <p className="lead mt-4">
+              <p>
                 A dental website is usually the first piece. These are the natural next steps, built by the same team.
               </p>
             </div>
-            <ul className="col-3 mt-10">
+            <ul className="agentdir-grid">
               {SIBLINGS.map((s) => (
-                <li key={s.href} className="svc-card" style={{ padding: 0 }}>
-                  <a href={s.href} style={{ display: 'block', padding: 24, height: '100%' }}>
-                    <h3>{s.t} <span style={{ color: T.small }} aria-hidden="true">→</span></h3>
-                    <p className="mt-4">{s.d}</p>
+                <li key={s.href}>
+                  <a href={s.href}>
+                    <span className="agentdir-t">{s.t}</span>
+                    <span className="agentdir-l">{s.d}</span>
+                    <span className="agentdir-go" aria-hidden="true">↗</span>
                   </a>
                 </li>
               ))}
@@ -888,76 +987,37 @@ export default function DentalWebsiteDesignAUPage() {
           </div>
         </section>
 
-        {/* ═══ 14. FAQ ═══ */}
-        <section className="sec-lg dot-grid" id="faq">
+        {/* ═══ FAQ (Family A accordion; same FAQ_ITEMS array as the FAQPage JSON-LD) ═══ */}
+        <AuFaq
+          categories={FAQ_CATEGORIES}
+          items={FAQ_ITEMS}
+          heading="Dental website design and dental SEO questions Australian practices ask"
+          askLabel="Still have a question? Ask the founder →"
+          askNote="Replies within 24 hours."
+        />
+
+        {/* ═══ FINAL CTA (light, US finalcta) ═══ */}
+        <section className="finalcta" id="finalcta">
           <div className="wrap">
-            <style>{'.au-svc .faq-item summary::after{content:none;display:none}'}</style>
-            <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">FAQ</span>
-              <h2>Dental website design and dental SEO questions Australian practices ask</h2>
+            <div>
+              <div className="eyebrow">Ready when you are</div>
+              <h2>A dental website that books patients and follows the rules</h2>
+              <p>
+                Send your name and work email. The founder replies within 24 hours to book a short call about your
+                practice, your locations, the software you book into, and what your website should fix first. No spam, no
+                obligation.
+              </p>
             </div>
-            <div className="faq-grid">
-              <aside className="faq-sidebar">
-                <span className="faq-sidebar-topics">Topics</span>
-                <nav className="faq-sidebar-nav">
-                  {FAQ_CATEGORIES.map((c) => (
-                    <a key={c.key} href={`#faq-${c.key}`}>
-                      {c.label}
-                      <span className="faq-nav-count">{FAQ_ITEMS.filter((f) => f.category === c.key).length}</span>
-                    </a>
-                  ))}
-                </nav>
-                <div className="faq-sidebar-cta">
-                  <ModalCTAButton label="Still have a question? Ask the founder →" region="au" modalVariant="default" btnVariant="secondary-light" />
-                  <p>Replies within 24 hours.</p>
-                </div>
-              </aside>
-
-              <div>
-                {FAQ_CATEGORIES.map((c) => (
-                  <div key={c.key} id={`faq-${c.key}`} style={{ marginBottom: 40 }}>
-                    <div className="faq-cat-header">
-                      <span className="faq-cat-bar" />
-                      <p className="faq-cat-label">{c.label}</p>
-                    </div>
-                    <ul className="faq-list">{FAQ_ITEMS.filter((f) => f.category === c.key).map((f) => (
-                      <li key={f.question}><details className="faq-item">
-                        <summary>
-                          <span className="q-text">{f.question}</span>
-                          <span className="chevron">
-                            <svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5L7 9L11 5" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" /></svg>
-                          </span>
-                        </summary>
-                        <div className="faq-ans"><p>{f.answer}</p></div>
-                      </details></li>
-                    ))}</ul>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ═══ 15. FINAL CTA (the only dark section) ═══ */}
-        <section className="dark-sec">
-          <div className="wrap" style={{ textAlign: 'center', maxWidth: 640 }}>
-            <span className="eyebrow">Ready when you are</span>
-            <h2>A dental website that books patients and follows the rules</h2>
-            <p className="mt-4">
-              Send your name and work email. The founder replies within 24 hours to book a short call about your
-              practice, your locations, the software you book into, and what your website should fix first. No spam, no
-              obligation.
-            </p>
-            <div className="mt-8" style={{ display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap' }}>
-              <ModalCTAButton label="Plan my dental website" region="au" modalVariant="default" btnVariant="primary-light" />
-              <a className="btn btn-outline" href="/au/seo" style={{ color: '#fff', borderColor: 'rgba(255,255,255,.25)' }}>See SEO services</a>
+            <div className="ctas">
+              <ModalCTAButton label="Plan my dental website" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
+              <a className="btn btn-ghost" href="/au/seo">See SEO services</a>
             </div>
           </div>
         </section>
 
       </main>
       </div>
-      <SiteFooter locale="au" linkColumns={AU_FOOTER_COLUMNS} variant="dark" tagline="Ecommerce, AI agents, websites and AI search for Australian businesses. Built by senior engineers, supported after launch, owned by you." />
+      <SiteFooter locale="au" linkColumns={AU_FOOTER_COLUMNS} tagline="Ecommerce, AI agents, websites and AI search for Australian businesses. Built by senior engineers, supported after launch, owned by you." />
     </>
   );
 }

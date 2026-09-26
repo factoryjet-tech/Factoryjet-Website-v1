@@ -1,32 +1,25 @@
 import type { Metadata } from 'next';
+import { Fragment } from 'react';
+import type { ReactNode } from 'react';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import { AU_FOOTER_COLUMNS } from '@/data/auFooterColumns';
-import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
-import '../au-service.css';
+import AuFaq from '../components/AuFaq';
+import VisualSlot from '../components/VisualSlot';
+import '@/components/v2/AiAgentDevelopmentSections.css';
+import '../au-page.css';
 
 const CANONICAL = 'https://factoryjet.com/au/ai-receptionist';
 const UPDATED = '2026-09-25';
 const TITLE = 'AI Receptionist Australia | Custom, Supported | FactoryJet';
-const H1 = 'AI Receptionist Australia: Answers Every Call, Books the Job, Hands Over When It Matters';
+/* Shortened 2026-09-26 so the hero form sits in the first desktop screen. The rest of the old H1
+   ("Hands Over When It Matters") moved into the hero lead. */
+const H1 = 'AI Receptionist Australia: Answers Every Call, Books the Job';
 const DESCRIPTION =
   'A custom AI receptionist for Australian businesses. Answers calls 24/7, books into ServiceM8, Cliniko or your calendar, and hands urgent calls to your team.';
-
-/* Design tokens, copied by value from ../au-service.css so inline styles stay
-   on-system without CSS custom property references in this file. */
-const T = {
-  ink: '#0F0F12',
-  n200: '#E5E5E0',
-  n400: '#6E6E68',
-  orange: '#F05A28',
-  green: '#047857',
-  small: '#B23E13',
-  fm: "'Geist Mono',monospace",
-  fd: "'Plus Jakarta Sans',sans-serif",
-};
 
 /* ONE array drives the visible trail AND the BreadcrumbList JSON-LD, so the
    schema can never describe a trail a human cannot see. Never hand-copy a
@@ -264,8 +257,6 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-const srcNote = { fontFamily: T.fm, fontSize: 11, color: T.n400, marginTop: 12 } as const;
-const srcLink = { textDecoration: 'underline' } as const;
 const extLink = { target: '_blank', rel: 'noopener noreferrer nofollow' } as const;
 
 /* "Which option fits you" self-check. Rendered as <details> so it needs no
@@ -297,6 +288,52 @@ const SIBLINGS: { href: string; t: string; d: string }[] = [
   { href: '/au/ai-seo', t: 'AI SEO', d: 'Get found when Australians ask ChatGPT, Perplexity or Google AI for a business like yours.' },
   { href: '/au', t: 'FactoryJet Australia', d: 'Everything we build for Australian businesses: ecommerce, websites, AI agents and AI search.' },
 ];
+/* Industries we build for (was a 3-col card grid; now the Family A capgrid). */
+const INDUSTRIES: { t: string; d: ReactNode }[] = [
+  { t: 'Tradies and home services', d: <>Plumbers, sparkies, HVAC techs, builders and cleaners. It answers while you are on the tools, takes the suburb and the problem, books a slot in ServiceM8 or Tradify, and sends real emergencies, like a burst pipe or no power, to your mobile. Need the website too? See <a href="/au/websites-for-tradies">websites for tradies</a>.</> },
+  { t: 'Medical and allied health clinics', d: 'GPs, physios, chiros, psychologists and specialists, on the admin side only: bookings, changes, directions and what to bring, written into Cliniko or your practice software. No clinical advice, ever, and urgent symptoms follow a path your clinicians approve.' },
+  { t: 'Dental practices', d: <>New patient enquiries, check-ups, hygiene bookings, cancellations and approved answers on health fund claiming. Pain, swelling and emergencies go to the team at once. It can work alongside online booking pages patients already use. Need the website side too? See <a href="/au/dental-website-design">dental website design and SEO</a>.</> },
+  { t: 'Law firms', d: 'New enquiry intake by practice area, details for your conflict check, first consultation bookings, and routing existing clients to the right lawyer. A virtual receptionist for lawyers that never gives legal advice and captures every after-hours enquiry.' },
+  { t: 'Real estate and property management', d: 'Inspection and appraisal bookings, listing questions, tenant maintenance requests and after-hours calls, logged into your property software, with urgent repairs routed to the right tradie or property manager.' },
+  { t: 'Hospitality', d: 'Restaurants, cafés and venues. Table bookings and changes during service, opening hours, dietary and function enquiries, so staff are not pulled off the floor by the phone on a Friday night.' },
+];
+
+/* Icons and visual-slot subjects for the industry cards (same order as INDUSTRIES). */
+const INDUSTRY_ICONS = [
+  'M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4 2.6-2.6Z',
+  'M4 4h16v16H4V4Zm8 4v8m-4-4h8',
+  'M7 3C4.5 3 3 5 3 7.5c0 3 1.5 4.5 2 7.5.4 2.5 1 6 2.5 6s1.5-4 2.5-6c.5-1 1.5-1 2 0 1 2 1 6 2.5 6s2.1-3.5 2.5-6c.5-3 2-4.5 2-7.5C21 5 19.5 3 17 3c-2 0-3 1-5 1S9 3 7 3Z',
+  'M12 3v18M5 21h14M6 7h12M6 7l-3 7a3 3 0 0 0 6 0L6 7Zm12 0-3 7a3 3 0 0 0 6 0l-3-7Z',
+  'M3 11 12 4l9 7v9h-6v-6H9v6H3v-9Z',
+  'M5 3v7a2 2 0 0 0 4 0V3M7 3v18M17 3c-2 1-3 3-3 6v4h3v8',
+] as const;
+const INDUSTRY_SUBJECTS = [
+  'AI-generated model: a white tradie van beside an orange phone handset and a booking card dropping into a job board',
+  'AI-generated model: a white clinic front desk with an orange appointment block sliding into a calendar grid',
+  'AI-generated model: a white tooth-shaped model beside an orange booking card and a small desk phone',
+  'AI-generated model: a white set of scales beside an orange enquiry card being routed to one of three folders',
+  'AI-generated model: a white house model with an orange key tag and a maintenance request card',
+  'AI-generated model: a white restaurant table model with an orange reservation card and a phone set aside',
+] as const;
+
+/* Hero spec panel icons (answer, book, hand over). */
+const HERO_ICONS = [
+  'M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z',
+  'M4 6h16v14H4V6Zm0 4h16M8 3v4m8-4v4',
+  'M9 7a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 13c0-3 2-5 5-5s5 2 5 5m3-9h5m-2-2 2 2-2 2',
+] as const;
+
+/* Visual slot page key (route without /au/). */
+const PAGE_KEY = 'ai-receptionist';
+
+/* H1 split for the Family A hero emphasis. Same string as H1 (schema headline); only the
+   benefit clause after the colon is wrapped in .hero-emphasis. */
+const H1_SPLIT = H1.indexOf(': ');
+const H1_LEAD = H1.slice(0, H1_SPLIT + 1);
+const H1_EMPHASIS = H1.slice(H1_SPLIT + 2);
+
+const STEP_ICON = { width: 24, height: 24, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', strokeWidth: 1.5, strokeLinecap: 'round', strokeLinejoin: 'round' } as const;
+const CAP_ICON = { width: 24, height: 24, viewBox: '0 0 24 24', fill: 'none', stroke: '#C94A1A', strokeWidth: 1.6, strokeLinecap: 'round', strokeLinejoin: 'round', 'aria-hidden': true } as const;
 
 export default function AiReceptionistAUPage() {
   return (
@@ -305,244 +342,282 @@ export default function AiReceptionistAUPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <SiteHeader locale="au" logoHref="/au" />
-      <div className="au-svc">
-      <main>
+      <div className="aiAgentPage auPage">
+      <nav className="crumbs" aria-label="Breadcrumb">
+        <div className="wrap">
+          {crumbs.map((item, index) => (
+            <Fragment key={item.url}>
+              {index > 0 && ' / '}
+              {index === crumbs.length - 1 ? <b aria-current="page">{item.name}</b> : <a href={item.url}>{item.name}</a>}
+            </Fragment>
+          ))}
+        </div>
+      </nav>
+      <main id="au-content">
 
-        <Breadcrumbs items={crumbs} />
+        {/* ═══ HERO (US web-design hub hero: copy + inline form left, spec panel right) ═══ */}
+        <section className="hero" id="hero">
+          <div className="wrap hero-grid">
+            <div className="hero-copy">
+              <div className="eyebrow">AI Receptionist Australia</div>
+              <h1>{H1_LEAD} <span className="hero-emphasis">{H1_EMPHASIS}</span></h1>
+              <p className="lead">
+                FactoryJet builds custom AI receptionists for Australian businesses. Yours answers the phone day and
+                night, works out what each caller needs, answers routine questions, books straight into your calendar,
+                ServiceM8, Tradify or Cliniko, takes clear messages, and hands over when it matters: urgent calls go to
+                the right person. We design it around your calls, support it after launch, and you own it.
+              </p>
+              <HeroInlineForm region="au" source="au_ai_receptionist_hero" submitLabel="Plan my AI receptionist" />
+            </div>
 
-        {/* ═══ 1. HERO ═══ */}
-        <section className="sec-lg dot-grid" style={{ position: 'relative', paddingTop: 36 }}>
+            <form
+              className="specpanel"
+              aria-label="What an AI receptionist does on every call"
+              data-visual-slot={`${PAGE_KEY}:hero`}
+              data-visual-kind="diagram"
+              data-visual-subject="The three things the receptionist does on every call: answer day and night, book into your real system, hand over to a person when it matters"
+              data-visual-ratio="1:1"
+              data-visual-status="filled"
+            >
+              <div className="specpanel-bar">
+                <span className="statusdot"></span>
+                <span>INCLUDED · WHAT IT DOES ON EVERY CALL</span>
+                <span className="sys"><span>24/7</span><span>CALLS</span><span>YOURS</span></span>
+              </div>
+              <div className="workflow-controls">
+                <label className="workflow-toggle" title="Pause or resume the animation">
+                  <input type="checkbox" className="workflow-pause" aria-label="Pause animation" />
+                  <svg className="pause-icon" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M5 3v10M11 3v10" fill="none" stroke="currentColor" strokeWidth="2" /></svg>
+                  <svg className="play-icon" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="m5 3 8 5-8 5Z" fill="currentColor" /></svg>
+                </label>
+                <button type="reset" className="workflow-replay" aria-label="Replay animation" title="Replay animation">
+                  <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M3 6a5 5 0 1 1 0 4M3 2v4h4" /></svg>
+                </button>
+              </div>
+              <div className="specpanel-body" role="radiogroup" aria-label="Explore what it does">
+                <label className="specrow run">
+                  <input className="workflow-select" type="radio" name="rec-step" value="1" />
+                  <span className="workflow-icon" aria-hidden="true"><svg {...STEP_ICON}><path d={HERO_ICONS[0]} /></svg></span>
+                  <span className="idx">nights, weekends, public holidays</span>
+                  <span className="title">Answers, day and night</span>
+                  <span className="tag">24/7</span>
+                </label>
+                <label className="specrow run">
+                  <input className="workflow-select" type="radio" name="rec-step" value="2" />
+                  <span className="workflow-icon" aria-hidden="true"><svg {...STEP_ICON}><path d={HERO_ICONS[1]} /></svg></span>
+                  <span className="idx">calendar, job or practice software</span>
+                  <span className="title">Books into your real system</span>
+                  <span className="tag">Live</span>
+                </label>
+                <label className="specrow hold">
+                  <input className="workflow-select" type="radio" name="rec-step" value="3" />
+                  <span className="workflow-icon" aria-hidden="true"><svg {...STEP_ICON}><path d={HERO_ICONS[2]} /></svg></span>
+                  <span className="idx">urgent, upset or sensitive callers</span>
+                  <span className="title">Hands over when it matters</span>
+                  <span className="tag">To a person</span>
+                </label>
+              </div>
+              <div className="specpanel-foot">RULE · The caller can always ask for a person.</div>
+            </form>
+          </div>
+        </section>
+
+        {/* ═══ LEDGER (was the facts band; verified only) ═══ */}
+        <div className="ledger">
           <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <div className="flex-wrap mb-6">
-                  <span className="chip"><span className="dot dot-orange" />AI Receptionist Australia</span>
-                  <span className="chip">24/7 AI Call Answering</span>
-                  <span className="chip">Built, Supported, Yours</span>
-                </div>
-                <h1 style={{ fontSize: 'clamp(2.1rem, 3.9vw, 3.05rem)' }}>{H1}</h1>
-                <p className="lead mt-6" style={{ maxWidth: 560 }}>
-                  FactoryJet builds custom AI receptionists for Australian businesses. Yours answers the phone day and
-                  night, works out what each caller needs, answers routine questions, books straight into your calendar,
-                  ServiceM8, Tradify or Cliniko, takes clear messages, and passes urgent calls to the right person. We
-                  design it around your calls, support it after launch, and you own it.
-                </p>
-
-                <div className="byline mt-6" style={{ maxWidth: 560 }}>
-                  <div className="av">BB</div>
-                  <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
-                  <div className="upd">Last updated<br />25 September 2026</div>
-                </div>
-
-                <div className="mt-6" style={{ maxWidth: 560 }}>
-                  <HeroInlineForm region="au" source="au_ai_receptionist_hero" submitLabel="Plan my AI receptionist" />
+            {[
+              { v: '500+', t: 'businesses served by FactoryJet since 2014, founder-led on every project', s: 'About FactoryJet', u: '/about' },
+              { v: 'Say so', t: 'public facing AI tools should be clearly identified as AI to the people using them', s: 'OAIC, AI products guidance', u: SRC_OAIC_AI },
+              { v: 'At the start', t: 'of a recorded call is when the caller must be told it is being recorded', s: 'OAIC, guide to health privacy', u: SRC_OAIC_CALLS },
+              { v: 'Keep it', t: 'your existing number: divert calls, or usually take it with you if you change telco', s: 'ACMA, keep your number', u: SRC_ACMA },
+            ].map((r) => (
+              <div className="ledgercell" key={r.t}>
+                <div className="k"><a href={r.u} {...(r.u.startsWith('http') ? extLink : {})}>{r.s}</a></div>
+                <div className="v">
+                  <strong className={/\d/.test(r.v) ? 'ledger-number' : 'ledger-word'}>{r.v}</strong>
+                  {r.t}
                 </div>
               </div>
+            ))}
+          </div>
+        </div>
 
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/ai-receptionist/ai-receptionist-hero.webp" width={1400} height={933} fetchPriority="high" decoding="async" alt="A Sydney electrician with both hands in a switchboard while a call comes in on the phone lying on his tool case, ready for an AI receptionist to answer" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
-                <div style={{ padding: '14px 12px 8px' }}>
-                  <span className="eyebrow">What it does on every call</span>
-                  <div className="scorecard-row">
-                    <div><div className="scorecard-metric">Answers, day and night</div><div className="scorecard-note">nights, weekends, public holidays</div></div>
-                    <div className="scorecard-val" style={{ fontSize: 15 }}>24/7</div>
-                  </div>
-                  <div className="scorecard-row">
-                    <div><div className="scorecard-metric">Books into your real system</div><div className="scorecard-note">calendar, job or practice software</div></div>
-                    <div className="scorecard-val" style={{ fontSize: 15 }}>Live</div>
-                  </div>
-                  <div className="scorecard-row">
-                    <div><div className="scorecard-metric">Hands over when it matters</div><div className="scorecard-note">urgent, upset or sensitive callers</div></div>
-                    <div className="scorecard-val" style={{ color: T.green, fontSize: 15 }}>To a person</div>
+        <div className="wrap byline">
+          <div className="av">BB</div>
+          <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
+          <div className="upd">Last updated<br />25 September 2026</div>
+        </div>
+
+        {/* ═══ ANSWER-FIRST DEFINITION (GEO) → Family A facts ═══ */}
+        <section className="section facts" id="facts">
+          <div className="wrap">
+            <div className="section-head">
+              <h2 data-speakable="true">What is an AI receptionist, and is it right for an Australian business?</h2>
+            </div>
+            <div className="factswrap">
+              <div className="factlist">
+                <div className="fact">
+                  <div className="sec">§01</div>
+                  <p data-speakable="true">
+                    <span className="stat">An AI receptionist is a voice agent that answers your business phone 24/7.</span> It
+                    understands what callers want, answers routine questions, books jobs or appointments into your own
+                    system, takes messages, and passes urgent or sensitive calls to a person. It suits Australian
+                    businesses that miss calls or answer the same questions all day.
+                  </p>
+                </div>
+                <div className="fact">
+                  <div className="sec">§02</div>
+                  <div>
+                    <div className="factlabel">Three terms we use a lot</div>
+                    <p>
+                      A <b>voice agent</b> is AI that holds a spoken conversation and can take actions, such as making a
+                      booking. <b>Handover</b> (or escalation) means passing a call to a person when the AI should not deal
+                      with it. An <b>integration</b> is a live connection between the receptionist and your software, so it
+                      can read your calendar and write bookings itself.
+                    </p>
                   </div>
                 </div>
+                <div className="fact">
+                  <div className="sec">§03</div>
+                  <p>
+                    Most AI phone answering products in Australia are apps you sign up to and set up yourself. That works
+                    well for simple message-taking, and for many sole traders it is all you need. It works less well when
+                    calls depend on your own job system, your own rules and your own team. That second case is what we
+                    build: an AI receptionist designed around the calls you actually get, connected to the systems you
+                    actually use, and looked after once it is live.
+                  </p>
+                </div>
               </div>
+              <VisualSlot page={PAGE_KEY} slot="facts" kind="photo" ratio="3:2" className="factphoto"
+                subject="A tradie busy with both hands at work while a call comes in on his phone">
+                <img src="/images/au/ai-receptionist/ai-receptionist-hero.webp" width={1400} height={933} loading="lazy" decoding="async" alt="A Sydney electrician with both hands in a switchboard while a call comes in on the phone lying on his tool case, ready for an AI receptionist to answer" />
+              </VisualSlot>
             </div>
           </div>
         </section>
 
-        {/* ═══ 2. ANSWER-FIRST DEFINITION (GEO) ═══ */}
-        <section className="sec">
+        {/* ═══ WHICH CALLS SUIT AI → full-width head + grouped lists ═══ */}
+        <section className="section" id="which-calls">
           <div className="wrap">
-            <div className="def" style={{ maxWidth: 940 }} data-speakable="true">
-              <span className="lab">What is an AI receptionist, and is it right for an Australian business?</span>
-              <p>
-                An AI receptionist is a voice agent that answers your business phone 24/7. It understands what callers
-                want, answers routine questions, books jobs or appointments into your own system, takes messages, and
-                passes urgent or sensitive calls to a person. It suits Australian businesses that miss calls or answer
-                the same questions all day.
-              </p>
-            </div>
-            <div className="def mt-6" style={{ maxWidth: 940 }}>
-              <span className="lab">Three terms we use a lot</span>
-              <p>
-                A <b>voice agent</b> is AI that holds a spoken conversation and can take actions, such as making a
-                booking. <b>Handover</b> (or escalation) means passing a call to a person when the AI should not deal
-                with it. An <b>integration</b> is a live connection between the receptionist and your software, so it
-                can read your calendar and write bookings itself.
-              </p>
-            </div>
-            <p className="lead mt-8" style={{ maxWidth: 920 }}>
-              Most AI phone answering products in Australia are apps you sign up to and set up yourself. That works
-              well for simple message-taking, and for many sole traders it is all you need. It works less well when
-              calls depend on your own job system, your own rules and your own team. That second case is what we
-              build: an AI receptionist designed around the calls you actually get, connected to the systems you
-              actually use, and looked after once it is live.
-            </p>
-          </div>
-        </section>
-
-        {/* ═══ 3. FACTS BAND (verified only) ═══ */}
-        <section className="stats-band">
-          <div className="wrap">
-            <ul className="col-4" style={{ gap: 20 }}>
-              {[
-                { v: '500+', t: 'businesses served by FactoryJet since 2014, founder-led on every project', s: 'About FactoryJet', u: '/about' },
-                { v: 'Say so', t: 'public facing AI tools should be clearly identified as AI to the people using them', s: 'OAIC, AI products guidance', u: SRC_OAIC_AI },
-                { v: 'At the start', t: 'of a recorded call is when the caller must be told it is being recorded', s: 'OAIC, guide to health privacy', u: SRC_OAIC_CALLS },
-                { v: 'Keep it', t: 'your existing number: divert calls, or usually take it with you if you change telco', s: 'ACMA, keep your number', u: SRC_ACMA },
-              ].map((r) => (
-                <li key={r.t}>
-                  <div style={{ fontFamily: T.fd, fontWeight: 800, fontSize: 26, color: T.orange }}>{r.v}</div>
-                  <p style={{ fontSize: 13.5, color: T.ink, marginTop: 4 }}>{r.t}</p>
-                  <a href={r.u} {...(r.u.startsWith('http') ? extLink : {})} style={{ fontFamily: T.fm, fontSize: 10, color: T.n400, textDecoration: 'underline' }}>{r.s}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-
-        {/* ═══ 4. WHICH CALLS SUIT AI ═══ */}
-        <section className="sec-lg dot-grid">
-          <div className="wrap">
-            <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">Start with your calls, not the technology</span>
+            <div className="section-head">
+              <div className="eyebrow">Start with your calls, not the technology</div>
               <h2>Which calls an AI receptionist should take, and which should stay with a person</h2>
-              <p className="lead mt-4">
+              <p className="lead">
                 The biggest mistake with AI call answering is pointing it at every call on day one. The right split
                 depends on your business, but the pattern is very consistent across the Australian businesses we
                 speak to, from a two-van plumbing business in Brisbane to a multi-room physio clinic in Melbourne.
               </p>
             </div>
-            <div className="col-6040 mt-12">
-              <div className="card card-top-orange">
-                <span className="eyebrow">Good fit for the AI receptionist</span>
-                <ul className="scope-list mt-4">
-                  <li><b>New jobs and bookings.</b> Checking real availability and writing the job or appointment into your system, then confirming by SMS.</li>
-                  <li><b>Changes and cancellations.</b> Moving a booking within rules you set, such as notice periods or call-out windows.</li>
-                  <li><b>Routine questions.</b> Hours, parking, service areas, which services you offer, what to bring, and answers you have approved word for word.</li>
-                  <li><b>New enquiries.</b> Name, number, suburb, what they need and how urgent it is, passed to your team or CRM.</li>
-                  <li><b>Overflow and after hours.</b> Picking up when every line is busy, over lunch, at night, on weekends and on public holidays.</li>
-                  <li><b>Clear messages.</b> A written summary sent to the right person, not a voicemail nobody has time to play back.</li>
-                </ul>
-              </div>
-              <div className="card">
-                <span className="eyebrow">Keep with a person</span>
-                <ul className="scope-list mt-4">
-                  <li><b>Anything clinical or legal.</b> Symptoms, treatment, diagnosis, or legal advice of any kind.</li>
-                  <li><b>Emergencies and safety.</b> The AI’s only job here is to spot the words and route the call at once.</li>
-                  <li><b>Complaints and upset callers.</b> People want to be heard by a person, and they should be.</li>
-                  <li><b>Money and decisions.</b> Refunds, disputes, credit and anything that changes someone’s rights.</li>
-                  <li><b>Your most important relationships.</b> Key clients, builders and suppliers can go straight to a named person.</li>
-                </ul>
-              </div>
+            <div className="agentdir-group chg-group">
+              <div className="agentdir-label"><span className="capid">GRP‑01</span><h3>Good fit for the AI receptionist</h3></div>
+              <ul className="chg-list">
+                <li><span><b>New jobs and bookings.</b> Checking real availability and writing the job or appointment into your system, then confirming by SMS.</span></li>
+                <li><span><b>Changes and cancellations.</b> Moving a booking within rules you set, such as notice periods or call-out windows.</span></li>
+                <li><span><b>Routine questions.</b> Hours, parking, service areas, which services you offer, what to bring, and answers you have approved word for word.</span></li>
+                <li><span><b>New enquiries.</b> Name, number, suburb, what they need and how urgent it is, passed to your team or CRM.</span></li>
+                <li><span><b>Overflow and after hours.</b> Picking up when every line is busy, over lunch, at night, on weekends and on public holidays.</span></li>
+                <li><span><b>Clear messages.</b> A written summary sent to the right person, not a voicemail nobody has time to play back.</span></li>
+              </ul>
+            </div>
+            <div className="agentdir-group chg-group">
+              <div className="agentdir-label"><span className="capid">GRP‑02</span><h3>Keep with a person</h3></div>
+              <ul className="chg-list">
+                <li><span><b>Anything clinical or legal.</b> Symptoms, treatment, diagnosis, or legal advice of any kind.</span></li>
+                <li><span><b>Emergencies and safety.</b> The AI’s only job here is to spot the words and route the call at once.</span></li>
+                <li><span><b>Complaints and upset callers.</b> People want to be heard by a person, and they should be.</span></li>
+                <li><span><b>Money and decisions.</b> Refunds, disputes, credit and anything that changes someone’s rights.</span></li>
+                <li><span><b>Your most important relationships.</b> Key clients, builders and suppliers can go straight to a named person.</span></li>
+              </ul>
             </div>
           </div>
         </section>
 
-        {/* ═══ 5. FIT CHECK (interactive, <details>) ═══ */}
-        <section className="sec-lg">
+        {/* ═══ FIT CHECK (<details>) → vlog ═══ */}
+        <section className="vlog" id="fit-check">
           <div className="wrap">
-            <div className="col-6040">
+            <div className="section-head">
+              <div className="eyebrow">Which option fits you?</div>
+              <h2>A 30-second check: app, answering service or custom AI receptionist</h2>
+              <p>Tap the line that sounds most like your business. The answer is honest, even when it is not us.</p>
+              <VisualSlot page={PAGE_KEY} slot="proof" kind="photo" ratio="3:2" captionClassName="figcap"
+                subject="A clinic receptionist on a headset greeting a patient at the front desk, with a booking calendar on her monitor"
+                caption="In a busy clinic the phone and the patient at the counter compete for the same person. An AI receptionist takes the routine calls, so the front desk can look after the people in the room.">
+                <img src="/images/au/ai-receptionist/ai-receptionist-clinic.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A receptionist on a headset at a Melbourne physiotherapy clinic front desk greets a patient, with a colour-block booking calendar on her monitor" />
+              </VisualSlot>
+            </div>
+            <div className="ventries">
+              {FIT_CHECK.map((f) => (
+                <details key={f.q} className="ventry">
+                  <summary><h3>{f.q}</h3><span className="chev" aria-hidden="true">+</span></summary>
+                  <span className="vtag">{f.verdict}</span>
+                  <p>{f.a}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ═══ HANDOVER → facts ═══ */}
+        <section className="section facts" id="handover">
+          <div className="wrap">
+            <div className="section-head">
+              <div className="eyebrow">Handover, designed in</div>
+              <h2>How the AI hands a call over to a person</h2>
+            </div>
+            <div className="factswrap">
+              <div className="factlist">
+                <div className="fact"><div className="sec">§01</div><p>
+                  A good AI receptionist is judged less by how clever it sounds and more by how well it knows when to
+                  stop. Before we build anything, we sit down with you and write the handover rules: which words,
+                  situations and callers go straight to a person, who that person is at different times of day, and
+                  what happens if nobody picks up.
+                </p></div>
+                <div className="fact"><div className="sec">§02</div><p>
+                  When a rule fires, the AI tells the caller it is putting them through and transfers the call live,
+                  with a short summary sent to whoever answers, so the caller does not have to repeat themselves. If
+                  nobody is free, it takes a detailed message, promises a call back within the time you set, and
+                  alerts the right person by SMS, email or your team chat.
+                </p></div>
+                <div className="fact"><div className="sec">§03</div><p>
+                  The caller can always ask for a person. We never build a receptionist that traps someone in a loop.
+                  That matters for your reputation, and the OAIC’s AI guidance also expects human oversight of what
+                  an AI system does.
+                </p></div>
+                <div className="fact"><div className="sec">§04</div><div>
+                  <div className="factlabel">Typical handover triggers</div>
+                  <ul className="trigrows">
+                    <li><span className="m">Caller asks for a person</span><span className="n">any wording, any time</span><span className="t">Transfer</span></li>
+                    <li><span className="m">Emergency or safety words</span><span className="n">agreed list, tested before launch</span><span className="t">Immediate</span></li>
+                    <li><span className="m">Upset or confused caller</span><span className="n">repeated misunderstanding counts</span><span className="t">Transfer</span></li>
+                    <li><span className="m">Question with no approved answer</span><span className="n">it never guesses</span><span className="t">Message</span></li>
+                    <li><span className="m">Nobody available</span><span className="n">summary plus SMS to the right person</span><span className="t">Call back</span></li>
+                  </ul>
+                </div></div>
+              </div>
+              <VisualSlot page={PAGE_KEY} slot="facts-2" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
+                subject="An office coordinator on a headset taking a transferred call, with the AI call summary on her screen"
+                caption="The call arrives with a summary already on screen, so the caller never has to start again.">
+                <img src="/images/au/ai-receptionist/ai-receptionist-handover.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over the shoulder of an office coordinator at a Brisbane plumbing business taking a transferred call on her headset, with the AI’s call summary on her screen" />
+              </VisualSlot>
+            </div>
+          </div>
+        </section>
+
+        {/* ═══ COMPARISON TABLE ═══ */}
+        <section className="section comparison" id="comparison">
+          <div className="wrap">
+            <div className="section-head head-split">
+              <div className="eyebrow">Side by side</div>
               <div>
-                <span className="eyebrow">Which option fits you?</span>
-                <h2>A 30-second check: app, answering service or custom AI receptionist</h2>
-                <p className="lead mt-4" style={{ maxWidth: 560 }}>
-                  Tap the line that sounds most like your business. The answer is honest, even when it is not us.
+                <h2>Human receptionist vs virtual receptionist service vs AI app vs a custom AI receptionist</h2>
+                <p className="lead">
+                  Four common ways Australian businesses handle the phone. Each is the right answer for someone. This
+                  compares them on what actually changes day to day, not on price.
                 </p>
-                <div className="card mt-6" style={{ padding: '4px 20px' }}>
-                  {FIT_CHECK.map((f) => (
-                    <details key={f.q}>
-                      <summary style={{ gap: 16, textAlign: 'left' }}>{f.q}</summary>
-                      <div style={{ paddingBottom: 18 }}>
-                        <span style={{ fontFamily: T.fm, fontSize: 10, background: T.small, color: '#fff', borderRadius: 999, padding: '3px 9px', letterSpacing: '.06em' }}>{f.verdict}</span>
-                        <p className="mt-2" style={{ marginTop: 10 }}>{f.a}</p>
-                      </div>
-                    </details>
-                  ))}
-                </div>
-              </div>
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/ai-receptionist/ai-receptionist-clinic.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A receptionist on a headset at a Melbourne physiotherapy clinic front desk greets a patient, with a colour-block booking calendar on her monitor" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
-                <div style={{ padding: '14px 12px 8px' }}>
-                  <p style={{ fontSize: 14 }}>
-                    In a busy clinic the phone and the patient at the counter compete for the same person. An AI
-                    receptionist takes the routine calls, so the front desk can look after the people in the room.
-                  </p>
-                </div>
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* ═══ 6. HANDOVER ═══ */}
-        <section className="sec-lg dot-grid">
-          <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <span className="eyebrow">Handover, designed in</span>
-                <h2>How the AI hands a call over to a person</h2>
-                <div className="stack mt-6">
-                  <p>
-                    A good AI receptionist is judged less by how clever it sounds and more by how well it knows when to
-                    stop. Before we build anything, we sit down with you and write the handover rules: which words,
-                    situations and callers go straight to a person, who that person is at different times of day, and
-                    what happens if nobody picks up.
-                  </p>
-                  <p>
-                    When a rule fires, the AI tells the caller it is putting them through and transfers the call live,
-                    with a short summary sent to whoever answers, so the caller does not have to repeat themselves. If
-                    nobody is free, it takes a detailed message, promises a call back within the time you set, and
-                    alerts the right person by SMS, email or your team chat.
-                  </p>
-                  <p>
-                    The caller can always ask for a person. We never build a receptionist that traps someone in a loop.
-                    That matters for your reputation, and the OAIC’s AI guidance also expects human oversight of what
-                    an AI system does.
-                  </p>
-                </div>
-              </div>
-              <div className="stack">
-                <figure className="card" style={{ padding: 8, margin: 0 }}>
-                  <img src="/images/au/ai-receptionist/ai-receptionist-handover.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over the shoulder of an office coordinator at a Brisbane plumbing business taking a transferred call on her headset, with the AI’s call summary on her screen" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
-                  <figcaption style={{ padding: '12px 10px 6px', fontSize: 14 }}>
-                    The call arrives with a summary already on screen, so the caller never has to start again.
-                  </figcaption>
-                </figure>
-              <div className="card card-top-orange">
-                <span className="eyebrow">Typical handover triggers</span>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Caller asks for a person</div><div className="scorecard-note">any wording, any time</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Transfer</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Emergency or safety words</div><div className="scorecard-note">agreed list, tested before launch</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Immediate</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Upset or confused caller</div><div className="scorecard-note">repeated misunderstanding counts</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Transfer</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Question with no approved answer</div><div className="scorecard-note">it never guesses</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Message</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Nobody available</div><div className="scorecard-note">summary plus SMS to the right person</div></div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Call back</div></div>
-              </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ═══ 7. COMPARISON TABLE ═══ */}
-        <section className="sec-lg">
-          <div className="wrap">
-            <span className="eyebrow">Side by side</span>
-            <h2 style={{ maxWidth: 820 }}>Human receptionist vs virtual receptionist service vs AI app vs a custom AI receptionist</h2>
-            <p className="lead mt-4" style={{ maxWidth: 760 }}>
-              Four common ways Australian businesses handle the phone. Each is the right answer for someone. This
-              compares them on what actually changes day to day, not on price.
-            </p>
-            <div className="card mt-8" style={{ padding: 0, overflowX: 'auto' }}>
-              <table className="cmp-table" style={{ minWidth: 760 }}>
+            <div className="tablewrap">
+              <table>
                 <thead>
                   <tr>
                     <th>What you get</th>
@@ -553,189 +628,194 @@ export default function AiReceptionistAUPage() {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td className="feat">Coverage hours</td><td className="fj"><span className="yes">24/7, many calls at once</span></td><td><span className="yes">24/7</span></td><td><span className="partial">Depends on plan</span></td><td><span className="partial">Business hours, one call at a time</span></td></tr>
-                  <tr><td className="feat">Books into your own system</td><td className="fj"><span className="yes">Yes, built for your system</span></td><td><span className="partial">Only supported apps</span></td><td><span className="partial">Sometimes, by hand</span></td><td><span className="yes">Yes</span></td></tr>
-                  <tr><td className="feat">Follows your call rules</td><td className="fj"><span className="yes">Designed around them</span></td><td><span className="partial">Within app settings</span></td><td><span className="partial">From a script</span></td><td><span className="yes">Yes, with training</span></td></tr>
-                  <tr><td className="feat">Handover to your team</td><td className="fj"><span className="yes">Live transfer with summary</span></td><td><span className="partial">Basic transfer or message</span></td><td><span className="yes">Transfer or message</span></td><td><span className="yes">Walks over or transfers</span></td></tr>
-                  <tr><td className="feat">Control over what it says</td><td className="fj"><span className="yes">Full, reviewed with you</span></td><td><span className="partial">Limited to settings</span></td><td><span className="partial">Script you supply</span></td><td><span className="yes">Full</span></td></tr>
-                  <tr><td className="feat">Choice of where call data goes</td><td className="fj"><span className="yes">You choose the providers</span></td><td><span className="no">Set by the app</span></td><td><span className="partial">Set by the service</span></td><td><span className="yes">Your own systems</span></td></tr>
-                  <tr><td className="feat">Who owns the setup</td><td className="fj"><span className="yes">You do</span></td><td><span className="no">The app provider</span></td><td><span className="no">The service provider</span></td><td><span className="yes">You do</span></td></tr>
-                  <tr><td className="feat">Setup effort for you</td><td className="fj"><span className="partial">Workshops, then we build</span></td><td><span className="yes">Low, do it yourself</span></td><td><span className="yes">Low</span></td><td><span className="partial">Hiring and training</span></td></tr>
-                  <tr><td className="feat">Support after launch</td><td className="fj"><span className="yes">Same team, ongoing</span></td><td><span className="partial">Help desk</span></td><td><span className="yes">Account manager</span></td><td>Your own management</td></tr>
-                  <tr><td className="feat">Human warmth</td><td className="fj"><span className="partial">Natural voice, hands to people</span></td><td><span className="partial">Natural voice</span></td><td><span className="yes">A real person</span></td><td><span className="yes">A real person who knows you</span></td></tr>
+                  <tr><th scope="row">Coverage hours</th><td className="fj">24/7, many calls at once</td><td>24/7</td><td>Depends on plan</td><td>Business hours, one call at a time</td></tr>
+                  <tr><th scope="row">Books into your own system</th><td className="fj">Yes, built for your system</td><td>Only supported apps</td><td>Sometimes, by hand</td><td>Yes</td></tr>
+                  <tr><th scope="row">Follows your call rules</th><td className="fj">Designed around them</td><td>Within app settings</td><td>From a script</td><td>Yes, with training</td></tr>
+                  <tr><th scope="row">Handover to your team</th><td className="fj">Live transfer with summary</td><td>Basic transfer or message</td><td>Transfer or message</td><td>Walks over or transfers</td></tr>
+                  <tr><th scope="row">Control over what it says</th><td className="fj">Full, reviewed with you</td><td>Limited to settings</td><td>Script you supply</td><td>Full</td></tr>
+                  <tr><th scope="row">Choice of where call data goes</th><td className="fj">You choose the providers</td><td>Set by the app</td><td>Set by the service</td><td>Your own systems</td></tr>
+                  <tr><th scope="row">Who owns the setup</th><td className="fj">You do</td><td>The app provider</td><td>The service provider</td><td>You do</td></tr>
+                  <tr><th scope="row">Setup effort for you</th><td className="fj">Workshops, then we build</td><td>Low, do it yourself</td><td>Low</td><td>Hiring and training</td></tr>
+                  <tr><th scope="row">Support after launch</th><td className="fj">Same team, ongoing</td><td>Help desk</td><td>Account manager</td><td>Your own management</td></tr>
+                  <tr><th scope="row">Human warmth</th><td className="fj">Natural voice, hands to people</td><td>Natural voice</td><td>A real person</td><td>A real person who knows you</td></tr>
                 </tbody>
               </table>
             </div>
-            <p style={srcNote}>
+            <p className="tablenote">
               Want to see how the running costs compare? Read our guide:{' '}
-              <a href="/blog/ai-voice-agents-vs-human-answering-services-cost-comparison-2026" style={srcLink}>AI voice agents vs human answering services, a cost comparison</a>.
+              <a href="/blog/ai-voice-agents-vs-human-answering-services-cost-comparison-2026">AI voice agents vs human answering services, a cost comparison</a>.
             </p>
           </div>
         </section>
 
-        {/* ═══ 8. HOW WE BUILD IT (step-by-step, <details>) ═══ */}
-        <section className="sec-lg dot-grid" id="how-we-build">
+        {/* ═══ PHOTOBREAK (US template visual, no AU image yet) ═══ */}
+        <VisualSlot page={PAGE_KEY} slot="photobreak" kind="illustration" ratio="12:5" className="photobreak"
+          subject="AI-generated model: a white desk phone on a long rail of call cards, one orange card lifted out and passed to a small human figure" />
+
+        {/* ═══ HOW WE BUILD IT → process timeline (steps stay openable, as the copy says) ═══ */}
+        <section className="section process" id="how-we-build">
           <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <span className="eyebrow">How we build it</span>
+            <div className="head-media">
+              <div className="section-head">
+                <div className="eyebrow">How we build it</div>
                 <h2>How we build your AI receptionist, in eight steps</h2>
-                <p className="lead mt-4" style={{ maxWidth: 560 }}>
+                <p className="lead">
                   Every AI receptionist we build follows the same path. It is the difference between an AI voice agent
                   that sounds good in a demo and one your customers can rely on at 7am on a Monday. Open any step to
                   see what happens in it.
                 </p>
-                <div className="card mt-6" style={{ padding: '4px 20px' }}>
-                  {BUILD_STEPS.map((s) => (
-                    <details key={s.n}>
-                      <summary style={{ gap: 16, textAlign: 'left' }}>
-                        <span><span style={{ fontFamily: T.fm, color: T.small, marginRight: 12 }}>{s.n}</span>{s.t}</span>
-                      </summary>
-                      <p style={{ paddingBottom: 18 }}>{s.d}</p>
-                    </details>
-                  ))}
-                </div>
               </div>
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/ai-receptionist/ai-receptionist-listening.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A FactoryJet engineer and an Adelaide vet clinic practice manager share earbuds to listen to real incoming calls while she takes notes" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
-                <div style={{ padding: '14px 12px 8px' }}>
-                  <p style={{ fontSize: 14 }}>
-                    Step one is listening. We go through a sample of your real calls with you, then map every type of
-                    call, what should happen, and where a person takes over. That call map is what you sign off.
-                  </p>
-                </div>
+              <VisualSlot page={PAGE_KEY} slot="process" kind="photo" ratio="3:2" captionClassName="figcap"
+                subject="A FactoryJet engineer and a clinic practice manager listening to real incoming calls together while she takes notes"
+                caption="Step one is listening. We go through a sample of your real calls with you, then map every type of call, what should happen, and where a person takes over. That call map is what you sign off.">
+                <img src="/images/au/ai-receptionist/ai-receptionist-listening.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A FactoryJet engineer and an Adelaide vet clinic practice manager share earbuds to listen to real incoming calls while she takes notes" />
+              </VisualSlot>
+            </div>
+            <div className="timeline timeline-4">
+              {BUILD_STEPS.map((s) => (
+                <details key={s.n} className="tnode">
+                  <summary>
+                    <div className="idx">{s.n}</div>
+                    <h3>{s.t}<span className="chev" aria-hidden="true">+</span></h3>
+                  </summary>
+                  <p>{s.d}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <div className="au-midcta">
+          <MidPageCTA
+            headline={'Missing calls, or answering the same questions all day?'}
+            sub={'Tell us about your calls and the system you book into. On a short call with the founder, we will tell you whether an AI receptionist would help, which calls it should take first, and whether a simple app would do the job.'}
+            label={'Plan my AI receptionist'}
+          />
+        </div>
+
+        {/* ═══ WHEN AN APP IS ENOUGH → facts + rule-of-thumb panel ═══ */}
+        <section className="section facts" id="app-or-build">
+          <div className="wrap">
+            <div className="section-head">
+              <div className="eyebrow">The honest answer</div>
+              <h2>When an off-the-shelf AI receptionist app is enough</h2>
+            </div>
+            <div className="factswrap">
+              <div className="factlist">
+                <div className="fact"><div className="sec">§01</div><p>
+                  If you are a sole trader or a very small team, and what you mostly need is something that answers,
+                  takes the caller’s details and texts you, a self-serve AI phone answering service is often the right
+                  call. It is quick to set up, you pay monthly, and you can cancel. There are good Australian ones,
+                  several of them built for tradies. We would rather tell you that on a first call than sell you a
+                  build you do not need.
+                </p></div>
+                <div className="fact"><div className="sec">§02</div><p>
+                  A custom AI receptionist earns its place when the calls depend on your systems and your rules. For
+                  example: booking into practice software the apps do not support, applying your own cancellation
+                  policy, routing callers by suburb to the right technician, checking an existing matter before a
+                  transfer, or covering several sites with different hours and staff.
+                </p></div>
+                <div className="fact"><div className="sec">§03</div><p>
+                  It is also the better route when you want control. With an app, the provider decides what the AI
+                  can do and where your data goes. With a build, you decide, and the setup is yours to keep. For the
+                  wider picture of AI that acts across your business, see our{' '}
+                  <a href="/au/ai-agents">AI agent development for Australian businesses</a>. If you are still working
+                  out where AI fits at all, start with <a href="/au/ai-consulting">AI consulting in Australia</a>.
+                </p></div>
+              </div>
+              <div className="au-panel">
+                <div className="eyebrow">A simple rule of thumb</div>
+                <ul className="trigrows">
+                  <li><span className="m">Take a message and text me</span><span className="n">sole trader, simple calls</span><span className="t">App</span></li>
+                  <li><span className="m">Book into Google or Outlook calendar</span><span className="n">if the app supports it</span><span className="t">App first</span></li>
+                  <li><span className="m">Book into your job or practice system</span><span className="n">with your job types and rules</span><span className="t">Build</span></li>
+                  <li><span className="m">Rules only your business knows</span><span className="n">routing, policies, exceptions</span><span className="t">Build</span></li>
+                  <li><span className="m">Several sites or teams</span><span className="n">different hours and handovers</span><span className="t">Build</span></li>
+                </ul>
               </div>
             </div>
           </div>
         </section>
 
-        <MidPageCTA
-          headline={'Missing calls, or answering the same questions all day?'}
-          sub={'Tell us about your calls and the system you book into. On a short call with the founder, we will tell you whether an AI receptionist would help, which calls it should take first, and whether a simple app would do the job.'}
-          label={'Plan my AI receptionist'}
-        />
-
-        {/* ═══ 9. WHEN AN APP IS ENOUGH ═══ */}
-        <section className="sec-lg">
+        {/* ═══ PRIVACY ACT + RECORDING → facts + photo + ruled rows ═══ */}
+        <section className="section facts" id="rules">
           <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <span className="eyebrow">The honest answer</span>
-                <h2>When an off-the-shelf AI receptionist app is enough</h2>
-                <div className="stack mt-6">
-                  <p>
-                    If you are a sole trader or a very small team, and what you mostly need is something that answers,
-                    takes the caller’s details and texts you, a self-serve AI phone answering service is often the right
-                    call. It is quick to set up, you pay monthly, and you can cancel. There are good Australian ones,
-                    several of them built for tradies. We would rather tell you that on a first call than sell you a
-                    build you do not need.
-                  </p>
-                  <p>
-                    A custom AI receptionist earns its place when the calls depend on your systems and your rules. For
-                    example: booking into practice software the apps do not support, applying your own cancellation
-                    policy, routing callers by suburb to the right technician, checking an existing matter before a
-                    transfer, or covering several sites with different hours and staff.
-                  </p>
-                  <p>
-                    It is also the better route when you want control. With an app, the provider decides what the AI
-                    can do and where your data goes. With a build, you decide, and the setup is yours to keep. For the
-                    wider picture of AI that acts across your business, see our{' '}
-                    <a href="/au/ai-agents">AI agent development for Australian businesses</a>. If you are still working
-                    out where AI fits at all, start with <a href="/au/ai-consulting">AI consulting in Australia</a>.
-                  </p>
-                </div>
-              </div>
-              <div className="card card-top-orange">
-                <span className="eyebrow">A simple rule of thumb</span>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Take a message and text me</div><div className="scorecard-note">sole trader, simple calls</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>App</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Book into Google or Outlook calendar</div><div className="scorecard-note">if the app supports it</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>App first</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Book into your job or practice system</div><div className="scorecard-note">with your job types and rules</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Build</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Rules only your business knows</div><div className="scorecard-note">routing, policies, exceptions</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Build</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Several sites or teams</div><div className="scorecard-note">different hours and handovers</div></div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Build</div></div>
-              </div>
+            <div className="section-head">
+              <div className="eyebrow">The Privacy Act, in plain English</div>
+              <h2>Telling callers they are talking to AI, recording calls, and handling call data properly</h2>
             </div>
-          </div>
-        </section>
-
-        {/* ═══ 10. PRIVACY ACT + RECORDING ═══ */}
-        <section className="sec-lg dot-grid">
-          <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <span className="eyebrow">The Privacy Act, in plain English</span>
-                <h2>Telling callers they are talking to AI, recording calls, and handling call data properly</h2>
-                <div className="stack mt-6">
-                  <p>
-                    Every call your AI receptionist takes collects personal information: a name, a number, an address,
-                    often a reason for calling that can be sensitive, such as a sore tooth or a family law matter. The
-                    Privacy Act 1988 and its Australian Privacy Principles (the APPs) set the rules for how businesses
-                    handle that information.
-                  </p>
-                  <p>
-                    <b>Telling callers it is AI.</b> The Office of the Australian Information Commissioner (OAIC)
-                    published guidance on using commercially available AI products. It says public facing AI tools
-                    should be clearly identified as AI, and that businesses should update their privacy policies and
-                    notices with clear information about how they use AI. Under APP 5, you must also take reasonable
-                    steps to let people know you are collecting their information and why. So our greeting says the
-                    caller is speaking with an automated assistant.
-                  </p>
-                  <p>
-                    <b>Recording calls.</b> Call recording in Australia is covered by the federal Telecommunications
-                    (Interception and Access) Act and by separate state and territory listening and surveillance device
-                    laws, and those state laws are not all the same. The safe, simple practice is the one the OAIC’s
-                    health privacy guide spells out: if a call is recorded or monitored, tell the caller at the start of
-                    the conversation, so they can end the call or ask not to be recorded. We build that notice into the
-                    greeting and set a clear retention period.
-                  </p>
+            <div className="factswrap">
+              <div className="factlist">
+                <div className="fact"><div className="sec">§01</div><p>
+                  Every call your AI receptionist takes collects personal information: a name, a number, an address,
+                  often a reason for calling that can be sensitive, such as a sore tooth or a family law matter. The
+                  Privacy Act 1988 and its Australian Privacy Principles (the APPs) set the rules for how businesses
+                  handle that information.
+                </p></div>
+                <div className="fact"><div className="sec">§02</div><p>
+                  <b>Telling callers it is AI.</b> The Office of the Australian Information Commissioner (OAIC)
+                  published guidance on using commercially available AI products. It says public facing AI tools
+                  should be clearly identified as AI, and that businesses should update their privacy policies and
+                  notices with clear information about how they use AI. Under APP 5, you must also take reasonable
+                  steps to let people know you are collecting their information and why. So our greeting says the
+                  caller is speaking with an automated assistant.
+                </p></div>
+                <div className="fact"><div className="sec">§03</div><p>
+                  <b>Recording calls.</b> Call recording in Australia is covered by the federal Telecommunications
+                  (Interception and Access) Act and by separate state and territory listening and surveillance device
+                  laws, and those state laws are not all the same. The safe, simple practice is the one the OAIC’s
+                  health privacy guide spells out: if a call is recorded or monitored, tell the caller at the start of
+                  the conversation, so they can end the call or ask not to be recorded. We build that notice into the
+                  greeting and set a clear retention period.
+                </p></div>
+                <div className="fact"><div className="sec">§04</div><div>
                   <p>
                     <b>Small business.</b> The OAIC says many small businesses under a turnover threshold are exempt from
                     the Privacy Act, but some are covered whatever their size, including health service providers. A
                     small physio, GP or dental practice is covered. We build to the APPs either way.
                   </p>
-                </div>
-                <p style={srcNote}>
-                  Sources: <a href={SRC_OAIC_AI} {...extLink} style={srcLink}>OAIC, privacy and commercially available AI products</a>;{' '}
-                  <a href={SRC_OAIC_CALLS} {...extLink} style={srcLink}>OAIC, guide to health privacy (collecting health information)</a>;{' '}
-                  <a href={SRC_OAIC_SMALL} {...extLink} style={srcLink}>OAIC, small business</a>. This is general information, not legal advice.
-                </p>
-              </div>
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/ai-receptionist/ai-receptionist-lawfirm.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over-the-shoulder view of a lawyer in a bright Perth office reviewing call summaries on her laptop, with a desk phone beside her" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
-                <div style={{ padding: '14px 12px 8px' }}>
-                  <p style={{ fontSize: 14 }}>
-                    Every call the AI handles ends up as a short written summary in the right place. For a law firm, that
-                    means a new enquiry arrives with the details a lawyer needs before calling back.
+                  <p className="au-note">
+                    Sources: <a href={SRC_OAIC_AI} {...extLink}>OAIC, privacy and commercially available AI products</a>;{' '}
+                    <a href={SRC_OAIC_CALLS} {...extLink}>OAIC, guide to health privacy (collecting health information)</a>;{' '}
+                    <a href={SRC_OAIC_SMALL} {...extLink}>OAIC, small business</a>. This is general information, not legal advice.
                   </p>
-                </div>
+                </div></div>
               </div>
+              <VisualSlot page={PAGE_KEY} slot="facts-3" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
+                subject="A lawyer reviewing written call summaries on her laptop, with a desk phone beside her"
+                caption="Every call the AI handles ends up as a short written summary in the right place. For a law firm, that means a new enquiry arrives with the details a lawyer needs before calling back.">
+                <img src="/images/au/ai-receptionist/ai-receptionist-lawfirm.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over-the-shoulder view of a lawyer in a bright Perth office reviewing call summaries on her laptop, with a desk phone beside her" />
+              </VisualSlot>
             </div>
-            <ul className="col-3 mt-10">
-              <li className="card"><h3>What we do</h3><p className="mt-4">Write the AI disclosure and recording notice into the greeting, set retention periods, choose providers with suitable hosting and no-training terms, and document the data flow for your privacy policy.</p></li>
-              <li className="card"><h3>What you keep</h3><p className="mt-4">You stay responsible for the personal information you collect. We make that easier with access controls, a record of every call the AI handled, and plain-English notes on where data goes.</p></li>
-              <li className="card"><h3>What we do not do</h3><p className="mt-4">We are not lawyers and do not give legal sign-off. For health, legal and financial businesses, confirm the detail with your privacy adviser or professional body.</p></li>
-            </ul>
+            <div className="platlist span-all" role="list">
+              <div className="plat plat-2col" role="listitem"><span className="capid">01</span><div className="plat-name"><h3>What we do</h3></div><p className="plat-build">Write the AI disclosure and recording notice into the greeting, set retention periods, choose providers with suitable hosting and no-training terms, and document the data flow for your privacy policy.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">02</span><div className="plat-name"><h3>What you keep</h3></div><p className="plat-build">You stay responsible for the personal information you collect. We make that easier with access controls, a record of every call the AI handled, and plain-English notes on where data goes.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">03</span><div className="plat-name"><h3>What we do not do</h3></div><p className="plat-build">We are not lawyers and do not give legal sign-off. For health, legal and financial businesses, confirm the detail with your privacy adviser or professional body.</p></div>
+            </div>
           </div>
         </section>
 
-        {/* ═══ 11. KEEP YOUR NUMBER ═══ */}
-        <section className="sec-lg">
+        {/* ═══ KEEP YOUR NUMBER → facts + "which one you need" panel ═══ */}
+        <section className="section facts" id="phone-line">
           <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <span className="eyebrow">Your phone line</span>
-                <h2>Keeping your existing number: call diversion or porting</h2>
-                <div className="stack mt-6">
-                  <p>
-                    Your customers already know your number. It is on your ute, your website, your Google Business
-                    Profile and years of old invoices. You do not have to change it to use an AI receptionist, whether
-                    it is a mobile, a landline or a 1300 number.
-                  </p>
-                  <p>
-                    <b>Call diversion</b> (call forwarding) is the usual route. Your number stays with your current
-                    telco, and you divert calls to the AI receptionist. You can divert every call, only calls outside
-                    business hours, or only calls that ring out or find the line busy. Most telcos and phone systems let
-                    you set these up, and it is easy to switch off.
-                  </p>
+            <div className="section-head">
+              <div className="eyebrow">Your phone line</div>
+              <h2>Keeping your existing number: call diversion or porting</h2>
+            </div>
+            <div className="factswrap">
+              <div className="factlist">
+                <div className="fact"><div className="sec">§01</div><p>
+                  Your customers already know your number. It is on your ute, your website, your Google Business
+                  Profile and years of old invoices. You do not have to change it to use an AI receptionist, whether
+                  it is a mobile, a landline or a 1300 number.
+                </p></div>
+                <div className="fact"><div className="sec">§02</div><p>
+                  <b>Call diversion</b> (call forwarding) is the usual route. Your number stays with your current
+                  telco, and you divert calls to the AI receptionist. You can divert every call, only calls outside
+                  business hours, or only calls that ring out or find the line busy. Most telcos and phone systems let
+                  you set these up, and it is easy to switch off.
+                </p></div>
+                <div className="fact"><div className="sec">§03</div><div>
                   <p>
                     <b>Porting</b> means moving the number itself to a different telco. You only need it if you are
                     changing provider anyway, for example moving to a cloud phone system. The ACMA says you can usually
@@ -743,181 +823,190 @@ export default function AiReceptionistAUPage() {
                     new telco does not have to accept the request, so check before you sign. Ports of a single local
                     number generally take 8 to 15 days.
                   </p>
-                </div>
-                <p style={srcNote}>
-                  Source: <a href={SRC_ACMA} {...extLink} style={srcLink}>ACMA, keep or transfer your phone number</a>.
-                </p>
+                  <p className="au-note">
+                    Source: <a href={SRC_ACMA} {...extLink}>ACMA, keep or transfer your phone number</a>.
+                  </p>
+                </div></div>
               </div>
-              <div className="card card-top-orange">
-                <span className="eyebrow">Which one you need</span>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Happy with your telco</div><div className="scorecard-note">number stays where it is</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Divert</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Only after hours or missed calls</div><div className="scorecard-note">conditional diversion</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Divert</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Moving to a new phone system</div><div className="scorecard-note">the new telco requests the port</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Port</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Several numbers or sites</div><div className="scorecard-note">each can route differently</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Either</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Change your number</div><div className="scorecard-note">never required</div></div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>No need</div></div>
+              <div className="au-panel">
+                <div className="eyebrow">Which one you need</div>
+                <ul className="trigrows">
+                  <li><span className="m">Happy with your telco</span><span className="n">number stays where it is</span><span className="t">Divert</span></li>
+                  <li><span className="m">Only after hours or missed calls</span><span className="n">conditional diversion</span><span className="t">Divert</span></li>
+                  <li><span className="m">Moving to a new phone system</span><span className="n">the new telco requests the port</span><span className="t">Port</span></li>
+                  <li><span className="m">Several numbers or sites</span><span className="n">each can route differently</span><span className="t">Either</span></li>
+                  <li><span className="m">Change your number</span><span className="n">never required</span><span className="t">No need</span></li>
+                </ul>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ═══ 12. INDUSTRIES ═══ */}
-        <section className="sec-lg dot-grid">
+        {/* ═══ INDUSTRIES → capgrid ═══ */}
+        <section className="section capabilities" id="industries">
           <div className="wrap">
-            <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">Who we build for</span>
+            <div className="section-head">
+              <div className="eyebrow">Who we build for</div>
               <h2>AI receptionists for tradies, clinics, dental practices, law firms, real estate and hospitality</h2>
-              <p className="lead mt-4">
+              <p className="lead">
                 The same core build, shaped very differently by the calls each industry gets and the rules it works
                 under.
               </p>
             </div>
-            <ul className="col-3 mt-12">
-              <li className="svc-card"><h3>Tradies and home services</h3><p className="mt-4">Plumbers, sparkies, HVAC techs, builders and cleaners. It answers while you are on the tools, takes the suburb and the problem, books a slot in ServiceM8 or Tradify, and sends real emergencies, like a burst pipe or no power, to your mobile. Need the website too? See <a href="/au/websites-for-tradies" style={srcLink}>websites for tradies</a>.</p></li>
-              <li className="svc-card"><h3>Medical and allied health clinics</h3><p className="mt-4">GPs, physios, chiros, psychologists and specialists, on the admin side only: bookings, changes, directions and what to bring, written into Cliniko or your practice software. No clinical advice, ever, and urgent symptoms follow a path your clinicians approve.</p></li>
-              <li className="svc-card"><h3>Dental practices</h3><p className="mt-4">New patient enquiries, check-ups, hygiene bookings, cancellations and approved answers on health fund claiming. Pain, swelling and emergencies go to the team at once. It can work alongside online booking pages patients already use. Need the website side too? See <a href="/au/dental-website-design" style={srcLink}>dental website design and SEO</a>.</p></li>
-              <li className="svc-card"><h3>Law firms</h3><p className="mt-4">New enquiry intake by practice area, details for your conflict check, first consultation bookings, and routing existing clients to the right lawyer. A virtual receptionist for lawyers that never gives legal advice and captures every after-hours enquiry.</p></li>
-              <li className="svc-card"><h3>Real estate and property management</h3><p className="mt-4">Inspection and appraisal bookings, listing questions, tenant maintenance requests and after-hours calls, logged into your property software, with urgent repairs routed to the right tradie or property manager.</p></li>
-              <li className="svc-card"><h3>Hospitality</h3><p className="mt-4">Restaurants, cafés and venues. Table bookings and changes during service, opening hours, dietary and function enquiries, so staff are not pulled off the floor by the phone on a Friday night.</p></li>
-            </ul>
-            <div className="col-6040 mt-12">
-              <div className="stack">
-                <p>
-                  Not on the list? The same approach works for vets, salons, gyms, accountants, car dealers, NDIS
-                  providers and aged care admin. If your calls follow a pattern, an AI receptionist can usually take the
-                  routine ones. For a buyer’s view of the options in this space, read our guide to{' '}
-                  <a href="/blog/best-ai-receptionist-small-business">the best AI receptionist for small business</a>.
-                  If you are comparing{' '}
-                  <a href="/blog/best-ai-agencies-australia-2026" style={srcLink}>Australian agencies that build voice agents and chatbots</a>,
-                  see our guide to the best AI agencies in Australia.
-                </p>
-                <p>
-                  Health businesses get extra care. Because health service providers are covered by the Privacy Act
-                  whatever their size, we plan data location, recording notices and retention with you before any
-                  patient calls reach the system.
-                </p>
-              </div>
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/ai-receptionist/ai-receptionist-dental.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A dental receptionist at a bright Brisbane practice greets an arriving patient face to face while the desk phone stays quiet" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
-              </div>
+            <div className="capgrid">
+              {INDUSTRIES.map((j, i) => {
+                const n = String(i + 1).padStart(2, '0');
+                return (
+                  <div key={j.t} className={`cap cap-${i + 1}`}>
+                    <div className="caphead"><span className="capid">CAP‑{n}</span><svg {...CAP_ICON}><path d={INDUSTRY_ICONS[i]} /></svg></div>
+                    <VisualSlot page={PAGE_KEY} slot={`capability-${n}`} kind="diagram" ratio="11:4" className="cap-diagram" subject={INDUSTRY_SUBJECTS[i]} />
+                    <h3>{j.t}</h3>
+                    <p>{j.d}</p>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </section>
 
-        {/* ═══ 13. ENGAGEMENT SHAPES + DEMAND ═══ */}
-        <section className="sec-lg">
+        {/* ═══ INDUSTRIES, CONTINUED → definition module (image left, copy right) ═══ */}
+        <section className="definition" id="more-industries">
+          <div>
+            <VisualSlot page={PAGE_KEY} slot="definition" kind="photo" ratio="3:2" className="definition-image"
+              subject="A dental receptionist greeting an arriving patient face to face while the desk phone stays quiet">
+              <img src="/images/au/ai-receptionist/ai-receptionist-dental.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A dental receptionist at a bright Brisbane practice greets an arriving patient face to face while the desk phone stays quiet" />
+            </VisualSlot>
+          </div>
+          <div className="definition-copy">
+            <p>
+              Not on the list? The same approach works for vets, salons, gyms, accountants, car dealers, NDIS
+              providers and aged care admin. If your calls follow a pattern, an AI receptionist can usually take the
+              routine ones. For a buyer’s view of the options in this space, read our guide to{' '}
+              <a href="/blog/best-ai-receptionist-small-business">the best AI receptionist for small business</a>.
+              If you are comparing{' '}
+              <a href="/blog/best-ai-agencies-australia-2026">Australian agencies that build voice agents and chatbots</a>,
+              see our guide to the best AI agencies in Australia.
+            </p>
+            <p>
+              Health businesses get extra care. Because health service providers are covered by the Privacy Act
+              whatever their size, we plan data location, recording notices and retention with you before any
+              patient calls reach the system.
+            </p>
+          </div>
+        </section>
+
+        {/* ═══ ENGAGEMENT SHAPES + DEMAND → ruled rows + split ═══ */}
+        <section className="section platforms" id="engagement">
           <div className="wrap">
-            <div className="col-6040">
+            <div className="section-head plat-head">
               <div>
-                <span className="eyebrow">Scope, not packages</span>
+                <div className="eyebrow">Scope, not packages</div>
                 <h2>Three ways to work with us on an AI receptionist</h2>
-                <p className="lead mt-4" style={{ maxWidth: 560 }}>
-                  Every project is quoted for your scope, with a fixed price for the build and ongoing support shown
-                  separately. These are the shapes it usually takes.
-                </p>
-                <ul className="scope-list num-list mt-6" style={{ maxWidth: 580 }}>
-                  <li><b>Focused first build.</b> Your most common call types, one booking or job system, one number, missed and after-hours calls first. The fastest way to prove it on real callers.</li>
-                  <li><b>Full front desk.</b> All routine call types, several integrations (job or practice system, CRM, team chat), multiple numbers or sites, and detailed handover rules for each team.</li>
-                  <li><b>Build plus support.</b> Either of the above with ongoing support: transcript reviews, new call types, answer updates, and keeping pace with changes to the AI models and providers.</li>
-                </ul>
-                <p className="mt-6" style={{ maxWidth: 560 }}>
+              </div>
+              <p>
+                Every project is quoted for your scope, with a fixed price for the build and ongoing support shown
+                separately. These are the shapes it usually takes.
+              </p>
+            </div>
+            <div className="platlist" role="list">
+              <div className="plat plat-2col" role="listitem"><span className="capid">01</span><div className="plat-name"><h3>Focused first build.</h3></div><p className="plat-build">Your most common call types, one booking or job system, one number, missed and after-hours calls first. The fastest way to prove it on real callers.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">02</span><div className="plat-name"><h3>Full front desk.</h3></div><p className="plat-build">All routine call types, several integrations (job or practice system, CRM, team chat), multiple numbers or sites, and detailed handover rules for each team.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">03</span><div className="plat-name"><h3>Build plus support.</h3></div><p className="plat-build">Either of the above with ongoing support: transcript reviews, new call types, answer updates, and keeping pace with changes to the AI models and providers.</p></div>
+            </div>
+            <div className="au-split">
+              <div>
+                <p>
                   What moves the scope: the number of call types, how many systems it connects to, how many sites and
                   numbers, your expected call volume (which sets the voice and AI usage you pay providers directly), and
                   the level of support you want. We explain every line of the quote on the call.
                 </p>
-                <div className="mt-8">
-                  <ModalCTAButton label="Plan my AI receptionist" region="au" modalVariant="default" btnVariant="primary-light" />
-                </div>
+                <ModalCTAButton label="Plan my AI receptionist" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
               </div>
-
-              <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: `1px solid ${T.n200}`, padding: '14px 18px' }}>
-                  <span style={{ fontFamily: T.fm, fontSize: 10, letterSpacing: '.13em', textTransform: 'uppercase', color: T.n400 }}>Australia · Monthly Search Demand</span>
-                  <span style={{ background: T.small, color: '#fff', fontFamily: T.fm, fontSize: 10, borderRadius: 999, padding: '3px 9px' }}>DataForSEO</span>
-                </div>
-                <div style={{ padding: '4px 18px 14px' }}>
-                  <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
-                    {[
-                      { kw: 'ai receptionist', v: '880', w: '100%', kd: 'The head term' },
-                      { kw: 'virtual receptionist', v: '590', w: '67%', kd: 'Human and AI answering' },
-                      { kw: 'ai receptionist australia', v: '390', w: '44%', kd: 'Buyer intent, Australia' },
-                      { kw: 'virtual receptionist australia', v: '260', w: '30%', kd: 'Comparing services' },
-                      { kw: 'ai voice agent', v: '210', w: '24%', kd: 'The technology behind it' },
-                      { kw: 'ai phone answering', v: '140', w: '16%', kd: 'Missed-call problem' },
-                      { kw: 'medical virtual receptionist', v: '140', w: '16%', kd: 'Clinics and practices' },
-                      { kw: 'ai receptionist for small business', v: '70', w: '8%', kd: 'Small firms comparing options' },
-                    ].map((r) => (
-                      <li key={r.kw} className="demand-row">
-                        <div className="demand-top"><span className="demand-kw">{r.kw}</span><span className="demand-v">{r.v}<span style={{ fontSize: 9, color: T.n400 }}> searches</span></span></div>
-                        <div className="demand-bar"><i style={{ width: r.w }} /></div>
-                        <div className="demand-kd">{r.kd}</div>
-                      </li>
-                    ))}
-                  </ul>
-                  <p style={{ textAlign: 'center', fontFamily: T.fm, fontSize: 10, color: T.n400, marginTop: 10 }}>Source: DataForSEO, Australia, September 2026</p>
-                </div>
+              <div className="demand">
+                <div className="demand-head"><span>Australia · Monthly Search Demand</span><b>DataForSEO</b></div>
+                <ul>
+                  {[
+                    { kw: 'ai receptionist', v: '880', w: '100%', kd: 'The head term' },
+                    { kw: 'virtual receptionist', v: '590', w: '67%', kd: 'Human and AI answering' },
+                    { kw: 'ai receptionist australia', v: '390', w: '44%', kd: 'Buyer intent, Australia' },
+                    { kw: 'virtual receptionist australia', v: '260', w: '30%', kd: 'Comparing services' },
+                    { kw: 'ai voice agent', v: '210', w: '24%', kd: 'The technology behind it' },
+                    { kw: 'ai phone answering', v: '140', w: '16%', kd: 'Missed-call problem' },
+                    { kw: 'medical virtual receptionist', v: '140', w: '16%', kd: 'Clinics and practices' },
+                    { kw: 'ai receptionist for small business', v: '70', w: '8%', kd: 'Small firms comparing options' },
+                  ].map((r) => (
+                    <li key={r.kw} className="demand-row">
+                      <div className="demand-top"><span className="demand-kw">{r.kw}</span><span className="demand-v">{r.v}<small> searches</small></span></div>
+                      <div className="demand-bar"><i style={{ width: r.w }} /></div>
+                      <div className="demand-kd">{r.kd}</div>
+                    </li>
+                  ))}
+                </ul>
+                <p className="demand-src">Source: DataForSEO, Australia, September 2026</p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ═══ 14. PROVIDER LIST (self-disclosure, ItemList) ═══ */}
-        <section className="sec-lg dot-grid">
+        {/* ═══ PROVIDER LIST (self-disclosure, ItemList from PROVIDERS) → ruled rows ═══ */}
+        <section className="section platforms" id="providers">
           <div className="wrap">
-            <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">The honest landscape</span>
-              <h2>Australian AI receptionist and virtual receptionist providers worth knowing</h2>
-              <p className="lead mt-4">
+            <div className="section-head plat-head">
+              <div>
+                <div className="eyebrow">The honest landscape</div>
+                <h2>Australian AI receptionist and virtual receptionist providers worth knowing</h2>
+              </div>
+              <p>
                 We are one option, not the only one. These Australian providers show up when people search for an AI
                 receptionist in Australia or ask AI assistants for one. They range from self-serve apps to human
                 answering companies to managed services. Each note is based on what the company says on its own
                 website.
               </p>
             </div>
-            <ul className="col-2 mt-10" style={{ gap: 16 }}>
+            <div className="platlist" role="list">
               {PROVIDERS.map((p, i) => (
-                <li key={p.name} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
-                  <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.small, minWidth: 30 }}>{i + 1}</span>
-                  <div>
-                    <h3 style={{ fontSize: 18 }}>{p.name}{p.name === 'FactoryJet' && <span style={{ fontFamily: T.fm, fontSize: 10, background: T.small, color: '#fff', borderRadius: 999, padding: '2px 8px', marginLeft: 8, verticalAlign: 'middle' }}>That is us</span>}</h3>
-                    <p className="mt-2" style={{ marginTop: 6 }}>{p.note}</p>
-                  </div>
-                </li>
+                <div key={p.name} className={p.name === 'FactoryJet' ? 'plat plat-2col plat-own' : 'plat plat-2col'} role="listitem">
+                  <span className="capid">{String(i + 1).padStart(2, '0')}</span>
+                  <div className="plat-name"><h3>{p.name}</h3>{p.name === 'FactoryJet' && <span className="plat-flag">That is us</span>}</div>
+                  <p className="plat-build">{p.note}</p>
+                </div>
               ))}
-            </ul>
-            <p style={srcNote}>
+            </div>
+            <p className="sub-note">
               Providers named from live Australian search results and AI assistant answers for AI receptionist queries, September 2026. Notes reflect each company’s own website on 25 September 2026. Listing is not endorsement.
             </p>
-            <div className="card mt-8" style={{ maxWidth: 900 }}>
-              <span className="eyebrow">Questions to ask any provider, including us</span>
-              <ol className="scope-list num-list mt-4">
-                <li><b>Can I ring it right now?</b> The best test of an AI receptionist is calling it with a hard question and a noisy background.</li>
-                <li><b>Does it write into my system, or just send me a message?</b> Ask to see a booking land in your actual job or practice software.</li>
-                <li><b>What exactly triggers a handover?</b> Get the list in writing, and test that asking for a person works first time.</li>
-                <li><b>Where does call data go, and is it used for training?</b> Ask for the providers by name and where they host data.</li>
-                <li><b>Who changes the answers when my business changes?</b> You, them, or nobody. Know before you sign.</li>
-                <li><b>What do I own if I leave?</b> Call flows, prompts, recordings and transcripts. Ask how you get them back.</li>
+            <div className="au-panel au-panel-wide">
+              <div className="eyebrow">Questions to ask any provider, including us</div>
+              <ol className="au-numlist">
+                <li><span><b>Can I ring it right now?</b> The best test of an AI receptionist is calling it with a hard question and a noisy background.</span></li>
+                <li><span><b>Does it write into my system, or just send me a message?</b> Ask to see a booking land in your actual job or practice software.</span></li>
+                <li><span><b>What exactly triggers a handover?</b> Get the list in writing, and test that asking for a person works first time.</span></li>
+                <li><span><b>Where does call data go, and is it used for training?</b> Ask for the providers by name and where they host data.</span></li>
+                <li><span><b>Who changes the answers when my business changes?</b> You, them, or nobody. Know before you sign.</span></li>
+                <li><span><b>What do I own if I leave?</b> Call flows, prompts, recordings and transcripts. Ask how you get them back.</span></li>
               </ol>
             </div>
           </div>
         </section>
 
-        {/* ═══ 15. SIBLING SERVICES (hover cards) ═══ */}
-        <section className="sec-lg">
+        {/* ═══ SIBLING SERVICES → agentdir ═══ */}
+        <section className="section agentdir" id="more-services">
           <div className="wrap">
-            <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">Beyond the phone</span>
+            <div className="section-head">
+              <div className="eyebrow">Beyond the phone</div>
               <h2>The rest of what we build for Australian businesses</h2>
-              <p className="lead mt-4">
+              <p>
                 An AI receptionist is often the first AI system a business trusts. These are the natural next steps,
                 built by the same team.
               </p>
             </div>
-            <ul className="col-3 mt-10">
+            <ul className="agentdir-grid">
               {SIBLINGS.map((s) => (
-                <li key={s.href} className="svc-card" style={{ padding: 0 }}>
-                  <a href={s.href} style={{ display: 'block', padding: 24, height: '100%' }}>
-                    <h3>{s.t} <span style={{ color: T.small }} aria-hidden="true">→</span></h3>
-                    <p className="mt-4">{s.d}</p>
+                <li key={s.href}>
+                  <a href={s.href}>
+                    <span className="agentdir-t">{s.t}</span>
+                    <span className="agentdir-l">{s.d}</span>
+                    <span className="agentdir-go" aria-hidden="true">↗</span>
                   </a>
                 </li>
               ))}
@@ -925,76 +1014,37 @@ export default function AiReceptionistAUPage() {
           </div>
         </section>
 
-        {/* ═══ 16. FAQ (canonical Linear Minimal) ═══ */}
-        <section className="sec-lg dot-grid" id="faq">
+        {/* ═══ FAQ (Family A accordion; same FAQ_ITEMS array as the FAQPage JSON-LD) ═══ */}
+        <AuFaq
+          categories={FAQ_CATEGORIES}
+          items={FAQ_ITEMS}
+          heading="AI receptionist questions Australian business owners actually ask"
+          askLabel="Still have a question? Ask the founder →"
+          askNote="Replies within 24 hours."
+        />
+
+        {/* ═══ FINAL CTA (light, US finalcta) ═══ */}
+        <section className="finalcta" id="finalcta">
           <div className="wrap">
-            <style>{'.au-svc .faq-item summary::after{content:none;display:none}'}</style>
-            <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">FAQ</span>
-              <h2>AI receptionist questions Australian business owners actually ask</h2>
+            <div>
+              <div className="eyebrow">Ready when you are</div>
+              <h2>Stop missing calls, without losing the personal touch</h2>
+              <p>
+                Send your name and work email. The founder replies within 24 hours to book a short call about the calls
+                you get, the system you book into, and whether a custom AI receptionist or a simple app is the right fit.
+                No spam, no obligation.
+              </p>
             </div>
-            <div className="faq-grid">
-              <aside className="faq-sidebar">
-                <span className="faq-sidebar-topics">Topics</span>
-                <nav className="faq-sidebar-nav">
-                  {FAQ_CATEGORIES.map((c) => (
-                    <a key={c.key} href={`#faq-${c.key}`}>
-                      {c.label}
-                      <span className="faq-nav-count">{FAQ_ITEMS.filter((f) => f.category === c.key).length}</span>
-                    </a>
-                  ))}
-                </nav>
-                <div className="faq-sidebar-cta">
-                  <ModalCTAButton label="Still have a question? Ask the founder →" region="au" modalVariant="default" btnVariant="secondary-light" />
-                  <p>Replies within 24 hours.</p>
-                </div>
-              </aside>
-
-              <div>
-                {FAQ_CATEGORIES.map((c) => (
-                  <div key={c.key} id={`faq-${c.key}`} style={{ marginBottom: 40 }}>
-                    <div className="faq-cat-header">
-                      <span className="faq-cat-bar" />
-                      <p className="faq-cat-label">{c.label}</p>
-                    </div>
-                    <ul className="faq-list">{FAQ_ITEMS.filter((f) => f.category === c.key).map((f) => (
-                      <li key={f.question}><details className="faq-item">
-                        <summary>
-                          <span className="q-text">{f.question}</span>
-                          <span className="chevron">
-                            <svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5L7 9L11 5" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" /></svg>
-                          </span>
-                        </summary>
-                        <div className="faq-ans"><p>{f.answer}</p>{f.links ? <p style={{ marginTop: 8 }}>{f.links.map((l) => <a key={l.href} href={l.href} style={{ ...srcLink, marginRight: 16 }}>{l.label}</a>)}</p> : null}</div>
-                      </details></li>
-                    ))}</ul>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ═══ 17. FINAL CTA (the only dark section) ═══ */}
-        <section className="dark-sec">
-          <div className="wrap" style={{ textAlign: 'center', maxWidth: 640 }}>
-            <span className="eyebrow">Ready when you are</span>
-            <h2>Stop missing calls, without losing the personal touch</h2>
-            <p className="mt-4">
-              Send your name and work email. The founder replies within 24 hours to book a short call about the calls
-              you get, the system you book into, and whether a custom AI receptionist or a simple app is the right fit.
-              No spam, no obligation.
-            </p>
-            <div className="mt-8" style={{ display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap' }}>
-              <ModalCTAButton label="Plan my AI receptionist" region="au" modalVariant="default" btnVariant="primary-light" />
-              <a className="btn btn-outline" href="/au/ai-agents" style={{ color: '#fff', borderColor: 'rgba(255,255,255,.25)' }}>See AI agent development</a>
+            <div className="ctas">
+              <ModalCTAButton label="Plan my AI receptionist" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
+              <a className="btn btn-ghost" href="/au/ai-agents">See AI agent development</a>
             </div>
           </div>
         </section>
 
       </main>
       </div>
-      <SiteFooter locale="au" linkColumns={AU_FOOTER_COLUMNS} variant="dark" tagline="Ecommerce, AI agents, websites and AI search for Australian businesses. Built by senior engineers, supported after launch, owned by you." />
+      <SiteFooter locale="au" linkColumns={AU_FOOTER_COLUMNS} tagline="Ecommerce, AI agents, websites and AI search for Australian businesses. Built by senior engineers, supported after launch, owned by you." />
     </>
   );
 }

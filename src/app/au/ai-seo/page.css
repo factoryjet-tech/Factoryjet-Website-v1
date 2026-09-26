@@ -1,0 +1,37 @@
+/* /au/ai-seo add-ons on top of AiAgentDevelopmentSections.css + ../au-page.css.
+   Scoped to .aiAgentPage.auPage; tokens only from the Family A system, no new colours.
+   .city-list is a mirror of .aiSeoHub .city-list (AiSeoHubSections.css), re-scoped. */
+
+/* Split rows: top-aligned prose next to a data panel */
+.aiAgentPage.auPage .au-split.au-split-top { margin-top: 0; }
+.aiAgentPage.auPage .au-split > div > p + p { margin-top: 14px; }
+.aiAgentPage.auPage .au-split-photo { margin-top: 28px; }
+.aiAgentPage.auPage .au-split-photo img { width: 100%; height: auto; border-radius: 10px; }
+.aiAgentPage.auPage .au-subhead { margin: 52px 0 18px; font-size: 22px; line-height: 1.25; }
+
+/* Single-column bullet list inside fit-check entries */
+.aiAgentPage.auPage .chg-list.chg-list-1col { grid-template-columns: minmax(0,1fr); }
+.aiAgentPage.auPage details.ventry .chg-list { margin-top: 12px; }
+.aiAgentPage.auPage details.ventry .chg-list li:last-child { border-bottom: 0; }
+
+/* Link button at the end of a fact row */
+.aiAgentPage.auPage .fact .fact-cta { margin-top: 20px; }
+
+/* Panel heading (h3 in a bordered panel) */
+.aiAgentPage.auPage .au-panel-title { font-size: 20px; line-height: 1.25; margin-bottom: 6px; }
+
+/* Directory tiles under a facts section, keeping the original "Explore ... →" labels */
+.aiAgentPage.auPage .facts .agentdir-grid { grid-template-columns: repeat(3,minmax(0,1fr)); margin-top: 48px; }
+.aiAgentPage.auPage .agentdir-more { display: block; margin-top: 10px; font-family: var(--mono); font-size: 10px; letter-spacing: .06em; text-transform: uppercase; color: var(--accent-text); }
+
+/* Place and service links (mirror of .aiSeoHub .city-list) */
+.aiAgentPage.auPage .city-list { list-style: none; margin: 20px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.aiAgentPage.auPage .city-list a { display: inline-flex; align-items: center; min-height: 40px; padding: 8px 14px; border: 1px solid var(--line); border-radius: 999px; background: white; color: var(--ink); font-size: 13px; font-weight: 500; transition: border-color .18s ease, color .18s ease; }
+.aiAgentPage.auPage .city-list a:hover { border-color: var(--accent); color: var(--accent-text); }
+
+@media (max-width: 1080px) {
+  .aiAgentPage.auPage .facts .agentdir-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media (max-width: 820px) {
+  .aiAgentPage.auPage .facts .agentdir-grid { grid-template-columns: 1fr; }
+}

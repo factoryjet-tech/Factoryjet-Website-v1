@@ -1,32 +1,23 @@
 import type { Metadata } from 'next';
+import { Fragment } from 'react';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import { AU_FOOTER_COLUMNS } from '@/data/auFooterColumns';
-import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
-import '../au-service.css';
+import AuFaq from '../components/AuFaq';
+import VisualSlot from '../components/VisualSlot';
+import '@/components/v2/AiAgentDevelopmentSections.css';
+import '../au-page.css';
+import './page.css';
 
 const CANONICAL = 'https://factoryjet.com/au/ecommerce-seo';
 const UPDATED = '2026-09-26';
 const TITLE = 'Ecommerce SEO Agency Australia | Shopify SEO | FactoryJet';
-const H1 = 'Ecommerce SEO Agency Australia: Shopify, WooCommerce and Magento SEO That Sells Products';
+const H1 = 'Ecommerce SEO Agency Australia: SEO That Sells Products';
 const DESCRIPTION =
   'Ecommerce SEO and Shopify SEO for Australian online stores: collection pages, product data, Google Shopping free listings, AI search and safe migrations.';
-
-/* Design tokens, copied by value from ../au-service.css so inline styles stay
-   on-system without CSS custom property references in this file. */
-const T = {
-  ink: '#0F0F12',
-  n200: '#E5E5E0',
-  n400: '#6E6E68',
-  orange: '#F05A28',
-  green: '#047857',
-  small: '#B23E13',
-  fm: "'Geist Mono',monospace",
-  fd: "'Plus Jakarta Sans',sans-serif",
-};
 
 /* ONE array drives the visible trail AND the BreadcrumbList JSON-LD. */
 const crumbs = [
@@ -251,10 +242,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-const srcNote = { fontFamily: T.fm, fontSize: 11, color: T.n400, marginTop: 12 } as const;
-const srcLink = { textDecoration: 'underline' } as const;
 const extLink = { target: '_blank', rel: 'noopener noreferrer nofollow' } as const;
-const imgStyle = { width: '100%', height: 'auto', borderRadius: 12, display: 'block' } as const;
 
 /* The eight areas ecommerce SEO covers (numbered listicle). */
 const AREAS: { t: string; d: string }[] = [
@@ -267,6 +255,28 @@ const AREAS: { t: string; d: string }[] = [
   { t: 'Content that answers buyers', d: 'Buying guides, size guides, comparisons and care guides that answer the questions people ask before they buy, and link to the right categories.' },
   { t: 'Migration protection', d: 'When you replatform or redesign, a full redirect map and pre-launch checks so years of rankings move with you instead of disappearing.' },
 ];
+
+/* Icons and visual-slot subjects for the eight area cards (same order as AREAS). */
+const AREA_ICONS = [
+  'M4 4h7v7H4V4Zm9 0h7v7h-7V4ZM4 13h7v7H4v-7Zm9 0h7v7h-7v-7Z',
+  'M3 12 12 3h8v8l-9 9-8-8Zm13-5h.01',
+  'M12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm0-6v3m0 12v3M3 12h3m12 0h3M5.6 5.6l2.1 2.1m8.6 8.6 2.1 2.1m0-12.8-2.1 2.1m-8.6 8.6-2.1 2.1',
+  'm8 7-5 5 5 5m8-10 5 5-5 5M14 4l-4 16',
+  'M5 8h14l-1 12H6L5 8Zm4 0V6a3 3 0 0 1 6 0v2',
+  'M12 3v4m0 10v4M3 12h4m10 0h4M7 7l2 2m6 6 2 2m0-10-2 2m-6 6-2 2',
+  'M4 5a2 2 0 0 1 2-2h14v16H6a2 2 0 0 0-2 2V5Zm4 3h8',
+  'M4 8h13l-3-3m6 11H7l3 3',
+] as const;
+const AREA_SUBJECTS = [
+  'AI-generated model: white category cards arranged as a tree, the top card outlined in orange',
+  'AI-generated model: a white product card with a photo, sizes and an orange delivery tag',
+  'AI-generated model: a white catalogue grid where orange lines mark the few filter pages worth crawling',
+  'AI-generated model: a white product page with an orange code bracket showing price, stock and returns',
+  'AI-generated model: white product tiles appearing in a shopping strip, one with an orange free listing badge',
+  'AI-generated model: a white chat bubble recommending three product cards, one outlined in orange',
+  'AI-generated model: a white buying guide booklet with orange arrows pointing to category cards',
+  'AI-generated model: old and new store pages joined by a single orange redirect arrow',
+] as const;
 
 /* Platform comparison rows. */
 const PLATFORMS: { p: string; good: string; watch: string; fix: string }[] = [
@@ -318,6 +328,17 @@ const SIBLINGS: { href: string; t: string; d: string }[] = [
   { href: '/au', t: 'FactoryJet Australia', d: 'Everything we build for Australian businesses: ecommerce, websites, AI agents and AI search.' },
 ];
 
+/* Visual slot page key (route without /au/). */
+const PAGE_KEY = 'ecommerce-seo';
+
+/* H1 split for the Family A hero emphasis. Same string as H1 (schema headline); only the
+   closing benefit phrase is wrapped in .hero-emphasis. */
+const H1_EMPHASIS = 'SEO That Sells Products';
+const H1_LEAD = H1.slice(0, H1.lastIndexOf(H1_EMPHASIS)).trimEnd();
+
+const STEP_ICON = { width: 24, height: 24, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', strokeWidth: 1.5, strokeLinecap: 'round', strokeLinejoin: 'round' } as const;
+const CAP_ICON = { width: 24, height: 24, viewBox: '0 0 24 24', fill: 'none', stroke: '#C94A1A', strokeWidth: 1.6, strokeLinecap: 'round', strokeLinejoin: 'round', 'aria-hidden': true } as const;
+
 export default function EcommerceSeoAUPage() {
   return (
     <>
@@ -325,201 +346,260 @@ export default function EcommerceSeoAUPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <SiteHeader locale="au" logoHref="/au" />
-      <div className="au-svc">
-      <main>
+      <div className="aiAgentPage auPage">
+      <nav className="crumbs" aria-label="Breadcrumb">
+        <div className="wrap">
+          {crumbs.map((item, index) => (
+            <Fragment key={item.url}>
+              {index > 0 && ' / '}
+              {index === crumbs.length - 1 ? <b aria-current="page">{item.name}</b> : <a href={item.url}>{item.name}</a>}
+            </Fragment>
+          ))}
+        </div>
+      </nav>
+      <main id="au-content">
 
-        <Breadcrumbs items={crumbs} />
+        {/* ═══ HERO (US web-design hub hero: copy + inline form left, spec panel right) ═══ */}
+        <section className="hero" id="hero">
+          <div className="wrap hero-grid">
+            <div className="hero-copy">
+              <div className="eyebrow">Ecommerce SEO Australia</div>
+              <h1>{H1_LEAD} <span className="hero-emphasis">{H1_EMPHASIS}</span></h1>
+              <p className="lead">
+                FactoryJet is an ecommerce SEO agency for Australian online stores, covering Shopify, WooCommerce and
+                Magento SEO. We get your collection and product pages found in Google, Google Shopping and AI answers,
+                on Shopify, WooCommerce, Magento (Adobe Commerce), BigCommerce and Maropost. Because we also build and
+                migrate stores, we fix problems in the theme itself, and every account and file stays yours.
+              </p>
+              <HeroInlineForm region="au" source="au_ecommerce_seo_hero" submitLabel="Review my store’s SEO" />
+            </div>
 
-        {/* ═══ 1. HERO ═══ */}
-        <section className="sec-lg dot-grid" style={{ position: 'relative', paddingTop: 36 }}>
+            <form
+              className="specpanel"
+              aria-label="Where online store traffic comes from"
+              data-visual-slot={`${PAGE_KEY}:hero`}
+              data-visual-kind="diagram"
+              data-visual-subject="Where store traffic comes from: collection pages for head terms, product pages and free listings for the long tail, and AI answers"
+              data-visual-ratio="1:1"
+              data-visual-status="filled"
+            >
+              <div className="specpanel-bar">
+                <span className="statusdot"></span>
+                <span>TRAFFIC · WHERE STORE TRAFFIC COMES FROM</span>
+                <span className="sys"><span>Shopify SEO Services</span><span>We Build Stores Too</span></span>
+              </div>
+              <div className="workflow-controls">
+                <label className="workflow-toggle" title="Pause or resume the animation">
+                  <input type="checkbox" className="workflow-pause" aria-label="Pause animation" />
+                  <svg className="pause-icon" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M5 3v10M11 3v10" fill="none" stroke="currentColor" strokeWidth="2" /></svg>
+                  <svg className="play-icon" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="m5 3 8 5-8 5Z" fill="currentColor" /></svg>
+                </label>
+                <button type="reset" className="workflow-replay" aria-label="Replay animation" title="Replay animation">
+                  <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M3 6a5 5 0 1 1 0 4M3 2v4h4" /></svg>
+                </button>
+              </div>
+              <div className="specpanel-body" role="radiogroup" aria-label="Explore where traffic comes from">
+                <label className="specrow run">
+                  <input className="workflow-select" type="radio" name="ecomseo-au-step" value="1" />
+                  <span className="workflow-icon" aria-hidden="true"><svg {...STEP_ICON}><path d={AREA_ICONS[0]} /></svg></span>
+                  <span className="idx">the broad terms buyers search</span>
+                  <span className="title">Collection pages</span>
+                  <span className="tag">Head terms</span>
+                </label>
+                <label className="specrow run">
+                  <input className="workflow-select" type="radio" name="ecomseo-au-step" value="2" />
+                  <span className="workflow-icon" aria-hidden="true"><svg {...STEP_ICON}><path d={AREA_ICONS[1]} /></svg></span>
+                  <span className="idx">the specific items and the Shopping tab</span>
+                  <span className="title">Product pages and free listings</span>
+                  <span className="tag">Long tail</span>
+                </label>
+                <label className="specrow hold">
+                  <input className="workflow-select" type="radio" name="ecomseo-au-step" value="3" />
+                  <span className="workflow-icon" aria-hidden="true"><svg {...STEP_ICON}><path d={AREA_ICONS[5]} /></svg></span>
+                  <span className="idx">AI Overviews, ChatGPT, Perplexity</span>
+                  <span className="title">AI answers</span>
+                  <span className="tag">Growing</span>
+                </label>
+              </div>
+              <div className="specpanel-foot">RULE · When we build a keyword map, every important term gets exactly one owner.</div>
+            </form>
+          </div>
+        </section>
+
+        {/* ═══ LEDGER (was the facts band; verified only) ═══ */}
+        <div className="ledger">
           <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <div className="flex-wrap mb-6">
-                  <span className="chip"><span className="dot dot-orange" />Ecommerce SEO Australia</span>
-                  <span className="chip">Shopify SEO Services</span>
-                  <span className="chip">We Build Stores Too</span>
-                </div>
-                <h1 style={{ fontSize: 'clamp(2.1rem, 3.9vw, 3.05rem)' }}>{H1}</h1>
-                <p className="lead mt-6" style={{ maxWidth: 560 }}>
-                  FactoryJet is an ecommerce SEO agency for Australian online stores. We get your collection and
-                  product pages found in Google, Google Shopping and AI answers, on Shopify, WooCommerce, Magento
-                  (Adobe Commerce), BigCommerce and Maropost. Because we also build and migrate stores, we fix
-                  problems in the theme itself, and every account and file stays yours.
-                </p>
-
-                <div className="byline mt-6" style={{ maxWidth: 560 }}>
-                  <div className="av">BB</div>
-                  <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
-                  <div className="upd">Last updated<br />26 September 2026</div>
-                </div>
-
-                <div className="mt-6" style={{ maxWidth: 560 }}>
-                  <HeroInlineForm region="au" source="au_ecommerce_seo_hero" submitLabel="Review my store’s SEO" />
+            {[
+              { v: '500+', t: 'businesses served by FactoryJet since 2014, founder-led on every project', s: 'About FactoryJet', u: '/about' },
+              { v: 'Free', t: 'product listings can show across Google Search, Shopping, Maps and more, if your product data is complete', s: 'Google Merchant Center Help', u: SRC_FREE_LISTINGS },
+              { v: 'Auto', t: 'every Shopify store generates a sitemap.xml with products, collections, pages and blog posts', s: 'Shopify Help Center', u: SRC_SHOPIFY_SITEMAP },
+              { v: 'Block', t: 'filter URLs that do not need to be found, using robots.txt, is one option Google documents for faceted navigation', s: 'Google Search Central', u: SRC_FACETS },
+            ].map((r) => (
+              <div className="ledgercell" key={r.t}>
+                <div className="k"><a href={r.u} {...(r.u.startsWith('http') ? extLink : {})}>{r.s}</a></div>
+                <div className="v">
+                  <strong className={/\d/.test(r.v) ? 'ledger-number' : 'ledger-word'}>{r.v}</strong>
+                  {r.t}
                 </div>
               </div>
+            ))}
+          </div>
+        </div>
 
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/ecommerce-seo/ecommerce-seo-hero.webp" width={1400} height={933} fetchPriority="high" decoding="async" alt="A Melbourne homewares founder and an ecommerce SEO consultant arrange blank cards into a category tree on the wall of her warehouse office, planning the store’s structure" style={imgStyle} />
-                <div style={{ padding: '14px 12px 8px' }}>
-                  <span className="eyebrow">Where store traffic comes from</span>
-                  <div className="scorecard-row">
-                    <div><div className="scorecard-metric">Collection pages</div><div className="scorecard-note">the broad terms buyers search</div></div>
-                    <div className="scorecard-val" style={{ fontSize: 15 }}>Head terms</div>
-                  </div>
-                  <div className="scorecard-row">
-                    <div><div className="scorecard-metric">Product pages and free listings</div><div className="scorecard-note">the specific items and the Shopping tab</div></div>
-                    <div className="scorecard-val" style={{ fontSize: 15 }}>Long tail</div>
-                  </div>
-                  <div className="scorecard-row">
-                    <div><div className="scorecard-metric">AI answers</div><div className="scorecard-note">AI Overviews, ChatGPT, Perplexity</div></div>
-                    <div className="scorecard-val" style={{ color: T.green, fontSize: 15 }}>Growing</div>
+        <div className="wrap byline">
+          <div className="av">BB</div>
+          <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
+          <div className="upd">Last updated<br />26 September 2026</div>
+        </div>
+
+        {/* ═══ ANSWER-FIRST DEFINITION (GEO) → Family A facts ═══ */}
+        <section className="section facts" id="facts">
+          <div className="wrap">
+            <div className="section-head">
+              <h2 data-speakable="true">What does an ecommerce SEO agency do for an Australian online store?</h2>
+            </div>
+            <div className="factswrap">
+              <div className="factlist">
+                <div className="fact">
+                  <div className="sec">§01</div>
+                  <p data-speakable="true">
+                    <span className="stat">An ecommerce SEO agency gets a store’s category and product pages found when people search for what
+                    it sells.</span> It fixes duplicate and filtered URLs, writes collection pages, improves product data, sets
+                    up Google Shopping free listings and prepares products for AI answers, then reports on organic
+                    revenue, not just rankings.
+                  </p>
+                </div>
+                <div className="fact">
+                  <div className="sec">§02</div>
+                  <div>
+                    <div className="factlabel">Three terms we use a lot</div>
+                    <p>
+                      A <b>collection</b> (Shopify’s word for a category page) groups products, such as &ldquo;linen
+                      sheets&rdquo;. <b>Faceted navigation</b> means the filters for size, colour and price, which can create
+                      thousands of near-identical URLs. <b>Structured data</b> is hidden code that tells Google a page’s
+                      price, stock and reviews, so products can show richer results.
+                    </p>
                   </div>
                 </div>
+                <div className="fact">
+                  <div className="sec">§03</div>
+                  <p>
+                    Ecommerce SEO is the fastest-growing SEO topic we measured in Australia: search interest roughly doubled
+                    on a year earlier. Most agencies selling it are SEO specialists who hand you a list of fixes. That is
+                    fine until the fix lives in your theme code and nobody can action it. We are a build team as well as an
+                    SEO team, so the audit, the fix and the follow-up happen in one place.
+                  </p>
+                </div>
               </div>
+              <VisualSlot page={PAGE_KEY} slot="facts" kind="photo" ratio="3:2" className="factphoto"
+                subject="A homewares store founder and an ecommerce SEO consultant arranging blank cards into a category tree on a wall">
+                <img src="/images/au/ecommerce-seo/ecommerce-seo-hero.webp" width={1400} height={933} loading="lazy" decoding="async" alt="A Melbourne homewares founder and an ecommerce SEO consultant arrange blank cards into a category tree on the wall of her warehouse office, planning the store’s structure" />
+              </VisualSlot>
             </div>
           </div>
         </section>
 
-        {/* ═══ 2. ANSWER-FIRST DEFINITION (GEO) ═══ */}
-        <section className="sec">
+        {/* ═══ EIGHT AREAS (listicle) → capgrid ═══ */}
+        <section className="section capabilities" id="services">
           <div className="wrap">
-            <div className="def" style={{ maxWidth: 940 }} data-speakable="true">
-              <span className="lab">What does an ecommerce SEO agency do for an Australian online store?</span>
-              <p>
-                An ecommerce SEO agency gets a store’s category and product pages found when people search for what
-                it sells. It fixes duplicate and filtered URLs, writes collection pages, improves product data, sets
-                up Google Shopping free listings and prepares products for AI answers, then reports on organic
-                revenue, not just rankings.
-              </p>
-            </div>
-            <div className="def mt-6" style={{ maxWidth: 940 }}>
-              <span className="lab">Three terms we use a lot</span>
-              <p>
-                A <b>collection</b> (Shopify’s word for a category page) groups products, such as &ldquo;linen
-                sheets&rdquo;. <b>Faceted navigation</b> means the filters for size, colour and price, which can create
-                thousands of near-identical URLs. <b>Structured data</b> is hidden code that tells Google a page’s
-                price, stock and reviews, so products can show richer results.
-              </p>
-            </div>
-            <p className="lead mt-8" style={{ maxWidth: 920 }}>
-              Ecommerce SEO is the fastest-growing SEO topic we measured in Australia: search interest roughly doubled
-              on a year earlier. Most agencies selling it are SEO specialists who hand you a list of fixes. That is
-              fine until the fix lives in your theme code and nobody can action it. We are a build team as well as an
-              SEO team, so the audit, the fix and the follow-up happen in one place.
-            </p>
-          </div>
-        </section>
-
-        {/* ═══ 3. FACTS BAND (verified only) ═══ */}
-        <section className="stats-band">
-          <div className="wrap">
-            <ul className="col-4" style={{ gap: 20 }}>
-              {[
-                { v: '500+', t: 'businesses served by FactoryJet since 2014, founder-led on every project', s: 'About FactoryJet', u: '/about' },
-                { v: 'Free', t: 'product listings can show across Google Search, Shopping, Maps and more, if your product data is complete', s: 'Google Merchant Center Help', u: SRC_FREE_LISTINGS },
-                { v: 'Auto', t: 'every Shopify store generates a sitemap.xml with products, collections, pages and blog posts', s: 'Shopify Help Center', u: SRC_SHOPIFY_SITEMAP },
-                { v: 'Block', t: 'filter URLs that do not need to be found, using robots.txt, is one option Google documents for faceted navigation', s: 'Google Search Central', u: SRC_FACETS },
-              ].map((r) => (
-                <li key={r.t}>
-                  <div style={{ fontFamily: T.fd, fontWeight: 800, fontSize: 26, color: T.orange }}>{r.v}</div>
-                  <p style={{ fontSize: 13.5, color: T.ink, marginTop: 4 }}>{r.t}</p>
-                  <a href={r.u} {...(r.u.startsWith('http') ? extLink : {})} style={{ fontFamily: T.fm, fontSize: 10, color: T.n400, textDecoration: 'underline' }}>{r.s}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-
-        {/* ═══ 4. EIGHT AREAS (listicle) ═══ */}
-        <section className="sec-lg dot-grid">
-          <div className="wrap">
-            <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">What ecommerce SEO services cover</span>
+            <div className="section-head">
+              <div className="eyebrow">What ecommerce SEO services cover</div>
               <h2>Ecommerce SEO services: the 8 areas that move an online store</h2>
-              <p className="lead mt-4">
+              <p className="lead">
                 Every store is different, but the work always falls into these eight areas. A good ecommerce SEO
                 strategy decides which ones matter most for your catalogue this quarter, instead of doing a little of
                 everything.
               </p>
             </div>
-            <ol className="col-2 mt-10" style={{ gap: 16, listStyle: 'none', padding: 0 }}>
-              {AREAS.map((a, i) => (
-                <li key={a.t} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
-                  <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.small, minWidth: 30 }}>{String(i + 1).padStart(2, '0')}</span>
-                  <div>
-                    <h3 style={{ fontSize: 18 }}>{a.t}</h3>
-                    <p style={{ marginTop: 6 }}>{a.d}</p>
+            <div className="capgrid">
+              {AREAS.map((a, i) => {
+                const n = String(i + 1).padStart(2, '0');
+                return (
+                  <div key={a.t} className={`cap cap-${i + 1}`}>
+                    <div className="caphead"><span className="capid">CAP‑{n}</span><svg {...CAP_ICON}><path d={AREA_ICONS[i]} /></svg></div>
+                    <VisualSlot page={PAGE_KEY} slot={`capability-${n}`} kind="diagram" ratio="11:4" className="cap-diagram" subject={AREA_SUBJECTS[i]} />
+                    <h3>{a.t}</h3>
+                    <p>{a.d}</p>
                   </div>
-                </li>
-              ))}
-            </ol>
+                );
+              })}
+            </div>
           </div>
         </section>
 
-        {/* ═══ 5. SHOPIFY SEO ═══ */}
-        <section className="sec-lg">
+        {/* ═══ SHOPIFY SEO → facts + "at a glance" panel ═══ */}
+        <section className="section facts" id="shopify-seo">
           <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <span className="eyebrow">Shopify SEO agency</span>
-                <h2>Shopify SEO services: what the platform does for you, and what it leaves to you</h2>
-                <div className="stack mt-6">
-                  <p>
-                    Most Australian online stores we see run on Shopify, and Shopify is a good base for SEO. It hosts
-                    the store on fast infrastructure, sets canonical tags on product pages, lets you edit every title,
-                    meta description and URL handle, and generates a sitemap.xml automatically as you add products,
-                    collections, pages and blog posts.
-                  </p>
+            <div className="section-head">
+              <div className="eyebrow">Shopify SEO agency</div>
+              <h2>Shopify SEO services: what the platform does for you, and what it leaves to you</h2>
+            </div>
+            <div className="factswrap">
+              <div className="factlist">
+                <div className="fact"><div className="sec">§01</div><p>
+                  Most Australian online stores we see run on Shopify, and Shopify is a good base for SEO. It hosts
+                  the store on fast infrastructure, sets canonical tags on product pages, lets you edit every title,
+                  meta description and URL handle, and generates a sitemap.xml automatically as you add products,
+                  collections, pages and blog posts.
+                </p></div>
+                <div className="fact"><div className="sec">§02</div><div>
                   <p>
                     What it does not do is decide your strategy. It will not research which collections Australians
                     search for, write the words on those collections, or stop your theme and apps from creating
                     problems. The four issues we fix most often in Shopify SEO work:
                   </p>
-                  <ol className="scope-list num-list">
-                    <li><b>Collection-path duplicates.</b> Many themes link to products as /collections/name/products/item as well as /products/item. The canonical tag points to the main URL, but internal links split the signal. A small theme edit fixes it.</li>
-                    <li><b>Filtered collection URLs.</b> Filters for size, colour and price can create thousands of URLs. We decide which filtered pages deserve to be found (sometimes &ldquo;black boots&rdquo; is worth a page) and keep the rest out of the crawl.</li>
-                    <li><b>App bloat.</b> Reviews, upsells, pop-ups and SEO apps each add scripts. We remove duplicates and move what we can, such as structured data, into the theme.</li>
-                    <li><b>Empty collections.</b> A grid of products with no introduction gives Google little to rank. A short, useful intro and links to related collections usually help more than any app.</li>
+                  <ol className="au-numlist au-numlist-inline">
+                    <li><span><b>Collection-path duplicates.</b> Many themes link to products as /collections/name/products/item as well as /products/item. The canonical tag points to the main URL, but internal links split the signal. A small theme edit fixes it.</span></li>
+                    <li><span><b>Filtered collection URLs.</b> Filters for size, colour and price can create thousands of URLs. We decide which filtered pages deserve to be found (sometimes &ldquo;black boots&rdquo; is worth a page) and keep the rest out of the crawl.</span></li>
+                    <li><span><b>App bloat.</b> Reviews, upsells, pop-ups and SEO apps each add scripts. We remove duplicates and move what we can, such as structured data, into the theme.</span></li>
+                    <li><span><b>Empty collections.</b> A grid of products with no introduction gives Google little to rank. A short, useful intro and links to related collections usually help more than any app.</span></li>
                   </ol>
+                </div></div>
+                <div className="fact"><div className="sec">§03</div><div>
                   <p>
                     For deeper control, Shopify lets developers edit a robots.txt.liquid file. Shopify’s own help centre
                     calls this an unsupported customisation and warns that incorrect use can result in loss of all
                     traffic, which is why we only change it with a clear reason and test it before and after. As a
                     registered Shopify Partner, we build stores too: see our{' '}
-                    <a href="/au/shopify-development" style={srcLink}>Shopify development services in Australia</a>.
+                    <a href="/au/shopify-development">Shopify development services in Australia</a>.
                   </p>
-                </div>
-                <p style={srcNote}>
-                  Sources: <a href={SRC_SHOPIFY_SITEMAP} {...extLink} style={srcLink}>Shopify Help Center, sitemap</a>;{' '}
-                  <a href={SRC_SHOPIFY_ROBOTS} {...extLink} style={srcLink}>Shopify Help Center, editing robots.txt.liquid</a>.
-                </p>
+                  <p className="au-note">
+                    Sources: <a href={SRC_SHOPIFY_SITEMAP} {...extLink}>Shopify Help Center, sitemap</a>;{' '}
+                    <a href={SRC_SHOPIFY_ROBOTS} {...extLink}>Shopify Help Center, editing robots.txt.liquid</a>.
+                  </p>
+                </div></div>
               </div>
-              <div className="card card-top-orange">
-                <span className="eyebrow">Shopify SEO at a glance</span>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Sitemap.xml</div><div className="scorecard-note">generated automatically</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Built in</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Product canonical tags</div><div className="scorecard-note">point to /products/ URLs</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Built in</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Collection copy and keyword map</div><div className="scorecard-note">research and writing</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Your job</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Filter and duplicate control</div><div className="scorecard-note">theme and robots rules</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Your job</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Rich product data</div><div className="scorecard-note">depends on the theme</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Check it</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Links and mentions</div><div className="scorecard-note">earned over time</div></div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Your job</div></div>
+              <div className="au-panel">
+                <div className="eyebrow">Shopify SEO at a glance</div>
+                <ul className="trigrows">
+                  <li><span className="m">Sitemap.xml</span><span className="n">generated automatically</span><span className="t">Built in</span></li>
+                  <li><span className="m">Product canonical tags</span><span className="n">point to /products/ URLs</span><span className="t">Built in</span></li>
+                  <li><span className="m">Collection copy and keyword map</span><span className="n">research and writing</span><span className="t">Your job</span></li>
+                  <li><span className="m">Filter and duplicate control</span><span className="n">theme and robots rules</span><span className="t">Your job</span></li>
+                  <li><span className="m">Rich product data</span><span className="n">depends on the theme</span><span className="t">Check it</span></li>
+                  <li><span className="m">Links and mentions</span><span className="n">earned over time</span><span className="t">Your job</span></li>
+                </ul>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ═══ 6. PLATFORM TABLE ═══ */}
-        <section className="sec-lg dot-grid">
+        {/* ═══ PLATFORM TABLE → comparison ═══ */}
+        <section className="section comparison" id="platforms">
           <div className="wrap">
-            <span className="eyebrow">WooCommerce, Magento and BigCommerce SEO</span>
-            <h2 style={{ maxWidth: 820 }}>SEO on every major ecommerce platform: what helps, what to watch, what we fix</h2>
-            <p className="lead mt-4" style={{ maxWidth: 760 }}>
-              The principles of SEO for ecommerce do not change between platforms. The plumbing does. This is what we
-              look for first on each one, whether you need a WooCommerce SEO agency, Magento SEO services or help on
-              BigCommerce.
-            </p>
-            <div className="card mt-8" style={{ padding: 0, overflowX: 'auto' }}>
-              <table className="cmp-table" style={{ minWidth: 760 }}>
+            <div className="section-head head-split">
+              <div className="eyebrow">WooCommerce, Magento and BigCommerce SEO</div>
+              <div>
+                <h2>SEO on every major ecommerce platform: what helps, what to watch, what we fix</h2>
+                <p className="lead">
+                  The principles of SEO for ecommerce do not change between platforms. The plumbing does. This is what we
+                  look for first on each one, whether you need a WooCommerce SEO agency, Magento SEO services or help on
+                  BigCommerce.
+                </p>
+              </div>
+            </div>
+            <div className="tablewrap">
+              <table>
                 <thead>
                   <tr>
                     <th>Platform</th>
@@ -531,7 +611,7 @@ export default function EcommerceSeoAUPage() {
                 <tbody>
                   {PLATFORMS.map((r) => (
                     <tr key={r.p}>
-                      <td className="feat">{r.p}</td>
+                      <th scope="row">{r.p}</th>
                       <td>{r.good}</td>
                       <td>{r.watch}</td>
                       <td className="fj">{r.fix}</td>
@@ -540,286 +620,285 @@ export default function EcommerceSeoAUPage() {
                 </tbody>
               </table>
             </div>
-            <p style={srcNote}>
+            <p className="tablenote">
               Choosing or changing platform? Read our guide to{' '}
-              <a href="/blog/best-ecommerce-platform-australia-2026" style={srcLink}>the best ecommerce platform in Australia</a>, or see{' '}
-              <a href="/au/ecommerce-development" style={srcLink}>ecommerce development in Australia</a>.
+              <a href="/blog/best-ecommerce-platform-australia-2026">the best ecommerce platform in Australia</a>, or see{' '}
+              <a href="/au/ecommerce-development">ecommerce development in Australia</a>.
             </p>
           </div>
         </section>
 
-        {/* ═══ 7. CATEGORY VS PRODUCT + PRODUCT PAGES ═══ */}
-        <section className="sec-lg">
-          <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <span className="eyebrow">Category and product page structure</span>
-                <h2>Give every page one job: SEO for ecommerce category pages and product pages</h2>
-                <div className="stack mt-6">
-                  <p>
-                    The most common reason a store stalls is that its pages compete with each other. A collection
-                    called &ldquo;Sheets&rdquo;, a blog post called &ldquo;Best sheets&rdquo; and ten products with
-                    &ldquo;sheets&rdquo; in the title all chase the same search. Google has to guess which one to rank,
-                    and often picks the weakest.
-                  </p>
-                  <p>
-                    <b>Category and collection pages</b> should own the broad terms: &ldquo;linen sheets&rdquo;,
-                    &ldquo;kids’ gumboots&rdquo;, &ldquo;espresso machines&rdquo;. They need a clear title, a short
-                    introduction that helps someone choose, useful filters, and links to closely related collections.
-                  </p>
-                  <p>
-                    <b>Product pages</b> should own the specific terms: the model, colour, size or material. They need
-                    unique descriptions (not the supplier’s copy that fifty other Australian retailers use), real photos
-                    with descriptive alt text, sizes and specifications, delivery times across Australia, and returns
-                    information. Original photography helps twice: it makes pages different from competitors, and it
-                    gives Google Images something unique to show.
-                  </p>
-                  <p>
-                    <b>Guides</b> should own questions: &ldquo;how to choose a thread count&rdquo; or &ldquo;what size
-                    gumboot for a four-year-old&rdquo;. They link to the collections that answer them. When we build a
-                    keyword map, every important term gets exactly one owner.
-                  </p>
-                </div>
-              </div>
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/ecommerce-seo/ecommerce-seo-product.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A small online retailer arranges a folded linen throw and an orange mug on a white paper backdrop in a bright waterside studio, with a camera on a tripod ready for original product photos" style={imgStyle} />
-                <div style={{ padding: '14px 12px 8px' }}>
-                  <span className="eyebrow">Who owns which search</span>
-                  <div className="scorecard-row"><div className="scorecard-metric">Broad category term</div><div className="scorecard-val" style={{ fontSize: 14 }}>Collection</div></div>
-                  <div className="scorecard-row"><div className="scorecard-metric">Model, colour or size</div><div className="scorecard-val" style={{ fontSize: 14 }}>Product</div></div>
-                  <div className="scorecard-row"><div className="scorecard-metric">How to choose, how to use</div><div className="scorecard-val" style={{ fontSize: 14 }}>Guide</div></div>
-                  <div className="scorecard-row"><div className="scorecard-metric">Two pages, same term</div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Merge</div></div>
-                </div>
-              </div>
+        {/* ═══ CATEGORY VS PRODUCT → definition module (image + "who owns which search" left, copy right) ═══ */}
+        <section className="definition" id="page-structure">
+          <div>
+            <VisualSlot page={PAGE_KEY} slot="definition" kind="photo" ratio="3:2" className="definition-image"
+              subject="A small online retailer setting up original product photos of a linen throw and a mug on a white backdrop">
+              <img src="/images/au/ecommerce-seo/ecommerce-seo-product.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A small online retailer arranges a folded linen throw and an orange mug on a white paper backdrop in a bright waterside studio, with a camera on a tripod ready for original product photos" />
+            </VisualSlot>
+            <div className="au-panel definition-panel">
+              <div className="eyebrow">Who owns which search</div>
+              <ul className="trigrows">
+                <li><span className="m">Broad category term</span><span className="t">Collection</span></li>
+                <li><span className="m">Model, colour or size</span><span className="t">Product</span></li>
+                <li><span className="m">How to choose, how to use</span><span className="t">Guide</span></li>
+                <li><span className="m">Two pages, same term</span><span className="t">Merge</span></li>
+              </ul>
             </div>
+          </div>
+          <div className="definition-copy">
+            <div className="eyebrow">Category and product page structure</div>
+            <h2>Give every page one job: SEO for ecommerce category pages and product pages</h2>
+            <p>
+              The most common reason a store stalls is that its pages compete with each other. A collection
+              called &ldquo;Sheets&rdquo;, a blog post called &ldquo;Best sheets&rdquo; and ten products with
+              &ldquo;sheets&rdquo; in the title all chase the same search. Google has to guess which one to rank,
+              and often picks the weakest.
+            </p>
+            <p>
+              <b>Category and collection pages</b> should own the broad terms: &ldquo;linen sheets&rdquo;,
+              &ldquo;kids’ gumboots&rdquo;, &ldquo;espresso machines&rdquo;. They need a clear title, a short
+              introduction that helps someone choose, useful filters, and links to closely related collections.
+            </p>
+            <p>
+              <b>Product pages</b> should own the specific terms: the model, colour, size or material. They need
+              unique descriptions (not the supplier’s copy that fifty other Australian retailers use), real photos
+              with descriptive alt text, sizes and specifications, delivery times across Australia, and returns
+              information. Original photography helps twice: it makes pages different from competitors, and it
+              gives Google Images something unique to show.
+            </p>
+            <p>
+              <b>Guides</b> should own questions: &ldquo;how to choose a thread count&rdquo; or &ldquo;what size
+              gumboot for a four-year-old&rdquo;. They link to the collections that answer them. When we build a
+              keyword map, every important term gets exactly one owner.
+            </p>
           </div>
         </section>
 
-        {/* ═══ 8. TECHNICAL SEO FOR LARGE CATALOGUES ═══ */}
-        <section className="sec-lg dot-grid">
+        {/* ═══ TECHNICAL SEO FOR LARGE CATALOGUES → ruled rows ═══ */}
+        <section className="section platforms" id="technical">
           <div className="wrap">
-            <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">Technical SEO for ecommerce</span>
-              <h2>Technical SEO for large catalogues: filters, variants, stock and speed</h2>
-              <p className="lead mt-4">
+            <div className="section-head plat-head">
+              <div>
+                <div className="eyebrow">Technical SEO for ecommerce</div>
+                <h2>Technical SEO for large catalogues: filters, variants, stock and speed</h2>
+              </div>
+              <p>
                 A store with two thousand products can easily expose two hundred thousand URLs once filters, sort
                 orders and variants multiply. Google will not crawl all of them, and it should not have to. The job
                 is deciding which ones matter.
               </p>
             </div>
-            <ul className="col-3 mt-10">
-              <li className="card"><h3>Filtered navigation</h3><p className="mt-4">Google documents several ways to manage faceted navigation, including blocking filter URLs in robots.txt when they do not need to be found, and pointing canonical tags at the unfiltered page. We choose per filter: a popular filter like a brand or colour may deserve its own indexable page, while price sorting never does.</p></li>
-              <li className="card"><h3>Variants</h3><p className="mt-4">Sizes and colours usually belong on one product page with a selector, not on separate thin pages. The exception is when people search for a variant by name, such as a specific colourway, and it has its own photos.</p></li>
-              <li className="card"><h3>Out-of-stock and discontinued</h3><p className="mt-4">Coming back: keep the page, mark it out of stock, show alternatives. Gone for good with traffic or links: redirect to the closest match. Never had traffic: let it return a 404. Mass-deleting old products is a classic way to lose rankings.</p></li>
-              <li className="card"><h3>Speed on mobile</h3><p className="mt-4">Most Australian shoppers browse on phones. We look at real-user Core Web Vitals, image sizes, fonts, and the apps and tracking scripts that load before the product does.</p></li>
-              <li className="card"><h3>Pagination and internal links</h3><p className="mt-4">Deep products need a path from the homepage. We check that paginated collections are crawlable, that breadcrumbs work, and that important collections are linked from the menu and footer, not only from JavaScript menus.</p></li>
-              <li className="card"><h3>International and B2B</h3><p className="mt-4">Selling to New Zealand or overseas means separate currencies and sometimes separate URLs with hreflang tags. B2B stores need public, crawlable catalogue pages while trade pricing stays behind a login.</p></li>
-            </ul>
-            <p style={srcNote}>
-              Source: <a href={SRC_FACETS} {...extLink} style={srcLink}>Google Search Central, managing crawling of faceted navigation URLs</a>.
+            <div className="platlist" role="list">
+              <div className="plat plat-2col" role="listitem"><span className="capid">01</span><div className="plat-name"><h3>Filtered navigation</h3></div><p className="plat-build">Google documents several ways to manage faceted navigation, including blocking filter URLs in robots.txt when they do not need to be found, and pointing canonical tags at the unfiltered page. We choose per filter: a popular filter like a brand or colour may deserve its own indexable page, while price sorting never does.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">02</span><div className="plat-name"><h3>Variants</h3></div><p className="plat-build">Sizes and colours usually belong on one product page with a selector, not on separate thin pages. The exception is when people search for a variant by name, such as a specific colourway, and it has its own photos.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">03</span><div className="plat-name"><h3>Out-of-stock and discontinued</h3></div><p className="plat-build">Coming back: keep the page, mark it out of stock, show alternatives. Gone for good with traffic or links: redirect to the closest match. Never had traffic: let it return a 404. Mass-deleting old products is a classic way to lose rankings.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">04</span><div className="plat-name"><h3>Speed on mobile</h3></div><p className="plat-build">Most Australian shoppers browse on phones. We look at real-user Core Web Vitals, image sizes, fonts, and the apps and tracking scripts that load before the product does.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">05</span><div className="plat-name"><h3>Pagination and internal links</h3></div><p className="plat-build">Deep products need a path from the homepage. We check that paginated collections are crawlable, that breadcrumbs work, and that important collections are linked from the menu and footer, not only from JavaScript menus.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">06</span><div className="plat-name"><h3>International and B2B</h3></div><p className="plat-build">Selling to New Zealand or overseas means separate currencies and sometimes separate URLs with hreflang tags. B2B stores need public, crawlable catalogue pages while trade pricing stays behind a login.</p></div>
+            </div>
+            <p className="sub-note">
+              Source: <a href={SRC_FACETS} {...extLink}>Google Search Central, managing crawling of faceted navigation URLs</a>.
             </p>
           </div>
         </section>
 
-        <MidPageCTA
-          headline={'Store traffic flat, or rankings slipping after a redesign?'}
-          sub={'Send us your store URL. On a short call with the founder, we will walk through what we found, the three fixes that matter most, and whether you need an agency at all.'}
-          label={'Review my store’s SEO'}
-        />
+        <div className="au-midcta">
+          <MidPageCTA
+            headline={'Store traffic flat, or rankings slipping after a redesign?'}
+            sub={'Send us your store URL. On a short call with the founder, we will walk through what we found, the three fixes that matter most, and whether you need an agency at all.'}
+            label={'Review my store’s SEO'}
+          />
+        </div>
 
-        {/* ═══ 9. GOOGLE SHOPPING FREE LISTINGS + STRUCTURED DATA ═══ */}
-        <section className="sec-lg">
+        {/* ═══ GOOGLE SHOPPING FREE LISTINGS + STRUCTURED DATA → facts + checklist panel ═══ */}
+        <section className="section facts" id="free-listings">
           <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <span className="eyebrow">Google Shopping free listings</span>
-                <h2>Getting products into Google Shopping free listings and rich results</h2>
-                <div className="stack mt-6">
-                  <p>
-                    Many Australian store owners think the Shopping tab is only for ads. It is not. Google Merchant
-                    Center Help says free listings can show your products at no cost across Google Search, the
-                    Shopping tab, Maps and more. The catch is data quality: Google says products are not guaranteed to
-                    show, because it relies on the data you give it to match your products to searches.
-                  </p>
-                  <p>
-                    <b>What Google asks for.</b> Titles, prices, images, descriptions and availability for every
-                    product. Shipping settings, which Merchant Center requires for stores in Australia. And your returns
-                    policy on the website, so it can appear next to your products. Your feed price also needs to match
-                    the price shoppers see on the page, including GST.
-                  </p>
-                  <p>
-                    <b>Structured data on the page.</b> Google’s product structured data documentation describes two
-                    types: product snippets, which can show price, availability, reviews and shipping in normal search
-                    results, and merchant listings, for pages where people can buy. We build this markup into the theme
-                    so it always matches what the page shows.
-                  </p>
+            <div className="section-head">
+              <div className="eyebrow">Google Shopping free listings</div>
+              <h2>Getting products into Google Shopping free listings and rich results</h2>
+            </div>
+            <div className="factswrap">
+              <div className="factlist">
+                <div className="fact"><div className="sec">§01</div><p>
+                  Many Australian store owners think the Shopping tab is only for ads. It is not. Google Merchant
+                  Center Help says free listings can show your products at no cost across Google Search, the
+                  Shopping tab, Maps and more. The catch is data quality: Google says products are not guaranteed to
+                  show, because it relies on the data you give it to match your products to searches.
+                </p></div>
+                <div className="fact"><div className="sec">§02</div><p>
+                  <b>What Google asks for.</b> Titles, prices, images, descriptions and availability for every
+                  product. Shipping settings, which Merchant Center requires for stores in Australia. And your returns
+                  policy on the website, so it can appear next to your products. Your feed price also needs to match
+                  the price shoppers see on the page, including GST.
+                </p></div>
+                <div className="fact"><div className="sec">§03</div><p>
+                  <b>Structured data on the page.</b> Google’s product structured data documentation describes two
+                  types: product snippets, which can show price, availability, reviews and shipping in normal search
+                  results, and merchant listings, for pages where people can buy. We build this markup into the theme
+                  so it always matches what the page shows.
+                </p></div>
+                <div className="fact"><div className="sec">§04</div><div>
                   <p>
                     <b>Reviews, done honestly.</b> Star ratings help, but only genuine ones. The ACCC says it is against
                     the law to create fake or misleading reviews, to suppress genuine negative ones, or to offer
                     incentives only for positive reviews. We set up review requests after delivery and never write or
                     buy reviews.
                   </p>
-                </div>
-                <p style={srcNote}>
-                  Sources: <a href={SRC_FREE_LISTINGS} {...extLink} style={srcLink}>Google Merchant Center Help, free listings</a>;{' '}
-                  <a href={SRC_PRODUCT_SD} {...extLink} style={srcLink}>Google Search Central, Product structured data</a>;{' '}
-                  <a href={SRC_ACCC_REVIEWS} {...extLink} style={srcLink}>ACCC, online reviews</a>. General information, not legal advice.
-                </p>
+                  <p className="au-note">
+                    Sources: <a href={SRC_FREE_LISTINGS} {...extLink}>Google Merchant Center Help, free listings</a>;{' '}
+                    <a href={SRC_PRODUCT_SD} {...extLink}>Google Search Central, Product structured data</a>;{' '}
+                    <a href={SRC_ACCC_REVIEWS} {...extLink}>ACCC, online reviews</a>. General information, not legal advice.
+                  </p>
+                </div></div>
               </div>
-              <div className="card card-top-orange">
-                <span className="eyebrow">Free listings checklist</span>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Merchant Center account</div><div className="scorecard-note">verified and linked to the store</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Set up</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Product feed</div><div className="scorecard-note">titles, prices, images, stock</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Complete</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Shipping settings</div><div className="scorecard-note">required in Australia</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Required</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Returns policy</div><div className="scorecard-note">shown next to products</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Add it</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Price on page matches feed</div><div className="scorecard-note">GST-inclusive, same everywhere</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Match</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Disapproved products</div><div className="scorecard-note">checked every month</div></div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Fixed</div></div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ═══ 10. AI SEARCH FOR PRODUCTS ═══ */}
-        <section className="sec-lg dot-grid">
-          <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <span className="eyebrow">AI SEO for ecommerce</span>
-                <h2>How products show up when people ask ChatGPT, Perplexity or Google AI what to buy</h2>
-                <div className="stack mt-6">
-                  <p>
-                    Shoppers increasingly start with a question rather than a keyword: &ldquo;what are good waterproof
-                    hiking boots for wide feet?&rdquo; Google answers with AI Overviews and AI Mode, and assistants such
-                    as ChatGPT and Perplexity now show product suggestions of their own. Those answers are built from
-                    pages and product data the systems can find and trust.
-                  </p>
-                  <p>
-                    Nobody can buy a guaranteed placement in those answers, and you should be wary of anyone who says
-                    they can. What you can do is make your products easy to understand and easy to cite:
-                  </p>
-                  <ul className="scope-list">
-                    <li><b>Complete product facts.</b> Materials, dimensions, fit, compatibility, care, warranty and delivery times, written as plain text, not only inside images.</li>
-                    <li><b>Collection pages that explain.</b> A short guide to choosing within the category gives AI systems something quotable.</li>
-                    <li><b>Buying guides that answer real questions.</b> The same questions shoppers ask assistants, answered directly.</li>
-                    <li><b>Mentions beyond your own site.</b> Reviews, gift guides, news and comparison articles that name your brand.</li>
-                    <li><b>Clean product data.</b> Consistent structured data and a healthy Merchant Center feed.</li>
-                  </ul>
-                  <p>
-                    This is the same work as good ecommerce SEO, pointed at a new kind of search. For the full picture,
-                    see <a href="/au/ai-seo" style={srcLink}>AI SEO in Australia</a> or our guide on{' '}
-                    <a href="/blog/how-to-get-chatgpt-to-recommend-your-business-2026" style={srcLink}>how to get ChatGPT to recommend your business</a>.
-                  </p>
-                </div>
-              </div>
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/ecommerce-seo/ecommerce-seo-aisearch.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over the shoulder of a Brisbane shopper on his sofa asking an AI assistant on his phone for shoe recommendations, with three product photos in the chat" style={imgStyle} />
-                <div style={{ padding: '14px 12px 8px' }}>
-                  <p style={{ fontSize: 14 }}>
-                    When a shopper asks an assistant what to buy, the answer draws on pages and product data it can
-                    trust. Complete facts and genuine mentions make your products easier to recommend.
-                  </p>
-                </div>
+              <div className="au-panel">
+                <div className="eyebrow">Free listings checklist</div>
+                <ul className="trigrows">
+                  <li><span className="m">Merchant Center account</span><span className="n">verified and linked to the store</span><span className="t">Set up</span></li>
+                  <li><span className="m">Product feed</span><span className="n">titles, prices, images, stock</span><span className="t">Complete</span></li>
+                  <li><span className="m">Shipping settings</span><span className="n">required in Australia</span><span className="t">Required</span></li>
+                  <li><span className="m">Returns policy</span><span className="n">shown next to products</span><span className="t">Add it</span></li>
+                  <li><span className="m">Price on page matches feed</span><span className="n">GST-inclusive, same everywhere</span><span className="t">Match</span></li>
+                  <li><span className="m">Disapproved products</span><span className="n">checked every month</span><span className="t">Fixed</span></li>
+                </ul>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ═══ 11. MIGRATION PROTECTION ═══ */}
-        <section className="sec-lg">
+        {/* ═══ AI SEARCH FOR PRODUCTS → definition module (image left, copy right) ═══ */}
+        <section className="definition" id="ai-search">
+          <div>
+            <VisualSlot page={PAGE_KEY} slot="definition-2" kind="photo" ratio="3:2" className="definition-image"
+              subject="A shopper on his sofa asking an AI assistant on his phone for shoe recommendations">
+              <img src="/images/au/ecommerce-seo/ecommerce-seo-aisearch.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over the shoulder of a Brisbane shopper on his sofa asking an AI assistant on his phone for shoe recommendations, with three product photos in the chat" />
+            </VisualSlot>
+            <p className="figcap">
+              When a shopper asks an assistant what to buy, the answer draws on pages and product data it can
+              trust. Complete facts and genuine mentions make your products easier to recommend.
+            </p>
+          </div>
+          <div className="definition-copy">
+            <div className="eyebrow">AI SEO for ecommerce</div>
+            <h2>How products show up when people ask ChatGPT, Perplexity or Google AI what to buy</h2>
+            <p>
+              Shoppers increasingly start with a question rather than a keyword: &ldquo;what are good waterproof
+              hiking boots for wide feet?&rdquo; Google answers with AI Overviews and AI Mode, and assistants such
+              as ChatGPT and Perplexity now show product suggestions of their own. Those answers are built from
+              pages and product data the systems can find and trust.
+            </p>
+            <p>
+              Nobody can buy a guaranteed placement in those answers, and you should be wary of anyone who says
+              they can. What you can do is make your products easy to understand and easy to cite:
+            </p>
+            <ul className="chg-list chg-list-1col">
+              <li><span><b>Complete product facts.</b> Materials, dimensions, fit, compatibility, care, warranty and delivery times, written as plain text, not only inside images.</span></li>
+              <li><span><b>Collection pages that explain.</b> A short guide to choosing within the category gives AI systems something quotable.</span></li>
+              <li><span><b>Buying guides that answer real questions.</b> The same questions shoppers ask assistants, answered directly.</span></li>
+              <li><span><b>Mentions beyond your own site.</b> Reviews, gift guides, news and comparison articles that name your brand.</span></li>
+              <li><span><b>Clean product data.</b> Consistent structured data and a healthy Merchant Center feed.</span></li>
+            </ul>
+            <p>
+              This is the same work as good ecommerce SEO, pointed at a new kind of search. For the full picture,
+              see <a href="/au/ai-seo">AI SEO in Australia</a> or our guide on{' '}
+              <a href="/blog/how-to-get-chatgpt-to-recommend-your-business-2026">how to get ChatGPT to recommend your business</a>.
+            </p>
+          </div>
+        </section>
+
+        {/* ═══ MIGRATION PROTECTION → facts + photo + checks panel ═══ */}
+        <section className="section facts" id="migration">
           <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <span className="eyebrow">Migration protection</span>
-                <h2>Moving to Shopify or redesigning? Protect the rankings you already have</h2>
-                <div className="stack mt-6">
-                  <p>
-                    A replatform or redesign is the single riskiest moment for a store’s organic traffic. URLs change
-                    (a WooCommerce /product/ path becomes a Shopify /products/ path, Magento category paths disappear),
-                    content gets trimmed, titles reset to defaults, and years of rankings can vanish in a week.
-                  </p>
-                  <p>
-                    Shopify SEO migration work starts before the new store is built. We crawl the old site, pull every
-                    URL that has traffic or links from Search Console and analytics, and build a redirect map so each
-                    old URL sends a 301 (permanent) redirect to its closest new page, in a single hop. We carry titles,
-                    descriptions, reviews and important content across, then test the whole map on a staging copy
-                    before the domain switches.
-                  </p>
-                  <p>
-                    After launch, we watch Search Console daily for the first weeks: crawl errors, pages dropping out of
-                    the index, and redirects that are not behaving. Because we also run migrations as a build team, the
-                    SEO plan and the build plan are one plan. For Magento stores, our{' '}
-                    <a href="/blog/magento-to-shopify-plus-migration-checklist-2026" style={srcLink}>Magento to Shopify Plus migration checklist</a>{' '}
-                    goes step by step.
-                  </p>
+            <div className="section-head">
+              <div className="eyebrow">Migration protection</div>
+              <h2>Moving to Shopify or redesigning? Protect the rankings you already have</h2>
+            </div>
+            <div className="factswrap">
+              <div className="factlist">
+                <div className="fact"><div className="sec">§01</div><p>
+                  A replatform or redesign is the single riskiest moment for a store’s organic traffic. URLs change
+                  (a WooCommerce /product/ path becomes a Shopify /products/ path, Magento category paths disappear),
+                  content gets trimmed, titles reset to defaults, and years of rankings can vanish in a week.
+                </p></div>
+                <div className="fact"><div className="sec">§02</div><p>
+                  Shopify SEO migration work starts before the new store is built. We crawl the old site, pull every
+                  URL that has traffic or links from Search Console and analytics, and build a redirect map so each
+                  old URL sends a 301 (permanent) redirect to its closest new page, in a single hop. We carry titles,
+                  descriptions, reviews and important content across, then test the whole map on a staging copy
+                  before the domain switches.
+                </p></div>
+                <div className="fact"><div className="sec">§03</div><p>
+                  After launch, we watch Search Console daily for the first weeks: crawl errors, pages dropping out of
+                  the index, and redirects that are not behaving. Because we also run migrations as a build team, the
+                  SEO plan and the build plan are one plan. For Magento stores, our{' '}
+                  <a href="/blog/magento-to-shopify-plus-migration-checklist-2026">Magento to Shopify Plus migration checklist</a>{' '}
+                  goes step by step.
+                </p></div>
+                <div className="fact"><div className="sec">§04</div>
+                  <div className="au-panel">
+                    <div className="eyebrow">Migration checks we never skip</div>
+                    <ul className="trigrows">
+                      <li><span className="m">Full crawl of the old store</span><span className="n">plus Search Console and analytics URLs</span><span className="t">Before</span></li>
+                      <li><span className="m">301 redirect map, one hop</span><span className="n">no chains, no redirects to the homepage</span><span className="t">Before</span></li>
+                      <li><span className="m">Titles, content and reviews moved</span><span className="n">not reset to theme defaults</span><span className="t">During</span></li>
+                      <li><span className="m">Daily Search Console checks</span><span className="n">for the first weeks after launch</span><span className="t">After</span></li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-              <div className="stack">
-                <figure className="card" style={{ padding: 8, margin: 0 }}>
-                  <img src="/images/au/ecommerce-seo/ecommerce-seo-migration.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over the shoulder of a FactoryJet engineer in a Sydney office reviewing a redirect map that links old store pages to new ones across two monitors" style={imgStyle} />
-                  <figcaption style={{ padding: '12px 10px 6px', fontSize: 14 }}>
-                    Every old URL with traffic or links gets one new home, tested on a copy of the store before launch.
-                  </figcaption>
-                </figure>
-                <div className="card card-top-orange">
-                  <span className="eyebrow">Migration checks we never skip</span>
-                  <div className="scorecard-row"><div><div className="scorecard-metric">Full crawl of the old store</div><div className="scorecard-note">plus Search Console and analytics URLs</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Before</div></div>
-                  <div className="scorecard-row"><div><div className="scorecard-metric">301 redirect map, one hop</div><div className="scorecard-note">no chains, no redirects to the homepage</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Before</div></div>
-                  <div className="scorecard-row"><div><div className="scorecard-metric">Titles, content and reviews moved</div><div className="scorecard-note">not reset to theme defaults</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>During</div></div>
-                  <div className="scorecard-row"><div><div className="scorecard-metric">Daily Search Console checks</div><div className="scorecard-note">for the first weeks after launch</div></div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>After</div></div>
-                </div>
-              </div>
+              <VisualSlot page={PAGE_KEY} slot="facts-2" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
+                subject="An engineer reviewing a redirect map that links old store pages to new ones across two monitors"
+                caption="Every old URL with traffic or links gets one new home, tested on a copy of the store before launch.">
+                <img src="/images/au/ecommerce-seo/ecommerce-seo-migration.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over the shoulder of a FactoryJet engineer in a Sydney office reviewing a redirect map that links old store pages to new ones across two monitors" />
+              </VisualSlot>
             </div>
           </div>
         </section>
 
-        {/* ═══ 12. FIT CHECK (interactive, <details>) ═══ */}
-        <section className="sec-lg dot-grid">
+        {/* ═══ FIT CHECK (<details>) → vlog, questions panel under the sticky head ═══ */}
+        <section className="vlog" id="fit-check">
           <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <span className="eyebrow">Which option fits you?</span>
-                <h2>A 30-second check: do it yourself, audit, consultant or ecommerce SEO agency</h2>
-                <p className="lead mt-4" style={{ maxWidth: 560 }}>
-                  Tap the line that sounds most like your store. The answer is honest, even when it is not us.
-                </p>
-                <div className="card mt-6" style={{ padding: '4px 20px' }}>
-                  {FIT_CHECK.map((f) => (
-                    <details key={f.q}>
-                      <summary style={{ gap: 16, textAlign: 'left' }}>{f.q}</summary>
-                      <div style={{ paddingBottom: 18 }}>
-                        <span style={{ fontFamily: T.fm, fontSize: 10, background: T.small, color: '#fff', borderRadius: 999, padding: '3px 9px', letterSpacing: '.06em' }}>{f.verdict}</span>
-                        <p style={{ marginTop: 10 }}>{f.a}</p>
-                      </div>
-                    </details>
-                  ))}
-                </div>
-              </div>
-              <div className="card card-top-orange">
-                <span className="eyebrow">Questions to ask any ecommerce SEO company, including us</span>
-                <ol className="scope-list num-list mt-4">
-                  <li><b>Who will edit my theme?</b> If the answer is &ldquo;your developer&rdquo;, ask how fixes get done.</li>
-                  <li><b>What do you report on?</b> Organic revenue and indexed pages matter more than a ranking chart.</li>
-                  <li><b>Show me work on my platform.</b> Shopify, WooCommerce and Magento need different skills.</li>
-                  <li><b>How do you earn links?</b> Avoid anyone selling link packages or bulk directory listings.</li>
-                  <li><b>What do I own?</b> Search Console, analytics, Merchant Center and content should all be in your name.</li>
-                  <li><b>What if I leave?</b> You should be able to walk away with everything, with no lock-in.</li>
+            <div className="section-head">
+              <div className="eyebrow">Which option fits you?</div>
+              <h2>A 30-second check: do it yourself, audit, consultant or ecommerce SEO agency</h2>
+              <p>Tap the line that sounds most like your store. The answer is honest, even when it is not us.</p>
+              <div className="au-panel vlog-panel">
+                <div className="eyebrow">Questions to ask any ecommerce SEO company, including us</div>
+                <ol className="au-numlist">
+                  <li><span><b>Who will edit my theme?</b> If the answer is &ldquo;your developer&rdquo;, ask how fixes get done.</span></li>
+                  <li><span><b>What do you report on?</b> Organic revenue and indexed pages matter more than a ranking chart.</span></li>
+                  <li><span><b>Show me work on my platform.</b> Shopify, WooCommerce and Magento need different skills.</span></li>
+                  <li><span><b>How do you earn links?</b> Avoid anyone selling link packages or bulk directory listings.</span></li>
+                  <li><span><b>What do I own?</b> Search Console, analytics, Merchant Center and content should all be in your name.</span></li>
+                  <li><span><b>What if I leave?</b> You should be able to walk away with everything, with no lock-in.</span></li>
                 </ol>
               </div>
             </div>
+            <div className="ventries">
+              {FIT_CHECK.map((f) => (
+                <details key={f.q} className="ventry">
+                  <summary><h3>{f.q}</h3><span className="chev" aria-hidden="true">+</span></summary>
+                  <span className="vtag">{f.verdict}</span>
+                  <p>{f.a}</p>
+                </details>
+              ))}
+            </div>
           </div>
         </section>
 
-        {/* ═══ 13. COMPARISON TABLE ═══ */}
-        <section className="sec-lg">
+        {/* ═══ COMPARISON TABLE ═══ */}
+        <section className="section" id="comparison">
           <div className="wrap">
-            <span className="eyebrow">Side by side</span>
-            <h2 style={{ maxWidth: 820 }}>Doing it yourself vs a freelancer vs an SEO-only agency vs an ecommerce SEO agency that builds stores</h2>
-            <p className="lead mt-4" style={{ maxWidth: 760 }}>
-              Four common ways Australian stores handle SEO. Each suits someone. This compares what changes day to day,
-              not price.
-            </p>
-            <div className="card mt-8" style={{ padding: 0, overflowX: 'auto' }}>
-              <table className="cmp-table" style={{ minWidth: 760 }}>
+            <div className="section-head">
+              <div className="eyebrow">Side by side</div>
+              <h2>Doing it yourself vs a freelancer vs an SEO-only agency vs an ecommerce SEO agency that builds stores</h2>
+              <p className="lead">
+                Four common ways Australian stores handle SEO. Each suits someone. This compares what changes day to day,
+                not price.
+              </p>
+            </div>
+            <div className="tablewrap">
+              <table>
                 <thead>
                   <tr>
                     <th>What you get</th>
@@ -830,56 +909,53 @@ export default function EcommerceSeoAUPage() {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td className="feat">Finds the problems</td><td className="fj"><span className="yes">Full audit</span></td><td><span className="yes">Full audit</span></td><td><span className="partial">Depends on the person</span></td><td><span className="partial">With free tools</span></td></tr>
-                  <tr><td className="feat">Fixes theme and code</td><td className="fj"><span className="yes">Yes, in-house developers</span></td><td><span className="partial">Often hands it to your developer</span></td><td><span className="partial">Sometimes</span></td><td><span className="no">Rarely</span></td></tr>
-                  <tr><td className="feat">Collection and product copy</td><td className="fj"><span className="yes">Yes</span></td><td><span className="yes">Yes</span></td><td><span className="partial">Sometimes</span></td><td><span className="yes">Yes, if you have time</span></td></tr>
-                  <tr><td className="feat">Merchant Center and free listings</td><td className="fj"><span className="yes">Yes</span></td><td><span className="partial">Often a paid media team</span></td><td><span className="partial">Sometimes</span></td><td><span className="partial">Possible</span></td></tr>
-                  <tr><td className="feat">Migration protection</td><td className="fj"><span className="yes">SEO and build in one plan</span></td><td><span className="partial">Advice to your build team</span></td><td><span className="partial">Advice</span></td><td><span className="no">High risk</span></td></tr>
-                  <tr><td className="feat">AI search visibility</td><td className="fj"><span className="yes">Included</span></td><td><span className="partial">Varies</span></td><td><span className="partial">Varies</span></td><td><span className="partial">Basics</span></td></tr>
-                  <tr><td className="feat">Links and mentions</td><td className="fj"><span className="yes">Earned, never bought</span></td><td><span className="yes">Usually a strength</span></td><td><span className="partial">Varies</span></td><td><span className="partial">Slow</span></td></tr>
-                  <tr><td className="feat">Who owns accounts and content</td><td className="fj"><span className="yes">You do</span></td><td><span className="partial">Check the contract</span></td><td><span className="partial">Check</span></td><td><span className="yes">You do</span></td></tr>
-                  <tr><td className="feat">Support after the project</td><td className="fj"><span className="yes">Same team, ongoing</span></td><td><span className="yes">Monthly retainer</span></td><td><span className="partial">If available</span></td><td>You</td></tr>
+                  <tr><th scope="row">Finds the problems</th><td className="fj">Full audit</td><td>Full audit</td><td>Depends on the person</td><td>With free tools</td></tr>
+                  <tr><th scope="row">Fixes theme and code</th><td className="fj">Yes, in-house developers</td><td>Often hands it to your developer</td><td>Sometimes</td><td>Rarely</td></tr>
+                  <tr><th scope="row">Collection and product copy</th><td className="fj">Yes</td><td>Yes</td><td>Sometimes</td><td>Yes, if you have time</td></tr>
+                  <tr><th scope="row">Merchant Center and free listings</th><td className="fj">Yes</td><td>Often a paid media team</td><td>Sometimes</td><td>Possible</td></tr>
+                  <tr><th scope="row">Migration protection</th><td className="fj">SEO and build in one plan</td><td>Advice to your build team</td><td>Advice</td><td>High risk</td></tr>
+                  <tr><th scope="row">AI search visibility</th><td className="fj">Included</td><td>Varies</td><td>Varies</td><td>Basics</td></tr>
+                  <tr><th scope="row">Links and mentions</th><td className="fj">Earned, never bought</td><td>Usually a strength</td><td>Varies</td><td>Slow</td></tr>
+                  <tr><th scope="row">Who owns accounts and content</th><td className="fj">You do</td><td>Check the contract</td><td>Check</td><td>You do</td></tr>
+                  <tr><th scope="row">Support after the project</th><td className="fj">Same team, ongoing</td><td>Monthly retainer</td><td>If available</td><td>You</td></tr>
                 </tbody>
               </table>
             </div>
-            <p style={srcNote}>
+            <p className="tablenote">
               Comparing costs? Our{' '}
-              <a href="/blog/seo-cost-australia-2026" style={srcLink}>SEO cost guide for Australia</a> and{' '}
-              <a href="/blog/shopify-cost-australia-2026" style={srcLink}>Shopify cost guide for Australia</a>{' '}
+              <a href="/blog/seo-cost-australia-2026">SEO cost guide for Australia</a> and{' '}
+              <a href="/blog/shopify-cost-australia-2026">Shopify cost guide for Australia</a>{' '}
               show typical market ranges from third-party sources. We do not publish a price list.
             </p>
           </div>
         </section>
 
-        {/* ═══ 14. AUDIT (interactive, <details>) ═══ */}
-        <section className="sec-lg dot-grid" id="audit">
+        {/* ═══ AUDIT (<details>) → facts layout: head + demand panel left, openable parts right ═══ */}
+        <section className="section facts" id="audit">
           <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <span className="eyebrow">Ecommerce SEO audit</span>
-                <h2>What our ecommerce SEO audit checks, in eight parts</h2>
-                <p className="lead mt-4" style={{ maxWidth: 560 }}>
-                  An audit should end with a short list of what to fix first, not a two-hundred-page export. Open any
-                  part to see what we look at. You keep the report whatever you decide next.
-                </p>
-                <div className="card mt-6" style={{ padding: '4px 20px' }}>
+            <div className="section-head">
+              <div className="eyebrow">Ecommerce SEO audit</div>
+              <h2>What our ecommerce SEO audit checks, in eight parts</h2>
+              <p className="lead">
+                An audit should end with a short list of what to fix first, not a two-hundred-page export. Open any
+                part to see what we look at. You keep the report whatever you decide next.
+              </p>
+            </div>
+            <div className="factswrap">
+              <div className="factlist">
+                <div className="ventries">
                   {AUDIT.map((a, i) => (
-                    <details key={a.t}>
-                      <summary style={{ gap: 16, textAlign: 'left' }}>
-                        <span><span style={{ fontFamily: T.fm, color: T.small, marginRight: 12 }}>{String(i + 1).padStart(2, '0')}</span>{a.t}</span>
-                      </summary>
-                      <p style={{ paddingBottom: 18 }}>{a.d}</p>
+                    <details key={a.t} className="ventry ventry-num">
+                      <summary><h3><span className="ventry-n">{String(i + 1).padStart(2, '0')}</span>{a.t}</h3><span className="chev" aria-hidden="true">+</span></summary>
+                      <p>{a.d}</p>
                     </details>
                   ))}
                 </div>
               </div>
-              <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: `1px solid ${T.n200}`, padding: '14px 18px' }}>
-                  <span style={{ fontFamily: T.fm, fontSize: 10, letterSpacing: '.13em', textTransform: 'uppercase', color: T.n400 }}>Australia · Monthly Search Demand</span>
-                  <span style={{ background: T.small, color: '#fff', fontFamily: T.fm, fontSize: 10, borderRadius: 999, padding: '3px 9px' }}>DataForSEO</span>
-                </div>
-                <div style={{ padding: '4px 18px 14px' }}>
-                  <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
+              <div className="factphoto">
+                <div className="demand">
+                  <div className="demand-head"><span>Australia · Monthly Search Demand</span><b>DataForSEO</b></div>
+                  <ul>
                     {[
                       { kw: 'ecommerce seo', v: '480', w: '100%', kd: 'The head term' },
                       { kw: 'magento seo services', v: '480', w: '100%', kd: 'Magento and Adobe Commerce stores' },
@@ -891,107 +967,111 @@ export default function EcommerceSeoAUPage() {
                       { kw: 'ecommerce seo audit', v: '70', w: '15%', kd: 'The usual first step' },
                     ].map((r) => (
                       <li key={r.kw} className="demand-row">
-                        <div className="demand-top"><span className="demand-kw">{r.kw}</span><span className="demand-v">{r.v}<span style={{ fontSize: 9, color: T.n400 }}> searches</span></span></div>
+                        <div className="demand-top"><span className="demand-kw">{r.kw}</span><span className="demand-v">{r.v}<small> searches</small></span></div>
                         <div className="demand-bar"><i style={{ width: r.w }} /></div>
                         <div className="demand-kd">{r.kd}</div>
                       </li>
                     ))}
                   </ul>
-                  <p style={{ textAlign: 'center', fontFamily: T.fm, fontSize: 10, color: T.n400, marginTop: 10 }}>Source: DataForSEO, Australia, September 2026</p>
+                  <p className="demand-src">Source: DataForSEO, Australia, September 2026</p>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ═══ 15. PROCESS (interactive, <details>) + ENGAGEMENT SHAPES ═══ */}
-        <section className="sec-lg" id="how-we-work">
+        {/* ═══ PHOTOBREAK (US template visual, no AU image yet) ═══ */}
+        <VisualSlot page={PAGE_KEY} slot="photobreak" kind="illustration" ratio="12:5" className="photobreak"
+          subject="AI-generated model: a white online store on a table with category cards, product tags and a single orange redirect arrow, seen from above" />
+
+        {/* ═══ PROCESS (<details>) + ENGAGEMENT SHAPES → timeline with the scope panel beside the head ═══ */}
+        <section className="section process" id="how-we-work">
           <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <span className="eyebrow">How we work</span>
+            <div className="head-media">
+              <div className="section-head">
+                <div className="eyebrow">How we work</div>
                 <h2>How our ecommerce SEO services run, in eight steps</h2>
-                <p className="lead mt-4" style={{ maxWidth: 560 }}>
+                <p className="lead">
                   The same path for a fifty-product boutique in Adelaide and a ten-thousand-SKU retailer in Sydney. The
                   depth changes, the order does not. Open any step.
                 </p>
-                <div className="card mt-6" style={{ padding: '4px 20px' }}>
-                  {PROCESS.map((s) => (
-                    <details key={s.n}>
-                      <summary style={{ gap: 16, textAlign: 'left' }}>
-                        <span><span style={{ fontFamily: T.fm, color: T.small, marginRight: 12 }}>{s.n}</span>{s.t}</span>
-                      </summary>
-                      <p style={{ paddingBottom: 18 }}>{s.d}</p>
-                    </details>
-                  ))}
-                </div>
               </div>
-              <div>
-                <span className="eyebrow">Scope, not packages</span>
-                <h3 className="mt-4" style={{ fontSize: 22 }}>Three ways to work with us</h3>
-                <ul className="scope-list num-list mt-6">
-                  <li><b>One-off ecommerce SEO audit.</b> A full audit and prioritised fix list. Ideal before a redesign, after a traffic drop, or to brief your own team.</li>
-                  <li><b>Fix and build.</b> The audit plus implementation: theme fixes, structured data, collection copy and Merchant Center, delivered as a fixed scope.</li>
-                  <li><b>Ongoing ecommerce SEO.</b> Monthly work on content, product templates, links and AI visibility, with a report tied to organic revenue.</li>
-                </ul>
-                <p className="mt-6">
+              <div className="au-panel">
+                <div className="eyebrow">Scope, not packages</div>
+                <h3 className="au-panel-title">Three ways to work with us</h3>
+                <ol className="au-numlist">
+                  <li><span><b>One-off ecommerce SEO audit.</b> A full audit and prioritised fix list. Ideal before a redesign, after a traffic drop, or to brief your own team.</span></li>
+                  <li><span><b>Fix and build.</b> The audit plus implementation: theme fixes, structured data, collection copy and Merchant Center, delivered as a fixed scope.</span></li>
+                  <li><span><b>Ongoing ecommerce SEO.</b> Monthly work on content, product templates, links and AI visibility, with a report tied to organic revenue.</span></li>
+                </ol>
+                <p className="au-panel-intro">
                   What moves the scope: catalogue size, platform, how much technical debt the theme carries, how
                   competitive your categories are, and whether you need content and links as well as fixes. We explain
                   every line of the quote on the call.
                 </p>
-                <div className="mt-8">
-                  <ModalCTAButton label="Review my store’s SEO" region="au" modalVariant="default" btnVariant="primary-light" />
-                </div>
+                <ModalCTAButton label="Review my store’s SEO" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
               </div>
+            </div>
+            <div className="timeline timeline-4">
+              {PROCESS.map((s) => (
+                <details key={s.n} className="tnode">
+                  <summary>
+                    <div className="idx">{s.n}</div>
+                    <h3>{s.t}<span className="chev" aria-hidden="true">+</span></h3>
+                  </summary>
+                  <p>{s.d}</p>
+                </details>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* ═══ 16. PROVIDER LIST (self-disclosure, ItemList) ═══ */}
-        <section className="sec-lg dot-grid">
+        {/* ═══ PROVIDER LIST (self-disclosure, ItemList from PROVIDERS) → ruled rows ═══ */}
+        <section className="section platforms" id="providers">
           <div className="wrap">
-            <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">The honest landscape</span>
-              <h2>Australian ecommerce SEO and Shopify SEO agencies worth knowing</h2>
-              <p className="lead mt-4">
+            <div className="section-head plat-head">
+              <div>
+                <div className="eyebrow">The honest landscape</div>
+                <h2>Australian ecommerce SEO and Shopify SEO agencies worth knowing</h2>
+              </div>
+              <p>
                 We are one option, not the only one. These Australian agencies rank for ecommerce SEO and Shopify SEO
                 searches in Australia. Each note is based on what the agency says on its own ecommerce SEO page.
               </p>
             </div>
-            <ul className="col-2 mt-10" style={{ gap: 16 }}>
+            <div className="platlist" role="list">
               {PROVIDERS.map((p, i) => (
-                <li key={p.name} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
-                  <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.small, minWidth: 30 }}>{i + 1}</span>
-                  <div>
-                    <h3 style={{ fontSize: 18 }}>{p.name}{p.name === 'FactoryJet' && <span style={{ fontFamily: T.fm, fontSize: 10, background: T.small, color: '#fff', borderRadius: 999, padding: '2px 8px', marginLeft: 8, verticalAlign: 'middle' }}>That is us</span>}</h3>
-                    <p style={{ marginTop: 6 }}>{p.note}</p>
-                  </div>
-                </li>
+                <div key={p.name} className={p.name === 'FactoryJet' ? 'plat plat-2col plat-own' : 'plat plat-2col'} role="listitem">
+                  <span className="capid">{String(i + 1).padStart(2, '0')}</span>
+                  <div className="plat-name"><h3>{p.name}</h3>{p.name === 'FactoryJet' && <span className="plat-flag">That is us</span>}</div>
+                  <p className="plat-build">{p.note}</p>
+                </div>
               ))}
-            </ul>
-            <p style={srcNote}>
+            </div>
+            <p className="sub-note">
               Agencies named from live Australian search results for ecommerce SEO and Shopify SEO queries, September 2026. Notes reflect each agency’s own website on 26 September 2026. Listing is not endorsement.
             </p>
           </div>
         </section>
 
-        {/* ═══ 17. SIBLING SERVICES (hover cards) ═══ */}
-        <section className="sec-lg">
+        {/* ═══ SIBLING SERVICES → agentdir ═══ */}
+        <section className="section agentdir" id="more-services">
           <div className="wrap">
-            <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">Beyond SEO</span>
+            <div className="section-head">
+              <div className="eyebrow">Beyond SEO</div>
               <h2>The rest of what we build for Australian online stores</h2>
-              <p className="lead mt-4">
+              <p>
                 Ecommerce SEO works best when the store underneath it is sound. These are built and supported by the
                 same team.
               </p>
             </div>
-            <ul className="col-3 mt-10">
+            <ul className="agentdir-grid">
               {SIBLINGS.map((s) => (
-                <li key={s.href} className="svc-card" style={{ padding: 0 }}>
-                  <a href={s.href} style={{ display: 'block', padding: 24, height: '100%' }}>
-                    <h3>{s.t} <span style={{ color: T.small }} aria-hidden="true">→</span></h3>
-                    <p className="mt-4">{s.d}</p>
+                <li key={s.href}>
+                  <a href={s.href}>
+                    <span className="agentdir-t">{s.t}</span>
+                    <span className="agentdir-l">{s.d}</span>
+                    <span className="agentdir-go" aria-hidden="true">↗</span>
                   </a>
                 </li>
               ))}
@@ -999,76 +1079,37 @@ export default function EcommerceSeoAUPage() {
           </div>
         </section>
 
-        {/* ═══ 18. FAQ (canonical Linear Minimal) ═══ */}
-        <section className="sec-lg dot-grid" id="faq">
+        {/* ═══ FAQ (Family A accordion; same FAQ_ITEMS array as the FAQPage JSON-LD) ═══ */}
+        <AuFaq
+          categories={FAQ_CATEGORIES}
+          items={FAQ_ITEMS}
+          heading="Ecommerce SEO and Shopify SEO questions Australian store owners ask"
+          askLabel="Still have a question? Ask the founder →"
+          askNote="Replies within 24 hours."
+        />
+
+        {/* ═══ FINAL CTA (light, US finalcta) ═══ */}
+        <section className="finalcta" id="finalcta">
           <div className="wrap">
-            <style>{'.au-svc .faq-item summary::after{content:none;display:none}'}</style>
-            <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">FAQ</span>
-              <h2>Ecommerce SEO and Shopify SEO questions Australian store owners ask</h2>
+            <div>
+              <div className="eyebrow">Ready when you are</div>
+              <h2>Turn your collections and products into organic sales</h2>
+              <p>
+                Send your name, work email and store URL. The founder replies within 24 hours to book a short call about
+                your platform, your categories and what is holding the store back, and whether you need an agency, a
+                one-off audit or just a few fixes. No spam, no obligation.
+              </p>
             </div>
-            <div className="faq-grid">
-              <aside className="faq-sidebar">
-                <span className="faq-sidebar-topics">Topics</span>
-                <nav className="faq-sidebar-nav">
-                  {FAQ_CATEGORIES.map((c) => (
-                    <a key={c.key} href={`#faq-${c.key}`}>
-                      {c.label}
-                      <span className="faq-nav-count">{FAQ_ITEMS.filter((f) => f.category === c.key).length}</span>
-                    </a>
-                  ))}
-                </nav>
-                <div className="faq-sidebar-cta">
-                  <ModalCTAButton label="Still have a question? Ask the founder →" region="au" modalVariant="default" btnVariant="secondary-light" />
-                  <p>Replies within 24 hours.</p>
-                </div>
-              </aside>
-
-              <div>
-                {FAQ_CATEGORIES.map((c) => (
-                  <div key={c.key} id={`faq-${c.key}`} style={{ marginBottom: 40 }}>
-                    <div className="faq-cat-header">
-                      <span className="faq-cat-bar" />
-                      <p className="faq-cat-label">{c.label}</p>
-                    </div>
-                    <ul className="faq-list">{FAQ_ITEMS.filter((f) => f.category === c.key).map((f) => (
-                      <li key={f.question}><details className="faq-item">
-                        <summary>
-                          <span className="q-text">{f.question}</span>
-                          <span className="chevron">
-                            <svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5L7 9L11 5" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" /></svg>
-                          </span>
-                        </summary>
-                        <div className="faq-ans"><p>{f.answer}</p></div>
-                      </details></li>
-                    ))}</ul>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ═══ 19. FINAL CTA (the only dark section) ═══ */}
-        <section className="dark-sec">
-          <div className="wrap" style={{ textAlign: 'center', maxWidth: 640 }}>
-            <span className="eyebrow">Ready when you are</span>
-            <h2>Turn your collections and products into organic sales</h2>
-            <p className="mt-4">
-              Send your name, work email and store URL. The founder replies within 24 hours to book a short call about
-              your platform, your categories and what is holding the store back, and whether you need an agency, a
-              one-off audit or just a few fixes. No spam, no obligation.
-            </p>
-            <div className="mt-8" style={{ display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap' }}>
-              <ModalCTAButton label="Review my store’s SEO" region="au" modalVariant="default" btnVariant="primary-light" />
-              <a className="btn btn-outline" href="/au/shopify-development" style={{ color: '#fff', borderColor: 'rgba(255,255,255,.25)' }}>See Shopify development</a>
+            <div className="ctas">
+              <ModalCTAButton label="Review my store’s SEO" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
+              <a className="btn btn-ghost" href="/au/shopify-development">See Shopify development</a>
             </div>
           </div>
         </section>
 
       </main>
       </div>
-      <SiteFooter locale="au" linkColumns={AU_FOOTER_COLUMNS} variant="dark" tagline="Ecommerce, AI agents, websites and AI search for Australian businesses. Built by senior engineers, supported after launch, owned by you." />
+      <SiteFooter locale="au" linkColumns={AU_FOOTER_COLUMNS} tagline="Ecommerce, AI agents, websites and AI search for Australian businesses. Built by senior engineers, supported after launch, owned by you." />
     </>
   );
 }

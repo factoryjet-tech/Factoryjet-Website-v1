@@ -73,7 +73,8 @@ export const FAQ_ITEMS: FaqItem[] = [
     category: 'basics',
     question: 'Does SEO work for small businesses?',
     answer:
-      'It works well when a small business has a clear service and a defined area. Local search is where a small business can genuinely outrank a larger competitor, because distance from the searcher and a well-kept listing carry real weight. It works poorly when the business is too broad to describe in a search term, or when nobody is searching for what is being sold.',
+      'It works well when a small business has a clear service and a defined area. Local search is where a small business can genuinely outrank a larger competitor, because distance from the searcher and a well-kept listing carry real weight. It works poorly when the business is too broad to describe in a search term, or when nobody is searching for what is being sold. Our small business SEO page covers the smaller-budget version.',
+    links: [{ href: '/au/small-business-seo', label: 'Small business SEO in Australia' }],
   },
   {
     category: 'basics',
@@ -233,7 +234,8 @@ export const FAQ_ITEMS: FaqItem[] = [
     category: 'local',
     question: 'Is local SEO worth it?',
     answer:
-      'For a business that serves a defined area, usually yes, because the Google map pack sits above the ordinary results on most local searches. When we checked 14 Australian city searches for SEO terms in September 2026, a map pack appeared on most of them. The core work, a verified Business Profile, reviews and one page per service, costs little and keeps paying back. It is less useful for a business that sells nationally online.',
+      'For a business that serves a defined area, usually yes, because the Google map pack sits above the ordinary results on most local searches. When we checked 14 Australian city searches for SEO terms in September 2026, a map pack appeared on most of them. The core work, a verified Business Profile, reviews and one page per service, costs little and keeps paying back. It is less useful for a business that sells nationally online. Our local SEO page explains the work in full.',
+    links: [{ href: '/au/local-seo', label: 'Local SEO services in Australia' }],
   },
 
   // ==== Technical, audit and ecommerce SEO ====

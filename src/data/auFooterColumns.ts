@@ -21,6 +21,7 @@ import type { SiteFooterColumn } from '@/components/v2/SiteFooter';
 // Every link below is an AU page or a shared non-US page; keep it that way.
 // 2026-09-26: AU wave 4 adds 5 /au pages and a fifth column for the 6 Australian guides
 // (SiteFooter switches to lg:grid-cols-5 when it gets five columns).
+// 2026-09-26: AU wave 5 adds 8 /au pages (4 to each of the first two columns).
 export const AU_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
   {
     heading: 'E-Commerce & Web',
@@ -29,8 +30,12 @@ export const AU_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
       { label: 'Shopify Development',      href: '/au/shopify-development' },
       { label: 'Ecommerce SEO',            href: '/au/ecommerce-seo' },
       { label: 'Web Design Australia',     href: '/au#web-design' },
+      { label: 'Small Business Web Design', href: '/au/small-business-web-design' },
       { label: 'Websites for Tradies',     href: '/au/websites-for-tradies' },
       { label: 'Dental Website Design',    href: '/au/dental-website-design' },
+      { label: 'NDIS Website Design',      href: '/au/ndis-website-design' },
+      { label: 'Real Estate Websites',     href: '/au/real-estate-websites' },
+      { label: 'Accountant Website Design', href: '/au/accountant-website-design' },
       { label: 'Website Maintenance',      href: '/au/website-maintenance' },
     ],
   },
@@ -42,8 +47,12 @@ export const AU_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
       { label: 'AI Consulting',            href: '/au/ai-consulting' },
       { label: 'AI Receptionist',          href: '/au/ai-receptionist' },
       { label: 'AI Customer Service',      href: '/au/ai-customer-service' },
+      { label: 'Accounts Payable Automation', href: '/au/accounts-payable-automation' },
       { label: 'AI SEO & GEO',             href: '/au/ai-seo' },
       { label: 'SEO Services',             href: '/au/seo' },
+      { label: 'Local SEO',                href: '/au/local-seo' },
+      { label: 'Small Business SEO',       href: '/au/small-business-seo' },
+      { label: 'Law Firm SEO',             href: '/au/law-firm-seo' },
     ],
   },
   {

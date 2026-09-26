@@ -188,3 +188,42 @@
 /* Spec-panel and tag labels render uppercase like US (source text keeps the page's own casing) */
 .aiAgentPage.auPage .specrow .idx, .aiAgentPage.auPage .specrow .tag, .aiAgentPage.auPage .vtag { text-transform: uppercase; }
 .aiAgentPage.auPage .au-panel-wide { margin-top: 36px; max-width: 900px; }
+
+/* Section heads with a photo column (amended 2026-09-26 after the live pilot check).
+   The photo column must never read as a lone caption beside empty space:
+   1. a filled slot's image reserves its 3:2 box with the wash tint while it lazy-loads,
+   2. head copy and photo centre on each other instead of both hanging from the top,
+   3. a head-media whose slot is empty (placeholder, hidden) collapses to one column. */
+.aiAgentPage.auPage .vslot[data-visual-status='filled'] img { background: var(--accent-wash); }
+.aiAgentPage.auPage .process .head-media { align-items: center; }
+.aiAgentPage.auPage .process .head-media .vslot img { height: auto; aspect-ratio: 3 / 2; object-fit: cover; }
+.aiAgentPage.auPage .process .head-media:not(:has(> .vslot[data-visual-status='filled'])) { grid-template-columns: minmax(0,1fr); }
+.aiAgentPage.auPage .process .head-media:not(:has(> .vslot[data-visual-status='filled'])) .section-head { max-width: 740px; }
+/* A process head without a photo keeps eyebrow, h2 and lead stacked (Family A makes .process .section-head a flex row). */
+.aiAgentPage.auPage .process .section-head.head-stack { display: block; max-width: 740px; }
+.aiAgentPage.auPage .process .section-head.head-stack h2 { margin-top: 16px; }
+.aiAgentPage.auPage .process .tablenote { margin-top: 36px; }
+
+/* Process with 6 steps: 3 columns, same connector logic as .timeline-4 */
+.aiAgentPage.auPage .timeline.timeline-3 { grid-template-columns: repeat(3,minmax(0,1fr)); row-gap: 44px; }
+.aiAgentPage.auPage .timeline-3::before { display: none; }
+.aiAgentPage.auPage .timeline-3 .tnode::before { content: ''; position: absolute; left: 46px; right: -28px; top: 23px; height: 1px; background: var(--line-strong); }
+.aiAgentPage.auPage .timeline-3 .tnode:nth-child(3n)::before, .aiAgentPage.auPage .timeline-3 .tnode:last-child::before { display: none; }
+
+/* Item lists inside ruled rows (care-plan scopes) */
+.aiAgentPage.auPage .plat-items { list-style: none; margin: 0; padding: 0; }
+.aiAgentPage.auPage .plat-items li { position: relative; padding: 0 0 8px 16px; font-size: 14px; color: var(--body); line-height: 1.6; }
+.aiAgentPage.auPage .plat-items li::before { content: ''; position: absolute; left: 0; top: 8px; width: 6px; height: 6px; background: var(--accent); border-radius: 1px; }
+.aiAgentPage.auPage :is(.cap p, .plat-fit) a { color: var(--accent-text); text-decoration: underline; text-underline-offset: 3px; }
+.aiAgentPage.auPage .fact .au-numlist { margin-top: 6px; }
+
+@media (max-width: 820px) {
+  .aiAgentPage.auPage .timeline.timeline-3 { grid-template-columns: 1fr; }
+  .aiAgentPage.auPage .timeline-3::before { display: block; }
+  .aiAgentPage.auPage .timeline-3 .tnode::before { display: none; }
+}
+@media (min-width: 821px) and (max-width: 1080px) {
+  .aiAgentPage.auPage .timeline.timeline-3 { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .aiAgentPage.auPage .timeline-3 .tnode:nth-child(n)::before { display: block; }
+  .aiAgentPage.auPage .timeline-3 .tnode:nth-child(2n)::before, .aiAgentPage.auPage .timeline-3 .tnode:last-child::before { display: none; }
+}

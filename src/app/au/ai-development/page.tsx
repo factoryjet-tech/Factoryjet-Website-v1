@@ -1,32 +1,25 @@
 import type { Metadata } from 'next';
+import { Fragment } from 'react';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import { AU_FOOTER_COLUMNS } from '@/data/auFooterColumns';
 import HeroInlineForm from '@/components/HeroInlineForm';
-import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
-import '../au-service.css';
+import AuFaq from '../components/AuFaq';
+import VisualSlot from '../components/VisualSlot';
+import '@/components/v2/AiAgentDevelopmentSections.css';
+import '../au-page.css';
+import './page.css';
 
 const CANONICAL = 'https://factoryjet.com/au/ai-development';
 const UPDATED = '2026-09-26';
 const TITLE = 'AI Development Company Australia | Custom AI | FactoryJet';
-const H1 = 'AI Development Company in Australia: Custom AI Built Into the Systems You Already Run';
+/* Shortened 2026-09-26 so the hero form sits in the first desktop screen. The rest of the old H1
+   ("Built Into the Systems You Already Run") moved into the hero lead. */
+const H1 = 'AI Development Company in Australia: Custom AI for Your Systems';
 const DESCRIPTION =
   'AI development company in Australia for SMEs and mid-market. Custom AI development, AI integration with Xero, MYOB, CRM and ERP, and AI implementation you own.';
-
-/* Design tokens, copied by value from ../au-service.css so inline styles stay
-   on-system without CSS custom property references in this file. */
-const T = {
-  ink: '#0F0F12',
-  n200: '#E5E5E0',
-  n400: '#6E6E68',
-  orange: '#FF5C00',
-  green: '#047857',
-  small: '#B23E13',
-  fm: "'Geist Mono',monospace",
-  fd: "'Plus Jakarta Sans',sans-serif",
-};
 
 /* ONE array drives the visible trail AND the BreadcrumbList JSON-LD, so the
    schema can never describe a trail a human cannot see. Never hand-copy a
@@ -63,12 +56,32 @@ const SRC_AWS_REGIONS = 'https://docs.aws.amazon.com/global-infrastructure/lates
 // Microsoft Learn, list of Azure regions: Australia East = New South Wales.
 const SRC_AZURE_REGIONS = 'https://learn.microsoft.com/en-us/azure/reliability/regions-list';
 
+// Xero Developer, Limits FAQ: per connected organisation, "Concurrent Limit: 5
+// calls in progress at one time Minute Limit: 60 calls per minute Daily Limit:
+// 5000 calls per day"; over the limit returns HTTP 429. fetch-verified 2026-09-26
+const SRC_XERO_LIMITS = 'https://developer.xero.com/faq/limits';
+// Xero Developer FAQ, Custom Integration: a custom connection "can only be
+// connected to a single organisation"; organisations purchase a Custom
+// Connection per app; connections created from 29 April 2026 use granular
+// scopes. fetch-verified 2026-09-26
+const SRC_XERO_FAQ = 'https://developer.xero.com/faq';
+// Xero App Store (AU): categories include bills and expenses, invoicing and
+// jobs, ecommerce, point of sale, payroll HR, time tracking, reporting and
+// forecasting. fetch-verified 2026-09-26
+const SRC_XERO_APPS = 'https://apps.xero.com/au';
+// MYOB Developer, getting started: AccountRight, Essentials and MYOB Business
+// all integrate with the same API; "MYOB Business will replace our MYOB
+// Essentials and MYOB AccountRight product lines for new customers in
+// Australia"; apps authenticate with OAuth and need an API key. fetch-verified 2026-09-26
+const SRC_MYOB_API = 'https://developer.myob.com/api/myob-business-api/api-overview/getting-started/';
+
 /* ─── FAQ source of truth (drives UI + FAQPage schema) ─────────────── */
 const FAQ_CATEGORIES = [
   { key: 'basics',   label: 'AI development basics' },
   { key: 'choosing', label: 'Choosing an AI development company' },
   { key: 'delivery', label: 'Timelines, cost & how it works' },
   { key: 'data',     label: 'Data, privacy & Australian rules' },
+  { key: 'accounting', label: 'Xero & MYOB integrations' },
 ] as const;
 
 const FAQ_ITEMS: { category: string; question: string; answer: string; links?: { href: string; label: string }[] }[] = [
@@ -154,6 +167,19 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
     answer: 'Yes. The code, integrations, prompts, test sets and documentation are yours. We are not a platform you rent. If you move the work in-house or to another provider, it keeps running. You hold the accounts with the AI model providers and cloud hosts and pay them directly, with no markup through us.' },
   { category: 'data', question: 'What stops the AI from making things up?',
     answer: 'Nothing removes the risk completely, so we design around it. The AI answers from your own documents, shows its sources, says “I don’t know” when it does not, and a person approves anything that matters. Before launch we test it against a set of real questions with known answers, and we keep scoring it every month after launch.' },
+  // ── Xero & MYOB integrations ──
+  { category: 'accounting', question: 'What apps does Xero integrate with?',
+    answer: 'A long list of business apps. The Xero App Store groups them into categories such as bills and expenses, invoicing and jobs, ecommerce, point of sale, payroll and HR, time tracking, and reporting and forecasting. Dext, ApprovalMax and ServiceM8 are among the apps it features. Check the App Store first: if a proven app already does the job, set it up well. Build custom only when no app fits your process.',
+    links: [{ href: SRC_XERO_APPS, label: 'Xero App Store (Australia)' }] },
+  { category: 'accounting', question: 'Can you build a custom Xero or MYOB integration?',
+    answer: 'Yes. We connect Xero or MYOB to your CRM, ecommerce store, job software, ERP or a custom AI workflow through their official APIs, with your team signing in to approve access. For Xero, a single-business link usually runs as a Custom Connection that your organisation buys from Xero. We design around each API’s limits, log every change we post, and hand you the code and documentation.',
+    links: [{ href: SRC_XERO_FAQ, label: 'Xero Developer FAQ' }, { href: SRC_MYOB_API, label: 'MYOB API: getting started' }] },
+  { category: 'accounting', question: 'Can AI enter supplier bills into Xero or MYOB?',
+    answer: 'Yes, with a person approving. An AI workflow reads the bill from your inbox, pulls out the supplier, ABN, amounts and GST, matches it to the purchase order where there is one, suggests the account code and creates a draft bill in Xero or MYOB. Your bookkeeper approves or corrects it. Nothing is paid automatically. Our accounts payable automation page explains the full build.',
+    links: [{ href: '/au/accounts-payable-automation', label: 'Accounts payable automation' }] },
+  { category: 'accounting', question: 'Does the Xero API have limits we need to plan for?',
+    answer: 'Yes. Xero says each connected organisation can have 5 calls in progress at once, 60 calls per minute and 5,000 calls per day, and going over returns an error until the limit resets. That is plenty for most small businesses, but a store syncing thousands of orders a day needs batching and queues. We plan for it in the design rather than finding out after launch.',
+    links: [{ href: SRC_XERO_LIMITS, label: 'Xero API limits FAQ' }] },
 ];
 
 /* ─── Named Australian AI development companies (open self-disclosure,
@@ -272,19 +298,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-/* Page-scoped layout fixes (QA 2026-09-25). The shared au-service.css adds a
-   '+' via summary::after to every <details>, which doubles up with the
-   chevron on .faq-item expanders; tables need a minimum width so they scroll
-   sideways on phones instead of squashing; the demand card header must wrap. */
-const PAGE_CSS = `
-.au-adv .faq-item summary::after{content:none}
-.au-adv .cmp-table{min-width:720px}
-.au-adv .demand-head{flex-wrap:wrap;gap:8px}
-`;
-
-const srcNote = { fontFamily: T.fm, fontSize: 11, color: T.n400, marginTop: 12 } as const;
-const srcLink = { textDecoration: 'underline' } as const;
-const detailBody = { padding: '0 0 20px', maxWidth: 820 } as const;
+const extLink = { target: '_blank', rel: 'noopener noreferrer nofollow' } as const;
 
 /* Phased delivery: one array drives the <details> expanders. */
 const PHASES: { n: string; t: string; w: string; d: string; out: string }[] = [
@@ -320,6 +334,61 @@ const CHOOSE: { t: string; d: string }[] = [
   { t: 'Can we switch AI models later?', d: 'A well-built system can change model without a rewrite. Being tied to one model means being tied to one price list.' },
   { t: 'What does support look like after launch?', d: 'Ask who watches it, how fast they respond, and how they handle model updates. Most AI failures happen after the launch party, not before it.' },
 ];
+/* Nine kinds of custom AI development (was an inline card list). */
+const SERVICES: { n: string; t: string; d: string; link?: { href: string; label: string } }[] = [
+  { n: '01', t: 'Answers from your own documents', d: 'A private search box that answers staff or customer questions from your policies, manuals, contracts and price lists, and shows which page each answer came from. Example: a Brisbane wholesaler’s sales team asks about trade terms for a new customer and gets the exact clause, not a guess.' },
+  { n: '02', t: 'AI with Xero and MYOB', d: 'AI that reads supplier bills and receipts from an inbox, suggests the account code and GST treatment based on how you have coded similar bills before, and leaves a draft for your bookkeeper to approve. Nothing posts without a person.' },
+  { n: '03', t: 'Document and email processing', d: 'AI that reads purchase orders, delivery dockets, application forms or claims and pulls the key details into your systems. Example: emailed purchase orders from trade buyers become draft sales orders in your ERP, ready for a person to check.' },
+  { n: '04', t: 'AI inside your CRM', d: 'Call and email summaries on the customer record, suggested next steps, and first-draft quotes and follow-ups written in your tone. Example: after a sales call, the notes, actions and a draft reply are waiting in HubSpot or Salesforce before the rep has put the phone down.' },
+  { n: '05', t: 'AI for ecommerce operations', d: 'Product descriptions drafted from supplier data, cleaner attributes and categories, better on-site search, and returns reasons sorted into themes. This is our home ground.', link: { href: '/au/ecommerce-development', label: 'Ecommerce development in Australia' } },
+  { n: '06', t: 'Helpdesk and inbox triage', d: 'Incoming tickets and emails sorted, tagged, prioritised and given a suggested reply, with anything sensitive routed straight to a person. Example: “where is my order” questions get a drafted answer with tracking pulled in; complaints go to a manager.' },
+  { n: '07', t: 'AI in Microsoft 365', d: 'Connections between AI and SharePoint, Outlook, Teams and Excel, so answers and actions happen where your team already works. Example: a Teams assistant that finds the latest signed version of a supplier agreement in SharePoint.' },
+  { n: '08', t: 'Internal AI tools and apps', d: 'Small, focused applications for one team: a quote builder, a compliance checker, a report writer that pulls numbers from three systems. Example: a weekly trading summary drafted from your shop, ERP and ad accounts, checked by a person, sent on Monday.' },
+  { n: '09', t: 'AI agents that take actions', d: 'AI that carries out multi-step tasks across your systems within rules you set, such as chasing an overdue invoice or rebooking a delivery. Agents need extra design care, so they have their own page.', link: { href: '/au/ai-agents', label: 'AI agents for Australian businesses' } },
+];
+
+/* Icons and visual-slot subjects for the nine service cards (same order as SERVICES). */
+const SERVICE_ICONS = [
+  'M6 3h9l4 4v14H6V3Zm9 0v4h4M9 12h6M9 16h4',
+  'M6 3h12v18l-3-2-3 2-3-2-3 2V3Zm3 5h6M9 11h6M9 14h4',
+  'M4 13h4l2 3h4l2-3h4M4 13l3-8h10l3 8v6H4v-6Z',
+  'M9 8a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 12c0-3 2-5 5-5s5 2 5 5M15 7h5M15 11h5M17 15h3',
+  'M3 4h2l2.5 11h10L20 7H6.2M9 20a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm8 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z',
+  'M4 5h16l-6 8v6l-4-2v-4L4 5Z',
+  'M4 4h7v7H4V4Zm9 0h7v7h-7V4ZM4 13h7v7H4v-7Zm9 0h7v7h-7v-7Z',
+  'M3 5h18v14H3V5Zm0 4h18M7 13h4M7 16h7',
+  'M4 12a8 8 0 0 1 14-5.3M20 12a8 8 0 0 1-14 5.3M18 3v4h-4M6 21v-4h4',
+] as const;
+const SERVICE_SUBJECTS = [
+  'AI-generated model: a white stack of document pages with an orange tab marking the exact page an answer came from',
+  'AI-generated model: a white receipt card sliding into a ledger tray, an orange draft tag waiting for a bookkeeper tick',
+  'AI-generated model: white purchase order sheets passing through a slot and coming out as a tidy orange order card',
+  'AI-generated model: a white customer record card with an orange summary strip and a draft reply card beside it',
+  'AI-generated model: a white shopping trolley beside neat product cards, one orange card being relabelled',
+  'AI-generated model: white ticket cards dropping through a sorter into trays, one orange card routed to a person',
+  'AI-generated model: four white tiles in a square with an orange thread linking them to a small assistant figure',
+  'AI-generated model: a small white app window on a plinth showing three blocks feeding one orange summary panel',
+  'AI-generated model: a white loop track with an orange token moving between three system blocks under a rule card',
+] as const;
+
+/* Hero spec panel icons (integrated, yours, Australian hosting). */
+const HERO_ICONS = [
+  'M9 3v5M15 3v5M7 8h10v4a5 5 0 0 1-10 0V8Zm5 9v4',
+  'M8 8l-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14',
+  'M7 18h10a4 4 0 0 0 .5-8 6 6 0 0 0-11.5 1.5A3.3 3.3 0 0 0 7 18Z',
+] as const;
+
+/* Visual slot page key (route without /au/). */
+const PAGE_KEY = 'ai-development';
+
+/* H1 split for the Family A hero emphasis. Same string as H1 (schema headline); only the
+   benefit clause after the colon is wrapped in .hero-emphasis. */
+const H1_SPLIT = H1.indexOf(': ');
+const H1_LEAD = H1.slice(0, H1_SPLIT + 1);
+const H1_EMPHASIS = H1.slice(H1_SPLIT + 2);
+
+const STEP_ICON = { width: 24, height: 24, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', strokeWidth: 1.5, strokeLinecap: 'round', strokeLinejoin: 'round' } as const;
+const CAP_ICON = { width: 24, height: 24, viewBox: '0 0 24 24', fill: 'none', stroke: '#C94A1A', strokeWidth: 1.6, strokeLinecap: 'round', strokeLinejoin: 'round', 'aria-hidden': true } as const;
 
 export default function AiDevelopmentAUPage() {
   return (
@@ -328,327 +397,438 @@ export default function AiDevelopmentAUPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <SiteHeader locale="au" logoHref="/au" />
+      <div className="aiAgentPage auPage">
+      <nav className="crumbs" aria-label="Breadcrumb">
+        <div className="wrap">
+          {crumbs.map((item, index) => (
+            <Fragment key={item.url}>
+              {index > 0 && ' / '}
+              {index === crumbs.length - 1 ? <b aria-current="page">{item.name}</b> : <a href={item.url}>{item.name}</a>}
+            </Fragment>
+          ))}
+        </div>
+      </nav>
+      <main id="au-content">
 
-      <style dangerouslySetInnerHTML={{ __html: PAGE_CSS }} />
+        {/* ═══ HERO (US web-design hub hero: copy + inline form left, spec panel right) ═══ */}
+        <section className="hero" id="hero">
+          <div className="wrap hero-grid">
+            <div className="hero-copy">
+              <div className="eyebrow">AI Development Company Australia</div>
+              <h1>{H1_LEAD} <span className="hero-emphasis">{H1_EMPHASIS}</span></h1>
+              <p className="lead">
+                FactoryJet is an AI development company for Australian SMEs and mid-market firms, building custom AI
+                into the systems you already run. We design, build and support custom AI software, connect it to the
+                CRM, ERP, Xero or MYOB, shop, helpdesk and Microsoft 365 tools your team already uses, and take it from
+                a promising idea to something people rely on every day. You own the code and the data. The same senior
+                team stays on after launch.
+              </p>
+              <HeroInlineForm region="au" source="au_ai_development_hero" submitLabel="Talk to the Founder" />
+            </div>
 
-      <div className="au-svc au-adv">
-      <main>
+            <form
+              className="specpanel"
+              aria-label="What you get from a custom AI build"
+              data-visual-slot={`${PAGE_KEY}:hero`}
+              data-visual-kind="diagram"
+              data-visual-subject="What a client gets: AI built into their systems, code and data they own, and Australian hosting where needed"
+              data-visual-ratio="1:1"
+              data-visual-status="filled"
+            >
+              <div className="specpanel-bar">
+                <span className="statusdot"></span>
+                <span>INCLUDED · WHAT YOU GET</span>
+                <span className="sys"><span>INTEGRATION</span><span>YOUR CODE</span></span>
+              </div>
+              <div className="workflow-controls">
+                <label className="workflow-toggle" title="Pause or resume the animation">
+                  <input type="checkbox" className="workflow-pause" aria-label="Pause animation" />
+                  <svg className="pause-icon" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M5 3v10M11 3v10" fill="none" stroke="currentColor" strokeWidth="2" /></svg>
+                  <svg className="play-icon" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="m5 3 8 5-8 5Z" fill="currentColor" /></svg>
+                </label>
+                <button type="reset" className="workflow-replay" aria-label="Replay animation" title="Replay animation">
+                  <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M3 6a5 5 0 1 1 0 4M3 2v4h4" /></svg>
+                </button>
+              </div>
+              <div className="specpanel-body" role="radiogroup" aria-label="Explore what you get">
+                <label className="specrow run">
+                  <input className="workflow-select" type="radio" name="adv-step" value="1" />
+                  <span className="workflow-icon" aria-hidden="true"><svg {...STEP_ICON}><path d={HERO_ICONS[0]} /></svg></span>
+                  <span className="idx">CRM, ERP, Xero, MYOB, shop, helpdesk, M365</span>
+                  <span className="title">AI built into your systems</span>
+                  <span className="tag">Integrated</span>
+                </label>
+                <label className="specrow run">
+                  <input className="workflow-select" type="radio" name="adv-step" value="2" />
+                  <span className="workflow-icon" aria-hidden="true"><svg {...STEP_ICON}><path d={HERO_ICONS[1]} /></svg></span>
+                  <span className="idx">no platform lock-in, no licence</span>
+                  <span className="title">Code, prompts and data</span>
+                  <span className="tag">Yours</span>
+                </label>
+                <label className="specrow hold">
+                  <input className="workflow-select" type="radio" name="adv-step" value="3" />
+                  <span className="workflow-icon" aria-hidden="true"><svg {...STEP_ICON}><path d={HERO_ICONS[2]} /></svg></span>
+                  <span className="idx">AWS Sydney or Melbourne, Azure Australia East</span>
+                  <span className="title">Australian hosting</span>
+                  <span className="tag">Available</span>
+                </label>
+              </div>
+              <div className="specpanel-foot">RULE · Your people stay in charge.</div>
+            </form>
+          </div>
+        </section>
 
-        <Breadcrumbs items={crumbs} />
-
-        {/* ═══ 1. HERO ═══ */}
-        <section className="sec-lg dot-grid" style={{ position: 'relative' }}>
+        {/* ═══ LEDGER (was the facts band; verified only) ═══ */}
+        <div className="ledger">
           <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <div className="flex-wrap mb-6">
-                  <span className="chip"><span className="dot dot-orange" />AI Development Company Australia</span>
-                  <span className="chip">AI Integration</span>
-                  <span className="chip">You Own the Code</span>
-                </div>
-                <h1>{H1}</h1>
-                <p className="lead mt-6" style={{ maxWidth: 560 }}>
-                  FactoryJet is an AI development company for Australian SMEs and mid-market firms. We design, build
-                  and support custom AI software, connect it to the CRM, ERP, Xero or MYOB, shop, helpdesk and
-                  Microsoft 365 tools your team already uses, and take it from a promising idea to something people
-                  rely on every day. You own the code and the data. The same senior team stays on after launch.
-                </p>
-
-                <div className="byline mt-6" style={{ maxWidth: 560 }}>
-                  <div className="av">BB</div>
-                  <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
-                  <div className="upd">Last updated<br />26 September 2026</div>
-                </div>
-
-                <div className="mt-6" style={{ maxWidth: 560 }}>
-                  <HeroInlineForm region="au" source="au_ai_development_hero" submitLabel="Talk to the Founder" />
+            {[
+              { v: '13', t: 'Australian Privacy Principles apply to AI that handles personal information, including overseas disclosure (APP 8) and security (APP 11)', s: 'OAIC', u: SRC_OAIC_APPS },
+              { v: 'In + out', t: 'privacy obligations cover both what goes into an AI system and AI output that contains personal information', s: 'OAIC guidance', u: SRC_OAIC_PRODUCTS },
+              { v: '2', t: 'AWS regions in Australia (Sydney and Melbourne) where an AI system and its data can be hosted', s: 'AWS', u: SRC_AWS_REGIONS },
+              { v: 'NSW', t: 'is where Microsoft’s Azure Australia East region sits, another onshore hosting option', s: 'Microsoft Learn', u: SRC_AZURE_REGIONS },
+            ].map((r) => (
+              <div className="ledgercell" key={r.t}>
+                <div className="k"><a href={r.u} {...extLink}>{r.s}</a></div>
+                <div className="v">
+                  <strong className={/\d/.test(r.v) ? 'ledger-number' : 'ledger-word'}>{r.v}</strong>
+                  {r.t}
                 </div>
               </div>
+            ))}
+          </div>
+        </div>
 
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/ai-development/ai-development-hero.webp" width={1400} height={933} fetchPriority="high" decoding="async" alt="A FactoryJet developer and a Sydney business owner reviewing a custom internal AI tool on a monitor, with the harbour through the window" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
-                <div style={{ padding: '14px 12px 8px' }}>
-                  <span className="eyebrow">What you get</span>
-                  <div className="scorecard-row">
-                    <div><div className="scorecard-metric">AI built into your systems</div><div className="scorecard-note">CRM, ERP, Xero, MYOB, shop, helpdesk, M365</div></div>
-                    <div className="scorecard-val" style={{ fontSize: 15 }}>Integrated</div>
+        <div className="wrap byline">
+          <div className="av">BB</div>
+          <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
+          <div className="upd">Last updated<br />26 September 2026</div>
+        </div>
+
+        {/* ═══ ANSWER-FIRST DEFINITION (GEO) → Family A facts ═══ */}
+        <section className="section facts" id="facts">
+          <div className="wrap">
+            <div className="section-head">
+              <h2 data-speakable="true">What does an AI development company do?</h2>
+            </div>
+            <div className="factswrap">
+              <div className="factlist">
+                <div className="fact">
+                  <div className="sec">§01</div>
+                  <p data-speakable="true">
+                    <span className="stat">An AI development company builds software that uses AI to do a real job in your business, then keeps
+                    it working.</span> It picks the task, prepares your data, chooses a model, connects it to systems like Xero
+                    or your CRM, tests accuracy, meets Privacy Act duties and puts it live. A good one tells you when a
+                    ready-made tool is enough.
+                  </p>
+                </div>
+                <div className="fact">
+                  <div className="sec">§02</div>
+                  <div>
+                    <div className="factlabel">Three terms, in plain English</div>
+                    <p>
+                      <b>AI development</b> is building the software. <b>AI integration</b> is connecting AI to the tools you
+                      already use, so it reads the right information and writes results back in the right place. <b>AI
+                      implementation</b> is everything that turns a demo into daily use: real data, permissions, testing,
+                      training, monitoring and support.
+                    </p>
                   </div>
-                  <div className="scorecard-row">
-                    <div><div className="scorecard-metric">Code, prompts and data</div><div className="scorecard-note">no platform lock-in, no licence</div></div>
-                    <div className="scorecard-val" style={{ fontSize: 15 }}>Yours</div>
-                  </div>
-                  <div className="scorecard-row">
-                    <div><div className="scorecard-metric">Australian hosting</div><div className="scorecard-note">AWS Sydney or Melbourne, Azure Australia East</div></div>
-                    <div className="scorecard-val" style={{ color: T.green, fontSize: 15 }}>Available</div>
+                </div>
+                <div className="fact">
+                  <div className="sec">§03</div>
+                  <div>
+                    <p>
+                      Why this matters for an Australian business: your staff are probably already using AI, often through
+                      personal accounts. The Office of the Australian Information Commissioner (OAIC) says privacy obligations
+                      apply to any personal information put into an AI system, and it recommends businesses do not enter
+                      personal information, especially sensitive information, into publicly available generative AI tools.
+                      Proper AI development gives your team the same help inside systems you control.
+                    </p>
+                    <p className="au-note">
+                      Source: <a href={SRC_OAIC_PRODUCTS} {...extLink}>OAIC, guidance on privacy and the use of commercially available AI products</a>.
+                    </p>
                   </div>
                 </div>
               </div>
+              <VisualSlot page={PAGE_KEY} slot="facts" kind="photo" ratio="3:2" className="factphoto"
+                subject="A FactoryJet developer and a business owner reviewing a custom internal AI tool on a monitor">
+                <img src="/images/au/ai-development/ai-development-hero.webp" width={1400} height={933} loading="lazy" decoding="async" alt="A FactoryJet developer and a Sydney business owner reviewing a custom internal AI tool on a monitor, with the harbour through the window" />
+              </VisualSlot>
             </div>
           </div>
         </section>
 
-        {/* ═══ 2. ANSWER-FIRST DEFINITION (GEO) ═══ */}
-        <section className="sec">
+        {/* ═══ LISTICLE: WHAT WE BUILD → capgrid + sibling tiles ═══ */}
+        <section className="section capabilities" id="services">
           <div className="wrap">
-            <div className="def" style={{ maxWidth: 940 }} data-speakable="true">
-              <span className="lab">What does an AI development company do?</span>
-              <p>
-                An AI development company builds software that uses AI to do a real job in your business, then keeps
-                it working. It picks the task, prepares your data, chooses a model, connects it to systems like Xero
-                or your CRM, tests accuracy, meets Privacy Act duties and puts it live. A good one tells you when a
-                ready-made tool is enough.
-              </p>
-            </div>
-            <div className="def mt-6" style={{ maxWidth: 940 }}>
-              <span className="lab">Three terms, in plain English</span>
-              <p>
-                <b>AI development</b> is building the software. <b>AI integration</b> is connecting AI to the tools you
-                already use, so it reads the right information and writes results back in the right place. <b>AI
-                implementation</b> is everything that turns a demo into daily use: real data, permissions, testing,
-                training, monitoring and support.
-              </p>
-            </div>
-            <p className="lead mt-8" style={{ maxWidth: 920 }}>
-              Why this matters for an Australian business: your staff are probably already using AI, often through
-              personal accounts. The Office of the Australian Information Commissioner (OAIC) says privacy obligations
-              apply to any personal information put into an AI system, and it recommends businesses do not enter
-              personal information, especially sensitive information, into publicly available generative AI tools.
-              Proper AI development gives your team the same help inside systems you control.
-            </p>
-            <p style={srcNote}>
-              Source: <a href={SRC_OAIC_PRODUCTS} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>OAIC, guidance on privacy and the use of commercially available AI products</a>.
-            </p>
-          </div>
-        </section>
-
-        {/* ═══ 3. FACTS BAND (verified only) ═══ */}
-        <section className="stats-band">
-          <div className="wrap">
-            <ul className="col-4" style={{ gap: 20 }}>
-              {[
-                { v: '13', t: 'Australian Privacy Principles apply to AI that handles personal information, including overseas disclosure (APP 8) and security (APP 11)', s: 'OAIC', u: SRC_OAIC_APPS },
-                { v: 'In + out', t: 'privacy obligations cover both what goes into an AI system and AI output that contains personal information', s: 'OAIC guidance', u: SRC_OAIC_PRODUCTS },
-                { v: '2', t: 'AWS regions in Australia (Sydney and Melbourne) where an AI system and its data can be hosted', s: 'AWS', u: SRC_AWS_REGIONS },
-                { v: 'NSW', t: 'is where Microsoft’s Azure Australia East region sits, another onshore hosting option', s: 'Microsoft Learn', u: SRC_AZURE_REGIONS },
-              ].map((r) => (
-                <li key={r.t}>
-                  <div style={{ fontFamily: T.fd, fontWeight: 800, fontSize: 26, color: T.orange }}>{r.v}</div>
-                  <p style={{ fontSize: 13.5, color: T.ink, marginTop: 4 }}>{r.t}</p>
-                  <a href={r.u} target="_blank" rel="noopener noreferrer nofollow" style={{ fontFamily: T.fm, fontSize: 10, color: T.n400, textDecoration: 'underline' }}>{r.s}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-
-        {/* ═══ 4. LISTICLE: WHAT WE BUILD ═══ */}
-        <section className="sec-lg dot-grid">
-          <div className="wrap">
-            <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">Our AI development services</span>
+            <div className="section-head">
+              <div className="eyebrow">Our AI development services</div>
               <h2>Nine kinds of custom AI development we do for Australian businesses</h2>
-              <p className="lead mt-4">
+              <p className="lead">
                 Each one is a real job with a plain example. Most projects start with one and add the next once the
                 first is working. None of them asks you to replace the software you run today.
               </p>
             </div>
-            <ol className="col-2 mt-10">
-              {([
-                { n: '01', t: 'Answers from your own documents', d: 'A private search box that answers staff or customer questions from your policies, manuals, contracts and price lists, and shows which page each answer came from. Example: a Brisbane wholesaler’s sales team asks about trade terms for a new customer and gets the exact clause, not a guess.' },
-                { n: '02', t: 'AI with Xero and MYOB', d: 'AI that reads supplier bills and receipts from an inbox, suggests the account code and GST treatment based on how you have coded similar bills before, and leaves a draft for your bookkeeper to approve. Nothing posts without a person.' },
-                { n: '03', t: 'Document and email processing', d: 'AI that reads purchase orders, delivery dockets, application forms or claims and pulls the key details into your systems. Example: emailed purchase orders from trade buyers become draft sales orders in your ERP, ready for a person to check.' },
-                { n: '04', t: 'AI inside your CRM', d: 'Call and email summaries on the customer record, suggested next steps, and first-draft quotes and follow-ups written in your tone. Example: after a sales call, the notes, actions and a draft reply are waiting in HubSpot or Salesforce before the rep has put the phone down.' },
-                { n: '05', t: 'AI for ecommerce operations', d: 'Product descriptions drafted from supplier data, cleaner attributes and categories, better on-site search, and returns reasons sorted into themes. This is our home ground.', link: { href: '/au/ecommerce-development', label: 'Ecommerce development in Australia' } },
-                { n: '06', t: 'Helpdesk and inbox triage', d: 'Incoming tickets and emails sorted, tagged, prioritised and given a suggested reply, with anything sensitive routed straight to a person. Example: “where is my order” questions get a drafted answer with tracking pulled in; complaints go to a manager.' },
-                { n: '07', t: 'AI in Microsoft 365', d: 'Connections between AI and SharePoint, Outlook, Teams and Excel, so answers and actions happen where your team already works. Example: a Teams assistant that finds the latest signed version of a supplier agreement in SharePoint.' },
-                { n: '08', t: 'Internal AI tools and apps', d: 'Small, focused applications for one team: a quote builder, a compliance checker, a report writer that pulls numbers from three systems. Example: a weekly trading summary drafted from your shop, ERP and ad accounts, checked by a person, sent on Monday.' },
-                { n: '09', t: 'AI agents that take actions', d: 'AI that carries out multi-step tasks across your systems within rules you set, such as chasing an overdue invoice or rebooking a delivery. Agents need extra design care, so they have their own page.', link: { href: '/au/ai-agents', label: 'AI agents for Australian businesses' } },
-              ] as { n: string; t: string; d: string; link?: { href: string; label: string } }[]).map((s) => (
-                <li key={s.n} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start', ...(s.n === '09' ? { gridColumn: '1 / -1' } : {}) }}>
-                  <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.small, minWidth: 34 }}>{s.n}</span>
-                  <div>
-                    <h3 style={{ fontSize: 18 }}>{s.t}</h3>
-                    <p className="mt-2" style={{ marginTop: 6 }}>{s.d}</p>
-                    {s.link && <p style={{ marginTop: 8 }}><a href={s.link.href} style={{ color: T.small, textDecoration: 'underline' }}>{s.link.label}</a></p>}
-                  </div>
-                </li>
+            <div className="capgrid">
+              {SERVICES.map((s, i) => (
+                <div key={s.n} className={`cap cap-${i + 1}`}>
+                  <div className="caphead"><span className="capid">CAP‑{s.n}</span><svg {...CAP_ICON}><path d={SERVICE_ICONS[i]} /></svg></div>
+                  <VisualSlot page={PAGE_KEY} slot={`capability-${s.n}`} kind="diagram" ratio="11:4" className="cap-diagram" subject={SERVICE_SUBJECTS[i]} />
+                  <h3>{s.t}</h3>
+                  <p>{s.d}</p>
+                  {s.link && <p><a href={s.link.href}>{s.link.label}</a></p>}
+                </div>
               ))}
-            </ol>
-            <ul className="col-4 mt-10" style={{ gap: 16 }}>
-              <li><a className="svc-card" href="/au/ai-agents" style={{ display: 'block', height: '100%' }}><span className="eyebrow">Sibling service</span><h3 style={{ fontSize: 17 }}>AI agents for Australian businesses</h3><p className="mt-2">When the AI should act on its own across your systems.</p></a></li>
-              <li><a className="svc-card" href="/au/ai-consulting" style={{ display: 'block', height: '100%' }}><span className="eyebrow">Sibling service</span><h3 style={{ fontSize: 17 }}>AI consulting in Australia</h3><p className="mt-2">When you are still deciding what AI should do first.</p></a></li>
-              <li><a className="svc-card" href="/au/ai-receptionist" style={{ display: 'block', height: '100%' }}><span className="eyebrow">Sibling service</span><h3 style={{ fontSize: 17 }}>AI receptionist</h3><p className="mt-2">When the job is answering the phone, not software.</p></a></li>
-              <li><a className="svc-card" href="/au/ecommerce-development" style={{ display: 'block', height: '100%' }}><span className="eyebrow">Sibling service</span><h3 style={{ fontSize: 17 }}>Ecommerce development</h3><p className="mt-2">When AI needs to live inside your online store.</p></a></li>
-            </ul>
+            </div>
+            <div className="agentdir-group chg-group">
+              <div className="agentdir-label"><span className="capid">GRP‑01</span><h3>Sibling service</h3></div>
+              <ul className="agentdir-grid">
+                <li><a href="/au/ai-agents"><span className="agentdir-t">AI agents for Australian businesses</span><span className="agentdir-l">When the AI should act on its own across your systems.</span><span className="agentdir-go" aria-hidden="true">↗</span></a></li>
+                <li><a href="/au/ai-consulting"><span className="agentdir-t">AI consulting in Australia</span><span className="agentdir-l">When you are still deciding what AI should do first.</span><span className="agentdir-go" aria-hidden="true">↗</span></a></li>
+                <li><a href="/au/ai-receptionist"><span className="agentdir-t">AI receptionist</span><span className="agentdir-l">When the job is answering the phone, not software.</span><span className="agentdir-go" aria-hidden="true">↗</span></a></li>
+                <li><a href="/au/ecommerce-development"><span className="agentdir-t">Ecommerce development</span><span className="agentdir-l">When AI needs to live inside your online store.</span><span className="agentdir-go" aria-hidden="true">↗</span></a></li>
+              </ul>
+            </div>
           </div>
         </section>
 
-        {/* ═══ 5. INTEGRATION + RAG, ENGINEER IMAGE ═══ */}
-        <section className="sec-lg">
+        {/* ═══ INTEGRATION + RAG → facts (typical build rows, photo, integration table) ═══ */}
+        <section className="section facts" id="integration">
           <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <span className="eyebrow">How custom AI knows your business</span>
-                <h2>AI integration that answers from your data, not from the internet</h2>
-                <div className="stack mt-6">
-                  <p>
-                    A general AI model knows a lot about the world and nothing about your business. It has never seen
-                    your price list, your returns policy or last month’s supplier agreement. Ask it about them and it
-                    will either say it does not know or, worse, make up something that sounds right.
-                  </p>
-                  <p>
-                    The fix most custom AI development uses is called <b>RAG</b>, short for retrieval-augmented
-                    generation. Think of it as an open-book exam. Before the AI answers, the system looks up the most
-                    relevant pages from your own documents and records, hands them to the AI, and tells it to answer
-                    using only those pages. The answer can then show exactly where it came from.
-                  </p>
-                  <p>
-                    Getting that right is most of the engineering. Documents have to be split sensibly, kept up to date
-                    when files change, and filtered by permissions so the payroll folder never shows up in a warehouse
-                    answer. We build that plumbing, test it against real questions, and keep it current after launch.
-                    It is also where Australian hosting matters: the search index holds copies of your documents, so
-                    it lives in the same Australian region as the rest of your data when that is a requirement.
-                  </p>
-                </div>
-              </div>
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/ai-development/ai-development-engineer.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A FactoryJet AI engineer in a Melbourne office working on two monitors showing a diagram of connected system blocks" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
-                <div style={{ padding: '14px 12px 8px' }}>
-                  <span className="eyebrow">Inside a typical build</span>
-                  <div className="scorecard-row"><div><div className="scorecard-metric">Your documents and records</div><div className="scorecard-note">drives, CRM, ERP, Xero or MYOB, shop, helpdesk</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Source</div></div>
-                  <div className="scorecard-row"><div><div className="scorecard-metric">Search and permissions layer</div><div className="scorecard-note">finds the right pages, hides the wrong ones</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Retrieve</div></div>
-                  <div className="scorecard-row"><div><div className="scorecard-metric">AI model</div><div className="scorecard-note">chosen on your test cases, swappable</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Answer</div></div>
-                  <div className="scorecard-row"><div><div className="scorecard-metric">A person, where it matters</div><div className="scorecard-note">approves anything customer-facing</div></div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Check</div></div>
-                </div>
-              </div>
+            <div className="section-head">
+              <div className="eyebrow">How custom AI knows your business</div>
+              <h2>AI integration that answers from your data, not from the internet</h2>
             </div>
-
-            <div className="card mt-10" style={{ padding: 0, overflowX: 'auto' }}>
-              <table className="cmp-table">
+            <div className="factswrap">
+              <div className="factlist">
+                <div className="fact"><div className="sec">§01</div><p>
+                  A general AI model knows a lot about the world and nothing about your business. It has never seen
+                  your price list, your returns policy or last month’s supplier agreement. Ask it about them and it
+                  will either say it does not know or, worse, make up something that sounds right.
+                </p></div>
+                <div className="fact"><div className="sec">§02</div><p>
+                  The fix most custom AI development uses is called <b>RAG</b>, short for retrieval-augmented
+                  generation. Think of it as an open-book exam. Before the AI answers, the system looks up the most
+                  relevant pages from your own documents and records, hands them to the AI, and tells it to answer
+                  using only those pages. The answer can then show exactly where it came from.
+                </p></div>
+                <div className="fact"><div className="sec">§03</div><p>
+                  Getting that right is most of the engineering. Documents have to be split sensibly, kept up to date
+                  when files change, and filtered by permissions so the payroll folder never shows up in a warehouse
+                  answer. We build that plumbing, test it against real questions, and keep it current after launch.
+                  It is also where Australian hosting matters: the search index holds copies of your documents, so
+                  it lives in the same Australian region as the rest of your data when that is a requirement.
+                </p></div>
+                <div className="fact"><div className="sec">§04</div><div>
+                  <div className="factlabel">Inside a typical build</div>
+                  <ul className="trigrows">
+                    <li><span className="m">Your documents and records</span><span className="n">drives, CRM, ERP, Xero or MYOB, shop, helpdesk</span><span className="t">Source</span></li>
+                    <li><span className="m">Search and permissions layer</span><span className="n">finds the right pages, hides the wrong ones</span><span className="t">Retrieve</span></li>
+                    <li><span className="m">AI model</span><span className="n">chosen on your test cases, swappable</span><span className="t">Answer</span></li>
+                    <li><span className="m">A person, where it matters</span><span className="n">approves anything customer-facing</span><span className="t">Check</span></li>
+                  </ul>
+                </div></div>
+              </div>
+              <VisualSlot page={PAGE_KEY} slot="facts-2" kind="photo" ratio="3:2" className="factphoto"
+                subject="An AI engineer working on two monitors showing a diagram of connected system blocks">
+                <img src="/images/au/ai-development/ai-development-engineer.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A FactoryJet AI engineer in a Melbourne office working on two monitors showing a diagram of connected system blocks" />
+              </VisualSlot>
+            </div>
+            <div className="tablewrap span-all">
+              <table>
                 <thead>
                   <tr><th>System you run</th><th>What AI integration usually does there</th><th>Who approves</th></tr>
                 </thead>
                 <tbody>
-                  <tr><td className="feat">Xero or MYOB</td><td>Reads bills and receipts, suggests account codes and GST treatment, drafts the entry</td><td>Your bookkeeper</td></tr>
-                  <tr><td className="feat">CRM (HubSpot, Salesforce, Zoho)</td><td>Summarises calls and emails, drafts follow-ups and quotes, flags stalled deals</td><td>The account owner</td></tr>
-                  <tr><td className="feat">ERP (NetSuite, Dynamics, Odoo)</td><td>Turns emailed purchase orders into draft sales orders, answers stock questions</td><td>Sales or ops staff</td></tr>
-                  <tr><td className="feat">Ecommerce (Shopify, BigCommerce, Magento)</td><td>Drafts product copy, cleans attributes, sorts returns reasons, improves on-site search</td><td>Merchandiser</td></tr>
-                  <tr><td className="feat">Helpdesk (Zendesk, Freshdesk, Gorgias)</td><td>Tags and prioritises tickets, drafts replies with order data pulled in</td><td>Support agent</td></tr>
-                  <tr><td className="feat">Microsoft 365</td><td>Answers from SharePoint, drafts in Outlook, assists inside Teams</td><td>The person asking</td></tr>
+                  <tr><th scope="row">Xero or MYOB</th><td>Reads bills and receipts, suggests account codes and GST treatment, drafts the entry</td><td>Your bookkeeper</td></tr>
+                  <tr><th scope="row">CRM (HubSpot, Salesforce, Zoho)</th><td>Summarises calls and emails, drafts follow-ups and quotes, flags stalled deals</td><td>The account owner</td></tr>
+                  <tr><th scope="row">ERP (NetSuite, Dynamics, Odoo)</th><td>Turns emailed purchase orders into draft sales orders, answers stock questions</td><td>Sales or ops staff</td></tr>
+                  <tr><th scope="row">Ecommerce (Shopify, BigCommerce, Magento)</th><td>Drafts product copy, cleans attributes, sorts returns reasons, improves on-site search</td><td>Merchandiser</td></tr>
+                  <tr><th scope="row">Helpdesk (Zendesk, Freshdesk, Gorgias)</th><td>Tags and prioritises tickets, drafts replies with order data pulled in</td><td>Support agent</td></tr>
+                  <tr><th scope="row">Microsoft 365</th><td>Answers from SharePoint, drafts in Outlook, assists inside Teams</td><td>The person asking</td></tr>
                 </tbody>
               </table>
             </div>
-            <p className="mt-6" style={{ maxWidth: 780 }}>
-              If the job is answering customers in your helpdesk, our <a href="/au/ai-customer-service" style={srcLink}>AI customer service</a> page
+            <p className="tablenote span-all">
+              If the job is answering customers in your helpdesk, our <a href="/au/ai-customer-service">AI customer service</a> page
               covers Zendesk, Freshdesk, Gorgias and HubSpot builds.
             </p>
           </div>
         </section>
 
-        {/* ═══ 6. PHASED DELIVERY (details expanders) ═══ */}
-        <section className="sec-lg dot-grid">
+        {/* ═══ XERO + MYOB INTEGRATION → facts rows + label rows ═══ */}
+        <section className="section facts" id="xero-myob">
           <div className="wrap">
-            <div className="col-6040">
-            <div>
-            <div style={{ maxWidth: 780 }}>
-              <span className="eyebrow">The AI development life cycle</span>
-              <h2>AI implementation, step by step: six phases and how long each takes</h2>
-              <p className="lead mt-4">
-                Most AI development companies show a process diagram with no timings. Here are ours, with honest
-                ranges. A first project usually runs 6 to 14 weeks from kick-off to live use. Phases overlap, so the
-                total is shorter than the sum. Open each phase to see what happens and what you get at the end.
+            <div className="section-head">
+              <div className="eyebrow">Xero and MYOB integration</div>
+              <h2>Xero and MYOB integration: connecting AI to the books Australian businesses already run on</h2>
+              <p className="lead">
+                Most Australian SMEs keep their books in Xero or MYOB. That makes the accounting file the place where AI
+                work either lands cleanly or creates a mess for your bookkeeper. Here is how we connect to both.
               </p>
             </div>
-            <ul className="faq-list mt-10">
+            <div className="factswrap">
+              <div className="factlist">
+                <div className="fact"><div className="sec">§01</div><div>
+                  <h3>Check the app store before building anything</h3>
+                  <p>
+                    Xero’s App Store already lists apps for bills and expenses, invoicing and jobs, ecommerce, point of
+                    sale, payroll, time tracking and reporting. If a proven app does what you need, we set it up and
+                    configure it properly (tax codes, tracking categories, payout reconciliation) instead of writing
+                    code you then have to maintain. Custom work starts where the apps stop: your own approval rules, an
+                    AI step that reads documents, or a system no app connects to.
+                  </p>
+                </div></div>
+                <div className="fact"><div className="sec">§02</div><div>
+                  <h3>Custom Xero integration</h3>
+                  <p>
+                    We build against Xero’s official API, with someone in your business signing in to grant access to
+                    only the data the integration needs. For a link that serves just your organisation, Xero offers a
+                    Custom Connection, which your organisation buys from Xero and which connects to that one
+                    organisation. Xero also limits each connected organisation to 5 calls in progress at once, 60 per
+                    minute and 5,000 per day, so a busy sync is designed with batching and a queue from day one.
+                  </p>
+                </div></div>
+                <div className="fact"><div className="sec">§03</div><div>
+                  <h3>Custom MYOB integration</h3>
+                  <p>
+                    MYOB’s developer documentation says AccountRight, Essentials and MYOB Business all connect through the
+                    same API, and that MYOB Business is replacing Essentials and AccountRight for new customers in
+                    Australia. Some features only show in one product’s screens, so we confirm which MYOB product and
+                    file type you run before designing anything. Access uses an API key and your sign-in approval, and
+                    older desktop files can behave differently from online ones.
+                  </p>
+                </div></div>
+                <div className="fact"><div className="sec">§04</div><div>
+                  <div className="factlabel">Where AI and your accounts meet</div>
+                  <ul className="trigrows">
+                    <li><span className="m">Supplier bills from the inbox</span><span className="n">read, coded, drafted, then approved</span><span className="t">Draft bill</span></li>
+                    <li><span className="m">Orders from Shopify or your ERP</span><span className="n">invoices, payments and GST posted</span><span className="t">Sync</span></li>
+                    <li><span className="m">Aged receivables</span><span className="n">reminder emails drafted for review</span><span className="t">Draft</span></li>
+                    <li><span className="m">Month-end questions</span><span className="n">answers pulled from the ledger, with links</span><span className="t">Read only</span></li>
+                  </ul>
+                  <p>
+                    The most common starting point is bills. Our{' '}
+                    <a href="/au/accounts-payable-automation">accounts payable automation for Australian businesses</a>{' '}
+                    reads supplier invoices, matches them to purchase orders and creates draft bills in Xero or MYOB for
+                    your bookkeeper to approve. Nothing is paid without a person.
+                  </p>
+                  <p className="au-note">
+                    Sources: <a href={SRC_XERO_APPS} {...extLink}>Xero App Store</a>;{' '}
+                    <a href={SRC_XERO_FAQ} {...extLink}>Xero Developer FAQ, custom integration</a>;{' '}
+                    <a href={SRC_XERO_LIMITS} {...extLink}>Xero API limits</a>;{' '}
+                    <a href={SRC_MYOB_API} {...extLink}>MYOB API, getting started</a>.
+                  </p>
+                </div></div>
+              </div>
+              <VisualSlot page={PAGE_KEY} slot="facts-6" kind="photo" ratio="3:2" className="factphoto"
+                subject="Over the shoulder of a bookkeeper in a Sydney office approving a draft supplier bill on her laptop, the screen facing her, a paper invoice beside the keyboard" />
+            </div>
+          </div>
+        </section>
+
+        {/* ═══ PHOTOBREAK (US template visual, no AU image yet) ═══ */}
+        <VisualSlot page={PAGE_KEY} slot="photobreak" kind="illustration" ratio="12:5" className="photobreak"
+          subject="AI-generated model: six white blocks on a long rail from idea to live system, the last block orange with a small status light" />
+
+        {/* ═══ PHASED DELIVERY → process timeline (phases stay openable, as the copy says) ═══ */}
+        <section className="section process" id="phases">
+          <div className="wrap">
+            <div className="head-media">
+              <div className="section-head">
+                <div className="eyebrow">The AI development life cycle</div>
+                <h2>AI implementation, step by step: six phases and how long each takes</h2>
+                <p className="lead">
+                  Most AI development companies show a process diagram with no timings. Here are ours, with honest
+                  ranges. A first project usually runs 6 to 14 weeks from kick-off to live use. Phases overlap, so the
+                  total is shorter than the sum. Open each phase to see what happens and what you get at the end.
+                </p>
+              </div>
+              <VisualSlot page={PAGE_KEY} slot="process" kind="photo" ratio="3:2" captionClassName="figcap"
+                subject="Three colleagues at a round table talking through printed pilot results for a new AI tool"
+                caption={<><b>Phase five in practice.</b> The pilot review is a conversation with the people who used the tool on real work: where it was right, where it struggled, and whether the goal agreed in discovery has been met.</>}>
+                <img src="/images/au/ai-development/ai-development-pilot.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Three colleagues in a bright Perth office talking through printed pilot results, shown as plain coloured bars, for a new AI tool at a round white table" />
+              </VisualSlot>
+            </div>
+            <div className="timeline timeline-3">
               {PHASES.map((p) => (
-                <li key={p.n}>
-                  <details className="faq-item">
-                    <summary>
-                      <span className="q-text"><span style={{ fontFamily: T.fm, color: T.small, marginRight: 12 }}>{p.n}</span>{p.t} <span style={{ fontFamily: T.fm, fontSize: 12, color: T.n400, marginLeft: 8 }}>{p.w}</span></span>
-                      <span className="chevron">
-                        <svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5L7 9L11 5" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" /></svg>
-                      </span>
-                    </summary>
-                    <div style={detailBody}>
-                      <p>{p.d}</p>
-                      <p className="mt-2" style={{ marginTop: 8 }}><b style={{ color: T.ink }}>You get:</b> {p.out}</p>
-                    </div>
-                  </details>
-                </li>
+                <details key={p.n} className="tnode">
+                  <summary>
+                    <div className="idx">{p.n}</div>
+                    <h3>{p.t}<span className="chev" aria-hidden="true">+</span></h3>
+                    <span className="vtag">{p.w}</span>
+                  </summary>
+                  <p>{p.d}</p>
+                  <p><b>You get:</b> {p.out}</p>
+                </details>
               ))}
-            </ul>
-            <p style={srcNote}>
+            </div>
+            <p className="tablenote">
               Ranges are typical for one focused use case at an Australian SME or mid-market firm. Several
               integrations, older on-premise systems or sensitive health and financial data push toward the top of
               each range.
             </p>
+          </div>
+        </section>
+
+        {/* ═══ GOOD FIRST PROJECT → facts + photo ═══ */}
+        <section className="section facts" id="first-project">
+          <div className="wrap">
+            <div className="section-head">
+              <div className="eyebrow">What a first project looks like</div>
+              <h2>What makes a good first AI development project</h2>
             </div>
-            <div className="card" style={{ padding: 8 }}>
-              <img src="/images/au/ai-development/ai-development-pilot.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Three colleagues in a bright Perth office talking through printed pilot results, shown as plain coloured bars, for a new AI tool at a round white table" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
-              <div style={{ padding: '14px 12px 8px' }}>
-                <span className="eyebrow">Phase five in practice</span>
-                <p style={{ fontSize: 14 }}>
-                  The pilot review is a conversation with the people who used the tool on real work: where it was
-                  right, where it struggled, and whether the goal agreed in discovery has been met.
+            <div className="factswrap">
+              <div className="factlist">
+                <div className="fact"><div className="sec">§01</div><p>
+                  The best first project is small, repeated every day and easy to measure. Think of work where
+                  people read something messy (an emailed order, a PDF invoice, a support request), type it into
+                  another system, and fix the mistakes later. That kind of job has past examples you can test
+                  against, so you know how accurate the system is before anyone relies on it.
+                </p></div>
+                <div className="fact"><div className="sec">§02</div><p>
+                  We start in <b>discovery</b> by agreeing one goal you can measure. In <b>data preparation</b> we
+                  collect past cases with the correct answers, which become the test set. The <b>prototype</b> shows
+                  the idea working on your data, the <b>build</b> connects it to your systems with drafts rather than
+                  final actions, and the <b>pilot</b> runs alongside your team while we measure accuracy on every
+                  case.
+                </p></div>
+                <div className="fact"><div className="sec">§03</div><p>
+                  Your people stay in charge. They check and approve instead of re-typing, and anything unusual goes
+                  to them first.
+                </p></div>
+                <div className="fact"><div className="sec">§04</div><div>
+                  <div className="factlabel">Why this is a good first project</div>
+                  <ul className="trigrows">
+                    <li><span className="m">Repeated every day</span><span className="t">Yes</span></li>
+                    <li><span className="m">Easy to measure</span><span className="t">Yes</span></li>
+                    <li><span className="m">Past data to test against</span><span className="t">Yes</span></li>
+                    <li><span className="m">A person approves each result</span><span className="t">Always</span></li>
+                  </ul>
+                </div></div>
+              </div>
+              <VisualSlot page={PAGE_KEY} slot="facts-3" kind="photo" ratio="3:2" className="factphoto"
+                subject="An office administrator holding a printed purchase order beside a stack of orders waiting to be keyed in">
+                <img src="/images/au/ai-development/ai-development-orders.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over-the-shoulder view of an office administrator at a Perth wholesaler holding a printed purchase order beside a stack of orders and dockets waiting to be keyed into the system" />
+              </VisualSlot>
+            </div>
+          </div>
+        </section>
+
+        {/* ═══ COMPARISON TABLE ═══ */}
+        <section className="section comparison" id="comparison">
+          <div className="wrap">
+            <div className="section-head head-split">
+              <div className="eyebrow">Side by side</div>
+              <div>
+                <h2>Off-the-shelf AI tool vs freelancer vs outsourced dev shop vs an AI development company</h2>
+                <p className="lead">
+                  Each option is right for someone. This is how they compare on the things that decide whether AI keeps
+                  working after month three.
                 </p>
               </div>
             </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ═══ 7. GOOD FIRST PROJECT, WAREHOUSE IMAGE ═══ */}
-        <section className="sec-lg">
-          <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <span className="eyebrow">What a first project looks like</span>
-                <h2>What makes a good first AI development project</h2>
-                <div className="stack mt-6">
-                  <p>
-                    The best first project is small, repeated every day and easy to measure. Think of work where
-                    people read something messy (an emailed order, a PDF invoice, a support request), type it into
-                    another system, and fix the mistakes later. That kind of job has past examples you can test
-                    against, so you know how accurate the system is before anyone relies on it.
-                  </p>
-                  <p>
-                    We start in <b>discovery</b> by agreeing one goal you can measure. In <b>data preparation</b> we
-                    collect past cases with the correct answers, which become the test set. The <b>prototype</b> shows
-                    the idea working on your data, the <b>build</b> connects it to your systems with drafts rather than
-                    final actions, and the <b>pilot</b> runs alongside your team while we measure accuracy on every
-                    case.
-                  </p>
-                  <p>
-                    Your people stay in charge. They check and approve instead of re-typing, and anything unusual goes
-                    to them first.
-                  </p>
-                </div>
-              </div>
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/ai-development/ai-development-orders.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over-the-shoulder view of an office administrator at a Perth wholesaler holding a printed purchase order beside a stack of orders and dockets waiting to be keyed into the system" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
-                <div style={{ padding: '14px 12px 8px' }}>
-                  <span className="eyebrow">Why this is a good first project</span>
-                  <div className="scorecard-row"><div className="scorecard-metric">Repeated every day</div><div className="scorecard-val" style={{ fontSize: 14 }}>Yes</div></div>
-                  <div className="scorecard-row"><div className="scorecard-metric">Easy to measure</div><div className="scorecard-val" style={{ fontSize: 14 }}>Yes</div></div>
-                  <div className="scorecard-row"><div className="scorecard-metric">Past data to test against</div><div className="scorecard-val" style={{ fontSize: 14 }}>Yes</div></div>
-                  <div className="scorecard-row"><div className="scorecard-metric">A person approves each result</div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Always</div></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ═══ 8. COMPARISON TABLE ═══ */}
-        <section className="sec-lg dot-grid">
-          <div className="wrap">
-            <span className="eyebrow">Side by side</span>
-            <h2 style={{ maxWidth: 800 }}>Off-the-shelf AI tool vs freelancer vs outsourced dev shop vs an AI development company</h2>
-            <p className="lead mt-4" style={{ maxWidth: 760 }}>
-              Each option is right for someone. This is how they compare on the things that decide whether AI keeps
-              working after month three.
-            </p>
-            <div className="card mt-8" style={{ padding: 0, overflowX: 'auto' }}>
-              <table className="cmp-table">
+            <div className="tablewrap">
+              <table>
                 <thead>
                   <tr>
                     <th>What matters</th>
@@ -659,447 +839,376 @@ export default function AiDevelopmentAUPage() {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td className="feat">Best fit</td><td><span className="partial">General writing and search</span></td><td><span className="partial">Small prototypes</span></td><td><span className="partial">Well-specified builds</span></td><td className="fj"><span className="yes">Australian SMEs and mid-market</span></td></tr>
-                  <tr><td className="feat">Control over how it works</td><td><span className="partial">Settings the vendor allows</span></td><td><span className="yes">Full</span></td><td><span className="partial">Full, via change requests</span></td><td className="fj"><span className="yes">Full: your rules, your data</span></td></tr>
-                  <tr><td className="feat">Integration depth</td><td><span className="partial">Built-in connectors only</span></td><td><span className="partial">One or two systems</span></td><td><span className="yes">Deep, if specified</span></td><td className="fj"><span className="yes">Deep: Xero, MYOB, CRM, ERP, shop, M365</span></td></tr>
-                  <tr><td className="feat">Speed to first result</td><td><span className="yes">Days</span></td><td><span className="yes">Weeks</span></td><td><span className="partial">Weeks to months</span></td><td className="fj"><span className="yes">Prototype in weeks</span></td></tr>
-                  <tr><td className="feat">Accuracy testing</td><td><span className="no">Not on your cases</span></td><td><span className="partial">Varies</span></td><td><span className="partial">Often functional tests only</span></td><td className="fj"><span className="yes">Test set before launch, monthly after</span></td></tr>
-                  <tr><td className="feat">Privacy Act and Australian hosting</td><td><span className="partial">Vendor terms decide</span></td><td><span className="partial">Varies</span></td><td><span className="partial">Ask; often not the default</span></td><td className="fj"><span className="yes">Designed in, AU regions available</span></td></tr>
-                  <tr><td className="feat">Who owns it</td><td><span className="no">The vendor; you rent it</span></td><td><span className="partial">Depends on the contract</span></td><td><span className="partial">Often yours, check licences</span></td><td className="fj"><span className="yes">You: code, prompts, data</span></td></tr>
-                  <tr><td className="feat">Support after launch</td><td><span className="partial">Vendor help desk</span></td><td><span className="no">If they are available</span></td><td><span className="partial">Separate contract, new team</span></td><td className="fj"><span className="yes">Same team, monthly</span></td></tr>
-                  <tr><td className="feat">Who does the work</td><td>You and your team</td><td>One person</td><td><span className="partial">Mixed seniority, rotating staff</span></td><td className="fj"><span className="yes">Senior engineers + founder</span></td></tr>
+                  <tr><th scope="row">Best fit</th><td>General writing and search</td><td>Small prototypes</td><td>Well-specified builds</td><td className="fj">Australian SMEs and mid-market</td></tr>
+                  <tr><th scope="row">Control over how it works</th><td>Settings the vendor allows</td><td>Full</td><td>Full, via change requests</td><td className="fj">Full: your rules, your data</td></tr>
+                  <tr><th scope="row">Integration depth</th><td>Built-in connectors only</td><td>One or two systems</td><td>Deep, if specified</td><td className="fj">Deep: Xero, MYOB, CRM, ERP, shop, M365</td></tr>
+                  <tr><th scope="row">Speed to first result</th><td>Days</td><td>Weeks</td><td>Weeks to months</td><td className="fj">Prototype in weeks</td></tr>
+                  <tr><th scope="row">Accuracy testing</th><td>Not on your cases</td><td>Varies</td><td>Often functional tests only</td><td className="fj">Test set before launch, monthly after</td></tr>
+                  <tr><th scope="row">Privacy Act and Australian hosting</th><td>Vendor terms decide</td><td>Varies</td><td>Ask; often not the default</td><td className="fj">Designed in, AU regions available</td></tr>
+                  <tr><th scope="row">Who owns it</th><td>The vendor; you rent it</td><td>Depends on the contract</td><td>Often yours, check licences</td><td className="fj">You: code, prompts, data</td></tr>
+                  <tr><th scope="row">Support after launch</th><td>Vendor help desk</td><td>If they are available</td><td>Separate contract, new team</td><td className="fj">Same team, monthly</td></tr>
+                  <tr><th scope="row">Who does the work</th><td>You and your team</td><td>One person</td><td>Mixed seniority, rotating staff</td><td className="fj">Senior engineers + founder</td></tr>
                 </tbody>
               </table>
             </div>
-            <p className="mt-6" style={{ maxWidth: 800 }}>
+            <p className="tablenote">
               The real difference in this table is who owns the outcome. A typical outsourced dev shop builds to a specification and
               moves the team on. We scope the job with you, measure accuracy against your own cases, host where your
               data needs to live, and the same senior people support it for as long as you want them to.
             </p>
-            <p className="mt-4" style={{ maxWidth: 800 }}>
+            <p className="tablenote">
               Our honest advice: try an off-the-shelf tool first for general jobs. Bring in an AI development company
               when the job needs your own systems, your own rules, or data you cannot paste into a public tool.
             </p>
           </div>
         </section>
 
-        <MidPageCTA
-          headline={'Have an AI idea that needs to connect to your real systems?'}
-          sub={'Tell us the job and the tools involved. On a short call with the founder, we will tell you whether a ready-made tool will do, what a custom build would involve, and roughly how many weeks each phase would take.'}
-          label={'Talk to the Founder'}
-        />
+        <div className="au-midcta">
+          <MidPageCTA
+            headline={'Have an AI idea that needs to connect to your real systems?'}
+            sub={'Tell us the job and the tools involved. On a short call with the founder, we will tell you whether a ready-made tool will do, what a custom build would involve, and roughly how many weeks each phase would take.'}
+            label={'Talk to the Founder'}
+          />
+        </div>
 
-        {/* ═══ 9. WHAT CAN GO WRONG ═══ */}
-        <section className="sec-lg">
+        {/* ═══ WHAT CAN GO WRONG → ruled rows ═══ */}
+        <section className="section platforms" id="what-can-go-wrong">
           <div className="wrap">
-            <div style={{ maxWidth: 780 }}>
-              <span className="eyebrow">The part most pages leave out</span>
-              <h2>What can go wrong with AI implementation, and how we prevent it</h2>
-              <p className="lead mt-4">
+            <div className="section-head plat-head">
+              <div>
+                <div className="eyebrow">The part most pages leave out</div>
+                <h2>What can go wrong with AI implementation, and how we prevent it</h2>
+              </div>
+              <p>
                 Most AI development company pages in Australian search results skip this part. These are the problems that make business owners nervous, and every one of them is avoidable.
               </p>
             </div>
-            <ul className="col-3 mt-12">
-              <li className="svc-card"><h3>No clear job for it</h3><p className="mt-4">AI bought because it is new ends up unused. We start from one measurable task and a number you already track, and we say no to projects that do not have one.</p></li>
-              <li className="svc-card"><h3>It makes things up</h3><p className="mt-4">AI can state wrong answers confidently. We ground answers in your documents, show sources, make it say &ldquo;I don’t know&rdquo;, and keep a person approving anything customer-facing.</p></li>
-              <li className="svc-card"><h3>The demo never meets real data</h3><p className="mt-4">A prototype on ten tidy examples says little about ten thousand messy ones. We test on your real cases from the prototype phase and share accuracy before launch.</p></li>
-              <li className="svc-card"><h3>Personal information ends up offshore by accident</h3><p className="mt-4">APP 8 sets rules for sending personal information overseas. We map where every piece of data goes, use business terms that do not train on your inputs, and host in Australia where needed.</p></li>
-              <li className="svc-card"><h3>It quietly gets worse</h3><p className="mt-4">Models are updated, your data changes, and accuracy drifts. Monthly scoring against a fixed test set catches that before your customers do.</p></li>
-              <li className="svc-card"><h3>Staff do not trust it</h3><p className="mt-4">If the people doing the job were never asked, they route around the system. We involve them from discovery, run the pilot with them, and keep a person in control of decisions.</p></li>
-              <li className="svc-card"><h3>Running costs surprise you</h3><p className="mt-4">Model usage is billed per use. We estimate running costs at the prototype stage, choose the smallest model that meets the accuracy bar, and show usage in the monthly report.</p></li>
-              <li className="svc-card"><h3>A connected system changes</h3><p className="mt-4">Xero, your CRM or your shop platform releases an update and a connection breaks. Monitoring alerts us, and fixing it is part of monthly support.</p></li>
-              <li className="svc-card"><h3>The builder disappears</h3><p className="mt-4">The classic agency failure: launch, invoice, gone. You own everything we build, it is documented, and the team that built it stays on to support it.</p></li>
-            </ul>
+            <div className="platlist" role="list">
+              <div className="plat plat-2col" role="listitem"><span className="capid">01</span><div className="plat-name"><h3>No clear job for it</h3></div><p className="plat-build">AI bought because it is new ends up unused. We start from one measurable task and a number you already track, and we say no to projects that do not have one.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">02</span><div className="plat-name"><h3>It makes things up</h3></div><p className="plat-build">AI can state wrong answers confidently. We ground answers in your documents, show sources, make it say &ldquo;I don’t know&rdquo;, and keep a person approving anything customer-facing.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">03</span><div className="plat-name"><h3>The demo never meets real data</h3></div><p className="plat-build">A prototype on ten tidy examples says little about ten thousand messy ones. We test on your real cases from the prototype phase and share accuracy before launch.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">04</span><div className="plat-name"><h3>Personal information ends up offshore by accident</h3></div><p className="plat-build">APP 8 sets rules for sending personal information overseas. We map where every piece of data goes, use business terms that do not train on your inputs, and host in Australia where needed.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">05</span><div className="plat-name"><h3>It quietly gets worse</h3></div><p className="plat-build">Models are updated, your data changes, and accuracy drifts. Monthly scoring against a fixed test set catches that before your customers do.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">06</span><div className="plat-name"><h3>Staff do not trust it</h3></div><p className="plat-build">If the people doing the job were never asked, they route around the system. We involve them from discovery, run the pilot with them, and keep a person in control of decisions.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">07</span><div className="plat-name"><h3>Running costs surprise you</h3></div><p className="plat-build">Model usage is billed per use. We estimate running costs at the prototype stage, choose the smallest model that meets the accuracy bar, and show usage in the monthly report.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">08</span><div className="plat-name"><h3>A connected system changes</h3></div><p className="plat-build">Xero, your CRM or your shop platform releases an update and a connection breaks. Monitoring alerts us, and fixing it is part of monthly support.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">09</span><div className="plat-name"><h3>The builder disappears</h3></div><p className="plat-build">The classic agency failure: launch, invoice, gone. You own everything we build, it is documented, and the team that built it stays on to support it.</p></div>
+            </div>
           </div>
         </section>
 
-        {/* ═══ 10. PRIVACY ACT + AUSTRALIAN HOSTING ═══ */}
-        <section className="sec-lg dot-grid">
+        {/* ═══ PRIVACY ACT + AUSTRALIAN HOSTING → facts + photo + ruled rows ═══ */}
+        <section className="section facts" id="privacy">
           <div className="wrap">
-            <div className="col-6040">
-            <div>
-              <span className="eyebrow">Privacy Act and APPs, in plain English</span>
+            <div className="section-head">
+              <div className="eyebrow">Privacy Act and APPs, in plain English</div>
               <h2>AI development services with Australian privacy designed in, not bolted on</h2>
-              <div className="stack mt-6">
-                <p>
+            </div>
+            <div className="factswrap">
+              <div className="factlist">
+                <div className="fact"><div className="sec">§01</div><p>
                   If your AI touches personal information, meaning anything about a customer, patient, tenant or staff
                   member, the Privacy Act 1988 and its 13 Australian Privacy Principles (APPs) apply to most
                   businesses. The OAIC is clear that privacy obligations cover both the personal information put into
                   an AI system and any AI output that contains personal information.
-                </p>
-                <p>
+                </p></div>
+                <div className="fact"><div className="sec">§02</div><p>
                   Three APPs shape most of our design decisions. <b>APP 8</b> covers sending personal information
                   overseas, which matters because many AI models run outside Australia by default. <b>APP 10</b> asks
                   you to take reasonable steps to keep personal information accurate, which is one reason we test AI
                   output before it lands in a customer record. <b>APP 11</b> asks you to protect personal information
                   from misuse and unauthorised access, which is why access is limited by role and every AI action is
                   logged.
-                </p>
-                <p>
+                </p></div>
+                <div className="fact"><div className="sec">§03</div><p>
                   The OAIC also recommends a privacy by design approach for AI, including a Privacy Impact Assessment
                   (a written check of how a project affects people’s personal information and how you reduce the
                   risks), and its guidance for AI developers says the planning stage is where that work belongs. The
                   Australian Government’s voluntary Guidance for AI Adoption points the same way: test and monitor AI
                   systems, and keep human control.
-                </p>
-                <p>
-                  Where your data needs to stay onshore, we build in Australian cloud regions: AWS has regions in
-                  Sydney and Melbourne, and Microsoft Azure’s Australia East region is in New South Wales. We then
-                  choose AI model options and settings to match, and write down exactly what goes where.
-                </p>
+                </p></div>
+                <div className="fact"><div className="sec">§04</div><div>
+                  <p>
+                    Where your data needs to stay onshore, we build in Australian cloud regions: AWS has regions in
+                    Sydney and Melbourne, and Microsoft Azure’s Australia East region is in New South Wales. We then
+                    choose AI model options and settings to match, and write down exactly what goes where.
+                  </p>
+                  <p className="au-note">
+                    Sources: <a href={SRC_OAIC_PRODUCTS} {...extLink}>OAIC, privacy and commercially available AI products</a>;{' '}
+                    <a href={SRC_OAIC_DEV} {...extLink}>OAIC, privacy and developing generative AI models</a>;{' '}
+                    <a href={SRC_OAIC_APPS} {...extLink}>OAIC, APP quick reference</a>;{' '}
+                    <a href={SRC_AWS_REGIONS} {...extLink}>AWS Regions</a>;{' '}
+                    <a href={SRC_AZURE_REGIONS} {...extLink}>Microsoft Learn, Azure regions</a>.
+                  </p>
+                </div></div>
               </div>
-              <p style={srcNote}>
-                Sources: <a href={SRC_OAIC_PRODUCTS} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>OAIC, privacy and commercially available AI products</a>;{' '}
-                <a href={SRC_OAIC_DEV} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>OAIC, privacy and developing generative AI models</a>;{' '}
-                <a href={SRC_OAIC_APPS} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>OAIC, APP quick reference</a>;{' '}
-                <a href={SRC_AWS_REGIONS} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>AWS Regions</a>;{' '}
-                <a href={SRC_AZURE_REGIONS} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>Microsoft Learn, Azure regions</a>.
-              </p>
+              <VisualSlot page={PAGE_KEY} slot="facts-4" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
+                subject="A privacy officer reviewing a printed data map of boxes and arrows showing where information in an AI system goes"
+                caption={<><b>What your privacy lead receives.</b> A plain data map: which information the system reads, where it is stored, which AI provider sees it and in which country. It is the starting point for a Privacy Impact Assessment.</>}>
+                <img src="/images/au/ai-development/ai-development-privacy.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A privacy officer in a calm, bright Adelaide office reviewing a printed data map of boxes and arrows that shows where each piece of information in an AI system goes" />
+              </VisualSlot>
             </div>
-            <div className="card" style={{ padding: 8 }}>
-              <img src="/images/au/ai-development/ai-development-privacy.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A privacy officer in a calm, bright Adelaide office reviewing a printed data map of boxes and arrows that shows where each piece of information in an AI system goes" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
-              <div style={{ padding: '14px 12px 8px' }}>
-                <span className="eyebrow">What your privacy lead receives</span>
-                <p style={{ fontSize: 14 }}>
-                  A plain data map: which information the system reads, where it is stored, which AI provider sees it
-                  and in which country. It is the starting point for a Privacy Impact Assessment.
-                </p>
-              </div>
+            <div className="platlist span-all" role="list">
+              <div className="plat plat-2col" role="listitem"><span className="capid">01</span><div className="plat-name"><h3>What we do</h3></div><p className="plat-build">Map the personal information each feature uses, remove what it does not need, choose providers with business terms that do not train on your inputs, and prepare the inputs for your Privacy Impact Assessment.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">02</span><div className="plat-name"><h3>How we secure it</h3></div><p className="plat-build">Role-based access, secrets kept out of code, Australian hosting where you need it, logs of every AI action, and a person approving anything with real consequences.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">03</span><div className="plat-name"><h3>What we do not do</h3></div><p className="plat-build">We are not lawyers and do not give legal sign-off. Your business stays responsible for its privacy duties. We build to your requirements and document what your adviser needs.</p></div>
             </div>
-            </div>
-            <ul className="col-3 mt-10">
-              <li className="card"><h3>What we do</h3><p className="mt-4">Map the personal information each feature uses, remove what it does not need, choose providers with business terms that do not train on your inputs, and prepare the inputs for your Privacy Impact Assessment.</p></li>
-              <li className="card"><h3>How we secure it</h3><p className="mt-4">Role-based access, secrets kept out of code, Australian hosting where you need it, logs of every AI action, and a person approving anything with real consequences.</p></li>
-              <li className="card"><h3>What we do not do</h3><p className="mt-4">We are not lawyers and do not give legal sign-off. Your business stays responsible for its privacy duties. We build to your requirements and document what your adviser needs.</p></li>
-            </ul>
           </div>
         </section>
 
-        {/* ═══ 11. WHICH FITS YOU (details checklist) ═══ */}
-        <section className="sec-lg">
+        {/* ═══ WHICH FITS YOU (<details>) → vlog with the quick-version panel in the sticky head ═══ */}
+        <section className="vlog" id="which-fits">
           <div className="wrap">
-            <div className="col-6040">
-            <div>
-            <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">Build, buy or integrate?</span>
+            <div className="section-head">
+              <div className="eyebrow">Build, buy or integrate?</div>
               <h2>Which kind of AI project fits your business?</h2>
-              <p className="lead mt-4">
+              <p>
                 Open each option and count how many lines sound like you. It is a quick way to know which conversation
                 to have before you talk to any AI development company.
               </p>
+              <div className="au-panel">
+                <div className="eyebrow">The quick version</div>
+                <ul className="trigrows">
+                  <li><span className="m">Writing, summaries, meeting notes</span><span className="n">general work, no customer data</span><span className="t">Buy</span></li>
+                  <li><span className="m">Copying between two systems</span><span className="n">Xero or MYOB, CRM, ERP, helpdesk</span><span className="t">Integrate</span></li>
+                  <li><span className="m">An AI tool nobody uses</span><span className="n">usually not connected to your data</span><span className="t">Integrate</span></li>
+                  <li><span className="m">Rules only your business knows</span><span className="n">pricing, approvals, exceptions</span><span className="t">Build</span></li>
+                  <li><span className="m">Personal information must stay onshore</span><span className="n">Australian cloud regions</span><span className="t">Build</span></li>
+                  <li><span className="m">Still not sure</span><span className="n">start with a short assessment</span><span className="t"><a href="/au/ai-consulting">Consult</a></span></li>
+                </ul>
+              </div>
             </div>
-            <ul className="faq-list mt-8">
+            <div className="ventries">
               {FIT.map((f) => (
-                <li key={f.t}>
-                  <details className="faq-item">
-                    <summary>
-                      <span className="q-text">{f.t}</span>
-                      <span className="chevron">
-                        <svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5L7 9L11 5" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" /></svg>
-                      </span>
-                    </summary>
-                    <div style={detailBody}>
-                      <p style={{ marginBottom: 10 }}>{f.s}</p>
-                      <ul className="scope-list">
-                        {f.items.map((it) => <li key={it}>{it}</li>)}
-                      </ul>
-                      {f.link && <p className="mt-4"><a href={f.link.href} style={{ color: T.small, textDecoration: 'underline' }}>{f.link.label}</a></p>}
-                    </div>
-                  </details>
-                </li>
+                <details key={f.t} className="ventry">
+                  <summary><h3>{f.t}</h3><span className="chev" aria-hidden="true">+</span></summary>
+                  <p>{f.s}</p>
+                  <ul className="chg-list">
+                    {f.items.map((it) => (<li key={it}><span>{it}</span></li>))}
+                  </ul>
+                  {f.link && <p><a href={f.link.href}>{f.link.label}</a></p>}
+                </details>
               ))}
-            </ul>
-            </div>
-            <div className="card card-top-orange">
-              <span className="eyebrow">The quick version</span>
-              <div className="scorecard-row"><div><div className="scorecard-metric">Writing, summaries, meeting notes</div><div className="scorecard-note">general work, no customer data</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Buy</div></div>
-              <div className="scorecard-row"><div><div className="scorecard-metric">Copying between two systems</div><div className="scorecard-note">Xero or MYOB, CRM, ERP, helpdesk</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Integrate</div></div>
-              <div className="scorecard-row"><div><div className="scorecard-metric">An AI tool nobody uses</div><div className="scorecard-note">usually not connected to your data</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Integrate</div></div>
-              <div className="scorecard-row"><div><div className="scorecard-metric">Rules only your business knows</div><div className="scorecard-note">pricing, approvals, exceptions</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Build</div></div>
-              <div className="scorecard-row"><div><div className="scorecard-metric">Personal information must stay onshore</div><div className="scorecard-note">Australian cloud regions</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Build</div></div>
-              <div className="scorecard-row"><div><div className="scorecard-metric">Still not sure</div><div className="scorecard-note">start with a short assessment</div></div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}><a href="/au/ai-consulting" style={{ textDecoration: 'underline' }}>Consult</a></div></div>
-            </div>
             </div>
           </div>
         </section>
 
-        {/* ═══ 12. HOW TO CHOOSE CHECKLIST (details) ═══ */}
-        <section className="sec-lg dot-grid">
+        {/* ═══ HOW TO CHOOSE CHECKLIST (<details>) → openable rows, two columns ═══ */}
+        <section className="section" id="how-to-choose">
           <div className="wrap">
-            <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">Before you sign anything</span>
+            <div className="section-head">
+              <div className="eyebrow">Before you sign anything</div>
               <h2>How to choose an AI development company in Australia: a ten-point checklist</h2>
-              <p className="lead mt-4">
+              <p className="lead">
                 Use this with any AI software development company, including us. A good one will enjoy the questions.
                 A weak one will steer you back to the demo.
               </p>
             </div>
-            <div className="col-2 mt-8" style={{ gap: '0 48px' }}>
-            {[CHOOSE.slice(0, 5), CHOOSE.slice(5)].map((half, h) => (
-            <ol key={h} className="faq-list" start={h * 5 + 1} style={{ listStyle: 'none' }}>
-              {half.map((c, j) => { const i = h * 5 + j; return (
-                <li key={c.t}>
-                  <details className="faq-item">
-                    <summary>
-                      <span className="q-text"><span style={{ fontFamily: T.fm, color: T.small, marginRight: 12 }}>{String(i + 1).padStart(2, '0')}</span>{c.t}</span>
-                      <span className="chevron">
-                        <svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5L7 9L11 5" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" /></svg>
-                      </span>
-                    </summary>
-                    <div style={detailBody}><p>{c.d}</p></div>
-                  </details>
-                </li>
-              ); })}
-            </ol>
-            ))}
+            <div className="ventries choose-grid">
+              {CHOOSE.map((c, i) => (
+                <details key={c.t} className="ventry">
+                  <summary><h3><span className="capid">{String(i + 1).padStart(2, '0')}</span> {c.t}</h3><span className="chev" aria-hidden="true">+</span></summary>
+                  <p>{c.d}</p>
+                </details>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* ═══ 13. WHY FACTORYJET (E-E-A-T) + PILOT IMAGE ═══ */}
-        <section className="sec-lg">
+        {/* ═══ WHY FACTORYJET (E-E-A-T) → facts + photo ═══ */}
+        <section className="section facts" id="why-factoryjet">
           <div className="wrap">
-            <div className="col-6040">
+            <div className="section-head">
+              <div className="eyebrow">Why FactoryJet</div>
+              <h2>An AI software development company that grew up inside commerce systems</h2>
+            </div>
+            <div className="factswrap">
+              <div className="factlist">
+                <div className="fact"><div className="sec">§01</div><p>
+                  FactoryJet was founded in 2014 by Bhavesh Barot and has served 500+ businesses since, most of them
+                  in commerce: B2B wholesalers such as Bombay Petals, direct-to-consumer brands such as Belle Maison,
+                  and the ERPs, CRMs, accounting tools and ecommerce platforms that sit behind them. That decade of
+                  integration work is why our AI development starts from your systems, not from a model.
+                </p></div>
+                <div className="fact"><div className="sec">§02</div><p>
+                  We are a services company. We design, build, implement and support AI, and you own what we build.
+                  We do not sell a platform, take a cut of your model costs, or hand you to a junior team after the
+                  contract is signed. The founder is involved in every engagement.
+                </p></div>
+                <div className="fact"><div className="sec">§03</div><p>
+                  Not sure what to build yet? Start with <a href="/au/ai-consulting">AI consulting for Australian businesses</a>,
+                  which hands its plan straight to the same engineers. For more on how we think about builds, read{' '}
+                  <a href="/blog/ai-agent-build-vs-buy-2026">our build vs buy guide for AI agents</a> or{' '}
+                  <a href="/blog/what-is-an-ai-agent-cost-2026">what drives the cost of an AI agent</a>, and see
+                  our wider <a href="/services/ai-integration-services">AI integration services</a> page.
+                </p></div>
+                <div className="fact"><div className="sec">§04</div><div>
+                  <div className="factlabel">What sets the scope</div>
+                  <ul className="trigrows">
+                    <li><span className="m">Number of systems to connect</span><span className="t">Reach</span></li>
+                    <li><span className="m">State of your data</span><span className="t">Prep</span></li>
+                    <li><span className="m">Accuracy the job needs</span><span className="t">Testing</span></li>
+                    <li><span className="m">Personal information and hosting</span><span className="t">Privacy</span></li>
+                    <li><span className="m">Support after launch</span><span className="t">Monthly</span></li>
+                    <li><span className="m">First call with the founder</span><span className="t">Free</span></li>
+                  </ul>
+                  <ModalCTAButton label="Talk to the Founder" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
+                </div></div>
+              </div>
+              <VisualSlot page={PAGE_KEY} slot="facts-5" kind="photo" ratio="3:2" className="factphoto"
+                subject="A FactoryJet engineer and the owner of a homewares wholesaler reviewing an internal tool on a laptop at a showroom counter">
+                <img src="/images/au/ai-development/ai-development-commerce.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over-the-shoulder view of a FactoryJet engineer and the owner of a Melbourne homewares wholesaler reviewing an internal tool on a laptop at the showroom counter" />
+              </VisualSlot>
+            </div>
+          </div>
+        </section>
+
+        {/* ═══ ENGAGEMENT SHAPES (no pricing) → ruled rows ═══ */}
+        <section className="section platforms" id="engagement">
+          <div className="wrap">
+            <div className="section-head plat-head">
               <div>
-                <span className="eyebrow">Why FactoryJet</span>
-                <h2>An AI software development company that grew up inside commerce systems</h2>
-                <div className="stack mt-6">
-                  <p>
-                    FactoryJet was founded in 2014 by Bhavesh Barot and has served 500+ businesses since, most of them
-                    in commerce: B2B wholesalers such as Bombay Petals, direct-to-consumer brands such as Belle Maison,
-                    and the ERPs, CRMs, accounting tools and ecommerce platforms that sit behind them. That decade of
-                    integration work is why our AI development starts from your systems, not from a model.
-                  </p>
-                  <p>
-                    We are a services company. We design, build, implement and support AI, and you own what we build.
-                    We do not sell a platform, take a cut of your model costs, or hand you to a junior team after the
-                    contract is signed. The founder is involved in every engagement.
-                  </p>
-                  <p>
-                    Not sure what to build yet? Start with <a href="/au/ai-consulting" style={{ textDecoration: 'underline' }}>AI consulting for Australian businesses</a>,
-                    which hands its plan straight to the same engineers. For more on how we think about builds, read{' '}
-                    <a href="/blog/ai-agent-build-vs-buy-2026" style={{ textDecoration: 'underline' }}>our build vs buy guide for AI agents</a> or{' '}
-                    <a href="/blog/what-is-an-ai-agent-cost-2026" style={{ textDecoration: 'underline' }}>what drives the cost of an AI agent</a>, and see
-                    our wider <a href="/services/ai-integration-services" style={{ textDecoration: 'underline' }}>AI integration services</a> page.
-                  </p>
-                </div>
+                <div className="eyebrow">Scope, not packages</div>
+                <h2>Four ways to work with our AI development team</h2>
               </div>
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/ai-development/ai-development-commerce.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over-the-shoulder view of a FactoryJet engineer and the owner of a Melbourne homewares wholesaler reviewing an internal tool on a laptop at the showroom counter" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
-                <div style={{ padding: '14px 12px 8px' }}>
-                  <span className="eyebrow">What sets the scope</span>
-                  <div className="scorecard-row"><div className="scorecard-metric">Number of systems to connect</div><div className="scorecard-val" style={{ fontSize: 14 }}>Reach</div></div>
-                  <div className="scorecard-row"><div className="scorecard-metric">State of your data</div><div className="scorecard-val" style={{ fontSize: 14 }}>Prep</div></div>
-                  <div className="scorecard-row"><div className="scorecard-metric">Accuracy the job needs</div><div className="scorecard-val" style={{ fontSize: 14 }}>Testing</div></div>
-                  <div className="scorecard-row"><div className="scorecard-metric">Personal information and hosting</div><div className="scorecard-val" style={{ fontSize: 14 }}>Privacy</div></div>
-                  <div className="scorecard-row"><div className="scorecard-metric">Support after launch</div><div className="scorecard-val" style={{ fontSize: 14 }}>Monthly</div></div>
-                  <div className="scorecard-row"><div className="scorecard-metric">First call with the founder</div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Free</div></div>
-                  <div className="mt-6">
-                    <ModalCTAButton label="Talk to the Founder" region="au" modalVariant="default" btnVariant="primary-light" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ═══ 14. ENGAGEMENT SHAPES (no pricing) ═══ */}
-        <section className="sec-lg dot-grid">
-          <div className="wrap">
-            <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">Scope, not packages</span>
-              <h2>Four ways to work with our AI development team</h2>
-              <p className="lead mt-4">
+              <p>
                 Every engagement is quoted for your scope, with a fixed price per phase. These are the shapes it
                 usually takes, from smallest to largest.
               </p>
             </div>
-            <ul className="col-4 mt-10" style={{ gap: 20 }}>
-              <li className="svc-card"><h3>Prototype sprint</h3><p className="mt-4">One job, your real data, a working prototype and an accuracy score in a few weeks. You decide whether to go further with evidence, not a pitch.</p></li>
-              <li className="svc-card"><h3>Fixed-scope build</h3><p className="mt-4">From discovery to live use for one use case, including integrations, testing, training and launch. The most common starting point.</p></li>
-              <li className="svc-card"><h3>AI integration project</h3><p className="mt-4">You already have an AI tool. We connect it properly to Xero, MYOB, your CRM, ERP, shop, helpdesk or Microsoft 365 so it can actually do the job.</p></li>
-              <li className="svc-card"><h3>Monthly support</h3><p className="mt-4">Monitoring, fixes, model updates and small improvements for systems we built, or for AI someone else built and then left behind.</p></li>
-            </ul>
+            <div className="platlist" role="list">
+              <div className="plat plat-2col" role="listitem"><span className="capid">01</span><div className="plat-name"><h3>Prototype sprint</h3></div><p className="plat-build">One job, your real data, a working prototype and an accuracy score in a few weeks. You decide whether to go further with evidence, not a pitch.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">02</span><div className="plat-name"><h3>Fixed-scope build</h3></div><p className="plat-build">From discovery to live use for one use case, including integrations, testing, training and launch. The most common starting point.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">03</span><div className="plat-name"><h3>AI integration project</h3></div><p className="plat-build">You already have an AI tool. We connect it properly to Xero, MYOB, your CRM, ERP, shop, helpdesk or Microsoft 365 so it can actually do the job.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">04</span><div className="plat-name"><h3>Monthly support</h3></div><p className="plat-build">Monitoring, fixes, model updates and small improvements for systems we built, or for AI someone else built and then left behind.</p></div>
+            </div>
           </div>
         </section>
 
-        {/* ═══ 15. AUSTRALIA-WIDE + DEMAND CARD ═══ */}
-        <section className="sec-lg">
+        {/* ═══ AUSTRALIA-WIDE + DEMAND → head + split (prose, links | demand) ═══ */}
+        <section className="section" id="australia-wide">
           <div className="wrap">
-            <div className="col-6040">
+            <div className="section-head">
+              <div className="eyebrow">Sydney, Melbourne, Brisbane and beyond</div>
+              <h2>AI developers for Australian businesses, wherever you are</h2>
+            </div>
+            <div className="au-split">
               <div>
-                <span className="eyebrow">Sydney, Melbourne, Brisbane and beyond</span>
-                <h2>AI developers for Australian businesses, wherever you are</h2>
-                <div className="stack mt-6">
-                  <p>
-                    People often search for an AI development company in Sydney or Melbourne expecting to need a team
-                    down the road. For this work you do not. We run discovery workshops over video, share a test
-                    environment from the early weeks, and demo working software at regular milestones, for businesses in
-                    Sydney, Melbourne, Brisbane, Perth, Adelaide, Canberra, Hobart and regional Australia.
-                  </p>
-                  <p>
-                    What matters more than a postcode is who answers when something breaks. At FactoryJet that is the
-                    same senior team that built your system, with the founder involved throughout.
-                  </p>
-                  <p>
-                    If the job is a phone line rather than software, see our <a href="/au/ai-receptionist" style={{ textDecoration: 'underline' }}>AI
-                    receptionist for Australian businesses</a>. If you want AI to act on its own across your systems,
-                    see <a href="/au/ai-agents" style={{ textDecoration: 'underline' }}>AI agents in Australia</a>. For all our Australian services,
-                    visit <a href="/au" style={{ textDecoration: 'underline' }}>FactoryJet Australia</a>.
-                  </p>
-                </div>
-                <div className="flex-wrap mt-6">
-                  <a className="city-pill" href="/au">FactoryJet Australia</a>
-                  <a className="city-pill" href="/au/ai-agents">AI agents Australia</a>
-                  <a className="city-pill" href="/au/ai-consulting">AI consulting Australia</a>
-                  <a className="city-pill" href="/au/ai-seo">AI SEO Australia</a>
-                  <a className="city-pill" href="/au/shopify-development">Shopify development Australia</a>
-                  <a className="city-pill" href="/contact">Contact us</a>
-                </div>
+                <p>
+                  People often search for an AI development company in Sydney or Melbourne expecting to need a team
+                  down the road. For this work you do not. We run discovery workshops over video, share a test
+                  environment from the early weeks, and demo working software at regular milestones, for businesses in
+                  Sydney, Melbourne, Brisbane, Perth, Adelaide, Canberra, Hobart and regional Australia.
+                </p>
+                <p>
+                  What matters more than a postcode is who answers when something breaks. At FactoryJet that is the
+                  same senior team that built your system, with the founder involved throughout.
+                </p>
+                <p>
+                  If the job is a phone line rather than software, see our <a href="/au/ai-receptionist">AI
+                  receptionist for Australian businesses</a>. If you want AI to act on its own across your systems,
+                  see <a href="/au/ai-agents">AI agents in Australia</a>. For all our Australian services,
+                  visit <a href="/au">FactoryJet Australia</a>.
+                </p>
+                <ul className="city-list">
+                  <li><a href="/au">FactoryJet Australia</a></li>
+                  <li><a href="/au/ai-agents">AI agents Australia</a></li>
+                  <li><a href="/au/ai-consulting">AI consulting Australia</a></li>
+                  <li><a href="/au/ai-seo">AI SEO Australia</a></li>
+                  <li><a href="/au/shopify-development">Shopify development Australia</a></li>
+                  <li><a href="/contact">Contact us</a></li>
+                </ul>
               </div>
-
-              <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
-                <div className="demand-head" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: `1px solid ${T.n200}`, padding: '14px 18px' }}>
-                  <span style={{ fontFamily: T.fm, fontSize: 10, letterSpacing: '.13em', textTransform: 'uppercase', color: T.n400 }}>Australia · Monthly Search Demand</span>
-                  <span style={{ background: T.small, color: '#fff', fontFamily: T.fm, fontSize: 10, borderRadius: 999, padding: '3px 9px' }}>DataForSEO</span>
-                </div>
-                <div style={{ padding: '4px 18px 14px' }}>
-                  <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
-                    {[
-                      { kw: 'ai development', v: '260', w: '100%', kd: 'The head term' },
-                      { kw: 'ai integration', v: '170', w: '65%', kd: 'Connect AI to your tools' },
-                      { kw: 'ai development company', v: '140', w: '54%', kd: 'Buyer intent' },
-                      { kw: 'ai development company in australia', v: '140', w: '54%', kd: 'Buyer intent, national' },
-                      { kw: 'ai development services', v: '90', w: '35%', kd: 'Buyer intent' },
-                      { kw: 'ai implementation', v: '90', w: '35%', kd: 'Idea to daily use' },
-                      { kw: 'ai application development', v: '50', w: '19%', kd: 'Custom apps' },
-                      { kw: 'ai integration services', v: '40', w: '15%', kd: 'Buyer intent' },
-                    ].map((r) => (
-                      <li key={r.kw} className="demand-row">
-                        <div className="demand-top"><span className="demand-kw">{r.kw}</span><span className="demand-v">{r.v}<span style={{ fontSize: 9, color: T.n400 }}> searches</span></span></div>
-                        <div className="demand-bar"><i style={{ width: r.w }} /></div>
-                        <div className="demand-kd">{r.kd}</div>
-                      </li>
-                    ))}
-                  </ul>
-                  <p style={{ textAlign: 'center', fontFamily: T.fm, fontSize: 10, color: T.n400, marginTop: 10 }}>Source: DataForSEO, Australia, September 2026</p>
-                </div>
+              <div className="demand">
+                <div className="demand-head"><span>Australia · Monthly Search Demand</span><b>DataForSEO</b></div>
+                <ul>
+                  {[
+                    { kw: 'ai development', v: '260', w: '100%', kd: 'The head term' },
+                    { kw: 'ai integration', v: '170', w: '65%', kd: 'Connect AI to your tools' },
+                    { kw: 'ai development company', v: '140', w: '54%', kd: 'Buyer intent' },
+                    { kw: 'ai development company in australia', v: '140', w: '54%', kd: 'Buyer intent, national' },
+                    { kw: 'ai development services', v: '90', w: '35%', kd: 'Buyer intent' },
+                    { kw: 'ai implementation', v: '90', w: '35%', kd: 'Idea to daily use' },
+                    { kw: 'ai application development', v: '50', w: '19%', kd: 'Custom apps' },
+                    { kw: 'ai integration services', v: '40', w: '15%', kd: 'Buyer intent' },
+                  ].map((r) => (
+                    <li key={r.kw} className="demand-row">
+                      <div className="demand-top"><span className="demand-kw">{r.kw}</span><span className="demand-v">{r.v}<small> searches</small></span></div>
+                      <div className="demand-bar"><i style={{ width: r.w }} /></div>
+                      <div className="demand-kd">{r.kd}</div>
+                    </li>
+                  ))}
+                </ul>
+                <p className="demand-src">Source: DataForSEO, Australia, September 2026</p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ═══ 16. COMPETITOR LIST (self-disclosure, ItemList) ═══ */}
-        <section className="sec-lg dot-grid">
+        {/* ═══ COMPETITOR LIST (self-disclosure, ItemList from AI_DEV_COMPANIES) → ruled rows ═══ */}
+        <section className="section platforms" id="providers">
           <div className="wrap">
-            <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">The honest landscape</span>
-              <h2>AI development companies in Australia worth knowing</h2>
-              <p className="lead mt-4">
+            <div className="section-head plat-head">
+              <div>
+                <div className="eyebrow">The honest landscape</div>
+                <h2>AI development companies in Australia worth knowing</h2>
+              </div>
+              <p>
                 We are one option, not the only one. These AI development companies show up when Australian buyers
                 search for AI development services or ask AI assistants for a recommendation. Each note is based on
                 what the company says on its own website. Talk to a few and pick the fit.
               </p>
             </div>
-            <ul className="col-2 mt-10">
+            <div className="platlist" role="list">
               {AI_DEV_COMPANIES.map((a, i) => (
-                <li key={a.name} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start', ...(i === 0 ? { borderColor: T.small } : {}), ...(i === AI_DEV_COMPANIES.length - 1 && AI_DEV_COMPANIES.length % 2 === 1 ? { gridColumn: '1 / -1' } : {}) }}>
-                  <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.small, minWidth: 30 }}>{String(i + 1).padStart(2, '0')}</span>
-                  <div>
-                    <h3 style={{ fontSize: 18 }}>{a.name}{a.name === 'FactoryJet' && <span style={{ fontFamily: T.fm, fontSize: 10, background: T.small, color: '#fff', borderRadius: 999, padding: '2px 8px', marginLeft: 8, verticalAlign: 'middle' }}>That is us</span>}</h3>
-                    <p className="mt-2" style={{ marginTop: 6 }}>{a.note}</p>
-                  </div>
-                </li>
+                <div key={a.name} className={a.name === 'FactoryJet' ? 'plat plat-2col plat-own' : 'plat plat-2col'} role="listitem">
+                  <span className="capid">{String(i + 1).padStart(2, '0')}</span>
+                  <div className="plat-name"><h3>{a.name}</h3>{a.name === 'FactoryJet' && <span className="plat-flag">That is us</span>}</div>
+                  <p className="plat-build">{a.note}</p>
+                </div>
               ))}
-            </ul>
-            <p style={srcNote}>
+            </div>
+            <p className="sub-note">
               Companies named from live Australian search results and AI assistant answers for AI development company queries, September 2026. Each company’s own website was checked on 26 September 2026 for an Australian office and the services named. Listing is not endorsement.
             </p>
-            <p className="mt-4" style={{ maxWidth: 760 }}>
-              Our <a href="/blog/best-ai-agencies-australia-2026" style={srcLink}>comparison of Australian AI agencies</a> lists
+            <p className="sub-note">
+              Our <a href="/blog/best-ai-agencies-australia-2026">comparison of Australian AI agencies</a> lists
               13 firms, including us, with where each is based, client size, platforms and published prices.
             </p>
           </div>
         </section>
 
-        {/* ═══ 17. FAQ (canonical Linear Minimal) ═══ */}
-        <section className="sec-lg" id="faq">
+        {/* ═══ FAQ (Family A accordion; same FAQ_ITEMS array as the FAQPage JSON-LD) ═══ */}
+        <AuFaq
+          categories={FAQ_CATEGORIES}
+          items={FAQ_ITEMS}
+          heading="AI development questions Australian business owners actually ask"
+          askLabel="Still have a question? Ask the founder →"
+          askNote="Replies within 24 hours."
+        />
+
+        {/* ═══ FINAL CTA (light, US finalcta) ═══ */}
+        <section className="finalcta" id="finalcta">
           <div className="wrap">
-            <div style={{ textAlign: 'center' }}>
-              <span className="eyebrow">FAQ</span>
-              <h2>AI development questions Australian business owners actually ask</h2>
+            <div>
+              <div className="eyebrow">Ready when you are</div>
+              <h2>Turn your AI idea into software your team uses every day</h2>
+              <p>
+                Send your name and work email. The founder replies within 24 hours to book a short call about the job,
+                the systems involved, and whether a ready-made tool or a custom build is the right answer. No spam, no
+                obligation.
+              </p>
             </div>
-            <nav className="faq-pill-nav" aria-label="FAQ topics">
-              {FAQ_CATEGORIES.map((c) => (
-                <a key={c.key} href={`#faq-${c.key}`}>
-                  {c.label}
-                  <span className="pill-count">{FAQ_ITEMS.filter((f) => f.category === c.key).length}</span>
-                </a>
-              ))}
-            </nav>
-            <div className="faq-grid">
-              <aside className="faq-sidebar">
-                <span className="faq-sidebar-topics">Topics</span>
-                <nav className="faq-sidebar-nav">
-                  {FAQ_CATEGORIES.map((c) => (
-                    <a key={c.key} href={`#faq-${c.key}`}>
-                      {c.label}
-                      <span className="faq-nav-count">{FAQ_ITEMS.filter((f) => f.category === c.key).length}</span>
-                    </a>
-                  ))}
-                </nav>
-                <div className="faq-sidebar-cta">
-                  <ModalCTAButton label="Still have a question? Ask the founder →" region="au" modalVariant="default" btnVariant="secondary-light" />
-                  <p>Replies within 24 hours.</p>
-                </div>
-              </aside>
-
-              <div>
-                {FAQ_CATEGORIES.map((c) => (
-                  <div key={c.key} id={`faq-${c.key}`} style={{ marginBottom: 40 }}>
-                    <div className="faq-cat-header">
-                      <span className="faq-cat-bar" />
-                      <p className="faq-cat-label">{c.label}</p>
-                    </div>
-                    <ul className="faq-list">{FAQ_ITEMS.filter((f) => f.category === c.key).map((f) => (
-                      <li key={f.question}><details className="faq-item">
-                        <summary>
-                          <span className="q-text">{f.question}</span>
-                          <span className="chevron">
-                            <svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5L7 9L11 5" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" /></svg>
-                          </span>
-                        </summary>
-                        <div className="faq-ans"><p>{f.answer}</p>{f.links ? <p style={{ marginTop: 8 }}>{f.links.map((l) => <a key={l.href} href={l.href} style={{ ...srcLink, marginRight: 16 }}>{l.label}</a>)}</p> : null}</div>
-                      </details></li>
-                    ))}</ul>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ═══ 18. FINAL CTA (the only dark section) ═══ */}
-        <section className="dark-sec">
-          <div className="wrap" style={{ textAlign: 'center', maxWidth: 640 }}>
-            <span className="eyebrow">Ready when you are</span>
-            <h2>Turn your AI idea into software your team uses every day</h2>
-            <p className="mt-4">
-              Send your name and work email. The founder replies within 24 hours to book a short call about the job,
-              the systems involved, and whether a ready-made tool or a custom build is the right answer. No spam, no
-              obligation.
-            </p>
-            <div className="mt-8" style={{ display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap' }}>
-              <ModalCTAButton label="Talk to the Founder" region="au" modalVariant="default" btnVariant="primary-light" />
-              <a className="btn btn-outline" href="/au/ai-consulting" style={{ color: '#fff', borderColor: 'rgba(255,255,255,.25)' }}>Start with AI consulting</a>
+            <div className="ctas">
+              <ModalCTAButton label="Talk to the Founder" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
+              <a className="btn btn-ghost" href="/au/ai-consulting">Start with AI consulting</a>
             </div>
           </div>
         </section>
 
       </main>
       </div>
-
-      <SiteFooter locale="au" linkColumns={AU_FOOTER_COLUMNS} variant="dark" tagline="Ecommerce, AI agents, websites and AI search for Australian businesses. Built by senior engineers, supported after launch, owned by you." />
+      <SiteFooter locale="au" linkColumns={AU_FOOTER_COLUMNS} tagline="Ecommerce, AI agents, websites and AI search for Australian businesses. Built by senior engineers, supported after launch, owned by you." />
     </>
   );
 }

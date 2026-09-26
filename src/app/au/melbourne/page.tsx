@@ -1,14 +1,18 @@
 import type { Metadata } from 'next';
+import { Fragment } from 'react';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
-import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import { AU_FOOTER_COLUMNS } from '@/data/auFooterColumns';
 import { CANONICAL, CRUMBS, CITATIONS, SERVICE_AREAS } from './pageData';
 import { FAQ_CATEGORIES, FAQ_ITEMS } from './faqData';
-import '../au-service.css';
+import AuFaq from '../components/AuFaq';
+import VisualSlot from '../components/VisualSlot';
+import '@/components/v2/AiAgentDevelopmentSections.css';
+import '../au-page.css';
+import '../au-city.css';
 
 /* Primary terms (DataForSEO, Australia, fetched 2026-09-24, close variants collapsed):
    web design melbourne 1,900 · website design melbourne 1,300 · seo consultant melbourne
@@ -20,18 +24,6 @@ const TITLE = 'Web Design & SEO Consultant Melbourne | FactoryJet';
 const H1 = 'Web design and SEO consulting in Melbourne';
 const DESCRIPTION =
   'Melbourne web design and SEO consulting. Fast sites by senior engineers, honest advice on what will move enquiries, and you own everything. Free site review.';
-
-/* Design tokens, copied by value from ../au-service.css (same as /au/ai-agents). */
-const T = {
-  ink: '#0F0F12',
-  n200: '#E5E5E0',
-  n400: '#6E6E68',
-  orange: '#FF5C00',
-  green: '#047857',
-  small: '#B23E13',
-  fm: "'Geist Mono',monospace",
-  fd: "'Plus Jakarta Sans',sans-serif",
-};
 
 const [SRC_ABS, SRC_SEO_GUIDE, SRC_CWV] = CITATIONS;
 
@@ -233,9 +225,43 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-const srcNote = { fontFamily: T.fm, fontSize: 11, color: T.n400, marginTop: 12 } as const;
-const srcLink = { textDecoration: 'underline' } as const;
-const imgStyle = { width: '100%', height: 'auto', borderRadius: 12, display: 'block' } as const;
+const extLink = { target: '_blank', rel: 'noopener noreferrer nofollow' } as const;
+
+/* Visual slot page key (route without /au/). */
+const PAGE_KEY = 'melbourne';
+
+/* H1 split for the Family A hero emphasis. Rendered text stays byte-identical to H1 (schema headline). */
+const H1_SPLIT = H1.lastIndexOf(' in ');
+const H1_LEAD = H1.slice(0, H1_SPLIT);
+const H1_EMPHASIS = H1.slice(H1_SPLIT + 1);
+
+const STEP_ICON = { width: 24, height: 24, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', strokeWidth: 1.5, strokeLinecap: 'round', strokeLinejoin: 'round' } as const;
+const CAP_ICON = { width: 24, height: 24, viewBox: '0 0 24 24', fill: 'none', stroke: '#C94A1A', strokeWidth: 1.6, strokeLinecap: 'round', strokeLinejoin: 'round', 'aria-hidden': true } as const;
+
+/* Hero spec panel rows (the old "How we work with Melbourne businesses" hero card rows). */
+const HERO_ROWS: { note: string; metric: string; val: string; icon: string }[] = [
+  { note: 'the person who scopes it builds it', metric: 'Senior engineers only', val: 'Always', icon: 'M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm-7 10c0-4 3-6 7-6s7 2 7 6' },
+  { note: 'websites up to 5 pages', metric: '7-day delivery', val: '7 days', icon: 'M4 5h16v15H4V5Zm0 5h16M8 3v4m8-4v4' },
+  { note: 'in your name from day one', metric: 'Domain, site and every account', val: 'Yours', icon: 'M14 4a6 6 0 1 1-4.2 10.3L4 20m2-2 2 2m1-5 2 2' },
+];
+
+/* Icons and visual-slot subjects for the six web design cards (same order as BUILD). */
+const BUILD_ICONS = [
+  'M4 16a8 8 0 1 1 16 0M12 16l4-5',
+  'M4 5h16M4 12h11M4 19h7',
+  'M6 3h9l4 4v14H6V3Zm3 8h7m-7 4h7',
+  'M8 3h8a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Zm3 15h2',
+  'M9 3v5m6-5v5M7 8h10v3a5 5 0 0 1-10 0V8Zm5 8v5',
+  'M14 4a6 6 0 1 1-4.2 10.3L4 20m2-2 2 2m1-5 2 2',
+] as const;
+const BUILD_SUBJECTS = [
+  'AI-generated model: a white speed gauge with its needle resting in an orange good zone beside a small phone',
+  'AI-generated model: a row of white page cards, each labelled with a short search phrase, linked to one site map',
+  'AI-generated model: a white page card with an orange answer block at the top and plain text lines below',
+  'AI-generated model: a white phone showing a short form and one large orange call button',
+  'AI-generated model: a website card connected by thin lines to a booking calendar, a CRM card and an invoice card',
+  'AI-generated model: an orange key being handed from one small figure to another in front of a white website card',
+] as const;
 
 export default function MelbournePage() {
   return (
@@ -244,228 +270,252 @@ export default function MelbournePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <SiteHeader locale="au" logoHref="/au" />
-
-      <div className="au-svc">
+      <div className="aiAgentPage auPage">
+      <nav className="crumbs" aria-label="Breadcrumb">
+        <div className="wrap">
+          {CRUMBS.map((item, index) => (
+            <Fragment key={item.url}>
+              {index > 0 && ' / '}
+              {index === CRUMBS.length - 1 ? <b aria-current="page">{item.name}</b> : <a href={item.url}>{item.name}</a>}
+            </Fragment>
+          ))}
+        </div>
+      </nav>
       <main id="main-content">
 
-        <Breadcrumbs items={CRUMBS} />
+        {/* ═══ HERO (US web-design hub hero: copy + inline form left, spec panel right) ═══ */}
+        <section className="hero" id="hero">
+          <div className="wrap hero-grid">
+            <div className="hero-copy">
+              <div className="eyebrow">Melbourne, Victoria</div>
+              <h1>{H1_LEAD} <span className="hero-emphasis">{H1_EMPHASIS}</span></h1>
+              <p className="lead">
+                Web design in Melbourne for businesses that need the website to bring in work. We design and build
+                fast websites, advise on the search work that will actually move enquiries, and you deal with the
+                engineer doing the job, not an account manager relaying messages. You own everything at the end.
+              </p>
+              <HeroInlineForm region="au" source="au_melbourne_hero_inline" submitLabel="Get my free site review" />
+            </div>
 
-        {/* ═══ 1. HERO ═══ */}
-        <section className="sec-lg dot-grid" style={{ position: 'relative' }}>
+            <form
+              className="specpanel"
+              aria-label="How we work with Melbourne businesses"
+              data-visual-slot={`${PAGE_KEY}:hero`}
+              data-visual-kind="diagram"
+              data-visual-subject="How every Melbourne engagement runs: senior engineers only, 7-day delivery for small sites, and every account in the client's name"
+              data-visual-ratio="1:1"
+              data-visual-status="filled"
+            >
+              <div className="specpanel-bar">
+                <span className="statusdot"></span>
+                <span>INCLUDED · HOW WE WORK WITH MELBOURNE BUSINESSES</span>
+                <span className="sys"><span>WEB DESIGN</span><span>SEO CONSULTING</span></span>
+              </div>
+              <div className="workflow-controls">
+                <label className="workflow-toggle" title="Pause or resume the animation">
+                  <input type="checkbox" className="workflow-pause" aria-label="Pause animation" />
+                  <svg className="pause-icon" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M5 3v10M11 3v10" fill="none" stroke="currentColor" strokeWidth="2" /></svg>
+                  <svg className="play-icon" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="m5 3 8 5-8 5Z" fill="currentColor" /></svg>
+                </label>
+                <button type="reset" className="workflow-replay" aria-label="Replay animation" title="Replay animation">
+                  <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M3 6a5 5 0 1 1 0 4M3 2v4h4" /></svg>
+                </button>
+              </div>
+              <div className="specpanel-body" role="radiogroup" aria-label="Explore how we work">
+                {HERO_ROWS.map((r, i) => (
+                  <label key={r.metric} className={i === HERO_ROWS.length - 1 ? 'specrow hold' : 'specrow run'}>
+                    <input className="workflow-select" type="radio" name="melbourne-step" value={String(i + 1)} />
+                    <span className="workflow-icon" aria-hidden="true"><svg {...STEP_ICON}><path d={r.icon} /></svg></span>
+                    <span className="idx">{r.note}</span>
+                    <span className="title">{r.metric}</span>
+                    <span className="tag">{r.val}</span>
+                  </label>
+                ))}
+              </div>
+              <div className="specpanel-foot">RULE · If you leave, nothing breaks and nothing has to be bought back.</div>
+            </form>
+          </div>
+        </section>
+
+        {/* ═══ LEDGER (was the facts band) ═══ */}
+        <div className="ledger">
           <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <div className="flex-wrap mb-6">
-                  <span className="chip"><span className="dot dot-orange" />Melbourne, Victoria</span>
-                  <span className="chip">Web Design</span>
-                  <span className="chip">SEO Consulting</span>
-                </div>
-                <h1>{H1}</h1>
-                <p className="lead mt-6" style={{ maxWidth: 560 }}>
-                  Web design in Melbourne for businesses that need the website to bring in work. We design and build
-                  fast websites, advise on the search work that will actually move enquiries, and you deal with the
-                  engineer doing the job, not an account manager relaying messages. You own everything at the end.
-                </p>
-
-                <div className="byline mt-6" style={{ maxWidth: 560 }}>
-                  <div className="av">BB</div>
-                  <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
-                  <div className="upd">Last updated<br />26 September 2026</div>
-                </div>
-
-                <div className="mt-6" style={{ maxWidth: 560 }}>
-                  <HeroInlineForm region="au" source="au_melbourne_hero_inline" submitLabel="Get my free site review" />
+            {[
+              { v: '2,920', t: 'monthly Melbourne web design searches, the most of any Australian city', s: 'DataForSEO, Sep 2026', u: '' },
+              { v: '19,581', t: 'more businesses in Victoria across 2025–26, the second largest rise of any state', s: 'ABS, Aug 2026', u: SRC_ABS.url },
+              { v: 'No AIO', t: 'Google showed no AI Overview on “web design company melbourne” or “melbourne web designer”', s: 'Google AU, 24 Sep 2026', u: '' },
+              { v: '2.5s', t: 'Google’s Largest Contentful Paint mark for a good page experience', s: 'Google Search Central', u: SRC_CWV.url },
+            ].map((r) => (
+              <div className="ledgercell" key={r.t}>
+                <div className="k">{r.u ? <a href={r.u} {...extLink}>{r.s}</a> : r.s}</div>
+                <div className="v">
+                  <strong className={/^[\d.,]+s?$/.test(r.v) ? 'ledger-number' : 'ledger-word'}>{r.v}</strong>
+                  {r.t}
                 </div>
               </div>
+            ))}
+          </div>
+        </div>
 
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/melbourne/melbourne-hero.webp" width={1400} height={933} fetchPriority="high" decoding="async" alt="A Melbourne web designer and a business owner review her new homepage design on a monitor in a Collingwood warehouse studio, with a tram passing on the street outside" style={imgStyle} />
-                <div style={{ padding: '14px 12px 8px' }}>
-                  <span className="eyebrow">How we work with Melbourne businesses</span>
-                  <div className="scorecard-row">
-                    <div><div className="scorecard-metric">Senior engineers only</div><div className="scorecard-note">the person who scopes it builds it</div></div>
-                    <div className="scorecard-val" style={{ fontSize: 15 }}>Always</div>
-                  </div>
-                  <div className="scorecard-row">
-                    <div><div className="scorecard-metric">7-day delivery</div><div className="scorecard-note">websites up to 5 pages</div></div>
-                    <div className="scorecard-val" style={{ fontSize: 15 }}>7 days</div>
-                  </div>
-                  <div className="scorecard-row">
-                    <div><div className="scorecard-metric">Domain, site and every account</div><div className="scorecard-note">in your name from day one</div></div>
-                    <div className="scorecard-val" style={{ color: T.green, fontSize: 15 }}>Yours</div>
+        <div className="wrap byline">
+          <div className="av">BB</div>
+          <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
+          <div className="upd">Last updated<br />26 September 2026</div>
+        </div>
+
+        {/* ═══ ANSWER-FIRST (GEO) → facts ═══ */}
+        <section className="section facts" id="answer">
+          <div className="wrap">
+            <div className="section-head">
+              <h2 data-speakable="true">What does a web design company in Melbourne actually do?</h2>
+            </div>
+            <div className="factswrap">
+              <div className="factlist">
+                <div className="fact">
+                  <div className="sec">§01</div>
+                  <p data-speakable="true">
+                    A good web design company in Melbourne builds a site that loads fast on a phone, says what you sell in
+                    the first screen, and is structured around what Melbourne buyers type into Google. It connects to the
+                    software you already run, hands you the domain and every login, and measures success in enquiries,
+                    not in how the homepage looks on launch day.
+                  </p>
+                </div>
+                <div className="fact">
+                  <div className="sec">§02</div>
+                  <div data-speakable="true">
+                    <h3>And what does an SEO consultant in Melbourne do?</h3>
+                    <p>
+                      An SEO consultant diagnoses why your website is not producing enquiries, puts the causes in the order
+                      that pays back fastest, and either fixes them or briefs whoever will. That is different from a
+                      retainer, which buys a fixed number of hours whether or not they are aimed at your real problem.
+                      FactoryJet works both ways: we build and run the work, or we advise and your team executes.
+                    </p>
                   </div>
                 </div>
+                <div className="fact">
+                  <div className="sec">§03</div>
+                  <p>
+                    Melbourne is one of the two busiest search markets in Australia for this work. Across web design, SEO,
+                    ecommerce and AI services, Melbourne records about 10,330 searches a month that name the city, just
+                    behind Sydney. For web design alone, and for ecommerce and AI agents, it is the busiest city in the
+                    country. That means more buyers, and more agencies competing for them, so this page spends as much time
+                    on how to judge a web designer as it does on selling ours.
+                  </p>
+                </div>
               </div>
+              <VisualSlot page={PAGE_KEY} slot="facts" kind="photo" ratio="3:2" className="factphoto"
+                subject="A Melbourne web designer and a business owner reviewing her new homepage on a monitor in a Collingwood warehouse studio">
+                <img src="/images/au/melbourne/melbourne-hero.webp" width={1400} height={933} loading="lazy" decoding="async" alt="A Melbourne web designer and a business owner review her new homepage design on a monitor in a Collingwood warehouse studio, with a tram passing on the street outside" />
+              </VisualSlot>
             </div>
           </div>
         </section>
 
-        {/* ═══ 2. ANSWER-FIRST (GEO) ═══ */}
-        <section className="sec">
+        {/* ═══ FIVE SYMPTOMS (<details>) → vlog, engagement card as a panel ═══ */}
+        <section className="vlog" id="diagnosis">
           <div className="wrap">
-            <div className="def" style={{ maxWidth: 940 }} data-speakable="true">
-              <span className="lab">What does a web design company in Melbourne actually do?</span>
+            <div className="section-head">
+              <div className="eyebrow">Diagnosis before design</div>
+              <h2>Five reasons a Melbourne website stops bringing in work</h2>
               <p>
-                A good web design company in Melbourne builds a site that loads fast on a phone, says what you sell in
-                the first screen, and is structured around what Melbourne buyers type into Google. It connects to the
-                software you already run, hands you the domain and every login, and measures success in enquiries,
-                not in how the homepage looks on launch day.
+                Five Melbourne businesses can have the same complaint, that the website does not bring in work, and
+                five different causes with very different costs to fix. Being sold a content retainer when the real
+                problem is a noindex tag is how owners come to believe search does not work for them. Open the one
+                that sounds like you.
               </p>
             </div>
-            <div className="def mt-6" style={{ maxWidth: 940 }} data-speakable="true">
-              <span className="lab">And what does an SEO consultant in Melbourne do?</span>
-              <p>
-                An SEO consultant diagnoses why your website is not producing enquiries, puts the causes in the order
-                that pays back fastest, and either fixes them or briefs whoever will. That is different from a
-                retainer, which buys a fixed number of hours whether or not they are aimed at your real problem.
-                FactoryJet works both ways: we build and run the work, or we advise and your team executes.
-              </p>
-            </div>
-            <p className="lead mt-8" style={{ maxWidth: 920 }}>
-              Melbourne is one of the two busiest search markets in Australia for this work. Across web design, SEO,
-              ecommerce and AI services, Melbourne records about 10,330 searches a month that name the city, just
-              behind Sydney. For web design alone, and for ecommerce and AI agents, it is the busiest city in the
-              country. That means more buyers, and more agencies competing for them, so this page spends as much time
-              on how to judge a web designer as it does on selling ours.
-            </p>
-          </div>
-        </section>
-
-        {/* ═══ 3. FACTS BAND ═══ */}
-        <section className="stats-band">
-          <div className="wrap">
-            <ul className="col-4" style={{ gap: 20 }}>
-              {[
-                { v: '2,920', t: 'monthly Melbourne web design searches, the most of any Australian city', s: 'DataForSEO, Sep 2026', u: '' },
-                { v: '19,581', t: 'more businesses in Victoria across 2025–26, the second largest rise of any state', s: 'ABS, Aug 2026', u: SRC_ABS.url },
-                { v: 'No AIO', t: 'Google showed no AI Overview on “web design company melbourne” or “melbourne web designer”', s: 'Google AU, 24 Sep 2026', u: '' },
-                { v: '2.5s', t: 'Google’s Largest Contentful Paint mark for a good page experience', s: 'Google Search Central', u: SRC_CWV.url },
-              ].map((r) => (
-                <li key={r.t}>
-                  <div style={{ fontFamily: T.fd, fontWeight: 800, fontSize: 26, color: T.orange }}>{r.v}</div>
-                  <p style={{ fontSize: 13.5, color: T.ink, marginTop: 4 }}>{r.t}</p>
-                  {r.u ? (
-                    <a href={r.u} target="_blank" rel="noopener noreferrer nofollow" style={{ fontFamily: T.fm, fontSize: 10, color: T.n400, textDecoration: 'underline' }}>{r.s}</a>
-                  ) : (
-                    <span style={{ fontFamily: T.fm, fontSize: 10, color: T.n400 }}>{r.s}</span>
-                  )}
-                </li>
+            <div className="ventries">
+              {DIAGNOSIS.map((d) => (
+                <details key={d.symptom} className="ventry">
+                  <summary><h3>{d.symptom}</h3><span className="chev" aria-hidden="true">+</span></summary>
+                  <p><b>Likely cause:</b> {d.likely}</p>
+                  <p><b>What fixes it:</b> {d.fix}</p>
+                </details>
               ))}
-            </ul>
-          </div>
-        </section>
-
-        {/* ═══ 4. FIVE SYMPTOMS (interactive <details>) ═══ */}
-        <section className="sec-lg dot-grid">
-          <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <span className="eyebrow">Diagnosis before design</span>
-                <h2>Five reasons a Melbourne website stops bringing in work</h2>
-                <p className="lead mt-4" style={{ maxWidth: 560 }}>
-                  Five Melbourne businesses can have the same complaint, that the website does not bring in work, and
-                  five different causes with very different costs to fix. Being sold a content retainer when the real
-                  problem is a noindex tag is how owners come to believe search does not work for them. Open the one
-                  that sounds like you.
-                </p>
-                <div className="card mt-8" style={{ padding: '4px 22px' }}>
-                  {DIAGNOSIS.map((d, i) => (
-                    <details key={d.symptom}>
-                      <summary><span><span style={{ fontFamily: T.fm, color: T.small, marginRight: 10 }}>{String(i + 1).padStart(2, '0')}</span>{d.symptom}</span></summary>
-                      <div style={{ paddingBottom: 18 }}>
-                        <p style={{ fontSize: 15 }}><b>Likely cause:</b> {d.likely}</p>
-                        <p style={{ fontSize: 15, marginTop: 8 }}><b>What fixes it:</b> {d.fix}</p>
-                      </div>
-                    </details>
-                  ))}
-                </div>
-              </div>
-              <div className="card card-top-orange">
-                <span className="eyebrow">Melbourne engagements at a glance</span>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Where we work</div><div className="scorecard-note">CBD to Box Hill, Footscray, Dandenong and Geelong</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Metro + VIC</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Two ways to engage</div><div className="scorecard-note">we build it, or we advise your team</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Build / Advise</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">How it starts</div><div className="scorecard-note">site and Google listing review, in writing</div></div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Free</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">How we meet</div><div className="scorecard-note">video calls in Melbourne business hours</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Remote</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">What we will not do</div><div className="scorecard-note">buy links, hold your domain, promise a position</div></div><div className="scorecard-val" style={{ color: T.small, fontSize: 14 }}>Never</div></div>
-                <p style={{ fontSize: 13, color: T.n400, marginTop: 12 }}>
+              <div className="au-panel">
+                <div className="eyebrow">Melbourne engagements at a glance</div>
+                <ul className="trigrows">
+                  <li><span className="m">Where we work</span><span className="n">CBD to Box Hill, Footscray, Dandenong and Geelong</span><span className="t">Metro + VIC</span></li>
+                  <li><span className="m">Two ways to engage</span><span className="n">we build it, or we advise your team</span><span className="t">Build / Advise</span></li>
+                  <li><span className="m">How it starts</span><span className="n">site and Google listing review, in writing</span><span className="t">Free</span></li>
+                  <li><span className="m">How we meet</span><span className="n">video calls in Melbourne business hours</span><span className="t">Remote</span></li>
+                  <li><span className="m">What we will not do</span><span className="n">buy links, hold your domain, promise a position</span><span className="t">Never</span></li>
+                </ul>
+                <p className="au-note">
                   No price figures appear on this page on purpose. What a Melbourne engagement costs depends on which
                   of the five problems you actually have, and a number posted here would be wrong for most readers.
                   For published Australian ranges, see our{' '}
-                  <a href="/blog/website-cost-australia-2026" style={srcLink}>guide to website design cost in Australia</a>.
+                  <a href="/blog/website-cost-australia-2026">guide to website design cost in Australia</a>.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ═══ 5. MELBOURNE MARKET + DEMAND ═══ */}
-        <section className="sec-lg">
+        {/* ═══ MELBOURNE MARKET + DEMAND → prose/demand split, then city table ═══ */}
+        <section className="section market" id="market">
           <div className="wrap">
-            <div className="col-6040">
+            <div className="section-head">
+              <div className="eyebrow">The Melbourne search market</div>
+              <h2>What Melbourne website design searches look like in September 2026</h2>
+            </div>
+            <div className="au-split au-split-flush">
               <div>
-                <span className="eyebrow">The Melbourne search market</span>
-                <h2>What Melbourne website design searches look like in September 2026</h2>
-                <div className="stack mt-6">
-                  <p>
-                    Victoria gained 19,581 businesses across 2025–26, the second largest net increase of any state or
-                    territory, within a national total of 2,814,778 actively trading businesses at 30 June 2026. More
-                    businesses means more people competing for the same attention, which is part of why Melbourne is a
-                    harder search market than Brisbane or Adelaide.
-                  </p>
-                  <p>
-                    The demand is real. “Web design melbourne” is searched about 1,900 times a month and “website
-                    design melbourne” about 1,300, and they are largely the same buyer using different words. A smaller
-                    group searches for a person rather than a firm, “melbourne web designer”, and they tend to be
-                    owner-operators who want to deal with one named human. We wrote this page for both.
-                  </p>
-                  <p>
-                    We checked who holds page one on 24 September 2026, counting how many separate websites link to
-                    each one (known as referring domains, the main measure of a site’s authority). For “web design
-                    company melbourne” the weakest agency on page one had links from 335 websites and the middle of
-                    the pack about 780. Those positions belong to firms with a decade of reputation, and nobody reaches
-                    them in months. The softer searches are different: one small studio on page one for “melbourne web
-                    designer” had links from just 3 websites. Depth and clarity still win there.
-                  </p>
-                  <p>
-                    One more thing worth knowing. Most of these searches show a Google Maps pack, the three local
-                    businesses with pins, above the ordinary results. That pack goes to businesses with a Melbourne
-                    address close to the searcher. We do not have a Melbourne office and will not invent one to get in.
-                    What we can do is set up your own Google Business Profile so that you are in it.
-                  </p>
-                </div>
-                <p style={srcNote}>
-                  Sources: <a href={SRC_ABS.url} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>{SRC_ABS.source}, {SRC_ABS.title}</a>;
+                <p>
+                  Victoria gained 19,581 businesses across 2025–26, the second largest net increase of any state or
+                  territory, within a national total of 2,814,778 actively trading businesses at 30 June 2026. More
+                  businesses means more people competing for the same attention, which is part of why Melbourne is a
+                  harder search market than Brisbane or Adelaide.
+                </p>
+                <p>
+                  The demand is real. “Web design melbourne” is searched about 1,900 times a month and “website
+                  design melbourne” about 1,300, and they are largely the same buyer using different words. A smaller
+                  group searches for a person rather than a firm, “melbourne web designer”, and they tend to be
+                  owner-operators who want to deal with one named human. We wrote this page for both.
+                </p>
+                <p>
+                  We checked who holds page one on 24 September 2026, counting how many separate websites link to
+                  each one (known as referring domains, the main measure of a site’s authority). For “web design
+                  company melbourne” the weakest agency on page one had links from 335 websites and the middle of
+                  the pack about 780. Those positions belong to firms with a decade of reputation, and nobody reaches
+                  them in months. The softer searches are different: one small studio on page one for “melbourne web
+                  designer” had links from just 3 websites. Depth and clarity still win there.
+                </p>
+                <p>
+                  One more thing worth knowing. Most of these searches show a Google Maps pack, the three local
+                  businesses with pins, above the ordinary results. That pack goes to businesses with a Melbourne
+                  address close to the searcher. We do not have a Melbourne office and will not invent one to get in.
+                  What we can do is set up your own Google Business Profile so that you are in it.
+                </p>
+                <p className="au-note">
+                  Sources: <a href={SRC_ABS.url} {...extLink}>{SRC_ABS.source}, {SRC_ABS.title}</a>;
                   {' '}search volumes and page-one checks from DataForSEO, Google Australia, 24 September 2026.
                 </p>
               </div>
-
-              <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: `1px solid ${T.n200}`, padding: '14px 18px' }}>
-                  <span style={{ fontFamily: T.fm, fontSize: 10, letterSpacing: '.13em', textTransform: 'uppercase', color: T.n400 }}>Melbourne · Monthly Searches</span>
-                  <span style={{ background: T.small, color: '#fff', fontFamily: T.fm, fontSize: 10, borderRadius: 999, padding: '3px 9px' }}>DataForSEO</span>
-                </div>
-                <div style={{ padding: '4px 18px 14px' }}>
-                  <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
-                    {DEMAND.map((r) => (
-                      <li key={r.kw} className="demand-row">
-                        <div className="demand-top"><span className="demand-kw">{r.kw}</span><span className="demand-v">{r.v}<span style={{ fontSize: 9, color: T.n400 }}> searches</span></span></div>
-                        <div className="demand-bar"><i style={{ width: r.w }} /></div>
-                        <div className="demand-kd">{r.note}</div>
-                      </li>
-                    ))}
-                  </ul>
-                  <p style={{ textAlign: 'center', fontFamily: T.fm, fontSize: 10, color: T.n400, marginTop: 10 }}>Google Australia, September 2026. Close variants overlap.</p>
-                </div>
+              <div className="demand">
+                <div className="demand-head"><span>Melbourne · Monthly Searches</span><b>DataForSEO</b></div>
+                <ul>
+                  {DEMAND.map((r) => (
+                    <li key={r.kw} className="demand-row">
+                      <div className="demand-top"><span className="demand-kw">{r.kw}</span><span className="demand-v">{r.v}<small> searches</small></span></div>
+                      <div className="demand-bar"><i style={{ width: r.w }} /></div>
+                      <div className="demand-kd">{r.note}</div>
+                    </li>
+                  ))}
+                </ul>
+                <p className="demand-src">Google Australia, September 2026. Close variants overlap.</p>
               </div>
             </div>
 
-            <h3 className="mt-12" style={{ maxWidth: 760 }}>How Melbourne compares with other Australian cities</h3>
-            <p className="mt-4" style={{ maxWidth: 760 }}>
-              Monthly searches that name each city, across the web design, SEO, ecommerce and AI agent terms we track.
-              Melbourne edges Sydney on web design, ecommerce and AI agent demand, and trails it on SEO.
-            </p>
-            <div className="card mt-6" style={{ padding: 0, overflowX: 'auto' }}>
-              <table className="cmp-table">
+            <div className="city-sub">
+              <h3>How Melbourne compares with other Australian cities</h3>
+              <p>
+                Monthly searches that name each city, across the web design, SEO, ecommerce and AI agent terms we track.
+                Melbourne edges Sydney on web design, ecommerce and AI agent demand, and trails it on SEO.
+              </p>
+            </div>
+            <div className="tablewrap">
+              <table>
                 <thead>
                   <tr>
                     <th>City</th>
@@ -479,7 +529,7 @@ export default function MelbournePage() {
                 <tbody>
                   {CITIES.map((c) => (
                     <tr key={c.city}>
-                      <td className="feat">{c.href ? <a href={c.href} style={srcLink}>{c.city}</a> : c.city}{c.city === 'Melbourne' ? ' (this page)' : ''}</td>
+                      <th scope="row">{c.href ? <a href={c.href}>{c.city}</a> : c.city}{c.city === 'Melbourne' ? ' (this page)' : ''}</th>
                       <td>{c.total}</td>
                       <td className="fj">{c.web}</td>
                       <td>{c.seo}</td>
@@ -490,207 +540,218 @@ export default function MelbournePage() {
                 </tbody>
               </table>
             </div>
-            <p style={srcNote}>DataForSEO, Google Australia, keyword volumes fetched 24 September 2026, close variants collapsed.</p>
+            <p className="tablenote">DataForSEO, Google Australia, keyword volumes fetched 24 September 2026, close variants collapsed.</p>
           </div>
         </section>
 
-        {/* ═══ 6. WHO WE BUILD FOR ═══ */}
-        <section className="sec-lg dot-grid">
+        {/* ═══ WHO WE BUILD FOR → ruled rows + suburb pills + city-map slot ═══ */}
+        <section className="section platforms" id="who-we-build-for">
           <div className="wrap">
-            <div className="col-6040">
+            <div className="section-head plat-head">
               <div>
-                <span className="eyebrow">Who we build for in Melbourne</span>
+                <div className="eyebrow">Who we build for in Melbourne</div>
                 <h2>Small business website design across Melbourne, suburb by suburb</h2>
-                <p className="lead mt-4" style={{ maxWidth: 580 }}>
-                  About 320 Melbourne searches a month are for small business website design specifically. Every
-                  industry buys differently, so the site has to match how your customers decide, not a template. These
-                  are the Melbourne businesses we build for most.
-                </p>
               </div>
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/melbourne/melbourne-laneway.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A cafe owner in a Melbourne CBD laneway checks her new website on her phone in the doorway of her cafe, with murals, hanging plants and bluestone cobbles behind her" style={imgStyle} />
-                <div style={{ padding: '12px 10px 6px' }}>
-                  <p style={{ fontSize: 14 }}>
-                    In a laneway cafe, most visitors arrive on a phone within a few hundred metres of the door. Hours, the
-                    menu and a map link have to load before anything else.
-                  </p>
+              <p>
+                About 320 Melbourne searches a month are for small business website design specifically. Every
+                industry buys differently, so the site has to match how your customers decide, not a template. These
+                are the Melbourne businesses we build for most.
+              </p>
+            </div>
+            <div className="platlist" role="list">
+              {SECTORS.map((s, i) => (
+                <div key={s.name} className="plat" role="listitem">
+                  <span className="capid">{String(i + 1).padStart(2, '0')}</span>
+                  <div className="plat-name"><h3>{s.name}</h3></div>
+                  <p className="plat-fit">{s.where}</p>
+                  <p className="plat-build">{s.note}</p>
                 </div>
+              ))}
+            </div>
+            <div className="city-areas">
+              <VisualSlot page={PAGE_KEY} slot="platforms" kind="photo" ratio="3:2" captionClassName="figcap"
+                subject="A cafe owner in a Melbourne CBD laneway checking her new website on her phone in the doorway of her cafe"
+                caption="In a laneway cafe, most visitors arrive on a phone within a few hundred metres of the door. Hours, the menu and a map link have to load before anything else.">
+                <img src="/images/au/melbourne/melbourne-laneway.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A cafe owner in a Melbourne CBD laneway checks her new website on her phone in the doorway of her cafe, with murals, hanging plants and bluestone cobbles behind her" />
+              </VisualSlot>
+              <div>
+                <div className="factlabel">Areas we work across</div>
+                <ul className="city-list">
+                  {SERVICE_AREAS.map((a) => (<li key={a}><span>{a}</span></li>))}
+                </ul>
+                <p className="city-areas-more">And the rest of Victoria.</p>
+                <VisualSlot page={PAGE_KEY} slot="city-map" kind="map" ratio="3:2"
+                  subject="A plain map of greater Melbourne with the listed suburbs and Geelong marked as small dots; no office pin, because FactoryJet has no Melbourne office" />
               </div>
             </div>
-            <ul className="col-3 mt-12">
-              {SECTORS.map((s) => (
-                <li key={s.name} className="svc-card">
-                  <h3>{s.name}</h3>
-                  <p style={{ fontFamily: T.fm, fontSize: 11, color: T.small, marginTop: 6, textTransform: 'uppercase', letterSpacing: '.06em' }}>{s.where}</p>
-                  <p className="mt-4">{s.note}</p>
-                </li>
-              ))}
-            </ul>
-            <p className="mt-8" style={{ fontSize: 14, color: T.n400 }}>
-              Areas we work across: {SERVICE_AREAS.join(', ')}, and the rest of Victoria.
-            </p>
           </div>
         </section>
 
-        {/* ═══ 7. WEB DESIGN: WHEN WE BUILD IT ═══ */}
-        <section className="sec-lg" id="web-design-melbourne">
+        {/* ═══ WEB DESIGN: WHEN WE BUILD IT → capgrid ═══ */}
+        <section className="section capabilities" id="web-design-melbourne">
           <div className="wrap">
-            <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">Web design in Melbourne</span>
+            <div className="section-head">
+              <div className="eyebrow">Web design in Melbourne</div>
               <h2>Website design in Melbourne, when we build it: six things every site gets</h2>
-              <p className="lead mt-4">
+              <p className="lead">
                 We design and build the site, rework the content with you, and launch it. Websites of up to five pages
                 qualify for our 7-day delivery from an approved scope. Builds with bookings, logins or integrations take
                 longer, and you get the date at scope rather than discovering it in week six.
               </p>
             </div>
-            <ol className="stack mt-10" style={{ maxWidth: 900 }}>
-              {BUILD.map((s, i) => (
-                <li key={s.t} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
-                  <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.orange, minWidth: 34 }}>{String(i + 1).padStart(2, '0')}</span>
-                  <div>
-                    <h3 style={{ fontSize: 18 }}>{s.t}</h3>
-                    <p style={{ marginTop: 6 }}>{s.d}</p>
+            <div className="capgrid">
+              {BUILD.map((s, i) => {
+                const n = String(i + 1).padStart(2, '0');
+                return (
+                  <div key={s.t} className={`cap cap-${i + 1}`}>
+                    <div className="caphead"><span className="capid">CAP‑{n}</span><svg {...CAP_ICON}><path d={BUILD_ICONS[i]} /></svg></div>
+                    <VisualSlot page={PAGE_KEY} slot={`capability-${n}`} kind="diagram" ratio="11:4" className="cap-diagram" subject={BUILD_SUBJECTS[i]} />
+                    <h3>{s.t}</h3>
+                    <p>{s.d}</p>
                   </div>
-                </li>
-              ))}
-            </ol>
-            <p style={srcNote}>
-              Core Web Vitals marks: <a href={SRC_CWV.url} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>{SRC_CWV.source}, {SRC_CWV.title}</a>.
+                );
+              })}
+            </div>
+            <p className="tablenote">
+              Core Web Vitals marks: <a href={SRC_CWV.url} {...extLink}>{SRC_CWV.source}, {SRC_CWV.title}</a>.
             </p>
           </div>
         </section>
 
-        {/* ═══ 8. INTEGRATIONS + CLINIC IMAGE ═══ */}
-        <section className="sec-lg dot-grid">
-          <div className="wrap">
-            <div className="col-6040">
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/melbourne/melbourne-clinic.webp" width={1200} height={800} loading="lazy" decoding="async" alt="The receptionist at a physiotherapy clinic in a renovated Richmond terrace checks the booking system while a patient waits at the front desk" style={imgStyle} />
-              </div>
-              <div>
-                <span className="eyebrow">Beyond the brochure site</span>
-                <h2>A website that works with the systems behind the front desk</h2>
-                <div className="stack mt-6">
-                  <p>
-                    A Richmond physio, a Box Hill dental practice or a South Yarra accountant rarely needs a prettier
-                    homepage. They need the booking button to write into the practice system, the enquiry form to land
-                    in the CRM with the right tags, and the invoice to reach Xero or MYOB without someone retyping it.
-                  </p>
-                  <p>
-                    That is where custom web design earns its keep over a template. We connect the site to the tools
-                    you already run through their official connections, and we say plainly when a tool has no way in,
-                    so you can decide whether to change it or live with a manual step.
-                  </p>
-                  <p>
-                    If the repeated admin behind the website is the real problem, such as sorting enquiries or copying
-                    orders between systems, that is a job for an <a href="/au/ai-agents" style={srcLink}>AI agent built into your existing tools</a>,
-                    and Melbourne is the city with the most searches for exactly that. For a first opinion on where AI
-                    fits at all, see <a href="/au/ai-consulting" style={srcLink}>AI consulting for Australian businesses</a>.
-                  </p>
-                </div>
-              </div>
-            </div>
+        {/* ═══ INTEGRATIONS + CLINIC IMAGE → definition (image left, copy right) ═══ */}
+        <section className="definition" id="integrations">
+          <div>
+            <VisualSlot page={PAGE_KEY} slot="definition" kind="photo" ratio="3:2" className="definition-image"
+              subject="The receptionist at a Richmond physiotherapy clinic checking the booking system while a patient waits">
+              <img src="/images/au/melbourne/melbourne-clinic.webp" width={1200} height={800} loading="lazy" decoding="async" alt="The receptionist at a physiotherapy clinic in a renovated Richmond terrace checks the booking system while a patient waits at the front desk" />
+            </VisualSlot>
           </div>
-        </section>
-
-        <MidPageCTA
-          headline="Not sure which of the five problems you have?"
-          sub="Send us your address. We crawl the site, check your Google Business Profile and read your own Search Console data, then tell you which one is actually costing you enquiries. Free, and if the answer is that you do not need us, we will say that."
-          label="Get a free diagnosis"
-          note="Bhavesh replies within one business day, Australian hours."
-        />
-
-        {/* ═══ 9. SEO CONSULTING ═══ */}
-        <section className="sec-lg" id="seo-consultant-melbourne">
-          <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <span className="eyebrow">SEO consultant Melbourne</span>
-                <h2>SEO consulting in Melbourne, when your team does the work</h2>
-                <p className="lead mt-4" style={{ maxWidth: 580 }}>
-                  About 1,000 Melbourne searches a month are for an SEO consultant rather than an agency. Consultant
-                  intent is advisory: the buyer usually has someone who can do the work and wants direction. Google itself
-                  says some changes take effect in a few hours and others take several months, and advises waiting a few
-                  weeks before judging a change. We plan around that.
-                </p>
-              </div>
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/melbourne/melbourne-trades.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A Melbourne plumber beside his white van on a leafy street of red-brick Edwardian houses checks a new job enquiry on his phone" style={imgStyle} />
-                <div style={{ padding: '12px 10px 6px' }}>
-                  <p style={{ fontSize: 14 }}>
-                    For a tradie in the eastern suburbs, the Google Business Profile does more work than the website.
-                    Setting it up properly is usually the first hour we recommend. See what goes on a{' '}
-                    <a href="/au/websites-for-tradies" style={srcLink}>website for tradies</a>.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <ul className="col-3 mt-12">
-              {ADVISE.map((a) => (
-                <li key={a.t} className="card">
-                  <h3 style={{ fontSize: 17 }}>{a.t}</h3>
-                  <p className="mt-4" style={{ fontSize: 14.5 }}>{a.d}</p>
-                </li>
-              ))}
-            </ul>
-            <p style={srcNote}>
-              Timing guidance: <a href={SRC_SEO_GUIDE.url} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>{SRC_SEO_GUIDE.source}, {SRC_SEO_GUIDE.title}</a>.
-              {' '}For the full SEO service, see <a href="/au/seo" style={srcLink}>SEO services in Australia</a>; for visibility in ChatGPT and Google AI answers, see <a href="/au/ai-seo" style={srcLink}>AI SEO for Australian businesses</a>.
+          <div className="definition-copy">
+            <div className="eyebrow">Beyond the brochure site</div>
+            <h2>A website that works with the systems behind the front desk</h2>
+            <p>
+              A Richmond physio, a Box Hill dental practice or a South Yarra accountant rarely needs a prettier
+              homepage. They need the booking button to write into the practice system, the enquiry form to land
+              in the CRM with the right tags, and the invoice to reach Xero or MYOB without someone retyping it.
+            </p>
+            <p>
+              That is where custom web design earns its keep over a template. We connect the site to the tools
+              you already run through their official connections, and we say plainly when a tool has no way in,
+              so you can decide whether to change it or live with a manual step.
+            </p>
+            <p>
+              If the repeated admin behind the website is the real problem, such as sorting enquiries or copying
+              orders between systems, that is a job for an <a href="/au/ai-agents">AI agent built into your existing tools</a>,
+              and Melbourne is the city with the most searches for exactly that. For a first opinion on where AI
+              fits at all, see <a href="/au/ai-consulting">AI consulting for Australian businesses</a>.
             </p>
           </div>
         </section>
 
-        {/* ═══ 10. PROCESS (<details>) ═══ */}
-        <section className="sec-lg dot-grid">
+        {/* ═══ SEO CONSULTING → facts ═══ */}
+        <section className="section facts" id="seo-consultant-melbourne">
           <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <span className="eyebrow">How a Melbourne project runs</span>
+            <div className="section-head">
+              <div className="eyebrow">SEO consultant Melbourne</div>
+              <h2>SEO consulting in Melbourne, when your team does the work</h2>
+              <p className="lead">
+                About 1,000 Melbourne searches a month are for an SEO consultant rather than an agency. Consultant
+                intent is advisory: the buyer usually has someone who can do the work and wants direction. Google itself
+                says some changes take effect in a few hours and others take several months, and advises waiting a few
+                weeks before judging a change. We plan around that.
+              </p>
+            </div>
+            <div className="factswrap">
+              <div className="factlist">
+                {ADVISE.map((a, i) => (
+                  <div key={a.t} className="fact">
+                    <div className="sec">§{String(i + 1).padStart(2, '0')}</div>
+                    <div>
+                      <h3>{a.t}</h3>
+                      <p>{a.d}</p>
+                      {i === ADVISE.length - 1 ? (
+                        <p className="au-note">
+                          Timing guidance: <a href={SRC_SEO_GUIDE.url} {...extLink}>{SRC_SEO_GUIDE.source}, {SRC_SEO_GUIDE.title}</a>.
+                          {' '}For the full SEO service, see <a href="/au/seo">SEO services in Australia</a>; for visibility in ChatGPT and Google AI answers, see <a href="/au/ai-seo">AI SEO for Australian businesses</a>.
+                        </p>
+                      ) : null}
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <VisualSlot page={PAGE_KEY} slot="facts-2" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
+                subject="A Melbourne plumber beside his van on a leafy street checking a new job enquiry on his phone"
+                caption={<>For a tradie in the eastern suburbs, the Google Business Profile does more work than the website. Setting it up properly is usually the first hour we recommend. See what goes on a{' '}<a href="/au/websites-for-tradies">website for tradies</a>.</>}>
+                <img src="/images/au/melbourne/melbourne-trades.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A Melbourne plumber beside his white van on a leafy street of red-brick Edwardian houses checks a new job enquiry on his phone" />
+              </VisualSlot>
+            </div>
+          </div>
+        </section>
+
+        {/* ═══ PHOTOBREAK (US template visual, no AU image yet) ═══ */}
+        <VisualSlot page={PAGE_KEY} slot="photobreak" kind="illustration" ratio="12:5" className="photobreak"
+          subject="AI-generated model: a white Melbourne tram-stop sign beside a row of white website page cards, one card lifted in orange" />
+
+        {/* ═══ PROCESS (steps stay openable, as the copy says) ═══ */}
+        <section className="section process" id="process">
+          <div className="wrap">
+            <div className="head-media">
+              <div className="section-head">
+                <div className="eyebrow">How a Melbourne project runs</div>
                 <h2>From free review to live website in seven steps</h2>
-                <p className="lead mt-4" style={{ maxWidth: 560 }}>
+                <p className="lead">
                   Open any step to see what happens and what you get at the end of it. You can stop after the review or
                   after the scope, and keep what we gave you.
                 </p>
-                <div className="card mt-8" style={{ padding: '4px 22px' }}>
-                  {STEPS.map((s) => (
-                    <details key={s.n}>
-                      <summary><span><span style={{ fontFamily: T.fm, color: T.small, marginRight: 10 }}>{s.n}</span>{s.t}</span></summary>
-                      <div style={{ paddingBottom: 18 }}>
-                        <p style={{ fontSize: 15 }}>{s.d}</p>
-                        <p style={{ fontSize: 14, marginTop: 8 }}><b>You get:</b> {s.out}</p>
-                      </div>
-                    </details>
-                  ))}
-                </div>
-                <p className="mt-4" style={{ fontSize: 14 }}>
-                  Monthly fixes and updates are covered by our <a href="/au/website-maintenance" style={srcLink}>website maintenance</a> plans.
-                </p>
               </div>
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/melbourne/melbourne-workshop.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A web strategist sketches a website sitemap of connected boxes on a whiteboard for two business owners in a Southbank meeting room overlooking the Yarra River" style={imgStyle} />
-                <div style={{ padding: '14px 12px 8px' }}>
-                  <p style={{ fontSize: 14 }}>
-                    Step three is a sitemap, not a colour palette. Every page gets named after something Melbourne buyers
-                    actually search, using real volume data, before anyone opens a design tool.
-                  </p>
-                </div>
-              </div>
+              <VisualSlot page={PAGE_KEY} slot="process" kind="photo" ratio="3:2" captionClassName="figcap"
+                subject="A web strategist sketching a sitemap on a whiteboard for two business owners in a Southbank meeting room"
+                caption="Step three is a sitemap, not a colour palette. Every page gets named after something Melbourne buyers actually search, using real volume data, before anyone opens a design tool.">
+                <img src="/images/au/melbourne/melbourne-workshop.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A web strategist sketches a website sitemap of connected boxes on a whiteboard for two business owners in a Southbank meeting room overlooking the Yarra River" />
+              </VisualSlot>
             </div>
+            <div className="timeline timeline-4">
+              {STEPS.map((s) => (
+                <details key={s.n} className="tnode">
+                  <summary>
+                    <div className="idx">{s.n}</div>
+                    <h3>{s.t}<span className="chev" aria-hidden="true">+</span></h3>
+                  </summary>
+                  <p>{s.d}</p>
+                  <p><b>You get:</b> {s.out}</p>
+                </details>
+              ))}
+            </div>
+            <p className="tablenote">
+              Monthly fixes and updates are covered by our <a href="/au/website-maintenance">website maintenance</a> plans.
+            </p>
           </div>
         </section>
 
-        {/* ═══ 11. COMPARISON TABLE ═══ */}
-        <section className="sec-lg">
+        <div className="au-midcta">
+          <MidPageCTA
+            headline="Not sure which of the five problems you have?"
+            sub="Send us your address. We crawl the site, check your Google Business Profile and read your own Search Console data, then tell you which one is actually costing you enquiries. Free, and if the answer is that you do not need us, we will say that."
+            label="Get a free diagnosis"
+            note="Bhavesh replies within one business day, Australian hours."
+          />
+        </div>
+
+        {/* ═══ COMPARISON TABLE ═══ */}
+        <section className="section comparison" id="comparison">
           <div className="wrap">
-            <span className="eyebrow">Side by side</span>
-            <h2 style={{ maxWidth: 760 }}>Freelance web designer vs design studio vs full-service agency vs FactoryJet</h2>
-            <p className="lead mt-4" style={{ maxWidth: 760 }}>
-              Melbourne buyers search for all four, from “freelance web designer melbourne” to “web design agency
-              melbourne”. Each is right for someone. The table shows where each one tends to be strong.
-            </p>
-            <div className="card mt-8" style={{ padding: 0, overflowX: 'auto' }}>
-              <table className="cmp-table">
+            <div className="section-head head-split">
+              <div className="eyebrow">Side by side</div>
+              <div>
+                <h2>Freelance web designer vs design studio vs full-service agency vs FactoryJet</h2>
+                <p className="lead">
+                  Melbourne buyers search for all four, from “freelance web designer melbourne” to “web design agency
+                  melbourne”. Each is right for someone. The table shows where each one tends to be strong.
+                </p>
+              </div>
+            </div>
+            <div className="tablewrap">
+              <table>
                 <thead>
                   <tr>
                     <th>What you get</th>
@@ -701,51 +762,51 @@ export default function MelbournePage() {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td className="feat">Best fit</td><td className="fj"><span className="yes">Sites that must perform and connect to your systems</span></td><td><span className="partial">Small, well-defined sites</span></td><td><span className="partial">Brand-led, visual work</span></td><td><span className="partial">Campaigns, ads and brand under one roof</span></td></tr>
-                  <tr><td className="feat">Who writes the code</td><td className="fj"><span className="yes">Senior engineers you speak to</span></td><td><span className="yes">The freelancer</span></td><td><span className="partial">Varies, sometimes outsourced</span></td><td><span className="partial">Often a separate team</span></td></tr>
-                  <tr><td className="feat">Speed measured against Google’s marks</td><td className="fj"><span className="yes">Before and after report</span></td><td><span className="partial">Depends on the person</span></td><td><span className="partial">Sometimes</span></td><td><span className="partial">Sometimes</span></td></tr>
-                  <tr><td className="feat">Search demand checked before pages are planned</td><td className="fj"><span className="yes">Real volume data</span></td><td><span className="no">Rarely</span></td><td><span className="partial">Sometimes</span></td><td><span className="yes">Usually</span></td></tr>
-                  <tr><td className="feat">Integrations (bookings, CRM, Xero)</td><td className="fj"><span className="yes">Built in</span></td><td><span className="partial">Plugins</span></td><td><span className="partial">Varies</span></td><td><span className="partial">Varies</span></td></tr>
-                  <tr><td className="feat">Ownership of domain and accounts</td><td className="fj"><span className="yes">Yours from day one</span></td><td><span className="partial">Check the contract</span></td><td><span className="partial">Check the contract</span></td><td><span className="partial">Often held by the agency</span></td></tr>
-                  <tr><td className="feat">Support after launch</td><td className="fj"><span className="yes">Same team</span></td><td><span className="partial">If available</span></td><td><span className="partial">Varies</span></td><td><span className="yes">Usually, on retainer</span></td></tr>
-                  <tr><td className="feat">Melbourne office you can visit</td><td className="fj"><span className="no">No, remote in Melbourne hours</span></td><td><span className="partial">Sometimes</span></td><td><span className="yes">Usually</span></td><td><span className="yes">Usually</span></td></tr>
-                  <tr><td className="feat">TV, print and brand campaigns</td><td className="fj"><span className="no">Not our work</span></td><td><span className="no">No</span></td><td><span className="partial">Brand, yes</span></td><td><span className="yes">Yes</span></td></tr>
+                  <tr><th scope="row">Best fit</th><td className="fj">Sites that must perform and connect to your systems</td><td>Small, well-defined sites</td><td>Brand-led, visual work</td><td>Campaigns, ads and brand under one roof</td></tr>
+                  <tr><th scope="row">Who writes the code</th><td className="fj">Senior engineers you speak to</td><td>The freelancer</td><td>Varies, sometimes outsourced</td><td>Often a separate team</td></tr>
+                  <tr><th scope="row">Speed measured against Google’s marks</th><td className="fj">Before and after report</td><td>Depends on the person</td><td>Sometimes</td><td>Sometimes</td></tr>
+                  <tr><th scope="row">Search demand checked before pages are planned</th><td className="fj">Real volume data</td><td>Rarely</td><td>Sometimes</td><td>Usually</td></tr>
+                  <tr><th scope="row">Integrations (bookings, CRM, Xero)</th><td className="fj">Built in</td><td>Plugins</td><td>Varies</td><td>Varies</td></tr>
+                  <tr><th scope="row">Ownership of domain and accounts</th><td className="fj">Yours from day one</td><td>Check the contract</td><td>Check the contract</td><td>Often held by the agency</td></tr>
+                  <tr><th scope="row">Support after launch</th><td className="fj">Same team</td><td>If available</td><td>Varies</td><td>Usually, on retainer</td></tr>
+                  <tr><th scope="row">Melbourne office you can visit</th><td className="fj">No, remote in Melbourne hours</td><td>Sometimes</td><td>Usually</td><td>Usually</td></tr>
+                  <tr><th scope="row">TV, print and brand campaigns</th><td className="fj">Not our work</td><td>No</td><td>Brand, yes</td><td>Yes</td></tr>
                 </tbody>
               </table>
             </div>
-            <p style={srcNote}>The last two rows are where we are the wrong choice. A comparison where the author wins every line is not worth reading.</p>
+            <p className="tablenote">The last two rows are where we are the wrong choice. A comparison where the author wins every line is not worth reading.</p>
           </div>
         </section>
 
-        {/* ═══ 12. SIX QUESTIONS + WHO RANKS ═══ */}
-        <section className="sec-lg dot-grid" id="choosing">
+        {/* ═══ SIX QUESTIONS + WHO RANKS ═══ */}
+        <section className="section" id="choosing">
           <div className="wrap">
-            <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">Choosing someone</span>
+            <div className="section-head">
+              <div className="eyebrow">Choosing someone</div>
               <h2>Six questions that separate Melbourne web design agencies quickly</h2>
-              <p className="lead mt-4">
+              <p className="lead">
                 More Melbourne searches ask who to hire than what the work costs, so this is the part of the page worth
                 your time. Ask all six of whoever you are considering, including us. Watch the right-hand column: it is
                 where the difference usually shows.
               </p>
             </div>
-            <div className="card mt-8" style={{ padding: 0, overflowX: 'auto' }}>
-              <table className="cmp-table">
+            <div className="tablewrap">
+              <table>
                 <thead>
                   <tr><th>Ask this</th><th className="fj">A good answer sounds like</th><th>Walk away if you hear</th></tr>
                 </thead>
                 <tbody>
                   {QUESTIONS.map((r) => (
-                    <tr key={r.q}><td className="feat">{r.q}</td><td className="fj"><span className="yes">{r.good}</span></td><td><span className="no">{r.bad}</span></td></tr>
+                    <tr key={r.q}><th scope="row">{r.q}</th><td className="fj">{r.good}</td><td>{r.bad}</td></tr>
                   ))}
                 </tbody>
               </table>
             </div>
 
-            <div className="col-2 mt-12">
-              <div className="card">
+            <div className="au-split">
+              <div>
                 <h3>Why there is no “best Melbourne web design agencies” list here</h3>
-                <p className="mt-4">
+                <p>
                   Google shows several versions of that question to Melbourne searchers, so we know you are asking it.
                   We will not rank our own competitors, because a list written by us is marketing wearing a lab coat.
                   Every agency that publishes one puts itself at the top. Build your own shortlist instead: search the
@@ -753,110 +814,113 @@ export default function MelbournePage() {
                   each. Three conversations is usually enough.
                 </p>
               </div>
-              <div className="card card-top-orange">
+              <div className="au-panel">
                 <h3>Who Google showed on page one</h3>
-                <p className="mt-4" style={{ fontSize: 14.5 }}>
+                <p>
                   For “web design company melbourne” on 24 September 2026, with directories removed, page one held
                   these sites. It is a record of the results page, not a recommendation, and a sensible place to start
                   your own research.
                 </p>
-                <ul className="flex-wrap mt-4" style={{ listStyle: 'none', padding: 0 }}>
-                  {PAGE_ONE.map((d) => (<li key={d} className="chip">{d}</li>))}
+                <ul className="city-list">
+                  {PAGE_ONE.map((d) => (<li key={d}><span>{d}</span></li>))}
                 </ul>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ═══ 13. ECOMMERCE / B2B ═══ */}
-        <section className="sec-lg">
+        {/* ═══ ECOMMERCE / B2B → facts ═══ */}
+        <section className="section facts" id="ecommerce">
           <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <span className="eyebrow">Ecommerce website design Melbourne</span>
-                <h2>When the website has to sell, not just inform</h2>
-                <div className="stack mt-6">
-                  <p>
-                    Ecommerce website design is the largest Melbourne web search after the core design terms, at about
-                    390 searches a month, and Melbourne has more ecommerce searches naming the city than anywhere else in
-                    Australia. Some of the most valuable are manufacturers and wholesalers in the south east and the west who
-                    want trade customers to reorder online instead of by email.
-                  </p>
-                  <p>
-                    That is a different build from a brochure site. Stock has to sync, GST has to be right, trade pricing
-                    has to show only to logged-in accounts, shipping has to work with Australia Post and couriers, and
-                    orders have to land in Xero or MYOB. FactoryJet has spent more than a decade on commerce builds,
-                    including B2B ordering for Bombay Petals.
-                  </p>
-                  <p>
-                    For store builds, see our <a href="/au/ecommerce-development" style={srcLink}>ecommerce development service in Australia</a>.
-                    If you are on or moving to Shopify, see <a href="/au/shopify-development" style={srcLink}>Shopify development for Australian businesses</a>;
-                    we are a registered Shopify Partner.
-                  </p>
-                </div>
+            <div className="section-head">
+              <div className="eyebrow">Ecommerce website design Melbourne</div>
+              <h2>When the website has to sell, not just inform</h2>
+            </div>
+            <div className="factswrap">
+              <div className="factlist">
+                <div className="fact"><div className="sec">§01</div><p>
+                  Ecommerce website design is the largest Melbourne web search after the core design terms, at about
+                  390 searches a month, and Melbourne has more ecommerce searches naming the city than anywhere else in
+                  Australia. Some of the most valuable are manufacturers and wholesalers in the south east and the west who
+                  want trade customers to reorder online instead of by email.
+                </p></div>
+                <div className="fact"><div className="sec">§02</div><p>
+                  That is a different build from a brochure site. Stock has to sync, GST has to be right, trade pricing
+                  has to show only to logged-in accounts, shipping has to work with Australia Post and couriers, and
+                  orders have to land in Xero or MYOB. FactoryJet has spent more than a decade on commerce builds,
+                  including B2B ordering for Bombay Petals.
+                </p></div>
+                <div className="fact"><div className="sec">§03</div><p>
+                  For store builds, see our <a href="/au/ecommerce-development">ecommerce development service in Australia</a>.
+                  If you are on or moving to Shopify, see <a href="/au/shopify-development">Shopify development for Australian businesses</a>;
+                  we are a registered Shopify Partner.
+                </p></div>
               </div>
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/melbourne/melbourne-b2b.webp" width={1200} height={800} loading="lazy" decoding="async" alt="An operations manager with a tablet and a warehouse worker check a pallet of plain cartons in a light-industrial warehouse in Dandenong South, Melbourne" style={imgStyle} />
-                <div style={{ padding: '12px 10px 6px' }}>
-                  <p style={{ fontSize: 14 }}>
-                    In a Dandenong South warehouse, the website is an ordering system. It has to agree with the stock on
-                    the racks and the invoice in the accounts.
-                  </p>
-                </div>
-              </div>
+              <VisualSlot page={PAGE_KEY} slot="facts-3" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
+                subject="An operations manager with a tablet and a warehouse worker checking a pallet of cartons in a Dandenong South warehouse"
+                caption="In a Dandenong South warehouse, the website is an ordering system. It has to agree with the stock on the racks and the invoice in the accounts.">
+                <img src="/images/au/melbourne/melbourne-b2b.webp" width={1200} height={800} loading="lazy" decoding="async" alt="An operations manager with a tablet and a warehouse worker check a pallet of plain cartons in a light-industrial warehouse in Dandenong South, Melbourne" />
+              </VisualSlot>
             </div>
           </div>
         </section>
 
-        {/* ═══ 14. WHICH OPTION FITS (<details>) ═══ */}
-        <section className="sec-lg dot-grid">
+        {/* ═══ WHICH OPTION FITS (<details>) → vlog ═══ */}
+        <section className="vlog" id="which-option">
           <div className="wrap">
-            <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">Which option fits you</span>
+            <div className="section-head">
+              <div className="eyebrow">Which option fits you</div>
               <h2>A quick check: what does your Melbourne business actually need?</h2>
-              <p className="lead mt-4">Open the line that sounds most like you. The honest answer is not always this page.</p>
+              <p>Open the line that sounds most like you. The honest answer is not always this page.</p>
             </div>
-            <div className="card mt-8" style={{ padding: '4px 22px', maxWidth: 900 }}>
-              <details>
-                <summary>We need a new website, up to five pages, and our content is mostly ready</summary>
-                <div style={{ paddingBottom: 18 }}><p style={{ fontSize: 15 }}><b>This page is the right place.</b> Websites up to 5 pages qualify for our 7-day delivery from approved scope. Start with the free review so the scope is right.</p></div>
+            <div className="ventries">
+              <details className="ventry">
+                <summary><h3>We need a new website, up to five pages, and our content is mostly ready</h3><span className="chev" aria-hidden="true">+</span></summary>
+                <span className="vtag">This page is the right place.</span>
+                <p>Websites up to 5 pages qualify for our 7-day delivery from approved scope. Start with the free review so the scope is right.</p>
               </details>
-              <details>
-                <summary>Our site is fine, but we do not show up in Google or Maps</summary>
-                <div style={{ paddingBottom: 18 }}><p style={{ fontSize: 15 }}><b>You need SEO, not a redesign.</b> Start with a technical audit and your Google Business Profile. See our <a href="/au/seo" style={srcLink}>SEO services for Australian businesses</a>.</p></div>
+              <details className="ventry">
+                <summary><h3>Our site is fine, but we do not show up in Google or Maps</h3><span className="chev" aria-hidden="true">+</span></summary>
+                <span className="vtag">You need SEO, not a redesign.</span>
+                <p>Start with a technical audit and your Google Business Profile. See our <a href="/au/seo">SEO services for Australian businesses</a>.</p>
               </details>
-              <details>
-                <summary>We have a marketer or developer and just need direction</summary>
-                <div style={{ paddingBottom: 18 }}><p style={{ fontSize: 15 }}><b>SEO consulting.</b> We diagnose, rank the fixes and brief your team. Often better value than a retainer.</p></div>
+              <details className="ventry">
+                <summary><h3>We have a marketer or developer and just need direction</h3><span className="chev" aria-hidden="true">+</span></summary>
+                <span className="vtag">SEO consulting.</span>
+                <p>We diagnose, rank the fixes and brief your team. Often better value than a retainer.</p>
               </details>
-              <details>
-                <summary>We sell products online, or want trade customers to order online</summary>
-                <div style={{ paddingBottom: 18 }}><p style={{ fontSize: 15 }}><b>An ecommerce build.</b> See <a href="/au/ecommerce-development" style={srcLink}>ecommerce development</a> or <a href="/au/shopify-development" style={srcLink}>Shopify development</a> in Australia.</p></div>
+              <details className="ventry">
+                <summary><h3>We sell products online, or want trade customers to order online</h3><span className="chev" aria-hidden="true">+</span></summary>
+                <span className="vtag">An ecommerce build.</span>
+                <p>See <a href="/au/ecommerce-development">ecommerce development</a> or <a href="/au/shopify-development">Shopify development</a> in Australia.</p>
               </details>
-              <details>
-                <summary>We want ChatGPT, Perplexity and Google AI answers to name our business</summary>
-                <div style={{ paddingBottom: 18 }}><p style={{ fontSize: 15 }}><b>That is AI search visibility.</b> See our <a href="/au/ai-seo" style={srcLink}>AI SEO service for Australian businesses</a>.</p></div>
+              <details className="ventry">
+                <summary><h3>We want ChatGPT, Perplexity and Google AI answers to name our business</h3><span className="chev" aria-hidden="true">+</span></summary>
+                <span className="vtag">That is AI search visibility.</span>
+                <p>See our <a href="/au/ai-seo">AI SEO service for Australian businesses</a>.</p>
               </details>
-              <details>
-                <summary>Our real problem is admin: enquiries, orders and invoices copied by hand</summary>
-                <div style={{ paddingBottom: 18 }}><p style={{ fontSize: 15 }}><b>Look at automation.</b> See <a href="/au/ai-agents" style={srcLink}>AI agents built into Xero, HubSpot and your other tools</a>.</p></div>
+              <details className="ventry">
+                <summary><h3>Our real problem is admin: enquiries, orders and invoices copied by hand</h3><span className="chev" aria-hidden="true">+</span></summary>
+                <span className="vtag">Look at automation.</span>
+                <p>See <a href="/au/ai-agents">AI agents built into Xero, HubSpot and your other tools</a>.</p>
               </details>
-              <details>
-                <summary>We want a brand campaign, TV or print, or an office we can visit weekly</summary>
-                <div style={{ paddingBottom: 18 }}><p style={{ fontSize: 15 }}><b>Not us.</b> A Melbourne full-service agency or local studio is the better fit, and we would say so on a call.</p></div>
+              <details className="ventry">
+                <summary><h3>We want a brand campaign, TV or print, or an office we can visit weekly</h3><span className="chev" aria-hidden="true">+</span></summary>
+                <span className="vtag">Not us.</span>
+                <p>A Melbourne full-service agency or local studio is the better fit, and we would say so on a call.</p>
               </details>
             </div>
           </div>
         </section>
 
-        {/* ═══ 15. SIBLINGS + CITIES (hover cards) ═══ */}
-        <section className="sec-lg">
+        {/* ═══ SIBLINGS + CITIES → agentdir + city pills ═══ */}
+        <section className="section agentdir" id="more-services">
           <div className="wrap">
-            <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">FactoryJet Australia</span>
+            <div className="section-head">
+              <div className="eyebrow">FactoryJet Australia</div>
               <h2>More services for Melbourne businesses</h2>
             </div>
-            <ul className="col-3 mt-10" style={{ gap: 16 }}>
+            <ul className="agentdir-grid">
               {[
                 { h: '/au', t: 'FactoryJet Australia', d: 'Web design, ecommerce, AI agents and AI search for Australian businesses, in one place.' },
                 { h: '/au/seo', t: 'SEO services Australia', d: 'Technical repair, content and local search, reported on enquiries rather than rankings.' },
@@ -866,103 +930,69 @@ export default function MelbournePage() {
                 { h: '/au/ai-seo', t: 'AI SEO', d: 'Get your business named in ChatGPT, Perplexity and Google AI answers.' },
               ].map((c) => (
                 <li key={c.h}>
-                  <a href={c.h} className="svc-card" style={{ display: 'block', height: '100%' }}>
-                    <h3 style={{ fontSize: 17 }}>{c.t} <span aria-hidden="true" style={{ color: T.small }}>→</span></h3>
-                    <p style={{ marginTop: 8, fontSize: 14 }}>{c.d}</p>
+                  <a href={c.h}>
+                    <span className="agentdir-t">{c.t}</span>
+                    <span className="agentdir-l">{c.d}</span>
+                    <span className="agentdir-go" aria-hidden="true">↗</span>
                   </a>
                 </li>
               ))}
             </ul>
-            <p className="mt-10" style={{ fontSize: 15 }}>Web design and SEO in other Australian cities:</p>
-            <div className="flex-wrap mt-4">
-              <a className="city-pill" href="/au/brisbane">Web design Brisbane</a>
-              <a className="city-pill" href="/au/adelaide">Web design Adelaide</a>
-              <a className="city-pill" href="/au/canberra">Web design Canberra</a>
-              <a className="city-pill" href="/au">All of Australia</a>
+            <div className="city-links">
+              <p>Web design and SEO in other Australian cities:</p>
+              <ul className="city-list">
+                <li><a href="/au/brisbane">Web design Brisbane</a></li>
+                <li><a href="/au/adelaide">Web design Adelaide</a></li>
+                <li><a href="/au/canberra">Web design Canberra</a></li>
+                <li><a href="/au">All of Australia</a></li>
+              </ul>
             </div>
           </div>
         </section>
 
-        {/* ═══ 16. FAQ ═══ */}
-        <section className="sec-lg dot-grid" id="faq">
+        {/* ═══ FAQ (Family A accordion; same FAQ_ITEMS array as the FAQPage JSON-LD) ═══ */}
+        <AuFaq
+          categories={FAQ_CATEGORIES}
+          items={FAQ_ITEMS}
+          heading="Web design and SEO in Melbourne: questions buyers ask"
+          askLabel="Still have a question? Ask the founder →"
+          askNote="Replies within 24 hours."
+        />
+
+        {/* ═══ SOURCES → references ═══ */}
+        <section className="section referencesSection references" id="sources">
           <div className="wrap">
-            <div style={{ textAlign: 'center' }}>
-              <span className="eyebrow">FAQ</span>
-              <h2>Web design and SEO in Melbourne: questions buyers ask</h2>
-            </div>
-            <div className="faq-grid">
-              <aside className="faq-sidebar">
-                <span className="faq-sidebar-topics">Topics</span>
-                <nav className="faq-sidebar-nav">
-                  {FAQ_CATEGORIES.map((c) => (
-                    <a key={c.key} href={`#faq-${c.key}`}>
-                      {c.label}
-                      <span className="faq-nav-count">{FAQ_ITEMS.filter((f) => f.category === c.key).length}</span>
-                    </a>
-                  ))}
-                </nav>
-                <div className="faq-sidebar-cta">
-                  <ModalCTAButton label="Still have a question? Ask the founder →" region="au" modalVariant="default" btnVariant="secondary-light" />
-                  <p>Replies within 24 hours.</p>
-                </div>
-              </aside>
-              <div>
-                {FAQ_CATEGORIES.map((c) => (
-                  <div key={c.key} id={`faq-${c.key}`} style={{ marginBottom: 40 }}>
-                    <div className="faq-cat-header">
-                      <span className="faq-cat-bar" />
-                      <p className="faq-cat-label">{c.label}</p>
-                    </div>
-                    <ul className="faq-list">{FAQ_ITEMS.filter((f) => f.category === c.key).map((f) => (
-                      <li key={f.question}><details className="faq-item">
-                        <summary>
-                          <span className="q-text">{f.question}</span>
-                          <span className="chevron">
-                            <svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5L7 9L11 5" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" /></svg>
-                          </span>
-                        </summary>
-                        <div className="faq-ans"><p>{f.answer}</p>{f.links ? <p style={{ marginTop: 8 }}>{f.links.map((l) => <a key={l.href} href={l.href} style={{ ...srcLink, marginRight: 16 }}>{l.label}</a>)}</p> : null}</div>
-                      </details></li>
-                    ))}</ul>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ═══ 17. SOURCES ═══ */}
-        <section className="sec">
-          <div className="wrap" style={{ maxWidth: 900 }}>
-            <span className="eyebrow">Sources</span>
-            <ol className="stack mt-4" style={{ paddingLeft: 18 }}>
+            <div className="eyebrow">Sources</div>
+            <div className="refs refs-claims">
               {CITATIONS.map((c) => (
-                <li key={c.id} style={{ fontSize: 14 }}>
-                  <a href={c.url} target="_blank" rel="noopener noreferrer" style={srcLink}>{c.source}: {c.title}</a>
-                  <p style={{ fontSize: 13.5, color: T.n400, marginTop: 4 }}>{c.claim}</p>
-                </li>
+                <div className="ref" key={c.id}>
+                  <a href={c.url} target="_blank" rel="noopener noreferrer">{c.source}: {c.title}</a>
+                  <p>{c.claim}</p>
+                </div>
               ))}
-            </ol>
-            <p style={srcNote}>
+            </div>
+            <p className="au-note">
               Search volumes, page-one link counts, Maps pack and AI Overview presence were measured by FactoryJet with
               DataForSEO against Google Australia on 24 September 2026.
             </p>
           </div>
         </section>
 
-        {/* ═══ 18. FINAL CTA (the only dark section) ═══ */}
-        <section className="dark-sec">
-          <div className="wrap" style={{ textAlign: 'center', maxWidth: 640 }}>
-            <span className="eyebrow">Next step</span>
-            <h2>Find out what is actually holding your Melbourne site back</h2>
-            <p className="mt-4">
-              Send us the address. We will work out which of the five problems on this page you actually have, in
-              writing, and if your problem is conversion rather than search we will say so. The founder replies within
-              one business day, Australian hours.
-            </p>
-            <div className="mt-8" style={{ display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap' }}>
-              <ModalCTAButton label="Get a free site review" region="au" modalVariant="default" btnVariant="primary-light" />
-              <a className="btn btn-outline" href="/au/seo" style={{ color: '#fff', borderColor: 'rgba(255,255,255,.25)' }}>See SEO services</a>
+        {/* ═══ FINAL CTA (light, US finalcta) ═══ */}
+        <section className="finalcta" id="finalcta">
+          <div className="wrap">
+            <div>
+              <div className="eyebrow">Next step</div>
+              <h2>Find out what is actually holding your Melbourne site back</h2>
+              <p>
+                Send us the address. We will work out which of the five problems on this page you actually have, in
+                writing, and if your problem is conversion rather than search we will say so. The founder replies within
+                one business day, Australian hours.
+              </p>
+            </div>
+            <div className="ctas">
+              <ModalCTAButton label="Get a free site review" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
+              <a className="btn btn-ghost" href="/au/seo">See SEO services</a>
             </div>
           </div>
         </section>
@@ -970,7 +1000,7 @@ export default function MelbournePage() {
       </main>
       </div>
 
-      <SiteFooter locale="au" linkColumns={AU_FOOTER_COLUMNS} variant="dark" tagline="Ecommerce, AI agents, websites and AI search for Australian businesses. Built by senior engineers, supported after launch, owned by you." />
+      <SiteFooter locale="au" linkColumns={AU_FOOTER_COLUMNS} tagline="Ecommerce, AI agents, websites and AI search for Australian businesses. Built by senior engineers, supported after launch, owned by you." />
     </>
   );
 }

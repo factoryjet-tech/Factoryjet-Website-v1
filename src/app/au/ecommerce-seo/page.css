@@ -1,0 +1,29 @@
+/* /au/ecommerce-seo add-ons on top of AiAgentDevelopmentSections.css + ../au-page.css.
+   Scoped to .aiAgentPage.auPage; tokens only from the Family A system, no new colours. */
+
+/* Single-column bullet list inside definition copy */
+.aiAgentPage.auPage .chg-list.chg-list-1col { grid-template-columns: minmax(0,1fr); }
+.aiAgentPage.auPage .definition-copy .chg-list { margin: 20px 0; }
+
+/* Numbered list inside a fact row */
+.aiAgentPage.auPage .au-numlist.au-numlist-inline { margin-top: 12px; }
+
+/* Panels placed inside a fact row, under a definition image, or in the sticky vlog head
+   (au-page.css pins every .facts .au-panel to column 1; these sit in normal flow) */
+.aiAgentPage.auPage .fact .au-panel { grid-column: auto; grid-row: auto; position: static; margin-top: 0; }
+.aiAgentPage.auPage .definition-panel { margin-top: 20px; }
+.aiAgentPage.auPage .vlog-panel { margin-top: 28px; }
+.aiAgentPage.auPage .au-panel-title { font-size: 20px; line-height: 1.25; margin-bottom: 6px; }
+.aiAgentPage.auPage .au-panel-intro { margin-top: 14px; font-size: 14px; color: var(--body); line-height: 1.65; }
+.aiAgentPage.auPage .au-panel .btn { margin-top: 18px; }
+
+/* Openable audit parts: numbered <details> in the facts column */
+.aiAgentPage.auPage .ventry-num { padding-left: 28px; }
+.aiAgentPage.auPage .ventry-num::before { display: none; }
+.aiAgentPage.auPage .ventry-n { margin-right: 12px; font-family: var(--mono); font-size: 12px; font-weight: 500; color: var(--accent-text); }
+.aiAgentPage.auPage .facts .factphoto .demand { margin-top: 0; }
+
+@media (max-width: 820px) {
+  .aiAgentPage.auPage .fact .au-panel { margin-top: 0; }
+  .aiAgentPage.auPage .facts .factphoto { margin-right: 0; }
+}

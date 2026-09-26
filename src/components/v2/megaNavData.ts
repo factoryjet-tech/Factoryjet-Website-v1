@@ -10,8 +10,8 @@
 
 import {
   Activity, BarChart3, Bot, BookOpen, Building2, Calculator, ClipboardCheck, Code2, Compass, Factory,
-  Gauge, Globe, Layers, LayoutTemplate, Mail, MessageSquare, Mic, Plug, RefreshCw, Search, ShoppingBag,
-  ShoppingCart, Sparkles, Star, Stethoscope, Store, User, Workflow, Wrench,
+  Gauge, Globe, Layers, LayoutTemplate, Mail, MapPin, MessageSquare, Mic, Plug, Receipt, RefreshCw, Search, ShoppingBag,
+  ShoppingCart, Sparkles, Star, Store, User, Workflow, Wrench,
 } from 'lucide-react';
 import type { ElementType } from 'react';
 
@@ -475,12 +475,14 @@ export const AU_SERVICE_HUBS: ServiceHub[] = [
         { icon: Compass, label: 'AI Consulting', href: '/au/ai-consulting' },
         { icon: Mic, label: 'AI Receptionist', href: '/au/ai-receptionist' },
         { icon: MessageSquare, label: 'AI Customer Service', href: '/au/ai-customer-service' },
+        { icon: Receipt, label: 'Accounts Payable Automation', href: '/au/accounts-payable-automation' },
       ] },
       { heading: 'Popular for', kind: 'compact', items: [
         { label: 'Tradies & field services', href: '/au/ai-receptionist' },
         { label: 'Clinics & dental practices', href: '/au/ai-receptionist#how-we-build' },
         { label: 'Shopify & Gorgias support', href: '/au/ai-customer-service' },
-        { label: 'Xero & MYOB automation', href: '/au/ai-agents' },
+        { label: 'Xero & MYOB automation', href: '/au/accounts-payable-automation' },
+        { label: 'Real estate agencies', href: '/au/real-estate-websites#ai-for-real-estate' },
         { label: 'AI inside your CRM or ERP', href: '/au/ai-development' },
       ] },
       { heading: 'Australian guides', kind: 'compact', items: [
@@ -498,21 +500,22 @@ export const AU_SERVICE_HUBS: ServiceHub[] = [
     columns: [
       { heading: 'Services', kind: 'rich', items: [
         { icon: LayoutTemplate, label: 'Web Design Australia', href: '/au#web-design' },
-        { icon: Wrench, label: 'Websites for Tradies', href: '/au/websites-for-tradies' },
-        { icon: Stethoscope, label: 'Dental Website Design', href: '/au/dental-website-design' },
+        { icon: Store, label: 'Small Business Web Design', href: '/au/small-business-web-design' },
         { icon: RefreshCw, label: 'Website Maintenance', href: '/au/website-maintenance' },
+      ], more: { label: 'Website cost guide 2026', href: '/blog/website-cost-australia-2026' } },
+      { heading: 'By industry', kind: 'compact', items: [
+        { label: 'Tradies & trade businesses', href: '/au/websites-for-tradies' },
+        { label: 'Dental practices', href: '/au/dental-website-design' },
+        { label: 'NDIS providers', href: '/au/ndis-website-design' },
+        { label: 'Real estate agencies', href: '/au/real-estate-websites' },
+        { label: 'Accounting firms', href: '/au/accountant-website-design' },
       ] },
       { heading: 'Australian cities', kind: 'compact', items: [
         { label: 'Melbourne', href: '/au/melbourne' },
         { label: 'Brisbane', href: '/au/brisbane' },
         { label: 'Adelaide', href: '/au/adelaide' },
         { label: 'Canberra', href: '/au/canberra' },
-      ] },
-      { heading: 'Australian guides', kind: 'compact', items: [
-        { label: 'Website cost guide 2026', href: '/blog/website-cost-australia-2026' },
-        { label: 'Best web design companies', href: '/blog/best-web-design-companies-small-business-australia' },
-        { label: 'Best WordPress developers', href: '/blog/best-wordpress-development-companies-australia-2026' },
-      ] },
+      ], more: { label: 'Best web design companies', href: '/blog/best-web-design-companies-small-business-australia' } },
     ],
     feature: { image: '/images/menu/menu-web-design-model.webp', kicker: 'Guide', title: 'Best web design companies in Australia', body: 'How Australian small businesses choose a web design company.', href: '/blog/best-web-design-companies-small-business-australia', cta: 'Read the guide' },
     note: { lead: 'Planning a new site?', label: 'See how we work', href: '/au#how-we-work' },
@@ -524,12 +527,21 @@ export const AU_SERVICE_HUBS: ServiceHub[] = [
     columns: [
       { heading: 'AI search & SEO', kind: 'rich', items: [
         { icon: Search, label: 'SEO Services Australia', href: '/au/seo' },
+        { icon: MapPin, label: 'Local SEO & Google Maps', href: '/au/local-seo' },
+        { icon: Store, label: 'Small Business SEO', href: '/au/small-business-seo' },
         { icon: Sparkles, label: 'AI SEO & GEO', href: '/au/ai-seo' },
         { icon: ShoppingCart, label: 'Ecommerce SEO', href: '/au/ecommerce-seo' },
+      ] },
+      { heading: 'By industry', kind: 'compact', items: [
+        { label: 'Law Firm SEO', href: '/au/law-firm-seo' },
+        { label: 'Dental SEO', href: '/au/dental-website-design#dental-seo' },
+        { label: 'Real Estate SEO', href: '/au/real-estate-websites#real-estate-seo' },
+        { label: 'SEO for Accountants', href: '/au/accountant-website-design#seo' },
       ] },
       { heading: 'Questions answered', kind: 'compact', items: [
         { label: 'SEO cost in Australia', href: '/blog/seo-cost-australia-2026' },
         { label: 'SEO questions', href: '/au/seo#faq' },
+        { label: 'Local SEO questions', href: '/au/local-seo#faq' },
         { label: 'AI search questions', href: '/au/ai-seo#faq' },
       ] },
     ],
@@ -556,10 +568,10 @@ export const AU_SIMPLE_MENUS: SimpleMenu[] = [
       { heading: 'Local businesses', kind: 'compact', items: [
         { label: 'Tradies & trade businesses', href: '/au/websites-for-tradies' },
         { label: 'Dental practices', href: '/au/dental-website-design' },
-        { label: 'Melbourne', href: '/au/melbourne' },
-        { label: 'Brisbane', href: '/au/brisbane' },
-        { label: 'Adelaide', href: '/au/adelaide' },
-        { label: 'Canberra', href: '/au/canberra' },
+        { label: 'NDIS providers', href: '/au/ndis-website-design' },
+        { label: 'Real estate agencies', href: '/au/real-estate-websites' },
+        { label: 'Accounting firms', href: '/au/accountant-website-design' },
+        { label: 'Law firms', href: '/au/law-firm-seo' },
       ] },
     ],
     feature: { image: '/images/menu/menu-ecommerce.webp', kicker: 'Australia', title: 'FactoryJet Australia', body: 'Ecommerce, AI agents, websites and AI search for Australian businesses.', href: '/au', cta: 'See everything we do' },

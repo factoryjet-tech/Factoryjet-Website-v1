@@ -1,0 +1,3 @@
+/* /au/small-business-seo only: industry list inside the definition module (single column, visible links). */
+.aiAgentPage.auPage .definition-copy .chg-list { grid-template-columns: minmax(0,1fr); margin-top: 20px; }
+.aiAgentPage.auPage .definition-copy .chg-list a { color: var(--accent-text); text-decoration: underline; text-underline-offset: 3px; }
