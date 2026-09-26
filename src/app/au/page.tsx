@@ -8,6 +8,7 @@ import MidPageCTA from '@/components/v2/MidPageCTA';
 import { auHubAlternates } from '@/data/hreflangMap';
 import { AU_FOOTER_COLUMNS } from '@/data/auFooterColumns';
 import './au-service.css';
+import '../au-design-review/review.css';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    /au: FactoryJet Australia hub. Rebuilt 2026-09-25 (replaces the June 2026
@@ -295,7 +296,7 @@ const linkUnder = { textDecoration: 'underline', textUnderlineOffset: 3 } as con
 
 function HubLinks({ hub }: { hub: HubKey }) {
   return (
-    <ul className="stack mt-6" style={{ listStyle: 'none' }}>
+    <ul className="hub-links mt-6" style={{ listStyle: 'none' }}>
       {pagesFor(hub).map((p) => (
         <li key={p.href}>
           <a className="svc-card" href={p.href} style={{ display: 'block', padding: 20 }}>
@@ -308,7 +309,43 @@ function HubLinks({ hub }: { hub: HubKey }) {
   );
 }
 
-export default function AustraliaHubPage() {
+function HeroProofCard({ imageSrc, system = false }: { imageSrc: string; system?: boolean }) {
+  return (
+    <div className="card hero-proof" style={{ padding: 8 }}>
+      {system ? (
+        <picture>
+          <source media="(min-width: 641px)" srcSet={imageSrc} />
+          <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width={1400} height={933} fetchPriority="high" decoding="async" alt="A tactile map of Australia connecting an online store, an AI voice agent and local search locations" style={imgStyle} />
+        </picture>
+      ) : (
+        <img src={imageSrc} width={1400} height={933} fetchPriority="high" decoding="async" alt="Over-the-shoulder view of a Sydney homewares shop owner and a FactoryJet engineer reviewing her online store on a monitor in the shop, with an AI chat open on a phone beside it and the Harbour Bridge through the window" style={imgStyle} />
+      )}
+      <div style={{ padding: '14px 12px 8px' }}>
+        <span className="eyebrow">What you get, whichever service</span>
+        <div className="scorecard-row">
+          <div><div className="scorecard-metric">Who builds it</div><div className="scorecard-note">senior engineers, founder involved</div></div>
+          <div className="scorecard-val" style={{ fontSize: 15 }}>No juniors</div>
+        </div>
+        <div className="scorecard-row">
+          <div><div className="scorecard-metric">Websites up to 5 pages</div><div className="scorecard-note">fixed scope, fixed quote</div></div>
+          <div className="scorecard-val" style={{ fontSize: 15 }}>7-day delivery</div>
+        </div>
+        <div className="scorecard-row">
+          <div><div className="scorecard-metric">Code, content, integrations</div><div className="scorecard-note">no platform lock-in</div></div>
+          <div className="scorecard-val" style={{ color: T.green, fontSize: 15 }}>You own it</div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export type AustraliaHubReviewConcept = 'atlas' | 'workshop' | 'system';
+
+export function AustraliaHubContent({ reviewConcept }: { reviewConcept?: AustraliaHubReviewConcept } = {}) {
+  const reviewHeroImage = reviewConcept
+    ? `/images/au/mockups/${reviewConcept}-hero.webp`
+    : '/images/au/hub/au-hub-hero.webp';
+
   return (
     <>
       <script id="ld-au-hub" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
@@ -321,64 +358,66 @@ export default function AustraliaHubPage() {
       <style dangerouslySetInnerHTML={{ __html: HUB_CSS }} />
       <main>
 
-        <Breadcrumbs items={crumbs} />
+        {reviewConcept === 'system' ? null : <Breadcrumbs items={crumbs} />}
 
         {/* ═══ 1. HERO ═══ */}
         <section className="sec-lg dot-grid" style={{ position: 'relative' }}>
           <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <div className="flex-wrap mb-6">
-                  <span className="chip"><span className="dot dot-orange" />FactoryJet Australia</span>
-                  <span className="chip">Ecommerce</span>
-                  <span className="chip">AI Agents</span>
-                  <span className="chip">Web Design</span>
-                  <span className="chip">AI Search &amp; SEO</span>
-                </div>
-                <h1>{H1}</h1>
-                <p className="lead mt-6" style={{ maxWidth: 580 }}>
-                  FactoryJet builds online stores, AI agents, websites and AI search visibility for Australian
-                  businesses. If you are looking for web design Australia buyers trust, an ecommerce developer who
-                  understands GST and Afterpay, or an AI automation agency that builds instead of pitching, it is one
-                  senior team, founder-led, and you own everything we build.
-                </p>
-
-                <div className="byline mt-6" style={{ maxWidth: 580 }}>
-                  <div className="av">BB</div>
-                  <div className="who"><b>Bhavesh Barot</b>, Founder &amp; CEO<br /><span>500+ businesses served since 2014</span></div>
-                  <div className="upd">Last updated<br />25 September 2026</div>
-                </div>
-
-                <div className="mt-6" style={{ maxWidth: 580 }}>
+            {reviewConcept === 'system' ? (
+              <div className="system-hero">
+                <div className="system-hero-copy">
+                  <div className="flex-wrap mb-6">
+                    <span className="chip">Ecommerce</span>
+                    <span className="chip">AI Agents</span>
+                    <span className="chip">Web Design</span>
+                    <span className="chip">AI Search &amp; SEO</span>
+                  </div>
+                  <h1>
+                    <span className="system-hero-line">Websites, ecommerce and AI</span>
+                    <span className="system-hero-line">built for Australian businesses</span>
+                  </h1>
+                  <p className="lead">
+                    One senior team designs, builds and supports the digital systems your Australian business needs to grow.
+                  </p>
                   <HeroInlineForm region="au" source="au_hub_hero" submitLabel="Talk to the Founder" />
                 </div>
+                <HeroProofCard imageSrc={reviewHeroImage} system />
               </div>
-
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/hub/au-hub-hero.webp" width={1400} height={933} fetchPriority="high" decoding="async" alt="Over-the-shoulder view of a Sydney homewares shop owner and a FactoryJet engineer reviewing her online store on a monitor in the shop, with an AI chat open on a phone beside it and the Harbour Bridge through the window" style={imgStyle} />
-                <div style={{ padding: '14px 12px 8px' }}>
-                  <span className="eyebrow">What you get, whichever service</span>
-                  <div className="scorecard-row">
-                    <div><div className="scorecard-metric">Who builds it</div><div className="scorecard-note">senior engineers, founder involved</div></div>
-                    <div className="scorecard-val" style={{ fontSize: 15 }}>No juniors</div>
+            ) : (
+              <div className="col-6040">
+                <div>
+                  <div className="flex-wrap mb-6">
+                    <span className="chip"><span className="dot dot-orange" />FactoryJet Australia</span>
+                    <span className="chip">Ecommerce</span>
+                    <span className="chip">AI Agents</span>
+                    <span className="chip">Web Design</span>
+                    <span className="chip">AI Search &amp; SEO</span>
                   </div>
-                  <div className="scorecard-row">
-                    <div><div className="scorecard-metric">Websites up to 5 pages</div><div className="scorecard-note">fixed scope, fixed quote</div></div>
-                    <div className="scorecard-val" style={{ fontSize: 15 }}>7-day delivery</div>
+                  <h1>{H1}</h1>
+                  <p className="lead mt-6" style={{ maxWidth: 580 }}>
+                    FactoryJet builds online stores, AI agents, websites and AI search visibility for Australian
+                    businesses. If you are looking for web design Australia buyers trust, an ecommerce developer who
+                    understands GST and Afterpay, or an AI automation agency that builds instead of pitching, it is one
+                    senior team, founder-led, and you own everything we build.
+                  </p>
+                  <div className="byline mt-6" style={{ maxWidth: 580 }}>
+                    <div className="av">BB</div>
+                    <div className="who"><b>Bhavesh Barot</b>, Founder &amp; CEO<br /><span>500+ businesses served since 2014</span></div>
+                    <div className="upd">Last updated<br />25 September 2026</div>
                   </div>
-                  <div className="scorecard-row">
-                    <div><div className="scorecard-metric">Code, content, integrations</div><div className="scorecard-note">no platform lock-in</div></div>
-                    <div className="scorecard-val" style={{ color: T.green, fontSize: 15 }}>You own it</div>
+                  <div className="mt-6" style={{ maxWidth: 580 }}>
+                    <HeroInlineForm region="au" source="au_hub_hero" submitLabel="Talk to the Founder" />
                   </div>
                 </div>
+                <HeroProofCard imageSrc={reviewHeroImage} />
               </div>
-            </div>
+            )}
           </div>
         </section>
 
         {/* ═══ 2. ANSWER-FIRST ═══ */}
         <section className="sec">
-          <div className="wrap">
+          <div className="wrap system-answer-grid">
             <div className="def" style={{ maxWidth: 940 }} data-speakable="true">
               <span className="lab">Who is FactoryJet, for an Australian business?</span>
               <p>
@@ -397,12 +436,13 @@ export default function AustraliaHubPage() {
                 one platform to another without losing products, customers or Google rankings.
               </p>
             </div>
-            <p className="lead mt-8" style={{ maxWidth: 920 }}>
-              Most Australian businesses we speak to do not need four suppliers. They need one team that can build the
-              website or store, connect it to the tools they already run, add AI where it genuinely saves time, and make
-              sure buyers can find it. That is what this page maps out, service by service, with a link to the detail
-              page for each one.
-            </p>
+            <div className="answer-thesis">
+              <span className="lab">Why one senior team works</span>
+              <p>
+                Most Australian businesses do not need four suppliers. They need one team to build the website or
+                store, connect existing tools, add useful AI, and help buyers find them.
+              </p>
+            </div>
           </div>
         </section>
 
@@ -429,7 +469,7 @@ export default function AustraliaHubPage() {
         {/* ═══ 4. ALL AU SERVICES (hover cards = ItemList) ═══ */}
         <section className="sec-lg dot-grid" id="services">
           <div className="wrap">
-            <div style={{ maxWidth: 780 }}>
+            <div className="services-intro" style={{ maxWidth: 780 }}>
               <span className="eyebrow">Every FactoryJet Australia service</span>
               <h2>Four service hubs, eight detail pages, one team</h2>
               <p className="lead mt-4">
@@ -495,7 +535,7 @@ export default function AustraliaHubPage() {
               </div>
               <div className="hub-sticky">
                 <div className="card" style={{ padding: 8 }}>
-                  <img src="/images/au/hub/au-hub-ecommerce.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over-the-shoulder view of a shopper at a Melbourne café near Flinders Street checking out a linen cushion on a mobile online store" style={imgStyle} />
+                  <img src={reviewConcept === 'system' ? '/images/au/mockups/system-ecommerce.webp' : '/images/au/hub/au-hub-ecommerce.webp'} width={1200} height={800} loading="lazy" decoding="async" alt="Over-the-shoulder view of a shopper at a Melbourne café near Flinders Street checking out a complete linen cushion product page on a mobile online store" style={imgStyle} />
                 </div>
                 <div className="card card-top-orange mt-6">
                   <span className="eyebrow">Set up before launch</span>
@@ -519,7 +559,7 @@ export default function AustraliaHubPage() {
             <div className="col-4060 hub-flip">
               <div className="hub-sticky">
                 <div className="card" style={{ padding: 8 }}>
-                  <img src="/images/au/hub/au-hub-ai-agents.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over-the-shoulder view of an office manager at a Brisbane building supplies trade counter watching an AI agent workflow complete on her laptop, beside a tray of paper order forms" style={imgStyle} />
+                  <img src={reviewConcept === 'system' ? '/images/au/mockups/system-ai.webp' : '/images/au/hub/au-hub-ai-agents.webp'} width={1200} height={800} loading="lazy" decoding="async" alt="Over-the-shoulder view of an office manager at a Brisbane building supplies trade counter reviewing a completed purchase-order extraction and approval workflow on her laptop" style={imgStyle} />
                 </div>
                 <div className="card mt-6">
                   <span className="eyebrow">Which AI service fits you?</span>
@@ -614,7 +654,7 @@ export default function AustraliaHubPage() {
                 </p>
               </div>
               <div className="card hub-sticky" style={{ padding: 8 }}>
-                <img src="/images/au/hub/au-hub-web-design.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A web designer and her client reviewing a website page layout on a large monitor in a bright Melbourne design studio" style={imgStyle} />
+                <img src={reviewConcept === 'system' ? '/images/au/mockups/system-web-design.webp' : '/images/au/hub/au-hub-web-design.webp'} width={1200} height={800} loading="lazy" decoding="async" alt="A web designer and her client reviewing a finished Australian homewares website with a photographic hero and product collections on a large monitor in a bright Melbourne studio" style={imgStyle} />
                 <div style={{ padding: '14px 12px 8px' }}>
                   <span className="eyebrow">Every website ships with</span>
                   <div className="scorecard-row"><div className="scorecard-metric">Custom design, no recycled templates</div><div className="scorecard-val" style={{ fontSize: 14 }}>Yes</div></div>
@@ -883,7 +923,7 @@ export default function AustraliaHubPage() {
         </section>
 
         {/* ═══ 13. LISTICLE: questions before you hire ═══ */}
-        <section className="sec-lg">
+        <section className="sec-lg" id="questions">
           <div className="wrap">
             <div style={{ maxWidth: 760 }}>
               <span className="eyebrow">Before you sign anything</span>
@@ -931,7 +971,7 @@ export default function AustraliaHubPage() {
         <section className="sec-lg dot-grid" id="cities">
           <div className="wrap">
             <div className="col-6040">
-              <div>
+              <div className="cities-copy">
                 <span className="eyebrow">Where we work</span>
                 <h2>Serving businesses across Australia, with local pages for four cities</h2>
                 <div className="stack mt-6">
@@ -1020,18 +1060,21 @@ export default function AustraliaHubPage() {
         </section>
 
         {/* ═══ 16. FINAL CTA (the only dark section) ═══ */}
-        <section className="dark-sec">
-          <div className="wrap" style={{ textAlign: 'center', maxWidth: 660 }}>
-            <span className="eyebrow">Talk to the Founder</span>
-            <h2>Tell us what you sell and where you want to grow</h2>
-            <p className="mt-4">
-              Send your name and work email. Bhavesh replies within one business day to book a short call in your time
-              zone. You will leave with a clear scope, a fixed quote and an honest answer on whether we are the right
-              fit. No sales team, no obligation.
-            </p>
-            <div className="mt-8" style={{ display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap' }}>
-              <ModalCTAButton label="Talk to the Founder" region="au" modalVariant="default" btnVariant="primary-light" />
-              <a className="btn btn-outline" href="/au/ecommerce-development" style={{ color: '#fff', borderColor: 'rgba(255,255,255,.25)' }}>See ecommerce development</a>
+        <section className="dark-sec founder-cta">
+          <div className="wrap founder-cta__inner">
+            <div>
+              <span className="eyebrow">Talk to the Founder</span>
+              <h2>Tell us what you sell and where you want to grow</h2>
+            </div>
+            <div className="founder-cta__action">
+              <p>
+                Send your name and work email. Bhavesh replies within one business day to book a short call in your time
+                zone. Leave with a clear scope and fixed quote—no sales team, no obligation.
+              </p>
+              <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+                <ModalCTAButton label="Talk to the Founder" region="au" modalVariant="default" btnVariant="primary-light" />
+                <a className="btn btn-outline" href="/au/ecommerce-development" style={{ color: '#fff', borderColor: 'rgba(255,255,255,.25)' }}>See ecommerce development</a>
+              </div>
             </div>
           </div>
         </section>
@@ -1045,5 +1088,13 @@ export default function AustraliaHubPage() {
         tagline="Ecommerce, AI agents, websites and AI search for Australian businesses. Built by senior engineers, supported after launch, owned by you."
       />
     </>
+  );
+}
+
+export default function AustraliaHubPage() {
+  return (
+    <div className="au-review au-review--system" data-review-concept="system">
+      <AustraliaHubContent reviewConcept="system" />
+    </div>
   );
 }

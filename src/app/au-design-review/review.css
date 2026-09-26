@@ -1,0 +1,1316 @@
+/* Review-only presentation layer. The source page is imported intact so every
+   visible word and link remains identical to /au. None of these selectors are
+   loaded by the production route. */
+
+.review-index {
+  --orange: #f05a28;
+  --ink: #14110f;
+  --muted: #6e635a;
+  min-height: 100svh;
+  background: #faf8f4;
+  color: var(--ink);
+  padding: clamp(28px, 5vw, 72px);
+  font-family: Inter, sans-serif;
+}
+
+.review-index__header {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(280px, 4fr);
+  gap: 48px;
+  align-items: end;
+  max-width: 1480px;
+  margin: 0 auto 64px;
+  padding-bottom: 36px;
+  border-bottom: 1px solid #d9d0c8;
+}
+
+.review-index__header > p,
+.review-index__card > span {
+  grid-column: 1 / -1;
+  margin: 0;
+  font-family: "Geist Mono", monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #b23e13;
+}
+
+.review-index__header h1 {
+  margin: 0;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: clamp(3.25rem, 7vw, 7.5rem);
+  line-height: .92;
+  letter-spacing: -.065em;
+}
+
+.review-index__header div p,
+.review-index__card p {
+  margin: 0 0 10px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.review-index__grid {
+  max-width: 1480px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.review-index__card {
+  min-height: 570px;
+  display: flex;
+  flex-direction: column;
+  padding: 22px;
+  border: 1px solid #d9d0c8;
+  border-radius: 20px;
+  background: #fff;
+  color: var(--ink);
+  text-decoration: none;
+  transition: transform .35s cubic-bezier(.16, 1, .3, 1), border-color .35s ease;
+}
+
+.review-index__card:hover { transform: translateY(-8px); border-color: var(--orange); }
+.review-index__card h2 { margin: 28px 0 10px; font: 800 clamp(1.7rem, 2.5vw, 2.5rem)/1 "Plus Jakarta Sans", sans-serif; letter-spacing: -.045em; }
+.review-index__card strong { margin-top: auto; color: #b23e13; font-size: 14px; }
+
+.review-index__preview {
+  height: 280px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 28px;
+  border-radius: 13px;
+  background: #f5f0e9;
+  border: 1px solid #e7ded6;
+}
+
+.review-index__preview i { position: absolute; left: 22px; top: 18px; z-index: 2; color: var(--orange); font: 700 12px/1 "Geist Mono", monospace; }
+.review-index__preview b,
+.review-index__preview em { position: absolute; display: block; }
+.review-index__card--atlas .review-index__preview b { inset: 48px 38% 26px 18px; background: var(--ink); clip-path: polygon(0 0, 94% 0, 94% 22%, 78% 22%, 78% 46%, 100% 46%, 100% 69%, 68% 69%, 68% 100%, 0 100%); }
+.review-index__card--atlas .review-index__preview em { inset: 26px 18px 28px 65%; background: linear-gradient(150deg, #f05a28 0 48%, #ffd7c8 48%); border-radius: 45% 45% 8px 8px; }
+.review-index__card--workshop .review-index__preview { background: linear-gradient(145deg, #d8c0a9, #f1e6d7 45%, #8f6f55); }
+.review-index__card--workshop .review-index__preview b { inset: 46px 46px 34px 28px; background: rgba(255,255,255,.9); border-radius: 18px; }
+.review-index__card--workshop .review-index__preview em { width: 44%; height: 36%; right: 20px; bottom: 18px; background: #f05a28; border-radius: 13px; }
+.review-index__card--system .review-index__preview { background-color: #fff; background-image: linear-gradient(#e7ded6 1px, transparent 1px), linear-gradient(90deg, #e7ded6 1px, transparent 1px); background-size: 42px 42px; }
+.review-index__card--system .review-index__preview b { inset: 54px 52% 34px 20px; background: var(--ink); }
+.review-index__card--system .review-index__preview em { inset: 86px 20px 64px 58%; border: 14px solid var(--orange); }
+
+.au-review {
+  --review-orange: #f05a28;
+  --review-rust: #b23e13;
+  --review-ink: #14110f;
+  --review-body: #46403b;
+  --review-muted: #6e635a;
+  --review-line: #e7ded6;
+  --review-cream: #faf8f4;
+  background: #fff;
+}
+
+.au-review .au-svc {
+  --cream: #fff;
+  --ink: var(--review-ink);
+  --n200: var(--review-line);
+  --n400: var(--review-muted);
+  --n600: var(--review-body);
+  overflow: clip;
+}
+
+.au-review .au-svc .wrap { max-width: 1320px; padding-inline: clamp(24px, 4vw, 64px); }
+.au-review .au-svc h1,
+.au-review .au-svc h2 { text-wrap: balance; }
+.au-review .au-svc p { font-size: 16px; line-height: 1.78; }
+.au-review .au-svc .lead { font-size: 18px; line-height: 1.72; }
+.au-review .au-svc .dot-grid { background-image: none; }
+.au-review .au-svc .card,
+.au-review .au-svc .svc-card { box-shadow: none; }
+.au-review .au-svc main > section { position: relative; }
+
+/* ───────────────────────── CONCEPT A: AUSTRALIAN ATLAS ─────────────── */
+.au-review--atlas .au-svc { background: #fff; }
+.au-review--atlas .au-svc main > section { border-top: 1px solid var(--review-line); }
+.au-review--atlas .au-svc .sec { padding-block: 74px; }
+.au-review--atlas .au-svc .sec-lg { padding-block: clamp(92px, 9vw, 150px); }
+.au-review--atlas .au-svc .eyebrow { margin-bottom: 18px; color: var(--review-rust); }
+.au-review--atlas .au-svc h1 { max-width: 760px; font-size: clamp(3.4rem, 5.6vw, 5.9rem) !important; line-height: .98; letter-spacing: -.055em; }
+.au-review--atlas .au-svc h2 { font-size: clamp(2.6rem, 4.7vw, 4.9rem); line-height: 1; letter-spacing: -.055em; }
+.au-review--atlas .au-svc h3 { letter-spacing: -.035em; }
+.au-review--atlas .au-svc .chip { border: 0; border-radius: 0; padding: 0 14px 0 0; background: transparent; }
+.au-review--atlas .au-svc main > section:first-of-type { padding-block: clamp(48px, 6vw, 86px) 96px !important; border-top: 0; }
+.au-review--atlas .au-svc main > section:first-of-type .col-6040 { grid-template-columns: minmax(0, 7fr) minmax(360px, 5fr); gap: clamp(44px, 6vw, 96px); align-items: stretch; }
+.au-review--atlas .au-svc main > section:first-of-type .card { border: 0; border-radius: 0; padding: 0 !important; display: grid; grid-template-rows: minmax(430px, 1fr) auto; }
+.au-review--atlas .au-svc main > section:first-of-type .card img { height: 100% !important; min-height: 430px; object-fit: cover; border-radius: 2px !important; filter: saturate(.9) contrast(1.03); }
+.au-review--atlas .au-svc main > section:first-of-type .card img { content: url('/images/au/mockups/atlas-hero.webp'); }
+.au-review--atlas .au-svc main > section:first-of-type .card > div { padding: 24px 0 0 !important; }
+.au-review--atlas .au-svc .byline { border: 0; border-top: 1px solid var(--review-line); border-bottom: 1px solid var(--review-line); border-radius: 0; padding-inline: 0; }
+.au-review--atlas .au-svc main > section:nth-of-type(2) .wrap { display: grid; grid-template-columns: repeat(12, 1fr); column-gap: 24px; }
+.au-review--atlas .au-svc main > section:nth-of-type(2) .def { max-width: none !important; border: 0; border-radius: 0; padding: 0 0 0 24px; background: transparent; border-left: 3px solid var(--review-orange); }
+.au-review--atlas .au-svc main > section:nth-of-type(2) .def:first-child { grid-column: 1 / 7; }
+.au-review--atlas .au-svc main > section:nth-of-type(2) .def:nth-child(2) { grid-column: 7 / 13; margin-top: 0; }
+.au-review--atlas .au-svc main > section:nth-of-type(2) > .wrap > .lead { grid-column: 4 / 12; margin-top: 64px; font-size: clamp(1.25rem, 2vw, 1.75rem); color: var(--review-ink); }
+.au-review--atlas .au-svc .stats-band { padding-block: 48px; background: var(--review-orange); border: 0; }
+.au-review--atlas .au-svc .stats-band li { padding-left: 18px; border-left: 1px solid rgba(20,17,15,.25); }
+.au-review--atlas .au-svc .stats-band li div { color: var(--review-ink) !important; font-size: 40px !important; }
+.au-review--atlas .au-svc .stats-band li p,
+.au-review--atlas .au-svc .stats-band li span { color: var(--review-ink) !important; }
+.au-review--atlas .au-svc #services { background: var(--review-cream); }
+.au-review--atlas .au-svc #services > .wrap > div:first-child { max-width: 1040px !important; }
+.au-review--atlas .au-svc #services .col-3 { grid-template-columns: repeat(12, 1fr); gap: 0 24px; border-top: 1px solid var(--review-line); }
+.au-review--atlas .au-svc #services .col-3 > li { grid-column: span 4; }
+.au-review--atlas .au-svc #services .svc-card { min-height: 100%; border: 0; border-radius: 0; border-bottom: 1px solid var(--review-line); padding: 30px 0; }
+.au-review--atlas .au-svc #services .col-3 > li:nth-child(3n+2) .svc-card { padding-inline: 24px; border-inline: 1px solid var(--review-line); }
+.au-review--atlas .au-svc #services .svc-card:hover { padding-left: 14px; background: #fff; }
+.au-review--atlas .au-svc #ecommerce .col-6040,
+.au-review--atlas .au-svc #web-design .col-6040,
+.au-review--atlas .au-svc #search .col-6040,
+.au-review--atlas .au-svc #cities .col-6040 { grid-template-columns: minmax(0, 7fr) minmax(360px, 4fr); gap: clamp(56px, 8vw, 128px); }
+.au-review--atlas .au-svc #ai .col-4060,
+.au-review--atlas .au-svc #how-we-work .col-4060 { grid-template-columns: minmax(340px, 4fr) minmax(0, 7fr); gap: clamp(56px, 8vw, 128px); }
+.au-review--atlas .au-svc #ai,
+.au-review--atlas .au-svc #website-cost,
+.au-review--atlas .au-svc #how-we-work,
+.au-review--atlas .au-svc #cities { background: var(--review-cream); }
+.au-review--atlas .au-svc :is(#ecommerce,#ai,#web-design,#search,#how-we-work,#cities) .card { border-radius: 0; border-color: var(--review-line); }
+.au-review--atlas .au-svc :is(#ecommerce,#ai,#web-design,#search,#how-we-work,#cities) .card:has(img) { border: 0; padding: 0 !important; }
+.au-review--atlas .au-svc :is(#ecommerce,#ai,#web-design,#search,#how-we-work,#cities) .card img { border-radius: 2px !important; }
+.au-review--atlas .au-svc .svc-card { border-radius: 0; }
+.au-review--atlas .au-svc #web-design > .wrap > .col-3 .svc-card { border: 0; border-top: 1px solid var(--review-line); padding-inline: 0; }
+.au-review--atlas .au-svc #compare .card { border-radius: 0; padding: 0; border-inline: 0; }
+.au-review--atlas .au-svc #compare .cmp-table th,
+.au-review--atlas .au-svc #compare .cmp-table td { padding: 20px; }
+.au-review--atlas .au-svc main > section:nth-last-of-type(4) .card { border: 0; border-top: 1px solid var(--review-line); border-radius: 0; padding-inline: 0 !important; }
+.au-review--atlas .au-svc #faq > .wrap > div:first-child { text-align: left !important; max-width: 900px; }
+.au-review--atlas .au-svc .faq-grid { grid-template-columns: 220px 1fr !important; gap: 100px; }
+.au-review--atlas .au-svc .dark-sec { border-top: 0; padding-block: 120px; background: var(--review-ink); }
+
+/* ───────────────────────── CONCEPT B: WORKING SESSION ──────────────── */
+.au-review--workshop .au-svc { --cream: #f7f2eb; background: var(--cream); }
+.au-review--workshop .au-svc .wrap { max-width: 1380px; }
+.au-review--workshop .au-svc .sec { padding-block: 76px; }
+.au-review--workshop .au-svc .sec-lg { padding-block: clamp(84px, 8vw, 132px); }
+.au-review--workshop .au-svc h1 { font-size: clamp(3.15rem, 4.8vw, 5rem) !important; line-height: .96; letter-spacing: -.06em; }
+.au-review--workshop .au-svc h2 { font-size: clamp(2.55rem, 4.4vw, 4.5rem); line-height: 1; letter-spacing: -.055em; }
+.au-review--workshop .au-svc .dot-grid { background: #f7f2eb; }
+.au-review--workshop .au-svc main > section:first-of-type { padding-block: 32px 96px !important; }
+.au-review--workshop .au-svc main > section:first-of-type .wrap { max-width: 1480px; }
+.au-review--workshop .au-svc main > section:first-of-type .col-6040 { position: relative; display: block; min-height: 900px; }
+.au-review--workshop .au-svc main > section:first-of-type .col-6040 > div:first-child { position: relative; z-index: 2; width: min(760px, 62%); margin-top: 48px; padding: 40px; border: 1px solid rgba(231,222,214,.9); border-radius: 26px; background: rgba(255,255,255,.94); backdrop-filter: blur(18px); }
+.au-review--workshop .au-svc main > section:first-of-type .col-6040 > .card { position: absolute; z-index: 1; inset: 0 0 0 25%; overflow: hidden; padding: 0 !important; border: 0; border-radius: 30px; background: #d9c2af; }
+.au-review--workshop .au-svc main > section:first-of-type .card > img { width: 100%; height: 100% !important; object-fit: cover; border-radius: 0 !important; }
+.au-review--workshop .au-svc main > section:first-of-type .card > img { content: url('/images/au/mockups/workshop-hero.webp'); }
+.au-review--workshop .au-svc main > section:first-of-type .card > div { position: absolute; right: 24px; bottom: 24px; width: min(410px, 48%); padding: 22px !important; border-radius: 18px; background: rgba(255,255,255,.94); backdrop-filter: blur(18px); }
+.au-review--workshop .au-svc .chip { background: rgba(255,255,255,.7); }
+.au-review--workshop .au-svc .byline { background: transparent; border-color: var(--review-line); }
+.au-review--workshop .au-svc main > section:nth-of-type(2) .wrap { max-width: 1160px; }
+.au-review--workshop .au-svc .def { border: 0; border-radius: 24px; padding: 34px; background: #fff; }
+.au-review--workshop .au-svc main > section:nth-of-type(2) .def:nth-child(2) { margin-left: 13%; }
+.au-review--workshop .au-svc main > section:nth-of-type(2) > .wrap > .lead { margin-left: 28%; font-size: 21px; color: var(--review-ink); }
+.au-review--workshop .au-svc .stats-band { background: var(--review-ink); border: 0; padding-block: 60px; }
+.au-review--workshop .au-svc .stats-band li { padding: 18px; border-right: 1px solid rgba(255,255,255,.16); }
+.au-review--workshop .au-svc .stats-band li:last-child { border-right: 0; }
+.au-review--workshop .au-svc .stats-band li div { color: var(--review-orange) !important; }
+.au-review--workshop .au-svc .stats-band li p { color: #fff !important; }
+.au-review--workshop .au-svc .stats-band li span { color: rgba(255,255,255,.55) !important; }
+.au-review--workshop .au-svc #services { background: #fff; }
+.au-review--workshop .au-svc #services > .wrap > div:first-child { margin-left: 8%; }
+.au-review--workshop .au-svc #services .col-3 { align-items: stretch; }
+.au-review--workshop .au-svc #services .col-3 > li:nth-child(3n+2) { transform: translateY(34px); }
+.au-review--workshop .au-svc .svc-card,
+.au-review--workshop .au-svc .card { border-radius: 22px; border-color: rgba(195,181,169,.75); }
+.au-review--workshop .au-svc .svc-card { background: rgba(255,255,255,.78); }
+.au-review--workshop .au-svc :is(#ecommerce,#ai,#web-design,#search,#how-we-work,#cities) .col-6040,
+.au-review--workshop .au-svc :is(#ecommerce,#ai,#web-design,#search,#how-we-work,#cities) .col-4060 { gap: clamp(42px, 7vw, 112px); }
+.au-review--workshop .au-svc :is(#ecommerce,#web-design,#search,#cities) .col-6040 { grid-template-columns: minmax(0, 6fr) minmax(420px, 5fr); }
+.au-review--workshop .au-svc :is(#ai,#how-we-work) .col-4060 { grid-template-columns: minmax(420px, 5fr) minmax(0, 6fr); }
+.au-review--workshop .au-svc :is(#ecommerce,#ai,#web-design,#search,#how-we-work,#cities) .card:has(img) { padding: 0 !important; border: 8px solid #fff; overflow: hidden; }
+.au-review--workshop .au-svc :is(#ecommerce,#ai,#web-design,#search,#how-we-work,#cities) .card img { min-height: 420px; object-fit: cover; border-radius: 15px !important; }
+.au-review--workshop .au-svc #ecommerce,
+.au-review--workshop .au-svc #web-design,
+.au-review--workshop .au-svc #how-we-work,
+.au-review--workshop .au-svc #faq { background: #fff; }
+.au-review--workshop .au-svc #ai,
+.au-review--workshop .au-svc #search,
+.au-review--workshop .au-svc #cities { background: #f7f2eb; }
+.au-review--workshop .au-svc main > section:nth-last-of-type(4) .card { background: rgba(255,255,255,.8); }
+.au-review--workshop .au-svc #compare .card { padding: 12px; overflow: hidden; }
+.au-review--workshop .au-svc #faq > .wrap > div:first-child { max-width: 820px; margin-left: 25%; text-align: left !important; }
+.au-review--workshop .au-svc .faq-grid { grid-template-columns: 250px 1fr !important; gap: 80px; }
+.au-review--workshop .au-svc .dark-sec { background: var(--review-orange); color: var(--review-ink); }
+.au-review--workshop .au-svc .dark-sec h2,
+.au-review--workshop .au-svc .dark-sec p { color: var(--review-ink); }
+.au-review--workshop .au-svc .dark-sec .eyebrow { color: var(--review-ink); }
+.au-review--workshop .au-svc .dark-sec .btn-primary { background: var(--review-ink); color: #fff; }
+.au-review--workshop .au-svc .dark-sec .btn-outline { color: var(--review-ink) !important; border-color: rgba(20,17,15,.35) !important; }
+
+/* ───────────────────────── CONCEPT C: ONE SENIOR SYSTEM ────────────── */
+.au-review--system .au-svc {
+  background-color: #fff;
+  background-image: linear-gradient(rgba(231,222,214,.22) 1px, transparent 1px), linear-gradient(90deg, rgba(231,222,214,.22) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+.au-review--system .au-svc .wrap { max-width: 1380px; }
+.au-review--system .au-svc main > section { background: #fff; border-top: 1px solid var(--review-line); }
+.au-review--system .au-svc .sec { padding-block: clamp(58px, 6vw, 90px); }
+.au-review--system .au-svc .sec-lg { padding-block: clamp(74px, 7vw, 112px); }
+.au-review--system .au-svc h1 { font-size: clamp(3rem, 4.2vw, 4.25rem) !important; line-height: .95; letter-spacing: -.062em; }
+.au-review--system .au-svc h2 { max-width: 920px; font-size: clamp(2.35rem, 3.45vw, 3.65rem); line-height: .98; letter-spacing: -.058em; }
+.au-review--system .au-svc h3 { letter-spacing: -.035em; }
+.au-review--system .au-svc .eyebrow { display: inline-flex; align-items: center; gap: 12px; }
+.au-review--system .au-svc .eyebrow::before { content: ''; width: 28px; height: 2px; background: var(--review-orange); }
+.au-review--system .au-svc .chip { border-radius: 2px; background: rgba(255,255,255,.88); }
+.au-review--system .au-svc .card,
+.au-review--system .au-svc .svc-card { border-radius: 0; box-shadow: none; }
+
+/* Hero: one complete desktop viewport, with the founder banner removed in markup. */
+.au-review--system .au-svc main > section:first-of-type {
+  display: flex;
+  align-items: center;
+  height: calc(100svh - 136px);
+  min-height: 590px;
+  max-height: 700px;
+  padding-block: 24px !important;
+  border-top: 0;
+  background: rgba(255,255,255,.86);
+}
+.au-review--system .au-svc main > section:first-of-type > .wrap { width: 100%; }
+.au-review--system .au-svc main > section:first-of-type .col-6040 { grid-template-columns: minmax(0, 7fr) minmax(360px, 5fr); gap: clamp(26px, 3vw, 46px); align-items: center; }
+.au-review--system .au-svc main > section:first-of-type .flex-wrap { gap: 7px; margin-bottom: 14px !important; }
+.au-review--system .au-svc main > section:first-of-type .chip { padding: 6px 10px; font-size: 9px; }
+.au-review--system .au-svc main > section:first-of-type .lead { max-width: 660px !important; margin-top: 14px !important; font-size: 15.5px; line-height: 1.5; }
+.au-review--system .au-svc main > section:first-of-type form { max-width: 660px; margin-top: 14px !important; }
+.au-review--system .au-svc main > section:first-of-type form > div { padding: 10px !important; border: 1px solid var(--review-ink) !important; border-radius: 0 !important; box-shadow: none !important; }
+.au-review--system .au-svc main > section:first-of-type form input,
+.au-review--system .au-svc main > section:first-of-type form button { height: 42px !important; border-radius: 0 !important; }
+.au-review--system .au-svc main > section:first-of-type .card { display: grid; grid-template-rows: auto auto; overflow: hidden; padding: 0 !important; border-color: var(--review-ink); }
+.au-review--system .au-svc main > section:first-of-type .card picture { display: block; }
+.au-review--system .au-svc main > section:first-of-type .card img { width: 100%; height: clamp(225px, 33vh, 290px) !important; min-height: 0; object-fit: cover; border-radius: 0 !important; }
+.au-review--system .au-svc main > section:first-of-type .card > div { padding: 16px 18px 10px !important; border-top: 1px solid var(--review-ink); }
+.au-review--system .au-svc main > section:first-of-type .card .eyebrow { margin-bottom: 4px; font-size: 9px; }
+.au-review--system .au-svc main > section:first-of-type .scorecard-row { padding-block: 9px; }
+.au-review--system .au-svc main > section:first-of-type .scorecard-metric { font-size: 13px; }
+.au-review--system .au-svc main > section:first-of-type .scorecard-note { font-size: 10px; }
+.au-review--system .au-svc main > section:first-of-type .scorecard-val { font-size: 12px !important; }
+
+/* Definition chapter: two hard-edged reference blocks plus a plain-English thesis. */
+.au-review--system .au-svc main > section:nth-of-type(2) { background: #fff8f5; }
+.au-review--system .au-svc main > section:nth-of-type(2) .wrap { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 24px; }
+.au-review--system .au-svc .def { max-width: none !important; border: 1px solid var(--review-ink); border-radius: 0; padding: clamp(24px, 3vw, 38px); background: #fff; }
+.au-review--system .au-svc main > section:nth-of-type(2) .def:first-child { grid-column: 1 / 7; }
+.au-review--system .au-svc main > section:nth-of-type(2) .def:nth-child(2) { grid-column: 7 / 13; margin-top: 0; }
+.au-review--system .au-svc main > section:nth-of-type(2) > .wrap > .lead { grid-column: 5 / 13; margin-top: 28px; color: var(--review-ink); font-size: clamp(1.15rem, 1.75vw, 1.5rem); }
+
+/* Fact band: an intentional rhythm break and the only black area before the close. */
+.au-review--system .au-svc .stats-band { padding: 0; background: var(--review-ink); border: 0; }
+.au-review--system .au-svc .stats-band .wrap { padding-inline: 0; }
+.au-review--system .au-svc .stats-band .col-4 { gap: 0; }
+.au-review--system .au-svc .stats-band li { min-height: 164px; padding: 28px; border-right: 1px solid rgba(255,255,255,.2); }
+.au-review--system .au-svc .stats-band li div { color: var(--review-orange) !important; }
+.au-review--system .au-svc .stats-band li p { color: #fff !important; }
+.au-review--system .au-svc .stats-band li span { color: rgba(255,255,255,.55) !important; }
+
+/* Services chapter: catalogue, not nine repeated floating cards. */
+.au-review--system .au-svc #services { background: #f3efe9; }
+.au-review--system .au-svc #services > .wrap > div:first-child { display: grid; grid-template-columns: 5fr 4fr; gap: 72px; max-width: none !important; align-items: end; }
+.au-review--system .au-svc #services > .wrap > div:first-child .eyebrow,
+.au-review--system .au-svc #services > .wrap > div:first-child h2 { grid-column: 1; }
+.au-review--system .au-svc #services > .wrap > div:first-child .lead { grid-column: 2; grid-row: 1 / 3; margin: 0 !important; }
+.au-review--system .au-svc #services .col-3 { grid-template-columns: 1fr 1fr; gap: 0; border-top: 1px solid var(--review-ink); border-left: 1px solid var(--review-ink); }
+.au-review--system .au-svc #services .col-3 > li { border-right: 1px solid var(--review-ink); border-bottom: 1px solid var(--review-ink); }
+.au-review--system .au-svc #services .svc-card { min-height: 100%; padding: 26px 28px; border: 0; background: rgba(255,255,255,.72); transition: background-color .2s ease, padding-left .2s ease; }
+.au-review--system .au-svc #services .svc-card:hover { padding-left: 36px; background: #fff; }
+
+/* Individual service chapters: alternating composition and content-first hierarchy. */
+.au-review--system .au-svc :is(#ecommerce,#web-design,#cities) .col-6040 { grid-template-columns: minmax(0, 7fr) minmax(360px, 5fr); gap: clamp(54px, 7vw, 108px); }
+.au-review--system .au-svc :is(#ai,#how-we-work) .col-4060 { grid-template-columns: minmax(360px, 5fr) minmax(0, 7fr); gap: clamp(54px, 7vw, 108px); }
+.au-review--system .au-svc :is(#ecommerce,#ai,#web-design,#search,#how-we-work,#cities) .card:has(img) { padding: 0 !important; border-color: var(--review-ink); }
+.au-review--system .au-svc :is(#ecommerce,#ai,#web-design,#search,#how-we-work,#cities) .card img { width: 100%; min-height: 330px; object-fit: cover; border-radius: 0 !important; }
+.au-review--system .au-svc #ecommerce { background: #fff8f5; }
+.au-review--system .au-svc #ecommerce .col-6040 > div:last-child { align-self: start; }
+.au-review--system .au-svc #ecommerce .card-top-orange { border-top-width: 4px; }
+.au-review--system .au-svc #ai { background: #fff; }
+.au-review--system .au-svc #ai .hub-sticky > .card:last-child { background: #f3efe9; }
+
+/* Mid-page decision checkpoint. */
+.au-review--system .au-svc main > section:nth-of-type(7) { padding-block: 52px !important; background: var(--review-orange) !important; border-color: var(--review-ink); }
+.au-review--system .au-svc main > section:nth-of-type(7) > div { max-width: 1320px !important; }
+.au-review--system .au-svc main > section:nth-of-type(7) > div > div { display: grid; grid-template-columns: 7fr 5fr; gap: 28px 80px; padding: 0 !important; border: 0 !important; border-radius: 0 !important; background: transparent !important; }
+.au-review--system .au-svc main > section:nth-of-type(7) h2 { grid-column: 1; margin: 0 !important; color: var(--review-ink); }
+.au-review--system .au-svc main > section:nth-of-type(7) p:first-child { grid-column: 1; margin: 0 !important; color: var(--review-ink) !important; }
+.au-review--system .au-svc main > section:nth-of-type(7) h2 + p { grid-column: 2; grid-row: 1 / 3; margin: 0 !important; align-self: end; color: var(--review-ink) !important; }
+.au-review--system .au-svc main > section:nth-of-type(7) div:last-child { grid-column: 1 / -1; margin-top: 0 !important; }
+.au-review--system .au-svc main > section:nth-of-type(7) a { border-radius: 0 !important; background: var(--review-ink) !important; }
+.au-review--system .au-svc main > section:nth-of-type(7) span { color: var(--review-ink) !important; }
+.au-review--system .au-svc main > section:nth-of-type(7) a span { color: #fff !important; }
+
+/* Web design chapter: capability matrix, then a compact seven-day decision system. */
+.au-review--system .au-svc #web-design { background: #fff; }
+.au-review--system .au-svc #web-design > .wrap > .col-3 { gap: 0; border-top: 1px solid var(--review-ink); border-left: 1px solid var(--review-ink); }
+.au-review--system .au-svc #web-design > .wrap > .col-3 .svc-card { padding: 28px; border: 0; border-right: 1px solid var(--review-ink); border-bottom: 1px solid var(--review-ink); }
+.au-review--system .au-svc #web-design > .wrap > .col-6040:last-child { grid-template-columns: minmax(0, 8fr) minmax(340px, 4fr); gap: 32px; }
+.au-review--system .au-svc #web-design > .wrap > .col-6040:last-child .card { border-color: var(--review-ink); }
+
+/* Cost chapter: numbered drivers become a scan-friendly two-column field guide. */
+.au-review--system .au-svc #website-cost { background: #f3efe9; }
+.au-review--system .au-svc #website-cost .col-6040 { grid-template-columns: minmax(0, 8fr) minmax(340px, 4fr); gap: clamp(48px, 6vw, 88px); }
+.au-review--system .au-svc #website-cost .num-list { display: grid; grid-template-columns: 1fr 1fr; gap: 0 28px; max-width: none !important; }
+.au-review--system .au-svc #website-cost .card { border: 1px solid var(--review-ink); background: #fff; }
+
+/* Search chapter deliberately reverses the visual anchor. */
+.au-review--system .au-svc #search { background: #fff8f5; }
+.au-review--system .au-svc #search .col-6040 { grid-template-columns: minmax(360px, 5fr) minmax(0, 7fr); gap: clamp(54px, 7vw, 108px); }
+.au-review--system .au-svc #search .col-6040 > div:first-child { grid-column: 2; }
+.au-review--system .au-svc #search .col-6040 > .card { grid-column: 1; grid-row: 1; }
+
+/* Delivery chapter: operational evidence, presented like a field manual. */
+.au-review--system .au-svc #how-we-work { background: #fff; }
+.au-review--system .au-svc #how-we-work .int-group { border-top: 1px solid var(--review-ink); }
+.au-review--system .au-svc #how-we-work .int-group li { padding-block: 15px; }
+
+/* Comparison and self-check: one matrix, then three lightweight diagnostic columns. */
+.au-review--system .au-svc #compare { background: #f3efe9; }
+.au-review--system .au-svc #compare .card { padding: 0; border-color: var(--review-ink); }
+.au-review--system .au-svc #compare .cmp-table th,
+.au-review--system .au-svc #compare .cmp-table td { padding: 18px; }
+.au-review--system .au-svc #compare > .wrap > p:last-child { color: #554c45 !important; }
+.au-review--system .au-svc main > section:nth-of-type(13) { background: #fff; }
+.au-review--system .au-svc main > section:nth-of-type(13) .col-3 { gap: 0; border-top: 1px solid var(--review-ink); border-left: 1px solid var(--review-ink); }
+.au-review--system .au-svc main > section:nth-of-type(13) .card { padding: 28px; border: 0; border-right: 1px solid var(--review-ink); border-bottom: 1px solid var(--review-ink); background: #fff; }
+.au-review--system .au-svc main > section:nth-of-type(13) .card:nth-child(2) { background: #fff8f5; box-shadow: inset 0 4px 0 var(--review-orange); }
+
+/* Hiring guide: editorial numbered rows with one anchored visual. */
+.au-review--system .au-svc main > section:nth-of-type(14) { background: #fff8f5; }
+.au-review--system .au-svc main > section:nth-of-type(14) .col-6040 { grid-template-columns: minmax(0, 8fr) minmax(340px, 4fr); gap: 52px; }
+.au-review--system .au-svc main > section:nth-of-type(14) ol { gap: 0; border-top: 1px solid var(--review-ink); }
+.au-review--system .au-svc main > section:nth-of-type(14) ol .card { padding: 22px 0; border: 0; border-bottom: 1px solid var(--review-line); background: transparent; }
+
+/* Australia chapter: service-area directory and timezone proof in one unit. */
+.au-review--system .au-svc #cities { background: #fff; }
+.au-review--system .au-svc #cities .col-2 { gap: 0; border-top: 1px solid var(--review-ink); border-left: 1px solid var(--review-ink); }
+.au-review--system .au-svc #cities .col-2 > li { border-right: 1px solid var(--review-ink); border-bottom: 1px solid var(--review-ink); }
+.au-review--system .au-svc #cities .col-2 .svc-card { border: 0; }
+
+/* FAQ is its own reference destination, not the tail of the preceding section. */
+.au-review--system .au-svc #faq { background: #f3efe9; }
+.au-review--system .au-svc #faq > .wrap > div:first-child { max-width: 880px; text-align: left !important; }
+.au-review--system .au-svc .faq-grid { grid-template-columns: 250px 1fr !important; gap: clamp(44px, 6vw, 88px); }
+.au-review--system .au-svc .faq-sidebar { border-top: 3px solid var(--review-orange); }
+.au-review--system .au-svc .faq-item { border-color: #cfc4bb; }
+.au-review--system .au-svc #faq .faq-cat-label { color: #a53810; }
+
+.au-review--system > footer a.group { color: #ff9b73 !important; }
+
+.au-review--system .au-svc .dark-sec { padding-block: clamp(84px, 9vw, 132px); background: var(--review-ink); }
+
+@media (max-width: 960px) {
+  .review-index__header { grid-template-columns: 1fr; }
+  .review-index__grid { grid-template-columns: 1fr; }
+  .review-index__card { min-height: 500px; }
+  .au-review .au-svc .sec-lg { padding-block: 76px; }
+  .au-review .au-svc h1 { font-size: clamp(2.7rem, 9vw, 4.5rem) !important; }
+  .au-review .au-svc h2 { font-size: clamp(2.15rem, 7vw, 3.4rem); }
+  .au-review--atlas .au-svc main > section:first-of-type .col-6040,
+  .au-review--atlas .au-svc #ecommerce .col-6040,
+  .au-review--atlas .au-svc #web-design .col-6040,
+  .au-review--atlas .au-svc #search .col-6040,
+  .au-review--atlas .au-svc #cities .col-6040,
+  .au-review--atlas .au-svc #ai .col-4060,
+  .au-review--atlas .au-svc #how-we-work .col-4060,
+  .au-review--workshop .au-svc :is(#ecommerce,#ai,#web-design,#search,#how-we-work,#cities) :is(.col-6040,.col-4060),
+  .au-review--system .au-svc :is(#ecommerce,#ai,#web-design,#search,#how-we-work,#cities) :is(.col-6040,.col-4060) { grid-template-columns: 1fr; gap: 46px; }
+  .au-review--atlas .au-svc main > section:nth-of-type(2) .wrap,
+  .au-review--system .au-svc main > section:nth-of-type(2) .wrap { display: block; }
+  .au-review--atlas .au-svc main > section:nth-of-type(2) .def:nth-child(2),
+  .au-review--system .au-svc main > section:nth-of-type(2) .def:nth-child(2) { margin-top: 24px; }
+  .au-review--atlas .au-svc main > section:nth-of-type(2) > .wrap > .lead,
+  .au-review--system .au-svc main > section:nth-of-type(2) > .wrap > .lead { margin-top: 36px; }
+  .au-review--atlas .au-svc #services .col-3,
+  .au-review--system .au-svc #services .col-3 { grid-template-columns: 1fr; }
+  .au-review--atlas .au-svc #services .col-3 > li { grid-column: auto; }
+  .au-review--workshop .au-svc main > section:first-of-type .col-6040 { min-height: auto; display: flex; flex-direction: column; }
+  .au-review--workshop .au-svc main > section:first-of-type .col-6040 > div:first-child { width: auto; margin-top: 0; padding: 30px; }
+  .au-review--workshop .au-svc main > section:first-of-type .col-6040 > .card { position: relative; inset: auto; min-height: 620px; margin-top: -22px; }
+  .au-review--workshop .au-svc main > section:first-of-type .card > div { width: calc(100% - 32px); right: 16px; bottom: 16px; }
+  .au-review--workshop .au-svc #services .col-3 > li:nth-child(3n+2) { transform: none; }
+  .au-review--workshop .au-svc main > section:nth-of-type(2) .def:nth-child(2),
+  .au-review--workshop .au-svc main > section:nth-of-type(2) > .wrap > .lead,
+  .au-review--workshop .au-svc #services > .wrap > div:first-child,
+  .au-review--workshop .au-svc #faq > .wrap > div:first-child { margin-left: 0; }
+  .au-review--system .au-svc main > section:first-of-type { height: auto; min-height: 0; max-height: none; padding-block: 48px 72px !important; }
+  .au-review--system .au-svc main > section:first-of-type .col-6040 { grid-template-columns: 1fr; }
+  .au-review--system .au-svc main > section:first-of-type .card img { height: 420px !important; }
+  .au-review--system .au-svc #services > .wrap > div:first-child { display: block; }
+  .au-review--system .au-svc #services > .wrap > div:first-child .lead { margin-top: 20px !important; }
+  .au-review--system .au-svc main > section:nth-of-type(7) > div > div { grid-template-columns: 1fr; gap: 20px; }
+  .au-review--system .au-svc main > section:nth-of-type(7) h2 + p { grid-column: 1; grid-row: auto; }
+  .au-review--system .au-svc #web-design > .wrap > .col-6040:last-child,
+  .au-review--system .au-svc #website-cost .col-6040,
+  .au-review--system .au-svc main > section:nth-of-type(14) .col-6040 { grid-template-columns: 1fr; }
+  .au-review--system .au-svc #search .col-6040 > div:first-child,
+  .au-review--system .au-svc #search .col-6040 > .card { grid-column: 1; grid-row: auto; }
+  .au-review--system .au-svc #search .col-6040 > .card { order: -1; }
+  .au-review--system .au-svc #faq .faq-grid { grid-template-columns: 1fr !important; }
+}
+
+@media (max-width: 640px) {
+  .review-index { padding: 20px; }
+  .review-index__header { margin-bottom: 28px; }
+  .review-index__card { min-height: 450px; }
+  .au-review .au-svc .wrap { padding-inline: 20px; }
+  .au-review .au-svc p { font-size: 15px; }
+  .au-review .au-svc .lead { font-size: 16px; }
+  .au-review .au-svc .sec-lg { padding-block: 60px; }
+  .au-review .au-svc h1 { font-size: 2.55rem !important; }
+  .au-review .au-svc h2 { font-size: 2.2rem; }
+  .au-review--atlas .au-svc main > section:first-of-type .card { grid-template-rows: 360px auto; }
+  .au-review--atlas .au-svc .stats-band .col-4,
+  .au-review--system .au-svc .stats-band .col-4 { grid-template-columns: 1fr 1fr; }
+  .au-review--workshop .au-svc main > section:first-of-type .col-6040 > div:first-child { padding: 24px; }
+  .au-review--workshop .au-svc main > section:first-of-type .col-6040 > .card { min-height: 560px; }
+  .au-review--workshop .au-svc main > section:first-of-type .card > div { width: calc(100% - 24px); right: 12px; bottom: 12px; }
+  .au-review--system .au-svc main > section:first-of-type { min-height: calc(100svh - 112px); padding-block: 20px 32px !important; }
+  .au-review--system .au-svc main > section:first-of-type h1 { font-size: clamp(2.2rem, 10.2vw, 2.75rem) !important; line-height: .96; }
+  .au-review--system .au-svc main > section:first-of-type .flex-wrap { gap: 5px; margin-bottom: 10px !important; }
+  .au-review--system .au-svc main > section:first-of-type .chip { padding: 4px 7px; font-size: 8px; }
+  .au-review--system .au-svc main > section:first-of-type .lead { margin-top: 10px !important; font-size: 13px; line-height: 1.42; }
+  .au-review--system .au-svc main > section:first-of-type form { margin-top: 10px !important; }
+  .au-review--system .au-svc main > section:first-of-type form > div { padding: 7px !important; }
+  .au-review--system .au-svc main > section:first-of-type form > div > div:first-child { flex-direction: row !important; gap: 5px !important; }
+  .au-review--system .au-svc main > section:first-of-type form input { flex: 1 1 0 !important; width: 0 !important; min-width: 0; padding-inline: 8px !important; font-size: 12px !important; }
+  .au-review--system .au-svc main > section:first-of-type form button { flex: 0 0 auto; padding-inline: 9px !important; font-size: 11px !important; }
+  .au-review--system .au-svc main > section:first-of-type form > div > div:nth-child(3) { margin-top: 6px !important; font-size: 10px !important; }
+  .au-review--system .au-svc main > section:first-of-type .col-6040 > .card { display: none; }
+  .au-review--system .au-svc #website-cost .num-list { grid-template-columns: 1fr; }
+  .au-review--system .au-svc #web-design > .wrap > .col-3,
+  .au-review--system .au-svc main > section:nth-of-type(13) .col-3 { grid-template-columns: 1fr; }
+  .au-review--system .au-svc main > section:nth-of-type(7) { padding-block: 42px !important; }
+  .au-review--system .au-svc .stats-band li { min-height: 150px; padding: 20px; }
+}
+
+/* ─────────────── CONCEPT C, PASS 2: EDITORIAL SYSTEM ───────────────
+   Softer hierarchy, useful scroll depth and no hard-outline card language. */
+.au-review--system .au-svc {
+  --system-cream: #faf7f2;
+  --system-peach: #fff2eb;
+  --system-sand: #f2ece4;
+  --system-line: #e7ded6;
+  background: #fff;
+}
+
+.au-review--system .au-svc main > section {
+  overflow: clip;
+  border-top: 0;
+}
+
+.au-review--system .au-svc main > section[id] { scroll-margin-top: 96px; }
+
+.au-review--system .au-svc :is(.card, .svc-card, .def) {
+  border: 0 !important;
+  border-radius: 22px;
+  box-shadow: 0 18px 55px rgba(55, 39, 28, .075);
+}
+
+.au-review--system .au-svc :is(.card, .svc-card) {
+  transition: transform .28s ease, box-shadow .28s ease, background-color .28s ease;
+}
+
+.au-review--system .au-svc a.svc-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 65px rgba(55, 39, 28, .11);
+}
+
+/* A composed two-line statement, then the lead/form and proof visual. */
+.au-review--system .au-svc main > section:first-of-type {
+  height: min(680px, calc(100svh - 80px));
+  min-height: 610px;
+  max-height: 680px;
+  padding-block: 34px !important;
+  background:
+    radial-gradient(circle at 86% 16%, rgba(240,90,40,.1), transparent 28%),
+    linear-gradient(180deg, #fff 0%, #fffaf7 100%);
+}
+
+.au-review--system .au-svc main > section:first-of-type .col-6040 {
+  grid-template-columns: minmax(0, 7fr) minmax(390px, 5fr);
+  column-gap: clamp(38px, 5vw, 74px);
+  row-gap: 16px;
+  align-items: end;
+}
+
+.au-review--system .au-svc .system-hero {
+  display: grid;
+  gap: 16px;
+}
+
+.au-review--system .au-svc .system-hero-lower {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(390px, 5fr);
+  gap: clamp(38px, 5vw, 74px);
+  align-items: start;
+}
+
+.au-review--system .au-svc .system-hero-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+  padding-top: 4px;
+}
+
+.au-review--system .au-svc main > section:first-of-type .col-6040 > div:first-child {
+  display: contents;
+}
+
+.au-review--system .au-svc main > section:first-of-type .flex-wrap {
+  grid-column: 1 / -1;
+  margin: 0 !important;
+}
+
+.au-review--system .au-svc main > section:first-of-type h1 {
+  grid-column: 1 / -1;
+  max-width: 1320px;
+  margin: 0;
+  font-size: clamp(3rem, 3.25vw, 3.25rem) !important;
+  line-height: .98;
+  letter-spacing: -.058em;
+  text-wrap: balance;
+}
+
+.au-review--system .au-svc .system-hero-line {
+  display: block;
+  white-space: nowrap;
+}
+
+.au-review--system .au-svc main > section:first-of-type .lead {
+  grid-column: 1;
+  align-self: start;
+  max-width: 720px !important;
+  margin: 4px 0 0 !important;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.au-review--system .au-svc main > section:first-of-type form {
+  grid-column: 1;
+  align-self: end;
+  max-width: 720px;
+  margin: 0 !important;
+}
+
+.au-review--system .au-svc .system-hero form { width: 100%; }
+
+.au-review--system .au-svc main > section:first-of-type form > div {
+  padding: 10px !important;
+  border: 0 !important;
+  border-radius: 18px !important;
+  background: rgba(255,255,255,.96) !important;
+  box-shadow: 0 18px 55px rgba(55,39,28,.1) !important;
+}
+
+.au-review--system .au-svc main > section:first-of-type form input,
+.au-review--system .au-svc main > section:first-of-type form button {
+  border-radius: 11px !important;
+}
+
+.au-review--system .au-svc main > section:first-of-type .col-6040 > .card {
+  grid-column: 2;
+  grid-row: 3 / 5;
+  align-self: stretch;
+  overflow: hidden;
+  padding: 8px !important;
+  border-radius: 26px;
+  background: #fff;
+  box-shadow: 0 28px 80px rgba(55,39,28,.14);
+}
+
+.au-review--system .au-svc .system-hero .hero-proof {
+  align-self: start;
+  overflow: hidden;
+  padding: 8px !important;
+  border-radius: 26px;
+  background: #fff;
+  box-shadow: 0 28px 80px rgba(55,39,28,.14);
+}
+
+.au-review--system .au-svc main > section:first-of-type .card img {
+  height: 205px !important;
+  border-radius: 19px !important;
+}
+
+.au-review--system .au-svc main > section:first-of-type .card > div {
+  padding: 14px 12px 6px !important;
+  border-top: 0;
+}
+
+/* The answer-first opening reads like one editorial spread, not two boxes. */
+.au-review--system .au-svc main > section:nth-of-type(2) {
+  background: var(--system-cream);
+}
+
+.au-review--system .au-svc main > section:nth-of-type(2) .wrap {
+  align-items: start;
+  gap: 22px;
+}
+
+.au-review--system .au-svc .def {
+  min-height: 100%;
+  padding: clamp(28px, 3.2vw, 48px);
+  background: #fff;
+}
+
+.au-review--system .au-svc main > section:nth-of-type(2) .def:nth-child(2) {
+  background: var(--system-peach);
+  box-shadow: none;
+}
+
+.au-review--system .au-svc main > section:nth-of-type(2) > .wrap > .lead {
+  grid-column: 4 / 13;
+  margin-top: 42px;
+  padding-left: clamp(0px, 3vw, 44px);
+  font-size: clamp(1.25rem, 1.75vw, 1.55rem);
+  line-height: 1.48;
+}
+
+/* A clean fact rail with no boxed cells. */
+.au-review--system .au-svc .stats-band {
+  background: var(--review-ink);
+}
+
+.au-review--system .au-svc .stats-band .wrap {
+  padding-inline: clamp(20px, 4vw, 56px);
+}
+
+.au-review--system .au-svc .stats-band li {
+  min-height: 142px;
+  padding: 28px clamp(16px, 2.4vw, 38px);
+  border-right-color: rgba(255,255,255,.12);
+}
+
+/* Service catalogue: asymmetric bento, soft tonal hierarchy. */
+.au-review--system .au-svc #services {
+  background: #fff;
+}
+
+.au-review--system .au-svc #services > .wrap > div:first-child {
+  grid-template-columns: 7fr 5fr;
+  gap: clamp(40px, 6vw, 92px);
+}
+
+.au-review--system .au-svc #services .col-3 {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 18px;
+  border: 0;
+}
+
+.au-review--system .au-svc #services .col-3 > li {
+  grid-column: span 4;
+  border: 0;
+}
+
+.au-review--system .au-svc #services .col-3 > li:nth-child(1),
+.au-review--system .au-svc #services .col-3 > li:nth-child(4),
+.au-review--system .au-svc #services .col-3 > li:nth-child(7) { grid-column: span 5; }
+.au-review--system .au-svc #services .col-3 > li:nth-child(2),
+.au-review--system .au-svc #services .col-3 > li:nth-child(3),
+.au-review--system .au-svc #services .col-3 > li:nth-child(8) { grid-column: span 7; }
+.au-review--system .au-svc #services .col-3 > li:last-child { grid-column: 1 / -1; }
+
+.au-review--system .au-svc #services .svc-card {
+  min-height: 220px;
+  padding: clamp(24px, 2.4vw, 36px);
+  background: var(--system-cream);
+}
+
+.au-review--system .au-svc #services li:nth-child(2n) .svc-card { background: var(--system-peach); }
+.au-review--system .au-svc #services li:nth-child(3n) .svc-card { background: var(--system-sand); }
+.au-review--system .au-svc #services .svc-card:hover { padding-left: clamp(24px, 2.4vw, 36px); }
+
+/* Service chapters: compact links stop long-copy columns from leaving a dead flank. */
+.au-review--system .au-svc :is(#ecommerce,#ai,#web-design,#search,#how-we-work,#cities) :is(.col-6040,.col-4060) {
+  gap: clamp(48px, 6vw, 92px);
+  align-items: start;
+}
+
+.au-review--system .au-svc :is(#ecommerce,#ai,#web-design,#search,#how-we-work,#cities) .hub-sticky {
+  top: 118px;
+}
+
+.au-review--system .au-svc :is(#ecommerce,#ai,#web-design,#search,#how-we-work,#cities) .card:has(img) {
+  overflow: hidden;
+  padding: 8px !important;
+  border: 0 !important;
+  border-radius: 26px;
+  background: #fff;
+  box-shadow: 0 24px 68px rgba(55,39,28,.11);
+}
+
+.au-review--system .au-svc :is(#ecommerce,#ai,#web-design,#search,#how-we-work,#cities) .card img {
+  min-height: 0;
+  aspect-ratio: 3 / 2;
+  border-radius: 19px !important;
+  object-fit: cover;
+}
+
+.au-review--system .au-svc :is(#ecommerce,#ai,#web-design,#search) .hub-links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.au-review--system .au-svc .hub-links .svc-card {
+  height: 100%;
+  padding: 22px !important;
+  background: #fff;
+  box-shadow: 0 14px 44px rgba(55,39,28,.07);
+}
+
+.au-review--system .au-svc #ecommerce { background: var(--system-peach); }
+.au-review--system .au-svc #ai { background: #fff; }
+.au-review--system .au-svc #web-design { background: var(--system-cream); }
+.au-review--system .au-svc #search { background: var(--system-peach); }
+.au-review--system .au-svc #how-we-work { background: #fff; }
+
+.au-review--system .au-svc :is(#ecommerce,#ai) .hub-sticky > .card:last-child,
+.au-review--system .au-svc #web-design .hub-sticky,
+.au-review--system .au-svc #website-cost .card,
+.au-review--system .au-svc #cities .col-6040 > div:last-child {
+  padding: clamp(24px, 2.5vw, 38px);
+  border: 0 !important;
+  border-radius: 24px;
+  background: rgba(255,255,255,.86);
+  box-shadow: 0 18px 56px rgba(55,39,28,.075);
+}
+
+.au-review--system .au-svc #ai .hub-sticky > .card:last-child { background: var(--system-sand); }
+.au-review--system .au-svc .card-top-orange { border-top: 0 !important; }
+
+/* Orange checkpoint stays concise and acts as the page's chapter break. */
+.au-review--system .au-svc main > section:nth-of-type(7) {
+  border: 0;
+  background: var(--review-orange) !important;
+}
+
+.au-review--system .au-svc main > section:nth-of-type(7) > div > div {
+  border: 0 !important;
+  border-radius: 0 !important;
+}
+
+.au-review--system .au-svc main > section:nth-of-type(7) a {
+  border-radius: 999px !important;
+}
+
+/* Web capabilities and decision aids become a varied, breathable field guide. */
+.au-review--system .au-svc #web-design > .wrap > .col-3 {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 16px;
+  border: 0;
+}
+
+.au-review--system .au-svc #web-design > .wrap > .col-3 > li { grid-column: span 4; }
+.au-review--system .au-svc #web-design > .wrap > .col-3 > li:nth-child(1),
+.au-review--system .au-svc #web-design > .wrap > .col-3 > li:nth-child(5) { grid-column: span 5; }
+.au-review--system .au-svc #web-design > .wrap > .col-3 > li:nth-child(2),
+.au-review--system .au-svc #web-design > .wrap > .col-3 > li:nth-child(4) { grid-column: span 7; }
+
+.au-review--system .au-svc #web-design > .wrap > .col-3 .svc-card {
+  min-height: 210px;
+  padding: 28px;
+  border: 0;
+  background: #fff;
+}
+
+.au-review--system .au-svc #web-design > .wrap > .col-3 li:nth-child(2n) .svc-card { background: var(--system-peach); }
+
+.au-review--system .au-svc #web-design > .wrap > .col-6040:last-child .card {
+  border: 0 !important;
+  background: #fff;
+}
+
+.au-review--system .au-svc #web-design > .wrap > .col-6040:last-child > div:first-child > .card {
+  padding: 8px 26px !important;
+}
+
+.au-review--system .au-svc #website-cost { background: #fff; }
+.au-review--system .au-svc #website-cost .card { background: var(--system-cream); }
+.au-review--system .au-svc #website-cost .num-list { gap: 0 34px; }
+.au-review--system .au-svc #website-cost .num-list li { border-bottom-color: var(--system-line); }
+
+.au-review--system .au-svc #search .col-6040 > .card {
+  align-self: start;
+  background: #fff;
+}
+
+.au-review--system .au-svc #how-we-work .int-group {
+  border-top-color: var(--system-line);
+}
+
+/* Tables retain functional hairlines, never black frames. */
+.au-review--system .au-svc #compare { background: var(--system-sand); }
+.au-review--system .au-svc #compare .card {
+  overflow: hidden;
+  border: 0 !important;
+  border-radius: 22px;
+  background: #fff;
+}
+.au-review--system .au-svc #compare .cmp-table :is(th,td) { border-color: var(--system-line); }
+
+.au-review--system .au-svc main > section:nth-of-type(13) .col-3 {
+  gap: 16px;
+  border: 0;
+}
+
+.au-review--system .au-svc main > section:nth-of-type(13) .card {
+  min-height: 320px;
+  padding: 30px;
+  border: 0;
+  background: var(--system-cream);
+}
+
+.au-review--system .au-svc main > section:nth-of-type(13) .card:nth-child(2) {
+  background: var(--system-peach);
+  box-shadow: 0 18px 55px rgba(55,39,28,.075);
+}
+
+.au-review--system .au-svc main > section:nth-of-type(14) { background: #fff; }
+.au-review--system .au-svc main > section:nth-of-type(14) ol { border-top-color: var(--system-line); }
+
+.au-review--system .au-svc #cities { background: var(--system-cream); }
+.au-review--system .au-svc #cities .col-2 {
+  gap: 14px;
+  border: 0;
+}
+.au-review--system .au-svc #cities .col-2 > li { border: 0; }
+.au-review--system .au-svc #cities .col-2 .svc-card {
+  min-height: 170px;
+  padding: 24px;
+  background: #fff;
+}
+
+.au-review--system .au-svc #faq { background: #fff; }
+.au-review--system .au-svc .faq-sidebar { border-top-color: var(--review-orange); }
+.au-review--system .au-svc .faq-item { border-color: var(--system-line); }
+
+/* One light scroll reveal and one restrained image drift. Content is visible
+   without support, and reduced-motion users receive a static page. */
+@supports (animation-timeline: view()) {
+  .au-review--system .au-svc main > section:not(:first-of-type) > .wrap {
+    animation: system-section-in both linear;
+    animation-timeline: view();
+    animation-range: entry 8% cover 28%;
+  }
+
+  .au-review--system .au-svc :is(#ecommerce,#ai,#web-design,#search,#how-we-work,#cities) .card img {
+    animation: system-image-drift both linear;
+    animation-timeline: view();
+    animation-range: entry 0% exit 100%;
+  }
+}
+
+@keyframes system-section-in {
+  from { transform: translateY(28px); }
+  to { transform: translateY(0); }
+}
+
+.au-review--system .au-svc .stats-band li span {
+  color: #bcb7b2 !important;
+}
+
+@keyframes system-image-drift {
+  from { transform: scale(1.035) translateY(-1.2%); }
+  to { transform: scale(1.08) translateY(1.2%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .au-review--system .au-svc *,
+  .au-review--system .au-svc *::before,
+  .au-review--system .au-svc *::after {
+    scroll-behavior: auto !important;
+    animation: none !important;
+    transition-duration: .01ms !important;
+  }
+}
+
+@media (max-width: 1180px) {
+  .au-review--system .au-svc main > section:first-of-type {
+    height: auto;
+    min-height: 0;
+    max-height: none;
+    padding-block: 52px 72px !important;
+  }
+
+  .au-review--system .au-svc .system-hero-line { white-space: normal; }
+  .au-review--system .au-svc main > section:first-of-type h1 { font-size: clamp(3rem, 5.2vw, 4.25rem) !important; }
+
+  .au-review--system .au-svc #services .col-3 > li,
+  .au-review--system .au-svc #services .col-3 > li:nth-child(n),
+  .au-review--system .au-svc #web-design > .wrap > .col-3 > li,
+  .au-review--system .au-svc #web-design > .wrap > .col-3 > li:nth-child(n) {
+    grid-column: span 6;
+  }
+
+  .au-review--system .au-svc #services .col-3 > li:last-child { grid-column: 1 / -1; }
+}
+
+@media (max-width: 960px) {
+  .au-review--system .au-svc main > section:first-of-type .col-6040 {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .au-review--system .au-svc main > section:first-of-type .col-6040 > div:first-child { display: contents; }
+  .au-review--system .au-svc main > section:first-of-type :is(.flex-wrap,h1,.lead,form,.col-6040 > .card) { grid-column: 1; }
+  .au-review--system .au-svc main > section:first-of-type .col-6040 > .card { grid-row: auto; }
+  .au-review--system .au-svc main > section:first-of-type .card img { height: 380px !important; }
+  .au-review--system .au-svc .system-hero-lower { grid-template-columns: 1fr; }
+
+  .au-review--system .au-svc :is(#ecommerce,#ai,#web-design,#search,#how-we-work,#cities) .hub-sticky { position: static; }
+  .au-review--system .au-svc :is(#ecommerce,#ai,#web-design,#search) .hub-links { grid-template-columns: 1fr; }
+
+  .au-review--system .au-svc #services .col-3,
+  .au-review--system .au-svc #web-design > .wrap > .col-3 { grid-template-columns: 1fr; }
+
+  .au-review--system .au-svc #services .col-3 > li,
+  .au-review--system .au-svc #services .col-3 > li:nth-child(n),
+  .au-review--system .au-svc #web-design > .wrap > .col-3 > li,
+  .au-review--system .au-svc #web-design > .wrap > .col-3 > li:nth-child(n) {
+    grid-column: 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .au-review--system .au-svc main > section:first-of-type {
+    min-height: calc(100svh - 88px);
+    padding-block: 24px 36px !important;
+  }
+
+  .au-review--system .au-svc main > section:first-of-type h1 {
+    font-size: clamp(2.35rem, 10.7vw, 3rem) !important;
+    line-height: .98;
+  }
+
+  .au-review--system .au-svc main > section:first-of-type .col-6040 > .card { display: none; }
+  .au-review--system .au-svc .system-hero .hero-proof { display: none !important; }
+  .au-review--system .au-svc main > section:first-of-type form > div { border-radius: 14px !important; }
+  .au-review--system .au-svc .stats-band li { min-height: 132px; padding: 20px; }
+  .au-review--system .au-svc #services .svc-card,
+  .au-review--system .au-svc #web-design > .wrap > .col-3 .svc-card { min-height: auto; }
+}
+
+/* ─────────────── CONCEPT C, PASS 3: SPLIT HERO + STICKY CHAPTERS ───────
+   The page stays static-first. Sticky positioning removes empty flanks on
+   long chapters without adding scroll listeners or hydration work. */
+.au-review--system {
+  overflow-x: clip;
+}
+
+.au-review--system .au-svc,
+.au-review--system .au-svc main > section {
+  overflow: visible;
+}
+
+/* Hero: a strict copy-left / visual-right composition in one viewport. */
+.au-review--system .au-svc main > section:first-of-type {
+  height: calc(100svh - 80px);
+  min-height: 620px;
+  max-height: 760px;
+  padding-block: clamp(28px, 4vh, 48px) !important;
+}
+
+.au-review--system .au-svc .system-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(430px, .92fr);
+  gap: clamp(46px, 5.5vw, 88px);
+  align-items: center;
+}
+
+.au-review--system .au-svc .system-hero-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+  min-width: 0;
+  padding: 0;
+}
+
+.au-review--system .au-svc .system-hero-copy .flex-wrap {
+  margin: 0 !important;
+}
+
+.au-review--system .au-svc .system-hero h1 {
+  max-width: 760px;
+  margin: 0;
+  font-size: clamp(3.5rem, 4.25vw, 4.9rem) !important;
+  line-height: .94;
+  letter-spacing: -.065em;
+  text-wrap: initial;
+}
+
+.au-review--system .au-svc .system-hero-line {
+  display: block;
+  white-space: nowrap;
+}
+
+.au-review--system .au-svc .system-hero .lead {
+  max-width: 590px !important;
+  margin: 0 !important;
+  font-size: clamp(1.05rem, 1.25vw, 1.2rem);
+  line-height: 1.55;
+}
+
+.au-review--system .au-svc .system-hero form {
+  width: 100%;
+  max-width: 660px;
+  margin: 2px 0 0 !important;
+}
+
+.au-review--system .au-svc .system-hero .hero-proof {
+  align-self: center;
+  width: 100%;
+  max-width: 560px;
+  justify-self: end;
+}
+
+.au-review--system .au-svc .system-hero .hero-proof img {
+  height: clamp(220px, 30vh, 270px) !important;
+}
+
+/* The answer-first section is one aligned three-part orientation strip. */
+.au-review--system .au-svc main > section:nth-of-type(2) .system-answer-grid {
+  display: grid;
+  grid-template-columns: 1.08fr 1.08fr .84fr;
+  gap: 18px;
+  align-items: stretch;
+}
+
+.au-review--system .au-svc main > section:nth-of-type(2) .def,
+.au-review--system .au-svc main > section:nth-of-type(2) .answer-thesis {
+  grid-column: auto;
+  min-height: 100%;
+  margin: 0 !important;
+  padding: clamp(28px, 2.5vw, 40px);
+  border: 0;
+  border-radius: 22px;
+}
+
+.au-review--system .au-svc main > section:nth-of-type(2) .def:first-child {
+  grid-column: auto;
+  background: #fff;
+}
+
+.au-review--system .au-svc main > section:nth-of-type(2) .def:nth-child(2) {
+  grid-column: auto;
+  background: var(--system-peach);
+}
+
+.au-review--system .au-svc .answer-thesis {
+  background: var(--review-ink);
+  color: #fff;
+  box-shadow: 0 18px 55px rgba(55, 39, 28, .075);
+}
+
+.au-review--system .au-svc .answer-thesis .lab {
+  color: #ff9b73;
+}
+
+.au-review--system .au-svc .answer-thesis p {
+  margin: 0;
+  color: #fff;
+}
+
+/* Catalogue: the chapter statement stays visible while the service index moves. */
+.au-review--system .au-svc #services > .wrap {
+  display: grid;
+  grid-template-columns: minmax(290px, .7fr) minmax(0, 1.3fr);
+  gap: clamp(52px, 6vw, 96px);
+  align-items: start;
+}
+
+.au-review--system .au-svc #services .services-intro {
+  position: sticky;
+  top: 112px;
+  display: block !important;
+  grid-template-columns: none;
+  max-width: none !important;
+}
+
+.au-review--system .au-svc #services .services-intro h2 {
+  max-width: 10ch;
+  font-size: clamp(2.75rem, 3.4vw, 3.75rem);
+}
+
+.au-review--system .au-svc #services .services-intro .lead {
+  margin-top: 22px !important;
+  max-width: 34ch;
+  font-size: 1rem;
+}
+
+.au-review--system .au-svc #services .col-3 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 0 !important;
+}
+
+.au-review--system .au-svc #services .col-3 > li,
+.au-review--system .au-svc #services .col-3 > li:nth-child(n) {
+  grid-column: auto;
+}
+
+.au-review--system .au-svc #services .col-3 > li:last-child {
+  grid-column: 1 / -1;
+}
+
+.au-review--system .au-svc #services .svc-card {
+  min-height: 205px;
+}
+
+/* Every long split chapter gets a reliable pinned side. */
+@media (min-width: 961px) {
+  .au-review--system .au-svc .hub-sticky,
+  .au-review--system .au-svc #cities .cities-copy {
+    position: sticky;
+    top: 104px;
+    align-self: start;
+  }
+
+  .au-review--system .au-svc #questions .hub-sticky {
+    top: 112px;
+  }
+}
+
+.au-review--system .au-svc #questions {
+  background: #fff8f5;
+}
+
+.au-review--system .au-svc #questions .col-6040 {
+  grid-template-columns: minmax(0, 7fr) minmax(360px, 4fr);
+  gap: clamp(48px, 6vw, 86px);
+  align-items: start;
+}
+
+.au-review--system .au-svc #questions .hub-sticky {
+  overflow: hidden;
+  background: #fff;
+}
+
+.au-review--system .au-svc #cities .col-6040 {
+  align-items: start;
+}
+
+/* Final CTA: two balanced columns and a body that reads in three lines. */
+.au-review--system .au-svc .founder-cta {
+  padding-block: clamp(72px, 8vw, 108px);
+}
+
+.au-review--system .au-svc .founder-cta__inner {
+  display: grid;
+  grid-template-columns: minmax(0, .85fr) minmax(520px, 1.15fr);
+  gap: clamp(48px, 5.5vw, 88px);
+  align-items: center;
+}
+
+.au-review--system .au-svc .founder-cta h2 {
+  max-width: 720px;
+  margin: 0;
+  color: #fff;
+}
+
+.au-review--system .au-svc .founder-cta__action {
+  display: grid;
+  gap: 28px;
+}
+
+.au-review--system .au-svc .founder-cta__action p {
+  max-width: 620px;
+  margin: 0;
+  color: rgba(255,255,255,.7);
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+@media (max-width: 1180px) {
+  .au-review--system .au-svc .system-hero {
+    grid-template-columns: minmax(0, 1fr) minmax(380px, .9fr);
+    gap: 42px;
+  }
+
+  .au-review--system .au-svc .system-hero h1 {
+    font-size: clamp(3rem, 5.2vw, 4rem) !important;
+  }
+
+  .au-review--system .au-svc .system-hero-line {
+    white-space: normal;
+  }
+
+  .au-review--system .au-svc main > section:nth-of-type(2) .system-answer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .au-review--system .au-svc main > section:nth-of-type(2) .answer-thesis {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 960px) {
+  .au-review--system .au-svc main > section:first-of-type {
+    height: auto;
+    min-height: 0;
+    max-height: none;
+  }
+
+  .au-review--system .au-svc .system-hero,
+  .au-review--system .au-svc #services > .wrap,
+  .au-review--system .au-svc .founder-cta__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .au-review--system .au-svc .system-hero .hero-proof {
+    max-width: none;
+    justify-self: stretch;
+  }
+
+  .au-review--system .au-svc main > section:nth-of-type(2) .system-answer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .au-review--system .au-svc main > section:nth-of-type(2) .answer-thesis {
+    grid-column: auto;
+  }
+
+  .au-review--system .au-svc #services .services-intro,
+  .au-review--system .au-svc #cities .cities-copy {
+    position: static;
+  }
+
+  .au-review--system .au-svc #services .col-3 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .au-review--system .au-svc .founder-cta__inner {
+    gap: 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .au-review--system .au-svc .system-hero h1 {
+    font-size: clamp(2.55rem, 11vw, 3.25rem) !important;
+  }
+
+  .au-review--system .au-svc .system-hero-copy {
+    gap: 14px;
+  }
+
+  .au-review--system .au-svc #services .col-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .au-review--system .au-svc #services .col-3 > li:last-child {
+    grid-column: auto;
+  }
+
+  .au-review--system .au-svc .founder-cta__inner {
+    gap: 26px;
+  }
+}
