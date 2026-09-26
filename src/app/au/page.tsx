@@ -211,7 +211,7 @@ const jsonLd = {
       about: { '@id': ORG_ID },
       breadcrumb: { '@id': `${CANONICAL}#breadcrumb` },
       mainEntity: { '@id': `${CANONICAL}#services` },
-      primaryImageOfPage: 'https://factoryjet.com/images/au/hub/au-hub-hero.webp',
+      primaryImageOfPage: 'https://factoryjet.com/images/au/generated/au-home/hero.webp',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['h1', '[data-speakable]'] },
       author: {
         '@type': 'Person',
@@ -342,9 +342,11 @@ function HeroProofCard({ imageSrc, system = false }: { imageSrc: string; system?
 export type AustraliaHubReviewConcept = 'atlas' | 'workshop' | 'system';
 
 export function AustraliaHubContent({ reviewConcept }: { reviewConcept?: AustraliaHubReviewConcept } = {}) {
-  const reviewHeroImage = reviewConcept
-    ? `/images/au/mockups/${reviewConcept}-hero.webp`
-    : '/images/au/hub/au-hub-hero.webp';
+  const reviewHeroImage = reviewConcept === 'system'
+    ? '/images/au/generated/au-home/hero.webp'
+    : reviewConcept
+      ? `/images/au/mockups/${reviewConcept}-hero.webp`
+      : '/images/au/generated/au-home/hero.webp';
 
   return (
     <>
@@ -535,7 +537,7 @@ export function AustraliaHubContent({ reviewConcept }: { reviewConcept?: Austral
               </div>
               <div className="hub-sticky">
                 <div className="card" style={{ padding: 8 }}>
-                  <img src={reviewConcept === 'system' ? '/images/au/mockups/system-ecommerce.webp' : '/images/au/hub/au-hub-ecommerce.webp'} width={1200} height={800} loading="lazy" decoding="async" alt="Over-the-shoulder view of a shopper at a Melbourne café near Flinders Street checking out a complete linen cushion product page on a mobile online store" style={imgStyle} />
+                  <img src="/images/au/generated/au-home/ecommerce.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over-the-shoulder view of a shopper at a Melbourne café near Flinders Street checking out a complete linen cushion product page on a mobile online store" style={imgStyle} />
                 </div>
                 <div className="card card-top-orange mt-6">
                   <span className="eyebrow">Set up before launch</span>
@@ -559,7 +561,7 @@ export function AustraliaHubContent({ reviewConcept }: { reviewConcept?: Austral
             <div className="col-4060 hub-flip">
               <div className="hub-sticky">
                 <div className="card" style={{ padding: 8 }}>
-                  <img src={reviewConcept === 'system' ? '/images/au/mockups/system-ai.webp' : '/images/au/hub/au-hub-ai-agents.webp'} width={1200} height={800} loading="lazy" decoding="async" alt="Over-the-shoulder view of an office manager at a Brisbane building supplies trade counter reviewing a completed purchase-order extraction and approval workflow on her laptop" style={imgStyle} />
+                  <img src="/images/au/generated/au-home/ai.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over-the-shoulder view of an office manager at a Brisbane building supplies trade counter reviewing a completed purchase-order extraction and approval workflow on her laptop" style={imgStyle} />
                 </div>
                 <div className="card mt-6">
                   <span className="eyebrow">Which AI service fits you?</span>
@@ -654,7 +656,7 @@ export function AustraliaHubContent({ reviewConcept }: { reviewConcept?: Austral
                 </p>
               </div>
               <div className="card hub-sticky" style={{ padding: 8 }}>
-                <img src={reviewConcept === 'system' ? '/images/au/mockups/system-web-design.webp' : '/images/au/hub/au-hub-web-design.webp'} width={1200} height={800} loading="lazy" decoding="async" alt="A web designer and her client reviewing a finished Australian homewares website with a photographic hero and product collections on a large monitor in a bright Melbourne studio" style={imgStyle} />
+                <img src="/images/au/generated/au-home/web-design.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A web designer and her client reviewing a finished Australian homewares website with a photographic hero and product collections on a large monitor in a bright Melbourne studio" style={imgStyle} />
                 <div style={{ padding: '14px 12px 8px' }}>
                   <span className="eyebrow">Every website ships with</span>
                   <div className="scorecard-row"><div className="scorecard-metric">Custom design, no recycled templates</div><div className="scorecard-val" style={{ fontSize: 14 }}>Yes</div></div>
@@ -804,7 +806,7 @@ export function AustraliaHubContent({ reviewConcept }: { reviewConcept?: Austral
                 <HubLinks hub="search" />
               </div>
               <div className="card hub-sticky" style={{ padding: 8 }}>
-                <img src="/images/au/hub/au-hub-ai-search.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over-the-shoulder view of a woman in a Perth apartment reading an AI assistant answer that recommends local businesses on her phone" style={imgStyle} />
+                <img src="/images/au/generated/au-home/ai-search.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over-the-shoulder view of a woman in a Perth apartment reading an AI assistant answer that recommends local businesses on her phone" style={imgStyle} />
                 <div style={{ padding: '14px 12px 8px' }}>
                   <span className="eyebrow">Where buyers look now</span>
                   <div className="scorecard-row"><div><div className="scorecard-metric">Google search and Maps</div><div className="scorecard-note">technical and local SEO</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>SEO</div></div>
