@@ -17,10 +17,10 @@ import '../au-service.css';
    agency brisbane 390 · local seo brisbane 390. Title and H1 intent kept from the
    previous version of this page. */
 const UPDATED = '2026-09-25';
-const TITLE = 'Web Design & SEO Brisbane | Fast Sites, Found on Google | FactoryJet';
+const TITLE = 'Web Design & SEO Brisbane | Fast, Findable Sites | FactoryJet';
 const H1 = 'Web design and SEO for Brisbane businesses';
 const DESCRIPTION =
-  'Brisbane web design and SEO for businesses that need enquiries. Fast sites built by senior engineers, Google Business Profile done properly, and you own everything. Free site review.';
+  'Brisbane web design and SEO for businesses that need enquiries. Fast sites by senior engineers, Google Business Profile done properly, and you own it all.';
 
 /* Design tokens, copied by value from ../au-service.css (same as /au/ai-agents). */
 const T = {
@@ -368,7 +368,9 @@ export default function BrisbanePage() {
                 <div className="scorecard-row"><div><div className="scorecard-metric">What we will not do</div><div className="scorecard-note">buy links, publish thin suburb pages, hold your domain</div></div><div className="scorecard-val" style={{ color: T.small, fontSize: 14 }}>Never</div></div>
                 <p style={{ fontSize: 13, color: T.n400, marginTop: 12 }}>
                   No price figures appear on this page on purpose. Brisbane quotes vary by how much repair a site needs
-                  and how much content already exists. You get yours in writing after the free review.
+                  and how much content already exists. You get yours in writing after the free review. Our{' '}
+                  <a href="/blog/website-cost-australia-2026" style={srcLink}>Australian website cost guide</a> shows the
+                  published market ranges.
                 </p>
               </div>
             </div>
@@ -586,6 +588,8 @@ export default function BrisbanePage() {
                   About 1,900 Brisbane searches a month are for an SEO agency and another 390 for local SEO. Google
                   itself says some changes take effect in a few hours and others take several months, and advises
                   waiting a few weeks before judging a change. We plan against that reality rather than a launch date.
+                  See <a href="/blog/seo-cost-australia-2026#seo-cost-by-city" style={srcLink}>SEO cost by city</a> for
+                  published Australian price ranges.
                 </p>
               </div>
               <div className="card" style={{ padding: 8 }}>
@@ -593,7 +597,8 @@ export default function BrisbanePage() {
                 <div style={{ padding: '12px 10px 6px' }}>
                   <p style={{ fontSize: 14 }}>
                     A Brisbane sparky gets most new work from the Maps pack on a customer’s phone. A complete Business
-                    Profile with honest service areas is the first job, not the last.
+                    Profile with honest service areas is the first job, not the last. More on{' '}
+                    <a href="/au/websites-for-tradies" style={srcLink}>websites and local SEO for tradies</a>.
                   </p>
                 </div>
               </div>
@@ -635,6 +640,9 @@ export default function BrisbanePage() {
                     </details>
                   ))}
                 </div>
+                <p className="mt-4" style={{ fontSize: 14 }}>
+                  Monthly fixes and updates are covered by our <a href="/au/website-maintenance" style={srcLink}>website maintenance</a> plans.
+                </p>
               </div>
               <div className="card" style={{ padding: 8 }}>
                 <img src="/images/au/brisbane/brisbane-planning.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A web designer and a business owner plan a website sitemap with pastel cards pinned to a wall in a West End Brisbane studio with louvred windows and ceiling fans" style={imgStyle} />
@@ -869,7 +877,7 @@ export default function BrisbanePage() {
                             <svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5L7 9L11 5" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" /></svg>
                           </span>
                         </summary>
-                        <div className="faq-ans"><p>{f.answer}</p></div>
+                        <div className="faq-ans"><p>{f.answer}</p>{f.links ? <p style={{ marginTop: 8 }}>{f.links.map((l) => <a key={l.href} href={l.href} style={{ ...srcLink, marginRight: 16 }}>{l.label}</a>)}</p> : null}</div>
                       </details></li>
                     ))}</ul>
                   </div>

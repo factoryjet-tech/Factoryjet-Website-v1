@@ -71,7 +71,7 @@ const FAQ_CATEGORIES = [
   { key: 'data',     label: 'Data, privacy & Australian rules' },
 ] as const;
 
-const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
+const FAQ_ITEMS: { category: string; question: string; answer: string; links?: { href: string; label: string }[] }[] = [
   // ── AI development basics ──
   { category: 'basics', question: 'What is AI development?',
     answer: 'AI development is designing, building, testing and running software that uses artificial intelligence to do a useful job in a business. Today that usually means software built around a large language model, the kind of AI behind ChatGPT and Claude, connected to your own data and systems. It covers the whole path: picking the job, preparing data, building, testing accuracy, going live and keeping it working.' },
@@ -90,9 +90,21 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'basics', question: 'Is an AI agent the same as AI development?',
     answer: 'No. An AI agent is one thing an AI development company can build: AI that takes actions across your systems within rules you set, such as rebooking a delivery or chasing an overdue invoice. AI development is the wider field, which also covers document search, integrations, data tools and internal apps. For agents specifically, see our AI agents page for Australian businesses.' },
 
+  { category: 'basics', question: 'Can you build an AI agent with ChatGPT?',
+    answer: 'Yes, for simple jobs. OpenAI lets paid users build custom GPTs with instructions, uploaded files and connections to other apps, and developers can build agents on OpenAI’s models through its API. That covers a helper that answers from your documents. It falls short when the agent must act inside Xero, your CRM or your ERP with approval steps, logging and Australian data hosting, which is where a proper build comes in.' },
+  { category: 'basics', question: 'What is the best tool to build an AI agent?',
+    answer: 'It depends on who will maintain it. Non-technical teams on Microsoft 365 often start with Copilot Studio. Teams that want visual workflows use n8n, Make or Zapier. Developers building something custom use the OpenAI or Anthropic APIs with a framework such as the OpenAI Agents SDK or LangGraph. The best tool is the one that can safely reach your systems and that someone on your side understands.' },
+  { category: 'basics', question: 'Do you need coding to build AI agents?',
+    answer: 'Not for a simple one. No-code builders such as Copilot Studio, n8n and Zapier let you set up an agent by describing its job and connecting apps. Coding becomes necessary when the agent must connect to software without a ready-made connector, handle unusual cases reliably, meet privacy and logging rules, or run at volume. Most business agents we build mix no-code workflows with some custom code.' },
+  { category: 'basics', question: 'Are AI agents easy to build?',
+    answer: 'A demo is easy; a reliable one is not. You can get an agent answering questions in an afternoon. Making it right on the hundredth odd email, safe with customer data, recoverable when a connected tool changes, and trusted by your team takes weeks of testing on real cases. That gap between demo and daily use is where most business AI projects stall.' },
+  { category: 'basics', question: 'Is there an AI that can develop software?',
+    answer: 'Yes, AI coding assistants such as GitHub Copilot, Claude Code and OpenAI Codex now write, test and fix a large share of code under a developer’s direction. They are good at well-defined tasks and fast prototypes. They still need an experienced engineer to set the design, review what they produce, catch security problems and decide what to build. We use them every day, with a senior person accountable for the result.' },
+
   // ── Choosing an AI development company ──
   { category: 'choosing', question: 'What are the top AI development companies in Australia?',
-    answer: 'It depends on your size and the job. Names that come up often in Australian searches include Avenue Group in Perth, Osher Digital in Brisbane, ZenityAI, EB Pearls and Microknot in Sydney, Vrinsoft in Melbourne, and Red Marble AI. Larger enterprises also use the big consultancies. We list several, including us, on this page with a neutral note on each. Speak to two or three before choosing.' },
+    answer: 'It depends on your size and the job. Names that come up often include Team 400 and Osher Digital in Brisbane, 13Labs in Melbourne and IOTAI across four cities, with Arinco and Mantel Group for larger Microsoft and enterprise programs. Our comparison of Australian AI agencies lists where each is based and which platforms it builds on. Speak to two or three before choosing.',
+    links: [{ href: '/blog/best-ai-agencies-australia-2026', label: 'Comparison of Australian AI agencies' }] },
   { category: 'choosing', question: 'How do I choose an AI development company in Australia?',
     answer: 'Ask to see AI systems they have put live, not demos. Ask who will write the code and whether the same team supports it after launch. Confirm you will own the code, prompts and data. Ask how they measure accuracy, how they handle the Privacy Act and where your data will be hosted, and when they would tell you to buy a tool instead. Clear answers to all of these are a good sign.' },
   { category: 'choosing', question: 'Are you an Australian company?',
@@ -112,7 +124,8 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'delivery', question: 'How long does custom AI development take?',
     answer: 'A focused first project usually takes 6 to 14 weeks from kick-off to live use. Discovery takes 1 to 2 weeks, data preparation 1 to 4 weeks, a working prototype 2 to 4 weeks, the production build and integrations 3 to 8 weeks, and a pilot with real users 2 to 4 weeks. Phases overlap. Messy data and older systems stretch the timeline; a clear, narrow job shortens it.' },
   { category: 'delivery', question: 'How much does it cost to build a custom AI?',
-    answer: 'It depends on scope, not a rate card, so we do not publish prices. The biggest cost drivers are how many systems the AI must connect to, how clean your data is, how accurate it needs to be, how much personal information it touches, and whether you want monthly support. We scope after a free first call and quote a fixed price per phase. Model usage is billed to you directly by the provider.' },
+    answer: 'It depends on scope, not a rate card. The drivers are how many systems the AI must connect to, how clean your data is, how accurate it needs to be, how much personal information it touches, and whether you want support. We quote a fixed price per phase after a free first call, and model usage is billed to you directly. For typical Australian build and running costs, read our custom AI cost guide.',
+    links: [{ href: '/blog/ai-cost-australia-2026', label: 'Custom AI cost guide' }] },
   { category: 'delivery', question: 'How do I develop my own AI?',
     answer: 'Start with one job, not a strategy document. Pick a repeated task where mistakes are low-risk and results are easy to measure. Check the data it needs. Try a ready-made tool first. If that falls short, build a small prototype, test it on real cases, run a short pilot with the people who do the job, then roll out with training and monitoring. Add the next job only after the first one works.' },
   { category: 'delivery', question: 'Can I build my own AI for free?',
@@ -144,18 +157,18 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
 ];
 
 /* ─── Named Australian AI development companies (open self-disclosure,
-       ItemList). Each note is based on the company’s own homepage, fetched
-       2026-09-25. ──────────────────────────────────────────────────────── */
+       ItemList). Companies and notes match /blog/best-ai-agencies-australia-2026
+       (own sites checked 2026-09-26). ──────────────────────────────────────────────────────── */
 const AI_DEV_COMPANIES: { name: string; note: string }[] = [
   { name: 'FactoryJet', note: 'That is us. A founder-led AI development company working remotely with Australian SMEs and mid-market firms. Strongest where AI has to connect to commerce and operations systems: Xero, MYOB, CRM, ERP, ecommerce, helpdesk and Microsoft 365. You own the code, and the same team supports it.' },
-  { name: 'Avenue Group', note: 'Head office in Perth, with a presence in Melbourne and Sydney. Builds custom chatbots, machine learning, computer vision and agentic automation, and offers onshore data centre and cloud hosting from Perth.' },
-  { name: 'Osher Digital', note: 'A Brisbane-based firm offering custom AI development, AI agent development, AI consulting, process automation and custom ERP software for clients across Australia.' },
-  { name: 'ZenityAI', note: 'A Sydney-based AI engineering firm focused on government and enterprise work: custom models, agentic systems, governance and compliance frameworks, and secure deployment.' },
-  { name: 'EB Pearls', note: 'A Sydney software company in Surry Hills with a delivery office in Kathmandu, building AI-native software, mobile apps, web and ecommerce platforms.' },
-  { name: 'Microknot', note: 'A Sydney software development agency offering AI software development alongside custom software, web and mobile apps, data analytics and legacy system modernisation.' },
-  { name: 'Vrinsoft', note: 'Established in 2008, based in Melbourne with a presence in Sydney, Adelaide, Brisbane and Perth. Offers AI development alongside mobile apps, custom software and web development.' },
-  { name: 'Red Marble AI', note: 'An Australian AI specialist covering AI strategy and governance, product engineering, data science, generative AI solutions and AI literacy training.' },
-  { name: 'AI Developers', note: 'An Australian AI development services company building AI agents, chatbots, machine learning and process automation across sectors such as legal, medical, transport and agriculture.' },
+  { name: 'Team 400', note: 'Brisbane head office, working across Sydney, Melbourne and Brisbane. Builds custom AI agents and the software around them, with strong Microsoft work (Azure OpenAI, Copilot Studio, Power Platform) plus .NET and React development, for mid-size and larger businesses.' },
+  { name: '13Labs', note: 'Based at Stone & Chalk on King Street, Melbourne, working Australia-wide. A founder-led team building AI software such as document search, information extraction and staff assistants, plus AI agents that answer from approved information, on fixed-price quotes.' },
+  { name: 'Osher Digital', note: 'Based on Eagle Street, Brisbane, working across Australia with small to mid-market businesses. Offers AI agent development, AI consulting, n8n automation, system integrations and custom ERP software.' },
+  { name: 'IOTAI', note: 'Offices in North Sydney, Melbourne, Brisbane and the Gold Coast. Builds workflow automation, AI agents and internal apps on Retool and n8n, rolls out Microsoft Copilot, and offers on-premise AI and a monthly managed service.' },
+  { name: 'Arinco', note: 'Offices in Melbourne, Sydney, Brisbane, Perth and Auckland. A Microsoft specialist building production copilots and agents on Azure, Microsoft 365 and Copilot Studio for enterprise and mid-market organisations.' },
+  { name: 'Spark Interact', note: 'Based on Pitt Street, Sydney, working Australia-wide. Builds robotic process automation, AI chatbots, intelligent document processing and business intelligence automation for SMEs and enterprises.' },
+  { name: 'Advancer', note: 'Based in Fortitude Valley, Brisbane. Offers AI training, AI consulting and readiness assessments, AI agents for workflows and CRM updates, voice AI for call handling and bookings, and data consulting, on fixed-scope pilots.' },
+  { name: 'Mantel Group', note: 'An Australian and New Zealand technology consultancy covering AI, data, cloud, digital and cyber security, with 850+ tech experts according to its site. Built for enterprise programs rather than a first SME project.' },
 ];
 
 /* ─── JSON-LD (Organization is referenced by @id only, defined sitewide) ── */
@@ -525,6 +538,10 @@ export default function AiDevelopmentAUPage() {
                 </tbody>
               </table>
             </div>
+            <p className="mt-6" style={{ maxWidth: 780 }}>
+              If the job is answering customers in your helpdesk, our <a href="/au/ai-customer-service" style={srcLink}>AI customer service</a> page
+              covers Zendesk, Freshdesk, Gorgias and HubSpot builds.
+            </p>
           </div>
         </section>
 
@@ -625,7 +642,7 @@ export default function AiDevelopmentAUPage() {
         <section className="sec-lg dot-grid">
           <div className="wrap">
             <span className="eyebrow">Side by side</span>
-            <h2 style={{ maxWidth: 800 }}>Off-the-shelf AI tool vs freelancer vs offshore dev shop vs an AI development company</h2>
+            <h2 style={{ maxWidth: 800 }}>Off-the-shelf AI tool vs freelancer vs outsourced dev shop vs an AI development company</h2>
             <p className="lead mt-4" style={{ maxWidth: 760 }}>
               Each option is right for someone. This is how they compare on the things that decide whether AI keeps
               working after month three.
@@ -637,7 +654,7 @@ export default function AiDevelopmentAUPage() {
                     <th>What matters</th>
                     <th>Off-the-shelf AI tool</th>
                     <th>Freelancer</th>
-                    <th>Offshore dev shop</th>
+                    <th>Outsourced dev shop</th>
                     <th className="fj">FactoryJet</th>
                   </tr>
                 </thead>
@@ -655,7 +672,7 @@ export default function AiDevelopmentAUPage() {
               </table>
             </div>
             <p className="mt-6" style={{ maxWidth: 800 }}>
-              The real difference in this table is who owns the outcome. A typical offshore dev shop builds to a specification and
+              The real difference in this table is who owns the outcome. A typical outsourced dev shop builds to a specification and
               moves the team on. We scope the job with you, measure accuracy against your own cases, host where your
               data needs to live, and the same senior people support it for as long as you want them to.
             </p>
@@ -996,7 +1013,11 @@ export default function AiDevelopmentAUPage() {
               ))}
             </ul>
             <p style={srcNote}>
-              Companies named from live Australian search results and AI assistant answers for AI development company queries, September 2026. Notes reflect each company’s own website on 25 September 2026. Listing is not endorsement.
+              Companies named from live Australian search results and AI assistant answers for AI development company queries, September 2026. Each company’s own website was checked on 26 September 2026 for an Australian office and the services named. Listing is not endorsement.
+            </p>
+            <p className="mt-4" style={{ maxWidth: 760 }}>
+              Our <a href="/blog/best-ai-agencies-australia-2026" style={srcLink}>comparison of Australian AI agencies</a> lists
+              13 firms, including us, with where each is based, client size, platforms and published prices.
             </p>
           </div>
         </section>
@@ -1048,7 +1069,7 @@ export default function AiDevelopmentAUPage() {
                             <svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5L7 9L11 5" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" /></svg>
                           </span>
                         </summary>
-                        <div className="faq-ans"><p>{f.answer}</p></div>
+                        <div className="faq-ans"><p>{f.answer}</p>{f.links ? <p style={{ marginTop: 8 }}>{f.links.map((l) => <a key={l.href} href={l.href} style={{ ...srcLink, marginRight: 16 }}>{l.label}</a>)}</p> : null}</div>
                       </details></li>
                     ))}</ul>
                   </div>

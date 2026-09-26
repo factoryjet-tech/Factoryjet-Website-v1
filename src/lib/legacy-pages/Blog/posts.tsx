@@ -129,8 +129,21 @@ import { post as bestAiAgentsForEcommerce2026Post } from './posts/best-ai-agents
 import { post as bestB2bEcommercePlatformManufacturersDistributors2026Post } from './posts/best-b2b-ecommerce-platform-manufacturers-distributors-2026';
 import { post as ecommerceWebsiteCost2026Post } from './posts/ecommerce-website-cost-2026';
 import { post as localSeoCost2026Post } from './posts/local-seo-cost-2026';
+import { post as websiteCostAustralia2026Post } from './posts/website-cost-australia-2026';
+import { post as seoCostAustralia2026Post } from './posts/seo-cost-australia-2026';
+import { post as aiCostAustralia2026Post } from './posts/ai-cost-australia-2026';
+import { post as shopifyCostAustralia2026Post } from './posts/shopify-cost-australia-2026';
+import { post as bestAiAgenciesAustralia2026Post } from './posts/best-ai-agencies-australia-2026';
+import { post as bestEcommercePlatformAustralia2026Post } from './posts/best-ecommerce-platform-australia-2026';
 
 export const POSTS: BlogPost[] = [
+  // --- AU WAVE 4 (2026-09-26) ---
+  websiteCostAustralia2026Post,
+  seoCostAustralia2026Post,
+  aiCostAustralia2026Post,
+  shopifyCostAustralia2026Post,
+  bestAiAgenciesAustralia2026Post,
+  bestEcommercePlatformAustralia2026Post,
   // --- WAVE 1 ORGANIC LEADS (2026-09-17) ---
   bestAiAgentsForEcommerce2026Post,
   bestB2bEcommercePlatformManufacturersDistributors2026Post,

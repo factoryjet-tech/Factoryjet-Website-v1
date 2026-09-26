@@ -23,7 +23,7 @@ export const FAQ_CATEGORIES = [
   { key: 'local', label: 'Google Maps & local search' },
 ] as const;
 
-export const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
+export const FAQ_ITEMS: { category: string; question: string; answer: string; links?: { href: string; label: string }[] }[] = [
   // ---------- Choosing ----------
   { category: 'choosing', question: 'What are some good web design agencies in Melbourne?',
     answer: 'Melbourne has a deep design market, and for pure brand and visual work there are studios here that do it better than we do. We are a better fit when the site has to perform: load fast, rank, connect to software you already run, and keep working two years later. If you need a beautiful brochure, hire a studio. If you need an asset that brings in enquiries, ask harder engineering questions.' },
@@ -46,15 +46,20 @@ export const FAQ_ITEMS: { category: string; question: string; answer: string }[]
 
   // ---------- Cost ----------
   { category: 'cost', question: 'How much does it cost to design a website in Melbourne?',
-    answer: 'It comes down to how many pages you need, whether the content already exists, and what the site has to connect to. A five page site for a consultancy and a site with bookings and a customer login are different jobs. Any figure quoted before someone has looked at yours is a guess. We review, scope it in writing, and give you a fixed price for that scope before you commit.' },
+    answer: 'It comes down to how many pages you need, whether the content already exists, and what the site has to connect to. A five page site for a consultancy and a site with bookings and a customer login are different jobs. Any figure quoted before someone has looked at yours is a guess. We review, scope it in writing, and give you a fixed price for that scope before you commit. Our website cost guide lists published Australian market ranges.',
+    links: [{ href: '/blog/website-cost-australia-2026', label: 'Website cost in Australia (2026 guide)' }] },
   { category: 'cost', question: 'How much should I pay a web designer?',
-    answer: 'Pay for the outcome you need, not a page count. The things that move the price are custom design versus a template, who writes the content, integrations such as bookings or a CRM, ecommerce, and whether support after launch is included. Compare quotes on the same written scope, and check what is excluded. A lower quote that leaves out content, hosting setup or ownership often costs more by the end.' },
+    answer: 'Pay for the outcome you need, not a page count. The things that move the price are custom design versus a template, who writes the content, integrations such as bookings or a CRM, ecommerce, and whether support after launch is included. Compare quotes on the same written scope, and check what is excluded. A lower quote that leaves out content, hosting setup or ownership often costs more by the end.',
+    links: [{ href: '/blog/website-cost-australia-2026', label: 'Website cost in Australia (2026 guide)' }] },
   { category: 'cost', question: 'How much does SEO cost in Melbourne?',
-    answer: 'It depends on the size of the problem rather than the size of the city. A site with clean structure that needs content and local listings sorted is a smaller job than one where Google cannot crawl half the pages. We audit first, then price repair work as fixed milestones and ongoing content and link work separately, so you can see what each part buys and stop either one.' },
+    answer: 'It depends on the size of the problem rather than the size of the city. A site with clean structure that needs content and local listings sorted is a smaller job than one where Google cannot crawl half the pages. We audit first, then price repair work as fixed milestones and ongoing content and link work separately, so you can see what each part buys and stop either one. Our SEO cost guide breaks published Australian ranges down by city.',
+    links: [{ href: '/blog/seo-cost-australia-2026#seo-cost-by-city', label: 'SEO cost by city' }] },
   { category: 'cost', question: 'Where can I find SEO services in Melbourne on a small budget?',
-    answer: 'Low-cost and cheap are different things. Cheap SEO usually means automated link building and mass-produced content, which can leave you worse off after a Google update. A small budget works best on a scope matched to your real problem. If your site has a handful of technical faults and no local listing, that is a modest fix and does not need a large monthly retainer.' },
+    answer: 'Low-cost and cheap are different things. Cheap SEO usually means automated link building and mass-produced content, which can leave you worse off after a Google update. A small budget works best on a scope matched to your real problem. If your site has a handful of technical faults and no local listing, that is a modest fix and does not need a large monthly retainer.',
+    links: [{ href: '/blog/seo-cost-australia-2026#local-seo-cost', label: 'Local SEO cost in Australia' }] },
   { category: 'cost', question: 'Is there a monthly fee to have a website?',
-    answer: 'Yes, though it is usually small. You pay yearly for the domain and monthly or yearly for hosting. If the site takes bookings or payments there is normally a platform or transaction fee too. What you should not pay is a monthly fee purely to keep pages online with an agency that holds the keys. Everything we build is yours outright.' },
+    answer: 'Yes, though it is usually small. You pay yearly for the domain and monthly or yearly for hosting. If the site takes bookings or payments there is normally a platform or transaction fee too. What you should not pay is a monthly fee purely to keep pages online with an agency that holds the keys. Everything we build is yours outright.',
+    links: [{ href: '/blog/website-cost-australia-2026#monthly', label: 'Monthly website running costs' }, { href: '/au/website-maintenance', label: 'Website maintenance plans' }] },
   { category: 'cost', question: 'How long does it typically take to build a website?',
     answer: 'Websites of up to five pages qualify for our 7-day delivery, counted from an approved scope with content ready. Larger sites, ecommerce stores and builds with bookings or integrations take longer, and you get the date in writing at scope. The build is rarely the slow part. Waiting on copy, photos and sign-off is, so we flag early which items sit with you.' },
   { category: 'cost', question: 'How many pages should a good website have?',

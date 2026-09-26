@@ -71,7 +71,7 @@ const FAQ_CATEGORIES = [
   { key: 'industries', label: 'Tradies, clinics, law & more' },
 ] as const;
 
-const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
+const FAQ_ITEMS: { category: string; question: string; answer: string; links?: { href: string; label: string }[] }[] = [
   // ── AI receptionist basics ──
   { category: 'basics', question: 'What is an AI receptionist?',
     answer: 'An AI receptionist is a voice agent that answers your business phone. It speaks with callers in natural language, works out what they need, answers routine questions, books or moves appointments, takes clear messages, and passes urgent or sensitive calls to a person on your team. It works around the clock, including nights, weekends and public holidays, and it follows rules you agree in advance.' },
@@ -86,7 +86,12 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'basics', question: 'What is the difference between a virtual receptionist and an AI receptionist?',
     answer: 'In Australia, a virtual receptionist usually means a real person at an answering company who picks up your calls using your script, takes a message or transfers the call. An AI receptionist is software that answers instead. It is available at any hour, can take many calls at once, and can book straight into your systems. Some answering companies now offer both, with people stepping in when the AI cannot help.' },
   { category: 'basics', question: 'Are there AI customer service agents for phone calls?',
-    answer: 'Yes. An AI customer service agent is a wider term for AI that answers customer questions and takes actions, by phone, chat, email or SMS. An AI receptionist is the phone version, focused on incoming calls. The same engineering sits underneath both. Many of our clients start with calls, then add web chat or SMS follow-up using the same answers and the same handover rules.' },
+    answer: 'Yes. An AI customer service agent is a wider term for AI that answers customer questions and takes actions, by phone, chat, email or SMS. An AI receptionist is the phone version, focused on incoming calls. The same engineering sits underneath both. Many of our clients start with calls, then add web chat or SMS follow-up using the same answers and the same handover rules. For chat, email and helpdesk support, see our AI customer service page.',
+    links: [{ href: '/au/ai-customer-service', label: 'AI customer service for Australian support teams' }] },
+  { category: 'basics', question: 'What does a virtual receptionist do?',
+    answer: 'A virtual receptionist answers your business calls from somewhere other than your office, using your business name and a script you agree. Typical jobs are greeting callers, taking detailed messages, transferring calls to the right person, booking appointments and answering simple questions such as hours and location. In Australia the term usually means a person at an answering company, though AI receptionists now do the same routine work at any hour.' },
+  { category: 'basics', question: 'Is there an AI answering service available in Australia?',
+    answer: 'Yes, several. Australian options range from self-serve AI receptionist apps such as Sophiie, Johnni and Nexwin, to managed services such as Valory, to answering companies such as OfficeHQ that offer AI answering with a person ready to step in. You can also have one built around your own systems, which is what we do. All of them work with call forwarding, so you keep your existing number.' },
 
   // ── Choosing the right option ──
   { category: 'choosing', question: 'Which AI receptionist is best in Australia?',
@@ -102,9 +107,16 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'choosing', question: 'Is an AI voice agent the same as an AI receptionist?',
     answer: 'An AI receptionist is one kind of AI voice agent. A voice agent is any AI that holds a spoken conversation and takes actions, such as confirming orders, following up quotes or qualifying leads. An AI receptionist is a voice agent focused on incoming calls to your front desk. We build both, which is why our receptionists connect so tightly to the rest of your systems.' },
 
+  { category: 'choosing', question: 'Which virtual receptionist is the best in Australia?',
+    answer: 'The best one is the one that suits how your calls actually go. Human answering services such as OfficeHQ, Virtual Reception and Ruby Receptionist suit businesses whose callers expect a person and whose calls vary. AI receptionist apps suit high volumes of routine calls at any hour. Before you choose, sort your last fifty calls by type, then trial two services on your after-hours and overflow calls.' },
+
   // ── Setup, phone lines & cost ──
   { category: 'setup', question: 'How much does an AI receptionist cost in Australia?',
-    answer: 'It depends on scope, not a rate card. The main drivers are how many call types it handles, how many systems it connects to, how many locations and phone numbers are involved, how many calls it takes each month (which sets the usage you pay the voice and AI providers directly), and the level of support you want. We scope it on a free first call and quote a fixed price for the build, with support shown separately.' },
+    answer: 'It depends on scope, not a rate card. The main drivers are how many call types it handles, how many systems it connects to, how many locations and phone numbers are involved, how many calls it takes each month (which sets the usage you pay the voice and AI providers directly), and the level of support you want. We scope it on a free first call and quote a fixed price for the build, with support shown separately. For published Australian plan prices, see our AI receptionist cost comparison.',
+    links: [{ href: '/blog/ai-cost-australia-2026#ai-receptionist-cost', label: 'AI receptionist cost comparison' }] },
+  { category: 'setup', question: 'How much does a virtual receptionist cost?',
+    answer: 'It depends on how the service charges and how many calls you get. Human answering services usually charge a monthly base plus a fee per call or per minute, so a busy line costs far more than a quiet one. AI services usually charge a monthly plan with included minutes and an overage rate. Hours covered, bookings and transfers add to it. Our AI cost guide lists published Australian prices for both.',
+    links: [{ href: '/blog/ai-cost-australia-2026#virtual-receptionist', label: 'Virtual receptionist prices in Australia' }] },
   { category: 'setup', question: 'Can I keep my existing phone number?',
     answer: 'Yes. The simplest route is call forwarding, also called call diversion: your number stays with your current telco and you divert calls to the AI receptionist always, after hours, when busy, or when unanswered. If you are changing telco anyway, you can usually take the number with you. The ACMA says you can usually keep your number when you change telco, which is called porting.' },
   { category: 'setup', question: 'What is number porting and do I need it?',
@@ -134,9 +146,13 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'rules', question: 'What happens if the AI gets something wrong?',
     answer: 'It will sometimes mishear or misunderstand, just as people do. We reduce the risk in three ways: reading key details back to the caller, limiting it to answers you have approved, and sending every booking and message to your team with a summary. After launch we review call transcripts with you, fix the patterns we find, and keep adjusting it as your business changes.' },
 
+  { category: 'rules', question: 'Is using AI voice illegal?',
+    answer: 'No. Using an AI voice to answer your business calls is legal in Australia, as long as you follow the rules that already apply to calls. Tell callers they are speaking with an automated assistant, as the OAIC recommends, give notice before recording, and handle personal information under the Privacy Act. Outbound sales calls are different: the Do Not Call Register rules apply. Copying a real person’s voice without consent is a separate legal risk.' },
+
   // ── Industries ──
   { category: 'industries', question: 'Is there an AI receptionist for tradies?',
-    answer: 'Yes, and trades are one of the best fits. A plumber, sparky or builder on a roof cannot answer the phone, and a missed call is often a lost job. An AI receptionist for tradies answers while you work, takes the address and the problem, books a slot in ServiceM8 or Tradify, and sends genuine emergencies, like a burst pipe, straight to your mobile.' },
+    answer: 'Yes, and trades are one of the best fits. A plumber, sparky or builder on a roof cannot answer the phone, and a missed call is often a lost job. An AI receptionist for tradies answers while you work, takes the address and the problem, books a slot in ServiceM8 or Tradify, and sends genuine emergencies, like a burst pipe, straight to your mobile. If you also need a website that brings in those calls, see our websites for tradies.',
+    links: [{ href: '/au/websites-for-tradies', label: 'Websites for tradies' }] },
   { category: 'industries', question: 'Is there an AI medical receptionist available in Australia?',
     answer: 'Yes. Several Australian providers offer AI receptionists for clinics, and we build custom ones on the admin side only: bookings, changes, directions, what to bring and routine practice questions, written into your practice software. It never gives clinical advice, and urgent symptoms follow a handover path your clinicians approve. Because health providers are covered by the Privacy Act, data handling gets extra care.' },
   { category: 'industries', question: 'Does an AI dental receptionist work for a practice?',
@@ -275,6 +291,7 @@ const BUILD_STEPS: { n: string; t: string; d: string }[] = [
 
 const SIBLINGS: { href: string; t: string; d: string }[] = [
   { href: '/au/ai-agents', t: 'AI agent development', d: 'The wider family your receptionist belongs to: AI agents that follow up quotes, chase invoices and handle admin across your systems.' },
+  { href: '/au/ai-customer-service', t: 'AI customer service', d: 'For support teams: AI agents that answer chat and email, draft replies and triage tickets in your helpdesk.' },
   { href: '/au/ai-development', t: 'AI development and integration', d: 'AI built into your CRM, job system or website, for work that goes beyond the phone.' },
   { href: '/au/ai-consulting', t: 'AI consulting', d: 'Not sure the phone is where to start? A short assessment of where AI will actually pay off in your business.' },
   { href: '/au/ai-seo', t: 'AI SEO', d: 'Get found when Australians ask ChatGPT, Perplexity or Google AI for a business like yours.' },
@@ -755,9 +772,9 @@ export default function AiReceptionistAUPage() {
               </p>
             </div>
             <ul className="col-3 mt-12">
-              <li className="svc-card"><h3>Tradies and home services</h3><p className="mt-4">Plumbers, sparkies, HVAC techs, builders and cleaners. It answers while you are on the tools, takes the suburb and the problem, books a slot in ServiceM8 or Tradify, and sends real emergencies, like a burst pipe or no power, to your mobile.</p></li>
+              <li className="svc-card"><h3>Tradies and home services</h3><p className="mt-4">Plumbers, sparkies, HVAC techs, builders and cleaners. It answers while you are on the tools, takes the suburb and the problem, books a slot in ServiceM8 or Tradify, and sends real emergencies, like a burst pipe or no power, to your mobile. Need the website too? See <a href="/au/websites-for-tradies" style={srcLink}>websites for tradies</a>.</p></li>
               <li className="svc-card"><h3>Medical and allied health clinics</h3><p className="mt-4">GPs, physios, chiros, psychologists and specialists, on the admin side only: bookings, changes, directions and what to bring, written into Cliniko or your practice software. No clinical advice, ever, and urgent symptoms follow a path your clinicians approve.</p></li>
-              <li className="svc-card"><h3>Dental practices</h3><p className="mt-4">New patient enquiries, check-ups, hygiene bookings, cancellations and approved answers on health fund claiming. Pain, swelling and emergencies go to the team at once. It can work alongside online booking pages patients already use.</p></li>
+              <li className="svc-card"><h3>Dental practices</h3><p className="mt-4">New patient enquiries, check-ups, hygiene bookings, cancellations and approved answers on health fund claiming. Pain, swelling and emergencies go to the team at once. It can work alongside online booking pages patients already use. Need the website side too? See <a href="/au/dental-website-design" style={srcLink}>dental website design and SEO</a>.</p></li>
               <li className="svc-card"><h3>Law firms</h3><p className="mt-4">New enquiry intake by practice area, details for your conflict check, first consultation bookings, and routing existing clients to the right lawyer. A virtual receptionist for lawyers that never gives legal advice and captures every after-hours enquiry.</p></li>
               <li className="svc-card"><h3>Real estate and property management</h3><p className="mt-4">Inspection and appraisal bookings, listing questions, tenant maintenance requests and after-hours calls, logged into your property software, with urgent repairs routed to the right tradie or property manager.</p></li>
               <li className="svc-card"><h3>Hospitality</h3><p className="mt-4">Restaurants, cafés and venues. Table bookings and changes during service, opening hours, dietary and function enquiries, so staff are not pulled off the floor by the phone on a Friday night.</p></li>
@@ -769,6 +786,9 @@ export default function AiReceptionistAUPage() {
                   providers and aged care admin. If your calls follow a pattern, an AI receptionist can usually take the
                   routine ones. For a buyer’s view of the options in this space, read our guide to{' '}
                   <a href="/blog/best-ai-receptionist-small-business">the best AI receptionist for small business</a>.
+                  If you are comparing{' '}
+                  <a href="/blog/best-ai-agencies-australia-2026" style={srcLink}>Australian agencies that build voice agents and chatbots</a>,
+                  see our guide to the best AI agencies in Australia.
                 </p>
                 <p>
                   Health businesses get extra care. Because health service providers are covered by the Privacy Act
@@ -945,7 +965,7 @@ export default function AiReceptionistAUPage() {
                             <svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5L7 9L11 5" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" /></svg>
                           </span>
                         </summary>
-                        <div className="faq-ans"><p>{f.answer}</p></div>
+                        <div className="faq-ans"><p>{f.answer}</p>{f.links ? <p style={{ marginTop: 8 }}>{f.links.map((l) => <a key={l.href} href={l.href} style={{ ...srcLink, marginRight: 16 }}>{l.label}</a>)}</p> : null}</div>
                       </details></li>
                     ))}</ul>
                   </div>

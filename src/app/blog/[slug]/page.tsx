@@ -4,11 +4,16 @@ import { notFound } from 'next/navigation'
 import SiteHeader from '@/components/v2/SiteHeader'
 import SiteFooter from '@/components/v2/SiteFooter'
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
+import { AU_FOOTER_COLUMNS } from '@/data/auFooterColumns';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema'
 import { BlogPostPage } from '@/pages/Blog/components/BlogPostPage'
 import { POSTS } from '@/pages/Blog/posts'
 import { getRelatedPosts, getRelatedServices } from '@/pages/Blog/relatedLinks'
 import { getAuthorByName } from '@/data/authors'
+
+// Australian guides (slug names Australia) get the AU header, footer and en_AU locale,
+// so a reader arriving from an AU search stays inside the Australian site.
+const isAuGuide = (slug: string) => slug.includes('australia');
 
 type Props = {
   params: Promise<{ slug: string }>
@@ -59,7 +64,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
           alt: post.title,
         },
       ],
-      locale: 'en_US',
+      locale: isAuGuide(resolvedParams.slug) ? 'en_AU' : 'en_US',
     },
     twitter: {
       card: 'summary_large_image',
@@ -166,7 +171,7 @@ export default async function Page({ params }: Props) {
         />
       )}
 
-      <SiteHeader locale="us" />
+      {isAuGuide(resolvedParams.slug) ? <SiteHeader locale="au" logoHref="/au" /> : <SiteHeader locale="us" />}
       <main>
       <Breadcrumbs items={[
         { name: 'Home', url: 'https://factoryjet.com' },
@@ -179,7 +184,9 @@ export default async function Page({ params }: Props) {
           relatedServices={getRelatedServices(post)}
         />
       </main>
-      <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
+      {isAuGuide(resolvedParams.slug)
+        ? <SiteFooter locale="au" linkColumns={AU_FOOTER_COLUMNS} />
+        : <SiteFooter linkColumns={US_FOOTER_COLUMNS} />}
     </>
   )
 }

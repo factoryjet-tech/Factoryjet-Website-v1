@@ -87,7 +87,7 @@ const FAQ_CATEGORIES = [
   { key: 'choosing', label: 'Choosing an agency & cost' },
 ] as const;
 
-const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
+const FAQ_ITEMS: { category: string; question: string; answer: string; links?: { href: string; label: string }[] }[] = [
   // ── Basics ──
   { category: 'basics', question: 'What is AI SEO?',
     answer: 'AI SEO is the work of getting your business found in Google and named in the answers AI assistants give. That covers ChatGPT, Claude, Gemini, Perplexity and Google AI Overviews. It keeps the classic parts of SEO, such as a fast site, clear pages and good links, and adds work aimed at being quoted: plain answers, structured data, and a consistent story about your business across the web.' },
@@ -105,6 +105,12 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     answer: 'A GEO agency helps businesses get mentioned in answers from ChatGPT, Gemini, Claude, Perplexity and Google AI Overviews. Some are specialists that only do GEO. Most are SEO agencies that added it. We think splitting them rarely makes sense, because AI assistants lean on the same things classic SEO builds. Ask any GEO agency to show your starting position before you sign.' },
   { category: 'basics', question: 'What does an AI visibility audit include?',
     answer: 'An AI visibility audit checks how AI assistants talk about your business today. We run the questions your buyers ask across ChatGPT, Claude, Gemini, Perplexity and Google, record whether you are named, which competitors are named instead, and which websites the answers cite. We also check whether AI crawlers can read your site. You get the baseline every later report is compared against.' },
+
+  { category: 'basics', question: 'What does AI visibility mean?',
+    answer: 'AI visibility is how often, and how accurately, AI assistants mention your business when people ask about what you sell. It covers three things: whether you are named at all, whether the details they give are correct, and whether they link to your site as a source. It is the AI version of search rankings, except there is no single position to check, because answers vary by assistant, question and day.' },
+  { category: 'basics', question: 'What is the difference between a geo audit and a SEO audit?',
+    answer: 'An SEO audit checks whether Google can crawl, index and rank your pages: technical faults, page structure, speed and links. A GEO audit checks whether AI assistants name and cite you: it runs your buyers’ real questions through ChatGPT, Claude, Gemini, Perplexity and Google AI Overviews, records who gets named and which sources are quoted, and checks that AI crawlers can read your site. Fix the SEO faults first.',
+    links: [{ href: '/au/seo', label: 'SEO audits in Australia' }] },
 
   // ── Is SEO dead? ──
   { category: 'future', question: 'Is SEO dead because of ChatGPT?',
@@ -140,11 +146,21 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'how', question: 'How long does AI SEO take to work?',
     answer: 'Technical fixes, such as unblocking crawlers and adding structured data, can change what AI tools can read within weeks. Being named more often usually takes a few months, because it depends on new content being indexed and on other sites mentioning you. We agree a set of test questions at the start and report on the same set every month, so progress is visible.' },
 
+  { category: 'how', question: 'How to measure your AI visibility?',
+    answer: 'Write down 20 to 50 questions your buyers really ask, such as “best Shopify agency in Melbourne”. Run each one several times in ChatGPT, Claude, Gemini, Perplexity and Google, because answers vary. Record whether you are named, where, which competitors appear and which websites are cited. Repeat the same set each month. Our free AI visibility checker runs a first scan across the main assistants for you.',
+    links: [{ href: '/ai-visibility-checker', label: 'Free AI visibility checker' }] },
+
   // ── Choosing an agency & cost ──
   { category: 'choosing', question: 'What are some good AI SEO agencies in Australia?',
     answer: 'Well-known names include StudioHawk, Impressive Digital, Prosperity Media, Luminary, Click Click Media, Firewire, 23 Digital and Pivotal Agency, and we are one of the options too. We list each with a neutral note further up this page. Interestingly, when we asked four AI assistants the same question, they named different agencies, so talk to a few and ask each for evidence.' },
   { category: 'choosing', question: 'How much does AI SEO cost in Australia?',
-    answer: 'It depends on scope, not a price list. The main drivers are how many buyer questions and services you want to cover, how much content needs writing or fixing, the state of your site’s technical setup, how many directory and review profiles need work, and whether you want a one-off audit or ongoing monthly work. We scope after a free first call and quote in writing.' },
+    answer: 'It depends on scope, not a price list. The main drivers are how many buyer questions and services you want to cover, how much content needs writing or fixing, the state of your site’s technical setup, how many directory and review profiles need work, and whether you want a one-off audit or ongoing monthly work. We scope after a free first call and quote in writing. Our SEO cost guide shows how Australian providers price AI SEO today.',
+    links: [
+      { href: '/blog/seo-cost-australia-2026#ai-seo-cost', label: 'AI SEO cost in Australia' },
+      { href: '/blog/ai-cost-australia-2026#ai-seo-cost', label: 'AI cost guide' },
+    ] },
+  { category: 'choosing', question: 'What is the best GEO agency?',
+    answer: 'There is no best GEO agency in general, only the best fit for your market. The test is evidence: ask each agency to run your buyers’ questions across several AI assistants before you sign, show you the starting results, and report on the same questions every month. Be wary of guaranteed ChatGPT placement. An agency that can also fix your website and content will usually move faster than one that only advises.' },
   { category: 'choosing', question: 'Can an agency guarantee my business will appear in ChatGPT?',
     answer: 'No, and you should be wary of any agency that does. AI answers change between assistants, between days and even between two people asking the same thing. Nobody controls them. An honest agency promises measurable work and transparent testing: the same questions, run the same way, reported every month, so you can see whether mentions are rising.' },
   { category: 'choosing', question: 'Do I need a separate GEO agency as well as my SEO agency?',
@@ -756,7 +772,13 @@ export default function AiSeoAUPage() {
                     accurate stock and delivery details, and consistent reviews give an assistant something solid to
                     repeat. Our <a href="/au/ecommerce-development" style={inLink}>ecommerce development in Australia</a>{' '}
                     and <a href="/au/shopify-development" style={inLink}>Shopify development</a> teams build stores
-                    that are readable by machines from day one.
+                    that are readable by machines from day one. For stores, this sits inside our{' '}
+                    <a href="/au/ecommerce-seo" style={inLink}>ecommerce SEO services</a>, alongside collection pages and
+                    Google Shopping.
+                  </p>
+                  <p>
+                    Health practices have extra rules to follow. See{' '}
+                    <a href="/au/dental-website-design#ahpra" style={inLink}>how the Ahpra advertising guidelines shape a dental website</a>.
                   </p>
                 </div>
               </div>
@@ -994,7 +1016,7 @@ export default function AiSeoAUPage() {
                             <svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5L7 9L11 5" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" /></svg>
                           </span>
                         </summary>
-                        <div className="faq-ans"><p>{f.answer}</p></div>
+                        <div className="faq-ans"><p>{f.answer}</p>{f.links ? <p style={{ marginTop: 8 }}>{f.links.map((l) => <a key={l.href} href={l.href} style={{ ...srcLink, marginRight: 16 }}>{l.label}</a>)}</p> : null}</div>
                       </details></li>
                     ))}</ul>
                   </div>

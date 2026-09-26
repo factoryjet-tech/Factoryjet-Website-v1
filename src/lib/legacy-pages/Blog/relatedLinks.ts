@@ -38,8 +38,12 @@ interface ServiceRule {
    * (US) equivalent for those posts. Without this every UK post sent its whole
    * block to US service pages, which is both wrong for the reader and the reason
    * the /uk/* hubs received no internal links at all.
+   *
+   * 'australia' is stricter than 'uk': an Australian post is offered ONLY
+   * Australian pages (see getRelatedServices), never a US fallback, because the
+   * AU header and footer promise an all-/au experience.
    */
-  market?: 'uk';
+  market?: 'uk' | 'australia';
 }
 
 const SERVICE_RULES: ServiceRule[] = [
@@ -394,6 +398,119 @@ const SERVICE_RULES: ServiceRule[] = [
     weight: 1,
     market: 'uk',
   },
+  // --- AU pages (market-gated: Australian posts see ONLY these, 2026-09-26) ---
+  {
+    href: '/au/ecommerce-seo',
+    label: 'Ecommerce SEO (Australia)',
+    blurb: 'Collection pages, Google Shopping free listings and migration protection for Australian stores.',
+    keywords: ['ecommerce seo', 'shopify seo', 'woocommerce seo', 'store seo'],
+    weight: 4,
+    market: 'australia',
+  },
+  {
+    href: '/au/ai-seo',
+    label: 'AI SEO & GEO (Australia)',
+    blurb: 'Get named by ChatGPT, Perplexity and Google AI Overviews when Australians ask.',
+    keywords: ['ai seo', 'geo', 'aeo', 'generative engine', 'answer engine', 'ai search', 'ai overview', 'chatgpt', 'perplexity', 'ai visibility'],
+    weight: 3,
+    market: 'australia',
+  },
+  {
+    href: '/au/shopify-development',
+    label: 'Shopify Development (Australia)',
+    blurb: 'Shopify and Shopify Plus builds, migrations and support for Australian brands.',
+    keywords: ['shopify'],
+    weight: 4,
+    market: 'australia',
+  },
+  {
+    href: '/au/ecommerce-development',
+    label: 'Ecommerce Development (Australia)',
+    blurb: 'Online stores for Australian DTC and B2B brands on the platform that fits.',
+    keywords: ['ecommerce', 'e-commerce', 'online store', 'woocommerce', 'magento', 'bigcommerce', 'maropost', 'dtc'],
+    weight: 3,
+    market: 'australia',
+  },
+  {
+    href: '/au/ai-receptionist',
+    label: 'AI Receptionist (Australia)',
+    blurb: 'AI receptionists that answer calls, book jobs and hand urgent calls to a person.',
+    keywords: ['receptionist', 'voice agent', 'call answering', 'answering service'],
+    weight: 4,
+    market: 'australia',
+  },
+  {
+    href: '/au/ai-customer-service',
+    label: 'AI Customer Service (Australia)',
+    blurb: 'AI agents that answer chat and email and triage tickets in your helpdesk.',
+    keywords: ['chatbot', 'customer service', 'customer support', 'helpdesk'],
+    weight: 4,
+    market: 'australia',
+  },
+  {
+    href: '/au/ai-consulting',
+    label: 'AI Consulting (Australia)',
+    blurb: 'Find where AI pays off for an Australian SME, then build it.',
+    keywords: ['ai consult', 'ai strategy', 'ai readiness'],
+    weight: 4,
+    market: 'australia',
+  },
+  {
+    href: '/au/ai-agents',
+    label: 'AI Agents & Automation (Australia)',
+    blurb: 'Custom AI agents built into Xero, MYOB, HubSpot and ServiceM8.',
+    keywords: ['ai agent', 'agentic ai', 'ai automation', 'ai agenc', 'workflow automation', 'automation agency'],
+    weight: 3,
+    market: 'australia',
+  },
+  {
+    href: '/au/ai-development',
+    label: 'AI Development (Australia)',
+    blurb: 'Custom AI development and integration for Australian businesses.',
+    keywords: ['ai development', 'ai developer', 'ai integration', 'custom ai'],
+    weight: 3,
+    market: 'australia',
+  },
+  {
+    href: '/au/websites-for-tradies',
+    label: 'Websites for Tradies (Australia)',
+    blurb: 'Tradie websites with licence details, reviews, job photos and local SEO.',
+    keywords: ['tradie', 'trades', 'plumber', 'electrician', 'builder'],
+    weight: 4,
+    market: 'australia',
+  },
+  {
+    href: '/au/dental-website-design',
+    label: 'Dental Website Design (Australia)',
+    blurb: 'Dental websites and dental SEO checked against the Ahpra advertising guidelines.',
+    keywords: ['dental', 'dentist', 'clinic'],
+    weight: 4,
+    market: 'australia',
+  },
+  {
+    href: '/au/website-maintenance',
+    label: 'Website Maintenance (Australia)',
+    blurb: 'Care plans for WordPress, WooCommerce and Shopify sites, tested on staging first.',
+    keywords: ['maintenance', 'care plan', 'running cost', 'wordpress'],
+    weight: 3,
+    market: 'australia',
+  },
+  {
+    href: '/au',
+    label: 'Web Design (Australia)',
+    blurb: 'Custom websites for Australian businesses, fast and easy to update.',
+    keywords: ['web design', 'website design', 'web designer', 'website cost', 'wordpress', 'website'],
+    weight: 2,
+    market: 'australia',
+  },
+  {
+    href: '/au/seo',
+    label: 'SEO Services (Australia)',
+    blurb: 'Search strategy, technical fixes and content for Australian businesses.',
+    keywords: ['seo'],
+    weight: 1,
+    market: 'australia',
+  },
 ];
 
 /** Category fallback when no keyword matches. */
@@ -413,6 +530,17 @@ const UK_CATEGORY_FALLBACK: Record<string, string[]> = {
   'E-Commerce Development': ['/uk/ecommerce-development', '/uk/seo', '/uk/ai-seo'],
   'Emerging Tech': ['/uk/ai-agents', '/uk/ai-seo', '/uk/seo'],
   'Maintenance & Security': ['/uk/web-design', '/uk/seo-audit', '/uk/seo'],
+};
+
+/**
+ * Australian posts fall back to Australian pages only. Lists are longer than the
+ * link limit so the family reordering below still has same-topic pages to promote.
+ */
+const AU_CATEGORY_FALLBACK: Record<string, string[]> = {
+  'Web Design & Strategy': ['/au', '/au/website-maintenance', '/au/websites-for-tradies', '/au/seo'],
+  'E-Commerce Development': ['/au/ecommerce-development', '/au/shopify-development', '/au/ecommerce-seo', '/au/ai-customer-service'],
+  'Emerging Tech': ['/au/ai-agents', '/au/ai-seo', '/au/seo', '/au/ecommerce-seo', '/au/ai-consulting', '/au/ai-development'],
+  'Maintenance & Security': ['/au/website-maintenance', '/au', '/au/seo'],
 };
 
 // First rule wins per href: two rules can share a destination (see the 'seo' rule).
@@ -453,6 +581,9 @@ const SERVICE_FAMILY: Record<string, ServiceFamily> = {
   '/uk/seo-audit': 'search',
   '/uk/local-seo': 'search',
   '/uk/seo': 'search',
+  '/au/ai-seo': 'search',
+  '/au/seo': 'search',
+  '/au/ecommerce-seo': 'search',
   // ai: agents, automation, chatbots (build-an-AI-system intent, not visibility intent)
   '/services/ai-chatbot-development': 'ai',
   '/services/ai-customer-support-agents': 'ai',
@@ -460,12 +591,21 @@ const SERVICE_FAMILY: Record<string, ServiceFamily> = {
   '/services/ai-integration-services': 'ai',
   '/services/ai-agent-development': 'ai',
   '/uk/ai-agents': 'ai',
+  '/au/ai-agents': 'ai',
+  '/au/ai-consulting': 'ai',
+  '/au/ai-development': 'ai',
+  '/au/ai-receptionist': 'ai',
+  '/au/ai-customer-service': 'ai',
   // web: design and build
   '/services/website-redesign': 'web',
   '/services/small-business-website-design': 'web',
   '/services/wordpress-development': 'web',
   '/services/web-design': 'web',
   '/uk/web-design': 'web',
+  '/au': 'web',
+  '/au/website-maintenance': 'web',
+  '/au/websites-for-tradies': 'web',
+  '/au/dental-website-design': 'web',
   // ecommerce: storefronts, platforms, marketplaces
   '/services/shopify-development': 'ecommerce',
   '/services/woocommerce-development': 'ecommerce',
@@ -481,6 +621,8 @@ const SERVICE_FAMILY: Record<string, ServiceFamily> = {
   '/ecommerce-for-manufacturers': 'ecommerce',
   '/services/ecommerce-growth-agency': 'ecommerce',
   '/uk/ecommerce-development': 'ecommerce',
+  '/au/ecommerce-development': 'ecommerce',
+  '/au/shopify-development': 'ecommerce',
 };
 
 function haystack(post: BlogPost): string {
@@ -521,6 +663,8 @@ export function getRelatedServices(post: BlogPost, limit = 3): RelatedService[] 
   for (const rule of SERVICE_RULES) {
     // A geo-scoped rule is invisible to every post outside its market.
     if (rule.market && rule.market !== postMarket) continue;
+    // Australian posts see only Australian pages.
+    if (postMarket === 'australia' && rule.market !== 'australia') continue;
 
     let hits = 0;
     for (const kw of rule.keywords) {
@@ -568,7 +712,9 @@ export function getRelatedServices(post: BlogPost, limit = 3): RelatedService[] 
     // gating. UK hubs still exhaust before any US page; family only reorders within a tier.
     const chain = postMarket === 'uk'
       ? [...byFamily(UK_CATEGORY_FALLBACK[post.category] ?? []), ...byFamily(CATEGORY_FALLBACK[post.category] ?? [])]
-      : byFamily(CATEGORY_FALLBACK[post.category] ?? []);
+      : postMarket === 'australia'
+        ? byFamily(AU_CATEGORY_FALLBACK[post.category] ?? [])
+        : byFamily(CATEGORY_FALLBACK[post.category] ?? []);
 
     for (const href of chain) {
       if (seen.has(href)) continue;

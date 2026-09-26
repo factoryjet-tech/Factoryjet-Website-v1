@@ -12,7 +12,7 @@ const CANONICAL = 'https://factoryjet.com/au/ecommerce-development';
 const UPDATED = '2026-09-25';
 const TITLE = 'Ecommerce Agency & Development Australia | FactoryJet';
 const DESCRIPTION =
-  'FactoryJet is an ecommerce agency in Australia. We design, build and support Shopify, WooCommerce, Adobe Commerce and B2B stores. Clear timelines. You own it.';
+  'FactoryJet is an ecommerce agency for Australia. Ecommerce design, development and support for Shopify, WooCommerce, Adobe Commerce and B2B stores. You own it.';
 const H1 = 'Ecommerce Agency Australia: Ecommerce Development for DTC and B2B Brands, Supported After Launch';
 
 /* Design tokens, copied by value from ../au-service.css so inline styles stay
@@ -84,7 +84,7 @@ const FAQ_CATEGORIES = [
   { key: 'working',   label: 'Working with us' },
 ] as const;
 
-const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
+const FAQ_ITEMS: { category: string; question: string; answer: string; links?: { href: string; label: string }[] }[] = [
   // ── Ecommerce basics ──
   { category: 'basics', question: 'What is an ecommerce agency?',
     answer: 'An ecommerce agency is a team that plans, designs, builds and looks after online stores. Some agencies only do marketing, such as ads and email. Others only do design. A full ecommerce agency covers platform choice, design, development, integrations, migration and support after launch. FactoryJet sits on the build side: we design and develop your store, connect it to your systems, and stay on afterwards. You own everything we build.' },
@@ -95,7 +95,11 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'basics', question: 'What is the difference between ecommerce web design and ecommerce development?',
     answer: 'Ecommerce web design decides what a shopper sees and trusts: layout, product pages, the order information appears in, and how checkout feels. Ecommerce development is the code underneath that makes it fast, takes payments, syncs stock and holds up on a busy sale day. A design nobody can build is just a picture. A build nobody designed usually converts badly. We do both as one team.' },
   { category: 'basics', question: 'How much does it cost to have an ecommerce website built in Australia?',
-    answer: 'There is no honest single figure, because a small DTC launch and a B2B catalogue with ERP integration are different jobs. The main cost drivers are product count, the platform and its apps, how custom the design is, how many systems you connect (payments, stock, Xero or MYOB, couriers), whether you are migrating an old store, and B2B pricing rules. We scope after a free call and quote a fixed price per stage.' },
+    answer: 'There is no honest single figure, because a small DTC launch and a B2B catalogue with ERP integration are different jobs. The drivers are product count, the platform and its apps, custom design, how many systems you connect, any migration, and B2B pricing rules. We quote a fixed price per stage after a free call. Published Australian ranges for online stores are in our website cost guide.',
+    links: [
+      { href: '/blog/website-cost-australia-2026#wordpress-ecommerce', label: 'Website cost guide' },
+      { href: '/blog/shopify-cost-australia-2026', label: 'Shopify cost in Australia' },
+    ] },
   { category: 'basics', question: 'How long does it take to build an ecommerce website?',
     answer: 'A platform store with a custom theme takes 3 to 5 weeks. An advanced store with subscriptions, B2B pricing or a migration takes 5 to 8 weeks. Headless, custom or ERP-heavy builds take 8 to 14 weeks. Catalogue size, integrations and how quickly product data and sign-offs arrive move the date more than the code does.' },
   { category: 'basics', question: 'Is ecommerce still profitable in Australia in 2026?',
@@ -104,6 +108,17 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     answer: 'AI website builders can put a basic store online quickly, and for testing an idea that can be enough. They struggle with the parts that decide whether a store makes money: clean product data, links to your stock and accounts, a migration that keeps your Google rankings, Australian Consumer Law, and speed on a real phone. We use AI tools inside our own process, but people design, check and own every decision.' },
   { category: 'basics', question: 'What are the 5 Cs of ecommerce?',
     answer: 'There is no official list, and different writers use different five words. The version we find useful when planning a store is catalogue (clean product data), content (pages that answer buyer questions), checkout (short, honest, fast), connections (payments, stock, accounts and couriers talking to each other) and care (support after launch). A store that gets those five right usually does well.' },
+
+  { category: 'basics', question: 'How to design an e-commerce website?',
+    answer: 'Design from the product page outwards. Start with what a shopper needs to decide: clear photos from the angles people ask about, variants that are easy to pick, stock status, delivery estimate and the returns promise. Then build category pages with filters that work on a phone, and a checkout with guest option, address lookup and the total price shown up front. Test the whole flow on a real phone before anything looks finished.' },
+  { category: 'basics', question: 'What are common eCommerce mistakes?',
+    answer: 'The ones we fix most often: delivery costs that only appear at checkout, product descriptions copied from the supplier, category pages with no words on them, too many apps slowing the store, a checkout that forces account creation, and a replatform with no redirects that wipes out Google rankings overnight. Under Australian Consumer Law, a no refunds line or a price that excludes unavoidable fees is a legal problem as well as a sales one.' },
+  { category: 'basics', question: 'Do I need an ABN for eCommerce?',
+    answer: 'If you are running an online store as a business, yes, you should get one. An ABN is free from the Australian Business Register, you need it to register for GST once your turnover reaches the GST threshold, and the ACCC notes that reputable online sellers display their ABN. Without one, some business customers must withhold tax from what they pay you. Selling a few personal items as a hobby is different.' },
+  { category: 'basics', question: 'How to start an e-commerce business in Australia?',
+    answer: 'Validate demand before you build. Check that people search for what you sell and that you can land it with a healthy margin after delivery and returns. Then register an ABN and business name, pick a platform that fits your catalogue, set up payments, GST, Australia Post or courier rates and a refund policy that follows the Australian Consumer Law. Launch with a small range, measure what sells, and grow from there.' },
+  { category: 'basics', question: 'What is the 80/20 rule in ecommerce?',
+    answer: 'It is the observation that a small share of your products, customers or pages usually brings in most of the revenue, often quoted as 20% producing 80%. The exact split varies. The useful part is acting on it: check your own sales report, then put your best photography, copy, stock planning and ad budget behind the products and categories that actually sell, rather than spreading effort evenly across the whole catalogue.' },
 
   // ── Choosing an agency ──
   { category: 'choosing', question: 'How do I choose an ecommerce agency in Australia?',
@@ -119,9 +134,14 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
 
   // ── Platforms ──
   { category: 'platforms', question: 'What are the top ecommerce platforms in Australia?',
-    answer: 'The platforms most Australian stores run on are Shopify (and Shopify Plus for larger brands), WooCommerce on WordPress, BigCommerce, Adobe Commerce (Magento), and Maropost Commerce Cloud, which many Australians still call Neto. Custom and headless builds cover the rest. The right one depends on your catalogue, B2B needs, team and integrations, not on which is most popular.' },
+    answer: 'Most Australian stores run on Shopify or Shopify Plus, WooCommerce, BigCommerce, Adobe Commerce (Magento) or Maropost Commerce Cloud, which many Australians still call Neto. The right one depends on your catalogue, B2B needs, team and integrations, not on popularity. Our best ecommerce platform in Australia guide compares them on AUD prices, GST, Afterpay and Zip, and shipping.',
+    links: [{ href: '/blog/best-ecommerce-platform-australia-2026', label: 'Best ecommerce platform in Australia guide' }] },
   { category: 'platforms', question: 'Is Shopify or WooCommerce better for an Australian online store?',
-    answer: 'Shopify suits most DTC brands that want less to manage, because hosting, security and checkout are handled for you. WooCommerce suits businesses already built around WordPress and content, and it gives more control, but you (or we) look after hosting, updates and speed. For Shopify-specific builds, see our Shopify development page for Australia, where we go deeper.' },
+    answer: 'Shopify suits most DTC brands that want less to manage, because hosting, security and checkout are handled for you. WooCommerce suits businesses already built around WordPress and content, and it gives more control, but you (or we) look after hosting, updates and speed. For Shopify-specific builds, see our Shopify development page for Australia, where we go deeper. See the full Shopify vs WooCommerce comparison for Australia too.',
+    links: [
+      { href: '/blog/best-ecommerce-platform-australia-2026#head-to-head', label: 'Shopify vs WooCommerce comparison for Australia' },
+      { href: '/au/shopify-development', label: 'Shopify development' },
+    ] },
   { category: 'platforms', question: 'When does Adobe Commerce (Magento) make sense?',
     answer: 'Adobe Commerce, the paid version of Magento, earns its place with large catalogues, several stores or brands on one back end, and complex B2B rules such as company accounts, negotiated quotes and approval chains. It needs specialist developers, proper hosting and regular upkeep. For a small or mid-sized DTC brand it is usually more platform than the job needs.' },
   { category: 'platforms', question: 'What is headless ecommerce, and do I need it?',
@@ -157,7 +177,8 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'working', question: 'Do we own the store and the code when it is finished?',
     answer: 'Yes, completely. The platform account, domain, theme, custom code, integrations and documentation all sit in your name from day one. There is no licence to rent from us and no hosting you cannot move. If you ever want to take the work in-house or to another developer, you can, and it keeps running. We would rather keep you because the support is good than because you are locked in.' },
   { category: 'working', question: 'What support do you offer after launch?',
-    answer: 'We stay close for the first weeks after launch, when real customers on real phones surface things a test store never does. After that you choose the shape: ad-hoc fixes when you need them, a monthly support plan covering updates, security patches and small improvements, or planned growth sprints for new features. The same engineers who built the store look after it.' },
+    answer: 'We stay close for the first weeks after launch, when real customers on real phones surface things a test store never does. After that you choose the shape: ad-hoc fixes when you need them, a monthly support plan covering updates, security patches and small improvements, or planned growth sprints for new features. The same engineers who built the store look after it. For WooCommerce and Shopify stores, our monthly website maintenance plan covers tested updates, checkout testing and backups.',
+    links: [{ href: '/au/website-maintenance', label: 'Monthly website maintenance plan' }] },
   { category: 'working', question: 'Who actually does the work, and are you in Australia?',
     answer: 'Senior engineers do the work, with the founder, Bhavesh Barot, involved in scoping every project. FactoryJet was founded in 2014 and has served 500+ businesses. We work with Australian brands remotely, with calls booked at times that suit your business day, a shared project board, and a staging store you can review whenever you like. There is no handoff to juniors after the sales call.' },
   { category: 'working', question: 'Can you also help with SEO and AI search after launch?',
@@ -513,7 +534,7 @@ export default function EcommerceDevelopmentAUPage() {
               </li>
             </ul>
             <ul className="col-3 mt-6">
-              <li><a className="svc-card" href="/au/seo" style={{ display: 'block', height: '100%', color: 'inherit', textDecoration: 'none' }}><h3 style={{ fontSize: 18 }}>Ecommerce SEO</h3><p className="mt-2" style={{ fontSize: 14 }}>Category and product pages that rank on Google, plus the technical fixes behind them.</p><span style={{ fontFamily: T.fm, fontSize: 12, color: T.small }}>SEO Australia →</span></a></li>
+              <li><a className="svc-card" href="/au/ecommerce-seo" style={{ display: 'block', height: '100%', color: 'inherit', textDecoration: 'none' }}><h3 style={{ fontSize: 18 }}>Ecommerce SEO</h3><p className="mt-2" style={{ fontSize: 14 }}>Category and product pages that rank on Google, plus the technical fixes behind them.</p><span style={{ fontFamily: T.fm, fontSize: 12, color: T.small }}>Ecommerce SEO Australia →</span></a></li>
               <li><a className="svc-card" href="/au/ai-agents" style={{ display: 'block', height: '100%', color: 'inherit', textDecoration: 'none' }}><h3 style={{ fontSize: 18 }}>AI agents for your store</h3><p className="mt-2" style={{ fontSize: 14 }}>Agents that answer order questions and keep listings and stock in step, with you approving the actions.</p><span style={{ fontFamily: T.fm, fontSize: 12, color: T.small }}>AI agents →</span></a></li>
               <li><a className="svc-card" href="/commerceflo" style={{ display: 'block', height: '100%', color: 'inherit', textDecoration: 'none' }}><h3 style={{ fontSize: 18 }}>Commerceflo</h3><p className="mt-2" style={{ fontSize: 14 }}>Our own AI commerce operator for brands running DTC, B2B and marketplaces on one data model.</p><span style={{ fontFamily: T.fm, fontSize: 12, color: T.small }}>About Commerceflo →</span></a></li>
             </ul>
@@ -605,7 +626,9 @@ export default function EcommerceDevelopmentAUPage() {
               covers themes, Shopify Plus, apps and Shopify migrations in depth. If you run DTC, a trade portal and
               marketplaces together, read how <a href="/commerceflo" style={{ color: T.small, textDecoration: 'underline' }}>Commerceflo</a>,
               FactoryJet’s own AI commerce operator, handles all three on one data model. Our DTC client Belle Maison
-              runs on it.
+              runs on it. See every Shopify plan price and fee in AUD in our{' '}
+              <a href="/blog/shopify-cost-australia-2026" style={{ color: T.small, textDecoration: 'underline' }}>Shopify pricing Australia guide</a>, or compare
+              all the platforms in our <a href="/blog/best-ecommerce-platform-australia-2026" style={{ color: T.small, textDecoration: 'underline' }}>best ecommerce platform in Australia guide</a>.
             </p>
 
             {/* Which platform fits you (interactive chooser) */}
@@ -667,7 +690,7 @@ export default function EcommerceDevelopmentAUPage() {
             </div>
             <ul className="col-3 mt-10">
               <li className="svc-card"><h3>Product pages that sell</h3><p className="mt-4">Real photography from the angles people want, clear variants, stock status you can trust, delivery estimate by postcode, and the returns promise in plain words.</p></li>
-              <li className="svc-card"><h3>Category pages that rank</h3><p className="mt-4">Filters that work on a phone, clean URLs, and a short intro that answers what someone searched for. Category pages are where most ecommerce SEO is won.</p></li>
+              <li className="svc-card"><h3>Category pages that rank</h3><p className="mt-4">Filters that work on a phone, clean URLs, and a short intro that answers what someone searched for. Category pages are where most ecommerce SEO is won. See <a href="/au/ecommerce-seo" style={srcLink}>ecommerce SEO for category and product pages</a>.</p></li>
               <li className="svc-card"><h3>A checkout with nothing extra</h3><p className="mt-4">Guest checkout, address lookup, the total price shown up front, and payment options your customers actually use. Every extra field costs orders.</p></li>
             </ul>
           </div>
@@ -952,6 +975,12 @@ export default function EcommerceDevelopmentAUPage() {
                   <li><b>Monthly support plan.</b> Updates, security patches, small improvements and a named engineer who knows your store.</li>
                   <li><b>Growth sprints.</b> Planned blocks of work on new features, B2B, marketplaces or conversion, measured against numbers you already track.</li>
                 </ul>
+                <p className="mt-6" style={{ maxWidth: 580 }}>
+                  For WooCommerce and Shopify stores, our <a href="/au/website-maintenance" style={srcLink}>monthly website maintenance plan</a> covers
+                  tested updates, checkout testing and backups. Once orders grow,{' '}
+                  <a href="/au/ai-customer-service" style={srcLink}>AI customer service for online stores</a> can take the
+                  order-status and returns questions off your team.
+                </p>
                 <div className="mt-8">
                   <ModalCTAButton label="Talk to the Founder" region="au" modalVariant="default" btnVariant="primary-light" />
                 </div>
@@ -1108,7 +1137,7 @@ export default function EcommerceDevelopmentAUPage() {
                             <svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5L7 9L11 5" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" /></svg>
                           </span>
                         </summary>
-                        <div className="faq-ans"><p>{f.answer}</p></div>
+                        <div className="faq-ans"><p>{f.answer}</p>{f.links ? <p style={{ marginTop: 8 }}>{f.links.map((l) => <a key={l.href} href={l.href} style={{ ...srcLink, marginRight: 16 }}>{l.label}</a>)}</p> : null}</div>
                       </details></li>
                     ))}</ul>
                   </div>

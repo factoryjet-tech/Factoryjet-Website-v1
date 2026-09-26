@@ -24,9 +24,12 @@ const CITY_PAGES = ['brisbane', 'melbourne', 'adelaide', 'canberra'] as const
 
 // 2026-09-25: AU build from AU-MARKET-RESEARCH-2026-09-25.md (AI and ecommerce
 // searches that are winnable without a Maps pack).
+// 2026-09-26: AU wave 4 adds ecommerce SEO, AI customer service, website maintenance and
+// two industry pages (tradies, dental practices).
 const SERVICE_PAGES = [
-  'ai-agents', 'ai-consulting', 'ai-development', 'ai-receptionist', 'ai-seo',
-  'shopify-development', 'ecommerce-development',
+  'ai-agents', 'ai-consulting', 'ai-development', 'ai-receptionist', 'ai-customer-service', 'ai-seo',
+  'shopify-development', 'ecommerce-development', 'ecommerce-seo',
+  'website-maintenance', 'websites-for-tradies', 'dental-website-design',
 ] as const
 
 export default function sitemap(): MetadataRoute.Sitemap {

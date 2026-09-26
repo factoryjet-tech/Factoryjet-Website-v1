@@ -19,14 +19,19 @@ import type { SiteFooterColumn } from '@/components/v2/SiteFooter';
  */
 // 2026-09-25: repointed at the AU build (7 new /au pages + the /au hub).
 // Every link below is an AU page or a shared non-US page; keep it that way.
+// 2026-09-26: AU wave 4 adds 5 /au pages and a fifth column for the 6 Australian guides
+// (SiteFooter switches to lg:grid-cols-5 when it gets five columns).
 export const AU_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
   {
     heading: 'E-Commerce & Web',
     links: [
       { label: 'Ecommerce Development',    href: '/au/ecommerce-development' },
       { label: 'Shopify Development',      href: '/au/shopify-development' },
+      { label: 'Ecommerce SEO',            href: '/au/ecommerce-seo' },
       { label: 'Web Design Australia',     href: '/au#web-design' },
-      { label: 'Website Cost',             href: '/au#website-cost' },
+      { label: 'Websites for Tradies',     href: '/au/websites-for-tradies' },
+      { label: 'Dental Website Design',    href: '/au/dental-website-design' },
+      { label: 'Website Maintenance',      href: '/au/website-maintenance' },
     ],
   },
   {
@@ -36,8 +41,20 @@ export const AU_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
       { label: 'AI Development',           href: '/au/ai-development' },
       { label: 'AI Consulting',            href: '/au/ai-consulting' },
       { label: 'AI Receptionist',          href: '/au/ai-receptionist' },
+      { label: 'AI Customer Service',      href: '/au/ai-customer-service' },
       { label: 'AI SEO & GEO',             href: '/au/ai-seo' },
       { label: 'SEO Services',             href: '/au/seo' },
+    ],
+  },
+  {
+    heading: 'Australian Guides',
+    links: [
+      { label: 'Website Cost Guide',       href: '/blog/website-cost-australia-2026' },
+      { label: 'SEO Cost Guide',           href: '/blog/seo-cost-australia-2026' },
+      { label: 'AI Cost Guide',            href: '/blog/ai-cost-australia-2026' },
+      { label: 'Shopify Cost Guide',       href: '/blog/shopify-cost-australia-2026' },
+      { label: 'Ecommerce Platform Guide', href: '/blog/best-ecommerce-platform-australia-2026' },
+      { label: 'Compare AI Agencies',      href: '/blog/best-ai-agencies-australia-2026' },
     ],
   },
   {

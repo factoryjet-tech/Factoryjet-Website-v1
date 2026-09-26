@@ -1,0 +1,24 @@
+Images for /blog/seo-cost-australia-2026, generated 2026-09-26
+Model: openai:gpt-image@2.5-flare via Runware, 1536x1024 PNG, prompt-only (no negativePrompt).
+Resized/cropped with ImageMagick (-strip), converted with cwebp -q 82.
+Every image reviewed at full size, plus zoomed crops of every hand and every screen. Checks: five fingers, natural faces,
+no readable text or numbers, no logos or real brands, screen geometry (screens face the people using them), scene matches its section.
+All four passed on the first attempt; none regenerated.
+
+Style suffix for all prompts: "Bright high-key commercial photography in Australia, natural Australian daylight, clean white and very light grey surroundings, crisp sharp focus, airy calm confident mood, accurate natural skin tones, hands anatomically correct with exactly five natural fingers in relaxed poses, one warm orange object as the main colour accent. No logos, no brand names, no readable text or numbers anywhere, including on screens, paper, clothing and vehicles. Photorealistic, professional colour grading, no illustration."
+
+seo-cost-australia-2026-hero.webp (1400x933) and seo-cost-australia-2026-og.webp (1200x630, top-anchored crop), section: post hero (comparing two SEO proposals)
+Prompt: "A Melbourne homewares shop owner, a woman in her forties with shoulder-length brown hair in a cream knit jumper, sits at a timber table in the bright back office of her shop, comparing two printed proposal documents laid side by side on the table in front of her, one hand resting on each document, thoughtful expression. The pages show only faint grey blocks and lines, no readable words and no numbers. A closed laptop, a ceramic mug and one orange folder on the table. Shelves of neutral ceramics softly visible behind her, sunlight through a large window." + style suffix
+Review: Both hands zoom-checked, five fingers each, resting naturally on the pages. Pages carry only grey bars, no words or digits. Closed laptop has no logo. Ceramics unbranded. PASS.
+
+seo-cost-australia-2026-review.webp (1200x800), section: "What each monthly SEO budget buys"
+Prompt: "Over-the-shoulder camera view from behind two people seated side by side at a desk in a bright Sydney office: an SEO specialist, a man in his thirties with short dark hair in a light blue shirt, and a physiotherapy clinic owner, a woman in her fifties with grey hair in a navy top. A laptop on the desk faces both of them, and the camera sees its screen from behind their shoulders: the screen shows a simple rising line chart made of one grey line and one orange line on a white background, no words and no numbers, no axis labels. He points at the chart with an open hand; she leans in, interested. A potted plant and one orange notebook on the desk, large windows with city light." + style suffix
+Review: Screen faces both people, camera behind their shoulders. Chart has no labels or numbers. His open hand and her hand under her chin zoom-checked, correct. Laptop has no logo. Sydney Harbour view (landmarks, no signage). PASS.
+
+seo-cost-australia-2026-tradie.webp (1200x800), section: "Local SEO cost for tradies and single-location businesses"
+Prompt: "A Perth plumber in his thirties with a short beard wearing a navy work shirt stands beside his unmarked white work van parked in the sunny driveway of a suburban brick home with a eucalyptus tree, holding a smartphone in one hand at a natural size and looking at it, smiling, the other hand resting on the open van door. The camera is beside and slightly behind his shoulder so the phone screen faces him, showing only a simple map with one orange pin and grey rectangles, no words and no numbers. One orange toolbox on the van floor. Clear blue sky." + style suffix
+Review: Phone faces him, camera over his shoulder; map shows only an orange pin and grey shapes, no street names. Phone hand and door hand zoom-checked, five fingers. Van unmarked, no number plate visible. PASS (orange toolbox not rendered; orange map pin is the accent).
+
+seo-cost-australia-2026-store.webp (1200x800), section: "Ecommerce SEO cost"
+Prompt: "A small online store warehouse in Brisbane: a woman in her thirties with curly dark hair in a grey t-shirt packs a parcel at a clean white packing bench, taping a plain brown cardboard box, while a colleague, a man in his twenties, scans a shelf of neatly stacked plain boxes behind her. Rows of light timber shelves with unlabelled products, bright skylights, one orange tape dispenser on the bench. No labels, no printing on any box." + style suffix
+Review: Tape-dispenser hand and box hand zoom-checked, correct. Colleague's scanner hand correct. All boxes plain, no printing. Background laptop screen faces away and shows nothing legible. PASS.

@@ -1,0 +1,24 @@
+Images for /blog/ai-cost-australia-2026, generated 2026-09-26
+Model: openai:gpt-image@2.5-flare via Runware, 1536x1024 PNG, prompt-only (no negativePrompt).
+Resized/cropped with ImageMagick (-strip), converted with cwebp -q 82.
+Every image reviewed at full size, plus zoomed crops of every hand, screen and device. Checks: five fingers, natural faces,
+no readable text or numbers, no logos or real brands, screen geometry (screens face the people using them), scene matches its section.
+All four passed on the first attempt; none regenerated.
+
+Style suffix for all prompts: "Bright high-key commercial photography in Australia, natural Australian daylight, clean white and very light grey surroundings, crisp sharp focus, airy calm confident mood, accurate natural skin tones, hands anatomically correct with exactly five natural fingers in relaxed poses, one warm orange object as the main colour accent. No logos, no brand names, no readable text or numbers anywhere, including on screens, paper, clothing and vehicles. Photorealistic, professional colour grading, no illustration."
+
+ai-cost-australia-2026-hero.webp (1400x933) and ai-cost-australia-2026-og.webp (1200x630, near-top crop), section: post hero
+Prompt: "Over-the-shoulder camera view from behind two people seated side by side at a pale timber table in a bright Brisbane office: a business owner, a man in his fifties with short grey hair in a white linen shirt, and an operations manager, a woman in her thirties with dark hair tied back in a sage green top. A laptop on the table faces both of them and the camera sees its screen from behind their shoulders: the screen shows three simple rounded cards in grey and one in orange, no words and no numbers. Beside the laptop lies a printed page covered only in faint grey bars, a pen and a calculator with a blank display. She gestures toward the screen with an open hand, he listens thoughtfully. Large windows with soft city light." + style suffix
+Review: Laptop faces both people, camera behind them. Screen shows only grey and orange cards. Her open hand and his hand at chin zoom-checked, five fingers, natural. Calculator display blank, keys unlabelled. Paper shows grey bars only. Laptop has no logo. Brisbane River and Story Bridge view, no signage. PASS.
+
+ai-cost-australia-2026-receptionist.webp (1200x800), section: "AI receptionist and AI voice agent cost"
+Prompt: "A Melbourne physiotherapy clinic front desk in the morning. A clinic owner, a woman in her forties with curly auburn hair in a navy polo shirt, stands behind the white reception counter looking down at a tablet she holds in both hands, smiling slightly. The camera is beside and slightly behind her shoulder so the tablet screen faces her, showing a simple list of grey rounded bars with one orange bar, no words and no numbers. A cordless desk phone sits on the counter. A potted fiddle leaf fig and one orange cushion on a waiting-room chair behind. Sunlight through tall windows." + style suffix
+Review: Tablet faces her, camera over her shoulder. Both hands zoom-checked, five fingers each. Cordless phone screen blank, keypad unlabelled (zoomed). Framed seascape print, no text. No logos. PASS.
+
+ai-cost-australia-2026-build.webp (1200x800), section: "How much does it cost to build a custom AI agent in Australia?"
+Prompt: "Three colleagues in a bright Sydney office standing at a large whiteboard: one man in his thirties with a short beard in a grey t-shirt draws connected boxes and arrows with an orange marker, a woman in her twenties with straight black hair in a white shirt and an older man with glasses in a blue shirt watch and smile. The diagram has only boxes, circles and arrows, no writing at all. A laptop on a nearby table is closed. Harbour light through large windows." + style suffix
+Review: Whiteboard carries only boxes, circles and arrows (zoomed). Marker hand and resting hand zoom-checked, correct. Closed laptop, no logo. Opera House and Harbour Bridge in background (landmarks, no signage). No faces resemble identifiable real people. PASS.
+
+ai-cost-australia-2026-running.webp (1200x800), section: "What does an AI agent cost per month to run?"
+Prompt: "An online homewares store owner, a man in his thirties with short brown hair and a light denim shirt, sits alone at a desk in a bright Adelaide warehouse office with shelves of neatly stacked plain cardboard boxes behind him. Over-the-shoulder camera view from behind him: the monitor in front of him faces him and shows a simple bar chart of grey bars with one orange bar on white, no words, no numbers, no axis labels. His right hand rests on a mouse, his left holds a ceramic mug. One orange box on the shelf." + style suffix
+Review: Monitor faces him, camera behind. Chart has no labels or numbers. Mug hand and mouse hand checked, five fingers. Boxes unbranded. PASS.

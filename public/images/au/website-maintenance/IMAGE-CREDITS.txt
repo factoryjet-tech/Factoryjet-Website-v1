@@ -1,0 +1,27 @@
+Images for /au/website-maintenance, generated 2026-09-26
+Model: openai:gpt-image@2.5-flare via Runware, 1536x1024 PNG, prompt-only (no negativePrompt). Resized with ImageMagick (-strip), cwebp -q 82.
+Hero 1400x933; og 1200x630 centre crop of the hero; in-body images 1200x800.
+Every image reviewed at full size, plus zoomed crops of hands, screens and wall art. Checks: five fingers, faces, no readable text or numbers,
+no logos or real brands, screen geometry (screens face the people using them; camera over the shoulder), scene matches its section,
+and no scene repeated from another AU page.
+Style suffix for all prompts: "Bright high-key commercial photography in Australia, natural Australian daylight, clean white and very light grey surroundings, crisp sharp focus, airy calm confident mood, accurate natural skin tones, hands anatomically correct with exactly five natural fingers in relaxed poses, one warm orange object as the main colour accent. No logos, no brand names, no readable text or numbers anywhere, including on screens, paper, clothing and vehicles. Photorealistic, professional colour grading, no illustration."
+
+website-maintenance-hero.webp + website-maintenance-og.webp, section: hero
+Prompt: "Over-the-shoulder camera view from behind and slightly to the side of a homewares shop owner, a woman in her late thirties with curly dark hair in a linen apron, standing at a timber packing bench in the back room of her small Sydney shop. She glances at an open laptop on the bench whose screen faces her and the camera from behind her shoulder, showing a simple online shop layout made of soft photo tiles and grey bars with one small green tick badge, no words and no numbers. Her hands are wrapping a ceramic vase in paper. Shelves of neatly stacked ceramics and folded linen behind, sunny window light, one orange ceramic jug on the shelf." + style suffix
+Review: Laptop screen faces her, camera over her shoulder; screen shows product photo tiles, grey bars and a green tick only, no words. Both hands on the tissue paper, five fingers. Harbour Bridge through the window (landmark, not a brand). A tiny unreadable model mark under the laptop screen was blurred in post. PASS.
+
+website-maintenance-staging.webp, section: "How we update your website without breaking it"
+Prompt: two developers in a bright Melbourne studio, over-the-shoulder, one wide monitor facing them showing two versions of the same page side by side in blocks and grey lines, no words and no numbers; she points, he holds the mouse; orange mug.
+Review: Monitor faces both people; wireframe blocks and grey lines only. Pointing hand and mouse hand correct. City poster on the wall has no text. PASS.
+
+website-maintenance-takeover.webp, section: "Taking over a website another agency or freelancer built"
+Prompt: Brisbane physiotherapy clinic owner (fifties, navy polo) slides a closed orange folder across a round table to a web engineer (thirties, light blue shirt); closed laptop, two glasses of water; treatment room through an open door; sunny.
+Review: No screen visible (laptop closed). Hands correct, five fingers. Anatomy poster in the background: heading is an out-of-focus blur, not readable (zoom-checked). Story Bridge through the window. PASS.
+
+website-maintenance-report.webp, section: care plan fit check (monthly report)
+Prompt: over-the-shoulder view of an Adelaide tradesman (navy and orange hi-vis shirt) sitting in the side door of a clean white unmarked van, holding a tablet whose screen faces him showing green and grey bars and three green tick circles, no words and no numbers; jacaranda tree and brick houses.
+Review: Tablet faces him, camera over his shoulder. Both hands holding tablet correct. Van unmarked. Tool cases carry no brand text. PASS.
+
+website-maintenance-hacked.webp, section: "What happens if your website gets hacked"
+Prompt: Perth accounting office, web engineer (late twenties, glasses) beside a practice manager (fifties, short silver hair, teal blouse), over-the-shoulder from behind both, monitor facing them shows large green check circles and grey rounded rectangles, no words and no numbers; she has a hand on her chest in relief; orange notebook.
+Review: Monitor faces both; ticks and grey bars only. His open gesturing hand and her hand on chest correct. Perth skyline through the window. PASS.

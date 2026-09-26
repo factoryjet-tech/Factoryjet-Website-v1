@@ -1,41 +1,70 @@
 import React from 'react';
 import type { BlogPost } from '../data.types';
 
+/*
+ * Best WordPress development companies in Australia (2026). Rewritten 2026-09-26 (AU Wave 4 fact pass).
+ *
+ * WHAT CHANGED AND WHY: the April 2026 version named no WordPress companies at all, quoted FactoryJet prices in
+ * pounds sterling and US dollars, positioned us as a cheaper offshore option, promised "Lighthouse 92+
+ * guaranteed" as a "contractual performance SLA", "2-4 week" delivery and "98% client satisfaction", claimed
+ * "50+ industries", and described the Impulse Branding work as a WordPress migration (the case study says a
+ * website build plus ongoing SEO and AI search). All of that is gone. Do not reintroduce it.
+ *
+ * AGENCY LIST: each company's own website was opened on 26 September 2026 to confirm an Australian address or base
+ * and that it offers WordPress work.
+ *
+ * PRICE RULE: every dollar figure is a third-party Australian market range, opened and read on 26 September 2026:
+ *   - WolfIQ, wolfiq.com.au/how-much-does-a-website-cost-in-australia (2026 guide, checked Sep 2026): professional
+ *     WordPress $3,000 to $7,000 for a basic brochure site and $5,000 to $15,000 for a comprehensive business site;
+ *     professional maintenance $100 to $2,000 a month; hosting alone $40 to $200 a month.
+ *   - Keen to Design, keentodesign.com.au/web-design-cost/ (updated 12 Apr 2026): custom WordPress by a freelancer
+ *     $2,500 to $6,000, mid-range $7,000 to $15,000, agency $5,000 to $20,000+; annual maintenance $500 to $3,000.
+ * None of these is a FactoryJet price. This page must never carry a FactoryJet price.
+ *
+ * CASE FACTS: Impulse Branding and Formative Concepts facts come from src/data/case-studies/index.ts.
+ *
+ * FAQ schema: /blog/[slug]/page.tsx builds FAQPage JSON-LD by mapping post.faqs, the same array the page
+ * renders. Do not add a second FAQ list anywhere.
+ */
+
+const ext = { target: '_blank', rel: 'noopener noreferrer' } as const;
+const linkCls = 'text-blue-600 underline hover:text-blue-800 transition-colors';
+
 export const post: BlogPost = {
   id: '119',
   slug: "best-wordpress-development-companies-australia-2026",
-  title: "Best WordPress Development Companies for Small Business in Australia 2026: Enterprise Features at SMB Pricing",
-  excerpt: "Australian small businesses need WordPress developers who deliver enterprise-grade features without enterprise pricing. This guide compares top WordPress development companies serving Australian SMBs in 2026, focusing on capabilities, pricing transparency, and real project outcomes.",
+  title: "Best WordPress Development Companies in Australia for Small Business (2026)",
+  excerpt: "How to choose a WordPress developer as an Australian small business in 2026. Six companies whose Australian bases and WordPress services we checked on their own websites, sourced AUD price ranges, the features worth paying for, and what to put in the contract.",
   category: "Web Design & Strategy",
   author: 'Bhavesh Barot',
-  date: "Apr 30, 2026",
-  readTime: '14 min read',
+  date: "Sep 26, 2026",
+  readTime: '12 min read',
   imageUrl: "/blog-images/best-wordpress-development-companies-australia-2026-hero.webp",
   meta: {
     title: "Best WordPress Developers for Australian Small Business 2026",
-    description: "Compare Australia's top WordPress developers for SMBs, pricing, portfolio quality, turnaround time, and which agency gives you the most value under $5K AUD.",
+    description: "Six WordPress developers for Australian small businesses, checked on their own sites, with sourced AUD price ranges and a checklist for choosing one.",
   },
   keyTakeaways: [
-    "Australian SMBs typically pay AUD $4,000–$15,000 for custom WordPress sites, but offshore specialists like FactoryJet deliver comparable quality at 50–60% lower cost (£1,500–£8,000 / ~AUD $2,900–$15,500).",
-    "Enterprise features like WooCommerce wholesale pricing, multi-currency support, and CRM integration are now standard in SMB WordPress builds when working with experienced developers.",
-    "Lighthouse performance scores above 90/100 directly impact Google rankings and conversion rates; demand performance guarantees in your WordPress development contract.",
-    "Australian businesses benefit from working with developers experienced in ACCC compliance, GST-ready e-commerce, and Australia Post shipping integrations for WooCommerce.",
-    "Real client references with verifiable contact details and live project URLs are the strongest indicator of WordPress development quality; avoid agencies that only show mockups.",
-    "Ongoing maintenance plans starting from AUD $150–$300/month prevent security breaches and keep WordPress sites compliant with Australian privacy regulations.",
+    "Australian price guides put a professional WordPress site at about $3,000 to $7,000 for a basic brochure site and $5,000 to $15,000 for a fuller business site (WolfIQ, 2026 guide). These are typical Australian market ranges, not FactoryJet prices.",
+    "Keen to Design (April 2026) puts custom WordPress at $2,500 to $6,000 from a freelancer, $7,000 to $15,000 mid-range, and $5,000 to $20,000 and up from an agency.",
+    "Features that used to be enterprise-only, such as wholesale pricing in WooCommerce, CRM sync and Xero or MYOB links, are now normal in small business builds.",
+    "Put speed targets in writing: 90 or more on mobile in PageSpeed Insights and passing Core Web Vitals, then ask who keeps them there after launch.",
+    "Ask for live project links and a named reference you can phone. Screenshots and mockups prove nothing.",
+    "Budget for upkeep. Keen to Design puts annual maintenance at $500 to $3,000, and an unmaintained WordPress site is an easy target.",
   ],
   faqs: [
-    { q: "What should Australian small businesses expect to pay for WordPress development in 2026?", a: "Australian SMBs typically pay AUD $4,000–$15,000 for custom WordPress sites from local agencies. International specialists like FactoryJet offer comparable enterprise-grade builds at £1,500–£8,000 (~AUD $2,900–$15,500), delivering 50–60% cost savings without compromising quality. Pricing depends on page count, custom functionality, e-commerce requirements, and integrations. Always request itemised quotes and performance guarantees." },
-    { q: "Do offshore WordPress developers understand Australian business requirements?", a: "Experienced offshore developers serving Australian clients understand ACCC compliance, GST-ready WooCommerce configuration, Australia Post shipping integration, and Australian privacy regulations. FactoryJet has delivered WordPress projects for businesses across 50+ industries globally, including Australian e-commerce and service businesses. Verify Australian client references and ask specific questions about local compliance during discovery calls." },
-    { q: "What enterprise WordPress features do small businesses actually need?", a: "Australian SMBs benefit most from WooCommerce wholesale pricing tiers, multi-currency support for international sales, CRM integration (HubSpot, Salesforce), automated GST calculation, Australia Post shipping, inventory management, and customer account portals. These features were once enterprise-only but are now standard in quality SMB WordPress builds. Prioritise features that directly reduce manual work or increase conversion rates." },
-    { q: "How long does custom WordPress development take for Australian businesses?", a: "Standard WordPress sites with 10–20 pages typically take 3–6 weeks from brief to launch. E-commerce builds with WooCommerce, payment gateway integration, and custom functionality require 4–8 weeks. FactoryJet delivers most projects in 2–4 weeks through AI-accelerated workflows and dedicated project teams. Timelines depend on content readiness, revision rounds, and third-party integration complexity." },
-    { q: "What Lighthouse performance score should Australian businesses demand?", a: "Demand minimum Lighthouse scores of 90/100 for Performance and 92/100 for SEO. FactoryJet guarantees 92+ Performance on every build. Poor performance directly impacts Google rankings, mobile conversions, and user experience. Australian businesses with slow WordPress sites lose customers to faster competitors. Request Lighthouse reports for existing client sites during vendor evaluation." },
-    { q: "Should Australian SMBs choose WordPress over Shopify or Wix?", a: "WordPress offers superior flexibility, ownership, and cost efficiency for Australian businesses planning long-term growth. Unlike Shopify's monthly fees or Wix's platform lock-in, WordPress gives you full code ownership and unlimited customisation. Choose WordPress for content-heavy sites, complex e-commerce, or businesses requiring custom integrations. Choose Shopify for simple product catalogues with minimal customisation needs." },
-    { q: "What ongoing WordPress maintenance do Australian businesses need?", a: "Essential maintenance includes weekly security updates, daily backups, uptime monitoring, malware scanning, and Australian privacy regulation compliance. FactoryJet offers maintenance from £99/month (~AUD $190). Neglected WordPress sites face security breaches, data loss, and ACCC compliance issues. Budget 10–15% of initial development cost annually for proper maintenance and hosting." },
-    { q: "How do Australian businesses verify WordPress developer quality?", a: "Request live project URLs with verifiable client contact details. Check Lighthouse performance scores on real sites. Ask for specific examples of Australian compliance features implemented. Review case studies with measurable outcomes (traffic growth, conversion rates, load times). FactoryJet doesn't yet have a published Australian case study to point to; our published references (Impulse Branding, Formative Concepts) are international, with live URLs and contact details available on request, and follow the same build and SEO approach we'd apply to an Australian project." },
-    { q: "Can WordPress handle enterprise-level e-commerce for Australian SMBs?", a: "Yes. WooCommerce powers 28% of all online stores globally and handles businesses processing millions in annual revenue, with the wholesale portals, subscription products, multi-currency sales, and complex shipping rules an enterprise SMB needs. FactoryJet has built exactly this kind of platform, wholesale and enterprise commerce on WordPress + WooCommerce, serving retail and wholesale customers side by side, and the same approach applies whether the business is in India, Australia, or anywhere else." },
-    { q: "What payment gateways work best for Australian WordPress e-commerce?", a: "Stripe and PayPal are standard for Australian WooCommerce sites, offering competitive fees (1.75% + $0.30 per transaction for Stripe) and easy integration. Add Afterpay or Zip for buy-now-pay-later options that increase average order values by 20–40%. Ensure your WordPress developer configures automatic GST calculation and provides transaction reporting compatible with Xero or MYOB for Australian tax compliance." },
-    { q: "Do Australian businesses need separate mobile WordPress sites in 2026?", a: "No. Responsive design is standard in 2026 WordPress development. Your site automatically adapts to mobile, tablet, and desktop screens using a single codebase. Google's mobile-first indexing means your mobile experience directly determines search rankings. Demand mobile Lighthouse scores above 85/100 and test checkout flows on actual mobile devices before launch." },
-    { q: "How do Australian SMBs integrate WordPress with existing business systems?", a: "Quality WordPress developers integrate with Xero, MYOB, HubSpot, Salesforce, Mailchimp, and Australia Post APIs. FactoryJet implements CRM/ERP integrations that sync customer data, automate invoicing, and eliminate manual data entry. Integration complexity varies from simple Zapier connections (1–2 days) to custom API development (1–2 weeks). Discuss integration requirements during initial discovery to avoid scope creep." },
+    { q: "What should Australian small businesses expect to pay for WordPress development in 2026?", a: "WolfIQ's 2026 guide puts professional WordPress at about $3,000 to $7,000 for a basic brochure site and $5,000 to $15,000 for a fuller business site. Keen to Design (April 2026) gives $2,500 to $6,000 for a freelancer and $5,000 to $20,000 and up for an agency. These are typical Australian market ranges, not FactoryJet prices. Page count, custom features, WooCommerce and integrations move the number most." },
+    { q: "Can a WordPress developer without an Australian office handle Australian business requirements?", a: "Yes, if they have done it before and can show you. Ask about Australian Consumer Law wording on product and returns pages, GST in WooCommerce, Australia Post shipping, Xero or MYOB links and the Australian Privacy Principles. FactoryJet has no Australian office. Our senior engineers work remotely in Australian business hours, set these up as standard, and stay on to support the site after launch." },
+    { q: "What enterprise WordPress features do small businesses actually need?", a: "The ones that save real time or win real sales: wholesale pricing tiers in WooCommerce, CRM integration (HubSpot or Salesforce), automatic GST, Australia Post shipping, stock management and customer account pages for reordering. These used to be enterprise-only and are now normal in good small business builds. Skip features you cannot name a use for, because each one adds upkeep." },
+    { q: "How long does custom WordPress development take for Australian businesses?", a: "A small site of up to 5 pages can be delivered in 7 days when content is ready. Larger custom sites usually take several weeks. WooCommerce stores with payment, shipping and custom features take longer again, in line with 3 to 5 weeks for a standard store and 5 to 8 weeks with B2B features or a migration. Content readiness, revision rounds and third-party integrations set the pace." },
+    { q: "What Lighthouse performance score should Australian businesses demand?", a: "Ask for 90 or more on mobile for Performance in PageSpeed Insights, plus passing Core Web Vitals in real-user data. Poor performance hurts rankings and mobile sales. Put the target in the scope, ask how the developer will keep it once you add plugins and content, and test live client sites yourself during vendor evaluation rather than trusting a screenshot." },
+    { q: "Should Australian SMBs choose WordPress over Shopify or Wix?", a: "Choose WordPress for content-heavy sites, service businesses that care about search, or stores with unusual needs, because you own the code and can change anything. Choose Shopify for product catalogues where you want payments, hosting and security handled for you. Choose Wix or Squarespace only for a simple site you will run yourself and are happy to keep small." },
+    { q: "What ongoing WordPress maintenance do Australian businesses need?", a: "Regular core, theme and plugin updates, daily backups, uptime monitoring, malware scanning and a check of privacy and consent settings when rules change. Keen to Design puts annual maintenance at $500 to $3,000 (April 2026), and WolfIQ puts professional maintenance at $100 to $2,000 a month depending on scope. Neglected WordPress sites are the ones that get hacked." },
+    { q: "How do Australian businesses verify WordPress developer quality?", a: "Ask for live project links and a named client you can phone. Test those sites in PageSpeed Insights. Ask for examples of Australian compliance features they have built, and case studies that name the client. FactoryJet does not yet have a published Australian case study; our published references, such as Impulse Branding and Formative Concepts, are international, with live sites you can check." },
+    { q: "Can WordPress handle enterprise-level e-commerce for Australian SMBs?", a: "Yes, with WooCommerce and the right hosting. It handles wholesale pricing, subscriptions, multiple currencies and complex shipping rules for businesses selling to retail and trade customers at once. The trade-off is upkeep: more plugins mean more updates and more places for speed and security to slip. For very large catalogues or heavy B2B, compare it honestly with Shopify Plus or a custom build." },
+    { q: "What payment gateways work best for Australian WordPress e-commerce?", a: "Stripe and PayPal are the usual choices for Australian WooCommerce stores, with Afterpay or Zip for buy now, pay later. Check each provider's current Australian fees at your real order value before you choose. Make sure your developer sets up automatic GST and exports transactions cleanly to Xero or MYOB, so your bookkeeper is not fixing things by hand every quarter." },
+    { q: "Do Australian businesses need separate mobile WordPress sites in 2026?", a: "No. A responsive site adapts to phones, tablets and desktops from one codebase, and that is standard. Google ranks your site on its mobile version, so the mobile experience decides your rankings. Test checkout and forms on real phones, including a mid-range Android on mobile data, before launch." },
+    { q: "How do Australian SMBs integrate WordPress with existing business systems?", a: "Good WordPress developers connect sites to Xero, MYOB, HubSpot, Salesforce, Mailchimp and Australia Post. Simple links can run through a tool like Zapier; deeper ones need custom API work. Integrations are where scope creep hides, so list every system you need connected during discovery, and ask who fixes the link when one of those systems changes its API." },
   ],
   content: (
     <>
@@ -43,7 +72,7 @@ export const post: BlogPost = {
         <h2 className="text-lg font-bold mb-3">Table of Content: In This Article</h2>
         <ul className="list-disc pl-5 space-y-1 text-blue-700">
           <li>What Australian Small Businesses Need from WordPress Developers in 2026</li>
-          <li>Comparing WordPress Development Pricing: Australia vs International Specialists</li>
+          <li>WordPress Development Companies in Australia and What They Cost</li>
           <li>Enterprise WordPress Features Now Standard for SMBs</li>
           <li>How to Evaluate WordPress Developer Quality: Australian Business Checklist</li>
           <li>WordPress Performance Standards Australian Businesses Should Demand</li>
@@ -53,70 +82,111 @@ export const post: BlogPost = {
       </div>
 
       <p className="text-lg leading-relaxed mb-6">
-        The best WordPress development companies for Australian small businesses in 2026 blend technical excellence with transparent pricing and fast delivery. Local Australian agencies typically charge AUD $4,000–$15,000 for custom builds, while international specialists like FactoryJet deliver comparable quality at 50–60% lower cost (£1,500–£8,000 / ~AUD $2,900–$15,500), with 2–4 week turnaround times, Lighthouse 92+ performance standards, and proven experience across 50+ industries.
+        The best WordPress developer for an Australian small business is one that builds Australian rules into the site from day one, puts speed targets in writing, shows you live sites you can test, and is still around to update the site next year. Australian price guides put a professional WordPress site at roughly $3,000 to $15,000 in 2026, depending on size. Below are six companies whose Australian base and WordPress services we checked on their own websites, including us, and the checklist to choose between them.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What Australian Small Businesses Need from WordPress Developers in 2026</h2>
-      <p className="mb-4">Australian small businesses need WordPress developers who understand that a generic international build won't satisfy local regulatory and operational requirements. The difference between a functional website and a compliant, conversion-optimised platform comes down to Australia-specific capabilities that most offshore developers overlook. ACCC compliance sits at the foundation of any legitimate Australian e-commerce operation. WordPress developers must configure clear pricing displays, transparent refund policies, and Australian Consumer Law guarantees directly into product pages and checkout flows. A WooCommerce store that doesn't automatically surface these legal requirements exposes businesses to regulatory penalties and customer disputes that damage both revenue and reputation. GST configuration separates amateur builds from professional implementations. Australian SMBs require WooCommerce stores that calculate GST automatically based on customer location, integrate seamlessly with Xero or MYOB for BAS reporting, and maintain audit trails that satisfy ATO requirements. Manual tax calculation creates compliance gaps that cost businesses thousands in accounting fees and potential penalties. Australia Post integration delivers the shipping experience Australian customers expect. Real-time rate calculation, domestic and international tracking, and automated label generation through eParcel and MyPost Business accounts turn shipping from an operational headache into a competitive advantage. WordPress developers who hardcode shipping rates or rely on manual processes create friction that drives customers to competitors with smoother checkout experiences. Mobile performance determines whether Australian visitors convert or bounce. With Google's Core Web Vitals now ranking factors, WordPress sites must achieve Lighthouse Performance scores above 90 on mobile devices. Developers who deliver bloated themes with poor mobile optimisation waste the traffic businesses pay to acquire. Security hardening protects both business operations and customer data. WordPress installations require protection against common vulnerabilities, regular security updates, and compliance with Australian Privacy Principles for customer data handling. A breach doesn't just compromise data, it destroys the trust that small businesses spend years building.</p>
+      <p className="mb-4">A generic WordPress build will look fine and still miss what an Australian business needs. Australian Consumer Law comes first for anyone selling online: clear prices, refund and returns wording that matches the consumer guarantees, and warranty information where it applies, all visible before someone pays. GST is next. WooCommerce stores should show GST-inclusive prices to consumers, produce proper tax invoices once you are registered, and pass clean data to Xero or MYOB for your BAS. Shipping should use real Australia Post rates, through eParcel or MyPost Business, with tracking and labels handled in the store rather than by hand. Mobile performance decides whether visitors stay: Core Web Vitals are part of how Google ranks pages, and heavy themes and plugin piles are the usual reason WordPress sites are slow. Security matters because WordPress is the most common target on the web. That means hardening, regular updates and care with customer data under the Australian Privacy Principles. A developer who treats any of these as extras will leave you paying to fix them later.</p>
 
 
-      <h2 className="text-2xl font-bold mt-8 mb-4">Comparing WordPress Development Pricing: Australia vs International Specialists</h2>
-      <p className="mb-4">Australian small businesses face a stark pricing reality: local WordPress agencies typically charge AUD $4,000–$15,000 for custom builds, reflecting Sydney and Melbourne's high operational costs, commercial rent, and local salary expectations. International specialists working with Australian clients quote one fixed price up front: FactoryJet's £1,500–£8,000 range translates to approximately AUD $2,900–$15,500, without sacrificing technical standards or delivery timelines. The pricing gap stems from structural differences rather than quality compromises. Australian agencies carry overhead costs tied to CBD office space, local employment regulations, and domestic supplier relationships. International teams working remotely eliminate these fixed costs while maintaining identical technical capabilities: Next.js 15 development, Lighthouse Performance scores above 92, and WordPress builds meeting WCAG 2.1 AA accessibility standards. Pricing transparency separates professional developers from agencies obscuring costs in vague proposals. Itemised quotes should break down design hours, development sprints, plugin licensing, and integration work separately. When evaluating proposals, Australian businesses should request specific deliverables, number of custom post types, e-commerce product limits, API integrations included, rather than accepting bundled "packages" that hide scope limitations. Total cost of ownership extends beyond initial build fees. Ongoing maintenance typically runs AUD $150–$300 monthly for security patches, plugin updates, and performance monitoring. Hosting costs add another AUD $20–$200 monthly depending on traffic volume and server specifications. Future feature additions, adding membership functionality, integrating Xero accounting, or building custom calculators, should be quoted separately with clear hourly rates or fixed-price estimates. Australian businesses working with international developers gain cost advantages while retaining quality benchmarks. The 2–4 week delivery standard remains consistent regardless of developer location, and communication via Slack, email, and scheduled video calls eliminates timezone friction for most project types.</p>
-      <p className="mb-4">➡ Learn more: <a href="/pricing" className="text-blue-600 underline hover:text-blue-800 transition-colors">Pricing</a></p>
+      <h2 className="text-2xl font-bold mt-8 mb-4">WordPress Development Companies in Australia and What They Cost</h2>
+      <p className="mb-4">The six companies below all offer WordPress work to Australian small businesses. We opened each company's own website on 26 September 2026 and recorded where it is based and what it says it does. We have not ranked them, because the right choice depends on your budget, how much custom work you need, and how much support you want after launch. For price, use the sourced ranges in the second table rather than any single quote, including ours. Both price guides are Australian and were read on the same day.</p>
+      <p className="mb-4">➡ Learn more: <a href="/blog/website-cost-australia-2026" className={linkCls}>Website cost in Australia (2026 guide)</a></p>
 
       <div className="overflow-x-auto mb-8">
         <table className="min-w-full border-collapse border border-gray-300">
+          <caption className="caption-bottom text-left text-xs text-gray-500 pt-2">Based on each company's own website, checked 26 September 2026. Listed in no particular order.</caption>
           <thead className="bg-gray-800 text-white">
             <tr>
-              <th className="p-3 border">Service Component</th>
-              <th className="p-3 border">Australian Local Agency</th>
-              <th className="p-3 border">International Specialist (FactoryJet)</th>
-              <th className="p-3 border">Key Difference</th>
+              <th className="p-3 border">Company</th>
+              <th className="p-3 border">Based in</th>
+              <th className="p-3 border">WordPress work (their own description)</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td className="border p-3">10-page business site</td>
-              <td className="border p-3">AUD $4,000–$8,000</td>
-              <td className="border p-3">£1,500–£3,000 (~AUD $2,900–$5,800)</td>
-              <td className="border p-3">50–60% cost savings, same quality</td>
+              <td className="border p-3"><a href="https://keentodesign.com.au/" className={linkCls} {...ext}>Keen to Design</a></td>
+              <td className="border p-3">Sydney (Pitt Street); since 2014</td>
+              <td className="border p-3">WordPress-first web design, ecommerce, custom development, SEO and maintenance</td>
             </tr>
             <tr>
-              <td className="border p-3">E-commerce (WooCommerce)</td>
-              <td className="border p-3">AUD $8,000–$15,000</td>
-              <td className="border p-3">£2,000–£8,000 (~AUD $3,900–$15,500)</td>
-              <td className="border p-3">Enterprise features at SMB pricing</td>
+              <td className="border p-3"><a href="https://www.wolfiq.com.au/" className={linkCls} {...ext}>WolfIQ</a></td>
+              <td className="border p-3">Sydney; since 2014</td>
+              <td className="border p-3">WordPress design, development and support, custom web apps, SEO and care plans with hosting</td>
             </tr>
             <tr>
-              <td className="border p-3">Delivery timeline</td>
-              <td className="border p-3">6–12 weeks</td>
-              <td className="border p-3">2–4 weeks</td>
-              <td className="border p-3">AI-accelerated workflows</td>
+              <td className="border p-3"><a href="https://jezweb.com/" className={linkCls} {...ext}>Jezweb</a></td>
+              <td className="border p-3">Newcastle, NSW (Wallsend); since 2002</td>
+              <td className="border p-3">Web design and development, WordPress hosting and maintenance, ecommerce and SEO</td>
             </tr>
             <tr>
-              <td className="border p-3">Performance guarantee</td>
-              <td className="border p-3">Rarely specified</td>
-              <td className="border p-3">Lighthouse 92+ guaranteed</td>
-              <td className="border p-3">Contractual performance SLA</td>
+              <td className="border p-3"><a href="https://23digital.com.au/" className={linkCls} {...ext}>23 Digital</a></td>
+              <td className="border p-3">Melbourne, Sydney and Brisbane</td>
+              <td className="border p-3">Web design and ecommerce on WordPress, WooCommerce and other platforms, plus SEO and paid media</td>
             </tr>
             <tr>
-              <td className="border p-3">Monthly maintenance</td>
-              <td className="border p-3">AUD $300–$600</td>
-              <td className="border p-3">£99+ (~AUD $190+)</td>
-              <td className="border p-3">Includes security, backups, monitoring</td>
+              <td className="border p-3"><a href="https://www.digitalnomadshq.com.au/" className={linkCls} {...ext}>Digital Nomads HQ</a></td>
+              <td className="border p-3">Sunshine Coast (Mooloolaba)</td>
+              <td className="border p-3">Web design and development on WordPress, WooCommerce and Shopify, with SEO and ads</td>
             </tr>
             <tr className="bg-gray-100 font-bold">
-              <td className="border p-3">Client references</td>
-              <td className="border p-3">Often generic</td>
-              <td className="border p-3">Named contacts with live URLs</td>
-              <td className="border p-3">Verifiable project outcomes</td>
+              <td className="border p-3"><a href="/au" className={linkCls}>FactoryJet</a> (that is us)</td>
+              <td className="border p-3">No Australian office; senior engineers work remotely in Australian business hours</td>
+              <td className="border p-3">WordPress and WooCommerce builds, maintenance, SEO and AI SEO; support after launch, and you own the code and accounts</td>
             </tr>
           </tbody>
         </table>
       </div>
 
+      <div className="overflow-x-auto mb-8">
+        <table className="min-w-full border-collapse border border-gray-300">
+          <caption className="caption-bottom text-left text-xs text-gray-500 pt-2">Typical Australian market ranges, AUD, as published by each source. Checked 26 September 2026. Not FactoryJet prices.</caption>
+          <thead className="bg-gray-800 text-white">
+            <tr>
+              <th className="p-3 border">WordPress cost item</th>
+              <th className="p-3 border">Typical range (AUD)</th>
+              <th className="p-3 border">Source (updated)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td className="border p-3">Basic brochure site</td>
+              <td className="border p-3">$3,000 to $7,000</td>
+              <td className="border p-3"><a href="https://www.wolfiq.com.au/how-much-does-a-website-cost-in-australia" className={linkCls} {...ext}>WolfIQ</a> (2026 guide, checked Sep 2026)</td>
+            </tr>
+            <tr>
+              <td className="border p-3">Fuller business site</td>
+              <td className="border p-3">$5,000 to $15,000</td>
+              <td className="border p-3"><a href="https://www.wolfiq.com.au/how-much-does-a-website-cost-in-australia" className={linkCls} {...ext}>WolfIQ</a> (2026 guide, checked Sep 2026)</td>
+            </tr>
+            <tr>
+              <td className="border p-3">Custom WordPress, freelancer</td>
+              <td className="border p-3">$2,500 to $6,000</td>
+              <td className="border p-3"><a href="https://keentodesign.com.au/web-design-cost/" className={linkCls} {...ext}>Keen to Design</a> (Apr 2026)</td>
+            </tr>
+            <tr>
+              <td className="border p-3">Custom WordPress, mid-range</td>
+              <td className="border p-3">$7,000 to $15,000</td>
+              <td className="border p-3"><a href="https://keentodesign.com.au/web-design-cost/" className={linkCls} {...ext}>Keen to Design</a> (Apr 2026)</td>
+            </tr>
+            <tr>
+              <td className="border p-3">Custom WordPress, agency</td>
+              <td className="border p-3">$5,000 to $20,000+</td>
+              <td className="border p-3"><a href="https://keentodesign.com.au/web-design-cost/" className={linkCls} {...ext}>Keen to Design</a> (Apr 2026)</td>
+            </tr>
+            <tr>
+              <td className="border p-3">Annual maintenance</td>
+              <td className="border p-3">$500 to $3,000 a year</td>
+              <td className="border p-3"><a href="https://keentodesign.com.au/web-design-cost/" className={linkCls} {...ext}>Keen to Design</a> (Apr 2026)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p className="mb-4">For sourced 2026 AUD ranges for WordPress and other websites, with GST explained, see our <a href="/blog/website-cost-australia-2026" className={linkCls}>website cost in Australia guide</a>.</p>
+
       <h2 className="text-2xl font-bold mt-8 mb-4">Enterprise WordPress Features Now Standard for SMBs</h2>
-      <p className="mb-4">Advanced WordPress capabilities that were once reserved for enterprise budgets, multi-currency commerce, CRM automation, headless architecture, are now essential tools for Australian small businesses competing in 2026's digital marketplace. The gap between SMB and enterprise functionality has collapsed, and forward-thinking Australian businesses are deploying these features to punch above their weight class. WooCommerce now handles wholesale pricing tiers and customer-specific pricing natively, letting B2B sellers offer trade discounts, volume breaks, and account-specific rates without custom development. A Melbourne industrial supplier can show different pricing to retail buyers, trade accounts, and enterprise customers: all from one WordPress installation. Multi-currency support with automatic conversion and geo-targeted pricing means Sydney exporters display AUD to local customers, USD to Americans, and GBP to UK buyers without manual intervention. CRM integration has moved from "nice to have" to operational necessity. HubSpot and Salesforce now sync bidirectionally with WordPress, automating lead capture, customer segmentation, and sales workflows that previously required dedicated staff. When a Brisbane consulting firm captures a contact form submission, that lead flows directly into their CRM with full browsing history and engagement data, no spreadsheet exports, no manual entry. Advanced inventory management with low-stock alerts, supplier integration, and automated reordering prevents stockouts and reduces carrying costs. Customer account portals deliver Amazon-level convenience, order history, saved payment methods, subscription management, and one-click reordering, building loyalty that keeps customers returning. Headless WordPress architecture decouples content from presentation, powering omnichannel experiences across web, mobile apps, and in-store kiosks from a single content source. A Perth retailer manages product data once and delivers consistent experiences everywhere customers engage.</p>
+      <p className="mb-4">Features that used to need an enterprise budget are now normal in a well-built small business site. WooCommerce can show different prices to retail buyers, trade accounts and large customers from one installation, with volume breaks and account-specific rates, so a Melbourne industrial supplier does not need a separate wholesale portal. Multi-currency extensions let an exporter show AUD at home and other currencies abroad. CRM integration with HubSpot or Salesforce sends every form enquiry straight into your pipeline with its source attached, so nobody retypes leads from an inbox. Stock management with low-stock alerts helps you avoid running out of your best sellers. Customer account pages with order history and one-click reordering make repeat buying easy for trade customers. Headless WordPress, where WordPress manages content and a separate front end displays it, can feed a website, an app and in-store screens from one place, though it adds cost and complexity that most small businesses do not need yet. The rule of thumb: pay for a feature when you can name the job it does and the person who will use it.</p>
 
 
       <div className="my-8 rounded-xl bg-[#0052CC] p-6 flex flex-col sm:flex-row items-center justify-between gap-4 not-prose">
@@ -130,23 +200,23 @@ export const post: BlogPost = {
       </div>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">How to Evaluate WordPress Developer Quality: Australian Business Checklist</h2>
-      <p className="mb-4">Quality WordPress developers separate themselves through transparent proof, not polished promises. Australian SMBs should request live project URLs with direct client contact details, not portfolio screenshots that could showcase anyone's work. A developer confident in their output will gladly connect you with three recent clients who can verify delivery timelines, communication quality, and post-launch support. Lighthouse performance reports reveal technical competence immediately. Request Google Lighthouse scores for at least five existing client sites, filtering out agencies that can't demonstrate consistent 90+ Performance and 92+ SEO scores. These metrics directly correlate with search visibility and user experience: two factors that determine whether your investment generates revenue or wastes bandwidth. Australian compliance knowledge isn't optional. Ask specific questions about ACCC consumer law implementation, automated GST calculation for domestic and international transactions, and Privacy Act 1988 requirements for contact forms and analytics. Developers who fumble these questions will create legal headaches six months after launch when your accountant flags configuration errors. Technical depth matters beyond theme customisation. Verify the agency builds custom plugins for unique business logic, integrates third-party APIs (payment gateways, CRM systems, inventory management), and implements security hardening beyond basic SSL certificates. Request examples of WP-CLI usage, staging environment workflows, and automated backup systems. Case studies should contain numbers, not adjectives. Look for documented outcomes: "reduced page load time from 4.2s to 1.1s", "increased organic traffic 47% in 90 days", "improved checkout conversion rate from 2.1% to 3.8%". Vague claims about "significant improvements" signal inexperience with analytics tools. Communication infrastructure predicts project success. Clarify response time expectations, confirm they use professional project management platforms like Asana or ClickUp, and understand revision policies before signing contracts. Agencies that communicate through scattered WhatsApp threads rarely deliver organised outcomes.</p>
+      <p className="mb-4">Good WordPress developers prove their work rather than describe it. Ask for live project links with a client contact you can phone, not portfolio screenshots that could be anyone's. A confident developer will connect you with recent clients who can speak to timelines, communication and support after launch. Run PageSpeed Insights on several of their live sites; consistent results tell you more than any sales deck. Test their Australian knowledge with specific questions: how they handle refund wording under Australian Consumer Law, automatic GST for domestic and overseas orders, and Privacy Act 1988 requirements for forms and analytics. Fumbled answers now mean an unhappy accountant later. Check technical depth beyond themes: can they write a custom plugin for your business logic, connect payment gateways, CRMs and stock systems, and harden security beyond an SSL certificate? Ask how they use staging sites, version control and automated backups. Case studies should name the client and show something you can check. Finally, ask how they communicate: who your contact is, which project tool they use, how revisions are tracked and how quickly they reply.</p>
 
 
       <h2 className="text-2xl font-bold mt-8 mb-4">WordPress Performance Standards Australian Businesses Should Demand</h2>
-      <p className="mb-4">Australian SMBs should contractually require a minimum Lighthouse Performance score of 90/100 on both mobile and desktop, with SEO scores at 92/100 or higher to remain competitive in Google's algorithm. These aren't aspirational targets. They're baseline requirements for any WordPress site expecting to convert visitors in 2026. First Contentful Paint must stay under 1.8 seconds, and Largest Contentful Paint under 2.5 seconds, particularly critical for Australian mobile networks where users abandon sites that hesitate. Total page weight should never exceed 2MB; bloated WordPress themes routinely hit 5–8MB, killing mobile conversions before the hero section even renders. Specify these limits in your contract, or you'll inherit a site that looks impressive in Figma but haemorrhages traffic on Telstra 4G. Core Web Vitals: Largest Contentful Paint, Interaction to Next Paint, and Cumulative Layout Shift, must pass all three metrics for Google's ranking boost to apply. A failing CLS score means your product images shift mid-tap, frustrating users and tanking your Quality Score. Server response time under 200ms requires Australian or APAC hosting; a Sydney-based Kinsta or WP Engine instance delivers this consistently, while offshore shared hosting adds 400–600ms before a single asset loads. Demand these benchmarks in writing before signing. Agencies that hedge on performance metrics either lack technical capability or plan to deliver a site that fails Google's mobile-first indexing. FactoryJet's 98% client satisfaction rate stems partly from contractual performance guarantees that protect Australian SMBs from paying twice, once for the build, again for the rebuild when organic traffic never materialises.</p>
+      <p className="mb-4">Write speed targets into the scope. A sensible baseline is 90 or more for Performance on mobile in PageSpeed Insights, and passing all three Core Web Vitals: Largest Contentful Paint under 2.5 seconds, Interaction to Next Paint under 200 milliseconds and Cumulative Layout Shift under 0.1. Those are Google's published thresholds for a good experience. Keep page weight lean; heavy themes and page builders are the usual reason WordPress sites miss these numbers on mobile data. Hosting matters too. A server in Australia or the Asia-Pacific region cuts the time before anything loads for Australian visitors, compared with cheap shared hosting on the other side of the world. Then ask the question most developers avoid: who keeps these numbers where they are after launch? Every plugin, tracking script and large image you add pushes them down. A developer who hedges on performance targets now is unlikely to protect them later. We set targets per project in writing and check them again after launch as part of support.</p>
 
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What Quality WordPress Development Delivers</h2>
-      <p className="mb-4">We don't have a published Australian case study yet, so rather than attach a number to a market we haven't built in, here's what the same approach has actually delivered elsewhere. Impulse Branding, a print branding contractor, needed a digital presence that matched their offline reputation. FactoryJet migrated them to WordPress with GEO/AIO structured data layered in, and the site went on to influence real, measured pipeline within six months without ongoing ad spend, published in full on our case studies page. Formative Concepts, an MEP drafting and BIM consultancy targeting architects and construction firms worldwide, had zero digital footprint before FactoryJet built them a 20+ page Gatsby site optimised for GEO, AEO, and AIO; within four months it was driving thousands of monthly international visitors and dozens of qualified leads, also published in full. Neither client is Australian, and we're not claiming they are. What carries over is the approach: WordPress (or the right platform for the job) built with SEO, performance, and conversion architecture as foundational requirements rather than post-launch additions. That's what we'd bring to an Australian build too.</p>
+      <p className="mb-4">We don't have a published Australian case study yet, so rather than attach a number to a market we haven't built in, here is what our published work elsewhere shows. For Impulse Branding Solutions, a branding business, FactoryJet built the website and provides ongoing SEO and AI search work, connecting their service and portfolio content with the questions their customers ask. Formative Concepts, an MEP drafting and BIM consultancy selling to architects and construction firms worldwide, had no digital footprint before we built them a 20+ page site set up for search and AI answer engines; their published case study reports thousands of monthly international visitors and dozens of qualified leads within the first four months. Neither client is Australian, and we're not claiming they are, and the Formative Concepts site is built on Gatsby rather than WordPress. What carries over is the approach: the right platform for the job, with search, speed and conversion planned from the first day rather than added after launch. Read both on our <a href="/case-studies" className={linkCls}>case studies page</a>.</p>
 
 
       <h2 className="text-2xl font-bold mt-8 mb-4">WordPress Maintenance and Security for Australian Compliance</h2>
-      <p className="mb-4">Australian businesses face a distinct maintenance challenge: WordPress sites must stay secure, fast, and compliant with evolving privacy regulations while operating in a market where downtime directly impacts revenue. Effective ongoing maintenance starts with weekly security updates across WordPress core, themes, and plugins: the three layers where vulnerabilities most commonly emerge. Delaying these patches even by days can expose customer data to known exploits that attackers actively scan for. Daily automated backups with 30-day retention provide the recovery safety net every business needs, and storing these backups in Australian data centres ensures faster restoration times and alignment with data sovereignty expectations. Uptime monitoring with 99.9% availability guarantees means your site gets checked every minute, with immediate incident response when issues arise, critical for e-commerce sites where every hour offline costs sales. Malware scanning and removal paired with firewall configuration defends against common attack vectors like brute-force login attempts, SQL injection, and cross-site scripting. These aren't theoretical risks: WordPress powers 43% of all websites globally, making it a constant target. Australian privacy regulations now mirror GDPR-style data handling requirements, meaning your site needs proper cookie consent mechanisms, transparent privacy policies, and secure data processing workflows that withstand regulatory scrutiny. Performance monitoring through monthly Lighthouse reports tracks your site's speed, accessibility, and SEO health over time. When scores drop, you receive specific optimisation recommendations, compressing images, eliminating render-blocking resources, or upgrading hosting infrastructure, before users notice slowdowns. Sites maintaining Lighthouse Performance scores above 90 consistently see lower bounce rates and higher conversion rates than competitors letting their technical health drift. This maintenance approach costs £99–£299 monthly depending on site complexity, a fraction of what emergency breach recovery or regulatory penalties would demand. The alternative, reactive fixes after problems surface, typically costs 5–10 times more than proactive monthly care.</p>
-      <p className="mb-4">➡ Learn more: <a href="/services/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">Web Design</a></p>
+      <p className="mb-4">WordPress needs looking after every month. Update WordPress core, themes and plugins regularly, because those are the three places vulnerabilities appear, and attackers scan for known holes within days of them being published. Take daily backups and keep them for at least 30 days, stored somewhere separate from the site, so a bad update or a hack is a short outage rather than a disaster. Monitor uptime so someone knows within minutes when the site goes down, which matters most for stores. Add malware scanning and a firewall to block brute-force logins and common attacks. Keep privacy settings current: a clear privacy policy, cookie and marketing consent that matches what your tools actually collect, and care with where customer data is stored and sent. Check speed monthly, because it slips as content and plugins pile up, and fix issues before visitors notice. Keen to Design puts annual website maintenance at $500 to $3,000 (April 2026), and WolfIQ puts professional maintenance at $100 to $2,000 a month depending on scope. Either way, it costs far less than cleaning up after a breach.</p>
+      <p className="mb-4">➡ For Australian WordPress, WooCommerce and Shopify sites, see our <a href="/au/website-maintenance" className={linkCls}>website maintenance services in Australia</a>.</p>
 
 
-      <p className="mb-6">➡ Ready to launch your online store? <a href="/services/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">FactoryJet e-commerce development for US businesses</a>, custom builds, Lighthouse 95+, delivered in 7 days from $2,999. Or see our <a href="/services/shopify-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">Shopify store packages</a>.</p>
+      <p className="mb-6">➡ Planning a WordPress site or store? See <a href="/au" className={linkCls}>FactoryJet in Australia</a> or our <a href="/au/ecommerce-development" className={linkCls}>ecommerce development service in Australia</a>.</p>
 
       <div className="my-12 rounded-2xl bg-[#0052CC] p-8 sm:p-10 text-center not-prose">
         <h3 className="text-white text-2xl font-bold mb-3">Ready to transform your business?</h3>
@@ -154,7 +224,7 @@ export const post: BlogPost = {
         <a href="https://factoryjet.com/contact" className="inline-block bg-white text-[#0052CC] font-bold px-8 py-3 rounded-xl hover:bg-blue-50 transition-colors text-lg">
           Book a Free 30-Min Consultation →
         </a>
-        <p className="text-blue-200 text-sm mt-6">500+ businesses · 98% satisfaction · 12+ years combined experience</p>
+        <p className="text-blue-200 text-sm mt-6">500+ businesses · 97% on-time delivery · Supported after launch</p>
       </div>
     </>
   ),

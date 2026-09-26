@@ -19,7 +19,7 @@ const UPDATED = '2026-09-25';
 const TITLE = 'Web Design & SEO Consultant Melbourne | FactoryJet';
 const H1 = 'Web design and SEO consulting in Melbourne';
 const DESCRIPTION =
-  'Melbourne web design and SEO consulting. Fast sites built by senior engineers, honest advice on what will move enquiries, and you own everything. Free site review.';
+  'Melbourne web design and SEO consulting. Fast sites by senior engineers, honest advice on what will move enquiries, and you own everything. Free site review.';
 
 /* Design tokens, copied by value from ../au-service.css (same as /au/ai-agents). */
 const T = {
@@ -390,6 +390,8 @@ export default function MelbournePage() {
                 <p style={{ fontSize: 13, color: T.n400, marginTop: 12 }}>
                   No price figures appear on this page on purpose. What a Melbourne engagement costs depends on which
                   of the five problems you actually have, and a number posted here would be wrong for most readers.
+                  For published Australian ranges, see our{' '}
+                  <a href="/blog/website-cost-australia-2026" style={srcLink}>guide to website design cost in Australia</a>.
                 </p>
               </div>
             </div>
@@ -618,7 +620,8 @@ export default function MelbournePage() {
                 <div style={{ padding: '12px 10px 6px' }}>
                   <p style={{ fontSize: 14 }}>
                     For a tradie in the eastern suburbs, the Google Business Profile does more work than the website.
-                    Setting it up properly is usually the first hour we recommend.
+                    Setting it up properly is usually the first hour we recommend. See what goes on a{' '}
+                    <a href="/au/websites-for-tradies" style={srcLink}>website for tradies</a>.
                   </p>
                 </div>
               </div>
@@ -660,6 +663,9 @@ export default function MelbournePage() {
                     </details>
                   ))}
                 </div>
+                <p className="mt-4" style={{ fontSize: 14 }}>
+                  Monthly fixes and updates are covered by our <a href="/au/website-maintenance" style={srcLink}>website maintenance</a> plans.
+                </p>
               </div>
               <div className="card" style={{ padding: 8 }}>
                 <img src="/images/au/melbourne/melbourne-workshop.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A web strategist sketches a website sitemap of connected boxes on a whiteboard for two business owners in a Southbank meeting room overlooking the Yarra River" style={imgStyle} />
@@ -915,7 +921,7 @@ export default function MelbournePage() {
                             <svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5L7 9L11 5" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" /></svg>
                           </span>
                         </summary>
-                        <div className="faq-ans"><p>{f.answer}</p></div>
+                        <div className="faq-ans"><p>{f.answer}</p>{f.links ? <p style={{ marginTop: 8 }}>{f.links.map((l) => <a key={l.href} href={l.href} style={{ ...srcLink, marginRight: 16 }}>{l.label}</a>)}</p> : null}</div>
                       </details></li>
                     ))}</ul>
                   </div>

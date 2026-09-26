@@ -11,7 +11,7 @@
 import {
   Activity, BarChart3, Bot, BookOpen, Building2, Calculator, ClipboardCheck, Code2, Compass, Factory,
   Gauge, Globe, Layers, LayoutTemplate, Mail, MessageSquare, Mic, Plug, RefreshCw, Search, ShoppingBag,
-  ShoppingCart, Sparkles, Star, Store, User, Workflow, Wrench,
+  ShoppingCart, Sparkles, Star, Stethoscope, Store, User, Workflow, Wrench,
 } from 'lucide-react';
 import type { ElementType } from 'react';
 
@@ -451,9 +451,12 @@ export const AU_SERVICE_HUBS: ServiceHub[] = [
       { heading: 'Build & run', kind: 'rich', items: [
         { icon: Store, label: 'Ecommerce Development', href: '/au/ecommerce-development' },
         { icon: ShoppingBag, label: 'Shopify Development', href: '/au/shopify-development' },
-        { icon: Search, label: 'Ecommerce & AI Search', href: '/au/ai-seo' },
+        { icon: Search, label: 'Ecommerce & Shopify SEO', href: '/au/ecommerce-seo' },
+        { icon: Sparkles, label: 'AI Search (GEO) for Stores', href: '/au/ai-seo' },
       ] },
       { heading: 'Australian guides', kind: 'compact', items: [
+        { label: 'Best ecommerce platform in Australia', href: '/blog/best-ecommerce-platform-australia-2026' },
+        { label: 'Shopify cost in Australia', href: '/blog/shopify-cost-australia-2026' },
         { label: 'Best ecommerce agencies in Australia', href: '/blog/best-ecommerce-agency-small-business-australia-2026' },
         { label: 'Ecommerce questions answered', href: '/au/ecommerce-development#faq' },
       ] },
@@ -471,13 +474,18 @@ export const AU_SERVICE_HUBS: ServiceHub[] = [
         { icon: Plug, label: 'AI Development & Integration', href: '/au/ai-development' },
         { icon: Compass, label: 'AI Consulting', href: '/au/ai-consulting' },
         { icon: Mic, label: 'AI Receptionist', href: '/au/ai-receptionist' },
+        { icon: MessageSquare, label: 'AI Customer Service', href: '/au/ai-customer-service' },
       ] },
       { heading: 'Popular for', kind: 'compact', items: [
         { label: 'Tradies & field services', href: '/au/ai-receptionist' },
         { label: 'Clinics & dental practices', href: '/au/ai-receptionist#how-we-build' },
+        { label: 'Shopify & Gorgias support', href: '/au/ai-customer-service' },
         { label: 'Xero & MYOB automation', href: '/au/ai-agents' },
-        { label: 'AI strategy for SMEs', href: '/au/ai-consulting' },
         { label: 'AI inside your CRM or ERP', href: '/au/ai-development' },
+      ] },
+      { heading: 'Australian guides', kind: 'compact', items: [
+        { label: 'AI cost guide 2026', href: '/blog/ai-cost-australia-2026' },
+        { label: 'Best AI agencies in Australia', href: '/blog/best-ai-agencies-australia-2026' },
       ] },
     ],
     feature: { image: '/images/menu/menu-ai-agents.webp', kicker: 'Start here', title: 'AI consulting for Australian SMEs', body: 'Find where AI pays off, check your Privacy Act duties, then build it.', href: '/au/ai-consulting', cta: 'See how it works' },
@@ -490,8 +498,9 @@ export const AU_SERVICE_HUBS: ServiceHub[] = [
     columns: [
       { heading: 'Services', kind: 'rich', items: [
         { icon: LayoutTemplate, label: 'Web Design Australia', href: '/au#web-design' },
-        { icon: Calculator, label: 'What a website costs', href: '/au#website-cost' },
-        { icon: Compass, label: 'How we work with you', href: '/au#how-we-work' },
+        { icon: Wrench, label: 'Websites for Tradies', href: '/au/websites-for-tradies' },
+        { icon: Stethoscope, label: 'Dental Website Design', href: '/au/dental-website-design' },
+        { icon: RefreshCw, label: 'Website Maintenance', href: '/au/website-maintenance' },
       ] },
       { heading: 'Australian cities', kind: 'compact', items: [
         { label: 'Melbourne', href: '/au/melbourne' },
@@ -500,6 +509,7 @@ export const AU_SERVICE_HUBS: ServiceHub[] = [
         { label: 'Canberra', href: '/au/canberra' },
       ] },
       { heading: 'Australian guides', kind: 'compact', items: [
+        { label: 'Website cost guide 2026', href: '/blog/website-cost-australia-2026' },
         { label: 'Best web design companies', href: '/blog/best-web-design-companies-small-business-australia' },
         { label: 'Best WordPress developers', href: '/blog/best-wordpress-development-companies-australia-2026' },
       ] },
@@ -515,8 +525,10 @@ export const AU_SERVICE_HUBS: ServiceHub[] = [
       { heading: 'AI search & SEO', kind: 'rich', items: [
         { icon: Search, label: 'SEO Services Australia', href: '/au/seo' },
         { icon: Sparkles, label: 'AI SEO & GEO', href: '/au/ai-seo' },
+        { icon: ShoppingCart, label: 'Ecommerce SEO', href: '/au/ecommerce-seo' },
       ] },
       { heading: 'Questions answered', kind: 'compact', items: [
+        { label: 'SEO cost in Australia', href: '/blog/seo-cost-australia-2026' },
         { label: 'SEO questions', href: '/au/seo#faq' },
         { label: 'AI search questions', href: '/au/ai-seo#faq' },
       ] },
@@ -542,6 +554,8 @@ export const AU_SIMPLE_MENUS: SimpleMenu[] = [
         { label: 'Logistics & wholesale', href: '/au/ai-development' },
       ] },
       { heading: 'Local businesses', kind: 'compact', items: [
+        { label: 'Tradies & trade businesses', href: '/au/websites-for-tradies' },
+        { label: 'Dental practices', href: '/au/dental-website-design' },
         { label: 'Melbourne', href: '/au/melbourne' },
         { label: 'Brisbane', href: '/au/brisbane' },
         { label: 'Adelaide', href: '/au/adelaide' },
@@ -553,19 +567,27 @@ export const AU_SIMPLE_MENUS: SimpleMenu[] = [
   {
     key: 'resources', label: 'Resources',
     columns: [
-      { heading: 'Australian guides', kind: 'rich', items: [
-        { icon: BookOpen, label: 'Best ecommerce agencies in Australia', href: '/blog/best-ecommerce-agency-small-business-australia-2026' },
-        { icon: BookOpen, label: 'Best web design companies in Australia', href: '/blog/best-web-design-companies-small-business-australia' },
-        { icon: BookOpen, label: 'Best WordPress developers in Australia', href: '/blog/best-wordpress-development-companies-australia-2026' },
+      { heading: 'Cost guides (2026)', kind: 'rich', items: [
+        { icon: Calculator, label: 'Website cost in Australia', href: '/blog/website-cost-australia-2026' },
+        { icon: Search, label: 'SEO cost in Australia', href: '/blog/seo-cost-australia-2026' },
+        { icon: Bot, label: 'AI cost in Australia', href: '/blog/ai-cost-australia-2026' },
+        { icon: ShoppingBag, label: 'Shopify cost in Australia', href: '/blog/shopify-cost-australia-2026' },
+      ] },
+      { heading: 'Australian comparisons', kind: 'compact', items: [
+        { label: 'Best ecommerce platform in Australia', href: '/blog/best-ecommerce-platform-australia-2026' },
+        { label: 'Best AI agencies in Australia', href: '/blog/best-ai-agencies-australia-2026' },
+        { label: 'Best ecommerce agencies in Australia', href: '/blog/best-ecommerce-agency-small-business-australia-2026' },
+        { label: 'Best web design companies in Australia', href: '/blog/best-web-design-companies-small-business-australia' },
+        { label: 'Best WordPress developers in Australia', href: '/blog/best-wordpress-development-companies-australia-2026' },
       ] },
       { heading: 'Questions answered', kind: 'compact', items: [
         { label: 'FactoryJet Australia FAQ', href: '/au#faq' },
-        { label: 'Website cost in Australia', href: '/au#website-cost' },
+        { label: 'What drives website cost', href: '/au#website-cost' },
         { label: 'AI agents FAQ', href: '/au/ai-agents#faq' },
         { label: 'Shopify FAQ', href: '/au/shopify-development#faq' },
       ] },
     ],
-    feature: { image: '/images/menu/menu-ai-search-model.webp', kicker: 'Guide', title: 'Website cost in Australia', body: 'What actually drives the cost of a website for an Australian business.', href: '/au#website-cost', cta: 'Read it' },
+    feature: { image: '/images/menu/menu-ai-search-model.webp', kicker: 'Guide', title: 'Website cost in Australia', body: 'Sourced AUD price ranges for Australian websites, monthly running costs, and how GST applies to a quote.', href: '/blog/website-cost-australia-2026', cta: 'Read the guide' },
   },
   {
     key: 'company', label: 'Company',

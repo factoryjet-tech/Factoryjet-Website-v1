@@ -72,7 +72,7 @@ const FAQ_CATEGORIES = [
   { key: 'data',     label: 'Privacy, data & ownership' },
 ] as const;
 
-const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
+const FAQ_ITEMS: { category: string; question: string; answer: string; links?: { href: string; label: string }[] }[] = [
   // ── Basics ──
   { category: 'basics', question: 'What is an AI automation agency?',
     answer: 'An AI automation agency is a team that designs, builds and looks after AI systems that do repetitive work inside your business. That usually means AI agents and automated workflows connected to the software you already use, such as Xero, HubSpot or Microsoft 365. A good one maps your process first, builds with human approval where it matters, and supports the system after launch.' },
@@ -89,19 +89,39 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'basics', question: 'What are some examples of AI automations?',
     answer: 'Reading supplier invoices and drafting bills in Xero or MYOB. Turning a website enquiry into a HubSpot deal with a suggested reply. Booking a tradie job into ServiceM8 from an email. Answering order status questions using Shopify and courier tracking. Summarising a client meeting into your practice management system. Each one takes a repeated task off your team and keeps a person in charge of the decision.' },
   { category: 'basics', question: 'Are there AI customer service agents?',
-    answer: 'Yes. AI customer service agents answer common questions by chat, email or phone, look up orders or bookings, and hand harder cases to a person. They work well for order status, booking changes and first-line questions. Under OAIC guidance, public-facing AI tools such as chatbots should be clearly identified as AI. For phone answering specifically, see our AI receptionist service for Australian businesses.' },
+    answer: 'Yes. AI customer service agents answer common questions by chat, email or phone, look up orders or bookings, and hand harder cases to a person. They work well for order status, booking changes and first-line questions. Under OAIC guidance, public-facing AI tools such as chatbots should be clearly identified as AI. For chat and email support, see our AI customer service page; for phone answering, see our AI receptionist service.',
+    links: [
+      { href: '/au/ai-customer-service', label: 'AI customer service agents' },
+      { href: '/au/ai-receptionist', label: 'AI receptionist' },
+    ] },
   { category: 'basics', question: 'What are the five types of agent in AI?',
     answer: 'The classic textbook list is simple reflex agents, model-based reflex agents, goal-based agents, utility-based agents and learning agents. It describes how an agent decides, from fixed reactions up to agents that improve with experience. Business AI agents today mostly use a large language model to plan, plus fixed rules and approval steps around it, so the textbook labels matter less than what the agent is allowed to do.' },
   { category: 'basics', question: 'Is AI automation still in demand in Australia?',
     answer: 'Yes, and it is early. The Australian Bureau of Statistics found about 12% of Australian businesses used AI in 2024–25, up from 1% in 2021–22. Use is highest in professional services at 24%, and still low in construction at 6% and transport, postal and warehousing at 1%. That gap is where practical, well-scoped automation tends to pay off first.' },
 
+  { category: 'basics', question: 'What is RPA, and is it the same as AI automation?',
+    answer: 'No. RPA, robotic process automation, is software that copies the clicks and keystrokes a person makes in a system and repeats them exactly. It is fast and cheap for fixed, predictable steps, but it breaks when a screen changes or an input looks different. AI automation reads messy inputs such as emails, PDFs and call notes and decides what they mean. Most good builds use fixed rules or RPA for the predictable steps and AI only where judgement is needed.' },
+  { category: 'basics', question: 'What is an AI automation consultant?',
+    answer: 'An AI automation consultant looks at how work moves through your business and tells you which steps are worth automating, with what tools, in what order and at what risk. Some only advise and hand you a roadmap. Others, like us, also build and support what they recommend. If you hire an advice-only consultant, ask who will build the system and who will fix it when a connected tool changes.' },
+  { category: 'basics', question: 'Is ChatGPT an AI agent?',
+    answer: 'Not in the business sense, though it is heading that way. Plain ChatGPT answers questions and drafts text when you ask. An AI agent takes actions in your systems, such as creating an order in Shopify or a bill in Xero, within rules you set. OpenAI has added agent features that can browse and complete tasks, but they act on your behalf in a browser rather than inside your business systems with approval steps and logs.' },
+  { category: 'basics', question: 'Can I get an AI agent for free?',
+    answer: 'You can try one for free. ChatGPT, Claude and Gemini have free plans, and n8n can be self-hosted at no licence cost, so a confident owner can build a simple agent without paying for software. What is rarely free is the running cost: model usage fees once volume grows, hosting, and the time to fix it when a connected tool changes. Free tools suit learning and low-risk jobs, not customer or financial data.' },
+  { category: 'basics', question: 'Which AI agents are best for business?',
+    answer: 'The best ones do one repeated job well inside the tools you already use. The most reliable in our experience are inbox and enquiry triage, invoice and document reading into Xero or MYOB, order status answers for online stores, lead qualification into a CRM, and after-hours call answering. Agents that promise to run a whole department are the ones that disappoint. Start with one measurable job, prove it, then add the next.' },
+
   // ── Choosing ──
   { category: 'choosing', question: 'What is the leading AI automation agency in Australia?',
-    answer: 'There is no single leader, and any agency that claims the title is marketing. The right choice depends on your size, your systems and whether you want strategy, a build or ongoing management. Aivy, Team 400, FlowWorks, Osher Digital, Advancer and AI Lab Australia appear often in Australian search results and AI answers. We list them, and ourselves, with a neutral note on each further up this page.' },
+    answer: 'There is no single leader, and any agency that claims the title is marketing. The right choice depends on your size, your systems and whether you want strategy, a build or ongoing management. Team 400, Aivy, FlowWorks, Osher Digital, Advancer and IOTAI appear often in Australian search results and AI answers. We compare 13 of them, including us, in our guide to the best AI agencies in Australia, with each fact checked on the agency’s own site.',
+    links: [{ href: '/blog/best-ai-agencies-australia-2026', label: 'Best AI agencies in Australia' }] },
   { category: 'choosing', question: 'Which AI automation agencies are located in Australia?',
-    answer: 'Several have Australian offices, including Aivy, Team 400 (Sydney, Brisbane, Melbourne), Osher Digital and Advancer (Brisbane), AI Lab Australia (Sydney), IOTAI and BRAIVE. FactoryJet serves Australian businesses remotely from our engineering team, with the founder involved in every project. Whoever you pick, ask where your data will be stored and who actually writes the code.' },
+    answer: 'Several have Australian offices, including Team 400, Osher Digital and Advancer (Brisbane), Aivy and FlowWorks (Melbourne), Edison AI (Sydney) and IOTAI (Sydney, Melbourne, Brisbane and the Gold Coast). FactoryJet serves Australian businesses remotely from our engineering team, with the founder involved in every project. Whoever you pick, ask where your data will be stored and who actually writes the code.' },
   { category: 'choosing', question: 'How do I choose an AI agent developer?',
     answer: 'Ask for systems they have put live, not demos. Ask who writes the code and whether that person supports it after launch. Ask how they handle personal information under the Privacy Act, how the agent asks a human for approval, and what you own at the end. A good AI agent developer answers all of these plainly and tells you when a simpler automation would do.' },
+  { category: 'choosing', question: 'What does an AI agent developer do?',
+    answer: 'An AI agent developer designs and builds the agent and everything around it. That means choosing the model, writing the instructions and rules, connecting the agent to your systems through their APIs with the least access it needs, testing it on real past cases, and adding approval steps, logs and an off switch. A good one also monitors the agent after launch and fixes it when your software or the model changes.' },
+  { category: 'choosing', question: 'How do I hire an AI agent?',
+    answer: 'You do not hire the agent itself; you hire a team to build it for your process, or you subscribe to a ready-made tool. Start by writing down one job, how often it happens and how you measure it today. Then talk to two or three developers, ask for systems they have put live, and get a fixed-scope quote with a supervised pilot. Check who owns the code and who supports it after launch.' },
   { category: 'choosing', question: 'Should I use Zapier, Make or n8n myself, or hire an agency?',
     answer: 'Do it yourself if the job is simple, low risk and someone on your team enjoys building it. No-code tools are great for moving data between two apps. Hire help when the job touches several systems, involves customer or financial data, needs an approval step, or would hurt if it silently broke. Many of our builds use n8n or similar tools underneath, set up properly and monitored.' },
   { category: 'choosing', question: 'Which platform is best for AI automation?',
@@ -115,9 +135,11 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
 
   // ── Cost & process ──
   { category: 'cost', question: 'How much do AI automation agencies charge?',
-    answer: 'Pricing varies widely because the work varies widely. The main drivers are how many systems the agent connects to, how messy the inputs are, how much human approval and logging it needs, how sensitive the data is, and whether you want ongoing support. We do not publish a rate card. We scope after a free call with the founder and give you a fixed quote per stage.' },
+    answer: 'Pricing varies widely because the work varies widely. The drivers are how many systems the agent connects to, how messy the inputs are, how much approval and logging it needs, how sensitive the data is, and whether you want ongoing support. We scope after a free call with the founder and give you a fixed quote per stage. Published Australian market ranges are in our AI cost guide.',
+    links: [{ href: '/blog/ai-cost-australia-2026#ai-automation-cost', label: 'AI automation costs in Australia' }] },
   { category: 'cost', question: 'How much does it cost to build an AI agent in Australia?',
-    answer: 'A focused agent that does one job in one or two systems costs far less than a multi-agent system spanning finance, CRM and operations. Add model usage fees, paid directly to the AI provider, and a monthly support plan if you want one. The honest way to price it is to map the process first. Talk to the founder and you will get a fixed-scope quote, not a range.' },
+    answer: 'A focused agent that does one job in one or two systems costs far less than a multi-agent system spanning finance, CRM and operations. Add model usage fees, paid directly to the AI provider, and support if you want it. We map the process first, then give you a fixed-scope quote. Our AI agent cost guide for Australia sets out published market ranges and running costs.',
+    links: [{ href: '/blog/ai-cost-australia-2026#ai-agent-cost', label: 'AI agent cost guide for Australia' }] },
   { category: 'cost', question: 'How are AI agents developed?',
     answer: 'In stages. We map the process and pick one job, design what the agent may and may not do, connect it to your systems with the least access it needs, and test it on real past examples. Then it runs alongside your team in a supervised pilot before it takes on live work. Monitoring, logs and a simple way to switch it off are built in from day one.' },
   { category: 'cost', question: 'How long does it take to build an AI agent?',
@@ -147,19 +169,20 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
 ];
 
 /* ─── Named Australian AI automation agencies (open self-disclosure,
-       ItemList). Each note is based on the company’s own homepage, fetched
-       2026-09-25. ───────────────────────────────────────────────────── */
+       ItemList). Each company and note matches the fact-checked list in
+       /blog/best-ai-agencies-australia-2026, where every agency's own site was
+       opened on 2026-09-26 to confirm an Australian office and the services named. ───────────────────────────────────────────────────── */
 const AGENCIES: { name: string; note: string }[] = [
   { name: 'FactoryJet', note: 'That is us. Senior engineers who map the process, build custom AI agents into your existing tools with human approval steps, and support them after launch. Founder involved on every project. Strongest where AI meets commerce, finance and operations systems. You own everything we build.' },
-  { name: 'Aivy', note: 'An Australian AI automation agency focused on six industries: accounting, ecommerce, healthcare, NDIS, real estate and professional services. Offers document and finance automation, Xero integrations and chatbots, and describes fixed-scope pilots.' },
-  { name: 'Team 400', note: 'An AI agency and consultancy with a presence in Sydney, Brisbane and Melbourne. Covers AI agent development alongside Microsoft AI work (Azure AI Foundry, Copilot Studio, Power Automate) and .NET and React software development.' },
-  { name: 'FlowWorks', note: 'An Australian AI consulting and automation firm that starts with an AI Readiness Review, then builds automations and agents connected to existing tools, with a focus on governance. Publishes a long guide to AI agents for Australian businesses.' },
-  { name: 'Edison AI', note: 'An AI implementation and training partner for Australian SMBs. Audits workflows, automates repetitive work and trains teams to use AI, with a strong emphasis on staff capability.' },
-  { name: 'Osher Digital', note: 'Brisbane-based business automation consultants offering AI agent development, robotic process automation, system integrations and custom ERP software, and says clients own the code outright.' },
-  { name: 'Advancer', note: 'A Brisbane AI agency offering AI training, AI agents, voice AI, custom AI and data consulting, plus agent mapping and fractional AI director services.' },
-  { name: 'AI Lab Australia', note: 'A Sydney AI automation agency building custom chatbots, AI voice assistants, agentic workflows and custom web applications, with AI strategy consulting and group training.' },
-  { name: 'IOTAI', note: 'Describes itself as a managed intelligence provider that builds and manages AI agents, workflows and business tools, including n8n automation, Microsoft Copilot deployment and on-premise AI for legal, health and finance.' },
-  { name: 'BRAIVE', note: 'Describes itself as one of Australia’s first AI agencies. Offers AI roadmaps and strategy, AI training and workshops, custom automation and agents, chatbots and pre-built automations.' },
+  { name: 'Aivy', note: 'Based in Kensington, Melbourne, working nationally with mid-market firms. Offers AI consulting, document and finance automation, Xero integration and chatbot development for accounting, ecommerce, healthcare, NDIS, professional services and real estate, with fixed-scope pilots.' },
+  { name: 'Team 400', note: 'Brisbane head office, working across Sydney, Melbourne and Brisbane. Builds custom AI agents and the software around them, with strong Microsoft work (Azure OpenAI, Copilot Studio, Power Platform) plus .NET and React development, for mid-size and larger businesses.' },
+  { name: 'FlowWorks', note: 'Based on St Kilda Road, Melbourne, working with SMEs in every capital city. Starts with an AI readiness assessment, then builds automations, agents and voice AI connected to tools such as Xero, HubSpot, Google Workspace and Microsoft 365, with ongoing operations support.' },
+  { name: 'Edison AI', note: 'Based in Surry Hills, Sydney, serving small and medium businesses Australia-wide. Implements AI agents and workflow automation and trains staff to use AI, from readiness audits through to dashboards.' },
+  { name: 'Osher Digital', note: 'Based on Eagle Street, Brisbane, working across Australia with small to mid-market businesses. Offers AI agent development, AI consulting, n8n automation, system integrations and custom ERP software.' },
+  { name: 'Advancer', note: 'Based in Fortitude Valley, Brisbane. Offers AI training, AI consulting and readiness assessments, AI agents for workflows and CRM updates, voice AI for call handling and bookings, and data consulting, on fixed-scope pilots.' },
+  { name: 'IOTAI', note: 'Offices in North Sydney, Melbourne, Brisbane and the Gold Coast. Builds workflow automation, AI agents and internal apps on Retool and n8n, rolls out Microsoft Copilot, and offers on-premise AI and a monthly managed service.' },
+  { name: '13Labs', note: 'Based at Stone & Chalk on King Street, Melbourne, working Australia-wide. A founder-led team building AI software such as document search, information extraction and staff assistants, plus AI agents that answer from approved information, on fixed-price quotes.' },
+  { name: 'Arinco', note: 'Offices in Melbourne, Sydney, Brisbane, Perth and Auckland. A Microsoft specialist building production copilots and agents on Azure, Microsoft 365 and Copilot Studio for enterprise and mid-market organisations.' },
 ];
 
 /* ─── Build steps (rendered as <details> expanders) ─── */
@@ -927,7 +950,11 @@ export default function AiAgentsAUPage() {
               ))}
             </ul>
             <p style={srcNote}>
-              Agencies named from live Australian search results and AI assistant answers for AI automation agency queries, September 2026. Notes reflect each company’s own homepage on 25 September 2026. Listing is not endorsement.
+              Agencies named from live Australian search results and AI assistant answers for AI automation agency queries, September 2026. Each company’s own website was checked on 26 September 2026 for an Australian office and the services named. Listing is not endorsement.
+            </p>
+            <p className="mt-4" style={{ maxWidth: 760 }}>
+              Want more detail on each one? We compare 13 of them, including us, by location, client size, platforms and
+              published prices in our guide to the <a href="/blog/best-ai-agencies-australia-2026" style={srcLink}>best AI agencies in Australia</a>.
             </p>
           </div>
         </section>
@@ -939,12 +966,14 @@ export default function AiAgentsAUPage() {
               <span className="eyebrow">Related AI services in Australia</span>
               <h2>Not quite an AI agent? These may fit better</h2>
             </div>
-            <ul className="col-4 mt-10" style={{ gap: 16 }}>
+            <ul className="col-3 mt-10" style={{ gap: 16 }}>
               {[
+                { h: '/au/ai-customer-service', t: 'AI customer service', d: 'Chat and email answers, draft replies and ticket triage inside Zendesk, Gorgias or HubSpot.' },
                 { h: '/au/ai-consulting', t: 'AI consulting', d: 'Not sure where AI fits? A readiness assessment ranks the use cases worth doing first.' },
                 { h: '/au/ai-development', t: 'AI development', d: 'Larger builds: AI inside your product, custom apps and deeper system integration.' },
                 { h: '/au/ai-receptionist', t: 'AI receptionist', d: 'A voice agent that answers, qualifies and books calls, day and night.' },
                 { h: '/au/ai-seo', t: 'AI SEO', d: 'Get your business named in ChatGPT, Perplexity and Google AI answers.' },
+                { h: '/blog/ai-cost-australia-2026', t: 'AI cost guide', d: 'Published Australian price ranges for AI agents, chatbots and receptionists, with sources and GST basis.' },
               ].map((c) => (
                 <li key={c.h}>
                   <a href={c.h} className="svc-card" style={{ display: 'block', height: '100%' }}>
@@ -997,7 +1026,7 @@ export default function AiAgentsAUPage() {
                             <svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5L7 9L11 5" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" /></svg>
                           </span>
                         </summary>
-                        <div className="faq-ans"><p>{f.answer}</p></div>
+                        <div className="faq-ans"><p>{f.answer}</p>{f.links ? <p style={{ marginTop: 8 }}>{f.links.map((l) => <a key={l.href} href={l.href} style={{ ...srcLink, marginRight: 16 }}>{l.label}</a>)}</p> : null}</div>
                       </details></li>
                     ))}</ul>
                   </div>

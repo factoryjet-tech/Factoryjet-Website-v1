@@ -19,6 +19,8 @@
 export interface Faq {
   q: string;
   a: string;
+  /** Optional visible links under the answer; the answer text names the target in words. */
+  links?: { href: string; label: string }[];
   topic: 'Is it worth it' | 'Cost and scope' | 'Websites' | 'SEO' | 'Google and local search';
 }
 
@@ -60,12 +62,14 @@ export const FAQS: Faq[] = [
   {
     q: 'How much does it cost to create a website in SA?', // [SA]
     topic: 'Cost and scope',
-    a: 'It depends on page count, whether your content already exists, and what the site must connect to. A five page site for a trade business and a site with a booking system and customer logins are different jobs. Any number quoted before someone has looked at yours is a guess. We review the current site, write a scope, and price that scope before you commit to anything.',
+    a: 'It depends on page count, whether your content already exists, and what the site must connect to. A five page site for a trade business and a site with a booking system and customer logins are different jobs. Any number quoted before someone has looked at yours is a guess. We review the current site, write a scope, and price that scope before you commit to anything. Published Australian ranges are in our website cost guide.',
+    links: [{ href: '/blog/website-cost-australia-2026', label: 'Website cost in Australia (2026 guide)' }],
   },
   {
     q: 'How much should SEO cost for a small business?',
     topic: 'Cost and scope',
-    a: 'It should track the size of your problem, not a standard package. A site with sound structure that needs its local listing fixed and a few pages written is a small job. A site Google cannot crawl properly is a bigger one. Ask any agency to price the diagnosis separately from the ongoing work, so you can find out what is wrong without committing to a year of anything.',
+    a: 'It should track the size of your problem, not a standard package. A site with sound structure that needs its local listing fixed and a few pages written is a small job. A site Google cannot crawl properly is a bigger one. Ask any agency to price the diagnosis separately from the ongoing work, so you can find out what is wrong without committing to a year of anything. Published ranges are in our SEO cost guide.',
+    links: [{ href: '/blog/seo-cost-australia-2026#local-seo-cost', label: 'Local SEO cost in Australia' }, { href: '/blog/seo-cost-australia-2026#seo-cost-by-city', label: 'SEO cost by city' }],
   },
   {
     q: 'How many pages should a good website have?',
@@ -76,12 +80,14 @@ export const FAQS: Faq[] = [
     q: 'Is there a monthly fee to have a website?',
     topic: 'Cost and scope',
     a: 'Yes, usually small. The domain is billed yearly and hosting monthly or yearly. If the site takes bookings or payments there is normally a platform or transaction fee too. What you should not be paying is a monthly fee purely to keep pages online with an agency holding the keys. Our work is yours outright, including the domain.',
+    links: [{ href: '/blog/website-cost-australia-2026#monthly', label: 'Monthly website running costs' }, { href: '/au/website-maintenance', label: 'Website maintenance plans' }],
   },
 
   {
     q: 'How much does it cost for a website designer in Adelaide?',
     topic: 'Cost and scope',
     a: 'We do not publish a number, because the honest answer depends on four things: how many pages you need, whether the words and photos already exist, what the site must connect to (bookings, a store, a CRM), and how much search work comes with it. A freelancer, a large Adelaide agency and a senior remote team will all quote differently for the same brief. Ask each one to price the same written scope so you can compare like with like.',
+    links: [{ href: '/blog/website-cost-australia-2026', label: 'Website cost in Australia (2026 guide)' }],
   },
 
   // ---------- Websites ----------

@@ -18,6 +18,8 @@
 export interface Faq {
   q: string;
   a: string;
+  /** Optional visible links under the answer; the answer text names the target in words. */
+  links?: { href: string; label: string }[];
   topic: 'Accessibility and compliance' | 'Cost and scope' | 'Websites' | 'SEO' | 'Google and local search';
 }
 
@@ -59,7 +61,8 @@ export const FAQS: Faq[] = [
   {
     q: 'How much does it cost to design a website in Australia?',
     topic: 'Cost and scope',
-    a: 'It depends on page count, whether content already exists, and what the site must connect to. For Canberra specifically, accessibility work and any security or hosting requirement attached to a contract will move the number, so those need to be on the table at scope rather than discovered later. We review, write a scope, and price that before you commit.',
+    a: 'It depends on page count, whether content already exists, and what the site must connect to. For Canberra specifically, accessibility work and any security or hosting requirement attached to a contract will move the number, so those need to be on the table at scope rather than discovered later. We review, write a scope, and price that before you commit. Published Australian ranges are in our website cost guide.',
+    links: [{ href: '/blog/website-cost-australia-2026', label: 'Website cost in Australia (2026 guide)' }],
   },
   {
     q: 'How many pages should a good website have?',
@@ -70,12 +73,14 @@ export const FAQS: Faq[] = [
     q: 'Is there a monthly fee to have a website?',
     topic: 'Cost and scope',
     a: 'Yes, usually small: the domain yearly and hosting monthly or yearly. If your site takes memberships, event bookings or payments there is normally a platform or transaction fee too. What you should not pay is a monthly fee simply to keep pages online with an agency holding the keys. That arrangement is common and it is worth checking your current contract for.',
+    links: [{ href: '/blog/website-cost-australia-2026#monthly', label: 'Monthly website running costs' }, { href: '/au/website-maintenance', label: 'Website maintenance plans' }],
   },
 
   {
     q: 'How much does a web designer cost in Canberra?',
     topic: 'Cost and scope',
     a: 'We do not publish a figure, because it moves with four things: the number of pages, whether the content exists, what the site connects to (memberships, events, payments), and how much accessibility and security evidence your contracts need. A freelancer, a Canberra studio and a senior remote team will quote the same brief differently. Give each the same written scope, including the accessibility level, so the quotes are comparable.',
+    links: [{ href: '/blog/website-cost-australia-2026', label: 'Website cost in Australia (2026 guide)' }],
   },
 
   // ---------- Websites ----------

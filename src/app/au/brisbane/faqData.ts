@@ -23,18 +23,22 @@ export const FAQ_CATEGORIES = [
   { key: 'local', label: 'Google Maps & local search' },
 ] as const;
 
-export const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
+export const FAQ_ITEMS: { category: string; question: string; answer: string; links?: { href: string; label: string }[] }[] = [
   // ---------- Cost ----------
   { category: 'cost', question: 'How much does it cost to design a website in Brisbane?',
-    answer: 'It depends on how many pages you need, whether the content already exists, and what the site has to connect to. A four page site for a trade business and a fifty page site with bookings and a customer login are different jobs, and any figure quoted before someone has looked at yours is a guess. We review your current site, write a scope, and put a fixed price against it before you commit.' },
+    answer: 'It depends on how many pages you need, whether the content already exists, and what the site has to connect to. A four page site for a trade business and a fifty page site with bookings and a customer login are different jobs, and any figure quoted before someone has looked at yours is a guess. We review your current site, write a scope, and put a fixed price against it before you commit. Our website cost guide lists published Australian market ranges.',
+    links: [{ href: '/blog/website-cost-australia-2026', label: 'Website cost in Australia (2026 guide)' }] },
   { category: 'cost', question: 'How much should I pay a website designer?',
-    answer: 'Pay for the outcome you need, not a page count. The things that move the price are custom design versus a template, who writes the content, integrations such as bookings or a CRM, ecommerce, and whether support after launch is included. Compare quotes on the same written scope and check what is left out. A lower quote that excludes content, hosting setup or ownership often costs more by the end.' },
+    answer: 'Pay for the outcome you need, not a page count. The things that move the price are custom design versus a template, who writes the content, integrations such as bookings or a CRM, ecommerce, and whether support after launch is included. Compare quotes on the same written scope and check what is left out. A lower quote that excludes content, hosting setup or ownership often costs more by the end.',
+    links: [{ href: '/blog/website-cost-australia-2026', label: 'Website cost in Australia (2026 guide)' }] },
   { category: 'cost', question: 'How much does SEO cost in Brisbane?',
-    answer: 'SEO cost tracks the size of the problem, not the size of the city. A site with clean structure that needs content and local listings sorted is a smaller job than one where Google cannot crawl half the pages. We audit first and price the repair work as fixed milestones, then the ongoing content and link work separately, so you can see what you are paying for and stop either part.' },
+    answer: 'SEO cost tracks the size of the problem, not the size of the city. A site with clean structure that needs content and local listings sorted is a smaller job than one where Google cannot crawl half the pages. We audit first and price the repair work as fixed milestones, then the ongoing content and link work separately, so you can see what you are paying for and stop either part. Our SEO cost guide breaks published Australian ranges down by city.',
+    links: [{ href: '/blog/seo-cost-australia-2026#seo-cost-by-city', label: 'SEO cost by city' }] },
   { category: 'cost', question: 'Is it cheaper to build a website myself?',
     answer: 'In cash, usually yes. In total cost, often no. A builder subscription is inexpensive, but the hours you spend on layout, copy and fixing the mobile view are hours not spent selling. The honest test is the value of your time. If a week of it is worth more than the build, doing it yourself is the expensive option. If you are pre-revenue and time-rich, build it yourself and come back later.' },
   { category: 'cost', question: 'Is there a monthly fee to have a website?',
-    answer: 'Yes, though it is usually small. You pay for the domain name each year and for hosting monthly or yearly. If your site takes bookings or payments there is normally a platform or transaction fee on top. What you should not pay is a monthly fee simply to keep pages online with an agency that holds the keys. You own our work outright.' },
+    answer: 'Yes, though it is usually small. You pay for the domain name each year and for hosting monthly or yearly. If your site takes bookings or payments there is normally a platform or transaction fee on top. What you should not pay is a monthly fee simply to keep pages online with an agency that holds the keys. You own our work outright.',
+    links: [{ href: '/blog/website-cost-australia-2026#monthly', label: 'Monthly website running costs' }, { href: '/au/website-maintenance', label: 'Website maintenance plans' }] },
   { category: 'cost', question: 'How long does it typically take to build a website?',
     answer: 'Websites of up to five pages qualify for our 7-day delivery, counted from an approved scope with content ready. Larger sites, ecommerce stores and builds with bookings or integrations take longer, and you get the date at scope. The build itself is rarely the slow part. Waiting on copy, photos and sign-off is, so we tell you early which items sit with you.' },
   { category: 'cost', question: 'How many pages should a good website have?',

@@ -16,7 +16,7 @@ import '../au-service.css';
    old sections/ folder and the Lenis client shell were removed. */
 
 const UPDATED = '2026-09-25';
-const TITLE = 'Web Design & SEO Adelaide | Easiest Capital to Rank In | FactoryJet';
+const TITLE = 'Web Design & SEO Adelaide | Easier to Rank In | FactoryJet';
 const H1 = 'Web design Adelaide: websites and SEO for South Australian businesses';
 const DESCRIPTION =
   'Adelaide web design and SEO. Less entrenched competition than Sydney or Perth, so the same work goes further. Fast sites by senior engineers. Free site review.';
@@ -746,14 +746,15 @@ export default function AdelaidePage() {
                 <h2>What decides the cost of website design in Adelaide</h2>
                 <p className="lead mt-4" style={{ maxWidth: 560 }}>
                   No price figures appear on this page on purpose. What an Adelaide project costs depends on how much repair
-                  the site needs and how much content already exists. You get yours in writing after the free review. Work
-                  usually takes one of four shapes.
+                  the site needs and how much content already exists. You get yours in writing after the free review.
+                  Published market ranges are in our <a href="/blog/website-cost-australia-2026" style={link}>website cost guide</a>{' '}
+                  and <a href="/blog/seo-cost-australia-2026" style={link}>SEO cost guide</a>. Work usually takes one of four shapes.
                 </p>
                 <ul className="scope-list num-list mt-6" style={{ maxWidth: 580 }}>
                   <li><b>Free review.</b> Site crawl, speed test, Google listing check and a look at the competition. Some businesses take the findings and do the work themselves, and that is fine.</li>
                   <li><b>Website build.</b> A fixed-scope design and build. Sites of up to five pages can have 7-day delivery once the content is ready.</li>
                   <li><b>Search programme.</b> Technical repair, service and suburb pages, Google listing and review system, reported against enquiries.</li>
-                  <li><b>Monthly support.</b> Updates, security, small changes and a person who answers when something breaks.</li>
+                  <li><b>Monthly support.</b> Updates, security, small changes and a person who answers when something breaks. Monthly fixes and updates are covered by our <a href="/au/website-maintenance" style={link}>website maintenance</a> plans.</li>
                 </ul>
                 <div className="mt-8">
                   <ModalCTAButton label="Talk to the Founder" region="au" modalVariant="default" btnVariant="primary-light" />
@@ -867,7 +868,7 @@ export default function AdelaidePage() {
                             <svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5L7 9L11 5" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" /></svg>
                           </span>
                         </summary>
-                        <div className="faq-ans"><p>{f.a}</p></div>
+                        <div className="faq-ans"><p>{f.a}</p>{f.links ? <p style={{ marginTop: 8 }}>{f.links.map((l) => <a key={l.href} href={l.href} style={{ ...link, marginRight: 16 }}>{l.label}</a>)}</p> : null}</div>
                       </details></li>
                     ))}</ul>
                   </div>

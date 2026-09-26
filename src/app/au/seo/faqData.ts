@@ -27,6 +27,8 @@ export interface FaqItem {
   category: FaqCategory;
   question: string;
   answer: string;
+  /** Optional visible links shown under the answer. The answer text still names the target in words. */
+  links?: { href: string; label: string }[];
 }
 
 export const FAQ_ITEMS: FaqItem[] = [
@@ -73,6 +75,18 @@ export const FAQ_ITEMS: FaqItem[] = [
     answer:
       'It works well when a small business has a clear service and a defined area. Local search is where a small business can genuinely outrank a larger competitor, because distance from the searcher and a well-kept listing carry real weight. It works poorly when the business is too broad to describe in a search term, or when nobody is searching for what is being sold.',
   },
+  {
+    category: 'basics',
+    question: 'How to do SEO for a small business?',
+    answer:
+      'Start with the jobs that pay back fastest. Verify and complete your Google Business Profile, check in Search Console that Google can index your pages, and write one clear page for each service you sell, naming the areas you cover. Then ask every happy customer for a review and reply to all of them. Only after those are done is it worth spending on content at volume or link earning.',
+  },
+  {
+    category: 'basics',
+    question: 'Can a beginner do SEO?',
+    answer:
+      'Yes, the basics. A business owner can set up a Google Business Profile, write plain service pages, fix page titles and ask for reviews with no training beyond Google\'s free SEO Starter Guide. Where beginners come unstuck is technical faults that are invisible in the browser, such as a noindex tag or broken redirects after a redesign, and judging which search terms are worth the effort. Do the basics yourself and get help for those.',
+  },
 
   // ==== Choosing an SEO agency ====
   {
@@ -117,31 +131,53 @@ export const FAQ_ITEMS: FaqItem[] = [
     answer:
       'Yes. We work with businesses anywhere in Australia, remotely and in Australian business hours. We are also honest that the Sydney, Perth and Gold Coast head terms for SEO itself are held by agencies with far more links than we have, so we do not chase those terms for our own site. For your business, the question is how strong your own competitors are, and we measure that before we quote.',
   },
+  {
+    category: 'choosing',
+    question: 'Do you do SEO for tradies, dentists and online stores?',
+    answer:
+      'Yes, and each needs a different mix. Tradies win mostly on the Google Business Profile, reviews and service-area pages. Dental practices need the same local work plus copy that follows the Ahpra advertising guidelines. Online stores live or die on collection pages, product data and duplicate URL control. We have a separate page for each, linked below, so you can see how the work differs.',
+    links: [
+      { href: '/au/websites-for-tradies', label: 'SEO for tradies' },
+      { href: '/au/dental-website-design#dental-seo', label: 'Dental SEO' },
+      { href: '/au/ecommerce-seo', label: 'Ecommerce SEO' },
+    ],
+  },
 
   // ==== Cost and contracts ====
   {
     category: 'cost',
     question: 'How much should I expect to pay for SEO?',
     answer:
-      'It depends on the size of the problem, not on a standard package. The main drivers are how many technical faults the site has, how many pages need writing, how strong the businesses on page one are, how many locations you serve, and whether links need earning. A sound site that needs its Business Profile fixed and a few pages written is a small job. A site Google cannot crawl is a big one. We quote after measuring.',
+      'It depends on the size of the gap between your site and page one, not on a standard package. The drivers are how many technical faults the site has, how many pages need writing, how strong the page-one businesses are, how many locations you serve and whether links need earning. We quote a fixed price per stage after measuring. Published Australian price ranges by tier are in our SEO cost in Australia guide.',
+    links: [{ href: '/blog/seo-cost-australia-2026', label: 'SEO cost in Australia (2026 guide)' }],
   },
   {
     category: 'cost',
     question: 'How much does SEO cost in Australia?',
     answer:
-      'Australian SEO pricing tracks competition and scope rather than the postcode. A local trade business in a regional town with a few weak competitors needs far less work than an ecommerce store competing nationally. Ask any SEO agency in Australia to price the diagnosis separately from the ongoing work, so you can find out what is actually wrong without committing to a year of anything.',
+      'Australian SEO pricing tracks competition and scope rather than the postcode: a regional trade business with weak competitors needs far less work than a store competing nationally. Ask any agency to price the diagnosis separately from the ongoing work. Our SEO cost in Australia guide compares package, hourly and audit prices from six published Australian sources, with GST explained.',
+    links: [{ href: '/blog/seo-cost-australia-2026', label: 'SEO cost in Australia (2026 guide)' }],
   },
   {
     category: 'cost',
     question: 'Does SEO cost more in Sydney or Melbourne than in Brisbane or Adelaide?',
     answer:
-      'Often, because the competition is stronger, not because the work is different. When we measured Australian search results, the weakest business on page one for SEO terms in Sydney had far more linking websites than the weakest in Canberra or Melbourne consultant searches. More competition means more content and more link earning to close the gap. The city sets the size of the gap. The gap sets the cost.',
+      'Often, because the competition is stronger, not because the work is different. More linking websites behind the page-one businesses means more content and more link earning to close the gap. The city sets the size of the gap, and the gap sets the cost. Our SEO cost guide breaks published Australian price ranges down by city.',
+    links: [{ href: '/blog/seo-cost-australia-2026#seo-cost-by-city', label: 'SEO cost by city' }],
   },
   {
     category: 'cost',
     question: 'How much should SEO cost for a small business?',
     answer:
-      'Less than most retainers assume, if the work is scoped to the actual fault. Many Australian small businesses need a one-off technical repair and a properly set up Google Business Profile, then very little for months. Being sold a large monthly retainer before anyone has diagnosed the problem is the most common way money gets wasted on search in this country.',
+      'Less than most retainers assume, if the work is scoped to the actual fault. Many Australian small businesses need a one-off technical repair and a properly set up Google Business Profile, then little for months. Being sold a large retainer before anyone has diagnosed the problem is the most common way money is wasted. Published local and small business ranges are in our SEO cost guide.',
+    links: [{ href: '/blog/seo-cost-australia-2026#local-seo-cost', label: 'Local SEO cost in Australia' }],
+  },
+  {
+    category: 'cost',
+    question: 'How much does an SEO audit cost?',
+    answer:
+      'The price follows the size of the site and what you get back. A small business site is a few days of work, while a store with thousands of product and filter pages takes far longer to crawl and trace. The bigger difference is output: a ranked list of fixes with reasons is worth more than a raw tool export. Our SEO cost in Australia guide lists published audit prices from Australian providers.',
+    links: [{ href: '/blog/seo-cost-australia-2026#pricing-models', label: 'SEO audit and pricing models in Australia' }],
   },
   {
     category: 'cost',
@@ -193,6 +229,12 @@ export const FAQ_ITEMS: FaqItem[] = [
     answer:
       'No. Near-identical suburb pages stopped working years ago and now compete with each other. Build one strong page per real service, a clear service area on your Business Profile, and separate location pages only where you genuinely have a location or a meaningfully different offer. Google also suggests a service area of no more than about two hours of driving from your base for most businesses.',
   },
+  {
+    category: 'local',
+    question: 'Is local SEO worth it?',
+    answer:
+      'For a business that serves a defined area, usually yes, because the Google map pack sits above the ordinary results on most local searches. When we checked 14 Australian city searches for SEO terms in September 2026, a map pack appeared on most of them. The core work, a verified Business Profile, reviews and one page per service, costs little and keeps paying back. It is less useful for a business that sells nationally online.',
+  },
 
   // ==== Technical, audit and ecommerce SEO ====
   {
@@ -218,6 +260,31 @@ export const FAQ_ITEMS: FaqItem[] = [
     question: 'Do Core Web Vitals affect SEO?',
     answer:
       'They are part of how Google assesses page experience. Google publishes the pass marks: Largest Contentful Paint within 2.5 seconds, Interaction to Next Paint under 200 milliseconds and Cumulative Layout Shift under 0.1. Speed alone will not lift a weak page above a strong one, but a slow site loses visitors before they read anything, which hurts enquiries whatever your ranking.',
+  },
+  {
+    category: 'technical',
+    question: 'Can ChatGPT do an SEO audit?',
+    answer:
+      'Only a partial one. ChatGPT can review a page you paste in, suggest better titles and spot thin or confusing copy. It cannot crawl your whole site, see your Search Console indexing data or measure how many sites link to your competitors, and it will sometimes state a problem that is not there. Use it as a second reader on individual pages, and use a crawler plus Search Console for the audit itself.',
+  },
+  {
+    category: 'technical',
+    question: 'How often should an SEO audit be performed?',
+    answer:
+      'A full audit once a year suits most small business sites, plus a quick check each month in Search Console for new indexing errors. Run a fresh audit straight away after a redesign, a platform move or a sudden traffic drop, because that is when redirects break and noindex tags get left on. Large ecommerce stores that add products weekly benefit from a lighter technical crawl every quarter.',
+  },
+  {
+    category: 'technical',
+    question: 'What is the difference between a geo audit and a SEO audit?',
+    answer:
+      'An SEO audit asks whether Google can crawl, index and rank your pages in ordinary results. A GEO audit, short for generative engine optimisation, asks whether AI tools such as ChatGPT, Perplexity and Google AI Overviews name and cite your business when buyers ask about what you sell. It checks real prompts, which sources the AI quotes and whether your pages give direct, citable answers. Most businesses need the SEO audit first.',
+    links: [{ href: '/au/ai-seo', label: 'AI SEO and GEO in Australia' }],
+  },
+  {
+    category: 'technical',
+    question: 'Which tool is best for SEO audit?',
+    answer:
+      'Start with Google Search Console, which is free and the only tool that shows how Google itself sees your pages. Add a crawler such as Screaming Frog, free up to 500 URLs, to find broken links, redirects and missing titles. Semrush and Ahrefs add backlink and competitor data on a paid plan. No tool ranks the problems by business impact for you, which is the part an experienced person still has to do.',
   },
   {
     category: 'technical',

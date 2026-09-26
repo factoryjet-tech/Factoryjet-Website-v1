@@ -69,7 +69,7 @@ const FAQ_CATEGORIES = [
   { key: 'data',       label: 'Privacy, data & build' },
 ] as const;
 
-const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
+const FAQ_ITEMS: { category: string; question: string; answer: string; links?: { href: string; label: string }[] }[] = [
   // ── AI consulting basics ──
   { category: 'basics', question: 'What does an AI consultant actually do?',
     answer: 'An AI consultant works out where AI is worth using in your business and how to use it safely. Day to day, that means sitting with the people who do the work, mapping how jobs flow today, finding the two or three tasks where AI saves real time, checking your data and Privacy Act duties, and recommending whether to buy a tool or build one. A good one then helps you put it live.' },
@@ -88,9 +88,22 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'basics', question: 'What is the 10-20-70 rule for AI?',
     answer: 'It is a rule of thumb, often attributed to Boston Consulting Group, that says roughly 10% of the effort in an AI project goes into the algorithms, 20% into technology and data, and 70% into people and processes. The exact numbers are not a law. The point holds: most AI projects fail on adoption and process, not on the model, so that is where we spend our time.' },
 
+  { category: 'basics', question: 'What is an AI strategy consultant?',
+    answer: 'An AI strategy consultant helps leadership decide where AI fits in the business, in what order and with what rules. The output is a short plan: the use cases worth doing, the benefit and risk of each, the data and systems they need, and who is accountable. Strategy alone does not save any hours. Ask whether the same consultant will help put the first use case live, or who will.' },
+  { category: 'basics', question: 'How can I use AI for my business?',
+    answer: 'Start with a job your team repeats every week and dislikes. Good first uses are drafting replies to common enquiries, reading invoices and documents into Xero or MYOB, summarising meetings into your CRM, answering after-hours calls, and preparing weekly reports. Pick one, measure how long it takes today, try it with a business version of ChatGPT, Claude, Copilot or Gemini, and only build something custom once the simple option runs out.' },
+  { category: 'basics', question: 'Which AI is best for small business owners?',
+    answer: 'Usually the one that fits the software you already pay for. If your business runs on Microsoft 365, Copilot works inside Outlook, Word and Excel. On Google Workspace, Gemini does the same in Gmail and Docs. ChatGPT and Claude are strong general assistants for writing and analysis. Use a business plan with proper data terms rather than a free personal account once customer information is involved.' },
+  { category: 'basics', question: 'Are AI consultants in high demand?',
+    answer: 'Yes, and supply has grown just as fast. The Australian Bureau of Statistics found about 12% of Australian businesses used AI in 2024–25, up from 1% in 2021–22, so many owners are looking for help for the first time. The catch is that anyone can call themselves an AI consultant. Ask for systems they have put live in a real business, and the name of the person who will do your work.' },
+
   // ── Choosing an AI consultant ──
   { category: 'choosing', question: 'What are some reputable AI consulting companies in Australia?',
-    answer: 'It depends on your size and goal. For large enterprise programs, Mantel, RUBIX, V2 AI and the Big Four are common names. For SMEs and mid-market firms, AI Consulting Group and Kinetic Consultancy in Sydney, Real Minds AI and Arcadian Digital in Melbourne, and Advancer and Osher Digital in Brisbane appear often. We list several, including us, further up this page, with a neutral note on each.' },
+    answer: 'It depends on your size and goal. For large enterprise programs, Mantel Group, Arinco and the Big Four are common names. For SMEs and mid-market firms, AI Consulting Group in Sydney, FlowWorks and Aivy in Melbourne, and Advancer and Osher Digital in Brisbane appear often. For a fact-checked comparison of AI consultancies and agencies, see our guide to the best AI agencies in Australia.',
+    links: [{ href: '/blog/best-ai-agencies-australia-2026', label: 'AI consultancies and agencies compared' }] },
+  { category: 'choosing', question: 'What are the 10 best AI consulting firms?',
+    answer: 'Any fixed top 10 is a marketing list, because the best firm for a bank is the wrong one for a 30-person distributor. Globally, the Big Four and firms such as Accenture and McKinsey lead on enterprise AI programs. For Australian SMEs and mid-market firms, we compare 13 AI agencies and consultancies, including us, by location, client size, platforms and published prices, each checked on the firm’s own website.',
+    links: [{ href: '/blog/best-ai-agencies-australia-2026', label: 'Best AI agencies in Australia (2026)' }] },
   { category: 'choosing', question: 'Who are the Big Four consultants in Australia?',
     answer: 'The Big Four are Deloitte, PwC, EY and KPMG. All four run AI consulting practices in Australia, alongside global strategy firms and large technology consultancies. They suit large organisations with board-level transformation programs. For a business of 20 to 200 people, their model is usually heavier and slower than the problem needs, and senior partners rarely do the hands-on work.' },
   { category: 'choosing', question: 'Should a mid-sized Australian business hire a Big Four firm for AI?',
@@ -110,7 +123,8 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
 
   // ── Cost & how it works ──
   { category: 'engagement', question: 'How much does an AI consultant cost?',
-    answer: 'It depends on scope, not a rate card. The main cost drivers are how many teams and processes are in scope, how scattered your data is, how many systems need connecting, how much privacy and governance work your sector needs, and whether you want advice only or advice plus a build. We scope after a free first call and quote a fixed price per stage.' },
+    answer: 'It depends on scope, not a rate card. The drivers are how many teams and processes are in scope, how scattered your data is, how many systems need connecting, how much privacy and governance work your sector needs, and whether you want advice only or advice plus a build. We quote a fixed price per stage after a free first call. Published Australian hourly and day rates are in our AI cost guide.',
+    links: [{ href: '/blog/ai-cost-australia-2026#ai-consultant-cost', label: 'What AI consultants charge in Australia' }] },
   { category: 'engagement', question: 'How do AI consultants charge?',
     answer: 'Most AI consultants in Australia charge in one of three ways: a fixed price for a defined piece of work such as a readiness assessment, time and materials for open-ended work, or a monthly retainer for ongoing advice. We prefer fixed prices per stage, so you know the cost before each step starts and can stop after any stage without a penalty.' },
   { category: 'engagement', question: 'How long does an AI readiness assessment take?',
@@ -144,18 +158,19 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
 ];
 
 /* ─── Named Australian AI consultancies (open self-disclosure, ItemList).
-       Each note is based on the company’s own website, fetched 2026-09-25. ── */
+       Companies and notes match /blog/best-ai-agencies-australia-2026 (own sites
+       checked 2026-09-26). ── */
 const AI_CONSULTANCIES: { name: string; note: string }[] = [
   { name: 'FactoryJet', note: 'That is us. An AI consultancy that also engineers: we run the readiness assessment, pick the use cases, check data and Privacy Act duties, and then design and build the system if a build is the right call. Founder involved on every engagement, and you own what we build.' },
-  { name: 'AI Consulting Group', note: 'A Sydney-based consultancy (head office in the CBD) covering data, IoT, machine learning and generative AI, with management consultants and project managers. It offers fixed-price and time-and-materials projects and serves clients in Australia, Europe and the Americas.' },
-  { name: 'Mantel', note: 'An Australian and New Zealand owned technology and AI consultancy with 900+ specialists across AI, data, cloud, digital and cyber security. Built for enterprise programs rather than a first SME project.' },
-  { name: 'RUBIX', note: 'An Australian data and AI consultancy with offices in Melbourne, Sydney and other capitals, focused on trusted data foundations, AI governance and practical AI delivery. It offers a free AI readiness check.' },
-  { name: 'Red Marble AI', note: 'An Australian AI software development and strategy company working with AI since 2017, covering AI strategy, AI governance, engineering and agents for larger organisations.' },
-  { name: 'Kinetic Consultancy', note: 'A Sydney-based AI consulting firm, with an office on Martin Place, focused on digital transformation and AI solutions for organisations of all sizes.' },
-  { name: 'Real Minds AI', note: 'A Melbourne AI consultant for Australian SMEs, combining operational transformation (connecting systems, removing manual work) with hands-on AI training, including Claude Code training.' },
-  { name: 'Arcadian Digital', note: 'A Melbourne engineering firm on Collins Street offering AI consulting, agentic AI, AI integrations and web applications, starting from the business bottleneck and working backwards.' },
-  { name: 'Advancer', note: 'A Brisbane AI agency offering AI training, AI agents, AI consulting, voice AI and custom AI, including a fractional AI director service.' },
-  { name: 'Osher Digital', note: 'Brisbane-based business automation consultants working across Australia, covering AI consulting, AI agent development, robotic process automation and system integrations.' },
+  { name: 'AI Consulting Group', note: 'Based on York Street, Sydney, with clients in Australia, New Zealand, Europe and the Americas. Covers data and AI strategy, machine learning, generative AI, AI governance and machine vision, on fixed-price or time-and-materials projects.' },
+  { name: 'Mantel Group', note: 'An Australian and New Zealand technology consultancy covering AI, data, cloud, digital and cyber security, with 850+ tech experts according to its site. Built for enterprise programs rather than a first SME project.' },
+  { name: 'Arinco', note: 'Offices in Melbourne, Sydney, Brisbane, Perth and Auckland. A Microsoft specialist building production copilots and agents on Azure, Microsoft 365 and Copilot Studio for enterprise and mid-market organisations.' },
+  { name: 'FlowWorks', note: 'Based on St Kilda Road, Melbourne, working with SMEs in every capital city. Starts with an AI readiness assessment, then builds automations, agents and voice AI connected to tools such as Xero, HubSpot, Google Workspace and Microsoft 365, with ongoing operations support.' },
+  { name: 'Aivy', note: 'Based in Kensington, Melbourne, working nationally with mid-market firms. Offers AI consulting, document and finance automation, Xero integration and chatbot development for accounting, ecommerce, healthcare, NDIS, professional services and real estate, with fixed-scope pilots.' },
+  { name: 'Advancer', note: 'Based in Fortitude Valley, Brisbane. Offers AI training, AI consulting and readiness assessments, AI agents for workflows and CRM updates, voice AI for call handling and bookings, and data consulting, on fixed-scope pilots.' },
+  { name: 'Edison AI', note: 'Based in Surry Hills, Sydney, serving small and medium businesses Australia-wide. Implements AI agents and workflow automation and trains staff to use AI, from readiness audits through to dashboards.' },
+  { name: 'Team 400', note: 'Brisbane head office, working across Sydney, Melbourne and Brisbane. Builds custom AI agents and the software around them, with strong Microsoft work (Azure OpenAI, Copilot Studio, Power Platform) plus .NET and React development, for mid-size and larger businesses.' },
+  { name: 'Osher Digital', note: 'Based on Eagle Street, Brisbane, working across Australia with small to mid-market businesses. Offers AI agent development, AI consulting, n8n automation, system integrations and custom ERP software.' },
 ];
 
 /* ─── Readiness checklist (interactive <details>) ─────────────────── */
@@ -933,7 +948,11 @@ export default function AiConsultingAUPage() {
               ))}
             </ul>
             <p style={srcNote}>
-              Firms named from live Australian search results and AI assistant answers for AI consulting queries, September 2026. Notes reflect each company’s own website on 25 September 2026. Listing is not endorsement.
+              Firms named from live Australian search results and AI assistant answers for AI consulting queries, September 2026. Each company’s own website was checked on 26 September 2026 for an Australian office and the services named. Listing is not endorsement.
+            </p>
+            <p className="mt-4" style={{ maxWidth: 760 }}>
+              For a wider shortlist, we compare 13 Australian AI consultancies and agencies by location, client size,
+              platforms and published prices in our <a href="/blog/best-ai-agencies-australia-2026" style={srcLink}>AI consultancies and agencies compared</a> guide.
             </p>
           </div>
         </section>
@@ -1018,7 +1037,7 @@ export default function AiConsultingAUPage() {
                             <svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5L7 9L11 5" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" /></svg>
                           </span>
                         </summary>
-                        <div className="faq-ans"><p>{f.answer}</p></div>
+                        <div className="faq-ans"><p>{f.answer}</p>{f.links ? <p style={{ marginTop: 8 }}>{f.links.map((l) => <a key={l.href} href={l.href} style={{ ...srcLink, marginRight: 16 }}>{l.label}</a>)}</p> : null}</div>
                       </details></li>
                     ))}</ul>
                   </div>

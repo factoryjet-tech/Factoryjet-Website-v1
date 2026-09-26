@@ -380,7 +380,7 @@ export default function AuSeoPage() {
               </li>
               <li className="svc-card">
                 <h3>Local SEO</h3>
-                <p className="mt-4">Google Business Profile set-up and repair, categories, service areas, photos, review replies and consistent business details across Australian directories. The highest-return work for trades, clinics and shopfronts.</p>
+                <p className="mt-4">Google Business Profile set-up and repair, categories, service areas, photos, review replies and consistent business details across Australian directories. The highest-return work for trades, clinics and shopfronts. For practices, see <a href="/au/dental-website-design#dental-seo" style={srcLink}>dental SEO in Australia</a>.</p>
               </li>
               <li className="svc-card">
                 <h3>Ecommerce and Shopify SEO</h3>
@@ -499,6 +499,10 @@ export default function AuSeoPage() {
                     should hide their address and show a service area instead. A common cause of suspension is a
                     service-area business, often a tradie, showing a home address it should have hidden.
                   </p>
+                  <p>
+                    For trade businesses, our <a href="/au/websites-for-tradies" style={srcLink}>tradie websites and SEO for tradies</a> page
+                    covers licence display rules and Google Business Profile setup.
+                  </p>
                 </div>
                 <p style={srcNote}>
                   Sources: <a href={SRC_LOCAL_RANK} target="_blank" rel="noopener noreferrer nofollow" style={srcLink}>Google, local ranking factors</a>;{' '}
@@ -543,6 +547,10 @@ export default function AuSeoPage() {
                     problems. On WooCommerce, Magento and BigCommerce the same principles apply with different
                     plumbing. Because we also <a href="/au/ecommerce-development" style={srcLink}>build ecommerce stores for Australian brands</a>,
                     we can fix the template causing the problem rather than patching around it.
+                  </p>
+                  <p>
+                    For the full playbook, see our <a href="/au/ecommerce-seo" style={srcLink}>ecommerce SEO agency page</a>,
+                    covering Shopify SEO, Magento, Google Shopping free listings and migrations.
                   </p>
                 </div>
               </div>
@@ -721,7 +729,7 @@ export default function AuSeoPage() {
               <details>
                 <summary>We run an online store and our collection pages do not rank</summary>
                 <div style={{ paddingBottom: 18 }}>
-                  <p style={{ fontSize: 15 }}><b>You need ecommerce SEO.</b> Collection copy, duplicate URL control and product data. If the store itself needs rebuilding, see <a href="/au/shopify-development" style={srcLink}>Shopify development in Australia</a>.</p>
+                  <p style={{ fontSize: 15 }}><b>You need ecommerce SEO.</b> Collection copy, duplicate URL control and product data. See <a href="/au/ecommerce-seo" style={srcLink}>ecommerce SEO services in Australia</a>. If the store itself needs rebuilding, see <a href="/au/shopify-development" style={srcLink}>Shopify development in Australia</a>.</p>
                 </div>
               </details>
               <details>
@@ -871,6 +879,10 @@ export default function AuSeoPage() {
                 <p className="mt-6" style={{ maxWidth: 580 }}>
                   Be careful with any SEO pricing that arrives before anyone has looked at your site. A package priced
                   on a call cannot know whether your problem is a single noindex tag or a year of link earning.
+                </p>
+                <p className="mt-4" style={{ maxWidth: 580 }}>
+                  Want to see what Australian providers publish? Our <a href="/blog/seo-cost-australia-2026" style={srcLink}>SEO cost in Australia guide</a> compares
+                  package, hourly and audit prices from six sources.
                 </p>
                 <div className="mt-8">
                   <ModalCTAButton label="Talk to the Founder" region="au" modalVariant="default" btnVariant="primary-light" />
@@ -1047,7 +1059,7 @@ export default function AuSeoPage() {
                             <svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5L7 9L11 5" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" /></svg>
                           </span>
                         </summary>
-                        <div className="faq-ans"><p>{f.answer}</p></div>
+                        <div className="faq-ans"><p>{f.answer}</p>{f.links ? <p style={{ marginTop: 8 }}>{f.links.map((l) => <a key={l.href} href={l.href} style={{ ...srcLink, marginRight: 16 }}>{l.label}</a>)}</p> : null}</div>
                       </details></li>
                     ))}</ul>
                   </div>

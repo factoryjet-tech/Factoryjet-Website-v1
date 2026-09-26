@@ -20,7 +20,7 @@ import '../au-service.css';
    digital.gov.au could not be fetched during research. See pageData.ts. */
 
 const UPDATED = '2026-09-25';
-const TITLE = 'Web Design & SEO Canberra | Accessible Sites for the ACT | FactoryJet';
+const TITLE = 'Web Design & SEO Canberra | Accessible Sites | FactoryJet';
 const H1 = 'Web design Canberra: accessible websites and SEO for ACT organisations';
 const DESCRIPTION =
   'Canberra web design and SEO for businesses, associations and public-sector suppliers. Accessible sites built to WCAG, fast, and yours to own. Free site review.';
@@ -733,14 +733,15 @@ export default function CanberraPage() {
                 <h2>What decides the cost of web design in Canberra</h2>
                 <p className="lead mt-4" style={{ maxWidth: 560 }}>
                   No price figures appear on this page on purpose. Accessibility retrofits vary enormously depending on how
-                  the existing site was built, and a number posted here would mislead most readers. Work usually takes one
-                  of four shapes.
+                  the existing site was built, and a number posted here would mislead most readers. Published market
+                  ranges are in our <a href="/blog/website-cost-australia-2026" style={link}>website cost guide</a>{' '}
+                  and <a href="/blog/seo-cost-australia-2026" style={link}>SEO cost guide</a>. Work usually takes one of four shapes.
                 </p>
                 <ul className="scope-list num-list mt-6" style={{ maxWidth: 580 }}>
                   <li><b>Free review.</b> Accessibility sample test, crawl, speed check and Google listing check, in a short written summary.</li>
                   <li><b>Accessibility remediation.</b> Fixing the failures on your existing site, ranked by how many people they block, with a retest.</li>
                   <li><b>Website build.</b> A fixed-scope accessible design and build. Sites of up to five pages can have 7-day delivery once content and approvals are ready.</li>
-                  <li><b>Support and search.</b> Keeping content current and accessible, plus search work if your audience actually searches.</li>
+                  <li><b>Support and search.</b> Keeping content current and accessible, plus search work if your audience actually searches. Monthly fixes and updates are covered by our <a href="/au/website-maintenance" style={link}>website maintenance</a> plans.</li>
                 </ul>
                 <div className="mt-8">
                   <ModalCTAButton label="Talk to the Founder" region="au" modalVariant="default" btnVariant="primary-light" />
@@ -853,7 +854,7 @@ export default function CanberraPage() {
                             <svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5L7 9L11 5" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" /></svg>
                           </span>
                         </summary>
-                        <div className="faq-ans"><p>{f.a}</p></div>
+                        <div className="faq-ans"><p>{f.a}</p>{f.links ? <p style={{ marginTop: 8 }}>{f.links.map((l) => <a key={l.href} href={l.href} style={{ ...link, marginRight: 16 }}>{l.label}</a>)}</p> : null}</div>
                       </details></li>
                     ))}</ul>
                   </div>

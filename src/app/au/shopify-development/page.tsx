@@ -71,7 +71,7 @@ const FAQ_CATEGORIES = [
   { key: 'after',    label: 'Australia and after launch' },
 ] as const;
 
-const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
+const FAQ_ITEMS: { category: string; question: string; answer: string; links?: { href: string; label: string }[] }[] = [
   // ── Hiring a Shopify developer ──
   { category: 'hiring', question: 'What does a Shopify developer do?',
     answer: 'A Shopify developer builds and changes the code behind a Shopify store. That covers the theme, which is the design layer written in Shopify’s Liquid language, plus custom sections, app setup, integrations with other software, and speed fixes. A good one also knows when to use an existing app instead of writing code, because every custom line is something you have to maintain.' },
@@ -88,17 +88,28 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'hiring', question: 'Who is the best Shopify agency in Australia?',
     answer: 'There is no single best one, only the best fit for your size and problem. Large Shopify Plus agencies suit enterprise retailers. Design-led studios suit fashion and beauty. Integration-heavy teams suit brands with an ERP or wholesale channel. We list several Australian Shopify agencies on this page, including us, with a neutral note on each. Talk to two or three and compare.' },
 
+  { category: 'hiring', question: 'What is a development store in Shopify?',
+    answer: 'A development store is a free Shopify store that registered Shopify Partners use to build and test a store before it goes live. It has most of the features of a paid plan, and you can place test orders, but it cannot take real payments. When the build is ready, the partner transfers ownership to you and you choose a paid plan. Ask your developer to build in a development store in your name or transfer it on launch.' },
+  { category: 'hiring', question: 'Can ChatGPT build me a Shopify store?',
+    answer: 'Not on its own. ChatGPT can write product descriptions, suggest a collection structure, draft policies and explain Liquid code, and Shopify has its own AI tools inside the admin. What it cannot do is set up your payments, GST, shipping rules and Xero connection, test real checkouts, or take responsibility when something breaks. Use it to speed up the writing and let a person handle the build and the testing.' },
+
   // ── Cost, fees and timelines ──
   { category: 'cost', question: 'How much does it cost to hire a Shopify developer?',
-    answer: 'It depends on scope, not an hourly rate. The big cost drivers are custom design versus an adapted theme, how many products and variants you have, how much data moves in a migration, how many systems connect (Xero, MYOB, an ERP, a 3PL), and whether you need B2B or Shopify Plus features. We quote a fixed price per stage after a free scoping call with the founder.' },
+    answer: 'It depends on scope, not an hourly rate. The big cost drivers are custom design versus an adapted theme, how many products and variants you have, how much data moves in a migration, how many systems connect (Xero, MYOB, an ERP, a 3PL), and whether you need B2B or Shopify Plus features. We quote a fixed price per stage after a free scoping call with the founder. For published Australian market ranges, see our Shopify cost in Australia guide.',
+    links: [{ href: '/blog/shopify-cost-australia-2026#developer-cost', label: 'Shopify developer costs in Australia' }] },
   { category: 'cost', question: 'How much does Shopify take from each sale?',
-    answer: 'It depends on your plan and how the customer pays. With Shopify Payments you pay a card processing fee, a percentage plus a small fixed amount, and the percentage falls on higher plans. With a third-party payment provider, Shopify adds its own transaction fee on top of that provider’s fee. Read the live rates on Shopify’s Australian pricing page, linked in the sources on this page.' },
+    answer: 'It depends on your plan and how the customer pays. With Shopify Payments you pay a card processing fee, a percentage plus a small fixed amount, and the percentage falls on higher plans. With a third-party payment provider, Shopify adds its own transaction fee on top of that provider’s fee. Our Shopify cost in Australia guide works out the fee on an example sale for every plan.',
+    links: [{ href: '/blog/shopify-cost-australia-2026#100-sale', label: 'What Shopify takes from each sale' }] },
   { category: 'cost', question: 'How long does a Shopify store build take?',
     answer: 'A store on an adapted theme with up to five pages can go live with our 7-day delivery. A custom theme store usually takes 3 to 5 weeks. An advanced build with integrations, B2B or a migration takes 5 to 8 weeks. A headless or heavily custom build takes 8 to 14 weeks. We confirm the timeline in writing once scope is agreed.' },
   { category: 'cost', question: 'What does 7-day delivery cover?',
     answer: '7-day delivery applies to Shopify sites of up to five pages built on a proven theme, with your products loaded, payments, shipping and GST set up, and the basics of SEO and analytics in place. It suits new brands and small catalogues. Custom design, migrations, B2B and integrations take longer, and we tell you that upfront rather than squeezing them into a week.' },
   { category: 'cost', question: 'How much does Shopify SEO cost?',
-    answer: 'Shopify SEO is priced by the work, not the keyword. A one-off technical clean-up after a build or migration is a fixed piece of work. Ongoing Shopify SEO, meaning content, collection pages and links over months, is usually a monthly engagement. The drivers are catalogue size, how much duplicate content the theme creates, and how competitive your category is.' },
+    answer: 'Shopify SEO is priced by the work, not the keyword. A one-off technical clean-up after a build or migration is a fixed piece of work. Ongoing Shopify SEO, meaning content, collection pages and links over months, is usually a monthly engagement. The drivers are catalogue size, how much duplicate content the theme creates, and how competitive your category is. Published Australian ecommerce SEO ranges are in our SEO cost guide.',
+    links: [
+      { href: '/blog/seo-cost-australia-2026#ecommerce-seo-cost', label: 'Ecommerce SEO cost in Australia' },
+      { href: '/au/ecommerce-seo', label: 'Shopify SEO services' },
+    ] },
   { category: 'cost', question: 'Are there hidden costs after a Shopify store launches?',
     answer: 'The recurring costs are known if you ask early: the Shopify plan, card or transaction fees, paid apps, a paid theme licence if you use one, domain and email, and any support plan. App fees are the one that creeps. We keep app count low and list every paid app in the handover, so you can see the monthly total before you commit.' },
 
@@ -116,15 +127,31 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'platform', question: 'What is headless Shopify, and do I need it?',
     answer: 'Headless means the shopfront customers see is a separate custom website, often built with Shopify’s Hydrogen framework, while Shopify still runs products, checkout and orders behind it. It gives total design freedom and can be very fast. It also costs more to build and maintain. Most Australian brands do not need it. A well-built theme store is the right answer far more often.' },
 
+  { category: 'platform', question: 'What is the downside of using Shopify?',
+    answer: 'Five come up most. Monthly costs grow as you add paid apps. Using a payment provider other than Shopify Payments adds a Shopify transaction fee. Checkout changes are limited below Shopify Plus. Web addresses must follow Shopify’s fixed pattern, such as /products/ and /collections/, which matters in a migration. And complex product builders or pricing rules can fight the platform. For most Australian direct-to-consumer brands these are manageable.',
+    links: [{ href: '/blog/best-ecommerce-platform-australia-2026', label: 'How Shopify compares with other platforms' }] },
+
   // ── Migrations, apps and SEO ──
   { category: 'build', question: 'Can you migrate my store to Shopify?',
     answer: 'Yes. We move stores to Shopify from WooCommerce, Magento (Adobe Commerce), BigCommerce, Maropost Commerce Cloud (formerly Neto), Wix and Squarespace. We migrate products, variants, images, customers, order history where needed, reviews and content, then map every old URL to its new home with 301 redirects. We rehearse the move on a copy of the store before switching your domain.' },
   { category: 'build', question: 'Will I lose my Google rankings if I move to Shopify?',
     answer: 'Not if the migration is done properly. Rankings drop when old URLs break, titles and descriptions get lost, or content is thinned out. We crawl your current site first, keep the pages that bring in traffic, redirect every old URL with a 301, move your metadata across, and check Google Search Console daily for the first weeks after launch.' },
   { category: 'build', question: 'Does Shopify do SEO, or do I need a Shopify SEO agency?',
-    answer: 'Shopify covers the basics: editable titles and descriptions, clean URLs, a sitemap and mobile-friendly themes. What it does not do is choose your keywords, write useful collection pages, fix duplicate product URLs a theme creates, or earn links. That is the work of a Shopify SEO agency or an in-house marketer. We build SEO basics into every store and offer ongoing work through our AI SEO team.' },
+    answer: 'Shopify covers the basics: editable titles and descriptions, clean URLs, a sitemap and mobile-friendly themes. What it does not do is choose your keywords, write useful collection pages, fix duplicate product URLs a theme creates, or earn links. That is the work of a Shopify SEO agency or an in-house marketer. We build SEO basics into every store and offer ongoing Shopify SEO services through our ecommerce SEO team.',
+    links: [{ href: '/au/ecommerce-seo', label: 'Shopify SEO agency' }] },
+  { category: 'build', question: 'Who can migrate my store from Magento, WooCommerce or Neto to Shopify in Australia?',
+    answer: 'We can, and so can most established Australian Shopify agencies. We move stores from Magento (Adobe Commerce), WooCommerce and Maropost Commerce Cloud, which was called Neto, with products, customers, order history and reviews, then redirect every old web address so Google rankings carry across. Whoever you choose, ask for a written redirect map and a rehearsal on a copy of the store before the domain switches.',
+    links: [{ href: '/blog/magento-to-shopify-plus-migration-checklist-2026', label: 'Magento to Shopify migration checklist' }] },
   { category: 'build', question: 'Can you connect Shopify to Xero or MYOB?',
     answer: 'Yes. Both have Shopify connections, either through their own app or a trusted connector. The real work is deciding what flows where: orders as invoices or daily summaries, how GST and payment fees are recorded, and how refunds are handled. We set it up with your bookkeeper so the numbers reconcile at month end, not just so the sync runs.' },
+  { category: 'build', question: 'How can I reconcile my Shopify payments in Xero?',
+    answer: 'The trick is that a Shopify payout is not the same as your sales. Each deposit is sales minus card fees and refunds, often across several days of orders. Record gross sales, fees and refunds separately through a clearing account, then match the payout to your bank feed. Connector apps such as A2X do this summary for you, so each Xero entry matches the deposit to the cent.' },
+  { category: 'build', question: 'What accounting software is best for Shopify?',
+    answer: 'For most Australian stores, Xero, because it is what most bookkeepers here use and it has well-tested Shopify connectors. MYOB is a sound choice if your business already runs on it, and QuickBooks works too. The software matters less than the setup: decide whether orders go in one by one or as daily summaries, and how GST, fees and refunds are recorded, with your bookkeeper before anything syncs.' },
+  { category: 'build', question: 'Which courier does Shopify use?',
+    answer: 'Shopify does not deliver parcels itself. Your store connects to carriers, and you choose which. Australian stores most often use Australia Post or its StarTrack service, Sendle, Aramex or CouriersPlease, either through the carrier’s own Shopify app or a multi-carrier app such as StarShipIt that prints labels and sends tracking emails. Live rates at checkout come from those connections.' },
+  { category: 'build', question: 'Which delivery partner is best for Shopify?',
+    answer: 'It depends on what you send and where. Australia Post has the widest reach, which matters for regional and remote postcodes. Sendle suits small, light parcels from small businesses. Courier services such as StarTrack or Aramex often suit heavier or bulkier items in metro areas. Many stores use two carriers through a multi-carrier app, sending each order with whichever is cheaper or faster for that postcode.' },
   { category: 'build', question: 'Can you set up Afterpay, Zip and Australian shipping?',
     answer: 'Yes. Afterpay and Zip both work with Shopify for buy now, pay later at checkout. For shipping we set up Australia Post, Sendle or StarShipIt, depending on your volumes and where you send, with live rates or flat rules, label printing and tracking emails. We test real checkouts end to end before launch, including a refund.' },
   { category: 'build', question: 'Can Shopify handle B2B wholesale in Australia?',
@@ -548,7 +575,9 @@ export default function ShopifyDevelopmentAUPage() {
                     Most Australian brands we talk to are not starting from scratch. They are on WooCommerce that has
                     become slow and plugin-heavy, Magento (Adobe Commerce) that has become expensive to keep patched,
                     Maropost Commerce Cloud (the platform formerly called Neto), BigCommerce, Wix or Squarespace. Our
-                    Shopify migration service moves all of it across in a planned order.
+                    Shopify migration service moves all of it across in a planned order. Weighing Shopify against
+                    Maropost, BigCommerce or WooCommerce first? Read{' '}
+                    <a href="/blog/best-ecommerce-platform-australia-2026" style={inLink}>which ecommerce platform suits an Australian store</a>.
                   </p>
                   <p>
                     We migrate products, variants, images, customer accounts, order history where you need it,
@@ -561,7 +590,8 @@ export default function ShopifyDevelopmentAUPage() {
                     at a quiet time. For the first weeks after launch we watch Google Search Console every day. If your
                     move also involves a new platform decision, our{' '}
                     <a href="/au/ecommerce-development" style={inLink}>ecommerce development team in Australia</a> can compare Shopify
-                    with the alternatives first.
+                    with the alternatives first. Our <a href="/au/ecommerce-seo" style={inLink}>Shopify SEO agency</a> team
+                    protects rankings before, during and after the move.
                   </p>
                 </div>
               </div>
@@ -597,6 +627,10 @@ export default function ShopifyDevelopmentAUPage() {
                   <li><b>Marketing and reviews.</b> Klaviyo or your email tool, a reviews app, and GA4 purchase tracking that matches what Shopify reports.</li>
                   <li><b>Custom apps.</b> When no app does the job, a small private app using Shopify’s API, the doorway that lets other software read and write store data.</li>
                 </ul>
+                <p className="mt-6" style={{ maxWidth: 580 }}>
+                  Many stores add an AI agent that answers where-is-my-order and returns questions inside Gorgias or
+                  Zendesk; see <a href="/au/ai-customer-service" style={inLink}>AI customer service for Shopify stores</a>.
+                </p>
               </div>
               <div className="card" style={{ padding: 8 }}>
                 <img src="/images/au/shopify-development/shopify-development-integrations.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over-the-shoulder view of a Sydney online store's dispatch desk: an order dashboard on the laptop, a label printer feeding out a shipping label and a stack of courier satchels ready to go" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
@@ -776,6 +810,11 @@ export default function ShopifyDevelopmentAUPage() {
                   <li><b>B2B and Plus features.</b> Trade pricing, checkout extensions and custom Functions.</li>
                   <li><b>Support after launch.</b> Whether you want a monthly plan or call us as needed.</li>
                 </ul>
+                <p className="mt-6" style={{ maxWidth: 580 }}>
+                  Want the numbers? Our <a href="/blog/shopify-cost-australia-2026" style={inLink}>Shopify cost in Australia guide</a> lists
+                  every plan price and fee in AUD, <a href="/blog/shopify-cost-australia-2026#100-sale" style={inLink}>what Shopify takes from each sale</a>,
+                  and published <a href="/blog/shopify-cost-australia-2026#developer-cost" style={inLink}>Shopify developer costs in Australia</a>.
+                </p>
                 <div className="mt-8">
                   <ModalCTAButton label="Get a fixed-scope Shopify quote" region="au" modalVariant="default" btnVariant="primary-light" />
                 </div>
@@ -962,7 +1001,8 @@ export default function ShopifyDevelopmentAUPage() {
                 <p>
                   We work the other way. The engineers who build your store support it, the handover documents every
                   app and integration, and the code sits in version control in your name. Support is a monthly plan or
-                  on request, whichever suits you.
+                  on request, whichever suits you. See what a{' '}
+                  <a href="/au/website-maintenance" style={inLink}>Shopify and website care plan</a> includes.
                 </p>
               </div>
             </div>
@@ -1039,7 +1079,7 @@ export default function ShopifyDevelopmentAUPage() {
                             <svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5L7 9L11 5" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" /></svg>
                           </span>
                         </summary>
-                        <div className="faq-ans"><p>{f.answer}</p></div>
+                        <div className="faq-ans"><p>{f.answer}</p>{f.links ? <p style={{ marginTop: 8 }}>{f.links.map((l) => <a key={l.href} href={l.href} style={{ ...srcLink, marginRight: 16 }}>{l.label}</a>)}</p> : null}</div>
                       </details></li>
                     ))}</ul>
                   </div>
