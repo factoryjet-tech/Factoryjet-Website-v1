@@ -340,7 +340,11 @@
 .au-review--system .au-svc main > section:nth-of-type(7) p:first-child { grid-column: 1; margin: 0 !important; color: var(--review-ink) !important; }
 .au-review--system .au-svc main > section:nth-of-type(7) h2 + p { grid-column: 2; grid-row: 1 / 3; margin: 0 !important; align-self: end; color: var(--review-ink) !important; }
 .au-review--system .au-svc main > section:nth-of-type(7) div:last-child { grid-column: 1 / -1; margin-top: 0 !important; }
-.au-review--system .au-svc main > section:nth-of-type(7) a { border-radius: 0 !important; background: var(--review-ink) !important; }
+.au-review--system .au-svc main > section:nth-of-type(7) a {
+  border-radius: 0 !important;
+  background: var(--review-ink) !important;
+  color: #fff !important;
+}
 .au-review--system .au-svc main > section:nth-of-type(7) span { color: var(--review-ink) !important; }
 .au-review--system .au-svc main > section:nth-of-type(7) a span { color: #fff !important; }
 
