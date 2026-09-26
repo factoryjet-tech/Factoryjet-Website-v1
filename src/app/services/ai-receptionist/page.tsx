@@ -15,7 +15,7 @@ const CANONICAL_URL = 'https://factoryjet.com/services/ai-receptionist';
 const PAGE_TITLE = 'AI Receptionist | Custom 24/7 AI Phone Answering | FactoryJet';
 const PAGE_DESC =
   'A custom AI receptionist that answers every call 24/7, qualifies the caller, and books the job straight into your CRM or scheduling software. Built for your business, not a template. Get a free call audit.';
-const PAGE_MODIFIED = '2026-09-07';
+const PAGE_MODIFIED = '2026-09-26';
 
 // Single source of truth for the breadcrumb trail. Feeds both the visible
 // <Breadcrumbs> component and the BreadcrumbList JSON-LD below so the two
@@ -40,6 +40,9 @@ export const metadata: Metadata = {
     '24/7 ai receptionist',
     'ai receptionist for contractors',
     'ai answering service for hvac and plumbing',
+    'ai voice agent',
+    'ai voice agent development',
+    'conversational ai voice agent',
   ],
   alternates: {
     canonical: CANONICAL_URL,
@@ -77,6 +80,7 @@ const FAQ_CATEGORIES: ReadonlyArray<FAQCategory> = [
   { key: 'dispatch', label: 'Integrations & Scheduling' },
   { key: 'trades', label: 'Trades: Vertical Logic' },
   { key: 'roi', label: 'Setup & Business Value' },
+  { key: 'telephony', label: 'Telephony, Compliance & Testing' },
 ];
 
 const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
@@ -244,6 +248,46 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'trades',
     question: 'Can one agent handle a business that runs HVAC, plumbing, and electrical under the same roof?',
     answer: 'Yes. For multi-trade contractors, agent orchestration keeps the HVAC diagnostic questions separate from the plumbing and electrical ones. Each set of questions matches whichever service the caller actually asked about. The caller never notices a handoff between trade logic. Each trade still books into its own crew and its own slice of the dispatch board.',
+  },
+  {
+    category: 'telephony',
+    question: "Which phone systems and telephony providers does an AI receptionist work with?",
+    answer: "We build on Twilio Voice or Telnyx SIP trunking and connect to RingCentral, Asterisk and most cloud PBX systems. You keep your existing business numbers. Calls can forward to the agent full time, only after hours, or only when your team does not pick up in time. The same carrier connection also sends the SMS confirmations, so you manage one telephony vendor, not three.",
+  },
+  {
+    category: 'telephony',
+    question: "How fast does an AI voice agent respond on a live call?",
+    answer: "Our target is under 500 milliseconds from the moment the caller stops talking to the first word back. Streaming speech-to-text takes roughly 120ms, the reasoning step plus any calendar or CRM lookup about 180ms, and speech synthesis about 120ms. When a lookup runs longer, the agent says a short filler such as \"let me check that for you\" so the caller never sits in dead air.",
+  },
+  {
+    category: 'telephony',
+    question: "Does an AI receptionist have to follow TCPA and FCC calling rules?",
+    answer: "Answering calls people make to you is not telemarketing, but callbacks and follow-up texts can fall under TCPA and FCC rules, so we build them into the agent. Callbacks only go out inside the recipient's local 8am to 9pm window, worked out from area code and ZIP. A spoken \"stop calling\" is logged as an opt-out across your CRM lists straight away. Every call opens with your company name and a plain statement that the caller is talking to an AI assistant.",
+  },
+  {
+    category: 'telephony',
+    question: "How do we test the AI receptionist before it takes real customer calls?",
+    answer: "Before launch your team gets a private staging number. Staff call it the way real customers do: from a noisy truck, with strong accents, interrupting mid-sentence, asking the awkward questions you actually get. You read the transcripts and listen to the recordings, we fix whatever sounds wrong, and only then do we forward live lines, usually starting with after-hours or overflow calls.",
+  },
+  {
+    category: 'telephony',
+    question: "Can the agent spell back confirmation codes, email addresses and dates correctly?",
+    answer: "Yes. Names, email addresses, policy numbers and confirmation codes are where phone agents usually slip, so we load a pronunciation list for your business and have the agent read critical details back with phonetic spelling, like \"B as in bravo\". If the caller corrects anything, the agent confirms again before it writes the detail to your CRM or calendar.",
+  },
+  {
+    category: 'telephony',
+    question: "Are call recordings and transcripts stored securely?",
+    answer: "Recordings, transcripts and call data are encrypted in transit and at rest, and they sit in a storage bucket in your own AWS or Google Cloud account, not ours. You decide how long they are kept. Staff sign in through single sign-on, and role-based access keeps the front-desk view separate from the owner view, so not everyone can play back every call.",
+  },
+  {
+    category: 'telephony',
+    question: "When is an AI receptionist not worth building?",
+    answer: "If you get fewer than about 100 calls a month, forwarding to a mobile is usually enough, and we will say so. We also do not build outbound robocall or telemarketing dialers. And a voice agent should never give medical, legal or psychiatric advice: in a clinic or firm it handles scheduling, directions and intake, then hands anything that needs professional judgment to a person.",
+  },
+  {
+    category: 'telephony',
+    question: "Can the agent route key accounts or callers from certain regions differently?",
+    answer: "Yes. While the call connects, the agent looks up the caller's number in HubSpot or Salesforce. Key accounts can go straight to their account manager, and area code or location data can send a caller to the nearest branch or a state-licensed specialist. Everyone else is handled by the agent from greeting to booked appointment, with a summary logged to the record.",
   },
 ];
 
@@ -1028,6 +1072,92 @@ export default function AiReceptionistPage() {
                 </p>
               </li>
             </ul>
+          </div>
+        </section>
+
+        {/* VOICE AGENT ENGINEERING: merged from /services/ai-agent-development/ai-voice-agent (301, 2026-09-26) */}
+        <section id="voice-agent-development" className="py-20 bg-white border-b border-[#E7DED6]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl mb-12">
+              <div className="font-mono text-xs text-[#B23E13] font-bold uppercase tracking-wider mb-2">
+                // AI VOICE AGENT DEVELOPMENT
+              </div>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-4">Under the Hood: Speed, Call Rules and Honest Limits.</h2>
+              <p className="text-lg text-[#46403B]">
+                An AI receptionist is a voice agent with one job: answer your line and finish the task on the call. Three things decide whether callers trust it. How fast it answers, whether its callbacks follow US calling rules, and whether it knows what it should never try to do.
+              </p>
+            </div>
+
+            <div className="mb-12">
+              <h3 className="text-xl font-bold text-[#14110F] mb-2">The Latency Budget for Every Spoken Reply.</h3>
+              <p className="text-sm text-[#46403B] mb-6 max-w-3xl">Conversation feels natural when a reply lands in well under a second. This is how we split the time on every turn.</p>
+              <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 list-none p-0">
+                <li className="p-6 rounded-2xl bg-white border border-[#E7DED6]">
+                  <div className="font-mono text-xs text-[#B23E13] font-bold mb-2">~120 MS // LISTEN</div>
+                  <p className="text-base font-bold text-[#14110F] mb-2">Streaming speech-to-text.</p>
+                  <p className="text-sm text-[#46403B] leading-relaxed">The caller's words are transcribed as they speak, with a pronunciation list for your names, codes and street addresses.</p>
+                </li>
+                <li className="p-6 rounded-2xl bg-white border border-[#E7DED6]">
+                  <div className="font-mono text-xs text-[#B23E13] font-bold mb-2">~180 MS // THINK</div>
+                  <p className="text-base font-bold text-[#14110F] mb-2">Reasoning and lookups.</p>
+                  <p className="text-sm text-[#46403B] leading-relaxed">The model works out what the caller wants and checks your calendar, CRM or price list through its API.</p>
+                </li>
+                <li className="p-6 rounded-2xl bg-white border border-[#E7DED6]">
+                  <div className="font-mono text-xs text-[#B23E13] font-bold mb-2">~120 MS // SPEAK</div>
+                  <p className="text-base font-bold text-[#14110F] mb-2">Neural speech synthesis.</p>
+                  <p className="text-sm text-[#46403B] leading-relaxed">The reply streams back as audio while it is still being generated, so the agent starts talking without a pause.</p>
+                </li>
+                <li className="p-6 rounded-2xl bg-white border border-[#E7DED6]">
+                  <div className="font-mono text-xs text-[#B23E13] font-bold mb-2">UNDER 500 MS // TOTAL</div>
+                  <p className="text-base font-bold text-[#14110F] mb-2">The whole turn.</p>
+                  <p className="text-sm text-[#46403B] leading-relaxed">From the caller finishing a sentence to the first word back. Past about a second, conversations start to feel robotic.</p>
+                </li>
+              </ul>
+            </div>
+
+            <div className="mb-12">
+              <h3 className="text-xl font-bold text-[#14110F] mb-2">TCPA and FCC Rules Built Into Callbacks.</h3>
+              <p className="text-sm text-[#46403B] mb-6 max-w-3xl">Answering calls people make to you is not telemarketing. Callbacks and follow-up texts can be covered by the TCPA and the FCC&apos;s rules at 47 CFR 64.1200, so the agent enforces them itself.</p>
+              <ul className="grid grid-cols-1 md:grid-cols-3 gap-4 list-none p-0">
+                <li className="p-6 rounded-2xl bg-white border border-[#E7DED6]">
+                  <div className="font-mono text-xs text-[#B23E13] font-bold mb-2">CALLING WINDOWS</div>
+                  <p className="text-base font-bold text-[#14110F] mb-2">Callbacks inside 8am to 9pm local time.</p>
+                  <p className="text-sm text-[#46403B] leading-relaxed">The agent works out the recipient's time zone from area code and ZIP before any callback or follow-up text goes out.</p>
+                </li>
+                <li className="p-6 rounded-2xl bg-white border border-[#E7DED6]">
+                  <div className="font-mono text-xs text-[#B23E13] font-bold mb-2">OPT-OUTS</div>
+                  <p className="text-base font-bold text-[#14110F] mb-2">Do-not-call requests logged at once.</p>
+                  <p className="text-sm text-[#46403B] leading-relaxed">When a caller says &quot;stop calling&quot; or &quot;remove my number&quot;, the agent confirms it out loud and writes a suppression flag to every CRM list.</p>
+                </li>
+                <li className="p-6 rounded-2xl bg-white border border-[#E7DED6]">
+                  <div className="font-mono text-xs text-[#B23E13] font-bold mb-2">DISCLOSURE</div>
+                  <p className="text-base font-bold text-[#14110F] mb-2">A plain AI disclosure on every call.</p>
+                  <p className="text-sm text-[#46403B] leading-relaxed">Each call opens with your company name, the reason for the call where there is one, and a clear statement that the caller is talking to an AI assistant.</p>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-bold text-[#14110F] mb-2">When You Should Not Build One.</h3>
+              <p className="text-sm text-[#46403B] mb-6 max-w-3xl">We would rather lose the project than sell a voice agent that will not pay back.</p>
+              <ul className="grid grid-cols-1 md:grid-cols-3 gap-4 list-none p-0">
+                <li className="p-6 rounded-2xl bg-white border border-[#E7DED6]">
+                  <div className="font-mono text-xs text-[#B23E13] font-bold mb-2">LOW VOLUME</div>
+                  <p className="text-base font-bold text-[#14110F] mb-2">Fewer than about 100 calls a month.</p>
+                  <p className="text-sm text-[#46403B] leading-relaxed">Forwarding to a mobile is usually enough. Build a voice agent when missed calls are costing you real revenue.</p>
+                </li>
+                <li className="p-6 rounded-2xl bg-white border border-[#E7DED6]">
+                  <div className="font-mono text-xs text-[#B23E13] font-bold mb-2">OUTBOUND BLASTS</div>
+                  <p className="text-base font-bold text-[#14110F] mb-2">Robocall and telemarketing dialers.</p>
+                  <p className="text-sm text-[#46403B] leading-relaxed">We do not build them. We build inbound answering, callbacks people asked for, and lead qualification.</p>
+                </li>
+                <li className="p-6 rounded-2xl bg-white border border-[#E7DED6]">
+                  <div className="font-mono text-xs text-[#B23E13] font-bold mb-2">PROFESSIONAL ADVICE</div>
+                  <p className="text-base font-bold text-[#14110F] mb-2">Medical, legal or psychiatric advice.</p>
+                  <p className="text-sm text-[#46403B] leading-relaxed">A voice agent should never give it. In a clinic or firm it books, directs and takes intake, then hands the caller to a person.</p>
+                </li>
+              </ul>
+            </div>
           </div>
         </section>
 

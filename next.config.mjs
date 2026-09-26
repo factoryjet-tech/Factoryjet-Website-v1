@@ -102,6 +102,14 @@ const nextConfig = {
       { source: '/services/ai-agent-development/ai-customer-support',    destination: '/services/ai-customer-support-agents', permanent: true },
       { source: '/services/ai-agents-for-healthcare',                    destination: '/services/healthcare-ai-agents',       permanent: true },
       { source: '/services/ai-agent-development/ai-sales-agent',         destination: '/services/ai-sdr',                     permanent: true },
+      // US consolidation (2026-09-26). Prod layer is /public/_redirects
+      { source: '/austin/ai-agents',                             destination: '/services/ai-agent-development',       permanent: true },
+      { source: '/denver/ai-agents',                             destination: '/services/ai-agent-development',       permanent: true },
+      { source: '/raleigh/ai-agents',                            destination: '/services/ai-agent-development',       permanent: true },
+      { source: '/charlotte/ai-automation',                      destination: '/services/ai-automation',              permanent: true },
+      { source: '/miami/ai-automation',                          destination: '/services/ai-automation',              permanent: true },
+      { source: '/services/ai-agent-development/ai-voice-agent', destination: '/services/ai-receptionist',            permanent: true },
+      { source: '/compare/shopify-vs-woocommerce',               destination: '/comparisons/shopify-vs-woocommerce',  permanent: true },
       // UK sitemap legacy URLs
       { source: '/uk/sitemap-index.xml',    destination: '/sitemap.xml',            permanent: true },
       { source: '/uk/sitemap-cities.xml',   destination: '/sitemap-uk/sitemap.xml', permanent: true },

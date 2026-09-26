@@ -912,6 +912,12 @@ export default function WebsiteRedesignPage() {
               <a href="/blog/austin-ecommerce-checkout-optimization-2026" className="block p-5 rounded-lg border border-[#E5E5E0] bg-white hover:border-[#F05A28] transition-colors">
                 <p className="text-sm font-semibold text-[#0F0F12] leading-snug">Austin ecommerce checkout optimization: redesign-ready playbook</p>
               </a>
+              <a href="/services/webflow-development#migration" className="block p-5 rounded-lg border border-[#E5E5E0] bg-white hover:border-[#F05A28] transition-colors">
+                <p className="text-sm font-semibold text-[#0F0F12] leading-snug">Moving platforms as part of the redesign? How to migrate to Webflow without losing rankings</p>
+              </a>
+              <a href="/services/website-maintenance" className="block p-5 rounded-lg border border-[#E5E5E0] bg-white hover:border-[#F05A28] transition-colors">
+                <p className="text-sm font-semibold text-[#0F0F12] leading-snug">Once the new site is live: website maintenance that keeps it updated and secure</p>
+              </a>
             </div>
           </div>
         </section>

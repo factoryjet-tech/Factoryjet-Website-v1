@@ -32,7 +32,6 @@ function AiAgentFaqAccordion() {
 
 const AGENT_DIRECTORY: { group: string; lead: string; items: { title: string; href: string; line: string }[] }[] = [
   { group: 'By job', lead: 'Agents that take a specific job off a team.', items: [
-    { title: 'AI Voice Agents', href: '/services/ai-agent-development/ai-voice-agent', line: 'Inbound calls, qualification and booking by phone' },
     { title: 'AI Receptionist', href: '/services/ai-receptionist', line: 'Answers every call 24/7 and books into your calendar' },
     { title: 'AI Customer Support Agents', href: '/services/ai-customer-support-agents', line: 'Resolves Zendesk, Gorgias and Intercom tickets' },
     { title: 'AI SDR & BDR Agents', href: '/services/ai-sdr', line: 'Replies to inbound leads, qualifies, books meetings' },
@@ -46,6 +45,7 @@ const AGENT_DIRECTORY: { group: string; lead: string; items: { title: string; hr
     { title: 'Manufacturing Operations Agent', href: '/services/ai-agent-development/manufacturing-operations-agent', line: 'Answers from ERP, CMMS and shop-floor data' },
     { title: 'AI Workflow Automation', href: '/services/ai-workflow-automation', line: 'Multi-step processes across your tools' },
     { title: 'AI Integration Services', href: '/services/ai-integration-services', line: 'Connect AI to your CRM, ERP and apps' },
+    { title: 'AI Development Services', href: '/services/ai-development', line: 'Custom AI, RAG and integrations that draft, not act' },
     { title: 'AI Automation', href: '/services/ai-automation', line: 'Lead follow-up, invoicing and reporting, automated' },
     { title: 'AI Agent Monitoring', href: '/services/ai-agent-monitoring', line: 'Support, evaluations and upkeep after launch' },
   ] },
@@ -291,7 +291,7 @@ export default function AiAgentDevelopmentSections() {
                 </div>
                 <div className="fact">
                   <div className="sec">§04</div>
-                  <p>The three vendor categories are platforms (you build it yourself with LangGraph, CrewAI, or AutoGen), enterprise consultancies (large-scale, slow, expensive), and specialist agentic AI development companies (custom-built, production-focused, faster than a consultancy, more accountable than a platform).</p>
+                  <p>The three vendor categories are platforms (you build it yourself with LangGraph, CrewAI, or AutoGen), enterprise consultancies (large-scale, slow, expensive), and specialist agentic AI development companies (custom-built, production-focused, faster than a consultancy, more accountable than a platform). Not sure an agent is the right first project? Our <a href="/services/ai-consulting" style={{ color: 'var(--accent-text)', textDecoration: 'underline', textUnderlineOffset: 3 }}>AI consulting services</a> start with a readiness assessment and tell you.</p>
                 </div>
                 <div className="fact">
                   <div className="sec">§05</div>
@@ -397,7 +397,7 @@ export default function AiAgentDevelopmentSections() {
                   <span>SCADA</span>
                 </div>
               </a>
-              <a className="cap cap-3" href="/services/ai-agent-development/ai-voice-agent">
+              <a className="cap cap-3" href="/services/ai-receptionist">
                 <div className="caphead">
                   <span className="capid">CAP‑03</span>
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C94A1A" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -405,7 +405,7 @@ export default function AiAgentDevelopmentSections() {
                   </svg>
                 </div>
                 <CapabilityDiagram kind={2} />
-                <h3>AI Voice Agents</h3>
+                <h3>AI Receptionist &amp; Voice Agents</h3>
                 <p>Answers and routes business calls, hands off to a human the moment confidence drops.</p>
                 <div className="systags">
                   <span>Telephony</span>
@@ -561,6 +561,7 @@ export default function AiAgentDevelopmentSections() {
               <a href="/services/ai-automation">Compare: AI Agent Development vs. AI Automation vs. AI Integration Services</a>
               <a href="/blog/what-is-agentic-ai">What Is Agentic AI? A Plain-Language Guide</a>
               <a href="/tools/ai-agent-roi-calculator">AI Agent Cost Calculator</a>
+              <a href="/blog/best-ai-consulting-firms-usa-2026">Who does AI strategy vs. who builds: AI consulting firms in the USA, compared</a>
             </div>
           </div>
         </section>

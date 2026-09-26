@@ -639,7 +639,7 @@ export const post: BlogPost = {
       <p>
         A fifth shape, voice, is the same architecture with speech in and speech out, and stricter
         latency requirements that change both the model choices and the cost. That one has its own
-        page: <a href="/services/ai-agent-development/ai-voice-agent">AI voice agents</a>.
+        page: <a href="/services/ai-receptionist">AI receptionists and voice agents</a>.
       </p>
       <p>
         Two patterns run through all of them. Each one owns a <strong>queue</strong> with a
@@ -778,6 +778,13 @@ export const post: BlogPost = {
         want it scoped against your actual systems,{' '}
         <a href="/services/ai-agent-development">AI agent development</a> is the page to read next.
         The first conversation should be about the queue, not the model.
+      </p>
+      <p>
+        Two other routes, depending on where you are. If you need AI that drafts and answers rather
+        than acts, our <a href="/services/ai-development">custom AI development</a> page covers scope
+        and timelines. If you need help deciding what to build first, our{' '}
+        <a href="/services/ai-consulting">AI consulting services</a> start with a fixed-scope
+        readiness assessment.
       </p>
 
       <div className="bg-[#FAF8F5] border-2 border-[#E5DFD7] p-6 sm:p-8 rounded-xl my-10 shadow-sm">

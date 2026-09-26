@@ -12,7 +12,7 @@
 .aiSeoHub .fact li b { color: var(--ink); font-weight: 600; }
 
 /* Links inside prose blocks */
-.aiSeoHub .sub-note a, .aiSeoHub .chg-note a, .aiSeoHub .tableSubLabel a { color: var(--accent-text); text-decoration: underline; text-underline-offset: 3px; }
+.aiSeoHub .sub-note a, .aiSeoHub .chg-note a, .aiSeoHub .tableSubLabel a, .aiSeoHub .plat-head p a { color: var(--accent-text); text-decoration: underline; text-underline-offset: 3px; }
 .aiSeoHub .sub-note { margin-top: 18px; font-size: 13px; color: var(--muted); line-height: 1.7; }
 
 /* Photos: the illustrations are drawn on white, so show them whole */

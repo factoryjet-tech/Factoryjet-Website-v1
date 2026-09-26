@@ -940,6 +940,13 @@ export default function ShopifyMaintenanceServicesPage() {
               It covers theme and app updates, bug fixes, Shopify platform changes, speed and checkout monitoring, and integration
               upkeep. Choose one by its response times, included hours, platform depth and who does the work.
             </p>
+            <p style={{ marginTop: '12px', fontSize: '15px', lineHeight: 1.6, color: '#14110F' }}>
+              Not on Shopify? Our{' '}
+              <a href="/services/website-maintenance" style={{ color: '#B23E13', textDecoration: 'underline', textUnderlineOffset: 3 }}>
+                website maintenance services
+              </a>{' '}
+              cover WordPress, Webflow and custom sites.
+            </p>
           </div>
         </section>
 

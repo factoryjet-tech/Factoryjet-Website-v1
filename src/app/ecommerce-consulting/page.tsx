@@ -481,6 +481,8 @@ export default function EcommerceConsultingPage() {
               <Link href="/services/ecommerce-development" className="font-semibold text-[#C94A1A] underline">e-commerce development</Link>,{' '}
               <Link href="/b2b-ecommerce" className="font-semibold text-[#C94A1A] underline">B2B e-commerce</Link>, and{' '}
               <Link href="/omnichannel-commerce" className="font-semibold text-[#C94A1A] underline">omnichannel commerce</Link>.
+              {' '}For AI across support, sales and operations, not only the store, see{' '}
+              <Link href="/services/ai-consulting" className="font-semibold text-[#C94A1A] underline">AI consulting</Link>.
             </p>
           </div>
         </section>

@@ -158,7 +158,7 @@ export default function WebDesignHubSections() {
                 <div className="fact"><div className="sec">§02</div><p><span className="stat">53% of mobile site visits are likely to be abandoned if pages take longer than 3 seconds to load.</span> Speed is not a finishing touch. It decides whether people see your offer at all. <a href="https://blog.google/products/admanager/the-need-for-mobile-speed/" target="_blank" rel="noopener nofollow">Google, 2016 ↗</a></p></div>
                 <div className="fact"><div className="sec">§03</div><p><span className="stat">People form a first opinion of a web page in about 50 milliseconds</span>, before they read a word. Clear layout and a plain headline do more in that moment than any animation. <a href="https://www.tandfonline.com/doi/abs/10.1080/01449290500330448" target="_blank" rel="noopener nofollow">Lindgaard et al., 2006 ↗</a></p></div>
                 <div className="fact"><div className="sec">§04</div><p><span className="stat">Google says there is no special markup needed to appear in its AI Overviews.</span> The same basics apply: pages that can be crawled and indexed, with the important content in text. A site built right for Google is most of the way to being read by AI assistants too. <a href="https://developers.google.com/search/docs/appearance/ai-features" target="_blank" rel="noopener nofollow">Google Search Central ↗</a></p></div>
-                <div className="fact"><div className="sec">§05</div><p>The most common way a website fails is after launch, not before. The agency goes quiet, plugins go stale, and nobody remembers which old URLs needed redirects. We build every site so your team can run it, and we stay on to support it.</p></div>
+                <div className="fact"><div className="sec">§05</div><p>The most common way a website fails is after launch, not before. The agency goes quiet, plugins go stale, and nobody remembers which old URLs needed redirects. We build every site so your team can run it, and we stay on to support it. See how our <a href="/services/website-maintenance">website maintenance</a> keeps it that way.</p></div>
               </div>
               <div className="factphoto">
                 <img width="900" height="600" src="/images/web-design-hub/web-design-page-model.webp" alt="AI-generated model of responsive website design: a white web page layout connected to a matching phone layout by a glass tube" loading="lazy" decoding="async" />
@@ -300,10 +300,10 @@ export default function WebDesignHubSections() {
                 </dl>
                 <span className="plat-go" aria-hidden="true">↗</span>
               </a>
-              <div className="plat" role="listitem">
+              <a className="plat" role="listitem" href="/services/webflow-development">
                 <span className="capid">PLT-02</span>
                 <div className="plat-name"><h3>Webflow</h3><p className="pw-fit"><span className="k">Best for</span>Marketing teams that want visual control and no plugin upkeep</p></div>
-                <p className="pw-build"><span className="k">What we build</span>We work as a Webflow agency for B2B marketing sites: a clean class system, CMS collections for blogs, case studies, and resources, and forms wired to your CRM.</p>
+                <p className="pw-build"><span className="k">What we build</span>We work as a Webflow development agency for B2B marketing sites: a clean class system, CMS collections for blogs, case studies, and resources, and forms wired to your CRM.</p>
                 <dl className="pw-trade">
                   <dt>Editor</dt><dd>Visual editor, so marketers can publish without a developer</dd>
                   <dt>Speed</dt><dd>Fast by default on Webflow&apos;s managed hosting</dd>
@@ -311,8 +311,8 @@ export default function WebDesignHubSections() {
                   <dt>Ecosystem</dt><dd>Smaller app marketplace. Complex features often need custom code</dd>
                   <dt>Lock-in</dt><dd>Medium to high. The site lives on Webflow, and moving off usually means a rebuild</dd>
                 </dl>
-                <span className="plat-go" aria-hidden="true"></span>
-              </div>
+                <span className="plat-go" aria-hidden="true">↗</span>
+              </a>
               <div className="plat" role="listitem">
                 <span className="capid">PLT-03</span>
                 <div className="plat-name"><h3>Framer</h3><p className="pw-fit"><span className="k">Best for</span>Startups and launch sites that need to look sharp and ship fast</p></div>
@@ -388,7 +388,7 @@ export default function WebDesignHubSections() {
                 </tbody>
               </table>
             </div>
-            <p className="tablenote">On SEO, the platform matters less than the build. Keep the real content in the HTML, keep pages fast, and redirect every old URL. For JavaScript sites, Google says server-side or pre-rendering is still a great idea because not all bots can run JavaScript (<a href="https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics" target="_blank" rel="noopener nofollow">Google Search Central</a>). More detail in the <a href="#faq-platforms">platform FAQs</a>.</p>
+            <p className="tablenote">On SEO, the platform matters less than the build. Keep the real content in the HTML, keep pages fast, and redirect every old URL. For JavaScript sites, Google says server-side or pre-rendering is still a great idea because not all bots can run JavaScript (<a href="https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics" target="_blank" rel="noopener nofollow">Google Search Central</a>). More detail in the <a href="#faq-platforms">platform FAQs</a>. For sites that are already live, our <a href="/services/technical-seo">technical SEO</a> team fixes rendering, speed and crawl problems without a rebuild.</p>
           </div>
         </section>
 
@@ -400,10 +400,12 @@ export default function WebDesignHubSections() {
               <p>Each page covers what that kind of website needs, what we build, and how we build it.</p>
             </div>
             <div className="agentdir-group">
-              <div className="agentdir-label"><h3>By service</h3><p>The type of website work you need.</p><span className="mono agentdir-count">5 services</span></div>
+              <div className="agentdir-label"><h3>By service</h3><p>The type of website work you need.</p><span className="mono agentdir-count">7 services</span></div>
               <ul className="agentdir-grid">
                 <li><a href="/services/website-redesign"><span className="agentdir-t">Website Redesign</span><span className="agentdir-l">Rebuild your current site without losing rankings</span><span className="agentdir-go" aria-hidden="true">↗</span></a></li>
                 <li><a href="/services/wordpress-development"><span className="agentdir-t">WordPress Development</span><span className="agentdir-l">Custom themes, plugins, and headless WordPress</span><span className="agentdir-go" aria-hidden="true">↗</span></a></li>
+                <li><a href="/services/webflow-development"><span className="agentdir-t">Webflow Development</span><span className="agentdir-l">Custom Webflow builds and migrations to Webflow</span><span className="agentdir-go" aria-hidden="true">↗</span></a></li>
+                <li><a href="/services/website-maintenance"><span className="agentdir-t">Website Maintenance</span><span className="agentdir-l">Updates, backups, security and fixes after launch</span><span className="agentdir-go" aria-hidden="true">↗</span></a></li>
                 <li><a href="/services/web-application-development"><span className="agentdir-t">Web Application Development</span><span className="agentdir-l">Portals, dashboards, and booking engines</span><span className="agentdir-go" aria-hidden="true">↗</span></a></li>
                 <li><a href="/services/b2b-website-design"><span className="agentdir-t">B2B Website Design</span><span className="agentdir-l">Long sales cycles, RFQs, and buying committees</span><span className="agentdir-go" aria-hidden="true">↗</span></a></li>
                 <li><a href="/services/small-business-website-design"><span className="agentdir-t">Small Business Website Design</span><span className="agentdir-l">Fast, professional sites built to bring in calls</span><span className="agentdir-go" aria-hidden="true">↗</span></a></li>

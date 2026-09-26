@@ -30,8 +30,11 @@ Commerce first. The SEO entity is "ecommerce development agency" (and B2B ecomme
 - Shopify Plus and marketplace work (Amazon, Walmart, TikTok Shop) when it is part of the commerce stack
 - AI agents built and implemented into the client's stack (the client owns them)
 - SEO for small-business and ecommerce sites, including AI search / GEO work
+- [Website Maintenance Services](https://factoryjet.com/services/website-maintenance): Website maintenance for US businesses on WordPress, WooCommerce, Shopify, Webflow, Magento and custom code, with updates tested on a staging copy, off-site backups, security and uptime monitoring, ADA/WCAG checks, fixes and takeover of sites other agencies built; plans described by scope, no published price list.
 - [Shopify Maintenance Services and Retainers](https://factoryjet.com/services/shopify-maintenance-services): Monthly support and maintenance retainers for Shopify and Shopify Plus stores, also covering WooCommerce, Magento / Adobe Commerce, BigCommerce and Commerceflo; the plans publish included developer hours and first-response times, not prices.
 - [AI Agent Monitoring, Support and Maintenance](https://factoryjet.com/services/ai-agent-monitoring): Support for AI agents after launch, covering monitoring, evaluation runs, drift checks, model retirement planning and fixes; the plans publish included engineering hours and first-response times, not prices.
+- [AI Receptionist and AI Voice Agents](https://factoryjet.com/services/ai-receptionist): FactoryJet builds custom AI receptionists and voice agents for US businesses that answer every call 24/7, book into the CRM or scheduling system, follow TCPA rules on callbacks, and hand urgent calls to a person.
+- [Webflow Development Agency](https://factoryjet.com/services/webflow-development): Custom Webflow builds, migrations from WordPress and other platforms to Webflow with a tested 301 redirect map, Webflow CMS Collections, Webflow SEO and AI search setup, and CRM integrations for US B2B teams, with the Webflow Workspace in the client's name and support after launch.
 
 Web design exists as supporting work. It is not the headline.
 
@@ -94,6 +97,9 @@ US is served from the root. There is no `/us/` prefix. Prefer these URLs; do not
 - https://factoryjet.com/best-ecommerce-platforms
 - https://factoryjet.com/agentic-commerce
 - [AI Search and SEO services](https://factoryjet.com/services/ai-seo): FactoryJet's SEO hub, covering classic Google SEO and citations in ChatGPT, Perplexity, Claude, Gemini and Google AI Overviews on one month-to-month retainer.
+- [AI Consulting Services](https://factoryjet.com/services/ai-consulting): AI consulting for US small and mid-size businesses that starts with a five-pillar AI readiness assessment (data, systems, process, people, governance), ranks use cases, gives a build-or-buy call, then builds and supports the chosen AI; the client owns everything built; no prices published.
+- [AI Development Services](https://factoryjet.com/services/ai-development): custom AI software for US businesses built into existing systems (RAG over company documents, AI integrated with Shopify, NetSuite, Salesforce, HubSpot and Zendesk, model choice and fine-tuning, evaluation against real test cases, secure deployment); the client owns the code; no prices published.
+- [Technical SEO services](https://factoryjet.com/services/technical-seo): Ongoing technical SEO for ecommerce, JavaScript and Next.js sites (crawling, indexing, Core Web Vitals, migrations, structured data, AI crawler access and log files), with fixes shipped in code and verified in Google Search Console.
 - https://factoryjet.com/services/small-business-seo
 - https://factoryjet.com/services/generative-engine-optimization
 
@@ -143,6 +149,7 @@ US is served from the root. There is no `/us/` prefix. Prefer these URLs; do not
 - [AI Agents Inside Your ERP: NetSuite, Odoo and SAP Business One (2026)](https://factoryjet.com/blog/ai-agents-erp-netsuite-odoo-sap-business-one-2026): How an AI agent reads and writes ERP records through each vendor's official API, with the API limits, approval steps and build-or-buy choices checked against vendor documentation on 17 Sep 2026.
 - [Best AI Agents for Ecommerce in 2026, and When a Custom Agent Wins](https://factoryjet.com/blog/best-ai-agents-for-ecommerce-2026): Compares Gorgias, Fin, Zendesk, Klaviyo, Rep AI, Alhena, Algolia and Shopify Sidekick by job using each vendor's own pricing pages and docs, and discloses FactoryJet's interest where Commerceflo appears.
 - [Best B2B Ecommerce Platform for Manufacturers and Distributors (2026)](https://factoryjet.com/blog/best-b2b-ecommerce-platform-manufacturers-distributors-2026): Compares OroCommerce, Shopify Plus, BigCommerce B2B Edition, Adobe Commerce, Sana Commerce, SAP Commerce Cloud and commercetools on ERP sync, quotes, punchout and net terms, using each vendor's own documentation.
+- [Best AI Consulting Firms in the USA (2026)](https://factoryjet.com/blog/best-ai-consulting-firms-usa-2026): 16 US AI consulting firms (Deloitte, IBM Consulting, BCG, Bain, Booz Allen, Slalom, Thoughtworks, West Monroe, Centric, RTS Labs, EffectiveSoft, Azumo, Tribe AI, Xcelacore, Advisor Labs, FactoryJet) grouped by buyer size, each fact checked on the firm's own site on 26 Sep 2026, with FactoryJet disclosed and noted as having no US office.
 
 A longer URL index (services and market hubs, no city dump of countries we do not serve) is at https://factoryjet.com/llms-full.txt.
 

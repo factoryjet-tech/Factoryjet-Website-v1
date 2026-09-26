@@ -101,6 +101,8 @@ export const US_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
   {
     heading: 'AI Agents & Automation',
     links: [
+      { label: 'AI Consulting Services',      href: '/services/ai-consulting' },
+      { label: 'AI Development Services',     href: '/services/ai-development' },
       { label: 'Custom AI Agent Development', href: '/services/ai-agent-development' },
       { label: 'AI Automation Agency',        href: '/services/ai-automation' },
       { label: 'AI Chatbot Development',      href: '/services/ai-chatbot-development' },
@@ -121,18 +123,21 @@ export const US_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
       { label: 'AI Agent ROI Calculator',     href: '/tools/ai-agent-roi-calculator' },
       { label: 'AI Workflow Automation',      href: '/services/ai-workflow-automation' },
       { label: 'n8n vs LangChain vs CrewAI',  href: '/comparisons/n8n-vs-langchain-vs-crewai-enterprise' },
-      { label: 'Voice AI Agents',             href: '/services/ai-agent-development/ai-voice-agent' },
       { label: 'n8n Automation',              href: '/n8n-automation' },
       { label: 'AI SEO & Visibility',         href: '/services/ai-seo' },
       { label: 'GEO Agency',                  href: '/services/generative-engine-optimization' },
       { label: 'AI Visibility Checker',       href: '/ai-visibility-checker' },
+      { label: 'Best AI Consulting Firms (USA)', href: '/blog/best-ai-consulting-firms-usa-2026' },
     ],
   },
   {
     heading: 'Services & SEO',
     links: [
       { label: 'Web Design',             href: '/services/web-design' },
+      { label: 'Webflow Development',    href: '/services/webflow-development' },
+      { label: 'Website Maintenance',    href: '/services/website-maintenance' },
       { label: 'SEO Services',           href: '/services/ai-seo' },
+      { label: 'Technical SEO',          href: '/services/technical-seo' },
       { label: 'E-Commerce SEO',         href: '/services/ecommerce-seo' },
       { label: 'Shopify SEO',            href: '/services/shopify-seo' },
       { label: 'Local SEO',              href: '/services/local-seo' },

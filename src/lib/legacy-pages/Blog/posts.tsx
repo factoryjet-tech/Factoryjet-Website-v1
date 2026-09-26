@@ -135,8 +135,11 @@ import { post as aiCostAustralia2026Post } from './posts/ai-cost-australia-2026'
 import { post as shopifyCostAustralia2026Post } from './posts/shopify-cost-australia-2026';
 import { post as bestAiAgenciesAustralia2026Post } from './posts/best-ai-agencies-australia-2026';
 import { post as bestEcommercePlatformAustralia2026Post } from './posts/best-ecommerce-platform-australia-2026';
+import { post as bestAiConsultingFirmsUsa2026Post } from './posts/best-ai-consulting-firms-usa-2026';
 
 export const POSTS: BlogPost[] = [
+  // --- US TIER 1 (2026-09-26) ---
+  bestAiConsultingFirmsUsa2026Post,
   // --- AU WAVE 4 (2026-09-26) ---
   websiteCostAustralia2026Post,
   seoCostAustralia2026Post,
@@ -2282,6 +2285,10 @@ export const POSTS: BlogPost[] = [
       <p>
         Maintaining a website protects the investment made during development and ensures steady growth instead of gradual decline.
       </p>
+
+      <p>
+        If you would rather hand this off, see our <a href="/services/website-maintenance" className="text-[#B23E13] underline">website maintenance services</a>.
+      </p>
     </>
   )
 },
@@ -4033,13 +4040,13 @@ export const POSTS: BlogPost[] = [
   hideExcerptOnPage: true,
   category: 'Web Design & Strategy',
   author: 'Bhavesh Barot',
-  date: 'Mar 28, 2026',
+  date: 'Sep 26, 2026',
   readTime: '14 min read',
   imageUrl: '/what-is-webflow-guide-2026.webp',
   isFeatured: true,
   meta: {
     title: "What Is Webflow? Features, Pricing & Honest Review (2026)",
-    description: "Webflow lets you build fast, SEO-ready sites without code. This guide covers Webflow pricing (Free–$39/mo), features, and when it beats WordPress or Wix in 2026."
+    description: "Webflow lets you build fast, SEO-ready sites without code. This guide covers Webflow pricing (free, then $15 and $25/mo site plans), features, and when it beats WordPress or Wix in 2026."
   },
   faqs: [
     { q: "What is Webflow used for?", a: "Webflow is used to design, build, and host websites without writing code. Common use cases include marketing sites, portfolios, blogs, SaaS landing pages, and e-commerce stores." },
@@ -4047,7 +4054,7 @@ export const POSTS: BlogPost[] = [
     { q: "Is Webflow good for beginners?", a: "Webflow has a learning curve. It is not as beginner-friendly as Wix or Squarespace, but Webflow University (their free training platform) makes it much easier to get started." },
     { q: "What is Webflow vs Wix?", a: "Wix is simpler and cheaper to start. Webflow is more powerful, gives you full design control, exports clean code, and is better for SEO. Wix is for beginners; Webflow is for professionals." },
     { q: "Can Webflow replace WordPress?", a: "For many use cases, yes. Webflow can replace WordPress for marketing sites, portfolios, and CMS-driven content sites. It is not a full replacement if you rely heavily on WordPress plugins or custom PHP functionality." },
-    { q: "How much does Webflow cost?", a: "Webflow has a free plan for prototyping. Paid site plans start at $14/month (Basic), $23/month (CMS), and $39/month (Business), all billed annually. E-commerce plans start at $29/month." },
+    { q: "How much does Webflow cost?", a: "Webflow has a free Starter plan for prototyping. Paid site plans are Basic at $15/month (no CMS) and Premium from $25/month (with the CMS), billed yearly; billed monthly they are $25 and $39. A Team plan costs $2,500/month on an annual contract and Enterprise is custom. E-commerce plans start at $29/month billed yearly." },
     { q: "Is Webflow good for SEO in 2026?", a: "Yes, Webflow is considered SEO-friendly because it generates clean code, allows full control over meta tags, and offers fast hosting with CDN support. However, results still depend on content quality and optimization." },
     { q: "Can Webflow handle high-traffic websites?", a: "Yes, Webflow uses AWS infrastructure and a global CDN, making it capable of handling high traffic. Many businesses and SaaS companies use Webflow for scalable marketing websites." }
   ],
@@ -4146,7 +4153,7 @@ export const POSTS: BlogPost[] = [
             <tr><td className="border p-3">SEO capabilities</td><td className="border p-3">Built-in, robust</td><td className="border p-3">Yoast / RankMath</td></tr>
             <tr><td className="border p-3">Speed</td><td className="border p-3">Fast (CDN)</td><td className="border p-3">Needs optimization</td></tr>
             <tr><td className="border p-3">Learning curve</td><td className="border p-3">Medium</td><td className="border p-3">Medium–High</td></tr>
-            <tr><td className="border p-3">Starting price</td><td className="border p-3">$14/mo (CMS)</td><td className="border p-3">Free core, ~$10–30/mo hosting</td></tr>
+            <tr><td className="border p-3">Starting price</td><td className="border p-3">$15/mo (Basic); CMS from $25/mo (Premium)</td><td className="border p-3">Free core, ~$10–30/mo hosting</td></tr>
           </tbody>
         </table>
       </div>
@@ -4192,7 +4199,7 @@ export const POSTS: BlogPost[] = [
             <tr><td className="border p-3">Animations</td><td className="border p-3">Complex interactions</td><td className="border p-3">Smooth, component-based</td></tr>
             <tr><td className="border p-3">React components</td><td className="border p-3">No</td><td className="border p-3">Yes (native)</td></tr>
             <tr><td className="border p-3">E-commerce</td><td className="border p-3">Yes</td><td className="border p-3">No</td></tr>
-            <tr><td className="border p-3">Pricing</td><td className="border p-3">$14–$39/mo</td><td className="border p-3">Free tier available</td></tr>
+            <tr><td className="border p-3">Pricing</td><td className="border p-3">$15–$25/mo site plans, billed yearly</td><td className="border p-3">Free tier available</td></tr>
             <tr><td className="border p-3">Speed</td><td className="border p-3">Very fast</td><td className="border p-3">Very fast</td></tr>
           </tbody>
         </table>
@@ -4271,7 +4278,7 @@ export const POSTS: BlogPost[] = [
 
       <h2 id="webflow-pricing" className="text-2xl font-bold mt-8 mb-4">Webflow Pricing vs Hiring a Webflow Expert (2026)</h2>
       <p className="mb-4">
-        Webflow plans start from around $14/month, but building a high-performing website still requires design, SEO, and development expertise.
+        Webflow site plans start at $15/month for Basic (no CMS) and from $25/month for Premium, which adds the CMS with up to 20,000 items. Both prices are billed yearly; billed monthly they are $25 and $39. Larger teams move to the Team plan at $2,500/month on an annual contract, and ecommerce plans run $29, $74 and $212/month billed yearly (<a href="https://webflow.com/pricing" target="_blank" rel="noopener noreferrer nofollow" className="text-blue-600 underline hover:text-blue-800 transition-colors">Webflow pricing</a>, checked 26 Sep 2026). Building a high-performing website still requires design, SEO, and development expertise.
       </p>
       <p className="mb-4">
         At first glance, Webflow seems affordable. You can launch a site for a low monthly cost. But most businesses quickly realize that building a professional, high-converting website takes time, skill, and experience.
@@ -4288,7 +4295,7 @@ export const POSTS: BlogPost[] = [
         This is why many companies choose to work with Webflow experts instead of doing it themselves.
       </p>
       <p className="mb-6">
-        In short, Webflow pricing is affordable, but the real investment is in building a site that actually performs.
+        In short, Webflow pricing is affordable, but the real investment is in building a site that actually performs. If you would rather have a team build and support it, see our <a href="/services/webflow-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">Webflow development services</a>.
       </p>
 
       <h2 id="webflow-case-study" className="text-2xl font-bold mt-8 mb-4">Real-World Example: SaaS Company Switches to Webflow</h2>

@@ -5,6 +5,7 @@ import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import '../ai-agents/ai-agents.css';
+import { aiConsultingAlternates } from '@/data/hreflangMap';
 
 const CANONICAL = 'https://factoryjet.com/uk/ai-consulting';
 const UPDATED = '2026-09-24';
@@ -221,7 +222,7 @@ export const metadata: Metadata = {
   title: TITLE,
   description:
     'FactoryJet is a UK AI consultancy that runs your AI readiness assessment, picks the use cases worth doing, then builds them. Founder-led. You own it.',
-  alternates: { canonical: CANONICAL, languages: { 'en-GB': CANONICAL, 'x-default': CANONICAL } },
+  alternates: { canonical: CANONICAL, languages: aiConsultingAlternates },
   openGraph: {
     title: TITLE,
     description:

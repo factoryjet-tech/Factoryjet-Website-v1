@@ -346,7 +346,11 @@ export const post: BlogPost = {
         >
           Deloitte, August 2026
         </a>
-        ). Most businesses, including yours, are earlier in this process than the marketing around AI agents suggests. Starting with a hybrid, low-risk step is not a compromise, it is where almost everyone actually is right now.
+        ). Most businesses, including yours, are earlier in this process than the marketing around AI agents suggests. Starting with a hybrid, low-risk step is not a compromise, it is where almost everyone actually is right now. An{' '}
+        <a href="/services/ai-consulting" className="text-[#F05A28] underline">
+          AI readiness assessment
+        </a>{' '}
+        answers the build-or-buy question for each use case before you spend.
       </p>
 
       {/* Section 7: Decision framework */}

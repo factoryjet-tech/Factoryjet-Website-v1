@@ -541,7 +541,7 @@ export default function AiAgentsUKPage() {
               </li>
               <li className="svc-card">
                 <h3>AI receptionists and phone agents</h3>
-                <p className="mt-4">A voice agent that answers calls, takes messages, books appointments, and routes urgent calls to a person, at any hour. It is one of the fastest growing things UK firms ask us for. See our <a href="/uk/ai-receptionist" style={{ textDecoration: 'underline' }}>AI receptionist service for UK businesses</a> and the <a href="/services/ai-agent-development/ai-voice-agent" style={{ textDecoration: 'underline' }}>AI voice agent build</a>.</p>
+                <p className="mt-4">A voice agent that answers calls, takes messages, books appointments, and routes urgent calls to a person, at any hour. It is one of the fastest growing things UK firms ask us for. See our <a href="/uk/ai-receptionist" style={{ textDecoration: 'underline' }}>AI receptionist service for UK businesses</a>.</p>
               </li>
               <li className="svc-card">
                 <h3>AI customer service agents</h3>

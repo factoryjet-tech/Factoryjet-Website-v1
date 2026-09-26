@@ -78,10 +78,11 @@ export const SERVICE_HUBS: ServiceHub[] = [
     summary: 'Custom AI agents built into your ERP, CRM, store and support desk, with a human approval step where it matters.',
     columns: [
       { heading: 'Build', kind: 'rich', items: [
+        { icon: Compass, label: 'AI Consulting', href: '/services/ai-consulting' },
+        { icon: Code2, label: 'AI Development', href: '/services/ai-development' },
         { icon: Plug, label: 'AI Integration Services', href: '/services/ai-integration-services' },
         { icon: Workflow, label: 'AI Workflow Automation', href: '/services/ai-workflow-automation' },
         { icon: Bot, label: 'AI Automation', href: '/services/ai-automation' },
-        { icon: Mic, label: 'AI Voice Agents', href: '/services/ai-agent-development/ai-voice-agent' },
         { icon: MessageSquare, label: 'AI Chatbot Development', href: '/services/ai-chatbot-development' },
         { icon: Activity, label: 'AI Agent Monitoring', href: '/services/ai-agent-monitoring' },
       ] },
@@ -118,7 +119,9 @@ export const SERVICE_HUBS: ServiceHub[] = [
     columns: [
       { heading: 'Services', kind: 'rich', items: [
         { icon: RefreshCw, label: 'Website Redesign', href: '/services/website-redesign' },
+        { icon: Wrench, label: 'Website Maintenance', href: '/services/website-maintenance' },
         { icon: Globe, label: 'WordPress Development', href: '/services/wordpress-development' },
+        { icon: Layers, label: 'Webflow Development', href: '/services/webflow-development' },
         { icon: Code2, label: 'Web Application Development', href: '/services/web-application-development' },
         { icon: LayoutTemplate, label: 'B2B Website Design', href: '/services/b2b-website-design' },
         { icon: ShoppingBag, label: 'Small Business Website Design', href: '/services/small-business-website-design' },
@@ -156,6 +159,7 @@ export const SERVICE_HUBS: ServiceHub[] = [
         { icon: BarChart3, label: 'AI Citation Study', href: '/ai-citation-study' },
       ] },
       { heading: 'By focus', kind: 'compact', items: [
+        { label: 'Technical SEO', href: '/services/technical-seo' },
         { label: 'E-commerce SEO', href: '/services/ecommerce-seo' },
         { label: 'Shopify SEO', href: '/services/shopify-seo' },
         { label: 'Local SEO', href: '/services/local-seo' },
@@ -292,7 +296,6 @@ export const UK_SERVICE_HUBS: ServiceHub[] = [
       { heading: 'By job', kind: 'compact', items: [
         { label: 'AI Customer Support Agents', href: '/services/ai-customer-support-agents' },
         { label: 'AI SDR & BDR Agents', href: '/services/ai-sdr' },
-        { label: 'AI Voice Agents', href: '/services/ai-agent-development/ai-voice-agent' },
         { label: 'AI Scheduling Agent', href: '/services/ai-agent-development/ai-scheduling-agent' },
         { label: 'AI Marketing Agent', href: '/services/ai-agent-development/ai-marketing-agent' },
         { label: 'RFQ Automation Agent', href: '/services/ai-agent-development/rfq-bidding-agent' },

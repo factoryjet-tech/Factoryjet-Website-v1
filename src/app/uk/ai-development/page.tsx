@@ -5,6 +5,7 @@ import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import '../ai-agents/ai-agents.css';
+import { aiDevelopmentAlternates } from '@/data/hreflangMap';
 
 const CANONICAL = 'https://factoryjet.com/uk/ai-development';
 const UPDATED = '2026-09-24';
@@ -235,7 +236,7 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: CANONICAL, languages: { 'en-GB': CANONICAL, 'x-default': CANONICAL } },
+  alternates: { canonical: CANONICAL, languages: aiDevelopmentAlternates },
   openGraph: {
     title: TITLE,
     description:

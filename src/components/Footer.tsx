@@ -56,7 +56,7 @@ const Footer: React.FC = () => {
               <li><Link href="/services/ai-chatbot-development" onClick={() => trackNavigation('AI Chatbot', '/services/ai-chatbot-development', 'footer')} className="hover:text-jet-blue transition-colors">AI Chatbot</Link></li>
               <li><Link href="/services/ai-sdr" onClick={() => trackNavigation('AI SDR Agent', '/services/ai-sdr', 'footer')} className="hover:text-jet-blue transition-colors">AI SDR Agent</Link></li>
               <li><Link href="/services/ai-customer-support-agents" onClick={() => trackNavigation('AI Customer Support', '/services/ai-customer-support-agents', 'footer')} className="hover:text-jet-blue transition-colors">AI Customer Support</Link></li>
-              <li><Link href="/services/ai-agent-development/ai-voice-agent" onClick={() => trackNavigation('AI Voice Agent', '/services/ai-agent-development/ai-voice-agent', 'footer')} className="hover:text-jet-blue transition-colors">AI Voice Agent</Link></li>
+              <li><Link href="/services/ai-receptionist" onClick={() => trackNavigation('AI Receptionist', '/services/ai-receptionist', 'footer')} className="hover:text-jet-blue transition-colors">AI Receptionist</Link></li>
             </ul>
           </div>
 

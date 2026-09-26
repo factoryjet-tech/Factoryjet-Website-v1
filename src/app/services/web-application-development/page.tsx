@@ -712,6 +712,9 @@ export default function WebApplicationDevelopmentPage() {
             <a href="/blog/nyc-b2b-corporate-web-design-guide-2026" className="block p-5 rounded-lg border border-[#E5E5E0] bg-white hover:border-[#F05A28] transition-colors">
               <p className="text-sm font-semibold text-[#0F0F12] leading-snug">NYC B2B corporate web design: a 2026 buyer guide</p>
             </a>
+            <a href="/services/ai-development" className="block p-5 rounded-lg border border-[#E5E5E0] bg-white hover:border-[#F05A28] transition-colors">
+              <p className="text-sm font-semibold text-[#0F0F12] leading-snug">Add AI features to your web app, such as answers from your own data</p>
+            </a>
           </div>
         </div>
       </section>

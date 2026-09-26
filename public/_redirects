@@ -335,3 +335,19 @@
 # slug move costs nothing now and would get expensive later.
 /services/contractor-ai-receptionist /services/ai-receptionist 301
 /services/ai-sdr-development /services/ai-sdr 301
+
+# US consolidation (2026-09-26, pipeline/research/US-OPPORTUNITIES-2026-09-26.md
+# section 5). Five city AI pages had 1 to 12 US impressions in 90 days and city
+# AI demand measures near zero, so they were doorway-shaped: each goes to the
+# main AI page for its topic. The AI voice agent child merges into the AI
+# receptionist page (unique FAQs and the latency and TCPA sections ported). The
+# /compare/ copy of the Shopify vs WooCommerce page was a re-export whose
+# canonical already pointed at /comparisons/. Every destination is a live page
+# and none is a source of another rule here, so each redirect is a single hop.
+/austin/ai-agents /services/ai-agent-development 301
+/denver/ai-agents /services/ai-agent-development 301
+/raleigh/ai-agents /services/ai-agent-development 301
+/charlotte/ai-automation /services/ai-automation 301
+/miami/ai-automation /services/ai-automation 301
+/services/ai-agent-development/ai-voice-agent /services/ai-receptionist 301
+/compare/shopify-vs-woocommerce /comparisons/shopify-vs-woocommerce 301

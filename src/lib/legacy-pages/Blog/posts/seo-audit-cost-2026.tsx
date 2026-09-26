@@ -396,7 +396,9 @@ export const post: BlogPost = {
         <li>
           <strong>Week 1–2:</strong> Fix critical technical blockers, pages returning 4xx errors,
           canonical misconfigurations, Core Web Vitals failures, and indexation blocks. These are
-          the issues preventing Google from properly crawling and evaluating your site.
+          the issues preventing Google from properly crawling and evaluating your site. Need the
+          fixes done, not just listed? See our{' '}
+          <a href="/services/technical-seo">technical SEO services</a>.
         </li>
         <li>
           <strong>Week 3–4:</strong> On-page optimizations on your top 20 highest-traffic or

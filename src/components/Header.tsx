@@ -37,7 +37,7 @@ const AI_SERVICES: SubMenuItem[] = [
   { label: 'AI Scheduling Agent', href: '/services/ai-agent-development/ai-scheduling-agent', icon: Calendar, desc: 'Automated scheduling & booking', isRoute: true },
   { label: 'AI Workflow Automation', href: '/services/ai-workflow-automation', icon: Workflow, desc: 'End-to-end workflow automation', isRoute: true },
   { label: 'AI Customer Support', href: '/services/ai-customer-support-agents', icon: Headphones, desc: '24/7 AI support agents', isRoute: true },
-  { label: 'AI Voice Agent', href: '/services/ai-agent-development/ai-voice-agent', icon: Phone, desc: 'Voice-powered AI assistants', isRoute: true },
+  { label: 'AI Receptionist', href: '/services/ai-receptionist', icon: Phone, desc: 'Voice-powered AI assistants', isRoute: true },
 ];
 
 const ECOMMERCE_SERVICES_BASE: Omit<SubMenuItem, 'href'>[] = [

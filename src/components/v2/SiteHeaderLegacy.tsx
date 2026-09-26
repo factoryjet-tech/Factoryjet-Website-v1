@@ -96,7 +96,6 @@ const US_AI_AGENTS_NAV = [
   { icon: TrendingUp,    label: 'AI SDR & BDR Agents',    href: '/services/ai-sdr',                 desc: 'Inbound qualification & CRM booking' },
   { icon: RefreshCw,     label: 'AI Agent Monitoring',    href: '/services/ai-agent-monitoring',    desc: 'Support, evals & model upgrades' },
   { icon: GitBranch,     label: 'Workflow Automation',    href: '/services/ai-workflow-automation', desc: 'Connect ERP, CRM & databases' },
-  { icon: Mic,           label: 'Voice AI Agents',        href: '/services/ai-agent-development/ai-voice-agent',         desc: 'Inbound & outbound voice calling' },
   { icon: Calculator,    label: 'AI Agent ROI Calculator',href: '/tools/ai-agent-roi-calculator',               desc: 'Calculate headcount & payback' },
 ] as const;
 
@@ -347,7 +346,7 @@ const IN_AI_AGENTS = [
   { icon: MessageSquare, label: 'AI Chatbot',             href: '/services/ai-chatbot-development',                      desc: 'Smart 24/7 support' },
   { icon: TrendingUp,    label: 'AI SDR Agent',           href: '/services/ai-sdr',                                      desc: 'Automated outreach' },
   { icon: Megaphone,     label: 'AI Marketing Agent',     href: '/services/ai-agent-development/ai-marketing-agent',     desc: 'Automate campaigns' },
-  { icon: Mic,           label: 'AI Voice Agent',         href: '/services/ai-agent-development/ai-voice-agent',         desc: 'Voice-based AI calls' },
+  { icon: Mic,           label: 'AI Receptionist',        href: '/services/ai-receptionist',                      desc: 'Voice-based AI calls' },
   { icon: GitBranch,     label: 'AI Workflow Automation', href: '/services/ai-workflow-automation',                      desc: 'End-to-end automation' },
   { icon: Headphones,    label: 'AI Customer Support',    href: '/services/ai-customer-support-agents',                  desc: 'Resolve tickets faster' },
   { icon: CalendarClock, label: 'AI Scheduling Agent',    href: '/services/ai-agent-development/ai-scheduling-agent',    desc: 'Smart bookings & calendar' },
@@ -416,7 +415,7 @@ const UAE_WEB_SERVICES = [
 const UAE_AI_SERVICES = [
   { icon: MessageSquare, label: 'AI Chatbot',    href: '/services/ai-chatbot-development',                      desc: 'Smart customer support' },
   { icon: Zap,           label: 'AI Workflow Automation', href: '/services/ai-workflow-automation',             desc: 'Automate repetitive work' },
-  { icon: Bot,           label: 'AI Voice Agent',href: '/services/ai-agent-development/ai-voice-agent',         desc: 'Voice-based AI assistants' },
+  { icon: Bot,           label: 'AI Receptionist',href: '/services/ai-receptionist',                      desc: 'Voice-based AI assistants' },
 ] as const;
 
 const UAE_LOCATIONS = [

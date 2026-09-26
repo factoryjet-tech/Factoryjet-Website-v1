@@ -24,13 +24,13 @@ import FinalCTA from '@/components/v2/FinalCTA';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Best AI Chatbot Development Company in USA | FactoryJet',
+  title: 'AI Chatbot Development Services in the USA | FactoryJet',
   description:
     'Custom AI chatbots for US businesses: support triage, lead gen, and e-commerce booking. Deflect routine tickets. Delivered in 2-3 weeks. Get a quote.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Best AI Chatbot Development Company in USA | FactoryJet',
+    title: 'AI Chatbot Development Services in the USA | FactoryJet',
     description:
       'Custom AI chatbots for customer support, lead gen, and e-commerce. Built on GPT-4o and Claude. fixed-price, milestone-paid. Fast delivery.',
     url: 'https://factoryjet.com/services/ai-chatbot-development',
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best AI Chatbot Development Company in USA | FactoryJet',
+    title: 'AI Chatbot Development Services in the USA | FactoryJet',
     description:
       'Custom AI chatbots for US small businesses. fixed-price. 2–3 week delivery. Get a quote.',
     images: ['https://factoryjet.com/images/us/services/hero-ai-chatbot.webp'],
@@ -746,7 +746,7 @@ export default function AIChatbotDevelopmentPage() {
         <Hero
         formSlot={<HeroInlineForm region="us" source="us_services_ai_chatbot_development_hero" />}
           eyebrow="AI CHATBOT DEVELOPMENT · USA"
-          headline="A Chatbot That Answers, Qualifies, and Books, While You're Asleep"
+          headline="AI Chatbot Development Services That Answer, Qualify and Book While You Sleep"
           lead="Your best customers expect an answer in seconds, not hours. FactoryJet builds custom AI chatbots, for customer support, lead generation, e-commerce, and appointment booking, that respond instantly, connect to your existing tools, and come with a fixed price set after discovery."
           secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
           trustItems={[
@@ -1043,6 +1043,11 @@ export default function AIChatbotDevelopmentPage() {
                 OpenAI Safety Best Practices
               </a>
               {' '}guide. Automated sentiment analysis flags frustrated users for instant human handoff.
+              {' '}Chatbots that answer from your policies are built on the same retrieval (RAG) work described on our{' '}
+              <a href="/services/ai-development" className="text-[#B23E13] underline font-medium">
+                AI development services
+              </a>
+              {' '}page.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

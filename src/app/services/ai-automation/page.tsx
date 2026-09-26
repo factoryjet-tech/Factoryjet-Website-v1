@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import { usServiceAlternates } from '@/data/hreflangMap';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
@@ -78,7 +77,7 @@ export const metadata: Metadata = {
 
 // Freshness signal. Benchmark: 56% of AI-Overview-cited pages carry it.
 // Keep honest: bump when the page's content actually changes.
-const PAGE_MODIFIED = '2026-08-06';
+const PAGE_MODIFIED = '2026-09-26';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -939,6 +938,59 @@ export default function AIAutomationPage() {
           </div>
         </section>
 
+        {/* ── 9c. BUSINESS AUTOMATION SERVICES ──────────────────────────────
+            Added 2026-09-26 (pipeline/research/US-OPPORTUNITIES-2026-09-26.md,
+            section 5 #3): "business automation services" is 480/mo at KD 0 and
+            this page sat at position 75 for it without ever using the phrase.
+            Scope statements only; no third-party statistics.
+        ─────────────────────────────────────────────────────────────────────── */}
+        <section id="business-automation-services" className="py-20 bg-white border-t border-[#E7DED6]">
+          <div className="max-w-6xl mx-auto px-6">
+            <p className="text-sm font-semibold text-[#B23E13] uppercase tracking-widest mb-3">
+              Not everything needs AI
+            </p>
+            <h2 className="font-fj-display text-[2rem] font-medium leading-[1.15] tracking-[-0.025em] text-fj-ink mb-4">
+              Business automation services for the whole back office
+            </h2>
+            <p className="font-fj-body text-fj-neutral-600 max-w-[68ch] mb-4">
+              Business automation means taking the repeat steps out of how work moves through your company: from quote to invoice, from lead to customer, from order to delivery. Plenty of those steps need no AI at all. A fixed rule does the job, costs less to run and never guesses. We add AI only where a step needs reading, sorting or writing, and we tell you which is which in the audit. For a wider view across departments, not only one workflow, see our{' '}
+              <a href="/services/ai-consulting" className="font-semibold underline underline-offset-2 text-[#B23E13]">
+                AI strategy and readiness
+              </a>{' '}
+              work.
+            </p>
+            <p className="font-fj-body text-fj-neutral-600 max-w-[68ch] mb-10">
+              These are the six processes small businesses ask us to automate most. Each one is built in the tools you already pay for, and you own every workflow when we hand it over.
+            </p>
+            <ul className="grid gap-5 md:grid-cols-2 lg:grid-cols-3 list-none p-0">
+              <li className="rounded-2xl border border-[#E7DED6] bg-[#FAFAF7] p-6">
+                <h3 className="font-fj-body text-[1.0625rem] font-semibold text-fj-ink mb-2">Quote to cash</h3>
+                <p className="font-fj-body text-[0.9375rem] leading-[1.6] text-fj-neutral-600">A signed quote becomes an invoice in QuickBooks or Xero, payment reminders go out on schedule, and paid invoices close the deal in your CRM.</p>
+              </li>
+              <li className="rounded-2xl border border-[#E7DED6] bg-[#FAFAF7] p-6">
+                <h3 className="font-fj-body text-[1.0625rem] font-semibold text-fj-ink mb-2">Lead to customer</h3>
+                <p className="font-fj-body text-[0.9375rem] leading-[1.6] text-fj-neutral-600">Web forms, calls and marketplace enquiries land in HubSpot or Salesforce with the source attached, get routed to the right person, and get a first reply in minutes.</p>
+              </li>
+              <li className="rounded-2xl border border-[#E7DED6] bg-[#FAFAF7] p-6">
+                <h3 className="font-fj-body text-[1.0625rem] font-semibold text-fj-ink mb-2">Order to delivery</h3>
+                <p className="font-fj-body text-[0.9375rem] leading-[1.6] text-fj-neutral-600">Shopify or marketplace orders sync to inventory, shipping labels and customer updates without anyone copying order numbers between tabs.</p>
+              </li>
+              <li className="rounded-2xl border border-[#E7DED6] bg-[#FAFAF7] p-6">
+                <h3 className="font-fj-body text-[1.0625rem] font-semibold text-fj-ink mb-2">Hire to onboard</h3>
+                <p className="font-fj-body text-[0.9375rem] leading-[1.6] text-fj-neutral-600">An accepted offer creates the accounts, sends the paperwork, books the first-week calendar and tells IT what equipment to ship.</p>
+              </li>
+              <li className="rounded-2xl border border-[#E7DED6] bg-[#FAFAF7] p-6">
+                <h3 className="font-fj-body text-[1.0625rem] font-semibold text-fj-ink mb-2">Month-end reporting</h3>
+                <p className="font-fj-body text-[0.9375rem] leading-[1.6] text-fj-neutral-600">Numbers from your accounting, ad and sales tools pulled into one report on the same day every month, with the gaps flagged instead of hidden.</p>
+              </li>
+              <li className="rounded-2xl border border-[#E7DED6] bg-[#FAFAF7] p-6">
+                <h3 className="font-fj-body text-[1.0625rem] font-semibold text-fj-ink mb-2">Document intake</h3>
+                <p className="font-fj-body text-[0.9375rem] leading-[1.6] text-fj-neutral-600">Invoices, purchase orders and forms read, checked against your records and filed, with anything unclear sent to a person to approve.</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+
         {/* ── 10. PRICING ──────────────────────────────────────────────────── */}
         <div id="pricing">
           <PricingTiers
@@ -965,28 +1017,6 @@ export default function AIAutomationPage() {
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
         />
-
-        {/* Cities We Serve, internal linking for SEO */}
-        <section className="py-10 bg-[#FAFAF7]">
-          <div className="max-w-6xl mx-auto px-6">
-            <p className="text-sm font-semibold text-[#B23E13] uppercase tracking-widest mb-3">Serving the US</p>
-            <h2 className="text-2xl font-bold text-[#0F0F12] mb-6">AI Automation Services by City</h2>
-            {/* Trailing slashes removed 2026-08-06: both hrefs 308-redirected, so every
-                internal click and crawl was spending a hop it did not need to. */}
-            <ul className="flex list-none flex-wrap gap-3 p-0">
-              {[
-                { city: 'Miami, FL', href: '/miami/ai-automation' },
-                { city: 'Charlotte, NC', href: '/charlotte/ai-automation' },
-              ].map(({ city, href }) => (
-                <li key={href}>
-                  <Link href={href} className="inline-block px-4 py-2 rounded-full border border-[#B23E13] text-[#B23E13] text-sm font-medium hover:bg-[#B23E13] hover:text-white transition-colors">
-                    {city}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
 
         {/* ── 14. FINAL CTA ─────────────────────────────────────────────────── */}
         <FinalCTA

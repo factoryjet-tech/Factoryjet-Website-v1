@@ -130,6 +130,7 @@ const SEO_SERVICES: ReadonlyArray<{ href: string; name: string; flag?: string; f
   { href: '/services/ecommerce-seo', name: 'E-commerce SEO', fit: 'Online stores on any platform', build: 'Category and product page structure, Product and Offer schema, faceted navigation, and crawl budget.' },
   { href: '/services/shopify-seo', name: 'Shopify SEO', fit: 'Shopify and Shopify Plus stores', build: 'Duplicate collection URLs, thin collection pages, theme speed, and the structured data many themes leave out.' },
   { href: '/services/seo-audit', name: 'SEO Audit', fit: 'Sites that lost traffic, or never gained it', build: 'A technical, content and authority review with a fix list in priority order, before you spend more.' },
+  { href: '/services/technical-seo', name: 'Technical SEO', fit: 'Ecommerce, JavaScript and Next.js sites that Google struggles to crawl', build: 'Crawling, indexing, Core Web Vitals, migrations, structured data and AI crawler access, fixed in code and verified in Search Console.' },
   { href: '/services/seo-consulting', name: 'SEO Consulting', fit: 'Teams with their own writers or developers', build: 'Strategy, roadmaps and reviews for your team to carry out, with a senior practitioner on call.' },
 ];
 
@@ -140,30 +141,17 @@ const INDUSTRY_SEO = [
   { title: 'Roofing SEO', href: '/services/roofing-seo', line: 'Storm-driven demand and service-area rankings' },
 ];
 
-const INDIA_SEO = [
-  { title: 'AI SEO Company in India', href: '/ai-seo', line: 'AI SEO, GEO and AEO for Indian businesses' },
-  { title: 'SEO Company in India', href: '/seo', line: 'The India SEO hub, with city pages' },
-  { title: 'Technical SEO Services in India', href: '/seo/technical-seo', line: 'Speed, crawling, indexing and schema' },
-  { title: 'Local SEO Services in India', href: '/seo/local-seo', line: 'Google Business Profile and map results' },
-  { title: 'Ecommerce SEO Services in India', href: '/seo/ecommerce-seo', line: 'Category, product and store structure' },
-  { title: 'SEO services in Delhi, Mumbai and Bangalore', href: '/seo/delhi', line: 'City pages, starting with Delhi' },
-];
-
 /** Google positions from the DataForSEO pull (desktop, English) on 23 Sep 2026. null = not in the top 10. */
 const SEARCHES = [
   { market: 'US', term: 'ai seo agency' },
   { market: 'US', term: 'ai seo services' },
-  { market: 'India', term: 'ai seo agency' },
-  { market: 'India', term: 'ai seo services' },
 ] as const;
 
 export const COMPETITORS: ReadonlyArray<{ name: string; domain: string; positions: ReadonlyArray<number | null>; offers: string; note: string; citedInAio: boolean }> = [
-  { name: 'Thrive Agency', domain: 'thriveagency.com', positions: [4, 5, 6, 2], offers: 'Lists separate ChatGPT, Gemini, Perplexity, Claude and AI Overviews services on its AI SEO page.', note: 'The only agency on page one for all four searches, in both countries.', citedInAio: true },
-  { name: 'OuterBox', domain: 'outerboxdesign.com', positions: [2, null, 5, null], offers: 'Tests your brand across ChatGPT, Perplexity, Gemini and Bing Copilot, and adds a conversion layer for AI-referred visits.', note: 'Second only to a Reddit thread for ai seo agency in the US.', citedInAio: true },
-  { name: 'Level Agency', domain: 'level.agency', positions: [3, 7, null, null], offers: 'Frames AI SEO as a layer added on top of traditional SEO, with a straight-answers FAQ on generative search.', note: 'Cited inside the US AI Overviews for both searches.', citedInAio: true },
-  { name: 'Coalition Technologies', domain: 'coalitiontechnologies.com', positions: [6, null, null, null], offers: 'A six-part framework: entity clarity, technical access, extractable answers, outside validation, tracking and conversion paths.', note: 'Also on page one for seo services in the US.', citedInAio: true },
-  { name: 'Techmagnate', domain: 'techmagnate.com', positions: [null, null, 3, 1], offers: 'India-based. Separate ChatGPT, Perplexity, Gemini, AI Mode and Copilot services, and says it has 300+ digital marketing experts.', note: "Named in Google India's AI Overview for seo services too.", citedInAio: true },
-  { name: 'SEO Discovery', domain: 'seodiscovery.com', positions: [null, null, 1, 3], offers: 'India-based. Owns the top India result for ai seo agency. Its page would not load without JavaScript, so we could not read its outline.', note: 'Also on page one for seo company in India.', citedInAio: true },
+  { name: 'Thrive Agency', domain: 'thriveagency.com', positions: [4, 5], offers: 'Lists separate ChatGPT, Gemini, Perplexity, Claude and AI Overviews services on its AI SEO page.', note: 'On page one for both searches.', citedInAio: true },
+  { name: 'OuterBox', domain: 'outerboxdesign.com', positions: [2, null], offers: 'Tests your brand across ChatGPT, Perplexity, Gemini and Bing Copilot, and adds a conversion layer for AI-referred visits.', note: 'Second only to a Reddit thread for ai seo agency in the US.', citedInAio: true },
+  { name: 'Level Agency', domain: 'level.agency', positions: [3, 7], offers: 'Frames AI SEO as a layer added on top of traditional SEO, with a straight-answers FAQ on generative search.', note: 'Cited inside the US AI Overviews for both searches.', citedInAio: true },
+  { name: 'Coalition Technologies', domain: 'coalitiontechnologies.com', positions: [6, null], offers: 'A six-part framework: entity clarity, technical access, extractable answers, outside validation, tracking and conversion paths.', note: 'Also on page one for seo services in the US.', citedInAio: true },
 ];
 
 function DirectoryList({ items }: { items: ReadonlyArray<{ title: string; href: string; line: string }> }) {
@@ -221,9 +209,9 @@ export default function AiSeoHubSections() {
         <section className="hero" id="hero">
           <div className="wrap hero-grid">
             <div className="hero-copy">
-              <div className="eyebrow">AI SEO Agency · US &amp; India · Service Specification</div>
+              <div className="eyebrow">AI SEO Agency · United States · Service Specification</div>
               <h1>AI SEO Services That Get You <span className="hero-emphasis">Cited by AI</span> and Ranked on Google</h1>
-              <p className="lead" data-speakable>FactoryJet is an AI SEO agency and SEO company for businesses in the US and India. When buyers ask ChatGPT, Perplexity, Claude, Gemini or Google AI Overviews who to hire, the answer names a few businesses. We work to make yours one of them, and keep your Google rankings climbing, on one month-to-month retainer with both numbers in every report.</p>
+              <p className="lead" data-speakable>FactoryJet is an AI SEO agency and SEO company for businesses across the US. When buyers ask ChatGPT, Perplexity, Claude, Gemini or Google AI Overviews who to hire, the answer names a few businesses. We work to make yours one of them, and keep your Google rankings climbing, on one month-to-month retainer with both numbers in every report.</p>
               <div className="actions">
                 <a className="btn btn-primary" href="/ai-visibility-checker">Get a free AI visibility check</a>
                 <a className="btn btn-ghost" href="#how">See how we work</a>
@@ -308,10 +296,10 @@ export default function AiSeoHubSections() {
                   <li><span><b>Classic SEO:</b> technical, local and ecommerce SEO, because AI engines still read ranked pages</span></li>
                 </ul></div></div>
                 <div className="fact"><div className="sec">§03</div><p><span className="stat">When Google shows an AI summary, people click through to a website on 8% of searches, against 15% when there is no summary.</span> Links inside the summary get clicked 1% of the time. Being the source the summary quotes is now part of the job. <a href={PEW} target="_blank" rel="noopener">Pew Research Center, 2025 ↗</a></p></div>
-                <div className="fact"><div className="sec">§04</div><p><span className="stat">About 2 billion people a month use Google AI Overviews</span>, the answer box above the blue links, which Google said was live in more than 200 countries and territories. Its chat-style AI Mode passed 100 million monthly users across the US and India. <a href={TC} target="_blank" rel="noopener">Google via TechCrunch, July 2025 ↗</a></p></div>
+                <div className="fact"><div className="sec">§04</div><p><span className="stat">About 2 billion people a month use Google AI Overviews</span>, the answer box above the blue links, which Google said was live in more than 200 countries and territories. Its chat-style AI Mode passed 100 million monthly users in its first markets. <a href={TC} target="_blank" rel="noopener">Google via TechCrunch, July 2025 ↗</a></p></div>
                 <div className="fact"><div className="sec">§05</div><p><span className="stat">Around 800 million people use ChatGPT</span>, with OpenAI saying close to 10% of the world uses its tools. More buyers start their research inside an AI assistant every quarter. <a href={FORT} target="_blank" rel="noopener">Fortune / OpenAI, 2025 ↗</a></p></div>
                 <div className="fact"><div className="sec">§06</div><p>Google says you do not need special AI files or special schema to appear in AI Overviews or AI Mode. Most AI SEO is ordinary, excellent SEO plus pages built so an answer can be lifted cleanly. Be wary of anyone selling a secret AI ruleset. <a href={GOOG} target="_blank" rel="noopener">Google Search Central ↗</a></p></div>
-                <div className="fact"><div className="sec">§07</div><p>FactoryJet runs AI SEO and classic SEO as one workflow on one retainer, for clients in the US and India, because the same fixes earn both kinds of traffic. Bhavesh, our founder, and the team run your account, and every monthly report shows citations per engine next to Google rankings. We also build ecommerce stores, AI agents and websites, so fixes that need a developer do not wait on another vendor.</p></div>
+                <div className="fact"><div className="sec">§07</div><p>FactoryJet runs AI SEO and classic SEO as one workflow on one retainer, for US clients, because the same fixes earn both kinds of traffic. Bhavesh, our founder, and the team run your account, and every monthly report shows citations per engine next to Google rankings. We also build ecommerce stores, AI agents and websites, so fixes that need a developer do not wait on another vendor.</p></div>
               </div>
               <div className="factphoto">
                 <img width="1000" height="667" src="/images/ai-seo-hub/ai-seo-facts-page-stack.webp" alt="AI-generated illustration for AI SEO services: a hand placing one orange page tile on a stack of white page tiles beside a magnifying lens" loading="lazy" decoding="async" />
@@ -405,7 +393,7 @@ export default function AiSeoHubSections() {
           <div className="wrap">
             <div className="section-head plat-head">
               <div><div className="eyebrow">Classic SEO</div><h2>SEO Services for Every Kind of Business</h2></div>
-              <p>Still need rankings first? The same team works as a full SEO company: local SEO services, technical SEO services, ecommerce SEO services and SEO audits. Each service below has its own page with its full scope. Generative engine optimization lives on its own page too, so this hub links to it rather than repeating it.</p>
+              <p>Still need rankings first? The same team works as a full SEO company: local SEO services, <a href="/services/technical-seo">technical SEO services</a>, ecommerce SEO services and SEO audits. Each service below has its own page with its full scope. Generative engine optimization lives on its own page too, so this hub links to it rather than repeating it.</p>
             </div>
             <div className="platlist" role="list">
               {SEO_SERVICES.map((row, i) => (
@@ -429,10 +417,6 @@ export default function AiSeoHubSections() {
                   <li key={city.slug}><a href={`/${city.slug}/seo`}>{city.label}</a></li>
                 ))}
               </ul>
-            </div>
-            <div className="agentdir-group ind-block">
-              <div className="agentdir-label"><h3>AI SEO and SEO in India</h3><p>India has its own hub pages, written for Indian buyers and search results.</p><span className="mono agentdir-count">{INDIA_SEO.length} pages</span></div>
-              <DirectoryList items={INDIA_SEO} />
             </div>
             <div className="plat-foot"><span>Not sure where you stand? See who AI assistants recommend in your category today, free.</span><a href="/ai-visibility-checker">Run the free AI Visibility Checker ↗</a></div>
           </div>
@@ -483,8 +467,8 @@ export default function AiSeoHubSections() {
           <div className="wrap">
             <div className="section-head">
               <div className="eyebrow">Compare Agencies</div>
-              <h2>Who Ranks for AI SEO Searches Today, in the US and India</h2>
-              <p>These are the agency sites on Google&apos;s first page for ai seo agency and ai seo services, pulled from DataForSEO (desktop, English) on 23 September 2026, for the US and for India. Positions move every week, so treat this as a snapshot. Roundup and forum pages, like Reddit threads and top-ten lists, are left out because they are not agencies.</p>
+              <h2>Who Ranks for AI SEO Searches in the US Today</h2>
+              <p>These are the agency sites on Google&apos;s first page for ai seo agency and ai seo services, pulled from DataForSEO (US, desktop, English) on 23 September 2026. Positions move every week, so treat this as a snapshot. Roundup and forum pages, like Reddit threads and top-ten lists, are left out because they are not agencies.</p>
             </div>
             <div className="tablewrap">
               <table>
@@ -507,14 +491,14 @@ export default function AiSeoHubSections() {
                   ))}
                   <tr className="us">
                     <th>FactoryJet<br /><span className="mono tableSubLabel tableSubLabelAccent">This page</span></th>
-                    <td className="poscell">Not in the top 10 for any of these four searches today.</td>
+                    <td className="poscell">Not in the top 10 for either search today.</td>
                     <td>Bhavesh, our founder, and the team on your account, citation counts per engine, month-to-month terms, and in-house ecommerce, AI agent and web builds.</td>
                     <td>Far less domain authority than every agency above. If the safest logo on the invoice matters most, hire the incumbent.</td>
                   </tr>
                 </tbody>
               </table>
             </div>
-            <p className="sub-note">Shortlisting, not hiring yet? Our roundups of the <a href="/blog/best-ai-seo-agencies-usa">best AI SEO agencies in the USA</a> and the <a href="/blog/best-ai-seo-agencies-india">best AI SEO agencies in India</a> review more shops, and our <a href="/blog/best-seo-agencies-usa">best SEO agencies in the USA</a> list covers classic SEO.</p>
+            <p className="sub-note">Shortlisting, not hiring yet? Our roundup of the <a href="/blog/best-ai-seo-agencies-usa">best AI SEO agencies in the USA</a> reviews more shops, and our <a href="/blog/best-seo-agencies-usa">best SEO agencies in the USA</a> list covers classic SEO.</p>
           </div>
         </section>
 
@@ -524,7 +508,7 @@ export default function AiSeoHubSections() {
               <div className="faqintro">
                 <div className="eyebrow">FAQ</div>
                 <h2 className="faqHeading">AI SEO and SEO, Answered Directly</h2>
-                <p>{AI_SEO_FAQS.length} real questions buyers in the US and India ask Google and AI assistants, most taken from Google&apos;s People Also Ask boxes, answered without hedging.</p>
+                <p>{AI_SEO_FAQS.length} real questions US buyers ask Google and AI assistants, most taken from Google&apos;s People Also Ask boxes, answered without hedging.</p>
                 <nav className="faq-catnav" aria-label="FAQ categories">
                   {AI_SEO_FAQ_CATEGORIES.map((category) => <a key={category.id} href={`#${category.id}`}>{category.label}</a>)}
                 </nav>
@@ -541,8 +525,6 @@ export default function AiSeoHubSections() {
               <a href="/services/generative-engine-optimization">Generative Engine Optimization Services (GEO)</a>
               <a href="/ai-visibility-checker">Free AI Visibility Checker</a>
               <a href="/blog/best-ai-seo-agencies-usa">Best AI SEO Agencies in the USA</a>
-              <a href="/blog/best-ai-seo-agencies-india">Best AI SEO Agencies in India</a>
-              <a href="/ai-seo">AI SEO Company in India</a>
               <a href={TC} target="_blank" rel="noopener">TechCrunch: AI Overviews and AI Mode Users</a>
               <a href={GOOG} target="_blank" rel="noopener">Google: AI Features and Your Website</a>
               <a href={OAI} target="_blank" rel="noopener">OpenAI: Overview of Crawlers</a>

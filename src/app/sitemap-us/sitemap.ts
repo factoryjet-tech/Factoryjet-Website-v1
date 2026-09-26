@@ -51,6 +51,7 @@ const US_ROUTES: { path: string; source: string }[] = [
   { path: '/services/website-redesign',                    source: 'src/app/services/website-redesign/page.tsx' },
   { path: '/services/wordpress-development',               source: 'src/app/services/wordpress-development/page.tsx' },
   { path: '/services/web-application-development',         source: 'src/app/services/web-application-development/page.tsx' },
+  { path: '/services/webflow-development',                  source: 'src/app/services/webflow-development/page.tsx' },
   // /services/ai-agents retired 2026-08-06: 301 to /services/ai-agent-development.
   // A sitemap must never list a redirect source.
   { path: '/services/ai-automation',                       source: 'src/app/services/ai-automation/page.tsx' },
@@ -60,6 +61,7 @@ const US_ROUTES: { path: string; source: string }[] = [
   { path: '/services/shopify-seo',                         source: 'src/app/services/shopify-seo/page.tsx' },
   { path: '/services/small-business-seo',                  source: 'src/app/services/small-business-seo/page.tsx' },
   { path: '/services/seo-audit',                           source: 'src/app/services/seo-audit/page.tsx' },
+  { path: '/services/technical-seo',                        source: 'src/app/services/technical-seo/page.tsx' },
   { path: '/services/seo-consulting',                      source: 'src/app/services/seo-consulting/page.tsx' },
   { path: '/services/roofing-seo',                         source: 'src/app/services/roofing-seo/page.tsx' },
   { path: '/services/dental-seo',                           source: 'src/app/services/dental-seo/page.tsx' },
@@ -86,13 +88,15 @@ const US_ROUTES: { path: string; source: string }[] = [
   // agent", 2,900/mo) that are not buyer intent. Size expectations accordingly;
   // see pipeline/research/US-ONLY-REALITY-2026-08-17.md.
   { path: '/services/ai-agent-development',                source: 'src/app/services/ai-agent-development/page.tsx' },
+  { path: '/services/ai-development',                       source: 'src/app/services/ai-development/page.tsx' },
   // 2026-09-17: the chatbot, customer support, sales agent and workflow automation
   // children were merged by 301 into /services/ai-chatbot-development,
   // /services/ai-customer-support-agents, /services/ai-sdr and
   // /services/ai-workflow-automation, which are each listed once below.
+  // 2026-09-26: /services/ai-agent-development/ai-voice-agent was merged by 301
+  // into /services/ai-receptionist (listed below).
   { path: '/services/ai-agent-development/ai-marketing-agent',  source: 'src/app/services/ai-agent-development/ai-marketing-agent/page.tsx' },
   { path: '/services/ai-agent-development/ai-scheduling-agent', source: 'src/app/services/ai-agent-development/ai-scheduling-agent/page.tsx' },
-  { path: '/services/ai-agent-development/ai-voice-agent', source: 'src/app/services/ai-agent-development/ai-voice-agent/page.tsx' },
   // ── Manufacturer/distributor capability spokes, added 2026-08-06 ───────────
   // Built as LLM-citation and sales-collateral assets, NOT SEO pages: the whole
   // US vertical-agent keyword space measured 7 keywords / 730 per month / zero
@@ -102,6 +106,7 @@ const US_ROUTES: { path: string; source: string }[] = [
   { path: '/services/ai-agent-development/procurement-supply-chain-agent', source: 'src/app/services/ai-agent-development/procurement-supply-chain-agent/page.tsx' },
   { path: '/services/ai-chatbot-development',              source: 'src/app/services/ai-chatbot-development/page.tsx' },
   { path: '/services/ai-integration-services',             source: 'src/app/services/ai-integration-services/page.tsx' },
+  { path: '/services/ai-consulting',                        source: 'src/app/services/ai-consulting/page.tsx' },
   { path: '/services/ai-workflow-automation',              source: 'src/app/services/ai-workflow-automation/page.tsx' },
   { path: '/services/small-business-website-design',       source: 'src/app/services/small-business-website-design/page.tsx' },
   { path: '/services/magento-development',                 source: 'src/app/services/magento-development/page.tsx' },
@@ -168,11 +173,21 @@ const US_ROUTES: { path: string; source: string }[] = [
   { path: '/corpus-christi/seo',                            source: 'src/app/corpus-christi/seo/page.tsx' },
   { path: '/huntington-beach/seo',                          source: 'src/app/huntington-beach/seo/page.tsx' },
   { path: '/lakewood-ranch/seo',                            source: 'src/app/lakewood-ranch/seo/page.tsx' },
-  { path: '/austin/ai-agents',                              source: 'src/app/austin/ai-agents/page.tsx' },
-  { path: '/denver/ai-agents',                              source: 'src/app/denver/ai-agents/page.tsx' },
-  { path: '/raleigh/ai-agents',                             source: 'src/app/raleigh/ai-agents/page.tsx' },
-  { path: '/charlotte/ai-automation',                       source: 'src/app/charlotte/ai-automation/page.tsx' },
-  { path: '/miami/ai-automation',                           source: 'src/app/miami/ai-automation/page.tsx' },
+  // 2026-09-26: the five city AI pages (/austin|denver|raleigh/ai-agents,
+  // /charlotte|miami/ai-automation) were retired by 301 to the main AI pages.
+  // Same day: 11 live, indexable, self-canonical US pages that had never been
+  // listed here were added (each verified 200 on production, not a redirect).
+  { path: '/atlanta/seo',                                   source: 'src/app/atlanta/seo/page.tsx' },
+  { path: '/kansas-city/seo',                               source: 'src/app/kansas-city/seo/page.tsx' },
+  { path: '/kansas-city/web-design',                        source: 'src/app/kansas-city/web-design/page.tsx' },
+  { path: '/miami/seo',                                     source: 'src/app/miami/seo/page.tsx' },
+  { path: '/minneapolis/seo',                               source: 'src/app/minneapolis/seo/page.tsx' },
+  { path: '/minneapolis/web-design',                        source: 'src/app/minneapolis/web-design/page.tsx' },
+  { path: '/minneapolis/ecommerce-development',             source: 'src/app/minneapolis/ecommerce-development/page.tsx' },
+  { path: '/salt-lake-city/seo',                            source: 'src/app/salt-lake-city/seo/page.tsx' },
+  { path: '/salt-lake-city/web-design',                     source: 'src/app/salt-lake-city/web-design/page.tsx' },
+  { path: '/salt-lake-city/ecommerce-development',          source: 'src/app/salt-lake-city/ecommerce-development/page.tsx' },
+  { path: '/services/shopify-theme-development',            source: 'src/app/services/shopify-theme-development/page.tsx' },
   { path: '/services/ecommerce-development',               source: 'src/app/services/ecommerce-development/page.tsx' },
   { path: '/services/ecommerce-growth-agency',             source: 'src/app/services/ecommerce-growth-agency/page.tsx' },
   { path: '/services/ecommerce-marketing-agency',          source: 'src/app/services/ecommerce-marketing-agency/page.tsx' },
@@ -186,6 +201,7 @@ const US_ROUTES: { path: string; source: string }[] = [
   { path: '/agentic-commerce-for-brands',                  source: 'src/app/agentic-commerce-for-brands/page.tsx' },
   { path: '/services/shopify-plus-b2b',                    source: 'src/app/services/shopify-plus-b2b/page.tsx' },
   { path: '/services/shopify-maintenance-services',        source: 'src/app/services/shopify-maintenance-services/page.tsx' },
+  { path: '/services/website-maintenance',                  source: 'src/app/services/website-maintenance/page.tsx' },
   { path: '/services/bigcommerce-b2b',                     source: 'src/app/services/bigcommerce-b2b/page.tsx' },
   { path: '/services/amazon-agency',                       source: 'src/app/services/amazon-agency/page.tsx' },
   { path: '/services/tiktok-shop-agency',                  source: 'src/app/services/tiktok-shop-agency/page.tsx' },

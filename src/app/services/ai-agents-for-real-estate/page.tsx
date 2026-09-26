@@ -26,7 +26,7 @@ import MidPageCTA from '@/components/v2/MidPageCTA';
    Does NOT own, and must not cannibalise:
      /services/ai-agent-development            general agent building, the parent
      /services/ai-sdr                                   generic inbound lead agent
-     /services/ai-agent-development/ai-voice-agent      generic voice
+     /services/ai-receptionist                          generic voice / phone answering
      /services/ai-agent-development/ai-scheduling-agent generic booking
      /services/ai-chatbot-development                   generic site chat
      /services/real-estate-website-design               the website build
@@ -918,7 +918,7 @@ export default function AiAgentsForRealEstatePage() {
                 </Link>{' '}
                 and{' '}
                 <Link
-                  href="/services/ai-agent-development/ai-voice-agent"
+                  href="/services/ai-receptionist"
                   className="font-semibold underline underline-offset-2"
                   style={{ color: ORANGE_DARK }}
                 >
@@ -1536,8 +1536,8 @@ export default function AiAgentsForRealEstatePage() {
                   desc: 'Booking, rescheduling and confirmation against real calendar and capacity rules.',
                 },
                 {
-                  label: 'AI voice agent',
-                  href: '/services/ai-agent-development/ai-voice-agent',
+                  label: 'AI receptionist and voice agents',
+                  href: '/services/ai-receptionist',
                   desc: 'Inbound calls handled over Twilio, routed to the right person.',
                 },
                 {

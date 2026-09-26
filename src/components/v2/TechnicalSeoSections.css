@@ -1,0 +1,109 @@
+/* Technical SEO service page (/services/technical-seo), layered on AiAgentDevelopmentSections.css.
+   Every rule is scoped under .technicalSeo so nothing leaks into other .aiAgentPage pages.
+   Blocks mirror AiSeoHubSections.css and WebDesignHubSections.css, rescoped. */
+
+/* Visual slots: placeholders stay hidden until the visual pass fills them. */
+.technicalSeo [data-visual-status='placeholder'] { display: none; }
+.technicalSeo figure { margin: 0; }
+.technicalSeo .definition:has(> [data-visual-status='placeholder']) { grid-template-columns: minmax(0,1fr); }
+.technicalSeo .definition:has(> [data-visual-status='placeholder']) .definition-copy { max-width: 820px; }
+
+/* Hero */
+.technicalSeo .hero-alt { margin-top: 16px; font-size: 13px; color: var(--muted); }
+.technicalSeo .hero-alt a { color: var(--accent-text); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.technicalSeo .inline-link { color: var(--accent-text); text-decoration: underline; text-underline-offset: 3px; }
+
+/* Facts */
+.technicalSeo .fact .stat { color: var(--ink); font-weight: 600; }
+.technicalSeo .fact ul { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 8px; }
+.technicalSeo .fact li { display: grid; grid-template-columns: 8px minmax(0,1fr); gap: 12px; align-items: baseline; color: var(--body); font-size: 14px; line-height: 1.6; }
+.technicalSeo .fact li::before { content: ''; width: 7px; height: 7px; background: var(--accent); border-radius: 1px; transform: translateY(-1px); }
+.technicalSeo .fact li b { color: var(--ink); font-weight: 600; }
+.technicalSeo .srclink { color: var(--accent-text); font-family: var(--mono); font-size: 11px; text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; margin-right: 8px; }
+
+/* Links inside prose blocks */
+.technicalSeo .tablenote, .technicalSeo .sub-note { margin-top: 16px; font-size: 13px; color: var(--muted); line-height: 1.7; }
+.technicalSeo .tablenote a, .technicalSeo .sub-note a, .technicalSeo .chg-note a, .technicalSeo .tableSubLabel a,
+.technicalSeo .definition-copy a:not(.srclink), .technicalSeo .section-head p a, .technicalSeo td a { color: var(--accent-text); text-decoration: underline; text-underline-offset: 3px; }
+
+/* Capabilities */
+.technicalSeo .cap-more { display: inline-block; margin-top: 14px; font-family: var(--mono); font-size: 10px; letter-spacing: .06em; color: var(--accent-text); text-transform: uppercase; }
+
+/* Checks list */
+.technicalSeo .changes { border-top: 1px solid var(--line); }
+.technicalSeo .changes .section-head p { margin-top: 18px; color: var(--body); font-size: 16px; line-height: 1.75; }
+.technicalSeo .chg-group .capid { display: block; margin-bottom: 10px; }
+.technicalSeo .chg-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); column-gap: 28px; align-content: start; }
+.technicalSeo .chg-list li { display: grid; grid-template-columns: 8px minmax(0,1fr); gap: 12px; align-items: baseline; padding: 13px 0; border-bottom: 1px solid var(--line); font-size: 14px; color: var(--body); line-height: 1.55; }
+.technicalSeo .chg-list li::before { content: ''; width: 7px; height: 7px; background: var(--accent); border-radius: 1px; transform: translateY(-1px); }
+.technicalSeo .chg-list li b { color: var(--ink); font-weight: 600; }
+.technicalSeo .chg-note { margin-top: 36px; padding: 20px 24px; border: 1px solid var(--line); border-left: 2px solid var(--accent); border-radius: 8px; background: var(--accent-wash); color: var(--body); font-size: 14px; line-height: 1.75; max-width: 880px; }
+
+/* Mid-page CTA band (light, never dark) */
+.technicalSeo .midcta { padding: 8px 0 clamp(56px,7vw,96px); }
+.technicalSeo .midcta-inner { display: flex; justify-content: space-between; align-items: flex-end; gap: 32px 56px; padding: 36px 40px; border: 1px solid var(--line); border-left: 2px solid var(--accent); border-radius: 12px; background: var(--accent-wash); }
+.technicalSeo .midcta h2 { margin-top: 14px; font-size: clamp(26px,2.8vw,36px); max-width: 24ch; }
+.technicalSeo .midcta p { margin-top: 14px; max-width: 60ch; color: var(--body); font-size: 15px; line-height: 1.75; }
+.technicalSeo .midcta .ctas, .technicalSeo .finalcta .ctas { display: flex; flex-wrap: wrap; gap: 12px; flex-shrink: 0; }
+.technicalSeo .finalcta .ctas { margin-bottom: 5px; }
+.technicalSeo .midcta .btn, .technicalSeo .finalcta .ctas .btn { margin: 0; }
+
+/* Rendering comparison */
+.technicalSeo .render-compare .section-head { row-gap: 18px; }
+.technicalSeo .render-compare .section-head p { grid-column: 2; margin: 0; color: var(--body); font-size: 16px; line-height: 1.75; max-width: 70ch; }
+.technicalSeo .render-compare tbody th { font-weight: 500; }
+
+/* Platform index */
+.technicalSeo .platforms { border-top: 1px solid var(--line); }
+.technicalSeo .plat-head { max-width: none; display: grid; grid-template-columns: minmax(0,5fr) minmax(0,7fr); gap: 20px 64px; align-items: end; }
+.technicalSeo .plat-head h2 { margin-top: 16px; }
+.technicalSeo .plat-head p { color: var(--body); font-size: 16px; line-height: 1.75; max-width: 60ch; }
+.technicalSeo .platlist { border-top: 1px solid var(--ink); }
+.technicalSeo .plat { display: grid; grid-template-columns: 64px minmax(0,2.6fr) minmax(0,2.6fr) minmax(0,5fr) 28px; gap: 24px; align-items: start; padding: 26px 16px; border-bottom: 1px solid var(--line); transition: background .18s ease; }
+.technicalSeo a.plat:hover { background: var(--accent-wash); }
+.technicalSeo a.plat:hover h3, .technicalSeo a.plat:hover .plat-go { color: var(--accent-text); }
+.technicalSeo .plat .capid { padding-top: 6px; }
+.technicalSeo .plat h3 { font-size: 22px; line-height: 1.2; }
+.technicalSeo .plat .k { display: block; font-family: var(--mono); font-size: 9px; font-weight: 400; color: var(--muted); letter-spacing: .06em; text-transform: uppercase; margin-bottom: 6px; }
+.technicalSeo .plat-fit { font-size: 14px; color: var(--ink); font-weight: 500; line-height: 1.6; }
+.technicalSeo .plat-build { font-size: 14px; color: var(--body); line-height: 1.7; }
+.technicalSeo .plat-go { color: var(--muted); font-size: 19px; padding-top: 2px; text-align: right; }
+.technicalSeo .plat-foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 32px; margin-top: 26px; font-size: 14px; color: var(--body); }
+.technicalSeo .plat-foot a { color: var(--accent-text); font-weight: 600; }
+
+/* Process CTA row */
+.technicalSeo .timelineAction { display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* Competitor table */
+.technicalSeo .agencies { border-top: 1px solid var(--line); }
+.technicalSeo .agencies .section-head p { margin-top: 18px; color: var(--body); font-size: 16px; line-height: 1.75; }
+.technicalSeo .agencies tbody th { width: 18%; }
+.technicalSeo .poscell { min-width: 190px; }
+.technicalSeo .posrow { display: flex; justify-content: space-between; gap: 10px; padding: 3px 0; border-bottom: 1px dashed var(--line); font-size: 13px; }
+.technicalSeo .posrow:last-child { border-bottom: 0; }
+.technicalSeo .posrow .mono { font-size: 10.5px; letter-spacing: .04em; color: var(--muted); }
+.technicalSeo .posrow b { color: var(--ink); font-weight: 600; white-space: nowrap; }
+
+/* FAQ sources */
+.technicalSeo .faqsrc { font-family: var(--mono); font-size: 11px; color: var(--accent-text); text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; }
+
+/* References */
+.technicalSeo .refs { grid-template-columns: repeat(4,minmax(0,1fr)); row-gap: 22px; }
+
+@media (max-width: 1080px) {
+  .technicalSeo .plat { grid-template-columns: 56px minmax(0,1fr) minmax(0,1.4fr) 20px; }
+  .technicalSeo .plat .plat-name { grid-column: 2; grid-row: 1; }
+  .technicalSeo .plat .plat-fit { grid-column: 2; grid-row: 2; }
+  .technicalSeo .plat .plat-build { grid-column: 3; grid-row: 1 / span 2; }
+  .technicalSeo .plat .plat-go { grid-column: 4; grid-row: 1; }
+}
+@media (max-width: 820px) {
+  .technicalSeo .chg-list { grid-template-columns: 1fr; }
+  .technicalSeo .plat-head { grid-template-columns: 1fr; }
+  .technicalSeo .plat { grid-template-columns: minmax(0,1fr) 20px; gap: 10px; padding: 22px 4px; }
+  .technicalSeo .plat .capid, .technicalSeo .plat .plat-name, .technicalSeo .plat .plat-fit, .technicalSeo .plat .plat-build { grid-column: 1; grid-row: auto; padding: 0; }
+  .technicalSeo .plat .plat-go { grid-column: 2; grid-row: 1; }
+  .technicalSeo .midcta-inner { flex-direction: column; align-items: flex-start; padding: 28px 22px; }
+  .technicalSeo .render-compare .section-head p { margin-top: 16px; }
+  .technicalSeo .refs { grid-template-columns: 1fr; }
+}

@@ -10,7 +10,8 @@ import { AI_SEO_FAQS } from '@/components/v2/AiSeoHubFaqs';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   /services/ai-seo: AI Search & SEO hub for the US and India.
+   /services/ai-seo: AI Search & SEO hub for the US (the only US SEO hub).
+   India has its own hub at /ai-seo; keep India copy off this page (2026-09-26).
 
    Rebuilt 2026-09-23 from the approved mockup in the AI Agent Development page's
    design system (same port pattern as the homepage, commit 7a8e582). Keyword map
@@ -29,9 +30,9 @@ import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 ───────────────────────────────────────────────────────────────────────────── */
 
 const PAGE_URL = 'https://factoryjet.com/services/ai-seo';
-const TITLE = 'AI SEO Services & SEO Agency for the US and India | FactoryJet';
+const TITLE = 'AI SEO Services & AI SEO Agency in the USA | FactoryJet';
 const DESCRIPTION =
-  'AI SEO agency and SEO company for the US and India. Get cited by ChatGPT, Perplexity, Gemini and Google AI Overviews and rank on Google. Free AI check.';
+  'AI SEO agency and SEO company for US businesses. Get cited by ChatGPT, Perplexity, Gemini and Google AI Overviews and rank on Google. Free AI check.';
 const OG_IMAGE = 'https://factoryjet.com/images/ai-seo-hub/ai-seo-definition-answer-path.webp';
 
 export const metadata: Metadata = {
@@ -64,7 +65,7 @@ export const metadata: Metadata = {
 };
 
 /** Honest last-substantive-edit date. Bump only when the page content changes. */
-const PAGE_MODIFIED = '2026-09-23';
+const PAGE_MODIFIED = '2026-09-26';
 
 const webPageSchema = {
   '@context': 'https://schema.org',
@@ -96,10 +97,7 @@ const serviceSchema = {
   description:
     'AI SEO and classic SEO on one month-to-month retainer: getting a business cited by ChatGPT, Perplexity, Claude, Gemini and Google AI Overviews while its Google rankings climb, with citations per engine and rankings in every monthly report.',
   provider: { '@id': 'https://factoryjet.com/#organization' },
-  areaServed: [
-    { '@type': 'Country', name: 'United States' },
-    { '@type': 'Country', name: 'India' },
-  ],
+  areaServed: { '@type': 'Country', name: 'United States' },
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'AI SEO services',
@@ -128,7 +126,7 @@ const faqSchema = {
 const competitorListSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
-  name: 'Agencies on Google page one for AI SEO searches in the US and India, 23 September 2026',
+  name: 'Agencies on Google page one for AI SEO searches in the US, 23 September 2026',
   itemListOrder: 'https://schema.org/ItemListUnordered',
   numberOfItems: COMPETITORS.length,
   itemListElement: COMPETITORS.map((c, i) => ({

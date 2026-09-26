@@ -489,6 +489,8 @@ export default function ShopifySeoPage() {
                 </p>
                 <p>
                   We build modular section schemas. Thin collection grids become high-converting category guides. Our team cleans up bloated app scripts. Stores maintain fast Core Web Vitals. We embed rich JSON-LD schema graphs. AI search engines cite your products directly in search answers.
+                  {' '}App bloat, duplicate collection URLs and incomplete Product schema are covered in depth on our{' '}
+                  <a href="/services/technical-seo" style={{ textDecoration: 'underline', textUnderlineOffset: 3 }}>technical SEO services</a> page.
                 </p>
               </div>
             </div>

@@ -746,6 +746,17 @@ export default function AIIntegrationServicesPage() {
               <p>
                 Most businesses spend months evaluating AI tools and signing up for pilots. Most never ship anything meaningful. The faster path is simple. Keep the tools your team already knows. Add AI capabilities directly via API. Your sales team stays in HubSpot. Your support team stays in Zendesk. The AI operates automatically behind the scenes.
               </p>
+              <p>
+                If the job needs more than one app, answers from your own documents or a custom interface, see our{' '}
+                <a href="/services/ai-development" className="font-semibold underline underline-offset-2 text-[#B23E13]">
+                  custom AI development services
+                </a>
+                . If you have not picked the use case yet, start with an{' '}
+                <a href="/services/ai-consulting#readiness" className="font-semibold underline underline-offset-2 text-[#B23E13]">
+                  AI readiness assessment
+                </a>
+                .
+              </p>
 
               <div className="grid grid-cols-3 gap-3" aria-hidden>
                 {[

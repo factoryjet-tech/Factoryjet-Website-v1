@@ -410,7 +410,9 @@ export const post: BlogPost = {
       <p>
         Updates, plugin conflicts, broken forms, content changes, security patching, speed
         regressions, and the annual "why is the contact form not sending." There are only three
-        ways this gets handled: you do it, you pay someone to do it, or nobody does it.
+        ways this gets handled: you do it, you pay someone to do it (that is what{' '}
+        <a href="/services/website-maintenance">website maintenance services</a> are), or nobody
+        does it.
       </p>
       <p>
         That third option is what most businesses actually choose, and it is the most expensive one.

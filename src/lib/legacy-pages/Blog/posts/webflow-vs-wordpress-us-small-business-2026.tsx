@@ -9,20 +9,20 @@ export const post: BlogPost = {
     "Webflow gives a US small business a visually polished site with managed hosting and zero plugin chaos, but it caps out fast on content depth and integrations. WordPress costs less long-term, scales further, and runs on the world's largest plugin ecosystem, but you own the maintenance. This 2026 guide maps each platform to the team, budget, and content rhythm you actually have.",
   category: 'Web Design & Strategy',
   author: 'Bhavesh Barot',
-  date: 'Jun 5, 2026',
+  date: 'Sep 26, 2026',
   readTime: '11 min read',
   imageUrl: '/blog-images/webflow-vs-wordpress-us-small-business-2026.webp',
   meta: {
     title: 'Webflow vs WordPress for US Small Businesses (2026 Honest Comparison)',
     description:
-      'Webflow at $14-$235/month or WordPress free plus hosting? This 2026 guide for US small businesses compares pricing, ease of use, SEO, plugins, multilingual, ecommerce, and 3-year total cost.',
+      'Webflow from $15/month or WordPress free plus hosting? This 2026 guide for US small businesses compares pricing, ease of use, SEO, plugins, multilingual, ecommerce, and 3-year total cost.',
   },
   keyTakeaways: [
     'Webflow wins for design-led marketing sites under 50 pages where a non-technical owner or designer maintains the site and plugin sprawl is the thing you want to avoid most.',
     'WordPress wins for content-heavy sites (50+ blog posts, multilingual, membership, learning, complex forms) and for any project where total budget is under $10,000.',
-    "Real US pricing in 2026: Webflow Site plans run $14-$235/month all-in (hosting included); WordPress is free software plus $5-$100/month hosting plus $0-$500 in one-time themes/plugins plus $5,000-$50,000 in build.",
+    "Real US pricing in 2026: Webflow Site plans run $15/month (Basic) and from $25/month (Premium) billed yearly, hosting included, with a $2,500/month Team plan and custom Enterprise pricing above that; WordPress is free software plus $5-$100/month hosting plus $0-$500 in one-time themes/plugins plus $5,000-$50,000 in build.",
     "Three-year total cost of ownership for a typical SMB marketing site: Webflow lands $4,500-$15,000 with a professional build; WordPress lands $8,000-$40,000 once you add agency build, maintenance retainer, and premium plugins.",
-    "Webflow's design freedom and clean code are real advantages: its CMS caps (10,000 items on Business, 20,000 on Enterprise) and limited native multilingual support are real ceilings.",
+    "Webflow's design freedom and clean code are real advantages: its CMS caps (20,000 items and 40 Collections on Premium, no CMS at all on Basic) and paid-add-on multilingual support are real ceilings.",
     'The headless option is mature on both sides in 2026: Webflow as a CMS with a Next.js front end via the Webflow API, or WordPress headless with the REST API or WPGraphQL.',
     "FactoryJet builds on both platforms and recommends the one that matches your team's strengths, not the one we feel like selling that quarter.",
   ],
@@ -33,11 +33,11 @@ export const post: BlogPost = {
     },
     {
       q: 'How much does Webflow really cost vs WordPress for a US SMB?',
-      a: "Webflow Site plans for US small businesses run $14/month (Basic), $23/month (CMS), $39/month (Business), and $235/month (Enterprise starting): all billed annually, all with hosting included. Webflow Ecommerce adds $29-$235/month depending on plan. A professional Webflow build for an SMB typically runs $3,000-$15,000. WordPress is free software; you pay $5-$30/month for shared hosting or $30-$100/month for managed hosting (WP Engine, Kinsta, Pressable), $0-$500 one-time on premium themes and plugins, and $5,000-$50,000 for a professional build. Over three years, a Webflow SMB site lands $4,500-$15,000 all-in; a WordPress SMB site lands $8,000-$40,000 once you add the maintenance retainer most owners eventually pay.",
+      a: "Webflow Site plans for US small businesses run $15/month for Basic (no CMS) and from $25/month for Premium (CMS, 20,000 items), both billed yearly with hosting included; billed monthly they are $25 and $39. Above that sit the Team plan at $2,500/month on an annual contract and custom-priced Enterprise. Webflow Ecommerce plans run $29, $74 and $212/month billed yearly (Standard, Plus, Advanced). A professional Webflow build for an SMB typically runs $3,000-$15,000. WordPress is free software; you pay $5-$30/month for shared hosting or $30-$100/month for managed hosting (WP Engine, Kinsta, Pressable), $0-$500 one-time on premium themes and plugins, and $5,000-$50,000 for a professional build. Over three years, a Webflow SMB site lands $4,500-$15,000 all-in; a WordPress SMB site lands $8,000-$40,000 once you add the maintenance retainer most owners eventually pay.",
     },
     {
       q: 'Is Webflow really better for SEO than WordPress in 2026?',
-      a: "Neither platform is meaningfully better, both can hit Lighthouse 95+ and rank well when built properly. Webflow's strengths: clean semantic HTML out of the box, fast global CDN included, full control over meta tags, OG tags, canonical URLs, and schema markup, and automatic SSL. Its weaknesses: limited native blog templating compared to WordPress, no Yoast/Rank Math equivalent (you wire SEO fields manually per page or per CMS collection), and a 100-page hard limit on static pages (CMS items don't count, but it surprises people). WordPress's strengths: Yoast and Rank Math are mature on-page SEO engines, unlimited posts and pages, and seamless integration with Google Search Console and Schema Pro. The honest summary: pick the platform that fits your content rhythm and your team, both rank when the underlying content is good.",
+      a: "Neither platform is meaningfully better, both can hit Lighthouse 95+ and rank well when built properly. Webflow's strengths: clean semantic HTML out of the box, fast global CDN included, full control over meta tags, OG tags, canonical URLs, and schema markup, and automatic SSL. Its weaknesses: limited native blog templating compared to WordPress, no Yoast/Rank Math equivalent (you wire SEO fields manually per page or per CMS collection), and a hard limit on static pages (300 on the Basic plan; CMS items don't count, but it surprises people). WordPress's strengths: Yoast and Rank Math are mature on-page SEO engines, unlimited posts and pages, and seamless integration with Google Search Console and Schema Pro. The honest summary: pick the platform that fits your content rhythm and your team, both rank when the underlying content is good.",
     },
     {
       q: 'Can I do a multilingual site on Webflow like I can on WordPress?',
@@ -155,7 +155,7 @@ export const post: BlogPost = {
           <tbody>
             <tr className="bg-white">
               <td className="border p-3 font-semibold">Pricing model</td>
-              <td className="border p-3">$14-$235/month Site plans (hosting included)</td>
+              <td className="border p-3">$15/month Basic, from $25/month Premium (billed yearly, hosting included)</td>
               <td className="border p-3">Free software + $5-$100/month hosting</td>
             </tr>
             <tr className="bg-gray-50">
@@ -175,7 +175,7 @@ export const post: BlogPost = {
             </tr>
             <tr className="bg-white">
               <td className="border p-3 font-semibold">Scalability (page count)</td>
-              <td className="border p-3">100 static pages cap; 10K-20K CMS items</td>
+              <td className="border p-3">300 static pages on Basic; 20,000 CMS items on Premium</td>
               <td className="border p-3">No practical limit on posts or pages</td>
             </tr>
             <tr className="bg-gray-50">
@@ -228,7 +228,7 @@ export const post: BlogPost = {
         <strong>1. Designer-led brands where the visual is the strategy.</strong> Boutique studios, fashion brands, restaurants with a strong identity, architecture firms, creative agencies, premium DTC brands. If the marketing pitch is &quot;our brand feels different,&quot; Webflow&apos;s visual editor and clean code execution lets your designer build exactly what they sketched without a developer in the loop.
       </p>
       <p className="mb-4">
-        <strong>2. Marketing sites under 50 pages with no big blog.</strong> If your site is 10-30 pages plus a light blog and you publish a few posts a month, Webflow is right-sized. The 100-static-page cap and CMS pricing tiers don&apos;t bite at this scale, and the maintenance savings are real.
+        <strong>2. Marketing sites under 50 pages with no big blog.</strong> If your site is 10-30 pages plus a light blog and you publish a few posts a month, Webflow is right-sized. The static page cap and CMS item limits don&apos;t bite at this scale, and the maintenance savings are real.
       </p>
       <p className="mb-4">
         <strong>3. No in-house dev and no appetite for plugin maintenance.</strong> Webflow has zero plugin update cycles, zero PHP version migrations, and zero hosting decisions. You pay the monthly Site plan and the platform handles security, updates, backups, and uptime. For a 2-5 person US SMB with no technical staff, the cognitive offload is significant.
@@ -248,7 +248,7 @@ export const post: BlogPost = {
 
       <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg mb-8">
         <h3 className="text-lg font-bold mb-3">Still deciding which platform to build on?</h3>
-        <p className="mb-4">The platform matters less than whether the build is fast, accessible and easy for your team to run. FactoryJet builds on Webflow, WordPress and custom Next.js, and recommends the fit rather than pushing one option.</p>
+        <p className="mb-4">The platform matters less than whether the build is fast, accessible and easy for your team to run. FactoryJet builds on <a href="/services/webflow-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">Webflow</a>, WordPress and custom Next.js, and recommends the fit rather than pushing one option.</p>
         <a href="/services/web-design" className="inline-block bg-[#B23E13] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#9A3510] transition-colors">See web design services &rarr;</a>
       </div>
 
@@ -283,7 +283,7 @@ export const post: BlogPost = {
         Both platforms have surface pricing and real pricing. Here&apos;s what a US SMB actually pays in 2026, with the line items that don&apos;t show up on the marketing page.
       </p>
       <p className="mb-4">
-        <strong>Webflow real pricing.</strong> Site plans: Basic $14/month (no CMS), CMS $23/month (2,000 CMS items, 3 editors), Business $39/month (10,000 CMS items, 10 editors), Enterprise from $235/month custom (20,000+ items, SSO, custom limits). All billed annually, all include hosting and CDN. Ecommerce plans add $29-$235/month for native storefront functionality. A professional Webflow build for a US SMB typically runs $3,000-$15,000 depending on page count, custom interactions, and CMS structure. Three-year all-in for a typical SMB marketing site: $4,500-$15,000.
+        <strong>Webflow real pricing.</strong> Site plans: Basic $15/month (no CMS, up to 300 static pages, 10 GB bandwidth), Premium from $25/month (Webflow CMS with 20,000 items and 40 Collections, 50 GB bandwidth, more bandwidth costs extra). Those are billed-yearly prices; billed monthly, Basic is $25 and Premium starts at $39. Above them, the Team plan is $2,500/month on an annual contract and Enterprise is custom. All site plans include hosting and CDN. Ecommerce plans are Standard $29/month (500 items, 2% transaction fee), Plus $74/month and Advanced $212/month, billed yearly (<a href="https://webflow.com/pricing" target="_blank" rel="noopener noreferrer nofollow" className="text-blue-600 underline hover:text-blue-800 transition-colors">Webflow pricing</a>, checked 26 Sep 2026). A professional Webflow build for a US SMB typically runs $3,000-$15,000 depending on page count, custom interactions, and CMS structure. Three-year all-in for a typical SMB marketing site: $4,500-$15,000.
       </p>
       <p className="mb-4">
         <strong>WordPress real pricing.</strong> Software is free. Hosting: shared $5-$30/month (good enough for a brochure site), managed $30-$100/month (WP Engine, Kinsta, Pressable, recommended for any serious site). One-time costs: premium theme $0-$100, premium plugins $0-$400 total (Yoast Premium, Gravity Forms, a backup tool, etc.). Build: $5,000-$50,000 depending on agency and scope; budget $5,000-$15,000 for a typical SMB marketing site. Ongoing: $99-$249/month maintenance retainer if you outsource it, or 2-4 hours/month of internal time if you do it yourself (most owners don&apos;t sustain this). Three-year all-in for a typical SMB site with maintenance: $8,000-$40,000.

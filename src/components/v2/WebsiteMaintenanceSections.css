@@ -1,0 +1,104 @@
+/* Website Maintenance hub (/services/website-maintenance), layered on AiAgentDevelopmentSections.css.
+   Every rule is scoped under .wmHub so nothing leaks into other .aiAgentPage pages.
+   Blocks ported from AiSeoHubSections.css and WebDesignHubSections.css, rescoped; hub-only blocks below. */
+
+/* Visual slots: placeholders stay hidden until the visual pass replaces them */
+.aiAgentPage.wmHub [data-visual-status='placeholder'] { display: none; }
+.wmHub .definition:has(> [data-visual-status='placeholder']) { grid-template-columns: minmax(0,1fr); max-width: 880px; }
+
+/* Hero */
+.wmHub .hero-alt { margin-top: 16px; font-size: 13px; color: var(--muted); }
+.wmHub .hero-alt a { color: var(--accent-text); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+
+/* Facts */
+.wmHub .fact p a { color: var(--accent-text); font-family: var(--mono); font-size: 11px; text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; }
+.wmHub .fact .stat { color: var(--ink); font-weight: 600; }
+.wmHub .fact ul { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 8px; }
+.wmHub .fact li, .wmHub .cost-drivers li { display: grid; grid-template-columns: 8px minmax(0,1fr); gap: 12px; align-items: baseline; color: var(--body); font-size: 14px; line-height: 1.6; }
+.wmHub .fact li::before, .wmHub .cost-drivers li::before { content: ''; width: 7px; height: 7px; background: var(--accent); border-radius: 1px; transform: translateY(-1px); }
+.wmHub .fact li b, .wmHub .cost-drivers li b { color: var(--ink); font-weight: 600; }
+
+/* Section-head intro paragraphs and inline links */
+.wmHub .section-head p { margin-top: 18px; color: var(--body); font-size: 16px; line-height: 1.75; }
+.wmHub .section-head p a, .wmHub .chg-note a, .wmHub .tableSubLabel a, .wmHub .cost-drivers p a, .wmHub .ventry p a { color: var(--accent-text); text-decoration: underline; text-underline-offset: 3px; }
+.wmHub .comparison .section-head p { grid-column: 2; margin: 0; max-width: 70ch; }
+
+/* Checklist */
+.wmHub .changes { border-top: 1px solid var(--line); }
+.wmHub .chg-group .capid { display: block; margin-bottom: 10px; }
+.wmHub .chg-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); column-gap: 28px; align-content: start; }
+.wmHub .chg-list li { display: grid; grid-template-columns: 8px minmax(0,1fr); gap: 12px; align-items: baseline; padding: 13px 0; border-bottom: 1px solid var(--line); font-size: 14px; color: var(--body); line-height: 1.55; }
+.wmHub .chg-list li::before { content: ''; width: 7px; height: 7px; background: var(--accent); border-radius: 1px; transform: translateY(-1px); }
+.wmHub .chg-list li b { color: var(--ink); font-weight: 600; }
+.wmHub .chg-note { margin-top: 36px; padding: 20px 24px; border: 1px solid var(--line); border-left: 2px solid var(--accent); border-radius: 8px; background: var(--accent-wash); color: var(--body); font-size: 14px; line-height: 1.75; max-width: 880px; }
+
+/* Mid-page CTA band (light, never dark) */
+.wmHub .midcta { padding: 64px 0; background: var(--accent-wash); border-block: 1px solid var(--line); }
+.wmHub .midcta .wrap { display: flex; justify-content: space-between; align-items: flex-end; gap: 48px; }
+.wmHub .midcta h2 { margin-top: 16px; font-size: clamp(28px,3vw,40px); }
+.wmHub .midcta p { margin-top: 16px; max-width: 62ch; color: var(--body); font-size: 15px; line-height: 1.75; }
+.wmHub .midcta .ctas, .wmHub .finalcta .ctas, .wmHub .timelineAction { display: flex; flex-wrap: wrap; gap: 12px; flex-shrink: 0; }
+.wmHub .finalcta .ctas { margin-bottom: 5px; }
+.wmHub .finalcta .ctas .btn { margin: 0; }
+
+/* Platforms */
+.wmHub .platforms { border-top: 1px solid var(--line); }
+.wmHub .plat-head { max-width: none; display: grid; grid-template-columns: minmax(0,5fr) minmax(0,7fr); gap: 20px 64px; align-items: end; }
+.wmHub .plat-head h2 { margin-top: 16px; }
+.wmHub .plat-head p { margin: 0; max-width: 60ch; }
+.wmHub .platlist { border-top: 1px solid var(--ink); }
+.wmHub .plat { display: grid; grid-template-columns: 64px minmax(0,3fr) minmax(0,3.2fr) minmax(0,4.4fr) 28px; gap: 24px; align-items: start; padding: 26px 16px; border-bottom: 1px solid var(--line); transition: background .18s ease; }
+.wmHub a.plat:hover { background: var(--accent-wash); }
+.wmHub a.plat:hover h3, .wmHub a.plat:hover .plat-go { color: var(--accent-text); }
+.wmHub .plat .capid { padding-top: 6px; }
+.wmHub .plat h3 { font-size: 22px; line-height: 1.2; }
+.wmHub .plat-flag { display: inline-block; margin-top: 10px; font-family: var(--mono); font-size: 9px; letter-spacing: .06em; color: var(--accent-text); background: white; border: 1px solid var(--accent); border-radius: 4px; padding: 4px 7px; }
+.wmHub .plat-own { background: var(--accent-wash); }
+.wmHub .plat-fit { font-size: 14px; color: var(--ink); font-weight: 500; line-height: 1.6; }
+.wmHub .plat-fit .k { display: block; font-family: var(--mono); font-size: 9px; font-weight: 400; color: var(--muted); letter-spacing: .06em; text-transform: uppercase; margin-bottom: 6px; }
+.wmHub .plat-build { font-size: 14px; color: var(--body); line-height: 1.7; }
+.wmHub .plat-go { color: var(--muted); font-size: 19px; padding-top: 2px; text-align: right; }
+
+/* Plans + cost tables */
+.wmHub .plans tbody th { width: 22%; }
+.wmHub .cost { border-top: 1px solid var(--line); }
+.wmHub .cost tbody th { width: 22%; }
+.wmHub .cost-drivers { display: grid; grid-template-columns: minmax(0,4fr) minmax(0,8fr); gap: 16px 56px; margin-top: 40px; align-items: start; }
+.wmHub .cost-drivers h3 { font-size: 22px; }
+.wmHub .cost-drivers ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.wmHub .cost-drivers p { grid-column: 2; color: var(--body); font-size: 15px; line-height: 1.75; }
+
+/* Takeover list */
+.wmHub .takeover-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); column-gap: 32px; border-top: 1px solid var(--ink); }
+.wmHub .takeover-list li { display: grid; grid-template-columns: 36px minmax(0,1fr); gap: 12px; align-items: baseline; padding: 16px 0; border-bottom: 1px solid var(--line); font-size: 14px; color: var(--body); line-height: 1.6; }
+.wmHub .takeover-list .capid { color: var(--accent-text); }
+
+/* Providers table */
+.wmHub .agencies { border-top: 1px solid var(--line); }
+.wmHub .agencies tbody th { width: 18%; }
+
+/* FAQ source links */
+.wmHub .faqsrc { font-family: var(--mono); font-size: 11px; color: var(--accent-text); text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; }
+
+/* References */
+.wmHub .refs { grid-template-columns: repeat(4,minmax(0,1fr)); row-gap: 22px; }
+
+@media (max-width: 1080px) {
+  .wmHub .plat { grid-template-columns: 56px minmax(0,1fr) minmax(0,1.4fr) 20px; }
+  .wmHub .plat-fit { grid-column: 2; }
+  .wmHub .plat-build { grid-column: 3; grid-row: 1 / span 2; }
+  .wmHub .plat-go { grid-column: 4; grid-row: 1; }
+}
+@media (max-width: 820px) {
+  .wmHub .chg-list, .wmHub .takeover-list { grid-template-columns: 1fr; }
+  .wmHub .plat-head, .wmHub .cost-drivers { grid-template-columns: 1fr; }
+  .wmHub .cost-drivers p { grid-column: 1; }
+  .wmHub .comparison .section-head p { margin-top: 16px; }
+  .wmHub .plat { grid-template-columns: minmax(0,1fr) 20px; gap: 10px; padding: 22px 4px; }
+  .wmHub .plat .capid { grid-column: 1; padding: 0; }
+  .wmHub .plat-name, .wmHub .plat-fit, .wmHub .plat-build { grid-column: 1; grid-row: auto; }
+  .wmHub .plat-go { grid-column: 2; grid-row: 1; }
+  .wmHub .midcta .wrap { display: block; }
+  .wmHub .midcta .ctas { margin-top: 26px; }
+  .wmHub .refs { grid-template-columns: 1fr; }
+}

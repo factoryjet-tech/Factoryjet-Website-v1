@@ -11,9 +11,9 @@ import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
 const CANONICAL_URL = 'https://factoryjet.com/services/legal-ai-agents';
-const PAGE_TITLE = 'Legal AI Agents & AI Receptionist for Law Firms | FactoryJet';
+const PAGE_TITLE = 'AI for Law Firms: Legal AI Agents & AI Intake | FactoryJet';
 const PAGE_DESC =
-  'Custom AI receptionist and legal AI agents for law firms. Automate intake, contract redlining & discovery with Clio, MyCase & Filevine sync. Get an audit.';
+  'AI for law firms: custom legal AI agents and an AI receptionist for intake, contract redlining and discovery, synced with Clio, MyCase and Filevine.';
 const PAGE_MODIFIED = '2026-09-19';
 
 /** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
@@ -383,7 +383,7 @@ export default function LegalAiAgentsPage() {
                 </div>
 
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#14110F] font-heading leading-tight mb-6">
-                  Custom Legal AI Agents &amp; AI Receptionist for Law Firms.
+                  AI for Law Firms: Custom Legal AI Agents &amp; AI Receptionist.
                 </h1>
 
                 <p className="text-lg sm:text-xl text-[#46403B] mb-8 leading-relaxed">

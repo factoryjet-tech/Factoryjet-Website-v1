@@ -46,7 +46,6 @@ DEFAULT_PRIORITY_URLS = [
     'https://factoryjet.com/services/ai-customer-support-agents',
     'https://factoryjet.com/services/ai-sdr',
     'https://factoryjet.com/services/ai-workflow-automation',
-    'https://factoryjet.com/services/ai-agent-development/ai-voice-agent',
     'https://factoryjet.com/blog/ai-customer-support-agent-architecture-guide',
     'https://factoryjet.com/blog/how-to-build-custom-ai-sdr-b2b-sales-2026',
     'https://factoryjet.com/blog/n8n-vs-zapier-vs-make-ai-workflow-automation-2026',

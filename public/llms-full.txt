@@ -48,20 +48,26 @@ Updated: 17 Sep 2026.
 - https://factoryjet.com/services/ecommerce-seo
 - https://factoryjet.com/services/shopify-seo
 - https://factoryjet.com/services/seo-audit
+- https://factoryjet.com/services/technical-seo
 - https://factoryjet.com/services/local-seo
 - https://factoryjet.com/services/ai-seo
 - https://factoryjet.com/services/generative-engine-optimization
 
 ## AI agents (software we build into the client's stack)
+- https://factoryjet.com/services/ai-consulting
+- https://factoryjet.com/services/ai-development
 - https://factoryjet.com/services/ai-agent-development
 - https://factoryjet.com/services/ai-automation
 - https://factoryjet.com/services/ai-chatbot-development
+- https://factoryjet.com/services/ai-receptionist
 - https://factoryjet.com/services/ai-workflow-automation
 - [AI Agent Monitoring, Support and Maintenance](https://factoryjet.com/services/ai-agent-monitoring): Support for AI agents after launch: monitoring, evaluation runs, drift checks, model retirement planning and fixes.
 
 ## Supporting web
 - https://factoryjet.com/services/web-design
 - https://factoryjet.com/services/website-redesign
+- https://factoryjet.com/services/website-maintenance
+- https://factoryjet.com/services/webflow-development
 - https://factoryjet.com/services/small-business-website-design
 
 ## Markets

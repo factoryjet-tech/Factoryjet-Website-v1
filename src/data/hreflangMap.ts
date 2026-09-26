@@ -558,36 +558,52 @@ export const usServiceAlternates = {
     'en-US': 'https://factoryjet.com/services/ai-workflow-automation',
     'x-default': 'https://factoryjet.com/services/ai-workflow-automation',
   },
+  // US Tier 1 (2026-09-26). No UK/AU/IN twin exists for either topic.
+  // /services/technical-seo is NOT paired with the India /seo/technical-seo page (different market).
+  'technical-seo': {
+    'en-US': 'https://factoryjet.com/services/technical-seo',
+    'x-default': 'https://factoryjet.com/services/technical-seo',
+  },
+  'webflow-development': {
+    'en-US': 'https://factoryjet.com/services/webflow-development',
+    'x-default': 'https://factoryjet.com/services/webflow-development',
+  },
 } as const
 
 // ===========================================================================
-// US CITY × AI SERVICE PAGES (US only)
-// Pattern: /us/{city}/ai-agents or /us/{city}/ai-automation
-// Per CITY PAGE RULE: only en-US + x-default.
+// US / UK / AU SERVICE CLUSTERS (added 2026-09-26)
+// One topic, one page per market. Every page in a cluster emits the SAME
+// object, so the tags are reciprocal. x-default = the US page (the US is the
+// priority market). Before this, each UK/AU page declared itself x-default,
+// giving one topic two or three competing x-defaults.
+// If you add a market page for one of these topics, add it here, not inline.
 // ===========================================================================
 
-export const usCityAIAlternates = {
-  'austin-ai-agents': {
-    'en-US': 'https://factoryjet.com/austin/ai-agents',
-    'x-default': 'https://factoryjet.com/austin/ai-agents',
-  },
-  'denver-ai-agents': {
-    'en-US': 'https://factoryjet.com/denver/ai-agents',
-    'x-default': 'https://factoryjet.com/denver/ai-agents',
-  },
-  'raleigh-ai-agents': {
-    'en-US': 'https://factoryjet.com/raleigh/ai-agents',
-    'x-default': 'https://factoryjet.com/raleigh/ai-agents',
-  },
-  'miami-ai-automation': {
-    'en-US': 'https://factoryjet.com/miami/ai-automation',
-    'x-default': 'https://factoryjet.com/miami/ai-automation',
-  },
-  'charlotte-ai-automation': {
-    'en-US': 'https://factoryjet.com/charlotte/ai-automation',
-    'x-default': 'https://factoryjet.com/charlotte/ai-automation',
-  },
+/** /services/ai-consulting (US), /uk/ai-consulting, /au/ai-consulting. */
+export const aiConsultingAlternates = {
+  'en-US': 'https://factoryjet.com/services/ai-consulting',
+  'en-GB': 'https://factoryjet.com/uk/ai-consulting',
+  'en-AU': 'https://factoryjet.com/au/ai-consulting',
+  'x-default': 'https://factoryjet.com/services/ai-consulting',
 } as const
+
+/** /services/ai-development (US), /uk/ai-development, /au/ai-development. */
+export const aiDevelopmentAlternates = {
+  'en-US': 'https://factoryjet.com/services/ai-development',
+  'en-GB': 'https://factoryjet.com/uk/ai-development',
+  'en-AU': 'https://factoryjet.com/au/ai-development',
+  'x-default': 'https://factoryjet.com/services/ai-development',
+} as const
+
+/** /services/website-maintenance (US), /au/website-maintenance. No UK page exists. */
+export const websiteMaintenanceAlternates = {
+  'en-US': 'https://factoryjet.com/services/website-maintenance',
+  'en-AU': 'https://factoryjet.com/au/website-maintenance',
+  'x-default': 'https://factoryjet.com/services/website-maintenance',
+} as const
+
+// US CITY × AI SERVICE PAGES: retired 2026-09-26 (301 to /services/ai-agent-development
+// and /services/ai-automation in public/_redirects). City AI demand is near zero.
 
 // ===========================================================================
 // NEW YORK SUB-PAGES (US only)

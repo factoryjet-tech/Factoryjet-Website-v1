@@ -981,8 +981,8 @@ export default function AgricultureEquipmentAiAgentsPage() {
               </h2>
               <p className="text-base sm:text-lg text-[#46403B]">
                 This build extends our{' '}
-                <Link href="/services/ai-agent-development/ai-voice-agent" className="underline hover:no-underline" style={{ color: '#B23E13' }}>
-                  AI voice agent engineering
+                <Link href="/services/ai-receptionist" className="underline hover:no-underline" style={{ color: '#B23E13' }}>
+                  AI receptionist and voice agent engineering
                 </Link>{' '}
                 practice for agriculture. We build sub-500ms voice pipelines. We build telematics fault decoders. We build deterministic DMS connectors for farm dealerships.
               </p>

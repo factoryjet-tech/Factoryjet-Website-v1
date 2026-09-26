@@ -42,8 +42,8 @@ expect('US human /seo (hub) → US SEO hub',
 // Changed 2026-08-06: the agent cluster was retargeted from India to the US, so a
 // North American visitor now belongs on it. The old rule bounced every US visitor
 // off the page, which made the retarget meaningless.
-expect('US human /services/ai-agent-development/ai-voice-agent → NOT redirected (cluster is US-owned)',
-  decideNaRedirect({ path: '/services/ai-agent-development/ai-voice-agent', country: 'US', userAgent: CHROME }), null)
+expect('US human /services/ai-agent-development/ai-scheduling-agent → NOT redirected (cluster is US-owned)',
+  decideNaRedirect({ path: '/services/ai-agent-development/ai-scheduling-agent', country: 'US', userAgent: CHROME }), null)
 expect('US human /services/ai-agent-development (hub) → NOT redirected (cluster is US-owned)',
   decideNaRedirect({ path: '/services/ai-agent-development', country: 'US', userAgent: CHROME }), null)
 expect('US human /ai-seo → US ai-seo',

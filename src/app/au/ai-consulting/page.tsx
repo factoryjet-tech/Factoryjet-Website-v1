@@ -11,6 +11,7 @@ import VisualSlot from '../components/VisualSlot';
 import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
 import './page.css';
+import { aiConsultingAlternates } from '@/data/hreflangMap';
 
 const CANONICAL = 'https://factoryjet.com/au/ai-consulting';
 const UPDATED = '2026-09-26';
@@ -324,7 +325,7 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: CANONICAL, languages: { 'en-AU': CANONICAL, 'x-default': CANONICAL } },
+  alternates: { canonical: CANONICAL, languages: aiConsultingAlternates },
   openGraph: {
     title: TITLE,
     description:

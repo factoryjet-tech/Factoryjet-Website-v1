@@ -912,7 +912,10 @@ export default function SeoAuditServicePage() {
                 single owner with limited hours. When the map pack is the missing channel, it is{' '}
                 <Link href="/services/local-seo" style={LINK_STYLE}>local SEO</Link>. When faceted URLs are burning
                 crawl budget and collection pages are cannibalizing each other, it is{' '}
-                <Link href="/services/ecommerce-seo" style={LINK_STYLE}>ecommerce SEO</Link>.
+                <Link href="/services/ecommerce-seo" style={LINK_STYLE}>ecommerce SEO</Link>. When the findings are
+                mostly technical and you want the fixes shipped after the audit, our{' '}
+                <Link href="/services/technical-seo" style={LINK_STYLE}>ongoing technical SEO</Link> service
+                implements them and checks every release.
               </p>
               <p className="dek" style={{ maxWidth: 780, marginTop: 16 }}>
                 When you rank in Google but no assistant will name you, the work is{' '}

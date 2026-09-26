@@ -62,10 +62,10 @@ import TalkToFounder from '@/components/v2/TalkToFounder';
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const PAGE_URL = 'https://factoryjet.com/services/healthcare-seo';
 const HERO_IMAGE = 'https://factoryjet.com/images/services/healthcare-seo.webp';
-const PAGE_TITLE = 'Healthcare SEO Agency for Clinics & Health Tech | FactoryJet';
+const PAGE_TITLE = 'Medical & Healthcare SEO Agency for Clinics | FactoryJet';
 const PAGE_DESCRIPTION =
-  'Healthcare SEO agency for practices, clinics and health tech companies. Get found on Google and in AI answers with pages your compliance team can approve.';
-const H1_TEXT = 'Healthcare SEO agency for practices, clinics and health tech companies.';
+  'Medical and healthcare SEO for practices, clinics and health tech companies. Get found on Google and in AI answers with pages your compliance team approves.';
+const H1_TEXT = 'Medical and healthcare SEO agency for practices, clinics and health tech companies.';
 const PAGE_MODIFIED = '2026-09-17';
 const REVIEWED_DATE = 'September 17, 2026';
 
