@@ -462,7 +462,7 @@ export const AU_SERVICE_HUBS: ServiceHub[] = [
       ] },
     ],
     feature: { image: '/images/menu/menu-ecommerce.webp', kicker: 'Guide', title: 'Best ecommerce agencies in Australia', body: 'How Australian small businesses compare ecommerce agencies, and what to ask.', href: '/blog/best-ecommerce-agency-small-business-australia-2026', cta: 'Read the guide' },
-    note: { lead: 'Not sure where to start?', label: 'Talk to the founder', href: '/au/ecommerce-development#faq' },
+    note: { lead: 'Not sure where to start?', label: 'Talk to the founder', href: '/contact' },
   },
   {
     key: 'ai', title: 'AI Agent Development', rail: 'Agents, automation, consulting',
@@ -596,7 +596,7 @@ export const AU_SIMPLE_MENUS: SimpleMenu[] = [
         { icon: Globe, label: 'FactoryJet Australia', href: '/au' },
         { icon: User, label: 'How we work with Australian businesses', href: '/au#how-we-work' },
         { icon: Star, label: 'How we compare', href: '/au#compare' },
-        { icon: Mail, label: 'Talk to the founder', href: '/au#faq' },
+        { icon: Mail, label: 'Talk to the founder', href: '/contact' },
       ] },
     ],
     feature: { image: '/images/menu/menu-web-design-model.webp', kicker: 'Talk to us', title: 'Talk to the founder', body: 'Bhavesh reads every request and replies within 24 hours on business days.', href: '/au#how-we-work', cta: 'See how we work' },

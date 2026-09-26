@@ -16,8 +16,8 @@ import '../au-service.css';
    720 · seo consultant / expert brisbane 590 · brisbane web designer 480 · web design
    agency brisbane 390 · local seo brisbane 390. Title and H1 intent kept from the
    previous version of this page. */
-const UPDATED = '2026-09-25';
-const TITLE = 'Web Design & SEO Brisbane | Fast, Findable Sites | FactoryJet';
+const UPDATED = '2026-09-26';
+const TITLE = 'Web Design & SEO Brisbane | Fast Sites | FactoryJet';
 const H1 = 'Web design and SEO for Brisbane businesses';
 const DESCRIPTION =
   'Brisbane web design and SEO for businesses that need enquiries. Fast sites by senior engineers, Google Business Profile done properly, and you own it all.';
@@ -264,7 +264,7 @@ export default function BrisbanePage() {
                 <div className="byline mt-6" style={{ maxWidth: 560 }}>
                   <div className="av">BB</div>
                   <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
-                  <div className="upd">Last updated<br />25 September 2026</div>
+                  <div className="upd">Last updated<br />26 September 2026</div>
                 </div>
 
                 <div className="mt-6" style={{ maxWidth: 560 }}>

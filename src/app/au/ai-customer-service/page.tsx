@@ -1,12 +1,15 @@
 import type { Metadata } from 'next';
+import { Fragment } from 'react';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import { AU_FOOTER_COLUMNS } from '@/data/auFooterColumns';
-import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
-import '../au-service.css';
+import AuFaq from '../components/AuFaq';
+import VisualSlot from '../components/VisualSlot';
+import '@/components/v2/AiAgentDevelopmentSections.css';
+import '../au-page.css';
 
 const CANONICAL = 'https://factoryjet.com/au/ai-customer-service';
 const UPDATED = '2026-09-26';
@@ -14,19 +17,6 @@ const TITLE = 'AI Customer Service Australia | Chat & Email | FactoryJet';
 const H1 = 'AI Customer Service for Australian Support Teams: Faster Answers, After-Hours Cover, People on the Hard Cases';
 const DESCRIPTION =
   'AI customer service for Australian support teams. Agents answer chat and email, draft replies, triage Zendesk or Gorgias tickets and hand hard cases to people.';
-
-/* Design tokens, copied by value from ../au-service.css so inline styles stay
-   on-system without CSS custom property references in this file. */
-const T = {
-  ink: '#0F0F12',
-  n200: '#E5E5E0',
-  n400: '#6E6E68',
-  orange: '#F05A28',
-  green: '#047857',
-  small: '#B23E13',
-  fm: "'Geist Mono',monospace",
-  fd: "'Plus Jakarta Sans',sans-serif",
-};
 
 /* ONE array drives the visible trail AND the BreadcrumbList JSON-LD. Never
    hand-copy a second list here. */
@@ -253,8 +243,6 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-const srcNote = { fontFamily: T.fm, fontSize: 11, color: T.n400, marginTop: 12 } as const;
-const srcLink = { textDecoration: 'underline' } as const;
 const extLink = { target: '_blank', rel: 'noopener noreferrer nofollow' } as const;
 
 /* The four jobs the AI does. */
@@ -264,6 +252,20 @@ const JOBS: { t: string; d: string }[] = [
   { t: 'Triages', d: 'Reads every new ticket, works out what it is about and how urgent it is, adds tags, spots duplicates and angry customers, and routes it to the right queue or person before anyone opens it.' },
   { t: 'Hands over', d: 'Passes the conversation to a person when a rule says so, with a short summary, the order or account details and what has been tried, so the customer never has to explain it twice.' },
 ];
+
+/* Icons and visual-slot subjects for the four job cards (same order as JOBS). */
+const JOB_ICONS = [
+  'M4 5h16v11H9l-5 4V5Zm4 5h8M8 13h5',
+  'M4 20h4L19 9l-4-4L4 16v4Zm9-13 4 4',
+  'M4 5h16l-6 8v6l-4-2v-4L4 5Z',
+  'M9 7a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 13c0-3 2-5 5-5s5 2 5 5m3-9h5m-2-2 2 2-2 2',
+] as const;
+const JOB_SUBJECTS = [
+  'AI-generated model: a white chat window with an orange reply bubble answering a short customer question',
+  'AI-generated model: a helpdesk ticket with a drafted reply card waiting for an orange approve tick from a person',
+  'AI-generated model: incoming white ticket cards passing through a sorter into three labelled trays',
+  'AI-generated model: an orange summary card passing from a chat window to a small human figure at a desk',
+] as const;
 
 /* "Which option fits you" self-check. Rendered as <details>, no client component. */
 const FIT_CHECK: { q: string; a: string; verdict: string }[] = [
@@ -315,6 +317,18 @@ const SIBLINGS: { href: string; t: string; d: string }[] = [
   { href: '/au', t: 'FactoryJet Australia', d: 'Everything we build for Australian businesses: ecommerce, websites, AI agents and AI search.' },
 ];
 
+/* Visual slot page key (route without /au/). */
+const PAGE_KEY = 'ai-customer-service';
+
+/* H1 split for the Family A hero emphasis. Same string as H1 (schema headline); only the
+   benefit clause after the colon is wrapped in .hero-emphasis. */
+const H1_SPLIT = H1.indexOf(': ');
+const H1_LEAD = H1.slice(0, H1_SPLIT + 1);
+const H1_EMPHASIS = H1.slice(H1_SPLIT + 2);
+
+const STEP_ICON = { width: 24, height: 24, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', strokeWidth: 1.5, strokeLinecap: 'round', strokeLinejoin: 'round' } as const;
+const CAP_ICON = { width: 24, height: 24, viewBox: '0 0 24 24', fill: 'none', stroke: '#C94A1A', strokeWidth: 1.6, strokeLinecap: 'round', strokeLinejoin: 'round', 'aria-hidden': true } as const;
+
 export default function AiCustomerServiceAUPage() {
   return (
     <>
@@ -322,232 +336,271 @@ export default function AiCustomerServiceAUPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <SiteHeader locale="au" logoHref="/au" />
-      <div className="au-svc">
-      <main>
+      <div className="aiAgentPage auPage">
+      <nav className="crumbs" aria-label="Breadcrumb">
+        <div className="wrap">
+          {crumbs.map((item, index) => (
+            <Fragment key={item.url}>
+              {index > 0 && ' / '}
+              {index === crumbs.length - 1 ? <b aria-current="page">{item.name}</b> : <a href={item.url}>{item.name}</a>}
+            </Fragment>
+          ))}
+        </div>
+      </nav>
+      <main id="au-content">
 
-        <Breadcrumbs items={crumbs} />
+        {/* ═══ HERO (US web-design hub hero: copy + inline form left, spec panel right) ═══ */}
+        <section className="hero" id="hero">
+          <div className="wrap hero-grid">
+            <div className="hero-copy">
+              <div className="eyebrow">AI Customer Service Australia</div>
+              <h1>{H1_LEAD} <span className="hero-emphasis">{H1_EMPHASIS}</span></h1>
+              <p className="lead">
+                FactoryJet builds AI customer service agents for Australian support teams. Yours answers chat and
+                email from your approved content, drafts replies for staff to check, triages tickets in Zendesk,
+                Freshdesk, Gorgias or HubSpot, reads order data from Shopify, and hands complaints and complex cases
+                to a person with a summary. We build it around your helpdesk, support it after launch, and you own it.
+              </p>
+              <HeroInlineForm region="au" source="au_ai_customer_service_hero" submitLabel="Plan my AI customer service" />
+            </div>
 
-        {/* ═══ 1. HERO ═══ */}
-        <section className="sec-lg dot-grid" style={{ position: 'relative', paddingTop: 36 }}>
+            <form
+              className="specpanel"
+              aria-label="What an AI customer service agent does on every ticket"
+              data-visual-slot={`${PAGE_KEY}:hero`}
+              data-visual-kind="diagram"
+              data-visual-subject="The three things the agent does on every ticket: answer routine questions, draft and triage the rest, hand hard cases to a person"
+              data-visual-ratio="1:1"
+              data-visual-status="filled"
+            >
+              <div className="specpanel-bar">
+                <span className="statusdot"></span>
+                <span>INCLUDED · WHAT IT DOES ON EVERY TICKET</span>
+                <span className="sys"><span>CHAT</span><span>EMAIL</span><span>HELPDESK</span></span>
+              </div>
+              <div className="workflow-controls">
+                <label className="workflow-toggle" title="Pause or resume the animation">
+                  <input type="checkbox" className="workflow-pause" aria-label="Pause animation" />
+                  <svg className="pause-icon" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="M5 3v10M11 3v10" fill="none" stroke="currentColor" strokeWidth="2" /></svg>
+                  <svg className="play-icon" aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path d="m5 3 8 5-8 5Z" fill="currentColor" /></svg>
+                </label>
+                <button type="reset" className="workflow-replay" aria-label="Replay animation" title="Replay animation">
+                  <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M3 6a5 5 0 1 1 0 4M3 2v4h4" /></svg>
+                </button>
+              </div>
+              <div className="specpanel-body" role="radiogroup" aria-label="Explore what it does">
+                <label className="specrow run">
+                  <input className="workflow-select" type="radio" name="acs-step" value="1" />
+                  <span className="workflow-icon" aria-hidden="true"><svg {...STEP_ICON}><path d={JOB_ICONS[0]} /></svg></span>
+                  <span className="idx">chat and email, day and night</span>
+                  <span className="title">Answers routine questions</span>
+                  <span className="tag">24/7</span>
+                </label>
+                <label className="specrow run">
+                  <input className="workflow-select" type="radio" name="acs-step" value="2" />
+                  <span className="workflow-icon" aria-hidden="true"><svg {...STEP_ICON}><path d={JOB_ICONS[1]} /></svg></span>
+                  <span className="idx">inside your existing helpdesk</span>
+                  <span className="title">Drafts and triages the rest</span>
+                  <span className="tag">Draft</span>
+                </label>
+                <label className="specrow hold">
+                  <input className="workflow-select" type="radio" name="acs-step" value="3" />
+                  <span className="workflow-icon" aria-hidden="true"><svg {...STEP_ICON}><path d={JOB_ICONS[3]} /></svg></span>
+                  <span className="idx">complaints, disputes, upset customers</span>
+                  <span className="title">Hands over the hard cases</span>
+                  <span className="tag">To a person</span>
+                </label>
+              </div>
+              <div className="specpanel-foot">RULE · A customer can always ask for a person, and it works first time.</div>
+            </form>
+          </div>
+        </section>
+
+        {/* ═══ LEDGER (was the facts band; verified only) ═══ */}
+        <div className="ledger">
           <div className="wrap">
-            <div className="col-6040">
+            {[
+              { v: '500+', t: 'businesses served by FactoryJet since 2014, founder-led on every project', s: 'About FactoryJet', u: '/about' },
+              { v: 'Say so', t: 'public facing AI tools such as chatbots should be clearly identified as AI', s: 'OAIC, AI products guidance', u: SRC_OAIC_AI },
+              { v: 'Still yours', t: 'accountability for customer data you send to an overseas AI provider', s: 'OAIC, APP 8 guidelines', u: SRC_APP8 },
+              { v: 'No fault', t: 'needed for misleading conduct, so a wrong AI answer is still the business’s answer', s: 'Treasury, AI and the ACL, 2025', u: SRC_TREASURY_ACL },
+            ].map((r) => (
+              <div className="ledgercell" key={r.t}>
+                <div className="k"><a href={r.u} {...(r.u.startsWith('http') ? extLink : {})}>{r.s}</a></div>
+                <div className="v">
+                  <strong className={/\d/.test(r.v) ? 'ledger-number' : 'ledger-word'}>{r.v}</strong>
+                  {r.t}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="wrap byline">
+          <div className="av">BB</div>
+          <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
+          <div className="upd">Last updated<br />26 September 2026</div>
+        </div>
+
+        {/* ═══ ANSWER-FIRST DEFINITION (GEO) → Family A facts ═══ */}
+        <section className="section facts" id="facts">
+          <div className="wrap">
+            <div className="section-head">
+              <h2 data-speakable="true">What is AI customer service, and how do Australian businesses use it?</h2>
+            </div>
+            <div className="factswrap">
+              <div className="factlist">
+                <div className="fact">
+                  <div className="sec">§01</div>
+                  <p data-speakable="true">
+                    <span className="stat">AI customer service uses AI agents to answer customer chats and emails, draft replies for staff, sort
+                    and route tickets, and hand complex or sensitive cases to a person.</span> Australian businesses use it for
+                    faster answers and cover outside business hours, with their own team handling complaints, disputes and
+                    anything that needs judgement.
+                  </p>
+                </div>
+                <div className="fact">
+                  <div className="sec">§02</div>
+                  <div>
+                    <div className="factlabel">Three terms we use a lot</div>
+                    <p>
+                      An <b>AI agent</b> is AI that holds a conversation and can take actions, such as looking up an order,
+                      within rules you set. <b>Triage</b> means reading each ticket, working out what it is and how urgent,
+                      and sending it to the right place. A <b>helpdesk</b> is the software your team answers customers in,
+                      such as Zendesk, Freshdesk, Gorgias or HubSpot.
+                    </p>
+                  </div>
+                </div>
+                <div className="fact">
+                  <div className="sec">§03</div>
+                  <p>
+                    Almost every result you find for AI customer service is a software vendor selling its own AI agent. Those
+                    products are good, and one of them may be all you need. What they rarely tell you is how to decide,
+                    what to set up before customers see it, or what Australian privacy and consumer law expect of you. This
+                    page covers all three, and explains what we build when the built-in option is not enough.
+                  </p>
+                </div>
+              </div>
+              <VisualSlot page={PAGE_KEY} slot="facts" kind="photo" ratio="3:2" className="factphoto"
+                subject="A support lead at an Australian online store reviewing AI chat replies on her monitor">
+                <img src="/images/au/ai-customer-service/ai-customer-service-hero.webp" width={1400} height={933} loading="lazy" decoding="async" alt="Over the shoulder of a support lead at a Melbourne online homewares store reviewing AI chat replies on her monitor, with the warehouse shelves beyond the office window" />
+              </VisualSlot>
+            </div>
+          </div>
+        </section>
+
+        {/* ═══ NOT THE RECEPTIONIST (distinct scope, cross-link) → ruled rows ═══ */}
+        <section className="section platforms" id="scope">
+          <div className="wrap">
+            <div className="section-head plat-head">
               <div>
-                <div className="flex-wrap mb-6">
-                  <span className="chip"><span className="dot dot-orange" />AI Customer Service Australia</span>
-                  <span className="chip">Chat, Email & Helpdesk</span>
-                  <span className="chip">Built, Supported, Yours</span>
-                </div>
-                <h1 style={{ fontSize: 'clamp(2rem, 3.6vw, 2.85rem)' }}>{H1}</h1>
-                <p className="lead mt-6" style={{ maxWidth: 560 }}>
-                  FactoryJet builds AI customer service agents for Australian support teams. Yours answers chat and
-                  email from your approved content, drafts replies for staff to check, triages tickets in Zendesk,
-                  Freshdesk, Gorgias or HubSpot, reads order data from Shopify, and hands complaints and complex cases
-                  to a person with a summary. We build it around your helpdesk, support it after launch, and you own it.
-                </p>
-
-                <div className="byline mt-6" style={{ maxWidth: 560 }}>
-                  <div className="av">BB</div>
-                  <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
-                  <div className="upd">Last updated<br />26 September 2026</div>
-                </div>
-
-                <div className="mt-6" style={{ maxWidth: 560 }}>
-                  <HeroInlineForm region="au" source="au_ai_customer_service_hero" submitLabel="Plan my AI customer service" />
-                </div>
+                <div className="eyebrow">This page vs our AI receptionist page</div>
+                <h2>AI customer service is for support teams. An AI receptionist is for the phone.</h2>
               </div>
-
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/ai-customer-service/ai-customer-service-hero.webp" width={1400} height={933} fetchPriority="high" decoding="async" alt="Over the shoulder of a support lead at a Melbourne online homewares store reviewing AI chat replies on her monitor, with the warehouse shelves beyond the office window" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
-                <div style={{ padding: '14px 12px 8px' }}>
-                  <span className="eyebrow">What it does on every ticket</span>
-                  <div className="scorecard-row">
-                    <div><div className="scorecard-metric">Answers routine questions</div><div className="scorecard-note">chat and email, day and night</div></div>
-                    <div className="scorecard-val" style={{ fontSize: 15 }}>24/7</div>
-                  </div>
-                  <div className="scorecard-row">
-                    <div><div className="scorecard-metric">Drafts and triages the rest</div><div className="scorecard-note">inside your existing helpdesk</div></div>
-                    <div className="scorecard-val" style={{ fontSize: 15 }}>Draft</div>
-                  </div>
-                  <div className="scorecard-row">
-                    <div><div className="scorecard-metric">Hands over the hard cases</div><div className="scorecard-note">complaints, disputes, upset customers</div></div>
-                    <div className="scorecard-val" style={{ color: T.green, fontSize: 15 }}>To a person</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ═══ 2. ANSWER-FIRST DEFINITION (GEO) ═══ */}
-        <section className="sec">
-          <div className="wrap">
-            <div className="def" style={{ maxWidth: 940 }} data-speakable="true">
-              <span className="lab">What is AI customer service, and how do Australian businesses use it?</span>
               <p>
-                AI customer service uses AI agents to answer customer chats and emails, draft replies for staff, sort
-                and route tickets, and hand complex or sensitive cases to a person. Australian businesses use it for
-                faster answers and cover outside business hours, with their own team handling complaints, disputes and
-                anything that needs judgement.
+                This page is about written support at scale: chat, email, social messages and the tickets behind
+                them, inside a helpdesk, often for an online store, software business or service company with a
+                support team. If what you need is someone to answer your business phone, book jobs and take messages
+                while you are on the tools or with a patient, read our{' '}
+                <a href="/au/ai-receptionist">AI receptionist for Australian businesses</a> page instead.
               </p>
             </div>
-            <div className="def mt-6" style={{ maxWidth: 940 }}>
-              <span className="lab">Three terms we use a lot</span>
-              <p>
-                An <b>AI agent</b> is AI that holds a conversation and can take actions, such as looking up an order,
-                within rules you set. <b>Triage</b> means reading each ticket, working out what it is and how urgent,
-                and sending it to the right place. A <b>helpdesk</b> is the software your team answers customers in,
-                such as Zendesk, Freshdesk, Gorgias or HubSpot.
-              </p>
-            </div>
-            <p className="lead mt-8" style={{ maxWidth: 920 }}>
-              Almost every result you find for AI customer service is a software vendor selling its own AI agent. Those
-                products are good, and one of them may be all you need. What they rarely tell you is how to decide,
-                what to set up before customers see it, or what Australian privacy and consumer law expect of you. This
-                page covers all three, and explains what we build when the built-in option is not enough.
-            </p>
-          </div>
-        </section>
-
-        {/* ═══ 3. NOT THE RECEPTIONIST (distinct scope, cross-link) ═══ */}
-        <section className="sec">
-          <div className="wrap">
-            <div className="col-6040">
-              <div className="card card-top-orange">
-                <span className="eyebrow">This page vs our AI receptionist page</span>
-                <h2 style={{ fontSize: 'clamp(1.4rem, 2.2vw, 1.8rem)', marginTop: 10 }}>AI customer service is for support teams. An AI receptionist is for the phone.</h2>
-                <p className="mt-4">
-                  This page is about written support at scale: chat, email, social messages and the tickets behind
-                  them, inside a helpdesk, often for an online store, software business or service company with a
-                  support team. If what you need is someone to answer your business phone, book jobs and take messages
-                  while you are on the tools or with a patient, read our{' '}
-                  <a href="/au/ai-receptionist">AI receptionist for Australian businesses</a> page instead.
-                </p>
-              </div>
-              <div className="card">
-                <span className="eyebrow">Quick guide</span>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Missed calls, bookings, front desk</div><div className="scorecard-note">tradies, clinics, law firms</div></div><div className="scorecard-val" style={{ fontSize: 14 }}><a href="/au/ai-receptionist">Receptionist</a></div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Chat, email and helpdesk tickets</div><div className="scorecard-note">online stores, SaaS, service teams</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>This page</div></div>
-                <div className="scorecard-row"><div><div className="scorecard-metric">Back-office work across systems</div><div className="scorecard-note">quotes, invoices, orders</div></div><div className="scorecard-val" style={{ fontSize: 14 }}><a href="/au/ai-agents">AI agents</a></div></div>
-              </div>
+            <div className="eyebrow plat-label">Quick guide</div>
+            <div className="platlist" role="list">
+              <div className="plat" role="listitem"><span className="capid">01</span><div className="plat-name"><h3>Missed calls, bookings, front desk</h3></div><p className="plat-build">tradies, clinics, law firms</p><p className="plat-build"><a href="/au/ai-receptionist">Receptionist</a></p></div>
+              <div className="plat plat-own" role="listitem"><span className="capid">02</span><div className="plat-name"><h3>Chat, email and helpdesk tickets</h3></div><p className="plat-build">online stores, SaaS, service teams</p><p className="plat-fit">This page</p></div>
+              <div className="plat" role="listitem"><span className="capid">03</span><div className="plat-name"><h3>Back-office work across systems</h3></div><p className="plat-build">quotes, invoices, orders</p><p className="plat-build"><a href="/au/ai-agents">AI agents</a></p></div>
             </div>
           </div>
         </section>
 
-        {/* ═══ 4. FACTS BAND (verified only) ═══ */}
-        <section className="stats-band">
+        {/* ═══ FOUR JOBS + WHAT STAYS WITH PEOPLE → capgrid + grouped lists ═══ */}
+        <section className="section capabilities" id="capabilities">
           <div className="wrap">
-            <ul className="col-4" style={{ gap: 20 }}>
-              {[
-                { v: '500+', t: 'businesses served by FactoryJet since 2014, founder-led on every project', s: 'About FactoryJet', u: '/about' },
-                { v: 'Say so', t: 'public facing AI tools such as chatbots should be clearly identified as AI', s: 'OAIC, AI products guidance', u: SRC_OAIC_AI },
-                { v: 'Still yours', t: 'accountability for customer data you send to an overseas AI provider', s: 'OAIC, APP 8 guidelines', u: SRC_APP8 },
-                { v: 'No fault', t: 'needed for misleading conduct, so a wrong AI answer is still the business’s answer', s: 'Treasury, AI and the ACL, 2025', u: SRC_TREASURY_ACL },
-              ].map((r) => (
-                <li key={r.t}>
-                  <div style={{ fontFamily: T.fd, fontWeight: 800, fontSize: 26, color: T.orange }}>{r.v}</div>
-                  <p style={{ fontSize: 13.5, color: T.ink, marginTop: 4 }}>{r.t}</p>
-                  <a href={r.u} {...(r.u.startsWith('http') ? extLink : {})} style={{ fontFamily: T.fm, fontSize: 10, color: T.n400, textDecoration: 'underline' }}>{r.s}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-
-        {/* ═══ 5. FOUR JOBS + WHAT STAYS WITH PEOPLE ═══ */}
-        <section className="sec-lg dot-grid">
-          <div className="wrap">
-            <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">What an AI customer service agent actually does</span>
+            <div className="section-head">
+              <div className="eyebrow">What an AI customer service agent actually does</div>
               <h2>Four jobs: answer, draft, triage and hand over</h2>
-              <p className="lead mt-4">
+              <p className="lead">
                 A common mistake is switching on the first job for every ticket on day one. The teams that do well
                 treat these as four separate jobs, switch them on in order, and decide for each
                 ticket type which jobs the AI is trusted with.
               </p>
             </div>
-            <ul className="col-2 mt-10" style={{ gap: 16 }}>
-              {JOBS.map((j, i) => (
-                <li key={j.t} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
-                  <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.small, minWidth: 30 }}>{String(i + 1).padStart(2, '0')}</span>
-                  <div>
-                    <h3 style={{ fontSize: 18 }}>{j.t}</h3>
-                    <p className="mt-2" style={{ marginTop: 6 }}>{j.d}</p>
+            <div className="capgrid">
+              {JOBS.map((j, i) => {
+                const n = String(i + 1).padStart(2, '0');
+                return (
+                  <div key={j.t} className={`cap cap-${i + 1}`}>
+                    <div className="caphead"><span className="capid">CAP‑{n}</span><svg {...CAP_ICON}><path d={JOB_ICONS[i]} /></svg></div>
+                    <VisualSlot page={PAGE_KEY} slot={`capability-${n}`} kind="diagram" ratio="11:4" className="cap-diagram" subject={JOB_SUBJECTS[i]} />
+                    <h3>{j.t}</h3>
+                    <p>{j.d}</p>
                   </div>
-                </li>
+                );
+              })}
+            </div>
+            <div className="agentdir-group chg-group">
+              <div className="agentdir-label"><span className="capid">GRP‑01</span><h3>Good fit for AI</h3></div>
+              <ul className="chg-list">
+                <li><span><b>Where is my order.</b> Tracking, delivery windows and delays, read live from your store and courier data.</span></li>
+                <li><span><b>Returns and exchanges.</b> Explaining your policy and starting a return within rules you set.</span></li>
+                <li><span><b>Product and service questions.</b> Sizes, compatibility, stock, what is included, answered from approved content.</span></li>
+                <li><span><b>Account admin.</b> Address changes, subscription pauses, password reset links, after the customer is verified.</span></li>
+                <li><span><b>Ticket triage.</b> Tagging, urgency, language, sentiment and routing for every ticket, including the ones people answer.</span></li>
+                <li><span><b>Summaries.</b> A three-line summary on long threads so staff can pick them up fast.</span></li>
+              </ul>
+            </div>
+            <div className="agentdir-group chg-group">
+              <div className="agentdir-label"><span className="capid">GRP‑02</span><h3>Keep with a person</h3></div>
+              <ul className="chg-list">
+                <li><span><b>Complaints.</b> People want to be heard by a person, and they should be.</span></li>
+                <li><span><b>Refund disputes and consumer guarantee claims.</b> The AI can collect the details; a person decides.</span></li>
+                <li><span><b>Anything clinical, legal or financial advice.</b> Out of scope, always.</span></li>
+                <li><span><b>Safety issues and vulnerable customers.</b> Spot the signs, hand over at once.</span></li>
+                <li><span><b>Your biggest accounts.</b> Key customers can go straight to a named person.</span></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* ═══ FIT CHECK (<details>) → vlog ═══ */}
+        <section className="vlog" id="fit-check">
+          <div className="wrap">
+            <div className="section-head">
+              <div className="eyebrow">Which option fits you?</div>
+              <h2>A 30-second check: chatbot app, your helpdesk’s AI, or a custom AI agent</h2>
+              <p>Tap the line that sounds most like your support team. The answer is honest, even when it is not us.</p>
+              <VisualSlot page={PAGE_KEY} slot="proof" kind="photo" ratio="3:2" captionClassName="figcap"
+                subject="A customer at home in the evening chatting with an online store's AI assistant on her phone"
+                caption="Customers ask questions when it suits them, often in the evening. An AI agent answers the routine ones straight away and leaves the rest ready for your team in the morning.">
+                <img src="/images/au/ai-customer-service/ai-customer-service-evening.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over the shoulder of a customer on her sofa in a Sydney apartment at dusk, chatting with an online store’s AI assistant on her phone, a parcel on the coffee table" />
+              </VisualSlot>
+            </div>
+            <div className="ventries">
+              {FIT_CHECK.map((f) => (
+                <details key={f.q} className="ventry">
+                  <summary><h3>{f.q}</h3><span className="chev" aria-hidden="true">+</span></summary>
+                  <span className="vtag">{f.verdict}</span>
+                  <p>{f.a}</p>
+                </details>
               ))}
-            </ul>
-            <div className="col-6040 mt-12">
-              <div className="card card-top-orange">
-                <span className="eyebrow">Good fit for AI</span>
-                <ul className="scope-list mt-4">
-                  <li><b>Where is my order.</b> Tracking, delivery windows and delays, read live from your store and courier data.</li>
-                  <li><b>Returns and exchanges.</b> Explaining your policy and starting a return within rules you set.</li>
-                  <li><b>Product and service questions.</b> Sizes, compatibility, stock, what is included, answered from approved content.</li>
-                  <li><b>Account admin.</b> Address changes, subscription pauses, password reset links, after the customer is verified.</li>
-                  <li><b>Ticket triage.</b> Tagging, urgency, language, sentiment and routing for every ticket, including the ones people answer.</li>
-                  <li><b>Summaries.</b> A three-line summary on long threads so staff can pick them up fast.</li>
-                </ul>
-              </div>
-              <div className="card">
-                <span className="eyebrow">Keep with a person</span>
-                <ul className="scope-list mt-4">
-                  <li><b>Complaints.</b> People want to be heard by a person, and they should be.</li>
-                  <li><b>Refund disputes and consumer guarantee claims.</b> The AI can collect the details; a person decides.</li>
-                  <li><b>Anything clinical, legal or financial advice.</b> Out of scope, always.</li>
-                  <li><b>Safety issues and vulnerable customers.</b> Spot the signs, hand over at once.</li>
-                  <li><b>Your biggest accounts.</b> Key customers can go straight to a named person.</li>
-                </ul>
-              </div>
             </div>
           </div>
         </section>
 
-        {/* ═══ 6. FIT CHECK (interactive, <details>) ═══ */}
-        <section className="sec-lg">
+        {/* ═══ INTEGRATIONS TABLE ═══ */}
+        <section className="section integrations" id="integrations">
           <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <span className="eyebrow">Which option fits you?</span>
-                <h2>A 30-second check: chatbot app, your helpdesk’s AI, or a custom AI agent</h2>
-                <p className="lead mt-4" style={{ maxWidth: 560 }}>
-                  Tap the line that sounds most like your support team. The answer is honest, even when it is not us.
-                </p>
-                <div className="card mt-6" style={{ padding: '4px 20px' }}>
-                  {FIT_CHECK.map((f) => (
-                    <details key={f.q}>
-                      <summary style={{ gap: 16, textAlign: 'left' }}>{f.q}</summary>
-                      <div style={{ paddingBottom: 18 }}>
-                        <span style={{ fontFamily: T.fm, fontSize: 10, background: T.small, color: '#fff', borderRadius: 999, padding: '3px 9px', letterSpacing: '.06em' }}>{f.verdict}</span>
-                        <p style={{ marginTop: 10 }}>{f.a}</p>
-                      </div>
-                    </details>
-                  ))}
-                </div>
-              </div>
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/ai-customer-service/ai-customer-service-evening.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over the shoulder of a customer on her sofa in a Sydney apartment at dusk, chatting with an online store’s AI assistant on her phone, a parcel on the coffee table" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
-                <div style={{ padding: '14px 12px 8px' }}>
-                  <p style={{ fontSize: 14 }}>
-                    Customers ask questions when it suits them, often in the evening. An AI agent answers the routine
-                    ones straight away and leaves the rest ready for your team in the morning.
-                  </p>
-                </div>
-              </div>
+            <div className="section-head">
+              <div className="eyebrow">Works inside the tools you already use</div>
+              <h2>Zendesk, Freshdesk, Gorgias, HubSpot, Shopify and Intercom: what the AI reads and what it does</h2>
+              <p className="lead">
+                Your team keeps working in the same helpdesk. The AI agent sits inside it, through each product’s
+                published API, with only the access each step needs. Here is what that typically covers.
+              </p>
             </div>
-          </div>
-        </section>
-
-        {/* ═══ 7. INTEGRATIONS TABLE ═══ */}
-        <section className="sec-lg dot-grid">
-          <div className="wrap">
-            <span className="eyebrow">Works inside the tools you already use</span>
-            <h2 style={{ maxWidth: 820 }}>Zendesk, Freshdesk, Gorgias, HubSpot, Shopify and Intercom: what the AI reads and what it does</h2>
-            <p className="lead mt-4" style={{ maxWidth: 760 }}>
-              Your team keeps working in the same helpdesk. The AI agent sits inside it, through each product’s
-              published API, with only the access each step needs. Here is what that typically covers.
-            </p>
-            <div className="card mt-8" style={{ padding: 0, overflowX: 'auto' }}>
-              <table className="cmp-table" style={{ minWidth: 760 }}>
+            <div className="tablewrap">
+              <table>
                 <thead>
                   <tr>
                     <th>System</th>
@@ -558,7 +611,7 @@ export default function AiCustomerServiceAUPage() {
                 <tbody>
                   {INTEGRATIONS.map((r) => (
                     <tr key={r.sys}>
-                      <td className="feat">{r.sys}</td>
+                      <th scope="row">{r.sys}</th>
                       <td>{r.reads}</td>
                       <td className="fj">{r.does}</td>
                     </tr>
@@ -566,7 +619,7 @@ export default function AiCustomerServiceAUPage() {
                 </tbody>
               </table>
             </div>
-            <p style={srcNote}>
+            <p className="tablenote">
               Also common: WooCommerce, BigCommerce, Maropost (formerly Neto), Salesforce, Xero and MYOB for invoice questions,
               Slack or Microsoft Teams for alerts, and Australia Post or courier tracking. If a system has no usable API,
               we tell you before the build starts.
@@ -574,63 +627,66 @@ export default function AiCustomerServiceAUPage() {
           </div>
         </section>
 
-        {/* ═══ 8. HANDOVER ═══ */}
-        <section className="sec-lg">
+        {/* ═══ HANDOVER → facts ═══ */}
+        <section className="section facts" id="handover">
           <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <span className="eyebrow">Handover, designed in</span>
-                <h2>How the AI hands a conversation to a person</h2>
-                <div className="stack mt-6">
-                  <p>
-                    The best AI customer service is judged by how well it knows when to stop. Before we build, we write
-                    the handover rules with you: which topics, words, customers and order values go to a person, which
-                    team or person gets them at different times, and what the customer is told while they wait.
-                  </p>
-                  <p>
-                    When a rule fires, the AI tells the customer a person will take over and roughly when, based on your
-                    real hours. It then creates or updates the ticket with a short summary, the order or account details
-                    and what it has already tried, tags it and assigns it to the right queue. Nobody has to scroll back
-                    through twenty messages, and the customer never repeats themselves.
-                  </p>
-                  <p>
-                    A customer can always ask for a person, and it works first time. We never build an agent that traps
-                    someone in a loop. The OAIC’s AI guidance also expects a person to be able to check and overturn
-                    what an AI system decides.
-                  </p>
-                </div>
+            <div className="section-head">
+              <div className="eyebrow">Handover, designed in</div>
+              <h2>How the AI hands a conversation to a person</h2>
+            </div>
+            <div className="factswrap">
+              <div className="factlist">
+                <div className="fact"><div className="sec">§01</div><p>
+                  The best AI customer service is judged by how well it knows when to stop. Before we build, we write
+                  the handover rules with you: which topics, words, customers and order values go to a person, which
+                  team or person gets them at different times, and what the customer is told while they wait.
+                </p></div>
+                <div className="fact"><div className="sec">§02</div><p>
+                  When a rule fires, the AI tells the customer a person will take over and roughly when, based on your
+                  real hours. It then creates or updates the ticket with a short summary, the order or account details
+                  and what it has already tried, tags it and assigns it to the right queue. Nobody has to scroll back
+                  through twenty messages, and the customer never repeats themselves.
+                </p></div>
+                <div className="fact"><div className="sec">§03</div><p>
+                  A customer can always ask for a person, and it works first time. We never build an agent that traps
+                  someone in a loop. The OAIC’s AI guidance also expects a person to be able to check and overturn
+                  what an AI system decides.
+                </p></div>
+                <div className="fact"><div className="sec">§04</div><div>
+                  <div className="factlabel">Typical handover triggers</div>
+                  <ul className="trigrows">
+                    <li><span className="m">Customer asks for a person</span><span className="n">any wording, any channel</span><span className="t">Hand over</span></li>
+                    <li><span className="m">Complaint or refund dispute</span><span className="n">including consumer guarantee claims</span><span className="t">Hand over</span></li>
+                    <li><span className="m">Upset or repeated contact</span><span className="n">tone, or third message on one issue</span><span className="t">Priority</span></li>
+                    <li><span className="m">No approved answer</span><span className="n">it never guesses</span><span className="t">Draft only</span></li>
+                    <li><span className="m">Outside hours</span><span className="n">honest wait time, ticket ready for morning</span><span className="t">Queue</span></li>
+                  </ul>
+                </div></div>
               </div>
-              <div className="stack">
-                <figure className="card" style={{ padding: 8, margin: 0 }}>
-                  <img src="/images/au/ai-customer-service/ai-customer-service-handover.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over the shoulder of a Sydney support specialist on a headset picking up a handed-over chat, with the AI’s summary card flagged at the top of his screen" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
-                  <figcaption style={{ padding: '12px 10px 6px', fontSize: 14 }}>
-                    The conversation arrives with a summary already on screen, so your team starts with the answer, not the questions.
-                  </figcaption>
-                </figure>
-                <div className="card card-top-orange">
-                  <span className="eyebrow">Typical handover triggers</span>
-                  <div className="scorecard-row"><div><div className="scorecard-metric">Customer asks for a person</div><div className="scorecard-note">any wording, any channel</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Hand over</div></div>
-                  <div className="scorecard-row"><div><div className="scorecard-metric">Complaint or refund dispute</div><div className="scorecard-note">including consumer guarantee claims</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Hand over</div></div>
-                  <div className="scorecard-row"><div><div className="scorecard-metric">Upset or repeated contact</div><div className="scorecard-note">tone, or third message on one issue</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Priority</div></div>
-                  <div className="scorecard-row"><div><div className="scorecard-metric">No approved answer</div><div className="scorecard-note">it never guesses</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Draft only</div></div>
-                  <div className="scorecard-row"><div><div className="scorecard-metric">Outside hours</div><div className="scorecard-note">honest wait time, ticket ready for morning</div></div><div className="scorecard-val" style={{ color: T.green, fontSize: 14 }}>Queue</div></div>
-                </div>
-              </div>
+              <VisualSlot page={PAGE_KEY} slot="facts-2" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
+                subject="A support specialist on a headset picking up a handed-over chat with the AI summary card at the top of the screen"
+                caption="The conversation arrives with a summary already on screen, so your team starts with the answer, not the questions.">
+                <img src="/images/au/ai-customer-service/ai-customer-service-handover.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over the shoulder of a Sydney support specialist on a headset picking up a handed-over chat, with the AI’s summary card flagged at the top of his screen" />
+              </VisualSlot>
             </div>
           </div>
         </section>
 
-        {/* ═══ 9. COMPARISON TABLE ═══ */}
-        <section className="sec-lg dot-grid">
+        {/* ═══ COMPARISON TABLE ═══ */}
+        <section className="section comparison" id="comparison">
           <div className="wrap">
-            <span className="eyebrow">Side by side</span>
-            <h2 style={{ maxWidth: 820 }}>Chatbot builder app vs your helpdesk’s built-in AI vs a custom AI customer service agent</h2>
-            <p className="lead mt-4" style={{ maxWidth: 760 }}>
-              Three common routes, plus a team with no AI at all. Each is the right answer for someone. This compares
-              them on what changes day to day, not on price.
-            </p>
-            <div className="card mt-8" style={{ padding: 0, overflowX: 'auto' }}>
-              <table className="cmp-table" style={{ minWidth: 820 }}>
+            <div className="section-head head-split">
+              <div className="eyebrow">Side by side</div>
+              <div>
+                <h2>Chatbot builder app vs your helpdesk’s built-in AI vs a custom AI customer service agent</h2>
+                <p className="lead">
+                  Three common routes, plus a team with no AI at all. Each is the right answer for someone. This compares
+                  them on what changes day to day, not on price.
+                </p>
+              </div>
+            </div>
+            <div className="tablewrap">
+              <table>
                 <thead>
                   <tr>
                     <th>What you get</th>
@@ -641,293 +697,290 @@ export default function AiCustomerServiceAUPage() {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td className="feat">Coverage hours</td><td className="fj"><span className="yes">24/7 for approved ticket types</span></td><td><span className="yes">24/7</span></td><td><span className="yes">24/7</span></td><td><span className="partial">Business hours</span></td></tr>
-                  <tr><td className="feat">Reads systems beyond the helpdesk</td><td className="fj"><span className="yes">Any system with an API</span></td><td><span className="partial">Supported apps only</span></td><td><span className="partial">Few, often none</span></td><td><span className="yes">Staff look it up</span></td></tr>
-                  <tr><td className="feat">Follows your business rules</td><td className="fj"><span className="yes">Designed around them</span></td><td><span className="partial">Within product settings</span></td><td><span className="partial">Basic</span></td><td><span className="yes">With training</span></td></tr>
-                  <tr><td className="feat">Draft mode for staff approval</td><td className="fj"><span className="yes">Yes, per ticket type</span></td><td><span className="yes">Usually</span></td><td><span className="no">Rarely</span></td><td>Not applicable</td></tr>
-                  <tr><td className="feat">Handover with summary</td><td className="fj"><span className="yes">Your rules, your queues</span></td><td><span className="yes">Yes</span></td><td><span className="partial">Basic</span></td><td>Not applicable</td></tr>
-                  <tr><td className="feat">Choice of AI model and data location</td><td className="fj"><span className="yes">You choose</span></td><td><span className="partial">Set by the vendor</span></td><td><span className="no">Set by the app</span></td><td><span className="yes">Your own systems</span></td></tr>
-                  <tr><td className="feat">Who owns the setup</td><td className="fj"><span className="yes">You do</span></td><td><span className="partial">Your config, their product</span></td><td><span className="no">The app provider</span></td><td><span className="yes">You do</span></td></tr>
-                  <tr><td className="feat">Setup effort for you</td><td className="fj"><span className="partial">Workshops, then we build</span></td><td><span className="yes">Low to medium</span></td><td><span className="yes">Low</span></td><td><span className="partial">Hiring and training</span></td></tr>
-                  <tr><td className="feat">Support after launch</td><td className="fj"><span className="yes">Same team, ongoing</span></td><td><span className="partial">Vendor help desk</span></td><td><span className="partial">Help docs</span></td><td>Your own management</td></tr>
+                  <tr><th scope="row">Coverage hours</th><td className="fj">24/7 for approved ticket types</td><td>24/7</td><td>24/7</td><td>Business hours</td></tr>
+                  <tr><th scope="row">Reads systems beyond the helpdesk</th><td className="fj">Any system with an API</td><td>Supported apps only</td><td>Few, often none</td><td>Staff look it up</td></tr>
+                  <tr><th scope="row">Follows your business rules</th><td className="fj">Designed around them</td><td>Within product settings</td><td>Basic</td><td>With training</td></tr>
+                  <tr><th scope="row">Draft mode for staff approval</th><td className="fj">Yes, per ticket type</td><td>Usually</td><td>Rarely</td><td>Not applicable</td></tr>
+                  <tr><th scope="row">Handover with summary</th><td className="fj">Your rules, your queues</td><td>Yes</td><td>Basic</td><td>Not applicable</td></tr>
+                  <tr><th scope="row">Choice of AI model and data location</th><td className="fj">You choose</td><td>Set by the vendor</td><td>Set by the app</td><td>Your own systems</td></tr>
+                  <tr><th scope="row">Who owns the setup</th><td className="fj">You do</td><td>Your config, their product</td><td>The app provider</td><td>You do</td></tr>
+                  <tr><th scope="row">Setup effort for you</th><td className="fj">Workshops, then we build</td><td>Low to medium</td><td>Low</td><td>Hiring and training</td></tr>
+                  <tr><th scope="row">Support after launch</th><td className="fj">Same team, ongoing</td><td>Vendor help desk</td><td>Help docs</td><td>Your own management</td></tr>
                 </tbody>
               </table>
             </div>
-            <p style={srcNote}>
-              Want the numbers? Our <a href="/blog/ai-cost-australia-2026" style={srcLink}>AI cost guide for Australia (2026)</a> lists
+            <p className="tablenote">
+              Want the numbers? Our <a href="/blog/ai-cost-australia-2026">AI cost guide for Australia (2026)</a> lists
               typical market ranges for chatbots, AI agents and platform fees, with sources. For the technical side, read{' '}
-              <a href="/blog/ai-chatbots-vs-ai-agents-business" style={srcLink}>AI chatbots vs AI agents for business</a>.
+              <a href="/blog/ai-chatbots-vs-ai-agents-business">AI chatbots vs AI agents for business</a>.
             </p>
           </div>
         </section>
 
-        {/* ═══ 10. HOW WE BUILD IT (step-by-step, <details>) ═══ */}
-        <section className="sec-lg" id="how-we-build">
+        {/* ═══ PHOTOBREAK (US template visual, no AU image yet) ═══ */}
+        <VisualSlot page={PAGE_KEY} slot="photobreak" kind="illustration" ratio="12:5" className="photobreak"
+          subject="AI-generated model: a row of white support ticket cards on a rail, one orange card lifted out and passed to a small human figure" />
+
+        {/* ═══ HOW WE BUILD IT → process timeline (steps stay openable, as the copy says) ═══ */}
+        <section className="section process" id="how-we-build">
           <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <span className="eyebrow">How we build it</span>
+            <div className="head-media">
+              <div className="section-head">
+                <div className="eyebrow">How we build it</div>
                 <h2>How we build your AI customer service agent, in eight steps</h2>
-                <p className="lead mt-4" style={{ maxWidth: 560 }}>
+                <p className="lead">
                   The difference between an AI agent that impresses in a demo and one your customers can rely on is
                   mostly steps three and five. Open any step to see what happens in it.
                 </p>
-                <div className="card mt-6" style={{ padding: '4px 20px' }}>
-                  {BUILD_STEPS.map((s) => (
-                    <details key={s.n}>
-                      <summary style={{ gap: 16, textAlign: 'left' }}>
-                        <span><span style={{ fontFamily: T.fm, color: T.small, marginRight: 12 }}>{s.n}</span>{s.t}</span>
-                      </summary>
-                      <p style={{ paddingBottom: 18 }}>{s.d}</p>
-                    </details>
-                  ))}
-                </div>
               </div>
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/ai-customer-service/ai-customer-service-workshop.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A FactoryJet engineer and the customer service manager of an Adelaide online retailer sorting cards into four piles at a meeting table, mapping ticket types" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
-                <div style={{ padding: '14px 12px 8px' }}>
-                  <p style={{ fontSize: 14 }}>
-                    Step one is sorting real tickets into types with the person who runs your support. That ticket map,
-                    with a rule for each type, is what you sign off before we build.
-                  </p>
-                </div>
-              </div>
+              <VisualSlot page={PAGE_KEY} slot="process" kind="photo" ratio="3:2" captionClassName="figcap"
+                subject="A FactoryJet engineer and a customer service manager sorting ticket cards into piles at a meeting table"
+                caption="Step one is sorting real tickets into types with the person who runs your support. That ticket map, with a rule for each type, is what you sign off before we build.">
+                <img src="/images/au/ai-customer-service/ai-customer-service-workshop.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A FactoryJet engineer and the customer service manager of an Adelaide online retailer sorting cards into four piles at a meeting table, mapping ticket types" />
+              </VisualSlot>
+            </div>
+            <div className="timeline timeline-4">
+              {BUILD_STEPS.map((s) => (
+                <details key={s.n} className="tnode">
+                  <summary>
+                    <div className="idx">{s.n}</div>
+                    <h3>{s.t}<span className="chev" aria-hidden="true">+</span></h3>
+                  </summary>
+                  <p>{s.d}</p>
+                </details>
+              ))}
             </div>
           </div>
         </section>
 
-        <MidPageCTA
-          headline={'Your support inbox growing faster than your team?'}
-          sub={'Tell us which helpdesk you use and what customers ask most. On a short call with the founder, we will tell you which tickets AI should take first, whether your helpdesk’s own AI is enough, and what a custom agent would add.'}
-          label={'Plan my AI customer service'}
-        />
+        <div className="au-midcta">
+          <MidPageCTA
+            headline={'Your support inbox growing faster than your team?'}
+            sub={'Tell us which helpdesk you use and what customers ask most. On a short call with the founder, we will tell you which tickets AI should take first, whether your helpdesk’s own AI is enough, and what a custom agent would add.'}
+            label={'Plan my AI customer service'}
+          />
+        </div>
 
-        {/* ═══ 11. ECOMMERCE ═══ */}
-        <section className="sec-lg dot-grid">
-          <div className="wrap">
-            <div className="col-6040">
-              <div>
-                <span className="eyebrow">For online stores</span>
-                <h2>AI customer service for Shopify and ecommerce stores in Australia</h2>
-                <div className="stack mt-6">
-                  <p>
-                    For an online store, a large share of tickets are the same few questions: where is my order, how do
-                    I return this, will it fit, when is it back in stock. They have clear answers sitting in Shopify, your
-                    courier’s tracking and your returns policy. That makes ecommerce one of the best fits for an AI
-                    chatbot for customer service, and it is where many of our clients start.
-                  </p>
-                  <p>
-                    Two things need extra care in Australia. First, <b>refunds and returns</b>. The Australian Consumer
-                    Law gives customers guarantees that a store policy cannot remove, so the AI must never tell a
-                    customer they have no right to a remedy. We keep returns answers word for word from an approved
-                    policy, and send any faulty-product or refund dispute to a person. Second, <b>delivery promises</b>.
-                    The AI quotes the courier’s actual tracking, not a guess.
-                  </p>
-                  <p>
-                    Gorgias is built for this and suits many Shopify stores on its own. We build custom agents when the
-                    answer lives somewhere the helpdesk cannot see, such as a 3PL warehouse system, a B2B trade portal or
-                    an ERP. If your store itself needs work, our <a href="/au/shopify-development">Shopify development
-                    team in Australia</a> and <a href="/au/ecommerce-development">ecommerce development</a> pages cover it.
-                  </p>
-                </div>
-              </div>
-              <div className="card" style={{ padding: 8 }}>
-                <img src="/images/au/ai-customer-service/ai-customer-service-warehouse.webp" width={1200} height={800} loading="lazy" decoding="async" alt="The owner of a small Brisbane online store taping an order box at her packing bench while a chat notification glows on her phone beside it" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
-                <div style={{ padding: '14px 12px 8px' }}>
-                  <p style={{ fontSize: 14 }}>
-                    In a small store the person packing orders is often the person answering chats. AI takes the order
-                    status questions so the packing gets done.
-                  </p>
-                </div>
-              </div>
-            </div>
+        {/* ═══ ECOMMERCE → definition module (image left, copy right) ═══ */}
+        <section className="definition" id="ecommerce">
+          <div>
+            <VisualSlot page={PAGE_KEY} slot="definition" kind="photo" ratio="3:2" className="definition-image"
+              subject="The owner of a small online store packing an order while a chat notification shows on her phone">
+              <img src="/images/au/ai-customer-service/ai-customer-service-warehouse.webp" width={1200} height={800} loading="lazy" decoding="async" alt="The owner of a small Brisbane online store taping an order box at her packing bench while a chat notification glows on her phone beside it" />
+            </VisualSlot>
+            <p className="figcap">
+              In a small store the person packing orders is often the person answering chats. AI takes the order
+              status questions so the packing gets done.
+            </p>
+          </div>
+          <div className="definition-copy">
+            <div className="eyebrow">For online stores</div>
+            <h2>AI customer service for Shopify and ecommerce stores in Australia</h2>
+            <p>
+              For an online store, a large share of tickets are the same few questions: where is my order, how do
+              I return this, will it fit, when is it back in stock. They have clear answers sitting in Shopify, your
+              courier’s tracking and your returns policy. That makes ecommerce one of the best fits for an AI
+              chatbot for customer service, and it is where many of our clients start.
+            </p>
+            <p>
+              Two things need extra care in Australia. First, <b>refunds and returns</b>. The Australian Consumer
+              Law gives customers guarantees that a store policy cannot remove, so the AI must never tell a
+              customer they have no right to a remedy. We keep returns answers word for word from an approved
+              policy, and send any faulty-product or refund dispute to a person. Second, <b>delivery promises</b>.
+              The AI quotes the courier’s actual tracking, not a guess.
+            </p>
+            <p>
+              Gorgias is built for this and suits many Shopify stores on its own. We build custom agents when the
+              answer lives somewhere the helpdesk cannot see, such as a 3PL warehouse system, a B2B trade portal or
+              an ERP. If your store itself needs work, our <a href="/au/shopify-development">Shopify development
+              team in Australia</a> and <a href="/au/ecommerce-development">ecommerce development</a> pages cover it.
+            </p>
           </div>
         </section>
 
-        {/* ═══ 12. PRIVACY ACT + ACL ═══ */}
-        <section className="sec-lg">
+        {/* ═══ PRIVACY ACT + ACL → facts + checklist panel + ruled rows ═══ */}
+        <section className="section facts" id="rules">
           <div className="wrap">
-            <div style={{ maxWidth: 820 }}>
-              <span className="eyebrow">The rules, in plain English</span>
+            <div className="section-head">
+              <div className="eyebrow">The rules, in plain English</div>
               <h2>The Privacy Act, AI disclosure and the Australian Consumer Law for AI customer service</h2>
             </div>
-            <div className="col-6040 mt-8">
-              <div className="stack">
-                <p>
+            <div className="factswrap">
+              <div className="factlist">
+                <div className="fact"><div className="sec">§01</div><p>
                   Every chat and email your AI agent handles contains personal information: names, addresses, order
                   history, and sometimes health, money or family details. The Privacy Act 1988 and its Australian
                   Privacy Principles (the APPs) set the rules for how covered businesses collect, use, store and send
                   that information.
-                </p>
-                <p>
+                </p></div>
+                <div className="fact"><div className="sec">§02</div><p>
                   <b>Tell customers it is AI.</b> The Office of the Australian Information Commissioner (OAIC) says public
                   facing AI tools such as chatbots should be clearly identified as AI, and that businesses should update
                   their privacy policies and notices with clear information about how they use AI. It also recommends
                   not entering personal information into publicly available generative AI tools.
-                </p>
-                <p>
+                </p></div>
+                <div className="fact"><div className="sec">§03</div><p>
                   <b>Know where the data goes.</b> Most AI models run on servers overseas. Under APP 8, before personal
                   information goes to an overseas recipient, you must take reasonable steps to make sure it will not
                   breach the APPs, and you stay accountable for what that recipient does. So we name every provider,
                   check its data terms, and use Australian hosting where it is offered and it matters to you.
-                </p>
-                <p>
+                </p></div>
+                <div className="fact"><div className="sec">§04</div><p>
                   <b>Automated decisions.</b> From 10 December 2026, the OAIC says businesses that use personal
                   information in automated decisions that could affect someone’s rights or interests must explain the
                   kinds of information used and decisions made in their privacy policy. If your AI agent approves or
                   refuses refunds, account changes or claims on its own, that is likely to apply. Keeping a person on
                   those decisions keeps things simple.
-                </p>
-                <p>
-                  <b>Wrong answers are still your answers.</b> Treasury’s 2025 review of AI and the Australian Consumer
-                  Law found the misleading conduct rules apply regardless of the technology, can be breached without
-                  fault, and put the onus on businesses to make sure the technology they use is fit for purpose. That is
-                  why we restrict the AI to approved answers and log everything it says.
-                </p>
-                <p style={srcNote}>
-                  Sources: <a href={SRC_OAIC_AI} {...extLink} style={srcLink}>OAIC, privacy and commercially available AI products</a>;{' '}
-                  <a href={SRC_APP8} {...extLink} style={srcLink}>OAIC, APP 8 cross-border disclosure</a>;{' '}
-                  <a href={SRC_APP_QR} {...extLink} style={srcLink}>OAIC, APP quick reference</a>;{' '}
-                  <a href={SRC_OAIC_ADM} {...extLink} style={srcLink}>OAIC, automated decision making transparency</a>;{' '}
-                  <a href={SRC_OAIC_SMALL} {...extLink} style={srcLink}>OAIC, small business</a>;{' '}
-                  <a href={SRC_TREASURY_ACL} {...extLink} style={srcLink}>Treasury, Review of AI and the Australian Consumer Law (October 2025)</a>.
-                  This is general information, not legal advice.
-                </p>
+                </p></div>
+                <div className="fact"><div className="sec">§05</div><div>
+                  <p>
+                    <b>Wrong answers are still your answers.</b> Treasury’s 2025 review of AI and the Australian Consumer
+                    Law found the misleading conduct rules apply regardless of the technology, can be breached without
+                    fault, and put the onus on businesses to make sure the technology they use is fit for purpose. That is
+                    why we restrict the AI to approved answers and log everything it says.
+                  </p>
+                  <p className="au-note">
+                    Sources: <a href={SRC_OAIC_AI} {...extLink}>OAIC, privacy and commercially available AI products</a>;{' '}
+                    <a href={SRC_APP8} {...extLink}>OAIC, APP 8 cross-border disclosure</a>;{' '}
+                    <a href={SRC_APP_QR} {...extLink}>OAIC, APP quick reference</a>;{' '}
+                    <a href={SRC_OAIC_ADM} {...extLink}>OAIC, automated decision making transparency</a>;{' '}
+                    <a href={SRC_OAIC_SMALL} {...extLink}>OAIC, small business</a>;{' '}
+                    <a href={SRC_TREASURY_ACL} {...extLink}>Treasury, Review of AI and the Australian Consumer Law (October 2025)</a>.
+                    This is general information, not legal advice.
+                  </p>
+                </div></div>
               </div>
-              <div className="card card-top-orange">
-                <span className="eyebrow">7 things to get right before AI answers your customers</span>
-                <ol className="scope-list num-list mt-4">
+              <div className="au-panel">
+                <div className="eyebrow">7 things to get right before AI answers your customers</div>
+                <ol className="au-numlist">
                   {SEVEN_THINGS.map((s) => (
-                    <li key={s.t}><b>{s.t}</b> {s.d}</li>
+                    <li key={s.t}><span><b>{s.t}</b> {s.d}</span></li>
                   ))}
                 </ol>
               </div>
             </div>
-            <ul className="col-3 mt-10">
-              <li className="card"><h3>What we do</h3><p className="mt-4">Write the AI disclosure into the chat and first message, restrict answers to approved content, choose providers with suitable hosting and no-training terms, set retention periods, and document the data flow for your privacy policy.</p></li>
-              <li className="card"><h3>What you keep</h3><p className="mt-4">You stay responsible for the personal information you collect and for what your AI tells customers. We make that easier with access controls, a log of every AI reply, and plain-English notes on where data goes.</p></li>
-              <li className="card"><h3>What we do not do</h3><p className="mt-4">We are not lawyers and do not give legal sign-off. For health, financial and insurance businesses, confirm the detail with your privacy adviser or compliance team.</p></li>
-            </ul>
+            <div className="platlist span-all" role="list">
+              <div className="plat plat-2col" role="listitem"><span className="capid">01</span><div className="plat-name"><h3>What we do</h3></div><p className="plat-build">Write the AI disclosure into the chat and first message, restrict answers to approved content, choose providers with suitable hosting and no-training terms, set retention periods, and document the data flow for your privacy policy.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">02</span><div className="plat-name"><h3>What you keep</h3></div><p className="plat-build">You stay responsible for the personal information you collect and for what your AI tells customers. We make that easier with access controls, a log of every AI reply, and plain-English notes on where data goes.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">03</span><div className="plat-name"><h3>What we do not do</h3></div><p className="plat-build">We are not lawyers and do not give legal sign-off. For health, financial and insurance businesses, confirm the detail with your privacy adviser or compliance team.</p></div>
+            </div>
           </div>
         </section>
 
-        {/* ═══ 13. ENGAGEMENT SHAPES + DEMAND ═══ */}
-        <section className="sec-lg dot-grid">
+        {/* ═══ ENGAGEMENT SHAPES + DEMAND → ruled rows + split ═══ */}
+        <section className="section platforms" id="engagement">
           <div className="wrap">
-            <div className="col-6040">
+            <div className="section-head plat-head">
               <div>
-                <span className="eyebrow">Scope, not packages</span>
+                <div className="eyebrow">Scope, not packages</div>
                 <h2>Three ways to work with us on AI customer service</h2>
-                <p className="lead mt-4" style={{ maxWidth: 560 }}>
-                  Every project is quoted for your scope, with a fixed price for the build and ongoing support shown
-                  separately. These are the shapes it usually takes.
-                </p>
-                <ul className="scope-list num-list mt-6" style={{ maxWidth: 580 }}>
-                  <li><b>Draft and triage first.</b> The agent drafts replies and sorts tickets inside your helpdesk, with staff approving everything. Low risk, fast to prove.</li>
-                  <li><b>Live answers on chosen ticket types.</b> Chat and email answers for the ticket types that passed testing, with integrations to your store, booking or account systems and full handover rules.</li>
-                  <li><b>Build plus support.</b> Either of the above with ongoing transcript reviews, new ticket types, content updates and keeping pace with changes to the AI models and your helpdesk.</li>
-                </ul>
-                <p className="mt-6" style={{ maxWidth: 560 }}>
+              </div>
+              <p>
+                Every project is quoted for your scope, with a fixed price for the build and ongoing support shown
+                separately. These are the shapes it usually takes.
+              </p>
+            </div>
+            <div className="platlist" role="list">
+              <div className="plat plat-2col" role="listitem"><span className="capid">01</span><div className="plat-name"><h3>Draft and triage first.</h3></div><p className="plat-build">The agent drafts replies and sorts tickets inside your helpdesk, with staff approving everything. Low risk, fast to prove.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">02</span><div className="plat-name"><h3>Live answers on chosen ticket types.</h3></div><p className="plat-build">Chat and email answers for the ticket types that passed testing, with integrations to your store, booking or account systems and full handover rules.</p></div>
+              <div className="plat plat-2col" role="listitem"><span className="capid">03</span><div className="plat-name"><h3>Build plus support.</h3></div><p className="plat-build">Either of the above with ongoing transcript reviews, new ticket types, content updates and keeping pace with changes to the AI models and your helpdesk.</p></div>
+            </div>
+            <div className="au-split">
+              <div>
+                <p>
                   What moves the scope: the number of ticket types, how many systems it connects to, the channels and
                   languages, your conversation volume (which sets the AI usage you pay providers directly), and the
                   support you want. For typical Australian market ranges, see our{' '}
                   <a href="/blog/ai-cost-australia-2026">AI cost guide</a>. For a list of other firms, see{' '}
                   <a href="/blog/best-ai-agencies-australia-2026">the best AI agencies in Australia</a>.
                 </p>
-                <div className="mt-8">
-                  <ModalCTAButton label="Plan my AI customer service" region="au" modalVariant="default" btnVariant="primary-light" />
-                </div>
+                <ModalCTAButton label="Plan my AI customer service" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
               </div>
-
-              <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: `1px solid ${T.n200}`, padding: '14px 18px' }}>
-                  <span style={{ fontFamily: T.fm, fontSize: 10, letterSpacing: '.13em', textTransform: 'uppercase', color: T.n400 }}>Australia · Monthly Search Demand</span>
-                  <span style={{ background: T.small, color: '#fff', fontFamily: T.fm, fontSize: 10, borderRadius: 999, padding: '3px 9px' }}>DataForSEO</span>
-                </div>
-                <div style={{ padding: '4px 18px 14px' }}>
-                  <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
-                    {[
-                      { kw: 'ai customer service', v: '210', w: '100%', kd: 'The head term' },
-                      { kw: 'ai chatbot service', v: '90', w: '43%', kd: 'Buying a chatbot as a service' },
-                      { kw: 'ai chatbot for website', v: '90', w: '43%', kd: 'Website chat' },
-                      { kw: 'ai chatbot for business', v: '70', w: '33%', kd: 'Comparing options' },
-                      { kw: 'ai customer service agent', v: '50', w: '24%', kd: 'Agents, not scripts' },
-                      { kw: 'ai chatbot for customer service', v: '50', w: '24%', kd: 'Support chat' },
-                      { kw: 'customer service ai agent', v: '30', w: '14%', kd: 'Same intent, other wording' },
-                      { kw: 'ai chatbot for ecommerce', v: '20', w: '10%', kd: 'Online stores' },
-                    ].map((r) => (
-                      <li key={r.kw} className="demand-row">
-                        <div className="demand-top"><span className="demand-kw">{r.kw}</span><span className="demand-v">{r.v}<span style={{ fontSize: 9, color: T.n400 }}> searches</span></span></div>
-                        <div className="demand-bar"><i style={{ width: r.w }} /></div>
-                        <div className="demand-kd">{r.kd}</div>
-                      </li>
-                    ))}
-                  </ul>
-                  <p style={{ textAlign: 'center', fontFamily: T.fm, fontSize: 10, color: T.n400, marginTop: 10 }}>Source: DataForSEO, Australia, September 2026</p>
-                </div>
+              <div className="demand">
+                <div className="demand-head"><span>Australia · Monthly Search Demand</span><b>DataForSEO</b></div>
+                <ul>
+                  {[
+                    { kw: 'ai customer service', v: '210', w: '100%', kd: 'The head term' },
+                    { kw: 'ai chatbot service', v: '90', w: '43%', kd: 'Buying a chatbot as a service' },
+                    { kw: 'ai chatbot for website', v: '90', w: '43%', kd: 'Website chat' },
+                    { kw: 'ai chatbot for business', v: '70', w: '33%', kd: 'Comparing options' },
+                    { kw: 'ai customer service agent', v: '50', w: '24%', kd: 'Agents, not scripts' },
+                    { kw: 'ai chatbot for customer service', v: '50', w: '24%', kd: 'Support chat' },
+                    { kw: 'customer service ai agent', v: '30', w: '14%', kd: 'Same intent, other wording' },
+                    { kw: 'ai chatbot for ecommerce', v: '20', w: '10%', kd: 'Online stores' },
+                  ].map((r) => (
+                    <li key={r.kw} className="demand-row">
+                      <div className="demand-top"><span className="demand-kw">{r.kw}</span><span className="demand-v">{r.v}<small> searches</small></span></div>
+                      <div className="demand-bar"><i style={{ width: r.w }} /></div>
+                      <div className="demand-kd">{r.kd}</div>
+                    </li>
+                  ))}
+                </ul>
+                <p className="demand-src">Source: DataForSEO, Australia, September 2026</p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ═══ 14. PROVIDER LIST (self-disclosure, ItemList) ═══ */}
-        <section className="sec-lg">
+        {/* ═══ PROVIDER LIST (self-disclosure, ItemList from PROVIDERS) → ruled rows ═══ */}
+        <section className="section platforms" id="providers">
           <div className="wrap">
-            <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">The honest landscape</span>
-              <h2>AI customer service options Australian businesses compare</h2>
-              <p className="lead mt-4">
+            <div className="section-head plat-head">
+              <div>
+                <div className="eyebrow">The honest landscape</div>
+                <h2>AI customer service options Australian businesses compare</h2>
+              </div>
+              <p>
                 We are one option, not the only one. These are the helpdesk AI agents and Australian specialists that
                 show up when people search for AI customer service in Australia or ask AI assistants for one. Each note
                 is based on what the company says on its own website.
               </p>
             </div>
-            <ul className="col-2 mt-10" style={{ gap: 16 }}>
+            <div className="platlist" role="list">
               {PROVIDERS.map((p, i) => (
-                <li key={p.name} className="card" style={{ display: 'flex', gap: 18, alignItems: 'flex-start' }}>
-                  <span style={{ fontFamily: T.fm, fontWeight: 700, fontSize: 15, color: T.small, minWidth: 30 }}>{i + 1}</span>
-                  <div>
-                    <h3 style={{ fontSize: 18 }}>{p.name}{p.name === 'FactoryJet' && <span style={{ fontFamily: T.fm, fontSize: 10, background: T.small, color: '#fff', borderRadius: 999, padding: '2px 8px', marginLeft: 8, verticalAlign: 'middle' }}>That is us</span>}</h3>
-                    <p style={{ marginTop: 6 }}>{p.note}</p>
-                  </div>
-                </li>
+                <div key={p.name} className={p.name === 'FactoryJet' ? 'plat plat-2col plat-own' : 'plat plat-2col'} role="listitem">
+                  <span className="capid">{String(i + 1).padStart(2, '0')}</span>
+                  <div className="plat-name"><h3>{p.name}</h3>{p.name === 'FactoryJet' && <span className="plat-flag">That is us</span>}</div>
+                  <p className="plat-build">{p.note}</p>
+                </div>
               ))}
-            </ul>
-            <p style={srcNote}>
+            </div>
+            <p className="sub-note">
               Options named from live Australian search results and AI assistant answers for AI customer service and AI chatbot queries, September 2026. Notes reflect each company’s own website on 26 September 2026. Listing is not endorsement.
             </p>
-            <div className="card mt-8" style={{ maxWidth: 900 }}>
-              <span className="eyebrow">Questions to ask any provider, including us</span>
-              <ol className="scope-list num-list mt-4">
-                <li><b>Can I test it on my own past tickets?</b> A demo on the vendor’s content tells you little. Ask for results on yours.</li>
-                <li><b>What does it do when it does not know?</b> The right answer is hand over or draft, never guess.</li>
-                <li><b>How do customers reach a person?</b> Test it: type “agent” and see what happens.</li>
-                <li><b>Which AI providers see our data, where, and do they train on it?</b> Get names and locations in writing.</li>
-                <li><b>How is it priced as volume grows?</b> Per seat, per conversation and per resolution scale very differently.</li>
-                <li><b>What do we keep if we leave?</b> Prompts, approved answers, workflows and conversation history.</li>
+            <div className="au-panel au-panel-wide">
+              <div className="eyebrow">Questions to ask any provider, including us</div>
+              <ol className="au-numlist">
+                <li><span><b>Can I test it on my own past tickets?</b> A demo on the vendor’s content tells you little. Ask for results on yours.</span></li>
+                <li><span><b>What does it do when it does not know?</b> The right answer is hand over or draft, never guess.</span></li>
+                <li><span><b>How do customers reach a person?</b> Test it: type “agent” and see what happens.</span></li>
+                <li><span><b>Which AI providers see our data, where, and do they train on it?</b> Get names and locations in writing.</span></li>
+                <li><span><b>How is it priced as volume grows?</b> Per seat, per conversation and per resolution scale very differently.</span></li>
+                <li><span><b>What do we keep if we leave?</b> Prompts, approved answers, workflows and conversation history.</span></li>
               </ol>
             </div>
           </div>
         </section>
 
-        {/* ═══ 15. SIBLING SERVICES (hover cards) ═══ */}
-        <section className="sec-lg dot-grid">
+        {/* ═══ SIBLING SERVICES → agentdir ═══ */}
+        <section className="section agentdir" id="more-services">
           <div className="wrap">
-            <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">Beyond the support inbox</span>
+            <div className="section-head">
+              <div className="eyebrow">Beyond the support inbox</div>
               <h2>The rest of what we build for Australian businesses</h2>
-              <p className="lead mt-4">
+              <p>
                 AI customer service is often the first AI system a business trusts with customers. These are the
                 natural next steps, built by the same team. For the engineering detail, read our{' '}
                 <a href="/blog/ai-customer-support-agent-architecture-guide">AI customer support agent architecture guide</a>.
               </p>
             </div>
-            <ul className="col-3 mt-10">
+            <ul className="agentdir-grid">
               {SIBLINGS.map((s) => (
-                <li key={s.href} className="svc-card" style={{ padding: 0 }}>
-                  <a href={s.href} style={{ display: 'block', padding: 24, height: '100%' }}>
-                    <h3>{s.t} <span style={{ color: T.small }} aria-hidden="true">→</span></h3>
-                    <p className="mt-4">{s.d}</p>
+                <li key={s.href}>
+                  <a href={s.href}>
+                    <span className="agentdir-t">{s.t}</span>
+                    <span className="agentdir-l">{s.d}</span>
+                    <span className="agentdir-go" aria-hidden="true">↗</span>
                   </a>
                 </li>
               ))}
@@ -935,76 +988,37 @@ export default function AiCustomerServiceAUPage() {
           </div>
         </section>
 
-        {/* ═══ 16. FAQ (canonical Linear Minimal) ═══ */}
-        <section className="sec-lg" id="faq">
+        {/* ═══ FAQ (Family A accordion; same FAQ_ITEMS array as the FAQPage JSON-LD) ═══ */}
+        <AuFaq
+          categories={FAQ_CATEGORIES}
+          items={FAQ_ITEMS}
+          heading="AI customer service questions Australian businesses actually ask"
+          askLabel="Still have a question? Ask the founder →"
+          askNote="Replies within 24 hours."
+        />
+
+        {/* ═══ FINAL CTA (light, US finalcta) ═══ */}
+        <section className="finalcta" id="finalcta">
           <div className="wrap">
-            <style>{'.au-svc .faq-item summary::after{content:none;display:none}'}</style>
-            <div style={{ maxWidth: 760 }}>
-              <span className="eyebrow">FAQ</span>
-              <h2>AI customer service questions Australian businesses actually ask</h2>
+            <div>
+              <div className="eyebrow">Ready when you are</div>
+              <h2>Faster answers for customers, fewer repeat tickets for your team</h2>
+              <p>
+                Send your name and work email. The founder replies within 24 hours to book a short call about your
+                helpdesk, the questions customers ask most, and whether your helpdesk’s own AI or a custom AI customer
+                service agent is the right fit. No spam, no obligation.
+              </p>
             </div>
-            <div className="faq-grid">
-              <aside className="faq-sidebar">
-                <span className="faq-sidebar-topics">Topics</span>
-                <nav className="faq-sidebar-nav">
-                  {FAQ_CATEGORIES.map((c) => (
-                    <a key={c.key} href={`#faq-${c.key}`}>
-                      {c.label}
-                      <span className="faq-nav-count">{FAQ_ITEMS.filter((f) => f.category === c.key).length}</span>
-                    </a>
-                  ))}
-                </nav>
-                <div className="faq-sidebar-cta">
-                  <ModalCTAButton label="Still have a question? Ask the founder →" region="au" modalVariant="default" btnVariant="secondary-light" />
-                  <p>Replies within 24 hours.</p>
-                </div>
-              </aside>
-
-              <div>
-                {FAQ_CATEGORIES.map((c) => (
-                  <div key={c.key} id={`faq-${c.key}`} style={{ marginBottom: 40 }}>
-                    <div className="faq-cat-header">
-                      <span className="faq-cat-bar" />
-                      <p className="faq-cat-label">{c.label}</p>
-                    </div>
-                    <ul className="faq-list">{FAQ_ITEMS.filter((f) => f.category === c.key).map((f) => (
-                      <li key={f.question}><details className="faq-item">
-                        <summary>
-                          <span className="q-text">{f.question}</span>
-                          <span className="chevron">
-                            <svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5L7 9L11 5" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" /></svg>
-                          </span>
-                        </summary>
-                        <div className="faq-ans"><p>{f.answer}</p></div>
-                      </details></li>
-                    ))}</ul>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ═══ 17. FINAL CTA (the only dark section) ═══ */}
-        <section className="dark-sec">
-          <div className="wrap" style={{ textAlign: 'center', maxWidth: 640 }}>
-            <span className="eyebrow">Ready when you are</span>
-            <h2>Faster answers for customers, fewer repeat tickets for your team</h2>
-            <p className="mt-4">
-              Send your name and work email. The founder replies within 24 hours to book a short call about your
-              helpdesk, the questions customers ask most, and whether your helpdesk’s own AI or a custom AI customer
-              service agent is the right fit. No spam, no obligation.
-            </p>
-            <div className="mt-8" style={{ display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap' }}>
-              <ModalCTAButton label="Plan my AI customer service" region="au" modalVariant="default" btnVariant="primary-light" />
-              <a className="btn btn-outline" href="/au/ai-receptionist" style={{ color: '#fff', borderColor: 'rgba(255,255,255,.25)' }}>Need phone answering? See AI receptionist</a>
+            <div className="ctas">
+              <ModalCTAButton label="Plan my AI customer service" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
+              <a className="btn btn-ghost" href="/au/ai-receptionist">Need phone answering? See AI receptionist</a>
             </div>
           </div>
         </section>
 
       </main>
       </div>
-      <SiteFooter locale="au" linkColumns={AU_FOOTER_COLUMNS} variant="dark" tagline="Ecommerce, AI agents, websites and AI search for Australian businesses. Built by senior engineers, supported after launch, owned by you." />
+      <SiteFooter locale="au" linkColumns={AU_FOOTER_COLUMNS} tagline="Ecommerce, AI agents, websites and AI search for Australian businesses. Built by senior engineers, supported after launch, owned by you." />
     </>
   );
 }

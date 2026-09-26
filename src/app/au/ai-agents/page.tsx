@@ -9,7 +9,7 @@ import { AU_FOOTER_COLUMNS } from '@/data/auFooterColumns';
 import '../au-service.css';
 
 const CANONICAL = 'https://factoryjet.com/au/ai-agents';
-const UPDATED = '2026-09-25';
+const UPDATED = '2026-09-26';
 const TITLE = 'AI Automation Agency Australia | AI Agents | FactoryJet';
 const H1 = 'AI Automation Agency Australia: Custom AI Agents Built Into the Tools You Already Run';
 const DESCRIPTION =
@@ -338,7 +338,7 @@ export default function AiAgentsAUPage() {
                 <div className="byline mt-6" style={{ maxWidth: 560 }}>
                   <div className="av">BB</div>
                   <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
-                  <div className="upd">Last updated<br />25 September 2026</div>
+                  <div className="upd">Last updated<br />26 September 2026</div>
                 </div>
 
                 <div className="mt-6" style={{ maxWidth: 560 }}>

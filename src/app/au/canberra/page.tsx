@@ -19,7 +19,7 @@ import '../au-service.css';
    Australian government digital policy or any legal accessibility obligation.
    digital.gov.au could not be fetched during research. See pageData.ts. */
 
-const UPDATED = '2026-09-25';
+const UPDATED = '2026-09-26';
 const TITLE = 'Web Design & SEO Canberra | Accessible Sites | FactoryJet';
 const H1 = 'Web design Canberra: accessible websites and SEO for ACT organisations';
 const DESCRIPTION =
@@ -239,7 +239,7 @@ export default function CanberraPage() {
                 <div className="byline mt-6" style={{ maxWidth: 560 }}>
                   <div className="av">BB</div>
                   <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
-                  <div className="upd">Last updated<br />25 September 2026</div>
+                  <div className="upd">Last updated<br />26 September 2026</div>
                 </div>
 
                 <div className="mt-6" style={{ maxWidth: 560 }}>

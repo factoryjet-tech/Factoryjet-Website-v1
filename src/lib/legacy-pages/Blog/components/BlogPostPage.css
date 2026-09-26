@@ -1,0 +1,96 @@
+/* Blog post typography (shared template for every /blog/<slug>, US and AU).
+ *
+ * Puts post headings on the same display system as the US service pages
+ * (see src/components/v2/AiAgentDevelopmentSections.css): Plus Jakarta Sans
+ * 800 with tight tracking for headings, Inter for body.
+ *
+ * Why CSS here and not in the 130+ post files: posts style their own headings
+ * with mixed Tailwind classes (text-2xl font-bold, font-display, font-heading,
+ * or no class at all), and the `prose` classes on #content are inert because
+ * @tailwindcss/typography is not installed. One scoped rule fixes them all.
+ *
+ * Scope: .blog-post is the template root, .blog-prose is the #content div.
+ * Colours are never set here, so dark cards keep their white headings.
+ */
+
+.blog-post {
+  --blog-display: var(--font-plus-jakarta), 'Plus Jakarta Sans', system-ui, sans-serif;
+  --blog-link: #B23E13;
+}
+
+/* 1. Font family, weight and tracking for every heading on the page,
+ *    including headings inside post cards and the template's own
+ *    Key Takeaways, FAQ, author and sidebar headings. Size stays with
+ *    each heading's own classes unless rule 2 applies. */
+.blog-post :is(h1, h2, h3) {
+  font-family: var(--blog-display);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+.blog-post h4 {
+  font-family: var(--blog-display);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+/* 2. Section-level headings in the post body: direct children of #content,
+ *    or of a plain unclassed wrapper (article/section/div) or a legacy
+ *    `.prose` article wrapper. Headings nested inside cards and callouts are
+ *    deliberately excluded so their compact sizes are kept. */
+.blog-prose > h2,
+.blog-prose > :is(article, section, div):not([class]) > h2,
+.blog-prose > .prose > h2 {
+  font-size: clamp(26px, 3vw, 36px);
+  line-height: 1.15;
+  text-wrap: balance;
+}
+.blog-prose > h3,
+.blog-prose > :is(article, section, div):not([class]) > h3,
+.blog-prose > .prose > h3 {
+  font-size: clamp(20px, 1.6vw, 23px);
+  line-height: 1.25;
+  text-wrap: balance;
+}
+
+/* 3. Body copy at section level: Inter (inherited), comfortable measure. */
+.blog-prose > :is(p, ul, ol):not([class*='leading-']),
+.blog-prose > :is(article, section, div):not([class]) > :is(p, ul, ol):not([class*='leading-']),
+.blog-prose > .prose > :is(p, ul, ol):not([class*='leading-']) {
+  line-height: 1.75;
+}
+
+/* 4. Fallback spacing for posts written with bare, unclassed elements
+ *    (about 19 posts, e.g. website-cost-australia-2026). Tailwind's reset
+ *    strips all margins, bullets and link styling, so without this their
+ *    headings and paragraphs run together. Classed elements are untouched. */
+.blog-prose > :is(h2, h3):not([class]),
+.blog-prose > :is(article, section, div):not([class]) > :is(h2, h3):not([class]),
+.blog-prose > .prose > :is(h2, h3):not([class]) {
+  margin-top: 1.6em;
+  margin-bottom: 0.55em;
+}
+.blog-prose > :is(p, ul, ol):not([class]),
+.blog-prose > :is(article, section, div):not([class]) > :is(p, ul, ol):not([class]),
+.blog-prose > .prose > :is(p, ul, ol):not([class]) {
+  margin-bottom: 1.15em;
+}
+.blog-prose > ul:not([class]),
+.blog-prose > :is(article, section, div):not([class]) > ul:not([class]),
+.blog-prose > .prose > ul:not([class]) {
+  list-style: disc;
+  padding-left: 1.4em;
+}
+.blog-prose > ol:not([class]),
+.blog-prose > :is(article, section, div):not([class]) > ol:not([class]),
+.blog-prose > .prose > ol:not([class]) {
+  list-style: decimal;
+  padding-left: 1.4em;
+}
+.blog-prose :is(ul, ol):not([class]) > li + li {
+  margin-top: 0.4em;
+}
+.blog-prose :is(p, li):not([class]) a:not([class]) {
+  color: var(--blog-link);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

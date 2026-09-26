@@ -15,7 +15,7 @@ import '../au-service.css';
    1,000 · melbourne web designer 720 · web design company / agency melbourne 590.
    Title and H1 intent kept from the previous version of this page (it already carries
    "web design" + "SEO consultant" + "Melbourne"). */
-const UPDATED = '2026-09-25';
+const UPDATED = '2026-09-26';
 const TITLE = 'Web Design & SEO Consultant Melbourne | FactoryJet';
 const H1 = 'Web design and SEO consulting in Melbourne';
 const DESCRIPTION =
@@ -270,7 +270,7 @@ export default function MelbournePage() {
                 <div className="byline mt-6" style={{ maxWidth: 560 }}>
                   <div className="av">BB</div>
                   <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
-                  <div className="upd">Last updated<br />25 September 2026</div>
+                  <div className="upd">Last updated<br />26 September 2026</div>
                 </div>
 
                 <div className="mt-6" style={{ maxWidth: 560 }}>

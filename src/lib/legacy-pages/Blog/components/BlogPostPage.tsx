@@ -7,6 +7,7 @@ import { StickyCallToAction } from './StickyCallToAction';
 import { ShareButton } from './ShareButton';
 import { BlogHeroImage } from './BlogHeroImage';
 import BlogLeadCapture from '@/components/BlogLeadCapture';
+import './BlogPostPage.css';
 import { getAuthorByName } from '@/data/authors';
 import {
   ArrowLeft,
@@ -75,7 +76,7 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({
   relatedServices = [],
 }) => {
   return (
-    <div className="min-h-screen bg-[#FAFAF7] relative">
+    <div className="blog-post min-h-screen bg-[#FAFAF7] relative">
       <ReadingProgress />
       <StickyCallToAction />
 
@@ -122,7 +123,7 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({
           </div>
 
           <h1
-            className="font-display font-bold text-2xl md:text-4xl lg:text-5xl xl:text-6xl text-slate-900 leading-[1.1] mb-6 md:mb-8"
+            className="font-fj-display font-extrabold tracking-[-0.03em] text-[32px] md:text-[42px] lg:text-[50px] xl:text-[56px] text-slate-900 leading-[1.08] [text-wrap:balance] mb-6 md:mb-8"
           >
             {post.title}
           </h1>
@@ -192,7 +193,7 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({
               )}
 
               {/* Main Content Body */}
-              <div id="content" className="prose prose-slate prose-sm md:prose-base lg:prose-lg max-w-none prose-headings:font-display prose-headings:font-bold prose-headings:text-gray-900 prose-a:text-[#F05A28] prose-a:no-underline hover:prose-a:underline prose-img:rounded-xl prose-img:shadow-lg prose-p:leading-relaxed prose-li:text-gray-700">
+              <div id="content" className="blog-prose prose prose-slate prose-sm md:prose-base lg:prose-lg max-w-none prose-headings:font-display prose-headings:font-bold prose-headings:text-gray-900 prose-a:text-[#F05A28] prose-a:no-underline hover:prose-a:underline prose-img:rounded-xl prose-img:shadow-lg prose-p:leading-relaxed prose-li:text-gray-700">
                 {post.content}
               </div>
 

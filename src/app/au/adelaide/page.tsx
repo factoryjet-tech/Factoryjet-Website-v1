@@ -15,7 +15,7 @@ import '../au-service.css';
    FAQ set and the sources are carried over from the August 2026 page; the
    old sections/ folder and the Lenis client shell were removed. */
 
-const UPDATED = '2026-09-25';
+const UPDATED = '2026-09-26';
 const TITLE = 'Web Design & SEO Adelaide | Easier to Rank In | FactoryJet';
 const H1 = 'Web design Adelaide: websites and SEO for South Australian businesses';
 const DESCRIPTION =
@@ -239,7 +239,7 @@ export default function AdelaidePage() {
                 <div className="byline mt-6" style={{ maxWidth: 560 }}>
                   <div className="av">BB</div>
                   <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
-                  <div className="upd">Last updated<br />25 September 2026</div>
+                  <div className="upd">Last updated<br />26 September 2026</div>
                 </div>
 
                 <div className="mt-6" style={{ maxWidth: 560 }}>

@@ -9,7 +9,7 @@ import MidPageCTA from '@/components/v2/MidPageCTA';
 import '../au-service.css';
 
 const CANONICAL = 'https://factoryjet.com/au/ai-development';
-const UPDATED = '2026-09-25';
+const UPDATED = '2026-09-26';
 const TITLE = 'AI Development Company Australia | Custom AI | FactoryJet';
 const H1 = 'AI Development Company in Australia: Custom AI Built Into the Systems You Already Run';
 const DESCRIPTION =
@@ -357,7 +357,7 @@ export default function AiDevelopmentAUPage() {
                 <div className="byline mt-6" style={{ maxWidth: 560 }}>
                   <div className="av">BB</div>
                   <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
-                  <div className="upd">Last updated<br />25 September 2026</div>
+                  <div className="upd">Last updated<br />26 September 2026</div>
                 </div>
 
                 <div className="mt-6" style={{ maxWidth: 560 }}>
