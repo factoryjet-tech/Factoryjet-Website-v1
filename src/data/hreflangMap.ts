@@ -273,11 +273,15 @@ export const seoAuditServicesAlternatesUS = {
  * x-default now points to the US page. Do NOT "restore" it to /ai-seo. Keep
  * en-IN → /ai-seo so India intent still resolves to the India page.
  */
+// 2026-09-28: en-GB and en-AU now point at the real /uk/ai-seo and /au/ai-seo
+// pages (previously en-GB -> /uk homepage, en-AE -> /uae homepage, while the UK and
+// AU pages each declared themselves x-default). en-AE dropped: no UAE AI SEO page.
+// The UK and AU pages use this same map so the cluster is reciprocal.
 export const aiSeoAlternates = {
   'en-IN': 'https://factoryjet.com/ai-seo',
   'en-US': 'https://factoryjet.com/services/ai-seo',
-  'en-AE': 'https://factoryjet.com/uae',
-  'en-GB': 'https://factoryjet.com/uk',
+  'en-GB': 'https://factoryjet.com/uk/ai-seo',
+  'en-AU': 'https://factoryjet.com/au/ai-seo',
   'x-default': 'https://factoryjet.com/services/ai-seo',
 } as const
 

@@ -109,6 +109,7 @@ export const post: BlogPost = {
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Jun 7, 2026',
+  dateModified: 'Sep 28, 2026',
   readTime: '11 min read',
   imageUrl: '/blog-images/how-long-does-seo-take-2026-month-by-month-timeline.webp',
   meta: {
@@ -149,6 +150,29 @@ export const post: BlogPost = {
           targeting a competitive niche realistically needs <strong>12–18 months</strong> of
           consistent effort. The biggest variable is not effort, it is your starting point.
         </p>
+      </div>
+
+      <div className="not-prose my-8 rounded-2xl border border-[#E5DFD7] bg-[#FAFAF7] p-5 md:p-6">
+        <p className="text-base text-slate-800 leading-relaxed mb-4">
+          <strong>Want to know where your site sits on this timeline?</strong> We run SEO and AI
+          search (ChatGPT, Perplexity, Google AI Overviews) as one program on a month-to-month
+          retainer. Every monthly report shows your Google rankings next to how often AI assistants
+          name you.
+        </p>
+        <div className="flex flex-wrap items-center gap-3">
+          <a
+            href="/services/ai-seo"
+            className="inline-flex items-center rounded-lg bg-[#B23E13] px-5 py-3 font-semibold text-white hover:bg-[#8F3210]"
+          >
+            See SEO and AI search services
+          </a>
+          <a
+            href="/services/technical-seo"
+            className="inline-flex items-center rounded-lg border border-slate-300 bg-white px-5 py-3 font-semibold text-slate-900 hover:bg-slate-50"
+          >
+            Technical SEO services
+          </a>
+        </div>
       </div>
 
       {/* ── INTRO ───────────────────────────────────────────────────────── */}
@@ -276,7 +300,7 @@ export const post: BlogPost = {
             Schedule 30-Min Technical SEO Scoping →
           </a>
           <a
-            href="/services/ai-seo"
+            href="/services/technical-seo"
             className="inline-flex items-center gap-2 bg-white text-[#1F2937] border border-gray-300 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
           >
             Explore Technical SEO Services
@@ -513,63 +537,36 @@ export const post: BlogPost = {
       </p>
 
       {/* ── CTA ─────────────────────────────────────────────────────────── */}
-      <div
-        style={{
-          background: 'linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%)',
-          borderRadius: '16px',
-          padding: '48px 40px',
-          marginTop: '56px',
-          textAlign: 'center',
-        }}
-      >
-        <p
-          style={{
-            color: '#FF6B00',
-            fontWeight: 700,
-            fontSize: '13px',
-            textTransform: 'uppercase',
-            letterSpacing: '0.08em',
-            marginBottom: '12px',
-          }}
-        >
-          FactoryJet · Skip the Technical Ramp-Up
+      <div className="not-prose mt-14 rounded-2xl border border-[#E5DFD7] bg-[#FAFAF7] p-6 md:p-8">
+        <p className="font-mono text-xs font-bold uppercase tracking-wider text-[#B23E13] mb-2">
+          Talk to the founder
         </p>
-        <h3
-          style={{
-            color: '#fff',
-            fontSize: '26px',
-            fontWeight: 700,
-            lineHeight: 1.3,
-            marginBottom: '16px',
-          }}
-        >
-          Want a website that starts SEO-ready from day one?
-        </h3>
-        <p style={{ color: '#94a3b8', fontSize: '16px', marginBottom: '32px', lineHeight: 1.65 }}>
-          Every FactoryJet site ships with schema markup, Core Web Vitals optimization, and proper
-          site architecture already in place, eliminating the 6–8 week technical audit phase that
-          delays most SEO timelines.
+        <p className="text-xl md:text-2xl font-bold text-slate-900 mb-3">
+          Bring your site. We will tell you where you are on the timeline.
         </p>
-        <a
-          href="https://calendly.com/bhavesh-factoryjet/30min"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            display: 'inline-block',
-            background: '#FF6B00',
-            color: '#fff',
-            fontWeight: 700,
-            fontSize: '16px',
-            padding: '14px 36px',
-            borderRadius: '8px',
-            textDecoration: 'none',
-          }}
-        >
-          Talk to the Founder. Free 30-min Call
-        </a>
-        <p style={{ color: '#475569', fontSize: '13px', marginTop: '16px' }}>
-          Bring your site. We will audit it live and tell you exactly where you are on the timeline.
+        <p className="text-slate-700 text-base leading-relaxed mb-5">
+          On a free 30-minute call, we look at your Search Console data live and tell you which
+          month of this timeline you are really in, what is slowing you down, and what to fix
+          first. If you are building a new site, every FactoryJet site ships with schema, fast Core
+          Web Vitals and clean site structure already in place, so you skip most of the technical
+          ramp-up.
         </p>
+        <div className="flex flex-wrap items-center gap-3">
+          <a
+            href="https://calendly.com/bhavesh-factoryjet/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center rounded-lg bg-[#B23E13] px-5 py-3 font-semibold text-white hover:bg-[#8F3210]"
+          >
+            Book a free 30-minute call
+          </a>
+          <a
+            href="/services/ai-seo"
+            className="inline-flex items-center rounded-lg border border-slate-300 bg-white px-5 py-3 font-semibold text-slate-900 hover:bg-slate-50"
+          >
+            See SEO and AI search services
+          </a>
+        </div>
       </div>
 
       {/* ── AUTHOR ──────────────────────────────────────────────────────── */}
@@ -607,8 +604,8 @@ export const post: BlogPost = {
             Bhavesh Barot
           </p>
           <p style={{ color: '#6b7280', fontSize: '14px', lineHeight: 1.6, margin: 0 }}>
-            Founder of FactoryJet. Returns on your time, 500+ websites delivered, 12+ years in
-            web development and e-commerce. Obsessed with measurable results, not vanity metrics.
+            Founder of FactoryJet. 500+ businesses served across web, commerce and AI work,
+            12+ years in web development and e-commerce. Obsessed with measurable results, not vanity metrics.
           </p>
         </div>
       </div>

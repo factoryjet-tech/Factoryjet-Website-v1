@@ -10,6 +10,7 @@ export const post: BlogPost = {
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Aug 31, 2026',
+  dateModified: 'Sep 28, 2026',
   readTime: '14 min read',
   imageUrl: '/blog-images/best-ai-seo-agencies-india-2026.webp',
   meta: {
@@ -149,19 +150,32 @@ export const post: BlogPost = {
         </p>
       </div>
 
-      {/* Target Market Clarifier */}
-      <div className="bg-slate-50 border border-slate-200 p-4 md:p-5 rounded-xl mb-8 text-sm text-gray-700">
-        <p>
-          <strong>Hiring for a United States business?</strong> This evaluation covers India-based briefs and regional market economics. If you are hiring for a US company, visit our{' '}
-          <a href="/services/ai-seo" className="text-[#F05A28] font-semibold hover:underline">
-            US AI SEO Services Hub
-          </a>
-          , or explore our curated guide on the{' '}
-          <a href="/blog/best-ai-seo-agencies-usa" className="text-[#F05A28] font-semibold hover:underline">
-            10 Best AI SEO Agencies in the USA
+      {/* Service CTA + target market clarifier */}
+      <div className="not-prose mb-8 rounded-2xl border border-[#E5DFD7] bg-[#FAFAF7] p-5 md:p-6">
+        <p className="text-base text-slate-800 leading-relaxed mb-4">
+          <strong>Hiring AI SEO services for an Indian business?</strong> See how FactoryJet scopes AI
+          SEO in India: per-engine citation reports for ChatGPT, Perplexity, Gemini and Google AI
+          Overviews every month, plus the site fixes done by our own engineers.{' '}
+          <strong>Hiring for a US company?</strong> Use our US AI SEO services page instead, or the{' '}
+          <a href="/blog/best-ai-seo-agencies-usa" className="font-semibold text-[#B23E13] underline">
+            10 best AI SEO agencies in the USA
           </a>
           .
         </p>
+        <div className="flex flex-wrap items-center gap-3">
+          <a
+            href="/ai-seo"
+            className="inline-flex items-center rounded-lg bg-[#B23E13] px-5 py-3 font-semibold text-white hover:bg-[#8F3210]"
+          >
+            AI SEO services in India
+          </a>
+          <a
+            href="/services/ai-seo"
+            className="inline-flex items-center rounded-lg border border-slate-300 bg-white px-5 py-3 font-semibold text-slate-900 hover:bg-slate-50"
+          >
+            AI SEO services for US businesses
+          </a>
+        </div>
       </div>
 
       {/* Market Context Section */}
@@ -361,33 +375,32 @@ export const post: BlogPost = {
       </div>
 
       {/* Mid-Article Interactive Audit Widget */}
-      <div className="bg-gradient-to-r from-gray-900 to-gray-800 text-white rounded-2xl p-6 md:p-8 my-10 shadow-lg">
-        <div className="max-w-2xl">
-          <span className="inline-block px-3 py-1 bg-[#F05A28] text-white text-xs font-bold uppercase rounded-full tracking-wider mb-3">
-            Instant Diagnostic
-          </span>
-          <h3 className="text-xl md:text-2xl font-display font-bold text-white mb-2">
-            Audit Your Business Across ChatGPT, Perplexity &amp; Google AI Overviews
-          </h3>
-          <p className="text-gray-300 text-sm md:text-base leading-relaxed mb-6">
-            Before speaking with any agency, find out exactly how AI models currently see your brand. We run your commercial queries across all major LLMs to identify missing citations and schema bottlenecks.
-          </p>
-          <div className="flex flex-wrap gap-3">
-            <a
-              href="/ai-visibility-checker"
-              className="inline-flex items-center justify-center bg-[#F05A28] hover:bg-[#C94818] text-white font-semibold text-sm px-6 py-3 rounded-lg transition-colors"
-            >
-              Run AI Visibility Check
-            </a>
-            <a
-              href="https://calendly.com/bhavesh-factoryjet/30min"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 text-white border border-white/20 font-semibold text-sm px-6 py-3 rounded-lg transition-colors"
-            >
-              Book 30-Min Technical Audit
-            </a>
-          </div>
+      <div className="not-prose my-10 rounded-2xl border border-[#E5DFD7] bg-[#FAFAF7] p-6 md:p-8">
+        <p className="font-mono text-xs font-bold uppercase tracking-wider text-[#B23E13] mb-2">
+          Before you shortlist anyone
+        </p>
+        <p className="text-xl md:text-2xl font-bold text-slate-900 mb-3">
+          See how ChatGPT, Perplexity and Google AI Overviews see your business today
+        </p>
+        <p className="text-slate-700 text-base leading-relaxed mb-5">
+          Run the free check to see whether AI assistants name you for the questions your buyers
+          ask. Then use the result to judge every agency on this list, including us.
+        </p>
+        <div className="flex flex-wrap items-center gap-3">
+          <a
+            href="/ai-visibility-checker"
+            className="inline-flex items-center rounded-lg bg-[#B23E13] px-5 py-3 font-semibold text-white hover:bg-[#8F3210]"
+          >
+            Run the free AI visibility check
+          </a>
+          <a
+            href="https://calendly.com/bhavesh-factoryjet/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center rounded-lg border border-slate-300 bg-white px-5 py-3 font-semibold text-slate-900 hover:bg-slate-50"
+          >
+            Book a 30-minute call
+          </a>
         </div>
       </div>
 

@@ -4,12 +4,13 @@ import type { BlogPost } from '../data.types';
 export const post: BlogPost = {
   id: '227',
   slug: 'shopify-development-cost-2026',
-  title: 'Shopify Development Cost in 2026: Real Numbers From 500+ Store Builds',
+  title: 'Shopify Development Cost in 2026: What a Store Really Costs',
   excerpt:
-    "Exact Shopify development costs by project type: from a $39/month DIY setup to a $120,000+ enterprise build. Verified 2026 ranges cross-referenced with market data and 500+ stores.",
+    "Short answer: a DIY Shopify store costs $468 to $1,068 in year one. A professionally built store for a small US business typically costs $2,000 to $6,000 one time plus $39 to $105 a month. Advanced builds run $6,000 to $20,000, and Shopify Plus or headless builds start around $40,000. Ranges come from Shopify's own pricing and published 2026 agency data.",
   category: 'E-Commerce Development',
   author: 'Bhavesh Barot',
   date: 'Jun 7, 2026',
+  dateModified: 'Sep 28, 2026',
   readTime: '9 min read',
   imageUrl: '/blog-images/shopify-development-cost-2026.webp',
   imageAlt:
@@ -17,7 +18,7 @@ export const post: BlogPost = {
   meta: {
     title: 'Shopify Development Cost 2026: Real Numbers | FactoryJet',
     description:
-      'Shopify development costs for 2026: $39/month DIY setups to $120K+ enterprise builds. Verified ranges from 500+ stores FactoryJet has built.',
+      'Shopify development cost 2026: $468 to $1,068 DIY, $2,000 to $6,000 for a pro-built small business store, $40K+ for Plus. Sourced ranges, plus timelines.',
   },
   keyTakeaways: [
     'A DIY store with a free theme costs $468–$1,068 in Year 1. A professionally built custom store for a US small business typically costs $2,000–$6,000 one-time plus $39–$105/month.',
@@ -116,7 +117,7 @@ export const post: BlogPost = {
   content: (
     <>
       <p className="text-sm text-gray-500 mb-6">
-        By Bhavesh Barot | Returns on your time | June 7, 2026 | 9 min read
+        By Bhavesh Barot | Published June 7, 2026 | Updated September 28, 2026 | 9 min read
       </p>
 
       <div className="bg-[#FFF3EE] border-l-4 border-[#F05A28] p-5 rounded-r-xl mb-8">
@@ -129,14 +130,38 @@ export const post: BlogPost = {
         </p>
       </div>
 
+      <div className="not-prose my-8 rounded-2xl border border-[#E5DFD7] bg-[#FAFAF7] p-5 md:p-6">
+        <p className="text-base text-slate-800 leading-relaxed mb-4">
+          <strong>Want your own number instead of a range?</strong> Tell us what you sell, how many
+          products you have and what the store has to connect to. We send a written scope and
+          timeline before any work starts. A store up to 5 pages gets 7-day delivery; a custom-theme
+          store takes 3 to 5 weeks.
+        </p>
+        <div className="flex flex-wrap items-center gap-3">
+          <a
+            href="/services/shopify-development"
+            className="inline-flex items-center rounded-lg bg-[#B23E13] px-5 py-3 font-semibold text-white hover:bg-[#8F3210]"
+          >
+            See Shopify development
+          </a>
+          <a
+            href="/services/ecommerce-development"
+            className="inline-flex items-center rounded-lg border border-slate-300 bg-white px-5 py-3 font-semibold text-slate-900 hover:bg-slate-50"
+          >
+            Compare ecommerce platforms and builds
+          </a>
+        </div>
+      </div>
+
       <p className="text-lg leading-relaxed mb-6">
         Most Shopify cost guides give you a range so wide it&apos;s useless. &ldquo;$1,000 to
         $100,000&rdquo; tells you nothing about what you actually need to budget.
       </p>
       <p className="mb-8">
-        At FactoryJet, we&apos;ve built over 500 Shopify stores for small businesses across the US, UK, UAE and India. Here are the
-        real numbers, organized by what you&apos;re actually buying, verified against current 2026
-        market data.
+        FactoryJet has served 500+ businesses across web, commerce and AI work in the US, UK, UAE
+        and India, and Shopify builds are a big part of that. Here are the real numbers, organized
+        by what you&apos;re actually buying, checked against Shopify&apos;s own pricing and
+        published 2026 market data.
       </p>
 
       <hr className="my-8 border-gray-200" />
@@ -587,19 +612,22 @@ export const post: BlogPost = {
         How FactoryJet Prices Shopify Development
       </h2>
       <p className="mb-4">
-        Across 500+ Shopify stores built for small businesses in the US, UK, UAE and India, FactoryJet has found that most
-        growing brands fall into one of three project types.
+        Across the stores we have built for small businesses in the US, UK, UAE and India, most
+        growing brands fall into one of three project types. We quote each one in writing, with a
+        timeline, before any work starts.
       </p>
       <p className="mb-4">
         A standard Shopify store for a small US business with 50 to 500 SKUs, a custom homepage,
         product page optimizations, and core app integrations fits the standard custom store
-        bucket described earlier in this guide. We deliver these in 7 days or less for up to
-        5-page builds.
+        bucket described earlier in this guide. A store of up to 5 pages on a proven theme gets
+        7-day delivery. A store on a custom theme takes 3 to 5 weeks.
       </p>
       <p className="mb-4">
         For stores needing custom functionality, integrations with existing business systems, or
         conversion-optimized builds based on real data from similar stores in your industry, the
-        project moves into the advanced custom build range and typically takes 3 to 6 weeks.
+        project moves into the advanced custom build range. Subscriptions, B2B features or a
+        migration usually take 5 to 8 weeks, and headless or fully custom builds take 8 to 14
+        weeks.
       </p>
       <p className="mb-4">
         UK businesses planning a Shopify build go through the same scoping conversation. Visit{' '}
@@ -714,37 +742,37 @@ export const post: BlogPost = {
         <a href="/nashville/ecommerce-development" className="text-[#F05A28] font-semibold underline hover:text-[#C94818]">
           Nashville
         </a>{' '}
-        and beyond, all with 7-day delivery.
+        and beyond.
       </p>
 
-      {/* High-Converting CTA Box */}
-      <div className="bg-gradient-to-r from-gray-900 to-gray-800 text-white rounded-2xl p-6 md:p-8 my-8 shadow-lg">
-        <div className="max-w-2xl">
-          <span className="inline-block px-3 py-1 bg-[#F05A28] text-white text-xs font-bold uppercase rounded-full tracking-wider mb-3">
-            7-Day Delivery Turnaround
-          </span>
-          <h3 className="text-xl md:text-2xl font-display font-bold text-white mb-2">
-            Get an Exact Fixed-Price Scope for Your Shopify Store
-          </h3>
-          <p className="text-gray-300 text-sm md:text-base leading-relaxed mb-6">
-            FactoryJet has engineered 500+ custom Shopify stores and migrations for small businesses across the US, UK, UAE, and India. Book a 30-minute technical consultation with founder Bhavesh Barot.
-          </p>
-          <div className="flex flex-wrap gap-3">
-            <a
-              href="https://calendly.com/bhavesh-factoryjet/30min"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-[#F05A28] hover:bg-[#C94818] text-white font-semibold text-sm px-6 py-3 rounded-lg transition-colors"
-            >
-              Book 30-Min Technical Call
-            </a>
-            <a
-              href="/services/shopify-development"
-              className="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 text-white border border-white/20 font-semibold text-sm px-6 py-3 rounded-lg transition-colors"
-            >
-              Explore Shopify Services
-            </a>
-          </div>
+      <div className="not-prose my-10 rounded-2xl border border-[#E5DFD7] bg-[#FAFAF7] p-6 md:p-8">
+        <p className="font-mono text-xs font-bold uppercase tracking-wider text-[#B23E13] mb-2">
+          Written scope before any work starts
+        </p>
+        <p className="text-xl md:text-2xl font-bold text-slate-900 mb-3">
+          Get a real number for your Shopify store
+        </p>
+        <p className="text-slate-700 text-base leading-relaxed mb-5">
+          Book a 30-minute call with founder Bhavesh Barot. Bring your product count, the apps you
+          use and anything the store has to connect to, like inventory or accounting software. We
+          will tell you which bucket you are in, what it takes to build, and how long it will take.
+          After launch, we stay on to support the store.
+        </p>
+        <div className="flex flex-wrap items-center gap-3">
+          <a
+            href="https://calendly.com/bhavesh-factoryjet/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center rounded-lg bg-[#B23E13] px-5 py-3 font-semibold text-white hover:bg-[#8F3210]"
+          >
+            Book a 30-minute call
+          </a>
+          <a
+            href="/services/ecommerce-development"
+            className="inline-flex items-center rounded-lg border border-slate-300 bg-white px-5 py-3 font-semibold text-slate-900 hover:bg-slate-50"
+          >
+            See ecommerce development
+          </a>
         </div>
       </div>
 

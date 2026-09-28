@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import { Fragment, type ReactNode } from 'react';
 import { AI_AGENT_FAQ_CATEGORIES, AI_AGENT_FAQS } from './AiAgentDevelopmentFaqs';
 import './AiAgentDevelopmentSections.css';
 
@@ -97,6 +97,141 @@ function AgentDirectory() {
   );
 }
 
+/* Answer-first block. AI buyers (ChatGPT, Perplexity) ask use case, systems,
+   cost, timeline and ownership questions, in that order (AI-BUYER-SWEEP-RESULTS-
+   2026-09-17). Cost figures are the ProductCrafters market range already cited
+   and fetch-verified in /blog/what-is-an-ai-agent-cost-2026, labelled as a
+   market reference, never as a FactoryJet price. Timeline wording matches that
+   same guide. */
+const SHORT_ANSWERS: { tag: string; q: string; a: ReactNode }[] = [
+  {
+    tag: 'WHAT IT DOES',
+    q: 'What does an AI agent actually do for my business?',
+    a: <>It takes one repeat job that follows your rules and does it inside your systems. Agents we build read RFQs and draft quotes in NetSuite or Odoo, answer order and return tickets for Shopify stores in Gorgias or Zendesk, qualify inbound leads into HubSpot, and chase open purchase orders with suppliers. It suits manufacturers, distributors, ecommerce brands and service firms that already run on real software.</>,
+  },
+  {
+    tag: 'SYSTEMS',
+    q: 'What will it connect to?',
+    a: <>The tools you already pay for. ERP: NetSuite, SAP Business One, Odoo, Microsoft Dynamics 365. CRM: HubSpot, Salesforce. Help desk: Zendesk, Gorgias, Intercom, Freshdesk. Commerce: Shopify, Shopify Plus, BigCommerce. Plus email, Slack and anything with an API. If a system has no API, we tell you on the first call, because that changes the plan.</>,
+  },
+  {
+    tag: 'COST',
+    q: 'How much does it cost?',
+    a: <>It depends on how many systems the agent reads and writes to, not on the AI model. As a market reference, development firm ProductCrafters puts 2026 builds at about $5,000 to $180,000+, with integration as the biggest part. We quote a fixed price for your scope after one call. Our <a href="/blog/what-is-an-ai-agent-cost-2026" style={{ color: 'var(--accent-text)', textDecoration: 'underline', textUnderlineOffset: 3 }}>AI agent cost guide</a> shows what moves the number, including monthly running costs.</>,
+  },
+  {
+    tag: 'TIMELINE',
+    q: 'How long does it take?',
+    a: <>A pilot on one narrow workflow usually takes two to four weeks. A production agent with permissions, logging, approvals and monitoring usually takes six to twelve weeks. Most of that time goes into connecting your systems and testing edge cases, not the AI part.</>,
+  },
+  {
+    tag: 'OWNERSHIP',
+    q: 'What do I own when it is done?',
+    a: <>All of it: the code in your own Git repository, the prompts, the test sets, the connectors and the cloud account it runs in. You pay the model provider, such as Anthropic or OpenAI, directly. There is no per-agent license from us, so you can keep us on for support or take the work in-house.</>,
+  },
+  {
+    tag: 'AFTER LAUNCH',
+    q: 'Who looks after it once it is live?',
+    a: <>We do, if you want us to. Agents drift when your prices, policies or data change, so we watch accuracy, update prompts and models, and fix failures. That is what our <a href="/services/ai-agent-monitoring" style={{ color: 'var(--accent-text)', textDecoration: 'underline', textUnderlineOffset: 3 }}>AI agent monitoring and support</a> work covers. We don&apos;t hand over a demo and disappear.</>,
+  },
+];
+
+function ShortAnswers() {
+  return (
+    <section className="section vlog" id="short-answers">
+      <div className="wrap">
+        <div className="section-head">
+          <div className="eyebrow">Answer First</div>
+          <h2>AI Agent Development: The Short Answers</h2>
+          <p style={{ marginTop: 18, color: 'var(--body)', fontSize: 16, lineHeight: 1.75 }}>The six things buyers ask us first, answered before the sales part of the page.</p>
+        </div>
+        <div className="ventries">
+          {SHORT_ANSWERS.map((item) => (
+            <div className="ventry" key={item.tag}>
+              <span className="vtag">{item.tag}</span>
+              <h3>{item.q}</h3>
+              <p>{item.a}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+const ECOMMERCE_AGENTS: { title: string; href: string; line: string; tags: string[] }[] = [
+  {
+    title: 'Support agent for Shopify stores',
+    href: '/services/ai-customer-support-agents',
+    line: 'Answers where-is-my-order, returns and address changes inside Gorgias or Zendesk, using live Shopify order data. Refunds above your limit go to a person.',
+    tags: ['Shopify', 'Gorgias', 'Zendesk'],
+  },
+  {
+    title: 'Quotes and reorders for B2B and wholesale',
+    href: '/services/ai-agent-development/rfq-bidding-agent',
+    line: 'Reads emailed RFQs and purchase orders, checks price lists and stock, and drafts the quote or order for your team to approve.',
+    tags: ['NetSuite', 'Odoo', 'Shopify Plus B2B'],
+  },
+  {
+    title: 'Order, stock and accounting sync',
+    href: '/services/shopify-ai-agents',
+    line: 'Keeps Shopify, inventory and accounting in step, and tells a person when an order and a record do not match.',
+    tags: ['Shopify', 'QuickBooks', 'Xero'],
+  },
+  {
+    title: 'Ready-made agent, or custom?',
+    href: '/blog/best-ai-agents-for-ecommerce-2026',
+    line: 'Our comparison of Gorgias, Fin, Zendesk, Shopify Sidekick and others by job, and the point where a custom agent is worth building.',
+    tags: ['Buyer guide'],
+  },
+];
+
+function EcommerceAgents() {
+  return (
+    <section className="section capabilities" id="ecommerce-agents">
+      <div className="wrap">
+        <div className="section-head">
+          <div className="eyebrow">Ecommerce</div>
+          <h2>AI Agents for Ecommerce Stores</h2>
+          <p style={{ marginTop: 18, color: 'var(--body)', fontSize: 16, lineHeight: 1.75 }}>Ecommerce is where we build most often: the systems are well documented and the repeat work is easy to count. If a tool you already pay for covers the job, we will say so before we quote a build.</p>
+        </div>
+        <div className="capgrid">
+          {ECOMMERCE_AGENTS.map((item) => (
+            <a className="cap" href={item.href} key={item.href}>
+              <h3>{item.title}</h3>
+              <p>{item.line}</p>
+              <div className="systags">
+                {item.tags.map((tag) => <span key={tag}>{tag}</span>)}
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function TellUsTheWorkflow() {
+  return (
+    <section className="finalcta" id="tell-us">
+      <div className="wrap">
+        <div>
+          <div className="eyebrow">Next Step</div>
+          <h2 style={{ marginTop: 16 }}>Tell Us the Workflow You Want an Agent to Run</h2>
+          <p>Send us three answers. On the first call we can tell you whether it is a build, a buy or a simpler automation, and what will drive the cost.</p>
+          <ol style={{ margin: '22px 0 0', paddingLeft: 20, color: 'var(--body)', fontSize: 15, lineHeight: 1.75 }}>
+            <li><strong style={{ color: 'var(--ink)' }}>What starts the work?</strong> An email, a form, a ticket, an RFQ or an order.</li>
+            <li><strong style={{ color: 'var(--ink)' }}>Which systems does it touch?</strong> For example NetSuite, Shopify, HubSpot or Zendesk.</li>
+            <li><strong style={{ color: 'var(--ink)' }}>How often does it happen, and who does it today?</strong> A rough weekly count is enough.</li>
+          </ol>
+          <p style={{ marginTop: 18, fontSize: 14 }}>Bhavesh, our founder, reads every enquiry and usually replies within 2 to 3 hours.</p>
+        </div>
+        <a className="btn btn-primary" href="/contact">Tell us the workflow</a>
+      </div>
+    </section>
+  );
+}
+
 function WorkflowIcon({ step }: { step: number }) {
   const paths = [
     'M6 3h8l4 4v14H6V3Zm8 0v5h4M9 12h6M9 16h4',
@@ -187,16 +322,16 @@ export default function AiAgentDevelopmentSections() {
             <div className="hero-copy">
               <div className="eyebrow">Service Specification</div>
               <h1>AI Agent Development That Survives Contact With <span className="hero-emphasis">Your Real Systems</span></h1>
-              <p className="lead">Custom AI agent development and agentic AI development built to plan, decide, and act inside the tools you already run, NetSuite, SAP, Odoo, Salesforce, HubSpot, Zendesk, not a chatbot wearing an agent's name.</p>
+              <p className="lead">We design, build and support custom AI agents that plan, decide and act inside the tools you already run: NetSuite, SAP, Odoo, Salesforce, HubSpot, Zendesk and Shopify. Not a chatbot wearing an agent&apos;s name. You own the code, and a person approves anything that matters.</p>
               <div className="actions">
-                <a className="btn btn-primary" href="/contact">Scope your AI agent</a>
-                <a className="btn btn-ghost" href="#build">See how we build</a>
+                <a className="btn btn-primary" href="#tell-us">Tell us the workflow</a>
+                <a className="btn btn-ghost" href="#short-answers">Cost, timeline, ownership</a>
               </div>
             </div>
             <form className="specpanel" aria-label="Interactive RFQ workflow illustration">
               <div className="specpanel-bar">
                 <span className="statusdot" />
-                <span>PIPELINE &#8212; RFQ TO QUOTE</span>
+                <span>PIPELINE · RFQ TO QUOTE</span>
                 <span className="sys">
                   <span>NETSUITE</span>
                   <span>SAP</span>
@@ -243,7 +378,7 @@ export default function AiAgentDevelopmentSections() {
                   <span className="tag">HOLD</span>
                 </label>
               </div>
-              <div className="specpanel-foot">RULE &#8212; a missing rate is flagged on the price sheet, never guessed.</div>
+              <div className="specpanel-foot">RULE: a missing rate is flagged on the price sheet, never guessed.</div>
             </form>
           </div>
         </section>
@@ -260,8 +395,8 @@ export default function AiAgentDevelopmentSections() {
               <div className="v">Senior AI engineers who've shipped production systems, not a training bench.</div>
             </div>
             <div className="ledgercell">
-              <div className="k">Market rate context</div>
-              <div className="v">Published industry rates run $25–150+/hr. We scope to a fixed outcome, not an hourly meter.</div>
+              <div className="k">Pricing</div>
+              <div className="v">A fixed price for an agreed scope, quoted after one call. No hourly meter running in the background.</div>
             </div>
             <div className="ledgercell">
               <div className="k">Track record</div>
@@ -269,6 +404,7 @@ export default function AiAgentDevelopmentSections() {
             </div>
           </div>
         </div>
+        <ShortAnswers />
         <section className="section facts" id="facts">
           <div className="wrap">
             <div className="section-head">
@@ -287,7 +423,7 @@ export default function AiAgentDevelopmentSections() {
                 </div>
                 <div className="fact">
                   <div className="sec">§03</div>
-                  <p>Custom AI agent development typically runs $10,000 to $100,000+ depending on complexity, and most well-scoped projects reach a first production deployment in 3 to 12 weeks. Broader AI development services, outside the agent category, follow a similar range.</p>
+                  <p>Cost follows the number of systems the agent has to read and write to, not the AI model. Development firm ProductCrafters puts 2026 builds at about $5,000 to $180,000+, with integration as the biggest part. A narrow pilot takes two to four weeks. Our <a href="/blog/what-is-an-ai-agent-cost-2026" style={{ color: 'var(--accent-text)', textDecoration: 'underline', textUnderlineOffset: 3 }}>AI agent cost guide</a> breaks down what it costs to build, run or rent one.</p>
                 </div>
                 <div className="fact">
                   <div className="sec">§04</div>
@@ -300,7 +436,7 @@ export default function AiAgentDevelopmentSections() {
               </div>
               <div className="factphoto">
                 <img width="1000" height="667" src="/images/us/services/ai-agent-review-signoff.webp" alt="AI-generated illustration of a person reviewing and approving a connected workflow on a tablet" loading="lazy" decoding="async" />
-                <div className="cap">FIELD REFERENCE &#8212; REVIEW &amp; SIGN‑OFF</div>
+                <div className="cap">FIELD REFERENCE · REVIEW &amp; SIGN‑OFF</div>
               </div>
             </div>
           </div>
@@ -467,10 +603,12 @@ export default function AiAgentDevelopmentSections() {
             </div>
           </div>
         </section>
+        <EcommerceAgents />
+        <TellUsTheWorkflow />
         <AgentDirectory />
         <section className="photobreak" id="photobreak">
           <img className="kenburns" width="2000" height="667" src="/images/us/services/ai-agent-tolerance-check.webp" alt="AI-generated model of a software workflow moving through architecture, processing, verification, and output" loading="lazy" decoding="async" />
-          <div className="caption"><span className="dot" />FIELD REFERENCE &#8212; TOLERANCE CHECK</div>
+          <div className="caption"><span className="dot" />FIELD REFERENCE · TOLERANCE CHECK</div>
         </section>
         <section className="section process" id="build">
           <div className="wrap">
@@ -544,10 +682,9 @@ export default function AiAgentDevelopmentSections() {
                 <h2 className="faqHeading">AI Agent Development, Answered Directly</h2>
                 <p>Real questions buyers ask, no hedging.</p>
                 <nav className="faq-catnav" aria-label="FAQ categories">
-                  <a href="#faq-vendor">Vendor Selection</a>
-                  <a href="#faq-definitions">Definitions</a>
-                  <a href="#faq-cost">Cost &amp; Timeline</a>
-                  <a href="#faq-support">Build, Buy &amp; Support</a>
+                  {AI_AGENT_FAQ_CATEGORIES.map((category) => (
+                    <a key={category.id} href={`#${category.id}`}>{category.label}</a>
+                  ))}
                 </nav>
               </div>
               <AiAgentFaqAccordion />
@@ -558,6 +695,12 @@ export default function AiAgentDevelopmentSections() {
           <div className="wrap">
             <div className="eyebrow">References</div>
             <div className="refs">
+              <a href="/blog/what-is-an-ai-agent-cost-2026">AI agent development cost in 2026: build, run or rent</a>
+              <a href="/blog/ai-agent-build-vs-buy-2026">Build or buy an AI agent? An honest decision guide</a>
+              <a href="/blog/ai-customer-support-agent-architecture-guide">AI customer support agent architecture: Zendesk, Intercom and Gorgias</a>
+              <a href="/blog/ai-agents-erp-netsuite-odoo-sap-business-one-2026">AI agents inside NetSuite, Odoo and SAP Business One</a>
+              <a href="/blog/best-ai-agents-for-ecommerce-2026">Best AI agents for ecommerce, and when a custom agent wins</a>
+              <a href="/services/shopify-ai-agents">Shopify AI agents: orders, wholesale POs, returns and ERP sync</a>
               <a href="/services/ai-automation">Compare: AI Agent Development vs. AI Automation vs. AI Integration Services</a>
               <a href="/blog/what-is-agentic-ai">What Is Agentic AI? A Plain-Language Guide</a>
               <a href="/tools/ai-agent-roi-calculator">AI Agent Cost Calculator</a>
@@ -569,7 +712,7 @@ export default function AiAgentDevelopmentSections() {
           <div className="wrap">
             <div>
               <h2>Tell Us the Workflow, We'll Tell You the Truth</h2>
-              <p>Tell us the workflow you want an agent to run. We'll tell you honestly whether that's a build, a buy, or something in between, before you spend anything.</p>
+              <p>Tell us the workflow you want an agent to run and the systems it touches. We&apos;ll tell you honestly whether that&apos;s a build, a buy, or something in between, before you spend anything. Bhavesh, our founder, reads every enquiry and usually replies within 2 to 3 hours.</p>
             </div>
             <a className="btn btn-primary" href="/contact">Scope your AI agent</a>
           </div>

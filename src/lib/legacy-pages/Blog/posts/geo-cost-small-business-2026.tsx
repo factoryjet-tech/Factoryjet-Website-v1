@@ -129,6 +129,7 @@ export const post: BlogPost = {
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Sep 17, 2026',
+  dateModified: 'Sep 28, 2026',
   readTime: '15 min read',
   imageUrl: '/blog-images/geo-cost-small-business-2026.webp',
   meta: {
@@ -157,6 +158,29 @@ export const post: BlogPost = {
         <p className="text-gray-800 font-medium">
           According to WebFX&apos;s May 2026 pricing guide, GEO (and AI SEO, which is priced the same way) costs $1,500–$5,000/month for most small businesses, $5,000–$25,000+ for mid-size companies and $25,000–$50,000+ for enterprises. One-off agency projects such as audits run $5,000–$50,000. Tools alone cost $10–$1,000+ a month. DIY GEO costs $0 in tools and 4–6 hours per month. Here is what each level actually delivers.
         </p>
+      </div>
+
+      <div className="not-prose my-8 rounded-2xl border border-[#E5DFD7] bg-[#FAFAF7] p-5 md:p-6">
+        <p className="text-base text-slate-800 leading-relaxed mb-4">
+          <strong>Want a GEO quote you can compare line by line?</strong> We run GEO and classic SEO
+          as one program, on one month-to-month retainer, and every monthly report shows how often
+          ChatGPT, Perplexity, Claude, Gemini and Google AI Overviews name you, next to your Google
+          rankings. Scope and price are in writing before anything starts.
+        </p>
+        <div className="flex flex-wrap items-center gap-3">
+          <a
+            href="/services/ai-seo"
+            className="inline-flex items-center rounded-lg bg-[#B23E13] px-5 py-3 font-semibold text-white hover:bg-[#8F3210]"
+          >
+            See AI SEO services
+          </a>
+          <a
+            href="/ai-visibility-checker"
+            className="inline-flex items-center rounded-lg border border-slate-300 bg-white px-5 py-3 font-semibold text-slate-900 hover:bg-slate-50"
+          >
+            Free AI visibility check
+          </a>
+        </div>
       </div>
 
       {/* Table of Contents */}
@@ -397,6 +421,7 @@ export const post: BlogPost = {
         <p className="mb-4">We scope GEO programs from your actual prompt list: the markets, products, languages and AI engines your buyers use. The scope and price are in writing before any retainer starts, so you can compare them line by line with other quotes.</p>
         <div className="flex flex-wrap items-center gap-4">
           <a href="/contact" className="inline-block bg-[#B23E13] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#9A3510] transition-colors">Get a written GEO quote &rarr;</a>
+          <a href="/services/ai-seo" className="inline-block bg-white text-[#1F2937] border border-gray-300 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors">See AI SEO services</a>
           <a href="/services/generative-engine-optimization" className="inline-block bg-white text-[#1F2937] border border-gray-300 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors">See GEO agency services</a>
         </div>
       </div>

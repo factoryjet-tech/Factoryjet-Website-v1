@@ -13,7 +13,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
-const PAGE_MODIFIED = '2026-09-17';
+const PAGE_MODIFIED = '2026-09-28';
 const CANONICAL_URL = 'https://factoryjet.com/services/ai-customer-support-agents';
 
 /** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
@@ -105,7 +105,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'basics',
     question: 'What percentage of customer support tickets can an AI agent resolve end to end?',
     answer:
-      'For structured ticket types, the numbers are strong. Think order status, returns, address changes, product questions, and subscription changes. A custom agent resolves 65 percent to 80 percent of that volume on its own. No human agent needs to step in. The rest goes to your team automatically. Each handoff carries the full conversation history. Your human agent sees everything already. The customer never has to repeat themselves.',
+      'It depends on your ticket mix, so we measure it instead of promising a number. Structured types such as order status, returns, address changes and subscription changes are the best candidates. In shadow mode the agent drafts replies on your real tickets and your team approves or corrects each one, so you see the actual rate per category before anything goes live. Everything else goes to your team with the full history attached.',
   },
   {
     category: 'basics',
@@ -162,7 +162,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'safety',
     question: 'How is proprietary customer data protected during AI inference?',
     answer:
-      "Every AI call runs under a zero-data-retention agreement with Anthropic and OpenAI. Customer data is processed inside your own private cloud, not a shared one. It is never used to train a public AI model. Conversation logs and order data stay in databases you control. Access is limited too. Only your authorized support staff, and the agent itself, can read a given customer's record.",
+      "The agent runs in your own cloud account and calls the AI model through your own business API account. Anthropic and OpenAI do not train their models on business API data by default, and both offer zero data retention for eligible accounts, which we help you request. Conversation logs and order data stay in databases you control, and only your authorized staff and the agent can read a customer's record.",
   },
   {
     category: 'safety',
@@ -174,7 +174,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'safety',
     question: 'What compliance frameworks does the support agent architecture satisfy?',
     answer:
-      'The architecture is built for compliance. It meets SOC 2 Type II controls. It follows the California Consumer Privacy Act and PCI DSS payment standards. Sensitive card numbers are tokenized, so the agent never stores or logs the real number in plain text. A customer can ask to delete their data, or make a request under CCPA. That request routes to a documented manual review process.',
+      'We design the agent to fit the controls you already follow, such as SOC 2, the California Consumer Privacy Act (CCPA) and PCI DSS for card payments. The agent never stores or logs full card numbers, because payment details stay with your payment provider. Data deletion and CCPA requests go to a documented manual review. Because the agent runs in your own cloud account, your auditor can review it alongside the rest of your systems.',
   },
   // Ported 2026-09-17 (see note above). OWASP Top 10 for LLM Applications 2025
   // and Twilio Verify docs fetch-verified that day.
@@ -195,6 +195,18 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     question: 'What is the typical timeline to build and deploy a custom AI support agent?',
     answer:
       'Most builds take 3 to 5 weeks from start to finish. That covers discovery, connector engineering, shadow-mode testing, and a gradual rollout. A single-platform deployment often finishes closer to three weeks. A more complex build usually takes longer. Think multiple ERP systems, or five or more ticket categories. Those land closer to the five-week mark.',
+  },
+  {
+    category: 'process',
+    question: 'How much does a custom AI customer support agent cost?',
+    answer:
+      'It depends on how many ticket types the agent handles, how many systems it has to write to, and how strict your approval rules are, not on the AI model. We quote a fixed price after reviewing your queue. For comparison, Intercom Fin bills $0.99 per resolved outcome, and our AI agent cost guide works through a support agent handling 2,000 tickets a month at about $22 to $112 in model calls on September 2026 prices.',
+  },
+  {
+    category: 'process',
+    question: 'What do you need from us to scope a support agent?',
+    answer:
+      'Read access to your help desk, or an export of your last 90 days of tickets, so we can see which categories repeat. Your written return, refund and shipping policies. And a list of the systems an agent would need to check, such as Shopify, your 3PL or NetSuite. If your policies only live in people\'s heads, writing them down comes first, and we help with that.',
   },
   {
     category: 'process',
@@ -356,8 +368,8 @@ const webPageSchema = {
 
 const STATS = [
   { b: 'Sub-60s', s: 'first response time across all channels' },
-  { b: '65% to 80%', s: 'autonomous resolution on Tier-1 queues' },
-  { b: 'Zero Slop', s: 'deterministic tool calling & strict guardrails' },
+  { b: '3 to 5 weeks', s: 'typical build, from queue audit to live tickets' },
+  { b: 'Shadow mode', s: 'your team reviews every draft before the agent sends' },
   { b: '100% Owned', s: 'private Git repo & cloud deployment' },
 ];
 
@@ -384,7 +396,7 @@ export default function AiCustomerSupportAgentsPage() {
                 Custom <span className="pp-grad">AI Customer Support</span> Agent Development
               </h1>
               <p className="pp-lead">
-                We build autonomous support agents that resolve real tickets inside Zendesk, Gorgias, and Intercom. They connect to live Shopify, ERP, and CRM records. A human stays in the loop for anything that needs judgment.
+                We design, build and support AI agents that resolve real tickets inside Zendesk, Gorgias, and Intercom. They connect to live Shopify, ERP, and CRM records. A human stays in the loop for anything that needs judgment, and you own the code.
               </p>
               <HeroInlineForm
                 source="services_ai_customer_support_agents"
@@ -415,7 +427,7 @@ export default function AiCustomerSupportAgentsPage() {
                 </div>
                 <div className="flex justify-between py-1">
                   <span className="text-[#46403B]">Data Privacy:</span>
-                  <span className="font-semibold text-[#F05A28]">Zero-Data-Retention VPC</span>
+                  <span className="font-semibold text-[#14110F]">Runs in your own cloud</span>
                 </div>
               </div>
             </div>
@@ -447,6 +459,44 @@ export default function AiCustomerSupportAgentsPage() {
                 An AI customer support agent is software that reads and answers customer tickets on its own. It receives a ticket through your help desk&apos;s webhook. It figures out what the customer actually needs. Then it makes secure API calls into your ecommerce and ERP systems. It resolves the ticket directly: tracking an order, processing a return, or updating an address. Anything outside its rules goes to a human, every time.
               </p>
             </div>
+          </div>
+        </section>
+
+        {/* SHORT ANSWERS (added 2026-09-28). Answer-first block for AI buyers,
+            who ask who it is for, systems, cost, timeline and ownership
+            (AI-BUYER-SWEEP-RESULTS-2026-09-17). Cost points to the sourced
+            cost guide instead of quoting a FactoryJet price. */}
+        <section className="pp-section" id="short-answers">
+          <div className="pp-container">
+            <div className="max-w-3xl mb-8">
+              <h2 className="pp-h2">AI Support Agents in Six Short Answers</h2>
+            </div>
+            <dl className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="pp-card p-6 bg-white">
+                <dt className="text-base font-bold text-[#14110F] mb-2">Who is it for?</dt>
+                <dd className="text-sm text-[#46403B] leading-relaxed m-0">Shopify and Shopify Plus brands, subscription brands and B2B wholesalers whose help desk fills up with the same questions: where is my order, can I return this, can you change my address, can I skip a delivery.</dd>
+              </div>
+              <div className="pp-card p-6 bg-white">
+                <dt className="text-base font-bold text-[#14110F] mb-2">What does it connect to?</dt>
+                <dd className="text-sm text-[#46403B] leading-relaxed m-0">Zendesk, Gorgias, Intercom, Freshdesk, Front, Salesforce Service Cloud and Kustomer on the help desk side. Shopify, NetSuite, Microsoft Dynamics 365, SAP and ShipBob for order, stock and shipping data.</dd>
+              </div>
+              <div className="pp-card p-6 bg-white">
+                <dt className="text-base font-bold text-[#14110F] mb-2">What does it cost?</dt>
+                <dd className="text-sm text-[#46403B] leading-relaxed m-0">A fixed price for your scope. It moves with the number of ticket types, the systems the agent writes to and your approval rules. Our <Link href="/blog/what-is-an-ai-agent-cost-2026" className="underline font-semibold text-[#B23E13]">AI agent cost guide</Link> compares building one with renting a vendor agent.</dd>
+              </div>
+              <div className="pp-card p-6 bg-white">
+                <dt className="text-base font-bold text-[#14110F] mb-2">How long does it take?</dt>
+                <dd className="text-sm text-[#46403B] leading-relaxed m-0">Most builds take three to five weeks: a week of queue audit, two weeks of connectors, then shadow mode and a gradual rollout one ticket type at a time.</dd>
+              </div>
+              <div className="pp-card p-6 bg-white">
+                <dt className="text-base font-bold text-[#14110F] mb-2">What do I own?</dt>
+                <dd className="text-sm text-[#46403B] leading-relaxed m-0">The code, prompts, test sets and connectors, in your own Git repository and cloud account. No per-agent license. We stay on for monitoring and support if you want us to.</dd>
+              </div>
+              <div className="pp-card p-6 bg-white">
+                <dt className="text-base font-bold text-[#14110F] mb-2">How does it work under the hood?</dt>
+                <dd className="text-sm text-[#46403B] leading-relaxed m-0">Our <Link href="/blog/ai-customer-support-agent-architecture-guide" className="underline font-semibold text-[#B23E13]">support agent architecture guide</Link> walks through the Zendesk, Intercom and Gorgias integration in detail. Building or rebuilding the store itself? See our <Link href="/services/shopify-development" className="underline font-semibold text-[#B23E13]">Shopify development</Link> work.</dd>
+              </div>
+            </dl>
           </div>
         </section>
 
@@ -566,7 +616,7 @@ export default function AiCustomerSupportAgentsPage() {
                 <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#F05A28] block mb-2">
                   05 // ENTERPRISE SECURITY
                 </span>
-                <h3 className="text-xl font-bold text-[#14110F] mb-3">Zero-Data-Retention Security</h3>
+                <h3 className="text-xl font-bold text-[#14110F] mb-3">Your Data Stays in Your Cloud</h3>
                 <p className="text-sm text-[#46403B] leading-relaxed">
                   Payment details and personal information stay inside your own private cloud. They never leave that perimeter.
                 </p>
@@ -746,7 +796,7 @@ export default function AiCustomerSupportAgentsPage() {
               <div className="pp-card p-6 bg-white">
                 <h3 className="text-base font-bold text-[#14110F] mb-4">AI Infrastructure</h3>
                 <ul className="space-y-3 text-sm text-[#46403B] leading-relaxed list-none p-0 m-0">
-                  <li><span className="font-bold text-[#14110F]">Anthropic</span> and <span className="font-bold text-[#14110F]">OpenAI</span> models, under zero-data-retention agreements.</li>
+                  <li><span className="font-bold text-[#14110F]">Anthropic</span> and <span className="font-bold text-[#14110F]">OpenAI</span> models, called through your own API account, with zero data retention where your account is eligible.</li>
                   <li><span className="font-bold text-[#14110F]">pgvector</span> and <span className="font-bold text-[#14110F]">Pinecone</span> for vector search across your knowledge base.</li>
                   <li><span className="font-bold text-[#14110F]">Twilio</span> and <span className="font-bold text-[#14110F]">SendGrid</span> for SMS and email notifications tied to a ticket.</li>
                 </ul>
@@ -832,6 +882,7 @@ export default function AiCustomerSupportAgentsPage() {
           headline="Not sure which ticket queue to automate first?"
           sub="Send us your current Zendesk or Gorgias ticket breakdown. We'll show you exactly which category clears fastest, and where a human should still sit."
           label="Get a support automation audit"
+          note="Bhavesh, our founder, reads every enquiry and usually replies within 2 to 3 hours."
         />
 
         {/* COMPARISON MATRIX */}
@@ -1200,14 +1251,14 @@ export default function AiCustomerSupportAgentsPage() {
                 Schedule a 30-Minute Customer Support Automation Audit
               </h2>
               <p className="text-base text-[#46403B] max-w-2xl mx-auto mb-8">
-                Speak directly with founder Bhavesh Barot. We will audit your current help desk queues and look at your highest-volume ticket categories. Then we send a fixed-price proposal with real deflection milestones.
+                Speak directly with founder Bhavesh Barot. We will audit your current help desk queues and look at your highest-volume ticket categories. Then we send a fixed-price proposal with real deflection milestones. Send a form instead and Bhavesh usually replies within 2 to 3 hours.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a
                   href={CALENDLY}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 rounded-lg bg-[#F05A28] text-white font-semibold text-sm hover:bg-[#D8441A] transition-colors shadow-sm"
+                  className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 rounded-lg bg-[#B23E13] text-white font-semibold text-sm hover:bg-[#8F3210] transition-colors shadow-sm"
                 >
                   Book Strategy Call via Calendly &rarr;
                 </a>

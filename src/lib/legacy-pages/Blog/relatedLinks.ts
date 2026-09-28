@@ -232,6 +232,13 @@ const SERVICE_RULES: ServiceRule[] = [
     weight: 4,
   },
   {
+    href: '/services/shopify-ai-agents',
+    label: 'Shopify AI Agents',
+    blurb: 'Custom agents for Shopify orders, wholesale POs, returns and ERP sync, with approvals built in.',
+    keywords: ['shopify ai', 'ai agent for shopify', 'shopify automation', 'draft order', 'ai agents for ecommerce'],
+    weight: 4,
+  },
+  {
     href: '/services/ai-receptionist',
     label: 'AI Receptionist',
     blurb: 'A custom AI receptionist that answers every call and books it into your system.',
@@ -656,6 +663,7 @@ const SERVICE_FAMILY: Record<string, ServiceFamily> = {
   // ai: agents, automation, chatbots (build-an-AI-system intent, not visibility intent)
   '/services/ai-chatbot-development': 'ai',
   '/services/ai-customer-support-agents': 'ai',
+  '/services/shopify-ai-agents': 'ai',
   '/services/ai-automation': 'ai',
   '/services/ai-integration-services': 'ai',
   '/services/ai-agent-development': 'ai',

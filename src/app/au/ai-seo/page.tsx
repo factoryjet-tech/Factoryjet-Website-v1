@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { aiSeoAlternates } from '@/data/hreflangMap';
 import { Fragment } from 'react';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
@@ -255,7 +256,7 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: CANONICAL, languages: { 'en-AU': CANONICAL, 'x-default': CANONICAL } },
+  alternates: { canonical: CANONICAL, languages: aiSeoAlternates },
   openGraph: {
     title: TITLE,
     description:

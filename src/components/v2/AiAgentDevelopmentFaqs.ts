@@ -15,6 +15,10 @@ export const AI_AGENT_FAQ_CATEGORIES = [
   {
     "id": "faq-support",
     "label": "Build, Buy & Support"
+  },
+  {
+    "id": "faq-scope",
+    "label": "Systems, Ownership & Ecommerce"
   }
 ] as const;
 
@@ -29,13 +33,13 @@ export const AI_AGENT_FAQS = [
     "id": "Q02",
     "category": "faq-vendor",
     "question": "Who implements AI agents inside ERP systems like NetSuite, SAP, or Odoo?",
-    "answer": "Very few development partners have shown real implementation work here. Ask any vendor to show, not just describe, an agent reading and writing data inside one of these systems."
+    "answer": "Few development partners can show this. Ask any vendor to show, not just describe, an agent reading and writing data inside one of these systems. We build agents that read RFQs, check pricing rules and stock, and draft quotes inside NetSuite, SAP and Odoo, with a person approving before anything is sent to a customer."
   },
   {
     "id": "Q03",
     "category": "faq-vendor",
-    "question": "How do I hire an AI agent developer, and what does it cost per hour?",
-    "answer": "Published rates for AI agent development run $25 to $150 or more an hour depending on the vendor and how deep the integration goes. Hourly rates make a total budget hard to predict, which is why FactoryJet scopes a fixed price for the whole engagement instead of billing by the clock. Ask any vendor whether they price by outcome or by the hour before you sign anything."
+    "question": "How do I hire an AI agent developer, and should I pay by the hour?",
+    "answer": "Check three things. Have they connected an agent to a system like yours, and can they show it reading and writing real data? How do they price? And who supports the agent after launch? Hourly billing makes the total hard to predict, which is why we quote a fixed price for an agreed scope. Our guide to hiring an AI agent developer lists the questions worth asking."
   },
   {
     "id": "Q04",
@@ -71,19 +75,19 @@ export const AI_AGENT_FAQS = [
     "id": "Q09",
     "category": "faq-cost",
     "question": "How much does it cost to build a custom AI agent?",
-    "answer": "Custom AI agent development typically runs from around $10,000 for a narrow, single-workflow agent to well over $100,000 for a multi-agent system with deep enterprise integration. The biggest cost driver isn't the AI model, it's how many systems the agent needs to read and write to."
+    "answer": "It depends mostly on how many systems the agent has to read and write to, and how many edge cases it must handle, not on the AI model. As a market reference, development firm ProductCrafters puts 2026 builds at about $5,000 to more than $180,000, with integration as the biggest part. We quote a fixed price after one call, and a narrow pilot is the cheapest way to learn what a full build needs."
   },
   {
     "id": "Q10",
     "category": "faq-cost",
     "question": "How much do AI development services cost overall?",
-    "answer": "AI development services vary widely by scope, from a few thousand dollars for a narrow AI feature to well over $100,000 for a multi-agent system with deep enterprise integration. The real driver is how many systems the AI needs to read and write to, not the AI model itself."
+    "answer": "They range from a small AI feature, such as a drafting or sorting step inside one tool, to a multi-agent system connected to an ERP, CRM and help desk. The driver is the same either way: how many systems the AI touches and how much it is allowed to change on its own. Tools that only draft for a person to approve cost far less than agents that write to live records."
   },
   {
     "id": "Q11",
     "category": "faq-cost",
     "question": "How long does it take to implement an AI agent in a business?",
-    "answer": "A narrow, well-scoped AI agent typically reaches a first production deployment in 3 to 12 weeks. Timelines stretch when the agent needs to integrate with multiple systems or the decision logic has a lot of edge cases that need real testing."
+    "answer": "A pilot on one narrow workflow usually takes two to four weeks. A production agent with permissions, logging, approvals and monitoring usually takes six to twelve weeks. Timelines stretch when the agent touches several systems, or when the rules have many edge cases that need real testing rather than a demo."
   },
   {
     "id": "Q12",
@@ -119,6 +123,42 @@ export const AI_AGENT_FAQS = [
     "id": "Q17",
     "category": "faq-support",
     "question": "Who provides ongoing support and monitoring for AI agents after launch?",
-    "answer": "Most standalone AI agent vendors stop at delivery. FactoryJet includes monitoring for accuracy drift, prompt and model updates, and a clear incident process, since an agent that isn't watched after launch degrades quietly."
+    "answer": "Most standalone AI agent vendors stop at delivery. We stay on after launch if you want us to: we watch accuracy, update prompts and models when your prices or policies change, and run a clear process when something fails. An agent that nobody watches after launch gets worse quietly, and you usually find out from a customer."
+  },
+  {
+    "id": "Q18",
+    "category": "faq-scope",
+    "question": "Can you build an AI customer support agent for my Shopify store?",
+    "answer": "Yes. It answers where-is-my-order, return and address-change tickets inside Gorgias or Zendesk, using live order data from Shopify and tracking from your carrier. Refunds or credits above a limit you set go to a person with the details attached. If Gorgias AI Agent or Intercom Fin already covers your queue, we will tell you to switch that on first, because it is faster than any build."
+  },
+  {
+    "id": "Q19",
+    "category": "faq-scope",
+    "question": "Which systems can your AI agents connect to?",
+    "answer": "ERPs such as NetSuite, SAP Business One, Odoo and Microsoft Dynamics 365. CRMs such as HubSpot and Salesforce. Help desks such as Zendesk, Gorgias, Intercom and Freshdesk. Commerce platforms such as Shopify, Shopify Plus and BigCommerce. Plus email, Slack, spreadsheets and anything with an API. If a system has no API, we look at file exports or a read-only database link and agree that route with your IT team first."
+  },
+  {
+    "id": "Q20",
+    "category": "faq-scope",
+    "question": "What do I own after the project ends?",
+    "answer": "Everything we build: the code in your own Git repository, the prompts, the test sets, the connectors, the documentation and the cloud account the agent runs in. You pay model providers such as Anthropic or OpenAI directly, and there is no per-agent license fee from us. You can keep us on for support, bring the work in-house, or hand it to another team."
+  },
+  {
+    "id": "Q21",
+    "category": "faq-scope",
+    "question": "What do you need from us to scope an AI agent?",
+    "answer": "Three answers. What starts the work: an email, a form, a ticket, an RFQ or an order. Which systems it has to read or update. And roughly how often it happens and who does it today. Ten or so real examples with names removed, such as recent RFQs or tickets, let us give you an honest answer on the first call, including whether an agent is the right tool at all."
+  },
+  {
+    "id": "Q22",
+    "category": "faq-scope",
+    "question": "How much does it cost to run an AI agent each month?",
+    "answer": "Running costs are usually far smaller than the build. They cover model usage, which grows with volume, hosting, and any support plan. Our AI agent cost guide works through a support agent handling 2,000 tickets a month and puts the model calls at about $22 to $112 a month on Anthropic's September 2026 prices. Support and monitoring are quoted separately, based on how much the agent does."
+  },
+  {
+    "id": "Q23",
+    "category": "faq-scope",
+    "question": "Do you build AI agents for B2B and wholesale ecommerce?",
+    "answer": "Yes. The common ones read emailed RFQs and purchase orders, check customer price lists and stock in NetSuite or Odoo, and draft a quote or order for your team to approve. On Shopify Plus B2B stores they can also answer account and reorder questions from live data. A person approves anything that commits price, stock or credit."
   }
 ] as const;

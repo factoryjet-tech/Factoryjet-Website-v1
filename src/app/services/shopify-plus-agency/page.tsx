@@ -12,7 +12,7 @@ import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-09-19';
+const PAGE_MODIFIED = '2026-09-28';
 
 export const metadata: Metadata = {
   title: 'Shopify Plus Development Agency | FactoryJet',
@@ -96,7 +96,7 @@ const FAQ_ITEMS = [
     category: 'basics',
     question: 'How long does a Shopify Plus build take?',
     answer:
-      'A focused Plus build usually runs 4 to 8 weeks. A full replatform takes 8 to 14 weeks. This includes B2B catalogs, ERP integrations, and international markets. Timeline variables include catalog data quality, third-party system connections, and custom Shopify Functions requirements. We scope all technical requirements before providing a fixed quote.',
+      'A focused Plus build (checkout, Functions, B2B or a migration) usually runs 5 to 8 weeks. A full replatform or headless build takes 8 to 14 weeks. This includes B2B catalogs, ERP integrations, and international markets. Timeline variables include catalog data quality, third-party system connections, and custom Shopify Functions requirements. We scope all technical requirements before providing a fixed quote.',
   },
   {
     category: 'basics',
@@ -114,7 +114,7 @@ const FAQ_ITEMS = [
     category: 'basics',
     question: 'Are you a certified Shopify Plus Partner?',
     answer:
-      'We focus on engineering capability rather than marketing badges. Bring us your complex Plus requirements. We build custom checkout rules, B2B company structures, expansion stores, and ERP sync. Judge us on the precision of our technical architecture. Does your procurement team require a formal directory badge? We clarify fit immediately on our discovery call.',
+      'No. FactoryJet is a registered Shopify Partner, without a Plus Partner tier. We do the Plus engineering itself: checkout extensibility, Shopify Functions, B2B companies and catalogs, expansion stores and ERP sync. If your procurement team requires a Plus Partner badge, tell us on the first call and we will say plainly whether we are the right fit.',
   },
   {
     category: 'platform',
@@ -199,6 +199,12 @@ const FAQ_ITEMS = [
     question: 'Can you integrate Shopify Plus with our ERP and back office?',
     answer:
       'Yes. We integrate enterprise ERPs including NetSuite, SAP, Microsoft Dynamics 365, and Acumatica. We connect through Admin GraphQL APIs and iPaaS middleware like Celigo. We synchronize multi-location inventory, wholesale catalogs, customer companies, order fulfillment, and financial records.',
+  },
+  {
+    category: 'engagement',
+    question: 'How much does a Shopify Plus build cost?',
+    answer:
+      'It depends on how much logic sits below the theme: how many Functions, whether you need B2B companies and catalogs, how many expansion stores, and which ERP or PIM the store must sync with. The Plus plan fee itself is paid to Shopify, not to us. We scope everything on a free call and send one fixed price, paid in milestones. Our Shopify Plus cost guide explains the typical ranges.',
   },
   {
     category: 'working',
@@ -456,11 +462,11 @@ export default function ShopifyPlusAgencyPage() {
             <div style={{ display: 'grid', gridTemplateColumns: '1.05fr 0.95fr', gap: 'clamp(32px,5vw,56px)', alignItems: 'center' }} className="pp-herogrid">
               <div>
                 <p className="pp-eyebrow">Shopify Plus agency</p>
-                <h1 style={{ margin: '14px 0 12px', maxWidth: '19ch' }}>
-                  Shopify Plus development that lives below the theme.
+                <h1 style={{ margin: '14px 0 12px', maxWidth: '22ch' }}>
+                  Shopify Plus development for US brands: checkout, B2B and ERP work that survives every update.
                 </h1>
                 <p className="pp-lead" style={{ maxWidth: '50ch' }}>
-                  We are a Shopify Plus development agency for high-growth US brands. We engineer checkout extensibility, server-side Shopify Functions, and native B2B wholesale. We build expansion stores and live ERP sync. Every system is built so platform updates never break checkout.
+                  We build the parts of a Plus store that sit below the theme: checkout extensions, Shopify Functions, native B2B wholesale, expansion stores and live ERP sync. A focused Plus build takes 5 to 8 weeks, a full replatform 8 to 14. You get a fixed quote before work starts, and we stay on after launch.
                 </p>
                 <HeroInlineForm source="us_shopify_plus_hero" region="us" submitLabel="Get a Shopify Plus scoping call" />
               </div>
@@ -518,6 +524,13 @@ export default function ShopifyPlusAgencyPage() {
                       Salesforce Commerce Cloud to Shopify Plus
                     </Link>{' '}
                     migration work.
+                  </p>
+                  <p>
+                    Budgeting first? Our guide to{' '}
+                    <Link href="/blog/the-true-cost-of-shopify-plus-2026" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
+                      the true cost of Shopify Plus
+                    </Link>{' '}
+                    covers the plan fee, apps and build costs. For your own store, we send one fixed price after a free scoping call.
                   </p>
                 </div>
               </div>

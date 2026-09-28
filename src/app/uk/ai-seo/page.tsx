@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { aiSeoAlternates } from '@/data/hreflangMap';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import Footer from '../sections/Footer';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
@@ -191,7 +192,7 @@ export const metadata: Metadata = {
   title: 'AI SEO Agency UK: AEO and GEO for AI Answers | FactoryJet',
   description:
     'A UK AI SEO agency using AEO and GEO to get your business named in ChatGPT, Perplexity and Google AI Overviews, without losing your Google rankings.',
-  alternates: { canonical: CANONICAL, languages: { 'en-GB': CANONICAL, 'x-default': CANONICAL } },
+  alternates: { canonical: CANONICAL, languages: aiSeoAlternates },
   openGraph: {
     title: 'AI SEO Agency UK: AEO and GEO for AI Answers | FactoryJet',
     description:

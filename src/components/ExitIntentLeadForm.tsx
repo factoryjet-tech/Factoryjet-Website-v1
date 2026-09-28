@@ -16,6 +16,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { X, Gift, ArrowRight, ShieldCheck, Loader2, CheckCircle } from 'lucide-react';
 import { submitLead } from '@/utils/submitLead';
+import { SERVICE_CATEGORIES, serviceFromPath } from '@/utils/leadService';
 import {
   trackFormStart,
   trackFormSubmit,
@@ -50,6 +51,10 @@ const ExitIntentLeadForm: React.FC<ExitIntentLeadFormProps> = ({
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
+  // Pre-selected from the page path when the popup opens. Sent only if the
+  // visitor changes it; otherwise the server records it as guessed from the page.
+  const [service, setService] = useState('');
+  const [serviceTouched, setServiceTouched] = useState(false);
   const [honeypot, setHoneypot] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -59,9 +64,10 @@ const ExitIntentLeadForm: React.FC<ExitIntentLeadFormProps> = ({
   // ── Exit-intent trigger — once per session ────────────────────────────────
   useEffect(() => {
     if (typeof window === 'undefined') return;
-    if (sessionStorage.getItem(SESSION_KEY)) return;
+    try { if (sessionStorage.getItem(SESSION_KEY)) return; } catch { /* storage blocked: still allow the popup */ }
 
     const open = () => {
+      setService(serviceFromPath(window.location.pathname) || '');
       setIsVisible(true);
       try { sessionStorage.setItem(SESSION_KEY, '1'); } catch { /* private mode */ }
     };
@@ -102,10 +108,11 @@ const ExitIntentLeadForm: React.FC<ExitIntentLeadFormProps> = ({
     if (!canSubmit) { setError('Please enter your name and a valid email.'); return; }
     setIsSubmitting(true);
     setError(null);
-    trackFormSubmit(source);
+    trackFormSubmit(source, { service: service || '' });
     try {
       const { docId } = await submitLead({
         name, email, phone,
+        service: serviceTouched ? service : '',
         region, source, collection: collectionName,
       });
       trackFormSuccess(source);
@@ -185,6 +192,15 @@ const ExitIntentLeadForm: React.FC<ExitIntentLeadFormProps> = ({
                 placeholder="Phone (optional)"
                 autoComplete="tel" className={inputCls} style={inputStyle}
               />
+              <label className="sr-only" htmlFor="exit-intent-service">What do you need? (optional)</label>
+              <select
+                id="exit-intent-service" name="service" value={service}
+                onChange={(e) => { setService(e.target.value); setServiceTouched(true); }}
+                className={inputCls} style={inputStyle}
+              >
+                <option value="">What do you need? (optional)</option>
+                {SERVICE_CATEGORIES.map((c) => <option key={c} value={c}>{c}</option>)}
+              </select>
 
               {/* Honeypot, off-screen, hidden from real users */}
               <div aria-hidden="true" style={{ position: 'absolute', left: '-9999px', height: 0, width: 0, overflow: 'hidden' }}>

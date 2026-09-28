@@ -23,6 +23,8 @@
  */
 
 import { readLeadAttribution } from '@/utils/leadAttribution';
+import { resolveServiceCategory, serviceFromValue } from '@/utils/leadService';
+import { rememberLeadContext } from '@/utils/leadConversion';
 
 /*
  * 2026-09-25 (performance): the Firebase SDK (~110 KB transferred, ~97 KB of it
@@ -129,6 +131,10 @@ export async function submitLead(input: LeadInput): Promise<LeadResult> {
   // Where this visitor came from (landing page, referring site, UTM tags), so the
   // lead email and CRM record say which page and channel produced this lead.
   const attribution = readLeadAttribution();
+  // Which service this lead is about, even when the form had no service picker:
+  // the picked value wins, else the form page, else the landing page.
+  const serviceCategory = resolveServiceCategory(input.service, page, attribution.landingPage);
+  const serviceInferred = serviceFromValue(input.service) ? 'no' : 'yes';
 
   const payload = {
     docId,
@@ -142,6 +148,8 @@ export async function submitLead(input: LeadInput): Promise<LeadResult> {
     region: input.region || '',
     source: input.source,
     page,
+    serviceCategory,
+    serviceInferred,
     ...attribution,
     turnstileToken: input.turnstileToken || '',
   };
@@ -169,12 +177,18 @@ export async function submitLead(input: LeadInput): Promise<LeadResult> {
       source: input.source,
       // `page` MUST be mirrored here (see the merge note in mirrorToFirestore).
       page,
+      serviceCategory,
+      serviceInferred,
       ...attribution,
       turnstileToken: input.turnstileToken || '',
     });
   } catch {
     /* ignore: never block on the client SDK */
   }
+
+  // Lets the GA4 conversion (fired here or on /thank-you) carry the service and
+  // landing page for this lead id. No personal data.
+  rememberLeadContext(docId, { service: serviceCategory, landingPage: attribution.landingPage || page, aiAssistant: attribution.aiAssistant });
 
   return { ok, docId, erpLeadId, enrichToken };
 }

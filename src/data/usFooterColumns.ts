@@ -118,6 +118,7 @@ export const US_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
       { label: 'DSO & Dental Group AI Agents', href: '/services/dental-support-organization-ai-agents' },
       { label: 'AI Receptionist',              href: '/services/ai-receptionist' },
       { label: 'AI Customer Support Agents',  href: '/services/ai-customer-support-agents' },
+      { label: 'Shopify AI Agents',           href: '/services/shopify-ai-agents' },
       { label: 'AI SDR & BDR Agents',         href: '/services/ai-sdr' },
       { label: 'AI Agent Monitoring & Support', href: '/services/ai-agent-monitoring' },
       { label: 'AI Agent ROI Calculator',     href: '/tools/ai-agent-roi-calculator' },

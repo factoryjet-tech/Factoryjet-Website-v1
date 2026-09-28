@@ -88,6 +88,7 @@ import { post as howToSellOnWalmartMarketplace2026Post } from './posts/how-to-se
 import { post as whatIsAgenticAiPost } from './posts/what-is-agentic-ai';
 import { post as howToChooseDigitalMarketingAgencyIndia2026Post } from './posts/how-to-choose-digital-marketing-agency-india-2026';
 import { post as howToChooseEcommerceDevelopmentAgency2026Post } from './posts/how-to-choose-ecommerce-development-agency-2026';
+import { post as ecommerceReplatformingWithoutLosingSeo2026Post } from './posts/ecommerce-replatforming-without-losing-seo-2026';
 import { post as howToChooseHeadlessCommerceAgency2026Post } from './posts/how-to-choose-headless-commerce-agency-2026';
 import { post as topB2bEcommerceDevelopmentAgenciesPortals2026Post } from './posts/top-b2b-ecommerce-development-agencies-portals-2026';
 import { post as bestOmnichannelCommerceSolutionShopifyPlus2026Post } from './posts/best-omnichannel-commerce-solution-shopify-plus-2026';
@@ -189,6 +190,7 @@ export const POSTS: BlogPost[] = [
   howToChooseDigitalMarketingAgencyIndia2026Post,
   digitalMarketingForSmallBusinessIndiaPost,
   howToChooseEcommerceDevelopmentAgency2026Post,
+  ecommerceReplatformingWithoutLosingSeo2026Post,
   howToChooseHeadlessCommerceAgency2026Post,
   topB2bEcommerceDevelopmentAgenciesPortals2026Post,
   bestOmnichannelCommerceSolutionShopifyPlus2026Post,

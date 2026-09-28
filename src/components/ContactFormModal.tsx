@@ -43,7 +43,7 @@ import {
   trackButtonClick,
 } from '../utils/gtm';
 
-type ServiceType = 'website' | 'ecommerce' | 'maintenance' | 'seo' | 'ai-seo' | 'other';
+type ServiceType = 'website' | 'ecommerce' | 'maintenance' | 'seo' | 'ai-seo' | 'ai-agents' | 'other';
 
 interface FormData {
   name: string;
@@ -72,7 +72,9 @@ const defaultServices: {
 ];
 
 const aiServices: typeof defaultServices = [
-  { id: 'maintenance', label: 'AI Agent Development', icon: Bot,        description: 'Custom AI agents for business' },
+  /* Was id 'maintenance' until 2026-09-28, so AI agent leads reached the inbox
+     and CRM labelled "AMC / Maintenance". */
+  { id: 'ai-agents',   label: 'AI Agent Development', icon: Bot,        description: 'Custom AI agents for business' },
   { id: 'ai-seo',      label: 'AI SEO / GEO',          icon: Sparkles,   description: 'Get cited by ChatGPT & AI search' },
   { id: 'website',     label: 'Website Design',       icon: Monitor,    description: 'Custom high-performance websites' },
   { id: 'ecommerce',   label: 'E-Commerce',            icon: ShoppingBag, description: 'Shopify & WooCommerce stores' },

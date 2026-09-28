@@ -1,431 +1,410 @@
 import React from 'react';
 import type { BlogPost } from '../data.types';
 
+/*
+ * 2026-09-28 lead-gen pass. Every number in this post was re-checked that day against the
+ * source it is attributed to (links in the Sources list at the bottom):
+ *   - JPMorgan Chase Institute: 17.7% (Dec 2025), 5.2% (Jan 2023), 1.7% (Jan 2019).
+ *   - US Census Bureau story, May 2026: 17% to 20% (Dec 14 2025 to May 3 2026); 32% at 100-249
+ *     employees; under 20% at four or fewer employees.
+ *   - Federal Reserve FEDS Note, Apr 3 2026: about 18% of firms by year-end 2025.
+ *   - SBA Office of Advocacy, Sep 2025: 6.3% small vs 11.1% large (factor 1.8), small up to 8.8%;
+ *     nearly 82% of firms under five employees cite "not applicable"; 6.7% lack of knowledge,
+ *     6.3% privacy.
+ *   - Thryv press release, Jul 2025 (540 interviews, May 2025): 39% to 55%; 47% to 68% at 10-100
+ *     employees; 63% daily; 62% / 55% / 46% top uses; 58% save 20+ hours a month.
+ * The earlier version carried a "77% see no use case" figure and a barrier list (62%, 60%, 38%,
+ * 34%, 37%) that the cited SBA report does not contain, plus ROI figures (80%+, 16%, 25-35%, 20%,
+ * 93%, 62%, median of 5 tools) with no source on the page. Those are gone. Do not re-add a number
+ * without adding the source that states it.
+ */
+
+const LINK = 'text-[#B23E13] underline hover:text-[#8F3210]';
+
 export const post: BlogPost = {
   id: '219',
   slug: 'ai-adoption-us-small-businesses-2026',
-  title: 'AI Adoption by US Small Businesses 2026: Real Numbers',
+  title: 'US Small Business AI Adoption Rate 2026: 17.7% Pay for AI',
   excerpt:
-    'Only 17.7% of US small businesses have actually paid for an AI tool, yet 55% say they use AI. We break down the gap using government and transaction-based data, the real barriers, and what the numbers mean for your business in 2026.',
+    'Short answer: 17.7% of US small businesses were paying for AI tools in December 2025, up from 5.2% in January 2023 (JPMorgan Chase Institute, based on real payments). The US Census Bureau puts AI use at 17% to 20% of businesses. Surveys that count any use at all go higher: Thryv found 55% in 2025.',
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Jun 8, 2026',
-  readTime: '10 min read',
+  dateModified: 'Sep 28, 2026',
+  readTime: '9 min read',
   imageUrl: '/blog-images/ai-adoption-us-small-businesses-2026.webp',
   meta: {
-    title: 'AI Adoption by US Small Businesses 2026: Real Numbers',
+    title: 'US Small Business AI Adoption Rate 2026: 17.7% Pay for AI',
     description:
-      'Only 17.7% of small businesses have paid for AI, yet 55% say they use it. We break down the data, the barriers, and what it means for your business.',
+      '17.7% of US small businesses paid for AI by Dec 2025, up from 5.2% in 2023 (JPMorgan Chase). Census: 17-20% use AI. Every stat sourced, plus what it means for you.',
   },
   keyTakeaways: [
-    'The headline "55% of small businesses use AI" includes anyone who tried a free tool once. The more credible figure: 17.7% of US small businesses have paid for an AI tool, per JP Morgan Chase transaction data (Dec 2025).',
-    'US Census Bureau data (May 2026) confirms 17–20% of US businesses use AI in actual production operations, not experiments.',
-    'The Great AI Divide has emerged: roughly 18–20% of SMBs run 5+ AI tools daily, 35–40% have experimented inconsistently, and 40–45% have not started at all.',
-    '77% of non-adopters see no applicable use case for AI in their business, this is a failure of relevance, not a technology problem.',
-    'Among businesses that have adopted AI: 80%+ report productivity gains, AI product recommendations drive 25–35% of e-commerce revenue, and 93% plan to increase AI spending.',
-    'The first-mover window is still open, but closing. Large-enterprise AI adoption has plateaued while small business adoption is accelerating.',
+    '17.7% of US small businesses paid for AI services in December 2025, up from 5.2% in January 2023 and 1.7% in January 2019 (JPMorgan Chase Institute, based on actual payments).',
+    'The US Census Bureau found 17% to 20% of US businesses used AI between December 2025 and May 2026. It was 32% for firms with 100 to 249 employees and under 20% for firms with four or fewer.',
+    'The Federal Reserve estimates about 18% of US firms had adopted AI by the end of 2025.',
+    'Surveys that count any use run higher: Thryv found 55% of small businesses used AI in 2025, up from 39% in 2024, and 68% among firms with 10 to 100 employees.',
+    'The top reason small firms skip AI is that it does not seem to fit: nearly 82% of businesses with fewer than five employees gave that reason for not planning to use it (SBA Office of Advocacy, 2025).',
+    'Small firms are catching up. On the SBA measure, small business AI use rose from 6.3% to 8.8% in six months of 2025 while large-firm growth slowed.',
   ],
   faqs: [
     {
       q: 'What percentage of US small businesses use AI in 2026?',
-      a: 'The most reliable figure is 17–20% actively using AI in production operations, per US Census Bureau data from May 2026. JP Morgan Chase Institute transaction-based research puts the number at 17.7% as of December 2025. Broader self-reported surveys show 55–68%, but these capture one-time experiments rather than consistent operational use.',
+      a: 'It depends on what you count. 17.7% of US small businesses were paying for AI services in December 2025, per JPMorgan Chase Institute payment data. The US Census Bureau found 17% to 20% of businesses used AI from December 2025 to May 2026, and the Federal Reserve puts it at about 18% of firms at the end of 2025. Surveys that count any use, even once, go higher: Thryv found 55% in 2025.',
+    },
+    {
+      q: 'What is the small business AI adoption rate trend?',
+      a: 'It is climbing fast. JPMorgan Chase Institute data shows the share of small businesses paying for AI went from 1.7% in January 2019 to 5.2% in January 2023, then to 17.7% by December 2025. Most of that jump came after 2023. Thryv\'s survey shows the same direction: self-reported use rose from 39% in 2024 to 55% in 2025.',
+    },
+    {
+      q: 'Why do AI adoption statistics for small businesses disagree so much?',
+      a: 'They measure different things. JPMorgan Chase counts businesses that actually paid for an AI service. The Census Bureau asks whether a business used AI to produce goods or services. Surveys like Thryv\'s ask owners whether they use AI at all, which includes trying a free chatbot once. Paid use is the best sign that AI is part of how a business runs day to day.',
     },
     {
       q: 'What are the biggest barriers to AI adoption for small businesses?',
-      a: 'The #1 barrier is perceived irrelevance, 77% of non-adopters see no applicable use case for their business (SBA, 2025). After that: lack of understanding (62%), no in-house expertise (60%), data privacy concerns (38%), and unclear ROI (34%).',
-    },
-    {
-      q: 'What ROI do small businesses see from AI?',
-      a: '80%+ of AI-using SMBs report productivity gains. 16% report gains exceeding 20%. E-commerce businesses using AI recommendations see those features drive 25–35% of total revenue. Customer service AI tools improve response quality measurably and boost retention by approximately 20%.',
-    },
-    {
-      q: 'Which AI tools are small businesses actually using?',
-      a: 'The most common use cases: generative AI for content and copy (ChatGPT, Claude), AI customer service chatbots (47% of AI-using SMBs), marketing automation, workflow automation, and e-commerce personalization. The typical AI-using small business now runs 5 AI tools, not just one.',
+      a: 'Relevance, by a wide margin. The SBA Office of Advocacy found nearly 82% of businesses with fewer than five employees said AI was not applicable to their business when asked why they were not planning to use it. The next reasons were far behind: lack of knowledge about AI (6.7%) and privacy concerns (6.3%). As businesses get bigger, more complex concerns such as cost and security move up.',
     },
     {
       q: 'Are small businesses catching up to large companies in AI adoption?',
-      a: 'Yes, and faster than expected. Large enterprises used AI at 1.8x the rate of small firms in early 2024. By mid-2025, the gap had narrowed significantly as small business adoption accelerated while large-firm growth leveled off.',
+      a: 'Yes. The SBA Office of Advocacy reported that in early 2025, 6.3% of small businesses (under 250 employees) used AI against 11.1% of large ones, a factor of 1.8. Six months later the small business share had risen to 8.8% while large-firm growth slowed. The SBA estimated small firms may be only about a year behind.',
     },
     {
-      q: 'How did AI adoption change from 2024 to 2026?',
-      a: 'Self-reported AI use among SMBs grew from 39% in 2024 to 55% in 2025 (Thryv). Among companies with 10–100 employees, adoption jumped from 47% to 68% in the same period. Generative AI specifically went from ~40% in 2024 to 58%+ by 2026.',
+      q: 'Does company size change AI adoption?',
+      a: 'Yes. In the Census Bureau data, 32% of firms with 100 to 249 employees used AI as of May 2026, while fewer than 20% of firms with four or fewer employees did. The SBA also found a U shape: the very smallest businesses, under five employees, used AI more than other small businesses.',
     },
     {
-      q: 'What is the most credible source for AI adoption data?',
-      a: 'The US Census Bureau BTOS and JP Morgan Chase Institute produce the most methodologically rigorous data, they measure actual production use (Census) and real payment transactions (JP Morgan) rather than relying on self-reporting. Thryv, US Chamber of Commerce, and SBA surveys are useful for trend direction but tend to include experimental one-time usage.',
+      q: 'How are small businesses actually using AI?',
+      a: 'In Thryv\'s 2025 survey of 540 small business decision makers, the top uses were data analysis (62%), content generation (55%) and customer engagement tools like chatbots (46%). 63% said they use AI daily and 58% said it saves them more than 20 hours a month. Treat these as self-reported numbers from owners who already use AI.',
     },
     {
-      q: 'Do AI tools actually save small businesses time?',
-      a: 'Yes, measurably. Companies report productivity gains ranging from 29–72% depending on implementation depth. The businesses seeing the highest gains have built AI into multiple workflows: content, customer service, lead follow-up, and inventory or product management.',
+      q: 'What is the most credible source for small business AI adoption data?',
+      a: 'The US Census Bureau Business Trends and Outlook Survey and the JPMorgan Chase Institute. Census asks a large sample every two weeks with a strict definition. JPMorgan Chase looks at real payments to AI providers, so it is not based on what owners remember. The Federal Reserve\'s April 2026 note is a good summary of both. Thryv and other surveys are useful for direction, not for the exact level.',
     },
     {
-      q: 'Is it too late to start adopting AI as a small business?',
-      a: 'No. With roughly 80% of small businesses not yet running AI tools operationally, the first-mover window is still open. The businesses that start in 2026 and build AI into their operations over the next 12–18 months will be ahead of competitors who wait until 2027–2028.',
-    },
-    {
-      q: 'What industries have the highest AI adoption among small businesses?',
-      a: 'Professional services, retail and e-commerce, marketing agencies, and technology-adjacent businesses lead adoption. Construction, food service, skilled trades, and local service businesses have the lowest adoption rates, reflecting the 77% "no applicable use case" finding concentrated in these sectors.',
-    },
-    {
-      q: 'How much does it cost to add AI to a small business?',
-      a: 'Entry-level: $0–$50/month for tools like ChatGPT Plus and basic automation. Mid-level operational stack (5 tools across content, customer service, and marketing): $200–$600/month. Custom AI agent builds integrated with your website or e-commerce platform: $5,000–$50,000+ depending on scope.',
+      q: 'Is it too late for a small business to start using AI?',
+      a: 'No. On the payment data, about 82% of US small businesses were still not paying for any AI service at the end of 2025. The businesses that pull ahead are not the ones with the fanciest tools. They picked one or two jobs that eat the most hours every week, like answering the same customer questions or following up on leads, and put AI on those first.',
     },
     {
       q: "What's the difference between AI chatbots and AI agents for small businesses?",
-      a: 'AI chatbots answer questions from a knowledge base, they respond but don\'t take action. AI agents can complete multi-step tasks autonomously: following up with a lead, updating a CRM record, sending a quote, scheduling an appointment. Agents are significantly more powerful but require more setup and integration work.',
+      a: "A chatbot answers questions from a knowledge base. It responds but does not act. An AI agent can finish a task with several steps: follow up with a lead, update a CRM record, send a quote or book an appointment. Agents do more, but they need to be connected to your systems and tested properly, which is the part most small businesses need help with.",
     },
     {
-      q: 'How do I know which AI tools are right for my business?',
-      a: 'Start with your three most time-consuming repetitive tasks. Then look for AI tools purpose-built for those specific tasks rather than general-purpose platforms. The businesses seeing the highest ROI use purpose-built applications for customer support, e-commerce merchandising, and content, not just ChatGPT for everything.',
+      q: 'How do I know which AI project to start with?',
+      a: 'List your three most time-consuming repetitive tasks and how many hours each takes a week. Pick the one where a mistake is cheap to fix and the volume is high, such as order status questions, lead follow-up or product descriptions. Start there, measure hours saved for a month, then decide on the next one.',
     },
     {
       q: 'Are AI tools safe for small businesses to use?',
-      a: 'The main risks are data privacy (feeding customer or proprietary data into third-party AI systems), output accuracy, and over-dependence. Read data usage policies before using any AI tool with customer data, verify AI-generated content before publishing, and keep humans in the loop for high-stakes decisions.',
+      a: 'The main risks are data privacy (feeding customer or private data into a third-party AI system), wrong answers, and relying on it too much. Read each tool\'s data usage policy before you give it customer data, check AI-written content before it goes out, and keep a person in the loop for anything high-stakes, like refunds, pricing or legal wording.',
     },
     {
-      q: 'What percentage of small businesses plan to increase AI spending?',
-      a: '93% of small businesses currently using AI plan to continue investing, and 62% are planning to increase AI spending in the next 12 months. Among non-adopters, 77% still see no reason to start. The divergence between these two groups is accelerating.',
+      q: 'How much does it cost to add AI to a small business?',
+      a: 'Off-the-shelf AI tools are monthly subscriptions, and many have free tiers. A custom AI agent connected to your own store, CRM or inbox is a one-time build plus running costs that depend on how much it is used. Our AI agent cost guide breaks down what drives that number, and we give a written scope before any build starts.',
     },
     {
-      q: 'How does AI adoption affect e-commerce conversion rates?',
-      a: 'AI personalization is one of the highest-ROI applications in e-commerce. Product recommendation engines drive 25–35% of e-commerce revenue for stores that have implemented them. Cart abandonment automation and AI-generated product copy also have documented positive effects on conversion rates.',
-    },
-    {
-      q: 'Is there a government resource for AI adoption data?',
-      a: 'Yes. The US Census Bureau\'s Business Trends and Outlook Survey (BTOS) tracks AI usage monthly. The Federal Reserve\'s FEDS Notes published research on monitoring AI adoption in May 2026. The SBA Office of Advocacy published "Small Firms Closing In" in September 2025. All three are publicly available.',
-    },
-    {
-      q: 'What happened to AI adoption growth in 2025?',
-      a: '2025 was the year small business AI adoption accelerated past large enterprises in growth rate. Large-firm adoption plateaued around 30–35%, while small firm adoption using broad definitions nearly doubled. JP Morgan Chase transaction data showing 17.7% reflects the conservative, operational end of this curve.',
-    },
-    {
-      q: 'What does running 5 AI tools mean for the average small business?',
-      a: 'The median AI-using small business runs 5 AI tools as of mid-2025. A typical stack: ChatGPT or Claude for writing and research, an AI customer service chatbot, an AI email marketing tool, an AI social media scheduler with caption generation, and an AI analytics or reporting tool. This is the shift from "we tried AI once" to "AI is part of how we operate."',
+      q: 'Is there a government source for AI adoption data?',
+      a: 'Yes. The US Census Bureau\'s Business Trends and Outlook Survey (BTOS) tracks AI use every two weeks. The Federal Reserve published "Monitoring AI Adoption in the US Economy" in April 2026. The SBA Office of Advocacy published "AI in Business: Small Firms Closing In" in September 2025. All three are free to read.',
     },
     {
       q: 'How do I get started with AI for my website or online store?',
-      a: 'The highest-ROI entry points: (1) AI customer service chat that handles FAQs 24/7, (2) AI product description generation, (3) AI-assisted SEO, and (4) AI email automation for cart abandonment and post-purchase follow-up. Each can be implemented without custom development. If you want them built in from day one, FactoryJet delivers AI-integrated sites in 7 days.',
+      a: 'Start with the job that costs you the most hours: customer questions, order status, lead follow-up or product content. FactoryJet designs and builds custom AI agents for those jobs, connects them to your store, CRM or inbox, and stays on to support them after launch. You own what we build. Book a 30-minute call and we will tell you which job to automate first.',
     },
   ],
   content: (
     <>
+      <p className="text-sm text-gray-500 mb-6">
+        Updated September 28, 2026. Every figure below was re-checked against its source that day.
+      </p>
+
       <div className="bg-amber-50 border border-amber-200 p-5 rounded-lg mb-8">
-        <p className="font-semibold text-amber-900 mb-1">TL;DR</p>
-        <p className="text-amber-800">
-          The "everyone is using AI" narrative is overstated. Only 17.7% of US small businesses have
-          actually paid for an AI tool (JP Morgan Chase, Dec 2025). But among those who have, the
-          gains are real, 80%+ report productivity improvements. The story of AI and US small
-          businesses in 2026 is a story of two camps pulling further apart.
+        <p className="font-semibold text-amber-900 mb-1">The short answer</p>
+        <p className="text-amber-900">
+          <strong>17.7% of US small businesses were paying for AI tools in December 2025</strong>, up
+          from 5.2% in January 2023 (JPMorgan Chase Institute). The US Census Bureau puts AI use at
+          17% to 20% of US businesses, and the Federal Reserve says about 18%. The 55% figure you may
+          have seen comes from a survey that counts any use at all. So roughly four out of five
+          small businesses have not made AI part of how they run yet.
         </p>
       </div>
 
-      <h2 className="text-2xl font-bold mt-8 mb-4">
-        The Number You've Actually Been Cited: 55% vs 17.7%
-      </h2>
+      <div className="not-prose my-8 rounded-2xl border border-[#E5DFD7] bg-[#FAFAF7] p-5 md:p-6">
+        <p className="text-base text-slate-800 leading-relaxed">
+          <strong>Want to be in the 17.7%, without guessing?</strong> We build custom AI agents for
+          small businesses: customer support, lead follow-up and order questions, connected to the
+          tools you already use.{' '}
+          <a href="/services/ai-agent-development" className="font-semibold text-[#B23E13] underline">
+            See AI agent development
+          </a>{' '}
+          or{' '}
+          <a href="/services/ai-automation" className="font-semibold text-[#B23E13] underline">
+            AI automation services
+          </a>
+          .
+        </p>
+      </div>
+
+      <h2 className="text-2xl font-bold mt-8 mb-4">Why You See Both 55% and 17.7%</h2>
       <p className="mb-4">
-        You've probably seen the headlines. "55% of small businesses now use AI." "AI adoption jumps
-        40% year over year." These numbers are real, but they measure something different than what
-        most people assume.
+        You have probably seen the headline &ldquo;55% of small businesses now use AI.&rdquo; That
+        number is real, but it measures something different from what most people assume.
       </p>
       <p className="mb-4">
-        <strong>The 55% figure</strong> comes from Thryv's 2025 survey of small business owners who
-        reported <em>using</em> AI in some capacity. That includes someone who used ChatGPT once to
-        draft an email, ran a single test with an AI image tool, or tried a free tier of an
-        automation platform for a week.
+        <strong>The 55% figure</strong> comes from{' '}
+        <a
+          href="https://investor.thryv.com/news/news-details/2025/AI-Adoption-Among-Small-Businesses-Surges-41-in-2025-According-to-New-Survey-from-Thryv/"
+          className={LINK}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Thryv&apos;s 2025 survey
+        </a>{' '}
+        of 540 small business decision makers, up from 39% in 2024. It counts owners who say they
+        use AI in some way. That includes someone who used ChatGPT once to draft an email.
       </p>
       <p className="mb-4">
-        <strong>The 17.7% figure</strong> comes from JP Morgan Chase Institute's analysis of{' '}
-        <em>actual AI service payments</em> made by small businesses through December 2025. This is
-        transaction data, not self-reporting. It captures businesses that are paying for, and
-        therefore consistently using, AI tools as part of their operations.
+        <strong>The 17.7% figure</strong> comes from the JPMorgan Chase Institute&apos;s analysis of{' '}
+        <em>actual payments</em> small businesses made to AI providers through December 2025. It is
+        payment data, not a survey. A business that pays for an AI tool every month is using it for
+        real work.
       </p>
       <p className="mb-4">
-        Neither number is wrong. They're measuring different things. The gap between them, roughly
-        37 percentage points, is the implementation gap, and it's the most important story in small
-        business technology right now.
+        Neither number is wrong. The gap between them, about 37 percentage points, is the gap
+        between trying AI and running part of the business on it. That gap is the most useful thing
+        in this whole data set.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">
-        Government Data Shows 17–20% of US Businesses Use AI, Here's the Breakdown
+        Government Data Shows 17% to 20% of US Businesses Use AI
       </h2>
       <p className="mb-4">
-        The US Census Bureau's Business Trends and Outlook Survey tracks AI usage monthly. From
-        December 2025 through May 2026, the numbers have held steady:
+        The US Census Bureau&apos;s Business Trends and Outlook Survey asks businesses about AI every
+        two weeks. From December 14, 2025 to May 3, 2026, the numbers held steady:
       </p>
       <ul className="list-disc pl-6 mb-4 space-y-2">
         <li>
-          <strong>17–20%</strong> of US businesses report actively using AI in production operations
+          <strong>17% to 20%</strong> of US businesses reported using AI
         </li>
         <li>
-          <strong>20–23%</strong> expect to start using AI in the next six months
+          Firms with <strong>4 or fewer employees</strong>: less than 20% reported AI use
         </li>
         <li>
-          Firms with <strong>4 or fewer employees</strong>: less than 20% report AI use
-        </li>
-        <li>
-          Firms with <strong>100–249 employees</strong>: 32% report AI use
+          Firms with <strong>100 to 249 employees</strong>: 32% reported AI use
         </li>
       </ul>
       <p className="mb-4">
-        The Census data uses a strict definition, businesses must be using AI in actual operations,
-        not experimenting. This makes it the most conservative and most reliable baseline.
-      </p>
-      <p className="mb-4">
-        The SBA's Office of Advocacy put it plainly in their September 2025 research spotlight:
-        small firms are closing in on large firms, but the gap hasn't closed yet.
+        The Federal Reserve&apos;s April 2026 note lands in the same place: about 18% of firms had
+        adopted AI by the end of 2025. When the government data and the payment data agree this
+        closely, you can trust the level.
       </p>
 
-      <h2 className="text-2xl font-bold mt-8 mb-4">
-        The Great AI Divide: Two Groups, Diverging Fast
-      </h2>
-      <p className="mb-4">
-        Based on aggregate data from six major studies (Census Bureau, JP Morgan Chase, Thryv, US
-        Chamber of Commerce, SBA, and OECD), the US small business landscape in 2026 looks like
-        this:
-      </p>
+      <h2 className="text-2xl font-bold mt-8 mb-4">What Each Source Actually Measures</h2>
       <div className="overflow-x-auto mb-6">
-        <table className="min-w-full border-collapse border border-gray-300">
-          <thead className="bg-gray-800 text-white">
+        <table className="min-w-full border-collapse border border-gray-300 text-sm">
+          <thead className="bg-gray-100 text-gray-900">
             <tr>
-              <th className="p-3 border text-left">Group</th>
-              <th className="p-3 border text-left">Size</th>
-              <th className="p-3 border text-left">AI Status</th>
-              <th className="p-3 border text-left">Typical Profile</th>
+              <th className="p-3 border text-left">Source</th>
+              <th className="p-3 border text-left">What it counts</th>
+              <th className="p-3 border text-left">Latest figure</th>
             </tr>
           </thead>
           <tbody>
             <tr className="bg-white">
-              <td className="p-3 border font-semibold">Early Movers</td>
-              <td className="p-3 border">~18–20% of SMBs</td>
-              <td className="p-3 border">Running 5+ AI tools daily</td>
-              <td className="p-3 border">Content, customer service, e-commerce personalization all automated</td>
+              <td className="p-3 border font-semibold">JPMorgan Chase Institute</td>
+              <td className="p-3 border">Small businesses paying an AI provider</td>
+              <td className="p-3 border">17.7% (Dec 2025), up from 5.2% (Jan 2023)</td>
             </tr>
             <tr className="bg-gray-50">
-              <td className="p-3 border font-semibold">Experimenters</td>
-              <td className="p-3 border">~35–40% of SMBs</td>
-              <td className="p-3 border">Tried AI but inconsistently</td>
-              <td className="p-3 border">Used ChatGPT a few times, no systematic adoption</td>
+              <td className="p-3 border font-semibold">US Census Bureau (BTOS)</td>
+              <td className="p-3 border">Businesses using AI, asked every two weeks</td>
+              <td className="p-3 border">17% to 20% (Dec 2025 to May 2026)</td>
             </tr>
             <tr className="bg-white">
-              <td className="p-3 border font-semibold">Non-Adopters</td>
-              <td className="p-3 border">~40–45% of SMBs</td>
-              <td className="p-3 border">No AI tools in use</td>
-              <td className="p-3 border">See no applicable use case (77% of this group)</td>
+              <td className="p-3 border font-semibold">Federal Reserve</td>
+              <td className="p-3 border">Firms that have adopted AI, summary of several data sets</td>
+              <td className="p-3 border">About 18% (end of 2025)</td>
+            </tr>
+            <tr className="bg-gray-50">
+              <td className="p-3 border font-semibold">SBA Office of Advocacy</td>
+              <td className="p-3 border">Small (under 250 staff) vs large firms, from Census data</td>
+              <td className="p-3 border">8.8% small vs 11.1% large (2025)</td>
+            </tr>
+            <tr className="bg-white">
+              <td className="p-3 border font-semibold">Thryv survey</td>
+              <td className="p-3 border">Owners who say they use AI at all</td>
+              <td className="p-3 border">55% (2025), up from 39% (2024)</td>
             </tr>
           </tbody>
         </table>
       </div>
       <p className="mb-4">
-        The typical AI-using small business now runs a <strong>median of 5 AI tools.</strong> That's
-        not people dabbling with one chatbot. It's an actual operational stack. That shift from
-        single-tool experimentation to multi-tool integration happened between late 2024 and mid-2025.
+        The SBA figure is lower than the Census headline because it uses an older, stricter Census
+        question and a different time window. The direction is the same in every source: up, and
+        faster since 2023.
       </p>
 
-      <div className="bg-[#FAF8F5] border-2 border-[#E5DFD7] p-6 sm:p-8 rounded-xl my-10 shadow-sm">
+      <div className="not-prose my-10 rounded-2xl border border-[#E5DFD7] bg-[#FAFAF7] p-6 md:p-8">
         <p className="font-mono text-xs font-bold uppercase tracking-wider text-[#B23E13] mb-2">
-          // Executive Diagnostic &amp; Architecture Scoping
+          From trying AI to running on it
         </p>
-        <h3 className="text-xl sm:text-2xl font-bold text-[#1F2937] mb-3">
-          Deploy Production AI Agents Across Your Commerce &amp; Ops Stack
-        </h3>
-        <p className="text-[#4B5563] text-base leading-relaxed mb-6">
-          Moving from one-off chatbot experiments to autonomous AI workflows? We build custom AI customer support agents, automated RFQ quoting engines, and ERP sync pipelines with guaranteed SLAs. Schedule a direct 30-minute scoping call with founder Bhavesh Barot.
+        <p className="text-xl md:text-2xl font-bold text-slate-900 mb-3">
+          Pick one job. We build the AI agent that does it.
         </p>
-        <div className="flex flex-wrap items-center gap-4">
+        <p className="text-slate-700 text-base leading-relaxed mb-5">
+          Most small businesses do not need an AI strategy deck. They need one agent that answers
+          customer questions, follows up on every lead, or handles order status, connected to their
+          store, CRM or inbox. We design it, build it, test it on your real data, and stay on to
+          support it. You own what we build.
+        </p>
+        <div className="flex flex-wrap items-center gap-3">
+          <a
+            href="/services/ai-agent-development"
+            className="inline-flex items-center rounded-lg bg-[#B23E13] px-5 py-3 font-semibold text-white hover:bg-[#8F3210]"
+          >
+            See AI agent development
+          </a>
           <a
             href="https://calendly.com/bhavesh-factoryjet/30min"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-[#B23E13] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#9A3510] transition-colors shadow-sm"
+            className="inline-flex items-center rounded-lg border border-slate-300 bg-white px-5 py-3 font-semibold text-slate-900 hover:bg-slate-50"
           >
-            Schedule 30-Min Architecture Call →
-          </a>
-          <a
-            href="/services/ai-agent-development"
-            className="inline-flex items-center gap-2 bg-white text-[#1F2937] border border-gray-300 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
-          >
-            Explore AI Agent Framework
+            Book a 30-minute call
           </a>
         </div>
       </div>
 
-      <h2 className="text-2xl font-bold mt-8 mb-4">
-        Why 77% of Non-Adopters See No Reason to Start
-      </h2>
+      <h2 className="text-2xl font-bold mt-8 mb-4">Why Most Small Firms Still Skip AI</h2>
       <p className="mb-4">
-        The most surprising finding in the data is the "no reason" response. Among small businesses
-        that haven't adopted AI, <strong>77% said they see no applicable use case</strong> for AI in
-        their business (SBA 2025).
+        The biggest reason is not cost or fear. It is fit. When the SBA Office of Advocacy looked at
+        why businesses were not planning to use AI,{' '}
+        <strong>
+          nearly 82% of businesses with fewer than five employees said AI was not applicable to
+          their business
+        </strong>
+        . The next reasons were far behind: lack of knowledge about AI (6.7%) and privacy concerns
+        (6.3%). As businesses get bigger, fewer say &ldquo;not applicable&rdquo; and more complex
+        concerns, like cost and security, move up.
       </p>
-      <p className="mb-4">This isn't resistance. It's a failure of relevance.</p>
+      <p className="mb-4">This is not resistance. It is a failure of relevance.</p>
       <p className="mb-4">
-        The AI tools that get the most press, large language models, image generators, code
-        assistants, are oriented toward knowledge workers, content creators, and software
-        developers. A plumber in{' '}
-        <a href="/tampa/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">
+        The AI tools that get the most press, like chat assistants, image generators and code
+        assistants, are built for office workers and software teams. A plumber in{' '}
+        <a href="/tampa/web-design" className={LINK}>
           Tampa
         </a>
         , a boutique owner in{' '}
-        <a href="/nashville/seo" className="text-blue-600 underline hover:text-blue-800 transition-colors">
+        <a href="/nashville/seo" className={LINK}>
           Nashville
         </a>
         , or a food distributor in{' '}
-        <a href="/charlotte/seo" className="text-blue-600 underline hover:text-blue-800 transition-colors">
+        <a href="/charlotte/seo" className={LINK}>
           Charlotte
         </a>{' '}
-        doesn't immediately see where ChatGPT fits into their Tuesday.
+        does not immediately see where ChatGPT fits into their Tuesday.
       </p>
       <p className="mb-4">
-        The businesses that do adopt AI successfully aren't using general-purpose tools in a vacuum.
-        They're using purpose-built applications: AI that handles their customer service queue, AI
-        that writes their product descriptions, AI that follows up with leads at 2am. At FactoryJet,
-        we build these integrations directly into the websites and{' '}
-        <a href="/services/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">
-          Shopify stores
+        The businesses that make AI stick do not start with a general tool. They start with one
+        specific job: answering the customer service queue, writing product descriptions, or
+        following up with leads at 2am. At FactoryJet, we build that job into the websites and{' '}
+        <a href="/services/ecommerce-development" className={LINK}>
+          online stores
         </a>{' '}
-        we deliver, so the AI layer comes ready to use on day one.
+        we deliver, so the AI part works on day one.
       </p>
+
+      <h2 className="text-2xl font-bold mt-8 mb-4">How Small Businesses That Use AI Actually Use It</h2>
       <p className="mb-4">
-        Beyond the relevance gap, the other barriers stack up as follows (SBA 2025, Statista 2025):
+        Thryv&apos;s 2025 survey asked owners who use AI what they use it for. These are
+        self-reported, so read them as direction, not precise measurement:
       </p>
       <ul className="list-disc pl-6 mb-4 space-y-2">
-        <li><strong>62%</strong> of non-adopters lack understanding of how AI could help their business</li>
-        <li><strong>60%</strong> have no in-house expertise or resources to implement AI</li>
-        <li><strong>38%</strong> are concerned about data privacy and security</li>
-        <li><strong>34%</strong> don't see a clear ROI or use case</li>
-        <li><strong>37%</strong> lack the time to properly explore tools</li>
+        <li>
+          <strong>Data analysis:</strong> 62%
+        </li>
+        <li>
+          <strong>Content generation:</strong> 55%
+        </li>
+        <li>
+          <strong>Customer engagement tools like chatbots:</strong> 46%
+        </li>
+        <li>
+          <strong>Use AI daily:</strong> 63%
+        </li>
+        <li>
+          <strong>Save more than 20 hours a month:</strong> 58%
+        </li>
       </ul>
-
-      <h2 className="text-2xl font-bold mt-8 mb-4">
-        80%+ of AI-Using SMBs Report Productivity Gains: The Full ROI Breakdown
-      </h2>
-      <p className="mb-4">For the businesses that have moved past experimentation, the returns are documented:</p>
       <p className="mb-4">
-        <strong>Productivity:</strong> More than{' '}
-        <strong>80% of AI-using SMBs report productivity gains</strong>. Of those,{' '}
-        <strong>16% report gains exceeding 20%</strong>, roughly 1 in 6 AI-adopting small
-        businesses has seen a 20%+ productivity jump (McKinsey, 2025).
-      </p>
-      <p className="mb-4">
-        <strong>E-commerce:</strong> AI product recommendation engines drive{' '}
-        <strong>25–35% of total e-commerce revenue</strong> for stores that have implemented them.
-        AI-assisted personalization has been linked to revenue gains of up to 40% for early movers
-        (McKinsey, 2025).
-      </p>
-      <p className="mb-4">
-        <strong>Customer service:</strong> 47% of AI-using SMBs now use chatbots for 24/7 customer
-        support. These tools have measurably improved response quality and resolution speed while
-        cutting the cost of handling routine inquiries.
-      </p>
-      <p className="mb-4">
-        <strong>Retention:</strong> AI customer service tools have been linked to a 20% improvement
-        in customer retention rates: a number that compounds significantly for businesses with
-        repeat-purchase revenue models.
-      </p>
-      <p className="mb-4">
-        <strong>Investment intent:</strong>{' '}
-        <strong>93% of SMBs currently using AI plan to continue investing</strong>, and 62% are
-        planning to increase AI spending in the next 12 months. This is not a trend reversing.
+        Twenty hours a month is half a work week. That is the real prize, and it comes from putting
+        AI on repeat work, not from trying a new tool every week.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">
-        Professional Services Lead AI Adoption; Construction and Trades Are Last
+        Small Firms Are Catching Up. The Window Is Still Open.
       </h2>
       <p className="mb-4">
-        Adoption is not uniform across industries. Based on Census Bureau data and OECD research:
-      </p>
-      <p className="mb-4">
-        <strong>Higher adoption:</strong> Professional services, retail and e-commerce, marketing
-        agencies, and tech-adjacent businesses are ahead of the curve. These sectors have clear,
-        immediate AI use cases (content, customer communication, product descriptions).
-      </p>
-      <p className="mb-4">
-        <strong>Lower adoption:</strong> Construction, food service, skilled trades, and local
-        service businesses have the lowest AI adoption rates. The 77% "no applicable use case"
-        response is concentrated in these sectors.
-      </p>
-      <p className="mb-4">
-        This is relevant for any vendor selling to small businesses: your buyer's AI readiness
-        varies enormously by industry, not just company size.
-      </p>
-
-      <h2 className="text-2xl font-bold mt-8 mb-4">
-        The First-Mover Window Is Still Open, But Closing Fast
-      </h2>
-      <p className="mb-4">
-        The data tells a straightforward story:{' '}
-        <strong>
-          the window for first-mover advantage in small business AI adoption is still open, but it's
-          closing.
-        </strong>
-      </p>
-      <p className="mb-4">
-        In early 2024, large enterprises used AI at 1.8x the rate of small firms. By mid-2025,
-        small business adoption had accelerated while large-firm growth plateaued. Small businesses
-        are catching up, but the businesses leading that catch-up are pulling away from the ones
-        that haven't started.
+        In early 2025, large businesses used AI at 1.8 times the rate of small ones: 11.1% against
+        6.3%, on the SBA&apos;s measure. Six months later the small business share had climbed to
+        8.8% while large-firm growth slowed. The SBA estimated small firms may be only about a year
+        behind.
       </p>
       <p className="mb-4">
         The businesses that will look back on 2026 as a turning point are the ones that moved from
-        "we tried it a few times" to "AI is part of how we operate." That's not about buying the
-        most sophisticated tools. It's about identifying three or four specific tasks your team does
-        manually every week and finding AI tools purpose-built for those tasks.
+        &ldquo;we tried it a few times&rdquo; to &ldquo;AI handles this job for us.&rdquo; That is
+        not about buying the most advanced tools. It is about picking the three or four tasks your
+        team does by hand every week and putting AI on those.
       </p>
       <p className="mb-4">
-        If you run an e-commerce store: AI product recommendations, AI-generated product
-        descriptions, and an AI customer service layer are the three highest-ROI applications. If
-        you run a service business: AI-assisted lead follow-up, AI-powered appointment scheduling,
-        and AI content creation for your marketing tend to deliver returns fastest. For local service
-        businesses in competitive markets: HVAC, plumbing, or home services in{' '}
-        <a href="/cleveland/seo" className="text-[#F05A28] underline hover:text-[#C94818] transition-colors">
+        If you run an online store: AI answers to customer and order questions, AI-written product
+        descriptions, and AI product recommendations are the usual starting points. If you run a
+        service business: AI lead follow-up, AI appointment booking and AI help with marketing
+        content tend to pay back fastest. For local service businesses in competitive markets, like
+        HVAC, plumbing or home services in{' '}
+        <a href="/cleveland/seo" className={LINK}>
           Northeast Ohio
-        </a>{' '}
-, AI-assisted SEO content helps you rank in the Map Pack faster by publishing neighborhood
-        and service-area pages at a pace no manual team can match. There is a newer reason it matters too.
-        Buyers increasingly ask ChatGPT or Perplexity for a recommendation before they ever open Google, and
-        you can{' '}
-        <a href="/ai-visibility-checker" className="text-[#F05A28] underline hover:text-[#C94818] transition-colors">
+        </a>
+        , there is a newer reason it matters too. Buyers increasingly ask ChatGPT or Perplexity for
+        a recommendation before they ever open Google, and you can{' '}
+        <a href="/ai-visibility-checker" className={LINK}>
           check whether those tools name your business
         </a>{' '}
         in about a minute.
       </p>
       <p className="mb-4">
-        At FactoryJet, we build these capabilities directly into the{' '}
-        <a href="/services/ecommerce-development" className="text-[#F05A28] underline hover:text-[#C94818] transition-colors">
-          websites and e-commerce stores
-        </a>{' '}
-        we deliver, so you are not starting from scratch. The 17.7% who are already there are not
-        smarter than the other 82.3%. They just started earlier.
+        The 17.7% who are already there are not smarter than the other 82.3%. They just started
+        earlier.
       </p>
 
-      {/* High-Converting In-Article Lead Magnet */}
-      <div className="bg-gradient-to-r from-gray-900 to-gray-800 text-white rounded-2xl p-6 md:p-8 my-8 shadow-lg">
-        <div className="max-w-2xl">
-          <span className="inline-block px-3 py-1 bg-[#F05A28] text-white text-xs font-bold uppercase rounded-full tracking-wider mb-3">
-            US Small Business Action Plan
-          </span>
-          <h3 className="text-xl md:text-2xl font-display font-bold text-white mb-2">
-            Want to Deploy Practical AI Tools That Actually Generate Revenue?
-          </h3>
-          <p className="text-gray-300 text-sm md:text-base leading-relaxed mb-6">
-            FactoryJet engineers custom AI customer support agents, automated lead follow-up workflows, and high-speed e-commerce storefronts for US small businesses. We deliver turn-key solutions in 7 days.
-          </p>
-          <div className="flex flex-wrap gap-3">
-            <a
-              href="https://calendly.com/bhavesh-factoryjet/30min"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-[#F05A28] hover:bg-[#C94818] text-white font-semibold text-sm px-6 py-3 rounded-lg transition-colors"
-            >
-              Book 30-Min Consultation
-            </a>
-            <a
-              href="/services/ai-automation"
-              className="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 text-white border border-white/20 font-semibold text-sm px-6 py-3 rounded-lg transition-colors"
-            >
-              Explore AI Automation Services
-            </a>
-          </div>
+      <div className="not-prose my-10 rounded-2xl border border-[#E5DFD7] bg-white p-6 md:p-8">
+        <p className="font-mono text-xs font-bold uppercase tracking-wider text-[#B23E13] mb-2">
+          Talk to the founder
+        </p>
+        <p className="text-xl md:text-2xl font-bold text-slate-900 mb-3">
+          Not sure which job to hand to AI first?
+        </p>
+        <p className="text-slate-700 text-base leading-relaxed mb-5">
+          Bring your busiest week. On a 30-minute call with Bhavesh, we will look at where your hours
+          go and tell you honestly which job is worth automating first, which is not, and what it
+          takes to build. You get a written scope before any work starts. If you want to know what
+          drives the cost first, read our{' '}
+          <a href="/blog/what-is-an-ai-agent-cost-2026" className="font-semibold text-[#B23E13] underline">
+            AI agent cost guide
+          </a>
+          .
+        </p>
+        <div className="flex flex-wrap items-center gap-3">
+          <a
+            href="https://calendly.com/bhavesh-factoryjet/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center rounded-lg bg-[#B23E13] px-5 py-3 font-semibold text-white hover:bg-[#8F3210]"
+          >
+            Book a 30-minute call
+          </a>
+          <a
+            href="/services/ai-automation"
+            className="inline-flex items-center rounded-lg border border-slate-300 bg-white px-5 py-3 font-semibold text-slate-900 hover:bg-slate-50"
+          >
+            See AI automation services
+          </a>
         </div>
       </div>
 
@@ -434,7 +413,7 @@ export const post: BlogPost = {
         <li>
           <a
             href="https://www.census.gov/library/stories/2026/05/ai-use-businesses.html"
-            className="text-[#F05A28] underline hover:text-[#C94818]"
+            className={LINK}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -444,17 +423,17 @@ export const post: BlogPost = {
         <li>
           <a
             href="https://www.jpmorganchase.com/institute/all-topics/business-growth-and-entrepreneurship/understanding-ai-use-by-small-businesses"
-            className="text-[#F05A28] underline hover:text-[#C94818]"
+            className={LINK}
             target="_blank"
             rel="noopener noreferrer"
           >
-            JP Morgan Chase Institute, Understanding AI Use Among Small Businesses
+            JPMorgan Chase Institute, Understanding AI Use Among Small Businesses
           </a>
         </li>
         <li>
           <a
             href="https://www.federalreserve.gov/econres/notes/feds-notes/monitoring-ai-adoption-in-the-u-s-economy-20260403.html"
-            className="text-[#F05A28] underline hover:text-[#C94818]"
+            className={LINK}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -464,7 +443,7 @@ export const post: BlogPost = {
         <li>
           <a
             href="https://advocacy.sba.gov/wp-content/uploads/2025/09/Research-Spotlight-AI-in-Business-Small-Firms-Closing-In_-092425.pdf"
-            className="text-[#F05A28] underline hover:text-[#C94818]"
+            className={LINK}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -473,32 +452,22 @@ export const post: BlogPost = {
         </li>
         <li>
           <a
+            href="https://investor.thryv.com/news/news-details/2025/AI-Adoption-Among-Small-Businesses-Surges-41-in-2025-According-to-New-Survey-from-Thryv/"
+            className={LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Thryv, AI Adoption Among Small Businesses Surges 41% in 2025 (July 2025)
+          </a>
+        </li>
+        <li>
+          <a
             href="https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/12/ai-adoption-by-small-and-medium-sized-enterprises_9c48eae6/426399c1-en.pdf"
-            className="text-[#F05A28] underline hover:text-[#C94818]"
+            className={LINK}
             target="_blank"
             rel="noopener noreferrer"
           >
-            OECD, AI Adoption by Small and Medium-Sized Enterprises (December 2025)
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai"
-            className="text-[#F05A28] underline hover:text-[#C94818]"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            McKinsey: The State of AI in 2025
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.statista.com/topics/11736/ai-in-small-and-medium-sized-enterprises/"
-            className="text-[#F05A28] underline hover:text-[#C94818]"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Statista, AI Adoption Rates Among SMBs Worldwide (2025)
+            OECD, AI Adoption by Small and Medium-Sized Enterprises (December 2025), further reading
           </a>
         </li>
       </ul>

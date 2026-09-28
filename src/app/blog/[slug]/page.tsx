@@ -109,7 +109,7 @@ function generateArticleJsonLd(post: typeof POSTS[0], slug: string) {
     description: post.excerpt,
     image: post.imageUrl?.startsWith('http') ? post.imageUrl : `https://factoryjet.com${post.imageUrl || '/og-default.png'}`,
     datePublished: new Date(post.date).toISOString(),
-    dateModified: new Date(post.date).toISOString(),
+    dateModified: new Date(post.dateModified ?? post.date).toISOString(),
     author: authorSchema,
     publisher: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
     mainEntityOfPage: {

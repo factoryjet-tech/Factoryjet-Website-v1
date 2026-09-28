@@ -11,19 +11,16 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import RelatedGuides from '@/components/v2/RelatedGuides';
 import Hero from '@/components/v2/Hero';
 import HeroInlineForm from '@/components/HeroInlineForm';
-import ServiceHeroImageBand from '@/components/v2/ServiceHeroImageBand';
-import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
 import StrategicDarkSection from '@/components/v2/StrategicDarkSection';
 import IndustriesGrid from '@/components/v2/IndustriesGrid';
 import ServiceJourneyRow, { type ServiceJourneyStage } from '@/components/v2/ServiceJourneyRow';
-import BoringStatsRow from '@/components/v2/BoringStatsRow';
 import CityContextSection from '@/components/v2/CityContextSection';
 import ComparisonTable, { CompareIcon } from '@/components/v2/ComparisonTable';
 import PricingTiers from '@/components/v2/PricingTiers';
-import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
+import MidPageCTA from '@/components/v2/MidPageCTA';
 import EcommerceRoiCalculator from '@/components/commerce/EcommerceRoiCalculator';
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -33,13 +30,13 @@ import EcommerceRoiCalculator from '@/components/commerce/EcommerceRoiCalculator
 export const metadata: Metadata = {
   title: 'Ecommerce Development Company USA | FactoryJet',
   description:
-    'Hire ecommerce developers for Shopify, WooCommerce & custom stores. We build for brands in India, the US, the UK and the UAE. Fixed-price, quoted upfront.',
+    'Custom Shopify, WooCommerce and headless stores for US brands. Most stores go live in 3 to 5 weeks, with a fixed quote upfront and support after launch.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Ecommerce Development Company | Custom Online Stores | FactoryJet',
+    title: 'Ecommerce Development Company USA | FactoryJet',
     description:
-      'Hire ecommerce developers for custom online stores. Shopify, WooCommerce & custom ecommerce development for brands in India, the US, the UK and the UAE.',
+      'We design, build and support custom Shopify, WooCommerce and headless stores for US brands. Fixed quote upfront, most stores live in 3 to 5 weeks.',
     url: 'https://factoryjet.com/services/ecommerce-development',
     images: [
       {
@@ -53,9 +50,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ecommerce Development Company | Custom Online Stores | FactoryJet',
+    title: 'Ecommerce Development Company USA | FactoryJet',
     description:
-      'Hire ecommerce developers: a custom ecommerce development company serving India, the US, the UK and the UAE. Fixed-price, milestone-paid.',
+      'Custom Shopify, WooCommerce and headless stores for US brands. Fixed quote upfront, milestone-paid, and the same team supports you after launch.',
     images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: {
@@ -83,7 +80,7 @@ export const metadata: Metadata = {
 // Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
 // dateModified; these pages carried none. Keep this honest: bump it when the
 // page's content actually changes, not on every unrelated deploy.
-const PAGE_MODIFIED = '2026-08-04';
+const PAGE_MODIFIED = '2026-09-28';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -115,7 +112,7 @@ const serviceSchema = {
   ],
   serviceType: 'E-Commerce Development',
   description:
-    'Custom e-commerce development for businesses in India, the US, the UK and the UAE. Shopify, WooCommerce, BigCommerce, and headless Next.js Commerce. Conversion-optimized, mobile-first, Lighthouse 95+. fixed-price, milestone-paid.',
+    'Custom e-commerce development for US brands, also delivered in the UK, the UAE and India. Shopify, WooCommerce, BigCommerce and headless Next.js stores: designed, built, launched and supported after launch. Custom-theme stores take 3 to 5 weeks, advanced stores 5 to 8 weeks, headless or custom builds 8 to 14 weeks. Fixed price, milestone-paid, full code ownership.',
 };
 
 /** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
@@ -147,7 +144,7 @@ const ECOMM_SERVICES = [
     name: 'Shopify & Shopify Plus',
     description:
       'Custom Liquid themes, full store builds, Shopify Plus checkout customization, B2B wholesale portals, and headless Hydrogen storefronts. The right Shopify setup for your catalog size and revenue stage.',
-    example: 'Our most common e-commerce engagement. 120+ Shopify stores delivered.',
+    example: 'Our most common e-commerce engagement.',
     linkLabel: 'See Shopify services',
     linkHref: '/services/shopify-development',
   },
@@ -226,6 +223,34 @@ const ECOMM_JOURNEY_STAGES: ServiceJourneyStage[] = [
   },
 ];
 
+/* Build timelines. Wording confirmed by Bhavesh on 2026-09-24 (these are the
+   ranges every other page is told to copy). Do not stretch or shorten them. */
+const BUILD_TIMELINES = [
+  { scope: 'Platform store', detail: 'Custom-designed Shopify or WooCommerce store', weeks: '3-5 weeks' },
+  { scope: 'Advanced store', detail: 'Subscriptions, B2B pricing or a migration', weeks: '5-8 weeks' },
+  { scope: 'Headless or custom', detail: 'Next.js storefront, marketplace or custom platform', weeks: '8-14 weeks' },
+] as const;
+
+/* Proof near the top of the page. Only published, verified case studies from
+   src/data/case-studies (no invented metrics: those entries deliberately carry
+   none). Both stores run on Commerceflo, not Shopify, and the cards say so. */
+const PROOF_CASES = [
+  {
+    client: 'Belle Maison',
+    market: 'Wholesale distributor, Mumbai',
+    platform: 'Built on Commerceflo',
+    what: 'One storefront for retail shoppers and trade buyers. Trade accounts log in, see their own prices, and turn a quote into an order without anyone retyping it.',
+    href: '/case-studies/belle-maison-ecommerce-success',
+  },
+  {
+    client: 'GPSUK',
+    market: 'Promotional products, United Kingdom',
+    platform: 'Built on Commerceflo',
+    what: 'A B2B storefront for a supplier whose buyers reorder branded stock. Trade accounts browse the catalogue, get account pricing, and move from quote to order online.',
+    href: '/case-studies/gpsuk-promotional-products',
+  },
+] as const;
+
 const ECOMM_STATS = [
   {
     value: '500+',
@@ -234,10 +259,10 @@ const ECOMM_STATS = [
     categoryLabel: 'TRACK RECORD',
   },
   {
-    value: '2.3×',
-    label: 'average improvement in add-to-cart rate, custom build vs. generic theme.',
-    microcopy: 'measured across FactoryJet e-commerce builds in 2024.',
-    categoryLabel: 'CONVERSION LIFT',
+    value: '97%',
+    label: 'of projects delivered on time or early.',
+    microcopy: 'we give you a launch date on day one and plan the build backwards from it.',
+    categoryLabel: 'ON-TIME DELIVERY',
   },
   {
     value: 'Fixed Price',
@@ -448,7 +473,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does e-commerce development cost?',
     answer:
-      'FactoryJet e-commerce development is fixed-price and scoped to your build. The main cost drivers include the platform store itself with custom theme and payments. Advanced features like subscription logic or B2B pricing add scope. The most complex builds are headless storefronts and multi-vendor marketplaces. Every project is milestone-paid. We confirm the full investment on a discovery call before work begins.',
+      'It depends on four things: the platform, how many products and variants you have, whether you are moving from an old store, and which systems the store has to talk to (ERP, 3PL, subscriptions, B2B pricing). A custom-theme Shopify or WooCommerce store is the smallest build. Subscriptions, B2B pricing or a migration add scope. Headless and marketplace builds are the largest. We give you one fixed price after a free 30-minute call, paid in milestones. For typical market ranges, read our ecommerce website cost guide and Shopify development cost guide.',
   },
   {
     category: 'pricing',
@@ -474,7 +499,7 @@ const FAQ_ITEMS = [
     category: 'migration',
     question: 'Will my Google rankings survive a platform migration?',
     answer:
-      'Yes, if done correctly. Before migration, we audit existing URL structures to protect rankings. We build a complete 301 redirect map before touching DNS. We submit new sitemaps to Google Search Console on launch day. Then we monitor organic traffic for 30 days post-launch. Most clients see organic visibility recover fully within 6 to 8 weeks.',
+      'Yes, if the migration is done carefully. Before we move anything, we list every URL that gets search traffic today. We build a complete 301 redirect map (a rule that sends each old address to its new one) before touching DNS. We submit new sitemaps to Google Search Console on launch day and watch organic traffic for 30 days after launch. A small dip for a few weeks is normal with any move. A missing redirect map is what causes lasting losses.',
   },
 
   /* ── Technical & SEO ── */
@@ -502,7 +527,7 @@ const FAQ_ITEMS = [
     category: 'trust',
     question: 'How is FactoryJet different from a US or UK e-commerce agency?',
     answer:
-      'Three things: pricing, ownership, and honesty. Our fixed-price builds cost a fraction of typical Western agency quotes. We deliver the full codebase to your GitHub on launch day with zero lock-in. We also tell you when a simpler solution fits better than a more expensive one. We have delivered 500+ projects across the US, the UK, and the UAE.',
+      'Four things: price, ownership, support and honesty. Our engineering team is based in India, so a fixed-price build usually costs well under a typical US agency quote for the same scope. You own the full codebase on launch day, with no lock-in. We stay on after launch for fixes and improvements instead of handing you off. And we tell you when a simpler, cheaper setup fits better. We have delivered 500+ projects across the US, the UK, the UAE and India.',
   },
   {
     category: 'trust',
@@ -515,7 +540,7 @@ const FAQ_ITEMS = [
     category: 'platform',
     question: 'Can you build a subscription or recurring-revenue e-commerce store?',
     answer:
-      'Yes. Subscription e-commerce is one of our highest-ROI offerings. We implement subscription logic using Recharge, Bold Subscriptions, or WooCommerce Subscriptions. Models include subscription boxes, consumable replenishment, and digital memberships. Subscription stores often generate 30% to 50% higher customer lifetime value. We configure custom cancel flows to reduce churn and build loyalty.',
+      'Yes. Subscription e-commerce is one of our highest-ROI offerings. We implement subscription logic using Recharge, Bold Subscriptions, or WooCommerce Subscriptions. Models include subscription boxes, consumable replenishment, and digital memberships. We also set up customer portals where subscribers can skip, swap or pause, and cancel flows that offer a pause before a cancel.',
   },
   {
     category: 'technical',
@@ -527,7 +552,7 @@ const FAQ_ITEMS = [
     category: 'technical',
     question: 'How do I optimize my e-commerce store for mobile shoppers?',
     answer:
-      'Mobile drives 65% to 75% of e-commerce traffic but only 55% of revenue. Poor mobile checkout UX causes that gap. FactoryJet fixes this with mobile-first layouts designed for 375px screens first. We enable one-tap Apple Pay and Google Pay checkout to eliminate cart abandonment. We add thumb-friendly buttons, sticky add-to-cart bars, and lazy-loaded images. Every store passes Google Core Web Vitals with Lighthouse 90+ before launch.',
+      'Most e-commerce traffic now arrives on phones, but phones still convert worse than desktop. Poor mobile checkout is usually the reason. We design every layout for a 375px phone screen first. We enable one-tap Apple Pay and Google Pay checkout to eliminate cart abandonment. We add thumb-friendly buttons, sticky add-to-cart bars, and lazy-loaded images. Every store passes Google Core Web Vitals with Lighthouse 90+ before launch.',
   },
   {
     category: 'technical',
@@ -565,6 +590,24 @@ const FAQ_ITEMS = [
     answer:
       'Both. Most businesses are best served by Shopify or WooCommerce, and that is where we start the conversation. But when off-the-shelf platforms cannot support your product logic, multi-vendor marketplaces, proprietary pricing engines, deep ERP coupling, we operate as a custom ecommerce software development company and build a bespoke platform, typically headless on a React/Next.js front end. We recommend the simplest option that fits, not the most expensive.',
   },
+  {
+    category: 'pricing',
+    question: 'How does pricing work for an e-commerce build?',
+    answer:
+      'You get one fixed price for an agreed scope, written down before work starts. There is no hourly billing. You pay in milestones, usually tied to design approval, the staging store and launch. Platform fees (Shopify, BigCommerce) and app subscriptions are billed to you directly by those companies, so you always see them. If you add something mid-project, we quote that change before we build it.',
+  },
+  {
+    category: 'trust',
+    question: 'What should I have ready before the first call?',
+    answer:
+      'Nothing formal. It helps to know what you sell, roughly how many products and variants you have, which platform you are on today (if any), and one or two stores you like. If you have monthly traffic or sales numbers, bring them. We use the call to recommend a platform and scope, then send a fixed quote and a launch date.',
+  },
+  {
+    category: 'trust',
+    question: 'Can you improve my current store instead of rebuilding it?',
+    answer:
+      'Often, yes. If your platform is right and the problem is speed, checkout friction or a weak product page, a focused fix costs far less than a rebuild. We start with an audit and tell you plainly whether a rebuild is worth it. For Shopify stores we also run ongoing support and maintenance, so the same team keeps improving the store after the fix.',
+  },
 ];
 
 const faqSchema = {
@@ -586,38 +629,15 @@ const howToSchema = {
   // 7-day delivery is real for standard website builds, but this page's own
   // process section says 3 to 14 weeks, so P7D contradicted the visible content.
   totalTime: 'P98D',
-  step: [
-    {
-      '@type': 'HowToStep',
-      position: 1,
-      name: 'Stage 1 | Discovery Call',
-      text: 'We learn your business, goals, and target audience. We define the sitemap, content strategy, and technical requirements.',
-    },
-    {
-      '@type': 'HowToStep',
-      position: 2,
-      name: 'Stage 2 | Strategy & Structure',
-      text: 'We finalize your site architecture, wireframes, and content outline. You approve the plan before any design begins.',
-    },
-    {
-      '@type': 'HowToStep',
-      position: 3,
-      name: 'Stage 3 | Design',
-      text: 'We design every page with your brand identity, mobile-first layouts, and conversion-focused UX. You review and approve all designs.',
-    },
-    {
-      '@type': 'HowToStep',
-      position: 4,
-      name: 'Stage 4 | Development & SEO',
-      text: 'We build your site in Next.js or WordPress, optimize Core Web Vitals, add structured data, and connect all integrations.',
-    },
-    {
-      '@type': 'HowToStep',
-      position: 5,
-      name: 'Stage 5 | Launch',
-      text: 'Your website goes live. We handle DNS, SSL, final QA, and provide training plus 30-day post-launch support.',
-    },
-  ],
+  // Derived from ECOMM_JOURNEY_STAGES (the visible process section) so the
+  // schema can never describe a different process than the page shows.
+  // The old hand-written steps described a Next.js/WordPress website build.
+  step: ECOMM_JOURNEY_STAGES.map((stage, index) => ({
+    '@type': 'HowToStep',
+    position: index + 1,
+    name: stage.title,
+    text: stage.description,
+  })),
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -681,68 +701,135 @@ export default function EcommerceDevelopmentPage() {
         <Breadcrumbs items={BREADCRUMB_ITEMS} />
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
+        {/* Rewritten 2026-09-28. The old H1 ("An Online Store That Sells on Any
+            Platform, at Any Scale") made no promise a buyer could check, and the
+            right-hand card sold an unverified "2.3x conversion" figure. The hero now
+            answers what we build, for whom, on which platforms and how long it takes,
+            using only the confirmed timelines. */}
         <Hero
-        formSlot={<HeroInlineForm region="us" source="us_services_ecommerce_development_hero" />}
-          eyebrow="E-COMMERCE DEVELOPMENT"
-          headline="An Online Store That Sells on Any Platform, at Any Scale"
-          lead="Most e-commerce stores are built on generic themes and convert below 1%. FactoryJet builds custom Shopify, WooCommerce, BigCommerce, and headless stores, designed in Figma, engineered for conversion: fixed-price, milestone-paid, and predictable from quote to launch."
-          secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
+          formSlot={<HeroInlineForm region="us" source="us_services_ecommerce_development_hero" />}
+          eyebrow="ECOMMERCE DEVELOPMENT COMPANY, USA"
+          headline="We design, build and support online stores for US brands. Most go live in 3 to 5 weeks."
+          lead="Shopify, WooCommerce, BigCommerce or a custom headless build. We move your products, customers and SEO over, connect payments, shipping and email, and stay on after launch. You get a fixed quote before work starts, and you own the code."
+          secondaryCta={{ label: 'How pricing works', href: '#pricing-explained' }}
           trustItems={[
-            '500+ businesses served',
-            'Fixed-price, quoted upfront',
-            'All major platforms',
+            'Fixed quote before work starts',
+            '97% delivered on time or early',
+            'You own the code on launch day',
           ]}
           rightSlot={
-            <div className="rounded-2xl border border-fj-neutral-200 bg-white p-8 shadow-sm">
+            <div className="rounded-2xl border border-fj-neutral-200 bg-white p-7 md:p-8">
               <p
                 className="font-fj-mono font-medium uppercase text-[#B23E13]"
                 style={{ fontSize: '11px', letterSpacing: '0.14em' }}
               >
-                THE COST OF A 1% CONVERSION RATE
+                WHAT YOU GET, AND HOW LONG IT TAKES
               </p>
-              <p className="mt-4 font-fj-display text-[2rem] font-medium leading-[1.1] tracking-[-0.025em] text-fj-ink">
-                Same traffic. Better store. The math is simple.
+              <p className="mt-3 font-fj-display text-[1.5rem] font-bold leading-[1.2] tracking-[-0.02em] text-fj-ink">
+                Pick the store you need. We give you a launch date on the first call.
               </p>
-              <div className="mt-6 space-y-4">
-                {[
-                  { label: 'Monthly visitors', value: '5,000' },
-                  { label: 'Average order value', value: '$80' },
-                  { label: 'Generic theme (1% conv.)', value: '$4,000/mo' },
-                  { label: 'Custom store (2.3% conv.)', value: '$9,200/mo' },
-                ].map((row) => (
-                  <div key={row.label} className="flex items-center justify-between border-b border-fj-neutral-100 pb-3">
-                    <p className="font-fj-body text-[0.875rem] text-fj-neutral-500">{row.label}</p>
-                    <p className="fj-display font-semibold text-fj-ink" style={{ fontSize: '1rem', letterSpacing: '-0.02em' }}>{row.value}</p>
-                  </div>
+              <ul className="mt-5 divide-y divide-fj-neutral-100 border-y border-fj-neutral-100">
+                {BUILD_TIMELINES.map((row) => (
+                  <li key={row.scope} className="flex items-start justify-between gap-4 py-3.5">
+                    <div>
+                      <p className="font-fj-body text-[0.9375rem] font-semibold text-fj-ink">{row.scope}</p>
+                      <p className="mt-0.5 font-fj-body text-[0.8125rem] text-fj-neutral-600">{row.detail}</p>
+                    </div>
+                    <p className="shrink-0 font-fj-display text-[1rem] font-bold tracking-[-0.02em] text-[#B23E13]">
+                      {row.weeks}
+                    </p>
+                  </li>
                 ))}
-                <div className="rounded-xl bg-[rgba(240,90,40,0.08)] px-4 py-3">
-                  <p className="font-fj-body text-[0.875rem] font-semibold text-[#B23E13]">
-                    +$5,200/month from the same traffic. A custom store pays for itself in under 60 days.
-                  </p>
-                </div>
-              </div>
+              </ul>
+              <p className="mt-5 font-fj-body text-[0.875rem] leading-relaxed text-fj-neutral-600">
+                Every build includes custom design, payments, shipping and tax setup, technical SEO, analytics, checkout testing on real devices, and support after launch.
+              </p>
             </div>
           }
         />
 
-        {/* ── 1b. HERO IMAGE BAND ──────────────────────────────────────────── */}
-        <ServiceHeroImageBand
-          imageSrc="/images/services/card-ecommerce.webp"
-          imageAlt="Custom e-commerce checkout flow on dual screens, FactoryJet e-commerce development"
-          stats={[
-            { value: '500+', label: 'Businesses Served' },
-            { value: 'Full Code', label: 'Yours at Launch: Zero Lock-In' },
-            { value: 'Fixed Price', label: 'Confirmed Upfront, No Surprises' },
-            { value: '12+ Yrs', label: 'E-Commerce Expertise' },
-          ]}
-        />
+        {/* ── 2. SHORT ANSWER + PROOF ──────────────────────────────────────── */}
+        {/* Replaces the hero image band and BigThreeTrustBlock. That block's
+            showcase variant hardcodes "7-day delivery", which contradicts the 3-14
+            week e-commerce timelines this page states. Proof shown here is only
+            published case studies and a verbatim client quote. */}
+        <section className="border-y border-fj-neutral-200 bg-white py-14 md:py-20">
+          <div className="mx-auto max-w-[1120px] px-6 md:px-8">
+            <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-14">
+              <div className="lg:col-span-7">
+                <p className="fj-eyebrow">THE SHORT ANSWER</p>
+                <h2 className="mt-3 font-fj-display text-[clamp(1.625rem,3vw,2.25rem)] font-bold leading-[1.15] tracking-[-0.03em] text-fj-ink">
+                  What an ecommerce development company should do for you
+                </h2>
+                <p
+                  data-speakable
+                  className="mt-5 font-fj-body text-[1.0625rem] leading-[1.7] text-fj-neutral-600"
+                >
+                  FactoryJet builds custom Shopify, WooCommerce, BigCommerce and headless stores for small and mid-size US brands. A custom-theme store takes 3 to 5 weeks. A store with subscriptions, B2B pricing or a migration takes 5 to 8 weeks. Headless and custom builds take 8 to 14 weeks. You get one fixed price after a free call, you pay in milestones, and you own the code and every login on launch day. After launch, the same team stays on to fix, test and improve the store.
+                </p>
+                <p className="mt-4 font-fj-body text-[1rem] leading-[1.7] text-fj-neutral-600">
+                  Not sure which platform fits? Start with our{' '}
+                  <Link href="/blog/shopify-vs-woocommerce-us-small-business-2026" className="font-medium text-[#B23E13] underline underline-offset-2">
+                    Shopify vs WooCommerce guide
+                  </Link>
+                  , or tell us what you sell in the form above and we will recommend one.
+                </p>
 
-        {/* ── 2. TRUST STATS ───────────────────────────────────────────────── */}
-        <BigThreeTrustBlock
-          eyebrow="BY THE NUMBERS"
-          headline="500+ businesses served. 12 years of e-commerce. Four markets trust the results."
-          description="Websites designed and built for businesses across India, the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and 7-day delivery."
-        />
+                <figure className="mt-8 rounded-2xl border border-fj-neutral-200 bg-fj-cream p-6 md:p-7">
+                  <blockquote className="font-fj-display text-[1.125rem] font-semibold leading-[1.45] tracking-[-0.01em] text-fj-ink">
+                    &ldquo;We were live in 6 days, I genuinely did not believe that was possible. The design is stunning, the WhatsApp integration brings in inquiries every day, and the site has stayed lightning fast.&rdquo;
+                  </blockquote>
+                  <figcaption className="mt-5 flex items-center gap-3">
+                    <img
+                      src="/images/testimonials/ricky-belle-maison-128.webp"
+                      alt="Ricky B., founder of Belle Maison"
+                      width={44}
+                      height={44}
+                      loading="lazy"
+                      className="h-11 w-11 rounded-full object-cover"
+                    />
+                    <span className="font-fj-body text-[0.875rem] leading-snug text-fj-neutral-600">
+                      <strong className="font-semibold text-fj-ink">Ricky B.</strong>, Founder, Belle Maison
+                      <br />
+                      Store built by FactoryJet on Commerceflo, not Shopify.
+                    </span>
+                  </figcaption>
+                </figure>
+              </div>
+
+              <div className="lg:col-span-5">
+                <p className="fj-eyebrow">STORES WE HAVE BUILT</p>
+                <div className="mt-4 space-y-4">
+                  {PROOF_CASES.map((c) => (
+                    <Link
+                      key={c.client}
+                      href={c.href}
+                      className="block rounded-2xl border border-fj-neutral-200 bg-fj-cream p-6 transition-colors hover:border-[#F05A28]"
+                    >
+                      <p className="font-fj-mono text-[11px] font-medium uppercase tracking-[0.12em] text-[#B23E13]">
+                        {c.market}
+                      </p>
+                      <p className="mt-2 font-fj-display text-[1.25rem] font-bold tracking-[-0.02em] text-fj-ink">
+                        {c.client}
+                      </p>
+                      <p className="mt-2 font-fj-body text-[0.9375rem] leading-relaxed text-fj-neutral-600">{c.what}</p>
+                      <p className="mt-3 font-fj-body text-[0.8125rem] font-semibold text-fj-ink">
+                        {c.platform} &middot; Read the case study <span aria-hidden="true">&rarr;</span>
+                      </p>
+                    </Link>
+                  ))}
+                </div>
+                <p className="mt-5 font-fj-body text-[0.875rem] leading-relaxed text-fj-neutral-600">
+                  500+ projects delivered for businesses in the US, the UK, the UAE and India.{' '}
+                  <Link href="/case-studies" className="font-medium text-[#B23E13] underline underline-offset-2">
+                    See all case studies
+                  </Link>
+                  .
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* ── 3. WHAT GREAT E-COMMERCE LOOKS LIKE ─────────────────────────── */}
         <ServiceExplanation
@@ -810,7 +897,7 @@ export default function EcommerceDevelopmentPage() {
                 </p>
               </div>
               <p>
-                FactoryJet designs every e-commerce store around conversion: where the size guide goes, when the sticky cart appears, how the mobile PDP stacks, what trust signals appear above the fold, and how the checkout flow handles hesitation. We&apos;ve built 120+ Shopify stores and hundreds of WooCommerce and custom builds for brands in India, the US, the UK and the UAE. The data from those builds informs every decision we make on the next one.
+                FactoryJet designs every e-commerce store around conversion: where the size guide goes, when the sticky cart appears, how the mobile PDP stacks, what trust signals appear above the fold, and how the checkout flow handles hesitation. Every store we launch teaches us something about the next one, and those lessons go straight into your build.
               </p>
               <p>
                 We&apos;re platform-agnostic. Shopify, WooCommerce, BigCommerce, headless Next.js, we recommend the right stack for your catalog, your team&apos;s technical comfort, and your revenue stage. Then we build it properly, hand over the code, and get out of the way.
@@ -856,7 +943,7 @@ export default function EcommerceDevelopmentPage() {
           }
         />
 
-        {/* ── 4. THE PROBLEM (DARK) ─────────────────────────────────────────── */}
+        {/* ── 4. THE PROBLEM (DARK, the page's only dark section) ─────────────────────────────────────────── */}
         <StrategicDarkSection
           eyebrow="THE PROBLEM"
           headline="Your store has traffic. The conversion rate is where revenue goes to die."
@@ -874,8 +961,8 @@ export default function EcommerceDevelopmentPage() {
             },
             {
               icon: '💸',
-              title: 'US and UK agencies charge several times more for this',
-              body: 'A mid-tier US or UK e-commerce agency bills a multiple of what we charge for a custom store build, before retainers, migration fees, or app configuration. FactoryJet delivers the same Figma-first design, the same platform engineering quality, and the same Lighthouse audit: fixed-price, milestone-paid, with full code ownership at handoff. We are an India-based engineering team, and we have been shipping e-commerce for clients in the US, the UK and the UAE for over a decade.',
+              title: 'Most agencies disappear after launch day',
+              body: 'The store goes live, the invoice clears, and the agency moves on. Then an app update breaks checkout or a theme change slows every page, and nobody who built it is around. We quote support as part of the plan, not as an afterthought, and the team that built your store is the team that fixes it. We are an India-based engineering team, which is also why a fixed-price build from us usually costs well under a comparable US agency quote.',
             },
           ]}
         />
@@ -887,6 +974,14 @@ export default function EcommerceDevelopmentPage() {
           lead="Discovery before we commit to a platform. Design approval before we commit to code. Full checkout testing before we commit to launch."
           stages={ECOMM_JOURNEY_STAGES}
           closingNote="5 STAGES · 3-14 WEEKS TO LAUNCH · PLATFORM-AGNOSTIC · ZERO DOWNTIME LAUNCH DAY"
+        />
+
+        {/* ── 5b. MID-PAGE CTA ─────────────────────────────────────────────── */}
+        <MidPageCTA
+          headline="Get a fixed quote and a launch date for your store"
+          sub="Tell us what you sell, how many products you have and which platform you are on today. We reply with a platform recommendation, a fixed price and a launch date. No hourly billing, no obligation."
+          label="Get my store quote"
+          note="Bhavesh, our founder, reads every request and usually replies within 2 to 3 hours."
         />
 
         {/* ── 6. WHAT WE BUILD ─────────────────────────────────────────────── */}
@@ -1068,7 +1163,7 @@ export default function EcommerceDevelopmentPage() {
           leadParagraphs={[
             "US e-commerce sales are projected to reach $1.19 trillion in 2025, 21% of all US retail. The businesses capturing the majority of that growth are not the largest brands. They're the mid-size DTC companies with fast, well-built stores that convert mobile traffic efficiently, run automated post-purchase email flows, and don't lose half their ad spend to slow load times.",
             "FactoryJet has served e-commerce businesses in Austin, Miami, Denver, Nashville, Portland, Charlotte, Raleigh, Tampa, and across the US. We understand what a 10-50 person brand needs from an e-commerce store: not enterprise complexity, but professional design, sub-2-second mobile performance, and a checkout flow that doesn't leak customers.",
-            "The businesses we build for aren't buying a new store because their current one looks bad. They're buying it because they calculated the cost of staying on a template: 1% conversion rate × 5,000 monthly visitors × $80 AOV = $4,000/month. 2.3% × 5,000 × $80 = $9,200/month. That $5,200 monthly difference pays for the build in under 60 days.",
+            "The businesses we build for rarely buy a new store because the old one looks bad. They buy it because they did the math on their own numbers. At 5,000 visitors a month and an $80 average order, every half point of conversion rate is worth $2,000 a month in sales. Run the same sum on your store before you talk to anyone, including us.",
           ]}
           bodySlot={
             <>
@@ -1133,12 +1228,67 @@ export default function EcommerceDevelopmentPage() {
           footer="Timelines reflect typical agency and freelancer ranges as of 2026. FactoryJet fixed-price contracts available for all tiers, quoted upfront after a free discovery call."
         />
 
-        {/* ── 11b. TESTIMONIALS ─────────────────────────────────────────────── */}
-        <TestimonialsSection
-          region="us"
-          eyebrow="CLIENT RESULTS"
-          headline="What founders say after we build their e-commerce store"
-        />
+        {/* ── 11b. HOW PRICING WORKS ───────────────────────────────────────── */}
+        {/* Replaces TestimonialsSection here: the same real quote now sits near the
+            top, and that component's US stats carry an unverified "$50M+" figure and
+            render a dark band (this page now keeps a single dark section). */}
+        <section id="pricing-explained" className="scroll-mt-24 bg-fj-cream py-14 md:py-20">
+          <div className="mx-auto max-w-[1120px] px-6 md:px-8">
+            <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-14">
+              <div className="lg:col-span-7">
+                <p className="fj-eyebrow">WHAT IT COSTS</p>
+                <h2 className="mt-3 font-fj-display text-[clamp(1.625rem,3vw,2.25rem)] font-bold leading-[1.15] tracking-[-0.03em] text-fj-ink">
+                  How pricing works for an ecommerce build
+                </h2>
+                <p className="mt-5 font-fj-body text-[1.0625rem] leading-[1.7] text-fj-neutral-600">
+                  We do not publish one price, because a 40-product Shopify store and a B2B store synced to NetSuite are different jobs. What we do promise: one fixed price for an agreed scope, written down before work starts, paid in milestones. Nothing is billed by the hour.
+                </p>
+                <ul className="mt-6 space-y-3 font-fj-body text-[1rem] leading-[1.6] text-fj-neutral-600">
+                  <li><strong className="font-semibold text-fj-ink">Platform.</strong> Shopify and WooCommerce builds cost less than headless or fully custom ones.</li>
+                  <li><strong className="font-semibold text-fj-ink">Catalog size.</strong> More products, variants and custom fields mean more setup and testing.</li>
+                  <li><strong className="font-semibold text-fj-ink">Migration.</strong> Moving products, customers, orders and SEO from an old store adds scope.</li>
+                  <li><strong className="font-semibold text-fj-ink">Integrations.</strong> ERP, 3PL, subscriptions and B2B pricing each add work.</li>
+                  <li><strong className="font-semibold text-fj-ink">Running costs.</strong> Platform and app fees are billed to you directly by Shopify, BigCommerce and the app makers, so you always see them.</li>
+                </ul>
+              </div>
+              <div className="lg:col-span-5">
+                <div className="rounded-2xl border border-fj-neutral-200 bg-white p-7">
+                  <p className="font-fj-mono text-[11px] font-medium uppercase tracking-[0.14em] text-[#B23E13]">
+                    SET A BUDGET FIRST
+                  </p>
+                  <p className="mt-3 font-fj-display text-[1.25rem] font-bold leading-snug tracking-[-0.02em] text-fj-ink">
+                    Our cost guides show typical market ranges, with sources.
+                  </p>
+                  <ul className="mt-5 space-y-3 font-fj-body text-[0.9375rem]">
+                    <li>
+                      <Link href="/blog/ecommerce-website-cost-2026" className="font-medium text-[#B23E13] underline underline-offset-2">
+                        What an ecommerce website costs in 2026
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/blog/shopify-development-cost-2026" className="font-medium text-[#B23E13] underline underline-offset-2">
+                        Shopify development cost in 2026
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/blog/the-true-cost-of-shopify-plus-2026" className="font-medium text-[#B23E13] underline underline-offset-2">
+                        The true cost of Shopify Plus
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/website-cost" className="font-medium text-[#B23E13] underline underline-offset-2">
+                        How much a website costs in 2026
+                      </Link>
+                    </li>
+                  </ul>
+                  <p className="mt-5 border-t border-fj-neutral-100 pt-5 font-fj-body text-[0.875rem] leading-relaxed text-fj-neutral-600">
+                    Want a number for your store? Fill in the form at the top of this page and we will send a fixed quote after a free 30-minute call.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* ── 12. PRICING ──────────────────────────────────────────────────── */}
         <div id="pricing">
@@ -1151,29 +1301,51 @@ export default function EcommerceDevelopmentPage() {
           />
         </div>
 
-        {/* ── 13. WHY FACTORYJET (DARK) ─────────────────────────────────────── */}
-        <StrategicDarkSection
-          eyebrow="WHY FACTORYJET"
-          headline="We've built e-commerce. We know what actually moves revenue."
-          lead="FactoryJet has delivered 500+ projects for businesses across India, the US, the UK and the UAE on every e-commerce platform. We know which design decisions move the needle on conversion, and which ones just look good in an agency proposal."
-          pillars={[
-            {
-              icon: '📐',
-              title: 'Platform-agnostic. We recommend what fits, not what we prefer.',
-              body: 'Most agencies push a single platform due to partnership deals. We build on Shopify, WooCommerce, BigCommerce, and custom Next.js. We recommend solutions based on your catalog, team, and revenue goals, not vendor incentives.',
-            },
-            {
-              icon: '📊',
-              title: 'Conversion-first design backed by 120+ store builds.',
-              body: 'We know from 120+ Shopify builds that sticky carts outperform static ones. Social proof near the Add to Cart button lifts conversion. Every unnecessary checkout field reduces completion by 1% to 2%. We design around real user data, not visual mockups.',
-            },
-            {
-              icon: '🔒',
-              title: 'Your code, your hosting, your GitHub, on launch day.',
-              body: 'The full codebase lands in your repository on launch day. No proprietary builder holds your store hostage. No monthly retainer is required to keep your site running. Any qualified developer can maintain and extend it.',
-            },
-          ]}
-        />
+        {/* ── 13. WHY FACTORYJET (light, was dark) ─────────────────────────── */}
+        {/* Converted to a light band on 2026-09-28 so the page keeps a single dark
+            section, per the page build spec. The "120+ store builds" claim was dropped
+            because it is not in the confirmed-claims list. */}
+        <section className="bg-white py-14 md:py-20">
+          <div className="mx-auto max-w-[1120px] px-6 md:px-8">
+            <p className="fj-eyebrow">WHY FACTORYJET</p>
+            <h2 className="mt-3 max-w-[26ch] font-fj-display text-[clamp(1.625rem,3vw,2.25rem)] font-bold leading-[1.15] tracking-[-0.03em] text-fj-ink">
+              We build the store, then we stay to look after it.
+            </h2>
+            <p className="mt-4 max-w-[62ch] font-fj-body text-[1.0625rem] leading-[1.7] text-fj-neutral-600">
+              FactoryJet has delivered 500+ projects for businesses in the US, the UK, the UAE and India. Design, development, launch and support all come from one team, so nobody hands you off.
+            </p>
+            <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-12">
+              {[
+                {
+                  title: 'We recommend what fits, not what pays us most.',
+                  body: 'We build on Shopify, WooCommerce, BigCommerce and custom Next.js. We pick based on your catalog, your team and your plans, and we will tell you when a simpler setup is enough.',
+                  span: 'md:col-span-5',
+                },
+                {
+                  title: 'Design decisions made for buying, not for the portfolio.',
+                  body: 'Where the size guide sits, when the sticky cart appears, how the mobile product page stacks, which trust signals show near Add to Cart. Every checkout field we remove is one less reason to leave.',
+                  span: 'md:col-span-7',
+                },
+                {
+                  title: 'Your code, your hosting, your GitHub, on launch day.',
+                  body: 'The full codebase lands in your repository on launch day. No proprietary builder holds your store hostage, and any qualified developer can maintain it.',
+                  span: 'md:col-span-7',
+                },
+                {
+                  title: 'Support after launch, from the people who built it.',
+                  body: 'Every build includes a post-launch support window. After that, you can keep us on a monthly retainer for fixes, seasonal updates and new features.',
+                  span: 'md:col-span-5',
+                },
+              ].map((p) => (
+                <div key={p.title} className={`rounded-2xl border border-fj-neutral-200 bg-fj-cream p-7 ${p.span}`}>
+                  <div className="mb-4 h-[3px] w-8 rounded-full bg-[#F05A28]" aria-hidden="true" />
+                  <h3 className="font-fj-display text-[1.1875rem] font-bold leading-snug tracking-[-0.02em] text-fj-ink">{p.title}</h3>
+                  <p className="mt-3 font-fj-body text-[0.9375rem] leading-relaxed text-fj-neutral-600">{p.body}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* ── 13b. HIRE ECOMMERCE DEVELOPERS ────────────────────────────────── */}
         <section className="py-14 md:py-20 bg-[#FAFAF7]">
@@ -1322,13 +1494,13 @@ export default function EcommerceDevelopmentPage() {
         {/* ── 15. FINAL CTA ─────────────────────────────────────────────────── */}
         <div id="final-cta">
           <FinalCTA
-            variant="dark"
+            variant="light"
             eyebrow="READY TO START"
-            headline="Book an E-Commerce Consultation, No Obligation"
-            sub="In 30 minutes, we'll audit your current store or platform, identify what's costing you revenue, recommend the right tech stack, and give you a fixed price. No pitch. No pressure. An honest assessment from engineers who've built 500+ stores."
-            primaryCta={{ label: 'Book Your Free Consultation', modal: true, region: 'us' }}
-            secondaryCta={{ label: 'See Our Portfolio', href: '/portfolio' }}
-            objectionHandler="Fixed price. Full code ownership. Platform-agnostic. 500+ businesses served."
+            headline="Get a fixed quote and a launch date for your store"
+            sub="In a free 30-minute call we look at your current store or plan, point out what is costing you sales, and recommend a platform. Then we send a fixed price and a launch date in writing. No pitch, no pressure."
+            primaryCta={{ label: 'Book a Free Store Call', modal: true, region: 'us' }}
+            secondaryCta={{ label: 'See Case Studies', href: '/case-studies' }}
+            objectionHandler="Fixed price. You own the code. Support after launch. 500+ projects delivered."
           />
         </div>
 

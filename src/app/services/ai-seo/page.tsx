@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 
 import { aiSeoAlternates } from '@/data/hreflangMap';
+import { ORG_ID, FOUNDER_ID } from '@/data/organization';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
 import SiteHeader from '@/components/v2/SiteHeader';
@@ -27,6 +28,15 @@ import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
    from COMPETITORS, the same arrays the page renders. Every schema const declared
    here is rendered into a script tag; do not add one without wiring it up.
    Hreflang: aiSeoAlternates (src/data/hreflangMap.ts).
+   Organization: the full ORGANIZATION_SCHEMA is emitted once by src/app/layout.tsx;
+   this page only references it by ORG_ID (the old per-page Organization stub was a
+   second, thinner node with the same @id and was removed 2026-09-28).
+
+   2026-09-28 traffic check (GA4 08/31-09/27, GSC 08/29-09/26): the "23 sessions at
+   5s" were almost all (direct) visits from Albania, Singapore, China, UAE, Brazil and
+   others at 0s, i.e. bots, not a broken page. Google sends this URL almost no
+   impressions. The "ai seo services" position swing (17 to 44) belonged to
+   /blog/best-ai-seo-agencies-india on India SERPs, not to this page.
 ───────────────────────────────────────────────────────────────────────────── */
 
 const PAGE_URL = 'https://factoryjet.com/services/ai-seo';
@@ -77,13 +87,14 @@ const webPageSchema = {
   dateModified: PAGE_MODIFIED,
   inLanguage: 'en',
   author: {
+    '@id': FOUNDER_ID,
     '@type': 'Person',
     name: 'Bhavesh Barot',
     url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
     jobTitle: 'Founder, FactoryJet',
   },
-  publisher: { '@id': 'https://factoryjet.com/#organization' },
-  about: { '@id': 'https://factoryjet.com/#organization' },
+  publisher: { '@id': ORG_ID },
+  about: { '@id': ORG_ID },
   isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
   speakable: { '@type': 'SpeakableSpecification', cssSelector: ['h1', '[data-speakable]', '.ans'] },
 };
@@ -96,7 +107,7 @@ const serviceSchema = {
   alternateName: ['AI SEO agency', 'AI SEO company', 'AI search optimization', 'SEO agency', 'SEO company'],
   description:
     'AI SEO and classic SEO on one month-to-month retainer: getting a business cited by ChatGPT, Perplexity, Claude, Gemini and Google AI Overviews while its Google rankings climb, with citations per engine and rankings in every monthly report.',
-  provider: { '@id': 'https://factoryjet.com/#organization' },
+  provider: { '@id': ORG_ID },
   areaServed: { '@type': 'Country', name: 'United States' },
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
@@ -136,8 +147,6 @@ const competitorListSchema = {
   })),
 };
 
-const organizationSchema = { '@context': 'https://schema.org', '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' };
-
 export default function AiSeoServicePage() {
   return (
     <>
@@ -145,7 +154,6 @@ export default function AiSeoServicePage() {
       <script id="ai-seo-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script id="ai-seo-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script id="ai-seo-competitor-list-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(competitorListSchema) }} />
-      <script id="ai-seo-organization-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
       <BreadcrumbSchema items={breadcrumbs} />
 
       <SiteHeader />

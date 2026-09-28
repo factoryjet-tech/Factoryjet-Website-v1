@@ -17,7 +17,7 @@ import IndustriesGrid from '@/components/v2/IndustriesGrid';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
-import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
+import MidPageCTA from '@/components/v2/MidPageCTA';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    SEO / Metadata
@@ -769,6 +769,13 @@ export default function AIMarketingAgentUSPage() {
           closingNote="Every stage ends with a working campaign. You see the AI in action before it talks to your entire customer base."
         />
 
+        <MidPageCTA
+          headline="Tell us the campaign you want an agent to run"
+          sub="Name the channel (email, SMS or CRM), the tools you use, such as Klaviyo or HubSpot, and what a person does by hand today. We will tell you what it takes to build, and whether a tool you already pay for covers it."
+          label="Tell us the workflow"
+          note="Bhavesh, our founder, reads every enquiry and usually replies within 2 to 3 hours."
+        />
+
         {/* ── 7. TECH STACK (LIGHT, REVERSED) ──────────────────────────────── */}
         <ServiceExplanation
           eyebrow="TECHNOLOGY"
@@ -951,7 +958,6 @@ export default function AIMarketingAgentUSPage() {
           sectors={MARKETING_INDUSTRIES}
         />
 
-        <GetFreeQuoteCTA />
         {/* ── 13. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"
@@ -1017,7 +1023,7 @@ export default function AIMarketingAgentUSPage() {
         {/* ── 16. FINAL CTA (DARK) ─────────────────────────────────────────── */}
         <div id="final-cta">
           <FinalCTA
-            variant="dark"
+            variant="light"
             eyebrow="GET STARTED"
             headline="Book a Free AI Marketing Strategy Call"
             sub="Tell us your biggest marketing bottleneck. We examine list segmentation and campaign content volume. We map how an AI agent fits your channels. You receive a fixed-price estimate before development starts. No pitch, no pressure."

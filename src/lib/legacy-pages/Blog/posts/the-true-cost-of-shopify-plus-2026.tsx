@@ -32,6 +32,7 @@ export const post: BlogPost = {
   category: 'E-Commerce Development',
   author: 'Bhavesh Barot',
   date: 'August 30, 2026',
+  dateModified: 'Sep 28, 2026',
   readTime: '14 min read',
   imageUrl: '/blog-images/the-true-cost-of-shopify-plus-2026-hero.webp',
   meta: {
@@ -124,6 +125,38 @@ export const post: BlogPost = {
   ],
   content: (
     <>
+
+      <p className="text-lg leading-relaxed mb-6 text-gray-800">
+        When finance leaders evaluate Shopify Plus in 2026, the first number they see is the plan fee: <strong>$2,300 a month on a 3-year term or $2,500 a month on a 1-year term</strong> in the US (<a href={SRC_PLUS_PRICING} target="_blank" rel="noopener noreferrer" className={LINK_CLASS}>Shopify Plus pricing</a>). Treating that as the full cost is the most common budgeting mistake. A brand with $10 million a year in online sales on standard cards pays about $225,000 a year in Shopify Payments card fees at the Plus rate of 2.25%, plus 30 cents per order, on top of $27,600 to $30,000 in plan fees.
+      </p>
+
+      <p className="text-base leading-relaxed mb-6 text-gray-700">
+        This guide breaks down every published line item on Shopify Plus in 2026, using Shopify&apos;s own pricing pages and help center, checked on September 17, 2026. Where Shopify publishes nothing, we say so. If you are leaving Magento, published cost ranges and timelines for the one-time migration project are in our <a href="/replatforming/magento-to-shopify#migration-cost" className="text-[#B23E13] underline">Magento to Shopify Plus migration cost and timeline guide</a>.
+      </p>
+
+      <div className="not-prose my-8 rounded-2xl border border-[#E5DFD7] bg-[#FAFAF7] p-5 md:p-6">
+        <p className="text-base text-slate-800 leading-relaxed mb-4">
+          <strong>Deciding between Plus and Advanced, or planning a move?</strong> Send us your
+          yearly online sales, average order value and the systems your store connects to. We run
+          this cost model on your numbers and send a written estimate for the build before any work
+          starts.
+        </p>
+        <div className="flex flex-wrap items-center gap-3">
+          <a
+            href="/services/shopify-plus-agency"
+            className="inline-flex items-center rounded-lg bg-[#B23E13] px-5 py-3 font-semibold text-white hover:bg-[#8F3210]"
+          >
+            See Shopify Plus agency services
+          </a>
+          <a
+            href="/services/shopify-development"
+            className="inline-flex items-center rounded-lg border border-slate-300 bg-white px-5 py-3 font-semibold text-slate-900 hover:bg-slate-50"
+          >
+            See Shopify development
+          </a>
+        </div>
+      </div>
+
       <div className="bg-gray-50 p-6 rounded-lg mb-8 border border-gray-200">
         <h2 className="text-lg font-bold mb-3 text-gray-900">Table of Contents</h2>
         <ul className="list-disc pl-5 space-y-1 text-blue-700">
@@ -141,14 +174,6 @@ export const post: BlogPost = {
           <li>B2B &amp; DTC on One Store</li>
         </ul>
       </div>
-
-      <p className="text-lg leading-relaxed mb-6 text-gray-800">
-        When finance leaders evaluate Shopify Plus in 2026, the first number they see is the plan fee: <strong>$2,300 a month on a 3-year term or $2,500 a month on a 1-year term</strong> in the US (<a href={SRC_PLUS_PRICING} target="_blank" rel="noopener noreferrer" className={LINK_CLASS}>Shopify Plus pricing</a>). Treating that as the full cost is the most common budgeting mistake. A brand with $10 million a year in online sales on standard cards pays about $225,000 a year in Shopify Payments card fees at the Plus rate of 2.25%, plus 30 cents per order, on top of $27,600 to $30,000 in plan fees.
-      </p>
-
-      <p className="text-base leading-relaxed mb-6 text-gray-700">
-        This guide breaks down every published line item on Shopify Plus in 2026, using Shopify&apos;s own pricing pages and help center, checked on September 17, 2026. Where Shopify publishes nothing, we say so. If you are leaving Magento, published cost ranges and timelines for the one-time migration project are in our <a href="/replatforming/magento-to-shopify#migration-cost" className="text-[#B23E13] underline">Magento to Shopify Plus migration cost and timeline guide</a>.
-      </p>
 
       <h2 className="text-2xl font-bold mt-10 mb-4 text-gray-900">
         1. Shopify Plus 2026 Plan Fees
@@ -462,23 +487,31 @@ export const post: BlogPost = {
         For how FactoryJet builds wholesale on Shopify, see our <a href="/services/shopify-plus-b2b" className={LINK_CLASS}>Shopify Plus B2B service</a>.
       </p>
 
-      <div className="bg-gray-900 text-white p-6 rounded-xl mt-10 mb-6">
-        <h3 className="text-xl font-bold mb-2 text-white">Need a Line-by-Line Shopify Plus Cost Review?</h3>
-        <p className="text-gray-300 text-sm mb-4 leading-relaxed">
-          FactoryJet reviews Shopify Plus costs, replatforming plans, headless builds and ERP integrations, and sends a written scope before any work starts.
+      <div className="not-prose mt-10 mb-6 rounded-2xl border border-[#E5DFD7] bg-[#FAFAF7] p-6 md:p-8">
+        <p className="text-xl md:text-2xl font-bold text-slate-900 mb-2">Need a line-by-line Shopify Plus cost review?</p>
+        <p className="text-slate-700 text-base mb-5 leading-relaxed">
+          FactoryJet reviews Shopify Plus costs, replatforming plans, headless builds and ERP
+          integrations, and sends a written scope before any work starts. After launch, we stay on to
+          support the store.
         </p>
-        <div className="flex flex-wrap gap-4 items-center">
+        <div className="flex flex-wrap gap-3 items-center">
           <a
             href="/services/shopify-plus-agency"
-            className="inline-block bg-orange-700 hover:bg-orange-800 text-white font-semibold px-6 py-2.5 rounded-lg text-sm transition-colors"
+            className="inline-flex items-center rounded-lg bg-[#B23E13] px-5 py-3 font-semibold text-white hover:bg-[#8F3210]"
           >
-            Explore Shopify Plus Agency Services →
+            Explore Shopify Plus agency services
+          </a>
+          <a
+            href="/services/ecommerce-development"
+            className="inline-flex items-center rounded-lg border border-slate-300 bg-white px-5 py-3 font-semibold text-slate-900 hover:bg-slate-50"
+          >
+            See ecommerce development
           </a>
           <a
             href="/services/shopify-migration-agency"
-            className="inline-block border border-gray-700 hover:border-gray-500 text-gray-200 px-6 py-2.5 rounded-lg text-sm transition-colors"
+            className="inline-flex items-center rounded-lg border border-slate-300 bg-white px-5 py-3 font-semibold text-slate-900 hover:bg-slate-50"
           >
-            Explore Migration Services
+            Explore migration services
           </a>
         </div>
       </div>

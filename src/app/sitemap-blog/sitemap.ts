@@ -42,7 +42,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // touching the file. Falls back to build time for malformed dates.
   const posts: MetadataRoute.Sitemap = POSTS.map((post) => ({
     url: `${SITE_URL}/blog/${post.slug}`,
-    lastModified: parsePostDate(post.date, buildTime),
+    lastModified: parsePostDate(post.dateModified ?? post.date, buildTime),
     changeFrequency: CHANGEFREQ.blog as ChangeFreq,
     priority: PRIORITY.blog,
   }))

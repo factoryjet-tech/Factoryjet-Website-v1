@@ -237,6 +237,7 @@ const US_ROUTES: { path: string; source: string }[] = [
   { path: '/tools/ai-agent-roi-calculator',                 source: 'src/app/tools/ai-agent-roi-calculator/page.tsx' },
   { path: '/tools/replatforming-cost-calculator',          source: 'src/app/tools/replatforming-cost-calculator/page.tsx' },
   { path: '/services/ai-customer-support-agents',          source: 'src/app/services/ai-customer-support-agents/page.tsx' },
+  { path: '/services/shopify-ai-agents',                   source: 'src/app/services/shopify-ai-agents/page.tsx' },
   { path: '/services/ai-sdr',                  source: 'src/app/services/ai-sdr/page.tsx' },
   { path: '/services/ai-agent-monitoring',                 source: 'src/app/services/ai-agent-monitoring/page.tsx' },
   { path: '/services/ecommerce-cro-agency',                source: 'src/app/services/ecommerce-cro-agency/page.tsx' },

@@ -10,19 +10,16 @@ import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
 import SiteFooter from '@/components/v2/SiteFooter';
 import Hero from '@/components/v2/Hero';
 import HeroInlineForm from '@/components/HeroInlineForm';
-import ServiceHeroImageBand from '@/components/v2/ServiceHeroImageBand';
-import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
 import StrategicDarkSection from '@/components/v2/StrategicDarkSection';
 import IndustriesGrid from '@/components/v2/IndustriesGrid';
 import ServiceJourneyRow, { type ServiceJourneyStage } from '@/components/v2/ServiceJourneyRow';
-import BoringStatsRow from '@/components/v2/BoringStatsRow';
 import CityContextSection from '@/components/v2/CityContextSection';
 import ComparisonTable, { CompareIcon } from '@/components/v2/ComparisonTable';
 import PricingTiers from '@/components/v2/PricingTiers';
-import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
+import MidPageCTA from '@/components/v2/MidPageCTA';
 import EcommerceRoiCalculator from '@/components/commerce/EcommerceRoiCalculator';
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -83,7 +80,7 @@ export const metadata: Metadata = {
    JSON-LD Schema
 ───────────────────────────────────────────────────────────────────────────── */
 
-const PAGE_MODIFIED = '2026-08-29';
+const PAGE_MODIFIED = '2026-09-28';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -131,7 +128,7 @@ const SHOPIFY_SERVICES = [
     name: 'Custom Shopify Theme Development.',
     description:
       'We design themes in Figma. We write clean Liquid code with custom sections. Your team can edit content directly without developer tickets.',
-    example: 'Clients average 2.3× improvement in mobile add-to-cart rate vs. generic themes.',
+    example: 'Designed around how your customers actually shop, then tested on real phones.',
     linkLabel: 'See theme examples',
     linkHref: '/portfolio',
   },
@@ -210,18 +207,45 @@ const SHOPIFY_JOURNEY_STAGES: ServiceJourneyStage[] = [
   },
 ];
 
-const SHOPIFY_STATS = [
+/* Build timelines. Confirmed by Bhavesh on 2026-09-24 (the ecommerce-development
+   wording every page copies). Do not stretch or shorten them. */
+const SHOPIFY_TIMELINES = [
+  { scope: 'Custom Shopify store', detail: 'Figma design, custom Liquid theme, products and payments', weeks: '3-5 weeks' },
+  { scope: 'Advanced Shopify build', detail: 'Shopify Plus, subscriptions, B2B wholesale or a migration', weeks: '5-8 weeks' },
+  { scope: 'Headless Shopify', detail: 'Hydrogen storefront on the Storefront API', weeks: '8-14 weeks' },
+] as const;
+
+/* Only published, verified case studies from src/data/case-studies. Both run on
+   Commerceflo, not Shopify, and the cards say so. */
+const PROOF_CASES = [
   {
-    value: '2.3×',
-    label: 'Improvement in mobile add-to-cart rate with a custom theme vs. generic.',
-    microcopy: 'Average across FactoryJet Shopify builds in 2024.',
-    categoryLabel: 'CONVERSION LIFT',
+    client: 'Belle Maison',
+    market: 'Wholesale distributor, Mumbai',
+    platform: 'Built on Commerceflo',
+    what: 'One storefront for retail shoppers and trade buyers. Trade accounts log in, see their own prices, and turn a quote into an order without anyone retyping it.',
+    href: '/case-studies/belle-maison-ecommerce-success',
   },
   {
-    value: '120+',
-    label: 'Shopify stores built and launched across DTC, B2B, and enterprise brands.',
-    microcopy: 'Engineered by FactoryJet for performance and high conversions.',
-    categoryLabel: 'STORES LAUNCHED',
+    client: 'GPSUK',
+    market: 'Promotional products, United Kingdom',
+    platform: 'Built on Commerceflo',
+    what: 'A B2B storefront for a supplier whose buyers reorder branded stock. Trade accounts browse the catalogue, get account pricing, and move from quote to order online.',
+    href: '/case-studies/gpsuk-promotional-products',
+  },
+] as const;
+
+const SHOPIFY_STATS = [
+  {
+    value: '97%',
+    label: 'Of projects delivered on time or early.',
+    microcopy: 'You get a launch date on day one and we plan the build backwards from it.',
+    categoryLabel: 'ON-TIME DELIVERY',
+  },
+  {
+    value: '500+',
+    label: 'Projects delivered for businesses in the US, the UK, the UAE and India.',
+    microcopy: 'Stores, websites and custom software, built and supported by one team.',
+    categoryLabel: 'TRACK RECORD',
   },
   {
     value: 'Fixed Price',
@@ -417,7 +441,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How long does a Shopify store build take?',
     answer:
-      'A custom theme on an existing store takes 2–3 weeks from design sign-off. A full store build from scratch takes 3–5 weeks. Shopify Plus or headless Hydrogen builds run 6–10 weeks depending on B2B complexity or custom app requirements. We give you a firm timeline during discovery, because clear scope drives delivery speed.',
+      'A full custom Shopify store takes 3 to 5 weeks. Shopify Plus, subscriptions, B2B wholesale or a migration from another platform takes 5 to 8 weeks. A headless Hydrogen storefront takes 8 to 14 weeks. A theme refresh on a store that is already live is usually quicker. We give you a firm launch date on the first call, because clear scope drives delivery speed.',
   },
   {
     category: 'pricing',
@@ -710,76 +734,144 @@ export default function ShopifyPage() {
       <main className="bg-fj-cream">
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
+        {/* Rewritten 2026-09-28: the old hero sold an unverified "2.3x add-to-cart"
+            figure and a "120+ stores" count that is not in the confirmed-claims list.
+            It now states what we build, for whom and how long it takes, using only
+            the confirmed timelines. */}
         <Hero
-        formSlot={<HeroInlineForm region="us" source="us_services_shopify_development_hero" />}
+          formSlot={<HeroInlineForm region="us" source="us_services_shopify_development_hero" />}
           eyebrow="SHOPIFY DEVELOPMENT · USA"
-          headline="Custom Shopify Stores That Sell, Not Just Look Good"
-          lead="Generic Shopify themes convert below 1%. FactoryJet builds custom Shopify and Shopify Plus stores, designed in Figma, built in Liquid, that are fast, on-brand, and optimized for your specific customer journey. engineered for measurable outcomes."
-          secondaryCta={{ label: 'See Pricing', href: '#pricing' }}
+          headline="Custom Shopify stores for US brands, designed, built and supported by one team."
+          lead="We design your store in Figma, build it in clean Liquid, move your products, customers and SEO over, and stay on after launch. Most custom Shopify stores go live in 3 to 5 weeks. You get a fixed quote before work starts, and you own the theme code."
+          secondaryCta={{ label: 'How pricing works', href: '#pricing-explained' }}
           trustItems={[
-            '120+ Shopify stores launched.',
-            'Fixed-price, quoted upfront.',
-            'Milestone-paid delivery.',
+            'Registered Shopify Partner',
+            'Fixed quote before work starts',
+            '97% delivered on time or early',
           ]}
           rightSlot={
-            <div className="rounded-2xl border border-fj-neutral-200 bg-white p-8 shadow-sm">
+            <div className="rounded-2xl border border-fj-neutral-200 bg-white p-7 md:p-8">
               <p
                 className="font-fj-mono font-medium uppercase text-[#B23E13]"
                 style={{ fontSize: '11px', letterSpacing: '0.14em' }}
               >
-                WHAT A CUSTOM SHOPIFY STORE CHANGES
+                WHAT YOU GET, AND HOW LONG IT TAKES
               </p>
-              <p className="mt-4 font-fj-display text-[2rem] font-medium leading-[1.1] tracking-[-0.025em] text-fj-ink">
-                Your theme is your top sales rep. Most stores have it working against them.
+              <p className="mt-3 font-fj-display text-[1.5rem] font-bold leading-[1.2] tracking-[-0.02em] text-fj-ink">
+                Tell us where your store is today. We give you a launch date on the first call.
               </p>
-              <div className="mt-6 space-y-3">
-                {[
-                  'Generic themes load in 4–6s on mobile. Up to 53% of visitors leave before adding items to cart.',
-                  'Custom themes load in under 2 seconds. Brands average a 2.3× lift in add-to-cart rate.',
-                  'Confusing menus and buried CTAs hurt sales. Clear hierarchy lowers abandonment rates.',
-                ].map((point, i) => (
-                  <div key={i} className="flex items-start gap-3">
-                    <span className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#F05A28]/10 font-fj-mono text-[10px] font-bold text-[#B23E13]">
-                      {i + 1}
-                    </span>
-                    <p className="font-fj-body text-[0.875rem] leading-[1.5] text-fj-neutral-600">
-                      {point}
+              <ul className="mt-5 divide-y divide-fj-neutral-100 border-y border-fj-neutral-100">
+                {SHOPIFY_TIMELINES.map((row) => (
+                  <li key={row.scope} className="flex items-start justify-between gap-4 py-3.5">
+                    <div>
+                      <p className="font-fj-body text-[0.9375rem] font-semibold text-fj-ink">{row.scope}</p>
+                      <p className="mt-0.5 font-fj-body text-[0.8125rem] text-fj-neutral-600">{row.detail}</p>
+                    </div>
+                    <p className="shrink-0 font-fj-display text-[1rem] font-bold tracking-[-0.02em] text-[#B23E13]">
+                      {row.weeks}
                     </p>
-                  </div>
+                  </li>
                 ))}
-              </div>
-              <div className="mt-6 border-t border-fj-neutral-100 pt-6">
-                <p className="font-fj-body text-[0.8125rem] text-fj-neutral-400">
-                  Avg. 2.3× add-to-cart improvement. Custom theme vs. Shopify default.
-                </p>
-              </div>
+              </ul>
+              <p className="mt-5 font-fj-body text-[0.875rem] leading-relaxed text-fj-neutral-600">
+                Every build includes custom design, payments and Shop Pay, shipping and tax setup, technical SEO, analytics, checkout testing on real phones, and support after launch.
+              </p>
             </div>
           }
         />
 
-        {/* ── 1b. HERO IMAGE BAND ──────────────────────────────────────────── */}
-        <ServiceHeroImageBand
-          imageSrc="/images/services/card-shopify.webp"
-          imageAlt="Custom Shopify storefront on a MacBook with a skincare product, FactoryJet Shopify development"
-          stats={[
-            { value: '120+', label: 'Shopify Stores Delivered.' },
-            { value: 'DTC + B2B', label: 'On one Shopify store.' },
-            { value: 'Fixed Price', label: 'Confirmed Upfront, No Surprises.' },
-            { value: 'Decade+', label: 'Building e-commerce.' },
-          ]}
-        />
+        {/* ── 2. SHORT ANSWER + PROOF ──────────────────────────────────────── */}
+        {/* Replaces the hero image band and BigThreeTrustBlock (whose showcase
+            variant hardcodes "7-day delivery", contradicting the 3-5 week Shopify
+            timeline). Proof is only published case studies plus a verbatim quote,
+            and it says plainly that those stores run on Commerceflo, not Shopify. */}
+        <section className="border-y border-fj-neutral-200 bg-white py-14 md:py-20">
+          <div className="mx-auto max-w-[1120px] px-6 md:px-8">
+            <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-14">
+              <div className="lg:col-span-7">
+                <p className="fj-eyebrow">THE SHORT ANSWER</p>
+                <h2 className="mt-3 font-fj-display text-[clamp(1.625rem,3vw,2.25rem)] font-bold leading-[1.15] tracking-[-0.03em] text-fj-ink">
+                  What a Shopify development agency should do for you
+                </h2>
+                <p
+                  data-speakable
+                  className="mt-5 font-fj-body text-[1.0625rem] leading-[1.7] text-fj-neutral-600"
+                >
+                  FactoryJet is a registered Shopify Partner that designs, builds and supports custom Shopify stores for US brands. A custom-theme store takes 3 to 5 weeks. Shopify Plus, subscriptions, B2B wholesale or a migration takes 5 to 8 weeks. A headless Hydrogen storefront takes 8 to 14 weeks. You get one fixed price after a free call, you pay in milestones, and the theme code lands in your GitHub on launch day. After launch, the same team stays on for fixes and improvements.
+                </p>
+                <p className="mt-4 font-fj-body text-[1rem] leading-[1.7] text-fj-neutral-600">
+                  Still deciding on a platform? Read{' '}
+                  <Link href="/blog/shopify-vs-woocommerce-us-small-business-2026" className="font-medium text-[#B23E13] underline underline-offset-2">
+                    Shopify vs WooCommerce for US small businesses
+                  </Link>
+                  , or see all our{' '}
+                  <Link href="/services/ecommerce-development" className="font-medium text-[#B23E13] underline underline-offset-2">
+                    ecommerce development services
+                  </Link>
+                  .
+                </p>
 
-        {/* ── 2. TRUST STATS ───────────────────────────────────────────────── */}
-        <BigThreeTrustBlock
-          eyebrow="BY THE NUMBERS"
-          headline="120+ Shopify stores built. A decade-plus of e-commerce. US brands trust the results."
-        />
+                <figure className="mt-8 rounded-2xl border border-fj-neutral-200 bg-fj-cream p-6 md:p-7">
+                  <blockquote className="font-fj-display text-[1.125rem] font-semibold leading-[1.45] tracking-[-0.01em] text-fj-ink">
+                    &ldquo;We were live in 6 days, I genuinely did not believe that was possible. The design is stunning, the WhatsApp integration brings in inquiries every day, and the site has stayed lightning fast.&rdquo;
+                  </blockquote>
+                  <figcaption className="mt-5 flex items-center gap-3">
+                    <img
+                      src="/images/testimonials/ricky-belle-maison-128.webp"
+                      alt="Ricky B., founder of Belle Maison"
+                      width={44}
+                      height={44}
+                      loading="lazy"
+                      className="h-11 w-11 rounded-full object-cover"
+                    />
+                    <span className="font-fj-body text-[0.875rem] leading-snug text-fj-neutral-600">
+                      <strong className="font-semibold text-fj-ink">Ricky B.</strong>, Founder, Belle Maison
+                      <br />
+                      Store built by FactoryJet on Commerceflo, not Shopify.
+                    </span>
+                  </figcaption>
+                </figure>
+              </div>
+
+              <div className="lg:col-span-5">
+                <p className="fj-eyebrow">COMMERCE WORK WE HAVE PUBLISHED</p>
+                <div className="mt-4 space-y-4">
+                  {PROOF_CASES.map((c) => (
+                    <Link
+                      key={c.client}
+                      href={c.href}
+                      className="block rounded-2xl border border-fj-neutral-200 bg-fj-cream p-6 transition-colors hover:border-[#F05A28]"
+                    >
+                      <p className="font-fj-mono text-[11px] font-medium uppercase tracking-[0.12em] text-[#B23E13]">
+                        {c.market}
+                      </p>
+                      <p className="mt-2 font-fj-display text-[1.25rem] font-bold tracking-[-0.02em] text-fj-ink">
+                        {c.client}
+                      </p>
+                      <p className="mt-2 font-fj-body text-[0.9375rem] leading-relaxed text-fj-neutral-600">{c.what}</p>
+                      <p className="mt-3 font-fj-body text-[0.8125rem] font-semibold text-fj-ink">
+                        {c.platform} &middot; Read the case study <span aria-hidden="true">&rarr;</span>
+                      </p>
+                    </Link>
+                  ))}
+                </div>
+                <p className="mt-5 font-fj-body text-[0.875rem] leading-relaxed text-fj-neutral-600">
+                  500+ projects delivered for businesses in the US, the UK, the UAE and India.{' '}
+                  <Link href="/case-studies" className="font-medium text-[#B23E13] underline underline-offset-2">
+                    See all case studies
+                  </Link>
+                  .
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* ── 3. WHY SHOPIFY + CUSTOM THEME ───────────────────────────────── */}
         <ServiceExplanation
           eyebrow="WHY CUSTOM SHOPIFY"
           headline="Shopify Is the Right Platform. A Generic Theme Is the Wrong Move."
-          lead="Shopify is the world's leading e-commerce platform for a reason. But 90% of Shopify stores run on the same five themes, and wonder why their conversion rate is 0.8%."
+          lead="Shopify is the right platform for most US brands. But thousands of stores run on the same handful of free themes, and shoppers can tell."
           body={
             <>
               <div className="flex flex-wrap gap-2" aria-hidden>
@@ -807,9 +899,9 @@ export default function ShopifyPage() {
               {/* Mini conversion stats, aria-hidden decorative */}
               <div className="grid grid-cols-3 gap-3" aria-hidden>
                 {[
-                  { value: '0.8%', label: 'avg. conv. rate, generic theme' },
-                  { value: '2.3×', label: 'lift with custom theme' },
-                  { value: '309ms', label: "Shopify's avg. TTFB" },
+                  { value: 'Figma', label: 'you approve every page first' },
+                  { value: 'Liquid', label: 'clean, editable theme code' },
+                  { value: 'GitHub', label: 'your code, from launch day' },
                 ].map((b) => (
                   <div
                     key={b.value}
@@ -836,11 +928,11 @@ export default function ShopifyPage() {
                   className="font-fj-display font-semibold text-fj-ink"
                   style={{ fontSize: '1.1875rem', lineHeight: 1.35, letterSpacing: '-0.02em' }}
                 >
-                  The theme is not cosmetic. It&apos;s the difference between a 1% and a 3% conversion rate.
+                  The theme is not cosmetic. It decides how easily a shopper gets from product page to paid order.
                 </p>
               </div>
               <p>
-                FactoryJet has built Shopify stores since the platform launched. We&apos;ve seen what generic themes cost brands in lost revenue, and what a properly engineered, conversion-optimized custom theme returns. We design in Figma. You approve every page before we build. Then we code in Liquid with high performance and clean SEO.
+                We have seen what generic themes cost brands in lost sales, and what a properly built custom theme changes. We design in Figma. You approve every page before we build. Then we code in Liquid with high performance and clean SEO.
               </p>
               <p>
                 We work with DTC brands and B2B wholesalers. We serve fashion and apparel companies. We also support food brands and high-AOV lifestyle retailers across the US. The industries differ; the standard of engineering doesn&apos;t.
@@ -861,9 +953,8 @@ export default function ShopifyPage() {
                 {[
                   { metric: 'Lighthouse Performance', score: '95+', note: 'custom theme, optimized images' },
                   { metric: 'Lighthouse SEO', score: '100', note: 'schema, canonical, sitemaps' },
-                  { metric: 'Mobile Add-to-Cart Rate', score: '2.3×', note: 'vs. generic theme avg.' },
-                  { metric: 'Time to First Byte', score: '<310ms', note: "Shopify's global CDN" },
-                  { metric: 'Checkout Conversion', score: '+15%', note: 'Shopify checkout vs. custom' },
+                  { metric: 'Checkout testing', score: 'Real devices', note: 'iOS and Android, Shop Pay, PayPal, Stripe' },
+                  { metric: 'Theme code', score: 'Yours', note: 'delivered to your GitHub on launch day' },
                   { metric: 'Core Web Vitals', score: 'Green', note: 'all three: LCP, CLS, INP' },
                 ].map((item) => (
                   <div key={item.metric} className="flex items-center justify-between gap-4 py-3.5">
@@ -887,11 +978,11 @@ export default function ShopifyPage() {
           }
         />
 
-        {/* ── 4. THE PROBLEM (DARK) ─────────────────────────────────────────── */}
+        {/* ── 4. THE PROBLEM (DARK, the page's only dark section) ─────────────────────────────────────────── */}
         <StrategicDarkSection
           eyebrow="THE PROBLEM"
           headline="Your Shopify store looks fine. It's the conversion rate that's costing you."
-          lead="Most Shopify stores leave 50–70% of their revenue on the table. Not because their product is wrong, because their storefront is built for convenience, not conversion."
+          lead="Most Shopify stores lose sales they never see. Not because the product is wrong, but because the storefront was set up for convenience, not for buying."
           pillars={[
             {
               icon: '🐢',
@@ -905,8 +996,8 @@ export default function ShopifyPage() {
             },
             {
               icon: '💸',
-              title: 'US Shopify agencies charge multiples higher for this.',
-              body: 'A mid-tier US agency bills a multiple of our rate for custom theme development. FactoryJet delivers the same Figma-first design, clean Liquid engineering, and Lighthouse performance at a fixed price.',
+              title: 'Most agencies disappear after launch day.',
+              body: 'The store goes live, the invoice clears, and the agency moves on. Then an app update breaks checkout and nobody who built it is around. We plan support into the project, and the team that built your store is the team that fixes it. Our engineering team is in India, which is also why a fixed-price build usually costs well under a comparable US agency quote.',
             },
           ]}
         />
@@ -918,6 +1009,14 @@ export default function ShopifyPage() {
           lead="A structured build process with design approval before engineering, a staging store before DNS switch, and a full Lighthouse audit before you sign off."
           stages={SHOPIFY_JOURNEY_STAGES}
           closingNote="5 STAGES · 3–5 WEEKS TO LAUNCH · FIGMA APPROVAL BEFORE BUILD · ZERO DOWNTIME LAUNCH."
+        />
+
+        {/* ── 5b. MID-PAGE CTA ─────────────────────────────────────────────── */}
+        <MidPageCTA
+          headline="Get a fixed quote and a launch date for your Shopify store"
+          sub="Tell us what you sell, how many products you have and whether you are already on Shopify. We reply with a scope, a fixed price and a launch date. No hourly billing, no obligation."
+          label="Get my Shopify quote"
+          note="Bhavesh, our founder, reads every request and usually replies within 2 to 3 hours."
         />
 
         {/* ── 6. WHAT WE BUILD ─────────────────────────────────────────────── */}
@@ -1098,7 +1197,7 @@ export default function ShopifyPage() {
           leadParagraphs={[
             "Shopify powers 29% of all e-commerce websites globally and holds the number one market share position in the United States. It processes over $378 billion in gross merchandise volume annually across 2.85 million live stores. The infrastructure is exceptional. The average store's conversion rate, around 1.4%, is not.",
             "FactoryJet builds custom Shopify stores for high-growth US brands across the country. We understand what DTC brands, B2B wholesalers, and local retailers need. They need professional design, fast product pages, and checkout flows that retain customers without excessive technical debt.",
-            "The brands we build for run the numbers first. Improving conversion from 1% to 2.3% on 5,000 monthly visitors at an $80 AOV yields $52,000 in additional annual revenue from the exact same traffic.",
+            "The brands we build for run the numbers first. At 5,000 visitors a month and an $80 average order, every half point of conversion rate is worth $2,000 a month in sales. Do that sum on your own store before you talk to any agency, including us.",
           ]}
           bodySlot={
             <>
@@ -1148,12 +1247,67 @@ export default function ShopifyPage() {
           footer="Timelines reflect typical US market ranges as of 2026. FactoryJet fixed-price contracts available for all tiers, quoted upfront after a free discovery call."
         />
 
-        {/* ── 11b. TESTIMONIALS ─────────────────────────────────────────────── */}
-        <TestimonialsSection
-          region="us"
-          eyebrow="CLIENT RESULTS"
-          headline="What founders say after we build their Shopify store"
-        />
+        {/* ── 11b. HOW PRICING WORKS ───────────────────────────────────────── */}
+        {/* Replaces TestimonialsSection here: the same real quote now sits near the
+            top, and that component's US stats carry an unverified "$50M+" figure and
+            render a dark band (this page now keeps a single dark section). */}
+        <section id="pricing-explained" className="scroll-mt-24 bg-fj-cream py-14 md:py-20">
+          <div className="mx-auto max-w-[1120px] px-6 md:px-8">
+            <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-14">
+              <div className="lg:col-span-7">
+                <p className="fj-eyebrow">WHAT IT COSTS</p>
+                <h2 className="mt-3 font-fj-display text-[clamp(1.625rem,3vw,2.25rem)] font-bold leading-[1.15] tracking-[-0.03em] text-fj-ink">
+                  How pricing works for a Shopify build
+                </h2>
+                <p className="mt-5 font-fj-body text-[1.0625rem] leading-[1.7] text-fj-neutral-600">
+                  We do not publish one price, because a 40-product theme build and a Shopify Plus B2B store synced to NetSuite are different jobs. What we do promise: one fixed price for an agreed scope, written down before work starts, paid in milestones. Nothing is billed by the hour.
+                </p>
+                <ul className="mt-6 space-y-3 font-fj-body text-[1rem] leading-[1.6] text-fj-neutral-600">
+                  <li><strong className="font-semibold text-fj-ink">Theme work.</strong> A custom theme costs more than adjusting a premium one, and less than a headless Hydrogen build.</li>
+                  <li><strong className="font-semibold text-fj-ink">Catalog size.</strong> More products, variants and custom fields mean more setup and testing.</li>
+                  <li><strong className="font-semibold text-fj-ink">Migration.</strong> Moving products, customers, orders and SEO from an old store adds scope.</li>
+                  <li><strong className="font-semibold text-fj-ink">Integrations.</strong> ERP, 3PL, subscriptions and B2B pricing each add work.</li>
+                  <li><strong className="font-semibold text-fj-ink">Running costs.</strong> Platform and app fees are billed to you directly by Shopify and the app makers, so you always see them.</li>
+                </ul>
+              </div>
+              <div className="lg:col-span-5">
+                <div className="rounded-2xl border border-fj-neutral-200 bg-white p-7">
+                  <p className="font-fj-mono text-[11px] font-medium uppercase tracking-[0.14em] text-[#B23E13]">
+                    SET A BUDGET FIRST
+                  </p>
+                  <p className="mt-3 font-fj-display text-[1.25rem] font-bold leading-snug tracking-[-0.02em] text-fj-ink">
+                    Our cost guides show typical market ranges, with sources.
+                  </p>
+                  <ul className="mt-5 space-y-3 font-fj-body text-[0.9375rem]">
+                    <li>
+                      <Link href="/blog/ecommerce-website-cost-2026" className="font-medium text-[#B23E13] underline underline-offset-2">
+                        What an ecommerce website costs in 2026
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/blog/shopify-development-cost-2026" className="font-medium text-[#B23E13] underline underline-offset-2">
+                        Shopify development cost in 2026
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/blog/the-true-cost-of-shopify-plus-2026" className="font-medium text-[#B23E13] underline underline-offset-2">
+                        The true cost of Shopify Plus
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/website-cost" className="font-medium text-[#B23E13] underline underline-offset-2">
+                        How much a website costs in 2026
+                      </Link>
+                    </li>
+                  </ul>
+                  <p className="mt-5 border-t border-fj-neutral-100 pt-5 font-fj-body text-[0.875rem] leading-relaxed text-fj-neutral-600">
+                    Want a number for your store? Fill in the form at the top of this page and we will send a fixed quote after a free 30-minute call.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* ── 12. PRICING ──────────────────────────────────────────────────── */}
         <div id="pricing">
@@ -1166,29 +1320,51 @@ export default function ShopifyPage() {
           />
         </div>
 
-        {/* ── 13. WHY FACTORYJET (DARK) ─────────────────────────────────────── */}
-        <StrategicDarkSection
-          eyebrow="WHY FACTORYJET"
-          headline="We've built 120+ Shopify stores. Not slide decks about them."
-          lead="FactoryJet has been building e-commerce. We know what moves the needle on a Shopify product page, and what looks impressive in a proposal but doesn't affect your conversion rate."
-          pillars={[
-            {
-              icon: '🎯',
-              title: 'Conversion-first design, not portfolio-first',
-              body: 'A Shopify theme\'s job is to sell. We design around your specific customer\'s decision-making process, where trust signals go, how the size guide surfaces, when the sticky cart appears, where to put the review count. These aren\'t aesthetic decisions. They\'re conversion decisions backed by 120+ builds of data.',
-            },
-            {
-              icon: '⚡',
-              title: 'Figma approval before a line of Liquid',
-              body: 'We show you desktop and mobile mockups for every key page before opening a code editor. If the direction is wrong, we fix it in Figma, not after 3 weeks of engineering. This is how we deliver in 3–5 weeks when traditional agencies quote 6 months.',
-            },
-            {
-              icon: '🔒',
-              title: 'Your code, your GitHub, launch day',
-              body: 'The full Liquid codebase lands in your GitHub repository the day you go live. No proprietary builder, no FactoryJet platform subscription, no lock-in. Any Shopify developer can maintain it. If you outgrow us, or outgrow Shopify entirely, you walk away with a real, documented codebase.',
-            },
-          ]}
-        />
+        {/* ── 13. WHY FACTORYJET (light, was dark) ─────────────────────────── */}
+        {/* Converted to a light band on 2026-09-28 so the page keeps a single dark
+            section, per the page build spec. The "120+ store builds" claim was dropped
+            because it is not in the confirmed-claims list. */}
+        <section className="bg-white py-14 md:py-20">
+          <div className="mx-auto max-w-[1120px] px-6 md:px-8">
+            <p className="fj-eyebrow">WHY FACTORYJET</p>
+            <h2 className="mt-3 max-w-[26ch] font-fj-display text-[clamp(1.625rem,3vw,2.25rem)] font-bold leading-[1.15] tracking-[-0.03em] text-fj-ink">
+              We build the store, then we stay to look after it.
+            </h2>
+            <p className="mt-4 max-w-[62ch] font-fj-body text-[1.0625rem] leading-[1.7] text-fj-neutral-600">
+              We are a registered Shopify Partner with 500+ projects delivered across the US, the UK, the UAE and India. Design, Liquid development, launch and support all come from one team, so nobody hands you off.
+            </p>
+            <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-12">
+              {[
+                {
+                  title: 'We recommend the smallest build that works.',
+                  body: 'If a premium theme with a few custom sections will do the job, we will say so. If you need Plus or headless, we will explain why in plain numbers before you commit.',
+                  span: 'md:col-span-5',
+                },
+                {
+                  title: 'Design decisions made for buying, not for the portfolio.',
+                  body: 'Where the size guide sits, when the sticky cart appears, how the mobile product page stacks, which trust signals show near Add to Cart. Every checkout field we remove is one less reason to leave.',
+                  span: 'md:col-span-7',
+                },
+                {
+                  title: 'Your code, your hosting, your GitHub, on launch day.',
+                  body: 'The full Liquid codebase lands in your GitHub on launch day. No proprietary builder, no lock-in, and any Shopify developer can maintain it.',
+                  span: 'md:col-span-7',
+                },
+                {
+                  title: 'Support after launch, from the people who built it.',
+                  body: 'Every build includes a post-launch support window. After that, you can keep us on a monthly retainer for fixes, seasonal updates and new features.',
+                  span: 'md:col-span-5',
+                },
+              ].map((p) => (
+                <div key={p.title} className={`rounded-2xl border border-fj-neutral-200 bg-fj-cream p-7 ${p.span}`}>
+                  <div className="mb-4 h-[3px] w-8 rounded-full bg-[#F05A28]" aria-hidden="true" />
+                  <h3 className="font-fj-display text-[1.1875rem] font-bold leading-snug tracking-[-0.02em] text-fj-ink">{p.title}</h3>
+                  <p className="mt-3 font-fj-body text-[0.9375rem] leading-relaxed text-fj-neutral-600">{p.body}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* ── 13b. HIRE A SHOPIFY DEVELOPER ─────────────────────────────────── */}
         <section className="py-14 md:py-20 bg-[#FAFAF7]">
@@ -1306,13 +1482,13 @@ export default function ShopifyPage() {
         {/* ── 15. FINAL CTA ─────────────────────────────────────────────────── */}
         <div id="final-cta">
           <FinalCTA
-            variant="dark"
+            variant="light"
             eyebrow="READY TO START"
-            headline="Book a Shopify Store Audit, No Obligation"
-            sub="In 30 minutes, we'll audit your current store or platform, identify the specific pages losing you the most revenue, and give you a fixed price to fix it. No pitch. No pressure. An honest assessment from engineers who've built 120+ stores."
+            headline="Book a free Shopify store audit"
+            sub="In 30 minutes we look at your current store or plan, point out the pages losing you the most sales, and recommend what to fix first. Then we send a fixed price and a launch date in writing. No pitch, no pressure."
             primaryCta={{ label: 'Book Your Free Store Audit', modal: true, region: 'us' }}
-            secondaryCta={{ label: 'See Our Portfolio', href: '/portfolio' }}
-            objectionHandler="Fixed price. Full code ownership. 120+ Shopify stores delivered."
+            secondaryCta={{ label: 'See Case Studies', href: '/case-studies' }}
+            objectionHandler="Fixed price. You own the code. Support after launch. Registered Shopify Partner."
           />
         </div>
 

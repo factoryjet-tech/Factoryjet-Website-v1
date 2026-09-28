@@ -9,7 +9,6 @@ import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
 import Hero from '@/components/v2/Hero';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
-import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
 import StrategicDarkSection from '@/components/v2/StrategicDarkSection';
 import IndustriesGrid from '@/components/v2/IndustriesGrid';
@@ -17,9 +16,9 @@ import ServiceJourneyRow, { type ServiceJourneyStage } from '@/components/v2/Ser
 import BoringStatsRow from '@/components/v2/BoringStatsRow';
 import ComparisonTable, { CompareIcon } from '@/components/v2/ComparisonTable';
 import PricingTiers from '@/components/v2/PricingTiers';
-import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
+import MidPageCTA from '@/components/v2/MidPageCTA';
 
 /* ----------------------------------------------------------------------------─
    SEO / Metadata
@@ -34,7 +33,7 @@ import FinalCTA from '@/components/v2/FinalCTA';
 export const metadata: Metadata = {
   title: 'WooCommerce Development Agency USA | FactoryJet',
   description:
-    'Hire expert US WooCommerce developers. Custom store builds, plugins, integrations, and performance optimization. Fixed-price, milestone-paid.',
+    'Custom WooCommerce stores, plugins and B2B features for US businesses. Most stores live in 3 to 5 weeks, fixed quote upfront, 30 days of support included.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
@@ -82,7 +81,7 @@ export const metadata: Metadata = {
 
 // Freshness signal. Benchmark: 56% of AI-Overview-cited pages carry it.
 // Keep honest: bump when the page's content actually changes.
-const PAGE_MODIFIED = '2026-08-04';
+const PAGE_MODIFIED = '2026-09-28';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -160,12 +159,42 @@ const JOURNEY_STAGES: ServiceJourneyStage[] = [
   },
 ];
 
+/* Only published, verified case studies from src/data/case-studies. Both run on
+   Commerceflo, not WooCommerce, and the cards say so. */
+const PROOF_CASES = [
+  {
+    client: 'Belle Maison',
+    market: 'Wholesale distributor, Mumbai',
+    platform: 'Built on Commerceflo',
+    what: 'One storefront for retail shoppers and trade buyers. Trade accounts log in, see their own prices, and turn a quote into an order without anyone retyping it.',
+    href: '/case-studies/belle-maison-ecommerce-success',
+  },
+  {
+    client: 'GPSUK',
+    market: 'Promotional products, United Kingdom',
+    platform: 'Built on Commerceflo',
+    what: 'A B2B storefront for a supplier whose buyers reorder branded stock. Trade accounts browse the catalogue, get account pricing, and move from quote to order online.',
+    href: '/case-studies/gpsuk-promotional-products',
+  },
+] as const;
+
+/* Who we build WooCommerce stores for. Replaces IndustriesGrid's default
+   showcase, which renders unverified "+38% / +52%" result stats on a dark band. */
+const WOO_SECTORS = [
+  { name: 'Content-led brands', description: 'You already publish recipes, guides or reviews on WordPress and want the shop on the same site, so content and products share one login and one SEO footprint.' },
+  { name: 'B2B wholesalers', description: 'Role-based pricing, hidden retail prices, bulk order forms, purchase orders and net terms, built with hooks and filters so updates never undo them.' },
+  { name: 'Subscription businesses', description: 'Replenishment products, boxes and memberships on WooCommerce Subscriptions, with pause, skip and upgrade flows your customers can run themselves.' },
+  { name: 'Makers with complex products', description: 'Furniture, apparel and made-to-order goods with configurators, conditional options and pricing that changes with every choice.' },
+  { name: 'Stores leaving Shopify', description: 'Products, customers, orders and every old URL moved over with 301 redirects, and Shopify apps replaced with plugins or custom code.' },
+  { name: 'Slow or broken stores', description: 'An audit of hosting, caching, plugins and checkout, then a fixed-price list of fixes. Often cheaper than a rebuild.' },
+] as const;
+
 const STATS = [
   {
-    value: 'Fixed Price',
-    label: 'scoped and quoted upfront for a custom WooCommerce store.',
-    microcopy: 'custom theme, your product catalog, full integrations.',
-    categoryLabel: 'PRICING.',
+    value: '3-5 weeks',
+    label: 'for a custom-theme WooCommerce store.',
+    microcopy: '5-8 weeks with subscriptions, B2B pricing or a migration.',
+    categoryLabel: 'TIMELINE.',
   },
   {
     value: 'Fixed Price',
@@ -174,10 +203,10 @@ const STATS = [
     categoryLabel: 'PRICING MODEL.',
   },
   {
-    value: '25+',
-    label: 'years of WordPress and WooCommerce development.',
-    microcopy: '500+ e-commerce projects delivered for US businesses.',
-    categoryLabel: 'EXPERIENCE.',
+    value: '97%',
+    label: 'of projects delivered on time or early.',
+    microcopy: '500+ projects delivered for businesses in the US, the UK, the UAE and India.',
+    categoryLabel: 'ON-TIME DELIVERY.',
   },
 ];
 
@@ -471,39 +500,16 @@ const howToSchema = {
   '@context': 'https://schema.org',
   '@type': 'HowTo',
   name: 'How FactoryJet builds your WooCommerce store',
-  description: 'Our process for delivering professional, high-performance WooCommerce stores for US brands.',
-  step: [
-    {
-      '@type': 'HowToStep',
-      position: 1,
-      name: 'Day 1 | Discovery Call',
-      text: 'We learn your business, goals, and target audience. We define the sitemap, content strategy, and technical requirements.',
-    },
-    {
-      '@type': 'HowToStep',
-      position: 2,
-      name: 'Day 2 | Strategy & Structure',
-      text: 'We finalize your site architecture, wireframes, and content outline. You approve the plan before any design begins.',
-    },
-    {
-      '@type': 'HowToStep',
-      position: 3,
-      name: 'Days 3-4 | Design',
-      text: 'We design every page with your brand identity, mobile-first layouts, and conversion-focused UX. You review and approve all designs.',
-    },
-    {
-      '@type': 'HowToStep',
-      position: 4,
-      name: 'Days 5-6 | Development & SEO',
-      text: 'We build your site in Next.js or WordPress, optimize Core Web Vitals, add structured data, and connect all integrations.',
-    },
-    {
-      '@type': 'HowToStep',
-      position: 5,
-      name: 'Day 7 | Launch',
-      text: 'Your website goes live. We handle DNS, SSL, final QA, and provide training plus 30-day post-launch support.',
-    },
-  ],
+  description: 'Our process for delivering custom WooCommerce stores, typically 3 to 14 weeks depending on scope.',
+  totalTime: 'P98D',
+  // Derived from JOURNEY_STAGES (the visible process section) so schema and page
+  // cannot drift. The old steps described a 7-day Next.js website build.
+  step: JOURNEY_STAGES.map((stage, index) => ({
+    '@type': 'HowToStep',
+    position: index + 1,
+    name: stage.title,
+    text: stage.description,
+  })),
 };
 
 /* ----------------------------------------------------------------------------─
@@ -539,10 +545,15 @@ export default function WoocommerceDevelopmentPage() {
         {/* -- 1. HERO -------------------------------------------------------- */}
         <Hero
         formSlot={<HeroInlineForm region="us" source="us_services_woocommerce_development_hero" />}
-          eyebrow="WOOCOMMERCE DEVELOPMENT SERVICES"
-          headline="Senior WooCommerce developers. Custom stores and plugins. fixed-price, milestone-paid."
-          lead="We build custom WooCommerce stores and plugins. We engineer B2B wholesale features, live ERP sync, and speed optimization. Every build is a fixed-price project delivered by senior WordPress developers."
-          secondaryCta={{ label: 'View Our Work', href: '/portfolio' }}
+          eyebrow="WOOCOMMERCE DEVELOPMENT · USA"
+          headline="Custom WooCommerce stores and plugins for US businesses, built to survive every update."
+          lead="We design and build WooCommerce stores, B2B wholesale features, subscriptions and ERP sync, then support them after launch. Most custom stores go live in 3 to 5 weeks. You get a fixed quote before work starts, and you own every line of code."
+          secondaryCta={{ label: 'See case studies', href: '/case-studies' }}
+          trustItems={[
+            'Fixed quote before work starts',
+            '97% delivered on time or early',
+            '30 days of support included',
+          ]}
           rightSlot={
             <div className="w-full overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white shadow-sm">
               <div className="border-b border-fj-neutral-100 px-7 py-4">
@@ -587,13 +598,94 @@ export default function WoocommerceDevelopmentPage() {
         />
 
         {/* -- 2. LOGO BAR ---------------------------------------------------- */}
-        <LogoBar tagline="500+ e-commerce businesses trust FactoryJet, from custom plugins to full WooCommerce builds" />
+        <LogoBar tagline="500+ projects delivered for businesses in the US, the UK, the UAE and India" />
 
-        {/* -- 3. TRUST BLOCK ----------------------------------------------─-- */}
-        <BigThreeTrustBlock
-          eyebrow="WHY FACTORYJET FOR WOOCOMMERCE"
-          headline="Senior WooCommerce developers. Fixed-price proposals. fixed-price, milestone-paid."
-        />
+        {/* ── 2. SHORT ANSWER + PROOF ──────────────────────────────────────── */}
+        {/* Replaces the hero image band and BigThreeTrustBlock (whose showcase
+            variant hardcodes "7-day delivery", contradicting the 3-5 week store
+            timeline). Proof is only published case studies plus a verbatim quote,
+            and it says plainly that those stores run on Commerceflo, not WooCommerce. */}
+        <section className="border-y border-fj-neutral-200 bg-white py-14 md:py-20">
+          <div className="mx-auto max-w-[1120px] px-6 md:px-8">
+            <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-14">
+              <div className="lg:col-span-7">
+                <p className="fj-eyebrow">THE SHORT ANSWER</p>
+                <h2 className="mt-3 font-fj-display text-[clamp(1.625rem,3vw,2.25rem)] font-bold leading-[1.15] tracking-[-0.03em] text-fj-ink">
+                  What you get from our WooCommerce developers
+                </h2>
+                <p
+                  data-speakable
+                  className="mt-5 font-fj-body text-[1.0625rem] leading-[1.7] text-fj-neutral-600"
+                >
+                  FactoryJet designs, builds and supports custom WooCommerce stores and plugins for US businesses. A custom-theme store takes 3 to 5 weeks. A store with subscriptions, B2B pricing or a migration takes 5 to 8 weeks. Fully custom or headless builds take 8 to 14 weeks. Every customization uses WooCommerce hooks and filters, so updates do not break it. You get one fixed price after a free call, and every build includes 30 days of support from the developers who built it.
+                </p>
+                <p className="mt-4 font-fj-body text-[1rem] leading-[1.7] text-fj-neutral-600">
+                  Still deciding on a platform? Read{' '}
+                  <Link href="/blog/shopify-vs-woocommerce-us-small-business-2026" className="font-medium text-[#B23E13] underline underline-offset-2">
+                    Shopify vs WooCommerce for US small businesses
+                  </Link>
+                  , or compare{' '}
+                  <Link href="/services/shopify-development" className="font-medium text-[#B23E13] underline underline-offset-2">
+                    Shopify development
+                  </Link>
+                  .
+                </p>
+
+                <figure className="mt-8 rounded-2xl border border-fj-neutral-200 bg-fj-cream p-6 md:p-7">
+                  <blockquote className="font-fj-display text-[1.125rem] font-semibold leading-[1.45] tracking-[-0.01em] text-fj-ink">
+                    &ldquo;We were live in 6 days, I genuinely did not believe that was possible. The design is stunning, the WhatsApp integration brings in inquiries every day, and the site has stayed lightning fast.&rdquo;
+                  </blockquote>
+                  <figcaption className="mt-5 flex items-center gap-3">
+                    <img
+                      src="/images/testimonials/ricky-belle-maison-128.webp"
+                      alt="Ricky B., founder of Belle Maison"
+                      width={44}
+                      height={44}
+                      loading="lazy"
+                      className="h-11 w-11 rounded-full object-cover"
+                    />
+                    <span className="font-fj-body text-[0.875rem] leading-snug text-fj-neutral-600">
+                      <strong className="font-semibold text-fj-ink">Ricky B.</strong>, Founder, Belle Maison
+                      <br />
+                      Store built by FactoryJet on Commerceflo, not WooCommerce.
+                    </span>
+                  </figcaption>
+                </figure>
+              </div>
+
+              <div className="lg:col-span-5">
+                <p className="fj-eyebrow">COMMERCE WORK WE HAVE PUBLISHED</p>
+                <div className="mt-4 space-y-4">
+                  {PROOF_CASES.map((c) => (
+                    <Link
+                      key={c.client}
+                      href={c.href}
+                      className="block rounded-2xl border border-fj-neutral-200 bg-fj-cream p-6 transition-colors hover:border-[#F05A28]"
+                    >
+                      <p className="font-fj-mono text-[11px] font-medium uppercase tracking-[0.12em] text-[#B23E13]">
+                        {c.market}
+                      </p>
+                      <p className="mt-2 font-fj-display text-[1.25rem] font-bold tracking-[-0.02em] text-fj-ink">
+                        {c.client}
+                      </p>
+                      <p className="mt-2 font-fj-body text-[0.9375rem] leading-relaxed text-fj-neutral-600">{c.what}</p>
+                      <p className="mt-3 font-fj-body text-[0.8125rem] font-semibold text-fj-ink">
+                        {c.platform} &middot; Read the case study <span aria-hidden="true">&rarr;</span>
+                      </p>
+                    </Link>
+                  ))}
+                </div>
+                <p className="mt-5 font-fj-body text-[0.875rem] leading-relaxed text-fj-neutral-600">
+                  500+ projects delivered for businesses in the US, the UK, the UAE and India.{' '}
+                  <Link href="/case-studies" className="font-medium text-[#B23E13] underline underline-offset-2">
+                    See all case studies
+                  </Link>
+                  .
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* -- 4. WHAT WE BUILD --------------------------------------------─-- */}
         <ServiceExplanation
@@ -680,11 +772,22 @@ export default function WoocommerceDevelopmentPage() {
 
         {/* -- 5. INDUSTRIES -------------------------------------------------- */}
         <IndustriesGrid
-          eyebrow="INDUSTRIES WE SERVE"
-          headline="WooCommerce Development for US E-Commerce Businesses in Every Category"
+          variant="cards"
+          eyebrow="WHO WE BUILD FOR"
+          headline="WooCommerce Development for US Businesses That Need More Than a Template"
+          lead="WooCommerce is the right choice when you want full control of your code, your hosting and your customer data. These are the stores we build most."
+          sectors={WOO_SECTORS}
         />
 
-        {/* -- 6. WHAT GOES WRONG ------------------------------------------─-- */}
+        {/* -- 5b. MID-PAGE CTA ---------------------------------------------- */}
+        <MidPageCTA
+          headline="Get a fixed quote for your WooCommerce store"
+          sub="Tell us what you sell, what your store needs to do and whether you are on WooCommerce today. We reply with a scope, a fixed price and a launch date. No hourly billing, no obligation."
+          label="Get my WooCommerce quote"
+          note="Bhavesh, our founder, reads every request and usually replies within 2 to 3 hours."
+        />
+
+        {/* -- 6. WHAT GOES WRONG (the page's only dark section) ------------------------------------------─-- */}
         <StrategicDarkSection
           eyebrow="WHAT GOES WRONG"
           headline="Three WooCommerce Development Mistakes That Cost Businesses Money"
@@ -696,11 +799,11 @@ export default function WoocommerceDevelopmentPage() {
             },
             {
               title: 'Plugin bloat that kills store performance',
-              body: `Many stores run 30 or more plugins. Many plugins handle trivial tasks that belong in the theme. Each plugin adds extra database queries and script files. Removing unnecessary plugins often speeds up page loads by 40 percent. We audit your plugin stack and replace heavy plugins with clean custom code.`,
+              body: `Many stores run 30 or more plugins. Many plugins handle trivial tasks that belong in the theme. Each plugin adds extra database queries and script files. Removing the ones you do not need is often the quickest speed win. We audit your plugin stack and replace heavy plugins with clean custom code.`,
             },
             {
               title: `Checkout friction that leaks revenue`,
-              body: `Default WooCommerce checkout forms contain too many fields. Most stores do not need separate address fields on initial orders. Extra form fields increase checkout abandonment. Streamlining checkout fields often boosts conversions by 15 to 25 percent. We design clean checkout flows tailored to your actual buyers.`,
+              body: `Default WooCommerce checkout forms contain too many fields. Most stores do not need separate address fields on initial orders. Every extra form field is one more reason to leave. We design clean checkout flows tailored to your actual buyers.`,
             },
           ]}
         />
@@ -733,7 +836,7 @@ export default function WoocommerceDevelopmentPage() {
           body={
             <>
               <p>
-                FactoryJet has built on WordPress and WooCommerce for over a decade. We understand what architectures hold up over time. We know which shortcuts create technical debt two years later. We build for longevity and easy maintenance.
+                We have built on WordPress and WooCommerce for years. We understand what architectures hold up over time. We know which shortcuts create technical debt two years later. We build for longevity and easy maintenance.
               </p>
 
               <p>
@@ -799,16 +902,71 @@ export default function WoocommerceDevelopmentPage() {
         <PricingTiers
           eyebrow="PRICING"
           headline="Fixed-Price WooCommerce Development Packages"
-          lead="Starting prices for common WooCommerce project types. Every project gets a custom quote after the discovery call, scope drives price, and we don't quote without understanding what you need."
+          lead="Three common WooCommerce project types. Every project gets one fixed quote after a free discovery call, because scope drives price and we do not quote without understanding what you need."
           tiers={PRICING_TIERS}
         />
 
-        {/* -- 12. TESTIMONIALS --------------------------------------------─-- */}
-        <TestimonialsSection
-          region="us"
-          eyebrow="WHAT CLIENTS SAY"
-          headline="4.9/5 on Google across 500+ projects. Real results from real businesses."
-        />
+        {/* ── 11b. HOW PRICING WORKS ───────────────────────────────────────── */}
+        {/* Replaces TestimonialsSection here: the same real quote now sits near the
+            top, and that component's US stats carry an unverified "$50M+" figure and
+            render a dark band (this page now keeps a single dark section). */}
+        <section id="pricing-explained" className="scroll-mt-24 bg-fj-cream py-14 md:py-20">
+          <div className="mx-auto max-w-[1120px] px-6 md:px-8">
+            <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-14">
+              <div className="lg:col-span-7">
+                <p className="fj-eyebrow">WHAT IT COSTS</p>
+                <h2 className="mt-3 font-fj-display text-[clamp(1.625rem,3vw,2.25rem)] font-bold leading-[1.15] tracking-[-0.03em] text-fj-ink">
+                  How pricing works for a WooCommerce build
+                </h2>
+                <p className="mt-5 font-fj-body text-[1.0625rem] leading-[1.7] text-fj-neutral-600">
+                  We do not publish one price, because a 40-product WooCommerce store and a B2B store synced to NetSuite are different jobs. What we do promise: one fixed price for an agreed scope, written down before work starts, paid in milestones. Nothing is billed by the hour.
+                </p>
+                <ul className="mt-6 space-y-3 font-fj-body text-[1rem] leading-[1.6] text-fj-neutral-600">
+                  <li><strong className="font-semibold text-fj-ink">Theme and plugins.</strong> A custom theme and custom plugins cost more than adjusting what you have, and last longer.</li>
+                  <li><strong className="font-semibold text-fj-ink">Catalog size.</strong> More products, variants and custom fields mean more setup and testing.</li>
+                  <li><strong className="font-semibold text-fj-ink">Migration.</strong> Moving products, customers, orders and SEO from an old store adds scope.</li>
+                  <li><strong className="font-semibold text-fj-ink">Integrations.</strong> ERP, 3PL, subscriptions and B2B pricing each add work.</li>
+                  <li><strong className="font-semibold text-fj-ink">Running costs.</strong> Hosting and premium plugin licences are paid by you directly to those providers. WooCommerce itself charges no platform fee.</li>
+                </ul>
+              </div>
+              <div className="lg:col-span-5">
+                <div className="rounded-2xl border border-fj-neutral-200 bg-white p-7">
+                  <p className="font-fj-mono text-[11px] font-medium uppercase tracking-[0.14em] text-[#B23E13]">
+                    SET A BUDGET FIRST
+                  </p>
+                  <p className="mt-3 font-fj-display text-[1.25rem] font-bold leading-snug tracking-[-0.02em] text-fj-ink">
+                    Our cost guides show typical market ranges, with sources.
+                  </p>
+                  <ul className="mt-5 space-y-3 font-fj-body text-[0.9375rem]">
+                    <li>
+                      <Link href="/blog/ecommerce-website-cost-2026" className="font-medium text-[#B23E13] underline underline-offset-2">
+                        What an ecommerce website costs in 2026
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/blog/shopify-development-cost-2026" className="font-medium text-[#B23E13] underline underline-offset-2">
+                        Shopify development cost in 2026
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/blog/website-running-cost-per-month-2026" className="font-medium text-[#B23E13] underline underline-offset-2">
+                        What a website costs to run each month
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/website-cost" className="font-medium text-[#B23E13] underline underline-offset-2">
+                        How much a website costs in 2026
+                      </Link>
+                    </li>
+                  </ul>
+                  <p className="mt-5 border-t border-fj-neutral-100 pt-5 font-fj-body text-[0.875rem] leading-relaxed text-fj-neutral-600">
+                    Want a number for your store? Fill in the form at the top of this page and we will send a fixed quote after a free 30-minute call.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* -- 12b. HIRE WOOCOMMERCE DEVELOPERS ------------------------------- */}
         <section className="py-14 md:py-20 bg-[#FAFAF7]">
@@ -820,7 +978,7 @@ export default function WoocommerceDevelopmentPage() {
                 <p>
                   Most US store owners don&apos;t want to gamble on a marketplace listing, they want to{' '}
                   <strong>hire a WooCommerce developer</strong> who has shipped real stores and won&apos;t vanish
-                  mid-project. As a US WooCommerce development agency, FactoryJet gives you a dedicated WooCommerce
+                  mid-project. FactoryJet gives you a dedicated WooCommerce
                   expert backed by a full team: designer, developer, and QA, all owning your build end to end.
                 </p>
                 <p>
@@ -878,7 +1036,7 @@ export default function WoocommerceDevelopmentPage() {
 
         {/* -- 14. FINAL CTA -------------------------------------------------- */}
         <FinalCTA
-          variant="dark"
+          variant="light"
           eyebrow="GET STARTED"
           headline="Ready to build or improve your WooCommerce store?"
           sub="Book a 30-minute discovery call. We'll scope your project, answer your technical questions, and give you a fixed-price proposal within 24-48 hours. No obligation."

@@ -17,7 +17,7 @@ import IndustriesGrid from '@/components/v2/IndustriesGrid';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
-import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
+import MidPageCTA from '@/components/v2/MidPageCTA';
 
 export const metadata: Metadata = {
   title: 'AI Scheduling Agent for US Businesses | FactoryJet',
@@ -651,6 +651,13 @@ export default function AISchedulingAgentUSPage() {
           closingNote="We run 100+ test bookings before your customers see the AI. You validate the conversation flow and calendar accuracy, we fix any edge cases before go-live."
         />
 
+        <MidPageCTA
+          headline="Tell us how bookings work today"
+          sub="Name the calendar or booking system you use, where requests come in (phone, web, email) and your rules for who can book what. We will tell you what it takes to build, and whether a tool you already pay for covers it."
+          label="Tell us the workflow"
+          note="Bhavesh, our founder, reads every enquiry and usually replies within 2 to 3 hours."
+        />
+
         <ServiceExplanation
           eyebrow="TECHNOLOGY."
           headline="The technology stack behind your AI scheduling agent."
@@ -778,7 +785,6 @@ export default function AISchedulingAgentUSPage() {
           sectors={SCHEDULING_INDUSTRIES}
         />
 
-        <GetFreeQuoteCTA />
         <TestimonialsSection
           eyebrow="CLIENT RESULTS."
           headline="What founders say about working with FactoryJet."
@@ -839,7 +845,7 @@ export default function AISchedulingAgentUSPage() {
 
         <div id="final-cta">
           <FinalCTA
-            variant="dark"
+            variant="light"
             eyebrow="GET STARTED."
             headline="Book a Free AI Scheduling Strategy Call."
             sub="Tell us your appointment volume, current booking workflows, and biggest friction points. We map how an AI scheduling agent streamlines your calendar. We provide a transparent fixed-price estimate before writing any code."

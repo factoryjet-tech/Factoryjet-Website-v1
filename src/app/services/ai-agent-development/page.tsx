@@ -3,12 +3,13 @@ import AiAgentDevelopmentSections, { breadcrumbs } from '@/components/v2/AiAgent
 import { AI_AGENT_FAQS } from '@/components/v2/AiAgentDevelopmentFaqs';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import JsonLd from '@/components/JsonLd';
+import { ORG_ID } from '@/data/organization';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 
 const url = 'https://factoryjet.com/services/ai-agent-development';
 const title = 'Custom AI Agent Development Company USA | FactoryJet';
-const description = 'Real AI agents built into your ERP, CRM, and workflows, not a demo that breaks in week one. Cost, timeline, and how we build. See how FactoryJet does it.';
+const description = 'Custom AI agents built into your ERP, CRM, help desk and Shopify store, not a demo that breaks in week one. Cost, timeline, what you own, and how we build.';
 const socialImage = 'https://factoryjet.com/images/us/services/ai-agent-definition-workbench.webp';
 
 export const metadata: Metadata = {
@@ -29,12 +30,43 @@ const faqSchema = {
   })),
 };
 
+// Freshness signal. Bump only when the page content actually changes.
+const PAGE_MODIFIED = '2026-09-28';
+
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': `${url}#webpage`,
+  url,
+  name: title,
+  description,
+  dateModified: PAGE_MODIFIED,
+  isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
+  publisher: { '@id': ORG_ID },
+  about: { '@id': `${url}#service` },
+};
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': `${url}#service`,
+  name: 'Custom AI Agent Development',
+  serviceType: 'AI agent development',
+  description:
+    'FactoryJet designs, builds and supports custom AI agents that work inside NetSuite, SAP, Odoo, Salesforce, HubSpot, Zendesk, Gorgias and Shopify, with human approval on decisions that matter. The client owns the code.',
+  provider: { '@id': ORG_ID },
+  areaServed: { '@type': 'Country', name: 'United States' },
+  url,
+};
+
 export default function AiAgentDevelopmentPage() {
   return (
     <>
       <JsonLd id="ai-agent-faq-schema" data={faqSchema} />
+      <JsonLd id="ai-agent-webpage-schema" data={webPageSchema} />
+      <JsonLd id="ai-agent-service-schema" data={serviceSchema} />
       <BreadcrumbSchema items={breadcrumbs} />
-      <SiteHeader cta={{ label: 'Scope your AI agent', href: '/contact' }} />
+      <SiteHeader cta={{ label: 'Tell us the workflow', href: '/contact' }} />
       <AiAgentDevelopmentSections />
       <SiteFooter />
     </>

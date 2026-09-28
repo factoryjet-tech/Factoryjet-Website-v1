@@ -10,8 +10,9 @@
  *
  * What is stored, in the visitor's own browser only:
  *   - sessionStorage "fj_visit": the first page of this visit, the external
- *     referrer HOST (never the full referring URL), UTM tags, and which kind of
- *     ad click id was present (never the id itself).
+ *     referrer HOST (never the full referring URL), UTM tags, which kind of
+ *     ad click id was present, and the Google Ads gclid itself (an opaque ad
+ *     click id, not personal data; kept so a lead can be matched to its click).
  *   - localStorage "fj_last_touch": the same shape for the most recent visit
  *     that arrived from another site, a campaign or an ad click, kept 90 days,
  *     so a returning visitor who comes back directly still shows the channel
@@ -30,8 +31,12 @@ export interface LeadAttribution {
   utmSource: string;
   utmMedium: string;
   utmCampaign: string;
-  /** "google-ads" | "microsoft-ads" | "meta" | "linkedin" | "" (type only, never the id). */
+  /** "google-ads" | "microsoft-ads" | "meta" | "linkedin" | "" (type of ad click). */
   clickId: string;
+  /** Google Ads click id (gclid / gbraid / wbraid value) when the visit carried one. */
+  gclid: string;
+  /** "chatgpt" | "perplexity" | "gemini" | "claude" | "copilot" | "" when an AI assistant sent the visit. */
+  aiAssistant: string;
   /** Most recent earlier visit that came from another site, a campaign or an ad click (90 days). */
   lastTouchReferrer: string;
   lastTouchLanding: string;
@@ -46,6 +51,7 @@ interface Touch {
   utmMedium: string;
   utmCampaign: string;
   clickId: string;
+  gclid?: string;
   at: string;
 }
 
@@ -61,6 +67,8 @@ const EMPTY: LeadAttribution = {
   utmMedium: '',
   utmCampaign: '',
   clickId: '',
+  gclid: '',
+  aiAssistant: '',
   lastTouchReferrer: '',
   lastTouchLanding: '',
   lastTouchCampaign: '',
@@ -93,6 +101,27 @@ function clickIdType(params: URLSearchParams): string {
   return '';
 }
 
+// AI assistants that send buyers to us. Matched on the referrer host or the
+// utm_source they add to outbound links (ChatGPT adds utm_source=chatgpt.com).
+const AI_ASSISTANTS: [RegExp, string][] = [
+  [/(^|\.)(chatgpt\.com|chat\.openai\.com|openai\.com)$|^chatgpt/, 'chatgpt'],
+  [/(^|\.)perplexity\.ai$|^perplexity/, 'perplexity'],
+  [/(^|\.)gemini\.google\.com$|(^|\.)bard\.google\.com$|^gemini/, 'gemini'],
+  [/(^|\.)claude\.ai$|^claude/, 'claude'],
+  [/(^|\.)copilot\.microsoft\.com$|(^|\.)copilot\.com$|^copilot/, 'copilot'],
+];
+
+/** Which AI assistant (if any) a referrer host or utm_source points to. */
+export function aiAssistantFrom(...values: (string | null | undefined)[]): string {
+  for (const raw of values) {
+    const v = (raw || '').trim().toLowerCase().replace(/^www\./, '');
+    if (!v) continue;
+    const hit = AI_ASSISTANTS.find(([re]) => re.test(v));
+    if (hit) return hit[1];
+  }
+  return '';
+}
+
 function readTouch(storage: Storage, key: string): Touch | null {
   try {
     const raw = storage.getItem(key);
@@ -120,6 +149,7 @@ export function captureLeadAttribution(): void {
       utmMedium: clip(params.get('utm_medium')),
       utmCampaign: clip(params.get('utm_campaign')),
       clickId: clickIdType(params),
+      gclid: clip(params.get('gclid') || params.get('gbraid') || params.get('wbraid'), 200),
       at: new Date().toISOString(),
     };
 
@@ -155,6 +185,8 @@ export function readLeadAttribution(): LeadAttribution {
       utmMedium: clip(visit?.utmMedium),
       utmCampaign: clip(visit?.utmCampaign),
       clickId: clip(visit?.clickId, 20),
+      gclid: clip(visit?.gclid, 200),
+      aiAssistant: aiAssistantFrom(visit?.referrer, visit?.utmSource),
       lastTouchReferrer: clip(last?.referrer || last?.utmSource || last?.clickId, 100),
       lastTouchLanding: clip(last?.landingPage, 200),
       lastTouchCampaign: clip(last?.utmCampaign),

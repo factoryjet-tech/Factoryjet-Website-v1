@@ -13,6 +13,8 @@ export interface BlogPost {
   category: Category;
   author: string;
   date: string;
+  /** Optional last-updated date (same format as `date`). Falls back to `date`. */
+  dateModified?: string;
   readTime: string;
   imageUrl: string;
   imageAlt?: string;

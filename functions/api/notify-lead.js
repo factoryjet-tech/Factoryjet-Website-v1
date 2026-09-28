@@ -53,6 +53,10 @@ async function writeLeadToFirestore(env, lead) {
       phone:      s(lead.phone),
       company:    s(lead.company),
       service:    s(lead.service),
+      // One of five categories (see src/utils/leadService.ts); inferred from
+      // the page when the form had no service picker (serviceInferred = "yes").
+      serviceCategory: s(lead.serviceCategory),
+      serviceInferred: s(lead.serviceInferred),
       message:    s(lead.message),
       region:     s(lead.region),
       source:     s(lead.source),
@@ -64,6 +68,8 @@ async function writeLeadToFirestore(env, lead) {
       utmMedium:         s(lead.utmMedium),
       utmCampaign:       s(lead.utmCampaign),
       clickId:           s(lead.clickId),
+      gclid:             s(lead.gclid),
+      aiAssistant:       s(lead.aiAssistant),
       lastTouchReferrer: s(lead.lastTouchReferrer),
       lastTouchLanding:  s(lead.lastTouchLanding),
       lastTouchCampaign: s(lead.lastTouchCampaign),
@@ -175,7 +181,9 @@ async function writeLeadToERPNext(env, lead) {
     }
   }
 
-  const noteText = `Came from: ${channelLabel(lead)}\n${attributionLines(lead)}Form: ${lead.source || 'Website'}\nForm page: https://factoryjet.com${lead.page || ''}\nService: ${serviceLabel(lead.service)}\nRegion: ${lead.region ? String(lead.region).toUpperCase() : 'Not specified'}\nMessage: ${lead.message || 'N/A'}\nFirebase Doc ID: ${lead.docId || 'N/A'}`;
+  const category = lead.serviceCategory || 'Other';
+  const noteText = `Service: ${category}${lead.serviceInferred === 'yes' ? ' (guessed from the page, the form had no service picker)' : ''}\n${lead.service ? `Service picked on form: ${serviceLabel(lead.service)}\n` : ''}Came from: ${channelLabel(lead)}\n${lead.aiAssistant ? `AI assistant: yes (${lead.aiAssistant})\n` : ''}${attributionLines(lead)}Form: ${lead.source || 'Website'}\nForm page: https://factoryjet.com${lead.page || ''}\nWebsite region: ${lead.region ? String(lead.region).toUpperCase() : 'Not specified'}\nMessage: ${lead.message || 'N/A'}\nFirebase Doc ID: ${lead.docId || 'N/A'}`;
+  const country = countryFromPhone(lead.phone);
 
   // 2. Returning prospect? ERPNext rejects a second Lead with the same email while
   // CRM Settings "Allow Lead Duplication based on Emails" is off (it was off on
@@ -239,6 +247,12 @@ async function writeLeadToERPNext(env, lead) {
       ...(String(lead.email || '').trim().toLowerCase() !== LEAD_OWNER ? { lead_owner: LEAD_OWNER } : {}),
       custom_firebase_doc_id: lead.docId || '',
       custom_sequence_status: 'Not Contacted',
+      // Service category. ERPNext silently ignores this key until a Custom Field
+      // named custom_service_interest exists on Lead; the note carries it either way.
+      custom_service_interest: category,
+      // Only when the phone number says so. ERPNext otherwise fills its system
+      // default (India), which is cleared right after the insert below.
+      ...(country ? { country } : {}),
       notes: [{ note: noteText }],
     };
 
@@ -256,6 +270,20 @@ async function writeLeadToERPNext(env, lead) {
       if (res.ok) {
         const data = await res.json();
         leadId = data?.data?.name;
+        // ERPNext applies its default country (India) to any Lead created without
+        // one, which made every US/UK lead look Indian. Clear it when unknown.
+        if (leadId && !country && data?.data?.country) {
+          try {
+            const clr = await fetchWithTimeout(`${erpUrl}/api/resource/Lead/${encodeURIComponent(leadId)}`, {
+              method: 'PUT',
+              headers: { ...ERP_HEADERS, 'Content-Type': 'application/json', 'Authorization': authHeader },
+              body: JSON.stringify({ country: '' }),
+            }, erpTimeout(env));
+            if (!clr.ok) console.warn('ERPNext country clear returned HTTP', clr.status);
+          } catch (err) {
+            console.warn('ERPNext country clear warning:', describeFetchError(err));
+          }
+        }
       } else {
         const errText = (await res.text()).slice(0, 500);
         console.error('ERPNext Lead write failed:', res.status, errText);
@@ -272,7 +300,7 @@ async function writeLeadToERPNext(env, lead) {
   let todoId = null;
   if (leadId) {
     try {
-      const serviceName = serviceLabel(lead.service);
+      const serviceName = category;
       const todoPayload = {
         description: `${returning ? 'Returning lead, new inquiry. ' : ''}Follow up with ${lead.name || 'Website Lead'} (${lead.company || 'Individual'})\nService: ${serviceName} · Page: ${lead.page || '/'}\nCame from: ${channelLabel(lead)}${lead.landingPage ? ` · Landed on: ${lead.landingPage}` : ''}\nPhone: ${lead.phone || 'N/A'} · Email: ${lead.email || 'N/A'}\nInquiry: ${lead.message || 'N/A'}`,
         status: 'Open',
@@ -309,9 +337,61 @@ async function writeLeadToERPNext(env, lead) {
 }
 
 
+/**
+ * Country from an international phone prefix, only when it is unambiguous.
+ * +1 is skipped on purpose (US, Canada and the Caribbean share it), and numbers
+ * without a "+" or "00" prefix return '' because the country is not known.
+ */
+const PHONE_COUNTRIES = [
+  ['971', 'United Arab Emirates'], ['353', 'Ireland'], ['44', 'United Kingdom'],
+  ['61', 'Australia'], ['64', 'New Zealand'], ['65', 'Singapore'], ['91', 'India'],
+  ['49', 'Germany'], ['33', 'France'], ['31', 'Netherlands'], ['27', 'South Africa'],
+];
+export function countryFromPhone(phone) {
+  const raw = String(phone || '').trim();
+  const m = raw.match(/^(?:\+|00)\s*([\d\s().-]+)$/);
+  if (!m) return '';
+  const digits = m[1].replace(/\D/g, '');
+  const hit = PHONE_COUNTRIES.find(([code]) => digits.startsWith(code));
+  return hit ? hit[1] : '';
+}
+
+// The five service categories (mirror of src/utils/leadService.ts, which the
+// browser uses; this copy is the server-side fallback for old or odd clients).
+const SERVICE_CATEGORIES = ['AI Agent Development', 'E-commerce', 'SEO & AI Search', 'Website Design', 'Other'];
+function categoryFromPath(path) {
+  const p = String(path || '').toLowerCase().split('?')[0];
+  if (!p || p === '/') return '';
+  if (/(ai-seo|generative-engine|(^|[/-])geo([/-]|$)|(^|[/-])aeo([/-]|$)|ai-visibility|answer-engine|llm-seo|ai-search)/.test(p)) return 'SEO & AI Search';
+  if (/(ai-agent|ai-automation|ai-receptionist|ai-chatbot|ai-consult|ai-development|ai-integration|ai-workflow|ai-voice|agentic|jetagent|jetsdr|jetdocs|(^|\/)services\/ai-|(^|\/)ai(\/|$))/.test(p)) return 'AI Agent Development';
+  if (/(replatform|-to-shopify|migration)/.test(p)) return 'E-commerce';
+  if (/seo/.test(p)) return 'SEO & AI Search';
+  if (/(ecommerce|e-commerce|shopify|woocommerce|magento|bigcommerce|commerceflo|replatform|b2b-commerce|wholesale|marketplace|tiktok-shop|headless-commerce)/.test(p)) return 'E-commerce';
+  if (/(web-design|website|web-development|webflow|wordpress|landing-page|redesign)/.test(p)) return 'Website Design';
+  return '';
+}
+function categoryFromValue(value) {
+  const v = String(value || '').trim().toLowerCase();
+  if (!v || v === 'unknown') return '';
+  const exact = SERVICE_CATEGORIES.find((c) => c.toLowerCase() === v);
+  if (exact) return exact;
+  if (/(ai-seo|ai seo|\bgeo\b|\baeo\b|ai search|seo|\bsearch\b)/.test(v)) return 'SEO & AI Search';
+  if (/(ai-agents?|\bai agents?\b|\bagents?\b|\bagentic\b|automation|chatbot|receptionist)/.test(v)) return 'AI Agent Development';
+  if (/(e-?commerce|shopify|woocommerce|magento|bigcommerce|replatform|marketplace|wholesale|store)/.test(v)) return 'E-commerce';
+  if (/(website|web design|web|maintenance|amc|landing|brand)/.test(v)) return 'Website Design';
+  if (/^other/.test(v)) return 'Other';
+  return '';
+}
+/** Trust the browser's category only if it is one of the five; else work it out here. */
+export function resolveCategory({ serviceCategory, service, page, landingPage }) {
+  if (SERVICE_CATEGORIES.includes(serviceCategory)) return serviceCategory;
+  return categoryFromValue(service) || categoryFromPath(page) || categoryFromPath(landingPage) || 'Other';
+}
+
 /** Pretty-print the service slug into a human label */
 function serviceLabel(id) {
   const map = {
+    'ai-agents': 'AI Agent Development',
     website:     'Website Design',
     ecommerce:   'E-Commerce / Shopify',
     seo:         'SEO / Local SEO',
@@ -381,7 +461,10 @@ function channelLabel(lead) {
 function attributionLines(lead) {
   let out = '';
   if (lead.landingPage) out += `Landing page: https://factoryjet.com${lead.landingPage}\n`;
-  if (lead.utmCampaign) out += `Campaign name: ${lead.utmCampaign}\n`;
+  if (lead.utmSource) out += `UTM: source=${lead.utmSource}${lead.utmMedium ? ` medium=${lead.utmMedium}` : ''}${lead.utmCampaign ? ` campaign=${lead.utmCampaign}` : ''}\n`;
+  else if (lead.utmCampaign) out += `Campaign name: ${lead.utmCampaign}\n`;
+  if (lead.referrer) out += `Referrer: ${lead.referrer}\n`;
+  if (lead.gclid) out += `gclid: ${lead.gclid}\n`;
   if (lead.lastTouchReferrer && lead.lastTouchReferrer !== lead.referrer) {
     out += `Earlier visit: via ${lead.lastTouchReferrer}${lead.lastTouchLanding ? ` to ${lead.lastTouchLanding}` : ''}${lead.lastTouchAt ? ` on ${lead.lastTouchAt.slice(0, 10)}` : ''}\n`;
   }
@@ -389,7 +472,7 @@ function attributionLines(lead) {
 }
 
 /** Build a clean HTML email body */
-function buildHtml({ name, email, phone, company, service, message, region, page, turnstileVerdict, erpLeadId, erpReturning, attribution }) {
+function buildHtml({ name, email, phone, company, service, serviceCategory, serviceInferred, message, region, page, turnstileVerdict, erpLeadId, erpReturning, attribution }) {
   const a = attribution || {};
   const now = new Date().toLocaleString('en-US', {
     timeZone: 'Asia/Kolkata',
@@ -428,11 +511,11 @@ function buildHtml({ name, email, phone, company, service, message, region, page
                 ${row('Email',   email ? `<a href="mailto:${email}" style="color:#F05A28;text-decoration:none;">${email}</a>` : '—')}
                 ${row('Phone',   phone   || '—')}
                 ${row('Company', company || '—')}
-                ${row('Service', `<span style="display:inline-block;background:#FFF1EB;color:#F05A28;padding:3px 10px;border-radius:20px;font-weight:600;font-size:13px;">${serviceLabel(service)}</span>`)}
+                ${row('Service', `<span style="display:inline-block;background:#FFF1EB;color:#B23E13;padding:3px 10px;border-radius:20px;font-weight:600;font-size:13px;">${escapeHtml(serviceCategory || serviceLabel(service))}</span>${serviceInferred === 'yes' ? ' <span style="color:#6B7280;font-size:12px;">(guessed from the page)</span>' : (service ? ` <span style="color:#6B7280;font-size:12px;">${escapeHtml(serviceLabel(service))}</span>` : '')}`)}
                 ${row('Region',  (region || '').toUpperCase() || '—')}
                 ${message ? row('Message', `<span style="color:#374151;">${message}</span>`) : ''}
                 ${erpLeadId ? row('CRM Lead', `<a href="https://erp.factoryjet.com/app/lead/${encodeURIComponent(erpLeadId)}" style="color:#F05A28;font-weight:600;text-decoration:none;">${erpLeadId} ${erpReturning ? '(returning lead, new inquiry added)' : '(Assigned to Bhavesh)'}</a>`) : ''}
-                ${row('Came from', `<strong>${escapeHtml(channelLabel(a))}</strong>`)}
+                ${row('Came from', `<strong>${escapeHtml(channelLabel(a))}</strong>${a.aiAssistant ? ' <span style="color:#B23E13;font-size:12px;font-weight:600;">AI assistant</span>' : ''}`)}
                 ${a.landingPage ? row('Landing page', `<a href="https://factoryjet.com${escapeHtml(a.landingPage)}" style="color:#6B7280;font-size:12px;">factoryjet.com${escapeHtml(a.landingPage)}</a>`) : ''}
                 ${a.utmCampaign ? row('Campaign', escapeHtml(a.utmCampaign)) : ''}
                 ${page ? row('Form page', `<a href="https://factoryjet.com${page}" style="color:#6B7280;font-size:12px;">factoryjet.com${page}</a>`) : ''}
@@ -821,11 +904,18 @@ export async function onRequestPost(context) {
     utmMedium:         attr(body.utmMedium, 120),
     utmCampaign:       attr(body.utmCampaign, 120),
     clickId:           attr(body.clickId, 20),
+    gclid:             attr(body.gclid, 200).replace(/[^A-Za-z0-9_-]/g, ''),
+    aiAssistant:       attr(body.aiAssistant, 20).replace(/[^a-z]/g, ''),
     lastTouchReferrer: attr(body.lastTouchReferrer, 100),
     lastTouchLanding:  pathOnly(body.lastTouchLanding),
     lastTouchCampaign: attr(body.lastTouchCampaign, 120),
     lastTouchAt:       attr(body.lastTouchAt, 40),
   };
+
+  const serviceCategory = resolveCategory({
+    serviceCategory: clipText(body.serviceCategory, 40), service, page, landingPage: attribution.landingPage,
+  });
+  const serviceInferred = categoryFromValue(service) ? 'no' : 'yes';
 
   // Guard: need at minimum a name + email
   if (!name || !email) {
@@ -842,7 +932,7 @@ export async function onRequestPost(context) {
   // ── (1) AUTHORITATIVE: persist the lead to Firestore server-side ───────────
   // This is the reliable capture path; it runs regardless of email status.
   const fsResult = await writeLeadToFirestore(env, {
-    docId, collection, name, email, phone, company, service, message, region, source, page,
+    docId, collection, name, email, phone, company, service, serviceCategory, serviceInferred, message, region, source, page,
     ...attribution,
     turnstileToken: body.turnstileToken, turnstileVerdict,
   });
@@ -852,7 +942,7 @@ export async function onRequestPost(context) {
   // alert email; otherwise answer now and let the sync finish in the background.
   const erpPromise = writeLeadToERPNext(env, {
     docId: fsResult.docId || docId,
-    name, email, phone, company, service, message, region, source, page,
+    name, email, phone, company, service, serviceCategory, serviceInferred, message, region, source, page,
     ...attribution,
   }).then((result) => {
     if (!result.saved) console.error('ERPNext lead sync did not save:', result.error || result.status || 'unknown');
@@ -873,7 +963,7 @@ export async function onRequestPost(context) {
   if (!apiKey) {
     console.error('RESEND_API_KEY not set — lead saved, email skipped');
   } else {
-    const serviceStr = serviceLabel(service);
+    const serviceStr = serviceCategory;
     // Only an outright verification FAILURE is worth flagging in the subject.
     // 'absent' and 'unchecked' are normal for real people and stay unmarked, so
     // the warning keeps its meaning instead of appearing on half the leads.
@@ -887,7 +977,7 @@ export async function onRequestPost(context) {
           to: [NOTIFY_TO],
           subject,
           html: buildHtml({
-            name, email, phone, company, service, message, region, page,
+            name, email, phone, company, service, serviceCategory, serviceInferred, message, region, page,
             turnstileVerdict, erpLeadId: erpResult.leadId, erpReturning: Boolean(erpResult.returning), attribution,
           }),
           reply_to: email,
