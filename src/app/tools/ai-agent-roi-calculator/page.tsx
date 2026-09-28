@@ -11,7 +11,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 const CANONICAL_URL = 'https://factoryjet.com/tools/ai-agent-roi-calculator';
 const PAGE_TITLE = 'AI Agent ROI Calculator & Cost Estimator | FactoryJet';
 const PAGE_DESC =
-  'Calculate custom AI agent development ROI, ticket deflection, labor savings, and token compute payback periods for your US business. Try the calculator.';
+  'Calculate custom AI agent development ROI, ticket deflection, team hours freed, and token compute payback periods for your US business. Try the calculator.';
 const PAGE_MODIFIED = '2026-09-01';
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'AI Agent Cost & ROI Calculator 2026 | FactoryJet',
     description:
-      'Model custom AI agent development payback, automated ticket deflection, and net labor cost reduction across Zendesk, HubSpot, NetSuite, and Shopify.',
+      'Model custom AI agent development payback, automated ticket deflection, and the value of team hours freed across Zendesk, HubSpot, NetSuite, and Shopify.',
     url: CANONICAL_URL,
     siteName: 'FactoryJet',
     locale: 'en_US',
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'AI Agent Cost & ROI Calculator 2026 | FactoryJet',
     description:
-      'Calculate custom AI agent development payback periods, labor savings, and monthly run costs with our interactive model.',
+      'Calculate custom AI agent development payback periods, team hours freed, and monthly run costs with our interactive model.',
     images: ['https://factoryjet.com/og-default.png'],
   },
   robots: {
@@ -81,7 +81,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'roi',
     question: 'How do you calculate the return on investment for an AI agent?',
     answer:
-      'AI agent ROI is calculated by multiplying monthly task volume by average minutes saved per task and fully loaded human labor rates, subtracting recurring LLM token compute and server hosting costs, and dividing net annual savings by initial one-time milestone development fees.',
+      'AI agent ROI is calculated by multiplying monthly task volume by average minutes saved per task and your team\'s hourly cost, subtracting recurring LLM token compute and server hosting costs, and dividing net annual savings by initial one-time milestone development fees.',
   },
   {
     category: 'roi',
@@ -91,15 +91,15 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
   },
   {
     category: 'roi',
-    question: 'How do labor cost offsets scale as ticket volume grows?',
+    question: 'What happens to cost when ticket volume grows?',
     answer:
-      'Unlike human staffing, which requires linear headcount additions and benefits overhead as volume expands, an AI agent handles 5x to 10x spikes in transaction volume with nominal increases in token compute costs. A seasonal surge that would normally require temporary hires and weeks of onboarding instead just increases your monthly token bill, with no ramp-up time and no drop in resolution quality.',
+      'The agent\'s running cost is mostly tokens, so it rises roughly in line with the number of tasks it handles, not in big steps. During a seasonal surge, your team keeps working on the harder cases while the agent takes more of the routine ones, and your token bill goes up for that month. Edge cases still go to a person, so plan for review time as volume grows.',
   },
   {
     category: 'roi',
     question: 'What qualitative business benefits are excluded from this calculator?',
     answer:
-      'This model deliberately excludes indirect revenue gains such as 24/7 sub-minute response times, reduced customer churn, higher conversion rates on instant lead follow-ups, and improved employee retention resulting from removing repetitive data entry. We keep the calculator conservative on purpose, so the payback figure it shows you is a floor built on hard labor-cost math, not an optimistic number inflated by soft benefits.',
+      'This model deliberately excludes indirect revenue gains such as 24/7 sub-minute response times, reduced customer churn, higher conversion rates on instant lead follow-ups, and improved employee retention resulting from removing repetitive data entry. We keep the calculator conservative on purpose, so the payback figure it shows you is a floor built on hours-freed math, not an optimistic number inflated by soft benefits.',
   },
   {
     category: 'costs',
@@ -177,7 +177,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'usage',
     question: 'What inputs do I need to enter to get an accurate estimate from this calculator?',
     answer:
-      'You select a target workflow (support, sales, back-office, or catalog operations), pick your primary system of record from a list of nine common help desk, CRM, and ERP platforms, then set your monthly task volume and fully loaded hourly labor rate on two sliders. The model recalculates net savings, hours recovered, and payback period live as you adjust any input.',
+      'You select a target workflow (support, sales, back-office, or catalog operations), pick your primary system of record from a list of nine common help desk, CRM, and ERP platforms, then set your monthly task volume and your team\'s hourly cost on two sliders. The model recalculates net savings, hours recovered, and payback period live as you adjust any input.',
   },
   {
     category: 'usage',
@@ -199,9 +199,9 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
   },
   {
     category: 'usage',
-    question: 'Where do the token compute and labor-cost numbers in this calculator come from?',
+    question: 'Where do the token compute and hourly cost numbers in this calculator come from?',
     answer:
-      "Token compute is modeled at $0.045 per resolved task plus a small fixed monthly infrastructure cost, reflecting real production frontier-model pricing behind semantic caching. The hourly labor rate defaults to $28, a commonly cited US fully loaded support and sales rep cost, but you can move the slider from $15 to $75 to match your own team's actual loaded rate before reading the results.",
+      "Token compute is modeled at $0.045 per resolved task plus a small fixed monthly infrastructure cost, reflecting real production frontier-model pricing behind semantic caching. The hourly cost starts at $28 as an example. Move the slider from $15 to $75 to match your own team's cost before reading the results.",
   },
 ];
 
@@ -231,7 +231,7 @@ export default function AiAgentRoiCalculatorPage() {
     operatingSystem: 'All',
     offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
     description:
-      'Interactive calculator modeling custom AI agent development costs, labor savings, monthly token compute, ticket deflection rates, and net payback periods for US businesses.',
+      'Interactive calculator modeling custom AI agent development costs, team hours freed, monthly token compute, ticket deflection rates, and net payback periods for US businesses.',
     dateModified: `${PAGE_MODIFIED}T00:00:00Z`,
     author: {
       '@type': 'Person',
@@ -291,7 +291,7 @@ export default function AiAgentRoiCalculatorPage() {
               </h1>
 
               <p className="text-lg sm:text-xl text-[#46403B] leading-relaxed max-w-3xl mx-auto">
-                Model custom AI agent development payback, automated ticket deflection, and net labor cost reduction across Zendesk, HubSpot, NetSuite, and Shopify.
+                Model custom AI agent development payback, automated ticket deflection, and the value of team hours freed across Zendesk, HubSpot, NetSuite, and Shopify.
               </p>
 
               <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 mt-6 text-xs font-mono text-[#6E655F]">
@@ -568,7 +568,7 @@ export default function AiAgentRoiCalculatorPage() {
                       Wholesale At-Cost (~$0.04 / ticket)
                     </td>
                     <td className="p-4 sm:p-6 text-[#6E655F]">$0.99 per resolution surcharge</td>
-                    <td className="p-4 sm:p-6 text-[#6E655F]">$18 - $35 / labor hour</td>
+                    <td className="p-4 sm:p-6 text-[#6E655F]">$18 - $35 / hour of team time</td>
                   </tr>
                   <tr>
                     <td className="p-4 sm:p-6 font-semibold text-[#14110F]">Data Privacy &amp; VPC</td>

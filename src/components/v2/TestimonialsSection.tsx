@@ -6,7 +6,7 @@ import Link from 'next/link';
  *
  * Accepts a `region` prop ('in' | 'us' | 'uk') that swaps:
  *   - Testimonial cards (client name, city, quote, industry)
- *   - Proof panel stats (₹400Cr+ → $50M+ for US)
+ *   - Proof panel stats (same confirmed stats for every region)
  *   - Live projects panel (India .in domains → US portfolio links)
  *   - Default headline copy
  *
@@ -122,7 +122,8 @@ const LIVE_PROJECTS: LiveProject[] = [
 const US_STATS = [
   { value: '523+', label: 'websites built across the US, UK & India' },
   { value: '97%', label: 'delivered on time or early' },
-  { value: '$50M+', label: 'client revenue from sites we built' },
+  // Was '$50M+ client revenue', never verified. Replaced 2026-09-28 with a confirmed claim.
+  { value: '7 days', label: 'website delivery, for sites up to 5 pages' },
 ] as const;
 
 /* ─── Star row ──────────────────────────────────────────────────────────── */
@@ -205,7 +206,7 @@ export default function TestimonialsSection({
   const stats        = isUS ? US_STATS : ([
     { value: '523+',     label: 'websites built across India, US & UK' },
     { value: '97%',      label: 'delivered on time or early' },
-    { value: '₹400Cr+', label: 'client revenue from sites we built' },
+    { value: '7 days',   label: 'website delivery, for sites up to 5 pages' },
   ] as const);
   const liveProjectsLabel = 'Live verified projects';
   const resolvedHeadline  = headline ?? (

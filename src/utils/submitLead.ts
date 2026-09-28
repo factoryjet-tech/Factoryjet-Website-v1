@@ -88,13 +88,15 @@ export interface LeadResult {
 }
 
 /** Build a readable, collision-resistant doc id: 2026-06-22_11-04-31_JohnDoe_a1b2 */
-function makeDocId(name: string): string {
+function makeDocId(): string {
   const now = new Date();
   const dateStr = now.toISOString().split('T')[0];
   const timeStr = now.toTimeString().split(' ')[0].replace(/:/g, '-');
-  const namePart = (name || 'lead').replace(/\s+/g, '').slice(0, 15) || 'lead';
-  const rand = Math.random().toString(36).slice(2, 6);
-  return `${dateStr}_${timeStr}_${namePart}_${rand}`;
+  // No name in the id: it is pushed to GA4 as lead_id and appears in the
+  // /thank-you?lid= URL, so it must not carry personal data. The 'lead' slot
+  // keeps the old 4-part shape so existing ids and ERPNext records still match.
+  const rand = Math.random().toString(36).slice(2, 8);
+  return `${dateStr}_${timeStr}_lead_${rand}`;
 }
 
 /** POST to the edge function with a hard timeout so it can never hang. */
@@ -125,7 +127,7 @@ async function postNotifyLead(
 }
 
 export async function submitLead(input: LeadInput): Promise<LeadResult> {
-  const docId = makeDocId(input.name);
+  const docId = makeDocId();
   const page = input.page ?? (typeof window !== 'undefined' ? window.location.pathname : '');
   const collection = input.collection || 'contactus';
   // Where this visitor came from (landing page, referring site, UTM tags), so the

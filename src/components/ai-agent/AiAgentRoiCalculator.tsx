@@ -213,10 +213,10 @@ export default function AiAgentRoiCalculator({
             Live Financial Modeling Engine &bull; US Benchmarks
           </div>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-[#14110F] font-heading tracking-tight">
-            Calculate Your AI Agent Net Savings &amp; Payback
+            Estimate the Hours Your Team Gets Back
           </h2>
           <p className="text-sm sm:text-base text-[#46403B] mt-1">
-            Adjust your monthly queue volume, loaded labor rate, and target systems to see exact cost recovery projections.
+            Set your monthly volume, your team's hourly cost and your systems. You get a rough estimate of the time the agent frees up and what that time is worth. It is an estimate, not a promise.
           </p>
         </div>
 
@@ -361,14 +361,14 @@ export default function AiAgentRoiCalculator({
             </div>
           </div>
 
-          {/* 4. Hourly Labor Cost Slider & Presets */}
+          {/* 4. Team Hourly Cost Slider & Presets */}
           <div className="p-5 rounded-2xl border border-[#E7DED6] bg-[#FAFAF7] shadow-sm">
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-3">
               <div>
                 <label htmlFor={rateSliderId} className="text-xs font-mono font-bold uppercase tracking-wider text-[#14110F] block">
-                  4. Loaded Hourly Cost per Human Rep / Specialist
+                  4. Your Team's Hourly Cost
                 </label>
-                <span className="text-xs text-[#6E655F]">Base salary, benefits, payroll taxes, and overhead</span>
+                <span className="text-xs text-[#6E655F]">Used only to put a value on the hours your team gets back</span>
               </div>
               <div className="text-left sm:text-right">
                 <span className="text-2xl font-extrabold text-[#F05A28] font-heading">
@@ -447,7 +447,7 @@ export default function AiAgentRoiCalculator({
                   <span className="text-xs font-mono font-normal text-[#6E655F] ml-1">hrs/mo</span>
                 </div>
                 <div className="text-[11px] text-[#6E655F] mt-0.5">
-                  &asymp; {calculations.fullTimeEquivalents} Full-Time Reps
+                  &asymp; {calculations.fullTimeEquivalents} full-time people's worth of time back
                 </div>
               </div>
 
@@ -494,7 +494,7 @@ export default function AiAgentRoiCalculator({
             {/* Financial Breakdown Bar */}
             <div className="p-4 rounded-xl bg-white border border-[#E7DED6] mb-6 text-xs font-mono">
               <div className="flex justify-between text-[#46403B] mb-1.5">
-                <span>Gross Labor Value:</span>
+                <span>Value of Hours Freed:</span>
                 <span className="font-bold text-[#14110F]">${calculations.annualGrossLaborSavings.toLocaleString()}/yr</span>
               </div>
               <div className="flex justify-between text-[#46403B] mb-2 pb-2 border-b border-[#E7DED6]">
