@@ -55,7 +55,7 @@ export const metadata: Metadata = {
 };
 
 // Freshness signal. Keep honest: bump when the page's content actually changes.
-const PAGE_MODIFIED = '2026-09-23';
+const PAGE_MODIFIED = '2026-09-29';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',

@@ -17,6 +17,11 @@
   --fm:'Geist Mono',monospace;
 }
 
+@media (max-width: 767px) {
+  /* Keep the AU hub footer legal row above the global fixed quote bar. */
+  .au-svc + footer { padding-bottom: 88px; }
+}
+
 .au-svc, .au-svc *::before, .au-svc *::after {box-sizing:border-box;margin:0;padding:0}
 
 .au-svc {scroll-behavior:smooth}
@@ -512,7 +517,7 @@
 .au-svc .byline .who b {color:var(--ink)}
 .au-svc .byline .who span {color:var(--n400)}
 .au-svc .byline .upd {margin-left:auto;font-family:var(--fm);font-size:10px;color:var(--n400);text-align:right;line-height:1.5}
-.au-svc .def {background:var(--white);border:1px solid var(--n200);border-left:3px solid var(--orange);border-radius:14px;padding:24px 26px}
+.au-svc .def {background:var(--white);border:1px solid var(--n200);border-radius:14px;padding:24px 26px}
 .au-svc .def .lab {font-family:var(--fm);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#B23E13;display:block;margin-bottom:8px}
 .au-svc .def p {font-size:17px;color:var(--ink);line-height:1.7}
 .au-svc .plat-card {background:var(--white);border:1px solid var(--n200);border-radius:16px;padding:22px;transition:border-color .2s}

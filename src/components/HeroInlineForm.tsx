@@ -29,9 +29,24 @@ export interface HeroInlineFormProps {
   region?: 'us' | 'uk' | 'in' | 'au' | 'ae';
   /** Submit button label. Default 'Get my free quote'. */
   submitLabel?: string;
+  /** Optional DOM id used by sticky conversion controls to return to this form. */
+  formId?: string;
+  /** Optional low-commitment path shown below the submit row. */
+  secondaryHref?: string;
+  secondaryLabel?: string;
+  /** Optional trust note shown below the submit row. */
+  trustText?: string;
 }
 
-const HeroInlineForm: React.FC<HeroInlineFormProps> = ({ source = 'us_hero_inline', region = 'us', submitLabel = 'Get my free quote' }) => {
+const HeroInlineForm: React.FC<HeroInlineFormProps> = ({
+  source = 'us_hero_inline',
+  region = 'us',
+  submitLabel = 'Get my free quote',
+  formId,
+  secondaryHref,
+  secondaryLabel,
+  trustText,
+}) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [honeypot, setHoneypot] = useState('');
@@ -77,7 +92,7 @@ const HeroInlineForm: React.FC<HeroInlineFormProps> = ({ source = 'us_hero_inlin
 
   return (
     <>
-    <form onSubmit={handleSubmit} onFocus={onFirstInteraction} className="mt-6 max-w-[540px]">
+    <form id={formId} onSubmit={handleSubmit} onFocus={onFirstInteraction} className="mt-6 max-w-[540px]" data-hero-inline-form>
       <div
         className="rounded-2xl bg-white p-3.5 sm:p-4"
         style={{ border: '1px solid rgba(15,33,56,0.10)', boxShadow: '0 10px 30px rgba(15,33,56,0.07)' }}
@@ -116,11 +131,19 @@ const HeroInlineForm: React.FC<HeroInlineFormProps> = ({ source = 'us_hero_inlin
           style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, opacity: 0 }}
         />
 
-        <div className="mt-2.5 flex items-center gap-1.5 font-fj-body" style={{ fontSize: '12.5px', color: '#4a5a6b' }}>
-          <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-            <path d="M4.5 7l2 2L9.5 4.5" stroke="#103A5E" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-          <span><b style={{ color: '#0F2138', fontWeight: 600 }}>Founder replies within 24 hours.</b> No spam, no obligation.</span>
+        <div className={`mt-2.5 flex gap-2 font-fj-body ${secondaryHref && secondaryLabel ? 'flex-col sm:flex-row sm:items-center sm:justify-between' : 'items-center'}`} style={{ fontSize: '12.5px', color: '#4a5a6b' }}>
+          <span>
+            {trustText ?? <><b style={{ color: '#0F2138', fontWeight: 600 }}>Founder replies within 24 hours.</b> No spam, no obligation.</>}
+          </span>
+          {secondaryHref && secondaryLabel && (
+            <a
+              href={secondaryHref}
+              className="shrink-0 font-fj-mono font-semibold underline underline-offset-4 transition-colors hover:text-[#B23E13] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#B23E13]"
+              style={{ color: '#6E3C2A' }}
+            >
+              {secondaryLabel}
+            </a>
+          )}
         </div>
 
         {error && <p className="mt-2 font-fj-body text-[13px]" style={{ color: '#b3261e' }}>{error}</p>}

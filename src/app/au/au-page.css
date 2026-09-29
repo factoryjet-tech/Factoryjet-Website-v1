@@ -75,7 +75,7 @@
 .aiAgentPage.auPage .chg-list li b { color: var(--ink); font-weight: 600; }
 
 /* Bordered side panel + numbered list (used for checklists that sit beside prose) */
-.aiAgentPage.auPage .au-panel { padding: 24px 26px; border: 1px solid var(--line); border-left: 2px solid var(--accent); border-radius: 8px; background: var(--accent-wash); }
+.aiAgentPage.auPage .au-panel { padding: 24px 26px; border: 1px solid var(--line); border-radius: 8px; background: var(--accent-wash); }
 .aiAgentPage.auPage .au-panel .eyebrow { margin-bottom: 14px; }
 .aiAgentPage.auPage .au-numlist { list-style: none; margin: 0; padding: 0; counter-reset: au; }
 .aiAgentPage.auPage .au-numlist li { counter-increment: au; display: grid; grid-template-columns: 30px minmax(0,1fr); gap: 8px; padding: 11px 0; border-bottom: 1px solid var(--line); font-size: 14px; color: var(--body); line-height: 1.65; }
@@ -83,6 +83,11 @@
 .aiAgentPage.auPage .au-numlist li::before { content: counter(au, decimal-leading-zero); font-family: var(--mono); font-size: 10px; color: var(--accent-text); padding-top: 3px; }
 .aiAgentPage.auPage .au-numlist b { color: var(--ink); font-weight: 600; }
 .aiAgentPage.auPage .facts .au-panel { grid-column: 1; grid-row: 2; position: sticky; top: 112px; }
+
+/* A sticky side panel can travel into full-width rows that follow the facts
+   grid. Keep AU audit/checklist panels in normal flow so those rows remain
+   readable during a long desktop scroll. */
+.aiAgentPage.auPage .facts .wrap:has(> .span-all) .au-panel { position: static; top: auto; }
 
 /* Label / note / value rows (hero scorecards, handover triggers) */
 .aiAgentPage.auPage .trigrows { list-style: none; margin: 14px 0 0; padding: 0; }
@@ -250,6 +255,9 @@
 .aiAgentPage.auPage .factphoto.vslot,
 .aiAgentPage.auPage .process .vslot,
 .aiAgentPage.auPage .vlog .vslot { overflow: visible; border: 0; background: transparent; box-shadow: none; }
+/* The filled-slot wrapper is positioned relative below; clear Family A's sticky
+   `top` offset so captions keep their full height in normal document flow. */
+.aiAgentPage.auPage .factphoto.vslot { top: auto; }
 .aiAgentPage.auPage .factphoto.vslot > img,
 .aiAgentPage.auPage .process .vslot > img,
 .aiAgentPage.auPage .vlog .vslot > img {
@@ -310,4 +318,22 @@
   .aiAgentPage.auPage .vslot[data-visual-status='filled'] { border-radius: 10px; }
   .aiAgentPage.auPage .photobreak.vslot { width: calc(100% - 32px); }
   .aiAgentPage.auPage .photobreak.vslot > img { min-height: 210px; }
+}
+
+/* Keep long ledger values (for example, six-figure totals) inside a 390px viewport. */
+@media (max-width: 480px) {
+  .aiAgentPage.auPage .ledger .wrap { grid-template-columns: minmax(0, 1fr); }
+  .aiAgentPage.auPage .ledgercell {
+    min-width: 0;
+    padding: 24px 0;
+    border-right: 0;
+    border-top: 1px solid var(--line);
+  }
+  .aiAgentPage.auPage .ledgercell:first-child { border-top: 0; }
+  .aiAgentPage.auPage .ledgercell:nth-child(n) { padding-left: 0; padding-right: 0; }
+}
+
+@media (max-width: 767px) {
+  /* Reserve room for the global fixed quote bar at the very end of AU pages. */
+  .aiAgentPage.auPage + footer { padding-bottom: 88px; }
 }

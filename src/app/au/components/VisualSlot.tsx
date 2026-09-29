@@ -22,10 +22,13 @@ const GENERATED_SLOTS: Record<string, readonly string[]> = {
   'local-seo': ['facts', 'proof', 'photobreak', 'process', 'definition'],
   melbourne: ['facts', 'definition', 'photobreak', 'process', 'city-map'],
   'ndis-website-design': ['facts', 'proof', 'photobreak', 'process', 'definition'],
+  'real-estate-websites': ['facts', 'proof', 'photobreak', 'process', 'definition'],
   seo: ['facts', 'proof', 'photobreak', 'process', 'definition'],
   'shopify-development': ['facts', 'photobreak', 'definition', 'proof', 'facts-2'],
   'small-business-seo': ['facts', 'proof', 'photobreak', 'process', 'definition'],
+  'small-business-web-design': ['facts', 'proof', 'photobreak', 'process', 'definition'],
   'website-maintenance': ['facts', 'proof', 'photobreak', 'process', 'facts-3'],
+  'websites-for-tradies': ['facts', 'facts-2', 'photobreak', 'process', 'definition'],
 };
 
 function generatedVisualSrc(page: string, slot: string): string | undefined {

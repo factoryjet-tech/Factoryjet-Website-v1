@@ -1,6 +1,7 @@
 import { Fragment } from 'react';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import { HOME_FAQ_CATEGORIES, HOME_FAQS } from './HomeFaqs';
+import MobileStickyBar from './MobileStickyBar';
 import './AiAgentDevelopmentSections.css';
 import './HomeSections.css';
 
@@ -45,8 +46,25 @@ export default function HomeSections() {
             <div className="hero-copy">
               <div className="eyebrow">Ecommerce Development · AI Commerce</div>
               <h1>We Build Your Ecommerce. And the <span className="hero-emphasis">AI Agents That Keep It Running.</span></h1>
-              <p className="lead">Ecommerce development services for DTC and B2B brands: design, development, implementation, and support. Stores and B2B portals on Shopify, Shopify Plus, Adobe Commerce, BigCommerce, WooCommerce, or Commerceflo, plus the agents that list, reprice, and keep stock in sync across every channel you sell on.</p>
-              <HeroInlineForm source="us_hero_inline" region="us" submitLabel="Get a commerce audit" />
+              <p className="lead">Ecommerce development for DTC and B2B brands on Shopify, Adobe Commerce, BigCommerce, WooCommerce, and Commerceflo, with AI agents that keep channels, stock, and orders in sync.</p>
+              <HeroInlineForm
+                source="us_hero_inline"
+                region="us"
+                submitLabel="Get a commerce audit"
+                formId="home-hero-form"
+                secondaryHref="#comparison"
+                secondaryLabel="Explore Agency Comparison & Case Studies ↓"
+                trustText="🔒 Direct founder response · Zero sales pressure"
+              />
+              <aside className="hero-proof" aria-label="Selected FactoryJet clients and track record">
+                <p><strong>Over $120M+ GMV powered</strong> across 500+ commerce &amp; AI engagements.</p>
+                <div className="proof-brands" aria-label="Selected clients">
+                  <span>Belle Maison</span>
+                  <span>Impulse Branding</span>
+                  <span>Yadav Automation</span>
+                  <span>Argos Watches</span>
+                </div>
+              </aside>
             </div>
 
             <form className="specpanel" aria-label="Interactive order workflow illustration">
@@ -67,32 +85,36 @@ export default function HomeSections() {
               </div>
               <div className="specpanel-body" role="radiogroup" aria-label="Explore workflow steps">
                 <label className="specrow run">
-                  <input className="workflow-select" type="radio" name="order-step" value="1" />
+                  <input className="workflow-select" type="radio" name="order-step" value="1" aria-describedby="workflow-detail-1" />
                   <span className="workflow-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 5h2l2.2 10.2a1 1 0 0 0 1 .8h8.6a1 1 0 0 0 1-.8L19.5 8H6.2M9 20h.01M17 20h.01"/></svg></span>
                   <span className="idx">STEP 01</span>
                   <span className="title">Order lands from any channel</span>
                   <span className="tag">READ</span>
+                  <span className="workflow-detail" id="workflow-detail-1">Channel webhooks normalize each order into one shared queue with its source and customer context intact.</span>
                 </label>
                 <label className="specrow run">
-                  <input className="workflow-select" type="radio" name="order-step" value="2" />
+                  <input className="workflow-select" type="radio" name="order-step" value="2" aria-describedby="workflow-detail-2" />
                   <span className="workflow-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M4 7l8-4 8 4v10l-8 4-8-4V7Zm0 0 8 4 8-4M12 11v10"/></svg></span>
                   <span className="idx">STEP 02</span>
                   <span className="title">Check one live stock count</span>
                   <span className="tag">VERIFY</span>
+                  <span className="workflow-detail" id="workflow-detail-2">The workflow checks the live inventory source before allocation, so every channel works from the same available count.</span>
                 </label>
                 <label className="specrow run">
-                  <input className="workflow-select" type="radio" name="order-step" value="3" />
+                  <input className="workflow-select" type="radio" name="order-step" value="3" aria-describedby="workflow-detail-3" />
                   <span className="workflow-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M4 12h6m0 0 4-6h6M10 12l4 6h6M10 12h10"/></svg></span>
                   <span className="idx">STEP 03</span>
                   <span className="title">Update every channel &amp; route to fulfillment</span>
                   <span className="tag">WRITE</span>
+                  <span className="workflow-detail" id="workflow-detail-3">Confirmed stock is reserved, channel counts are updated, and the order is routed to the correct warehouse or 3PL.</span>
                 </label>
                 <label className="specrow hold">
-                  <input className="workflow-select" type="radio" name="order-step" value="4" />
+                  <input className="workflow-select" type="radio" name="order-step" value="4" aria-describedby="workflow-detail-4" />
                   <span className="workflow-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3 3 7v5c0 5 9 9 9 9s9-4 9-9V7l-9-4Zm-4 9 3 3 5-6"/></svg></span>
                   <span className="idx">STEP 04</span>
                   <span className="title">Exceptions go to your team</span>
                   <span className="tag">HOLD</span>
+                  <span className="workflow-detail" id="workflow-detail-4">Mismatches and policy exceptions pause safely with the evidence your team needs to approve or correct them.</span>
                 </label>
               </div>
               <div className="specpanel-foot">RULE · if stock doesn't reconcile, the order is flagged, never oversold.</div>
@@ -103,7 +125,16 @@ export default function HomeSections() {
         <div className="ledger">
           <div className="wrap">
             <div className="ledgercell"><div className="k">Founded</div><div className="v"><strong className="ledger-number">2014</strong></div></div>
-            <div className="ledgercell"><div className="k">Platforms</div><div className="v">Shopify, Shopify Plus, Adobe Commerce (Magento), BigCommerce, WooCommerce, headless, and Commerceflo.</div></div>
+            <div className="ledgercell ledger-platforms">
+              <div className="k">Platforms</div>
+              <nav className="platform-pills" aria-label="Ecommerce platform services">
+                <a href="/services/shopify-development">Shopify &amp; Plus</a>
+                <a href="/services/magento-development">Adobe Commerce (Magento)</a>
+                <a href="/services/ecommerce-development">BigCommerce</a>
+                <a href="/services/woocommerce-development">WooCommerce</a>
+                <a href="/services/ai-agent-development">AI Commerce Agents</a>
+              </nav>
+            </div>
             <div className="ledgercell"><div className="k">What you own</div><div className="v">Everything we build: the store, the integrations, the agents. No FactoryJet subscription.</div></div>
             <div className="ledgercell"><div className="k">Track record</div><div className="v"><strong className="ledger-number">500+</strong> businesses served across web, commerce, and AI engagements.</div></div>
           </div>
@@ -119,8 +150,8 @@ export default function HomeSections() {
               <div className="factlist">
                 <div className="fact"><div className="sec">§01</div><p>FactoryJet is an ecommerce development company for DTC and B2B brands in the United States, and an AI development company that builds the agents on top. We design, build, implement, and support stores, B2B portals, AI agents, and the websites and search presence around them. You own and run everything we build.</p></div>
                 <div className="fact"><div className="sec">§02</div><p>Most multichannel problems are data problems. When your store, Amazon, Walmart, TikTok Shop, and B2B portal each keep their own copy of stock, you oversell. We build one catalog, one live inventory, and one order queue under every channel.</p></div>
-                <div className="fact"><div className="sec">§03</div><p><span className="stat">About 70% of online carts are abandoned before checkout.</span> The store you sell from has to load fast and be easy to buy from, or the traffic you paid for leaks out. <a href="https://baymard.com/lists/cart-abandonment-rate" target="_blank" rel="noopener nofollow">Baymard Institute ↗</a></p></div>
-                <div className="fact"><div className="sec">§04</div><p><span className="stat">16.9% of US retail sales now happen online</span>, and visits to US retail sites from AI tools like ChatGPT rose 1,200% between July 2024 and February 2025. Buyers now ask an assistant what to buy. <a href="https://www.census.gov/retail/ecommerce.html" target="_blank" rel="noopener nofollow">US Census ↗</a> <a href="https://blog.adobe.com/en/publish/2025/03/17/adobe-analytics-traffic-to-us-retail-websites-from-generative-ai-sources-jumps-1200-percent" target="_blank" rel="noopener nofollow">Adobe Analytics ↗</a></p></div>
+                <div className="fact"><div className="sec">§03</div><p><span className="stat">About 70% of online carts are abandoned before checkout.</span> The store you sell from has to load fast and be easy to buy from, or the traffic you paid for leaks out. <span className="source-cite" role="note">Source: Baymard Institute cart abandonment benchmark</span></p></div>
+                <div className="fact"><div className="sec">§04</div><p><span className="stat">16.9% of US retail sales now happen online</span>, and visits to US retail sites from AI tools like ChatGPT rose 1,200% between July 2024 and February 2025. Buyers now ask an assistant what to buy. <span className="source-cite" role="note">Sources: US Census quarterly retail report; Adobe Analytics retail traffic study</span></p></div>
                 <div className="fact"><div className="sec">§05</div><p>The AI agents we build are task agents, not chatbots. They list new products in each marketplace's format, fix suppressed listings, reprice, and reconcile feeds on your live data, then hand the exceptions to your team.</p></div>
               </div>
               <div className="factphoto">
@@ -467,6 +498,7 @@ export default function HomeSections() {
           </div>
         </section>
       </main>
+      <MobileStickyBar targetId="home-hero-form" />
     </div>
   );
 }

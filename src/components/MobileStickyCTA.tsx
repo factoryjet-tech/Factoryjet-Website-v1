@@ -19,14 +19,24 @@ export default function MobileStickyCTA() {
   const { openModal } = useContactModal();
   const [show, setShow] = useState(false);
   const pathname = usePathname();
+  const isHomepage = pathname === '/';
   const waHref = whatsappHref("Hi FactoryJet, I'd like a free quote for my project.", pathname);
 
   useEffect(() => {
+    if (isHomepage) {
+      setShow(false);
+      return;
+    }
+
     const onScroll = () => setShow(window.scrollY > 480);
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
-  }, []);
+  }, [isHomepage]);
+
+  // The homepage owns an IntersectionObserver-driven bar tied to its inline
+  // commerce-audit form. Never stack this global quote bar on top of it.
+  if (isHomepage) return null;
 
   return (
     <div
