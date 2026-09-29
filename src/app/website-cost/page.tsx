@@ -22,11 +22,11 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
    types before hiring anyone, so a thin page here is a lost lead, not a
    cosmetic problem.
 
-   The hard constraint: this page may never state a price. No currency, no
-   ranges, no "starting from". So the entire craft is answering the cost
-   question honestly WITHOUT a number: what drives it, how the pricing models
-   differ, what buyers forget to budget, and the checklist that makes two
-   quotes actually comparable. Named engagement shapes carry no figures.
+   Pricing rule changed 2026-09-30 (Bhavesh): cost pages MAY show price
+   RANGES, never one fixed number. PRICE_RANGES below is FactoryJet's reading
+   of 2026 US quotes, the same figures the homepage FAQ and the US website cost
+   guide publish, labelled as our estimate. Keep all three in sync. Buyers ask
+   AI assistants price questions, and a cost page with no number loses them.
 
    External citations, each curl-verified 200 and the claim read on the page
    on 2026-08-13:
@@ -42,12 +42,12 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 ───────────────────────────────────────────────────────────────────────────── */
 
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
-const REVIEWED_DATE = 'August 13, 2026';
+const REVIEWED_DATE = 'September 30, 2026';
 
 export const metadata: Metadata = {
   title: 'How Much Does a Website Cost in 2026? | FactoryJet',
   description:
-    'What really sets the price of a website: page count, design, content, integrations, platform and upkeep. Plus the questions that make two quotes comparable.',
+    'Most US small business websites cost $2,000 to $8,000 in 2026. Price ranges by type of site, what moves the number, and how to compare two quotes.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
@@ -70,14 +70,24 @@ export const metadata: Metadata = {
 
 // Freshness signal. Benchmark: 56% of AI-Overview-cited pages carry it.
 // Keep honest: bump when the page's content actually changes.
-const PAGE_MODIFIED = '2026-08-13';
+const PAGE_MODIFIED = '2026-09-30';
 
 /* ── content ──────────────────────────────────────────────────────────────── */
 
 const HERO_PROMISES = [
-  'No price on this page, because a published number would be wrong for almost everyone reading it.',
+  'Typical 2026 US price ranges by type of site, labelled as our estimate, never one fixed number.',
   'What actually moves the number, in plain language, including the parts most quotes leave out.',
   'A checklist you can hand to any agency, including ones that are not us.',
+];
+
+/** FactoryJet's reading of 2026 US quotes. Ranges only, never a single price. */
+const PRICE_RANGES: ReadonlyArray<{ option: string; upfront: string; ongoing: string; fits: string }> = [
+  { option: 'DIY builder (Wix, Squarespace)', upfront: '$0 plus 40 to 80 hours of your time', ongoing: 'The builder\'s monthly plan', fits: 'A one-page site or testing an idea' },
+  { option: 'Freelancer or template setup', upfront: '$1,500 to $5,000', ongoing: 'Varies, often none', fits: 'A simple site with content ready' },
+  { option: 'Custom small business site (5 to 10 pages)', upfront: '$2,000 to $8,000', ongoing: '$99 to $299 a month for care', fits: 'Most local and service businesses' },
+  { option: 'Ecommerce store', upfront: '$3,000 to $20,000', ongoing: 'Platform plan plus care', fits: 'Selling online, catalog and payments' },
+  { option: 'US agency, fully custom design', upfront: '$8,000 to $25,000', ongoing: 'Retainer, if any', fits: 'Brand-led sites with research and testing' },
+  { option: 'Complex, integrated or headless build', upfront: '$25,000 and up', ongoing: 'Support contract', fits: 'ERP, CRM or custom logic the site must run' },
 ];
 
 const COST_DRIVERS: ReadonlyArray<{ title: string; body: string }> = [
@@ -318,25 +328,25 @@ const FAQ_ITEMS = [
     category: 'basics',
     question: 'How much does a website cost?',
     answer:
-      'There is no honest single number, and anyone who gives you one before seeing your scope is guessing. Price follows six things: template count, design depth, content readiness, integrations, platform choice, and who maintains it after launch. Send us your scope and we will quote it in writing.',
+      'In the US in 2026, most custom small business websites land between $2,000 and $8,000. A DIY builder costs $0 upfront plus your time, and a fully custom US agency build runs $8,000 to $25,000. Complex builds with integrations start around $25,000. Where you land depends on six things: template count, design depth, content readiness, integrations, platform and upkeep. These are our estimates from US quotes; send us your scope and we will quote it in writing.',
   },
   {
     category: 'basics',
     question: 'How much does a website cost for a small business?',
     answer:
-      'Less than most owners fear, and more than a builder subscription. A small business site is usually a handful of templates, a contact form wired to your inbox or CRM, local search setup and analytics. The number climbs when you add booking, payments or a real integration.',
+      'Usually $2,000 to $8,000 for a custom site of 5 to 10 pages, plus about $99 to $299 a month if you want someone to keep it updated and secure. That covers a handful of templates, a contact form wired to your inbox or CRM, local search setup and analytics. The number climbs when you add booking, payments or a real integration.',
   },
   {
     category: 'basics',
     question: 'How much does an ecommerce website cost?',
     answer:
-      'More than a brochure site, because a store is software. You are paying for catalog setup, payments, shipping and tax rules, inventory sync and email flows on top of design. Catalog size and integration count move it most. B2B rules like contract pricing and net terms move it again.',
+      'Usually $3,000 to $20,000, because a store is software. You are paying for catalog setup, payments, shipping and tax rules, inventory sync and email flows on top of design. Catalog size and integration count move it most. B2B rules like contract pricing and net terms move it again.',
   },
   {
     category: 'basics',
-    question: 'Why will you not put a price on this page?',
+    question: 'Why do you show ranges instead of one price?',
     answer:
-      'Because a published number would be wrong for almost everyone who reads it. A five-page site with finished content and a fifty-page site with an ERP integration are not the same job. We would rather scope yours on a call and quote it in writing.',
+      'Because one number would be wrong for almost everyone who reads it. A five-page site with finished content and a fifty-page site with an ERP integration are not the same job. The ranges tell you roughly where you will land; a written quote against your scope tells you exactly.',
   },
   {
     category: 'basics',
@@ -574,7 +584,7 @@ export default function WebsiteCostPage() {
                 How much does a website cost?
               </h1>
               <p className="mt-5 max-w-[620px] text-[17px] leading-relaxed text-[#46403B]">
-                {'Straight talk on what sets the price, what buyers forget to budget, and the questions that make two quotes comparable.'}
+                {'Most custom small business sites in the US cost $2,000 to $8,000. Here are the ranges by type of site, what moves the number, and the questions that make two quotes comparable.'}
               </p>
               <div className="mt-7">
                 <HeroInlineForm region="us" source="us_website_cost_hero" submitLabel="Get my project scoped" />
@@ -617,7 +627,7 @@ export default function WebsiteCostPage() {
               The short answer
             </h2>
             <p className="mt-5 max-w-[70ch] text-[19px] leading-[1.6] text-[#14110F]">
-              {'A website costs whatever its scope costs. Six things move the number more than anything else: how many templates you need, how custom the design is, whether your content and photos are ready, how many systems it has to connect to, which platform you build on, and who keeps it running after launch.'}
+              {'Most custom small business websites in the US cost $2,000 to $8,000 in 2026. Stores run $3,000 to $20,000, and complex builds with integrations start around $25,000. Six things decide where you land: how many templates you need, how custom the design is, whether your content and photos are ready, how many systems it has to connect to, which platform you build on, and who keeps it running after launch.'}
             </p>
             <p className="mt-5 max-w-[70ch] text-[16px] leading-relaxed text-[#46403B]">
               {'Everything below explains those six in plain language, then hands you a checklist you can use on any agency. If you want a real number, we scope it on a short call and quote it in writing before work starts. Start with '}
@@ -625,6 +635,49 @@ export default function WebsiteCostPage() {
               {' if the site is a marketing site, or '}
               <Link href="/services/ecommerce-development" className={LINK}>ecommerce development</Link>
               {' if you are selling online.'}
+            </p>
+          </div>
+        </section>
+
+        {/* ── PRICE RANGES ──────────────────────────────────────────────── */}
+        <section id="price-ranges" className="border-b border-[#E7DED6]">
+          <div className="mx-auto max-w-[1180px] px-5 py-16 md:py-20">
+            <h2 className="max-w-[26ch] font-fj-display text-3xl font-extrabold tracking-tight md:text-4xl">
+              Typical website prices in the US, 2026
+            </h2>
+            <p className="mt-4 max-w-[70ch] text-[16px] leading-relaxed text-[#46403B]">
+              {'Ranges, not quotes. These are our estimates of 2026 US quotes. Builder plan prices change often, so check '}
+              <a href="https://www.wix.com/plans" target="_blank" rel="noopener noreferrer" className={LINK}>Wix</a>
+              {' and '}
+              <a href="https://www.squarespace.com/pricing" target="_blank" rel="noopener noreferrer" className={LINK}>Squarespace</a>
+              {' directly.'}
+            </p>
+            <div className="mt-10 overflow-x-auto rounded-2xl border border-[#E7DED6]">
+              <table className="w-full min-w-[640px] border-collapse text-left text-[15px]">
+                <thead className="bg-[#FFF8F5] font-fj-mono text-[11px] uppercase tracking-[0.1em] text-[#B23E13]">
+                  <tr>
+                    <th scope="col" className="p-4">Type of site</th>
+                    <th scope="col" className="p-4">Upfront</th>
+                    <th scope="col" className="p-4">Ongoing</th>
+                    <th scope="col" className="p-4">Fits</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {PRICE_RANGES.map((r) => (
+                    <tr key={r.option} className="border-t border-[#E7DED6] align-top">
+                      <th scope="row" className="p-4 font-fj-display font-bold text-[#14110F]">{r.option}</th>
+                      <td className="p-4 font-semibold text-[#14110F]">{r.upfront}</td>
+                      <td className="p-4 text-[#46403B]">{r.ongoing}</td>
+                      <td className="p-4 text-[#46403B]">{r.fits}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="mt-6 max-w-[70ch] text-[15px] leading-relaxed text-[#46403B]">
+              {'FactoryJet quotes one fixed price in writing after a short scoping call, and sites of 5 pages or fewer can be delivered in 7 days. For a line-by-line breakdown, read our '}
+              <Link href="/blog/website-cost-small-business-usa-2026" className={LINK}>small business website cost guide</Link>
+              {'.'}
             </p>
           </div>
         </section>
