@@ -76,3 +76,4 @@ tsconfig.tsbuildinfo
 # Clarity daily snapshots (local analytics, regenerable only for 3 days)
 pipeline/research/data/clarity/
 pipeline/research/data/weekly/
+pipeline/research/data/index-watch/
