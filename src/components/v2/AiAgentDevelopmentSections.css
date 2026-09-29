@@ -230,8 +230,12 @@
 .aiAgentPage .finalcta h2 { max-width: 20ch; font-size: clamp(34px,4.6vw,58px); line-height: 1.1; }
 .aiAgentPage .finalcta p { margin-top: 24px; max-width: 60ch; font-size: 16px; line-height: 1.75; color: var(--body); }
 .aiAgentPage .finalcta .btn { flex-shrink: 0; margin-bottom: 5px; }
-.aiAgentPage .finalcta-form { flex: 0 1 540px; min-width: 0; }
-.aiAgentPage .finalcta-form form { margin-top: 0; }
+.aiAgentPage .finalcta-form { flex: 0 1 440px; min-width: 0; }
+.aiAgentPage .finalcta-form form { margin-top: 0; max-width: none; }
+/* Stack the inline form here: beside the CTA copy it only gets ~40% of the row. */
+.aiAgentPage .finalcta-form [data-hero-inline-form] > div > div:first-child { flex-direction: column; }
+.aiAgentPage .finalcta-form [data-hero-inline-form] input,
+.aiAgentPage .finalcta-form [data-hero-inline-form] button[type="submit"] { flex: none; width: 100%; }
 
 /* Directory of every AI agent page (hub interlinking). */
 .aiAgentPage .agentdir { border-top: 1px solid var(--line); }
