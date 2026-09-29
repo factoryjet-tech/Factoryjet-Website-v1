@@ -19,11 +19,11 @@ export const post: BlogPost = {
   keyTakeaways: [
     'Shopify is right for 80% of US small business e-commerce, it handles PCI compliance, hosting, and scaling automatically at $79–$299/month.',
     'Custom websites (Next.js, WordPress) outperform Shopify on content SEO: they rank for 2–3x more blog-driven keywords because of superior technical architecture.',
-    'A Shopify store built by an agency costs $2,499–$6,000; a comparable custom e-commerce site costs $8,000–$25,000: the 3–4x price difference is real.',
+    'A Shopify store built by an agency costs $2,500–$6,000; a comparable custom e-commerce site costs $8,000–$25,000: the 3–4x price difference is real.',
     'Shopify\'s 0.5–2% transaction fees on third-party gateways cost $5,000–$20,000/year on $500K+ revenue, at that scale, custom can pay for itself within 18 months.',
     'Service businesses (no products) should almost always use a custom site: Shopify is optimized for products and adds unnecessary complexity and cost for service-only models.',
     'The hybrid approach: Shopify for the store, custom site for the blog/content hub, is the power move for brands where content drives acquisition.',
-    'FactoryJet builds both Shopify stores and custom websites for US small businesses, with 7-day delivery starting at $1,999 (custom) and $2,499 (Shopify).',
+    'FactoryJet builds both Shopify stores and custom websites for US small businesses, with 7-day delivery and a fixed price quoted in writing after a short scoping call.',
   ],
   faqs: [
     {
@@ -32,7 +32,7 @@ export const post: BlogPost = {
     },
     {
       q: 'How much does a Shopify store cost to build vs. a custom website?',
-      a: "A professionally built Shopify store costs $2,499–$6,000 for agency development plus $79–$299/month for Shopify subscription. A custom e-commerce site costs $8,000–$25,000 for agency development plus $30–$80/month for hosting. Over three years, Shopify's total cost of ownership is typically lower for businesses under $300K/year in revenue. Above $500K/year, Shopify's transaction fees ($2,500–$10,000/year) can make custom builds more economical.",
+      a: "A professionally built Shopify store costs $2,500–$6,000 for agency development plus $79–$299/month for Shopify subscription. A custom e-commerce site costs $8,000–$25,000 for agency development plus $30–$80/month for hosting. Over three years, Shopify's total cost of ownership is typically lower for businesses under $300K/year in revenue. Above $500K/year, Shopify's transaction fees ($2,500–$10,000/year) can make custom builds more economical.",
     },
     {
       q: 'Is Shopify bad for SEO compared to a custom website?',
@@ -60,7 +60,7 @@ export const post: BlogPost = {
     },
     {
       q: 'How long does it take to build a Shopify store vs. a custom website?',
-      a: "A Shopify store with a custom theme and 50-product catalog takes 7–21 days with an efficient agency. A comparable custom e-commerce site takes 4–12 weeks. FactoryJet builds Shopify stores in 7 days starting at $2,499. The speed advantage comes from Shopify's established infrastructure. There's no server setup, no payment gateway configuration from scratch, and no security certification work. Custom sites require these layers, adding 3–6 weeks of foundation work before design even begins.",
+      a: "A Shopify store with a custom theme and 50-product catalog takes 7–21 days with an efficient agency. A comparable custom e-commerce site takes 4–12 weeks. FactoryJet builds Shopify stores in 7 days. The speed advantage comes from Shopify's established infrastructure. There's no server setup, no payment gateway configuration from scratch, and no security certification work. Custom sites require these layers, adding 3–6 weeks of foundation work before design even begins.",
     },
     {
       q: 'Is Shopify or a custom website better for wholesale ecommerce in the US?',
@@ -202,7 +202,7 @@ export const post: BlogPost = {
           <tbody>
             <tr className="bg-white">
               <td className="border p-3">Initial build</td>
-              <td className="border p-3">$2,499–$6,000</td>
+              <td className="border p-3">$2,500–$6,000</td>
               <td className="border p-3">$4,000–$15,000</td>
             </tr>
             <tr className="bg-gray-50">
@@ -329,10 +329,10 @@ export const post: BlogPost = {
         FactoryJet builds both platforms for US small businesses with the same quality standard, the same 7-day delivery, and the same pricing transparency. We don't favor one over the other, we recommend based on your actual business model.
       </p>
       <p className="mb-4">
-        <strong>Shopify stores:</strong> Custom theme development, product catalog setup, payment gateway configuration, SEO optimization, and app integration. Starting at $2,499 for up to 50 products, delivered in 7 days.
+        <strong>Shopify stores:</strong> Custom theme development, product catalog setup, payment gateway configuration, SEO optimization, and app integration. Up to 50 products, delivered in 7 days.
       </p>
       <p className="mb-4">
-        <strong>Custom websites (WordPress/Next.js):</strong> Custom design, Core Web Vitals optimization, full on-page SEO, schema markup, and 30-day post-launch support. Starting at $1,999 for a 5-page professional site, delivered in 7 days.
+        <strong>Custom websites (WordPress/Next.js):</strong> Custom design, Core Web Vitals optimization, full on-page SEO, schema markup, and 30-day post-launch support. A 5-page professional site, delivered in 7 days.
       </p>
       <p className="mb-4">
         Our US-hour project management team will tell you honestly which platform fits your business, and we'll document exactly why in writing before you commit a dollar. India-based development means a lower price for identical technical output.

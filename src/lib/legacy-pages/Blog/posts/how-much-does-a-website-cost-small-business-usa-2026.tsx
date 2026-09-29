@@ -6,7 +6,7 @@ export const post: BlogPost = {
   slug: 'how-much-does-a-website-cost-small-business-usa-2026',
   title: 'How Much Does a Website Cost for a Small Business in the USA? (2026)',
   excerpt:
-    'A US small business website costs $500 to $25,000 in 2026 depending on complexity, technology, and whether you hire locally or offshore. This guide gives you the full price breakdown, explains every factor that affects cost, and shows you how to get a Lighthouse 95+ site for $1,999.',
+    'A US small business website costs $500 to $25,000 in 2026 depending on complexity, technology, and whether you hire locally or offshore. This guide gives you the full price breakdown, explains every factor that affects cost, and shows you what a Lighthouse 95+ site actually requires.',
   category: 'Web Design & Strategy',
   author: 'Bhavesh Barot',
   date: 'May 23, 2026',
@@ -15,29 +15,29 @@ export const post: BlogPost = {
   meta: {
     title: 'How Much Does a Website Cost for a Small Business USA? (2026 Pricing Guide)',
     description:
-      'Complete 2026 pricing guide: US small business website costs from $500 to $25,000. What affects price, what you actually need, and how to get Lighthouse 95+ for $1,999.',
+      'Complete 2026 pricing guide: US small business website costs from $500 to $25,000. What affects price, what you actually need, and what it takes to get Lighthouse 95+.',
   },
   keyTakeaways: [
-    'US small business website costs in 2026 range from $500 (DIY builder) to $25,000+ (premium domestic agency), with the sweet spot for a custom professional site at $1,999 to $8,000.',
+    'US small business website costs in 2026 range from $500 (DIY builder) to $25,000+ (premium domestic agency), with the sweet spot for a custom professional site at $2,000 to $8,000.',
     'The four cost factors that matter most: technology stack (Next.js vs template), number of pages, e-commerce requirements, and agency delivery model.',
     'A $500 Wix or Squarespace site costs very little upfront but creates long-term SEO and performance limitations: the cost of rebuilding it in 18 to 24 months is often $3,000 to $8,000.',
     'E-commerce adds $1,500 to $8,000 to a basic site cost depending on product volume, payment complexity, and inventory system integrations.',
     'US domestic agencies charge $8,000 to $25,000 primarily due to local overhead, office space, and domestic payroll rather than technical output differences.',
-    'Lighthouse 95+ scores (the performance standard that directly influences Core Web Vitals rankings) are achievable at any price point above $1,999 with proper engineering.',
-    'FactoryJet builds custom US small business websites starting at $1,999 with Lighthouse 95+, full technical SEO, WCAG 2.2 compliance, and 7-day delivery.',
+    'Lighthouse 95+ scores (the performance standard that directly influences Core Web Vitals rankings) are achievable at modest price points with proper engineering.',
+    'FactoryJet builds custom US small business websites with Lighthouse 95+, full technical SEO, WCAG 2.2 compliance, and 7-day delivery for sites of 5 pages or fewer, at a fixed price quoted in writing after a short scoping call.',
   ],
   faqs: [
     {
       q: 'How much should a small business website cost in the USA in 2026?',
-      a: 'Budget breakdown for US small businesses in 2026: DIY (Wix, Squarespace, Shopify basic) costs $0 to $500 setup plus $20 to $50/month. Template-based WordPress with freelancer customization runs $500 to $2,500. Custom professional 5-page site from an offshore agency with US support runs $1,999 to $4,000. Custom professional site from a US domestic agency runs $8,000 to $18,000. E-commerce (Shopify custom) runs $2,499 to $12,000. Full custom web applications run $15,000 to $50,000+. For most US SMBs needing a professional conversion-optimized site, $1,999 to $4,000 from a vetted agency delivers the highest ROI.',
+      a: 'Budget breakdown for US small businesses in 2026: DIY (Wix, Squarespace, Shopify basic) costs $0 to $500 setup plus $20 to $50/month. Template-based WordPress with freelancer customization runs $500 to $2,500. Custom professional 5-page site from an offshore agency with US support runs $2,000 to $4,000. Custom professional site from a US domestic agency runs $8,000 to $18,000. E-commerce (Shopify custom) runs $2,500 to $12,000. Full custom web applications run $15,000 to $50,000+. For most US SMBs needing a professional conversion-optimized site, $2,000 to $4,000 from a vetted agency delivers the highest ROI.',
     },
     {
       q: 'Why do US web design agencies charge $10,000 to $25,000 for a website?',
       a: 'US domestic agencies charge higher rates because of domestic operating overhead, not superior code quality. A mid-size US agency pays office rent, $85,000 to $130,000 in annual developer salary, health benefits, and domestic account management costs. The same Next.js expertise, Lighthouse optimization techniques, and React engineering patterns exist in global engineering hubs at a fraction of the cost with zero difference in technical output.',
     },
     {
-      q: "What is included in a $1,999 website from FactoryJet?",
-      a: "FactoryJet's $1,999 starting package includes: bespoke custom design (no purchased templates), up to 5 core pages, Next.js or WordPress build, Lighthouse 95+ across all four Core Web Vitals metrics, WCAG 2.2 Level AA accessibility compliance, technical SEO (JSON-LD schema markup, XML sitemap, meta tags), mobile-first responsive architecture, 30 days post-launch support, full code and hosting ownership transfer, and US business-hour project management with 7-day turnaround.",
+      q: "What is included in a FactoryJet small business website?",
+      a: "FactoryJet's small business website package includes: bespoke custom design (no purchased templates), up to 5 core pages, Next.js or WordPress build, Lighthouse 95+ across all four Core Web Vitals metrics, WCAG 2.2 Level AA accessibility compliance, technical SEO (JSON-LD schema markup, XML sitemap, meta tags), mobile-first responsive architecture, 30 days post-launch support, full code and hosting ownership transfer, and US business-hour project management with 7-day turnaround.",
     },
     {
       q: 'Is a $500 Wix or Squarespace website good enough for a US small business?',
@@ -45,11 +45,11 @@ export const post: BlogPost = {
     },
     {
       q: 'How much does an e-commerce website cost for a US small business in 2026?',
-      a: 'E-commerce pricing in 2026: Basic DIY Shopify setup runs $500 to $1,500 in Year 1 fees. Custom Shopify theme with up to 50 products and payment configuration runs $2,499 to $4,999 at FactoryJet. Mid-tier custom e-commerce with 100 to 500 products and ERP/CRM integration runs $5,000 to $12,000. Full headless e-commerce builds run $12,000 to $35,000+.',
+      a: 'E-commerce pricing in 2026: Basic DIY Shopify setup runs $500 to $1,500 in Year 1 fees. Mid-tier custom e-commerce with 100 to 500 products and ERP/CRM integration runs $5,000 to $12,000. Full headless e-commerce builds run $12,000 to $35,000+.',
     },
     {
       q: 'Does a more expensive website rank better on Google?',
-      a: 'No. Search rankings correlate with technical engineering quality, speed, and content relevance, not agency price tags. Google measures mobile Core Web Vitals (LCP under 2.5s, CLS under 0.1, INP under 200ms), structured schema markup, and crawl efficiency. A $25,000 agency build on a bloated theme will be outranked by a $1,999 custom Next.js build with Lighthouse 100/100.',
+      a: 'No. Search rankings correlate with technical engineering quality, speed, and content relevance, not agency price tags. Google measures mobile Core Web Vitals (LCP under 2.5s, CLS under 0.1, INP under 200ms), structured schema markup, and crawl efficiency. A $25,000 agency build on a bloated theme will be outranked by a lean custom Next.js build with Lighthouse 100/100.',
     },
     {
       q: 'What ongoing costs should a US small business budget for their website?',
@@ -57,7 +57,7 @@ export const post: BlogPost = {
     },
     {
       q: 'How do I get the best value website for my small business in the USA?',
-      a: 'Hire an established engineering team with US-hour project management, verified Lighthouse 95+ client sites, fixed-price milestone billing, and named client references. This secures $10,000+ worth of domestic agency output for $1,999 to $4,000. Always verify live PageSpeed scores on pagespeed.web.dev before signing.',
+      a: 'Hire an established engineering team with US-hour project management, verified Lighthouse 95+ client sites, fixed-price milestone billing, and named client references. This secures $10,000+ worth of domestic agency output for $2,000 to $4,000. Always verify live PageSpeed scores on pagespeed.web.dev before signing.',
     },
   ],
   content: (
@@ -72,7 +72,7 @@ export const post: BlogPost = {
           <li>US Domestic vs Offshore Agencies: The Price Difference Explained</li>
           <li>E-commerce Website Costs in 2026</li>
           <li>Ongoing Website Costs Every Business Should Budget</li>
-          <li>What $1,999 Actually Gets You</li>
+          <li>What a FactoryJet Website Includes</li>
           <li>What FactoryJet Delivers in 7 Days</li>
         </ul>
       </div>
@@ -106,22 +106,10 @@ export const post: BlogPost = {
               <td className="border p-3">60-80 (mobile)</td>
             </tr>
             <tr className="bg-white">
-              <td className="border p-3 font-semibold">Custom Next.js site (FactoryJet)</td>
-              <td className="border p-3 font-bold text-[#B23E13]">$1,999-$4,000</td>
-              <td className="border p-3">US small businesses demanding high search rank</td>
-              <td className="border p-3 font-bold text-[#F05A28]">95-100 (mobile)</td>
-            </tr>
-            <tr className="bg-[#FAFAF7]">
               <td className="border p-3 font-semibold">Custom site (US domestic agency)</td>
               <td className="border p-3">$8,000-$18,000</td>
               <td className="border p-3">Mid-market corporate enterprises</td>
               <td className="border p-3">85-100 (mobile)</td>
-            </tr>
-            <tr className="bg-white">
-              <td className="border p-3 font-semibold">Custom Shopify e-commerce (FactoryJet)</td>
-              <td className="border p-3 font-bold text-[#B23E13]">$2,499-$5,999</td>
-              <td className="border p-3">DTC brands, retail, multichannel sellers</td>
-              <td className="border p-3 font-bold text-[#F05A28]">95-100 (mobile)</td>
             </tr>
             <tr className="bg-[#FAFAF7]">
               <td className="border p-3 font-semibold">Custom e-commerce (US domestic agency)</td>
@@ -176,9 +164,9 @@ export const post: BlogPost = {
         <strong>3. The 18-month rebuild cycle.</strong> Most growing businesses outgrow template builders within 18 to 24 months. Rebuilding on Next.js or Shopify at that stage costs $3,000 to $8,000, rendering the initial DIY effort an expensive temporary patch.
       </p>
 
-      <h2 className="text-2xl font-bold mt-8 mb-4 text-gray-900">What $1,999 Gets You from FactoryJet</h2>
+      <h2 className="text-2xl font-bold mt-8 mb-4 text-gray-900">What a FactoryJet Website Includes</h2>
       <p className="mb-4 text-gray-700 leading-relaxed">
-        FactoryJet's $1,999 package is engineered specifically for US small businesses that demand enterprise-level speed, search visibility, and conversion design:
+        FactoryJet's small business website package is engineered specifically for US small businesses that demand enterprise-level speed, search visibility, and conversion design:
       </p>
       <ul className="list-disc pl-5 space-y-2 mb-6 text-gray-700">
         <li><strong>Bespoke design:</strong> Custom design crafted around your brand identity without pre-bought templates.</li>
@@ -198,7 +186,7 @@ export const post: BlogPost = {
             Get an Exact Fixed-Price Scope for Your Website Build
           </h3>
           <p className="text-gray-300 text-sm md:text-base leading-relaxed mb-6">
-            FactoryJet builds high-performance Next.js websites and custom Shopify stores starting at $1,999. Book a 30-minute scoping call with founder Bhavesh Barot.
+            FactoryJet builds high-performance Next.js websites and custom Shopify stores, with a fixed price in writing after a 30-minute scoping call with founder Bhavesh Barot.
           </p>
           <div className="flex flex-wrap gap-3">
             <a
@@ -223,8 +211,8 @@ export const post: BlogPost = {
         <h3 className="text-lg font-bold mb-2 text-gray-900">US Small Business Website Budget Guide 2026</h3>
         <p className="text-gray-700 mb-3">Quick reference for your planning:</p>
         <ul className="list-disc pl-5 space-y-1 text-gray-700">
-          <li><strong>5-page professional site:</strong> $1,999 (FactoryJet) to $12,000 (US domestic agency)</li>
-          <li><strong>Shopify e-commerce build:</strong> $2,499 (FactoryJet) to $20,000 (US domestic agency)</li>
+          <li><strong>5-page professional site:</strong> $2,000 (offshore agency) to $12,000 (US domestic agency)</li>
+          <li><strong>Shopify e-commerce build:</strong> $2,500 (offshore agency) to $20,000 (US domestic agency)</li>
           <li><strong>Monthly maintenance:</strong> $99 to $249/month</li>
           <li><strong>Domain + hosting:</strong> $120 to $600/year</li>
           <li><strong>Technical SEO audit:</strong> $500 to $1,500</li>

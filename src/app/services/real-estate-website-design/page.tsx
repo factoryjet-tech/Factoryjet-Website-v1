@@ -421,8 +421,8 @@ const MARKET_STATS = [
     sourceLabel: 'FactoryJet',
   },
   {
-    value: '$0/mo',
-    label: 'ongoing FactoryJet platform fee, you own the site outright, pay only for hosting',
+    value: 'No fee',
+    label: 'no ongoing FactoryJet platform fee, you own the site outright and pay only for hosting',
     sourceUrl: 'https://factoryjet.com/pricing',
     sourceLabel: 'FactoryJet',
   },
@@ -503,7 +503,7 @@ export default function RealEstateWebsiteDesignPage() {
               <span className="text-white/40 text-center">Real Geeks / kvCORE</span>
             </div>
             {[
-              ['Monthly Cost', '$0 after build', 'Recurring monthly fee'],
+              ['Monthly Cost', 'No platform fee after build', 'Recurring monthly fee'],
               ['Lighthouse Score', '90+', '40-65'],
               ['Custom Design', '✓ Fully custom', '✗ Template only'],
               ['You Own the Site', '✓ Outright', '✗ Subscription'],
@@ -650,7 +650,7 @@ export default function RealEstateWebsiteDesignPage() {
         eyebrow="HOW WE COMPARE"
         headline="FactoryJet vs. Real Estate Platforms vs. Generic Web Agencies"
         lead="Not all real estate website options are equal. Here's what the decision looks like when you compare side by side, on price, quality, and what you're left with long-term."
-        pullQuote={{ stat: '$0/mo', caption: 'ongoing FactoryJet platform fee, you pay once and own the site outright.' }}
+        pullQuote={{ stat: 'No fee', caption: 'no ongoing FactoryJet platform fee, you pay once and own the site outright.' }}
         columns={COMPARISON_COLUMNS}
         rows={COMPARISON_ROWS}
         footer="Real Geeks, kvCORE, and BoomTown monthly fees are recurring and typically increase over time. FactoryJet is a one-time build fee: a small monthly hosting cost goes directly to your host."

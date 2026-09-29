@@ -24,7 +24,7 @@ export const post: BlogPost = {
     'AI agent implementation does not require a technical team. Platforms like Voiceflow, Botpress, and custom-built solutions can deploy a functional lead qualification agent in 5–7 days.',
     'The most valuable AI agent use cases for US SMBs in 2026: 24/7 website chat support, lead qualification and routing, appointment scheduling and reminders, post-purchase follow-up, and quote request processing.',
     'Cost range: off-the-shelf AI chatbot platforms run $50–$500/month. Custom AI agents built by an agency typically cost $2,500–$8,000 to build and $100–$300/month to maintain.',
-    'FactoryJet builds and deploys custom AI agents for US small businesses in 7 days, integrated directly into your website, starting at $2,999.',
+    'FactoryJet builds and deploys custom AI agents for US small businesses, integrated directly into your website, and quotes a fixed price in writing after a short scoping call.',
   ],
   faqs: [
     {
@@ -37,11 +37,11 @@ export const post: BlogPost = {
     },
     {
       q: 'How much does an AI agent cost for a US small business?',
-      a: "Cost ranges in 2026: off-the-shelf platforms (Intercom, Drift, Tidio, Freshchat), $50–$400/month with limited customization. Mid-tier custom configurations on Voiceflow or Botpress, $1,500–$3,500 to build, $75–$200/month to run. Fully custom AI agents built by an agency, $2,500–$8,000 to build, $100–$300/month to maintain. For most US SMBs, the custom agency-built route at $2,999–$4,999 delivers the best ROI because it's trained on your specific business, integrated into your website and CRM, and tested against your actual customer conversations.",
+      a: "Cost ranges in 2026: off-the-shelf platforms (Intercom, Drift, Tidio, Freshchat), $50–$400/month with limited customization. Mid-tier custom configurations on Voiceflow or Botpress, $1,500–$3,500 to build, $75–$200/month to run. Fully custom AI agents built by an agency, $2,500–$8,000 to build, $100–$300/month to maintain. For most US SMBs, the custom agency-built route delivers the best ROI because it's trained on your specific business, integrated into your website and CRM, and tested against your actual customer conversations.",
     },
     {
       q: 'How long does it take to implement an AI agent for my small business?',
-      a: "A functional lead qualification or customer support AI agent can be built and deployed in 5–7 days when built by an experienced agency. The timeline depends on: complexity of the conversation flows, number of integrations needed (CRM, calendar, email), and how much training data (past customer conversations, FAQs, product information) is available. Simpler agents (FAQ bot, appointment scheduler) deploy faster. Complex agents that integrate with Salesforce or HubSpot and handle multi-step qualification flows take 10–14 days. FactoryJet deploys AI agents integrated into your website in 7 days.",
+      a: "A functional lead qualification or customer support AI agent can be built and deployed in 5–7 days when built by an experienced agency. The timeline depends on: complexity of the conversation flows, number of integrations needed (CRM, calendar, email), and how much training data (past customer conversations, FAQs, product information) is available. Simpler agents (FAQ bot, appointment scheduler) deploy faster. Complex agents that integrate with Salesforce or HubSpot and handle multi-step qualification flows take 10–14 days. FactoryJet builds AI agents integrated into your website, with the timeline set in the written scope.",
     },
     {
       q: 'Do I need a technical team to manage an AI agent?',
@@ -57,7 +57,7 @@ export const post: BlogPost = {
     },
     {
       q: 'How do I get started with an AI agent for my small business?',
-      a: "The fastest path: (1) Identify your highest-volume repetitive task, answering the same 20 questions, booking appointments, qualifying leads. (2) Document your current process and typical customer questions. (3) Choose between a DIY platform ($50–$200/month, 2–4 weeks to configure yourself) or an agency build ($2,999–$4,999, 7 days to deployment). (4) Integrate with your website and CRM. (5) Monitor for 30 days and refine. FactoryJet builds and deploys custom AI agents for US SMBs in 7 days, integrated directly into your website. Get started at factoryjet.com/ai-agents.",
+      a: "The fastest path: (1) Identify your highest-volume repetitive task, answering the same 20 questions, booking appointments, qualifying leads. (2) Document your current process and typical customer questions. (3) Choose between a DIY platform ($50–$200/month, 2–4 weeks to configure yourself) or an agency build (typically $2,500–$8,000 to build). (4) Integrate with your website and CRM. (5) Monitor for 30 days and refine. FactoryJet builds custom AI agents for US small businesses, integrated directly into your website, on a timeline agreed in the written scope. Get started at factoryjet.com/ai-agents.",
     },
   ],
   content: (
@@ -102,7 +102,7 @@ export const post: BlogPost = {
         <strong>Lead response standards.</strong> A 2023 Harvard Business Review analysis of 2,241 US companies found that businesses responding to leads within 5 minutes were 21x more likely to qualify the lead than businesses that waited 30 minutes. Most small businesses can't respond within 5 minutes consistently, especially after hours or during peak periods. AI agents respond within seconds, 24/7.
       </p>
       <p className="mb-4">
-        <strong>Cost accessibility.</strong> Platforms that previously required enterprise IT budgets are now available for $50–$300/month. Custom AI agents built by agencies start at $2,999. The ROI threshold has dropped below 90 days for most service businesses with regular inbound volume.
+        <strong>Cost accessibility.</strong> Platforms that previously required enterprise IT budgets are now available for $50–$300/month. Custom AI agents built by agencies typically cost $2,500–$8,000 to build. The ROI threshold has dropped below 90 days for most service businesses with regular inbound volume.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">The 5 Highest-ROI Use Cases for US SMBs</h2>
@@ -165,7 +165,7 @@ export const post: BlogPost = {
         <strong>Agency-built custom AI agents:</strong> $2,500–$8,000 to build, $100–$300/month to maintain. Pros: trained on your business, integrated with your website and CRM, handles complex multi-step workflows, maintained and improved over time. Cons: higher upfront cost. ROI threshold for service businesses: typically 60–90 days.
       </p>
       <p className="mb-4">
-        FactoryJet builds custom AI agents for US small businesses from $2,999, deployed and integrated into your website in 7 days. Treat $2,999 as the entry point rather than a quote: we price the build once we know what the agent has to do. ➡ <a href="/services/ai-agent-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">See our AI agent services</a>
+        FactoryJet builds custom AI agents for US small businesses, deployed and integrated into your website. We quote a fixed price in writing after a short scoping call, once we know what the agent has to do. ➡ <a href="/services/ai-agent-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">See our AI agent services</a>
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What to Avoid When Buying AI Agent Tools</h2>
@@ -180,12 +180,12 @@ export const post: BlogPost = {
           <li>Count daily repetitive customer queries your team handles manually</li>
           <li>Multiply by average time per query × your labor cost per hour</li>
           <li>Add estimated value of after-hours leads currently being lost</li>
-          <li>Divide $2,999 (build cost) by that monthly total</li>
+          <li>Divide your quoted build cost by that monthly total</li>
           <li>Most US service businesses hit payback in 45–90 days</li>
         </ul>
       </div>
 
-      <p className="mb-6">➡ Ready to deploy AI agents for your US business? <a href="/services/ai-agent-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">FactoryJet AI Agents for US businesses</a>, built and integrated into your website in 7 days from $2,999. Explore our <a href="/services/ai-automation" className="text-blue-600 underline hover:text-blue-800 transition-colors">AI automation services</a>.</p>
+      <p className="mb-6">➡ Ready to deploy AI agents for your US business? <a href="/services/ai-agent-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">FactoryJet AI Agents for US businesses</a>, built and integrated into your website, with a fixed quote after a short scoping call. Explore our <a href="/services/ai-automation" className="text-blue-600 underline hover:text-blue-800 transition-colors">AI automation services</a>.</p>
     </>
   ),
 };

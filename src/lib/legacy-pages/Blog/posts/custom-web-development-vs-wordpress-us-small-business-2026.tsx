@@ -306,13 +306,13 @@ export const post: BlogPost = {
         FactoryJet builds both WordPress sites and custom web applications for US small businesses. We don&apos;t prefer one over the other commercially, we recommend whichever fits the business. About 70% of our US SMB clients are correctly served by WordPress; the remaining 30% need genuine custom development.
       </p>
       <p className="mb-4">
-        <strong>WordPress builds:</strong> Custom theme development (no purchased templates), Lighthouse 90+ mobile scores, WCAG 2.2 Level AA accessibility, full on-page SEO (Yoast or Rank Math configured), schema markup, managed hosting setup on WP Engine or Kinsta, and editor training for your team. 7-day delivery on standard 5-page builds when content is provided at kickoff. Starting at $1,999.
+        <strong>WordPress builds:</strong> Custom theme development (no purchased templates), Lighthouse 90+ mobile scores, WCAG 2.2 Level AA accessibility, full on-page SEO (Yoast or Rank Math configured), schema markup, managed hosting setup on WP Engine or Kinsta, and editor training for your team. 7-day delivery on standard 5-page builds when content is provided at kickoff.
       </p>
       <p className="mb-4">
-        <strong>Custom web applications:</strong> Next.js on Vercel, Astro on Netlify, or Ruby on Rails on Heroku depending on the workload. Postgres or PlanetScale for data, NextAuth or Clerk for auth, Stripe for billing if applicable. SOC 2-ready architecture, full CI/CD, automated testing, and a documented operations runbook. Engagement starts at $30,000 for a focused MVP and scales based on scope.
+        <strong>Custom web applications:</strong> Next.js on Vercel, Astro on Netlify, or Ruby on Rails on Heroku depending on the workload. Postgres or PlanetScale for data, NextAuth or Clerk for auth, Stripe for billing if applicable. SOC 2-ready architecture, full CI/CD, automated testing, and a documented operations runbook. Scope is set in a short scoping call, and the price is fixed in writing before work starts.
       </p>
       <p className="mb-4">
-        <strong>Headless WordPress hybrid:</strong> WordPress back end with a Next.js front end on Vercel, connected via WPGraphQL. The editor experience your team knows, the performance and design freedom you actually want. Typically $15,000–$45,000 for an SMB build.
+        <strong>Headless WordPress hybrid:</strong> WordPress back end with a Next.js front end on Vercel, connected via WPGraphQL. The editor experience your team knows, the performance and design freedom you actually want. Every build gets a fixed quote after scoping.
       </p>
       <p className="mb-4">
         Already on WordPress and outgrowing it? See our <a href="/services/website-redesign" className="text-blue-600 underline hover:text-blue-800 transition-colors">website redesign service</a>, we audit your existing site, recommend the right next step (better WordPress, headless, or full custom), and only quote the path that actually fits.

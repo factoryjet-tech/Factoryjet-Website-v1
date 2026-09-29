@@ -24,7 +24,7 @@ export const post: BlogPost = {
     'Sales tax automation is built into Shopify (Shopify Tax) but is a paid plugin on WooCommerce (TaxJar or Avalara, $19-$50/month), factor this in if you have nexus in multiple states.',
     'For US payment stacks: both platforms support Stripe, PayPal, and Square. Shopify Payments waives the 0.5-2% platform fee; WooCommerce never charges a platform fee regardless of processor.',
     'Black Friday / Cyber Monday traffic handling favors Shopify out of the box, managed infrastructure scales automatically. WooCommerce needs a properly sized host (Cloudways, Kinsta, WP Engine) configured in advance.',
-    'FactoryJet builds both platforms for US small businesses with 7-day delivery and Lighthouse 95+ performance: Shopify from $2,499, WooCommerce from $2,999.',
+    'FactoryJet builds both platforms for US small businesses with 7-day delivery and Lighthouse 95+ performance, at a fixed price quoted in writing after a short scoping call.',
   ],
   faqs: [
     {
@@ -69,7 +69,7 @@ export const post: BlogPost = {
     },
     {
       q: 'Which platform does FactoryJet recommend for US small businesses?',
-      a: "It depends on your numbers. We recommend Shopify for US stores under $500K/year in revenue, businesses with no in-house technical resource, and any DTC brand that needs to launch in under 2 weeks. We recommend WooCommerce for stores over $500K/year, businesses already running WordPress for content marketing, and B2B catalogs that need custom pricing rules, net-30 terms, or wholesale tiers. FactoryJet builds both with 7-day delivery: Shopify packages start at $2,499 and WooCommerce at $2,999, with the final figure confirmed once the product count is known. You can book a 30-minute conversation at https://calendly.com/bhavesh-factoryjet/30min and we'll recommend the right platform for your specific situation.",
+      a: "It depends on your numbers. We recommend Shopify for US stores under $500K/year in revenue, businesses with no in-house technical resource, and any DTC brand that needs to launch in under 2 weeks. We recommend WooCommerce for stores over $500K/year, businesses already running WordPress for content marketing, and B2B catalogs that need custom pricing rules, net-30 terms, or wholesale tiers. FactoryJet builds both with 7-day delivery and quotes a fixed price in writing once the product count is known. You can book a 30-minute conversation at https://calendly.com/bhavesh-factoryjet/30min and we'll recommend the right platform for your specific situation.",
     },
   ],
   content: (
@@ -121,8 +121,8 @@ export const post: BlogPost = {
             </tr>
             <tr className="bg-gray-50">
               <td className="border p-3 font-semibold">Setup cost (professional)</td>
-              <td className="border p-3">$2,499-$8,000</td>
-              <td className="border p-3">$2,999-$10,000</td>
+              <td className="border p-3">$2,500-$8,000</td>
+              <td className="border p-3">$3,000-$10,000</td>
             </tr>
             <tr className="bg-white">
               <td className="border p-3 font-semibold">Platform transaction fee</td>
@@ -253,10 +253,10 @@ export const post: BlogPost = {
         FactoryJet builds both platforms for US small businesses, and we genuinely don't have a horse in the race, we recommend the one that matches your numbers and your operational style. Here's the framework we use with US clients.
       </p>
       <p className="mb-4">
-        If you're doing under $500,000/year in revenue, have no in-house technical resource, and want to launch in under 2 weeks: <strong>Shopify</strong>. We build a Shopify store in 7 days starting at $2,499, including custom theme configuration, up to 50 products loaded, Shopify Payments setup, US sales tax across all 50 states, Lighthouse 95+ performance, and 30 days of post-launch support. The vast majority of US DTC brands and retail businesses we work with fit this profile.
+        If you're doing under $500,000/year in revenue, have no in-house technical resource, and want to launch in under 2 weeks: <strong>Shopify</strong>. We build a Shopify store in 7 days, including custom theme configuration, up to 50 products loaded, Shopify Payments setup, US sales tax across all 50 states, Lighthouse 95+ performance, and 30 days of post-launch support. The vast majority of US DTC brands and retail businesses we work with fit this profile.
       </p>
       <p className="mb-4">
-        If you're doing over $500,000/year in revenue, already running WordPress for content, or you need B2B-specific features like wholesale tiers or net-30 terms: <strong>WooCommerce</strong>. We build WooCommerce stores in 10-14 days starting at $2,999, custom theme, payment gateway integration (Stripe, PayPal, or Square), managed hosting setup, TaxJar or Avalara configured for your nexus states, and Lighthouse 95+ across product and category pages.
+        If you're doing over $500,000/year in revenue, already running WordPress for content, or you need B2B-specific features like wholesale tiers or net-30 terms: <strong>WooCommerce</strong>. We build WooCommerce stores in 10-14 days, with custom theme, payment gateway integration (Stripe, PayPal, or Square), managed hosting setup, TaxJar or Avalara configured for your nexus states, and Lighthouse 95+ across product and category pages.
       </p>
       <p className="mb-4">
         For both platforms, every build ships with the same technical foundation: Lighthouse 95+, WCAG 2.2 Level AA accessibility, Product JSON-LD schema for Google Shopping rich results, Core Web Vitals optimization, GA4 and Search Console configured, and full code and data ownership transferred to you at final payment. No vendor lock-in on our side either, you can move to any agency or in-house team afterward.
@@ -277,7 +277,7 @@ export const post: BlogPost = {
           Talk to the Founder &rarr;
         </a>
         <p className="text-blue-200 text-sm mt-6">
-          Shopify from $2,499 &middot; WooCommerce from $2,999 &middot; 7-day delivery &middot; Lighthouse 95+
+          Fixed quote after scoping &middot; 7-day delivery for sites of 5 pages or fewer &middot; Lighthouse 95+
         </p>
       </div>
 

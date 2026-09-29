@@ -45,7 +45,7 @@ export const post: BlogPost = {
     },
     {
       q: 'How much does it cost to build an ecommerce store for a Tampa boutique?',
-      a: "Tampa local agencies typically quote $8,000–$25,000 for a 10–50 product Shopify store with custom design, and $20,000–$60,000 for a comparable custom or WooCommerce build. The bulk of that cost is design and theme customization, not the underlying platform engineering. FactoryJet builds equivalent Shopify stores for Tampa boutiques starting at $2,499 and custom ecommerce builds starting at $3,999, with 7-day delivery on standard Shopify setups. The technical work, theme customization, Florida sales tax setup, local pickup configuration, schema markup, is the same regardless of who builds it.",
+      a: "Tampa local agencies typically quote $8,000–$25,000 for a 10–50 product Shopify store with custom design, and $20,000–$60,000 for a comparable custom or WooCommerce build. The bulk of that cost is design and theme customization, not the underlying platform engineering. FactoryJet builds equivalent Shopify and custom ecommerce stores for Tampa boutiques and quotes a fixed price in writing after a short scoping call. The technical work, theme customization, Florida sales tax setup, local pickup configuration, schema markup, is the same regardless of who builds it.",
     },
     {
       q: 'Should a Tampa DTC brand pick Shopify or build something custom?',
@@ -125,7 +125,7 @@ export const post: BlogPost = {
 
       <h3 className="text-xl font-semibold mt-6 mb-3">Shopify: The Default for Most Tampa Boutiques</h3>
       <p className="mb-4">
-        For most Tampa-area boutiques and DTC brands under roughly $2M in revenue, Shopify is the right answer and it is not particularly close. The reasons specific to Tampa: native local pickup, Shopify Tax that handles Florida and multi-state automatically, an app ecosystem that supports bilingual storefronts cleanly (Langify, Weglot), and theme architectures that handle seasonal swaps without a developer. Pricing runs $39–$399/month on the platform, plus theme and customization. A typical Tampa boutique build on Shopify lands at $2,499–$5,999 from FactoryJet versus $8,000–$25,000 from a Tampa local agency.
+        For most Tampa-area boutiques and DTC brands under roughly $2M in revenue, Shopify is the right answer and it is not particularly close. The reasons specific to Tampa: native local pickup, Shopify Tax that handles Florida and multi-state automatically, an app ecosystem that supports bilingual storefronts cleanly (Langify, Weglot), and theme architectures that handle seasonal swaps without a developer. Pricing runs $39–$399/month on the platform, plus theme and customization. Tampa local agencies typically quote $8,000–$25,000 for a custom Shopify boutique build.
       </p>
       <p className="mb-4">
         Where Shopify gets weaker: very large catalogs (1,000+ SKUs with complex variants), heavily customized checkout flows on the standard plan, and B2B wholesale flows that need bespoke pricing rules. Shopify Plus solves most of those but kicks the price tier up significantly.
@@ -188,7 +188,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What FactoryJet Builds for Tampa Boutiques</h2>
       <p className="mb-4">
-        FactoryJet builds Shopify and custom ecommerce stores for Tampa-area boutiques and DTC brands in 7 days, from $2,499 for Shopify and $3,999 for custom builds. Both are entry points: catalogue size and integrations move the number, and we fix it in writing before starting. Every Tampa-area store ships with: theme customization on a current Shopify Online Store 2.0 architecture, Florida sales tax setup via Shopify Tax, local pickup configured for your pickup point in Hyde Park, SoHo, Ybor, Tampa Heights, or wherever you operate, a hurricane-season banner and pause-shipping workflow already wired up, schema markup for Product and Organization, Lighthouse mobile performance above 90 on launch, and US business-hour project management throughout the build.
+        FactoryJet builds Shopify and custom ecommerce stores for Tampa-area boutiques and DTC brands. Catalogue size and integrations set the scope, and we fix a price in writing after a short scoping call, before starting. Every Tampa-area store ships with: theme customization on a current Shopify Online Store 2.0 architecture, Florida sales tax setup via Shopify Tax, local pickup configured for your pickup point in Hyde Park, SoHo, Ybor, Tampa Heights, or wherever you operate, a hurricane-season banner and pause-shipping workflow already wired up, schema markup for Product and Organization, Lighthouse mobile performance above 90 on launch, and US business-hour project management throughout the build.
       </p>
       <p className="mb-4">
         Bigger projects, 500+ SKU catalogs, custom subscription flows, B2B wholesale layers, or WooCommerce migrations, run 2–4 weeks and are scoped during discovery. The pricing stays transparent. 7-day delivery applies to standard Shopify builds with client assets ready at kickoff.

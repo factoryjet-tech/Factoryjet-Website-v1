@@ -95,7 +95,7 @@ export const post: BlogPost = {
           <thead className="bg-[#FFF8F5] border-b border-[#E7DED6]">
             <tr>
               <th className="p-4 font-bold text-[#14110F]">Cost Component</th>
-              <th className="p-4 font-bold text-[#F05A28]">FactoryJet Custom AI Voice</th>
+              <th className="p-4 font-bold text-[#F05A28]">Custom AI Voice Agent</th>
               <th className="p-4 font-bold text-[#6E655F]">Third-Party Answering Service</th>
               <th className="p-4 font-bold text-[#6E655F]">In-House 2-Person BDC</th>
             </tr>
@@ -127,13 +127,13 @@ export const post: BlogPost = {
             </tr>
             <tr>
               <td className="p-4 font-semibold">One-Time Implementation &amp; Build</td>
-              <td className="p-4 font-bold text-[#F05A28]">$12,500 - $18,500 (One-Time)</td>
+              <td className="p-4 font-bold text-[#F05A28]">Fixed quote after scoping</td>
               <td className="p-4 text-[#6E655F]">$1,500 Setup</td>
               <td className="p-4 text-[#6E655F]">$6,000 Recruiting &amp; Training</td>
             </tr>
             <tr className="bg-[#FFF8F5] font-bold">
               <td className="p-4 text-[#14110F]">3-Year Total Cumulative Cost</td>
-              <td className="p-4 text-[#F05A28]">$24,005 (Capital Asset)</td>
+              <td className="p-4 text-[#F05A28]">$8,505 running cost plus one-time build (Capital Asset)</td>
               <td className="p-4 text-[#6E655F]">$457,350 (Operating Sink)</td>
               <td className="p-4 text-[#6E655F]">$337,200 (Labor Overhead)</td>
             </tr>

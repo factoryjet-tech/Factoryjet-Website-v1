@@ -33,7 +33,7 @@ export const post: BlogPost = {
     },
     {
       q: 'How much does a custom Shopify theme cost for a US brand in 2026?',
-      a: "Real US pricing in 2026 lands in three tiers. A focused custom theme on Online Store 2.0, built on Liquid with custom sections, runs $5,000-$15,000 for a US SMB brand with a defined scope and brand system already in place. A full custom theme with extensive PDP customization, custom cart drawer, and 15-20 reusable sections runs $15,000-$30,000. A headless Hydrogen storefront on Shopify Plus with custom checkout, multi-region routing, and React-based component library runs $35,000-$75,000+. US Shopify agencies typically price 2-4x higher for the same scope. FactoryJet builds custom themes from $3,999, with the fixed price set out in a scope document and Lighthouse 95+ as a delivery requirement.",
+      a: "Real US pricing in 2026 lands in three tiers. A focused custom theme on Online Store 2.0, built on Liquid with custom sections, runs $5,000-$15,000 for a US SMB brand with a defined scope and brand system already in place. A full custom theme with extensive PDP customization, custom cart drawer, and 15-20 reusable sections runs $15,000-$30,000. A headless Hydrogen storefront on Shopify Plus with custom checkout, multi-region routing, and React-based component library runs $35,000-$75,000+. US Shopify agencies typically price 2-4x higher for the same scope. FactoryJet builds custom themes at a fixed price set out in a scope document after a short scoping call, with Lighthouse 95+ as a delivery requirement.",
     },
     {
       q: 'Should I build my custom Shopify theme on Liquid (Online Store 2.0) or Hydrogen?',
@@ -49,7 +49,7 @@ export const post: BlogPost = {
     },
     {
       q: 'What ongoing maintenance does a custom Shopify theme need?',
-      a: "Custom themes need ongoing work for three reasons. First, Shopify ships major platform features 2-3 times a year (Online Store 2.0, Markets, Bundles, Checkout Extensibility, B2B updates): your theme has to adopt them or fall behind competitors. Second, your app stack changes, new reviews app, new subscription engine, new analytics tool all need theme integration. Third, your business changes, new product categories, new collection page layouts, seasonal landing pages, BFCM-specific templates. Budget $300-$1,500/month for a US retainer with a Shopify developer, or expect to run a $3,000-$8,000 catch-up project every 6-9 months. FactoryJet offers retainer plans from $299/month for ongoing Shopify work.",
+      a: "Custom themes need ongoing work for three reasons. First, Shopify ships major platform features 2-3 times a year (Online Store 2.0, Markets, Bundles, Checkout Extensibility, B2B updates): your theme has to adopt them or fall behind competitors. Second, your app stack changes, new reviews app, new subscription engine, new analytics tool all need theme integration. Third, your business changes, new product categories, new collection page layouts, seasonal landing pages, BFCM-specific templates. Budget $300-$1,500/month for a US retainer with a Shopify developer, or expect to run a $3,000-$8,000 catch-up project every 6-9 months. FactoryJet also offers retainer plans for ongoing Shopify work, quoted to the scope you need.",
     },
     {
       q: 'Can I customize a premium third-party theme instead of building from scratch?',
@@ -61,7 +61,7 @@ export const post: BlogPost = {
     },
     {
       q: 'Does FactoryJet build custom Shopify themes for US brands?',
-      a: 'Yes. FactoryJet has built custom Shopify themes and Hydrogen storefronts for US DTC brands, B2B wholesalers, fashion and apparel companies, and high-AOV home and lifestyle retailers. Every build includes: Figma-first design with full approval before any Liquid is written, custom sections editable from the Shopify theme editor, Online Store 2.0 architecture with JSON templates, Lighthouse 95+ Performance and 100 on SEO/Accessibility/Best Practices, Product schema and Core Web Vitals optimization, integration with your existing Klaviyo/Stripe/TaxJar stack, and full code ownership delivered to your GitHub repository on launch day. Custom Shopify theme builds start at $3,999. Book a 30-minute conversation at https://calendly.com/bhavesh-factoryjet/30min for a fixed quote.',
+      a: 'Yes. FactoryJet has built custom Shopify themes and Hydrogen storefronts for US DTC brands, B2B wholesalers, fashion and apparel companies, and high-AOV home and lifestyle retailers. Every build includes: Figma-first design with full approval before any Liquid is written, custom sections editable from the Shopify theme editor, Online Store 2.0 architecture with JSON templates, Lighthouse 95+ Performance and 100 on SEO/Accessibility/Best Practices, Product schema and Core Web Vitals optimization, integration with your existing Klaviyo/Stripe/TaxJar stack, and full code ownership delivered to your GitHub repository on launch day. Book a 30-minute conversation at https://calendly.com/bhavesh-factoryjet/30min for a fixed quote.',
     },
   ],
   content: (
@@ -314,7 +314,7 @@ export const post: BlogPost = {
         Every custom theme build ships with the same technical foundation: Online Store 2.0 architecture with JSON templates and sections-everywhere, custom sections editable from the Shopify theme editor, metafields-driven extended product data, Lighthouse Performance 95+ and 100 on SEO/Accessibility/Best Practices, Product schema and Core Web Vitals optimization, integration with your existing Klaviyo / Stripe / TaxJar / ShipStation stack, and full code ownership delivered to your GitHub repository on launch day. No vendor lock-in, you can move to any Shopify developer or in-house team afterward.
       </p>
       <p className="mb-4">
-        Custom Shopify theme builds start at $3,999. Full store builds with theme + product setup + payment + apps + launch start at $7,500. Shopify Plus and headless Hydrogen builds start at $15,000. See the full scope and timeline on our <a href="/services/shopify-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">US Shopify development service page</a>.
+        Every build, from a custom theme to a full store or a Shopify Plus and headless Hydrogen build, gets a fixed price quoted in writing after a short scoping call. See the full scope and timeline on our <a href="/services/shopify-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">US Shopify development service page</a>.
       </p>
 
       <div className="my-12 rounded-2xl bg-[#0052CC] p-8 sm:p-10 text-center not-prose">
@@ -329,7 +329,7 @@ export const post: BlogPost = {
           Talk to the Founder &rarr;
         </a>
         <p className="text-blue-200 text-sm mt-6">
-          Custom Shopify themes from $3,999 &middot; Full store builds from $7,500 &middot; Lighthouse 95+ &middot; Full code ownership
+          Fixed quote after scoping &middot; Lighthouse 95+ &middot; Full code ownership
         </p>
       </div>
 

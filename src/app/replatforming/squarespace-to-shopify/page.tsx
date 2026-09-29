@@ -87,7 +87,7 @@ const FAQ_ITEMS = [
     category: 'cost',
     question: 'How much does a Squarespace to Shopify migration cost?',
     answer:
-      'Our fixed-price Squarespace migrations range between $6,000 and $18,000 depending on catalog size, custom layout complexity, and third-party app requirements. We provide a fixed-price proposal before starting any development.',
+      'The cost depends on catalog size, custom layout complexity, and third-party app requirements. FactoryJet quotes a fixed price in writing after a short scoping call, before starting any development.',
   },
   {
     category: 'cost',

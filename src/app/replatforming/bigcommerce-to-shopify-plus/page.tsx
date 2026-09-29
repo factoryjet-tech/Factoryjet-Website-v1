@@ -99,7 +99,7 @@ const FAQ_ITEMS = [
     category: 'cost',
     question: 'How much does a BigCommerce to Shopify Plus migration cost?',
     answer:
-      'Migration projects typically range from $15,000 to $45,000 depending on SKU volume, custom design requirements, third-party app complexity, and ERP integrations. We provide a guaranteed fixed-price quote before any development begins.',
+      'The cost depends on SKU volume, custom design requirements, third-party app complexity, and ERP integrations. FactoryJet quotes a fixed price in writing after a short scoping call, before any development begins.',
   },
   {
     category: 'cost',

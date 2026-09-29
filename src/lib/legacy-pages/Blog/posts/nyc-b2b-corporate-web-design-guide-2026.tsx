@@ -245,8 +245,8 @@ export const post: BlogPost = {
             </tr>
             <tr className="bg-gray-50">
               <td className="border p-3 font-bold">FactoryJet (engineering-first, remote, US-hour PM)</td>
-              <td className="border p-3 font-bold">$3,100–$15,000</td>
-              <td className="border p-3 font-bold">$15,000–$50,000</td>
+              <td className="border p-3 font-bold">Fixed quote after scoping</td>
+              <td className="border p-3 font-bold">Fixed quote after scoping</td>
               <td className="border p-3 font-bold">2–8 weeks</td>
             </tr>
           </tbody>

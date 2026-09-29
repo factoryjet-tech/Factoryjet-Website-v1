@@ -23,7 +23,7 @@ export const post: BlogPost = {
     "Idaho's 6% flat statewide sales tax is one of the simplest in the country to configure, but multi-state nexus still catches Boise DTC brands the moment they ship meaningful volume to California, Texas, or New York.",
     "BSU football season (late August through November), outdoor recreation peak (May through September), and the post-holiday Treasure Valley slowdown (January through March) create a three-cycle traffic pattern most generic Shopify themes do not handle gracefully.",
     "Local pickup integration is a real conversion lever for Downtown, Boise Bench, North End, Eagle, and Meridian brands, Shopify's native Local Pickup handles this in under an hour with no paid app required.",
-    "Boise local agencies typically quote $6,000–$25,000 for a custom Shopify build with 6–14 week timelines. FactoryJet builds equivalent stores in 7 days starting at $2,999 for Shopify and from $3,999 for fully custom ecommerce.",
+    "Boise local agencies typically quote $6,000–$25,000 for a custom Shopify build with 6–14 week timelines. FactoryJet builds equivalent Shopify and fully custom ecommerce stores and quotes a fixed price in writing after a short scoping call.",
     "FactoryJet builds Shopify and custom ecommerce stores for Boise and Treasure Valley brands in 7 days, with Idaho sales tax, local pickup, seasonal banner workflows, and Lighthouse 90+ mobile performance configured from launch.",
   ],
   faqs: [
@@ -33,7 +33,7 @@ export const post: BlogPost = {
     },
     {
       q: 'How much does it cost to build a Shopify store for a Boise business?',
-      a: "Boise local agencies: Mode Effect, Crush, Collide, and the broader Treasure Valley shop list, typically quote $6,000–$25,000 for a custom Shopify build with timelines running 6–14 weeks. The bulk of that cost is design and theme customization, not the underlying Shopify engineering. FactoryJet builds equivalent Shopify stores for Boise businesses from $2,999 with 7-day delivery on standard builds, and fully custom ecommerce builds from $3,999. Those are starting points, confirmed in writing after a scoping call. The technical work is the same regardless of who builds it: Shopify Online Store 2.0 theme architecture, Idaho sales tax setup, payment gateway integration, schema markup, Lighthouse performance tuning. The pricing difference is structural, not a quality difference.",
+      a: "Boise local agencies: Mode Effect, Crush, Collide, and the broader Treasure Valley shop list, typically quote $6,000–$25,000 for a custom Shopify build with timelines running 6–14 weeks. The bulk of that cost is design and theme customization, not the underlying Shopify engineering. FactoryJet builds equivalent Shopify stores and fully custom ecommerce builds for Boise businesses, with a fixed price confirmed in writing after a short scoping call. The technical work is the same regardless of who builds it: Shopify Online Store 2.0 theme architecture, Idaho sales tax setup, payment gateway integration, schema markup, Lighthouse performance tuning.",
     },
     {
       q: 'When should a Boise business pick custom Shopify development over an off-the-shelf theme?',
@@ -187,7 +187,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What FactoryJet Builds for Boise</h2>
       <p className="mb-4">
-        FactoryJet builds Shopify and custom ecommerce stores for Boise and Treasure Valley brands in 7 days, starting at $2,999 for standard Shopify and from $3,999 for fully custom ecommerce. Every Boise store ships with theme customization on Shopify Online Store 2.0, Idaho sales tax plus multi-state nexus through Shopify Tax, local pickup for your Downtown, Boise Bench, North End, Eagle, Meridian, or Garden City location, payment gateway setup, USPS / UPS / FedEx shipping zones, schema markup, Klaviyo abandoned cart, and Lighthouse mobile Performance above 90 on launch.
+        FactoryJet builds Shopify and custom ecommerce stores for Boise and Treasure Valley brands , with a fixed price quoted in writing after a short scoping call. Every Boise store ships with theme customization on Shopify Online Store 2.0, Idaho sales tax plus multi-state nexus through Shopify Tax, local pickup for your Downtown, Boise Bench, North End, Eagle, Meridian, or Garden City location, payment gateway setup, USPS / UPS / FedEx shipping zones, schema markup, Klaviyo abandoned cart, and Lighthouse mobile Performance above 90 on launch.
       </p>
       <p className="mb-4">
         Bigger projects, 500+ SKU catalogs, custom subscription flows, bundle configurators, B2B wholesale layers, or WooCommerce migrations, run 2–4 weeks and are scoped during discovery. The pricing stays transparent. 7-day delivery applies to standard Shopify builds with client assets ready at kickoff.

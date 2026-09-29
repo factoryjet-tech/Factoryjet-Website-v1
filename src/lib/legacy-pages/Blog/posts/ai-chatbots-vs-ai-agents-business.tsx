@@ -277,7 +277,7 @@ export const post: BlogPost = {
         <strong>AI agent, multi-workflow or multi-tool.</strong> $30,000–$75,000 upfront, $400–$1,200/month. Setup time: 6–12 weeks. Best for: SMBs that want one agent system handling several connected workflows across CRM, calendar, email, billing, and helpdesk.
       </p>
       <p className="mb-4">
-        FactoryJet's locked AI Agent tiers for US SMBs: <strong>$5K Starter</strong> (single workflow, 7-day delivery), <strong>$15K Growth</strong> (multi-step agent with CRM integration), <strong>$50K Scale</strong> (multi-agent system with custom tooling), and an Enterprise tier for complex builds. Custom chatbots typically fit inside the Starter or Growth tiers depending on integration depth.
+        FactoryJet scopes AI agent work for US SMBs in tiers: <strong>Starter</strong> (single workflow, 7-day delivery), <strong>Growth</strong> (multi-step agent with CRM integration), <strong>Scale</strong> (multi-agent system with custom tooling), and an Enterprise tier for complex builds. Each one gets a fixed price in writing after a short scoping call. Custom chatbots typically fit inside the Starter or Growth tiers depending on integration depth.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Build vs Buy</h2>

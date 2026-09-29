@@ -15,21 +15,21 @@ export const post: BlogPost = {
   meta: {
     title: 'Website Redesign Cost for US Small Businesses in 2026 | FactoryJet',
     description:
-      'Website redesign costs for US SMBs range from $1,999 to $25,000 in 2026. What drives the price, when to redesign vs. refresh, and how to get Lighthouse 95+ results at offshore pricing.',
+      'Website redesign costs for US SMBs range from $2,000 to $25,000 in 2026. What drives the price, when to redesign vs. refresh, and how to get Lighthouse 95+ results at offshore pricing.',
   },
   keyTakeaways: [
-    'US small business website redesigns cost $3,500–$25,000 from domestic agencies and $1,999–$6,000 from offshore-with-US-support agencies: the same Lighthouse 95+ outcome at 60–70% less cost.',
+    'US small business website redesigns cost $3,500–$25,000 from domestic agencies and $2,000–$6,000 from offshore-with-US-support agencies: the same Lighthouse 95+ outcome at 60–70% less cost.',
     'The single biggest driver of redesign cost is scope clarity: agencies that price without a detailed written scope will find reasons to charge more after you\'ve signed.',
     'You need a full redesign (not just a visual refresh) when: your Lighthouse mobile Performance score is below 60, your site is on an unsupported platform, or your conversion rate is below 1% on service pages.',
     'Content migration is the hidden cost of most redesigns, moving 50–200 pages of existing content, redirecting URLs, and preserving link equity typically adds $500–$3,000 to the project.',
     'A website redesign without a Core Web Vitals audit is a waste of money. If the new site loads in 4 seconds instead of the old site\'s 5 seconds, you didn\'t actually solve the problem.',
     'The best time to redesign is before a marketing campaign, product launch, or seasonal peak, not during one. Allow 14–21 days minimum (7 days with FactoryJet) between project kickoff and launch.',
-    'FactoryJet redesigns US small business websites starting at $1,999 with 7-day delivery, Lighthouse 95+, full content migration for up to 10 pages, and 30-day post-launch support.',
+    'FactoryJet redesigns US small business websites with 7-day delivery, Lighthouse 95+, full content migration for up to 10 pages, and 30-day post-launch support.',
   ],
   faqs: [
     {
       q: 'How much does a website redesign cost for a US small business in 2026?',
-      a: 'Website redesign costs in 2026 for US small businesses: $3,500–$8,000 from freelancers and small studios; $8,000–$25,000 from mid-market US agencies; $15,000–$50,000+ from premium US agencies. Offshore agencies with US business-hour support (like FactoryJet) deliver the same technical quality for $1,999–$6,000. The key variable is scope: a 5-page service website redesign is $1,999–$4,999; an e-commerce site with 50+ products is $3,999–$8,999; a complex custom web application is $10,000+. Always get a fixed-price quote with an itemized scope, hourly redesign billing almost always runs over budget.',
+      a: 'Website redesign costs in 2026 for US small businesses: $3,500–$8,000 from freelancers and small studios; $8,000–$25,000 from mid-market US agencies; $15,000–$50,000+ from premium US agencies. Offshore agencies with US business-hour support deliver the same technical quality for $2,000–$6,000. The key variable is scope: a 5-page service website sits at the low end of these ranges, an e-commerce site with 50+ products costs more, and a complex custom web application is $10,000+. Always get a fixed-price quote with an itemized scope, hourly redesign billing almost always runs over budget.',
     },
     {
       q: 'When does a US small business need a full website redesign?',
@@ -37,7 +37,7 @@ export const post: BlogPost = {
     },
     {
       q: 'What is the difference between a website redesign and a website refresh?',
-      a: 'A website refresh involves visual updates, new colors, updated photography, new fonts, minor layout improvements, without changing the underlying platform, code structure, or content architecture. A refresh typically costs $800–$3,000 and takes 1–3 weeks. A full redesign involves rebuilding on a new or updated platform with new design, new code, new content architecture, and typically content migration. A redesign costs $1,999–$25,000 and takes 7–20 weeks. Choose a refresh if your platform and performance are solid; choose a redesign if either is broken.',
+      a: 'A website refresh involves visual updates, new colors, updated photography, new fonts, minor layout improvements, without changing the underlying platform, code structure, or content architecture. A refresh typically costs $800–$3,000 and takes 1–3 weeks. A full redesign involves rebuilding on a new or updated platform with new design, new code, new content architecture, and typically content migration. A redesign costs $2,000–$25,000 and takes 7–20 weeks. Choose a refresh if your platform and performance are solid; choose a redesign if either is broken.',
     },
     {
       q: 'What is the hidden cost of a website redesign?',
@@ -57,7 +57,7 @@ export const post: BlogPost = {
     },
     {
       q: 'Can FactoryJet redesign my US small business website?',
-      a: 'Yes. FactoryJet redesigns US small business websites starting at $1,999 for a 5-page rebuild with 7-day delivery. Our redesign scope includes: new custom Next.js or WordPress build (never templates), Lighthouse 95+ optimization, content migration for up to 10 pages, 301 redirect mapping, full technical SEO, WCAG 2.2 accessibility compliance, Google Search Console setup, and 30 days post-launch support. E-commerce redesigns start at $3,999. We\'re priced well below US agency rates, and every figure above is a starting point rather than a quote. Get a free quote at factoryjet.com/contact.',
+      a: 'Yes. FactoryJet redesigns US small business websites, with 7-day delivery on a 5-page rebuild. Our redesign scope includes: new custom Next.js or WordPress build (never templates), Lighthouse 95+ optimization, content migration for up to 10 pages, 301 redirect mapping, full technical SEO, WCAG 2.2 accessibility compliance, Google Search Console setup, and 30 days post-launch support. E-commerce redesigns are scoped separately. Every redesign gets a fixed price in writing after a short scoping call. Get a free quote at factoryjet.com/contact.',
     },
   ],
   content: (
@@ -95,25 +95,25 @@ export const post: BlogPost = {
             <tr className="bg-white">
               <td className="border p-3">5-page service website</td>
               <td className="border p-3">$8,000–$18,000</td>
-              <td className="border p-3">$1,999–$3,499</td>
+              <td className="border p-3">Fixed quote after scoping</td>
               <td className="border p-3">7–14 days</td>
             </tr>
             <tr className="bg-gray-50">
               <td className="border p-3">10–20 page website with blog</td>
               <td className="border p-3">$12,000–$25,000</td>
-              <td className="border p-3">$2,999–$4,999</td>
+              <td className="border p-3">Fixed quote after scoping</td>
               <td className="border p-3">10–21 days</td>
             </tr>
             <tr className="bg-white">
               <td className="border p-3">E-commerce (up to 50 products)</td>
               <td className="border p-3">$15,000–$35,000</td>
-              <td className="border p-3">$3,999–$6,999</td>
+              <td className="border p-3">Fixed quote after scoping</td>
               <td className="border p-3">14–21 days</td>
             </tr>
             <tr className="bg-gray-50">
               <td className="border p-3">Custom web application</td>
               <td className="border p-3">$30,000+</td>
-              <td className="border p-3">$10,000+</td>
+              <td className="border p-3">Fixed quote after scoping</td>
               <td className="border p-3">6–12 weeks</td>
             </tr>
           </tbody>
@@ -156,7 +156,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What FactoryJet Offers for US Small Business Redesigns</h2>
       <p className="mb-4">
-        FactoryJet redesigns US small business websites starting at $1,999, 5-page rebuild, 7-day delivery, Lighthouse 95+, content migration for up to 10 pages, 301 redirect mapping, full technical SEO, and 30-day post-launch support. E-commerce redesigns start at $3,999. Pricing is fixed and published upfront. Fixed-price contracts with itemized scope, no surprise invoices.
+        FactoryJet redesigns US small business websites: 5-page rebuild, 7-day delivery, Lighthouse 95+, content migration for up to 10 pages, 301 redirect mapping, full technical SEO, and 30-day post-launch support. E-commerce redesigns are scoped separately. Every project gets a fixed price in writing after a short scoping call. Fixed-price contracts with itemized scope, no surprise invoices.
       </p>
       <p className="mb-4">
         ➡ <a href="/contact" className="text-blue-600 underline hover:text-blue-800 transition-colors">Get a free redesign quote with PageSpeed proof in 24 hours</a> · <a href="/portfolio" className="text-blue-600 underline hover:text-blue-800 transition-colors">View our portfolio</a>

@@ -99,7 +99,7 @@ const FAQ_ITEMS = [
     category: 'cost',
     question: 'How much does a WooCommerce to Shopify migration cost?',
     answer:
-      'Our fixed-price WooCommerce migrations typically range between $8,000 and $25,000 depending on catalog size, custom theme redesign requirements, and third-party app integrations. We guarantee no surprise billable hours.',
+      'The cost depends on catalog size, custom theme redesign requirements, and third-party app integrations. FactoryJet quotes a fixed price in writing after a short scoping call, so there are no surprise billable hours.',
   },
   {
     category: 'cost',

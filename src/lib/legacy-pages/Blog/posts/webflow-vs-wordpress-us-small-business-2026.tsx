@@ -328,13 +328,13 @@ export const post: BlogPost = {
         FactoryJet builds both Webflow and WordPress sites for US small businesses. We don&apos;t prefer one commercially, we recommend whichever fits your team, content rhythm, and budget. Roughly 60% of our US SMB marketing-site clients are correctly served by WordPress; 30% are better served by Webflow; 10% land on the headless path.
       </p>
       <p className="mb-4">
-        <strong>Webflow builds:</strong> Custom design (no purchased templates), Webflow CMS collections structured for your content, Lighthouse 90+ mobile scores, WCAG 2.2 Level AA accessibility, full on-page SEO (meta, schema, OG, canonical control), Webflow Editor training for your team, and Site plan setup on the right tier for your scale. 7-day delivery on standard 5-page builds when content is provided at kickoff. Starting at $2,499.
+        <strong>Webflow builds:</strong> Custom design (no purchased templates), Webflow CMS collections structured for your content, Lighthouse 90+ mobile scores, WCAG 2.2 Level AA accessibility, full on-page SEO (meta, schema, OG, canonical control), Webflow Editor training for your team, and Site plan setup on the right tier for your scale. 7-day delivery on standard 5-page builds when content is provided at kickoff. Fixed price quoted in writing after scoping.
       </p>
       <p className="mb-4">
-        <strong>WordPress builds:</strong> Custom theme development (no themeforest), Lighthouse 90+ mobile scores, WCAG 2.2 Level AA accessibility, full SEO configuration (Yoast or Rank Math + schema markup), managed hosting setup on WP Engine, Kinsta, or Pressable, and editor training for your team. 7-day delivery on standard 5-page builds. Starting at $1,999. See <a href="/services/wordpress-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">WordPress development packages</a> for full scope.
+        <strong>WordPress builds:</strong> Custom theme development (no themeforest), Lighthouse 90+ mobile scores, WCAG 2.2 Level AA accessibility, full SEO configuration (Yoast or Rank Math + schema markup), managed hosting setup on WP Engine, Kinsta, or Pressable, and editor training for your team. 7-day delivery on standard 5-page builds. Fixed price quoted in writing after scoping. See <a href="/services/wordpress-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">WordPress development packages</a> for full scope.
       </p>
       <p className="mb-4">
-        <strong>Headless builds:</strong> Webflow + Next.js or WordPress + Next.js with WPGraphQL. The editor experience your team already knows, paired with the performance and design freedom of a custom front end. Typically $12,000-$45,000 for an SMB build.
+        <strong>Headless builds:</strong> Webflow + Next.js or WordPress + Next.js with WPGraphQL. The editor experience your team already knows, paired with the performance and design freedom of a custom front end. Scoped and quoted at a fixed price before work starts.
       </p>
       <p className="mb-4">
         Every build ships with the same technical foundation regardless of platform: Lighthouse 90+ mobile, WCAG 2.2 Level AA accessibility, Organization and LocalBusiness JSON-LD schema, Core Web Vitals green, GA4 and Search Console configured, and full code and data ownership transferred to you at final payment.
@@ -352,7 +352,7 @@ export const post: BlogPost = {
           Talk to the Founder &rarr;
         </a>
         <p className="text-blue-200 text-sm mt-6">
-          WordPress from $1,999 &middot; Webflow from $2,499 &middot; 7-day delivery &middot; Lighthouse 90+
+          Fixed quote after scoping &middot; 7-day delivery for sites of 5 pages or fewer &middot; Lighthouse 90+
         </p>
       </div>
 

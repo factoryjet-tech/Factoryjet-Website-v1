@@ -88,7 +88,7 @@ const faqs = [
     },
     {
       q: 'Does FactoryJet offer SEO services for US small businesses?',
-      a: 'Yes. FactoryJet builds SEO programs for US small businesses from $1,499/month, with the retainer sized to your market on a call. Every engagement includes technical SEO, on-page optimization, content, link building outreach, and GEO-readiness work (structured data, answer-first content structure, brand citation monitoring). We are founder-led, which means you work directly with a senior strategist, not a junior account manager passing your tasks to an offshore team. Book a 30-minute call at calendly.com/bhavesh-factoryjet/30min to discuss your situation.',
+      a: 'Yes. FactoryJet builds SEO programs for US small businesses, with the retainer sized to your market and quoted in writing after a short call. Every engagement includes technical SEO, on-page optimization, content, link building outreach, and GEO-readiness work (structured data, answer-first content structure, brand citation monitoring). We are founder-led, which means you work directly with a senior strategist, not a junior account manager passing your tasks to an offshore team. Book a 30-minute call at calendly.com/bhavesh-factoryjet/30min to discuss your situation.',
     },
   ];
 
@@ -114,7 +114,7 @@ export const post: BlogPost = {
     'What you get at $500/month is not the same as what you get at $2,500/month. Budget tiers are not just price, they are fundamentally different scopes of work.',
     'The biggest SEO cost mistakes small businesses make: paying for a one-time SEO fix, buying cheap link packages, and choosing a vendor based solely on price.',
     'AI search (ChatGPT, Gemini, Perplexity) now drives meaningful referral traffic for SMBs. In 2026, SEO without GEO (Generative Engine Optimization) is incomplete.',
-    'FactoryJet builds US small business SEO programs starting at $1,499/month, including GEO-readiness work as standard on every engagement.',
+    'FactoryJet builds US small business SEO programs with GEO-readiness work included as standard on every engagement, quoted in writing after a short scoping call.',
   ],
   faqs,
   content: (

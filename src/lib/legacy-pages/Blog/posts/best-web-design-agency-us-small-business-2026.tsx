@@ -23,7 +23,7 @@ export const post: BlogPost = {
     'The "local agency" premium is rarely justified for SMBs: offshore-with-US-support agencies deliver identical technical output at 60–70% lower cost.',
     'WCAG 2.2 accessibility compliance is non-negotiable in 2026: ADA website lawsuits hit 4,605 US cases in 2023, with settlements averaging $25,000.',
     'Ask for three named client references you can call independently, not testimonials on the agency\'s own website.',
-    'FactoryJet delivers custom small business websites in 7 days starting at $1,999 with Lighthouse 95+ scores and US-hour project management.',
+    'FactoryJet delivers custom 5-page small business websites in 7 days with Lighthouse 95+ scores and US-hour project management, at a fixed price quoted in writing after a short scoping call.',
   ],
   faqs: [
     {
@@ -32,7 +32,7 @@ export const post: BlogPost = {
     },
     {
       q: 'How much should a US small business pay a web design agency in 2026?',
-      a: "For a professional 5–8 page custom website, budget $1,999–$8,000 depending on complexity and agency location. US domestic agencies charge $8,000–$25,000. Offshore agencies with US-hour support (like FactoryJet) charge an indicative $1,999–$6,000 for equivalent quality, fixed once the page count is agreed. E-commerce sites add $1,500–$5,000. Never pay over 50% upfront; 50% at kickoff and 50% at launch is the standard. Monthly maintenance should cost $99–$249.",
+      a: "For a professional 5–8 page custom website, budget $2,000–$8,000 depending on complexity and agency location. US domestic agencies charge $8,000–$25,000. Offshore agencies with US-hour support charge roughly $1,500–$8,000 for equivalent quality. E-commerce sites add $1,500–$5,000. Never pay over 50% upfront; 50% at kickoff and 50% at launch is the standard. Monthly maintenance should cost $99–$249.",
     },
     {
       q: 'Is it safe to hire an offshore web design agency for my US business?',
@@ -236,7 +236,7 @@ export const post: BlogPost = {
         <strong>Hourly billing</strong> is appropriate for ongoing maintenance and defined change orders after launch. $100–$175/hour is the US agency standard; $35–$75/hour is the offshore-with-US-support rate. Never agree to hourly billing for the initial website build unless the scope is genuinely undefined (e.g., a complex custom web application where requirements emerge through development).
       </p>
       <p className="mb-4">
-        <strong>Monthly retainer</strong> is appropriate for ongoing relationships covering maintenance, content updates, SEO, and iterative improvements. $149–$499/month covers most SMB needs from a well-structured agency. Retainers should specify deliverables, "X hours of development time, security monitoring included, Y content updates per month", not vague "ongoing support."
+        <strong>Monthly retainer</strong> is appropriate for ongoing relationships covering maintenance, content updates, SEO, and iterative improvements. $150–$500/month covers most SMB needs from a well-structured agency. Retainers should specify deliverables, "X hours of development time, security monitoring included, Y content updates per month", not vague "ongoing support."
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">The Reference Check: How to Verify Without Getting Burned</h2>
@@ -318,7 +318,7 @@ export const post: BlogPost = {
         What we deliver for US SMBs: custom Next.js or WordPress builds (never purchased templates), Lighthouse 95+ scores on every project, WCAG 2.2 Level AA compliance, full technical SEO included in base scope, 7-day delivery on 5-page sites, US business-hour project management, US-governed contracts, named US client references, and full code ownership transferred at final payment.
       </p>
       <p className="mb-4">
-        Pricing: 5-page professional website starts at $1,999. Shopify stores start at $2,499. Monthly maintenance plans from $149/month. 97% of projects delivered on time. Pricing is fixed and published upfront.
+        Pricing is fixed and quoted in writing after a short scoping call, before any work starts. 97% of projects delivered on time.
       </p>
       <p className="mb-4">
         ➡ <a href="/services/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">See our web design packages</a> · <a href="/portfolio" className="text-blue-600 underline hover:text-blue-800 transition-colors">View our portfolio</a> · <a href="/contact" className="text-blue-600 underline hover:text-blue-800 transition-colors">Get a free quote with PageSpeed proof in 24 hours</a>

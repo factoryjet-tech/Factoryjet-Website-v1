@@ -15,25 +15,25 @@ export const post: BlogPost = {
   meta: {
     title: 'Ecommerce Development Denver CO: Small Business Guide 2026 | FactoryJet',
     description:
-      'Denver CO small businesses: Shopify and custom ecommerce development in 7 days starting at $2,499. Pricing is fixed and published upfront. Complete guide with costs, timelines, and FAQs.',
+      'Denver CO small businesses: Shopify and custom ecommerce development in 7 days, at a fixed price quoted in writing after scoping. Complete guide with costs, timelines, and FAQs.',
   },
   keyTakeaways: [
-    'Denver ecommerce development agencies charge $12,000–$40,000 for Shopify or custom online stores, offshore agencies with US support deliver identical Lighthouse 95+ results for $2,499–$7,999.',
+    'Denver ecommerce development agencies charge $12,000–$40,000 for Shopify or custom online stores, offshore agencies with US support can deliver identical Lighthouse 95+ results for far less.',
     'Denver\'s outdoor, active lifestyle, and health & wellness market is one of the strongest DTC ecommerce segments in the US, average order values are high and repeat purchase rates are strong.',
     'Shopify is the right platform for most Denver SMBs selling physical products: lower upfront cost, faster launch, and a proven app ecosystem. Custom development is only justified for unique checkout logic, subscription complexity, or marketplace functionality.',
     'Colorado\'s economic nexus law requires sales tax collection on orders over $100,000/year or 200 transactions: your ecommerce platform must handle multi-state tax collection correctly from day one.',
     'Denver\'s seasonal retail patterns (ski season, outdoor recreation season) mean your ecommerce site must handle traffic spikes without performance degradation: Shopify and Next.js both handle this well.',
     'Local SEO for Denver ecommerce requires product schema, Google Shopping integration, and service area signals: Denver Metro, Boulder, Fort Collins, and Colorado Springs are distinct commercial audiences.',
-    'FactoryJet builds Shopify and custom ecommerce stores for Denver small businesses starting at $2,499 with 7-day delivery, Lighthouse 95+, and full product setup for up to 50 SKUs.',
+    'FactoryJet builds Shopify and custom ecommerce stores for Denver small businesses with 7-day delivery, Lighthouse 95+, full product setup for up to 50 SKUs, and a fixed price quoted in writing after a short scoping call.',
   ],
   faqs: [
     {
       q: 'How much does ecommerce development cost for Denver CO small businesses?',
-      a: 'Denver ecommerce development pricing in 2026: Shopify setup from a local Denver agency runs $8,000–$20,000 for a standard 50-product store. Custom ecommerce development runs $20,000–$60,000+. Freelancers charge $4,000–$12,000 for Shopify builds with varying quality. Offshore agencies with US business-hour support (like FactoryJet) deliver the same Shopify or custom build quality for $2,499–$7,999. Denver agencies charge premium rates reflecting Colorado\'s cost of living, not superior technical output. For most Denver SMBs, the $6,000–$15,000 savings is better deployed on Google Shopping campaigns or Denver-specific inventory.',
+      a: 'Denver ecommerce development pricing in 2026: Shopify setup from a local Denver agency runs $8,000–$20,000 for a standard 50-product store. Custom ecommerce development runs $20,000–$60,000+. Freelancers charge $4,000–$12,000 for Shopify builds with varying quality. Offshore agencies with US business-hour support can deliver the same Shopify or custom build quality for far less. Denver agencies charge premium rates reflecting Colorado\'s cost of living, not superior technical output. For most Denver SMBs, the savings are better deployed on Google Shopping campaigns or Denver-specific inventory.',
     },
     {
       q: 'Should a Denver small business use Shopify or custom ecommerce?',
-      a: 'Shopify is the right choice for 85% of Denver small businesses selling physical products. Shopify handles hosting, security, and platform updates automatically. It launches faster (7 days vs. 6–16 weeks for custom), costs less upfront ($2,499 vs. $15,000+), and integrates with every major app in the ecommerce ecosystem (Klaviyo, Gorgias, Judge.me, Google Shopping). Choose custom development only if you have: a subscription product model with complex billing rules that Shopify\'s native subscriptions can\'t handle, a marketplace connecting multiple vendors, or checkout requirements that Shopify\'s checkout can\'t accommodate.',
+      a: 'Shopify is the right choice for 85% of Denver small businesses selling physical products. Shopify handles hosting, security, and platform updates automatically. It launches faster (7 days vs. 6–16 weeks for custom), costs far less upfront than a $15,000+ custom build, and integrates with every major app in the ecommerce ecosystem (Klaviyo, Gorgias, Judge.me, Google Shopping). Choose custom development only if you have: a subscription product model with complex billing rules that Shopify\'s native subscriptions can\'t handle, a marketplace connecting multiple vendors, or checkout requirements that Shopify\'s checkout can\'t accommodate.',
     },
     {
       q: 'What ecommerce features do Denver outdoor and retail businesses need?',
@@ -57,7 +57,7 @@ export const post: BlogPost = {
     },
     {
       q: 'Can FactoryJet build an ecommerce store for my Denver CO business?',
-      a: 'Yes. FactoryJet builds Shopify and custom ecommerce stores for Denver small businesses from $2,499 for a standard 50-product Shopify setup with 7-day delivery. Larger catalogues and custom integrations price differently, agreed on a call. Our scope includes custom theme configuration, product upload with SEO-optimized titles and descriptions, Colorado sales tax configuration, Google Shopping feed setup, Product JSON-LD schema, Lighthouse 95+ optimization, and 30 days post-launch support. We\'ve served 500+ businesses across the US, UK, UAE and India, including clients in Colorado and the Mountain West. Get a free quote with a PageSpeed proof link at factoryjet.com/contact.',
+      a: 'Yes. FactoryJet builds Shopify and custom ecommerce stores for Denver small businesses, with 7-day delivery on a standard 50-product Shopify setup. Every build gets a fixed price in writing after a short scoping call, and larger catalogues and custom integrations are scoped the same way. Our scope includes custom theme configuration, product upload with SEO-optimized titles and descriptions, Colorado sales tax configuration, Google Shopping feed setup, Product JSON-LD schema, Lighthouse 95+ optimization, and 30 days post-launch support. We\'ve served 500+ businesses across the US, UK, UAE and India, including clients in Colorado and the Mountain West. Get a free quote with a PageSpeed proof link at factoryjet.com/contact.',
     },
   ],
   content: (
@@ -98,19 +98,19 @@ export const post: BlogPost = {
             <tr className="bg-white">
               <td className="border p-3">Shopify (up to 50 products)</td>
               <td className="border p-3">$8,000–$20,000</td>
-              <td className="border p-3">$2,499–$4,999</td>
+              <td className="border p-3">Fixed quote after scoping</td>
               <td className="border p-3">7 days</td>
             </tr>
             <tr className="bg-gray-50">
               <td className="border p-3">Shopify (50–200 products)</td>
               <td className="border p-3">$12,000–$30,000</td>
-              <td className="border p-3">$4,999–$7,999</td>
+              <td className="border p-3">Fixed quote after scoping</td>
               <td className="border p-3">14–21 days</td>
             </tr>
             <tr className="bg-white">
               <td className="border p-3">Custom ecommerce</td>
               <td className="border p-3">$25,000–$60,000+</td>
-              <td className="border p-3">$12,000–$25,000</td>
+              <td className="border p-3">Fixed quote after scoping</td>
               <td className="border p-3">6–12 weeks</td>
             </tr>
           </tbody>
@@ -119,7 +119,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Shopify vs. Custom: The Denver Decision Framework</h2>
       <p className="mb-4">
-        The Shopify vs. custom decision is one of the most consequential choices a Denver SMB makes when launching ecommerce. Most Denver businesses should choose Shopify, it launches in 7 days, costs $2,499–$7,999 vs. $25,000+ for custom, and handles hosting, security, and platform updates automatically.
+        The Shopify vs. custom decision is one of the most consequential choices a Denver SMB makes when launching ecommerce. Most Denver businesses should choose Shopify, it launches in 7 days, costs far less than the $25,000+ a custom build runs, and handles hosting, security, and platform updates automatically.
       </p>
       <p className="mb-4">
         Custom development earns its premium cost when: your business model requires checkout complexity Shopify can't handle (complex subscription billing tiers, multi-vendor marketplace functionality, custom B2B pricing engines), your projected order volume will exceed Shopify's transaction cost economics at scale ($1M+/year), or your brand demands a fully unique experience that Shopify themes genuinely can't deliver.
@@ -142,7 +142,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What FactoryJet Offers Denver Businesses</h2>
       <p className="mb-4">
-        FactoryJet builds Shopify and custom ecommerce stores for Denver small businesses starting at $2,499, 7-day delivery, Lighthouse 95+, up to 50 products loaded, Colorado sales tax configured, Google Shopping feed setup, and 30-day post-launch support. Pricing is fixed and published upfront with identical technical quality. US business-hour project management throughout.
+        FactoryJet builds Shopify and custom ecommerce stores for Denver small businesses: 7-day delivery, Lighthouse 95+, up to 50 products loaded, Colorado sales tax configured, Google Shopping feed setup, and 30-day post-launch support. Pricing is fixed and quoted in writing after a short scoping call. US business-hour project management throughout.
       </p>
       <p className="mb-4">
         ➡ <a href="/contact" className="text-blue-600 underline hover:text-blue-800 transition-colors">Get a free ecommerce quote with PageSpeed proof in 24 hours</a> · <a href="/services/ecommerce-development" className="text-blue-600 underline hover:text-blue-800 transition-colors">See our ecommerce packages</a>

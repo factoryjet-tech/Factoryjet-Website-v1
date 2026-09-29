@@ -87,7 +87,7 @@ const FAQ_ITEMS = [
     category: 'cost',
     question: 'How much does a Wix to Shopify migration cost?',
     answer:
-      'Our fixed-price Wix migrations typically range between $5,000 and $16,000 depending on catalog size, custom theme redesign requirements, and third-party app integrations. We guarantee no surprise hourly billing.',
+      'The cost depends on catalog size, custom theme redesign requirements, and third-party app integrations. FactoryJet quotes a fixed price in writing after a short scoping call, so there is no surprise hourly billing.',
   },
   {
     category: 'cost',

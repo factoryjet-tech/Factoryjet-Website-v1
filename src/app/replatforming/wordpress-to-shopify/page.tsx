@@ -87,7 +87,7 @@ const FAQ_ITEMS = [
     category: 'cost',
     question: 'How much does a WordPress to Shopify migration cost?',
     answer:
-      'Our fixed-price migrations typically range from $6,000 to $20,000 depending on total page count, blog article volume, custom design complexity, and third-party integrations. We provide an exact fixed quote after an initial technical audit.',
+      'The cost depends on total page count, blog article volume, custom design complexity, and third-party integrations. FactoryJet quotes a fixed price in writing after an initial technical audit.',
   },
   {
     category: 'cost',
