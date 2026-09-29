@@ -72,3 +72,7 @@ tsconfig.tsbuildinfo
 
 # FUSE mount artifacts (Cowork sandbox)
 .fuse_hidden*
+
+# Clarity daily snapshots (local analytics, regenerable only for 3 days)
+pipeline/research/data/clarity/
+pipeline/research/data/weekly/
