@@ -39,7 +39,7 @@ async function writeLeadToFirestore(env, lead) {
   const project = (env && env.FIREBASE_PROJECT_ID) || FB_PROJECT;
   const apiKey  = (env && (env.FIREBASE_API_KEY || env.NEXT_PUBLIC_FIREBASE_API_KEY)) || FB_API_KEY;
   const docId   = (lead.docId && String(lead.docId).replace(/[^A-Za-z0-9_-]/g, '')) ||
-                  `${new Date().toISOString().replace(/[:.]/g, '-')}_${(lead.name || 'lead').replace(/\s+/g, '').slice(0, 15)}`;
+                  `${new Date().toISOString().replace(/[:.]/g, '-')}_lead_${crypto.randomUUID().slice(0, 6)}`; // no name: ids reach GA4 and URLs
   // Collection allow-list — never let the client write to an arbitrary path.
   const ALLOWED = ['contactus', 'contactpage', 'location_leads'];
   const collection = ALLOWED.includes(lead.collection) ? lead.collection : 'contactus';
