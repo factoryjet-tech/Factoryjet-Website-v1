@@ -37,6 +37,45 @@ function HomeFaqAccordion() {
   );
 }
 
+const WORK = [
+  {
+    tag: 'SHOPIFY · US STORE',
+    client: 'Shopholistico',
+    summary: 'A custom Shopify theme for a whole-food supplement brand selling across the US, with subscribe-and-save plans, bundles and two landing pages built for Meta ads.',
+    image: '/images/work/shopholistico-desktop.webp',
+    alt: 'Shopholistico homepage on desktop, a Shopify store for whole-food supplements',
+    site: 'https://www.shopholistico.com',
+    caseStudy: '/case-studies/shopholistico-shopify-store',
+  },
+  {
+    tag: 'AI AGENT · US LAW FIRM',
+    client: 'Washington Law Group',
+    summary: 'An AI agent that finds serious crashes involving commercial vehicles in published news and police sources, checks the facts, and alerts the firm by email. Live, running every two hours.',
+    image: '',
+    alt: '',
+    site: '',
+    caseStudy: '/case-studies/washington-law-group-accident-detection-agent',
+  },
+  {
+    tag: 'BUSINESS WEBSITE · 75+ PAGES',
+    client: 'Impulse Branding',
+    summary: 'A large business website for a signage and fit-out company, with service, case study and insight pages built so search engines and AI answers can read them.',
+    image: '/images/work/impulse-branding-desktop.webp',
+    alt: 'Impulse Branding website homepage on desktop',
+    site: 'https://www.impulsebranding.in',
+    caseStudy: '/case-studies/impulse-branding-migration',
+  },
+  {
+    tag: 'INDUSTRIAL WEBSITE · SEO',
+    client: 'Yadav Entrance Automation',
+    summary: 'A website built from scratch for an entrance automation manufacturer, covering 16 product lines, with SEO and AI search work that continues after launch.',
+    image: '/images/work/yadav-entrance-automation-desktop.webp',
+    alt: 'Yadav Entrance Automation website homepage on desktop',
+    site: 'https://yadaventranceautomation.com',
+    caseStudy: '/case-studies/yadav-entrance-automation-website-seo',
+  },
+] as const;
+
 export default function HomeSections() {
   return (
     <div className="aiAgentPage homePage">
@@ -438,18 +477,43 @@ export default function HomeSections() {
           </div>
         </section>
 
-        <section className="vlog" id="work">
+        <section className="section work" id="work">
           <div className="wrap">
             <div className="section-head">
-              <div className="eyebrow">Selected Work</div>
-              <h2>Commerce We've Designed, Built, and Launched</h2>
-              <p>A few of the DTC and B2B builds behind a decade-plus of commerce work. Ask for comparable builds on a call.</p>
+              <div className="eyebrow">Recent Work</div>
+              <h2>Live Projects You Can Check Yourself</h2>
+              <p>Real clients, real sites, all live today. Open any of them, then read how we built it.</p>
             </div>
-            <div className="ventries">
-              <div className="ventry"><span className="vtag">B2B WHOLESALE</span><h3>Wholesale ordering, online</h3><p>A B2B commerce build for an artificial-plants and decor wholesaler, so trade buyers place and repeat orders online instead of over email and phone.</p><div className="client">BOMBAY PETALS</div></div>
-              <div className="ventry"><span className="vtag">DTC + TRADE</span><h3>One storefront for retail and trade buyers</h3><p>A storefront for an artificial plants and flowers brand that serves retail shoppers and B2B trade buyers from the same catalog.</p><div className="client">BELLE MAISON</div></div>
-              <div className="ventry"><span className="vtag">AI AGENT</span><h3>Pricing computed live, not guessed</h3><p>A specialty equipment contractor needed complex retrofit pricing. We built an agent that computes every job from one rule book. Tested against a job priced by hand, it landed within a fraction of a percent, and flags any missing rate instead of guessing.</p><div className="client"><a href="/services/ai-agent-development">AI AGENT DEVELOPMENT ↗</a></div></div>
+            <div className="workgrid">
+              {WORK.map((w) => (
+                <article className="workcard" key={w.client}>
+                  <div className={w.image ? 'workshot' : 'workshot flow'}>
+                    {w.image ? (
+                      <img width="1200" height="750" src={w.image} alt={w.alt} loading="lazy" decoding="async" />
+                    ) : (
+                      <ol className="agentflow" aria-label="How the Washington Law Group agent works">
+                        <li><span>01</span>Reads licensed news, police and highway patrol feeds every two hours</li>
+                        <li><span>02</span>Keeps only serious crashes that involve a commercial vehicle</li>
+                        <li><span>03</span>Checks every name against the source article</li>
+                        <li><span>04</span>Emails the firm one clear alert per crash</li>
+                      </ol>
+                    )}
+                  </div>
+                  <div className="workbody">
+                    <span className="vtag">{w.tag}</span>
+                    <h3>{w.client}</h3>
+                    <p>{w.summary}</p>
+                    <div className="worklinks">
+                      <a href={w.caseStudy}>Read the case study <span aria-hidden="true">→</span></a>
+                      {w.site && <a href={w.site} target="_blank" rel="noopener">Visit live site <span aria-hidden="true">↗</span></a>}
+                    </div>
+                  </div>
+                </article>
+              ))}
             </div>
+            <p className="workmore">
+              More work: <a href="/case-studies/flying-pixel-agency">Flying Pixel</a> (drone survey company), <a href="/case-studies/rdb-travels-cab-booking-website">RDB Travels</a> (cab hire), <a href="/case-studies/belle-maison-ecommerce-success">Belle Maison</a> (retail and trade store). <a href="/case-studies">See all case studies <span aria-hidden="true">→</span></a>
+            </p>
           </div>
         </section>
 

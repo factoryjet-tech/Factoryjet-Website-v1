@@ -35,6 +35,27 @@ const CREAM = '#FAFAF7'
 //-shipped screenshot of the actual delivered client site.
 const CARDS = [
   {
+    slug: 'shopholistico-shopify-store',
+    client: 'Shopholistico',
+    category: 'E-Comm',
+    stat: 'Shopify',
+    label: 'Custom Theme + Subscriptions',
+  },
+  {
+    slug: 'washington-law-group-accident-detection-agent',
+    client: 'Washington Law Group',
+    category: 'AI Agents',
+    stat: 'AI Agent',
+    label: 'Commercial Crash Detection + Alerts',
+  },
+  {
+    slug: 'rdb-travels-cab-booking-website',
+    client: 'RDB Travels',
+    category: 'Travel',
+    stat: 'Website',
+    label: 'Cab Hire Site + WhatsApp Quotes',
+  },
+  {
     slug: 'sow-easy-distributor-portal',
     client: 'Sow Easy',
     category: 'E-Comm',
@@ -88,8 +109,8 @@ const CARDS = [
     realHero: null,
   },
   {
-    slug: 'fliying-pixel-agency',
-    client: 'Fliying Pixel',
+    slug: 'flying-pixel-agency',
+    client: 'Flying Pixel',
     category: 'Corporate',
     stat: '500+',
     label: 'Qualified Leads from Organic Traffic',

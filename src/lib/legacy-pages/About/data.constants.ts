@@ -148,7 +148,7 @@ export const TESTIMONIALS: Testimonial[] = [
     text: "The ERPNext implementation was seamless. We were skeptical about moving from our legacy system, but FactoryJet's team made it easy. Now we have real-time visibility into our operations.",
     author: "Tejas Bramhbhatt",
     role: "Founder",
-    company: "Fliying Pixel"
+    company: "Flying Pixel"
   },
   {
     text: "We started with a simple website project and now we're using FactoryJet for our CRM, digital marketing, and e-commerce store. They've become an extension of our team.",

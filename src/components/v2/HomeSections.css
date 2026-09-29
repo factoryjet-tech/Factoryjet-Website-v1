@@ -85,3 +85,26 @@
   .homePage .mobile-sticky-bar { display: flex; }
   .homePage .mobile-sticky-bar[data-visible='true'] { transform: translateY(0); opacity: 1; pointer-events: auto; }
 }
+
+/* Recent work grid (2026-09-29): real, named, live client projects */
+.homePage .work .section-head { max-width: 640px; }
+.homePage .workgrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.homePage .workcard { display: flex; flex-direction: column; background: #fff; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.homePage .workshot { aspect-ratio: 16 / 10; background: var(--accent-wash); border-bottom: 1px solid var(--line); overflow: hidden; }
+.homePage .workshot img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+.homePage .agentflow { list-style: none; margin: 0; padding: 22px 24px; height: 100%; display: grid; align-content: center; gap: 10px; }
+.homePage .agentflow li { display: flex; gap: 12px; align-items: baseline; background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 10px 14px; font-size: 13.5px; line-height: 1.45; color: var(--ink); }
+.homePage .agentflow li span { font-family: var(--mono); font-size: 10px; color: var(--accent-text); letter-spacing: .06em; }
+.homePage .workbody { padding: 22px 24px 24px; display: flex; flex-direction: column; flex: 1; }
+.homePage .workbody .vtag { font-family: var(--mono); font-size: 10px; color: var(--accent-text); letter-spacing: .07em; }
+.homePage .workbody h3 { font-size: 22px; margin: 8px 0 10px; }
+.homePage .workbody p { color: var(--body); font-size: 14.5px; line-height: 1.7; flex: 1; }
+.homePage .worklinks { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: 18px; font-family: var(--mono); font-size: 12px; font-weight: 600; }
+.homePage .worklinks a, .homePage .workmore a { color: var(--accent-text); text-decoration: underline; text-underline-offset: 4px; }
+.homePage .workmore { margin-top: 26px; color: var(--body); font-size: 14.5px; line-height: 1.7; }
+@media (max-width: 760px) {
+  .homePage .workgrid { grid-template-columns: 1fr; gap: 16px; }
+  .homePage .workshot.flow { aspect-ratio: auto; }
+  .homePage .agentflow { padding: 16px; gap: 8px; }
+  .homePage .agentflow li { font-size: 12.5px; padding: 8px 12px; }
+}

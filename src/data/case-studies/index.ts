@@ -18,6 +18,10 @@
  * non-fabricated testimonial quote.
  */
 
+import { shopholisticoCaseStudy } from './shopholistico'
+import { washingtonLawGroupCaseStudy } from './washington-law-group'
+import { rdbTravelsCaseStudy } from './rdb-travels'
+
 export type CaseStudyMetric = {
   /** Short label e.g. "Conversion rate". */
   label: string
@@ -148,9 +152,13 @@ export type CaseStudy = {
  *
  * Order preserved from the legacy data file:
  *   Belle Maison -> Impulse Branding -> Formative Concepts ->
- *   GroFresh Agro -> Fliying Pixel -> Rukman Transport.
+ *   GroFresh Agro -> Flying Pixel -> Rukman Transport.
  */
 export const CASE_STUDIES: CaseStudy[] = [
+  // ─── Recent work, added 2026-09-29 (client naming approved by Bhavesh) ──
+  shopholisticoCaseStudy,
+  washingtonLawGroupCaseStudy,
+  rdbTravelsCaseStudy,
   // ─── 1. Belle Maison: DTC + B2B commerce on Commerceflo ─────────────────
   // REWRITTEN 2026-08-04. The previous version was fabricated end to end: it
   // described a "DTC luxury home brand" on Shopify Plus with $180K revenue in
@@ -223,7 +231,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     ogImageUrl: '/images/case-studies/belle-maison-ecommerce-success-og.png',
     publishedDate: '2026-05-28',
     ctaTeaser: 'Selling to retail shoppers and trade accounts? We can scope both buying journeys on one commerce system.',
-    relatedSlugs: ['impulse-branding-migration', 'fliying-pixel-agency'],
+    relatedSlugs: ['impulse-branding-migration', 'flying-pixel-agency'],
     faqs: [
       {
         q: 'What is quote-to-cash, in plain terms?',
@@ -291,7 +299,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     ogImageUrl: '/images/case-studies/impulse-branding-migration-og.png',
     publishedDate: '2026-05-28',
     ctaTeaser: 'We can connect your service pages, portfolio, and inquiry journey as one website and search engagement.',
-    relatedSlugs: ['belle-maison-ecommerce-success', 'fliying-pixel-agency'],
+    relatedSlugs: ['belle-maison-ecommerce-success', 'flying-pixel-agency'],
     faqs: [
       { q: 'What work does FactoryJet provide for Impulse Branding Solutions?', a: 'FactoryJet built the website and provides ongoing SEO and AI search work.' },
       { q: 'Does this case claim a measured revenue uplift?', a: 'No. This case describes the engagement and its implementation scope. It does not report a measured revenue or traffic uplift.' },
@@ -478,10 +486,10 @@ export const CASE_STUDIES: CaseStudy[] = [
     ],
   },
 
-  // ─── 5. Fliying Pixel — creative agency lead gen via design + CRO ─────────
+  // ─── 5. Flying Pixel — creative agency lead gen via design + CRO ─────────
   {
-    slug: 'fliying-pixel-agency',
-    client: 'Fliying Pixel',
+    slug: 'flying-pixel-agency',
+    client: 'Flying Pixel',
     tagline: 'A creative agency that needed a portfolio that converted as well as it looked.',
     industry: 'Creative Agency',
     services: [
@@ -493,7 +501,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     ],
     headline: 'Generating 500+ Organic Leads via High-Performance Design',
     summary:
-      'As a creative agency, Fliying Pixel needed a website that walked the talk, visually impressive and rigorously optimized for conversion. FactoryJet built a WIX Studio site layered with custom SEO/AIO strategy, generating 500+ qualified leads from organic traffic without paid ads.',
+      'As a creative agency, Flying Pixel needed a website that walked the talk, visually impressive and rigorously optimized for conversion. FactoryJet built a WIX Studio site layered with custom SEO/AIO strategy, generating 500+ qualified leads from organic traffic without paid ads.',
     category: 'Corporate',
     heroStats: [
       { value: '500+', label: 'Organic leads' },
@@ -528,7 +536,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       { label: 'Bounce Rate', value: '-31%' },
     ],
     challenge:
-      'As a creative agency, Fliying Pixel needed a website that walked the talk. Their existing portfolio was visually appealing but functionally weak, it was not converting visitors into inquiries. They needed a balance of stunning aesthetics and rigorous conversion rate optimization (CRO). The site had to look like it was made by a creative agency you would actually hire, while still moving the prospect through a clear inquiry funnel and feeding the CRM cleanly enough that the team could follow up the same day.',
+      'As a creative agency, Flying Pixel needed a website that walked the talk. Their existing portfolio was visually appealing but functionally weak, it was not converting visitors into inquiries. They needed a balance of stunning aesthetics and rigorous conversion rate optimization (CRO). The site had to look like it was made by a creative agency you would actually hire, while still moving the prospect through a clear inquiry funnel and feeding the CRM cleanly enough that the team could follow up the same day.',
     challengePullQuote:
       'A portfolio that looks beautiful but does not convert is a luxury we could not afford.',
     approach:
@@ -538,8 +546,8 @@ export const CASE_STUDIES: CaseStudy[] = [
       'We deployed a visually rich website with highly optimized conversion funnels. We utilized WIX Studio for its design flexibility but superimposed a custom SEO and AIO strategy layer. By creating high-value content pillars around their services, we drove a massive influx of organic traffic. Velo API powered the dynamic case-study filtering; Zapier wired inquiries into the CRM with immediate Slack alerts.',
     results:
       'Over 500 qualified leads from organic traffic alone, zero paid spend. Traffic grew 300% in the same window, and client retention hit 95%. The team now spends discovery calls qualifying down a full inbound pipeline instead of chasing outbound prospects cold.',
-    imageUrl: '/images/case-studies/fliying-pixel-agency-hero.jpg',
-    ogImageUrl: '/images/case-studies/fliying-pixel-agency-og.png',
+    imageUrl: '/images/case-studies/flying-pixel-agency-hero.jpg',
+    ogImageUrl: '/images/case-studies/flying-pixel-agency-og.png',
     publishedDate: '2026-05-28',
     ctaTeaser: 'Agency portfolio that does not convert? We balance stunning design with rigorous CRO, no paid ads required.',
     relatedSlugs: ['impulse-branding-migration', 'belle-maison-ecommerce-success'],

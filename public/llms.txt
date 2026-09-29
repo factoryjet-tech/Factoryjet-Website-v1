@@ -87,6 +87,14 @@ US is served from the root. There is no `/us/` prefix. Prefer these URLs; do not
 - https://factoryjet.com/ai-citation-study
 - https://factoryjet.com/commerceflo
 
+### Recent case studies
+- [Shopholistico Shopify store](https://factoryjet.com/case-studies/shopholistico-shopify-store): Custom Shopify theme for a US whole-food supplement brand, with subscribe-and-save plans, bundles and ad landing pages.
+- [Washington Law Group AI agent](https://factoryjet.com/case-studies/washington-law-group-accident-detection-agent): Live AI agent for a US law firm that finds serious commercial-vehicle crashes in published news and police sources, checks the facts and emails the firm.
+- [RDB Travels website](https://factoryjet.com/case-studies/rdb-travels-cab-booking-website): Cab and bus hire website for an Ahmedabad operator, with WhatsApp quotes and route pages.
+- [Yadav Entrance Automation](https://factoryjet.com/case-studies/yadav-entrance-automation-website-seo): Website built from scratch for an entrance automation manufacturer, with ongoing SEO and AI search work.
+- [Impulse Branding](https://factoryjet.com/case-studies/impulse-branding-migration): Large business website for a signage and fit-out company.
+- [Flying Pixel](https://factoryjet.com/case-studies/flying-pixel-agency): Website for a drone survey and aerial imaging company.
+
 ### Flagship
 - [Ecommerce Development](https://factoryjet.com/services/ecommerce-development): Custom Shopify, WooCommerce and headless stores for US brands; 3-5 weeks for a platform store, 5-8 for advanced, 8-14 for headless/custom; fixed quote upfront; support after launch.
 - https://factoryjet.com/omnichannel-commerce
