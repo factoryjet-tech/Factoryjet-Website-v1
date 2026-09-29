@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     url: 'https://factoryjet.com/services/small-business-website-design',
     images: [
       {
-        url: 'https://factoryjet.com/images/us/hero-us.webp',
+        url: 'https://factoryjet.com/og-default.png',
         width: 1200,
         height: 630,
         alt: 'Small Business Website Design Services, FactoryJet',
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     title: 'Small Business Website Design: 7-Day Delivery | FactoryJet',
     description:
       'Custom websites for US small businesses. Mobile-first, SEO-ready, full code ownership. Fixed price, delivered in 7 days.',
-    images: ['https://factoryjet.com/images/us/hero-us.webp'],
+    images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: {
     canonical: 'https://factoryjet.com/services/small-business-website-design',

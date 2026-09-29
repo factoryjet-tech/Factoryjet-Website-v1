@@ -55,14 +55,14 @@ export const metadata: Metadata = {
     description:
       'An honest guide to what drives the cost of a website build: page count, design depth, content readiness, integrations, platform choice, migration and upkeep.',
     url: 'https://factoryjet.com/website-cost',
-    images: [{ url: 'https://factoryjet.com/images/us/hero-us.webp', width: 1200, height: 630, alt: 'What drives the cost of a website build, FactoryJet' }],
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'What drives the cost of a website build, FactoryJet' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'How Much Does a Website Cost in 2026? | FactoryJet',
     description: 'What drives the cost of a website: pages, design, content, integrations, platform, migration and upkeep.',
-    images: ['https://factoryjet.com/images/us/hero-us.webp'],
+    images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: { canonical: 'https://factoryjet.com/website-cost', languages: websiteCostAlternates },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },

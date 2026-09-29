@@ -1,12 +1,11 @@
 # FactoryJet — robots.txt
 # AI retrieval / search bots are welcomed (core to our AIO/GEO strategy).
-# Model-vendor training crawlers (OpenAI, Anthropic) are ALSO welcomed: we want
-# their models to know FactoryJet exists without needing a live fetch. Third-party
-# data brokers that resell scraped corpora are still blocked. Content Signals below
-# declare that policy per contentsignals.org (search + AI answers + training = yes).
+# Every AI training crawler is ALSO welcomed (2026-09-29, no exceptions): we want
+# models to know FactoryJet exists without needing a live fetch. Content Signals
+# below declare that policy per contentsignals.org (search + AI answers + training = yes).
 # NOTE: sourced from a static file (was src/app/robots.ts). Keep the three rule
 # sets (AI retrieval = allow, vendor training = allow, data brokers = disallow)
-# in sync with any policy change.
+# in sync with any policy change. Policy since 2026-09-29: every bot allowed.
 
 User-agent: *
 Allow: /
@@ -91,21 +90,16 @@ Allow: /
 User-agent: meta-externalagent
 Allow: /
 
-# ─── AI TRAINING bots we deliberately ALLOW ───
-# RESOLVED 2026-09-09 by Bhavesh: option (a). The Content-Signal line above now
-# reads ai-train=yes, which matches the three Allow rules below. Declared policy
-# and actual behaviour agree again.
-#
-# WHY allow training: FactoryJet sells AI visibility. A model that absorbed our
-# pages during training can name us with no retrieval step at all, which is the
-# cheapest form of the exact outcome we sell. We host nothing on this domain that
-# is worth withholding from a model, so there is no cost on the other side.
-#
-# This is NOT a blanket ai-train=yes for everyone. Access control (the Disallow
-# rules below) and usage permission (Content-Signal) are separate layers: we grant
-# the permission generally, then refuse access to the data brokers in the next
-# section. First-party vendor crawlers whose models we want to reach = allowed.
-# Third parties who scrape to resell a corpus = still blocked.
+# ─── AI TRAINING crawlers: ALL allowed ───
+# 2026-09-29, Bhavesh: allow every bot, training or retrieval. The earlier
+# data-broker block list (CCBot, Cohere, Bytespider, Amazonbot, Diffbot and
+# others) is gone. Reason: FactoryJet sells AI visibility, and every corpus a
+# model learns from is one more place our name can come from. Common Crawl
+# (CCBot) in particular feeds many open and commercial model training sets.
+# Every bot is named so none relies on the wildcard. Paths listed under
+# User-agent: * above are spam URL patterns and /api/, not bot blocks; a bot
+# named here follows only its own group, so it may crawl those paths too, which
+# is harmless (they 404 or 405).
 User-agent: GPTBot
 Allow: /
 
@@ -115,35 +109,62 @@ Allow: /
 User-agent: anthropic-ai
 Allow: /
 
-# ─── AI training-only scrapers — blocked ───
-# These scrape for model training, NOT live AI search. Blocking them does not
-# hurt AI-search visibility (standard 2026 publisher pattern).
 User-agent: CCBot
-Disallow: /
-
-User-agent: Cohere-ai
-Disallow: /
-
-User-agent: Bytespider
-Disallow: /
+Allow: /
 
 User-agent: Amazonbot
-Disallow: /
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: cohere-training-data-crawler
+Allow: /
 
 User-agent: Diffbot
-Disallow: /
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: MistralAI-User
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: PetalBot
+Allow: /
 
 User-agent: Omgilibot
-Disallow: /
+Allow: /
 
 User-agent: Timpibot
-Disallow: /
+Allow: /
 
 User-agent: ImagesiftBot
-Disallow: /
+Allow: /
 
 User-agent: img2dataset
-Disallow: /
+Allow: /
+
+User-agent: AI2Bot
+Allow: /
+
+User-agent: Kangaroo Bot
+Allow: /
 
 Sitemap: https://factoryjet.com/sitemap.xml
 Host: https://factoryjet.com

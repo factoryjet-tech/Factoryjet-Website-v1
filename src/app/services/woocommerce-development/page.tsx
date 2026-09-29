@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     url: 'https://factoryjet.com/services/woocommerce-development',
     images: [
       {
-        url: 'https://factoryjet.com/images/us/hero-us.webp',
+        url: 'https://factoryjet.com/og-default.png',
         width: 1200,
         height: 630,
         alt: 'WooCommerce Development Services: FactoryJet',
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     title: 'WooCommerce Development Agency USA | Hire WooCommerce Developers | FactoryJet',
     description:
       'Hire WooCommerce developers & experts, custom stores, design, plugins & integrations. Fixed-price projects.',
-    images: ['https://factoryjet.com/images/us/hero-us.webp'],
+    images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: {
     canonical: 'https://factoryjet.com/services/woocommerce-development',

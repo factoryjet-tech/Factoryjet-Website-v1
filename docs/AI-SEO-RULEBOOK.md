@@ -71,7 +71,7 @@ robots.txt and assuming Claude citation is covered is wrong.
 
 Named and allowed: GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, anthropic-ai, PerplexityBot,
 Google-Extended, Applebot-Extended, meta-externalagent.
-Blocked (deliberate, training-only): CCBot, Cohere-ai, Bytespider, Amazonbot, Diffbot, Omgilibot,
+Blocked: none since 2026-09-29 (Bhavesh: allow every bot). Previously blocked: CCBot, Cohere-ai, Bytespider, Amazonbot, Diffbot, Omgilibot,
 Timpibot, ImagesiftBot, img2dataset.
 
 **Gaps to fix:**

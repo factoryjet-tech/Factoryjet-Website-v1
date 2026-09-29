@@ -166,7 +166,7 @@ export const post: BlogPost = {
                 url: 'https://factoryjet.com',
               },
               primaryImageOfPage:
-                'https://factoryjet.com/blog-images/how-to-choose-ecommerce-development-agency-2026.webp',
+                'https://factoryjet.com/blog-images/best-ecommerce-development-agencies-usa.webp',
               speakable: {
                 '@type': 'SpeakableSpecification',
                 cssSelector: ['h1', '.answer-first'],

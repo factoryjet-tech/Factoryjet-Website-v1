@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description:
       'An e-commerce development agency that consults, designs, builds, and implements omnichannel commerce for DTC and B2B brands. Platform-agnostic. A decade-plus building commerce.',
     url: 'https://factoryjet.com/about',
-    images: [{ url: 'https://factoryjet.com/og/about.png', width: 1200, height: 630, alt: 'FactoryJet, e-commerce development agency for DTC and B2B brands' }],
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet, e-commerce development agency for DTC and B2B brands' }],
     locale: 'en_US',
   },
   twitter: {
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title: 'About FactoryJet | E-Commerce Development Agency for DTC & B2B',
     description:
       'An e-commerce development agency for DTC and B2B brands. We build omnichannel commerce on Shopify, Magento, WooCommerce, or Commerceflo.',
-    images: ['https://factoryjet.com/og/about.png'],
+    images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: { canonical: 'https://factoryjet.com/about', languages: aboutAlternates },
   robots: {

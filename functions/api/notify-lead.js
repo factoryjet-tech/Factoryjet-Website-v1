@@ -563,6 +563,22 @@ function row(label, value) {
 }
 
 /**
+ * Label (never block) inbound sales pitches. Of 23 live form leads between
+ * 2026-09-17 and 2026-09-29, the largest single group was link builders and SEO
+ * freelancers pitching FactoryJet (e.g. "Quality Link-builders", "Linked Builder
+ * Team", *seoconsultant@gmail.com). Turnstile cannot catch them because they are
+ * real people. The tag only changes the email subject so real buyers stand out.
+ */
+function isVendorPitch({ email, company, message }) {
+  const local = String(email || '').toLowerCase().split('@')[0];
+  const org = String(company || '').toLowerCase();
+  const msg = String(message || '').toLowerCase();
+  if (/(seo|outreach|linkbuild|backlink|guestpost|guest\.post)/.test(local)) return true;
+  if (/(link.?build|backlink|guest.?post|seo (expert|specialist|consultant|executive))/.test(org)) return true;
+  return /(backlink|link.?building|link insertion|guest.?post|sponsored (post|article)|domain authority|\bda ?\d{2}|\bdr ?\d{2}|white.?label|outsourc|write for (you|us)|we (offer|provide) (seo|web|development|design|link|content|lead)|rank(ing)? your (website|site)|first page of google|partnership opportunit)/.test(msg);
+}
+
+/**
  * Verify the Turnstile token with Cloudflare.
  *
  * Until now the token was stored and never checked, which made the widget purely
@@ -967,7 +983,8 @@ export async function onRequestPost(context) {
     // Only an outright verification FAILURE is worth flagging in the subject.
     // 'absent' and 'unchecked' are normal for real people and stay unmarked, so
     // the warning keeps its meaning instead of appearing on half the leads.
-    const subject = `${turnstileVerdict === 'failed' ? '⚠️ LIKELY SPAM — ' : '🔥 '}New lead: ${name} — ${serviceStr}${region ? ` (${region.toUpperCase()})` : ''}`;
+    const pitch = isVendorPitch({ email, company, message });
+    const subject = `${turnstileVerdict === 'failed' ? '⚠️ LIKELY SPAM — ' : pitch ? '🧾 Vendor pitch — ' : '🔥 '}New lead: ${name} — ${serviceStr}${region ? ` (${region.toUpperCase()})` : ''}`;
     try {
       const resendRes = await fetch('https://api.resend.com/emails', {
         method: 'POST',

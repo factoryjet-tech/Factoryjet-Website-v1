@@ -1,6 +1,7 @@
 import { Fragment, type ReactNode } from 'react';
 import { AI_SEO_FAQ_CATEGORIES, AI_SEO_FAQS } from './AiSeoHubFaqs';
 import { US_SEO_CITY_PAGES } from './SeoCityLinksUS';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import './AiAgentDevelopmentSections.css';
 import './AiSeoHubSections.css';
 
@@ -441,7 +442,7 @@ export default function AiSeoHubSections() {
               <div className="tnode"><div className="idx">05</div><h3>Measure</h3><p>Citations per engine, Google rankings and leads, every month. Scope adjusts monthly. No annual lock-in.</p></div>
             </div>
             <div className="timelineAction">
-              <a className="btn btn-primary" href="/contact">Scope your AI SEO</a>
+              <a className="btn btn-primary" href="#finalcta">Scope your AI SEO</a>
               <a className="btn btn-ghost" href="/ai-visibility-checker">Run the free check first</a>
             </div>
           </div>
@@ -539,11 +540,18 @@ export default function AiSeoHubSections() {
           <div className="wrap">
             <div>
               <h2>Find Out Who AI Recommends in Your Category</h2>
-              <p>Run the free check to see which businesses ChatGPT, Perplexity and Google AI Overviews name today. Then talk to Bhavesh and the team about closing the gap, with a fixed quote before any work starts.</p>
+              <p>Send your name and email, then your website in the next step. Bhavesh and the team check which businesses ChatGPT, Perplexity and Google AI Overviews name today, then send a fixed quote for closing the gap.</p>
             </div>
-            <div className="ctas">
-              <a className="btn btn-primary" href="/ai-visibility-checker">Get a free AI visibility check</a>
-              <a className="btn btn-ghost" href="/contact">Talk to Bhavesh and the team</a>
+            <div className="finalcta-form">
+              <HeroInlineForm
+                region="us"
+                source="services_ai_seo_final"
+                service="SEO & AI Search"
+                submitLabel="Get my AI SEO quote"
+                trustText="Fixed quote before any work starts. No spam, no obligation."
+                secondaryHref="/ai-visibility-checker"
+                secondaryLabel="Or run the free AI visibility check"
+              />
             </div>
           </div>
         </section>

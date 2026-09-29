@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     url: 'https://factoryjet.com/whatsapp-chatbot',
     images: [
       {
-        url: 'https://factoryjet.com/images/services/whatsapp-chatbot.webp',
+        url: 'https://factoryjet.com/og-default.png',
         width: 1200,
         height: 630,
         alt: 'FactoryJet WhatsApp Chatbot Development India',
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     title: 'WhatsApp Chatbot Development India | FactoryJet',
     description:
       'WhatsApp chatbots for Indian businesses. Automate orders, support & lead capture. Fixed-price, scoped after a free call. 7-day delivery.',
-    images: ['https://factoryjet.com/images/services/whatsapp-chatbot.webp'],
+    images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: {
     canonical: 'https://factoryjet.com/whatsapp-chatbot',

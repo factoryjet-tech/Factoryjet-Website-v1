@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     url: 'https://factoryjet.com/services/magento-development',
     images: [
       {
-        url: 'https://factoryjet.com/images/us/hero-us.webp',
+        url: 'https://factoryjet.com/og-default.png',
         width: 1200,
         height: 630,
         alt: 'Magento Development Services: FactoryJet',
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     title: 'Magento Development Company USA | Hire Magento Developers | FactoryJet',
     description:
       'Hire certified Magento developers: Magento 2 & Adobe Commerce builds, custom modules, migrations & performance tuning.',
-    images: ['https://factoryjet.com/images/us/hero-us.webp'],
+    images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: {
     canonical: 'https://factoryjet.com/services/magento-development',

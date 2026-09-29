@@ -36,6 +36,9 @@ export interface HeroInlineFormProps {
   secondaryLabel?: string;
   /** Optional trust note shown below the submit row. */
   trustText?: string;
+  /** Service this form is about (e.g. 'AI Agent Development'), sent with the lead
+   *  so it is labelled, not guessed from the URL. */
+  service?: string;
 }
 
 const HeroInlineForm: React.FC<HeroInlineFormProps> = ({
@@ -46,6 +49,7 @@ const HeroInlineForm: React.FC<HeroInlineFormProps> = ({
   secondaryHref,
   secondaryLabel,
   trustText,
+  service,
 }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -72,10 +76,10 @@ const HeroInlineForm: React.FC<HeroInlineFormProps> = ({
     if (!canSubmit) { setError('Please enter your name and a valid email.'); return; }
     setIsSubmitting(true);
     setError(null);
-    trackFormSubmit(source, { service: '' });
+    trackFormSubmit(source, { service: service || '' });
     try {
       // Durable, server-first capture — never hangs on the browser Firestore SDK.
-      const { ok, docId, enrichToken } = await submitLead({ name, email, region, source });
+      const { ok, docId, enrichToken } = await submitLead({ name, email, region, source, service });
       trackFormSuccess(source);
       // Counts the lead now, then opens the step-2 details modal; it goes to
       // /thank-you?...&counted=1 when the visitor sends or skips.

@@ -1,5 +1,6 @@
 import { Fragment, type ReactNode } from 'react';
 import { AI_AGENT_FAQ_CATEGORIES, AI_AGENT_FAQS } from './AiAgentDevelopmentFaqs';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import './AiAgentDevelopmentSections.css';
 
 export const breadcrumbs = [
@@ -226,7 +227,15 @@ function TellUsTheWorkflow() {
           </ol>
           <p style={{ marginTop: 18, fontSize: 14 }}>Bhavesh, our founder, reads every enquiry and usually replies within 2 to 3 hours.</p>
         </div>
-        <a className="btn btn-primary" href="/contact">Tell us the workflow</a>
+        <div className="finalcta-form">
+          <HeroInlineForm
+            region="us"
+            source="services_ai_agent_development_tell_us"
+            service="AI Agent Development"
+            submitLabel="Scope my agent"
+            trustText="Name and email is enough. We follow up with the three questions above."
+          />
+        </div>
       </div>
     </section>
   );
@@ -644,7 +653,7 @@ export default function AiAgentDevelopmentSections() {
               </div>
             </div>
             <div className="timelineAction">
-              <a className="btn btn-primary" href="/contact">Scope your AI agent</a>
+              <a className="btn btn-primary" href="#tell-us">Scope your AI agent</a>
             </div>
           </div>
         </section>
@@ -714,7 +723,15 @@ export default function AiAgentDevelopmentSections() {
               <h2>Tell Us the Workflow, We'll Tell You the Truth</h2>
               <p>Tell us the workflow you want an agent to run and the systems it touches. We&apos;ll tell you honestly whether that&apos;s a build, a buy, or something in between, before you spend anything. Bhavesh, our founder, reads every enquiry and usually replies within 2 to 3 hours.</p>
             </div>
-            <a className="btn btn-primary" href="/contact">Scope your AI agent</a>
+            <div className="finalcta-form">
+              <HeroInlineForm
+                region="us"
+                source="services_ai_agent_development_final"
+                service="AI Agent Development"
+                submitLabel="Scope my agent"
+                trustText="No spam, no obligation. You get a straight build, buy or automate answer."
+              />
+            </div>
           </div>
         </section>
       </main>
