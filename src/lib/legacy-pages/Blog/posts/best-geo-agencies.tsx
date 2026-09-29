@@ -470,7 +470,7 @@ export const post: BlogPost = {
       <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg mb-8">
         <h3 className="text-lg font-bold mb-3">GEO for your ecommerce brand or small business</h3>
         <p className="mb-4">
-          FactoryJet tracks AI citations in ChatGPT, Perplexity, Claude, and Gemini monthly for ecommerce brands and US SMBs. Our AI SEO engagements are scoped per brand and cover GEO strategy, citation tracking, and original content production. See our <Link href="/services/ai-seo" className="text-[#B23E13] underline">AI SEO services</Link> for the full scope, or the <Link href="/services/generative-engine-optimization" className="text-[#B23E13] underline">GEO service page</Link> for the GEO work on its own.
+          FactoryJet tracks AI citations in ChatGPT, Perplexity, Claude, and Gemini monthly for ecommerce brands and US SMBs. Our AI SEO engagements are scoped per brand and cover GEO strategy, citation tracking, and original content production. See our <Link href="/services/ai-seo" className="text-[#B23E13] underline">AI SEO services</Link> for the full scope, or the <Link href="/services/generative-engine-optimization" className="text-[#B23E13] underline">GEO agency page</Link> for the GEO and AEO work on its own.
         </p>
         <Link
           href="/services/ai-seo"

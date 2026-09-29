@@ -130,6 +130,7 @@ export const SERVICE_HUBS: ServiceHub[] = [
         { label: 'Manufacturing', href: '/services/manufacturing-website-design' },
         { label: 'SaaS', href: '/services/saas-website-design' },
         { label: 'Law Firms', href: '/services/law-firm-website-design' },
+        { label: 'Medical Practices', href: '/services/medical-website-design' },
         { label: 'Real Estate', href: '/services/real-estate-website-design' },
         { label: 'Restaurants', href: '/services/restaurant-website-design' },
         { label: 'Nonprofits', href: '/services/nonprofit-website-design' },
@@ -327,6 +328,7 @@ export const UK_SERVICE_HUBS: ServiceHub[] = [
         { label: 'Manufacturing', href: '/services/manufacturing-website-design' },
         { label: 'SaaS', href: '/services/saas-website-design' },
         { label: 'Law Firms', href: '/services/law-firm-website-design' },
+        { label: 'Medical Practices', href: '/services/medical-website-design' },
         { label: 'Real Estate', href: '/services/real-estate-website-design' },
         { label: 'Nonprofits', href: '/services/nonprofit-website-design' },
       ] },
@@ -392,6 +394,7 @@ export const UK_SIMPLE_MENUS: SimpleMenu[] = [
       ] },
       { heading: 'Websites by industry', kind: 'compact', items: [
         { label: 'Law Firms', href: '/services/law-firm-website-design' },
+        { label: 'Medical Practices', href: '/services/medical-website-design' },
         { label: 'Manufacturing', href: '/services/manufacturing-website-design' },
         { label: 'SaaS', href: '/services/saas-website-design' },
         { label: 'Nonprofits', href: '/services/nonprofit-website-design' },

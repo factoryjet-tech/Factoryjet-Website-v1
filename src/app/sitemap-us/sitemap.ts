@@ -113,6 +113,7 @@ const US_ROUTES: { path: string; source: string }[] = [
   { path: '/services/woocommerce-development',             source: 'src/app/services/woocommerce-development/page.tsx' },
   { path: '/website-cost',                                 source: 'src/app/website-cost/page.tsx' },
   { path: '/services/law-firm-website-design',             source: 'src/app/services/law-firm-website-design/page.tsx' },
+  { path: '/services/medical-website-design',              source: 'src/app/services/medical-website-design/page.tsx' },
   { path: '/services/real-estate-website-design',          source: 'src/app/services/real-estate-website-design/page.tsx' },
   { path: '/austin/web-design',                            source: 'src/app/austin/web-design/page.tsx' },
   { path: '/miami/web-design',                             source: 'src/app/miami/web-design/page.tsx' },

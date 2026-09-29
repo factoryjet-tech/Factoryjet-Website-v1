@@ -653,9 +653,9 @@ const RELATED_SERVICES: ReadonlyArray<{ href: string; title: string; body: strin
     body: 'Scheduling, intake and front office work handled by AI agents, with a clear clinical boundary.',
   },
   {
-    href: '/services/saas-website-design',
-    title: 'SaaS website design',
-    body: 'Product websites for software companies, including health tech.',
+    href: '/services/medical-website-design',
+    title: 'Medical website design',
+    body: 'Practice websites with online booking, provider pages and accessible patient forms.',
   },
 ];
 

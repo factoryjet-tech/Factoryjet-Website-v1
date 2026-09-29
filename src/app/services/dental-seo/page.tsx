@@ -1046,7 +1046,7 @@ export default function DentalSEOPage() {
               Sometimes the honest finding is that the profile is fine and the site is the problem. One that takes
               six seconds to show a booking button is a{' '}
               <Link href="/services/web-design" style={LINK_STYLE}>web design</Link> problem, better served by{' '}
-              <Link href="/services/small-business-website-design" style={LINK_STYLE}>small business website design</Link>{' '}
+              <Link href="/services/medical-website-design" style={LINK_STYLE}>medical and dental website design</Link>{' '}
               than by another month of profile tuning.
             </p>
             <p style={{ fontSize: 16, lineHeight: 1.75, color: 'var(--n600)', marginTop: 18 }}>

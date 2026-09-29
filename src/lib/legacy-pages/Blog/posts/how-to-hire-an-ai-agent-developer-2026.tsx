@@ -4,20 +4,59 @@ import type { BlogPost, FAQItem } from '../data.types';
 // FAQs are grounded in live Google "People Also Ask" and organic SERP data pulled via
 // DataForSEO on 2026-09-20 for "hire ai agent developer" and "ai agent developer cost per
 // hour" (see pipeline/research/, this session), plus reasonable adjacent buyer questions.
+// 2026-09-29 retarget to "hire ai developer" (Google US, 720/mo, KD 14): the People Also
+// Ask box and related searches for that keyword supplied the new questions marked below.
+// Career-intent PAA ("Which AI job is highly paid?", "Is AI a good career choice?",
+// "Which 3 jobs will not survive AI?") and the unverifiable "30% rule" were excluded.
 // The FAQPage schema is generated centrally by the blog route (src/app/blog/[slug]/page.tsx)
 // FROM this exact array, so the visible FAQs and the structured data can never drift apart.
 // Do not add a second, hand-written FAQPage script anywhere in this file.
 const faqs: FAQItem[] = [
   {
-    q: 'How do I hire an AI agent developer?',
-    a: 'Start by writing down the one task you want automated and roughly how often it happens today. Then pick a hiring path: a freelancer for a single, well-defined build, an agency for ongoing support and a full team, or an in-house hire only once this is permanent, full-time work. Whichever path you choose, ask to see a real past integration, not a demo, before you sign anything.',
+    q: 'How do I hire an AI developer?',
+    a: 'Start by writing down the one task you want automated and roughly how often it happens today. Then pick a hiring path: a freelancer for a single, well-defined build, an agency or project team for a fixed-scope build with support after launch, or an in-house hire only once this is permanent, full-time work. Whichever path you choose, ask to see a real past integration, not a demo, before you sign anything.',
   },
   {
-    q: 'How much does it cost to hire an AI agent developer?',
+    // PAA, "hire ai developer", 2026-09-29
+    q: 'What does an AI developer do?',
+    a: 'The title covers two different jobs. Some AI developers train or tune models, which is research-heavy work most small businesses never need. Most business projects need the other kind: a developer who connects an existing model to your real tools (help desk, store, CRM), controls what it is allowed to change, and tests it against past cases. That second kind is often called an AI agent developer.',
+  },
+  {
+    // PAA, "hire ai developer", 2026-09-29
+    q: 'Is AI coding difficult enough that I should hire someone?',
+    a: 'Getting a model to answer a question takes an afternoon. Getting it to act safely on your real systems is harder: you need permission limits, error handling, logging, and tests built from real past cases. If nobody on your team has shipped software that touches live customer or order data, hire for that part. A short paid pilot is a cheap way to find out.',
+  },
+  {
+    // PAA ("What is AI developer salary?"), "hire ai developer", 2026-09-29
+    q: 'Should I pay an AI developer a salary or a project fee?',
+    a: 'Pay a salary only when you have a steady, full-time stream of AI work and someone to manage it. For a single build with a clear finish line, a project fee tied to a written scope is easier to budget and easier to hold someone to. Many businesses start with a fixed-scope project and only consider a salaried hire once the second or third project is already queued up.',
+  },
+  {
+    // PAA / AI Overview "where to look", "hire ai developer", 2026-09-29
+    q: 'Where can I hire AI developers?',
+    a: 'There are three main places. Freelance marketplaces such as Upwork list individual developers you vet yourself. Talent networks such as Arc describe their candidates as pre-vetted before you see them. Agencies and project teams take a whole build, from scope to launch and support. Wherever you look, run the same checks: a real past integration, a clear testing plan, and written code ownership.',
+  },
+  {
+    // Related search "ai developer job description", "hire ai developer", 2026-09-29
+    q: 'What should an AI developer job description include?',
+    a: 'Name the task first, not the technology. Say which systems the developer will connect to (for example your help desk and your store), what the finished work must do, and how you will test it. List must-have skills: model APIs with tool use, API integration, and testing AI output against real cases. Add who owns the code, and whether the role is a project, a contract, or permanent.',
+  },
+  {
+    // Related search "hire ai developer reddit", 2026-09-29
+    q: 'Should I trust Reddit recommendations when hiring an AI developer?',
+    a: 'Treat Reddit threads as a source of warning signs, not a shortlist. Candid posts are useful for spotting common problems, such as freelancers who disappear after launch or agencies that bill hourly without a scope. A name recommended in a thread still needs the same checks as anyone else: a past integration you can verify, a reference you actually call, and a written scope.',
+  },
+  {
+    // Related search "ai developer free", 2026-09-29
+    q: 'Can I get an AI developer for free?',
+    a: 'You can prototype for free. Many model providers and no-code tools offer free tiers that let you test whether an idea works at all. What you usually cannot get for free is the production work: connecting safely to your live systems, testing against real cases, and someone answering when it breaks. Use a free prototype to sharpen your scope, then hire for the build.',
+  },
+  {
+    q: 'How much does it cost to hire an AI developer?',
     a: 'It depends on scope, not on a single hourly number you can quote in advance. A narrow, single-workflow agent costs far less than one touching several business systems with compliance requirements. Rather than guess a figure here, our companion article breaks down the three real cost buckets (running it, renting it, and building it) with worked examples: see how much AI agent development costs.',
   },
   {
-    q: 'Can I develop my own AI agent instead of hiring someone?',
+    q: 'Can I build my own AI agent without hiring a developer?',
     a: 'A single developer with coding experience can prototype a basic agent using an open-source framework in about a week. What is harder to do yourself is the part that makes it safe on real systems: permissions, error handling, logging, and testing against real past cases. If your business does not have that engineering skill in-house, that gap is what you are actually hiring for.',
   },
   {
@@ -62,7 +101,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: 'When does it make sense to hire an AI agent developer in-house instead of an agency?',
-    a: 'In-house makes sense once AI agent work is a genuinely ongoing, full-time part of your business, not a single project. It gives you the most control and the deepest institutional knowledge, but it is slow and expensive to hire for, and hard to keep current on a fast-moving field by yourself. Most businesses are better served starting with a freelancer or agency and only bringing this in-house once the workload justifies it.',
+    a: 'In-house makes sense once AI agent work is an ongoing, full-time part of your business rather than a single project. It gives you the most control and the deepest institutional knowledge, but it is slow and expensive to hire for, and hard to keep current on a fast-moving field by yourself. Most businesses are better served starting with a freelancer or agency and only bringing this in-house once the workload justifies it.',
   },
   {
     q: 'What are the tradeoffs of hiring a freelancer for an AI agent?',
@@ -130,11 +169,11 @@ const faqs: FAQItem[] = [
   },
   {
     q: 'Can a general web development agency also build AI agents?',
-    a: 'Some can, and the underlying skill (integrating systems through APIs) genuinely overlaps with web development. The gap is usually evaluation and safety: has this team tested an AI system against real historical cases, and do they build in spend limits, step limits, and human handoffs by default. Ask a general web agency to walk you through a past AI agent project specifically, not just a website they built.',
+    a: 'Some can, and the underlying skill (integrating systems through APIs) overlaps with web development. The gap is usually evaluation and safety: has this team tested an AI system against real historical cases, and do they build in spend limits, step limits, and human handoffs by default. Ask a general web agency to walk you through a past AI agent project. A website they built does not count.',
   },
   {
     q: 'What is the biggest mistake businesses make when hiring an AI agent developer?',
-    a: 'Skipping the evaluation step and going straight to whoever pitches the most confidently. The clearest sign of a serious developer is not a polished pitch, it is a specific, verifiable answer to concrete questions: a real past integration, a real testing process, and a written answer on who owns the code. Businesses that skip asking these end up with agents nobody can safely maintain.',
+    a: 'Skipping the evaluation step and going straight to whoever pitches the most confidently. A serious developer gives specific, checkable answers to concrete questions: a real past integration, a real testing process, and a written answer on who owns the code. A polished pitch proves little. Businesses that skip asking these end up with agents nobody can safely maintain.',
   },
   {
     q: 'Should I hire one developer or a full team for an AI agent project?',
@@ -149,28 +188,30 @@ const faqs: FAQItem[] = [
 export const post: BlogPost = {
   id: '454',
   slug: 'how-to-hire-an-ai-agent-developer-2026',
-  title: 'How to Hire an AI Agent Developer in 2026',
+  title: 'How to Hire AI Developers in 2026: Freelancer, In-House or Agency',
   excerpt:
-    'A plain-language, evaluation-first guide to hiring an AI agent developer: the honest tradeoffs between a freelancer, an agency, and an in-house hire, the questions to ask before you sign, the red flags to watch for, and where cost actually comes from.',
+    'You have three ways to hire AI developers. A freelancer fits one small, clearly defined build. An in-house hire fits once AI work is permanent and full-time. An agency or project team fits a fixed-scope build that touches several of your systems and needs support after launch. This guide shows how to vet each one before you sign.',
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Sep 20, 2026',
-  readTime: '16 min read',
+  dateModified: 'Sep 29, 2026',
+  readTime: '18 min read',
   imageUrl: '/blog-images/how-to-hire-an-ai-agent-developer-2026.webp',
   imageAlt:
     'Two coworkers reviewing a laptop screen together during a hiring discussion, representing how a business should evaluate an AI agent developer before hiring one',
   meta: {
-    title: 'How to Hire an AI Agent Developer in 2026',
+    title: 'How to Hire AI Developers in 2026: Vetting Checklist',
     description:
-      'How to hire an AI agent developer: freelancer vs agency vs in-house, what to ask before you sign, red flags to avoid, honest cost context, and 34 buyer FAQs.',
+      'How to hire AI developers: when a freelancer, in-house hire or agency fits, a 10-point vetting checklist, red flags, code ownership, and 41 buyer FAQs.',
   },
   keyTakeaways: [
+    'Pick the path by the shape of the work. Freelancer: one narrow build. In-house: permanent, full-time AI work. Agency or project team: a fixed-scope build across several systems, with support after launch.',
     'An AI agent developer builds software that takes real actions on real systems (issuing a refund, updating a record, booking a meeting), not just software that answers questions. That distinction should shape how you evaluate candidates.',
     'The three hiring paths (freelancer, agency, in-house) have real, honest tradeoffs. None is universally right; the correct one depends on how narrow the task is and whether you need ongoing support.',
     'Five questions separate a serious developer from a confident pitch: show me a real past integration, tell me how you test before launch, tell me who owns the code after, tell me who monitors it afterward, and give me a fixed-scope proposal.',
     'Vague "AI-powered" language, no real past integration to point to, and a refusal to explain testing in plain terms are the clearest red flags, regardless of how polished the sales pitch is.',
     'Cost depends on scope, not a single hourly number. This guide deliberately avoids inventing one; see our companion cost article for the real three-part breakdown with worked examples.',
-    'This is a buyer\'s framework first. FactoryJet is mentioned once, as one real example of the agency path, not as the point of the article.',
+    'This is a buyer\'s framework first. FactoryJet appears in one section near the end as an example of the agency path, and the same checklist applies to us.',
   ],
   faqs,
   content: (
@@ -188,12 +229,12 @@ export const post: BlogPost = {
               '@id':
                 'https://factoryjet.com/blog/how-to-hire-an-ai-agent-developer-2026#webpage',
               url: 'https://factoryjet.com/blog/how-to-hire-an-ai-agent-developer-2026',
-              name: 'How to Hire an AI Agent Developer in 2026',
+              name: 'How to Hire AI Developers in 2026: Freelancer, In-House or Agency',
               description:
-                'A plain-language, evaluation-first guide to hiring an AI agent developer: freelancer vs agency vs in-house, questions to ask, red flags, and honest cost context.',
+                'A plain-language guide to hiring AI developers: when a freelancer, an in-house hire, or an agency fits, a vetting checklist, red flags, code ownership, and testing.',
               inLanguage: 'en-US',
               datePublished: '2026-09-20',
-              dateModified: '2026-09-20',
+              dateModified: '2026-09-29',
               author: { '@type': 'Person', name: 'Bhavesh Barot' },
               publisher: {
                 '@type': 'Organization',
@@ -232,22 +273,24 @@ export const post: BlogPost = {
       <div className="answer-first bg-amber-50 border border-amber-200 p-5 rounded-2xl mb-8">
         <p className="font-semibold text-amber-900 mb-1">The short answer</p>
         <p className="text-amber-900">
-          To hire an AI agent developer, first write down the one task you want automated and how
-          often it happens today. Then choose a hiring path: a freelancer for a single, narrow
-          build, an agency for a coordinated team and ongoing support, or an in-house hire only
-          once this becomes permanent, full-time work. Before you sign with anyone, ask to see a
-          real past integration (not a demo), how they test before launch, who owns the code
-          afterward, and for a fixed-scope proposal instead of open-ended hourly billing.
+          To hire AI developers, first write down the one task you want automated and how often it
+          happens today. Then choose a hiring path: a freelancer for a single, narrow build, an
+          in-house hire once AI work is permanent and full-time, or an agency or project team for a
+          fixed-scope build that touches several systems and needs support after launch. Before
+          you sign with anyone, ask to see a real past integration (not a demo), how they test
+          before launch, who owns the code afterward, and for a fixed-scope proposal instead of
+          open-ended hourly billing.
         </p>
       </div>
 
       <p className="mb-4 text-gray-800">
-        &quot;AI agent developer&quot; is a confusing job title right now because almost anyone
-        who has called an API from a model provider is using it. That makes hiring harder, not
-        easier. This guide is deliberately evaluation-first: it will not tell you that one hiring
-        path is always right, and it does not invent a cost number just to give you something to
-        anchor on. It is a framework for judging any candidate, whether they are a solo freelancer
-        or a full agency, before you hand them access to your systems.
+        &quot;AI developer&quot; is a confusing job title right now. It can mean a researcher who
+        trains models, or an engineer who connects an existing model to your help desk, store, or
+        CRM. Most businesses searching to hire AI developers need the second kind, usually called
+        an AI agent developer, and almost anyone who has called a model API now uses that title
+        too. This guide is evaluation-first. It will not tell you one hiring path is always right,
+        and it does not invent a cost number to anchor on. It is a framework for judging any
+        candidate, solo freelancer or full agency, before you hand them access to your systems.
       </p>
       <p className="mb-6 text-gray-800">
         Quick vocabulary, once, so the rest reads easily. An <strong>AI agent</strong> is software
@@ -264,13 +307,14 @@ export const post: BlogPost = {
         <ol className="list-decimal pl-5 space-y-1 text-gray-800">
           <li><a href="#what-they-build" className="text-orange-600 underline">What an AI agent developer actually builds</a></li>
           <li><a href="#hiring-paths" className="text-orange-600 underline">The three hiring paths, honestly compared</a></li>
+          <li><a href="#vetting-checklist" className="text-orange-600 underline">A 10-point vetting checklist for AI developers</a></li>
           <li><a href="#questions-to-ask" className="text-orange-600 underline">Questions to ask before you hire</a></li>
           <li><a href="#red-flags" className="text-orange-600 underline">Red flags that predict a bad project</a></li>
           <li><a href="#check-references" className="text-orange-600 underline">How to check references and past work</a></li>
           <li><a href="#ownership-support" className="text-orange-600 underline">Code ownership and support after launch</a></li>
           <li><a href="#testing" className="text-orange-600 underline">How a serious developer tests before launch</a></li>
           <li><a href="#cost-context" className="text-orange-600 underline">What this actually costs</a></li>
-          <li><a href="#where-we-fit" className="text-orange-600 underline">Where FactoryJet fits in this framework</a></li>
+          <li><a href="#where-we-fit" className="text-orange-600 underline">Working with FactoryJet&apos;s team on a fixed-scope AI agent build</a></li>
         </ol>
       </div>
 
@@ -294,8 +338,8 @@ export const post: BlogPost = {
         refund in your store, updates a record in your CRM, or books a meeting on a real calendar.
       </p>
       <p className="mb-4 text-gray-800">
-        That means the job is not mostly about writing clever instructions for a model. It is
-        software engineering aimed at a specific, narrow problem: reading data safely out of your
+        So most of the job is software engineering aimed at a specific, narrow problem, and
+        writing clever instructions for the model is a small slice of it. The work covers reading data safely out of your
         systems, deciding what the agent is allowed to do, writing the code that performs the
         action without breaking something else, testing that code against real past cases, and
         building in a way for the agent to hand off to a person when it is unsure. The model call
@@ -350,9 +394,65 @@ export const post: BlogPost = {
       <p className="mb-6 text-gray-800">
         A simple rule of thumb: use a freelancer to test a narrow idea quickly and cheaply, move to
         an agency once you need reliability and support you can count on, and only hire in-house
-        once AI agent work has become a genuinely permanent, full-time part of your operation. Do
-        not let a vendor push you toward the option that happens to be how they get paid.
+        once AI agent work has become a permanent, full-time part of your operation. Do not let a
+        vendor push you toward the option that happens to be how they get paid.
       </p>
+
+      <h2 id="vetting-checklist" className="text-2xl font-bold mt-8 mb-4 text-gray-900">
+        A 10-point vetting checklist for AI developers
+      </h2>
+      <p className="mb-4 text-gray-800">
+        Run every candidate through the same ten checks, in this order. The early checks are cheap
+        and filter out most bad fits before you spend time on interviews. If a candidate fails two
+        or more, keep looking.
+      </p>
+      <ol className="list-decimal pl-6 space-y-3 mb-6 text-gray-800">
+        <li>
+          <strong>Your scope is written down first.</strong> One task, the systems it touches, and
+          what &quot;done&quot; looks like, on one page. Without this, every quote you collect is a
+          guess and you cannot compare them.
+        </li>
+        <li>
+          <strong>They have shipped to production.</strong> Ask for one project that ran on live
+          business data. A notebook experiment or a hosted demo does not count.
+        </li>
+        <li>
+          <strong>They can name the systems.</strong> A real answer sounds like &quot;it read
+          tickets from the help desk API and wrote refunds back to the store.&quot; Vague
+          &quot;AI-powered automation&quot; talk fails this check.
+        </li>
+        <li>
+          <strong>They have the right skills for your task.</strong> Model APIs with tool use
+          (letting the model call your software), API integration, and testing AI output against
+          real cases. Model training is rarely needed for a business build.
+        </li>
+        <li>
+          <strong>They describe a testing plan.</strong> A set of real past cases the agent is
+          checked against before launch, plus monitoring after. See the{' '}
+          <a href="#testing" className="text-orange-600 underline">testing section</a> below.
+        </li>
+        <li>
+          <strong>They build in limits and a handoff.</strong> The agent should have clear limits on
+          what it can change, and a named person it hands off to when it is unsure.
+        </li>
+        <li>
+          <strong>Ownership is in the contract.</strong> A written assignment of the code, the
+          agent&apos;s logic, and its data to you. Paying the invoice alone does not do this.
+        </li>
+        <li>
+          <strong>Accounts sit in your name.</strong> API keys, cloud accounts, and connections to
+          your tools belong to your business, so you can switch developers without a rebuild.
+        </li>
+        <li>
+          <strong>You called a reference.</strong> A past client with a similar project, on the
+          phone, not a testimonial on their website.
+        </li>
+        <li>
+          <strong>The proposal has a fixed scope.</strong> A defined piece of work at a defined
+          price, with the post-launch support period spelled out. A short paid pilot is a fair way
+          to test fit before a larger build.
+        </li>
+      </ol>
 
       {/* Mid-page CTA */}
       <div className="bg-orange-50 border border-orange-200 p-6 rounded-2xl my-8">
@@ -457,8 +557,8 @@ export const post: BlogPost = {
         </table>
       </div>
       <p className="mb-6 text-gray-800">
-        None of these alone is automatically disqualifying. A young freelancer might genuinely have
-        a thin portfolio and still be sharp and honest about it. Two or more of these together, on
+        None of these alone is automatically disqualifying. A young freelancer might have a thin
+        portfolio and still be sharp and honest about it. Two or more of these together, on
         the same candidate, is a strong reason to keep looking.
       </p>
 
@@ -560,18 +660,62 @@ export const post: BlogPost = {
       </p>
 
       <h2 id="where-we-fit" className="text-2xl font-bold mt-8 mb-4 text-gray-900">
-        Where FactoryJet fits in this framework
+        Working with FactoryJet&apos;s team on a fixed-scope AI agent build
       </h2>
-      <p className="mb-6 text-gray-800">
-        We built this guide as a genuinely neutral checklist, and it works the same way if you point
-        it at us. As one example of the agency path described above, we scope every agent against a
-        real, named workflow before quoting a price. We build agents connected to systems businesses
-        actually run: help desks like Zendesk and Gorgias, CRMs like HubSpot and Salesforce, ERPs
-        like NetSuite, and commerce platforms like Shopify. Every agent ships with tool limits, a
-        human handoff for anything it is unsure about, and full client ownership of the code and
-        integrations at launch. If that is the standard you are already holding other candidates to,
-        we would rather earn a place on your shortlist than ask you to take our word for it.
+      <p className="mb-4 text-gray-800">
+        FactoryJet is an example of the agency or project team path, and the checklist above works
+        the same way if you point it at us. We have been building for businesses since 2014 and
+        have served more than 500 of them. For AI work, we build agents connected to systems
+        businesses already run: help desks like Zendesk and Gorgias, CRMs like HubSpot and
+        Salesforce, ERPs like NetSuite, and commerce platforms like Shopify. The agent is a
+        deliverable your team owns and works alongside, with a person always one handoff away.
       </p>
+      <p className="mb-4 text-gray-800">A fixed-scope build with us runs in four steps:</p>
+      <ol className="list-decimal pl-6 space-y-3 mb-6 text-gray-800">
+        <li>
+          <strong>Scoping call.</strong> You describe one workflow. Bhavesh Barot, our founder,
+          reads every enquiry himself and usually replies within 2 to 3 hours.
+        </li>
+        <li>
+          <strong>Written scope and fixed quote.</strong> The scope names every system the agent
+          reads from and writes to, what it may and may not change, who it hands off to, and how it
+          will be tested. The price is fixed against that document, not billed by the hour.
+        </li>
+        <li>
+          <strong>Build and test on your real cases.</strong> We check the agent against a set of
+          your past tickets, orders, or requests before it touches live work, and you see the
+          results.
+        </li>
+        <li>
+          <strong>Launch and handover.</strong> The agent ships with tool limits, a human handoff
+          for anything it is unsure about, and full ownership of the code, integrations, and
+          accounts in your name. If you want us to stay on after launch, we agree what that
+          support covers before the build starts.
+        </li>
+      </ol>
+      <div className="bg-orange-50 border border-orange-200 p-6 rounded-2xl my-8">
+        <p className="font-semibold text-gray-900 mb-2">
+          Have one workflow in mind? Get it scoped as a fixed project.
+        </p>
+        <p className="text-gray-800 mb-4">
+          See how our team plans, tests, and hands over AI agent builds, including what a written
+          scope from us covers and what you own at launch.
+        </p>
+        <div className="flex flex-wrap items-center gap-3">
+          <a
+            href="/services/ai-agent-development"
+            className="inline-flex items-center rounded-lg bg-[#B23E13] px-5 py-3 font-semibold text-white hover:bg-[#8F3210]"
+          >
+            See AI agent development
+          </a>
+          <a
+            href="/contact"
+            className="inline-flex items-center rounded-lg border border-slate-300 bg-white px-5 py-3 font-semibold text-slate-900 hover:bg-slate-50"
+          >
+            Describe your workflow
+          </a>
+        </div>
+      </div>
 
       {/* End CTA */}
       <div className="bg-amber-50 border border-amber-200 p-6 rounded-2xl mt-10 mb-4">

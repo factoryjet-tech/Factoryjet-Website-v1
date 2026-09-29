@@ -37,22 +37,31 @@ import '@/components/v2/PlatformPage.css';
    in the "How GEO relates to SEO and AEO" section and in FAQ_ITEMS were
    fetch-verified on 2026-09-17. Do not edit a claim without re-opening its
    source page first. See docs/AI-SEO-RULEBOOK.md §1 and §5.
+
+   2026-09-29 pass for "geo agency" (720/mo US, KD 24) and "aeo agency"
+   (590/mo, KD 1). US GSC 2026-08-31..09-27: this URL had 1 impression
+   (position 45), so it has no foothold yet; the GEO blog posts collect the
+   GEO queries. Title and H1 now carry AEO, an AEO section answers "what is
+   an AEO agency", and nine FAQs come from US People Also Ask for "geo
+   agency", "aeo agency", "generative engine optimization services/agency"
+   and "answer engine optimization services" (DataForSEO, 2026-09-29). The
+   query fan-out quote was fetch-verified on Google Search Central 2026-09-29.
 ───────────────────────────────────────────────────────────────────────────── */
 
-const PAGE_MODIFIED = '2026-09-17';
+const PAGE_MODIFIED = '2026-09-29';
 
-const PAGE_TITLE = 'GEO Agency: Generative Engine Optimization Services | FactoryJet';
+const PAGE_TITLE = 'GEO & AEO Agency: Generative Engine Optimization Services | FactoryJet';
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,
   description:
-    'US GEO agency. Our generative engine optimization services get your brand named in the answers ChatGPT, Perplexity, Claude and Google AI Overviews give buyers.',
+    'US GEO and AEO agency. Our generative engine optimization services get your brand named in the answers ChatGPT, Perplexity, Claude and Google AI Overviews give buyers.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
     title: PAGE_TITLE,
     description:
-      'A GEO agency for US brands: AI crawler access, pages an AI can quote, clear brand signals, and a mention rate you can check across ChatGPT, Claude, Gemini, Perplexity and Google AI Overviews.',
+      'A GEO and AEO agency for US brands: AI crawler access, pages an AI can quote, clear brand signals, and a mention rate you can check across ChatGPT, Claude, Gemini, Perplexity and Google AI Overviews.',
     url: 'https://factoryjet.com/services/generative-engine-optimization',
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet GEO agency: generative engine optimization services' }],
     locale: 'en_US',
@@ -60,7 +69,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: PAGE_TITLE,
-    description: 'A GEO agency for US brands. Get named in AI answers, not just ranked on a results page.',
+    description: 'A GEO and AEO agency for US brands. Get named in AI answers as well as ranked on a results page.',
     images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: {
@@ -91,15 +100,31 @@ const FAQ_CATEGORIES = [
 /* Grouped by category, in category order, so the FAQPage schema lists the
    questions in the same order the page shows them. Questions marked PAA come
    from Google's People Also Ask boxes for "geo agency", "answer engine
-   optimization services" and "is geo replacing seo" (US, 2026-09-17). */
+   optimization services" and "is geo replacing seo" (US, 2026-09-17).
+   Questions marked PAA-0929 come from the US People Also Ask boxes for "geo
+   agency", "aeo agency", "generative engine optimization services",
+   "generative engine optimization agency" and "answer engine optimization
+   services" (DataForSEO, desktop, 2026-09-29). */
 const FAQ_ITEMS = [
   // PAA
-  { category: 'basics', question: 'What is a GEO agency?', answer: 'A GEO agency gets your brand named in AI answers, not just ranked in search results. A normal SEO agency reports rankings and clicks. A GEO agency also checks which AI bots can read your site, rewrites pages so an answer can be quoted from them, and reports how often ChatGPT, Claude, Gemini, Perplexity and Google AI Overviews name you.' },
+  { category: 'basics', question: 'What is a GEO agency?', answer: 'A GEO agency gets your brand named in AI answers as well as ranked in search results. A normal SEO agency reports rankings and clicks. A GEO agency also checks which AI bots can read your site, rewrites pages so an answer can be quoted from them, and reports how often ChatGPT, Claude, Gemini, Perplexity and Google AI Overviews name you.' },
   { category: 'basics', question: 'What is generative engine optimization?', answer: 'Generative engine optimization, or GEO, is the work of getting your pages used and your brand named inside AI answers. Instead of competing only for a spot in a list of links, you compete to be one of the few sources an engine cites when it writes an answer in ChatGPT, Perplexity, Claude, Gemini or Google AI Overviews.' },
   // PAA ("What is answer engine optimization?")
   { category: 'basics', question: 'What is answer engine optimization?', answer: 'Answer engine optimization is the older sibling of GEO. It began as writing pages so direct answers could be pulled into featured snippets and voice replies. That same extractable structure now feeds AI answers, so AEO and GEO have largely converged.' },
+  // PAA-0929 ("What does GEO stand for?"). Local pack seen in the saved US SERP for "geo agency", 2026-09-29.
+  { category: 'basics', question: 'What does GEO stand for?', answer: 'In marketing, GEO stands for generative engine optimization: getting your brand named in answers that AI tools write. The same three letters also mean geographic, as in geotargeted or geofenced ads. When we checked US Google results for "geo agency" on 29 September 2026, a local map pack showed up next to the GEO agencies. If an agency pitches GEO, ask which one it means.' },
+  // PAA-0929 ("What is an AEO agency?")
+  { category: 'basics', question: 'What is an AEO agency?', answer: 'An AEO agency, short for answer engine optimization agency, rewrites your pages so Google and AI tools can lift a short, direct answer from them. The work shows up in featured snippets, People Also Ask boxes, voice assistants, and AI answers from ChatGPT, Perplexity and Google AI Overviews. Most AEO agencies now sell the same work GEO agencies sell, under a different label.' },
+  // PAA-0929 ("What does AEO stand for?")
+  { category: 'basics', question: 'What does AEO stand for?', answer: 'AEO stands for answer engine optimization. An answer engine is any tool that replies with an answer instead of a list of links: Google featured snippets and AI Overviews, voice assistants, ChatGPT and Perplexity. AEO is the work of making your page the one that answer is taken from.' },
+  // PAA-0929 ("What are generative engine optimization services?")
+  { category: 'basics', question: 'What are generative engine optimization services?', answer: 'They are the paid work a GEO agency does to get you named in AI answers. Ours covers five jobs: an AI crawler access audit, rewriting key pages into answers that can be quoted, entity and schema cleanup, earning mentions on the sites AI tools read, and repeat mention tracking across ChatGPT, Claude, Gemini, Perplexity and Google AI Overviews.' },
 
   { category: 'terms', question: 'What is the difference between GEO and AEO?', answer: 'GEO is about being a source inside a generated answer. AEO is about having a clean extractable answer on the page in the first place. AEO is a component of GEO, not a rival to it. Anyone selling them as two separate retainers is selling the same work twice.' },
+  // PAA-0929 ("What is the difference between SEO and AEO?")
+  { category: 'terms', question: 'What is the difference between SEO and AEO?', answer: 'SEO works to rank your page in the list of links, and it is measured in rankings and clicks. AEO works to make your page the source of the short answer that sits above that list or replaces it, and it is measured in answers used. One page can do both. AEO mostly changes how each answer on the page is written and laid out.' },
+  // PAA-0929 ("Is AEO replacing SEO?"). Source: Google Search Central, AI features and your website (fetched 2026-09-29).
+  { category: 'terms', question: 'Is AEO replacing SEO?', answer: 'No. An answer engine has to find and trust your page before it can quote it, and that is still SEO work: indexing, speed, links and clear pages. Google says the best practices for SEO remain relevant for AI Overviews and AI Mode. AEO sits on top of SEO and changes how the answers on the page are written.' },
   { category: 'terms', question: 'What is the difference between GEO and traditional SEO?', answer: 'Traditional SEO competes for a ranked position and is measured in clicks. GEO competes to be quoted inside an answer and is measured in mentions. The underlying index is largely shared, so the technical foundations overlap heavily, but the winning page shape and the reporting are different.' },
   // PAA. Source: Google Search Central, AI features and your website (fetched 2026-09-17).
   { category: 'terms', question: 'Is GEO replacing SEO?', answer: 'No. GEO is built on top of SEO, not instead of it. Google says the best practices for SEO remain relevant for its AI features, and a page must be indexed in Google Search before it can be a supporting link in an AI Overview. What changes is the goal: being named inside the answer, not only ranking under it.' },
@@ -114,11 +139,17 @@ const FAQ_ITEMS = [
   { category: 'choosing', question: 'Which GEO agency is considered the best?', answer: 'No single ranking settles it. Review directories such as Clutch publish GEO agency rankings, and most "best GEO agency" lists are published by agencies, ours included. Use them for a shortlist. The best agency for you can show your current mention rate on each engine, name the AI bots your site blocks today, explain which pages it will change first, and will not guarantee a ChatGPT citation.' },
   // PAA
   { category: 'choosing', question: 'What are the top GEO companies?', answer: 'They fall into three groups. Specialist GEO and AEO agencies that do the work for you. Established SEO and content agencies that have added GEO to their services. And software tools that track AI mentions but leave the fixing to your team. Pick an agency if you need the work done, and a tool if you only need tracking. Our list of the best GEO agencies compares ten, with our own place on it disclosed.' },
-  { category: 'choosing', question: 'How much does a GEO agency cost?', answer: 'It depends on scope, so we quote after a scoping call instead of publishing a price. Three things drive the cost: how many pages need rewriting, how many buyer questions and engines are tracked, and whether crawler access and technical fixes have to come first. Our GEO cost guide covers typical market ranges, and the free AI visibility check shows your starting point.' },
+  { category: 'choosing', question: 'How much does a GEO agency cost?', answer: 'It depends on scope, so we quote after a scoping call instead of publishing a price. Three things drive the cost: how many pages need rewriting, how many buyer questions and engines are tracked, and whether crawler access and technical fixes have to come first. Work usually starts with a one-time audit, then a fixed quote for the fixes, then optional month-to-month tracking. Our GEO cost guide covers typical market ranges.' },
   // PAA ("Can I do SEO myself?", asked about GEO)
   { category: 'choosing', question: 'Can I do generative engine optimization myself?', answer: 'Some of it, yes. You can check your robots.txt for AI bots, put short direct answers near the top of key pages, and ask ChatGPT and Perplexity your buyers’ questions each month to see who gets named. The hard parts are measuring properly across engines and earning mentions on other sites. That is usually where an agency earns its fee.' },
   // PAA
   { category: 'choosing', question: 'Is AEO worth it?', answer: 'Yes, if your buyers ask questions before they buy. AEO work makes each answer on your page short, direct and easy to quote. It is cheap to do on pages you already have, and the same work feeds featured snippets, voice answers and AI answers. Sold alone as a separate retainer, it is usually overpriced.' },
+  // PAA-0929 ("Is it worth hiring an SEO agency?", asked about GEO)
+  { category: 'choosing', question: 'Is it worth hiring a GEO agency?', answer: 'It is worth it when your buyers ask AI tools before they buy and those answers name competitors instead of you. It is not worth it yet if AI crawlers are blocked on your site, because that is a one-line robots.txt fix you can check yourself. Run our free AI visibility check before you pay anyone, us included.' },
+  // PAA-0929 ("What are the best AEO tools for 2026?")
+  { category: 'choosing', question: 'What are the best AEO tools?', answer: 'Tools and agencies do different jobs. AEO and GEO tools track how often AI answers name you, and some suggest fixes. They do not rewrite your pages or earn you mentions on other sites. If you have a writer and a developer, a tool may be enough. If not, you need someone to do the work. Our review of GEO and AI visibility tools compares the main options.' },
+  // PAA-0929 ("Can ChatGPT do SEO?")
+  { category: 'choosing', question: 'Can ChatGPT do GEO or SEO for me?', answer: 'It can draft answers, suggest FAQ questions and write schema code for you to check. It cannot see how your server treats each AI crawler, test how your pages render for bots, or count how often other AI tools name you across repeated runs. Use it as a writing helper and check every fact it gives you, because it can invent sources.' },
 
   { category: 'engines', question: 'Which AI engines can you actually influence?', answer: 'We influence engines that retrieve live web pages. These include ChatGPT search, Perplexity, Claude, Google AI Overviews, and Bing chat. We cannot alter static model training data. We optimize what models fetch, read, and cite in live queries.' },
   { category: 'engines', question: 'How does ChatGPT decide which sites it can cite?', answer: 'Access is the first gate and OpenAI documents it. Sites opted out of the OAI-SearchBot crawler will not be shown in ChatGPT search answers, though they can still appear as navigational links. That makes robots.txt the cheapest and most damaging mistake in the whole discipline.' },
@@ -155,7 +186,7 @@ const SERVICE_SCHEMA = {
   '@type': 'Service',
   serviceType: 'Generative engine optimization',
   name: 'Generative engine optimization services',
-  alternateName: ['GEO agency services', 'Answer engine optimization services', 'LLM SEO services'],
+  alternateName: ['GEO agency services', 'AEO agency services', 'Answer engine optimization services', 'LLM SEO services'],
   url: 'https://factoryjet.com/services/generative-engine-optimization',
   description:
     'GEO agency services for US brands: retrieval crawler access across OAI-SearchBot, Claude-SearchBot, PerplexityBot and Applebot, extractable answer structure for answer engine optimization, schema.org entity work, llms.txt and IndexNow, and repeat mention measurement across ChatGPT, Claude, Gemini, Perplexity and Google AI Overviews.',
@@ -179,8 +210,8 @@ const WEBPAGE_SCHEMA = {
   '@type': 'WebPage',
   '@id': 'https://factoryjet.com/services/generative-engine-optimization#webpage',
   url: 'https://factoryjet.com/services/generative-engine-optimization',
-  name: 'GEO Agency: Generative Engine Optimization Services',
-  description: 'FactoryJet is a US GEO agency offering generative engine optimization, answer engine optimization and LLM SEO services.',
+  name: 'GEO & AEO Agency: Generative Engine Optimization Services',
+  description: 'FactoryJet is a US GEO and AEO agency offering generative engine optimization, answer engine optimization and LLM SEO services.',
   citation: Object.values(RELATION_SOURCES).map((s) => ({ '@type': 'CreativeWork', name: s.name, url: s.url })),
   dateModified: PAGE_MODIFIED,
   author: { '@type': 'Person', name: 'Bhavesh Barot', url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/', jobTitle: 'Founder, FactoryJet' },
@@ -258,6 +289,21 @@ const HIRE_WHEN = [
     href: '/services/ai-seo',
     label: 'See our AI SEO services',
   },
+];
+
+/* AEO section. Serves "aeo agency" and "answer engine optimization services".
+   The fan-out item quotes Google Search Central (RELATION_SOURCES.google),
+   fetch-verified 2026-09-29. The SERP observation is from the saved US
+   DataForSEO pull for "aeo agency" (pipeline/research/data/us-buyer-2026-09-29). */
+const AEO_AGENCY_ANSWER =
+  'An AEO agency (answer engine optimization agency) makes your pages the source of the short answers Google and AI tools show. It finds the questions your buyers ask, puts a direct answer under each one, and lays pages out so that answer can be lifted cleanly into a featured snippet, a voice reply or an AI answer. We run AEO as part of our GEO work, on the same plan and the same report.';
+
+const AEO_WORK = [
+  { t: 'Question map.', d: 'The questions buyers type into Google and ask ChatGPT, pulled from People Also Ask boxes and real prompts, grouped so each one has a page that answers it.' },
+  { t: 'Answer-first rewrite.', d: 'A direct answer of about 40 to 60 words right under each question heading, before any background or sales copy.' },
+  { t: 'Follow-up coverage.', d: 'Google says AI Overviews and AI Mode may use a "query fan-out" technique, running several related searches to build one answer. A page that also answers the next two or three questions gets more chances to be pulled in.' },
+  { t: 'Lists, tables and FAQ blocks.', d: 'Real HTML lists and tables instead of long paragraphs, plus an FAQ block whose schema is built from the same list the page shows, so the two never disagree.' },
+  { t: 'Answer tracking.', d: 'Featured snippets, People Also Ask and AI answers checked on the same question set every cycle, so you can see which answers are yours and which moved.' },
 ];
 
 const RELATION = [
@@ -409,7 +455,7 @@ const SEGMENTS = [
   { t: 'Ecommerce and DTC brands.', d: 'Buying guides, category explainers and comparison pages are what assistants reach for on "which brand should I buy" questions. Product pages alone rarely get cited.' },
   { t: 'B2B and SaaS.', d: 'The assistant is often consulted before a vendor list exists. Category definition pages, integration and standards coverage, and honest alternative comparisons get named.' },
   { t: 'Professional services.', d: 'Legal, accounting, medical and consulting answers lean on trust signals. Named authors, credentials, jurisdiction specifics and clean entity resolution beat volume here.' },
-  { t: 'Local and multi location businesses.', d: 'Assistants answer near me questions from the index plus local data. Consistent naming across profiles, correct location schema and genuinely distinct location pages.' },
+  { t: 'Local and multi location businesses.', d: 'Assistants answer near me questions from the index plus local data. Consistent naming across profiles, correct location schema, and location pages that each say something different.' },
 ];
 
 const checkIcon = (
@@ -446,15 +492,16 @@ export default function GenerativeEngineOptimizationPage() {
             <div style={{ display: 'grid', gridTemplateColumns: '1.05fr 0.95fr', gap: 'clamp(32px,5vw,56px)', alignItems: 'center' }} className="pp-herogrid">
               <div>
                 <p className="pp-eyebrow">Generative engine optimization services</p>
-                <h1 style={{ margin: '14px 0 12px', maxWidth: '19ch' }}>
-                  A GEO agency that gets your brand named in AI answers.
+                <h1 style={{ margin: '14px 0 12px', maxWidth: '20ch' }}>
+                  A GEO and AEO agency that gets your brand named in AI answers.
                 </h1>
                 <p className="pp-lead" style={{ maxWidth: '50ch' }}>
-                  FactoryJet is a generative engine optimization (GEO) agency for US brands. We work on one outcome: your
+                  FactoryJet is a generative engine optimization (GEO) and answer engine optimization (AEO) agency for US
+                  brands. We work on one outcome: your
                   business named inside the answers ChatGPT, Claude, Perplexity, Gemini and Google AI Overviews write for
                   your buyers. Access first, then pages an AI can quote, then a mention number you can check.
                 </p>
-                <HeroInlineForm source="us_geo_hero" region="us" submitLabel="Get an AI visibility audit" />
+                <HeroInlineForm source="us_geo_hero" region="us" service="SEO & AI Search" submitLabel="Get an AI visibility audit" />
               </div>
               <div style={{ borderRadius: '20px', overflow: 'hidden', border: '1px solid var(--pp-line)', boxShadow: '0 24px 48px -28px rgba(20,17,15,0.28)' }}>
                 <Image
@@ -586,8 +633,39 @@ export default function GenerativeEngineOptimizationPage() {
           </div>
         </section>
 
-        {/* Terminology table */}
+        {/* AEO agency: what answer engine optimization work includes */}
         <section className="pp-sec tint">
+          <div className="pp-wrap">
+            <div style={{ display: 'grid', gridTemplateColumns: '0.9fr 1.1fr', gap: 'clamp(32px,5vw,64px)', alignItems: 'start' }} className="pp-herogrid">
+              <div>
+                <p className="pp-mlabel">{'// aeo agency'}</p>
+                <h2 style={{ marginTop: '10px' }}>What an AEO agency does, and what AEO services include</h2>
+                <p className="pp-lead" style={{ marginTop: '14px' }}>{AEO_AGENCY_ANSWER}</p>
+                <p className="pp-lead" style={{ marginTop: '14px' }}>
+                  Buyers are wary of the label. When we pulled US Google results for &ldquo;aeo agency&rdquo; on 29
+                  September 2026, the top result was a Reddit thread asking whether AEO agency services are worth the
+                  cost, and four of the top eight were &ldquo;best AEO agency&rdquo; lists. So judge an AEO agency by
+                  the five jobs on the right, not by the acronym. Google&rsquo;s own{' '}
+                  <a href={RELATION_SOURCES.google.url} target="_blank" rel="noopener noreferrer nofollow" style={linkStyle}>
+                    guide to AI features
+                  </a>{' '}
+                  is the source for the fan-out point.
+                </p>
+              </div>
+              <ol style={{ display: 'grid', gap: '12px', listStyle: 'none', margin: 0, padding: 0 }}>
+                {AEO_WORK.map((item, index) => (
+                  <li key={item.t} style={bulletRowStyle}>
+                    <span style={{ ...bulletStyle, fontSize: '11px', fontWeight: 700 }}>{index + 1}</span>
+                    <span><strong style={{ color: 'var(--pp-ink)' }}>{item.t}</strong> {item.d}</span>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          </div>
+        </section>
+
+        {/* Terminology table */}
+        <section className="pp-sec">
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// the labels'}</p>
             <h2 style={{ marginTop: '10px' }}>GEO, AEO, AIO and LLM SEO, in plain English</h2>
@@ -619,7 +697,7 @@ export default function GenerativeEngineOptimizationPage() {
         </section>
 
         {/* Sourced statements from the engines */}
-        <section className="pp-sec">
+        <section className="pp-sec tint">
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// primary sources'}</p>
             <h2 style={{ marginTop: '10px' }}>What the engines themselves publish</h2>
@@ -642,7 +720,7 @@ export default function GenerativeEngineOptimizationPage() {
         </section>
 
         {/* Surfaces table */}
-        <section className="pp-sec tint">
+        <section className="pp-sec">
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// the surfaces'}</p>
             <h2 style={{ marginTop: '10px' }}>The retrieval surfaces and crawlers we work against</h2>
@@ -676,7 +754,7 @@ export default function GenerativeEngineOptimizationPage() {
         </section>
 
         {/* Problem */}
-        <section className="pp-sec">
+        <section className="pp-sec tint">
           <div className="pp-wrap">
             <p className="pp-mlabel">{'// the problem'}</p>
             <h2 style={{ marginTop: '10px' }}>Why brands do not show up in AI answers</h2>
@@ -782,13 +860,10 @@ export default function GenerativeEngineOptimizationPage() {
                 will tell you which retrieval crawlers can reach you, which cannot, and whether your top pages can be
                 quoted at all.
               </p>
-              <div style={{ marginTop: '20px', display: 'flex', gap: '14px', flexWrap: 'wrap', alignItems: 'center' }}>
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center gap-2 rounded-full bg-[#B23E13] px-6 py-3 text-base font-semibold text-white transition-opacity hover:opacity-90"
-                >
-                  Check your retrieval access &rarr;
-                </Link>
+              <div style={{ marginTop: '20px', maxWidth: '560px' }}>
+                <HeroInlineForm source="us_geo_mid" region="us" service="SEO & AI Search" submitLabel="Check my retrieval access" />
+              </div>
+              <div style={{ marginTop: '16px' }}>
                 <ModalCTAButton label="Talk to the Founder" region="us" btnVariant="primary-light" />
               </div>
             </div>
