@@ -57,12 +57,12 @@ export default function HomeSections() {
                 trustText="🔒 Direct founder response · Zero sales pressure"
               />
               <aside className="hero-proof" aria-label="Selected FactoryJet clients and track record">
-                <p><strong>Over $120M+ GMV powered</strong> across 500+ commerce &amp; AI engagements.</p>
+                <p><strong>500+ businesses served</strong> across web, commerce and AI engagements.</p>
                 <div className="proof-brands" aria-label="Selected clients">
                   <span>Belle Maison</span>
+                  <span>Shopholistico</span>
                   <span>Impulse Branding</span>
-                  <span>Yadav Automation</span>
-                  <span>Argos Watches</span>
+                  <span>Yadav Entrance Automation</span>
                 </div>
               </aside>
             </div>
@@ -130,7 +130,7 @@ export default function HomeSections() {
               <nav className="platform-pills" aria-label="Ecommerce platform services">
                 <a href="/services/shopify-development">Shopify &amp; Plus</a>
                 <a href="/services/magento-development">Adobe Commerce (Magento)</a>
-                <a href="/services/ecommerce-development">BigCommerce</a>
+                <a href="/bigcommerce-development">BigCommerce</a>
                 <a href="/services/woocommerce-development">WooCommerce</a>
                 <a href="/services/ai-agent-development">AI Commerce Agents</a>
               </nav>
@@ -150,8 +150,8 @@ export default function HomeSections() {
               <div className="factlist">
                 <div className="fact"><div className="sec">§01</div><p>FactoryJet is an ecommerce development company for DTC and B2B brands in the United States, and an AI development company that builds the agents on top. We design, build, implement, and support stores, B2B portals, AI agents, and the websites and search presence around them. You own and run everything we build.</p></div>
                 <div className="fact"><div className="sec">§02</div><p>Most multichannel problems are data problems. When your store, Amazon, Walmart, TikTok Shop, and B2B portal each keep their own copy of stock, you oversell. We build one catalog, one live inventory, and one order queue under every channel.</p></div>
-                <div className="fact"><div className="sec">§03</div><p><span className="stat">About 70% of online carts are abandoned before checkout.</span> The store you sell from has to load fast and be easy to buy from, or the traffic you paid for leaks out. <span className="source-cite" role="note">Source: Baymard Institute cart abandonment benchmark</span></p></div>
-                <div className="fact"><div className="sec">§04</div><p><span className="stat">16.9% of US retail sales now happen online</span>, and visits to US retail sites from AI tools like ChatGPT rose 1,200% between July 2024 and February 2025. Buyers now ask an assistant what to buy. <span className="source-cite" role="note">Sources: US Census quarterly retail report; Adobe Analytics retail traffic study</span></p></div>
+                <div className="fact"><div className="sec">§03</div><p><span className="stat">About 70% of online carts are abandoned before checkout.</span> The store you sell from has to load fast and be easy to buy from, or the traffic you paid for leaks out. <a href="https://baymard.com/lists/cart-abandonment-rate" target="_blank" rel="noopener nofollow">Baymard Institute ↗</a></p></div>
+                <div className="fact"><div className="sec">§04</div><p><span className="stat">16.9% of US retail sales now happen online</span>, and visits to US retail sites from AI tools like ChatGPT rose 1,200% between July 2024 and February 2025. Buyers now ask an assistant what to buy. <a href="https://www.census.gov/retail/ecommerce.html" target="_blank" rel="noopener nofollow">US Census ↗</a> <a href="https://blog.adobe.com/en/publish/2025/03/17/adobe-analytics-traffic-to-us-retail-websites-from-generative-ai-sources-jumps-1200-percent" target="_blank" rel="noopener nofollow">Adobe Analytics ↗</a></p></div>
                 <div className="fact"><div className="sec">§05</div><p>The AI agents we build are task agents, not chatbots. They list new products in each marketplace's format, fix suppressed listings, reprice, and reconcile feeds on your live data, then hand the exceptions to your team.</p></div>
               </div>
               <div className="factphoto">
