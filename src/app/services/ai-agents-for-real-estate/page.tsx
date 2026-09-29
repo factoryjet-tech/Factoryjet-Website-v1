@@ -566,7 +566,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'working',
     question: 'How much does an AI agent for a real estate team cost?',
     answer:
-      'We will not put a figure on a page, because a number written without seeing your setup is aimed at an average rather than at you. Scope depends on how many queues and systems, whether those systems have clean APIs, whether MLS data is involved, and how much conversation design you need.',
+      'Building a custom AI agent costs roughly $5,000 to more than $180,000, according to a 2026 breakdown by development firm ProductCrafters; that range covers AI agents in general, not real estate alone. Where your team lands depends on how many queues and systems you have, whether those systems have clean APIs, whether MLS data is involved, and how much conversation design you need. A general range is aimed at an average rather than at you, so we scope your setup before quoting.',
   },
   {
     category: 'working',

@@ -506,7 +506,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does AI workflow automation cost?',
     answer:
-      'Pricing depends on connected tools, logic branches, and compliance rules. Most SMBs choose our Growth tier for multi-system automation. All projects are fixed-price and milestone-paid with delivery dates agreed in writing.',
+      'US agencies typically charge $5,000 to $15,000 to automate one workflow and $15,000 to $50,000 for several connected workflows, according to Layer3 Labs. The cost moves with connected tools, logic branches, and compliance rules. FactoryJet projects are fixed-price and milestone-paid with delivery dates agreed in writing.',
   },
   {
     category: 'pricing',

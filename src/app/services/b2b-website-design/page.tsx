@@ -502,7 +502,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'working',
     question: 'How much does a B2B website cost?',
     answer:
-      'We will not put a figure on a page, because a number written without seeing your situation is aimed at an average rather than at you. What moves scope: how many templates you need, whether positioning is in or out, how many integrations touch the site, who writes the content, and whether accessibility conformance is required.',
+      'No survey prices B2B websites on their own, but general small business websites cost $1,000 to $48,000 on average, and small agencies typically charge $6,000 to $12,000, according to WebFX. What moves a B2B site within that range: how many templates you need, whether positioning is in or out, how many integrations touch the site, who writes the content, and whether accessibility conformance is required. We scope those before quoting.',
   },
   {
     category: 'working',

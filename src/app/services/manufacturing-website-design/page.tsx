@@ -479,7 +479,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'building',
     question: 'How much does a manufacturing website cost?',
     answer:
-      'We do not publish a figure, because a number set without seeing your situation is aimed at an average, not at you. What moves scope: how many processes need their own page, how many products need spec pages, whether CAD downloads and a distributor locator are in play, and how much technical content already exists.',
+      'No published survey prices manufacturing sites on their own, but general small business websites cost $1,000 to $48,000 on average, and small agencies typically charge $6,000 to $12,000, according to WebFX. What moves scope: how many processes need their own page, how many products need spec pages, whether CAD downloads and a distributor locator are in play, and how much technical content already exists. We quote after seeing your situation, because a number set without it is aimed at an average, not at you.',
   },
   {
     category: 'building',

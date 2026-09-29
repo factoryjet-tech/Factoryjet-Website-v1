@@ -13,14 +13,14 @@ export const post: BlogPost = {
   readTime: '16 min read',
   imageUrl: '/blog-images/website-cost-small-business-usa-2026-hero.webp',
   meta: {
-    title: "Small Business Website Cost 2026: $1,499-$15,000 (USA Guide)",
+    title: "Small Business Website Cost 2026: $1,500-$15,000 (USA Guide)",
     description: "US small business websites run $1,500-$15,000 in 2026. Compare DIY vs freelancer vs agency pricing and see what's included at each tier to avoid overpaying.",
   },
   keyTakeaways: [
     'A professional custom website for a US small business costs $1,500-$8,000 in 2026; anything under that is almost always a template with minimal customization.',
     'DIY builders (Wix, Squarespace) cost $23-$65/month but cap your SEO ceiling and require 40-80 hours of your own time to build and maintain.',
     'US domestic agencies typically charge $8,000-$25,000 for the same deliverable that offshore-with-US-support teams deliver for $2,000-$5,000.',
-    'Monthly maintenance costs $99-$299 from a professional agency; skipping maintenance leads to security breaches that cost $5,000-$50,000 to remediate.',
+    'Monthly maintenance costs $100-$300 from a professional agency; skipping maintenance leads to security breaches that cost $5,000-$50,000 to remediate.',
     'A slow website (load time over 3 seconds) loses 53% of mobile visitors before the page even loads. Speed is a direct revenue metric.',
     'Price anchoring matters: get three quotes, compare scope line-by-line, and reject any agency that will not provide an itemized statement of work.',
     'FactoryJet delivers 5-page professional websites in 7 days: the offshore-quality-at-offshore-price benchmark for US SMBs, with US-hour communication.',
@@ -40,7 +40,7 @@ export const post: BlogPost = {
     },
     {
       q: 'Do I need to pay monthly fees after my website is built?',
-      a: "Yes, plan for $99-$299/month in ongoing costs. This covers hosting ($20-$100/month), security monitoring and SSL renewal ($20-$50/month), plugin/CMS updates ($50-$100/month), and minor content updates ($50-$150/month). Skipping maintenance creates security vulnerabilities: 43% of cyberattacks target small businesses, and the average remediation cost is $25,000. Many agencies bundle these into maintenance plans; compare carefully what is included.",
+      a: "Yes, plan for $100-$300/month in ongoing costs. This covers hosting ($20-$100/month), security monitoring and SSL renewal ($20-$50/month), plugin/CMS updates ($50-$100/month), and minor content updates ($50-$150/month). Skipping maintenance creates security vulnerabilities: 43% of cyberattacks target small businesses, and the average remediation cost is $25,000. Many agencies bundle these into maintenance plans; compare carefully what is included.",
     },
     {
       q: 'How long does it take to build a small business website?',
@@ -60,7 +60,7 @@ export const post: BlogPost = {
     },
     {
       q: 'Is a $2,000 website too cheap to be good?',
-      a: "Not if the agency has efficient systems. That price point is achievable when an agency uses modern tooling (Next.js, component libraries, CI/CD pipelines), an offshore cost structure (India-based teams cost 60-70% less than US), and a productized process (standardized 5-page build rather than fully custom). FactoryJet builds professional 5-page sites on exactly that model: 7-day delivery, Lighthouse 100 scores, and US business-hour support. Ask for PageSpeed Insights reports on live client sites before assuming low price means low quality.",
+      a: "Not if the agency has efficient systems. That price point is achievable when an agency uses modern tooling (Next.js, component libraries, CI/CD pipelines), an offshore cost structure (India-based teams cost 60-70% less than US), and a productized process (standardized 5-page build rather than fully custom). FactoryJet's 5-page builds use the same tooling and process, with 7-day delivery, Lighthouse 100 scores, US business-hour support, and a fixed price quoted in writing after a short scoping call. Ask for PageSpeed Insights reports on live client sites before assuming low price means low quality.",
     },
     {
       q: 'What ROI should I expect from a new small business website?',
@@ -181,8 +181,8 @@ export const post: BlogPost = {
             </tr>
             <tr className="bg-[#FAFAF7]">
               <td className="border p-3 font-semibold">Offshore Agency (FactoryJet)</td>
-              <td className="border p-3 font-bold text-[#B23E13]">$1,999-$6,000</td>
-              <td className="border p-3">$99-$250</td>
+              <td className="border p-3 font-bold text-[#B23E13]">Fixed quote after scoping</td>
+              <td className="border p-3">Fixed quote after scoping</td>
               <td className="border p-3 font-bold text-[#F05A28]">7-21 days</td>
               <td className="border p-3 font-bold text-[#F05A28]">High (Lighthouse 95+)</td>
             </tr>
@@ -223,12 +223,12 @@ export const post: BlogPost = {
         Output quality from US agencies is not universally superior. Many US agencies subcontract development to global engineering teams while adding a 60-80% markup for coordination. Ask specifically where developers are located to determine whether you are paying for domestic coding or domestic account management.
       </p>
 
-      <h2 className="text-2xl font-bold mt-8 mb-4 text-gray-900">Tier 4: Offshore Agencies with US Support ($1,999-$6,000)</h2>
+      <h2 className="text-2xl font-bold mt-8 mb-4 text-gray-900">Tier 4: Offshore Agencies with US Support ($2,000-$6,000)</h2>
       <p className="mb-4 text-gray-700 leading-relaxed">
         The highest-leverage option for US SMBs is the offshore-with-US-support model: agencies with global engineering teams, dedicated US-hours project management, US-governed contracts, and US-based client references. These agencies deliver the same technical output as domestic firms at 60-70% lower cost.
       </p>
       <p className="mb-4 text-gray-700 leading-relaxed">
-        Lighthouse scores, WCAG compliance, Core Web Vitals, and JSON-LD schema markup do not have a geography. What matters is engineering rigor and communication reliability. FactoryJet operates on this model: full code ownership, 7-day delivery, and verified Lighthouse 95+ performance.
+        Lighthouse scores, WCAG compliance, Core Web Vitals, and JSON-LD schema markup do not have a geography. What matters is engineering rigor and communication reliability. FactoryJet builds with full code ownership, 7-day delivery for sites of 5 pages or fewer, and verified Lighthouse 95+ performance, and quotes a fixed price in writing after a short scoping call.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4 text-gray-900">E-Commerce Website Costs: Shopify vs. WooCommerce vs. Custom</h2>
@@ -245,7 +245,7 @@ export const post: BlogPost = {
           <tbody className="text-gray-800 text-sm">
             <tr className="bg-white">
               <td className="border p-3 font-semibold">Shopify (custom theme)</td>
-              <td className="border p-3 font-bold text-[#B23E13]">$2,499-$6,000</td>
+              <td className="border p-3 font-bold text-[#B23E13]">$2,500-$6,000</td>
               <td className="border p-3">$39-$105</td>
               <td className="border p-3">DTC brands, product-first businesses</td>
             </tr>
@@ -299,7 +299,7 @@ export const post: BlogPost = {
       <div className="bg-[#FAFAF7] border border-[#E5E5DF] rounded-xl p-6 mt-8">
         <h3 className="text-lg font-bold mb-2 text-gray-900">The Bottom Line</h3>
         <p className="text-gray-700 leading-relaxed">
-          Budget $2,000 to $5,000 for a professional US small business website in 2026 when using an offshore-with-US-support engineering team. Budget $8,000 to $15,000 if you require a domestic agency for regulatory or preference reasons. Add $99 to $249/month for ongoing maintenance. Expect a 3x to 8x ROI within 12 months when technical SEO and conversion architecture are properly implemented.
+          Budget $2,000 to $5,000 for a professional US small business website in 2026 when using an offshore-with-US-support engineering team. Budget $8,000 to $15,000 if you require a domestic agency for regulatory or preference reasons. Add $100 to $250/month for ongoing maintenance. Expect a 3x to 8x ROI within 12 months when technical SEO and conversion architecture are properly implemented.
         </p>
       </div>
     </>

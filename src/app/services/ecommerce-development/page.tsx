@@ -473,7 +473,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does e-commerce development cost?',
     answer:
-      'It depends on four things: the platform, how many products and variants you have, whether you are moving from an old store, and which systems the store has to talk to (ERP, 3PL, subscriptions, B2B pricing). A custom-theme Shopify or WooCommerce store is the smallest build. Subscriptions, B2B pricing or a migration add scope. Headless and marketplace builds are the largest. We give you one fixed price after a free 30-minute call, paid in milestones. For typical market ranges, read our ecommerce website cost guide and Shopify development cost guide.',
+      'A small store on a pre-built theme can launch for about $1,000 to $5,000, and a store with custom design and integrations typically costs $5,000 to $25,000, according to BigCommerce. Where yours lands depends on four things: the platform, how many products and variants you have, whether you are moving from an old store, and which systems the store has to talk to (ERP, 3PL, subscriptions, B2B pricing). A custom-theme Shopify or WooCommerce store is the smallest build. Headless and marketplace builds are the largest. We give you one fixed price after a free 30-minute call, paid in milestones. Our ecommerce website cost and Shopify development cost guides go deeper.',
   },
   {
     category: 'pricing',

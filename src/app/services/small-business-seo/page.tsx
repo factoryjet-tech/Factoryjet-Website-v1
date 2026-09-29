@@ -48,7 +48,7 @@ const FAQ_GROUPS: ReadonlyArray<FaqGroup> = [
     items: [
       {
         q: 'How much do small business SEO services cost in the US?',
-        a: `FactoryJet pricing is fixed and scoped to your goals. The main drivers are your market and how fast you want to move. We scope every plan to the work that actually brings customers, then quote it up front on a short call so you know the full cost before work starts. The simplest way to get a real figure is to start with a free SEO audit.`,
+        a: `Small businesses in the US typically pay $1,500 to $3,500 a month for SEO, according to WebFX. The main drivers are your market and how fast you want to move. FactoryJet scopes every plan to the work that actually brings customers, then quotes a fixed price up front on a short call so you know the full cost before work starts. The simplest way to get a real figure is to start with a free SEO audit.`,
       },
       {
         q: 'Is affordable SEO for small business actually worth it?',

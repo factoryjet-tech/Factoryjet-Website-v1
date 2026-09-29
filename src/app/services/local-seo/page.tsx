@@ -50,7 +50,7 @@ const FAQ_GROUPS: ReadonlyArray<FaqGroup> = [
     items: [
       {
         q: 'How much do local SEO services cost in the US?',
-        a: 'FactoryJet pricing is fixed and scoped to your goals. The main drivers are how competitive your market is and how many locations you have. We scope every engagement to the work that will actually move your map-pack rankings and calls, then quote it up front on a short call so you know the full cost before work starts. The simplest way to get a real figure is to start with a free local SEO audit.',
+        a: 'US local SEO retainers run about $500 to $3,000 a month, according to WebFX. The main drivers are how competitive your market is and how many locations you have. FactoryJet scopes every engagement to the work that will move your map-pack rankings and calls, then quotes a fixed price up front on a short call so you know the full cost before work starts. The simplest way to get a real figure is to start with a free local SEO audit.',
       },
       {
         q: 'Do you lock me into a long contract?',

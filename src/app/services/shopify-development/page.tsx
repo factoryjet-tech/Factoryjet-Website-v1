@@ -435,7 +435,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does a custom Shopify store cost?',
     answer:
-      'FactoryJet provides fixed-price Shopify development scoped to your exact catalog. Main cost drivers include custom theme design, catalog migrations, and third-party app setups. Complex builds like Shopify Plus B2B wholesale portals or headless Hydrogen apps require broader scopes. Every build is milestone-paid with clear deliverables confirmed before work starts. You receive senior engineering without agency bloat or surprise hourly invoices.',
+      'A fully custom Shopify store build typically costs $8,000 to $35,000, according to Shopify agency CartCoders. Main cost drivers include custom theme design, catalog migrations, and third-party app setups. Complex builds like Shopify Plus B2B wholesale portals or headless Hydrogen apps require broader scopes. FactoryJet quotes a fixed price scoped to your exact catalog. Every build is milestone-paid with clear deliverables confirmed before work starts. You receive senior engineering without agency bloat or surprise hourly invoices.',
   },
   {
     category: 'pricing',
@@ -564,7 +564,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does it cost to hire a Shopify developer?',
     answer:
-      'Costs depend on your specific project scope and catalog size. A custom theme build on an existing store costs less than a ground-up migration. We provide a firm fixed quote after your initial discovery call. Freelancers often bill hourly without hard ceilings, which leads to budget overruns. Our milestone-paid structure ensures total cost certainty from day one.',
+      'Shopify developers in the US and Canada typically charge $120 to $200 an hour, according to a 2026 rate guide from CartCoders. Total cost depends on your project scope and catalog size. A custom theme build on an existing store costs less than a ground-up migration. We provide a firm fixed quote after your initial discovery call. Freelancers often bill hourly without hard ceilings, which leads to budget overruns. Our milestone-paid structure ensures total cost certainty from day one.',
   },
   {
     category: 'trust',
@@ -596,7 +596,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does Shopify website cost in USA?',
     answer:
-      'Shopify store costs scale with catalog complexity and design depth. Custom Figma themes require deeper engineering than basic template tweaks. Shopify Plus and headless builds represent the highest enterprise tier. In addition to initial builds, factor in platform fees and app subscriptions. We quote all upfront development costs and expected app expenses before work begins.',
+      'A fully custom Shopify store build typically costs $8,000 to $35,000, according to Shopify agency CartCoders. Costs scale with catalog complexity and design depth. Custom Figma themes require deeper engineering than basic template tweaks. Shopify Plus and headless builds represent the highest enterprise tier. In addition to initial builds, factor in platform fees and app subscriptions. We quote all upfront development costs and expected app expenses before work begins.',
   },
   {
     category: 'trust',

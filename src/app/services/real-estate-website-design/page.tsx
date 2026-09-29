@@ -279,7 +279,7 @@ const FAQ_ITEMS = [
   {
     category: 'basics',
     question: 'How much does a real estate agent website cost?',
-    answer: "A custom real estate agent website from FactoryJet is fixed-price and scoped to your build: a custom 8-page site with IDX integration, neighborhood pages, lead capture forms, mobile optimization, and on-page SEO setup. The main cost drivers are the site type (agent, brokerage, or property management), page count, and the number of neighborhood pages. We quote the full price up front after a free discovery call, and it comes in well below what US real estate web agencies charge for comparable work.",
+    answer: "No published survey prices real estate sites on their own, but general small business websites cost $1,000 to $48,000 on average, and small agencies typically charge $6,000 to $12,000, according to WebFX. The main cost drivers are the site type (agent, brokerage, or property management), page count, and the number of neighborhood pages. A typical FactoryJet agent build is a custom 8-page site with IDX integration, neighborhood pages, lead capture forms, mobile optimization, and on-page SEO setup. We quote a fixed price up front after a free discovery call.",
   },
   {
     category: 'basics',

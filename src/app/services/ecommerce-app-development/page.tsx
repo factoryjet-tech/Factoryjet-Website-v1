@@ -353,13 +353,13 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'cost',
     question: 'How much does it cost to develop an ecommerce app?',
     answer:
-      'Pricing depends on technical scope. It reflects whether you use React Native or separate Swift and Kotlin codebases. Key factors include your commerce backend, Storefront API complexity, custom loyalty tiers, and ERP inventory sync integrations.',
+      'Most app projects reviewed on Clutch cost $10,000 to $49,999, and the average is about $90,780, according to Clutch. Where an ecommerce app lands depends on technical scope. It reflects whether you use React Native or separate Swift and Kotlin codebases. Key factors include your commerce backend, Storefront API complexity, custom loyalty tiers, and ERP inventory sync integrations.',
   },
   {
     category: 'cost',
     question: 'How much does it cost to pay someone to develop an app?',
     answer:
-      'Development cost spans UI/UX architecture, backend API integration, App Store and Google Play submissions, and ongoing maintenance. Annual maintenance covers iOS and Android OS updates, API deprecations, security patches, and library dependencies.',
+      'According to Clutch, most app development projects reviewed on its site cost $10,000 to $49,999, with an average near $90,780. That cost spans UI/UX architecture, backend API integration, App Store and Google Play submissions, and ongoing maintenance. Annual maintenance covers iOS and Android OS updates, API deprecations, security patches, and library dependencies.',
   },
   /* ── Building it ────────────────────────────────────────────────────── */
   {

@@ -47,7 +47,7 @@ const FAQ_GROUPS: ReadonlyArray<FaqGroup> = [
     items: [
       {
         q: 'How much do ecommerce SEO services cost in the US?',
-        a: 'FactoryJet pricing is fixed and scoped to your goals. The main drivers are your catalog size, platform, and how competitive your category is. We scope every engagement to the work that will actually move revenue, then quote it up front on a short call so you know the full cost before work starts. The simplest way to get a real figure is to start with a free ecommerce SEO audit.',
+        a: 'Most ecommerce businesses pay $500 to $7,500 a month for SEO, according to WebFX survey data. The main cost drivers are your catalog size, platform, and how competitive your category is. We scope every engagement to the work that will actually move revenue, then quote a fixed price up front on a short call so you know the full cost before work starts. The simplest way to get a real figure is to start with a free ecommerce SEO audit.',
       },
       {
         q: 'Do you lock me into a long contract?',

@@ -579,7 +579,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'cost',
     question: 'How much does AI agent maintenance cost?',
     answer:
-      'It depends on seven things: model tokens, conversation or task volume, connected systems, evaluation cadence, your monitoring tool, compliance needs and required response times. We do not publish prices, because an agent handling a few internal requests and one handling thousands of customer conversations need very different support. We quote after an audit of your agent.',
+      'After launch, hosting for a custom-built AI agent typically runs $500 to $10,000 a month, and yearly maintenance $10,000 to $50,000 or more, according to development firm ProductCrafters. Where you land depends on seven things: model tokens, conversation or task volume, connected systems, evaluation cadence, your monitoring tool, compliance needs and required response times. An agent handling a few internal requests and one handling thousands of customer conversations need very different support, so we quote after an audit of your agent.',
   },
   {
     category: 'cost',
@@ -591,7 +591,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'cost',
     question: 'What does it cost to maintain an AI agent each month?',
     answer:
-      'Add up four parts: model usage for the month, your monitoring tool plan, the engineering hours to review, test and fix the agent, and compliance work such as HIPAA reviews. The engineering hours often decide the total, and they depend on how often the agent changes and how fast you need responses. That is why our plans are built around hours.',
+      'Development firm ProductCrafters puts monthly hosting for a custom-built AI agent at $500 to $10,000, with yearly maintenance of $10,000 to $50,000 or more. To estimate your own month, add up four parts: model usage, your monitoring tool plan, the engineering hours to review, test and fix the agent, and compliance work such as HIPAA reviews. The engineering hours often decide the total, and they depend on how often the agent changes and how fast you need responses. That is why we scope support around hours.',
   },
   {
     category: 'cost',

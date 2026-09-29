@@ -491,7 +491,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does AI automation cost for a small business?',
     answer:
-      'FactoryJet delivers all automations on a fixed-price contract. Pricing depends on workflow count, tool APIs, and model complexity. Most clients pick our Growth tier for multi-tool operations. All fees are confirmed upfront with milestone payments.',
+      'US agencies typically charge $5,000 to $15,000 to automate one workflow and $15,000 to $50,000 for several connected workflows, according to Layer3 Labs. The cost moves with workflow count, tool APIs, and model complexity. FactoryJet delivers all automations on a fixed-price contract, with fees confirmed in writing upfront and paid in milestones.',
   },
   {
     category: 'pricing',

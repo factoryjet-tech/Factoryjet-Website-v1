@@ -4,7 +4,7 @@ import type { BlogPost } from '../data.types';
 const faqs = [
     {
       q: 'How much does SEO cost per month for a small business?',
-      a: 'Most US small businesses spend between $500 and $2,500 per month on SEO. Local businesses competing in a single city often land at $500–$1,000/month for basic local SEO work. Businesses in competitive industries, legal, healthcare, home services, e-commerce, typically need $1,500–$3,500/month to move the needle. The national average for small business SEO retainers is around $1,497/month according to Ahrefs\' 2024 agency pricing survey.',
+      a: 'Most US small businesses spend between $500 and $2,500 per month on SEO. Local businesses competing in a single city often land at $500–$1,000/month for basic local SEO work. Businesses in competitive industries, legal, healthcare, home services, e-commerce, typically need $1,500–$3,500/month to move the needle. Ahrefs\' 2024 survey of 439 SEO providers found an average of $2,917 a month for SEO retainers and $1,557 a month for local SEO.',
     },
     {
       q: 'What is included in a typical small business SEO retainer?',
@@ -209,7 +209,7 @@ export const post: BlogPost = {
         </table>
       </div>
       <p className="text-xs text-gray-500 mb-6">
-        Source: FactoryJet analysis of 500+ US client engagements, Ahrefs State of SEO 2024, and Search Engine Journal Pricing Survey 2025.
+        Ranges are market estimates. For published survey data, see Ahrefs\' SEO pricing survey (2024) and WebFX\'s SEO pricing page (2026).
       </p>
       <p className="text-sm text-gray-700 mb-6">
         Want to know how long each tier takes to deliver results? Read our{' '}
@@ -234,7 +234,7 @@ export const post: BlogPost = {
 
       <h3 className="text-xl font-semibold mt-6 mb-3">$1,000–$2,500/Month: The Full Small Business Program</h3>
       <p>
-        This is where the economics of SEO start to make sense for most US small businesses. At this budget level, a quality agency can run a complete program: keyword strategy, technical monitoring, on-page optimization, content publishing, and active link building, not just outreach, but links actually earned. According to a 2025 Search Engine Journal survey, the median US agency retainer for SMB SEO clients falls at $1,497/month, which aligns with this tier.
+        This is where the economics of SEO start to make sense for most US small businesses. At this budget level, a quality agency can run a complete program: keyword strategy, technical monitoring, on-page optimization, content publishing, and active link building, not just outreach, but links actually earned. Ahrefs\' 2024 survey of 439 SEO providers puts the average local SEO retainer at $1,557 a month, which aligns with this tier.
       </p>
       <p>
         The difference between a $1,000/month agency and a $2,500/month agency is usually link velocity and content volume. Both can produce results. The higher-budget option compounds faster because it is building domain authority and topical coverage at a higher rate.

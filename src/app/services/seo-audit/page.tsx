@@ -49,7 +49,7 @@ const FAQ_GROUPS: ReadonlyArray<FaqGroup> = [
     items: [
       {
         q: 'How much do SEO audit services cost in the US?',
-        a: `Our initial SEO site audit is free. It is a real review of your site with a prioritized roadmap, and it is yours to keep. If you want us to implement the fixes, ongoing technical SEO and SEO work is fixed-price and scoped to your goals on a short call, then runs month-to-month. The main driver is the size of your site and how much needs fixing, and we quote it up front so you know the full cost before work starts.`,
+        a: `Most businesses pay $101 to $750 for a one-time SEO audit, according to a WebFX survey. The price rises with the size of your site and how much needs fixing. Our initial SEO site audit is free. It is a real review of your site with a prioritized roadmap, and it is yours to keep. If you want us to implement the fixes, ongoing technical SEO and SEO work is fixed-price and scoped to your goals on a short call, quoted up front, then runs month-to-month.`,
       },
       {
         q: 'Is the free SEO audit actually free?',

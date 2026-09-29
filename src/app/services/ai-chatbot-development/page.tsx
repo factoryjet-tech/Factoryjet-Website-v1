@@ -573,7 +573,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does AI chatbot development cost?',
     answer:
-      'Pricing depends on intents, integrations, and deployment channels. Most SMBs select our Growth tier for multi-intent support and CRM sync. All projects are fixed-price and milestone-paid with zero hidden fees.',
+      'A basic FAQ chatbot costs about $5,000 to $15,000 and a custom AI chatbot $20,000 to $80,000, according to the 2026 pricing guide from CMARIX. The cost moves with intents, integrations, and deployment channels. FactoryJet projects are fixed-price and milestone-paid with zero hidden fees.',
   },
   {
     category: 'pricing',
@@ -681,7 +681,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does an AI chatbot cost in USA?',
     answer:
-      'One-time custom chatbot builds range based on intents and systems. FactoryJet quotes every project with a fixed price after discovery. Custom bots save thousands in recurring software subscription costs over time.',
+      'In North America, chatbot development usually costs $50,000 to $200,000 or more, according to CMARIX, which puts a basic FAQ bot at $5,000 to $15,000. One-time custom chatbot builds move with the number of intents and systems. FactoryJet quotes every project with a fixed price after discovery. Custom bots save thousands in recurring software subscription costs over time.',
   },
 ];
 

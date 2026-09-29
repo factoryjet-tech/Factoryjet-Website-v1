@@ -220,7 +220,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'deployment',
     question: 'How much do AI agents cost a month?',
     answer:
-      'Cost mostly depends on three things: how many units and properties the agent covers, how many systems it connects to (your PMS, your tour-calendar or smart-lock platform, your call and text lines), and how much fair housing guardrail configuration your portfolio needs. A single small community connecting to one PMS costs far less to build than a multi-state portfolio needing custom connectors and per-property pricing logic. Weigh that against what missed after-hours calls and unqualified walk-in traffic already cost your leasing pipeline. Ask any vendor for a scoped quote based on your own unit count and systems, not a flat number that ignores your portfolio.',
+      'Hosting a custom-built AI agent typically runs $500 to $10,000 a month after launch, with yearly maintenance of $10,000 to $50,000 or more, according to development firm ProductCrafters. Cost depends on how many units and properties the agent covers, how many systems it connects to (your PMS, tour-calendar or smart-lock platform, call and text lines), and how much fair housing guardrail configuration your portfolio needs. A small community on one PMS costs far less than a multi-state portfolio needing custom connectors and per-property pricing logic. Ask any vendor for a scoped quote based on your own unit count and systems.',
   },
   {
     category: 'deployment',

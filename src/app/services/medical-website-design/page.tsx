@@ -506,7 +506,7 @@ const FAQ_ITEMS = [
     category: 'cost',
     question: 'How much does a medical website cost?',
     answer:
-      'It depends on four things: how many providers and locations need their own pages, whether booking and intake tools need connecting, how much writing we do for you, and how custom the design is. A one-provider, five-page site sits at the small end. A multi-location group with provider search sits at the large end. We quote every project in writing after a short call, and our website cost guide explains each driver in detail.',
+      'No published survey prices medical sites on their own, but general small business websites cost $1,000 to $48,000 on average, and small agencies typically charge $6,000 to $12,000, according to WebFX. Where you land depends on four things: how many providers and locations need their own pages, whether booking and intake tools need connecting, how much writing we do for you, and how custom the design is. A one-provider, five-page site sits at the small end. A multi-location group with provider search sits at the large end. We quote every project in writing after a short call, and our website cost guide explains each driver in detail.',
   },
   {
     category: 'cost',

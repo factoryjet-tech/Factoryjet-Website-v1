@@ -89,7 +89,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
   {
     category: 'basics',
     question: 'How much does it cost to sell on Walmart Marketplace?',
-    answer: 'Walmart charges no monthly subscription fee for sellers. You pay a category referral fee on each sale. You also pay WFS fees if you use Walmart logistics. Referral rates vary by product category. We audit your catalog margins before launching. We calculate your exact fee structure in advance.',
+    answer: 'Walmart charges no setup or monthly fee and takes a referral fee of 3% to 20% of each sale depending on category, with 15% common, according to Walmart Marketplace. You also pay WFS fees if you use Walmart logistics. We audit your catalog margins before launching. We calculate your exact fee structure in advance.',
   },
   {
     category: 'basics',

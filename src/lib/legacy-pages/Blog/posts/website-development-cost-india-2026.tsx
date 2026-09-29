@@ -25,7 +25,7 @@ export const post: BlogPost = {
     'City location affects price by 2–3x (Mumbai vs Tier-2), but the best agencies work remotely. A strong Indore agency outperforms a mediocre Mumbai agency at half the price.',
     'Hidden costs, domain renewals, SSL, speed optimisation, annual maintenance, GST, add ₹15,000–₹50,000/year to the original build cost for most small businesses.',
     '70% of Indian SMBs have no professional website (NASSCOM data). Every day without one is a lead flowing to a competitor who showed up on Google.',
-    'FactoryJet delivers production-grade websites in 7 days from ₹25,000, faster than the industry average of 6–10 weeks, deployed on Cloudflare for sub-1.5s load speeds across India.',
+    'FactoryJet delivers production-grade websites of 5 pages or fewer in 7 days, faster than the industry average of 6–10 weeks, deployed on Cloudflare for sub-1.5s load speeds across India.',
   ],
   faqs: [
     {
@@ -90,7 +90,7 @@ export const post: BlogPost = {
     },
     {
       q: 'Can I get a professional website for under ₹50,000 in India?',
-      a: 'Yes. A professional 5-page business website with custom design, mobile responsiveness, SEO setup, and contact forms can be built for ₹30,000–₹50,000 by a quality agency or experienced freelancer. FactoryJet builds professional websites starting at ₹25,000, with the exact figure agreed once we know the page count and features. Anything under ₹15,000 from an agency should be examined carefully, at that price point, expect template designs with minimal customisation.',
+      a: 'Yes. A professional 5-page business website with custom design, mobile responsiveness, SEO setup, and contact forms can be built for ₹30,000–₹50,000 by a quality agency or experienced freelancer. FactoryJet quotes a fixed price in writing after a short scoping call, once we know the page count and features. Anything under ₹15,000 from an agency should be examined carefully, at that price point, expect template designs with minimal customisation.',
     },
     {
       q: 'How much does a WordPress website cost in India?',
@@ -425,7 +425,7 @@ export const post: BlogPost = {
           </thead>
           <tbody>
             {[
-              ['Typical cost (business site)', '₹5,000 – ₹20,000', '₹50,000 – ₹1,50,000', '₹25,000 – ₹80,000'],
+              ['Typical cost (business site)', '₹5,000 – ₹20,000', '₹50,000 – ₹1,50,000', 'Fixed quote after scoping'],
               ['Timeline', '2–8 weeks', '4–12 weeks', '7 days'],
               ['Design quality', 'Template / low', 'Good', 'Premium'],
               ['Code quality', 'Variable', 'Good', 'Production-grade'],
@@ -578,8 +578,8 @@ export const post: BlogPost = {
         <h2 className="text-2xl font-bold mb-3">Ready to Build Your Website in 7 Days?</h2>
         <p className="text-gray-300 mb-4">
           Stop overthinking the budget. FactoryJet has built 500+ websites for Indian and US
-          businesses. We deliver professional, production-grade websites in 7 days, starting
-          from <strong className="text-orange-400">₹25,000</strong>.
+          businesses. We deliver professional, production-grade websites of 5 pages or fewer in 7
+          days, and quote a fixed price in writing after a short scoping call.
         </p>
         <ul className="text-gray-300 text-sm space-y-1 mb-6">
           <li>✓ Custom design (no generic templates)</li>

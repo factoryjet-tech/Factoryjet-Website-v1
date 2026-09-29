@@ -296,7 +296,7 @@ const FAQ_ITEMS = [
   {
     category: 'cost',
     question: 'How much does it cost to build a web application?',
-    answer: "FactoryJet's web application development is fixed-price and scoped to your build. The main cost drivers are how many user roles and core workflows you need, the number of third-party integrations, and whether the app is a focused MVP, a multi-role portal, or a full multi-tenant SaaS platform with subscriptions and complex reporting. We quote the full price up front after a free discovery call, and it comes in well below what US development agencies charge for the same tiers.",
+    answer: "A custom web application costs $15,000 to $300,000 or more, according to development studio Utsubo's 2026 guide. The main cost drivers are how many user roles and core workflows you need, the number of third-party integrations, and whether the app is a focused MVP, a multi-role portal, or a full multi-tenant SaaS platform with subscriptions and complex reporting. FactoryJet quotes a fixed price up front after a free discovery call.",
   },
   {
     category: 'cost',
@@ -388,7 +388,7 @@ const FAQ_ITEMS = [
     category: 'cost',
     question: 'How much does website development cost in USA?',
     answer:
-      'Website development cost in USA spans a wide range depending on whether you need a marketing site, a web application MVP, or a full SaaS platform: each step up adds significant scope and cost. FactoryJet quotes fixed prices after a scoping call, milestone-paid, and our phased model doubles as a quick website launch service: a working MVP ships before the full feature set, so you start learning from real users sooner.',
+      'A small business website costs $1,000 to $48,000 on average, according to WebFX, and a custom web application $15,000 to $300,000 or more, according to development studio Utsubo. Where you land depends on whether you need a marketing site, a web application MVP, or a full SaaS platform: each step up adds significant scope and cost. FactoryJet quotes fixed prices after a scoping call, milestone-paid, and our phased model doubles as a quick website launch service: a working MVP ships before the full feature set, so you start learning from real users sooner.',
   },
   {
     category: 'working',

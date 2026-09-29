@@ -521,7 +521,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much do AI integration services cost?',
     answer:
-      'FactoryJet AI integrations are fixed-price and scoped to your build. Key drivers include system count, API complexity, and custom fine-tuning needs. Most clients choose our Growth tier with multi-system connectors and unified monitoring. Enterprise integrations with compliance rules and legacy systems are scoped individually. All quotes are fixed upfront with zero hourly billing.',
+      'A first done-for-you AI install for an owner-led business typically costs $4,500 to $25,000, according to a September 2026 market range from consultant Justin McKelvey. Key cost drivers include system count, API complexity, and custom fine-tuning needs. Enterprise integrations with compliance rules and legacy systems are scoped individually. FactoryJet AI integrations are fixed-price and scoped to your build, with the quote fixed upfront and zero hourly billing.',
   },
   {
     category: 'pricing',

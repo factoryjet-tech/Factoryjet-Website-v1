@@ -791,7 +791,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'engagement',
     question: 'How much does healthcare SEO cost?',
     answer:
-      'It depends on scope, so we quote each engagement instead of publishing rates. The biggest cost drivers are the number of locations or products, how competitive your market is, how much content needs expert and compliance review, the current state of your site, and whether you need local SEO, B2B content or both. Hospitals and multi-location groups cost more mainly because of scale and extra review layers.',
+      'Healthcare SEO retainers typically run $1,500 to $5,000 a month, and local healthcare SEO $300 to $2,000 a month, according to WebFX. The biggest cost drivers are the number of locations or products, how competitive your market is, how much content needs expert and compliance review, the current state of your site, and whether you need local SEO, B2B content or both. Hospitals and multi-location groups cost more mainly because of scale and extra review layers. We quote each engagement after scoping it.',
   },
   {
     category: 'engagement',

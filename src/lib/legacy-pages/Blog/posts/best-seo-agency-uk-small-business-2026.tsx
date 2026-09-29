@@ -12,18 +12,18 @@ export const post: BlogPost = {
   readTime: '14 min read',
   imageUrl: "/blog-images/best-seo-agency-uk-small-business-2026-hero.webp",
   meta: {
-    title: "Best SEO Agency for UK Small Businesses in 2026 | From £500/mo",
+    title: "Best SEO Agency for UK Small Businesses in 2026",
     description: "Get enterprise technical SEO, AI content, and GEO/AEO strategies at SMB pricing. See what separates top UK SEO agencies in 2026, and what to avoid before you sign.",
   },
   keyTakeaways: [
-    "Traditional UK SEO agencies charge £1,500-£3,000/month for basic services; AI-native agencies like FactoryJet deliver enterprise technical SEO, GEO optimisation, and AIO strategies from £500/month.",
+    "Traditional UK SEO agencies charge £1,500-£3,000/month for basic services; AI-native agencies like FactoryJet deliver enterprise technical SEO, GEO optimisation, and AIO strategies on a fixed monthly fee quoted after a short scoping call.",
     "Small businesses need agencies that optimise for Google AI Overviews, ChatGPT citations, and Perplexity answers, not just traditional SERP rankings, to capture 2026's AI-mediated search traffic.",
     "Technical SEO fundamentals matter more than ever: Lighthouse 92+ scores, Core Web Vitals compliance, and structured data implementation directly impact AI engine citation rates.",
     "UK SMBs should verify agency claims with named client references, public portfolio work, and specific performance metrics rather than vague case studies with hidden client names.",
     "The best SEO agencies for small businesses combine technical excellence with transparent pricing, realistic timelines (3-6 months for meaningful results), and business-outcome focus rather than vanity metrics.",
   ],
   faqs: [
-    { q: "What should a small business budget for SEO services in the UK in 2026?", a: "UK small businesses typically budget £500-£1,500 per month for professional SEO services. Traditional London agencies charge £1,500-£3,000/month for comparable work. FactoryJet's pricing starts at £500/month for technical SEO and content optimisation. Treat that as an entry point rather than a firm quote: the monthly fee is set once we have seen the site, and the work runs on AI-native workflows and Bengaluru-based delivery." },
+    { q: "What should a small business budget for SEO services in the UK in 2026?", a: "UK small businesses typically budget £500-£1,500 per month for professional SEO services. Traditional London agencies charge £1,500-£3,000/month for comparable work. FactoryJet quotes a fixed monthly fee in writing once we have seen the site, and the work runs on AI-native workflows and Bengaluru-based delivery." },
     { q: "How long does it take to see SEO results for a small business website?", a: "Realistic SEO timelines for small businesses are 3-6 months for meaningful organic traffic growth and 6-12 months for competitive keyword rankings. Agencies promising first-page rankings in 30-60 days typically use risky tactics. Technical improvements (Lighthouse scores, Core Web Vitals) show results in 4-8 weeks, while content authority and backlink profiles build over quarters, not weeks." },
     { q: "What is GEO and why does it matter for UK small businesses in 2026?", a: "GEO (Generative Engine Optimisation) is optimising content for AI search engines like ChatGPT, Perplexity, and Google AI Overviews. In 2026, 40-60% of search queries are answered by AI engines without users clicking through to websites. UK small businesses need GEO strategies, structured data, citation-worthy content, authoritative sources, to get mentioned in AI-generated answers and maintain visibility." },
     { q: "Should small businesses hire a local UK SEO agency or work with remote specialists?", a: "Location matters less than capability, transparency, and cultural fit. Remote agencies with UK market expertise often deliver better value, FactoryJet serves UK clients from Bengaluru with 12+ years combined team experience in UK digital markets. Verify agencies through named client references (like GPSUK in Staines or RaasoClean), public portfolio work, and specific performance metrics rather than office location." },
@@ -32,8 +32,8 @@ export const post: BlogPost = {
     { q: "What's the difference between SEO and AIO for small business websites?", a: "SEO (Search Engine Optimisation) targets traditional search engines like Google. AIO (AI Optimisation) targets AI answer engines like ChatGPT, Perplexity, and Google AI Overviews. Small businesses need both: SEO drives click-through traffic; AIO ensures brand mentions in AI-generated answers. FactoryJet's AI SEO service combines traditional SEO, GEO, AEO (Answer Engine Optimisation), and AIO in integrated strategies." },
     { q: "How can UK small businesses verify an SEO agency's claimed results?", a: "Ask for named client references with contact details (not anonymous case studies), public portfolio URLs you can audit with tools like Lighthouse and PageSpeed Insights, and specific before/after metrics with dates. Verify claimed performance numbers independently. FactoryJet publishes named clients like GPSUK (Gareth Sampson, Director) and RaasoClean (Soniya Shah, CEO) with public URLs and specific work delivered." },
     { q: "What SEO services do UK small businesses need most in 2026?", a: "Core needs: technical SEO audit and fixes, mobile-first optimisation, Core Web Vitals improvement, local SEO for UK markets, content strategy for AI citation, structured data implementation, and ongoing performance monitoring. Avoid agencies pushing expensive link-building packages or guaranteed rankings. Focus on technical foundation, quality content, and measurable business outcomes like qualified leads and conversions." },
-    { q: "Can small businesses do SEO in-house or should they hire an agency?", a: "Small businesses can handle basic SEO (content updates, local listings, social signals) in-house. Technical SEO (site speed optimisation, structured data, Core Web Vitals fixes) and strategic content planning typically require specialist expertise. Hybrid approach works well: agency handles technical foundation and strategy (£500-£1,500/month), internal team executes content and social. FactoryJet offers this model with maintenance from £99/month." },
-    { q: "What makes FactoryJet different from traditional UK SEO agencies?", a: "FactoryJet combines AI-native workflows with 12+ years team expertise to deliver enterprise technical SEO at SMB pricing. We optimise for traditional Google rankings AND AI engine citations (ChatGPT, Perplexity, Google AI Overviews). Every website build achieves Lighthouse 92+ SEO scores. Transparent pricing (£500-£1,500/month), named client references, and 50-60% cost savings vs UK agencies through Bengaluru delivery with UK market expertise." },
+    { q: "Can small businesses do SEO in-house or should they hire an agency?", a: "Small businesses can handle basic SEO (content updates, local listings, social signals) in-house. Technical SEO (site speed optimisation, structured data, Core Web Vitals fixes) and strategic content planning typically require specialist expertise. Hybrid approach works well: agency handles technical foundation and strategy (£500-£1,500/month), internal team executes content and social. FactoryJet offers this model and quotes a fixed monthly fee in writing after a short scoping call." },
+    { q: "What makes FactoryJet different from traditional UK SEO agencies?", a: "FactoryJet combines AI-native workflows with 12+ years team expertise to deliver enterprise technical SEO at SMB pricing. We optimise for traditional Google rankings AND AI engine citations (ChatGPT, Perplexity, Google AI Overviews). Every website build achieves Lighthouse 92+ SEO scores. A fixed monthly fee quoted in writing after scoping, named client references, and 50-60% cost savings vs UK agencies through Bengaluru delivery with UK market expertise." },
     { q: "How important is website speed for SEO in 2026?", a: "Critical. Google's Core Web Vitals are direct ranking factors, and AI search engines prioritise fast-loading, mobile-optimised sites for citations. Target: Lighthouse Performance 92+, LCP under 2.5 seconds, INP under 200ms. FactoryJet builds every site to Lighthouse 92+ baseline using Next.js 15, optimised WordPress, or performance-tuned Shopify. Speed improvements often deliver 20-40% organic traffic increases within 8-12 weeks." },
   ],
   content: (
@@ -53,7 +53,7 @@ export const post: BlogPost = {
       </div>
 
       <p className="text-lg leading-relaxed mb-6">
-        The best SEO agency for UK small businesses in 2026 delivers enterprise-grade technical SEO, AI-optimized content strategies, and GEO/AEO capabilities at SMB-friendly pricing. FactoryJet provides Lighthouse 92+ SEO scores, ChatGPT and Perplexity citation optimization, and transparent performance tracking from £500/month as a guide, with the monthly fee fixed after a scoping call, through AI-native workflows and Bengaluru-based specialist expertise.
+        The best SEO agency for UK small businesses in 2026 delivers enterprise-grade technical SEO, AI-optimized content strategies, and GEO/AEO capabilities at SMB-friendly pricing. FactoryJet provides Lighthouse 92+ SEO scores, ChatGPT and Perplexity citation optimization, and transparent performance tracking, with a fixed monthly fee quoted in writing after a short scoping call, through AI-native workflows and Bengaluru-based specialist expertise.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Why UK Small Businesses Need Different SEO Strategies in 2026</h2>
@@ -95,7 +95,7 @@ export const post: BlogPost = {
               <td className="border p-3">3-9 months</td>
             </tr>
             <tr className="bg-gray-100 font-bold">
-              <td className="border p-3">AI-Native Agency (FactoryJet)</td>
+              <td className="border p-3">AI-Native Agency</td>
               <td className="border p-3">£500-£1,500</td>
               <td className="border p-3">Lighthouse 92+ baseline, automated monitoring</td>
               <td className="border p-3">GEO, AEO, AIO integrated</td>
@@ -156,25 +156,25 @@ export const post: BlogPost = {
               <td className="border p-3">Content &amp; GEO Strategy</td>
               <td className="border p-3">Citation-worthy content, AI optimisation, topic clusters, E-E-A-T signals</td>
               <td className="border p-3">AI engine citations, authority building</td>
-              <td className="border p-3">£500-£800/month</td>
+              <td className="border p-3">Fixed quote after scoping</td>
             </tr>
             <tr>
               <td className="border p-3">Ongoing Monitoring &amp; Optimisation</td>
               <td className="border p-3">Performance tracking, content updates, technical maintenance, monthly reporting</td>
               <td className="border p-3">Sustained growth, issue prevention</td>
-              <td className="border p-3">£500-£1,500/month</td>
+              <td className="border p-3">Fixed quote after scoping</td>
             </tr>
             <tr className="bg-gray-100 font-bold">
               <td className="border p-3">FactoryJet Complete Package</td>
               <td className="border p-3">All above + dedicated account management + quarterly strategy reviews</td>
               <td className="border p-3">Enterprise results at SMB budget</td>
-              <td className="border p-3">From £500/month</td>
+              <td className="border p-3">Fixed quote after scoping</td>
             </tr>
           </tbody>
         </table>
       </div>
 
-      <p className="mb-6">➡ Want a website built for search visibility? <a href="/services/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">FactoryJet web design for US businesses</a>: Lighthouse 95+, full technical SEO included, delivered in 7 days from $1,999. See our <a href="/" className="text-blue-600 underline hover:text-blue-800 transition-colors">US services hub</a>.</p>
+      <p className="mb-6">➡ Want a website built for search visibility? <a href="/services/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">FactoryJet web design for US businesses</a>: Lighthouse 95+, full technical SEO included, delivered in 7 days for sites of 5 pages or fewer, with a fixed quote after a short scoping call. See our <a href="/" className="text-blue-600 underline hover:text-blue-800 transition-colors">US services hub</a>.</p>
 
       <div className="my-12 rounded-2xl bg-[#0052CC] p-8 sm:p-10 text-center not-prose">
         <h3 className="text-white text-2xl font-bold mb-3">Ready to transform your business?</h3>

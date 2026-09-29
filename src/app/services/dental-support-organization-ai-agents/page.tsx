@@ -214,7 +214,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'deployment',
     question: 'What does it cost to roll this out DSO-wide?',
     answer:
-      'Cost mostly depends on three things: how many locations and call volume the portfolio has, how many different practice management systems it runs across those locations, and how much of the roll-up onboarding needs to happen up front versus phased in as acquisitions close. A DSO standardized on one PMS across most locations costs less to build than a portfolio running five different legacy systems from past acquisitions. Ask for a scoped quote based on your actual location count and systems, not a flat number that ignores your portfolio.',
+      'Building a custom AI agent costs roughly $5,000 to more than $180,000, according to a 2026 breakdown by development firm ProductCrafters, a general figure rather than one for dental groups. Where a DSO lands depends on three things: location count and call volume, how many practice management systems run across those locations, and how much roll-up onboarding happens up front versus phased in as acquisitions close. A DSO on one PMS costs less to build than a portfolio running five legacy systems. Ask for a scoped quote based on your actual location count and systems.',
   },
   {
     category: 'deployment',

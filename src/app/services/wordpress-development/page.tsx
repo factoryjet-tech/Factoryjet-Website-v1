@@ -422,7 +422,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does a custom WordPress website cost?',
     answer:
-      'FactoryJet\'s custom WordPress websites are fixed-price and scoped to your build. The main cost drivers are page count (a focused site with a custom theme, no page builders, mobile-first build, and full SEO setup vs. a 15-30 page site with custom post types) and whether you need a WooCommerce store. Fixed-price and milestone-paid, with the full number confirmed on a free consultation before work starts: our engineering team has built WordPress sites for US businesses for 12+ years with the same engineering standards, leaner operations.',
+      'Agencies charge $3,000 to $100,000 for a custom WordPress site and freelancers $500 to $5,000, according to WebFX. The main cost drivers are page count (a focused site with a custom theme, no page builders, mobile-first build, and full SEO setup vs. a 15-30 page site with custom post types) and whether you need a WooCommerce store. FactoryJet quotes a fixed price, milestone-paid, with the full number confirmed on a free consultation before work starts: our engineering team has built WordPress sites for US businesses for 12+ years with the same engineering standards, leaner operations.',
   },
   {
     category: 'pricing',

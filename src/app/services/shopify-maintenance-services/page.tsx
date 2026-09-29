@@ -316,7 +316,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'cost',
     question: 'How much does it cost to hire someone to maintain a website?',
     answer:
-      'Freelancers usually bill by the hour or by task, and agencies sell monthly retainers that reserve hours and set response times. The price rises with self-hosting, custom code and how fast you need answers. Ask every quote to list hours, response times and exclusions so you compare like with like.',
+      'Maintaining a small business website costs about $35 to $100 a month, and $125 to $500 a month for a larger SMB site, according to WebFX. Freelancers usually bill by the hour or by task, and agencies sell monthly retainers that reserve hours and set response times. The price rises with self-hosting, custom code and how fast you need answers. Ask every quote to list hours, response times and exclusions so you compare like with like.',
   },
   {
     category: 'cost',
@@ -334,7 +334,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'cost',
     question: 'How much does a Shopify store cost to run each month?',
     answer:
-      'Add up five lines: your Shopify plan fee, payment processing, third-party transaction fees if you use a provider other than Shopify Payments, app subscriptions, and developer time for upkeep. Shopify publishes plan fees and rates on its pricing page. App subscriptions are the line that creeps up, so we review every app during onboarding.',
+      'Shopify lists its Basic, Grow and Advanced plans at $29, $79 and $299 a month billed yearly, and Shopify Plus at $2,300 a month on a three-year term, according to Shopify’s 2026 cost guide. Then add payment processing, third-party transaction fees if you use a provider other than Shopify Payments, app subscriptions, and developer time for upkeep. App subscriptions are the line that creeps up, so we review every app during onboarding.',
   },
   {
     category: 'choosing',

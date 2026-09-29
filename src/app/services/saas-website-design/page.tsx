@@ -427,7 +427,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'build',
     question: 'How much does a SaaS website cost?',
     answer:
-      'We will not put a figure on a page, because a number written without seeing your situation is aimed at an average rather than at you. What moves scope: how many product jobs need their own page, whether you sell self-serve or through a sales team, and whether docs have to be migrated.',
+      'No published survey prices SaaS sites on their own, but general small business websites cost $1,000 to $48,000 on average, and small agencies typically charge $6,000 to $12,000, according to WebFX. What moves scope: how many product jobs need their own page, whether you sell self-serve or through a sales team, and whether docs have to be migrated. We quote after seeing your situation, because a number written without it is aimed at an average rather than at you.',
   },
   {
     category: 'build',

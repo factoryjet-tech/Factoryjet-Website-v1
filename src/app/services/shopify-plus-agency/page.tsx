@@ -204,7 +204,7 @@ const FAQ_ITEMS = [
     category: 'engagement',
     question: 'How much does a Shopify Plus build cost?',
     answer:
-      'It depends on how much logic sits below the theme: how many Functions, whether you need B2B companies and catalogs, how many expansion stores, and which ERP or PIM the store must sync with. The Plus plan fee itself is paid to Shopify, not to us. We scope everything on a free call and send one fixed price, paid in milestones. Our Shopify Plus cost guide explains the typical ranges.',
+      'A Shopify Plus build usually costs $40,000 to $120,000 or more, according to Shopify agency CartCoders. Where you land depends on how much logic sits below the theme: how many Functions, whether you need B2B companies and catalogs, how many expansion stores, and which ERP or PIM the store must sync with. The Plus plan fee itself is paid to Shopify, not to us. We scope everything on a free call and send one fixed price, paid in milestones. Our Shopify Plus cost guide explains the typical ranges.',
   },
   {
     category: 'working',

@@ -417,7 +417,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does a website redesign cost for a small business?',
     answer:
-      'FactoryJet provides fixed-price website redesigns scoped to your specific build. Pricing depends on page volume, headless CMS or WordPress integration, e-commerce checkout requirements, and custom animations. Every quote is delivered upfront following a free site audit, milestone-paid with no hourly billing surprises.',
+      'A website redesign costs $3,000 to $75,000, with agencies charging $5,000 to $75,000 and freelancers $3,000 to $10,000, according to WebFX. The price depends on page volume, headless CMS or WordPress integration, e-commerce checkout requirements, and custom animations. FactoryJet quotes a fixed price up front after a free site audit, milestone-paid with no hourly billing surprises.',
   },
   {
     category: 'pricing',
@@ -435,7 +435,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does website redesign cost in USA?',
     answer:
-      'Website redesign cost in the United States ranges from fixed-scope SMB marketing packages to large enterprise redesigns requiring custom API integrations. FactoryJet delivers fixed-price quotes following a technical audit. Milestone payments ensure accountability, and all contracts include comprehensive 301 redirect mapping.',
+      'US website redesigns cost $3,000 to $75,000, with agencies charging $5,000 to $75,000, according to WebFX. Where you land depends on scope, from fixed-scope SMB marketing sites to large enterprise redesigns requiring custom API integrations. FactoryJet delivers fixed-price quotes following a technical audit. Milestone payments ensure accountability, and all contracts include full 301 redirect mapping.',
   },
 
   /* ── Technical & SEO ── */

@@ -444,7 +444,7 @@ const FAQ_ITEMS = [
   // -- Cost & Pricing ----------------------------------------------------─
   {
     question: 'How much does WooCommerce development cost compared to Shopify development?',
-    answer: `Upfront development costs are similar for custom builds on either platform. FactoryJet quotes all projects at a fixed price up front. The ongoing cost difference is where WooCommerce shines. WooCommerce requires only web hosting fees, with zero platform cuts. Shopify charges monthly subscription fees and platform transaction cuts.`,
+    answer: `Agencies charge $3,000 to $100,000 for a WordPress or WooCommerce site, according to WebFX, and a fully custom Shopify store build typically costs $8,000 to $35,000, according to CartCoders. So upfront costs overlap for custom builds on either platform. The ongoing cost difference is where WooCommerce shines. WooCommerce requires only web hosting fees, with zero platform cuts. Shopify charges monthly subscription fees and platform transaction cuts. FactoryJet quotes all projects at a fixed price up front.`,
     category: 'cost',
   },
   {

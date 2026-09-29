@@ -458,7 +458,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How much does a law firm website design cost?',
     answer:
-      'FactoryJet delivers law firm website design on a transparent, fixed-price basis. Every project is scoped to your exact specifications. Key cost drivers include total page count, practice area depth, attorney profiles, and multi-location needs. Custom intake logic and legal blog setups also factor into scope. We provide a guaranteed upfront quote following a complimentary discovery call. Our fixed fees come in well below traditional legal agency hourly rates. Our engineering team brings over 12 years of specialized legal web design experience to every build.',
+      'No published survey prices law firm sites on their own, but general small business websites cost $1,000 to $48,000 on average, and small agencies typically charge $6,000 to $12,000, according to WebFX. Key cost drivers include total page count, practice area depth, attorney profiles, and multi-location needs. Custom intake logic and legal blog setups also factor into scope. FactoryJet quotes a fixed price in writing after a free discovery call. FactoryJet has built websites since 2014.',
   },
   {
     category: 'pricing',

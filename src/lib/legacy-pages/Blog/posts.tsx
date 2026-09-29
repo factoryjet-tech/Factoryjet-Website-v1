@@ -4535,7 +4535,7 @@ export const POSTS: BlogPost[] = [
         <li>custom development stacks</li>
       </ul>
       <p className="mb-4 font-semibold">
-        FactoryJet web design pricing in Mumbai typically starts from ₹35,000 for business websites and can go beyond ₹2,00,000+ for advanced lead-generation websites, custom portals, and enterprise builds.
+        FactoryJet quotes a fixed price in writing after a short scoping call, whether the project is a business website, an advanced lead-generation website, a custom portal, or an enterprise build.
       </p>
       <p className="mb-6">
         <strong>Best suited for:</strong> B2B companies, healthcare brands, SaaS businesses, lead generation websites, and service-based companies.
@@ -4725,7 +4725,7 @@ export const POSTS: BlogPost[] = [
             </tr>
           </thead>
           <tbody>
-            <tr><td className="border p-3">FactoryJet</td><td className="border p-3">₹35,000+</td><td className="border p-3">3–5 weeks</td><td className="border p-3">B2B / Lead Gen</td></tr>
+            <tr><td className="border p-3">FactoryJet</td><td className="border p-3">Fixed quote after scoping</td><td className="border p-3">3–5 weeks</td><td className="border p-3">B2B / Lead Gen</td></tr>
             <tr><td className="border p-3">Creaa Designs</td><td className="border p-3">₹40,000+</td><td className="border p-3">4–6 weeks</td><td className="border p-3">Brand Identity</td></tr>
             <tr><td className="border p-3">Xee Design</td><td className="border p-3">₹30,000+</td><td className="border p-3">3–4 weeks</td><td className="border p-3">UI/UX Focus</td></tr>
             <tr><td className="border p-3">SySpree</td><td className="border p-3">₹50,000+</td><td className="border p-3">4–6 weeks</td><td className="border p-3">Mid-Size Growth</td></tr>
