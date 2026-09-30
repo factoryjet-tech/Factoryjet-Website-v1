@@ -9,7 +9,10 @@ What it does (built 2026-09-30):
   3. Sends every URL that is NOT "Submitted and indexed", plus every URL whose
      sitemap <lastmod> is within the last 3 days (new or updated pages), to IndexNow
      (Bing, Yandex, Seznam, Naver share it) and to Bing's own SubmitUrlBatch.
-  4. Writes data/index-watch/<date>.json and prints a short list of the
+  4. Resubmits the sitemap index and every child sitemap to Bing Webmaster
+     (SubmitFeed) and Google (sitemaps API), and records Bing's own sitemap
+     report (status, URL count, last crawled) so a failing sitemap shows up.
+  5. Writes data/index-watch/<date>.json and prints a short list of the
      highest-priority unindexed URLs, which still need "Request indexing"
      clicked by hand in Search Console (Google has no API for that on
      normal pages).
@@ -28,6 +31,7 @@ import json
 import os
 import re
 import sys
+import urllib.parse
 import urllib.request
 
 from google.auth.transport.requests import AuthorizedSession
@@ -48,6 +52,13 @@ def fetch(url, timeout=30):
     req = urllib.request.Request(url, headers={'Cache-Control': 'no-cache', 'User-Agent': 'factoryjet-index-watch'})
     with urllib.request.urlopen(req, timeout=timeout) as r:
         return r.read().decode('utf-8', 'ignore')
+
+
+def sitemap_files():
+    """The sitemap index plus every child sitemap it lists."""
+    children = [u.strip() for u in re.findall(r'<loc>([^<]+)</loc>', fetch(f'https://{HOST}/sitemap.xml'))
+                if u.strip().endswith('.xml')]
+    return [f'https://{HOST}/sitemap.xml'] + children
 
 
 def sitemap_urls():
@@ -98,20 +109,72 @@ def indexnow(urls):
         return r.status
 
 
-def bing_submit(urls):
+def bing_env():
     env = {}
     for line in open(os.path.join(HERE, '.env')):
         if '=' in line and not line.startswith('#'):
             k, v = line.split('=', 1)
             env[k.strip()] = v.strip().strip('"')
-    key = env['BING_WEBMASTER_API_KEY']
-    site_url = env.get('BING_SITE_URL', f'https://{HOST}/')
-    body = json.dumps({'siteUrl': site_url, 'urlList': urls}).encode()
-    req = urllib.request.Request(
-        f'https://ssl.bing.com/webmaster/api.svc/json/SubmitUrlBatch?apikey={key}', data=body,
-        headers={'Content-Type': 'application/json; charset=utf-8'})
+    return env['BING_WEBMASTER_API_KEY'], env.get('BING_SITE_URL', f'https://{HOST}/')
+
+
+def bing_call(endpoint, body=None, params=None):
+    key, site_url = bing_env()
+    q = urllib.parse.urlencode({'apikey': key, **(params or {})})
+    data = json.dumps(body).encode() if body is not None else None
+    req = urllib.request.Request(f'https://ssl.bing.com/webmaster/api.svc/json/{endpoint}?{q}', data=data,
+                                 headers={'Content-Type': 'application/json; charset=utf-8'})
     with urllib.request.urlopen(req, timeout=60) as r:
-        return r.status
+        raw = r.read().decode()
+    return json.loads(raw).get('d') if raw.strip() else None
+
+
+def bing_submit(urls):
+    _, site_url = bing_env()
+    bing_call('SubmitUrlBatch', {'siteUrl': site_url, 'urlList': urls})
+    return 200
+
+
+def resubmit_sitemaps(files):
+    """Resubmit every sitemap to Bing Webmaster (SubmitFeed) and Google (sitemaps PUT)."""
+    out = {'bing': {}, 'google': {}}
+    _, site_url = bing_env()
+    for f in files:
+        try:
+            bing_call('SubmitFeed', {'siteUrl': site_url, 'feedUrl': f})
+            out['bing'][f] = 'ok'
+        except Exception as e:
+            out['bing'][f] = f'failed: {str(e)[:60]}'
+    creds = service_account.Credentials.from_service_account_file(
+        KEY, scopes=['https://www.googleapis.com/auth/webmasters'])
+    g = AuthorizedSession(creds)
+    site = urllib.parse.quote(SITE, safe='')
+    for f in files:
+        try:
+            r = g.put(f'https://www.googleapis.com/webmasters/v3/sites/{site}/sitemaps/'
+                      f'{urllib.parse.quote(f, safe="")}', timeout=60)
+            out['google'][f] = 'ok' if r.status_code in (200, 204) else f'HTTP {r.status_code}'
+        except Exception as e:
+            out['google'][f] = f'failed: {str(e)[:60]}'
+    return out
+
+
+def bing_sitemap_report():
+    """What Bing says about each registered sitemap: last crawl, URL count, errors."""
+    _, site_url = bing_env()
+    try:
+        feeds = bing_call('GetFeeds', params={'siteUrl': site_url}) or []
+    except Exception as e:
+        return [{'error': str(e)[:80]}]
+    rows = []
+    for f in feeds:
+        crawled = str(f.get('LastCrawled') or '')
+        m = re.search(r'/Date\((\d+)', crawled)
+        if m:
+            crawled = datetime.datetime.utcfromtimestamp(int(m.group(1)) / 1000).date().isoformat()
+        rows.append({'url': f.get('Url'), 'status': f.get('Status'), 'urls': f.get('UrlCount'),
+                     'lastCrawled': crawled})
+    return rows
 
 
 def rank(url):
@@ -149,9 +212,13 @@ def main():
             except Exception as e:
                 sent[name] = f'failed: {str(e)[:80]}'
 
+    sitemaps = {} if dry else resubmit_sitemaps(sitemap_files())
+    feeds = bing_sitemap_report()
+
     os.makedirs(OUT_DIR, exist_ok=True)
     manual = sorted(todo, key=rank)[:15]
     json.dump({'date': today, 'total': len(urls), 'summary': summary, 'submitted': sent,
+               'sitemaps_resubmitted': sitemaps, 'bing_sitemaps': feeds,
                'request_by_hand_in_gsc': manual, 'results': res},
               open(os.path.join(OUT_DIR, f'{today}.json'), 'w'), indent=1)
 
@@ -159,6 +226,12 @@ def main():
     for k, v in sorted(summary.items(), key=lambda kv: -kv[1]):
         print(f'  {v:4}  {k}')
     print(f'  submitted {len(push)} URLs ({len(todo)} unindexed in Google, {len(recent)} new or updated in the last 3 days): {sent or "dry run"}')
+    for engine, res_ in (sitemaps or {}).items():
+        ok = sum(1 for v in res_.values() if v == 'ok')
+        print(f'  sitemaps resubmitted to {engine}: {ok}/{len(res_)}')
+    print('  Bing sitemap report:')
+    for f in feeds:
+        print(f"    {f.get('status')}  {f.get('urls')} URLs  last crawled {f.get('lastCrawled')}  {f.get('url') or f.get('error')}")
     print('  request by hand in GSC (top 15):')
     for u in manual:
         print('   ', u)
