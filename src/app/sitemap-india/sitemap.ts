@@ -121,12 +121,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: CHANGEFREQ.service as ChangeFreq,
       priority: PRIORITY.service,
     },
-    {
-      url: `${SITE_URL}/services/ecommerce-development`,
-      lastModified: getFileLastMod('src/app/services/ecommerce-development/page.tsx'),
-      changeFrequency: CHANGEFREQ.service as ChangeFreq,
-      priority: PRIORITY.service,
-    },
+    // /services/ecommerce-development is listed in sitemap-us only (deduped 2026-09-30).
     {
       url: `${SITE_URL}/shopify-development`,
       lastModified: getFileLastMod('src/app/shopify-development/page.tsx'),

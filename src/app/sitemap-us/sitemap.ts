@@ -20,8 +20,9 @@ type ChangeFreq = MetadataRoute.Sitemap[number]['changeFrequency']
 // US route paths — hardcoded for now. The programmatic SEO pipeline will
 // replace this with a data-layer enumeration once src/data/us/ exists,
 // mirroring sitemap-uk.
+// A URL belongs to exactly one sitemap. The homepage, /about, /portfolio and
+// /pricing live in sitemap-pages; /blog lives in sitemap-blog (deduped 2026-09-30).
 const US_ROUTES: { path: string; source: string }[] = [
-  { path: '/',                                              source: 'src/app/page.tsx' },
   { path: '/b2b-ecommerce',                                source: 'src/app/b2b-ecommerce/page.tsx' },
   { path: '/ecommerce-for-manufacturers',                  source: 'src/app/ecommerce-for-manufacturers/page.tsx' },
   { path: '/ai-citation-study',                            source: 'src/app/ai-citation-study/page.tsx' },
@@ -39,12 +40,8 @@ const US_ROUTES: { path: string; source: string }[] = [
   { path: '/commerceflo',                                  source: 'src/app/commerceflo/page.tsx' },
   { path: '/agentic-commerce',                             source: 'src/app/agentic-commerce/page.tsx' },
   { path: '/best-ecommerce-platforms',                     source: 'src/app/best-ecommerce-platforms/page.tsx' },
-  { path: '/about',                                        source: 'src/app/about/page.tsx' },
   { path: '/faq',                                          source: 'src/app/faq/page.tsx' },
-  { path: '/portfolio',                                    source: 'src/app/portfolio/page.tsx' },
-  { path: '/blog',                                          source: 'src/app/blog/page.tsx' },
   { path: '/case-studies',                                 source: 'src/app/case-studies/page.tsx' },
-  { path: '/pricing',                                      source: 'src/app/pricing/page.tsx' },
   { path: '/services',                                     source: 'src/app/services/page.tsx' },
   { path: '/services/web-design',                          source: 'src/app/services/web-design/page.tsx' },
   { path: '/services/shopify-development',                 source: 'src/app/services/shopify-development/page.tsx' },
