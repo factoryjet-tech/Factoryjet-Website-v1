@@ -50,6 +50,9 @@
 .aiAgentPage.auPage.auReceptionistVisual #engagement .platlist { border-top: 0; display: flex; flex-direction: column; }
 .aiAgentPage.auPage.auReceptionistVisual #engagement .plat { grid-template-columns: 40px minmax(0,1fr) minmax(0,1.65fr); padding: 24px 0; }
 .aiAgentPage.auPage.auReceptionistVisual #providers .plat h3 { font-size: 20px; }
+.aiAgentPage.auPage.auReceptionistVisual :is(#engagement, #providers) .plat.plat-own { padding-inline: 20px; }
+.aiAgentPage.auPage.auReceptionistVisual .plat:hover { box-shadow: none; }
+.aiAgentPage.auPage.auReceptionistVisual #engagement .plat:hover { background: transparent; }
 .aiAgentPage.auPage.auReceptionistVisual .au-panel-wide { max-width: none; }
 .aiAgentPage.auPage.auReceptionistVisual .au-panel-wide .au-numlist { display: grid; grid-template-columns: 1fr 1fr; gap: 0 32px; }
 .aiAgentPage.auPage.auReceptionistVisual .agentdir .agentdir-grid { grid-template-columns: 1fr 1fr; }

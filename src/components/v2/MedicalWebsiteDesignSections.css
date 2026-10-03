@@ -245,6 +245,11 @@
 .medical-plans .group .fj-display { color: var(--medical-ink) !important; }
 .medical-plans .group p.fj-display { font-size: 28px !important; line-height: 1.2 !important; }
 .medical-plans .group button { min-height: 48px; }
+.medicalWebsiteDesign .medical-plans .group button.backdrop-blur-sm:hover {
+  background: #B23E13;
+  border-color: #B23E13;
+  color: #fff;
+}
 .medicalWebsiteDesign .medical-faq > section { background: #fff !important; padding-block: 64px; }
 .medical-faq details[open] > div { border-left: 0; padding-left: 0; }
 .medical-faq summary { min-height: 60px; }

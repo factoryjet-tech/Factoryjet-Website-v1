@@ -107,10 +107,12 @@ export function thankYouUrl({ lid, region, source, counted }: LeadConversion & {
 /**
  * What an inline form does once submitLead() returns. Only a saved lead with an
  * enrich token opens the modal (and is counted on the form page once the modal
- * has loaded). Everything else goes straight to /thank-you WITHOUT counted=1,
+ * has loaded). A failed capture stays on the form. A saved lead without a token
+ * goes straight to /thank-you WITHOUT counted=1,
  * so the destination page counts it the way it always has: firing the event and
  * then navigating away at once can unload the page before GTM's tags send.
  */
-export function afterSubmitPlan(r: { ok: boolean; enrichToken?: string | null }): 'modal' | 'thank-you' {
-  return r.ok && r.enrichToken ? 'modal' : 'thank-you';
+export function afterSubmitPlan(r: { ok: boolean; enrichToken?: string | null }): 'modal' | 'thank-you' | 'error' {
+  if (!r.ok) return 'error';
+  return r.enrichToken ? 'modal' : 'thank-you';
 }

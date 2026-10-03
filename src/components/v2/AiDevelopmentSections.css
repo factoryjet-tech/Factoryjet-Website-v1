@@ -115,6 +115,7 @@
   .aiDevPage .plat-go { grid-column: 4; grid-row: 1; }
 }
 @media (max-width: 820px) {
+  .aiDevPage .finalcta .ctas { margin-top: 28px; }
   .aiDevPage .ai-dev-midcta > section { padding-block: 44px; }
   .aiDevPage .ai-dev-midcta > section > div { width: min(100% - 40px,620px); }
   .aiDevPage .ai-dev-midcta > section > div > div { padding: 28px 22px; }

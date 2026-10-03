@@ -85,6 +85,8 @@
 .aiAgentPage.auPage.auSystemVisual #what-can-go-wrong .plat { grid-template-columns: 1fr; gap: 14px; align-content: start; padding: 28px 0; border-bottom: 1px solid var(--line); }
 .aiAgentPage.auPage.auSystemVisual #what-can-go-wrong .plat .capid { color: var(--accent-text); }
 .aiAgentPage.auPage.auSystemVisual #what-can-go-wrong .plat .plat-build { font-size: 14px; }
+.aiAgentPage.auPage.auSystemVisual .plat:hover { box-shadow: none; }
+.aiAgentPage.auPage.auSystemVisual #what-can-go-wrong .plat:hover { background: transparent; }
 .aiAgentPage.auPage.auSystemVisual #privacy .platlist { margin-top: 40px; }
 .aiAgentPage.auPage.auSystemVisual #which-fits .chg-list { gap: 14px; }
 .aiAgentPage.auPage.auSystemVisual #which-fits .ventry:nth-child(2) { border-top: 2px solid var(--accent); }

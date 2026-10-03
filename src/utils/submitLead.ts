@@ -18,8 +18,9 @@
  *      (idempotent — never creates duplicates). It can hang or fail freely; it
  *      is never awaited and can never block the user.
  *
- * Net effect: a lead is captured as long as EITHER path works, and the form UI
- * always advances within a couple of seconds.
+ * The UI advances only after the authoritative path confirms capture. A failed
+ * request throws to the form's existing retry error; an unconfirmed mirror is
+ * never enough to claim success or count a conversion.
  */
 
 import { readLeadAttribution } from '@/utils/leadAttribution';
@@ -116,7 +117,7 @@ async function postNotifyLead(
     });
     if (res.ok) {
       const data = await res.json().catch(() => null);
-      return { ok: true, erpLeadId: data?.erpLeadId || null, enrichToken: data?.enrichToken || null };
+      return { ok: data?.ok === true, erpLeadId: data?.erpLeadId || null, enrichToken: data?.enrichToken || null };
     }
     return { ok: false };
   } catch {
@@ -162,6 +163,11 @@ export async function submitLead(input: LeadInput): Promise<LeadResult> {
   const ok = postRes.ok;
   const erpLeadId = postRes.erpLeadId;
   const enrichToken = postRes.enrichToken ?? null;
+
+  // Every caller awaits this function before its success UI/tracking. Require
+  // the endpoint's capture acknowledgement before starting the mirror, so a
+  // failed attempt cannot create an unconfirmed background record on retry.
+  if (!ok) throw new Error('Lead capture was not confirmed');
 
   // (2) Best-effort secondary: client Firestore write. Fire-and-forget — never
   //     awaited, so a hung/slow SDK cannot block the user. Same docId keeps it

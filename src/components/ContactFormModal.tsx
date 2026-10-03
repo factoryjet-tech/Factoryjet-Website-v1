@@ -31,6 +31,7 @@ import {
 } from 'lucide-react';
 import { useContactModal } from '../context/ContactModalContext';
 import { submitLead } from '../utils/submitLead';
+import { containDialogFocus } from '../utils/dialogFocus';
 import {
   trackModalOpen,
   trackModalClose,
@@ -123,6 +124,21 @@ const ContactFormModal: React.FC = () => {
   // Cloudflare Turnstile
   const turnstileContainerRef = useRef<HTMLDivElement>(null);
   const turnstileWidgetId = useRef<string | null>(null);
+  const panelRef = useRef<HTMLDivElement>(null);
+  const closeRef = useRef<() => void>(() => {});
+
+  useEffect(() => {
+    if (!isOpen || !panelRef.current) return;
+    return containDialogFocus(panelRef.current, () => closeRef.current());
+  }, [isOpen]);
+
+  // Service selection replaces its focused button with contact fields. Keep
+  // keyboard focus in the active step when that original control disappears.
+  useEffect(() => {
+    const panel = panelRef.current;
+    if (!isOpen || !panel || panel.contains(document.activeElement)) return;
+    panel.querySelector<HTMLElement>(step === 2 ? 'input[name="name"]' : 'form button')?.focus({ preventScroll: true });
+  }, [isOpen, step]);
 
   const [formData, setFormData] = useState<FormData>({
     name: '', email: '', phone: '', company: '',
@@ -328,6 +344,7 @@ const ContactFormModal: React.FC = () => {
   };
 
   // ── Step indicator (2 steps) ──────────────────────────────────────────────
+  closeRef.current = handleClose;
   const renderStepIndicator = () => (
     <div className="flex items-center justify-center gap-2 mb-8">
       {[1, 2].map((s) => (
@@ -532,16 +549,21 @@ const ContactFormModal: React.FC = () => {
 
   return (
     <div
-      className="fixed inset-0 z-[9999] flex items-center justify-center p-4"
+      className="fj-contact-modal-overlay fixed inset-0 z-[9999] flex items-center justify-center p-4"
       style={{ animation: 'fadeIn 0.2s ease-out' }}
       onClick={handleClose}
     >
       {/* Backdrop */}
-      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
+      <div data-dialog-backdrop className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
 
       {/* Modal panel */}
       <div
-        className="relative bg-white rounded-2xl shadow-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto"
+        ref={panelRef}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="contact-modal-title"
+        tabIndex={-1}
+        className="fj-contact-modal-panel relative bg-white rounded-2xl shadow-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto"
         style={{ animation: 'slideUp 0.25s ease-out' }}
         onClick={(e) => e.stopPropagation()}
       >
@@ -556,7 +578,7 @@ const ContactFormModal: React.FC = () => {
 
         {/* Header */}
         <div className="bg-gradient-to-r from-[#B23E13] to-[#9A3510] px-6 py-8 text-center rounded-t-2xl">
-          <h2 className="text-2xl font-bold text-white mb-1">Let's Build Something Great</h2>
+          <h2 id="contact-modal-title" className="text-2xl font-bold text-white mb-1">Let's Build Something Great</h2>
           <p className="text-white/90 text-sm">No commitment. Free consultation.</p>
         </div>
 
@@ -577,6 +599,10 @@ const ContactFormModal: React.FC = () => {
         @keyframes fadeIn { from { opacity: 0 } to { opacity: 1 } }
         @keyframes slideUp { from { opacity: 0; transform: translateY(16px) scale(0.97) } to { opacity: 1; transform: translateY(0) scale(1) } }
         .animate-fadeIn { animation: fadeIn 0.2s ease-out }
+        @media (prefers-reduced-motion: reduce) {
+          .fj-contact-modal-overlay, .fj-contact-modal-panel, .fj-contact-modal-panel .animate-fadeIn { animation: none !important; }
+          .fj-contact-modal-panel * { transition-duration: 0s !important; }
+        }
       `}</style>
     </div>
   );

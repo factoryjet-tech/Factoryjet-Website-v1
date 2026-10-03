@@ -44,5 +44,6 @@ import { afterSubmitPlan } from '../src/utils/leadConversion.ts';
 test('afterSubmitPlan opens the modal only for a saved lead with a token', () => {
   assert.equal(afterSubmitPlan({ ok: true, enrichToken: '1.abc' }), 'modal');
   assert.equal(afterSubmitPlan({ ok: true, enrichToken: null }), 'thank-you');
-  assert.equal(afterSubmitPlan({ ok: false, enrichToken: '1.abc' }), 'thank-you');
+  assert.equal(afterSubmitPlan({ ok: false, enrichToken: '1.abc' }), 'error');
+  assert.equal(afterSubmitPlan({ ok: false, enrichToken: null }), 'error');
 });

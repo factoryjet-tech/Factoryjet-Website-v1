@@ -6,9 +6,9 @@
  *   2. once it has loaded, count the lead (fireLeadConversion) and open it, so a
  *      visitor who closes the tab with the modal open is still a conversion;
  *   3. on Send or Skip, go to /thank-you?...&counted=1 (no second count there).
- * If the save failed, there is no token, or the modal code fails to load, it goes
- * straight to /thank-you WITHOUT counted=1, and that page counts the lead as it
- * always has (see afterSubmitPlan).
+ * A failed save throws back to the form's existing retry error. A saved lead
+ * without a token, or whose modal code fails to load, goes straight to
+ * /thank-you WITHOUT counted=1, where the destination counts the saved lead.
  */
 
 import React, { useCallback, useRef, useState } from 'react';
@@ -51,7 +51,9 @@ export function useLeadEnrichment() {
   }, []);
 
   const start = useCallback((ctx: EnrichStart) => {
-    if (afterSubmitPlan(ctx) === 'thank-you') { bail(ctx); return; }
+    const plan = afterSubmitPlan(ctx);
+    if (plan === 'error') throw new Error('Lead capture was not confirmed');
+    if (plan === 'thank-you') { bail(ctx); return; }
     loadModal()
       .then((Modal) => {
         fireLeadConversion({ lid: ctx.docId, region: ctx.region, source: ctx.source });

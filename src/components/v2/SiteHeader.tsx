@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { X, Menu } from 'lucide-react';
@@ -9,6 +9,7 @@ import type { ModalRegion } from '../../context/ContactModalContext';
 import Wordmark from './Wordmark';
 import { MegaNavDesktop, MegaNavMobile } from './MegaNav';
 import { AU_SERVICE_HUBS, AU_SIMPLE_MENUS, UK_SERVICE_HUBS, UK_SIMPLE_MENUS } from './megaNavData';
+import { containDialogFocus } from '@/utils/dialogFocus';
 
 // ─── Locale type ──────────────────────────────────────────────────────────────
 
@@ -58,15 +59,18 @@ function ModernSiteHeader({
     : locale === 'au' ? { hubs: AU_SERVICE_HUBS, menus: AU_SIMPLE_MENUS } : {};
 
   const [mobileOpen, setMobileOpen] = useState(false);
+  const drawerRef = useRef<HTMLDivElement>(null);
+  const menuTriggerRef = useRef<HTMLButtonElement>(null);
 
-  // Close the mobile drawer on Escape (the desktop mega menu handles its own).
   useEffect(() => {
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') setMobileOpen(false);
-    };
-    document.addEventListener('keydown', onKey);
-    return () => document.removeEventListener('keydown', onKey);
-  }, []);
+    if (!mobileOpen || !drawerRef.current) return;
+    const desktop = window.matchMedia('(min-width: 768px)');
+    if (desktop.matches) { setMobileOpen(false); return; }
+    const onResize = () => { if (desktop.matches) setMobileOpen(false); };
+    desktop.addEventListener('change', onResize);
+    const release = containDialogFocus(drawerRef.current, () => setMobileOpen(false), menuTriggerRef.current);
+    return () => { desktop.removeEventListener('change', onResize); release(); };
+  }, [mobileOpen]);
 
   // Prevent body scroll when mobile drawer is open
   useEffect(() => {
@@ -112,6 +116,7 @@ function ModernSiteHeader({
             <div className="flex items-center gap-3">
               {/* Mobile hamburger */}
               <button
+                ref={menuTriggerRef}
                 type="button"
                 aria-label={mobileOpen ? 'Close navigation menu' : 'Open navigation menu'}
                 aria-expanded={mobileOpen}
@@ -141,20 +146,26 @@ function ModernSiteHeader({
 
       {/* Backdrop */}
       <div
+        data-dialog-backdrop
         aria-hidden="true"
         onClick={() => setMobileOpen(false)}
-        className={`fixed inset-0 z-40 bg-fj-ink/25 backdrop-blur-sm transition-opacity duration-300 md:hidden ${
+        className={`fixed inset-0 z-40 bg-fj-ink/25 backdrop-blur-sm transition-opacity motion-reduce:transition-none duration-300 md:hidden ${
           mobileOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
       />
 
       {/* Drawer panel */}
       <div
+        ref={drawerRef}
         id="mobile-drawer"
+        tabIndex={-1}
+        inert={!mobileOpen}
+        aria-hidden={!mobileOpen}
         role="dialog"
-        aria-modal="true"
+        aria-modal={mobileOpen ? true : undefined}
         aria-label="Navigation menu"
-        className={`fixed right-0 top-0 z-50 flex h-[100dvh] w-[88vw] max-w-[360px] flex-col bg-white shadow-2xl transition-transform duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] md:hidden ${
+        style={{ visibility: mobileOpen ? 'visible' : 'hidden' }}
+        className={`fixed right-0 top-0 z-50 flex h-[100dvh] w-[88vw] max-w-[360px] flex-col bg-white shadow-2xl transition-transform motion-reduce:transition-none duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] md:hidden ${
           mobileOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
