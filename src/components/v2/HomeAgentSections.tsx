@@ -208,7 +208,7 @@ export function AgentMidCta() {
           <div>
             <div className="eyebrow">Free Assessment</div>
             <h2>Name One Task Your Team Repeats Every Day</h2>
-            <p>We&apos;ll tell you whether an agent can take it, whether a tool you can buy already does it, and what a build would need. Bhavesh, our founder, reads every enquiry and usually replies within 2 to 3 hours.</p>
+            <p>We&apos;ll tell you whether an agent can take it, whether a tool you can buy already does it, and what a build would need. Before you sign, we build a demo agent that runs on your own sample files, so you can check its output against a job you have already done by hand. Bhavesh, our founder, reads every enquiry and usually replies within 2 to 3 hours.</p>
             <ol>
               <li>The task, in one or two sentences</li>
               <li>The systems it touches, such as your ERP, store, or help desk</li>

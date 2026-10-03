@@ -5,6 +5,7 @@ import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import FAQ from '@/components/v2/FAQ';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
+import HeroInlineForm from '@/components/HeroInlineForm';
 import EnterpriseArchitectureBlueprint from '@/components/v2/EnterpriseArchitectureBlueprint';
 import AuthorCard from '@/components/v2/AuthorCard';
 import CommerceRoiCalculator from '@/components/v2/CommerceRoiCalculator';
@@ -13,7 +14,7 @@ import EcommerceCityLinksUS from '@/components/v2/EcommerceCityLinksUS';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-30';
+const PAGE_MODIFIED = '2026-10-04';
 const CANONICAL = 'https://factoryjet.com/tampa/ecommerce-development';
 
 export const metadata: Metadata = {
@@ -546,17 +547,16 @@ export default function TampaEcommercePage() {
                   </p>
                 </div>
 
-                <div className="rv-actions">
-                  <ModalCTAButton label="Get an E-Commerce Architecture Quote" region="us" btnVariant="primary-dark" />
-                  <a href="#tpa-ecom-districts" className="rv-btn-secondary">
-                    <div className="rv-video-circle">
-                      <svg width="14" height="16" viewBox="0 0 14 16" fill="#141414">
-                        <path d="M13 7.13397C13.6667 7.51887 13.6667 8.48113 13 8.86603L2.5 14.9282C1.83333 15.3131 1 14.832 1 14.0622L1 1.93782C1 1.16802 1.83333 0.686897 2.5 1.0718L13 7.13397Z" />
-                      </svg>
-                    </div>
-                    <span>Explore Tampa Corridors</span>
-                  </a>
-                </div>
+                <HeroInlineForm
+                  region="us"
+                  source="ecommerce_tampa_hero"
+                  service="E-commerce"
+                  submitLabel="Get my quote"
+                  formId="tampa-ecom-hero-form"
+                  secondaryHref="#tpa-ecom-districts"
+                  secondaryLabel="Explore Tampa Corridors ↓"
+                  trustText="Founder usually replies within 2 to 3 hours. You see a working draft of your store before you sign."
+                />
               </div>
 
               {/* Right Column: Clean Organic Curved Photo Frame */}

@@ -5,7 +5,8 @@
  * (pipeline/research/HOMEPAGE-REDESIGN-KEYWORDS-2026-09-23.md).
  * 2026-10-04: five questions added from real buyer briefs and the AI buyer
  * sweep (Shopify + QuickBooks, Shopify beside WordPress, quoting agents,
- * buy vs build, support after launch).
+ * buy vs build, support after launch), plus the demo-before-you-sign answer
+ * (practice confirmed by Bhavesh, 2026-10-04).
  */
 
 export const HOME_FAQ_CATEGORIES = [
@@ -61,4 +62,5 @@ export const HOME_FAQS: HomeFaq[] = [
   { id: 'Q39', category: 'working-together', question: "What should we ask before hiring an ecommerce development agency?", answer: "Ask about their B2B experience specifically, their discovery and scoping process, how they handle integrations, who owns the relationship after launch, and to see comparable builds. We are happy to answer all of those on a call." },
   { id: 'Q40', category: 'working-together', question: "How long does an ecommerce build or migration take?", answer: "Most mid-market builds and migrations run from a few weeks to a few months, depending on custom integrations and catalog complexity. You get a phased timeline with milestones after scoping." },
   { id: 'Q41', category: 'working-together', question: "Do you work with US brands?", answer: "Yes, most of the brands we work with are US-based, across DTC and B2B, and we bring a decade-plus of commerce builds to every engagement." },
+  { id: 'Q42', category: 'working-together', question: "Can we see a demo before we sign a contract?", answer: "Yes. Before you sign, we show you working software built on your own data. For a store, that is a draft theme set up in your own store. For an AI agent, it is a demo that runs on your sample files and rules, so you can check its output against a job you have already done by hand. You decide after you have seen it work." },
 ];

@@ -477,6 +477,10 @@ export default function HomeSections() {
               <div className="tnode"><div className="idx">04</div><h3>Migrate</h3><p>Data moved with a 301 map, so rankings and order history survive cutover.</p></div>
               <div className="tnode"><div className="idx">05</div><h3>Support</h3><p>We stay after launch: monitoring, fixes, and the next channel you add.</p></div>
             </div>
+            <div className="taxbridge">
+              <p><b>Before you sign, you see it work.</b> For a store, we build a draft theme in your own store. For an AI agent, we build a demo that runs on your sample files and rules.</p>
+              <a href="#hero">Ask for a demo ↑</a>
+            </div>
             <div className="timelineAction"><a className="btn btn-primary" href="#hero">Get a commerce audit</a></div>
           </div>
         </section>
