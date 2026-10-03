@@ -2,8 +2,12 @@ import { Fragment } from 'react';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import { HOME_FAQ_CATEGORIES, HOME_FAQS } from './HomeFaqs';
 import MobileStickyBar from './MobileStickyBar';
+import { ProblemTax, UnifiedLayers, StackVsSystem, IntegrationMap } from './HomeCommerceSections';
+import { AgentRunSection, AgentCatalog, BuildVsBuy, AgentMidCta } from './HomeAgentSections';
+import { CostAnswers, WorkDirectory, AiAnswerMock, AiVisibilityBand } from './HomeAnswerSections';
 import './AiAgentDevelopmentSections.css';
 import './HomeSections.css';
+import './HomeExtraSections.css';
 
 /*
  * Homepage (2026-09-23): the AI Agent Development page's design system applied
@@ -13,6 +17,9 @@ import './HomeSections.css';
  *
  * Static server component. The only client code is HeroInlineForm (lead capture
  * + step-2 details modal). The hero workflow panel animates with CSS only.
+ *
+ * 2026-10-04: added the problem, unified layers, integrations, AI agent, cost and
+ * directory sections (HomeCommerceSections, HomeAgentSections, HomeAnswerSections).
  */
 
 function HomeFaqAccordion() {
@@ -201,12 +208,28 @@ export default function HomeSections() {
           </div>
         </section>
 
+        <ProblemTax />
+
+        <section className="definition" id="definition">
+          <div className="definition-image">
+            <img className="kenburns" width="1400" height="933" src="/images/home/home-unified-commerce-model.webp" alt="AI-generated model of one commerce hub connected to a storefront, a shopping cart, warehouse shelving, and wholesale pallets" loading="lazy" decoding="async" />
+          </div>
+          <div className="definition-copy">
+            <div className="eyebrow">Term</div>
+            <h2 className="term">Unified Commerce</h2>
+            <p>The architecture under omnichannel selling. One catalog, one live inventory, and one order engine that your store, marketplaces, point of sale, and B2B portal all read from, instead of each keeping its own copy. Omnichannel describes what the customer sees. Unified commerce is what keeps it true: a unit sold on Amazon is gone from Shopify and the wholesale portal moments later, and nobody re-keys a product five times. If a vendor's "omnichannel" setup still needs a nightly spreadsheet to reconcile, it isn't unified.</p>
+          </div>
+        </section>
+
+        <UnifiedLayers />
+
         <section className="section comparison" id="comparison">
           <div className="wrap">
             <div className="section-head">
               <div className="eyebrow">Compare</div>
               <h2>How to Choose an Ecommerce Development Agency</h2>
             </div>
+            <StackVsSystem />
             <div className="tablewrap">
               <table>
                 <thead><tr><th>Option</th><th>What you get</th><th>Best for</th><th>Trade‑off</th></tr></thead>
@@ -217,17 +240,6 @@ export default function HomeSections() {
                 </tbody>
               </table>
             </div>
-          </div>
-        </section>
-
-        <section className="definition" id="definition">
-          <div className="definition-image">
-            <img className="kenburns" width="1400" height="933" src="/images/home/home-unified-commerce-model.webp" alt="AI-generated model of one commerce hub connected to a storefront, a shopping cart, warehouse shelving, and wholesale pallets" loading="lazy" decoding="async" />
-          </div>
-          <div className="definition-copy">
-            <div className="eyebrow">Term</div>
-            <h2 className="term">Unified Commerce</h2>
-            <p>The architecture under omnichannel selling. One catalog, one live inventory, and one order engine that your store, marketplaces, point of sale, and B2B portal all read from, instead of each keeping its own copy. Omnichannel describes what the customer sees. Unified commerce is what keeps it true: a unit sold on Amazon is gone from Shopify and the wholesale portal moments later, and nobody re-keys a product five times. If a vendor's "omnichannel" setup still needs a nightly spreadsheet to reconcile, it isn't unified.</p>
           </div>
         </section>
 
@@ -381,44 +393,34 @@ export default function HomeSections() {
           </div>
         </section>
 
+        <IntegrationMap />
+
+        <AgentRunSection />
+
+        <AgentCatalog />
+
+        <BuildVsBuy />
+
+        <AgentMidCta />
 
         <section className="section services" id="services">
           <div className="wrap">
             <div className="section-head">
               <div className="eyebrow">More From the Same Team</div>
-              <h2>AI Development Services, AI Search &amp; SEO, and Website Design</h2>
-              <p>Ecommerce is where we started. The same engineers also build AI agents for operations teams, get brands cited in AI answers, and design websites for B2B and service businesses. One team, one set of standards, and you own everything we ship.</p>
+              <h2>AI Search &amp; SEO and Website Design</h2>
+              <p>The same team that builds your store and your agents also gets brands cited in AI answers and designs websites for B2B and service businesses. One set of standards, and you own everything we ship.</p>
             </div>
             <div className="svclist">
-              <article className="svc" id="svc-ai-development">
-                <div>
-                  <div className="svc-top"><span className="svc-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><rect x="5" y="7" width="14" height="12" rx="3"/><path d="M12 3v4M9 12h.01M15 12h.01M9 16h6"/></svg></span><span className="capid">SVC‑02</span></div>
-                  <h3>AI Agent Development</h3>
-                  <div className="aka">AI development company · Agentic AI development · AI integration</div>
-                  <p className="def">An AI development company builds software that reads your data, makes a decision, and takes action inside the tools you already run. We build custom AI agents wired into NetSuite, SAP, Odoo, Salesforce, HubSpot, Zendesk, and Shopify, with a human approval step wherever the decision matters. Most well-scoped agents reach production in 3 to 12 weeks.</p>
-                  <div className="svc-links"><a className="btn btn-primary" href="/services/ai-agent-development">AI agent development</a><a className="btn btn-ghost" href="/services/ai-integration-services">AI integration services</a></div>
-                </div>
-                <div>
-                <ul>
-                  <li><span><b>ERP &amp; procurement agents</b> that turn an RFQ into a quote</span></li>
-                  <li><span><b>Customer support agents</b> that resolve tickets from your knowledge base</span></li>
-                  <li><span><b>AI voice agents</b> that answer and route business calls</span></li>
-                  <li><span><b>Sales &amp; SDR agents</b> that qualify leads and book meetings</span></li>
-                  <li><span><b>AI integration services</b> for CRMs, ERPs, and internal APIs</span></li>
-                  <li><span><b>AI automation</b> for the repetitive work between systems</span></li>
-                </ul>
-                <div className="systags"><span>NetSuite</span><span>SAP</span><span>Salesforce</span><span>HubSpot</span><span>Zendesk</span></div>
-                </div>
-              </article>
               <article className="svc" id="svc-ai-search">
                 <div>
-                  <div className="svc-top"><span className="svc-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5M8.5 11h5M11 8.5v5"/></svg></span><span className="capid">SVC‑03</span></div>
+                  <div className="svc-top"><span className="svc-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5M8.5 11h5M11 8.5v5"/></svg></span><span className="capid">SVC‑01</span></div>
                   <h3>AI Search &amp; SEO</h3>
                   <div className="aka">AI SEO services · Generative engine optimization · AEO · Ecommerce SEO</div>
                   <p className="def">AI search optimization gets your brand named and cited when buyers ask ChatGPT, Claude, Gemini, Perplexity, or Google AI Overviews what to buy, while your pages still rank in classic Google results. It's also called generative engine optimization (GEO) or answer engine optimization (AEO). Start with a free check of who AI assistants recommend in your category today.</p>
                   <div className="svc-links"><a className="btn btn-primary" href="/services/ai-seo">AI SEO services</a><a className="btn btn-ghost" href="/ai-visibility-checker">Free AI visibility check</a></div>
                 </div>
                 <div>
+                <AiAnswerMock />
                 <ul>
                   <li><span><b>AI visibility audit</b> across ChatGPT, Perplexity, and AI Overviews</span></li>
                   <li><span><b>Generative engine optimization</b> for answer-first, citable pages</span></li>
@@ -432,7 +434,7 @@ export default function HomeSections() {
               </article>
               <article className="svc" id="svc-web-design">
                 <div>
-                  <div className="svc-top"><span className="svc-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8h18M8 21h8M12 18v3"/></svg></span><span className="capid">SVC‑04</span></div>
+                  <div className="svc-top"><span className="svc-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8h18M8 21h8M12 18v3"/></svg></span><span className="capid">SVC‑02</span></div>
                   <h3>Website Design &amp; Development</h3>
                   <div className="aka">Web design company · Website redesign · Web development services</div>
                   <p className="def">Custom website design and development for B2B and service businesses: planned around what your buyers need to see, built to load fast, and structured so Google and AI assistants can read it from day one. New builds and redesigns, on WordPress, Webflow, or a custom Next.js stack.</p>
@@ -451,9 +453,11 @@ export default function HomeSections() {
                 </div>
               </article>
             </div>
+            <AiVisibilityBand />
           </div>
         </section>
 
+        <CostAnswers />
 
         <section className="photobreak" id="photobreak">
           <img className="kenburns" width="1536" height="540" src="/images/home/home-order-flow-panorama.webp" alt="AI-generated model of an order moving from intake through routing, inventory, a check gate, and packed shipments" loading="lazy" decoding="async" />
@@ -517,6 +521,8 @@ export default function HomeSections() {
           </div>
         </section>
 
+        <WorkDirectory />
+
         <section className="section faq" id="faq">
           <div className="wrap">
             <div className="faqwrap">
@@ -545,6 +551,10 @@ export default function HomeSections() {
               <a href="/services/web-design">Website design</a>
               <a href="/blog/ecommerce-website-cost-2026">Ecommerce website cost guide</a>
               <a href="/agentic-commerce">What is agentic commerce?</a>
+              <a href="/services/ai-automation">AI automation services</a>
+              <a href="/services/shopify-plus-b2b">Shopify Plus B2B</a>
+              <a href="/marketplace-management">Marketplace management</a>
+              <a href="/website-cost">Website cost guide</a>
             </div>
           </div>
         </section>

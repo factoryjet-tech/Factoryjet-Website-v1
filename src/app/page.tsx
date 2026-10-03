@@ -55,7 +55,7 @@ export const metadata: Metadata = {
 };
 
 // Freshness signal. Keep honest: bump when the page's content actually changes.
-const PAGE_MODIFIED = '2026-09-29';
+const PAGE_MODIFIED = '2026-10-04';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -65,7 +65,7 @@ const webPageSchema = {
   dateModified: PAGE_MODIFIED,
   isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
   publisher: { '@id': 'https://factoryjet.com/#organization' },
-  speakable: { '@type': 'SpeakableSpecification', cssSelector: ['h1', '.fact p', '.ans'] },
+  speakable: { '@type': 'SpeakableSpecification', cssSelector: ['h1', '.fact p', '.answer', '.ans'] },
 };
 
 const FAQ_SCHEMA = {
@@ -96,6 +96,7 @@ const SERVICE_SCHEMA = {
     itemListElement: [
       { name: 'Ecommerce development', url: 'https://factoryjet.com/services/ecommerce-development' },
       { name: 'AI agent development', url: 'https://factoryjet.com/services/ai-agent-development' },
+      { name: 'AI integration services', url: 'https://factoryjet.com/services/ai-integration-services' },
       { name: 'AI SEO services', url: 'https://factoryjet.com/services/ai-seo' },
       { name: 'Website design and development', url: 'https://factoryjet.com/services/web-design' },
     ].map((s) => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name: s.name, url: s.url } })),
