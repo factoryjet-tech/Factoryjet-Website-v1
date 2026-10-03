@@ -10,6 +10,7 @@ import AuFaq from '../components/AuFaq';
 import VisualSlot from '../components/VisualSlot';
 import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
+import './page.css';
 
 const CANONICAL = 'https://factoryjet.com/au/websites-for-tradies';
 const UPDATED = '2026-09-26';
@@ -321,6 +322,57 @@ const HERO_H1_EMPHASIS = 'Quote-Ready Sites That Get Found Locally';
 const STEP_ICON = { width: 24, height: 24, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', strokeWidth: 1.5, strokeLinecap: 'round', strokeLinejoin: 'round' } as const;
 const CAP_ICON = { width: 24, height: 24, viewBox: '0 0 24 24', fill: 'none', stroke: '#C94A1A', strokeWidth: 1.6, strokeLinecap: 'round', strokeLinejoin: 'round', 'aria-hidden': true } as const;
 
+/* Text-free interface diagrams illustrate layout and enquiry paths, never client proof. */
+function TradePagePreview({ index }: { index: number }) {
+  const gallery = index === 2 || index === 4;
+  const booking = index === 3;
+  return (
+    <svg viewBox="0 0 320 130" fill="none" aria-hidden="true" focusable="false">
+      <rect x="12" y="8" width="296" height="114" rx="8" fill="white" stroke="var(--line-strong)" />
+      <path d="M12 28h296" stroke="var(--line)" />
+      <circle cx="24" cy="18" r="2" fill="var(--accent)" /><circle cx="33" cy="18" r="2" fill="var(--line)" /><circle cx="42" cy="18" r="2" fill="var(--line)" />
+      <rect x="26" y="42" width="90" height="5" rx="2" fill="var(--ink)" />
+      <rect x="26" y="55" width="72" height="3" rx="1.5" fill="var(--line-strong)" />
+      <rect x="26" y="63" width="86" height="3" rx="1.5" fill="var(--line-strong)" />
+      <rect x="26" y="86" width="82" height="22" rx="4" fill="var(--accent)" />
+      <path d={TRADE_ICONS[index]} transform="translate(57 89) scale(.68)" stroke="white" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+      {gallery ? (
+        <g>
+          {[146, 197, 248].map((x) => <g key={x}><rect x={x} y="42" width="42" height="57" rx="3" fill="var(--accent-wash)" stroke="var(--line)" /><path d={`M${x+4} 88l10-13 7 7 7-17 10 23`} stroke="var(--accent)" strokeWidth="1.3" /><circle cx={x+11} cy="54" r="3" fill="var(--accent)" /></g>)}
+          <path d="M146 107h62m12 0h70" stroke="var(--line-strong)" strokeWidth="3" strokeLinecap="round" />
+        </g>
+      ) : booking ? (
+        <g><rect x="146" y="42" width="144" height="66" rx="4" fill="var(--accent-wash)" stroke="var(--line)" />
+          <path d="M146 58h144M179 58v50m37-50v50m37-50v50M146 82h144" stroke="var(--line)" />
+          <rect x="183" y="62" width="29" height="16" rx="2" fill="var(--accent)" /><path d="m190 70 4 4 9-8" stroke="white" strokeWidth="1.6" />
+          <rect x="257" y="86" width="29" height="16" rx="2" fill="var(--line-strong)" />
+        </g>
+      ) : (
+        <g><rect x="146" y="42" width="144" height="66" rx="4" fill="var(--accent-wash)" stroke="var(--line)" />
+          <rect x="157" y="52" width="47" height="7" rx="2" fill="var(--line-strong)" /><path d="M157 70h119m-119 10h119" stroke="var(--line-strong)" strokeWidth="3" strokeLinecap="round" />
+          <rect x="249" y="91" width="28" height="9" rx="3" fill="var(--accent)" /><path d="m163 94 3 3 6-6" stroke="var(--accent-text)" strokeWidth="1.5" />
+        </g>
+      )}
+    </svg>
+  );
+}
+
+function EnquiryRoutingDiagram() {
+  return <svg className="tradie-routing-diagram" viewBox="0 0 320 112" fill="none" aria-hidden="true" focusable="false">
+    <rect x="12" y="20" width="58" height="72" rx="7" fill="white" stroke="var(--line-strong)" />
+    <path d="M30 29h22m-28 15h33m-33 8h33m-33 8h25" stroke="var(--line-strong)" strokeWidth="3" strokeLinecap="round" />
+    <rect x="23" y="72" width="36" height="11" rx="3" fill="var(--accent)" />
+    <path d="M70 56h38m-6-6 6 6-6 6M142 56h35m-6-6 6 6-6 6" stroke="var(--accent)" strokeWidth="1.5" />
+    <circle cx="126" cy="56" r="16" fill="var(--accent-wash)" stroke="var(--accent)" />
+    <path d="m119 56 5 5 9-10" stroke="var(--accent-text)" strokeWidth="2" />
+    <rect x="179" y="25" width="128" height="62" rx="6" fill="white" stroke="var(--line-strong)" />
+    <path d="M179 40h128m-85 0v47m42-47v47" stroke="var(--line)" />
+    <rect x="226" y="47" width="31" height="16" rx="3" fill="var(--accent)" />
+    <rect x="185" y="66" width="30" height="13" rx="3" fill="var(--line)" />
+    <rect x="269" y="47" width="31" height="13" rx="3" fill="var(--line)" />
+  </svg>;
+}
+
 export default function WebsitesForTradiesAUPage() {
   return (
     <>
@@ -328,7 +380,7 @@ export default function WebsitesForTradiesAUPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <SiteHeader locale="au" logoHref="/au" />
-      <div className="aiAgentPage auPage">
+      <div className="aiAgentPage auPage auTradiesVisual">
       <nav className="crumbs" aria-label="Breadcrumb">
         <div className="wrap">
           {crumbs.map((item, index) => (
@@ -379,6 +431,11 @@ export default function WebsitesForTradiesAUPage() {
                 <button type="reset" className="workflow-replay" aria-label="Replay animation" title="Replay animation">
                   <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M3 6a5 5 0 1 1 0 4M3 2v4h4" /></svg>
                 </button>
+              </div>
+              <div className="tradie-hero-preview" aria-hidden="true">
+                <div className="tradie-preview-stage tradie-preview-call"><TradePagePreview index={0} /></div>
+                <div className="tradie-preview-stage tradie-preview-proof"><TradePagePreview index={2} /></div>
+                <div className="tradie-preview-stage tradie-preview-connected"><EnquiryRoutingDiagram /></div>
               </div>
               <div className="specpanel-body" role="radiogroup" aria-label="Explore what every site does">
                 <label className="specrow run">
@@ -473,7 +530,10 @@ export default function WebsitesForTradiesAUPage() {
                   </p>
                 </div>
               </div>
-              <VisualSlot page={PAGE_KEY} slot="facts" kind="photo" ratio="3:2" className="factphoto"
+              <VisualSlot page={PAGE_KEY} slot="facts" kind="photo"
+                src="/images/au/visual-pass-2026-10-03/websites-for-tradies/tradie-in-the-field-1280.webp"
+                srcSet="/images/au/visual-pass-2026-10-03/websites-for-tradies/tradie-in-the-field-640.webp 640w, /images/au/visual-pass-2026-10-03/websites-for-tradies/tradie-in-the-field-1280.webp 1280w"
+                sizes="(max-width: 820px) calc(100vw - 32px), 520px" ratio="3:2" className="factphoto"
                 subject="A landscaper beside her ute checking her mobile website, which shows a photo of a garden she has just finished">
                 <img src="/images/au/websites-for-tradies/tradie-website-hero.webp" width={1400} height={933} loading="lazy" decoding="async" alt="Over the shoulder of a Perth landscaper beside her ute, checking her mobile website, which shows a photo of the garden she has just finished" />
               </VisualSlot>
@@ -501,7 +561,10 @@ export default function WebsitesForTradiesAUPage() {
                   </div>
                 ))}
               </div>
-              <VisualSlot page={PAGE_KEY} slot="facts-2" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
+              <VisualSlot page={PAGE_KEY} slot="facts-2" kind="photo"
+                src="/images/au/visual-pass-2026-10-03/websites-for-tradies/job-photo-gallery-1280.webp"
+                srcSet="/images/au/visual-pass-2026-10-03/websites-for-tradies/job-photo-gallery-640.webp 640w, /images/au/visual-pass-2026-10-03/websites-for-tradies/job-photo-gallery-1280.webp 1280w"
+                sizes="(max-width: 820px) calc(100vw - 32px), 520px" ratio="3:2" className="factphoto" captionClassName="figcap"
                 subject="A carpenter photographing a deck he has just finished, for his website project gallery"
                 caption="Your best marketing is already on your phone. Photos of finished jobs, taken on the day, do more for a tradie website than any stock image.">
                 <img src="/images/au/websites-for-tradies/tradie-website-photos.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A Melbourne carpenter crouches to photograph the spotted-gum deck and steps he has just finished, for his website project gallery" />
@@ -641,7 +704,10 @@ export default function WebsitesForTradiesAUPage() {
                   </ul>
                 </div></div>
               </div>
-              <VisualSlot page={PAGE_KEY} slot="facts-3" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
+              <VisualSlot page={PAGE_KEY} slot="facts-3" kind="photo"
+                src="/images/au/visual-pass-2026-10-03/websites-for-tradies/customer-local-search-1280.webp"
+                srcSet="/images/au/visual-pass-2026-10-03/websites-for-tradies/customer-local-search-640.webp 640w, /images/au/visual-pass-2026-10-03/websites-for-tradies/customer-local-search-1280.webp 1280w"
+                sizes="(max-width: 820px) calc(100vw - 32px), 520px" ratio="3:2" className="factphoto" captionClassName="figcap"
                 subject="A homeowner on her couch comparing local tradies on a map with reviews on her tablet"
                 caption="This is where most jobs start: a customer on the couch comparing three tradies on a map. Your profile, reviews and website decide who gets the call.">
                 <img src="/images/au/websites-for-tradies/tradie-website-search.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over the shoulder of a Brisbane homeowner on her couch comparing local tradies on a map with reviews on her tablet" />
@@ -738,7 +804,7 @@ export default function WebsitesForTradiesAUPage() {
                 </p>
               </div>
             </div>
-            <div className="tablewrap">
+            <div className="tablewrap" tabIndex={0} role="region" aria-label="Tradie website options comparison, scroll horizontally">
               <table>
                 <thead>
                   <tr>
@@ -772,10 +838,14 @@ export default function WebsitesForTradiesAUPage() {
         {/* ═══ JOB SOFTWARE INTEGRATION → definition module (image left, copy right) ═══ */}
         <section className="definition" id="job-software">
           <div>
-            <VisualSlot page={PAGE_KEY} slot="definition" kind="photo" ratio="3:2" className="definition-image"
+            <VisualSlot page={PAGE_KEY} slot="definition" kind="photo"
+                src="/images/au/visual-pass-2026-10-03/websites-for-tradies/job-system-office-1280.webp"
+                srcSet="/images/au/visual-pass-2026-10-03/websites-for-tradies/job-system-office-640.webp 640w, /images/au/visual-pass-2026-10-03/websites-for-tradies/job-system-office-1280.webp 1280w"
+                sizes="(max-width: 820px) calc(100vw - 32px), 520px" ratio="3:2" className="definition-image"
               subject="The office manager of a family plumbing business reviewing the week's job schedule on her laptop, the work van outside">
               <img src="/images/au/websites-for-tradies/tradie-website-office.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over the shoulder of the office manager of a family plumbing business in Adelaide, reviewing the week’s job schedule on her laptop with the work van outside" />
             </VisualSlot>
+            <EnquiryRoutingDiagram />
             <p className="figcap">
               When a website enquiry lands straight in the job schedule, the office can quote the same day instead
               of retyping emails.
@@ -832,6 +902,7 @@ export default function WebsitesForTradiesAUPage() {
               </div>
               <div className="au-panel">
                 <div className="eyebrow">Where each enquiry goes</div>
+                <EnquiryRoutingDiagram />
                 <ul className="trigrows">
                   <li><span className="m">Job request form on your site</span><span className="n">into your job software, with photos</span><span className="t">Lead</span></li>
                   <li><span className="m">Call you answer</span><span className="n">tap-to-call from the website</span><span className="t">You</span></li>
@@ -845,6 +916,9 @@ export default function WebsitesForTradiesAUPage() {
 
         {/* ═══ PHOTOBREAK (US template visual, no AU image yet) ═══ */}
         <VisualSlot page={PAGE_KEY} slot="photobreak" kind="illustration" ratio="12:5" className="photobreak"
+          src="/images/au/visual-pass-2026-10-03/websites-for-tradies/enquiry-to-schedule-1280.webp"
+          srcSet="/images/au/visual-pass-2026-10-03/websites-for-tradies/enquiry-to-schedule-640.webp 640w, /images/au/visual-pass-2026-10-03/websites-for-tradies/enquiry-to-schedule-1280.webp 1280w"
+          sizes="(max-width: 820px) calc(100vw - 32px), 1200px"
           subject="AI-generated model: a white ute and a phone showing a tradie website, with an orange job card travelling from the phone into a job schedule board" />
 
         {/* ═══ HOW WE BUILD IT → process timeline (steps stay openable, as the copy says) ═══ */}
@@ -859,13 +933,16 @@ export default function WebsitesForTradiesAUPage() {
                   Open any step to see what happens in it.
                 </p>
               </div>
-              <VisualSlot page={PAGE_KEY} slot="process" kind="photo" ratio="3:2" captionClassName="figcap"
+              <VisualSlot page={PAGE_KEY} slot="process" kind="photo"
+                src="/images/au/visual-pass-2026-10-03/websites-for-tradies/workshop-planning-1280.webp"
+                srcSet="/images/au/visual-pass-2026-10-03/websites-for-tradies/workshop-planning-640.webp 640w, /images/au/visual-pass-2026-10-03/websites-for-tradies/workshop-planning-1280.webp 1280w"
+                sizes="(max-width: 820px) calc(100vw - 32px), 520px" ratio="3:2" captionClassName="figcap"
                 subject="A FactoryJet web designer and an electrician reviewing paper sketches of his mobile website on a workbench"
                 caption="We plan the site around the jobs you want more of. You sign off the page plan before anything is designed.">
                 <img src="/images/au/websites-for-tradies/tradie-website-workshop.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A FactoryJet web designer and a Sydney electrician review paper sketches of his mobile website on a workbench in his workshop" />
               </VisualSlot>
             </div>
-            <div className="timeline timeline-4">
+            <div className="timeline timeline-4 tradie-build-timeline">
               {BUILD_STEPS.map((s) => (
                 <details key={s.n} className="tnode">
                   <summary>
@@ -904,7 +981,9 @@ export default function WebsitesForTradiesAUPage() {
                 return (
                   <div key={j.t} className={`cap cap-${i + 1}`}>
                     <div className="caphead"><span className="capid">CAP‑{n}</span><svg {...CAP_ICON}><path d={TRADE_ICONS[i]} /></svg></div>
-                    <VisualSlot page={PAGE_KEY} slot={`capability-${n}`} kind="diagram" ratio="11:4" className="cap-diagram" subject={TRADE_SUBJECTS[i]} />
+                    <VisualSlot page={PAGE_KEY} slot={`capability-${n}`} kind="diagram" ratio="11:4" className="cap-diagram" subject={TRADE_SUBJECTS[i]} src={null}>
+                      <TradePagePreview index={i} />
+                    </VisualSlot>
                     <h3>{j.t}</h3>
                     <p>{j.d}</p>
                   </div>

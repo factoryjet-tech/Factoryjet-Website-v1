@@ -8,6 +8,7 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import AuFaq from '../components/AuFaq';
 import VisualSlot from '../components/VisualSlot';
+import { InvoiceRail, InvoiceJob, InvoiceMerge } from './InvoiceVisuals';
 import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
 import './page.css';
@@ -355,7 +356,7 @@ export default function AccountsPayableAutomationAUPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <SiteHeader locale="au" logoHref="/au" />
-      <div className="aiAgentPage auPage">
+      <div className="aiAgentPage auPage auApVisual">
       <nav className="crumbs" aria-label="Breadcrumb">
         <div className="wrap">
           {crumbs.map((item, index) => (
@@ -396,6 +397,7 @@ export default function AccountsPayableAutomationAUPage() {
                 <span>INCLUDED · WHAT HAPPENS TO EVERY INVOICE</span>
                 <span className="sys"><span>XERO</span><span>MYOB</span><span>PEPPOL</span></span>
               </div>
+              <div className="ap-hero-art" aria-hidden="true"><InvoiceRail compact /></div>
               <div className="workflow-controls">
                 <label className="workflow-toggle" title="Pause or resume the animation">
                   <input type="checkbox" className="workflow-pause" aria-label="Pause animation" />
@@ -491,7 +493,7 @@ export default function AccountsPayableAutomationAUPage() {
                   </div>
                 </div>
               </div>
-              <VisualSlot page={PAGE_KEY} slot="facts" kind="photo" ratio="3:2" className="factphoto"
+              <VisualSlot page={PAGE_KEY} slot="facts" src="/images/au/visual-pass-2026-10-03/accounts-payable-automation/facts-1280.webp" srcSet="/images/au/visual-pass-2026-10-03/accounts-payable-automation/facts-640.webp 640w, /images/au/visual-pass-2026-10-03/accounts-payable-automation/facts-1280.webp 1280w" sizes="(max-width: 820px) 100vw, 560px" kind="photo" ratio="3:2" className="factphoto"
                 subject="A bookkeeper at a small Australian wholesale business reviewing a queue of checked supplier bills on her monitor, the screen facing her, paper invoices set aside on the desk, no readable text or logos" />
             </div>
           </div>
@@ -536,7 +538,7 @@ export default function AccountsPayableAutomationAUPage() {
                 return (
                   <div key={j.t} className={`cap cap-${i + 1}`}>
                     <div className="caphead"><span className="capid">CAP‑{n}</span><svg {...CAP_ICON}><path d={JOB_ICONS[i]} /></svg></div>
-                    <VisualSlot page={PAGE_KEY} slot={`capability-${n}`} kind="diagram" ratio="11:4" className="cap-diagram" subject={JOB_SUBJECTS[i]} />
+                    <VisualSlot page={PAGE_KEY} slot={`capability-${n}`} kind="diagram" ratio="11:4" className="cap-diagram" subject={JOB_SUBJECTS[i]} src={null}><InvoiceJob job={i} /></VisualSlot>
                     <h3>{j.t}</h3>
                     <p>{j.d}</p>
                   </div>
@@ -567,7 +569,7 @@ export default function AccountsPayableAutomationAUPage() {
                 only the access each step needs, and never has access to make payments.
               </p>
             </div>
-            <div className="tablewrap">
+            <div className="tablewrap" tabIndex={0} role="region" aria-label="Scrollable comparison table">
               <table>
                 <thead>
                   <tr>
@@ -650,7 +652,7 @@ export default function AccountsPayableAutomationAUPage() {
 
         {/* ═══ PHOTOBREAK (placeholder) ═══ */}
         <VisualSlot page={PAGE_KEY} slot="photobreak" kind="illustration" ratio="12:5" className="photobreak"
-          subject="AI-generated model: a long rail of white invoice cards moving left to right through read, check, match and approve stations, one orange card lifted off the rail towards a small human figure" />
+          subject="AI-generated model: a long rail of white invoice cards moving left to right through read, check, match and approve stations, one orange card lifted off the rail towards a small human figure" src={null}><InvoiceRail /></VisualSlot>
 
         {/* ═══ HOW WE BUILD IT → process timeline ═══ */}
         <section className="section process" id="how-we-build">
@@ -664,7 +666,7 @@ export default function AccountsPayableAutomationAUPage() {
                   five. Open any step to see what happens in it.
                 </p>
               </div>
-              <VisualSlot page={PAGE_KEY} slot="process" kind="photo" ratio="3:2" captionClassName="figcap"
+              <VisualSlot page={PAGE_KEY} slot="process" src="/images/au/visual-pass-2026-10-03/accounts-payable-automation/process-1280.webp" srcSet="/images/au/visual-pass-2026-10-03/accounts-payable-automation/process-640.webp 640w, /images/au/visual-pass-2026-10-03/accounts-payable-automation/process-1280.webp 1280w" sizes="(max-width: 820px) 100vw, 560px" kind="photo" ratio="3:2" captionClassName="figcap"
                 subject="A FactoryJet engineer and the bookkeeper of an Australian trade supplier sorting printed supplier invoices into piles on a meeting table, laptop screen facing them, no readable text or logos"
                 caption="Step one is tracing real invoices from arrival to payment with the person who pays your bills. The rules you sign off come from that session." />
             </div>
@@ -693,7 +695,7 @@ export default function AccountsPayableAutomationAUPage() {
         {/* ═══ FRAUD CONTROLS → definition module ═══ */}
         <section className="definition" id="fraud-controls">
           <div>
-            <VisualSlot page={PAGE_KEY} slot="definition" kind="photo" ratio="3:2" className="definition-image"
+            <VisualSlot page={PAGE_KEY} slot="definition" src="/images/au/visual-pass-2026-10-03/accounts-payable-automation/definition-1280.webp" srcSet="/images/au/visual-pass-2026-10-03/accounts-payable-automation/definition-640.webp 640w, /images/au/visual-pass-2026-10-03/accounts-payable-automation/definition-1280.webp 1280w" sizes="(max-width: 820px) 100vw, 560px" kind="photo" ratio="3:2" className="definition-image"
               subject="A finance officer at an Australian small business on a desk phone calling a supplier to confirm bank details, a laptop open beside her with the screen facing her, no readable text or logos"
               captionClassName="figcap"
               caption="The simplest control against payment redirection scams: call the supplier on a number you already hold. The agent makes sure that call happens before approval." />
@@ -757,7 +759,7 @@ export default function AccountsPayableAutomationAUPage() {
                 </div></div>
               </div>
               <VisualSlot page={PAGE_KEY} slot="facts-2" kind="diagram" ratio="3:2" className="factphoto"
-                subject="AI-generated model: two paths merging into one, a white PDF envelope path with a reading station and an orange Peppol eInvoice path that skips it, both joining one row of check, match and approve stations" />
+                subject="AI-generated model: two paths merging into one, a white PDF envelope path with a reading station and an orange Peppol eInvoice path that skips it, both joining one row of check, match and approve stations" src={null}><InvoiceMerge /></VisualSlot>
             </div>
           </div>
         </section>
@@ -774,7 +776,7 @@ export default function AccountsPayableAutomationAUPage() {
                 </p>
               </div>
             </div>
-            <div className="tablewrap">
+            <div className="tablewrap" tabIndex={0} role="region" aria-label="Scrollable comparison table">
               <table>
                 <thead>
                   <tr>

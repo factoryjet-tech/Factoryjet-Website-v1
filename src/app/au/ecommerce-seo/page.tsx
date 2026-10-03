@@ -8,6 +8,7 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import AuFaq from '../components/AuFaq';
 import VisualSlot from '../components/VisualSlot';
+import CatalogueDiagram from './CatalogueDiagram';
 import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
 import './page.css';
@@ -346,7 +347,7 @@ export default function EcommerceSeoAUPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <SiteHeader locale="au" logoHref="/au" />
-      <div className="aiAgentPage auPage">
+      <div className="aiAgentPage auPage auEcommerceSeoVisual">
       <nav className="crumbs" aria-label="Breadcrumb">
         <div className="wrap">
           {crumbs.map((item, index) => (
@@ -398,6 +399,7 @@ export default function EcommerceSeoAUPage() {
                   <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M3 6a5 5 0 1 1 0 4M3 2v4h4" /></svg>
                 </button>
               </div>
+              <div className="hero-catalogue-art" aria-hidden="true"><CatalogueDiagram /></div>
               <div className="specpanel-body" role="radiogroup" aria-label="Explore where traffic comes from">
                 <label className="specrow run">
                   <input className="workflow-select" type="radio" name="ecomseo-au-step" value="1" />
@@ -491,7 +493,7 @@ export default function EcommerceSeoAUPage() {
                   </p>
                 </div>
               </div>
-              <VisualSlot page={PAGE_KEY} slot="facts" kind="photo" ratio="3:2" className="factphoto"
+              <VisualSlot page={PAGE_KEY} slot="facts" src="/images/au/visual-pass-2026-10-03/ecommerce-seo/catalogue-planning-1280.webp" srcSet="/images/au/visual-pass-2026-10-03/ecommerce-seo/catalogue-planning-640.webp 640w, /images/au/visual-pass-2026-10-03/ecommerce-seo/catalogue-planning-1280.webp 1280w, /images/au/visual-pass-2026-10-03/ecommerce-seo/catalogue-planning-1920.webp 1920w" sizes="(max-width: 820px) calc(100vw - 32px), 560px" kind="photo" ratio="3:2" className="factphoto"
                 subject="A homewares store founder and an ecommerce SEO consultant arranging blank cards into a category tree on a wall">
                 <img src="/images/au/ecommerce-seo/ecommerce-seo-hero.webp" width={1400} height={933} loading="lazy" decoding="async" alt="A Melbourne homewares founder and an ecommerce SEO consultant arrange blank cards into a category tree on the wall of her warehouse office, planning the store’s structure" />
               </VisualSlot>
@@ -517,7 +519,7 @@ export default function EcommerceSeoAUPage() {
                 return (
                   <div key={a.t} className={`cap cap-${i + 1}`}>
                     <div className="caphead"><span className="capid">CAP‑{n}</span><svg {...CAP_ICON}><path d={AREA_ICONS[i]} /></svg></div>
-                    <VisualSlot page={PAGE_KEY} slot={`capability-${n}`} kind="diagram" ratio="11:4" className="cap-diagram" subject={AREA_SUBJECTS[i]} />
+                    <VisualSlot page={PAGE_KEY} slot={`capability-${n}`} kind="diagram" ratio="11:4" className="cap-diagram" subject={AREA_SUBJECTS[i]} src={null}><CatalogueDiagram variant={i} /></VisualSlot>
                     <h3>{a.t}</h3>
                     <p>{a.d}</p>
                   </div>
@@ -598,7 +600,7 @@ export default function EcommerceSeoAUPage() {
                 </p>
               </div>
             </div>
-            <div className="tablewrap">
+            <div className="tablewrap" tabIndex={0} role="region" aria-label="Ecommerce SEO comparison, scroll horizontally to view all columns">
               <table>
                 <thead>
                   <tr>
@@ -631,7 +633,7 @@ export default function EcommerceSeoAUPage() {
         {/* ═══ CATEGORY VS PRODUCT → definition module (image + "who owns which search" left, copy right) ═══ */}
         <section className="definition" id="page-structure">
           <div>
-            <VisualSlot page={PAGE_KEY} slot="definition" kind="photo" ratio="3:2" className="definition-image"
+            <VisualSlot page={PAGE_KEY} slot="definition" imageAlt="AI-generated editorial still life of homewares, a hiking boot and blank category cards connected by orange thread, illustrating catalogue hierarchy" src="/images/au/visual-pass-2026-10-03/ecommerce-seo/catalogue-structure-1280.webp" srcSet="/images/au/visual-pass-2026-10-03/ecommerce-seo/catalogue-structure-640.webp 640w, /images/au/visual-pass-2026-10-03/ecommerce-seo/catalogue-structure-1280.webp 1280w, /images/au/visual-pass-2026-10-03/ecommerce-seo/catalogue-structure-1920.webp 1920w" sizes="(max-width: 820px) calc(100vw - 32px), 560px" kind="photo" ratio="3:2" className="definition-image"
               subject="A small online retailer setting up original product photos of a linen throw and a mug on a white backdrop">
               <img src="/images/au/ecommerce-seo/ecommerce-seo-product.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A small online retailer arranges a folded linen throw and an orange mug on a white paper backdrop in a bright waterside studio, with a camera on a tripod ready for original product photos" />
             </VisualSlot>
@@ -769,7 +771,7 @@ export default function EcommerceSeoAUPage() {
         {/* ═══ AI SEARCH FOR PRODUCTS → definition module (image left, copy right) ═══ */}
         <section className="definition" id="ai-search">
           <div>
-            <VisualSlot page={PAGE_KEY} slot="definition-2" kind="photo" ratio="3:2" className="definition-image"
+            <VisualSlot page={PAGE_KEY} slot="definition-2" src="/images/au/visual-pass-2026-10-03/ecommerce-seo/product-search-1280.webp" srcSet="/images/au/visual-pass-2026-10-03/ecommerce-seo/product-search-640.webp 640w, /images/au/visual-pass-2026-10-03/ecommerce-seo/product-search-1280.webp 1280w, /images/au/visual-pass-2026-10-03/ecommerce-seo/product-search-1920.webp 1920w" sizes="(max-width: 820px) calc(100vw - 32px), 560px" kind="photo" ratio="3:2" className="definition-image"
               subject="A shopper on his sofa asking an AI assistant on his phone for shoe recommendations">
               <img src="/images/au/ecommerce-seo/ecommerce-seo-aisearch.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over the shoulder of a Brisbane shopper on his sofa asking an AI assistant on his phone for shoe recommendations, with three product photos in the chat" />
             </VisualSlot>
@@ -846,7 +848,7 @@ export default function EcommerceSeoAUPage() {
                   </div>
                 </div>
               </div>
-              <VisualSlot page={PAGE_KEY} slot="facts-2" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
+              <VisualSlot page={PAGE_KEY} slot="facts-2" src="/images/au/visual-pass-2026-10-03/ecommerce-seo/migration-review-1280.webp" srcSet="/images/au/visual-pass-2026-10-03/ecommerce-seo/migration-review-640.webp 640w, /images/au/visual-pass-2026-10-03/ecommerce-seo/migration-review-1280.webp 1280w, /images/au/visual-pass-2026-10-03/ecommerce-seo/migration-review-1920.webp 1920w" sizes="(max-width: 820px) calc(100vw - 32px), 560px" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
                 subject="An engineer reviewing a redirect map that links old store pages to new ones across two monitors"
                 caption="Every old URL with traffic or links gets one new home, tested on a copy of the store before launch.">
                 <img src="/images/au/ecommerce-seo/ecommerce-seo-migration.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over the shoulder of a FactoryJet engineer in a Sydney office reviewing a redirect map that links old store pages to new ones across two monitors" />
@@ -897,7 +899,7 @@ export default function EcommerceSeoAUPage() {
                 not price.
               </p>
             </div>
-            <div className="tablewrap">
+            <div className="tablewrap" tabIndex={0} role="region" aria-label="Ecommerce SEO comparison, scroll horizontally to view all columns">
               <table>
                 <thead>
                   <tr>

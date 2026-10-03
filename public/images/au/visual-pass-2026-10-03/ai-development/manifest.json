@@ -1,0 +1,118 @@
+{
+  "reviewed": "2026-10-03 contact sheet /tmp/au-b6-a-assets.jpg",
+  "purpose": "Responsive derivatives of existing illustrative artwork, no new proof",
+  "images": [
+    {
+      "slot": "facts",
+      "source": "generated/ai-development/facts.webp",
+      "width": 640,
+      "file": "facts-640.webp",
+      "bytes": 29110
+    },
+    {
+      "slot": "facts",
+      "source": "generated/ai-development/facts.webp",
+      "width": 1280,
+      "file": "facts-1280.webp",
+      "bytes": 65616
+    },
+    {
+      "slot": "facts",
+      "source": "generated/ai-development/facts.webp",
+      "width": 1440,
+      "file": "facts-1440.webp",
+      "bytes": 87252
+    },
+    {
+      "slot": "facts-2",
+      "source": "generated/ai-development/facts-2.webp",
+      "width": 640,
+      "file": "facts-2-640.webp",
+      "bytes": 29958
+    },
+    {
+      "slot": "facts-2",
+      "source": "generated/ai-development/facts-2.webp",
+      "width": 1280,
+      "file": "facts-2-1280.webp",
+      "bytes": 67932
+    },
+    {
+      "slot": "facts-2",
+      "source": "generated/ai-development/facts-2.webp",
+      "width": 1440,
+      "file": "facts-2-1440.webp",
+      "bytes": 87746
+    },
+    {
+      "slot": "facts-5",
+      "source": "generated/ai-development/facts-5.webp",
+      "width": 640,
+      "file": "facts-5-640.webp",
+      "bytes": 34420
+    },
+    {
+      "slot": "facts-5",
+      "source": "generated/ai-development/facts-5.webp",
+      "width": 1280,
+      "file": "facts-5-1280.webp",
+      "bytes": 77294
+    },
+    {
+      "slot": "facts-5",
+      "source": "generated/ai-development/facts-5.webp",
+      "width": 1440,
+      "file": "facts-5-1440.webp",
+      "bytes": 102812
+    },
+    {
+      "slot": "process",
+      "source": "generated/ai-development/process.webp",
+      "width": 640,
+      "file": "process-640.webp",
+      "bytes": 32606
+    },
+    {
+      "slot": "process",
+      "source": "generated/ai-development/process.webp",
+      "width": 1280,
+      "file": "process-1280.webp",
+      "bytes": 77116
+    },
+    {
+      "slot": "process",
+      "source": "generated/ai-development/process.webp",
+      "width": 1440,
+      "file": "process-1440.webp",
+      "bytes": 104124
+    },
+    {
+      "slot": "facts-3",
+      "source": "ai-development/ai-development-orders.webp",
+      "width": 640,
+      "file": "facts-3-640.webp",
+      "bytes": 33030
+    },
+    {
+      "slot": "facts-3",
+      "source": "ai-development/ai-development-orders.webp",
+      "width": 1200,
+      "file": "facts-3-1200.webp",
+      "bytes": 79310
+    },
+    {
+      "slot": "facts-4",
+      "source": "ai-development/ai-development-privacy.webp",
+      "width": 640,
+      "file": "facts-4-640.webp",
+      "bytes": 30684
+    },
+    {
+      "slot": "facts-4",
+      "source": "ai-development/ai-development-privacy.webp",
+      "width": 1200,
+      "file": "facts-4-1200.webp",
+      "bytes": 78322
+    }
+  ]
+}

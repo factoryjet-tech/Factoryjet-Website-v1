@@ -162,3 +162,42 @@ export const US_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
     ],
   },
 ];
+
+/** The compact footer is a curated view, not a second copy of link labels.
+ * The complete array above remains server-rendered in the directory disclosure.
+ * This preserves every crawlable destination, including chrome-only pages. */
+function featuredLinks(paths: ReadonlyArray<string>) {
+  return paths.map((href) => {
+    const link = US_FOOTER_COLUMNS.flatMap((column) => column.links).find((item) => item.href === href);
+    if (!link) throw new Error(`Unknown US footer destination: ${href}`);
+    return link;
+  });
+}
+
+export const US_FOOTER_FEATURED_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
+  {
+    heading: 'Commerce',
+    links: featuredLinks([
+      '/services/ecommerce-development', '/services/dtc-ecommerce-agency',
+      '/b2b-ecommerce', '/omnichannel-commerce', '/replatforming', '/services/ecommerce-audit',
+    ]),
+  },
+  {
+    heading: 'AI Agents & Automation',
+    links: featuredLinks([
+      '/services/ai-consulting', '/services/ai-development', '/services/ai-agent-development',
+      '/services/ai-automation', '/services/ai-integration-services', '/services/ai-workflow-automation',
+    ]),
+  },
+  {
+    heading: 'Services & SEO',
+    links: featuredLinks([
+      '/services/web-design', '/services/webflow-development', '/services/website-maintenance',
+      '/services/technical-seo', '/services/ai-seo', '/services/wordpress-development',
+    ]),
+  },
+  {
+    heading: 'Company',
+    links: featuredLinks(['/about', '/case-studies', '/portfolio', '/blog', '/faq', '/contact']),
+  },
+];

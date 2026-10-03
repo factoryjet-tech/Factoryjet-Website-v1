@@ -12,6 +12,9 @@ import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
 import '../au-hub.css';
 
+import './visual.css';
+import { ExecutionPath, ExecutionJobDiagram } from './ExecutionDiagram';
+
 const CANONICAL = 'https://factoryjet.com/au/ai-agents';
 const UPDATED = '2026-09-26';
 const TITLE = 'AI Automation Agency Australia | AI Agents | FactoryJet';
@@ -402,7 +405,7 @@ export default function AiAgentsAUPage() {
 
       <SiteHeader locale="au" logoHref="/au" />
 
-      <div className="aiAgentPage auPage">
+      <div className="aiAgentPage auPage auExecutionVisual">
       <nav className="crumbs" aria-label="Breadcrumb">
         <div className="wrap">
           {crumbs.map((item, index) => (
@@ -453,6 +456,7 @@ export default function AiAgentsAUPage() {
                   <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M3 6a5 5 0 1 1 0 4M3 2v4h4" /></svg>
                 </button>
               </div>
+              <ExecutionPath compact />
               <div className="specpanel-body" role="radiogroup" aria-label="Explore what every build includes">
                 <label className="specrow run">
                   <input className="workflow-select" type="radio" name="agents-step" value="1" />
@@ -546,7 +550,7 @@ export default function AiAgentsAUPage() {
                   </p>
                 </div>
               </div>
-              <VisualSlot page={PAGE_KEY} slot="facts" kind="photo" ratio="3:2" className="factphoto"
+              <VisualSlot page={PAGE_KEY} slot="facts" src="/images/au/visual-pass-2026-10-03/ai-agents/facts-1440.webp" srcSet="/images/au/visual-pass-2026-10-03/ai-agents/facts-640.webp 640w, /images/au/visual-pass-2026-10-03/ai-agents/facts-1280.webp 1280w, /images/au/visual-pass-2026-10-03/ai-agents/facts-1440.webp 1440w" sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1080px) 40vw, 480px" kind="photo" ratio="3:2" className="factphoto"
                 subject="A Sydney business owner approving the next step of an AI agent workflow on his laptop while his operations manager looks on">
                 <img src="/images/au/ai-agents/ai-agents-hero.webp" width={1400} height={933} loading="lazy" decoding="async" alt="Over the shoulder of a Sydney business owner approving the next step of an AI agent workflow on his laptop while his operations manager looks on" />
               </VisualSlot>
@@ -570,7 +574,7 @@ export default function AiAgentsAUPage() {
               {AGENCY_JOBS.map((j, i) => (
                 <div key={j.n} className={`cap cap-${i + 1}`}>
                   <div className="caphead"><span className="capid">CAP‑{j.n}</span><svg {...CAP_ICON}><path d={JOB_ICONS[i]} /></svg></div>
-                  <VisualSlot page={PAGE_KEY} slot={`capability-${j.n}`} kind="diagram" ratio="11:4" className="cap-diagram" subject={JOB_SUBJECTS[i]} />
+                  <VisualSlot src={null} page={PAGE_KEY} slot={`capability-${j.n}`} kind="diagram" ratio="11:4" className="cap-diagram" subject={JOB_SUBJECTS[i]}><ExecutionJobDiagram index={i} /></VisualSlot>
                   <h3>{j.t}</h3>
                   <p>{j.d}</p>
                 </div>
@@ -607,10 +611,10 @@ export default function AiAgentsAUPage() {
                   </div>
                 ))}
               </div>
-              <VisualSlot page={PAGE_KEY} slot="facts-2" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
+              <VisualSlot page={PAGE_KEY} slot="facts-2" src="/images/au/visual-pass-2026-10-03/ai-agents/facts-2-1200.webp" srcSet="/images/au/visual-pass-2026-10-03/ai-agents/facts-2-640.webp 640w, /images/au/visual-pass-2026-10-03/ai-agents/facts-2-1200.webp 1200w" sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1080px) 40vw, 480px" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
                 subject="A Perth property manager at the agency counter checking maintenance requests an AI agent has sorted, on a tablet"
                 caption="A tenant emails about a leaking tap at 9pm. The agent logs the request in the property system, suggests the right tradie and drafts the reply. The property manager approves both in the morning.">
-                <img src="/images/au/ai-agents/ai-agents-property.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over the shoulder of a Perth property manager at the agency counter checking maintenance requests an AI agent has sorted, on a tablet" />
+                <img src="/images/au/visual-pass-2026-10-03/ai-agents/facts-2-1200.webp" srcSet="/images/au/visual-pass-2026-10-03/ai-agents/facts-2-640.webp 640w, /images/au/visual-pass-2026-10-03/ai-agents/facts-2-1200.webp 1200w" sizes="(max-width: 820px) calc(100vw - 40px), 480px" width={1200} height={800} loading="lazy" decoding="async" alt="Over the shoulder of a Perth property manager at the agency counter checking maintenance requests an AI agent has sorted, on a tablet" />
               </VisualSlot>
             </div>
           </div>
@@ -629,10 +633,10 @@ export default function AiAgentsAUPage() {
                   only the access the job needs.
                 </p>
               </div>
-              <VisualSlot page={PAGE_KEY} slot="platforms" kind="photo" ratio="3:2" captionClassName="figcap"
+              <VisualSlot page={PAGE_KEY} slot="platforms" src="/images/au/visual-pass-2026-10-03/ai-agents/platforms-1200.webp" srcSet="/images/au/visual-pass-2026-10-03/ai-agents/platforms-640.webp 640w, /images/au/visual-pass-2026-10-03/ai-agents/platforms-1200.webp 1200w" sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1080px) 40vw, 480px" kind="photo" ratio="3:2" captionClassName="figcap"
                 subject="An Adelaide bookkeeper comparing a paper supplier invoice with the draft bill an AI agent prepared on his second monitor"
                 caption="The agent reads the supplier invoice and prepares a draft bill in Xero or MYOB. The bookkeeper checks it against the paper and approves. Nothing posts on its own.">
-                <img src="/images/au/ai-agents/ai-agents-integrations.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over the shoulder of an Adelaide bookkeeper comparing a paper supplier invoice with the draft bill an AI agent prepared on his second monitor" />
+                <img src="/images/au/visual-pass-2026-10-03/ai-agents/platforms-1200.webp" srcSet="/images/au/visual-pass-2026-10-03/ai-agents/platforms-640.webp 640w, /images/au/visual-pass-2026-10-03/ai-agents/platforms-1200.webp 1200w" sizes="(max-width: 820px) calc(100vw - 40px), 480px" width={1200} height={800} loading="lazy" decoding="async" alt="Over the shoulder of an Adelaide bookkeeper comparing a paper supplier invoice with the draft bill an AI agent prepared on his second monitor" />
               </VisualSlot>
             </div>
             <div className="platlist" role="list">
@@ -684,10 +688,10 @@ export default function AiAgentsAUPage() {
                   </ul>
                 </div></div>
               </div>
-              <VisualSlot page={PAGE_KEY} slot="facts-3" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
+              <VisualSlot page={PAGE_KEY} slot="facts-3" src="/images/au/visual-pass-2026-10-03/ai-agents/facts-3-1200.webp" srcSet="/images/au/visual-pass-2026-10-03/ai-agents/facts-3-640.webp 640w, /images/au/visual-pass-2026-10-03/ai-agents/facts-3-1200.webp 1200w" sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1080px) 40vw, 480px" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
                 subject="A Melbourne operations lead approving an action an AI agent drafted, on her phone"
                 caption="Approval arrives where your team already is. One tap to approve, one to send it back with a note.">
-                <img src="/images/au/ai-agents/ai-agents-approval.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over the shoulder of a Melbourne operations lead approving an action an AI agent drafted, on her phone, with a coffee in her other hand" />
+                <img src="/images/au/visual-pass-2026-10-03/ai-agents/facts-3-1200.webp" srcSet="/images/au/visual-pass-2026-10-03/ai-agents/facts-3-640.webp 640w, /images/au/visual-pass-2026-10-03/ai-agents/facts-3-1200.webp 1200w" sizes="(max-width: 820px) calc(100vw - 40px), 480px" width={1200} height={800} loading="lazy" decoding="async" alt="Over the shoulder of a Melbourne operations lead approving an action an AI agent drafted, on her phone, with a coffee in her other hand" />
               </VisualSlot>
             </div>
           </div>
@@ -695,7 +699,7 @@ export default function AiAgentsAUPage() {
 
         {/* ═══ PHOTOBREAK (US template visual, no AU image yet) ═══ */}
         <VisualSlot page={PAGE_KEY} slot="photobreak" kind="illustration" ratio="12:5" className="photobreak"
-          subject="AI-generated model: white software tiles on a long table connected by orange cables to one small agent block, a hand resting on an approve switch" />
+          subject="AI-generated model: white software tiles on a long table connected by orange cables to one small agent block, a hand resting on an approve switch" src={null}><ExecutionPath /></VisualSlot>
 
         {/* ═══ BUILD PROCESS → process timeline (steps stay openable, as the copy says) ═══ */}
         <section className="section process" id="how-we-build">
@@ -709,7 +713,7 @@ export default function AiAgentsAUPage() {
                   you can stop after any of them.
                 </p>
               </div>
-              <VisualSlot page={PAGE_KEY} slot="process" kind="photo" ratio="3:2" captionClassName="figcap"
+              <VisualSlot page={PAGE_KEY} slot="process" src="/images/au/visual-pass-2026-10-03/ai-agents/process-1440.webp" srcSet="/images/au/visual-pass-2026-10-03/ai-agents/process-640.webp 640w, /images/au/visual-pass-2026-10-03/ai-agents/process-1280.webp 1280w, /images/au/visual-pass-2026-10-03/ai-agents/process-1440.webp 1440w" sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1080px) 40vw, 480px" kind="photo" ratio="3:2" captionClassName="figcap"
                 subject="A FactoryJet engineer and a physiotherapy clinic owner mapping her booking process with sticky notes on a large sheet of paper"
                 caption="Step one is always paper, not code. We lay out the process with the people who do it, and the right first agent usually becomes obvious within the hour.">
                 <img src="/images/au/ai-agents/ai-agents-workshop.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A FactoryJet engineer and a Brisbane physiotherapy clinic owner map her booking process with sticky notes and arrows on a large sheet of paper" />
@@ -749,7 +753,7 @@ export default function AiAgentsAUPage() {
                 option to the job.
               </p>
             </div>
-            <div className="tablewrap">
+            <div className="tablewrap" tabIndex={0} role="region" aria-label="Scrollable comparison table">
               <table>
                 <thead>
                   <tr>
@@ -785,7 +789,7 @@ export default function AiAgentsAUPage() {
               <p>
                 Open the description that sounds most like your business. The honest answer is not always us.
               </p>
-              <VisualSlot page={PAGE_KEY} slot="proof" kind="illustration" ratio="3:2"
+              <VisualSlot page={PAGE_KEY} slot="proof" src="/images/au/visual-pass-2026-10-03/ai-agents/proof-1440.webp" srcSet="/images/au/visual-pass-2026-10-03/ai-agents/proof-640.webp 640w, /images/au/visual-pass-2026-10-03/ai-agents/proof-1280.webp 1280w, /images/au/visual-pass-2026-10-03/ai-agents/proof-1440.webp 1440w" sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1080px) 40vw, 480px" kind="illustration" ratio="3:2"
                 subject="AI-generated model: six white signposts at a fork, one orange sign pointing to the right kind of AI help" />
             </div>
             <div className="ventries">
@@ -865,10 +869,10 @@ export default function AiAgentsAUPage() {
                   </ul>
                 </div></div>
               </div>
-              <VisualSlot page={PAGE_KEY} slot="facts-4" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
+              <VisualSlot page={PAGE_KEY} slot="facts-4" src="/images/au/visual-pass-2026-10-03/ai-agents/facts-4-1200.webp" srcSet="/images/au/visual-pass-2026-10-03/ai-agents/facts-4-640.webp 640w, /images/au/visual-pass-2026-10-03/ai-agents/facts-4-1200.webp 1200w" sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1080px) 40vw, 480px" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
                 subject="Two colleagues in a Canberra meeting room reviewing a printed data flow diagram before an AI agent is built"
                 caption="Privacy is planned on paper first: which information the agent sees, where it goes, and who can check it.">
-                <img src="/images/au/ai-agents/ai-agents-privacy.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Two colleagues in a calm Canberra meeting room review a printed data flow diagram before any AI agent is built" />
+                <img src="/images/au/visual-pass-2026-10-03/ai-agents/facts-4-1200.webp" srcSet="/images/au/visual-pass-2026-10-03/ai-agents/facts-4-640.webp 640w, /images/au/visual-pass-2026-10-03/ai-agents/facts-4-1200.webp 1200w" sizes="(max-width: 820px) calc(100vw - 40px), 480px" width={1200} height={800} loading="lazy" decoding="async" alt="Two colleagues in a calm Canberra meeting room review a printed data flow diagram before any AI agent is built" />
               </VisualSlot>
             </div>
             <div className="platlist span-all" role="list">
@@ -980,7 +984,7 @@ export default function AiAgentsAUPage() {
         {/* ═══ WORKED EXAMPLE (warehouse / operations story) → definition module ═══ */}
         <section className="definition" id="worked-example">
           <div>
-            <VisualSlot page={PAGE_KEY} slot="definition" kind="photo" ratio="3:2" className="definition-image"
+            <VisualSlot page={PAGE_KEY} slot="definition" src="/images/au/visual-pass-2026-10-03/ai-agents/definition-1440.webp" srcSet="/images/au/visual-pass-2026-10-03/ai-agents/definition-640.webp 640w, /images/au/visual-pass-2026-10-03/ai-agents/definition-1280.webp 1280w, /images/au/visual-pass-2026-10-03/ai-agents/definition-1440.webp 1440w" sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1080px) 40vw, 480px" kind="photo" ratio="3:2" className="definition-image"
               subject="A customer service team member in an online store's back office working through an order inbox an AI agent has already sorted">
               <img src="/images/au/ai-agents/ai-agents-orders.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over the shoulder of a customer service team member in a Melbourne online store’s back office, working through an order inbox an AI agent has already sorted" />
             </VisualSlot>

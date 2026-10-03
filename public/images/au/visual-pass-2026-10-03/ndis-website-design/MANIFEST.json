@@ -1,0 +1,86 @@
+[
+  {
+    "source": "website/public/images/au/generated/ndis-website-design/facts.webp",
+    "output": "website/public/images/au/visual-pass-2026-10-03/ndis-website-design/facts-640.webp",
+    "width": 640,
+    "height": 427,
+    "bytes": 35634
+  },
+  {
+    "source": "website/public/images/au/generated/ndis-website-design/facts.webp",
+    "output": "website/public/images/au/visual-pass-2026-10-03/ndis-website-design/facts-1280.webp",
+    "width": 1280,
+    "height": 853,
+    "bytes": 84672
+  },
+  {
+    "source": "website/public/images/au/generated/ndis-website-design/facts.webp",
+    "output": "website/public/images/au/visual-pass-2026-10-03/ndis-website-design/facts-1440.webp",
+    "width": 1440,
+    "height": 960,
+    "bytes": 113932
+  },
+  {
+    "source": "website/public/images/au/generated/ndis-website-design/proof.webp",
+    "output": "website/public/images/au/visual-pass-2026-10-03/ndis-website-design/proof-640.webp",
+    "width": 640,
+    "height": 427,
+    "bytes": 23968
+  },
+  {
+    "source": "website/public/images/au/generated/ndis-website-design/proof.webp",
+    "output": "website/public/images/au/visual-pass-2026-10-03/ndis-website-design/proof-1280.webp",
+    "width": 1280,
+    "height": 853,
+    "bytes": 52938
+  },
+  {
+    "source": "website/public/images/au/generated/ndis-website-design/proof.webp",
+    "output": "website/public/images/au/visual-pass-2026-10-03/ndis-website-design/proof-1440.webp",
+    "width": 1440,
+    "height": 960,
+    "bytes": 66580
+  },
+  {
+    "source": "website/public/images/au/generated/ndis-website-design/process.webp",
+    "output": "website/public/images/au/visual-pass-2026-10-03/ndis-website-design/process-640.webp",
+    "width": 640,
+    "height": 427,
+    "bytes": 30348
+  },
+  {
+    "source": "website/public/images/au/generated/ndis-website-design/process.webp",
+    "output": "website/public/images/au/visual-pass-2026-10-03/ndis-website-design/process-1280.webp",
+    "width": 1280,
+    "height": 853,
+    "bytes": 71340
+  },
+  {
+    "source": "website/public/images/au/generated/ndis-website-design/process.webp",
+    "output": "website/public/images/au/visual-pass-2026-10-03/ndis-website-design/process-1440.webp",
+    "width": 1440,
+    "height": 960,
+    "bytes": 92620
+  },
+  {
+    "source": "website/public/images/au/generated/ndis-website-design/definition.webp",
+    "output": "website/public/images/au/visual-pass-2026-10-03/ndis-website-design/definition-640.webp",
+    "width": 640,
+    "height": 427,
+    "bytes": 29166
+  },
+  {
+    "source": "website/public/images/au/generated/ndis-website-design/definition.webp",
+    "output": "website/public/images/au/visual-pass-2026-10-03/ndis-website-design/definition-1280.webp",
+    "width": 1280,
+    "height": 853,
+    "bytes": 70202
+  },
+  {
+    "source": "website/public/images/au/generated/ndis-website-design/definition.webp",
+    "output": "website/public/images/au/visual-pass-2026-10-03/ndis-website-design/definition-1440.webp",
+    "width": 1440,
+    "height": 960,
+    "bytes": 92016
+  }
+]

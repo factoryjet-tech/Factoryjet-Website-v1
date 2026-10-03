@@ -1,0 +1,86 @@
+[
+  {
+    "source": "website/public/images/au/generated/local-seo/facts.webp",
+    "output": "website/public/images/au/visual-pass-2026-10-03/local-seo/facts-640.webp",
+    "width": 640,
+    "height": 427,
+    "bytes": 42054
+  },
+  {
+    "source": "website/public/images/au/generated/local-seo/facts.webp",
+    "output": "website/public/images/au/visual-pass-2026-10-03/local-seo/facts-1280.webp",
+    "width": 1280,
+    "height": 853,
+    "bytes": 95550
+  },
+  {
+    "source": "website/public/images/au/generated/local-seo/facts.webp",
+    "output": "website/public/images/au/visual-pass-2026-10-03/local-seo/facts-1440.webp",
+    "width": 1440,
+    "height": 960,
+    "bytes": 109168
+  },
+  {
+    "source": "website/public/images/au/generated/local-seo/proof.webp",
+    "output": "website/public/images/au/visual-pass-2026-10-03/local-seo/proof-640.webp",
+    "width": 640,
+    "height": 427,
+    "bytes": 40774
+  },
+  {
+    "source": "website/public/images/au/generated/local-seo/proof.webp",
+    "output": "website/public/images/au/visual-pass-2026-10-03/local-seo/proof-1280.webp",
+    "width": 1280,
+    "height": 853,
+    "bytes": 94534
+  },
+  {
+    "source": "website/public/images/au/generated/local-seo/proof.webp",
+    "output": "website/public/images/au/visual-pass-2026-10-03/local-seo/proof-1440.webp",
+    "width": 1440,
+    "height": 960,
+    "bytes": 107800
+  },
+  {
+    "source": "website/public/images/au/generated/local-seo/process.webp",
+    "output": "website/public/images/au/visual-pass-2026-10-03/local-seo/process-640.webp",
+    "width": 640,
+    "height": 427,
+    "bytes": 28674
+  },
+  {
+    "source": "website/public/images/au/generated/local-seo/process.webp",
+    "output": "website/public/images/au/visual-pass-2026-10-03/local-seo/process-1280.webp",
+    "width": 1280,
+    "height": 853,
+    "bytes": 66292
+  },
+  {
+    "source": "website/public/images/au/generated/local-seo/process.webp",
+    "output": "website/public/images/au/visual-pass-2026-10-03/local-seo/process-1440.webp",
+    "width": 1440,
+    "height": 960,
+    "bytes": 75064
+  },
+  {
+    "source": "website/public/images/au/generated/local-seo/definition.webp",
+    "output": "website/public/images/au/visual-pass-2026-10-03/local-seo/definition-640.webp",
+    "width": 640,
+    "height": 427,
+    "bytes": 29278
+  },
+  {
+    "source": "website/public/images/au/generated/local-seo/definition.webp",
+    "output": "website/public/images/au/visual-pass-2026-10-03/local-seo/definition-1280.webp",
+    "width": 1280,
+    "height": 853,
+    "bytes": 70048
+  },
+  {
+    "source": "website/public/images/au/generated/local-seo/definition.webp",
+    "output": "website/public/images/au/visual-pass-2026-10-03/local-seo/definition-1440.webp",
+    "width": 1440,
+    "height": 960,
+    "bytes": 81014
+  }
+]

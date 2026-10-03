@@ -1,0 +1,89 @@
+{
+  "purpose": "Route-owned responsive derivatives of existing, previously reviewed AI illustrative artwork. These images are not customer evidence or a record of an actual engagement.",
+  "files": [
+    {
+      "file": "facts-640.webp",
+      "width": 640,
+      "height": 427,
+      "bytes": 25428,
+      "source": "public/images/au/generated/ai-consulting/facts.webp"
+    },
+    {
+      "file": "facts-1280.webp",
+      "width": 1280,
+      "height": 853,
+      "bytes": 57964,
+      "source": "public/images/au/generated/ai-consulting/facts.webp"
+    },
+    {
+      "file": "proof-640.webp",
+      "width": 640,
+      "height": 427,
+      "bytes": 27752,
+      "source": "public/images/au/generated/ai-consulting/proof.webp"
+    },
+    {
+      "file": "proof-1280.webp",
+      "width": 1280,
+      "height": 853,
+      "bytes": 64126,
+      "source": "public/images/au/generated/ai-consulting/proof.webp"
+    },
+    {
+      "file": "process-640.webp",
+      "width": 640,
+      "height": 427,
+      "bytes": 24204,
+      "source": "public/images/au/generated/ai-consulting/process.webp"
+    },
+    {
+      "file": "process-1280.webp",
+      "width": 1280,
+      "height": 853,
+      "bytes": 53620,
+      "source": "public/images/au/generated/ai-consulting/process.webp"
+    },
+    {
+      "file": "definition-640.webp",
+      "width": 640,
+      "height": 427,
+      "bytes": 29714,
+      "source": "public/images/au/generated/ai-consulting/definition.webp"
+    },
+    {
+      "file": "definition-1280.webp",
+      "width": 1280,
+      "height": 853,
+      "bytes": 67290,
+      "source": "public/images/au/generated/ai-consulting/definition.webp"
+    },
+    {
+      "file": "facts-2-640.webp",
+      "width": 640,
+      "height": 427,
+      "bytes": 27456,
+      "source": "public/images/au/ai-consulting/ai-consulting-privacy.webp"
+    },
+    {
+      "file": "facts-2-1280.webp",
+      "width": 1200,
+      "height": 800,
+      "bytes": 66406,
+      "source": "public/images/au/ai-consulting/ai-consulting-privacy.webp"
+    },
+    {
+      "file": "facts-3-640.webp",
+      "width": 640,
+      "height": 427,
+      "bytes": 31570,
+      "source": "public/images/au/ai-consulting/ai-consulting-questions.webp"
+    },
+    {
+      "file": "facts-3-1280.webp",
+      "width": 1200,
+      "height": 800,
+      "bytes": 74478,
+      "source": "public/images/au/ai-consulting/ai-consulting-questions.webp"
+    }
+  ]
+}

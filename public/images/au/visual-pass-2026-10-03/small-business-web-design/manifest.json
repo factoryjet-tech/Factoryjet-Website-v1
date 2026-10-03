@@ -1,0 +1,65 @@
+{
+  "provenance": "Responsive derivatives of reviewed existing AI-generated illustrative project artwork, not client proof.",
+  "images": [
+    {
+      "source": "public/images/au/generated/small-business-web-design/facts.webp",
+      "file": "public/images/au/visual-pass-2026-10-03/small-business-web-design/facts-640.webp",
+      "width": 640,
+      "bytes": 32200
+    },
+    {
+      "source": "public/images/au/generated/small-business-web-design/facts.webp",
+      "file": "public/images/au/visual-pass-2026-10-03/small-business-web-design/facts-1280.webp",
+      "width": 1280,
+      "bytes": 75322
+    },
+    {
+      "source": "public/images/au/generated/small-business-web-design/proof.webp",
+      "file": "public/images/au/visual-pass-2026-10-03/small-business-web-design/proof-640.webp",
+      "width": 640,
+      "bytes": 46206
+    },
+    {
+      "source": "public/images/au/generated/small-business-web-design/proof.webp",
+      "file": "public/images/au/visual-pass-2026-10-03/small-business-web-design/proof-1280.webp",
+      "width": 1280,
+      "bytes": 112744
+    },
+    {
+      "source": "public/images/au/generated/small-business-web-design/photobreak.webp",
+      "file": "public/images/au/visual-pass-2026-10-03/small-business-web-design/photobreak-640.webp",
+      "width": 640,
+      "bytes": 19218
+    },
+    {
+      "source": "public/images/au/generated/small-business-web-design/photobreak.webp",
+      "file": "public/images/au/visual-pass-2026-10-03/small-business-web-design/photobreak-1280.webp",
+      "width": 1280,
+      "bytes": 53750
+    },
+    {
+      "source": "public/images/au/generated/small-business-web-design/process.webp",
+      "file": "public/images/au/visual-pass-2026-10-03/small-business-web-design/process-640.webp",
+      "width": 640,
+      "bytes": 30526
+    },
+    {
+      "source": "public/images/au/generated/small-business-web-design/process.webp",
+      "file": "public/images/au/visual-pass-2026-10-03/small-business-web-design/process-1280.webp",
+      "width": 1280,
+      "bytes": 70204
+    },
+    {
+      "source": "public/images/au/generated/small-business-web-design/definition.webp",
+      "file": "public/images/au/visual-pass-2026-10-03/small-business-web-design/definition-640.webp",
+      "width": 640,
+      "bytes": 11948
+    },
+    {
+      "source": "public/images/au/generated/small-business-web-design/definition.webp",
+      "file": "public/images/au/visual-pass-2026-10-03/small-business-web-design/definition-1280.webp",
+      "width": 1280,
+      "bytes": 29394
+    }
+  ]
+}

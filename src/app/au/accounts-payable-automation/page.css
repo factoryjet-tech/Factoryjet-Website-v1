@@ -1,6 +1,160 @@
-/* /au/accounts-payable-automation only. While the definition slot is an unfilled placeholder
-   (hidden by au-page.css), collapse the definition module to one column so the copy does not sit
-   beside an empty column. Once the visual pass fills the slot, the Family A two-column layout returns. */
-.aiAgentPage.auPage .definition:not(:has(.vslot[data-visual-status='filled'])) { grid-template-columns: minmax(0,1fr); }
-.aiAgentPage.auPage .definition:not(:has(.vslot[data-visual-status='filled'])) > div:first-child { display: none; }
-.aiAgentPage.auPage .definition:not(:has(.vslot[data-visual-status='filled'])) .definition-copy { max-width: 740px; }
+/* Route-owned visual pass. Copy and integrations are unchanged. */
+
+.aiAgentPage.auPage.auApVisual .section { padding-block: clamp(60px,7vw,96px); }
+.aiAgentPage.auPage.auApVisual :is(h1,h2,h3) { overflow-wrap: break-word; text-wrap: balance; }
+.aiAgentPage.auPage.auApVisual .eyebrow { text-transform: none; letter-spacing: .02em; }
+.aiAgentPage.auPage.auApVisual :is(.factlabel,.specrow .idx,.specrow .tag,.vtag) { text-transform: none; letter-spacing: .01em; }
+.aiAgentPage.auPage.auApVisual .fact p { max-width: 70ch; font-size: 16px; }
+.aiAgentPage.auPage.auApVisual :is(.fact,.plat,.ventry,.tnode,.cap):hover { transform: none; box-shadow: none; }
+.aiAgentPage.auPage.auApVisual .vslot > img { animation: none; transform: none; filter: none; box-shadow: none; }
+.aiAgentPage.auPage.auApVisual .figcap { font-size: 13px; line-height: 1.7; }
+.aiAgentPage.auPage.auApVisual :is(button,summary,input,.tablewrap):focus-visible { outline: 2px solid var(--accent-text); outline-offset: 5px; }
+.aiAgentPage.auPage.auApVisual .hero { padding-block: 40px 60px; }
+.aiAgentPage.auPage.auApVisual .hero-grid { grid-template-columns: minmax(0,1.2fr) minmax(0,.9fr); gap: 48px; }
+.aiAgentPage.auPage.auApVisual .hero h1 { font-size: clamp(38px,4.1vw,55px); max-width: 22ch; }
+.aiAgentPage.auPage.auApVisual .hero .lead { font-size: 16px; }
+.aiAgentPage.auPage.auApVisual .specpanel { box-shadow: none; border-radius: 12px; background: white; }
+.aiAgentPage.auPage.auApVisual .specpanel-bar { background: var(--accent-wash); padding: 20px; gap: 9px; font-size: 10px; line-height: 1.6; }
+.aiAgentPage.auPage.auApVisual .specpanel-bar > span:nth-child(2) { flex: 1; }
+.aiAgentPage.auPage.auApVisual .sys { width: 100%; margin: 2px 0 0 16px; font-size: 10px; }
+.aiAgentPage.auPage.auApVisual .sys span { padding: 4px 6px; background: white; }
+.aiAgentPage.auPage.auApVisual .workflow-controls { padding: 0 20px; }
+.aiAgentPage.auPage.auApVisual :is(.workflow-toggle,.workflow-replay) { width: 44px; height: 44px; }
+.aiAgentPage.auPage.auApVisual .specpanel-body { background: none; padding: 16px 20px 22px; gap: 12px; }
+.aiAgentPage.auPage.auApVisual .specrow { grid-template-columns: 32px minmax(0,1fr); width: 100%; margin-left: 0; gap: 4px 12px; padding: 14px; box-shadow: none; border-radius: 6px; animation-name: b2-flow; animation-timing-function: cubic-bezier(.22,1,.36,1); }
+.aiAgentPage.auPage.auApVisual .specrow::before,.aiAgentPage.auPage.auApVisual .specrow::after,.aiAgentPage.auPage.auApVisual .specrow .tag::after { content: none; }
+.aiAgentPage.auPage.auApVisual .specrow .idx { font-family: var(--sans); font-size: 11px; }
+.aiAgentPage.auPage.auApVisual .specrow .title { font-size: 14px; }
+.aiAgentPage.auPage.auApVisual .specrow .tag { grid-column: 2; grid-row: 3; width: fit-content; font-size: 10px; color: var(--accent-text); }
+.aiAgentPage.auPage.auApVisual .specrow:has(.workflow-select:checked) { transform: none; background: var(--accent-wash); box-shadow: none; }
+.aiAgentPage.auPage.auApVisual .specpanel-foot { font-family: var(--sans); font-size: 12px; padding: 20px; }
+.aiAgentPage.auPage.auApVisual .ledger-number { font-size: 32px; }
+.aiAgentPage.auPage.auApVisual .ledger-word { font-size: 23px; }
+.aiAgentPage.auPage.auApVisual .ledgercell .k { font-size: 11px; }
+.aiAgentPage.auPage.auApVisual .byline { padding-block: 22px; }
+.aiAgentPage.auPage.auApVisual .tablewrap { border-radius: 6px; overscroll-behavior-inline: contain; }
+.aiAgentPage.auPage.auApVisual .tablewrap table { min-width: 900px; }
+.aiAgentPage.auPage.auApVisual .tablewrap th { text-transform: none; font-size: 13px; line-height: 1.6; }
+.aiAgentPage.auPage.auApVisual .tablewrap td { font-size: 14px; padding-block: 22px; line-height: 1.7; }
+.aiAgentPage.auPage.auApVisual .section-head.head-split { display: block; max-width: 960px; }
+.aiAgentPage.auPage.auApVisual .section-head.head-split h2 { margin-top: 18px; }
+.aiAgentPage.auPage.auApVisual .au-numlist li span { min-width: 0; overflow-wrap: anywhere; }
+.aiAgentPage.auPage.auApVisual .plat-build { max-width: 70ch; }
+.aiAgentPage.auPage.auApVisual .au-panel { box-shadow: none; border-radius: 6px; }
+.aiAgentPage.auPage.auApVisual #providers .plat { grid-template-columns: 36px minmax(0,.9fr) minmax(0,1.6fr); gap: 24px; padding: 26px 16px; }
+.aiAgentPage.auPage.auApVisual #providers .plat h3 { font-size: 22px; }
+.aiAgentPage.auPage.auApVisual #providers .au-panel-wide { background: var(--accent-wash); max-width: none; padding: 32px; border: 0; }
+.aiAgentPage.auPage.auApVisual #providers .au-panel-wide > .eyebrow { font-family: var(--display); font-size: 22px; color: var(--ink); font-weight: 800; }
+.aiAgentPage.auPage.auApVisual #providers .au-numlist { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); column-gap: 38px; }
+.aiAgentPage.auPage.auApVisual #more-services .agentdir-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 0 48px; border-top: 1px solid var(--line); }
+.aiAgentPage.auPage.auApVisual #more-services .agentdir-grid a { border: 0; border-bottom: 1px solid var(--line); border-radius: 0; padding: 26px 32px 26px 0; }
+.aiAgentPage.auPage.auApVisual #more-services .agentdir-t { font-size: 19px; }
+.aiAgentPage.auPage.auApVisual #more-services .agentdir-l { font-size: 14px; color: var(--body); }
+.aiAgentPage.auPage.auApVisual #more-services .agentdir-go { right: 4px; }
+.aiAgentPage.auPage.auApVisual .faqwrap { grid-template-columns: minmax(0,.85fr) minmax(0,1.45fr); gap: 60px; }
+.aiAgentPage.auPage.auApVisual .faq-catnav a { min-height: 44px; display: flex; align-items: center; }
+.aiAgentPage.auPage.auApVisual .faq-category { text-transform: none; letter-spacing: .01em; }
+.aiAgentPage.auPage.auApVisual .faqitem summary { min-height: 64px; }
+.aiAgentPage.auPage.auApVisual .finalcta .ctas { display: flex; flex-direction: column; align-items: stretch; min-width: 230px; }
+.aiAgentPage.auPage.auApVisual .au-midcta section { width: calc(100% - 64px); max-width: 1200px; margin-inline: auto; border: 1px solid var(--line); border-radius: 6px; }
+@keyframes b2-flow { 0%,22% { border-color: var(--accent); background: var(--accent-wash); } 25%,100% { border-color: var(--line-strong); background: white; } }
+@media (max-width:820px) {
+ .aiAgentPage.auPage.auApVisual .hero-grid { grid-template-columns: 1fr; gap: 32px; }
+ .aiAgentPage.auPage.auApVisual .hero h1 { font-size: clamp(34px,6.3vw,48px); }
+ .aiAgentPage.auPage.auApVisual .hero .lead { font-size: 15px; }
+ .aiAgentPage.auPage.auApVisual .ledger .wrap { grid-template-columns: repeat(2,minmax(0,1fr)); }
+ .aiAgentPage.auPage.auApVisual .ledgercell { min-width: 0; padding: 24px 15px; }
+ .aiAgentPage.auPage.auApVisual .ledger-number { font-size: 29px; }
+ .aiAgentPage.auPage.auApVisual .ledger-word { font-size: 21px; }
+ .aiAgentPage.auPage.auApVisual #providers .plat { grid-template-columns: 28px minmax(0,1fr); gap: 12px; padding-inline: 8px; }
+ .aiAgentPage.auPage.auApVisual #providers .plat-build { grid-column: 2; }
+ .aiAgentPage.auPage.auApVisual #providers .au-panel-wide { padding: 24px; }
+ .aiAgentPage.auPage.auApVisual .faqwrap { grid-template-columns: 1fr; gap: 32px; }
+ .aiAgentPage.auPage.auApVisual .finalcta .ctas { min-width: 0; width: fit-content; margin-top: 24px; }
+ .aiAgentPage.auPage.auApVisual .au-midcta section { width: calc(100% - 40px); }
+}
+@media (max-width:600px) {
+ .aiAgentPage.auPage.auApVisual .section { padding-block: 56px; }
+ .aiAgentPage.auPage.auApVisual #providers .au-numlist,.aiAgentPage.auPage.auApVisual #more-services .agentdir-grid { grid-template-columns: 1fr; }
+ .aiAgentPage.auPage.auApVisual .specpanel-bar { padding: 16px; }
+ .aiAgentPage.auPage.auApVisual .sys { margin-left: 0; flex-wrap: wrap; }
+ .aiAgentPage.auPage.auApVisual .workflow-controls { padding-inline: 14px; }
+ .aiAgentPage.auPage.auApVisual .specpanel-body { padding-inline: 14px; }
+ .aiAgentPage.auPage.auApVisual .specrow { padding: 12px; }
+ .aiAgentPage.auPage.auApVisual .fact p { font-size: 15px; }
+ .aiAgentPage.auPage.auApVisual .au-panel { padding: 20px; }
+ .aiAgentPage.auPage.auApVisual .finalcta h2 { font-size: 30px; }
+}
+@media (prefers-reduced-motion:reduce) {
+ .aiAgentPage.auPage.auApVisual *,.aiAgentPage.auPage.auApVisual *::before,.aiAgentPage.auPage.auApVisual *::after { animation: none !important; transition: none !important; }
+}
+
+.aiAgentPage.auPage.auApVisual .ap-hero-art { padding: 12px 20px; color: var(--ink); background: white; }
+.aiAgentPage.auPage.auApVisual .ap-rail { width: 100%; height: auto; display: block; }
+.aiAgentPage.auPage.auApVisual #facts .wrap { display: block; }
+.aiAgentPage.auPage.auApVisual #facts .section-head { max-width: 960px; margin-bottom: 40px; }
+.aiAgentPage.auPage.auApVisual #facts .factswrap { display: grid; grid-template-columns: minmax(0,1.35fr) minmax(0,.9fr); gap: 64px; align-items: start; }
+.aiAgentPage.auPage.auApVisual #facts .factlist,.aiAgentPage.auPage.auApVisual #facts .factphoto { grid-column: auto; grid-row: auto; position: static; }
+.aiAgentPage.auPage.auApVisual #facts .fact .stat { display: block; font-size: 21px; margin-bottom: 18px; line-height: 1.5; }
+.aiAgentPage.auPage.auApVisual #scope .plat { grid-template-columns: 38px minmax(0,1.2fr) minmax(0,.9fr) minmax(0,.4fr); padding-block: 28px; }
+.aiAgentPage.auPage.auApVisual #capabilities { background: var(--accent-wash); border-block: 1px solid var(--line); }
+.aiAgentPage.auPage.auApVisual #capabilities .capgrid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 0 56px; }
+.aiAgentPage.auPage.auApVisual #capabilities .cap:nth-child(n) { grid-column: auto; background: none; border: 0; border-top: 1px solid var(--line); border-radius: 0; padding: 28px 0; }
+.aiAgentPage.auPage.auApVisual #capabilities .caphead { margin: 0; }
+.aiAgentPage.auPage.auApVisual #capabilities .cap-diagram { border: 0; background: none; height: 110px; max-width: 330px; margin: 12px 0 20px; }
+.aiAgentPage.auPage.auApVisual .ap-job { width: 100%; height: 100%; color: var(--ink); }
+.aiAgentPage.auPage.auApVisual #capabilities .cap h3 { font-size: 28px; }
+.aiAgentPage.auPage.auApVisual #capabilities .chg-group { display: grid; grid-template-columns: .8fr 1.5fr; gap: 50px; border-top: 1px solid var(--line); margin-top: 22px; padding-top: 30px; }
+.aiAgentPage.auPage.auApVisual #integrations .tablewrap table { min-width: 840px; }
+.aiAgentPage.auPage.auApVisual #tax-invoices .wrap { grid-template-columns: minmax(0,1.25fr) minmax(0,.9fr); gap: 42px 64px; }
+.aiAgentPage.auPage.auApVisual #tax-invoices .section-head { grid-column: 1 / -1; max-width: 1000px; }
+.aiAgentPage.auPage.auApVisual #tax-invoices .au-panel { position: static; background: var(--accent-wash); }
+.aiAgentPage.auPage.auApVisual #tax-invoices .au-panel .eyebrow { font-family: var(--display); color: var(--ink); font-size: 22px; font-weight: 800; }
+.aiAgentPage.auPage.auApVisual .photobreak { aspect-ratio: auto; height: auto; padding: 32px; color: var(--ink); background: var(--accent-wash); border-radius: 8px; max-width: 1200px; margin-inline: auto; }
+.aiAgentPage.auPage.auApVisual #how-we-build .head-media { grid-template-columns: minmax(0,1.35fr) minmax(0,.85fr); gap: 64px; }
+.aiAgentPage.auPage.auApVisual #how-we-build .timeline { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 0 64px; }
+.aiAgentPage.auPage.auApVisual #how-we-build .timeline::before,.aiAgentPage.auPage.auApVisual #how-we-build .tnode::before { display: none; }
+.aiAgentPage.auPage.auApVisual #how-we-build .tnode { padding: 26px 0; border-bottom: 1px solid var(--line); }
+.aiAgentPage.auPage.auApVisual #how-we-build .tnode summary { display: grid; grid-template-columns: 44px minmax(0,1fr); gap: 18px; align-items: start; min-height: 54px; }
+.aiAgentPage.auPage.auApVisual #how-we-build .tnode .idx { position: static; grid-column: 1; grid-row: 1; width: 42px; height: 42px; border-radius: 6px; }
+.aiAgentPage.auPage.auApVisual #how-we-build .tnode h3 { grid-column: 2; font-size: 23px; margin: 0; padding: 6px 22px 6px 0; }
+.aiAgentPage.auPage.auApVisual #how-we-build .tnode p { margin: 16px 0 0 62px; font-size: 15px; }
+.aiAgentPage.auPage.auApVisual #fraud-controls { grid-template-columns: minmax(0,.9fr) minmax(0,1.2fr); gap: 64px; }
+.aiAgentPage.auPage.auApVisual #fraud-controls .definition-image::after { display: none; }
+.aiAgentPage.auPage.auApVisual #einvoicing .wrap { grid-template-columns: minmax(0,1.25fr) minmax(0,.9fr); gap: 38px 64px; }
+.aiAgentPage.auPage.auApVisual #einvoicing .section-head { grid-column: 1 / -1; max-width: 1000px; }
+.aiAgentPage.auPage.auApVisual #einvoicing .factphoto { position: static; grid-column: 2; grid-row: 2; background: var(--accent-wash); padding: 24px; border-radius: 8px; }
+.aiAgentPage.auPage.auApVisual .ap-merge { width: 100%; height: auto; }
+.aiAgentPage.auPage.auApVisual #engagement .au-split { grid-template-columns: .9fr 1.1fr; gap: 64px; }
+.aiAgentPage.auPage.auApVisual #engagement .demand { border: 0; border-radius: 0; border-top: 1px solid var(--ink); }
+.aiAgentPage.auPage.auApVisual #engagement .demand-head,.aiAgentPage.auPage.auApVisual #engagement .demand ul { padding-inline: 0; }
+@media (max-width:820px) {
+ .aiAgentPage.auPage.auApVisual #facts .factswrap,.aiAgentPage.auPage.auApVisual #tax-invoices .wrap,.aiAgentPage.auPage.auApVisual #einvoicing .wrap,.aiAgentPage.auPage.auApVisual #how-we-build .head-media,.aiAgentPage.auPage.auApVisual #fraud-controls,.aiAgentPage.auPage.auApVisual #engagement .au-split { display: block; }
+ .aiAgentPage.auPage.auApVisual #facts .factphoto,.aiAgentPage.auPage.auApVisual #einvoicing .factphoto,.aiAgentPage.auPage.auApVisual #tax-invoices .au-panel,.aiAgentPage.auPage.auApVisual #how-we-build .head-media .vslot,.aiAgentPage.auPage.auApVisual #engagement .demand { margin-top: 32px; }
+ .aiAgentPage.auPage.auApVisual #scope .plat { grid-template-columns: 30px minmax(0,1fr); gap: 14px; }
+ .aiAgentPage.auPage.auApVisual #scope :is(.plat-build,.plat-fit) { grid-column: 2; }
+ .aiAgentPage.auPage.auApVisual #capabilities .capgrid { gap: 0 32px; }
+ .aiAgentPage.auPage.auApVisual #capabilities .chg-group { grid-template-columns: 1fr; gap: 20px; }
+ .aiAgentPage.auPage.auApVisual #how-we-build .timeline { column-gap: 30px; }
+ .aiAgentPage.auPage.auApVisual #how-we-build .tnode h3 { font-size: 20px; }
+ .aiAgentPage.auPage.auApVisual .photobreak { aspect-ratio: auto; width: calc(100% - 40px); padding: 12px; }
+ .aiAgentPage.auPage.auApVisual #fraud-controls { margin-top: 68px; }
+}
+@media (max-width:600px) {
+ .aiAgentPage.auPage.auApVisual #capabilities .capgrid,.aiAgentPage.auPage.auApVisual #how-we-build .timeline { grid-template-columns: 1fr; }
+ .aiAgentPage.auPage.auApVisual #capabilities .cap-diagram { height: 100px; margin-bottom: 14px; }
+ .aiAgentPage.auPage.auApVisual #capabilities .chg-list { grid-template-columns: 1fr; }
+ .aiAgentPage.auPage.auApVisual #how-we-build .tnode h3 { font-size: 22px; }
+ .aiAgentPage.auPage.auApVisual #how-we-build .tnode p { margin-left: 0; }
+}
+
+/* Explicit positions prevent inherited Family A fact columns overlapping the full-width heading. */
+.aiAgentPage.auPage.auApVisual #tax-invoices .factlist { grid-column: 1; grid-row: 2; }
+.aiAgentPage.auPage.auApVisual #einvoicing .factlist { grid-column: 1; grid-row: 2; }
+.aiAgentPage.auPage.auApVisual #tax-invoices .au-panel { grid-column: 2; grid-row: 2; }
+
+@media (max-width: 480px) {
+ .aiAgentPage.auPage.auApVisual .ledger .wrap { grid-template-columns: minmax(0,1fr); }
+ .aiAgentPage.auPage.auApVisual .ledgercell { border-right: 0; border-bottom: 1px solid var(--line); }
+ .aiAgentPage.auPage.auApVisual .ledgercell:last-child { border-bottom: 0; }
+}

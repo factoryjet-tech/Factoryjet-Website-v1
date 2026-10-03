@@ -1,0 +1,100 @@
+/* September 2026 cases only. The established archive retains its original rendering. */
+.cs-visual { --csv-ink: #14110F; --csv-line: #E7DED6; --csv-tint: #FFF8F5; color: var(--csv-ink); }
+.cs-visual .fj-display, .cs-visual .font-fj-display { font-family: var(--font-plus-jakarta), sans-serif; font-style: normal !important; }
+.cs-visual .cs-hero { background-color: white !important; background-image: radial-gradient(circle, #E7DED6 0.8px, transparent 0.8px) !important; background-size: 24px 24px !important; }
+.cs-visual .cs-hero h1 { font-size: clamp(2rem, 4.3vw, 3.4rem); line-height: 1.1; }
+.csv-hero-mobile { display: none; }
+.cs-visual .cs-hero .grid.border-t { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+.cs-visual .cs-hero .grid.border-t .fj-display { font-size: clamp(1.25rem, 2vw, 1.75rem) !important; overflow-wrap: normal !important; }
+.cs-visual .cs-hero-meta { height: auto; background: white !important; border-color: var(--csv-line) !important; border-radius: 16px; }
+.cs-visual .cs-hero-meta .font-fj-mono { color: #6E635A; }
+.cs-visual .cs-hero-meta dl { margin-top: 24px; }
+.csv-hero-stage { position: relative; display: block; padding: 24px 42px 48px 0; margin: -2px -16px 24px 0; border-radius: 22px; outline-offset: 6px; }
+.csv-hero-stage:focus-visible, .csv-image-inspector summary:focus-visible, .csv-image-detail:focus-visible { outline: 2px solid #C94A1A; outline-offset: 6px; }
+.csv-browser { overflow: hidden; border: 1px solid #D9CFC6; border-radius: 12px; background: white; box-shadow: 0 8px 28px #14110F10; }
+.csv-browser-bar { display: flex; align-items: center; gap: 5px; height: 28px; padding: 0 12px; border-bottom: 1px solid var(--csv-line); background: #FAF8F6; }
+.csv-browser-bar i { width: 5px; height: 5px; border-radius: 100%; background: #C7BAB0; }
+.csv-browser-bar span { width: 46%; height: 9px; margin: auto; border: 1px solid var(--csv-line); border-radius: 3px; background: white; }
+.csv-browser-bar svg { width: 10px; height: 10px; fill: none; stroke: #6E635A; }
+.csv-browser img { display: block; width: 100%; height: auto; }
+.csv-hero-stage > .csv-browser { transform: rotate(-3deg); transition: transform .25s ease; }
+.csv-hero-stage:hover > .csv-browser { transform: rotate(-1deg); }
+.csv-phone { position: absolute; width: 25%; right: 0; bottom: 12px; padding: 5px; border: 2px solid #14110F; border-radius: 18px; background: #14110F; box-shadow: 0 12px 24px #14110F18; transform: rotate(5deg); }
+.csv-phone img { width: 100%; height: auto; border-radius: 12px; display: block; }
+.csv-phone-camera { width: 35%; height: 5px; background: #14110F; border-radius: 0 0 4px 4px; position: absolute; left: 32%; top: 5px; }
+.csv-inspect { display: grid; place-items: center; position: absolute; right: 16px; top: 16px; width: 36px; height: 36px; border: 1px solid var(--csv-line); background: white; border-radius: 50%; color: #C94A1A; box-shadow: 0 3px 12px #14110F0D; }
+.csv-inspect svg { width: 19px; height: 19px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; }
+.csv-hero-stage > .csv-inspect { right: 40px; top: 2px; }
+.cs-visual .cs-glance { background: var(--csv-tint); border-block: 1px solid var(--csv-line); }
+.cs-visual .cs-glance .grid > div { border: 1px solid var(--csv-line); box-shadow: none !important; background-image: none !important; border-radius: 12px; }
+.cs-visual .cs-challenge, .cs-visual .cs-results { background: white !important; border-bottom: 1px solid var(--csv-line); }
+.cs-visual .cs-challenge > .pointer-events-none, .cs-visual .cs-results > .pointer-events-none { display: none; }
+.cs-visual .cs-challenge h2, .cs-visual .cs-results h2 { color: var(--csv-ink) !important; }
+.cs-visual .cs-challenge .font-fj-body, .cs-visual .cs-results .font-fj-body { color: #46403B !important; }
+.cs-visual .cs-challenge .font-fj-mono, .cs-visual .cs-results .font-fj-mono { color: #C94A1A !important; }
+.cs-visual .cs-challenge aside > div { padding: 30px; background: var(--csv-tint) !important; border: 1px solid var(--csv-line); box-shadow: none; border-radius: 14px; }
+.cs-visual .cs-challenge aside p { color: var(--csv-ink) !important; font-size: clamp(1.4rem, 2.3vw, 1.8rem) !important; }
+.cs-visual .cs-approach { background: white; }
+.cs-visual .cs-approach aside > div { background: var(--csv-tint); border-color: var(--csv-line); }
+.cs-visual .cs-approach li { border-radius: 6px; border-color: var(--csv-line); }
+.cs-visual .cs-solution { background: var(--csv-tint); border-block: 1px solid var(--csv-line); }
+.cs-visual .cs-results .border-y { border-color: var(--csv-line); display: grid; gap: 24px; align-items: center; }
+.cs-visual .cs-results .border-y > p:last-child { margin-top: 0; }
+.cs-visual .cs-results .border-y > p > span { color: #6E635A !important; }
+.cs-visual .cs-results .grid > div { border-color: var(--csv-line); background: white !important; border-radius: 12px; }
+.cs-visual .cs-results .grid > div > p:first-of-type { color: #C94A1A !important; }
+.csv-metric-icon { display: grid; place-items: center; width: 40px; height: 40px; color: #C94A1A; background: var(--csv-tint); border: 1px solid var(--csv-line); border-radius: 10px; margin-bottom: 28px; }
+.csv-metric-icon svg { width: 23px; height: 23px; }
+.csv-service-map { display: grid; gap: 0; padding-top: 6px; }
+.csv-service-map > span { display: flex !important; align-items: center; gap: 12px; padding: 10px 0 !important; border-radius: 0 !important; font-size: 12px !important; background: transparent !important; position: relative; }
+.csv-service-map > span:not(:last-child)::after { content: ''; position: absolute; left: 15px; top: 42px; width: 1px; height: 13px; background: #D9BFB0; }
+.csv-service-map svg { flex: 0 0 32px; width: 32px; height: 32px; padding: 6px; border: 1px solid #E7DED6; background: #FFF8F5; border-radius: 8px; }
+.csv-agent-workflow { padding: 18px; border: 1px solid var(--csv-line); border-radius: 18px; background: white; background-image: radial-gradient(circle, #E7DED6 .7px, transparent .7px); background-size: 20px 20px; }
+.csv-agent-workflow svg { width: 100%; height: auto; display: block; }
+.csv-agent-workflow .csv-workflow-compact { display: none; }
+.csv-agent-workflow[data-animated] .csv-flow-pulse { animation: csv-data-pass 3.8s ease-in-out infinite; }
+.csv-agent-workflow[data-animated] .csv-flow-pulse-delayed { animation-delay: 1.9s; }
+@keyframes csv-data-pass { 0%, 100% { opacity: .3; } 40%, 65% { opacity: 1; } }
+.csv-gallery { display: grid; grid-template-columns: minmax(0, 1fr) minmax(150px, .29fr); align-items: start; gap: 32px; scroll-margin-top: 120px; }
+.csv-gallery-figure { min-width: 0; margin: 0; }
+.csv-gallery figcaption { margin-top: 18px; font-family: var(--font-inter), sans-serif; color: #46403B; font-size: 13px; line-height: 1.65; max-width: 580px; }
+.csv-image-inspector summary { display: block; position: relative; cursor: zoom-in; list-style: none; outline-offset: 6px; }
+.csv-image-inspector summary::-webkit-details-marker { display: none; }
+.csv-image-inspector[open] summary { cursor: zoom-out; }
+.csv-gallery-phone { padding: 7px; background: #14110F; border: 1px solid #14110F; border-radius: 23px; box-shadow: 0 8px 24px #14110F12; }
+.csv-gallery-phone img { display: block; width: 100%; height: auto; border-radius: 17px; }
+.csv-image-detail { margin-top: 18px; max-height: 72vh; overflow: auto; border: 1px solid #D9CFC6; border-radius: 12px; background: white; }
+.csv-image-detail img { display: block; width: max(100%, 1100px); max-width: none; height: auto; }
+.csv-gallery-mobile .csv-image-detail img { width: max(100%, 390px); }
+/* These three case FAQs remain readable when their shared scroll wrapper hydrates offscreen. */
+.cs-visual .csv-faq > section > div > div:first-child,
+.cs-visual .csv-faq .grid > div { opacity: 1 !important; transform: none !important; }
+.cs-visual .cs-related .grid > a > div { display: flex; flex-direction: column; }
+.cs-visual .cs-related .grid > a > div > p:nth-of-type(3) { margin-bottom: 24px; }
+.cs-visual .cs-related .grid > a > div > .border-t { margin-top: auto; }
+@media (min-width: 1024px) {
+  .cs-visual .cs-glance .grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .cs-visual .cs-glance .grid > div:first-child, .cs-visual .cs-glance .grid > div:last-child { grid-column: span 2; }
+  .cs-visual .cs-results .border-y { grid-template-columns: 1.25fr 1fr; gap: 56px; }
+  .cs-visual .cs-hero-meta { padding: 24px; }
+}
+@media (max-width: 600px) {
+  .csv-hero-mobile { display: block; margin-top: 28px; }
+  .csv-hero-desktop { display: none; }
+  .cs-visual .cs-hero-founder > div > div:first-child { flex-direction: column; }
+  .cs-visual .cs-hero .grid.border-t { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  .cs-visual .cs-hero .grid.border-t > :last-child { grid-column: span 2; }
+  .csv-hero-stage { margin: 0 0 24px; padding: 14px 42px 38px 0; }
+  .csv-gallery { grid-template-columns: minmax(0, 1fr); gap: 36px; }
+  .csv-gallery-mobile { width: min(65%, 280px); justify-self: center; }
+  .csv-gallery-mobile figcaption { text-align: center; }
+  .csv-agent-workflow { padding: 8px; }
+  .csv-agent-workflow .csv-workflow-wide { display: none; }
+  .csv-agent-workflow .csv-workflow-compact { display: block; max-width: 360px; margin-inline: auto; }
+  .csv-gallery-phone { border-radius: 26px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .csv-agent-workflow[data-animated] .csv-flow-pulse { animation: none; opacity: 1; }
+  .csv-hero-stage > .csv-browser { transition: none; transform: none; }
+  .csv-hero-stage:hover > .csv-browser { transform: none; }
+}

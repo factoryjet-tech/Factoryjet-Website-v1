@@ -8,8 +8,10 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import AuFaq from '../components/AuFaq';
 import VisualSlot from '../components/VisualSlot';
+import { StagingRelease, CarePath } from './CareVisuals';
 import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
+import './page.css';
 import { websiteMaintenanceAlternates } from '@/data/hreflangMap';
 
 const CANONICAL = 'https://factoryjet.com/au/website-maintenance';
@@ -370,7 +372,7 @@ export default function WebsiteMaintenanceAUPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <SiteHeader locale="au" logoHref="/au" />
-      <div className="aiAgentPage auPage">
+      <div className="aiAgentPage auPage auCareVisual">
       <nav className="crumbs" aria-label="Breadcrumb">
         <div className="wrap">
           {crumbs.map((item, index) => (
@@ -413,6 +415,7 @@ export default function WebsiteMaintenanceAUPage() {
                 <span>INCLUDED · WHAT A CARE PLAN DOES EVERY MONTH</span>
                 <span className="sys"><span>WORDPRESS</span><span>SHOPIFY</span><span>YOUR ACCOUNTS</span></span>
               </div>
+              <div className="care-hero-art" aria-hidden="true"><StagingRelease /></div>
               <div className="workflow-controls">
                 <label className="workflow-toggle" title="Pause or resume the animation">
                   <input type="checkbox" className="workflow-pause" aria-label="Pause animation" />
@@ -516,7 +519,7 @@ export default function WebsiteMaintenanceAUPage() {
                   </p>
                 </div>
               </div>
-              <VisualSlot page={PAGE_KEY} slot="facts" kind="photo" ratio="3:2" className="factphoto"
+              <VisualSlot page={PAGE_KEY} slot="facts" src="/images/au/visual-pass-2026-10-03/website-maintenance/facts-1280.webp" srcSet="/images/au/visual-pass-2026-10-03/website-maintenance/facts-640.webp 640w, /images/au/visual-pass-2026-10-03/website-maintenance/facts-1280.webp 1280w" sizes="(max-width: 820px) 100vw, 560px" kind="photo" ratio="3:2" className="factphoto"
                 subject="A homewares shop owner wrapping an order, with her online shop open on the laptop beside her">
                 <img src="/images/au/website-maintenance/website-maintenance-hero.webp" width={1400} height={933} loading="lazy" decoding="async" alt="Over the shoulder of a Sydney homewares shop owner wrapping a ceramic vase for an order, with her online shop open on the laptop beside her" />
               </VisualSlot>
@@ -601,7 +604,7 @@ export default function WebsiteMaintenanceAUPage() {
                 Tap the line that sounds most like your website. The answer is honest, even when the answer is that
                 you can do it yourself.
               </p>
-              <VisualSlot page={PAGE_KEY} slot="proof" kind="photo" ratio="3:2" captionClassName="figcap"
+              <VisualSlot page={PAGE_KEY} slot="proof" src="/images/au/visual-pass-2026-10-03/website-maintenance/proof-1280.webp" srcSet="/images/au/visual-pass-2026-10-03/website-maintenance/proof-640.webp 640w, /images/au/visual-pass-2026-10-03/website-maintenance/proof-1280.webp 1280w" sizes="(max-width: 820px) 100vw, 560px" kind="photo" ratio="3:2" captionClassName="figcap"
                 subject="A tradesman sitting in the side door of his work van, reading his monthly website report on a tablet"
                 caption="The monthly report is written to be read in two minutes between jobs: what we updated, what we fixed, whether enquiries are arriving, and anything that needs your decision.">
                 <img src="/images/au/website-maintenance/website-maintenance-report.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over the shoulder of an Adelaide tradesman sitting in the side door of his work van, reading his monthly website report on a tablet" />
@@ -621,7 +624,7 @@ export default function WebsiteMaintenanceAUPage() {
 
         {/* ═══ PHOTOBREAK (US template visual, no AU image yet) ═══ */}
         <VisualSlot page={PAGE_KEY} slot="photobreak" kind="illustration" ratio="12:5" className="photobreak"
-          subject="AI-generated model: two white website frames side by side, staging and live, with an orange update card passing from one to the other" />
+          subject="AI-generated model: two white website frames side by side, staging and live, with an orange update card passing from one to the other" src={null}><StagingRelease /></VisualSlot>
 
         {/* ═══ HOW WE UPDATE SAFELY → process timeline (steps stay openable, as the copy says) ═══ */}
         <section className="section process" id="how-we-update">
@@ -636,7 +639,7 @@ export default function WebsiteMaintenanceAUPage() {
                   see what happens in it.
                 </p>
               </div>
-              <VisualSlot page={PAGE_KEY} slot="process" kind="photo" ratio="3:2" captionClassName="figcap"
+              <VisualSlot page={PAGE_KEY} slot="process" src="/images/au/visual-pass-2026-10-03/website-maintenance/process-1280.webp" srcSet="/images/au/visual-pass-2026-10-03/website-maintenance/process-640.webp 640w, /images/au/visual-pass-2026-10-03/website-maintenance/process-1280.webp 1280w" sizes="(max-width: 820px) 100vw, 560px" kind="photo" ratio="3:2" captionClassName="figcap"
                 subject="Two web developers comparing the staging and live versions of a client website side by side on one monitor"
                 caption="Staging and live, side by side. If the updated copy looks or behaves differently from the live site, we find out why before any customer does.">
                 <img src="/images/au/website-maintenance/website-maintenance-staging.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over the shoulder of two web developers in a Melbourne studio comparing the staging and live versions of a client website side by side on one monitor" />
@@ -681,7 +684,7 @@ export default function WebsiteMaintenanceAUPage() {
                 provider.
               </p>
             </div>
-            <div className="tablewrap">
+            <div className="tablewrap" tabIndex={0} role="region" aria-label="Scrollable comparison table">
               <table>
                 <thead>
                   <tr>
@@ -824,7 +827,7 @@ export default function WebsiteMaintenanceAUPage() {
                 </p>
               </div>
             </div>
-            <div className="tablewrap">
+            <div className="tablewrap" tabIndex={0} role="region" aria-label="Scrollable comparison table">
               <table>
                 <thead>
                   <tr>
@@ -923,7 +926,7 @@ export default function WebsiteMaintenanceAUPage() {
                 return (
                   <div key={j.t} className={`cap cap-${i + 1}`}>
                     <div className="caphead"><span className="capid">CAP‑{n}</span><svg {...CAP_ICON}><path d={INDUSTRY_ICONS[i]} /></svg></div>
-                    <VisualSlot page={PAGE_KEY} slot={`capability-${n}`} kind="diagram" ratio="11:4" className="cap-diagram" subject={INDUSTRY_SUBJECTS[i]} />
+                    <VisualSlot page={PAGE_KEY} slot={`capability-${n}`} kind="diagram" ratio="11:4" className="cap-diagram" subject={INDUSTRY_SUBJECTS[i]} src={null}><CarePath index={i} /></VisualSlot>
                     <h3>{j.t}</h3>
                     <p>{j.d}</p>
                   </div>

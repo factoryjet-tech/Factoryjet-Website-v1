@@ -1,0 +1,65 @@
+{
+  "provenance": "Responsive derivatives of existing project AI-generated illustrative artwork, inspected before use. No new proof or results.",
+  "assets": [
+    {
+      "source": "website/public/images/au/generated/small-business-seo/facts.webp",
+      "output": "website/public/images/au/visual-pass-2026-10-03/small-business-seo/facts-640.webp",
+      "width": 640,
+      "bytes": 35412
+    },
+    {
+      "source": "website/public/images/au/generated/small-business-seo/facts.webp",
+      "output": "website/public/images/au/visual-pass-2026-10-03/small-business-seo/facts-1280.webp",
+      "width": 1280,
+      "bytes": 80816
+    },
+    {
+      "source": "website/public/images/au/generated/small-business-seo/proof.webp",
+      "output": "website/public/images/au/visual-pass-2026-10-03/small-business-seo/proof-640.webp",
+      "width": 640,
+      "bytes": 34742
+    },
+    {
+      "source": "website/public/images/au/generated/small-business-seo/proof.webp",
+      "output": "website/public/images/au/visual-pass-2026-10-03/small-business-seo/proof-1280.webp",
+      "width": 1280,
+      "bytes": 79340
+    },
+    {
+      "source": "website/public/images/au/generated/small-business-seo/photobreak.webp",
+      "output": "website/public/images/au/visual-pass-2026-10-03/small-business-seo/photobreak-640.webp",
+      "width": 640,
+      "bytes": 13318
+    },
+    {
+      "source": "website/public/images/au/generated/small-business-seo/photobreak.webp",
+      "output": "website/public/images/au/visual-pass-2026-10-03/small-business-seo/photobreak-1280.webp",
+      "width": 1280,
+      "bytes": 40106
+    },
+    {
+      "source": "website/public/images/au/generated/small-business-seo/process.webp",
+      "output": "website/public/images/au/visual-pass-2026-10-03/small-business-seo/process-640.webp",
+      "width": 640,
+      "bytes": 32460
+    },
+    {
+      "source": "website/public/images/au/generated/small-business-seo/process.webp",
+      "output": "website/public/images/au/visual-pass-2026-10-03/small-business-seo/process-1280.webp",
+      "width": 1280,
+      "bytes": 74900
+    },
+    {
+      "source": "website/public/images/au/generated/small-business-seo/definition.webp",
+      "output": "website/public/images/au/visual-pass-2026-10-03/small-business-seo/definition-640.webp",
+      "width": 640,
+      "bytes": 34226
+    },
+    {
+      "source": "website/public/images/au/generated/small-business-seo/definition.webp",
+      "output": "website/public/images/au/visual-pass-2026-10-03/small-business-seo/definition-1280.webp",
+      "width": 1280,
+      "bytes": 80916
+    }
+  ]
+}

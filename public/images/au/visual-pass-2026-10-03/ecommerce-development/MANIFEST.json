@@ -1,0 +1,146 @@
+{
+  "reviewed": "2026-10-03 contact sheet /tmp/au-b5-a-assets.jpg",
+  "purpose": "Responsive derivatives of existing illustrative assets; no new proof",
+  "images": [
+    {
+      "slot": "facts",
+      "source": "generated/ecommerce-development/facts.webp",
+      "width": 640,
+      "file": "facts-640.webp",
+      "bytes": 35270
+    },
+    {
+      "slot": "facts",
+      "source": "generated/ecommerce-development/facts.webp",
+      "width": 1280,
+      "file": "facts-1280.webp",
+      "bytes": 81556
+    },
+    {
+      "slot": "facts",
+      "source": "generated/ecommerce-development/facts.webp",
+      "width": 1536,
+      "file": "facts-1536.webp",
+      "bytes": 112332
+    },
+    {
+      "slot": "process",
+      "source": "generated/ecommerce-development/process.webp",
+      "width": 640,
+      "file": "process-640.webp",
+      "bytes": 21476
+    },
+    {
+      "slot": "process",
+      "source": "generated/ecommerce-development/process.webp",
+      "width": 1280,
+      "file": "process-1280.webp",
+      "bytes": 53446
+    },
+    {
+      "slot": "process",
+      "source": "generated/ecommerce-development/process.webp",
+      "width": 1536,
+      "file": "process-1536.webp",
+      "bytes": 80846
+    },
+    {
+      "slot": "definition",
+      "source": "generated/ecommerce-development/definition.webp",
+      "width": 640,
+      "file": "definition-640.webp",
+      "bytes": 35032
+    },
+    {
+      "slot": "definition",
+      "source": "generated/ecommerce-development/definition.webp",
+      "width": 1280,
+      "file": "definition-1280.webp",
+      "bytes": 82544
+    },
+    {
+      "slot": "definition",
+      "source": "generated/ecommerce-development/definition.webp",
+      "width": 1536,
+      "file": "definition-1536.webp",
+      "bytes": 116306
+    },
+    {
+      "slot": "proof",
+      "source": "generated/ecommerce-development/proof.webp",
+      "width": 640,
+      "file": "proof-640.webp",
+      "bytes": 17032
+    },
+    {
+      "slot": "proof",
+      "source": "generated/ecommerce-development/proof.webp",
+      "width": 1280,
+      "file": "proof-1280.webp",
+      "bytes": 42734
+    },
+    {
+      "slot": "proof",
+      "source": "generated/ecommerce-development/proof.webp",
+      "width": 1536,
+      "file": "proof-1536.webp",
+      "bytes": 67910
+    },
+    {
+      "slot": "mobile",
+      "source": "ecommerce-development/ecommerce-development-mobile.webp",
+      "width": 640,
+      "file": "mobile-640.webp",
+      "bytes": 29436
+    },
+    {
+      "slot": "mobile",
+      "source": "ecommerce-development/ecommerce-development-mobile.webp",
+      "width": 1200,
+      "file": "mobile-1200.webp",
+      "bytes": 63238
+    },
+    {
+      "slot": "trade",
+      "source": "ecommerce-development/ecommerce-development-trade.webp",
+      "width": 640,
+      "file": "trade-640.webp",
+      "bytes": 34046
+    },
+    {
+      "slot": "trade",
+      "source": "ecommerce-development/ecommerce-development-trade.webp",
+      "width": 1200,
+      "file": "trade-1200.webp",
+      "bytes": 89964
+    },
+    {
+      "slot": "migration",
+      "source": "ecommerce-development/ecommerce-development-migration.webp",
+      "width": 640,
+      "file": "migration-640.webp",
+      "bytes": 27008
+    },
+    {
+      "slot": "migration",
+      "source": "ecommerce-development/ecommerce-development-migration.webp",
+      "width": 1200,
+      "file": "migration-1200.webp",
+      "bytes": 76224
+    },
+    {
+      "slot": "remote",
+      "source": "ecommerce-development/ecommerce-development-remote.webp",
+      "width": 640,
+      "file": "remote-640.webp",
+      "bytes": 32768
+    },
+    {
+      "slot": "remote",
+      "source": "ecommerce-development/ecommerce-development-remote.webp",
+      "width": 1200,
+      "file": "remote-1200.webp",
+      "bytes": 78488
+    }
+  ]
+}

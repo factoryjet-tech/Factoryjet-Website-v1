@@ -60,6 +60,8 @@ export interface ComparisonTableProps {
   rows: ReadonlyArray<ComparisonRow>;
   /** Optional small line below the table (caveats, sources, footnote). */
   footer?: ReactNode;
+  /** Opt-in named keyboard-scroll region; omitted leaves existing pages unchanged. */
+  scrollRegionLabel?: string;
 }
 
 const HEADER_TYPE =
@@ -76,6 +78,7 @@ export default function ComparisonTable({
   columns,
   rows,
   footer,
+  scrollRegionLabel,
 }: ComparisonTableProps) {
   const hasPullQuote = !!pullQuote;
 
@@ -148,7 +151,12 @@ export default function ComparisonTable({
         )}
 
         {/* Table wrapper, horizontal scroll on narrow viewports */}
-        <div className="mt-12 overflow-x-auto">
+        <div
+          className="mt-12 overflow-x-auto"
+          tabIndex={scrollRegionLabel ? 0 : undefined}
+          role={scrollRegionLabel ? 'region' : undefined}
+          aria-label={scrollRegionLabel}
+        >
           <table className="w-full min-w-[720px] border-collapse">
             <thead>
               <tr>

@@ -1,5 +1,6 @@
 import { Fragment, type ReactNode } from 'react';
 import HeroInlineForm from '@/components/HeroInlineForm';
+import WebflowCollectionVisual from './WebflowCollectionVisual';
 import { WEBFLOW_FAQ_CATEGORIES, WEBFLOW_FAQS } from './WebflowDevelopmentFaqs';
 import './AiAgentDevelopmentSections.css';
 import './WebflowDevelopmentSections.css';
@@ -19,8 +20,8 @@ import './WebflowDevelopmentSections.css';
  * and BreadcrumbList JSON-LD in page.tsx. The FAQ array lives in
  * WebflowDevelopmentFaqs.ts and feeds both the accordion and FAQPage JSON-LD.
  *
- * Visuals: every intended image is a <figure data-visual-slot> placeholder,
- * hidden from visitors by WebflowDevelopmentSections.css until the visual pass.
+ * Visual pass 2026-10-02: original illustrative editorial photography, a
+ * migration illustration, and a native SVG CMS Collection diagram.
  *
  * Partner status: no Webflow partner claim exists in the repo or founder data,
  * so this page says nothing about partner status. Do not add one unverified.
@@ -262,7 +263,8 @@ export default function WebflowDevelopmentSections() {
                 <div className="fact"><div className="sec">§04</div><p><span className="stat">Webflow hosting is managed for you: SSL on every site plan, automatic backups, and SOC 2 Type II compliance.</span> Webflow says its network reaches 95% of the world in under 50 milliseconds. There are no plugins or server updates for anyone to run. <a href={WF_HOSTING} target="_blank" rel="noopener nofollow">Webflow hosting ↗</a></p></div>
                 <div className="fact"><div className="sec">§05</div><p>FactoryJet builds on Webflow, WordPress, Next.js and the main ecommerce platforms. That matters when you hire a Webflow agency: a Webflow-only shop will almost always recommend Webflow. We recommend it when your team wants visual control of a marketing site, and we say so when a different platform fits better.</p></div>
               </div>
-              <figure className="factphoto wf-slot" data-visual-slot="webflow-development:facts" data-visual-kind="photo" data-visual-subject="Two marketers at a desk in a bright US office, one editing a website page on a large monitor that faces them, the other reviewing on a laptop beside her; the screens show a generic page layout with blocks and no readable text or logos" data-visual-ratio="3:2" data-visual-status="placeholder">
+              <figure className="factphoto wf-slot" data-visual-slot="webflow-development:facts" data-visual-kind="photo" data-visual-subject="Two marketers at a desk in a bright US office, one editing a website page on a large monitor that faces them, the other reviewing on a laptop beside her; the screens show a generic page layout with blocks and no readable text or logos" data-visual-ratio="3:2" data-visual-status="ready" data-visual-origin="generated-illustration">
+                <img src="/images/us/visual-pass-2026-10-02/webflow-development/editor-workshop.webp" srcSet="/images/us/visual-pass-2026-10-02/webflow-development/editor-workshop-768.webp 768w, /images/us/visual-pass-2026-10-02/webflow-development/editor-workshop.webp 1440w" sizes="(max-width: 820px) calc(100vw - 40px), 430px" width="1440" height="960" loading="lazy" decoding="async" alt="Illustrative marketers editing and reviewing a website page" />
                 <figcaption className="cap">FIELD REFERENCE · A MARKETING TEAM PUBLISHING ITS OWN PAGES</figcaption>
               </figure>
             </div>
@@ -296,7 +298,7 @@ export default function WebflowDevelopmentSections() {
         </section>
 
         <section className="definition" id="definition">
-          <figure className="definition-image wf-slot" data-visual-slot="webflow-development:definition" data-visual-kind="diagram" data-visual-subject="One page template on the left feeding many finished pages on the right, each filled from a row of a content table, showing how a CMS Collection template generates pages; white cards, one orange accent card, no readable text" data-visual-ratio="3:2" data-visual-status="placeholder" />
+          <figure className="definition-image wf-slot" data-visual-slot="webflow-development:definition" data-visual-kind="diagram" data-visual-subject="One page template on the left feeding many finished pages on the right, each filled from a row of a content table, showing how a CMS Collection template generates pages; white cards, one orange accent card, no readable text" data-visual-ratio="3:2" data-visual-status="ready"><WebflowCollectionVisual /></figure>
           <div className="definition-copy">
             <div className="eyebrow">Term</div>
             <h2 className="term">CMS Collection</h2>
@@ -452,7 +454,9 @@ export default function WebflowDevelopmentSections() {
           </div>
         </section>
 
-        <figure className="photobreak wf-slot" data-visual-slot="webflow-development:photobreak" data-visual-kind="illustration" data-visual-subject="An older website page on the left connected through a checkpoint with an orange marker to a clean new website page and a matching phone layout on the right, suggesting every old URL redirected to its new page; white and cream tones, one orange accent, no readable text or logos" data-visual-ratio="16:5" data-visual-status="placeholder" />
+        <figure className="photobreak wf-slot" data-visual-slot="webflow-development:photobreak" data-visual-kind="illustration" data-visual-subject="An older website page on the left connected through a checkpoint with an orange marker to a clean new website page and a matching phone layout on the right, suggesting every old URL redirected to its new page; white and cream tones, one orange accent, no readable text or logos" data-visual-ratio="16:5" data-visual-status="ready" data-visual-origin="generated-illustration">
+          <img src="/images/us/visual-pass-2026-10-02/webflow-development/migration-panorama.webp" srcSet="/images/us/visual-pass-2026-10-02/webflow-development/migration-panorama-768.webp 768w, /images/us/visual-pass-2026-10-02/webflow-development/migration-panorama.webp 1600w" sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1264px) calc(100vw - 64px), 1200px" width="1600" height="500" loading="lazy" decoding="async" alt="Illustration of old website pages connecting directly to new desktop and mobile layouts" />
+        </figure>
 
         <section className="section process" id="how">
           <div className="wrap">

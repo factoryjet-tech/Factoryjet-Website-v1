@@ -65,6 +65,11 @@ export interface VisualSlotProps {
   captionClassName?: string;
   /** The existing image. Omit for a placeholder. */
   children?: ReactNode;
+  /** Explicit artwork for a reviewed visual pass. null keeps the supplied children. */
+  src?: string | null;
+  srcSet?: string;
+  sizes?: string;
+  imageAlt?: string;
 }
 
 export default function VisualSlot({
@@ -77,8 +82,12 @@ export default function VisualSlot({
   caption,
   captionClassName = 'cap',
   children,
+  src,
+  srcSet,
+  sizes,
+  imageAlt,
 }: VisualSlotProps) {
-  const generatedSrc = generatedVisualSrc(page, slot);
+  const generatedSrc = src === null ? undefined : (src ?? generatedVisualSrc(page, slot));
   const generatedAlt = /^AI-generated\b/i.test(subject)
     ? subject
     : `AI-generated ${kind} showing ${subject}`;
@@ -94,11 +103,13 @@ export default function VisualSlot({
   const generatedImage = generatedSrc ? (
     <img
       src={generatedSrc}
+      srcSet={srcSet}
+      sizes={sizes}
       {...ratioSize}
       loading={slot === 'hero' ? 'eager' : 'lazy'}
       fetchPriority={slot === 'hero' ? 'high' : undefined}
       decoding="async"
-      alt={generatedAlt}
+      alt={imageAlt ?? generatedAlt}
     />
   ) : null;
   const visual = generatedImage ?? children;

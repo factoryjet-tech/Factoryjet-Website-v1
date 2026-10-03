@@ -1,0 +1,86 @@
+[
+  {
+    "source": "website/public/images/au/generated/accountant-website-design/facts.webp",
+    "output": "website/public/images/au/visual-pass-2026-10-03/accountant-website-design/facts-640.webp",
+    "width": 640,
+    "height": 427,
+    "bytes": 23942
+  },
+  {
+    "source": "website/public/images/au/generated/accountant-website-design/facts.webp",
+    "output": "website/public/images/au/visual-pass-2026-10-03/accountant-website-design/facts-1280.webp",
+    "width": 1280,
+    "height": 853,
+    "bytes": 55474
+  },
+  {
+    "source": "website/public/images/au/generated/accountant-website-design/facts.webp",
+    "output": "website/public/images/au/visual-pass-2026-10-03/accountant-website-design/facts-1440.webp",
+    "width": 1440,
+    "height": 960,
+    "bytes": 63702
+  },
+  {
+    "source": "website/public/images/au/generated/accountant-website-design/proof.webp",
+    "output": "website/public/images/au/visual-pass-2026-10-03/accountant-website-design/proof-640.webp",
+    "width": 640,
+    "height": 427,
+    "bytes": 23728
+  },
+  {
+    "source": "website/public/images/au/generated/accountant-website-design/proof.webp",
+    "output": "website/public/images/au/visual-pass-2026-10-03/accountant-website-design/proof-1280.webp",
+    "width": 1280,
+    "height": 853,
+    "bytes": 57896
+  },
+  {
+    "source": "website/public/images/au/generated/accountant-website-design/proof.webp",
+    "output": "website/public/images/au/visual-pass-2026-10-03/accountant-website-design/proof-1440.webp",
+    "width": 1440,
+    "height": 960,
+    "bytes": 65744
+  },
+  {
+    "source": "website/public/images/au/generated/accountant-website-design/process.webp",
+    "output": "website/public/images/au/visual-pass-2026-10-03/accountant-website-design/process-640.webp",
+    "width": 640,
+    "height": 427,
+    "bytes": 21010
+  },
+  {
+    "source": "website/public/images/au/generated/accountant-website-design/process.webp",
+    "output": "website/public/images/au/visual-pass-2026-10-03/accountant-website-design/process-1280.webp",
+    "width": 1280,
+    "height": 853,
+    "bytes": 46342
+  },
+  {
+    "source": "website/public/images/au/generated/accountant-website-design/process.webp",
+    "output": "website/public/images/au/visual-pass-2026-10-03/accountant-website-design/process-1440.webp",
+    "width": 1440,
+    "height": 960,
+    "bytes": 52408
+  },
+  {
+    "source": "website/public/images/au/generated/accountant-website-design/definition.webp",
+    "output": "website/public/images/au/visual-pass-2026-10-03/accountant-website-design/definition-640.webp",
+    "width": 640,
+    "height": 427,
+    "bytes": 23730
+  },
+  {
+    "source": "website/public/images/au/generated/accountant-website-design/definition.webp",
+    "output": "website/public/images/au/visual-pass-2026-10-03/accountant-website-design/definition-1280.webp",
+    "width": 1280,
+    "height": 853,
+    "bytes": 55476
+  },
+  {
+    "source": "website/public/images/au/generated/accountant-website-design/definition.webp",
+    "output": "website/public/images/au/visual-pass-2026-10-03/accountant-website-design/definition-1440.webp",
+    "width": 1440,
+    "height": 960,
+    "bytes": 63378
+  }
+]

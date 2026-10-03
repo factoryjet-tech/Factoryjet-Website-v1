@@ -27,3 +27,146 @@
   .aiAgentPage.auPage .fact .au-panel { margin-top: 0; }
   .aiAgentPage.auPage .facts .factphoto { margin-right: 0; }
 }
+
+/* Visual pass 2026-10-03: catalogue-led compositions, isolated from other AU routes. */
+.aiAgentPage.auPage.auEcommerceSeoVisual .hero-grid { grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr); gap: clamp(28px, 4vw, 64px); align-items: start; }
+.aiAgentPage.auPage.auEcommerceSeoVisual .hero { padding-bottom: 48px; }
+.aiAgentPage.auPage.auEcommerceSeoVisual .hero h1 { font-size: clamp(36px, 4.2vw, 60px); }
+.aiAgentPage.auPage.auEcommerceSeoVisual .hero .lead { max-width: 60ch; }
+.aiAgentPage.auPage.auEcommerceSeoVisual .hero form:not(.specpanel) { width: 100%; }
+.aiAgentPage.auPage.auEcommerceSeoVisual .hero form:not(.specpanel) > div:first-child { flex-wrap: wrap; }
+.aiAgentPage.auPage.auEcommerceSeoVisual .hero form:not(.specpanel) button { white-space: normal; min-height: 48px; }
+.aiAgentPage.auPage.auEcommerceSeoVisual .specpanel { margin-top: 10px; box-shadow: none; }
+.aiAgentPage.auPage.auEcommerceSeoVisual .specpanel-bar { flex-wrap: wrap; gap: 12px; }
+.aiAgentPage.auPage.auEcommerceSeoVisual .specpanel-bar .sys { width: 100%; margin-left: 0; }
+.aiAgentPage.auPage.auEcommerceSeoVisual .hero-catalogue-art { padding: 8px 30px 0; background: var(--accent-wash); }
+.aiAgentPage.auPage.auEcommerceSeoVisual .hero-catalogue-art .catalogue-diagram { height: 110px; }
+.aiAgentPage.auPage.auEcommerceSeoVisual .workflow-controls { padding-top: 14px; }
+.aiAgentPage.auPage.auEcommerceSeoVisual :is(.workflow-toggle, .workflow-replay) { width: 44px; height: 44px; }
+.aiAgentPage.auPage.auEcommerceSeoVisual .specpanel-body { min-height: 0; padding: 18px 24px 24px; }
+.aiAgentPage.auPage.auEcommerceSeoVisual .specrow { margin-left: 0; width: 100%; box-shadow: none; }
+.aiAgentPage.auPage.auEcommerceSeoVisual .specrow:nth-child(odd) { margin-left: 0; }
+.aiAgentPage.auPage.auEcommerceSeoVisual .specrow:has(.workflow-select:checked) { box-shadow: none; background: var(--accent-wash); }
+.aiAgentPage.auPage.auEcommerceSeoVisual .specrow .idx { font-size: 9px; letter-spacing: .025em; }
+.aiAgentPage.auPage.auEcommerceSeoVisual .specrow .title { font-size: 14px; }
+.aiAgentPage.auPage.auEcommerceSeoVisual .catalogue-diagram { display: block; width: 100%; height: auto; color: var(--accent-text); }
+.aiAgentPage.auPage.auEcommerceSeoVisual .diagram-root { fill: var(--accent-wash); stroke: var(--accent-text); stroke-width: 1.5; }
+.aiAgentPage.auPage.auEcommerceSeoVisual .diagram-page { fill: white; stroke: var(--line); stroke-width: 1.5; }
+.aiAgentPage.auPage.auEcommerceSeoVisual :is(.section, .vlog) { padding-block: clamp(48px, 6vw, 84px); }
+.aiAgentPage.auPage.auEcommerceSeoVisual .vslot > img { animation: none; transform: none; box-shadow: none; filter: none; }
+.aiAgentPage.auPage.auEcommerceSeoVisual .vslot { box-shadow: none; }
+.aiAgentPage.auPage.auEcommerceSeoVisual #facts .wrap { grid-template-columns: minmax(0, 1fr) minmax(0, 1.18fr); gap: 32px 60px; }
+.aiAgentPage.auPage.auEcommerceSeoVisual #facts .section-head { grid-column: 1 / -1; max-width: 850px; }
+.aiAgentPage.auPage.auEcommerceSeoVisual #facts .factlist { grid-column: 1; grid-row: 2; }
+.aiAgentPage.auPage.auEcommerceSeoVisual #facts .factphoto { grid-column: 2; grid-row: 2; align-self: start; }
+.aiAgentPage.auPage.auEcommerceSeoVisual #facts .factphoto img { aspect-ratio: 4 / 5; object-position: 48% center; }
+.aiAgentPage.auPage.auEcommerceSeoVisual #services { background: var(--accent-wash); border-block: 1px solid var(--line); }
+.aiAgentPage.auPage.auEcommerceSeoVisual #services .section-head { max-width: 850px; }
+.aiAgentPage.auPage.auEcommerceSeoVisual #services .capgrid { gap: 20px; }
+.aiAgentPage.auPage.auEcommerceSeoVisual #services .cap { grid-column: span 6; padding: 26px; border-radius: 8px; box-shadow: none; }
+.aiAgentPage.auPage.auEcommerceSeoVisual #services .cap:nth-child(4n+1) { grid-column: span 7; }
+.aiAgentPage.auPage.auEcommerceSeoVisual #services .cap:nth-child(4n+2) { grid-column: span 5; }
+.aiAgentPage.auPage.auEcommerceSeoVisual #services .cap-diagram { border: 0; box-shadow: none; background: transparent; width: 100%; max-width: 420px; margin: 8px 0 16px; }
+.aiAgentPage.auPage.auEcommerceSeoVisual #services .cap h3 { font-size: 22px; }
+.aiAgentPage.auPage.auEcommerceSeoVisual #shopify-seo .au-panel { align-self: start; padding: 26px; background: white; border-color: var(--ink); }
+.aiAgentPage.auPage.auEcommerceSeoVisual #shopify-seo .trigrows li { padding-block: 17px; }
+.aiAgentPage.auPage.auEcommerceSeoVisual #shopify-seo .au-numlist-inline span { min-width: 0; overflow-wrap: anywhere; }
+.aiAgentPage.auPage.auEcommerceSeoVisual #platforms { background: white; }
+.aiAgentPage.auPage.auEcommerceSeoVisual .tablewrap { border: 1px solid var(--line); border-radius: 8px; }
+.aiAgentPage.auPage.auEcommerceSeoVisual .tablewrap table { min-width: 840px; }
+.aiAgentPage.auPage.auEcommerceSeoVisual .tablewrap th { white-space: normal; }
+.aiAgentPage.auPage.auEcommerceSeoVisual .tablewrap :is(th,td) { padding: 20px; vertical-align: top; }
+.aiAgentPage.auPage.auEcommerceSeoVisual .tablewrap:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 5px; }
+.aiAgentPage.auPage.auEcommerceSeoVisual #page-structure { background: var(--accent-wash); padding: clamp(28px, 4vw, 52px); border: 1px solid var(--line); border-radius: 8px; gap: 48px; }
+.aiAgentPage.auPage.auEcommerceSeoVisual #page-structure .definition-image { aspect-ratio: 3 / 2; }
+.aiAgentPage.auPage.auEcommerceSeoVisual #page-structure .definition-panel { background: white; padding: 24px; }
+.aiAgentPage.auPage.auEcommerceSeoVisual #page-structure .trigrows li { grid-template-columns: minmax(0,1fr) auto; gap: 12px; }
+.aiAgentPage.auPage.auEcommerceSeoVisual #technical .plat-head { grid-template-columns: minmax(0,1.1fr) minmax(0,1fr); }
+.aiAgentPage.auPage.auEcommerceSeoVisual #technical .plat { padding-block: 30px; padding-inline: 0; grid-template-columns: 48px minmax(0,3fr) minmax(0,5fr); }
+.aiAgentPage.auPage.auEcommerceSeoVisual #technical .plat h3 { font-size: 25px; }
+.aiAgentPage.auPage.auEcommerceSeoVisual #free-listings { background: var(--accent-wash); }
+.aiAgentPage.auPage.auEcommerceSeoVisual #free-listings .au-panel { background: white; border: 0; border-radius: 8px; padding: 24px; }
+.aiAgentPage.auPage.auEcommerceSeoVisual #free-listings .trigrows .t { min-width: 62px; text-align: center; }
+.aiAgentPage.auPage.auEcommerceSeoVisual #ai-search { align-items: start; gap: clamp(28px,4vw,64px); }
+.aiAgentPage.auPage.auEcommerceSeoVisual #ai-search .definition-image { aspect-ratio: 4 / 5; }
+.aiAgentPage.auPage.auEcommerceSeoVisual #ai-search .definition-image img { height: 100%; object-position: 43% center; }
+.aiAgentPage.auPage.auEcommerceSeoVisual #ai-search .chg-list { row-gap: 0; }
+.aiAgentPage.auPage.auEcommerceSeoVisual #migration .wrap { grid-template-columns: minmax(0,1fr) minmax(0,1.3fr); gap: 32px 60px; }
+.aiAgentPage.auPage.auEcommerceSeoVisual #migration .section-head { grid-column: 1 / -1; max-width: 860px; }
+.aiAgentPage.auPage.auEcommerceSeoVisual #migration .factlist { grid-column: 2; grid-row: 2; }
+.aiAgentPage.auPage.auEcommerceSeoVisual #migration .factphoto { grid-column: 1; grid-row: 2; }
+.aiAgentPage.auPage.auEcommerceSeoVisual #migration .factphoto img { aspect-ratio: 4 / 5; object-position: 54% center; }
+.aiAgentPage.auPage.auEcommerceSeoVisual #migration .au-panel { padding: 22px; }
+.aiAgentPage.auPage.auEcommerceSeoVisual #fit-check .section-head { position: static; }
+.aiAgentPage.auPage.auEcommerceSeoVisual #fit-check .ventry { border-radius: 8px; padding: 24px; box-shadow: none; }
+.aiAgentPage.auPage.auEcommerceSeoVisual #fit-check .ventry::before { display: none; }
+.aiAgentPage.auPage.auEcommerceSeoVisual #fit-check .ventry summary { min-height: 44px; }
+.aiAgentPage.auPage.auEcommerceSeoVisual #fit-check .ventry[open] { background: white; border-color: var(--accent-text); }
+.aiAgentPage.auPage.auEcommerceSeoVisual #comparison .section-head { max-width: 900px; }
+.aiAgentPage.auPage.auEcommerceSeoVisual #audit .wrap { grid-template-columns: minmax(0,1fr) minmax(0,1.2fr); }
+.aiAgentPage.auPage.auEcommerceSeoVisual #audit .section-head { grid-column: 1 / -1; max-width: 850px; }
+.aiAgentPage.auPage.auEcommerceSeoVisual #audit .factlist { grid-column: 1; grid-row: 2; }
+.aiAgentPage.auPage.auEcommerceSeoVisual #audit .factphoto { grid-column: 2; grid-row: 2; }
+.aiAgentPage.auPage.auEcommerceSeoVisual #audit .ventry-num { padding-inline: 18px; }
+.aiAgentPage.auPage.auEcommerceSeoVisual #audit .ventry-num summary { min-height: 44px; }
+.aiAgentPage.auPage.auEcommerceSeoVisual #audit .demand { padding: 28px; background: var(--accent-wash); }
+.aiAgentPage.auPage.auEcommerceSeoVisual .photobreak { height: auto; aspect-ratio: 12 / 5; }
+.aiAgentPage.auPage.auEcommerceSeoVisual #how-we-work .head-media { grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 60px; align-items: start; }
+.aiAgentPage.auPage.auEcommerceSeoVisual #how-we-work .timeline { display: block; border-top: 1px solid var(--ink); margin-top: 36px; }
+.aiAgentPage.auPage.auEcommerceSeoVisual #how-we-work .timeline::before { display: none; }
+.aiAgentPage.auPage.auEcommerceSeoVisual #how-we-work .tnode { border: 0; border-bottom: 1px solid var(--line); border-radius: 0; padding: 23px 0; background: transparent; box-shadow: none; }
+.aiAgentPage.auPage.auEcommerceSeoVisual #how-we-work .tnode::before { display: none; }
+.aiAgentPage.auPage.auEcommerceSeoVisual #how-we-work .tnode summary { display: grid; grid-template-columns: 56px minmax(0,1fr); gap: 20px; align-items: center; min-height: 44px; }
+.aiAgentPage.auPage.auEcommerceSeoVisual #how-we-work .tnode .idx { position: relative; left: auto; top: auto; width: 44px; height: 44px; display: grid; place-items: center; background: var(--accent-wash); border-radius: 50%; margin: 0; font-size: 14px; }
+.aiAgentPage.auPage.auEcommerceSeoVisual #how-we-work .tnode h3 { margin: 0; font-size: clamp(19px,2vw,25px); display: flex; justify-content: space-between; gap: 16px; align-items: center; }
+.aiAgentPage.auPage.auEcommerceSeoVisual #how-we-work .tnode p { margin: 16px 0 0 76px; max-width: 72ch; }
+.aiAgentPage.auPage.auEcommerceSeoVisual #how-we-work .tnode .chev { margin-left: auto; }
+.aiAgentPage.auPage.auEcommerceSeoVisual #providers .plat { padding-block: 24px; border-radius: 0; }
+.aiAgentPage.auPage.auEcommerceSeoVisual #providers .plat-own { background: var(--accent-wash); }
+.aiAgentPage.auPage.auEcommerceSeoVisual #more-services .agentdir-grid { grid-template-columns: minmax(0,1fr) minmax(0,1fr); }
+.aiAgentPage.auPage.auEcommerceSeoVisual #more-services .agentdir-grid a { padding: 22px; min-height: 150px; background: white; border-radius: 8px; }
+.aiAgentPage.auPage.auEcommerceSeoVisual .faqwrap { grid-template-columns: minmax(0,.8fr) minmax(0,1.4fr); }
+.aiAgentPage.auPage.auEcommerceSeoVisual .faq-catnav a { min-height: 44px; align-items: center; }
+.aiAgentPage.auPage.auEcommerceSeoVisual .finalcta .wrap { grid-template-columns: minmax(0,1.25fr) minmax(0,.75fr); gap: 48px; }
+.aiAgentPage.auPage.auEcommerceSeoVisual .finalcta .ctas { align-items: stretch; }
+.aiAgentPage.auPage.auEcommerceSeoVisual :is(.btn, .tablewrap, summary, .workflow-toggle, .workflow-replay):focus-visible { outline: 2px solid var(--accent-text); outline-offset: 4px; }
+.aiAgentPage.auPage.auEcommerceSeoVisual :is(.fact,.plat,.tnode,.ventry) { transition: background-color .2s cubic-bezier(.22,1,.36,1); }
+@media (hover:hover) {
+  .aiAgentPage.auPage.auEcommerceSeoVisual :is(.plat,.tnode,.ventry):hover { box-shadow: none; transform: none; background: var(--accent-wash); }
+}
+@media (max-width: 1100px) and (min-width: 821px) {
+  .aiAgentPage.auPage.auEcommerceSeoVisual .hero form:not(.specpanel) > div:first-child { flex-direction: column; }
+  .aiAgentPage.auPage.auEcommerceSeoVisual .hero form:not(.specpanel) button { width: 100%; }
+}
+@media (max-width: 820px) {
+  .aiAgentPage.auPage.auEcommerceSeoVisual :is(.hero-grid, #facts .wrap, #migration .wrap, #audit .wrap, #how-we-work .head-media, .faqwrap, .finalcta .wrap, #technical .plat-head) { grid-template-columns: minmax(0,1fr); gap: 28px; }
+  .aiAgentPage.auPage.auEcommerceSeoVisual :is(#facts,#migration,#audit) :is(.factlist,.factphoto,.section-head) { grid-column: 1; grid-row: auto; }
+  .aiAgentPage.auPage.auEcommerceSeoVisual #facts .factphoto img { aspect-ratio: 3 / 2; }
+  .aiAgentPage.auPage.auEcommerceSeoVisual #migration .factphoto img { aspect-ratio: 3 / 2; }
+  .aiAgentPage.auPage.auEcommerceSeoVisual :is(#services .cap:nth-child(n)) { grid-column: 1 / -1; }
+  .aiAgentPage.auPage.auEcommerceSeoVisual #services .cap { padding: 22px; }
+  .aiAgentPage.auPage.auEcommerceSeoVisual #page-structure { padding: 24px; gap: 28px; }
+  .aiAgentPage.auPage.auEcommerceSeoVisual #technical .plat { grid-template-columns: 30px minmax(0,1fr); gap: 12px; }
+  .aiAgentPage.auPage.auEcommerceSeoVisual #technical .plat-build { grid-column: 2; }
+  .aiAgentPage.auPage.auEcommerceSeoVisual #more-services .agentdir-grid { grid-template-columns: minmax(0,1fr); }
+  .aiAgentPage.auPage.auEcommerceSeoVisual #ai-search .definition-image { aspect-ratio: 3 / 2; }
+  .aiAgentPage.auPage.auEcommerceSeoVisual #how-we-work .tnode p { margin-left: 0; }
+  .aiAgentPage.auPage.auEcommerceSeoVisual #how-we-work .tnode summary { grid-template-columns: 40px minmax(0,1fr); gap: 16px; }
+  .aiAgentPage.auPage.auEcommerceSeoVisual #how-we-work .tnode .idx { width: 36px; height: 36px; }
+}
+@media (max-width: 480px) {
+  .aiAgentPage.auPage.auEcommerceSeoVisual .hero h1 { font-size: clamp(30px,8.8vw,38px); }
+  .aiAgentPage.auPage.auEcommerceSeoVisual .specpanel-body { padding: 16px; }
+  .aiAgentPage.auPage.auEcommerceSeoVisual .specrow { grid-template-columns: 30px minmax(0,1fr); gap: 4px 10px; padding: 14px; }
+  .aiAgentPage.auPage.auEcommerceSeoVisual .specrow .tag { grid-column: 2; grid-row: 3; justify-self: start; margin-top: 5px; }
+  .aiAgentPage.auPage.auEcommerceSeoVisual .specrow .title { font-size: 13px; }
+  .aiAgentPage.auPage.auEcommerceSeoVisual .trigrows li { grid-template-columns: minmax(0,1fr); }
+  .aiAgentPage.auPage.auEcommerceSeoVisual .trigrows .t { grid-column: 1; grid-row: auto; justify-self: start; }
+  .aiAgentPage.auPage.auEcommerceSeoVisual .demand-top { flex-wrap: wrap; gap: 4px 12px; }
+  .aiAgentPage.auPage.auEcommerceSeoVisual #audit .demand { padding: 20px; }
+  .aiAgentPage.auPage.auEcommerceSeoVisual .photobreak { aspect-ratio: 3 / 2; }
+  .aiAgentPage.auPage.auEcommerceSeoVisual :is(.au-panel,.vlog-panel) { padding: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .aiAgentPage.auPage.auEcommerceSeoVisual *, .aiAgentPage.auPage.auEcommerceSeoVisual *::before, .aiAgentPage.auPage.auEcommerceSeoVisual *::after { animation: none !important; transition: none !important; }
+}

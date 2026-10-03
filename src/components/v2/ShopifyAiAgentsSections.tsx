@@ -35,7 +35,7 @@ import './ShopifyAiAgentsSections.css';
  * Static server component. The only client code is HeroInlineForm.
  * AGENT_JOBS and shopifyAiBreadcrumbs also feed the Service and BreadcrumbList JSON-LD.
  * FAQ array lives in ShopifyAiAgentsFaqs.ts and feeds the accordion AND FAQPage JSON-LD.
- * Images are existing files in public/images (no new generation). No FactoryJet prices.
+ * Photos are generated illustrative scenes, not client evidence. No FactoryJet prices.
  */
 
 export const shopifyAiBreadcrumbs = [
@@ -274,7 +274,7 @@ export default function ShopifyAiAgentsSections() {
                 <div className="fact"><div className="sec">§05</div><p>FactoryJet is a registered Shopify Partner that builds both Shopify stores and AI agents. Bhavesh Barot, our founder, is involved in every AI project, the same team supports the agent after launch, and you own everything we build. If Sidekick, Flow or an app will do the job, we say so on the first call.</p></div>
               </div>
               <div className="factphoto">
-                <img src="/images/us/commerce/woocommerce-to-shopify-people-laptop-orders.webp" alt="A store owner in his stockroom reviewing the day's orders on a laptop" width={1280} height={800} loading="lazy" decoding="async" />
+                <img src="/images/us/visual-pass-2026-10-03/shopify-agent-review-1280.webp" srcSet="/images/us/visual-pass-2026-10-03/shopify-agent-review-640.webp 640w, /images/us/visual-pass-2026-10-03/shopify-agent-review-1280.webp 1280w, /images/us/visual-pass-2026-10-03/shopify-agent-review-1920.webp 1920w" sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1264px) 35vw, 440px" alt="Illustrative generated scene of a merchant reviewing draft orders on a laptop in a stockroom; not a FactoryJet client photograph" width={1536} height={1024} loading="lazy" decoding="async" />
                 <div className="cap">THE PERSON STAYS IN CHARGE · THE AGENT PREPARES THE WORK</div>
               </div>
             </div>
@@ -288,7 +288,7 @@ export default function ShopifyAiAgentsSections() {
               <div className="eyebrow">Compare</div>
               <h2>Sidekick vs Shopify Flow vs Helpdesk AI vs a Custom Shopify Agent</h2>
             </div>
-            <div className="tablewrap">
+            <div className="tablewrap" tabIndex={0} role="region" aria-label="Shopify AI tools comparison; scroll horizontally to view all columns">
               <table>
                 <thead><tr><th>Option</th><th>What it is</th><th>Best for</th><th>Where it stops</th></tr></thead>
                 <tbody>
@@ -320,13 +320,13 @@ export default function ShopifyAiAgentsSections() {
                       <h3>{job.title}</h3>
                       <div className="systags">{job.systems.map((s) => <span key={s}>{s}</span>)}</div>
                     </div>
-                    <div className="plat-fit"><span className="k">Starts when</span>{job.trigger}<span className="k guard-k">Hard limit</span>{job.guard}</div>
+                    <div className="plat-fit"><div><span className="k">Starts when</span>{job.trigger}</div><div><span className="k guard-k">Hard limit</span>{job.guard}</div></div>
                     <p className="plat-build">{job.body}</p>
                     <span className="plat-go" aria-hidden="true">{job.href ? '↗' : ''}</span>
                   </>
                 );
                 return job.href
-                  ? <a key={job.title} className="plat" role="listitem" href={job.href}>{inner}</a>
+                  ? <div key={job.title} role="listitem"><a className="plat" href={job.href}>{inner}</a></div>
                   : <div key={job.title} className="plat" role="listitem">{inner}</div>;
               })}
             </div>
@@ -340,7 +340,7 @@ export default function ShopifyAiAgentsSections() {
               <div className="eyebrow">Integrations</div>
               <h2>The Systems Our Shopify Agents Read and Write</h2>
             </div>
-            <div className="tablewrap">
+            <div className="tablewrap" tabIndex={0} role="region" aria-label="Shopify agent systems and APIs">
               <table>
                 <thead><tr><th>Area</th><th>Systems and APIs</th></tr></thead>
                 <tbody>
@@ -377,14 +377,38 @@ export default function ShopifyAiAgentsSections() {
           </div>
         </section>
 
-        <MidPageCTA
+        <div className="shop-midcta" id="next-step"><MidPageCTA
           headline="Know which Shopify job eats the most hours?"
           sub="Tell us the job and the systems involved. On a short call with the founder we will say whether Sidekick, Flow or an app can do it, and if not, what a custom agent involves and how many weeks each phase takes."
           label="Scope my Shopify agent"
-        />
+        /></div>
 
         {/* ═══ DEFINITION ═══ */}
         <section className="definition" id="definition">
+          <div className="shop-draft-diagram">
+            <svg viewBox="0 0 640 420" role="img" aria-label="Illustrative workflow: incoming purchase order becomes an agent-prepared draft, then waits for a person to approve before becoming a completed order">
+              <g fill="none" strokeLinecap="round" strokeLinejoin="round">
+                <path className="draft-wire" d="M157 210h56m214 0h56" />
+                <path className="draft-wire" d="m201 202 12 8-12 8m270-16 12 8-12 8" />
+                <rect className="draft-surface" x="39" y="132" width="118" height="156" rx="12" />
+                <path className="draft-ink" d="M69 169h58M69 184h41M69 228h58M69 244h39" />
+                <path className="draft-ink" d="M69 202h19v10H69zM99 202h28v10H99z" />
+                <rect className="draft-core" x="213" y="107" width="214" height="206" rx="16" />
+                <rect className="draft-surface" x="260" y="134" width="120" height="152" rx="9" />
+                <path className="draft-ink" d="M283 164h72M283 179h51M283 231h72M283 246h46M283 197h21v15h-21zM317 197h38v15h-38z" />
+                <circle className="draft-core" cx="376" cy="278" r="28" />
+                <path className="draft-accent" d="M369 274v-5a7 7 0 0 1 14 0v5m-17 0h20v14h-20z" />
+                <path className="draft-wire" d="M320 107V76" />
+                <circle className="draft-surface" cx="320" cy="51" r="25" />
+                <path className="draft-accent" d="M307 62v-6c0-5 6-7 13-7s13 2 13 7v6m-7-25a6 6 0 1 1-12 0 6 6 0 0 1 12 0" />
+                <rect className="draft-surface" x="483" y="132" width="118" height="156" rx="12" />
+                <path className="draft-ink" d="M509 163h65M509 179h45M509 246h65" />
+                <circle className="draft-core" cx="542" cy="213" r="21" />
+                <path className="draft-accent" d="m532 213 7 7 14-16" />
+                <path className="draft-faint" d="M62 349h116m45 0h194m45 0h116" />
+              </g>
+            </svg>
+          </div>
           <div className="definition-copy">
             <div className="eyebrow">Term</div>
             <h2 className="term">Draft Order</h2>
@@ -405,13 +429,13 @@ export default function ShopifyAiAgentsSections() {
               <div className="plat" role="listitem"><span className="capid">02</span><div className="plat-name"><h3>Read or write</h3></div><div className="plat-fit"><span className="k">Lower cost</span>Reads and drafts</div><p className="plat-build">An agent that tags orders or drafts replies is cheaper to make safe than one that writes draft orders, and far cheaper than one allowed to change prices or refunds.</p><span className="plat-go" aria-hidden="true"></span></div>
               <div className="plat" role="listitem"><span className="capid">03</span><div className="plat-name"><h3>How messy the input is</h3></div><div className="plat-fit"><span className="k">Lower cost</span>Clean Shopify data</div><p className="plat-build">Structured order data is easy. Scanned PDFs, free-text emails and supplier sheets with old part numbers need more testing before the agent is right often enough.</p><span className="plat-go" aria-hidden="true"></span></div>
               <div className="plat" role="listitem"><span className="capid">04</span><div className="plat-name"><h3>Volume and peaks</h3></div><div className="plat-fit"><span className="k">Watch for</span>Sales events, big imports</div><p className="plat-build">Order volume drives AI model usage, which you pay the model provider directly, and big jobs must be paced around your plan&apos;s API limit.</p><span className="plat-go" aria-hidden="true"></span></div>
-              <a className="plat" role="listitem" href="/services/ai-agent-monitoring"><span className="capid">05</span><div className="plat-name"><h3>Support after launch</h3></div><div className="plat-fit"><span className="k">Monthly</span>Monitoring and fixes</div><p className="plat-build">Shopify versions its API, apps change their data and your policies move. A monthly plan covers re-scoring, fixes and improvements, scoped in advance so the cost is known.</p><span className="plat-go" aria-hidden="true">↗</span></a>
+              <div role="listitem"><a className="plat" href="/services/ai-agent-monitoring"><span className="capid">05</span><div className="plat-name"><h3>Support after launch</h3></div><div className="plat-fit"><span className="k">Monthly</span>Monitoring and fixes</div><p className="plat-build">Shopify versions its API, apps change their data and your policies move. A monthly plan covers re-scoring, fixes and improvements, scoped in advance so the cost is known.</p><span className="plat-go" aria-hidden="true">↗</span></a></div>
             </div>
           </div>
         </section>
 
         <figure className="photobreak">
-          <img src="/images/us/commerce/b2b-ecommerce-people-warehouse-team.webp" alt="Two warehouse staff checking a pallet of boxed orders against a clipboard" width={1280} height={800} loading="lazy" decoding="async" />
+          <img src="/images/us/visual-pass-2026-10-03/shopify-fulfillment-1280.webp" srcSet="/images/us/visual-pass-2026-10-03/shopify-fulfillment-640.webp 640w, /images/us/visual-pass-2026-10-03/shopify-fulfillment-1280.webp 1280w, /images/us/visual-pass-2026-10-03/shopify-fulfillment-1920.webp 1920w" sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1264px) calc(100vw - 64px), 1200px" alt="Illustrative generated scene of a fulfillment worker scanning a carton beside prepared orders; not a FactoryJet client photograph" width={1536} height={1024} loading="lazy" decoding="async" />
         </figure>
 
         {/* ═══ PROCESS ═══ */}
@@ -463,7 +487,7 @@ export default function ShopifyAiAgentsSections() {
               <div className="plat" role="listitem"><span className="capid">01</span><div className="plat-name"><h3>A fixed rule would do</h3></div><div className="plat-fit"><span className="k">Do this instead</span>Set up Shopify Flow</div><p className="plat-build">If you can write the job as &quot;when this, then that&quot;, Flow does it for free on most plans. No AI needed.</p><span className="plat-go" aria-hidden="true"></span></div>
               <div className="plat" role="listitem"><span className="capid">02</span><div className="plat-name"><h3>It is only support</h3></div><div className="plat-fit"><span className="k">Do this instead</span>Turn on your helpdesk&apos;s AI agent</div><p className="plat-build">Gorgias, Zendesk and Intercom all sell AI agents for routine tickets. Set one up well first and build only for the gap.</p><span className="plat-go" aria-hidden="true"></span></div>
               <div className="plat" role="listitem"><span className="capid">03</span><div className="plat-name"><h3>Low volume</h3></div><div className="plat-fit"><span className="k">Do this instead</span>Keep a person on it, use Sidekick</div><p className="plat-build">If the job takes an hour a week, the build and support will cost more than the time it saves.</p><span className="plat-go" aria-hidden="true"></span></div>
-              <a className="plat" role="listitem" href="/services/shopify-development"><span className="capid">04</span><div className="plat-name"><h3>The store itself is the problem</h3></div><div className="plat-fit"><span className="k">Do this instead</span>Fix the store first</div><p className="plat-build">An agent cannot fix messy product data, broken apps or a slow theme. Clean the store up, then automate.</p><span className="plat-go" aria-hidden="true">↗</span></a>
+              <div role="listitem"><a className="plat" href="/services/shopify-development"><span className="capid">04</span><div className="plat-name"><h3>The store itself is the problem</h3></div><div className="plat-fit"><span className="k">Do this instead</span>Fix the store first</div><p className="plat-build">An agent cannot fix messy product data, broken apps or a slow theme. Clean the store up, then automate.</p><span className="plat-go" aria-hidden="true">↗</span></a></div>
             </div>
           </div>
         </section>

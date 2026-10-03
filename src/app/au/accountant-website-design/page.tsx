@@ -10,6 +10,8 @@ import AuFaq from '../components/AuFaq';
 import VisualSlot from '../components/VisualSlot';
 import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
+import './page.css';
+import { PracticeJourneyDiagram, PracticeCapabilityDiagram, PracticeIntakeDiagram, PracticeSearchDiagram } from './PracticeDiagram';
 
 const CANONICAL = 'https://factoryjet.com/au/accountant-website-design';
 const UPDATED = '2026-09-26';
@@ -333,7 +335,7 @@ export default function AccountantWebsiteDesignAUPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <SiteHeader locale="au" logoHref="/au" />
-      <div className="aiAgentPage auPage">
+      <div className="aiAgentPage auPage auAccountantVisual">
       <nav className="crumbs" aria-label="Breadcrumb">
         <div className="wrap">
           {crumbs.map((item, index) => (
@@ -385,6 +387,7 @@ export default function AccountantWebsiteDesignAUPage() {
                   <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M3 6a5 5 0 1 1 0 4M3 2v4h4" /></svg>
                 </button>
               </div>
+              <PracticeJourneyDiagram compact />
               <div className="specpanel-body" role="radiogroup" aria-label="Explore what the site does">
                 <label className="specrow run">
                   <input className="workflow-select" type="radio" name="acct-step" value="1" />
@@ -479,7 +482,7 @@ export default function AccountantWebsiteDesignAUPage() {
                   </p>
                 </div>
               </div>
-              <VisualSlot page={PAGE_KEY} slot="facts" kind="photo" ratio="3:2" className="factphoto"
+              <VisualSlot page={PAGE_KEY} slot="facts" src="/images/au/visual-pass-2026-10-03/accountant-website-design/facts-1280.webp" srcSet="/images/au/visual-pass-2026-10-03/accountant-website-design/facts-640.webp 640w, /images/au/visual-pass-2026-10-03/accountant-website-design/facts-1280.webp 1280w, /images/au/visual-pass-2026-10-03/accountant-website-design/facts-1440.webp 1440w" sizes="(max-width: 820px) calc(100vw - 48px), 560px" kind="photo" ratio="3:2" className="factphoto"
                 subject="A partner at a small suburban Australian accounting firm reviewing her firm's new website on a desktop monitor that faces her, a client folder on the desk, no readable text or logos" />
             </div>
           </div>
@@ -527,7 +530,7 @@ export default function AccountantWebsiteDesignAUPage() {
                 return (
                   <div key={c.t} className={`cap cap-${i + 1}`}>
                     <div className="caphead"><span className="capid">CAP‑{n}</span><svg {...CAP_ICON}><path d={CAP_ICONS[i]} /></svg></div>
-                    <VisualSlot page={PAGE_KEY} slot={`capability-${n}`} kind="diagram" ratio="11:4" className="cap-diagram" subject={CAP_SUBJECTS[i]} />
+                    <VisualSlot page={PAGE_KEY} slot={`capability-${n}`} kind="diagram" ratio="11:4" className="cap-diagram" src={null} subject={CAP_SUBJECTS[i]}><PracticeCapabilityDiagram step={i} /></VisualSlot>
                     <h3>{c.t}</h3>
                     <p>{c.d}</p>
                   </div>
@@ -665,7 +668,7 @@ export default function AccountantWebsiteDesignAUPage() {
               </div>
               <VisualSlot page={PAGE_KEY} slot="facts-2" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
                 subject="A small business owner in a ute cab searching on her phone for a local accountant, the phone screen facing her, no readable text or logos"
-                caption="Most first searches for an accountant happen on a phone, often between jobs. The page that answers fastest usually gets the call." />
+                caption="Most first searches for an accountant happen on a phone, often between jobs. The page that answers fastest usually gets the call." src={null}><PracticeSearchDiagram /></VisualSlot>
             </div>
           </div>
         </section>
@@ -677,7 +680,7 @@ export default function AccountantWebsiteDesignAUPage() {
               <div className="eyebrow">Which option fits you?</div>
               <h2>A 30-second check: builder, template service, custom site, SEO or AI intake</h2>
               <p>Tap the line that sounds most like your practice. The answer is honest, even when it is not us.</p>
-              <VisualSlot page={PAGE_KEY} slot="proof" kind="photo" ratio="3:2" captionClassName="figcap"
+              <VisualSlot page={PAGE_KEY} slot="proof" src="/images/au/visual-pass-2026-10-03/accountant-website-design/proof-1280.webp" srcSet="/images/au/visual-pass-2026-10-03/accountant-website-design/proof-640.webp 640w, /images/au/visual-pass-2026-10-03/accountant-website-design/proof-1280.webp 1280w, /images/au/visual-pass-2026-10-03/accountant-website-design/proof-1440.webp 1440w" sizes="(max-width: 820px) calc(100vw - 48px), 560px" kind="photo" ratio="3:2" captionClassName="figcap"
                 subject="Two accountants at a meeting table in an Australian suburban office, one pointing at a printed page layout, a laptop open and facing them, no readable text"
                 caption="The right answer depends on the size of the firm and where the time is going now." />
             </div>
@@ -706,7 +709,7 @@ export default function AccountantWebsiteDesignAUPage() {
                 </p>
               </div>
             </div>
-            <div className="tablewrap">
+            <div className="tablewrap" tabIndex={0} role="region" aria-label="Scrollable accountant website comparison">
               <table>
                 <thead>
                   <tr>
@@ -738,8 +741,8 @@ export default function AccountantWebsiteDesignAUPage() {
         </section>
 
         {/* ═══ PHOTOBREAK (placeholder for the visual pass) ═══ */}
-        <VisualSlot page={PAGE_KEY} slot="photobreak" kind="illustration" ratio="12:5" className="photobreak"
-          subject="AI-generated model: a row of white document folders on a rail moving into an orange secure box, with one folder handed to a small human figure at a desk" />
+        <VisualSlot page={PAGE_KEY} slot="photobreak" kind="illustration" ratio="12:5" className="photobreak" src={null}
+          subject="AI-generated model: a row of white document folders on a rail moving into an orange secure box, with one folder handed to a small human figure at a desk"><PracticeIntakeDiagram /></VisualSlot>
 
         {/* ═══ HOW WE BUILD IT → process timeline ═══ */}
         <section className="section process" id="how-we-build">
@@ -752,7 +755,7 @@ export default function AccountantWebsiteDesignAUPage() {
                   Most of the value is in steps one to four. Open any step to see what happens in it.
                 </p>
               </div>
-              <VisualSlot page={PAGE_KEY} slot="process" kind="photo" ratio="3:2" captionClassName="figcap"
+              <VisualSlot page={PAGE_KEY} slot="process" src="/images/au/visual-pass-2026-10-03/accountant-website-design/process-1280.webp" srcSet="/images/au/visual-pass-2026-10-03/accountant-website-design/process-640.webp 640w, /images/au/visual-pass-2026-10-03/accountant-website-design/process-1280.webp 1280w, /images/au/visual-pass-2026-10-03/accountant-website-design/process-1440.webp 1440w" sizes="(max-width: 820px) calc(100vw - 48px), 560px" kind="photo" ratio="3:2" captionClassName="figcap"
                 subject="A FactoryJet strategist on a video call with two partners of an Australian accounting firm, the laptop screen facing the strategist, sticky notes of service names on a wall behind the partners with no readable text"
                 caption="Step one is a conversation with the partners about which clients the firm wants more of. Everything else follows from it." />
             </div>
@@ -781,7 +784,7 @@ export default function AccountantWebsiteDesignAUPage() {
         {/* ═══ AI FOR ACCOUNTANTS → definition module ═══ */}
         <section className="definition" id="ai-for-accountants">
           <div>
-            <VisualSlot page={PAGE_KEY} slot="definition" kind="mockup" ratio="3:2" className="definition-image"
+            <VisualSlot page={PAGE_KEY} slot="definition" src="/images/au/visual-pass-2026-10-03/accountant-website-design/definition-1280.webp" srcSet="/images/au/visual-pass-2026-10-03/accountant-website-design/definition-640.webp 640w, /images/au/visual-pass-2026-10-03/accountant-website-design/definition-1280.webp 1280w, /images/au/visual-pass-2026-10-03/accountant-website-design/definition-1440.webp 1440w" sizes="(max-width: 820px) calc(100vw - 48px), 560px" kind="mockup" ratio="3:2" className="definition-image"
               subject="Mockup of a client portal upload screen on a laptop, with a short AI checklist beside it showing two documents received and one still missing, generic icons only, no brand names or readable personal data" />
             <p className="figcap">
               AI document intake checks what a client has uploaded against what the job needs, and asks for the rest

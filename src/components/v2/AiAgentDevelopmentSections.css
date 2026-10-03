@@ -218,7 +218,7 @@
 .aiAgentPage .chev { display: grid; place-items: center; width: 24px; height: 24px; border: 1px solid var(--line); border-radius: 50%; color: var(--accent-text); font-size: 17px; line-height: 1; transition: transform .18s ease; }
 .aiAgentPage .faqitem[open] .chev { transform: rotate(45deg); background: var(--accent-wash); }
 .aiAgentPage .faqitem[open] .qtext { color: var(--accent-text); }
-.aiAgentPage .ans { color: var(--body); font-size: 14px; line-height: 1.8; max-width: 70ch; margin: 0 0 22px 44px; padding: 12px 18px; border-left: 2px solid var(--accent); background: var(--accent-wash); }
+.aiAgentPage .ans { color: var(--body); font-size: 14px; line-height: 1.8; max-width: 70ch; margin: 0 0 22px 44px; padding: 0; border-left: 0; background: transparent; }
 
 .aiAgentPage .referencesSection { padding-top: 0; }
 .aiAgentPage .refs { display: grid; grid-template-columns: 1.6fr 1fr .7fr; gap: 36px; margin-top: 22px; }
@@ -346,7 +346,7 @@
   .aiAgentPage .ventry { padding: 23px 22px 24px 54px; }
   .aiAgentPage .ventry::before { left: 22px; width: 13px; height: 8px; }
   .aiAgentPage .faqitem summary { gap: 9px; grid-template-columns: 25px minmax(0,1fr) 24px; }
-  .aiAgentPage .ans { margin-left: 34px; padding: 12px; }
+  .aiAgentPage .ans { margin-left: 34px; padding: 0; }
   .aiAgentPage .caption { left: 12px; right: 12px; bottom: 12px; font-size: 8px; width: fit-content; }
 }
 @media (prefers-reduced-motion: reduce) {

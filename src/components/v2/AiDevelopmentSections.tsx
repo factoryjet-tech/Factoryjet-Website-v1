@@ -30,8 +30,7 @@ import './AiDevelopmentSections.css';
  * Service, ItemList and BreadcrumbList JSON-LD in page.tsx. The FAQ array lives in
  * AiDevelopmentFaqs.ts and feeds both the accordion and the FAQPage JSON-LD.
  *
- * Visuals: every intended image is a <figure data-visual-slot> placeholder, hidden
- * from visitors by AiDevelopmentSections.css until the visual pass fills it.
+ * Visuals: page-specific editorial illustrations and an accessible retrieval diagram.
  * No prices on this page: cost questions link to the cost guide.
  */
 
@@ -64,8 +63,11 @@ const CAP_ICON = { width: 24, height: 24, viewBox: '0 0 24 24', fill: 'none', st
 const DIAGRAM = { viewBox: '0 0 440 160', fill: 'none', stroke: 'currentColor', strokeWidth: 1.5 } as const;
 const EXT = { target: '_blank', rel: 'noopener nofollow' } as const;
 
-/** Placeholder for the later visual pass. Hidden from visitors by CSS while status is "placeholder". */
+/** Generated editorial scenes are illustrative, not photographs of staff or clients. */
 function VisualSlot({ slot, kind, subject, ratio, className }: { slot: string; kind: 'photo' | 'diagram' | 'illustration' | 'mockup' | 'map'; subject: string; ratio: string; className?: string }) {
+  const panoramic = slot === 'photobreak';
+  const asset = panoramic ? 'operations' : 'document-review';
+  const imageRoot = '/images/us/visual-pass-2026-10-02/ai-development';
   return (
     <figure
       className={className ? `visual-slot ${className}` : 'visual-slot'}
@@ -73,9 +75,53 @@ function VisualSlot({ slot, kind, subject, ratio, className }: { slot: string; k
       data-visual-kind={kind}
       data-visual-subject={subject}
       data-visual-ratio={ratio}
-      data-visual-status="placeholder"
-      aria-hidden="true"
-    />
+      data-visual-status="ready"
+    >
+      {kind === 'diagram' ? <RetrievalDiagram /> : (
+        <img
+          src={`${imageRoot}/${asset}-${panoramic ? 1536 : 960}.webp`}
+          srcSet={`${imageRoot}/${asset}-${panoramic ? 768 : 640}.webp ${panoramic ? 768 : 640}w, ${imageRoot}/${asset}-${panoramic ? 1536 : 960}.webp ${panoramic ? 1536 : 960}w`}
+          sizes={panoramic ? '(max-width: 820px) calc(100vw - 40px), (max-width: 1264px) calc(100vw - 64px), 1200px' : '(max-width: 820px) calc(100vw - 40px), (max-width: 1264px) 38vw, 420px'}
+          width={panoramic ? 1536 : 960}
+          height={640}
+          loading="lazy"
+          decoding="async"
+          alt={panoramic ? 'AI-generated illustration of an operations team reviewing an order queue beside a warehouse.' : 'AI-generated illustration of two colleagues reviewing an AI answer and its source document.'}
+        />
+      )}
+    </figure>
+  );
+}
+
+function RetrievalDiagram() {
+  return (
+    <svg viewBox="0 0 520 347" role="img" aria-labelledby="ai-development-rag-title ai-development-rag-desc" className="retrieval-diagram">
+      <title id="ai-development-rag-title">Retrieval-augmented generation with source citations</title>
+      <desc id="ai-development-rag-desc">Company documents feed a search step. Selected passages go to a language model, which returns an answer. An orange citation path links the answer back to its source document.</desc>
+      <path className="retrieval-grid" d="M40 74h440M40 174h440M40 274h440" />
+      <g className="retrieval-documents">
+        <rect className="retrieval-surface" x="44" y="90" width="94" height="128" rx="10" />
+        <rect className="retrieval-surface" x="56" y="80" width="94" height="128" rx="10" />
+        <rect className="retrieval-paper" x="68" y="70" width="94" height="128" rx="10" />
+        <path className="retrieval-line" d="M84 94h40M84 114h61M84 134h61" />
+        <rect className="retrieval-highlight" x="81" y="148" width="67" height="13" rx="3" />
+        <path className="retrieval-line" d="M84 177h44" />
+      </g>
+      <path className="retrieval-wire" d="M162 135h32m63 0h28m70 0h28" />
+      <path className="retrieval-arrow" d="m188 131 6 4-6 4m91-8 6 4-6 4m92-8 6 4-6 4" />
+      <circle className="retrieval-paper" cx="225" cy="135" r="31" />
+      <circle className="retrieval-line" cx="221" cy="131" r="11" />
+      <path className="retrieval-line" d="m229 139 9 9" />
+      <rect className="retrieval-core" x="285" y="100" width="70" height="70" rx="15" />
+      <rect className="retrieval-chip" x="308" y="123" width="24" height="24" rx="5" />
+      <path className="retrieval-chip" d="M311 116v7m9-7v7m9-7v7m-18 24v7m9-7v7m9-7v7m-28-28h7m-7 9h7m-7 9h7m24-18h7m-7 9h7m-7 9h7" />
+      <path className="retrieval-paper" d="M394 91h79a9 9 0 0 1 9 9v80a9 9 0 0 1-9 9h-47l-20 15v-15h-12a9 9 0 0 1-9-9v-80a9 9 0 0 1 9-9Z" />
+      <path className="retrieval-line" d="M401 115h64M401 132h51M401 149h58" />
+      <rect className="retrieval-highlight" x="401" y="164" width="29" height="10" rx="3" />
+      <path className="retrieval-citation" d="M415 189v63a16 16 0 0 1-16 16H128a16 16 0 0 1-16-16v-35" />
+      <path className="retrieval-arrow retrieval-citation" d="m106 225 6-8 6 8" />
+      <circle className="retrieval-highlight" cx="263" cy="268" r="5" />
+    </svg>
   );
 }
 
@@ -314,7 +360,7 @@ export default function AiDevelopmentSections() {
               <div className="eyebrow">Compare</div>
               <h2>AI Development vs AI Agents vs AI Integration vs AI Consulting</h2>
             </div>
-            <div className="tablewrap">
+            <div className="tablewrap" tabIndex={0} role="region" aria-label="AI development service comparison">
               <table>
                 <thead><tr><th>Service</th><th>What you get</th><th>Best for</th><th>Where it lives</th></tr></thead>
                 <tbody>
@@ -375,7 +421,7 @@ export default function AiDevelopmentSections() {
               <div className="eyebrow">Architecture</div>
               <h2>Prompting, RAG, Fine-Tuning or an Agent: Which One Your Job Needs</h2>
             </div>
-            <div className="tablewrap">
+            <div className="tablewrap" tabIndex={0} role="region" aria-label="AI architecture approach comparison">
               <table>
                 <thead><tr><th>Approach</th><th>Use it when</th><th>What it costs you to keep</th><th>Watch out for</th></tr></thead>
                 <tbody>
@@ -414,11 +460,13 @@ export default function AiDevelopmentSections() {
           </div>
         </section>
 
-        <MidPageCTA
-          headline="Have an AI job that needs your real data and systems?"
-          sub="Tell us the job and the tools involved. On a short call with the founder, we will tell you whether a ready-made tool will do, what a custom build would involve, and how many weeks each phase takes."
-          label="Scope my AI build"
-        />
+        <div className="ai-dev-midcta" id="next-step">
+          <MidPageCTA
+            headline="Have an AI job that needs your real data and systems?"
+            sub="Tell us the job and the tools involved. On a short call with the founder, we will tell you whether a ready-made tool will do, what a custom build would involve, and how many weeks each phase takes."
+            label="Scope my AI build"
+          />
+        </div>
 
         {/* ═══ USE CASES ═══ */}
         <section className="section platforms" id="use-cases">
@@ -510,7 +558,7 @@ export default function AiDevelopmentSections() {
               <h2>AI Development Companies in the US Worth Comparing</h2>
               <p>US-based firms that showed up for AI development searches on Google and in AI answers on 26 September 2026, with details from their own websites the same day. Directories, forums and firms we could not confirm are US-based are left out. Treat it as a snapshot.</p>
             </div>
-            <div className="tablewrap">
+            <div className="tablewrap" tabIndex={0} role="region" aria-label="AI development companies comparison">
               <table>
                 <thead><tr><th>Company</th><th>Based in</th><th>What they offer</th><th>Where we saw them</th></tr></thead>
                 <tbody>

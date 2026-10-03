@@ -6,7 +6,6 @@ import SiteFooter from '@/components/v2/SiteFooter';
 import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
 import Hero from '@/components/v2/Hero';
 import HeroInlineForm from '@/components/HeroInlineForm';
-import ServiceHeroImageBand from '@/components/v2/ServiceHeroImageBand';
 import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
 import StrategicDarkSection from '@/components/v2/StrategicDarkSection';
@@ -18,6 +17,7 @@ import PricingTiers from '@/components/v2/PricingTiers';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
+import '@/components/v2/MedicalWebsiteDesignSections.css';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    /services/medical-website-design: US medical, dental and specialty practice
@@ -749,10 +749,11 @@ export default function MedicalWebsiteDesignPage() {
         cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }}
       />
 
-      <main className="bg-fj-cream">
+      <main className="medicalWebsiteDesign">
         <Breadcrumbs items={BREADCRUMB_ITEMS} />
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
+        <div className="medical-hero">
         <Hero
           formSlot={
             <HeroInlineForm
@@ -771,7 +772,7 @@ export default function MedicalWebsiteDesignPage() {
             'You own the code and content.',
           ]}
           rightSlot={
-            <div className="rounded-2xl border border-fj-neutral-200 bg-white p-8 shadow-sm">
+            <div className="medical-before-after">
               <p
                 className="font-fj-mono font-medium uppercase text-[#B23E13]"
                 style={{ fontSize: '11px', letterSpacing: '0.14em' }}
@@ -781,7 +782,7 @@ export default function MedicalWebsiteDesignPage() {
               <p className="mt-4 font-fj-display text-[1.75rem] font-medium leading-[1.15] tracking-[-0.025em] text-fj-ink">
                 Before and after
               </p>
-              <div className="mt-6 space-y-4">
+              <div className="medical-before-after-rows">
                 {[
                   {
                     before: 'A "Contact us" form that emails symptoms and dates of birth to a shared inbox.',
@@ -796,21 +797,26 @@ export default function MedicalWebsiteDesignPage() {
                     after: 'WCAG 2.1 AA contrast, large tap targets and click-to-call in the header.',
                   },
                 ].map((row, i) => (
-                  <div key={i} className="rounded-xl border border-fj-neutral-100 bg-fj-neutral-50 p-4">
+                  <div key={i} className="medical-before-after-row">
+                    <div className="medical-before">
                     <p className="font-fj-body text-[0.75rem] font-medium uppercase tracking-wide text-fj-neutral-600">Common today</p>
                     <p className="mt-1 font-fj-body text-[0.8125rem] leading-[1.5] text-fj-neutral-600">{row.before}</p>
-                    <p className="mt-2 font-fj-body text-[0.75rem] font-medium uppercase tracking-wide text-[#B23E13]">What we build</p>
+                    </div>
+                    <div className="medical-after">
+                    <p className="font-fj-body text-[0.75rem] font-medium uppercase tracking-wide text-[#B23E13]">What we build</p>
                     <p className="mt-1 font-fj-body text-[0.8125rem] leading-[1.5] text-fj-neutral-600">{row.after}</p>
+                    </div>
                   </div>
                 ))}
               </div>
             </div>
           }
         />
+        </div>
 
         {/* ── 1a. ANSWER-FIRST BLOCK ───────────────────────────────────────── */}
-        <section className="bg-white py-12 md:py-16 border-y border-fj-neutral-100">
-          <div id="medical-short-answer" className="mx-auto max-w-[1120px] px-6 md:px-8 grid grid-cols-1 gap-8 lg:grid-cols-[7fr_5fr] lg:gap-14">
+        <section className="medical-short-answer bg-white py-12 md:py-16 border-y border-fj-neutral-100">
+          <div id="medical-short-answer" className="medical-answer-grid mx-auto max-w-[1120px] px-6 md:px-8 grid grid-cols-1 gap-8 lg:grid-cols-[7fr_5fr] lg:gap-14">
             <div>
               <p
                 className="font-fj-mono font-medium uppercase text-[#B23E13]"
@@ -830,7 +836,7 @@ export default function MedicalWebsiteDesignPage() {
                 ))}
               </ol>
             </div>
-            <div className="rounded-2xl border border-fj-neutral-200 bg-fj-cream p-6 md:p-8 self-start">
+            <div className="medical-timelines rounded-2xl border border-fj-neutral-200 bg-fj-cream p-6 md:p-8 self-start">
               <p className="font-fj-body text-[0.9375rem] font-semibold text-fj-ink">Timelines we work to</p>
               <ul className="mt-3 space-y-2 font-fj-body text-[0.9375rem] leading-[1.55] text-fj-neutral-700">
                 <li>7 days for a site of 5 pages or fewer, once content is ready.</li>
@@ -846,25 +852,49 @@ export default function MedicalWebsiteDesignPage() {
         </section>
 
         {/* ── 1b. HERO IMAGE BAND ──────────────────────────────────────────── */}
-        <ServiceHeroImageBand
-          imageSrc="/images/services/healthcare-seo-eeat.webp"
-          imageAlt="A doctor in a white coat typing on a laptop at a clinic desk, next to a stethoscope."
-          stats={[
+        <section className="medical-patient-band">
+          <div className="medical-patient-band-inner">
+            {/* Illustrative booking concept, not a client interface or patient record. */}
+            <div className="medical-patient-image">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/us/visual-pass-2026-10-03/medical-patient-journey-1280.webp"
+                srcSet="/images/us/visual-pass-2026-10-03/medical-patient-journey-640.webp 640w, /images/us/visual-pass-2026-10-03/medical-patient-journey-1280.webp 1280w, /images/us/visual-pass-2026-10-03/medical-patient-journey-1920.webp 1920w"
+                sizes="(max-width: 767px) calc(100vw - 48px), (max-width: 1199px) calc(100vw - 64px), 1056px"
+                width={1536}
+                height={1024}
+                loading="lazy"
+                decoding="async"
+                alt="Illustrative medical appointment journey with a phone, laptop and stethoscope."
+              />
+            </div>
+            <ul className="medical-patient-stats">
+              {[
             { value: '2014', label: 'Year FactoryJet Was Founded.' },
             { value: '500+', label: 'Businesses Served.' },
             { value: '7 Days', label: 'Delivery for Sites of 5 Pages or Fewer.' },
             { value: 'WCAG 2.1 AA', label: 'Accessibility Level We Build To.' },
-          ]}
-        />
+              ].map((stat) => (
+                <li key={stat.value}>
+                  <span className="medical-patient-stat-value">{stat.value}</span>
+                  <span className="medical-patient-stat-label">{stat.label}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
 
         {/* ── 2. TRUST STATEMENT ───────────────────────────────────────────── */}
+        <div className="medical-trust">
         <BigThreeTrustBlock
           variant="statement"
           eyebrow="WHAT WE PROMISE, AND WHAT WE DO NOT"
           headline="We build the site and connect the tools your practice already trusts. We never claim a HIPAA certification we do not hold."
         />
+        </div>
 
         {/* ── 3. WHAT MAKES MEDICAL DIFFERENT ──────────────────────────────── */}
+        <div className="medical-explanation">
         <ServiceExplanation
           eyebrow="MEDICAL WEBSITE DESIGN EXPLAINED"
           headline="Why a Medical Practice Website Needs Different Rules From Any Other Business Site."
@@ -885,7 +915,7 @@ export default function MedicalWebsiteDesignPage() {
               <p>
                 HHS, the federal health department, published guidance on tracking code used by practices and their vendors. It says tracking technologies on logged-in pages such as a patient portal or telehealth platform generally have access to protected health information. It also says that when a vendor receives that information, the practice needs a business associate agreement with them. Read the <a href={SOURCES.hhsTracking.url} className={linkClass} rel="noopener" target="_blank">HHS tracking guidance</a> for the full text.
               </p>
-              <div className="border-l-2 border-[#F05A28] pl-5 py-1" aria-hidden>
+              <div className="medical-privacy-example">
                 <p
                   className="font-fj-display font-semibold text-fj-ink"
                   style={{ fontSize: '1.125rem', lineHeight: 1.35, letterSpacing: '-0.02em' }}
@@ -906,14 +936,7 @@ export default function MedicalWebsiteDesignPage() {
           }
           rightSlot={
             <div
-              className="w-full overflow-hidden rounded-2xl bg-white shadow-sm"
-              style={{
-                borderWidth: '1px',
-                borderStyle: 'solid',
-                borderColor: 'rgb(229, 231, 235)',
-                borderTopWidth: '2px',
-                borderTopColor: '#F05A28',
-              }}
+              className="medical-includes w-full overflow-hidden rounded-2xl bg-white"
             >
               <div className="border-b border-fj-neutral-100 px-7 py-4">
                 <p
@@ -952,9 +975,10 @@ export default function MedicalWebsiteDesignPage() {
             </div>
           }
         />
+        </div>
 
         {/* ── 4. WHAT WE BUILD ─────────────────────────────────────────────── */}
-        <div id="what-we-build">
+        <div id="what-we-build" className="medical-build">
           <IndustriesGrid
             variant="cards"
             eyebrow="WHAT WE BUILD FOR MEDICAL PRACTICES"
@@ -965,6 +989,7 @@ export default function MedicalWebsiteDesignPage() {
         </div>
 
         {/* ── 5. THE RULES, WITH SOURCES ───────────────────────────────────── */}
+        <div className="medical-rules">
         <CityContextSection
           eyebrow="THE RULES THAT SHAPE A US MEDICAL SITE."
           headline="Two Dates and One Number Every Practice Website Should Be Built Around."
@@ -975,9 +1000,11 @@ export default function MedicalWebsiteDesignPage() {
           ]}
           stats={RULE_STATS}
         />
+        </div>
 
-        {/* ── 6. THE TRACKING PROBLEM (ONLY DARK SECTION) ──────────────────── */}
+        {/* ── 6. THE TRACKING PROBLEM ──────────────────────────────────────── */}
         <StrategicDarkSection
+          className="medical-privacy"
           eyebrow="THE PART MOST PRACTICE SITES GET WRONG."
           headline="The riskiest thing on many practice websites is a few lines of marketing code on the booking page."
           lead="Analytics and ad pixels are often added by whoever set up the site, then forgotten. They load on every page by default, including the pages where patients type their name, reason for visit and appointment time."
@@ -998,15 +1025,17 @@ export default function MedicalWebsiteDesignPage() {
         />
 
         {/* ── 7. MID-PAGE CTA ──────────────────────────────────────────────── */}
+        <div className="medical-review">
         <MidPageCTA
           headline="Want to know what your booking page sends to Google and Meta?"
           sub="Send us your practice website. We will list every third-party script that loads on your booking and contact pages, flag which forms collect patient details, and tell you what we would change."
           label="Get a free practice site review"
           note="Bhavesh Barot, our founder, reads every enquiry and usually replies within 2 to 3 hours."
         />
+        </div>
 
         {/* ── 8. LISTICLE: WHO IS ON PAGE ONE ──────────────────────────────── */}
-        <section className="bg-fj-cream py-14 md:py-20">
+        <section className="medical-partners bg-fj-cream py-14 md:py-20">
           <div className="mx-auto max-w-[1120px] px-6 md:px-8">
             <p
               className="font-fj-mono font-medium uppercase text-[#B23E13]"
@@ -1020,11 +1049,11 @@ export default function MedicalWebsiteDesignPage() {
             <p className="mt-4 max-w-[780px] font-fj-body text-[1.0625rem] leading-[1.65] text-fj-neutral-700">
               We searched &quot;medical website design&quot; on Google in the US on {SERP_CHECK_DATE} and grouped the eight organic results by type. Disclosure: FactoryJet wrote this list and is one of the options on it. We have no business relationship with the other companies named, and we describe them only from their own public pages.
             </p>
-            <ol className="mt-10 grid grid-cols-1 gap-5 lg:grid-cols-2">
+            <ol className="medical-partner-list mt-10">
               {PARTNER_TYPES.map((p, i) => (
                 <li
                   key={p.name}
-                  className={`rounded-2xl border bg-white p-6 md:p-7 ${i === PARTNER_TYPES.length - 1 ? 'border-[#F05A28] lg:col-span-2' : 'border-fj-neutral-200'}`}
+                  className={`medical-partner-entry ${i === PARTNER_TYPES.length - 1 ? 'medical-partner-entry-factoryjet' : ''}`}
                 >
                   <p className="font-fj-mono text-[0.75rem] font-semibold uppercase tracking-[0.12em] text-[#B23E13]">
                     {String(i + 1).padStart(2, '0')}
@@ -1039,7 +1068,9 @@ export default function MedicalWebsiteDesignPage() {
         </section>
 
         {/* ── 9. COMPARISON TABLE ──────────────────────────────────────────── */}
+        <div className="medical-comparison">
         <ComparisonTable
+          scrollRegionLabel="Medical website partner comparison"
           eyebrow="HOW THE OPTIONS COMPARE."
           headline="FactoryJet vs. Healthcare Marketing Package vs. DIY Builder vs. Generic Freelancer."
           lead="Every option can produce a good-looking site. The differences show up in who owns it, where patient data goes and whether accessibility was tested."
@@ -1051,8 +1082,10 @@ export default function MedicalWebsiteDesignPage() {
           rows={COMPARISON_ROWS}
           footer="Columns describe typical setups, not any named company, and individual vendors vary. Ask any vendor, including us, to put ownership, BAA and accessibility answers in writing."
         />
+        </div>
 
         {/* ── 10. PROCESS ──────────────────────────────────────────────────── */}
+        <div className="medical-process">
         <ServiceJourneyRow
           eyebrow="OUR PROCESS"
           headline="From Practice Audit to Live Website: Five Stages."
@@ -1060,9 +1093,10 @@ export default function MedicalWebsiteDesignPage() {
           stages={MEDICAL_JOURNEY_STAGES}
           closingNote="7 DAYS FOR 5 PAGES OR FEWER. 3 TO 5 WEEKS SMALL PRACTICE. 5 TO 8 WEEKS GROUP OR CLINIC. 8 TO 14 WEEKS MULTI-LOCATION."
         />
+        </div>
 
         {/* ── 11. ENGAGEMENT TIERS ─────────────────────────────────────────── */}
-        <div id="plans">
+        <div id="plans" className="medical-plans">
           <PricingTiers
             eyebrow="HOW WE SCOPE A PRACTICE SITE."
             headline="Three Ways We Build Medical Websites, Sized to Your Practice."
@@ -1073,6 +1107,7 @@ export default function MedicalWebsiteDesignPage() {
         </div>
 
         {/* ── 12. FAQ ──────────────────────────────────────────────────────── */}
+        <div className="medical-faq">
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS."
           headline="Medical Website Design Questions, Answered Plainly."
@@ -1080,9 +1115,10 @@ export default function MedicalWebsiteDesignPage() {
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
         />
+        </div>
 
         {/* ── 13. SOURCES + RELATED LINKS ──────────────────────────────────── */}
-        <section className="py-12 bg-[#FAFAF7]">
+        <section className="medical-resources py-12 bg-[#FAFAF7]">
           <div className="mx-auto max-w-[1120px] px-6 md:px-8 grid grid-cols-1 gap-10 lg:grid-cols-[7fr_5fr]">
             <div>
               <p className="font-fj-mono text-[0.75rem] font-semibold uppercase tracking-[0.14em] text-[#B23E13]">Related services.</p>
@@ -1118,6 +1154,7 @@ export default function MedicalWebsiteDesignPage() {
         </section>
 
         {/* ── 14. FINAL CTA ────────────────────────────────────────────────── */}
+        <div className="medical-finalcta">
         <FinalCTA
           variant="light"
           eyebrow="START WITH A FREE PRACTICE SITE REVIEW."
@@ -1127,6 +1164,7 @@ export default function MedicalWebsiteDesignPage() {
           secondaryCta={{ label: 'See All Web Design Services.', href: '/services/web-design' }}
           objectionHandler="Quoted in writing before work starts. You own everything at handover. The founder reads every enquiry."
         />
+        </div>
       </main>
 
       <SiteFooter linkColumns={US_FOOTER_COLUMNS} />

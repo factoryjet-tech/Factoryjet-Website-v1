@@ -1,5 +1,6 @@
 import { Fragment, type ReactNode } from 'react';
 import HeroInlineForm from '@/components/HeroInlineForm';
+import TechnicalSeoIndexabilityVisual from './TechnicalSeoIndexabilityVisual';
 import { TECHNICAL_SEO_FAQ_CATEGORIES, TECHNICAL_SEO_FAQS } from './TechnicalSeoFaqs';
 import './AiAgentDevelopmentSections.css';
 import './TechnicalSeoSections.css';
@@ -21,8 +22,8 @@ import './TechnicalSeoSections.css';
  * feed the Service, ItemList and BreadcrumbList JSON-LD in page.tsx, so schema
  * always matches what the reader sees. The FAQ array lives in TechnicalSeoFaqs.ts.
  *
- * Visuals: every intended image is a <figure data-visual-slot> placeholder, hidden
- * from visitors by TechnicalSeoSections.css until the visual pass fills it.
+ * Visual pass 2026-10-02: original illustrative editorial photography and a
+ * native SVG indexability diagram. No people depicted are actual staff or clients.
  */
 
 export const technicalSeoBreadcrumbs = [
@@ -335,7 +336,8 @@ export default function TechnicalSeoSections() {
                 <div className="fact"><div className="sec">§06</div><p><span className="stat">To appear as a link in Google AI Overviews or AI Mode, a page must be indexed and eligible for a snippet.</span> Google says there are no extra technical requirements. Technical SEO is the entry ticket to AI search, not a separate trick. <Src href={SRC.ai}>Google Search Central</Src></p></div>
                 <div className="fact"><div className="sec">§07</div><p>FactoryJet runs technical SEO as a development job, not a reporting job. We build ecommerce stores, websites and AI agents, so the people who find a rendering bug or a redirect chain can also ship the fix. Bhavesh, our founder, and the team stay on after each fix to catch regressions from your next release.</p></div>
               </div>
-              <figure className="factphoto" data-visual-slot="technical-seo:facts" data-visual-kind="photo" data-visual-subject="Two US developers at a standing desk in a bright office, one pointing at a large monitor that faces them both, showing a site crawl table with rows of URLs and status codes; camera behind their shoulders so the screen faces them and the camera; no readable text, no logos" data-visual-ratio="3:2" data-visual-status="placeholder">
+              <figure className="factphoto" data-visual-slot="technical-seo:facts" data-visual-kind="photo" data-visual-subject="Two US developers at a standing desk in a bright office, one pointing at a large monitor that faces them both, showing a site crawl table with rows of URLs and status codes; camera behind their shoulders so the screen faces them and the camera; no readable text, no logos" data-visual-ratio="3:2" data-visual-status="ready" data-visual-origin="generated-illustration">
+                <img src="/images/us/visual-pass-2026-10-02/technical-seo/crawl-review.webp" srcSet="/images/us/visual-pass-2026-10-02/technical-seo/crawl-review-768.webp 768w, /images/us/visual-pass-2026-10-02/technical-seo/crawl-review.webp 1440w" sizes="(max-width: 820px) calc(100vw - 40px), 430px" width="1440" height="960" loading="lazy" decoding="async" alt="Illustrative developers reviewing a website crawl on a monitor" />
                 <figcaption className="cap">FIELD REFERENCE · A CRAWL REVIEWED LINE BY LINE</figcaption>
               </figure>
             </div>
@@ -364,7 +366,7 @@ export default function TechnicalSeoSections() {
         </section>
 
         <section className="definition" id="definition">
-          <figure className="definition-image" data-visual-slot="technical-seo:definition" data-visual-kind="diagram" data-visual-subject="Clean line diagram on white: one web page icon passing through four unlabeled gates (a sitemap, a robots gate, a render frame, an index stack) with the last gate in orange; flat, no text, no logos" data-visual-ratio="3:2" data-visual-status="placeholder" />
+          <figure className="definition-image" data-visual-slot="technical-seo:definition" data-visual-kind="diagram" data-visual-subject="Clean line diagram on white: one web page icon passing through four unlabeled gates (a sitemap, a robots gate, a render frame, an index stack) with the last gate in orange; flat, no text, no logos" data-visual-ratio="3:2" data-visual-status="ready"><TechnicalSeoIndexabilityVisual /></figure>
           <div className="definition-copy">
             <div className="eyebrow">Term</div>
             <h2 className="term">Indexability</h2>
@@ -483,7 +485,8 @@ export default function TechnicalSeoSections() {
           </div>
         </section>
 
-        <figure className="photobreak" id="photobreak" data-visual-slot="technical-seo:panorama" data-visual-kind="photo" data-visual-subject="Wide shot of a small US product team in a daylight office reviewing a website launch checklist on a wall-mounted screen that faces them, one person at a laptop turned toward the group; screen content abstract charts only, no readable text, no logos" data-visual-ratio="16:6" data-visual-status="placeholder">
+        <figure className="photobreak" id="photobreak" data-visual-slot="technical-seo:panorama" data-visual-kind="photo" data-visual-subject="Wide shot of a small US product team in a daylight office reviewing a website launch checklist on a wall-mounted screen that faces them, one person at a laptop turned toward the group; screen content abstract charts only, no readable text, no logos" data-visual-ratio="16:6" data-visual-status="ready" data-visual-origin="generated-illustration">
+          <img src="/images/us/visual-pass-2026-10-02/technical-seo/release-review.webp" srcSet="/images/us/visual-pass-2026-10-02/technical-seo/release-review-768.webp 768w, /images/us/visual-pass-2026-10-02/technical-seo/release-review.webp 1600w" sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1264px) calc(100vw - 64px), 1200px" width="1600" height="600" loading="lazy" decoding="async" alt="Illustrative product team reviewing a website release together" />
           <figcaption className="caption"><span className="dot"></span>FIELD REFERENCE · A RELEASE CHECKED BEFORE IT SHIPS</figcaption>
         </figure>
 

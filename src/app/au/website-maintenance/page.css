@@ -1,0 +1,187 @@
+/* Route-owned visual pass. Copy and integrations are unchanged. */
+
+.aiAgentPage.auPage.auCareVisual .section { padding-block: clamp(60px,7vw,96px); }
+.aiAgentPage.auPage.auCareVisual :is(h1,h2,h3) { overflow-wrap: break-word; text-wrap: balance; }
+.aiAgentPage.auPage.auCareVisual .eyebrow { text-transform: none; letter-spacing: .02em; }
+.aiAgentPage.auPage.auCareVisual :is(.factlabel,.specrow .idx,.specrow .tag,.vtag) { text-transform: none; letter-spacing: .01em; }
+.aiAgentPage.auPage.auCareVisual .fact p { max-width: 70ch; font-size: 16px; }
+.aiAgentPage.auPage.auCareVisual :is(.fact,.plat,.ventry,.tnode,.cap):hover { transform: none; box-shadow: none; }
+.aiAgentPage.auPage.auCareVisual .vslot > img { animation: none; transform: none; filter: none; box-shadow: none; }
+.aiAgentPage.auPage.auCareVisual .figcap { font-size: 13px; line-height: 1.7; }
+.aiAgentPage.auPage.auCareVisual :is(button,summary,input,.tablewrap):focus-visible { outline: 2px solid var(--accent-text); outline-offset: 5px; }
+.aiAgentPage.auPage.auCareVisual .hero { padding-block: 40px 60px; }
+.aiAgentPage.auPage.auCareVisual .hero-grid { grid-template-columns: minmax(0,1.2fr) minmax(0,.9fr); gap: 48px; }
+.aiAgentPage.auPage.auCareVisual .hero h1 { font-size: clamp(38px,4.1vw,55px); max-width: 22ch; }
+.aiAgentPage.auPage.auCareVisual .hero .lead { font-size: 16px; }
+.aiAgentPage.auPage.auCareVisual .specpanel { box-shadow: none; border-radius: 12px; background: white; }
+.aiAgentPage.auPage.auCareVisual .specpanel-bar { background: var(--accent-wash); padding: 20px; gap: 9px; font-size: 10px; line-height: 1.6; }
+.aiAgentPage.auPage.auCareVisual .specpanel-bar > span:nth-child(2) { flex: 1; }
+.aiAgentPage.auPage.auCareVisual .sys { width: 100%; margin: 2px 0 0 16px; font-size: 10px; }
+.aiAgentPage.auPage.auCareVisual .sys span { padding: 4px 6px; background: white; }
+.aiAgentPage.auPage.auCareVisual .workflow-controls { padding: 0 20px; }
+.aiAgentPage.auPage.auCareVisual :is(.workflow-toggle,.workflow-replay) { width: 44px; height: 44px; }
+.aiAgentPage.auPage.auCareVisual .specpanel-body { background: none; padding: 16px 20px 22px; gap: 12px; }
+.aiAgentPage.auPage.auCareVisual .specrow { grid-template-columns: 32px minmax(0,1fr); width: 100%; margin-left: 0; gap: 4px 12px; padding: 14px; box-shadow: none; border-radius: 6px; animation-name: b2-flow; animation-timing-function: cubic-bezier(.22,1,.36,1); }
+.aiAgentPage.auPage.auCareVisual .specrow::before,.aiAgentPage.auPage.auCareVisual .specrow::after,.aiAgentPage.auPage.auCareVisual .specrow .tag::after { content: none; }
+.aiAgentPage.auPage.auCareVisual .specrow .idx { font-family: var(--sans); font-size: 11px; }
+.aiAgentPage.auPage.auCareVisual .specrow .title { font-size: 14px; }
+.aiAgentPage.auPage.auCareVisual .specrow .tag { grid-column: 2; grid-row: 3; width: fit-content; font-size: 10px; color: var(--accent-text); }
+.aiAgentPage.auPage.auCareVisual .specrow:has(.workflow-select:checked) { transform: none; background: var(--accent-wash); box-shadow: none; }
+.aiAgentPage.auPage.auCareVisual .specpanel-foot { font-family: var(--sans); font-size: 12px; padding: 20px; }
+.aiAgentPage.auPage.auCareVisual .ledger-number { font-size: 32px; }
+.aiAgentPage.auPage.auCareVisual .ledger-word { font-size: 23px; }
+.aiAgentPage.auPage.auCareVisual .ledgercell .k { font-size: 11px; }
+.aiAgentPage.auPage.auCareVisual .byline { padding-block: 22px; }
+.aiAgentPage.auPage.auCareVisual .tablewrap { border-radius: 6px; overscroll-behavior-inline: contain; }
+.aiAgentPage.auPage.auCareVisual .tablewrap table { min-width: 900px; }
+.aiAgentPage.auPage.auCareVisual .tablewrap th { text-transform: none; font-size: 13px; line-height: 1.6; }
+.aiAgentPage.auPage.auCareVisual .tablewrap td { font-size: 14px; padding-block: 22px; line-height: 1.7; }
+.aiAgentPage.auPage.auCareVisual .section-head.head-split { display: block; max-width: 960px; }
+.aiAgentPage.auPage.auCareVisual .section-head.head-split h2 { margin-top: 18px; }
+.aiAgentPage.auPage.auCareVisual .au-numlist li span { min-width: 0; overflow-wrap: anywhere; }
+.aiAgentPage.auPage.auCareVisual .plat-build { max-width: 70ch; }
+.aiAgentPage.auPage.auCareVisual .au-panel { box-shadow: none; border-radius: 6px; }
+.aiAgentPage.auPage.auCareVisual #providers .plat { grid-template-columns: 36px minmax(0,.9fr) minmax(0,1.6fr); gap: 24px; padding: 26px 16px; }
+.aiAgentPage.auPage.auCareVisual #providers .plat h3 { font-size: 22px; }
+.aiAgentPage.auPage.auCareVisual #providers .au-panel-wide { background: var(--accent-wash); max-width: none; padding: 32px; border: 0; }
+.aiAgentPage.auPage.auCareVisual #providers .au-panel-wide > .eyebrow { font-family: var(--display); font-size: 22px; color: var(--ink); font-weight: 800; }
+.aiAgentPage.auPage.auCareVisual #providers .au-numlist { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); column-gap: 38px; }
+.aiAgentPage.auPage.auCareVisual #more-services .agentdir-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 0 48px; border-top: 1px solid var(--line); }
+.aiAgentPage.auPage.auCareVisual #more-services .agentdir-grid a { border: 0; border-bottom: 1px solid var(--line); border-radius: 0; padding: 26px 32px 26px 0; }
+.aiAgentPage.auPage.auCareVisual #more-services .agentdir-t { font-size: 19px; }
+.aiAgentPage.auPage.auCareVisual #more-services .agentdir-l { font-size: 14px; color: var(--body); }
+.aiAgentPage.auPage.auCareVisual #more-services .agentdir-go { right: 4px; }
+.aiAgentPage.auPage.auCareVisual .faqwrap { grid-template-columns: minmax(0,.85fr) minmax(0,1.45fr); gap: 60px; }
+.aiAgentPage.auPage.auCareVisual .faq-catnav a { min-height: 44px; display: flex; align-items: center; }
+.aiAgentPage.auPage.auCareVisual .faq-category { text-transform: none; letter-spacing: .01em; }
+.aiAgentPage.auPage.auCareVisual .faqitem summary { min-height: 64px; }
+.aiAgentPage.auPage.auCareVisual .finalcta .ctas { display: flex; flex-direction: column; align-items: stretch; min-width: 230px; }
+.aiAgentPage.auPage.auCareVisual .au-midcta section { width: calc(100% - 64px); max-width: 1200px; margin-inline: auto; border: 1px solid var(--line); border-radius: 6px; }
+@keyframes b2-flow { 0%,22% { border-color: var(--accent); background: var(--accent-wash); } 25%,100% { border-color: var(--line-strong); background: white; } }
+@media (max-width:820px) {
+ .aiAgentPage.auPage.auCareVisual .hero-grid { grid-template-columns: 1fr; gap: 32px; }
+ .aiAgentPage.auPage.auCareVisual .hero h1 { font-size: clamp(34px,6.3vw,48px); }
+ .aiAgentPage.auPage.auCareVisual .hero .lead { font-size: 15px; }
+ .aiAgentPage.auPage.auCareVisual .ledger .wrap { grid-template-columns: repeat(2,minmax(0,1fr)); }
+ .aiAgentPage.auPage.auCareVisual .ledgercell { min-width: 0; padding: 24px 15px; }
+ .aiAgentPage.auPage.auCareVisual .ledger-number { font-size: 29px; }
+ .aiAgentPage.auPage.auCareVisual .ledger-word { font-size: 21px; }
+ .aiAgentPage.auPage.auCareVisual #providers .plat { grid-template-columns: 28px minmax(0,1fr); gap: 12px; padding-inline: 8px; }
+ .aiAgentPage.auPage.auCareVisual #providers .plat-build { grid-column: 2; }
+ .aiAgentPage.auPage.auCareVisual #providers .au-panel-wide { padding: 24px; }
+ .aiAgentPage.auPage.auCareVisual .faqwrap { grid-template-columns: 1fr; gap: 32px; }
+ .aiAgentPage.auPage.auCareVisual .finalcta .ctas { min-width: 0; width: fit-content; margin-top: 24px; }
+ .aiAgentPage.auPage.auCareVisual .au-midcta section { width: calc(100% - 40px); }
+}
+@media (max-width:600px) {
+ .aiAgentPage.auPage.auCareVisual .section { padding-block: 56px; }
+ .aiAgentPage.auPage.auCareVisual #providers .au-numlist,.aiAgentPage.auPage.auCareVisual #more-services .agentdir-grid { grid-template-columns: 1fr; }
+ .aiAgentPage.auPage.auCareVisual .specpanel-bar { padding: 16px; }
+ .aiAgentPage.auPage.auCareVisual .sys { margin-left: 0; flex-wrap: wrap; }
+ .aiAgentPage.auPage.auCareVisual .workflow-controls { padding-inline: 14px; }
+ .aiAgentPage.auPage.auCareVisual .specpanel-body { padding-inline: 14px; }
+ .aiAgentPage.auPage.auCareVisual .specrow { padding: 12px; }
+ .aiAgentPage.auPage.auCareVisual .fact p { font-size: 15px; }
+ .aiAgentPage.auPage.auCareVisual .au-panel { padding: 20px; }
+ .aiAgentPage.auPage.auCareVisual .finalcta h2 { font-size: 30px; }
+}
+@media (prefers-reduced-motion:reduce) {
+ .aiAgentPage.auPage.auCareVisual *,.aiAgentPage.auPage.auCareVisual *::before,.aiAgentPage.auPage.auCareVisual *::after { animation: none !important; transition: none !important; }
+}
+
+.aiAgentPage.auPage.auCareVisual .care-hero-art { padding: 18px 20px; color: var(--ink); }
+.aiAgentPage.auPage.auCareVisual .care-release { width: 100%; display: block; height: auto; }
+.aiAgentPage.auPage.auCareVisual #answer .wrap { grid-template-columns: minmax(0,1.2fr) minmax(0,.85fr); gap: 40px 64px; }
+.aiAgentPage.auPage.auCareVisual #answer .section-head { grid-column: 1 / -1; max-width: 900px; }
+.aiAgentPage.auPage.auCareVisual #answer .factphoto { grid-column: 2; grid-row: 2; position: static; }
+.aiAgentPage.auPage.auCareVisual #answer .fact .stat { display: block; font-size: 23px; margin-bottom: 18px; line-height: 1.45; }
+.aiAgentPage.auPage.auCareVisual #included { background: var(--accent-wash); border-block: 1px solid var(--line); }
+.aiAgentPage.auPage.auCareVisual #included .wrap { display: block; }
+.aiAgentPage.auPage.auCareVisual #included .section-head { max-width: 900px; margin-bottom: 40px; }
+.aiAgentPage.auPage.auCareVisual #included .factswrap { display: grid; grid-template-columns: minmax(0,1.6fr) minmax(0,.8fr); gap: 48px; align-items: start; }
+.aiAgentPage.auPage.auCareVisual #included .factlist { grid-column: auto; grid-row: auto; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 26px 32px; }
+.aiAgentPage.auPage.auCareVisual #included .fact { padding: 0; border: 0; grid-template-columns: 30px minmax(0,1fr); gap: 12px; }
+.aiAgentPage.auPage.auCareVisual #included .fact b { display: block; margin-bottom: 7px; line-height: 1.5; color: var(--ink); }
+.aiAgentPage.auPage.auCareVisual #included .fact p { font-size: 14px; }
+.aiAgentPage.auPage.auCareVisual #included .au-panel { background: white; padding: 24px; }
+.aiAgentPage.auPage.auCareVisual #included .trigrows li { grid-template-columns: minmax(0,1fr) auto; }
+.aiAgentPage.auPage.auCareVisual #included .trigrows .m { grid-column: 1; }
+.aiAgentPage.auPage.auCareVisual #included .trigrows .n { grid-column: 1; grid-row: 2; }
+.aiAgentPage.auPage.auCareVisual #included .trigrows .t { grid-column: 2; grid-row: 1 / span 2; }
+.aiAgentPage.auPage.auCareVisual #care-plans .platlist { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 32px; border-top: 0; }
+.aiAgentPage.auPage.auCareVisual #care-plans .plat { display: block; border-top: 1px solid var(--ink); border-bottom: 0; padding: 28px 0; }
+.aiAgentPage.auPage.auCareVisual #care-plans .plat-name { margin-block: 16px; }
+.aiAgentPage.auPage.auCareVisual #care-plans .plat h3 { font-size: 26px; }
+.aiAgentPage.auPage.auCareVisual #care-plans .plat-fit { min-height: 54px; font-size: 14px; margin-bottom: 18px; }
+.aiAgentPage.auPage.auCareVisual #care-plans .plat-items { font-size: 14px; }
+.aiAgentPage.auPage.auCareVisual #fit-check .section-head { position: static; }
+.aiAgentPage.auPage.auCareVisual #fit-check .wrap { grid-template-columns: minmax(0,.85fr) minmax(0,1.25fr); gap: 64px; }
+.aiAgentPage.auPage.auCareVisual #fit-check .ventry { border-radius: 6px; padding-inline: 24px; }
+.aiAgentPage.auPage.auCareVisual #fit-check .ventry::before { display: none; }
+.aiAgentPage.auPage.auCareVisual #fit-check .ventry summary { min-height: 76px; align-items: center; }
+.aiAgentPage.auPage.auCareVisual #fit-check .ventry h3 { font-size: 18px; line-height: 1.5; }
+.aiAgentPage.auPage.auCareVisual #fit-check .ventry p { padding-bottom: 24px; }
+.aiAgentPage.auPage.auCareVisual .photobreak { aspect-ratio: auto; padding: 40px; height: auto; width: min(100% - 64px,1200px); color: var(--ink); background: var(--accent-wash); border-radius: 8px; }
+.aiAgentPage.auPage.auCareVisual #how-we-update .head-media { grid-template-columns: .9fr 1.2fr; gap: 64px; }
+.aiAgentPage.auPage.auCareVisual #how-we-update .timeline { display: block; max-width: 840px; margin-inline: auto; }
+.aiAgentPage.auPage.auCareVisual #how-we-update .timeline::before,.aiAgentPage.auPage.auCareVisual #how-we-update .tnode::before { display: none; }
+.aiAgentPage.auPage.auCareVisual #how-we-update .tnode { border-top: 1px solid var(--line); padding: 25px 0; }
+.aiAgentPage.auPage.auCareVisual #how-we-update .tnode summary { display: grid; grid-template-columns: 48px minmax(0,1fr); gap: 26px; align-items: start; min-height: 48px; }
+.aiAgentPage.auPage.auCareVisual #how-we-update .tnode .idx { position: static; grid-column: 1; grid-row: 1; border-radius: 6px; width: 44px; height: 44px; }
+.aiAgentPage.auPage.auCareVisual #how-we-update .tnode h3 { grid-column: 2; font-size: 25px; margin: 0; padding: 5px 24px 5px 0; }
+.aiAgentPage.auPage.auCareVisual #how-we-update .tnode p { margin: 14px 0 0 74px; font-size: 15px; }
+.aiAgentPage.auPage.auCareVisual #by-platform .tablewrap th { min-width: 180px; }
+.aiAgentPage.auPage.auCareVisual #takeover .wrap { display: block; }
+.aiAgentPage.auPage.auCareVisual #takeover .section-head { max-width: 950px; margin-bottom: 40px; }
+.aiAgentPage.auPage.auCareVisual #takeover .factswrap { display: grid; grid-template-columns: minmax(0,1.45fr) minmax(0,.8fr); gap: 64px; align-items: start; }
+.aiAgentPage.auPage.auCareVisual #takeover .factlist,.aiAgentPage.auPage.auCareVisual #takeover .factphoto { grid-column: auto; grid-row: auto; }
+.aiAgentPage.auPage.auCareVisual #takeover .factphoto { position: sticky; top: 120px; }
+.aiAgentPage.auPage.auCareVisual #takeover .au-numlist { display: grid; grid-template-columns: 1fr 1fr; column-gap: 26px; }
+.aiAgentPage.auPage.auCareVisual #takeover .au-numlist li { font-size: 14px; }
+.aiAgentPage.auPage.auCareVisual #takeover .fact:nth-child(4) { background: var(--accent-wash); padding: 24px 18px; border-radius: 6px; }
+.aiAgentPage.auPage.auCareVisual #security .wrap { grid-template-columns: minmax(0,1.3fr) minmax(0,.9fr); gap: 38px 64px; }
+.aiAgentPage.auPage.auCareVisual #security .section-head { grid-column: 1 / -1; max-width: 1000px; }
+.aiAgentPage.auPage.auCareVisual #security .factphoto { grid-column: 2; grid-row: 2; position: static; }
+.aiAgentPage.auPage.auCareVisual #security .platlist { margin-top: 20px; }
+.aiAgentPage.auPage.auCareVisual #security .plat { grid-template-columns: 35px minmax(0,.65fr) minmax(0,1.5fr); gap: 24px; }
+.aiAgentPage.auPage.auCareVisual #cost .plat { grid-template-columns: 36px minmax(0,.8fr) minmax(0,1.6fr); padding-block: 24px; }
+.aiAgentPage.auPage.auCareVisual #cost .au-split { grid-template-columns: .9fr 1.1fr; gap: 64px; margin-top: 48px; }
+.aiAgentPage.auPage.auCareVisual #cost .demand { border: 0; border-top: 1px solid var(--ink); border-radius: 0; }
+.aiAgentPage.auPage.auCareVisual #cost .demand-head,.aiAgentPage.auPage.auCareVisual #cost .demand ul { padding-inline: 0; }
+.aiAgentPage.auPage.auCareVisual #industries .capgrid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 0 56px; }
+.aiAgentPage.auPage.auCareVisual #industries .cap:nth-child(n) { grid-column: auto; border: 0; border-top: 1px solid var(--line); border-radius: 0; background: white; padding: 28px 0; }
+.aiAgentPage.auPage.auCareVisual #industries .caphead { margin: 0; }
+.aiAgentPage.auPage.auCareVisual #industries .cap-diagram { height: 90px; width: min(100%,320px); margin-block: 12px 18px; border: 0; background: none; }
+.aiAgentPage.auPage.auCareVisual .care-path { width: 100%; height: 100%; }
+.aiAgentPage.auPage.auCareVisual #industries h3 { font-size: 24px; }
+@media (max-width:1080px) {
+ .aiAgentPage.auPage.auCareVisual #included .factlist { grid-template-columns: 1fr; }
+ .aiAgentPage.auPage.auCareVisual #included .factswrap { grid-template-columns: minmax(0,1.4fr) minmax(0,.9fr); gap: 32px; }
+}
+@media (max-width:820px) {
+ .aiAgentPage.auPage.auCareVisual #answer .wrap,.aiAgentPage.auPage.auCareVisual #included .factswrap,.aiAgentPage.auPage.auCareVisual #fit-check .wrap,.aiAgentPage.auPage.auCareVisual #how-we-update .head-media,.aiAgentPage.auPage.auCareVisual #takeover .factswrap,.aiAgentPage.auPage.auCareVisual #security .wrap,.aiAgentPage.auPage.auCareVisual #cost .au-split { display: block; }
+ .aiAgentPage.auPage.auCareVisual #answer .section-head,.aiAgentPage.auPage.auCareVisual #security .section-head { margin-bottom: 30px; }
+ .aiAgentPage.auPage.auCareVisual #answer .factphoto,.aiAgentPage.auPage.auCareVisual #included .au-panel,.aiAgentPage.auPage.auCareVisual #how-we-update .head-media .vslot,.aiAgentPage.auPage.auCareVisual #takeover .factphoto,.aiAgentPage.auPage.auCareVisual #security .factphoto,.aiAgentPage.auPage.auCareVisual #cost .demand { margin-top: 32px; position: static; }
+ .aiAgentPage.auPage.auCareVisual #included .factlist { grid-template-columns: repeat(2,minmax(0,1fr)); }
+ .aiAgentPage.auPage.auCareVisual #care-plans .platlist { grid-template-columns: 1fr; gap: 0; }
+ .aiAgentPage.auPage.auCareVisual #care-plans .plat-fit { min-height: 0; }
+ .aiAgentPage.auPage.auCareVisual #fit-check .ventries { margin-top: 32px; }
+ .aiAgentPage.auPage.auCareVisual .photobreak { aspect-ratio: auto; width: calc(100% - 40px); padding: 16px; }
+ .aiAgentPage.auPage.auCareVisual #security .plat,.aiAgentPage.auPage.auCareVisual #cost .plat { grid-template-columns: 30px minmax(0,1fr); gap: 16px; }
+ .aiAgentPage.auPage.auCareVisual #security .plat-build,.aiAgentPage.auPage.auCareVisual #cost .plat-build { grid-column: 2; }
+ .aiAgentPage.auPage.auCareVisual #industries .capgrid { gap: 0 32px; }
+}
+@media (max-width:600px) {
+ .aiAgentPage.auPage.auCareVisual #included .factlist,.aiAgentPage.auPage.auCareVisual #takeover .au-numlist,.aiAgentPage.auPage.auCareVisual #industries .capgrid { grid-template-columns: 1fr; }
+ .aiAgentPage.auPage.auCareVisual #how-we-update .tnode summary { grid-template-columns: 42px minmax(0,1fr); gap: 16px; }
+ .aiAgentPage.auPage.auCareVisual #how-we-update .tnode h3 { font-size: 22px; }
+ .aiAgentPage.auPage.auCareVisual #how-we-update .tnode p { margin-left: 0; }
+ .aiAgentPage.auPage.auCareVisual #takeover .trigrows li { grid-template-columns: minmax(0,1fr) auto; }
+ .aiAgentPage.auPage.auCareVisual #takeover .trigrows .n { grid-column: 1; grid-row: 2; }
+ .aiAgentPage.auPage.auCareVisual #takeover .trigrows .t { grid-column: 2; grid-row: 1 / span 2; }
+}
+
+/* Explicit positions prevent inherited Family A fact columns overlapping the full-width heading. */
+.aiAgentPage.auPage.auCareVisual #answer .factlist { grid-column: 1; grid-row: 2; }
+.aiAgentPage.auPage.auCareVisual #security .factlist { grid-column: 1; grid-row: 2; }
+.aiAgentPage.auPage.auCareVisual #included .au-panel { grid-column: auto; grid-row: auto; }

@@ -1,0 +1,108 @@
+/* Support workbench: ticket documents, four jobs, and a two-column build. */
+.aiAgentPage.auPage.auCustomerServiceVisual .section { padding-block: clamp(64px,7vw,104px); }
+.aiAgentPage.auPage.auCustomerServiceVisual .hero-grid { grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 60px; }
+.aiAgentPage.auPage.auCustomerServiceVisual .specpanel { background: white; box-shadow: none; margin-top: 30px; }
+.aiAgentPage.auPage.auCustomerServiceVisual .specpanel-body { background: var(--accent-wash); gap: 16px; padding: 24px; }
+.aiAgentPage.auPage.auCustomerServiceVisual .specrow { border-radius: 3px; box-shadow: none; width: 100%; padding-block: 18px; }
+.aiAgentPage.auPage.auCustomerServiceVisual .specrow:nth-child(even) { margin-left: 0; }
+.aiAgentPage.auPage.auCustomerServiceVisual .specrow:not(:last-child)::after { display: none; }
+.aiAgentPage.auPage.auCustomerServiceVisual .workflow-icon { border-radius: 3px; background: white; }
+.aiAgentPage.auPage.auCustomerServiceVisual .workflow-toggle,
+.aiAgentPage.auPage.auCustomerServiceVisual .workflow-replay { min-width: 44px; min-height: 44px; }
+.aiAgentPage.auPage.auCustomerServiceVisual .factphoto { position: static; margin-right: 0; }
+.aiAgentPage.auPage.auCustomerServiceVisual .factphoto img { height: auto; aspect-ratio: 3/2; }
+.aiAgentPage.auPage.auCustomerServiceVisual #scope .plat { grid-template-columns: 40px minmax(0,1.2fr) minmax(0,1fr) minmax(0,.7fr); padding-inline: 16px; }
+.aiAgentPage.auPage.auCustomerServiceVisual #scope .plat h3 { font-size: 20px; }
+.aiAgentPage.auPage.auCustomerServiceVisual #capabilities .section-head { max-width: 840px; }
+.aiAgentPage.auPage.auCustomerServiceVisual #capabilities .capgrid { grid-template-columns: 1fr; gap: 0; border-top: 1px solid var(--ink); }
+.aiAgentPage.auPage.auCustomerServiceVisual #capabilities .cap { grid-column: auto; display: grid; grid-template-columns: 52px minmax(0,.8fr) minmax(0,1.5fr); gap: 12px 32px; padding: 34px 24px; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; background: white; }
+.aiAgentPage.auPage.auCustomerServiceVisual #capabilities .cap:nth-child(even) { background: var(--accent-wash); }
+.aiAgentPage.auPage.auCustomerServiceVisual #capabilities .cap:hover { transform: none; box-shadow: none; }
+.aiAgentPage.auPage.auCustomerServiceVisual #capabilities .caphead { grid-column: 1; grid-row: 1; flex-direction: column; align-items: start; gap: 12px; }
+.aiAgentPage.auPage.auCustomerServiceVisual #capabilities .cap-diagram { grid-column: 3; grid-row: 1 / span 2; margin: 0; height: 150px; width: 100%; }
+.aiAgentPage.auPage.auCustomerServiceVisual #capabilities .cap h3 { grid-column: 2; grid-row: 1; margin: 0; align-self: center; font-size: 28px; }
+.aiAgentPage.auPage.auCustomerServiceVisual #capabilities .cap p { grid-column: 2; grid-row: 2; margin: 0; max-width: 48ch; }
+.aiAgentPage.auPage.auCustomerServiceVisual #capabilities .chg-group { display: grid; grid-template-columns: minmax(0,.65fr) minmax(0,1.65fr); gap: 42px; margin-top: 40px; padding-top: 28px; border-top: 1px solid var(--line); }
+.aiAgentPage.auPage.auCustomerServiceVisual #capabilities .chg-list { grid-template-columns: 1fr; }
+.aiAgentPage.auPage.auCustomerServiceVisual #capabilities .chg-list li:first-child { padding-top: 0; }
+.aiAgentPage.auPage.auCustomerServiceVisual .vlog .wrap { gap: 48px; grid-template-columns: minmax(0,1.05fr) minmax(0,1fr); }
+.aiAgentPage.auPage.auCustomerServiceVisual .ventries { gap: 0; border-top: 1px solid var(--ink); }
+.aiAgentPage.auPage.auCustomerServiceVisual .ventry { padding: 24px 8px; border: 0; border-bottom: 1px solid var(--line); }
+.aiAgentPage.auPage.auCustomerServiceVisual .ventry summary { min-height: 44px; align-items: center; }
+.aiAgentPage.auPage.auCustomerServiceVisual .tablewrap:focus-visible,
+.aiAgentPage.auPage.auCustomerServiceVisual summary:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 4px; }
+.aiAgentPage.auPage.auCustomerServiceVisual #integrations .tablewrap table { min-width: 790px; }
+.aiAgentPage.auPage.auCustomerServiceVisual #integrations tbody th { width: 16%; font-family: var(--display); font-size: 18px; }
+.aiAgentPage.auPage.auCustomerServiceVisual #integrations td { width: 42%; }
+.aiAgentPage.auPage.auCustomerServiceVisual #comparison table { min-width: 920px; }
+.aiAgentPage.auPage.auCustomerServiceVisual .tablewrap :is(th,td) { padding: 22px 20px; }
+.aiAgentPage.auPage.auCustomerServiceVisual .photobreak { height: auto; aspect-ratio: auto; background: var(--accent-wash); border: 1px solid var(--line); padding: 24px; }
+.aiAgentPage.auPage.auCustomerServiceVisual .acs-ticket-flow { display: block; width: 100%; height: 100%; color: var(--accent-text); }
+.aiAgentPage.auPage.auCustomerServiceVisual .process .head-media { grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 52px; }
+.aiAgentPage.auPage.auCustomerServiceVisual .timeline.timeline-4 { grid-template-columns: 1fr 1fr; gap: 0 36px; }
+.aiAgentPage.auPage.auCustomerServiceVisual .timeline::before,
+.aiAgentPage.auPage.auCustomerServiceVisual .tnode::before { display: none; }
+.aiAgentPage.auPage.auCustomerServiceVisual .tnode { padding: 24px 0; border-bottom: 1px solid var(--line); }
+.aiAgentPage.auPage.auCustomerServiceVisual .tnode summary { display: grid; grid-template-columns: 42px minmax(0,1fr); gap: 20px; align-items: center; min-height: 44px; }
+.aiAgentPage.auPage.auCustomerServiceVisual .tnode .idx { position: static; grid-column: 1; grid-row: 1; width: 42px; height: 42px; border-radius: 8px; }
+.aiAgentPage.auPage.auCustomerServiceVisual .tnode h3 { grid-column: 2; grid-row: 1; margin: 0; font-size: 20px; align-items: center; }
+.aiAgentPage.auPage.auCustomerServiceVisual .tnode p { padding-left: 62px; font-size: 14px; }
+.aiAgentPage.auPage.auCustomerServiceVisual #ecommerce { gap: 48px; padding-bottom: 80px; }
+.aiAgentPage.auPage.auCustomerServiceVisual .definition-image::after { display: none; }
+.aiAgentPage.auPage.auCustomerServiceVisual #rules .au-panel { position: static; background: white; }
+.aiAgentPage.auPage.auCustomerServiceVisual #rules .au-numlist li { padding-block: 18px; }
+.aiAgentPage.auPage.auCustomerServiceVisual #engagement .plat { grid-template-columns: 40px minmax(0,1fr) minmax(0,1.75fr); padding-inline: 0; }
+.aiAgentPage.auPage.auCustomerServiceVisual #providers .plat { grid-template-columns: 40px minmax(0,1fr) minmax(0,2.4fr); padding-inline: 16px; }
+.aiAgentPage.auPage.auCustomerServiceVisual #providers .plat h3 { font-size: 20px; }
+.aiAgentPage.auPage.auCustomerServiceVisual .au-panel-wide { max-width: none; background: white; }
+.aiAgentPage.auPage.auCustomerServiceVisual .au-panel-wide .au-numlist { display: grid; grid-template-columns: 1fr 1fr; gap: 0 36px; }
+.aiAgentPage.auPage.auCustomerServiceVisual .au-numlist span { min-width: 0; overflow-wrap: anywhere; }
+.aiAgentPage.auPage.auCustomerServiceVisual .agentdir .agentdir-grid { grid-template-columns: 1fr 1fr; }
+.aiAgentPage.auPage.auCustomerServiceVisual .agentdir-grid a { border-radius: 8px; }
+.aiAgentPage.auPage.auCustomerServiceVisual .finalcta .wrap { align-items: start; }
+.aiAgentPage.auPage.auCustomerServiceVisual .finalcta .ctas { flex-direction: column; align-items: stretch; }
+@media (max-width: 1080px) {
+  .aiAgentPage.auPage.auCustomerServiceVisual .hero-grid { gap: 36px; }
+  .aiAgentPage.auPage.auCustomerServiceVisual #capabilities .cap { gap: 16px 24px; grid-template-columns: 40px minmax(0,1fr) minmax(0,1fr); }
+  .aiAgentPage.auPage.auCustomerServiceVisual #providers .plat { grid-template-columns: 36px minmax(0,1fr) minmax(0,1.6fr); }
+}
+@media (max-width: 820px) {
+  .aiAgentPage.auPage.auCustomerServiceVisual .hero-grid,
+  .aiAgentPage.auPage.auCustomerServiceVisual .vlog .wrap,
+  .aiAgentPage.auPage.auCustomerServiceVisual .process .head-media,
+  .aiAgentPage.auPage.auCustomerServiceVisual #capabilities .chg-group { grid-template-columns: 1fr; gap: 28px; }
+  .aiAgentPage.auPage.auCustomerServiceVisual .specpanel { margin-top: 0; }
+  .aiAgentPage.auPage.auCustomerServiceVisual .vlog .section-head { position: static; }
+  .aiAgentPage.auPage.auCustomerServiceVisual #capabilities .cap { grid-template-columns: 40px minmax(0,1fr); padding: 24px 16px; }
+  .aiAgentPage.auPage.auCustomerServiceVisual #capabilities .cap-diagram { grid-column: 1 / -1; grid-row: 2; height: 130px; }
+  .aiAgentPage.auPage.auCustomerServiceVisual #capabilities .cap p { grid-column: 1 / -1; grid-row: 3; max-width: none; }
+  .aiAgentPage.auPage.auCustomerServiceVisual #capabilities .caphead { flex-direction: row; align-self: center; }
+  .aiAgentPage.auPage.auCustomerServiceVisual #capabilities .caphead > svg { display: none; }
+  .aiAgentPage.auPage.auCustomerServiceVisual #scope .plat,
+  .aiAgentPage.auPage.auCustomerServiceVisual #providers .plat,
+  .aiAgentPage.auPage.auCustomerServiceVisual #engagement .plat { grid-template-columns: 1fr; gap: 10px; padding: 24px 12px; }
+  .aiAgentPage.auPage.auCustomerServiceVisual .timeline.timeline-4 { grid-template-columns: 1fr; }
+  .aiAgentPage.auPage.auCustomerServiceVisual .tnode p { padding-left: 62px; }
+  .aiAgentPage.auPage.auCustomerServiceVisual .photobreak { aspect-ratio: auto; padding: 10px; }
+  .aiAgentPage.auPage.auCustomerServiceVisual .au-panel-wide .au-numlist,
+  .aiAgentPage.auPage.auCustomerServiceVisual .agentdir .agentdir-grid { grid-template-columns: 1fr; }
+  .aiAgentPage.auPage.auCustomerServiceVisual #ecommerce { padding-bottom: 64px; }
+}
+@media (max-width: 480px) {
+  .aiAgentPage.auPage.auCustomerServiceVisual .ledger .wrap { grid-template-columns: 1fr; }
+  .aiAgentPage.auPage.auCustomerServiceVisual .ledgercell { padding: 20px 0; border: 0; border-bottom: 1px solid var(--line); }
+  .aiAgentPage.auPage.auCustomerServiceVisual .ledger-number,
+  .aiAgentPage.auPage.auCustomerServiceVisual .ledger-word { font-size: 28px; }
+  .aiAgentPage.auPage.auCustomerServiceVisual .tnode summary { grid-template-columns: 36px minmax(0,1fr); gap: 16px; }
+  .aiAgentPage.auPage.auCustomerServiceVisual .tnode .idx { width: 36px; height: 36px; }
+  .aiAgentPage.auPage.auCustomerServiceVisual .tnode h3 { font-size: 18px; }
+  .aiAgentPage.auPage.auCustomerServiceVisual .tnode p { padding-left: 0; }
+  .aiAgentPage.auPage.auCustomerServiceVisual .trigrows li { gap: 8px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .aiAgentPage.auPage.auCustomerServiceVisual * { scroll-behavior: auto; }
+}
+
+/* Keep native disclosure headings clear of the base decorative checkmark. */
+.aiAgentPage.auPage.auCustomerServiceVisual #fit-check .ventry::before { display: none; }
+.aiAgentPage.auPage.auCustomerServiceVisual .photobreak svg { display: block; width: 100%; height: auto; }

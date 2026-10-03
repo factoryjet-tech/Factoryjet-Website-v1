@@ -1,0 +1,12 @@
+FactoryJet AU visual enhancement, 3 October 2026.
+
+These are responsive WebP optimizations of pre-existing FactoryJet AI-generated illustrative assets. They are not real client photographs, staff portraits or proof of delivered work.
+
+tradie-in-the-field: /images/au/websites-for-tradies/tradie-website-hero.webp
+job-photo-gallery: /images/au/websites-for-tradies/tradie-website-photos.webp
+job-system-office: /images/au/websites-for-tradies/tradie-website-office.webp
+workshop-planning: /images/au/websites-for-tradies/tradie-website-workshop.webp
+enquiry-to-schedule: /images/au/generated/websites-for-tradies/photobreak.webp
+customer-local-search: /images/au/websites-for-tradies/tradie-website-search.webp
+
+Reviewed source people, hands and screens before reuse. Optimized at 640px and up to 1280px without enlargement; WebP quality 78 (80 for enquiry-to-schedule illustration). Page has explicit responsive srcSet, reserved 3:2 dimensions and lazy decoding.

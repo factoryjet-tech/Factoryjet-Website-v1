@@ -1,0 +1,271 @@
+/* Dental visual pass: all rules are opt-in and page-local. Existing Family A
+   tokens, visible copy, lead forms and AU navigation remain the source of truth. */
+.aiAgentPage.auPage.auDentalVisual .section { padding-block: clamp(64px, 7vw, 100px); }
+.aiAgentPage.auPage.auDentalVisual :is(h1, h2, h3) { overflow-wrap: break-word; }
+.aiAgentPage.auPage.auDentalVisual .fact p { max-width: 70ch; font-size: 16px; }
+.aiAgentPage.auPage.auDentalVisual .eyebrow { letter-spacing: .02em; text-transform: none; }
+.aiAgentPage.auPage.auDentalVisual :is(.factlabel, .specrow .idx, .specrow .tag, .vtag) { text-transform: none; letter-spacing: .01em; }
+.aiAgentPage.auPage.auDentalVisual :is(.fact, .plat, .ventry, .tnode):hover { transform: none; box-shadow: none; background-image: none; }
+.aiAgentPage.auPage.auDentalVisual .vslot[data-visual-status='filled'],
+.aiAgentPage.auPage.auDentalVisual .vslot[data-visual-status='filled'] > img { box-shadow: none; }
+.aiAgentPage.auPage.auDentalVisual .vslot[data-visual-status='filled'] > img { animation: none; transform: none; filter: none; }
+.aiAgentPage.auPage.auDentalVisual .factphoto img { height: auto; aspect-ratio: 3 / 2; }
+.aiAgentPage.auPage.auDentalVisual .figcap { font-size: 13px; line-height: 1.7; }
+.aiAgentPage.auPage.auDentalVisual :is(button, summary, input):focus-visible,
+.aiAgentPage.auPage.auDentalVisual .tablewrap:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 5px; }
+
+/* A calm appointment-book panel, with an existing native radio flow. */
+.aiAgentPage.auPage.auDentalVisual .hero { padding-block: 42px 64px; }
+.aiAgentPage.auPage.auDentalVisual .hero-grid { grid-template-columns: minmax(0, 1.3fr) minmax(0, .9fr); gap: 48px; }
+.aiAgentPage.auPage.auDentalVisual .hero h1 { font-size: clamp(38px, 4.2vw, 56px); max-width: 22ch; }
+.aiAgentPage.auPage.auDentalVisual .hero .lead { font-size: 16px; max-width: 60ch; }
+.aiAgentPage.auPage.auDentalVisual .specpanel { background: white; box-shadow: none; border-radius: 12px; }
+.aiAgentPage.auPage.auDentalVisual .specpanel-bar { gap: 10px; padding: 22px; font-size: 10px; line-height: 1.7; border-radius: 12px 12px 0 0; background: var(--accent-wash); }
+.aiAgentPage.auPage.auDentalVisual .specpanel-bar > span:nth-child(2) { flex: 1; }
+.aiAgentPage.auPage.auDentalVisual .sys { width: 100%; margin: 0 0 0 17px; font-size: 10px; }
+.aiAgentPage.auPage.auDentalVisual .sys span { background: white; padding: 4px 7px; }
+.aiAgentPage.auPage.auDentalVisual .workflow-controls { padding: 16px 22px 0; }
+.aiAgentPage.auPage.auDentalVisual :is(.workflow-toggle, .workflow-replay) { width: 44px; height: 44px; }
+.aiAgentPage.auPage.auDentalVisual .specpanel-body { background: none; gap: 14px; padding: 18px 22px 24px; }
+.aiAgentPage.auPage.auDentalVisual .specrow { width: 100%; margin-left: 0; grid-template-columns: 38px minmax(0, 1fr); gap: 6px 14px; padding: 17px 14px; border-radius: 7px; box-shadow: none; animation-name: dental-workflow-step; animation-timing-function: cubic-bezier(.22, 1, .36, 1); }
+.aiAgentPage.auPage.auDentalVisual .specrow::before,
+.aiAgentPage.auPage.auDentalVisual .specrow::after,
+.aiAgentPage.auPage.auDentalVisual .specrow .tag::after { content: none; }
+.aiAgentPage.auPage.auDentalVisual .specrow .idx { font-family: var(--sans); font-size: 11px; color: var(--muted); }
+.aiAgentPage.auPage.auDentalVisual .specrow .title { font-size: 14px; }
+.aiAgentPage.auPage.auDentalVisual .specrow .tag { grid-column: 2; grid-row: 3; width: fit-content; font-size: 10px; padding: 2px 7px; color: var(--accent-text); }
+.aiAgentPage.auPage.auDentalVisual .specrow:has(.workflow-select:checked) { transform: none; box-shadow: none; border-color: var(--accent); background: var(--accent-wash); }
+.aiAgentPage.auPage.auDentalVisual .specpanel-foot { padding: 20px 22px; font-family: var(--sans); font-size: 12px; border-radius: 0 0 12px 12px; }
+@keyframes dental-workflow-step {
+  0%, 22% { border-color: var(--accent); background: var(--accent-wash); }
+  25%, 100% { border-color: var(--line-strong); background: white; }
+}
+@media (hover: hover) {
+  .aiAgentPage.auPage.auDentalVisual .specrow:hover { transform: none; background: var(--accent-wash); }
+}
+.aiAgentPage.auPage.auDentalVisual .ledger .wrap { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.aiAgentPage.auPage.auDentalVisual .ledgercell { padding-block: 26px; }
+.aiAgentPage.auPage.auDentalVisual .ledger-number { font-size: 34px; }
+.aiAgentPage.auPage.auDentalVisual .ledgercell .k { font-size: 11px; }
+.aiAgentPage.auPage.auDentalVisual .ledger-word { font-size: 22px; min-height: 37px; }
+.aiAgentPage.auPage.auDentalVisual .byline { padding-block: 20px; }
+
+/* Answer first: full-width question, practical definition with contextual image. */
+.aiAgentPage.auPage.auDentalVisual #answer .wrap { grid-template-columns: minmax(0, 1.25fr) minmax(0, .85fr); gap: 36px 70px; }
+.aiAgentPage.auPage.auDentalVisual #answer .section-head { grid-column: 1 / -1; max-width: 860px; }
+.aiAgentPage.auPage.auDentalVisual #answer .factlist { grid-column: 1; grid-row: 2; }
+.aiAgentPage.auPage.auDentalVisual #answer .factphoto { grid-column: 2; grid-row: 2; margin: 0; position: static; }
+.aiAgentPage.auPage.auDentalVisual #answer .fact .stat { display: block; font-size: 21px; line-height: 1.45; margin-bottom: 16px; }
+.aiAgentPage.auPage.auDentalVisual #answer .factlabel { font-size: 12px; font-family: var(--sans); font-weight: 600; }
+
+/* A working native checklist: reader can mark their existing site's coverage. */
+.aiAgentPage.auPage.auDentalVisual #must-haves { border-block: 1px solid var(--line); background: var(--accent-wash); }
+.aiAgentPage.auPage.auDentalVisual #must-haves .wrap { display: block; }
+.aiAgentPage.auPage.auDentalVisual #must-haves .section-head { max-width: 820px; margin-bottom: 36px; }
+.aiAgentPage.auPage.auDentalVisual #must-haves .factswrap { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(0, .8fr); gap: 44px; align-items: start; }
+.aiAgentPage.auPage.auDentalVisual #must-haves .factlist { grid-column: auto; grid-row: auto; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.aiAgentPage.auPage.auDentalVisual #must-haves .dental-checkitem { border: 0; padding: 0; gap: 11px; grid-template-columns: 25px minmax(0, 1fr); cursor: pointer; }
+.aiAgentPage.auPage.auDentalVisual .dental-checkitem .sec { display: flex; flex-direction: column; gap: 9px; align-items: center; padding-top: 2px; }
+.aiAgentPage.auPage.auDentalVisual .dental-checkitem input { accent-color: var(--accent-text); width: 22px; height: 22px; margin: 0; cursor: pointer; flex-shrink: 0; }
+.aiAgentPage.auPage.auDentalVisual .dental-checkitem p { font-size: 14px; line-height: 1.75; }
+.aiAgentPage.auPage.auDentalVisual .dental-checkitem p b { display: block; color: var(--ink); font-size: 15px; line-height: 1.45; margin-bottom: 7px; }
+.aiAgentPage.auPage.auDentalVisual .dental-checkitem:has(input:checked) p { color: var(--ink); }
+.aiAgentPage.auPage.auDentalVisual .dental-checkitem:has(input:checked) p b { text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 5px; }
+.aiAgentPage.auPage.auDentalVisual #must-haves .factphoto { position: sticky; top: 120px; grid-column: auto; grid-row: auto; margin: 0; }
+.aiAgentPage.auPage.auDentalVisual #must-haves .factphoto img { aspect-ratio: 4 / 5; object-position: 26% center; }
+.aiAgentPage.auPage.auDentalVisual #must-haves .chg-group { display: grid; grid-template-columns: .8fr 1.7fr; gap: 44px; margin-top: 54px; padding-top: 30px; border-top: 1px solid var(--line); }
+.aiAgentPage.auPage.auDentalVisual #must-haves .chg-list { gap: 0 26px; }
+.aiAgentPage.auPage.auDentalVisual #must-haves .chg-list li::before { background: var(--ink); width: 5px; height: 5px; }
+
+/* Advertising guidance is presented as readable notes rather than fake approval. */
+.aiAgentPage.auPage.auDentalVisual #ahpra .wrap { grid-template-columns: minmax(0, .9fr) minmax(0, 1.5fr); gap: 68px; }
+.aiAgentPage.auPage.auDentalVisual #ahpra .fact { grid-template-columns: 34px minmax(0, 1fr); gap: 18px; }
+.aiAgentPage.auPage.auDentalVisual #ahpra .fact b { color: var(--ink); }
+.aiAgentPage.auPage.auDentalVisual #ahpra-check .wrap { gap: 60px; }
+.aiAgentPage.auPage.auDentalVisual #ahpra-check .section-head { position: static; }
+.aiAgentPage.auPage.auDentalVisual #ahpra-check .ventries { gap: 12px; }
+.aiAgentPage.auPage.auDentalVisual #ahpra-check .ventry { padding: 0 24px; border-radius: 7px; }
+.aiAgentPage.auPage.auDentalVisual #ahpra-check .ventry::before { content: none; }
+.aiAgentPage.auPage.auDentalVisual #ahpra-check .ventry summary { min-height: 72px; padding-block: 22px; align-items: center; }
+.aiAgentPage.auPage.auDentalVisual #ahpra-check .ventry summary h3 { font-size: 17px; line-height: 1.5; letter-spacing: -.015em; }
+.aiAgentPage.auPage.auDentalVisual #ahpra-check .ventry .vtag { margin-top: 0; font-size: 11px; background: var(--accent-wash); color: var(--accent-text); }
+.aiAgentPage.auPage.auDentalVisual #ahpra-check .ventry p { padding-bottom: 24px; font-size: 15px; }
+.aiAgentPage.auPage.auDentalVisual #ahpra-check .vslot img { aspect-ratio: 3 / 2; object-fit: cover; }
+
+/* Booking path: explanatory prose alongside a phone composition. */
+.aiAgentPage.auPage.auDentalVisual #booking .wrap { display: block; }
+.aiAgentPage.auPage.auDentalVisual #booking .section-head { max-width: 900px; margin-bottom: 40px; }
+.aiAgentPage.auPage.auDentalVisual #booking .factswrap { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, .9fr); gap: 70px; align-items: start; }
+.aiAgentPage.auPage.auDentalVisual #booking .factlist { grid-column: 1; grid-row: 1; }
+.aiAgentPage.auPage.auDentalVisual #booking .factphoto { grid-column: 2; grid-row: 1; margin: 0; position: sticky; top: 120px; }
+.aiAgentPage.auPage.auDentalVisual #booking .factphoto img { aspect-ratio: 4 / 5; object-position: 55% center; }
+.aiAgentPage.auPage.auDentalVisual #booking .fact:last-child { margin-top: 20px; padding: 24px 20px; background: var(--accent-wash); border-radius: 8px; }
+.aiAgentPage.auPage.auDentalVisual #booking .factlabel { font-family: var(--sans); font-size: 15px; font-weight: 600; line-height: 1.5; }
+.aiAgentPage.auPage.auDentalVisual .trigrows .t { font-size: 11px; }
+.aiAgentPage.auPage.auDentalVisual #comparison .section-head { display: block; max-width: 1000px; }
+.aiAgentPage.auPage.auDentalVisual #comparison .section-head h2 { margin-top: 18px; }
+.aiAgentPage.auPage.auDentalVisual #comparison .tablewrap { border-radius: 7px; overscroll-behavior-inline: contain; }
+.aiAgentPage.auPage.auDentalVisual #comparison table { min-width: 1030px; table-layout: fixed; }
+.aiAgentPage.auPage.auDentalVisual #comparison th { font-size: 13px; text-transform: none; line-height: 1.55; }
+.aiAgentPage.auPage.auDentalVisual #comparison td { font-size: 14px; line-height: 1.7; padding-block: 22px; }
+
+/* Local search notes with an honest reporting checklist, no invented charts. */
+.aiAgentPage.auPage.auDentalVisual #dental-seo .wrap { grid-template-columns: minmax(0, .8fr) minmax(0, 1.3fr); gap: 36px 76px; }
+.aiAgentPage.auPage.auDentalVisual #dental-seo .au-panel { background: white; border: 0; border-top: 1px solid var(--ink); border-radius: 0; padding: 24px 0 0; position: static; }
+.aiAgentPage.auPage.auDentalVisual #dental-seo .au-panel .eyebrow { color: var(--ink); font-family: var(--sans); font-size: 16px; }
+.aiAgentPage.auPage.auDentalVisual .dental-booking-flow { height: auto; padding: clamp(20px, 3vw, 40px); border-radius: 8px; color: var(--accent-text); }
+.aiAgentPage.auPage.auDentalVisual .dental-flow-svg { width: 100%; display: block; }
+
+/* Ordered implementation plan, reading down in source order. */
+.aiAgentPage.auPage.auDentalVisual #seo-plan .wrap { display: grid; grid-template-columns: .8fr 1.3fr; gap: 76px; align-items: start; }
+.aiAgentPage.auPage.auDentalVisual #seo-plan .section-head { margin: 0; position: sticky; top: 120px; }
+.aiAgentPage.auPage.auDentalVisual #seo-plan .timeline { grid-template-columns: 1fr; gap: 0; }
+.aiAgentPage.auPage.auDentalVisual #seo-plan .timeline::before,
+.aiAgentPage.auPage.auDentalVisual #seo-plan .tnode::before { display: none; }
+.aiAgentPage.auPage.auDentalVisual #seo-plan .tnode { display: grid; grid-template-columns: 48px minmax(0, 1fr); gap: 10px 22px; padding: 26px 0; border-bottom: 1px solid var(--line); }
+.aiAgentPage.auPage.auDentalVisual #seo-plan .tnode:first-child { padding-top: 0; }
+.aiAgentPage.auPage.auDentalVisual #seo-plan .tnode:last-child { border: 0; padding-bottom: 0; }
+.aiAgentPage.auPage.auDentalVisual #seo-plan .tnode .idx { grid-column: 1; grid-row: 1 / span 2; position: static; border-radius: 7px; width: 44px; height: 44px; }
+.aiAgentPage.auPage.auDentalVisual #seo-plan .tnode h3 { margin: 0; font-size: 23px; padding-top: 5px; }
+.aiAgentPage.auPage.auDentalVisual #seo-plan .tnode p { grid-column: 2; margin: 0; font-size: 15px; }
+.aiAgentPage.auPage.auDentalVisual .au-midcta section { max-width: 1200px; width: calc(100% - 64px); margin-inline: auto; border-radius: 8px; border: 1px solid var(--line); }
+
+/* Privacy: prose in normal flow and a useful accessible-screen scene. */
+.aiAgentPage.auPage.auDentalVisual #privacy-accessibility .wrap { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, .9fr); gap: 36px 70px; }
+.aiAgentPage.auPage.auDentalVisual #privacy-accessibility .section-head { grid-column: 1 / -1; max-width: 920px; }
+.aiAgentPage.auPage.auDentalVisual #privacy-accessibility .factlist { grid-column: 1; grid-row: 2; }
+.aiAgentPage.auPage.auDentalVisual #privacy-accessibility .factphoto { grid-column: 2; grid-row: 2; position: static; margin: 0; }
+.aiAgentPage.auPage.auDentalVisual #privacy-accessibility .platlist { border-top: 0; margin-top: 18px; }
+.aiAgentPage.auPage.auDentalVisual #privacy-accessibility .plat { grid-template-columns: 40px minmax(0, .6fr) minmax(0, 1.5fr); padding: 22px 0; }
+
+/* Practice types form a two-column directory with small structural diagrams. */
+.aiAgentPage.auPage.auDentalVisual #practice-types .section-head { max-width: 850px; }
+.aiAgentPage.auPage.auDentalVisual #practice-types .capgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 60px; }
+.aiAgentPage.auPage.auDentalVisual #practice-types .cap:nth-child(n) { grid-column: auto; padding: 24px 0 0; border: 0; border-radius: 0; background: white; border-top: 1px solid var(--line); box-shadow: none; }
+.aiAgentPage.auPage.auDentalVisual #practice-types .caphead { margin-bottom: 0; }
+.aiAgentPage.auPage.auDentalVisual #practice-types .cap-diagram { border: 0; border-radius: 0; background: transparent; height: 104px; width: min(100%, 340px); margin-block: 4px 12px; }
+.aiAgentPage.auPage.auDentalVisual #practice-types .cap-diagram svg { display: block; width: 100%; height: 100%; }
+.aiAgentPage.auPage.auDentalVisual #practice-types h3 { font-size: 24px; }
+.aiAgentPage.auPage.auDentalVisual #practice-types .cap p { font-size: 15px; max-width: 58ch; }
+
+/* Scope rows, search-demand chart and the factual provider directory differ. */
+.aiAgentPage.auPage.auDentalVisual #engagement .plat { grid-template-columns: 48px minmax(0, .8fr) minmax(0, 1.4fr); padding: 28px 0; }
+.aiAgentPage.auPage.auDentalVisual #engagement .plat h3 { max-width: 15ch; font-size: 27px; }
+.aiAgentPage.auPage.auDentalVisual #engagement .plat-build { font-size: 15px; }
+.aiAgentPage.auPage.auDentalVisual #engagement .au-split { margin-top: 48px; gap: 76px; grid-template-columns: .9fr 1.1fr; }
+.aiAgentPage.auPage.auDentalVisual #engagement .demand { border: 0; border-radius: 0; border-top: 1px solid var(--ink); }
+.aiAgentPage.auPage.auDentalVisual #engagement .demand-head { padding-inline: 0; letter-spacing: .01em; text-transform: none; font-size: 11px; }
+.aiAgentPage.auPage.auDentalVisual #engagement .demand ul { padding-inline: 0; }
+.aiAgentPage.auPage.auDentalVisual #engagement .demand-row { padding-block: 16px; }
+.aiAgentPage.auPage.auDentalVisual #engagement .demand-bar { height: 6px; border-radius: 2px; }
+.aiAgentPage.auPage.auDentalVisual #engagement .demand-bar i { border-radius: 2px; }
+.aiAgentPage.auPage.auDentalVisual #engagement .demand-src { padding-inline: 0; }
+.aiAgentPage.auPage.auDentalVisual #providers .plat-head { grid-template-columns: 1fr; gap: 24px; max-width: 950px; }
+.aiAgentPage.auPage.auDentalVisual #providers .plat-head p { max-width: 75ch; }
+.aiAgentPage.auPage.auDentalVisual #providers .plat { grid-template-columns: 42px minmax(0, 1fr) minmax(0, 1.7fr); gap: 24px; padding: 26px 18px; }
+.aiAgentPage.auPage.auDentalVisual #providers .plat h3 { font-size: 22px; }
+.aiAgentPage.auPage.auDentalVisual #providers .au-panel-wide { max-width: none; padding: 32px; background: var(--accent-wash); border: 0; }
+.aiAgentPage.auPage.auDentalVisual #providers .au-panel-wide > .eyebrow { font-family: var(--display); font-size: 21px; color: var(--ink); font-weight: 800; margin-bottom: 24px; }
+.aiAgentPage.auPage.auDentalVisual #providers .au-numlist { display: grid; grid-template-columns: 1fr 1fr; column-gap: 44px; }
+.aiAgentPage.auPage.auDentalVisual #providers .au-numlist li { padding-block: 18px; font-size: 14px; }
+.aiAgentPage.auPage.auDentalVisual #more-services .agentdir-grid { grid-template-columns: 1fr 1fr; gap: 0 48px; border-top: 1px solid var(--line); }
+.aiAgentPage.auPage.auDentalVisual #more-services .agentdir-grid a { border: 0; border-bottom: 1px solid var(--line); border-radius: 0; padding: 28px 32px 28px 0; }
+.aiAgentPage.auPage.auDentalVisual #more-services .agentdir-t { font-size: 19px; }
+.aiAgentPage.auPage.auDentalVisual #more-services .agentdir-l { color: var(--body); font-size: 14px; margin-top: 9px; }
+.aiAgentPage.auPage.auDentalVisual #more-services .agentdir-go { top: 27px; right: 5px; font-size: 21px; }
+.aiAgentPage.auPage.auDentalVisual .faq-catnav a { min-height: 44px; display: flex; align-items: center; font-size: 14px; }
+.aiAgentPage.auPage.auDentalVisual .faq-category { font-size: 12px; text-transform: none; letter-spacing: .01em; }
+.aiAgentPage.auPage.auDentalVisual .faqwrap { gap: 64px; grid-template-columns: minmax(0, .9fr) minmax(0, 1.5fr); }
+.aiAgentPage.auPage.auDentalVisual .faqitem summary { min-height: 64px; }
+.aiAgentPage.auPage.auDentalVisual .finalcta .wrap { gap: 52px; }
+.aiAgentPage.auPage.auDentalVisual .finalcta h2 { max-width: 24ch; }
+.aiAgentPage.auPage.auDentalVisual .finalcta .ctas { display: flex; flex-direction: column; align-items: stretch; min-width: 230px; }
+
+@media (max-width: 1080px) {
+  .aiAgentPage.auPage.auDentalVisual .hero-grid { grid-template-columns: minmax(0, 1.15fr) minmax(0, .9fr); gap: 32px; }
+  .aiAgentPage.auPage.auDentalVisual .hero h1 { font-size: 46px; }
+  .aiAgentPage.auPage.auDentalVisual #must-haves .factswrap { grid-template-columns: 1.7fr 1fr; gap: 28px; }
+  .aiAgentPage.auPage.auDentalVisual #must-haves .factlist { grid-template-columns: 1fr; }
+  .aiAgentPage.auPage.auDentalVisual #must-haves .factphoto img { aspect-ratio: 3 / 4; }
+  .aiAgentPage.auPage.auDentalVisual #providers .plat { grid-template-columns: 32px minmax(0, 1fr) minmax(0, 1.4fr); gap: 18px; }
+}
+@media (max-width: 820px) {
+  .aiAgentPage.auPage.auDentalVisual .section { padding-block: 64px; }
+  .aiAgentPage.auPage.auDentalVisual .hero { padding-block: 32px 52px; }
+  .aiAgentPage.auPage.auDentalVisual .hero-grid { grid-template-columns: 1fr; gap: 36px; }
+  .aiAgentPage.auPage.auDentalVisual .hero h1 { font-size: clamp(34px, 6.2vw, 48px); max-width: 22ch; }
+  .aiAgentPage.auPage.auDentalVisual .hero .lead { font-size: 15px; }
+  .aiAgentPage.auPage.auDentalVisual .ledger .wrap { grid-template-columns: 1fr 1fr; }
+  .aiAgentPage.auPage.auDentalVisual .ledgercell { min-width: 0; padding: 24px 16px; }
+  .aiAgentPage.auPage.auDentalVisual :is(#answer, #ahpra, #dental-seo, #privacy-accessibility) .wrap { display: block; }
+  .aiAgentPage.auPage.auDentalVisual :is(#answer, #ahpra, #dental-seo, #privacy-accessibility) .section-head { margin-bottom: 30px; }
+  .aiAgentPage.auPage.auDentalVisual :is(#answer, #must-haves, #booking, #privacy-accessibility) .factphoto { position: static; margin-top: 30px; }
+  .aiAgentPage.auPage.auDentalVisual #must-haves .factswrap { display: block; }
+  .aiAgentPage.auPage.auDentalVisual #must-haves .factlist { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
+  .aiAgentPage.auPage.auDentalVisual #must-haves .factphoto img { aspect-ratio: 3 / 2; object-position: center; }
+  .aiAgentPage.auPage.auDentalVisual #must-haves .chg-group { grid-template-columns: 1fr; gap: 16px; }
+  .aiAgentPage.auPage.auDentalVisual #must-haves .chg-list { grid-template-columns: 1fr; }
+  .aiAgentPage.auPage.auDentalVisual #ahpra-check .wrap { grid-template-columns: 1fr; gap: 28px; }
+  .aiAgentPage.auPage.auDentalVisual #booking .factswrap { display: block; }
+  .aiAgentPage.auPage.auDentalVisual #booking .factphoto img { aspect-ratio: 3 / 2; }
+  .aiAgentPage.auPage.auDentalVisual #booking .fact:last-child { padding: 20px 14px; grid-template-columns: 28px minmax(0, 1fr); gap: 10px; }
+  .aiAgentPage.auPage.auDentalVisual #dental-seo .au-panel { margin-top: 34px; }
+  .aiAgentPage.auPage.auDentalVisual .dental-booking-flow { width: calc(100% - 40px); aspect-ratio: auto; padding: 12px 0; margin-bottom: 0; }
+  .aiAgentPage.auPage.auDentalVisual #seo-plan .wrap { grid-template-columns: 1fr; gap: 32px; }
+  .aiAgentPage.auPage.auDentalVisual #seo-plan .section-head { position: static; }
+  .aiAgentPage.auPage.auDentalVisual #seo-plan .tnode { padding-left: 0; gap: 10px 16px; }
+  .aiAgentPage.auPage.auDentalVisual .au-midcta section { width: calc(100% - 40px); }
+  .aiAgentPage.auPage.auDentalVisual #privacy-accessibility .plat { grid-template-columns: 30px minmax(0, 1fr); gap: 12px; }
+  .aiAgentPage.auPage.auDentalVisual #privacy-accessibility .plat-build { grid-column: 2; }
+  .aiAgentPage.auPage.auDentalVisual #practice-types .capgrid { gap: 28px 32px; }
+  .aiAgentPage.auPage.auDentalVisual #engagement .plat { grid-template-columns: 40px minmax(0, 1fr); gap: 16px; }
+  .aiAgentPage.auPage.auDentalVisual #engagement .plat h3 { max-width: none; font-size: 24px; }
+  .aiAgentPage.auPage.auDentalVisual #engagement .plat-build { grid-column: 2; }
+  .aiAgentPage.auPage.auDentalVisual #engagement .au-split { grid-template-columns: 1fr; gap: 36px; }
+  .aiAgentPage.auPage.auDentalVisual #providers .plat { grid-template-columns: 28px minmax(0, 1fr); gap: 10px 16px; padding-inline: 8px; }
+  .aiAgentPage.auPage.auDentalVisual #providers .plat-build { grid-column: 2; }
+  .aiAgentPage.auPage.auDentalVisual #providers .au-panel-wide { padding: 24px; }
+  .aiAgentPage.auPage.auDentalVisual .faqwrap { grid-template-columns: 1fr; gap: 32px; }
+  .aiAgentPage.auPage.auDentalVisual .finalcta .ctas { margin-top: 28px; width: fit-content; min-width: 0; }
+}
+@media (max-width: 560px) {
+  .aiAgentPage.auPage.auDentalVisual .wrap { width: calc(100% - 40px); }
+  .aiAgentPage.auPage.auDentalVisual .hero h1 { font-size: clamp(32px, 8.5vw, 42px); }
+  .aiAgentPage.auPage.auDentalVisual .specpanel-bar { padding: 18px; }
+  .aiAgentPage.auPage.auDentalVisual .specpanel-body { padding: 18px; }
+  .aiAgentPage.auPage.auDentalVisual .specrow { grid-template-columns: 30px minmax(0, 1fr); gap: 6px 10px; padding: 14px 12px; }
+  .aiAgentPage.auPage.auDentalVisual .workflow-icon { width: 30px; height: 34px; }
+  .aiAgentPage.auPage.auDentalVisual .specrow .title { font-size: 13px; }
+  .aiAgentPage.auPage.auDentalVisual .specrow .idx { font-size: 10px; }
+  .aiAgentPage.auPage.auDentalVisual .ledger .wrap { grid-template-columns: 1fr; }
+  .aiAgentPage.auPage.auDentalVisual .ledgercell:nth-child(n) { padding: 24px 0; border-right: 0; border-top: 1px solid var(--line); }
+  .aiAgentPage.auPage.auDentalVisual .ledgercell:first-child { border-top: 0; }
+  .aiAgentPage.auPage.auDentalVisual .ledger-word { min-height: 0; }
+  .aiAgentPage.auPage.auDentalVisual .fact { grid-template-columns: 28px minmax(0, 1fr); gap: 10px; }
+  .aiAgentPage.auPage.auDentalVisual .fact p { font-size: 15px; }
+  .aiAgentPage.auPage.auDentalVisual #must-haves .factlist { grid-template-columns: 1fr; }
+  .aiAgentPage.auPage.auDentalVisual #must-haves .dental-checkitem { padding-bottom: 22px; border-bottom: 1px solid var(--line); }
+  .aiAgentPage.auPage.auDentalVisual #must-haves .dental-checkitem:last-child { border-bottom: 0; padding-bottom: 0; }
+  .aiAgentPage.auPage.auDentalVisual #ahpra .fact { grid-template-columns: 28px minmax(0, 1fr); gap: 12px; }
+  .aiAgentPage.auPage.auDentalVisual #ahpra-check .ventry { padding-inline: 18px; }
+  .aiAgentPage.auPage.auDentalVisual #seo-plan .tnode { grid-template-columns: 38px minmax(0, 1fr); }
+  .aiAgentPage.auPage.auDentalVisual #seo-plan .tnode .idx { width: 36px; height: 36px; }
+  .aiAgentPage.auPage.auDentalVisual #seo-plan .tnode h3 { font-size: 21px; }
+  .aiAgentPage.auPage.auDentalVisual #practice-types .capgrid { grid-template-columns: 1fr; }
+  .aiAgentPage.auPage.auDentalVisual #practice-types .cap:nth-child(n) { background: white; }
+  .aiAgentPage.auPage.auDentalVisual #practice-types .cap-diagram { height: 90px; max-width: 290px; }
+  .aiAgentPage.auPage.auDentalVisual #engagement .demand-top { flex-wrap: wrap; }
+  .aiAgentPage.auPage.auDentalVisual #engagement .demand-v { white-space: nowrap; }
+  .aiAgentPage.auPage.auDentalVisual #engagement .demand-head { align-items: flex-start; }
+  .aiAgentPage.auPage.auDentalVisual #providers .au-numlist { grid-template-columns: 1fr; }
+  .aiAgentPage.auPage.auDentalVisual #providers .au-panel-wide { padding-inline: 18px; }
+  .aiAgentPage.auPage.auDentalVisual #more-services .agentdir-grid { grid-template-columns: 1fr; }
+  .aiAgentPage.auPage.auDentalVisual .faqitem summary { gap: 9px; grid-template-columns: 28px minmax(0, 1fr) 24px; }
+  .aiAgentPage.auPage.auDentalVisual .finalcta .ctas { width: 100%; }
+  .aiAgentPage.auPage.auDentalVisual .byline .upd { width: 100%; margin-left: 48px; text-align: left; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .aiAgentPage.auPage.auDentalVisual *,
+  .aiAgentPage.auPage.auDentalVisual *::before,
+  .aiAgentPage.auPage.auDentalVisual *::after { animation: none !important; transition: none !important; }
+}

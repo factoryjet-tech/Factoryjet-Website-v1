@@ -10,6 +10,14 @@ import FAQ from '@/components/v2/FAQ'
 import TalkToFounder from '@/components/v2/TalkToFounder'
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns'
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema'
+import {
+  AccidentAgentWorkflow,
+  CaseStudyHeroVisual,
+  CaseStudyScreenshotGallery,
+  CaseVisualIcon,
+  VISUAL_CASE_SLUGS,
+} from '@/components/v2/CaseStudyVisuals'
+import '@/components/v2/CaseStudyVisuals.css'
 
 import {
   CASE_STUDIES,
@@ -204,9 +212,11 @@ function CrystalCard({
 function HeroSection({ cs }: { cs: CaseStudy }) {
   const engagement = CLIENT_ENGAGEMENTS.find((entry) => entry.caseSlug === cs.slug)
   const stats = cs.heroStats ?? []
+  const enhanced = VISUAL_CASE_SLUGS.has(cs.slug)
+  const accidentAgent = cs.slug === 'washington-law-group-accident-detection-agent'
   return (
     <section
-      className="relative overflow-hidden py-14 md:py-20"
+      className="cs-hero relative overflow-hidden py-14 md:py-20"
       style={{
         backgroundColor: CREAM,
         backgroundImage: [
@@ -248,6 +258,8 @@ function HeroSection({ cs }: { cs: CaseStudy }) {
               </p>
             )}
 
+            {enhanced && <div className="csv-hero-mobile" data-visual-enhancement>{accidentAgent ? <AccidentAgentWorkflow animated /> : <CaseStudyHeroVisual cs={cs} />}</div>}
+
             {/* Hero maxi-stats row (3) */}
             {stats.length > 0 && (
               <div className="mt-10 grid gap-6 border-t border-black/[0.08] pt-8"
@@ -271,8 +283,9 @@ function HeroSection({ cs }: { cs: CaseStudy }) {
 
           {/* RIGHT, client logo + meta */}
           <div className="lg:col-span-5">
+            {enhanced && <div className="csv-hero-desktop" data-visual-enhancement>{accidentAgent ? <div className="mb-6"><AccidentAgentWorkflow animated /></div> : <CaseStudyHeroVisual cs={cs} />}</div>}
             <div
-              className="flex h-full min-h-[260px] flex-col justify-between rounded-2xl border border-black/[0.08] bg-white p-7"
+              className="cs-hero-meta flex h-full min-h-[260px] flex-col justify-between rounded-2xl border border-black/[0.08] bg-white p-7"
               style={{
                 backgroundImage:
                   'radial-gradient(ellipse 100% 80% at 80% 10%, rgba(240,90,40,0.06) 0%, transparent 65%)',
@@ -334,13 +347,14 @@ function HeroSection({ cs }: { cs: CaseStudy }) {
                     <dt className="font-fj-mono text-[10px] font-bold uppercase text-fj-neutral-400" style={{ letterSpacing: '0.14em' }}>
                       Services
                     </dt>
-                    <dd className="mt-2 flex flex-wrap gap-1.5">
-                      {cs.services.map((s) => (
+                    <dd className={accidentAgent ? 'csv-service-map mt-2' : 'mt-2 flex flex-wrap gap-1.5'}>
+                      {cs.services.map((s, i) => (
                         <span
                           key={s}
                           className="inline-flex items-center rounded-full px-2.5 py-1 font-fj-body text-[11px] font-medium"
                           style={{ background: 'rgba(240,90,40,0.08)', color: ORANGE_DEEP }}
                         >
+                          {accidentAgent && <CaseVisualIcon kind={i} />}
                           {s}
                         </span>
                       ))}
@@ -353,7 +367,7 @@ function HeroSection({ cs }: { cs: CaseStudy }) {
         </div>
 
         {/* Pinned founder card at hero bottom */}
-        <div className="mt-12">
+        <div className="cs-hero-founder mt-12">
           <TalkToFounder
             variant="compact"
             theme="light"
@@ -369,7 +383,7 @@ function HeroSection({ cs }: { cs: CaseStudy }) {
 function AtAGlanceSection({ tiles }: { tiles: CaseStudyGlanceTile[] }) {
   if (!tiles?.length) return null
   return (
-    <section className="bg-fj-cream py-14 md:py-20">
+    <section className="cs-glance bg-fj-cream py-14 md:py-20">
       <div className="mx-auto max-w-[1120px] px-6 md:px-8">
         <div className="mb-10 max-w-[640px]">
           <Eyebrow>At a glance</Eyebrow>
@@ -407,7 +421,7 @@ function ChallengeSection({ body, pullQuote }: { body: string; pullQuote?: strin
   if (!body) return null
   return (
     <section
-      className="relative overflow-hidden py-14 md:py-20"
+      className="cs-challenge relative overflow-hidden py-14 md:py-20"
       style={{
         backgroundColor: CHARCOAL,
         backgroundImage: [
@@ -494,7 +508,7 @@ function ChallengeSection({ body, pullQuote }: { body: string; pullQuote?: strin
 function ApproachSection({ body, techStack }: { body: string; techStack?: string[] }) {
   if (!body) return null
   return (
-    <section className="bg-white py-14 md:py-20">
+    <section className="cs-approach bg-white py-14 md:py-20">
       <div className="mx-auto max-w-[1120px] px-6 md:px-8">
         <div className="mb-10 max-w-[700px]">
           <Eyebrow>Our Approach</Eyebrow>
@@ -548,13 +562,15 @@ function ApproachSection({ body, techStack }: { body: string; techStack?: string
 function SolutionSection({
   body,
   screenshots,
+  visualSlug,
 }: {
   body: string
   screenshots?: CaseStudyScreenshot[]
+  visualSlug?: string
 }) {
   if (!body && !screenshots?.length) return null
   return (
-    <section className="bg-fj-cream py-14 md:py-20">
+    <section className="cs-solution bg-fj-cream py-14 md:py-20">
       <div className="mx-auto max-w-[1120px] px-6 md:px-8">
         <div className="mb-10 max-w-[760px]">
           <Eyebrow>What We Built</Eyebrow>
@@ -576,7 +592,8 @@ function SolutionSection({
           </div>
         )}
 
-        {screenshots && screenshots.length > 0 && (
+        {visualSlug === 'washington-law-group-accident-detection-agent' && <div data-visual-enhancement><AccidentAgentWorkflow /></div>}
+        {visualSlug && screenshots?.length ? <CaseStudyScreenshotGallery screenshots={screenshots} /> : screenshots && screenshots.length > 0 && (
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {screenshots.slice(0, 5).map((s, i) => {
               const isMobile = s.device === 'mobile'
@@ -623,15 +640,17 @@ function ResultsSection({
   body,
   headlineMetric,
   resultsMetrics,
+  visualSlug,
 }: {
   body?: string
   headlineMetric?: CaseStudyMetric
   resultsMetrics?: CaseStudyMetric[]
+  visualSlug?: string
 }) {
   if (!headlineMetric && !resultsMetrics?.length && !body) return null
   return (
     <section
-      className="relative overflow-hidden py-14 md:py-20"
+      className="cs-results relative overflow-hidden py-14 md:py-20"
       style={{
         backgroundColor: CHARCOAL,
         backgroundImage: [
@@ -692,6 +711,7 @@ function ResultsSection({
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {resultsMetrics.slice(0, 6).map((m, i) => (
               <CrystalCard key={i} dark>
+                {visualSlug && <div className="csv-metric-icon" data-visual-enhancement><CaseVisualIcon kind={i} /></div>}
                 <p
                   className="fj-display font-fj-display font-bold leading-none tracking-[-0.025em]"
                   style={{ color: ORANGE, fontSize: 'clamp(1.25rem, 2.5vw, 2rem)', lineHeight: 1.2, overflowWrap: 'anywhere' }}
@@ -833,7 +853,7 @@ function RelatedCasesSection({ current }: { current: CaseStudy }) {
   if (!related.length) return null
 
   return (
-    <section className="bg-white py-14 md:py-20">
+    <section className="cs-related bg-white py-14 md:py-20">
       <div className="mx-auto max-w-[1120px] px-6 md:px-8">
         <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
           <div>
@@ -905,15 +925,16 @@ function RelatedCasesSection({ current }: { current: CaseStudy }) {
 }
 
 // ───── SECTION 10 — FAQ (cream) ─────────────────────────────────────────────
-function FAQSection({ faqs, client }: { faqs: CaseStudy['faqs']; client: string }) {
+function FAQSection({ faqs, client, enhanced = false }: { faqs: CaseStudy['faqs']; client: string; enhanced?: boolean }) {
   if (!faqs?.length) return null
-  return (
+  const content = (
     <FAQ
       eyebrow="Frequently asked"
       headline={`Questions about the ${client} project.`}
       items={faqs.map((f) => ({ question: f.q, answer: f.a }))}
     />
   )
+  return enhanced ? <div className="csv-faq">{content}</div> : content
 }
 
 // ───── PAGE ─────────────────────────────────────────────────────────────────
@@ -921,6 +942,7 @@ export default async function CaseStudyPage({ params }: Props) {
   const { slug } = await params
   const cs = getCaseStudyBySlug(slug)
   if (!cs) notFound()
+  const visualSlug = VISUAL_CASE_SLUGS.has(slug) ? slug : undefined
 
   const articleSchema = articleJsonLd(cs, slug)
   const faqSchema = cs.faqs?.length ? faqJsonLd(cs.faqs) : null
@@ -956,7 +978,7 @@ export default async function CaseStudyPage({ params }: Props) {
       )}
 
       <SiteHeader />
-      <main>
+      <main className={visualSlug ? 'cs-visual' : undefined} data-case-visual={visualSlug}>
       <Breadcrumbs items={[
           { name: 'Home', url: 'https://factoryjet.com' },
           { name: 'Case Studies', url: 'https://factoryjet.com/case-studies' },
@@ -966,16 +988,17 @@ export default async function CaseStudyPage({ params }: Props) {
         <AtAGlanceSection tiles={cs.glanceTiles ?? []} />
         <ChallengeSection body={cs.challenge} pullQuote={cs.challengePullQuote} />
         <ApproachSection body={cs.approach} techStack={cs.techStack} />
-        <SolutionSection body={cs.solution} screenshots={cs.screenshots} />
+        <SolutionSection body={cs.solution} screenshots={cs.screenshots} visualSlug={visualSlug} />
         <ResultsSection
           body={cs.results}
           headlineMetric={cs.headlineMetric}
           resultsMetrics={cs.resultsMetrics}
+          visualSlug={visualSlug}
         />
         <TestimonialSection t={cs.testimonial} />
         <FounderBannerSection teaser={cs.ctaTeaser} />
         <RelatedCasesSection current={cs} />
-        <FAQSection faqs={cs.faqs} client={cs.client} />
+        <FAQSection faqs={cs.faqs} client={cs.client} enhanced={Boolean(visualSlug)} />
       </main>
       <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
     </>

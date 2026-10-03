@@ -2,10 +2,25 @@
    Every rule is scoped under .aiDevPage so nothing leaks into other .aiAgentPage pages.
    Block rules mirror AiSeoHubSections.css and WebDesignHubSections.css, rescoped. */
 
-/* Visual slots: hidden from visitors until the visual pass fills them */
-.aiDevPage [data-visual-status='placeholder'] { display: none; }
-.aiDevPage .factphoto:has(> [data-visual-status='placeholder']) { display: none; }
-.aiDevPage .definition:has(> [data-visual-status='placeholder']) { grid-template-columns: minmax(0,1fr); max-width: 860px; }
+/* Editorial illustrations and the document-grounded retrieval diagram. */
+.aiDevPage .visual-slot { margin: 0; }
+.aiDevPage .factphoto { margin-right: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 12px; }
+.aiDevPage .factphoto img { display: block; height: auto; aspect-ratio: 3 / 2; border-radius: 0; }
+.aiDevPage .facts .wrap { grid-template-rows: min-content 1fr; }
+.aiDevPage .definition-image { border: 1px solid var(--line); background: var(--accent-wash); }
+.aiDevPage .definition-image::after { display: none; }
+.aiDevPage .retrieval-diagram { width: 100%; height: 100%; display: block; }
+.aiDevPage .retrieval-grid { fill: none; stroke: var(--line); stroke-width: 1; }
+.aiDevPage .retrieval-surface { fill: #F1E9E3; stroke: var(--line); stroke-width: 1.2; }
+.aiDevPage .retrieval-paper { fill: #FFF; stroke: #C7B9AD; stroke-width: 1.2; }
+.aiDevPage .retrieval-line { fill: none; stroke: var(--muted); stroke-width: 1.5; stroke-linecap: round; }
+.aiDevPage .retrieval-highlight { fill: var(--accent); }
+.aiDevPage .retrieval-wire, .aiDevPage .retrieval-arrow { fill: none; stroke: var(--muted); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.aiDevPage .retrieval-core { fill: var(--accent-wash); stroke: var(--accent); stroke-width: 1.5; }
+.aiDevPage .retrieval-chip { fill: none; stroke: var(--accent-text); stroke-width: 1.5; stroke-linecap: round; }
+.aiDevPage .retrieval-citation { fill: none; stroke: var(--accent); stroke-width: 2; }
+.aiDevPage .photobreak { height: auto; aspect-ratio: 12 / 5; border: 1px solid var(--line); }
+.aiDevPage .photobreak img { display: block; height: 100%; }
 
 /* Hero */
 .aiDevPage .hero-alt { margin-top: 16px; font-size: 13px; color: var(--muted); }
@@ -75,6 +90,24 @@
 .aiDevPage .finalcta .ctas .btn { margin: 0; }
 .aiDevPage .refs { grid-template-columns: repeat(4,minmax(0,1fr)); row-gap: 22px; }
 
+/* Bring the existing shared CTA into this page's white/orange section system. */
+.aiDevPage .ai-dev-midcta > section { background: var(--accent-wash); border-color: var(--line); padding-block: 64px; }
+.aiDevPage .ai-dev-midcta > section > div { width: min(100% - 64px,1200px); max-width: none; padding: 0; }
+.aiDevPage .ai-dev-midcta > section > div > div { background: white; border-color: var(--line); border-radius: 12px; padding: 40px 44px; }
+.aiDevPage .ai-dev-midcta h2 { margin-top: 14px; max-width: 28ch; font-family: var(--display); font-size: clamp(26px,2.8vw,36px); line-height: 1.13; }
+.aiDevPage .ai-dev-midcta h2 + p { margin-top: 16px; font-family: var(--sans); color: var(--body); max-width: 65ch; line-height: 1.75; }
+.aiDevPage .ai-dev-midcta a { min-height: 52px; border-radius: 7px; background: var(--ink); color: white; font-family: var(--sans); font-size: 16px; }
+.aiDevPage .ai-dev-midcta a:hover { background: var(--accent-text); opacity: 1; }
+.aiDevPage .ai-dev-midcta span { font-family: var(--sans); color: var(--body); }
+.aiDevPage .ai-dev-midcta a span { color: inherit; }
+.aiDevPage .specpanel, .aiDevPage .capgrid > .cap:hover,
+.aiDevPage .specrow:has(.workflow-select:checked) { box-shadow: none; }
+.aiDevPage .workflow-toggle, .aiDevPage .workflow-replay { width: 44px; height: 44px; }
+.aiDevPage .faq-catnav a { min-height: 44px; display: inline-flex; align-items: center; }
+.aiDevPage .ans { border: 0; background: transparent; padding: 0; }
+.aiDevPage .tablewrap:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 4px; }
+.aiDevPage .btn:active { transform: translateY(0); }
+
 @media (max-width: 1080px) {
   .aiDevPage .plat { grid-template-columns: 56px minmax(0,1fr) minmax(0,1.4fr) 20px; }
   .aiDevPage .plat-fit { grid-column: 2; }
@@ -82,6 +115,11 @@
   .aiDevPage .plat-go { grid-column: 4; grid-row: 1; }
 }
 @media (max-width: 820px) {
+  .aiDevPage .ai-dev-midcta > section { padding-block: 44px; }
+  .aiDevPage .ai-dev-midcta > section > div { width: min(100% - 40px,620px); }
+  .aiDevPage .ai-dev-midcta > section > div > div { padding: 28px 22px; }
+  .aiDevPage .photobreak { padding-bottom: 0; overflow: hidden; }
+  .aiDevPage .photobreak img { height: 100%; border-radius: 0; }
   .aiDevPage .chg-list { grid-template-columns: 1fr; }
   .aiDevPage .plat-head { grid-template-columns: 1fr; }
   .aiDevPage .plat { grid-template-columns: minmax(0,1fr) 20px; gap: 10px; padding: 22px 4px; }
@@ -90,4 +128,5 @@
   .aiDevPage .plat-go { grid-column: 2; grid-row: 1; }
   .aiDevPage .refs { grid-template-columns: 1fr; }
   .aiDevPage .ventry p a { white-space: normal; }
+  .aiDevPage .faqsrc { white-space: normal; overflow-wrap: anywhere; }
 }

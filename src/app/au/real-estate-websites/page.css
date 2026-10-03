@@ -1,0 +1,197 @@
+/* Route-owned visual pass, all visible copy and integrations frozen. */
+
+.aiAgentPage.auPage.auPropertyVisual .section { padding-block: clamp(60px,7vw,96px); }
+.aiAgentPage.auPage.auPropertyVisual :is(h1,h2,h3) { overflow-wrap: break-word; text-wrap: balance; }
+.aiAgentPage.auPage.auPropertyVisual .eyebrow { text-transform: none; letter-spacing: .02em; }
+.aiAgentPage.auPage.auPropertyVisual :is(.factlabel,.specrow .idx,.specrow .tag,.vtag) { text-transform: none; letter-spacing: .01em; }
+.aiAgentPage.auPage.auPropertyVisual .fact p { max-width: 70ch; font-size: 16px; }
+.aiAgentPage.auPage.auPropertyVisual :is(.fact,.plat,.ventry,.tnode,.cap):hover { transform: none; box-shadow: none; }
+.aiAgentPage.auPage.auPropertyVisual .vslot > img { animation: none; transform: none; filter: none; box-shadow: none; }
+.aiAgentPage.auPage.auPropertyVisual .figcap { font-size: 13px; line-height: 1.7; }
+.aiAgentPage.auPage.auPropertyVisual :is(button,summary,input,.tablewrap):focus-visible { outline: 2px solid var(--accent-text); outline-offset: 5px; }
+.aiAgentPage.auPage.auPropertyVisual .hero { padding-block: 40px 60px; }
+.aiAgentPage.auPage.auPropertyVisual .hero-grid { grid-template-columns: minmax(0,1.2fr) minmax(0,.9fr); gap: 48px; }
+.aiAgentPage.auPage.auPropertyVisual .hero h1 { font-size: clamp(38px,4.1vw,55px); max-width: 22ch; }
+.aiAgentPage.auPage.auPropertyVisual .hero .lead { font-size: 16px; }
+.aiAgentPage.auPage.auPropertyVisual .specpanel { box-shadow: none; border-radius: 12px; background: white; }
+.aiAgentPage.auPage.auPropertyVisual .specpanel-bar { background: var(--accent-wash); padding: 20px; gap: 9px; font-size: 10px; line-height: 1.6; }
+.aiAgentPage.auPage.auPropertyVisual .specpanel-bar > span:nth-child(2) { flex: 1; }
+.aiAgentPage.auPage.auPropertyVisual .sys { width: 100%; margin: 2px 0 0 16px; font-size: 10px; }
+.aiAgentPage.auPage.auPropertyVisual .sys span { padding: 4px 6px; background: white; }
+.aiAgentPage.auPage.auPropertyVisual .workflow-controls { padding: 0 20px; }
+.aiAgentPage.auPage.auPropertyVisual :is(.workflow-toggle,.workflow-replay) { width: 44px; height: 44px; }
+.aiAgentPage.auPage.auPropertyVisual .specpanel-body { background: none; padding: 16px 20px 22px; gap: 12px; }
+.aiAgentPage.auPage.auPropertyVisual .specrow { grid-template-columns: 32px minmax(0,1fr); width: 100%; margin-left: 0; gap: 4px 12px; padding: 14px; box-shadow: none; border-radius: 6px; animation-name: property-flow; animation-timing-function: cubic-bezier(.22,1,.36,1); }
+.aiAgentPage.auPage.auPropertyVisual .specrow::before,.aiAgentPage.auPage.auPropertyVisual .specrow::after,.aiAgentPage.auPage.auPropertyVisual .specrow .tag::after { content: none; }
+.aiAgentPage.auPage.auPropertyVisual .specrow .idx { font-family: var(--sans); font-size: 11px; }
+.aiAgentPage.auPage.auPropertyVisual .specrow .title { font-size: 14px; }
+.aiAgentPage.auPage.auPropertyVisual .specrow .tag { grid-column: 2; grid-row: 3; width: fit-content; font-size: 10px; color: var(--accent-text); }
+.aiAgentPage.auPage.auPropertyVisual .specrow:has(.workflow-select:checked) { transform: none; background: var(--accent-wash); box-shadow: none; }
+.aiAgentPage.auPage.auPropertyVisual .specpanel-foot { font-family: var(--sans); font-size: 12px; padding: 20px; }
+.aiAgentPage.auPage.auPropertyVisual .ledger-number { font-size: 32px; }
+.aiAgentPage.auPage.auPropertyVisual .ledger-word { font-size: 23px; }
+.aiAgentPage.auPage.auPropertyVisual .ledgercell .k { font-size: 11px; }
+.aiAgentPage.auPage.auPropertyVisual .byline { padding-block: 22px; }
+.aiAgentPage.auPage.auPropertyVisual .tablewrap { border-radius: 6px; overscroll-behavior-inline: contain; }
+.aiAgentPage.auPage.auPropertyVisual .tablewrap table { min-width: 900px; }
+.aiAgentPage.auPage.auPropertyVisual .tablewrap th { text-transform: none; font-size: 13px; line-height: 1.6; }
+.aiAgentPage.auPage.auPropertyVisual .tablewrap td { font-size: 14px; padding-block: 22px; line-height: 1.7; }
+.aiAgentPage.auPage.auPropertyVisual .section-head.head-split { display: block; max-width: 960px; }
+.aiAgentPage.auPage.auPropertyVisual .section-head.head-split h2 { margin-top: 18px; }
+.aiAgentPage.auPage.auPropertyVisual .au-numlist li span { min-width: 0; overflow-wrap: anywhere; }
+.aiAgentPage.auPage.auPropertyVisual .plat-build { max-width: 70ch; }
+.aiAgentPage.auPage.auPropertyVisual .au-panel { box-shadow: none; border-radius: 6px; }
+.aiAgentPage.auPage.auPropertyVisual #providers .plat { grid-template-columns: 36px minmax(0,.9fr) minmax(0,1.6fr); gap: 24px; padding: 26px 16px; }
+.aiAgentPage.auPage.auPropertyVisual #providers .plat h3 { font-size: 22px; }
+.aiAgentPage.auPage.auPropertyVisual #providers .au-panel-wide { background: var(--accent-wash); max-width: none; padding: 32px; border: 0; }
+.aiAgentPage.auPage.auPropertyVisual #providers .au-panel-wide > .eyebrow { font-family: var(--display); font-size: 22px; color: var(--ink); font-weight: 800; }
+.aiAgentPage.auPage.auPropertyVisual #providers .au-numlist { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); column-gap: 38px; }
+.aiAgentPage.auPage.auPropertyVisual #more-services .agentdir-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 0 48px; border-top: 1px solid var(--line); }
+.aiAgentPage.auPage.auPropertyVisual #more-services .agentdir-grid a { border: 0; border-bottom: 1px solid var(--line); border-radius: 0; padding: 26px 32px 26px 0; }
+.aiAgentPage.auPage.auPropertyVisual #more-services .agentdir-t { font-size: 19px; }
+.aiAgentPage.auPage.auPropertyVisual #more-services .agentdir-l { font-size: 14px; color: var(--body); }
+.aiAgentPage.auPage.auPropertyVisual #more-services .agentdir-go { right: 4px; }
+.aiAgentPage.auPage.auPropertyVisual .faqwrap { grid-template-columns: minmax(0,.85fr) minmax(0,1.45fr); gap: 60px; }
+.aiAgentPage.auPage.auPropertyVisual .faq-catnav a { min-height: 44px; display: flex; align-items: center; }
+.aiAgentPage.auPage.auPropertyVisual .faq-category { text-transform: none; letter-spacing: .01em; }
+.aiAgentPage.auPage.auPropertyVisual .faqitem summary { min-height: 64px; }
+.aiAgentPage.auPage.auPropertyVisual .finalcta .ctas { display: flex; flex-direction: column; align-items: stretch; min-width: 230px; }
+.aiAgentPage.auPage.auPropertyVisual .au-midcta section { width: calc(100% - 64px); max-width: 1200px; margin-inline: auto; border: 1px solid var(--line); border-radius: 6px; }
+@keyframes property-flow { 0%,22% { border-color: var(--accent); background: var(--accent-wash); } 25%,100% { border-color: var(--line-strong); background: white; } }
+@media (max-width:820px) {
+ .aiAgentPage.auPage.auPropertyVisual .hero-grid { grid-template-columns: 1fr; gap: 32px; }
+ .aiAgentPage.auPage.auPropertyVisual .hero h1 { font-size: clamp(34px,6.3vw,48px); }
+ .aiAgentPage.auPage.auPropertyVisual .hero .lead { font-size: 15px; }
+ .aiAgentPage.auPage.auPropertyVisual .ledger .wrap { grid-template-columns: repeat(2,minmax(0,1fr)); }
+ .aiAgentPage.auPage.auPropertyVisual .ledgercell { min-width: 0; padding: 24px 15px; }
+ .aiAgentPage.auPage.auPropertyVisual .ledger-number { font-size: 29px; }
+ .aiAgentPage.auPage.auPropertyVisual .ledger-word { font-size: 21px; }
+ .aiAgentPage.auPage.auPropertyVisual #providers .plat { grid-template-columns: 28px minmax(0,1fr); gap: 12px; padding-inline: 8px; }
+ .aiAgentPage.auPage.auPropertyVisual #providers .plat-build { grid-column: 2; }
+ .aiAgentPage.auPage.auPropertyVisual #providers .au-panel-wide { padding: 24px; }
+ .aiAgentPage.auPage.auPropertyVisual .faqwrap { grid-template-columns: 1fr; gap: 32px; }
+ .aiAgentPage.auPage.auPropertyVisual .finalcta .ctas { min-width: 0; width: fit-content; margin-top: 24px; }
+ .aiAgentPage.auPage.auPropertyVisual .au-midcta section { width: calc(100% - 40px); }
+}
+@media (max-width:600px) {
+ .aiAgentPage.auPage.auPropertyVisual .section { padding-block: 56px; }
+ .aiAgentPage.auPage.auPropertyVisual #providers .au-numlist,.aiAgentPage.auPage.auPropertyVisual #more-services .agentdir-grid { grid-template-columns: 1fr; }
+ .aiAgentPage.auPage.auPropertyVisual .specpanel-bar { padding: 16px; }
+ .aiAgentPage.auPage.auPropertyVisual .sys { margin-left: 0; flex-wrap: wrap; }
+ .aiAgentPage.auPage.auPropertyVisual .workflow-controls { padding-inline: 14px; }
+ .aiAgentPage.auPage.auPropertyVisual .specpanel-body { padding-inline: 14px; }
+ .aiAgentPage.auPage.auPropertyVisual .specrow { padding: 12px; }
+ .aiAgentPage.auPage.auPropertyVisual .fact p { font-size: 15px; }
+ .aiAgentPage.auPage.auPropertyVisual .au-panel { padding: 20px; }
+ .aiAgentPage.auPage.auPropertyVisual .finalcta h2 { font-size: 30px; }
+}
+@media (prefers-reduced-motion:reduce) {
+ .aiAgentPage.auPage.auPropertyVisual *,.aiAgentPage.auPage.auPropertyVisual *::before,.aiAgentPage.auPage.auPropertyVisual *::after { animation: none !important; transition: none !important; }
+}
+
+.aiAgentPage.auPage.auPropertyVisual #facts .wrap { display: block; }
+.aiAgentPage.auPage.auPropertyVisual #facts .section-head { max-width: 920px; margin-bottom: 36px; }
+.aiAgentPage.auPage.auPropertyVisual #facts .factswrap { display: grid; grid-template-columns: minmax(0,1.3fr) minmax(0,.9fr); gap: 64px; align-items: start; }
+.aiAgentPage.auPage.auPropertyVisual #facts .factlist,.aiAgentPage.auPage.auPropertyVisual #facts .factphoto { grid-column: auto; grid-row: auto; position: static; }
+.aiAgentPage.auPage.auPropertyVisual #facts .fact .stat { display: block; font-size: 22px; line-height: 1.5; margin-bottom: 18px; }
+.aiAgentPage.auPage.auPropertyVisual #portals .plat { grid-template-columns: 36px minmax(0,1.25fr) minmax(0,.9fr) minmax(0,.6fr); padding-block: 25px; }
+.aiAgentPage.auPage.auPropertyVisual #fit-check .section-head { position: static; }
+.aiAgentPage.auPage.auPropertyVisual #fit-check .ventry { padding: 0 24px; border-radius: 6px; }
+.aiAgentPage.auPage.auPropertyVisual #fit-check .ventry::before { display: none; }
+.aiAgentPage.auPage.auPropertyVisual #fit-check .ventry summary { min-height: 76px; padding-block: 22px; align-items: center; }
+.aiAgentPage.auPage.auPropertyVisual #fit-check .ventry h3 { font-size: 18px; line-height: 1.5; }
+.aiAgentPage.auPage.auPropertyVisual #fit-check .ventry p { font-size: 15px; padding-bottom: 24px; }
+.aiAgentPage.auPage.auPropertyVisual .photobreak { width: min(100% - 64px,1200px); border-radius: 8px; }
+.aiAgentPage.auPage.auPropertyVisual #engagement .au-split { grid-template-columns: .9fr 1.1fr; gap: 64px; }
+.aiAgentPage.auPage.auPropertyVisual #engagement .demand { border: 0; border-radius: 0; border-top: 1px solid var(--ink); }
+.aiAgentPage.auPage.auPropertyVisual #engagement .demand-head,.aiAgentPage.auPage.auPropertyVisual #engagement .demand ul { padding-inline: 0; }
+.aiAgentPage.auPage.auPropertyVisual #how-we-build .tnode .idx { position: static; border-radius: 6px; }
+.aiAgentPage.auPage.auPropertyVisual #how-we-build .timeline::before,.aiAgentPage.auPage.auPropertyVisual #how-we-build .tnode::before { display: none; }
+@media(max-width:820px) {
+ .aiAgentPage.auPage.auPropertyVisual #facts .factswrap,.aiAgentPage.auPage.auPropertyVisual #engagement .au-split { display: block; }
+ .aiAgentPage.auPage.auPropertyVisual #facts .factphoto,.aiAgentPage.auPage.auPropertyVisual #engagement .demand { margin-top: 30px; }
+ .aiAgentPage.auPage.auPropertyVisual #portals .plat { grid-template-columns: 28px minmax(0,1fr); gap: 14px; }
+ .aiAgentPage.auPage.auPropertyVisual #portals :is(.plat-build,.plat-fit) { grid-column: 2; }
+ .aiAgentPage.auPage.auPropertyVisual .photobreak { width: calc(100% - 40px); }
+}
+
+
+.aiAgentPage.auPage.auPropertyVisual .agency-hero-art { padding: 24px 20px; background: var(--accent-wash); border-block: 1px solid var(--line); }
+.aiAgentPage.auPage.auPropertyVisual .agency-feed-visual { display: block; width: 100%; height: auto; color: var(--ink); }
+.aiAgentPage.auPage.auPropertyVisual .specpanel-bar { background: white; }
+.aiAgentPage.auPage.auPropertyVisual .specrow { border: 0; border-bottom: 1px solid var(--line); border-radius: 0; padding: 20px 0; background: white; }
+.aiAgentPage.auPage.auPropertyVisual .specrow .idx { font-size: 11px; font-family: var(--sans); }
+.aiAgentPage.auPage.auPropertyVisual .specrow .title { font-size: 15px; }
+.aiAgentPage.auPage.auPropertyVisual .specpanel-foot { border: 0; background: var(--accent-wash); }
+.aiAgentPage.auPage.auPropertyVisual #portals .plat { grid-template-columns: 36px minmax(0,.9fr) minmax(0,1.1fr) minmax(0,.7fr); gap: 24px; padding-block: 26px; }
+.aiAgentPage.auPage.auPropertyVisual #portals .plat h3 { font-size: 25px; }
+.aiAgentPage.auPage.auPropertyVisual #capabilities .capgrid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 0 60px; }
+.aiAgentPage.auPage.auPropertyVisual #capabilities .cap:nth-child(n) { grid-column: auto; display: grid; grid-template-columns: 44px minmax(0,1fr); gap: 14px 22px; padding: 30px 0; border: 0; border-top: 1px solid var(--line); border-radius: 0; background: white; }
+.aiAgentPage.auPage.auPropertyVisual #capabilities .caphead { grid-column: 1; grid-row: 1 / span 3; flex-direction: column; align-items: start; gap: 20px; margin: 0; }
+.aiAgentPage.auPage.auPropertyVisual #capabilities .cap-diagram { grid-column: 2; grid-row: 1; height: 105px; width: min(100%,340px); margin: 0; border: 0; background: none; }
+.aiAgentPage.auPage.auPropertyVisual #capabilities h3 { grid-column: 2; grid-row: 2; font-size: 25px; margin: 0; }
+.aiAgentPage.auPage.auPropertyVisual #capabilities .cap p { grid-column: 2; grid-row: 3; font-size: 15px; }
+.aiAgentPage.auPage.auPropertyVisual .agency-job { width: 100%; height: 100%; color: var(--ink); }
+.aiAgentPage.auPage.auPropertyVisual #listings-feed { background: var(--accent-wash); border-block: 1px solid var(--line); }
+.aiAgentPage.auPage.auPropertyVisual #listings-feed .tablewrap table { min-width: 950px; table-layout: fixed; background: white; }
+.aiAgentPage.auPage.auPropertyVisual #listings-feed .tablewrap tbody th { font-size: 18px; }
+.aiAgentPage.auPage.auPropertyVisual #listings-feed .tablenote { font-size: 13px; line-height: 1.9; margin-top: 24px; }
+.aiAgentPage.auPage.auPropertyVisual #real-estate-seo .wrap { grid-template-columns: minmax(0,1.4fr) minmax(0,.9fr); gap: 42px 64px; }
+.aiAgentPage.auPage.auPropertyVisual #real-estate-seo .section-head { grid-column: 1 / -1; max-width: 960px; }
+.aiAgentPage.auPage.auPropertyVisual #real-estate-seo .factlist { grid-column: 1; grid-row: 2; }
+.aiAgentPage.auPage.auPropertyVisual #real-estate-seo .factphoto { grid-column: 2; grid-row: 2; position: static; margin: 0; padding: 18px; border: 1px solid var(--line); border-radius: 7px; }
+.aiAgentPage.auPage.auPropertyVisual .suburb-visual { display: block; width: 100%; height: auto; color: var(--ink); }
+.aiAgentPage.auPage.auPropertyVisual #real-estate-seo .trigrows li { grid-template-columns: minmax(0,1.3fr) minmax(0,1fr) auto; gap: 16px; padding-block: 21px; }
+.aiAgentPage.auPage.auPropertyVisual #real-estate-seo .trigrows .m { font-size: 17px; line-height: 1.45; }
+.aiAgentPage.auPage.auPropertyVisual #real-estate-seo .trigrows .n { font-size: 14px; line-height: 1.6; }
+.aiAgentPage.auPage.auPropertyVisual #real-estate-seo .trigrows .t { font-size: 10px; }
+.aiAgentPage.auPage.auPropertyVisual #comparison .tablewrap table { min-width: 1020px; table-layout: fixed; }
+.aiAgentPage.auPage.auPropertyVisual .photobreak { aspect-ratio: auto; height: auto; padding: 0; overflow: hidden; }
+.aiAgentPage.auPage.auPropertyVisual .photobreak > img { display: block; height: auto; min-height: 0; }
+.aiAgentPage.auPage.auPropertyVisual #how-we-build .head-media { grid-template-columns: .95fr 1.2fr; gap: 64px; }
+.aiAgentPage.auPage.auPropertyVisual #how-we-build .timeline { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 0 64px; }
+.aiAgentPage.auPage.auPropertyVisual #how-we-build .tnode { padding: 27px 0; border-bottom: 1px solid var(--line); }
+.aiAgentPage.auPage.auPropertyVisual #how-we-build .tnode summary { display: grid; grid-template-columns: 44px minmax(0,1fr); gap: 20px; min-height: 55px; }
+.aiAgentPage.auPage.auPropertyVisual #how-we-build .tnode .idx { position: static; grid-column: 1; grid-row: 1; width: 42px; height: 42px; }
+.aiAgentPage.auPage.auPropertyVisual #how-we-build .tnode h3 { grid-column: 2; font-size: 23px; margin: 0; padding: 4px 22px 4px 0; }
+.aiAgentPage.auPage.auPropertyVisual #how-we-build .tnode p { font-size: 15px; margin: 16px 0 0 64px; }
+.aiAgentPage.auPage.auPropertyVisual #how-we-build .tnode:is(:nth-child(2),:nth-child(4)) .idx { background: var(--accent-wash); }
+.aiAgentPage.auPage.auPropertyVisual #ai-for-real-estate { grid-template-columns: minmax(0,.9fr) minmax(0,1.3fr); gap: 64px; align-items: start; }
+.aiAgentPage.auPage.auPropertyVisual #ai-for-real-estate .definition-image::after { display: none; }
+.aiAgentPage.auPage.auPropertyVisual #rules { background: var(--accent-wash); border-block: 1px solid var(--line); }
+.aiAgentPage.auPage.auPropertyVisual #rules .wrap { grid-template-columns: minmax(0,1.4fr) minmax(0,.85fr); gap: 40px 64px; }
+.aiAgentPage.auPage.auPropertyVisual #rules .section-head { grid-column: 1 / -1; max-width: 1050px; }
+.aiAgentPage.auPage.auPropertyVisual #rules .factlist { grid-column: 1; grid-row: 2; }
+.aiAgentPage.auPage.auPropertyVisual #rules .au-panel { grid-column: 2; grid-row: 2; position: static; background: white; }
+.aiAgentPage.auPage.auPropertyVisual #rules .au-panel .eyebrow { font-family: var(--display); color: var(--ink); font-size: 22px; font-weight: 800; }
+.aiAgentPage.auPage.auPropertyVisual #rules .au-note { font-size: 13px; line-height: 1.9; }
+.aiAgentPage.auPage.auPropertyVisual #engagement .plat { grid-template-columns: 34px minmax(0,.75fr) minmax(0,1.5fr); padding-block: 26px; }
+.aiAgentPage.auPage.auPropertyVisual #engagement .plat h3 { font-size: 25px; }
+@media(max-width:1080px) {
+ .aiAgentPage.auPage.auPropertyVisual #capabilities .capgrid { gap: 0 32px; }
+ .aiAgentPage.auPage.auPropertyVisual #capabilities .cap:nth-child(n) { grid-template-columns: 36px minmax(0,1fr); column-gap: 16px; }
+}
+@media(max-width:820px) {
+ .aiAgentPage.auPage.auPropertyVisual #capabilities .capgrid { grid-template-columns: 1fr; }
+ .aiAgentPage.auPage.auPropertyVisual #portals .plat,.aiAgentPage.auPage.auPropertyVisual #engagement .plat { grid-template-columns: 28px minmax(0,1fr); gap: 15px; }
+ .aiAgentPage.auPage.auPropertyVisual #portals :is(.plat-build,.plat-fit),.aiAgentPage.auPage.auPropertyVisual #engagement .plat-build { grid-column: 2; }
+ .aiAgentPage.auPage.auPropertyVisual #real-estate-seo .wrap,.aiAgentPage.auPage.auPropertyVisual #rules .wrap,.aiAgentPage.auPage.auPropertyVisual #how-we-build .head-media,.aiAgentPage.auPage.auPropertyVisual #ai-for-real-estate { display: block; }
+ .aiAgentPage.auPage.auPropertyVisual #real-estate-seo .factphoto,.aiAgentPage.auPage.auPropertyVisual #rules .au-panel,.aiAgentPage.auPage.auPropertyVisual #how-we-build .head-media .vslot,.aiAgentPage.auPage.auPropertyVisual #ai-for-real-estate .definition-copy { margin-top: 32px; }
+ .aiAgentPage.auPage.auPropertyVisual #real-estate-seo .factphoto { max-width: 530px; }
+ .aiAgentPage.auPage.auPropertyVisual #how-we-build .timeline { column-gap: 32px; }
+ .aiAgentPage.auPage.auPropertyVisual #how-we-build .tnode h3 { font-size: 20px; }
+ .aiAgentPage.auPage.auPropertyVisual .photobreak { aspect-ratio: auto; padding: 0; }
+}
+@media(max-width:600px) {
+ .aiAgentPage.auPage.auPropertyVisual #how-we-build .timeline { grid-template-columns: 1fr; }
+ .aiAgentPage.auPage.auPropertyVisual #how-we-build .tnode h3 { font-size: 22px; }
+ .aiAgentPage.auPage.auPropertyVisual #how-we-build .tnode p { margin-left: 0; }
+ .aiAgentPage.auPage.auPropertyVisual #real-estate-seo .trigrows li { grid-template-columns: 1fr auto; gap: 8px; }
+ .aiAgentPage.auPage.auPropertyVisual #real-estate-seo .trigrows .n { grid-column: 1 / -1; grid-row: 2; }
+ .aiAgentPage.auPage.auPropertyVisual #real-estate-seo .trigrows .t { grid-column: 2; grid-row: 1; }
+}
+@media(max-width:480px) {
+ .aiAgentPage.auPage.auPropertyVisual .ledger .wrap { grid-template-columns: minmax(0,1fr); }
+ .aiAgentPage.auPage.auPropertyVisual .ledgercell { border-right: 0; border-bottom: 1px solid var(--line); }
+ .aiAgentPage.auPage.auPropertyVisual .ledgercell:last-child { border-bottom: 0; }
+}

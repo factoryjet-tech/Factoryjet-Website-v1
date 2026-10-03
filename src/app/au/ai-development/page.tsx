@@ -13,6 +13,9 @@ import '../au-page.css';
 import './page.css';
 import { aiDevelopmentAlternates } from '@/data/hreflangMap';
 
+import './visual.css';
+import { SystemBoundary, SystemServiceDiagram, DraftBillDiagram } from './SystemDiagram';
+
 const CANONICAL = 'https://factoryjet.com/au/ai-development';
 const UPDATED = '2026-09-26';
 const TITLE = 'AI Development Company Australia | Custom AI | FactoryJet';
@@ -398,7 +401,7 @@ export default function AiDevelopmentAUPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <SiteHeader locale="au" logoHref="/au" />
-      <div className="aiAgentPage auPage">
+      <div className="aiAgentPage auPage auSystemVisual">
       <nav className="crumbs" aria-label="Breadcrumb">
         <div className="wrap">
           {crumbs.map((item, index) => (
@@ -451,6 +454,7 @@ export default function AiDevelopmentAUPage() {
                   <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M3 6a5 5 0 1 1 0 4M3 2v4h4" /></svg>
                 </button>
               </div>
+              <SystemBoundary compact />
               <div className="specpanel-body" role="radiogroup" aria-label="Explore what you get">
                 <label className="specrow run">
                   <input className="workflow-select" type="radio" name="adv-step" value="1" />
@@ -550,7 +554,7 @@ export default function AiDevelopmentAUPage() {
                   </div>
                 </div>
               </div>
-              <VisualSlot page={PAGE_KEY} slot="facts" kind="photo" ratio="3:2" className="factphoto"
+              <VisualSlot page={PAGE_KEY} slot="facts" src="/images/au/visual-pass-2026-10-03/ai-development/facts-1440.webp" srcSet="/images/au/visual-pass-2026-10-03/ai-development/facts-640.webp 640w, /images/au/visual-pass-2026-10-03/ai-development/facts-1280.webp 1280w, /images/au/visual-pass-2026-10-03/ai-development/facts-1440.webp 1440w" sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1080px) 40vw, 480px" kind="photo" ratio="3:2" className="factphoto"
                 subject="A FactoryJet developer and a business owner reviewing a custom internal AI tool on a monitor">
                 <img src="/images/au/ai-development/ai-development-hero.webp" width={1400} height={933} loading="lazy" decoding="async" alt="A FactoryJet developer and a Sydney business owner reviewing a custom internal AI tool on a monitor, with the harbour through the window" />
               </VisualSlot>
@@ -573,7 +577,7 @@ export default function AiDevelopmentAUPage() {
               {SERVICES.map((s, i) => (
                 <div key={s.n} className={`cap cap-${i + 1}`}>
                   <div className="caphead"><span className="capid">CAP‑{s.n}</span><svg {...CAP_ICON}><path d={SERVICE_ICONS[i]} /></svg></div>
-                  <VisualSlot page={PAGE_KEY} slot={`capability-${s.n}`} kind="diagram" ratio="11:4" className="cap-diagram" subject={SERVICE_SUBJECTS[i]} />
+                  <VisualSlot src={null} page={PAGE_KEY} slot={`capability-${s.n}`} kind="diagram" ratio="11:4" className="cap-diagram" subject={SERVICE_SUBJECTS[i]}><SystemServiceDiagram index={i} /></VisualSlot>
                   <h3>{s.t}</h3>
                   <p>{s.d}</p>
                   {s.link && <p><a href={s.link.href}>{s.link.label}</a></p>}
@@ -629,12 +633,12 @@ export default function AiDevelopmentAUPage() {
                   </ul>
                 </div></div>
               </div>
-              <VisualSlot page={PAGE_KEY} slot="facts-2" kind="photo" ratio="3:2" className="factphoto"
+              <VisualSlot page={PAGE_KEY} slot="facts-2" src="/images/au/visual-pass-2026-10-03/ai-development/facts-2-1440.webp" srcSet="/images/au/visual-pass-2026-10-03/ai-development/facts-2-640.webp 640w, /images/au/visual-pass-2026-10-03/ai-development/facts-2-1280.webp 1280w, /images/au/visual-pass-2026-10-03/ai-development/facts-2-1440.webp 1440w" sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1080px) 40vw, 480px" kind="photo" ratio="3:2" className="factphoto"
                 subject="An AI engineer working on two monitors showing a diagram of connected system blocks">
                 <img src="/images/au/ai-development/ai-development-engineer.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A FactoryJet AI engineer in a Melbourne office working on two monitors showing a diagram of connected system blocks" />
               </VisualSlot>
             </div>
-            <div className="tablewrap span-all">
+            <div className="tablewrap span-all" tabIndex={0} role="region" aria-label="Scrollable system integration table">
               <table>
                 <thead>
                   <tr><th>System you run</th><th>What AI integration usually does there</th><th>Who approves</th></tr>
@@ -722,14 +726,14 @@ export default function AiDevelopmentAUPage() {
                 </div></div>
               </div>
               <VisualSlot page={PAGE_KEY} slot="facts-6" kind="photo" ratio="3:2" className="factphoto"
-                subject="Over the shoulder of a bookkeeper in a Sydney office approving a draft supplier bill on her laptop, the screen facing her, a paper invoice beside the keyboard" />
+                subject="Over the shoulder of a bookkeeper in a Sydney office approving a draft supplier bill on her laptop, the screen facing her, a paper invoice beside the keyboard" src={null}><DraftBillDiagram /></VisualSlot>
             </div>
           </div>
         </section>
 
         {/* ═══ PHOTOBREAK (US template visual, no AU image yet) ═══ */}
         <VisualSlot page={PAGE_KEY} slot="photobreak" kind="illustration" ratio="12:5" className="photobreak"
-          subject="AI-generated model: six white blocks on a long rail from idea to live system, the last block orange with a small status light" />
+          subject="AI-generated model: six white blocks on a long rail from idea to live system, the last block orange with a small status light" src={null}><SystemBoundary /></VisualSlot>
 
         {/* ═══ PHASED DELIVERY → process timeline (phases stay openable, as the copy says) ═══ */}
         <section className="section process" id="phases">
@@ -744,7 +748,7 @@ export default function AiDevelopmentAUPage() {
                   total is shorter than the sum. Open each phase to see what happens and what you get at the end.
                 </p>
               </div>
-              <VisualSlot page={PAGE_KEY} slot="process" kind="photo" ratio="3:2" captionClassName="figcap"
+              <VisualSlot page={PAGE_KEY} slot="process" src="/images/au/visual-pass-2026-10-03/ai-development/process-1440.webp" srcSet="/images/au/visual-pass-2026-10-03/ai-development/process-640.webp 640w, /images/au/visual-pass-2026-10-03/ai-development/process-1280.webp 1280w, /images/au/visual-pass-2026-10-03/ai-development/process-1440.webp 1440w" sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1080px) 40vw, 480px" kind="photo" ratio="3:2" captionClassName="figcap"
                 subject="Three colleagues at a round table talking through printed pilot results for a new AI tool"
                 caption={<><b>Phase five in practice.</b> The pilot review is a conversation with the people who used the tool on real work: where it was right, where it struggled, and whether the goal agreed in discovery has been met.</>}>
                 <img src="/images/au/ai-development/ai-development-pilot.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Three colleagues in a bright Perth office talking through printed pilot results, shown as plain coloured bars, for a new AI tool at a round white table" />
@@ -807,9 +811,9 @@ export default function AiDevelopmentAUPage() {
                   </ul>
                 </div></div>
               </div>
-              <VisualSlot page={PAGE_KEY} slot="facts-3" kind="photo" ratio="3:2" className="factphoto"
+              <VisualSlot page={PAGE_KEY} slot="facts-3" src="/images/au/visual-pass-2026-10-03/ai-development/facts-3-1200.webp" srcSet="/images/au/visual-pass-2026-10-03/ai-development/facts-3-640.webp 640w, /images/au/visual-pass-2026-10-03/ai-development/facts-3-1200.webp 1200w" sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1080px) 40vw, 480px" kind="photo" ratio="3:2" className="factphoto"
                 subject="An office administrator holding a printed purchase order beside a stack of orders waiting to be keyed in">
-                <img src="/images/au/ai-development/ai-development-orders.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over-the-shoulder view of an office administrator at a Perth wholesaler holding a printed purchase order beside a stack of orders and dockets waiting to be keyed into the system" />
+                <img src="/images/au/visual-pass-2026-10-03/ai-development/facts-3-1200.webp" srcSet="/images/au/visual-pass-2026-10-03/ai-development/facts-3-640.webp 640w, /images/au/visual-pass-2026-10-03/ai-development/facts-3-1200.webp 1200w" sizes="(max-width: 820px) calc(100vw - 40px), 480px" width={1200} height={800} loading="lazy" decoding="async" alt="Over-the-shoulder view of an office administrator at a Perth wholesaler holding a printed purchase order beside a stack of orders and dockets waiting to be keyed into the system" />
               </VisualSlot>
             </div>
           </div>
@@ -828,7 +832,7 @@ export default function AiDevelopmentAUPage() {
                 </p>
               </div>
             </div>
-            <div className="tablewrap">
+            <div className="tablewrap" tabIndex={0} role="region" aria-label="Scrollable comparison table">
               <table>
                 <thead>
                   <tr>
@@ -943,10 +947,10 @@ export default function AiDevelopmentAUPage() {
                   </p>
                 </div></div>
               </div>
-              <VisualSlot page={PAGE_KEY} slot="facts-4" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
+              <VisualSlot page={PAGE_KEY} slot="facts-4" src="/images/au/visual-pass-2026-10-03/ai-development/facts-4-1200.webp" srcSet="/images/au/visual-pass-2026-10-03/ai-development/facts-4-640.webp 640w, /images/au/visual-pass-2026-10-03/ai-development/facts-4-1200.webp 1200w" sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1080px) 40vw, 480px" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
                 subject="A privacy officer reviewing a printed data map of boxes and arrows showing where information in an AI system goes"
                 caption={<><b>What your privacy lead receives.</b> A plain data map: which information the system reads, where it is stored, which AI provider sees it and in which country. It is the starting point for a Privacy Impact Assessment.</>}>
-                <img src="/images/au/ai-development/ai-development-privacy.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A privacy officer in a calm, bright Adelaide office reviewing a printed data map of boxes and arrows that shows where each piece of information in an AI system goes" />
+                <img src="/images/au/visual-pass-2026-10-03/ai-development/facts-4-1200.webp" srcSet="/images/au/visual-pass-2026-10-03/ai-development/facts-4-640.webp 640w, /images/au/visual-pass-2026-10-03/ai-development/facts-4-1200.webp 1200w" sizes="(max-width: 820px) calc(100vw - 40px), 480px" width={1200} height={800} loading="lazy" decoding="async" alt="A privacy officer in a calm, bright Adelaide office reviewing a printed data map of boxes and arrows that shows where each piece of information in an AI system goes" />
               </VisualSlot>
             </div>
             <div className="platlist span-all" role="list">
@@ -1056,7 +1060,7 @@ export default function AiDevelopmentAUPage() {
                   <ModalCTAButton label="Talk to the Founder" region="au" modalVariant="default" btnVariant="secondary-light" className="btn btn-primary" />
                 </div></div>
               </div>
-              <VisualSlot page={PAGE_KEY} slot="facts-5" kind="photo" ratio="3:2" className="factphoto"
+              <VisualSlot page={PAGE_KEY} slot="facts-5" src="/images/au/visual-pass-2026-10-03/ai-development/facts-5-1440.webp" srcSet="/images/au/visual-pass-2026-10-03/ai-development/facts-5-640.webp 640w, /images/au/visual-pass-2026-10-03/ai-development/facts-5-1280.webp 1280w, /images/au/visual-pass-2026-10-03/ai-development/facts-5-1440.webp 1440w" sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1080px) 40vw, 480px" kind="photo" ratio="3:2" className="factphoto"
                 subject="A FactoryJet engineer and the owner of a homewares wholesaler reviewing an internal tool on a laptop at a showroom counter">
                 <img src="/images/au/ai-development/ai-development-commerce.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over-the-shoulder view of a FactoryJet engineer and the owner of a Melbourne homewares wholesaler reviewing an internal tool on a laptop at the showroom counter" />
               </VisualSlot>

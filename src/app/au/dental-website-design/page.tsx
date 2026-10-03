@@ -10,6 +10,8 @@ import AuFaq from '../components/AuFaq';
 import VisualSlot from '../components/VisualSlot';
 import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
+import './page.css';
+import { DentalBookingFlow, DentalPracticeDiagram } from './DentalVisuals';
 
 const CANONICAL = 'https://factoryjet.com/au/dental-website-design';
 const UPDATED = '2026-09-26';
@@ -344,7 +346,7 @@ export default function DentalWebsiteDesignAUPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <SiteHeader locale="au" logoHref="/au" />
-      <div className="aiAgentPage auPage">
+      <div className="aiAgentPage auPage auDentalVisual">
       <nav className="crumbs" aria-label="Breadcrumb">
         <div className="wrap">
           {crumbs.map((item, index) => (
@@ -491,9 +493,9 @@ export default function DentalWebsiteDesignAUPage() {
                   </p>
                 </div>
               </div>
-              <VisualSlot page={PAGE_KEY} slot="facts" kind="photo" ratio="3:2" className="factphoto"
+              <VisualSlot page={PAGE_KEY} slot="facts" src={null} kind="photo" ratio="3:2" className="factphoto"
                 subject="A dental practice owner reviewing her new dental website on a laptop, a treatment room behind the glass wall">
-                <img src="/images/au/dental-website-design/dental-website-hero.webp" width={1400} height={933} loading="lazy" decoding="async" alt="Over the shoulder of a Melbourne dental practice owner reviewing her new dental website on a laptop, with a treatment room behind the glass wall" />
+                <img src="/images/au/visual-pass-2026-10-03/dental-website-design/dental-hero-800.webp" srcSet="/images/au/visual-pass-2026-10-03/dental-website-design/dental-hero-480.webp 480w, /images/au/visual-pass-2026-10-03/dental-website-design/dental-hero-800.webp 800w, /images/au/visual-pass-2026-10-03/dental-website-design/dental-hero-1200.webp 1200w" sizes="(max-width: 820px) calc(100vw - 40px), 480px" width={1400} height={933} loading="lazy" decoding="async" alt="AI-generated illustrative scene: Over the shoulder of a Melbourne dental practice owner reviewing her new dental website on a laptop, with a treatment room behind the glass wall" />
               </VisualSlot>
             </div>
           </div>
@@ -513,16 +515,16 @@ export default function DentalWebsiteDesignAUPage() {
             <div className="factswrap">
               <div className="factlist" role="list">
                 {MUST_HAVES.map((m, i) => (
-                  <div key={m.t} className="fact" role="listitem">
-                    <div className="sec">§{String(i + 1).padStart(2, '0')}</div>
+                  <label key={m.t} className="fact dental-checkitem" role="listitem">
+                    <div className="sec"><input type="checkbox" aria-label={`Mark ${m.t.toLowerCase()} as reviewed`} /><span>§{String(i + 1).padStart(2, '0')}</span></div>
                     <p><b>{m.t}.</b> {m.d}</p>
-                  </div>
+                  </label>
                 ))}
               </div>
-              <VisualSlot page={PAGE_KEY} slot="facts-2" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
+              <VisualSlot page={PAGE_KEY} slot="facts-2" src={null} kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
                 subject="A dentist in scrubs photographing her practice's bright waiting room for the new website"
                 caption="Real photos of your rooms and team do more for trust than any stock smile, and they are honest, which matters under the Ahpra rules.">
-                <img src="/images/au/dental-website-design/dental-website-photos.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A Sydney dentist in navy scrubs photographing her practice’s bright waiting room for the new website, with a softbox light beside her" />
+                <img src="/images/au/visual-pass-2026-10-03/dental-website-design/dental-photos-800.webp" srcSet="/images/au/visual-pass-2026-10-03/dental-website-design/dental-photos-480.webp 480w, /images/au/visual-pass-2026-10-03/dental-website-design/dental-photos-800.webp 800w, /images/au/visual-pass-2026-10-03/dental-website-design/dental-photos-1200.webp 1200w" sizes="(max-width: 820px) calc(100vw - 40px), 480px" width={1200} height={800} loading="lazy" decoding="async" alt="AI-generated illustrative scene: A Sydney dentist in navy scrubs photographing her practice’s bright waiting room for the new website, with a softbox light beside her" />
               </VisualSlot>
             </div>
             <div className="agentdir-group chg-group span-all">
@@ -590,10 +592,10 @@ export default function DentalWebsiteDesignAUPage() {
           <div className="wrap">
             <div className="section-head">
               <h2>Can we put this on our website? Tap to check</h2>
-              <VisualSlot page={PAGE_KEY} slot="proof" kind="photo" ratio="3:2" captionClassName="figcap"
+              <VisualSlot page={PAGE_KEY} slot="proof" src={null} kind="photo" ratio="3:2" captionClassName="figcap"
                 subject="A dentist and a FactoryJet content strategist reviewing website copy together on a laptop in a practice staff room"
                 caption="Every page is reviewed with a dentist from your practice before it goes live. You stay the advertiser, so you get the final say.">
-                <img src="/images/au/dental-website-design/dental-website-review.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A dentist and a FactoryJet content strategist reviewing website copy together on a laptop in an Adelaide practice staff room" />
+                <img src="/images/au/visual-pass-2026-10-03/dental-website-design/dental-review-800.webp" srcSet="/images/au/visual-pass-2026-10-03/dental-website-design/dental-review-480.webp 480w, /images/au/visual-pass-2026-10-03/dental-website-design/dental-review-800.webp 800w, /images/au/visual-pass-2026-10-03/dental-website-design/dental-review-1200.webp 1200w" sizes="(max-width: 820px) calc(100vw - 40px), 480px" width={1200} height={800} loading="lazy" decoding="async" alt="AI-generated illustrative scene: A dentist and a FactoryJet content strategist reviewing website copy together on a laptop in an Adelaide practice staff room" />
               </VisualSlot>
             </div>
             <div className="ventries">
@@ -652,9 +654,9 @@ export default function DentalWebsiteDesignAUPage() {
                   </ul>
                 </div></div>
               </div>
-              <VisualSlot page={PAGE_KEY} slot="facts-3" kind="photo" ratio="3:2" className="factphoto"
+              <VisualSlot page={PAGE_KEY} slot="facts-3" src={null} kind="photo" ratio="3:2" className="factphoto"
                 subject="A man in his kitchen choosing an appointment time on a dental practice booking screen on his phone">
-                <img src="/images/au/dental-website-design/dental-website-booking.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over the shoulder of a man in a Brisbane kitchen choosing an appointment time on a dental practice booking screen on his phone" />
+                <img src="/images/au/visual-pass-2026-10-03/dental-website-design/dental-booking-800.webp" srcSet="/images/au/visual-pass-2026-10-03/dental-website-design/dental-booking-480.webp 480w, /images/au/visual-pass-2026-10-03/dental-website-design/dental-booking-800.webp 800w, /images/au/visual-pass-2026-10-03/dental-website-design/dental-booking-1200.webp 1200w" sizes="(max-width: 820px) calc(100vw - 40px), 480px" width={1200} height={800} loading="lazy" decoding="async" alt="AI-generated illustrative scene: Over the shoulder of a man in a Brisbane kitchen choosing an appointment time on a dental practice booking screen on his phone" />
               </VisualSlot>
             </div>
           </div>
@@ -674,7 +676,7 @@ export default function DentalWebsiteDesignAUPage() {
                 </p>
               </div>
             </div>
-            <div className="tablewrap">
+            <div className="tablewrap" role="region" tabIndex={0} aria-label="Compare dental website options, scroll horizontally to view all columns">
               <table>
                 <thead>
                   <tr>
@@ -761,8 +763,10 @@ export default function DentalWebsiteDesignAUPage() {
         </section>
 
         {/* ═══ PHOTOBREAK (US template visual, no AU image yet) ═══ */}
-        <VisualSlot page={PAGE_KEY} slot="photobreak" kind="illustration" ratio="12:5" className="photobreak"
-          subject="AI-generated model: a white dental practice building on a map, with an orange booking card travelling from a phone into an appointment book" />
+        <VisualSlot page={PAGE_KEY} slot="photobreak" kind="diagram" ratio="12:5" className="photobreak dental-booking-flow" src={null}
+          subject="Illustrative booking flow from a patient’s phone, through a practice location page, into an appointment calendar. No patient information or actual software interface.">
+          <DentalBookingFlow />
+        </VisualSlot>
 
         {/* ═══ DENTAL SEO PLAN → process timeline ═══ */}
         <section className="section process" id="seo-plan">
@@ -828,10 +832,10 @@ export default function DentalWebsiteDesignAUPage() {
                   </p>
                 </div></div>
               </div>
-              <VisualSlot page={PAGE_KEY} slot="facts-4" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
+              <VisualSlot page={PAGE_KEY} slot="facts-4" src={null} kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
                 subject="An older woman at home using a high-contrast dental practice website with large buttons on her tablet"
                 caption="Large, high-contrast buttons and text that resizes cleanly help older patients book on their own, without calling the front desk for help.">
-                <img src="/images/au/dental-website-design/dental-website-access.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over the shoulder of an older woman in a Perth living room using a high-contrast dental practice website with large buttons on her tablet" />
+                <img src="/images/au/visual-pass-2026-10-03/dental-website-design/dental-access-800.webp" srcSet="/images/au/visual-pass-2026-10-03/dental-website-design/dental-access-480.webp 480w, /images/au/visual-pass-2026-10-03/dental-website-design/dental-access-800.webp 800w, /images/au/visual-pass-2026-10-03/dental-website-design/dental-access-1200.webp 1200w" sizes="(max-width: 820px) calc(100vw - 40px), 480px" width={1200} height={800} loading="lazy" decoding="async" alt="AI-generated illustrative scene: Over the shoulder of an older woman in a Perth living room using a high-contrast dental practice website with large buttons on her tablet" />
               </VisualSlot>
             </div>
             <div className="platlist span-all" role="list">
@@ -858,7 +862,9 @@ export default function DentalWebsiteDesignAUPage() {
                 return (
                   <div key={j.t} className={`cap cap-${i + 1}`}>
                     <div className="caphead"><span className="capid">CAP‑{n}</span><svg {...CAP_ICON}><path d={PRACTICE_ICONS[i]} /></svg></div>
-                    <VisualSlot page={PAGE_KEY} slot={`capability-${n}`} kind="diagram" ratio="11:4" className="cap-diagram" subject={PRACTICE_SUBJECTS[i]} />
+                    <VisualSlot page={PAGE_KEY} slot={`capability-${n}`} kind="diagram" ratio="11:4" className="cap-diagram" subject={PRACTICE_SUBJECTS[i]} src={null}>
+                      <DentalPracticeDiagram variant={i} />
+                    </VisualSlot>
                     <h3>{j.t}</h3>
                     <p>{j.d}</p>
                   </div>

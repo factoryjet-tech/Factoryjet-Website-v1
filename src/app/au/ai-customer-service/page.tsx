@@ -10,6 +10,8 @@ import AuFaq from '../components/AuFaq';
 import VisualSlot from '../components/VisualSlot';
 import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
+import './page.css';
+import TicketFlowDiagram, { TicketJobDiagram } from './TicketDiagram';
 
 const CANONICAL = 'https://factoryjet.com/au/ai-customer-service';
 const UPDATED = '2026-09-26';
@@ -336,7 +338,7 @@ export default function AiCustomerServiceAUPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <SiteHeader locale="au" logoHref="/au" />
-      <div className="aiAgentPage auPage">
+      <div className="aiAgentPage auPage auCustomerServiceVisual">
       <nav className="crumbs" aria-label="Breadcrumb">
         <div className="wrap">
           {crumbs.map((item, index) => (
@@ -481,7 +483,7 @@ export default function AiCustomerServiceAUPage() {
                   </p>
                 </div>
               </div>
-              <VisualSlot page={PAGE_KEY} slot="facts" kind="photo" ratio="3:2" className="factphoto"
+              <VisualSlot page={PAGE_KEY} slot="facts" src="/images/au/visual-pass-2026-10-03/ai-customer-service/facts-1280.webp" srcSet="/images/au/visual-pass-2026-10-03/ai-customer-service/facts-640.webp 640w, /images/au/visual-pass-2026-10-03/ai-customer-service/facts-1280.webp 1280w, /images/au/visual-pass-2026-10-03/ai-customer-service/facts-1440.webp 1440w" sizes="(max-width: 820px) calc(100vw - 40px), 560px" kind="photo" ratio="3:2" className="factphoto"
                 subject="A support lead at an Australian online store reviewing AI chat replies on her monitor">
                 <img src="/images/au/ai-customer-service/ai-customer-service-hero.webp" width={1400} height={933} loading="lazy" decoding="async" alt="Over the shoulder of a support lead at a Melbourne online homewares store reviewing AI chat replies on her monitor, with the warehouse shelves beyond the office window" />
               </VisualSlot>
@@ -532,7 +534,7 @@ export default function AiCustomerServiceAUPage() {
                 return (
                   <div key={j.t} className={`cap cap-${i + 1}`}>
                     <div className="caphead"><span className="capid">CAP‑{n}</span><svg {...CAP_ICON}><path d={JOB_ICONS[i]} /></svg></div>
-                    <VisualSlot page={PAGE_KEY} slot={`capability-${n}`} kind="diagram" ratio="11:4" className="cap-diagram" subject={JOB_SUBJECTS[i]} />
+                    <VisualSlot page={PAGE_KEY} slot={`capability-${n}`} kind="diagram" ratio="11:4" className="cap-diagram" subject={JOB_SUBJECTS[i]} src={null}><TicketJobDiagram job={i} /></VisualSlot>
                     <h3>{j.t}</h3>
                     <p>{j.d}</p>
                   </div>
@@ -570,7 +572,7 @@ export default function AiCustomerServiceAUPage() {
               <div className="eyebrow">Which option fits you?</div>
               <h2>A 30-second check: chatbot app, your helpdesk’s AI, or a custom AI agent</h2>
               <p>Tap the line that sounds most like your support team. The answer is honest, even when it is not us.</p>
-              <VisualSlot page={PAGE_KEY} slot="proof" kind="photo" ratio="3:2" captionClassName="figcap"
+              <VisualSlot page={PAGE_KEY} slot="proof" src="/images/au/visual-pass-2026-10-03/ai-customer-service/proof-1280.webp" srcSet="/images/au/visual-pass-2026-10-03/ai-customer-service/proof-640.webp 640w, /images/au/visual-pass-2026-10-03/ai-customer-service/proof-1280.webp 1280w, /images/au/visual-pass-2026-10-03/ai-customer-service/proof-1440.webp 1440w" sizes="(max-width: 820px) calc(100vw - 40px), 560px" kind="photo" ratio="3:2" captionClassName="figcap"
                 subject="A customer at home in the evening chatting with an online store's AI assistant on her phone"
                 caption="Customers ask questions when it suits them, often in the evening. An AI agent answers the routine ones straight away and leaves the rest ready for your team in the morning.">
                 <img src="/images/au/ai-customer-service/ai-customer-service-evening.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over the shoulder of a customer on her sofa in a Sydney apartment at dusk, chatting with an online store’s AI assistant on her phone, a parcel on the coffee table" />
@@ -599,7 +601,7 @@ export default function AiCustomerServiceAUPage() {
                 published API, with only the access each step needs. Here is what that typically covers.
               </p>
             </div>
-            <div className="tablewrap">
+            <div className="tablewrap" tabIndex={0} role="region" aria-label="Scrollable support systems comparison">
               <table>
                 <thead>
                   <tr>
@@ -685,7 +687,7 @@ export default function AiCustomerServiceAUPage() {
                 </p>
               </div>
             </div>
-            <div className="tablewrap">
+            <div className="tablewrap" tabIndex={0} role="region" aria-label="Scrollable support systems comparison">
               <table>
                 <thead>
                   <tr>
@@ -719,7 +721,9 @@ export default function AiCustomerServiceAUPage() {
 
         {/* ═══ PHOTOBREAK (US template visual, no AU image yet) ═══ */}
         <VisualSlot page={PAGE_KEY} slot="photobreak" kind="illustration" ratio="12:5" className="photobreak"
-          subject="AI-generated model: a row of white support ticket cards on a rail, one orange card lifted out and passed to a small human figure" />
+          subject="AI-generated model: a row of white support ticket cards on a rail, one orange card lifted out and passed to a small human figure" src={null}>
+          <TicketFlowDiagram />
+        </VisualSlot>
 
         {/* ═══ HOW WE BUILD IT → process timeline (steps stay openable, as the copy says) ═══ */}
         <section className="section process" id="how-we-build">
@@ -733,7 +737,7 @@ export default function AiCustomerServiceAUPage() {
                   mostly steps three and five. Open any step to see what happens in it.
                 </p>
               </div>
-              <VisualSlot page={PAGE_KEY} slot="process" kind="photo" ratio="3:2" captionClassName="figcap"
+              <VisualSlot page={PAGE_KEY} slot="process" src="/images/au/visual-pass-2026-10-03/ai-customer-service/process-1280.webp" srcSet="/images/au/visual-pass-2026-10-03/ai-customer-service/process-640.webp 640w, /images/au/visual-pass-2026-10-03/ai-customer-service/process-1280.webp 1280w, /images/au/visual-pass-2026-10-03/ai-customer-service/process-1440.webp 1440w" sizes="(max-width: 820px) calc(100vw - 40px), 560px" kind="photo" ratio="3:2" captionClassName="figcap"
                 subject="A FactoryJet engineer and a customer service manager sorting ticket cards into piles at a meeting table"
                 caption="Step one is sorting real tickets into types with the person who runs your support. That ticket map, with a rule for each type, is what you sign off before we build.">
                 <img src="/images/au/ai-customer-service/ai-customer-service-workshop.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A FactoryJet engineer and the customer service manager of an Adelaide online retailer sorting cards into four piles at a meeting table, mapping ticket types" />
@@ -764,7 +768,7 @@ export default function AiCustomerServiceAUPage() {
         {/* ═══ ECOMMERCE → definition module (image left, copy right) ═══ */}
         <section className="definition" id="ecommerce">
           <div>
-            <VisualSlot page={PAGE_KEY} slot="definition" kind="photo" ratio="3:2" className="definition-image"
+            <VisualSlot page={PAGE_KEY} slot="definition" src="/images/au/visual-pass-2026-10-03/ai-customer-service/definition-1280.webp" srcSet="/images/au/visual-pass-2026-10-03/ai-customer-service/definition-640.webp 640w, /images/au/visual-pass-2026-10-03/ai-customer-service/definition-1280.webp 1280w, /images/au/visual-pass-2026-10-03/ai-customer-service/definition-1440.webp 1440w" sizes="(max-width: 820px) calc(100vw - 40px), 560px" kind="photo" ratio="3:2" className="definition-image"
               subject="The owner of a small online store packing an order while a chat notification shows on her phone">
               <img src="/images/au/ai-customer-service/ai-customer-service-warehouse.webp" width={1200} height={800} loading="lazy" decoding="async" alt="The owner of a small Brisbane online store taping an order box at her packing bench while a chat notification glows on her phone beside it" />
             </VisualSlot>

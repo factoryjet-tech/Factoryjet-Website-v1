@@ -8,8 +8,10 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import AuFaq from '../components/AuFaq';
 import VisualSlot from '../components/VisualSlot';
+import { ServiceEnquiryVisual, WebJob } from './WebVisuals';
 import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
+import './page.css';
 
 const CANONICAL = 'https://factoryjet.com/au/small-business-web-design';
 const UPDATED = '2026-09-26';
@@ -327,7 +329,7 @@ export default function SmallBusinessWebDesignAUPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <SiteHeader locale="au" logoHref="/au" />
-      <div className="aiAgentPage auPage">
+      <div className="aiAgentPage auPage auSmallWebVisual">
       <nav className="crumbs" aria-label="Breadcrumb">
         <div className="wrap">
           {crumbs.map((item, index) => (
@@ -369,6 +371,7 @@ export default function SmallBusinessWebDesignAUPage() {
                 <span>INCLUDED · EVERY SMALL BUSINESS SITE</span>
                 <span className="sys"><span>DESIGN</span><span>COPY</span><span>SEO</span></span>
               </div>
+              <div className="web-hero-art" aria-hidden="true"><ServiceEnquiryVisual /></div>
               <div className="workflow-controls">
                 <label className="workflow-toggle" title="Pause or resume the animation">
                   <input type="checkbox" className="workflow-pause" aria-label="Pause animation" />
@@ -478,7 +481,7 @@ export default function SmallBusinessWebDesignAUPage() {
                   </p>
                 </div>
               </div>
-              <VisualSlot page={PAGE_KEY} slot="facts" kind="photo" ratio="3:2" className="factphoto"
+              <VisualSlot page={PAGE_KEY} slot="facts" src="/images/au/visual-pass-2026-10-03/small-business-web-design/facts-1280.webp" srcSet="/images/au/visual-pass-2026-10-03/small-business-web-design/facts-640.webp 640w, /images/au/visual-pass-2026-10-03/small-business-web-design/facts-1280.webp 1280w" sizes="(max-width: 820px) 100vw, 560px" kind="photo" ratio="3:2" className="factphoto"
                 subject="Over the shoulder of the owner of a small Australian café or florist at her counter, reviewing her new website homepage on a laptop that faces her, customers blurred in the background; no readable text or logos" />
             </div>
           </div>
@@ -528,7 +531,7 @@ export default function SmallBusinessWebDesignAUPage() {
                 return (
                   <div key={j.t} className={`cap cap-${i + 1}`}>
                     <div className="caphead"><span className="capid">CAP‑{n}</span><svg {...CAP_ICON}><path d={INCLUDE_ICONS[i]} /></svg></div>
-                    <VisualSlot page={PAGE_KEY} slot={`capability-${n}`} kind="diagram" ratio="11:4" className="cap-diagram" subject={INCLUDE_SUBJECTS[i]} />
+                    <VisualSlot page={PAGE_KEY} slot={`capability-${n}`} kind="diagram" ratio="11:4" className="cap-diagram" subject={INCLUDE_SUBJECTS[i]} src={null}><WebJob job={i} /></VisualSlot>
                     <h3>{j.t}</h3>
                     <p>{j.d}</p>
                   </div>
@@ -564,7 +567,7 @@ export default function SmallBusinessWebDesignAUPage() {
                 </p>
               </div>
             </div>
-            <div className="tablewrap">
+            <div className="tablewrap" tabIndex={0} role="region" aria-label="Scrollable comparison">
               <table>
                 <thead>
                   <tr>
@@ -604,7 +607,7 @@ export default function SmallBusinessWebDesignAUPage() {
               <div className="eyebrow">Which route fits you?</div>
               <h2>A 30-second check: website builder, small site, growth site, or someone local</h2>
               <p>Tap the line that sounds most like your business. The answer is honest, even when it is not us.</p>
-              <VisualSlot page={PAGE_KEY} slot="proof" kind="photo" ratio="3:2" captionClassName="figcap"
+              <VisualSlot page={PAGE_KEY} slot="proof" src="/images/au/visual-pass-2026-10-03/small-business-web-design/proof-1280.webp" srcSet="/images/au/visual-pass-2026-10-03/small-business-web-design/proof-640.webp 640w, /images/au/visual-pass-2026-10-03/small-business-web-design/proof-1280.webp 1280w" sizes="(max-width: 820px) 100vw, 560px" kind="photo" ratio="3:2" captionClassName="figcap"
                 subject="A customer at a bus stop in an Australian suburb checking a local business website on her phone before calling, the phone screen facing her; no readable text"
                 caption="Most customers check your website on a phone before they call. If it is slow or unclear, they call the next business instead." />
             </div>
@@ -621,7 +624,7 @@ export default function SmallBusinessWebDesignAUPage() {
         </section>
 
         {/* ═══ PHOTOBREAK (placeholder) ═══ */}
-        <VisualSlot page={PAGE_KEY} slot="photobreak" kind="illustration" ratio="12:5" className="photobreak"
+        <VisualSlot page={PAGE_KEY} slot="photobreak" src="/images/au/visual-pass-2026-10-03/small-business-web-design/photobreak-1280.webp" srcSet="/images/au/visual-pass-2026-10-03/small-business-web-design/photobreak-640.webp 640w, /images/au/visual-pass-2026-10-03/small-business-web-design/photobreak-1280.webp 1280w" sizes="(max-width: 820px) 100vw, 1200px" kind="illustration" ratio="12:5" className="photobreak"
           subject="AI-generated model: a row of five small white shopfront models along a street, each with a phone-sized website card in the window, one card lit in orange" />
 
         {/* ═══ HOW WE BUILD IT → process timeline ═══ */}
@@ -637,7 +640,7 @@ export default function SmallBusinessWebDesignAUPage() {
                   need from you.
                 </p>
               </div>
-              <VisualSlot page={PAGE_KEY} slot="process" kind="photo" ratio="3:2" captionClassName="figcap"
+              <VisualSlot page={PAGE_KEY} slot="process" src="/images/au/visual-pass-2026-10-03/small-business-web-design/process-1280.webp" srcSet="/images/au/visual-pass-2026-10-03/small-business-web-design/process-640.webp 640w, /images/au/visual-pass-2026-10-03/small-business-web-design/process-1280.webp 1280w" sizes="(max-width: 820px) 100vw, 560px" kind="photo" ratio="3:2" captionClassName="figcap"
                 subject="An Australian small business owner at her kitchen table on a video call with a web designer, a printed homepage design and a phone beside her laptop, the laptop screen facing her; no readable text"
                 caption="Day one is a 30-minute call. By day two you are approving a real homepage design, not a mood board." />
             </div>
@@ -666,7 +669,7 @@ export default function SmallBusinessWebDesignAUPage() {
         {/* ═══ AI AND WEBSITES → definition module ═══ */}
         <section className="definition" id="ai-and-websites">
           <div>
-            <VisualSlot page={PAGE_KEY} slot="definition" kind="illustration" ratio="3:2" className="definition-image"
+            <VisualSlot page={PAGE_KEY} slot="definition" src="/images/au/visual-pass-2026-10-03/small-business-web-design/definition-1280.webp" srcSet="/images/au/visual-pass-2026-10-03/small-business-web-design/definition-640.webp 640w, /images/au/visual-pass-2026-10-03/small-business-web-design/definition-1280.webp 1280w" sizes="(max-width: 820px) 100vw, 560px" kind="illustration" ratio="3:2" className="definition-image"
               subject="AI-generated model: a white website page model with an orange AI assistant chat card beside it, a small human figure checking and correcting a line on the page" />
             <p className="figcap">
               AI can write a first draft of a website in minutes. Checking it, owning it and making it bring enquiries
@@ -744,7 +747,7 @@ export default function SmallBusinessWebDesignAUPage() {
                 <div className="eyebrow">8 things every small business website needs before launch</div>
                 <ol className="au-numlist">
                   {LAUNCH_CHECKLIST.map((s) => (
-                    <li key={s.t}><span><b>{s.t}</b> {s.d}</span></li>
+                    <li key={s.t}><label className="launch-check"><input type="checkbox" /><span><b>{s.t}</b> {s.d}</span></label></li>
                   ))}
                 </ol>
               </div>

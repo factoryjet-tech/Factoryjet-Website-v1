@@ -8,6 +8,7 @@ import MidPageCTA from '@/components/v2/MidPageCTA';
 import { AU_FOOTER_COLUMNS } from '@/data/auFooterColumns';
 import AuFaq from '../components/AuFaq';
 import VisualSlot from '../components/VisualSlot';
+import { DecisionWorkshopVisual, BuyBuildVisual, ConsultingJob } from './ConsultingVisuals';
 import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
 import './page.css';
@@ -393,7 +394,7 @@ export default function AiConsultingAUPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <SiteHeader locale="au" logoHref="/au" />
-      <div className="aiAgentPage auPage">
+      <div className="aiAgentPage auPage auConsultVisual">
       <nav className="crumbs" aria-label="Breadcrumb">
         <div className="wrap">
           {crumbs.map((item, index) => (
@@ -435,6 +436,7 @@ export default function AiConsultingAUPage() {
                 <span>INCLUDED · WHAT YOU LEAVE WITH</span>
                 <span className="sys"><span>READINESS</span><span>ADVISE</span><span>BUILD</span></span>
               </div>
+              <div className="consult-hero-art" aria-hidden="true"><DecisionWorkshopVisual /></div>
               <div className="workflow-controls">
                 <label className="workflow-toggle" title="Pause or resume the animation">
                   <input type="checkbox" className="workflow-pause" aria-label="Pause animation" />
@@ -538,7 +540,7 @@ export default function AiConsultingAUPage() {
                   </p>
                 </div>
               </div>
-              <VisualSlot page={PAGE_KEY} slot="facts" kind="photo" ratio="3:2" className="factphoto"
+              <VisualSlot page={PAGE_KEY} slot="facts" src="/images/au/visual-pass-2026-10-03/ai-consulting/facts-1280.webp" srcSet="/images/au/visual-pass-2026-10-03/ai-consulting/facts-640.webp 640w, /images/au/visual-pass-2026-10-03/ai-consulting/facts-1280.webp 1280w" sizes="(max-width: 820px) 100vw, 560px" kind="photo" ratio="3:2" className="factphoto"
                 subject="An AI consultant and a trades business owner picking three sticky notes out of a pile of ideas">
                 <img src="/images/au/ai-consulting/ai-consulting-hero.webp" width={1400} height={933} loading="lazy" decoding="async" alt="An AI consultant and the owner of a Sydney trades business picking three sticky notes out of a pile of ideas to decide where AI will pay off first, with Sydney Harbour through the window" />
               </VisualSlot>
@@ -561,7 +563,7 @@ export default function AiConsultingAUPage() {
               {CONSULTANT_JOBS.map((j, i) => (
                 <div key={j.n} className={`cap cap-${i + 1}`}>
                   <div className="caphead"><span className="capid">CAP‑{j.n}</span><svg {...CAP_ICON}><path d={JOB_ICONS[i]} /></svg></div>
-                  <VisualSlot page={PAGE_KEY} slot={`capability-${j.n}`} kind="diagram" ratio="11:4" className="cap-diagram" subject={JOB_SUBJECTS[i]} />
+                  <VisualSlot page={PAGE_KEY} slot={`capability-${j.n}`} kind="diagram" ratio="11:4" className="cap-diagram" subject={JOB_SUBJECTS[i]} src={null}><ConsultingJob job={i} /></VisualSlot>
                   <h3>{j.t}</h3>
                   <p>{j.d}</p>
                 </div>
@@ -583,7 +585,7 @@ export default function AiConsultingAUPage() {
                 </p>
               </div>
             </div>
-            <div className="tablewrap">
+            <div className="tablewrap" tabIndex={0} role="region" aria-label="Scrollable consultancy comparison">
               <table>
                 <thead>
                   <tr>
@@ -623,7 +625,7 @@ export default function AiConsultingAUPage() {
                 Open each area and tick off what is already true for your business. Three or more gaps in one area
                 is normal. It tells you where an AI readiness assessment should start.
               </p>
-              <VisualSlot page={PAGE_KEY} slot="proof" kind="photo" ratio="3:2" captionClassName="figcap"
+              <VisualSlot page={PAGE_KEY} slot="proof" src="/images/au/visual-pass-2026-10-03/ai-consulting/proof-1280.webp" srcSet="/images/au/visual-pass-2026-10-03/ai-consulting/proof-640.webp 640w, /images/au/visual-pass-2026-10-03/ai-consulting/proof-1280.webp 1280w" sizes="(max-width: 820px) 100vw, 560px" kind="photo" ratio="3:2" captionClassName="figcap"
                 subject="An operations manager and an AI consultant reviewing a laptop and a blank checklist in a warehouse office"
                 caption="A readiness assessment is a working session, not a quiz. We sit with the people who run the process, look at the actual systems, and write down what is true today, gaps included.">
                 <img src="/images/au/ai-consulting/ai-consulting-readiness.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over-the-shoulder view of an operations manager and an AI consultant reviewing a laptop and a blank checklist in a bright Melbourne warehouse office" />
@@ -634,7 +636,7 @@ export default function AiConsultingAUPage() {
                 <details key={r.area} className="ventry">
                   <summary><h3>{r.area}: {r.lead}</h3><span className="chev" aria-hidden="true">+</span></summary>
                   <ul className="chg-list">
-                    {r.checks.map((c) => (<li key={c}><span>{c}</span></li>))}
+                    {r.checks.map((c) => (<li key={c}><label className="readiness-check"><input type="checkbox" /><span>{c}</span></label></li>))}
                   </ul>
                 </details>
               ))}
@@ -644,7 +646,7 @@ export default function AiConsultingAUPage() {
 
         {/* ═══ PHOTOBREAK (US template visual, no AU image yet) ═══ */}
         <VisualSlot page={PAGE_KEY} slot="photobreak" kind="illustration" ratio="12:5" className="photobreak"
-          subject="AI-generated model: a long white table of process boxes, three orange boxes lifted onto a small plinth for a pilot" />
+          subject="Working ideas reviewed and narrowed to a short list, followed by a written decision and governance check" src={null}><DecisionWorkshopVisual /></VisualSlot>
 
         {/* ═══ ENGAGEMENT STAGES → process timeline (stages stay openable, as the copy says) ═══ */}
         <section className="section process" id="how-it-runs">
@@ -658,7 +660,7 @@ export default function AiConsultingAUPage() {
                   keep everything we have produced.
                 </p>
               </div>
-              <VisualSlot page={PAGE_KEY} slot="process" kind="photo" ratio="3:2" captionClassName="figcap"
+              <VisualSlot page={PAGE_KEY} slot="process" src="/images/au/visual-pass-2026-10-03/ai-consulting/process-1280.webp" srcSet="/images/au/visual-pass-2026-10-03/ai-consulting/process-640.webp 640w, /images/au/visual-pass-2026-10-03/ai-consulting/process-1280.webp 1280w" sizes="(max-width: 820px) 100vw, 560px" kind="photo" ratio="3:2" captionClassName="figcap"
                 subject="A consultant drawing a four-step process flow of empty boxes on a whiteboard while three staff look on"
                 caption={<><b>Stage two in practice.</b> The readiness workshop starts by drawing the process as it runs today, box by box, with the people who do the work in the room. The best AI use case is usually a step where someone copies information between two screens, or answers the same question many times a week.</>}>
                 <img src="/images/au/ai-consulting/ai-consulting-workshop.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A readiness workshop in a bright Melbourne meeting room: a consultant draws a four-step process flow of empty boxes on a whiteboard while three staff who do the work look on" />
@@ -720,6 +722,7 @@ export default function AiConsultingAUPage() {
               </div>
               <div className="au-panel">
                 <div className="eyebrow">A simple rule of thumb</div>
+                <BuyBuildVisual />
                 <ul className="trigrows">
                   <li><span className="m">General writing and summaries</span><span className="n">Copilot, ChatGPT Enterprise, Claude, Gemini</span><span className="t">Buy</span></li>
                   <li><span className="m">Searching your own documents</span><span className="n">often covered by the tools above</span><span className="t">Buy first</span></li>
@@ -735,7 +738,7 @@ export default function AiConsultingAUPage() {
         {/* ═══ WHERE THE PLAN LEADS → definition module (photo left, copy + link tiles right) ═══ */}
         <section className="definition" id="next-steps">
           <div>
-            <VisualSlot page={PAGE_KEY} slot="definition" kind="photo" ratio="3:2" className="definition-image"
+            <VisualSlot page={PAGE_KEY} slot="definition" src="/images/au/visual-pass-2026-10-03/ai-consulting/definition-1280.webp" srcSet="/images/au/visual-pass-2026-10-03/ai-consulting/definition-640.webp 640w, /images/au/visual-pass-2026-10-03/ai-consulting/definition-1280.webp 1280w" sizes="(max-width: 820px) 100vw, 560px" kind="photo" ratio="3:2" className="definition-image"
               subject="A FactoryJet engineer and a distribution business owner reviewing a tablet together on a warehouse floor">
               <img src="/images/au/ai-consulting/ai-consulting-build.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over-the-shoulder view of a FactoryJet engineer and a distribution business owner in a hi-vis vest reviewing a tablet together in a bright Brisbane warehouse" />
             </VisualSlot>
@@ -815,7 +818,7 @@ export default function AiConsultingAUPage() {
               <VisualSlot page={PAGE_KEY} slot="facts-2" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
                 subject="Three colleagues reading and marking up a printed draft AI usage policy together in a bright office"
                 caption={<><b>What governance looks like.</b> Usually a short, plain-English AI usage policy that the owner, the privacy lead and the people who use the tools read and agree together. Which tools are allowed, what data can go in them, and who checks the output.</>}>
-                <img src="/images/au/ai-consulting/ai-consulting-privacy.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Three colleagues in a calm, bright Canberra office reading and marking up a printed draft AI usage policy together, with Parliament House in the distance" />
+                <img src="/images/au/visual-pass-2026-10-03/ai-consulting/facts-2-1280.webp" srcSet="/images/au/visual-pass-2026-10-03/ai-consulting/facts-2-640.webp 640w, /images/au/visual-pass-2026-10-03/ai-consulting/facts-2-1280.webp 1200w" sizes="(max-width: 820px) 100vw, 560px" width={1200} height={800} loading="lazy" decoding="async" alt="Three colleagues in a calm, bright Canberra office reading and marking up a printed draft AI usage policy together, with Parliament House in the distance" />
               </VisualSlot>
             </div>
             <div className="platlist span-all" role="list">
@@ -1031,7 +1034,7 @@ export default function AiConsultingAUPage() {
               <VisualSlot page={PAGE_KEY} slot="facts-3" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
                 subject="A wholesale business owner with pen and notepad questioning an AI consultant across a round table"
                 caption="Interview the consultant the way you would interview a senior hire. Write their answers down, and compare them side by side with the other firms on your shortlist.">
-                <img src="/images/au/ai-consulting/ai-consulting-questions.webp" width={1200} height={800} loading="lazy" decoding="async" alt="The owner of a Melbourne wholesale business, pen and notepad in hand, questions an AI consultant across a round table before deciding whether to hire him" />
+                <img src="/images/au/visual-pass-2026-10-03/ai-consulting/facts-3-1280.webp" srcSet="/images/au/visual-pass-2026-10-03/ai-consulting/facts-3-640.webp 640w, /images/au/visual-pass-2026-10-03/ai-consulting/facts-3-1280.webp 1200w" sizes="(max-width: 820px) 100vw, 560px" width={1200} height={800} loading="lazy" decoding="async" alt="The owner of a Melbourne wholesale business, pen and notepad in hand, questions an AI consultant across a round table before deciding whether to hire him" />
               </VisualSlot>
             </div>
           </div>

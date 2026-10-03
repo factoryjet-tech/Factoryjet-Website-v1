@@ -1,0 +1,146 @@
+{
+  "reviewed": "2026-10-03 contact sheet /tmp/au-b6-a-assets.jpg",
+  "purpose": "Responsive derivatives of existing illustrative artwork, no new proof",
+  "images": [
+    {
+      "slot": "facts",
+      "source": "generated/ai-agents/facts.webp",
+      "width": 640,
+      "file": "facts-640.webp",
+      "bytes": 27182
+    },
+    {
+      "slot": "facts",
+      "source": "generated/ai-agents/facts.webp",
+      "width": 1280,
+      "file": "facts-1280.webp",
+      "bytes": 61892
+    },
+    {
+      "slot": "facts",
+      "source": "generated/ai-agents/facts.webp",
+      "width": 1440,
+      "file": "facts-1440.webp",
+      "bytes": 81336
+    },
+    {
+      "slot": "process",
+      "source": "generated/ai-agents/process.webp",
+      "width": 640,
+      "file": "process-640.webp",
+      "bytes": 29638
+    },
+    {
+      "slot": "process",
+      "source": "generated/ai-agents/process.webp",
+      "width": 1280,
+      "file": "process-1280.webp",
+      "bytes": 66162
+    },
+    {
+      "slot": "process",
+      "source": "generated/ai-agents/process.webp",
+      "width": 1440,
+      "file": "process-1440.webp",
+      "bytes": 85382
+    },
+    {
+      "slot": "definition",
+      "source": "generated/ai-agents/definition.webp",
+      "width": 640,
+      "file": "definition-640.webp",
+      "bytes": 26376
+    },
+    {
+      "slot": "definition",
+      "source": "generated/ai-agents/definition.webp",
+      "width": 1280,
+      "file": "definition-1280.webp",
+      "bytes": 64876
+    },
+    {
+      "slot": "definition",
+      "source": "generated/ai-agents/definition.webp",
+      "width": 1440,
+      "file": "definition-1440.webp",
+      "bytes": 86786
+    },
+    {
+      "slot": "proof",
+      "source": "generated/ai-agents/proof.webp",
+      "width": 640,
+      "file": "proof-640.webp",
+      "bytes": 9346
+    },
+    {
+      "slot": "proof",
+      "source": "generated/ai-agents/proof.webp",
+      "width": 1280,
+      "file": "proof-1280.webp",
+      "bytes": 23624
+    },
+    {
+      "slot": "proof",
+      "source": "generated/ai-agents/proof.webp",
+      "width": 1440,
+      "file": "proof-1440.webp",
+      "bytes": 33006
+    },
+    {
+      "slot": "facts-2",
+      "source": "ai-agents/ai-agents-property.webp",
+      "width": 640,
+      "file": "facts-2-640.webp",
+      "bytes": 29542
+    },
+    {
+      "slot": "facts-2",
+      "source": "ai-agents/ai-agents-property.webp",
+      "width": 1200,
+      "file": "facts-2-1200.webp",
+      "bytes": 67476
+    },
+    {
+      "slot": "platforms",
+      "source": "ai-agents/ai-agents-integrations.webp",
+      "width": 640,
+      "file": "platforms-640.webp",
+      "bytes": 25792
+    },
+    {
+      "slot": "platforms",
+      "source": "ai-agents/ai-agents-integrations.webp",
+      "width": 1200,
+      "file": "platforms-1200.webp",
+      "bytes": 60646
+    },
+    {
+      "slot": "facts-3",
+      "source": "ai-agents/ai-agents-approval.webp",
+      "width": 640,
+      "file": "facts-3-640.webp",
+      "bytes": 32888
+    },
+    {
+      "slot": "facts-3",
+      "source": "ai-agents/ai-agents-approval.webp",
+      "width": 1200,
+      "file": "facts-3-1200.webp",
+      "bytes": 76642
+    },
+    {
+      "slot": "facts-4",
+      "source": "ai-agents/ai-agents-privacy.webp",
+      "width": 640,
+      "file": "facts-4-640.webp",
+      "bytes": 25524
+    },
+    {
+      "slot": "facts-4",
+      "source": "ai-agents/ai-agents-privacy.webp",
+      "width": 1200,
+      "file": "facts-4-1200.webp",
+      "bytes": 64718
+    }
+  ]
+}

@@ -10,7 +10,9 @@ import AuFaq from '../components/AuFaq';
 import VisualSlot from '../components/VisualSlot';
 import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
+import { MerchantWorkbench, MerchantBuildDiagram, MerchantMigrationDiagram } from './MerchantDiagram';
 import './page.css';
+import './visual.css';
 
 const CANONICAL = 'https://factoryjet.com/au/shopify-development';
 const UPDATED = '2026-09-25';
@@ -353,7 +355,7 @@ export default function ShopifyDevelopmentAUPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <SiteHeader locale="au" logoHref="/au" />
-      <div className="aiAgentPage auPage">
+      <div className="aiAgentPage auPage auShopifyVisual">
       <nav className="crumbs" aria-label="Breadcrumb">
         <div className="wrap">
           {crumbs.map((item, index) => (
@@ -405,6 +407,7 @@ export default function ShopifyDevelopmentAUPage() {
                   <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M3 6a5 5 0 1 1 0 4M3 2v4h4" /></svg>
                 </button>
               </div>
+              <MerchantWorkbench compact />
               <div className="specpanel-body" role="radiogroup" aria-label="Explore what you get">
                 <label className="specrow run">
                   <input className="workflow-select" type="radio" name="shopify-au-step" value="1" />
@@ -498,7 +501,7 @@ export default function ShopifyDevelopmentAUPage() {
                   </p>
                 </div>
               </div>
-              <VisualSlot page={PAGE_KEY} slot="facts" kind="photo" ratio="3:2" className="factphoto"
+              <VisualSlot page={PAGE_KEY} slot="facts" src="/images/au/visual-pass-2026-10-03/shopify-development/facts-1536.webp" srcSet="/images/au/visual-pass-2026-10-03/shopify-development/facts-640.webp 640w, /images/au/visual-pass-2026-10-03/shopify-development/facts-1280.webp 1280w, /images/au/visual-pass-2026-10-03/shopify-development/facts-1536.webp 1536w" sizes="(max-width: 820px) calc(100vw - 40px), 560px" kind="photo" ratio="3:2" className="factphoto"
                 subject="A Shopify developer and a skincare brand founder reviewing her new store on his laptop in their warehouse studio">
                 <img src="/images/au/shopify-development/shopify-development-hero.webp" width={1400} height={933} loading="lazy" decoding="async" alt="Over-the-shoulder view of a Shopify developer building a skincare brand's new store while the founder, holding one of her amber bottles, points at a product tile on his laptop in their Melbourne warehouse studio" />
               </VisualSlot>
@@ -522,7 +525,7 @@ export default function ShopifyDevelopmentAUPage() {
               {BUILD_ITEMS.map((s, i) => (
                 <div key={s.n} className={`cap cap-${i + 1}`}>
                   <div className="caphead"><span className="capid">CAP‑{s.n}</span><svg {...CAP_ICON}><path d={BUILD_ICONS[i]} /></svg></div>
-                  <VisualSlot page={PAGE_KEY} slot={`capability-${s.n}`} kind="diagram" ratio="11:4" className="cap-diagram" subject={BUILD_SUBJECTS[i]} />
+                  <VisualSlot page={PAGE_KEY} slot={`capability-${s.n}`} kind="diagram" ratio="11:4" className="cap-diagram" subject={BUILD_SUBJECTS[i]} src={null}><MerchantBuildDiagram index={i} /></VisualSlot>
                   <h3>{s.t}</h3>
                   <p>{s.d}</p>
                 </div>
@@ -545,7 +548,7 @@ export default function ShopifyDevelopmentAUPage() {
                 </p>
               </div>
             </div>
-            <div className="tablewrap">
+            <div className="tablewrap" role="region" tabIndex={0} aria-label="shopify development comparison 1">
               <table>
                 <thead>
                   <tr>
@@ -604,7 +607,9 @@ export default function ShopifyDevelopmentAUPage() {
 
         {/* ═══ PHOTOBREAK (US template visual, no AU image yet) ═══ */}
         <VisualSlot page={PAGE_KEY} slot="photobreak" kind="illustration" ratio="12:5" className="photobreak"
-          subject="AI-generated model: a white Shopify storefront on a rail moving through five stations, the last one handing an orange parcel to a small human figure" />
+          subject="AI-generated model: a white Shopify storefront on a rail moving through five stations, the last one handing an orange parcel to a small human figure" src={null}>
+          <MerchantWorkbench />
+        </VisualSlot>
 
         {/* ═══ PROCESS WITH WEEK RANGES → timeline (stages stay openable, as the copy says) ═══ */}
         <section className="section process" id="how-a-build-runs">
@@ -686,6 +691,7 @@ export default function ShopifyDevelopmentAUPage() {
                 </p></div>
               </div>
               <div className="au-panel">
+                <MerchantMigrationDiagram />
                 <div className="eyebrow">What moves across</div>
                 <ul className="trigrows">
                   <li><span className="m">Products, variants, images</span><span className="t">Yes</span></li>
@@ -703,7 +709,7 @@ export default function ShopifyDevelopmentAUPage() {
         {/* ═══ APPS AND INTEGRATIONS → definition module (image left, copy right) ═══ */}
         <section className="definition" id="integrations">
           <div>
-            <VisualSlot page={PAGE_KEY} slot="definition" kind="photo" ratio="3:2" className="definition-image"
+            <VisualSlot page={PAGE_KEY} slot="definition" src="/images/au/visual-pass-2026-10-03/shopify-development/definition-1536.webp" srcSet="/images/au/visual-pass-2026-10-03/shopify-development/definition-640.webp 640w, /images/au/visual-pass-2026-10-03/shopify-development/definition-1280.webp 1280w, /images/au/visual-pass-2026-10-03/shopify-development/definition-1536.webp 1536w" sizes="(max-width: 820px) calc(100vw - 40px), 560px" kind="photo" ratio="3:2" className="definition-image"
               subject="An online store dispatch desk with an order dashboard on a laptop, a label printer and courier satchels">
               <img src="/images/au/shopify-development/shopify-development-integrations.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over-the-shoulder view of a Sydney online store's dispatch desk: an order dashboard on the laptop, a label printer feeding out a shipping label and a stack of courier satchels ready to go" />
             </VisualSlot>
@@ -757,7 +763,7 @@ export default function ShopifyDevelopmentAUPage() {
                   the same books.
                 </p></div>
               </div>
-              <VisualSlot page={PAGE_KEY} slot="facts-2" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
+              <VisualSlot page={PAGE_KEY} slot="facts-2" src="/images/au/visual-pass-2026-10-03/shopify-development/b2b-1536.webp" srcSet="/images/au/visual-pass-2026-10-03/shopify-development/b2b-640.webp 640w, /images/au/visual-pass-2026-10-03/shopify-development/b2b-1280.webp 1280w, /images/au/visual-pass-2026-10-03/shopify-development/b2b-1536.webp 1536w" sizes="(max-width: 820px) calc(100vw - 40px), 560px" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
                 subject="A homewares boutique owner reordering stock from a wholesale supplier's trade store on a tablet at her shop counter"
                 caption={<>This is what B2B looks like from the stockist&apos;s side: her own prices, her usual products, and a reorder in a couple of taps instead of an email and a spreadsheet.</>}>
                 <img src="/images/au/shopify-development/shopify-development-b2b.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over-the-shoulder view of a Brisbane homewares boutique owner reordering ceramic vases from a wholesale supplier's trade store on a tablet at her shop counter" />
@@ -776,7 +782,7 @@ export default function ShopifyDevelopmentAUPage() {
           <div>
             <VisualSlot page={PAGE_KEY} slot="definition-2" kind="photo" ratio="3:2" className="definition-image"
               subject="A Shopify developer checking a product page on her phone against the desktop version on her laptop">
-              <img src="/images/au/shopify-development/shopify-development-build.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over-the-shoulder view of a Shopify developer in a Melbourne office checking a product page on her phone against the desktop version on her laptop" />
+              <img src="/images/au/visual-pass-2026-10-03/shopify-development/mobile-1200.webp" srcSet="/images/au/visual-pass-2026-10-03/shopify-development/mobile-640.webp 640w, /images/au/visual-pass-2026-10-03/shopify-development/mobile-1200.webp 1200w" sizes="(max-width: 820px) calc(100vw - 40px), 560px" width={1200} height={800} loading="lazy" decoding="async" alt="Over-the-shoulder view of a Shopify developer in a Melbourne office checking a product page on her phone against the desktop version on her laptop" />
             </VisualSlot>
             <p className="figcap">
               We review every template on mobile first. Most Australian shoppers browse on their phones, and a
@@ -815,7 +821,7 @@ export default function ShopifyDevelopmentAUPage() {
                 much you need to change after launch.
               </p>
             </div>
-            <div className="tablewrap">
+            <div className="tablewrap" role="region" tabIndex={0} aria-label="shopify development comparison 2">
               <table>
                 <thead>
                   <tr>
@@ -845,7 +851,7 @@ export default function ShopifyDevelopmentAUPage() {
             <div className="section-head">
               <h2>Which option fits you?</h2>
               <p>Tick through each list. Tap a heading to fold it away.</p>
-              <VisualSlot page={PAGE_KEY} slot="proof" kind="photo" ratio="3:2"
+              <VisualSlot page={PAGE_KEY} slot="proof" src="/images/au/visual-pass-2026-10-03/shopify-development/proof-1536.webp" srcSet="/images/au/visual-pass-2026-10-03/shopify-development/proof-640.webp 640w, /images/au/visual-pass-2026-10-03/shopify-development/proof-1280.webp 1280w, /images/au/visual-pass-2026-10-03/shopify-development/proof-1536.webp 1536w" sizes="(max-width: 820px) calc(100vw - 40px), 560px" kind="photo" ratio="3:2"
                 subject="A brand founder at her desk comparing a short list of Shopify agencies, freelancers and an in-house job ad" />
             </div>
             <div className="ventries">
@@ -959,7 +965,7 @@ export default function ShopifyDevelopmentAUPage() {
               <VisualSlot page={PAGE_KEY} slot="facts-3" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
                 subject="An online fashion store team member inspecting a returned pair of sneakers at the returns bench"
                 caption="Returns are where the consumer guarantees get real. We build a clear refund and replacement process into the store, so your team and your customers both know the steps.">
-                <img src="/images/au/shopify-development/shopify-development-warehouse.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A team member at a Sydney online fashion store inspecting a returned pair of white sneakers at the returns bench before processing the refund" />
+                <img src="/images/au/visual-pass-2026-10-03/shopify-development/returns-1200.webp" srcSet="/images/au/visual-pass-2026-10-03/shopify-development/returns-640.webp 640w, /images/au/visual-pass-2026-10-03/shopify-development/returns-1200.webp 1200w" sizes="(max-width: 820px) calc(100vw - 40px), 560px" width={1200} height={800} loading="lazy" decoding="async" alt="A team member at a Sydney online fashion store inspecting a returned pair of white sneakers at the returns bench before processing the refund" />
               </VisualSlot>
             </div>
           </div>
@@ -1032,7 +1038,7 @@ export default function ShopifyDevelopmentAUPage() {
               <VisualSlot page={PAGE_KEY} slot="facts-4" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
                 subject="An online store team member handing courier satchels to a driver loading a van outside their warehouse"
                 caption="From Perth, most customers are a long way east. Shipping rules and courier cut-offs get set up for where your orders actually go.">
-                <img src="/images/au/shopify-development/shopify-development-dispatch.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A Perth online store team member handing a stack of courier satchels to a driver loading a white van outside their warehouse on a sunny morning" />
+                <img src="/images/au/visual-pass-2026-10-03/shopify-development/dispatch-1200.webp" srcSet="/images/au/visual-pass-2026-10-03/shopify-development/dispatch-640.webp 640w, /images/au/visual-pass-2026-10-03/shopify-development/dispatch-1200.webp 1200w" sizes="(max-width: 820px) calc(100vw - 40px), 560px" width={1200} height={800} loading="lazy" decoding="async" alt="A Perth online store team member handing a stack of courier satchels to a driver loading a white van outside their warehouse on a sunny morning" />
               </VisualSlot>
             </div>
           </div>

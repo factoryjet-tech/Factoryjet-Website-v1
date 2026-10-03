@@ -1,5 +1,6 @@
 import { Fragment, type ReactNode } from 'react';
 import HeroInlineForm from '@/components/HeroInlineForm';
+import WebsiteMaintenanceStagingVisual from './WebsiteMaintenanceStagingVisual';
 import { WM_FAQ_CATEGORIES, WM_FAQS } from './WebsiteMaintenanceFaqs';
 import './AiAgentDevelopmentSections.css';
 import './WebsiteMaintenanceSections.css';
@@ -21,8 +22,8 @@ import './WebsiteMaintenanceSections.css';
  * Arrays exported here (CAPABILITIES, PROVIDERS, wmBreadcrumbs) also feed the Service,
  * ItemList and BreadcrumbList JSON-LD in page.tsx. FAQ lives in WebsiteMaintenanceFaqs.ts.
  *
- * Visuals: every <figure data-visual-slot> is a placeholder for the later visual pass and
- * is hidden from visitors by the scoped CSS rule in WebsiteMaintenanceSections.css.
+ * Visual pass 2026-10-02: original illustrative editorial photography and a
+ * native SVG staging/backup diagram. People depicted are illustrative, not staff.
  */
 
 export const wmBreadcrumbs = [
@@ -72,8 +73,11 @@ const STEP_ICON = { width: 24, height: 24, viewBox: '0 0 24 24', fill: 'none', s
 const CAP_ICON = { width: 24, height: 24, viewBox: '0 0 24 24', fill: 'none', stroke: '#C94A1A', strokeWidth: 1.6, strokeLinecap: 'round', strokeLinejoin: 'round', 'aria-hidden': true } as const;
 const DIAGRAM = { viewBox: '0 0 440 160', fill: 'none', stroke: 'currentColor', strokeWidth: 1.5 } as const;
 
-/** Visual slot placeholder. Hidden from visitors until the visual pass replaces it. */
+/** Completed visuals retain the original slot metadata for later maintenance. */
 function VisualSlot({ slot, kind, subject, ratio, className }: { slot: string; kind: 'photo' | 'diagram' | 'illustration' | 'mockup' | 'map'; subject: string; ratio: string; className?: string }) {
+  const isPanorama = slot === 'photobreak';
+  const asset = isPanorama ? 'staging-review' : 'operations-review';
+  const base = `/images/us/visual-pass-2026-10-02/website-maintenance/${asset}`;
   return (
     <figure
       className={className ? `wm-slot ${className}` : 'wm-slot'}
@@ -81,9 +85,13 @@ function VisualSlot({ slot, kind, subject, ratio, className }: { slot: string; k
       data-visual-kind={kind}
       data-visual-subject={subject}
       data-visual-ratio={ratio}
-      data-visual-status="placeholder"
-      aria-hidden="true"
-    />
+      data-visual-status="ready"
+      data-visual-origin={kind === 'photo' ? 'generated-illustration' : 'native-diagram'}
+    >
+      {kind === 'diagram' ? <WebsiteMaintenanceStagingVisual /> : (
+        <img src={`${base}.webp`} srcSet={`${base}-768.webp 768w, ${base}.webp ${isPanorama ? 1600 : 1440}w`} sizes={isPanorama ? '(max-width: 820px) calc(100vw - 40px), (max-width: 1264px) calc(100vw - 64px), 1200px' : '(max-width: 820px) calc(100vw - 40px), 430px'} width={isPanorama ? 1600 : 1440} height={isPanorama ? 600 : 960} loading="lazy" decoding="async" alt={isPanorama ? 'Illustrative developers reviewing staging and live website layouts together' : 'Illustrative operations manager checking website updates on a laptop'} />
+      )}
+    </figure>
   );
 }
 

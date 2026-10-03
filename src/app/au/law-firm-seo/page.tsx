@@ -8,8 +8,10 @@ import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import AuFaq from '../components/AuFaq';
 import VisualSlot from '../components/VisualSlot';
+import { LegalIntakeVisual, LegalJob } from './LegalVisuals';
 import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
+import './page.css';
 
 const CANONICAL = 'https://factoryjet.com/au/law-firm-seo';
 const UPDATED = '2026-09-26';
@@ -375,7 +377,7 @@ export default function LawFirmSeoAUPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <SiteHeader locale="au" logoHref="/au" />
-      <div className="aiAgentPage auPage">
+      <div className="aiAgentPage auPage auLawSeoVisual">
       <nav className="crumbs" aria-label="Breadcrumb">
         <div className="wrap">
           {crumbs.map((item, index) => (
@@ -417,6 +419,7 @@ export default function LawFirmSeoAUPage() {
                 <span>INCLUDED · WHAT EVERY LAW FIRM ENGAGEMENT COVERS</span>
                 <span className="sys"><span>SEO</span><span>WEBSITE</span><span>INTAKE</span></span>
               </div>
+              <div className="seo-hero-art" aria-hidden="true"><LegalIntakeVisual /></div>
               <div className="workflow-controls">
                 <label className="workflow-toggle" title="Pause or resume the animation">
                   <input type="checkbox" className="workflow-pause" aria-label="Pause animation" />
@@ -531,7 +534,7 @@ export default function LawFirmSeoAUPage() {
                   </p>
                 </div>
               </div>
-              <VisualSlot page={PAGE_KEY} slot="facts" kind="photo" ratio="3:2" className="factphoto"
+              <VisualSlot page={PAGE_KEY} slot="facts" src="/images/au/visual-pass-2026-10-03/law-firm-seo/facts-1280.webp" srcSet="/images/au/visual-pass-2026-10-03/law-firm-seo/facts-640.webp 640w, /images/au/visual-pass-2026-10-03/law-firm-seo/facts-1280.webp 1280w" sizes="(max-width: 820px) 100vw, 560px" kind="photo" ratio="3:2" className="factphoto"
                 subject="A solicitor in a small Australian suburban law office reviewing her firm's family law page on a laptop that faces her, bookshelves and a window behind" />
             </div>
           </div>
@@ -578,7 +581,7 @@ export default function LawFirmSeoAUPage() {
                 return (
                   <div key={j.t} className={`cap cap-${i + 1}`}>
                     <div className="caphead"><span className="capid">CAP‑{n}</span><svg {...CAP_ICON}><path d={JOB_ICONS[i]} /></svg></div>
-                    <VisualSlot page={PAGE_KEY} slot={`capability-${n}`} kind="diagram" ratio="11:4" className="cap-diagram" subject={JOB_SUBJECTS[i]} />
+                    <VisualSlot page={PAGE_KEY} slot={`capability-${n}`} kind="diagram" ratio="11:4" className="cap-diagram" subject={JOB_SUBJECTS[i]} src={null}><LegalJob job={i} /></VisualSlot>
                     <h3>{j.t}</h3>
                     <p>{j.d}</p>
                   </div>
@@ -615,7 +618,7 @@ export default function LawFirmSeoAUPage() {
               <div className="eyebrow">Where should your firm start?</div>
               <h2>A 30-second check for Australian law firms</h2>
               <p>Tap the line that sounds most like your practice. The answer is honest, even when it is a smaller job than you expected.</p>
-              <VisualSlot page={PAGE_KEY} slot="proof" kind="photo" ratio="3:2" captionClassName="figcap"
+              <VisualSlot page={PAGE_KEY} slot="proof" src="/images/au/visual-pass-2026-10-03/law-firm-seo/proof-1280.webp" srcSet="/images/au/visual-pass-2026-10-03/law-firm-seo/proof-640.webp 640w, /images/au/visual-pass-2026-10-03/law-firm-seo/proof-1280.webp 1280w" sizes="(max-width: 820px) 100vw, 560px" kind="photo" ratio="3:2" captionClassName="figcap"
                 subject="A man at his kitchen table in the evening searching for a family lawyer on his phone, which faces him, documents beside him"
                 caption="Most people look for a lawyer in the evening, on a phone, after something has gone wrong. The page they land on has a few seconds to show it can help." />
             </div>
@@ -731,7 +734,7 @@ export default function LawFirmSeoAUPage() {
                 and a criminal defence page should not be built the same way. This is how we plan them.
               </p>
             </div>
-            <div className="tablewrap">
+            <div className="tablewrap" tabIndex={0} role="region" aria-label="Scrollable comparison table">
               <table>
                 <thead>
                   <tr>
@@ -773,7 +776,7 @@ export default function LawFirmSeoAUPage() {
                 </p>
               </div>
             </div>
-            <div className="tablewrap">
+            <div className="tablewrap" tabIndex={0} role="region" aria-label="Scrollable comparison table">
               <table>
                 <thead>
                   <tr>
@@ -805,7 +808,7 @@ export default function LawFirmSeoAUPage() {
         </section>
 
         {/* ═══ PHOTOBREAK ═══ */}
-        <VisualSlot page={PAGE_KEY} slot="photobreak" kind="illustration" ratio="12:5" className="photobreak"
+        <VisualSlot page={PAGE_KEY} slot="photobreak" src="/images/au/visual-pass-2026-10-03/law-firm-seo/photobreak-1280.webp" srcSet="/images/au/visual-pass-2026-10-03/law-firm-seo/photobreak-640.webp 640w, /images/au/visual-pass-2026-10-03/law-firm-seo/photobreak-1280.webp 1280w" sizes="(max-width: 820px) 100vw, 560px" kind="illustration" ratio="12:5" className="photobreak"
           subject="AI-generated model: a white miniature Australian main street with small office buildings, one with an orange doorway and a path leading from a phone-shaped search bar to its door" />
 
         {/* ═══ PROCESS ═══ */}
@@ -820,7 +823,7 @@ export default function LawFirmSeoAUPage() {
                   sign-off before anything is published. Open any step to see what happens in it.
                 </p>
               </div>
-              <VisualSlot page={PAGE_KEY} slot="process" kind="photo" ratio="3:2" captionClassName="figcap"
+              <VisualSlot page={PAGE_KEY} slot="process" src="/images/au/visual-pass-2026-10-03/law-firm-seo/process-1280.webp" srcSet="/images/au/visual-pass-2026-10-03/law-firm-seo/process-640.webp 640w, /images/au/visual-pass-2026-10-03/law-firm-seo/process-1280.webp 1280w" sizes="(max-width: 820px) 100vw, 560px" kind="photo" ratio="3:2" captionClassName="figcap"
                 subject="A FactoryJet strategist on a video call with two Australian solicitors in a meeting room, the laptop screen facing the solicitors, notes on the table"
                 caption="Each practice-area page starts with a short interview with the solicitor who runs that practice." />
             </div>
@@ -849,7 +852,7 @@ export default function LawFirmSeoAUPage() {
         {/* ═══ WEBSITE DESIGN → definition ═══ */}
         <section className="definition" id="law-firm-website-design">
           <div>
-            <VisualSlot page={PAGE_KEY} slot="definition" kind="mockup" ratio="3:2" className="definition-image"
+            <VisualSlot page={PAGE_KEY} slot="definition" src="/images/au/visual-pass-2026-10-03/law-firm-seo/definition-1280.webp" srcSet="/images/au/visual-pass-2026-10-03/law-firm-seo/definition-640.webp 640w, /images/au/visual-pass-2026-10-03/law-firm-seo/definition-1280.webp 1280w" sizes="(max-width: 820px) 100vw, 560px" kind="mockup" ratio="3:2" className="definition-image"
               subject="Mockup: a law firm website on a laptop and a phone side by side, practice-area menu and a short enquiry form visible, placeholder text only, no real firm name" />
             <p className="figcap">
               A law firm website should tell a visitor in seconds what you do, for whom and where, and make it easy to
@@ -895,7 +898,7 @@ export default function LawFirmSeoAUPage() {
                 use, so every enquiry is logged, assigned and followed up.
               </p>
             </div>
-            <div className="tablewrap">
+            <div className="tablewrap" tabIndex={0} role="region" aria-label="Scrollable comparison table">
               <table>
                 <thead>
                   <tr>

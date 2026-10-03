@@ -12,6 +12,8 @@ import VisualSlot from '../components/VisualSlot';
 import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
 import './page.css';
+import './visual.css';
+import CitationDiagram from './CitationDiagram';
 
 /* /au/ai-seo: AI SEO and generative engine optimisation (GEO) for Australian
    businesses. Built 2026-09-25 from brief_au_ai_seo.json and the AU market
@@ -318,7 +320,7 @@ export default function AiSeoAUPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <SiteHeader locale="au" logoHref="/au" />
-      <div className="aiAgentPage auPage">
+      <div className="aiAgentPage auPage auAiSeoVisual">
       <nav className="crumbs" aria-label="Breadcrumb">
         <div className="wrap">
           {crumbs.map((item, index) => (
@@ -371,6 +373,7 @@ export default function AiSeoAUPage() {
                   <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M3 6a5 5 0 1 1 0 4M3 2v4h4" /></svg>
                 </button>
               </div>
+              <CitationDiagram compact />
               <div className="specpanel-body" role="radiogroup" aria-label="Explore what we measured">
                 <label className="specrow run">
                   <input className="workflow-select" type="radio" name="aiseo-au-step" value="1" />
@@ -464,7 +467,7 @@ export default function AiSeoAUPage() {
                   </p>
                 </div>
               </div>
-              <VisualSlot page={PAGE_KEY} slot="facts" kind="photo" ratio="3:2" className="factphoto"
+              <VisualSlot page={PAGE_KEY} slot="facts" src="/images/au/visual-pass-2026-10-03/ai-seo/facts-1280.webp" srcSet="/images/au/visual-pass-2026-10-03/ai-seo/facts-640.webp 640w, /images/au/visual-pass-2026-10-03/ai-seo/facts-1280.webp 1280w, /images/au/visual-pass-2026-10-03/ai-seo/facts-1440.webp 1440w" sizes="(max-width: 820px) calc(100vw - 48px), 560px" kind="photo" ratio="3:2" className="factphoto"
                 subject="A marketing manager comparing an AI assistant answer on her phone with search results on her laptop, a FactoryJet specialist beside her">
                 <img src="/images/au/ai-seo/ai-seo-hero.webp" width={1400} height={933} loading="lazy" decoding="async" alt="Over-the-shoulder view of an Australian marketing manager in a Brisbane office comparing an AI assistant's answer on her phone with a search results page on her laptop, with a FactoryJet AI SEO specialist beside her" />
               </VisualSlot>
@@ -605,7 +608,7 @@ export default function AiSeoAUPage() {
                 </p>
               </div>
             </div>
-            <div className="tablewrap">
+            <div className="tablewrap" tabIndex={0} role="region" aria-label="Scrollable comparison table">
               <table>
                 <thead>
                   <tr>
@@ -638,8 +641,8 @@ export default function AiSeoAUPage() {
         </section>
 
         {/* ═══ PHOTOBREAK (US template visual, no AU image yet) ═══ */}
-        <VisualSlot page={PAGE_KEY} slot="photobreak" kind="illustration" ratio="12:5" className="photobreak"
-          subject="AI-generated model: white question cards feeding into four white answer panels, one orange card naming a business in all four" />
+        <VisualSlot page={PAGE_KEY} slot="photobreak" kind="illustration" ratio="12:5" className="photobreak" src={null}
+          subject="AI-generated model: white question cards feeding into four white answer panels, one orange card naming a business in all four"><CitationDiagram /></VisualSlot>
 
         {/* ═══ PROCESS (<details>) → timeline, photo beside the head ═══ */}
         <section className="section process" id="process">
@@ -653,7 +656,7 @@ export default function AiSeoAUPage() {
                   Some businesses stop there, and that is a fine outcome.
                 </p>
               </div>
-              <VisualSlot page={PAGE_KEY} slot="process" kind="photo" ratio="3:2" captionClassName="figcap"
+              <VisualSlot page={PAGE_KEY} slot="process" src="/images/au/visual-pass-2026-10-03/ai-seo/process-1280.webp" srcSet="/images/au/visual-pass-2026-10-03/ai-seo/process-640.webp 640w, /images/au/visual-pass-2026-10-03/ai-seo/process-1280.webp 1280w, /images/au/visual-pass-2026-10-03/ai-seo/process-1440.webp 1440w" sizes="(max-width: 820px) calc(100vw - 48px), 560px" kind="photo" ratio="3:2" captionClassName="figcap"
                 subject="Two people at a meeting table sorting index cards of buyer questions into three columns"
                 caption="Step one happens at a table, not in a tool. We sort buyer questions into piles by how close each one is to a sale. “What is GEO?” is research. “Best GEO agency in Sydney” is someone ready to call.">
                 <img src="/images/au/ai-seo/ai-seo-workshop.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Two people at a timber meeting table in a Melbourne office sorting blank index cards of buyer questions into three columns" />
@@ -736,7 +739,7 @@ export default function AiSeoAUPage() {
                 Read the list that sounds most like you (tap a heading to fold it away). If you tick three or more in
                 one list, that is probably where to start.
               </p>
-              <VisualSlot page={PAGE_KEY} slot="proof" kind="photo" ratio="3:2"
+              <VisualSlot page={PAGE_KEY} slot="proof" src="/images/au/visual-pass-2026-10-03/ai-seo/proof-1280.webp" srcSet="/images/au/visual-pass-2026-10-03/ai-seo/proof-640.webp 640w, /images/au/visual-pass-2026-10-03/ai-seo/proof-1280.webp 1280w, /images/au/visual-pass-2026-10-03/ai-seo/proof-1440.webp 1440w" sizes="(max-width: 820px) calc(100vw - 48px), 560px" kind="photo" ratio="3:2"
                 subject="A business owner at a café table reading a short AI assistant answer on her phone next to a Google Maps listing" />
             </div>
             <div className="ventries">
@@ -769,7 +772,7 @@ export default function AiSeoAUPage() {
         {/* ═══ WHO WE HELP + TRADIE STORY → definition module (image left, copy right) ═══ */}
         <section className="definition" id="where-questions-are-asked">
           <div>
-            <VisualSlot page={PAGE_KEY} slot="definition" kind="photo" ratio="3:2" className="definition-image"
+            <VisualSlot page={PAGE_KEY} slot="definition" src="/images/au/visual-pass-2026-10-03/ai-seo/definition-1280.webp" srcSet="/images/au/visual-pass-2026-10-03/ai-seo/definition-640.webp 640w, /images/au/visual-pass-2026-10-03/ai-seo/definition-1280.webp 1280w, /images/au/visual-pass-2026-10-03/ai-seo/definition-1440.webp 1440w" sizes="(max-width: 820px) calc(100vw - 48px), 560px" kind="photo" ratio="3:2" className="definition-image"
               subject="A tradesman in his work van asking an AI assistant a question on his phone">
               <img src="/images/au/ai-seo/ai-seo-tradie.webp" width={1200} height={800} loading="lazy" decoding="async" alt="An Australian tradesman in his work van on a Brisbane street asking an AI assistant a question on his phone" />
             </VisualSlot>

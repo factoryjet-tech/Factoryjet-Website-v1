@@ -1,0 +1,9 @@
+FactoryJet AU ecommerce SEO visual pass — 2026-10-03
+
+catalogue-structure-{640,1280,1920}.webp: AI-generated editorial still life using the built-in imagegen tool. Product assortment and blank cards illustrate catalogue organisation; this is not a client catalogue, case study or proof of results. Full prompt and original generation path are recorded in artifacts/visual-pass-2026-10-03-au-b1/image-generation.json.
+
+catalogue-planning-{640,1280,1920}.webp: responsive derivatives of public/images/au/generated/ecommerce-seo/facts.webp.
+product-search-{640,1280,1920}.webp: responsive derivatives of public/images/au/generated/ecommerce-seo/definition-2.webp.
+migration-review-{640,1280,1920}.webp: responsive derivatives of public/images/au/generated/ecommerce-seo/facts-2.webp.
+
+The three existing sources were visually inspected before deriving WebP sizes. They remain illustrative AI artwork and are described as such in image alternatives. No endorsement or performance claim is implied.

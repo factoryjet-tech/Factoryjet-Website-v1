@@ -11,6 +11,8 @@ import VisualSlot from '../components/VisualSlot';
 import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
 import './page.css';
+import './visual.css';
+import { ParticipantPathDiagram, ParticipantCapabilityDiagram, ParticipantAccessDiagram } from './ParticipantDiagram';
 
 const CANONICAL = 'https://factoryjet.com/au/ndis-website-design';
 const UPDATED = '2026-09-26';
@@ -340,7 +342,7 @@ export default function NdisWebsiteDesignAUPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <SiteHeader locale="au" logoHref="/au" />
-      <div className="aiAgentPage auPage">
+      <div className="aiAgentPage auPage auNdisVisual">
       <nav className="crumbs" aria-label="Breadcrumb">
         <div className="wrap">
           {crumbs.map((item, index) => (
@@ -391,6 +393,7 @@ export default function NdisWebsiteDesignAUPage() {
                   <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M3 6a5 5 0 1 1 0 4M3 2v4h4" /></svg>
                 </button>
               </div>
+              <ParticipantPathDiagram compact />
               <div className="specpanel-body" role="radiogroup" aria-label="Explore what every site includes">
                 <label className="specrow run">
                   <input className="workflow-select" type="radio" name="ndis-step" value="1" />
@@ -483,7 +486,7 @@ export default function NdisWebsiteDesignAUPage() {
                   </p>
                 </div>
               </div>
-              <VisualSlot page={PAGE_KEY} slot="facts" kind="photo" ratio="3:2" className="factphoto"
+              <VisualSlot page={PAGE_KEY} slot="facts" src="/images/au/visual-pass-2026-10-03/ndis-website-design/facts-1280.webp" srcSet="/images/au/visual-pass-2026-10-03/ndis-website-design/facts-640.webp 640w, /images/au/visual-pass-2026-10-03/ndis-website-design/facts-1280.webp 1280w, /images/au/visual-pass-2026-10-03/ndis-website-design/facts-1440.webp 1440w" sizes="(max-width: 820px) calc(100vw - 48px), 560px" kind="photo" ratio="3:2" className="factphoto"
                 subject="A support coordinator and a participant in a wheelchair at a kitchen table in a Brisbane home, both looking at a provider website on a tablet that faces them, natural light, no text or logos visible" />
             </div>
           </div>
@@ -506,7 +509,7 @@ export default function NdisWebsiteDesignAUPage() {
                 return (
                   <div key={j.t} className={`cap cap-${i + 1}`}>
                     <div className="caphead"><span className="capid">CAP‑{n}</span><svg {...CAP_ICON}><path d={BUILD_ICONS[i]} /></svg></div>
-                    <VisualSlot page={PAGE_KEY} slot={`capability-${n}`} kind="diagram" ratio="11:4" className="cap-diagram" subject={BUILD_SUBJECTS[i]} />
+                    <VisualSlot page={PAGE_KEY} slot={`capability-${n}`} kind="diagram" ratio="11:4" className="cap-diagram" src={null} subject={BUILD_SUBJECTS[i]}><ParticipantCapabilityDiagram step={i} /></VisualSlot>
                     <h3>{j.t}</h3>
                     <p>{j.d}</p>
                   </div>
@@ -523,7 +526,7 @@ export default function NdisWebsiteDesignAUPage() {
               <div className="eyebrow">Which site do you need?</div>
               <h2>A 30-second check for NDIS providers</h2>
               <p>Tap the line that sounds most like your organisation. The answer is honest, even when it is a smaller job.</p>
-              <VisualSlot page={PAGE_KEY} slot="proof" kind="photo" ratio="3:2" captionClassName="figcap"
+              <VisualSlot page={PAGE_KEY} slot="proof" src="/images/au/visual-pass-2026-10-03/ndis-website-design/proof-1280.webp" srcSet="/images/au/visual-pass-2026-10-03/ndis-website-design/proof-640.webp 640w, /images/au/visual-pass-2026-10-03/ndis-website-design/proof-1280.webp 1280w, /images/au/visual-pass-2026-10-03/ndis-website-design/proof-1440.webp 1440w" sizes="(max-width: 820px) calc(100vw - 48px), 560px" kind="photo" ratio="3:2" captionClassName="figcap"
                 subject="An allied health practice owner in a bright Adelaide clinic reception reviewing her website on a laptop that faces her, a client chatting with the receptionist in the background, no text or logos visible" />
             </div>
             <div className="ventries">
@@ -617,7 +620,7 @@ export default function NdisWebsiteDesignAUPage() {
                 Level AA. On a provider site, this is what that looks like, and how we check it.
               </p>
             </div>
-            <div className="tablewrap">
+            <div className="tablewrap" tabIndex={0} role="region" aria-label="Scrollable accessibility matrix">
               <table>
                 <thead>
                   <tr>
@@ -648,8 +651,8 @@ export default function NdisWebsiteDesignAUPage() {
         </section>
 
         {/* ═══ PHOTOBREAK (placeholder for the visual pass) ═══ */}
-        <VisualSlot page={PAGE_KEY} slot="photobreak" kind="illustration" ratio="12:5" className="photobreak"
-          subject="AI-generated model: a row of white web page cards, one with an oversized orange focus ring and an Easy Read pictogram, on a plain white surface" />
+        <VisualSlot page={PAGE_KEY} slot="photobreak" kind="illustration" ratio="12:5" className="photobreak" src={null}
+          subject="AI-generated model: a row of white web page cards, one with an oversized orange focus ring and an Easy Read pictogram, on a plain white surface"><ParticipantAccessDiagram /></VisualSlot>
 
         {/* ═══ HOW WE BUILD IT → process timeline ═══ */}
         <section className="section process" id="how-we-build">
@@ -663,7 +666,7 @@ export default function NdisWebsiteDesignAUPage() {
                   checked at the start and again before launch. Open any step to see what happens in it.
                 </p>
               </div>
-              <VisualSlot page={PAGE_KEY} slot="process" kind="photo" ratio="3:2" captionClassName="figcap"
+              <VisualSlot page={PAGE_KEY} slot="process" src="/images/au/visual-pass-2026-10-03/ndis-website-design/process-1280.webp" srcSet="/images/au/visual-pass-2026-10-03/ndis-website-design/process-640.webp 640w, /images/au/visual-pass-2026-10-03/ndis-website-design/process-1280.webp 1280w, /images/au/visual-pass-2026-10-03/ndis-website-design/process-1440.webp 1440w" sizes="(max-width: 820px) calc(100vw - 48px), 560px" kind="photo" ratio="3:2" captionClassName="figcap"
                 subject="A FactoryJet designer on a video call with the owner of a Melbourne NDIS provider, the owner at her desk looking at a laptop that faces her, printed page plans on the desk, no text or logos readable" />
             </div>
             <div className="timeline timeline-4">
@@ -691,7 +694,7 @@ export default function NdisWebsiteDesignAUPage() {
         {/* ═══ NDIS MARKETING → definition module (image left, copy right) ═══ */}
         <section className="definition" id="ndis-marketing">
           <div>
-            <VisualSlot page={PAGE_KEY} slot="definition" kind="photo" ratio="3:2" className="definition-image"
+            <VisualSlot page={PAGE_KEY} slot="definition" src="/images/au/visual-pass-2026-10-03/ndis-website-design/definition-1280.webp" srcSet="/images/au/visual-pass-2026-10-03/ndis-website-design/definition-640.webp 640w, /images/au/visual-pass-2026-10-03/ndis-website-design/definition-1280.webp 1280w, /images/au/visual-pass-2026-10-03/ndis-website-design/definition-1440.webp 1440w" sizes="(max-width: 820px) calc(100vw - 48px), 560px" kind="photo" ratio="3:2" className="definition-image"
               subject="A support coordinator in a Perth office comparing two provider websites on her monitor, which faces her, with a notepad beside the keyboard, no text or logos readable" />
           </div>
           <div className="definition-copy">

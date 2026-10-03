@@ -11,6 +11,8 @@ import AuFaq from '../components/AuFaq';
 import VisualSlot from '../components/VisualSlot';
 import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
+import './page.css';
+import CallRoutingDiagram from './CallRoutingDiagram';
 
 const CANONICAL = 'https://factoryjet.com/au/ai-receptionist';
 const UPDATED = '2026-09-25';
@@ -342,7 +344,7 @@ export default function AiReceptionistAUPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <SiteHeader locale="au" logoHref="/au" />
-      <div className="aiAgentPage auPage">
+      <div className="aiAgentPage auPage auReceptionistVisual">
       <nav className="crumbs" aria-label="Breadcrumb">
         <div className="wrap">
           {crumbs.map((item, index) => (
@@ -488,7 +490,7 @@ export default function AiReceptionistAUPage() {
                   </p>
                 </div>
               </div>
-              <VisualSlot page={PAGE_KEY} slot="facts" kind="photo" ratio="3:2" className="factphoto"
+              <VisualSlot page={PAGE_KEY} slot="facts" src="/images/au/visual-pass-2026-10-03/ai-receptionist/facts-1280.webp" srcSet="/images/au/visual-pass-2026-10-03/ai-receptionist/facts-640.webp 640w, /images/au/visual-pass-2026-10-03/ai-receptionist/facts-1280.webp 1280w, /images/au/visual-pass-2026-10-03/ai-receptionist/facts-1440.webp 1440w" sizes="(max-width: 820px) calc(100vw - 40px), 560px" kind="photo" ratio="3:2" className="factphoto"
                 subject="A tradie busy with both hands at work while a call comes in on his phone">
                 <img src="/images/au/ai-receptionist/ai-receptionist-hero.webp" width={1400} height={933} loading="lazy" decoding="async" alt="A Sydney electrician with both hands in a switchboard while a call comes in on the phone lying on his tool case, ready for an AI receptionist to answer" />
               </VisualSlot>
@@ -539,7 +541,7 @@ export default function AiReceptionistAUPage() {
               <div className="eyebrow">Which option fits you?</div>
               <h2>A 30-second check: app, answering service or custom AI receptionist</h2>
               <p>Tap the line that sounds most like your business. The answer is honest, even when it is not us.</p>
-              <VisualSlot page={PAGE_KEY} slot="proof" kind="photo" ratio="3:2" captionClassName="figcap"
+              <VisualSlot page={PAGE_KEY} slot="proof" src="/images/au/visual-pass-2026-10-03/ai-receptionist/proof-1280.webp" srcSet="/images/au/visual-pass-2026-10-03/ai-receptionist/proof-640.webp 640w, /images/au/visual-pass-2026-10-03/ai-receptionist/proof-1280.webp 1280w, /images/au/visual-pass-2026-10-03/ai-receptionist/proof-1440.webp 1440w" sizes="(max-width: 820px) calc(100vw - 40px), 560px" kind="photo" ratio="3:2" captionClassName="figcap"
                 subject="A clinic receptionist on a headset greeting a patient at the front desk, with a booking calendar on her monitor"
                 caption="In a busy clinic the phone and the patient at the counter compete for the same person. An AI receptionist takes the routine calls, so the front desk can look after the people in the room.">
                 <img src="/images/au/ai-receptionist/ai-receptionist-clinic.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A receptionist on a headset at a Melbourne physiotherapy clinic front desk greets a patient, with a colour-block booking calendar on her monitor" />
@@ -616,7 +618,7 @@ export default function AiReceptionistAUPage() {
                 </p>
               </div>
             </div>
-            <div className="tablewrap">
+            <div className="tablewrap" tabIndex={0} role="region" aria-label="Scrollable receptionist options comparison">
               <table>
                 <thead>
                   <tr>
@@ -650,7 +652,9 @@ export default function AiReceptionistAUPage() {
 
         {/* ═══ PHOTOBREAK (US template visual, no AU image yet) ═══ */}
         <VisualSlot page={PAGE_KEY} slot="photobreak" kind="illustration" ratio="12:5" className="photobreak"
-          subject="AI-generated model: a white desk phone on a long rail of call cards, one orange card lifted out and passed to a small human figure" />
+          subject="AI-generated model: a white desk phone on a long rail of call cards, one orange card lifted out and passed to a small human figure" src={null}>
+          <CallRoutingDiagram />
+        </VisualSlot>
 
         {/* ═══ HOW WE BUILD IT → process timeline (steps stay openable, as the copy says) ═══ */}
         <section className="section process" id="how-we-build">
@@ -665,7 +669,7 @@ export default function AiReceptionistAUPage() {
                   see what happens in it.
                 </p>
               </div>
-              <VisualSlot page={PAGE_KEY} slot="process" kind="photo" ratio="3:2" captionClassName="figcap"
+              <VisualSlot page={PAGE_KEY} slot="process" src="/images/au/visual-pass-2026-10-03/ai-receptionist/process-1280.webp" srcSet="/images/au/visual-pass-2026-10-03/ai-receptionist/process-640.webp 640w, /images/au/visual-pass-2026-10-03/ai-receptionist/process-1280.webp 1280w, /images/au/visual-pass-2026-10-03/ai-receptionist/process-1440.webp 1440w" sizes="(max-width: 820px) calc(100vw - 40px), 560px" kind="photo" ratio="3:2" captionClassName="figcap"
                 subject="A FactoryJet engineer and a clinic practice manager listening to real incoming calls together while she takes notes"
                 caption="Step one is listening. We go through a sample of your real calls with you, then map every type of call, what should happen, and where a person takes over. That call map is what you sign off.">
                 <img src="/images/au/ai-receptionist/ai-receptionist-listening.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A FactoryJet engineer and an Adelaide vet clinic practice manager share earbuds to listen to real incoming calls while she takes notes" />
@@ -872,7 +876,7 @@ export default function AiReceptionistAUPage() {
         {/* ═══ INDUSTRIES, CONTINUED → definition module (image left, copy right) ═══ */}
         <section className="definition" id="more-industries">
           <div>
-            <VisualSlot page={PAGE_KEY} slot="definition" kind="photo" ratio="3:2" className="definition-image"
+            <VisualSlot page={PAGE_KEY} slot="definition" src="/images/au/visual-pass-2026-10-03/ai-receptionist/definition-1280.webp" srcSet="/images/au/visual-pass-2026-10-03/ai-receptionist/definition-640.webp 640w, /images/au/visual-pass-2026-10-03/ai-receptionist/definition-1280.webp 1280w, /images/au/visual-pass-2026-10-03/ai-receptionist/definition-1440.webp 1440w" sizes="(max-width: 820px) calc(100vw - 40px), 560px" kind="photo" ratio="3:2" className="definition-image"
               subject="A dental receptionist greeting an arriving patient face to face while the desk phone stays quiet">
               <img src="/images/au/ai-receptionist/ai-receptionist-dental.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A dental receptionist at a bright Brisbane practice greets an arriving patient face to face while the desk phone stays quiet" />
             </VisualSlot>

@@ -1,0 +1,65 @@
+{
+  "provenance": "Responsive derivatives of existing reviewed AI-generated site assets; illustrative scenes, not project proof.",
+  "assets": [
+    {
+      "file": "facts-640.webp",
+      "source": "/images/au/generated/ai-receptionist/facts.webp",
+      "bytes": 21544
+    },
+    {
+      "file": "facts-1280.webp",
+      "source": "/images/au/generated/ai-receptionist/facts.webp",
+      "bytes": 49146
+    },
+    {
+      "file": "facts-1440.webp",
+      "source": "/images/au/generated/ai-receptionist/facts.webp",
+      "bytes": 63934
+    },
+    {
+      "file": "proof-640.webp",
+      "source": "/images/au/generated/ai-receptionist/proof.webp",
+      "bytes": 21768
+    },
+    {
+      "file": "proof-1280.webp",
+      "source": "/images/au/generated/ai-receptionist/proof.webp",
+      "bytes": 48588
+    },
+    {
+      "file": "proof-1440.webp",
+      "source": "/images/au/generated/ai-receptionist/proof.webp",
+      "bytes": 60938
+    },
+    {
+      "file": "process-640.webp",
+      "source": "/images/au/generated/ai-receptionist/process.webp",
+      "bytes": 28938
+    },
+    {
+      "file": "process-1280.webp",
+      "source": "/images/au/generated/ai-receptionist/process.webp",
+      "bytes": 65432
+    },
+    {
+      "file": "process-1440.webp",
+      "source": "/images/au/generated/ai-receptionist/process.webp",
+      "bytes": 83036
+    },
+    {
+      "file": "definition-640.webp",
+      "source": "/images/au/generated/ai-receptionist/definition.webp",
+      "bytes": 21994
+    },
+    {
+      "file": "definition-1280.webp",
+      "source": "/images/au/generated/ai-receptionist/definition.webp",
+      "bytes": 49396
+    },
+    {
+      "file": "definition-1440.webp",
+      "source": "/images/au/generated/ai-receptionist/definition.webp",
+      "bytes": 61662
+    }
+  ]
+}

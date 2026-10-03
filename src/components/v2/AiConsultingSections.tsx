@@ -22,8 +22,7 @@ import './AiConsultingSections.css';
  * the Service, ItemList and BreadcrumbList JSON-LD in page.tsx, so schema always matches
  * what the reader sees. The FAQ array lives in AiConsultingFaqs.ts.
  *
- * Visuals: every intended image is a <figure data-visual-slot> placeholder, hidden from
- * visitors by AiConsultingSections.css until the Codex visual pass fills it.
+ * Visuals: page-specific editorial illustrations and an accessible readiness diagram.
  * No FactoryJet prices on this page: cost questions link to the cost guides.
  */
 
@@ -52,8 +51,11 @@ function CapIcon({ d }: { d: string }) {
   );
 }
 
-/** Placeholder for the Codex visual pass. Hidden from visitors while data-visual-status is "placeholder". */
+/** Generated editorial scenes are illustrative, not photographs of staff or clients. */
 function VisualSlot({ slot, kind, subject, ratio, className }: { slot: string; kind: 'photo' | 'diagram' | 'illustration' | 'mockup' | 'map'; subject: string; ratio: string; className?: string }) {
+  const panoramic = slot === 'photobreak-implementation';
+  const asset = panoramic ? 'implementation' : 'workshop';
+  const imageRoot = '/images/us/visual-pass-2026-10-02/ai-consulting';
   return (
     <figure
       className={className ? `visual-slot ${className}` : 'visual-slot'}
@@ -61,9 +63,48 @@ function VisualSlot({ slot, kind, subject, ratio, className }: { slot: string; k
       data-visual-kind={kind}
       data-visual-subject={subject}
       data-visual-ratio={ratio}
-      data-visual-status="placeholder"
-      aria-hidden="true"
-    />
+      data-visual-status="ready"
+    >
+      {kind === 'diagram' ? <ReadinessDiagram /> : (
+        <img
+          src={`${imageRoot}/${asset}-${panoramic ? 1536 : 960}.webp`}
+          srcSet={`${imageRoot}/${asset}-${panoramic ? 768 : 640}.webp ${panoramic ? 768 : 640}w, ${imageRoot}/${asset}-${panoramic ? 1536 : 960}.webp ${panoramic ? 1536 : 960}w`}
+          sizes={panoramic ? '(max-width: 820px) calc(100vw - 40px), (max-width: 1264px) calc(100vw - 64px), 1200px' : '(max-width: 820px) calc(100vw - 40px), (max-width: 1264px) 38vw, 420px'}
+          width={panoramic ? 1536 : 960}
+          height={panoramic ? 560 : 640}
+          loading="lazy"
+          decoding="async"
+          alt={panoramic ? 'AI-generated illustration of colleagues reviewing a draft order in a distribution office.' : 'AI-generated illustration of three business colleagues mapping a workflow with orange sticky notes.'}
+        />
+      )}
+    </figure>
+  );
+}
+
+function ReadinessDiagram() {
+  const pillars = [
+    { x: 57, y: 150, height: 122, icon: 'M-12-9c0-7 24-7 24 0s-24 7-24 0Zm0 0v17c0 7 24 7 24 0V-9m-24 8c0 7 24 7 24 0' },
+    { x: 145, y: 122, height: 150, icon: 'M-7-15v9m14-9v9M-12-6h24v8c0 7-5 12-12 12S-12 9-12 2v-8Zm12 20v7' },
+    { x: 233, y: 205, height: 67, icon: 'M-6-17H6v12H-6v-12ZM0-5v7m-14 0h28M-14 2v7m28-7v7m-34 0h12v12h-12V9Zm28 0h12v12H8V9Z' },
+    { x: 321, y: 142, height: 130, icon: 'M0-3a6 6 0 1 0 0-12 6 6 0 0 0 0 12ZM-10 16v-5c0-12 20-12 20 0v5M-12-4a5 5 0 1 1 0-10M12-4a5 5 0 1 0 0-10M-17 14V8m34 6V8' },
+    { x: 409, y: 132, height: 140, icon: 'M0-17-14-11v12c0 11 14 18 14 18S14 12 14 1v-12L0-17Zm-7 17 5 5 10-11' },
+  ];
+  return (
+    <svg viewBox="0 0 520 347" role="img" aria-labelledby="ai-consulting-readiness-title ai-consulting-readiness-desc" className="readiness-diagram">
+      <title id="ai-consulting-readiness-title">Five pillars of AI readiness</title>
+      <desc id="ai-consulting-readiness-desc">An illustrative comparison of data, systems, process, people and governance. The shorter orange process pillar identifies a gap to address first. Bar heights are conceptual, not measured client scores.</desc>
+      <path className="readiness-grid" d="M40 92h440M40 152h440M40 212h440M40 272h440" />
+      {pillars.map((pillar, index) => (
+        <g key={pillar.x} className={index === 2 ? 'readiness-pillar readiness-gap' : 'readiness-pillar'}>
+          <rect className="readiness-track" x={pillar.x} y="92" width="54" height="180" rx="8" />
+          <rect className="readiness-bar" x={pillar.x} y={pillar.y} width="54" height={pillar.height} rx="8" />
+          <path className="readiness-icon" d={pillar.icon} transform={`translate(${pillar.x + 27} 57)`} />
+        </g>
+      ))}
+      <path className="readiness-focus" d="M249 190l11 11 11-11" />
+      <circle className="readiness-key" cx="260" cy="309" r="5" />
+      <path className="readiness-grid" d="M51 309h187m44 0h187" />
+    </svg>
   );
 }
 
@@ -334,7 +375,7 @@ export default function AiConsultingSections() {
               <div className="eyebrow">Compare</div>
               <h2>AI Consulting vs. AI Development vs. AI Agent Development</h2>
             </div>
-            <div className="tablewrap">
+            <div className="tablewrap" tabIndex={0} role="region" aria-label="AI consulting service comparison">
               <table>
                 <thead><tr><th>Service</th><th>The question it answers</th><th>What you get</th><th>Start here when</th></tr></thead>
                 <tbody>
@@ -477,7 +518,7 @@ export default function AiConsultingSections() {
               <h2>Types of AI Consulting Firms, and Who Each One Suits</h2>
               <p>Every kind of firm below does good work for the right client. The mistake is hiring a firm built for a different size of business than yours.</p>
             </div>
-            <div className="tablewrap">
+            <div className="tablewrap" tabIndex={0} role="region" aria-label="Types of AI consulting firms comparison">
               <table>
                 <thead><tr><th>Type of firm</th><th>Best for</th><th>What you usually get</th><th>Watch for</th></tr></thead>
                 <tbody>
@@ -516,7 +557,7 @@ export default function AiConsultingSections() {
               <h2>Who Ranks for AI Consulting Services in the US Today</h2>
               <p>These are the consulting firms on Google&apos;s first page for ai consulting services and ai implementation services in the US, pulled from DataForSEO (desktop, English) on 26 September 2026. The number is each firm&apos;s order among the organic results. Roundups, review sites and analyst pages are left out because they are not consulting firms. Rankings move every week, so treat this as a snapshot.</p>
             </div>
-            <div className="tablewrap">
+            <div className="tablewrap" tabIndex={0} role="region" aria-label="AI consulting firms search snapshot">
               <table>
                 <thead><tr><th>Firm</th><th>Google order, 26 Sep 2026</th><th>What their page offers</th><th>Also worth knowing</th></tr></thead>
                 <tbody>

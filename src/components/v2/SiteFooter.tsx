@@ -3,6 +3,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import { AU_FOOTER_COLUMNS } from '@/data/auFooterColumns';
 import { RECOGNITION_PROFILES } from '@/data/recognitionProfiles';
 import Wordmark from './Wordmark';
+import UsSiteFooter from './UsSiteFooter';
 
 /**
  * SiteFooter — v2.0 bottom-of-page chrome.
@@ -231,6 +232,14 @@ export default function SiteFooter({
 
   const currentRegion = REGION_LABEL[locale] ?? 'United States';
   const surfaceClass = isDark ? 'border-white/10 bg-white/[0.03]' : 'border-fj-neutral-200 bg-white/60';
+
+  // Only the US canonical directory gets the compact redesign. Explicit local
+  // columns and all AU / UAE / India footers retain their existing presentation.
+  if (resolvedColumns === US_FOOTER_COLUMNS) {
+    return <UsSiteFooter logoText={logoText} tagline={tagline} copyright={copyright}
+      bottomLinks={bottomLinks} regions={REGIONS} currentRegion={currentRegion}
+      isDark={isDark} showRecognition={showRecognition} className={className} />;
+  }
 
   return (
     <footer className={`${sectionClass} ${className}`.trim()}>

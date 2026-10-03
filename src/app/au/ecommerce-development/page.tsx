@@ -10,7 +10,9 @@ import AuFaq from '../components/AuFaq';
 import VisualSlot from '../components/VisualSlot';
 import '@/components/v2/AiAgentDevelopmentSections.css';
 import '../au-page.css';
+import { CommerceArchitecture, CommerceServiceDiagram, CommerceChannelsDiagram } from './CommerceDiagram';
 import '../au-hub.css';
+import './visual.css';
 
 const CANONICAL = 'https://factoryjet.com/au/ecommerce-development';
 const UPDATED = '2026-09-26';
@@ -436,7 +438,7 @@ export default function EcommerceDevelopmentAUPage() {
 
       <SiteHeader locale="au" logoHref="/au" />
 
-      <div className="aiAgentPage auPage">
+      <div className="aiAgentPage auPage auCommerceVisual">
       <nav className="crumbs" aria-label="Breadcrumb">
         <div className="wrap">
           {crumbs.map((item, index) => (
@@ -488,6 +490,7 @@ export default function EcommerceDevelopmentAUPage() {
                   <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M3 6a5 5 0 1 1 0 4M3 2v4h4" /></svg>
                 </button>
               </div>
+              <CommerceArchitecture compact />
               <div className="specpanel-body" role="radiogroup" aria-label="Explore what you get">
                 <label className="specrow run">
                   <input className="workflow-select" type="radio" name="ecom-step" value="1" />
@@ -576,7 +579,7 @@ export default function EcommerceDevelopmentAUPage() {
                   </p>
                 </div>
               </div>
-              <VisualSlot page={PAGE_KEY} slot="facts" kind="photo" ratio="3:2" className="factphoto"
+              <VisualSlot page={PAGE_KEY} slot="facts" src="/images/au/visual-pass-2026-10-03/ecommerce-development/facts-1536.webp" srcSet="/images/au/visual-pass-2026-10-03/ecommerce-development/facts-640.webp 640w, /images/au/visual-pass-2026-10-03/ecommerce-development/facts-1280.webp 1280w, /images/au/visual-pass-2026-10-03/ecommerce-development/facts-1536.webp 1536w" sizes="(max-width: 820px) calc(100vw - 40px), 560px" kind="photo" ratio="3:2" className="factphoto"
                 subject="The owner of a Melbourne homewares brand reviewing product pages on her online store at a timber desk">
                 <img src="/images/au/ecommerce-development/ecommerce-development-hero.webp" width={1400} height={933} loading="lazy" decoding="async" alt="The owner of a Melbourne homewares brand reviewing product pages on her online store, seen over her shoulder at a bright timber desk" />
               </VisualSlot>
@@ -600,7 +603,7 @@ export default function EcommerceDevelopmentAUPage() {
               <a className="cap cap-1" href="/au/shopify-development">
                 <div className="caphead"><span className="capid">Most asked for</span><svg {...CAP_ICON}><path d={HERO_ICONS[0]} /></svg></div>
                 <VisualSlot page={PAGE_KEY} slot="capability-01" kind="diagram" ratio="11:4" className="cap-diagram"
-                  subject="AI-generated model: a white Shopify-style storefront block with an orange theme panel sliding into place" />
+                  subject="AI-generated model: a white Shopify-style storefront block with an orange theme panel sliding into place" src={null}><CommerceServiceDiagram /></VisualSlot>
                 <h3>Shopify development Australia</h3>
                 <p>
                   Custom Shopify and Shopify Plus themes, apps chosen with care, B2B wholesale on Shopify, and
@@ -613,7 +616,7 @@ export default function EcommerceDevelopmentAUPage() {
               <a className="cap cap-2" href="/au/ai-seo">
                 <div className="caphead"><span className="capid">New way shoppers search</span><svg {...CAP_ICON}><path d={HERO_ICONS[3]} /></svg></div>
                 <VisualSlot page={PAGE_KEY} slot="capability-02" kind="diagram" ratio="11:4" className="cap-diagram"
-                  subject="AI-generated model: a white chat bubble quoting a small product card, with an orange citation marker" />
+                  subject="AI-generated model: a white chat bubble quoting a small product card, with an orange citation marker" src={null}><CommerceServiceDiagram search /></VisualSlot>
                 <h3>AI SEO for online stores</h3>
                 <p>
                   Shoppers now ask ChatGPT, Perplexity and Google AI Overviews which brand to buy from. AI SEO works on
@@ -646,7 +649,9 @@ export default function EcommerceDevelopmentAUPage() {
 
         {/* ═══ PHOTOBREAK (US template visual, no AU image yet) ═══ */}
         <VisualSlot page={PAGE_KEY} slot="photobreak" kind="illustration" ratio="12:5" className="photobreak"
-          subject="AI-generated model: a white online store on a phone-sized stand, connected by orange cables to small accounts, stock and courier blocks" />
+          subject="AI-generated model: a white online store on a phone-sized stand, connected by orange cables to small accounts, stock and courier blocks" src={null}>
+          <CommerceArchitecture />
+        </VisualSlot>
 
         {/* ═══ START TO FINISH → process timeline (stages stay openable, as the copy says) + timelines table ═══ */}
         <section className="section process" id="start-to-finish">
@@ -660,7 +665,7 @@ export default function EcommerceDevelopmentAUPage() {
                   what happens and what you walk away with.
                 </p>
               </div>
-              <VisualSlot page={PAGE_KEY} slot="process" kind="photo" ratio="3:2" captionClassName="figcap"
+              <VisualSlot page={PAGE_KEY} slot="process" src="/images/au/visual-pass-2026-10-03/ecommerce-development/process-1536.webp" srcSet="/images/au/visual-pass-2026-10-03/ecommerce-development/process-640.webp 640w, /images/au/visual-pass-2026-10-03/ecommerce-development/process-1280.webp 1280w, /images/au/visual-pass-2026-10-03/ecommerce-development/process-1536.webp 1536w" sizes="(max-width: 820px) calc(100vw - 40px), 560px" kind="photo" ratio="3:2" captionClassName="figcap"
                 subject="A designer sketching mobile product page wireframes in a paper sketchbook, a phone and closed laptop beside him"
                 caption="Structure before colour. We sketch how a shopper moves from a search to a paid order as simple boxes on a phone-sized page, then design around that path.">
                 <img src="/images/au/ecommerce-development/ecommerce-development-planning.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A designer in a Sydney studio sketching mobile product page wireframes in a paper sketchbook, seen over his shoulder, with a phone and closed laptop beside him" />
@@ -680,7 +685,7 @@ export default function EcommerceDevelopmentAUPage() {
               ))}
             </div>
 
-            <div className="tablewrap">
+            <div className="tablewrap" role="region" tabIndex={0} aria-label="ecommerce development comparison 1">
               <table>
                 <thead>
                   <tr><th>Type of ecommerce build</th><th className="fj">Typical timeline</th><th>What moves the date</th></tr>
@@ -807,7 +812,7 @@ export default function EcommerceDevelopmentAUPage() {
               <VisualSlot page={PAGE_KEY} slot="facts-2" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
                 subject="A shopper at a riverside cafe browsing a product page for a ceramic vase on her phone"
                 caption="This is where the sale happens: one hand, a phone, a few spare minutes. Photo, options and the buy button all fit on the first screen.">
-                <img src="/images/au/ecommerce-development/ecommerce-development-mobile.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A shopper at a sunny Brisbane riverside cafe browsing a product page for a ceramic vase on her phone, seen over her shoulder" />
+                <img src="/images/au/visual-pass-2026-10-03/ecommerce-development/mobile-1200.webp" srcSet="/images/au/visual-pass-2026-10-03/ecommerce-development/mobile-640.webp 640w, /images/au/visual-pass-2026-10-03/ecommerce-development/mobile-1200.webp 1200w" sizes="(max-width: 820px) calc(100vw - 40px), 560px" width={1200} height={800} loading="lazy" decoding="async" alt="A shopper at a sunny Brisbane riverside cafe browsing a product page for a ceramic vase on her phone, seen over her shoulder" />
               </VisualSlot>
             </div>
           </div>
@@ -824,7 +829,7 @@ export default function EcommerceDevelopmentAUPage() {
         {/* ═══ INTEGRATIONS (Australian stack) → definition module (image left, copy right) ═══ */}
         <section className="definition" id="integrations">
           <div>
-            <VisualSlot page={PAGE_KEY} slot="definition" kind="photo" ratio="3:2" className="definition-image"
+            <VisualSlot page={PAGE_KEY} slot="definition" src="/images/au/visual-pass-2026-10-03/ecommerce-development/definition-1536.webp" srcSet="/images/au/visual-pass-2026-10-03/ecommerce-development/definition-640.webp 640w, /images/au/visual-pass-2026-10-03/ecommerce-development/definition-1280.webp 1280w, /images/au/visual-pass-2026-10-03/ecommerce-development/definition-1536.webp 1536w" sizes="(max-width: 820px) calc(100vw - 40px), 560px" kind="photo" ratio="3:2" className="definition-image"
               subject="An operations manager at an online homewares brand checking synced orders on her laptop beside a label printer and courier satchels">
               <img src="/images/au/ecommerce-development/ecommerce-development-packing.webp" width={1200} height={800} loading="lazy" decoding="async" alt="An operations manager at a Melbourne online homewares brand checking synced orders on her laptop, with a label printer and courier satchels ready beside her" />
             </VisualSlot>
@@ -916,10 +921,10 @@ export default function EcommerceDevelopmentAUPage() {
               <VisualSlot page={PAGE_KEY} slot="facts-3" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
                 subject="A trade customer and a sales rep in a wholesale showroom looking at a trade ordering portal on a tablet"
                 caption="A good trade portal gives your reps a tool to sell with, not a website to compete with. They can log in as a customer and place the order for them.">
-                <img src="/images/au/ecommerce-development/ecommerce-development-trade.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A trade customer and a sales rep in a Brisbane wholesale showroom looking at a trade ordering portal on a tablet" />
+                <img src="/images/au/visual-pass-2026-10-03/ecommerce-development/trade-1200.webp" srcSet="/images/au/visual-pass-2026-10-03/ecommerce-development/trade-640.webp 640w, /images/au/visual-pass-2026-10-03/ecommerce-development/trade-1200.webp 1200w" sizes="(max-width: 820px) calc(100vw - 40px), 560px" width={1200} height={800} loading="lazy" decoding="async" alt="A trade customer and a sales rep in a Brisbane wholesale showroom looking at a trade ordering portal on a tablet" />
               </VisualSlot>
             </div>
-            <div className="tablewrap span-all">
+            <div className="tablewrap span-all" role="region" tabIndex={0} aria-label="ecommerce development comparison 2">
               <table>
                 <thead><tr><th>Area</th><th>B2B (trade)</th><th>DTC (public)</th></tr></thead>
                 <tbody>
@@ -957,6 +962,7 @@ export default function EcommerceDevelopmentAUPage() {
               </div>
             </div>
           </div>
+          <div className="wrap commerce-channel-frame"><CommerceChannelsDiagram /></div>
         </section>
 
         {/* ═══ MIGRATION (six steps) → facts with numbered rows ═══ */}
@@ -991,7 +997,7 @@ export default function EcommerceDevelopmentAUPage() {
               <VisualSlot page={PAGE_KEY} slot="facts-4" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
                 subject="Two ecommerce engineers checking a redirect map on one monitor against the new store on another, a phone on a stand for mobile testing"
                 caption="Old addresses on the left, new store on the right. Every line on that map becomes one 301 redirect, and each one is tested on the staging store before launch.">
-                <img src="/images/au/ecommerce-development/ecommerce-development-migration.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Two ecommerce engineers in a bright Adelaide office checking a redirect map on one monitor against the new store on another, with a phone on a stand for mobile testing" />
+                <img src="/images/au/visual-pass-2026-10-03/ecommerce-development/migration-1200.webp" srcSet="/images/au/visual-pass-2026-10-03/ecommerce-development/migration-640.webp 640w, /images/au/visual-pass-2026-10-03/ecommerce-development/migration-1200.webp 1200w" sizes="(max-width: 820px) calc(100vw - 40px), 560px" width={1200} height={800} loading="lazy" decoding="async" alt="Two ecommerce engineers in a bright Adelaide office checking a redirect map on one monitor against the new store on another, with a phone on a stand for mobile testing" />
               </VisualSlot>
             </div>
           </div>
@@ -1070,7 +1076,7 @@ export default function EcommerceDevelopmentAUPage() {
                 Use these with any ecommerce development company in Australia, including us. Tap each one for what a
                 good answer sounds like.
               </p>
-              <VisualSlot page={PAGE_KEY} slot="proof" kind="illustration" ratio="3:2"
+              <VisualSlot page={PAGE_KEY} slot="proof" src="/images/au/visual-pass-2026-10-03/ecommerce-development/proof-1536.webp" srcSet="/images/au/visual-pass-2026-10-03/ecommerce-development/proof-640.webp 640w, /images/au/visual-pass-2026-10-03/ecommerce-development/proof-1280.webp 1280w, /images/au/visual-pass-2026-10-03/ecommerce-development/proof-1536.webp 1536w" sizes="(max-width: 820px) calc(100vw - 40px), 560px" kind="illustration" ratio="3:2"
                 subject="AI-generated model: a white eight-line checklist on a clipboard, orange ticks on each line" />
             </div>
             <div className="ventries">
@@ -1092,7 +1098,7 @@ export default function EcommerceDevelopmentAUPage() {
               <div className="eyebrow">Side by side</div>
               <h2>Ecommerce agency vs freelancer vs in-house developer</h2>
             </div>
-            <div className="tablewrap">
+            <div className="tablewrap" role="region" tabIndex={0} aria-label="ecommerce development comparison 3">
               <table>
                 <thead>
                   <tr><th>What you get</th><th className="fj">FactoryJet</th><th>Solo freelancer</th><th>In-house developer</th></tr>
@@ -1159,7 +1165,7 @@ export default function EcommerceDevelopmentAUPage() {
           <div>
             <VisualSlot page={PAGE_KEY} slot="definition-2" kind="photo" ratio="3:2" className="definition-image"
               subject="The owner of a homewares and gift shop on a video call with his ecommerce team from the back room of his store">
-              <img src="/images/au/ecommerce-development/ecommerce-development-remote.webp" width={1200} height={800} loading="lazy" decoding="async" alt="The owner of a Perth homewares and gift shop on a video call with his ecommerce team from the back room of his store, seen over his shoulder" />
+              <img src="/images/au/visual-pass-2026-10-03/ecommerce-development/remote-1200.webp" srcSet="/images/au/visual-pass-2026-10-03/ecommerce-development/remote-640.webp 640w, /images/au/visual-pass-2026-10-03/ecommerce-development/remote-1200.webp 1200w" sizes="(max-width: 820px) calc(100vw - 40px), 560px" width={1200} height={800} loading="lazy" decoding="async" alt="The owner of a Perth homewares and gift shop on a video call with his ecommerce team from the back room of his store, seen over his shoulder" />
             </VisualSlot>
             <p className="figcap">
               A weekly call from the back of the shop, a shared board and a staging store you can open any time.

@@ -1,0 +1,132 @@
+{
+  "reviewed": "2026-10-03 contact sheet /tmp/au-b5-a-assets.jpg",
+  "purpose": "Responsive derivatives of existing illustrative assets; no new proof",
+  "images": [
+    {
+      "slot": "facts",
+      "source": "generated/shopify-development/facts.webp",
+      "width": 640,
+      "file": "facts-640.webp",
+      "bytes": 34312
+    },
+    {
+      "slot": "facts",
+      "source": "generated/shopify-development/facts.webp",
+      "width": 1280,
+      "file": "facts-1280.webp",
+      "bytes": 78330
+    },
+    {
+      "slot": "facts",
+      "source": "generated/shopify-development/facts.webp",
+      "width": 1536,
+      "file": "facts-1536.webp",
+      "bytes": 110566
+    },
+    {
+      "slot": "definition",
+      "source": "generated/shopify-development/definition.webp",
+      "width": 640,
+      "file": "definition-640.webp",
+      "bytes": 30572
+    },
+    {
+      "slot": "definition",
+      "source": "generated/shopify-development/definition.webp",
+      "width": 1280,
+      "file": "definition-1280.webp",
+      "bytes": 70184
+    },
+    {
+      "slot": "definition",
+      "source": "generated/shopify-development/definition.webp",
+      "width": 1536,
+      "file": "definition-1536.webp",
+      "bytes": 93590
+    },
+    {
+      "slot": "proof",
+      "source": "generated/shopify-development/proof.webp",
+      "width": 640,
+      "file": "proof-640.webp",
+      "bytes": 29752
+    },
+    {
+      "slot": "proof",
+      "source": "generated/shopify-development/proof.webp",
+      "width": 1280,
+      "file": "proof-1280.webp",
+      "bytes": 68054
+    },
+    {
+      "slot": "proof",
+      "source": "generated/shopify-development/proof.webp",
+      "width": 1536,
+      "file": "proof-1536.webp",
+      "bytes": 95434
+    },
+    {
+      "slot": "b2b",
+      "source": "generated/shopify-development/facts-2.webp",
+      "width": 640,
+      "file": "b2b-640.webp",
+      "bytes": 38654
+    },
+    {
+      "slot": "b2b",
+      "source": "generated/shopify-development/facts-2.webp",
+      "width": 1280,
+      "file": "b2b-1280.webp",
+      "bytes": 88432
+    },
+    {
+      "slot": "b2b",
+      "source": "generated/shopify-development/facts-2.webp",
+      "width": 1536,
+      "file": "b2b-1536.webp",
+      "bytes": 122696
+    },
+    {
+      "slot": "mobile",
+      "source": "shopify-development/shopify-development-build.webp",
+      "width": 640,
+      "file": "mobile-640.webp",
+      "bytes": 33968
+    },
+    {
+      "slot": "mobile",
+      "source": "shopify-development/shopify-development-build.webp",
+      "width": 1200,
+      "file": "mobile-1200.webp",
+      "bytes": 80866
+    },
+    {
+      "slot": "returns",
+      "source": "shopify-development/shopify-development-warehouse.webp",
+      "width": 640,
+      "file": "returns-640.webp",
+      "bytes": 32538
+    },
+    {
+      "slot": "returns",
+      "source": "shopify-development/shopify-development-warehouse.webp",
+      "width": 1200,
+      "file": "returns-1200.webp",
+      "bytes": 79754
+    },
+    {
+      "slot": "dispatch",
+      "source": "shopify-development/shopify-development-dispatch.webp",
+      "width": 640,
+      "file": "dispatch-640.webp",
+      "bytes": 32652
+    },
+    {
+      "slot": "dispatch",
+      "source": "shopify-development/shopify-development-dispatch.webp",
+      "width": 1200,
+      "file": "dispatch-1200.webp",
+      "bytes": 80806
+    }
+  ]
+}

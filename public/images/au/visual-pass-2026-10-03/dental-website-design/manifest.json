@@ -1,0 +1,110 @@
+{
+  "provenance": "Existing page-specific AI-generated illustrative images, generated 2026-09-26; original prompts and reviews in public/images/au/dental-website-design/IMAGE-CREDITS.txt. Not client project or patient proof.",
+  "derivatives": [
+    {
+      "path": "public/images/au/visual-pass-2026-10-03/dental-website-design/dental-hero-480.webp",
+      "width": 480,
+      "height": 320,
+      "bytes": 18358,
+      "source": "public/images/au/dental-website-design/dental-website-hero.webp"
+    },
+    {
+      "path": "public/images/au/visual-pass-2026-10-03/dental-website-design/dental-hero-800.webp",
+      "width": 800,
+      "height": 533,
+      "bytes": 35000,
+      "source": "public/images/au/dental-website-design/dental-website-hero.webp"
+    },
+    {
+      "path": "public/images/au/visual-pass-2026-10-03/dental-website-design/dental-hero-1200.webp",
+      "width": 1200,
+      "height": 800,
+      "bytes": 54088,
+      "source": "public/images/au/dental-website-design/dental-website-hero.webp"
+    },
+    {
+      "path": "public/images/au/visual-pass-2026-10-03/dental-website-design/dental-photos-480.webp",
+      "width": 480,
+      "height": 320,
+      "bytes": 15234,
+      "source": "public/images/au/dental-website-design/dental-website-photos.webp"
+    },
+    {
+      "path": "public/images/au/visual-pass-2026-10-03/dental-website-design/dental-photos-800.webp",
+      "width": 800,
+      "height": 533,
+      "bytes": 29450,
+      "source": "public/images/au/dental-website-design/dental-website-photos.webp"
+    },
+    {
+      "path": "public/images/au/visual-pass-2026-10-03/dental-website-design/dental-photos-1200.webp",
+      "width": 1200,
+      "height": 800,
+      "bytes": 52418,
+      "source": "public/images/au/dental-website-design/dental-website-photos.webp"
+    },
+    {
+      "path": "public/images/au/visual-pass-2026-10-03/dental-website-design/dental-review-480.webp",
+      "width": 480,
+      "height": 320,
+      "bytes": 18334,
+      "source": "public/images/au/dental-website-design/dental-website-review.webp"
+    },
+    {
+      "path": "public/images/au/visual-pass-2026-10-03/dental-website-design/dental-review-800.webp",
+      "width": 800,
+      "height": 533,
+      "bytes": 37292,
+      "source": "public/images/au/dental-website-design/dental-website-review.webp"
+    },
+    {
+      "path": "public/images/au/visual-pass-2026-10-03/dental-website-design/dental-review-1200.webp",
+      "width": 1200,
+      "height": 800,
+      "bytes": 72956,
+      "source": "public/images/au/dental-website-design/dental-website-review.webp"
+    },
+    {
+      "path": "public/images/au/visual-pass-2026-10-03/dental-website-design/dental-booking-480.webp",
+      "width": 480,
+      "height": 320,
+      "bytes": 19742,
+      "source": "public/images/au/dental-website-design/dental-website-booking.webp"
+    },
+    {
+      "path": "public/images/au/visual-pass-2026-10-03/dental-website-design/dental-booking-800.webp",
+      "width": 800,
+      "height": 533,
+      "bytes": 38634,
+      "source": "public/images/au/dental-website-design/dental-website-booking.webp"
+    },
+    {
+      "path": "public/images/au/visual-pass-2026-10-03/dental-website-design/dental-booking-1200.webp",
+      "width": 1200,
+      "height": 800,
+      "bytes": 69662,
+      "source": "public/images/au/dental-website-design/dental-website-booking.webp"
+    },
+    {
+      "path": "public/images/au/visual-pass-2026-10-03/dental-website-design/dental-access-480.webp",
+      "width": 480,
+      "height": 320,
+      "bytes": 17598,
+      "source": "public/images/au/dental-website-design/dental-website-access.webp"
+    },
+    {
+      "path": "public/images/au/visual-pass-2026-10-03/dental-website-design/dental-access-800.webp",
+      "width": 800,
+      "height": 533,
+      "bytes": 32228,
+      "source": "public/images/au/dental-website-design/dental-website-access.webp"
+    },
+    {
+      "path": "public/images/au/visual-pass-2026-10-03/dental-website-design/dental-access-1200.webp",
+      "width": 1200,
+      "height": 800,
+      "bytes": 55676,
+      "source": "public/images/au/dental-website-design/dental-website-access.webp"
+    }
+  ]
+}
