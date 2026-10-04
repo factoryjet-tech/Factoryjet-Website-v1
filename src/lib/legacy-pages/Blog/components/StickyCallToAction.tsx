@@ -52,7 +52,7 @@ export function StickyCallToAction() {
         <div className="min-w-0 flex-1 text-white">
           <span className="font-fj-display font-bold text-base">Have a project in mind?</span>
           <span className="ml-2 text-sm" style={{ color: 'rgba(255,255,255,0.62)' }}>
-            Get a free quote &mdash; the founder replies within 24 hours.
+            Get a fixed quote. The founder usually replies within 2 to 3 hours.
           </span>
         </div>
         <button

@@ -7,6 +7,7 @@ import { StickyCallToAction } from './StickyCallToAction';
 import { ShareButton } from './ShareButton';
 import { BlogHeroImage } from './BlogHeroImage';
 import BlogLeadCapture from '@/components/BlogLeadCapture';
+import { blogLeadOffer } from '../leadOffer';
 import './BlogPostPage.css';
 import { getAuthorByName } from '@/data/authors';
 import {
@@ -15,7 +16,6 @@ import {
   Clock,
   Twitter,
   Linkedin,
-  Rocket,
   Lightbulb,
   ChevronDown,
   ArrowUpRight,
@@ -75,6 +75,8 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({
   relatedPosts = [],
   relatedServices = [],
 }) => {
+  // One offer per post, matched to its topic and market (see ../leadOffer.ts).
+  const leadOffer = blogLeadOffer(post);
   return (
     <div className="blog-post min-h-screen bg-[#FAFAF7] relative">
       <ReadingProgress />
@@ -197,10 +199,8 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({
                 {post.content}
               </div>
 
-              {/* Inline lead capture, end of article, before FAQ. Reuses the
-                  proven submitLead pipeline; redirect to /thank-you fires the
-                  single Google Ads + GA4 lead conversion. source = blog_<slug>. */}
-              <BlogLeadCapture slug={post.slug} />
+              {/* Lead form, end of article, before FAQ. source = blog_<slug>. */}
+              <BlogLeadCapture slug={post.slug} offer={leadOffer} />
 
               {/* AEO: FAQ Module */}
               {post.faqs && <FAQAccordion faqs={post.faqs} />}
@@ -340,30 +340,10 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({
           <aside className="lg:col-span-4 space-y-6 md:space-y-8">
             <div className="lg:sticky lg:top-24 space-y-6 md:space-y-8">
               
-              {/* 1. High Converting CTA */}
-              <div className="backdrop-blur-md bg-white border border-[#F05A28]/15 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-xl md:rounded-2xl p-5 md:p-6 relative overflow-hidden group hover:shadow-xl transition-all duration-300">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-[#F05A28]/10 rounded-full -mr-16 -mt-16 blur-2xl"></div>
-                <div className="absolute bottom-0 left-0 w-24 h-24 bg-orange-500/10 rounded-full -ml-12 -mb-12 blur-2xl"></div>
-
-                <div className="relative z-10">
-                  <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-[#F05A28] to-[#C94818] rounded-lg md:rounded-xl flex items-center justify-center text-white mb-3 md:mb-4 shadow-lg shadow-[#F05A28]/30 group-hover:scale-110 transition-transform duration-300">
-                    <Rocket className="w-5 h-5 md:w-6 md:h-6" />
-                  </div>
-                  <h3 className="font-display font-bold text-lg md:text-xl text-gray-900 mb-2">
-                    Want this done for you?
-                  </h3>
-                  <p className="text-xs md:text-sm text-gray-600 mb-5 md:mb-6 leading-relaxed">
-                    Get a free, no-pitch plan for your site. The founder replies within 24 hours, and most sites ship in about 7 days.
-                  </p>
-
-                  <Link href="/contact" className="w-full bg-[#B23E13] hover:bg-[#9A3510] text-white font-semibold py-3 md:py-3.5 rounded-lg md:rounded-xl transition-all duration-300 shadow-lg shadow-[#B23E13]/20 flex items-center justify-center gap-2 group/btn text-sm md:text-base">
-                    Get my free plan
-                    <ArrowLeft className="w-3.5 h-3.5 md:w-4 md:h-4 rotate-180 group-hover/btn:translate-x-1 transition-transform" />
-                  </Link>
-                  <p className="text-center text-xs text-gray-500 mt-3">No commitment. Founder replies in 24h.</p>
-                </div>
-              </div>
-
+              {/* Lead form beside the article for the whole read (desktop only;
+                  hidden below lg in BlogPostPage.css because the same form
+                  already sits at the end of the article). */}
+              <BlogLeadCapture slug={post.slug} offer={leadOffer} placement="sidebar" />
 
             </div>
           </aside>

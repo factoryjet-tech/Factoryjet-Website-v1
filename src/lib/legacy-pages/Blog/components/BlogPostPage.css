@@ -94,3 +94,22 @@
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+
+/* Lead form blocks (BlogLeadCapture): end of article and sticky sidebar.
+ * Light surface, brand orange for small text (#B23E13), no glow or gradient. */
+.blog-post .blog-lead { margin: 40px 0; padding: 28px; border: 1px solid #F0D9CD; border-radius: 16px; background: #FFF8F5; }
+.blog-post .blog-lead-eyebrow { margin: 0 0 10px; color: #B23E13; font-family: var(--font-geist-mono), 'Geist Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; }
+.blog-post .blog-lead-heading { margin: 0; color: #14110F; font-size: clamp(22px, 2.4vw, 28px); line-height: 1.2; }
+.blog-post .blog-lead-body { margin: 12px 0 0; max-width: 60ch; color: #46403B; font-size: 15px; line-height: 1.65; }
+.blog-post .blog-lead [data-hero-inline-form] { margin-top: 18px; }
+.blog-post .blog-lead-side { margin: 0; padding: 22px; }
+.blog-post .blog-lead-side .blog-lead-heading { font-size: 20px; }
+.blog-post .blog-lead-side .blog-lead-body { font-size: 14px; }
+.blog-post .blog-lead-side [data-hero-inline-form] { max-width: none; }
+/* The sidebar is too narrow for name, email and button in one row. */
+.blog-post .blog-lead-side [data-hero-inline-form] > div > div:first-child { flex-direction: column; }
+.blog-post .blog-lead-side [data-hero-inline-form] input:not([aria-hidden]),
+.blog-post .blog-lead-side [data-hero-inline-form] button[type="submit"] { flex: none; width: 100%; }
+@media (max-width: 1023px) {
+  .blog-post .blog-lead-side { display: none; }
+}
