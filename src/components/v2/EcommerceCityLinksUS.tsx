@@ -43,7 +43,7 @@ export default function EcommerceCityLinksUS({ currentCity }: Props) {
             E-Commerce Development Across the US
           </h2>
           <p className="mt-3 text-gray-500 max-w-xl mx-auto text-sm">
-            Same 7-day delivery. Same transparent, fixed-price quotes. Serving small businesses in every major US market.
+            The same fixed quote before work starts and the same build timelines, for small businesses in every major US market.
           </p>
         </div>
 

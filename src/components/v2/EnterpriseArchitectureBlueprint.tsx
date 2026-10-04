@@ -124,8 +124,40 @@ export default function EnterpriseArchitectureBlueprint({
 
   const activeEvent = SIMULATION_EVENTS[activeEventIndex];
 
+  // Perf (2026-10-04): the timers below re-render this whole component every
+  // 50 ms. They used to start at hydration and run for the life of the page,
+  // even while the section was far off screen. They now run only while the
+  // section is on screen and the tab is visible, the same fix applied to
+  // WebDesignArchitectureBlueprint on 2026-09-25. What a reader sees is unchanged.
+  const sectionRef = useRef<HTMLElement>(null);
+  const [timersOn, setTimersOn] = useState(false);
+
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el || typeof IntersectionObserver === 'undefined') {
+      setTimersOn(true);
+      return;
+    }
+    let onScreen = false;
+    const update = () => setTimersOn(onScreen && document.visibilityState === 'visible');
+    const io = new IntersectionObserver(
+      (entries) => {
+        onScreen = entries.some((e) => e.isIntersecting);
+        update();
+      },
+      { rootMargin: '200px 0px' }
+    );
+    io.observe(el);
+    document.addEventListener('visibilitychange', update);
+    return () => {
+      io.disconnect();
+      document.removeEventListener('visibilitychange', update);
+    };
+  }, []);
+
   // Auto-scroll progress timer across tabs
   useEffect(() => {
+    if (!timersOn) return;
     const intervalTime = 50;
     const stepIncrement = (intervalTime / AUTO_SCROLL_DURATION) * 100;
 
@@ -145,11 +177,11 @@ export default function EnterpriseArchitectureBlueprint({
     }, intervalTime);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [timersOn]);
 
   // When dataflow tab is active, auto-advance simulation events
   useEffect(() => {
-    if (activeTab !== 'dataflow') return;
+    if (activeTab !== 'dataflow' || !timersOn) return;
 
     const eventTimer = setInterval(() => {
       setActiveEventIndex((prev) => (prev + 1) % SIMULATION_EVENTS.length);
@@ -159,7 +191,7 @@ export default function EnterpriseArchitectureBlueprint({
     }, 2500);
 
     return () => clearInterval(eventTimer);
-  }, [activeTab]);
+  }, [activeTab, timersOn]);
 
   // When user clicks a tab
   const handleTabClick = (tabId: TabType) => {
@@ -175,7 +207,8 @@ export default function EnterpriseArchitectureBlueprint({
   };
 
   return (
-    <section 
+    <section
+      ref={sectionRef}
       className="relative overflow-hidden bg-gradient-to-b from-[#FFF9F6] via-[#FAF7F2] to-[#FFFFFF] text-[#1E293B] py-20 md:py-28 font-fj-body border-y border-[#E8DFD8]"
     >
       {/* ── STRIPE-STYLE LUMINOUS MESH GRADIENTS ── */}
@@ -507,7 +540,7 @@ export default function EnterpriseArchitectureBlueprint({
             <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
               
               <div className={`p-5 rounded-2xl border transition-all ${
-                simStep >= 1 ? 'bg-[#FFF9F6] border-[#F05A28]' : 'bg-[#FAF8F5] border-[#E8DFD8] opacity-60'
+                simStep >= 1 ? 'bg-[#FFF9F6] border-[#F05A28]' : 'bg-[#FAF8F5] border-[#E8DFD8] grayscale'
               }`}>
                 <div className="flex items-center justify-between mb-2">
                   <span className="font-fj-mono text-xs text-[#B23E13] font-bold">STEP 1: INGESTION</span>
@@ -521,7 +554,7 @@ export default function EnterpriseArchitectureBlueprint({
               </div>
 
               <div className={`p-5 rounded-2xl border transition-all ${
-                simStep >= 2 ? 'bg-[#F0F9FF] border-[#3B82F6]' : 'bg-[#FAF8F5] border-[#E8DFD8] opacity-60'
+                simStep >= 2 ? 'bg-[#F0F9FF] border-[#3B82F6]' : 'bg-[#FAF8F5] border-[#E8DFD8] grayscale'
               }`}>
                 <div className="flex items-center justify-between mb-2">
                   <span className="font-fj-mono text-xs text-[#0369A1] font-bold">STEP 2: PIPELINE BUS</span>
@@ -535,7 +568,7 @@ export default function EnterpriseArchitectureBlueprint({
               </div>
 
               <div className={`p-5 rounded-2xl border transition-all ${
-                simStep >= 3 ? 'bg-[#ECFDF5] border-[#10B981]' : 'bg-[#FAF8F5] border-[#E8DFD8] opacity-60'
+                simStep >= 3 ? 'bg-[#ECFDF5] border-[#10B981]' : 'bg-[#FAF8F5] border-[#E8DFD8] grayscale'
               }`}>
                 <div className="flex items-center justify-between mb-2">
                   <span className="font-fj-mono text-xs text-[#047857] font-bold">STEP 3: COMPLETED</span>

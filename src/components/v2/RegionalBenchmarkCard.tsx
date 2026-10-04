@@ -92,7 +92,7 @@ export default function RegionalBenchmarkCard({
           { label: 'Audited Metro Sites', value: `${defaultSampleSize}`, desc: `Active business websites in ${city}`, tone: 'neutral' },
           { label: 'Average Mobile LCP', value: defaultLcp, desc: '4.0s slower than Next.js standard', tone: 'danger' },
           { label: 'Average Mobile Bounce', value: defaultAbandonment, desc: 'Lost visitors before interaction', tone: 'warning' },
-          { label: 'FactoryJet Delivery SLA', value: '7 Days', desc: 'Guaranteed launch to live production', tone: 'success' },
+          { label: 'FactoryJet Delivery', value: '7 Days', desc: 'For websites of up to 5 pages', tone: 'success' },
         ]
   );
 
