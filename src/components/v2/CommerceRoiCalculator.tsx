@@ -88,7 +88,7 @@ export default function CommerceRoiCalculator({
                   <label htmlFor="comm-rev-input" style={{ fontSize: '13.5px', fontWeight: 700, color: '#141414' }}>
                     Current Monthly Online Revenue
                   </label>
-                  <span style={{ fontSize: '15px', fontWeight: 800, color: '#FF5622', fontFamily: 'var(--pp-mono, monospace)' }}>
+                  <span style={{ fontSize: '15px', fontWeight: 800, color: '#B23E13', fontFamily: 'var(--pp-mono, monospace)' }}>
                     {sym}{monthlyRevenue.toLocaleString()}
                   </span>
                 </div>
@@ -102,7 +102,7 @@ export default function CommerceRoiCalculator({
                   onChange={(e) => setMonthlyRevenue(Number(e.target.value))}
                   style={{ width: '100%', accentColor: '#FF5622', cursor: 'pointer' }}
                 />
-                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '11px', color: '#8E8E9F', marginTop: '4px' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '11px', color: '#6E6E80', marginTop: '4px' }}>
                   <span>{sym}10,000/mo</span>
                   <span>{sym}500,000/mo</span>
                   <span>{sym}1,000,000+/mo</span>
@@ -115,7 +115,7 @@ export default function CommerceRoiCalculator({
                   <label htmlFor="comm-cr-input" style={{ fontSize: '13.5px', fontWeight: 700, color: '#141414' }}>
                     Current Mobile Conversion Rate
                   </label>
-                  <span style={{ fontSize: '15px', fontWeight: 800, color: '#FF5622', fontFamily: 'var(--pp-mono, monospace)' }}>
+                  <span style={{ fontSize: '15px', fontWeight: 800, color: '#B23E13', fontFamily: 'var(--pp-mono, monospace)' }}>
                     {conversionRate.toFixed(1)}%
                   </span>
                 </div>
@@ -129,7 +129,7 @@ export default function CommerceRoiCalculator({
                   onChange={(e) => setConversionRate(Number(e.target.value))}
                   style={{ width: '100%', accentColor: '#FF5622', cursor: 'pointer' }}
                 />
-                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '11px', color: '#8E8E9F', marginTop: '4px' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '11px', color: '#6E6E80', marginTop: '4px' }}>
                   <span>0.5% (Sub-par)</span>
                   <span>1.8% (UK/US Average)</span>
                   <span>5.0% (Top Tier)</span>
@@ -142,7 +142,7 @@ export default function CommerceRoiCalculator({
                   <label htmlFor="comm-speed-input" style={{ fontSize: '13.5px', fontWeight: 700, color: '#141414' }}>
                     Current Mobile Load Time (LCP)
                   </label>
-                  <span style={{ fontSize: '15px', fontWeight: 800, color: currentSpeed > 2.5 ? '#E11D48' : '#10B981', fontFamily: 'var(--pp-mono, monospace)' }}>
+                  <span style={{ fontSize: '15px', fontWeight: 800, color: currentSpeed > 2.5 ? '#BE123C' : '#047857', fontFamily: 'var(--pp-mono, monospace)' }}>
                     {currentSpeed.toFixed(1)}s {currentSpeed > 2.5 ? '(Fails CWV)' : '(Passes)'}
                   </span>
                 </div>
@@ -156,7 +156,7 @@ export default function CommerceRoiCalculator({
                   onChange={(e) => setCurrentSpeed(Number(e.target.value))}
                   style={{ width: '100%', accentColor: '#FF5622', cursor: 'pointer' }}
                 />
-                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '11px', color: '#8E8E9F', marginTop: '4px' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '11px', color: '#6E6E80', marginTop: '4px' }}>
                   <span>1.2s</span>
                   <span>3.8s (Typical Store)</span>
                   <span>6.0s (Severe Latency)</span>

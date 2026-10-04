@@ -284,7 +284,7 @@ export default function EnterpriseArchitectureBlueprint({
             >
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 pb-4 border-b border-[#F1E9E3]">
                 <div className="flex items-center gap-3">
-                  <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#F05A28] font-fj-mono text-xs font-bold text-white shadow-md shadow-[#F05A28]/30">
+                  <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#B23E13] font-fj-mono text-xs font-bold text-white shadow-md shadow-[#F05A28]/30">
                     L1
                   </div>
                   <div>
@@ -494,7 +494,7 @@ export default function EnterpriseArchitectureBlueprint({
                   onClick={() => handleManualEventSelect(idx)}
                   className={`px-4 py-2.5 rounded-xl text-xs font-bold transition-all border cursor-pointer ${
                     activeEventIndex === idx
-                      ? 'bg-[#F05A28] border-[#C94A1A] text-white shadow-md shadow-[#F05A28]/25 scale-[1.03]'
+                      ? 'bg-[#B23E13] border-[#8F3210] text-white shadow-md shadow-[#B23E13]/25 scale-[1.03]'
                       : 'bg-[#FAF8F5] border-[#E8DFD8] text-[#334155] hover:border-[#F05A28]/40 hover:bg-white'
                   }`}
                 >
@@ -511,7 +511,7 @@ export default function EnterpriseArchitectureBlueprint({
               }`}>
                 <div className="flex items-center justify-between mb-2">
                   <span className="font-fj-mono text-xs text-[#B23E13] font-bold">STEP 1: INGESTION</span>
-                  <span className="text-[11px] font-fj-mono text-[#64748B]">0ms</span>
+                  <span className="text-[11px] font-fj-mono text-[#475569]">0ms</span>
                 </div>
                 <h4 className="font-bold text-sm text-[#0F172A]">Event Triggered</h4>
                 <p className="text-xs text-[#475569] mt-1">{activeEvent.source}</p>
@@ -525,7 +525,7 @@ export default function EnterpriseArchitectureBlueprint({
               }`}>
                 <div className="flex items-center justify-between mb-2">
                   <span className="font-fj-mono text-xs text-[#0369A1] font-bold">STEP 2: PIPELINE BUS</span>
-                  <span className="text-[11px] font-fj-mono text-[#64748B]">~45ms</span>
+                  <span className="text-[11px] font-fj-mono text-[#475569]">~45ms</span>
                 </div>
                 <h4 className="font-bold text-sm text-[#0F172A]">Idempotent Queue</h4>
                 <p className="text-xs text-[#475569] mt-1">{activeEvent.protocol}</p>
@@ -679,7 +679,7 @@ export default function EnterpriseArchitectureBlueprint({
 
             <div className="space-y-3.5">
               <div className="p-4 rounded-2xl bg-[#FAF8F5] border border-[#E8DFD8] flex items-start gap-4">
-                <span className="flex-shrink-0 flex h-7 w-7 items-center justify-center rounded-full bg-[#F05A28] font-fj-mono text-xs font-bold text-white">
+                <span className="flex-shrink-0 flex h-7 w-7 items-center justify-center rounded-full bg-[#B23E13] font-fj-mono text-xs font-bold text-white">
                   1
                 </span>
                 <div>
@@ -691,7 +691,7 @@ export default function EnterpriseArchitectureBlueprint({
               </div>
 
               <div className="p-4 rounded-2xl bg-[#FAF8F5] border border-[#E8DFD8] flex items-start gap-4">
-                <span className="flex-shrink-0 flex h-7 w-7 items-center justify-center rounded-full bg-[#F05A28] font-fj-mono text-xs font-bold text-white">
+                <span className="flex-shrink-0 flex h-7 w-7 items-center justify-center rounded-full bg-[#B23E13] font-fj-mono text-xs font-bold text-white">
                   2
                 </span>
                 <div>
@@ -703,7 +703,7 @@ export default function EnterpriseArchitectureBlueprint({
               </div>
 
               <div className="p-4 rounded-2xl bg-[#FAF8F5] border border-[#E8DFD8] flex items-start gap-4">
-                <span className="flex-shrink-0 flex h-7 w-7 items-center justify-center rounded-full bg-[#F05A28] font-fj-mono text-xs font-bold text-white">
+                <span className="flex-shrink-0 flex h-7 w-7 items-center justify-center rounded-full bg-[#B23E13] font-fj-mono text-xs font-bold text-white">
                   3
                 </span>
                 <div>
@@ -715,7 +715,7 @@ export default function EnterpriseArchitectureBlueprint({
               </div>
 
               <div className="p-4 rounded-2xl bg-[#FAF8F5] border border-[#E8DFD8] flex items-start gap-4">
-                <span className="flex-shrink-0 flex h-7 w-7 items-center justify-center rounded-full bg-[#F05A28] font-fj-mono text-xs font-bold text-white">
+                <span className="flex-shrink-0 flex h-7 w-7 items-center justify-center rounded-full bg-[#B23E13] font-fj-mono text-xs font-bold text-white">
                   4
                 </span>
                 <div>

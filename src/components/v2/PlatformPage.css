@@ -670,7 +670,7 @@
   font-family: var(--pp-mono);
   font-size: 14px;
   font-weight: 700;
-  color: #A0A0B2;
+  color: #6E6E80; /* was #A0A0B2: 2.57:1 on white, failed contrast */
 }
 .platpage .rv-service-title {
   font-family: var(--pp-display);

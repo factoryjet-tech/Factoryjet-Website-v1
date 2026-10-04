@@ -105,11 +105,11 @@ export default function RegionalBenchmarkCard({
       <div className="flex flex-wrap items-center justify-between gap-3 mb-4 pb-4 border-b border-[#F0F0F5]">
         <div className="flex items-center gap-2">
           <span className="w-2 h-2 rounded-full bg-[#FF5622] animate-pulse" />
-          <span className="text-xs font-extrabold uppercase tracking-widest text-[#FF5622]">
+          <span className="text-xs font-extrabold uppercase tracking-widest text-[#B23E13]">
             2026 Empirical Research &amp; Market Telemetry
           </span>
         </div>
-        <span className="text-xs font-semibold text-[#8E8E9F] bg-[#F6F6F9] px-2.5 py-1 rounded-full">
+        <span className="text-xs font-semibold text-[#6E6E80] bg-[#F6F6F9] px-2.5 py-1 rounded-full">
           Sample: n={defaultSampleSize} Verified Sites
         </span>
       </div>
@@ -135,7 +135,7 @@ export default function RegionalBenchmarkCard({
             toneNum = 'text-[#D97706]';
           } else if (st.tone === 'success') {
             toneBg = 'bg-[#ECFDF5] border-[#A7F3D0] text-[#065F46]';
-            toneNum = 'text-[#10B981]';
+            toneNum = 'text-[#047857]';
           }
 
           return (
@@ -143,7 +143,7 @@ export default function RegionalBenchmarkCard({
               key={sIdx}
               className={`rounded-xl border p-3.5 flex flex-col justify-between ${toneBg}`}
             >
-              <span className="text-[11px] font-bold uppercase tracking-wider text-[#8E8E9F] mb-1">
+              <span className="text-[11px] font-bold uppercase tracking-wider text-[#6E6E80] mb-1">
                 {st.label}
               </span>
               <div className={`text-xl sm:text-2xl font-extrabold tracking-tight my-1 ${toneNum}`}>
@@ -159,7 +159,7 @@ export default function RegionalBenchmarkCard({
 
       {/* Technical Bottleneck Analysis Strip */}
       <div className="rounded-xl bg-[#F6F6F9] border border-[#E6E6EC] p-4 flex flex-col sm:flex-row items-start sm:items-center gap-3">
-        <div className="flex items-center gap-2 text-xs font-bold uppercase text-[#FF5622] tracking-wider flex-shrink-0">
+        <div className="flex items-center gap-2 text-xs font-bold uppercase text-[#B23E13] tracking-wider flex-shrink-0">
           <svg className="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
             <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
           </svg>

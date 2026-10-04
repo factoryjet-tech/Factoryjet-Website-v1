@@ -42,7 +42,7 @@ export const metadata: Metadata = {
 };
 
 const PARTNERS = [
-  'Shopify Plus Certified',
+  'Shopify Plus',
   'BigCommerce B2B Edition',
   'NetSuite ERP Integration',
   'SAP & Microsoft Dynamics',
@@ -543,7 +543,7 @@ export default function ChicagoEcommercePage() {
                 {/* Answer-First Brief */}
                 <div style={{ background: '#F6F6F9', borderLeft: '3px solid #FF5622', padding: '14px 18px', borderRadius: '0 12px 12px 0', marginBottom: '28px', maxWidth: '52ch' }}>
                   <p style={{ fontSize: '13.5px', color: '#141414', lineHeight: 1.55, margin: 0, fontWeight: 500 }}>
-                    <strong style={{ color: '#FF5622' }}>Executive Brief:</strong> FactoryJet delivers enterprise Chicago e-commerce development services: custom Shopify Plus storefronts, BigCommerce B2B wholesale portals, sub-second headless architectures, and bidirectional NetSuite/SAP ERP synchronization. Every build features custom Liquid/React engineering, one-tap mobile checkout acceleration, guaranteed zero downtime data migration, and 100% full intellectual property code ownership.
+                    <strong style={{ color: '#B23E13' }}>Executive Brief:</strong> FactoryJet delivers enterprise Chicago e-commerce development services: custom Shopify Plus storefronts, BigCommerce B2B wholesale portals, sub-second headless architectures, and bidirectional NetSuite/SAP ERP synchronization. Every build features custom Liquid/React engineering, one-tap mobile checkout acceleration, guaranteed zero downtime data migration, and 100% full intellectual property code ownership.
                   </p>
                 </div>
 
@@ -689,10 +689,10 @@ export default function ChicagoEcommercePage() {
                   }}
                 >
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
                     </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
+                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#6E6E80' }}>
                       {d.query}
                     </span>
                   </div>
@@ -744,7 +744,7 @@ export default function ChicagoEcommercePage() {
                   }}
                 >
                   <div style={{ order: idx % 2 === 0 ? 1 : 2 }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 12px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 12px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {ind.sector}
                     </span>
                     <h3 style={{ fontSize: 'clamp(22px, 2.8vw, 30px)', fontWeight: 800, color: '#141414', margin: '14px 0 12px', letterSpacing: '-0.02em', lineHeight: 1.25 }}>
@@ -812,11 +812,11 @@ export default function ChicagoEcommercePage() {
                   </div>
                   <div style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
                     <div>
-                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The Typical Agency Frustration:</span>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#6E6E80', letterSpacing: '0.08em' }}>The Typical Agency Frustration:</span>
                       <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
                     </div>
                     <div>
-                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>The FactoryJet Engineering Approach:</span>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#B23E13', letterSpacing: '0.08em' }}>The FactoryJet Engineering Approach:</span>
                       <p style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, margin: '4px 0 0', lineHeight: 1.5 }}>{p.solution}</p>
                     </div>
                   </div>
@@ -877,7 +877,7 @@ export default function ChicagoEcommercePage() {
                   }}
                 >
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {step.phase}
                     </span>
                   </div>
@@ -891,13 +891,13 @@ export default function ChicagoEcommercePage() {
                   </p>
 
                   <div style={{ borderTop: '1px solid #E6E6EC', paddingTop: '16px' }}>
-                    <span style={{ fontSize: '11px', fontWeight: 800, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.06em', display: 'block', marginBottom: '10px' }}>
+                    <span style={{ fontSize: '11px', fontWeight: 800, textTransform: 'uppercase', color: '#6E6E80', letterSpacing: '0.06em', display: 'block', marginBottom: '10px' }}>
                       Core Deliverables:
                     </span>
                     <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px' }}>
                       {step.deliverables.map((del, dIdx) => (
                         <li key={dIdx} style={{ fontSize: '12.5px', color: '#141414', display: 'flex', alignItems: 'flex-start', gap: '8px', lineHeight: 1.4 }}>
-                          <span style={{ color: '#FF5622', fontWeight: 800 }}>✓</span>
+                          <span style={{ color: '#B23E13', fontWeight: 800 }}>✓</span>
                           <span>{del}</span>
                         </li>
                       ))}

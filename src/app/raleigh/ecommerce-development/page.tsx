@@ -34,14 +34,14 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Best Raleigh E-Commerce Agency | Top Shopify Plus & Headless | FactoryJet',
-    description: 'Custom headless Shopify Plus and Next.js ecommerce development in Raleigh NC. Sub-second performance, full IP code ownership, 7-day delivery.',
+    description: 'Custom headless Shopify Plus and Next.js ecommerce development in Raleigh NC. Sub-second performance, full IP code ownership, and a fixed quote before work starts.',
     images: ['https://factoryjet.com/og-default.png'],
   },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
 const PARTNERS = [
-  'Shopify Plus Partner',
+  'Shopify Plus',
   'Headless Next.js 15',
   'BigCommerce B2B Edition',
   'Klaviyo Master Elite',
@@ -52,7 +52,7 @@ const PARTNERS = [
 ];
 
 const STAT_CARDS = [
-  { num: '7 Days', title: 'Average Turnaround Time', desc: 'From approved Figma UI/UX prototypes to fully tested, production-deployed Next.js commerce code.', icon: '⚡' },
+  { num: '3 to 5 Weeks', title: 'Typical Custom-Theme Store Build', desc: 'Builds with subscriptions, B2B, or a migration take 5 to 8 weeks. Headless builds take 8 to 14 weeks.', icon: '⚡' },
   { num: '98+', title: 'Lighthouse Performance Score', desc: 'Engineered for sub-second first contentful paint and flawless Core Web Vitals.', icon: '📈' },
   { num: '100%', title: 'Full IP & Code Ownership', desc: 'You own the clean GitHub repository, design assets, and deployment infrastructure.', icon: '🛡️' },
   { num: '0', title: 'WordPress Plugin Bloat', desc: 'Zero vulnerable third-party dependencies, slow PHP execution, or monthly maintenance bloat.', icon: '💎' },
@@ -469,7 +469,7 @@ const SERVICE_SCHEMA = {
   provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   serviceType: 'Ecommerce Development, Headless Shopify Plus, B2B Commerce & Next.js Storefronts',
   description:
-    'Custom headless Shopify Plus and Next.js ecommerce development in Raleigh NC. Sub-second performance, full IP code ownership, and rapid 7-day delivery for Research Triangle brands.',
+    'Custom headless Shopify Plus and Next.js ecommerce development in Raleigh NC. Sub-second performance, full IP code ownership, and a fixed quote before work starts for Research Triangle brands.',
   areaServed: [{ '@type': 'State', name: 'North Carolina' }],
 };
 
@@ -532,7 +532,7 @@ export default function RaleighEcommerceDevelopmentPage() {
                 </h1>
 
                 <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
-                  Headless Shopify Plus, custom Next.js 15 storefronts, and sub-second checkout engineered for Research Triangle brands. 7-day agile delivery with 100% code ownership.
+                  Headless Shopify Plus, custom Next.js 15 storefronts, and sub-second checkout engineered for Research Triangle brands. Custom-theme stores go live in 3 to 5 weeks and headless builds in 8 to 14, with 100% code ownership.
                 </p>
 
                 <HeroInlineForm
@@ -677,10 +677,10 @@ export default function RaleighEcommerceDevelopmentPage() {
                   }}
                 >
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {d.corridor}
                     </span>
-                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#8E8E9F' }}>
+                    <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: '#6E6E80' }}>
                       {d.query}
                     </span>
                   </div>
@@ -732,7 +732,7 @@ export default function RaleighEcommerceDevelopmentPage() {
                   }}
                 >
                   <div style={{ order: idx % 2 === 0 ? 1 : 2 }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 12px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 12px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {ind.sector}
                     </span>
                     <h3 style={{ fontSize: 'clamp(22px, 2.8vw, 30px)', fontWeight: 800, color: '#141414', margin: '14px 0 12px', letterSpacing: '-0.02em', lineHeight: 1.25 }}>
@@ -800,11 +800,11 @@ export default function RaleighEcommerceDevelopmentPage() {
                   </div>
                   <div style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
                     <div>
-                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The Typical Agency Frustration:</span>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#6E6E80', letterSpacing: '0.08em' }}>The Typical Agency Frustration:</span>
                       <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
                     </div>
                     <div>
-                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#FF5622', letterSpacing: '0.08em' }}>The FactoryJet Engineering Approach:</span>
+                      <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#B23E13', letterSpacing: '0.08em' }}>The FactoryJet Engineering Approach:</span>
                       <p style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, margin: '4px 0 0', lineHeight: 1.5 }}>{p.solution}</p>
                     </div>
                   </div>
@@ -841,7 +841,7 @@ export default function RaleighEcommerceDevelopmentPage() {
                 <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                   <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
                 </svg>
-                <span>Proven 7-Day Sprint Model</span>
+                <span>Four Stages, One Fixed Quote</span>
               </div>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
                 Our 4-Stage Rapid Ecommerce Protocol
@@ -865,7 +865,7 @@ export default function RaleighEcommerceDevelopmentPage() {
                   }}
                 >
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
-                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 800, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {step.phase}
                     </span>
                   </div>
@@ -879,13 +879,13 @@ export default function RaleighEcommerceDevelopmentPage() {
                   </p>
 
                   <div style={{ borderTop: '1px solid #E6E6EC', paddingTop: '16px' }}>
-                    <span style={{ fontSize: '11px', fontWeight: 800, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.06em', display: 'block', marginBottom: '10px' }}>
+                    <span style={{ fontSize: '11px', fontWeight: 800, textTransform: 'uppercase', color: '#6E6E80', letterSpacing: '0.06em', display: 'block', marginBottom: '10px' }}>
                       Core Deliverables:
                     </span>
                     <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px' }}>
                       {step.deliverables.map((del, dIdx) => (
                         <li key={dIdx} style={{ fontSize: '12.5px', color: '#141414', display: 'flex', alignItems: 'flex-start', gap: '8px', lineHeight: 1.4 }}>
-                          <span style={{ color: '#FF5622', fontWeight: 800 }}>✓</span>
+                          <span style={{ color: '#B23E13', fontWeight: 800 }}>✓</span>
                           <span>{del}</span>
                         </li>
                       ))}
@@ -984,7 +984,7 @@ export default function RaleighEcommerceDevelopmentPage() {
               <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
                 <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
               </svg>
-              <span>Fixed-Price &amp; 7-Day Delivery</span>
+              <span>Fixed Quote Before Work Starts</span>
             </div>
 
             <h2 style={{ fontSize: 'clamp(32px, 5vw, 54px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.03em', lineHeight: 1.12, margin: '0 0 20px' }}>
@@ -992,7 +992,7 @@ export default function RaleighEcommerceDevelopmentPage() {
             </h2>
 
             <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
-              Tell us about your brand goals. We will provide a comprehensive fixed-price proposal, clear sprint schedule, and interactive architecture plan.
+              Tell us about your brand goals. We reply with a fixed quote and a clear timeline, and you see a working draft of your store before you sign.
             </p>
 
             <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
