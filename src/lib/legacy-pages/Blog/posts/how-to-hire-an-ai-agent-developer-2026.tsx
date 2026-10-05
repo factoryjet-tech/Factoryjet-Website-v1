@@ -194,7 +194,7 @@ export const post: BlogPost = {
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Sep 20, 2026',
-  dateModified: 'Oct 04, 2026',
+  dateModified: 'Oct 05, 2026',
   readTime: '18 min read',
   imageUrl: '/blog-images/how-to-hire-an-ai-agent-developer-2026.webp',
   imageAlt:
@@ -283,9 +283,9 @@ export const post: BlogPost = {
         </p>
       </div>
       <div className="bg-gray-50 border border-gray-200 p-5 rounded-xl my-8">
-        <h2 className="text-xl font-bold mb-3">Inspect a Deployed Agent Before Hiring</h2>
-        <p className="mb-3">FactoryJet’s Washington Law Group implementation is a news-monitoring agent on a dedicated US server. The case documents source checks, duplicate controls, a private review console and daily backups. Use those details to ask a developer how they validate facts and operate a system after launch. Other workflows still need their own evidence and acceptance tests.</p>
-        <a href="/case-studies/washington-law-group-accident-detection-agent" className="text-[#B23E13] underline">Read the Washington Law Group implementation case</a>
+        <h2 className="text-xl font-bold mb-3">Case Study: Look at a Live Agent Before You Hire</h2>
+        <p className="mb-3">Ask every developer to show you something like this. For Washington Law Group, a personal injury firm, we built an agent that reads news and police sources across all 50 states every two hours and emails the firm the serious commercial-vehicle crashes that qualify. It checks each extracted name against the article text, merges repeated reports of one crash, and runs on a dedicated US server with named sign-in and encrypted daily backups. Use those details to ask a developer two things: how they check facts, and who runs the agent after launch.</p>
+        <a href="/case-studies/washington-law-group-accident-detection-agent" className="text-[#B23E13] underline">Read the full case study</a>
       </div>
 
 

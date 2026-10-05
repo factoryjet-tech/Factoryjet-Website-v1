@@ -15,7 +15,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
-const PAGE_MODIFIED = '2026-10-04';
+const PAGE_MODIFIED = '2026-10-05';
 const CANONICAL_URL = 'https://factoryjet.com/services/ai-agent-monitoring';
 const PAGE_TITLE = 'AI Agent Monitoring, Support & Maintenance | FactoryJet';
 const PAGE_DESCRIPTION =
@@ -763,7 +763,7 @@ export default function AiAgentMonitoringPage() {
                 Ongoing AI agent support means someone reads the agent&apos;s traces, tracks cost and escalation rates, reruns its test set when prompts or models change, and fixes integrations when vendors change them. The monthly cost depends on conversation volume, model usage, connected systems, how often you run evaluations, monitoring tools, compliance needs and how fast you need a response.
               </p>
               <p className="mt-4 text-xs text-[#6E655F]">
-                Updated October 4, 2026. Written by Bhavesh Barot, Founder of FactoryJet.
+                Updated October 5, 2026. Written by Bhavesh Barot, Founder of FactoryJet.
               </p>
             </div>
           </div>
@@ -772,10 +772,10 @@ export default function AiAgentMonitoringPage() {
         <section className="pp-section" id="deployed-case">
           <div className="pp-container">
             <div className="pp-card p-6 md:p-8 bg-white max-w-4xl">
-              <p className="pp-eyebrow">Deployed implementation</p>
-              <h2 className="pp-h2">Operating Washington Law Group’s Monitoring Agent</h2>
-              <p className="text-[#46403B] leading-relaxed mb-4">FactoryJet runs and maintains the firm’s incident-monitoring agent on a dedicated US server. The published implementation includes source checks, duplicate controls, restricted console access and daily backups. It shows what was delivered and who operates it, without claiming measured evaluation scores or business outcomes.</p>
-              <Link href="/case-studies/washington-law-group-accident-detection-agent" className="text-[#B23E13] underline font-semibold">Read the deployment and operating details</Link>
+              <p className="pp-eyebrow">Case study</p>
+              <h2 className="pp-h2">An Agent We Built and Still Run for Washington Law Group</h2>
+              <p className="text-[#46403B] leading-relaxed mb-4">We built this agent for a personal injury firm, and we run and maintain it on a dedicated US server. It sweeps news and police sources across all 50 states every two hours, every day. Support on this build covers those sweeps, the source and duplicate checks, named sign-in to the firm&apos;s console and encrypted daily backups. We have not published accuracy scores or business results from it, because none have been measured yet.</p>
+              <Link href="/case-studies/washington-law-group-accident-detection-agent" className="text-[#B23E13] underline font-semibold">Read the full case study</Link>
             </div>
           </div>
         </section>

@@ -14,7 +14,7 @@ const CANONICAL_URL = 'https://factoryjet.com/services/legal-ai-agents';
 const PAGE_TITLE = 'AI for Law Firms: Legal AI Agents & AI Intake | FactoryJet';
 const PAGE_DESC =
   'AI for law firms: custom legal AI agents and an AI receptionist for intake, contract redlining and discovery, synced with Clio, MyCase and Filevine.';
-const PAGE_MODIFIED = '2026-10-04';
+const PAGE_MODIFIED = '2026-10-05';
 
 /** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
  *  <Breadcrumbs> component and the BreadcrumbList JSON-LD below. So the two
@@ -462,10 +462,10 @@ export default function LegalAiAgentsPage() {
         <section className="py-12 bg-white border-b border-[#E7DED6]" id="deployed-case">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="rounded-2xl border border-[#E7DED6] bg-[#FAFAF7] p-6 sm:p-8">
-              <p className="font-mono text-xs text-[#B23E13] font-bold uppercase tracking-wider mb-2">Deployed implementation</p>
-              <h2 className="text-xl sm:text-2xl font-bold text-[#14110F] font-heading mb-4">Washington Law Group: Incident Monitoring and Research</h2>
-              <p className="text-[#46403B] leading-relaxed mb-4">FactoryJet delivered a news-monitoring agent on a dedicated US server. It checks extracted names against source text, groups repeated reports and presents findings in a private review console. Restricted access and daily backups support operation. This case documents a research workflow; intake, contract review and docketing need their own scope and validation.</p>
-              <Link href="/case-studies/washington-law-group-accident-detection-agent" className="text-[#B23E13] underline font-semibold">Read the Washington Law Group case study</Link>
+              <p className="font-mono text-xs text-[#B23E13] font-bold uppercase tracking-wider mb-2">Case study</p>
+              <h2 className="text-xl sm:text-2xl font-bold text-[#14110F] font-heading mb-4">Washington Law Group: An Agent That Finds Serious Truck Crashes</h2>
+              <p className="text-[#46403B] leading-relaxed mb-4">We built this personal injury firm an agent that reads news and police sources across all 50 states every two hours and emails the firm the serious commercial-vehicle crashes that qualify. Every victim name is checked against the article text before it is saved, and repeated reports of one crash are merged into one record. The firm&apos;s lawyers review every lead themselves. It runs on a dedicated US server with named sign-in and encrypted daily backups. This agent does research and monitoring. The intake, contract review and docketing agents on this page are scoped and tested as separate builds.</p>
+              <Link href="/case-studies/washington-law-group-accident-detection-agent" className="text-[#B23E13] underline font-semibold">Read the full case study</Link>
             </div>
           </div>
         </section>
