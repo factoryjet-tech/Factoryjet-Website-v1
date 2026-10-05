@@ -561,12 +561,13 @@ export default function TampaEcommercePage() {
 
               {/* Right Column: Clean Organic Curved Photo Frame */}
               <div className="rv-curved-frame-1">
-                <Image
-                  src="/images/us/tampa/ecommerce/service-explanation.webp"
-                  alt="Tampa Florida enterprise ecommerce engineering and headless Shopify Plus development"
-                  width={640}
-                  height={640}
-                  priority
+                <img
+                  src="/images/us/ecommerce-city/hero-tampa-marine-supply-owner.webp"
+                  alt="Owner of a Tampa marine supply business checking stock on a tablet, with dock lines and life jackets on the shelves and a marina behind her"
+                  width={760}
+                  height={798}
+                  fetchPriority="high"
+                  decoding="async"
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
                 />
               </div>

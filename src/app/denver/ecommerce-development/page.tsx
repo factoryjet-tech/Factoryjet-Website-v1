@@ -143,8 +143,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Tactile Editorial Commerce for Colorado Home & Architecture Brands',
     description:
       'High-end furniture makers, architectural hardware craftsmen, and designer lighting brands in Denver demand visual elegance and complex custom configuration. We engineer bespoke finish visualizers, trade professional discount portals, and white-glove freight shipping calculations.',
-    image: '/images/us/denver/ecommerce/service-explanation.webp',
-    alt: 'Denver luxury home goods furniture and architectural hardware ecommerce website engineering',
+    image: '/images/us/ecommerce-city/industry-denver-home-hardware-samples.webp',
+    alt: 'Brass cabinet pulls, black door levers and wood, marble and fabric samples on a showroom table, with the Denver skyline and mountains in the window',
     points: [
       'Interactive swatch selectors and material finish customizers',
       'Gated interior designer trade discount application and approval workflows',
@@ -610,11 +610,13 @@ export default function DenverEcommercePage() {
             <div className="rv-about-grid">
               {/* Left Column: Clean Organic Curved Photo Frame */}
               <div className="rv-curved-frame-2">
-                <Image
-                  src="/images/us/denver/ecommerce/service-explanation.webp"
-                  alt="FactoryJet senior ecommerce engineers building headless Shopify Plus storefronts for Denver brands"
-                  width={640}
-                  height={640}
+                <img
+                  src="/images/us/ecommerce-city/side-denver-outdoor-gear-store-review.webp"
+                  alt="Two people at a Denver outdoor gear brand reviewing their online store on a laptop, with skis and a mountain bike on the wall and the Rocky Mountains outside"
+                  width={760}
+                  height={836}
+                  loading="lazy"
+                  decoding="async"
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
                 />
               </div>

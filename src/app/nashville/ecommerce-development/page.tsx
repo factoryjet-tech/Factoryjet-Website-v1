@@ -542,12 +542,13 @@ export default function NashvilleEcommercePage() {
 
               {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
               <div className="rv-curved-frame-1">
-                <Image
-                  src="/images/us/nashville/ecommerce/service-explanation.webp"
-                  alt="Nashville Tennessee enterprise ecommerce engineering and headless Shopify Plus development"
-                  width={640}
-                  height={640}
-                  priority
+                <img
+                  src="/images/us/ecommerce-city/hero-nashville-boot-maker-packing-order.webp"
+                  alt="Owner of a Nashville boot brand packing a pair of tan western boots into a shipping box, with shelves of handmade boots behind her"
+                  width={760}
+                  height={798}
+                  fetchPriority="high"
+                  decoding="async"
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
                 />
               </div>
