@@ -1020,7 +1020,11 @@ export default function AiSdrPage() {
                 <p className="text-sm text-[#46403B] leading-relaxed">
                   An AI SDR speeds up your response to leads you already get. It cannot create demand. If only a handful
                   of inquiries arrive each month, put the budget into content, search, or paid campaigns first, then add
-                  the agent once there is a queue to work.
+                  the agent once there is a queue to work. Our{' '}
+                  <Link href="/services/ai-agent-development/ai-marketing-agent" className="underline hover:text-[#F05A28]">
+                    AI marketing agent
+                  </Link>{' '}
+                  page covers the campaign side.
                 </p>
               </li>
               <li className="pp-card p-6 bg-white">

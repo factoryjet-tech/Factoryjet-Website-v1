@@ -1382,7 +1382,9 @@ export default function EcommerceDevelopmentPage() {
                 <p>
                   You can hire a dedicated ecommerce developer for a fixed-scope build. Or keep a team on retainer for ongoing feature work. Either way, the codebase is yours on GitHub from launch day with no lock-in. Once the store is live, that same team can carry on as your{' '}
                   <Link href="/services/ecommerce-growth-agency" className="text-[#B23E13] font-medium underline underline-offset-2">ecommerce growth partner</Link>, or keep the store running on a{' '}
-                  <Link href="/services/shopify-maintenance-services" className="text-[#B23E13] font-medium underline underline-offset-2">support and maintenance retainer</Link>.
+                  <Link href="/services/shopify-maintenance-services" className="text-[#B23E13] font-medium underline underline-offset-2">support and maintenance retainer</Link>. For paid acquisition (Google Ads, paid social and shopping feeds), see our{' '}
+                  <Link href="/services/ecommerce-marketing-agency" className="text-[#B23E13] font-medium underline underline-offset-2">ecommerce marketing agency</Link>{' '}
+                  page.
                 </p>
                 <p>
                   Know your platform already? Go straight to{' '}

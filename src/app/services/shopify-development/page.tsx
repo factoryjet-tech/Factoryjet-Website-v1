@@ -1380,7 +1380,10 @@ export default function ShopifyPage() {
                   Need ongoing engineering capacity? You can hire a dedicated developer on a monthly retainer. We handle theme updates, app setups, conversion tests, and seasonal landing pages. See how our{' '}
                   <Link href="/services/shopify-maintenance-services" className="text-[#B23E13] font-medium underline underline-offset-2">Shopify maintenance and support retainers</Link> work. Need broader technical architecture? Explore our{' '}
                   <Link href="/services/ecommerce-development" className="text-[#B23E13] font-medium underline underline-offset-2">ecommerce development services</Link>. Already live and scaling? Review our{' '}
-                  <Link href="/services/shopify-seo" className="text-[#B23E13] font-medium underline underline-offset-2">Shopify SEO services</Link>.
+                  <Link href="/services/shopify-seo" className="text-[#B23E13] font-medium underline underline-offset-2">Shopify SEO services</Link>. For a custom Online Store 2.0 theme coded from scratch, see{' '}
+                  <Link href="/services/shopify-theme-development" className="text-[#B23E13] font-medium underline underline-offset-2">Shopify theme development</Link>. For agents that work on orders, returns and ERP sync inside the store, see{' '}
+                  <Link href="/services/shopify-ai-agents" className="text-[#B23E13] font-medium underline underline-offset-2">Shopify AI agents</Link>. To change what checkout asks for, offers or allows, see{' '}
+                  <Link href="/services/shopify-checkout-customization" className="text-[#B23E13] font-medium underline underline-offset-2">Shopify checkout customization</Link>.
                 </p>
               </div>
               <div className="rounded-2xl border border-[#E5E5E0] bg-white p-7">

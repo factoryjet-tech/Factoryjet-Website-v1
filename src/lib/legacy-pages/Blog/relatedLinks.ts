@@ -73,6 +73,15 @@ const SERVICE_RULES: ServiceRule[] = [
     keywords: ['seo audit', 'technical seo', 'site audit'],
     weight: 3,
   },
+  // 'technical seo' also sits on the SEO Audit rule above. Weight 4 puts this page
+  // first on a post that says it, and the audit page stays in the block behind it.
+  {
+    href: '/services/technical-seo',
+    label: 'Technical SEO',
+    blurb: 'Crawling, indexing, Core Web Vitals and migrations, fixed in code.',
+    keywords: ['technical seo', 'core web vitals', 'without losing seo'],
+    weight: 4,
+  },
   {
     href: '/services/law-firm-seo',
     label: 'Law Firm SEO',
@@ -160,6 +169,13 @@ const SERVICE_RULES: ServiceRule[] = [
     weight: 2,
   },
   {
+    href: '/services/shopify-theme-development',
+    label: 'Shopify Theme Development',
+    blurb: 'Custom Online Store 2.0 Liquid themes, with the code in your GitHub.',
+    keywords: ['shopify theme', 'theme development'],
+    weight: 5,
+  },
+  {
     href: '/services/woocommerce-development',
     label: 'WooCommerce Development',
     blurb: 'WooCommerce builds and rescues for stores on WordPress.',
@@ -236,6 +252,31 @@ const SERVICE_RULES: ServiceRule[] = [
     label: 'Shopify AI Agents',
     blurb: 'Custom agents for Shopify orders, wholesale POs, returns and ERP sync, with approvals built in.',
     keywords: ['shopify ai', 'ai agent for shopify', 'shopify automation', 'draft order', 'ai agents for ecommerce'],
+    weight: 4,
+  },
+  // Added 2026-10-05: three AI service pages no blog post could reach through this
+  // block. Keywords are narrow on purpose. 'custom ai' is left off AI Development
+  // because it would pull that page onto the AI SDR post.
+  {
+    href: '/services/ai-consulting',
+    label: 'AI Consulting',
+    blurb: 'An AI readiness assessment and a ranked roadmap, then the build from one team.',
+    keywords: ['ai consult', 'ai strategy', 'ai readiness'],
+    weight: 4,
+  },
+  {
+    href: '/services/ai-development',
+    label: 'AI Development',
+    blurb: 'Custom AI software built into your store, ERP and CRM, tested before launch.',
+    keywords: ['ai development', 'ai developer'],
+    weight: 3,
+  },
+  {
+    href: '/services/manufacturing-ai-agents',
+    label: 'Manufacturing AI Agents',
+    blurb: 'Agents that read RFQs and drawings, draft quotes and write approved drafts into your ERP.',
+    // 'rfq' is 3 characters, so it gets the word-boundary match like 'erp'.
+    keywords: ['manufacturing rfq', 'rfq'],
     weight: 4,
   },
   {
@@ -649,6 +690,7 @@ const SERVICE_FAMILY: Record<string, ServiceFamily> = {
   '/services/shopify-seo': 'search',
   '/services/small-business-seo': 'search',
   '/services/roofing-seo': 'search',
+  '/services/technical-seo': 'search',
   '/ai-visibility-checker': 'search',
   '/uk/ai-seo': 'search',
   '/uk/seo-audit': 'search',
@@ -667,6 +709,9 @@ const SERVICE_FAMILY: Record<string, ServiceFamily> = {
   '/services/ai-automation': 'ai',
   '/services/ai-integration-services': 'ai',
   '/services/ai-agent-development': 'ai',
+  '/services/ai-consulting': 'ai',
+  '/services/ai-development': 'ai',
+  '/services/manufacturing-ai-agents': 'ai',
   '/uk/ai-agents': 'ai',
   '/au/ai-agents': 'ai',
   '/au/ai-consulting': 'ai',
@@ -690,6 +735,7 @@ const SERVICE_FAMILY: Record<string, ServiceFamily> = {
   '/au/accountant-website-design': 'web',
   // ecommerce: storefronts, platforms, marketplaces
   '/services/shopify-development': 'ecommerce',
+  '/services/shopify-theme-development': 'ecommerce',
   '/services/woocommerce-development': 'ecommerce',
   '/services/magento-development': 'ecommerce',
   '/services/ecommerce-marketing-agency': 'ecommerce',

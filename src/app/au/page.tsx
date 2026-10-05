@@ -90,6 +90,27 @@ const AU_PAGES: { hub: HubKey; href: string; name: string; anchor: string; what:
 ];
 const pagesFor = (h: HubKey) => AU_PAGES.filter((p) => p.hub === h);
 
+/* AU pages built after the eight above (waves 4 and 5). They get a plain text
+   link in the pill list only, so the hub cards, the "eight detail pages" copy
+   and the ItemList JSON-LD stay as they are. Names match auFooterColumns.ts.
+   Added 2026-10-05: a rendered link audit found none of these 13 pages had an
+   in-content link from this hub. */
+const AU_MORE_PAGES = [
+  { href: '/au/ecommerce-seo', name: 'Ecommerce SEO' },
+  { href: '/au/local-seo', name: 'Local SEO' },
+  { href: '/au/small-business-seo', name: 'Small Business SEO' },
+  { href: '/au/law-firm-seo', name: 'Law Firm SEO' },
+  { href: '/au/ai-customer-service', name: 'AI Customer Service' },
+  { href: '/au/accounts-payable-automation', name: 'Accounts Payable Automation' },
+  { href: '/au/small-business-web-design', name: 'Small Business Web Design' },
+  { href: '/au/websites-for-tradies', name: 'Websites for Tradies' },
+  { href: '/au/dental-website-design', name: 'Dental Website Design' },
+  { href: '/au/ndis-website-design', name: 'NDIS Website Design' },
+  { href: '/au/real-estate-websites', name: 'Real Estate Websites' },
+  { href: '/au/accountant-website-design', name: 'Accountant Website Design' },
+  { href: '/au/website-maintenance', name: 'Website Maintenance' },
+];
+
 /* City pages that exist today. Sydney, Perth and the Gold Coast are served
    remotely and deliberately have no page (see AU market research). */
 const AU_CITIES = [
@@ -1006,6 +1027,9 @@ export function AustraliaHubContent({ reviewConcept }: { reviewConcept?: Austral
                 <div className="scorecard-row"><div><div className="scorecard-metric">AWST</div><div className="scorecard-note">WA</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Covered</div></div>
                 <div className="flex-wrap mt-6">
                   {AU_PAGES.map((p) => (
+                    <a key={p.href} className="city-pill" href={p.href}>{p.name}</a>
+                  ))}
+                  {AU_MORE_PAGES.map((p) => (
                     <a key={p.href} className="city-pill" href={p.href}>{p.name}</a>
                   ))}
                 </div>

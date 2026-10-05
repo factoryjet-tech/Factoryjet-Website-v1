@@ -207,6 +207,8 @@ const INDUSTRIES = [
   { title: 'Real estate', href: '/services/ai-agents-for-real-estate', line: 'Lead response and listing questions' },
   { title: 'Restaurants', href: '/services/restaurant-ai-voice-agents', line: 'Phone orders and reservations' },
   { title: 'Automotive dealers', href: '/services/automotive-ai-voice-agents', line: 'Service booking and sales calls' },
+  { title: 'Chemical & pharma', href: '/services/chemical-pharmaceutical-ai-agents', line: 'Batch records, SDS and LIMS sync' },
+  { title: 'Agriculture equipment', href: '/services/agriculture-equipment-ai-agents', line: 'Parts lookup, fault triage and service dispatch' },
 ];
 
 /** Google order among organic results, DataForSEO US desktop pull, 26 Sep 2026. null = not on page one. */

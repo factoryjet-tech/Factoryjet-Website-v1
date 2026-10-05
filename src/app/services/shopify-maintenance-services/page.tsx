@@ -1485,6 +1485,7 @@ export default function ShopifyMaintenanceServicesPage() {
                 <p style={{ marginTop: '22px', fontSize: '14px', lineHeight: 1.7, color: '#6E635A' }}>
                   Related: <InLink href="/services/ecommerce-development">ecommerce development</InLink>,{' '}
                   <InLink href="/services/shopify-development">Shopify development</InLink>,{' '}
+                  <InLink href="/services/shopify-theme-development">Shopify theme development</InLink>,{' '}
                   <InLink href="/services/shopify-plus-agency">Shopify Plus agency</InLink>,{' '}
                   <InLink href="/services/shopify-plus-b2b">Shopify Plus B2B</InLink>,{' '}
                   <InLink href="/replatforming/magento-to-shopify">Magento to Shopify</InLink> and{' '}

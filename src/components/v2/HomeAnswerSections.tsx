@@ -60,6 +60,10 @@ const INDUSTRIES = [
   { href: '/services/law-firm-website-design', t: 'Law firms: websites', l: 'Website design for legal practices' },
   { href: '/services/property-management-ai-agents', t: 'Property management', l: 'AI leasing agents' },
   { href: '/services/real-estate-website-design', t: 'Real estate', l: 'Websites for agents and brokerages' },
+  { href: '/services/automotive-ai-voice-agents', t: 'Automotive AI voice agents', l: 'Service booking for dealerships' },
+  { href: '/services/restaurant-ai-voice-agents', t: 'Restaurant AI voice agents', l: 'Phone orders and reservations' },
+  { href: '/services/chemical-pharmaceutical-ai-agents', t: 'Chemical and pharmaceutical AI agents', l: 'Batch record review and SDS authoring' },
+  { href: '/services/agriculture-equipment-ai-agents', t: 'Agriculture equipment AI agents', l: 'Parts lookup and service dispatch' },
 ] as const;
 
 const CITIES = [

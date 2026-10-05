@@ -242,6 +242,35 @@ const SERVICES = [
 ];
 
 /* ─────────────────────────────────────────────────────────────────────────────
+   More services: plain text links to service pages that have no card above.
+   Added 2026-10-05 after a rendered link audit: 15 of the 16 US service pages
+   Google had not indexed had no link from this hub. Anchor text is the service
+   name only; the one-line note sits outside the link. Each note restates the
+   target page's own meta description, so keep the two in line.
+───────────────────────────────────────────────────────────────────────────── */
+
+const MORE_SERVICES = [
+  { eyebrow: 'AI', title: 'AI Consulting', href: '/services/ai-consulting', note: 'An AI readiness assessment and a ranked roadmap, then the build.' },
+  { eyebrow: 'AI', title: 'AI Development', href: '/services/ai-development', note: 'Custom AI software built into your store, ERP and CRM.' },
+  { eyebrow: 'AI', title: 'Shopify AI Agents', href: '/services/shopify-ai-agents', note: 'Agents for orders, wholesale POs, returns and ERP sync.' },
+  { eyebrow: 'AI', title: 'AI Marketing Agent', href: '/services/ai-agent-development/ai-marketing-agent', note: 'Email, SMS, paid social and CRM campaigns in your brand voice.' },
+  { eyebrow: 'AI BY INDUSTRY', title: 'Manufacturing AI Agents', href: '/services/manufacturing-ai-agents', note: 'Agents that read RFQs and drawings and draft quotes.' },
+  { eyebrow: 'AI BY INDUSTRY', title: 'Legal AI Agents', href: '/services/legal-ai-agents', note: 'Intake, contract redlining and discovery for law firms.' },
+  { eyebrow: 'AI BY INDUSTRY', title: 'Property Management AI Agents', href: '/services/property-management-ai-agents', note: 'Leasing agents that sync with AppFolio, Yardi and RealPage.' },
+  { eyebrow: 'AI BY INDUSTRY', title: 'Automotive AI Voice Agents', href: '/services/automotive-ai-voice-agents', note: 'Service booking for dealerships, collision centers and parts counters.' },
+  { eyebrow: 'AI BY INDUSTRY', title: 'Chemical and Pharmaceutical AI Agents', href: '/services/chemical-pharmaceutical-ai-agents', note: 'Batch record review, SDS authoring and LIMS sync.' },
+  { eyebrow: 'AI BY INDUSTRY', title: 'Agriculture Equipment AI Agents', href: '/services/agriculture-equipment-ai-agents', note: 'Parts lookup, fault triage and service dispatch for ag dealerships.' },
+  { eyebrow: 'WEB', title: 'Webflow Development', href: '/services/webflow-development', note: 'Custom Webflow builds, migrations and CMS setup.' },
+  { eyebrow: 'WEB', title: 'Website Maintenance', href: '/services/website-maintenance', note: 'Tested updates, backups, security and speed checks.' },
+  { eyebrow: 'WEB', title: 'Medical Website Design', href: '/services/medical-website-design', note: 'Websites for clinics and practices with online booking.' },
+  { eyebrow: 'E-COMMERCE', title: 'Shopify Theme Development', href: '/services/shopify-theme-development', note: 'Custom Online Store 2.0 Liquid themes.' },
+  { eyebrow: 'E-COMMERCE', title: 'Shopify Checkout Customization', href: '/services/shopify-checkout-customization', note: 'Checkout fields, offers, and shipping and payment rules.' },
+  { eyebrow: 'E-COMMERCE', title: 'Wayfair Marketplace', href: '/wayfair-marketplace', note: 'Supplier setup, catalog, feeds and order links for Wayfair.' },
+  { eyebrow: 'E-COMMERCE', title: 'Ecommerce Audit', href: '/services/ecommerce-audit', note: 'A written review of your store with a ranked list of fixes.' },
+  { eyebrow: 'SEO', title: 'Technical SEO', href: '/services/technical-seo', note: 'Crawling, indexing, Core Web Vitals and site migrations.' },
+];
+
+/* ─────────────────────────────────────────────────────────────────────────────
    FAQ data
 ───────────────────────────────────────────────────────────────────────────── */
 
@@ -869,6 +898,42 @@ export default function USServicesHubPage() {
                   </div>
                 </Link>
               ))}
+            </div>
+
+            {/* More services: text links to service pages without a card above */}
+            <div className="mt-12">
+              <h3
+                className="fj-display font-semibold text-fj-ink"
+                style={{ fontSize: '1.1875rem', lineHeight: 1.2, letterSpacing: '-0.02em' }}
+              >
+                More Services
+              </h3>
+              <ul className="mt-5 grid list-none grid-cols-1 gap-3 p-0 sm:grid-cols-2 lg:grid-cols-3">
+                {MORE_SERVICES.map((service) => (
+                  <li
+                    key={service.href}
+                    className="rounded-xl bg-white p-4"
+                    style={{ border: '1px solid rgba(15,15,18,0.07)' }}
+                  >
+                    <p
+                      className="font-fj-mono font-bold uppercase"
+                      style={{ fontSize: '9px', letterSpacing: '0.13em', color: '#B23E13' }}
+                    >
+                      {service.eyebrow}
+                    </p>
+                    <Link
+                      href={service.href}
+                      className="fj-display inline-block py-1 font-semibold underline-offset-2 hover:underline"
+                      style={{ fontSize: '0.9375rem', color: '#B23E13' }}
+                    >
+                      {service.title}
+                    </Link>
+                    <p className="font-fj-body text-fj-neutral-600" style={{ fontSize: '0.8125rem' }}>
+                      {service.note}
+                    </p>
+                  </li>
+                ))}
+              </ul>
             </div>
 
             {/* Bottom nudge */}

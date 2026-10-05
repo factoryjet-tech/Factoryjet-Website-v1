@@ -384,6 +384,10 @@ export default function FaireWholesaleMarketplacePage() {
                 case pack rules, optimize catalog attributes for B2B search visibility, manage Top Shop operational
                 metrics, and structure Faire Direct funnels so you acquire wholesale accounts at 0% commission.
               </p>
+              <p>
+                Faire is one of several wholesale channels. If you are weighing other options, read our comparison of{' '}
+                <a href="/faire-alternatives" style={{ color: 'var(--pp-orange-dark)', fontWeight: 600, textDecoration: 'underline' }}>Faire alternatives</a>.
+              </p>
             </div>
           </div>
         </section>

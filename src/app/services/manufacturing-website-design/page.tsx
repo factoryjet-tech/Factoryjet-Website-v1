@@ -1468,6 +1468,11 @@ export default function ManufacturingWebsiteDesignPage() {
                   href: '/b2b-ecommerce',
                   desc: 'The wider B2B practice: trade accounts, wholesale ordering and buyer portals across industries.',
                 },
+                {
+                  label: 'Manufacturing AI agents',
+                  href: '/services/manufacturing-ai-agents',
+                  desc: 'Agents that read RFQs and drawings, draft quotes, and write approved drafts into NetSuite, SAP or Epicor.',
+                },
               ].map((svc) => (
                 <Link
                   key={svc.href}

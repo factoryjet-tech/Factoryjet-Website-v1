@@ -416,6 +416,15 @@ export default function MarketplaceManagementPage() {
                 marketplace APIs. We build automated buffer controls, price-sync state machines, and high-converting
                 storefront creative so you capture incremental revenue without multiplying overhead.
               </p>
+              <p>
+                Each channel has its own page. See how we work on{' '}
+                <a href="/services/amazon-agency" style={{ color: 'var(--pp-orange-dark)', fontWeight: 600, textDecoration: 'underline' }}>Amazon</a>,{' '}
+                <a href="/services/walmart-marketplace-agency" style={{ color: 'var(--pp-orange-dark)', fontWeight: 600, textDecoration: 'underline' }}>Walmart Marketplace</a>,{' '}
+                <a href="/target-plus-marketplace" style={{ color: 'var(--pp-orange-dark)', fontWeight: 600, textDecoration: 'underline' }}>Target Plus</a>,{' '}
+                <a href="/wayfair-marketplace" style={{ color: 'var(--pp-orange-dark)', fontWeight: 600, textDecoration: 'underline' }}>Wayfair</a>,{' '}
+                <a href="/services/tiktok-shop-agency" style={{ color: 'var(--pp-orange-dark)', fontWeight: 600, textDecoration: 'underline' }}>TikTok Shop</a> and{' '}
+                <a href="/faire-wholesale-marketplace" style={{ color: 'var(--pp-orange-dark)', fontWeight: 600, textDecoration: 'underline' }}>Faire Wholesale</a>.
+              </p>
             </div>
           </div>
         </section>

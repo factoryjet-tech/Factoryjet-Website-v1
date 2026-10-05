@@ -1068,7 +1068,10 @@ export default function LawFirmSEOPage() {
               Call tracking numbers tell you which page produced which call. Intake forms post through a
               webhook into whichever CRM the firm runs: HubSpot, Clio Grow, or Lawmatics. Review requests
               fire from that workflow when a matter closes, into Google Business Profile first, then Avvo,
-              Justia, FindLaw, Martindale-Hubbell, Super Lawyers, and your state bar listing.
+              Justia, FindLaw, Martindale-Hubbell, Super Lawyers, and your state bar listing. When intake
+              itself is the bottleneck, our{' '}
+              <Link href="/services/legal-ai-agents" style={LINK_STYLE}>legal AI agents</Link>{' '}
+              take new-matter intake and sync it to Clio, MyCase, or Filevine.
             </p>
 
             <h3 style={{ fontSize: '1.125rem', fontWeight: 700, marginTop: '32px' }}>AI answers, which now sit above the ten blue links</h3>

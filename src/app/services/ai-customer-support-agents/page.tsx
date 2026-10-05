@@ -494,7 +494,7 @@ export default function AiCustomerSupportAgentsPage() {
               </div>
               <div className="pp-card p-6 bg-white">
                 <dt className="text-base font-bold text-[#14110F] mb-2">How does it work under the hood?</dt>
-                <dd className="text-sm text-[#46403B] leading-relaxed m-0">Our <Link href="/blog/ai-customer-support-agent-architecture-guide" className="underline font-semibold text-[#B23E13]">support agent architecture guide</Link> walks through the Zendesk, Intercom and Gorgias integration in detail. Building or rebuilding the store itself? See our <Link href="/services/shopify-development" className="underline font-semibold text-[#B23E13]">Shopify development</Link> work.</dd>
+                <dd className="text-sm text-[#46403B] leading-relaxed m-0">Our <Link href="/blog/ai-customer-support-agent-architecture-guide" className="underline font-semibold text-[#B23E13]">support agent architecture guide</Link> walks through the Zendesk, Intercom and Gorgias integration in detail. Building or rebuilding the store itself? See our <Link href="/services/shopify-development" className="underline font-semibold text-[#B23E13]">Shopify development</Link> work. For agents that work on orders, returns and ERP sync inside the store, see <Link href="/services/shopify-ai-agents" className="underline font-semibold text-[#B23E13]">Shopify AI agents</Link>.</dd>
               </div>
             </dl>
           </div>

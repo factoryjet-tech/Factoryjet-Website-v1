@@ -1550,6 +1550,11 @@ export default function AiAgentsForRealEstatePage() {
                   href: '/services/ai-seo',
                   desc: 'Getting named and cited inside ChatGPT, Perplexity and Google AI Overviews.',
                 },
+                {
+                  label: 'Property management AI agents',
+                  href: '/services/property-management-ai-agents',
+                  desc: 'Leasing agents that answer prospects and sync with AppFolio, Yardi and RealPage.',
+                },
               ].map((svc) => (
                 <Link
                   key={svc.href}
