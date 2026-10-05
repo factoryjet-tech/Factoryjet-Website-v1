@@ -31,6 +31,7 @@ import json
 import os
 import re
 import sys
+import time
 import urllib.parse
 import urllib.request
 
@@ -48,10 +49,22 @@ OUT_DIR = os.path.join(HERE, 'data', 'index-watch')
 PRIORITY = [r'^/services/', r'^/website-cost', r'^/case-studies/', r'^/blog/', r'^/au/', r'^/uk/', r'^/']
 
 
-def fetch(url, timeout=30):
+def fetch(url, timeout=30, tries=5, wait=20):
+    """GET a URL as text, retrying network errors.
+
+    launchd fires this job as the Mac wakes, sometimes before DNS is up. Two
+    runs between 2026-09-30 and 2026-10-03 died right here with "nodename nor
+    servname provided" (see data/index-watch/launchd.log) and wrote no snapshot.
+    """
     req = urllib.request.Request(url, headers={'Cache-Control': 'no-cache', 'User-Agent': 'factoryjet-index-watch'})
-    with urllib.request.urlopen(req, timeout=timeout) as r:
-        return r.read().decode('utf-8', 'ignore')
+    for attempt in range(tries):
+        try:
+            with urllib.request.urlopen(req, timeout=timeout) as r:
+                return r.read().decode('utf-8', 'ignore')
+        except OSError:  # URLError (DNS, refused, HTTP status) and socket timeouts
+            if attempt == tries - 1:
+                raise
+            time.sleep(wait)
 
 
 def sitemap_files():

@@ -391,19 +391,15 @@ const jsonLd = {
       '@type': 'ItemList',
       name: 'FactoryJet Web Design & Development Services',
       description: 'Complete web design and development services for US small businesses',
-      numberOfItems: 10,
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Custom Web Design', url: 'https://factoryjet.com/services/web-design' },
-        { '@type': 'ListItem', position: 2, name: 'Shopify Development', url: 'https://factoryjet.com/services/shopify-development' },
-        { '@type': 'ListItem', position: 3, name: 'Custom E-commerce Development', url: 'https://factoryjet.com/services/ecommerce-development' },
-        { '@type': 'ListItem', position: 4, name: 'Web Application Development', url: 'https://factoryjet.com/services/web-application-development' },
-        { '@type': 'ListItem', position: 5, name: 'Website Redesign', url: 'https://factoryjet.com/services/website-redesign' },
-        { '@type': 'ListItem', position: 6, name: 'WordPress Development', url: 'https://factoryjet.com/services/wordpress-development' },
-        { '@type': 'ListItem', position: 7, name: 'AI Agent Development', url: 'https://factoryjet.com/services/ai-agent-development' },
-        { '@type': 'ListItem', position: 8, name: 'AI Automation', url: 'https://factoryjet.com/services/ai-automation' },
-        { '@type': 'ListItem', position: 9, name: 'Law Firm Website Design', url: 'https://factoryjet.com/services/law-firm-website-design' },
-        { '@type': 'ListItem', position: 10, name: 'Real Estate Website Design', url: 'https://factoryjet.com/services/real-estate-website-design' },
-      ],
+      // Built from SERVICES, the array the cards render from, so the list
+      // cannot drift from the page (it was a hand-typed 10 against 13 cards).
+      numberOfItems: SERVICES.length,
+      itemListElement: SERVICES.map((service, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: service.title,
+        url: `https://factoryjet.com${service.href}`,
+      })),
     },
     {
       '@type': 'BreadcrumbList',

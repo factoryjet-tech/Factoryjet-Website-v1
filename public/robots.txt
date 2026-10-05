@@ -50,6 +50,16 @@ Disallow: /admin/
 Allow: /_next/static/
 Disallow: /_next/
 
+# /cdn-cgi/l/email-protection is where Cloudflare's Email Address Obfuscation
+# points every address it rewrites in our HTML. A fetch of all 513 sitemap URLs
+# on 2026-10-05 found 103 of those links on 70 pages, and the target answers 404.
+# Deliberately narrower than Cloudflare's suggested "Disallow: /cdn-cgi/":
+# /cdn-cgi/scripts/ serves email-decode.min.js, which a rendering crawler needs
+# to show the real address, so it stays fetchable (same reason as /_next/static/).
+# This rule lives in the * group only. Bots with their own group below do not
+# read it and may still fetch that one URL, which is harmless (it 404s).
+Disallow: /cdn-cgi/l/
+
 # ─── AI retrieval / search bots — explicitly allowed ───
 # These fetch live content for AI search results / citations. Allowing them
 # is core to FactoryJet's AIO/GEO strategy. Every retrieval bot is named
