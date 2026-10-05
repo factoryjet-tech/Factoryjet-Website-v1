@@ -697,6 +697,65 @@
   transform: rotate(45deg);
 }
 
+/* City ecommerce pages: industry showcase rows, problem/solution pairs and the
+   agency evaluation table. These grids live here, not in inline styles, so the
+   phone breakpoint below can collapse them. An inline grid-template-columns,
+   order or height cannot be overridden by a media query. */
+.platpage .rv-showcase-row {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+}
+.platpage .rv-showcase-row--flip {
+  grid-template-columns: 0.9fr 1.1fr;
+}
+.platpage .rv-showcase-media {
+  height: 320px;
+}
+.platpage .rv-showcase-row--flip > .rv-showcase-media {
+  order: -1; /* image on the left on every second row */
+}
+.platpage .rv-service-compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.platpage .rv-eval-head,
+.platpage .rv-eval-row {
+  display: grid;
+  grid-template-columns: 1.2fr 1.4fr 1.4fr;
+}
+@media (max-width: 760px) {
+  .platpage .rv-showcase-row,
+  .platpage .rv-showcase-row--flip,
+  .platpage .rv-service-compare,
+  .platpage .rv-eval-row {
+    grid-template-columns: 1fr;
+  }
+  /* image above the text on every row, flipped or not. 220px on a phone keeps
+     roughly the desktop crop; it grows back to 320px as the single column widens. */
+  .platpage .rv-showcase-row > .rv-showcase-media {
+    order: -1;
+    height: clamp(220px, 46vw, 320px);
+  }
+  /* A three-column header has nothing to sit above once the rows stack,
+     so each cell shows its own column name (data-label) instead. */
+  .platpage .rv-eval-head {
+    display: none;
+  }
+  .platpage .rv-eval-row > [data-label]::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: 4px;
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #6E6E80;
+  }
+  .platpage .rv-eval-row > [data-label]:nth-child(2)::before {
+    color: #B23E13;
+  }
+}
+
 /* ─────────────────────────────────────────────────────────────────────────────
    CTA Grid, Founder Bio & Testimonial Proof Card Styles (.pp-ctagrid)
 ───────────────────────────────────────────────────────────────────────────── */
