@@ -1,0 +1,133 @@
+/* Opt-in visual refinement. No other blog route uses this root class. */
+.blog-india-guide {
+  --ig-ink: #14110f;
+  --ig-body: #46403b;
+  --ig-muted: #6e635a;
+  --ig-line: #e7ded6;
+  --ig-tint: #fff8f5;
+  --ig-accent: #b23e13;
+  background: #fff;
+  color: var(--ig-body);
+}
+.blog-india-guide :is(h1,h2,h3) { color: var(--ig-ink); text-wrap: balance; }
+.blog-india-guide > header { padding: clamp(36px,5vw,72px) 0 72px; border-color: var(--ig-line); }
+.blog-india-guide > header > div { max-width: 1160px; text-align: left; }
+.blog-india-guide > header > div > div:first-child { justify-content: flex-start; }
+.blog-india-guide h1 { max-width: 21ch; font-size: clamp(32px,4.3vw,60px); line-height: 1.12; margin-bottom: 30px; }
+.blog-india-guide > header img { box-shadow: none; border-color: var(--ig-line); }
+.blog-india-guide > header .bg-green-500 { background: var(--ig-accent); }
+.blog-india-guide > header + div { max-width: 1160px; margin-top: -32px; margin-bottom: clamp(32px,4vw,56px); }
+.blog-india-guide > header + div > div { aspect-ratio: 3.8; border-radius: 12px; box-shadow: none; outline: 1px solid var(--ig-line); }
+.blog-india-guide > header + div img { object-position: center 65%; }
+.blog-india-guide main { max-width: 1280px; }
+.blog-india-guide main > div { grid-template-columns: minmax(0,1fr) 300px; gap: clamp(28px,4vw,64px); }
+.blog-india-guide article { grid-column: auto; min-width: 0; }
+.blog-india-guide article > div { border: 0; padding: 0; border-radius: 0; box-shadow: none; }
+.blog-india-guide article > div > p:first-child {
+  margin: 0 0 36px; padding: 0 0 28px; border: 0; border-bottom: 1px solid var(--ig-line);
+  border-radius: 0; background: transparent; font-family: var(--font-inter),sans-serif;
+  font-style: normal; font-size: clamp(17px,1.6vw,21px); line-height: 1.75; color: var(--ig-body);
+}
+.blog-india-guide #takeaways > div { border: 0; border-radius: 12px; padding: 26px; background: var(--ig-tint); margin: 0 0 40px; }
+.blog-india-guide #takeaways ul { display: grid; gap: 0; }
+.blog-india-guide #takeaways li { padding: 16px 0; border-bottom: 1px solid var(--ig-line); font-size: 15px; line-height: 1.7; }
+.blog-india-guide #takeaways li:last-child { border-bottom: 0; padding-bottom: 0; }
+.blog-india-guide #takeaways li > span:first-child { background: #fff; color: var(--ig-accent); border-radius: 6px; min-width: 28px; height: 28px; }
+.blog-india-guide .india-guide-content { min-width: 0; }
+.blog-india-guide .india-guide-content :is(p,li) { line-height: 1.75; color: var(--ig-body); }
+.blog-india-guide .india-guide-content :is(h2,h3) { letter-spacing: -.025em; }
+.blog-india-guide .india-guide-content h2 { font-size: clamp(26px,2.6vw,36px); line-height: 1.2; margin: 0 0 22px; }
+.blog-india-guide .india-guide-content a { color: var(--ig-accent); text-underline-offset: 4px; }
+.blog-india-guide .india-guide-content :is(a,button):focus-visible,
+.blog-india-guide summary:focus-visible,
+.blog-india-guide .ig-table-scroll:focus-visible { outline: 2px solid var(--ig-accent); outline-offset: 4px; }
+.blog-india-guide .india-guide-content :is(.bg-\[\#B23E13\],.bg-\[\#F05A28\]) { color: #fff; background: #b23e13; box-shadow: none; }
+.blog-india-guide .india-guide-content :is(.bg-\[\#B23E13\],.bg-\[\#F05A28\]):hover { background: #8f3210; transform: none; }
+.blog-india-guide :is(.ig-answer,.ig-market,.ig-audit,.ig-final) { border: 1px solid var(--ig-line); border-radius: 12px; box-shadow: none; }
+.blog-india-guide .ig-answer { border: 0; padding: 28px 0; border-block: 1px solid var(--ig-line); border-radius: 0; background: #fff; }
+.blog-india-guide .ig-answer > p:first-child { color: var(--ig-accent); font-size: 20px; }
+.blog-india-guide .ig-market { background: var(--ig-tint); padding: clamp(22px,3vw,32px); }
+.blog-india-guide .ig-market :is(a,.ig-audit a,.ig-final a) { min-height: 46px; }
+.blog-india-guide :is(.ig-context,.ig-matrix,.ig-engines,.ig-reviews,.ig-hiring) { margin-block: clamp(44px,5vw,64px); }
+.blog-india-guide .ig-context > p { max-width: 70ch; font-size: 16px; }
+.blog-india-guide .ig-disclosure { margin-top: 28px; background: var(--ig-tint); border-color: var(--ig-line); color: var(--ig-body); padding: 22px; }
+.blog-india-guide .ig-disclosure > p:first-child { color: var(--ig-accent); }
+.blog-india-guide .ig-table-scroll { border: 1px solid var(--ig-line); border-radius: 10px; box-shadow: none; overscroll-behavior-inline: contain; }
+.blog-india-guide .ig-table-scroll table { min-width: 1100px; line-height: 1.55; }
+.blog-india-guide .ig-table-scroll thead { background: var(--ig-tint); color: var(--ig-ink); }
+.blog-india-guide .ig-table-scroll :is(th,td) { padding: 18px 16px; border-color: var(--ig-line); vertical-align: top; }
+.blog-india-guide .ig-table-scroll :is(th,td):first-child { width: 52px; min-width: 52px; position: sticky; left: 0; background: #fff; z-index: 1; }
+.blog-india-guide .ig-table-scroll :is(th,td):nth-child(2) { position: sticky; left: 52px; min-width: 132px; max-width: 160px; background: #fff; z-index: 1; border-right: 1px solid var(--ig-line); }
+.blog-india-guide .ig-table-scroll thead th { background: var(--ig-tint); }
+.blog-india-guide .ig-table-scroll tbody tr:first-child td { background: var(--ig-tint); }
+.blog-india-guide .ig-table-scroll td.font-bold { color: var(--ig-accent); }
+.blog-india-guide .ig-table-scroll td.text-emerald-700 { color: var(--ig-body); }
+.blog-india-guide .ig-table-scroll tbody tr:hover td { background: #fff3ee; }
+.blog-india-guide .ig-engines > div { gap: 0; border-top: 1px solid var(--ig-line); }
+.blog-india-guide .ig-engines > div > div { padding: 28px 22px 28px 0; border: 0; border-bottom: 1px solid var(--ig-line); border-radius: 0; box-shadow: none; }
+.blog-india-guide .ig-engines > div > div:nth-child(even) { padding-left: 24px; border-left: 1px solid var(--ig-line); }
+.blog-india-guide .ig-engines h3 { font-size: 18px; line-height: 1.4; }
+.blog-india-guide .ig-engines p { font-size: 15px; }
+.blog-india-guide .ig-audit { background: var(--ig-tint); padding: clamp(24px,3vw,36px); }
+.blog-india-guide .ig-audit > p:nth-child(2) { max-width: 29ch; font-size: clamp(24px,3vw,32px); line-height: 1.3; letter-spacing: -.02em; }
+.blog-india-guide .ig-agency { margin: 0; padding: 30px 0; border: 0; border-top: 1px solid var(--ig-line); border-radius: 0; box-shadow: none; display: grid; grid-template-columns: minmax(0,.9fr) minmax(0,1.5fr); column-gap: 28px; }
+.blog-india-guide .ig-agency > h3 { grid-column: 1; grid-row: 1 / span 3; font-size: 21px; line-height: 1.4; margin: 0; }
+.blog-india-guide .ig-agency > p { grid-column: 2; font-size: 15px; }
+.blog-india-guide .ig-agency > p:first-of-type { color: var(--ig-muted); font-size: 13px; margin-top: 0; }
+.blog-india-guide .ig-owned { display: block; background: var(--ig-tint); margin: 24px 0; padding: clamp(24px,3vw,36px); border-radius: 12px; border: 1px solid var(--ig-line); }
+.blog-india-guide .ig-owned h3 { font-size: clamp(24px,2.4vw,30px); line-height: 1.3; }
+.blog-india-guide .ig-owned > div:first-child { align-items: flex-start; }
+.blog-india-guide .ig-owned > div:first-child > span { color: var(--ig-accent); background: #fff; padding: 8px 10px; line-height: 1.4; }
+.blog-india-guide .ig-owned > div.bg-slate-50 { background: transparent; padding: 20px 0; border-block: 1px solid var(--ig-line); border-radius: 0; }
+.blog-india-guide .ig-owned ul { gap: 16px 24px; }
+.blog-india-guide .ig-owned > div:last-child { gap: 12px; }
+.blog-india-guide .ig-owned > div:last-child a { min-height: 44px; display: inline-flex; align-items: center; }
+.blog-india-guide .ig-hiring > div { display: grid; gap: 0; }
+.blog-india-guide .ig-hiring > div > div { border: 0; border-top: 1px solid var(--ig-line); border-radius: 0; padding: 24px 0; box-shadow: none; margin: 0; }
+.blog-india-guide .ig-hiring h3 { font-size: 20px; line-height: 1.45; max-width: 50ch; }
+.blog-india-guide .ig-hiring p { font-size: 15px; max-width: 70ch; }
+.blog-india-guide .ig-directory { padding: 28px 0; background: #fff; border: 0; border-block: 1px solid var(--ig-line); border-radius: 0; }
+.blog-india-guide .ig-directory > div { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 0 24px; }
+.blog-india-guide .ig-directory a { border-bottom: 1px solid var(--ig-line); min-height: 48px; display: flex; align-items: center; padding: 12px 0; line-height: 1.45; }
+.blog-india-guide .ig-final { text-align: left; background: var(--ig-tint); padding: clamp(24px,3vw,36px); }
+.blog-india-guide .ig-final h3 { font-size: clamp(25px,2.6vw,34px); line-height: 1.2; }
+.blog-india-guide .ig-final > p { margin-left: 0; max-width: 65ch; }
+.blog-india-guide .ig-final > div { justify-content: flex-start; }
+.blog-india-guide #faqs { padding: 32px 0 0; border: 0; border-top: 1px solid var(--ig-line); border-radius: 0; background: #fff; }
+.blog-india-guide #faqs > div { display: grid; gap: 0; }
+.blog-india-guide #faqs details { margin: 0; border: 0; border-bottom: 1px solid var(--ig-line); border-radius: 0; }
+.blog-india-guide #faqs summary { padding: 22px 0; gap: 12px; }
+.blog-india-guide #faqs details > div { padding: 0 0 24px; border: 0; color: var(--ig-body); line-height: 1.8; }
+.blog-india-guide #author { background: var(--ig-tint); border-color: var(--ig-line); border-radius: 12px; }
+.blog-india-guide #author img { box-shadow: none; border-radius: 10px; }
+.blog-india-guide :is(#related-services,#related-reading) { border-top: 1px solid var(--ig-line); padding-top: 32px; }
+.blog-india-guide :is(#related-services,#related-reading) a { box-shadow: none; border-color: var(--ig-line); border-radius: 10px; }
+.blog-india-guide aside { grid-column: auto; min-width: 0; }
+.blog-india-guide .blog-lead { border-radius: 12px; }
+.blog-india-guide .blog-lead-side { padding: 24px; }
+.blog-india-guide .blog-lead-side .blog-lead-heading { font-size: 22px; }
+.blog-india-guide > footer { border-color: var(--ig-line); }
+@media (max-width: 1023px) {
+  .blog-india-guide main > div { grid-template-columns: minmax(0,1fr); gap: 0; }
+  .blog-india-guide aside { display: none; }
+  .blog-india-guide > header + div > div { aspect-ratio: 2.6; }
+}
+@media (max-width: 639px) {
+  .blog-india-guide > header { padding-top: 28px; padding-bottom: 56px; }
+  .blog-india-guide h1 { font-size: clamp(30px,8vw,40px); }
+  .blog-india-guide > header + div { margin-top: -24px; }
+  .blog-india-guide > header + div > div { aspect-ratio: 1.9; }
+  .blog-india-guide #takeaways > div { padding: 20px; }
+  .blog-india-guide .ig-engines > div { grid-template-columns: minmax(0,1fr); }
+  .blog-india-guide .ig-engines > div > div:nth-child(even) { padding-left: 0; border-left: 0; }
+  .blog-india-guide .ig-agency { display: block; padding-block: 26px; }
+  .blog-india-guide .ig-agency > h3 { margin-bottom: 14px; font-size: 22px; }
+  .blog-india-guide .ig-owned { padding: 22px; }
+  .blog-india-guide .ig-directory > div { grid-template-columns: minmax(0,1fr); }
+  .blog-india-guide :is(.ig-market,.ig-audit,.ig-final) > div { align-items: stretch; }
+  .blog-india-guide :is(.ig-market,.ig-audit,.ig-final) > div > a { width: 100%; min-height: 48px; padding-inline: 16px; text-align: center; }
+  .blog-india-guide .blog-lead { padding: 22px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .blog-india-guide *, .blog-india-guide *::before, .blog-india-guide *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}

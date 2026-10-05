@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import './page.css';
+import AutomationGrowthVisual from './AutomationGrowthVisual';
 import { usServiceAlternates } from '@/data/hreflangMap';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
@@ -666,10 +668,11 @@ export default function AIAutomationPage() {
         cta={{ label: 'Free Automation Audit', modal: true, region: 'us' }}
       />
 
-      <main className="bg-fj-cream">
+      <main className="bg-fj-cream ai-automation-growth">
         <Breadcrumbs items={BREADCRUMB_ITEMS} />
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
+        <div className="ag-hero">
         <Hero
         formSlot={<HeroInlineForm region="us" source="us_services_ai_automation_hero" />}
           eyebrow="AI AUTOMATION AGENCY · USA"
@@ -682,13 +685,14 @@ export default function AIAutomationPage() {
             'n8n · Make · Zapier · Custom AI',
           ]}
           rightSlot={
-            <div className="rounded-2xl border border-fj-neutral-200 bg-white p-8 shadow-sm">
+            <div className="ag-before-after">
               <p
                 className="font-fj-mono font-medium uppercase text-[#B23E13]"
                 style={{ fontSize: '11px', letterSpacing: '0.14em' }}
               >
                 ILLUSTRATIVE, NOT A CLIENT RESULT
               </p>
+              <AutomationGrowthVisual />
               <p className="mt-4 font-fj-display text-[1.75rem] font-medium leading-[1.15] tracking-[-0.025em] text-fj-ink">
                 What the manual version looks like, and what the automated version does
               </p>
@@ -707,7 +711,7 @@ export default function AIAutomationPage() {
                     after: 'AI reads, classifies, drafts reply, routes to right agent, before inbox opens',
                   },
                 ].map((row, i) => (
-                  <li key={i} className="rounded-xl border border-fj-neutral-100 bg-fj-neutral-50 p-4">
+                  <li key={i} className="ag-audit-row">
                     <p className="font-fj-body text-[0.75rem] font-medium uppercase tracking-wide text-red-400">Before</p>
                     <p className="mt-1 font-fj-body text-[0.8125rem] leading-[1.5] text-fj-neutral-600">{row.before}</p>
                     <p className="mt-2 font-fj-body text-[0.75rem] font-medium uppercase tracking-wide text-[#B23E13]">After</p>
@@ -718,13 +722,14 @@ export default function AIAutomationPage() {
             </div>
           }
         />
+        </div>
 
         {/* ── 1B. SHORT ANSWERS ─────────────────────────────────────────────
             Added 2026-09-28. Answer-first block: AI buyers ask who it is for,
             which tools, cost, timeline and ownership before anything else
             (pipeline/research/AI-BUYER-SWEEP-RESULTS-2026-09-17.md). Timelines
             are the ones this page's own FAQ already states. No prices. */}
-        <section id="short-answers" className="py-16 bg-white border-b border-[#E7DED6]">
+        <section id="short-answers" className="ag-short-answers py-16 bg-white border-b border-[#E7DED6]">
           <div className="max-w-6xl mx-auto px-6">
             <p className="text-sm font-semibold text-[#B23E13] uppercase tracking-widest mb-3">Short answers</p>
             <h2 className="font-fj-display text-[2rem] font-medium leading-[1.15] tracking-[-0.025em] text-fj-ink mb-8">
@@ -759,15 +764,20 @@ export default function AIAutomationPage() {
         </section>
 
         {/* ── 2. LOGO BAR ──────────────────────────────────────────────────── */}
+        <div className="ag-logos">
         <LogoBar tagline="Trusted by 500+ businesses across the US, UK, and UAE" />
+        </div>
 
         {/* ── 3. TRUST BLOCK ───────────────────────────────────────────────── */}
+        <div className="ag-trust">
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
           headline="500+ businesses. 12 years of building. Real automation that ships."
         />
+        </div>
 
         {/* ── 4. WHAT IS AN AI AUTOMATION AGENCY ───────────────────────────── */}
+        <div className="ag-explanation">
         <ServiceExplanation
           eyebrow="AI AUTOMATION EXPLAINED"
           headline="What an AI Automation Agency Does, and Why It's Different from a Chatbot or a Zapier Freelancer"
@@ -789,7 +799,7 @@ export default function AIAutomationPage() {
                 A Zapier freelancer connects two tools and calls it automation. A large agency may scope the same job as a months-long program. FactoryJet sits in the middle. We map your full workflow and handle edge cases that break basic setups. We add an AI reasoning layer using Claude and GPT-4o for steps that require reading, classifying, or generating content.
               </p>
               <div
-                className="border-l-2 border-[#F05A28] pl-5 py-1"
+                className="ag-insight"
                 aria-hidden
               >
                 <p
@@ -809,7 +819,7 @@ export default function AIAutomationPage() {
           }
           rightSlot={
             <div
-              className="w-full overflow-hidden rounded-2xl bg-white shadow-sm"
+              className="ag-stack w-full overflow-hidden rounded-2xl bg-white shadow-sm"
               style={{
                 borderWidth: '1px',
                 borderStyle: 'solid',
@@ -855,8 +865,10 @@ export default function AIAutomationPage() {
             </div>
           }
         />
+        </div>
 
         {/* ── 5. THE PROBLEM (DARK) ─────────────────────────────────────────── */}
+        <div className="ag-manual-cost">
         <StrategicDarkSection
           eyebrow="THE COST OF MANUAL WORK"
           headline="The manual hours are the cost, and most teams have never actually added them up."
@@ -876,8 +888,10 @@ export default function AIAutomationPage() {
             },
           ]}
         />
+        </div>
 
         {/* ── 6. OUR PROCESS ───────────────────────────────────────────────── */}
+        <div className="ag-journey">
         <ServiceJourneyRow
           eyebrow="OUR PROCESS"
           headline="From Free Audit to Automated Workflow: 5 Structured Stages"
@@ -885,15 +899,19 @@ export default function AIAutomationPage() {
           stages={AUTOMATION_JOURNEY_STAGES}
           closingNote="5 STAGES · 3 DAYS TO 4 WEEKS · FREE AUDIT BEFORE ANY COMMITMENT"
         />
+        </div>
 
+        <div className="ag-mid-cta">
         <MidPageCTA
           headline="Tell us the one task you would automate first"
           sub="Name the task, the tools it touches and roughly how many times a week it happens. We will tell you what it takes to automate, and whether it needs AI at all."
           label="Tell us the workflow"
           note="Bhavesh, our founder, reads every enquiry and usually replies within 2 to 3 hours."
         />
+        </div>
 
         {/* ── 7. WHAT WE AUTOMATE ───────────────────────────────────────────── */}
+        <div className="ag-categories">
         <IndustriesGrid
           variant="cards"
           eyebrow="WHAT WE AUTOMATE"
@@ -901,8 +919,10 @@ export default function AIAutomationPage() {
           lead="Every business has a different bottleneck. These are the six workflow categories that consistently deliver the highest return on automation investment for the SMBs we work with."
           sectors={AUTOMATION_TYPES}
         />
+        </div>
 
         {/* ── 8. US MARKET CONTEXT ─────────────────────────────────────────── */}
+        <div className="ag-market">
         <CityContextSection
           eyebrow="THE US AUTOMATION MARKET"
           headline="Automation stopped being an enterprise-only decision"
@@ -913,9 +933,10 @@ export default function AIAutomationPage() {
           ]}
           stats={US_AUTOMATION_STATS}
         />
+        </div>
 
         {/* ── 8B. INTERACTIVE ROI CALCULATOR ──────────────────────────────── */}
-        <section className="bg-[#FFF8F5] py-16 md:py-24 border-y border-[#E7DED6]">
+        <section className="ag-estimator bg-[#FFF8F5] py-16 md:py-24 border-y border-[#E7DED6]">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-12">
               <span className="inline-block text-sm font-semibold tracking-wider text-[#B23E13] uppercase font-fj-mono">
@@ -933,6 +954,7 @@ export default function AIAutomationPage() {
         </section>
 
         {/* ── 9. COMPARISON TABLE ──────────────────────────────────────────── */}
+        <div className="ag-comparison">
         <ComparisonTable
           eyebrow="HOW WE COMPARE"
           headline="FactoryJet vs. Traditional Agency vs. DIY Tools vs. Freelancer"
@@ -943,8 +965,10 @@ export default function AIAutomationPage() {
           }}
           columns={COMPARISON_COLUMNS}
           rows={COMPARISON_ROWS}
+          scrollRegionLabel="AI automation agency comparison"
           footer="Compared on scope and on what you are left holding when the engagement ends, not on price. DIY looks cheapest until you count the staff time spent building and then maintaining the workflows."
         />
+        </div>
 
         {/* ── 9b. WHAT WE ACTUALLY CONNECT ──────────────────────────────────
             Added 2026-08-06. GSC (90 days to 2026-08-04) shows this page ranking
@@ -957,7 +981,7 @@ export default function AIAutomationPage() {
             START an automation agency, not hire one. Measured 2026-08-06,
             pipeline/research/dfs_aaa_serp.py.
         ─────────────────────────────────────────────────────────────────────── */}
-        <section className="py-20 bg-white">
+        <section className="ag-scope py-20 bg-white">
           <div className="max-w-6xl mx-auto px-6">
             <p className="text-sm font-semibold text-[#B23E13] uppercase tracking-widest mb-3">
               Scope, in plain terms
@@ -1009,7 +1033,7 @@ export default function AIAutomationPage() {
             this page sat at position 75 for it without ever using the phrase.
             Scope statements only; no third-party statistics.
         ─────────────────────────────────────────────────────────────────────── */}
-        <section id="business-automation-services" className="py-20 bg-white border-t border-[#E7DED6]">
+        <section id="business-automation-services" className="ag-back-office py-20 bg-white border-t border-[#E7DED6]">
           <div className="max-w-6xl mx-auto px-6">
             <p className="text-sm font-semibold text-[#B23E13] uppercase tracking-widest mb-3">
               Not everything needs AI
@@ -1057,7 +1081,7 @@ export default function AIAutomationPage() {
         </section>
 
         {/* ── 10. PRICING ──────────────────────────────────────────────────── */}
-        <div id="pricing">
+        <div id="pricing" className="ag-pricing">
           <PricingTiers
             eyebrow="TRANSPARENT PRICING"
             headline="Fixed-Price AI Automation: No Hourly Billing, No Scope Creep"
@@ -1068,13 +1092,16 @@ export default function AIAutomationPage() {
         </div>
 
         {/* ── 12. TESTIMONIALS ─────────────────────────────────────────────── */}
+        <div className="ag-testimonials">
         <TestimonialsSection
           region="us"
           eyebrow="WHAT CLIENTS SAY"
           headline="What clients say about working with us"
         />
+        </div>
 
         {/* ── 13. FAQ ──────────────────────────────────────────────────────── */}
+        <div className="ag-faq">
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
           headline="Every Question We Get on the Free Automation Audit Call, Answered Straight"
@@ -1082,8 +1109,10 @@ export default function AIAutomationPage() {
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
         />
+        </div>
 
         {/* ── 14. FINAL CTA ─────────────────────────────────────────────────── */}
+        <div className="ag-final-cta">
         <FinalCTA
           variant="light"
           eyebrow="START WITH A FREE AUDIT"
@@ -1093,6 +1122,7 @@ export default function AIAutomationPage() {
           secondaryCta={{ label: 'See AI Agent Services', href: '/services/ai-agent-development' }}
           objectionHandler="Fixed price. Free audit first. No commitment until you've seen the plan."
         />
+        </div>
 
       </main>
 

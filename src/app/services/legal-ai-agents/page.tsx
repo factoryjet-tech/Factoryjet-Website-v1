@@ -14,7 +14,7 @@ const CANONICAL_URL = 'https://factoryjet.com/services/legal-ai-agents';
 const PAGE_TITLE = 'AI for Law Firms: Legal AI Agents & AI Intake | FactoryJet';
 const PAGE_DESC =
   'AI for law firms: custom legal AI agents and an AI receptionist for intake, contract redlining and discovery, synced with Clio, MyCase and Filevine.';
-const PAGE_MODIFIED = '2026-09-19';
+const PAGE_MODIFIED = '2026-10-04';
 
 /** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
  *  <Breadcrumbs> component and the BreadcrumbList JSON-LD below. So the two
@@ -429,11 +429,11 @@ export default function LegalAiAgentsPage() {
                   </div>
                   <div className="mt-3 p-3 bg-white rounded-lg border border-[#E7DED6] text-xs">
                     <div className="flex items-center justify-between text-muted font-mono mb-1">
-                      <span>LIVE PRACTICE MANAGEMENT INGESTION</span>
-                      <span className="text-[#F05A28] font-bold">PRIVILEGE ENCLAVE</span>
+                      <span>ILLUSTRATIVE WORKFLOW</span>
+                      <span className="text-[#F05A28] font-bold">ATTORNEY REVIEW</span>
                     </div>
                     <div className="font-bold text-[#14110F]">
-                      Clio Manage &bull; Inbound M&amp;A Agreement Redlined in 42s (0 Hallucinations)
+                      Draft agreement review &bull; Source checks and attorney approval required
                     </div>
                   </div>
                 </div>
@@ -455,6 +455,17 @@ export default function LegalAiAgentsPage() {
               <p className="text-base sm:text-lg text-[#46403B] leading-relaxed">
                 A legal AI agent is automated software. It connects to practice management platforms like Clio, Filevine, and MyCase. It also links with NetDocuments and iManage. It monitors email inboxes and court docketing feeds. It triages incoming client inquiries. It checks jurisdictional fit. It screens adverse parties for conflicts. It indexes discovery pages with page-and-line citations. It redlines agreements against your playbook. It stages approved drafts in your practice management system. It logs a complete audit trail.
               </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-12 bg-white border-b border-[#E7DED6]" id="deployed-case">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="rounded-2xl border border-[#E7DED6] bg-[#FAFAF7] p-6 sm:p-8">
+              <p className="font-mono text-xs text-[#B23E13] font-bold uppercase tracking-wider mb-2">Deployed implementation</p>
+              <h2 className="text-xl sm:text-2xl font-bold text-[#14110F] font-heading mb-4">Washington Law Group: Incident Monitoring and Research</h2>
+              <p className="text-[#46403B] leading-relaxed mb-4">FactoryJet delivered a news-monitoring agent on a dedicated US server. It checks extracted names against source text, groups repeated reports and presents findings in a private review console. Restricted access and daily backups support operation. This case documents a research workflow; intake, contract review and docketing need their own scope and validation.</p>
+              <Link href="/case-studies/washington-law-group-accident-detection-agent" className="text-[#B23E13] underline font-semibold">Read the Washington Law Group case study</Link>
             </div>
           </div>
         </section>

@@ -141,9 +141,9 @@ export const post: BlogPost = {
     },
   ],
   content: (
-    <>
+    <div className="india-guide-content">
       {/* Short Answer Callout */}
-      <div className="bg-[#FFF3EE] border-l-4 border-[#F05A28] p-5 md:p-6 rounded-r-xl mb-8">
+      <div className="ig-answer bg-[#FFF3EE] border-[#F05A28] p-5 md:p-6 rounded-r-xl mb-8">
         <p className="font-bold text-gray-900 text-base md:text-lg mb-2">The Short Answer: Choosing an AI SEO Agency in India</p>
         <p className="text-gray-700 leading-relaxed text-sm md:text-base">
           Every agency listed below is based in India and actively executes AI search optimization. For small to mid-size companies, <strong>FactoryJet</strong> is the top recommendation (disclosed self-inclusion with engineering-first delivery and per-engine monthly citation reports). For venture-backed B2B SaaS startups, <strong>Qoulomb</strong> is a premier specialist. For large corporate enterprises, <strong>Infidigit</strong> and <strong>Techmagnate</strong> provide immense team scale. For budget-conscious startups seeking published packages, <strong>Black Marlin</strong> provides transparent pricing.
@@ -151,7 +151,7 @@ export const post: BlogPost = {
       </div>
 
       {/* Service CTA + target market clarifier */}
-      <div className="not-prose mb-8 rounded-2xl border border-[#E5DFD7] bg-[#FAFAF7] p-5 md:p-6">
+      <div className="ig-market not-prose mb-8 rounded-2xl border border-[#E5DFD7] bg-[#FAFAF7] p-5 md:p-6">
         <p className="text-base text-slate-800 leading-relaxed mb-4">
           <strong>Hiring AI SEO services for an Indian business?</strong> See how FactoryJet scopes AI
           SEO in India: per-engine citation reports for ChatGPT, Perplexity, Gemini and Google AI
@@ -178,6 +178,7 @@ export const post: BlogPost = {
         </div>
       </div>
 
+      <section className="ig-context">
       {/* Market Context Section */}
       <h2 className="text-2xl md:text-3xl font-display font-bold text-gray-900 mt-10 mb-4">
         Why AI SEO is Reshaping the Indian Digital Economy in 2026
@@ -216,18 +217,21 @@ export const post: BlogPost = {
       </p>
 
       {/* Upfront Transparency Disclosure */}
-      <div className="bg-amber-50 border border-amber-200 p-4 md:p-5 rounded-xl mb-8 text-sm text-amber-900">
+      <div className="ig-disclosure bg-amber-50 border border-amber-200 p-4 md:p-5 rounded-xl mb-8 text-sm text-amber-900">
         <p className="font-semibold mb-1">Full Upfront Disclosure:</p>
         <p>
           FactoryJet is listed at #1 on this roundup. When we audited the top ten search results for &quot;best AI SEO agency in India&quot;, six of the top results were agency self-published roundups that failed to disclose their self-inclusion. We disclose our placement immediately on the first screen, while providing an honest, rigorous breakdown of nine real competitors, including where their specialized strengths beat ours.
         </p>
       </div>
 
+      </section>
+
+      <section className="ig-matrix">
       {/* 2026 Comparison Table */}
-      <h2 className="text-2xl md:text-3xl font-display font-bold text-gray-900 mt-10 mb-4">
+      <h2 id="india-agency-matrix-heading" className="text-2xl md:text-3xl font-display font-bold text-gray-900 mt-10 mb-4">
         Top 10 AI SEO Agencies in India: 2026 Comparison Matrix
       </h2>
-      <div className="overflow-x-auto my-6 border border-gray-200 rounded-xl shadow-sm">
+      <div tabIndex={0} role="region" aria-labelledby="india-agency-matrix-heading" className="ig-table-scroll overflow-x-auto my-6 border border-gray-200 rounded-xl shadow-sm">
         <table className="min-w-full border-collapse bg-white text-sm">
           <thead className="bg-gray-900 text-white">
             <tr>
@@ -324,6 +328,9 @@ export const post: BlogPost = {
         </table>
       </div>
 
+      </section>
+
+      <section className="ig-engines">
       {/* Multi-Engine Capability Grid */}
       <h2 className="text-2xl md:text-3xl font-display font-bold text-gray-900 mt-12 mb-4">
         The 5 Major AI Search Engines: What Real AI SEO Optimizes For
@@ -374,8 +381,10 @@ export const post: BlogPost = {
         </div>
       </div>
 
+      </section>
+
       {/* Mid-Article Interactive Audit Widget */}
-      <div className="not-prose my-10 rounded-2xl border border-[#E5DFD7] bg-[#FAFAF7] p-6 md:p-8">
+      <div className="ig-audit not-prose my-10 rounded-2xl border border-[#E5DFD7] bg-[#FAFAF7] p-6 md:p-8">
         <p className="font-mono text-xs font-bold uppercase tracking-wider text-[#B23E13] mb-2">
           Before you shortlist anyone
         </p>
@@ -404,13 +413,14 @@ export const post: BlogPost = {
         </div>
       </div>
 
+      <section className="ig-reviews">
       {/* Detailed Agency Reviews */}
       <h2 className="text-2xl md:text-3xl font-display font-bold text-gray-900 mt-12 mb-6">
         Detailed Breakdown: The 10 Best AI SEO Agencies in India (2026)
       </h2>
 
       {/* Agency 1: FactoryJet */}
-      <div className="border border-orange-200 bg-white rounded-xl p-6 mb-8 shadow-sm">
+      <div className="ig-agency ig-owned border border-orange-200 bg-white rounded-xl p-6 mb-8 shadow-sm">
         <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
           <h3 className="text-xl font-bold text-gray-900">
             1. FactoryJet: Best for Indian SMBs &amp; Fast-Growing Brands (Our Team)
@@ -479,7 +489,7 @@ export const post: BlogPost = {
       </div>
 
       {/* Agency 2: Qoulomb */}
-      <div className="border border-gray-200 bg-white rounded-xl p-6 mb-8 shadow-sm">
+      <div className="ig-agency border border-gray-200 bg-white rounded-xl p-6 mb-8 shadow-sm">
         <h3 className="text-xl font-bold text-gray-900 mb-1">
           2. Qoulomb: Best for Venture-Backed B2B SaaS Startups
         </h3>
@@ -493,7 +503,7 @@ export const post: BlogPost = {
       </div>
 
       {/* Agency 3: Infidigit */}
-      <div className="border border-gray-200 bg-white rounded-xl p-6 mb-8 shadow-sm">
+      <div className="ig-agency border border-gray-200 bg-white rounded-xl p-6 mb-8 shadow-sm">
         <h3 className="text-xl font-bold text-gray-900 mb-1">
           3. Infidigit: Best for Enterprise Scale &amp; Large E-Commerce Portals
         </h3>
@@ -507,7 +517,7 @@ export const post: BlogPost = {
       </div>
 
       {/* Agency 4: Techmagnate */}
-      <div className="border border-gray-200 bg-white rounded-xl p-6 mb-8 shadow-sm">
+      <div className="ig-agency border border-gray-200 bg-white rounded-xl p-6 mb-8 shadow-sm">
         <h3 className="text-xl font-bold text-gray-900 mb-1">
           4. Techmagnate: Best for Regulated BFSI &amp; Healthcare Sectors
         </h3>
@@ -521,7 +531,7 @@ export const post: BlogPost = {
       </div>
 
       {/* Agency 5: PageTraffic */}
-      <div className="border border-gray-200 bg-white rounded-xl p-6 mb-8 shadow-sm">
+      <div className="ig-agency border border-gray-200 bg-white rounded-xl p-6 mb-8 shadow-sm">
         <h3 className="text-xl font-bold text-gray-900 mb-1">
           5. PageTraffic: Best Heritage Agency with Global Delivery
         </h3>
@@ -535,7 +545,7 @@ export const post: BlogPost = {
       </div>
 
       {/* Agency 6: Black Marlin Technologies */}
-      <div className="border border-gray-200 bg-white rounded-xl p-6 mb-8 shadow-sm">
+      <div className="ig-agency border border-gray-200 bg-white rounded-xl p-6 mb-8 shadow-sm">
         <h3 className="text-xl font-bold text-gray-900 mb-1">
           6. Black Marlin Technologies: Most Transparent Pricing
         </h3>
@@ -549,7 +559,7 @@ export const post: BlogPost = {
       </div>
 
       {/* Agency 7: RepIndia */}
-      <div className="border border-gray-200 bg-white rounded-xl p-6 mb-8 shadow-sm">
+      <div className="ig-agency border border-gray-200 bg-white rounded-xl p-6 mb-8 shadow-sm">
         <h3 className="text-xl font-bold text-gray-900 mb-1">
           7. RepIndia: Best for 360° Creative, Social &amp; AI Integration
         </h3>
@@ -563,7 +573,7 @@ export const post: BlogPost = {
       </div>
 
       {/* Agency 8: ZeroAdo */}
-      <div className="border border-gray-200 bg-white rounded-xl p-6 mb-8 shadow-sm">
+      <div className="ig-agency border border-gray-200 bg-white rounded-xl p-6 mb-8 shadow-sm">
         <h3 className="text-xl font-bold text-gray-900 mb-1">
           8. ZeroAdo: Best for Zero Lock-In Agility
         </h3>
@@ -577,7 +587,7 @@ export const post: BlogPost = {
       </div>
 
       {/* Agency 9: HikeMyTraffic */}
-      <div className="border border-gray-200 bg-white rounded-xl p-6 mb-8 shadow-sm">
+      <div className="ig-agency border border-gray-200 bg-white rounded-xl p-6 mb-8 shadow-sm">
         <h3 className="text-xl font-bold text-gray-900 mb-1">
           9. HikeMyTraffic: Best Multi-Acronym Search Coverage
         </h3>
@@ -591,7 +601,7 @@ export const post: BlogPost = {
       </div>
 
       {/* Agency 10: SEO Discovery */}
-      <div className="border border-gray-200 bg-white rounded-xl p-6 mb-8 shadow-sm">
+      <div className="ig-agency border border-gray-200 bg-white rounded-xl p-6 mb-8 shadow-sm">
         <h3 className="text-xl font-bold text-gray-900 mb-1">
           10. SEO Discovery: Best Regional High-Volume Option
         </h3>
@@ -604,6 +614,9 @@ export const post: BlogPost = {
         </p>
       </div>
 
+      </section>
+
+      <section className="ig-hiring">
       {/* Hiring Checklist / Questions Section */}
       <h2 className="text-2xl md:text-3xl font-display font-bold text-gray-900 mt-12 mb-4">
         3 Technical Questions to Ask Before Hiring an AI SEO Agency in India
@@ -641,8 +654,10 @@ export const post: BlogPost = {
         </div>
       </div>
 
+      </section>
+
       {/* Internal Link Hub Network */}
-      <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 my-10">
+      <div className="ig-directory bg-slate-50 border border-slate-200 rounded-xl p-6 my-10">
         <h3 className="text-lg font-bold text-gray-900 mb-3">
           Explore FactoryJet’s Regional Digital Marketing &amp; AI Search Hubs
         </h3>
@@ -666,7 +681,7 @@ export const post: BlogPost = {
       </div>
 
       {/* Final Closing CTA */}
-      <div className="bg-[#FFF3EE] border-2 border-[#F05A28] rounded-2xl p-6 md:p-8 text-center my-10">
+      <div className="ig-final bg-[#FFF3EE] border-2 border-[#F05A28] rounded-2xl p-6 md:p-8 text-center my-10">
         <h3 className="text-2xl font-display font-bold text-gray-900 mb-2">
           Ready to Claim Your Brand’s Presence in AI Search?
         </h3>
@@ -690,6 +705,6 @@ export const post: BlogPost = {
           </a>
         </div>
       </div>
-    </>
+    </div>
   ),
 };

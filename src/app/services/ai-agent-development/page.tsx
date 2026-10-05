@@ -8,8 +8,8 @@ import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 
 const url = 'https://factoryjet.com/services/ai-agent-development';
-const title = 'Custom AI Agent Development Company USA | FactoryJet';
-const description = 'Custom AI agents built into your ERP, CRM, help desk and Shopify store, not a demo that breaks in week one. Cost, timeline, what you own, and how we build.';
+const title = 'AI Agent Development Services and Company | FactoryJet';
+const description = 'Custom AI agent and agentic AI development for business workflows. See our Washington Law Group case, integration scope, tests and code ownership.';
 const socialImage = 'https://factoryjet.com/images/us/services/ai-agent-definition-workbench.webp';
 
 export const metadata: Metadata = {
@@ -31,7 +31,7 @@ const faqSchema = {
 };
 
 // Freshness signal. Bump only when the page content actually changes.
-const PAGE_MODIFIED = '2026-09-28';
+const PAGE_MODIFIED = '2026-10-04';
 
 const webPageSchema = {
   '@context': 'https://schema.org',
@@ -53,7 +53,7 @@ const serviceSchema = {
   name: 'Custom AI Agent Development',
   serviceType: 'AI agent development',
   description:
-    'FactoryJet designs, builds and supports custom AI agents that work inside NetSuite, SAP, Odoo, Salesforce, HubSpot, Zendesk, Gorgias and Shopify, with human approval on decisions that matter. The client owns the code.',
+    'FactoryJet scopes, builds and supports custom AI agents for business workflows, with approved integrations, source checks, action permissions and handover terms. The published Washington Law Group case documents a deployed research system.',
   provider: { '@id': ORG_ID },
   areaServed: { '@type': 'Country', name: 'United States' },
   url,

@@ -105,13 +105,13 @@ const HeroInlineForm: React.FC<HeroInlineFormProps> = ({
           <input
             aria-label="Your name" type="text" autoComplete="name" placeholder="Your name"
             value={name} onChange={(e) => setName(e.target.value)}
-            className="min-w-0 w-full sm:w-auto sm:flex-1 rounded-xl px-3.5 font-fj-body text-[15px] outline-none"
+            className="min-w-0 w-full sm:w-auto sm:flex-1 rounded-xl px-3.5 font-fj-body text-[15px] placeholder:text-[#6E635A] outline-none"
             style={inputStyle}
           />
           <input
             aria-label="Work email" type="email" autoComplete="email" placeholder="Work email"
             value={email} onChange={(e) => setEmail(e.target.value)}
-            className="min-w-0 w-full sm:w-auto sm:flex-1 rounded-xl px-3.5 font-fj-body text-[15px] outline-none"
+            className="min-w-0 w-full sm:w-auto sm:flex-1 rounded-xl px-3.5 font-fj-body text-[15px] placeholder:text-[#6E635A] outline-none"
             style={inputStyle}
           />
           <button

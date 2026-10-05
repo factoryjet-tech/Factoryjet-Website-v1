@@ -15,7 +15,7 @@ const CANONICAL_URL = 'https://factoryjet.com/services/manufacturing-ai-agents';
 const PAGE_TITLE = 'Manufacturing AI Agents for Quoting & ERP Automation | FactoryJet';
 const PAGE_DESC =
   'AI agents for US manufacturers that read RFQs and drawings, draft quotes, reconcile supplier POs and write approved drafts into NetSuite, SAP or Epicor.';
-const PAGE_MODIFIED = '2026-09-23';
+const PAGE_MODIFIED = '2026-10-04';
 
 /** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
  *  <Breadcrumbs> component and the BreadcrumbList JSON-LD below, so the two
@@ -85,133 +85,133 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'basics',
     question: 'What is a manufacturing AI agent and how does it operate?',
     answer:
-      'A manufacturing AI agent is software that connects to your ERP, your CRM, your email inbox, and your document files. It runs on its own, not on a schedule. It reads incoming RFQ emails and pulls the bill of materials (BOM) off CAD or PDF drawings. It matches each line item to your inventory master and checks real-time machine capacity. Then it drafts a quote or a PO reconciliation and sends it to a person for approval.',
+      "A manufacturing AI agent connects approved records and tools to a defined workflow. It can extract fields from incoming RFQs or supplier documents, retrieve inventory and pricing information, and prepare a draft for review. File formats, ERP access and allowed actions are scoped and tested for your plant. Quoting calculations and approval gates belong in application code, not model guesses.",
   },
   {
     category: 'basics',
     question: 'How fast can our manufacturing plant achieve positive ROI?',
     answer:
-      'Payback time depends on your plant size and how much of the quoting and PO work moves to the agent. Many mid-market US machine shops and contract manufacturers recover their setup cost within the first few months. The savings come from three places: faster RFQ turnaround, less time spent expediting open POs by hand, and fewer manual data-entry errors in the ERP.',
+      "Payback must be measured from your own workflow. Establish RFQ volume, preparation time, estimator review, corrections and operating cost before a pilot. Compare similar packages afterward, including failed or incomplete tasks. Released staff time creates capacity; it becomes a cash saving only when actual spending changes. We do not promise a universal payback period.",
   },
   {
     category: 'basics',
     question: 'Does the AI agent execute actions autonomously without human review?',
     answer:
-      'No. FactoryJet builds human-in-the-loop review into every high-value action. The agent reads the raw inputs, works out pricing tiers, and checks machine run times. It stages the full draft transaction inside NetSuite or SAP. Your estimator or purchasing manager reviews it and clicks approve.',
+      "Action permissions are agreed during discovery. For pricing, purchase orders and other consequential writes, start with a draft for an authorised person to review. Enforce the approval gate in the application and connector permissions. Routine read operations can run unattended; enabling a new write action requires its own acceptance checks.",
   },
   {
     category: 'basics',
     question: 'Can the AI agent handle complex multi-tier manufacturing assemblies?',
     answer:
-      'Yes. Our agents read multi-level bills of materials (BOM). They identify sub-assemblies, raw stock needs, outsourced finishing like anodizing or heat treating, and standard hardware from your supplier catalogs. Each sub-assembly gets its own costed line, not one blended price. That way your estimator can see exactly where labor, outsourced work, and raw material drive the total. They can adjust one line without re-quoting the whole assembly.',
+      "A multi-level bill of materials can be processed when the source structure and item identifiers are available. Scope the assembly depth, quantities, revisions and costing rules using representative examples. Keep purchased parts, labour and outsourced processes as separate lines. Missing components and ambiguous revisions should be sent to an estimator before a quote is approved.",
   },
   {
     category: 'erp',
     question: 'Which ERP systems do your manufacturing AI agents integrate with?',
     answer:
-      'We build native REST, SOAP, and direct database connectors. Today that list covers NetSuite, SAP S/4HANA, SAP Business One, Epicor Prophet 21, Epicor Kinetic, Infor CloudSuite Industrial (SyteLine), Microsoft Dynamics 365 Business Central, Acumatica, and JobBOSS. If your shop runs something else, or a heavily customized version of one of these, that is not a blocker. We scope the connector against its API or database schema during discovery instead.',
+      "We scope integrations with systems such as NetSuite, SAP, Epicor and Infor against your edition, API, licences and permissions. These are candidate integration targets, not a claim that every connector is already deployed or every custom configuration is supported. Discovery confirms the exact reads and writes, sandbox access and responsible ERP administrator.",
   },
   {
     category: 'erp',
     question: 'How does the agent reconcile supplier purchase order acknowledgements?',
     answer:
-      'When a supplier emails an order confirmation or a PDF acknowledgement, the agent reads it right away. It pulls out the vendor PO number, line item pricing, shipped quantities. The promised ship date. Then it compares all of that against the open PO in your ERP. It updates delivery schedules on its own and flags any price mismatch.',
+      "A proposed reconciliation workflow extracts supplier acknowledgement fields and compares them with the open PO in the ERP. It flags differences in quantity, price and promised dates. Your purchasing rules decide whether a change can be staged or requires review. Test duplicate messages, partial shipments and record matching before enabling updates.",
   },
   {
     category: 'erp',
     question: 'Can the AI agent read legacy database tables or on-premise servers?',
     answer:
-      'Yes. Many manufacturers run legacy SQL Server, Oracle, or AS400 databases behind a corporate firewall. For those, we deploy a secure zero-trust proxy agent, or a direct VPN tunnel. Either way, the agent can query your inventory tables without opening your internal network to the public internet.',
+      "On-premise access can use an IT-approved gateway, VPN or other controlled connection where the system supports it. Begin with narrowly scoped read access and log the records retrieved. The design depends on your network, database and vendor terms. It should not require exposing an internal database directly to the public internet.",
   },
   {
     category: 'erp',
     question: 'How does the agent handle custom inventory pricing tiers and contract terms?',
     answer:
-      'The agent checks your ERP customer master record in real time. It pulls the contract discount, negotiated freight terms, minimum order quantity (MOQ), and any customer-specific markup rule before it drafts a quote. This happens on every quote, not just the first one for a new customer. So if your sales team updates a contract mid-year, the next quote still uses the right numbers. Nobody has to re-key anything.',
+      "Retrieve customer-specific terms from an approved source and apply them through deterministic rules. Record the version and effective date used for a quote. Missing discounts, contradictory terms and stale records should become review questions. Test changes in customer accounts and contracts before enabling price-related writes.",
   },
   {
     category: 'rfq',
     question: 'How does the AI agent parse engineering drawings and PDF prints?',
     answer:
-      'We build vision pipelines that read scanned PDF prints, DWG files, and STEP files. They pull out title blocks, part numbers, material callouts (like 6061-T6 aluminum or 304 stainless steel), dimensional tolerances, surface finish notes, and GD&T callouts. Every value links back to its exact spot on the drawing. So when your estimator reviews the draft quote, they can click a tolerance callout and see the source dimension line, instead of re-reading the whole print to check it.',
+      "Document extraction must be evaluated on your actual formats and drawing quality. PDF text, scanned prints and native CAD files may need different parsers or licensed tooling. Preserve source references for fields used in a quote. Critical dimensions, tolerances and material callouts require validation; an extraction demonstration is not proof of reliable machining estimates.",
   },
   {
     category: 'rfq',
     question: 'What happens when an RFQ drawing contains unreadable or ambiguous dimensions?',
     answer:
-      'The agent never guesses on a critical dimension. When its confidence score drops below a set safety threshold, it flags that specific callout. It writes a short clarification note and routes the ticket to your senior estimator. The flag names the exact field it could not resolve, plus its best guess and a confidence score. Your estimator can confirm or correct it in seconds, instead of re-reading the whole print to find the problem.',
+      "An unreadable or conflicting critical dimension should remain unresolved and block the affected calculation or approval. Show the source location and the question to the estimator without silently substituting a guessed value. Test this behaviour on difficult drawings. A model confidence score alone is not a dependable safety guarantee.",
   },
   {
     category: 'rfq',
     question: 'Can the agent calculate cycle times and raw material stock costs?',
     answer:
-      'Yes. The agent uses your feeds-and-speeds tables, standard machine hourly rates, and setup times. It also pulls live commodity index prices, like scrap and metal spot prices, to build an accurate cost-plus or market-based quote. Those prices refresh on a schedule you set, usually daily. So a quote built on Monday uses Monday\'s aluminum or steel spot price, not a stale number from the last manual ERP update.',
+      "Cycle-time and stock-cost estimates can use your approved rate tables and calculation rules when those inputs are available. Record their version and effective date. Market feeds require authorised access and a defined treatment of stale or missing prices. Validate the resulting line costs against estimator-approved examples before production use.",
   },
   {
     category: 'rfq',
     question: 'Does the RFQ agent support customer portal submissions and email inboxes?',
     answer:
-      'Yes. Our agents watch shared sales inboxes, like rfq@yourcompany.com, and customer portals like Coupa, Ariba, and government bidding boards. They pull in each RFQ package as soon as it posts. Some portals need a login and have no API. For those, we set up a scheduled, credentialed check instead of a true real-time push. Nothing sits unnoticed for longer than the check interval you set, usually every fifteen minutes.',
+      "Inbox and portal access is scoped against the available API, permissions and terms. A mailbox event may trigger processing; a portal may require a scheduled check or a manual handoff. Agree the check interval and failure alerts. We do not assume that every portal permits automated login or provides real-time access.",
   },
   {
     category: 'security',
     question: 'Is proprietary CAD and engineering data kept completely private?',
     answer:
-      'Yes. We work under strict, enterprise zero-data-retention agreements. Your CAD geometry, part numbers, customer lists, and pricing margins are never used to train a public AI model. Everything is encrypted at rest with AES-256, and in transit with TLS 1.3.',
+      "Data handling depends on the approved deployment, provider contract and configuration. Document which CAD and customer data leaves your environment, retention periods, access controls, encryption and subprocessors. Verify any no-training or zero-retention terms explicitly before sending sensitive files. A private server or signed NDA alone does not guarantee every data protection requirement.",
   },
   {
     category: 'security',
     question: 'Does our manufacturing company own the custom AI agent code?',
     answer:
-      'Yes. You get 100 percent ownership of the IP and the source code. We hand over the full Git repository, the Python connectors, the prompt orchestration scripts. The Docker containers. There is no per-seat fee and no runtime vendor license, ever. Ownership starts on day one. It is not tied to a minimum contract term. You could hand the repository to your own developer, or a different vendor, at any point. You would not need our permission or a data export process.',
+      "Ownership and handover terms are written into the scope and agreement. Separate custom code and client data from third-party software, model services and CAD or ERP licences. The handover should include the repository, deployment instructions and transferable configuration. Owning custom code does not remove operating costs or third-party service terms.",
   },
   {
     category: 'security',
     question: 'How do you ensure IT compliance with CMMC and ITAR requirements?',
     answer:
-      'For aerospace and defense manufacturers under ITAR or CMMC, we deploy AI models inside sovereign AWS GovCloud or Azure Government. Access is locked to US-citizen engineers, with full audit logging. Before implementation starts, we also scope exactly which data classes count as export-controlled technical data under your ITAR determination. That means your compliance team draws the line between what the agent can touch and what stays fully isolated, not us.',
+      "Regulated technical data needs a deployment approved by your compliance and security owners before access is granted. They must determine applicable requirements, permitted personnel, services and data flows. Hosting location alone does not establish ITAR compliance or CMMC status. We scope technical controls within that approved boundary rather than promising certification through an AI deployment.",
   },
   {
     category: 'erp',
     question: 'Can the AI agent parse multi-level Bill of Materials (BOM) for complex assemblies?',
     answer:
-      'Yes. The agent walks the full parent-child BOM tree in your CAD or ERP database. It breaks assemblies down into sub-assemblies, weldments, raw stock cut pieces, standard catalog hardware like fasteners, bearings, and seals, and outside vendor plating, each as its own costed line. There is no fixed depth limit. It keeps traversing until it hits a purchased part, so even a five-level weldment gets costed as completely as a simple one.',
+      "BOM processing depends on reliable parent-child relationships, units, revisions and item identifiers. Agree the depth and quantity rules during discovery, then validate both component lines and rolled-up totals. Missing or cyclical relationships should be flagged. An apparently correct total does not establish that the underlying components were identified correctly.",
   },
   {
     category: 'erp',
     question: 'How do you integrate with older on-premise ERPs that lack modern REST APIs?',
     answer:
-      'For older on-premise ERPs, like JobBOSS, Global Shop Solutions, or older SAP or Epicor versions, we deploy a secure, local, read-only ODBC/JDBC gateway. Or we use an intermediate SQL staging table, both behind your firewall with zero cloud exposure. The gateway runs inside your network. It only pushes the specific fields a workflow needs, like part numbers and open PO lines. The rest of your database stays exactly as isolated as it is today.',
+      "Possible approaches include a vendor-supported gateway, read-only database access or an approved staging interface. Confirm support and licences with your ERP administrator first. Define the fields and transactions exposed and test recovery when connectivity fails. Direct writes to undocumented ERP tables should not be treated as a default integration path.",
   },
   {
     category: 'security',
     question: 'How long does a full manufacturing AI agent deployment take?',
     answer:
-      'One focused workflow, like RFQ email extraction or PO date reconciliation, takes 3 to 5 weeks. A full plant-wide build across quoting, ERP sync, and shop-floor scheduling takes 8 to 12 weeks. ERP access is the biggest variable. A plant that can hand over sandbox and API credentials in week one moves through testing fastest. A plant waiting on IT or a third-party ERP consultant lands toward the longer end.',
+      "FactoryJet uses a focused pilot of roughly two to four weeks and a production plan of roughly six to twelve weeks as planning ranges, subject to scope. Native CAD processing, restricted data and multiple ERP instances can require more work. Agree access dependencies, acceptance tests and the milestone being estimated before committing to a schedule.",
   },
   {
     category: 'erp',
     question: 'Does the agent support AS9100 or IATF 16949 quality documentation requirements?',
     answer:
-      'Yes. AS9100 and IATF 16949 are quality management system (QMS) standards built on the ISO 9001 baseline, for aerospace and automotive suppliers. For those clients, the agent attaches the required paperwork automatically: material certifications, first-article inspection reports, and lot traceability documentation, on every quote or PO record. If a certificate is missing, it flags this before the quote goes out.',
+      "A document workflow can retrieve and check records against requirements your quality team defines. Scope the certificate types, revision rules, source systems and review process. Missing or inconsistent documents should be flagged before approval. Automating document handling does not certify the plant or replace its quality management responsibilities.",
   },
   {
     category: 'rfq',
     question: 'Can the agent handle RFQs that arrive as native CAD files instead of PDFs, such as SolidWorks or Inventor assemblies?',
     answer:
-      'Yes, where the customer grants file access. Beyond flattened PDF and STEP files, we build parsers for native SolidWorks, Autodesk Inventor, and Siemens NX assemblies. These read dimensional and material data straight from the model tree, not a flattened drawing. That recovers metadata a rasterized PDF loses, like the material assigned to each part in a multi-material assembly. It makes quotes more accurate on complex weldments and machined housings.',
+      "Native CAD support requires checking the exact format, software version, API or parser availability and licence terms. Validate extraction against representative assemblies before including it in the delivery scope. If reliable native parsing is not available, agree an approved export or a manual review path rather than promising universal format support.",
   },
   {
     category: 'security',
     question: 'What happens to the agent and its data if we end the engagement?',
     answer:
-      'You keep everything. You already own the full Git repository, the connector code. The Docker containers from day one. So ending the engagement just means we stop billing and hand over any remaining documentation. There is no data migration fire drill, because your ERP and your infrastructure never left your control in the first place.',
+      "The agreement should identify which code, data, configuration and operating documentation you retain. Prepare an export and transfer plan for hosted resources, credentials and any third-party subscriptions. Test handover access before ending support. Custom code ownership is separate from the ongoing operation of ERP, CAD and model services.",
   },
   {
     category: 'basics',
     question: 'Do you support manufacturers running separate ERP instances across multiple plants?',
     answer:
-      'Yes. Multi-plant manufacturers often run a separate NetSuite or SAP instance per facility, or a mix of systems after an acquisition. We build one agent layer on top of all of them. It routes each RFQ and PO reconciliation to the right plant instance, based on customer, part number, or requested ship-from location.',
+      "A multi-plant workflow requires an explicit mapping between records, plant instances and permissions. Scope each ERP separately, including local customisations and master-data differences. Start with one validated path, then test routing to other plants. Require review when the plant cannot be determined instead of writing to a default instance.",
   },
 ];
 
@@ -387,7 +387,7 @@ export default function ManufacturingAiAgentsPage() {
                   </div>
                   <div className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-[#F05A28]" />
-                    <span>Zero Data Retention SLA</span>
+                    <span>Data Handling Scoped Before Access</span>
                   </div>
                 </div>
               </div>
@@ -431,7 +431,7 @@ export default function ManufacturingAiAgentsPage() {
                 What is a Manufacturing AI Agent?
               </h2>
               <p className="text-base sm:text-lg text-[#46403B] leading-relaxed">
-                A manufacturing AI agent is software that connects directly to your ERP, such as NetSuite, SAP, Epicor, or Infor. It reads incoming RFQ packages from customers. It pulls the specs straight off CAD drawings and PDF prints. It checks your raw material stock and machine run times. Then it stages a draft quote or PO reconciliation in seconds, with a full audit trail, for a human to approve.
+                A manufacturing AI agent is software that connects directly to your ERP, such as NetSuite, SAP, Epicor, or Infor. It reads incoming RFQ packages from customers. It pulls the specs straight off CAD drawings and PDF prints. It can check approved inventory and rate data where access is available. Then it can stage a draft quote or PO reconciliation for a human to approve. The exact sources, formats and connector actions are validated during discovery and the pilot.
               </p>
               <p className="mt-4 text-sm sm:text-base text-[#6E655F] leading-relaxed">
                 Need an agent that only reads your ERP, CMMS, and historian to answer floor questions and draft shift handovers, and never writes back? Read about our{' '}
@@ -456,7 +456,7 @@ export default function ManufacturingAiAgentsPage() {
                   60%+
                 </div>
                 <div className="text-xs sm:text-sm text-[#6E655F]">
-                  Quoting turnaround reduction
+                  Faster quote turnaround (Paperless Parts)
                 </div>
                 <a
                   href="https://www.paperlessparts.com/facts/"
@@ -464,31 +464,31 @@ export default function ManufacturingAiAgentsPage() {
                   rel="noopener noreferrer"
                   className="mt-1 block text-[10px] font-mono text-[#F05A28] hover:underline"
                 >
-                  Source: manufacturing quoting-automation data &rarr;
+                  Third-party vendor results, not FactoryJet outcomes &rarr;
                 </a>
               </div>
               <div>
                 <div className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-mono mb-1">
-                  100%
+                  Owned
                 </div>
                 <div className="text-xs sm:text-sm text-[#6E655F]">
-                  Client code & IP ownership
+                  Custom code ownership in the agreement
                 </div>
               </div>
               <div>
                 <div className="text-3xl sm:text-4xl font-extrabold text-[#F05A28] font-mono mb-1">
-                  &lt; 20 Min
+                  Pilot
                 </div>
                 <div className="text-xs sm:text-sm text-[#6E655F]">
-                  Typical RFQ package assembly
+                  Measure your RFQ turnaround
                 </div>
               </div>
               <div>
                 <div className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-mono mb-1">
-                  $0
+                  Scoped
                 </div>
                 <div className="text-xs sm:text-sm text-[#6E655F]">
-                  Per-seat recurring user tax
+                  Build and operating costs agreed
                 </div>
               </div>
             </div>
@@ -736,9 +736,9 @@ export default function ManufacturingAiAgentsPage() {
               <div className="font-mono text-xs text-[#F05A28] font-bold uppercase tracking-wider mb-2">
                 // SYSTEM COVERAGE
               </div>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-4">Which ERP, MES, and Shop-Floor Systems We Connect To.</h2>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-4">ERP, MES, and Shop-Floor Integration Targets.</h2>
               <p className="text-lg text-[#46403B]">
-                Every plant runs different software on the floor and in the back office. Here is exactly what we connect to today, and what each connection actually does.
+                Every plant runs different software on the floor and in the back office. The targets below illustrate integration scope. We validate your edition, API access, permissions and required actions before including a connector in the proposal.
               </p>
             </div>
 
@@ -828,12 +828,12 @@ export default function ManufacturingAiAgentsPage() {
                   desc: 'The agent reads messy vendor emails and PDF attachments the way a person would. It pulls out the PO number, the partial shipment quantity. The revised delivery date.',
                 },
                 {
-                  title: 'Zero-Data-Retention Security SLA',
-                  desc: 'Your engineering IP and CAD files are never stored on a public AI model. Every request runs under a signed non-disclosure agreement.',
+                  title: 'Approved Data Handling and Retention',
+                  desc: 'Document the data flow, provider terms, access and retention settings before sensitive files are connected. An NDA does not replace those controls.',
                 },
                 {
-                  title: 'ITAR & CMMC Sovereign Cloud Deployment',
-                  desc: 'Defense and aerospace suppliers get an extra layer of isolation. Their models run inside US-only AWS GovCloud or Azure Government, with access locked to US citizens.',
+                  title: 'Compliance-Approved Deployment Boundary',
+                  desc: 'Restricted technical data stays outside the workflow until your compliance and security owners approve the personnel, infrastructure and data flows. Cloud location alone does not establish compliance.',
                 },
                 {
                   title: '100% Client Code & Connector Ownership',
@@ -933,9 +933,9 @@ export default function ManufacturingAiAgentsPage() {
               <div className="font-mono text-xs text-[#F05A28] font-bold uppercase tracking-wider mb-2">
                 // VENDOR COMPARISON
               </div>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-4">FactoryJet Custom AI vs. Generic SaaS Quoting Tools.</h2>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-4">Custom Agents, Quoting Software and Manual Review.</h2>
               <p className="text-base sm:text-lg text-[#46403B]">
-                Why enterprise manufacturers choose owned AI infrastructure over restrictive black-box SaaS software.
+                Compare these routes against your actual drawings, ERP configuration and review requirements. Performance depends on the selected product and implementation.
               </p>
             </div>
 
@@ -948,7 +948,7 @@ export default function ManufacturingAiAgentsPage() {
                       FactoryJet Custom AI Agent
                     </th>
                     <th className="p-4 sm:p-6 font-bold text-[#6E655F]">
-                      Generic SaaS Quoting Software
+                      Quoting Software
                     </th>
                     <th className="p-4 sm:p-6 font-bold text-[#6E655F]">
                       Manual Estimator Process
@@ -957,44 +957,44 @@ export default function ManufacturingAiAgentsPage() {
                 </thead>
                 <tbody className="divide-y divide-[#E7DED6]">
                   <tr>
-                    <td className="p-4 sm:p-6 font-semibold text-[#14110F]">Average RFQ Turnaround.</td>
+                    <td className="p-4 sm:p-6 font-semibold text-[#14110F]">RFQ Turnaround Evaluation.</td>
                     <td className="p-4 sm:p-6 font-bold text-[#F05A28] bg-[#FFF8F5]">
-                      Under 20 Minutes
+                      Measure extraction plus estimator review in a pilot
                     </td>
-                    <td className="p-4 sm:p-6 text-[#6E655F]">1 to 2 Business Days.</td>
-                    <td className="p-4 sm:p-6 text-[#6E655F]">3 to 7 Business Days.</td>
+                    <td className="p-4 sm:p-6 text-[#6E655F]">Test the selected product on the same RFQ set.</td>
+                    <td className="p-4 sm:p-6 text-[#6E655F]">Establish your current handling-time baseline.</td>
                   </tr>
                   <tr>
                     <td className="p-4 sm:p-6 font-semibold text-[#14110F]">CAD & Drawing Parsing.</td>
                     <td className="p-4 sm:p-6 font-bold text-[#F05A28] bg-[#FFF8F5]">
-                      Direct Multi-Modal Vision + GD&T
+                      Formats and critical fields validated in scope
                     </td>
-                    <td className="p-4 sm:p-6 text-[#6E655F]">Basic Title Block Text Only.</td>
-                    <td className="p-4 sm:p-6 text-[#6E655F]">Manual Caliper & Ruler Review.</td>
+                    <td className="p-4 sm:p-6 text-[#6E655F]">Check supported formats and extraction evidence.</td>
+                    <td className="p-4 sm:p-6 text-[#6E655F]">Estimator reviews source drawings and requirements.</td>
                   </tr>
                   <tr>
                     <td className="p-4 sm:p-6 font-semibold text-[#14110F]">ERP Bi-Directional Sync.</td>
                     <td className="p-4 sm:p-6 font-bold text-[#F05A28] bg-[#FFF8F5]">
-                      Native NetSuite, SAP, Epicor API
+                      Connector scoped to your ERP edition and permissions
                     </td>
-                    <td className="p-4 sm:p-6 text-[#6E655F]">Manual CSV Import / Export.</td>
-                    <td className="p-4 sm:p-6 text-[#6E655F]">Double Data Entry into ERP.</td>
+                    <td className="p-4 sm:p-6 text-[#6E655F]">Verify the product’s connector and write permissions.</td>
+                    <td className="p-4 sm:p-6 text-[#6E655F]">Assess existing entry and approval steps.</td>
                   </tr>
                   <tr>
                     <td className="p-4 sm:p-6 font-semibold text-[#14110F]">Software Licensing & Fees.</td>
                     <td className="p-4 sm:p-6 font-bold text-[#F05A28] bg-[#FFF8F5]">
-                      100% Owned, $0 Per-Seat Fee
+                      Custom code ownership; operating dependencies scoped
                     </td>
-                    <td className="p-4 sm:p-6 text-[#6E655F]">$500 - $1,500 / seat / month.</td>
-                    <td className="p-4 sm:p-6 text-[#6E655F]">$85k - $120k / estimator salary.</td>
+                    <td className="p-4 sm:p-6 text-[#6E655F]">Check current vendor pricing and usage terms.</td>
+                    <td className="p-4 sm:p-6 text-[#6E655F]">Measure staff effort using your own cost basis.</td>
                   </tr>
                   <tr>
                     <td className="p-4 sm:p-6 font-semibold text-[#14110F]">Proprietary Data Privacy.</td>
                     <td className="p-4 sm:p-6 font-bold text-[#F05A28] bg-[#FFF8F5]">
-                      Private VPC & Zero Data Retention
+                      Approved deployment and contractual data terms
                     </td>
-                    <td className="p-4 sm:p-6 text-[#6E655F]">Shared Multi-Tenant Cloud.</td>
-                    <td className="p-4 sm:p-6 text-[#6E655F]">Internal Filesystem Only.</td>
+                    <td className="p-4 sm:p-6 text-[#6E655F]">Review hosting, access and retention settings.</td>
+                    <td className="p-4 sm:p-6 text-[#6E655F]">Review existing file access and sharing controls.</td>
                   </tr>
                 </tbody>
               </table>

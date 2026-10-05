@@ -961,5 +961,18 @@ function buildGraph(all: BlogPost[], limit: number): Map<string, BlogPost[]> {
  * blog so every post is reachable through in-content links.
  */
 export function getRelatedPosts(post: BlogPost, all: BlogPost[], limit = 3): BlogPost[] {
+  // Broad words such as "companies" otherwise recommend unrelated city lists.
+  if (post.slug === 'best-ai-agent-development-companies-2026') {
+    const slugs = [
+      'best-ai-agent-development-companies-small-business',
+      'ai-agent-build-vs-buy-2026',
+      'how-to-hire-an-ai-agent-developer-2026',
+    ];
+    const bySlug = new Map(all.map((candidate) => [candidate.slug, candidate]));
+    return slugs.flatMap((slug) => {
+      const candidate = bySlug.get(slug);
+      return candidate ? [candidate] : [];
+    }).slice(0, limit);
+  }
   return buildGraph(all, limit).get(post.slug) ?? [];
 }

@@ -1,161 +1,75 @@
 import React from 'react';
 import type { BlogPost } from '../data.types';
 
+const faqs = [
+  { q: 'What is agentic AI?', a: 'Agentic AI describes systems in which an AI model can choose steps and use tools to work toward a goal, within limits set by the application. For a business, the useful questions are which source it can read, which action it can take and when it must stop for review. A fixed workflow can also contain AI steps.' },
+  { q: 'What does agentic mean in AI?', a: 'It refers to the system having some control over the steps it takes toward a goal. The degree of control varies. Anthropic distinguishes predefined workflows from agents that choose their own path. Ask a developer to mark those boundaries on the proposed workflow rather than infer autonomy from the product name.' },
+  { q: 'What is an example of agentic AI in business?', a: 'Consider a proposed support system that checks an order, retrieves the current policy and chooses a permitted next action. FactoryJet’s published Washington Law Group implementation is a more bounded example: a model extracts facts, then fixed rules check relevance, source names and duplicates. That case describes a hybrid workflow with defined actions.' },
+  { q: 'How does agentic AI work?', a: 'The application gives a model a task, approved context and a limited set of tools. It records results between steps and decides when another step or a review is needed. Our Washington Law Group system uses source validation and duplicate records to constrain its research workflow. A developer must explain where the model can choose and where code fixes the path.' },
+  { q: 'Is agentic AI the same as generative AI?', a: 'Generative AI produces outputs such as text or extracted fields. An agentic application can use that output to choose and perform another step through a tool. In the Washington Law Group workflow, extraction is the model step and source checking is a separate code step. Treat the whole application as the unit you evaluate.' },
+  { q: 'Is agentic AI the same as an AI agent?', a: 'An AI agent is an individual implementation. Agentic AI is a description applied to systems with some ability to choose steps and act toward a goal. Suppliers use the terms differently. Ask for the actual task, tools and review rules before comparing offers that use either label.' },
+  { q: 'Is a chatbot an AI agent?', a: 'A chat interface alone does not tell you how the application works. Check whether it can use approved tools, choose a next step and carry state between steps. For a Shopify support tool, distinguish a drafted answer from an order lookup or an authorised update. Each has different access and testing requirements.' },
+  { q: 'Is ChatGPT an agent or a language model?', a: 'ChatGPT is an application that uses language models and can expose tools and agent features. Available capabilities depend on the product and configuration. For your business, check the actual connector permissions and permitted actions. A chat subscription by itself does not establish that the application can operate your CRM or ERP.' },
+  { q: 'Does an AI agent need several other agents?', a: 'Start with one bounded workflow. Add separate agents when distinct tasks or parallel research justify them, then test each handoff. Our published research case can be explained through its sources, extraction step and fixed checks without claiming a multi-agent architecture. A supplier should be able to explain the simpler design it considered.' },
+  { q: 'What are the risks of agentic AI?', a: 'Evaluate the actions your workflow permits. An incorrect extracted name, a duplicate notification or a write to the wrong record needs a different control. In the Washington Law Group system, source-name checks and duplicate handling address two specific risks. For a new workflow, test its own failure cases and keep an operator able to pause it.' },
+  { q: 'How do you stop an agent inventing facts?', a: 'Validate important fields against the authorised source and define what happens when evidence is missing. In the Washington Law Group implementation, an extracted name must appear in the source article before it can be saved. That control checks a specific field. Other claims and actions need their own checks and review rules.' },
+  { q: 'Can agentic AI work with NetSuite, Odoo or SAP?', a: 'An application can use an approved integration route when the ERP exposes the required records and actions. Confirm the version, licence, permissions and sandbox access during discovery. A listing of ERP names does not establish that a connector handles your business rules. Ask for tests on a rejected write and a repeated request.' },
+  { q: 'Can a small business use agentic AI?', a: 'Choose a recurring task with accessible sources and a person who can accept the output. A supplier can evaluate a redacted sample before proposing a custom build. For a standard app workflow, a configurable product may cover the task. Compare both routes against the same missing-data and duplicate-event examples.' },
+  { q: 'Can I develop an AI agent?', a: 'You can prototype with a builder or a coding framework, then connect approved tools and test representative inputs. A deployed system also needs credential handling, failure recovery and an operating owner. Our build-versus-buy guide compares those responsibilities. The prototype becomes useful evidence once it is tested on the exceptions in your actual queue.' },
+  { q: 'Do I need an agent or a fixed automation?', a: 'Use fixed rules for decisions you can write down and test directly. Use a model when interpreting variable text is part of the job. In the Washington Law Group implementation, a model extracts article facts while fixed rules check eligibility and duplicates. Keeping those responsibilities separate makes the workflow easier to inspect.' },
+  { q: 'How much does agentic AI cost?', a: 'Price the complete workflow: implementation, model usage, hosting, subscriptions, review work and support. The Washington Law Group case identifies dedicated hosting and a client-owned news subscription, so model calls are only one part of its operating scope. FactoryJet quotes a new build after the sources, actions and acceptance tests are agreed.' },
+  { q: 'Who owns an agentic AI system?', a: 'Ownership depends on the contract and the software used. Ask which code, prompts, connectors and tests you receive and which parts depend on third-party licences. The Washington Law Group agreement assigns the system code to the client. The same case also identifies a news subscription owned by the firm.' },
+  { q: 'How do we measure an agentic AI pilot?', a: 'Choose a task-level acceptance set before the build. Include successful inputs, missing evidence, repeated events and unavailable tools. Record the expected result for each. The Washington Law Group case publishes delivery controls rather than a measured revenue lift, so use it as an implementation example and establish your own pilot baseline.' },
+  { q: 'Which company can build an agentic AI system?', a: 'Compare a provider’s published offering with a relevant deployed implementation and the tests it proposes for your workflow. FactoryJet has a named research-agent case. Our ten-company comparison links other developers’ own service pages and states its selection method. Ask candidates to identify the access dependencies and handover work in their proposals.' },
+  { q: 'What should we do first?', a: 'Collect redacted examples from one queue and identify the source the operator uses to decide. Write down the permitted action and a reason to stop. For a research task, add an unsupported name and a duplicate story to the examples. That gives a developer something concrete to scope and test.' },
+];
+
 export const post: BlogPost = {
-  id: '240',
-  slug: 'what-is-agentic-ai',
-  title: 'What Is Agentic AI? A Plain-English Guide with Examples (2026)',
-  excerpt:
-    'Agentic AI is software that takes action to complete a goal, not just generates content. Here is what it means, how it works, real examples, and the use cases that matter for business in 2026.',
-  category: 'Emerging Tech',
-  author: 'Bhavesh Barot',
-  date: 'Jul 11, 2026',
-  readTime: '9 min read',
-  imageUrl: '/blog-images/what-is-agentic-ai.webp',
-  imageAlt: 'A team working together, illustrating agentic AI systems that plan and complete tasks',
-  meta: {
-    title: 'What Is Agentic AI? Definition, Examples, and Use Cases (2026)',
-    description:
-      'What is agentic AI in simple terms? A plain-English definition, how it works, real examples, use cases by function, and what agentic AI means for your business in 2026.',
-  },
-  keyTakeaways: [
-    'Agentic AI is software that takes action to complete a goal, not just generates content. It plans, uses tools, and carries out multi-step tasks with limited supervision.',
-    'The simple test: if the AI hands you something to act on, it is generative. If it acts, it is agentic. Generative AI writes the answer, agentic AI goes and does the thing.',
-    'It works as a loop: understand the goal, make a plan, take a step, check the result, and adjust, using memory and tools along the way.',
-    'Real examples include coding agents that fix bugs and open pull requests, support agents that resolve tickets end to end, and commerce agents that list, price, and restock across channels.',
-    'The business value moves from AI that suggests to AI that does. Completed tasks are worth far more than faster drafts, which is where the real ROI is heading in 2026.',
-    'In ecommerce, agentic AI shows up as agentic commerce: agents that discover and buy for shoppers, and agents that keep your catalog accurate for them to buy from.',
-  ],
-  faqs: [
-    {
-      q: 'What is agentic AI in simple terms?',
-      a: 'Agentic AI is software that takes action to reach a goal, not just answers a question. You give it an outcome, and it plans the steps, uses tools and APIs, checks its own work, and carries the task through with limited supervision. Where a chatbot replies and waits, an agentic system actually does the job, like booking the trip or completing the order.',
-    },
-    {
-      q: 'What is an example of agentic AI?',
-      a: 'A coding agent that reads a bug report, edits several files, runs the tests, and opens a pull request is agentic AI. So is a support agent that reads a ticket, checks the order, issues a refund, and replies, or a shopping agent that finds a product, compares options, and checks out for you. The common thread is that each one completes a multi-step task, not just produces text.',
-    },
-    {
-      q: 'What are the main use cases for agentic AI?',
-      a: 'The strongest use cases are jobs that span multiple steps or systems: customer support that resolves tickets end to end, sales and marketing workflows that research and follow up, operations and finance work like reconciling data, software tasks like fixing bugs, and commerce work like listing products, adjusting pricing, and keeping inventory in sync across channels. Anywhere a task is repetitive and multi-step is a candidate.',
-    },
-    {
-      q: 'How is agentic AI different from generative AI?',
-      a: 'Generative AI creates content: text, images, code, or answers. Agentic AI takes action to complete a goal, using tools and a plan-act-check loop. In one line, generative AI writes the answer and agentic AI goes and does the thing. They are not rivals, because agentic systems use a generative model as their reasoning engine, wrapped in the ability to act.',
-    },
-    {
-      q: 'How does agentic AI work?',
-      a: 'Agentic AI runs a loop rather than giving a single reply. It reads the goal, makes a plan, takes a step, looks at the result, and adjusts, repeating until the task is done. Along the way it uses memory to keep context and tools to act in the real world, like searching, running code, querying a database, or completing a checkout. A generative model does the reasoning; the agentic scaffolding gives it hands.',
-    },
-    {
-      q: 'Is agentic AI the same as an AI agent?',
-      a: 'They are closely related but not identical. An AI agent is a single system that acts toward a goal. Agentic AI is the broader capability, often several agents and tools working together. An AI agent is one worker, and agentic AI is the way of working. In casual use the terms are interchangeable; the difference mostly matters when you are building or buying a system.',
-    },
-    {
-      q: 'What are the risks of agentic AI?',
-      a: 'Because agentic AI takes actions, mistakes carry real consequences: it could send the wrong message, buy the wrong item, or change the wrong data. The main safeguards are keeping a human in the loop for high-stakes steps, giving agents narrow permissions, and logging what they do. The practical rule is to let agents act where errors are cheap and reversible, and require approval where they are not.',
-    },
-    {
-      q: 'Will agentic AI replace jobs?',
-      a: 'Agentic AI is more likely to reshape jobs than erase them wholesale, at least in the near term. It takes over the repetitive, multi-step execution that used to eat hours, which shifts people toward judgment, oversight, and the work agents cannot do well yet. The teams that benefit treat agents as capacity, not replacements, and put humans on the decisions that matter.',
-    },
-    {
-      q: 'How do businesses start with agentic AI?',
-      a: 'Start with one repetitive, multi-step task where errors are cheap, and let an agent handle it end to end with a human checking the output. Prove the time savings, add guardrails, then expand to bigger goals. In commerce, a natural first step is a readiness audit of your catalog, pricing, and data, since agentic systems only work as well as the data they act on.',
-    },
-  ],
-  content: (
-    <>
-      <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 mb-8">
-        <h2 className="text-lg font-bold mb-3 text-gray-900">What this guide covers</h2>
-        <ul className="list-disc pl-5 space-y-1 text-gray-700">
-          <li>What agentic AI is, in plain English</li>
-          <li>How agentic AI works</li>
-          <li>How it differs from generative AI</li>
-          <li>Real examples of agentic AI</li>
-          <li>Use cases by business function</li>
-          <li>What it means for your business</li>
-        </ul>
-      </div>
-
-      <p className="text-lg leading-relaxed mb-6">
-        <strong>Agentic AI is software that takes action to complete a goal, not just generates content.</strong> You give it an outcome, and it plans the steps, uses tools and APIs, checks its own work, and carries the task through with limited supervision. Where a chatbot replies and then waits for you, an agentic system actually does the job. The simplest test to keep in your head: if the AI hands you something to act on, it is generative; if it acts, it is agentic. Here is what that looks like in practice, with real examples.
-      </p>
-
-      <h2 className="text-2xl font-bold mt-8 mb-4">What is agentic AI, exactly?</h2>
-      <p className="mb-4">
-        Agentic AI describes AI systems that behave like an autonomous worker rather than a tool you operate. Give one a goal, and it figures out the steps and takes them. A few traits define it: it is goal-driven rather than prompt-by-prompt, it takes action through tools instead of only producing text, it works across multiple steps, and it adapts when something does not go to plan.
-      </p>
-      <p className="mb-4">
-        That autonomy is the whole point. Generative AI made everyone faster at creating a first draft, but a human still had to act on every output. Agentic AI closes that gap by doing the acting, which is why 2026 is the year the conversation moved from writing content to completing work.
-      </p>
-
-      <h2 className="text-2xl font-bold mt-8 mb-4">How does agentic AI work?</h2>
-      <p className="mb-4">
-        An agentic system runs a loop rather than giving a single reply. It reads the goal, makes a plan, takes a step, looks at the result, and adjusts, repeating until the task is done or it needs a human. Three ingredients make that loop work: a reasoning model as the brain, memory so it keeps context across steps, and tools so it can act in the real world by searching, running code, querying a database, or completing a checkout.
-      </p>
-      <p className="mb-4">
-        Bigger goals often use several agents. A planner breaks the goal into steps, specialists handle research or execution, and an orchestrator keeps them in sync. Whether it is one agent or a team, the shape is the same: reason, act, check, repeat. If you want the finer distinction between a single agent and a coordinated system, we cover{' '}
-        <a href="/blog/agentic-ai-vs-ai-agents" className="text-[#B23E13] underline hover:text-[#F05A28]">agentic AI vs AI agents</a> separately, and the single agent gets its own definition and running costs in <a href="/blog/what-is-an-ai-agent-cost-2026" className="text-[#B23E13] underline hover:text-[#F05A28]">what an AI agent is and what it costs</a>.
-      </p>
-
-      <h2 className="text-2xl font-bold mt-8 mb-4">How is agentic AI different from generative AI?</h2>
-      <p className="mb-4">
-        Generative AI creates content: text, images, code, or answers to a prompt. Agentic AI takes action to complete a goal. Generative AI writes the answer, agentic AI goes and does the thing. They are layers, not rivals, because an agentic system uses a generative model as its reasoning engine, then wraps it in memory, tools, and the ability to act. If that comparison is what brought you here, the full breakdown is in our{' '}
-        <a href="/blog/agentic-ai-vs-generative-ai" className="text-[#B23E13] underline hover:text-[#F05A28]">agentic AI vs generative AI</a> guide.
-      </p>
-
-      <div className="bg-orange-50 border border-orange-200 p-5 rounded-lg my-8 not-prose">
-        <p className="font-semibold text-orange-900 mb-2">Curious what agentic AI means for commerce?</p>
-        <p className="text-orange-800 mb-3">
-          Agentic AI is already reshaping how people buy. See how it turns into agentic commerce, and whether your brand is ready for agents that discover and check out on their own.
-        </p>
-        <a
-          href="/agentic-commerce"
-          className="inline-block bg-[#B23E13] text-white px-5 py-2 rounded font-semibold hover:bg-[#9A3510] transition-colors"
-        >
-          Read the agentic commerce guide &rarr;
-        </a>
-      </div>
-
-      <h2 className="text-2xl font-bold mt-8 mb-4">Real examples of agentic AI</h2>
-      <p className="mb-4">
-        The fastest way to understand agentic AI is to look at what it actually does. A few examples that are real in 2026:
-      </p>
-      <ul className="list-disc pl-5 space-y-2 mb-6 text-gray-700">
-        <li><strong>Coding agents</strong> that read a bug report, edit several files, run the tests, and open a pull request, instead of just suggesting a snippet.</li>
-        <li><strong>Customer-support agents</strong> that read a ticket, check the order in your system, issue the refund, and reply to the customer end to end.</li>
-        <li><strong>Research and analyst agents</strong> that gather sources, pull the data, and hand back a drafted summary with the work already done.</li>
-        <li><strong>Shopping and travel agents</strong> that take a request, compare options, and complete the booking or purchase.</li>
-        <li><strong>Commerce agents</strong> that list products, adjust pricing, and keep inventory in sync across your store and marketplaces without someone doing it by hand.</li>
-      </ul>
-      <p className="mb-4">
-        Notice the pattern: each one finishes a multi-step job. That is the tell that separates agentic AI from a model that only answers.
-      </p>
-
-      <h2 className="text-2xl font-bold mt-8 mb-4">Agentic AI use cases by function</h2>
-      <p className="mb-4">
-        The strongest use cases are repetitive, multi-step jobs that touch more than one system. By function, that looks like:
-      </p>
-      <ul className="list-disc pl-5 space-y-2 mb-6 text-gray-700">
-        <li><strong>Customer support:</strong> resolving common tickets end to end, escalating only the hard ones.</li>
-        <li><strong>Sales and marketing:</strong> researching accounts, drafting and sending follow-ups, and running campaign workflows.</li>
-        <li><strong>Operations and finance:</strong> reconciling data between systems, chasing exceptions, and flagging only what a human needs to see.</li>
-        <li><strong>Software:</strong> triaging issues, fixing bugs, and keeping dependencies current.</li>
-        <li><strong>Commerce:</strong> listing, pricing, and inventory across channels, plus the buying side, where agents shop on a customer behalf.</li>
-      </ul>
-
-      <h2 className="text-2xl font-bold mt-8 mb-4">What agentic AI means for your business</h2>
-      <p className="mb-4">
-        The reason agentic AI matters is that it moves AI value from suggesting to doing, and completed tasks are worth far more than faster drafts. For two years, most AI gains came from generating things quicker, which caps out because a human still has to act. Agentic AI removes that ceiling for the repetitive, multi-step work that used to eat hours.
-      </p>
-      <p className="mb-4">
-        The practical way to start is small: pick one repetitive task where errors are cheap and reversible, let an agent handle it end to end with a human checking the output, prove the time savings, then expand. In ecommerce specifically, this shift has a name, agentic commerce, where agents discover and buy for shoppers and your own agents keep your catalog accurate for them to buy from. If that is your world, the{' '}
-        <a href="/agentic-commerce" className="text-[#B23E13] underline hover:text-[#F05A28]">agentic commerce field guide</a> is the place to start, and{' '}
-        <a href="/commerceflo" className="text-[#B23E13] underline hover:text-[#F05A28]">Commerceflo by FactoryJet</a>, our AI commerce operator, is how we put agentic AI to work across a store. Generative AI made everyone faster at creating. Agentic AI is about to make software actually do the work.
-      </p>
-    </>
-  ),
+  id: '240', slug: 'what-is-agentic-ai',
+  title: 'What Is Agentic AI? Definition and a Deployed Business Example',
+  excerpt: 'Understand agentic AI through tool use, fixed rules and review points. See how FactoryJet’s Washington Law Group research workflow handles sources and duplicates.',
+  category: 'Emerging Tech', author: 'Bhavesh Barot', date: 'Jul 11, 2026', dateModified: 'Oct 04, 2026', readTime: '11 min read',
+  imageUrl: '/blog-images/what-is-agentic-ai.webp', imageAlt: 'A team reviewing the steps in an agentic business workflow',
+  meta: { title: 'What Is Agentic AI? Definition and Business Example', description: 'Agentic AI explained through tools, fixed rules and review points, with FactoryJet’s deployed Washington Law Group case and questions for business buyers.' },
+  keyTakeaways: ['An agentic system gives the model some choice over steps and tools.', 'Fixed workflows can include AI extraction without handing the model every decision.', 'Our Washington Law Group case makes source checks and duplicate handling visible.', 'Evaluate the permitted action and the failure path before buying a system.'], faqs,
+  content: <>
+    <p className="text-sm text-gray-600 mb-4">Updated <time dateTime="2026-10-04">October 4, 2026</time>.</p>
+    <p className="text-lg leading-relaxed mb-6"><strong>Agentic AI describes systems in which an AI model can choose steps and use tools to work toward a goal.</strong> The application sets the limits, records the results and decides when human review is required. For a business owner, the useful detail is the action the system may take inside your software.</p>
+    <h2 className="text-2xl font-bold mt-10 mb-4">The distinction we use when designing a workflow</h2>
+    <p className="mb-4"><a href="https://www.anthropic.com/engineering/building-effective-agents" className="text-[#B23E13] underline">Anthropic’s engineering guide</a> distinguishes predefined workflows from agents that choose their path. That distinction helps us scope a build. If the decision is a fixed eligibility rule, write it as code. If the input is a variable news article or email, a model can help interpret it.</p>
+    <p className="mb-6">Ask the developer to label every step in the proposal. Which step follows a fixed rule? Which step calls a model? Which step changes a record? The same system can include all of those. A diagram labelled “autonomous” leaves the most useful buying questions unanswered.</p>
+    <h2 className="text-2xl font-bold mt-10 mb-4">A deployed example from Washington Law Group</h2>
+    <p className="mb-4">FactoryJet built a news-monitoring and research system for Washington Law Group. It reads published sources, extracts accident facts and applies rules before sending relevant findings to the firm. The published case identifies a licensed news API, a nationwide news index, local feeds and the California Highway Patrol feed among its sources.</p>
+    <p className="mb-4">This is a hybrid AI workflow with a fixed operating path. We use it here to show the engineering around model output. It does not establish that a model should choose every next action or that a business should buy a multi-agent system.</p>
+    <ol className="list-decimal pl-6 space-y-3 mb-6">
+      <li><strong>Read the authorised source.</strong> The system starts with a published article or incident feed. It does not need a model to invent a new source.</li>
+      <li><strong>Extract the facts.</strong> A model reads the article and proposes fields. The application treats those fields as outputs to check.</li>
+      <li><strong>Validate a name.</strong> A returned name must appear in the article text before it can be saved. The published case reports that this check has caught invented names in actual runs.</li>
+      <li><strong>Apply eligibility rules.</strong> Fixed rules determine whether the incident meets the firm’s configured criteria. The model’s narrative does not replace those checks.</li>
+      <li><strong>Handle a repeated story.</strong> Duplicate detection controls whether a notification is new or an update. Staff can inspect records through a private console.</li>
+    </ol>
+    <p className="mb-6"><a href="/case-studies/washington-law-group-accident-detection-agent" className="text-[#B23E13] underline">Read the deployed case</a>. It documents source handling, access controls and code ownership. It does not publish a measured revenue increase or a conversion benchmark.</p>
+    <h2 className="text-2xl font-bold mt-10 mb-4">Generative AI and agentic AI in one business process</h2>
+    <div className="overflow-x-auto mb-6"><table className="w-full text-sm border-collapse"><caption className="text-left mb-3">Separate the model output from the application action</caption><thead><tr>{['Step', 'Responsibility', 'Question to ask'].map(t => <th key={t} scope="col" className="border p-3 text-left">{t}</th>)}</tr></thead><tbody>
+      <tr><th scope="row" className="border p-3 text-left">Article extraction</th><td className="border p-3">A model proposes facts from source text.</td><td className="border p-3">Can each required fact be traced to the source?</td></tr>
+      <tr><th scope="row" className="border p-3 text-left">Source-name check</th><td className="border p-3">Code checks the returned name against the article.</td><td className="border p-3">What happens when the name is absent?</td></tr>
+      <tr><th scope="row" className="border p-3 text-left">Notification</th><td className="border p-3">The application applies eligibility and duplicate rules.</td><td className="border p-3">Can the same story create a second alert?</td></tr>
+      <tr><th scope="row" className="border p-3 text-left">Operator review</th><td className="border p-3">Authorised staff inspect the saved record.</td><td className="border p-3">Can the reviewer see the source and checks?</td></tr>
+    </tbody></table></div>
+    <p className="mb-6">For the terminology comparison, see <a href="/blog/agentic-ai-vs-generative-ai" className="text-[#B23E13] underline">agentic AI versus generative AI</a>. For the difference between an individual implementation and the broader term, read <a href="/blog/agentic-ai-vs-ai-agents" className="text-[#B23E13] underline">agentic AI versus AI agents</a>.</p>
+    <h2 className="text-2xl font-bold mt-10 mb-4">Translate those checks to your own systems</h2>
+    <p className="mb-4">For an RFQ, replace the article with the customer’s request and the source-name check with a check on extracted line items. For a Shopify support queue, use the order record and the current return policy as the sources. These are proposed examples, each requiring its own implementation and tests.</p>
+    <p className="mb-4">A quote draft can wait for approval. A refund changes a financial record. Agree the permitted action before choosing a model or builder. That gives the team a concrete way to assess API access, review work and incident handling.</p>
+    <ul className="list-disc pl-6 space-y-3 mb-6">
+      <li><strong>Missing source:</strong> a request names an order that cannot be found. Define what the reviewer receives and prevent a guessed result.</li>
+      <li><strong>Conflicting evidence:</strong> two documents disagree about a quantity. Preserve both values for review rather than quietly choosing one.</li>
+      <li><strong>Repeated event:</strong> the same email arrives twice. Check the stored identifier before creating another draft.</li>
+      <li><strong>Unavailable tool:</strong> the ERP cannot answer. Record the failure and apply the agreed retry or review route.</li>
+    </ul>
+    <div className="bg-orange-50 border border-orange-200 rounded-lg p-6 my-8"><h2 className="text-xl font-bold mb-3">Bring us one recurring task</h2><p className="mb-3">Send a redacted input and name the system the operator checks today. We can identify which steps need a model, which need fixed rules and which need approval.</p><a href="/contact" className="text-[#B23E13] underline font-semibold">Scope an AI workflow</a></div>
+    <h2 className="text-2xl font-bold mt-10 mb-4">Choose the buying route after defining the action</h2>
+    <p className="mb-4">A configurable agent builder can cover a task when its connector and permissions match the brief. A coding framework gives engineers more control and leaves them responsible for deployment and operation. Our <a href="/blog/ai-agent-build-vs-buy-2026" className="text-[#B23E13] underline">builder and build-versus-buy comparison</a> separates those routes.</p>
+    <p className="mb-4">For a development engagement, compare the source checks and handover against a deployed case. Our <a href="/blog/best-ai-agent-development-companies-2026" className="text-[#B23E13] underline">ten-company comparison</a> links published offers and gives each provider a question to answer. FactoryJet publishes that comparison and is included in it.</p>
+    <p className="mb-6">The <a href="/services/ai-agent-development" className="text-[#B23E13] underline">AI agent development service</a> describes how we scope custom work. Ask for a proposal that names the sources, actions and acceptance set. In our Washington Law Group agreement, the client owns the system code; check ownership and third-party licences for your own build.</p>
+  </>,
 };
-
-export default post;

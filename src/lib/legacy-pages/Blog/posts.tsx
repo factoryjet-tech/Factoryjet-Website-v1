@@ -1,4 +1,5 @@
 import React from 'react';
+import { post as bestAiAgentDevelopmentCompanies2026Post } from './posts/best-ai-agent-development-companies-2026';
 import { BlogPost } from './data.types';
 import { NativeAd } from './components/NativeAd';
 import { post as howUkSmbsEvaluateWoocommerceAgency2026Post } from './posts/how-uk-smbs-evaluate-woocommerce-agency-2026';
@@ -139,6 +140,7 @@ import { post as bestEcommercePlatformAustralia2026Post } from './posts/best-eco
 import { post as bestAiConsultingFirmsUsa2026Post } from './posts/best-ai-consulting-firms-usa-2026';
 
 export const POSTS: BlogPost[] = [
+  bestAiAgentDevelopmentCompanies2026Post,
   // --- US TIER 1 (2026-09-26) ---
   bestAiConsultingFirmsUsa2026Post,
   // --- AU WAVE 4 (2026-09-26) ---

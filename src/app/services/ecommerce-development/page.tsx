@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { ecommerceAlternates } from '@/data/hreflangMap';
 
 import Image from 'next/image';
+import CommerceFlowVisual from './CommerceFlowVisual';
+import './page.css';
 
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
@@ -697,7 +699,7 @@ export default function EcommerceDevelopmentPage() {
         cta={{ label: 'Book a Consultation', modal: true, region: 'us' }}
       />
 
-      <main className="bg-fj-cream">
+      <main className="ec-growth bg-fj-cream">
         <Breadcrumbs items={BREADCRUMB_ITEMS} />
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
@@ -706,6 +708,7 @@ export default function EcommerceDevelopmentPage() {
             right-hand card sold an unverified "2.3x conversion" figure. The hero now
             answers what we build, for whom, on which platforms and how long it takes,
             using only the confirmed timelines. */}
+        <div className="ec-growth-hero">
         <Hero
           formSlot={<HeroInlineForm region="us" source="us_services_ecommerce_development_hero" />}
           eyebrow="ECOMMERCE DEVELOPMENT COMPANY, USA"
@@ -718,7 +721,8 @@ export default function EcommerceDevelopmentPage() {
             'You own the code on launch day',
           ]}
           rightSlot={
-            <div className="rounded-2xl border border-fj-neutral-200 bg-white p-7 md:p-8">
+            <div className="ec-growth-launch-board rounded-2xl border border-fj-neutral-200 bg-white p-7 md:p-8">
+              <CommerceFlowVisual />
               <p
                 className="font-fj-mono font-medium uppercase text-[#B23E13]"
                 style={{ fontSize: '11px', letterSpacing: '0.14em' }}
@@ -747,13 +751,14 @@ export default function EcommerceDevelopmentPage() {
             </div>
           }
         />
+        </div>
 
         {/* ── 2. SHORT ANSWER + PROOF ──────────────────────────────────────── */}
         {/* Replaces the hero image band and BigThreeTrustBlock. That block's
             showcase variant hardcodes "7-day delivery", which contradicts the 3-14
             week e-commerce timelines this page states. Proof shown here is only
             published case studies and a verbatim client quote. */}
-        <section className="border-y border-fj-neutral-200 bg-white py-14 md:py-20">
+        <section className="ec-growth-proof border-y border-fj-neutral-200 bg-white py-14 md:py-20">
           <div className="mx-auto max-w-[1120px] px-6 md:px-8">
             <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-14">
               <div className="lg:col-span-7">
@@ -832,6 +837,7 @@ export default function EcommerceDevelopmentPage() {
         </section>
 
         {/* ── 3. WHAT GREAT E-COMMERCE LOOKS LIKE ─────────────────────────── */}
+        <div className="ec-growth-explained">
         <ServiceExplanation
           eyebrow="E-COMMERCE EXPLAINED"
           headline="What Separates a Store That Sells from One That Doesn't"
@@ -942,8 +948,10 @@ export default function EcommerceDevelopmentPage() {
             </div>
           }
         />
+        </div>
 
         {/* ── 4. THE PROBLEM (DARK, the page's only dark section) ─────────────────────────────────────────── */}
+        <div className="ec-growth-problem">
         <StrategicDarkSection
           eyebrow="THE PROBLEM"
           headline="Your store has traffic. The conversion rate is where revenue goes to die."
@@ -966,8 +974,10 @@ export default function EcommerceDevelopmentPage() {
             },
           ]}
         />
+        </div>
 
         {/* ── 5. OUR PROCESS ───────────────────────────────────────────────── */}
+        <div className="ec-growth-process">
         <ServiceJourneyRow
           eyebrow="OUR PROCESS"
           headline="From Platform Decision to Live Store in 5 Stages"
@@ -975,16 +985,20 @@ export default function EcommerceDevelopmentPage() {
           stages={ECOMM_JOURNEY_STAGES}
           closingNote="5 STAGES · 3-14 WEEKS TO LAUNCH · PLATFORM-AGNOSTIC · ZERO DOWNTIME LAUNCH DAY"
         />
+        </div>
 
         {/* ── 5b. MID-PAGE CTA ─────────────────────────────────────────────── */}
+        <div className="ec-growth-mid-cta">
         <MidPageCTA
           headline="Get a fixed quote and a launch date for your store"
           sub="Tell us what you sell, how many products you have and which platform you are on today. We reply with a platform recommendation, a fixed price and a launch date. No hourly billing, no obligation."
           label="Get my store quote"
           note="Bhavesh, our founder, reads every request and usually replies within 2 to 3 hours."
         />
+        </div>
 
         {/* ── 6. WHAT WE BUILD ─────────────────────────────────────────────── */}
+        <div className="ec-growth-services">
         <IndustriesGrid
           variant="cards"
           eyebrow="WHAT WE BUILD"
@@ -992,10 +1006,11 @@ export default function EcommerceDevelopmentPage() {
           lead="From a Shopify launch to a fully custom marketplace, we scope the right engagement for your platform, catalog complexity, and revenue stage."
           sectors={ECOMM_SERVICES}
         />
+        </div>
 
         {/* ── 7. STATS BAND ────────────────────────────────────────────────── */}
         <section
-          className="py-12 md:py-16"
+          className="ec-growth-track-record py-12 md:py-16"
           style={{
             backgroundColor: '#FAFAF7',
             borderTop: '1.5px solid rgba(240,90,40,0.18)',
@@ -1076,6 +1091,7 @@ export default function EcommerceDevelopmentPage() {
         </section>
 
         {/* ── 8. TECH STACK ────────────────────────────────────────────────── */}
+        <div className="ec-growth-stack">
         <ServiceExplanation
           eyebrow="OUR TECH STACK"
           headline="Platform-Agnostic Engineering: We Use What Fits Your Business"
@@ -1155,8 +1171,10 @@ export default function EcommerceDevelopmentPage() {
             </div>
           }
         />
+        </div>
 
         {/* ── 9. US MARKET CONTEXT ─────────────────────────────────────────── */}
+        <div className="ec-growth-market">
         <CityContextSection
           eyebrow="THE US E-COMMERCE MARKET"
           headline="US E-Commerce Is a $1.19 Trillion Market. Most Small Businesses Capture Almost None of It."
@@ -1202,9 +1220,10 @@ export default function EcommerceDevelopmentPage() {
           }
           stats={US_ECOMM_STATS}
         />
+        </div>
 
         {/* ── 9b. INTERACTIVE ROI CALCULATOR ──────────────────────────────── */}
-        <section className="bg-[#FFF8F5] py-16 md:py-24 border-y border-[#E7DED6]">
+        <section className="ec-growth-roi bg-[#FFF8F5] py-16 md:py-24 border-y border-[#E7DED6]">
           <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
             <EcommerceRoiCalculator
               source="us_ecommerce_development_service_page"
@@ -1215,6 +1234,7 @@ export default function EcommerceDevelopmentPage() {
         </section>
 
         {/* ── 10. COMPARISON TABLE ─────────────────────────────────────────── */}
+        <div className="ec-growth-comparison">
         <ComparisonTable
           eyebrow="HOW WE COMPARE"
           headline="FactoryJet vs. Traditional Agency vs. Freelancer vs. DIY Platforms"
@@ -1223,16 +1243,18 @@ export default function EcommerceDevelopmentPage() {
             stat: 'Fixed price',
             caption: 'quoted upfront, same Figma design, platform engineering, and Lighthouse audits as a traditional agency project that costs several times more.',
           }}
+          scrollRegionLabel="Ecommerce development options comparison"
           columns={COMPARISON_COLUMNS}
           rows={COMPARISON_ROWS}
           footer="Timelines reflect typical agency and freelancer ranges as of 2026. FactoryJet fixed-price contracts available for all tiers, quoted upfront after a free discovery call."
         />
+        </div>
 
         {/* ── 11b. HOW PRICING WORKS ───────────────────────────────────────── */}
         {/* Replaces TestimonialsSection here: the same real quote now sits near the
             top, and that component's US stats carry an unverified "$50M+" figure and
             render a dark band (this page now keeps a single dark section). */}
-        <section id="pricing-explained" className="scroll-mt-24 bg-fj-cream py-14 md:py-20">
+        <section id="pricing-explained" className="ec-growth-cost scroll-mt-24 bg-fj-cream py-14 md:py-20">
           <div className="mx-auto max-w-[1120px] px-6 md:px-8">
             <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-14">
               <div className="lg:col-span-7">
@@ -1291,7 +1313,7 @@ export default function EcommerceDevelopmentPage() {
         </section>
 
         {/* ── 12. PRICING ──────────────────────────────────────────────────── */}
-        <div id="pricing">
+        <div id="pricing" className="ec-growth-pricing">
           <PricingTiers
             eyebrow="PRICING"
             headline="Transparent, Fixed-Price E-Commerce Development"
@@ -1305,7 +1327,7 @@ export default function EcommerceDevelopmentPage() {
         {/* Converted to a light band on 2026-09-28 so the page keeps a single dark
             section, per the page build spec. The "120+ store builds" claim was dropped
             because it is not in the confirmed-claims list. */}
-        <section className="bg-white py-14 md:py-20">
+        <section className="ec-growth-ownership bg-white py-14 md:py-20">
           <div className="mx-auto max-w-[1120px] px-6 md:px-8">
             <p className="fj-eyebrow">WHY FACTORYJET</p>
             <h2 className="mt-3 max-w-[26ch] font-fj-display text-[clamp(1.625rem,3vw,2.25rem)] font-bold leading-[1.15] tracking-[-0.03em] text-fj-ink">
@@ -1348,7 +1370,7 @@ export default function EcommerceDevelopmentPage() {
         </section>
 
         {/* ── 13b. HIRE ECOMMERCE DEVELOPERS ────────────────────────────────── */}
-        <section className="py-14 md:py-20 bg-[#FAFAF7]">
+        <section className="ec-growth-hire py-14 md:py-20 bg-[#FAFAF7]">
           <div className="max-w-6xl mx-auto px-6">
             <p className="text-sm font-semibold text-[#B23E13] uppercase tracking-widest mb-3">HIRE ECOMMERCE DEVELOPERS</p>
             <h2 className="text-3xl md:text-4xl font-bold text-[#0F0F12] mb-5 max-w-3xl">Hire ecommerce developers from a custom ecommerce development company.</h2>
@@ -1404,6 +1426,7 @@ export default function EcommerceDevelopmentPage() {
         </section>
 
         {/* ── 14. FAQ ──────────────────────────────────────────────────────── */}
+        <div className="ec-growth-faq">
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
           headline="Everything to Know Before You Start"
@@ -1411,9 +1434,10 @@ export default function EcommerceDevelopmentPage() {
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
         />
+        </div>
 
         {/* Cities We Serve, internal linking for SEO */}
-        <section className="py-10 bg-[#FAFAF7]">
+        <section className="ec-growth-cities py-10 bg-[#FAFAF7]">
           <div className="max-w-6xl mx-auto px-6">
             <p className="text-sm font-semibold text-[#B23E13] uppercase tracking-widest mb-3">Serving the US</p>
             <h2 className="text-2xl font-bold text-[#0F0F12] mb-6">E-Commerce Development Services by City</h2>
@@ -1473,7 +1497,7 @@ export default function EcommerceDevelopmentPage() {
         </section>
 
         {/* Related Reading, internal linking to blog posts */}
-        <section className="py-10 bg-[#FAFAF7]">
+        <section className="ec-growth-reading py-10 bg-[#FAFAF7]">
           <div className="max-w-6xl mx-auto px-6">
             <p className="text-sm font-semibold text-[#B23E13] uppercase tracking-widest mb-3">Related Reading</p>
             <h2 className="text-2xl font-bold text-[#0F0F12] mb-6">Keep learning before you commit</h2>
@@ -1492,7 +1516,7 @@ export default function EcommerceDevelopmentPage() {
         </section>
 
         {/* ── 15. FINAL CTA ─────────────────────────────────────────────────── */}
-        <div id="final-cta">
+        <div id="final-cta" className="ec-growth-final">
           <FinalCTA
             variant="light"
             eyebrow="READY TO START"

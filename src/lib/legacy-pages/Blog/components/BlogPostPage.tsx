@@ -9,6 +9,7 @@ import { BlogHeroImage } from './BlogHeroImage';
 import BlogLeadCapture from '@/components/BlogLeadCapture';
 import { blogLeadOffer } from '../leadOffer';
 import './BlogPostPage.css';
+import './IndiaAgencyGuide.css';
 import { getAuthorByName } from '@/data/authors';
 import {
   ArrowLeft,
@@ -78,7 +79,7 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({
   // One offer per post, matched to its topic and market (see ../leadOffer.ts).
   const leadOffer = blogLeadOffer(post);
   return (
-    <div className="blog-post min-h-screen bg-[#FAFAF7] relative">
+    <div className={`blog-post min-h-screen bg-[#FAFAF7] relative${post.slug === 'best-ai-seo-agencies-india' ? ' blog-india-guide' : ''}`}>
       <ReadingProgress />
       <StickyCallToAction />
 

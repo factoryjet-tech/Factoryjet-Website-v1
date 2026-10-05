@@ -194,7 +194,7 @@ export const post: BlogPost = {
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Sep 20, 2026',
-  dateModified: 'Sep 29, 2026',
+  dateModified: 'Oct 04, 2026',
   readTime: '18 min read',
   imageUrl: '/blog-images/how-to-hire-an-ai-agent-developer-2026.webp',
   imageAlt:
@@ -282,6 +282,12 @@ export const post: BlogPost = {
           open-ended hourly billing.
         </p>
       </div>
+      <div className="bg-gray-50 border border-gray-200 p-5 rounded-xl my-8">
+        <h2 className="text-xl font-bold mb-3">Inspect a Deployed Agent Before Hiring</h2>
+        <p className="mb-3">FactoryJet’s Washington Law Group implementation is a news-monitoring agent on a dedicated US server. The case documents source checks, duplicate controls, a private review console and daily backups. Use those details to ask a developer how they validate facts and operate a system after launch. Other workflows still need their own evidence and acceptance tests.</p>
+        <a href="/case-studies/washington-law-group-accident-detection-agent" className="text-[#B23E13] underline">Read the Washington Law Group implementation case</a>
+      </div>
+
 
       <p className="mb-4 text-gray-800">
         &quot;AI developer&quot; is a confusing job title right now. It can mean a researcher who
