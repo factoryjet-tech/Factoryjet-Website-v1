@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://factoryjet.com/images/automotive/dealership-service-lane-bdc-ai.jpg',
+        url: 'https://factoryjet.com/images/automotive/dealership-service-drive-advisor-og.jpg',
         width: 1200,
         height: 630,
         alt: 'FactoryJet Automotive AI Voice Agents and Dealership Service BDC Automation',
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: PAGE_TITLE,
     description: PAGE_DESC,
-    images: ['https://factoryjet.com/images/automotive/dealership-service-lane-bdc-ai.jpg'],
+    images: ['https://factoryjet.com/images/automotive/dealership-service-drive-advisor-og.jpg'],
   },
 };
 
@@ -395,14 +395,14 @@ export default function AutomotiveAiVoiceAgentsPage() {
               <div className="lg:col-span-5">
                 <div className="relative rounded-2xl border border-[#E7DED6] bg-[#FAFAF7] p-3 shadow-xl">
                   <div className="relative rounded-xl overflow-hidden aspect-[16/9] sm:aspect-[4/3] bg-[#E7DED6]">
-                    <Image
-                      src="/images/automotive/dealership-service-lane-bdc-ai.jpg"
-                      alt="American car dealership service drive BDC advisor with headset and tablet in automotive service lane"
+                    <img
+                      src="/images/automotive/dealership-service-drive-advisor.webp"
+                      alt="A service advisor wearing a headset and holding a tablet, talking with a customer beside a silver SUV in a dealership service lane"
                       width={1012}
                       height={676}
-                      priority
+                      fetchPriority="high"
+                      decoding="async"
                       className="absolute inset-0 h-full w-full object-cover"
-                      sizes="(max-width: 1024px) 100vw, 40vw"
                     />
                   </div>
                   <div className="mt-3 p-3 bg-white rounded-lg border border-[#E7DED6] text-xs">
@@ -726,13 +726,14 @@ export default function AutomotiveAiVoiceAgentsPage() {
                 </div>
                 <div className="lg:col-span-6 order-1 lg:order-2">
                   <div className="relative rounded-xl overflow-hidden aspect-[16/9] border border-[#E7DED6]">
-                    <Image
-                      src="/images/automotive/franchised-dealership-service-ai.jpg"
-                      alt="Service director at franchised car dealership reviewing digital repair orders and scheduling board"
+                    <img
+                      src="/images/automotive/dealership-service-desk-scheduling.webp"
+                      alt="A service advisor in a headset typing at a desk with a colour-blocked calendar on the monitor, and a white sedan raised on a lift behind the glass"
                       width={1376}
-                      height={768}
+                      height={774}
+                      loading="lazy"
+                      decoding="async"
                       className="absolute inset-0 h-full w-full object-cover"
-                      sizes="(max-width: 1024px) 100vw, 50vw"
                     />
                   </div>
                 </div>
@@ -742,13 +743,14 @@ export default function AutomotiveAiVoiceAgentsPage() {
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center bg-[#FAFAF7] p-8 rounded-2xl border border-[#E7DED6] shadow-sm">
                 <div className="lg:col-span-6">
                   <div className="relative rounded-xl overflow-hidden aspect-[16/9] border border-[#E7DED6]">
-                    <Image
-                      src="/images/automotive/collision-repair-estimate-dispatch-ai.jpg"
-                      alt="Collision repair center estimator assessing vehicle body damage with digital tablet"
+                    <img
+                      src="/images/automotive/collision-repair-estimator-fender-damage.webp"
+                      alt="An estimator in safety glasses photographing a crumpled front fender on a blue sedan with a tablet in a body shop"
                       width={1376}
-                      height={768}
+                      height={774}
+                      loading="lazy"
+                      decoding="async"
                       className="absolute inset-0 h-full w-full object-cover"
-                      sizes="(max-width: 1024px) 100vw, 50vw"
                     />
                   </div>
                 </div>
@@ -804,13 +806,14 @@ export default function AutomotiveAiVoiceAgentsPage() {
                 </div>
                 <div className="lg:col-span-6 order-1 lg:order-2">
                   <div className="relative rounded-xl overflow-hidden aspect-[16/9] border border-[#E7DED6]">
-                    <Image
-                      src="/images/automotive/auto-parts-lookup-phone-ai.jpg"
-                      alt="Automotive parts specialist fulfilling wholesale parts order at computerized counter"
-                      width={1280}
-                      height={800}
+                    <img
+                      src="/images/automotive/auto-parts-counter-brake-rotor.webp"
+                      alt="A parts counter worker holding a new brake rotor in front of long aisles of shelved cartons"
+                      width={1376}
+                      height={774}
+                      loading="lazy"
+                      decoding="async"
                       className="absolute inset-0 h-full w-full object-cover"
-                      sizes="(max-width: 1024px) 100vw, 50vw"
                     />
                   </div>
                 </div>
@@ -820,13 +823,14 @@ export default function AutomotiveAiVoiceAgentsPage() {
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center bg-[#FAFAF7] p-8 rounded-2xl border border-[#E7DED6] shadow-sm">
                 <div className="lg:col-span-6">
                   <div className="relative rounded-xl overflow-hidden aspect-[16/9] border border-[#E7DED6]">
-                    <Image
-                      src="/images/automotive/commercial-fleet-maintenance-ai.jpg"
-                      alt="Commercial fleet logistics maintenance director inspecting medium-duty delivery vans"
+                    <img
+                      src="/images/automotive/fleet-cargo-vans-maintenance-yard.webp"
+                      alt="A man in a high-visibility vest holding a clipboard and checking under the raised hood of a white cargo van at the head of a row of identical vans"
                       width={1376}
-                      height={768}
+                      height={774}
+                      loading="lazy"
+                      decoding="async"
                       className="absolute inset-0 h-full w-full object-cover"
-                      sizes="(max-width: 1024px) 100vw, 50vw"
                     />
                   </div>
                 </div>
@@ -882,13 +886,14 @@ export default function AutomotiveAiVoiceAgentsPage() {
                 </div>
                 <div className="lg:col-span-6 order-1 lg:order-2">
                   <div className="relative rounded-xl overflow-hidden aspect-[16/9] border border-[#E7DED6]">
-                    <Image
-                      src="/images/automotive/dealership-service-lane-bdc-ai.jpg"
-                      alt="Commercial diesel heavy truck service facility dispatcher coordinating shop repair orders"
-                      width={1012}
-                      height={676}
+                    <img
+                      src="/images/automotive/diesel-truck-technician-engine-bay.webp"
+                      alt="A technician standing on a step with a laptop at the exposed diesel engine of a white semi truck, its hood tilted forward in a repair shop"
+                      width={1376}
+                      height={774}
+                      loading="lazy"
+                      decoding="async"
                       className="absolute inset-0 h-full w-full object-cover"
-                      sizes="(max-width: 1024px) 100vw, 50vw"
                     />
                   </div>
                 </div>

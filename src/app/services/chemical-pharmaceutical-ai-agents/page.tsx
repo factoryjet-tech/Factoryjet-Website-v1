@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://factoryjet.com/images/chemical/specialty-chemical-formulations-ai.jpg',
+        url: 'https://factoryjet.com/images/chemical/pharma-quality-lab-batch-review-og.jpg',
         width: 1200,
         height: 630,
         alt: 'FactoryJet Chemical and Pharmaceutical AI Agents',
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: PAGE_TITLE,
     description: PAGE_DESC,
-    images: ['https://factoryjet.com/images/chemical/specialty-chemical-formulations-ai.jpg'],
+    images: ['https://factoryjet.com/images/chemical/pharma-quality-lab-batch-review-og.jpg'],
   },
 };
 
@@ -400,14 +400,14 @@ export default function ChemicalPharmaceuticalAiAgentsPage() {
               <div className="lg:col-span-5">
                 <div className="relative rounded-2xl border border-[#E7DED6] bg-[#FAFAF7] p-3 shadow-xl">
                   <div className="relative rounded-xl overflow-hidden aspect-[16/9] sm:aspect-[4/3] bg-[#E7DED6]">
-                    <Image
-                      src="/images/chemical/specialty-chemical-formulations-ai.jpg"
-                      alt="Quality assurance chemical engineer and laboratory scientist reviewing batch record analytics on workstation"
+                    <img
+                      src="/images/chemical/pharma-quality-lab-batch-review.webp"
+                      alt="Two lab analysts in white coats and safety glasses seated at a bench, reading a trace of sharp peaks on a monitor beside a rack of sample vials"
                       width={1344}
                       height={896}
-                      priority
+                      fetchPriority="high"
+                      decoding="async"
                       className="absolute inset-0 h-full w-full object-cover"
-                      sizes="(max-width: 1024px) 100vw, 40vw"
                     />
                   </div>
                   <div className="mt-3 p-3 bg-white rounded-lg border border-[#E7DED6] text-xs">
@@ -665,13 +665,14 @@ export default function ChemicalPharmaceuticalAiAgentsPage() {
                 </div>
                 <div className="lg:col-span-6 order-1 lg:order-2">
                   <div className="relative rounded-xl overflow-hidden aspect-[16/9] border border-[#E7DED6]">
-                    <Image
-                      src="/images/chemical/specialty-chemical-formulations-ai.jpg"
-                      alt="Chemical formulation laboratory scientist evaluating reactor batch samples and viscosity metrics"
-                      width={1344}
-                      height={896}
+                    <img
+                      src="/images/chemical/formulation-chemist-beaker-mixing.webp"
+                      alt="A chemist in a lab coat and blue gloves lowering an overhead stirrer into a beaker of amber liquid on a lab bench"
+                      width={1376}
+                      height={774}
+                      loading="lazy"
+                      decoding="async"
                       className="absolute inset-0 h-full w-full object-cover"
-                      sizes="(max-width: 1024px) 100vw, 50vw"
                     />
                   </div>
                 </div>
@@ -681,13 +682,14 @@ export default function ChemicalPharmaceuticalAiAgentsPage() {
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center bg-[#FAFAF7] p-8 rounded-2xl border border-[#E7DED6] shadow-sm">
                 <div className="lg:col-span-6">
                   <div className="relative rounded-xl overflow-hidden aspect-[16/9] border border-[#E7DED6]">
-                    <Image
-                      src="/images/chemical/pharma-batch-record-review-ai.jpg"
-                      alt="Pharmaceutical quality assurance specialist reviewing electronic batch record compliance on computer"
-                      width={1200}
-                      height={800}
+                    <img
+                      src="/images/chemical/cleanroom-operator-batch-tablet.webp"
+                      alt="A cleanroom operator in a full coverall, mask and goggles reading a tablet beside a stainless steel mixing vessel"
+                      width={1376}
+                      height={774}
+                      loading="lazy"
+                      decoding="async"
                       className="absolute inset-0 h-full w-full object-cover"
-                      sizes="(max-width: 1024px) 100vw, 50vw"
                     />
                   </div>
                 </div>
@@ -751,13 +753,14 @@ export default function ChemicalPharmaceuticalAiAgentsPage() {
                 </div>
                 <div className="lg:col-span-6 order-1 lg:order-2">
                   <div className="relative rounded-xl overflow-hidden aspect-[16/9] border border-[#E7DED6]">
-                    <Image
-                      src="/images/chemical/fda-21-cfr-part-11-compliance-ai.jpg"
-                      alt="Pharmaceutical compliance officer conducting GxP audit and document inspection"
-                      width={1200}
-                      height={896}
+                    <img
+                      src="/images/chemical/quality-audit-binder-review.webp"
+                      alt="An auditor pointing with a pen at a page in an open ring binder while a colleague in a lab coat looks on, in front of shelves of white binders"
+                      width={1376}
+                      height={774}
+                      loading="lazy"
+                      decoding="async"
                       className="absolute inset-0 h-full w-full object-cover"
-                      sizes="(max-width: 1024px) 100vw, 50vw"
                     />
                   </div>
                 </div>
@@ -767,13 +770,14 @@ export default function ChemicalPharmaceuticalAiAgentsPage() {
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center bg-[#FAFAF7] p-8 rounded-2xl border border-[#E7DED6] shadow-sm">
                 <div className="lg:col-span-6">
                   <div className="relative rounded-xl overflow-hidden aspect-[16/9] border border-[#E7DED6]">
-                    <Image
-                      src="/images/chemical/chemical-supply-chain-raw-materials-ai.jpg"
-                      alt="Chemical plant logistics manager inspecting raw material tanker unloading and warehouse inventory"
-                      width={1280}
-                      height={800}
+                    <img
+                      src="/images/chemical/chemical-warehouse-drum-receiving.webp"
+                      alt="A warehouse worker in a hard hat and orange vest scanning the label on a blue steel drum, with caged tote tanks and pallet racking behind her"
+                      width={1376}
+                      height={774}
+                      loading="lazy"
+                      decoding="async"
                       className="absolute inset-0 h-full w-full object-cover"
-                      sizes="(max-width: 1024px) 100vw, 50vw"
                     />
                   </div>
                 </div>
@@ -827,13 +831,14 @@ export default function ChemicalPharmaceuticalAiAgentsPage() {
                 </div>
                 <div className="lg:col-span-6 order-1 lg:order-2">
                   <div className="relative rounded-xl overflow-hidden aspect-[16/9] border border-[#E7DED6]">
-                    <Image
-                      src="/images/chemical/reach-tsca-prop65-regulatory-filing-ai.jpg"
-                      alt="Regulatory affairs director reviewing international chemical compliance filings and safety certifications"
-                      width={1280}
-                      height={800}
+                    <img
+                      src="/images/chemical/chemical-storage-cabinet-inventory-check.webp"
+                      alt="A man in a lab coat holding a tablet and checking a brown reagent bottle in an open yellow chemical safety cabinet"
+                      width={1376}
+                      height={774}
+                      loading="lazy"
+                      decoding="async"
                       className="absolute inset-0 h-full w-full object-cover"
-                      sizes="(max-width: 1024px) 100vw, 50vw"
                     />
                   </div>
                 </div>

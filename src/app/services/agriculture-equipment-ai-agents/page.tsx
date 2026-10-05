@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://factoryjet.com/images/agriculture/ag-equipment-dealership-service-parts-ai.jpg',
+        url: 'https://factoryjet.com/images/agriculture/farm-equipment-dealership-service-bay-og.jpg',
         width: 1200,
         height: 630,
         alt: 'FactoryJet Agriculture Equipment AI Agents',
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: PAGE_TITLE,
     description: PAGE_DESC,
-    images: ['https://factoryjet.com/images/agriculture/ag-equipment-dealership-service-parts-ai.jpg'],
+    images: ['https://factoryjet.com/images/agriculture/farm-equipment-dealership-service-bay-og.jpg'],
   },
 };
 
@@ -395,14 +395,14 @@ export default function AgricultureEquipmentAiAgentsPage() {
               <div className="lg:col-span-5">
                 <div className="relative rounded-2xl border border-[#E7DED6] bg-[#FAFAF7] p-3 shadow-xl">
                   <div className="relative rounded-xl overflow-hidden aspect-[16/9] sm:aspect-[4/3] bg-[#E7DED6]">
-                    <Image
-                      src="/images/agriculture/ag-equipment-dealership-service-parts-ai.jpg"
-                      alt="Agricultural equipment dealership service director and master technician reviewing combine diagnostics"
+                    <img
+                      src="/images/agriculture/farm-equipment-dealership-service-bay.webp"
+                      alt="A service manager and a technician reading a rugged tablet in front of a silver farm tractor in a dealership service bay"
                       width={1012}
                       height={676}
-                      priority
+                      fetchPriority="high"
+                      decoding="async"
                       className="absolute inset-0 h-full w-full object-cover"
-                      sizes="(max-width: 1024px) 100vw, 40vw"
                     />
                   </div>
                   <div className="mt-3 p-3 bg-white rounded-lg border border-[#E7DED6] text-xs">
@@ -718,13 +718,14 @@ export default function AgricultureEquipmentAiAgentsPage() {
                 </div>
                 <div className="lg:col-span-6 order-1 lg:order-2">
                   <div className="relative rounded-xl overflow-hidden aspect-[16/9] border border-[#E7DED6]">
-                    <Image
-                      src="/images/agriculture/ag-equipment-dealership-service-parts-ai.jpg"
-                      alt="Agricultural machinery dealership parts specialist fulfilling emergency harvest parts request"
-                      width={1012}
-                      height={676}
+                    <img
+                      src="/images/agriculture/farm-equipment-parts-counter.webp"
+                      alt="A parts clerk holding a tractor air filter at a parts counter, with shelves of cartons, drive belts and hydraulic hoses behind him"
+                      width={1376}
+                      height={774}
+                      loading="lazy"
+                      decoding="async"
                       className="absolute inset-0 h-full w-full object-cover"
-                      sizes="(max-width: 1024px) 100vw, 50vw"
                     />
                   </div>
                 </div>
@@ -734,13 +735,14 @@ export default function AgricultureEquipmentAiAgentsPage() {
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center bg-[#FAFAF7] p-8 rounded-2xl border border-[#E7DED6] shadow-sm">
                 <div className="lg:col-span-6">
                   <div className="relative rounded-xl overflow-hidden aspect-[16/9] border border-[#E7DED6]">
-                    <Image
-                      src="/images/agriculture/field-diagnostic-telematics-isobus-ai.jpg"
-                      alt="Farm equipment technician diagnosing tractor telematics error codes with field tablet"
+                    <img
+                      src="/images/agriculture/tractor-field-fault-diagnosis-laptop.webp"
+                      alt="A field technician crouching beside a tractor wheel, with a rugged laptop cabled to the machine on the cab step"
                       width={1376}
-                      height={768}
+                      height={774}
+                      loading="lazy"
+                      decoding="async"
                       className="absolute inset-0 h-full w-full object-cover"
-                      sizes="(max-width: 1024px) 100vw, 50vw"
                     />
                   </div>
                 </div>
@@ -820,13 +822,14 @@ export default function AgricultureEquipmentAiAgentsPage() {
                 </div>
                 <div className="lg:col-span-6 order-1 lg:order-2">
                   <div className="relative rounded-xl overflow-hidden aspect-[16/9] border border-[#E7DED6]">
-                    <Image
-                      src="/images/agriculture/precision-ag-sensor-drone-yield-ai.jpg"
-                      alt="Agronomist reviewing precision multispectral field maps and crop yield data on tablet"
+                    <img
+                      src="/images/agriculture/agronomist-drone-crop-scouting.webp"
+                      alt="Over the shoulder of an agronomist in a soybean field, holding a tablet with a colour-coded field map while a small drone hovers ahead"
                       width={1376}
-                      height={768}
+                      height={774}
+                      loading="lazy"
+                      decoding="async"
                       className="absolute inset-0 h-full w-full object-cover"
-                      sizes="(max-width: 1024px) 100vw, 50vw"
                     />
                   </div>
                 </div>
@@ -836,13 +839,14 @@ export default function AgricultureEquipmentAiAgentsPage() {
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center bg-[#FAFAF7] p-8 rounded-2xl border border-[#E7DED6] shadow-sm">
                 <div className="lg:col-span-6">
                   <div className="relative rounded-xl overflow-hidden aspect-[16/9] border border-[#E7DED6]">
-                    <Image
-                      src="/images/agriculture/seasonal-harvest-equipment-dispatch-ai.jpg"
-                      alt="Ag dealership mobile service truck technician repairing combine harvester in field"
+                    <img
+                      src="/images/agriculture/service-truck-combine-harvest-field.webp"
+                      alt="A mechanic reaching into an open side panel of a combine with a wrench in a wheat stubble field, beside a white service truck with a crane"
                       width={1376}
-                      height={768}
+                      height={774}
+                      loading="lazy"
+                      decoding="async"
                       className="absolute inset-0 h-full w-full object-cover"
-                      sizes="(max-width: 1024px) 100vw, 50vw"
                     />
                   </div>
                 </div>
@@ -919,13 +923,14 @@ export default function AgricultureEquipmentAiAgentsPage() {
                 </div>
                 <div className="lg:col-span-6 order-1 lg:order-2">
                   <div className="relative rounded-xl overflow-hidden aspect-[16/9] border border-[#E7DED6]">
-                    <Image
-                      src="/images/agriculture/commercial-agronomy-chemical-fertilizer-ai.jpg"
-                      alt="Commercial agronomy specialist inspecting crop protection fertilizer blending facility"
-                      width={1280}
-                      height={800}
+                    <img
+                      src="/images/agriculture/crop-input-tank-loading-ag-retail.webp"
+                      alt="A worker in safety glasses and chemical gloves connecting a hose to a white tote tank, with bulk storage tanks and a tanker truck behind her"
+                      width={1376}
+                      height={774}
+                      loading="lazy"
+                      decoding="async"
                       className="absolute inset-0 h-full w-full object-cover"
-                      sizes="(max-width: 1024px) 100vw, 50vw"
                     />
                   </div>
                 </div>

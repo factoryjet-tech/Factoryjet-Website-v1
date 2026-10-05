@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://factoryjet.com/images/legal/law-firm-contract-review-ai.jpg',
+        url: 'https://factoryjet.com/images/legal/law-firm-attorneys-contract-review-og.jpg',
         width: 1200,
         height: 630,
         alt: 'FactoryJet Legal AI Agents and Law Firm Automation',
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: PAGE_TITLE,
     description: PAGE_DESC,
-    images: ['https://factoryjet.com/images/legal/law-firm-contract-review-ai.jpg'],
+    images: ['https://factoryjet.com/images/legal/law-firm-attorneys-contract-review-og.jpg'],
   },
 };
 
@@ -417,14 +417,14 @@ export default function LegalAiAgentsPage() {
               <div className="lg:col-span-5">
                 <div className="relative rounded-2xl border border-[#E7DED6] bg-[#FAFAF7] p-3 shadow-xl">
                   <div className="relative rounded-xl overflow-hidden aspect-[16/9] sm:aspect-[4/3] bg-[#E7DED6]">
-                    <Image
-                      src="/images/legal/law-firm-contract-review-ai.jpg"
-                      alt="American law firm partner and senior attorney reviewing contract redlines on modern legal workstation"
+                    <img
+                      src="/images/legal/law-firm-attorneys-contract-review.webp"
+                      alt="Two attorneys at a wooden desk reviewing a printed document, one holding a pen over the page and the other at a laptop, with law books behind them"
                       width={1344}
                       height={896}
-                      priority
+                      fetchPriority="high"
+                      decoding="async"
                       className="absolute inset-0 h-full w-full object-cover"
-                      sizes="(max-width: 1024px) 100vw, 40vw"
                     />
                   </div>
                   <div className="mt-3 p-3 bg-white rounded-lg border border-[#E7DED6] text-xs">
@@ -771,13 +771,14 @@ export default function LegalAiAgentsPage() {
                 </div>
                 <div className="lg:col-span-6 order-1 lg:order-2">
                   <div className="relative rounded-xl overflow-hidden aspect-[16/9] border border-[#E7DED6]">
-                    <Image
-                      src="/images/legal/corporate-ma-due-diligence-ai.jpg"
-                      alt="Corporate legal team analyzing acquisition documents and financial schedules in law office"
-                      width={1200}
-                      height={800}
+                    <img
+                      src="/images/legal/due-diligence-team-document-boxes.webp"
+                      alt="Three lawyers at a conference table working through stacks of manila folders and file boxes, with laptops open"
+                      width={1376}
+                      height={774}
+                      loading="lazy"
+                      decoding="async"
                       className="absolute inset-0 h-full w-full object-cover"
-                      sizes="(max-width: 1024px) 100vw, 50vw"
                     />
                   </div>
                 </div>
@@ -787,13 +788,14 @@ export default function LegalAiAgentsPage() {
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center bg-[#FAFAF7] p-8 rounded-2xl border border-[#E7DED6] shadow-sm">
                 <div className="lg:col-span-6">
                   <div className="relative rounded-xl overflow-hidden aspect-[16/9] border border-[#E7DED6]">
-                    <Image
-                      src="/images/legal/personal-injury-client-intake-ai.jpg"
-                      alt="Legal intake specialist in personal injury law firm consulting with client in conference room"
-                      width={1200}
-                      height={896}
+                    <img
+                      src="/images/legal/personal-injury-client-intake-meeting.webp"
+                      alt="A woman taking notes on a yellow legal pad across a small round table from a man with his arm in a sling"
+                      width={1376}
+                      height={774}
+                      loading="lazy"
+                      decoding="async"
                       className="absolute inset-0 h-full w-full object-cover"
-                      sizes="(max-width: 1024px) 100vw, 50vw"
                     />
                   </div>
                 </div>
@@ -853,13 +855,14 @@ export default function LegalAiAgentsPage() {
                 </div>
                 <div className="lg:col-span-6 order-1 lg:order-2">
                   <div className="relative rounded-xl overflow-hidden aspect-[16/9] border border-[#E7DED6]">
-                    <Image
-                      src="/images/legal/real-estate-lease-abstraction-ai.jpg"
-                      alt="Commercial real estate lawyer analyzing property title documents and lease agreements"
-                      width={1280}
-                      height={800}
+                    <img
+                      src="/images/legal/commercial-lease-site-plan-review.webp"
+                      alt="An attorney leaning over a printed floor plan with a thick bound document open in her other hand, office towers visible through the window"
+                      width={1376}
+                      height={774}
+                      loading="lazy"
+                      decoding="async"
                       className="absolute inset-0 h-full w-full object-cover"
-                      sizes="(max-width: 1024px) 100vw, 50vw"
                     />
                   </div>
                 </div>
@@ -869,13 +872,14 @@ export default function LegalAiAgentsPage() {
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center bg-[#FAFAF7] p-8 rounded-2xl border border-[#E7DED6] shadow-sm">
                 <div className="lg:col-span-6">
                   <div className="relative rounded-xl overflow-hidden aspect-[16/9] border border-[#E7DED6]">
-                    <Image
-                      src="/images/legal/ip-trademark-discovery-ai.jpg"
-                      alt="Intellectual property patent attorney reviewing trademark filings and prior art documentation"
-                      width={1280}
-                      height={800}
+                    <img
+                      src="/images/legal/patent-attorney-prototype-drawings.webp"
+                      alt="A man in glasses examining a small metal gear mechanism over line drawings of mechanical parts spread across his desk"
+                      width={1376}
+                      height={774}
+                      loading="lazy"
+                      decoding="async"
                       className="absolute inset-0 h-full w-full object-cover"
-                      sizes="(max-width: 1024px) 100vw, 50vw"
                     />
                   </div>
                 </div>
@@ -931,13 +935,14 @@ export default function LegalAiAgentsPage() {
                 </div>
                 <div className="lg:col-span-6 order-1 lg:order-2">
                   <div className="relative rounded-xl overflow-hidden aspect-[16/9] border border-[#E7DED6]">
-                    <Image
-                      src="/images/legal/law-firm-contract-review-ai.jpg"
-                      alt="Estate planning attorney and client reviewing trust documentation in private conference room"
-                      width={1344}
-                      height={896}
+                    <img
+                      src="/images/legal/estate-planning-couple-attorney-signing.webp"
+                      alt="An older couple at a round table, the woman signing a document while an attorney slides a second page toward them"
+                      width={1376}
+                      height={774}
+                      loading="lazy"
+                      decoding="async"
                       className="absolute inset-0 h-full w-full object-cover"
-                      sizes="(max-width: 1024px) 100vw, 50vw"
                     />
                   </div>
                 </div>
