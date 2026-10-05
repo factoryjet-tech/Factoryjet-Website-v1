@@ -473,7 +473,7 @@ export function AustraliaHubContent({ reviewConcept }: { reviewConcept?: Austral
           <div className="wrap">
             <div className="services-intro" style={{ maxWidth: 780 }}>
               <span className="eyebrow">Every FactoryJet Australia service</span>
-              <h2>Four service hubs, eight detail pages, one team</h2>
+              <h2>Ecommerce, AI agents, web design and SEO from one team</h2>
               <p className="lead mt-4">
                 Pick the page that matches the job in front of you. Each one explains what we build, how it works for
                 Australian businesses, what drives the cost, and the questions buyers ask most. Web design is covered
