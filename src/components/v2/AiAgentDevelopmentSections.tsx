@@ -98,14 +98,47 @@ function AgentDirectory() {
   );
 }
 
-// Buyer questions share the scope and ownership language used in the FAQs.
+/* Answer-first block. AI buyers (ChatGPT, Perplexity) ask use case, systems,
+   cost, timeline and ownership questions, in that order (AI-BUYER-SWEEP-RESULTS-
+   2026-09-17). Question wording follows what was measured on 2026-10-05:
+   "What can an AI agent do for my business?" is a live Google People Also Ask,
+   and "how much does an ai agent cost" is the most-asked AI assistant question
+   in this cluster (DataForSEO AI keyword data, US). Cost figures are the
+   ProductCrafters market range, re-fetched 2026-10-05 and labelled as a market
+   reference, never as a FactoryJet price. Timeline wording matches
+   /blog/what-is-an-ai-agent-cost-2026. Keep one client name off this block:
+   the Washington Law Group case has its own section lower on the page. */
 const SHORT_ANSWERS: { tag: string; q: string; a: ReactNode }[] = [
-  { tag: 'WHAT IT DOES', q: 'What does an AI agent do for my business?', a: <>It uses approved sources and tools to complete a defined task. In our Washington Law Group research system, a model extracts article facts and code checks source names, eligibility and duplicates. For your workflow, we scope the trigger, permitted action and review points before choosing the implementation.</> },
-  { tag: 'SYSTEMS', q: 'What can it connect to?', a: <>We review the required access to your ERP, CRM, help desk or store, including NetSuite, Odoo, Salesforce, HubSpot, Zendesk and Shopify. The proposal names each read and write action, its permission and the sandbox test. An unavailable API or missing licence becomes a dependency in the scope.</> },
-  { tag: 'COST', q: 'How much does development cost?', a: <>We quote the agreed workflow after discovery. The scope identifies integration work, source checks and failure handling. The operating estimate separately covers model usage, hosting, subscriptions, review time and support. Our <a href="/blog/what-is-an-ai-agent-cost-2026" style={{ color: 'var(--accent-text)', textDecoration: 'underline', textUnderlineOffset: 3 }}>AI agent cost guide</a> covers the budgeting questions.</> },
-  { tag: 'TIMELINE', q: 'How do you set the timeline?', a: <>We separate the prototype, supervised pilot and operational rollout. Access to approved sources and a test environment can determine when work begins. The pilot acceptance set includes missing evidence, repeated events and unavailable tools. We agree those tests and dependencies before committing to a delivery schedule.</> },
-  { tag: 'OWNERSHIP', q: 'What do I own?', a: <>The agreement defines the custom code, prompts, connectors, tests and operating instructions handed over. Third-party licences remain separate. In the published Washington Law Group case, the client owns the system code. We make the equivalent ownership and deployment-account responsibilities explicit in your project scope.</> },
-  { tag: 'AFTER LAUNCH', q: 'Who operates the agent?', a: <>The operating plan names an owner for failed runs, source changes and credential updates. We can scope <a href="/services/ai-agent-monitoring" style={{ color: 'var(--accent-text)', textDecoration: 'underline', textUnderlineOffset: 3 }}>AI agent monitoring and support</a>. Our research case documents dedicated hosting and encrypted backups; your workflow gets its own incident and maintenance plan.</> },
+  {
+    tag: 'WHAT IT DOES',
+    q: 'What can an AI agent do for my business?',
+    a: <>It takes one repeat job that follows your rules and does it inside your systems. Agents we build read RFQs and draft quotes in NetSuite or Odoo, answer order and return tickets for Shopify stores in Gorgias or Zendesk, qualify inbound leads into HubSpot, and chase open purchase orders with suppliers. It suits manufacturers, distributors, ecommerce brands and service firms that already run on real software.</>,
+  },
+  {
+    tag: 'SYSTEMS',
+    q: 'What will it connect to?',
+    a: <>The tools you already pay for. ERP: NetSuite, SAP Business One, Odoo, Microsoft Dynamics 365. CRM: HubSpot, Salesforce. Help desk: Zendesk, Gorgias, Intercom, Freshdesk. Commerce: Shopify, Shopify Plus, BigCommerce. Plus email, Slack and anything with an API. If a system has no API, we tell you on the first call, because that changes the plan.</>,
+  },
+  {
+    tag: 'COST',
+    q: 'How much does an AI agent cost?',
+    a: <>As a market reference, development firm ProductCrafters puts 2026 custom AI agent builds at about $5,000 to $180,000+. The number of systems the agent reads and writes to moves the price far more than the AI model does. We quote a fixed price for your scope after one call. Our <a href="/blog/what-is-an-ai-agent-cost-2026" style={{ color: 'var(--accent-text)', textDecoration: 'underline', textUnderlineOffset: 3 }}>AI agent cost guide</a> shows what moves the number, including monthly running costs.</>,
+  },
+  {
+    tag: 'TIMELINE',
+    q: 'How long does it take?',
+    a: <>A pilot on one narrow workflow usually takes two to four weeks. A production agent with permissions, logging, approvals and monitoring usually takes six to twelve weeks. Most of that time goes into connecting your systems and testing edge cases.</>,
+  },
+  {
+    tag: 'OWNERSHIP',
+    q: 'What do I own when it is done?',
+    a: <>Everything we build for you: the code in your own Git repository, the prompts, the test sets and the connectors. The agent can run in your own cloud account or on a dedicated server we manage for you. You pay the model provider, such as Anthropic or OpenAI, directly. There is no per-agent license from us, so you can keep us on for support or take the work in-house.</>,
+  },
+  {
+    tag: 'AFTER LAUNCH',
+    q: 'Who looks after it once it is live?',
+    a: <>We do, if you want us to. Agents drift when your prices, policies or data change, so we watch accuracy, update prompts and models, and fix failures. That is what our <a href="/services/ai-agent-monitoring" style={{ color: 'var(--accent-text)', textDecoration: 'underline', textUnderlineOffset: 3 }}>AI agent monitoring and support</a> work covers. We don&apos;t hand over a demo and disappear.</>,
+  },
 ];
 
 function ShortAnswers() {
@@ -196,7 +229,7 @@ function TellUsTheWorkflow() {
             <li><strong style={{ color: 'var(--ink)' }}>Which systems does it touch?</strong> For example NetSuite, Shopify, HubSpot or Zendesk.</li>
             <li><strong style={{ color: 'var(--ink)' }}>How often does it happen, and who does it today?</strong> A rough weekly count is enough.</li>
           </ol>
-          <p style={{ marginTop: 18, fontSize: 14 }}>Bhavesh, our founder, reviews workflow enquiries.</p>
+          <p style={{ marginTop: 18, fontSize: 14 }}>Bhavesh, our founder, reads every enquiry and usually replies within 2 to 3 hours.</p>
         </div>
         <div className="finalcta-form">
           <HeroInlineForm
@@ -301,8 +334,8 @@ export default function AiAgentDevelopmentSections() {
           <div className="wrap hero-grid">
             <div className="hero-copy">
               <div className="eyebrow">Service Specification</div>
-              <h1>Custom AI Agent Development for <span className="hero-emphasis">Your Business Systems</span></h1>
-              <p className="lead">We scope custom AI workflows around your sources, business rules and permitted actions. Our deployed Washington Law Group research system checks extracted names against source text and handles duplicate reports. For an ERP, CRM or Shopify project, we agree the access, acceptance tests and handover before quoting the build.</p>
+              <h1>Custom AI Agent Development Services for <span className="hero-emphasis">Your Business Systems</span></h1>
+              <p className="lead">FactoryJet is an AI agent development company for US businesses. We design, build, integrate and support custom AI agents that follow your business rules and complete multi-step work inside the systems you already run: NetSuite, SAP, Odoo, Salesforce, HubSpot, Zendesk and Shopify. A person approves anything that matters. You own the code.</p>
               <div className="actions">
                 <a className="btn btn-primary" href="#tell-us">Tell us the workflow</a>
                 <a className="btn btn-ghost" href="#short-answers">Cost, timeline, ownership</a>
@@ -358,29 +391,29 @@ export default function AiAgentDevelopmentSections() {
                   <span className="tag">HOLD</span>
                 </label>
               </div>
-              <div className="specpanel-foot">ILLUSTRATIVE RFQ WORKFLOW: a missing rate goes to review. The proposed ERP connectors need their own implementation and tests.</div>
+              <div className="specpanel-foot">ILLUSTRATIVE RFQ WORKFLOW: a missing rate is flagged for a person, never guessed.</div>
             </form>
           </div>
         </section>
         <div className="ledger">
           <div className="wrap">
             <div className="ledgercell">
-              <div className="k">Deployed case</div>
+              <div className="k">Founded</div>
               <div className="v">
-                <a href="/case-studies/washington-law-group-accident-detection-agent">Washington Law Group</a>
+                <strong className="ledger-number">2014</strong>
               </div>
             </div>
             <div className="ledgercell">
-              <div className="k">Team</div>
-              <div className="v">Custom workflow engineering and operating support.</div>
+              <div className="k">Before you sign</div>
+              <div className="v">We show you working software on your own data before you sign a contract.</div>
             </div>
             <div className="ledgercell">
               <div className="k">Pricing</div>
-              <div className="v">A fixed quote after the workflow, access and acceptance tests are agreed.</div>
+              <div className="v">A fixed price for an agreed scope, quoted after one call. No hourly meter running in the background.</div>
             </div>
             <div className="ledgercell">
-              <div className="k">Case control</div>
-              <div className="v">Extracted names checked against the source article before saving.</div>
+              <div className="k">Track record</div>
+              <div className="v"><strong className="ledger-number">500+</strong> businesses served across web, commerce, and AI engagements.</div>
             </div>
           </div>
         </div>
@@ -395,23 +428,23 @@ export default function AiAgentDevelopmentSections() {
               <div className="factlist">
                 <div className="fact">
                   <div className="sec">§01</div>
-                  <p>Ask the provider to name the action. An order lookup, a draft reply and a refund each need different permissions and tests. A chat interface does not tell you which actions the system can take.</p>
+                  <p>An AI agent plans and acts across multiple steps. A chatbot answers one message at a time. If a vendor can&apos;t explain the difference, they&apos;re selling the second thing.</p>
                 </div>
                 <div className="fact">
                   <div className="sec">§02</div>
-                  <p>In our Washington Law Group implementation, extracted names are checked against the article before they are saved. Ask how a proposed supplier validates the source fields your workflow depends on.</p>
+                  <p>Most AI agent projects fail at integration, and the model is rarely the problem. The agent has to read your real data, follow your real policies and hold up through weeks of real use.</p>
                 </div>
                 <div className="fact">
                   <div className="sec">§03</div>
-                  <p>Quote the complete workflow: integration access, source checks, approvals, failure recovery and handover. Keep the ongoing model usage, hosting and review work in a separate operating estimate. Our <a href="/blog/what-is-an-ai-agent-cost-2026" style={{ color: 'var(--accent-text)', textDecoration: 'underline', textUnderlineOffset: 3 }}>AI agent cost guide</a> covers the questions to settle before comparing estimates.</p>
+                  <p>Cost follows the number of systems the agent has to read and write to. As a market reference, development firm ProductCrafters puts 2026 builds at about $5,000 to $180,000+. A narrow pilot takes two to four weeks. Our <a href="/blog/what-is-an-ai-agent-cost-2026" style={{ color: 'var(--accent-text)', textDecoration: 'underline', textUnderlineOffset: 3 }}>AI agent cost guide</a> breaks down what it costs to build, run or rent one.</p>
                 </div>
                 <div className="fact">
                   <div className="sec">§04</div>
-                  <p>A configurable builder and a coding framework leave different work with your team. Compare their connector actions and operating responsibilities before selecting a development partner. Our <a href="/services/ai-consulting" style={{ color: 'var(--accent-text)', textDecoration: 'underline', textUnderlineOffset: 3 }}>AI consulting services</a> start by assessing the task, sources and permitted actions.</p>
+                  <p>The three vendor categories are platforms (you build it yourself with LangGraph, CrewAI, or AutoGen), enterprise consultancies (large-scale, slow, expensive), and specialist agentic AI development companies (custom-built, production-focused, faster than a consultancy, more accountable than a platform). If you are not sure an agent is the right first project, our <a href="/services/ai-consulting" style={{ color: 'var(--accent-text)', textDecoration: 'underline', textUnderlineOffset: 3 }}>AI consulting services</a> start with a readiness assessment and tell you.</p>
                 </div>
                 <div className="fact">
                   <div className="sec">§05</div>
-                  <p>FactoryJet scopes custom AI agent development around one workflow and an acceptance set. The published Washington Law Group case gives you a source-checking implementation to inspect before discussing a new build.</p>
+                  <p>FactoryJet is an AI agent development company in the third category. We build custom AI agents into your ERP, CRM and internal systems, with a human approval step wherever a wrong decision would cost you.</p>
                 </div>
               </div>
               <div className="factphoto">
@@ -441,33 +474,38 @@ export default function AiAgentDevelopmentSections() {
                 <tbody>
                   <tr>
                     <th>Platforms &amp; frameworks<br /><span className="mono tableSubLabel">LangGraph, CrewAI, AutoGen</span></th>
-                    <td>Engineering toolkits for building an application</td>
+                    <td>Tools and SDKs for building agents yourself</td>
                     <td>Teams with strong internal engineering</td>
                     <td>You own security, integration, and maintenance</td>
                   </tr>
                   <tr>
                     <th>Enterprise consultancies<br /><span className="mono tableSubLabel">Accenture / IBM scale</span></th>
-                    <td>Agentic AI within a wider systems or data programme</td>
+                    <td>Agentic AI as part of a larger transformation program</td>
                     <td>Large, regulated enterprises</td>
-                    <td>Compare delivery scope, dependencies and operating ownership</td>
+                    <td>Slower pilots, higher cost, less flexibility</td>
                   </tr>
                   <tr className="us">
                     <th>Specialist development partners<br /><span className="mono tableSubLabel tableSubLabelAccent">FactoryJet</span></th>
                     <td>Custom agents built and wired into your real systems</td>
-                    <td>Teams seeking a scoped implementation and handover</td>
-                    <td>Request a relevant deployed case and a shared acceptance set</td>
+                    <td>Mid-market teams that want a working agent without a platform to manage</td>
+                    <td>Vendor diligence matters more, the category is still maturing</td>
                   </tr>
                 </tbody>
               </table>
             </div>
-            <p style={{ marginTop: 24, color: 'var(--body)', lineHeight: 1.75 }}>Our <a href="/blog/best-ai-agent-development-companies-2026" style={{ color: 'var(--accent-text)', textDecoration: 'underline' }}>ten-company AI agent development comparison</a> links each provider’s published offer and uses source checks, duplicate handling and handover as selection questions. FactoryJet publishes it and is included in the alphabetical list. For software options, read the <a href="/blog/ai-agent-build-vs-buy-2026" style={{ color: 'var(--accent-text)', textDecoration: 'underline' }}>AI agent builder comparison</a>.</p>
+            <p style={{ marginTop: 24, color: 'var(--body)', lineHeight: 1.75 }}>Our <a href="/blog/best-ai-agent-development-companies-2026" style={{ color: 'var(--accent-text)', textDecoration: 'underline' }}>comparison of ten AI agent development companies</a> links each firm&apos;s published offer and gives you one question to ask each of them. FactoryJet publishes it and is on the list, which is in alphabetical order. If you are weighing software against a custom build, read <a href="/blog/ai-agent-build-vs-buy-2026" style={{ color: 'var(--accent-text)', textDecoration: 'underline' }}>build or buy an AI agent</a>.</p>
           </div>
         </section>
         <section className="section facts" id="agentic-ai-development">
           <div className="wrap">
-            <div className="section-head"><div className="eyebrow">Agentic AI development services</div><h2>Decide which steps the model may choose</h2></div>
-            <p style={{ marginTop: 24, color: 'var(--body)', lineHeight: 1.75 }}>Agentic AI development gives a model some choice over steps or tools, within application limits. Our Washington Law Group research system uses a bounded workflow: model extraction followed by fixed source, eligibility and duplicate checks. We use that distinction when deciding whether your project needs an agent, an AI workflow or fixed automation.</p>
-            <p style={{ marginTop: 18, color: 'var(--body)', lineHeight: 1.75 }}>For a proposed RFQ workflow, a model can extract line items while code checks quantities and an estimator approves the quote. That is a proposed scope requiring its own connector and calculation tests. Read the <a href="/blog/what-is-agentic-ai" style={{ color: 'var(--accent-text)', textDecoration: 'underline' }}>agentic AI definition and deployed example</a> for the source-checking case behind this approach.</p>
+            <div className="section-head">
+              <div className="eyebrow">Agentic AI</div>
+              <h2>Agentic AI Development Services</h2>
+            </div>
+            <div>
+              <p style={{ color: 'var(--body)', lineHeight: 1.75 }}>Agentic AI development means building software where an AI model chooses its own next step or tool to reach a goal, inside limits you set. Most buyers use the term for the same work as AI agent development. As an agentic AI development company, our first job is to decide how much choice the model should get: a full agent, a fixed workflow with one AI step, or plain automation.</p>
+              <p style={{ marginTop: 18, color: 'var(--body)', lineHeight: 1.75 }}>Take an emailed RFQ. The model reads the line items. Code checks quantities and prices against your rule book. An estimator approves the quote before it goes out. The model gets freedom where the reading is messy, and fixed rules run everything that touches money. Our <a href="/blog/what-is-agentic-ai" style={{ color: 'var(--accent-text)', textDecoration: 'underline' }}>plain-language guide to agentic AI</a> explains the terms.</p>
+            </div>
           </div>
         </section>
         <section className="definition" id="definition">
@@ -623,7 +661,7 @@ export default function AiAgentDevelopmentSections() {
               <div className="tnode">
                 <div className="idx">04</div>
                 <h3>Verify</h3>
-                <p>Required fields and actions are tested against approved sources and examples before launch.</p>
+                <p>Every fact the agent states gets checked against its source before launch.</p>
               </div>
               <div className="tnode">
                 <div className="idx">05</div>
@@ -639,29 +677,29 @@ export default function AiAgentDevelopmentSections() {
         <section className="vlog" id="vlog">
           <div className="wrap">
             <div className="section-head">
-              <div className="eyebrow eyebrowBlue">Deployed Implementation</div>
-              <h2>Washington Law Group: Source-Checked Incident Monitoring</h2>
-              <p>A news-monitoring and research agent delivered on a dedicated US server, with a private console for the firm to review findings.</p>
+              <div className="eyebrow eyebrowBlue">Case Study</div>
+              <h2>The AI Agent We Built for Washington Law Group</h2>
+              <p>A personal injury firm needed to hear about serious commercial-vehicle crashes fast. The agent reads news and police sources across all 50 states every two hours and emails the firm the crashes that qualify.</p>
             </div>
             <div className="ventries">
               <div className="ventry">
                 <span className="vtag">SOURCES</span>
-                <h3>Check extracted facts</h3>
-                <p>The system extracts candidate incidents from authorised news sources. Names are checked against source text, and qualifying records retain their source links for review.</p>
+                <h3>It never invents a name</h3>
+                <p>An AI model pulls the facts from each article. Every name it returns is checked against the article text before it is saved. If the name is not there, it is dropped. This check has caught invented names in real runs.</p>
               </div>
               <div className="ventry">
-                <span className="vtag">WORKFLOW</span>
-                <h3>Group repeated reports</h3>
-                <p>Repeated coverage is grouped into one incident. Duplicate controls limit repeat alerts while a private console lets the firm inspect findings and updates.</p>
+                <span className="vtag">RULES</span>
+                <h3>Fixed rules decide, the lawyer judges</h3>
+                <p>A crash qualifies only if a commercial vehicle was involved, it was fatal or life-threatening, and it is 14 days old or newer. The agent shows what a source says about fault and never uses it to filter. That call stays with the firm.</p>
               </div>
               <div className="ventry">
                 <span className="vtag">OPERATIONS</span>
-                <h3>Keep an operating owner</h3>
-                <p>FactoryJet runs and maintains the agent with restricted console access and daily backups. The case documents delivery without claiming a measured increase in retained clients or revenue.</p>
+                <h3>Owned by the client, run by us</h3>
+                <p>The code is assigned to the firm under the agreement. FactoryJet runs and maintains the agent on a dedicated US server with named sign-in and encrypted daily backups. We publish no lead counts or revenue figures, because none have been measured yet.</p>
               </div>
             </div>
             <div className="timelineAction">
-              <a className="btn btn-primary" href="/case-studies/washington-law-group-accident-detection-agent">Read the implementation case study</a>
+              <a className="btn btn-primary" href="/case-studies/washington-law-group-accident-detection-agent">Read the full case study</a>
             </div>
           </div>
         </section>
@@ -703,7 +741,7 @@ export default function AiAgentDevelopmentSections() {
           <div className="wrap">
             <div>
               <h2>Tell Us the Workflow, We'll Tell You the Truth</h2>
-              <p>Tell us the workflow you want an agent to run and the systems it touches. We&apos;ll tell you honestly whether that&apos;s a build, a buy, or something in between, before you spend anything. Bhavesh, our founder, reviews workflow enquiries.</p>
+              <p>Tell us the workflow you want an agent to run and the systems it touches. We&apos;ll tell you honestly whether that&apos;s a build, a buy, or something in between, before you spend anything. Bhavesh, our founder, reads every enquiry and usually replies within 2 to 3 hours.</p>
             </div>
             <div className="finalcta-form">
               <HeroInlineForm
