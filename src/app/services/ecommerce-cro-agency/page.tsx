@@ -550,8 +550,8 @@ export default function EcommerceCroAgencyPage() {
         </section>
 
         {/* WHERE THE WORK HAPPENS: 3 REAL IMAGE ROWS */}
-        <section className="pp-sec">
-          <div className="pp-wrap">
+        <section className="pp-section">
+          <div className="pp-container">
             <div className="text-center max-w-3xl mx-auto mb-6">
               <p className="pp-mlabel">// INSIDE A CONVERSION SPRINT</p>
               <h2 style={{ marginTop: '10px' }}>Where the Work Happens: Speed, Product Pages, and Every Device</h2>
@@ -835,8 +835,8 @@ export default function EcommerceCroAgencyPage() {
         />
 
         {/* 30-DAY CONVERSION SPRINT TIMELINE */}
-        <section className="pp-sec">
-          <div className="pp-wrap">
+        <section className="pp-section">
+          <div className="pp-container">
             <div className="text-center max-w-3xl mx-auto mb-6">
               <p className="pp-mlabel">// SPRINT TIMELINE</p>
               <h2 style={{ marginTop: '10px' }}>How We Run a 30-Day Conversion Sprint</h2>
@@ -940,8 +940,8 @@ export default function EcommerceCroAgencyPage() {
         </section>
 
         {/* FOUNDER OVERSIGHT */}
-        <section className="pp-sec">
-          <div className="pp-wrap">
+        <section className="pp-section">
+          <div className="pp-container">
             <div className="pp-splitband">
               <div className="pp-splitband-text">
                 <p className="pp-mlabel">// DIRECT FOUNDER OVERSIGHT</p>

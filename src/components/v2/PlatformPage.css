@@ -52,7 +52,7 @@
 .platpage .pp-lead { font-size: clamp(16px, 1.8vw, 18.5px); line-height: 1.62; color: var(--pp-body); }
 
 /* mono // label */
-.platpage .pp-mlabel { font-family: var(--pp-mono); font-size: 11px; letter-spacing: 0.06em; color: var(--pp-muted); }
+.platpage .pp-mlabel, .pp-page .pp-mlabel { font-family: var(--pp-mono); font-size: 11px; letter-spacing: 0.06em; color: var(--pp-muted); }
 
 /* stat band — maxi typography */
 /* Stat band. Each stat is a full-height flex column with the sublabel pushed to
@@ -262,12 +262,12 @@
 
 /* Section imagery: same elevation language as cards, and a slow scale on hover
    so photography feels alive without parallax or video. */
-.platpage .pp-shot {
+.platpage .pp-shot, .pp-page .pp-shot {
   border-radius: 20px; overflow: hidden; border: 1px solid var(--pp-line);
   box-shadow: 0 1px 2px -1px rgba(20,17,15,.06), 0 18px 44px -30px rgba(20,17,15,.35);
 }
-.platpage .pp-shot img { display: block; width: 100%; height: auto; transition: transform .6s cubic-bezier(.22,.61,.36,1); }
-.platpage .pp-shot:hover img { transform: scale(1.03); }
+.platpage .pp-shot img, .pp-page .pp-shot img { display: block; width: 100%; height: auto; transition: transform .6s cubic-bezier(.22,.61,.36,1); }
+.platpage .pp-shot:hover img, .pp-page .pp-shot:hover img { transform: scale(1.03); }
 
 /* Section image band.
    Replaces the full-bleed "1280px photo with one stray caption line underneath"
@@ -318,20 +318,20 @@
 
    Alternate .reverse down a page. Three identical text-left/image-right bands in
    a row is the cloned-block pattern every design review flags. */
-.platpage .pp-splitband {
+.platpage .pp-splitband, .pp-page .pp-splitband {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: clamp(28px, 4vw, 56px);
   align-items: center;
   margin-top: 26px;
 }
-.platpage .pp-splitband.reverse > .pp-splitband-fig { order: -1; }
+.platpage .pp-splitband.reverse > .pp-splitband-fig, .pp-page .pp-splitband.reverse > .pp-splitband-fig { order: -1; }
 
-.platpage .pp-splitband-text > p { margin: 0 0 14px; max-width: 60ch; }
-.platpage .pp-splitband-text > p:last-child { margin-bottom: 0; }
+.platpage .pp-splitband-text > p, .pp-page .pp-splitband-text > p { margin: 0 0 14px; max-width: 60ch; }
+.platpage .pp-splitband-text > p:last-child, .pp-page .pp-splitband-text > p:last-child { margin-bottom: 0; }
 
 /* The former figcaption. Now a deliberate closing statement, not a stray line. */
-.platpage .pp-splitband-note {
+.platpage .pp-splitband-note, .pp-page .pp-splitband-note {
   margin-top: 20px;
   padding-top: 18px;
   border-top: 1px solid var(--pp-line);
@@ -342,17 +342,17 @@
   max-width: 52ch;
 }
 
-.platpage .pp-splitband-fig { margin: 0; }
+.platpage .pp-splitband-fig, .pp-page .pp-splitband-fig { margin: 0; }
 
 @media (max-width: 860px) {
-  .platpage .pp-splitband {
+  .platpage .pp-splitband, .pp-page .pp-splitband {
     grid-template-columns: 1fr;
     gap: 24px;
   }
   /* On one column the image always follows the text it belongs to, so the
      reverse modifier must not flip reading order. */
-  .platpage .pp-splitband.reverse > .pp-splitband-fig { order: 0; }
-  .platpage .pp-splitband-note { max-width: none; }
+  .platpage .pp-splitband.reverse > .pp-splitband-fig, .pp-page .pp-splitband.reverse > .pp-splitband-fig { order: 0; }
+  .platpage .pp-splitband-note, .pp-page .pp-splitband-note { max-width: none; }
 }
 
 /* Keyboard focus must always be visible. */

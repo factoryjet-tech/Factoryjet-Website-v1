@@ -699,9 +699,8 @@ export default function ClevelandSeoPage() {
               {INDUSTRY_SHOWCASE.map((ind, idx) => (
                 <div
                   key={ind.sector}
+                  className={idx % 2 === 0 ? 'rv-showcase-row' : 'rv-showcase-row rv-showcase-row--flip'}
                   style={{
-                    display: 'grid',
-                    gridTemplateColumns: idx % 2 === 0 ? '1.1fr 0.9fr' : '0.9fr 1.1fr',
                     gap: 'clamp(28px, 5vw, 56px)',
                     alignItems: 'center',
                     background: '#F9F9FC',
@@ -710,7 +709,7 @@ export default function ClevelandSeoPage() {
                     padding: 'clamp(24px, 4vw, 44px)',
                   }}
                 >
-                  <div style={{ order: idx % 2 === 0 ? 1 : 2 }}>
+                  <div>
                     <span style={{ fontSize: '12px', fontWeight: 800, color: '#FF5622', background: '#FFF0EB', padding: '4px 12px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {ind.sector}
                     </span>
@@ -730,7 +729,7 @@ export default function ClevelandSeoPage() {
                     </div>
                   </div>
 
-                  <div style={{ order: idx % 2 === 0 ? 2 : 1, position: 'relative', borderRadius: '14px', overflow: 'hidden', height: '320px', border: '1px solid #E2E2E8' }}>
+                  <div className="rv-showcase-media" style={{ position: 'relative', borderRadius: '14px', overflow: 'hidden', border: '1px solid #E2E2E8' }}>
                     <Image
                       src={ind.image}
                       alt={ind.alt}
@@ -777,7 +776,7 @@ export default function ClevelandSeoPage() {
                       </svg>
                     </div>
                   </div>
-                  <div style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                  <div className="rv-service-compare" style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #F0F0F5', gap: '20px' }}>
                     <div>
                       <span style={{ fontSize: '11.5px', fontWeight: 700, textTransform: 'uppercase', color: '#8E8E9F', letterSpacing: '0.08em' }}>The Typical Agency Frustration:</span>
                       <p style={{ fontSize: '13.5px', color: '#494852', margin: '4px 0 0', lineHeight: 1.5 }}>{p.problem}</p>
@@ -894,7 +893,7 @@ export default function ClevelandSeoPage() {
             </div>
 
             <div style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '16px', overflow: 'hidden', maxWidth: '960px', margin: '0 auto' }}>
-              <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1.4fr 1.4fr', background: '#141414', color: '#FFFFFF', padding: '16px 24px', fontWeight: 700, fontSize: '13.5px' }}>
+              <div className="rv-eval-head" style={{ background: '#141414', color: '#FFFFFF', padding: '16px 24px', fontWeight: 700, fontSize: '13.5px' }}>
                 <div>Evaluation Factor</div>
                 <div style={{ color: '#FF5622' }}>FactoryJet Engineering Model</div>
                 <div style={{ color: '#A0A0B0' }}>Traditional Marketing Agencies</div>
@@ -903,9 +902,8 @@ export default function ClevelandSeoPage() {
               {EVALUATION_CRITERIA.map((crit, cIdx) => (
                 <div
                   key={crit.label}
+                  className="rv-eval-row"
                   style={{
-                    display: 'grid',
-                    gridTemplateColumns: '1.2fr 1.4fr 1.4fr',
                     padding: '20px 24px',
                     borderTop: cIdx > 0 ? '1px solid #F0F0F5' : 'none',
                     background: cIdx % 2 === 0 ? '#FFFFFF' : '#FAFAFC',
@@ -916,10 +914,10 @@ export default function ClevelandSeoPage() {
                   <div style={{ fontWeight: 800, fontSize: '14px', color: '#141414' }}>
                     {crit.label}
                   </div>
-                  <div style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, lineHeight: 1.45 }}>
+                  <div data-label="FactoryJet Engineering Model" style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, lineHeight: 1.45 }}>
                     {crit.factoryjet}
                   </div>
-                  <div style={{ fontSize: '13px', color: '#6E6E80', lineHeight: 1.45 }}>
+                  <div data-label="Traditional Marketing Agencies" style={{ fontSize: '13px', color: '#6E6E80', lineHeight: 1.45 }}>
                     {crit.traditional}
                   </div>
                 </div>
