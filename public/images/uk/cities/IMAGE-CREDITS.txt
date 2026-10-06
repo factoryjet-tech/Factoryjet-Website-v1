@@ -1,0 +1,12 @@
+Real photographs of each city, used under the Unsplash License. Fetched 2026-10-06. No visible credit on the page; this file is the record.
+
+leeds.webp | Julian Tong | https://unsplash.com/photos/a-tall-building-with-a-clock-on-the-top-of-it-kMJICy331iA | Unsplash License
+manchester.webp | Chris Curry | https://unsplash.com/photos/brown-concrete-building-under-blue-sky-during-daytime-P_C9ONoCsb8 | Unsplash License
+birmingham.webp | Lulu Black | https://unsplash.com/photos/a-body-of-water-filled-with-lots-of-boats-tsTQuqKr4fk | Unsplash License
+sheffield.webp | Peter Wilkinson | https://unsplash.com/photos/a-fountain-in-front-of-a-building-cczeileq1pM | Unsplash License
+bristol.webp | Tom Wheatley | https://unsplash.com/photos/grey-and-brown-bridge-over-river-during-daytime-jViHqXprcpY | Unsplash License
+edinburgh.webp | Jörg Angeli | https://unsplash.com/photos/gray-concrete-castle-S56zN8cV5fk | Unsplash License
+liverpool.webp | Brett Jordan | https://unsplash.com/photos/historic-buildings-and-modern-architecture-under-blue-sky-jx7jk-8gDJs | Unsplash License
+glasgow.webp | Johnny Briggs | https://unsplash.com/photos/a-tall-building-with-a-clock-tower-next-to-a-street-light-5NCO2MlP5p8 | Unsplash License
+newcastle.webp | Ian Ward | https://unsplash.com/photos/tyne-bridge-over-a-river-0ZHOSyYPKUs | Unsplash License
+nottingham.webp | Korng Sok | https://unsplash.com/photos/a-large-building-with-a-dome-on-top-of-it-pt0b_AHz0xM | Unsplash License

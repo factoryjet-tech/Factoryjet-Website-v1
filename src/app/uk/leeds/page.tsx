@@ -108,7 +108,7 @@ export const metadata: Metadata = {
     locale: 'en_GB',
     type: 'website',
     images: [
-      { url: '/images/uk/city-leeds.jpg', width: 1200, height: 630, alt: 'SEO agency Leeds, FactoryJet' },
+      { url: '/images/uk/cities/leeds-og.jpg', width: 1200, height: 630, alt: 'Leeds Town Hall and its domed clock tower seen from street level' },
     ],
   },
   twitter: {

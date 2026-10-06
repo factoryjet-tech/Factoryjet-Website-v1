@@ -1066,8 +1066,8 @@ export default function AIChatbotDevelopmentPage() {
               </div>
               <div className="bg-white p-4 rounded-xl border border-[#E5E5DC] shadow-sm">
                 <Image
-                  src="/images/us/services/ai-agency/service-explanation-before-after.webp"
-                  alt="Before and after deployment workflow comparison"
+                  src="/images/us/services/ai-chatbot-development/illustration-two-desks-phones-laptop.webp"
+                  alt="Two desks side by side, one heaped with paper where a man takes a phone call, one clear where a woman works at a laptop"
                   width={600}
                   height={400}
                   className="rounded-lg object-cover w-full h-auto mb-3"
@@ -1079,8 +1079,8 @@ export default function AIChatbotDevelopmentPage() {
               </div>
               <div className="bg-white p-4 rounded-xl border border-[#E5E5DC] shadow-sm">
                 <Image
-                  src="/images/us/services/ai-agency/service-team-ai.webp"
-                  alt="FactoryJet conversational AI engineering team"
+                  src="/images/us/services/ai-chatbot-development/team-headset-chat-laptop.webp"
+                  alt="Three people at a wooden table, a woman in a headset typing on a laptop that shows chat bubbles while a man points at her screen"
                   width={600}
                   height={400}
                   className="rounded-lg object-cover w-full h-auto mb-3"

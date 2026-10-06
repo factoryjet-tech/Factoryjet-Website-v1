@@ -103,7 +103,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Legal search queries across Salt Lake and Utah counties are intensely competitive. We engineer impenetrable local SEO architectures featuring practice area knowledge hubs, attorney bar admission schemas, verified case outcome showcases, and localized citation dominance.',
     image: '/images/us/services/law-firm-seo/hero.webp',
-    alt: 'Salt Lake City corporate law firm commercial litigation and venture law local SEO ranking strategy',
+    alt: 'An empty wood-panelled office with bookshelves and a desk in warm light',
     points: [
       'LegalService and Attorney schema linking Utah State Bar verified credentials',
       'Localized practice area silos targeting Downtown SLC, Lehi, and South Jordan',
@@ -115,8 +115,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Capturing High-Value Patients Across Salt Lake & South Jordan',
     description:
       'In Utah’s premier elective surgery and specialized clinical markets, patients evaluate physician credentials and peer reviews thoroughly before booking. We optimize Google Business Profiles, implement MedicalProcedure structured schemas, build procedure-specific geo silos, and generate steady review velocity.',
-    image: '/images/us/b2b-website-design/hero.webp',
-    alt: 'Salt Lake City aesthetic plastic surgery medical practice clinic local SEO strategy',
+    image: '/images/us/salt-lake-city/seo/card-facial-cleansing-treatment.webp',
+    alt: 'A practitioner in a grey tunic wiping a cotton pad across the forehead of a woman lying on a treatment couch in a bright room',
     points: [
       'Multi-practitioner Google Business Profile optimization with procedure sub-categories',
       'MedicalProcedure and Physician structured JSON-LD schema linking hospital affiliations',
@@ -128,8 +128,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Topical Authority & AI Citation Engineering for Silicon Slopes Leaders',
     description:
       'Software enterprises, cybersecurity platforms, and IT consultancies in Lehi and Draper require commanding authority in technical search. We engineer deep topical content graphs, software schemas, and institutional citations that earn authority across Google, Perplexity, and AI search engines.',
-    image: '/images/us/saas-website-design/hero.webp',
-    alt: 'Silicon Slopes enterprise SaaS technology local SEO optimization',
+    image: '/images/us/salt-lake-city/seo/card-developers-pair-desk.webp',
+    alt: 'Two software engineers at one desk, a woman typing and a young man pointing at a monitor showing coloured blocks, in a bright office',
     points: [
       'Topical entity architecture covering cloud software capabilities and compliance standards',
       'Structured SoftwareApplication and Organization schema for AI citation retrieval',
@@ -141,8 +141,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Driving Continuous Commercial Project Bidding Across Wasatch Front',
     description:
       'Commercial general contractors, roofing companies, and HVAC specialists across the Wasatch Front require steady commercial project bidding opportunities. We build geo-targeted service area architectures, optimize Service Area Business (SAB) profiles, and capture high-intent commercial keyword searches.',
-    image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Salt Lake City commercial contractor HVAC and roofing local SEO ranking architecture',
+    image: '/images/us/salt-lake-city/seo/card-metal-stud-framing.webp',
+    alt: 'Two builders in white hard hats fixing a metal wall stud with a cordless drill inside a bright unfinished commercial space',
     points: [
       'Service area radius optimization covering Salt Lake City, West Valley, Sandy, and Provo',
       'High-speed mobile performance ensuring immediate project bidding phone calls',
@@ -512,8 +512,8 @@ export default function SaltLakeCitySeoPage() {
               {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
               <div className="rv-curved-frame-1">
                 <Image
-                  src="/images/us/b2b-website-design/hero.webp"
-                  alt="Salt Lake City Utah local SEO rankings and Google Maps 3-Pack dominance strategy"
+                  src="/images/us/salt-lake-city/seo/hero-paper-map-markers.webp"
+                  alt="A woman placing a round orange marker on a large paper street map while a man points at a cluster of grey markers on the table"
                   width={640}
                   height={640}
                   priority

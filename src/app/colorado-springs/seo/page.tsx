@@ -102,8 +102,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Capturing Prime Defense Procurement Around Space Command & Peterson SFB',
     description:
       'Home to U.S. Space Command, Peterson Space Force Base, and Schriever Space Force Base, Colorado Springs is America’s premier defense technology hub. We build authoritative capability silos, government entity schemas, and sub-second page performance that position engineering contractors on prime DoD procurement lists.',
-    image: '/images/us/saas-website-design/signup-flow.webp',
-    alt: 'Colorado Springs aerospace and defense contracting local SEO strategy',
+    image: '/images/us/colorado-springs/seo/card-satellite-frame-assembly.webp',
+    alt: 'Two engineers in white coats assembling a small foil-wrapped satellite frame, one using an orange torque wrench',
     points: [
       'Structured entity schemas for GovernmentOrganization and DefenseContractor',
       'Answer-first technical capability sheets formatted for AI answer indexing',
@@ -116,7 +116,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Severe Rocky Mountain hail storms and drastic Pikes Peak weather shifts create urgent homeowner repair demands across El Paso County. We position your contracting business directly in the top 3 Google Map Pack with live call recording and neighborhood service pages from Briargate to Falcon.',
     image: '/images/us/services/roofing-seo/roof-detail.webp',
-    alt: 'Colorado Springs roofing contractor and home services local SEO map pack',
+    alt: 'Close-up of a shingle roof ridge with metal flashing',
     points: [
       'Dedicated neighborhood landing pages for Briargate, Northgate, Falcon, and Fountain',
       'Real-time call recording and conversion attribution integrated into Google Analytics 4',
@@ -128,8 +128,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Winning Patient Trust in America’s Olympic City',
     description:
       'As Olympic City USA, Colorado Springs has an active population demanding top-tier sports medicine, physical therapy, and orthodontic care. We build comprehensive medical schema, doctor profile hubs, and automated patient review systems that secure top organic rankings and AI overview citations.',
-    image: '/images/services/healthcare-seo-process.webp',
-    alt: 'Colorado Springs sports medicine and healthcare practice local SEO',
+    image: '/images/us/colorado-springs/seo/card-ankle-taping-session.webp',
+    alt: 'A therapist applying orange kinesiology tape to the ankle of a male runner seated on a treatment table',
     points: [
       'Comprehensive schema for MedicalClinic, Physician, and SportsMedicine',
       'HIPAA-aware mobile conversion forms and instant click-to-call buttons',
@@ -141,8 +141,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Converting Millions of Annual Pikes Peak Visitors on Mobile',
     description:
       'From Garden of the Gods to Pikes Peak cog railway tours, millions of tourists visit Colorado Springs each year looking for immediate mobile recommendations. We optimize local entity signals, live event schemas, and mobile page performance to capture tourists searching on their phones.',
-    image: '/images/us/san-diego-seo/taproom-local-search.webp',
-    alt: 'Colorado Springs outdoor recreation tourism and hospitality local SEO',
+    image: '/images/us/colorado-springs/seo/card-lodge-reception-key.webp',
+    alt: 'A lodge receptionist handing a brass key across a wooden counter to two guests in hiking clothes, one with an orange backpack',
     points: [
       'Sub-second mobile speed optimization capturing immediate on-the-go visitor searches',
       'Structured TouristAttraction and Event schema for rich Google search snippets',
@@ -526,7 +526,7 @@ export default function ColoradoSpringsSeoPage() {
               <div className="rv-curved-frame-1">
                 <Image
                   src="/images/us/colorado-springs/hero-colorado-springs.webp"
-                  alt="Colorado Springs mountain landscape and local SEO technical optimization strategy"
+                  alt="A city at the foot of a snow-capped mountain under a sunset sky"
                   width={640}
                   height={640}
                   priority

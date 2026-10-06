@@ -103,7 +103,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Iconic surf apparel brands, custom surfboard shapers, and action sports retailers across Huntington Beach rely on local search visibility to capture tourists and regional enthusiasts. We optimize Google Maps profiles, build event-driven landing pages, implement structured product schemas, and drive foot traffic.',
     image: '/images/us/huntington-beach/seo/huntington-beach-oc-market.webp',
-    alt: 'Huntington Beach California surf lifestyle action sports retail local SEO strategy',
+    alt: 'A busy palm-lined shopping street with people at cafe tables under orange awnings',
     points: [
       'Store and LocalBusiness structured JSON-LD schema with live inventory and hours sync',
       'Google Maps 3-Pack ranking for high-intent surf shop, surfboard shaper, and coastal lifestyle terms',
@@ -115,8 +115,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Capturing High-Value Patients in Orange County Coastal Medical Corridors',
     description:
       'In Huntington Beach and Newport Beach competitive cosmetic surgery, medical spa, and dental implant markets, patients evaluate physician credentials and peer reviews thoroughly. We optimize Google Business Profiles, implement MedicalProcedure schemas, build procedure-specific silos, and generate steady review velocity.',
-    image: '/images/us/huntington-beach/seo/huntington-beach-seo-results.webp',
-    alt: 'Huntington Beach California cosmetic surgery medical spa dental implants local SEO',
+    image: '/images/us/huntington-beach/seo/card-dermatology-skin-check.webp',
+    alt: 'A dermatologist in a blue tunic examining the forearm of a red-haired woman with a handheld magnifier in a bright treatment room',
     points: [
       'Multi-practitioner Google Business Profile optimization with procedure sub-categories',
       'MedicalProcedure and Physician structured JSON-LD schema linking hospital affiliations',
@@ -128,8 +128,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Driving High-Value Project Bidding Across Greater Huntington Beach & OC',
     description:
       'Commercial general contractors, luxury coastal home builders, and roofing specialists across Orange County require consistent project bidding opportunities. We build geo-targeted service area architectures, optimize Service Area Business profiles, and capture high-intent contracting keywords.',
-    image: '/images/us/huntington-beach/seo/huntington-beach-seo-hero.webp',
-    alt: 'Huntington Beach California commercial roofing luxury remodeling contractor local SEO ranking engine',
+    image: '/images/us/huntington-beach/seo/card-concrete-slab-smoothing.webp',
+    alt: 'Two workers smoothing a freshly poured concrete slab, a man with a long float and a kneeling woman with a hand trowel in orange rubber boots',
     points: [
       'ServiceAreaBusiness schema markup defining multi-county coastal operational boundaries',
       'Hyper-local neighborhood geo-pages targeting Huntington Harbour, Sunset Beach, and Fountain Valley',
@@ -142,7 +142,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Precision aerospace machining shops, marine electronics fabricators, and defense subcontractors across the Gothard industrial corridor demand steady commercial RFQ volume. We build specialized technical service pages, link ISO and AS9100 safety certifications, and optimize commercial keyword rankings.',
     image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Huntington Beach aerospace precision machining marine technology local SEO engine',
+    alt: 'A machinist in safety glasses loading a metal part into a CNC lathe beside a tablet showing the part',
     points: [
       'Industrial engineering service schemas linking ISO, AS9100, and defense certifications',
       'High-intent B2B keyword silos targeting regional aerospace, defense, and maritime procurement teams',
@@ -518,8 +518,8 @@ export default function HuntingtonBeachSeoPage() {
               {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
               <div className="rv-curved-frame-1">
                 <Image
-                  src="/images/us/huntington-beach/seo/huntington-beach-oc-market.webp"
-                  alt="Huntington Beach California local SEO Google Maps 3-Pack ranking strategy"
+                  src="/images/us/huntington-beach/seo/hero-florist-bouquet-handover.webp"
+                  alt="A florist handing a paper-wrapped bouquet across the counter to an older man, beside a tablet showing a pale map with three pins"
                   width={640}
                   height={640}
                   priority
@@ -561,8 +561,8 @@ export default function HuntingtonBeachSeoPage() {
               {/* Left Column: Clean Organic Curved Photo Frame */}
               <div className="rv-curved-frame-2">
                 <Image
-                  src="/images/us/huntington-beach/seo/huntington-beach-seo-results.webp"
-                  alt="FactoryJet senior SEO engineers optimizing Huntington Beach local entity knowledge graph"
+                  src="/images/us/huntington-beach/seo/team-shop-street-phone-map.webp"
+                  alt="A woman in a straw hat and a man in a blue shirt looking at a phone that shows a map with pins on a sunny street of white shops"
                   width={640}
                   height={640}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}

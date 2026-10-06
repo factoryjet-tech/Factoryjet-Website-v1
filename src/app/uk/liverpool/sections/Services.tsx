@@ -21,7 +21,7 @@ const SERVICES: Service[] = [
     name: "Local SEO",
     heading: "Get Into the Liverpool Map Results",
     image: "/images/uk/liverpool/service-ai-seo-liverpool.webp",
-    imageAlt: "Local search results for a Liverpool business",
+    imageAlt: "An illustration of a search visibility bar chart linked to an AI answer card",
     imageSide: "right",
     featured: true,
     body: [
@@ -46,7 +46,7 @@ const SERVICES: Service[] = [
     name: "AI search",
     heading: "Getting Quoted Inside ChatGPT and Perplexity",
     image: "/images/uk/liverpool/service-ai-agents-liverpool.webp",
-    imageAlt: "An AI answer citing a Liverpool business",
+    imageAlt: "A chain of five blue icon tiles above a small bar chart card",
     imageSide: "right",
     body: [
       "AI answer tools do not rank you, they quote you. That rewards a different shape of page: a direct answer in the opening sentence, facts a machine can check, clean structured data, and the same business details everywhere the tool looks. It does not replace ordinary SEO and anybody selling it as a replacement is overselling. We treat it as a second surface on top of the same foundations, and we track which of your pages get cited, per query, across ChatGPT, Perplexity and Google AI Overviews, so you can see whether it is working rather than take our word for it.",

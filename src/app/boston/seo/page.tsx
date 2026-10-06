@@ -102,8 +102,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Topical Authority & AI Citation Engineering for Cambridge & Kendall Biotech',
     description:
       'Biotech enterprises, research CROs, and patent legal practices in Boston and Cambridge require commanding authority in technical and scientific search. We engineer deep topical content graphs, researcher schemas, and institutional citations that earn authority across Google, Perplexity, and AI search engines.',
-    image: '/images/us/boston-seo/boston-seo-team.webp',
-    alt: 'Boston biotechnology life sciences and clinical research local SEO ranking strategy',
+    image: '/images/us/boston/seo/card-biotech-lab-pipetting.webp',
+    alt: 'A scientist in a lab coat pipetting into tubes held in an orange rack while a colleague looks into a microscope',
     points: [
       'Topical entity architecture covering clinical development and regulatory pathways',
       'Structured MedicalScholarlyArticle and Organization schema for AI citation retrieval',
@@ -115,8 +115,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Dominating High-Stakes Search Corridors for Boston Law Firms',
     description:
       'Legal search terms in Suffolk and Middlesex counties are intensely competitive. We engineer impenetrable local SEO architectures featuring practice area knowledge hubs, attorney bar admission schemas, verified case outcome showcases, and localized citation dominance.',
-    image: '/images/us/boston-seo/boston-seo-consult.webp',
-    alt: 'Boston corporate law firm litigation and patent law local SEO ranking strategy',
+    image: '/images/us/boston/seo/card-law-library-research.webp',
+    alt: 'A woman on a step stool pulling a bound volume from a law library shelf while an older man in a grey suit holds an open book',
     points: [
       'LegalService and Attorney schema linking Massachusetts Bar verified credentials',
       'Localized practice area silos targeting Back Bay, Financial District, and Waltham',
@@ -128,8 +128,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Capturing High-Value Patients Across Longwood & Back Bay',
     description:
       'In Boston’s premier academic medicine and specialized clinical market, patients evaluate physician credentials and peer reviews thoroughly before booking. We optimize Google Business Profiles, implement medical specialty schemas, generate local patient review momentum, and capture top rankings for high-ticket elective queries.',
-    image: '/images/us/boston-seo/boston-seo-workshop.webp',
-    alt: 'Boston medical clinic specialized healthcare and surgery local SEO optimization',
+    image: '/images/us/boston/seo/card-hospital-teaching-seminar.webp',
+    alt: 'A senior doctor pointing to a plastic spine model while two junior doctors in scrubs listen in a hospital seminar room',
     points: [
       'Multi-practitioner Google Business Profile optimization with procedure sub-categories',
       'MedicalProcedure and Physician structured JSON-LD schema linking hospital affiliations',
@@ -141,8 +141,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Driving Commercial Contract Opportunities Across Route 128 Tech Corridor',
     description:
       'Robotics developers, defense contractors, and specialized engineering firms across Waltham and Burlington require steady commercial inquiry flow. We optimize your local digital footprint to capture corporate procurement officers, defense contracting officers, and venture partners.',
-    image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Boston robotics defense engineering and Route 128 technology local SEO architecture',
+    image: '/images/us/boston/seo/card-robot-arm-calibration.webp',
+    alt: 'A woman adjusting a small robotic arm that grips an orange foam block while a man types on a laptop in an engineering lab',
     points: [
       'Technical capability landing pages optimized for regional radius search queries',
       'High-speed mobile performance ensuring immediate quotation request submissions',
@@ -524,8 +524,8 @@ export default function BostonSeoPage() {
               {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
               <div className="rv-curved-frame-1">
                 <Image
-                  src="/images/us/boston-seo/boston-seo-team.webp"
-                  alt="Boston Massachusetts local SEO rankings and Google Maps 3-Pack dominance strategy"
+                  src="/images/us/boston/seo/hero-rising-line-review.webp"
+                  alt="An older man pointing a pencil at a monitor showing a simple rising line while a young woman with a notebook stands beside him"
                   width={640}
                   height={640}
                   priority

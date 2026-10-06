@@ -353,7 +353,7 @@ export default function WixToShopifyPage() {
               <div className="rv-curved-frame-1">
                 <Image
                   src="/images/replatforming/wix-hero-owner.webp"
-                  alt="E-commerce store owner reviewing Shopify store speed and mobile conversion metrics"
+                  alt="An older shop owner writing in a paper ledger beside a laptop on the counter"
                   width={640}
                   height={640}
                   priority

@@ -102,8 +102,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Capturing High-Value Patients Across Providence & East Side',
     description:
       'In Rhode Island premier elective surgery, cosmetic dentistry, and specialized clinical markets, patients evaluate physician credentials and peer reviews thoroughly before booking. We optimize Google Business Profiles, implement MedicalProcedure structured schemas, build procedure-specific geo silos, and generate steady review velocity.',
-    image: '/images/us/b2b-website-design/hero.webp',
-    alt: 'Providence Rhode Island specialized medical practice clinical surgery local SEO ranking strategy',
+    image: '/images/us/providence/seo/card-elbow-joint-examination.webp',
+    alt: 'A doctor in navy scrubs gently bending the elbow of an older man seated on an exam couch in a bright medical room',
     points: [
       'Multi-practitioner Google Business Profile optimization with procedure sub-categories',
       'MedicalProcedure and Physician structured JSON-LD schema linking hospital affiliations',
@@ -116,7 +116,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Legal search queries across Providence and Rhode Island courts are intensely competitive. We engineer impenetrable local SEO architectures featuring practice area knowledge hubs, attorney bar admission schemas, verified case outcome showcases, and localized citation dominance.',
     image: '/images/us/services/law-firm-seo/hero.webp',
-    alt: 'Providence corporate law firm commercial litigation and maritime law local SEO strategy',
+    alt: 'An empty wood-panelled office with bookshelves and a desk in warm light',
     points: [
       'LegalService and Attorney schema linking Rhode Island Bar Association verified credentials',
       'Localized practice area silos targeting Downtown Providence, Warwick, and Newport',
@@ -129,7 +129,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Precision tooling shops, marine defense suppliers, and jewelry manufacturers across Rhode Island require steady commercial quote requests. We build specialized technical service pages, link ISO quality certifications, and optimize commercial keyword rankings.',
     image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Providence precision tooling maritime manufacturing and industrial fabrication local SEO',
+    alt: 'A machinist in safety glasses loading a metal part into a CNC lathe beside a tablet showing the part',
     points: [
       'Industrial engineering service schemas linking ISO and ITAR certifications',
       'High-intent B2B keyword silos targeting regional OEM and defense procurement teams',
@@ -142,7 +142,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Fine dining establishments, event venues, and boutique hotel operators across Federal Hill and Downtown Providence rely on local search visibility to capture reservation volume. We optimize menu schemas, manage reputation signals, and capture high-intent dining searches.',
     image: '/images/us/restaurant-website-design/hero.webp',
-    alt: 'Providence Federal Hill fine dining restaurant and hospitality local SEO optimization',
+    alt: 'A restaurant guest reading a menu on her phone while a server sets a table behind her',
     points: [
       'Restaurant and Menu structured JSON-LD schema with direct reservation booking links',
       'Google Maps 3-Pack ranking for high-intent culinary and private event search terms',
@@ -525,7 +525,7 @@ export default function ProvidenceSeoPage() {
               <div className="rv-curved-frame-1">
                 <Image
                   src="/images/us/providence/seo/providence-ri-seo-hero.webp"
-                  alt="Providence Rhode Island local SEO Google Maps 3-Pack ranking strategy"
+                  alt="A woman in an orange coat holding a laptop on a riverside walkway, a domed civic building behind her"
                   width={640}
                   height={640}
                   priority
@@ -567,8 +567,8 @@ export default function ProvidenceSeoPage() {
               {/* Left Column: Clean Organic Curved Photo Frame */}
               <div className="rv-curved-frame-2">
                 <Image
-                  src="/images/us/providence/seo/providence-university-district.webp"
-                  alt="FactoryJet senior SEO engineers optimizing Providence local entity knowledge graph"
+                  src="/images/us/providence/seo/team-cafe-door-tablet-map.webp"
+                  alt="A woman in a green apron at a cafe door holding a tablet that shows a pale map with pins while a man in a hoodie looks on"
                   width={640}
                   height={640}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}

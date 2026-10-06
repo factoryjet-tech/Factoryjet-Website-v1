@@ -102,8 +102,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'High-Performance Digital Flagships for Arizona Technology Leaders',
     description:
       'From Tempe microelectronics suppliers to Chandler precision engineering innovators, B2B technology buyers evaluate technical capabilities critically. We engineer custom Next.js web applications with interactive component visualizers, downloadable specification sheets, and sub-second edge response times.',
-    image: '/images/us/phoenix-web-design/hero.webp',
-    alt: 'Phoenix semiconductor manufacturing and Silicon Desert high-tech web design engineering',
+    image: '/images/us/phoenix/web-design/card-circuit-board-microscope.webp',
+    alt: 'A man looking through a stereo microscope at a small circuit board while a woman beside him holds a tray of tiny chips in an electronics lab',
     points: [
       'Interactive equipment tolerance tables and technical spec sheet downloads',
       'Clean TypeScript codebase deployed on Cloudflare edge CDN with zero plugin bloat',
@@ -115,8 +115,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Sophisticated Patient Conversion Engines for Scottsdale Clinics',
     description:
       'In Scottsdale’s premier cosmetic surgery and aesthetic medical market, patients expect digital elegance, absolute discretion, and flawless mobile experiences. We craft bespoke interfaces with before-and-after visualizers, secure consultation request funnels, and HIPAA-compliant architecture.',
-    image: '/images/us/phoenix-web-design/mobile-first.webp',
-    alt: 'Scottsdale aesthetic medical clinic plastic surgery and healthcare website design',
+    image: '/images/us/phoenix/web-design/card-skin-consultation-mirror.webp',
+    alt: 'A clinician in a white tunic pointing toward the cheek of a seated woman who holds a round hand mirror in a bright consulting room',
     points: [
       'Bespoke editorial layouts showcasing clinical excellence and patient outcomes',
       'Sub-second mobile speed ensuring immediate consultation booking completions',
@@ -128,8 +128,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'High-Authority Digital Experiences for Biltmore & Camelback Firms',
     description:
       'Private equity firms, family offices, and commercial real estate developers along Camelback Road require digital presences that project institutional stability. We design bespoke typography scales, interactive property portfolios, and secure investor data rooms.',
-    image: '/images/us/phoenix-web-design/valley-planning.webp',
-    alt: 'Phoenix wealth management private equity and commercial real estate web design',
+    image: '/images/us/phoenix/web-design/card-adviser-couple-meeting.webp',
+    alt: 'A financial adviser in a navy suit talking with an older couple at a round table with closed folders in a bright office',
     points: [
       'Refined editorial typography and interactive property development showcases',
       'Encrypted client portal integration with multi-factor authentication routing',
@@ -142,7 +142,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'General contractors, roofing enterprises, and HVAC commercial operators across the Valley of the Sun require continuous project bidding opportunities. We build responsive web applications with interactive project estimators, safety credential showcases, and high-speed commercial RFQ forms.',
     image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Phoenix commercial construction contractor and industrial trade web design',
+    alt: 'A machinist in safety glasses loading a metal part into a CNC lathe beside a tablet showing the part',
     points: [
       'Interactive project cost estimation calculators and commercial bidding funnels',
       'Sub-second mobile performance ensuring immediate phone calls and form fills',
@@ -154,8 +154,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Engineering Flagships for High-Tech Arizona Defense & Mobility Innovators',
     description:
       'Autonomous vehicle testing firms, aerospace suppliers, and semiconductor equipment fabricators across Chandler demand high-authority digital experiences. We engineer custom Next.js platforms featuring interactive engineering spec tables, AS9100 quality cert showcases, and rapid CAD quotation intake.',
-    image: '/images/us/denver/tech-office.webp',
-    alt: 'Phoenix Chandler aerospace aviation autonomous tech web design engineering',
+    image: '/images/us/phoenix/web-design/card-wheeled-robot-workshop.webp',
+    alt: 'A woman kneeling to tighten a wheel on a small four-wheeled white robot while a man crouches behind it holding a tablet in a bright workshop',
     points: [
       'Interactive equipment capability matrices and engineering tolerance tables',
       'Secure CAD and STEP blueprint file upload integrations for rapid RFQ intake',
@@ -167,8 +167,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Clinical-Grade Digital Presences for Phoenix Bioscience Core Leaders',
     description:
       'Biotechnology researchers, genomic data platforms, and clinical health networks across Downtown Phoenix demand scientific credibility. We design high-converting web applications with interactive research pipeline visualizers, clinical trial enrollment funnels, and smooth micro-animations.',
-    image: '/images/services/card-real-estate.webp',
-    alt: 'Phoenix Downtown bioscience core healthtech clinical research website',
+    image: '/images/us/phoenix/web-design/card-lab-pipette-plate.webp',
+    alt: 'A scientist in a white lab coat filling a clear multi-well plate with a pipette beside a colleague lifting a tube from a rack in a laboratory',
     points: [
       'Interactive clinical pipeline visualizers and mechanism-of-action animations',
       'Tactile editorial typography scales with custom brand micro-animations',
@@ -556,7 +556,7 @@ export default function PhoenixWebDesignPage() {
               <div className="rv-curved-frame-1">
                 <Image
                   src="/images/us/phoenix-web-design/hero.webp"
-                  alt="Phoenix Arizona web design and custom Next.js web application development"
+                  alt="Three people at a desk around a monitor showing a handbag shop page, with desert hills through the window"
                   width={640}
                   height={640}
                   priority

@@ -104,7 +104,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'The Domain and downtown Austin tech firms demand websites that speak to enterprise CTOs and procurement committees. We build custom Next.js web applications featuring interactive product demo tours, API documentation portals, SOC 2 compliance matrices, and lightning-fast page speeds.',
     image: '/images/us/saas-website-design/hero.webp',
-    alt: 'Austin enterprise software and cloud infrastructure web design engineering',
+    alt: 'A man and a woman in a studio pointing at a wall display of a handbag product page, the same page open on a laptop',
     points: [
       'Interactive product feature tours and downloadable technical whitepaper funnels',
       'Frictionless multi-step demo scheduling forms routing to sales engineering teams',
@@ -117,7 +117,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'From private surgical clinics in Westlake Hills to dental groups in Round Rock, credibility drives patient acquisition. We engineer HIPAA-aware medical websites featuring searchable physician directories, specialty procedure overviews, insurance plan matrices, and lightning-fast appointment scheduling flows.',
     image: '/images/us/services/dental-seo/hero.webp',
-    alt: 'Austin healthcare medical practice and surgical clinic website design',
+    alt: 'A bright empty reception lobby with a sofa, plants and a white reception desk',
     points: [
       'Searchable provider directories with specialty credentials and hospital affiliations',
       'HIPAA-aware consultation intake forms and click-to-call mobile patient actions',
@@ -130,7 +130,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'High-stakes corporate law and venture capital firms in Austin cannot afford generic visual templates. We craft bespoke digital flagships featuring practice area content hubs, partner biographical repositories with bar admission schema, verified transaction track records, and secure client communication endpoints.',
     image: '/images/us/services/law-firm-seo/hero.webp',
-    alt: 'Austin corporate law firm litigation and venture capital web design',
+    alt: 'An empty wood-panelled office with bookshelves and a desk in warm light',
     points: [
       'Deep practice area knowledge graphs and structured legal case victory portfolios',
       'Attorney profile schema with state bar admissions and published industry insights',
@@ -143,7 +143,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Austin is a global semiconductor and hardware innovation capital. Technical websites built on slow legacy WordPress themes fail to convince hardware buyers. We develop high-performance web applications featuring structured capability tables, instant RFQ calculators, downloadable spec sheets, and sub-second edge hosting.',
     image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Austin advanced hardware and semiconductor web design engineering',
+    alt: 'A machinist in safety glasses loading a metal part into a CNC lathe beside a tablet showing the part',
     points: [
       'Interactive equipment capability matrices and downloadable CAD/PDF engineering data',
       'Frictionless multi-step RFQ form workflows routing directly to estimating teams',
@@ -156,7 +156,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'High-end architectural studios, custom luxury home builders, and interior designers in Westlake Hills, Tarrytown, and Barton Creek require editorial visual storytelling. We engineer custom portfolio flagships with smooth WebGL project transitions, high-resolution photo galleries, interactive floorplan viewports, and VIP private consultation inquiry funnels.',
     image: '/images/services/card-real-estate.webp',
-    alt: 'Austin luxury architectural studio and custom builder website design',
+    alt: 'A laptop on a marble table showing a property listings website with photos and a map',
     points: [
       'High-resolution project galleries with lazy-loaded WebP responsive image pipelines',
       'Interactive neighborhood development maps with school district filtering',
@@ -169,7 +169,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Austin’s iconic food and beverage brands along South Congress and East Austin require mobile-first digital flagships. We construct interactive venues featuring live OpenTable and Resy reservation widgets, dynamic event calendar feeds, localized catering request funnels, and high-resolution photo galleries rendering at 60fps.',
     image: '/images/us/restaurant-website-design/hero.webp',
-    alt: 'Austin culinary hospitality craft brewery and restaurant website design',
+    alt: 'A restaurant guest reading a menu on her phone while a server sets a table behind her',
     points: [
       'Frictionless integration with Resy, OpenTable, and Toast POS online ordering systems',
       'Interactive event calendar widgets with automated ticket purchase links',
@@ -592,8 +592,8 @@ export default function AustinWebDesignPage() {
               {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
               <div className="rv-curved-frame-1">
                 <Image
-                  src="/images/us/austin/hero-austin.webp"
-                  alt="Austin Texas modern web design engineering and custom Next.js website mockup"
+                  src="/images/us/austin/web-design/hero-sketching-page-boxes.webp"
+                  alt="A man drawing page layout boxes on a large sheet of paper with an orange marker while a woman adds a second sketch at a white table"
                   width={640}
                   height={640}
                   priority

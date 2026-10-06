@@ -743,7 +743,7 @@ export default function SeoConsultingPage() {
               <div className="mt-6 overflow-hidden rounded-2xl border border-black/10 shadow-lg">
                 <img
                   src="/images/us/services/seo/hero-seo.webp"
-                  alt="Enterprise technical SEO consulting audit and organic search performance analysis"
+                  alt="A woman working at a laptop that shows line charts in a plant-filled office"
                   width={1200}
                   height={800}
                   loading="lazy"
@@ -907,7 +907,7 @@ export default function SeoConsultingPage() {
               <div className="mt-6 overflow-hidden rounded-2xl border border-black/10 shadow-lg">
                 <img
                   src="/images/us/chicago-seo/chicago-strategy-session.webp"
-                  alt="Senior SEO consultant leading an enterprise organic search strategy and technical roadmap session"
+                  alt="A woman and a man talking across a table with a laptop between them"
                   width={1448}
                   height={1086}
                   loading="lazy"

@@ -103,7 +103,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'From Auburn Hills automotive suppliers to Dearborn tooling facilities, commercial procurement officers demand verified engineering credentials. We build responsive web applications with interactive equipment capability matrices, IATF 16949 compliance showcases, and secure CAD blueprint upload funnels.',
     image: '/images/us/detroit-web-design/detroit-manufacturer-site.webp',
-    alt: 'Detroit automotive supplier and precision industrial manufacturing web design',
+    alt: 'A woman showing a tablet of machined parts to a man at a laptop, a factory floor visible through the glass behind them',
     points: [
       'Interactive equipment capability matrices and engineering tolerance tables',
       'Secure CAD and STEP blueprint file upload integrations for rapid RFQ intake',
@@ -116,7 +116,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'From corporate trial attorneys in Downtown Detroit to labor and automotive defense law practices in Troy, prospective commercial clients demand immediate credibility. We design bespoke web architectures featuring attorney credentials, practice area silos, verified case results, and high-converting inquiry funnels.',
     image: '/images/us/services/law-firm-seo/hero.webp',
-    alt: 'Detroit corporate law firm litigation and automotive advisory web design',
+    alt: 'An empty wood-panelled office with bookshelves and a desk in warm light',
     points: [
       'Attorney directory schemas linking State Bar of Michigan verified credentials',
       'High-converting practice area landing pages optimized for corporate general counsel',
@@ -128,8 +128,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'High-Performance Web Applications for Detroit Tech Innovators',
     description:
       'From Woodward Corridor fintech platforms to Ann Arbor AI startups, digital technology buyers evaluate product capabilities instantly. We engineer custom Next.js web applications with interactive product sandboxes, pricing calculators, and sub-second edge response times.',
-    image: '/images/us/detroit-web-design/hero-detroit-studio.webp',
-    alt: 'Detroit fintech mobility software and venture tech web design engineering',
+    image: '/images/us/detroit/web-design/card-counter-card-payment.webp',
+    alt: 'A customer holding an orange wallet tapping a plain card on a card reader held out by a shop worker at a counter',
     points: [
       'Interactive software feature sandboxes and animated architecture visualizers',
       'Clean TypeScript codebase deployed on Cloudflare edge CDN with zero plugin bloat',
@@ -141,8 +141,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Patient-Centered Digital Platforms for Midtown Medical Practices',
     description:
       'In Detroit’s competitive healthcare market, patients evaluate clinical expertise and facility reputation thoroughly before booking. We craft accessible, HIPAA-conscious interfaces with provider directories, service area silos, and frictionless appointment scheduling workflows.',
-    image: '/images/us/detroit-web-design/detroit-process-review.webp',
-    alt: 'Detroit healthcare medical practice clinic website design and development',
+    image: '/images/us/detroit/web-design/card-hospital-corridor-wheelchair.webp',
+    alt: 'A nurse in teal scrubs pushing an older man in a wheelchair with an orange blanket on his knees while a porter holds a door open in a corridor',
     points: [
       'Multi-practitioner physician directories with board certification schemas',
       'Sub-second mobile speed ensuring immediate patient appointment booking',
@@ -154,8 +154,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Executive Portals & Digital Flagships for Oakland County Enterprises',
     description:
       'Corporate headquarters, commercial real estate developers, and wealth advisory firms across Troy demand institutional digital flagships. We engineer custom Next.js web applications featuring interactive investment calculators, executive portal gateways, and automated Salesforce/HubSpot lead routing.',
-    image: '/images/us/denver/tech-office.webp',
-    alt: 'Detroit Troy corporate enterprise financial services web design',
+    image: '/images/us/detroit/web-design/card-boardroom-chart-briefing.webp',
+    alt: 'A woman in a cream suit presenting coloured bars on a wall screen to two seated men, an orange notebook on the table',
     points: [
       'Enterprise client portal integrations with multi-factor authentication and role permissions',
       'Interactive financial planning calculators and asset allocation visualizers',
@@ -167,8 +167,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'High-Performance Web Platforms for Michigan Tech Innovators',
     description:
       'Artificial intelligence startups, university spin-offs, and life sciences platforms across Ann Arbor demand technical distinction. We design high-converting web applications with developer documentation sandboxes, interactive product architecture diagrams, and smooth micro-animations.',
-    image: '/images/services/card-real-estate.webp',
-    alt: 'Detroit Ann Arbor AI startup biotech enterprise tech web design',
+    image: '/images/us/detroit/web-design/card-research-desk-review.webp',
+    alt: 'Three researchers at a desk looking at coloured dots on a monitor, one with orange headphones round his neck',
     points: [
       'Developer documentation hubs with interactive code sandboxes and API visualizers',
       'Tactile editorial typography scales with custom brand micro-animations',
@@ -550,7 +550,7 @@ export default function DetroitWebDesignPage() {
               <div className="rv-curved-frame-1">
                 <Image
                   src="/images/us/detroit-web-design/hero-detroit-studio.webp"
-                  alt="Detroit Michigan web design and custom Next.js web application development"
+                  alt="Three people around a desktop monitor showing a fashion page in a brick loft office"
                   width={640}
                   height={640}
                   priority

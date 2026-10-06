@@ -103,7 +103,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'From Plymouth biomedical engineering innovators to Arden Hills surgical device builders, institutional credibility is paramount. We engineer custom Next.js web applications with interactive 3D device visualizers, FDA compliance showcases, clinical trial recruitment portals, and sub-second edge performance.',
     image: '/images/us/b2b-website-design/hero.webp',
-    alt: 'Minneapolis medical alley medical device clinical diagnostics and MedTech engineering website design',
+    alt: 'Three colleagues at a large wall display showing a plain grey page layout',
     points: [
       'Interactive 3D medical device visualizers and clinical trial data matrices',
       'Secure healthcare partner data rooms and hospital procurement portals',
@@ -116,7 +116,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Corporate law practices, private equity groups, and commercial litigation firms in the Twin Cities demand digital presences that project institutional stability. We design bespoke typography scales, interactive wealth calculators, and secure client portal integrations.',
     image: '/images/us/services/law-firm-seo/hero.webp',
-    alt: 'Minneapolis corporate law firm litigation private equity and financial advisory website design',
+    alt: 'An empty wood-panelled office with bookshelves and a desk in warm light',
     points: [
       'Refined editorial typography and interactive portfolio asset allocation visualizers',
       'Encrypted client portal integration with multi-factor authentication routing',
@@ -128,8 +128,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'High-Performance Web Applications for Eden Prairie & Minnetonka Tech',
     description:
       'From Eden Prairie supply chain platforms to Minnetonka cloud security startups, digital technology buyers evaluate product capabilities instantly. We engineer custom Next.js web applications with interactive product sandboxes, pricing calculators, developer documentation hubs, and sub-second edge response times.',
-    image: '/images/us/saas-website-design/hero.webp',
-    alt: 'Minneapolis enterprise cloud software supply chain technology web application engineering',
+    image: '/images/us/minneapolis/web-design/card-van-tracker-unit-install.webp',
+    alt: 'A fitter seated in the open cab of a plain white van fixing a small tracking box under the dashboard while a woman holds a tablet by the door',
     points: [
       'Interactive software feature sandboxes and animated architecture visualizers',
       'Clean TypeScript codebase deployed on Cloudflare edge CDN with zero plugin bloat',
@@ -142,7 +142,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'From Anoka precision CNC tooling builders to Maple Grove clean energy automation facilities, commercial procurement officers demand verified engineering credentials. We build responsive web applications with interactive equipment capability matrices, ISO quality cert showcases, and secure CAD blueprint upload funnels.',
     image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Minnesota precision industrial manufacturing automation and clean tech web design',
+    alt: 'A machinist in safety glasses loading a metal part into a CNC lathe beside a tablet showing the part',
     points: [
       'Interactive equipment capability matrices and engineering tolerance tables',
       'Secure CAD and STEP blueprint file upload integrations for rapid RFQ intake',
@@ -154,8 +154,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Enterprise Portals & Client Sandboxes for South Metro Corporate Hubs',
     description:
       'Fortune 500 regional operations, corporate financial advisory firms, and major health insurers across Bloomington and the I-494 corridor demand institutional digital flagships. We engineer custom Next.js web applications with interactive portfolio calculators, SOC2-compliant client portal gateways, and automated multi-branch lead routing.',
-    image: '/images/us/denver/tech-office.webp',
-    alt: 'Minneapolis Bloomington corporate enterprise financial services web design',
+    image: '/images/us/minneapolis/web-design/card-corporate-whiteboard-planning.webp',
+    alt: 'A manager in a burgundy suit drawing linked circles on a whiteboard with an orange marker while two colleagues watch from a meeting table',
     points: [
       'Enterprise client portal integrations with multi-factor authentication and role permissions',
       'Interactive financial planning calculators and asset allocation visualizers',
@@ -168,7 +168,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Contemporary architecture firms, design studios, and fintech payment innovators across the North Loop and Downtown St. Paul demand bespoke visual excellence. We design high-converting web applications with tactile editorial typography, interactive project lookbooks, smooth micro-animations, and instant consultation scheduling funnels.',
     image: '/images/services/card-real-estate.webp',
-    alt: 'Minneapolis North Loop creative studio architecture fintech web design',
+    alt: 'A laptop on a marble table showing a property listings website with photos and a map',
     points: [
       'Tactile editorial typography scales with custom brand micro-animations',
       'Interactive high-resolution project visualizers with zero layout shift or image delay',
@@ -544,7 +544,7 @@ export default function MinneapolisWebDesignPage() {
               <div className="rv-curved-frame-1">
                 <Image
                   src="/images/us/saas-website-design/hero.webp"
-                  alt="Minneapolis Minnesota web design and custom Next.js web application development"
+                  alt="A man and a woman in a studio pointing at a wall display of a handbag product page, the same page open on a laptop"
                   width={640}
                   height={640}
                   priority

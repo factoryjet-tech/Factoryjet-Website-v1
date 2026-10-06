@@ -103,8 +103,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'High-Concurrency Flash-Sale Storefronts for Record Labels & Artists',
     description:
       'Music Row labels and merchandise managers experience sudden traffic surges during tour announcements and album drops. We engineer headless Next.js storefronts on edge infrastructure capable of processing thousands of checkout orders per minute with zero lag or platform downtime.',
-    image: '/images/us/nashville/ecommerce/portfolio-1.webp',
-    alt: 'Nashville music artist merchandise and tour ecommerce development',
+    image: '/images/us/nashville/ecommerce/card-band-rehearsal-room.webp',
+    alt: 'A guitarist tuning an acoustic guitar on an orange strap beside a woman playing an upright double bass in a bright rehearsal room',
     points: [
       'High-concurrency edge infrastructure engineered for zero-latency flash drops',
       'Dynamic ticket and merchandise bundling with VIP membership access gating',
@@ -117,7 +117,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Automotive component manufacturers and equipment distributors along the I-24 and I-65 corridors require specialized procurement platforms. We develop custom BigCommerce B2B and Shopify Plus architectures featuring Year-Make-Model part fitment finders, custom contract pricing, and bidirectional NetSuite or SAP sync.',
     image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Nashville automotive manufacturing and industrial equipment B2B ecommerce platform',
+    alt: 'A machinist in safety glasses loading a metal part into a CNC lathe beside a tablet showing the part',
     points: [
       'Year-Make-Model part fitment lookup engines with faceted catalog filtering',
       'Automated LTL freight rate calculators and shipping rule integrations',
@@ -129,8 +129,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'High-Volume Recurring Revenue Engines for Tennessee Craft Brands',
     description:
       'From craft whiskey distilleries to gourmet Southern culinary makers, subscription commerce drives recurring margins. We develop custom recharge and Stripe billing integrations, state-compliant age verification workflows, and automated customer self-service retention portals.',
-    image: '/images/us/saas-website-design/hero.webp',
-    alt: 'Nashville craft distillery and gourmet food subscription ecommerce store design',
+    image: '/images/us/nashville/ecommerce/card-craft-distillery-bottle-filling.webp',
+    alt: 'A distiller pouring clear spirit through an orange funnel into a plain bottle while a man corks filled bottles beside a copper pot still',
     points: [
       'Custom box builder and recurring subscription membership architectures',
       'Self-service customer portal reducing subscription cancellation churn',
@@ -143,7 +143,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Healthcare management companies and clinic supply networks across Nashville require secure, compliant e-commerce systems. We build verified provider purchase portals, clinic replenishment subscriptions, and secure payment workflows.',
     image: '/images/us/services/dental-seo/hero.webp',
-    alt: 'Nashville medical equipment and healthcare clinic supply ecommerce store design',
+    alt: 'A bright empty reception lobby with a sofa, plants and a white reception desk',
     points: [
       'Verified practitioner license gating and professional wholesale tiers',
       'HIPAA-aware checkout workflows and secure customer data handling',
@@ -155,8 +155,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Enterprise Procurement Portals for Middle Tennessee Corporate Hubs',
     description:
       'Corporate headquarters, franchise operations, and multi-location commercial suppliers in Brentwood and Cool Springs require high-throughput digital procurement engines. We build custom B2B portals featuring customized corporate pricing sheets, punchout catalog integrations, multi-tiered buyer approval routing, and real-time NetSuite and SAP ERP synchronization.',
-    image: '/images/us/b2b-website-design/hero.webp',
-    alt: 'Nashville Brentwood corporate B2B wholesale procurement ecommerce platform',
+    image: '/images/us/nashville/ecommerce/card-office-supply-stockroom-delivery.webp',
+    alt: 'A delivery worker wheeling plain boxes on an orange hand truck into an office stockroom while an older man lifts a box onto a shelf',
     points: [
       'Multi-tier corporate account hierarchies with departmental purchasing limit controls',
       'Customized contracted price books and volume rebate tier calculation',
@@ -168,8 +168,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'High-Converting Digital Flagships for Nashville Fashion & Lifestyle Makers',
     description:
       'Handcrafted leather bootmakers, bespoke denim houses, and luxury apparel creators across The Gulch and Germantown demand tactile digital storefronts that convey artisanal quality. We engineer headless Next.js storefronts with interactive visual lookbooks, dynamic custom swatch pickers, 3D product visualizers, and instant one-tap Shop Pay mobile checkout.',
-    image: '/images/services/card-real-estate.webp',
-    alt: 'Nashville Gulch handcrafted boots apparel artisan lifestyle ecommerce store design',
+    image: '/images/us/nashville/ecommerce/card-bootmaker-leather-workbench.webp',
+    alt: 'A bootmaker in a leather apron hammering the sole of a tan boot on an iron last while a woman cuts leather at the same workbench',
     points: [
       'Interactive 3D product visualizers and dynamic leather finish swatch selectors',
       'Sub-500ms edge rendering ensuring frictionless lookbook browsing on mobile devices',

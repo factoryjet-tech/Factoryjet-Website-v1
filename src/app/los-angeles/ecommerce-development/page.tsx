@@ -104,7 +104,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'From DTLA garment manufacturers to Beverly Hills luxury designer houses, visual elegance and mobile speed drive customer lifetime value. We engineer headless Shopify Plus storefronts with sub-second page transitions, interactive lookbooks, smart product bundles, and frictionless one-click mobile checkout.',
     image: '/images/us/los-angeles-seo/los-angeles-fashion-district.webp',
-    alt: 'Los Angeles fashion apparel and luxury lifestyle D2C ecommerce development',
+    alt: 'Two women in a clothing studio folding garments at a table, palm trees outside',
     points: [
       'Sub-second headless Next.js frontend with instant mobile product filtering',
       'Dynamic product bundling, tiered upsells, and personalized cross-sells',
@@ -116,8 +116,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Engineering Enterprise B2B Portals for California Importers',
     description:
       'Importers and commercial distributors connecting Port of Los Angeles freight to regional warehouses require complex B2B procurement portals. We develop custom BigCommerce B2B and Shopify Plus architectures featuring company account hierarchies, custom contract pricing, and real-time NetSuite or SAP sync.',
-    image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Los Angeles enterprise wholesale distribution and B2B ecommerce platform',
+    image: '/images/us/los-angeles/ecommerce/card-warehouse-pallet-unwrapping.webp',
+    alt: 'A warehouse worker cutting stretch wrap from a pallet of plain boxes with an orange cutter while a supervisor lifts a box onto a cart',
     points: [
       'Customer-specific contracted pricing matrices and tiered volume discounts',
       'One-click reordering, CSV bulk ordering, and purchase order net-payment terms',
@@ -129,8 +129,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'High-Volume Recurring Revenue Engines for LA Beauty Brands',
     description:
       'From clean cosmetics in Venice to clinical skincare in Beverly Hills, subscription commerce drives recurring margins. We develop custom recharge and Stripe billing integrations, build-your-own skincare routine configurators, and automated customer self-service retention portals.',
-    image: '/images/us/services/dental-seo/hero.webp',
-    alt: 'Los Angeles beauty cosmetics and skincare subscription ecommerce store design',
+    image: '/images/us/los-angeles/ecommerce/card-skincare-subscription-box-packing.webp',
+    alt: 'A woman placing plain cream jars into a tissue-lined gift box while a man ties a closed box with orange ribbon in a bright packing studio',
     points: [
       'Custom box builder and recurring subscription membership architectures',
       'Self-service customer portal reducing subscription cancellation churn',
@@ -142,8 +142,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'High-Concurrency Flash-Drop Storefronts for LA Creators & Studios',
     description:
       'Major entertainment studios and high-profile creator brands experience sudden traffic surges during product drops. We engineer headless Next.js storefronts on edge infrastructure capable of processing thousands of checkout orders per minute with zero lag or platform downtime.',
-    image: '/images/us/saas-website-design/hero.webp',
-    alt: 'Los Angeles creator merchandise and entertainment flash drop ecommerce development',
+    image: '/images/us/los-angeles/ecommerce/card-merch-screen-printing-press.webp',
+    alt: 'A printer in an orange apron pulling a squeegee across a screen to print a star on a white T-shirt while a man folds finished shirts',
     points: [
       'High-concurrency edge infrastructure engineered for zero-latency flash drops',
       'Dynamic limited-edition bundling with VIP membership access gating',
@@ -156,7 +156,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Aftermarket exhaust manufacturers, off-road suspension fabricators, and EV performance tuning shops across the San Fernando Valley and Torrance demand complex vehicle fitment catalogs. We engineer specialized Year-Make-Model search filters, custom freight rating engines, and core-deposit return workflows.',
     image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Los Angeles automotive aftermarket performance parts and EV tuning B2B ecommerce engineering',
+    alt: 'A machinist in safety glasses loading a metal part into a CNC lathe beside a tablet showing the part',
     points: [
       'ACES and PIES compliant Year-Make-Model catalog fitment lookup engines',
       'Automated LTL freight shipping calculation and hazardous battery handling logic',
@@ -168,8 +168,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Multi-Lingual Subscription Commerce for San Gabriel Valley Importers',
     description:
       'Gourmet Asian food importers, specialty tea merchants, and artisanal snack brands across the San Gabriel Valley and Pasadena require rich multi-lingual digital storefronts. We build custom Next.js platforms featuring multi-currency checkouts, dynamic cold-chain shipping rules, and recurring subscription boxes.',
-    image: '/images/services/card-real-estate.webp',
-    alt: 'Los Angeles San Gabriel Valley specialty food import and cold chain subscription ecommerce',
+    image: '/images/us/los-angeles/ecommerce/card-imported-pantry-parcel-packing.webp',
+    alt: 'A shopkeeper in a navy apron packing dried noodles and plain jars into an insulated box while a young man cuts paper with orange scissors',
     points: [
       'Multi-language localization and localized currency payment gateways',
       'Automated dry-ice cold-chain shipping rate calculation based on zip code distance',
@@ -539,7 +539,7 @@ export default function LosAngelesEcommercePage() {
               <div className="rv-curved-frame-1">
                 <Image
                   src="/images/us/los-angeles-seo/los-angeles-seo-team.webp"
-                  alt="Los Angeles California enterprise ecommerce engineering and headless Shopify Plus development"
+                  alt="Three people in a meeting room, one standing at a whiteboard of empty boxes, palm trees outside"
                   width={640}
                   height={640}
                   priority

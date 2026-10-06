@@ -102,8 +102,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Commercial Lead Engines for Port of Corpus Christi Energy Operators',
     description:
       'As America leading energy export hub, Corpus Christi maritime logistics providers, industrial pipe fabricators, and petrochemical service contractors demand steady commercial RFQ volume. We build specialized technical service pages, link ISO safety certifications, and optimize commercial keyword rankings.',
-    image: '/images/us/corpus-christi/seo/corpus-christi-port-economy.webp',
-    alt: 'Corpus Christi Texas port logistics maritime fabrication energy services local SEO',
+    image: '/images/us/corpus-christi/seo/card-quay-container-signal.webp',
+    alt: 'Two dock workers in white hard hats on a quay beside plain shipping containers, one signalling and one using an orange radio',
     points: [
       'Industrial engineering service schemas linking ISO, ASME, and marine safety certifications',
       'High-intent B2B keyword silos targeting regional refinery, shipping, and port procurement managers',
@@ -115,8 +115,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Driving High-Value Project Bidding Across Greater Corpus Christi & Nueces County',
     description:
       'Commercial general contractors, coastal roofing specialists, and marine piling contractors across the Coastal Bend require consistent commercial bidding opportunities. We build geo-targeted service area architectures, optimize Service Area Business profiles, and capture high-intent commercial contracting keywords.',
-    image: '/images/us/corpus-christi/seo/corpus-christi-local-seo-business.webp',
-    alt: 'Corpus Christi Texas commercial roofing general contractor marine construction local SEO engine',
+    image: '/images/us/corpus-christi/seo/card-scaffold-coupler-fitting.webp',
+    alt: 'Two scaffolders in blue hard hats building a steel scaffold, one tightening a coupler and one passing up a wooden board',
     points: [
       'ServiceAreaBusiness schema markup defining multi-county Coastal Bend operational boundaries',
       'Hyper-local neighborhood geo-pages targeting Southside, Calallen, Flour Bluff, and Portland TX',
@@ -128,8 +128,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Capturing High-Value Patients in Corpus Christi Medical Corridors',
     description:
       'In Corpus Christi competitive orthopedic surgery, cosmetic dentistry, and cardiology markets, patients evaluate physician credentials and peer reviews thoroughly. We optimize Google Business Profiles, implement MedicalProcedure schemas, build procedure-specific silos, and generate steady review velocity.',
-    image: '/images/us/corpus-christi/seo/corpus-christi-seo-hero.webp',
-    alt: 'Corpus Christi Texas sports medicine orthopedic physical therapy clinic local SEO ranking engine',
+    image: '/images/us/corpus-christi/seo/card-clinic-reception-welcome.webp',
+    alt: 'A receptionist handing a pen across a clinic desk to an older man with a walking stick beside an orange vase of flowers, two people waiting behind',
     points: [
       'Multi-practitioner Google Business Profile optimization with procedure sub-categories',
       'MedicalProcedure and Physician structured JSON-LD schema linking hospital affiliations',
@@ -141,8 +141,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Local Map Pack Dominance for Gulf Coast Tourism Leaders',
     description:
       'Fishing charter captains, waterfront resorts, seafood dining establishments, and vacation rental managers across Padre Island and Port Aransas rely on local search visibility to capture tourists and travelers. We optimize Google Maps profiles, build event-driven landing pages, and drive high-intent reservation volume.',
-    image: '/images/us/b2b-website-design/hero.webp',
-    alt: 'Corpus Christi Texas coastal tourism fishing charter vacation rental resort local SEO',
+    image: '/images/us/corpus-christi/seo/card-beach-lounger-setup.webp',
+    alt: 'Two resort attendants setting up white sun loungers on a sandy beach, one laying a folded orange towel on a lounger',
     points: [
       'TouristAttraction and LodgingBusiness structured schema with direct booking integration',
       'Google Maps 3-Pack ranking for high-intent deep sea fishing, beach resort, and coastal dining terms',
@@ -518,8 +518,8 @@ export default function CorpusChristiSeoPage() {
               {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
               <div className="rv-curved-frame-1">
                 <Image
-                  src="/images/us/corpus-christi/seo/corpus-christi-port-economy.webp"
-                  alt="Corpus Christi Texas local SEO Google Maps 3-Pack ranking strategy"
+                  src="/images/us/corpus-christi/seo/hero-garage-ranking-rows.webp"
+                  alt="A mechanic in overalls wiping her hands and looking at a laptop on a tool chest that shows a list of grey rows with the top row green"
                   width={640}
                   height={640}
                   priority
@@ -561,8 +561,8 @@ export default function CorpusChristiSeoPage() {
               {/* Left Column: Clean Organic Curved Photo Frame */}
               <div className="rv-curved-frame-2">
                 <Image
-                  src="/images/us/corpus-christi/seo/corpus-christi-local-seo-business.webp"
-                  alt="FactoryJet senior SEO engineers optimizing Corpus Christi local entity knowledge graph"
+                  src="/images/us/corpus-christi/seo/team-terrace-tablet-map.webp"
+                  alt="A cook in a white jacket and a woman in a linen blazer looking at a tablet that shows a map with pins on a restaurant terrace"
                   width={640}
                   height={640}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}

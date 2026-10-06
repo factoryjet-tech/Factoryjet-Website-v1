@@ -102,8 +102,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'High-Performance Digital Flagships for Seattle Cloud & SaaS Leaders',
     description:
       'From South Lake Union cloud platforms to Bellevue enterprise software innovators, B2B software buyers demand immediate technical credibility. We engineer custom Next.js web applications with interactive product demos, developer API hubs, pricing tier calculators, and sub-second edge response times.',
-    image: '/images/us/seattle-web-design/hero.webp',
-    alt: 'Seattle enterprise SaaS cloud infrastructure and developer web design engineering',
+    image: '/images/us/seattle/web-design/card-engineers-standup-board.webp',
+    alt: 'Three software engineers standing at a wall board of blank coloured paper squares, one woman moving a square, in a bright office',
     points: [
       'Interactive product feature sandboxes and animated architecture visualizers',
       'High-converting tiered pricing calculators with dynamic currency switching',
@@ -115,8 +115,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Engineering Commercial Lead Engines for Kent Valley Industrial Giants',
     description:
       'Aerospace suppliers, CNC machining facilities, and logistics operators across the Puget Sound require steady commercial contract flow. We build responsive web applications with interactive capability matrices, AS9100 quality cert showcases, and high-speed RFQ intake workflows.',
-    image: '/images/us/seattle-web-design/process.webp',
-    alt: 'Seattle aerospace manufacturing and industrial supply web design',
+    image: '/images/us/seattle/web-design/card-jet-engine-fan-inspection.webp',
+    alt: 'Two engineers in coveralls inspecting the fan blades of a large jet engine on a stand, one shining a flashlight, in a bright hangar',
     points: [
       'Interactive equipment capability matrices and engineering tolerance tables',
       'Secure CAD file and blueprint upload integrations for rapid quotation intake',
@@ -129,7 +129,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'From corporate trial attorneys in Downtown Seattle to maritime admiralty law firms along the Puget Sound, prospective commercial clients demand immediate credibility. We design bespoke web architectures featuring attorney credentials, practice area silos, verified case results, and high-converting inquiry funnels.',
     image: '/images/us/services/law-firm-seo/hero.webp',
-    alt: 'Seattle corporate law firm litigation and maritime advisory web design',
+    alt: 'An empty wood-panelled office with bookshelves and a desk in warm light',
     points: [
       'Attorney directory schemas linking Washington State Bar Association credentials',
       'High-converting practice area landing pages optimized for corporate counsel',
@@ -141,8 +141,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Tactile Digital Experiences for Pacific Northwest Lifestyle Brands',
     description:
       'From Ballard marine equipment innovators to outdoor apparel brands, visual storytelling and rugged craft drive customer loyalty. We build custom Next.js storefronts with sub-second page transitions, interactive product lookbooks, and frictionless mobile checkouts.',
-    image: '/images/us/seattle-web-design/shop.webp',
-    alt: 'Seattle maritime marine supply and outdoor lifestyle brand web design',
+    image: '/images/us/seattle/web-design/card-marine-rope-counter.webp',
+    alt: 'A man in a navy sweater pulling thick white rope from a large spool for a woman in a yellow rain jacket in a marine supply store',
     points: [
       'Bespoke editorial layouts showcasing rugged Pacific Northwest craftsmanship',
       'Sub-second image rendering using modern WebP and AVIF next-gen formats',
@@ -154,8 +154,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Interactive Flagships for Eastside Software & Digital Media Innovators',
     description:
       'Gaming studios, interactive entertainment creators, and enterprise software engineering platforms across Redmond and Kirkland demand cutting-edge digital experiences. We engineer custom Next.js web applications featuring interactive WebGL demos, rich media asset delivery, and sub-second asset streaming.',
-    image: '/images/us/denver/tech-office.webp',
-    alt: 'Seattle Redmond Kirkland interactive gaming enterprise software web design',
+    image: '/images/us/seattle/web-design/card-motion-capture-session.webp',
+    alt: 'A woman in a black suit dotted with white markers holding a lunge pose while a man adjusts a camera on a tripod in a bright studio',
     points: [
       'Interactive WebGL product visualizers and dynamic media asset delivery',
       'Developer documentation portals with syntax highlighting and API sandboxes',
@@ -168,7 +168,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Contemporary architecture firms, urban design practices, and creative branding studios across Pioneer Square and SODO demand uncompromising aesthetic distinction. We design high-converting web applications with tactile editorial typography, interactive project lookbooks, and smooth micro-animations.',
     image: '/images/services/card-real-estate.webp',
-    alt: 'Seattle Pioneer Square SODO architecture creative studio urban design website',
+    alt: 'A laptop on a marble table showing a property listings website with photos and a map',
     points: [
       'Tactile editorial typography scales with custom brand micro-animations',
       'Interactive high-resolution project visualizers with zero layout shift or image delay',
@@ -550,7 +550,7 @@ export default function SeattleWebDesignPage() {
               <div className="rv-curved-frame-1">
                 <Image
                   src="/images/us/seattle-web-design/hero.webp"
-                  alt="Seattle Washington web design and custom Next.js web application development"
+                  alt="A woman and a man leaning over a laptop that shows a handbag page, evergreen trees through the window"
                   width={640}
                   height={640}
                   priority

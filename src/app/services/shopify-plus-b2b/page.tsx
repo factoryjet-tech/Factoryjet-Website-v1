@@ -572,7 +572,7 @@ export default function ShopifyPlusB2BPage() {
               </div>
               <Image
                 src={`${IMG}/shopify-plus-b2b-wholesale-portal.webp`}
-                alt="Shopify Plus B2B wholesale portal dashboard and pricing tiers"
+                alt="A man at a desk viewing a wholesale pricing table on a monitor"
                 width={1280}
                 height={800}
                 style={{ width: '100%', height: 'auto', borderRadius: '18px', border: '1px solid var(--pp-line)', display: 'block', objectFit: 'cover' }}

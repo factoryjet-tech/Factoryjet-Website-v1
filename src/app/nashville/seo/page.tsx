@@ -102,7 +102,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'In Middle Tennessee’s competitive healthcare capital, prospective patients research physician credentials thoroughly before scheduling procedures. We optimize Google Business Profiles, implement medical specialty schemas, generate local patient review momentum, and capture top rankings for competitive surgical and orthopedic queries.',
     image: '/images/us/services/dental-seo/hero.webp',
-    alt: 'Nashville healthcare medical clinic and surgical center local SEO optimization',
+    alt: 'A bright empty reception lobby with a sofa, plants and a white reception desk',
     points: [
       'Multi-practitioner Google Business Profile optimization with procedure sub-categories',
       'MedicalProcedure and Physician structured JSON-LD schema linking hospital affiliations',
@@ -114,8 +114,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Topical Authority & AI Citation Engineering for Music City Brands',
     description:
       'Music Row talent managers, recording studios, and indie labels demand high-visibility digital footprints. We build comprehensive topical clusters, artist event schemas, and structured entity graphs that earn citations in ChatGPT Search, Perplexity, and Google AI Overviews.',
-    image: '/images/us/saas-website-design/hero.webp',
-    alt: 'Nashville music entertainment studio and talent management search engine optimization',
+    image: '/images/us/nashville/seo/card-recording-studio-mixing-session.webp',
+    alt: 'A sound engineer moving faders on a mixing console while a singer in orange headphones sings into a microphone behind the studio glass',
     points: [
       'Topical content graph covering artist representation, studio services, and licensing',
       'Structured EntertainmentBusiness and Organization schema for AI citation retrieval',
@@ -128,7 +128,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Legal search terms in Davidson and Williamson counties are fiercely contested. We engineer impenetrable local SEO architectures featuring practice area knowledge hubs, attorney bar admission schemas, verified case settlement showcases, and localized citation dominance.',
     image: '/images/us/services/law-firm-seo/hero.webp',
-    alt: 'Nashville corporate law firm litigation and copyright local SEO ranking strategy',
+    alt: 'An empty wood-panelled office with bookshelves and a desk in warm light',
     points: [
       'LegalService and Attorney schema linking Tennessee Bar verified credentials',
       'Localized practice area silos targeting Davidson, Williamson, and Rutherford counties',
@@ -141,7 +141,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Automotive suppliers, industrial fabricators, and equipment distributors along the I-24 and I-65 corridors require steady commercial contract flow. We optimize your local digital footprint to capture plant engineers, procurement directors, and regional operations managers.',
     image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Nashville automotive manufacturing and industrial supply local SEO architecture',
+    alt: 'A machinist in safety glasses loading a metal part into a CNC lathe beside a tablet showing the part',
     points: [
       'Commercial capability landing pages optimized for regional radius search queries',
       'High-speed mobile performance ensuring immediate quote request submissions',
@@ -518,7 +518,7 @@ export default function NashvilleSeoPage() {
               <div className="rv-curved-frame-1">
                 <Image
                   src="/images/us/nashville/hero-nashville.webp"
-                  alt="Nashville Tennessee local SEO rankings and Google Maps 3-Pack dominance strategy"
+                  alt="A city skyline at dusk reflected in a river, with a lit bridge"
                   width={640}
                   height={640}
                   priority

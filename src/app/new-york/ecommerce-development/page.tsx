@@ -104,7 +104,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'From SoHo luxury flagships to Madison Avenue designer houses, high-end fashion brands demand digital shopping experiences that match their runway aesthetic. We engineer bespoke Figma UI/UX storefronts with sub-second product page loads, one-click mobile checkout, rich editorial lookbooks, and global multi-currency checkout.',
     image: '/images/us/saas-website-design/hero.webp',
-    alt: 'New York City SoHo luxury fashion apparel and designer accessories headless ecommerce storefront',
+    alt: 'A man and a woman in a studio pointing at a wall display of a handbag product page, the same page open on a laptop',
     points: [
       'Sub-second first contentful paint and instant product filtering with zero layout shifts',
       'Interactive visual lookbooks, dynamic sizing calculators, and cross-sell styling modules',
@@ -116,8 +116,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'High-Conversion Subscription Storefronts for Flatiron Brands',
     description:
       'Fast-growing beauty, skincare, and wellness brands across Flatiron and Chelsea need commerce platforms engineered for recurring customer lifetime value. We build custom headless Next.js storefronts with dynamic bundle builders, diagnostic shade-finder quizzes, and automated recurring subscription billing.',
-    image: '/images/us/b2b-website-design/sales-enablement.webp',
-    alt: 'New York City direct-to-consumer beauty skincare and wellness subscription ecommerce platform',
+    image: '/images/us/new-york/ecommerce/card-skincare-cream-lab-mixing.webp',
+    alt: 'A formulator in a lab coat stirring pale cream in a glass beaker while a young man fills plain dropper bottles with a pipette',
     points: [
       'Custom interactive bundle configurators and personalized diagnostic quiz engines',
       'Automated subscription management with Recharge, Smartrr, and Stripe Billing',
@@ -129,8 +129,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Enterprise Wholesale Portals for Garment District & Queens Distributors',
     description:
       'Apparel manufacturers, gourmet food importers, and specialty beverage distributors across Midtown and Long Island City require comprehensive B2B wholesale engines. We build high-speed wholesale platforms with automated PO processing, Net-30 credit terms, customer group tier pricing, and real-time ERP inventory syncing.',
-    image: '/images/us/b2b-website-design/hero.webp',
-    alt: 'New York City apparel manufacturing and food wholesale B2B ecommerce engineering',
+    image: '/images/us/new-york/ecommerce/card-wholesale-dry-goods-trolley.webp',
+    alt: 'A wholesaler lifting a plain sack of rice onto a flatbed trolley while a chef in a striped apron steadies a stack of plain cartons',
     points: [
       'Custom customer group pricing tiers with contracted volume discount schedules',
       'Instant PO generation, Net-30 invoicing, and multi-user corporate approval workflows',
@@ -142,8 +142,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'High-Trust Digital Showrooms for Diamond District Jewelers',
     description:
       'High-value jewelry retailers and fine watch dealers in Manhattan demand unmatched security and visual fidelity. We build bespoke digital showrooms with high-resolution 360-degree gem visualizers, custom ring configurators, insured white-glove shipping integrations, and high-limit payment routing.',
-    image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'New York City Diamond District luxury jewelry and fine watch ecommerce website design',
+    image: '/images/us/new-york/ecommerce/card-goldsmith-ring-stone-setting.webp',
+    alt: 'A goldsmith in a magnifying visor setting a stone into a gold ring while a man polishes a silver bracelet with an orange cloth',
     points: [
       'Interactive 360-degree 3D jewelry configurators and diamond certification databases',
       'High-limit fraud protection and escrow-integrated payment gateway routing',
@@ -155,8 +155,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Multi-Borough Perishable Logistics & Specialty Food Wholesale',
     description:
       'Artisanal specialty food producers, craft coffee roasters, and restaurant supply distributors across Long Island City, Brooklyn, and Hunts Point require complex multi-temperature logistics and wholesale pricing. We engineer custom B2B portals featuring route delivery scheduling, catch-weight billing calculations, and multi-warehouse inventory visibility.',
-    image: '/images/services/card-real-estate.webp',
-    alt: 'New York City gourmet food beverage cold chain distribution ecommerce website design',
+    image: '/images/us/new-york/ecommerce/card-fish-wholesale-ice-packing.webp',
+    alt: 'A fishmonger in a blue apron laying whole fish on ice in a plain white box while a woman adds more ice with an orange scoop',
     points: [
       'Catch-weight and variable lot pricing calculations during checkout',
       'Multi-warehouse regional distribution inventory synchronization',
@@ -168,8 +168,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'High-Velocity Digital Product Checkouts for Wall Street Innovators',
     description:
       'Financial data publishers, digital research firms, and Web3 fintech platforms in Lower Manhattan require institutional-grade payment infrastructure. We build custom Next.js storefronts with automated multi-currency settlement, tokenized micro-billing gateways, and sub-400ms global checkout rendering.',
-    image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'New York Financial District Wall Street fintech digital subscription ecommerce development',
+    image: '/images/us/new-york/ecommerce/card-cafe-counter-card-payment.webp',
+    alt: 'A customer in a trench coat tapping a plain card on a card reader held by a barista across a cafe counter, a cup on an orange tray',
     points: [
       'Multi-currency global settlement routing through Stripe and Adyen',
       'Tokenized micro-billing and dynamic digital entitlement provisioning',
@@ -550,8 +550,8 @@ export default function NewYorkEcommerceDevelopmentPage() {
               {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
               <div className="rv-curved-frame-1">
                 <Image
-                  src="/images/us/saas-website-design/hero.webp"
-                  alt="New York City ecommerce development and headless Shopify Plus storefront engineering"
+                  src="/images/us/new-york/ecommerce/hero-phone-laptop-shop-check.webp"
+                  alt="A woman comparing a shop page of coloured blocks on a phone and a laptop while a man folds a knit jumper beside a rail of clothes"
                   width={640}
                   height={640}
                   priority

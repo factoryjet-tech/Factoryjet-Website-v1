@@ -104,7 +104,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Atlanta wholesale distributors and industrial suppliers require complex digital procurement systems. We develop custom BigCommerce B2B and Shopify Plus architectures featuring company account hierarchies, custom price lists, quote-to-order workflows, and real-time NetSuite or SAP inventory synchronization.',
     image: '/images/us/marketplace/atlanta-enterprise-supply-chain-commerce.webp',
-    alt: 'Atlanta enterprise wholesale distribution and B2B ecommerce development',
+    alt: 'A man in a blazer at a desk beside a monitor of charts, city towers through the window',
     points: [
       'Customer-specific contracted pricing matrices and tiered volume discounts',
       'One-click reordering, CSV bulk ordering, and purchase order net-payment terms',
@@ -117,7 +117,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'From designer apparel houses in Buckhead to high-growth lifestyle brands in West Midtown, visual storytelling drives brand equity. We engineer headless Shopify Plus storefronts with sub-second page transitions, interactive lookbooks, smart product bundles, and frictionless one-click mobile checkout.',
     image: '/images/us/saas-website-design/hero.webp',
-    alt: 'Atlanta luxury fashion and lifestyle D2C ecommerce development',
+    alt: 'A man and a woman in a studio pointing at a wall display of a handbag product page, the same page open on a laptop',
     points: [
       'Sub-second headless Next.js frontend with instant mobile product filtering',
       'Dynamic product bundling, tiered upsells, and personalized cross-sells',
@@ -143,7 +143,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Healthcare and aesthetic product manufacturers across Metro Atlanta require secure, compliant e-commerce systems. We build verified provider purchase portals, patient direct-to-door fulfillment integrations, and secure payment workflows.',
     image: '/images/us/services/dental-seo/hero.webp',
-    alt: 'Atlanta medical healthcare and dental product ecommerce store design',
+    alt: 'A bright empty reception lobby with a sofa, plants and a white reception desk',
     points: [
       'Verified practitioner license gating and professional wholesale tiers',
       'HIPAA-aware checkout workflows and secure patient data handling',
@@ -544,7 +544,7 @@ export default function AtlantaEcommercePage() {
               <div className="rv-curved-frame-1">
                 <Image
                   src="/images/us/marketplace/atlanta-enterprise-supply-chain-commerce.webp"
-                  alt="Atlanta Georgia enterprise ecommerce engineering and headless Shopify Plus development"
+                  alt="A man in a blazer at a desk beside a monitor of charts, city towers through the window"
                   width={640}
                   height={640}
                   priority

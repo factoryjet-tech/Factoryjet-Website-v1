@@ -473,7 +473,7 @@ export default function ShopifyPlusAgencyPage() {
               <div style={{ borderRadius: '20px', overflow: 'hidden', border: '1px solid var(--pp-line)', boxShadow: '0 24px 48px -28px rgba(20,17,15,0.28)' }}>
                 <Image
                   src="/images/us/services/hero-shopify.webp"
-                  alt="An e-commerce team reviewing a Shopify Plus storefront and checkout configuration"
+                  alt="A laptop on a marble desk showing a product page, beside dried flowers and a candle jar"
                   width={600}
                   height={400}
                   priority
@@ -537,7 +537,7 @@ export default function ShopifyPlusAgencyPage() {
               <div style={{ borderRadius: '20px', overflow: 'hidden', border: '1px solid var(--pp-line)', boxShadow: '0 24px 48px -28px rgba(20,17,15,0.28)' }}>
                 <Image
                   src="/images/us/commerce/salesforce-commerce-cloud-to-shopify-plus-integration-map.webp"
-                  alt="An integration map showing a Shopify Plus store connected to ERP, PIM, and logistics systems"
+                  alt="A man sticking cards for the parts of a web system onto a white wall, joined by arrows"
                   width={600}
                   height={375}
                   style={{ width: '100%', height: 'auto', display: 'block' }}
@@ -633,7 +633,7 @@ export default function ShopifyPlusAgencyPage() {
               <div style={{ borderRadius: '20px', overflow: 'hidden', border: '1px solid var(--pp-line)', boxShadow: '0 24px 48px -28px rgba(20,17,15,0.28)' }}>
                 <Image
                   src="/images/us/platforms/platform-build.webp"
-                  alt="A developer reviewing checkout logic and function code for a Shopify Plus store"
+                  alt="Two men at a monitor showing a shop page, one pointing at the screen"
                   width={600}
                   height={450}
                   style={{ width: '100%', height: 'auto', display: 'block' }}

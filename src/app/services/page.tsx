@@ -142,7 +142,7 @@ const SERVICES = [
   },
   {
     image: '/images/services/ai-seo.webp',
-    imageAlt: 'Strategist mapping a search roadmap on a whiteboard',
+    imageAlt: 'A dark analytics screen showing load time and bounce rate charts',
     eyebrow: 'SEO',
     title: 'SEO Consulting',
     description:
@@ -197,7 +197,7 @@ const SERVICES = [
   },
   {
     image: '/images/services/card-webapp.webp',
-    imageAlt: 'AI agent workflow dashboard showing automated task routing and lead qualification',
+    imageAlt: 'An analytics dashboard glowing on an ultrawide monitor in a dark room',
     eyebrow: 'AI · NEW',
     title: 'AI Agent Development',
     description:
@@ -208,7 +208,7 @@ const SERVICES = [
   },
   {
     image: '/images/services/card-webapp.webp',
-    imageAlt: 'AI automation workflow diagram connecting CRM, email, and support systems',
+    imageAlt: 'An analytics dashboard glowing on an ultrawide monitor in a dark room',
     eyebrow: 'AI · AUTOMATION',
     title: 'AI Automation',
     description:

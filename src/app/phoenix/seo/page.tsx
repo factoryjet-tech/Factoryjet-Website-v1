@@ -102,8 +102,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Dominating High-Ticket Patient Search Across Scottsdale & Paradise Valley',
     description:
       'In the Valley’s highly competitive cosmetic surgery and elective medical markets, prospective patients conduct rigorous research before booking consultations. We optimize multi-practitioner Google Business Profiles, implement MedicalProcedure structured schemas, build procedure-specific geo silos, and generate steady review velocity.',
-    image: '/images/us/phoenix-web-design/mobile-first.webp',
-    alt: 'Phoenix and Scottsdale cosmetic surgery aesthetic clinic local SEO ranking strategy',
+    image: '/images/us/phoenix/seo/card-light-therapy-skin-treatment.webp',
+    alt: 'A practitioner in a white tunic holding a light wand to the cheek of a woman wearing orange protective goggles in a treatment chair',
     points: [
       'Multi-practitioner Google Business Profile optimization with procedure sub-categories',
       'MedicalProcedure and Physician structured JSON-LD schema linking hospital affiliations',
@@ -116,7 +116,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Legal search queries across Maricopa County are fiercely contested. We engineer impenetrable local SEO architectures featuring practice area knowledge hubs, attorney bar admission schemas, verified case outcome showcases, and localized citation dominance.',
     image: '/images/us/services/law-firm-seo/hero.webp',
-    alt: 'Phoenix corporate law firm litigation and estate planning local SEO ranking strategy',
+    alt: 'An empty wood-panelled office with bookshelves and a desk in warm light',
     points: [
       'LegalService and Attorney schema linking State Bar of Arizona verified credentials',
       'Localized practice area silos targeting Camelback Corridor, Biltmore, and North Scottsdale',
@@ -128,8 +128,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Capturing High-Value Commercial Project Inquiries Across the Valley',
     description:
       'General contractors, roofing enterprises, and commercial HVAC operators across Phoenix require continuous inbound bidding opportunities. We build geo-targeted service area architectures, optimize Service Area Business (SAB) profiles, and capture high-intent commercial keyword searches.',
-    image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Phoenix commercial contractor roofing and construction local SEO optimization',
+    image: '/images/us/phoenix/seo/card-concrete-slab-finishing.webp',
+    alt: 'Two construction workers in white hard hats smoothing a freshly poured concrete slab with a long float and a hand trowel on a building site',
     points: [
       'Service area radius optimization covering Maricopa and Pinal County commercial hubs',
       'High-speed mobile performance ensuring immediate project bidding phone calls',
@@ -141,8 +141,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Topical Authority & AI Citation Engineering for Silicon Desert Tech',
     description:
       'Semiconductor suppliers, precision CNC machine shops, and logistics operators across Tempe and Chandler require commanding authority in technical search. We engineer deep topical content graphs, researcher schemas, and institutional citations that earn authority across Google, Perplexity, and AI search engines.',
-    image: '/images/us/phoenix-web-design/hero.webp',
-    alt: 'Phoenix semiconductor supply and precision engineering B2B local SEO architecture',
+    image: '/images/us/phoenix/seo/card-silicon-wafer-inspection.webp',
+    alt: 'A woman in a white lab coat and gloves holding a shiny silicon wafer under a ring lamp while a man slides another wafer into a clear carrier',
     points: [
       'Topical entity architecture covering precision microelectronics and supply chain capabilities',
       'Structured Organization and Service schema for AI citation retrieval on ChatGPT and Perplexity',
@@ -531,7 +531,7 @@ export default function PhoenixSeoPage() {
               <div className="rv-curved-frame-1">
                 <Image
                   src="/images/us/phoenix-web-design/hero.webp"
-                  alt="Phoenix Arizona local SEO rankings and Google Maps 3-Pack dominance strategy"
+                  alt="Three people at a desk around a monitor showing a handbag shop page, with desert hills through the window"
                   width={640}
                   height={640}
                   priority

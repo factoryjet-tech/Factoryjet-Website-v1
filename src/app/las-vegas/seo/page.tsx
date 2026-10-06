@@ -102,8 +102,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Capturing High-Value Patient Consultations in Summerlin & Henderson',
     description:
       'In Las Vegas’s competitive aesthetic surgery and concierge wellness markets, prospective patients evaluate physician credentials and peer reviews thoroughly before booking. We optimize Google Business Profiles, implement MedicalProcedure structured schemas, build procedure-specific geo silos, and generate steady review velocity.',
-    image: '/images/us/las-vegas-seo/local-search.webp',
-    alt: 'Las Vegas and Summerlin cosmetic surgery aesthetic clinic local SEO ranking strategy',
+    image: '/images/us/las-vegas/seo/card-facial-mask-brush-treatment.webp',
+    alt: 'An aesthetician in a white tunic brushing a clay mask onto the face of a woman lying on a treatment bed with a towel around her hair',
     points: [
       'Multi-practitioner Google Business Profile optimization with procedure sub-categories',
       'MedicalProcedure and Physician structured JSON-LD schema linking hospital affiliations',
@@ -116,7 +116,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Legal search queries across Clark County are among the most fiercely contested in the nation. We engineer impenetrable local SEO architectures featuring practice area knowledge hubs, attorney bar admission schemas, verified case outcome showcases, and localized citation dominance.',
     image: '/images/us/services/law-firm-seo/hero.webp',
-    alt: 'Las Vegas corporate law firm personal injury and gaming litigation local SEO ranking strategy',
+    alt: 'An empty wood-panelled office with bookshelves and a desk in warm light',
     points: [
       'LegalService and Attorney schema linking State Bar of Nevada verified credentials',
       'Localized practice area silos targeting Summerlin, Downtown Las Vegas, and Henderson',
@@ -129,7 +129,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'From convention logistics suppliers near the Las Vegas Convention Center to luxury dining groups on the Strip, mobile travelers and corporate event planners demand instant search answers. We optimize geo-radius signals, event schemas, and real-time review response workflows.',
     image: '/images/us/las-vegas-seo/conventions.webp',
-    alt: 'Las Vegas convention center corporate event and hospitality entertainment local SEO optimization',
+    alt: 'Two people setting up an exhibition stand with folded tote bags and flight cases in a convention hall',
     points: [
       'Local radius geo-fencing targeting convention corridors and major resort districts',
       'Event and FoodEstablishment structured schema markup for immediate mobile discovery',
@@ -141,8 +141,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Driving Continuous Commercial Project Bidding Across Clark County',
     description:
       'Commercial HVAC contractors, roofing companies, and trade specialists across the Las Vegas valley require steady commercial project pipelines. We build geo-targeted service area architectures, optimize Service Area Business (SAB) profiles, and capture high-intent commercial keyword searches.',
-    image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Las Vegas commercial contractor HVAC and roofing local SEO architecture',
+    image: '/images/us/las-vegas/seo/card-rooftop-hvac-unit-service.webp',
+    alt: 'Two technicians servicing a large rooftop air conditioning unit, one connecting a gauge hose and one lifting out an air filter',
     points: [
       'Service area radius optimization covering Clark County commercial and industrial hubs',
       'High-speed mobile performance ensuring immediate project bidding phone calls',
@@ -518,7 +518,7 @@ export default function LasVegasSeoPage() {
               <div className="rv-curved-frame-1">
                 <Image
                   src="/images/us/las-vegas-seo/hero.webp"
-                  alt="Las Vegas Nevada local SEO rankings and Google Maps 3-Pack dominance strategy"
+                  alt="Two people at a desk looking at a laptop that shows a map with location pins, desert hills through the window"
                   width={640}
                   height={640}
                   priority

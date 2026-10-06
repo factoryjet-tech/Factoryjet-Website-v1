@@ -103,7 +103,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Legal search queries across Jackson, Johnson, and Clay counties are intensely contested. We engineer impenetrable local SEO architectures featuring practice area knowledge hubs, attorney bar admission schemas, verified case outcome showcases, and localized citation dominance.',
     image: '/images/us/services/law-firm-seo/hero.webp',
-    alt: 'Kansas City corporate law firm commercial litigation and estate planning local SEO ranking strategy',
+    alt: 'An empty wood-panelled office with bookshelves and a desk in warm light',
     points: [
       'LegalService and Attorney schema linking Missouri and Kansas Bar verified credentials',
       'Localized practice area silos targeting Downtown KC, Country Club Plaza, and Overland Park',
@@ -116,7 +116,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'In Kansas City’s premier elective surgery and specialized clinical markets, prospective patients evaluate physician credentials and peer reviews thoroughly before booking. We optimize Google Business Profiles, implement MedicalProcedure structured schemas, build procedure-specific geo silos, and generate steady review velocity.',
     image: '/images/us/services/dental-seo/hero.webp',
-    alt: 'Kansas City aesthetic plastic surgery medical practice dental clinic local SEO strategy',
+    alt: 'A bright empty reception lobby with a sofa, plants and a white reception desk',
     points: [
       'Multi-practitioner Google Business Profile optimization with procedure sub-categories',
       'MedicalProcedure and Physician structured JSON-LD schema linking hospital affiliations',
@@ -128,8 +128,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Topical Authority & AI Citation Engineering for KC Animal Health Leaders',
     description:
       'Animal health enterprises, veterinary technology innovators, and agricultural research firms in Kansas City demand authority in scientific and corporate search. We engineer deep topical content graphs, researcher schemas, and institutional citations that earn authority across Google, Perplexity, and AI search engines.',
-    image: '/images/us/b2b-website-design/hero.webp',
-    alt: 'Kansas City animal health corridor veterinary biotechnology and AgTech local SEO optimization',
+    image: '/images/us/kansas-city/seo/card-veterinary-dog-exam.webp',
+    alt: 'A vet in green scrubs listening to the chest of a golden retriever with a stethoscope while a young man holds the dog on an exam table',
     points: [
       'Topical entity architecture covering veterinary pharmacology and regulatory standards',
       'Structured MedicalScholarlyArticle and Organization schema for AI citation retrieval',
@@ -141,8 +141,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Driving Continuous Commercial Project Bidding Across KC Metro',
     description:
       'Commercial general contractors, roofing companies, and HVAC specialists across the Kansas City bi-state metropolitan area require steady commercial project bidding opportunities. We build geo-targeted service area architectures, optimize Service Area Business (SAB) profiles, and capture high-intent commercial keyword searches.',
-    image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Kansas City commercial contractor HVAC and roofing local SEO ranking architecture',
+    image: '/images/us/kansas-city/seo/card-site-survey-tripod.webp',
+    alt: 'A surveyor looking through an instrument on a tripod while a site manager with a rolled drawing points across a cleared building plot',
     points: [
       'Service area radius optimization covering Kansas City MO, Kansas City KS, Overland Park, and Olathe',
       'High-speed mobile performance ensuring immediate project bidding phone calls',
@@ -512,8 +512,8 @@ export default function KansasCitySeoPage() {
               {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
               <div className="rv-curved-frame-1">
                 <Image
-                  src="/images/us/b2b-website-design/hero.webp"
-                  alt="Kansas City Missouri local SEO rankings and Google Maps 3-Pack dominance strategy"
+                  src="/images/us/kansas-city/seo/hero-front-desk-phone-call.webp"
+                  alt="A man at a front desk answering a phone and writing on a notepad beside a monitor showing a calendar grid while a woman walks past with a folder"
                   width={640}
                   height={640}
                   priority

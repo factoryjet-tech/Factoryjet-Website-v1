@@ -409,8 +409,8 @@ export default function NetSuiteToShopifyPage() {
               {/* Left Column: Clean Organic Curved Photo Frame (Edge-to-Edge) */}
               <div className="rv-curved-frame-2">
                 <Image
-                  src="/images/replatforming/netsuite-team-architects.jpg"
-                  alt="FactoryJet senior ERP and e-commerce engineers reviewing bi-directional data flow"
+                  src="/images/replatforming/netsuite-team-box-arrow-review.webp"
+                  alt="Two people at a desk studying a monitor that shows two columns of coloured boxes joined by arrows in a bright office"
                   width={640}
                   height={640}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}

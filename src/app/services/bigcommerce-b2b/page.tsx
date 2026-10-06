@@ -566,7 +566,7 @@ export default function BigCommerceB2BPage() {
               </div>
               <Image
                 src={`${IMG}/bigcommerce-b2b-edition-quoting.webp`}
-                alt="BigCommerce B2B Edition quotation dashboard and buyer permissions."
+                alt="A man in a blazer tapping a tablet in a bright white showroom"
                 width={1280}
                 height={800}
                 style={{ width: '100%', height: 'auto', borderRadius: '18px', border: '1px solid var(--pp-line)', display: 'block', objectFit: 'cover' }}

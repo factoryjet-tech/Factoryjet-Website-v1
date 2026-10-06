@@ -103,7 +103,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'From the Kansas City Animal Health Corridor to bio-agriculture enterprises in Olathe, institutional credibility is paramount. We engineer custom Next.js web applications with interactive pipeline diagrams, research documentation hubs, regulatory compliance showcases, and sub-second edge performance.',
     image: '/images/us/b2b-website-design/hero.webp',
-    alt: 'Kansas City animal health corridor veterinary biotechnology and bio agriculture web design engineering',
+    alt: 'Three colleagues at a large wall display showing a plain grey page layout',
     points: [
       'Interactive scientific pipeline visualizers and mechanism-of-action animations',
       'Secure research data rooms and corporate partner portal integrations',
@@ -116,7 +116,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Private wealth advisory firms, family offices, and commercial litigation practices across Country Club Plaza and Downtown Kansas City demand digital presences that project institutional stability. We design bespoke typography scales, interactive wealth calculators, and secure client portal integrations.',
     image: '/images/us/services/law-firm-seo/hero.webp',
-    alt: 'Kansas City Country Club Plaza wealth management private equity and corporate law website design',
+    alt: 'An empty wood-panelled office with bookshelves and a desk in warm light',
     points: [
       'Refined editorial typography and interactive portfolio asset allocation visualizers',
       'Encrypted client portal integration with multi-factor authentication routing',
@@ -129,7 +129,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'From Lenexa precision tooling builders to Olathe heavy fabrication facilities, commercial procurement officers demand verified engineering credentials. We build responsive web applications with interactive equipment capability matrices, ISO quality cert showcases, and secure CAD blueprint upload funnels.',
     image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Kansas City precision manufacturing heavy equipment fabrication and engineering web design',
+    alt: 'A machinist in safety glasses loading a metal part into a CNC lathe beside a tablet showing the part',
     points: [
       'Interactive equipment capability matrices and engineering tolerance tables',
       'Secure CAD and STEP blueprint file upload integrations for rapid RFQ intake',
@@ -141,8 +141,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Commercial Lead Engines for KCI Logistics & Northland Hubs',
     description:
       'Freight forwarders, cold storage logistics operators, and intermodal carriers across the Kansas City metropolitan area demand high-speed lead engines. We build responsive web applications with interactive freight quote estimators, facility specification sheets, and automated lead routing.',
-    image: '/images/us/b2b-website-design/sales-enablement.webp',
-    alt: 'Kansas City freight logistics aviation cargo and multimodal distribution web design',
+    image: '/images/us/kansas-city/web-design/card-air-cargo-hold-loading.webp',
+    alt: 'Two ground handlers pushing a netted pallet of plain boxes toward the open cargo door of a plain white aircraft, one in orange ear defenders',
     points: [
       'Interactive freight rate estimation calculators and RFQ workflow automation',
       'Sub-second mobile performance ensuring immediate commercial quote submissions',
@@ -154,8 +154,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Enterprise Portals & Client Sandboxes for Overland Park Tech Campuses',
     description:
       'HealthTech platforms, telecommunications providers, and corporate regional headquarters along College Boulevard in Overland Park demand enterprise-grade digital flagships. We engineer custom Next.js web applications with interactive product sandboxes, SOC2-compliant client portals, automated HubSpot/Salesforce lead routing, and sub-second global edge CDN caching.',
-    image: '/images/us/denver/tech-office.webp',
-    alt: 'Kansas City Overland Park healthtech telecommunications enterprise web design',
+    image: '/images/us/kansas-city/web-design/card-wearable-monitor-treadmill-test.webp',
+    alt: 'A woman walking on a treadmill wearing a wrist sensor band while an engineer in a checked shirt stands beside her holding a tablet',
     points: [
       'Interactive software capability sandboxes and animated cloud architecture visualizers',
       'HIPAA and SOC2-compliant client portal gateways with multi-factor authentication',
@@ -168,7 +168,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Contemporary architecture firms, creative studios, and emerging fintech innovators across the Crossroads Arts District and Downtown KC demand bespoke visual excellence. We design high-converting web applications with tactile editorial typography, interactive project lookbooks, smooth micro-animations, and instant consultation scheduling funnels.',
     image: '/images/services/card-real-estate.webp',
-    alt: 'Kansas City Crossroads Arts District creative studio architecture fintech web design',
+    alt: 'A laptop on a marble table showing a property listings website with photos and a map',
     points: [
       'Tactile editorial typography scales with custom brand micro-animations',
       'Interactive high-resolution project visualizers with zero layout shift or image delay',
@@ -544,7 +544,7 @@ export default function KansasCityWebDesignPage() {
               <div className="rv-curved-frame-1">
                 <Image
                   src="/images/us/b2b-website-design/hero.webp"
-                  alt="Kansas City Missouri web design and custom Next.js web application development"
+                  alt="Three colleagues at a large wall display showing a plain grey page layout"
                   width={640}
                   height={640}
                   priority

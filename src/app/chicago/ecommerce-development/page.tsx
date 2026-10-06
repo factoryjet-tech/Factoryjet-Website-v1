@@ -105,7 +105,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Midwest industrial distributors handling tens of thousands of SKUs require more than basic consumer checkout templates. We engineer enterprise B2B portals on Shopify Plus and BigCommerce B2B Edition featuring customer-specific contract pricing, exploded parts diagram search, instant CSV bulk ordering, and real-time NetSuite or SAP inventory synchronization.',
     image: '/images/us/marketplace/shopify-plus-b2b-wholesale-portal.webp',
-    alt: 'Chicago industrial equipment and B2B wholesale ecommerce portal development',
+    alt: 'A man at a desk viewing a wholesale pricing table on a monitor',
     points: [
       'Customer-specific contract pricing tiers, volume discounts, and gated wholesale catalogs',
       'Exploded schematic parts lookup and instant bulk CSV order upload tools',
@@ -117,8 +117,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'High-Volume Wholesale & Direct-to-Consumer Culinary Commerce',
     description:
       'Chicago is the premier food and beverage hub of the Midwest. Whether distributing artisanal ingredients to restaurant groups or shipping temperature-sensitive perishables nationwide, we build high-performance storefronts with custom delivery date pickers, automated freight refrigeration rules, and recurring subscription engines.',
-    image: '/images/us/marketplace/bigcommerce-b2b-edition-quoting.webp',
-    alt: 'Chicago food and beverage specialty ecommerce platform engineering',
+    image: '/images/us/chicago/ecommerce/card-cold-store-loading.webp',
+    alt: 'A worker in orange gloves wheeling a trolley of plain insulated boxes while a woman in a white coat checks fish packed in ice',
     points: [
       'Advanced regional delivery date scheduling with refrigerated zip code routing rules',
       'Frictionless wholesale re-ordering portals for restaurant and hospitality accounts',
@@ -130,8 +130,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Sub-Second Visual Flagships Driving Global Conversion Rates',
     description:
       'Modern consumer brands cannot tolerate slow mobile cart rendering or clunky checkout flows. We engineer custom Shopify Plus themes and headless Next.js storefronts featuring instant size and color swatch switching, dynamic bundle builders, native Shop Pay integration, and predictive search that doubles mobile conversion rates.',
-    image: '/images/us/marketplace/miami-luxury-crossborder-creator-commerce.webp',
-    alt: 'Chicago direct to consumer apparel and lifestyle brand ecommerce development',
+    image: '/images/us/chicago/ecommerce/card-sneaker-product-shoot.webp',
+    alt: 'A photographer shooting a pair of plain white sneakers on a paper backdrop while a stylist adjusts the laces',
     points: [
       'Sub-second mobile product page rendering with instant image and variant switches',
       'Custom slide-out cart drawers with tiered free-shipping progress bars and upsells',
@@ -143,8 +143,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Compliant & Streamlined Procurement for Healthcare Systems',
     description:
       'Supplying hospitals, dental clinics, and research laboratories requires strict compliance, purchase order processing, and tax exemption management. We construct verified medical supply marketplaces featuring automated tax-exempt document verification, Net 30/60 purchase order workflows, and multi-department approval hierarchies.',
-    image: '/images/us/marketplace/omnichannel-vs-multichannel-unified-data.webp',
-    alt: 'Chicago medical supply and healthcare equipment ecommerce development',
+    image: '/images/us/chicago/ecommerce/card-medical-supply-stockroom.webp',
+    alt: 'A man shelving plain white boxes while a woman in a blue headscarf sorts white packs into an orange crate in a stockroom',
     points: [
       'Automated state tax exemption certificate collection and automated verification',
       'Purchase order (PO) generation with multi-tiered corporate approval workflows',
@@ -156,8 +156,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Bulk Quoting & Automated LTL Freight Logistics for Chicago Distributors',
     description:
       'Industrial packaging manufacturers and chemical distributors in Bedford Park and Elk Grove Village operate high-ticket bulk order workflows. We engineer custom B2B storefronts featuring real-time pallet weight calculations, automated hazardous material shipping disclaimers, tiered container volume pricing, and automated invoice reconciliation via QuickBooks and NetSuite.',
-    image: '/images/us/marketplace/dallas-fort-worth-wholesale-logistics-commerce.webp',
-    alt: 'Chicago commercial packaging and bulk freight distribution ecommerce engineering',
+    image: '/images/us/chicago/ecommerce/card-carton-plant-stacking.webp',
+    alt: 'A worker stacking flat cardboard sheets beside a box-folding machine while a man wraps a pallet of cartons in stretch film',
     points: [
       'Automated freight rate lookups with dynamic pallet dimension calculations',
       'Gated MSDS chemical safety data sheet downloads and compliance tracking',
@@ -563,7 +563,7 @@ export default function ChicagoEcommercePage() {
               <div className="rv-curved-frame-1">
                 <Image
                   src="/images/us/marketplace/headless-nextjs-vs-monolithic-liquid-architecture.webp"
-                  alt="Chicago E-Commerce Development Storefront Architecture"
+                  alt="A man standing at a curved monitor showing line charts in a bright office"
                   width={640}
                   height={640}
                   priority
@@ -605,8 +605,8 @@ export default function ChicagoEcommercePage() {
               {/* Left Column: Clean Organic Curved Photo Frame */}
               <div className="rv-curved-frame-2">
                 <Image
-                  src="/images/us/marketplace/ecommerce-speed-core-web-vitals-performance-engine.webp"
-                  alt="FactoryJet enterprise ecommerce architects building scalable Shopify Plus systems"
+                  src="/images/us/chicago/ecommerce/team-two-monitor-speed-check.webp"
+                  alt="A woman at a desk with two monitors showing coloured blocks and green rings while a man behind her holds a phone"
                   width={640}
                   height={640}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}

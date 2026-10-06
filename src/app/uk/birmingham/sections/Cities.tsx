@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import CityTiltFx from "@/app/uk/sections/CityTiltFx";
+import { CITY_PHOTO_ALT, cityPhotoSrc } from "@/app/uk/sections/cityPhotos";
 
 type City = {
   slug: string;
@@ -101,10 +102,7 @@ const CITIES: City[] = [
 ];
 
 function CityCard({ city }: { city: City }) {
-  const imageSrc =
-    city.slug === "birmingham"
-      ? "/images/uk/city-birmingham.jpg"
-      : `/images/uk/city-${city.slug}.jpg`;
+  const imageSrc = cityPhotoSrc(city.slug);
 
   return (
     <Link
@@ -137,7 +135,7 @@ function CityCard({ city }: { city: City }) {
       >
         <Image
           src={imageSrc}
-          alt={`${city.name} UK city skyline`}
+          alt={CITY_PHOTO_ALT[city.slug] ?? `${city.name} city centre`}
           fill
           sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
           className="object-cover"

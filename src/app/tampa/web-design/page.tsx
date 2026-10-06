@@ -104,7 +104,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Water Street and Westshore financial firms demand websites that speak to enterprise CFOs, institutional partners, and compliance officers. We build custom Next.js web applications featuring interactive product demo tours, API documentation portals, SOC 2 compliance matrices, and lightning-fast page speeds.',
     image: '/images/us/saas-website-design/hero.webp',
-    alt: 'Tampa financial services and fintech web design engineering',
+    alt: 'A man and a woman in a studio pointing at a wall display of a handbag product page, the same page open on a laptop',
     points: [
       'Interactive product feature tours and downloadable technical whitepaper funnels',
       'Frictionless multi-step demo scheduling forms routing to sales engineering teams',
@@ -117,7 +117,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'From private practices in South Tampa to surgical centers in Clearwater, credibility drives patient acquisition. We engineer HIPAA-aware medical websites featuring searchable physician directories, specialty procedure overviews, insurance plan matrices, and lightning-fast appointment scheduling flows.',
     image: '/images/us/services/dental-seo/hero.webp',
-    alt: 'Tampa healthcare medical practice and surgical clinic website design',
+    alt: 'A bright empty reception lobby with a sofa, plants and a white reception desk',
     points: [
       'Searchable provider directories with clinical specialty credentials and hospital affiliations',
       'HIPAA-aware consultation intake forms and click-to-call mobile patient actions',
@@ -130,7 +130,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'High-stakes corporate litigation and maritime law firms in Tampa cannot afford generic visual templates. We craft bespoke digital flagships featuring practice area content hubs, partner biographical repositories with bar admission schema, verified transaction track records, and secure client communication endpoints.',
     image: '/images/us/services/law-firm-seo/hero.webp',
-    alt: 'Tampa corporate law firm litigation and maritime practice web design',
+    alt: 'An empty wood-panelled office with bookshelves and a desk in warm light',
     points: [
       'Deep practice area knowledge graphs and structured legal case victory portfolios',
       'Attorney profile schema with state bar admissions and published industry insights',
@@ -143,7 +143,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Tampa Bay is a recognized defense technology and maritime trade powerhouse. Technical websites built on slow legacy WordPress themes fail to convince procurement committees. We develop high-performance web applications featuring structured capability tables, instant RFQ calculators, downloadable spec sheets, and sub-second edge hosting.',
     image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Tampa maritime logistics and defense manufacturing web design engineering',
+    alt: 'A machinist in safety glasses loading a metal part into a CNC lathe beside a tablet showing the part',
     points: [
       'Interactive equipment capability matrices and downloadable CAD/PDF engineering data',
       'Frictionless multi-step RFQ form workflows routing directly to estimating teams',
@@ -156,7 +156,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'High-end architectural studios, luxury custom home builders, and yacht brokerages in South Tampa, Davis Islands, and Belleair demand editorial visual storytelling. We engineer custom portfolio flagships with smooth WebGL project transitions, high-resolution photo galleries, interactive floorplan viewports, and VIP private consultation inquiry funnels.',
     image: '/images/services/card-real-estate.webp',
-    alt: 'Tampa luxury coastal real estate and yacht brokerage website design',
+    alt: 'A laptop on a marble table showing a property listings website with photos and a map',
     points: [
       'High-resolution project galleries with lazy-loaded WebP responsive image pipelines',
       'Interactive waterfront development maps with boating access and school district filtering',
@@ -169,7 +169,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Iconic culinary flagships, rooftop lounges, and craft breweries across Ybor City, Downtown Tampa, and St. Petersburg demand mobile-first digital flagships. We construct interactive venues featuring live OpenTable and Resy reservation widgets, private banquet inquiry funnels, and high-resolution photo menus rendering at 60fps.',
     image: '/images/us/restaurant-website-design/hero.webp',
-    alt: 'Tampa hospitality craft brewery and waterfront dining website design',
+    alt: 'A restaurant guest reading a menu on her phone while a server sets a table behind her',
     points: [
       'Frictionless integration with Resy, OpenTable, and Toast POS online ordering systems',
       'Interactive private banquet and event booking inquiry calculators',
@@ -563,7 +563,7 @@ export default function TampaWebDesignPage() {
               <div className="rv-curved-frame-1">
                 <Image
                   src="/images/us/tampa/hero-tampa.webp"
-                  alt="Tampa Florida modern web design engineering and custom Next.js website mockup"
+                  alt="A waterfront city skyline with palm trees under a blue sky"
                   width={640}
                   height={640}
                   priority

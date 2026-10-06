@@ -103,8 +103,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'High-Converting Headless Storefronts for Idaho Outdoor Brands',
     description:
       'From Boise backcountry ski innovators to mountain biking and fly-fishing gear builders, Idaho outdoor brands demand high-speed shopping experiences. We engineer bespoke Figma UI/UX storefronts with sub-second product page loads, one-click mobile checkout, rich interactive lookbooks, and customized gear configurators.',
-    image: '/images/us/boise/ecommerce/portfolio-1.webp',
-    alt: 'Boise Idaho outdoor sporting goods recreational gear and apparel headless ecommerce storefront',
+    image: '/images/us/boise/ecommerce/card-fishing-rod-workshop.webp',
+    alt: 'A woman winding orange thread onto a fishing rod at a workshop bench while a man fits a reel to a finished rod',
     points: [
       'Sub-second first contentful paint and instant product filtering with zero layout shifts',
       'Interactive visual lookbooks, dynamic sizing calculators, and cross-sell gear bundles',
@@ -116,8 +116,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Tactile Editorial E-Commerce for Idaho Agricultural Producers',
     description:
       'Specialty food producers, craft beverage makers, and sustainable agricultural leaders across the Treasure Valley demand digital storefronts that reflect their product quality. We engineer rich visual storytelling layouts with recurring subscription delivery management, cold-pack shipping logic, and localized age verification.',
-    image: '/images/us/b2b-website-design/sales-enablement.webp',
-    alt: 'Boise Treasure Valley specialty food beverage and agritech subscription ecommerce platform',
+    image: '/images/us/boise/ecommerce/card-lettuce-field-harvest.webp',
+    alt: 'A woman placing a head of lettuce into an orange crate in a vegetable field while an older man carries a tray of leafy greens',
     points: [
       'Flexible recurring subscription management with custom delivery interval selection',
       'Dynamic cold-pack and localized perishable shipping rate calculation',
@@ -130,7 +130,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Industrial hardware distributors, building material suppliers, and precision tooling manufacturers across Nampa and Caldwell require high-throughput B2B wholesale capabilities. We build high-speed wholesale platforms with automated PO processing, Net-30 credit terms, customer group tier pricing, and real-time ERP inventory syncing.',
     image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Boise Nampa industrial hardware building materials and manufacturing B2B ecommerce engineering',
+    alt: 'A machinist in safety glasses loading a metal part into a CNC lathe beside a tablet showing the part',
     points: [
       'Custom customer group pricing tiers with contracted volume discount schedules',
       'Instant PO generation, Net-30 invoicing, and multi-user corporate approval workflows',
@@ -142,8 +142,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'High-Conversion Subscription Storefronts for Meridian Scale-Ups',
     description:
       'Fast-growing wellness, nutritional supplement, and medical device providers across Meridian and Eagle require platforms engineered for recurring customer lifetime value. We build custom headless Next.js storefronts with dynamic bundle builders, diagnostic intake quizzes, and automated recurring subscription billing.',
-    image: '/images/us/b2b-website-design/hero.webp',
-    alt: 'Boise Meridian direct-to-consumer nutritional supplement and healthtech subscription ecommerce',
+    image: '/images/us/boise/ecommerce/card-supplement-bottle-filling.webp',
+    alt: 'A man in a lab coat pouring capsules from an orange scoop into a plain bottle while a woman packs capped bottles into a box',
     points: [
       'Custom interactive bundle configurators and personalized diagnostic quiz engines',
       'Automated subscription management with Recharge, Smartrr, and Stripe Billing',
@@ -155,8 +155,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Digital License Provisioning & Global Hardware Sales Portals',
     description:
       'Semiconductor hardware developers, IoT sensor innovators, and technology firms across the Boise Tech Corridor demand high-speed digital sales portals. We engineer custom Next.js web applications featuring automated software license key generation, developer API documentation gateways, and tier-based hardware evaluation checkout.',
-    image: '/images/services/card-real-estate.webp',
-    alt: 'Boise Idaho tech corridor electronics hardware software licensing ecommerce development',
+    image: '/images/us/boise/ecommerce/card-sensor-board-testing.webp',
+    alt: 'A woman placing a circuit board into a test fixture while a man watches a wave shape on a monitor in an electronics lab',
     points: [
       'Automated digital license provisioning and recurring enterprise SaaS billing',
       'Developer API key management and SDK documentation download portals',
@@ -169,7 +169,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Lumber processors, building material distributors, and heavy industrial hardware suppliers across Nampa and Caldwell require rugged online ordering portals. We build custom Next.js storefronts featuring engineering specification lookups, real-time multi-yard inventory tracking, and automated LTL freight calculations.',
     image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Boise Nampa Caldwell building materials timber supply and industrial hardware B2B ecommerce',
+    alt: 'A machinist in safety glasses loading a metal part into a CNC lathe beside a tablet showing the part',
     points: [
       'Interactive contractor material calculation matrices with bulk CSV order uploads',
       'Real-time multi-location warehouse inventory feeds across the Treasure Valley',
@@ -550,8 +550,8 @@ export default function BoiseEcommerceDevelopmentPage() {
               {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
               <div className="rv-curved-frame-1">
                 <Image
-                  src="/images/us/boise/ecommerce/portfolio-1.webp"
-                  alt="Boise Idaho ecommerce development and headless Shopify Plus storefront engineering"
+                  src="/images/us/boise/ecommerce/hero-packing-blanket-order.webp"
+                  alt="A woman lowering a folded grey blanket into a cardboard box beside a laptop that shows a shop page made of coloured blocks"
                   width={640}
                   height={640}
                   priority

@@ -102,8 +102,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Capturing Patient Searches in the Global Healthcare Capital',
     description:
       'Operating in the backyard of the Cleveland Clinic and University Hospitals requires exceptional local authority. Independent medical groups, specialized surgical clinics, and orthodontic practices win patient bookings by building exhaustive medical schema, verifying physician credentials, and automating 5-star review collection workflows.',
-    image: '/images/services/healthcare-seo-map-pack.webp',
-    alt: 'Cleveland healthcare and medical practice local SEO search optimization',
+    image: '/images/us/cleveland/seo/card-clinic-stethoscope-exam.webp',
+    alt: 'A doctor in a white coat listening to an older man with a stethoscope in a bright clinic exam room',
     points: [
       'Comprehensive schema for Physician, MedicalClinic, and MedicalSpecialty',
       'HIPAA-aware mobile conversion forms and instant click-to-call buttons',
@@ -116,7 +116,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'From polymer compounders and metal fabricators in Solon to machinery suppliers in Independence, industrial buyers research technical specifications online before submitting an RFQ. We format technical capability matrices and spec sheets to rank for B2B buyer queries and earn automated citations in generative AI search tools.',
     image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Cleveland precision manufacturing and industrial supplier enterprise SEO',
+    alt: 'A machinist in safety glasses loading a metal part into a CNC lathe beside a tablet showing the part',
     points: [
       'Answer-first technical specifications formatted for AI answer engine indexing',
       'Sub-second page load speeds on Next.js and Cloudflare Edge CDN infrastructure',
@@ -129,7 +129,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Legal search terms in Downtown Cleveland and surrounding suburbs carry immense commercial value. We engineer deep practice-area content hubs for personal injury, corporate litigation, and estate planning that establish undeniable local authority and capture permanent top-three organic rankings.',
     image: '/images/us/services/law-firm-seo/hero.webp',
-    alt: 'Cleveland law firm organic search marketing and litigation practice SEO',
+    alt: 'An empty wood-panelled office with bookshelves and a desk in warm light',
     points: [
       'Detailed practice area silos for commercial litigation and injury law',
       'Attorney profile schema with state bar admissions and verified case summaries',
@@ -142,7 +142,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Severe winter lake-effect snowstorms and hot, humid summer heatwaves trigger urgent home repair searches across Cuyahoga and Lorain counties. We position your contracting business directly in the Google Map Pack 3-Pack with live call recording and neighborhood service pages from Lakewood to Westlake.',
     image: '/images/us/services/roofing-seo/search-visibility.webp',
-    alt: 'Cleveland home services and mechanical contractor local SEO map pack strategy',
+    alt: 'A minimal street map illustration with three terracotta location pins',
     points: [
       'Neighborhood landing pages for Lakewood, Westlake, Beachwood, and Strongsville',
       'Live call recording and conversion attribution integrated into Google Analytics 4',
@@ -527,7 +527,7 @@ export default function ClevelandSeoPage() {
               <div className="rv-curved-frame-1">
                 <Image
                   src="/images/us/cleveland/web-design/portfolio-1.webp"
-                  alt="Cleveland Ohio local SEO and Google Map Pack 3-pack optimization strategy"
+                  alt="Upward view of a pale concrete building with a teal glass strip against a blue sky"
                   width={640}
                   height={640}
                   priority

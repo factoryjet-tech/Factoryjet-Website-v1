@@ -103,8 +103,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Self-Service Digital Ordering for Southeastern Manufacturers',
     description:
       'Charlotte is the central industrial crossroads of the Carolinas. We build enterprise Shopify B2B wholesale portals featuring custom dealer pricing tiers, quick-order CSV uploads, NET payment terms, and direct API synchronization with NetSuite and QuickBooks ERP systems.',
-    image: '/images/us/charlotte/ecommerce/portfolio-1.webp',
-    alt: 'Charlotte wholesale B2B portal and industrial manufacturing ecommerce development',
+    image: '/images/us/charlotte/ecommerce/card-machine-shop-lathe.webp',
+    alt: 'A machinist clamping a steel bar in a lathe while a colleague holds a finished steel part up to the light in a machine shop',
     points: [
       'Personalized wholesale pricing catalogs mapped to dealer customer accounts',
       'High-velocity bulk reordering matrices and quick CSV order upload tools',
@@ -116,8 +116,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Year-Make-Model Precision for Charlotte Motorsports Leaders',
     description:
       'Anchored by the NASCAR and performance racing hub in Mooresville and Concord, automotive parts retailers require complex catalog filtering. We engineer sub-second year-make-model vehicle lookup engines, fitment verification databases, and dynamic freight shipping calculations.',
-    image: '/images/us/charlotte/ecommerce/portfolio-2.webp',
-    alt: 'Charlotte automotive and motorsports parts ecommerce engineering',
+    image: '/images/us/charlotte/ecommerce/card-brake-caliper-fitting.webp',
+    alt: 'A mechanic bolting an orange brake caliper onto a raised grey car while a colleague carries the removed wheel in a garage',
     points: [
       'Instant year-make-model vehicle fitment lookup engines with zero lag',
       'Oversized and freight shipping rate calculators for engines and heavy components',
@@ -129,8 +129,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Frictionless Mobile Checkout for South End Fashion Creators',
     description:
       'Charlotte’s vibrant DTC fashion and lifestyle scene demands beautiful visual storefronts that convert on mobile devices. We build custom Shopify Plus themes equipped with Shop Pay acceleration, slide-out cart drawers, dynamic bundle builders, and automated Klaviyo email flows.',
-    image: '/images/us/charlotte/ecommerce/portfolio-3.webp',
-    alt: 'Charlotte DTC apparel and fashion ecommerce storefront development',
+    image: '/images/us/charlotte/ecommerce/card-dress-form-pinning.webp',
+    alt: 'A designer pinning cream linen onto a dress form with an orange pin cushion on her wrist while a man cuts fabric behind her',
     points: [
       'Shop Pay and Apple Pay one-tap mobile checkout acceleration',
       'Slide-out interactive cart drawers with tiered free-shipping progress indicators',
@@ -142,8 +142,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Scaling High-Velocity Subscriptions Across the Carolinas',
     description:
       'From craft coffee roasters and regional barbecue sauces to wellness supplements, food and beverage brands thrive on recurring subscriber revenue. We integrate high-throughput subscription engines via Recharge, custom mix-and-match bundle builders, and automated cold-chain 3PL logistics.',
-    image: '/images/us/b2b/b2b-trade-portal.webp',
-    alt: 'Charlotte specialty food craft beverage and CPG ecommerce development',
+    image: '/images/us/charlotte/ecommerce/card-jam-jar-filling.webp',
+    alt: 'A cook ladling jam into plain glass jars while a younger man scrapes a pot with an orange spatula in a commercial kitchen',
     points: [
       'Flexible subscribe-and-save billing portals with customer self-management',
       'Mix-and-match bundle builders with tiered volume price incentives',
@@ -155,8 +155,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Editorial Flagships for High-Ticket Retail & Luxury Outfitting',
     description:
       'Fine jewelry ateliers, custom furniture showrooms, and luxury lifestyle brands across SouthPark demand bespoke digital flagships. We build custom Shopify Plus storefronts with high-resolution media zoom, integrated Affirm/Klarna financing, and white-glove delivery scheduling.',
-    image: '/images/us/chicago-web-design/storefront.webp',
-    alt: 'Charlotte SouthPark luxury fine jewelry home decor ecommerce design',
+    image: '/images/us/charlotte/ecommerce/card-tableware-boutique-display.webp',
+    alt: 'A shop assistant placing an orange napkin on a porcelain plate at a display dining table while a customer examines a silver candlestick',
     points: [
       'High-resolution visual product zoom with 360-degree interactive asset views',
       'Integrated tiered consumer financing via Affirm and Shop Pay Installments',
@@ -169,7 +169,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Marine electronics suppliers, custom boat rigging manufacturers, and outdoor gear retailers across Lake Norman demand fast and intuitive catalog navigation. We engineer sub-second facet filtering, oversized freight calculation rules, and interactive dealer lookup locator maps.',
     image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Charlotte Lake Norman marine equipment watercraft motorsports ecommerce development',
+    alt: 'A machinist in safety glasses loading a metal part into a CNC lathe beside a tablet showing the part',
     points: [
       'Advanced multi-attribute facet filtering by hull size, horsepower, and model',
       'Dynamic freight rate calculation for oversized watercraft and boat parts',
@@ -574,8 +574,8 @@ export default function CharlotteEcommerceDevelopmentPage() {
               {/* Right Column: Clean Ritovex Organic Curved Photo Frame (Edge-to-Edge) */}
               <div className="rv-curved-frame-1">
                 <Image
-                  src="/images/us/charlotte/charlotte-site-mockup.webp"
-                  alt="Charlotte North Carolina ecommerce development team engineering custom Shopify Plus storefronts"
+                  src="/images/us/charlotte/ecommerce/hero-shop-page-block-review.webp"
+                  alt="Two people at a white desk reviewing a shop page made of coloured blocks on a monitor, one of them holding a plain parcel"
                   width={640}
                   height={640}
                   priority

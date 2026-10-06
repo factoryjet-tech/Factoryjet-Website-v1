@@ -103,8 +103,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Technical Digital Flagships for Energy Corridor Innovators',
     description:
       'From upstream exploration innovators to renewable energy scale-ups across the Energy Corridor, engineering credibility is paramount. We build custom Next.js web applications featuring interactive technology schematics, asset capability matrices, real-time ESG metrics, and sub-second edge performance.',
-    image: '/images/us/houston-web-design/hero.webp',
-    alt: 'Houston Energy Corridor oilfield services cleantech and energy engineering web design',
+    image: '/images/us/houston/web-design/card-pipeline-valve-inspection.webp',
+    alt: 'Two technicians in hard hats and coveralls at an outdoor pipeline, one turning a steel valve wheel and one checking a pressure gauge',
     points: [
       'Interactive equipment schematics and asset capability visualizers',
       'Secure client data rooms and corporate investor documentation hubs',
@@ -117,7 +117,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Specialized surgery centers, clinical research institutes, and life science innovators across the Texas Medical Center demand digital presences that project institutional authority. We engineer bespoke Figma UI/UX design systems with physician directories, treatment procedure silos, and HIPAA-compliant intake funnels.',
     image: '/images/us/b2b-website-design/hero.webp',
-    alt: 'Houston Texas Medical Center clinical practice biotech and healthcare web design',
+    alt: 'Three colleagues at a large wall display showing a plain grey page layout',
     points: [
       'Multi-practitioner physician directories and treatment procedure silos',
       'HIPAA-compliant patient intake forms and encrypted consultation routing',
@@ -130,7 +130,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'From Ship Channel heavy fabrication facilities to petrochemical equipment builders, commercial procurement officers demand verified engineering credentials. We build responsive web applications with interactive tolerance tables, ISO quality showcases, and secure CAD blueprint upload funnels.',
     image: '/images/us/houston-web-design/industry.webp',
-    alt: 'Houston heavy industrial fabrication petrochemical and commercial construction web design',
+    alt: 'A woman in a hi-vis vest and a man holding a tablet over site drawings, industrial plant visible through the window',
     points: [
       'Interactive equipment capability matrices and engineering tolerance tables',
       'Secure CAD and STEP blueprint file upload integrations for rapid RFQ intake',
@@ -142,8 +142,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Commercial Lead Engines for Houston Ship Channel Operators',
     description:
       'Maritime logistics providers, stevedoring operators, and intermodal carriers across the Port of Houston require high-speed lead engines. We build responsive web applications with interactive freight quote estimators, facility specification sheets, and automated RFQ routing.',
-    image: '/images/us/houston-web-design/process.webp',
-    alt: 'Houston Ship Channel maritime logistics port freight forwarding website design',
+    image: '/images/us/houston/web-design/card-container-yard-signal.webp',
+    alt: 'Two dock workers in white hard hats among plain shipping containers, one speaking into an orange radio and one directing a lifting machine',
     points: [
       'Interactive freight rate estimation calculators and RFQ workflow automation',
       'Sub-second mobile performance ensuring immediate commercial quote submissions',
@@ -155,8 +155,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Commercial Lead Engines for Houston Ship Channel Operators',
     description:
       'Maritime logistics providers, chemical terminals, stevedoring operators, and intermodal carriers across the Port of Houston require high-speed lead engines. We build responsive web applications with interactive freight quote estimators, facility specification sheets, hazardous materials compliance disclosures, and automated RFQ routing.',
-    image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Houston Ship Channel maritime logistics port freight forwarding website design',
+    image: '/images/us/houston/web-design/card-quayside-mooring-rope.webp',
+    alt: 'Two port workers looping a thick mooring rope over a steel bollard on a quay beside the plain hull of a cargo ship, an orange life ring nearby',
     points: [
       'Interactive freight rate estimation calculators and RFQ workflow automation',
       'Sub-second mobile performance ensuring immediate commercial quote submissions',
@@ -169,7 +169,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'High-end custom home builders, luxury interior designers, and architectural firms in River Oaks, Memorial, and The Woodlands require immersive visual storytelling. We build custom Next.js portfolios with high-resolution image galleries, interactive 3D floor plan viewers, and private consultation booking workflows.',
     image: '/images/services/card-real-estate.webp',
-    alt: 'Houston luxury residential custom home builder and architecture website design',
+    alt: 'A laptop on a marble table showing a property listings website with photos and a map',
     points: [
       'High-resolution retina photo galleries loading smoothly at 60 frames per second',
       'Interactive architectural project lookbooks and finishes specification matrices',
@@ -575,7 +575,7 @@ export default function HoustonWebDesignPage() {
               <div className="rv-curved-frame-1">
                 <Image
                   src="/images/us/houston-web-design/hero.webp"
-                  alt="Houston Texas web design and custom Next.js web application development"
+                  alt="Two people at a wall display showing fashion pages, city towers through the window"
                   width={640}
                   height={640}
                   priority

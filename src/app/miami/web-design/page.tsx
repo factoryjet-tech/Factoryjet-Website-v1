@@ -103,7 +103,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Brickell and Coral Gables wealth management firms demand websites that speak to international family offices, high-net-worth investors, and corporate treasurers. We build custom Next.js web applications featuring interactive investor portal gateways, multi-currency display, and lightning-fast page speeds.',
     image: '/images/us/saas-website-design/hero.webp',
-    alt: 'Miami private wealth and cross-border fintech web design engineering',
+    alt: 'A man and a woman in a studio pointing at a wall display of a handbag product page, the same page open on a laptop',
     points: [
       'Interactive portfolio performance overviews and downloadable investor reports',
       'Frictionless multi-step consultation scheduling forms routing to wealth partners',
@@ -115,8 +115,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'High-Impact Visual Flagships for South Florida Developers',
     description:
       'From ultra-luxury condominium developments in Biscayne Bay to boutique hotels in South Beach, visual prestige drives buyer interest. We craft bespoke digital flagships featuring full-screen cinematic video headers, interactive floorplan configurators, and private showing reservation flows.',
-    image: '/images/us/services/dental-seo/hero.webp',
-    alt: 'Miami luxury real estate and architecture website design',
+    image: '/images/us/miami/web-design/card-agent-couple-house-door.webp',
+    alt: 'An estate agent holding open the front door of a modern white house for a couple walking toward it, an orange planter beside the door',
     points: [
       'Interactive 3D unit floorplan viewers and high-resolution architectural galleries',
       'VIP private showing inquiry forms with automated CRM sales lead routing',
@@ -129,7 +129,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'High-stakes international arbitration and corporate law firms in Miami cannot afford generic visual templates. We craft bespoke digital flagships featuring practice area content hubs, partner biographical repositories with bar admission schema, verified transaction track records, and secure client communication endpoints.',
     image: '/images/us/services/law-firm-seo/hero.webp',
-    alt: 'Miami corporate law firm litigation and international arbitration web design',
+    alt: 'An empty wood-panelled office with bookshelves and a desk in warm light',
     points: [
       'Deep practice area knowledge graphs and structured legal case victory portfolios',
       'Attorney profile schema with state bar admissions and published industry insights',
@@ -141,8 +141,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Engineering Industrial Authority for Doral Logistics Leaders',
     description:
       'Miami is the premier logistics gateway between North America and Latin America. Industrial websites built on slow legacy WordPress themes fail to convince global supply chain directors. We develop high-performance web applications featuring structured capability tables, instant freight quote calculators, and sub-second edge hosting.',
-    image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Miami import export and freight forwarding web design engineering',
+    image: '/images/us/miami/web-design/card-forklift-truck-bay-loading.webp',
+    alt: 'A forklift driver lifting a pallet of plain boxes into a plain white truck at a loading bay while a woman guides him with a raised hand',
     points: [
       'Interactive logistics capability matrices and downloadable customs documentation',
       'Frictionless multi-step freight RFQ form workflows routing directly to dispatch teams',
@@ -154,8 +154,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Editorial Maritime Portfolios & Miami River Superyacht Showcases',
     description:
       'High-end yacht brokerages, charter fleets, and marine services operating in Miami Beach, Fort Lauderdale, and Coconut Grove require prestigious digital flagships. We build custom Next.js web applications featuring vessel inventory filtering, high-resolution photo galleries, virtual 360-degree cabin tours, and VIP private charter booking funnels.',
-    image: '/images/services/card-real-estate.webp',
-    alt: 'Miami luxury yacht brokerage and maritime charter website design',
+    image: '/images/us/miami/web-design/card-marina-yacht-broker-viewing.webp',
+    alt: 'A yacht broker in a white polo shirt showing a moored white motor yacht to a woman in sunglasses on a marina pontoon',
     points: [
       'Searchable vessel inventory catalogs with builder, length, and draft filtering',
       'Interactive 360-degree virtual yacht cabin tours and high-resolution video embeds',
@@ -168,7 +168,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'From Brickell wellness institutes to world-renowned plastic surgery clinics in Coral Gables and South Beach, patient trust drives procedure bookings. We engineer HIPAA-aware medical flagships featuring before-and-after procedural galleries, Florida Board of Medicine credentials, surgeon biographies, and instant private consultation scheduling.',
     image: '/images/us/services/dental-seo/hero.webp',
-    alt: 'Miami plastic surgery aesthetic medicine and luxury wellness web design',
+    alt: 'A bright empty reception lobby with a sofa, plants and a white reception desk',
     points: [
       'Interactive before-and-after treatment sliders with procedural filtering',
       'HIPAA-compliant consultation booking forms and secure patient intake portals',
@@ -539,7 +539,7 @@ export default function MiamiWebDesignPage() {
               <div className="rv-curved-frame-1">
                 <Image
                   src="/images/us/miami/hero-miami.webp"
-                  alt="Miami Florida modern web design engineering and custom Next.js website mockup"
+                  alt="A skyline of high-rise towers across turquoise water, framed by palm trees"
                   width={640}
                   height={640}
                   priority

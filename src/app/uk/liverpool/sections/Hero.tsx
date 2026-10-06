@@ -171,7 +171,7 @@ export default function Hero() {
               <div className="relative aspect-[4/3] w-full">
                 <Image
                   src="/images/uk/liverpool/hero-liverpool.webp"
-                  alt="The Liverpool waterfront at the Royal Albert Dock"
+                  alt="The Royal Liver, Cunard and Port of Liverpool buildings at Pier Head, seen across the water"
                   fill
                   sizes="(min-width: 1024px) 45vw, 100vw"
                   priority

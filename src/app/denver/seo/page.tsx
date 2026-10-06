@@ -103,7 +103,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Legal and financial search queries across Denver and Arapahoe counties are intensely contested. We engineer impenetrable local SEO architectures featuring practice area knowledge hubs, attorney bar admission schemas, verified case outcome showcases, and localized citation dominance.',
     image: '/images/us/denver/law-firm.webp',
-    alt: 'Denver and Cherry Creek private wealth management estate planning and corporate law local SEO',
+    alt: 'A law office reception with a glass meeting room and a mountain-backed skyline through the windows',
     points: [
       'LegalService and Attorney schema linking Colorado Bar verified credentials',
       'Localized practice area silos targeting LoDo, Cherry Creek, and the Denver Tech Center',
@@ -116,7 +116,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'In Denver’s premier elective surgery and concierge wellness markets, prospective patients evaluate physician credentials and peer reviews thoroughly before booking. We optimize Google Business Profiles, implement MedicalProcedure structured schemas, build procedure-specific geo silos, and generate steady review velocity.',
     image: '/images/us/denver/healthcare-clinic.webp',
-    alt: 'Denver Cherry Creek aesthetic plastic surgery medical practice clinic local SEO strategy',
+    alt: 'A bright clinic reception with a marble desk, pendant lights and armchairs',
     points: [
       'Multi-practitioner Google Business Profile optimization with procedure sub-categories',
       'MedicalProcedure and Physician structured JSON-LD schema linking hospital affiliations',
@@ -128,8 +128,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Local & Regional Search Dominance for Colorado Outdoor Leaders',
     description:
       'From Golden technical gear builders to Boulder active apparel brands, outdoor consumers demand immediate regional store discovery. We optimize Google Business Profiles, embed product catalogs, synchronize dealer networks, and capture high-intent gear searches.',
-    image: '/images/us/denver/ecommerce/portfolio-1.webp',
-    alt: 'Denver outdoor gear technical apparel brand retail store local SEO optimization',
+    image: '/images/us/denver/seo/card-ski-waxing-bench.webp',
+    alt: 'A technician scraping wax from a ski clamped to a tuning bench while a woman fits a binding, orange ski boots on the floor',
     points: [
       'Multi-location retail store and authorized dealer directory optimization',
       'Local radius geo-fencing targeting Front Range recreation corridors',
@@ -142,7 +142,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Commercial general contractors, roofing companies, and HVAC specialists across the Denver metropolitan area require steady commercial project bidding opportunities. We build geo-targeted service area architectures, optimize Service Area Business (SAB) profiles, and capture high-intent commercial keyword searches.',
     image: '/images/us/denver/contractor-site.webp',
-    alt: 'Denver commercial general contractor HVAC and roofing local SEO ranking architecture',
+    alt: 'A builder in a white hard hat leaning on site plans at a timber-framed building, a city skyline behind him',
     points: [
       'Service area radius optimization covering Denver, Aurora, Lakewood, and Littleton',
       'High-speed mobile performance ensuring immediate project bidding phone calls',
@@ -519,7 +519,7 @@ export default function DenverSeoPage() {
               <div className="rv-curved-frame-1">
                 <Image
                   src="/images/us/denver/hero-denver.webp"
-                  alt="Denver Colorado local SEO rankings and Google Maps 3-Pack dominance strategy"
+                  alt="A downtown skyline in front of snow-capped mountains under a blue sky"
                   width={640}
                   height={640}
                   priority

@@ -103,8 +103,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Local Map Pack Dominance for Arlington Entertainment Leaders',
     description:
       'Hospitality groups, event venues, and upscale dining establishments in Arlington Entertainment District rely on local search visibility to capture massive stadium crowds. We optimize Google Maps profiles, build event-driven landing pages, implement structured menu schemas, and drive high-intent reservation volume.',
-    image: '/images/us/arlington/seo/arlington-seo-hero.webp',
-    alt: 'Arlington TX entertainment district event venue hospitality local SEO strategy',
+    image: '/images/us/arlington/seo/card-event-hall-table-setup.webp',
+    alt: 'A woman in a waistcoat setting glasses on a round table beside a man in a navy apron folding a napkin in a bright event hall',
     points: [
       'Restaurant and EventVenue structured JSON-LD schema with direct reservation booking integration',
       'Google Maps 3-Pack ranking for high-intent game-day, concert, and corporate catering terms',
@@ -143,7 +143,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Precision tooling shops, automotive parts distributors, and intermodal freight operators across the Great Southwest Industrial District demand steady commercial quote requests. We build specialized technical service pages, link ISO quality certifications, and optimize commercial keyword rankings.',
     image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Arlington Great Southwest industrial park precision manufacturing logistics local SEO',
+    alt: 'A machinist in safety glasses loading a metal part into a CNC lathe beside a tablet showing the part',
     points: [
       'Industrial engineering service schemas linking ISO and manufacturing certifications',
       'High-intent B2B keyword silos targeting regional OEM and tier-1 supplier procurement teams',
@@ -542,8 +542,8 @@ export default function ArlingtonSeoPage() {
               {/* Right Column: Clean Organic Curved Photo Frame */}
               <div className="rv-curved-frame-1">
                 <Image
-                  src="/images/us/arlington/seo/arlington-seo-hero.webp"
-                  alt="Arlington Texas local SEO Google Maps 3-Pack ranking strategy"
+                  src="/images/us/arlington/seo/hero-map-pins-desk-review.webp"
+                  alt="Two people at a desk looking at a monitor that shows a pale map with coloured pins, an orange desk lamp beside them"
                   width={640}
                   height={640}
                   priority
@@ -585,8 +585,8 @@ export default function ArlingtonSeoPage() {
               {/* Left Column: Clean Organic Curved Photo Frame */}
               <div className="rv-curved-frame-2">
                 <Image
-                  src="/images/us/arlington/seo/arlington-local-business-seo.webp"
-                  alt="FactoryJet senior SEO engineers optimizing Arlington local entity knowledge graph"
+                  src="/images/us/arlington/seo/team-cafe-table-laptop-map.webp"
+                  alt="Three people at a round cafe table looking at a laptop that shows a pale map with coloured pins, an orange notebook on the table"
                   width={640}
                   height={640}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}

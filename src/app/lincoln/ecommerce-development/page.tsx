@@ -103,8 +103,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Enterprise B2B Wholesale Portals for Nebraska AgTech Leaders',
     description:
       'Livestock nutrition manufacturers, seed distributors, and precision agriculture equipment providers across Lincoln and the Silicon Prairie require high-performance digital commerce capabilities. We build high-speed wholesale platforms with automated PO processing, Net-30 credit terms, dealer group tier pricing, and real-time ERP inventory syncing.',
-    image: '/images/us/lincoln/ecommerce/portfolio-1.webp',
-    alt: 'Lincoln Nebraska agricultural technology livestock genetics and agronomy supply B2B ecommerce platform',
+    image: '/images/us/lincoln/ecommerce/card-crop-survey-drone-launch.webp',
+    alt: 'An agronomist kneeling to set a small drone on the ground at the edge of a soybean field while a man stands holding the controller',
     points: [
       'Custom dealer group pricing tiers with contracted volume discount schedules',
       'Instant PO generation, Net-30 invoicing, and multi-user corporate approval workflows',
@@ -117,7 +117,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Sheet metal fabricators, industrial electrical parts distributors, and hydraulic tool manufacturers across North 27th and West O Street demand resilient online catalogs. We engineer specialized technical search filters, schematic part lookups, automated freight rating, and customer credit line management.',
     image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Lincoln Nebraska industrial equipment sheet metal fabrication and manufacturing B2B ecommerce engineering',
+    alt: 'A machinist in safety glasses loading a metal part into a CNC lathe beside a tablet showing the part',
     points: [
       'Interactive schematic parts breakdown with instant add-to-cart item matching',
       'Automated LTL freight shipping calculation and hazardous materials handling logic',
@@ -130,7 +130,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Collegiate apparel brands, boutique lifestyle retailers, and sports merchandise creators across Downtown Lincoln and the Railyard need platforms engineered for viral game-day spikes. We build custom headless Next.js storefronts with instant product filtering, visual lookbooks, and frictionless 1-tap mobile checkouts.',
     image: '/images/us/saas-website-design/hero.webp',
-    alt: 'Lincoln Nebraska Haymarket collegiate apparel lifestyle goods and fan merchandise ecommerce',
+    alt: 'A man and a woman in a studio pointing at a wall display of a handbag product page, the same page open on a laptop',
     points: [
       'Sub-second first contentful paint and instant product filtering with zero layout shifts',
       'Interactive visual lookbooks, dynamic sizing calculators, and cross-sell gear bundles',
@@ -142,8 +142,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Tactile Editorial E-Commerce for Haymarket Food Artisans',
     description:
       'Specialty meat processors, artisan confectionery creators, and craft beverage makers across the Historic Haymarket demand digital storefronts that reflect their product quality. We engineer rich visual storytelling layouts with recurring subscription delivery management, cold-pack shipping logic, and localized age verification.',
-    image: '/images/us/b2b-website-design/sales-enablement.webp',
-    alt: 'Lincoln Haymarket artisan specialty food craft beverage and gourmet goods subscription ecommerce',
+    image: '/images/us/lincoln/ecommerce/card-chocolatier-truffle-dipping.webp',
+    alt: 'A chocolatier in a white jacket dipping a truffle in melted chocolate while a woman in a striped apron lines up finished truffles on a tray',
     points: [
       'Flexible recurring subscription management with custom delivery interval selection',
       'Dynamic cold-pack and localized perishable shipping rate calculation',
@@ -155,8 +155,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Digital License Provisioning & Global Hardware Sales Portals',
     description:
       'AgTech software developers and precision sensor innovators at Nebraska Innovation Campus (NIC) require sophisticated B2B commerce. We engineer custom Next.js web applications featuring automated digital software license key provisioning, developer API documentation gateways, and tier-based hardware evaluation unit checkouts.',
-    image: '/images/services/card-real-estate.webp',
-    alt: 'Lincoln Nebraska Innovation Campus agtech software precision sensors ecommerce development',
+    image: '/images/us/lincoln/ecommerce/card-field-soil-sensor-probe.webp',
+    alt: 'A researcher kneeling on an orange pad pushing a metal soil probe into the earth beside young corn plants while a woman fixes a sensor to a post',
     points: [
       'Automated digital license provisioning and recurring enterprise SaaS billing',
       'Developer API key management and SDK documentation download portals',
@@ -169,7 +169,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Aviation component manufacturers, sheet metal fabricators, and warehouse logistics providers across Lincoln Air Park demand rugged online ordering portals. We build custom Next.js storefronts featuring engineering drawing downloads, real-time inventory lot tracking, and freight quoting for heavy LTL freight.',
     image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Lincoln Air Park aerospace components warehousing precision sheet metal B2B ecommerce engineering',
+    alt: 'A machinist in safety glasses loading a metal part into a CNC lathe beside a tablet showing the part',
     points: [
       'Interactive CAD specification matrices and instant part number add-to-cart matching',
       'Real-time multi-location warehouse inventory feeds across eastern Nebraska',
@@ -550,8 +550,8 @@ export default function LincolnEcommerceDevelopmentPage() {
               {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
               <div className="rv-curved-frame-1">
                 <Image
-                  src="/images/us/lincoln/ecommerce/portfolio-1.webp"
-                  alt="Lincoln Nebraska ecommerce development and headless Shopify Plus storefront engineering"
+                  src="/images/us/lincoln/ecommerce/hero-parcel-weighing-bench.webp"
+                  alt="A man in a flannel shirt weighing a wrapped parcel on a small scale beside a laptop showing a shop page of coloured blocks"
                   width={640}
                   height={640}
                   priority

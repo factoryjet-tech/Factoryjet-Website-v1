@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import CityTiltFx from "./CityTiltFx";
+import { CITY_PHOTO_ALT, cityPhotoSrc } from "./cityPhotos";
 
 // ── City data (verbatim from content.md) ─────────────────────────────────────
 type City = {
@@ -131,8 +132,8 @@ function CityCard({ city }: { city: City }) {
         }}
       >
         <Image
-          src={`/images/uk/city-${city.slug}.jpg`}
-          alt={`${city.name} UK city skyline`}
+          src={cityPhotoSrc(city.slug)}
+          alt={CITY_PHOTO_ALT[city.slug] ?? `${city.name} city centre`}
           fill
           sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
           className="object-cover"

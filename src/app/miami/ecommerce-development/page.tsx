@@ -104,7 +104,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Doral and Airport logistics distributors in Miami require complex cross-border procurement systems. We develop custom BigCommerce B2B and Shopify Plus architectures featuring multi-currency pricing, duty and tariff calculations, company account hierarchies, and real-time NetSuite or SAP inventory synchronization.',
     image: '/images/us/marketplace/miami-luxury-crossborder-creator-commerce.webp',
-    alt: 'Miami enterprise cross-border wholesale distribution and B2B ecommerce development',
+    alt: 'A woman at a marble table using a tablet, with palm trees and a waterfront skyline through the window',
     points: [
       'Customer-specific contracted pricing matrices and tiered volume discounts',
       'One-click reordering, CSV bulk ordering, and purchase order net-payment terms',
@@ -117,7 +117,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'From haute couture houses in the Design District to global swimwear brands in Miami Beach, visual elegance drives customer lifetime value. We engineer headless Shopify Plus storefronts with sub-second page transitions, interactive lookbooks, smart product bundles, and frictionless one-click mobile checkout.',
     image: '/images/us/saas-website-design/hero.webp',
-    alt: 'Miami luxury fashion and resort wear D2C ecommerce development',
+    alt: 'A man and a woman in a studio pointing at a wall display of a handbag product page, the same page open on a laptop',
     points: [
       'Sub-second headless Next.js frontend with instant mobile product filtering',
       'Dynamic product bundling, tiered upsells, and personalized cross-sells',
@@ -129,8 +129,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'High-Volume Recurring Revenue Engines for Specialty Importers',
     description:
       'Gourmet food importers and specialty beverage brands in Miami demand high-throughput recurring subscription engines. We develop custom recharge and Stripe billing integrations, temperature-controlled shipping rate calculators, and automated customer self-service retention portals.',
-    image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Miami specialty food beverage and gourmet import subscription ecommerce',
+    image: '/images/us/miami/ecommerce/card-cheese-wheel-cold-room.webp',
+    alt: 'A woman in a white coat testing a large cheese wheel with a metal tool while a man in a blue smock carries another wheel in a cold room',
     points: [
       'Custom box builder and recurring subscription membership architectures',
       'Self-service customer portal reducing subscription cancellation churn',
@@ -143,7 +143,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Cosmetic surgery product manufacturers and aesthetic skincare brands across South Florida require secure, compliant e-commerce systems. We build verified provider purchase portals, patient direct-to-door fulfillment integrations, and secure payment workflows.',
     image: '/images/us/services/dental-seo/hero.webp',
-    alt: 'Miami medical aesthetic skincare and clinic product ecommerce store design',
+    alt: 'A bright empty reception lobby with a sofa, plants and a white reception desk',
     points: [
       'Verified practitioner license gating and professional wholesale tiers',
       'HIPAA-aware checkout workflows and secure patient data handling',
@@ -155,8 +155,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Private Client Salons & VIP Checkout Portals for Brickell Brands',
     description:
       'High-end jewelry creators, luxury accessory designers, and wealth merchandising flagships across Brickell demand bespoke private client experiences. We engineer headless Shopify Plus applications with password-protected VIP vaults, multi-currency wallets, and white-glove concierge checkout workflows.',
-    image: '/images/services/card-real-estate.webp',
-    alt: 'Miami Brickell luxury creator commerce private client high ticket ecommerce development',
+    image: '/images/us/miami/ecommerce/card-private-boutique-handbag-showing.webp',
+    alt: 'A sales adviser in white gloves presenting a plain tan leather handbag to a woman in a white suit seated on a sofa in a private showroom',
     points: [
       'Token-gated VIP product drops and private client reservation vaults',
       'Multi-currency cryptocurrency and wire transfer high-ticket checkout gateways',
@@ -168,8 +168,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Pan-Regional E-Commerce Gateways for Coral Gables Headquarters',
     description:
       'Multinational consumer brands and Latin American regional headquarters in Coral Gables require localized cross-border commerce architectures. We build dual-language English and Spanish storefronts with automated IP geolocation routing, localized payment gateways, and integrated customs duty calculations.',
-    image: '/images/us/b2b-website-design/hero.webp',
-    alt: 'Miami Coral Gables cross border Latin America dual language ecommerce development',
+    image: '/images/us/miami/ecommerce/card-export-sample-table-merchandising.webp',
+    alt: 'A merchandiser arranging folded shirts by colour on a long table while a man packs plain shoe boxes into a carton in a bright sample room',
     points: [
       'Automated IP geolocation language detection with frictionless English/Spanish currency toggles',
       'Integrated Latin American local payment gateways including PIX, OXXO, and MercadoPago',
@@ -545,7 +545,7 @@ export default function MiamiEcommercePage() {
               <div className="rv-curved-frame-1">
                 <Image
                   src="/images/us/marketplace/miami-luxury-crossborder-creator-commerce.webp"
-                  alt="Miami Florida enterprise ecommerce engineering and headless Shopify Plus development"
+                  alt="A woman at a marble table using a tablet, with palm trees and a waterfront skyline through the window"
                   width={640}
                   height={640}
                   priority

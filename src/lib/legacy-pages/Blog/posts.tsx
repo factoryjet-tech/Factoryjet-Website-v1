@@ -4545,7 +4545,7 @@ export const POSTS: BlogPost[] = [
 
       {/* 3. Xee Design */}
       <h2 id="xee-design" className="text-2xl font-bold mt-8 mb-4">3. <a href="https://xeedesign.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 transition-colors">Xee Design</a>, Strong UI/UX and Product Experience</h2>
-      <img src="/top-web-design-companies-mumbai/xee design ui ux saas website.webp" alt="UI UX SaaS website interface designed by Xee Design" className="rounded-xl w-full mb-6" />
+      <img src="/top-web-design-companies-mumbai/xee design ui ux saas website.webp" alt="Screenshot of the Xee Design homepage" className="rounded-xl w-full mb-6" />
       <p className="mb-4">
         Xee Design is a strong fit for businesses that prioritize user journey and interface quality.
       </p>
@@ -4593,7 +4593,7 @@ export const POSTS: BlogPost[] = [
 
       {/* 6. Innovins */}
       <h2 id="innovins" className="text-2xl font-bold mt-8 mb-4">6. <a href="https://www.innovins.com/web-development-services/" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 transition-colors">Innovins</a>, Development + Marketing Support</h2>
-      <img src="/top-web-design-companies-mumbai/innovins web development seo dashboard.webp" alt="Business website with SEO and analytics dashboard by Innovins" className="rounded-xl w-full mb-6" />
+      <img src="/top-web-design-companies-mumbai/innovins web development seo dashboard.webp" alt="Screenshot of the Innovins homepage" className="rounded-xl w-full mb-6" />
       <p className="mb-4">
         Innovins is a solid option if you want web development and digital marketing under one roof.
       </p>
@@ -4609,7 +4609,7 @@ export const POSTS: BlogPost[] = [
 
       {/* 7. Eskon Web Solutions */}
       <h2 id="eskon" className="text-2xl font-bold mt-8 mb-4">7. <a href="https://www.eskonwebsolutions.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 transition-colors">Eskon Web Solutions</a>, Better for E-Commerce</h2>
-      <img src="/top-web-design-companies-mumbai/eskon ecommerce store website.webp" alt="E-commerce website store interface by Eskon Web Solutions" className="rounded-xl w-full mb-6" />
+      <img src="/top-web-design-companies-mumbai/eskon ecommerce store website.webp" alt="Screenshot of the Eskon Web Solutions homepage" className="rounded-xl w-full mb-6" />
       <p className="mb-4">
         If your primary focus is selling products online, Eskon Web Solutions is stronger than general web design agencies.
       </p>
@@ -4641,7 +4641,7 @@ export const POSTS: BlogPost[] = [
 
       {/* 9. Devki Infotech */}
       <h2 id="devki-infotech" className="text-2xl font-bold mt-8 mb-4">9. <a href="https://www.devkiinfotech.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 transition-colors">Devki Infotech</a>, Best for Complex Web Systems</h2>
-      <img src="/top-web-design-companies-mumbai/devki custom software dashboard.webp" alt="Custom web application dashboard by Devki Infotech" className="rounded-xl w-full mb-6" />
+      <img src="/top-web-design-companies-mumbai/devki custom software dashboard.webp" alt="Screenshot of the Devki Infotech homepage" className="rounded-xl w-full mb-6" />
       <p className="mb-4">
         Devki Infotech becomes more relevant when the requirement goes beyond a marketing website.
       </p>
@@ -4661,7 +4661,7 @@ export const POSTS: BlogPost[] = [
 
       {/* 10. Bloom Agency */}
       <h2 id="bloom-agency" className="text-2xl font-bold mt-8 mb-4">10. <a href="https://bloomagency.in/website-development-company-mumbai/" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 transition-colors">Bloom Agency</a>, Strong for D2C Brands</h2>
-      <img src="/top-web-design-companies-mumbai/bloom d2c ecommerce brand website.webp" alt="D2C ecommerce website design by Bloom Agency" className="rounded-xl w-full mb-6" />
+      <img src="/top-web-design-companies-mumbai/bloom d2c ecommerce brand website.webp" alt="Screenshot of the Bloom Agency homepage" className="rounded-xl w-full mb-6" />
       <p className="mb-4">
         Bloom Agency is a good choice for direct-to-consumer and product-led brands.
       </p>

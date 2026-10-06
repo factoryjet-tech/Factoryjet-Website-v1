@@ -1053,8 +1053,8 @@ export default function AIWorkflowAutomationPage() {
               </div>
               <div className="bg-white p-4 rounded-xl border border-[#E5E5DC] shadow-sm">
                 <Image
-                  src="/images/us/services/ai-agency/service-explanation-before-after.webp"
-                  alt="Automated versus manual data processing performance comparison"
+                  src="/images/us/services/ai-workflow-automation/illustration-paper-table-laptop-grid.webp"
+                  alt="One long table, its left half piled with binders and loose sheets a woman sorts by hand, its right half clear with a man at a laptop"
                   width={600}
                   height={400}
                   className="rounded-lg object-cover w-full h-auto mb-3"
@@ -1066,8 +1066,8 @@ export default function AIWorkflowAutomationPage() {
               </div>
               <div className="bg-white p-4 rounded-xl border border-[#E5E5DC] shadow-sm">
                 <Image
-                  src="/images/us/services/ai-agency/service-team-ai.webp"
-                  alt="FactoryJet workflow automation engineering team"
+                  src="/images/us/services/ai-workflow-automation/team-wall-monitor-status-squares.webp"
+                  alt="A woman pointing at a wall monitor that shows green squares and one red square while two men watch, one holding a phone"
                   width={600}
                   height={400}
                   className="rounded-lg object-cover w-full h-auto mb-3"

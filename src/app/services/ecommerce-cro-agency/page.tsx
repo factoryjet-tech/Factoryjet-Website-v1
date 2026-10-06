@@ -614,8 +614,8 @@ export default function EcommerceCroAgencyPage() {
               <figure className="pp-splitband-fig">
                 <div className="pp-shot" style={{ position: 'relative', aspectRatio: '4 / 3' }}>
                   <Image
-                    src="/images/us/marketplace/ecommerce-speed-core-web-vitals-performance-engine.webp"
-                    alt="A Lighthouse performance report on a dual-monitor desk setup, showing a 100 performance score and Core Web Vitals metrics including Largest Contentful Paint under one second"
+                    src="/images/us/services/ecommerce-cro-agency/section-two-monitor-bars.webp"
+                    alt="A man at a white desk with two monitors, one showing three short red bars and the other three long green bars and rings"
                     width={1280}
                     height={800}
                     style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}

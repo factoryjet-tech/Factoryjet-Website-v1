@@ -102,8 +102,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Converting Affluent Patients in America’s Premier Master-Planned Community',
     description:
       'Lakewood Ranch is home to high-income retirees and active families demanding premium healthcare, aesthetic medicine, and concierge longevity care. We build comprehensive medical schema, doctor profile directories, and HIPAA-aware conversion flows that allow practices to dominate the Google 3-Pack and earn direct quotes in AI answer engines.',
-    image: '/images/us/lakewood-ranch/seo/lakewood-ranch-buyer-intent-dashboard.webp',
-    alt: 'Lakewood Ranch healthcare and medical clinic local search engine optimization',
+    image: '/images/us/lakewood-ranch/seo/card-blood-pressure-check.webp',
+    alt: 'A doctor wrapping a blood pressure cuff around the arm of an older woman in a lilac cardigan seated in an armchair in a bright room',
     points: [
       'Comprehensive schema for Physician, MedicalClinic, and MedicalSpecialty',
       'HIPAA-aware appointment scheduling and instant click-to-call mobile buttons',
@@ -115,8 +115,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Earning High-Ticket Consultations Among High-Net-Worth Retirees',
     description:
       'With thousands of high-net-worth individuals relocating to Lakewood Ranch, financial advisory practices and estate planning attorneys require authoritative search visibility. We build verified financial entity schemas, author deep wealth preservation guides, and engineer sub-second page performance.',
-    image: '/images/us/services/law-firm-seo/team.webp',
-    alt: 'Lakewood Ranch wealth management and estate planning local SEO strategy',
+    image: '/images/us/lakewood-ranch/seo/card-wealth-adviser-retired-couple.webp',
+    alt: 'A financial adviser in a cream blazer talking with a retired couple at a round table with two closed folders in a bright meeting room',
     points: [
       'Structured JSON-LD schema for FinancialService, LegalService, and WealthManagement',
       'High-authority regional media citations and verified NAP directory synchronization',
@@ -128,8 +128,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Capturing Multi-Million-Dollar Residential Project Inquiries',
     description:
       'Homeowners in The Lake Club, Country Club East, and Waterside demand elite craftsmanship. We optimize project portfolio galleries, architectural spec sheets, and neighborhood landing pages to position your contracting brand as the premier luxury builder across Sarasota and Manatee counties.',
-    image: '/images/us/lakewood-ranch/seo/lakewood-ranch-new-resident-seo.webp',
-    alt: 'Lakewood Ranch luxury custom home builder and contractor local SEO',
+    image: '/images/us/lakewood-ranch/seo/card-timber-wall-frame-raising.webp',
+    alt: 'Two carpenters lifting a timber wall frame upright on a concrete slab at a house building site, an orange extension cable on the ground',
     points: [
       'High-resolution WebP project galleries optimized for image search and speed',
       'Neighborhood landing pages for The Lake Club, Waterside, and Country Club',
@@ -142,7 +142,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Gulf Coast tropical storms and humid subtropical heat create urgent homeowner repair and storm hardening demands. We position your contracting business directly in the Google Map Pack 3-Pack with live call recording and neighborhood service pages from Lakewood Ranch to Sarasota and Bradenton.',
     image: '/images/us/services/roofing-seo/hero.webp',
-    alt: 'Lakewood Ranch hurricane roofing and contractor local SEO map pack strategy',
+    alt: 'Aerial view of suburban shingle rooftops at golden hour',
     points: [
       'Multi-county landing pages for Lakewood Ranch, Sarasota, and Bradenton',
       'Live call recording and conversion attribution integrated into Google Analytics 4',
@@ -525,7 +525,7 @@ export default function LakewoodRanchSeoPage() {
               <div className="rv-curved-frame-1">
                 <Image
                   src="/images/us/lakewood-ranch/seo/lakewood-ranch-seo-hero.webp"
-                  alt="Lakewood Ranch Florida local SEO technical optimization and Google Map Pack ranking strategy"
+                  alt="A couple at a waterside cafe table looking at a phone, palm trees and shopfronts behind them"
                   width={640}
                   height={640}
                   priority

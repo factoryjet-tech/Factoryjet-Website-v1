@@ -103,8 +103,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'High-LTV Subscription Architectures for Utah Wellness Brands',
     description:
       'Nutraceutical innovators, wellness drink brands, and dietary supplement companies across South Jordan and Salt Lake City require recurring subscription revenue and flexible bundle configurations. We engineer custom Recharge and Smartrr subscription portals with self-service flavor swapping, automated prepaid discounts, and cold-pack shipping logic.',
-    image: '/images/us/denver/ecommerce/portfolio-2.webp',
-    alt: 'Salt Lake City nutraceutical dietary supplement wellness subscription ecommerce development',
+    image: '/images/us/salt-lake-city/ecommerce/card-supplement-bottle-filling.webp',
+    alt: 'A woman in a white coat and hairnet pouring capsules through a funnel into a plain white bottle while a man presses lids onto filled bottles',
     points: [
       'Custom bundle-and-save configurators with dynamic tiered volume pricing',
       'Frictionless subscriber portal with self-service skip, swap, and add-on controls',
@@ -116,8 +116,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Engineering Immersive Digital Storefronts for Utah Outdoor Leaders',
     description:
       'From Wasatch backcountry ski gear builders to Ogden technical apparel innovators, outdoor enthusiasts demand fluid visual commerce and instant mobile purchasing. We engineer custom headless Next.js storefronts with interactive product visualizers, technical spec comparisons, and frictionless one-click checkouts.',
-    image: '/images/us/denver/ecommerce/portfolio-1.webp',
-    alt: 'Utah outdoor sports ski apparel and mountain gear ecommerce development headless Shopify Plus',
+    image: '/images/us/salt-lake-city/ecommerce/card-ski-waxing-bench.webp',
+    alt: 'A ski technician in an orange beanie running a waxing iron along a ski on a workbench while a woman scrapes wax from a second ski',
     points: [
       'Interactive 3D product visualizers and material durability spec comparisons',
       'Instant headless Shopify checkout with Apple Pay and Shop Pay acceleration',
@@ -129,8 +129,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Self-Service Wholesale Portals for Wasatch Front Manufacturers',
     description:
       'Industrial manufacturers and B2B wholesale distributors across West Valley City and Sandy require streamlined digital ordering for commercial buyers. We build custom BigCommerce B2B and Shopify Plus wholesale portals with customer-specific pricing, NetSuite ERP sync, and net terms invoicing.',
-    image: '/images/us/denver/ecommerce/portfolio-3.webp',
-    alt: 'Salt Lake City B2B wholesale portal NetSuite ERP ecommerce integration and industrial tooling catalog',
+    image: '/images/us/salt-lake-city/ecommerce/card-hardware-bolt-counter.webp',
+    alt: 'A woman in a green apron pouring steel bolts from a scoop into a paper bag for a man holding a sample bolt at a trade supply counter',
     points: [
       'Custom B2B wholesale portals with tiered negotiated pricing and MOQ validation',
       'Real-time NetSuite, SAP, and Epicor inventory and purchase order synchronization',
@@ -142,8 +142,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'High-Converting Digital Launchpads for Utah Hardware Startups',
     description:
       'Consumer electronics builders, smart home innovators, and IoT device manufacturers in Lehi and Draper demand high-velocity checkout funnels. We engineer custom interactive feature comparison tables, warranty registration workflows, and accessory bundle upsell funnels.',
-    image: '/images/us/saas-website-design/hero.webp',
-    alt: 'Silicon Slopes consumer electronics smart hardware ecommerce website engineering',
+    image: '/images/us/salt-lake-city/ecommerce/card-smart-device-assembly.webp',
+    alt: 'A man fitting a round white shell onto a small device while a woman places finished devices into plain white boxes at a workshop table',
     points: [
       'Interactive device specification tables and dynamic accessory upsell drawers',
       'Sub-second mobile speed ensuring immediate product purchases and global deliveries',
@@ -155,8 +155,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'High-Growth Digital Launchpads for Utah Smart Hardware & Fitness Innovators',
     description:
       'Connected fitness equipment manufacturers, biometric wearable creators, and smart outdoor device startups across Silicon Slopes demand high-velocity checkout funnels. We build custom Shopify Plus storefronts with interactive feature matrix comparisons, warranty registration portals, and subscription billing.',
-    image: '/images/us/chicago-web-design/storefront.webp',
-    alt: 'Salt Lake City Lehi Silicon Slopes connected fitness smart hardware ecommerce design',
+    image: '/images/us/salt-lake-city/ecommerce/card-treadmill-wristband-test.webp',
+    alt: 'A woman jogging on a treadmill wearing a plain black wristband while a man stands watching with a tablet in a bright test lab',
     points: [
       'Interactive device comparison visualizers and accessory bundle customizers',
       'Integrated consumer financing via Affirm and Shop Pay Installments',
@@ -168,8 +168,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Editorial Commerce Flagships for Alpine Gear & Luxury Outfitting',
     description:
       'Bespoke ski ateliers, custom snowboard shapers, and luxury mountain lifestyle brands in Park City require tactile digital flagships. We engineer custom headless Next.js storefronts featuring high-resolution editorial lookbooks, custom equipment sizing calculators, and white-glove shipping.',
-    image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Park City Utah luxury mountain outfitting ski snowboard ecommerce development',
+    image: '/images/us/salt-lake-city/ecommerce/card-ski-boot-fitting.webp',
+    alt: 'A boot fitter kneeling to fasten a ski boot buckle for a seated woman wearing an orange scarf in a bright outfitter shop',
     points: [
       'High-resolution visual product lookbooks with interactive shop-the-look hotspots',
       'Custom alpine equipment sizing and boot fitting recommendation engines',
@@ -543,8 +543,8 @@ export default function SaltLakeCityEcommercePage() {
               {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
               <div className="rv-curved-frame-1">
                 <Image
-                  src="/images/us/denver/ecommerce/portfolio-2.webp"
-                  alt="Salt Lake City Utah ecommerce development Shopify Plus headless Next.js engineering"
+                  src="/images/us/salt-lake-city/ecommerce/hero-sample-against-shop-page.webp"
+                  alt="A man holding a steel water bottle beside a monitor showing a grid of coloured tiles while a woman types at a tall table"
                   width={640}
                   height={640}
                   priority

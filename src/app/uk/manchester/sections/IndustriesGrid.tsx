@@ -33,8 +33,8 @@ const INDUSTRIES: Industry[] = [
     name: "E-Commerce & Retail",
     description:
       "From the Arndale to the Northern Quarter independents. Beat template stores on speed.",
-    image: "/images/manchester/industry-hospitality.webp",
-    imageAlt: "E-commerce and retail businesses in Manchester",
+    image: "/images/manchester/industry-retail-shop-parcel-packing.webp",
+    imageAlt: "A shopkeeper wrapping a mug in tissue paper at the counter of a small homeware shop while a man stacks sealed parcels beside her",
   },
   {
     name: "Manufacturing & Engineering",
@@ -47,8 +47,8 @@ const INDUSTRIES: Industry[] = [
     name: "Health & Life Sciences",
     description:
       "Accessible, fast sites built to WCAG 2.2 AA for health-tech and research teams.",
-    image: "/images/manchester/industry-health.webp",
-    imageAlt: "Health and life sciences businesses in Manchester",
+    image: "/images/manchester/industry-health-research-lab-bench.webp",
+    imageAlt: "Two researchers in white lab coats at a laboratory bench, one looking into a microscope and the other filling small tubes with a pipette",
   },
 ];
 

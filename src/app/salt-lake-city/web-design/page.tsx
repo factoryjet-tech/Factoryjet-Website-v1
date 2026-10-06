@@ -103,7 +103,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'From Silicon Slopes software leaders to Lehi cloud security startups, digital technology buyers evaluate product capabilities instantly. We engineer custom Next.js web applications with interactive product sandboxes, pricing calculators, developer documentation hubs, and sub-second edge response times.',
     image: '/images/us/saas-website-design/hero.webp',
-    alt: 'Salt Lake City Silicon Slopes enterprise SaaS cloud platform web design engineering',
+    alt: 'A man and a woman in a studio pointing at a wall display of a handbag product page, the same page open on a laptop',
     points: [
       'Interactive software feature sandboxes and animated architecture visualizers',
       'Clean TypeScript codebase deployed on Cloudflare edge CDN with zero plugin bloat',
@@ -116,7 +116,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Private wealth advisory firms, family offices, and commercial litigation practices in Downtown Salt Lake City demand digital presences that project institutional stability. We design bespoke typography scales, interactive wealth calculators, and secure client portal integrations.',
     image: '/images/us/services/law-firm-seo/hero.webp',
-    alt: 'Downtown Salt Lake City wealth management private equity and corporate law website design',
+    alt: 'An empty wood-panelled office with bookshelves and a desk in warm light',
     points: [
       'Refined editorial typography and interactive portfolio asset allocation visualizers',
       'Encrypted client portal integration with multi-factor authentication routing',
@@ -129,7 +129,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'From University of Utah Research Park biotech startups to Sandy medical device manufacturers, institutional credibility is paramount. We engineer custom Next.js web applications with interactive pipeline diagrams, investor data rooms, clinical trial recruitment portals, and sub-second edge performance.',
     image: '/images/us/b2b-website-design/hero.webp',
-    alt: 'Salt Lake City biomedical device life sciences and biotechnology web design',
+    alt: 'Three colleagues at a large wall display showing a plain grey page layout',
     points: [
       'Interactive clinical pipeline visualizers and mechanism-of-action animations',
       'Secure investor relations data rooms and board presentation document portals',
@@ -141,8 +141,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Tactile Digital Experiences for Utah Outdoor & Gear Brands',
     description:
       'From Wasatch backcountry gear builders to outdoor apparel innovators across Salt Lake County, active consumers demand immersive visual storytelling. We build responsive web applications with interactive product visualizers, durability showcases, and frictionless checkout funnels.',
-    image: '/images/us/denver/ecommerce/portfolio-1.webp',
-    alt: 'Salt Lake City outdoor recreation brand technical ski and apparel ecommerce web design',
+    image: '/images/us/salt-lake-city/web-design/card-bike-repair-stand.webp',
+    alt: 'A mechanic in a black apron adjusting the gears of a mountain bike on a repair stand while a woman turns the pedal by hand',
     points: [
       'Interactive product visualizers and material durability spec matrices',
       'Sub-second mobile speed ensuring immediate product purchases and dealer inquiries',
@@ -154,8 +154,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Technical Documentation & Demo Sandboxes for Utah Tech Leaders',
     description:
       'Cybersecurity platforms, identity verification software, and enterprise EdTech developers across Sandy and Draper require institutional credibility online. We engineer custom Next.js web applications featuring interactive API reference portals, live product sandboxes, and sub-second edge page delivery.',
-    image: '/images/services/card-real-estate.webp',
-    alt: 'Salt Lake City Sandy Draper cybersecurity edtech software web design development',
+    image: '/images/us/salt-lake-city/web-design/card-security-operations-room.webp',
+    alt: 'A man with a headset at a curved desk and a woman in a blue headscarf pointing at a wall screen of coloured dots and lines',
     points: [
       'Interactive product demo sandboxes and visual architecture diagrams',
       'Developer API reference hubs and downloadable SDK documentation portals',
@@ -168,7 +168,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Precision machine shops, defense aerospace suppliers, and heavy equipment manufacturers across West Valley City and the airport logistics corridor require institutional credibility online. We build custom Next.js web applications with CAD drawing upload portals, interactive equipment tolerance tables, and automated ERP request-for-quote (RFQ) routing.',
     image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Salt Lake City West Valley City precision manufacturing aerospace tooling web design',
+    alt: 'A machinist in safety glasses loading a metal part into a CNC lathe beside a tablet showing the part',
     points: [
       'CAD drawing file upload gateways with automated RFQ distribution to sales engineers',
       'Interactive CNC machining tolerance tables and materials compatibility guides',
@@ -545,7 +545,7 @@ export default function SaltLakeCityWebDesignPage() {
               <div className="rv-curved-frame-1">
                 <Image
                   src="/images/us/saas-website-design/hero.webp"
-                  alt="Salt Lake City Utah web design and custom Next.js web application development"
+                  alt="A man and a woman in a studio pointing at a wall display of a handbag product page, the same page open on a laptop"
                   width={640}
                   height={640}
                   priority

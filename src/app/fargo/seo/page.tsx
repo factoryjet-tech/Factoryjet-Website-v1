@@ -102,8 +102,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Commercial Lead Engines for Red River Valley Ag Leaders',
     description:
       'As America agricultural powerhouse, Fargo seed distributors, precision farming implement dealers, and rural electrical contractors demand steady commercial RFQ volume. We build specialized technical service pages, link agricultural manufacturer certifications, and optimize commercial keyword rankings.',
-    image: '/images/us/fargo/seo/fargo-seo-1.webp',
-    alt: 'Fargo North Dakota agricultural equipment farming supplies rural contractor local SEO engine',
+    image: '/images/us/fargo/seo/card-tractor-hose-check.webp',
+    alt: 'A woman checking a hose on a grey tractor while a man in a plaid shirt holds a wrench and two others look on in an equipment yard',
     points: [
       'Agricultural and industrial service schemas linking dealership accreditations and equipment brands',
       'High-intent B2B keyword silos targeting regional farm operators and grain elevator managers',
@@ -115,8 +115,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Driving High-Value Project Bidding Across Greater Fargo & Cass County',
     description:
       'Commercial general contractors, specialized flat roofing companies, and structural engineering firms across Fargo require consistent commercial bidding opportunities. We build geo-targeted service area architectures, optimize Service Area Business profiles, and capture high-intent commercial contracting keywords.',
-    image: '/images/us/fargo/seo/fargo-seo-2.webp',
-    alt: 'Fargo North Dakota commercial roofing general contractor electrical cold climate local SEO strategy',
+    image: '/images/us/fargo/seo/card-wall-insulation-board-fitting.webp',
+    alt: 'Two builders in white hard hats fitting a foam insulation board to a concrete wall, one pressing it flat and one holding an orange rubber mallet',
     points: [
       'ServiceAreaBusiness schema markup defining multi-county Red River Valley operational boundaries',
       'Hyper-local neighborhood geo-pages targeting West Fargo, Horace, Dilworth, and Moorhead',
@@ -128,8 +128,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Capturing High-Value Patients in Fargo Regional Medical Corridors',
     description:
       'In Fargo competitive orthopedic surgery, cosmetic dentistry, and cardiology markets, patients evaluate physician credentials and peer reviews thoroughly. We optimize Google Business Profiles, implement MedicalProcedure schemas, build procedure-specific silos, and generate steady review velocity.',
-    image: '/images/us/b2b-website-design/sales-enablement.webp',
-    alt: 'Fargo North Dakota sports medicine orthopedic cardiology physical therapy clinic local SEO',
+    image: '/images/us/fargo/seo/card-wrist-brace-fitting.webp',
+    alt: 'A doctor in a white coat fastening a wrist brace on an older man sitting on an exam table in a bright clinic room',
     points: [
       'Multi-practitioner Google Business Profile optimization with procedure sub-categories',
       'MedicalProcedure and Physician structured JSON-LD schema linking hospital affiliations',
@@ -141,8 +141,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Top-Rank Visibility for Fargo Law Firms & Estate Planners',
     description:
       'Downtown Fargo law firms competing for agricultural estate planning, farm succession, and corporate litigation retainers must rank in the top positions on Google Maps and organic search. We engineer authoritative legal practice area pages, optimize attorney schema markup, and build high-quality local legal citations.',
-    image: '/images/us/b2b-website-design/hero.webp',
-    alt: 'Fargo North Dakota corporate law agricultural estate planning commercial litigation local SEO',
+    image: '/images/us/fargo/seo/card-estate-lawyer-client-handshake.webp',
+    alt: 'A lawyer in a navy suit shaking hands across a desk with a woman in a plaid shirt and work jacket in a small bright law office',
     points: [
       'Attorney and LegalService structured JSON-LD schema linking State Bar of North Dakota credentials',
       'Practice area landing page silos capturing high-intent retainers across Cass and Clay Counties',
@@ -518,8 +518,8 @@ export default function FargoSeoPage() {
               {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
               <div className="rv-curved-frame-1">
                 <Image
-                  src="/images/us/fargo/seo/fargo-seo-1.webp"
-                  alt="Fargo North Dakota local SEO Google Maps 3-Pack ranking strategy"
+                  src="/images/us/fargo/seo/hero-farm-supply-counter-map.webp"
+                  alt="A man in a green vest showing a woman a laptop with a pale map and coloured pins at the counter of a farm supply shop"
                   width={640}
                   height={640}
                   priority
@@ -561,8 +561,8 @@ export default function FargoSeoPage() {
               {/* Left Column: Clean Organic Curved Photo Frame */}
               <div className="rv-curved-frame-2">
                 <Image
-                  src="/images/us/fargo/seo/fargo-seo-2.webp"
-                  alt="FactoryJet senior SEO engineers optimizing Fargo local entity knowledge graph"
+                  src="/images/us/fargo/seo/team-wall-map-push-pins.webp"
+                  alt="A man pressing a red pin into a pale wall map while a woman beside him holds a small orange box of pins in a bright office"
                   width={640}
                   height={640}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}

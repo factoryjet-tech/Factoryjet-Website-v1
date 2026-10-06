@@ -103,7 +103,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'RTP biopharma and clinical research organizations demand websites that speak to global pharmaceutical sponsors, FDA regulators, and clinical trial investigators. We build custom Next.js web applications featuring interactive pipeline tables, downloadable scientific whitepapers, and sub-second edge speeds.',
     image: '/images/us/saas-website-design/hero.webp',
-    alt: 'Raleigh biopharma and life sciences web design engineering',
+    alt: 'A man and a woman in a studio pointing at a wall display of a handbag product page, the same page open on a laptop',
     points: [
       'Interactive clinical pipeline matrices and downloadable peer-reviewed research',
       'Frictionless multi-step sponsor inquiry forms routing to business development teams',
@@ -116,7 +116,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'From private practices in North Hills to surgical clinics in Cary, credibility drives patient acquisition. We engineer HIPAA-aware medical websites featuring searchable physician directories, specialty procedure overviews, insurance plan matrices, and lightning-fast appointment scheduling flows.',
     image: '/images/us/services/dental-seo/hero.webp',
-    alt: 'Raleigh healthcare medical practice and surgical clinic website design',
+    alt: 'A bright empty reception lobby with a sofa, plants and a white reception desk',
     points: [
       'Searchable provider directories with clinical specialty credentials and hospital affiliations',
       'HIPAA-aware consultation intake forms and click-to-call mobile patient actions',
@@ -129,7 +129,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'High-stakes intellectual property and venture capital law firms in the Research Triangle cannot afford generic visual templates. We craft bespoke digital flagships featuring practice area content hubs, partner biographical repositories with bar admission schema, verified transaction track records, and secure client communication endpoints.',
     image: '/images/us/services/law-firm-seo/hero.webp',
-    alt: 'Raleigh corporate law firm intellectual property and venture capital web design',
+    alt: 'An empty wood-panelled office with bookshelves and a desk in warm light',
     points: [
       'Deep practice area knowledge graphs and structured legal case victory portfolios',
       'Attorney profile schema with state bar admissions and published industry insights',
@@ -141,8 +141,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Engineering Technical Authority for Triangle Innovators',
     description:
       'From clean energy startups to automated agriculture technology leaders across Wake County, technical buyers demand precision. We develop high-performance web applications featuring structured capability tables, instant RFQ calculators, downloadable spec sheets, and sub-second edge hosting.',
-    image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Raleigh clean tech and automated agtech web design engineering',
+    image: '/images/us/raleigh/web-design/card-solar-panel-install.webp',
+    alt: 'Two installers fitting a solar panel onto a low metal frame in a field, one tightening a bracket and the other steadying the panel',
     points: [
       'Interactive equipment capability matrices and downloadable CAD/PDF engineering data',
       'Frictionless multi-step RFQ form workflows routing directly to estimating teams',
@@ -154,8 +154,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Engineering Digital Authority for Raleigh Clean Tech Leaders',
     description:
       'From smart grid engineers in Raleigh to SAS enterprise analytics spinouts in Cary, technical B2B buyers require interactive proof of performance. We build custom Next.js web applications featuring real-time data visualization components, ESG reporting repositories, and enterprise procurement lead funnels.',
-    image: '/images/services/card-real-estate.webp',
-    alt: 'Raleigh clean tech smart grid and enterprise analytics website design',
+    image: '/images/us/raleigh/web-design/card-wind-turbine-base-check.webp',
+    alt: 'A technician in an orange hard hat opening an access door at the base of a white wind turbine while a woman fastens a safety harness',
     points: [
       'Interactive energy infrastructure project maps and downloadable ESG compliance data',
       'Enterprise RFP and contractor bid submission portals with secure file uploads',
@@ -167,8 +167,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Academic Stature & Commercial Pitch Portals for Triangle Spinouts',
     description:
       'Commercialization teams from NC State, Duke, and UNC Chapel Hill spinning out deep tech ventures demand high-credibility digital flagships. We construct interactive platforms featuring scientific publication hubs, researcher profile schemas, grant funding track records, and venture capital presentation portals.',
-    image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Raleigh university research spinout and intellectual property web design',
+    image: '/images/us/raleigh/web-design/card-robot-arm-bench-test.webp',
+    alt: 'A young woman guiding a small white robot arm to grip a block on a bench while an older man tightens its base in a bright research lab',
     points: [
       'Searchable scientific publication repositories with DOI links and author citations',
       'Interactive technology readiness level (TRL) matrices and patent portfolio silos',
@@ -539,7 +539,7 @@ export default function RaleighWebDesignPage() {
               <div className="rv-curved-frame-1">
                 <Image
                   src="/images/us/raleigh/hero-raleigh.webp"
-                  alt="Raleigh North Carolina modern web design engineering and custom Next.js website mockup"
+                  alt="Aerial view of a mid-size city skyline surrounded by trees"
                   width={640}
                   height={640}
                   priority

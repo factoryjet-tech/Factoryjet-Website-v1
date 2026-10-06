@@ -104,7 +104,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Chicago serves as the freight and manufacturing crossroads of North America. Industrial websites built on slow legacy WordPress themes fail to convince technical procurement teams. We develop high-performance Next.js web applications featuring structured equipment specification tables, instant RFQ calculators, downloadable CAD/PDF spec sheets, and sub-second edge hosting.',
     image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Chicago precision manufacturing equipment and industrial web design engineering',
+    alt: 'A machinist in safety glasses loading a metal part into a CNC lathe beside a tablet showing the part',
     points: [
       'Interactive equipment capability matrices and downloadable CAD/PDF engineering data',
       'Frictionless multi-step RFQ form workflows routing directly to estimating teams',
@@ -117,7 +117,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'From Streeterville academic medical centers to private surgical practices in Oak Brook, credibility drives patient acquisition. We engineer HIPAA-aware medical websites featuring searchable physician directories, specialty procedure overviews, insurance plan matrices, and lightning-fast appointment scheduling flows.',
     image: '/images/us/services/dental-seo/hero.webp',
-    alt: 'Chicago healthcare medical practice and surgical clinic website design',
+    alt: 'A bright empty reception lobby with a sofa, plants and a white reception desk',
     points: [
       'Searchable provider directories with specialty credentials and hospital affiliations',
       'HIPAA-aware consultation intake forms and click-to-call mobile patient actions',
@@ -130,7 +130,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'High-stakes corporate litigation and wealth management firms in Chicago cannot afford generic visual templates. We craft bespoke digital flagships featuring practice area content hubs, attorney biographical repositories with bar admission schema, verified case settlements, and secure client communication endpoints.',
     image: '/images/us/services/law-firm-seo/hero.webp',
-    alt: 'Chicago corporate law firm litigation and wealth management web design',
+    alt: 'An empty wood-panelled office with bookshelves and a desk in warm light',
     points: [
       'Deep practice area knowledge graphs and structured legal case victory portfolios',
       'Attorney profile schema with state bar admissions and published legal insights',
@@ -143,7 +143,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Chicago is an international culinary capital. Whether launching a Michelin-starred dining concept or scaling a multi-location hospitality group, mobile performance determines your booking volume. We engineer lightning-fast digital menus, integrated Resy and OpenTable reservation widgets, private dining booking portals, and event inquiry funnels.',
     image: '/images/us/restaurant-website-design/hero.webp',
-    alt: 'Chicago hospitality dining group and restaurant web design development',
+    alt: 'A restaurant guest reading a menu on her phone while a server sets a table behind her',
     points: [
       'Sub-second mobile menu rendering with allergen badges and dynamic beverage pairings',
       'Direct Resy, OpenTable, and SevenRooms reservation embeds with zero page lag',
@@ -531,7 +531,7 @@ export default function ChicagoWebDesignPage() {
               <div className="rv-curved-frame-1">
                 <Image
                   src="/images/us/chicago-web-design/hero.webp"
-                  alt="Chicago Illinois modern web design engineering and custom Next.js website mockup"
+                  alt="Three people at a desk around a monitor showing a black handbag product page, city towers through the window"
                   width={640}
                   height={640}
                   priority

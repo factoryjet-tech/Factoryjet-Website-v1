@@ -857,7 +857,7 @@ export default function SeoAuditServicePage() {
             <div style={{ marginTop: '36px', borderRadius: '16px', overflow: 'hidden', border: '1px solid var(--line)', maxWidth: 860 }}>
               <Image
                 src="/images/services/ai-seo.webp"
-                alt="Technical SEO audit performance dashboard tracking crawl health, Core Web Vitals, and indexation"
+                alt="A dark analytics screen showing load time and bounce rate charts"
                 width={860}
                 height={480}
                 loading="lazy"

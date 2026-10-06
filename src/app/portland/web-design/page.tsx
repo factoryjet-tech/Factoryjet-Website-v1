@@ -103,7 +103,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Portland is the global capital of athletic footwear and outdoor gear innovation. We craft bespoke digital flagships featuring interactive product configurators, high-resolution lifestyle galleries, sub-second mobile checkouts, and edge-cached product catalogs.',
     image: '/images/us/saas-website-design/hero.webp',
-    alt: 'Portland athletic footwear and outdoor apparel web design engineering',
+    alt: 'A man and a woman in a studio pointing at a wall display of a handbag product page, the same page open on a laptop',
     points: [
       'Interactive product feature galleries and downloadable catalog funnels',
       'Frictionless multi-step inquiry and purchase forms routing to commerce teams',
@@ -116,7 +116,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'From OHSU South Waterfront life science labs to specialty surgical practices in Northwest Portland, credibility drives trust. We engineer HIPAA-aware medical websites featuring searchable physician directories, research publication libraries, and lightning-fast appointment scheduling flows.',
     image: '/images/us/services/dental-seo/hero.webp',
-    alt: 'Portland healthcare medical practice and biomedical research website design',
+    alt: 'A bright empty reception lobby with a sofa, plants and a white reception desk',
     points: [
       'Searchable provider directories with clinical specialty credentials and hospital affiliations',
       'HIPAA-aware consultation intake forms and click-to-call mobile patient actions',
@@ -129,7 +129,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'High-stakes environmental law and sustainable architecture firms in Portland cannot afford generic visual templates. We craft bespoke digital flagships featuring practice area content hubs, project impact portfolios with schema markup, verified case studies, and secure client communication endpoints.',
     image: '/images/us/services/law-firm-seo/hero.webp',
-    alt: 'Portland corporate law firm and architecture web design',
+    alt: 'An empty wood-panelled office with bookshelves and a desk in warm light',
     points: [
       'Deep practice area knowledge graphs and structured architectural project portfolios',
       'Attorney profile schema with state bar admissions and published sustainability research',
@@ -142,7 +142,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'From Hillsboro semiconductor fabrication suppliers to clean tech innovators along the Columbia River, technical buyers demand precision. We develop high-performance web applications featuring structured capability tables, instant RFQ calculators, downloadable spec sheets, and sub-second edge hosting.',
     image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Portland semiconductor and clean tech manufacturing web design engineering',
+    alt: 'A machinist in safety glasses loading a metal part into a CNC lathe beside a tablet showing the part',
     points: [
       'Interactive equipment capability matrices and downloadable CAD/PDF engineering data',
       'Frictionless multi-step RFQ form workflows routing directly to estimating teams',
@@ -154,8 +154,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'High-Volume Headless Flagships for Beaverton & Portland Apparel Leaders',
     description:
       'As the global footwear and athletic apparel capital, Beaverton and Portland brands require uncompromising visual precision and rapid e-commerce checkouts. We build custom Next.js web applications featuring interactive 3D product rotators, sustainable materials transparency matrices, and sub-second catalog navigation.',
-    image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Portland athletic footwear outdoor gear and performance apparel website design',
+    image: '/images/us/portland/web-design/card-activewear-sewing-machine.webp',
+    alt: 'A man sewing black stretch fabric at an industrial sewing machine while a woman folds finished leggings behind him in a bright sewing room',
     points: [
       'Interactive 3D product viewports and fluid high-resolution lookbook galleries',
       'Sustainable materials traceability data and environmental impact estimators',
@@ -168,7 +168,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'From world-renowned specialty roasters in the Central Eastside to artisanal breweries and Pacific Northwest farm-to-table culinary groups, digital storytelling drives DTC subscriptions and taproom foot traffic. We engineer immersive web applications featuring recurring coffee subscription flows, live craft draft feeds, and high-resolution photo menus rendering at 60fps.',
     image: '/images/us/restaurant-website-design/hero.webp',
-    alt: 'Portland specialty coffee craft brewery and artisanal culinary website design',
+    alt: 'A restaurant guest reading a menu on her phone while a server sets a table behind her',
     points: [
       'Interactive roast profile guides and recurring coffee subscription checkout funnels',
       'Live taproom draft beer list integrations and private event booking inquiry forms',
@@ -539,7 +539,7 @@ export default function PortlandWebDesignPage() {
               <div className="rv-curved-frame-1">
                 <Image
                   src="/images/us/portland/hero-portland.webp"
-                  alt="Portland Oregon modern web design engineering and custom Next.js website mockup"
+                  alt="A riverside city skyline with steel bridges and a snow-capped peak behind it"
                   width={640}
                   height={640}
                   priority

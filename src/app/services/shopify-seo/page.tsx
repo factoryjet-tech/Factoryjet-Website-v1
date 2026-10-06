@@ -452,7 +452,7 @@ export default function ShopifySeoPage() {
           <div style={{ marginTop: '2.5rem', width: '100%', maxWidth: '1000px', margin: '2.5rem auto 0 auto', borderRadius: '1rem', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.1)', boxShadow: '0 20px 40px rgba(0,0,0,0.4)' }}>
             <Image
               src="/images/us/services/seo/hero-seo.webp"
-              alt="Shopify SEO Technical Performance and Revenue Telemetry"
+              alt="A woman working at a laptop that shows line charts in a plant-filled office"
               width={1200}
               height={630}
               priority

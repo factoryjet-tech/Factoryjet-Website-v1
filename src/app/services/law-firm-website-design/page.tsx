@@ -855,8 +855,8 @@ export default function LawFirmWebsiteDesignPage() {
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 my-10">
           <div style={{ borderRadius: '16px', overflow: 'hidden', border: '1px solid #E5E5E0', maxWidth: 860, margin: '0 auto' }}>
             <Image
-              src="/images/services/healthcare-seo-map-pack.webp"
-              alt="Local legal search map pack rankings and Google Business Profile visibility audit"
+              src="/images/us/services/law-firm-website-design/section-law-lobby-phone-map.webp"
+              alt="A woman in an armchair holding a phone that shows a pale map with one pin while a man in a charcoal suit stands beside her"
               width={860}
               height={480}
               loading="lazy"

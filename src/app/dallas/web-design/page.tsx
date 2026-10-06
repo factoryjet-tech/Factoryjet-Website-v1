@@ -104,7 +104,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'The Plano and Richardson telecom corridors demand websites that speak to CTOs and procurement committees. We build custom Next.js web applications featuring interactive product demo tours, API documentation portals, SOC 2 compliance matrices, and lightning-fast page speeds.',
     image: '/images/us/saas-website-design/hero.webp',
-    alt: 'Dallas enterprise software and cloud infrastructure web design engineering',
+    alt: 'A man and a woman in a studio pointing at a wall display of a handbag product page, the same page open on a laptop',
     points: [
       'Interactive product feature tours and downloadable technical whitepaper funnels',
       'Frictionless multi-step demo scheduling forms routing to sales engineering teams',
@@ -117,7 +117,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'From the Southwestern Medical District to private surgical clinics in Frisco, credibility drives patient acquisition. We engineer HIPAA-aware medical websites featuring searchable physician directories, specialty procedure overviews, insurance plan matrices, and lightning-fast appointment scheduling flows.',
     image: '/images/us/services/dental-seo/hero.webp',
-    alt: 'Dallas healthcare medical practice and surgical clinic website design',
+    alt: 'A bright empty reception lobby with a sofa, plants and a white reception desk',
     points: [
       'Searchable provider directories with specialty credentials and hospital affiliations',
       'HIPAA-aware consultation intake forms and click-to-call mobile patient actions',
@@ -130,7 +130,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'High-stakes litigation and private equity firms in Dallas cannot afford generic visual templates. We craft bespoke digital flagships featuring practice area content hubs, attorney biographical repositories with bar admission schema, verified transaction track records, and secure client communication endpoints.',
     image: '/images/us/services/law-firm-seo/hero.webp',
-    alt: 'Dallas corporate law firm litigation and private equity web design',
+    alt: 'An empty wood-panelled office with bookshelves and a desk in warm light',
     points: [
       'Deep practice area knowledge graphs and structured legal case victory portfolios',
       'Attorney profile schema with state bar admissions and published industry insights',
@@ -143,7 +143,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'DFW is the premier logistics hub of North America. Industrial websites built on slow legacy WordPress themes fail to convince technical procurement teams. We develop high-performance web applications featuring structured fleet capability tables, instant RFQ calculators, downloadable spec sheets, and sub-second edge hosting.',
     image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Dallas Fort Worth aviation and industrial logistics web design engineering',
+    alt: 'A machinist in safety glasses loading a metal part into a CNC lathe beside a tablet showing the part',
     points: [
       'Interactive equipment capability matrices and downloadable CAD/PDF engineering data',
       'Frictionless multi-step RFQ form workflows routing directly to estimating teams',
@@ -156,7 +156,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'High-end architectural studios, custom luxury home builders, and interior designers in Highland Park, Preston Hollow, and Southlake require editorial visual storytelling. We engineer custom portfolio flagships with smooth WebGL project transitions, high-resolution photo galleries, interactive floorplan viewports, and VIP private consultation inquiry funnels.',
     image: '/images/services/card-real-estate.webp',
-    alt: 'Dallas luxury architectural studio and custom builder website design',
+    alt: 'A laptop on a marble table showing a property listings website with photos and a map',
     points: [
       'High-resolution project galleries with lazy-loaded WebP responsive image pipelines',
       'Interactive neighborhood development maps with school district filtering',
@@ -169,7 +169,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Iconic hospitality groups and private dining clubs across Uptown Dallas, Harwood District, and the Fort Worth Cultural District demand mobile-first digital flagships. We construct interactive venues featuring live OpenTable and SevenRooms reservation widgets, private event booking funnels, and high-resolution photo galleries rendering at 60fps.',
     image: '/images/us/restaurant-website-design/hero.webp',
-    alt: 'Dallas luxury hospitality private club and fine dining website design',
+    alt: 'A restaurant guest reading a menu on her phone while a server sets a table behind her',
     points: [
       'Frictionless integration with OpenTable, SevenRooms, and Toast POS online ordering',
       'Interactive private banquet and corporate event inquiry calculators',
@@ -563,7 +563,7 @@ export default function DallasWebDesignPage() {
               <div className="rv-curved-frame-1">
                 <Image
                   src="/images/us/dallas-web-design/hero.webp"
-                  alt="Dallas Texas modern web design engineering and custom Next.js website mockup"
+                  alt="Two people at a wall display showing three handbag photos, a city skyline through the windows"
                   width={640}
                   height={640}
                   priority

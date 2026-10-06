@@ -398,8 +398,8 @@ export default function RestaurantAiVoiceAgentsPage() {
                 <div className="relative rounded-2xl border border-[#E7DED6] bg-[#FAFAF7] p-3 shadow-xl">
                   <div className="relative rounded-xl overflow-hidden aspect-[16/9] sm:aspect-[4/3] bg-[#E7DED6]">
                     <Image
-                      src="/images/restaurants/restaurant-ai-phone-ordering.webp"
-                      alt="American restaurant hostess managing dining room with modern Toast POS ordering system"
+                      src="/images/restaurants/restaurant-counter-takeout-handoff.webp"
+                      alt="A restaurant worker in a black apron handing a paper takeout bag to a customer across a counter with a touchscreen terminal and a cordless phone"
                       width={1376}
                       height={768}
                       priority
@@ -585,8 +585,8 @@ export default function RestaurantAiVoiceAgentsPage() {
                 <div className="lg:col-span-6 order-1 lg:order-2">
                   <div className="relative rounded-xl overflow-hidden aspect-[16/9] border border-[#E7DED6]">
                     <Image
-                      src="/images/restaurants/pizzeria-kitchen-ai-ticket.webp"
-                      alt="American chef taking artisanal pizza from brick oven with digital kitchen display screen in background"
+                      src="/images/restaurants/pizzeria-half-and-half-pizza-topping.webp"
+                      alt="A pizza cook putting mushrooms on one half of a raw pizza that has peppers on the other half while a second cook slides a pizza into a domed oven"
                       width={1376}
                       height={768}
                       className="absolute inset-0 h-full w-full object-cover"
@@ -601,8 +601,8 @@ export default function RestaurantAiVoiceAgentsPage() {
                 <div className="lg:col-span-6">
                   <div className="relative rounded-xl overflow-hidden aspect-[16/9] border border-[#E7DED6]">
                     <Image
-                      src="/images/restaurants/drive-thru-franchise-ai-voice.webp"
-                      alt="Modern American fast casual drive-thru ordering lane with digital menu and AI headset system"
+                      src="/images/restaurants/pickup-window-order-handoff.webp"
+                      alt="A restaurant worker in a teal polo shirt passing a paper bag from a pickup window to a man seated in a silver car, with an orange tray on the ledge"
                       width={1376}
                       height={768}
                       className="absolute inset-0 h-full w-full object-cover"
@@ -671,8 +671,8 @@ export default function RestaurantAiVoiceAgentsPage() {
                 <div className="lg:col-span-6 order-1 lg:order-2">
                   <div className="relative rounded-xl overflow-hidden aspect-[16/9] border border-[#E7DED6]">
                     <Image
-                      src="/images/restaurants/catering-banquet-ai-booking.webp"
-                      alt="American hospitality event coordinator reviewing reservation calendar in upscale dining room"
+                      src="/images/restaurants/fine-dining-host-seating-guest.webp"
+                      alt="A host in a charcoal suit standing beside a seated older woman at a white-clothed table in a bright dining room, a desk phone behind them"
                       width={1376}
                       height={768}
                       className="absolute inset-0 h-full w-full object-cover"
@@ -687,8 +687,8 @@ export default function RestaurantAiVoiceAgentsPage() {
                 <div className="lg:col-span-6">
                   <div className="relative rounded-xl overflow-hidden aspect-[16/9] border border-[#E7DED6]">
                     <Image
-                      src="/images/restaurants/toast-pos-kitchen-display-ai.webp"
-                      alt="Modern restaurant counter with Toast POS terminal and kitchen display screen"
+                      src="/images/restaurants/counter-order-terminal-kitchen-pass.webp"
+                      alt="A worker tapping a plain touchscreen terminal at a restaurant counter while a cook behind him sets a boxed meal on the steel pass under a wall screen"
                       width={1376}
                       height={768}
                       className="absolute inset-0 h-full w-full object-cover"
@@ -767,8 +767,8 @@ export default function RestaurantAiVoiceAgentsPage() {
                 <div className="lg:col-span-6 order-1 lg:order-2">
                   <div className="relative rounded-xl overflow-hidden aspect-[16/9] border border-[#E7DED6]">
                     <Image
-                      src="/images/restaurants/catering-banquet-ai-booking.webp"
-                      alt="Catering and banquet table service preparation with corporate luncheon platters"
+                      src="/images/restaurants/catering-lunch-buffet-setup.webp"
+                      alt="Two caterers setting a lunch buffet on a long white table, one lifting the lid of a chafing dish and the other placing a platter of wraps"
                       width={1376}
                       height={768}
                       className="absolute inset-0 h-full w-full object-cover"

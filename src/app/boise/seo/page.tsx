@@ -102,8 +102,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Capturing High-Value Patients in Boise Medical Corridors',
     description:
       'In Boise competitive sports medicine, orthopedic surgery, and cosmetic dentistry markets, patients evaluate physician credentials and peer reviews thoroughly. We optimize Google Business Profiles, implement MedicalProcedure schemas, build procedure-specific silos, and generate steady review velocity.',
-    image: '/images/us/boise/seo/boise-seo-1.webp',
-    alt: 'Boise Idaho sports medicine orthopedic physical therapy clinic local SEO ranking engine',
+    image: '/images/us/boise/seo/card-knee-model-consultation.webp',
+    alt: 'A doctor in a white coat bending a plastic knee joint model for an older male patient seated on an exam couch',
     points: [
       'Multi-practitioner Google Business Profile optimization with procedure sub-categories',
       'MedicalProcedure and Physician structured JSON-LD schema linking hospital affiliations',
@@ -115,8 +115,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Driving High-Value Project Bidding Across Greater Boise & Ada County',
     description:
       'Commercial general contractors, roofing companies, and mechanical specialists across the Treasure Valley require consistent commercial bidding opportunities. We build geo-targeted service area architectures, optimize Service Area Business profiles, and capture high-intent commercial contracting keywords.',
-    image: '/images/us/boise/seo/boise-seo-2.webp',
-    alt: 'Boise Idaho commercial roofing general contractor electrical local SEO strategy',
+    image: '/images/us/boise/seo/card-steel-stud-framing.webp',
+    alt: 'Two builders fitting a steel stud wall, one holding an orange spirit level against a stud and one driving a screw with a drill',
     points: [
       'ServiceAreaBusiness schema markup defining multi-county operational boundaries',
       'Hyper-local neighborhood geo-pages targeting Meridian, Eagle, Star, and Kuna',
@@ -128,8 +128,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Top-Rank Visibility for Boise Law Firms & Corporate Attorneys',
     description:
       'Downtown Boise law firms competing for corporate litigation, estate planning, and high-stakes family law retainers must rank in the top positions on Google Maps and organic search. We engineer authoritative legal practice area pages, optimize attorney schema markup, and build high-quality local legal citations.',
-    image: '/images/us/b2b-website-design/sales-enablement.webp',
-    alt: 'Boise Idaho corporate law estate planning and commercial litigation local SEO',
+    image: '/images/us/boise/seo/card-estate-document-signing.webp',
+    alt: 'An older woman signing a document with an orange pen at a desk beside a lawyer in a navy suit, her husband resting a hand on her shoulder',
     points: [
       'Attorney and LegalService structured JSON-LD schema linking Idaho State Bar credentials',
       'Practice area landing page silos capturing high-intent retainers across Ada and Canyon Counties',
@@ -141,8 +141,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Local Map Pack Dominance for Idaho Tourism & Recreation Leaders',
     description:
       'Outfitters, whitewater rafting companies, guest ranches, and boutique hospitality operators across the Boise Basin rely on local search visibility to capture tourists and regional travelers. We optimize Google Maps profiles, build event-driven landing pages, and drive high-intent reservation volume.',
-    image: '/images/us/b2b-website-design/hero.webp',
-    alt: 'Boise Idaho outdoor tourism whitewater rafting guest ranch local SEO strategy',
+    image: '/images/us/boise/seo/card-lakeside-tent-camp.webp',
+    alt: 'A guide pouring water from an orange kettle at a camp table while two guests sit on canvas chairs beside a tent by a lake',
     points: [
       'TouristAttraction and LodgingBusiness structured schema with direct booking integration',
       'Google Maps 3-Pack ranking for high-intent adventure, seasonal guiding, and lodge terms',
@@ -525,7 +525,7 @@ export default function BoiseSeoPage() {
               <div className="rv-curved-frame-1">
                 <Image
                   src="/images/us/boise/seo/boise-seo-1.webp"
-                  alt="Boise Idaho local SEO Google Maps 3-Pack ranking strategy"
+                  alt="Two panels: a woman standing outside an outdoor supply shop, and a dental clinic reception with a seated patient"
                   width={640}
                   height={640}
                   priority

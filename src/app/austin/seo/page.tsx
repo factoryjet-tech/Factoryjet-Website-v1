@@ -103,7 +103,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Medical practices in Austin face intense competition from hospital networks and private groups. We build verified medical entity schema, optimize provider profiles on Google Maps, and write clinical service pages that answer patient symptoms with absolute accuracy. This establishes medical authority that ranks in the 3-Pack and earns citations in AI search overviews.',
     image: '/images/us/services/dental-seo/hero.webp',
-    alt: 'Austin healthcare and dental practice local SEO ranking strategy',
+    alt: 'A bright empty reception lobby with a sofa, plants and a white reception desk',
     points: [
       'Comprehensive schema for Physician, MedicalClinic, and MedicalSpecialty',
       'HIPAA-aware conversion forms and click-to-call mobile buttons',
@@ -116,7 +116,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Austin homeowners search under urgent pressure when air conditioners fail during triple-digit July heatwaves or winter freezes hit Travis County. We position your business directly in the Google Local Services and Map Pack 3-Pack with instant phone tracking, neighborhood-level service pages, and verified licensing credentials.',
     image: '/images/us/services/roofing-seo/hero.webp',
-    alt: 'Austin home services and contractor local SEO map pack strategy',
+    alt: 'Aerial view of suburban shingle rooftops at golden hour',
     points: [
       'Neighborhood landing pages for Westlake, Circle C, Steiner Ranch, and Lakeway',
       'Live call recording and conversion tracking integrated into Google Analytics 4',
@@ -527,7 +527,7 @@ export default function AustinSeoPage() {
               <div className="rv-curved-frame-1">
                 <Image
                   src="/images/us/austin/hero-austin.webp"
-                  alt="Austin Texas skyline and local SEO technical optimization strategy"
+                  alt="A city skyline at sunset reflected in a lake"
                   width={640}
                   height={640}
                   priority
@@ -591,8 +591,8 @@ export default function AustinSeoPage() {
               {/* Left Column: Clean Organic Curved Photo Frame (Edge-to-Edge) */}
               <div className="rv-curved-frame-2">
                 <Image
-                  src="/images/us/austin/austin-local-seo-near-me.webp"
-                  alt="FactoryJet senior SEO engineers auditing Austin Google Map Pack and local search citations"
+                  src="/images/us/austin/seo/team-phone-map-listing-check.webp"
+                  alt="A man holding up a phone that shows a pale map with red pins while a woman beside him marks a clipboard at a white table"
                   width={640}
                   height={640}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}

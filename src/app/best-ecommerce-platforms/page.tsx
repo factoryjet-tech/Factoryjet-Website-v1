@@ -272,31 +272,31 @@ const USECASES = [
   {
     t: 'DTC brands scaling up',
     img: 'platform-choice.webp',
-    alt: 'A DTC founder reviewing ecommerce platform options with a consultant before committing to a build',
+    alt: 'A man sitting at a laptop in a home office, hand on his chin, with a coffee mug beside him',
     d: 'For a DTC brand that is outgrowing its starter platform, the right ecommerce platform gives you headroom without rebuilding from scratch every two years. We evaluate your catalog size, app dependencies, checkout requirements, and growth trajectory to pick the platform that does not become a ceiling. Shopify Plus and BigCommerce both handle serious DTC volume, with the difference in app flexibility, transaction fees, and how far you can go headless when you need it.',
   },
   {
     t: 'B2B and wholesale brands',
     img: 'platform-build.webp',
-    alt: 'A wholesale team managing B2B customer accounts and price lists through an ecommerce platform admin',
+    alt: 'Two men at a monitor showing a shop page, one pointing at the screen',
     d: 'B2B ecommerce has different needs than DTC: customer-specific pricing, purchase order workflows, net payment terms, quote requests, and minimum order quantities. Not every platform handles these natively. BigCommerce B2B Edition and Adobe Commerce are built for this; Shopify Plus has a B2B module that works for lighter B2B requirements. We configure the full B2B layer so your trade buyers self-serve and your team spends less time on manual quoting.',
   },
   {
     t: 'Brands selling on both DTC and B2B',
     img: 'platform-choice.webp',
-    alt: 'An ecommerce manager running a single store that serves both DTC shoppers and wholesale trade accounts',
+    alt: 'A man sitting at a laptop in a home office, hand on his chin, with a coffee mug beside him',
     d: 'Running DTC and B2B from one ecommerce platform is technically possible on the right platforms and a maintenance headache on the wrong ones. BigCommerce B2B Edition is purpose-built for this: one catalog, one admin, and separate pricing and checkout experiences by account type. We build the customer group structure, price lists, and checkout rules so both channels work cleanly without duplicate product management.',
   },
   {
     t: 'Headless and developer-led builds',
     img: 'platform-build.webp',
-    alt: 'A developer building a headless ecommerce storefront in Next.js connected through the BigCommerce or Shopify API',
+    alt: 'Two men at a monitor showing a shop page, one pointing at the screen',
     d: 'When your front end needs to do things a standard platform theme cannot: custom animations, composable checkout, or tight integration with a CMS or design system, a headless ecommerce platform build separates the commerce engine from the UI. We build the Next.js front end, wire it to the platform API, and hand you a decoupled storefront that performs well and is easy for your team to iterate on.',
   },
   {
     t: 'Platform migration and replatforming',
     img: 'platform-choice.webp',
-    alt: 'A team reviewing a migration plan to move from one ecommerce platform to a new one without losing traffic or orders',
+    alt: 'A man sitting at a laptop in a home office, hand on his chin, with a coffee mug beside him',
     d: 'Replatforming is one of the highest-risk ecommerce projects a brand can run: done wrong, you lose rankings, break integrations, or carry forward the structural problems you were trying to fix. We audit what is actually wrong with your current platform before recommending a move, then handle the full migration, covering products, customers, orders, content, and 301 redirects, with a staging QA step and a cutover plan that protects uptime and SEO.',
   },
 ];

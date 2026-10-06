@@ -104,8 +104,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Engineering Immersive Digital Storefronts for Colorado Outdoor Leaders',
     description:
       'From RiNo activewear brands to Golden technical mountaineering builders, outdoor enthusiasts demand fluid visual commerce and instant mobile purchasing. We engineer custom headless Next.js storefronts with interactive product visualizers, technical spec comparisons, and frictionless one-click checkouts.',
-    image: '/images/us/denver/ecommerce/portfolio-1.webp',
-    alt: 'Denver outdoor gear technical apparel brand ecommerce development and headless Shopify Plus',
+    image: '/images/us/denver/ecommerce/card-jacket-sleeve-sewing.webp',
+    alt: 'A woman sewing a blue jacket with an orange zip on an industrial machine while a man checks the hood of a finished jacket',
     points: [
       'Interactive 3D product visualizers and material durability spec comparisons',
       'Instant headless Shopify checkout with Apple Pay and Shop Pay acceleration',
@@ -117,8 +117,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'High-LTV Subscription Architectures for Boulder & Denver Food Brands',
     description:
       'Organic packaged food companies and wellness supplement innovators require recurring subscription revenue and flexible bundle configurations. We engineer custom Recharge and Smartrr subscription portals with self-service flavor swapping, automated prepaid discounts, and cold-pack shipping logic.',
-    image: '/images/us/denver/ecommerce/portfolio-2.webp',
-    alt: 'Denver and Boulder organic CPG food supplement subscription ecommerce development',
+    image: '/images/us/denver/ecommerce/card-granola-tray-spreading.webp',
+    alt: 'A baker spreading granola on a steel tray while a woman tips oats from an orange mixing bowl into a tub in a bakery kitchen',
     points: [
       'Custom bundle-and-save configurators with dynamic tiered volume pricing',
       'Frictionless subscriber portal with self-service skip, swap, and add-on controls',
@@ -130,8 +130,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Self-Service Wholesale Portals for Front Range Manufacturers',
     description:
       'Industrial manufacturers and B2B wholesale distributors across the Denver Tech Center and Adams County require streamlined digital ordering for commercial buyers. We build custom BigCommerce B2B and Shopify Plus wholesale portals with customer-specific pricing, NetSuite ERP sync, and net terms invoicing.',
-    image: '/images/us/denver/ecommerce/portfolio-3.webp',
-    alt: 'Denver B2B wholesale portal NetSuite ERP ecommerce integration and industrial parts catalog',
+    image: '/images/us/denver/ecommerce/card-toolroom-cutter-setup.webp',
+    alt: 'A toolmaker fitting a cutting tool into a milling machine while a man lifts a tray of end mills from an orange toolbox',
     points: [
       'Custom B2B wholesale portals with tiered negotiated pricing and MOQ validation',
       'Real-time NetSuite, SAP, and Epicor inventory and purchase order synchronization',
@@ -157,7 +157,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Custom ski builders, mountain bike fabricators, and technical mountaineering brands across Golden and Lakewood require precise catalog configuration. We engineer interactive gear dimension calculators, seasonal pre-order deposit funnels, and dynamic multi-warehouse shipping logic.',
     image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Denver Golden ski bicycle technical sports equipment ecommerce development',
+    alt: 'A machinist in safety glasses loading a metal part into a CNC lathe beside a tablet showing the part',
     points: [
       'Interactive gear fitment calculators and technical specification matrices',
       'Seasonal pre-order deposit workflows with automated customer balance notifications',
@@ -169,8 +169,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Clean-Label Storefronts for Boulder Natural Care Creators',
     description:
       'Herbal apothecary brands, organic skincare creators, and holistic wellness platforms along the US-36 corridor demand clean-label digital elegance. We build custom Shopify Plus stores with ingredient transparency matrices, subscription replenishment flows, and custom bundle builders.',
-    image: '/images/us/b2b/b2b-trade-portal.webp',
-    alt: 'Denver Boulder natural skincare herbal apothecary organic ecommerce design',
+    image: '/images/us/denver/ecommerce/card-herbal-oil-bottling.webp',
+    alt: 'A woman pouring oil through an orange funnel into an amber bottle while a man grinds dried flowers in a stone mortar',
     points: [
       'Interactive ingredient transparency glossaries and clinical benefit callouts',
       'Flexible recurring subscription portals with self-service customer replenishment',
@@ -569,7 +569,7 @@ export default function DenverEcommercePage() {
               <div className="rv-curved-frame-1">
                 <Image
                   src="/images/us/denver/hero-denver.webp"
-                  alt="Denver Colorado ecommerce development Shopify Plus headless Next.js engineering"
+                  alt="A downtown skyline in front of snow-capped mountains under a blue sky"
                   width={640}
                   height={640}
                   priority

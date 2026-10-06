@@ -103,8 +103,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Clinical-Grade B2B Wholesale Portals for Minnesota MedTech Leaders',
     description:
       'Medical device manufacturers, surgical equipment suppliers, and dental supply distributors across Plymouth and Arden Hills require institutional B2B commerce architectures. We engineer headless Shopify Plus and Next.js applications with automated PO processing, Net-30 credit terms, tiered hospital contract pricing, and real-time ERP inventory syncing.',
-    image: '/images/us/b2b-website-design/hero.webp',
-    alt: 'Minneapolis medical alley medical device clinical consumables B2B ecommerce engineering',
+    image: '/images/us/minneapolis/ecommerce/card-clinical-supply-shelf-stocking.webp',
+    alt: 'A man in teal scrubs stocking sealed pouches of tubing on steel shelves while a woman in a lab coat counts plain white boxes in a supply room',
     points: [
       'Custom customer group pricing tiers with contracted hospital procurement discounts',
       'Instant PO generation, Net-30 invoicing, and multi-user corporate approval workflows',
@@ -117,7 +117,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'From North Loop modern apparel flagships to Minnesota outdoor winter gear innovators, high-growth direct-to-consumer brands demand high-speed shopping experiences. We engineer bespoke Figma UI/UX storefronts with sub-second product page loads, one-click mobile checkout, and interactive bundle builders.',
     image: '/images/us/saas-website-design/hero.webp',
-    alt: 'Minneapolis North Loop direct-to-consumer apparel and outdoor gear ecommerce storefront design',
+    alt: 'A man and a woman in a studio pointing at a wall display of a handbag product page, the same page open on a laptop',
     points: [
       'Sub-second first contentful paint and instant product filtering with zero layout shifts',
       'Custom interactive bundle builders, sizing calculators, and upsell modules',
@@ -130,7 +130,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Industrial hardware distributors, packaging suppliers, and building material wholesalers across St. Paul and the Midway corridor demand high-throughput B2B capabilities. We build high-speed wholesale platforms with bulk CSV order uploads, freight rate estimation at checkout, and automated tax exemption validation.',
     image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Minneapolis industrial hardware commercial packaging and building material B2B ecommerce platform',
+    alt: 'A machinist in safety glasses loading a metal part into a CNC lathe beside a tablet showing the part',
     points: [
       'Bulk matrix ordering and instant CSV spreadsheet SKU order upload workflows',
       'Dynamic LTL freight calculation integrations with real-time carrier rate tables',
@@ -142,8 +142,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Tactile Editorial E-Commerce for Northeast Minneapolis Brands',
     description:
       'Craft breweries, specialty roasters, and artisanal consumer brands across Northeast Minneapolis demand digital storefronts that reflect their product quality. We engineer rich visual storytelling layouts with recurring subscription delivery management, cold-pack shipping logic, and localized age verification.',
-    image: '/images/us/b2b-website-design/sales-enablement.webp',
-    alt: 'Minneapolis artisanal craft food beverage specialty consumer goods ecommerce storefront',
+    image: '/images/us/minneapolis/ecommerce/card-berry-preserve-jar-filling.webp',
+    alt: 'A woman in a denim apron ladling dark berry jam into plain glass jars while a man screws on the lids in a small bright kitchen',
     points: [
       'Automated subscription management powered by Recharge and Shopify Native Subscriptions',
       'Thermal shipping and cold-pack delivery logic based on delivery destination climate zones',
@@ -155,8 +155,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Digital License Provisioning & Global Hardware Sales Portals',
     description:
       'Technology hardware manufacturers, IoT monitoring firms, and enterprise SaaS developers across Eden Prairie and Minnetonka demand high-speed digital sales portals. We engineer custom Next.js web applications featuring automated software license key generation, developer API documentation gateways, and tier-based hardware evaluation checkout.',
-    image: '/images/services/card-real-estate.webp',
-    alt: 'Minneapolis Eden Prairie tech hardware software subscriptions ecommerce development',
+    image: '/images/us/minneapolis/ecommerce/card-network-hardware-box-packing.webp',
+    alt: 'A technician lowering a plain black network device into a foam-lined box while a man seals another box with an orange tape dispenser',
     points: [
       'Automated digital license provisioning and recurring enterprise SaaS billing',
       'Developer API key management and SDK documentation download portals',
@@ -168,8 +168,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Omnichannel B2B Supply & POS Sync for South Metro Retail Chains',
     description:
       'Retail franchise networks, multi-location apparel chains, and consumer brand headquarters across Bloomington and Edina demand unified commerce engines. We engineer custom Next.js storefronts with real-time multi-location Shopify POS inventory syncing, buy-online-pickup-in-store (BOPIS) routing, and franchise supply portals.',
-    image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Minneapolis Bloomington omnichannel retail multi location POS B2B ecommerce engineering',
+    image: '/images/us/minneapolis/ecommerce/card-shop-shelf-restocking.webp',
+    alt: 'A shop assistant moving folded towels from a stock cage onto a shelf while a manager holding a tablet stands beside him in a bright shop',
     points: [
       'Real-time multi-location store inventory feeds with localized BOPIS checkout logic',
       'Franchise owner B2B bulk supply ordering portals with localized store billing',
@@ -538,8 +538,8 @@ export default function MinneapolisEcommercePage() {
               {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
               <div className="rv-curved-frame-1">
                 <Image
-                  src="/images/us/saas-website-design/hero.webp"
-                  alt="Minneapolis Minnesota ecommerce development and headless Shopify Plus web engineering"
+                  src="/images/us/minneapolis/ecommerce/hero-wholesale-pallet-check.webp"
+                  alt="A woman scanning plain cartons on a pallet with a handheld scanner while a man with a clipboard stands beside her in a warehouse aisle"
                   width={640}
                   height={640}
                   priority

@@ -581,8 +581,8 @@ export default function ManufacturingAiAgentsPage() {
                 <div className="lg:col-span-6">
                   <div className="relative rounded-xl overflow-hidden aspect-[16/9] border border-[#E7DED6]">
                     <Image
-                      src="/images/manufacturing/industrial-equipment-supply-chain.webp"
-                      alt="Industrial equipment supply chain director managing plant inventory and assembly line"
+                      src="/images/manufacturing/machine-assembly-motor-parts-receiving.webp"
+                      alt="A man bolting an electric motor onto a steel machine frame while a woman lifts a pneumatic cylinder from a box on a pallet in an assembly hall"
                       width={1200}
                       height={800}
                       className="absolute inset-0 h-full w-full object-cover"
@@ -643,8 +643,8 @@ export default function ManufacturingAiAgentsPage() {
                 <div className="lg:col-span-6 order-1 lg:order-2">
                   <div className="relative rounded-xl overflow-hidden aspect-[16/9] border border-[#E7DED6]">
                     <Image
-                      src="/images/manufacturing/electronics-assembly-ai-qa.webp"
-                      alt="Electronics assembly quality control technician inspecting circuit board"
+                      src="/images/manufacturing/pcb-assembly-bench-component-reels.webp"
+                      alt="A woman placing a component on a green circuit board with tweezers under a magnifier lamp while a man beside her holds a tray of component reels"
                       width={1448}
                       height={1086}
                       className="absolute inset-0 h-full w-full object-cover"
@@ -659,8 +659,8 @@ export default function ManufacturingAiAgentsPage() {
                 <div className="lg:col-span-6">
                   <div className="relative rounded-xl overflow-hidden aspect-[16/9] border border-[#E7DED6]">
                     <Image
-                      src="/images/manufacturing/automotive-tier1-warehouse-ai.webp"
-                      alt="Automotive parts warehouse logistics manager using barcode scanner and AI inventory platform"
+                      src="/images/manufacturing/auto-parts-dock-brake-disc-scanning.webp"
+                      alt="A woman scanning a tag on a wire cage of brake discs at a receiving dock while a man moves a pallet truck loaded with bins of metal brackets"
                       width={1012}
                       height={676}
                       className="absolute inset-0 h-full w-full object-cover"
@@ -721,8 +721,8 @@ export default function ManufacturingAiAgentsPage() {
                 <div className="lg:col-span-6 order-1 lg:order-2">
                   <div className="relative rounded-xl overflow-hidden aspect-[16/9] border border-[#E7DED6]">
                     <Image
-                      src="/images/manufacturing/industrial-equipment-supply-chain.webp"
-                      alt="Custom plastics and industrial tooling facility engineer reviewing production schedule"
+                      src="/images/manufacturing/injection-molding-press-resin-pellets.webp"
+                      alt="A woman inspecting a white molded plastic part beside an injection molding press while a man scoops clear resin pellets from a drum"
                       width={1200}
                       height={800}
                       className="absolute inset-0 h-full w-full object-cover"

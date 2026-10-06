@@ -118,7 +118,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Austin lifestyle brands demand visual storytelling combined with frictionless mobile checkout. We engineer custom Shopify themes with real-time Shopify POS inventory syncing, dynamic color/swatch variant filtering, and Shop Pay accelerated purchasing.',
     image: '/images/us/omnichannel/retail-dtc.webp',
-    alt: 'Austin apparel lifestyle boutique ecommerce store development',
+    alt: 'A boutique shop assistant handing a wrapped parcel to a customer beside a point-of-sale tablet',
     points: [
       'Sub-second mobile collection browsing with instant faceted filtering',
       'Omnichannel Shopify POS integration for in-store pickup and cross-channel returns',
@@ -157,7 +157,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Designer footwear ateliers, leathercraft creators, and luxury apparel boutiques across South Congress require immersive editorial storefronts. We build high-converting Shopify Plus stores with high-resolution visual lookbooks, custom size recommendation engines, and Shop Pay one-tap checkout.',
     image: '/images/us/chicago-web-design/storefront.webp',
-    alt: 'Austin South Congress luxury fashion boutique designer ecommerce design',
+    alt: 'A man in a handbag boutique holding a tablet that shows a bag product page',
     points: [
       'Interactive visual lookbooks with direct shop-the-look hotspot checkout',
       'Custom size and fit recommendation wizards reducing return rates',
@@ -569,7 +569,7 @@ export default function AustinEcommerceDevelopmentPage() {
               <div className="rv-curved-frame-1">
                 <Image
                   src="/images/us/services/hero-enterprise-ecommerce.webp"
-                  alt="Austin Texas modern ecommerce development and custom Shopify Plus store mockup"
+                  alt="A desktop monitor in a glass-walled office showing a product catalogue grid of clothing and a small chart panel"
                   width={640}
                   height={640}
                   priority

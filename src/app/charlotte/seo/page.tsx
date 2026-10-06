@@ -102,8 +102,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Earning High-Ticket Consultations in America’s Second Banking Capital',
     description:
       'Charlotte is a global financial powerhouse. Wealth management firms, commercial lending brokers, and corporate advisory practices need search visibility that projects institutional stability. We build verified financial entity schema, author deep practice area guides, and engineer sub-second page performance that converts sophisticated corporate clients.',
-    image: '/images/us/charlotte/charlotte-site-mockup.webp',
-    alt: 'Charlotte financial advisory and wealth management local SEO architecture',
+    image: '/images/us/charlotte/seo/card-wealth-adviser-meeting.webp',
+    alt: 'A financial adviser sliding a closed folder across a round table to an older male client, an orange cup and saucer beside him',
     points: [
       'Structured JSON-LD schema for FinancialService, AccountingService, and WealthManagement',
       'High-authority regional media citations and verified NAP directory synchronization',
@@ -116,7 +116,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'From humid summer air conditioning failures to severe Carolinas storm damage repairs, Charlotte homeowners search under urgent deadlines. We position your contracting business directly in the top 3 Google Map Pack with live call tracking, hyper-local neighborhood pages, and automated review collection systems.',
     image: '/images/us/services/roofing-seo/hero.webp',
-    alt: 'Charlotte home services and contractor local SEO map pack strategy',
+    alt: 'Aerial view of suburban shingle rooftops at golden hour',
     points: [
       'Neighborhood landing pages for Myers Park, Dilworth, SouthPark, and Lake Norman',
       'Real-time call recording and conversion attribution integrated into GA4',
@@ -128,8 +128,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Converting High-Intent Patients in Growing Residential Corridors',
     description:
       'Private medical practices, orthodontic groups, and specialized surgical clinics face aggressive competition from Atrium Health and Novant Health. We build detailed provider profiles, clinical symptom content, and medical schema that win Google 3-Pack rankings and earn direct quotes in AI answer overviews.',
-    image: '/images/us/services/dental-seo/team.webp',
-    alt: 'Charlotte healthcare and dental practice local search ranking strategy',
+    image: '/images/us/charlotte/seo/card-eye-test-fitting.webp',
+    alt: 'An optometrist sliding a lens into a metal trial frame worn by an older woman seated in an exam chair',
     points: [
       'Exhaustive nested schema for MedicalClinic, Physician, and MedicalSpecialty',
       'HIPAA-aware appointment scheduling and instant click-to-call mobile buttons',
@@ -141,8 +141,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Dominating National Supplier Procurement Along I-85 & I-77',
     description:
       'Charlotte is the logistics and industrial crossroads of the Southeast. Precision fabricators, equipment distributors, and freight carriers need websites that communicate engineering credibility to procurement managers. We optimize technical spec sheets, capability matrices, and RFQ forms to secure national supplier shortlists.',
-    image: '/images/us/marketplace/atlanta-enterprise-supply-chain-commerce.webp',
-    alt: 'Charlotte logistics manufacturing and B2B enterprise SEO strategy',
+    image: '/images/us/charlotte/seo/card-pallet-strapping-dock.webp',
+    alt: 'Two warehouse workers securing a pallet of plain cartons, one tightening a strap and one steering an orange pallet jack',
     points: [
       'Answer-first technical specifications formatted for generative search engine extraction',
       'Sub-second page speeds on lightweight Next.js and Cloudflare Edge architecture',
@@ -520,7 +520,7 @@ export default function CharlotteSeoPage() {
               <div className="rv-curved-frame-1">
                 <Image
                   src="/images/us/charlotte/hero-charlotte.webp"
-                  alt="Charlotte North Carolina skyline and local SEO technical optimization strategy"
+                  alt="A city skyline of glass towers above a tree-lined park"
                   width={640}
                   height={640}
                   priority

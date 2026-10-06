@@ -104,8 +104,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Engineering Enterprise B2B Portals for Gulf Coast Distributors',
     description:
       'Port Tampa Bay and East Tampa industrial distributors require complex digital procurement systems. We develop custom BigCommerce B2B and Shopify Plus architectures featuring company account hierarchies, custom price lists, quote-to-order workflows, and real-time NetSuite or SAP inventory synchronization.',
-    image: '/images/us/tampa/ecommerce/portfolio-1.webp',
-    alt: 'Tampa enterprise maritime wholesale distribution and B2B ecommerce development',
+    image: '/images/us/tampa/ecommerce/card-forklift-pallet-aisle.webp',
+    alt: 'A woman driving a white forklift lifting a pallet of cardboard boxes while a man signals with a raised hand in a warehouse aisle',
     points: [
       'Customer-specific contracted pricing matrices and tiered volume discounts',
       'One-click reordering, CSV bulk ordering, and purchase order net-payment terms',
@@ -118,7 +118,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'From luxury boutiques in Hyde Park Village to high-growth coastal lifestyle brands, visual storytelling drives brand equity. We engineer headless Shopify Plus storefronts with sub-second page transitions, interactive lookbooks, smart product bundles, and frictionless one-click mobile checkout.',
     image: '/images/us/saas-website-design/hero.webp',
-    alt: 'Tampa luxury fashion and coastal lifestyle D2C ecommerce development',
+    alt: 'A man and a woman in a studio pointing at a wall display of a handbag product page, the same page open on a laptop',
     points: [
       'Sub-second headless Next.js frontend with instant mobile product filtering',
       'Dynamic product bundling, tiered upsells, and personalized cross-sells',
@@ -130,8 +130,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'High-Volume Recurring Revenue Engines for Tampa Bay Makers',
     description:
       'Ybor craft beverage producers and specialty food makers in Florida demand high-performance recurring subscription engines. We develop custom recharge and Stripe billing integrations, box builder configurators, and automated customer self-service retention portals.',
-    image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Tampa craft beverage and specialty gourmet food subscription ecommerce',
+    image: '/images/us/tampa/ecommerce/card-craft-bottle-capping.webp',
+    alt: 'A man in a green apron capping a plain amber glass bottle with a hand-lever capper while a woman stands filled bottles in a wooden crate',
     points: [
       'Custom box builder and recurring subscription membership architectures',
       'Self-service customer portal reducing subscription cancellation churn',
@@ -144,7 +144,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Medical device manufacturers and clinical supply networks across Gateway and Tampa Bay require secure, compliant e-commerce systems. We build verified provider purchase portals, clinic replenishment subscriptions, and secure payment workflows.',
     image: '/images/us/services/dental-seo/hero.webp',
-    alt: 'Tampa medical device and healthcare clinic product ecommerce store design',
+    alt: 'A bright empty reception lobby with a sofa, plants and a white reception desk',
     points: [
       'Verified practitioner license gating and professional wholesale tiers',
       'HIPAA-aware checkout workflows and secure customer data handling',
@@ -156,8 +156,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Perishable Logistics & Wholesale Food Supply E-Commerce',
     description:
       'From Gulf Coast seafood wholesalers in Port Tampa Bay to specialty citrus growers across Central Florida, fresh food distributors require temperature-sensitive logistics and complex wholesale pricing. We engineer custom B2B portals with route-based delivery scheduling, catch-weight pricing calculators, and dry-ice shipping rules.',
-    image: '/images/services/card-real-estate.webp',
-    alt: 'Tampa cold chain seafood citrus food distribution wholesale ecommerce store design',
+    image: '/images/us/tampa/ecommerce/card-fish-ice-packing.webp',
+    alt: 'A woman in orange rubber gloves shovelling ice over whole fish in a white insulated box while a man lifts a sealed box onto a cart',
     points: [
       'Catch-weight and variable-weight pricing calculation during checkout',
       'Automated refrigerated freight rule logic and zip-code route scheduling',
@@ -170,7 +170,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Boat manufacturers, marine parts distributors, and fishing lifestyle brands across Tampa Bay and St. Petersburg require high-impact visual flagships. We build custom Next.js storefronts with interactive boat schematics, fitment search engines for outboard engines, and frictionless Shop Pay checkout.',
     image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Tampa marine parts boating outdoor gear ecommerce website design',
+    alt: 'A machinist in safety glasses loading a metal part into a CNC lathe beside a tablet showing the part',
     points: [
       'Year-make-model marine engine and hull parts fitment search filters',
       'Interactive 3D boat canvas and custom upholstery configurators',

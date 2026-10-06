@@ -390,8 +390,8 @@ export default function EcommerceSpeedCalculatorPage() {
             <h2 style={{ marginTop: '10px' }}>How mobile page load speed dictates commercial profitability</h2>
             <div style={{ margin: '24px 0', borderRadius: '16px', overflow: 'hidden', border: '1px solid var(--pp-line)', boxShadow: '0 12px 36px rgba(0,0,0,0.06)' }}>
               <Image
-                src={`${IMG}/ecommerce-speed-core-web-vitals-performance-engine.webp`}
-                alt="E-commerce mobile Core Web Vitals speed and conversion performance engineering"
+                src={`/images/us/marketplace/speed-calculator-section-phone-sand-timer.webp`}
+                alt="A woman holding a phone that shows a shop page of coloured blocks while turning over a small orange sand timer on a white desk"
                 width={1200}
                 height={675}
                 style={{ width: '100%', height: 'auto', display: 'block' }}

@@ -103,7 +103,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'From Cortex Innovation District biotech startups to 39 North plant science enterprises, institutional credibility is paramount. We engineer custom Next.js web applications with interactive pipeline diagrams, investor data rooms, clinical trial recruitment portals, and sub-second edge performance.',
     image: '/images/us/st-louis-web-design/plant-science-tablet.webp',
-    alt: 'St. Louis plant science biotechnology and MedTech innovation web design engineering',
+    alt: 'Two women in a greenhouse lab with trays of seedlings, one holding a tablet showing a leaf',
     points: [
       'Interactive clinical pipeline visualizers and mechanism-of-action animations',
       'Secure investor relations data rooms and board presentation document portals',
@@ -115,8 +115,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Sophisticated Digital Presences for Clayton & St. Louis Firms',
     description:
       'Private wealth advisory firms, family offices, and commercial litigation practices in Clayton demand digital presences that project institutional stability. We design bespoke typography scales, interactive wealth calculators, and secure client portal integrations.',
-    image: '/images/us/st-louis-web-design/hero-st-louis-studio.webp',
-    alt: 'Clayton St. Louis wealth management private equity and corporate law website design',
+    image: '/images/us/st-louis/web-design/card-adviser-document-wallet.webp',
+    alt: 'A wealth adviser in a camel blazer handing a closed leather document wallet to an older man seated in an armchair in a bright office',
     points: [
       'Refined editorial typography and interactive portfolio asset allocation visualizers',
       'Encrypted client portal integration with multi-factor authentication routing',
@@ -128,8 +128,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Engineering Commercial Lead Engines for St. Charles Manufacturers',
     description:
       'Aerospace suppliers, CNC machining facilities, and precision tooling manufacturers across St. Charles and Hazelwood require steady commercial contract flow. We build responsive web applications with interactive equipment matrices, AS9100 quality showcases, and rapid CAD quotation intake.',
-    image: '/images/us/st-louis-web-design/process-review-desk.webp',
-    alt: 'St. Louis aerospace manufacturing precision tooling and defense supply web design',
+    image: '/images/us/st-louis/web-design/card-cnc-mill-loading.webp',
+    alt: 'A machinist in green coveralls clamping an aluminium block into a CNC milling machine while an older man examines a finished metal part',
     points: [
       'Interactive equipment capability matrices and engineering tolerance tables',
       'Secure CAD and STEP blueprint file upload integrations for rapid RFQ intake',
@@ -141,8 +141,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Commercial Lead Engines for Earth City & Hazelwood Logistics Hubs',
     description:
       'Freight forwarders, cold storage logistics operators, and intermodal carriers across the St. Louis metropolitan area demand high-speed lead engines. We build responsive web applications with interactive freight quote estimators, facility specification sheets, and automated lead routing.',
-    image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'St. Louis freight logistics cold storage and multimodal transportation web design',
+    image: '/images/us/st-louis/web-design/card-loading-dock-pallet.webp',
+    alt: 'A dock worker in an orange safety vest moving a pallet of boxes on a pallet truck toward the open back of a white truck while a woman holds the door',
     points: [
       'Interactive freight rate estimation calculators and RFQ workflow automation',
       'Sub-second mobile performance ensuring immediate commercial quote submissions',
@@ -154,8 +154,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Enterprise Portals & Client Sandboxes for West County Corporate Hubs',
     description:
       'Enterprise software firms, regional healthcare provider networks, and commercial architectural studios across Chesterfield and West County demand sophisticated digital flagships. We engineer custom Next.js web applications with interactive capability matrices, patient intake workflows, and automated Salesforce/HubSpot lead routing.',
-    image: '/images/us/denver/tech-office.webp',
-    alt: 'St. Louis Chesterfield enterprise tech healthcare architecture web design',
+    image: '/images/us/st-louis/web-design/card-server-rack-cabling.webp',
+    alt: 'A technician plugging an orange network cable into a black server rack while a woman stands beside him holding a tablet in a server room',
     points: [
       'Interactive architectural portfolio visualizers and CAD model presentation modules',
       'HIPAA-aware patient intake form gateways and provider directory search',
@@ -167,8 +167,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Tactile Digital Experiences for St. Louis Arts & Non-Profit Foundations',
     description:
       'Historic cultural foundations, contemporary arts institutions, and digital media production studios across Grand Center and Midtown demand visual distinction. We design high-converting web applications with tactile editorial typography, interactive donor contribution funnels, dynamic event calendars, and smooth micro-animations.',
-    image: '/images/services/card-real-estate.webp',
-    alt: 'St. Louis Grand Center arts cultural foundation media studio web design',
+    image: '/images/us/st-louis/web-design/card-gallery-canvas-hanging.webp',
+    alt: 'Two art handlers in white gloves hanging a large abstract canvas on a white gallery wall, one standing on an orange stepladder',
     points: [
       'Tactile editorial typography scales with custom brand micro-animations',
       'Interactive donor contribution funnels with recurring Stripe giving workflows',
@@ -544,7 +544,7 @@ export default function StLouisWebDesignPage() {
               <div className="rv-curved-frame-1">
                 <Image
                   src="/images/us/st-louis-web-design/hero-st-louis-studio.webp"
-                  alt="St. Louis Missouri web design and custom Next.js web application development"
+                  alt="Three people at a monitor showing handbag pages in a brick loft office"
                   width={640}
                   height={640}
                   priority

@@ -103,7 +103,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Nashville is the undisputed healthcare management capital of America. We build custom Next.js web applications featuring searchable physician directories, patient portal gateways, HIPAA-aware consultation scheduling, and sub-second edge speeds.',
     image: '/images/us/services/dental-seo/hero.webp',
-    alt: 'Nashville healthcare hospital system and medical clinic web design engineering',
+    alt: 'A bright empty reception lobby with a sofa, plants and a white reception desk',
     points: [
       'Searchable provider directories with clinical specialty credentials and hospital affiliations',
       'HIPAA-aware consultation intake forms and click-to-call mobile patient actions',
@@ -116,7 +116,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'From Music Row talent agencies to indie record labels and streaming startups, visual storytelling is essential. We craft bespoke digital flagships featuring full-screen media players, artist tour date hubs with schema markup, and high-conversion merchandise portals.',
     image: '/images/us/saas-website-design/hero.webp',
-    alt: 'Nashville music entertainment and creative studio website design',
+    alt: 'A man and a woman in a studio pointing at a wall display of a handbag product page, the same page open on a laptop',
     points: [
       'High-performance audio and video player embeds with zero page speed degradation',
       'Event calendar schema integration for tour dates, festivals, and VIP ticketing',
@@ -129,7 +129,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'High-stakes corporate law and wealth management firms in Middle Tennessee cannot afford generic visual templates. We craft bespoke digital flagships featuring practice area content hubs, partner biographical repositories with bar admission schema, verified transaction track records, and secure client communication endpoints.',
     image: '/images/us/services/law-firm-seo/hero.webp',
-    alt: 'Nashville corporate law firm litigation and private wealth web design',
+    alt: 'An empty wood-panelled office with bookshelves and a desk in warm light',
     points: [
       'Deep practice area knowledge graphs and structured legal case victory portfolios',
       'Attorney profile schema with state bar admissions and published industry insights',
@@ -142,7 +142,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'From automotive suppliers along the I-24 corridor to regional freight hubs, industrial buyers demand technical clarity. We develop high-performance web applications featuring structured capability tables, instant RFQ calculators, downloadable spec sheets, and sub-second edge hosting.',
     image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Nashville automotive manufacturing and industrial supply web design engineering',
+    alt: 'A machinist in safety glasses loading a metal part into a CNC lathe beside a tablet showing the part',
     points: [
       'Interactive equipment capability matrices and downloadable CAD/PDF engineering data',
       'Frictionless multi-step RFQ form workflows routing directly to estimating teams',
@@ -155,7 +155,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'From Nissan and GM automotive tier suppliers along the I-24 and I-840 corridors to heavy stamping facilities in Smyrna and Murfreesboro, industrial procurement teams demand technical clarity. We build custom Next.js web applications featuring structured capability tables, instant RFQ calculators, downloadable spec sheets, and sub-second edge hosting.',
     image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Nashville automotive manufacturing and industrial supply web design engineering',
+    alt: 'A machinist in safety glasses loading a metal part into a CNC lathe beside a tablet showing the part',
     points: [
       'Interactive equipment capability matrices and downloadable CAD/PDF engineering data',
       'Frictionless multi-step RFQ form workflows routing directly to estimating teams',
@@ -168,7 +168,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'From Lower Broadway live music institutions to high-end Southern dining concepts in Germantown and The Gulch, digital first impressions drive table bookings and VIP private event buyouts. We engineer high-performance web applications featuring live Resy/OpenTable widgets, VIP reservation funnels, and high-resolution photo menus rendering at 60fps.',
     image: '/images/us/restaurant-website-design/hero.webp',
-    alt: 'Nashville hospitality entertainment venue and southern culinary website design',
+    alt: 'A restaurant guest reading a menu on her phone while a server sets a table behind her',
     points: [
       'Frictionless integration with Resy, OpenTable, and Toast POS online ordering systems',
       'Interactive private event and corporate banquet buyout booking calculators',
@@ -539,7 +539,7 @@ export default function NashvilleWebDesignPage() {
               <div className="rv-curved-frame-1">
                 <Image
                   src="/images/us/nashville/hero-nashville.webp"
-                  alt="Nashville Tennessee modern web design engineering and custom Next.js website mockup"
+                  alt="A city skyline at dusk reflected in a river, with a lit bridge"
                   width={640}
                   height={640}
                   priority

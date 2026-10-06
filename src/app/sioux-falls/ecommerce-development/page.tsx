@@ -103,8 +103,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Self-Service Digital Ordering for Upper Midwest Agricultural Leaders',
     description:
       'Sioux Falls is the agricultural commerce capital of the Northern Plains. We build enterprise Shopify B2B wholesale portals featuring custom dealer pricing tiers, quick-order CSV uploads, NET payment terms, and direct API synchronization with NetSuite, SAP, and QuickBooks ERP systems.',
-    image: '/images/us/sioux-falls/ecommerce/portfolio-1.webp',
-    alt: 'Sioux Falls agricultural equipment wholesale B2B ecommerce development',
+    image: '/images/us/sioux-falls/ecommerce/card-crop-drone-field.webp',
+    alt: 'A woman in an orange cap flying a small grey drone over green crop rows while an older farmer crouches to check a leaf',
     points: [
       'Personalized wholesale pricing catalogs mapped to dealer customer accounts',
       'High-velocity bulk reordering matrices and quick CSV order upload tools',
@@ -116,8 +116,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Scaling High-Velocity Subscriptions Across the Great Plains',
     description:
       'From grass-fed South Dakota beef and heritage pork to craft pantry goods, regional food brands thrive on recurring subscriber revenue. We integrate high-throughput subscription engines via Recharge, custom bundle builders, and automated cold-chain 3PL logistics with real-time zone shipping rates.',
-    image: '/images/us/sioux-falls/ecommerce/portfolio-2.webp',
-    alt: 'Sioux Falls specialty food and meat subscription ecommerce development',
+    image: '/images/us/sioux-falls/ecommerce/card-cured-sausage-wrapping.webp',
+    alt: 'A butcher in a striped apron wrapping smoked sausages in brown paper while a woman places wrapped parcels into an insulated box',
     points: [
       'Flexible subscribe-and-save billing portals with easy customer self-management',
       'Custom bundle builders with automated volume discount tiers',
@@ -129,8 +129,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Frictionless Mobile Checkout for Upper Midwest Lifestyle Brands',
     description:
       'High-performance winter apparel, hunting gear, and outdoor lifestyle brands demand visual storefronts that convert on mobile devices. We build custom Shopify Plus themes equipped with Shop Pay acceleration, slide-out cart drawers, dynamic bundle builders, and automated Klaviyo email flows.',
-    image: '/images/us/sioux-falls/ecommerce/portfolio-3.webp',
-    alt: 'Sioux Falls DTC apparel and outdoor gear ecommerce storefront development',
+    image: '/images/us/sioux-falls/ecommerce/card-fleece-order-packing.webp',
+    alt: 'A woman folding an orange fleece jacket beside an open cardboard box while a man carries a stack of folded shirts in a stockroom',
     points: [
       'Shop Pay and Apple Pay one-tap mobile checkout acceleration',
       'Slide-out interactive cart drawers with tiered free-shipping progress indicators',
@@ -142,8 +142,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Compliant Digital Commerce for Regional Healthcare Networks',
     description:
       'Serving the vast Sanford and Avera medical networks, healthcare equipment distributors require secure online purchasing. We engineer custom B2B trade counters with PO number entry, institutional purchasing approvals, and automated sales tax exemptions.',
-    image: '/images/us/b2b/b2b-trade-portal.webp',
-    alt: 'Sioux Falls healthcare equipment and medical supplies ecommerce engineering',
+    image: '/images/us/sioux-falls/ecommerce/card-medical-supply-stockroom.webp',
+    alt: 'A man placing a plain white box on a shelf above bandage rolls while a woman in lilac scrubs unfolds a wheelchair in a supply stockroom',
     points: [
       'Institutional procurement workflows with tiered employee purchasing approvals',
       'Automated tax exemption certificate verification via Avalara integration',
@@ -156,7 +156,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Precision metal fabricators, custom agricultural equipment builders, and industrial component manufacturers across Tea and Harrisburg demand automated quoting engines. We build interactive product visualizers, custom dimensional calculators, and rapid RFQ quotation intake funnels.',
     image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Sioux Falls Tea Harrisburg industrial manufacturing parts ecommerce development',
+    alt: 'A machinist in safety glasses loading a metal part into a CNC lathe beside a tablet showing the part',
     points: [
       'Interactive dimensional product configurators with dynamic pricing updates',
       'Bulk trade discount schedules mapped to verified commercial accounts',
@@ -169,7 +169,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'From upscale retail boutiques in the Empire District to multi-location lifestyle outfitters across the Sioux Empire, retail leaders require synchronized inventory. We build custom Shopify Plus themes featuring localized in-store pickup selectors, dynamic gift registries, and sub-second catalog browsing.',
     image: '/images/us/commerce/headless-commerce-storefront-build.webp',
-    alt: 'Sioux Falls Empire district omnichannel retail luxury apparel ecommerce design',
+    alt: 'A woman and a man looking at a desktop monitor showing a grid of clothing photos',
     points: [
       'Multi-location POS inventory synchronization for local store pickup and shipping',
       'High-converting mobile product detail pages with instant Shop Pay buy buttons',
@@ -574,8 +574,8 @@ export default function SiouxFallsEcommerceDevelopmentPage() {
               {/* Right Column: Clean Ritovex Organic Curved Photo Frame (Edge-to-Edge) */}
               <div className="rv-curved-frame-1">
                 <Image
-                  src="/images/us/sioux-falls/hero-sioux-falls.webp"
-                  alt="Sioux Falls South Dakota ecommerce development team engineering custom Shopify Plus storefronts"
+                  src="/images/us/sioux-falls/ecommerce/hero-parcel-van-handover.webp"
+                  alt="A woman passing a plain cardboard parcel to a man loading the back of a white van, with more parcels in an orange crate at their feet"
                   width={640}
                   height={640}
                   priority

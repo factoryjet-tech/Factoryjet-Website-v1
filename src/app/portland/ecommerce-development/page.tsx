@@ -103,8 +103,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'High-Impact Digital Flagships for Oregon Outdoor & Apparel Brands',
     description:
       'From Central Eastside footwear innovators to Pearl District sustainable apparel houses, visual storytelling and speed drive brand loyalty. We engineer headless Shopify Plus storefronts with sub-second page transitions, interactive product lookbooks, smart bundling, and frictionless one-click mobile checkout.',
-    image: '/images/us/portland/ecommerce/portfolio-1.webp',
-    alt: 'Portland athletic footwear and sustainable outdoor apparel modern D2C ecommerce development',
+    image: '/images/us/portland/ecommerce/card-running-shoe-workbench.webp',
+    alt: 'A woman in a denim apron pressing a rubber sole onto a plain white running shoe while a man cuts mesh fabric at a workshop bench',
     points: [
       'Sub-second headless Next.js frontend with instant mobile product filtering',
       'Dynamic product bundling, tiered upsells, and personalized cross-sells',
@@ -116,8 +116,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Allocation Engines & Recurring Club Portals for Oregon Wineries',
     description:
       'Willamette Valley wineries require sophisticated allocation tiers and membership club portals. We develop custom headless e-commerce architectures with compliant state-by-state tax calculation, age verification gates, and self-service member shipment selection funnels.',
-    image: '/images/us/portland/ecommerce/portfolio-2.webp',
-    alt: 'Portland and Willamette Valley winery direct to consumer subscription ecommerce store design',
+    image: '/images/us/portland/ecommerce/card-wine-barrel-sampling.webp',
+    alt: 'A winemaker drawing a sample of red wine from an oak barrel with a glass tube while a man rolls another barrel across a bright cellar',
     points: [
       'Tiered VIP membership allocation gating and custom release scheduling',
       'Automated recurring club billing and shipment customization portals',
@@ -129,8 +129,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Engineering Enterprise B2B Portals for Hillsboro & Beaverton Tech Suppliers',
     description:
       'Semiconductor component distributors and industrial electronics suppliers across the Silicon Forest require complex procurement platforms. We develop custom BigCommerce B2B and Shopify Plus architectures featuring company account hierarchies, custom contract pricing, and real-time NetSuite or SAP sync.',
-    image: '/images/us/portland/ecommerce/portfolio-3.webp',
-    alt: 'Portland enterprise semiconductor manufacturing and industrial electronics B2B ecommerce platform',
+    image: '/images/us/portland/ecommerce/card-component-reel-stockroom.webp',
+    alt: 'A man lifting a reel of electronic components from a metal shelf while a woman holds an orange tote bin of reels in a bright stockroom',
     points: [
       'Customer-specific contracted pricing matrices and tiered volume discounts',
       'One-click reordering, CSV bulk ordering, and purchase order net-payment terms',
@@ -142,8 +142,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'High-Volume Recurring Revenue Engines for Portland Culinary Brands',
     description:
       'From artisan coffee roasters in Southeast Portland to organic food suppliers, subscription commerce drives recurring margins. We develop custom recharge and Stripe billing integrations, build-your-own subscription configurators, and automated customer self-service retention portals.',
-    image: '/images/us/services/dental-seo/hero.webp',
-    alt: 'Portland specialty coffee roasting and gourmet food subscription ecommerce development',
+    image: '/images/us/portland/ecommerce/card-coffee-roaster-cooling.webp',
+    alt: 'A woman in an apron releasing roasted coffee beans from a drum roaster into a cooling tray while a man scoops green beans from a sack',
     points: [
       'Custom box builder and recurring subscription membership architectures',
       'Self-service customer portal reducing subscription cancellation churn',
@@ -155,8 +155,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'High-Performance Storefronts for Outdoor Action Sports Leaders',
     description:
       'Kiteboarding innovators, hydrofoil equipment manufacturers, and outdoor gear wholesalers across Hood River and the Columbia River Gorge demand high-impact commerce. We engineer custom Next.js storefronts with 3D product visualizers, interactive gear configurators, and regional dealer locator mapping.',
-    image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Portland Columbia River Gorge action sports hydrofoil gear ecommerce development',
+    image: '/images/us/portland/ecommerce/card-hydrofoil-board-setup.webp',
+    alt: 'A man in a wetsuit bolting a hydrofoil mast onto an upturned white board while a woman zips a board bag on a grassy bank by the water',
     points: [
       'Interactive 3D hydrofoil and board configurators with instant price recalculation',
       'Regional dealer locator maps with integrated local inventory availability feeds',
@@ -168,8 +168,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Engineering Commercial Wholesale Engines for Clackamas Manufacturers',
     description:
       'Precision CNC machine shops, industrial tooling distributors, and metal fabricators across Clackamas and the Industrial South demand high-throughput B2B commerce. We build custom wholesale portals with bulk matrix ordering, real-time CAD drawing file uploads, and ERP-integrated purchase order workflows.',
-    image: '/images/us/b2b-website-design/hero.webp',
-    alt: 'Portland Clackamas precision metal fabrication heavy machinery B2B ecommerce platform',
+    image: '/images/us/portland/ecommerce/card-steel-frame-welding.webp',
+    alt: 'A welder in a helmet and leather jacket welding the corner of a steel frame while a man in blue overalls holds a steel square against it',
     points: [
       'CAD drawing file upload gateways with automated quoting request workflows',
       'Bulk matrix ordering and instant CSV spreadsheet SKU order upload workflows',
@@ -538,8 +538,8 @@ export default function PortlandEcommercePage() {
               {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
               <div className="rv-curved-frame-1">
                 <Image
-                  src="/images/us/portland/ecommerce/portfolio-1.webp"
-                  alt="Portland Oregon enterprise ecommerce engineering and headless Shopify Plus development"
+                  src="/images/us/portland/ecommerce/hero-filming-product-demo.webp"
+                  alt="A woman pouring water from an orange kettle into a ceramic coffee dripper while a man beside her holds a phone on a small tripod"
                   width={640}
                   height={640}
                   priority

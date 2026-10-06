@@ -787,8 +787,8 @@ export default function LocalSeoServicePage() {
             </div>
             <div style={{ marginTop: '36px', borderRadius: '16px', overflow: 'hidden', border: '1px solid var(--ls-line)', maxWidth: 860 }}>
               <Image
-                src="/images/services/healthcare-seo-map-pack.webp"
-                alt="Google map pack ranking breakdown showing proximity and prominence metrics for local service searches"
+                src="/images/us/services/local-seo/section-plumber-door-phone-map.webp"
+                alt="A woman at a house door holding a phone that shows a pale map with pins as a plumber in blue overalls arrives with a tool bag"
                 width={860}
                 height={480}
                 loading="lazy"

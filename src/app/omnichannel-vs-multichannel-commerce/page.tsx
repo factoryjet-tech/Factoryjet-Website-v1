@@ -464,7 +464,7 @@ export default function OmnichannelVsMultichannelPage() {
               </div>
               <Image
                 src={`${IMG}/omnichannel-vs-multichannel-unified-data.webp`}
-                alt="Omnichannel unified data architecture showing multi-channel inventory synchronization"
+                alt="A man at a desk with two monitors showing inventory dashboards"
                 width={1280}
                 height={800}
                 style={{ width: '100%', height: 'auto', borderRadius: '18px', border: '1px solid var(--pp-line)', display: 'block', objectFit: 'cover' }}

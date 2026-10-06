@@ -752,8 +752,8 @@ export default function SmallBusinessSeoServicePage() {
             </div>
             <div style={{ marginTop: '36px', borderRadius: '16px', overflow: 'hidden', border: '1px solid var(--ls-line)', maxWidth: 860 }}>
               <Image
-                src="/images/services/healthcare-seo-map-pack.webp"
-                alt="Google map pack ranking breakdown showing proximity and prominence metrics for small business searches"
+                src="/images/us/services/small-business-seo/section-florist-counter-phone-map.webp"
+                alt="A florist in a grey apron wrapping stems at a counter while a customer holds a phone that shows a pale map with pins"
                 width={860}
                 height={480}
                 loading="lazy"

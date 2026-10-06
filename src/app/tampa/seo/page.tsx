@@ -104,7 +104,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'In Tampa Bay’s competitive healthcare and aesthetic sectors, patients research clinic reputations and doctor credentials thoroughly before booking. We optimize Google Business Profiles, implement medical specialty schemas, generate local patient review momentum, and capture top rankings for high-ticket elective queries.',
     image: '/images/us/services/dental-seo/hero.webp',
-    alt: 'Tampa healthcare medical clinic and elective surgery local SEO optimization',
+    alt: 'A bright empty reception lobby with a sofa, plants and a white reception desk',
     points: [
       'Multi-practitioner Google Business Profile optimization with procedure sub-categories',
       'MedicalProcedure and Physician structured JSON-LD schema linking hospital affiliations',
@@ -117,7 +117,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Legal search terms in Hillsborough and Pinellas counties are intensely competitive. We engineer impenetrable local SEO architectures featuring practice area knowledge hubs, attorney bar admission schemas, verified case settlement showcases, and localized citation dominance.',
     image: '/images/us/services/law-firm-seo/hero.webp',
-    alt: 'Tampa corporate law firm litigation and maritime law local SEO strategy',
+    alt: 'An empty wood-panelled office with bookshelves and a desk in warm light',
     points: [
       'LegalService and Attorney schema linking Florida Bar verified credentials',
       'Localized practice area silos targeting Downtown Tampa, St. Petersburg, and Clearwater',
@@ -129,8 +129,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Topical Authority & AI Citation Engineering for Tampa Financial Leaders',
     description:
       'Water Street and Westshore wealth managers require commanding search presence to capture relocating high-net-worth families and corporate leaders. We build comprehensive topical clusters, executive credential schemas, and structured entity graphs that earn citations in ChatGPT Search, Perplexity, and Google AI Overviews.',
-    image: '/images/us/saas-website-design/hero.webp',
-    alt: 'Tampa private wealth management and executive financial consulting SEO strategy',
+    image: '/images/us/tampa/seo/card-client-signing-document.webp',
+    alt: 'An adviser in a grey suit steadying a document on a desk while a woman in a green dress signs it in a bright office',
     points: [
       'Topical content graph covering Florida tax advantages and private wealth advisory',
       'Structured FinancialService and Organization schema for AI citation retrieval',
@@ -143,7 +143,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Marine cargo operators, terminal logistics providers, and cold storage distributors in East Tampa require steady commercial contract flow. We optimize your local digital footprint to capture supply chain directors, fleet managers, and regional logistics coordinators.',
     image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Tampa maritime cargo logistics and industrial cold storage local SEO architecture',
+    alt: 'A machinist in safety glasses loading a metal part into a CNC lathe beside a tablet showing the part',
     points: [
       'Commercial logistics capability landing pages optimized for regional radius search queries',
       'High-speed mobile performance ensuring immediate freight quote request submissions',
@@ -537,7 +537,7 @@ export default function TampaSeoPage() {
               <div className="rv-curved-frame-1">
                 <Image
                   src="/images/us/tampa/hero-tampa.webp"
-                  alt="Tampa Florida local SEO rankings and Google Maps 3-Pack dominance strategy"
+                  alt="A waterfront city skyline with palm trees under a blue sky"
                   width={640}
                   height={640}
                   priority

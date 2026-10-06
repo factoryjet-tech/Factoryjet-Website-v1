@@ -391,7 +391,7 @@ export default function HeadlessVsMonolithicPage() {
             <div style={{ margin: '24px 0', borderRadius: '16px', overflow: 'hidden', border: '1px solid var(--pp-line)', boxShadow: '0 12px 36px rgba(0,0,0,0.06)' }}>
               <Image
                 src={`${IMG}/headless-nextjs-vs-monolithic-liquid-architecture.webp`}
-                alt="Headless Next.js vs Monolithic Liquid theme architecture and performance comparison"
+                alt="A man standing at a curved monitor showing line charts in a bright office"
                 width={1200}
                 height={675}
                 style={{ width: '100%', height: 'auto', display: 'block' }}

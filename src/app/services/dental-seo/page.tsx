@@ -782,8 +782,8 @@ export default function DentalSEOPage() {
           </div>
           <div style={{ marginTop: '36px', borderRadius: '16px', overflow: 'hidden', border: '1px solid rgba(26,23,18,0.1)', maxWidth: 860 }}>
             <Image
-              src="/images/services/healthcare-seo-map-pack.webp"
-              alt="Google Map Pack ranking breakdown for dental practices showing proximity and prominence metrics"
+              src="/images/us/services/dental-seo/section-dental-reception-phone-map.webp"
+              alt="A man at a dental reception desk holding a phone that shows a pale map with pins while the receptionist leans in to look"
               width={860}
               height={480}
               loading="lazy"

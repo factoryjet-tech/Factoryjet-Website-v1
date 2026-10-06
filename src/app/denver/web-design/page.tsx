@@ -104,7 +104,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'From DTC enterprise software platforms to Boulder CleanTech startups, digital technology buyers evaluate product capabilities instantly. We engineer custom Next.js web applications with interactive product sandboxes, pricing calculators, developer documentation hubs, and sub-second edge response times.',
     image: '/images/us/denver/tech-office.webp',
-    alt: 'Denver enterprise SaaS technology cloud platform web design engineering',
+    alt: 'A busy open-plan office with people working at laptops and a mountain-backed city skyline through the windows',
     points: [
       'Interactive software feature sandboxes and animated architecture visualizers',
       'Clean TypeScript codebase deployed on Cloudflare edge CDN with zero plugin bloat',
@@ -117,7 +117,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Private wealth advisory firms, family offices, and commercial litigation practices in Cherry Creek North and Downtown Denver demand digital presences that project institutional stability. We design bespoke typography scales, interactive wealth calculators, and secure client portal integrations.',
     image: '/images/us/denver/law-firm.webp',
-    alt: 'Denver and Cherry Creek wealth management law firm web design',
+    alt: 'A law office reception with a glass meeting room and a mountain-backed skyline through the windows',
     points: [
       'Refined editorial typography and interactive portfolio asset allocation visualizers',
       'Encrypted client portal integration with multi-factor authentication routing',
@@ -129,8 +129,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Tactile Digital Experiences for Colorado Outdoor Brands',
     description:
       'From Golden technical gear builders to Boulder active apparel brands, outdoor consumers demand immersive visual storytelling. We build responsive web applications with interactive product visualizers, material durability showcases, and frictionless checkout funnels.',
-    image: '/images/us/denver/ecommerce/portfolio-1.webp',
-    alt: 'Denver outdoor recreation brand technical apparel and gear ecommerce web design',
+    image: '/images/us/denver/web-design/card-bike-wheel-truing.webp',
+    alt: 'A mechanic adjusting a spoke on a wheel in a truing stand while a man fits a chain to a grey mountain bike held in a repair stand',
     points: [
       'Interactive product visualizers and material durability spec matrices',
       'Sub-second mobile speed ensuring immediate product purchases and dealer inquiries',
@@ -143,7 +143,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'In Denver’s competitive elective medicine market, patients evaluate clinical expertise and facility reputation thoroughly before booking. We craft accessible, HIPAA-conscious interfaces with provider directories, service area silos, and frictionless appointment scheduling workflows.',
     image: '/images/us/denver/healthcare-clinic.webp',
-    alt: 'Denver concierge healthcare medical practice clinic website design and development',
+    alt: 'A bright clinic reception with a marble desk, pendant lights and armchairs',
     points: [
       'Multi-practitioner physician directories with board certification schemas',
       'Sub-second mobile speed ensuring immediate patient appointment booking',
@@ -155,8 +155,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Technical Documentation Portals for Front Range Research Leaders',
     description:
       'Quantum hardware firms, climate modeling laboratories, and aerospace research organizations across Boulder and US-36 demand institutional web applications. We engineer custom Next.js platforms featuring interactive scientific visualizers, developer API gateways, and sub-second technical documentation search.',
-    image: '/images/services/card-real-estate.webp',
-    alt: 'Denver Boulder quantum computing cleantech aerospace engineering website design',
+    image: '/images/us/denver/web-design/card-optical-table-alignment.webp',
+    alt: 'A physicist in orange safety goggles adjusting a mirror on an optical table while a colleague holds a lens beside her',
     points: [
       'Interactive scientific parameter visualizers and architectural diagrams',
       'Developer API reference hubs and downloadable SDK documentation portals',
@@ -169,7 +169,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Precision machine shops, aerospace component fabricators, and heavy equipment manufacturers across Golden and Lakewood require institutional credibility online. We build custom Next.js web applications with CAD drawing upload portals, interactive equipment tolerance tables, and automated ERP request-for-quote (RFQ) routing.',
     image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Denver Golden precision manufacturing machinery aerospace tooling web design',
+    alt: 'A machinist in safety glasses loading a metal part into a CNC lathe beside a tablet showing the part',
     points: [
       'CAD drawing file upload gateways with automated RFQ distribution to sales engineers',
       'Interactive CNC machining tolerance tables and materials compatibility guides',
@@ -569,7 +569,7 @@ export default function DenverWebDesignPage() {
               <div className="rv-curved-frame-1">
                 <Image
                   src="/images/us/denver/hero-denver.webp"
-                  alt="Denver Colorado web design and custom Next.js web application development"
+                  alt="A downtown skyline in front of snow-capped mountains under a blue sky"
                   width={640}
                   height={640}
                   priority

@@ -103,7 +103,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'In South Florida’s competitive aesthetic and surgical markets, prospective patients research procedure credentials thoroughly before booking consultations. We optimize Google Business Profiles, implement medical specialty schemas, generate local patient review momentum, and capture top rankings for high-ticket elective queries.',
     image: '/images/us/services/dental-seo/hero.webp',
-    alt: 'Miami healthcare medical aesthetic and plastic surgery clinic local SEO optimization',
+    alt: 'A bright empty reception lobby with a sofa, plants and a white reception desk',
     points: [
       'Multi-practitioner Google Business Profile optimization with procedure sub-categories',
       'MedicalProcedure and Physician structured JSON-LD schema linking hospital affiliations',
@@ -115,8 +115,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Topical Authority & AI Citation Engineering for Miami Financial Leaders',
     description:
       'Brickell financial advisors and family offices require commanding search presence to capture relocating wealth and international capital. We build comprehensive topical clusters, executive credential schemas, and structured entity graphs that earn citations in ChatGPT Search, Perplexity, and Google AI Overviews.',
-    image: '/images/us/saas-website-design/hero.webp',
-    alt: 'Miami private wealth management and cross-border financial SEO strategy',
+    image: '/images/us/miami/seo/card-advisers-chart-screen-review.webp',
+    alt: 'Two wealth advisers at a tall desk, a woman pointing at a monitor of simple bar shapes and an older man holding a closed leather folder',
     points: [
       'Topical content graph covering cross-border tax planning and private wealth advisory',
       'Structured FinancialService and Organization schema for AI citation retrieval',
@@ -129,7 +129,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Legal search terms in Miami-Dade County are intensely competitive. We engineer impenetrable local SEO architectures featuring practice area knowledge hubs, attorney bar admission schemas, verified case settlement showcases, and bilingual search dominance.',
     image: '/images/us/services/law-firm-seo/hero.webp',
-    alt: 'Miami corporate law firm litigation and international arbitration local SEO strategy',
+    alt: 'An empty wood-panelled office with bookshelves and a desk in warm light',
     points: [
       'LegalService and Attorney schema linking Florida Bar verified credentials',
       'Bilingual English and Spanish content architecture with localized schema markup',
@@ -141,8 +141,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Driving High-Ticket Commercial Inquiries Across Doral & PortMiami',
     description:
       'Freight forwarders, customs brokers, and maritime logistics operators in Miami require steady commercial contract flow. We optimize your local digital footprint to capture supply chain directors, trade managers, and international distributors seeking verified regional partners.',
-    image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Miami import export logistics and freight forwarding local SEO architecture',
+    image: '/images/us/miami/seo/card-export-crate-strapping.webp',
+    alt: 'A freight handler tightening an orange ratchet strap around a plain wooden export crate while a man in a white shirt holds a clipboard',
     points: [
       'Commercial logistics capability landing pages optimized for trade corridor queries',
       'High-speed mobile performance ensuring immediate freight quote request submissions',
@@ -525,7 +525,7 @@ export default function MiamiSeoPage() {
               <div className="rv-curved-frame-1">
                 <Image
                   src="/images/us/miami/hero-miami.webp"
-                  alt="Miami Florida local SEO rankings and Google Maps 3-Pack dominance strategy"
+                  alt="A skyline of high-rise towers across turquoise water, framed by palm trees"
                   width={640}
                   height={640}
                   priority

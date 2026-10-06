@@ -698,7 +698,7 @@ export default function KochiEcommercePage() {
               title: 'Impulse Branding · Mumbai',
               description:
                 'Impulse Branding is a Mumbai print branding and general contracting company. FactoryJet built impulsebranding.in and is now building their next-generation site.',
-              imageSrc: '/images/portfolio/belle-maison.webp',
+              imageSrc: '/images/work/impulse-branding-desktop.webp',
               stat1: 'Launched in 6 days',
               stat2: 'Web · SEO',
             },

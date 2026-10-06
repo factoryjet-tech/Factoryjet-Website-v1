@@ -170,10 +170,10 @@ const MIGRATION_WORKFLOW = [
 ];
 
 const USECASES = [
-  { t: 'Mid-market DTC brands', img: 'retail-dtc.webp', alt: 'A growing mid-market retail brand serving a customer at a BigCommerce-powered point of sale', d: 'Fast, custom storefronts that scale with your growing catalog. Enjoy zero transaction fees eating your profit margins, with open APIs ready for future integrations.' },
-  { t: 'B2B on BigCommerce', img: 'wholesale-dtc.webp', alt: 'A wholesale team fulfilling trade orders placed through a BigCommerce B2B Edition store', d: 'B2B Edition features price lists, customer groups, quotes, and net terms. Trade buyers self-serve on the same platform as your retail store.' },
-  { t: 'Multi-storefront & international', img: 'multi-location.webp', alt: 'An operator managing multiple BigCommerce storefronts and currencies from one admin', d: 'Run several storefronts, regions, and currencies from one account. Catalogs and pricing adapt per target market.' },
-  { t: 'Headless & developer-led', img: 'marketplace.webp', alt: 'A developer building a headless BigCommerce storefront connected through the BigCommerce API', d: 'Use BigCommerce as the commerce engine behind a custom frontend. Open APIs and modern developer tooling handle catalog and order processing.' },
+  { t: 'Mid-market DTC brands', img: 'retail-dtc.webp', alt: 'A boutique shop assistant handing a wrapped parcel to a customer beside a point-of-sale tablet', d: 'Fast, custom storefronts that scale with your growing catalog. Enjoy zero transaction fees eating your profit margins, with open APIs ready for future integrations.' },
+  { t: 'B2B on BigCommerce', img: 'wholesale-dtc.webp', alt: 'A warehouse team taping and packing cardboard boxes at long tables', d: 'B2B Edition features price lists, customer groups, quotes, and net terms. Trade buyers self-serve on the same platform as your retail store.' },
+  { t: 'Multi-storefront & international', img: 'multi-location.webp', alt: 'A man at a desk looking up at a wall of dashboard screens', d: 'Run several storefronts, regions, and currencies from one account. Catalogs and pricing adapt per target market.' },
+  { t: 'Headless & developer-led', img: 'marketplace.webp', alt: 'Hands typing on a laptop that shows an orders dashboard with charts', d: 'Use BigCommerce as the commerce engine behind a custom frontend. Open APIs and modern developer tooling handle catalog and order processing.' },
 ];
 const COMPARE = [
   { name: 'BigCommerce', model: 'Open SaaS, no transaction fees', b2b: 'B2B Edition', headless: 'Strong, API-first', best: 'Mid-market DTC + B2B', me: true },

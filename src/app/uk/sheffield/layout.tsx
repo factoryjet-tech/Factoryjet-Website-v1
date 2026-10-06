@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     siteName: "FactoryJet",
     locale: "en_GB",
     type: "website",
-    images: [{ url: '/images/uk/city-sheffield.jpg', width: 1200, height: 630, alt: 'SEO agency Sheffield: FactoryJet' }],
+    images: [{ url: '/images/uk/cities/sheffield-og.jpg', width: 1200, height: 630, alt: 'The Goodwin Fountain in the Peace Gardens in front of Sheffield Town Hall' }],
   },
   twitter: {
     card: "summary_large_image",

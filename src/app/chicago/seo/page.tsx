@@ -104,7 +104,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Commercial property managers and facility directors across Cook and DuPage counties do not browse pages of search results. When roof leaks occur or HVAC systems fail, they call the top 3 verified businesses in the Google Map Pack. We structure your Google Business Profile, service radius coordinates, localized job photo geo-tagging, and high-authority local contractor citations to dominate high-ticket service queries.',
     image: '/images/us/services/roofing-seo/hero.webp',
-    alt: 'Chicago commercial contractor and roofing local SEO ranking strategy',
+    alt: 'Aerial view of suburban shingle rooftops at golden hour',
     points: [
       'Hyper-localized neighborhood landing pages covering 25+ Chicagoland suburban municipalities',
       'Automated review generation workflows securing verified customer testimonials with keyword signals',
@@ -116,8 +116,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Driving High-Value Patient Appointments in Chicago’s Premier Medical Corridors',
     description:
       'From private practices along Michigan Avenue to multi-location dental groups in Naperville, local search visibility determines your patient acquisition costs. We optimize your medical entity profiles, connect provider NPI registries to local schema, optimize Google Maps categories, and ensure spotless citation consistency across healthcare directories.',
-    image: '/images/us/services/dental-seo/team.webp',
-    alt: 'Chicago healthcare dental and medical practice local SEO growth',
+    image: '/images/us/chicago/seo/card-dental-brushing-demo.webp',
+    alt: 'A dentist showing a seated male patient how to brush using a plastic teeth model and an orange toothbrush',
     points: [
       'Physician-specific and clinic-level Google Business Profile optimization with appointment booking links',
       'MedicalSpecialty and Physician schema markup aligning with state licensing and hospital networks',
@@ -129,8 +129,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Dominating High-Stakes Legal Search Queries in Downtown Chicago',
     description:
       'Legal keywords in Chicago are among the most competitive in the United States. Ranking in the Map Pack and top organic positions requires deep entity authority. We build comprehensive legal practice area content silos, optimize attorney bar admission entities, earn high-tier legal directory citations, and structure verified case result knowledge panels.',
-    image: '/images/us/services/law-firm-seo/team.webp',
-    alt: 'Chicago law firm litigation and corporate counsel local SEO architecture',
+    image: '/images/us/chicago/seo/card-injury-client-consultation.webp',
+    alt: 'A lawyer in a blue suit listening to a male client whose arm is in a sling, a closed orange ring binder on her knee',
     points: [
       'Practice area content architecture engineered for high-intent legal search queries',
       'LegalService and Attorney schema with state bar credentials and practice jurisdiction tags',
@@ -143,7 +143,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Industrial buyers and supply chain managers in Elk Grove Village and surrounding industrial parks search for local fabrication, machining, and logistics partners. We optimize your technical capability matrices, register verified B2B industry citations, and structure commercial supplier schemas to capture corporate purchase orders.',
     image: '/images/us/manufacturing-website-design/rfq-desk.webp',
-    alt: 'Chicago industrial supplier and logistics B2B local search optimization',
+    alt: 'A man comparing a printed technical drawing with a machined bracket shown on a laptop, calipers on the desk',
     points: [
       'B2B supplier and fabrication capability schemas linking equipment specs to regional search queries',
       'Google Maps optimization for commercial loading dock addresses and industrial park locations',
@@ -513,8 +513,8 @@ export default function ChicagoSeoPage() {
               {/* Right Column: Clean Organic Curved Photo Frame */}
               <div className="rv-curved-frame-1">
                 <Image
-                  src="/images/us/chicago-seo/chicago-strategy-session.webp"
-                  alt="Chicago Local SEO Google Maps Strategy and Ranking Analysis"
+                  src="/images/us/chicago/seo/hero-map-dot-grid-review.webp"
+                  alt="Two colleagues at a standing desk studying a monitor that shows a pale map covered with green and yellow dots"
                   width={640}
                   height={640}
                   priority

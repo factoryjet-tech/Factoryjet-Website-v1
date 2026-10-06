@@ -103,8 +103,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Clinical-Grade B2B Wholesale Portals for RTP Research Leaders',
     description:
       'Biotechnology providers, laboratory equipment suppliers, and clinical consumable distributors across Research Triangle Park require institutional B2B commerce architectures. We engineer headless Shopify Plus and Next.js applications with automated PO processing, Net-30 credit terms, contracted institutional pricing, and real-time ERP inventory syncing.',
-    image: '/images/us/b2b-website-design/hero.webp',
-    alt: 'Raleigh Research Triangle Park life sciences laboratory equipment and biotech B2B ecommerce engineering',
+    image: '/images/us/raleigh/ecommerce/card-lab-glassware-unpacking.webp',
+    alt: 'A man in a lab coat unpacking glass flasks from a cardboard box while a woman loads tubes into a benchtop centrifuge in a laboratory',
     points: [
       'Custom customer group pricing tiers with contracted research institution discounts',
       'Instant PO generation, Net-30 invoicing, and multi-user corporate approval workflows',
@@ -116,8 +116,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'High-Converting Headless Storefronts for Carolina Lifestyle Brands',
     description:
       'From North Carolina outdoor apparel innovators to athletic footwear brands, high-growth direct-to-consumer businesses demand high-speed shopping experiences. We engineer bespoke Figma UI/UX storefronts with sub-second product page loads, one-click mobile checkout, and interactive gear configurators.',
-    image: '/images/us/raleigh/hero-raleigh.webp',
-    alt: 'Raleigh direct-to-consumer outdoor sporting goods and athletic apparel ecommerce storefront design',
+    image: '/images/us/raleigh/ecommerce/card-dome-tent-pitching.webp',
+    alt: 'A man threading a pole through a grey dome tent while a woman kneels to tap in a peg with a mallet on a grass field',
     points: [
       'Sub-second first contentful paint and instant product filtering with zero layout shifts',
       'Custom interactive bundle builders, sizing calculators, and upsell modules',
@@ -129,8 +129,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Tactile Editorial E-Commerce for Triangle Artisanal Producers',
     description:
       'Specialty roasters, craft breweries, and sustainable agricultural brands across the Triangle demand digital storefronts that reflect their product craft. We engineer rich visual storytelling layouts with recurring subscription delivery management, cold-pack shipping logic, and localized age verification.',
-    image: '/images/us/b2b-website-design/sales-enablement.webp',
-    alt: 'Raleigh Durham specialty craft beverage and agritech subscription ecommerce platform',
+    image: '/images/us/raleigh/ecommerce/card-pickle-jar-packing.webp',
+    alt: 'A man in a white apron packing cucumbers and dill into plain glass jars while a woman screws on the lids in a bright food kitchen',
     points: [
       'Flexible recurring subscription management with custom delivery interval selection',
       'Dynamic cold-pack and localized perishable shipping rate calculation',
@@ -143,7 +143,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Industrial hardware distributors, electronic component suppliers, and precision tooling manufacturers across Morrisville and I-40 demand high-throughput B2B capabilities. We build high-speed wholesale platforms with bulk CSV order uploads, freight rate estimation at checkout, and automated tax exemption validation.',
     image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Raleigh industrial electronics precision hardware and clean technology B2B ecommerce platform',
+    alt: 'A machinist in safety glasses loading a metal part into a CNC lathe beside a tablet showing the part',
     points: [
       'Bulk matrix ordering and instant CSV spreadsheet SKU order upload workflows',
       'Dynamic LTL freight calculation integrations with real-time carrier rate tables',
@@ -155,8 +155,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Digital License Provisioning & Global Hardware Sales Portals',
     description:
       'Technology hardware manufacturers, IoT monitoring firms, and enterprise SaaS developers across Cary and the Triangle demand high-speed digital sales portals. We engineer custom Next.js web applications featuring automated software license key generation, developer API documentation gateways, and tier-based hardware evaluation checkout.',
-    image: '/images/services/card-real-estate.webp',
-    alt: 'Raleigh Cary tech corridor software licensing digital subscriptions ecommerce development',
+    image: '/images/us/raleigh/ecommerce/card-laptop-setup-bench.webp',
+    alt: 'A woman setting up a row of plain grey laptops on a bench while a man packs a closed laptop into a cardboard box in a bright workroom',
     points: [
       'Automated digital license provisioning and recurring enterprise SaaS billing',
       'Developer API key management and SDK documentation download portals',
@@ -168,8 +168,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'High-Impact Storefronts for Historic Tobacco District Innovators',
     description:
       'Artisanal consumer brands, lifestyle product creators, and innovative direct-to-consumer businesses across Durham American Tobacco District require digital flagships with sub-second page rendering, interactive lookbooks, and conversion-optimized mobile checkouts.',
-    image: '/images/us/b2b-website-design/sales-enablement.webp',
-    alt: 'Raleigh Durham American Tobacco District specialty consumer goods ecommerce storefront',
+    image: '/images/us/raleigh/ecommerce/card-candle-pouring-studio.webp',
+    alt: 'A woman in a linen apron pouring melted wax into plain glass jars while a man places finished candles into kraft boxes in a bright studio',
     points: [
       'Sub-500ms Next.js 15 edge page transitions with zero cumulative layout shifts',
       'Integrated VIP loyalty programs, SMS marketing funnels, and post-purchase flows',
@@ -551,7 +551,7 @@ export default function RaleighEcommerceDevelopmentPage() {
               <div className="rv-curved-frame-1">
                 <Image
                   src="/images/us/raleigh/hero-raleigh.webp"
-                  alt="Raleigh North Carolina ecommerce development and headless Shopify Plus storefront engineering"
+                  alt="Aerial view of a mid-size city skyline surrounded by trees"
                   width={640}
                   height={640}
                   priority

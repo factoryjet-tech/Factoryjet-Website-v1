@@ -103,7 +103,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Cleveland’s historic 200-year industrial powerhouse demands websites that speak directly to engineers and procurement officers. We build structured product capability matrices, downloadable ISO certification spec sheets, interactive RFQ calculators, and sub-second page speeds that convert B2B buyers.',
     image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Cleveland precision manufacturing and industrial equipment web design engineering',
+    alt: 'A machinist in safety glasses loading a metal part into a CNC lathe beside a tablet showing the part',
     points: [
       'Interactive equipment capability tables and downloadable CAD/PDF spec sheets',
       'Frictionless RFQ form routing directly to estimating and engineering teams',
@@ -116,7 +116,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Whether you operate an independent surgical clinic or provide specialized B2B vendor services to the Cleveland Clinic network, credibility is vital. We build HIPAA-aware web portals, physician directory matrices, clear insurance plan guides, and instant mobile appointment scheduling flows.',
     image: '/images/services/healthcare-seo.webp',
-    alt: 'Cleveland healthcare dental and medical practice website design',
+    alt: 'A clinician working on a laptop that shows charts in a clinic office',
     points: [
       'Intuitive provider bio directories with education and specialty filters',
       'HIPAA-aware consultation forms and click-to-call mobile contact buttons',
@@ -129,7 +129,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'High-stakes litigation and corporate clients in Downtown Cleveland evaluate your website before agreeing to an initial consultation. We design modern, high-contrast digital flagships featuring practice area breakdowns, attorney bio repositories, and secure client intake flows.',
     image: '/images/us/services/law-firm-seo/hero.webp',
-    alt: 'Cleveland law firm corporate counsel and litigation web design',
+    alt: 'An empty wood-panelled office with bookshelves and a desk in warm light',
     points: [
       'Comprehensive practice area content architecture and case result portfolios',
       'Attorney profile schema with state bar admissions and verified credentials',
@@ -142,7 +142,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'From craft breweries and historic restaurants along West 25th to boutique retailers, customer conversion happens on mobile devices. We build lightning-fast storefronts featuring dynamic digital menus, live reservation widgets, private dining inquiry forms, and event calendars.',
     image: '/images/us/restaurant-website-design/hero.webp',
-    alt: 'Cleveland hospitality restaurant and retail web design development',
+    alt: 'A restaurant guest reading a menu on her phone while a server sets a table behind her',
     points: [
       'Sub-second mobile menu rendering with dietary and allergy filter badges',
       'Seamless OpenTable and Resy reservation embeds with zero page lag',
@@ -496,7 +496,7 @@ export default function ClevelandWebDesignPage() {
               <div className="rv-curved-frame-1">
                 <Image
                   src="/images/services/web-design/hero.webp"
-                  alt="Cleveland Ohio modern web design engineering and custom Next.js website mockup"
+                  alt="An abstract render of blue and white steps leading to an arch"
                   width={640}
                   height={640}
                   priority

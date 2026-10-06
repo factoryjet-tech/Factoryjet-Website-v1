@@ -103,7 +103,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'In Southern California’s premier aesthetic and surgical markets, patients evaluate physician credentials and peer reviews thoroughly before scheduling consultations. We optimize Google Business Profiles, implement medical specialty schemas, generate local patient review momentum, and capture top rankings for high-ticket elective queries.',
     image: '/images/us/services/dental-seo/hero.webp',
-    alt: 'Los Angeles healthcare medical aesthetic and plastic surgery clinic local SEO optimization',
+    alt: 'A bright empty reception lobby with a sofa, plants and a white reception desk',
     points: [
       'Multi-practitioner Google Business Profile optimization with procedure sub-categories',
       'MedicalProcedure and Physician structured JSON-LD schema linking hospital affiliations',
@@ -116,7 +116,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Legal search terms across Los Angeles County are fiercely contested. We engineer impenetrable local SEO architectures featuring practice area knowledge hubs, attorney bar admission schemas, verified case outcome showcases, and localized citation dominance.',
     image: '/images/us/services/law-firm-seo/hero.webp',
-    alt: 'Los Angeles entertainment law firm litigation and copyright local SEO ranking strategy',
+    alt: 'An empty wood-panelled office with bookshelves and a desk in warm light',
     points: [
       'LegalService and Attorney schema linking California State Bar verified credentials',
       'Localized practice area silos targeting Century City, DTLA, Beverly Hills, and Pasadena',
@@ -128,8 +128,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Topical Authority & AI Citation Engineering for LA Financial Leaders',
     description:
       'Century City and Westside wealth advisors require commanding search presence to capture high-net-worth entertainment executives and tech founders. We build comprehensive topical clusters, executive credential schemas, and structured entity graphs that earn citations in ChatGPT Search, Perplexity, and Google AI Overviews.',
-    image: '/images/us/saas-website-design/hero.webp',
-    alt: 'Los Angeles private wealth management and entertainment financial advisory SEO strategy',
+    image: '/images/us/los-angeles/seo/card-tax-adviser-receipt-sorting.webp',
+    alt: 'A tax adviser in a waistcoat sorting paper slips into an orange accordion file while a client in a camel coat hands him an envelope',
     points: [
       'Topical content graph covering California wealth planning and executive advisory',
       'Structured FinancialService and Organization schema for AI citation retrieval',
@@ -141,8 +141,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Driving High-Ticket Commercial Inquiries Across Southern California',
     description:
       'Architectural studios, luxury general contractors, and commercial developers in Los Angeles require steady project flow. We optimize your local digital footprint to capture corporate developers, luxury estate owners, and hospitality groups.',
-    image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Los Angeles architecture and luxury commercial construction local SEO architecture',
+    image: '/images/us/los-angeles/seo/card-architect-site-shell-walkthrough.webp',
+    alt: 'An architect in a white hard hat pointing at the ceiling of a bare concrete building shell beside a contractor carrying an orange drawing tube',
     points: [
       'Commercial capability landing pages optimized for regional radius search queries',
       'High-speed mobile performance ensuring immediate project RFP submissions',
@@ -518,8 +518,8 @@ export default function LosAngelesSeoPage() {
               {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
               <div className="rv-curved-frame-1">
                 <Image
-                  src="/images/us/los-angeles-seo/los-angeles-fashion-district.webp"
-                  alt="Los Angeles California local SEO rankings and Google Maps 3-Pack dominance strategy"
+                  src="/images/us/los-angeles/seo/hero-restaurant-bars-review.webp"
+                  alt="A chef and a woman seated at a restaurant table looking at a laptop that shows four plain bars rising from left to right"
                   width={640}
                   height={640}
                   priority

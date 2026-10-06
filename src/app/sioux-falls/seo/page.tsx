@@ -102,7 +102,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Sioux Falls is the premier medical referral center for South Dakota, Iowa, and Minnesota. We build exhaustive medical schema, physician profile directories, and HIPAA-aware conversion flows that allow independent practices to win Google 3-Pack rankings and earn direct quotes in AI answer engines.',
     image: '/images/services/healthcare-seo.webp',
-    alt: 'Sioux Falls healthcare and medical practice local SEO strategy',
+    alt: 'A clinician working on a laptop that shows charts in a clinic office',
     points: [
       'Comprehensive schema for Physician, MedicalClinic, and MedicalSpecialty',
       'HIPAA-aware appointment scheduling and instant click-to-call mobile buttons',
@@ -114,8 +114,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Projecting Institutional Trust in America’s Banking Capital',
     description:
       'South Dakota’s favorable trust laws have made Sioux Falls a national center for wealth management and commercial banking. We engineer sub-second page performance, verified financial entity schemas, and deep practice area content that converts sophisticated corporate clients.',
-    image: '/images/us/shared/factoryjet-audit-call.webp',
-    alt: 'Sioux Falls financial advisory and trust administration local search marketing',
+    image: '/images/us/sioux-falls/seo/card-banker-client-handshake.webp',
+    alt: 'A loan officer in a grey suit shaking hands with a man in a tweed blazer and an orange necktie beside a desk in a bright office',
     points: [
       'Structured JSON-LD schema for FinancialService, AccountingService, and WealthManagement',
       'High-authority regional media citations and verified NAP directory synchronization',
@@ -128,7 +128,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'From agricultural machinery fabricators to bio-processing suppliers along I-90 and I-29, regional B2B buyers search technical specifications online before issuing an RFQ. We format technical capability matrices and spec sheets to rank for commercial buyer queries.',
     image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Sioux Falls AgTech and precision manufacturing industrial SEO',
+    alt: 'A machinist in safety glasses loading a metal part into a CNC lathe beside a tablet showing the part',
     points: [
       'Answer-first technical specifications formatted for generative AI search crawlers',
       'Sub-second page load speeds on Next.js and Cloudflare Edge infrastructure',
@@ -141,7 +141,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Severe summer Great Plains hail storms and harsh sub-zero winter freeze-thaw cycles create urgent home repair needs across Minnehaha and Lincoln counties. We position your contracting business directly in the Google Map Pack 3-Pack with live call recording and neighborhood service pages.',
     image: '/images/us/services/roofing-seo/search-visibility.webp',
-    alt: 'Sioux Falls roofing contractor and HVAC home services local SEO map pack',
+    alt: 'A minimal street map illustration with three terracotta location pins',
     points: [
       'Neighborhood landing pages for Downtown, Dawley Farm, Brandon, and Harrisburg',
       'Live call recording and conversion attribution integrated into Google Analytics 4',
@@ -506,8 +506,8 @@ export default function SiouxFallsSeoPage() {
               {/* Right Column: Clean Ritovex Organic Curved Photo Frame (Edge-to-Edge) */}
               <div className="rv-curved-frame-1">
                 <Image
-                  src="/images/us/sioux-falls/seo/sioux-falls-seo-1.webp"
-                  alt="Sioux Falls South Dakota local SEO technical optimization and Google Map Pack ranking strategy"
+                  src="/images/us/sioux-falls/seo/hero-upholstery-workshop-call.webp"
+                  alt="An upholsterer in a canvas apron answering a phone and writing in a notebook beside a laptop showing a simple rising line"
                   width={640}
                   height={640}
                   priority

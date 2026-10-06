@@ -103,7 +103,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'In affluent North Atlanta corridors, prospective patients research procedure credentials thoroughly before booking consultations. We optimize Google Business Profiles, implement medical specialty schemas, generate local patient review momentum, and capture top rankings for competitive aesthetic and orthopedic queries.',
     image: '/images/us/services/dental-seo/hero.webp',
-    alt: 'Atlanta healthcare medical clinic and surgical center local SEO optimization',
+    alt: 'A bright empty reception lobby with a sofa, plants and a white reception desk',
     points: [
       'Multi-practitioner Google Business Profile optimization with procedure sub-categories',
       'MedicalProcedure and Physician structured JSON-LD schema linking hospital affiliations',
@@ -129,7 +129,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Legal search terms in Atlanta are among the most fiercely contested in the country. We engineer impenetrable local SEO architectures featuring practice area knowledge hubs, attorney bar admission schemas, verified case settlement showcases, and localized citation dominance.',
     image: '/images/us/services/law-firm-seo/hero.webp',
-    alt: 'Atlanta corporate law firm litigation and personal injury local SEO ranking strategy',
+    alt: 'An empty wood-panelled office with bookshelves and a desk in warm light',
     points: [
       'LegalService and Attorney schema linking State Bar of Georgia verified credentials',
       'Localized practice area silos targeting Fulton, Gwinnett, Cobb, and DeKalb counties',
@@ -142,7 +142,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'General contractors, industrial suppliers, and logistics providers in Atlanta require steady commercial contract flow. We optimize your local digital footprint to capture facility managers, procurement directors, and commercial developers seeking regional partners.',
     image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Atlanta commercial contracting and industrial supply local SEO architecture',
+    alt: 'A machinist in safety glasses loading a metal part into a CNC lathe beside a tablet showing the part',
     points: [
       'Commercial capability landing pages optimized for regional radius search queries',
       'High-speed mobile performance ensuring immediate quote request submissions',
@@ -524,8 +524,8 @@ export default function AtlantaSeoPage() {
               {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
               <div className="rv-curved-frame-1">
                 <Image
-                  src="/images/us/atlanta-web-design/hero.webp"
-                  alt="Atlanta Georgia local SEO rankings and Google Maps 3-Pack dominance strategy"
+                  src="/images/us/atlanta/seo/hero-bakery-counter-map.webp"
+                  alt="A baker sliding a tray of loaves onto a shelf behind a wooden counter, beside a laptop showing a pale map with three pins"
                   width={640}
                   height={640}
                   priority

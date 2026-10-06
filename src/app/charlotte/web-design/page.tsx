@@ -103,7 +103,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Uptown and South End financial firms demand websites that speak to enterprise CFOs, institutional partners, and compliance officers. We build custom Next.js web applications featuring interactive product demo tours, API documentation portals, SOC 2 compliance matrices, and lightning-fast page speeds.',
     image: '/images/us/saas-website-design/hero.webp',
-    alt: 'Charlotte banking technology and fintech web design engineering',
+    alt: 'A man and a woman in a studio pointing at a wall display of a handbag product page, the same page open on a laptop',
     points: [
       'Interactive product feature tours and downloadable technical whitepaper funnels',
       'Frictionless multi-step demo scheduling forms routing to sales engineering teams',
@@ -116,7 +116,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'From private practices in Ballantyne to surgical clinics in South Park, credibility drives patient acquisition. We engineer HIPAA-aware medical websites featuring searchable physician directories, specialty procedure overviews, insurance plan matrices, and lightning-fast appointment scheduling flows.',
     image: '/images/us/services/dental-seo/hero.webp',
-    alt: 'Charlotte healthcare medical practice and surgical clinic website design',
+    alt: 'A bright empty reception lobby with a sofa, plants and a white reception desk',
     points: [
       'Searchable provider directories with specialty credentials and hospital affiliations',
       'HIPAA-aware consultation intake forms and click-to-call mobile patient actions',
@@ -129,7 +129,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'High-stakes corporate litigation and commercial real estate firms in Charlotte cannot afford generic visual templates. We craft bespoke digital flagships featuring practice area content hubs, partner biographical repositories with bar admission schema, verified transaction track records, and secure client communication endpoints.',
     image: '/images/us/services/law-firm-seo/hero.webp',
-    alt: 'Charlotte corporate law firm litigation and commercial real estate web design',
+    alt: 'An empty wood-panelled office with bookshelves and a desk in warm light',
     points: [
       'Deep practice area knowledge graphs and structured legal case victory portfolios',
       'Attorney profile schema with state bar admissions and published industry insights',
@@ -141,8 +141,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Engineering Industrial Authority for Carolinas Supply Chain Leaders',
     description:
       'Charlotte is a recognized energy engineering and logistics powerhouse. Technical websites built on slow legacy WordPress themes fail to convince procurement committees. We develop high-performance web applications featuring structured capability tables, instant RFQ calculators, downloadable spec sheets, and sub-second edge hosting.',
-    image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Charlotte energy engineering and logistics web design engineering',
+    image: '/images/us/charlotte/web-design/card-turbine-rotor-inspection.webp',
+    alt: 'Two engineers inspecting a large steel turbine rotor in a workshop, one in an orange hard hat shining a torch between the blades',
     points: [
       'Interactive equipment capability matrices and downloadable CAD/PDF engineering data',
       'Frictionless multi-step RFQ form workflows routing directly to estimating teams',
@@ -154,8 +154,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Engineering Digital Dominance for Mooresville & Lake Norman Leaders',
     description:
       'NASCAR team headquarters, precision racing suppliers, and luxury boat brokerages around Lake Norman demand ultra-high-definition visual platforms. We build custom Next.js web applications featuring interactive parts catalogs, 3D component configurators, race telemetry dashboards, and VIP private appointment inquiry funnels.',
-    image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Charlotte motorsports engineering and performance racing website design',
+    image: '/images/us/charlotte/web-design/card-race-engine-assembly.webp',
+    alt: 'An engineer tightening a bolt on an engine mounted on a stand while a colleague wipes a camshaft with an orange rag',
     points: [
       'Searchable performance parts catalogs with spec sheet downloads and fitment guides',
       'Interactive 3D component renders and video highlights rendering smoothly at 60fps',
@@ -167,8 +167,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Institutional Credibility for Charlotte Energy & Utility Innovators',
     description:
       'Known as the Energy Hub of the East Coast, Charlotte hosts major utility operators, smart grid engineers, and nuclear technology consultants in University City. We construct enterprise digital flagships featuring interactive grid capability maps, ESG reporting repositories, regulatory compliance matrices, and enterprise RFP portals.',
-    image: '/images/services/card-real-estate.webp',
-    alt: 'Charlotte energy tech clean power and utility infrastructure web design',
+    image: '/images/us/charlotte/web-design/card-solar-panel-check.webp',
+    alt: 'A technician tightening a clamp on a ground-mounted solar panel while a colleague unwinds cable from an orange reel',
     points: [
       'Interactive energy infrastructure project maps and downloadable ESG compliance data',
       'Enterprise RFP and contractor bid submission portals with secure file uploads',
@@ -538,8 +538,8 @@ export default function CharlotteWebDesignPage() {
               {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
               <div className="rv-curved-frame-1">
                 <Image
-                  src="/images/us/charlotte/hero-charlotte.webp"
-                  alt="Charlotte North Carolina modern web design engineering and custom Next.js website mockup"
+                  src="/images/us/charlotte/web-design/hero-paper-cutout-layout.webp"
+                  alt="A woman pinning paper cut-outs of page sections onto a cork board while a man hands her the next piece and another woman cuts paper"
                   width={640}
                   height={640}
                   priority

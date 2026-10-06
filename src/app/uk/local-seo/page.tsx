@@ -780,12 +780,12 @@ export default function LocalSeoUKPage() {
                 </div>
                 <figure className="card mt-8" style={{ padding: 8 }}>
                   <img
-                    src="/images/uk/city-manchester.jpg"
+                    src="/images/uk/cities/manchester.webp"
                     width={560}
                     height={420}
                     loading="lazy"
                     decoding="async"
-                    alt="A UK city centre skyline at first light"
+                    alt="The Albert Memorial and the clock tower of Manchester Town Hall in Albert Square"
                     style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }}
                   />
                   <figcaption style={{ padding: '0 6px 4px' }}>

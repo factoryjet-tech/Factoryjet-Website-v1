@@ -103,7 +103,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'As America freight logistics hub, Chattanooga fleet management, 3PL warehousing, and heavy transport operators require high-visibility local search authority. We optimize B2B service schemas, target regional supply chain keywords, and build authoritative commercial citations.',
     image: '/images/us/chattanooga/seo/chattanooga-seo-1.webp',
-    alt: 'Chattanooga Tennessee freight logistics transportation and fleet supply local SEO engine',
+    alt: 'A logistics manager in a hi-vis vest walking through a truck yard at dusk with a tablet',
     points: [
       'Industrial and logistics service structured JSON-LD schema with regional operational boundaries',
       'High-intent B2B search visibility targeting regional manufacturing and freight procurement managers',
@@ -115,8 +115,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Capturing High-Value Patients in Chattanooga Medical Corridors',
     description:
       'In Chattanooga competitive orthopedic surgery, cosmetic dentistry, and specialized medical markets, patients evaluate physician credentials and peer reviews thoroughly. We optimize Google Business Profiles, implement MedicalProcedure schemas, build procedure-specific silos, and generate steady review velocity.',
-    image: '/images/us/chattanooga/seo/chattanooga-seo-2.webp',
-    alt: 'Chattanooga Tennessee sports medicine orthopedic physical therapy clinic local SEO',
+    image: '/images/us/chattanooga/seo/card-knee-brace-fitting.webp',
+    alt: 'A clinician in scrubs fastening a knee brace on a seated woman, with crutches that have orange hand grips leaning on the couch',
     points: [
       'Multi-practitioner Google Business Profile optimization with procedure sub-categories',
       'MedicalProcedure and Physician structured JSON-LD schema linking hospital affiliations',
@@ -128,8 +128,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Driving High-Value Project Bidding Across Hamilton County',
     description:
       'Commercial general contractors, roofing companies, and mechanical specialists across Greater Chattanooga require consistent commercial bidding opportunities. We build geo-targeted service area architectures, optimize Service Area Business profiles, and capture high-intent commercial contracting keywords.',
-    image: '/images/us/b2b-website-design/sales-enablement.webp',
-    alt: 'Chattanooga Tennessee commercial roofing general contractor electrical local SEO strategy',
+    image: '/images/us/chattanooga/seo/card-block-wall-masonry.webp',
+    alt: 'Two masons in hard hats building a grey concrete block wall along an orange string line, one spreading mortar with a trowel',
     points: [
       'ServiceAreaBusiness schema markup defining multi-county operational boundaries',
       'Hyper-local neighborhood geo-pages targeting Northshore, Ooltewah, Signal Mountain, and East Ridge',
@@ -141,8 +141,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Local Map Pack Dominance for Scenic City Tourism Leaders',
     description:
       'Outfitters, climbing gyms, riverboat tours, and boutique hospitality venues across Chattanooga rely on local search visibility to capture tourists and regional travelers. We optimize Google Maps profiles, build event-driven landing pages, and drive high-intent reservation volume.',
-    image: '/images/us/b2b-website-design/hero.webp',
-    alt: 'Chattanooga Tennessee outdoor tourism climbing guide riverfront hospitality local SEO',
+    image: '/images/us/chattanooga/seo/card-river-kayak-briefing.webp',
+    alt: 'A guide showing two guests in life vests how to hold a kayak paddle with orange blades on a gravel riverbank',
     points: [
       'TouristAttraction and LodgingBusiness structured schema with direct booking integration',
       'Google Maps 3-Pack ranking for high-intent adventure, rock climbing, and event venue terms',
@@ -530,8 +530,8 @@ export default function ChattanoogaSeoPage() {
               {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
               <div className="rv-curved-frame-1">
                 <Image
-                  src="/images/us/chattanooga/seo/chattanooga-seo-1.webp"
-                  alt="Chattanooga Tennessee local SEO Google Maps 3-Pack ranking strategy"
+                  src="/images/us/chattanooga/seo/hero-bike-shop-customer-arrives.webp"
+                  alt="A bicycle mechanic at a repair stand greeting a woman who walks into the shop holding a phone that shows a pale map with one pin"
                   width={640}
                   height={640}
                   priority

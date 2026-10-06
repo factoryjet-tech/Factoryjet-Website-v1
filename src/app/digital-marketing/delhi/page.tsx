@@ -795,7 +795,7 @@ export default function DelhiDigitalMarketingPage() {
               <div className="relative overflow-hidden rounded-2xl border border-fj-neutral-200 shadow-sm">
                 <img
                   src="/images/services/digital-marketing/delhi/hero.webp"
-                  alt="A digital marketing professional in a modern Delhi office"
+                  alt="A woman in a beige blazer standing in an office with a city view behind her"
                   width={900}
                   height={1316}
                   fetchPriority="high"

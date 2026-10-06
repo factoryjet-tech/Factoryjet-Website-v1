@@ -397,8 +397,8 @@ export default function WordPressToShopifyPage() {
               {/* Left Column: Clean Organic Curved Photo Frame (Edge-to-Edge) */}
               <div className="rv-curved-frame-2">
                 <Image
-                  src="/images/replatforming/wordpress-team-coders.jpg"
-                  alt="FactoryJet senior migration developers auditing WordPress content blocks and theme sections"
+                  src="/images/replatforming/wordpress-team-layout-compare.webp"
+                  alt="Two people at a wooden desk comparing a layout of grey blocks on one monitor with a coloured layout on the other"
                   width={640}
                   height={640}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}

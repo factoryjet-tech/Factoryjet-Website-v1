@@ -102,8 +102,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Topical Authority & AI Citation Engineering for Torrey Pines Biotech',
     description:
       'Biotech enterprises, research CROs, and patent legal practices in San Diego require commanding authority in technical and scientific search. We engineer deep topical content graphs, researcher schemas, and institutional citations that earn authority across Google, Perplexity, and AI search engines.',
-    image: '/images/us/saas-website-design/hero.webp',
-    alt: 'San Diego biotechnology life sciences and clinical research SEO strategy',
+    image: '/images/us/san-diego/seo/card-petri-dish-check.webp',
+    alt: 'A researcher in a white lab coat holding a petri dish up to the light while a younger colleague swirls pink liquid in a flask',
     points: [
       'Topical entity architecture covering clinical development and regulatory pathways',
       'Structured MedicalScholarlyArticle and Organization schema for AI citation retrieval',
@@ -116,7 +116,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'In San Diego’s competitive medical and surgical markets, patients evaluate physician credentials and peer reviews thoroughly before booking. We optimize Google Business Profiles, implement medical specialty schemas, generate local patient review momentum, and capture top rankings for high-ticket elective queries.',
     image: '/images/us/services/dental-seo/hero.webp',
-    alt: 'San Diego medical clinic plastic surgery and aesthetic healthcare local SEO optimization',
+    alt: 'A bright empty reception lobby with a sofa, plants and a white reception desk',
     points: [
       'Multi-practitioner Google Business Profile optimization with procedure sub-categories',
       'MedicalProcedure and Physician structured JSON-LD schema linking hospital affiliations',
@@ -129,7 +129,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Legal search terms in San Diego County are intensely competitive. We engineer impenetrable local SEO architectures featuring practice area knowledge hubs, attorney bar admission schemas, verified case outcome showcases, and localized citation dominance.',
     image: '/images/us/services/law-firm-seo/hero.webp',
-    alt: 'San Diego corporate law firm litigation and maritime law local SEO ranking strategy',
+    alt: 'An empty wood-panelled office with bookshelves and a desk in warm light',
     points: [
       'LegalService and Attorney schema linking California State Bar verified credentials',
       'Localized practice area silos targeting Downtown San Diego, UTC, and North County',
@@ -142,7 +142,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Customs brokers, freight forwarders, and twin-plant cross-border logistics operators in South County require steady commercial contract flow. We optimize your local digital footprint to capture supply chain directors, binational plant managers, and regional logistics coordinators.',
     image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'San Diego cross border logistics customs broker and industrial trade local SEO architecture',
+    alt: 'A machinist in safety glasses loading a metal part into a CNC lathe beside a tablet showing the part',
     points: [
       'Commercial logistics capability landing pages optimized for regional radius search queries',
       'High-speed mobile performance ensuring immediate freight quote request submissions',
@@ -519,7 +519,7 @@ export default function SanDiegoSeoPage() {
               <div className="rv-curved-frame-1">
                 <Image
                   src="/images/us/san-diego-seo/hero.webp"
-                  alt="San Diego California local SEO rankings and Google Maps 3-Pack dominance strategy"
+                  alt="A man and a woman at a table looking at a laptop that shows a tan tote bag, palm trees outside"
                   width={640}
                   height={640}
                   priority

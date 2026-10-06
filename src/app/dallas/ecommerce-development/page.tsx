@@ -105,7 +105,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Texas industrial distributors handling tens of thousands of SKUs require more than basic consumer checkout templates. We engineer enterprise B2B portals on Shopify Plus and BigCommerce B2B Edition featuring customer-specific contract pricing, exploded parts diagram search, instant CSV bulk ordering, and real-time NetSuite or SAP inventory synchronization.',
     image: '/images/us/marketplace/shopify-plus-b2b-wholesale-portal.webp',
-    alt: 'Dallas industrial equipment and B2B wholesale ecommerce portal development',
+    alt: 'A man at a desk viewing a wholesale pricing table on a monitor',
     points: [
       'Customer-specific contract pricing tiers, volume discounts, and gated wholesale catalogs',
       'Exploded schematic parts lookup and instant bulk CSV order upload tools',
@@ -117,8 +117,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Sub-Second Visual Flagships Driving Global Conversion Rates',
     description:
       'Modern consumer brands cannot tolerate slow mobile cart rendering or clunky checkout flows. We engineer custom Shopify Plus themes and headless Next.js storefronts featuring instant size and color swatch switching, dynamic bundle builders, native Shop Pay integration, and predictive search that doubles mobile conversion rates.',
-    image: '/images/us/marketplace/miami-luxury-crossborder-creator-commerce.webp',
-    alt: 'Dallas direct to consumer apparel and lifestyle brand ecommerce development',
+    image: '/images/us/dallas/ecommerce/card-shoemaker-bench-work.webp',
+    alt: 'A shoemaker tapping a leather shoe on a wooden last with an orange mallet while a woman cuts leather at the same bench',
     points: [
       'Sub-second mobile product page rendering with instant image and variant switches',
       'Custom slide-out cart drawers with tiered free-shipping progress bars and upsells',
@@ -130,8 +130,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'High-Volume Recurring Commerce & Custom Replenishment Funnels',
     description:
       'Frisco and Dallas are epicenters for sports nutrition and wellness lifestyle brands. We build high-performance storefronts with custom subscription cadence selectors, automated loyalty tier discounts, build-a-box bundlers, and frictionless customer retention portals.',
-    image: '/images/us/marketplace/bigcommerce-b2b-edition-quoting.webp',
-    alt: 'Dallas sports nutrition and subscription ecommerce platform engineering',
+    image: '/images/us/dallas/ecommerce/card-gym-protein-scoop.webp',
+    alt: 'An athlete scooping powder from a plain tub into an orange shaker bottle in a gym while a trainer racks a dumbbell',
     points: [
       'Custom subscription cadence engines with flexible product swaps and pause options',
       'Interactive build-a-box bundlers with live volume discount calculators',
@@ -144,7 +144,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Supplying commercial facilities, logistics fleets, and construction jobsites requires purchase order processing, multi-warehouse routing, and tax exemption management. We construct verified B2B marketplaces featuring automated tax-exempt document verification, Net 30/60 purchase order workflows, and multi-department approval hierarchies.',
     image: '/images/us/marketplace/omnichannel-vs-multichannel-unified-data.webp',
-    alt: 'Dallas commercial supply and wholesale distribution ecommerce development',
+    alt: 'A man at a desk with two monitors showing inventory dashboards',
     points: [
       'Automated state tax exemption certificate collection and automated verification',
       'Purchase order (PO) generation with multi-tiered corporate approval workflows',
@@ -156,8 +156,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'High-Ticket Designer Trade Portals & Bespoke Furniture Configurators',
     description:
       'The Dallas Design District and Dallas Market Center represent the epicenter of high-end home furnishings. We build gated trade portals allowing interior designers and architects to apply for wholesale tax exemption, calculate custom fabric finishes, request physical finish swatches, and order white-glove residential freight delivery with custom lead times.',
-    image: '/images/us/marketplace/dallas-fort-worth-wholesale-logistics-commerce.webp',
-    alt: 'Dallas luxury home furnishings and trade portal ecommerce development',
+    image: '/images/us/dallas/ecommerce/card-sofa-fabric-choice.webp',
+    alt: 'An interior designer holding an orange fabric swatch against a cream sofa while an upholsterer fits a foot to an armchair',
     points: [
       'Gated wholesale designer registration with automated resale certificate verification',
       'Interactive 3D fabric, wood finish, and dimension customization tools',
@@ -551,7 +551,7 @@ export default function DallasEcommercePage() {
               <div className="rv-curved-frame-1">
                 <Image
                   src="/images/us/marketplace/headless-nextjs-vs-monolithic-liquid-architecture.webp"
-                  alt="Dallas E-Commerce Development Storefront Architecture"
+                  alt="A man standing at a curved monitor showing line charts in a bright office"
                   width={640}
                   height={640}
                   priority
@@ -593,8 +593,8 @@ export default function DallasEcommercePage() {
               {/* Left Column: Clean Organic Curved Photo Frame */}
               <div className="rv-curved-frame-2">
                 <Image
-                  src="/images/us/marketplace/ecommerce-speed-core-web-vitals-performance-engine.webp"
-                  alt="FactoryJet enterprise ecommerce architects building scalable Shopify Plus systems in Dallas"
+                  src="/images/us/dallas/ecommerce/team-workroom-laptop-bars.webp"
+                  alt="A man typing on a laptop that shows plain bars and a woman holding a phone at a high table in a workroom lined with boxes"
                   width={640}
                   height={640}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}

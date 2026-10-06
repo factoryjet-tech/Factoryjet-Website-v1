@@ -102,8 +102,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Commercial Lead Engines for Nebraska AgTech Leaders',
     description:
       'As the capital of Silicon Prairie agriculture, Lincoln seed distributors, livestock genetics consultants, and precision farming implement dealers demand steady commercial RFQ volume. We build specialized technical service pages, link agricultural manufacturer certifications, and optimize commercial keyword rankings.',
-    image: '/images/us/lincoln/seo/lincoln-seo-1.webp',
-    alt: 'Lincoln Nebraska agricultural technology seed distribution livestock genetics local SEO engine',
+    image: '/images/us/lincoln/seo/card-seed-planter-hopper-filling.webp',
+    alt: 'A grower in a straw hat pouring seed from a paper sack into a planter hopper while a man inspects a handful of seed from an orange bucket',
     points: [
       'Agricultural and industrial service schemas linking dealership accreditations and equipment brands',
       'High-intent B2B keyword silos targeting regional farm operators and agribusiness procurement teams',
@@ -115,8 +115,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Driving High-Value Project Bidding Across Greater Lincoln & Lancaster County',
     description:
       'Commercial general contractors, specialized flat roofing companies, and structural engineering firms across Lincoln require consistent commercial bidding opportunities. We build geo-targeted service area architectures, optimize Service Area Business profiles, and capture high-intent commercial contracting keywords.',
-    image: '/images/us/lincoln/seo/lincoln-seo-2.webp',
-    alt: 'Lincoln Nebraska commercial roofing general contractor electrical cold climate local SEO strategy',
+    image: '/images/us/lincoln/seo/card-concrete-block-wall-laying.webp',
+    alt: 'A mason spreading mortar on a concrete block wall while a woman in a white hard hat checks the top course with an orange spirit level',
     points: [
       'ServiceAreaBusiness schema markup defining multi-county Nebraska operational boundaries',
       'Hyper-local neighborhood geo-pages targeting South Lincoln, Waverly, Hickman, and Seward',
@@ -128,8 +128,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Capturing High-Value Patients in Lincoln Medical Corridors',
     description:
       'In Lincoln competitive orthopedic surgery, cosmetic dentistry, and cardiology markets, patients evaluate physician credentials and peer reviews thoroughly. We optimize Google Business Profiles, implement MedicalProcedure schemas, build procedure-specific silos, and generate steady review velocity.',
-    image: '/images/us/b2b-website-design/sales-enablement.webp',
-    alt: 'Lincoln Nebraska sports medicine orthopedic cardiology physical therapy clinic local SEO',
+    image: '/images/us/lincoln/seo/card-hand-xray-lightbox-review.webp',
+    alt: 'A surgeon in navy scrubs pointing at a hand X-ray on a wall lightbox while a young man with his forearm in an orange cast looks on',
     points: [
       'Multi-practitioner Google Business Profile optimization with procedure sub-categories',
       'MedicalProcedure and Physician structured JSON-LD schema linking hospital affiliations',
@@ -141,8 +141,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Top-Rank Visibility for Lincoln Law Firms & Estate Planners',
     description:
       'Downtown Lincoln law firms competing for agricultural estate planning, farm succession, and corporate litigation retainers must rank in the top positions on Google Maps and organic search. We engineer authoritative legal practice area pages, optimize attorney schema markup, and build high-quality local legal citations.',
-    image: '/images/us/b2b-website-design/hero.webp',
-    alt: 'Lincoln Nebraska corporate law agricultural estate planning commercial litigation local SEO',
+    image: '/images/us/lincoln/seo/card-law-library-case-binders.webp',
+    alt: 'A woman reaching for a bound volume on a library shelf while a man in a shirt and tie packs ring binders into a plain box',
     points: [
       'Attorney and LegalService structured JSON-LD schema linking Nebraska State Bar Association credentials',
       'Practice area landing page silos capturing high-intent retainers across Lancaster and Gage Counties',
@@ -524,8 +524,8 @@ export default function LincolnSeoPage() {
               {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
               <div className="rv-curved-frame-1">
                 <Image
-                  src="/images/us/lincoln/seo/lincoln-seo-1.webp"
-                  alt="Lincoln Nebraska local SEO Google Maps 3-Pack ranking strategy"
+                  src="/images/us/lincoln/seo/hero-shopfront-photo-shoot.webp"
+                  alt="A woman photographing a small shop front with a camera while an older man in a work apron holds the door open under a green awning"
                   width={640}
                   height={640}
                   priority

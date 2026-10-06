@@ -103,7 +103,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Legal search queries across Hennepin and Ramsey counties are intensely contested. We engineer impenetrable local SEO architectures featuring practice area knowledge hubs, attorney bar admission schemas, verified case outcome showcases, and localized citation dominance.',
     image: '/images/us/services/law-firm-seo/hero.webp',
-    alt: 'Minneapolis corporate law firm commercial litigation and estate planning local SEO ranking strategy',
+    alt: 'An empty wood-panelled office with bookshelves and a desk in warm light',
     points: [
       'LegalService and Attorney schema linking Minnesota State Bar verified credentials',
       'Localized practice area silos targeting Downtown Minneapolis, St. Paul, and Bloomington',
@@ -115,8 +115,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Topical Authority & Clinical Citations for Medical Alley Leaders',
     description:
       'In Minnesota’s renowned Medical Alley corridor, prospective healthcare buyers and specialized patients evaluate clinical credentials and peer reviews thoroughly. We optimize Google Business Profiles, implement MedicalProcedure structured schemas, build procedure-specific geo silos, and generate steady review velocity.',
-    image: '/images/us/b2b-website-design/hero.webp',
-    alt: 'Minneapolis Medical Alley medical device clinical diagnostics local SEO optimization',
+    image: '/images/us/minneapolis/seo/card-cleanroom-device-assembly.webp',
+    alt: 'Two technicians in white cleanroom coveralls, masks and blue gloves assembling small clear plastic device parts on an orange work mat',
     points: [
       'Multi-practitioner Google Business Profile optimization with procedure sub-categories',
       'MedicalProcedure and Physician structured JSON-LD schema linking hospital affiliations',
@@ -128,8 +128,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Topical Authority & AI Citation Engineering for Eden Prairie Tech',
     description:
       'Enterprise software platforms, telematics innovators, and logistics technology providers in Eden Prairie and Minnetonka require commanding authority in technical search. We engineer deep topical content graphs, software schemas, and institutional citations that earn authority across Google, Perplexity, and AI search engines.',
-    image: '/images/us/saas-website-design/hero.webp',
-    alt: 'Minneapolis enterprise cloud software supply chain technology local SEO optimization',
+    image: '/images/us/minneapolis/seo/card-software-engineers-pair-desk.webp',
+    alt: 'Two software engineers at a desk, a woman typing at a monitor of simple blocks while a man in a hoodie points at the screen',
     points: [
       'Topical entity architecture covering cloud software capabilities and compliance standards',
       'Structured SoftwareApplication and Organization schema for AI citation retrieval',
@@ -141,8 +141,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Driving Continuous Commercial Project Bidding Across Twin Cities',
     description:
       'Commercial general contractors, roofing companies, and HVAC specialists across the Minneapolis and St. Paul metropolitan area require steady commercial project bidding opportunities. We build geo-targeted service area architectures, optimize Service Area Business (SAB) profiles, and capture high-intent commercial keyword searches.',
-    image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Minneapolis commercial contractor HVAC and roofing local SEO ranking architecture',
+    image: '/images/us/minneapolis/seo/card-ceiling-duct-section-install.webp',
+    alt: 'Two installers on stepladders fitting a round silver duct to ceiling hangers, one holding it up while the other fixes a bracket with an orange drill',
     points: [
       'Service area radius optimization covering Minneapolis, St. Paul, Bloomington, and Brooklyn Park',
       'High-speed mobile performance ensuring immediate project bidding phone calls',
@@ -518,8 +518,8 @@ export default function MinneapolisSeoPage() {
               {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
               <div className="rv-curved-frame-1">
                 <Image
-                  src="/images/us/saas-website-design/hero.webp"
-                  alt="Minneapolis Minnesota local SEO rankings and Google Maps 3-Pack dominance strategy"
+                  src="/images/us/minneapolis/seo/hero-dog-grooming-salon-map.webp"
+                  alt="A groomer brushing a small white dog on a table while a man at a desk behind her looks at a monitor showing a pale map with pins"
                   width={640}
                   height={640}
                   priority

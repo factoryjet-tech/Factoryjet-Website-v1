@@ -155,25 +155,25 @@ const BENEFITS = [
 const USECASES = [
   {
     img: '/images/us/omnichannel/retail-dtc.webp',
-    alt: 'DTC brand owner reviewing an ecommerce consulting plan for their online store',
+    alt: 'A boutique shop assistant handing a wrapped parcel to a customer beside a point-of-sale tablet',
     t: 'DTC brands scaling up',
     d: 'You have outgrown a starter store and conversion has stalled. We audit the funnel, pick a platform that holds up as you grow, and give you a prioritized plan to lift conversion and speed.',
   },
   {
     img: '/images/us/omnichannel/wholesale-dtc.webp',
-    alt: 'B2B wholesale team planning a trade portal with an ecommerce consultant',
+    alt: 'A warehouse team taping and packing cardboard boxes at long tables',
     t: 'B2B and wholesale sellers',
     d: 'You need account pricing, net terms, quotes, and a dealer portal alongside retail. We model how B2B and DTC run on one system and connect it to your ERP.',
   },
   {
     img: '/images/us/omnichannel/multi-location.webp',
-    alt: 'Retailer reviewing a replatforming and migration plan across store systems',
+    alt: 'A man at a desk looking up at a wall of dashboard screens',
     t: 'Brands replatforming',
     d: 'Your platform is holding you back and a rebuild feels risky. We lock the target platform, plan the data migration and SEO redirects, and de-risk the cutover before code starts.',
   },
   {
     img: '/images/us/omnichannel/marketplace.webp',
-    alt: 'Seller planning a multichannel marketplace strategy across Amazon and their own store',
+    alt: 'Hands typing on a laptop that shows an orders dashboard with charts',
     t: 'Multichannel sellers',
     d: 'You sell on your store and marketplaces and they keep drifting out of sync. We plan one catalog and one live inventory across Amazon, Walmart, and your own store.',
   },

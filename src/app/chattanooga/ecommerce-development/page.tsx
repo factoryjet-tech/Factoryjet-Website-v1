@@ -103,8 +103,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Enterprise Portals for Chattanooga Freight & Transportation Leaders',
     description:
       'As the freight logistics capital of America, Chattanooga transportation tech companies and fleet parts suppliers require high-performance B2B ordering portals. We build custom commerce platforms with real-time EDI integrations, automated purchase order approvals, custom customer credit terms, and multi-warehouse fulfillment routing.',
-    image: '/images/us/chattanooga/ecommerce/portfolio-1.webp',
-    alt: 'Chattanooga Tennessee freight logistics transportation technology and fleet supply B2B ecommerce platform',
+    image: '/images/us/chattanooga/ecommerce/card-truck-tire-inspection.webp',
+    alt: 'A driver checking a truck tire beside an orange wheel chock while a mechanic tightens a wheel nut in a truck yard',
     points: [
       'Automated purchase order workflows with Net-30 credit invoicing and approval hierarchies',
       'Real-time two-way synchronization with transportation management systems and enterprise ERPs',
@@ -116,8 +116,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'High-Converting Headless Storefronts for Scenic City Adventure Brands',
     description:
       'From world-class climbing equipment manufacturers to mountain biking apparel creators, Chattanooga outdoor brands demand high-speed shopping experiences. We engineer bespoke Figma UI/UX storefronts with sub-second product page loads, one-click mobile checkout, rich interactive lookbooks, and customized gear configurators.',
-    image: '/images/us/b2b-website-design/hero.webp',
-    alt: 'Chattanooga Tennessee outdoor recreation rock climbing gear and adventure apparel headless ecommerce',
+    image: '/images/us/chattanooga/ecommerce/card-climbing-rope-check.webp',
+    alt: 'A woman checking a climbing rope by hand beside a harness with an orange carabiner while a man sews webbing on a machine',
     points: [
       'Sub-second first contentful paint and instant product filtering with zero layout shifts',
       'Interactive visual lookbooks, dynamic sizing calculators, and cross-sell gear bundles',
@@ -130,7 +130,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Tier-1 automotive parts manufacturers, precision machining shops, and industrial hardware distributors across Enterprise South require high-throughput B2B wholesale capabilities. We build high-speed wholesale platforms with automated PO processing, Net-30 credit terms, customer group tier pricing, and real-time ERP inventory syncing.',
     image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Chattanooga Enterprise South automotive parts precision manufacturing and industrial tooling B2B commerce',
+    alt: 'A machinist in safety glasses loading a metal part into a CNC lathe beside a tablet showing the part',
     points: [
       'Custom customer group pricing tiers with contracted volume discount schedules',
       'Instant PO generation, Net-30 invoicing, and multi-user corporate approval workflows',
@@ -142,8 +142,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Tactile Editorial E-Commerce for Southside Artisan Producers',
     description:
       'Specialty coffee roasters, craft distillers, and artisan food producers across Chattanooga Southside demand digital storefronts that reflect their product quality. We engineer rich visual storytelling layouts with recurring subscription delivery management, cold-pack shipping logic, and localized age verification.',
-    image: '/images/us/b2b-website-design/sales-enablement.webp',
-    alt: 'Chattanooga Southside artisan specialty food craft beverage and lifestyle goods subscription ecommerce',
+    image: '/images/us/chattanooga/ecommerce/card-chocolate-mould-pouring.webp',
+    alt: 'A chocolatier pouring melted chocolate into a bar mould while a woman wraps finished bars in plain paper tied with orange ribbon',
     points: [
       'Flexible recurring subscription management with custom delivery interval selection',
       'Dynamic cold-pack and localized perishable shipping rate calculation',
@@ -155,8 +155,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Digital Enterprise Commerce for Freight Alley Software & Fleet Leaders',
     description:
       'Chattanooga is known as Freight Alley, housing major logistics brokerages and transportation technology companies. We engineer custom Next.js platforms featuring automated API credit purchasing, recurring digital subscription tiers, and developer documentation gateways with sub-400ms edge speeds.',
-    image: '/images/services/card-real-estate.webp',
-    alt: 'Chattanooga freight logistics software transportation technology ecommerce development',
+    image: '/images/us/chattanooga/ecommerce/card-freight-dispatch-desk.webp',
+    alt: 'A dispatcher in a headset at two monitors showing coloured route lines while a colleague stands beside him holding a tablet',
     points: [
       'Automated digital license provisioning and recurring enterprise SaaS billing',
       'Developer API key management and SDK documentation download portals',
@@ -169,7 +169,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Outdoor lifestyle brands, climbing hardware manufacturers, and adventure outfitters across St. Elmo and Lookout Mountain demand rugged digital flagships. We build custom Next.js storefronts featuring interactive gear weight calculators, strength specification matrices, and frictionless mobile checkouts.',
     image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Chattanooga climbing gear outdoor recreation adventure equipment ecommerce website design',
+    alt: 'A machinist in safety glasses loading a metal part into a CNC lathe beside a tablet showing the part',
     points: [
       'Interactive gear specification matrices and weight-distribution calculators',
       'Custom bundle builders for expedition packs and safety hardware kits',
@@ -550,8 +550,8 @@ export default function ChattanoogaEcommerceDevelopmentPage() {
               {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
               <div className="rv-curved-frame-1">
                 <Image
-                  src="/images/us/chattanooga/ecommerce/portfolio-1.webp"
-                  alt="Chattanooga Tennessee ecommerce development and headless Shopify Plus storefront engineering"
+                  src="/images/us/chattanooga/ecommerce/hero-boot-product-photo.webp"
+                  alt="A man photographing a pair of brown leather boots on white paper with a tripod camera while a woman holds a white reflector board"
                   width={640}
                   height={640}
                   priority

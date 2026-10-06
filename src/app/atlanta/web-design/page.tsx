@@ -103,7 +103,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Tech Square and Alpharetta tech firms demand websites that speak to enterprise CTOs and procurement committees. We build custom Next.js web applications featuring interactive product demo tours, API documentation portals, SOC 2 compliance matrices, and lightning-fast page speeds.',
     image: '/images/us/saas-website-design/hero.webp',
-    alt: 'Atlanta enterprise software and cloud infrastructure web design engineering',
+    alt: 'A man and a woman in a studio pointing at a wall display of a handbag product page, the same page open on a laptop',
     points: [
       'Interactive product feature tours and downloadable technical whitepaper funnels',
       'Frictionless multi-step demo scheduling forms routing to sales engineering teams',
@@ -116,7 +116,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'From the Perimeter medical district to specialty surgical centers in Buckhead, credibility drives patient acquisition. We engineer HIPAA-aware medical websites featuring searchable physician directories, specialty procedure overviews, insurance plan matrices, and lightning-fast appointment scheduling flows.',
     image: '/images/us/services/dental-seo/hero.webp',
-    alt: 'Atlanta healthcare medical practice and surgical clinic website design',
+    alt: 'A bright empty reception lobby with a sofa, plants and a white reception desk',
     points: [
       'Searchable provider directories with specialty credentials and hospital affiliations',
       'HIPAA-aware consultation intake forms and click-to-call mobile patient actions',
@@ -129,7 +129,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'High-stakes litigation and private wealth firms in Atlanta cannot afford generic visual templates. We craft bespoke digital flagships featuring practice area content hubs, partner biographical repositories with bar admission schema, verified transaction track records, and secure client communication endpoints.',
     image: '/images/us/services/law-firm-seo/hero.webp',
-    alt: 'Atlanta corporate law firm litigation and private wealth web design',
+    alt: 'An empty wood-panelled office with bookshelves and a desk in warm light',
     points: [
       'Deep practice area knowledge graphs and structured legal case victory portfolios',
       'Attorney profile schema with state bar admissions and published industry insights',
@@ -155,7 +155,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'High-end architectural studios, custom luxury home builders, and interior design firms in Buckhead, Tuxedo Park, and Ansley Park demand editorial visual storytelling. We engineer custom portfolio flagships with smooth WebGL project transitions, high-resolution photo galleries, interactive floorplan viewports, and VIP private consultation inquiry funnels.',
     image: '/images/services/card-real-estate.webp',
-    alt: 'Atlanta luxury architectural studio and custom builder website design',
+    alt: 'A laptop on a marble table showing a property listings website with photos and a map',
     points: [
       'High-resolution project galleries with lazy-loaded WebP responsive image pipelines',
       'Interactive neighborhood development maps with private school district filtering',
@@ -168,7 +168,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Iconic culinary flagships, rooftop lounges, and craft breweries across West Midtown, Inman Park, and Old Fourth Ward demand mobile-first digital flagships. We construct interactive venues featuring live OpenTable and Resy reservation widgets, private banquet inquiry funnels, and high-resolution photo menus rendering at 60fps.',
     image: '/images/us/restaurant-website-design/hero.webp',
-    alt: 'Atlanta hospitality craft brewery and southern fine dining website design',
+    alt: 'A restaurant guest reading a menu on her phone while a server sets a table behind her',
     points: [
       'Frictionless integration with Resy, OpenTable, and Toast POS online ordering systems',
       'Interactive private banquet and corporate event booking inquiry calculators',
@@ -539,7 +539,7 @@ export default function AtlantaWebDesignPage() {
               <div className="rv-curved-frame-1">
                 <Image
                   src="/images/us/atlanta-web-design/hero.webp"
-                  alt="Atlanta Georgia modern web design engineering and custom Next.js website mockup"
+                  alt="Two people at a wall display showing a grid of handbag photos in a brick-walled studio"
                   width={640}
                   height={640}
                   priority

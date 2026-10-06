@@ -103,8 +103,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'High-Performance D2C & Subscription Hardware Storefronts',
     description:
       'Silicon Valley hardware tech companies require unified synchronization of device sales, firmware warranties, and recurring software subscriptions. We engineer headless Next.js architectures connecting Shopify Plus to Stripe Billing and custom IoT telemetry APIs for unified checkout flows.',
-    image: '/images/us/marketplace/san-francisco-silicon-valley-ecommerce-architecture.webp',
-    alt: 'San Francisco Silicon Valley hardware technology and consumer electronics ecommerce development',
+    image: '/images/us/san-francisco/ecommerce/card-circuit-board-workbench.webp',
+    alt: 'A man fitting a circuit board into a white casing with tweezers while a woman tests a second board with a probe at a workbench',
     points: [
       'Custom hardware box builders and recurring software membership architectures',
       'Stripe Billing and Shopify Plus unified multi-currency checkout gateways',
@@ -117,7 +117,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Napa Valley and Sonoma wineries require sophisticated allocation tiers and membership club portals. We develop custom headless e-commerce architectures with compliant state-by-state tax calculation, age verification gates, and self-service member shipment selection funnels.',
     image: '/images/us/saas-website-design/hero.webp',
-    alt: 'San Francisco and Napa Valley winery direct to consumer subscription ecommerce store design',
+    alt: 'A man and a woman in a studio pointing at a wall display of a handbag product page, the same page open on a laptop',
     points: [
       'Tiered VIP membership allocation gating and custom release scheduling',
       'Automated recurring club billing and shipment customization portals',
@@ -129,8 +129,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Engineering Enterprise B2B Portals for Bay Area Technology Distributors',
     description:
       'Electronic component distributors and semiconductor suppliers across San Jose and the East Bay require complex procurement platforms. We develop custom BigCommerce B2B and Shopify Plus architectures featuring company account hierarchies, custom contract pricing, and real-time NetSuite or SAP sync.',
-    image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'San Francisco enterprise technology wholesale distribution and B2B ecommerce platform',
+    image: '/images/us/san-francisco/ecommerce/card-wholesale-pallet-packing.webp',
+    alt: 'A man packing silver anti-static bags into a cardboard box while a woman wraps stretch film around a pallet of boxes in a warehouse',
     points: [
       'Customer-specific contracted pricing matrices and tiered volume discounts',
       'One-click reordering, CSV bulk ordering, and purchase order net-payment terms',
@@ -142,8 +142,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'High-Impact Digital Flagships for San Francisco Lifestyle Brands',
     description:
       'From sustainable apparel innovators in Hayes Valley to luxury footwear brands, visual storytelling and speed drive brand loyalty. We engineer headless Shopify Plus storefronts with sub-second page transitions, interactive lookbooks, smart product bundles, and frictionless one-click mobile checkout.',
-    image: '/images/us/services/dental-seo/hero.webp',
-    alt: 'San Francisco sustainable fashion apparel and modern lifestyle D2C ecommerce development',
+    image: '/images/us/san-francisco/ecommerce/card-pattern-cutting-table.webp',
+    alt: 'A designer cutting cotton cloth around a paper pattern with shears while a woman steams a plain dress on a rail in a bright studio',
     points: [
       'Sub-second headless Next.js frontend with instant mobile product filtering',
       'Dynamic product bundling, tiered upsells, and personalized cross-sells',
@@ -155,8 +155,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'High-End DTC Flagships & Allocation Engines for Napa & Sonoma Vintners',
     description:
       'Premier estate wineries and boutique vintners across Napa, Sonoma, and Northern California require sophisticated direct-to-consumer digital commerce. We build bespoke wine club management portals, allocation release workflows, recurring subscription billing systems, and automated state shipping compliance integrations.',
-    image: '/images/services/card-real-estate.webp',
-    alt: 'Napa Valley winery DTC wine club allocation and subscription ecommerce development',
+    image: '/images/us/san-francisco/ecommerce/card-wine-club-box-packing.webp',
+    alt: 'A man lowering plain dark glass bottles into a divided cardboard box while a woman closes a filled box in a bright packing room',
     points: [
       'Tiered allocation release systems with member-specific reserve gating',
       'Custom recurring wine club subscription customizer and shipment editor',
@@ -169,7 +169,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Semiconductor suppliers, IoT hardware manufacturers, and industrial electronics distributors across San Jose and the South Bay demand technical precision. We construct high-performance B2B portals featuring parametric part search filters, CAD drawing download gateways, and instant RFQ quoting workflows.',
     image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Silicon Valley semiconductor IoT hardware industrial electronics ecommerce development',
+    alt: 'A machinist in safety glasses loading a metal part into a CNC lathe beside a tablet showing the part',
     points: [
       'Parametric spec-sheet search filters and real-time inventory lot tracking',
       'Instant CAD and STEP file download gateways with gated engineering access',
@@ -538,8 +538,8 @@ export default function SanFranciscoEcommercePage() {
               {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
               <div className="rv-curved-frame-1">
                 <Image
-                  src="/images/us/marketplace/san-francisco-silicon-valley-ecommerce-architecture.webp"
-                  alt="San Francisco California enterprise ecommerce engineering and headless Shopify Plus development"
+                  src="/images/us/san-francisco/ecommerce/hero-wall-screen-shop-blocks.webp"
+                  alt="A man pointing at a wall screen of coloured blocks while three colleagues sit at the table, one with a laptop and one taking notes"
                   width={640}
                   height={640}
                   priority

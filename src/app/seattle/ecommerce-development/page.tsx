@@ -103,8 +103,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'High-Impact Digital Flagships for Seattle Outdoor & Lifestyle Brands',
     description:
       'From Pioneer Square technical apparel innovators to Puget Sound marine equipment suppliers, visual storytelling and speed drive brand loyalty. We engineer headless Shopify Plus storefronts with sub-second page transitions, interactive product lookbooks, smart bundling, and frictionless one-click mobile checkout.',
-    image: '/images/us/seattle-web-design/shop.webp',
-    alt: 'Seattle technical outdoor apparel sporting equipment and modern lifestyle D2C ecommerce development',
+    image: '/images/us/seattle/ecommerce/card-rain-jacket-dress-form.webp',
+    alt: 'A designer adjusting the hood of a teal waterproof jacket on a dress form while a man holds a fabric swatch against the sleeve',
     points: [
       'Sub-second headless Next.js frontend with instant mobile product filtering',
       'Dynamic product bundling, tiered upsells, and personalized cross-sells',
@@ -116,8 +116,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Engineering Enterprise B2B Portals for Kent Valley Manufacturers',
     description:
       'Aerospace suppliers, CNC machining facilities, and logistics operators connecting the Port of Seattle to global supply chains require complex B2B procurement portals. We develop custom BigCommerce B2B and Shopify Plus architectures featuring company account hierarchies, custom contract pricing, and real-time NetSuite or SAP sync.',
-    image: '/images/us/seattle-web-design/process.webp',
-    alt: 'Seattle enterprise aerospace manufacturing and industrial wholesale B2B ecommerce platform',
+    image: '/images/us/seattle/ecommerce/card-machined-part-caliper-check.webp',
+    alt: 'An inspector measuring a machined aluminium bracket with a steel caliper while a woman sets another bracket into a foam-lined tray',
     points: [
       'Customer-specific contracted pricing matrices and tiered volume discounts',
       'One-click reordering, CSV bulk ordering, and purchase order net-payment terms',
@@ -129,8 +129,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'High-Volume Recurring Revenue Engines for Seattle Food & Beverage Brands',
     description:
       'From artisan coffee roasters in Ballard to Pacific seafood suppliers, subscription commerce drives recurring margins. We develop custom recharge and Stripe billing integrations, build-your-own subscription configurators, and automated customer self-service retention portals.',
-    image: '/images/us/services/dental-seo/hero.webp',
-    alt: 'Seattle specialty coffee craft beverage and gourmet food subscription ecommerce store design',
+    image: '/images/us/seattle/ecommerce/card-brewery-hop-addition.webp',
+    alt: 'A brewer in orange rubber boots tipping hops from a scoop into a steel brew kettle while a man rolls a keg across the brewery floor',
     points: [
       'Custom box builder and recurring subscription membership architectures',
       'Self-service customer portal reducing subscription cancellation churn',
@@ -142,8 +142,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'High-Concurrency Flash-Drop Storefronts for Seattle Gaming & Tech Brands',
     description:
       'Gaming studios and hardware accessories creators across Redmond and Kirkland experience sudden traffic surges during product releases. We engineer headless Next.js storefronts on edge infrastructure capable of processing thousands of checkout orders per minute with zero lag or platform downtime.',
-    image: '/images/us/saas-website-design/hero.webp',
-    alt: 'Seattle gaming merchandise hardware accessories and digital drop ecommerce development',
+    image: '/images/us/seattle/ecommerce/card-tshirt-screen-printing.webp',
+    alt: 'A man in an orange apron pulling a squeegee across a print screen onto a black t-shirt while a woman moves a printed shirt to a drying rack',
     points: [
       'High-concurrency edge infrastructure engineered for zero-latency flash drops',
       'Dynamic limited-edition bundling with VIP membership access gating',
@@ -155,8 +155,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Compliant Life Science & Research Reagent E-Commerce Engines',
     description:
       'Biotechnology research hubs, diagnostic laboratory networks, and life sciences innovators across South Lake Union and Bothell require secure, compliant B2B sales portals. We engineer custom digital platforms featuring verified researcher license gating, institutional grant code payment processing, and temperature-sensitive cold-chain shipping rules.',
-    image: '/images/services/card-real-estate.webp',
-    alt: 'Seattle South Lake Union life sciences biotech and clinical diagnostics ecommerce platform',
+    image: '/images/us/seattle/ecommerce/card-reagent-cold-pack.webp',
+    alt: 'A woman in a lab coat taking a box of vials from a laboratory fridge while a man lays gel packs into a small orange cooler',
     points: [
       'Institutional grant code checkout and university procurement punchout catalogs',
       'Verified researcher credentials gating and hazardous material compliance logic',
@@ -169,7 +169,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Commercial fishing vessel suppliers, marine electronics distributors, and shipyard operators across Ballard and the Port of Seattle demand rugged online ordering portals. We build custom Next.js storefronts featuring marine schematic part lookups, real-time inventory lot tracking, and freight quoting for heavy ocean freight.',
     image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Seattle Ballard maritime marine equipment and shipyard parts B2B ecommerce engineering',
+    alt: 'A machinist in safety glasses loading a metal part into a CNC lathe beside a tablet showing the part',
     points: [
       'Interactive marine engine schematics with instant part number add-to-cart matching',
       'Real-time multi-location warehouse inventory feeds across Puget Sound ports',
@@ -539,7 +539,7 @@ export default function SeattleEcommercePage() {
               <div className="rv-curved-frame-1">
                 <Image
                   src="/images/us/seattle-web-design/hero.webp"
-                  alt="Seattle Washington enterprise ecommerce engineering and headless Shopify Plus development"
+                  alt="A woman and a man leaning over a laptop that shows a handbag page, evergreen trees through the window"
                   width={640}
                   height={640}
                   priority

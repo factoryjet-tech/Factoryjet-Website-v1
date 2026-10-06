@@ -820,8 +820,8 @@ export default function LawFirmSEOPage() {
 
             <div style={{ marginTop: '36px', borderRadius: '16px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.1)', maxWidth: 860 }}>
               <Image
-                src="/images/services/healthcare-seo-map-pack.webp"
-                alt="Google Map Pack ranking breakdown showing local proximity and prominence factors for legal searches"
+                src="/images/us/services/law-firm-seo/section-law-desk-laptop-map.webp"
+                alt="Two people at a desk in a law office looking at a laptop that shows a pale map with three pins, plain bound books behind them"
                 width={860}
                 height={480}
                 loading="lazy"

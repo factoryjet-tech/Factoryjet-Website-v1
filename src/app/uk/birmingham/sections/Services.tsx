@@ -28,7 +28,7 @@ const SERVICES: Service[] = [
     name: "SEO",
     heading: "Search work that starts with what is broken, not with a content calendar",
     image: "/images/uk/birmingham/service-web-design-birmingham.webp",
-    imageAlt: "Search Console data for a Birmingham business website",
+    imageAlt: "A laptop showing a blue landing page with chart cards floating beside it",
     imageSide: "right",
     featured: true,
     body: [
@@ -44,8 +44,8 @@ const SERVICES: Service[] = [
     number: "02",
     name: "AI SEO",
     heading: "Getting named when someone asks an assistant for a Birmingham recommendation",
-    image: "/images/uk/birmingham/service-ai-seo-birmingham.webp",
-    imageAlt: "AI search results naming local suppliers",
+    image: "/images/uk/birmingham/service-ai-seo-assistant-chat-laptop.webp",
+    imageAlt: "Two people at a desk looking at a laptop whose screen shows a chat layout of blank rounded bars, one typing and the other pointing at the screen",
     imageSide: "left",
     body: [
       "Search is splitting in two. Some people still scroll a results page. Others type the question into ChatGPT, Perplexity or Google's AI answers and read the short reply that names three or four businesses. Being named in that reply is a different job from ranking tenth, and very few Birmingham firms have started on it.",
@@ -61,7 +61,7 @@ const SERVICES: Service[] = [
     name: "Web Design",
     heading: "Rebuilds, but only when the platform is genuinely the thing holding you back",
     image: "/images/uk/birmingham/service-ai-agents-birmingham.webp",
-    imageAlt: "A Birmingham business website being rebuilt for speed",
+    imageAlt: "A flow diagram of six steps from strategy and discovery to deployment and monitoring",
     imageSide: "right",
     body: [
       "We would rather fix your site than replace it. A rebuild resets whatever search history the old pages had earned, costs months, and is the wrong answer to most problems. So we only raise it when the platform itself blocks the work: when pages cannot have their own titles, when structured data cannot be added, when the site is unusable on a phone, or when it is so slow that no content fix will rescue it.",

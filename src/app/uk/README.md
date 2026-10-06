@@ -158,16 +158,16 @@ service-web-design.webp        # Service showcase (+ .jpg fallback)
 service-ecommerce.webp
 service-ai-agents.webp
 service-ai-seo.webp
-city-birmingham.jpg            # City showcase images (10 cities)
-city-bristol.jpg
-city-edinburgh.jpg
-city-glasgow.jpg
-city-leeds.jpg
-city-liverpool.jpg
-city-manchester.jpg
-city-newcastle.jpg
-city-nottingham.jpg
-city-sheffield.jpg
+cities/birmingham.webp            # City showcase images (10 cities)
+cities/bristol.webp
+cities/edinburgh.webp
+cities/glasgow.webp
+cities/leeds.webp
+cities/liverpool.webp
+cities/manchester.webp
+cities/newcastle.webp
+cities/nottingham.webp
+cities/sheffield.webp
 ```
 
 **All images have been copied.** Verify with:

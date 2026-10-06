@@ -89,7 +89,7 @@ export default function Hero() {
             <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl border border-fj-neutral-200 bg-fj-neutral-100">
               <Image
                 src="/images/manchester/hero-people.webp"
-                alt="Business owners working together in a Manchester office"
+                alt="A man in a navy blazer smiling in front of a window with a blurred city view"
                 fill
                 priority
                 quality={72}

@@ -103,8 +103,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Enterprise B2B Wholesale Portals for Red River Valley Ag Leaders',
     description:
       'Seed producers, precision agriculture equipment manufacturers, and agronomy chemical distributors across the Red River Valley require high-performance digital commerce capabilities. We build high-speed wholesale platforms with automated PO processing, Net-30 credit terms, dealer group tier pricing, and real-time ERP inventory syncing.',
-    image: '/images/us/fargo/ecommerce/portfolio-1.webp',
-    alt: 'Fargo North Dakota Red River Valley agricultural equipment seeds and precision farming B2B ecommerce platform',
+    image: '/images/us/fargo/ecommerce/card-seed-hopper-filling.webp',
+    alt: 'A farmer tipping seed from an orange bucket into a planter hopper at a field edge while a woman opens a paper seed sack',
     points: [
       'Custom dealer group pricing tiers with contracted volume discount schedules',
       'Instant PO generation, Net-30 invoicing, and multi-user corporate approval workflows',
@@ -117,7 +117,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Industrial hardware suppliers, hydraulic component distributors, and heavy machinery parts dealers across West Fargo demand resilient online catalogs. We engineer specialized technical search filters, schematic part lookups, automated freight rating, and customer credit line management.',
     image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Fargo West Fargo industrial supply heavy machinery and hydraulic parts B2B ecommerce engineering',
+    alt: 'A machinist in safety glasses loading a metal part into a CNC lathe beside a tablet showing the part',
     points: [
       'Interactive schematic parts breakdown with instant add-to-cart item matching',
       'Automated LTL freight shipping calculation and hazardous materials handling logic',
@@ -129,8 +129,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'High-Converting Headless Storefronts for Northern Plains Outdoor Brands',
     description:
       'From Fargo cold-weather hunting gear creators to ice fishing innovators and outdoor lifestyle apparel brands, northern brands demand high-speed shopping experiences. We engineer bespoke Figma UI/UX storefronts with sub-second product page loads, one-click mobile checkout, rich interactive lookbooks, and customized gear configurators.',
-    image: '/images/us/b2b-website-design/hero.webp',
-    alt: 'Fargo North Dakota cold weather outdoor apparel sporting goods and hunting gear headless ecommerce',
+    image: '/images/us/fargo/ecommerce/card-parka-packing-bench.webp',
+    alt: 'A woman folding a quilted parka into a plain box beside an orange beanie and snow boots while a man hangs jackets on a rail',
     points: [
       'Sub-second first contentful paint and instant product filtering with zero layout shifts',
       'Interactive visual lookbooks, dynamic sizing calculators, and cross-sell gear bundles',
@@ -142,8 +142,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'High-Conversion Subscription Storefronts for NDSU Tech Scale-Ups',
     description:
       'Fast-growing biomedical, specialty nutrition, and consumer health innovators across the NDSU Research Park require platforms engineered for recurring customer lifetime value. We build custom headless Next.js storefronts with dynamic bundle builders, diagnostic intake quizzes, and automated recurring subscription billing.',
-    image: '/images/us/b2b-website-design/sales-enablement.webp',
-    alt: 'Fargo North Dakota biomedical nutrition healthtech and consumer wellness subscription ecommerce',
+    image: '/images/us/fargo/ecommerce/card-nutrition-lab-weighing.webp',
+    alt: 'A scientist spooning powder onto a lab balance while a colleague swirls liquid in a glass beaker, an orange stool at the bench',
     points: [
       'Custom interactive bundle configurators and personalized diagnostic quiz engines',
       'Automated subscription management with Recharge, Smartrr, and Stripe Billing',
@@ -155,8 +155,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Digital License Provisioning & Global Hardware Sales Portals',
     description:
       'Biomedical sensor developers and precision software innovators in the NDSU Research and Technology Park require complex B2B commerce platforms. We build custom Next.js web applications featuring automated digital software license key provisioning, developer API documentation gateways, and tier-based hardware evaluation unit checkouts.',
-    image: '/images/services/card-real-estate.webp',
-    alt: 'Fargo NDSU Research Park biomedical sensors and precision tech software ecommerce development',
+    image: '/images/us/fargo/ecommerce/card-sensor-lab-bench-assembly.webp',
+    alt: 'A woman in a lab coat placing a small sensor on a circuit board with tweezers while a man inspects a second board in a bright lab',
     points: [
       'Automated digital license provisioning and recurring enterprise SaaS billing',
       'Developer API key management and SDK documentation download portals',
@@ -168,8 +168,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Perishable Ag Logistics & Wholesale Food Supply E-Commerce',
     description:
       'Specialty food processors, grain handlers, and regional cold-storage distributors spanning Fargo and Moorhead require temperature-controlled shipping logic and complex wholesale pricing. We engineer custom B2B ordering portals with route-based delivery scheduling, multi-warehouse inventory visibility, and real-time LTL freight rate calculators.',
-    image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Fargo Red River Valley cold chain food logistics and agricultural wholesale ecommerce',
+    image: '/images/us/fargo/ecommerce/card-cold-store-crate-loading.webp',
+    alt: 'A man in an orange hat pulling a pallet of vegetable crates on a pallet truck while a woman in a blue vest steadies the top crate by a white truck',
     points: [
       'Multi-warehouse regional cold storage inventory synchronization',
       'Automated refrigerated LTL freight calculation and delivery window scheduling',
@@ -550,8 +550,8 @@ export default function FargoEcommerceDevelopmentPage() {
               {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
               <div className="rv-curved-frame-1">
                 <Image
-                  src="/images/us/fargo/ecommerce/portfolio-1.webp"
-                  alt="Fargo North Dakota ecommerce development and headless Shopify Plus storefront engineering"
+                  src="/images/us/fargo/ecommerce/hero-stockroom-shelf-count.webp"
+                  alt="A woman checking shelves of plain boxes with a tablet while a man on an orange step stool lifts a box down in a stockroom"
                   width={640}
                   height={640}
                   priority

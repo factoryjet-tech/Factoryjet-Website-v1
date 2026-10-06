@@ -104,7 +104,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Commercial property managers and facility directors across Dallas, Collin, and Tarrant counties do not browse pages of search results. When hail storms damage roofs or HVAC units fail, they call the top 3 verified businesses in the Google Map Pack. We structure your Google Business Profile, service radius coordinates, localized job photo geo-tagging, and high-authority local contractor citations to dominate high-ticket service queries.',
     image: '/images/us/services/roofing-seo/hero.webp',
-    alt: 'Dallas commercial contractor and roofing local SEO ranking strategy',
+    alt: 'Aerial view of suburban shingle rooftops at golden hour',
     points: [
       'Hyper-localized neighborhood landing pages covering 25+ DFW suburban municipalities',
       'Automated review generation workflows securing verified customer testimonials with keyword signals',
@@ -116,8 +116,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Driving High-Value Patient Appointments in Dallas’s Premier Medical Corridors',
     description:
       'From private practices in the Medical District to surgical centers in Frisco and Plano, local search visibility determines your patient acquisition costs. We optimize your medical entity profiles, connect provider NPI registries to local schema, optimize Google Maps categories, and ensure spotless citation consistency across healthcare directories.',
-    image: '/images/us/services/dental-seo/team.webp',
-    alt: 'Dallas healthcare dental and medical practice local SEO growth',
+    image: '/images/us/dallas/seo/card-blood-pressure-check.webp',
+    alt: 'A nurse in burgundy scrubs wrapping a blood pressure cuff around the arm of a seated woman in an exam room',
     points: [
       'Physician-specific and clinic-level Google Business Profile optimization with appointment booking links',
       'MedicalSpecialty and Physician schema markup aligning with state licensing and hospital networks',
@@ -129,8 +129,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Dominating High-Stakes Legal Search Queries in Uptown Dallas',
     description:
       'Legal keywords in Dallas are among the most competitive in the United States. Ranking in the Map Pack and top organic positions requires deep entity authority. We build comprehensive legal practice area content silos, optimize attorney bar admission entities, earn high-tier legal directory citations, and structure verified case result knowledge panels.',
-    image: '/images/us/services/law-firm-seo/team.webp',
-    alt: 'Dallas law firm litigation and corporate counsel local SEO architecture',
+    image: '/images/us/dallas/seo/card-court-file-packing.webp',
+    alt: 'A lawyer in a black suit and orange scarf packing folders into a wheeled case while a younger colleague carries archive boxes',
     points: [
       'Practice area content architecture engineered for high-intent legal search queries',
       'LegalService and Attorney schema with state bar credentials and practice jurisdiction tags',
@@ -143,7 +143,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Industrial buyers and supply chain managers in Fort Worth, Irving, and Alliance search for local fabrication, machining, and logistics partners. We optimize your technical capability matrices, register verified B2B industry citations, and structure commercial supplier schemas to capture corporate purchase orders.',
     image: '/images/us/manufacturing-website-design/rfq-desk.webp',
-    alt: 'Dallas Fort Worth industrial supplier and logistics B2B local search optimization',
+    alt: 'A man comparing a printed technical drawing with a machined bracket shown on a laptop, calipers on the desk',
     points: [
       'B2B supplier and fabrication capability schemas linking equipment specs to regional search queries',
       'Google Maps optimization for commercial loading dock addresses and industrial park locations',
@@ -514,7 +514,7 @@ export default function DallasSeoPage() {
               <div className="rv-curved-frame-1">
                 <Image
                   src="/images/us/dallas-seo/dallas-seo-consultant-call.webp"
-                  alt="Dallas Local SEO Google Maps Strategy and Ranking Analysis"
+                  alt="A man in a headset gesturing at a laptop that shows a tan handbag"
                   width={640}
                   height={640}
                   priority

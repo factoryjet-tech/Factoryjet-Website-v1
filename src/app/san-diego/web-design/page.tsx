@@ -102,8 +102,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Clinical-Grade Digital Experiences for Torrey Pines Biotech',
     description:
       'Biotechnology enterprises, therapeutics innovators, and clinical research organizations in San Diego require digital platforms that command scientific credibility. We engineer custom Next.js web applications featuring interactive pipeline visualizers, investor data rooms, clinical trial recruitment portals, and sub-second edge performance.',
-    image: '/images/us/san-diego-web-design/hero-studio.webp',
-    alt: 'San Diego biotechnology life sciences and scientific web design engineering',
+    image: '/images/us/san-diego/web-design/card-arm-cuff-reading.webp',
+    alt: 'A nurse in teal scrubs squeezing the bulb of a pressure cuff wrapped around the upper arm of a seated woman in a bright clinic room',
     points: [
       'Interactive clinical pipeline visualizers and mechanism-of-action animations',
       'Secure investor relations data rooms and board presentation document portals',
@@ -116,7 +116,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'From corporate trial attorneys in Downtown San Diego to maritime dispute lawyers in Little Italy, prospective commercial clients demand immediate credibility. We design bespoke web architectures featuring attorney credentials, practice area silos, verified case results, and high-converting inquiry funnels.',
     image: '/images/us/services/law-firm-seo/hero.webp',
-    alt: 'San Diego corporate law firm litigation and defense contracting web design',
+    alt: 'An empty wood-panelled office with bookshelves and a desk in warm light',
     points: [
       'Attorney directory schemas linking California State Bar verified credentials',
       'High-converting practice area landing pages optimized for corporate counsel',
@@ -129,7 +129,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Family offices and boutique wealth managers across La Jolla require sophisticated digital presences that project stability and intellectual leadership. We craft bespoke typography, bespoke charts, and secure client portal integrations.',
     image: '/images/us/saas-website-design/hero.webp',
-    alt: 'San Diego private wealth management and venture capital website design',
+    alt: 'A man and a woman in a studio pointing at a wall display of a handbag product page, the same page open on a laptop',
     points: [
       'Tailored editorial typography and bespoke interactive market visualizers',
       'Encrypted client portal integration with multi-factor authentication routing',
@@ -142,7 +142,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Freight forwarders, customs brokers, and twin-plant cross-border manufacturing operators in Otay Mesa demand high-speed lead engines. We build responsive web applications with interactive quote estimators, warehouse capability matrices, and bilingual English-Spanish user interfaces.',
     image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'San Diego cross border logistics customs broker and industrial trade web design',
+    alt: 'A machinist in safety glasses loading a metal part into a CNC lathe beside a tablet showing the part',
     points: [
       'Interactive freight rate estimation calculators and RFQ workflow automation',
       'Bilingual English and Spanish language switching with localized metadata',
@@ -154,8 +154,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Technical Flagships for Sorrento Valley Hardware & Defense Innovators',
     description:
       'Semiconductor designers, wireless communications innovators, and defense electronics suppliers across Sorrento Valley and UTC demand high-security web applications. We engineer custom Next.js platforms featuring interactive product architecture visualizers, gated technical whitepaper portals, and sub-second global edge CDN caching.',
-    image: '/images/us/denver/tech-office.webp',
-    alt: 'San Diego Sorrento Valley defense electronics telecom deeptech web design',
+    image: '/images/us/san-diego/web-design/card-circuit-soldering-antenna.webp',
+    alt: 'A woman soldering a small circuit board under a magnifier lamp while a man adjusts a small antenna on a tripod in an electronics lab',
     points: [
       'Interactive hardware architecture visualizers and engineering specification matrices',
       'Secure document data rooms with verified commercial partner access gating',
@@ -168,7 +168,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Private wealth advisory firms, concierge surgical practices, and luxury residential brokerages across La Jolla and Del Mar demand refined aesthetic craftsmanship. We design high-converting web applications with tactile editorial typography, interactive consultation intake funnels, and smooth micro-animations.',
     image: '/images/services/card-real-estate.webp',
-    alt: 'San Diego La Jolla private wealth aesthetic medicine luxury real estate web design',
+    alt: 'A laptop on a marble table showing a property listings website with photos and a map',
     points: [
       'Tactile editorial typography scales with custom brand micro-animations',
       'HIPAA-aware patient and client consultation intake gateways with instant notification routing',
@@ -544,7 +544,7 @@ export default function SanDiegoWebDesignPage() {
               <div className="rv-curved-frame-1">
                 <Image
                   src="/images/us/san-diego-web-design/hero-studio.webp"
-                  alt="San Diego California web design and custom Next.js web application development"
+                  alt="A man and a woman at a desktop monitor showing a handbag page layout, palm trees outside"
                   width={640}
                   height={640}
                   priority

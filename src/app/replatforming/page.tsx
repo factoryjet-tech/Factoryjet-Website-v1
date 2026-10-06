@@ -422,7 +422,7 @@ export default function ReplatformingHubPage() {
               <div className="rv-curved-frame-1">
                 <Image
                   src="/images/replatforming/replatforming-hero-architects.webp"
-                  alt="Enterprise technical directors reviewing e-commerce replatforming roadmap and data flow"
+                  alt="A man gesturing at a whiteboard beside a woman holding a notebook"
                   width={640}
                   height={640}
                   priority

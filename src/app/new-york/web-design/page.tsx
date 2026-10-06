@@ -103,7 +103,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'From Wall Street investment banks to Silicon Alley fintech disruptors, digital presence reflects fiduciary excellence. We engineer custom Next.js web applications with interactive financial modelers, compliance-ready investor data rooms, real-time market data integration, and sub-second global edge performance.',
     image: '/images/us/b2b-website-design/hero.webp',
-    alt: 'New York City Wall Street fintech private equity and investment banking web design engineering',
+    alt: 'Three colleagues at a large wall display showing a plain grey page layout',
     points: [
       'Interactive asset allocation visualizers and financial portfolio modelers',
       'Encrypted investor data rooms and multi-tier institutional access controls',
@@ -116,7 +116,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Midtown legal firms, commercial litigation boutiques, and executive consulting practices demand digital presences that project institutional authority. We design bespoke typography scales, interactive practice area silos, verified case outcome repositories, and secure client portal integrations.',
     image: '/images/us/services/law-firm-seo/hero.webp',
-    alt: 'New York City Midtown Manhattan corporate law firm and management consulting website design',
+    alt: 'An empty wood-panelled office with bookshelves and a desk in warm light',
     points: [
       'Refined editorial typography and interactive practice area directories',
       'Encrypted client portal integration with multi-factor authentication routing',
@@ -129,7 +129,7 @@ const INDUSTRY_SHOWCASE = [
     description:
       'Fast-growing software companies and modern digital media brands across Flatiron and Chelsea need web applications that convert enterprise buyers. We engineer high-speed marketing websites with interactive pricing calculators, product feature matrices, and automated CRM integrations.',
     image: '/images/us/saas-website-design/hero.webp',
-    alt: 'New York City Silicon Alley enterprise SaaS and digital media marketing web design',
+    alt: 'A man and a woman in a studio pointing at a wall display of a handbag product page, the same page open on a laptop',
     points: [
       'Interactive pricing configurators and dynamic product tour visualizers',
       'Frictionless lead routing directly into HubSpot, Salesforce, and Marketo',
@@ -141,8 +141,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Tactile Portfolio Showcases for DUMBO & SoHo Creators',
     description:
       'Premier architecture firms, luxury residential developers, and creative design studios across DUMBO and SoHo demand visual perfection. We build bespoke digital galleries with fluid page transitions, interactive floor plan viewers, and high-resolution media optimization.',
-    image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'New York City DUMBO architecture luxury real estate and creative studio website design',
+    image: '/images/us/new-york/web-design/card-architects-scale-model-table.webp',
+    alt: 'An architect placing a block on a white scale model of a building while a woman unrolls tracing paper beside it in a bright studio',
     points: [
       'Fluid interactive project galleries and 3D architectural floor plan viewers',
       'High-resolution WebP and AVIF image optimization with zero layout shift',
@@ -154,8 +154,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Institutional Authority & Compliance Portals for Wall Street Leaders',
     description:
       'Hedge funds, venture capital firms, private equity sponsors, and fintech platforms in Lower Manhattan and Midtown demand institutional credibility. We engineer custom Next.js web applications featuring real-time market data visualization widgets, LP investor portal gateways, and SOC 2 security compliance disclosures.',
-    image: '/images/services/card-real-estate.webp',
-    alt: 'New York Wall Street fintech private equity asset management website design',
+    image: '/images/us/new-york/web-design/card-analysts-multi-monitor-desk.webp',
+    alt: 'Two analysts at a desk with four monitors of simple line shapes, a woman pointing at a screen and a man in a navy suit on the phone',
     points: [
       'Interactive financial return charts and real-time market API data widgets',
       'Password-gated investor data rooms with encrypted LP document vaults',
@@ -167,8 +167,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Tactile Editorial Portfolios for Brooklyn Creative Institutions',
     description:
       'Creative agencies, film production houses, and world-class architectural studios across DUMBO, Williamsburg, and the Brooklyn Navy Yard require immaculate aesthetic execution. We build bespoke digital flagships featuring 60fps micro-animations, retina video portfolios, and bespoke design systems.',
-    image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Brooklyn DUMBO creative media agency and architecture website design',
+    image: '/images/us/new-york/web-design/card-studio-product-photo-set.webp',
+    alt: 'A photographer aiming a tripod camera at a grey ceramic vase on a white paper backdrop while a young man adjusts the vase by hand',
     points: [
       'Custom WebGL and Canvas visual interactions rendering at a steady 60 frames per second',
       'High-resolution streaming video case study galleries with zero buffering lag',
@@ -551,7 +551,7 @@ export default function NewYorkWebDesignPage() {
               <div className="rv-curved-frame-1">
                 <Image
                   src="/images/us/b2b-website-design/hero.webp"
-                  alt="New York City web design and custom Next.js web application development"
+                  alt="Three colleagues at a large wall display showing a plain grey page layout"
                   width={640}
                   height={640}
                   priority

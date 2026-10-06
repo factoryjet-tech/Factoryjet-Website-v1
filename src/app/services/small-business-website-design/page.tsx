@@ -662,7 +662,7 @@ export default function SmallBusinessWebDesignPage() {
               <div style={{ marginTop: '36px', borderRadius: '16px', overflow: 'hidden', border: '1px solid #E5E5E0', maxWidth: 860 }}>
                 <Image
                   src="/images/us/commerce/wordpress-to-shopify-hybrid-architecture.webp"
-                  alt="Small business website architecture diagram showing frontend, CMS, and analytics integration"
+                  alt="A woman drawing two linked boxes on a glass wall while a man watches"
                   width={860}
                   height={480}
                   loading="lazy"
