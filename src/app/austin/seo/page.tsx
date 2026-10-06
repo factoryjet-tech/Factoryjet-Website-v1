@@ -128,8 +128,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Winning High-Value Legal Retainers in Travis County',
     description:
       'Legal queries in Austin are among the most expensive advertising keywords in the country, often exceeding one hundred dollars per click in Google Ads. We build deep, practice-area content hubs and technical backlink authority that secure permanent top-three organic rankings without paying pay-per-click tolls.',
-    image: '/images/us/services/law-firm-seo/team.webp',
-    alt: 'Austin law firm organic search marketing and litigation practice SEO',
+    image: '/images/us/austin/seo/card-law-office-document-review.webp',
+    alt: 'Two lawyers at a meeting table, one reading a stapled document and the other writing on a yellow legal pad, with bookshelves behind them',
     points: [
       'Detailed practice area silos for personal injury, corporate law, and IP litigation',
       'Attorney profile schema with bar admissions and professional credentials',
@@ -141,8 +141,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Engineering Shortlist Dominance for National Procurement',
     description:
       'Austin technology companies and advanced manufacturers sell to sophisticated enterprise buyers who conduct exhaustive due diligence before contacting sales. We optimize technical whitepapers, product capability matrices, and software solution pages to rank for technical comparison queries and earn automatic citations in generative AI search tools.',
-    image: '/images/us/saas-website-design/page-plan.webp',
-    alt: 'Austin B2B technology and manufacturing enterprise SEO architecture',
+    image: '/images/us/austin/seo/card-precision-part-inspection.webp',
+    alt: 'An engineer in a white lab coat measuring a small steel part with a caliper while a colleague views a 3D model of the part on a monitor',
     points: [
       'Answer-first technical specifications formatted for generative search engine indexing',
       'Sub-second page load speeds on Next.js and Cloudflare Edge infrastructure',

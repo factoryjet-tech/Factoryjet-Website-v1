@@ -116,8 +116,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Driving High-Value Project Bidding Across Greater Arlington & Tarrant County',
     description:
       'Commercial general contractors, roofing companies, and mechanical specialists across Arlington require consistent commercial bidding opportunities. We build geo-targeted service area architectures, optimize Service Area Business profiles, and capture high-intent commercial contracting keywords.',
-    image: '/images/us/arlington/seo/arlington-local-business-seo.webp',
-    alt: 'Arlington TX commercial roofing general contractor local SEO ranking engine',
+    image: '/images/us/arlington/seo/card-commercial-roofing-crew.webp',
+    alt: 'Two roofers in white hard hats and harnesses fixing a grey metal roofing panel on a flat commercial roof, an orange safety cone behind them',
     points: [
       'ServiceAreaBusiness schema markup defining multi-county operational boundaries',
       'Hyper-local neighborhood geo-pages targeting North Arlington, Viridian, and Dalworthington Gardens',
@@ -129,8 +129,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Capturing High-Value Patients in Arlington Medical Corridors',
     description:
       'In Arlington competitive sports medicine, orthopedic surgery, and cosmetic dentistry markets, patients evaluate physician credentials and peer reviews thoroughly. We optimize Google Business Profiles, implement MedicalProcedure schemas, build procedure-specific silos, and generate steady review velocity.',
-    image: '/images/us/arlington/seo/arlington-tx-business-owner.webp',
-    alt: 'Arlington Texas sports medicine orthopedic physical therapy clinic local SEO',
+    image: '/images/us/arlington/seo/card-physiotherapy-knee-session.webp',
+    alt: 'A physiotherapist in a teal polo supporting the knee of an older woman as she stretches on a treatment table in a bright clinic',
     points: [
       'Multi-practitioner Google Business Profile optimization with procedure sub-categories',
       'MedicalProcedure and Physician structured JSON-LD schema linking hospital affiliations',

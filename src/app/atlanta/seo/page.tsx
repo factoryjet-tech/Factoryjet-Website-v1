@@ -115,8 +115,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Topical Authority & AI Citation Engineering for Atlanta Tech Leaders',
     description:
       'Midtown and Alpharetta enterprise technology buyers use generative AI engines and Google Search to discover software vendors. We build comprehensive topical clusters, technical whitepaper funnels, and structured entity graphs that earn citations in ChatGPT Search, Perplexity, and Google AI Overviews.',
-    image: '/images/us/saas-website-design/hero.webp',
-    alt: 'Atlanta B2B enterprise software and fintech search engine optimization',
+    image: '/images/us/atlanta/seo/card-software-engineers-desk.webp',
+    alt: 'Two software engineers at a white desk looking at a monitor of coloured blocks, one pointing at the screen and the other holding a mug',
     points: [
       'Topical content graph covering high-intent software comparisons and enterprise workflows',
       'Structured SoftwareApplication and Organization schema for AI citation retrieval',

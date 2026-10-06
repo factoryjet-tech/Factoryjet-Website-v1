@@ -104,8 +104,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Scaling DTC Subscription & Recurring Revenue in East Austin',
     description:
       'Central Texas is the national epicenter for disruptive CPG and beverage brands. We build custom Shopify Plus stores with recharge subscription engines, automated build-a-box bundles, and one-click upsells that maximize customer lifetime value (LTV).',
-    image: '/images/us/restaurant-website-design/hero.webp',
-    alt: 'Austin consumer packaged goods and specialty food ecommerce development',
+    image: '/images/us/austin/ecommerce/card-coffee-roastery-packing.webp',
+    alt: 'A man in a black apron scooping roasted coffee beans into a paper pouch on a scale while a woman seals filled pouches in a small roastery',
     points: [
       'Custom recurring subscription billing flows and flexible delivery interval management',
       'Interactive build-a-box bundlers and volume-tiered discount matrices',
@@ -130,8 +130,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'High-Performance Storefronts for Silicon Hills Innovators',
     description:
       'Tech hardware companies in The Domain and Silicon Hills require complex e-commerce architectures. We integrate 3D interactive product configurators, serial number registration portals, and global localized multi-currency checkouts.',
-    image: '/images/us/saas-website-design/hero.webp',
-    alt: 'Austin consumer electronics and hardware technology ecommerce store design',
+    image: '/images/us/austin/ecommerce/card-electronics-prototype-bench.webp',
+    alt: 'A woman in safety glasses soldering a small circuit board while a man beside her examines a white smart speaker prototype at an electronics bench',
     points: [
       'Interactive 3D model product viewers and custom feature comparison matrices',
       'Multi-currency and localized tax compliance via Shopify Markets Pro',
@@ -143,8 +143,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Self-Service Digital Procurement for Texas B2B Distributors',
     description:
       'Manufacturers and distributors across North Austin and Williamson County lose hours processing manual orders. We build custom Shopify Plus B2B portals with company account hierarchies, negotiated price lists, and Net 30 payment terms.',
-    image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Austin B2B wholesale distribution ecommerce portal development',
+    image: '/images/us/austin/ecommerce/card-industrial-supply-warehouse.webp',
+    alt: 'A man loading a box of steel pipe fittings onto a trolley while a woman with a clipboard checks a shelf in an industrial supply warehouse',
     points: [
       'Company profile hierarchies with multi-user purchasing permission controls',
       'Custom volume-tiered price lists and automated quick-order CSV uploads',
@@ -169,8 +169,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Tactile Digital Experiences for Sustainable Living Brands',
     description:
       'Eco-conscious home goods makers, modern furniture studios, and wellness innovators across Central Austin demand high-craft digital experiences. We engineer custom Shopify Plus themes with room visualizers, integrated carbon-neutral shipping calculators, and tiered financing.',
-    image: '/images/us/b2b/b2b-trade-portal.webp',
-    alt: 'Austin Mueller home decor sustainable living ecommerce development',
+    image: '/images/us/austin/ecommerce/card-ceramics-studio-wrapping.webp',
+    alt: 'A ceramicist trimming a bowl on a pottery wheel while a man wraps finished cups in brown paper in a sunlit studio',
     points: [
       'Interactive room arrangement visualizers and dimensional scale guides',
       'Integrated consumer financing via Affirm and Shop Pay Installments',

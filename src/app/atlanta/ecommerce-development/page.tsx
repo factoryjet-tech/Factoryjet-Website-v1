@@ -129,8 +129,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'High-Volume Recurring Revenue Engines for Atlanta CPG Brands',
     description:
       'Specialty beverage and consumer packaged goods brands in Georgia demand high-throughput recurring subscription engines. We develop custom recharge and Stripe billing integrations, box builder configurators, and automated customer self-service retention portals.',
-    image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Atlanta food beverage and specialty consumer goods subscription ecommerce',
+    image: '/images/us/atlanta/ecommerce/card-sauce-subscription-packing.webp',
+    alt: 'A woman in a denim apron packing jars of red pepper sauce into cardboard boxes while a man tapes a box shut in a white-tiled kitchen',
     points: [
       'Custom box builder and recurring subscription membership architectures',
       'Self-service customer portal reducing subscription cancellation churn',
@@ -155,8 +155,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Secure High-Throughput Checkout Architecture for Fintech-Driven Retailers',
     description:
       'High-volume consumer brands and financial technology providers across Alpharetta and North Fulton demand resilient transaction processing systems. We develop custom headless checkout architectures featuring multi-gateway failover routing, tokenized fraud prevention, instant ACH settlement, and zero-downtime flash scale capacity.',
-    image: '/images/us/b2b-website-design/hero.webp',
-    alt: 'Atlanta Alpharetta fintech ecommerce high volume payment processing development',
+    image: '/images/us/atlanta/ecommerce/card-card-payment-counter.webp',
+    alt: 'A customer tapping a bank card on a white card reader at a shop counter while a smiling shop assistant in a mustard cardigan looks on',
     points: [
       'Multi-gateway payment failover architecture eliminating dropped transactions',
       'Tokenized fraud prevention and automated 3D Secure verification flows',
@@ -168,8 +168,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Tactile Digital Storefronts for Atlanta Furniture & Interior Design Brands',
     description:
       'High-end furniture makers, architectural lighting manufacturers, and luxury decor flagships across West Midtown demand immersive visual merchandising. We engineer headless Next.js storefronts with real-time 3D furniture configurators, customized fabric swatch selection funnels, and integrated freight delivery estimation.',
-    image: '/images/services/card-real-estate.webp',
-    alt: 'Atlanta West Midtown bespoke furniture interior decor 3D ecommerce store design',
+    image: '/images/us/atlanta/ecommerce/card-furniture-showroom-swatches.webp',
+    alt: 'A man kneeling to adjust the leg of a walnut armchair while a woman holds fabric swatches against its cushion in a furniture showroom',
     points: [
       'Interactive 3D product visualizers and dynamic textile swatch customizers',
       'Automated white-glove and freight shipping rate calculation at checkout',

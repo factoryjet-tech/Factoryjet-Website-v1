@@ -141,8 +141,8 @@ const INDUSTRY_SHOWCASE = [
     headline: 'Engineering Industrial Authority for Atlanta Supply Chain Leaders',
     description:
       'Atlanta is the premier transportation and supply chain capital of the Southeast. Industrial websites built on slow legacy WordPress themes fail to convince technical procurement teams. We develop high-performance web applications featuring structured fleet capability tables, instant RFQ calculators, downloadable spec sheets, and sub-second edge hosting.',
-    image: '/images/us/manufacturing-website-design/shop-floor.webp',
-    alt: 'Atlanta logistics technology and freight transportation web design engineering',
+    image: '/images/us/atlanta/web-design/card-freight-warehouse-dispatch.webp',
+    alt: 'A dispatcher in a yellow hi-vis vest holding a tablet and talking to the driver of an orange forklift carrying a wrapped pallet in a freight warehouse',
     points: [
       'Interactive equipment capability matrices and downloadable CAD/PDF engineering data',
       'Frictionless multi-step RFQ form workflows routing directly to estimating teams',
