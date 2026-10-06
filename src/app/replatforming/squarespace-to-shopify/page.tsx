@@ -352,8 +352,8 @@ export default function SquarespaceToShopifyPage() {
               {/* Right Column: Clean Ritovex Organic Curved Photo Frame (Edge-to-Edge) */}
               <div className="rv-curved-frame-1">
                 <Image
-                  src="/images/replatforming/squarespace-hero-director.jpg"
-                  alt="Creative director reviewing brand aesthetic and Shopify storefront performance"
+                  src="/images/replatforming/squarespace-hero-swatch-review.webp"
+                  alt="A woman in a white shirt holding a fabric swatch beside a monitor that shows a wooden chair while two colleagues watch from the table"
                   width={640}
                   height={640}
                   priority
@@ -397,8 +397,8 @@ export default function SquarespaceToShopifyPage() {
               {/* Left Column: Clean Organic Curved Photo Frame (Edge-to-Edge) */}
               <div className="rv-curved-frame-2">
                 <Image
-                  src="/images/replatforming/squarespace-team-designers.jpg"
-                  alt="FactoryJet senior e-commerce designers reviewing Shopify theme components and typography"
+                  src="/images/replatforming/squarespace-team-theme-review.webp"
+                  alt="A man pointing at a monitor showing a page of grey blocks and product tiles while a woman sketches boxes in a notebook"
                   width={640}
                   height={640}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}

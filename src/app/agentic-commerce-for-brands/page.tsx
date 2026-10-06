@@ -452,8 +452,8 @@ export default function AgenticCommerceForBrandsPage() {
                 </div>
               </div>
               <Image
-                src={`${IMG}/agentic-commerce-autonomous-ai-shopper.webp`}
-                alt="Agentic commerce autonomous checkout simulation dashboard"
+                src={`${IMG}/agentic-commerce-agent-flow-monitor.webp`}
+                alt="A man at a white desk looking at a wide monitor that shows a flow of coloured blocks joined by lines, an orange lamp beside him"
                 width={1280}
                 height={800}
                 style={{ width: '100%', height: 'auto', borderRadius: '18px', border: '1px solid var(--pp-line)', display: 'block', objectFit: 'cover' }}

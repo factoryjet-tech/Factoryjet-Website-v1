@@ -378,10 +378,10 @@ export default function ShopifyVsBigCommercePage() {
             <h2 style={{ marginTop: '10px' }}>Shopify Plus vs BigCommerce: The Definitive Architectural Verdict</h2>
             <div style={{ margin: '24px 0', borderRadius: '16px', overflow: 'hidden', border: '1px solid var(--pp-line)', boxShadow: '0 12px 36px rgba(0,0,0,0.06)' }}>
               <Image
-                src={`${IMG}/shopify-plus-vs-bigcommerce-enterprise-matrix.webp`}
-                alt="Shopify Plus vs BigCommerce Enterprise technical architecture and B2B comparison"
-                width={1200}
-                height={675}
+                src={`${IMG}/platform-comparison-two-column-screen.webp`}
+                alt="A man standing beside a wall screen that shows two columns of coloured bars while a woman writes on a pad at the table"
+                width={1280}
+                height={800}
                 style={{ width: '100%', height: 'auto', display: 'block' }}
               />
             </div>

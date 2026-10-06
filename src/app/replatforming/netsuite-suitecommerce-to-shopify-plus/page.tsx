@@ -364,8 +364,8 @@ export default function NetSuiteToShopifyPage() {
               {/* Right Column: Clean Ritovex Organic Curved Photo Frame (Edge-to-Edge) */}
               <div className="rv-curved-frame-1">
                 <Image
-                  src="/images/replatforming/netsuite-hero-director.jpg"
-                  alt="Enterprise systems director reviewing NetSuite ERP data integration pipelines"
+                  src="/images/replatforming/netsuite-hero-systems-planning.webp"
+                  alt="A man in a grey jacket at a white table with a laptop showing joined boxes and a tablet showing horizontal bars"
                   width={640}
                   height={640}
                   priority

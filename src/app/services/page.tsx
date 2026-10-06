@@ -108,8 +108,8 @@ const SERVICES = [
     featured: true,
   },
   {
-    image: '/images/services/card-shopify.webp',
-    imageAlt: 'Shopify storefront on a MacBook with a skincare product beside it',
+    image: '/images/services/card-shopify-store-laptop-bottles.webp',
+    imageAlt: 'A laptop on a wooden table showing a shop page of amber bottle tiles, with two blank-labelled dropper bottles beside it',
     eyebrow: 'E-COMMERCE',
     title: 'Shopify Development',
     description:

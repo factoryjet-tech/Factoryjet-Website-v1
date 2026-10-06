@@ -592,7 +592,7 @@ export default function ReplatformingHubPage() {
                     <div style={{ width: '42px', height: '42px', borderRadius: '10px', background: '#F6F6F9', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '20px' }}>
                       {s.icon}
                     </div>
-                    <span style={{ fontSize: '11.5px', fontWeight: 700, color: '#FF5622', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                    <span style={{ fontSize: '11.5px', fontWeight: 700, color: '#B23E13', background: '#FFF0EB', padding: '4px 10px', borderRadius: '20px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                       {s.badge}
                     </span>
                   </div>

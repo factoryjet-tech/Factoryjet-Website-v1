@@ -42,9 +42,9 @@ const SERVICES: Service[] = [
     number: "02",
     name: "E-Commerce",
     heading: "E-Commerce Development for UK Retailers & Brands",
-    image: "/images/uk/service-ecommerce.webp",
+    image: "/images/uk/service-ecommerce-order-packing-bench.webp",
     imageAlt:
-      "Mobile phone with floating e-commerce product cards",
+      "A woman packing a folded jumper into a plain box at a packing bench while a man beside her holds a phone and a roll of tape",
     imageSide: "left",
     body: [
       "With the UK e-commerce market exceeding £265 billion and the Office for National Statistics putting 29.4% of all UK retail sales online in June 2026, having a professionally built online store is the single most important investment a UK retail or direct-to-consumer brand can make. FactoryJet is the Shopify development agency UK businesses choose when they need stores that convert, not just look good.",
@@ -78,9 +78,9 @@ const SERVICES: Service[] = [
     name: "AI SEO",
     heading:
       "AI SEO for UK Businesses: GEO, AEO, AIO & Traditional SEO Combined",
-    image: "/images/uk/service-ai-seo.webp",
+    image: "/images/uk/service-ai-seo-phone-chat-kitchen-table.webp",
     imageAlt:
-      "Two glass panels showing Google search and AI chat interfaces",
+      "A woman at a kitchen table speaking to a phone that shows two chat bubbles, a closed laptop and an orange teapot beside her",
     imageSide: "left",
     body: [
       "Search is going through its biggest change in two decades. Ofcom's Online Nation 2025 found that around 30% of searches now return an AI overview, that more than half of UK adults see those summaries often, and that ChatGPT took 1.8 billion UK visits in the first eight months of 2025, up from 368 million a year earlier. Google's own guidance is blunt about what to do next: there are no extra requirements to appear in AI Overviews or AI Mode, and no special optimisations. The fundamentals are the work, done properly and in public.",

@@ -1189,8 +1189,8 @@ export default function MagentoToShopifyPage() {
               </div>
               <div className="rv-curved-frame-2">
                 <Image
-                  src="/images/replatforming/magento-team-architects.jpg"
-                  alt="Two developers reviewing a Magento to Shopify field mapping on a monitor"
+                  src="/images/replatforming/magento-team-field-mapping.webp"
+                  alt="Two developers at a desk looking at a monitor that shows two tables of empty cells joined by arrows"
                   width={1200}
                   height={896}
                   sizes="(max-width: 991px) 100vw, 540px"

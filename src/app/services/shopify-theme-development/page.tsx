@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     url: CANONICAL,
     images: [
       {
-        url: 'https://factoryjet.com/images/us/shopify-theme/hero.webp',
+        url: 'https://factoryjet.com/images/us/shopify-theme/hero-theme-developer-wide-monitor.webp',
         width: 1024,
         height: 1024,
         alt: 'Custom Shopify Theme Development Code Architecture and Mobile UX',
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Custom Shopify Theme Development Agency | FactoryJet.',
     description: 'Custom Shopify theme development agency. We engineer bespoke Online Store 2.0 Liquid themes with 95+ Core Web Vitals, zero bloat, and GitHub code ownership.',
-    images: ['https://factoryjet.com/images/us/shopify-theme/hero.webp'],
+    images: ['https://factoryjet.com/images/us/shopify-theme/hero-theme-developer-wide-monitor.webp'],
   },
 };
 
@@ -473,8 +473,8 @@ export default function ShopifyThemeDevelopmentPage() {
           {/* Context-Aware Bespoke Hero Visual */}
           <div style={{ marginTop: '2.5rem', width: '100%', maxWidth: '1000px', margin: '2.5rem auto 0 auto', borderRadius: '1rem', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.1)', boxShadow: '0 20px 40px rgba(0,0,0,0.4)' }}>
             <Image
-              src="/images/us/shopify-theme/hero.webp"
-              alt="Bespoke Shopify Online Store 2.0 Theme Engineering Workspace"
+              src="/images/us/shopify-theme/hero-theme-developer-wide-monitor.webp"
+              alt="A man typing at a desk facing a wide monitor, half showing coloured dashes and half showing a phone frame with a blazer"
               width={1024}
               height={1024}
               priority
@@ -602,10 +602,10 @@ export default function ShopifyThemeDevelopmentPage() {
 
             <div style={{ marginTop: '3rem', width: '100%', maxWidth: '1000px', margin: '3rem auto 0 auto', borderRadius: '1rem', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.1)' }}>
               <Image
-                src="/images/us/shopify-theme/theme-architecture.webp"
-                alt="Modular Shopify Online Store 2.0 Section Schema Hierarchy and Asset Pipeline Architecture"
-                width={1200}
-                height={896}
+                src="/images/us/shopify-theme/theme-structure-wall-screen-briefing.webp"
+                alt="A woman in a navy blazer gesturing at a wall screen with a diagram of joined rectangles while two colleagues watch from the table"
+                width={1376}
+                height={774}
                 style={{ width: '100%', height: 'auto', display: 'block' }}
               />
             </div>

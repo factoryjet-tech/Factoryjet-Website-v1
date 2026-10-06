@@ -54,9 +54,9 @@ export const metadata: Metadata = {
     url: 'https://factoryjet.com/shopify-development',
     images: [
       {
-        url: 'https://factoryjet.com/images/services/card-shopify.webp',
+        url: 'https://factoryjet.com/images/services/card-shopify-store-laptop-bottles.webp',
         width: 1200,
-        height: 630,
+        height: 750,
         alt: 'FactoryJet Shopify Development Services India',
       },
     ],
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     title: 'Shopify Website Development Company India | FactoryJet',
     description:
       'Custom Shopify stores for Indian D2C brands. Razorpay + UPI + GST built in. 7-day delivery.',
-    images: ['https://factoryjet.com/images/services/card-shopify.webp'],
+    images: ['https://factoryjet.com/images/services/card-shopify-store-laptop-bottles.webp'],
   },
   alternates: {
     canonical: 'https://factoryjet.com/shopify-development',

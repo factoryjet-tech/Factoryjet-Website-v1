@@ -73,7 +73,7 @@ export default function ManchesterPage({ children }: { children?: React.ReactNod
       {/* Section 9: IndustriesGrid, Asymmetric bento with icons */}
       <IndustriesGrid />
 
-      {/* Section 10: CaseStudy, Before/After split */}
+      {/* Section 10: CaseStudy, real client work (three live sites) */}
       <CaseStudy />
 
       {/* Section 11: AIVisibility: GEO/AEO/SSR info cards */}

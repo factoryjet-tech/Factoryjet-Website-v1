@@ -565,10 +565,10 @@ export default function ManufacturingAiAgentsPage() {
                 <div className="lg:col-span-6 order-1 lg:order-2">
                   <div className="relative rounded-xl overflow-hidden aspect-[16/9] border border-[#E7DED6]">
                     <Image
-                      src="/images/manufacturing/precision-machining-ai-quote.jpg"
-                      alt="American CNC manufacturing engineer and machinist inspecting machined aerospace turbine component"
+                      src="/images/manufacturing/machined-impeller-caliper-check.webp"
+                      alt="A woman measuring a machined aluminium impeller with a caliper while a man in a blue work shirt watches, a milling machine behind them"
                       width={1376}
-                      height={768}
+                      height={774}
                       className="absolute inset-0 h-full w-full object-cover"
                       sizes="(max-width: 1024px) 100vw, 50vw"
                     />

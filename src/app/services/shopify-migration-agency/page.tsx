@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     url: CANONICAL,
     images: [
       {
-        url: 'https://factoryjet.com/images/us/shopify-migration/hero.webp',
+        url: 'https://factoryjet.com/images/us/shopify-migration/hero-migration-engineer-progress-bars.webp',
         width: 1024,
         height: 1024,
         alt: 'Enterprise Shopify Plus Migration Engineering Dashboard',
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Shopify Migration Agency | Zero-Downtime Replatforming | FactoryJet.',
     description: 'Shopify migration agency. Zero-downtime database ETL replatforming from Magento, WooCommerce, and BigCommerce to Shopify Plus with 100% SEO retention.',
-    images: ['https://factoryjet.com/images/us/shopify-migration/hero.webp'],
+    images: ['https://factoryjet.com/images/us/shopify-migration/hero-migration-engineer-progress-bars.webp'],
   },
 };
 
@@ -431,8 +431,8 @@ export default function ShopifyMigrationPage() {
           {/* Context-Aware Bespoke Hero Visual */}
           <div style={{ marginTop: '2.5rem', width: '100%', maxWidth: '1000px', margin: '2.5rem auto 0 auto', borderRadius: '1rem', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.1)', boxShadow: '0 20px 40px rgba(0,0,0,0.4)' }}>
             <Image
-              src="/images/us/shopify-migration/hero.webp"
-              alt="Enterprise 100,000 SKU Shopify Plus Database Migration Dashboard"
+              src="/images/us/shopify-migration/hero-migration-engineer-progress-bars.webp"
+              alt="A woman at a wooden desk facing two monitors, one showing three green progress bars and one showing rows of small squares"
               width={1024}
               height={1024}
               priority
@@ -540,8 +540,8 @@ export default function ShopifyMigrationPage() {
 
             <div style={{ marginTop: '3rem', width: '100%', maxWidth: '1000px', margin: '3rem auto 0 auto', borderRadius: '1rem', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.1)' }}>
               <Image
-                src="/images/us/shopify-migration/migration-war-room.webp"
-                alt="301 URL Redirect Mapping and Migration War Room Analytics Dashboard"
+                src="/images/us/shopify-migration/redirect-mapping-review-meeting.webp"
+                alt="Three colleagues in a meeting room, one pointing a pen at a wall screen that shows two columns of bars joined by arrows"
                 width={1200}
                 height={896}
                 style={{ width: '100%', height: 'auto', display: 'block' }}

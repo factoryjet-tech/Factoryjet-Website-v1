@@ -34,8 +34,8 @@ const STANDARD_CARDS: StandardCard[] = [
     description:
       "Restrained scroll motion and micro-interactions that signal quality without costing speed.",
     image: {
-      src: "/images/manchester/mockup-ecommerce.webp",
-      alt: "E-commerce storefront design mockup",
+      src: "/images/manchester/card-scrolling-shop-page-monitor.webp",
+      alt: "A man scrolling a web page on a monitor that shows a photo of a ceramic bowl above three vase tiles",
     },
   },
   {
@@ -50,8 +50,8 @@ const STANDARD_CARDS: StandardCard[] = [
     description:
       "Multi-step forms with auto-advance. Our Sheffield page shipped SEO 100, Performance 92.",
     image: {
-      src: "/images/manchester/mockup-dashboard.webp",
-      alt: "Web analytics dashboard showing traffic growth",
+      src: "/images/manchester/card-phone-form-option-buttons.webp",
+      alt: "A woman on a sofa holding a phone that shows a form with three large option buttons and a progress bar",
     },
   },
 ];

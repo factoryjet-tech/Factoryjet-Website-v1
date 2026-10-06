@@ -33,9 +33,9 @@ export const metadata: Metadata = {
     url: CANONICAL,
     images: [
       {
-        url: 'https://factoryjet.com/images/services/digital-marketing/chandigarh/hero.webp',
-        width: 832,
-        height: 1216,
+        url: 'https://factoryjet.com/images/services/digital-marketing/chandigarh/hero-studio-desk.webp',
+        width: 744,
+        height: 1087,
         alt: 'FactoryJet: Digital Marketing Agency in Chandigarh',
       },
     ],
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     title: 'Digital Marketing Agency in Chandigarh | FactoryJet',
     description:
       'Get found on Google and AI search, and turn Chandigarh visitors into customers. One senior in-house team.',
-    images: ['https://factoryjet.com/images/services/digital-marketing/chandigarh/hero.webp'],
+    images: ['https://factoryjet.com/images/services/digital-marketing/chandigarh/hero-studio-desk.webp'],
   },
   alternates: {
     canonical: CANONICAL,
@@ -665,10 +665,10 @@ export default function ChandigarhDigitalMarketingPage() {
               <div aria-hidden className="absolute -bottom-4 -left-4 h-28 w-28 rounded-2xl bg-fj-ink/[0.04]" />
               <div className="relative overflow-hidden rounded-2xl border border-fj-neutral-200 shadow-sm">
                 <img
-                  src="/images/services/digital-marketing/chandigarh/hero.webp"
+                  src="/images/services/digital-marketing/chandigarh/hero-studio-desk.webp"
                   alt="A professional standing at a desk reviewing design work"
-                  width={832}
-                  height={1216}
+                  width={744}
+                  height={1087}
                   fetchPriority="high"
                   className="aspect-[3/4] w-full object-cover"
                 />

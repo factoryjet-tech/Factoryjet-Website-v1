@@ -155,9 +155,9 @@ All images must exist in `public/images/uk/`:
 hero-uk.webp                   # Hero background (LCP image, 137 KB)
 uk-landscape.jpg               # Editorial image
 service-web-design.webp        # Service showcase (+ .jpg fallback)
-service-ecommerce.webp
+service-ecommerce-order-packing-bench.webp
 service-ai-agents.webp
-service-ai-seo.webp
+service-ai-seo-phone-chat-kitchen-table.webp
 cities/birmingham.webp            # City showcase images (10 cities)
 cities/bristol.webp
 cities/edinburgh.webp

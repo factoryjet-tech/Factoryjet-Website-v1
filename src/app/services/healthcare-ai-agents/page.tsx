@@ -694,10 +694,10 @@ export default function HealthcareAiAgentsPage() {
                   <div className="relative rounded-2xl border border-[#E7DED6] bg-[#FAFAF7] p-2 shadow-lg overflow-hidden">
                     <div className="relative rounded-xl overflow-hidden aspect-[16/10]">
                       <Image
-                        src="/images/healthcare/dental-ai-practice-scheduling.jpg"
-                        alt="American dental practice consultation room with automated AI appointment scheduling"
+                        src="/images/healthcare/dental-front-desk-week-calendar.webp"
+                        alt="A woman in navy scrubs pointing a pen at a monitor with a colour-blocked weekly calendar while a man beside her holds a tablet"
                         width={1376}
-                        height={768}
+                        height={860}
                         className="absolute inset-0 h-full w-full object-cover"
                         sizes="(max-width: 1024px) 100vw, 50vw"
                       />
@@ -746,10 +746,10 @@ export default function HealthcareAiAgentsPage() {
                   <div className="relative rounded-2xl border border-[#E7DED6] bg-[#FAFAF7] p-2 shadow-lg overflow-hidden">
                     <div className="relative rounded-xl overflow-hidden aspect-[16/10]">
                       <Image
-                        src="/images/healthcare/hospital-ai-triage-control.jpg"
-                        alt="American hospital clinical coordination room with AI intake stream telemetry"
+                        src="/images/healthcare/hospital-coordination-desk-charts.webp"
+                        alt="A woman in a blazer and a man in navy scrubs at a coordination desk with monitors showing bar charts and a grid of coloured squares"
                         width={1376}
-                        height={768}
+                        height={860}
                         className="absolute inset-0 h-full w-full object-cover"
                         sizes="(max-width: 1024px) 100vw, 50vw"
                       />
@@ -764,10 +764,10 @@ export default function HealthcareAiAgentsPage() {
                   <div className="relative rounded-2xl border border-[#E7DED6] bg-[#FAFAF7] p-2 shadow-lg overflow-hidden">
                     <div className="relative rounded-xl overflow-hidden aspect-[16/10]">
                       <Image
-                        src="/images/healthcare/independent-chiropractor-clinic-ai.jpg"
-                        alt="American chiropractic and physical therapy clinic front desk with automated check-in"
+                        src="/images/healthcare/clinic-reception-tablet-check-in.webp"
+                        alt="A man in a navy polo shaking hands with a woman at a clinic front desk where a tablet on a stand shows a green tick"
                         width={1376}
-                        height={768}
+                        height={860}
                         className="absolute inset-0 h-full w-full object-cover"
                         sizes="(max-width: 1024px) 100vw, 50vw"
                       />
@@ -820,10 +820,10 @@ export default function HealthcareAiAgentsPage() {
                   <div className="relative rounded-2xl border border-[#E7DED6] bg-[#FAFAF7] p-2 shadow-lg overflow-hidden">
                     <div className="relative rounded-xl overflow-hidden aspect-[16/10]">
                       <Image
-                        src="/images/healthcare/hipaa-cloud-security-audit.jpg"
-                        alt="American healthcare data security specialist reviewing HIPAA encrypted telemetry dashboards"
+                        src="/images/healthcare/data-security-review-workstation.webp"
+                        alt="A woman in blue-framed glasses at a desk with two monitors, one showing a padlock shape and a green ring chart"
                         width={1376}
-                        height={768}
+                        height={860}
                         className="absolute inset-0 h-full w-full object-cover"
                         sizes="(max-width: 1024px) 100vw, 50vw"
                       />

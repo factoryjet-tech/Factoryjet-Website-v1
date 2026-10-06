@@ -4101,7 +4101,7 @@ export const POSTS: BlogPost[] = [
       <p className="mb-6">
         Founded in 2013, Webflow has grown into one of the most powerful no-code website builders on the market. As of 2026, it powers over 3.5 million websites worldwide.
       </p>
-      <img src="/webflow-no-code-website-builder.webp" alt="Webflow no-code website builder interface" className="rounded-xl w-full mb-6" />
+      <img src="/images/blog/webflow-guide/visual-page-builder-monitor.webp" alt="A hand on a mouse in front of a monitor showing a visual page builder with a hill photo and outlined blocks" className="rounded-xl w-full mb-6" />
 
       <h2 id="key-features" className="text-2xl font-bold mt-8 mb-4">Key Features of Webflow</h2>
       <p className="mb-4">
@@ -4117,7 +4117,7 @@ export const POSTS: BlogPost[] = [
         <li><strong>Webflow Logic</strong>, Automate workflows without code (think Zapier-lite built right in).</li>
         <li><strong>Responsive Design</strong>: Control layout at every breakpoint: desktop, tablet, and mobile.</li>
       </ul>
-      <img src="/webflow-features-dashboard.webp" alt="Webflow features dashboard CMS tools" className="rounded-xl w-full mb-6" />
+      <img src="/images/blog/webflow-guide/site-dashboard-chart-cards.webp" alt="A monitor on a white desk showing a dashboard of cards with a ring chart, a line chart, a doughnut chart and a bar chart" className="rounded-xl w-full mb-6" />
 
       <h2 id="webflow-development" className="text-2xl font-bold mt-8 mb-4">Webflow Development Explained</h2>
       <p className="mb-4">
@@ -4182,7 +4182,7 @@ export const POSTS: BlogPost[] = [
         </div>
       </div>
 
-      <img src="/webflow-vs-wordpress-comparison.webp" alt="Webflow vs WordPress comparison 2026" className="rounded-xl w-full mb-6" />
+      <img src="/images/blog/webflow-guide/design-canvas-beside-list-view.webp" alt="Two monitors side by side, one showing a visual design canvas of wireframe blocks and one showing a list view with a dark sidebar" className="rounded-xl w-full mb-6" />
 
       <h2 id="webflow-vs-framer" className="text-2xl font-bold mt-8 mb-4">Webflow vs Framer</h2>
       <p className="mb-4">
@@ -4240,7 +4240,7 @@ export const POSTS: BlogPost[] = [
         <strong>Who should use Wix?</strong> Beginners who just need a simple business website fast.<br />
         <strong>Who should use Webflow?</strong> Designers, agencies, and anyone who needs a professional, scalable site.
       </p>
-      <img src="/webflow-vs-wix-infographic.webp" alt="Webflow vs Wix website builder comparison" className="rounded-xl w-full mb-6" />
+      <img src="/images/blog/webflow-guide/two-laptops-simple-and-dense-editors.webp" alt="Two open laptops side by side, one showing a simple page with round coloured buttons and one showing a dense design canvas" className="rounded-xl w-full mb-6" />
 
       <h2 id="webflow-wordpress-together" className="text-2xl font-bold mt-8 mb-4">Can You Use Webflow and WordPress Together?</h2>
       <p className="mb-4">
@@ -4278,7 +4278,7 @@ export const POSTS: BlogPost[] = [
         <p className="text-sm text-blue-700 mt-3">We help businesses build fast, SEO-friendly Webflow websites focused on real results, not just design.</p>
       </div>
 
-      <img src="/webflow-development-services-team-working.webp" alt="Webflow development services team working" className="rounded-xl w-full mb-6" />
+      <img src="/images/blog/webflow-guide/team-laptops-long-table.webp" alt="Four colleagues with laptops around a long wooden table in a bright office, one man pointing at the table as he talks" className="rounded-xl w-full mb-6" />
 
       <h2 id="webflow-pricing" className="text-2xl font-bold mt-8 mb-4">Webflow Pricing vs Hiring a Webflow Expert (2026)</h2>
       <p className="mb-4">

@@ -48,9 +48,9 @@ export const metadata: Metadata = {
     url: 'https://factoryjet.com/services/ai-agent-development/ai-marketing-agent',
     images: [
       {
-        url: 'https://factoryjet.com/images/us/services/hero-ai-agent-us.webp',
+        url: 'https://factoryjet.com/og-default.png',
         width: 1200,
-        height: 800,
+        height: 630,
         alt: 'FactoryJet AI Agent Development Services',
       },
     ],
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'AI Marketing Agent for US Businesses | FactoryJet',
     description: 'Email, SMS, social and ad automation in your brand voice. CAN-SPAM and TCPA aware. Fixed price.',
-    images: ['https://factoryjet.com/images/us/services/hero-ai-agent-us.webp'],
+    images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: {
     canonical: 'https://factoryjet.com/services/ai-agent-development/ai-marketing-agent',

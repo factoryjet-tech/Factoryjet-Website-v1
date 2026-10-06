@@ -384,10 +384,10 @@ export default function ShopifyVsMagentoPage() {
             <h2 style={{ marginTop: '10px' }}>Why enterprise brands are replatforming from Magento to Shopify Plus</h2>
             <div style={{ margin: '24px 0', borderRadius: '16px', overflow: 'hidden', border: '1px solid var(--pp-line)', boxShadow: '0 12px 36px rgba(0,0,0,0.06)' }}>
               <Image
-                src={`${IMG}/shopify-plus-vs-magento-adobe-commerce-tco.webp`}
-                alt="Shopify Plus vs Magento Adobe Commerce total cost of ownership and migration analysis"
-                width={1200}
-                height={675}
+                src={`${IMG}/replatforming-cost-chart-review.webp`}
+                alt="A woman at a white desk holding a printed bar chart beside a laptop that shows the same chart"
+                width={1280}
+                height={800}
                 style={{ width: '100%', height: 'auto', display: 'block' }}
               />
             </div>

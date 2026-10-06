@@ -458,8 +458,8 @@ export default function TargetPlusMarketplacePage() {
                 </div>
               </div>
               <Image
-                src={`${IMG}/target-plus-curated-retail-showcase.webp`}
-                alt="Target Plus curated retail showcase and DVS inventory dashboard"
+                src={`${IMG}/homeware-showroom-tablet-stock-check.webp`}
+                alt="A woman in a navy blazer in a homeware showroom holding a tablet that shows a simple bar chart, folded towels on the table"
                 width={1280}
                 height={800}
                 style={{ width: '100%', height: 'auto', borderRadius: '18px', border: '1px solid var(--pp-line)', display: 'block', objectFit: 'cover' }}

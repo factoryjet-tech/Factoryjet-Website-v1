@@ -364,8 +364,8 @@ export default function BigCommerceToShopifyPage() {
               {/* Right Column: Clean Ritovex Organic Curved Photo Frame (Edge-to-Edge) */}
               <div className="rv-curved-frame-1">
                 <Image
-                  src="/images/replatforming/bigcommerce-hero-vp.jpg"
-                  alt="VP of E-Commerce reviewing conversion analytics and Shopify Plus migration roadmap"
+                  src="/images/replatforming/bigcommerce-hero-ecommerce-lead-desk.webp"
+                  alt="A woman in a navy blazer at a wooden desk looking at a laptop that shows plain bars and a rising line"
                   width={640}
                   height={640}
                   priority
@@ -409,8 +409,8 @@ export default function BigCommerceToShopifyPage() {
               {/* Left Column: Clean Organic Curved Photo Frame (Edge-to-Edge) */}
               <div className="rv-curved-frame-2">
                 <Image
-                  src="/images/replatforming/bigcommerce-team-devs.jpg"
-                  alt="FactoryJet senior development team auditing catalog attributes and theme templates"
+                  src="/images/replatforming/bigcommerce-team-catalogue-audit.webp"
+                  alt="Two colleagues at a wooden desk, one pointing a pencil at a monitor that shows rows of grey rectangles and coloured squares"
                   width={640}
                   height={640}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}

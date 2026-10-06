@@ -364,8 +364,8 @@ export default function WooCommerceToShopifyPage() {
               {/* Right Column: Clean Ritovex Organic Curved Photo Frame (Edge-to-Edge) */}
               <div className="rv-curved-frame-1">
                 <Image
-                  src="/images/replatforming/woocommerce-hero-founder.jpg"
-                  alt="E-commerce brand founder reviewing Shopify checkout speed and conversion analytics"
+                  src="/images/replatforming/woocommerce-hero-store-owner-desk.webp"
+                  alt="A man in a grey shirt at a wooden desk looking at a laptop with a rising line chart, shelves of plain boxes behind him"
                   width={640}
                   height={640}
                   priority
@@ -409,8 +409,8 @@ export default function WooCommerceToShopifyPage() {
               {/* Left Column: Clean Organic Curved Photo Frame (Edge-to-Edge) */}
               <div className="rv-curved-frame-2">
                 <Image
-                  src="/images/replatforming/woocommerce-team-engineers.jpg"
-                  alt="FactoryJet senior migration engineers auditing WooCommerce database tables"
+                  src="/images/replatforming/woocommerce-team-data-audit.webp"
+                  alt="Two engineers at a desk, a woman holding a pen toward a monitor that shows a grid of table cells with some shaded green"
                   width={640}
                   height={640}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}

@@ -879,10 +879,10 @@ export default function AiReceptionistPage() {
                   <div className="relative rounded-2xl border border-[#E7DED6] bg-[#FAFAF7] p-2 shadow-lg overflow-hidden">
                     <div className="relative rounded-xl overflow-hidden aspect-[16/10]">
                       <Image
-                        src="/images/contractors/plumbing-electrical-field-dispatch.jpg"
-                        alt="American master plumber and commercial electrician reviewing dispatch routes in contractor office"
+                        src="/images/contractors/dispatch-office-route-map.webp"
+                        alt="A man and a woman in navy work shirts at a dispatch desk looking at a monitor with a street map and a route line"
                         width={1376}
-                        height={768}
+                        height={860}
                         className="h-full w-full object-cover"
                         sizes="(max-width: 1024px) 100vw, 50vw"
                       />
@@ -945,10 +945,10 @@ export default function AiReceptionistPage() {
                   <div className="relative rounded-2xl border border-[#E7DED6] bg-[#FAFAF7] p-2 shadow-lg overflow-hidden">
                     <div className="relative rounded-xl overflow-hidden aspect-[16/10]">
                       <Image
-                        src="/images/contractors/contractor-jobsite-dispatch-ai.jpg"
-                        alt="Commercial contractor field supervisor coordinating multi-property maintenance dispatch"
+                        src="/images/contractors/jobsite-supervisor-tablet-check.webp"
+                        alt="A site supervisor in a white hard hat and orange vest holding a tablet that shows rows with green dots, a concrete frame behind him"
                         width={1376}
-                        height={768}
+                        height={860}
                         className="h-full w-full object-cover"
                         sizes="(max-width: 1024px) 100vw, 50vw"
                       />

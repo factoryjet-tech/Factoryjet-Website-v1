@@ -29,9 +29,9 @@ export const metadata: Metadata = {
     url: CANONICAL,
     images: [
       {
-        url: 'https://factoryjet.com/images/us/headless-shopify/hero.webp',
-        width: 1200,
-        height: 630,
+        url: 'https://factoryjet.com/images/us/headless-shopify/hero-storefront-engineer-two-monitors.webp',
+        width: 1024,
+        height: 1024,
         alt: 'Headless Shopify Next.js 15 Storefront Architecture',
       },
     ],
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     title: 'Headless Shopify Agency: Sub-Second Next.js 15 Storefronts | FactoryJet.',
     description:
       'Enterprise headless Shopify Plus engineering with Next.js 15 App Router, React Server Components, and sub-second Core Web Vitals.',
-    images: ['https://factoryjet.com/images/us/headless-shopify/hero.webp'],
+    images: ['https://factoryjet.com/images/us/headless-shopify/hero-storefront-engineer-two-monitors.webp'],
   },
   robots: {
     index: true,
@@ -464,8 +464,8 @@ export default function HeadlessShopifyPage() {
           {/* Context-Aware Bespoke Hero Visual */}
           <div style={{ marginTop: '2.5rem', width: '100%', maxWidth: '1000px', margin: '2.5rem auto 0 auto', borderRadius: '1rem', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.1)', boxShadow: '0 20px 40px rgba(0,0,0,0.4)' }}>
             <Image
-              src="/images/us/headless-shopify/hero.webp"
-              alt="Headless Shopify Next.js 15 Architecture Telemetry Dashboard"
+              src="/images/us/headless-shopify/hero-storefront-engineer-two-monitors.webp"
+              alt="A man at a wooden desk facing two monitors, one showing a shop page with shoe tiles and one showing green line charts"
               width={1024}
               height={1024}
               priority
@@ -566,8 +566,8 @@ export default function HeadlessShopifyPage() {
 
             <div style={{ marginTop: '3rem', width: '100%', maxWidth: '1000px', margin: '3rem auto 0 auto', borderRadius: '1rem', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.1)' }}>
               <Image
-                src="/images/us/headless-shopify/architecture-review.webp"
-                alt="Headless Shopify Plus Code Architecture and Serverless API Flow"
+                src="/images/us/headless-shopify/architecture-whiteboard-four-layers.webp"
+                alt="A woman drawing four stacked boxes joined by arrows on a whiteboard while a man beside her holds a tablet"
                 width={1200}
                 height={896}
                 style={{ width: '100%', height: 'auto', display: 'block' }}

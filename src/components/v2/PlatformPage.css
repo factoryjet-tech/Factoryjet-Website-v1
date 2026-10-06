@@ -49,7 +49,7 @@
   font-size: clamp(26px, 4vw, 42px); line-height: 1.1; text-wrap: balance;
 }
 .platpage h3 { font-family: var(--pp-display); font-weight: 700; }
-.platpage .pp-lead { font-size: clamp(16px, 1.8vw, 18.5px); line-height: 1.62; color: var(--pp-body); }
+.platpage .pp-lead, .pp-page .pp-lead { font-size: clamp(16px, 1.8vw, 18.5px); line-height: 1.62; color: var(--pp-body); }
 
 /* mono // label */
 .platpage .pp-mlabel, .pp-page .pp-mlabel { font-family: var(--pp-mono); font-size: 11px; letter-spacing: 0.06em; color: var(--pp-muted); }

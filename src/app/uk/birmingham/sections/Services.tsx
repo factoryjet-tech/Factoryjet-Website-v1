@@ -76,8 +76,8 @@ const SERVICES: Service[] = [
     number: "04",
     name: "E-Commerce",
     heading: "Product and category pages built to be found, not just to be browsed",
-    image: "/images/uk/birmingham/service-ecommerce-birmingham.webp",
-    imageAlt: "E-commerce product listing for a Birmingham retailer",
+    image: "/images/uk/birmingham/service-ecommerce-necklace-packing-bench.webp",
+    imageAlt: "A woman placing a pearl necklace into a plain white box at a workshop bench while a man photographs another necklace",
     imageSide: "left",
     body: [
       "Most e-commerce SEO problems are structural. Category pages with no text on them, product pages using the manufacturer's description word for word, filters generating thousands of near-identical URLs, and a search box that quietly creates a new indexable page for every query anyone types. None of that is fixed by writing a blog.",

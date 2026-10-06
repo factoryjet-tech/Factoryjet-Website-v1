@@ -67,8 +67,8 @@ export default function CityContext() {
 
             <div className="relative mt-8 aspect-[16/9] w-full overflow-hidden rounded-2xl border border-fj-neutral-200 bg-fj-neutral-100">
               <Image
-                src="/images/manchester/northern-quarter.webp"
-                alt="Manchester Northern Quarter creative district"
+                src="/images/manchester/northern-quarter-thomas-street.webp"
+                alt="A red brick corner building at Thomas Street and Oak Street in the Northern Quarter, Manchester"
                 fill
                 priority={false}
                 quality={72}

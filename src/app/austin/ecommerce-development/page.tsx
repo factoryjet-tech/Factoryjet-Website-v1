@@ -568,8 +568,8 @@ export default function AustinEcommerceDevelopmentPage() {
               {/* Right Column: Clean Ritovex Organic Curved Photo Frame */}
               <div className="rv-curved-frame-1">
                 <Image
-                  src="/images/us/services/hero-enterprise-ecommerce.webp"
-                  alt="A desktop monitor in a glass-walled office showing a product catalogue grid of clothing and a small chart panel"
+                  src="/images/us/austin/ecommerce/hero-product-grid-review.webp"
+                  alt="A woman at a standing desk pointing a pen at a monitor that shows a grid of clothing tiles"
                   width={640}
                   height={640}
                   priority

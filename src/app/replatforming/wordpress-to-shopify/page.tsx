@@ -352,8 +352,8 @@ export default function WordPressToShopifyPage() {
               {/* Right Column: Clean Ritovex Organic Curved Photo Frame (Edge-to-Edge) */}
               <div className="rv-curved-frame-1">
                 <Image
-                  src="/images/replatforming/wordpress-hero-strategist.jpg"
-                  alt="Digital commerce director reviewing WordPress to Shopify content migration roadmap"
+                  src="/images/replatforming/wordpress-hero-content-timeline.webp"
+                  alt="A woman in a green blazer writing in a notebook beside a laptop that shows a timeline of coloured bars"
                   width={640}
                   height={640}
                   priority

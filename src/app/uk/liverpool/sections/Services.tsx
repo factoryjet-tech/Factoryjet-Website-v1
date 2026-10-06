@@ -20,8 +20,8 @@ const SERVICES: Service[] = [
     number: "01",
     name: "Local SEO",
     heading: "Get Into the Liverpool Map Results",
-    image: "/images/uk/liverpool/service-ai-seo-liverpool.webp",
-    imageAlt: "An illustration of a search visibility bar chart linked to an AI answer card",
+    image: "/images/uk/liverpool/service-local-seo-shop-counter-map-phone.webp",
+    imageAlt: "A shop owner in a dark apron behind a wooden counter holding a phone that shows a simple map with pins",
     imageSide: "right",
     featured: true,
     body: [
@@ -33,8 +33,8 @@ const SERVICES: Service[] = [
     number: "02",
     name: "Search and content",
     heading: "The Pages You Are Missing, Written and Shipped",
-    image: "/images/uk/liverpool/service-web-design-liverpool.webp",
-    imageAlt: "Service pages laid out for a Liverpool website",
+    image: "/images/uk/liverpool/service-content-wireframe-wall.webp",
+    imageAlt: "A woman arranging a grid of wireframe sketches pinned to a white wall while a man beside her holds another sheet",
     imageSide: "left",
     body: [
       "Most Liverpool sites have three pages trying to do the work of fifteen. If you sell eight services and have one page listing all of them, you are competing for none of them. We do the keyword research against real search volume, separate out the terms you can realistically win, then build a page per service that answers the question in its first sentence. Existing pages get fixed before new ones get written, because a rewritten page that already has history will usually move faster than a brand new one.",

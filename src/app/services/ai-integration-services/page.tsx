@@ -1009,13 +1009,13 @@ export default function AIIntegrationServicesPage() {
 
               <div className="flex flex-col rounded-2xl border border-fj-neutral-200 bg-fj-cream p-5">
                 <img
-                  src="/images/us/services/hero-ai-agent-us.webp"
-                  alt="Custom AI agent interface embedded directly into business software"
+                  src="/images/us/services/ai-integration-in-app-side-panel.webp"
+                  alt="A woman at a desk turning from a wide monitor that shows an app window with a side panel of chat bubbles"
                   width={1200}
                   height={800}
                   loading="lazy"
                   decoding="async"
-                  className="h-48 w-full rounded-xl object-cover border border-fj-neutral-200 shadow-sm"
+                  className="h-48 w-full rounded-xl object-cover object-top border border-fj-neutral-200 shadow-sm"
                 />
                 <h3 className="fj-display mt-4 text-lg font-bold text-fj-ink">In-App Native Interfaces</h3>
                 <p className="mt-2 font-fj-body text-sm text-fj-neutral-600">
