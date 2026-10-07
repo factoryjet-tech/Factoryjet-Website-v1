@@ -93,6 +93,8 @@ export default function CompetitorComparison() {
           <h2
             className="font-clash"
             style={{
+              fontWeight: 800,
+              letterSpacing: "-0.03em",
               fontSize: "clamp(2rem, 1.7rem + 1.3vw, 3rem)",
               lineHeight: 1.15,
               color: "#0a0f1c",
@@ -253,7 +255,7 @@ export default function CompetitorComparison() {
             >
               <h3
                 className="font-clash"
-                style={{ fontSize: "18px", color: "#0a0f1c", marginBottom: "4px" }}
+                style={{ fontWeight: 800, letterSpacing: "-0.03em", fontSize: "18px", color: "#0a0f1c", marginBottom: "4px" }}
               >
                 {name}
               </h3>
@@ -286,7 +288,7 @@ export default function CompetitorComparison() {
         >
           <h3
             className="font-clash"
-            style={{ fontSize: "22px", color: "#0a0f1c", marginBottom: "12px" }}
+            style={{ fontWeight: 800, letterSpacing: "-0.03em", fontSize: "22px", color: "#0a0f1c", marginBottom: "12px" }}
           >
             Why we can work this way
           </h3>

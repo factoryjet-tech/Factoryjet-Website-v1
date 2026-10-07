@@ -68,6 +68,8 @@ export default function Pricing() {
           <h2
             className="font-clash"
             style={{
+              fontWeight: 800,
+              letterSpacing: "-0.03em",
               fontSize: "clamp(2rem, 1.7rem + 1.3vw, 3rem)",
               lineHeight: 1.15,
               color: "#0a0f1c",

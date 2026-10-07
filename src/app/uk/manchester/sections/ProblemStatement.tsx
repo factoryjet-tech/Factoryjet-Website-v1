@@ -24,6 +24,8 @@ export default function ProblemStatement() {
         <h2
           className="font-clash"
           style={{
+            fontWeight: 800,
+            letterSpacing: "-0.03em",
             fontSize: "clamp(2.5rem, 2rem + 2vw, 4rem)",
             lineHeight: 1.1,
             color: "#0a0f1c",

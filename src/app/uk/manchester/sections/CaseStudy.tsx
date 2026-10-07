@@ -79,6 +79,8 @@ export default function CaseStudy() {
           <h2
             className="font-clash"
             style={{
+              fontWeight: 800,
+              letterSpacing: "-0.03em",
               fontSize: "clamp(2rem, 1.7rem + 1.2vw, 2.8rem)",
               lineHeight: 1.15,
               color: "#0a0f1c",
@@ -158,6 +160,8 @@ export default function CaseStudy() {
                 <h3
                   className="font-clash"
                   style={{
+                    fontWeight: 800,
+                    letterSpacing: "-0.03em",
                     fontSize: "clamp(1.5rem, 1.3rem + 0.8vw, 2rem)",
                     lineHeight: 1.2,
                     color: "#0a0f1c",

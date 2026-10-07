@@ -38,6 +38,8 @@ export default function FinalCTA() {
             <h2
               className="font-clash text-white"
               style={{
+                fontWeight: 800,
+                letterSpacing: "-0.03em",
                 fontSize: "clamp(2rem, 1.7rem + 1.3vw, 3rem)",
                 lineHeight: 1.15,
                 marginBottom: "24px",
