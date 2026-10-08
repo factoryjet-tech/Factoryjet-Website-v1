@@ -52,11 +52,12 @@ export default function MidPageCTA({
             {sub}
           </p>
           <div className="mt-6 flex flex-col items-start gap-3 sm:flex-row sm:items-center">
-            {/* 18px+ and semibold so white-on-#F05A28 clears the large-text contrast bar.
-                Below ~18px this pairing measures 3.4:1 and fails. */}
+            {/* #B23E13, the same fill as the hero form button. White on #F05A28 measures 3.38:1,
+                and 18px semibold is NOT large text (that starts at 24px regular or about 18.7px
+                bold), so it needs 4.5:1. White on #B23E13 measures 5.85:1. */}
             <Link
               href={href}
-              className="inline-flex items-center gap-2 rounded-full bg-[#F05A28] px-6 py-3 text-lg font-semibold text-white transition-opacity hover:opacity-90"
+              className="inline-flex items-center gap-2 rounded-full bg-[#B23E13] px-6 py-3 text-lg font-semibold text-white transition-opacity hover:opacity-90"
             >
               {label}
               <span aria-hidden="true">&rarr;</span>

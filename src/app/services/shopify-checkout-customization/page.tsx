@@ -792,14 +792,14 @@ const RELATED: ReadonlyArray<{ href: string; t: string; b: string }> = [
 /** Small inline source links. Same visual pattern as the audit page's stat sources. */
 function SourceLinks({ ids }: { ids: ReadonlyArray<SrcKey> }) {
   return (
-    <p className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1.5">
+    <p className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-0">
       {ids.map((id) => (
         <a
           key={id}
           href={SRC[id].url}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 font-fj-mono text-[11px] font-semibold tracking-wide text-[#B23E13] hover:underline"
+          className="inline-flex items-center gap-1.5 py-1 font-fj-mono text-[11px] font-semibold tracking-wide text-[#B23E13] hover:underline"
         >
           <svg width="10" height="10" viewBox="0 0 9 9" fill="none" aria-hidden="true" className="flex-shrink-0">
             <path d="M1.5 7.5L7.5 1.5M7.5 1.5H3M7.5 1.5V6" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
