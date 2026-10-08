@@ -72,6 +72,7 @@ export const US_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
       { label: 'Faire Alternatives',     href: '/faire-alternatives' },
       { label: 'Wayfair Marketplace',    href: '/wayfair-marketplace' },
       { label: 'Shopify Checkout Customization', href: '/services/shopify-checkout-customization' },
+      { label: 'Shopify QuickBooks Integration', href: '/services/shopify-quickbooks-integration' },
       { label: 'Replatforming Calculator', href: '/tools/replatforming-cost-calculator' },
       { label: 'Marketplace Fee Calculator', href: '/marketplace-fee-calculator' },
       { label: 'Ecommerce Speed Calculator', href: '/ecommerce-speed-calculator' },

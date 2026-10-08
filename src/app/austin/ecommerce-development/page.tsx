@@ -1016,7 +1016,7 @@ export default function AustinEcommerceDevelopmentPage() {
             </div>
 
             <p style={{ marginTop: '28px', fontSize: '13.5px', color: '#8E8E9F' }}>
-              Related services: <Link href="/austin/seo" style={{ color: '#FF5622', textDecoration: 'underline' }}>Austin SEO agency</Link>, <Link href="/services/shopify-development" style={{ color: '#FF5622', textDecoration: 'underline' }}>Shopify development</Link>, <Link href="/services/shopify-plus-b2b" style={{ color: '#FF5622', textDecoration: 'underline' }}>Shopify Plus B2B</Link>, and <Link href="/agentic-commerce" style={{ color: '#FF5622', textDecoration: 'underline' }}>Agentic commerce</Link>.
+              Related services: <Link href="/austin/seo" style={{ color: '#FF5622', textDecoration: 'underline' }}>Austin SEO agency</Link>, <Link href="/services/shopify-development" style={{ color: '#FF5622', textDecoration: 'underline' }}>Shopify development</Link>, <Link href="/services/shopify-plus-b2b" style={{ color: '#FF5622', textDecoration: 'underline' }}>Shopify Plus B2B</Link>, <Link href="/services/shopify-quickbooks-integration" style={{ color: '#FF5622', textDecoration: 'underline' }}>Shopify QuickBooks integration</Link>, and <Link href="/agentic-commerce" style={{ color: '#FF5622', textDecoration: 'underline' }}>Agentic commerce</Link>.
             </p>
           </div>
         </section>

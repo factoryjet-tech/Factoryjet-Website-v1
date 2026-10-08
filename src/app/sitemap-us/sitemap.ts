@@ -197,6 +197,7 @@ const US_ROUTES: { path: string; source: string }[] = [
   { path: '/wayfair-marketplace',                          source: 'src/app/wayfair-marketplace/page.tsx' },
   { path: '/faire-alternatives',                           source: 'src/app/faire-alternatives/page.tsx' },
   { path: '/services/shopify-checkout-customization',      source: 'src/app/services/shopify-checkout-customization/page.tsx' },
+  { path: '/services/shopify-quickbooks-integration',      source: 'src/app/services/shopify-quickbooks-integration/page.tsx' },
   { path: '/marketplace-fee-calculator',                   source: 'src/app/marketplace-fee-calculator/page.tsx' },
   { path: '/omnichannel-vs-multichannel-commerce',         source: 'src/app/omnichannel-vs-multichannel-commerce/page.tsx' },
   { path: '/agentic-commerce-for-brands',                  source: 'src/app/agentic-commerce-for-brands/page.tsx' },

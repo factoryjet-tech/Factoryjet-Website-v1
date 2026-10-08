@@ -1383,7 +1383,8 @@ export default function ShopifyPage() {
                   <Link href="/services/shopify-seo" className="text-[#B23E13] font-medium underline underline-offset-2">Shopify SEO services</Link>. For a custom Online Store 2.0 theme coded from scratch, see{' '}
                   <Link href="/services/shopify-theme-development" className="text-[#B23E13] font-medium underline underline-offset-2">Shopify theme development</Link>. For agents that work on orders, returns and ERP sync inside the store, see{' '}
                   <Link href="/services/shopify-ai-agents" className="text-[#B23E13] font-medium underline underline-offset-2">Shopify AI agents</Link>. To change what checkout asks for, offers or allows, see{' '}
-                  <Link href="/services/shopify-checkout-customization" className="text-[#B23E13] font-medium underline underline-offset-2">Shopify checkout customization</Link>.
+                  <Link href="/services/shopify-checkout-customization" className="text-[#B23E13] font-medium underline underline-offset-2">Shopify checkout customization</Link>. To keep stock, prices and your books in step with the store, see{' '}
+                  <Link href="/services/shopify-quickbooks-integration" className="text-[#B23E13] font-medium underline underline-offset-2">Shopify QuickBooks integration</Link>.
                 </p>
               </div>
               <div className="rounded-2xl border border-[#E5E5E0] bg-white p-7">
