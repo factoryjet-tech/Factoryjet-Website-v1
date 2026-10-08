@@ -1384,7 +1384,8 @@ export default function ShopifyPage() {
                   <Link href="/services/shopify-theme-development" className="text-[#B23E13] font-medium underline underline-offset-2">Shopify theme development</Link>. For agents that work on orders, returns and ERP sync inside the store, see{' '}
                   <Link href="/services/shopify-ai-agents" className="text-[#B23E13] font-medium underline underline-offset-2">Shopify AI agents</Link>. To change what checkout asks for, offers or allows, see{' '}
                   <Link href="/services/shopify-checkout-customization" className="text-[#B23E13] font-medium underline underline-offset-2">Shopify checkout customization</Link>. To keep stock, prices and your books in step with the store, see{' '}
-                  <Link href="/services/shopify-quickbooks-integration" className="text-[#B23E13] font-medium underline underline-offset-2">Shopify QuickBooks integration</Link>.
+                  <Link href="/services/shopify-quickbooks-integration" className="text-[#B23E13] font-medium underline underline-offset-2">Shopify QuickBooks integration</Link>. To add a Shopify store to a WordPress site you already run, see{' '}
+                  <Link href="/services/wordpress-shopify-integration" className="text-[#B23E13] font-medium underline underline-offset-2">WordPress Shopify integration</Link>.
                 </p>
               </div>
               <div className="rounded-2xl border border-[#E5E5E0] bg-white p-7">

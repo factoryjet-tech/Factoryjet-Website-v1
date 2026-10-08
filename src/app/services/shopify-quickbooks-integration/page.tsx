@@ -922,6 +922,13 @@ export default function ShopifyQuickBooksIntegrationPage() {
               <Link href="/services/shopify-development" className="font-semibold text-fj-ink underline underline-offset-4">
                 Shopify development
               </Link>
+              . If the store has to sit beside a WordPress site, see{' '}
+              <Link
+                href="/services/wordpress-shopify-integration"
+                className="font-semibold text-fj-ink underline underline-offset-4"
+              >
+                WordPress Shopify integration
+              </Link>
               .
             </p>
 

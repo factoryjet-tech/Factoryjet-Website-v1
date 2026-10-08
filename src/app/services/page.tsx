@@ -266,6 +266,7 @@ const MORE_SERVICES = [
   { eyebrow: 'E-COMMERCE', title: 'Shopify Theme Development', href: '/services/shopify-theme-development', note: 'Custom Online Store 2.0 Liquid themes.' },
   { eyebrow: 'E-COMMERCE', title: 'Shopify Checkout Customization', href: '/services/shopify-checkout-customization', note: 'Checkout fields, offers, and shipping and payment rules.' },
   { eyebrow: 'E-COMMERCE', title: 'Shopify QuickBooks Integration', href: '/services/shopify-quickbooks-integration', note: 'Stock, prices and books kept in step.' },
+  { eyebrow: 'E-COMMERCE', title: 'WordPress Shopify Integration', href: '/services/wordpress-shopify-integration', note: 'A Shopify store joined to the WordPress site you have.' },
   { eyebrow: 'E-COMMERCE', title: 'Wayfair Marketplace', href: '/wayfair-marketplace', note: 'Supplier setup, catalog, feeds and order links for Wayfair.' },
   { eyebrow: 'E-COMMERCE', title: 'Ecommerce Audit', href: '/services/ecommerce-audit', note: 'A written review of your store with a ranked list of fixes.' },
   { eyebrow: 'SEO', title: 'Technical SEO', href: '/services/technical-seo', note: 'Crawling, indexing, Core Web Vitals and site migrations.' },
