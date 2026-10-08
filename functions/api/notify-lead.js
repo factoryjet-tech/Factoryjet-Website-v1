@@ -77,6 +77,8 @@ async function writeLeadToFirestore(env, lead) {
       channel:           s(channelLabel(lead)),
       turnstileToken: s(lead.turnstileToken),
       turnstileVerdict: s(lead.turnstileVerdict),
+      // 'filled' when the form's hidden trap field had a value (see trapFilled).
+      honeypot:   s(lead.honeypot),
       status:     s('new'),
       capturedBy: s('server'),
       createdAt:  { timestampValue: new Date().toISOString() },
@@ -472,7 +474,7 @@ function attributionLines(lead) {
 }
 
 /** Build a clean HTML email body */
-function buildHtml({ name, email, phone, company, service, serviceCategory, serviceInferred, message, region, page, turnstileVerdict, erpLeadId, erpReturning, attribution }) {
+function buildHtml({ name, email, phone, company, service, serviceCategory, serviceInferred, message, region, page, turnstileVerdict, trapFilled, erpLeadId, erpReturning, attribution }) {
   const a = attribution || {};
   const now = new Date().toLocaleString('en-US', {
     timeZone: 'Asia/Kolkata',
@@ -521,6 +523,9 @@ function buildHtml({ name, email, phone, company, service, serviceCategory, serv
                 ${page ? row('Form page', `<a href="https://factoryjet.com${page}" style="color:#6B7280;font-size:12px;">factoryjet.com${page}</a>`) : ''}
                 ${turnstileVerdict === 'failed'
                   ? row('Spam check', '<span style="color:#B23E13;font-weight:600;">Failed bot check — treat with suspicion</span>')
+                  : ''}
+                ${trapFilled
+                  ? row('Spam trap', '<span style="color:#B23E13;font-weight:600;">Hidden trap field was filled. Usually a bot, sometimes a real visitor whose browser autofilled it. Read before deleting.</span>')
                   : ''}
               </table>
             </td>
@@ -944,6 +949,11 @@ export async function onRequestPost(context) {
   const turnstileVerdict = await verifyTurnstile(
     env, body.turnstileToken, request.headers.get('CF-Connecting-IP')
   );
+  // Same rule for the hidden trap field. The forms used to drop these in the
+  // browser and show "Request sent!", leaving no record; a browser autofill can
+  // fill that field for a real visitor (it is named company_website on three
+  // forms). The lead is kept and marked; the trap value itself is never stored.
+  const trapFilled = Boolean(body.honeypot && String(body.honeypot).trim());
 
   // ── (1) AUTHORITATIVE: persist the lead to Firestore server-side ───────────
   // This is the reliable capture path; it runs regardless of email status.
@@ -951,6 +961,7 @@ export async function onRequestPost(context) {
     docId, collection, name, email, phone, company, service, serviceCategory, serviceInferred, message, region, source, page,
     ...attribution,
     turnstileToken: body.turnstileToken, turnstileVerdict,
+    honeypot: trapFilled ? 'filled' : '',
   });
 
   // ── (1b) Push lead to ERPNext CRM without ever blocking the visitor ────────
@@ -984,7 +995,7 @@ export async function onRequestPost(context) {
     // 'absent' and 'unchecked' are normal for real people and stay unmarked, so
     // the warning keeps its meaning instead of appearing on half the leads.
     const pitch = isVendorPitch({ email, company, message });
-    const subject = `${turnstileVerdict === 'failed' ? '⚠️ LIKELY SPAM — ' : pitch ? '🧾 Vendor pitch — ' : '🔥 '}New lead: ${name} — ${serviceStr}${region ? ` (${region.toUpperCase()})` : ''}`;
+    const subject = `${turnstileVerdict === 'failed' || trapFilled ? '⚠️ LIKELY SPAM — ' : pitch ? '🧾 Vendor pitch — ' : '🔥 '}New lead: ${name} — ${serviceStr}${region ? ` (${region.toUpperCase()})` : ''}`;
     try {
       const resendRes = await fetch('https://api.resend.com/emails', {
         method: 'POST',
@@ -995,7 +1006,7 @@ export async function onRequestPost(context) {
           subject,
           html: buildHtml({
             name, email, phone, company, service, serviceCategory, serviceInferred, message, region, page,
-            turnstileVerdict, erpLeadId: erpResult.leadId, erpReturning: Boolean(erpResult.returning), attribution,
+            turnstileVerdict, trapFilled, erpLeadId: erpResult.leadId, erpReturning: Boolean(erpResult.returning), attribution,
           }),
           reply_to: email,
         }),

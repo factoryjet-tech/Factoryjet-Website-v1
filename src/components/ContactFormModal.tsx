@@ -31,6 +31,7 @@ import {
 } from 'lucide-react';
 import { useContactModal } from '../context/ContactModalContext';
 import { submitLead } from '../utils/submitLead';
+import { keepTrappedLead } from '../utils/trappedLead';
 import { containDialogFocus } from '../utils/dialogFocus';
 import {
   trackModalOpen,
@@ -282,8 +283,28 @@ const ContactFormModal: React.FC = () => {
   // ── Submit ────────────────────────────────────────────────────────────────
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Silent bot drop — honeypot filled.
-    if (honeypot.trim() !== '') { setIsSuccess(true); return; }
+    if (honeypot.trim() !== '') {
+      // Trap field filled: a bot, or a real visitor's autofill. Keep the lead
+      // (the server marks it likely spam) and count no conversion.
+      if (!canSubmit()) { setIsSuccess(true); return; }
+      setIsSubmitting(true);
+      const kept = await keepTrappedLead({
+        name:    formData.name,
+        email:   formData.email,
+        phone:   formData.phone,
+        company: formData.company,
+        service: formData.service,
+        message: formData.message,
+        region,
+        source: 'contact_form',
+        turnstileToken: formData.turnstileToken,
+        honeypot,
+      });
+      setIsSubmitting(false);
+      if (kept) setIsSuccess(true);
+      else setError('Something went wrong. Please try again.');
+      return;
+    }
     if (!canSubmit()) {
       setError('Please enter your name and a valid email.');
       return;

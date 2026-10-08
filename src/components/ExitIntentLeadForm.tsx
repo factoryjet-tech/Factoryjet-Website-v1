@@ -16,6 +16,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { X, Gift, ArrowRight, ShieldCheck, Loader2, CheckCircle } from 'lucide-react';
 import { submitLead } from '@/utils/submitLead';
+import { keepTrappedLead } from '@/utils/trappedLead';
 import { SERVICE_CATEGORIES, serviceFromPath } from '@/utils/leadService';
 import {
   trackFormStart,
@@ -104,7 +105,21 @@ const ExitIntentLeadForm: React.FC<ExitIntentLeadFormProps> = ({
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (honeypot.trim() !== '') { setIsSuccess(true); return; } // silent bot drop
+    if (honeypot.trim() !== '') {
+      // Trap field filled: a bot, or a real visitor's autofill. Keep the lead
+      // (the server marks it likely spam) and count no conversion.
+      if (!canSubmit) { setIsSuccess(true); return; }
+      setIsSubmitting(true);
+      const kept = await keepTrappedLead({
+        name, email, phone,
+        service: serviceTouched ? service : '',
+        region, source, collection: collectionName, honeypot,
+      });
+      setIsSubmitting(false);
+      if (kept) setIsSuccess(true);
+      else setError('Something went wrong. Please try again.');
+      return;
+    }
     if (!canSubmit) { setError('Please enter your name and a valid email.'); return; }
     setIsSubmitting(true);
     setError(null);

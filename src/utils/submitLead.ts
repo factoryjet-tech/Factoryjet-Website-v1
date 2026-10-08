@@ -75,6 +75,9 @@ export interface LeadInput {
   collection?: string;
   /** Cloudflare Turnstile token (spam signal), if available. */
   turnstileToken?: string;
+  /** Value of the form's hidden trap field, if it was filled. The server keeps
+   *  the lead and marks it likely spam. Send it through keepTrappedLead. */
+  honeypot?: string;
 }
 
 export interface LeadResult {
@@ -155,6 +158,7 @@ export async function submitLead(input: LeadInput): Promise<LeadResult> {
     serviceInferred,
     ...attribution,
     turnstileToken: input.turnstileToken || '',
+    honeypot: input.honeypot || '',
   };
 
   // (1) Authoritative: server-side write + email. Timeout 8s, then one 6s retry.

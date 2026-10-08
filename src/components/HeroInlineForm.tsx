@@ -13,6 +13,7 @@
 
 import React, { useState, useRef } from 'react';
 import { submitLead } from '@/utils/submitLead';
+import { keepTrappedLead } from '@/utils/trappedLead';
 import {
   trackFormStart,
   trackFormSubmit,
@@ -56,6 +57,7 @@ const HeroInlineForm: React.FC<HeroInlineFormProps> = ({
   const [honeypot, setHoneypot] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [sent, setSent] = useState(false);
   const startedRef = useRef(false);
   const enrichment = useLeadEnrichment();
 
@@ -70,9 +72,19 @@ const HeroInlineForm: React.FC<HeroInlineFormProps> = ({
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Silent bot drop — honeypot filled. Do NOT navigate to /thank-you (that
-    // would fire a phantom conversion). Just stop.
-    if (honeypot.trim() !== '') { return; }
+    if (honeypot.trim() !== '') {
+      // Trap field filled: a bot, or a real visitor's autofill. Keep the lead
+      // (the server marks it likely spam). Do NOT open the details modal or go
+      // to /thank-you: that would fire a phantom conversion.
+      if (!canSubmit) return;
+      setIsSubmitting(true);
+      setError(null);
+      const kept = await keepTrappedLead({ name, email, region, source, service, honeypot });
+      setIsSubmitting(false);
+      setSent(kept);
+      if (!kept) setError('Something went wrong. Please try again.');
+      return;
+    }
     if (!canSubmit) { setError('Please enter your name and a valid email.'); return; }
     setIsSubmitting(true);
     setError(null);
@@ -151,6 +163,7 @@ const HeroInlineForm: React.FC<HeroInlineFormProps> = ({
         </div>
 
         {error && <p className="mt-2 font-fj-body text-[13px]" style={{ color: '#b3261e' }}>{error}</p>}
+        {sent && <p className="mt-2 font-fj-body text-[13px]" role="status" style={{ color: '#0F2138' }}>Request sent. We reply within 24 hours.</p>}
       </div>
     </form>
     {enrichment.modal}
