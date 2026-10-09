@@ -52,6 +52,13 @@ import AgentLoopDiagram from './AgentLoopDiagram';
      inside the two cost FAQ answers.
    - The six "other names" restate each firm's own page as read that day. We
      have not worked with them and did not test their products.
+   - Partner status is left out on purpose (Bhavesh, 2026-10-09). FactoryJet is
+     not a listed partner of any ERP maker, so the page raises no partner
+     title, ours or another firm's, and leads on range across ERPs instead.
+     Do not add a partner claim.
+   - He also confirmed that day: the AI and hosting bills may sit in the
+     client's own accounts at cost, and FactoryJet keeps managing the servers,
+     the AI models, the API connections and the upkeep either way.
    - Mirrors /services/wordpress-shopify-integration for components and schema.
 
    Schema: WebPage + Service + FAQPage + ItemList + BreadcrumbList.
@@ -449,7 +456,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'working',
     question: 'What does it cost to run an ERP AI agent each month?',
     answer:
-      "There are two bills. The AI model charges for each request, and the agent needs somewhere to run. ProductCrafters' 2026 breakdown puts monthly infrastructure for a custom-built agent at $500 to $10,000. If you prefer, both sit in your own accounts and you pay those bills directly, at cost. Support after launch is a separate agreement that you choose.",
+      "There are two bills. The AI model charges for each request, and the agent needs somewhere to run. ProductCrafters' 2026 breakdown puts monthly infrastructure for a custom-built agent at $500 to $10,000. If you prefer, both sit in your own accounts and you pay those bills directly, at cost. Whose account pays does not change who does the work. We keep managing the servers, the AI models, the API connections and the upkeep, so your team never has to.",
   },
   {
     category: 'working',
@@ -473,7 +480,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'working',
     question: 'Who owns the agent and its code?',
     answer:
-      'You do. The agent is built for you and the code is yours. We can run it in your own cloud account and with your own AI key, so nothing depends on a FactoryJet login. If you later move the work in-house or to another firm, the code and its notes go with you.',
+      'You do. The agent is built for you and the code is yours. It can run in your own cloud account and with your own AI key, so nothing depends on a FactoryJet login. We still look after it day to day: the servers, the AI models, the API connections and the updates. If you later move the work in-house or to another firm, the code and its notes go with you.',
   },
   {
     category: 'working',
@@ -866,7 +873,7 @@ const OTHERS: ReadonlyArray<{ name: string; focus: string; says: string; source:
   {
     name: 'RSM US',
     focus: 'NetSuite',
-    says: 'Its NetSuite AI page calls the firm a 12-time NetSuite Partner of the Year and offers NetSuite AI services, including work with the AI Connector Service.',
+    says: 'Its NetSuite AI page offers NetSuite AI services and describes how the AI Connector Service lets tools such as Claude and ChatGPT work with NetSuite.',
     source: 'rsm',
   },
   {
@@ -878,7 +885,7 @@ const OTHERS: ReadonlyArray<{ name: string; focus: string; says: string; source:
   {
     name: 'Invitra Technologies',
     focus: 'NetSuite',
-    says: 'Describes itself as an authorized NetSuite AI Solution Partner, with 15+ years and 750+ NetSuite projects delivered.',
+    says: 'Offers NetSuite AI agents, AI services and connectors for finance, sales and operations. Its page states 15+ years and 750+ NetSuite projects delivered.',
     source: 'invitra',
   },
   {
@@ -1406,8 +1413,8 @@ export default function ErpAiAgentsPage() {
                   the firm&rsquo;s own page. We have not worked with them and did not test their products.
                 </p>
                 <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-neutral-600">
-                  Two of them state a partner title with NetSuite on the pages we read. If your procurement team
-                  requires a partner title with your ERP maker, ask each firm for it on the first call, us included.
+                  Where we differ is range. FactoryJet works across Odoo, NetSuite, SAP Business One, ERPNext and
+                  custom systems, so the route we recommend is not tied to one vendor&rsquo;s product.
                 </p>
               </div>
               <ol className="grid gap-4 lg:col-span-8">
