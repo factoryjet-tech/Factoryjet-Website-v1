@@ -1,0 +1,29 @@
+Images for /blog/best-ai-consultancies-australia-2026, generated 2026-10-09.
+Model: the built-in image model in OpenAI Codex (Codex CLI inside the ChatGPT desktop app, one headless `codex exec` call for 5 pictures, 1536x1024 PNG each). No stock photography. The people are generated and are not FactoryJet staff or clients, and the alt text does not say they are.
+Processing: resized with Pillow (LANCZOS), converted with `cwebp -q 82 -m 6 -metadata none`. No EXIF or XMP in the shipped files.
+Review: every picture read at full size, then zoomed crops of hands, screens, bezels and background signs, then read again at the size it ships. Checked: five fingers on every visible hand, no readable text or numbers, no logos or brand marks, screens face the people using them, nobody looks at the camera.
+
+Shared style block used in the prompt: "Photorealistic commercial photography, bright natural daylight, pale walls and light timber, clean modern Australian workplace, deep focus so everything is sharp, a candid working moment, calm and confident mood, accurate natural skin tones, a clear empty band of wall or window above the heads. Not an illustration."
+Shared rules block: "No readable text, letters, numbers, logos, brand names, badges, signage or landmarks anywhere, including on screens, paper, sticky notes, clothing, mugs, books and devices. Any screen shows only simple soft coloured shapes. Any paper is blank or shows only pale grey lines with no letters. Every hand has exactly five natural fingers in a relaxed pose. The people are different in every image. Nobody looks at the camera. The outside of every laptop lid and the back of every phone and tablet is plain and blank. Any monitor is a separate display with a thin plain black bezel on all four sides and a plain black stand, with no logo, mark, light or button of any kind; it is not an all-in-one computer. Keyboards and mice are plain black."
+
+best-ai-consultancies-australia-2026-hero.webp (1400x933) + -og.webp (1200x630, cut from the same picture scaled to 1200x800, rows 18 to 648)
+Scene: a bright meeting room. Camera behind two seated business owners (a woman in her fifties with short silver hair in a navy blazer, a man in his forties with dark curly hair in a pale blue shirt). An adviser in her thirties in a cream knit top stands on the far side of the table and points with an open hand at a large sheet of paper showing eight empty rounded boxes joined by arrows. Orange notebook and two glasses of water on the table.
+Review: flow chart boxes are empty, no words. Adviser open hand zoom-checked, five fingers. Laptop lid plain grey, no mark. Window shows trees and ordinary low-rise buildings, no signage. PASS, no retouching.
+
+best-ai-consultancies-australia-2026-readiness.webp (1200x800)
+Scene: a small distribution warehouse. An operations manager in his fifties with a grey beard, in a plain orange high-visibility vest over a grey polo, walks beside an adviser in her forties in a charcoal jacket who holds a plain black clipboard. Plain cardboard boxes on white shelving.
+Review: vest has no logo or lettering. Both of his hands and both of hers zoom-checked. Boxes carry blank tape strips only. A background monitor shows blurred shapes with no text.
+Retouch: one small blurred red safety pictogram on a far pillar (about 18x22 px in the 1536 px original) was painted out with the pillar colour, column by column, and feathered. No other change.
+
+best-ai-consultancies-australia-2026-training.webp (1200x800)
+Scene: a training room seen from the back. Five seated staff of mixed ages with open laptops whose displays face them and the camera. A trainer in his thirties with red hair and glasses in a dark green shirt gestures at a wall screen showing three soft coloured circles joined by lines. Orange mug on the nearest table.
+Review: wall screen and laptop displays show shapes only. Both trainer hands zoom-checked.
+Retouch: three tiny marks were covered by copying the plain strip beside each on the same rows: a 14x2 px nub in the centre of the wall screen bottom bezel, and two lettering-like smudges (about 12x4 px and 8x3 px) on the hinge strips of two laptops. No other change.
+
+best-ai-consultancies-australia-2026-policy.webp (1200x800)
+Scene: over the shoulder of a seated woman in her fifties with grey hair in a low bun and a teal blouse, holding a pen over a printed document that shows pale grey lines and no letters. A younger colleague in a white shirt leans in and points at the page. Orange folder, closed silver laptop, a monitor and a pot plant on the white desk.
+Review: document shows grey bars only. Pointing hand, resting hand and pen hand zoom-checked. Folder has no label. Laptop lid plain.
+Retouch: a logo-like mark on the monitor bottom bezel (about 13x7 px) was covered with an ellipse in the median bezel colour sampled either side, Gaussian blur 1.6. No other change.
+
+A fifth picture (a business owner on a video call, remote.png) was generated in the same call, passed review and was not used.
+Codex weekly meter: 7.0% before the run and 7.0% after (plan pro, same window).

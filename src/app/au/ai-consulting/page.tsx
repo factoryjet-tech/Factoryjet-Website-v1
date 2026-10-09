@@ -94,7 +94,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   // ── Choosing an AI consultant ──
   { category: 'choosing', question: 'What are some reputable AI consulting companies in Australia?',
     answer: 'It depends on your size and goal. For large enterprise programs, Mantel Group, Arinco and the Big Four are common names. For SMEs and mid-market firms, AI Consulting Group in Sydney, FlowWorks and Aivy in Melbourne, and Advancer and Osher Digital in Brisbane appear often. For a fact-checked comparison of AI consultancies and agencies, see our guide to the best AI agencies in Australia.',
-    links: [{ href: '/blog/best-ai-agencies-australia-2026', label: 'AI consultancies and agencies compared' }] },
+    links: [{ href: '/blog/best-ai-agencies-australia-2026', label: 'AI consultancies and agencies compared' }, { href: '/blog/best-ai-consultancies-australia-2026', label: 'AI consultancies by city: Sydney, Melbourne and Brisbane' }] },
   { category: 'choosing', question: 'What are the 10 best AI consulting firms?',
     answer: 'Any fixed top 10 is a marketing list, because the best firm for a bank is the wrong one for a 30-person distributor. Globally, the Big Four and firms such as Accenture and McKinsey lead on enterprise AI programs. For Australian SMEs and mid-market firms, we compare 13 AI agencies and consultancies, including us, by location, client size, platforms and published prices, each checked on the firm’s own website.',
     links: [{ href: '/blog/best-ai-agencies-australia-2026', label: 'Best AI agencies in Australia (2026)' }] },

@@ -1,0 +1,54 @@
+Images for /blog/ai-consultant-cost-2026, generated 2026-10-09
+Model: Codex built-in image model on the ChatGPT subscription (codex exec, one batch of 4), 1536x1024 PNG.
+Two faint smudges on laptop hinge bezels (hero and independent) were covered on the raw PNG with a small
+ellipse filled with the median bezel colour and blurred. Resized with Pillow (LANCZOS), converted with cwebp -q 82 -m 6.
+No EXIF, XMP, ICC or C2PA data in the shipped files (checked by byte search).
+Every picture was read at full size, then as zoomed crops of every hand, screen, shelf and device, then again at the
+size it ships. Checks: five fingers, natural faces, no readable text or numbers, no logos or brand marks, screen
+geometry (screens face the people using them), scene matches its section. All four passed on the first attempt; none regenerated.
+The people are generated. They are not FactoryJet staff or clients and the alt text does not say they are.
+
+Shared style: "Photorealistic commercial photograph, not an illustration. Bright natural daylight in a pale, clean room in the
+United States with white and very light grey walls and pale wood furniture. Deep focus, crisp detail, calm candid working
+moment, natural skin tones, professional colour grading. Leave a plain empty band of wall above the heads."
+Shared rules: "No readable text, letters, numbers, logos, brand names, badges or landmarks anywhere, including on screens,
+paper, clothing, mugs, pens, books and devices. Screens show only simple flat shapes (grey rounded bars and cards, one
+orange). Every hand has exactly five natural fingers in a relaxed pose. The outside of every laptop lid and the back of
+every phone is plain and blank with no mark. Laptops are plain dark grey with no logo. Clothing is plain with no printing.
+The people are different in every image. Nobody looks at the camera."
+
+ai-consultant-cost-2026-hero.webp (1400x933) and ai-consultant-cost-2026-og.webp (1200x630, crop from y=50 of the 1536x1024 original), section: post hero and share image
+Scene: camera directly behind two people at shoulder height at a pale wood table. A woman in her forties with shoulder-length
+brown hair in a cream sweater, and a man in his fifties with short grey hair in a navy shirt. An open laptop faces them and the
+camera, showing four rounded cards in a row, three grey and one orange, with grey bars under them. Orange notebook, pen, two white mugs.
+Review: screen faces both people, camera behind them. Screen shows three grey cards, one orange card and two grey bars, no
+words. His pointing hand, his resting hand and her hand at her chin zoom-checked, natural. Shelf holds a plain white binder, a
+plain jar and a plain black box. Hinge bezel smudge covered. PASS.
+Alt: A woman in a cream sweater and a grey-haired man in a navy shirt sit at a wooden table, seen from behind, as he points at an orange card beside three grey cards on a laptop screen.
+
+ai-consultant-cost-2026-independent.webp (1200x800), section: "How much does it cost to hire an AI consultant for a first project?"
+Scene: camera beside and slightly behind one seated man in his thirties with short hair and a trimmed beard in a light grey
+sweater, working alone at a desk in a home office. Laptop shows grey boxes joined by thin lines with one orange box. Orange mug,
+closed notebook, plant, bookshelf with blank spines.
+Review: screen faces him and the camera. Diagram has four boxes and connecting lines, no words. Hand on the keyboard checked.
+Mug plain, book spines blank, notebook plain. Hinge bezel smudge covered. PASS.
+Alt: A bearded man in a grey sweater works alone at a desk, seen over his shoulder, with a simple box diagram on his laptop and an orange mug beside it.
+
+ai-consultant-cost-2026-hiring.webp (1200x800), section: "How much does it cost to hire AI: employee, freelancer or agency?"
+Scene: side-on view of two people talking across a small meeting table. A woman in her fifties with short silver hair and
+glasses in a white blouse and charcoal cardigan, and a man in his late twenties with short black hair in a light blue shirt,
+one hand open mid-gesture. Closed dark grey laptop, closed orange folder, two glasses of water. No screens.
+Review: her clasped hands and both of his hands zoom-checked, natural. Laptop lid blank. Folder plain. Glasses frames plain.
+No papers, no screens, no text. PASS.
+Alt: A silver-haired woman in glasses and a young man in a light blue shirt talk across a meeting table with a closed laptop and an orange folder between them.
+
+ai-consultant-cost-2026-twelve-months.webp (1200x800), section: "What does an AI consultant cost over 12 months?"
+Scene: two people standing at a wall whiteboard, seen from behind and to the left. A woman in her thirties with dark hair in a
+low bun in an olive green shirt presses a blank orange sticky note onto the board. A man in his forties with short sandy hair in
+a white shirt watches with folded arms. The board shows one horizontal grey line with small empty circles and three blank orange
+sticky notes.
+Review: board carries one line, five empty circles and three blank sticky notes, no writing. Her hand on the note and his
+folded arm checked. Closed silver laptop on the table has a blank lid. Mug plain. PASS.
+Alt: A woman in an olive shirt presses an orange sticky note onto a whiteboard timeline of five circles while a man in a white shirt watches with folded arms.
+
+Codex weekly meter (plan pro): 7.0 percent before the batch, 7.0 percent after. Other page agents were generating pictures in the same window.

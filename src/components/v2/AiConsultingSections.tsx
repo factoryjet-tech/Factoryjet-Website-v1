@@ -616,6 +616,7 @@ export default function AiConsultingSections() {
               <a href="/services/ai-agent-monitoring">AI Agent Monitoring</a>
               <a href={FIRMS_LIST}>Best AI Consulting Firms in the USA</a>
               <a href={COST_GUIDE}>How Much Does an AI Agent Cost</a>
+              <a href="/blog/ai-consultant-cost-2026">How Much Does an AI Consultant Cost</a>
               <a href={BUILD_VS_BUY}>AI Agents: Build vs. Buy</a>
               <a href="/blog/ai-agents-small-business-usa-2026">AI Agents for US Small Businesses</a>
               <a href={CENSUS} target="_blank" rel="noopener">U.S. Census Bureau: AI Use by Businesses</a>

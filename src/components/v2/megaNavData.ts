@@ -413,6 +413,9 @@ export const UK_SIMPLE_MENUS: SimpleMenu[] = [
       ] },
       { heading: 'UK guides', kind: 'compact', items: [
         { label: 'How to build an AI agent', href: '/blog/how-to-build-an-ai-agent-uk-2026' },
+        { label: 'AI cost in the UK', href: '/blog/ai-cost-uk-2026' },
+        { label: 'Best AI agent companies in the UK', href: '/blog/best-ai-agent-development-companies-uk-2026' },
+        { label: 'Best AI consultancies in the UK', href: '/blog/best-ai-consultancies-uk-2026' },
         { label: 'Top ecommerce agencies in the UK', href: '/blog/top-ecommerce-development-agencies-uk-2026' },
         { label: 'Shopify vs WooCommerce for UK stores', href: '/blog/ecommerce-development-uk-shopify-woocommerce-2026' },
         { label: 'How to choose a web design agency', href: '/blog/how-to-choose-web-design-agency-uk-2026' },
@@ -494,6 +497,8 @@ export const AU_SERVICE_HUBS: ServiceHub[] = [
       { heading: 'Australian guides', kind: 'compact', items: [
         { label: 'AI cost guide 2026', href: '/blog/ai-cost-australia-2026' },
         { label: 'Best AI agencies in Australia', href: '/blog/best-ai-agencies-australia-2026' },
+        { label: 'Cost of hiring AI developers', href: '/blog/hire-ai-developers-australia-cost-2026' },
+        { label: 'Best AI consultancies in Australia', href: '/blog/best-ai-consultancies-australia-2026' },
       ] },
     ],
     feature: { image: '/images/menu/menu-ai-agents.webp', kicker: 'Start here', title: 'AI consulting for Australian SMEs', body: 'Find where AI pays off, check your Privacy Act duties, then build it.', href: '/au/ai-consulting', cta: 'See how it works' },

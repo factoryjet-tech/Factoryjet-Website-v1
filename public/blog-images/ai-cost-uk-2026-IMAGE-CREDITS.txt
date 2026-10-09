@@ -1,0 +1,57 @@
+Images for /blog/ai-cost-uk-2026, generated 2026-10-09
+Model: OpenAI Codex built-in image tool (codex-cli 0.160.1, ChatGPT subscription), one batch of 4, 1536x1024 PNG each.
+Resized and cropped with ImageMagick (-strip), converted with cwebp -q 82 -m 6. No EXIF or XMP in the shipped files.
+Every image reviewed at full size, then as 3x zoomed crops of every hand, screen, keypad and device, then again at the size it ships.
+Checks: five fingers, natural faces, no readable text or numbers, no logos or brands, no landmarks, screen geometry (each screen faces
+the person using it and the camera sits behind them), scene matches its section. All four passed on the first attempt; none regenerated.
+Two small retouches on the raw PNGs: light specks on the calculator keys (hero) and on the desk phone keypad (receptionist) were replaced
+with the local median so the keys are plain. Nothing else was edited.
+
+Shared style block: "Bright high-key commercial photography in England. Soft natural daylight from large windows, pale walls, pale wood
+furniture, deep focus so everything is sharp, a candid working moment, calm and unposed. Natural accurate skin tones. Photorealistic,
+professional colour grading, not an illustration. Leave an empty band of plain wall above every head."
+Shared rules block: "No readable text, letters, words, numbers, logos, brand names, badges or trademarks anywhere: not on screens, paper,
+clothing, phones, mugs, books, boxes or walls. No famous landmarks. Screens show only simple flat shapes. Every hand has exactly five
+natural fingers in a relaxed pose. The people are different in every image. Nobody looks at the camera. Every monitor is a separate
+display with a thin plain black bezel on all four sides and a plain black stand; it is not an all-in-one computer and has no silver chin;
+the bezel has no logo, no mark, no light and no button of any kind. Keyboards and mice are plain black with blank keys. The outside of
+every laptop lid and the back of every phone and tablet is plain and blank. Clothing is plain with no label, badge or printing."
+
+ai-cost-uk-2026-hero.webp (1400x933) and ai-cost-uk-2026-og.webp (1200x630, crop starting 66 px below the top of the 1200x800 resize), section: post hero
+Scene: "Camera directly behind two seated people at shoulder height, looking over their shoulders, so the open laptop display faces both
+of them and the camera. They sit side by side at a pale oak table in a bright office with tall white sash windows; through the windows,
+out of focus, a red brick terrace. Left: a woman in her forties with shoulder-length red hair, plain navy jumper. Right: a man in his
+thirties with short black hair and a trimmed beard, plain light grey shirt. The laptop screen shows four simple rounded cards in a row:
+three pale grey and one orange, no words, no numbers. On the table: a plain pocket calculator with a blank display, one printed page that
+shows only faint grey bars, a plain pen, a plain orange mug. Her right hand points loosely toward the screen with an open palm."
+Review: Laptop faces both people, camera behind them. Screen shows only grey and orange cards. Her open hand (thumb and four fingers) and
+his hand at his chin zoom-checked, natural. Calculator display blank, keys plain after the retouch. Page shows grey bars only. No logo on
+the laptop or the second monitor in the background. Brick terrace through the window, no signage, no landmark. Also checked as the
+1200x514 banner the blog template cuts from the middle: both heads, the screen and the calculator stay in frame. PASS.
+
+ai-cost-uk-2026-build.webp (1200x800), section: "How much does it cost to build a custom AI agent in the UK?"
+Scene: "Two people stand at a white table in a bright meeting room, seen from the side. A woman in her thirties with curly black hair,
+plain mustard cardigan over a white top, is laying plain blank index cards in a row. A man in his fifties with grey hair and thin glasses,
+plain dark green jumper, rests one fingertip on one of the cards. Every card is blank: white, pale grey and orange. Short lengths of plain
+string link some cards. A plain orange marker pen with no label lies beside a closed plain laptop with a blank lid."
+Review: All six cards blank (zoomed). Four hands zoom-checked, natural. Laptop lid blank, pen unlabelled. Two books on the sideboard have
+blank spines. PASS.
+
+ai-cost-uk-2026-receptionist.webp (1200x800), section: "AI receptionist cost in the UK, next to the cost of a GP receptionist"
+Scene: "A bright doctors surgery reception area in England. Camera beside and slightly behind the seated receptionist, looking over her
+shoulder, so the display faces both her and the camera. A woman in her fifties with short silver hair, plain teal cardigan, plain black
+telephone headset. The monitor shows a weekly calendar grid of pale grey rounded blocks with two orange blocks, no words, no numbers. On
+the counter: a plain black desk telephone, a plain orange document folder with no label, a small plant in a white pot. Beyond the counter,
+out of focus, a row of empty pale blue waiting room chairs and a tall window. No posters, no signs."
+Review: Monitor faces her, camera over her shoulder. Calendar grid has no words or numbers. Both hands zoom-checked. Phone display blank,
+keypad plain after the retouch. Monitor bezel and headset carry no mark. No signs or posters. PASS.
+
+ai-cost-uk-2026-running.webp (1200x800), section: "How much do AI agents cost to run each month?"
+Scene: "A small business owner at a kitchen table used as a home office, in a bright English kitchen with white cupboards and a window
+onto a garden. Camera directly behind her at shoulder height, looking over her shoulder. A woman in her thirties with long brown hair in
+a ponytail, plain cream jumper. The laptop screen shows a simple bar chart: pale grey bars and one orange bar, no words, no numbers, no
+axis labels. One hand holds a plain orange mug, the other rests beside an open notebook whose pages are blank. A plain pencil."
+Review: Laptop faces her, camera behind. Chart has five grey bars and one orange bar, no labels. Mug hand and table hand zoom-checked.
+Notebook pages blank. No logo on the laptop. PASS.
+
+No person in these pictures is a FactoryJet employee or client, and none is meant to resemble a real individual.

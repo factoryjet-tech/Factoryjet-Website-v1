@@ -1049,7 +1049,11 @@ export default function AIAutomationPage() {
               work.
             </p>
             <p className="font-fj-body text-fj-neutral-600 max-w-[68ch] mb-10">
-              These are the six processes small businesses ask us to automate most. Each one is built in the tools you already pay for, and you own every workflow when we hand it over.
+              These are the six processes small businesses ask us to automate most. Each one is built in the tools you already pay for, and you own every workflow when we hand it over. Comparing suppliers first? Read our list of the{' '}
+              <a href="/blog/best-ai-automation-agencies-usa-2026" className="font-semibold underline underline-offset-2 text-[#B23E13]">
+                best AI automation agencies in the US
+              </a>
+              , which includes us.
             </p>
             <ul className="grid gap-5 md:grid-cols-2 lg:grid-cols-3 list-none p-0">
               <li className="rounded-2xl border border-[#E7DED6] bg-[#FAFAF7] p-6">

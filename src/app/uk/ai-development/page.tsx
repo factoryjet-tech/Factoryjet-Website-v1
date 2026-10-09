@@ -651,7 +651,8 @@ export default function AiDevelopmentUKPage() {
                     runs an AI readiness assessment and hands the plan straight to the same engineers. Want to see how
                     we think about builds in more depth? Read our guide on{' '}
                     <a href="/blog/how-to-build-an-ai-agent-uk-2026">how to build an AI agent in the UK</a>, or our{' '}
-                    <a href="/services/ai-integration-services">AI integration services</a> page.
+                    <a href="/services/ai-integration-services">AI integration services</a> page. For prices in pounds, see
+                    our <a href="/blog/ai-cost-uk-2026">AI cost guide for the UK</a>.
                   </p>
                 </div>
               </div>

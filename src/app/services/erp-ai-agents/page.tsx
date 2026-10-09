@@ -199,6 +199,16 @@ const SRC = {
     label: 'Odoo 19.0 documentation: AI agents',
     url: 'https://www.odoo.com/documentation/19.0/applications/productivity/ai/agents.html',
   },
+  odoo20Agents: {
+    short: 'Odoo 20 docs: AI agents',
+    label: 'Odoo 20.0 documentation: AI agents',
+    url: 'https://www.odoo.com/documentation/20.0/applications/productivity/ai/agents.html',
+  },
+  odoo20Api: {
+    short: 'Odoo 20 docs: External API',
+    label: 'Odoo 20.0 documentation: External JSON-2 API',
+    url: 'https://www.odoo.com/documentation/20.0/developer/reference/external_api.html',
+  },
   odooKeys: {
     short: 'Odoo docs: AI API keys',
     label: 'Odoo 19.0 documentation: AI API keys',
@@ -345,7 +355,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'basics',
     question: 'What is the difference between an ERP chatbot and an ERP AI agent?',
     answer:
-      "A chatbot answers. An agent also does. Odoo draws the same line in its own documentation: its standard Ask AI agent can open views and display reports, but it cannot create leads or alter data. Changing records takes an agent that has been given tools for that job, and rules for when it may use them.",
+      "A chatbot answers. An agent also does. Odoo draws the same line in its own documentation. For Odoo 19 it says the standard Ask AI agent can open views and display reports, but cannot create leads or alter data. For Odoo 20, released in September 2026, it says an agent with no skills assigned can only provide information, and it lists Create Records and Update Records among the skills an agent can be given. Either way, changing records takes an agent that has been given tools for that job, and rules for when it may use them.",
   },
   {
     category: 'basics',
@@ -370,7 +380,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'systems',
     question: 'Can an outside AI agent connect to Odoo?',
     answer:
-      "Yes. Odoo 19 added the External JSON-2 API, reached at the /json/2 address and called with an API key. Odoo's documentation says the older XML-RPC and JSON-RPC addresses are scheduled for removal in Odoo 22, due in fall 2028. An integration built today should use the new API, or have a rewrite planned.",
+      "Yes. Odoo 19 added the External JSON-2 API, reached at the /json/2 address and called with an API key. Odoo's documentation says the older XML-RPC and JSON-RPC addresses are scheduled for removal in Odoo 22, due in fall 2028, and its Odoo 20 pages add that Odoo Online drops them sooner, in Online 21.1, due in winter 2027. An integration built today should use the new API, or have a rewrite planned.",
   },
   {
     category: 'systems',
@@ -618,7 +628,7 @@ const JOBS: ReadonlyArray<Job> = [
       'Answers in your help desk, your website chat or your team chat',
       'Hands over to a person, with the order already looked up, when the question needs a decision',
     ],
-    note: "This is the lightest job on the page, and the ERP makers ship parts of it themselves. Odoo says its standard Ask AI agent can open views and display reports but cannot alter data. Oracle says NetSuite's SuiteQL tools support read-only queries only.",
+    note: "This is the lightest job on the page, and the ERP makers ship parts of it themselves. Odoo's version 19 documentation says its standard Ask AI agent can open views and display reports but cannot alter data. Oracle says NetSuite's SuiteQL tools support read-only queries only.",
     sources: ['odooAi', 'nsFaq'],
     span: 'lg:col-span-12',
   },
@@ -680,13 +690,13 @@ const SYSTEMS: ReadonlyArray<{
 const BREAKS: ReadonlyArray<{ t: string; b: string; sources: ReadonlyArray<SrcKey> }> = [
   {
     t: 'An Odoo integration built on the old addresses',
-    b: "Odoo's documentation says its XML-RPC and JSON-RPC addresses are scheduled for removal in Odoo 22, due in fall 2028. Anything built on them has a rewrite ahead.",
-    sources: ['odooApi'],
+    b: "Odoo's documentation says its XML-RPC and JSON-RPC addresses are scheduled for removal in Odoo 22, due in fall 2028, and in Odoo Online 21.1, due in winter 2027. Anything built on them has a rewrite ahead.",
+    sources: ['odooApi', 'odoo20Api'],
   },
   {
     t: "Expecting Odoo's Ask AI to change records",
-    b: 'Odoo says its standard Ask AI agent cannot make changes to the database. It can open views and display reports. Changing data takes an agent that has been given tools for it.',
-    sources: ['odooAi', 'odooAgents'],
+    b: 'In Odoo 19, Odoo says the standard Ask AI agent cannot make changes to the database. It can open views and display reports. In Odoo 19 and Odoo 20 alike, changing data takes an agent that has been given tools for it. Odoo 20 calls them skills.',
+    sources: ['odooAi', 'odooAgents', 'odoo20Agents'],
   },
   {
     t: 'Odoo AI on your own server with no keys',
@@ -921,6 +931,8 @@ const othersSchema = {
 };
 
 const RELATED: ReadonlyArray<{ href: string; t: string; b: string }> = [
+  { href: '/services/netsuite-ai-agents', t: 'NetSuite AI agents', b: 'The NetSuite page: the AI Connector Service, MCP tools and custom agents.' },
+  { href: '/services/odoo-ai-agents', t: 'Odoo AI agents', b: 'The Odoo page: what Odoo 19 and 20 ship, and where a custom agent fits.' },
   { href: '/services/ai-agent-development', t: 'AI agent development', b: 'Custom agents for support, sales and operations, beyond the ERP.' },
   { href: '/services/manufacturing-ai-agents', t: 'Manufacturing AI agents', b: 'Quoting and ERP work for US manufacturers.' },
   { href: '/services/shopify-quickbooks-integration', t: 'Shopify QuickBooks integration', b: 'Stock, prices and books kept in step with the store.' },
@@ -1213,7 +1225,8 @@ export default function ErpAiAgentsPage() {
                 <li className="flex items-start gap-2.5">
                   <span aria-hidden="true" className="mt-[9px] h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#F05A28]" />
                   Odoo says its older XML-RPC and JSON-RPC addresses are scheduled for removal in Odoo 22, due in fall
-                  2028. An Odoo integration written against them today has a rewrite ahead.
+                  2028, and in Odoo Online 21.1, due in winter 2027. An Odoo integration written against them today has
+                  a rewrite ahead.
                 </li>
                 <li className="flex items-start gap-2.5">
                   <span aria-hidden="true" className="mt-[9px] h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#F05A28]" />
@@ -1226,7 +1239,7 @@ export default function ErpAiAgentsPage() {
                   for the agent on day one.
                 </li>
               </ul>
-              <SourceLinks ids={['odooApi', 'sapMaint', 'nsPerms']} />
+              <SourceLinks ids={['odooApi', 'odoo20Api', 'sapMaint', 'nsPerms']} />
             </div>
           </div>
         </section>

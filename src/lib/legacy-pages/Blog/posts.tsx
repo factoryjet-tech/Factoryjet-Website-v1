@@ -138,9 +138,24 @@ import { post as shopifyCostAustralia2026Post } from './posts/shopify-cost-austr
 import { post as bestAiAgenciesAustralia2026Post } from './posts/best-ai-agencies-australia-2026';
 import { post as bestEcommercePlatformAustralia2026Post } from './posts/best-ecommerce-platform-australia-2026';
 import { post as bestAiConsultingFirmsUsa2026Post } from './posts/best-ai-consulting-firms-usa-2026';
+import { post as bestAiAgentDevelopmentCompaniesUk2026Post } from './posts/best-ai-agent-development-companies-uk-2026';
+import { post as bestAiConsultanciesUk2026Post } from './posts/best-ai-consultancies-uk-2026';
+import { post as aiCostUk2026Post } from './posts/ai-cost-uk-2026';
+import { post as bestAiAutomationAgenciesUsa2026Post } from './posts/best-ai-automation-agencies-usa-2026';
+import { post as aiConsultantCost2026Post } from './posts/ai-consultant-cost-2026';
+import { post as hireAiDevelopersAustraliaCost2026Post } from './posts/hire-ai-developers-australia-cost-2026';
+import { post as bestAiConsultanciesAustralia2026Post } from './posts/best-ai-consultancies-australia-2026';
 
 export const POSTS: BlogPost[] = [
   bestAiAgentDevelopmentCompanies2026Post,
+  // --- BUYER QUESTION WAVE (2026-10-09): lists and cost guides for UK, US and AU ---
+  bestAiAgentDevelopmentCompaniesUk2026Post,
+  bestAiConsultanciesUk2026Post,
+  aiCostUk2026Post,
+  bestAiAutomationAgenciesUsa2026Post,
+  aiConsultantCost2026Post,
+  hireAiDevelopersAustraliaCost2026Post,
+  bestAiConsultanciesAustralia2026Post,
   // --- US TIER 1 (2026-09-26) ---
   bestAiConsultingFirmsUsa2026Post,
   // --- AU WAVE 4 (2026-09-26) ---
