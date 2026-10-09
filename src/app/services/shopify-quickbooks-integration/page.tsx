@@ -715,6 +715,7 @@ const RELATED: ReadonlyArray<{ href: string; t: string; b: string }> = [
   { href: '/services/ecommerce-audit', t: 'Free ecommerce audit', b: 'A written review of your store before you change anything.' },
   { href: '/services/shopify-maintenance-services', t: 'Shopify maintenance and support', b: 'Keeps the store and its connections current.' },
   { href: '/services/ai-integration-services', t: 'AI integration services', b: 'When the next system to connect is an AI agent.' },
+  { href: '/services/erp-ai-agents', t: 'ERP AI agents', b: 'Agents that draft quotes, orders and bookkeeping batches inside your ERP.' },
 ];
 
 /** Small inline source links. Same visual pattern as the checkout page. Renders

@@ -253,6 +253,7 @@ const MORE_SERVICES = [
   { eyebrow: 'AI', title: 'AI Consulting', href: '/services/ai-consulting', note: 'An AI readiness assessment and a ranked roadmap, then the build.' },
   { eyebrow: 'AI', title: 'AI Development', href: '/services/ai-development', note: 'Custom AI software built into your store, ERP and CRM.' },
   { eyebrow: 'AI', title: 'Shopify AI Agents', href: '/services/shopify-ai-agents', note: 'Agents for orders, wholesale POs, returns and ERP sync.' },
+  { eyebrow: 'AI', title: 'ERP AI Agents', href: '/services/erp-ai-agents', note: 'Agents inside Odoo, NetSuite, SAP Business One and ERPNext.' },
   { eyebrow: 'AI', title: 'AI Marketing Agent', href: '/services/ai-agent-development/ai-marketing-agent', note: 'Email, SMS, paid social and CRM campaigns in your brand voice.' },
   { eyebrow: 'AI BY INDUSTRY', title: 'Manufacturing AI Agents', href: '/services/manufacturing-ai-agents', note: 'Agents that read RFQs and drawings and draft quotes.' },
   { eyebrow: 'AI BY INDUSTRY', title: 'Legal AI Agents', href: '/services/legal-ai-agents', note: 'Intake, contract redlining and discovery for law firms.' },

@@ -802,7 +802,11 @@ log:          source file, extracted fields, API request, API response`}</pre>
         <Link href="/services/ai-workflow-automation" className="text-[#B23E13] hover:underline">
           AI workflow automation
         </Link>{' '}
-        covers the rule-based flows around it.
+        covers the rule-based flows around it. The service page for this work is{' '}
+        <Link href="/services/erp-ai-agents" className="text-[#B23E13] hover:underline">
+          ERP AI agents
+        </Link>
+        , which covers Odoo, NetSuite, SAP Business One and ERPNext.
       </p>
 
       <div className="my-10 p-8 rounded-2xl bg-[#FFF8F5] border border-[#E7DED6] text-center not-prose">

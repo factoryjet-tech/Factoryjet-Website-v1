@@ -116,6 +116,7 @@ export const US_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
       { label: 'Ag Equipment AI Agents',      href: '/services/agriculture-equipment-ai-agents' },
       { label: 'Legal AI Agents',             href: '/services/legal-ai-agents' },
       { label: 'Automotive AI Voice Agents',  href: '/services/automotive-ai-voice-agents' },
+      { label: 'ERP AI Agents',               href: '/services/erp-ai-agents' },
       { label: 'Manufacturing AI Agents',     href: '/services/manufacturing-ai-agents' },
       { label: 'Restaurant AI Voice Agents',  href: '/services/restaurant-ai-voice-agents' },
       { label: 'Healthcare AI Agents',        href: '/services/healthcare-ai-agents' },
