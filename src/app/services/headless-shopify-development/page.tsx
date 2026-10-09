@@ -14,7 +14,7 @@ import HeroInlineForm from '@/components/HeroInlineForm';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-08-30';
+const PAGE_MODIFIED = '2026-10-10';
 const CANONICAL = 'https://factoryjet.com/services/headless-shopify-development';
 
 export const metadata: Metadata = {
@@ -354,7 +354,7 @@ const FAQS = [
   },
   {
     question: "Who executes the engineering work on our account?",
-    answer: "All engineering is led by senior full-stack architects under founder Bhavesh Barot. We never outsource core development to junior offshore teams. You work directly with veteran React and Shopify engineers.",
+    answer: "All engineering is led by senior full-stack architects under founder Bhavesh Barot. We never outsource core development. You work directly with veteran React and Shopify engineers.",
   },
 ];
 
@@ -674,7 +674,7 @@ export default function HeadlessShopifyPage() {
             <div className="pp-section-header" style={{ marginBottom: '1.5rem' }}>
               <span className="pp-badge">US REGIONAL COVERAGE.</span>
               <h2 className="pp-section-title" style={{ fontSize: '1.5rem' }}>
-                Local E-Commerce Engineering Teams Across Major US Markets
+                E-Commerce Engineering for Brands Across Major US Markets
               </h2>
             </div>
             <EcommerceCityLinksUS currentCity="" />

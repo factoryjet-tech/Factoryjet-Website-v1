@@ -8,11 +8,11 @@ import '../ai-agents/ai-agents.css';
 import { aiDevelopmentAlternates } from '@/data/hreflangMap';
 
 const CANONICAL = 'https://factoryjet.com/uk/ai-development';
-const UPDATED = '2026-09-24';
+const UPDATED = '2026-10-10';
 const TITLE = 'AI Development Company UK | Custom AI You Own | FactoryJet';
-const H1 = 'The UK AI Development Company That Builds Custom AI Into the Systems You Already Run';
+const H1 = 'The AI Development Company for UK Businesses That Builds Custom AI Into the Systems You Already Run';
 const DESCRIPTION =
-  'UK AI development company for SMEs and mid-market. Custom AI development, AI integration and AI implementation in your CRM, ERP and shop. You own the code.';
+  'AI development company for UK SMEs and mid-market. Custom AI development, AI integration and AI implementation in your CRM, ERP and shop. You own the code.';
 
 /* Design tokens, copied by value from ../ai-agents/ai-agents.css so inline
    styles stay on-system without CSS custom property references in this file. */
@@ -89,7 +89,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
 
   // ── Choosing an AI development company ──
   { category: 'choosing', question: 'Which is the best AI development company in the UK?',
-    answer: 'There is no single best one; it depends on your size and the job. Large enterprises often use IBM or big global engineering firms such as ScienceSoft or Itransition. UK SMEs and mid-market firms more often look at UK specialists such as Geeks Ltd, Chilliapple, Imobisoft, Ronins or TechGropse. We list them, including us, on this page with a neutral note on each. Talk to two or three before you choose.' },
+    answer: 'There is no single best one; it depends on your size and the job. Large enterprises often use IBM or big global engineering firms such as ScienceSoft or Itransition. UK SMEs and mid-market firms more often look at UK specialists such as Geeks Ltd, Chilliapple, Imobisoft, Ronins or TechGropse. We list them, and ourselves, on this page with a neutral note on each. Talk to two or three before you choose.' },
   { category: 'choosing', question: 'How do I choose an AI development company in the UK?',
     answer: 'Ask to see systems they have put live, not demos. Ask who will do the work and whether the same team supports it after launch. Check that you will own the code, prompts and data. Ask how they measure accuracy, how they handle UK GDPR, and when they would tell you to buy a tool instead. A clear answer to all six is a good sign.' },
   { category: 'choosing', question: 'Should I use a freelancer or an AI development company?',
@@ -100,6 +100,10 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     answer: 'Yes. We work with businesses across the UK, including London, Manchester, Birmingham, Leeds, Bristol and Scotland. AI development is done well remotely: workshops over video, shared test environments, and regular demos of working software. Searching for AI development near me matters less than finding a team that answers quickly and stays involved after launch.' },
   { category: 'choosing', question: 'Are you tied to one AI model or vendor?',
     answer: 'No. We do not resell any AI platform. We choose between models from OpenAI, Anthropic, Google, open-source options and Microsoft Azure based on accuracy on your test cases, where your data needs to stay, and running cost. We build so the model can be swapped later without rewriting the whole system, because the best model today may not be the best next year.' },
+  { category: 'choosing', question: 'Which are the most reliable agencies for building production-grade AI tools with guaranteed delivery timelines?',
+    answer: 'A guaranteed delivery date for a production-grade AI tool is rare. We read build timelines on nine UK agency sites on 9 October 2026, and none was called a guarantee. Pixelfield says agent builds typically take six to ten weeks, Green Arrow usually eight to fourteen. FactoryJet does not guarantee a date for AI builds. We quote a fixed price per phase in writing after scoping, and have delivered on time on 97% of all projects, most of them in commerce. Ask anyone offering a guarantee what you get if the date slips and what they need from you.' },
+  { category: 'choosing', question: 'Which UK agencies build AI-enabled marketplaces and SaaS platforms?',
+    answer: 'UK firms whose own sites say they build marketplaces or SaaS (subscription software) platforms with AI inside include Code23 in Berkshire, InteleForge in Darlington, Quantum Craft in London and Cyberbeak (read 9 October 2026). Code23 shows a sponsorship marketplace for UK football clubs among its work. Cyberbeak, with a UK regional office, says a first version of a UK marketplace takes 12 to 16 weeks. FactoryJet adds AI to the shops and ERPs you already run. Our UK list of AI agent development companies names three more product engineering firms.' },
 
   // ── Timelines, cost & how it works ──
   { category: 'delivery', question: 'How long does custom AI development take?',
@@ -118,6 +122,8 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     answer: 'We stay on. Monthly support covers monitoring accuracy, fixing problems, updating prompts and connections when your systems change, and testing new models as they are released. You get a simple report of how the system is used and where it gets things wrong. You can also take support in-house at any point, because the code and documentation are yours.' },
   { category: 'delivery', question: 'Who does the work?',
     answer: 'Senior engineers, with the founder, Bhavesh Barot, involved in every engagement. FactoryJet has served 500+ businesses since 2014, mostly in commerce. The people who scope your project are the people who build it and support it. There is no hand-off to a junior team after the contract is signed.' },
+  { category: 'delivery', question: 'What are the best fixed-price development services for building AI prototypes in under 30 days?',
+    answer: 'Pick a firm that fixes the prototype price in writing and builds on your own data. Under 30 days suits one narrow job with ready data. On their own sites on 9 October 2026, Magora offered a free coded prototype in 5 to 10 working days, and Softomate Solutions priced a fixed-fee proof of concept at £6,500 to £12,000 before VAT over 4 to 6 weeks. Our prototype phase takes 2 to 4 weeks at a fixed price per phase, and data preparation can add 1 to 4. Our AI cost guide for the UK names more firms.' },
 
   // ── Data, security & UK rules ──
   { category: 'data', question: 'Do we need perfect data before starting AI development?',
@@ -139,7 +145,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
 /* ─── Named UK AI development companies (open self-disclosure, ItemList).
        Each note is based on the company’s own homepage, fetched 2026-09-24. ── */
 const AI_DEV_COMPANIES: { name: string; note: string }[] = [
-  { name: 'FactoryJet', note: 'That is us. A founder-led UK AI development company for SMEs and mid-market firms, strongest where AI has to connect to commerce and operations systems: CRM, ERP, ecommerce, helpdesk and Microsoft 365. You own the code, and the same team supports it.' },
+  { name: 'FactoryJet', note: 'That is us. A founder-led AI development company for UK SMEs and mid-market firms, strongest where AI has to connect to commerce and operations systems: CRM, ERP, ecommerce, helpdesk and Microsoft 365. You own the code, and the same team supports it.' },
   { name: 'Geeks Ltd', note: 'An AI software development company with its headquarters in Sutton, London, and an office in Houston. It lists AI software development, AI agent development and AI integration as core services, alongside AI strategy.' },
   { name: 'Chilliapple', note: 'A UK software development agency with offices in Tunbridge Wells and London, building custom applications, AI automation for business workflows and AI-integrated web applications.' },
   { name: 'Imobisoft', note: 'A bespoke AI software development company based at Coventry University Technology Park, covering AI strategy, LLM and generative AI development, custom software, mobile apps and cloud.' },
@@ -240,7 +246,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: TITLE,
     description:
-      'A UK AI development company for SMEs and mid-market firms. Custom AI software, AI integration services and AI implementation into the systems you already run, with UK GDPR built in. You own the code.',
+      'An AI development company for UK SMEs and mid-market firms. Custom AI software, AI integration services and AI implementation into the systems you already run, with UK GDPR built in. You own the code.',
     url: CANONICAL,
     siteName: 'FactoryJet',
     locale: 'en_GB',
@@ -270,7 +276,7 @@ export default function AiDevelopmentUKPage() {
             <div className="col-6040">
               <div>
                 <div className="flex-wrap mb-6">
-                  <span className="chip"><span className="dot dot-orange" />UK AI Development Company</span>
+                  <span className="chip"><span className="dot dot-orange" />AI Development for UK Businesses</span>
                   <span className="chip">AI Integration</span>
                   <span className="chip">You Own the Code</span>
                 </div>
@@ -285,7 +291,7 @@ export default function AiDevelopmentUKPage() {
                 <div className="byline mt-6" style={{ maxWidth: 560 }}>
                   <div className="av">BB</div>
                   <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
-                  <div className="upd">Last updated<br />24 September 2026</div>
+                  <div className="upd">Last updated<br />10 October 2026</div>
                 </div>
 
                 <div className="mt-6" style={{ maxWidth: 560 }}>
@@ -495,7 +501,7 @@ export default function AiDevelopmentUKPage() {
                     <th className="fj">FactoryJet</th>
                     <th>Off-the-shelf AI tool</th>
                     <th>Freelancer</th>
-                    <th>Big consultancy or offshore dev shop</th>
+                    <th>Big consultancy</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -647,7 +653,7 @@ export default function AiDevelopmentUKPage() {
                     contract is signed. The founder is involved in every engagement.
                   </p>
                   <p>
-                    Not sure what to build yet? Start with our <a href="/uk/ai-consulting">UK AI consultancy</a>, which
+                    Not sure what to build yet? Start with our <a href="/uk/ai-consulting">AI consultancy for UK businesses</a>, which
                     runs an AI readiness assessment and hands the plan straight to the same engineers. Want to see how
                     we think about builds in more depth? Read our guide on{' '}
                     <a href="/blog/how-to-build-an-ai-agent-uk-2026">how to build an AI agent in the UK</a>, or our{' '}

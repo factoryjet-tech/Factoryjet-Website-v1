@@ -15,7 +15,7 @@ const CANONICAL_URL = 'https://factoryjet.com/services/ai-receptionist';
 const PAGE_TITLE = 'AI Receptionist | Custom 24/7 AI Phone Answering | FactoryJet';
 const PAGE_DESC =
   'A custom AI receptionist that answers every call 24/7, qualifies the caller, and books the job straight into your CRM or scheduling software. Built for your business, not a template. Get a free call audit.';
-const PAGE_MODIFIED = '2026-09-26';
+const PAGE_MODIFIED = '2026-10-10';
 
 // Single source of truth for the breadcrumb trail. Feeds both the visible
 // <Breadcrumbs> component and the BreadcrumbList JSON-LD below so the two
@@ -115,6 +115,11 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     answer: 'All of them. The agent is not a single person on a single line, so ten simultaneous callers get ten simultaneous conversations with no hold queue. This matters most during a spike: a storm for a roofer, a product recall for a retailer, a busy Monday morning for a clinic. Those are exactly the moments a human front desk drops calls, and exactly the moments the calls are worth the most.',
   },
   {
+    category: 'basics',
+    question: 'What are some of the top companies that develop voice AI agents?',
+    answer: 'There are two kinds. Platforms you set up yourself: Retell AI, Vapi, Bland, Telnyx and Twilio bill by the minute, Goodcall sells a ready-made agent on a monthly plan, and Synthflow and PolyAI call themselves enterprise platforms (their own sites, 9 Oct 2026). Build firms make a custom agent on those platforms and connect it to your CRM. FactoryJet, which wrote this answer, is a build firm. We build on Twilio or Telnyx and work with US clients remotely. For routine calls, start with a platform. Our guide to the best AI receptionists for small business compares them.',
+  },
+  {
     category: 'industries',
     question: 'Can an AI receptionist handle medical or dental patient calls under HIPAA?',
     answer: 'Yes, under a signed BAA and with the call flow scoped so the agent only ever handles what it is cleared to handle. It books, reschedules and cancels appointments, captures reason for visit and insurance details, answers opening hours and location questions, and routes anything clinical to a human immediately. It does not give clinical advice or triage symptoms. Recordings and transcripts are handled under the same agreement, and anything a practice wants excluded from storage is excluded at the pipeline, not filtered afterwards.',
@@ -193,6 +198,16 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'trades',
     question: 'Can the AI filter out spam calls, supply vendors, and cold sales pitches?',
     answer: 'Yes. The AI automatically screens out unsolicited vendor pitches, recruitment calls, and telemarketing spam, and routes vendor invoices to your accounting email. Every legitimate customer project call still reaches your booking board. This alone recovers real time for a small office. A two- or three-person front desk otherwise spends a real chunk of the day on solar, insurance, and staffing cold calls that have nothing to do with booking actual jobs.',
+  },
+  {
+    category: 'roi',
+    question: 'How much does an AI voice agent cost?',
+    answer: 'An AI voice agent costs between $0.06 and $0.31 a minute to run on a self-serve platform, per vendor pricing pages read on 9 Oct 2026. Telnyx estimates about $0.06, the Vapi calculator shows $82 to $129 for 1,000 minutes, Retell AI lists $0.07 to $0.31, and Bland Start is $0.14. Goodcall, a ready-made product, lists $79 to $299 a month with no per-minute charge. A custom build adds a one-off cost, which development firm Kanopy Labs put at $15,000 to $200,000 or more (April 2026). FactoryJet quotes a fixed price in writing after a short scoping call.',
+  },
+  {
+    category: 'roi',
+    question: 'Which vendors offer pay-as-you-go pricing for AI voice agents suited for seasonal construction spikes?',
+    answer: 'Retell AI, Telnyx, Vapi and Bland offer pay-as-you-go pricing for AI voice agents, billed by the minute with no monthly minimum, per their pricing pages on 9 Oct 2026. For seasonal construction spikes, compare how many calls each runs at once. Telnyx lists 500, Retell AI 20 (more at $8 a line a month, removable anytime), the Bland Start plan 10 with a cap of 100 calls a day, and Vapi 4. All four are platforms you set up yourself. FactoryJet builds custom agents on Twilio or Telnyx, and usage can sit in your own account at cost.',
   },
   {
     category: 'roi',

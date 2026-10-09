@@ -122,4 +122,10 @@ export const SHOPIFY_AI_FAQS: ShopifyAiFaq[] = [
   { id: 'Q24', category: 'faq-choose', question: 'Can the AI agent handle customer support tickets too?',
     answer: 'Yes, and support has its own page because the design is different: the agent answers from your policies inside Zendesk or Gorgias, looks up the order in Shopify, and hands sensitive cases to a person. If support is your main job, start there. This page covers the store operations work behind it, such as orders, wholesale, returns and inventory.',
     link: { url: '/services/ai-customer-support-agents', label: 'AI customer support agents' } },
+  // Added 2026-10-10 from a US buyer question seen in Search Console. Each product line restates
+  // that vendor's own page, read 2026-10-09: loopreturns.com, the ReturnGO listing on apps.shopify.com,
+  // support.aftership.com, yuma.ai and gorgias.com.
+  { id: 'Q25', category: 'faq-choose', question: 'What vendors provide agentic AI to automate RMA approvals and refunds for a Shopify Plus store?',
+    answer: 'AI assistants we asked on October 9, 2026 mostly named two kinds of product. Loop, ReturnGO and AfterShip Returns are returns apps: you set rules, and they approve the return and send the refund automatically. Yuma and Gorgias are support AI agents that issue a refund or start a return inside the customer conversation. Each says so on its own site. A custom agent, which FactoryJet builds, fits what rules cannot settle: emailed requests and wholesale returns under terms held in your ERP. It works alongside Loop or AfterShip, and refunds above your limit go to a person.',
+    link: { url: '/blog/best-ai-agents-for-ecommerce-2026', label: 'Best AI agents for ecommerce' } },
 ];

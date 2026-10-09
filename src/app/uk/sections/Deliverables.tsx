@@ -136,11 +136,11 @@ const SOURCES: Array<{ stat: string; claim: string; source: string; url: string 
     url: "https://www.ofcom.org.uk/media-use-and-attitudes/online-habits/from-apps-to-ai-search-how-the-uk-goes-online-in-2025",
   },
   {
-    stat: "3,000+",
+    stat: "5,800+",
     claim:
-      "AI companies operate in the UK, turning over more than £10 billion a year and employing more than 60,000 people in AI roles.",
-    source: "DSIT, Artificial Intelligence sector study 2023",
-    url: "https://www.gov.uk/government/publications/artificial-intelligence-sector-study-2023/artificial-intelligence-sector-study-2023",
+      "AI companies operate in the UK, with revenue of £23.9 billion and AI related employment of 86,139.",
+    source: "DSIT, Artificial Intelligence sector study 2024 (published 3 September 2025)",
+    url: "https://www.gov.uk/government/publications/artificial-intelligence-sector-study-2024/artificial-intelligence-sector-study-2024",
   },
   {
     stat: "No shortcut",

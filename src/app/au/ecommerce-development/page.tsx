@@ -15,7 +15,7 @@ import '../au-hub.css';
 import './visual.css';
 
 const CANONICAL = 'https://factoryjet.com/au/ecommerce-development';
-const UPDATED = '2026-09-26';
+const UPDATED = '2026-10-10';
 const TITLE = 'Ecommerce Agency & Development Australia | FactoryJet';
 const DESCRIPTION =
   'FactoryJet is an ecommerce agency for Australia. Ecommerce design, development and support for Shopify, WooCommerce, Adobe Commerce and B2B stores. You own it.';
@@ -165,7 +165,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   { category: 'build', question: 'Do you build B2B ecommerce and trade portals?',
     answer: 'Yes. B2B ecommerce needs trade logins, account-specific prices, quick order by SKU, bulk upload, quotes, pay on account with credit limits, and prices shown ex-GST for trade buyers. We build it on Shopify Plus, Adobe Commerce, BigCommerce or WooCommerce, connected to your ERP or accounts software. We built this kind of B2B ordering for Bombay Petals.' },
   { category: 'build', question: 'Which Australian agency should I hire to build a B2B ecommerce website?',
-    answer: 'Hire one that has built a live trade portal connected to an ERP, not just DTC stores. Ask to log in to a B2B store they built, ask how they sync customer prices and credit limits from your ERP, and ask who supports it after launch. FactoryJet builds B2B stores for Australian wholesalers and manufacturers, working remotely with no Australian office. Compare us with the agencies listed on this page.' },
+    answer: 'Hire one that has built a live trade portal connected to an ERP, not just DTC stores. Ask to log in to a B2B store they built, ask how they sync customer prices and credit limits from your ERP, and ask who supports it after launch. FactoryJet builds B2B stores for Australian wholesalers and manufacturers, working remotely. Compare us with the agencies listed on this page.' },
   { category: 'build', question: 'What is B2B ecommerce?',
     answer: 'B2B ecommerce is selling to other businesses online instead of to the public. Trade buyers log in, see their own prices and payment terms, reorder quickly by SKU and pay on account. Behind the store, orders, stock and credit usually come from an ERP or accounting system. For wholesalers it replaces orders taken by phone, email and PDF with orders that arrive complete.' },
   { category: 'build', question: 'Can Shopify be used for B2B?',
@@ -195,7 +195,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   { category: 'working', question: 'What support do you offer after launch?',
     answer: 'We stay close for the first weeks after launch, when real customers on real phones surface things a test store never does. After that you choose the shape: ad-hoc fixes when you need them, a monthly support plan covering updates, security patches and small improvements, or planned growth sprints for new features. The same engineers who built the store look after it. For WooCommerce and Shopify stores, our monthly website maintenance plan covers tested updates, checkout testing and backups.',
     links: [{ href: '/au/website-maintenance', label: 'Monthly website maintenance plan' }] },
-  { category: 'working', question: 'Who actually does the work, and are you in Australia?',
+  { category: 'working', question: 'Who actually does the work?',
     answer: 'Senior engineers do the work, with the founder, Bhavesh Barot, involved in scoping every project. FactoryJet was founded in 2014 and has served 500+ businesses. We work with Australian brands remotely, with calls booked at times that suit your business day, a shared project board, and a staging store you can review whenever you like. There is no handoff to juniors after the sales call.' },
   { category: 'working', question: 'Can you also help with SEO and AI search after launch?',
     answer: 'Yes. Every store we build ships with clean URLs, product structured data and fast pages, which is the foundation for both. For ongoing work, our SEO service for Australian businesses handles rankings and content, and our AI SEO service focuses on getting your brand named in ChatGPT, Perplexity and Google AI Overviews. Nobody can guarantee a ranking or an AI mention, so we never promise one.' },
@@ -892,7 +892,7 @@ export default function EcommerceDevelopmentAUPage() {
                   </p>
                   <p>
                     FactoryJet designs, builds and supports B2B stores for Australian wholesalers and manufacturers. We
-                    work remotely, with no Australian office, and calls booked in your business day. If you would rather
+                    work remotely, with calls booked in your business day. If you would rather
                     sit across a table, the <a href="#agencies">Australian ecommerce agencies listed below</a> include
                     several with B2B and ERP integration teams in Brisbane, Sydney and Melbourne.
                   </p>

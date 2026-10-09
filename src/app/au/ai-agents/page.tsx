@@ -1038,7 +1038,7 @@ export default function AiAgentsAUPage() {
               ))}
             </div>
             <p className="sub-note">
-              Agencies named from live Australian search results and AI assistant answers for AI automation agency queries, September 2026. Each company’s own website was checked on 26 September 2026 for an Australian office and the services named. Listing is not endorsement.
+              Agencies named from live Australian search results and AI assistant answers for AI automation agency queries, September 2026. Each other company’s own website was checked on 26 September 2026 for an Australian office and the services named. Listing is not endorsement.
             </p>
             <p className="au-after">
               Want more detail on each one? We compare 13 of them, including us, by location, client size, platforms and

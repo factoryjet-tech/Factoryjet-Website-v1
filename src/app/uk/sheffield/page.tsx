@@ -59,11 +59,6 @@ const jsonLd = {
         '@type': 'City',
         name: 'Sheffield',
       },
-      geo: {
-        '@type': 'GeoCoordinates',
-        latitude: 53.3811,
-        longitude: -1.4701,
-      },
     },
     {
       '@type': 'Service',

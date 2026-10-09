@@ -78,6 +78,10 @@ const faqs = [
     a: 'Yes. You can prototype with a builder such as n8n or a coding framework such as LangGraph, then connect your tools and test on real inputs. The first demo is the easy part. A live agent also needs credential handling, recovery from failures and someone who owns it. Our build-versus-buy guide compares those responsibilities.',
   },
   {
+    q: 'What does an agentic AI developer do?',
+    a: 'An agentic AI developer builds software that takes a goal and acts on your systems. The developer connects a model to tools such as your help desk or ERP through their APIs, writes fixed rules for what it may change, checks its output against the source, tests on past cases, and logs every action. Prompt wording is a small part. Anthropic\'s engineering guide says its team spent more time optimizing tools than the overall prompt on its agent for the SWE-bench coding benchmark. Our guide to hiring AI developers covers vetting. Our AI consultant cost guide lists hourly rates.',
+  },
+  {
     q: 'Who owns an agentic AI system?',
     a: 'Whoever the contract says, so check before you sign. Ask which code, prompts, connectors and tests you receive and which parts depend on third-party licences. With FactoryJet you own everything we build for you, in your own Git repository.',
   },
@@ -108,7 +112,7 @@ export const post: BlogPost = {
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Jul 11, 2026',
-  dateModified: 'Oct 05, 2026',
+  dateModified: 'Oct 10, 2026',
   readTime: '11 min read',
   imageUrl: '/blog-images/what-is-agentic-ai.webp',
   imageAlt: 'A team working together, illustrating agentic AI systems that plan and complete tasks',
@@ -228,7 +232,7 @@ export const post: BlogPost = {
         </table>
       </div>
       <p className="mb-6">
-        The agent is live on a dedicated US server. We have not published lead counts or case outcomes, because none have been measured yet.{' '}
+        The agent is live on a dedicated US server.{' '}
         <a href="/case-studies/washington-law-group-accident-detection-agent" className="text-[#B23E13] underline hover:text-[#F05A28]">Read the full case study</a>{' '}
         for the sources, the access controls and who owns the code.
       </p>

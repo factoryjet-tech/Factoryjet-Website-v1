@@ -228,13 +228,13 @@ const FIRMS: Firm[] = [
     source: 'https://factoryjet.com/uk/ai-agents',
     group: 'commerce',
     region: 'Remote',
-    based: 'No UK office. We work remotely with UK clients and keep UK working hours',
+    based: 'Works remotely with UK clients and keeps UK working hours',
     type: 'AI agents, AI receptionists and AI inside ecommerce and operations',
     clients: 'Small and mid-size businesses; 500+ businesses served since 2014',
     platforms: 'Shopify, WooCommerce, Xero, Sage, HubSpot, Odoo, NetSuite, SAP Business One, ERPNext, and OpenAI, Anthropic and Google models',
     what: 'We map the process, then design, build and support custom AI agents, AI receptionists and customer service agents inside the tools you already use, with human approval steps. Our strongest ground is where AI meets online stores, order handling, finance and operations. The founder is involved in every project, you own what we build, and we show working software on your own data before a contract.',
     bestFor: 'Ecommerce and operations-heavy SMBs that want one team for the store, the integrations and the AI.',
-    ask: 'Whether a remote team suits you. If you need someone on site, pick a UK firm from this list. Ask us, as you would any supplier outside the UK, how personal data is covered.',
+    ask: 'Whether a remote team suits you. If you need someone on site every week, pick a firm from this list with an office near you. Ask us, as you would any supplier, where your data is stored and how it is protected.',
   },
 ];
 
@@ -279,7 +279,6 @@ const REGIONS: { where: string; seen: string }[] = [
   { where: 'Glasgow', seen: 'Not in our test set. We found and read this firm directly.' },
   { where: 'Cambridge and Durham', seen: 'Not in our test set as a place. Its AI agents page was cited for two of the UK-wide questions.' },
   { where: 'Newcastle upon Tyne', seen: 'Not in our test set as a place. Its UK page was cited for a manufacturing question.' },
-  { where: 'Remote', seen: 'FactoryJet was named or cited in 20 of the 273 answers we read on this topic.' },
 ];
 
 // Published prices, copied from each firm's own page on 9 Oct 2026.
@@ -298,7 +297,7 @@ const PRICES: { firm: string; figure: string; vat: string; source: string }[] = 
 const FAQS: FAQItem[] = [
   {
     q: "Which UK companies build custom AI agents for small and mid-size businesses?",
-    a: "Fourteen UK firms we checked on 9 October 2026 build agents for smaller businesses. For a small first project: Happy Webs (Greater Manchester), Augustova and Softomate Solutions (London), Flowio (Glasgow) and Supersede AI (Salford). For product teams: Pixelfield, Magora and Geeks Ltd (London). For sensitive data: OpenKit (Cambridge and Durham), Green Arrow (Cardiff) and Ayoob AI (Newcastle). For orders, ERP and Microsoft: Tom&Co (London), New Icon (Bristol) and BCN (Manchester). FactoryJet builds for UK firms remotely.",
+    a: "Fourteen UK firms we checked on 9 October 2026 build agents for smaller businesses. For a small first project: Happy Webs (Greater Manchester), Augustova and Softomate Solutions (London), Flowio (Glasgow) and Supersede AI (Salford). For product teams: Pixelfield, Magora and Geeks Ltd (London). For sensitive data: OpenKit (Cambridge and Durham), Green Arrow (Cardiff) and Ayoob AI (Newcastle). For orders, ERP and Microsoft: Tom&Co (London), New Icon (Bristol) and BCN (Manchester). FactoryJet builds for UK firms across ecommerce and operations.",
   },
   {
     q: "Which companies build custom AI agents in the UK?",
@@ -338,7 +337,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: "I run a UK manufacturing business. Who can build an AI agent that handles supplier emails and orders?",
-    a: "Tom&Co in London describes this exact job on its manufacturing page: it reads purchase orders, RFQs and enquiries, enters them into your ERP for approval and matches supplier invoices to purchase orders. Happy Webs in Greater Manchester shows a fabrication example on its AI page. Magora builds agents that work across CRM and ERP. FactoryJet builds order and RFQ agents remotely and has worked with Odoo, NetSuite, SAP Business One and ERPNext.",
+    a: "Tom&Co in London describes this exact job on its manufacturing page: it reads purchase orders, RFQs and enquiries, enters them into your ERP for approval and matches supplier invoices to purchase orders. Happy Webs in Greater Manchester shows a fabrication example on its AI page. Magora builds agents that work across CRM and ERP. FactoryJet builds order and RFQ agents and has worked with Odoo, NetSuite, SAP Business One and ERPNext.",
   },
   {
     q: "Is there an AI automation agency for small UK manufacturers?",
@@ -350,7 +349,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: "Who provides reliable e-commerce AI agents for automation?",
-    a: "Reliable means the agent has been tested on your real orders and a person approves the risky actions. Among UK firms in this guide, Green Arrow in Cardiff names Shopify among the systems its agents work in, and Tom&Co in London built ecommerce platforms for over a decade before moving into AI. FactoryJet builds online stores and the agents inside them for UK brands, working remotely. Ask any provider to show logs from a live agent that handles refunds or stock changes.",
+    a: "Reliable means the agent has been tested on your real orders and a person approves the risky actions. Among UK firms in this guide, Green Arrow in Cardiff names Shopify among the systems its agents work in, and Tom&Co in London built ecommerce platforms for over a decade before moving into AI. FactoryJet builds online stores and the agents inside them for UK brands. Ask any provider to show logs from a live agent that handles refunds or stock changes.",
   },
   {
     q: "How much does it cost to build a custom AI agent in the UK?",
@@ -378,7 +377,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: "Should I choose a UK-based AI agency or a remote one?",
-    a: "Choose a UK-based firm if you want workshops on site, or if your contract or sector requires a UK supplier. A remote team can work well when the project is software only. If a separate organisation outside the UK receives or can access personal data, the ICO calls that a restricted transfer, and it must be covered by one of the transfer mechanisms in its guide. Ask for that answer in writing. FactoryJet is remote and can host AI builds in the UK or EU.",
+    a: "Choose a UK-based firm if you want workshops on site, or if your contract or sector requires a UK supplier. A remote team can work well when the project is software only. If a separate organisation outside the UK receives or can access personal data, the ICO calls that a restricted transfer, and it must be covered by one of the transfer mechanisms in its guide. Ask for that answer in writing. FactoryJet can host AI builds in the UK or EU.",
   },
   {
     q: "Do UK data protection rules apply to AI agents?",
@@ -398,7 +397,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: "Which UK AI agencies build AI receptionists and voice agents?",
-    a: "Flowio in Glasgow builds voice agents that take calls, look things up, book and transfer to your team. Softomate Solutions in London lists AI voice agent development and WhatsApp chatbots. Happy Webs in Greater Manchester sells its own AI receptionist. FactoryJet builds AI receptionists for UK firms remotely. Ask any of them how the agent hands a caller to a person and where call recordings are stored.",
+    a: "Flowio in Glasgow builds voice agents that take calls, look things up, book and transfer to your team. Softomate Solutions in London lists AI voice agent development and WhatsApp chatbots. Happy Webs in Greater Manchester sells its own AI receptionist. FactoryJet builds AI receptionists for UK firms. Ask any of them how the agent hands a caller to a person and where call recordings are stored.",
   },
   {
     q: "Which UK AI agencies work with Microsoft Copilot Studio?",
@@ -437,7 +436,7 @@ export const post: BlogPost = {
     "Every fact below was read on each firm's own website on 9 October 2026. None of them paid to be here, and the order is not a ranking.",
     'Eight of the fourteen UK firms publish a price on their own site. First steps run from a £250 diagnostic to a £10,000 audit, and build figures from £2,000 for one automation to £20,000 to £80,000 for adding AI to an existing application.',
     'The ONS says AI use among UK businesses with 10 or more employees rose from around 12% to around 35% since late 2023.',
-    'FactoryJet is on this list. We have no UK office and work remotely; if you need someone on site, choose a UK firm.',
+    'FactoryJet is on this list. We work remotely with UK clients; if you need someone on site every week, choose a firm near you.',
   ],
   faqs: FAQS,
   content: (
@@ -485,7 +484,7 @@ export const post: BlogPost = {
       <div id="answer-first" className="mb-8 rounded-2xl border border-gray-200 bg-gray-50 p-6 not-prose">
         <p className="text-sm font-semibold uppercase tracking-wide text-[#B23E13] mb-2">The short answer</p>
         <p className="text-gray-800 leading-relaxed mb-3">
-          There is no single best AI agent development company in the UK. For a small first agent with published prices, look at Happy Webs, Augustova and Softomate. For product teams, Pixelfield and Magora. For sensitive data, OpenKit and Ayoob AI. For orders and ERP, Tom&amp;Co. For Microsoft, BCN. For AI inside an online store, FactoryJet, which works remotely.
+          There is no single best AI agent development company in the UK. For a small first agent with published prices, look at Happy Webs, Augustova and Softomate. For product teams, Pixelfield and Magora. For sensitive data, OpenKit and Ayoob AI. For orders and ERP, Tom&amp;Co. For Microsoft, BCN. For AI inside an online store, FactoryJet.
         </p>
         <p className="text-gray-800 leading-relaxed mb-3">
           We read every firm&rsquo;s own website on 9 October 2026: where it is based, what it builds, who it serves and any prices it publishes. Nobody paid to be listed and the order is not a ranking. FactoryJet wrote this guide and is on it, last.
@@ -496,13 +495,13 @@ export const post: BlogPost = {
       </div>
 
       <p className="mb-4">
-        Ask ChatGPT, Perplexity or Gemini for an AI agent development company in the UK and you get different names each time. We know because we asked. On 9 October 2026 we put UK buyer questions about AI agents and AI automation to ChatGPT, Claude, Gemini, Perplexity, Google AI Mode and Google AI Overviews, and logged every page they cited. FactoryJet was named or cited in 20 of the 273 answers we read on this topic. List articles made up 48% of the small-firm pages Perplexity cited, 46% for the Gemini app, 38% for Google AI Mode and AI Overviews, and 18% for the ChatGPT app.
+        Ask ChatGPT, Perplexity or Gemini for an AI agent development company in the UK and you get different names each time. We know because we asked. On 9 October 2026 we put UK buyer questions about AI agents and AI automation to ChatGPT, Claude, Gemini, Perplexity, Google AI Mode and Google AI Overviews, and logged every page they cited across 273 answers. List articles made up 48% of the small-firm pages Perplexity cited, 46% for the Gemini app, 38% for Google AI Mode and AI Overviews, and 18% for the ChatGPT app.
       </p>
       <p className="mb-4">
         So we opened six of those lists. Four put the publisher&rsquo;s own firm first. Two name Accenture, which is a fair answer for a bank and a poor one for a 20-person firm. This guide does the slow part. It covers 14 UK firms that build for small and mid-size businesses, each read on its own website, with every fact dated and linked to the page it came from.
       </p>
       <p className="mb-4">
-        <strong>A note on honesty.</strong> FactoryJet builds AI agents, so we are on this list. We put ourselves last, we say plainly that we have no UK office, and we tell you when a UK firm will suit you better. Listing yourself is common on pages like this one. It is also a reason to read every list, ours included, with care.
+        <strong>A note on honesty.</strong> FactoryJet builds AI agents, so we are on this list. We put ourselves last, and we tell you when another firm will suit you better. Listing yourself is common on pages like this one. It is also a reason to read every list, ours included, with care.
       </p>
       <p className="mb-6">
         A few terms first, in plain English. An <strong>AI agent</strong> is software that takes actions in your systems, such as raising an order or booking a job, and does more than chat. An <strong>AI agent development company</strong> writes that software for you. An <strong>AI automation agency</strong> connects AI to the tools you already use so routine steps happen without retyping. A <strong>CRM</strong> is the system that holds your customers and deals, and an <strong>ERP</strong> is the one that holds orders, stock and accounts. Most firms below do some of each.
@@ -767,7 +766,7 @@ export const post: BlogPost = {
               <td className="p-3 border border-gray-200 font-semibold">On-site workshops</td>
               <td className="p-3 border border-gray-200">Easy in their region. Tom&amp;Co and Ayoob AI both offer discovery in person</td>
               <td className="p-3 border border-gray-200">Yes, nationally</td>
-              <td className="p-3 border border-gray-200 bg-orange-50">No. Video workshops in UK working hours</td>
+              <td className="p-3 border border-gray-200 bg-orange-50">Video workshops in UK working hours</td>
             </tr>
             <tr className="odd:bg-white even:bg-gray-50">
               <td className="p-3 border border-gray-200 font-semibold">Best project size</td>
@@ -779,13 +778,13 @@ export const post: BlogPost = {
               <td className="p-3 border border-gray-200 font-semibold">Data and hosting</td>
               <td className="p-3 border border-gray-200">UK entity and UK contract. Several offer UK-region or on-premise hosting</td>
               <td className="p-3 border border-gray-200">Formal frameworks and deep governance teams</td>
-              <td className="p-3 border border-gray-200 bg-orange-50">UK or EU hosting on request. Ask how access from outside the UK is covered</td>
+              <td className="p-3 border border-gray-200 bg-orange-50">UK or EU hosting on request</td>
             </tr>
             <tr className="odd:bg-white even:bg-gray-50">
               <td className="p-3 border border-gray-200 font-semibold">Watch out for</td>
               <td className="p-3 border border-gray-200">Reliance on one or two people in a small team</td>
               <td className="p-3 border border-gray-200">Budgets sized for large organisations</td>
-              <td className="p-3 border border-gray-200 bg-orange-50">No UK office. Not right if you need people on site</td>
+              <td className="p-3 border border-gray-200 bg-orange-50">Not right if you need people on site every week</td>
             </tr>
           </tbody>
         </table>
@@ -798,7 +797,7 @@ export const post: BlogPost = {
       <ul className="list-disc pl-6 mb-4 space-y-2">
         <li><strong>You stay accountable.</strong> The ICO&rsquo;s <a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/artificial-intelligence/guidance-on-ai-and-data-protection/what-are-the-accountability-and-governance-implications-of-ai/" className="text-[#B23E13] underline" rel="noopener" target="_blank">guidance on AI and data protection</a> says the accountability principle makes you responsible for complying with data protection law, and for showing that you comply, in any AI system that processes personal data. It calls a data protection impact assessment an ideal way to show it. The ICO notes that this guidance is under review after the Data (Use and Access) Act.</li>
         <li><strong>Decisions made by software alone.</strong> The ICO&rsquo;s <a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/individual-rights/automated-decision-making/what-are-the-adm-safeguards/" className="text-[#B23E13] underline" rel="noopener" target="_blank">draft guidance on automated decision-making</a>, updated on 31 March 2026, covers solely automated decisions with significant effects on a person. Its safeguards section covers information about the decision, a way to make representations, human intervention and a way to contest it.</li>
-        <li><strong>Data that leaves the UK.</strong> The ICO&rsquo;s <a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/international-transfers/a-brief-guide-to-international-transfers/" className="text-[#B23E13] underline" rel="noopener" target="_blank">brief guide to international transfers</a>, dated 15 January 2026, says people risk losing the protection of UK data protection law if their personal information is sent, or made accessible, outside the UK, and that every restricted transfer must be covered by a transfer mechanism. This applies to the AI provider behind the agent and to any supplier outside the UK, including us.</li>
+        <li><strong>Data that leaves the UK.</strong> The ICO&rsquo;s <a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/international-transfers/a-brief-guide-to-international-transfers/" className="text-[#B23E13] underline" rel="noopener" target="_blank">brief guide to international transfers</a>, dated 15 January 2026, says people risk losing the protection of UK data protection law if their personal information is sent, or made accessible, outside the UK, and that every restricted transfer must be covered by a transfer mechanism. This applies to the AI provider behind the agent and to any supplier outside the UK.</li>
         <li><strong>Registration.</strong> The ICO says organisations that use personal information need to pay a <a href="https://ico.org.uk/for-organisations/data-protection-fee/" className="text-[#B23E13] underline" rel="noopener" target="_blank">data protection fee</a> unless they are exempt. Asking a UK agency for its ICO registration number takes one email, and GOV.UK lets you <a href="https://www.gov.uk/get-information-about-a-company" className="text-[#B23E13] underline" rel="noopener" target="_blank">look up a company&rsquo;s details for free</a>.</li>
       </ul>
       <p className="mb-6">
@@ -822,7 +821,7 @@ export const post: BlogPost = {
         <strong>Where we fit:</strong> UK SMBs that sell online or run order-heavy operations and want one team for the store, the integrations (Shopify, Xero, Sage, HubSpot, Odoo) and the AI. Before a contract, we show working software on your own data. We quote a fixed price in writing after a short scoping call, and we stay on after launch.
       </p>
       <p className="mb-4">
-        <strong>Where we do not:</strong> We have no UK office. We work remotely in UK working hours. If you need people in your building, choose one of the UK firms above. If your project is a Microsoft Copilot roll-out, BCN is a more natural fit. If your data must stay on your own machines, look at Ayoob AI or OpenKit. If your own engineers will maintain the agent inside your product, Pixelfield and Magora write for exactly that buyer.
+        <strong>Where we do not:</strong> If you need people in your building every week, choose one of the firms above with an office near you. If your project is a Microsoft Copilot roll-out, BCN is a more natural fit. If your data must stay on your own machines, look at Ayoob AI or OpenKit. If your own engineers will maintain the agent inside your product, Pixelfield and Magora write for exactly that buyer.
       </p>
       <p className="mb-6">
         If you are still working out what you need, these explain the options in plain English: <a href="/blog/how-to-build-an-ai-agent-uk-2026" className="text-[#B23E13] underline">how to build an AI agent in the UK</a> and <a href="/blog/what-does-an-ai-automation-agency-do-uk" className="text-[#B23E13] underline">what an AI automation agency does</a>.

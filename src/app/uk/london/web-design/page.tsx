@@ -92,7 +92,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'getting-started', question: 'How long does a London web design project take?',
     answer: 'A standard custom web design London project runs about four weeks from brief to launch. We also offer express delivery of up to a five-page site in seven days. Larger ecommerce and web-app builds are scoped individually, so the timeline stays honest rather than optimistic.' },
   { category: 'getting-started', question: 'Do I own the website and the code when it is finished?',
-    answer: 'Yes, one hundred percent. We push the full codebase to your GitHub at launch. There is no lock-in and no rented platform you have to keep paying us to access. If you ever move to another London web designer or team, everything goes with you.' },
+    answer: 'Yes, one hundred percent. We push the full codebase to your GitHub at launch. There is no lock-in and no rented platform you have to keep paying us to access. If you ever move to another web designer or team, everything goes with you.' },
   { category: 'getting-started', question: 'Can you redesign my existing London site without losing my Google rankings?',
     answer: 'Yes. A careful website redesign keeps your URLs, redirects, and content structure intact so your rankings carry across. We audit your current SEO and map every important page before we change anything, then watch rankings for London searches after launch to confirm nothing slipped.' },
 
@@ -105,8 +105,8 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'platforms', question: 'Do you build ecommerce and Shopify sites for London brands?',
     answer: 'Yes. Ecommerce web design London and Shopify web design London are among our most common builds, for DTC and B2B brands alike. We design product pages and checkout flows that convert on mobile, then wire up the payments, stock, and analytics behind them.' },
 
-  { category: 'london', question: 'Are you a London web design agency, and do you meet in person?',
-    answer: 'We are a UK web design agency that serves London clients across every borough, from Shoreditch to Canary Wharf. Projects run remotely with regular video reviews, which keeps your costs down without slowing the work. Most London clients tell us the remote process is faster than trailing across town for meetings.' },
+  { category: 'london', question: 'How do you work with London clients?',
+    answer: 'We work with London clients in every borough, from Shoreditch to Canary Wharf. Projects run remotely with regular video reviews, which keeps your costs down without slowing the work. Most London clients tell us the remote process is faster than trailing across town for meetings.' },
   { category: 'london', question: 'Which London areas do you work with?',
     answer: 'All of them: the City of London, Shoreditch, Soho, Camden, Islington, Hackney, Westminster, Mayfair, Canary Wharf, and Greater London out to Croydon and Richmond. A remote-first process means your location within the capital never limits the quality of the work.' },
   { category: 'london', question: 'Who actually does the work on my project?',
@@ -217,7 +217,7 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: 'Web Design London | Website Design Agency | FactoryJet',
   description:
-    'A web design agency in London. Fast, conversion-focused sites and ecommerce on Next.js, WordPress, Webflow and Shopify. You own the code.',
+    'A web design agency for London businesses. Fast, conversion-focused sites and ecommerce on Next.js, WordPress, Webflow and Shopify. You own the code.',
   alternates: {
     canonical: CANONICAL,
     languages: { 'en-GB': CANONICAL, 'x-default': CANONICAL },
@@ -225,7 +225,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Web Design London | Website Design Agency | FactoryJet',
     description:
-      'A web design company in London building fast, conversion-first websites and ecommerce stores for brands and startups. Next.js, WordPress, Webflow, Framer, Shopify. Fixed quote.',
+      'A web design company building fast, conversion-first websites and ecommerce stores for London brands and startups. Next.js, WordPress, Webflow, Framer, Shopify. Fixed quote.',
     url: CANONICAL,
     siteName: 'FactoryJet',
     locale: 'en_GB',
@@ -252,13 +252,13 @@ export default function LondonWebDesignPage() {
             <div className="col-6040">
               <div>
                 <div className="flex-wrap mb-6">
-                  <span className="chip"><span className="dot dot-orange" />London Web Design Agency</span>
+                  <span className="chip"><span className="dot dot-orange" />Web Design for London Businesses</span>
                   <span className="chip">Next.js &middot; Webflow &middot; Shopify</span>
                   <span className="chip">Fixed Scope</span>
                 </div>
                 <h1>Web Design in London That Turns Visitors Into <span className="grad-text">Buyers</span></h1>
                 <p className="lead mt-6" style={{ maxWidth: 540 }}>
-                  FactoryJet is a web design agency in London for brands, startups, and ecommerce businesses. We
+                  FactoryJet is a web design agency for London brands, startups, and ecommerce businesses. We
                   design fast, conversion-focused website design on the right platform for your goals, launch it in
                   weeks, and hand you the code on day one.
                 </p>
@@ -499,7 +499,7 @@ export default function LondonWebDesignPage() {
               </div>
               <div className="card">
                 <h3>Ownership and maintainability</h3>
-                <p className="mt-4">Clean, documented code pushed to your GitHub, built so any competent developer can pick it up later. You are never locked into one London agency to keep your own website running, which protects you if your needs or team change.</p>
+                <p className="mt-4">Clean, documented code pushed to your GitHub, built so any competent developer can pick it up later. You are never locked into one agency to keep your own website running, which protects you if your needs or team change.</p>
               </div>
             </div>
           </div>
@@ -653,7 +653,7 @@ export default function LondonWebDesignPage() {
             <div className="col-6040">
               <div>
                 <span className="eyebrow">What you get</span>
-                <h2>A London web design company that builds to sell</h2>
+                <h2>A web design company for London that builds to sell</h2>
                 <div className="stack mt-6">
                   <p>
                     London is one of the most competitive markets in the world, so a template site does not cut it

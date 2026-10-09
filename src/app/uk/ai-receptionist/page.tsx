@@ -7,7 +7,7 @@ import MidPageCTA from '@/components/v2/MidPageCTA';
 import '../ai-agents/ai-agents.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/ai-receptionist';
-const UPDATED = '2026-09-24';
+const UPDATED = '2026-10-10';
 const TITLE = 'AI Receptionist UK | Built Into Your Systems | FactoryJet';
 const H1 = 'AI Receptionist UK: Answers Every Call, Books Into Your Diary, Hands Over When It Matters';
 const DESCRIPTION =
@@ -96,6 +96,14 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   // ── Setup, phone lines & cost ──
   { category: 'setup', question: 'How much does an AI receptionist cost?',
     answer: 'It depends on scope. The main drivers are how many call types it handles, how many systems it connects to, how many locations or phone lines are involved, how many calls it takes each month (which sets the usage cost of the voice and AI services), and whether you want ongoing support. We scope after a free first call and quote a fixed price for the build, with monthly support shown separately.' },
+  // Buyer question "cost of a gp receptionist uk" (9 Oct 2026 run). Figures match
+  // /blog/ai-cost-uk-2026 and were re-read on 9 Oct 2026: NHS Employers pay scales
+  // 2026/27 (bands 2 and 3), NHS Health Careers (receptionists typically band 2 or 3),
+  // GOV.UK employer rates 2026 to 2027 (15% above £5,000; the totals are our sum),
+  // DHSC written answer of 9 March 2021 (GP practices set staff pay), and The VoIP
+  // Shop GP clinic plans (£30 and £120 a month, prices exclude VAT).
+  { category: 'setup', question: 'What is the cost of a GP receptionist in the UK?',
+    answer: 'A GP receptionist on NHS band 2 or 3 is paid £25,272 to £27,476 a year, or £12.92 to £14.05 an hour, on the NHS Employers pay scales for 2026/27. Employer National Insurance at 15% above £5,000 takes that to about £28,300 to £30,850, before pension. GP practices set their own pay, so adverts vary. The VoIP Shop lists AI receptionist plans for GP clinics at £30 to £120 a month before VAT. The two are not like for like, because a receptionist also runs the front desk. Our guide AI Cost in the UK (2026) shows the sums.' },
   { category: 'setup', question: 'Can I keep my existing phone number?',
     answer: 'Yes, in almost every case. The simplest route is call forwarding: your number stays with your current provider and you forward calls to the AI receptionist always, after hours, or when the line is busy or unanswered. If you are moving phone provider anyway, you can usually port the number, which means moving it to the new provider. Ofcom says a new provider will ask whether you want to keep your number.' },
   { category: 'setup', question: 'What is number porting and do I need it?',
@@ -265,7 +273,7 @@ export default function AiReceptionistUKPage() {
                 <div className="byline mt-6" style={{ maxWidth: 560 }}>
                   <div className="av">BB</div>
                   <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
-                  <div className="upd">Last updated<br />24 September 2026</div>
+                  <div className="upd">Last updated<br />10 October 2026</div>
                 </div>
 
                 <div className="mt-6" style={{ maxWidth: 560 }}>

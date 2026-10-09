@@ -261,7 +261,7 @@ export const post: BlogPost = {
       </p>
       <p>
         We are FactoryJet, an AI services company that designs, builds and supports AI agents, automation and websites. We
-        work remotely with UK clients and have no UK office. We are one of the firms you
+        work remotely with UK clients. We are one of the firms you
         might compare, so we have kept our own prices off this page on purpose. FactoryJet was founded in 2014 by Bhavesh
         Barot and has served more than 500 businesses.
       </p>
@@ -1230,7 +1230,7 @@ export const post: BlogPost = {
       <p>
         Bills for AI usage and hosting can sit in your own accounts at cost. We keep managing the servers, AI models, APIs
         and maintenance, so you do not have to. If an off-the-shelf tool from the tables above will do the job, we will
-        tell you so. And because we work remotely with no UK office, a local firm is the better choice if you
+        tell you so. And a firm near you is the better choice if you
         need someone on site.
       </p>
       <p>

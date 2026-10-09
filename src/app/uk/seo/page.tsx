@@ -7,8 +7,8 @@ import MidPageCTA from '@/components/v2/MidPageCTA';
 import './seo.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/seo';
-const UPDATED = '2026-08-25';
-const UPDATED_LABEL = '25 August 2026';
+const UPDATED = '2026-10-10';
+const UPDATED_LABEL = '10 October 2026';
 
 /* ─── Breadcrumb source of truth (drives trail + BreadcrumbList) ───── */
 const crumbs = [
@@ -53,7 +53,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     answer: 'Bhavesh Barot, the founder, on every account. Not a salesperson who hands you over, and not a junior working from a checklist. He scopes the work, plans it, and stays on it, so the person answering your email is the person doing the work. That is the whole point of hiring a consultant rather than a retainer, and it is why we keep the number of active accounts deliberately small.' },
   { category: 'consultant', question: 'Can you work with our in-house team or existing agency?',
     answer: 'Yes, and it is common. Plenty of businesses already have a developer, a marketing manager, or an agency doing part of the job well. In that case the consultant role is to set the plan, review the work, and settle the technical decisions nobody else can. We write recommendations your own team can act on, with the reasoning attached, so you are not stuck depending on us to keep moving.' },
-  { category: 'consultant', question: 'Do you work with businesses outside your own city?',
+  { category: 'consultant', question: 'Do you work with businesses anywhere in the UK?',
     answer: 'Yes. We consult for UK businesses wherever they are based, from London and Manchester to smaller towns with no local specialist at all. The work happens remotely with regular video reviews, so you get the same senior attention regardless of postcode. Where you sit only changes which local searches we target for you, never the standard of the work or how often you hear from us.' },
 
   // ── SEO basics ──
@@ -92,7 +92,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'local', question: 'Are you an ecommerce SEO agency?',
     answer: 'Yes. We work with Shopify, WooCommerce, and custom stores, optimising category and product pages, fixing the technical issues that hold ranking back, and structuring pages so both Google and AI engines surface your products. We also build the content around buying decisions that pulls in shoppers earlier. If you run a store, our ecommerce SEO and Shopify SEO work is built for exactly that.' },
   { category: 'local', question: 'Do you work outside London?',
-    answer: 'Yes. We are a UK SEO agency working with businesses across London, Manchester, Birmingham, Leeds, Bristol, and beyond. The work is handled remotely with regular video reviews, so a company anywhere in the UK gets the same senior team and the same standard. Where you are based does not change the quality of the work, only which local searches we target for you.' },
+    answer: 'Yes. We are an SEO agency for UK businesses, working with companies across London, Manchester, Birmingham, Leeds, Bristol, and beyond. The work is handled remotely with regular video reviews, so a company anywhere in the UK gets the same senior team and the same standard. Where you are based does not change the quality of the work, only which local searches we target for you.' },
   { category: 'local', question: 'Do you cover SEO in Manchester and other cities?',
     answer: 'We do. We run SEO for businesses in Manchester, Birmingham, Leeds, London, and across the UK, and we build local pages and Google Business Profiles for the areas each client serves. City-level SEO is mostly about local intent and proximity signals, so we target the exact searches your customers in that city use, wherever our team happens to sit.' },
 
@@ -110,7 +110,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'results', question: 'How do you report results?',
     answer: 'Clearly, and tied to your business, not vanity metrics. You get regular reporting on rankings, organic traffic, and enquiries, plus where you appear in AI answers and Google AI Overviews. We show what moved, what we did, and what is next, in plain language. If a report needs a glossary to understand, it is hiding a lack of results. Ours are built to be read in five minutes.' },
   { category: 'results', question: 'Who actually does the work?',
-    answer: 'A senior team, with the founder on every account. You will not be handed to a junior after the sales call, and the work is not quietly offshored to a content mill. That is deliberate: SEO that gets you ranked and quoted in AI answers takes judgement, not a template. When you email, the founder replies, and the person planning your strategy is the person doing it.' },
+    answer: 'A senior team, with the founder on every account. You will not be handed to a junior after the sales call, and we do not subcontract the work to a content mill. That is deliberate: SEO that gets you ranked and quoted in AI answers takes judgement, not a template. When you email, the founder replies, and the person planning your strategy is the person doing it.' },
   { category: 'results', question: 'How do we get started?',
     answer: 'Send your name and work email through the form on this page. The founder replies within 24 hours to book a short call, and runs a free SEO audit on your site: what is holding your rankings back, where you show up today, and where a competitor is ahead. That first look is genuinely useful whether or not we end up working together.' },
 ];
@@ -198,7 +198,7 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: 'SEO Consultant UK | Senior SEO, Founder Led | FactoryJet',
   description:
-    'A UK SEO consultant who plans and does the work himself. Technical, local and ecommerce SEO, plus AI answers. Free audit before you commit.',
+    'An SEO consultant for UK businesses who plans and does the work himself. Technical, local and ecommerce SEO, plus AI answers. Free audit before you commit.',
   alternates: { canonical: CANONICAL, languages: { 'en-GB': CANONICAL, 'x-default': CANONICAL } },
   openGraph: {
     title: 'SEO Consultant UK | Senior SEO, Founder Led | FactoryJet',
@@ -230,7 +230,7 @@ export default function SeoUKPage() {
             <div className="col-6040">
               <div>
                 <div className="flex-wrap mb-6">
-                  <span className="chip"><span className="dot dot-orange" />UK SEO Consultant</span>
+                  <span className="chip"><span className="dot dot-orange" />SEO Consultant for UK Businesses</span>
                   <span className="chip">Founder on every account</span>
                   <span className="chip">Google + AI Answers</span>
                 </div>
@@ -849,8 +849,8 @@ export default function SeoUKPage() {
               <span className="eyebrow">The honest landscape</span>
               <h2>UK SEO consultants and agencies worth knowing</h2>
               <p className="lead mt-4">
-                We would rather tell you the truth than pretend we are the only option. Here are UK firms doing real
-                search work, including us. Talk to a few, ask them Google&apos;s questions from earlier on this page, and
+                We would rather tell you the truth than pretend we are the only option. Here are firms doing real
+                search work for UK businesses, including us. Talk to a few, ask them Google&apos;s questions from earlier on this page, and
                 pick the fit.
               </p>
             </div>

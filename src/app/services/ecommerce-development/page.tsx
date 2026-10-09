@@ -82,7 +82,7 @@ export const metadata: Metadata = {
 // Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
 // dateModified; these pages carried none. Keep this honest: bump it when the
 // page's content actually changes, not on every unrelated deploy.
-const PAGE_MODIFIED = '2026-09-28';
+const PAGE_MODIFIED = '2026-10-10';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -527,9 +527,9 @@ const FAQ_ITEMS = [
   /* ── Working With Us ── */
   {
     category: 'trust',
-    question: 'How is FactoryJet different from a US or UK e-commerce agency?',
+    question: 'How is FactoryJet different from other e-commerce agencies?',
     answer:
-      'Four things: price, ownership, support and honesty. Our engineering team is based in India, so a fixed-price build usually costs well under a typical US agency quote for the same scope. You own the full codebase on launch day, with no lock-in. We stay on after launch for fixes and improvements instead of handing you off. And we tell you when a simpler, cheaper setup fits better. We have delivered 500+ projects across the US, the UK, the UAE and India.',
+      'Four things: price, ownership, support and honesty. A fixed-price build from us usually costs well under a typical agency quote for the same scope. You own the full codebase on launch day, with no lock-in. We stay on after launch for fixes and improvements instead of handing you off. And we tell you when a simpler, cheaper setup fits better. We have delivered 500+ projects across the US, the UK, the UAE and India.',
   },
   {
     category: 'trust',
@@ -970,7 +970,7 @@ export default function EcommerceDevelopmentPage() {
             {
               icon: '💸',
               title: 'Most agencies disappear after launch day',
-              body: 'The store goes live, the invoice clears, and the agency moves on. Then an app update breaks checkout or a theme change slows every page, and nobody who built it is around. We quote support as part of the plan, not as an afterthought, and the team that built your store is the team that fixes it. We are an India-based engineering team, which is also why a fixed-price build from us usually costs well under a comparable US agency quote.',
+              body: 'The store goes live, the invoice clears, and the agency moves on. Then an app update breaks checkout or a theme change slows every page, and nobody who built it is around. We quote support as part of the plan, not as an afterthought, and the team that built your store is the team that fixes it. A fixed-price build from us also usually costs well under a comparable agency quote.',
             },
           ]}
         />

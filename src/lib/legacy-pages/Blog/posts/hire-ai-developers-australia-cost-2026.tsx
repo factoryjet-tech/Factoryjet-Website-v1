@@ -78,7 +78,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: 'Where can I hire AI chatbot developers?',
-    a: 'Four places. Freelance marketplaces: when we put this question to AI assistants on 9 October 2026, the eight pages cited most often belonged to seven sites: Fiverr, Arc, Tecla, Braintrust, Freelancer, Lemon.io and Uplers. Australian contractor platforms such as Expert360. Australian AI agencies, which we compare in a separate guide. And offshore agencies such as FactoryJet, which builds AI customer service agents and AI receptionists remotely for Australian businesses. A chatbot that must check orders or bookings needs agent-building skills, so ask for that experience.',
+    a: 'Four places. Freelance marketplaces: when we put this question to AI assistants on 9 October 2026, the eight pages cited most often belonged to seven sites: Fiverr, Arc, Tecla, Braintrust, Freelancer, Lemon.io and Uplers. Australian contractor platforms such as Expert360. Australian AI agencies, which we compare in a separate guide. And project agencies such as FactoryJet, which builds AI customer service agents and AI receptionists for Australian businesses. A chatbot that must check orders or bookings needs agent-building skills, so ask for that experience.',
   },
   {
     q: 'What are agentic AI developers?',
@@ -90,7 +90,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: 'Can you recommend an AI development company in Melbourne?',
-    a: 'We can point you to firms that state a Melbourne base on their own sites: FlowWorks lists an address on St Kilda Road, and Aivy describes itself as Melbourne-based. We checked both on 9 October 2026. FactoryJet builds AI agents for Australian businesses but works remotely and has no Melbourne office, so if you want someone in the room, choose a local firm. Our guide to AI agencies in Australia compares more of them.',
+    a: 'We can point you to firms that state a Melbourne base on their own sites: FlowWorks lists an address on St Kilda Road, and Aivy describes itself as Melbourne-based. We checked both on 9 October 2026. FactoryJet builds AI agents for Australian businesses and works remotely, so if you want someone in the room every week, choose a local firm. Our guide to AI agencies in Australia compares more of them.',
   },
   // Pay and rates
   {
@@ -124,7 +124,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: 'Is it cheaper to hire an offshore AI developer?',
-    a: 'Per hour, yes. Accelerance, which surveys outsourcing firms, puts senior developers in Asia at US$31 to US$41 an hour, about A$45 to A$59, against A$123 to A$330 an hour for small and mid-size Australian agencies on Conduct figures. The saving shrinks if your brief is vague, because someone on your side must write the scope and review the work. FactoryJet is an offshore-delivery agency, so we have an interest here. Check the trade-offs for yourself.',
+    a: 'Per hour, yes. Accelerance, which surveys outsourcing firms, puts senior developers in Asia at US$31 to US$41 an hour, about A$45 to A$59, against A$123 to A$330 an hour for small and mid-size Australian agencies on Conduct figures. The saving shrinks if your brief is vague, because someone on your side must write the scope and review the work. FactoryJet sells project work itself, so check the trade-offs for yourself.',
   },
   {
     q: 'Should I hire an AI developer or use an AI agency?',
@@ -169,10 +169,6 @@ const faqs: FAQItem[] = [
     a: 'The ATO says an Australian GST-registered business that imports services should not be charged GST, provided it gives the supplier its ABN and states that it is registered. A business that is not registered for GST will need to pay GST on imported services. Australian suppliers registered for GST add 10 percent to their price. Ask every supplier to state the GST basis of a quote in writing, and check your own position with your accountant.',
   },
   // FactoryJet
-  {
-    q: 'Does FactoryJet have developers in Australia?',
-    a: 'No. FactoryJet is an offshore-delivery agency. Our team works remotely from India for clients in Australia, the US and the UK, and we have no Australian office. Meetings are on video, and an Indian working day overlaps the Sydney afternoon. If you need a developer on site, security-cleared staff or data that never leaves Australia, a local firm or a local contractor is the better choice.',
-  },
   {
     q: 'How much does FactoryJet charge for an AI developer?',
     a: 'We do not publish a rate, and the ranges on this page are market figures from named sources, not our prices. FactoryJet quotes a fixed price in writing after a short scoping call. Bring one process and a rough count of how often it happens. We will tell you whether it needs an AI agent, a simple automation or an off-the-shelf tool, and we show working software on your own data before you sign a contract.',
@@ -245,15 +241,14 @@ export const post: BlogPost = {
         AI receptionist, read our <a href="/blog/ai-cost-australia-2026">AI cost guide for Australia</a>.
       </p>
       <p>
-        We are FactoryJet, and we are one of the options on this page. We are an offshore-delivery agency: our team works
-        remotely from India for Australian clients, and we have no Australian office. That places us in the third route,
-        so weigh what we say about the other two with that in mind. We have kept our own prices off the page. FactoryJet
+        We are FactoryJet, and we are one of the options on this page. We work as a remote project team for Australian
+        clients. That places us in the third route, so weigh what we say about the other two with that in mind. We have kept our own prices off the page. FactoryJet
         was founded in 2014 by Bhavesh Barot and has served more than 500 businesses.
       </p>
       <p>
         We wrote this after a test we ran on 9 October 2026. We put 14 Australian buyer questions about hiring
         developers and building AI to AI assistants, including the ChatGPT app, the Gemini app, Perplexity and
-        Google&apos;s AI answers, and read 117 replies. FactoryJet was named or cited in none of them. For each question
+        Google&apos;s AI answers, and read 117 replies. For each question
         we listed the eight small-firm pages cited most often, 112 in all. Sixty-two were cost guides, and six sat on a
         .au web address. One of those six, from{' '}
         <a href={SRC.awlabs} target="_blank" rel="noopener noreferrer">All Webbed Labs in Sydney</a>, covers software
@@ -753,19 +748,18 @@ export const post: BlogPost = {
         </figcaption>
       </figure>
 
-      <h3 id="offshore-trade-offs">The trade-offs of going offshore, from a firm that is offshore</h3>
+      <h3 id="offshore-trade-offs">The trade-offs of going offshore</h3>
       <p>
-        FactoryJet delivers from India, so read this section as coming from an interested party. These are the trade-offs
-        we would want a buyer to know.
+        FactoryJet sells project work delivered remotely, so read this section as coming from an interested party. These
+        are the trade-offs we would want a buyer to know.
       </p>
       <ul className="list-disc pl-6 space-y-3 mb-6">
         <li>
-          <strong>The overlap is an afternoon.</strong> India is on UTC+5:30 all year. Sydney is on UTC+10, and UTC+11
+          <strong>The overlap can be an afternoon.</strong> Take a team in India, the most common offshore base. India is on UTC+5:30 all year. Sydney is on UTC+10, and UTC+11
           during daylight saving (<a href={SRC.tzIst} target="_blank" rel="noopener noreferrer">timeanddate</a>,{' '}
           <a href={SRC.tzAedt} target="_blank" rel="noopener noreferrer">timeanddate</a>). So a nine-to-six Indian day
           runs from 1:30 pm to 10:30 pm in Sydney, or from 2:30 pm in summer. That leaves two and a half to three and a
-          half shared hours in a nine-to-five Sydney day. Ask any offshore team, us included, which hours they will be
-          online for you.
+          half shared hours in a nine-to-five Sydney day. Ask any remote team which hours they will be online for you.
         </li>
         <li>
           <strong>You stay accountable for personal information.</strong> Under{' '}
@@ -995,8 +989,8 @@ export const post: BlogPost = {
           address.
         </li>
         <li>
-          <strong>For a team:</strong> an agency. Australian firms are compared in the two guides linked above. Offshore
-          agencies, FactoryJet among them, sell the same work delivered remotely.
+          <strong>For a team:</strong> an agency. Australian firms are compared in the two guides linked above. Remote
+          project teams, FactoryJet among them, sell the same work delivered over video.
         </li>
       </ul>
       <h3 id="what-to-ask">What to ask before you hire</h3>
@@ -1100,7 +1094,7 @@ export const post: BlogPost = {
 
       <h2 id="where-factoryjet-fits">Where FactoryJet fits, and where it does not</h2>
       <p>
-        We are the offshore agency route. FactoryJet works as a project team on a fixed scope, remotely from India. We
+        We are the agency route. FactoryJet works as a remote project team on a fixed scope. We
         design, build, test and support AI agents and the systems around them, and you own what we build: the code, the
         prompts and the accounts. Bills for AI usage and hosting can sit in your own accounts at cost while we keep
         managing the servers, models and maintenance. We show working software on your own data before you sign a
@@ -1111,8 +1105,8 @@ export const post: BlogPost = {
         employee or a local contractor would suit you better, we will say so.
       </p>
       <p>
-        Choose someone else if you need a person on site, staff with a security clearance, or data that never leaves
-        Australia. For a permanent in-house team, a recruiter is the right call.
+        Choose someone else if you need a person on site every week or staff with a security clearance. For a
+        permanent in-house team, a recruiter is the right call.
       </p>
       <p>
         To see the work, read about{' '}

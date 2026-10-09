@@ -96,7 +96,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
 
   { category: 'working', question: 'How long until I see results on Amazon?', answer: 'Advertising restructures and listing fixes often move numbers within the first 30 to 60 days. Organic ranking and review-driven conversion compound over three to six months. We prioritize the fastest-payback work first, usually wasted ad spend and weak listings, so early wins help fund the longer plays like DSP and catalog expansion.' },
   { category: 'working', question: 'Do I have to sign a long contract?', answer: 'No. We work on short, rolling terms and earn the renewal each month with results. If a bigger project like a full catalog rebuild makes sense, we scope it clearly up front so there are no surprises. Good agencies keep clients by performing, not by locking them into a year they cannot leave.' },
-  { category: 'working', question: 'Who will actually work on my account?', answer: 'FactoryJet’s senior in-house team. The Amazon specialists in your kickoff are the people doing the daily work, not a sales pod that hands you to offshore juniors after you sign. That is a deliberate choice, and it is a big part of why clients stay with us.' },
+  { category: 'working', question: 'Who will actually work on my account?', answer: 'FactoryJet’s senior in-house team. The Amazon specialists in your kickoff are the people doing the daily work, not a sales pod that hands you to juniors after you sign. That is a deliberate choice, and it is a big part of why clients stay with us.' },
   { category: 'working', question: 'What size brands do you work with?', answer: 'Mostly US small and mid-market brands, from sellers doing their first serious push past six figures to established brands scaling into eight. We scope the engagement to your stage and catalog rather than forcing one package on everyone, and we will tell you honestly if you are too early to need us yet.' },
   { category: 'working', question: 'How do you report on Amazon performance?', answer: 'You get a dashboard tied to profit, TACoS, and Buy Box health, plus a plain-language monthly review of what we did, what it returned, and what is next. We report on the numbers that decide whether Amazon makes you money, not vanity metrics like impressions dressed up as progress.' },
   { category: 'working', question: 'How do we get started?', answer: 'Request the free Amazon audit with your brand or storefront and your email. We come back with a teardown of your listings, ads, and account health, plus a suggested 90-day plan. Then you decide if you want us to run it. No long sales cycle, and the audit is yours to keep either way.' },
@@ -177,7 +177,7 @@ const STEPS = [
 
 const PILLARS = [
   { k: 'One team', h: 'Ads, listings, and ops together', p: 'Advertising, SEO, catalog, and creative handled by people who talk daily. No finger-pointing between three vendors.' },
-  { k: 'Senior', h: 'In-house, not offshored juniors', p: 'The Amazon specialists in your kickoff are the ones doing the work. A senior team that has shipped 500+ commerce projects.' },
+  { k: 'Senior', h: 'In-house, not handed to juniors', p: 'The Amazon specialists in your kickoff are the ones doing the work. A senior team that has shipped 500+ commerce projects.' },
   { k: 'Profit-first', h: 'We report on TACoS, not vanity', p: 'Managed to total ad cost of sales and contribution margin, so growth actually reaches your bank account.' },
 ];
 

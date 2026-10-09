@@ -116,4 +116,8 @@ export const AI_DEV_FAQS: AiDevFaq[] = [
     link: { url: '/blog/ai-agent-build-vs-buy-2026', label: 'Build vs buy guide' } },
   { id: 'Q29', category: 'faq-choose', question: 'Are you tied to one AI model or vendor?',
     answer: 'No. We do not resell any AI platform. We choose between models from OpenAI, Anthropic, Google and open-weight options based on accuracy on your test cases, where your data needs to stay, and running cost. We build so the model can be swapped later without rewriting the system, because the best model this year may not be the best one next year.' },
+  // Marketplace pages opened 2026-10-09; answer counts are from our 9 Oct 2026 AI answer check.
+  { id: 'Q30', category: 'faq-choose', question: 'Where can I hire chatbot developers?',
+    answer: 'On a freelance marketplace or from a development company. Upwork, Toptal, Arc and Freelancer.com list freelance chatbot developers you hire and manage yourself. When we asked AI assistants this on 9 October 2026, the Upwork page appeared in 8 of 14 answers, and the Arc and Toptal pages in 6 each. A development company fits when the chatbot must read orders or tickets in your own systems and be supported after launch. FactoryJet is that kind of firm, and we work remotely with US clients. For answers from your help pages only, an off-the-shelf tool can be enough.',
+    link: { url: '/services/ai-chatbot-development', label: 'AI chatbot development' } },
 ];

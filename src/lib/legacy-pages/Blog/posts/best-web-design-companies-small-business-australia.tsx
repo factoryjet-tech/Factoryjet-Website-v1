@@ -6,7 +6,7 @@ import type { BlogPost } from '../data.types';
  *
  * WHAT CHANGED AND WHY: the April 2026 version was titled "15 Best" but named no real companies. Its comparison
  * table listed invented, anonymous agencies ("Local Sydney Agency A" and so on) with made-up prices and scores.
- * It also positioned FactoryJet as an offshore team "from Bengaluru", quoted pounds sterling and US dollars,
+ * It also named a location for the FactoryJet team, quoted pounds sterling and US dollars,
  * promised "92+ guaranteed" Lighthouse scores, "2-4 week" delivery and "98% satisfaction", and used several
  * unsourced statistics. All of that is gone. Do not reintroduce it.
  *
@@ -34,10 +34,11 @@ export const post: BlogPost = {
   id: '116',
   slug: "best-web-design-companies-small-business-australia",
   title: "Best Web Design Companies for Small Business in Australia (2026)",
-  excerpt: "How to choose a web design company as an Australian small business in 2026. Six companies whose Australian bases and services we checked on their own websites, sourced AUD price ranges from Australian price guides, and the checks that separate a good agency from a risky one.",
+  excerpt: "How to choose a web design company as an Australian small business in 2026. Six companies whose services we checked on their own websites, sourced AUD price ranges from Australian price guides, and the checks that separate a good agency from a risky one.",
   category: "Web Design & Strategy",
   author: 'Bhavesh Barot',
   date: "Sep 26, 2026",
+  dateModified: "Oct 10, 2026",
   readTime: '12 min read',
   imageUrl: "/blog-images/best-web-design-companies-small-business-australia-hero.webp",
   meta: {
@@ -48,7 +49,7 @@ export const post: BlogPost = {
     "Australian price guides put a small business website at roughly $3,500 to $7,000 for 5 to 8 pages (Keen to Design, April 2026) or $3,000 to $7,000 for a brochure site (WolfIQ, 2026 guide). These are typical Australian market ranges, not FactoryJet prices.",
     "A custom mid-range WordPress site runs about $7,000 to $15,000, and an online store $8,000 to $25,000 and up (Keen to Design, April 2026).",
     "Running costs matter as much as the build: WolfIQ puts a brochure site at about $50 to $200 a month once hosting, updates and support are included.",
-    "The six companies below all publish their Australian base on their own websites. FactoryJet is the exception: we have no Australian office and work remotely in Australian business hours.",
+    "Five companies below publish their Australian base on their own websites. FactoryJet works remotely with Australian clients in Australian business hours.",
     "Ask every agency for live sites (not screenshots), a named reference you can phone, a written scope with revision limits, and who owns the domain, code and hosting when the job ends.",
     "Speed, accessibility and search setup should be in the first build. Retrofitting them later costs more than doing them once.",
   ],
@@ -58,7 +59,7 @@ export const post: BlogPost = {
     { q: "Should Australian small businesses use WordPress, Shopify, or custom code?", a: "WordPress suits service businesses that publish content and want full control of search settings. Shopify suits businesses that sell products and want payments, Afterpay and hosting handled for them; its Australian Basic plan is A$56 a month on monthly billing. Custom code makes sense when you need features no platform does well. Pick the platform your team can run day to day, not the one the agency prefers." },
     { q: "What is a good Lighthouse Performance score for a small business website?", a: "Aim for 90 or more on mobile for Performance, Accessibility, Best Practices and SEO, and pass Google's Core Web Vitals in real-user data. Scores change as you add plugins, images and tracking, so treat speed as something you keep rather than a launch-day number. Ask agencies for PageSpeed Insights results from sites they launched in the last year, then run the test yourself." },
     { q: "Do I need ongoing maintenance for my small business website?", a: "Yes. WordPress sites need regular core, theme and plugin updates, backups and security checks, or they become easy targets. Keen to Design puts annual maintenance at $500 to $3,000 (April 2026), and WolfIQ puts a brochure site's running costs at $50 to $200 a month including hosting. Shopify handles hosting and security for you, but apps and theme changes still need looking after." },
-    { q: "Can a web design company without an Australian office serve Australian small businesses well?", a: "Yes, if they work in your business hours, understand Australian rules and stay reachable after launch. FactoryJet has no Australian office. Our senior engineers work remotely in Australian business hours, set up the Privacy Act and Australian Consumer Law basics as standard, support the site after launch, and hand you ownership of the code, domain and accounts. Ask any remote team for references you can phone." },
+    { q: "Can a remote web design company serve Australian small businesses well?", a: "Yes, if they work in your business hours, understand Australian rules and stay reachable after launch. FactoryJet's senior engineers work remotely in Australian business hours, set up the Privacy Act and Australian Consumer Law basics as standard, support the site after launch, and hand you ownership of the code, domain and accounts. Ask any remote team for references you can phone." },
     { q: "What is the difference between a budget template site and a custom website?", a: "A template site uses a pre-built theme with light changes, a handful of pages and basic search setup. Keen to Design puts template builds with a freelancer at about $400 to $1,500. A custom site includes design made for your business, more pages, structured data, integrations and conversion work, and costs several times more. For a simple brochure site, custom work is not always better value." },
     { q: "How do I verify an agency's client claims?", a: "Ask for live website addresses, not screenshots, and a named contact with a role at a business you can look up. Real clients have real businesses you can find. Ask for PageSpeed Insights results on those live sites and specific project details: platform, page count and integrations. Be cautious with agencies that only offer first names, logos without links, or results with no source." },
     { q: "Should Australian small businesses prioritise mobile-first design?", a: "Yes. Google ranks sites on their mobile version, and many of your visitors will arrive on a phone. Make sure your agency tests on real devices, not only in a desktop browser, and builds touch-friendly navigation with tap targets that meet WCAG 2.2 guidance. Check the site on a mid-range Android phone on mobile data, not just the latest iPhone on office wifi." },
@@ -95,7 +96,7 @@ export const post: BlogPost = {
       </div>
 
       <p className="text-lg leading-relaxed mb-6">
-        The best web design company for an Australian small business is one that shows you live sites in your industry, gives you a written scope with a fixed price, builds speed and search setup into the first version, and stays reachable after launch. Australian price guides put a small business site at roughly $3,500 to $7,000 in 2026. Below are six companies whose Australian base and services we checked on their own websites, including us, plus the checks that tell a good agency from a risky one.
+        The best web design company for an Australian small business is one that shows you live sites in your industry, gives you a written scope with a fixed price, builds speed and search setup into the first version, and stays reachable after launch. Australian price guides put a small business site at roughly $3,500 to $7,000 in 2026. Below are six companies whose services we checked on their own websites, including us, plus the checks that tell a good agency from a risky one.
       </p>
 
       <div className="bg-orange-50 border-l-4 border-orange-600 p-5 rounded-r-lg mb-8">
@@ -157,7 +158,7 @@ export const post: BlogPost = {
             </tr>
             <tr className="bg-gray-100 font-bold">
               <td className="border p-3"><a href="/au" className={linkCls}>FactoryJet</a> (that is us)</td>
-              <td className="border p-3">No Australian office; senior engineers work remotely in Australian business hours</td>
+              <td className="border p-3">Senior engineers work remotely in Australian business hours</td>
               <td className="border p-3">Web design and development, Shopify and ecommerce, SEO and AI SEO, AI agents; support after launch</td>
               <td className="border p-3">You want a fixed scope, search and AI visibility built in, and a team that stays on after launch. You own the code and accounts</td>
             </tr>
@@ -194,7 +195,7 @@ export const post: BlogPost = {
 
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Local Agency or Remote Team: What Actually Matters</h2>
-      <p className="mb-4">Location matters less than it used to, and more than remote teams like to admit. A local agency can sit in your shop for a discovery session and often knows your suburb and your customers. That is real value for hospitality and retail brands where local context shapes the message. A remote team can be just as good if three things are true. They work in your business hours, so questions get answered the same day. They understand Australian rules, including the Privacy Act 1988, GST display and Australian Consumer Law, without being told. And they stay reachable after launch, because most website problems appear months later, when a plugin update or a payment change breaks something. FactoryJet is a remote team: we have no Australian office. Our senior engineers work in Australian business hours, support the site after launch, and hand you ownership of the code, domain and accounts. Whoever you choose, local or remote, ask the same questions: who writes the code, who answers when something breaks, how fast, and who owns everything at the end.</p>
+      <p className="mb-4">Location matters less than it used to, and more than remote teams like to admit. A local agency can sit in your shop for a discovery session and often knows your suburb and your customers. That is real value for hospitality and retail brands where local context shapes the message. A remote team can be just as good if three things are true. They work in your business hours, so questions get answered the same day. They understand Australian rules, including the Privacy Act 1988, GST display and Australian Consumer Law, without being told. And they stay reachable after launch, because most website problems appear months later, when a plugin update or a payment change breaks something. FactoryJet is a remote team. Our senior engineers work in Australian business hours, support the site after launch, and hand you ownership of the code, domain and accounts. Whoever you choose, local or remote, ask the same questions: who writes the code, who answers when something breaks, how fast, and who owns everything at the end.</p>
       <p className="mb-4">➡ Learn more: <a href="/au/website-maintenance" className={linkCls}>Website maintenance and support in Australia</a></p>
 
 

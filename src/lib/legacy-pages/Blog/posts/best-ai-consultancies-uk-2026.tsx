@@ -216,12 +216,12 @@ const FIRMS: Firm[] = [
     url: 'https://factoryjet.com/uk/ai-consulting',
     source: 'https://factoryjet.com/uk/ai-consulting',
     group: 'Us',
-    based: 'No UK office. We work remotely with UK clients, over video calls in UK working hours',
+    based: 'Works remotely with UK clients, over video calls in UK working hours',
     type: 'AI consulting that leads into a build: AI agents and AI inside ecommerce and operations',
     clients: 'Small and mid-size businesses; 500+ businesses served since 2014',
     what: 'We advise and then build. We map one process, check the data and the UK GDPR position, tell you whether to buy a tool or build one, and then design, build and support the AI agent or integration if a build is the right call. Our strongest ground is where AI meets online stores, B2B ordering, finance and operations. The founder is involved in every project, we can host on UK or EU cloud, and you own what we build.',
     bestFor: 'Ecommerce and operations-heavy small and mid-size companies that want the advice and the build from one team.',
-    ask: 'Whether a remote team suits you. If you need people in your office, security-cleared staff or a board paper from a known name, pick a UK firm from this list.',
+    ask: 'Whether a remote team suits you. If you need people in your office every week, security-cleared staff or a board paper from a known name, pick another firm from this list.',
   },
 ];
 
@@ -361,7 +361,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: "What are the best AI consulting companies in the UK?",
-    a: "It depends on your size. For small firms: The AI Consultancy, AI Expert UK and Optimus Consulting. For companies of about 50 people: OpenKit, iwantmore.ai, Helium42 and Generativ. For mid-market companies with a data team: Fifty One Degrees, Winder.AI and Datatonic. For regulated organisations: Faculty, Aiimi and Transparity. For the largest programmes, the Big Four and the strategy firms. FactoryJet suits ecommerce and operations work done remotely.",
+    a: "It depends on your size. For small firms: The AI Consultancy, AI Expert UK and Optimus Consulting. For companies of about 50 people: OpenKit, iwantmore.ai, Helium42 and Generativ. For mid-market companies with a data team: Fifty One Degrees, Winder.AI and Datatonic. For regulated organisations: Faculty, Aiimi and Transparity. For the largest programmes, the Big Four and the strategy firms. FactoryJet suits ecommerce and operations work.",
   },
   {
     q: "Is there a list of AI consulting companies in the UK?",
@@ -373,7 +373,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: "What consultancies can help an e-commerce business develop new AI-powered digital products?",
-    a: "Pick a firm that builds stores as well as AI. GPMD in London offers AI consultancy for ecommerce businesses and builds custom agents alongside its Shopify and BigCommerce work. Generativ lists consumer and ecommerce brands among its industries. FactoryJet builds online stores, B2B ordering and the AI agents that sit inside them, working remotely. Ask each one to show an AI feature running in a live store.",
+    a: "Pick a firm that builds stores as well as AI. GPMD in London offers AI consultancy for ecommerce businesses and builds custom agents alongside its Shopify and BigCommerce work. Generativ lists consumer and ecommerce brands among its industries. FactoryJet builds online stores, B2B ordering and the AI agents that sit inside them. Ask each one to show an AI feature running in a live store.",
   },
   {
     q: "Who are the generative AI consultants for business in London?",
@@ -389,7 +389,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: "What is the best nearshore generative AI consulting firm for a UK company?",
-    a: "Nearshore means a team in a nearby country and a similar time zone, which for a UK buyer usually means Europe. Helium42 works from London and Hamminkeln in Germany. Winder.AI says the engineers its founder works with most are in London and Italy. FactoryJet is offshore: we work remotely and hold calls in UK working hours. If you need the whole working day to overlap, choose a UK or European team.",
+    a: "Nearshore means a team in a nearby country and a similar time zone, which for a UK buyer usually means Europe. Helium42 works from London and Hamminkeln in Germany. Winder.AI says the engineers its founder works with most are in London and Italy. FactoryJet works remotely with UK clients and holds calls in UK working hours.",
   },
   {
     q: "I run a creative agency in Bristol. Who can train my team to use AI in real client workflows?",
@@ -456,12 +456,8 @@ const FAQS: FAQItem[] = [
     a: "Often, yes. A DPIA, or data protection impact assessment, is a written check of the risks a project poses to people's personal data. The Information Commissioner's Office says that in the vast majority of cases, using AI involves processing likely to result in a high risk, which triggers the legal requirement to do one. You assess it case by case. A good consultancy raises it before the build starts.",
   },
   {
-    q: "Does FactoryJet have a UK office?",
-    a: "No. We work remotely with UK clients and hold calls in UK working hours. We can host what we build on UK or EU cloud. If you need consultants in your office every week, security-cleared staff or a public sector framework, choose a UK firm from this guide. If the work is mostly software, integrations and support, a remote team can do it well.",
-  },
-  {
     q: "Is it safe to pick a consultancy that an AI assistant recommended?",
-    a: "Treat it as a lead. We read 140 AI answers to 13 UK buyer questions on 9 October 2026. Among the pages they cited most, comparison lists were cited 125 times, and three of the five rival lists we opened place the author's own firm first or second. Check the firm's own site for a UK address, look for named clients and ask to speak to one before you commit.",
+    a: "Treat it as a lead. We read 140 AI answers to 13 UK buyer questions on 9 October 2026. Among the pages they cited most, comparison lists were cited 125 times, and three of the five rival lists we opened place the author's own firm first or second. Check the firm's own site, look for named clients and ask to speak to one before you commit.",
   },
   {
     q: "AI consultancy or AI agent development company: which do I need?",
@@ -480,7 +476,7 @@ export const post: BlogPost = {
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Oct 9, 2026',
-  dateModified: 'Oct 9, 2026',
+  dateModified: 'Oct 10, 2026',
   readTime: '24 min read',
   imageUrl: `${IMG}-hero.webp`,
   imageAlt:
@@ -494,7 +490,7 @@ export const post: BlogPost = {
     "Every fact below was read on each firm's own website on 9 October 2026. Nobody paid to be listed, and the order is not a ranking.",
     'Seven of the 13 other firms publish prices. A first step runs from £2,999 for a workshop (AI Expert UK) to £10,000 for an audit (OpenKit). Most figures exclude VAT.',
     'Seven of the 14 list a London address on their own sites. The London table gives each postcode and its source.',
-    'FactoryJet is on this list. We have no UK office, we work remotely, and we advise and then build. If you need people in your office, choose a UK firm.',
+    'FactoryJet is on this list. We work remotely with UK clients, and we advise and then build. If you need people in your office every week, choose a firm near you.',
   ],
   faqs: FAQS,
   content: (
@@ -512,7 +508,7 @@ export const post: BlogPost = {
               description: META_DESCRIPTION,
               inLanguage: 'en-GB',
               datePublished: '2026-10-09',
-              dateModified: '2026-10-09',
+              dateModified: '2026-10-10',
               isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com' },
               publisher: { '@id': 'https://factoryjet.com/#organization' },
               about: { '@type': 'Thing', name: 'AI consultancies in the United Kingdom' },
@@ -541,7 +537,7 @@ export const post: BlogPost = {
       <div id="answer-first" className="mb-8 rounded-2xl border border-gray-200 bg-gray-50 p-6 not-prose">
         <p className="text-sm font-semibold uppercase tracking-wide text-[#B23E13] mb-2">The short answer</p>
         <p className="text-gray-800 leading-relaxed mb-3">
-          The best AI consultancy in the UK depends on your size. For a firm of about 10 people: The AI Consultancy, AI Expert UK or Optimus Consulting. For about 50 people: OpenKit, iwantmore.ai, Helium42 or Generativ. With a data team: Fifty One Degrees, Winder.AI or Datatonic. For regulated work: Faculty, Aiimi or Transparity. For ecommerce and operations, done remotely: FactoryJet.
+          The best AI consultancy in the UK depends on your size. For a firm of about 10 people: The AI Consultancy, AI Expert UK or Optimus Consulting. For about 50 people: OpenKit, iwantmore.ai, Helium42 or Generativ. With a data team: Fifty One Degrees, Winder.AI or Datatonic. For regulated work: Faculty, Aiimi or Transparity. For ecommerce and operations: FactoryJet.
         </p>
         <p className="text-gray-800 leading-relaxed mb-3">
           We checked all 14 on their own websites on 9 October 2026: where each is based, what it does, who it serves and any price it publishes. Nobody paid to be listed. Seven list a London address. Firms are grouped by the buyer they suit, and the order inside a group means nothing.
@@ -555,10 +551,10 @@ export const post: BlogPost = {
         Ask an AI assistant for the best AI consultancy in the UK and the answer often leans on a ranking of global firms. We know because we checked. On 9 October 2026 we read 140 answers to 13 UK buyer questions from ChatGPT, Claude, Gemini, Perplexity and Google&rsquo;s AI results. Two sources tied as the most cited, with at least 21 citations each. One was The AI Consultancy&rsquo;s own website, across four questions. The other was <a href={SOURCES.ranking} className={link} rel="noopener" target="_blank">consultancy.uk&rsquo;s ranking of AI and GenAI consulting firms</a>, across three. The ranking&rsquo;s top level holds Accenture, McKinsey, Deloitte, Bain, PwC, IBM Consulting and Boston Consulting Group.
       </p>
       <p className="mb-4">
-        That helps if you run a bank. It is little help to a 10-person surveying practice or a 50-person distributor. So we did the slow part. We took the UK firms that came up in those answers and in UK search results, opened each firm&rsquo;s own website, and wrote down only what the firm says about itself. Every profile links to its source. If we could not find a UK base on a firm&rsquo;s own site, the firm is not here. We are the one exception, and we say so.
+        That helps if you run a bank. It is little help to a 10-person surveying practice or a 50-person distributor. So we did the slow part. We took the UK firms that came up in those answers and in UK search results, opened each firm&rsquo;s own website, and wrote down only what the firm says about itself. Every profile links to its source. If we could not find a UK base on another firm&rsquo;s own site, that firm is not here.
       </p>
       <p className="mb-4">
-        <strong>A note on honesty.</strong> FactoryJet advises on AI and then builds it, so we are on this list. We put ourselves last. We say plainly that we have no UK office and work remotely, and we tell you where another firm on this page will suit you better. Three of the five rival lists we read place the author&rsquo;s own firm first or second, so read every list with that in mind, including this one.
+        <strong>A note on honesty.</strong> FactoryJet advises on AI and then builds it, so we are on this list. We put ourselves last, and we tell you where another firm on this page will suit you better. Three of the five rival lists we read place the author&rsquo;s own firm first or second, so read every list with that in mind, including this one.
       </p>
       <p className="mb-6">
         A few terms first. An <strong>AI consultancy</strong> helps you decide where AI fits and how to bring it in safely. An <strong>AI agent</strong> is software that takes actions in your systems, such as updating an order or drafting a reply for approval, where a chatbot only talks. A <strong>DPIA</strong> (data protection impact assessment) is a written check of the risks to people&rsquo;s personal data. <strong>Mid-market</strong> means companies between small and corporate; one firm below defines it as £5m to £250m in turnover.
@@ -603,7 +599,7 @@ export const post: BlogPost = {
       <ol className="list-decimal pl-6 mb-6 space-y-2">
         <li><strong>Start with what buyers ask.</strong> Ten of our 13 questions came from Google Search Console, where searchers had been shown our pages for them. Three we wrote ourselves, such as &ldquo;Best small business AI consultant UK&rdquo;. We read 140 AI answers to them on 9 October 2026.</li>
         <li><strong>Note what the assistants cite.</strong> Among the pages cited most for each question, comparison lists were cited 125 times, service pages 98 times, home pages 34 times and articles 22 times. The AI Consultancy&rsquo;s own site was cited at least 21 times across four questions, the most of any consultancy in our sample.</li>
-        <li><strong>Keep only firms that show a UK base.</strong> Each firm had to give a UK address or say it is UK-based on its own site. We also left out two names that older lists still carry: <a href={SOURCES.tomoro} className={link} rel="noopener" target="_blank">tomoro.ai</a> now redirects to deploy.co, a site titled The OpenAI Deployment Company, and the <a href={SOURCES.meshai} className={link} rel="noopener" target="_blank">Mesh-AI home page</a> says it is now part of Indicium AI.</li>
+        <li><strong>Check each firm for a UK base.</strong> Each of the 13 other firms had to give a UK address or say it is UK-based on its own site. We also left out two names that older lists still carry: <a href={SOURCES.tomoro} className={link} rel="noopener" target="_blank">tomoro.ai</a> now redirects to deploy.co, a site titled The OpenAI Deployment Company, and the <a href={SOURCES.meshai} className={link} rel="noopener" target="_blank">Mesh-AI home page</a> says it is now part of Indicium AI.</li>
         <li><strong>Group by buyer, with no ranking.</strong> A list that puts a 10-person boutique next to a firm with thousands of staff helps nobody. We sorted firms into four groups by the buyer they describe on their own sites.</li>
         <li><strong>Read the source and keep the quote.</strong> Every description comes from the firm&rsquo;s own pages, opened on 9 October 2026. For each fact we saved the line that supports it: 170 lines in all. Client names and counts are the firm&rsquo;s own claims, and we say so.</li>
         <li><strong>Prices only from the firm.</strong> Where a firm publishes a price, we quote it and link the page. We never guess another company&rsquo;s price, and we give no star ratings, because we have not hired these firms.</li>
@@ -618,7 +614,7 @@ export const post: BlogPost = {
         const inGroup = FIRMS.filter((f) => f.group === g);
         return (
           <section key={g} className="mb-6">
-            <h3 className="text-xl font-bold mt-8 mb-2">{g === 'Us' ? 'Remote, advice then build: FactoryJet' : g}</h3>
+            <h3 className="text-xl font-bold mt-8 mb-2">{g === 'Us' ? 'Advice, then the build: FactoryJet' : g}</h3>
             <p className="mb-4 text-gray-700">{GROUP_INTRO[g]}</p>
             {inGroup.map((f) => {
               const n = FIRMS.indexOf(f) + 1;
@@ -723,7 +719,7 @@ export const post: BlogPost = {
 
       <h3 className="text-xl font-bold mt-8 mb-2">Best AI consultancy in London for implementing AI in a 50-person company?</h3>
       <p className="mb-4">
-        Call three. <strong>The AI Consultancy</strong> in Hoxton publishes fixed fees for each stage, from a two-week readiness review to a production build, and runs workshops face to face. <strong>Generativ</strong> has a London office on Paul Street and joins CRMs, inboxes and AI agents into one system. <strong>Helium42</strong> on Uxbridge Road trains your staff during the build. If a security or procurement review comes first, add <strong>OpenKit</strong>, which is based in Cambridge and Durham and says it holds ISO 27001. FactoryJet fits when the work is tied to an online store or an order process and remote delivery suits you.
+        Call three. <strong>The AI Consultancy</strong> in Hoxton publishes fixed fees for each stage, from a two-week readiness review to a production build, and runs workshops face to face. <strong>Generativ</strong> has a London office on Paul Street and joins CRMs, inboxes and AI agents into one system. <strong>Helium42</strong> on Uxbridge Road trains your staff during the build. If a security or procurement review comes first, add <strong>OpenKit</strong>, which is based in Cambridge and Durham and says it holds ISO 27001. FactoryJet fits when the work is tied to an online store or an order process.
       </p>
 
       <h3 className="text-xl font-bold mt-8 mb-2">Generative AI consultants for business in London</h3>
@@ -824,19 +820,19 @@ export const post: BlogPost = {
               <td className="p-3 border border-gray-200 font-semibold">On-site workshops</td>
               <td className="p-3 border border-gray-200">Yes, near their offices</td>
               <td className="p-3 border border-gray-200">Yes, nationwide</td>
-              <td className="p-3 border border-gray-200 bg-orange-50">No. Video workshops in UK working hours</td>
+              <td className="p-3 border border-gray-200 bg-orange-50">Video workshops in UK working hours</td>
             </tr>
             <tr className="odd:bg-white even:bg-gray-50">
               <td className="p-3 border border-gray-200 font-semibold">Assurance and sign-off</td>
               <td className="p-3 border border-gray-200">Varies; ask for certificates and method</td>
               <td className="p-3 border border-gray-200">Deep, with audit, risk and assurance teams in house</td>
-              <td className="p-3 border border-gray-200 bg-orange-50">Human approval steps and logs built in; no audit practice</td>
+              <td className="p-3 border border-gray-200 bg-orange-50">Human approval steps and logs built in</td>
             </tr>
             <tr className="odd:bg-white even:bg-gray-50">
               <td className="p-3 border border-gray-200 font-semibold">Watch out for</td>
               <td className="p-3 border border-gray-200">Key-person risk in the smallest teams</td>
               <td className="p-3 border border-gray-200">Programmes sized for large organisations</td>
-              <td className="p-3 border border-gray-200 bg-orange-50">No UK office; wrong choice if you need people on site</td>
+              <td className="p-3 border border-gray-200 bg-orange-50">Not the right choice if you need people on site every week</td>
             </tr>
           </tbody>
         </table>
@@ -978,7 +974,7 @@ export const post: BlogPost = {
         <strong>Where we fit:</strong> UK small and mid-size businesses that sell online or run order-heavy operations and want the advice and the build from one team. Buyers who want to see working software on their own data before they sign a contract, a fixed quote per stage and a team that stays after launch.
       </p>
       <p className="mb-4">
-        <strong>Where we do not:</strong> We have no UK office. If you want workshops in your building, pick a UK firm near you. If you need security-cleared consultants, Aiimi says all of its are. If you buy through G-Cloud, Winder.AI can contract that way. For a Microsoft 365 Copilot roll-out, Transparity is the natural fit, and for Google Cloud data work, Datatonic. If your board wants a strategy paper from a known name, that is Big Four ground.
+        <strong>Where we do not:</strong> If you want workshops in your building, pick a firm near you. If you need security-cleared consultants, Aiimi says all of its are. If you buy through G-Cloud, Winder.AI can contract that way. For a Microsoft 365 Copilot roll-out, Transparity is the natural fit, and for Google Cloud data work, Datatonic. If your board wants a strategy paper from a known name, that is Big Four ground.
       </p>
       <p className="mb-6">
         Our services for UK businesses: <a href="/uk/ai-consulting" className={link}>AI consulting</a>, <a href="/uk/ai-agents" className={link}>AI agent development</a> and <a href="/uk/ai-development" className={link}>custom AI development</a>. If you are still working out what you need, read <a href="/blog/what-does-an-ai-automation-agency-do-uk" className={link}>what an AI automation agency does</a> and <a href="/blog/how-to-build-an-ai-agent-uk-2026" className={link}>how to build an AI agent in the UK</a>.

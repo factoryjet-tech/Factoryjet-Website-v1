@@ -92,11 +92,6 @@ const jsonLd = {
         { '@type': 'City', name: 'Birmingham' },
         { '@type': 'AdministrativeArea', name: 'West Midlands' },
       ],
-      geo: {
-        '@type': 'GeoCoordinates',
-        latitude: 52.4862,
-        longitude: -1.8904,
-      },
       author: AUTHOR,
     },
     {

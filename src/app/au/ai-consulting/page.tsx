@@ -15,7 +15,7 @@ import './page.css';
 import { aiConsultingAlternates } from '@/data/hreflangMap';
 
 const CANONICAL = 'https://factoryjet.com/au/ai-consulting';
-const UPDATED = '2026-09-26';
+const UPDATED = '2026-10-10';
 const TITLE = 'AI Consulting Australia | Consultants Who Build | FactoryJet';
 const DESCRIPTION =
   'AI consulting for Australian SMEs: we find where AI pays off, check your data and Privacy Act duties, decide buy or build, then build it. Founder-led.';
@@ -53,6 +53,21 @@ const SRC_OAIC_ADM =
 // network on 2026-09-25, so this secondary source is the verified link.)
 const SRC_AI6 =
   'https://www.allens.com.au/insights-news/insights/2025/11/governance-doesnt-stand-still-9-faqs-to-help-understand-the-governments-new-guidance-for-ai-adoption/';
+// National AI Centre primary sources, opened and read 2026-10-09 in a browser.
+// Foundations page lists the 6 essential practices by name. Its PDF (October
+// 2025) says: "It is the first update to Australia's Voluntary AI Safety
+// Standard (VAISS), launched in 2024. In this update, published in October
+// 2025, we have: condensed 10 guardrails into 6 essential practices". Neither
+// the pages nor the two PDFs say "replaces", and neither calls the Guidance
+// "voluntary", so the copy below says neither.
+const SRC_NAIC_GUIDANCE =
+  'https://www.ai.gov.au/staying-safe-and-responsible/essential-ai-practices/guidance-ai-adoption-foundations';
+// VAISS publication page (publisher: National Artificial Intelligence Centre):
+// "On 21 October 2025, we published the Guidance for AI Adoption, which
+// outlines 6 essential practices for safe and responsible AI governance. This
+// updated and simplified guidance for industry evolves the Voluntary AI Safety
+// Standard." and "The standard consists of 10 voluntary guardrails".
+const SRC_NAIC_VAISS = 'https://www.industry.gov.au/publications/voluntary-ai-safety-standard';
 
 /* ─── FAQ source of truth (drives UI + FAQPage schema) ─────────────── */
 const FAQ_CATEGORIES = [
@@ -142,7 +157,8 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   { category: 'data', question: 'What changes on 10 December 2026 for automated decisions?',
     answer: 'Under the Privacy and Other Legislation Amendment Act 2024, from 10 December 2026 organisations covered by the Privacy Act that use personal information in automated decisions that could affect people’s rights or interests must explain this in their privacy policy. If an AI system you plan will help make decisions about customers or staff, we flag it early so your policy can be updated.' },
   { category: 'data', question: 'What is the Australian Government’s guidance for safe and responsible AI?',
-    answer: 'The National AI Centre published the Guidance for AI Adoption, which updates and replaces the earlier Voluntary AI Safety Standard. It sets out six essential practices: decide who is accountable, understand impacts and plan accordingly, measure and manage risks, share essential information, test and monitor, and maintain human control. It is voluntary, and we use it as the checklist for our governance work.' },
+    answer: 'The National AI Centre published the Guidance for AI Adoption on 21 October 2025. The Centre calls it the first update to the Voluntary AI Safety Standard, launched in 2024, and says the update condensed that standard’s 10 guardrails into 6 essential practices: decide who is accountable, understand impacts and plan accordingly, measure and manage risks, share essential information, test and monitor, and maintain human control. We use it as the checklist for our governance work.',
+    links: [{ href: SRC_NAIC_GUIDANCE, label: 'National AI Centre, Guidance for AI Adoption' }, { href: SRC_NAIC_VAISS, label: 'National AI Centre, Voluntary AI Safety Standard' }] },
   { category: 'data', question: 'Do we need clean data before hiring an AI consultant?',
     answer: 'No. Finding out how clean your data is, and whether it is good enough for a given use case, is part of the job. Many useful first projects run on data you already have in documents, emails, Xero, MYOB or your CRM. If a use case needs better data, we tell you exactly what to fix and in what order, rather than asking you to tidy everything first.' },
   { category: 'data', question: 'Do you also build what you recommend?',
@@ -498,7 +514,7 @@ export default function AiConsultingAUPage() {
         <div className="wrap byline">
           <div className="av">BB</div>
           <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ businesses served since 2014</span></div>
-          <div className="upd">Last updated<br />26 September 2026</div>
+          <div className="upd">Last updated<br />10 October 2026</div>
         </div>
 
         {/* ═══ ANSWER-FIRST DEFINITION (GEO) → Family A facts ═══ */}
@@ -802,8 +818,9 @@ export default function AiConsultingAUPage() {
                 <div className="fact"><div className="sec">§04</div><div>
                   <p>
                     On the wider &ldquo;safe and responsible AI&rdquo; front, the Australian Government’s National AI Centre
-                    published the Guidance for AI Adoption, which updates and replaces the earlier Voluntary AI Safety
-                    Standard. It is voluntary, and its six essential practices make a sensible governance checklist for
+                    published the Guidance for AI Adoption on 21 October 2025. The Centre calls it the first update to
+                    the Voluntary AI Safety Standard, launched in 2024, and says the update condensed that standard’s 10
+                    guardrails into 6 essential practices. Those six practices make a sensible governance checklist for
                     any business: decide who is accountable, understand impacts and plan accordingly, measure and manage
                     risks, share essential information, test and monitor, and maintain human control.
                   </p>
@@ -811,6 +828,8 @@ export default function AiConsultingAUPage() {
                     Sources: <a href={SRC_OAIC_AI} {...extLink}>OAIC, guidance on privacy and the use of commercially available AI products</a>;{' '}
                     <a href={SRC_OAIC_APPS} {...extLink}>OAIC, Australian Privacy Principles</a>;{' '}
                     <a href={SRC_OAIC_ADM} {...extLink}>OAIC, transparency in automated decision making</a>;{' '}
+                    <a href={SRC_NAIC_GUIDANCE} {...extLink}>National AI Centre, Guidance for AI Adoption</a>;{' '}
+                    <a href={SRC_NAIC_VAISS} {...extLink}>National AI Centre, Voluntary AI Safety Standard</a>;{' '}
                     <a href={SRC_AI6} {...extLink}>Allens, FAQs on the Guidance for AI Adoption</a>.
                   </p>
                 </div></div>
@@ -1002,7 +1021,7 @@ export default function AiConsultingAUPage() {
               ))}
             </div>
             <p className="sub-note">
-              Firms named from live Australian search results and AI assistant answers for AI consulting queries, September 2026. Each company’s own website was checked on 26 September 2026 for an Australian office and the services named. Listing is not endorsement.
+              Firms named from live Australian search results and AI assistant answers for AI consulting queries, September 2026. Each other company’s own website was checked on 26 September 2026 for an Australian office and the services named. Listing is not endorsement.
             </p>
             <p className="sub-note">
               For a wider shortlist, we compare 13 Australian AI consultancies and agencies by location, client size,

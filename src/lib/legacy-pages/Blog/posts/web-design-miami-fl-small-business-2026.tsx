@@ -29,7 +29,7 @@ export const post: BlogPost = {
   faqs: [
     {
       q: 'How much does web design cost for Miami FL small businesses in 2026?',
-      a: 'Miami local web design agencies typically charge $10,000–$30,000 for a 5–8 page professional small business website. Miami\'s high cost of living, premium office space in Brickell and Miami Beach, and competition for bilingual talent drive these prices. Offshore agencies with US business-hour support deliver the same Lighthouse 95+ quality for $2,000–$5,000: a 60–70% cost reduction. For Miami SMBs in competitive sectors like hospitality or real estate, that savings funds significant Google Ads or social media budget.',
+      a: 'Miami local web design agencies typically charge $10,000–$30,000 for a 5–8 page professional small business website. Miami\'s high cost of living, premium office space in Brickell and Miami Beach, and competition for bilingual talent drive these prices. Remote agencies with US business-hour support deliver the same Lighthouse 95+ quality for $2,000–$5,000: a 60–70% cost reduction. For Miami SMBs in competitive sectors like hospitality or real estate, that savings funds significant Google Ads or social media budget.',
     },
     {
       q: 'Do Miami small businesses need a bilingual (Spanish/English) website?',
@@ -53,7 +53,7 @@ export const post: BlogPost = {
     },
     {
       q: 'Is it safe to hire a non-local agency for my Miami business website?',
-      a: 'Yes, with proper vetting. What matters for Miami businesses is: Lighthouse 90+ scores on live client sites (verify at pagespeed.web.dev), fixed-price contracts with US legal jurisdiction, named references you can call, and US business-hour availability for project communication. Miami-based agencies are not inherently better at web performance than remote agencies, in fact, many Miami agencies outsource their development to the same offshore teams anyway. The local premium buys in-person meetings, not better code.',
+      a: 'Yes, with proper vetting. What matters for Miami businesses is: Lighthouse 90+ scores on live client sites (verify at pagespeed.web.dev), fixed-price contracts with US legal jurisdiction, named references you can call, and US business-hour availability for project communication. Miami-based agencies are not inherently better at web performance than remote agencies, in fact, many Miami agencies outsource their development anyway. The local premium buys in-person meetings, not better code.',
     },
     {
       q: 'Can FactoryJet build a bilingual website for my Miami business?',
@@ -85,7 +85,7 @@ export const post: BlogPost = {
         Miami's premium real estate, talent market, and cost of living have pushed local agency rates to some of the highest in the Southeast US. A Brickell or Miami Beach web design studio charges $125–$200/hour. Project overhead adds 40–60%. A 5-page professional website runs $10,000–$30,000 from local Miami agencies.
       </p>
       <p className="mb-4">
-        The technical reality: the same React, Next.js, and performance optimization expertise that Miami agencies bill at $150/hour is globally available at $30–$55/hour from India-based agencies with US business-hour project management. The code is identical. The Lighthouse scores are identical. The cost difference is purely geographic.
+        The technical reality: the same React, Next.js, and performance optimization expertise that Miami agencies bill at $150/hour is globally available at $30–$55/hour from remote agencies with US business-hour project management. The code is identical. The Lighthouse scores are identical. The cost difference is purely geographic.
       </p>
       <div className="overflow-x-auto mb-8">
         <table className="min-w-full border-collapse border border-gray-300">
@@ -111,7 +111,7 @@ export const post: BlogPost = {
               <td className="border p-3">8–16 weeks</td>
             </tr>
             <tr className="bg-white">
-              <td className="border p-3">FactoryJet (offshore + US support)</td>
+              <td className="border p-3">FactoryJet (US business-hour support)</td>
               <td className="border p-3">Fixed quote after scoping</td>
               <td className="border p-3">Fixed quote after scoping</td>
               <td className="border p-3">7–14 days</td>

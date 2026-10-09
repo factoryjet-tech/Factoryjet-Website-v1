@@ -528,7 +528,7 @@ export default function AiConsultingSections() {
                   <tr><th>Enterprise IT consultancies<br /><span className="mono tableSubLabel">IBM Consulting, The Hackett Group</span></th><td>Big companies modernizing data platforms and ERP</td><td>Data engineering, platform work and AI at scale</td><td>Long programs. Small first projects are rarely their focus</td></tr>
                   <tr><th>Managed IT providers<br /><span className="mono tableSubLabel">Local MSPs</span></th><td>Businesses that want AI bundled with IT and security</td><td>Tool rollout, Microsoft Copilot setup, policies and training</td><td>Strong on setup, lighter on custom builds and integrations</td></tr>
                   <tr><th>Freelance AI consultants</th><td>A single, well-defined task on a tight budget</td><td>Fast advice or a small automation</td><td>One person to rely on for support, and no team behind them when they are away</td></tr>
-                  <tr className="us"><th>FactoryJet<br /><span className="mono tableSubLabel tableSubLabelAccent">Advise, build, support</span></th><td>Small and mid-size US businesses, especially commerce and operations-heavy ones</td><td>Readiness assessment, roadmap, the build itself and monthly support from one team</td><td>We are a smaller firm than the names above. If a global brand on the contract matters most, hire one of them</td></tr>
+                  <tr className="us"><th>FactoryJet<br /><span className="mono tableSubLabel tableSubLabelAccent">Advise, build, support</span></th><td>Small and mid-size US businesses, especially commerce and operations-heavy ones</td><td>Readiness assessment, roadmap, the build itself and monthly support from one team</td><td>Best fit when you want the team that writes the roadmap to build it and support it</td></tr>
                 </tbody>
               </table>
             </div>
@@ -547,7 +547,7 @@ export default function AiConsultingSections() {
               <div className="ventry"><span className="vtag">VERIFIED</span><h3>Every number links to its source</h3><p>Each statistic on this page links to the report it came from. Client assessments follow the same rule: every saving we estimate is built from your own numbers, shown line by line.</p></div>
               <div className="ventry"><span className="vtag">DISCLOSED</span><h3>We tell you when to buy, not build</h3><p>If AI already inside your software does the job, the roadmap says so. A consultant who only ever recommends custom builds is selling builds, not advice.</p></div>
               <div className="ventry"><span className="vtag">OWNED</span><h3>You own everything we build</h3><p>Code, prompts, workflows and AI provider accounts are set up in your name. Nothing we build stops working if you stop working with us.</p></div>
-              <div className="ventry"><span className="vtag">PENDING</span><h3>Named case studies are still being written</h3><p>We would rather publish nothing than a result we cannot prove. Ask for live references and a walkthrough of AI we have running for clients on a call.</p></div>
+              <div className="ventry"><span className="vtag">ON REQUEST</span><h3>We only publish results we can prove</h3><p>Ask for live references and a walkthrough of AI we have running for clients on a call.</p></div>
             </div>
           </div>
         </section>
@@ -580,9 +580,9 @@ export default function AiConsultingSections() {
                   ))}
                   <tr className="us">
                     <th>FactoryJet<br /><span className="mono tableSubLabel tableSubLabelAccent">This page</span></th>
-                    <td className="poscell">Not on page one for either search today.</td>
+                    <td className="poscell">Added for comparison.</td>
                     <td>A readiness assessment, a ranked roadmap, the build itself and monthly support, from Bhavesh and one team.</td>
-                    <td>Far smaller than every firm above. We fit small and mid-size businesses that want advice and a working build from the same people.</td>
+                    <td>We fit small and mid-size businesses that want advice and a working build from the same people.</td>
                   </tr>
                 </tbody>
               </table>

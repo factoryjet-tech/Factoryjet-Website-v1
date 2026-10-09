@@ -15,7 +15,7 @@ const CANONICAL_URL = 'https://factoryjet.com/services/healthcare-ai-agents';
 const PAGE_TITLE = 'Healthcare AI Agents & Medical Receptionists | FactoryJet';
 const PAGE_DESC =
   'Custom HIPAA-compliant healthcare AI agents and medical voice receptionists for US practices, dental clinics, and hospitals. Real EHR sync. Get an audit.';
-const PAGE_MODIFIED = '2026-09-19';
+const PAGE_MODIFIED = '2026-10-10';
 
 /** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
  *  <Breadcrumbs> component and the BreadcrumbList JSON-LD below, so the two
@@ -1263,7 +1263,7 @@ export default function HealthcareAiAgentsPage() {
                   Healthcare systems leave no room for guesswork. At FactoryJet, founder Bhavesh Barot runs every clinical architecture discovery session himself. In the first meeting, we review your call volume, your EHR&apos;s API access, and your HIPAA compliance requirements.
                 </p>
                 <p className="text-base sm:text-lg text-[#46403B] leading-relaxed mb-8">
-                  You work directly with senior systems architects who have already built high-scale voice pipelines and enterprise integrations. We never hand your healthcare infrastructure to junior salespeople or offshore contractors. The same senior-only approach runs across our broader{' '}
+                  You work directly with senior systems architects who have already built high-scale voice pipelines and enterprise integrations. We never hand your healthcare infrastructure to junior salespeople or outside contractors. The same senior-only approach runs across our broader{' '}
                   <Link href="/services/ai-agent-development" className="underline hover:text-[#F05A28]">
                     AI agent development
                   </Link>{' '}

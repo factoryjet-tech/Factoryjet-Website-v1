@@ -15,7 +15,7 @@ const CANONICAL_URL = 'https://factoryjet.com/services/dental-support-organizati
 const PAGE_TITLE = 'AI Receptionist Agents for Dental Support Organizations | FactoryJet';
 const PAGE_DESC =
   'Custom HIPAA-compliant AI receptionist and scheduling agents for dental support organizations (DSOs). Centralized answering across every location, synced with Denticon and Dentrix Ascend. Get an audit.';
-const PAGE_MODIFIED = '2026-09-19';
+const PAGE_MODIFIED = '2026-10-10';
 
 /** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
  *  <Breadcrumbs> component and the BreadcrumbList JSON-LD below, so the two
@@ -1181,7 +1181,7 @@ export default function DentalSupportOrganizationAiAgentsPage() {
                   A portfolio-wide deployment leaves no room for guesswork. At FactoryJet, founder Bhavesh Barot runs every DSO discovery session himself. In the first meeting, we review your location count, which practice management systems your portfolio actually runs, and how your legal entities and BAA structure are set up.
                 </p>
                 <p className="text-base sm:text-lg text-[#46403B] leading-relaxed mb-8">
-                  You work directly with senior systems architects who have already built high-scale voice pipelines and multi-tenant integrations. We never hand a portfolio-wide healthcare deployment to junior salespeople or offshore contractors. The same senior-only approach runs across our broader{' '}
+                  You work directly with senior systems architects who have already built high-scale voice pipelines and multi-tenant integrations. We never hand a portfolio-wide healthcare deployment to junior salespeople or outside contractors. The same senior-only approach runs across our broader{' '}
                   <Link href="/services/healthcare-ai-agents" className="underline hover:text-[#F05A28]">
                     healthcare AI agents
                   </Link>{' '}

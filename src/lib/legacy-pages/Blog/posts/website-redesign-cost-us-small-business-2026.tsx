@@ -15,10 +15,10 @@ export const post: BlogPost = {
   meta: {
     title: 'Website Redesign Cost for US Small Businesses in 2026 | FactoryJet',
     description:
-      'Website redesign costs for US SMBs range from $2,000 to $25,000 in 2026. What drives the price, when to redesign vs. refresh, and how to get Lighthouse 95+ results at offshore pricing.',
+      'Website redesign costs for US SMBs range from $2,000 to $25,000 in 2026. What drives the price, when to redesign vs. refresh, and how to get Lighthouse 95+ results at remote-team pricing.',
   },
   keyTakeaways: [
-    'US small business website redesigns cost $3,500–$25,000 from domestic agencies and $2,000–$6,000 from offshore-with-US-support agencies: the same Lighthouse 95+ outcome at 60–70% less cost.',
+    'US small business website redesigns cost $3,500–$25,000 from domestic agencies and $2,000–$6,000 from remote-with-US-support agencies: the same Lighthouse 95+ outcome at 60–70% less cost.',
     'The single biggest driver of redesign cost is scope clarity: agencies that price without a detailed written scope will find reasons to charge more after you\'ve signed.',
     'You need a full redesign (not just a visual refresh) when: your Lighthouse mobile Performance score is below 60, your site is on an unsupported platform, or your conversion rate is below 1% on service pages.',
     'Content migration is the hidden cost of most redesigns, moving 50–200 pages of existing content, redirecting URLs, and preserving link equity typically adds $500–$3,000 to the project.',
@@ -29,7 +29,7 @@ export const post: BlogPost = {
   faqs: [
     {
       q: 'How much does a website redesign cost for a US small business in 2026?',
-      a: 'Website redesign costs in 2026 for US small businesses: $3,500–$8,000 from freelancers and small studios; $8,000–$25,000 from mid-market US agencies; $15,000–$50,000+ from premium US agencies. Offshore agencies with US business-hour support deliver the same technical quality for $2,000–$6,000. The key variable is scope: a 5-page service website sits at the low end of these ranges, an e-commerce site with 50+ products costs more, and a complex custom web application is $10,000+. Always get a fixed-price quote with an itemized scope, hourly redesign billing almost always runs over budget.',
+      a: 'Website redesign costs in 2026 for US small businesses: $3,500–$8,000 from freelancers and small studios; $8,000–$25,000 from mid-market US agencies; $15,000–$50,000+ from premium US agencies. Remote agencies with US business-hour support deliver the same technical quality for $2,000–$6,000. The key variable is scope: a 5-page service website sits at the low end of these ranges, an e-commerce site with 50+ products costs more, and a complex custom web application is $10,000+. Always get a fixed-price quote with an itemized scope, hourly redesign billing almost always runs over budget.',
     },
     {
       q: 'When does a US small business need a full website redesign?',
@@ -87,7 +87,7 @@ export const post: BlogPost = {
             <tr>
               <th className="p-3 border text-left">Site Type</th>
               <th className="p-3 border text-left">US Domestic Agency</th>
-              <th className="p-3 border text-left">FactoryJet (Offshore + US Support)</th>
+              <th className="p-3 border text-left">FactoryJet (US Business-Hour Support)</th>
               <th className="p-3 border text-left">Timeline</th>
             </tr>
           </thead>
@@ -142,7 +142,7 @@ export const post: BlogPost = {
         <strong>Custom functionality</strong>: Booking systems, calculators, custom pricing tools, membership areas, and integrations with third-party software all add development hours.
       </p>
       <p className="mb-4">
-        <strong>Agency overhead</strong>, US domestic agencies' $100–$175/hour billing rates reflect their cost structure: San Francisco office rent, US developer salaries, account management staff. India-based agencies with US support deliver the same technical output at $30–$55/hour effective cost.
+        <strong>Agency overhead</strong>, US domestic agencies' $100–$175/hour billing rates reflect their cost structure: San Francisco office rent, US developer salaries, account management staff. remote agencies with US support deliver the same technical output at $30–$55/hour effective cost.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">How to Protect Google Rankings Through a Redesign</h2>

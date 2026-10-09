@@ -189,5 +189,40 @@ export const AI_AGENT_FAQS = [
     "category": "faq-scope",
     "question": "Do you build AI agents for B2B and wholesale ecommerce?",
     "answer": "Yes. The common ones read emailed RFQs and purchase orders, check customer price lists and stock in NetSuite or Odoo, and draft a quote or order for your team to approve. On Shopify Plus B2B stores they can also answer account and reorder questions from live data. A person approves anything that commits price, stock or credit."
+  },
+  // Q28 to Q32 added 2026-10-10. Wording comes from open buyer questions in the
+  // 9 Oct 2026 assistant sweep (Search Console, US). Third-party prices and
+  // figures were read on each source's own page on 2026-10-09 and will date:
+  // re-read Vultr, AWS Lightsail, DigitalOcean, Lindy, Intercom Fin,
+  // MentorCruise and ProductCrafters before changing or reusing them.
+  {
+    "id": "Q28",
+    "category": "faq-vendor",
+    "question": "How do I choose an agency for building an AI agent or AI employee?",
+    "answer": "Pick the agency that can show a working agent in a system like yours and say what it may do without a person. AI employee is a name some vendors use for an agent given one job role, so the checks are the same. OWASP's 2025 top 10 risks for apps built on large language models include excessive agency (LLM06), with three root causes: excessive functionality, permissions and autonomy. Ask each agency how it limits all three and who owns the code. Every agent FactoryJet builds has a human approval step wherever a wrong decision would cost money."
+  },
+  {
+    "id": "Q29",
+    "category": "faq-vendor",
+    "question": "Is there a small agency that builds with AI agents?",
+    "answer": "Yes. FactoryJet is a specialist firm, founded in 2014, where Bhavesh, our founder, reads every request and usually replies within 2 to 3 hours. We build custom AI agents into the systems you already run, such as NetSuite, Odoo, HubSpot, Zendesk and Shopify. A person approves anything that matters, and you own the code. We work with US clients remotely, so choose a local firm if you need people on site every week. Our guide to AI agent development companies for small business describes other developers and platforms from their own websites."
+  },
+  {
+    "id": "Q30",
+    "category": "faq-vendor",
+    "question": "I need to hire an AI agents expert. Who should I contact?",
+    "answer": "Contact a mentor for advice, a freelancer for one small task, or a development firm for an agent built into your systems. MentorCruise listed 85 agentic AI experts on October 9, 2026 and says fewer than 5% of applicants are accepted. Freelancer.com lets you post a project for free and compare bids. For a build with support after launch, send FactoryJet the form on this page. Bhavesh, our founder, usually replies within 2 to 3 hours. Our guide to hiring an AI agent developer has a 10-point vetting checklist for whichever you pick."
+  },
+  {
+    "id": "Q31",
+    "category": "faq-cost",
+    "question": "What are affordable agentic AI systems for small and mid-sized businesses?",
+    "answer": "The affordable ones are ready-made products you rent by the seat or by the outcome. On October 9, 2026, Lindy listed plans from $29.99 to $199.99 a user a month, and Intercom listed its Fin support agent at $0.99 per outcome. Development firm ProductCrafters puts per-seat agent products at $20 to $500 a user a month and custom builds at about $5,000 to more than $180,000. Rent first if a product already connects to your tools. Build when the work follows your own rules across several systems. Our guide to AI agent development companies for small business covers both routes."
+  },
+  {
+    "id": "Q32",
+    "category": "faq-cost",
+    "question": "What is the best AI agent hosting under $5 a month?",
+    "answer": "No host is best for every agent, and under $5 a month buys a small server. On their pricing pages on October 9, 2026, Vultr listed plans at $2.50 (IPv6 only) and $3.50 a month, AWS Lightsail at $3.50 (IPv6 only) and DigitalOcean at $4, each with half a gigabyte of memory. That runs a small script calling an AI model over an API, with model usage billed separately. A built agent starts where hosting stops: connections to your systems, permissions, testing and monitoring. On our builds, hosting can sit in your cloud account at cost while we manage it."
   }
 ] as const;

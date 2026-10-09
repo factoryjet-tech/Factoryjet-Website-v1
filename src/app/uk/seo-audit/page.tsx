@@ -7,8 +7,8 @@ import MidPageCTA from '@/components/v2/MidPageCTA';
 import './seo-audit.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/seo-audit';
-const UPDATED = '2026-08-25';
-const UPDATED_LABEL = '25 August 2026';
+const UPDATED = '2026-10-10';
+const UPDATED_LABEL = '10 October 2026';
 
 /* ─── Breadcrumb: ONE array feeds the visible trail and the JSON-LD ── */
 const crumbs = [
@@ -102,7 +102,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'access', question: 'Is a website audit the same thing as an SEO audit?',
     answer: 'They overlap heavily, and most people mean the same thing by both. A website audit sometimes stretches wider, into design, accessibility, and conversion. Ours covers the search and technical side in full, and we flag design or usability problems we spot along the way, because a page that loses visitors also loses rankings eventually.' },
   { category: 'access', question: 'Do you audit sites outside the UK?',
-    answer: 'Yes, though this page is written for UK businesses and most of our audit work is UK-based. If you are trading into the UK from elsewhere, or out of the UK into other markets, say so on the first call, because the checks change: hreflang, currency and address signals, and which version of Google we test against all shift.' },
+    answer: 'Yes, though this page is written for UK businesses. If you are trading into the UK from elsewhere, or out of the UK into other markets, say so on the first call, because the checks change: hreflang, currency and address signals, and which version of Google we test against all shift.' },
   { category: 'access', question: 'How quickly can you start?',
     answer: 'Usually within a few days of the first call. The founder replies to enquiries within 24 hours to book that call, and for most sites we begin the technical, content, backlink, and AI-visibility checks straight after it. Larger sites and busier weeks stretch that a little, and we tell you the honest date rather than an optimistic one.' },
 
@@ -113,7 +113,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     answer: 'No. The audit stands on its own. Some businesses take the list and fix things internally, some bring it to a different agency, and some ask us to help with the work. All three are common outcomes, and we would rather you make that call once you have seen exactly what needs doing than agree to anything before that.' },
   { category: 'results', question: 'Will you tell me if my previous agency did a bad job?',
     answer: 'Yes, plainly, and just as plainly if they did good work. We have seen audits used as a scare tactic against a perfectly competent previous agency, and that is not honest. If something was missed, mishandled, or left half-finished, we say so and explain why. If the foundations are solid, we tell you that too and build from there.' },
-  { category: 'results', question: 'Are you a UK-based team?',
+  { category: 'results', question: 'Do you work with businesses across the UK?',
     answer: 'Yes. We work with businesses across London, Manchester, Birmingham, Leeds, and the rest of the UK, with audits and calls run remotely so a company anywhere in the country gets the same senior person and the same standard of review, not a junior team handling the work while someone more experienced signs it off.' },
   { category: 'results', question: 'Who actually reviews my audit, a person or a tool?',
     answer: 'A person, every time. Automated tools do the initial scanning because they are fast at surfacing raw data, but a senior member of the team reads the output, checks it against the actual site, removes false alarms, and ranks what is left by real impact before anything reaches you. The founder reviews the findings before they go out.' },
@@ -459,7 +459,7 @@ export default function SeoAuditUKPage() {
                   height={672}
                   loading="lazy"
                   decoding="async"
-                  alt="A UK SEO team reviewing a site audit and analytics dashboard together"
+                  alt="An SEO team reviewing a site audit and analytics dashboard together"
                   style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }}
                 />
               </div>
@@ -797,8 +797,8 @@ export default function SeoAuditUKPage() {
               <span className="eyebrow">The honest landscape</span>
               <h2>UK SEO audit and agency options worth knowing</h2>
               <p className="lead mt-4">
-                We would rather point you to the real field than pretend we are the only option. Here are UK
-                agencies doing real audit and SEO work, including us. Talk to more than one and pick the fit.
+                We would rather point you to the real field than pretend we are the only option. Here are
+                agencies doing real audit and SEO work for UK businesses, including us. Talk to more than one and pick the fit.
               </p>
             </div>
             <ul className="stack mt-10" style={{ maxWidth: 900 }}>

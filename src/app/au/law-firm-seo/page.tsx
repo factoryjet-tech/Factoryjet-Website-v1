@@ -14,7 +14,7 @@ import '../au-page.css';
 import './page.css';
 
 const CANONICAL = 'https://factoryjet.com/au/law-firm-seo';
-const UPDATED = '2026-09-26';
+const UPDATED = '2026-10-10';
 const TITLE = 'Law Firm SEO Australia | Lawyer SEO & Websites | FactoryJet';
 const H1 = 'Law Firm SEO and Lawyer Websites for Australian Legal Practices';
 const DESCRIPTION =
@@ -168,7 +168,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   { category: 'choose', question: 'Is it worth having a Google Business Profile?',
     answer: 'For a law firm with a real office that clients can visit, yes. It is free, it is what appears in the map results for searches like “conveyancer near me”, and it collects reviews. Each office gets its own profile with the exact address, hours and practice areas. Using a virtual office or a mail address risks the profile being suspended, so we only set up profiles for real locations.' },
   { category: 'choose', question: 'Do you work with law firms outside Sydney and Melbourne?',
-    answer: 'Yes. We work with Australian firms remotely, by video call and email, on Australian business hours. FactoryJet does not have an office in Australia, and we say so up front. That makes no difference to the SEO or the website, which are built around your offices, your practice areas and the courts and communities you serve, whether that is the Sydney CBD, Toowoomba or Bunbury.' },
+    answer: 'Yes. We work with Australian firms remotely, by video call and email, on Australian business hours. The SEO and the website are built around your offices, your practice areas and the courts and communities you serve, whether that is the Sydney CBD, Toowoomba or Bunbury.' },
   { category: 'choose', question: 'Who writes and approves the legal content?',
     answer: 'We write practice-area pages and answers from interviews with your solicitors, in plain English at a reading level most clients can follow. A solicitor at your firm reviews and signs off every page before it goes live, because you are responsible for your advertising and for the accuracy of anything that reads like legal information. We keep a record of who approved what and when.' },
 ];
@@ -176,7 +176,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
 /* ─── Named options in the Australian market (open self-disclosure, ItemList).
        Each note is based on the company’s own website, fetched 2026-09-26. ── */
 const PROVIDERS: { name: string; note: string }[] = [
-  { name: 'FactoryJet', note: 'That is us. Law firm SEO and lawyer websites built together: practice-area pages, local search, secure intake connected to practice management software, and copy written for your solicitors to approve against rule 36. We work remotely and have no Australian office.' },
+  { name: 'FactoryJet', note: 'That is us. Law firm SEO and lawyer websites built together: practice-area pages, local search, secure intake connected to practice management software, and copy written for your solicitors to approve against rule 36. We work remotely with Australian firms.' },
   { name: 'StudioHawk', note: 'An SEO agency with offices in Prahran, Melbourne and South Eveleigh, Sydney. Its SEO for lawyers page covers technical SEO, local SEO, content, AI search and link building for law firms.' },
   { name: 'Paperstack', note: 'An Australian search agency headquartered in Surfers Paradise, with a Melbourne studio. Its law firm SEO page covers practice-area pages, credentialed author markup, local SEO and state advertising compliance review.' },
   { name: 'Lift Legal', note: 'A marketing agency for law firms with a Mosman, NSW contact address. It lists website design and development, SEO, Google Ads, content, email newsletters and social media for law firms.' },

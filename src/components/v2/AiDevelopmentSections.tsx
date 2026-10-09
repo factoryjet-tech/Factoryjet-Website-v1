@@ -572,9 +572,9 @@ export default function AiDevelopmentSections() {
                   ))}
                   <tr className="us">
                     <th>FactoryJet<br /><span className="mono tableSubLabel tableSubLabelAccent">This page</span></th>
-                    <td>Works with US businesses remotely. No local US office.</td>
+                    <td>Works with US businesses remotely, with calls scheduled in US business hours.</td>
                     <td>Custom AI built into commerce and B2B systems: RAG, integrations, evaluation and support, with the founder on every project and code you own.</td>
-                    <td>Not in Google&apos;s top 10 for these searches today, and far smaller than the firms above. If a big delivery bench matters most, hire one of them.</td>
+                    <td>Added for comparison.</td>
                   </tr>
                 </tbody>
               </table>

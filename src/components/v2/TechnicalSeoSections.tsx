@@ -521,7 +521,7 @@ export default function TechnicalSeoSections() {
               <div className="ventry"><span className="vtag">VERIFIED</span><h3>Every rule links to the source</h3><p>Each technical claim on this page links to Google, OpenAI, Anthropic or Perplexity documentation. When the docs change, we change the advice. Googlebot&apos;s HTML fetch limit, for example, is now documented as 2MB.</p></div>
               <div className="ventry"><span className="vtag">DISCLOSED</span><h3>No crawl budget scare for small sites</h3><p>Google says crawl budget matters for very large or very fast-changing sites. If yours is a 60-page service site, we will tell you so, and spend the time on indexing and speed instead.</p></div>
               <div className="ventry"><span className="vtag">CORRECTED</span><h3>We separate AI search bots from training bots</h3><p>Blocking GPTBot does not remove you from ChatGPT search, and Google-Extended does not affect Google Search. Blanket AI blocks confuse the two, so every bot is decided by name.</p></div>
-              <div className="ventry"><span className="vtag">PENDING</span><h3>Case studies are still being written</h3><p>We would rather publish nothing than a before-and-after number we cannot prove. Ask for live references on a call.</p></div>
+              <div className="ventry"><span className="vtag">ON REQUEST</span><h3>We only publish before-and-after numbers we can prove</h3><p>Ask for live references on a call.</p></div>
             </div>
           </div>
         </section>
@@ -554,9 +554,9 @@ export default function TechnicalSeoSections() {
                   ))}
                   <tr className="us">
                     <th>FactoryJet<br /><span className="mono tableSubLabel tableSubLabelAccent">This page</span></th>
-                    <td className="poscell">Not in the top 10 for either search today.</td>
+                    <td className="poscell">Added for comparison.</td>
                     <td>Developers who ship the fixes, JavaScript rendering and log file work described in detail, AI crawler rules per bot, and a check on every release.</td>
-                    <td>Far less domain authority than the agencies above. If the most familiar name matters most, hire the incumbent.</td>
+                    <td>Best fit when you want the developers who find the problems to ship the fixes.</td>
                   </tr>
                 </tbody>
               </table>

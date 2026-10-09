@@ -19,8 +19,8 @@ import OdooRoutesDiagram from './OdooRoutesDiagram';
    /services/odoo-ai-agents, built 2026-10-09.
 
    Why this page exists: on 9 Oct 2026 the question "Who can build an AI agent
-   that works inside Odoo?" was read across 14 AI answers and FactoryJet was
-   named in none. The assistants cited small Odoo firms' own service pages.
+   that works inside Odoo?" was read across 14 AI answers. The assistants
+   cited small Odoo firms' own service pages.
    /services/erp-ai-agents is the overview across four systems. This page is
    Odoo only and goes deeper. Keep "ERP AI" head terms out of its title and H1
    so the two pages do not compete.
@@ -1305,7 +1305,7 @@ export default function OdooAiAgentsPage() {
                   What Odoo&rsquo;s own AI does in versions 19 and 20, and where it stops.
                 </h2>
                 <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-neutral-600">
-                  Start here, because you may not need us. Odoo 19 added an AI app in September 2025. Odoo 20 followed
+                  Start with what Odoo already ships. Odoo 19 added an AI app in September 2025. Odoo 20 followed
                   in September 2026 and moved the line on what its agents may do.
                 </p>
                 <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-neutral-600">
@@ -1714,9 +1714,8 @@ export default function OdooAiAgentsPage() {
                   custom systems, so the route we recommend is not tied to one product.
                 </p>
                 <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-neutral-600">
-                  A local firm is sometimes the better choice. FactoryJet works remotely with US clients and has no US office.
-                  If you want someone on site in your warehouse, or a full Odoo rollout with accounting setup, pick a
-                  local Odoo implementation firm.
+                  For a full Odoo rollout with accounting setup, or someone on site in your warehouse every week,
+                  an Odoo implementation firm near you is the right call. For the AI work on top of Odoo, talk to us.
                 </p>
               </div>
               <ol className="grid gap-4 lg:col-span-8">

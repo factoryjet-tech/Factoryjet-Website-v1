@@ -170,7 +170,7 @@ const AGENCIES: Agency[] = [
     name: 'FactoryJet (that is us)',
     url: 'https://factoryjet.com/au',
     source: 'https://factoryjet.com/au',
-    based: 'No Australian office. We work remotely with Australian clients and schedule calls in Australian business hours',
+    based: 'We work remotely with Australian clients and schedule calls in Australian business hours',
     type: 'AI agents, AI receptionists and AI inside ecommerce and operations',
     clients: 'Small and mid-size businesses; 500+ businesses served since 2014',
     platforms: 'Shopify, custom Next.js commerce, Xero, MYOB, HubSpot, OpenAI, Anthropic, Google models',
@@ -221,7 +221,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: "Which AI automation agency is located in Australia?",
-    a: "Every agency in this guide except FactoryJet has an Australian office, which we confirmed on their own sites. They include Team 400 (Brisbane), Edison AI (Sydney), FlowWorks and Aivy (Melbourne), Advancer and Osher Digital (Brisbane), IOTAI (four offices), Spark Interact and AI Consulting Group (Sydney), 13Labs (Melbourne) and Arinco (four Australian capitals). FactoryJet works remotely and says so.",
+    a: "Twelve agencies in this guide have an Australian office, which we confirmed on their own sites. They include Team 400 (Brisbane), Edison AI (Sydney), FlowWorks and Aivy (Melbourne), Advancer and Osher Digital (Brisbane), IOTAI (four offices), Spark Interact and AI Consulting Group (Sydney), 13Labs (Melbourne) and Arinco (four Australian capitals). FactoryJet works remotely with Australian clients.",
   },
   {
     q: "What is the leading AI automation agency in Australia?",
@@ -306,6 +306,7 @@ export const post: BlogPost = {
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Sep 26, 2026',
+  dateModified: 'Oct 10, 2026',
   readTime: '17 min read',
   imageUrl: `${IMG}-hero.webp`,
   imageAlt:
@@ -320,7 +321,7 @@ export const post: BlogPost = {
     'Every fact below was read on each agency\'s own website on 26 September 2026. None of them paid to be here.',
     'Published entry prices run from A$1,500 for an assessment to A$50,000 to A$250,000 for large custom projects. Most agencies do not say whether GST is included.',
     'Only 12 percent of Australian businesses used AI in 2024 to 2025 (ABS), so a well-chosen first project still sets you apart.',
-    'FactoryJet is on this list. We have no Australian office and work remotely; if you need someone on site, choose a local agency.',
+    'FactoryJet is on this list. We work remotely with Australian clients; if you need someone on site, choose a local agency.',
   ],
   faqs: FAQS,
   content: (
@@ -339,7 +340,7 @@ export const post: BlogPost = {
                 'Compare the best AI automation agencies in Australia for 2026: where each is based, who it suits, platforms, published prices and how to choose the right one.',
               inLanguage: 'en-AU',
               datePublished: '2026-09-26',
-              dateModified: '2026-09-26',
+              dateModified: '2026-10-10',
               isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com' },
               publisher: { '@id': 'https://factoryjet.com/#organization' },
               about: { '@type': 'Thing', name: 'AI automation agencies in Australia' },
@@ -382,7 +383,7 @@ export const post: BlogPost = {
         So we did the boring part. We took the Australian agencies that came up most often, opened each one&rsquo;s own website, and wrote down only what they say about themselves: where they are based, what they build, who they build it for, which platforms they use and any published prices. If we could not confirm an Australian address or a clear service, the company is not here.
       </p>
       <p className="mb-4">
-        <strong>A note on honesty.</strong> FactoryJet builds AI agents, so we are on this list. We put ourselves last, we say plainly that we have no Australian office, and we tell you when a local agency will suit you better. Two other agencies that publish &ldquo;top AI agencies in Australia&rdquo; lists, Team 400 and Edison AI, include themselves too, and both disclose it. That is fair practice, and it is also a reason to read every list, including this one, with care.
+        <strong>A note on honesty.</strong> FactoryJet builds AI agents, so we are on this list. We put ourselves last, and we tell you when a local agency will suit you better. Two other agencies that publish &ldquo;top AI agencies in Australia&rdquo; lists, Team 400 and Edison AI, include themselves too, and both disclose it. That is fair practice, and it is also a reason to read every list, including this one, with care.
       </p>
       <p className="mb-6">
         A few terms first, in plain English. An <strong>AI automation agency</strong> connects AI to the software you already use so routine steps happen without retyping. An <strong>AI consultancy</strong> helps you decide where AI fits and how to introduce it safely. An <strong>AI developer</strong> writes custom software. An <strong>AI agent</strong> is software that takes actions in your systems, such as updating an order or booking a job, rather than only chatting. Most agencies below do some of all four.
@@ -420,7 +421,7 @@ export const post: BlogPost = {
       <h2 className="text-2xl font-bold mt-10 mb-4">How we built this list</h2>
       <ol className="list-decimal pl-6 mb-6 space-y-2">
         <li><strong>Start with what buyers see.</strong> We collected every company named across 24 AI assistant answers to six Australian questions about AI agencies, consultancies, chatbots and developers.</li>
-        <li><strong>Keep only Australian operators.</strong> Each company had to show an Australian office or clearly state it is Australian-based on its own site. Overseas firms with an Australian landing page were left out.</li>
+        <li><strong>Keep only Australian operators.</strong> Every other company here shows an Australian office or says on its own site that it is Australian-based.</li>
         <li><strong>Read the source, not the summary.</strong> Every description below comes from the agency&rsquo;s own homepage or main AI service page, opened on 26 September 2026. We link that page on every profile.</li>
         <li><strong>No scores we cannot prove.</strong> We do not give star ratings, because we have not worked with these agencies as clients. We tell you who each one suits, and a question worth asking them.</li>
         <li><strong>Prices only from the agency.</strong> Where an agency publishes prices, we quote them and link the page. We never guess another company&rsquo;s price.</li>
@@ -631,7 +632,7 @@ export const post: BlogPost = {
               <td className="p-3 border border-gray-200 font-semibold">Watch out for</td>
               <td className="p-3 border border-gray-200">Key-person risk in very small teams</td>
               <td className="p-3 border border-gray-200">Budgets sized for enterprises</td>
-              <td className="p-3 border border-gray-200 bg-orange-50">No Australian office; not right if you need people on site</td>
+              <td className="p-3 border border-gray-200 bg-orange-50">Not right if you need people on site</td>
             </tr>
           </tbody>
         </table>
@@ -669,7 +670,7 @@ export const post: BlogPost = {
         <strong>Where we fit:</strong> Australian SMBs that sell online or run order-heavy operations and want one team for the store, the integrations (Shopify, Xero, MYOB, HubSpot) and the AI. Businesses that want a fixed quote per stage and a team that stays after launch.
       </p>
       <p className="mb-4">
-        <strong>Where we do not:</strong> We have no Australian office. If you need people in your building every week, choose one of the local agencies above. If your project is a large Microsoft Copilot roll-out, a Microsoft specialist such as Arinco or Team 400 is a more natural fit. If your AI question is really forecasting or machine vision, a data-first firm such as AI Consulting Group will go deeper.
+        <strong>Where we do not:</strong> If you need people in your building every week, choose one of the local agencies above. If your project is a large Microsoft Copilot roll-out, a Microsoft specialist such as Arinco or Team 400 is a more natural fit. If your AI question is really forecasting or machine vision, a data-first firm such as AI Consulting Group will go deeper.
       </p>
       <p className="mb-6">
         If you are still working out what you need, these explain the options in plain English: <a href="/blog/what-does-an-ai-automation-agency-do" className="text-[#B23E13] underline">what an AI automation agency actually does</a>, <a href="/blog/ai-chatbots-vs-ai-agents-business" className="text-[#B23E13] underline">AI chatbots vs AI agents</a>, <a href="/blog/how-to-hire-an-ai-agent-developer-2026" className="text-[#B23E13] underline">how to hire an AI agent developer</a> and <a href="/blog/ai-agent-build-vs-buy-2026" className="text-[#B23E13] underline">whether to build or buy an AI agent</a>.

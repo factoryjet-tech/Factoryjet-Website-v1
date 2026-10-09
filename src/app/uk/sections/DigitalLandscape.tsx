@@ -15,9 +15,13 @@ const STATS: Stat[] = [
     // 2026-08-25: was "£80.8B UK AI Sector Value", which no source we could
     // fetch supports and which sat awkwardly beside the government's own
     // figures further down the page. Replaced with DSIT's published numbers.
-    value: "£10B+",
+    // 2026-10-10: was "£10B+" across "3,000+" companies, labelled "(DSIT, 2024)".
+    // DSIT's AI Sector Study 2024 (published 3 September 2025, re-read on gov.uk
+    // on 9 October 2026) says "more than 5,800 AI companies" and "Revenue is now
+    // at £23.9 billion".
+    value: "£23.9B",
     label: "UK AI Sector Revenue",
-    sublabel: "Across 3,000+ UK AI companies (DSIT, 2024)",
+    sublabel: "Across more than 5,800 UK AI companies (DSIT, AI Sector Study 2024)",
     icon: Sparkles,
     trend: "DSIT 2024",
   },
@@ -135,9 +139,9 @@ export default function DigitalLandscape() {
               </p>
               <p>
                 The United Kingdom has one of the largest AI sectors in
-                Europe. The government&rsquo;s own AI sector study counts more than
-                3,000 UK AI companies, turning over more than £10 billion a year
-                and employing over 60,000 people in AI roles. British businesses
+                Europe. The government&rsquo;s AI Sector Study 2024, published on
+                3 September 2025, counts more than 5,800 UK AI companies, with
+                revenue of £23.9 billion and AI related employment of 86,139. British businesses
                 are adopting AI faster than almost anywhere else: the proportion of UK firms actively using AI has leapt
                 from 9% in 2023 to 25% in late 2024 to 54% in early 2026,
                 according to the British Chambers of Commerce. Yet a

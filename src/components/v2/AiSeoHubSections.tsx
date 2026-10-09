@@ -459,7 +459,7 @@ export default function AiSeoHubSections() {
               <div className="ventry"><span className="vtag">VERIFIED</span><h3>Every number links to its source</h3><p>Each statistic on this page links to the report it came from. If we cannot show where a number came from, we leave it out. Client reports follow the same rule.</p></div>
               <div className="ventry"><span className="vtag">CORRECTED</span><h3>We fixed our own crawler advice</h3><p>Older answers on this site told readers to allow GPTBot for ChatGPT visibility. OpenAI documents GPTBot as a training crawler. OAI-SearchBot is the one that controls ChatGPT search answers. We corrected every answer.</p></div>
               <div className="ventry"><span className="vtag">DISCLOSED</span><h3>No magic files</h3><p>Google says no special AI files are needed for AI Overviews. We still publish llms.txt, and we tell clients plainly that no engine is known to read it yet.</p></div>
-              <div className="ventry"><span className="vtag">PENDING</span><h3>Case studies are still being written</h3><p>Named AI visibility case studies are in progress. We would rather publish nothing than a number we cannot prove. Ask for live references on a call.</p></div>
+              <div className="ventry"><span className="vtag">ON REQUEST</span><h3>We only publish numbers we can prove</h3><p>Ask for live references on a call.</p></div>
             </div>
           </div>
         </section>
@@ -492,9 +492,9 @@ export default function AiSeoHubSections() {
                   ))}
                   <tr className="us">
                     <th>FactoryJet<br /><span className="mono tableSubLabel tableSubLabelAccent">This page</span></th>
-                    <td className="poscell">Not in the top 10 for either search today.</td>
+                    <td className="poscell">Added for comparison.</td>
                     <td>Bhavesh, our founder, and the team on your account, citation counts per engine, month-to-month terms, and in-house ecommerce, AI agent and web builds.</td>
-                    <td>Far less domain authority than every agency above. If the safest logo on the invoice matters most, hire the incumbent.</td>
+                    <td>Best fit when you want AI search work and the site changes done by one team.</td>
                   </tr>
                 </tbody>
               </table>

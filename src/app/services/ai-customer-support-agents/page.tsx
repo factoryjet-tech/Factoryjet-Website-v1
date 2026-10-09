@@ -13,7 +13,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import '@/components/v2/PlatformPage.css';
 
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
-const PAGE_MODIFIED = '2026-09-28';
+const PAGE_MODIFIED = '2026-10-10';
 const CANONICAL_URL = 'https://factoryjet.com/services/ai-customer-support-agents';
 
 /** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
@@ -151,6 +151,23 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     question: 'How does the agent integrate with enterprise ERP and WMS platforms?',
     answer:
       'We build custom Model Context Protocol connectors and secure API endpoints. These connect to NetSuite, Microsoft Dynamics 365, SAP, ShipBob, and custom warehouse management systems. Each connector only touches the specific tables and fields the agent needs for its ticket work. It never gets a broad database credential that could reach unrelated financial or HR records.',
+  },
+  // Added 2026-10-10 for two open buyer questions (Search Console, measured
+  // 9 Oct 2026). Every vendor fact below was fetch-verified on 2026-10-09 on
+  // the vendor's own documentation or product page: docs.gorgias.com,
+  // support.zendesk.com, intercom.com/help, salesforce.com, manh.com,
+  // kibocommerce.com and fluentcommerce.com.
+  {
+    category: 'integrations',
+    question: 'Which customer service AI tools are capable of routing Spanish emails to automated workflows while English emails go to humans, and who delivers this?',
+    answer:
+      "Gorgias, Zendesk and Intercom can each do this with built-in settings, per their documentation, read October 9, 2026. Gorgias detects up to 54 languages, and a rule can read the ticket language and keep its AI Agent off the tickets you choose. Zendesk triggers can test the requester's language, and its Copilot add-on classifies the language of each new ticket. Intercom detects language on email, and a workflow can target the detected language and hand those emails to its Fin AI agent. A custom agent makes sense when the Spanish workflow needs write actions and approval rules across several systems.",
+  },
+  {
+    category: 'integrations',
+    question: 'Which order management and commerce vendors offer AI agents that automate order routing and customer service tasks?',
+    answer:
+      "Four vendors describe such agents on their own sites, read October 9, 2026. Salesforce Order Management lists Agentic Order Routing for fulfillment exceptions and Agentic Order Support for order status, cancellations and returns. Manhattan's Active Maven is an agentic AI chatbot trained on order management and customer service data. Kibo's Engage function covers chat, email and voice. Fluent Commerce built a where-is-my-order agent for Wilson with Sierra AI. Buy order routing from your order management vendor. A services firm fits on the support side, where we build agents that answer tickets from Shopify, NetSuite or 3PL order data.",
   },
   {
     category: 'safety',

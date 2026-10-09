@@ -15,7 +15,7 @@ const CANONICAL_URL = 'https://factoryjet.com/services/manufacturing-ai-agents';
 const PAGE_TITLE = 'Manufacturing AI Agents for Quoting & ERP Automation | FactoryJet';
 const PAGE_DESC =
   'AI agents for US manufacturers that read RFQs and drawings, draft quotes, reconcile supplier POs and write approved drafts into NetSuite, SAP or Epicor.';
-const PAGE_MODIFIED = '2026-10-05';
+const PAGE_MODIFIED = '2026-10-10';
 
 /** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
  *  <Breadcrumbs> component and the BreadcrumbList JSON-LD below, so the two
@@ -218,6 +218,18 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     question: 'Do you support manufacturers running separate ERP instances across multiple plants?',
     answer:
       "Yes. Where each plant runs its own NetSuite or SAP instance, or a mix of systems after an acquisition, we build one agent layer on top. It routes each RFQ and PO reconciliation to the right plant by customer, part number or ship-from location. We scope each ERP separately and start with one plant. If the agent cannot tell which plant a request belongs to, it asks a person and never writes to a default instance.",
+  },
+  {
+    category: 'basics',
+    question: 'Can we hire AI agent developers for factory automation?',
+    answer:
+      "Yes, if you mean the office work around the factory, such as RFQs, drawings, quotes, purchase orders and ERP entry. We build AI agents for that work. Factory automation more often means machines on the shop floor, such as PLCs (machine controllers) and robots. We do not program those. For that, hire a control system integrator. The Control System Integrators Association, founded in 1994, lists them in its Find an Integrator directory. Our ERP AI agents page covers Odoo, NetSuite, SAP Business One and ERPNext, and our manufacturing architecture guide shows how RFQ quoting and ERP sync are built.",
+  },
+  {
+    category: 'basics',
+    question: 'Do you offer AI consulting for workflow automation in manufacturing companies?',
+    answer:
+      "Yes, for the paperwork around production. We start with one workflow, such as RFQ to quote or supplier order confirmation to ERP. We record how many you handle and how long each takes, then check your ERP edition, API access and permissions in a sandbox. Our AI consulting page covers the readiness assessment and roadmap. Our NetSuite AI agents and Odoo AI agents pages list what each ERP's built-in AI already does. For plant-wide advice, NIST says its Manufacturing Extension Partnership has nearly 1,400 advisors at more than 450 service locations for small and medium-sized manufacturers.",
   },
 ];
 

@@ -34,7 +34,7 @@ const faqSchema = {
 };
 
 // Freshness signal. Bump only when the page content actually changes.
-const PAGE_MODIFIED = '2026-10-05';
+const PAGE_MODIFIED = '2026-10-10';
 
 const webPageSchema = {
   '@context': 'https://schema.org',

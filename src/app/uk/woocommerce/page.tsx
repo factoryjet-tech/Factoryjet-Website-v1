@@ -7,7 +7,7 @@ import MidPageCTA from '@/components/v2/MidPageCTA';
 import '../ai-agents/ai-agents.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/woocommerce';
-const UPDATED = '2026-09-24';
+const UPDATED = '2026-10-10';
 
 /* ONE array drives the visible trail AND the BreadcrumbList JSON-LD, so the
    schema can never describe a trail a human cannot see. Never hand-copy a
@@ -91,7 +91,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'agency', question: 'Should I hire a freelance WooCommerce developer or an agency?',
     answer: 'A good freelancer is fine for a small, clearly defined job. The risk is cover. When they are ill, on holiday or busy with a bigger client, nobody else knows your store, and checkout problems do not wait. An agency gives you more than one person who knows your code, plus code review. For a store that earns real money, that cover matters.' },
   { category: 'agency', question: 'Who are the best WooCommerce developers in the UK?',
-    answer: 'The best WooCommerce developer for you is one who has kept stores like yours running for years, not just launched them. Ask to speak to a client they have supported for more than two years. Ask how they handle plugin updates and who fixes things at the weekend. We list several UK WooCommerce agencies on this page, including us, so you can compare.' },
+    answer: 'The best WooCommerce developer for you is one who has kept stores like yours running for years, not just launched them. Ask to speak to a client they have supported for more than two years. Ask how they handle plugin updates and who fixes things at the weekend. We list several WooCommerce agencies that work with UK shops on this page, including us, so you can compare.' },
   { category: 'agency', question: 'How much does a WooCommerce developer or agency cost?',
     answer: 'It depends on the shape of the work. A store health check is small. A support retainer depends on how many hours of developer time you need each month. A new build depends on your catalogue, design, integrations and custom features. We scope after looking at your store, because two WooCommerce sites with the same theme can need very different amounts of work.' },
   { category: 'agency', question: 'Can you take over a WooCommerce store another developer built?',
@@ -107,7 +107,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'shopify', question: 'Will I lose my Google rankings if I move from WooCommerce to Shopify?',
     answer: 'You should not, if the move is done carefully. That means mapping every old URL to its new one with permanent redirects, keeping the page titles and content that rank, and moving product reviews and images. Shopify also uses different URL patterns, so the redirect map matters more than usual. Most ranking losses after a migration come from missed redirects.' },
   { category: 'shopify', question: 'Do you also build Shopify stores in the UK?',
-    answer: 'Yes. We are a UK ecommerce agency that works on WooCommerce, Shopify and Magento. That is why our advice on staying or moving is not tied to one platform. If Shopify is the better fit, our UK Shopify development team handles the build and the move, including the redirect map, customer and order history, and rewiring your integrations.' },
+    answer: 'Yes. We are an ecommerce agency for UK shops that works on WooCommerce, Shopify and Magento. That is why our advice on staying or moving is not tied to one platform. If Shopify is the better fit, our Shopify development team handles the build and the move, including the redirect map, customer and order history, and rewiring your integrations.' },
 ];
 
 /* ─── Named UK WooCommerce agencies (open self-disclosure, ItemList) ──
@@ -139,7 +139,7 @@ const jsonLd = {
       areaServed: { '@type': 'Country', name: 'United Kingdom' },
       url: CANONICAL,
       description:
-        'WooCommerce agency in the UK. WooCommerce developers for new stores, custom plugins and extensions, speed and hosting fixes, B2B and wholesale, Xero, Sage and Royal Mail Click & Drop integrations, security updates and ongoing WooCommerce support.',
+        'WooCommerce agency for UK shops. WooCommerce developers for new stores, custom plugins and extensions, speed and hosting fixes, B2B and wholesale, Xero, Sage and Royal Mail Click & Drop integrations, security updates and ongoing WooCommerce support.',
     },
     {
       '@type': 'BreadcrumbList',
@@ -199,12 +199,12 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: 'WooCommerce Agency UK | WooCommerce Developers | FactoryJet',
   description:
-    'FactoryJet is a UK WooCommerce agency. WooCommerce developers for new stores, custom plugins, speed fixes, Xero and courier integrations, and ongoing support.',
+    'WooCommerce agency for UK shops. WooCommerce developers for new stores, custom plugins, speed fixes, Xero and courier integrations, and ongoing support.',
   alternates: { canonical: CANONICAL, languages: { 'en-GB': CANONICAL, 'x-default': CANONICAL } },
   openGraph: {
     title: 'WooCommerce Agency UK | WooCommerce Developers | FactoryJet',
     description:
-      'A UK WooCommerce development agency. New stores, custom plugins, speed and hosting fixes, B2B and wholesale, Xero, Sage and Royal Mail integrations, and WooCommerce support from the same team. Free store health check.',
+      'A WooCommerce development agency for UK shops. New stores, custom plugins, speed and hosting fixes, B2B and wholesale, Xero, Sage and Royal Mail integrations, and WooCommerce support from the same team. Free store health check.',
     url: CANONICAL,
     siteName: 'FactoryJet',
     locale: 'en_GB',
@@ -231,7 +231,7 @@ export default function WooCommerceUKPage() {
             <div className="col-6040">
               <div>
                 <div className="flex-wrap mb-6">
-                  <span className="chip"><span className="dot dot-orange" />UK WooCommerce Agency</span>
+                  <span className="chip"><span className="dot dot-orange" />WooCommerce Agency for UK Shops</span>
                   <span className="chip">Builds, Plugins &amp; Fixes</span>
                   <span className="chip">Support After Launch</span>
                 </div>
@@ -246,7 +246,7 @@ export default function WooCommerceUKPage() {
                 <div className="byline mt-6" style={{ maxWidth: 560 }}>
                   <div className="av">BB</div>
                   <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ projects delivered</span></div>
-                  <div className="upd">Last updated<br />24 September 2026</div>
+                  <div className="upd">Last updated<br />10 October 2026</div>
                 </div>
 
                 <div className="mt-6" style={{ maxWidth: 560 }}>
@@ -414,7 +414,7 @@ export default function WooCommerceUKPage() {
               </li>
             </ul>
             <p className="mt-8" style={{ maxWidth: 820 }}>
-              Need search visibility as well as a working store? Our <a href="/uk/ecommerce-seo">UK ecommerce SEO</a> team
+              Need search visibility as well as a working store? Our <a href="/uk/ecommerce-seo">UK ecommerce SEO</a> service
               handles WooCommerce SEO, from product page structure to category content. For a full redesign rather than
               development work, see our <a href="/uk/web-design">UK web design</a> service.
             </p>
@@ -447,7 +447,7 @@ export default function WooCommerceUKPage() {
                   </p>
                 </div>
                 <div className="card mt-8" style={{ padding: 8 }}>
-                  <img src="/images/uk/woocommerce/woocommerce-developer.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A WooCommerce developer working at a tidy desk in a bright UK office with code on a large monitor and an orange mug beside the keyboard" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+                  <img src="/images/uk/woocommerce/woocommerce-developer.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A WooCommerce developer working at a tidy desk in a bright office with code on a large monitor and an orange mug beside the keyboard" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
                 </div>
               </div>
 
@@ -600,7 +600,7 @@ export default function WooCommerceUKPage() {
                 If moving is right, we plan it properly: a full redirect map to protect your Google rankings,
                 customers, orders and reviews moved across, and integrations rewired. Read how we run a{' '}
                 <a href="https://factoryjet.com/replatforming/woocommerce-to-shopify">WooCommerce to Shopify migration</a>,
-                see our <a href="https://factoryjet.com/uk/shopify-development">UK Shopify development</a> team, or
+                see our <a href="https://factoryjet.com/uk/shopify-development">UK Shopify development</a> service, or
                 look at our wider <a href="https://factoryjet.com/uk/ecommerce-development">UK ecommerce development</a> work.
               </p>
             </div>

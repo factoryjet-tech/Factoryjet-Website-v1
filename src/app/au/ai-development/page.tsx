@@ -17,7 +17,7 @@ import './visual.css';
 import { SystemBoundary, SystemServiceDiagram, DraftBillDiagram } from './SystemDiagram';
 
 const CANONICAL = 'https://factoryjet.com/au/ai-development';
-const UPDATED = '2026-09-26';
+const UPDATED = '2026-10-10';
 const TITLE = 'AI Development Company Australia | Custom AI | FactoryJet';
 /* Shortened 2026-09-26 so the hero form sits in the first desktop screen. The rest of the old H1
    ("Built Into the Systems You Already Run") moved into the hero lead. */
@@ -124,8 +124,6 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
     links: [{ href: '/blog/best-ai-agencies-australia-2026', label: 'Comparison of Australian AI agencies' }] },
   { category: 'choosing', question: 'How do I choose an AI development company in Australia?',
     answer: 'Ask to see AI systems they have put live, not demos. Ask who will write the code and whether the same team supports it after launch. Confirm you will own the code, prompts and data. Ask how they measure accuracy, how they handle the Privacy Act and where your data will be hosted, and when they would tell you to buy a tool instead. Clear answers to all of these are a good sign.' },
-  { category: 'choosing', question: 'Are you an Australian company?',
-    answer: 'We work with Australian businesses remotely rather than from a local office, and we would rather say so up front. What we offer is a senior team, the founder involved on every project, systems hosted in Australian cloud regions where your data needs it, and code you own outright. If an onshore team is a hard requirement for you, the local firms listed on this page are good places to start.' },
   { category: 'choosing', question: 'Should I use a freelancer or an AI development company?',
     answer: 'A freelancer suits a small prototype or a single contained script. A company makes more sense when the AI must connect to several systems, handle personal information, or run every day for years. That work needs testing, security, holiday cover and someone on call when a connected system changes. Plenty of businesses start with a freelancer and move to a team once the idea proves itself.' },
   { category: 'choosing', question: 'Should we buy an off-the-shelf AI tool or build custom AI?',
@@ -1174,7 +1172,7 @@ export default function AiDevelopmentAUPage() {
               ))}
             </div>
             <p className="sub-note">
-              Companies named from live Australian search results and AI assistant answers for AI development company queries, September 2026. Each company’s own website was checked on 26 September 2026 for an Australian office and the services named. Listing is not endorsement.
+              Companies named from live Australian search results and AI assistant answers for AI development company queries, September 2026. Each other company’s own website was checked on 26 September 2026 for an Australian office and the services named. Listing is not endorsement.
             </p>
             <p className="sub-note">
               Our <a href="/blog/best-ai-agencies-australia-2026">comparison of Australian AI agencies</a> lists

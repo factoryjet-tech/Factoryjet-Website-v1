@@ -19,7 +19,7 @@ export const post: BlogPost = {
   },
   keyTakeaways: [
     "Nashville's hospitality, music, and healthcare industries are fiercely competitive online: a slow or generic website loses customers to competitors before you ever get a call.",
-    'Local Nashville web design agencies charge $8,000–$20,000 for a 5-page professional website; offshore agencies with US-hour support deliver the same technical quality for $2,000–$4,000.',
+    'Local Nashville web design agencies charge $8,000–$20,000 for a 5-page professional website; remote agencies with US-hour support deliver the same technical quality for $2,000–$4,000.',
     'Lighthouse 95+ scores are achievable for any Nashville small business, they require engineering discipline, not budget. Ask any agency you consider to show live PageSpeed URLs.',
     'Nashville hospitality and restaurant businesses need mobile-first design above all: over 72% of local searches for food, venues, and entertainment happen on smartphones.',
     'Music-industry SMBs (studios, venues, talent agencies) benefit from media-rich sites with optimized video and audio, but only when performance is maintained alongside the media.',
@@ -29,7 +29,7 @@ export const post: BlogPost = {
   faqs: [
     {
       q: 'How much does web design cost for a small business in Nashville TN?',
-      a: "Nashville local web design agencies typically charge $8,000–$20,000 for a professional 5-page website. Mid-market agencies run $4,000–$8,000. Offshore agencies with US-hour project management deliver the same technical output for $2,000–$4,000. E-commerce adds $1,500–$5,000 depending on product volume. The price differential is a cost-of-living arbitrage, not a quality gap, ask any agency for Lighthouse scores on live client sites to verify.",
+      a: "Nashville local web design agencies typically charge $8,000–$20,000 for a professional 5-page website. Mid-market agencies run $4,000–$8,000. Remote agencies with US-hour project management deliver the same technical output for $2,000–$4,000. E-commerce adds $1,500–$5,000 depending on product volume. The price differential is a cost-of-living arbitrage, not a quality gap, ask any agency for Lighthouse scores on live client sites to verify.",
     },
     {
       q: 'What web design features do Nashville hospitality businesses need?',
@@ -151,7 +151,7 @@ export const post: BlogPost = {
               <td className="border p-3">6–12 weeks</td>
             </tr>
             <tr className="bg-gray-50">
-              <td className="border p-3 font-bold">FactoryJet (offshore + US support)</td>
+              <td className="border p-3 font-bold">FactoryJet (US business-hour support)</td>
               <td className="border p-3 font-bold">Fixed quote after scoping</td>
               <td className="border p-3 font-bold">Fixed quote after scoping</td>
               <td className="border p-3 font-bold">7–14 days</td>
@@ -160,7 +160,7 @@ export const post: BlogPost = {
         </table>
       </div>
       <p className="mb-4">
-        The cost differential between a downtown Nashville agency and FactoryJet isn't about quality. It's about overhead. A Nashville agency pays $85/sq ft for Broadway office space, US-rate salaries, and local marketing costs. That overhead gets passed to every client. FactoryJet's India-based development team operates at a fraction of that cost with the same Next.js, React, and Lighthouse optimization expertise.
+        The cost differential between a downtown Nashville agency and FactoryJet isn't about quality. It's about overhead. A Nashville agency pays $85/sq ft for Broadway office space, US-rate salaries, and local marketing costs. That overhead gets passed to every client. FactoryJet's development team operates at a fraction of that cost with the same Next.js, React, and Lighthouse optimization expertise.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What FactoryJet Delivers for Nashville SMBs</h2>

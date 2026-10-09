@@ -14,7 +14,7 @@ import './page.css';
 import { PracticeJourneyDiagram, PracticeCapabilityDiagram, PracticeIntakeDiagram, PracticeSearchDiagram } from './PracticeDiagram';
 
 const CANONICAL = 'https://factoryjet.com/au/accountant-website-design';
-const UPDATED = '2026-09-26';
+const UPDATED = '2026-10-10';
 const TITLE = 'Accountant Website Design & SEO Australia | FactoryJet';
 /* Visible hero heading and schema headline are the same text. */
 const H1 = 'Accountant Website Design and SEO for Australian Accounting Firms';
@@ -144,15 +144,15 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   // ── Working with us ──
   { category: 'working', question: 'Do we own the website and content you build?',
     answer: 'Yes. The design, copy, code, images and accounts are yours. You hold the domain, hosting and analytics accounts, and if you move to another company you take everything with you.' },
-  { category: 'working', question: 'Do you have an office in Australia?',
-    answer: 'No. We work with Australian firms remotely and do not have an Australian office. Workshops, reviews and training happen over video calls in Australian business hours. If you want an agency that visits your office in person, a local studio is the better choice.' },
+  { category: 'working', question: 'How will we work with you during the project?',
+    answer: 'We work with Australian firms remotely. Workshops, reviews and training happen over video calls in Australian business hours. If you want an agency that visits your office in person, a local studio is the better choice.' },
 ];
 
 /* ─── Named options in the Australian market (open self-disclosure, ItemList).
        Each note is based on the company's own website, fetched 2026-09-26; each
        lists an Australian address on its own site. ── */
 const PROVIDERS: { name: string; note: string }[] = [
-  { name: 'FactoryJet', note: 'That is us. Custom websites, SEO and AI document intake for accounting and bookkeeping firms, with TPB-aware copy. Founder-led. We work remotely and have no Australian office.' },
+  { name: 'FactoryJet', note: 'That is us. Custom websites, SEO and AI document intake for accounting and bookkeeping firms, with TPB-aware copy. Founder-led. We work remotely with Australian firms.' },
   { name: 'Accountant Website', note: 'Surry Hills, NSW. Websites built for accountants and accounting firms, plus branding, digital marketing, SEO, maintenance plans and managed cyber security.' },
   { name: 'Practice + Pixels', note: 'Fortitude Valley, QLD. Websites, branding and digital marketing for accounting firms, lawyers and financial advisers, with integrations such as Xero listed on its site.' },
   { name: 'Five by Five', note: 'Burleigh Heads, QLD. Accounting website design covering strategy, brand, content, build, SEO and hosting, plus SEO and PPC for accountants.' },

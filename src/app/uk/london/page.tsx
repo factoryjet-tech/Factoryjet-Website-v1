@@ -12,7 +12,7 @@ import CityLinksUK from '@/components/v2/CityLinksUK';
 import './london-hub.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/london';
-const UPDATED = '2026-08-25';
+const UPDATED = '2026-10-10';
 
 /* ─── Breadcrumb source of truth (drives the visible trail AND the JSON-LD) ─ */
 const crumbs = [
@@ -312,7 +312,7 @@ const SOURCES: { href: string; label: string; cite: string; note: string }[] = [
 
 /* ─── FAQ source of truth (drives UI + FAQPage schema) ──────────────── */
 const FAQ_CATEGORIES = [
-  { key: 'f1', label: 'About us in London' },
+  { key: 'f1', label: 'About FactoryJet' },
   { key: 'f2', label: 'Websites & platforms' },
   { key: 'f3', label: 'SEO & AI search' },
   { key: 'f4', label: 'Cost & working together' },
@@ -321,8 +321,6 @@ const FAQ_CATEGORIES = [
 
 const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   // About us in London
-  { category: 'f1', question: 'Are you a web design and digital agency based in London?',
-    answer: 'FactoryJet is a UK web design and digital agency that serves London clients across every borough, from the City to Hackney. We work remotely with regular video reviews. That keeps central-London overhead off your invoice without slowing the work or lowering the quality.' },
   { category: 'f1', question: 'What services do you offer London businesses?',
     answer: 'Web design, ecommerce and Shopify development, WordPress, SEO and AI SEO, and AI agents. One senior team covers the whole build, from the website to how it gets found on Google and in AI answers.' },
   { category: 'f1', question: 'Do you meet clients in person in London?',
@@ -393,16 +391,11 @@ const jsonLd = {
     {
       '@type': 'LocalBusiness',
       '@id': `${CANONICAL}#localbusiness`,
-      name: 'FactoryJet: Web Design & Digital Agency in London',
+      name: 'FactoryJet: Web Design & Digital Agency for London',
       url: CANONICAL,
       areaServed: { '@type': 'City', name: 'London' },
       provider: { '@id': 'https://factoryjet.com/#organization' },
       parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-      geo: {
-        '@type': 'GeoCoordinates',
-        latitude: 51.5074,
-        longitude: -0.1278,
-      },
       // NOTE (2026-08-25): an aggregateRating of 4.9 from 64 reviews was removed
       // here. No review of that count is visible on this page and the figure was
       // never sourced, which makes it both a Google structured-data policy breach
@@ -424,8 +417,8 @@ const jsonLd = {
       '@type': ['WebPage', 'Article'],
       '@id': CANONICAL,
       url: CANONICAL,
-      name: 'Web Design & Digital Agency in London | FactoryJet',
-      headline: 'Web Design & Digital Agency in London',
+      name: 'Web Design & Digital Agency for London | FactoryJet',
+      headline: 'Web Design & Digital Agency for London',
       inLanguage: 'en-GB',
       datePublished: '2026-07-01',
       dateModified: UPDATED,
@@ -455,7 +448,7 @@ const jsonLd = {
 };
 
 export const metadata: Metadata = {
-  title: 'Web Design & Digital Agency in London | FactoryJet',
+  title: 'Web Design & Digital Agency for London | FactoryJet',
   description:
     'FactoryJet is a web design and SEO agency for London businesses: websites, ecommerce, SEO and AI search. Fixed scope, you own the code, no lock-in.',
   alternates: {
@@ -466,14 +459,14 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Web Design & Digital Agency in London | FactoryJet',
+    title: 'Web Design & Digital Agency for London | FactoryJet',
     description:
       'Web design, ecommerce, SEO, and AI for London businesses. Fixed scope, you own the code, senior team, no lock-in.',
     url: CANONICAL,
     siteName: 'FactoryJet',
     locale: 'en_GB',
     type: 'website',
-    images: [{ url: '/images/uk/hero-uk.webp', width: 1200, height: 630, alt: 'Web Design & Digital Agency in London by FactoryJet' }],
+    images: [{ url: '/images/uk/hero-uk.webp', width: 1200, height: 630, alt: 'Web Design & Digital Agency for London by FactoryJet' }],
   },
   robots: { index: true, follow: true },
 };
@@ -502,7 +495,7 @@ export default function LondonHubPage() {
               <MotionFadeUp>
                 <h1>The <span className="grad">London</span> partner for web, commerce &amp; AI</h1>
                 <p className="sub">
-                  FactoryJet is a <mark>web design and digital agency in London</mark>. We build fast websites,
+                  FactoryJet is a <mark>web design and digital agency for London businesses</mark>. We build fast websites,
                   ecommerce stores, and AI-native SEO for London brands, and we get you found on Google and in AI
                   answers.
                 </p>
@@ -556,7 +549,7 @@ export default function LondonHubPage() {
               <div className="intro">
                 <span className="eyebrow">London, in one place</span>
                 <p className="lead">
-                  FactoryJet is a <mark>web design and digital agency in London</mark> that covers the whole build: the
+                  FactoryJet is a <mark>web design and digital agency for London businesses</mark> that covers the whole build: the
                   website, the online store, the SEO, and the AI. One senior team takes a London business from a first
                   site to being found on Google and quoted in AI answers, at a fixed scope with no lock-in.
                 </p>
@@ -1021,7 +1014,7 @@ export default function LondonHubPage() {
             <MotionFadeUp>
               <div style={{ textAlign: 'center' }}>
                 <span className="eyebrow">FAQ</span>
-                <h2>Working with a London agency, answered</h2>
+                <h2>Questions from London clients, answered</h2>
               </div>
               <div className="faqwrap">
                 <nav className="faqnav" aria-label="FAQ categories">

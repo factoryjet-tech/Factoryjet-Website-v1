@@ -15,7 +15,7 @@ import './visual.css';
 import { ParticipantPathDiagram, ParticipantCapabilityDiagram, ParticipantAccessDiagram } from './ParticipantDiagram';
 
 const CANONICAL = 'https://factoryjet.com/au/ndis-website-design';
-const UPDATED = '2026-09-26';
+const UPDATED = '2026-10-10';
 const TITLE = 'NDIS Website Design & Marketing Australia | FactoryJet';
 /* Visible hero heading. H1 is the exact visible heading text (lead + emphasis) and the
    schema headline, so the two can never drift. */
@@ -142,8 +142,8 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     answer: 'For NDIS providers, yes, if it is done for people rather than for tricks. Families and support coordinators search for a support plus a suburb, and Google often shows an AI Overview that pulls from clear, specific pages. Clear pages for each support and area, with accurate details and plain answers, are what Google and AI assistants tend to cite.' },
 
   // ── Working ──
-  { category: 'working', question: 'Do you have an office in Australia?',
-    answer: 'No. We do not have an Australian office, and we say so. We work with Australian providers remotely, on calls and video in Australian business hours, and the founder is involved on every project. For local search, what matters is your own business address, service area and reviews, not where your web designer sits.' },
+  { category: 'working', question: 'How will we work with you during the project?',
+    answer: 'We work with Australian providers remotely, on calls and video in Australian business hours, and the founder is involved on every project. For local search, what matters is your own business address, service area and reviews.' },
   { category: 'working', question: 'Do we own the NDIS website you build?',
     answer: 'Yes. The domain, hosting account, website, content, images and analytics are set up in your name, and you hold the logins. If you later move to another agency or bring it in-house, you take everything with you. Support after launch is there if you want it, never a condition.' },
 ];
@@ -151,7 +151,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
 /* ─── Named options in the Australian market (open self-disclosure, ItemList).
        Each note is based on the company’s own website, fetched 2026-09-26. ── */
 const PROVIDERS: { name: string; note: string }[] = [
-  { name: 'FactoryJet', note: 'That is us. We design, build and support accessible websites and SEO for NDIS providers, with copy checked against the NDIA logo guidelines and the Code of Conduct. No Australian office: we work remotely, founder involved on every project, and you own what we build.' },
+  { name: 'FactoryJet', note: 'That is us. We design, build and support accessible websites and SEO for NDIS providers, with copy checked against the NDIA logo guidelines and the Code of Conduct. We work remotely, founder involved on every project, and you own what we build.' },
   { name: 'ICON Agency', note: 'A digital agency listing offices in Cremorne VIC, Surry Hills NSW and Bowen Hills QLD. Its NDIS provider page offers website design and development, hosting, branding and communications, and says its sector knowledge comes from designing and developing the NDIS and NDIS Commission websites.' },
   { name: 'DSIGNS', note: 'A Parramatta NSW studio offering branding, web design and digital marketing for NDIS providers, from logo design to lead generation, with an NDIS portfolio on its site.' },
   { name: 'Website Adelaide', note: 'A South Australian web designer based in Maslin Beach SA that lists NDIS provider website design among the industries it builds for.' },

@@ -15,6 +15,12 @@ import { getAuthorByName } from '@/data/authors'
 // so a reader arriving from an AU search stays inside the Australian site.
 const isAuGuide = (slug: string) => slug.includes('australia');
 
+// UK guides (slug carries "uk" as its own word, e.g. ai-cost-uk-2026) get the UK header and
+// en_GB locale, so a reader arriving from a UK search sees UK services and the UK enquiry form.
+// The footer stays the shared one: the UK footer lives in src/app/uk/sections and has not been
+// checked outside the /uk pages.
+const isUkGuide = (slug: string) => /(^|-)uk(-|$)/.test(slug);
+
 type Props = {
   params: Promise<{ slug: string }>
 }
@@ -64,7 +70,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
           alt: post.title,
         },
       ],
-      locale: isAuGuide(resolvedParams.slug) ? 'en_AU' : 'en_US',
+      locale: isAuGuide(resolvedParams.slug) ? 'en_AU' : isUkGuide(resolvedParams.slug) ? 'en_GB' : 'en_US',
     },
     twitter: {
       card: 'summary_large_image',
@@ -171,7 +177,11 @@ export default async function Page({ params }: Props) {
         />
       )}
 
-      {isAuGuide(resolvedParams.slug) ? <SiteHeader locale="au" logoHref="/au" /> : <SiteHeader locale="us" />}
+      {isAuGuide(resolvedParams.slug)
+        ? <SiteHeader locale="au" logoHref="/au" />
+        : isUkGuide(resolvedParams.slug)
+          ? <SiteHeader locale="gb" logoHref="/uk" />
+          : <SiteHeader locale="us" />}
       <main>
       <Breadcrumbs items={[
         { name: 'Home', url: 'https://factoryjet.com' },

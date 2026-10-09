@@ -15,7 +15,7 @@ export const post: BlogPost = {
   meta: {
     title: 'Web Design Denver CO: 2026 Pricing & Agency Guide for Small Businesses',
     description:
-      'Denver CO small business web design costs, what outdoor and tech startups need, local vs offshore agency comparison, and how to get Lighthouse 95+ in 7 days.',
+      'Denver CO small business web design costs, what outdoor and tech startups need, local vs remote agency comparison, and how to get Lighthouse 95+ in 7 days.',
   },
   keyTakeaways: [
     "Denver's outdoor, tech startup, and wellness cultures create SMBs with strong brand identities that need web design to match, performance-first, visually bold, mobile-optimized.",
@@ -29,7 +29,7 @@ export const post: BlogPost = {
   faqs: [
     {
       q: 'How much does web design cost for a small business in Denver CO?',
-      a: "Denver local agencies charge $9,000–$22,000 for a professional 5-page website in 2026. Mid-market Denver agencies run $5,000–$9,000. Offshore agencies with US-hour support deliver the same technical quality: Lighthouse 95+, full technical SEO, WCAG 2.2 compliance, for $2,000–$4,000. Denver agencies carry high overhead from Cherry Creek and LoDo office space plus Colorado-rate salaries. That overhead shows up in your quote, not in your website's performance.",
+      a: "Denver local agencies charge $9,000–$22,000 for a professional 5-page website in 2026. Mid-market Denver agencies run $5,000–$9,000. Remote agencies with US-hour support deliver the same technical quality: Lighthouse 95+, full technical SEO, WCAG 2.2 compliance, for $2,000–$4,000. Denver agencies carry high overhead from Cherry Creek and LoDo office space plus Colorado-rate salaries. That overhead shows up in your quote, not in your website's performance.",
     },
     {
       q: 'What do Denver outdoor and adventure businesses need from their website?',
@@ -138,7 +138,7 @@ export const post: BlogPost = {
               <td className="border p-3">4–10 weeks</td>
             </tr>
             <tr className="bg-gray-50">
-              <td className="border p-3 font-bold">FactoryJet (offshore + US support)</td>
+              <td className="border p-3 font-bold">FactoryJet (US business-hour support)</td>
               <td className="border p-3 font-bold">Fixed quote after scoping</td>
               <td className="border p-3 font-bold">Fixed quote after scoping</td>
               <td className="border p-3 font-bold">7–14 days</td>

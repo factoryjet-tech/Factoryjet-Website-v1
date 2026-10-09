@@ -77,7 +77,7 @@ export const metadata: Metadata = {
 
 // Freshness signal. Benchmark: 56% of AI-Overview-cited pages carry it.
 // Keep honest: bump when the page's content actually changes.
-const PAGE_MODIFIED = '2026-08-04';
+const PAGE_MODIFIED = '2026-10-10';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -286,7 +286,7 @@ const ROI_STATS = [
   {
     value: 'Fixed Price',
     label: 'milestone-paid AI integration with full code ownership.',
-    microcopy: 'specialized engineers, US-caliber output, predictable from quote to launch.',
+    microcopy: 'specialized engineers, predictable from quote to launch.',
     categoryLabel: 'PRICING MODEL',
   },
 ];
@@ -314,7 +314,7 @@ const MARKET_STATS = [
 
 const COMPARISON_COLUMNS = [
   { label: 'FactoryJet', isFactoryJet: true },
-  { label: 'US AI Integration Agency' },
+  { label: 'Traditional Agency' },
   { label: 'SaaS AI Add-On (Copilot, etc.)' },
   { label: 'In-House Developer' },
 ] as const;
@@ -601,9 +601,18 @@ const FAQ_ITEMS = [
   },
   {
     category: 'trust',
-    question: 'How is FactoryJet different from a US AI development agency?',
+    question: 'How is FactoryJet different from a large AI development agency?',
     answer:
-      'We provide three distinct advantages. First is pricing: specialized engineers who have supported US businesses for 12+ years. Second is speed: direct access to the engineers building your solution without account layers. Third is SMB depth: over 500 projects delivered. We understand how to integrate AI inside a 15-person firm effectively.',
+      'We provide three distinct advantages. First is pricing: a fixed price paid by milestone, from specialized engineers who have supported US businesses for 12+ years. Second is speed: direct access to the engineers building your solution without account layers. Third is SMB depth: over 500 projects delivered. We understand how to integrate AI inside a 15-person firm effectively.',
+  },
+  // Added 2026-10-10 from a US buyer search seen in Search Console. Clutch and GoodFirms lines
+  // restate help.clutch.co and goodfirms.co as read on 2026-10-09. The 54 of 910 count is from
+  // our own run of US buyer questions that day.
+  {
+    category: 'trust',
+    question: 'Where can I read company reviews on AI integration for small business?',
+    answer:
+      'Read them on Clutch and GoodFirms, which publish client reviews of service firms. Clutch\'s help center says it checks each reviewer\'s identity and work history, and publishes reviews it cannot confirm as Not Verified. GoodFirms says every review is verified before it is published. In each review, check the verified label, the date, the project size and whether the work matches yours, such as AI added to a CRM or help desk. Of 910 AI answers to US buyer questions we collected on October 9, 2026, 54 cited clutch.co. FactoryJet\'s client reviews are on both sites.',
   },
 ];
 
@@ -910,7 +919,7 @@ export default function AIIntegrationServicesPage() {
             },
             {
               icon: '💸',
-              title: 'Custom integrations used to require expensive US engineering teams',
+              title: 'Custom integrations used to require expensive engineering teams',
               body: 'Connecting AI to legacy CRMs or custom databases requires real engineering. It cannot be solved with basic no-code tools. Traditional agencies charge steep ongoing retainers for this work. In contrast, FactoryJet delivers production-grade middleware and prompt engineering at predictable, milestone-paid pricing.',
             },
           ]}

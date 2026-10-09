@@ -8,7 +8,7 @@ import '../ai-agents/ai-agents.css';
 import { aiConsultingAlternates } from '@/data/hreflangMap';
 
 const CANONICAL = 'https://factoryjet.com/uk/ai-consulting';
-const UPDATED = '2026-09-24';
+const UPDATED = '2026-10-10';
 const TITLE = 'AI Consultancy UK | Consultants Who Also Build | FactoryJet';
 const H1 = 'AI Consultancy UK: Strategy That Ends in a Working System, Not a Slide Deck';
 
@@ -81,6 +81,12 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   // ── Choosing an AI consultant ──
   { category: 'choosing', question: 'Who are the top AI consultancy companies in the UK?',
     answer: 'It depends on your size and what you need. For large enterprise transformation, the big strategy firms such as BCG and McKinsey (QuantumBlack) and the Big Four are the obvious names. For UK SMEs and mid-market firms, specialist consultancies such as The AI Consultancy, Fifty One Degrees, OpenKit, iwantmore.ai and Helium42 appear often. We list several, including us, further up this page, with a neutral note on each.' },
+  { category: 'choosing', question: 'Is there a list of the best AI consulting companies in the UK?',
+    answer: 'Yes. Our guide, Best AI Consultancies in the UK and London (2026), compares 14 AI consulting firms. Thirteen show a UK base on their own websites, read on 9 October 2026. The fourteenth is FactoryJet, which works remotely with UK clients. Firms are grouped by buyer. For about 10 staff: The AI Consultancy, AI Expert UK and Optimus Consulting. For about 50: OpenKit, iwantmore.ai, Helium42 and Generativ. With a data team: Fifty One Degrees, Winder.AI and Datatonic. For regulated work: Faculty, Aiimi and Transparity. For large programmes, consultancy.uk says it assessed over 500 firms and named 35.' },
+  { category: 'choosing', question: 'What are the top AI consultancies in London in 2026?',
+    answer: 'Seven of the 14 firms in our 2026 comparison list a London address on their own sites, read on 9 October 2026: The AI Consultancy (Hoxton, N1), Generativ (Paul Street, EC2A, primary office in Nottingham), Helium42 (Uxbridge Road, W12), Fifty One Degrees (Great Portland Street, W1W), Datatonic (One Canada Square, E14), Faculty (Old Street, EC1V) and Transparity (Paddington, W2). They suit different buyers, from small firms to public bodies. Our guide, Best AI Consultancies in the UK and London (2026), gives every address with its source.' },
+  { category: 'choosing', question: 'Who are the generative AI consultants for business in London?',
+    answer: 'Five firms with London addresses do this work. Pick by the assistant you pay for. For Claude or ChatGPT, The AI Consultancy in Hoxton trains staff on both. For Microsoft 365 Copilot, Transparity in Paddington calls itself a pure-play Microsoft partner. For Gemini, Datatonic at One Canada Square rolls out Gemini Enterprise. Generativ and Helium42 run AI training. AI assistants cited the Generativ home page 5 times in the 8 answers we read on 9 October 2026. FactoryJet does this work with UK clients remotely. Our guide, Best AI Consultancies in the UK and London (2026), lists 14 firms.' },
   { category: 'choosing', question: 'Should a mid-sized UK business hire a Big Four firm for AI?',
     answer: 'Usually not for a first project. Big Four and large strategy firms are built for enterprise programmes with many teams, board-level change and large budgets. For a business of 20 to 200 people, that model tends to be heavy and slow. You will get more from a smaller consultancy where senior people do the work and the same team can build the first system.' },
   { category: 'choosing', question: 'AI consultant vs AI agency vs freelancer: which should I pick?',
@@ -199,7 +205,7 @@ const jsonLd = {
     {
       '@type': 'ItemList',
       '@id': `${CANONICAL}#consultancies`,
-      name: 'UK AI consultancies',
+      name: 'AI consultancies for UK businesses',
       itemListElement: AI_CONSULTANCIES.map((a, i) => ({
         '@type': 'ListItem',
         position: i + 1,
@@ -221,7 +227,7 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: TITLE,
   description:
-    'FactoryJet is a UK AI consultancy that runs your AI readiness assessment, picks the use cases worth doing, then builds them. Founder-led. You own it.',
+    'FactoryJet is an AI consultancy for UK firms that runs your AI readiness assessment, picks the use cases worth doing, then builds them. Founder-led. You own it.',
   alternates: { canonical: CANONICAL, languages: aiConsultingAlternates },
   openGraph: {
     title: TITLE,
@@ -256,7 +262,7 @@ export default function AiConsultingUKPage() {
             <div className="col-6040">
               <div>
                 <div className="flex-wrap mb-6">
-                  <span className="chip"><span className="dot dot-orange" />UK AI Consultancy</span>
+                  <span className="chip"><span className="dot dot-orange" />AI Consultancy for UK Businesses</span>
                   <span className="chip">AI Readiness Assessment</span>
                   <span className="chip">Consult, Then Build</span>
                 </div>
@@ -271,7 +277,7 @@ export default function AiConsultingUKPage() {
                 <div className="byline mt-6" style={{ maxWidth: 560 }}>
                   <div className="av">BB</div>
                   <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ projects delivered</span></div>
-                  <div className="upd">Last updated<br />24 September 2026</div>
+                  <div className="upd">Last updated<br />10 October 2026</div>
                 </div>
 
                 <div className="mt-6" style={{ maxWidth: 560 }}>
@@ -707,9 +713,9 @@ export default function AiConsultingUKPage() {
           <div className="wrap">
             <div style={{ maxWidth: 760 }}>
               <span className="eyebrow">The honest landscape</span>
-              <h2>UK AI consultancies worth knowing</h2>
+              <h2>AI consultancies for UK businesses worth knowing</h2>
               <p className="lead mt-4">
-                We are one option, not the only one. These are UK AI consulting firms that show up when people search
+                We are one option, not the only one. These are AI consulting firms for UK businesses that show up when people search
                 for an AI consultancy or ask AI assistants for a recommendation. Each note is based on what the
                 company says on its own website. Talk to a few and pick the fit.
               </p>

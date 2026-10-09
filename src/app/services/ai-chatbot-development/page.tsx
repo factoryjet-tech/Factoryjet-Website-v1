@@ -75,7 +75,7 @@ export const metadata: Metadata = {
 
 // Freshness signal. Benchmark: 56% of AI-Overview-cited pages carry it.
 // Keep honest: bump when the page's content actually changes.
-const PAGE_MODIFIED = '2026-09-17';
+const PAGE_MODIFIED = '2026-10-10';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -682,6 +682,23 @@ const FAQ_ITEMS = [
     question: 'How much does an AI chatbot cost in USA?',
     answer:
       'In North America, chatbot development usually costs $50,000 to $200,000 or more, according to CMARIX, which puts a basic FAQ bot at $5,000 to $15,000. One-time custom chatbot builds move with the number of intents and systems. FactoryJet quotes every project with a fixed price after discovery. Custom bots save thousands in recurring software subscription costs over time.',
+  },
+
+  // ── Open buyer cost questions (build wording, subscription wording), added 2026-10-10 ──
+  // Prices read 2026-10-09 on clutch.co/developers/artificial-intelligence/chatbots,
+  // cmarix.com/blog/ai-chatbot-development-cost, intercom.com/pricing,
+  // zendesk.com/pricing and tidio.com/pricing. Re-read before changing a figure.
+  {
+    category: 'pricing',
+    question: 'How much would it cost to build an AI chatbot?',
+    answer:
+      'A focused build or proof of concept (a small first version) starts at a $1,000 to $10,000 minimum, and an enterprise-grade system runs $100,000 to $250,000 or more, according to the chatbot companies page on Clutch, read on 9 October 2026. Clutch names four cost drivers: generative AI versus a simpler scripted flow, the number of systems the bot connects to, how much of your own data it must learn from, and compliance needs. After launch, the 2026 pricing guide from CMARIX says to budget about 15% to 20% of the build cost each year for fixes and updates.',
+  },
+  {
+    category: 'pricing',
+    question: 'How much does an AI chat bot cost?',
+    answer:
+      'A ready-made AI chat bot is billed by usage. On the vendor pricing pages we read on 9 October 2026, Intercom charges $0.99 per outcome for its Fin agent, Zendesk lists pay-as-you-go automated resolutions at $2.00 each, and Tidio sells its Lyro agent from $32.50 a month for 50 conversations on annual billing. Helpdesk seats cost extra on some plans. If the bot only answers from your help articles, a subscription is the cheaper place to start. A custom build is a one-time project for a bot that must act inside your own systems, such as checking an order.',
   },
 ];
 

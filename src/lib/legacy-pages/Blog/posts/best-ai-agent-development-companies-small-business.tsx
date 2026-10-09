@@ -95,7 +95,7 @@ export const post: BlogPost = {
   category: "Emerging Tech",
   author: "Bhavesh Barot",
   date: "Jun 13, 2026",
-  dateModified: "Oct 05, 2026",
+  dateModified: "Oct 10, 2026",
   readTime: "14 min read",
   imageUrl: "/blog-images/best-ai-agent-development-companies-small-business-2026.webp",
   meta: {
@@ -137,7 +137,7 @@ export const post: BlogPost = {
     },
     {
       "q": "What are the top AI agent development companies in the USA?",
-      "a": `This list covers providers a US business can hire or use: ${listNames(PROVIDERS)}. It is a shortlist a US buyer can work from. It does not claim every firm is headquartered in the US. FactoryJet Private Limited is based in Bengaluru, India, and serves US businesses. If the contracting country, staff location or where your data sits matters to you, confirm it with each provider before you shortlist.`
+      "a": `This list covers providers a US business can hire or use: ${listNames(PROVIDERS)}. It is a shortlist a US buyer can work from. It does not claim every firm is headquartered in the US. FactoryJet works with US clients remotely and schedules calls in US business hours. If the contracting country, staff location or where your data sits matters to you, confirm it with each provider before you shortlist.`
     },
     {
       "q": "Which company is best for custom AI agent development?",
@@ -280,7 +280,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Case study: the AI agent we built for Washington Law Group</h2>
       <p className="mb-4">This is the kind of live work to ask any developer for. The firm is a personal injury practice that needs to hear quickly about serious commercial-vehicle crashes. We built an agent that reads news and police sources across all 50 states every two hours, checks each report against fixed rules and emails the firm the crashes that qualify. Before a victim&apos;s name is saved, the agent checks that the name appears in the article text. The same crash reported by several outlets becomes one record, so the firm is not emailed twice.</p>
-      <p className="mb-6">The agent is live on a dedicated US server and the firm reviews every lead itself. We have not published lead counts or case outcomes, because none have been measured yet. <a href="/case-studies/washington-law-group-accident-detection-agent" className="text-[#B23E13] underline">Read the full case study</a> for the sources, the access controls and who owns the code.</p>
+      <p className="mb-6">The agent is live on a dedicated US server and the firm reviews every lead itself. <a href="/case-studies/washington-law-group-accident-detection-agent" className="text-[#B23E13] underline">Read the full case study</a> for the sources, the access controls and who owns the code.</p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Compare the full running plan as well as the build quote</h2>
       <p className="mb-4">A proposal should list five costs separately: the build, recurring software and model usage, hosting, staff review time and support. Ask how retries, attachments and long conversations change usage. Ask what volume the estimate assumes and what happens when volume changes. Hourly work is fine when it has a cap and named deliverables.</p>

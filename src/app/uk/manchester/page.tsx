@@ -43,11 +43,6 @@ const jsonLd = {
         '@type': 'City',
         name: 'Manchester',
       },
-      geo: {
-        '@type': 'GeoCoordinates',
-        latitude: 53.4808,
-        longitude: -2.2426,
-      },
       author: {
         '@type': 'Person',
         name: 'Bhavesh Barot',

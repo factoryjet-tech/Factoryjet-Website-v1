@@ -957,9 +957,9 @@ const EXPERIENCE: ReadonlyArray<{ t: string; kind: string; what: string; href: s
     span: 'lg:col-span-5',
   },
   {
-    t: 'What we leave out',
-    kind: 'No named NetSuite client',
-    what: 'This page names no NetSuite client and quotes no result. Client projects with public case studies are on the overview page and in our case studies.',
+    t: 'Proof you can check',
+    kind: 'Public case studies',
+    what: 'Client projects with public case studies are on the overview page and in our case studies.',
     href: '/case-studies',
     cta: 'See all case studies',
     span: 'lg:col-span-5',
@@ -1697,8 +1697,7 @@ export default function NetSuiteAiAgentsPage() {
                 </p>
                 <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-neutral-600">
                   Where we differ is range. FactoryJet also works on Odoo, SAP Business One, ERPNext and custom
-                  systems, so the route we recommend is not tied to one vendor&rsquo;s product. A firm that works on
-                  NetSuite alone will know its corners better than we do.
+                  systems, so the route we recommend is not tied to one vendor&rsquo;s product.
                 </p>
               </div>
               <ol className="grid gap-4 lg:col-span-8">

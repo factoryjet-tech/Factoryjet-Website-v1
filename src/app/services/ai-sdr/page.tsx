@@ -14,7 +14,7 @@ import '@/components/v2/PlatformPage.css';
 
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const CANONICAL_URL = 'https://factoryjet.com/services/ai-sdr';
-const PAGE_MODIFIED = '2026-09-17';
+const PAGE_MODIFIED = '2026-10-10';
 
 /** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
  *  <Breadcrumbs> component and the BreadcrumbList JSON-LD below, so the two
@@ -260,6 +260,14 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     question: 'Can a sales rep take over a conversation the AI SDR started?',
     answer:
       'Yes, at any point. When a rep replies in the thread, the agent detects the human reply, pauses its own follow-ups for that lead, and marks the rep as the owner in the CRM. The rep can also hand the lead back to the agent later for scheduling or follow-up. The agent and the rep never send on the same thread at the same time.',
+  },
+  // Added 2026-10-10 from a US buyer search seen in Search Console. The two product lines restate
+  // ruh.ai/functions/ai-sdr and bina-platform.com as read on 2026-10-09.
+  {
+    category: 'workflows',
+    question: 'Is there an autonomous AI sales agent for construction companies?',
+    answer:
+      "Yes. Two products are sold for it. Ruh AI's Construction SDR researches general contractors, developers and owners, writes outreach and books walkthroughs, with a person approving every send. BINA is an autonomous sales agent for new-construction real estate. Both descriptions come from their own sites, read October 9, 2026. FactoryJet builds the custom kind, set up around your rules. It replies to an inquiry in under 60 seconds, asks what your estimators ask (project type, location, budget, start date), books the site visit and logs it in your CRM. It does not price the job. Your estimator does.",
   },
 ];
 
@@ -1103,7 +1111,7 @@ export default function AiSdrPage() {
                   Sales pipeline is not a place for guesswork. At FactoryJet, founder Bhavesh Barot runs every AI SDR discovery call himself. In the first meeting, we review your current lead response time, your CRM setup, and the qualification rules your best reps already use.
                 </p>
                 <p>
-                  You work directly with senior engineers who have already built outbound systems for other B2B teams. Your build never gets handed to a junior salesperson or an offshore contractor. The same senior-only approach runs across our broader{' '}
+                  You work directly with senior engineers who have already built outbound systems for other B2B teams. Your build never gets handed to a junior salesperson or an outside contractor. The same senior-only approach runs across our broader{' '}
                   <Link href="/services/ai-agent-development" className="underline hover:text-[#F05A28]">
                     AI agent development
                   </Link>{' '}

@@ -6,7 +6,7 @@ export const post: BlogPost = {
   slug: 'website-cost-small-business-usa-2026',
   title: 'How Much Does a Website Cost for a Small Business in the USA? (2026 Complete Guide)',
   excerpt:
-    'A professional small business website in the USA costs between $1,500 and $15,000 in 2026, depending on the type, features, and agency. This guide breaks down every cost tier (DIY builders, freelancers, domestic agencies, and offshore teams) so you can budget confidently and avoid the overpriced surprises that burn most SMB owners.',
+    'A professional small business website in the USA costs between $1,500 and $15,000 in 2026, depending on the type, features, and agency. This guide breaks down every cost tier (DIY builders, freelancers, domestic agencies, and remote teams) so you can budget confidently and avoid the overpriced surprises that burn most SMB owners.',
   category: 'Web Design & Strategy',
   author: 'Bhavesh Barot',
   date: 'May 13, 2026',
@@ -19,16 +19,16 @@ export const post: BlogPost = {
   keyTakeaways: [
     'A professional custom website for a US small business costs $1,500-$8,000 in 2026; anything under that is almost always a template with minimal customization.',
     'DIY builders (Wix, Squarespace) cost $23-$65/month but cap your SEO ceiling and require 40-80 hours of your own time to build and maintain.',
-    'US domestic agencies typically charge $8,000-$25,000 for the same deliverable that offshore-with-US-support teams deliver for $2,000-$5,000.',
+    'US domestic agencies typically charge $8,000-$25,000 for the same deliverable that remote-with-US-support teams deliver for $2,000-$5,000.',
     'Monthly maintenance costs $100-$300 from a professional agency; skipping maintenance leads to security breaches that cost $5,000-$50,000 to remediate.',
     'A slow website (load time over 3 seconds) loses 53% of mobile visitors before the page even loads. Speed is a direct revenue metric.',
     'Price anchoring matters: get three quotes, compare scope line-by-line, and reject any agency that will not provide an itemized statement of work.',
-    'FactoryJet delivers 5-page professional websites in 7 days: the offshore-quality-at-offshore-price benchmark for US SMBs, with US-hour communication.',
+    'FactoryJet delivers 5-page professional websites in 7 days for US SMBs, with US-hour communication.',
   ],
   faqs: [
     {
       q: 'How much does a website cost for a small business in the USA in 2026?',
-      a: "A professional small business website in the USA costs $1,500-$8,000 in 2026. DIY builders like Wix or Squarespace cost $23-$65/month (plus 40-80 hours of your time). Freelancers charge $1,500-$5,000. US domestic agencies range from $8,000-$25,000. Offshore agencies with US-hour support (like FactoryJet) sit between the freelance and domestic-agency bands, usually on a fixed project scope rather than an hourly rate. E-commerce sites add $2,000-$10,000 depending on product count and customization.",
+      a: "A professional small business website in the USA costs $1,500-$8,000 in 2026. DIY builders like Wix or Squarespace cost $23-$65/month (plus 40-80 hours of your time). Freelancers charge $1,500-$5,000. US domestic agencies range from $8,000-$25,000. FactoryJet works on a fixed project scope rather than an hourly rate, with US-hour support, and quotes a fixed price in writing after a short scoping call. E-commerce sites add $2,000-$10,000 depending on product count and customization.",
     },
     {
       q: 'What is included in a $3,000 small business website?',
@@ -36,7 +36,7 @@ export const post: BlogPost = {
     },
     {
       q: 'Why are some web design agencies so much cheaper than others?',
-      a: "Price differences come from four factors: location (day rates vary widely depending on where the team is based), business model (productized agencies with repeatable systems are faster and cheaper than custom boutiques), technology stack (Next.js/React sites take less time to build than bespoke CMSes), and scope (template-based builds are faster but limit SEO and design flexibility). A $2,000 quote can be legitimate if the agency has efficient workflows and offshore cost structure. Or it can mean a $79 ThemeForest template with minimal customization.",
+      a: "Price differences come from four factors: location (day rates vary widely depending on where the team is based), business model (productized agencies with repeatable systems are faster and cheaper than custom boutiques), technology stack (Next.js/React sites take less time to build than bespoke CMSes), and scope (template-based builds are faster but limit SEO and design flexibility). A $2,000 quote can be legitimate if the agency has efficient workflows and a lean cost structure. Or it can mean a $79 ThemeForest template with minimal customization.",
     },
     {
       q: 'Do I need to pay monthly fees after my website is built?',
@@ -44,7 +44,7 @@ export const post: BlogPost = {
     },
     {
       q: 'How long does it take to build a small business website?',
-      a: "Timeline depends on scope and agency workflow. DIY builders take 2-8 weeks of your own time. Freelancers take 4-12 weeks. US domestic agencies take 6-16 weeks. Offshore agencies with productized workflows take 7-21 days. FactoryJet delivers 5-page sites in 7 days. The biggest delay factor is client feedback turnaround and content readiness. Having your copy, logo, and photos ready before kickoff cuts timelines by 30-50%.",
+      a: "Timeline depends on scope and agency workflow. DIY builders take 2-8 weeks of your own time. Freelancers take 4-12 weeks. US domestic agencies take 6-16 weeks. Agencies with productized workflows take 7-21 days. FactoryJet delivers 5-page sites in 7 days. The biggest delay factor is client feedback turnaround and content readiness. Having your copy, logo, and photos ready before kickoff cuts timelines by 30-50%.",
     },
     {
       q: 'Should I use Wix or hire a web design agency?',
@@ -60,7 +60,7 @@ export const post: BlogPost = {
     },
     {
       q: 'Is a $2,000 website too cheap to be good?',
-      a: "Not if the agency has efficient systems. That price point is achievable when an agency uses modern tooling (Next.js, component libraries, CI/CD pipelines), an offshore cost structure (India-based teams cost 60-70% less than US), and a productized process (standardized 5-page build rather than fully custom). FactoryJet's 5-page builds use the same tooling and process, with 7-day delivery, Lighthouse 100 scores, US business-hour support, and a fixed price quoted in writing after a short scoping call. Ask for PageSpeed Insights reports on live client sites before assuming low price means low quality.",
+      a: "Not if the agency has efficient systems. That price point is achievable when an agency uses modern tooling (Next.js, component libraries, CI/CD pipelines) and a productized process (standardized 5-page build rather than fully custom). FactoryJet's 5-page builds use the same tooling and process, with 7-day delivery, Lighthouse 100 scores, US business-hour support, and a fixed price quoted in writing after a short scoping call. Ask for PageSpeed Insights reports on live client sites before assuming low price means low quality.",
     },
     {
       q: 'What ROI should I expect from a new small business website?',
@@ -124,7 +124,7 @@ export const post: BlogPost = {
           <li>Tier 1: DIY Website Builders ($0-$780/year)</li>
           <li>Tier 2: Freelancers ($1,500-$5,000)</li>
           <li>Tier 3: US Domestic Agencies ($8,000-$25,000)</li>
-          <li>Tier 4: Offshore Agencies with US Support ($2,000-$6,000)</li>
+          <li>Tier 4: Remote Agencies with US Support ($2,000-$6,000)</li>
           <li>E-Commerce Website Costs: Shopify vs. WooCommerce vs. Custom</li>
           <li>Hidden Costs That Blow Budgets</li>
           <li>Monthly Maintenance: What You Pay After Launch</li>
@@ -180,7 +180,7 @@ export const post: BlogPost = {
               <td className="border p-3">High</td>
             </tr>
             <tr className="bg-[#FAFAF7]">
-              <td className="border p-3 font-semibold">Offshore Agency (FactoryJet)</td>
+              <td className="border p-3 font-semibold">Productized Agency (FactoryJet)</td>
               <td className="border p-3 font-bold text-[#B23E13]">Fixed quote after scoping</td>
               <td className="border p-3">Fixed quote after scoping</td>
               <td className="border p-3 font-bold text-[#F05A28]">7-21 days</td>
@@ -223,9 +223,9 @@ export const post: BlogPost = {
         Output quality from US agencies is not universally superior. Many US agencies subcontract development to global engineering teams while adding a 60-80% markup for coordination. Ask specifically where developers are located to determine whether you are paying for domestic coding or domestic account management.
       </p>
 
-      <h2 className="text-2xl font-bold mt-8 mb-4 text-gray-900">Tier 4: Offshore Agencies with US Support ($2,000-$6,000)</h2>
+      <h2 className="text-2xl font-bold mt-8 mb-4 text-gray-900">Tier 4: Remote Agencies with US Support ($2,000-$6,000)</h2>
       <p className="mb-4 text-gray-700 leading-relaxed">
-        The highest-leverage option for US SMBs is the offshore-with-US-support model: agencies with global engineering teams, dedicated US-hours project management, US-governed contracts, and US-based client references. These agencies deliver the same technical output as domestic firms at 60-70% lower cost.
+        The highest-leverage option for US SMBs is the remote-with-US-support model: agencies with global engineering teams, dedicated US-hours project management, US-governed contracts, and US-based client references. These agencies deliver the same technical output as domestic firms at 60-70% lower cost.
       </p>
       <p className="mb-4 text-gray-700 leading-relaxed">
         Lighthouse scores, WCAG compliance, Core Web Vitals, and JSON-LD schema markup do not have a geography. What matters is engineering rigor and communication reliability. FactoryJet builds with full code ownership, 7-day delivery for sites of 5 pages or fewer, and verified Lighthouse 95+ performance, and quotes a fixed price in writing after a short scoping call.
@@ -299,7 +299,7 @@ export const post: BlogPost = {
       <div className="bg-[#FAFAF7] border border-[#E5E5DF] rounded-xl p-6 mt-8">
         <h3 className="text-lg font-bold mb-2 text-gray-900">The Bottom Line</h3>
         <p className="text-gray-700 leading-relaxed">
-          Budget $2,000 to $5,000 for a professional US small business website in 2026 when using an offshore-with-US-support engineering team. Budget $8,000 to $15,000 if you require a domestic agency for regulatory or preference reasons. Add $100 to $250/month for ongoing maintenance. Expect a 3x to 8x ROI within 12 months when technical SEO and conversion architecture are properly implemented.
+          Budget $2,000 to $5,000 for a professional US small business website in 2026 when using an remote-with-US-support engineering team. Budget $8,000 to $15,000 if you require a domestic agency for regulatory or preference reasons. Add $100 to $250/month for ongoing maintenance. Expect a 3x to 8x ROI within 12 months when technical SEO and conversion architecture are properly implemented.
         </p>
       </div>
     </>

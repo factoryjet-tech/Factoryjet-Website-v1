@@ -69,7 +69,8 @@ export const metadata: Metadata = {
 };
 
 /** Honest last-substantive-edit date. Bump only when the page content changes. */
-const PAGE_MODIFIED = '2026-09-26';
+const PAGE_PUBLISHED = '2026-09-26';
+const PAGE_MODIFIED = '2026-10-10';
 
 const webPageSchema = {
   '@context': 'https://schema.org',
@@ -79,7 +80,7 @@ const webPageSchema = {
   name: TITLE,
   headline: H1,
   description: DESCRIPTION,
-  datePublished: PAGE_MODIFIED,
+  datePublished: PAGE_PUBLISHED,
   dateModified: PAGE_MODIFIED,
   inLanguage: 'en-US',
   author: { '@id': FOUNDER_ID, '@type': 'Person', name: 'Bhavesh Barot', url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/', jobTitle: 'Founder, FactoryJet' },

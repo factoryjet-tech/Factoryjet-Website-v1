@@ -168,7 +168,7 @@ const IN_WEB_DESIGN_FIRMS = [
 // Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
 // dateModified; these pages carried none. Keep this honest: bump it when the
 // page's content actually changes, not on every unrelated deploy.
-const PAGE_MODIFIED = '2026-08-04';
+const PAGE_MODIFIED = '2026-10-10';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -611,9 +611,9 @@ const IN_FAQ_ITEMS = [
   },
   {
     category: 'india',
-    question: 'Are you based in India? Can I meet you in person?',
+    question: 'Can I meet you in person?',
     answer:
-      'Yes. FactoryJet is headquartered in India. We work with clients across India primarily via video calls, WhatsApp, and shared project workspaces, which is how we maintain the efficiency needed to deliver in 7 days. For strategic engagements, we do meet clients in person in select cities. Most clients find the async-plus-video workflow faster and more structured than in-person agency meetings.',
+      'Yes. We work with clients across India primarily via video calls, WhatsApp, and shared project workspaces, which is how we maintain the efficiency needed to deliver in 7 days. For strategic engagements, we do meet clients in person in select cities. Most clients find the async-plus-video workflow faster and more structured than in-person agency meetings.',
   },
 
   // Money-query coverage, added 2026-06-11

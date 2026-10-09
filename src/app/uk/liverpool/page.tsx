@@ -109,11 +109,6 @@ const jsonLd = {
         { '@type': 'AdministrativeArea', name: 'Liverpool City Region' },
         { '@type': 'AdministrativeArea', name: 'Merseyside' },
       ],
-      geo: {
-        '@type': 'GeoCoordinates',
-        latitude: 53.4084,
-        longitude: -2.9916,
-      },
     },
     {
       '@type': 'Service',

@@ -13,7 +13,7 @@ import '@/components/v2/PlatformPage.css';
 
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const CANONICAL_URL = 'https://factoryjet.com/services/ecommerce-cro-agency';
-const PAGE_MODIFIED = '2026-09-03';
+const PAGE_MODIFIED = '2026-10-10';
 
 /** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
  *  <Breadcrumbs> component and the BreadcrumbList JSON-LD below, so the two
@@ -950,7 +950,7 @@ export default function EcommerceCroAgencyPage() {
                   CRO work fails quietly when nobody owns the result. At FactoryJet, founder Bhavesh Barot runs the discovery call for every sprint himself, and reviews every test before it ships.
                 </p>
                 <p>
-                  You work directly with senior developers who have already built checkout extensions and PDP tests for other Shopify Plus brands. We do not hand your funnel to junior staff or offshore contractors. If support tickets, not checkout conversion, are the real cost center, our{' '}
+                  You work directly with senior developers who have already built checkout extensions and PDP tests for other Shopify Plus brands. We do not hand your funnel to junior staff or outside contractors. If support tickets, not checkout conversion, are the real cost center, our{' '}
                   <Link href="/services/ai-customer-support-agents" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
                     AI customer support agents
                   </Link>{' '}

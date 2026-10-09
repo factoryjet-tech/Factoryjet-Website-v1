@@ -42,7 +42,7 @@ export const post: BlogPost = {
   category: "Emerging Tech",
   author: "Bhavesh Barot",
   date: "May 05, 2026",
-  dateModified: "Oct 05, 2026",
+  dateModified: "Oct 10, 2026",
   readTime: "12 min read",
   imageUrl: "/blog-images/ai-agents-business-operations-uk-smbs-2026-hero.webp",
   meta: {
@@ -136,7 +136,7 @@ export const post: BlogPost = {
       <p className="mb-6">The price moves with how many systems the agent reads and writes to and how many exceptions it must handle. FactoryJet quotes a fixed price in writing after a short scoping call. On time, a pilot on one narrow workflow usually takes two to four weeks, and a production agent with permissions, logging and monitoring usually takes six to twelve weeks.</p>
       <h2 className="text-2xl font-bold mt-8 mb-4">Case study: a monitoring agent we built for Washington Law Group</h2>
       <p className="mb-4">The research and monitoring row in the table above is live work for us. The firm is a US personal injury practice. We built an agent that reads news and police sources across all 50 states every two hours and emails the firm the serious commercial-vehicle crashes that qualify. It checks every extracted name against the article text and merges repeated reports of one crash into a single record. It runs on a dedicated US server with restricted sign-in and encrypted daily backups, and the firm reviews every lead itself.</p>
-      <p className="mb-6"><a href="/case-studies/washington-law-group-accident-detection-agent" className="text-[#B23E13] underline">Read the full case study</a>. It is a US project and we have not published savings figures from it, because none have been measured yet. Use it to see how sources, checks and review fit together in a live agent.</p>
+      <p className="mb-6"><a href="/case-studies/washington-law-group-accident-detection-agent" className="text-[#B23E13] underline">Read the full case study</a>. It is a US project. Use it to see how sources, checks and review fit together in a live agent.</p>
       <h2 className="text-2xl font-bold mt-8 mb-4">A commerce foundation: GPSUK</h2>
       <p className="mb-4">The <a href="/case-studies/gpsuk-promotional-products" className="text-[#B23E13] underline">GPSUK case study</a> documents a Commerceflo trade storefront with account-based pricing and quote-to-order workflows. It is a commerce build, and no AI agent runs on it.</p>
       <p className="mb-6">We include it because clean catalogue, customer and quote data often has to come first. An agent can only draft a quote from price lists it can trust. Add an agent where reading varied inputs or coordinating several steps adds something the commerce workflow does not already do.</p>

@@ -76,7 +76,7 @@ export const metadata: Metadata = {
 
 // Freshness signal. Benchmark: 56% of AI-Overview-cited pages carry it.
 // Keep honest: bump when the page's content actually changes.
-const PAGE_MODIFIED = '2026-09-28';
+const PAGE_MODIFIED = '2026-10-10';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -625,6 +625,14 @@ const FAQ_ITEMS = [
     question: 'How is FactoryJet different from a US automation consultant?',
     answer:
       'Fixed pricing, senior engineers doing the work, and practical small-business experience since 2014. We also stay on after launch to support what we built, instead of handing over a workflow and disappearing when an API changes.',
+  },
+  /* Added 2026-10-10. Upwork and Fiverr pages opened 2026-10-09; answer counts
+     are from our 9 Oct 2026 AI answer check. */
+  {
+    category: 'trust',
+    question: 'Where can I find services for freelance AI workflow setup?',
+    answer:
+      'Start with freelance marketplaces. When we asked AI assistants this on 9 October 2026, the Upwork page for AI workflow specialists appeared in 10 of 14 answers and the Fiverr Automations and Agents category in 5. That Fiverr category showed 17,000+ results that day. A freelancer is the right pick for one workflow between two or three common tools you can test yourself. An agency such as FactoryJet fits when the workflow touches money, customer data or several systems, or needs watching after launch. Our list of the best AI automation agencies in the US compares 14 firms.',
   },
 ];
 

@@ -14,7 +14,7 @@ import '../au-page.css';
 import './page.css';
 
 const CANONICAL = 'https://factoryjet.com/au/real-estate-websites';
-const UPDATED = '2026-09-26';
+const UPDATED = '2026-10-10';
 const TITLE = 'Real Estate Website Design & SEO Australia | FactoryJet';
 /* Visible hero heading AND schema headline: keep them identical. */
 const H1_LEAD = 'Real Estate Website Design and SEO for';
@@ -147,7 +147,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
 /* ─── Named options in the Australian market (open self-disclosure, ItemList).
        Each company's own website was opened on 2026-09-26 to confirm an Australian address and the service. ── */
 const PROVIDERS: { name: string; note: string }[] = [
-  { name: 'FactoryJet', note: 'That is us. Custom real estate websites, suburb SEO and AI enquiry handling, built around your CRM. We serve Australian agencies remotely and have no Australian office. You own what we build.' },
+  { name: 'FactoryJet', note: 'That is us. Custom real estate websites, suburb SEO and AI enquiry handling, built around your CRM. We serve Australian agencies remotely. You own what we build.' },
   { name: 'Agentbox Websites', note: 'Real estate websites from a CRM provider with a Sydney address. It says listings, agent data and off-market listings are pushed from your CRM into the website, with contact forms that sync with the CRM.' },
   { name: 'Rex', note: 'A real estate software company with offices listed in Brisbane and Perth. It offers a real estate CRM, property agency websites and AI features built into the CRM.' },
   { name: 'Aro Software', note: 'A real estate software company in Coolum Beach, Queensland. It says it has built more than 3,000 real estate websites and integrates with Australian real estate CRMs, whichever one you use.' },
@@ -882,7 +882,7 @@ export default function RealEstateWebsitesAUPage() {
               ))}
             </div>
             <p className="sub-note">
-              Named from Australian search results for real estate website queries, September 2026. Each company’s own website was checked on 26 September 2026 for an Australian address and the service. Listing is not endorsement.
+              Named from Australian search results for real estate website queries, September 2026. Each other company’s own website was checked on 26 September 2026 for an Australian address and the service. Listing is not endorsement.
             </p>
           </div>
         </section>

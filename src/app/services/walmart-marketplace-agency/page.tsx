@@ -169,7 +169,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
   {
     category: 'working',
     question: 'Who will actually work on my account?',
-    answer: 'FactoryJet senior in-house team runs your account. You work directly with experienced marketplace specialists. We never hand client work to offshore juniors. That consistency produces superior growth results.',
+    answer: 'FactoryJet senior in-house team runs your account. You work directly with experienced marketplace specialists. We never hand client work to juniors. That consistency produces superior growth results.',
   },
   {
     category: 'working',

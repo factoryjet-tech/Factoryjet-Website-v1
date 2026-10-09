@@ -78,6 +78,14 @@ const faqs: FAQItem[] = [
     q: 'How much does it cost to build a custom AI agent in Australia?',
     a: 'Web Video Digital\'s August 2026 guide puts most small and mid-size projects at A$30,000 to A$80,000, with simple single-task agents from A$15,000 and regulated or enterprise builds past A$150,000. Flowtivity\'s March 2026 guide is lower, at A$5,000 to A$50,000 or more, for example A$5,000 to A$10,000 for an appointment booking agent. The gap mostly reflects how much each firm includes.',
   },
+  {
+    q: 'Does it cost money to build an AI agent?',
+    a: 'Yes, when a firm builds it for you. Two Australian guides publish ranges for a custom build: Flowtivity (March 2026) at A$5,000 to A$50,000 or more, and Web Video Digital (August 2026) at A$15,000 to A$150,000, with most small and mid-size projects at A$30,000 to A$80,000. Most of that pays for connecting the agent to your systems and testing it. Model usage is usually the smallest line. If you would rather hire people than pay a project fee, our guide to hiring AI developers in Australia covers salaries and contractor day rates.',
+  },
+  {
+    q: 'How much does ChatGPT agents cost?',
+    a: 'OpenAI does not sell an agent at a separate price. Its help centre, read on 9 October 2026, says ChatGPT agent is no longer available and points users to ChatGPT Work, which is included in ChatGPT plans. It lists Plus at $20 a month and Pro at $100, $200 or $500 a month, and labels the Pro prices USD. In Australia OpenAI bills in Australian dollars, so check its pricing page for the local figure. A custom agent is built to work inside your own systems, which Flowtivity and Web Video Digital put at about A$5,000 to A$150,000 or more.',
+  },
   // Chatbots
   {
     q: 'How much does a chatbot cost?',
@@ -94,6 +102,10 @@ const faqs: FAQItem[] = [
   {
     q: 'What is the cheapest AI chatbot?',
     a: 'A free plan is the cheapest, and several website chat tools offer one, Tidio among them. The cheapest option that actually works for your business is the one that answers your customers\' real questions correctly with the least setup. A free bot that gives wrong answers about delivery times or returns costs you more in refunds and complaints than a paid plan would.',
+  },
+  {
+    q: 'How much does it cost to develop an AI chatbot?',
+    a: 'Developing a custom AI chatbot that connects to your own systems is a project. Flowtivity\'s March 2026 Australian guide puts customer service automation at A$10,000 to A$25,000, and both Australian guides we read add 15 to 25 percent of the build cost each year for maintenance. If the chatbot only needs to answer from your website content, you can set up software instead. Tidio lists a free plan and paid plans from US$24.17 a month on annual billing, about A$34. Once it has to check orders or change bookings, the AI agent ranges in this guide apply.',
   },
   // Receptionists and voice
   {
@@ -164,6 +176,7 @@ export const post: BlogPost = {
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Sep 26, 2026',
+  dateModified: 'Oct 10, 2026',
   readTime: '18 min read',
   imageUrl: '/blog-images/ai-cost-australia-2026-hero.webp',
   imageAlt:

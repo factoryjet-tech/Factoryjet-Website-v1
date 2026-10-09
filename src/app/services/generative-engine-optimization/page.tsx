@@ -48,14 +48,14 @@ import '@/components/v2/PlatformPage.css';
    query fan-out quote was fetch-verified on Google Search Central 2026-09-29.
 ───────────────────────────────────────────────────────────────────────────── */
 
-const PAGE_MODIFIED = '2026-09-29';
+const PAGE_MODIFIED = '2026-10-10';
 
 const PAGE_TITLE = 'GEO & AEO Agency: Generative Engine Optimization Services | FactoryJet';
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,
   description:
-    'US GEO and AEO agency. Our generative engine optimization services get your brand named in the answers ChatGPT, Perplexity, Claude and Google AI Overviews give buyers.',
+    'GEO and AEO agency for US brands. Our generative engine optimization services get your brand named in the answers ChatGPT, Perplexity, Claude and Google AI Overviews give buyers.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
@@ -211,7 +211,7 @@ const WEBPAGE_SCHEMA = {
   '@id': 'https://factoryjet.com/services/generative-engine-optimization#webpage',
   url: 'https://factoryjet.com/services/generative-engine-optimization',
   name: 'GEO & AEO Agency: Generative Engine Optimization Services',
-  description: 'FactoryJet is a US GEO and AEO agency offering generative engine optimization, answer engine optimization and LLM SEO services.',
+  description: 'FactoryJet is a GEO and AEO agency for US brands, offering generative engine optimization, answer engine optimization and LLM SEO services.',
   citation: Object.values(RELATION_SOURCES).map((s) => ({ '@type': 'CreativeWork', name: s.name, url: s.url })),
   dateModified: PAGE_MODIFIED,
   author: { '@type': 'Person', name: 'Bhavesh Barot', url: 'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/', jobTitle: 'Founder, FactoryJet' },

@@ -233,7 +233,7 @@ const CONSULTANCIES: Consultancy[] = [
     source: 'https://factoryjet.com/au/ai-consulting',
     city: 'Remote',
     suits: 'Small or mid-size business',
-    based: 'No Australian office. We work remotely with Australian clients and schedule calls in Australian business hours',
+    based: 'Works remotely with Australian clients and schedules calls in Australian business hours',
     type: 'AI readiness assessment, use case selection, AI usage policy, then the build',
     clients: 'Small and mid-size businesses; 500+ businesses served since 2014',
     builds: 'Yes. We are implementation-led: we advise, then we build',
@@ -286,7 +286,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: "Which Australian companies build custom AI agents for small and mid-size businesses?",
-    a: "Most firms in this guide advise first and can then build. Synap, Yes AI, Advancer, Integrity Ai and Sunburnt AI all list AI agents or automation for smaller businesses on their own sites, and FactoryJet builds custom agents remotely. For firms whose main work is building, see our guide to AI agencies in Australia. An agent is software that takes actions in your systems, with a person approving the steps that matter.",
+    a: "Most firms in this guide advise first and can then build. Synap, Yes AI, Advancer, Integrity Ai and Sunburnt AI all list AI agents or automation for smaller businesses on their own sites, and FactoryJet builds custom agents too. For firms whose main work is building, see our guide to AI agencies in Australia. An agent is software that takes actions in your systems, with a person approving the steps that matter.",
   },
   {
     q: "Who is the best AI automation agency in Australia?",
@@ -342,7 +342,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: "Who are the best AI consulting firms?",
-    a: "It depends where you are and how big you are, which is why this guide is sorted by city and buyer. For a small business, look at Nimbull, Real Minds AI, Synap or Integrity Ai. For a mid-size company, Kinetic Consulting, JOURN3Y, Yes AI, Revium or Advancer. For regulated or government work, AI Consulting Group, RUBIX or Humanising Technologies. FactoryJet advises remotely and then builds.",
+    a: "It depends where you are and how big you are, which is why this guide is sorted by city and buyer. For a small business, look at Nimbull, Real Minds AI, Synap or Integrity Ai. For a mid-size company, Kinetic Consulting, JOURN3Y, Yes AI, Revium or Advancer. For regulated or government work, AI Consulting Group, RUBIX or Humanising Technologies. FactoryJet advises and then builds.",
   },
   {
     q: "What is an AI readiness assessment?",
@@ -362,7 +362,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: "Can a remote AI consultancy work for an Australian business?",
-    a: "Yes for most advisory work, with limits. Workshops and interviews run well over video, and Advancer, a Brisbane firm, says most of its own delivery happens remotely. Choose local if you want advisers walking your site each week, or if a contract needs an Australian entity to handle your data. FactoryJet has no Australian office and works remotely in Australian business hours.",
+    a: "Yes for most advisory work, with limits. Workshops and interviews run well over video, and Advancer, a Brisbane firm, says most of its own delivery happens remotely. Choose local if you want advisers walking your site each week, or if a contract needs an Australian entity to handle your data. FactoryJet works remotely with Australian clients, in Australian business hours.",
   },
   {
     q: "Does the Privacy Act apply when we use AI?",
@@ -440,7 +440,7 @@ export const post: BlogPost = {
     'Thirteen of the 15 firms also build what they recommend. Ask each one for a written plan you own before any build.',
     'Three firms publish prices: Real Minds AI, Synap and Yes AI. Entry points run from A$400 plus GST for three hours to A$3,000 plus GST for a two to three week audit.',
     'From 10 December 2026, privacy policies must explain certain automated decisions that use personal information (OAIC).',
-    'FactoryJet is on this list. We have no Australian office, we work remotely, and we advise and then build.',
+    'FactoryJet is on this list. We work remotely with Australian clients, and we advise and then build.',
   ],
   faqs: FAQS,
   content: (
@@ -488,7 +488,7 @@ export const post: BlogPost = {
       <div id="answer-first" className="mb-8 rounded-2xl border border-gray-200 bg-gray-50 p-6 not-prose">
         <p className="text-sm font-semibold uppercase tracking-wide text-[#B23E13] mb-2">The short answer</p>
         <p className="text-gray-800 leading-relaxed mb-3">
-          There is no single best AI consultancy in Australia. Match by city and size. Small business: Nimbull (Sydney), Real Minds AI or Synap (Melbourne), Integrity Ai (Brisbane). Mid-size: Kinetic Consulting or JOURN3Y, Yes AI or Revium, Advancer. Regulated or government-facing: AI Consulting Group, RUBIX, Humanising Technologies. FactoryJet advises remotely, then builds.
+          There is no single best AI consultancy in Australia. Match by city and size. Small business: Nimbull (Sydney), Real Minds AI or Synap (Melbourne), Integrity Ai (Brisbane). Mid-size: Kinetic Consulting or JOURN3Y, Yes AI or Revium, Advancer. Regulated or government-facing: AI Consulting Group, RUBIX, Humanising Technologies. FactoryJet advises, then builds.
         </p>
         <p className="text-gray-800 leading-relaxed mb-3">
           FactoryJet wrote this list and is on it. We read every firm on its own website on 9 October 2026: where it is based, what advice it sells, who it suits and any price it publishes. Nobody paid to be listed and the order is not a ranking.
@@ -505,7 +505,7 @@ export const post: BlogPost = {
         Most lists of Australian AI firms are national, and that hides the question buyers ask. In Australia, &ldquo;ai consulting&rdquo; draws about 1,000 Google searches a month, and &ldquo;ai consulting sydney&rdquo; and &ldquo;ai consulting melbourne&rdquo; about 110 each (DataForSEO, read on 9 October 2026). People search by city. So this list is sorted by city, then by the kind of buyer each firm suits: a small business, a mid-size company, or a regulated or government-facing organisation.
       </p>
       <p className="mb-4">
-        <strong>A note on honesty.</strong> FactoryJet sells AI consulting, so we are on this list. We put ourselves last. We say plainly that we have no Australian office, that we work remotely and that we are implementation-led, which means we advise and then build. Where a local firm or an advice-only firm will suit you better, we say that too.
+        <strong>A note on honesty.</strong> FactoryJet sells AI consulting, so we are on this list. We put ourselves last. We are implementation-led, which means we advise and then build. Where another firm will suit you better, we say that too.
       </p>
       <p className="mb-6">
         A few terms, in plain English. A <strong>readiness assessment</strong> is a short review of your data, systems, people and risks. A <strong>roadmap</strong> is a ranked list of what to do, in order. <strong>Governance</strong> means the rules for using AI: who is accountable, which tools are allowed, what data may go into them and who checks the output. A <strong>use case</strong> is one job you want AI to help with, such as drafting quotes.
@@ -542,7 +542,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-10 mb-4">How we built this list</h2>
       <ol className="list-decimal pl-6 mb-6 space-y-2">
-        <li><strong>Start with what buyers ask.</strong> On 9 October 2026 we read 122 AI assistant answers to 10 Australian buyer questions. That included 14 answers to &ldquo;Best AI consultancy in Sydney for implementing AI in a mid-size company?&rdquo;, 14 to &ldquo;Can you recommend an AI development company in Melbourne?&rdquo; and 8 to &ldquo;What are some consulting firms in Australia?&rdquo;. FactoryJet was named or cited in 6 of the 122, all of them by Perplexity.</li>
+        <li><strong>Start with what buyers ask.</strong> On 9 October 2026 we read 122 AI assistant answers to 10 Australian buyer questions. That included 14 answers to &ldquo;Best AI consultancy in Sydney for implementing AI in a mid-size company?&rdquo;, 14 to &ldquo;Can you recommend an AI development company in Melbourne?&rdquo; and 8 to &ldquo;What are some consulting firms in Australia?&rdquo;.</li>
         <li><strong>Read the lists those answers cite.</strong> Assistants lean on lists. On our ten questions, list articles made up 73 percent of the small-firm pages Perplexity cited, 59 percent for the Gemini app, 36 percent for the ChatGPT app and 35 percent for Google. We read four of those lists. One covers Sydney only. One sorts firms by size tier. One is about firms that build agents. One national top seven never mentions Melbourne or Brisbane. Eleven of the 14 other firms on our list appear in none of the four.</li>
         <li><strong>Check Google as well.</strong> We ran 14 Australian searches about AI consulting through DataForSEO. Google showed an AI Overview on 11 of them. It showed none for either Brisbane search.</li>
         <li><strong>Advisory work only.</strong> A firm had to sell at least one of five things on its own site: a readiness assessment, a strategy or roadmap, governance and policy, training, or independent advice on tools and vendors.</li>
@@ -750,7 +750,7 @@ export const post: BlogPost = {
               <td className="p-3 border border-gray-200 font-semibold">In the room</td>
               <td className="p-3 border border-gray-200">Yes, in their own city</td>
               <td className="p-3 border border-gray-200">Ask which office would staff your work</td>
-              <td className="p-3 border border-gray-200 bg-orange-50">No. Video workshops in Australian business hours</td>
+              <td className="p-3 border border-gray-200 bg-orange-50">Video workshops in Australian business hours</td>
             </tr>
             <tr className="odd:bg-white even:bg-gray-50">
               <td className="p-3 border border-gray-200 font-semibold">Size of job that fits</td>
@@ -768,7 +768,7 @@ export const post: BlogPost = {
               <td className="p-3 border border-gray-200 font-semibold">Watch out for</td>
               <td className="p-3 border border-gray-200">A small team has limited capacity</td>
               <td className="p-3 border border-gray-200">Scope sized for large organisations</td>
-              <td className="p-3 border border-gray-200 bg-orange-50">No Australian office. Not right if you want advisers on site</td>
+              <td className="p-3 border border-gray-200 bg-orange-50">Not right if you want advisers on site every week</td>
             </tr>
           </tbody>
         </table>
@@ -846,7 +846,7 @@ export const post: BlogPost = {
         <strong>Where we fit:</strong> a small or mid-size Australian business that wants the readiness assessment, the use case shortlist and the AI usage policy from the same team that will build the first system. Businesses that sell online or run order-heavy operations get the most from us, because that is where we have worked longest.
       </p>
       <p className="mb-4">
-        <strong>Where we do not:</strong> we have no Australian office. If you want advisers in your building, choose a local firm from your city list. If you want an advice-first firm, Melotti AI Ethics Consulting and Kinetic Consulting are the two on this list. If a regulator will read your governance framework, RUBIX and AI Consulting Group both sell that as a named service. If you are a Queensland agency, Humanising Technologies knows that ground and we do not.
+        <strong>Where we do not:</strong> if you want advisers in your building every week, choose a local firm from your city list. If you want an advice-first firm, Melotti AI Ethics Consulting and Kinetic Consulting are the two on this list. If a regulator will read your governance framework, RUBIX and AI Consulting Group both sell that as a named service.
       </p>
       <p className="mb-6">
         We are not lawyers, and nothing we write is legal sign-off. You own the report and can take it to any builder.

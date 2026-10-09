@@ -7,7 +7,7 @@ import MidPageCTA from '@/components/v2/MidPageCTA';
 import '../ai-agents/ai-agents.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/magento';
-const UPDATED = '2026-09-24';
+const UPDATED = '2026-10-10';
 
 /* ONE array drives the visible trail AND the BreadcrumbList JSON-LD, so the
    schema can never describe a trail a human cannot see. Never hand-copy a
@@ -148,7 +148,7 @@ const jsonLd = {
       areaServed: { '@type': 'Country', name: 'United Kingdom' },
       url: CANONICAL,
       description:
-        'Magento agency in the UK. Senior Magento and Adobe Commerce developers for support, security patching, version upgrades, Hyvä rebuilds, extension clean-up and ERP, PIM and payment integrations.',
+        'Magento agency for UK merchants. Senior Magento and Adobe Commerce developers for support, security patching, version upgrades, Hyvä rebuilds, extension clean-up and ERP, PIM and payment integrations.',
     },
     {
       '@type': 'BreadcrumbList',
@@ -207,12 +207,12 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: 'Magento Agency UK | Adobe Commerce Developers | FactoryJet',
   description:
-    'FactoryJet is a UK Magento agency. Senior Magento and Adobe Commerce developers for support, upgrades, Hyvä rebuilds and integrations. We stay after launch.',
+    'Magento agency for UK stores. Senior Magento and Adobe Commerce developers for support, upgrades, Hyvä rebuilds and integrations. We stay after launch.',
   alternates: { canonical: CANONICAL, languages: { 'en-GB': CANONICAL, 'x-default': CANONICAL } },
   openGraph: {
     title: 'Magento Agency UK | Adobe Commerce Developers | FactoryJet',
     description:
-      'A UK Magento agency for merchants already on Magento 2 or Adobe Commerce. Senior developers for support, security patching, version upgrades, Hyvä front-end rebuilds, extension clean-up and ERP integrations. Free Magento health check.',
+      'A Magento agency for UK merchants already on Magento 2 or Adobe Commerce. Senior developers for support, security patching, version upgrades, Hyvä front-end rebuilds, extension clean-up and ERP integrations. Free Magento health check.',
     url: CANONICAL,
     siteName: 'FactoryJet',
     locale: 'en_GB',
@@ -239,7 +239,7 @@ export default function MagentoUKPage() {
             <div className="col-6040">
               <div>
                 <div className="flex-wrap mb-6">
-                  <span className="chip"><span className="dot dot-orange" />UK Magento Agency</span>
+                  <span className="chip"><span className="dot dot-orange" />Magento Agency for UK Merchants</span>
                   <span className="chip">Magento 2 &amp; Adobe Commerce</span>
                   <span className="chip">Hyvä Rebuilds</span>
                 </div>
@@ -254,7 +254,7 @@ export default function MagentoUKPage() {
                 <div className="byline mt-6" style={{ maxWidth: 560 }}>
                   <div className="av">BB</div>
                   <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ projects delivered</span></div>
-                  <div className="upd">Last updated<br />24 September 2026</div>
+                  <div className="upd">Last updated<br />10 October 2026</div>
                 </div>
 
                 <div className="mt-6" style={{ maxWidth: 560 }}>
@@ -264,7 +264,7 @@ export default function MagentoUKPage() {
 
               <div>
                 <div className="card" style={{ padding: 8 }}>
-                  <img src="/images/uk/magento/magento-hero.webp" width={1400} height={933} fetchPriority="high" decoding="async" alt="A senior Magento developer in a bright UK office with a store product grid on screen and code open on a laptop beside her" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+                  <img src="/images/uk/magento/magento-hero.webp" width={1400} height={933} fetchPriority="high" decoding="async" alt="A senior Magento developer in a bright office with a store product grid on screen and code open on a laptop beside her" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
                 </div>
                 <div className="card card-top-orange mt-6">
                   <span className="eyebrow">What we take on</span>
@@ -417,7 +417,7 @@ export default function MagentoUKPage() {
               </li>
               <li className="card">
                 <h3>Magento SEO and AI for Magento</h3>
-                <p className="mt-4">Technical fixes that help search engines read your catalogue, joined up with our <a href="/uk/ecommerce-seo">UK ecommerce SEO</a> team. And custom <a href="/uk/ai-agents">AI agents for Magento stores</a> that answer order questions from live data.</p>
+                <p className="mt-4">Technical fixes that help search engines read your catalogue, joined up with our <a href="/uk/ecommerce-seo">UK ecommerce SEO</a> service. And custom <a href="/uk/ai-agents">AI agents for Magento stores</a> that answer order questions from live data.</p>
               </li>
             </ul>
           </div>
@@ -449,7 +449,7 @@ export default function MagentoUKPage() {
                   </p>
                 </div>
                 <div className="card mt-8" style={{ padding: 8 }}>
-                  <img src="/images/uk/magento/magento-team.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Three members of a UK ecommerce engineering team planning a store architecture on a whiteboard" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+                  <img src="/images/uk/magento/magento-team.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Three members of an ecommerce engineering team planning a store architecture on a whiteboard" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
                 </div>
               </div>
 
@@ -562,7 +562,7 @@ export default function MagentoUKPage() {
                 If moving is right, we plan it properly: a full redirect map to protect your Google rankings,
                 customer and order history, and integrations rewired to the new platform. Read how we run a{' '}
                 <a href="https://factoryjet.com/replatforming/magento-to-shopify">Magento to Shopify migration</a>, see
-                our <a href="https://factoryjet.com/uk/shopify-development">UK Shopify development</a> team, or look at
+                our <a href="https://factoryjet.com/uk/shopify-development">UK Shopify development</a> service, or look at
                 our wider <a href="https://factoryjet.com/uk/ecommerce-development">UK ecommerce development</a> work.
               </p>
             </div>
@@ -656,7 +656,7 @@ export default function MagentoUKPage() {
                   </p>
                   <p>
                     So we work with merchants in London, the South East, Manchester, Birmingham, Leeds, Scotland
-                    and everywhere between, with the same senior UK Magento developers on every account. What you
+                    and everywhere between, with the same senior Magento developers on every account. What you
                     should care about is not the postcode of your agency. It is whether the person who answers
                     your ticket has seen your code before.
                   </p>

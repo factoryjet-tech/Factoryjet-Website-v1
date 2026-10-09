@@ -19,7 +19,7 @@ export const post: BlogPost = {
   },
   keyTakeaways: [
     "Charlotte is a top-10 fastest-growing US metro, web design competition among SMBs is intense, especially in finance, healthcare, professional services, and real estate.",
-    'Charlotte local web design agencies charge $8,000–$18,000 for a 5-page professional site; offshore agencies with US-hour project management often charge less for equivalent quality.',
+    'Charlotte local web design agencies charge $8,000–$18,000 for a 5-page professional site; remote agencies with US-hour project management often charge less for equivalent quality.',
     'Finance and professional services firms in Charlotte need trust-first design: clean typography, structured credentials, case studies, and schema markup, not flashy visuals.',
     'Healthcare SMBs in Charlotte face the same ADA compliance requirements as any US business, WCAG 2.2 Level AA and HIPAA-aware contact forms are non-negotiable.',
     'Charlotte real estate and construction businesses need performance-optimized image galleries, neighborhood-based local SEO, and mobile-first design for on-the-go buyers.',
@@ -29,7 +29,7 @@ export const post: BlogPost = {
   faqs: [
     {
       q: 'How much does web design cost for a small business in Charlotte NC?',
-      a: "Charlotte local agencies charge $8,000–$18,000 for a professional 5-page website. Mid-market agencies run $4,000–$8,000. Offshore agencies with US-hour support deliver the same Lighthouse 95+ output for $2,000–$4,000. The gap is entirely explained by local overhead: Charlotte office space, US-rate salaries, and agency marketing costs. The technical skill set (Next.js, React, Lighthouse optimization) is not geography-dependent.",
+      a: "Charlotte local agencies charge $8,000–$18,000 for a professional 5-page website. Mid-market agencies run $4,000–$8,000. Remote agencies with US-hour support deliver the same Lighthouse 95+ output for $2,000–$4,000. The gap is entirely explained by local overhead: Charlotte office space, US-rate salaries, and agency marketing costs. The technical skill set (Next.js, React, Lighthouse optimization) is not geography-dependent.",
     },
     {
       q: 'What do finance and professional services businesses in Charlotte need from their website?',
@@ -45,7 +45,7 @@ export const post: BlogPost = {
     },
     {
       q: 'What makes a good web design agency for Charlotte NC businesses?',
-      a: "A good Charlotte web design agency demonstrates: Lighthouse Performance scores above 90 on mobile for live client sites (verifiable at pagespeed.web.dev), fixed-price contracts with itemized scope, delivery in under 30 days, WCAG 2.2 compliance included in base price, verifiable client references you can call, full code ownership transferred at completion, and technical SEO included in the base build. These criteria apply equally to local Charlotte agencies and offshore agencies with US-hour support.",
+      a: "A good Charlotte web design agency demonstrates: Lighthouse Performance scores above 90 on mobile for live client sites (verifiable at pagespeed.web.dev), fixed-price contracts with itemized scope, delivery in under 30 days, WCAG 2.2 compliance included in base price, verifiable client references you can call, full code ownership transferred at completion, and technical SEO included in the base build. These criteria apply equally to local Charlotte agencies and remote agencies with US-hour support.",
     },
     {
       q: 'What CMS or platform should Charlotte small businesses use in 2026?',
@@ -146,7 +146,7 @@ export const post: BlogPost = {
               <td className="border p-3">4–10 weeks</td>
             </tr>
             <tr className="bg-gray-50">
-              <td className="border p-3 font-bold">FactoryJet (offshore + US support)</td>
+              <td className="border p-3 font-bold">FactoryJet (US business-hour support)</td>
               <td className="border p-3 font-bold">Fixed quote after scoping</td>
               <td className="border p-3 font-bold">Fixed quote after scoping</td>
               <td className="border p-3 font-bold">7–14 days</td>

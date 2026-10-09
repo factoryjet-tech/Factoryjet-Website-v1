@@ -163,13 +163,13 @@ const FAQ_FLAT = FAQ_GROUPS.flatMap((g) => g.items);
 export const metadata: Metadata = {
   title: 'Small Business SEO Services USA | FactoryJet',
   description:
-    'US small business SEO company. Affordable SEO services bringing calls and leads from Google. Founder-led, month-to-month, transparent reporting.',
+    'Small business SEO company for US businesses. Affordable SEO services bringing calls and leads from Google. Founder-led, month-to-month, transparent reporting.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
     title: 'Small Business SEO Services in the US: More Customers from Google | FactoryJet',
     description:
-      'A US small business SEO agency offering affordable SEO services for small businesses. Website, local, and content SEO scoped to your budget. Founder-led, month-to-month, reported in calls and leads.',
+      'A small business SEO agency for US businesses, offering affordable SEO services. Website, local, and content SEO scoped to your budget. Founder-led, month-to-month, reported in calls and leads.',
     url: 'https://factoryjet.com/services/small-business-seo',
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet small business SEO services for US businesses' }],
     locale: 'en_US',
@@ -190,7 +190,7 @@ export const metadata: Metadata = {
 
 // Freshness signal. Benchmark: 56% of AI-Overview-cited pages carry it.
 // Keep honest: bump when the page's content actually changes.
-const PAGE_MODIFIED = '2026-08-04';
+const PAGE_MODIFIED = '2026-10-10';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -624,7 +624,7 @@ export default function SmallBusinessSeoServicePage() {
           <div className="wrap">
             <span className="tag">Short answer</span>
             <p>
-              FactoryJet is a US small business SEO company that gets you found on Google and turns those searches into
+              FactoryJet is a small business SEO company for US businesses. We get you found on Google and turn those searches into
               customers. We fix the website first, so pages meet the published Core Web Vitals thresholds and carry
               structured data as JSON-LD, then finish your Google Business Profile, then publish content around what
               your buyers actually search. Calls and form submits come back as GA4 events through Google Tag Manager,

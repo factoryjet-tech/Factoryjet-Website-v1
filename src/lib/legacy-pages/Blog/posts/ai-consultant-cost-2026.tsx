@@ -154,7 +154,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: 'How much does FactoryJet charge for AI consulting?',
-    a: 'We do not publish a price list, and nothing on this page is a FactoryJet price. FactoryJet quotes a fixed price in writing after a short scoping call, and we can show working software on your own data before you sign a contract. Bills for AI usage and hosting can sit in your own accounts at cost, while we keep managing the servers, AI models, APIs and upkeep. We work remotely with US clients and have no US office.',
+    a: 'We do not publish a price list, and nothing on this page is a FactoryJet price. FactoryJet quotes a fixed price in writing after a short scoping call, and we can show working software on your own data before you sign a contract. Bills for AI usage and hosting can sit in your own accounts at cost, while we keep managing the servers, AI models, APIs and upkeep. We work remotely with US clients.',
   },
 ];
 
@@ -226,7 +226,7 @@ export const post: BlogPost = {
       </p>
       <p>
         We wrote it because of what we measured. On 9 October 2026 we asked AI assistants &quot;How much does an AI
-        consultant cost?&quot; and read 14 answers. FactoryJet was named in none of them. The page they cited most, 10
+        consultant cost?&quot; and read 14 answers. The page they cited most, 10
         times, was a pricing guide from Alice Labs, a European firm. So we opened the pages the assistants lean on, added
         the Bureau of Labor Statistics and a federal rate tool, and put the numbers side by side.
       </p>
@@ -939,9 +939,8 @@ export const post: BlogPost = {
         for you.
       </p>
       <p>
-        Here is where another firm suits you better. We have no US office and work with US clients remotely, so if
-        you need someone in your building every week, choose a local firm. If your board needs a large firm&apos;s name on
-        the report, hire a large firm. And if an off-the-shelf tool will do the job, we will tell you so.
+        Here is where another firm suits you better. We work with US clients remotely, so if
+        you need someone in your building every week, choose a local firm. And if an off-the-shelf tool will do the job, we will tell you so.
       </p>
       <p>
         To see the work behind these numbers, read about our{' '}

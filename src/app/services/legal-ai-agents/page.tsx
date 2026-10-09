@@ -14,7 +14,7 @@ const CANONICAL_URL = 'https://factoryjet.com/services/legal-ai-agents';
 const PAGE_TITLE = 'AI for Law Firms: Legal AI Agents & AI Intake | FactoryJet';
 const PAGE_DESC =
   'AI for law firms: custom legal AI agents and an AI receptionist for intake, contract redlining and discovery, synced with Clio, MyCase and Filevine.';
-const PAGE_MODIFIED = '2026-10-05';
+const PAGE_MODIFIED = '2026-10-10';
 
 /** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
  *  <Breadcrumbs> component and the BreadcrumbList JSON-LD below. So the two
@@ -225,6 +225,14 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     question: 'Who has the best AI receptionist for law firms?',
     answer:
       'There is no single best answer, it depends on your practice area, call volume, and practice management system. When you evaluate any AI receptionist for a law firm, check five things: does it run real conflict checks against your actual client database before a consultation gets booked, does it read and write to your practice management system in real time such as Clio, Filevine, or MyCase, does it stick to intake questions instead of drifting into legal advice, do you own the workflow and code or rent it every month, and can you hear a real call recording or see a live demo before you commit. A generic customer-service bot can take a message. A law firm usually needs something built to check conflicts, capture statute of limitations dates, and hand off cleanly to an attorney.',
+  },
+  // Added 2026-10-10 from a US buyer question seen in Search Console. Timeline figures restate
+  // the implementation FAQ above. Clio Grow and Harvey were read on clio.com and harvey.ai on 2026-10-09.
+  {
+    category: 'intake',
+    question: 'What companies build a custom AI agent for document review and intake automation for US firms, live in 3 weeks?',
+    answer:
+      'FactoryJet builds custom AI agents for document review and client intake for US law firms. We work remotely with US clients and schedule calls in US business hours. The accident-monitoring agent in the case study on this page runs on a dedicated US server. On timing, one focused workflow, intake or contract review, takes 3 to 4 weeks, and a full firm-wide build takes 6 to 8. Three weeks is the low end, and it needs API access and sample documents on day one. If software would do, Clio Grow covers law firm intake and Harvey covers contract analysis.',
   },
 ];
 

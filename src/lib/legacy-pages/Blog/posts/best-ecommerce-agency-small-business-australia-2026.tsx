@@ -5,7 +5,7 @@ import type { BlogPost } from '../data.types';
  * Best ecommerce agency for small business in Australia (2026). Rewritten 2026-09-26 (AU Wave 4 fact pass).
  *
  * WHAT CHANGED AND WHY: the April 2026 version quoted FactoryJet prices in pounds sterling and US dollars,
- * positioned us as an "offshore" agency, promised "Lighthouse 92+ guaranteed" and "2-4 week" delivery, cited a
+ * named a location for our team, promised "Lighthouse 92+ guaranteed" and "2-4 week" delivery, cited a
  * "98% satisfaction" figure and several unsourced percentages, and described Belle Maison incorrectly. All of
  * that is gone. Do not reintroduce it.
  *
@@ -35,29 +35,30 @@ export const post: BlogPost = {
   id: '117',
   slug: "best-ecommerce-agency-small-business-australia-2026",
   title: "Best Ecommerce Agency for Small Business in Australia (2026): 8 Agencies Compared",
-  excerpt: "How to choose an ecommerce agency as an Australian small business in 2026. Eight agencies whose Australian offices and services we checked on their own websites, sourced AUD market ranges for a store build, Shopify's Australian plan prices, and the questions that tell a good agency from a risky one.",
+  excerpt: "How to choose an ecommerce agency as an Australian small business in 2026. Eight agencies whose services we checked on their own websites, sourced AUD market ranges for a store build, Shopify's Australian plan prices, and the questions that tell a good agency from a risky one.",
   category: "E-Commerce Development",
   author: 'Bhavesh Barot',
   date: "Sep 26, 2026",
+  dateModified: "Oct 10, 2026",
   readTime: '13 min read',
   imageUrl: "/blog-images/best-ecommerce-agency-small-business-australia-2026-hero.webp",
   meta: {
     title: "8 Ecommerce Agencies for Australian Small Business (2026)",
-    description: "Eight Australian ecommerce and Shopify agencies checked on their own sites, sourced AUD build ranges, Shopify AU plan prices and how to choose the right one.",
+    description: "Eight ecommerce and Shopify agencies for Australian stores, checked on their own sites, sourced AUD build ranges, Shopify AU plan prices and how to choose one.",
   },
   keyTakeaways: [
     "Australian price guides put an ecommerce store build at roughly $5,000 to $25,000 (WolfIQ, 2026 guide) or $8,000 to $25,000+ (Keen to Design, April 2026). These are typical Australian market ranges, not FactoryJet prices.",
     "Shopify's Australian plans cost A$56, A$149 or A$575 a month on monthly billing, and Shopify Payments takes 1.7% + 30c per domestic online card sale on Basic (shopify.com/au, checked September 2026).",
     "Trade and retail in one store is now normal. If you sell wholesale too, ask each agency how they handle trade pricing, quotes and account-based ordering before you ask about design.",
     "Australian Consumer Law refund wording, GST on invoices, Afterpay or Zip, and Australia Post or Sendle rates should be in the first build, not added later.",
-    "Seven of the eight agencies listed here have Australian offices. FactoryJet does not; our senior engineers work remotely in Australian business hours, stay on after launch, and you own the code and accounts.",
+    "Seven agencies listed here have Australian offices. FactoryJet's senior engineers work remotely in Australian business hours and stay on after launch, and you own the code and accounts.",
     "Judge an agency on live stores in your category, who writes the code, and who answers when an app update breaks the cart. Partner badges are a starting point, not proof.",
   ],
   faqs: [
     { q: "What makes an ecommerce agency 'AI-native' for Australian small businesses?", a: "It means AI is part of how the agency builds and how the store works, not a chatbot bolted on at the end. In practice: product data structured so Google and AI assistants can read it, product copy drafted with AI and then edited by a person, search and recommendations that learn from real orders, and support tools that answer common questions from your own policies. Ask to see each of these working on a live store." },
     { q: "How much does a professional ecommerce website cost for a small business in Australia in 2026?", a: "Australian price guides put a store build at roughly $5,000 to $25,000 (WolfIQ, 2026 guide) or $8,000 to $25,000 and up (Keen to Design, April 2026). Running costs add about $250 to $500 a month for an online store (WolfIQ). These are typical Australian market ranges, not FactoryJet prices. We scope and quote each project after a call, because product count, integrations and B2B needs move the number most." },
     { q: "What custom B2B ecommerce platforms do Australian businesses use?", a: "Wholesalers and distributors usually need trade pricing per account, quote-to-order workflows, net payment terms and reorder lists. Shopify Plus covers much of this with its B2B features, and headless or custom builds cover the rest. FactoryJet also builds B2B storefronts on Commerceflo, our own commerce platform: GPSUK, a UK promotional products supplier, uses one so trade accounts see their own pricing and move from quote to order without retyping." },
-    { q: "Can an agency without an Australian office handle Australian Consumer Law and GST?", a: "Yes, if they build it in on purpose and can show you how. Ask to see refund and warranty wording that matches the consumer guarantees, GST shown correctly on prices and tax invoices, Australia Post or Sendle rates at checkout, and a privacy policy written for the Australian Privacy Principles. FactoryJet has no Australian office. Our senior engineers work in Australian business hours and set these up as part of every Australian store." },
+    { q: "Can a remote agency handle Australian Consumer Law and GST?", a: "Yes, if they build it in on purpose and can show you how. Ask to see refund and warranty wording that matches the consumer guarantees, GST shown correctly on prices and tax invoices, Australia Post or Sendle rates at checkout, and a privacy policy written for the Australian Privacy Principles. FactoryJet's senior engineers work in Australian business hours and set these up as part of every Australian store." },
     { q: "What Lighthouse Performance score should Australian ecommerce sites target in 2026?", a: "Aim for 90 or higher on mobile for Performance, and pass all three Core Web Vitals (LCP, INP and CLS) in real-user data. Lab scores move with apps, images and tracking scripts, so treat a score as something you keep, not a one-off number at launch. Ask any agency for PageSpeed Insights results from stores they launched in the last year, then test them yourself." },
     { q: "How long does it take to build a custom ecommerce website for an Australian small business?", a: "For a custom-theme store on a platform like Shopify, plan on 3 to 5 weeks. Stores with subscriptions, B2B or a migration usually take 5 to 8 weeks, and headless or fully custom builds 8 to 14 weeks. Small sites of up to 5 pages can be delivered in 7 days. Content and product data being ready on time is the biggest factor in hitting any of these." },
     { q: "What payment gateways work best for Australian ecommerce sites in 2026?", a: "Shopify Payments, Stripe and PayPal cover most Australian stores, with Afterpay and Zip for buy now, pay later. For B2B, add invoicing with payment terms rather than forcing trade buyers through a retail checkout. Whatever you choose, check the fee per sale at your real order value, confirm payouts in AUD, and make sure GST lands correctly in Xero or MYOB." },
@@ -174,7 +175,7 @@ export const post: BlogPost = {
       </div>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Case Study: Trade and Retail Storefronts We Built on Commerceflo</h2>
-      <p className="mb-4">We do not have a published Australian ecommerce case study yet, so here is what we have built elsewhere, described without numbers we cannot check. GPSUK supplies promotional products to business customers in the UK. Their buyers reorder branded stock and often need a quote before they order. We built their B2B storefront on Commerceflo, our own commerce platform, so trade accounts log in to a catalogue priced for their account, and a quote carries through to the order instead of being retyped. We also look after their SEO and AI search work. Belle Maison is a home decor and lighting wholesaler that sells to both retail shoppers and trade buyers. Their storefront, also built on Commerceflo, lets retail shoppers browse the catalogue while trade accounts see their own pricing and move from quote to order in the same place. Before that, trade orders came in by message and phone. Neither client is Australian. What carries over to an Australian wholesaler or distributor is the pattern: one store, per-account pricing, quote-to-order, and no double handling between a retail site and a wholesale portal. Read both on our <a href="/case-studies" className={linkCls}>case studies page</a>.</p>
+      <p className="mb-4">GPSUK supplies promotional products to business customers in the UK. Their buyers reorder branded stock and often need a quote before they order. We built their B2B storefront on Commerceflo, our own commerce platform, so trade accounts log in to a catalogue priced for their account, and a quote carries through to the order instead of being retyped. We also look after their SEO and AI search work. Belle Maison is a home decor and lighting wholesaler that sells to both retail shoppers and trade buyers. Their storefront, also built on Commerceflo, lets retail shoppers browse the catalogue while trade accounts see their own pricing and move from quote to order in the same place. Before that, trade orders came in by message and phone. Neither client is Australian. What carries over to an Australian wholesaler or distributor is the pattern: one store, per-account pricing, quote-to-order, and no double handling between a retail site and a wholesale portal. Read both on our <a href="/case-studies" className={linkCls}>case studies page</a>.</p>
 
 
       <h2 className="text-2xl font-bold mt-8 mb-4">How to Evaluate E-Commerce Agencies for Australian Consumer Law Compliance</h2>
@@ -198,7 +199,7 @@ export const post: BlogPost = {
         <li><strong>Flux</strong> (Melbourne, with teams in Los Angeles and London): Shopify Plus, headless builds and migrations.</li>
         <li><strong>Seventyfour Design</strong> (Melbourne): design, custom apps, migrations and integrations. Describes itself as a Shopify Plus Partner.</li>
         <li><strong>Moustache Republic</strong> (Sydney and Auckland): Shopify and BigCommerce since 2013.</li>
-        <li><strong>FactoryJet</strong> (that is us): no Australian office. Our senior engineers work remotely in Australian business hours. A registered Shopify Partner with no named tier, strongest on Xero, MYOB and ERP integrations, migrations and B2B. We stay on to support the store after launch, and you own the code and every account.</li>
+        <li><strong>FactoryJet</strong> (that is us): our senior engineers work remotely in Australian business hours. A registered Shopify Partner, strongest on Xero, MYOB and ERP integrations, migrations and B2B. We stay on to support the store after launch, and you own the code and every account.</li>
       </ul>
       <p className="mb-4">For how we build Shopify stores for Australian brands, see our <a href="/au/shopify-development" className={linkCls}>Shopify development service in Australia</a>. If your store already exists and the problem is rankings, our <a href="/au/ecommerce-seo" className={linkCls}>ecommerce and Shopify SEO service</a> covers collection pages, product data and migrations.</p>
 

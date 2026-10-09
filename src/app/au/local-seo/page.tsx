@@ -14,7 +14,7 @@ import './page.css';
 import { LocalCoverageDiagram, LocalWorkDiagram, LocalReviewDiagram } from './LocalDiagram';
 
 const CANONICAL = 'https://factoryjet.com/au/local-seo';
-const UPDATED = '2026-09-26';
+const UPDATED = '2026-10-10';
 const TITLE = 'Local SEO Services Australia | Google Maps SEO | FactoryJet';
 /* Visible hero heading AND schema headline: keep them the same text. */
 const H1 = 'Local SEO Services in Australia: Get Found by Nearby Customers';
@@ -74,7 +74,7 @@ const FAQ_CATEGORIES = [
   { key: 'profile', label: 'Google Business Profile & Maps' },
   { key: 'reviews', label: 'Reviews & citations' },
   { key: 'hiring',  label: 'Cost & choosing an agency' },
-  { key: 'where',   label: 'Cities, offices & AI search' },
+  { key: 'where',   label: 'Cities & AI search' },
 ] as const;
 
 const FAQ_ITEMS: {
@@ -129,8 +129,6 @@ const FAQ_ITEMS: {
   // ── Where ──
   { category: 'where', question: 'Do you do local SEO in Perth, Sydney, Brisbane and Melbourne?',
     answer: 'Yes. Local SEO is about your address and service area, not ours, so the method is the same in Perth, Sydney, Brisbane, Melbourne, Adelaide, Canberra or a regional town. What changes is competition. Inner-city searches usually need more reviews, stronger service pages and more time than a regional one. We measure who holds the map positions in your suburb before quoting.' },
-  { category: 'where', question: 'Do you have an Australian office?',
-    answer: 'No, and we say so plainly. FactoryJet has no Australian office, so we do not appear in Australian map results ourselves and we will not pretend otherwise. Local SEO ranks your business at your address, which is why the work happens on your Business Profile, your website and your listings. We work with Australian clients remotely, and the founder is involved on every project.' },
   { category: 'where', question: 'Is SEO dead now with AI?',
     answer: 'No. AI answers in Google and in assistants like ChatGPT still draw on the same sources: your website, your Business Profile, reviews and directory listings. For local searches Google still shows the map. What AI changes is that vague pages get skipped. Clear, specific pages that answer real questions, with accurate business details everywhere, are what both search and AI tools pick up.' },
   { category: 'where', question: 'Can ChatGPT do SEO?',
@@ -141,7 +139,7 @@ const FAQ_ITEMS: {
 /* ─── Named options in the Australian market (open self-disclosure, ItemList).
        Each note is based on the company’s own website, fetched 2026-09-26. ── */
 const PROVIDERS: { name: string; note: string }[] = [
-  { name: 'FactoryJet', note: 'That is us. We fix and manage your Google Business Profile, reviews process, citations and service-area pages, and build the website behind them if it needs work. No Australian office, so we work remotely on your profile as a manager while you stay the owner.' },
+  { name: 'FactoryJet', note: 'That is us. We fix and manage your Google Business Profile, reviews process, citations and service-area pages, and build the website behind them if it needs work. We work remotely on your profile as a manager while you stay the owner.' },
   { name: 'Impressive Digital', note: 'A Melbourne agency with an office in Cremorne, Victoria. Its local SEO page lists Google Business Profile optimisation, citation building and location targeting.' },
   { name: 'Sentius Digital', note: 'An agency with an office in Hawthorn East, Victoria. Its local SEO page lists Google Business Profile optimisation, local citation building, suburb-targeted content and review management.' },
   { name: 'Pivotal Agency', note: 'An agency with an office in Helensvale on the Gold Coast, Queensland. Its local SEO page lists Google Business Profile optimisation and citation audit, clean-up and new citation building.' },
@@ -459,9 +457,7 @@ export default function LocalSeoAUPage() {
                 <div className="fact">
                   <div className="sec">§03</div>
                   <p>
-                    One thing to be clear about first: FactoryJet has no Australian office, so you will not find us in
-                    an Australian map pack, and we will not use a borrowed address to get there. That matters less than
-                    it sounds. Local SEO ranks <b>your</b> business at <b>your</b> address. Everything we do happens on
+                    Local SEO ranks <b>your</b> business at <b>your</b> address. Everything we do happens on
                     your profile, your website and your listings, and you own all of them.
                   </p>
                 </div>
@@ -685,7 +681,6 @@ export default function LocalSeoAUPage() {
                   <tr><th scope="row">Website fixes behind the profile</th><td className="fj">Same team builds websites</td><td>Varies</td><td>No</td><td>Depends on your site</td></tr>
                   <tr><th scope="row">Reporting</th><td className="fj">Calls, directions, enquiries, map grid</td><td>Rankings, often</td><td>Listing count</td><td>Profile insights</td></tr>
                   <tr><th scope="row">Who owns the profile</th><td className="fj">You; we are a manager</td><td>Ask</td><td>Ask</td><td>You</td></tr>
-                  <tr><th scope="row">Australian office</th><td className="fj">No, remote</td><td>Usually</td><td>Varies</td><td>Not applicable</td></tr>
                 </tbody>
               </table>
             </div>
@@ -884,7 +879,6 @@ export default function LocalSeoAUPage() {
               <p>
                 We are one option, not the only one. These Australian agencies rank on page one for local SEO searches
                 in Australia, each with an Australian office and a local SEO service described on its own website.
-                Unlike them, we have no Australian office, and we list that first.
               </p>
             </div>
             <div className="platlist" role="list">

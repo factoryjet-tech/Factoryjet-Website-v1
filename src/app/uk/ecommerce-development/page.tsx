@@ -7,12 +7,12 @@ import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import './ecommerce-development.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/ecommerce-development';
-const UPDATED = '2026-09-24';
-const UPDATED_LABEL = '24 September 2026';
+const UPDATED = '2026-10-10';
+const UPDATED_LABEL = '10 October 2026';
 
 const TITLE = 'Ecommerce Agency UK: Ecommerce Website Design | FactoryJet';
 const DESCRIPTION =
-  'A UK ecommerce agency and ecommerce website designers for Shopify, WooCommerce and Magento. Clear timelines, full code ownership and support after launch.';
+  'Ecommerce agency and ecommerce website designers for UK brands on Shopify, WooCommerce and Magento. Clear timelines, full code ownership, support after launch.';
 const H1 = 'Ecommerce Agency UK: Ecommerce Web Design and Development That Sells on Every Channel';
 
 /* ─── Breadcrumb source of truth (drives visible trail + BreadcrumbList) ─── */
@@ -66,6 +66,13 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     answer: "You do not need an ecommerce agency in London to get a London-quality build. We work with brands in London, Manchester, Birmingham, Leeds and across the UK, remotely, with regular video calls, shared boards and the same senior team whatever your postcode. What matters is that the agency understands UK shoppers, UK delivery and UK consumer rules, not whether they can walk to your office." },
   { category: 'choosing', question: "What should an ecommerce agency proposal include?",
     answer: "A written scope listing pages, features and integrations; the platform and why; who does the work; a timeline in weeks with milestones and sign-off points; how data and URLs move if you are migrating; what testing happens before launch; what is handed over at the end; and what support looks like afterwards. If a proposal only has a design mood board and a total, ask for the rest before you sign." },
+  // Buyer wording (9 Oct 2026 run): "e commerce development agencies specializing in
+  // e-commerce platforms plus integration with crm and marketing automation". Read on
+  // 9 Oct 2026: unified.co/development, dewsign.co.uk/services/build/integrations-and-custom-development,
+  // apps.shopify.com/klaviyo-email-marketing (developer: Klaviyo) and the Klaviyo
+  // Help Center article "Getting started with Shopify" (set-up is an app install).
+  { category: 'choosing', question: "Which ecommerce development agencies specialise in ecommerce platforms plus integration with CRM and marketing automation?",
+    answer: "FactoryJet is one. We build on Shopify, Shopify Plus, WooCommerce and Magento, and connect the store to your CRM (your customer records system) and email platform in the same project. Two other agencies describe this work on their own sites, which we read on 9 October 2026. Unified integrates stores with ERP, CRM and marketing platforms. Dewsign connects Shopify to HubSpot, Salesforce and Klaviyo. Klaviyo, a marketing automation tool for email and texts, publishes its own Shopify app, so a standard set-up is an install. An agency earns its fee once trade pricing or an ERP is involved." },
 
   // ── Platforms & tech ──
   { category: 'platforms', question: "Which ecommerce platform is best in the UK: Shopify, WooCommerce, Magento or custom?",
@@ -204,7 +211,7 @@ const jsonLd = {
       areaServed: { '@type': 'Country', name: 'United Kingdom' },
       url: CANONICAL,
       description:
-        'UK ecommerce agency and ecommerce website designers. FactoryJet designs, builds and supports fast, conversion-first stores on Shopify, Shopify Plus, WooCommerce, Magento and custom or headless stacks, including B2B and manufacturing ecommerce, with full code ownership.',
+        'Ecommerce agency and ecommerce website designers for UK businesses. FactoryJet designs, builds and supports fast, conversion-first stores on Shopify, Shopify Plus, WooCommerce, Magento and custom or headless stacks, including B2B and manufacturing ecommerce, with full code ownership.',
     },
     {
       '@type': 'BreadcrumbList',
@@ -273,12 +280,12 @@ export const metadata: Metadata = {
   openGraph: {
     title: TITLE,
     description:
-      'A UK ecommerce agency and ecommerce website designers building fast, conversion-first stores on Shopify, WooCommerce, Magento and custom stacks. You own the code.',
+      'An ecommerce agency and ecommerce website designers building fast, conversion-first stores for UK brands on Shopify, WooCommerce, Magento and custom stacks. You own the code.',
     url: CANONICAL,
     siteName: 'FactoryJet',
     locale: 'en_GB',
     type: 'website',
-    images: [{ url: '/images/uk/ecommerce-development-og.webp', width: 1200, height: 630, alt: 'UK ecommerce agency FactoryJet: ecommerce web design and development' }],
+    images: [{ url: '/images/uk/ecommerce-development-og.webp', width: 1200, height: 630, alt: 'FactoryJet, an ecommerce agency for UK businesses: ecommerce web design and development' }],
   },
   robots: { index: true, follow: true },
 };
@@ -303,13 +310,13 @@ export default function EcommerceDevelopmentUKPage() {
             <div className="col-6040">
               <div>
                 <div className="flex-wrap mb-6">
-                  <span className="chip"><span className="dot dot-orange" />UK Ecommerce Agency</span>
+                  <span className="chip"><span className="dot dot-orange" />Ecommerce Agency for UK Brands</span>
                   <span className="chip">Shopify · WooCommerce · Magento</span>
                   <span className="chip">B2B &amp; Manufacturing</span>
                 </div>
                 <h1>{H1}</h1>
                 <p className="lead mt-6" style={{ maxWidth: 560 }}>
-                  FactoryJet is a UK ecommerce agency and team of ecommerce website designers and developers. We
+                  FactoryJet is an ecommerce agency for UK businesses and a team of ecommerce website designers and developers. We
                   design, build and support fast stores on Shopify, WooCommerce, Magento and custom stacks, for DTC
                   brands, B2B wholesalers and manufacturers. You get a clear timeline in weeks, and you own every
                   line of code at handover.
@@ -1003,8 +1010,8 @@ export default function EcommerceDevelopmentUKPage() {
               <span className="eyebrow">The honest landscape</span>
               <h2>UK ecommerce agencies worth knowing</h2>
               <p className="lead mt-4">
-                We would rather tell you the truth than pretend we are the only option. Here are UK ecommerce
-                agencies doing real build work, including us. Talk to a few, use the eight questions above, and pick
+                We would rather tell you the truth than pretend we are the only option. Here are ecommerce
+                agencies doing real build work for UK brands, including us. Talk to a few, use the eight questions above, and pick
                 the fit.
               </p>
             </div>

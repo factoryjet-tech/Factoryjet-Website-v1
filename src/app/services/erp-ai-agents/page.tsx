@@ -72,7 +72,7 @@ const PAGE_TITLE = 'AI Agents for ERP: Odoo, NetSuite, SAP Business One | Factor
 const PAGE_DESC =
   'We design, build and support AI agents inside Odoo, NetSuite, SAP Business One, ERPNext and custom ERPs. They draft quotes, orders and bookkeeping for approval.';
 const PAGE_PUBLISHED = '2026-10-09';
-const PAGE_MODIFIED = '2026-10-09';
+const PAGE_MODIFIED = '2026-10-10';
 const CHECKED_ON = '9 Oct 2026';
 const OG_IMAGE = 'https://factoryjet.com/og-default.png';
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
@@ -497,6 +497,14 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     question: 'Which industries do you work with?',
     answer:
       'Any business that runs on an ERP and handles a steady flow of quotes, orders or invoices: manufacturers and fabricators, wholesale distributors, online stores with an ERP behind them, and finance teams. FactoryJet was founded in 2014 and has served more than 500 businesses.',
+  },
+  // Added 2026-10-10 from a US buyer question seen in Search Console. The six names are the
+  // OTHERS list below. erpfocus.com/erp-vendor-directory.html was read on 2026-10-09.
+  {
+    category: 'working',
+    question: 'Where can I find a list of vendors offering enterprise resource planning (ERP) AI integration services?',
+    answer:
+      "This page keeps one. Next to FactoryJet, which works across Odoo, NetSuite, SAP Business One, ERPNext and custom ERPs, it names six: RSM US, Rand Group and Invitra Technologies for NetSuite, Bista Solutions and Silent Infotech for Odoo, and MyWave, a software product for SAP Business One. Each line restates the firm's own page as read on 9 Oct 2026. Our NetSuite AI agents and Odoo AI agents pages each list six names for that system. One caution. ERP Focus's vendor directory, the page AI assistants cited most for this question that day, lists ERP software makers.",
   },
 ];
 

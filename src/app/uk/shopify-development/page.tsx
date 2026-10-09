@@ -13,7 +13,7 @@ const UPDATED = '2026-09-24';
 const TITLE = 'Shopify Agency UK | Shopify Developer & Partner | FactoryJet';
 const H1 = 'Shopify Agency UK: Expert Shopify Developers and a Development Partner';
 const DESCRIPTION =
-  'UK Shopify agency and registered Shopify Partner. Expert Shopify developers for custom themes, Shopify Plus, B2B and migrations. You own the code. Free audit.';
+  'Shopify agency for UK brands, registered Shopify Partner. Expert developers for custom themes, Shopify Plus, B2B and migrations. You own the code. Free audit.';
 
 /* ─── Breadcrumb. ONE array feeds both the visible trail and the JSON-LD, so the
        two cannot drift apart. Never hand-copy a second array. ─────────────── */
@@ -102,7 +102,7 @@ const FAQ_ITEMS: { question: string; answer: string; category: FaqCategory }[] =
     category: 'Choosing an agency',
     question: 'Is there a Shopify development agency in the UK?',
     answer:
-      'Yes, plenty. UK Shopify agencies range from small studios and freelance Shopify developers to large Shopify Plus partners with offices in London, Manchester and abroad. FactoryJet is one of them. The list further up this page names several others, with a note on what each says it is good at, so you can shortlist two or three and compare them on the same questions.',
+      'Yes, plenty. UK Shopify agencies range from small studios and freelance Shopify developers to large Shopify Plus partners with offices in London, Manchester and abroad. FactoryJet builds Shopify stores for UK brands too. The list further up this page names several others, with a note on what each says it is good at, so you can shortlist two or three and compare them on the same questions.',
   },
   {
     category: 'Choosing an agency',
@@ -296,7 +296,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: TITLE,
     description:
-      'A UK Shopify agency and registered Shopify Partner. Expert Shopify developers for custom Liquid themes, Shopify Plus and B2B, migrations from WooCommerce and Magento, and headless Hydrogen. Book a free store audit.',
+      'A Shopify agency for UK brands and registered Shopify Partner. Expert Shopify developers for custom Liquid themes, Shopify Plus and B2B, migrations from WooCommerce and Magento, and headless Hydrogen. Book a free store audit.',
     url: CANONICAL,
     siteName: 'FactoryJet',
     locale: 'en_GB',
@@ -350,7 +350,7 @@ const jsonLd = {
       name: 'Shopify Agency UK',
       serviceType: 'Shopify development, Shopify Plus, Shopify migration and Shopify support',
       description:
-        'UK Shopify agency and registered Shopify Partner: custom Liquid themes, full store builds, Shopify Plus and B2B, migrations from WooCommerce and Magento, headless Hydrogen, custom apps and monthly support.',
+        'Shopify agency for UK brands and registered Shopify Partner: custom Liquid themes, full store builds, Shopify Plus and B2B, migrations from WooCommerce and Magento, headless Hydrogen, custom apps and monthly support.',
       url: CANONICAL,
       areaServed: { '@type': 'Country', name: 'United Kingdom' },
       provider: { '@id': 'https://factoryjet.com/#organization' },
@@ -415,12 +415,12 @@ export default function ShopifyDevelopmentPage() {
       <div>
         <div className="flex-wrap mb-3">
           <span className="chip-green"><span className="dot dot-green"></span>Registered Shopify Partner</span>
-          <span className="chip">UK · Shopify agency</span>
+          <span className="chip">Shopify agency for UK brands</span>
         </div>
         <h1>{H1}</h1>
         <p className="lead mt-4" style={{ maxWidth: '580px' }}>
-          FactoryJet is a UK Shopify agency. Our Shopify developers design, build, migrate and
-          support Shopify stores as your Shopify experts in the UK: custom themes, Shopify Plus and B2B, moves from WooCommerce or
+          FactoryJet is a Shopify agency for UK brands. Our Shopify developers design, build, migrate and
+          support Shopify stores as your Shopify experts for the UK market: custom themes, Shopify Plus and B2B, moves from WooCommerce or
           Magento, and headless builds. One named developer, a fixed written quote, and the code
           is yours on launch day.
         </p>
@@ -465,7 +465,7 @@ export default function ShopifyDevelopmentPage() {
         <div className="answer-box" data-speakable="true">
           <p>
             A Shopify agency designs, builds, launches and supports Shopify stores for other
-            businesses. FactoryJet is a UK Shopify agency and registered Shopify Partner. Our
+            businesses. FactoryJet is a Shopify agency for UK brands and a registered Shopify Partner. Our
             Shopify developers design the storefront, write the theme, set up UK payments, shipping
             and VAT, connect your apps, and hand you the code on launch day. You own everything we
             build.
@@ -1029,7 +1029,7 @@ export default function ShopifyDevelopmentPage() {
       <span className="eyebrow">THE HONEST LANDSCAPE</span>
       <h2 style={{ marginTop: '12px' }}>UK Shopify agencies and Shopify partners worth knowing</h2>
       <p className="lead mt-4">
-        We are one option, not the only one. These UK Shopify agencies show up when people search for
+        We are one option, not the only one. These Shopify agencies show up when people search for
         a Shopify agency in the UK or London, or ask AI assistants for one. Each note is based on
         what the company says on its own website. Talk to two or three and pick the fit.
       </p>

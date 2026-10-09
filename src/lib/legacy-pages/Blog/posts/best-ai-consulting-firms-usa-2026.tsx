@@ -221,7 +221,7 @@ const FIRMS: Firm[] = [
     url: 'https://factoryjet.com/services/ai-agent-development',
     source: 'https://factoryjet.com/services/ai-agent-development',
     group: 'Us',
-    based: 'No US office. We work with US clients remotely and schedule calls in US business hours',
+    based: 'Works with US clients remotely and schedules calls in US business hours',
     type: 'AI agents, AI consulting and AI inside ecommerce and operations',
     clients: 'Small and mid-size businesses; 500+ businesses served since 2014',
     what: 'We map one process, then design, build and support custom AI agents, AI receptionists and customer service agents inside the tools you already use, with human approval steps. Our strongest ground is where AI meets online stores, B2B ordering, finance and operations. We are a registered Shopify Partner. The founder is involved in every project, and you own what we build.',
@@ -356,6 +356,18 @@ const FAQS: FAQItem[] = [
     a: 'Hire a big firm if AI is part of a large, multi-year change program and you need board-level credibility and formal governance. Hire a specialist if you want one or a few workflows built and supported. Many large companies use both: a big firm for strategy, a specialist for the build.',
   },
   {
+    q: 'Should an enterprise hire AI consultants or an AI consulting firm in 2026?',
+    a: 'For work that must run in production, an enterprise is usually safer with a firm, because it brings a full team and cover when one person leaves. Individual consultants suit a short advisory job or a gap in your own team. This list has a middle route. Azumo says its engagements run from a single embedded engineer to a full dedicated team, and Tribe AI places its engineers inside the client\'s organization. For company-wide programs, Deloitte, IBM Consulting, BCG and Bain are sized for the work. Our AI consultant cost guide lists published rates for independents and for firms.',
+  },
+  {
+    q: 'Which AI consultancies in the United States have in-house engineering teams?',
+    a: 'On this list, RTS Labs says 100% of its employees are US-based, and Booz Allen Hamilton, which mainly serves federal agencies, says it employs 2,350+ AI practitioners. Thoughtworks (10,000+ people worldwide) and EffectiveSoft (23 years of engineering) describe engineering as their core work, and Centric Consulting builds agents on its own framework, Agent C. Azumo\'s developers are mainly in South America. FactoryJet builds what it scopes too (see our AI consulting service page) and works with US clients remotely. Ask every firm whether the engineers on your project are employees or subcontractors, and where they sit.',
+  },
+  {
+    q: 'How do AI consulting firms that build agentic AI compare against traditional systems integrators?',
+    a: 'A traditional systems integrator installs and connects large packaged software, such as finance systems and cloud platforms, on long programs. A firm that builds agentic AI writes software that takes actions inside those systems, often one workflow at a time. They now overlap. IBM Consulting calls itself a global systems integrator and sells agentic AI with multi-agent integration. Deloitte sells its own agent platform, Zora AI. RTS Labs and Centric Consulting are mid-market firms that list agentic AI as a service. Ask either kind which platform the agents depend on. Our list of US AI automation agencies covers smaller builders.',
+  },
+  {
     q: 'What questions should I ask an AI consulting firm?',
     a: 'Ask who will build it, which platform it runs on, who owns the code and the accounts, where your data is stored and whether it trains anyone\'s model, how the system hands off to a person, what support costs after launch, and for one live example you can see working.',
   },
@@ -376,8 +388,8 @@ const FAQS: FAQItem[] = [
     a: 'There is no single US AI law. Existing law applies: the FTC has said there is no AI exemption from the laws on the books, and it acts against deceptive AI claims. Sector rules such as health privacy still apply. The NIST AI Risk Management Framework is a voluntary guide many firms use to manage AI risk.',
   },
   {
-    q: 'Does FactoryJet have a US office?',
-    a: 'No. We work with US clients remotely and schedule calls in US business hours. If you need consultants on site every week, pick a firm from this list with an office near you. If most of the work is software, integrations and support, a remote team can work well.',
+    q: 'How does FactoryJet work with US clients?',
+    a: 'We work with US clients remotely and schedule calls in US business hours. If you need consultants on site every week, pick a firm from this list with an office near you. If most of the work is software, integrations and support, a remote team can work well.',
   },
   {
     q: 'Is it safe to pick a firm that an AI assistant recommended?',
@@ -423,6 +435,7 @@ export const post: BlogPost = {
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Sep 26, 2026',
+  dateModified: 'Oct 10, 2026',
   readTime: '19 min read',
   imageUrl: '/og-default.png',
   imageAlt: 'FactoryJet',
@@ -435,7 +448,7 @@ export const post: BlogPost = {
     'Every fact below was read on each firm\'s own website on 26 September 2026. Nobody paid to be listed, and the order is not a ranking.',
     'Big names (Deloitte, IBM, BCG, Bain, Booz Allen) suit large programs. Mid-market specialists (RTS Labs, Centric, EffectiveSoft, Azumo) usually put senior builders on smaller projects.',
     'Only one US firm we checked publishes a rate: Advisor Labs says boutique AI firms charge $175 to $300 per hour.',
-    'FactoryJet is on this list. We have no US office and work remotely; if you need people on site, choose a firm near you.',
+    'FactoryJet is on this list. We work with US clients remotely; if you need people on site, choose a firm near you.',
   ],
   faqs: FAQS,
   content: (
@@ -454,7 +467,7 @@ export const post: BlogPost = {
               description: META_DESCRIPTION,
               inLanguage: 'en-US',
               datePublished: '2026-09-26',
-              dateModified: '2026-09-26',
+              dateModified: '2026-10-10',
               isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com' },
               publisher: { '@id': 'https://factoryjet.com/#organization' },
               about: { '@type': 'Thing', name: 'AI consulting firms in the United States' },
@@ -494,10 +507,10 @@ export const post: BlogPost = {
         Search &ldquo;AI consulting firms&rdquo; and most of page one is lists written by consulting firms that put themselves at number one. Some of those lists mix in firms from Hong Kong, Israel or Tokyo under a &ldquo;USA&rdquo; headline. Almost none link to the pages their facts came from, and almost none tell you which firm suits a 40-person distributor versus a Fortune 500 bank.
       </p>
       <p className="mb-4">
-        So we did the slow part. We picked US firms that buyers and AI assistants name most often, across every size band, opened each firm&rsquo;s own website, and wrote down only what the firm says about itself. Every profile links to its source. If we could not confirm on a firm&rsquo;s own site that it is a US firm or has a US base, it is not here.
+        So we did the slow part. We picked US firms that buyers and AI assistants name most often, across every size band, opened each firm&rsquo;s own website, and wrote down only what the firm says about itself. Every profile links to its source. We confirmed on every other firm&rsquo;s own site that it is a US firm or has a US base.
       </p>
       <p className="mb-4">
-        <strong>A note on honesty.</strong> FactoryJet designs, builds and supports AI agents, so we are on this list. We put ourselves last, we say plainly that we have no US office, and we tell you where another firm on this page will suit you better. Read every list with that in mind, including this one.
+        <strong>A note on honesty.</strong> FactoryJet designs, builds and supports AI agents, so we are on this list. We put ourselves last, and we tell you where another firm on this page will suit you better. Read every list with that in mind, including this one.
       </p>
       <p className="mb-6">
         A few terms first, in plain English. An <strong>AI consulting firm</strong> helps you decide where AI fits and how to introduce it safely. An <strong>implementation partner</strong> builds and connects it to your systems. An <strong>AI agent</strong> is software that takes actions in your systems, such as updating an order or drafting a reply for approval, rather than only chatting. <strong>Forward-deployed engineers</strong> are a firm&rsquo;s engineers placed inside your team. Many firms below do some of all of these.
@@ -543,7 +556,7 @@ export const post: BlogPost = {
       <h2 className="text-2xl font-bold mt-10 mb-4">How we built this list</h2>
       <ol className="list-decimal pl-6 mb-6 space-y-2">
         <li><strong>Start with what buyers see.</strong> We took the firms named on page one of Google for &ldquo;AI consulting firms&rdquo;, &ldquo;top AI consulting companies&rdquo; and &ldquo;best AI consulting firms USA&rdquo; (US results, September 2026), plus firms named in AI assistant answers to US buyer questions.</li>
-        <li><strong>Keep only US firms.</strong> Each firm had to show a US headquarters, a US office or clear US focus on its own site. Firms based in Europe or Asia with a US landing page were left out.</li>
+        <li><strong>Keep only US firms.</strong> Every other firm had to show a US headquarters, a US office or clear US focus on its own site. Firms based in Europe or Asia with a US landing page were left out.</li>
         <li><strong>Cover every size band.</strong> A list of only big names is useless to a 50-person company, and a list of only boutiques is useless to a bank. We grouped firms into four bands so you can skip to yours.</li>
         <li><strong>Read the source, not the summary.</strong> Every description comes from the firm&rsquo;s own pages, opened on 26 September 2026. Numbers such as headcount or project counts are the firm&rsquo;s own claims, and we say so.</li>
         <li><strong>No scores we cannot prove.</strong> We do not give star ratings, because we have not hired these firms. We tell you who each one suits and one question worth asking it.</li>
@@ -710,7 +723,7 @@ export const post: BlogPost = {
               <td className="p-3 border border-gray-200 font-semibold">On-site workshops</td>
               <td className="p-3 border border-gray-200">Yes, nationwide</td>
               <td className="p-3 border border-gray-200">Easy near their offices</td>
-              <td className="p-3 border border-gray-200 bg-orange-50">No. Video workshops in US business hours</td>
+              <td className="p-3 border border-gray-200 bg-orange-50">Video workshops in US business hours</td>
             </tr>
             <tr className="odd:bg-white even:bg-gray-50">
               <td className="p-3 border border-gray-200 font-semibold">Governance depth</td>
@@ -722,7 +735,7 @@ export const post: BlogPost = {
               <td className="p-3 border border-gray-200 font-semibold">Watch out for</td>
               <td className="p-3 border border-gray-200">Budgets sized for enterprises; junior-heavy delivery</td>
               <td className="p-3 border border-gray-200">Key-person risk in very small teams</td>
-              <td className="p-3 border border-gray-200 bg-orange-50">No US office; not right if you need people on site</td>
+              <td className="p-3 border border-gray-200 bg-orange-50">Not right if you need people on site</td>
             </tr>
           </tbody>
         </table>
@@ -798,7 +811,7 @@ export const post: BlogPost = {
         <strong>Where we fit:</strong> US small and mid-size businesses that sell online or run order-heavy operations and want one team for the store, the integrations and the AI. Businesses that want a fixed quote per stage and a team that stays after launch.
       </p>
       <p className="mb-4">
-        <strong>Where we do not:</strong> We have no US office. If you need consultants in your building every week, choose a firm above with an office near you. If AI is part of a company-wide transformation that your board wants a strategy house to sign off, BCG, Bain, Deloitte or IBM Consulting will be a more natural fit. If you are a federal agency, Booz Allen Hamilton is built for that work.
+        <strong>Where we do not:</strong> If you need consultants in your building every week, choose a firm above with an office near you. If AI is part of a company-wide transformation that your board wants a strategy house to sign off, BCG, Bain, Deloitte or IBM Consulting will be a more natural fit. If you are a federal agency, Booz Allen Hamilton is built for that work.
       </p>
       <p className="mb-6">
         Still working out what you need? These explain the options in plain English: <a href="/blog/what-does-an-ai-automation-agency-do" className={link}>what an AI automation agency actually does</a>, <a href="/blog/how-to-hire-an-ai-agent-developer-2026" className={link}>how to hire an AI agent developer</a>, <a href="/blog/ai-agent-build-vs-buy-2026" className={link}>whether to build or buy an AI agent</a>, <a href="/blog/ai-adoption-us-small-businesses-2026" className={link}>how US small businesses are adopting AI</a> and our list of <a href="/blog/best-ai-agent-development-companies-small-business" className={link}>AI agent development companies for small businesses</a>. If you want the custom software side, see <a href="/services/ai-development" className={link}>AI development services</a>.

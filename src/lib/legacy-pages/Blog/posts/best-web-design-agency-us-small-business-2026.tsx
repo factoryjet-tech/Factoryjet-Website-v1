@@ -20,7 +20,7 @@ export const post: BlogPost = {
     'The best agencies prove quality with PageSpeed Insights URLs on live client sites, scores above 90 on mobile. Never hire based on portfolio screenshots alone.',
     'Fixed-price contracts with itemized deliverables protect SMBs from scope creep; hourly billing should only apply to ongoing maintenance and change orders.',
     'Agencies delivering in 7–21 days use modern tooling (Next.js, CI/CD pipelines, component libraries), not shortcuts. Slow agencies are often disorganized, not thorough.',
-    'The "local agency" premium is rarely justified for SMBs: offshore-with-US-support agencies deliver identical technical output at 60–70% lower cost.',
+    'The "local agency" premium is rarely justified for SMBs: remote-with-US-support agencies deliver identical technical output at 60–70% lower cost.',
     'WCAG 2.2 accessibility compliance is non-negotiable in 2026: ADA website lawsuits hit 4,605 US cases in 2023, with settlements averaging $25,000.',
     'Ask for three named client references you can call independently, not testimonials on the agency\'s own website.',
     'FactoryJet delivers custom 5-page small business websites in 7 days with Lighthouse 95+ scores and US-hour project management, at a fixed price quoted in writing after a short scoping call.',
@@ -32,11 +32,11 @@ export const post: BlogPost = {
     },
     {
       q: 'How much should a US small business pay a web design agency in 2026?',
-      a: "For a professional 5–8 page custom website, budget $2,000–$8,000 depending on complexity and agency location. US domestic agencies charge $8,000–$25,000. Offshore agencies with US-hour support charge roughly $1,500–$8,000 for equivalent quality. E-commerce sites add $1,500–$5,000. Never pay over 50% upfront; 50% at kickoff and 50% at launch is the standard. Monthly maintenance should cost $99–$249.",
+      a: "For a professional 5–8 page custom website, budget $2,000–$8,000 depending on complexity and agency location. US domestic agencies charge $8,000–$25,000. Remote agencies with US-hour support charge roughly $1,500–$8,000 for equivalent quality. E-commerce sites add $1,500–$5,000. Never pay over 50% upfront; 50% at kickoff and 50% at launch is the standard. Monthly maintenance should cost $99–$249.",
     },
     {
-      q: 'Is it safe to hire an offshore web design agency for my US business?',
-      a: "Yes, with verification. Check three things: ask for US client references you can call (not just testimonials), confirm the contract is governed by US law, and verify Lighthouse scores on live client sites. Offshore agencies with India-based development and US-hour project management deliver identical technical quality to US agencies at 60–70% lower cost. The 2024 market reality is that many US agencies outsource their development to the same India and Eastern Europe teams anyway.",
+      q: 'Is it safe to hire a remote web design agency for my US business?',
+      a: "Yes, with verification. Check three things: ask for US client references you can call (not just testimonials), confirm the contract is governed by US law, and verify Lighthouse scores on live client sites. Remote agencies with US-hour project management deliver identical technical quality to US agencies at 60–70% lower cost. The 2024 market reality is that many US agencies outsource their development anyway.",
     },
     {
       q: 'What questions should I ask a web design agency before hiring them?',
@@ -68,7 +68,7 @@ export const post: BlogPost = {
     },
     {
       q: 'How much do agencies charge for website design?',
-      a: "US web design agencies price in tiers. Small boutique shops charge $3,000 to $10,000 for a small business site. Mid-market agencies charge $10,000 to $50,000. Full-service firms serving national brands start around $50,000. Offshore agencies with US-hours account management sit at $1,500 to $8,000 for comparable technical output. The tier you need is set by scope and integrations, not by the agency's prestige.",
+      a: "US web design agencies price in tiers. Small boutique shops charge $3,000 to $10,000 for a small business site. Mid-market agencies charge $10,000 to $50,000. Full-service firms serving national brands start around $50,000. Remote agencies with US-hours account management sit at $1,500 to $8,000 for comparable technical output. The tier you need is set by scope and integrations, not by the agency's prestige.",
     },
     {
       q: 'What is the average cost to hire a web designer?',
@@ -122,7 +122,7 @@ export const post: BlogPost = {
           <li>Accessibility: The Legal and Commercial Case for WCAG 2.2</li>
           <li>Pricing Models: Fixed vs. Hourly vs. Retainer</li>
           <li>The Reference Check: How to Verify Without Getting Burned</li>
-          <li>Offshore vs. US Domestic: The Real 2026 Trade-Off</li>
+          <li>Remote vs. Local: The Real 2026 Trade-Off</li>
           <li>Contract Terms That Protect SMB Interests</li>
           <li>The 10 Questions to Ask Every Agency You Interview</li>
           <li>Red Flags That Predict Expensive Mistakes</li>
@@ -233,7 +233,7 @@ export const post: BlogPost = {
         <strong>Fixed-price project billing</strong> is the correct model for initial website builds. You get a defined scope, a defined price, and no budget surprises. Ensure the contract specifies: number of pages, number of design revision rounds, what constitutes a revision versus new work, and whether content and imagery are client-supplied or agency-produced. Fixed-price only works as buyer protection when the scope is written in sufficient detail.
       </p>
       <p className="mb-4">
-        <strong>Hourly billing</strong> is appropriate for ongoing maintenance and defined change orders after launch. $100–$175/hour is the US agency standard; $35–$75/hour is the offshore-with-US-support rate. Never agree to hourly billing for the initial website build unless the scope is genuinely undefined (e.g., a complex custom web application where requirements emerge through development).
+        <strong>Hourly billing</strong> is appropriate for ongoing maintenance and defined change orders after launch. $100–$175/hour is the US agency standard; $35–$75/hour is the remote-with-US-support rate. Never agree to hourly billing for the initial website build unless the scope is undefined (e.g., a complex custom web application where requirements emerge through development).
       </p>
       <p className="mb-4">
         <strong>Monthly retainer</strong> is appropriate for ongoing relationships covering maintenance, content updates, SEO, and iterative improvements. $150–$500/month covers most SMB needs from a well-structured agency. Retainers should specify deliverables, "X hours of development time, security monitoring included, Y content updates per month", not vague "ongoing support."
@@ -250,18 +250,18 @@ export const post: BlogPost = {
         Reference #5 is often the most revealing. "Probably" or "maybe" usually means the experience was fine but not exceptional. "Absolutely, already have them on retainer" means the agency delivered real business value. References who can't answer question #2 (their own PageSpeed score) indicate the agency never educated them on performance metrics: a telling gap.
       </p>
 
-      <h2 className="text-2xl font-bold mt-8 mb-4">Offshore vs. US Domestic: The Real 2026 Trade-Off</h2>
+      <h2 className="text-2xl font-bold mt-8 mb-4">Remote vs. Local: The Real 2026 Trade-Off</h2>
       <p className="mb-4">
         The argument for US-only agencies rests on three things: local accountability, time-zone overlap for real-time communication, and US legal recourse if something goes wrong. In 2026, all three advantages have narrowed significantly.
       </p>
       <p className="mb-4">
-        Offshore agencies with dedicated US business-hour project management solve the time-zone issue. You're communicating with a US-hours PM who manages the India-based development team asynchronously. US-governed contracts (offer, acceptance, payment terms under US law) solve the legal recourse issue. US client references with contact details solve the accountability issue.
+        Remote agencies with dedicated US business-hour project management solve the time-zone issue. You're communicating with a US-hours PM who manages the development team asynchronously. US-governed contracts (offer, acceptance, payment terms under US law) solve the legal recourse issue. US client references with contact details solve the accountability issue.
       </p>
       <p className="mb-4">
-        The cost difference remains real and significant: India-based development teams cost $18,000–$45,000/year per developer versus $95,000–$160,000 for comparable US talent. This isn't a quality arbitrage. It's a cost-of-living differential. The same Next.js expertise, the same React patterns, the same Lighthouse optimization techniques are globally distributed in 2026.
+        The cost difference remains real and significant, and it comes from lower overheads, not lower quality. The same Next.js expertise, the same React patterns, the same Lighthouse optimization techniques are globally distributed in 2026.
       </p>
       <p className="mb-4">
-        For most US SMBs spending $3,000–$12,000 on a website, the offshore premium delivers $5,000–$15,000 in savings with no measurable quality reduction when the agency is properly vetted. The money saved is better invested in SEO content, paid advertising, or the next phase of site development.
+        For most US SMBs spending $3,000–$12,000 on a website, the remote route delivers $5,000–$15,000 in savings with no measurable quality reduction when the agency is properly vetted. The money saved is better invested in SEO content, paid advertising, or the next phase of site development.
       </p>
       <p className="mb-4">➡ Learn more: <a href="/services/web-design" className="text-blue-600 underline hover:text-blue-800 transition-colors">FactoryJet US web design services</a></p>
 
@@ -312,7 +312,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What FactoryJet Offers US Small Businesses</h2>
       <p className="mb-4">
-        FactoryJet is an India-based agency built to serve US small businesses with enterprise-level technical standards at offshore-level pricing. We've served 500+ businesses across the US, UK, and UAE.
+        FactoryJet is built to serve US small businesses with enterprise-level technical standards. We've served 500+ businesses across the US, UK, and UAE.
       </p>
       <p className="mb-4">
         What we deliver for US SMBs: custom Next.js or WordPress builds (never purchased templates), Lighthouse 95+ scores on every project, WCAG 2.2 Level AA compliance, full technical SEO included in base scope, 7-day delivery on 5-page sites, US business-hour project management, US-governed contracts, named US client references, and full code ownership transferred at final payment.

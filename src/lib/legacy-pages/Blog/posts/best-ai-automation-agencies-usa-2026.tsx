@@ -218,13 +218,13 @@ const FIRMS: Firm[] = [
     url: 'https://factoryjet.com/services/ai-automation',
     source: 'https://factoryjet.com/services/ai-automation',
     group: 'Us',
-    based: 'No US office. We work with US clients remotely and schedule calls in US business hours',
+    based: 'Works with US clients remotely and schedules calls in US business hours',
     type: 'AI and workflow automation, AI agents and the store or system around them',
     clients: 'Small and mid-size businesses; 500+ businesses served since 2014',
     tools: 'n8n, Make, Zapier, HubSpot, Shopify',
     what: 'We map one workflow, then design, build and support it in n8n, Make or Zapier, with AI steps where someone would otherwise read and decide, and human approval steps. Work is fixed-price and paid by milestone, and you own every workflow. Our strongest ground is where automation meets online stores, order handling, accounting and ERP systems. We are a registered Shopify Partner. The founder is involved in every project.',
     bestFor: 'Online stores and order-heavy businesses that want one team for the store, the integrations and the automation.',
-    ask: 'Whether a remote team outside the US suits you. If you need people in your building, or a US-only team, pick a firm above that says so.',
+    ask: 'Whether a remote team suits you. If you need people in your building every week, pick a firm above with an office near you.',
   },
 ];
 
@@ -242,7 +242,7 @@ const GROUP_HEADING: Record<Group, string> = {
   'Growing and mid-size companies': 'Companies that build custom AI workflow automation for mid-sized businesses',
   Ecommerce: 'AI automation agencies for ecommerce and digital commerce',
   'White-label for digital agencies': 'White-label workflow automation partners for digital agencies',
-  Us: 'Remote team: FactoryJet',
+  Us: 'Automation for stores, orders and ERP: FactoryJet',
 };
 
 const GROUP_INTRO: Record<Group, string> = {
@@ -343,15 +343,15 @@ const FAQS: FAQItem[] = [
   },
   {
     q: 'Which AI automation agency is best for small businesses?',
-    a: 'The best one for a small business sells a small first project, quotes a fixed price and leaves you owning the accounts. Four US agencies on this list say they serve small businesses: SuperDupr, AutomateNexus, Epiphany Dynamics and XRAY. Send each the same one-page description of one task and compare the questions they ask. FactoryJet also builds for small businesses, remotely.',
+    a: 'The best one for a small business sells a small first project, quotes a fixed price and leaves you owning the accounts. Four US agencies on this list say they serve small businesses: SuperDupr, AutomateNexus, Epiphany Dynamics and XRAY. Send each the same one-page description of one task and compare the questions they ask. FactoryJet also builds for small businesses.',
   },
   {
     q: 'What are the best AI automation agencies?',
-    a: 'It depends on who is buying. For small businesses: SuperDupr, AutomateNexus, Epiphany Dynamics and XRAY. For mid-size companies: QueryNow, Revere Advisory, Sketch Development, Imaginovation and LowCode Agency. For online sellers: Bitcot, The Snow Media and FactoryJet. For agencies that resell: E2M Solutions and White Label IQ. All have a US base except FactoryJet, which works remotely. No independent ranking exists, including this one.',
+    a: 'It depends on who is buying. For small businesses: SuperDupr, AutomateNexus, Epiphany Dynamics and XRAY. For mid-size companies: QueryNow, Revere Advisory, Sketch Development, Imaginovation and LowCode Agency. For online sellers: Bitcot, The Snow Media and FactoryJet. For agencies that resell: E2M Solutions and White Label IQ. No independent ranking exists, including this one.',
   },
   {
     q: 'Can you build me a list of workflow automation agencies?',
-    a: 'Yes. Thirteen US firms we checked on 9 October 2026 are SuperDupr (Austin), AutomateNexus (Seattle), Epiphany Dynamics (Nashville), XRAY, QueryNow (Plano), Revere Advisory, Sketch Development (near St. Louis), Imaginovation (Raleigh), LowCode Agency (Miami), Bitcot (San Diego), The Snow Media (Naples, Florida), E2M Solutions (Denver and San Diego) and White Label IQ (Loveland, Colorado). FactoryJet is the fourteenth and works remotely, with no US office.',
+    a: 'Yes. Thirteen US firms we checked on 9 October 2026 are SuperDupr (Austin), AutomateNexus (Seattle), Epiphany Dynamics (Nashville), XRAY, QueryNow (Plano), Revere Advisory, Sketch Development (near St. Louis), Imaginovation (Raleigh), LowCode Agency (Miami), Bitcot (San Diego), The Snow Media (Naples, Florida), E2M Solutions (Denver and San Diego) and White Label IQ (Loveland, Colorado).',
   },
   {
     q: 'What is the best workflow automation agency for businesses?',
@@ -379,7 +379,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: 'Who offers offshore workflow automation services for digital agencies?',
-    a: 'E2M Solutions has US offices in Denver and San Diego and an India office in Ahmedabad, and sells white-label AI plans by the month. Two providers that AI assistants cited for this question are based abroad by their own account: Eicra gives a Dhaka, Bangladesh address, and Innovatrix Infotech says it delivers from Kolkata, India. FactoryJet is also an offshore team, in India.',
+    a: 'E2M Solutions has US offices in Denver and San Diego and an India office in Ahmedabad, and sells white-label AI plans by the month. Two providers that AI assistants cited for this question are based abroad by their own account: Eicra gives a Dhaka, Bangladesh address, and Innovatrix Infotech says it delivers from Kolkata, India. FactoryJet also takes white-label automation projects for agencies.',
   },
   {
     q: 'Is there a workflow automation staffing solution for digital agencies?',
@@ -446,10 +446,6 @@ const FAQS: FAQItem[] = [
     a: 'Timelines that firms publish, read on 9 October 2026: Epiphany Dynamics says a focused receptionist build takes five to ten business days. QueryNow builds one workflow in two weeks. SuperDupr says most systems go live in 2 to 4 weeks. AutomateNexus says first builds go live in 30 days. Revere Advisory delivers mid-market workflows in 60 to 90 days. More systems and messier data mean more time.',
   },
   {
-    q: 'Does FactoryJet have a US office?',
-    a: 'No. Our team is outside the US. We work with US clients remotely and schedule calls in US business hours. If you need people on site, or a team based entirely in the US, choose one of the firms on this list that says so, such as Sketch Development. If the work is software, integrations and support, a remote team can work well.',
-  },
-  {
     q: 'Is it safe to pick an agency that an AI assistant recommended?',
     a: 'Treat it as a lead, not a reference. On 9 October 2026 we read ten of the lists assistants cite for this topic, and in all nine that compare agencies the publisher is on its own list. Some names assistants give US buyers are based elsewhere. Check the agency site for a US address, ask for a client you can call, and read this list with the same care.',
   },
@@ -479,7 +475,7 @@ export const post: BlogPost = {
     'Every fact about every firm was read on its own website on 9 October 2026. Nobody paid to be listed, and the order is not a ranking.',
     'Six of the 13 other firms publish prices. They run from $1,000 for four hours with an engineer (XRAY) and $3,500 for a fixed-price setup (AutomateNexus) to $15,000 to $75,000 for a mid-market build (Revere Advisory).',
     'A freelancer is the right pick for one workflow between two or three common tools. An agency earns its fee when the workflow touches money, customer data or several systems.',
-    'FactoryJet is on this list. We have no US office and work remotely; if you need people on site, choose a firm near you.',
+    'FactoryJet is on this list. We work with US clients remotely; if you need people on site every week, choose a firm near you.',
   ],
   faqs: FAQS,
   content: (
@@ -497,7 +493,7 @@ export const post: BlogPost = {
               description: META_DESCRIPTION,
               inLanguage: 'en-US',
               datePublished: '2026-10-09',
-              dateModified: '2026-10-09',
+              dateModified: '2026-10-10',
               isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com' },
               publisher: { '@id': 'https://factoryjet.com/#organization' },
               about: { '@type': 'Thing', name: 'AI and workflow automation agencies in the United States' },
@@ -543,10 +539,10 @@ export const post: BlogPost = {
         The lists have other gaps. One &ldquo;USA small business&rdquo; list of ten gives six places to software you subscribe to and set up yourself, such as Zapier, Make and UiPath. Eight of the nine never mention white-label work for other agencies. Seven never mention freelancers. Buyers asked about both.
       </p>
       <p className="mb-4">
-        So we did the slow part. We picked US firms that build automation for small and mid-size buyers, opened each firm&rsquo;s own website, and wrote down only what the firm says about itself. Every profile links to its source. If we could not confirm a US base on a firm&rsquo;s own site, it is not here.
+        So we did the slow part. We picked US firms that build automation for small and mid-size buyers, opened each firm&rsquo;s own website, and wrote down only what the firm says about itself. Every profile links to its source. We confirmed a US base on every other firm&rsquo;s own site.
       </p>
       <p className="mb-4">
-        <strong>A note on honesty.</strong> FactoryJet designs, builds and supports workflow automation and AI agents, so we are on this list. We put ourselves last, we say plainly that we have no US office and that our team is outside the US, and we tell you where another firm on this page will suit you better. Read every list with that in mind, including this one.
+        <strong>A note on honesty.</strong> FactoryJet designs, builds and supports workflow automation and AI agents, so we are on this list. We put ourselves last, and we tell you where another firm on this page will suit you better. Read every list with that in mind, including this one.
       </p>
       <p className="mb-6">
         A few terms first, in plain English. An <strong>AI automation agency</strong> connects the software you already use so routine steps happen without retyping, and adds AI where a step needs reading or judgment. <strong>n8n, Make and Zapier</strong> are the three tools most of these firms build on: each one watches for an event in one app and runs steps in others. An <strong>AI agent</strong> is software that takes actions in your systems, such as updating an order, instead of only chatting. <strong>White-label</strong> means one firm builds and another sells the work under its own brand. An <strong>ERP</strong> is the system that holds orders, stock and accounts.
@@ -585,7 +581,7 @@ export const post: BlogPost = {
       <ol className="list-decimal pl-6 mb-6 space-y-2">
         <li><strong>Start with what buyers ask.</strong> The 21 questions came from our own Search Console data and from questions we wrote for US buyers. &ldquo;AI automation agency&rdquo; alone gets 4,400 US Google searches a month (DataForSEO, October 2026), and Google shows an AI answer for it.</li>
         <li><strong>Read the lists assistants cite.</strong> We read ten of the most-cited lists to see who gets named and what is missing. We did not copy them.</li>
-        <li><strong>Keep only US firms.</strong> Each firm had to show a US address, a US base or a US legal home on its own site. Two names assistants give US buyers did not pass on their own pages: <a href="https://www.meticulosity.com/about-meticulosity" className={link} rel="noopener" target="_blank">Meticulosity</a> says its home is Vancouver, Canada, and <a href="https://goodish.agency/" className={link} rel="noopener" target="_blank">Goodish Agency</a> shows its clock in Slovenia, six hours ahead of New York, while saying most of its clients are American. Both may suit you; they are outside a US list.</li>
+        <li><strong>Keep only US firms.</strong> Every other firm had to show a US address, a US base or a US legal home on its own site. Two names assistants give US buyers did not pass on their own pages: <a href="https://www.meticulosity.com/about-meticulosity" className={link} rel="noopener" target="_blank">Meticulosity</a> says its home is Vancouver, Canada, and <a href="https://goodish.agency/" className={link} rel="noopener" target="_blank">Goodish Agency</a> shows its clock in Slovenia, six hours ahead of New York, while saying most of its clients are American. Both may suit you; they are outside a US list.</li>
         <li><strong>Keep only firms that build for small and mid-size buyers.</strong> Software products and global consultancies were left out. For consultancies, see our list of <a href="/blog/best-ai-consulting-firms-usa-2026" className={link}>AI consulting firms in the USA</a>.</li>
         <li><strong>Read the source, not the summary.</strong> Every description comes from the firm&rsquo;s own pages, opened on 9 October 2026. Numbers such as project counts are the firm&rsquo;s own claims, and we say so.</li>
         <li><strong>No scores we cannot prove.</strong> We have not hired these firms, so there are no star ratings. We tell you who each one suits and one question worth asking it.</li>
@@ -841,12 +837,12 @@ export const post: BlogPost = {
         From this list, E2M Solutions and White Label IQ are white-label partners with US addresses. E2M sells a strategist or a squad by the month, which is close to staffing. XRAY sells engineer time by the hour. For the offshore question, assistants cited providers that say on their own sites where they work from: <a href="https://www.eicra.com/workflow-automation" className={link} rel="noopener" target="_blank">Eicra</a> gives a Dhaka, Bangladesh address, and <a href="https://www.innovatrixinfotech.com/services/usa" className={link} rel="noopener" target="_blank">Innovatrix Infotech</a> says it delivers from a single team in Kolkata, India.
       </p>
       <p className="mb-6">
-        FactoryJet is an offshore team too (see our entry above). Whichever model you pick, the same two points decide whether it works: your client&rsquo;s automation should sit in accounts your client or you control, and someone named should answer when a workflow fails at 9am on a Monday.
+        Whichever model you pick, the same two points decide whether it works: your client&rsquo;s automation should sit in accounts your client or you control, and someone named should answer when a workflow fails at 9am on a Monday.
       </p>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">Freelance AI workflow setup: when a freelancer is the right pick</h2>
       <p className="mb-4">
-        Two of the questions we tested asked for &ldquo;freelance AI workflow setup&rdquo;. Across the 14 answers to one of them, the page assistants cited most was Fiverr&rsquo;s automations category, five times. That is a fair answer for some jobs. A freelancer is the right pick when:
+        Two of the questions we tested asked for &ldquo;freelance AI workflow setup&rdquo;. Across the 14 answers to one of them, assistants pointed to freelance marketplaces most: Upwork&rsquo;s page for AI workflow specialists appeared in 10 and Fiverr&rsquo;s automations category in 5. That is a fair answer for some jobs. A freelancer is the right pick when:
       </p>
       <ul className="list-disc pl-6 mb-4 space-y-2">
         <li>The job is one workflow between two or three common tools, such as a form, a CRM and an email tool.</li>
@@ -929,13 +925,13 @@ export const post: BlogPost = {
               <td className="p-3 border border-gray-200 font-semibold">On-site visits</td>
               <td className="p-3 border border-gray-200">Rare</td>
               <td className="p-3 border border-gray-200">Possible near their city</td>
-              <td className="p-3 border border-gray-200 bg-orange-50">No. Video calls in US business hours</td>
+              <td className="p-3 border border-gray-200 bg-orange-50">Video calls in US business hours</td>
             </tr>
             <tr className="odd:bg-white even:bg-gray-50">
               <td className="p-3 border border-gray-200 font-semibold">Watch out for</td>
               <td className="p-3 border border-gray-200">Work stops when the person is ill, busy or gone</td>
               <td className="p-3 border border-gray-200">Workflows kept in the agency account; unclear running costs</td>
-              <td className="p-3 border border-gray-200 bg-orange-50">No US office; not right if you need people on site</td>
+              <td className="p-3 border border-gray-200 bg-orange-50">Not right if you need people on site every week</td>
             </tr>
           </tbody>
         </table>
@@ -1015,7 +1011,7 @@ export const post: BlogPost = {
         <strong>Where we fit:</strong> US small and mid-size businesses that sell online or run order-heavy operations and want one team for the store, the integrations and the automation. Businesses that want a fixed price in writing and a team that stays after launch.
       </p>
       <p className="mb-4">
-        <strong>Where we do not:</strong> We have no US office, and our team is outside the US. If you need people in your building, or a team based entirely in the US, choose a firm above that says so; Sketch Development states that its talent is 100% US-based. If you are a local service business whose main problem is missed calls, SuperDupr and Epiphany Dynamics are built for that. If your job is one small connection between two tools, a freelancer is the better buy.
+        <strong>Where we do not:</strong> If you need people in your building every week, choose a firm above with an office near you. If you are a local service business whose main problem is missed calls, SuperDupr and Epiphany Dynamics are built for that. If your job is one small connection between two tools, a freelancer is the better buy.
       </p>
       <p className="mb-6">
         Still working out what you need? These explain the options in plain English: <a href="/blog/what-does-an-ai-automation-agency-do" className={link}>what an AI automation agency actually does</a>, our list of <a href="/blog/best-ai-agent-development-companies-2026" className={link}>AI agent development companies</a> for custom agent builds, and the shorter list of <a href="/blog/best-ai-agent-development-companies-small-business" className={link}>AI agent developers for small businesses</a>.

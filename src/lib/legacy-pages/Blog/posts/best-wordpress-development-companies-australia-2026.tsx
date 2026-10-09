@@ -5,7 +5,7 @@ import type { BlogPost } from '../data.types';
  * Best WordPress development companies in Australia (2026). Rewritten 2026-09-26 (AU Wave 4 fact pass).
  *
  * WHAT CHANGED AND WHY: the April 2026 version named no WordPress companies at all, quoted FactoryJet prices in
- * pounds sterling and US dollars, positioned us as a cheaper offshore option, promised "Lighthouse 92+
+ * pounds sterling and US dollars, named a location for our team, promised "Lighthouse 92+
  * guaranteed" as a "contractual performance SLA", "2-4 week" delivery and "98% client satisfaction", claimed
  * "50+ industries", and described the Impulse Branding work as a WordPress migration (the case study says a
  * website build plus ongoing SEO and AI search). All of that is gone. Do not reintroduce it.
@@ -34,10 +34,11 @@ export const post: BlogPost = {
   id: '119',
   slug: "best-wordpress-development-companies-australia-2026",
   title: "Best WordPress Development Companies in Australia for Small Business (2026)",
-  excerpt: "How to choose a WordPress developer as an Australian small business in 2026. Six companies whose Australian bases and WordPress services we checked on their own websites, sourced AUD price ranges, the features worth paying for, and what to put in the contract.",
+  excerpt: "How to choose a WordPress developer as an Australian small business in 2026. Six companies whose WordPress services we checked on their own websites, sourced AUD price ranges, the features worth paying for, and what to put in the contract.",
   category: "Web Design & Strategy",
   author: 'Bhavesh Barot',
   date: "Sep 26, 2026",
+  dateModified: "Oct 10, 2026",
   readTime: '12 min read',
   imageUrl: "/blog-images/best-wordpress-development-companies-australia-2026-hero.webp",
   meta: {
@@ -54,13 +55,13 @@ export const post: BlogPost = {
   ],
   faqs: [
     { q: "What should Australian small businesses expect to pay for WordPress development in 2026?", a: "WolfIQ's 2026 guide puts professional WordPress at about $3,000 to $7,000 for a basic brochure site and $5,000 to $15,000 for a fuller business site. Keen to Design (April 2026) gives $2,500 to $6,000 for a freelancer and $5,000 to $20,000 and up for an agency. These are typical Australian market ranges, not FactoryJet prices. Page count, custom features, WooCommerce and integrations move the number most." },
-    { q: "Can a WordPress developer without an Australian office handle Australian business requirements?", a: "Yes, if they have done it before and can show you. Ask about Australian Consumer Law wording on product and returns pages, GST in WooCommerce, Australia Post shipping, Xero or MYOB links and the Australian Privacy Principles. FactoryJet has no Australian office. Our senior engineers work remotely in Australian business hours, set these up as standard, and stay on to support the site after launch." },
+    { q: "Can a remote WordPress developer handle Australian business requirements?", a: "Yes, if they have done it before and can show you. Ask about Australian Consumer Law wording on product and returns pages, GST in WooCommerce, Australia Post shipping, Xero or MYOB links and the Australian Privacy Principles. FactoryJet's senior engineers work remotely in Australian business hours, set these up as standard, and stay on to support the site after launch." },
     { q: "What enterprise WordPress features do small businesses actually need?", a: "The ones that save real time or win real sales: wholesale pricing tiers in WooCommerce, CRM integration (HubSpot or Salesforce), automatic GST, Australia Post shipping, stock management and customer account pages for reordering. These used to be enterprise-only and are now normal in good small business builds. Skip features you cannot name a use for, because each one adds upkeep." },
     { q: "How long does custom WordPress development take for Australian businesses?", a: "A small site of up to 5 pages can be delivered in 7 days when content is ready. Larger custom sites usually take several weeks. WooCommerce stores with payment, shipping and custom features take longer again, in line with 3 to 5 weeks for a standard store and 5 to 8 weeks with B2B features or a migration. Content readiness, revision rounds and third-party integrations set the pace." },
     { q: "What Lighthouse performance score should Australian businesses demand?", a: "Ask for 90 or more on mobile for Performance in PageSpeed Insights, plus passing Core Web Vitals in real-user data. Poor performance hurts rankings and mobile sales. Put the target in the scope, ask how the developer will keep it once you add plugins and content, and test live client sites yourself during vendor evaluation rather than trusting a screenshot." },
     { q: "Should Australian SMBs choose WordPress over Shopify or Wix?", a: "Choose WordPress for content-heavy sites, service businesses that care about search, or stores with unusual needs, because you own the code and can change anything. Choose Shopify for product catalogues where you want payments, hosting and security handled for you. Choose Wix or Squarespace only for a simple site you will run yourself and are happy to keep small." },
     { q: "What ongoing WordPress maintenance do Australian businesses need?", a: "Regular core, theme and plugin updates, daily backups, uptime monitoring, malware scanning and a check of privacy and consent settings when rules change. Keen to Design puts annual maintenance at $500 to $3,000 (April 2026), and WolfIQ puts professional maintenance at $100 to $2,000 a month depending on scope. Neglected WordPress sites are the ones that get hacked." },
-    { q: "How do Australian businesses verify WordPress developer quality?", a: "Ask for live project links and a named client you can phone. Test those sites in PageSpeed Insights. Ask for examples of Australian compliance features they have built, and case studies that name the client. FactoryJet does not yet have a published Australian case study; our published references, such as Impulse Branding and Formative Concepts, are international, with live sites you can check." },
+    { q: "How do Australian businesses verify WordPress developer quality?", a: "Ask for live project links and a named client you can phone. Test those sites in PageSpeed Insights. Ask for examples of Australian compliance features they have built, and case studies that name the client. FactoryJet's published references, such as Impulse Branding and Formative Concepts, are international, with live sites you can check." },
     { q: "Can WordPress handle enterprise-level e-commerce for Australian SMBs?", a: "Yes, with WooCommerce and the right hosting. It handles wholesale pricing, subscriptions, multiple currencies and complex shipping rules for businesses selling to retail and trade customers at once. The trade-off is upkeep: more plugins mean more updates and more places for speed and security to slip. For very large catalogues or heavy B2B, compare it honestly with Shopify Plus or a custom build." },
     { q: "What payment gateways work best for Australian WordPress e-commerce?", a: "Stripe and PayPal are the usual choices for Australian WooCommerce stores, with Afterpay or Zip for buy now, pay later. Check each provider's current Australian fees at your real order value before you choose. Make sure your developer sets up automatic GST and exports transactions cleanly to Xero or MYOB, so your bookkeeper is not fixing things by hand every quarter." },
     { q: "Do Australian businesses need separate mobile WordPress sites in 2026?", a: "No. A responsive site adapts to phones, tablets and desktops from one codebase, and that is standard. Google ranks your site on its mobile version, so the mobile experience decides your rankings. Test checkout and forms on real phones, including a mid-range Android on mobile data, before launch." },
@@ -82,7 +83,7 @@ export const post: BlogPost = {
       </div>
 
       <p className="text-lg leading-relaxed mb-6">
-        The best WordPress developer for an Australian small business is one that builds Australian rules into the site from day one, puts speed targets in writing, shows you live sites you can test, and is still around to update the site next year. Australian price guides put a professional WordPress site at roughly $3,000 to $15,000 in 2026, depending on size. Below are six companies whose Australian base and WordPress services we checked on their own websites, including us, and the checklist to choose between them.
+        The best WordPress developer for an Australian small business is one that builds Australian rules into the site from day one, puts speed targets in writing, shows you live sites you can test, and is still around to update the site next year. Australian price guides put a professional WordPress site at roughly $3,000 to $15,000 in 2026, depending on size. Below are six companies whose WordPress services we checked on their own websites, including us, and the checklist to choose between them.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What Australian Small Businesses Need from WordPress Developers in 2026</h2>
@@ -131,7 +132,7 @@ export const post: BlogPost = {
             </tr>
             <tr className="bg-gray-100 font-bold">
               <td className="border p-3"><a href="/au" className={linkCls}>FactoryJet</a> (that is us)</td>
-              <td className="border p-3">No Australian office; senior engineers work remotely in Australian business hours</td>
+              <td className="border p-3">Senior engineers work remotely in Australian business hours</td>
               <td className="border p-3">WordPress and WooCommerce builds, maintenance, SEO and AI SEO; support after launch, and you own the code and accounts</td>
             </tr>
           </tbody>
@@ -208,7 +209,7 @@ export const post: BlogPost = {
 
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What Quality WordPress Development Delivers</h2>
-      <p className="mb-4">We don't have a published Australian case study yet, so rather than attach a number to a market we haven't built in, here is what our published work elsewhere shows. For Impulse Branding Solutions, a branding business, FactoryJet built the website and provides ongoing SEO and AI search work, connecting their service and portfolio content with the questions their customers ask. Formative Concepts, an MEP drafting and BIM consultancy selling to architects and construction firms worldwide, had no digital footprint before we built them a 20+ page site set up for search and AI answer engines; their published case study reports thousands of monthly international visitors and dozens of qualified leads within the first four months. Neither client is Australian, and we're not claiming they are, and the Formative Concepts site is built on Gatsby rather than WordPress. What carries over is the approach: the right platform for the job, with search, speed and conversion planned from the first day rather than added after launch. Read both on our <a href="/case-studies" className={linkCls}>case studies page</a>.</p>
+      <p className="mb-4">For Impulse Branding Solutions, a branding business, FactoryJet built the website and provides ongoing SEO and AI search work, connecting their service and portfolio content with the questions their customers ask. Formative Concepts, an MEP drafting and BIM consultancy selling to architects and construction firms worldwide, had no digital footprint before we built them a 20+ page site set up for search and AI answer engines; their published case study reports thousands of monthly international visitors and dozens of qualified leads within the first four months. Neither client is Australian, and we're not claiming they are, and the Formative Concepts site is built on Gatsby rather than WordPress. What carries over is the approach: the right platform for the job, with search, speed and conversion planned from the first day rather than added after launch. Read both on our <a href="/case-studies" className={linkCls}>case studies page</a>.</p>
 
 
       <h2 className="text-2xl font-bold mt-8 mb-4">WordPress Maintenance and Security for Australian Compliance</h2>

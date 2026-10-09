@@ -80,7 +80,7 @@ export const metadata: Metadata = {
 
 // Freshness signal. Benchmark: 56% of AI-Overview-cited pages carry it.
 // Keep honest: bump when the page's content actually changes.
-const PAGE_MODIFIED = '2026-09-28';
+const PAGE_MODIFIED = '2026-10-10';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -506,6 +506,12 @@ const FAQ_ITEMS = [
     question: 'Are there ongoing costs after the automation is built?',
     answer:
       'You only pay standard subscription fees for tools like Make, Zapier, or self-hosted n8n. AI model API calls are billed directly at cost. FactoryJet adds no markups. We provide optional monthly retainers for ongoing optimization and updates.',
+  },
+  {
+    category: 'pricing',
+    question: 'What are the best affordable AI automation platforms for small businesses under $5,000?',
+    answer:
+      'Zapier, Make and n8n, the three we build in, all start well under $5,000 a year. On 9 October 2026 their pricing pages listed plans, billed annually, starting at $0 to $69 a month for Zapier, $0 to $9 for Make with up to 5,000 credits, and €20 to €50 for n8n Cloud. Self-hosting n8n is free, per its docs. A platform alone is enough when steps never change and your team maintains them. An agency earns its fee when a workflow crosses several systems or reads documents. Our list of the best US AI automation agencies compares 14.',
   },
 
   /* ── Tools & Integrations ── */

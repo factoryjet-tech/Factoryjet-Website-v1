@@ -15,7 +15,7 @@ const CANONICAL_URL = 'https://factoryjet.com/services/property-management-ai-ag
 const PAGE_TITLE = 'AI Leasing Agents for Property Management | FactoryJet';
 const PAGE_DESC =
   'Custom AI leasing agents for property management companies. Answer prospect calls, texts, and web chats 24/7, qualify leads, and sync live with AppFolio, Yardi, and RealPage. Get an audit.';
-const PAGE_MODIFIED = '2026-09-19';
+const PAGE_MODIFIED = '2026-10-10';
 
 /** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
  *  <Breadcrumbs> component and the BreadcrumbList JSON-LD below, so the two
@@ -1159,7 +1159,7 @@ export default function PropertyManagementAiAgentsPage() {
                   Leasing offices cannot afford a vendor that treats Fair Housing risk as an afterthought. At FactoryJet, founder Bhavesh Barot runs every property management discovery session himself. In the first meeting, we review your call and text volume, your PMS platform, and your portfolio&apos;s compliance requirements.
                 </p>
                 <p className="text-base sm:text-lg text-[#46403B] leading-relaxed mb-8">
-                  You work directly with senior systems architects who have already built high-scale voice and messaging pipelines. We never hand your leasing infrastructure to junior salespeople or offshore contractors. The same senior-only approach runs across our broader{' '}
+                  You work directly with senior systems architects who have already built high-scale voice and messaging pipelines. We never hand your leasing infrastructure to junior salespeople or outside contractors. The same senior-only approach runs across our broader{' '}
                   <Link href="/services/ai-agent-development" className="underline hover:text-[#F05A28]">
                     AI agent development
                   </Link>{' '}

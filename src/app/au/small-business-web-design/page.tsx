@@ -14,7 +14,7 @@ import '../au-page.css';
 import './page.css';
 
 const CANONICAL = 'https://factoryjet.com/au/small-business-web-design';
-const UPDATED = '2026-09-26';
+const UPDATED = '2026-10-10';
 const TITLE = 'Small Business Web Design Australia | Packages | FactoryJet';
 const H1 = 'Small Business Web Design in Australia: Sites That Bring Enquiries';
 const DESCRIPTION =
@@ -129,7 +129,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
 /* ─── Named options in the Australian market (ItemList).
        Each note is based on the company’s own website, fetched 2026-09-26. ── */
 const PROVIDERS: { name: string; note: string }[] = [
-  { name: 'FactoryJet', note: 'That is us. We design and build small business websites with 7-day delivery for sites up to five pages, SEO basics built in, and the domain, site and accounts in your name. No Australian office: we work remotely in Australian hours, founder involved on every project.' },
+  { name: 'FactoryJet', note: 'That is us. We design and build small business websites with 7-day delivery for sites up to five pages, SEO basics built in, and the domain, site and accounts in your name. We work remotely in Australian hours, founder involved on every project.' },
   { name: 'Magicdust', note: 'A small business web design company that says it has built over 10,000 small business websites since 2006, with offices listed in Mona Vale (Sydney), Brisbane City and Melbourne.' },
   { name: 'Blackbox Design', note: 'A design agency with offices listed in West Perth and Chadstone, Melbourne, that builds small to medium business websites on WordPress, Shopify and BigCommerce.' },
   { name: 'Christom Web Design', note: 'A WordPress web design studio in Collingwood, Melbourne, with a base in Noosa, that publishes named website packages for business websites and ecommerce stores.' },

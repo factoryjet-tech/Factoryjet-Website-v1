@@ -8,8 +8,8 @@ import Breadcrumbs from '@/components/v2/Breadcrumbs';
 import './ai-seo.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/ai-seo';
-const UPDATED = '2026-08-24';
-const UPDATED_LABEL = '24 August 2026';
+const UPDATED = '2026-10-10';
+const UPDATED_LABEL = '10 October 2026';
 
 /* ─── Breadcrumb source of truth (drives the visible trail + JSON-LD) ── */
 const crumbs = [
@@ -92,12 +92,20 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     answer: 'Yes. Generative engine optimisation draws on the same content and authority that traditional SEO builds, so dropping one weakens the other. We run them as one programme: the on-page, technical, and link work that earns rankings is the same foundation that gets you quoted in AI answers. You are not choosing between them.' },
   { category: 'results', question: 'Which AI engines should my business show up in?',
     answer: 'Start with the ones your buyers actually use. In the UK that means ChatGPT first, then Google AI Overviews and Gemini, with Perplexity growing fast among researchers and professionals. We map which engines your customers lean on for your kind of decision, then prioritise the work so you show up where it converts, not everywhere at once.' },
-  { category: 'results', question: 'Are you a UK AI SEO agency, and do you work outside London?',
-    answer: 'Yes. We are a UK AI SEO agency working with businesses across London, Manchester, Birmingham, Leeds, Bristol, and beyond. Search and AI visibility are handled remotely with regular video reviews, so a company anywhere in the UK gets the same senior team and the same standard of work.' },
+  { category: 'results', question: 'Do you work with businesses outside London?',
+    answer: 'Yes. We are an AI SEO agency for UK businesses, working with companies across London, Manchester, Birmingham, Leeds, Bristol, and beyond. Search and AI visibility are handled remotely with regular video reviews, so a company anywhere in the UK gets the same senior team and the same standard of work.' },
   { category: 'results', question: 'How is AI SEO different from a traditional SEO agency?',
     answer: 'A traditional SEO agency optimises to rank in the ten blue links. We optimise for that and for the AI answers now sitting above them. That means entity and schema work, content structured to be quoted, and tracking of whether ChatGPT and AI Overviews actually name you. If an agency is not measuring AI visibility, it is working to a 2019 version of search.' },
   { category: 'results', question: 'What should I look for in a UK AI SEO agency?',
     answer: 'Ask four things. Can they show you where you are named in AI answers today, and the exact prompts they ran to find out. Do they ship schema in server-rendered HTML rather than adding it with JavaScript. Do they report AI mentions next to rankings and enquiries, not separately. And will they tell you when something is not worth doing. An agency that guarantees AI mentions is guessing.' },
+  // Buyer wording (9 Oct 2026 run): "show me consultants that help b2b vendors rank
+  // higher in ai-generated shortlist summaries." The percentages are our own count
+  // from that run: 38 UK questions asking which firm to hire, pages from small firms
+  // only, page type read from the address. Perplexity 312 of 604, Gemini app 120 of
+  // 247, Google AI Mode and AI Overviews 141 of 341, ChatGPT app 474 of 599 (home
+  // 249 plus service 225).
+  { category: 'results', question: 'Which consultants help B2B vendors rank higher in AI-generated shortlist summaries?',
+    answer: 'FactoryJet does this work, and five other agencies serving UK firms are named further up this page. On 9 October 2026 we put 38 UK questions asking which firm to hire to AI assistants. Comparison lists made up 52% of the small-firm pages Perplexity cited, 49% for the Gemini app and 41% for Google AI Mode and AI Overviews. In the ChatGPT app, 79% were home and service pages of the firms themselves. So a B2B vendor needs a place on the comparison lists in its category, and service pages that answer the question in the first two lines.' },
   { category: 'results', question: 'How do we get started?',
     answer: 'Send your name and work email through the form on this page. The founder replies within 24 hours to book a short call, where we run a free AI visibility check on your business, show you where you appear in AI answers today, and map the gap. That first look is genuinely useful whether or not we end up working together.' },
 ];
@@ -191,12 +199,12 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: 'AI SEO Agency UK: AEO and GEO for AI Answers | FactoryJet',
   description:
-    'A UK AI SEO agency using AEO and GEO to get your business named in ChatGPT, Perplexity and Google AI Overviews, without losing your Google rankings.',
+    'An AI SEO agency for UK businesses, using AEO and GEO to get you named in ChatGPT, Perplexity and Google AI Overviews, without losing your Google rankings.',
   alternates: { canonical: CANONICAL, languages: aiSeoAlternates },
   openGraph: {
     title: 'AI SEO Agency UK: AEO and GEO for AI Answers | FactoryJet',
     description:
-      'An AI SEO agency in the UK using answer engine optimisation and generative engine optimisation to get businesses named in ChatGPT, Gemini, Perplexity and Google AI Overviews. Free AI visibility check.',
+      'An AI SEO agency for UK businesses, using answer engine optimisation and generative engine optimisation to get businesses named in ChatGPT, Gemini, Perplexity and Google AI Overviews. Free AI visibility check.',
     url: CANONICAL,
     siteName: 'FactoryJet',
     locale: 'en_GB',
@@ -224,7 +232,7 @@ export default function AiSeoUKPage() {
             <div className="col-6040">
               <div>
                 <div className="flex-wrap mb-6">
-                  <span className="chip"><span className="dot dot-orange" />UK AI SEO Agency</span>
+                  <span className="chip"><span className="dot dot-orange" />AI SEO for UK Businesses</span>
                   <span className="chip">GEO + AEO</span>
                   <span className="chip">ChatGPT · Gemini · Perplexity</span>
                 </div>
@@ -622,8 +630,8 @@ export default function AiSeoUKPage() {
               <span className="eyebrow">The honest landscape</span>
               <h2>UK AI SEO and GEO agencies worth knowing</h2>
               <p className="lead mt-4">
-                We would rather tell you the truth than pretend we are the only option. Here are UK agencies doing
-                real search and AI-visibility work, including us. Talk to a few and pick the fit.
+                We would rather tell you the truth than pretend we are the only option. Here are agencies doing
+                real search and AI-visibility work for UK businesses, including us. Talk to a few and pick the fit.
               </p>
             </div>
             <ul className="stack mt-10" style={{ maxWidth: 900 }}>

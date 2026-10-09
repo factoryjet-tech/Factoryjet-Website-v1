@@ -7,7 +7,7 @@ import MidPageCTA from '@/components/v2/MidPageCTA';
 import './ai-agents.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/ai-agents';
-const UPDATED = '2026-09-24';
+const UPDATED = '2026-10-10';
 
 /* ONE array drives the visible trail AND the BreadcrumbList JSON-LD, so the
    schema can never describe a trail a human cannot see. Never hand-copy a
@@ -55,6 +55,13 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
     answer: 'Agentic AI is AI that works towards a goal over several steps and uses tools to get there, instead of producing one answer and stopping. It might read an email, look up the order, check stock, draft a reply, and ask a person to approve a refund. The word agentic just means it acts, within limits you set.' },
   { category: 'basics', question: 'What is the difference between agentic AI and generative AI?',
     answer: 'Generative AI creates content: text, images, a summary, a draft reply. Agentic AI uses that ability to take actions across your systems towards a goal, such as updating a record or booking a slot. Most business agents use both: generative AI to write, agentic design to decide what to do next and when to ask a person.' },
+  // Added 2026-10-10 from open buyer questions measured 9 Oct 2026. Firm facts come from the
+  // data array of /blog/best-ai-agent-development-companies-uk-2026. Vendor prices were read
+  // on each vendor’s own pricing page on 9 Oct 2026 (annual billing).
+  { category: 'basics', question: 'Which AI agent development company in the UK should I choose?',
+    answer: 'There is no single best one, so choose by fit. Check three things on each firm’s own website before a call: the systems it has connected, who owns the code, and the price of the first paid step. Our full list is the guide Best AI Agent Development Companies UK 2026, which compares 15 firms we read on 9 October 2026. Eight of the 14 other firms publish a price, and first steps run from a £250 diagnostic to an audit from £10,000. FactoryJet is on that list.' },
+  { category: 'basics', question: 'What are the best affordable AI automation platforms for small businesses under $5,000?',
+    answer: 'Zapier, Make, n8n and Microsoft Power Automate are the four to price first. On this budget a subscription product does this better than a service firm like us. Prices are from each vendor’s own pricing page on 9 October 2026, for annual billing. Zapier is free for 100 tasks a month, then from US$19.99 a month, shown as £15.30 with its page set to pounds. Power Automate Premium is £11.50 per user a month before VAT. Make prices in dollars, from $9 a month for 5,000 credits. n8n prices in euros, from €20 a month for 2,500 workflow executions.' },
 
   // ── What we build ──
   { category: 'build', question: 'What can you actually automate for my business?',
@@ -106,7 +113,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'results', question: 'Do you work outside London?',
     answer: 'Yes. We work with UK businesses across London, Manchester, Birmingham, Leeds, and everywhere between, all handled remotely with regular video calls. Automation and integration work does not require anyone on-site, so a company anywhere in the UK gets the same senior team and the same build quality.' },
   { category: 'results', question: 'Who does the work?',
-    answer: 'Senior engineers, with the founder involved on every build. We are not a sales team that hands your project to a junior team or an offshore subcontractor once the contract is signed. The people who scope your automation audit are the same people who build and support the agent.' },
+    answer: 'Senior engineers, with the founder involved on every build. We are not a sales team that hands your project to a junior team or a subcontractor once the contract is signed. The people who scope your automation audit are the same people who build and support the agent.' },
   { category: 'results', question: 'How is this different from a generic AI automation agency reselling templates?',
     answer: 'A reseller configures a platform built by someone else and charges a markup. We design and build the agent and the integration ourselves, senior engineers, founder included, and you own the result. If an agency cannot show you a production build, only a demo, it is worth asking what you would actually own at the end.' },
   { category: 'results', question: 'What is the most common reason UK businesses stall on AI?',
@@ -118,7 +125,7 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
   { category: 'results', question: 'How do we get started?',
     answer: 'Send your name and work email through the form on this page. The founder replies within 24 hours to book a short call, where we run a free automation audit on your business, show you which processes are worth automating first, and map what a build would involve. That first look costs nothing.' },
   { category: 'results', question: 'Should I hire an AI consultant or an AI agency first?',
-    answer: 'If you do not yet know which process to automate, start with a consultant, or a readiness assessment, so you spend on the right thing. If you already know the process, go straight to an agency that builds. We do both: our UK AI consultancy runs the assessment, and the same team builds what it recommends, so nothing gets lost in a handover.' },
+    answer: 'If you do not yet know which process to automate, start with a consultant, or a readiness assessment, so you spend on the right thing. If you already know the process, go straight to an agency that builds. We do both: our AI consultancy for UK businesses runs the assessment, and the same team builds what it recommends, so nothing gets lost in a handover.' },
 ];
 
 /* ─── Named UK AI automation / agent agencies (open self-disclosure, ItemList) ─ */
@@ -152,7 +159,7 @@ const jsonLd = {
       areaServed: { '@type': 'Country', name: 'United Kingdom' },
       url: CANONICAL,
       description:
-        'AI automation agency and AI development company in the UK and London. We design, build, integrate, and support custom AI agents and agentic AI systems for customer support, AI receptionists, sales, scheduling, and operations, wired into the tools a business already runs.',
+        'AI automation agency and AI development company for businesses in the UK and London. We design, build, integrate, and support custom AI agents and agentic AI systems for customer support, AI receptionists, sales, scheduling, and operations, wired into the tools a business already runs.',
     },
     {
       '@type': 'BreadcrumbList',
@@ -169,7 +176,7 @@ const jsonLd = {
       '@id': CANONICAL,
       url: CANONICAL,
       name: 'AI Automation Agency UK | AI Agent Development | FactoryJet',
-      headline: 'The UK AI Automation Agency That Builds Agents Into Your Actual Tools',
+      headline: 'The AI Automation Agency for UK Businesses That Builds Agents Into Your Actual Tools',
       inLanguage: 'en-GB',
       datePublished: '2026-07-25',
       dateModified: UPDATED,
@@ -210,12 +217,12 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: 'AI Automation Agency UK | AI Agent Development | FactoryJet',
   description:
-    'UK and London AI automation agency. We design, build and support custom AI agents, agentic AI and AI integrations wired into the tools you run. You own it.',
+    'AI automation agency for UK and London firms. We design, build and support custom AI agents, agentic AI and AI integrations wired into your tools. You own it.',
   alternates: { canonical: CANONICAL, languages: { 'en-GB': CANONICAL, 'x-default': CANONICAL } },
   openGraph: {
     title: 'AI Automation Agency UK | AI Agent Development | FactoryJet',
     description:
-      'A UK AI automation agency and AI agent development team. We design and build custom AI agents for customer support, sales, and operations, wired into the tools you already run. You own what we build. Free automation audit.',
+      'An AI automation agency and AI agent development team for UK businesses. We design and build custom AI agents for customer support, sales, and operations, wired into the tools you already run. You own what we build. Free automation audit.',
     url: CANONICAL,
     siteName: 'FactoryJet',
     locale: 'en_GB',
@@ -242,11 +249,11 @@ export default function AiAgentsUKPage() {
             <div className="col-6040">
               <div>
                 <div className="flex-wrap mb-6">
-                  <span className="chip"><span className="dot dot-orange" />UK AI Automation Agency</span>
+                  <span className="chip"><span className="dot dot-orange" />AI Automation for UK Businesses</span>
                   <span className="chip">AI Agent Development</span>
                   <span className="chip">Custom Built, You Own It</span>
                 </div>
-                <h1>The UK AI Automation Agency That Builds Agents Into Your Actual Tools</h1>
+                <h1>The AI Automation Agency for UK Businesses That Builds Agents Into Your Actual Tools</h1>
                 <p className="lead mt-6" style={{ maxWidth: 560 }}>
                   FactoryJet is an AI automation agency and AI development company working with businesses across
                   the UK, from London to Leeds. We design, build, and support custom AI agents (customer support,
@@ -257,7 +264,7 @@ export default function AiAgentsUKPage() {
                 <div className="byline mt-6" style={{ maxWidth: 560 }}>
                   <div className="av">BB</div>
                   <div className="who"><b>Bhavesh Barot</b>, Founder<br /><span>500+ projects delivered</span></div>
-                  <div className="upd">Last updated<br />24 September 2026</div>
+                  <div className="upd">Last updated<br />10 October 2026</div>
                 </div>
 
                 <div className="mt-6" style={{ maxWidth: 560 }}>
@@ -440,7 +447,7 @@ export default function AiAgentsUKPage() {
                   <p>
                     2026 has brought a wave of AI automation agency accounts selling the same thing: a reseller
                     dashboard, a rebranded template, and a course on the side. FactoryJet is not that. We are a
-                    small team of engineers who design and ship production systems, and we say so plainly because
+                    team of engineers who design and ship production systems, and we say so plainly because
                     the difference shows up fast once an agent is actually running.
                   </p>
                   <p>
@@ -894,8 +901,8 @@ export default function AiAgentsUKPage() {
               <span className="eyebrow">The honest landscape</span>
               <h2>UK AI automation and agent agencies worth knowing</h2>
               <p className="lead mt-4">
-                We would rather tell you the truth than pretend we are the only option. Here are UK teams doing
-                real automation and agent-building work, including us. Talk to a few and pick the fit.
+                We would rather tell you the truth than pretend we are the only option. Here are teams doing
+                real automation and agent-building work for UK businesses, including us. Talk to a few and pick the fit.
               </p>
             </div>
             <ul className="stack mt-10" style={{ maxWidth: 900 }}>

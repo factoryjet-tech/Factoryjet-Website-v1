@@ -85,7 +85,7 @@ export const metadata: Metadata = {
 // Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
 // dateModified; these pages carried none. Keep this honest: bump it when the
 // page's content actually changes, not on every unrelated deploy.
-const PAGE_MODIFIED = '2026-08-04';
+const PAGE_MODIFIED = '2026-10-10';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -576,10 +576,10 @@ export default function SeoHubPage() {
               className="fj-display mt-3 font-semibold text-fj-ink"
               style={{ fontSize: 'clamp(1.6rem, 4vw, 2.4rem)', lineHeight: 1.15, letterSpacing: '-0.02em' }}
             >
-              SEO results are on the way
+              Built on the work behind 500+ websites
             </h2>
             <p className="mx-auto mt-4 max-w-2xl font-fj-body text-fj-neutral-600" style={{ fontSize: '1.0625rem', lineHeight: 1.6 }}>
-              We are putting together real SEO results, with rankings, visits, and leads, from live FactoryJet work. For now, it all sits on the same work behind 500+ websites we have built: solid basics, real content, and a 4.9 average Google review rating.
+              Our SEO sits on the same work behind 500+ websites we have built: solid basics, real content, and a 4.9 average Google review rating.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
               <a

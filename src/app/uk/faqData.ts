@@ -44,7 +44,7 @@ export const UK_FAQS: UkFaq[] = [
   {
     cat: "web-design",
     q: "What is the best website design company in the UK?",
-    a: "The best website design company depends on your specific needs and budget. Large agencies serve enterprise clients at premium rates, and mid-market agencies sit somewhere below that. FactoryJet occupies a unique position as the UK’s AI-native web design agency, delivering enterprise-grade quality on the same technology stack as Stripe and Vercel (Next.js 15, Tailwind CSS 4) at a fixed, scoped price quoted up front. Every site we build scores 90+ on Google Lighthouse and is optimised for both Google and AI search engines from day one.",
+    a: "The best website design company depends on your specific needs and budget. Large agencies serve enterprise clients at premium rates, and mid-market agencies sit somewhere below that. FactoryJet is an AI-native web design agency for UK businesses, delivering enterprise-grade quality on the same technology stack as Stripe and Vercel (Next.js 15, Tailwind CSS 4) at a fixed, scoped price quoted up front. Every site we build scores 90+ on Google Lighthouse and is optimised for both Google and AI search engines from day one.",
   },
   {
     cat: "web-design",
