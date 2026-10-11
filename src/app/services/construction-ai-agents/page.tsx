@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import styles from './visual-qa.module.css';
 import Link from 'next/link';
 
 import SiteHeader from '@/components/v2/SiteHeader';
@@ -1088,7 +1089,7 @@ function SourceLinks({ ids }: { ids: ReadonlyArray<SrcKey> }) {
           href={SRC[id].url}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 py-1 font-fj-mono text-[11px] font-semibold tracking-wide text-[#B23E13] hover:underline"
+          className="inline-flex min-h-11 min-w-11 items-center gap-1.5 py-2 font-fj-mono text-xs font-semibold tracking-wide text-[#B23E13] hover:underline"
         >
           <svg width="10" height="10" viewBox="0 0 9 9" fill="none" aria-hidden="true" className="flex-shrink-0">
             <path d="M1.5 7.5L7.5 1.5M7.5 1.5H3M7.5 1.5V6" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
@@ -1113,14 +1114,14 @@ export default function ConstructionAiAgentsPage() {
 
       <SiteHeader />
 
-      <main className="min-h-screen bg-fj-cream text-fj-ink">
+      <main className={`${styles.page} min-h-screen bg-fj-cream text-fj-ink`}>
         <Breadcrumbs items={BREADCRUMB_ITEMS} />
 
         {/* 1. HERO */}
-        <section className="relative overflow-hidden border-b border-fj-neutral-200 bg-fj-cream pt-12 pb-14 md:pt-14 md:pb-16">
+        <section className={`${styles.hero} relative overflow-hidden border-b border-fj-neutral-200 bg-fj-cream pt-12 pb-14 md:pt-14 md:pb-16`}>
           <div className="mx-auto max-w-[1200px] px-6 md:px-8">
             <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12">
-              <div className="lg:col-span-7">
+              <div className={`${styles.heroCopy} lg:col-span-7`}>
                 <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#F05A28]/30 bg-white px-3 py-1.5">
                   <span className="font-fj-mono text-xs font-bold tracking-wide text-[#B23E13]">
                     AI FOR CONSTRUCTION &middot; UNITED STATES
@@ -1131,16 +1132,12 @@ export default function ConstructionAiAgentsPage() {
                   AI agents for construction that draft the quotes, bid summaries and purchase orders your team approves.
                 </h1>
 
-                <p className="mt-5 max-w-2xl font-fj-body text-lg leading-relaxed text-fj-neutral-600">
+                <p className={`${styles.heroLead} mt-5 max-w-2xl font-fj-body text-lg leading-relaxed text-fj-neutral-600`}>
                   We design, build and support AI agents for general contractors, specialty contractors and building
-                  suppliers. Some jobs need nothing built, because Procore, Autodesk and the takeoff products already
-                  ship AI of their own. Where the work runs on your price book, your phone line or your ERP (the
-                  business system that holds your items, prices and orders), we build the agent, connect it to the
-                  software you already use and stay on after launch. You get a fixed quote in writing before work
-                  starts.
+                  suppliers.
                 </p>
 
-                <div className="mt-6">
+                <div className={`${styles.heroForm} mt-6`}>
                   <HeroInlineForm
                     region="us"
                     source="services_construction_ai_agents_hero"
@@ -1148,6 +1145,13 @@ export default function ConstructionAiAgentsPage() {
                     submitLabel="Scope my agent"
                   />
                 </div>
+
+                <p className={`${styles.heroDetails} mt-5 max-w-2xl font-fj-body text-lg leading-relaxed text-fj-neutral-600`}> Some jobs need nothing built, because Procore, Autodesk and the takeoff products already
+                  ship AI of their own. Where the work runs on your price book, your phone line or your ERP (the
+                  business system that holds your items, prices and orders), we build the agent, connect it to the
+                  software you already use and stay on after launch. You get a fixed quote in writing before work
+                  starts.
+                </p>
 
                 <div className="mt-5">
                   <Link
@@ -1183,7 +1187,7 @@ export default function ConstructionAiAgentsPage() {
                     className="aspect-[3/2] w-full object-cover"
                   />
                   <figcaption className="p-5 sm:p-6">
-                    <div className="font-fj-mono text-[11px] font-bold uppercase tracking-wider text-[#B23E13]">
+                    <div className="font-fj-mono text-xs font-bold uppercase tracking-wider text-[#B23E13]">
                       What arrives, what the agent drafts, who approves
                     </div>
                     <ul className="mt-3 grid gap-2.5 font-fj-body text-[13px] leading-snug text-fj-ink">
@@ -1248,7 +1252,7 @@ export default function ConstructionAiAgentsPage() {
               {SHIPS.map((c) => (
                 <li key={c.name} className={`rounded-2xl border border-fj-neutral-200 bg-white p-6 ${c.span}`}>
                   <h3 className="font-fj-display text-lg font-semibold text-fj-ink">{c.name}</h3>
-                  <div className="mt-1 font-fj-mono text-[11px] font-bold uppercase tracking-wider text-fj-neutral-600">
+                  <div className="mt-1 font-fj-mono text-xs font-bold uppercase tracking-wider text-fj-neutral-600">
                     {c.kind}
                   </div>
                   <p className="mt-3 font-fj-body text-[15px] leading-relaxed text-fj-ink">{c.says}</p>
@@ -1430,7 +1434,7 @@ export default function ConstructionAiAgentsPage() {
                     <div>
                       <div className="font-fj-display text-base font-semibold text-fj-ink">{k.rule}</div>
                       <div
-                        className={`mt-1 font-fj-mono text-[11px] font-bold uppercase tracking-wider ${
+                        className={`mt-1 font-fj-mono text-xs font-bold uppercase tracking-wider ${
                           k.keeper === 'build' ? 'text-[#B23E13]' : 'text-fj-neutral-600'
                         }`}
                       >
@@ -1487,13 +1491,13 @@ export default function ConstructionAiAgentsPage() {
               {EXPERIENCE.map((w) => (
                 <li key={w.t} className={`flex flex-col rounded-2xl border border-fj-neutral-200 bg-fj-cream p-6 ${w.span}`}>
                   <h3 className="font-fj-display text-lg font-semibold text-fj-ink">{w.t}</h3>
-                  <div className="mt-1 font-fj-mono text-[11px] font-bold uppercase tracking-wider text-fj-neutral-600">
+                  <div className="mt-1 font-fj-mono text-xs font-bold uppercase tracking-wider text-fj-neutral-600">
                     {w.kind}
                   </div>
                   <p className="mt-3 font-fj-body text-[15px] leading-relaxed text-fj-ink">{w.what}</p>
                   <Link
                     href={w.href}
-                    className="mt-4 inline-flex items-center gap-1.5 py-1 font-fj-body text-sm font-semibold text-[#B23E13] hover:underline"
+                    className="mt-4 inline-flex min-h-11 min-w-11 items-center gap-1.5 py-2 font-fj-body text-sm font-semibold text-[#B23E13] hover:underline"
                   >
                     {w.cta}
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true" className="h-4 w-4">
@@ -1633,7 +1637,7 @@ export default function ConstructionAiAgentsPage() {
                     </div>
                     <div>
                       <h3 className="font-fj-display text-lg font-semibold text-fj-ink">{o.name}</h3>
-                      <div className="mt-1 font-fj-mono text-[11px] font-bold uppercase tracking-wider text-fj-neutral-600">
+                      <div className="mt-1 font-fj-mono text-xs font-bold uppercase tracking-wider text-fj-neutral-600">
                         {o.focus}
                       </div>
                       <p className="mt-2 font-fj-body text-[15px] leading-relaxed text-fj-ink">{o.says}</p>
